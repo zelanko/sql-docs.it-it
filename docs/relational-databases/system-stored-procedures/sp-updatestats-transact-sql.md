@@ -47,7 +47,7 @@ sp_updatestats [ [ @resample = ] 'resample']
   
 ## <a name="arguments"></a>Argomenti  
  [ **@resample** =] **'resample'**  
- Specifica che **sp_updatestats** utilizzerà l'opzione RESAMPLE dell'istruzione [UPDATE STATISTICS](../../t-sql/statements/update-statistics-transact-sql.md). Se **'resample'** non viene specificato, **sp_updatestats** aggiorna le statistiche in base al campionamento predefinito. **@resample** è **varchar (8)** con valore predefinito 'NO'.  
+ Specifica che **sp_updatestats** utilizzerà l'opzione RESAMPLE del [UPDATE STATISTICS](../../t-sql/statements/update-statistics-transact-sql.md) istruzione. Se **'resample'** non viene specificato, **sp_updatestats** Aggiorna le statistiche in base al campionamento predefinito. **ricampionare** è **varchar (8)** con un valore predefinito del campo Nr.  
   
 ## <a name="remarks"></a>Note  
  **sp_updatestats** esegue l'istruzione UPDATE STATISTICS con la parola chiave ALL, in tutte le tabelle definite dall'utente e interne al database. La procedura sp_updatestats mostra i messaggi che indicano lo stato di avanzamento dell'esecuzione. Al termine dell'aggiornamento, viene mostrato un messaggio che indica l'effettivo aggiornamento delle statistiche di tutte le tabelle.  
