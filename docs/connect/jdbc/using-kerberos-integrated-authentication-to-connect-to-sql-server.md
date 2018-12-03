@@ -11,12 +11,12 @@ ms.assetid: 687802dc-042a-4363-89aa-741685d165b3
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fd82f894db2afc469c40c883deab2071b0e89f98
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: a7bd04090fd6c6a0cc7a0b8374930f3aba378113
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600451"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52396156"
 ---
 # <a name="using-kerberos-integrated-authentication-to-connect-to-sql-server"></a>Uso dell'autenticazione integrata Kerberos per la connessione a SQL Server
 
@@ -31,7 +31,7 @@ Quando si usa l'autenticazione integrata con il modulo Java **Krb5LoginModule**,
 - **useDefaultCcache = true**
 - **moduleBanner = false**
 
-Tramite [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] vengono impostate le proprietà seguenti per tutti gli altri ambienti Java Virtual Machine:
+[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] imposta le proprietà seguenti per tutti gli altri ambienti Java Virtual Machine:
 
 - **useTicketCache = true**
 - **doNotPrompt = true**

@@ -3,26 +3,24 @@ title: 'Esercitazione: Uso del servizio di archiviazione BLOB di Azure con SQL S
 ms.custom: ''
 ms.date: 01/07/2016
 ms.prod: sql
+ms.technology: ''
 ms.prod_service: database-engine
-ms.component: tutorial
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 applies_to:
 - SQL Server 2016
 ms.assetid: e69be67d-da1c-41ae-8c9a-6b12c8c2fb61
-caps.latest.revision: 23
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d6cba97149bde173d7cac233f3bc5742b710ce5d
-ms.sourcegitcommit: ddb682c0061c2a040970ea88c051859330b8ac00
+ms.openlocfilehash: abbccb66ca86fb80991c6f0733e1cbfa0ee8a8e8
+ms.sourcegitcommit: ba7fb4b9b4f0dbfe77a7c6906a1fde574e5a8e1e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51571380"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52302844"
 ---
 # <a name="tutorial-use-azure-blob-storage-service-with-sql-server-2016"></a>Esercitazione: Uso del servizio di archiviazione BLOB di Azure con SQL Server 2016
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -57,6 +55,7 @@ Una firma di accesso condivisa è un URI che concede diritti di accesso limitati
 -   Account di archiviazione  
 -   Contenitore BLOB di Azure   
 -   Criteri di firma di accesso condiviso    
+
 Questo script inizia con la dichiarazione di variabili con le quali specificare i nomi per le risorse indicate sopra e i nomi dei valori di input necessari seguenti:  
   
 -   Nome di prefisso usato nei nomi di altri oggetti risorsa    

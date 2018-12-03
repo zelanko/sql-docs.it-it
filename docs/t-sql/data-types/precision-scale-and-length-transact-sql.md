@@ -22,12 +22,12 @@ ms.assetid: fbc9ad2c-0d3b-4e98-8fdd-4d912328e40a
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 1e28639c3e0f167c61f63c4d63eadf703609b54b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bf6c6caf1162c3b2257ffea9c051fa7634250fd2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47603519"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507257"
 ---
 # <a name="precision-scale-and-length-transact-sql"></a>Precisione, scala e lunghezza (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -63,10 +63,10 @@ Le espressioni dell'operando sono definite come espressione e1, con precisione p
   
 \* La precisione e la scala del risultato hanno un valore massimo assoluto pari a 38. Quando la precisione del risultato è superiore a 38, viene ridotta a 38 e la scala corrispondente viene ridotta per evitare il troncamento della parte intera del risultato. In alcuni casi, quali la moltiplicazione o la divisione, il fattore di scala non viene ridotto per mantenere la precisione decimale, anche se può essere generato un errore di overflow.
 
-Nelle operazioni di addizione e sottrazione sono necessarie `max(p1 – s1, p2 – s2)` posizioni per archiviare la parte integrale del numero decimale. Se non è disponibile spazio sufficiente per l'archiviazione, ad esempio `max(p1 – s1, p2 – s2) < min(38, precision) – scale`, la scala viene ridotta per fornire spazio sufficiente per la parte integrale. La scala risultante è `MIN(precision, 38) - max(p1 – s1, p2 – s2)`, pertanto è possibile arrotondare la parte frazionaria per adattarla alla scala risultante.
+Nelle operazioni di addizione e sottrazione sono necessarie `max(p1 - s1, p2 - s2)` posizioni per archiviare la parte integrale del numero decimale. Se non è disponibile spazio sufficiente per l'archiviazione, ad esempio `max(p1 - s1, p2 - s2) < min(38, precision) - scale`, la scala viene ridotta per fornire spazio sufficiente per la parte integrale. La scala risultante è `MIN(precision, 38) - max(p1 - s1, p2 - s2)`, pertanto è possibile arrotondare la parte frazionaria per adattarla alla scala risultante.
 
 Nelle operazioni di moltiplicazione e divisione sono necessarie `precision - scale` posizioni per archiviare la parte integrale del risultato. La scala può essere ridotta tramite le regole seguenti:
-1.  La scala risultante viene ridotta a `min(scale, 38 – (precision-scale))` se la parte integrale è minore di 32, perché non può essere maggiore di `38 – (precision-scale)`. In questo caso il risultato può essere arrotondato.
+1.  La scala risultante viene ridotta a `min(scale, 38 - (precision-scale))` se la parte integrale è minore di 32, perché non può essere maggiore di `38 - (precision-scale)`. In questo caso il risultato può essere arrotondato.
 1. La scala non viene modificata se è minore di 6 e se la parte integrale è maggiore di 32. In questo caso, può essere generato un errore di overflow se decimal(38, scala) non è sufficiente 
 1. La scala viene impostata su 6 se è maggiore di 6 e se la parte integrale è maggiore di 32. In questo caso, sia la parte integrale che la scala possono essere ridotte e il tipo del risultato è decimal(38,6). Il risultato può essere arrotondato a 6 posizioni decimali. In caso contrario, se per la parte integrale non sono sufficienti 32 cifre, viene generato un errore di overflow.
 
@@ -76,7 +76,7 @@ L'espressione seguente restituisce il risultato `0.00000090000000000` senza arro
 select cast(0.0000009000 as decimal(30,20)) * cast(1.0000000000 as decimal(30,20)) [decimal 38,17]
 ```
 In questo caso la precisione è 61 e la scala è 40.
-La parte integrale (precisione-scala = 21) è minore di 32, quindi questo caso è riconducibile al caso (1) delle regole della moltiplicazione e la scala viene calcolata come `min(scale, 38 – (precision-scale)) = min(40, 38 – (61-40)) = 17`. Il tipo di risultato è `decimal(38,17)`.
+La parte integrale (precisione-scala = 21) è minore di 32, quindi questo caso è riconducibile al caso (1) delle regole della moltiplicazione e la scala viene calcolata come `min(scale, 38 - (precision-scale)) = min(40, 38 - (61-40)) = 17`. Il tipo di risultato è `decimal(38,17)`.
 
 L'espressione seguente restituisce il risultato `0.000001` che deve essere inserito in `decimal(38,6)`:
 ```sql

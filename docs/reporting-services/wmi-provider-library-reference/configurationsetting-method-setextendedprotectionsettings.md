@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 2d8e7232-42f4-41b6-98eb-c856f6c85d8c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7f6c17915293ec2ad654c6d8574d94623d6a16ed
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 49fd82957893f0394081da0de5303ee689857ce5
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47615539"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52407902"
 ---
 # <a name="configurationsetting-method---setextendedprotectionsettings"></a>Metodo di ConfigurationSetting - SetExtendedProtectionSettings
   Il metodo SetExtendedProtectionSettings viene usato per impostare le proprietà RSWindowsExtendedProtectionLevel e RSWindowsExtendedProtectionScenario nel file di configurazione RSReportServer.config di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
@@ -44,14 +44,14 @@ public void SetExtendedProtectionSettings(
   
  Nell'elenco seguente sono indicati i valori validi:  
   
- `”Off | Allow | Require”`  
+ `"Off | Allow | Require"`  
   
  *ExtendedProtectionScenario*  
  Imposta RSWindowsExtendedProtectionScenario nel file RSReportserver.config. Il valore obbligatorio non supporta la distinzione tra maiuscole e minuscole.  
   
  Nell'elenco seguente sono indicati i valori validi:  
   
- `”Any” | “Proxy” | “Direct”`  
+ `"Any" | "Proxy" | "Direct"`  
   
 ## <a name="remarks"></a>Remarks  
  Le proprietà RSWindowsExtendedProtectionLevel e RSWindowsExtendedProtectionScenario si applicano quando i tipi di autenticazione nel file RSReportServer.config includono RSWindowNTLM, RSWindowsNegotiate o RSWindowsKerberos. L'impostazione di queste proprietà ha effetto sulla modalità di autenticazione degli utenti e del software client nel server di report. Prima di impostare ExtendedProtectionLevel su **Allow** o **Require**, è consigliabile leggere la documentazione relativa alla protezione estesa.  

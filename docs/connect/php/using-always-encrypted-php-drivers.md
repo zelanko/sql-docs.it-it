@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: v-kaywon
 ms.author: v-kaywon
 manager: mbarwin
-ms.openlocfilehash: 29adbfcbce3701a853f18f7f1b3079bc0bb6f8ae
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 531286af24740e37e125708a4b874b6aba27c3dc
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47695679"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52403426"
 ---
 # <a name="using-always-encrypted-with-the-php-drivers-for-sql-server"></a>Uso di Always Encrypted con i driver PHP per SQL Server
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -155,7 +155,7 @@ $stmt->execute();
 Gli esempi seguenti illustrano il filtraggio dei dati basata su valori crittografati e il recupero di dati crittografato dalle colonne crittografate usando il driver PDO_SQLSRV e SQLSRV. Tenere presente quanto segue:
  -   Il valore usato nella clausola WHERE per filtrare la colonna SSN deve essere passato usando il parametro bind, in modo che il driver possa crittografarlo in modo trasparente prima dell'invio al server.
  -   Quando si esegue una query con parametri associati, il driver PHP determina automaticamente il tipo SQL per l'utente, a meno che l'utente specifica in modo esplicito il tipo SQL quando si usa il driver SQLSRV.
- -   Tutti i valori stampati dal programma sono in testo normale, poiché il driver decrittografa in modo trasparente i dati recuperati dalle colonne SSN e BirthDate.
+ -   Tutti i valori stampati dal programma saranno in testo non crittografato, perché il driver decrittografa in modo trasparente i dati recuperati dalle colonne SSN e BirthDate.
  
 Nota: Le query possono eseguire confronti di uguaglianza nelle colonne crittografate a solo se la crittografia è deterministica. Per altre informazioni, vedere [Selezione della crittografia deterministica o casuale](../../relational-databases/security/encryption/always-encrypted-database-engine.md#selecting--deterministic-or-randomized-encryption).
 

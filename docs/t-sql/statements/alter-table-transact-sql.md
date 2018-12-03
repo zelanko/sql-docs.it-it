@@ -60,12 +60,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7676df1bf5d5a556b79cdcfe0797884438150190
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: cc42802f6263e7e7609ef6c11aa6dda4114cee97
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701119"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52503648"
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE (Transact-SQL)
 
@@ -593,9 +593,9 @@ L'operazione di modifica colonna online consente alle statistiche automatiche o 
   
 -   L'opzione `WAIT_AT_LOW_PRIORITY` non può essere usata con l'operazione di modifica colonna online.  
   
--   `ALTER COLUMN … ADD/DROP PERSISTED` non è supportato per l'operazione di modifica colonna online.  
+-   `ALTER COLUMN ... ADD/DROP PERSISTED` non è supportato per l'operazione di modifica colonna online.  
   
--   `ALTER COLUMN … ADD/DROP ROWGUIDCOL/NOT FOR REPLICATION` non è interessato dall'operazione di modifica colonna online.  
+-   `ALTER COLUMN ... ADD/DROP ROWGUIDCOL/NOT FOR REPLICATION` non è interessato dall'operazione di modifica colonna online.  
   
 -   L'operazione di modifica colonna online non supporta la modifica di una tabella in cui è abilitato il rilevamento modifiche o che è una tabella di pubblicazione della replica di tipo merge.  
   
@@ -1008,7 +1008,7 @@ Elimina in modo condizionale la colonna o il vincolo solo se è già esistente.
  È possibile modificare la lunghezza, la precisione o la scala di una colonna specificando nuove dimensioni per il tipo di dati della colonna nella clausola ALTER COLUMN. Se nella colonna sono presenti dati, le nuove dimensioni non possono essere minori delle dimensioni massime dei dati. La colonna non può neppure essere definita in un indice, tranne nel caso in cui il tipo di dati della colonna sia **varchar**, **nvarchar** o **varbinary** e l'indice sia diverso dal risultato di un vincolo PRIMARY KEY. Vedere l'esempio P.  
   
 ## <a name="locks-and-alter-table"></a>Blocchi e ALTER TABLE  
- Le modifiche specificate in ALTER TABLE vengono implementate immediatamente. Se le modifiche richiedono l'alterazione delle righe nella tabella, le righe vengono aggiornate tramite ALTER TABLE. ALTER TABLE acquisisce un blocco di modifica dello schema (SCH-M) sulla tabella per verificare che durante la modifica nessun'altra connessione faccia riferimento ai dati o ai metadati della tabella, ad eccezione delle operazioni sugli indici online al termine delle quali è richiesto un blocco SCH-M molto breve. In un'operazione `ALTER TABLE…SWITCH` il blocco viene acquisito sia sulle tabelle di origine sia in quelle di destinazione. Le modifiche apportate alla tabella vengono registrate e possono essere recuperate completamente. Le modifiche che influiscono su tutte le righe di tabelle di grandi dimensioni, ad esempio l'eliminazione di una colonna o, in alcune edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], l'aggiunta di una colonna NOT NULL con un valore predefinito, possono richiedere molto tempo e generare un elevato numero di record del log. Tali istruzioni ALTER TABLE devono essere eseguite con la stessa attenzione dedicata alle istruzioni INSERT, UPDATE e DELETE quando queste influiscono su molte righe.  
+ Le modifiche specificate in ALTER TABLE vengono implementate immediatamente. Se le modifiche richiedono l'alterazione delle righe nella tabella, le righe vengono aggiornate tramite ALTER TABLE. ALTER TABLE acquisisce un blocco di modifica dello schema (SCH-M) sulla tabella per verificare che durante la modifica nessun'altra connessione faccia riferimento ai dati o ai metadati della tabella, ad eccezione delle operazioni sugli indici online al termine delle quali è richiesto un blocco SCH-M molto breve. In un'operazione `ALTER TABLE...SWITCH` il blocco viene acquisito sia sulle tabelle di origine sia in quelle di destinazione. Le modifiche apportate alla tabella vengono registrate e possono essere recuperate completamente. Le modifiche che influiscono su tutte le righe di tabelle di grandi dimensioni, ad esempio l'eliminazione di una colonna o, in alcune edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], l'aggiunta di una colonna NOT NULL con un valore predefinito, possono richiedere molto tempo e generare un elevato numero di record del log. Tali istruzioni ALTER TABLE devono essere eseguite con la stessa attenzione dedicata alle istruzioni INSERT, UPDATE e DELETE quando queste influiscono su molte righe.  
   
 ### <a name="adding-not-null-columns-as-an-online-operation"></a>Aggiunta di colonne NOT NULL come operazione online  
  A partire da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Enterprise Edition, l'aggiunta di una colonna NOT NULL con un valore predefinito è un'operazione online quando il valore predefinito è una *costante di runtime*. L'operazione viene pertanto completata quasi istantaneamente indipendentemente dal numero di righe nella tabella, in quanto le righe esistenti nella tabella non vengono aggiornate durante l'operazione, ma il valore predefinito viene archiviato solo nei metadati della tabella e il valore viene cercato in base alle necessità nelle query che accedono a tali righe. Questo comportamento è automatico. Oltre la sintassi ADD COLUMN, non è necessaria alcuna sintassi aggiuntiva per implementare l'operazione online. Una costante di runtime è un'espressione che produce lo stesso valore durante il runtime per ogni riga nella tabella indipendentemente dal relativo determinismo. Esempi di costanti di runtime sono l'espressione costante "Dati temporanei personali" o la funzione di sistema GETUTCDATETIME(). Al contrario, le funzioni `NEWID()` e `NEWSEQUENTIALID()` non sono costanti di runtime perché viene generato un valore univoco per ogni riga della tabella. L'aggiunta di una colonna NOT NULL con un valore predefinito che non è una costante di runtime viene eseguita sempre offline e per tutta la durata dell'operazione viene acquisito un blocco esclusivo (SCH-M).  

@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: a8d24287-8557-4b03-bea7-ca087f449b62
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8682e9016830309f7f8a0ce43d8dd72f6192e35f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 92156defdf08b3828fde898c7043a941bbd7326b
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47738309"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52394014"
 ---
 # <a name="expression-scope-for-totals-aggregates-and-built-in-collections"></a>Ambito di espressioni per totali, aggregazioni e raccolte predefinite
   Quando si scrivono espressioni, si noterà che il termine *ambito* viene utilizzato in molti contesti. Può infatti specificare i dati da utilizzare per la valutazione di un'espressione, il set di caselle di testo in una pagina di cui è stato eseguito il rendering, il set di elementi del report che possono essere mostrati o nascosti in base a un elemento Toggle. Il termine *ambito* verrà utilizzato in argomenti correlati alla valutazione di un'espressione, alla sintassi della funzione di aggregazione, alla visibilità condizionale nonché nei messaggi di errore relativi a queste aree. Per comprendere il significato di *ambito* in un contesto specifico, utilizzare le descrizioni seguenti:  
@@ -68,7 +68,7 @@ ms.locfileid: "47738309"
      L'espressione seguente genera gli anni di intervallo tra SellStartDate e LastReceiptDate. Questi campi si trovano in due set di dati diversi, DataSet1 e DataSet2. La funzione di aggregazione [First &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/report-builder-functions-first-function.md) restituisce il primo valore di SellStartDate in DataSet1 e il primo valore di LastReceiptDate in DataSet2.  
   
     ```  
-    =DATEDIFF(“yyyy”, First(Fields!SellStartDate.Value, "DataSet1"), First(Fields!LastReceiptDate.Value, "DataSet2"))  
+    =DATEDIFF("yyyy", First(Fields!SellStartDate.Value, "DataSet1"), First(Fields!LastReceiptDate.Value, "DataSet2"))  
     ```  
   
 -   **Ambito di dominio** Chiamato anche ambito di sincronizzazione. Un tipo di ambito dei dati che si applica alla valutazione dell'espressione per le aree dati nidificate. L'ambito di dominio viene utilizzato per specificare aggregazioni in tutte le istanze di un gruppo in modo da allineare e facilmente confrontare le istanze nidificate. Ad esempio, per allineare i valori, è possibile allineare l'intervallo e l'altezza dei grafici sparkline incorporati in una tabella.  

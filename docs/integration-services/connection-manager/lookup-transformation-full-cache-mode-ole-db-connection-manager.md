@@ -13,12 +13,12 @@ ms.assetid: c4150e1b-bdff-4f7a-af4c-3401c34def83
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a5bf791d21d9a3997a7284a6fdda7f4e8eab9c66
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 43edd7fbdaf744ae9c5ea401e28ccef930d91f2d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47616036"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52506985"
 ---
 # <a name="lookup-transformation-full-cache-mode---ole-db-connection-manager"></a>Trasformazione Ricerca in modalità Full Cache - Gestione connessione OLE DB
   È possibile configurare la trasformazione Ricerca per utilizzare la modalità Full Cache e una gestione connessione OLE DB. In modalità Full Cache il set di dati di riferimento viene caricato nella cache prima dell'esecuzione della trasformazione Ricerca.  
@@ -46,17 +46,17 @@ ms.locfileid: "47616036"
   
 7.  Nell'elenco **Specificare come gestire le righe senza voci corrispondenti** selezionare un'opzione di gestione degli errori per le righe senza voci corrispondenti.  
   
-8.  Nella pagina Connessione, selezionare una gestione connessione dall'elenco **Gestione connessione OLE DB** o fare clic su **Nuova** per creare una nuova gestione connessione. Per altre informazioni, vedere [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md).  
+8.  Nella pagina Connessione, selezionare una gestione connessione dall'elenco **Gestione connessione OLE DB** o fare clic su **Nuova** per creare una nuova gestione connessione. Per altre informazioni, vedere [Gestione connessione OLE DB](../../integration-services/connection-manager/ole-db-connection-manager.md).  
   
 9. Effettuare una delle attività seguenti:  
   
     -   Fare clic su **Usa una tabella o una vista**, quindi selezionare una tabella o una vista oppure fare clic su **Nuova** per creare una tabella o una vista.  
   
-         -oppure-  
+         oppure  
   
     -   Fare clic su **Usa i risultati di una query SQL**, quindi compilare una query nella finestra **Comando SQL** oppure fare clic su **Compila query** per compilare una query usando gli strumenti grafici disponibili in **Generatore query** .  
   
-         -oppure-  
+         oppure  
   
     -   In alternativa fare clic su **Sfoglia** per importare un'istruzione SQL da un file.  
   
@@ -83,8 +83,8 @@ ms.locfileid: "47616036"
 13. Fare clic su **OK** per salvare le modifiche alla trasformazione Ricerca e quindi eseguire il pacchetto.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Implementare una trasformazione Ricerca in modalità Full Cache tramite la gestione connessione della cache](../../integration-services/connection-manager/lookup-transformation-full-cache-mode-cache-connection-manager.md)   
- [Implementare una ricerca in modalità No Cache o Partial Cache](../../integration-services/data-flow/transformations/implement-a-lookup-in-no-cache-or-partial-cache-mode.md)   
+ [Implementazione di una trasformazione Ricerca in modalità Full Cache utilizzando la gestione connessione della cache](../../integration-services/connection-manager/lookup-transformation-full-cache-mode-cache-connection-manager.md)   
+ [Implementazione di una ricerca in modalità No Cache o Partial Cache](../../integration-services/data-flow/transformations/implement-a-lookup-in-no-cache-or-partial-cache-mode.md)   
  [Trasformazioni di Integration Services](../../integration-services/data-flow/transformations/integration-services-transformations.md)  
   
   

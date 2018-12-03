@@ -12,12 +12,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d02dd4a286321a6d5b2334f5cedcb06926f245fb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c0e8c720660c17c262f66e5a14841dff490c008b
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47652269"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52412098"
 ---
 # <a name="delete-user-defined-functions"></a>Eliminare funzioni definite dall'utente
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -84,7 +84,7 @@ ms.locfileid: "47652269"
 3.  Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**.  
   
     ```  
-    -- creates function called “Sales.ufn_SalesByStore”  
+    -- creates function called "Sales.ufn_SalesByStore"  
     USE AdventureWorks2012;  
     GO  
     CREATE FUNCTION Sales.ufn_SalesByStore (@storeid int)  

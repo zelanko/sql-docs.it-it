@@ -14,12 +14,12 @@ ms.assetid: 224fc025-c21f-4d43-aa9d-5ffac337f9b0
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: de1b72abf9f94b2c5618a90f53511dfeacc036ce
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: a4271eb5bc3956fd58b942eb7c7076716f8f03f7
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51640072"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52414268"
 ---
 # <a name="validate-xml-with-the-xml-task"></a>Validate XML with the XML Task
   È possibile convalidare documenti XML e ottenere output avanzato degli errori abilitando la proprietà **ValidationDetails** dell'Attività XML.  
@@ -97,7 +97,7 @@ SELECT col.value('@line','INT') AS line
 FROM @XML.nodes('/root/messages/error') AS tab(col)  
 )  
 SELECT * FROM rs;  
--- WHERE error LIKE ‘%whatever_string%’  
+-- WHERE error LIKE '%whatever_string%'  
   
 -- Query # 2, count of errors grouped by the error message  
 -- convert to relational/rectangular  

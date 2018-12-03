@@ -26,12 +26,12 @@ ms.assetid: 7a999fc7-0a26-4a0d-9eeb-db6fc794f3cb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3513d85607582a8aab726804f2501ee675859460
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 8930cb9c01ab04f6166a710de66ab3bbb3241a05
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51560508"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52403246"
 ---
 # <a name="use-the-copy-database-wizard"></a>Utilizzo di Copia guidata database
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -312,7 +312,7 @@ Indipendentemente dall'operazione scelta tra **spostamento** o **copia**, **coll
      > **NOTA:** è possibile avviare Copia guidata database da qualsiasi database.  È possibile usare Copia guidata database dal server di origine o di destinazione.
   
 ### <a name="a--move-database-using-detach-and-attach-method-to-an-instance-on-a-different-physical-server--a-login-and-sql-server-agent-job-will-be-moved-as-well"></a>**A.  Usando un metodo di collegamento e scollegamento, spostare il database in un'istanza su un server fisico diverso.  Verranno spostati anche un account di accesso e il processo di SQL Server Agent.**  
-Nell'esempio seguente vengono spostati il database `Sales` , un account di accesso di Windows denominato `contoso\Jennie` e un processo di SQL Server Agent denominato `Jennie’s Report` da un'istanza di SQL Server 2008 su `Server1` a un'istanza di SQL Server 2016 su `Server2`.  `Jennie’s Report` usa il database `Sales` .  `Sales` non esiste ancora nel server di destinazione, `Server2`.  `Server1` verrà riassegnato a un team diverso dopo lo spostamento del database.
+Nell'esempio seguente vengono spostati il database `Sales` , un account di accesso di Windows denominato `contoso\Jennie` e un processo di SQL Server Agent denominato `Jennie's Report` da un'istanza di SQL Server 2008 su `Server1` a un'istanza di SQL Server 2016 su `Server2`.  `Jennie's Report` usa il database `Sales` .  `Sales` non esiste ancora nel server di destinazione, `Server2`.  `Server1` verrà riassegnato a un team diverso dopo lo spostamento del database.
   
 6.  Come indicato nella sezione [Limitazioni e restrizioni](#Restrictions)precedente, sarà necessario creare uno scheletro di database nel server di destinazione durante il trasferimento di un processo di SQL Server Agent che fa riferimento a un database non ancora esistente nel server di destinazione.  Creare uno scheletro di database denominato `Sales` nel server di destinazione. 
 
@@ -322,7 +322,7 @@ Nell'esempio seguente vengono spostati il database `Sales` , un account di acces
   
 9.  Nella pagina**Configurare il database di destinazione** la **Procedura guidata** ha rilevato che `Sales` esiste già nel server di destinazione, perché è stato creato nel **passaggio 6** precedente, e ha aggiunto `_new` al nome del **Database di destinazione** .  Eliminare `_new` dalla casella di testo **Database di destinazione** .  Facoltativamente, modificare il **Nome file**e la **Cartella di destinazione**.  Selezionare **Elimina il database con lo stesso nome nel server di destinazione, quindi continua il trasferimento sovrascrivendo i file di database esistenti**.  Scegliere **Avanti**.
   
-10. Nel pannello**Oggetti correlati selezionati** della pagina **Selezionare gli oggetti server** fare clic sul pulsante con puntini di sospensione relativo a **Object name Logins**(Account di accesso nome oggetto).  In **Opzioni copia** selezionare **Copia solo gli account di accesso selezionati:**.  Selezionare la casella relativa a **Mostra tutti gli account di accesso al server**.  Controllare la casella **Account di accesso** per `contoso\Jennie`.  Fare clic su **OK**.  Nel pannello **Oggetti correlati disponibili:** selezionare **Processi di SQL Server Agent** e quindi fare clic sul pulsante **>** .  Nel pannello **Oggetti correlati selezionati:** fare clic sul pulsante con puntini di sospensione relativo a **Processi di SQL Server Agent**.  In **Opzioni copia** selezionare **Copia solo i processi selezionati:**.  Selezionare la casella per `Jennie’s Report`.  Fare clic su **OK**.  Scegliere **Avanti**.  
+10. Nel pannello**Oggetti correlati selezionati** della pagina **Selezionare gli oggetti server** fare clic sul pulsante con puntini di sospensione relativo a **Object name Logins**(Account di accesso nome oggetto).  In **Opzioni copia** selezionare **Copia solo gli account di accesso selezionati:**.  Selezionare la casella relativa a **Mostra tutti gli account di accesso al server**.  Controllare la casella **Account di accesso** per `contoso\Jennie`.  Fare clic su **OK**.  Nel pannello **Oggetti correlati disponibili:** selezionare **Processi di SQL Server Agent** e quindi fare clic sul pulsante **>** .  Nel pannello **Oggetti correlati selezionati:** fare clic sul pulsante con puntini di sospensione relativo a **Processi di SQL Server Agent**.  In **Opzioni copia** selezionare **Copia solo i processi selezionati:**.  Selezionare la casella per `Jennie's Report`.  Fare clic su **OK**.  Scegliere **Avanti**.  
   
 11. Nella pagina**Percorso dei file di database di origine** fare clic sul pulsante con puntini di sospensione relativo a **Condivisione file nel server di origine** e passare al percorso per il percorso della cartella specificato.  Ad esempio, per il percorso di cartella `D:\MSSQL13.MSSQLSERVER\MSSQL\DATA` usare `\\Server1\D$\MSSQL13.MSSQLSERVER\MSSQL\DATA` per **Condivisione file nel server di origine**.  Scegliere **Avanti**.
   
@@ -354,7 +354,7 @@ Nell'esempio seguente vengono spostati il database `Sales` , un account di acces
 Considerato che `Server1` verrà spostato in un team diverso e che l'operazione di **spostamento** non verrà ripetuta, considerare la possibilità di eseguire i passaggi seguenti:
      -    Eliminazione del pacchetto SSIS `SalesFromServer1toServer2_Move` su `Server2`.
      -    Eliminazione del processo di SQL Server Agent `SalesFromServer1toServer2_Move` su `Server2`.
-     -    Eliminazione del processo di SQL Server Agent `Jennie’s Report` su `Server1`.
+     -    Eliminazione del processo di SQL Server Agent `Jennie's Report` su `Server1`.
      -    Eliminazione dell'account di accesso `contoso\Jennie` su `Server1`.
 
 

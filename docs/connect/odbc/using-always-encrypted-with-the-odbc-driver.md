@@ -9,12 +9,12 @@ ms.assetid: 02e306b8-9dde-4846-8d64-c528e2ffe479
 ms.author: v-chojas
 manager: craigg
 author: MightyPen
-ms.openlocfilehash: 6f51baee10a0f9b9cbb3595be816b2928f5bc0b0
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: a0c917c6f7200db2b5a04b47185ba6b61f59ad34
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51604717"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52506835"
 ---
 # <a name="using-always-encrypted-with-the-odbc-driver-for-sql-server"></a>Uso di Always Encrypted con ODBC Driver for SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -365,9 +365,9 @@ L'insieme di credenziali delle chiavi di Azure rappresenta una scelta valida per
 
 Il driver supporta l'autenticazione ad Azure Key Vault usando i seguenti tipi di credenziali:
 
-- Nome utente/Password: con questo metodo, le credenziali sono il nome di un utente di Azure Active Directory e la relativa password.
+- Nome utente/Password - con questo metodo, le credenziali sono il nome di un utente di Azure Active Directory e la relativa password.
 
-- ID client/segreto: con questo metodo, le credenziali sono un ID client applicazione e un segreto dell'applicazione.
+- Client - ID/segreto con questo metodo, le credenziali sono un ID client applicazione e un segreto dell'applicazione.
 
 Per consentire al driver di utilizzare CMK archiviati in Azure Key Vault per la crittografia di colonna, usare la parola chiave solo nella stringa di connessione seguente:
 

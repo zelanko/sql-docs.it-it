@@ -11,12 +11,12 @@ ms.assetid: 447792bb-f39b-49b4-9fd0-1ef4154c74ab
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a2ddf8f5c03d6f4c6724075e7209d800e10f7e39
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: afced2ca67c104b0bb01ccfe57fee2e309cc1b08
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47724299"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52410168"
 ---
 # <a name="system-requirements-for-the-jdbc-driver"></a>Requisiti di sistema per il driver JDBC
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "47724299"
   
  A partire da Microsoft JDBC Driver 4.1 per SQL Server, sono supportati Sun Java SE Development Kit (JDK) 7.0 e Java Runtime Environment (JRE) 7.0.  
   
- A partire da [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)], il supporto del driver JDBC per l'API della specifica Java Database Connectivity (JDBC) è stato esteso in modo da includere l'API JDBC 4.0. L'API di JDBC 4.0 è stata introdotta come parte di Sun Java SE Development Kit (JDK) 6.0 e Java Runtime Environment (JRE) 6.0. JDBC 4.0 è un superset dell'API di JDBC 3.0.  
+ A partire da [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)], il supporto del driver JDBC per l'API della specifica Java Database Connectivity (JDBC) è stato esteso in modo da includere l'API di JDBC 4.0. L'API di JDBC 4.0 è stata introdotta come parte di Sun Java SE Development Kit (JDK) 6.0 e Java Runtime Environment (JRE) 6.0. JDBC 4.0 è un superset dell'API di JDBC 3.0.  
   
  Quando si distribuisce [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] nei sistemi operativi Windows e UNIX, è necessario usare i pacchetti di installazione, rispettivamente *sqljdbc_\<versione>_enu.exe* e *sqljdbc_\<versione>_enu.tar.gz*. Per altre informazioni su come distribuire il Driver JDBC, vedere [distribuzione del Driver JDBC](../../connect/jdbc/deploying-the-jdbc-driver.md) argomento.  
   
