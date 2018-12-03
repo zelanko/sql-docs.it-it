@@ -21,7 +21,7 @@ manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 129c7bd5c1932d509b9afc5a28a2548c9fa8c3f9
 ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/01/2018
 ms.locfileid: "47818791"
@@ -47,7 +47,7 @@ sp_updatestats [ [ @resample = ] 'resample']
   
 ## <a name="arguments"></a>Argomenti  
  [ **@resample** =] **'resample'**  
- Specifica che **sp_updatestats** utilizzerà l'opzione RESAMPLE del [UPDATE STATISTICS](../../t-sql/statements/update-statistics-transact-sql.md) istruzione. Se **'resample'** non viene specificato, **sp_updatestats** Aggiorna le statistiche in base al campionamento predefinito. **ricampionare** è **varchar (8)** con un valore predefinito del campo Nr.  
+ Specifica che **sp_updatestats** utilizzerà l'opzione RESAMPLE dell'istruzione [UPDATE STATISTICS](../../t-sql/statements/update-statistics-transact-sql.md). Se **'resample'** non viene specificato, **sp_updatestats** aggiorna le statistiche in base al campionamento predefinito. **@resample** è **varchar (8)** con valore predefinito 'NO'.  
   
 ## <a name="remarks"></a>Note  
  **sp_updatestats** esegue l'istruzione UPDATE STATISTICS con la parola chiave ALL, in tutte le tabelle definite dall'utente e interne al database. La procedura sp_updatestats mostra i messaggi che indicano lo stato di avanzamento dell'esecuzione. Al termine dell'aggiornamento, viene mostrato un messaggio che indica l'effettivo aggiornamento delle statistiche di tutte le tabelle.  
