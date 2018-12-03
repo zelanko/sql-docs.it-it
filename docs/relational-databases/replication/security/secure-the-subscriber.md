@@ -15,12 +15,12 @@ ms.assetid: c8f0d62a-8b5d-4a21-9aec-223da52bb708
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a36049bcbd2d5c043320f3e10d06005bf2f70b2c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d410a838083aeb52c090dee0f9878a8baa52cca3
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47671219"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52504051"
 ---
 # <a name="secure-the-subscriber"></a>Sicurezza del Sottoscrittore
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "47671219"
  Per altre informazioni, vedere [Creare una sottoscrizione aggiornabile di una pubblicazione transazionale](../../../relational-databases/replication/publish/create-updatable-subscription-to-transactional-publication.md) e [Visualizzare e modificare le impostazioni di sicurezza della replica](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md).  
   
 > [!IMPORTANT]  
->  È consigliabile concedere all'account specificato per la connessione solo le autorizzazioni necessarie per l'inserimento, l'aggiornamento e l'eliminazione dei dati delle viste create dalla replica nel database di pubblicazione. Concedere autorizzazioni per le viste del database di pubblicazione con nome formattato come **syncobj_***\<NumeroEsadecimale>* all'account configurato in ogni Sottoscrittore.  
+>  È consigliabile concedere all'account specificato per la connessione solo le autorizzazioni necessarie per l'inserimento, l'aggiornamento e l'eliminazione dei dati delle viste create dalla replica nel database di pubblicazione. Concedere autorizzazioni per le viste del database di pubblicazione con nomi nel formato **syncobj_**_\<NumeroEsadecimale>_ all'account configurato in ogni Sottoscrittore.  
   
 ## <a name="queued-updating-subscriptions"></a>Sottoscrizioni ad aggiornamento in coda  
  Quando si configurano sottoscrizioni ad aggiornamento in coda, è necessario tenere in considerazione due aspetti relativi alla sicurezza.  

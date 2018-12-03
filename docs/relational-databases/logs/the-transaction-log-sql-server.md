@@ -15,12 +15,12 @@ ms.assetid: d7be5ac5-4c8e-4d0a-b114-939eb97dac4d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: fb02296dd980e0db7e093950bd33eed7d3c05cf3
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: d85c61376992e22488b4ddddffc227e2a371ac76
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51677300"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52711592"
 ---
 # <a name="the-transaction-log-sql-server"></a>Log delle transazioni (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -114,9 +114,9 @@ Per evitare l'esaurimento dello spazio, il troncamento si verifica automaticamen
 |7|DATABASE_SNAPSHOT_CREATION|Viene creato uno snapshot del database. (Tutti i modelli di recupero)<br /><br /> Si tratta di una motivazione comune, e generalmente di breve durata, per il posticipo del troncamento del log.|  
 |8|LOG_SCAN|È in corso un'analisi del log. (Tutti i modelli di recupero)<br /><br /> Si tratta di una motivazione comune, e generalmente di breve durata, per il posticipo del troncamento del log.|  
 |9|AVAILABILITY_REPLICA|Una replica secondaria di un gruppo di disponibilità applica i record del log delle transazioni del database a un database secondario corrispondente. (Modello di recupero con registrazione completa)<br /><br /> Per altre informazioni, vedere [Panoramica di Gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md).|  
-|10|—|Solo per uso interno|  
-|11|—|Solo per uso interno|  
-|12|—|Solo per uso interno|  
+|10|-|Solo per uso interno|  
+|11|-|Solo per uso interno|  
+|12|-|Solo per uso interno|  
 |13|OLDEST_PAGE|Se un database è configurato per l'uso dei checkpoint indiretti, la pagina meno recente del database potrebbe essere meno recente del [numero di sequenza del file di log (LSN)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch) del checkpoint. In questo caso, la pagina meno recente può causare il posticipo del troncamento del log. (Tutti i modelli di recupero)<br /><br /> Per informazioni sui checkpoint indiretti, vedere [Database Checkpoints &#40;SQL Server&#41;](../../relational-databases/logs/database-checkpoints-sql-server.md).|  
 |14|OTHER_TRANSIENT|Questo valore non è attualmente utilizzato.|  
   
@@ -158,17 +158,17 @@ Quando la replica transazionale è abilitata, le operazioni SELECT INTO vengono 
     -   Ricompilazione del nuovo heap [DROP INDEX](../../t-sql/statements/drop-index-transact-sql.md) (se pertinente). Durante un'operazione `DROP INDEX` per la deallocazione delle pagine di un indice viene eseguita **sempre** la registrazione completa.
   
 ##  <a name="RelatedTasks"></a> Related tasks  
- **Gestione del log delle transazioni**  
+**Gestione del log delle transazioni**  
   
 -   [Gestione delle dimensioni del file di log delle transazioni](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md)  
   
 -   [Risolvere i problemi relativi a un log delle transazioni completo &#40;Errore di SQL Server 9002&#41;](../../relational-databases/logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md)  
   
- **Backup del log delle transazioni (modello di recupero con registrazione completa)**  
+**Backup del log delle transazioni (modello di recupero con registrazione completa)**  
   
 -   [Eseguire il backup di un log delle transazioni &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)  
   
- **Ripristino del log delle transazioni (modello di recupero con registrazione completa)**  
+**Ripristino del log delle transazioni (modello di recupero con registrazione completa)**  
   
 -   [Ripristinare un backup del log delle transazioni &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md)  
   

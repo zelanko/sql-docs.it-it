@@ -20,12 +20,12 @@ ms.assetid: dd7d8cd5-536b-460c-ab5b-cb4752bbdfaa
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: cabcdc95bbdf748774a0435715ae93241cdb33ee
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e7ad315244d6a236285abdd6784237856c3d442f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47810639"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52511430"
 ---
 # <a name="deny-asymmetric-key-permissions-transact-sql"></a>DENY - autorizzazioni per chiavi asimmetriche (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ DENY { permission  [ ,...n ] }
  *permission*  
  Specifica un'autorizzazione che può essere negata per una chiave asimmetrica. Vedere l'elenco riportato di seguito.  
   
- ON ASYMMETRIC KEY **::***asymmetric_key_name*  
+ ON ASYMMETRIC KEY **::**_asymmetric_key_name_  
  Specifica la chiave asimmetrica per cui viene negata l'autorizzazione. Il qualificatore di ambito "::" è obbligatorio.  
   
  *database_principal*  

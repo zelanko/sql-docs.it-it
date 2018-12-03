@@ -24,12 +24,12 @@ ms.assetid: 2b8f19a2-ee9d-4120-b194-fbcd2076a489
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 8135737f7abe250bfcd29b080b6875efad6286db
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a8023d72b28ec3ff9e9bafe2423b26620a5046ac
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47676754"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52534113"
 ---
 # <a name="media-sets-media-families-and-backup-sets-sql-server"></a>Set di supporti, gruppi di supporti e set di backup (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "47676754"
   
  Per creare un set di supporti nei supporti di backup durante un'operazione di backup, formattare i supporti di backup. Per altre informazioni, vedere [Creazione di un nuovo set di supporti](#CreatingMediaSet)più avanti in questo argomento. Dopo la formattazione, ogni file o nastro include un'intestazione supporto per il set di supporti ed è pronto per la ricezione di contenuto di backup. Dopo la creazione dell'intestazione, l'operazione di backup continua e in tutti i dispositivi di backup specificati per l'operazione viene eseguito il backup dei dati specificati nel supporto di backup.  
   
-> **NOTA** È possibile eseguire il mirroring dei set di supporti, per proteggersi dal rischio di un volume di supporti, ovvero un nastro o file su disco, danneggiato. Per altre informazioni, vedere [Set di supporti di backup con mirroring &#40;SQL Server&#41;](../../relational-databases/backup-restore/mirrored-backup-media-sets-sql-server.md).  
+> **NOTA** È possibile eseguire il mirroring dei set di supporti, per proteggersi dal rischio di un volume di supporti, ovvero un nastro o file su disco, danneggiato. Per altre informazioni, vedere [Mirrored Backup Media Sets &#40;SQL Server&#41;](../../relational-databases/backup-restore/mirrored-backup-media-sets-sql-server.md).  
   
  Non è possibile effettuare contemporaneamente backup compressi e non compressi in un set di supporti. Qualsiasi edizione di [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] o successiva è in grado di leggere i backup compressi. Per altre informazioni, vedere [Compressione backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-compression-sql-server.md).  
 
@@ -140,7 +140,7 @@ WITH
   
  ![Secondo set di backup distribuito su 3 nastri del set di supporti](../../relational-databases/backup-restore/media/bnr-mediaset-appendedto.gif "Secondo set di backup distribuito su 3 nastri del set di supporti")  
   
- Quando si ripristinano i backup, è possibile usare l'opzione FILE per specificare quali backup si desidera usare. L'esempio seguente illustra l'uso delle clausole FILE **=***numero_file_set_backup* quando si ripristina un backup completo del database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] seguito da un backup differenziale del database sullo stesso set di supporti. Il set di supporti usano tre nastri di backup, che si trovano sulle unità nastro `\\.\tape0`, `tape1`e `tape2`.  
+ Quando si ripristinano i backup, è possibile usare l'opzione FILE per specificare quali backup si desidera usare. L'esempio seguente illustra l'uso delle clausole FILE **=**_numero_file_set_backup_ quando si ripristina un backup completo del database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] seguito da un backup differenziale del database sullo stesso set di supporti. Il set di supporti usano tre nastri di backup, che si trovano sulle unità nastro `\\.\tape0`, `tape1`e `tape2`.  
   
 ```  
 RESTORE DATABASE AdventureWorks2012 FROM TAPE = '\\.\tape0', TAPE = '\\.\tape1', TAPE = '\\.\tape2'  

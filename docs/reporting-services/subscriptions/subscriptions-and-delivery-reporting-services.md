@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: be7ec052-28e2-4558-bc09-8479e5082926
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1c391d200e5e992572b27e8d99c92498e0ba297e
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: e04bdc6edaf53e73c7f26dd85a512dbda369ebb1
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031880"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52711963"
 ---
 # <a name="subscriptions-and-delivery-reporting-services"></a>Subscriptions and Delivery (Reporting Services)
   Una sottoscrizione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] è una configurazione che recapita un report in un momento specifico o in risposta a un evento e in un formato file specificato. Ad esempio, è possibile salvare il report MonthlySales.rdl ogni mercoledì come documento di Microsoft Word in una condivisione file. Le sottoscrizioni possono essere usate per pianificare e automatizzare il recapito di un report e con un set specifico di valori di parametri di report.  
@@ -33,7 +33,7 @@ ms.locfileid: "50031880"
   
  ![esempio di flusso di sottoscrizione ssrs](../../reporting-services/subscriptions/media/ssrs-subscription-example-flow.png "esempio di flusso di sottoscrizione ssrs")  
   
- Le sottoscrizioni non sono disponibili in tutte le edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per un elenco delle funzionalità supportate dalle edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [Funzionalità supportate dalle edizioni di SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
+ Le sottoscrizioni non sono disponibili in tutte le edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per un elenco delle funzionalità supportate dalle edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [Edizioni e funzionalità supportate di SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md).  
   
  **Contenuto dell'argomento:**  
   

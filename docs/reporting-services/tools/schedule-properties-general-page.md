@@ -10,12 +10,12 @@ f1_keywords:
 ms.assetid: 20e43966-6caf-4972-a2e2-0d9131ac8f51
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ecd386a4fe3004e36d5039a2fe8e98dfcc185033
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 907e3eaa4852979797395317a2db93276c551965
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47816509"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52712152"
 ---
 # <a name="schedule-properties-general-page"></a>Proprietà pianificazione (pagina Generale)
   Usare la pagina [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] in [!INCLUDE[ssManStudioFull_md](../../includes/ssmanstudiofull-md.md)] per visualizzare o modificare una pianificazione condivisa. È possibile utilizzare le pianificazioni condivise al posto di di pianificazioni specifiche di report o sottoscrizioni. Le modifiche alla pianificazione vengono applicate dopo aver salvato la pianificazione stessa. La modifica di una pianificazione non ha effetto sui processi attualmente in corso. Se si modifica una pianificazione mentre è in uso, tutte le sottoscrizioni e i report in esecuzione attivati da tale pianificazione verranno portati a termine.  
@@ -31,7 +31,7 @@ ms.locfileid: "47816509"
  4) Fare clic con il pulsante destro del mouse su una pianificazione condivisa e selezionare **Proprietà**.  
   
 > [!NOTE]  
->Questa funzionalità non è disponibile in ogni edizione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e questa pagina non è visualizzata quando si esegue un'edizione che non dispone di questa funzionalità. Per un elenco delle funzionalità supportate dalle edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [Funzionalità supportate dalle edizioni di SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
+>Questa funzionalità non è disponibile in ogni edizione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e questa pagina non è visualizzata quando si esegue un'edizione che non dispone di questa funzionalità. Per un elenco delle funzionalità supportate dalle edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [Edizioni e funzionalità supportate di SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md).  
   
 ## <a name="options"></a>Opzioni  
  **Nome**  

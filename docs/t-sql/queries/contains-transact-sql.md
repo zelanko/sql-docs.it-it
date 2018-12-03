@@ -35,12 +35,12 @@ ms.assetid: 996c72fc-b1ab-4c96-bd12-946be9c18f84
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 146802c657155f751b7121723d95fa7d78cb98e3
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: adb6c91dfdbec4bc9e09d83f2adbf0aba6dab998
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51704030"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52531726"
 ---
 # <a name="contains-transact-sql"></a>CONTAINS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -106,9 +106,9 @@ CONTAINS (
 <custom_proximity_term> ::=   
   NEAR (   
      {  
-        { <simple_term> | <prefix_term> } [ ,…n ]  
+        { <simple_term> | <prefix_term> } [ ,...n ]  
      |  
-        ( { <simple_term> | <prefix_term> } [ ,…n ] )   
+        ( { <simple_term> | <prefix_term> } [ ,...n ] )   
       [, <maximum_distance> [, <match_order> ] ]  
      }  
        )   
@@ -293,10 +293,10 @@ CONTAINS(column_name, 'NEAR((AA,BB,CC),5)')
  \<match_order> accetta uno dei valori seguenti:  
   
  **TRUE**  
- Applica l'ordine specificato all'interno dei termini. Ad esempio, `NEAR(A,B)` corrisponderebbe solo a `A … B`.  
+ Applica l'ordine specificato all'interno dei termini. Ad esempio, `NEAR(A,B)` corrisponderebbe solo a `A ... B`.  
   
  **FALSE**  
- Ignora l'ordine specificato. Ad esempio, `NEAR(A,B)` corrisponderebbe sia a `A … B` sia a `B … A`.  
+ Ignora l'ordine specificato. Ad esempio, `NEAR(A,B)` corrisponderebbe sia a `A ... B` sia a `B ... A`.  
   
  Impostazione predefinita.  
   

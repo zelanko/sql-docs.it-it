@@ -17,12 +17,12 @@ ms.assetid: abf0fa24-f199-4273-9a1a-e8787ac9bee1
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6a18484c470c3485fca750e1f6986702a9c37ff7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 975423cab6fb7b00baf279a9a4186336120e08c2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47612456"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52537917"
 ---
 # <a name="remote-servers"></a>Server remoti
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ ms.locfileid: "47612456"
 >  Se possibile, usare l'autenticazione di Windows.  
   
 ### <a name="remote-server-security-example"></a>Esempio di sicurezza del server remoto  
- Considerare queste installazioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : **serverSend** e **serverReceive**. **serverReceive** viene configurata per eseguire il mapping di un account di accesso in ingresso da **serverSend**, denominato **Sales_Mary**, a un account di accesso autenticato di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in **serverReceive**, denominato **Alice**. Viene eseguito il mapping di un altro account di accesso in ingresso da **serverSend**, denominato **Joe**, a un account di accesso autenticato [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in **serverReceive***,* denominato **Joe**.  
+ Considerare queste installazioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : **serverSend** e **serverReceive**. **serverReceive** viene configurata per eseguire il mapping di un account di accesso in ingresso da **serverSend**, denominato **Sales_Mary**, a un account di accesso autenticato di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in **serverReceive**, denominato **Alice**. Viene eseguito il mapping di un altro account di accesso in ingresso da **serverSend**, denominato **Joe**, a un account di accesso autenticato di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in **serverReceive**_,_ denominato **Joe**.  
   
  Il codice di esempio di Transact-SQL seguente configura `serverSend` per l'esecuzione di RPC su `serverReceive`.  
   
