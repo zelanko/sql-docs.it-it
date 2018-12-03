@@ -20,12 +20,12 @@ ms.assetid: b6d07386-7c6f-4cc6-be32-93289adbd3d6
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 7b68a59129df88c1ea40736ec90a73d0b7e1c5ae
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 5a3b7faea7ae15a1927309bcb0463a10efe74bd1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51673620"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52534635"
 ---
 # <a name="file-restores-simple-recovery-model"></a>Ripristini di file (modello di recupero con registrazione minima)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -69,13 +69,13 @@ ms.locfileid: "51673620"
   
  La sequenza di ripristino contiene solo due istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] . La prima istruzione esegue il ripristino di un file secondario, il file `A`, che viene ripristinato utilizzando WITH NORECOVERY. La seconda operazione ripristina altri due file, i file `B` e `C` , che vengono ripristinati utilizzando WITH RECOVERY da un diverso dispositivo di backup:  
   
-1.  RESTORE DATABASE *database* FILE **=***nome_file_A*  
+1.  RESTORE DATABASE *database* FILE **=**_nome_file_A_  
   
      FROM *backup_file_A*  
   
      WITH NORECOVERY **;**  
   
-2.  RESTORE DATABASE *database* FILE **=***nome_file_B***,***nome_file_C*  
+2.  RESTORE DATABASE *database* FILE **=**_nome_file_B_**,**_nome_file_C_  
   
      FROM *backup_dei_file_B_e_C*  
   

@@ -13,12 +13,12 @@ ms.assetid: c83d802c-e84e-4458-b3ca-173d9ba32f73
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 5a99c6f0f1e583afe023823ab2e46e3d142a5e7b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 08da0ac24a7999235efc6150d313ca2bb2ae0ea7
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47633789"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52502201"
 ---
 # <a name="restore-the-master-database-transact-sql"></a>Ripristinare il database master (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "47633789"
  Nell'esempio seguente viene ripristinato il database `master` nell'istanza predefinita del server. In questo esempio si presuppone che l'istanza del server sia già in esecuzione in modalità utente singolo. Viene avviata l'utilità `sqlcmd` ed eseguita un'istruzione `RESTORE DATABASE` che ripristina un backup completo del database `master` da un dispositivo disco: `Z:\SQLServerBackups\master.bak`.  
   
 > [!NOTE]  
->  Per un'istanza denominata, il comando **sqlcmd** deve specificare l'opzione *-S***\<NomeComputer>*\\*\<<NomeIstanza*.  
+>  Per un'istanza denominata, il comando **sqlcmd** deve specificare l'opzione **-S**_\<NomeComputer>_\\*\<NomeIstanza>*.  
   
 ```  
   

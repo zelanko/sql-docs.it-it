@@ -14,12 +14,12 @@ ms.assetid: d0de3f1f-4887-47fb-bacf-46aaad74c4be
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: a445496943b32fff113ae4eebeff23dc375ee323
-ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
+ms.openlocfilehash: 8ba0ec37bed5b47f0a78d78905f390eafda52ff9
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50051103"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52530409"
 ---
 # <a name="provision-subscriptions-and-alerts-for-ssrs-service-applications"></a>Provisioning di sottoscrizioni e avvisi per le applicazioni di servizio SSRS
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Le sottoscrizioni e gli avvisi dati richiedono SQL Server Agent e la configurazione di autorizzazioni per SQL Server Agent. Se vengono visualizzati messaggi di errore indicanti che si richiede SQL Server Agent sebbene sia in esecuzione, aggiornare o verificare le autorizzazioni. L'ambito di questo argomento è [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in modalità SharePoint e vengono descritti tre modi per aggiornare le autorizzazioni di SQL Server Agent con sottoscrizioni di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Le credenziali utilizzata nei passaggi di questo argomento devono disporre delle autorizzazioni sufficienti per concedere autorizzazioni di esecuzione a RSExecRole per gli oggetti nell'applicazione di servizio, il database msdb e database master.  
@@ -79,9 +79,9 @@ ms.locfileid: "50051103"
   
 4.  Aggiornare il seguente cmdlet di PowerShell sostituendo il nome del database del server di report, l'account del pool di applicazioni e il percorso dell'istruzione.  
   
-     **Sintassi del cmdlet:** `Get-SPRSDatabaseRightsScript –DatabaseName <ReportingServices database name> -UserName <app pool account> -IsWindowsUser | Out-File <path of statement>`  
+     **Sintassi del cmdlet:** `Get-SPRSDatabaseRightsScript -DatabaseName <ReportingServices database name> -UserName <app pool account> -IsWindowsUser | Out-File <path of statement>`  
   
-     **Cmdlet di esempio:** `Get-SPRSDatabaseRightsScript –DatabaseName ReportingService_46fd00359f894b828907b254e3f6257c –UserName “NT AUTHORITY\NETWORK SERVICE” –IsWindowsUser | Out-File c:\SQLServerAgentrights.sql`  
+     **Cmdlet di esempio:** `Get-SPRSDatabaseRightsScript -DatabaseName ReportingService_46fd00359f894b828907b254e3f6257c -UserName "NT AUTHORITY\NETWORK SERVICE" -IsWindowsUser | Out-File c:\SQLServerAgentrights.sql`  
   
 ## <a name="using-the-transact-sql-script"></a>Utilizzo dello script Transact-SQL  
  Le seguenti procedure possono essere utilizzate con gli script scaricati dalla pagina di provisioning o creati tramite PowerShell.  

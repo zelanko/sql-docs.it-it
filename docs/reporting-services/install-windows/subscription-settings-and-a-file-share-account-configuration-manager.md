@@ -9,12 +9,12 @@ f1_keywords:
 ms.assetid: fefa7bdb-b5f2-4db7-b91c-b58869279f3c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 61f8db13b3984825d37924a248ffebb31e2a5613
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: e0dd324cfbe9fbac48c85c31cea20887d650014c
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813114"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52402115"
 ---
 # <a name="subscription-settings-and-a-file-share-account-configuration-manager"></a>Impostazioni di sottoscrizione e un account di condivisione file (Gestione configurazione)
   Usare la pagina **Impostazioni sottoscrizione** di Gestione configurazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] per configurare un account di condivisione file per i server di report in modalità nativa e le sottoscrizioni con recapito tramite condivisione file. L'account di condivisione file consente di usare un singolo set di credenziali in più sottoscrizioni che recapitano i report a una condivisione file. Quando è necessario modificare le credenziali, è possibile configurare la modifica per l'account di condivisione file e non è necessario aggiornare ogni sottoscrizione.  
@@ -43,7 +43,7 @@ ms.locfileid: "51813114"
 > [!IMPORTANT]
 > L'account del servizio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] controlla il recapito delle sottoscrizioni e interagisce con l'account usato per le sottoscrizioni con recapito tramite condivisione file. Le funzionalità di sicurezza Windows non consentono di usare in combinazione 1) l'account del servizio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e 2) l'account usato per gli account di condivisione file. Ad esempio, se un account di sistema operativo predefinito viene usato per l'account di condivisione file, l'account del servizio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] deve essere un altro account di servizio con autorizzazioni di rappresentazione. Se sono configurati un account di condivisione file e una password espliciti, l'account di condivisione file deve avere il diritto di accesso al computer che esegue il servizio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Se l'account di condivisione file non ha le autorizzazioni necessarie, le sottoscrizioni che usano l'account di condivisione file avranno esito negativo con un messaggio di errore simile al seguente:  
 >   
->  `“Failure writing file {file} : An impersonation error occurred using the security context of the current user.”`  
+>  `"Failure writing file {file} : An impersonation error occurred using the security context of the current user."`  
   
 ## <a name="powershell-sample-to-audit-use-of-the-file-share-account"></a>Esempio di PowerShell per controllare l'uso dell'account di condivisione file  
  Eseguire lo script di Windows PowerShell seguente per elencare tutte le sottoscrizioni di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] configurate per l'uso dell' **account di condivisione file**. Sostituire `SERVERNAME` con un valore appropriato per il server di report in uso.  

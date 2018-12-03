@@ -13,12 +13,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 402a06ff3bb81231b99bb980390d9d4e1151074b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 426eefeb5a2c2ac04f201e9d5e4fdb4e74f46a87
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47821739"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52397453"
 ---
 # <a name="audit-add-db-user-event-class"></a>Audit Add DB User - classe di evento
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "47821739"
 |**ColumnPermissions**|**int**|Indicatore dell'impostazione o meno di un'autorizzazione per la colonna. Analizzare il testo dell'istruzione per determinare con esattezza quali autorizzazioni sono state impostate per quali colonne.|44|Sì|  
 |**DatabaseID**|**int**|ID del database specificato nell'istruzione di *database* USE oppure il database predefinito se per un'istanza specifica l'istruzione di *database* USE non è stata eseguita. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] visualizza il nome del database se la colonna di dati **ServerName** è acquisita nella traccia e il server è disponibile. Determinare il valore per un database utilizzando la funzione DB_ID.|3|Sì|  
 |**DatabaseName**|**nvarchar**|Nome del database cui il nome utente viene aggiunto o dal quale viene rimosso.|35|Sì|  
-|**DBUserName**|**nvarchar**|Nome utente dell'emittente nel database.|40|Sì|  
+|**DBUserName**|**nvarchar**|Nome dell'utente che ha eseguito l'istruzione nel database.|40|Sì|  
 |**EventClass**|**int**|Tipo di evento = 109.|27|no|  
 |**EventSequence**|**int**|Sequenza di un determinato evento all'interno della richiesta.|51|no|  
 |**EventSubClass**|**int**|Tipo di sottoclasse di evento.<br /><br /> 1=Aggiungi<br /><br /> 2=Elimina<br /><br /> 3=Concedi accesso al database<br /><br /> 4=Revoca accesso al database|21|Sì|  

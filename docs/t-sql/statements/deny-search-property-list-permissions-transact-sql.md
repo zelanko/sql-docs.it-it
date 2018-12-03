@@ -19,12 +19,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3692d7dfb2f6d4c6f672ba1b18d7d47f1fae08dd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 18f3887d2cfa96c0a7c132cfe8396300b3143f06
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47836520"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52519766"
 ---
 # <a name="deny-search-property-list-permissions-transact-sql"></a>Autorizzazioni per l'elenco delle proprietà di ricerca DENY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -47,7 +47,7 @@ DENY permission [ ,...n ] ON
  *permission*  
  Nome di un'autorizzazione. I mapping validi tra le autorizzazioni e le entità a protezione diretta sono descritti nella sezione "Osservazioni" più avanti in questo argomento.  
   
-ON SEARCH PROPERTY LIST **::***search_property_list_name*  
+ON SEARCH PROPERTY LIST **::**_search_property_list_name_  
  Specifica l'elenco delle proprietà di ricerca per cui viene negata l'autorizzazione. Il qualificatore di ambito :: è obbligatorio.  
   
 *database_principal*  

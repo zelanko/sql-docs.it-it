@@ -16,12 +16,12 @@ ms.assetid: 01b7fbca-5181-4d47-9f75-7f25af6b40d2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b735de61b88a5b33c6dd8174a3e0bd6cf3b9dece
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b063396b2dc55636f85b6884206c1a5a1d6e6109
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47628659"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52509217"
 ---
 # <a name="implement-a-lookup-in-no-cache-or-partial-cache-mode"></a>Implementazione di una ricerca in modalità No Cache o Partial Cache
   È possibile configurare la trasformazione Ricerca per utilizzare la modalità Partial Cache o No Cache:  
@@ -61,11 +61,11 @@ ms.locfileid: "47628659"
   
     -   Fare clic su **Usa i risultati di una query SQL**e quindi compilare una query nella finestra **Comando SQL** .  
   
-         -oppure-  
+         oppure  
   
          Fare clic su **Compila query** per compilare una query usando gli strumenti grafici forniti da **Generatore query** .  
   
-         -oppure-  
+         oppure  
   
          Fare clic su **Sfoglia** per importare un'istruzione SQL da un file.  
   

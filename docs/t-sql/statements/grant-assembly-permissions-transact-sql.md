@@ -17,12 +17,12 @@ ms.assetid: dce1e027-f859-4967-bdda-16a95ae460d0
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 1b1c6938730ff21e70790dddbcb20653878c53e2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6d5c434bc9bc73b58b9b7f2cc59d32f413eef8f9
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47678979"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52528998"
 ---
 # <a name="grant-assembly-permissions-transact-sql"></a>GRANT - autorizzazioni per assembly (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ GRANT { permission [ ,...n ] } ON ASSEMBLY :: assembly_name
  *permission*  
  Specifica un'autorizzazione che può essere concessa per un assembly. Vedere l'elenco riportato di seguito.  
   
- ON ASSEMBLY **::***assembly_name*  
+ ON ASSEMBLY **::**_assembly_name_  
  Specifica l'assembly per cui vengono concesse le autorizzazioni. Il qualificatore di ambito "::" è obbligatorio.  
   
  *database_principal*  

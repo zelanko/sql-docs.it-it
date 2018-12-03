@@ -11,12 +11,12 @@ ms.assetid: fd4ddeb8-0cb6-441b-9704-03575c07020f
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 615aa894b7ceb07d471c281eb6be24db9c0e3a43
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 675379c6c182ad72ecdeefe09423fe981cf67b41
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51657571"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52520518"
 ---
 # <a name="lesson-2-connecting-from-another-computer"></a>Lezione 2: Connessione da un altro computer
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -124,10 +124,10 @@ Se il servizio [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Browser è
   
 2.  Nella finestra di dialogo **Connetti al server** confermare l'opzione **Motore di database** nella casella **Tipo server** .  
   
-3.  Nella casella **Nome server** digitare **tcp:** per specificare il protocollo, quindi immettere il nome del computer, una virgola e il numero di porta. Per la connessione all'istanza predefinita viene automaticamente usata la porta 1433, la quale può quindi essere omessa. Digitare pertanto **tcp:***<nome_computer>*. In questo esempio di istanza denominata digitare **tcp:***<nome_computer>***,49172**.  
+3.  Nella casella **Nome server** digitare **tcp:** per specificare il protocollo, quindi immettere il nome del computer, una virgola e il numero di porta. Per la connessione all'istanza predefinita viene automaticamente usata la porta 1433, la quale può quindi essere omessa. Digitare pertanto **tcp:**_<nome_computer>_. In questo esempio di istanza denominata digitare **tcp:**_<nome_computer>_**,49172**.  
   
     > [!NOTE]  
-    > Se si omette **tcp:** nella casella **Nome server** , il client eseguirà un tentativo con tutti i protocolli abilitati, nell'ordine specificato nella configurazione client.  
+    > Se si omette **tcp:** nella casella **Nome server**, il client eseguirà un tentativo con tutti i protocolli abilitati, nell'ordine specificato nella configurazione client.  
   
 4.  Nella casella **Autenticazione** confermare l'opzione **Autenticazione di Windows**e quindi fare clic su **Connetti**.  
   

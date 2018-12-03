@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 10ae54e7-0e8a-4dff-995d-05516c51d076
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 157d883bf9b648704452783ccee730cd5a399d88
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d187de9f11995762599bf8c7b95eb1813c811e1e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47731469"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52517400"
 ---
 # <a name="add-a-filter-report-builder-and-ssrs"></a>Aggiungere un filtro (Generatore report e SSRS)
   Aggiungere un filtro a un set di dati, un'area dati o un gruppo per includere o escludere valori specifici nei calcoli o nella visualizzazione. In fase di esecuzione, i filtri vengono applicati prima al set di dati, poi all'area dati e infine al gruppo procedendo dall'alto verso il basso per le gerarchie di gruppi. In una tabella, una matrice o un elenco i filtri per gruppi di righe, gruppi di colonne e gruppi adiacenti vengono applicati in modo indipendente. Anche in un grafico i filtri per gruppi di categorie e gruppi di serie vengono applicati in modo indipendente.  
@@ -31,7 +31,7 @@ ms.locfileid: "47731469"
   
 1.  Aprire un report in visualizzazione **Progettazione** .  
   
-2.  Selezionare l'area dati nell'area di progettazione e quindi fare clic con il pulsante destro del mouse su *\<area dati>***Proprietà**. Per un misuratore, selezionare **Proprietà pannello del misuratore**. Viene visualizzata la finestra di dialogo *\<area dati>***Proprietà**.  
+2.  Selezionare l'area dati nell'area di progettazione e quindi fare clic con il pulsante destro del mouse su _\<area dati>_**Proprietà**. Per un misuratore, selezionare **Proprietà pannello del misuratore**. Viene visualizzata la finestra di dialogo _\<area dati>_**Proprietà**.  
   
     > [!NOTE]  
     >  In un'area dati Tablix fare clic con il pulsante destro del mouse sulla cella d'angolo oppure sull'handle di una riga o colonna e quindi scegliere **Proprietà Tablix**.  

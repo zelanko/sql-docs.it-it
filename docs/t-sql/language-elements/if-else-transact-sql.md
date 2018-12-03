@@ -22,17 +22,20 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 32984277ce15362335bcf528e0946914986ba382
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6851ae0f1ff4f5e65ce74db7f351deb3127a1a23
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47793619"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52515211"
 ---
 # <a name="ifelse-transact-sql"></a>IF...ELSE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Impone le condizioni per l'esecuzione di un'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)]. L'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] che segue una parola chiave IF e le relative condizioni viene eseguita se le condizioni vengono soddisfatte, ovvero quando l'espressione booleana restituisce TRUE. La parola chiave facoltativa ELSE introduce un'altra istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] eseguita quando non viene soddisfatta la condizione IF, ovvero quando l'espressione booleana restituisce FALSE.  
+> [!div class="nextstepaction"]
+> [Contribuisci a migliorare la documentazione di SQL Server](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+
+Impone le condizioni per l'esecuzione di un'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)]. L'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] che segue una parola chiave IF e le relative condizioni viene eseguita se le condizioni vengono soddisfatte, ovvero quando l'espressione booleana restituisce TRUE. La parola chiave facoltativa ELSE introduce un'altra istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] eseguita quando non viene soddisfatta la condizione IF, ovvero quando l'espressione booleana restituisce FALSE.  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -71,7 +74,7 @@ ELSE
  Per altri esempi, vedere [ELSE &#40;IF...ELSE&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/else-if-else-transact-sql.md).  
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- L'esempio seguente usa `IF…ELSE` per determinare quale delle due risposte visualizzare all'utente, in base al peso di un elemento nella tabella `DimProduct`.  
+ L'esempio seguente usa `IF...ELSE` per determinare quale delle due risposte visualizzare all'utente, in base al peso di un elemento nella tabella `DimProduct`.  
   
 ```  
 -- Uses AdventureWorksDW  

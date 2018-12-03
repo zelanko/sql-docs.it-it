@@ -19,12 +19,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ddb0f0da5f44f765733ea01dceac2d13e647221d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 06e42c1acf4493019dc626f30d032b70519c346f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47748759"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52540827"
 ---
 # <a name="grant-search-property-list-permissions-transact-sql"></a>Autorizzazioni per l'elenco delle proprietà di ricerca GRANT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -48,7 +48,7 @@ GRANT permission [ ,...n ] ON
  *permission*  
  Nome di un'autorizzazione. I mapping validi tra le autorizzazioni e le entità a protezione diretta sono descritti nella sezione "Osservazioni" più avanti in questo argomento.  
   
- ON SEARCH PROPERTY LIST **::***search_property_list_name*  
+ ON SEARCH PROPERTY LIST **::**_search_property_list_name_  
  Specifica l'elenco delle proprietà di ricerca per cui viene concessa l'autorizzazione. Il qualificatore di ambito **::** è obbligatorio.  
   
  **Per visualizzare gli elenchi delle proprietà di ricerca esistenti**  

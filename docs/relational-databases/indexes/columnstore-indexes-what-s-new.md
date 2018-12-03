@@ -11,12 +11,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4bb8822d29e2dd3270d5947e62bab6fe498f86c2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5fd38e30039ee174ed2558a88c1ddc1e3785238d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47629509"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514554"
 ---
 # <a name="columnstore-indexes---what39s-new"></a>Indici columnstore - Novità
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -78,7 +78,7 @@ ms.locfileid: "47629509"
   
 -   Gli indici columnstore supportano il livello di isolamento dello snapshot Read Committed e l'isolamento dello snapshot. Questo consente le query di analisi coerente transazionale senza alcun blocco.  
   
--   Columnstore supporta la deframmentazione degli indici rimuovendo le righe eliminate senza necessità di ricompilare l'indice in modo esplicito. L'istruzione `ALTER INDEX … REORGANIZE` rimuove dal columnstore le righe eliminate in base a un criterio definito internamente, con un'operazione online  
+-   Columnstore supporta la deframmentazione degli indici rimuovendo le righe eliminate senza necessità di ricompilare l'indice in modo esplicito. L'istruzione `ALTER INDEX ... REORGANIZE` rimuove dal columnstore le righe eliminate in base a un criterio definito internamente, con un'operazione online  
   
 -   Gli indici columnstore sono accessibili su una replica secondaria leggibile AlwaysOn. È possibile migliorare le prestazioni per l'analisi operativa ripartendo le query di analisi su una replica secondaria AlwaysOn.  
   

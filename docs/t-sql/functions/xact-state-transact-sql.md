@@ -24,12 +24,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d74e1ebfb3f1d8e2bc36c2a4bd0432a830934b5d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f72bda649e317b5c08638f959e6b7600aac72a88
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47799339"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52530527"
 ---
 # <a name="xactstate-transact-sql"></a>XACT_STATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -59,7 +59,7 @@ XACT_STATE()
  Per verificare se la richiesta corrente include una transazione utente attiva, è possibile usare entrambe le funzioni XACT_STATE e @@TRANCOUNT. Non è possibile usare @@TRANCOUNT per determinare se la transazione è stata classificata come transazione di cui non è possibile eseguire il commit. Non è possibile utilizzare XACT_STATE per determinare se esistono transazioni nidificate.  
   
 ## <a name="examples"></a>Esempi  
- Nell'esempio seguente viene utilizzata la funzione `XACT_STATE` nel blocco `CATCH` di un costrutto `TRY…CATCH` per determinare se è necessario eseguire il commit o il rollback di una transazione. Poiché il valore di `SET XACT_ABORT` è `ON`, l'errore di violazione del vincolo attiva lo stato di blocco per la transazione.  
+ Nell'esempio seguente viene utilizzata la funzione `XACT_STATE` nel blocco `CATCH` di un costrutto `TRY...CATCH` per determinare se è necessario eseguire il commit o il rollback di una transazione. Poiché il valore di `SET XACT_ABORT` è `ON`, l'errore di violazione del vincolo attiva lo stato di blocco per la transazione.  
   
 ```  
 USE AdventureWorks2012;  

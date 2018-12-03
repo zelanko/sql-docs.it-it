@@ -18,12 +18,12 @@ ms.assetid: 564e3500-c567-43dc-993b-9ab50e99cf3f
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: d390015877bc930ec70b2b858e077baa5ce920fd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b88fa209dba54482de1e113b7b7ee81528b43ab8
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47650719"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52519778"
 ---
 # <a name="deny-type-permissions-transact-sql"></a>DENY - autorizzazioni per tipi (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ DENY permission  [ ,...n ] ON TYPE :: [ schema_name . ] type_name
  *permission*  
  Specifica un'autorizzazione che può essere negata per un tipo. Per un elenco delle autorizzazioni, vedere la sezione Osservazioni di seguito in questo argomento.  
   
- ON TYPE **::** [ *schema_name***.** ] *type_name*  
+ ON TYPE **::** [ _schema_name_**.** ] *type_name*  
  Specifica il tipo per cui viene negata l'autorizzazione. Il qualificatore di ambito (**::**) è obbligatorio. Se si omette *schema_name*, viene usato lo schema predefinito. Se si specifica *schema_name*, il qualificatore di ambito dello schema (**.**) è obbligatorio.  
   
  TO \<database_principal>  
