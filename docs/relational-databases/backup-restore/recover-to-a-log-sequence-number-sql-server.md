@@ -22,12 +22,12 @@ ms.assetid: f7b3de5b-198d-448d-8c71-1cdd9239676c
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 479aabd0ca4edfc7529d0a9a1d47b075a7e1cab2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 70f932e1372fb3cb185167b778b9f280dbbee816
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47694779"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52540286"
 ---
 # <a name="recover-to-a-log-sequence-number-sql-server"></a>Recupero fino a un numero di sequenza del file di log (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -65,11 +65,11 @@ ms.locfileid: "47694779"
 ## <a name="transact-sql-syntax-for-restoring-to-an-lsn"></a>Sintassi Transact-SQL per il ripristino fino a un numero di sequenza del file di log (LSN)  
  Un'istruzione [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) consente di arrestare il processo esattamente in corrispondenza dell'LSN o immediatamente prima, come illustrato di seguito:  
   
--   Usare la clausola WITH STOPATMARK **='** lsn:*<numero_lsn>***'**, dove lsn:*\<Numerolsn>* è una stringa che specifica che il punto di recupero corrisponde al record di log contenente l'LSN specificato.  
+-   Usare la clausola WITH STOPATMARK **='** lsn:_<numero_lsn>_**'**, dove lsn:*\<Numerolsn>* è una stringa che specifica che il punto di recupero corrisponde al record di log contenente l'LSN specificato.  
   
      STOPATMARK esegue il rollforward al numero di sequenza del file di log (LSN) includendo anche tale record del log.  
   
--   Usare la clausola WITH STOPBEFOREMARK **='** lsn:*<numero_lsn>***'**, dove lsn:*\<Numerolsn>* è una stringa che specifica che il punto di recupero corrisponde al record di log immediatamente precedente a quello contenente l'LSN specificato.  
+-   Usare la clausola WITH STOPBEFOREMARK **='** lsn:_<numero_lsn>_**'**, dove lsn:*\<Numerolsn>* è una stringa che specifica che il punto di recupero corrisponde al record di log immediatamente precedente a quello contenente l'LSN specificato.  
   
      Tramite STOPBEFOREMARK viene eseguito il rollforward fino all'LSN escludendo tale record di log.  
   

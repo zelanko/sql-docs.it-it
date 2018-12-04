@@ -13,12 +13,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: e267e953b1a5d0401f55f9b569aa5381c392aba8
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 8df4a1e06e0bb1d7fbc4f4352c5c650be029f980
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51031459"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52532446"
 ---
 # <a name="ibcpsession2bcpsetbulkmode"></a>IBCPSession2::BCPSetBulkMode
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -68,7 +68,7 @@ HRESULT BCPSetBulkMode (
 |**E_OUTOFMEMORY**|Errore di memoria insufficiente.|  
   
 ## <a name="remarks"></a>Remarks  
- IBCPSession2::BCPSetBulkMode utilizzabile da copiare da una query o una tabella. Quando si utilizza IBCPSession2::BCPSetBulkMode per eseguire una copia bulk da un'istruzione di query, è necessario chiamare tale metodo prima di `IBCPSession::BCPControl(BCP_OPTIONS_HINTS, …)` per specificare l'istruzione di query.  
+ IBCPSession2::BCPSetBulkMode utilizzabile da copiare da una query o una tabella. Quando si utilizza IBCPSession2::BCPSetBulkMode per eseguire una copia bulk da un'istruzione di query, è necessario chiamare tale metodo prima di `IBCPSession::BCPControl(BCP_OPTIONS_HINTS, ...)` per specificare l'istruzione di query.  
   
  È necessario evitare di combinare la sintassi di chiamata RPC con la sintassi di query batch (ad esempio `{rpc func};SELECT * from Tbl`) in un unico testo di comando.  Ciò causerà ICommandPrepare:: Prepare restituire un errore e non consentono il recupero dei metadati. Utilizzare la sintassi ODBC CALL (ad esempio `{call func}; SELECT * from Tbl`) se è necessario combinare l'esecuzione della stored procedure e una query batch in un singolo testo di comando.  
   
@@ -76,10 +76,10 @@ HRESULT BCPSetBulkMode (
   
 |Proprietà|Descrizione|  
 |--------------|-----------------|  
-|BCP_OUT_CHARACTER_MODE|Specifica la modalità di output carattere.<br /><br /> Corrisponde all'opzione-c in BCP. EXE e a ibcpsession:: BCPColFmt con *eUserDataType* impostata su **BCP_TYPE_SQLCHARACTER**.|  
-|BCP_OUT_WIDE_CHARACTER_MODE|Specifica la modalità di output Unicode.<br /><br /> Corrisponde all'opzione-w in BCP. File EXE e ibcpsession:: BCPColFmt con *eUserDataType* impostata su **BCP_TYPE_SQLNCHAR**.|  
-|BCP_OUT_NATIVE_TEXT_MODE|Specifica tipi nativi per i tipi non carattere e Unicode per i tipi carattere.<br /><br /> Corrisponde all'opzione-N in BCP. File EXE e ibcpsession:: BCPColFmt con *eUserDataType* impostata su **BCP_TYPE_SQLNCHAR** se il tipo di colonna è una stringa oppure **BCP_TYPE_DEFAULT** se non è una stringa.|  
-|BCP_OUT_NATIVE_MODE|Specifica tipi di database nativi.<br /><br /> Corrisponde all'opzione-n in BCP. File EXE e ibcpsession:: BCPColFmt con *eUserDataType* impostata su **BCP_TYPE_DEFAULT**.|  
+|BCP_OUT_CHARACTER_MODE|Specifica la modalità di output carattere.<br /><br /> Corrisponde all'opzione - c in BCP. EXE e a ibcpsession:: BCPColFmt con *eUserDataType* impostata su **BCP_TYPE_SQLCHARACTER**.|  
+|BCP_OUT_WIDE_CHARACTER_MODE|Specifica la modalità di output Unicode.<br /><br /> Corrisponde all'opzione -w in BCP. File EXE e ibcpsession:: BCPColFmt con *eUserDataType* impostata su **BCP_TYPE_SQLNCHAR**.|  
+|BCP_OUT_NATIVE_TEXT_MODE|Specifica tipi nativi per i tipi non carattere e Unicode per i tipi carattere.<br /><br /> Corrisponde all'opzione -N in BCP. File EXE e ibcpsession:: BCPColFmt con *eUserDataType* impostata su **BCP_TYPE_SQLNCHAR** se il tipo di colonna è una stringa oppure **BCP_TYPE_DEFAULT** se non è una stringa.|  
+|BCP_OUT_NATIVE_MODE|Specifica tipi di database nativi.<br /><br /> Corrisponde all'opzione - n in BCP. File EXE e ibcpsession:: BCPColFmt con *eUserDataType* impostata su **BCP_TYPE_DEFAULT**.|  
   
  È possibile chiamare ibcpsession:: Bcpcontrol e IBCPSession2::BCPSetBulkMode ibcpsession:: Bcpcontrol opzioni che non siano in conflitto con IBCPSession2::BCPSetBulkMode. Ad esempio, è possibile chiamare ibcpsession:: Bcpcontrol con **BCP_OPTION_FIRST** e IBCPSession2::BCPSetBulkMode.  
   
@@ -102,7 +102,7 @@ BCPReadFmt();
   
 ```cpp  
 BCPInit(NULL, "dataFile", "errorFile", BCP_DIRECTION_OUT);  
-BCPControl(BCP_OPTION_HINTS, "select …");  
+BCPControl(BCP_OPTION_HINTS, "select ...");  
 BCPSetBulkMode();  
 ```  
   
@@ -123,7 +123,7 @@ BCPColFmt();
 BCPInit(NULL, "dataFile", "errorFile", BCP_DIRECTION_OUT);  
 BCPControl(BCP_OPTION_DELAYREADFMT, true);  
 BCPSetBulkMode();  
-BCPControl(BCP_OPTION_HINTS, "select …");  
+BCPControl(BCP_OPTION_HINTS, "select ...");  
 BCPReadFmt();  
 ```  
   

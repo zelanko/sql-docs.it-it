@@ -11,12 +11,12 @@ ms.assetid: 52205f03-ff29-4254-bfa8-07cced155c86
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 949ae2e19279db895ca9bca1441f06c2b2d8948f
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 7273baec814905d86e431c5a6a8f13313b9743e4
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51604101"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52536655"
 ---
 # <a name="using-azure-active-directory-with-the-odbc-driver"></a>Uso di Azure Active Directory con il driver ODBC
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -88,13 +88,13 @@ La finestra di dialogo dei messaggi di richiesta visualizzato dal SQLDriverConne
 Queste opzioni corrispondono alle stesse cinque disponibile nella configurazione del DSN dell'interfaccia utente precedente.
 
 ### <a name="example-connection-strings"></a>Esempi di stringhe di connessione
-1. Autenticazione di SQL Server – sintassi legacy. Certificato server non viene convalidato e viene utilizzata la crittografia solo se il server lo impone. Il nome utente e la password viene passata nella stringa di connessione.
+1. Autenticazione di SQL Server - sintassi legacy. Certificato server non viene convalidato e viene utilizzata la crittografia solo se il server lo impone. Il nome utente e la password viene passata nella stringa di connessione.
 `server=Server;database=Database;UID=UserName;PWD=Password;`
-2. Autenticazione SQL: nuova sintassi. Il client richiede la crittografia (il valore predefinito `Encrypt` viene `true`) e il certificato del server ottiene convalidato, indipendentemente dall'impostazione di crittografia (a meno che non `TrustServerCertificate` è impostata su `true`). Il nome utente e la password viene passata nella stringa di connessione.
+2. Autenticazione di SQL - nuova sintassi. Il client richiede la crittografia (il valore predefinito `Encrypt` viene `true`) e il certificato del server ottiene convalidato, indipendentemente dall'impostazione di crittografia (a meno che non `TrustServerCertificate` è impostata su `true`). Il nome utente e la password viene passata nella stringa di connessione.
  `server=Server;database=Database;UID=UserName;PWD=Password;Authentication=SqlPassword;`
-3. L'autenticazione di Windows (Kerberos in Linux e macOS) integrata tramite SSPI (per SQL Server o SQL IaaS) – sintassi corrente. Certificato server non viene convalidato, a meno che non viene utilizzata la crittografia. 
+3. L'autenticazione di Windows (Kerberos in Linux e macOS) integrata tramite SSPI (per SQL Server o IaaS di SQL) - sintassi corrente. Certificato server non viene convalidato, a meno che non viene utilizzata la crittografia. 
 `server=Server;database=Database;Trusted_Connection=yes;`
-4. (_Solo i driver di Windows_.) L'autenticazione Windows integrata tramite SSPI (se il database di destinazione è in SQL Server o SQL IaaS), nuova sintassi. Il client richiede la crittografia (il valore predefinito `Encrypt` viene `true`) e il certificato del server ottiene convalidato, indipendentemente dall'impostazione di crittografia (a meno che non `TrustServerCertificate` è impostata su `true`). 
+4. (_Solo i driver di Windows_.) L'autenticazione Windows integrata tramite SSPI (se il database di destinazione è in SQL Server o IaaS di SQL) - nuova sintassi. Il client richiede la crittografia (il valore predefinito `Encrypt` viene `true`) e il certificato del server ottiene convalidato, indipendentemente dall'impostazione di crittografia (a meno che non `TrustServerCertificate` è impostata su `true`). 
 `server=Server;database=Database;Authentication=ActiveDirectoryIntegrated;`
 5. Autenticazione di nome utente e Password di AAD (se il database di destinazione nel database SQL di Azure). Ottiene convalidare certificato del server, indipendentemente dall'impostazione di crittografia (a meno che `TrustServerCertificate` è impostata su `true`). Il nome utente e la password viene passata nella stringa di connessione. 
 `server=Server;database=Database;UID=UserName;PWD=Password;Authentication=ActiveDirectoryPassword;`

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ecccd16b-eba9-4e95-b55d-f15c621e003f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0e91e3572d962ec9c819aae7f501b7b274f5c452
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 10bdfa7e45324e845019e6b670321e56839a79bd
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50029570"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52711472"
 ---
 # <a name="schedules"></a>Pianificazioni
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] offre **pianificazioni condivise** e **pianificazioni in base al report** che consentono di controllare l'elaborazione e la distribuzione di report. La differenza tra i due tipi di pianificazione consiste nella modalità con cui vengono definite, archiviate e gestite. La costruzione interna dei due tipi di pianificazione è identica. Tutte le pianificazioni specificano un tipo di occorrenza: mensile, settimanale o giornaliera. All'interno del tipo di occorrenza, è possibile impostare gli intervalli relativi alla frequenza con cui un evento deve verificarsi. Il tipo di criterio di occorrenza e il modo in cui tali criteri vengono specificati sono identici sia che venga creata una pianificazione condivisa o una pianificazione in base al report.
@@ -54,7 +54,7 @@ ms.locfileid: "50029570"
  Per informazioni dettagliate sulla creazione e gestione delle pianificazioni, vedere [Create, Modify, and Delete Schedules](../../reporting-services/subscriptions/create-modify-and-delete-schedules.md).  
   
 > [!NOTE]  
->  Le operazioni sulle pianificazioni sono disponibili solo in alcune edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per un elenco delle funzionalità supportate dalle edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [Funzionalità supportate dalle edizioni di SQL Server 2016](https://msdn.microsoft.com/library/22ad82d7-860c-43d3-b77a-77fb9eec5454).  
+>  Le operazioni sulle pianificazioni sono disponibili solo in alcune edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per un elenco delle funzionalità supportate dalle edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [Edizioni e funzionalità supportate di SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md).  
   
 ##  <a name="bkmk_compare"></a> Pianificazioni condivise e pianificazioni in base al report  
  Dai due tipi di pianificazioni viene generato lo stesso output:  

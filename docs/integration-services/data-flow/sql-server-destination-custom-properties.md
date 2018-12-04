@@ -11,12 +11,12 @@ ms.assetid: b736aa6d-c154-44a0-be08-f25733fca1d9
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 58155e7529eb8bb94064fd4d7a9fd48df213f0f4
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 9667da7696e7fe2cd483504d4a44d14519d736f4
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51638868"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52523211"
 ---
 # <a name="sql-server-destination-custom-properties"></a>Proprietà personalizzate della destinazione SQL Server
   La destinazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] include sia proprietà personalizzate sia le proprietà comuni a tutti i componenti del flusso di dati.  
@@ -32,7 +32,7 @@ ms.locfileid: "51638868"
 |BulkInsertKeepIdentity|Boolean|Valore che specifica se i valori possono essere inseriti in colonne Identity. Il valore predefinito di questa proprietà è **False**.|  
 |BulkInsertKeepNulls|Boolean|Valore che specifica se l'inserimento bulk mantiene i valori Null. Il valore predefinito di questa proprietà è **False**.|  
 |BulkInsertLastRow|Valore intero|Valore che specifica l'ultima riga da inserire. Il valore predefinito di questa proprietà è **-1**, che indica che non è stato assegnato alcun valore.|  
-|BulkInsertMaxErrors|Valore intero|Valore che specifica il numero massimo di errori che possono verificarsi prima dell'arresto dell'inserimento bulk. Il valore predefinito di questa proprietà è **–1**, che indica che non è stato assegnato alcun valore.|  
+|BulkInsertMaxErrors|Valore intero|Valore che specifica il numero massimo di errori che possono verificarsi prima dell'arresto dell'inserimento bulk. Il valore predefinito di questa proprietà è **-1**, che indica che non è stato assegnato alcun valore.|  
 |BulkInsertOrder|String|Nomi delle colonne di ordinamento. È possibile ordinare ogni colonna in ordine crescente o decrescente. Se si utilizzano più colonne di ordinamento, i nomi delle colonne saranno separati da virgole.|  
 |BulkInsertTableName|String|Tabella o vista [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nel database in cui vengono copiati i dati.|  
 |BulkInsertTablock|Boolean|Valore che specifica se la tabella è bloccata durante l'inserimento bulk. Il valore predefinito di questa proprietà è **True**.|  

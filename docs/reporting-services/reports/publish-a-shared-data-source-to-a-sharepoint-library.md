@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 966ed425-3ce2-4e76-8237-3c1c977954ae
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ca366eeee5bbe0e291ccefa140237b9e977a9a90
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: a2b2d16b5815a665e718e16fb04f74ff408fefae
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51812814"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52527587"
 ---
 # <a name="publish-a-shared-data-source-to-a-sharepoint-library"></a>Pubblicare un'origine dati condivisa in una raccolta di SharePoint
   Per pubblicare un'origine dati condivisa in un server di report eseguito in modalità integrata SharePoint, è necessario impostare le proprietà del progetto report in Progettazione report. Nelle proprietà del progetto tutti i riferimenti a server, report e origini dati condivise devono essere URL completi.  
@@ -28,7 +28,7 @@ ms.locfileid: "51812814"
   
 1.  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]aprire un progetto del server di report esistente o nuovo.  
   
-2.  Scegliere **Proprietà** dal menu **Progetto**. Verrà visualizzata la finestra di dialogo *Pagine delle proprietà di***\<progetto**.  
+2.  Scegliere **Proprietà** dal menu **Progetto**. Verrà visualizzata la finestra di dialogo _\<Pagine delle proprietà_ **del progetto**.  
   
 3.  Nella casella **Configurazione** scegliere quella da utilizzare per la pubblicazione in un sito di SharePoint.  
   

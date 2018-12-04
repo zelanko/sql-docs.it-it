@@ -26,12 +26,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: a9d56cab3d149490b176aade356708c15767cf9e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: db0fbc2125ca748f0426eea95c4c1a059e5b67f5
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47838499"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52509957"
 ---
 # <a name="openrowset-transact-sql"></a>OPENROWSET (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -253,7 +253,7 @@ Specifica il carattere da usare come carattere virgolette nel file CSV. Se non v
 >    Messaggio 491, livello 16, stato 1, riga 20    
 >    Specificare il nome della correlazione per il set di righe con lettura bulk nella clausola FROM.    
   
--   Un'istruzione `SELECT...FROM OPENROWSET(BULK...)` consente di eseguire query direttamente sui dati in un file, senza importare i dati in una tabella. Le istruzioni `SELECT…FROM OPENROWSET(BULK...)` consentono anche di elencare alias di colonna bulk usando un file di formato per specificare nomi di colonna e tipi di dati.  
+-   Un'istruzione `SELECT...FROM OPENROWSET(BULK...)` consente di eseguire query direttamente sui dati in un file, senza importare i dati in una tabella. Le istruzioni `SELECT...FROM OPENROWSET(BULK...)` consentono anche di elencare alias di colonna bulk usando un file di formato per specificare nomi di colonna e tipi di dati.  
   
 -   L'uso di `OPENROWSET(BULK...)` come tabella di origine in un'istruzione `INSERT` o `MERGE` consente di eseguire l'importazione bulk di dati da un file di dati in una tabella di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per altre informazioni, vedere [Importazione di dati per operazioni bulk con BULK INSERT o OPENROWSET&#40;BULK...&#41; &#40;SQL Server&#41;](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md).  
   

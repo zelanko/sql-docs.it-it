@@ -15,12 +15,12 @@ ms.assetid: 022b679c-6799-4c13-9185-814224a20412
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 11602dcd1274690e7b77ca285c50269e83b6ca23
-ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
+ms.openlocfilehash: cf6a87ac5c41a2bd28a528a7337d05cb8dcf8775
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51215799"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52532107"
 ---
 # <a name="maintenance-cleanup-task-maintenance-plan"></a>Attività Pulizia file manutenzione (Piano di manutenzione)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -79,7 +79,7 @@ ms.locfileid: "51215799"
  **Selezionare o immettere il nome di un server**  
  Consente di selezionare il server a cui connettersi per l'esecuzione dell'attività.  
   
- **…**  
+ **...**  
  Consente di visualizzare l'elenco dei server disponibili.  
   
  **Immettere le informazioni per l'accesso al server**  

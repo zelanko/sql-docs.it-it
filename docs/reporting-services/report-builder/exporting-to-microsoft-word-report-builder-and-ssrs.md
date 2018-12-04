@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 0cd8ae26-4682-4473-8f15-af084951defd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1dd2e24be0ca0746ad456a43c9005f3e0dd8a30c
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: b315779a4e6c16bdea162ebd5d70c4b9c12ec94b
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51814094"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52393336"
 ---
 # <a name="exporting-to-microsoft-word-report-builder-and-ssrs"></a>Esportazione in Microsoft Word (Generatore report e SSRS)
 
@@ -179,7 +179,7 @@ ms.locfileid: "51814094"
   
  `<Extension Name="WORD" Type="Microsoft.ReportingServices.Rendering.WordRenderer.WordDocumentRenderer,Microsoft.ReportingServices.WordRendering" Visible="false"/>`  
   
- L'estensione WORDOPENXML consente di definire il renderer di Word per i file con estensione docx di [!INCLUDE[ofprword](../../includes/ofprword-md.md)] . L'estensione WORD consente di definire la versione [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003. `Visible = “false”` indica che il renderer di Word 2003 è nascosto. Per altre informazioni, vedere [File di configurazione RsReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md) e [File di configurazione RSReportDesigner](../../reporting-services/report-server/rsreportdesigner-configuration-file.md).  
+ L'estensione WORDOPENXML consente di definire il renderer di Word per i file con estensione docx di [!INCLUDE[ofprword](../../includes/ofprword-md.md)] . L'estensione WORD consente di definire la versione [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003. `Visible = "false"` indica che il renderer di Word 2003 è nascosto. Per altre informazioni, vedere [File di configurazione RsReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md) e [File di configurazione RSReportDesigner](../../reporting-services/report-server/rsreportdesigner-configuration-file.md).  
   
 ### <a name="differences-between-the-word-and-word-2003-renderers"></a>Differenze tra i renderer di Word e Word 2003  
  I report, visualizzabili tramite i renderer di Word o Word 2003, tendono a essere non distinguibili da un punto di vista visivo. Tuttavia, è possibile riscontrare piccole differenze tra i due tipi di formati Word o Word 2003.  

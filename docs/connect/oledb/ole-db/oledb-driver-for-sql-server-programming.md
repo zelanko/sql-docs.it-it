@@ -19,12 +19,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 849acd4eabc86882912d72309b6507e4ba2fd21b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 124c1f9cfa058b3f59141af0a16d8db25fef700b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47810769"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535125"
 ---
 # <a name="ole-db-driver-for-sql-server-programming"></a>Driver OLE DB per programmazione con SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "47810769"
   
  Driver OLE DB per SQL Server fornisce supporto OLE DB alle applicazioni che si connettono a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
- Il Driver OLE DB per SQL Server è un provider conforme a 2.0 versione OLE DB.  
+ Il Driver OLE DB per SQL Server è provider OLE DB versione 2.0-conformi.  
   
 ## <a name="in-this-section"></a>Contenuto della sezione  
   

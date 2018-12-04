@@ -5,19 +5,18 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 4d3a3940-6c2a-4dc4-90eb-86f26012c165
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b9e979cda71241420a19f4770a352478628f26f4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: eafa0e4260548ed90f039bcee71daea8a5b7ac9a
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47766675"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617381"
 ---
 # <a name="import-domains-from-an-excel-file-in-knowledge-discovery"></a>Importare i domini da un file di Excel in Individuazione informazioni
 
@@ -75,7 +74,7 @@ ms.locfileid: "47766675"
 ##  <a name="FollowUp"></a> Completamento: fasi successive all'importazione di domini da un file di Excel  
  Dopo avere importato i domini da un file di Excel, è possibile aggiungere informazioni ai domini o utilizzare i domini per un progetto di pulizia o un progetto corrispondente, a seconda del contenuto dei domini. Per altre informazioni, vedere [Eseguire l'individuazione di informazioni](../data-quality-services/perform-knowledge-discovery.md), [Gestione di un dominio](../data-quality-services/managing-a-domain.md), [Gestione di un dominio composito](../data-quality-services/managing-a-composite-domain.md), [Creare criteri di corrispondenza](../data-quality-services/create-a-matching-policy.md), [Pulizia dei dati](../data-quality-services/data-cleansing.md), o [Corrispondenza di dati](../data-quality-services/data-matching.md).  
   
-##  <a name="How"></a> How the import works  
+##  <a name="How"></a> Come funziona l'importazione  
  Nell'operazione di importazione di DQS un file di Excel viene interpretato come segue:  
   
 -   Una colonna rappresenta un dominio.  

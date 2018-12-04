@@ -11,12 +11,12 @@ ms.assetid: 1c10dd54-67cb-4b63-9e4d-aa6ff0452ecb
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d7bf78e034a998b8b6123c11f9d512e4f1232a44
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 424ec0d1cc37cab9791497ce9dede701ccdc3451
+ms.sourcegitcommit: ba7fb4b9b4f0dbfe77a7c6906a1fde574e5a8e1e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51639795"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52302424"
 ---
 # <a name="lesson-5-add-ssis-package-configurations-for-the-package-deployment-model"></a>Lezione 5: Aggiungere configurazioni del pacchetto SSIS per il modello di distribuzione del pacchetto
 Le configurazioni di pacchetto consentono di impostare variabili e proprietà di runtime all'esterno dell'ambiente di sviluppo. Le configurazioni consentono inoltre di sviluppare pacchetti flessibili e semplici da implementare e distribuire. [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] sono disponibili i tipi di configurazione seguenti:  
@@ -31,7 +31,7 @@ Le configurazioni di pacchetto consentono di impostare variabili e proprietà di
   
 -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] table  
   
-In questa lezione verrà modificato il semplice pacchetto di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] creato nella [Lezione 4: Aggiungere il reindirizzamento del flusso errato con SSIS](../integration-services/lesson-4-add-error-flow-redirection-with-ssis.md) per usare il modello di distribuzione del pacchetto e le configurazioni del pacchetto. È inoltre possibile copiare il pacchetto della lezione 4 completato incluso nell'esercitazione. La Configurazione guidata pacchetto consente di creare una configurazione XML che aggiorna la proprietà **Directory** del contenitore Foreach Loop tramite una variabile a livello di pacchetto associata alla proprietà Directory. Dopo aver creato il file di configurazione è possibile modificare il valore della variabile all'esterno dell'ambiente di sviluppo e puntare la proprietà modificata a una nuova cartella di dati di esempio. Quando il pacchetto viene eseguito nuovamente, il file di configurazione popola il valore della variabile che a sua volta aggiorna la proprietà **Directory**. Di conseguenza, il pacchetto esegue un'iterazione della nuova cartella dei dati anziché della cartella originale specificata a livello di codice nel pacchetto.  
+In questa lezione verrà modificato il semplice pacchetto di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] creato nella [Lezione 4: Aggiungere il reindirizzamento del flusso errato con SSIS](../integration-services/lesson-4-add-error-flow-redirection-with-ssis.md) per usare il modello di distribuzione del pacchetto e le configurazioni del pacchetto. È inoltre possibile copiare il pacchetto della lezione 4 completato incluso nell'esercitazione. La Configurazione guidata pacchetto consente di creare una configurazione XML che aggiorna la proprietà **Directory** del contenitore Foreach Loop tramite una variabile a livello di pacchetto associata alla proprietà Directory. Dopo aver creato il file di configurazione è possibile modificare il valore della variabile all'esterno dell'ambiente di sviluppo e puntare la proprietà modificata a una nuova cartella di dati di esempio. Quando il pacchetto viene eseguito nuovamente, il file di configurazione popola il valore della variabile che aggiorna la proprietà **Directory** . Di conseguenza, il pacchetto esegue un'iterazione della nuova cartella dei dati anziché della cartella originale specificata a livello di codice nel pacchetto.  
   
 > [!IMPORTANT]  
 > Per eseguire questa esercitazione, è necessario il database di esempio **AdventureWorksDW2012** . Per altre informazioni sull'installazione e sulla distribuzione di **AdventureWorksDW2012**, vedere [Esempi di Reporting Services su CodePlex](https://go.microsoft.com/fwlink/p/?LinkID=526910).  

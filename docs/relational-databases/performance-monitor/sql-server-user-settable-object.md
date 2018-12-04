@@ -5,7 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology: performance-monitor
+s.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - User Settable object
@@ -14,12 +14,12 @@ ms.assetid: 633de3ef-533c-4f0c-9c7b-c105129d8e94
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 40be191181d093b7e32f5f3f7ac0c8ac0c868b23
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: cb3c412361acf4e3c059f902c2fc0ae498601d36
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51033478"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52522986"
 ---
 # <a name="sql-server-user-settable-object"></a>Oggetto Definibile dall'utente di SQLServer
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "51033478"
 |**User counter 1**|Definito tramite **sp_user_counter1**.|  
 |**User counter 2**|Definito tramite **sp_user_counter2**.|  
 |**User counter 3**|Definito tramite **sp_user_counter3**.|  
-|…||  
+|...||  
 |**User counter 10**|Definito tramite **sp_user_counter10**.|  
   
  Per utilizzare le stored procedure dei contatori utente, eseguirle dall'applicazione utente con un solo parametro integer che rappresenta il nuovo valore del contatore. Ad esempio, per impostare **User counter 1** sul valore 10, eseguire l'istruzione Transact-SQL seguente:  

@@ -26,12 +26,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 583f00394043b93eb81d9717d771ea087ce2f21c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2cd03ba4b9b0363ef1d8ebe9c3ff0721fc08e3f9
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47714000"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542270"
 ---
 # <a name="alter-user-transact-sql"></a>ALTER USER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -85,7 +85,7 @@ ALTER USER userName
   
 -- SQL Database syntax when connected to a federation member  
 ALTER USER userName  
-     WITH <set_item> [ ,… n ]   
+     WITH <set_item> [ ,... n ]   
 [;]  
   
 <set_item> ::=   
@@ -109,12 +109,12 @@ ALTER USER userName
  *userName*  
  Specifica il nome con cui viene identificato l'utente all'interno del database.  
   
- LOGIN **=***loginName*  
+ LOGIN **=**_loginName_  
  Modifica il mapping di un utente associandolo a un altro account di accesso, modificando l'ID di sicurezza (SID) dell'utente in modo che corrisponda all'ID di sicurezza dell'account di accesso.  
   
  Se l'istruzione ALTER USER è l'unica istruzione in un batch SQL, il database SQL di Microsoft Azure supporta la clausola WITH LOGIN. Se l'istruzione ALTER USER non è l'unica istruzione in un batch SQL o viene eseguita in SQL dinamico, la clausola WITH LOGIN non è supportata.  
   
- NAME **=***newUserName*  
+ NAME **=**_newUserName_  
  Specifica il nuovo nome dell'utente. *newUserName* non deve essere già presente nel database corrente.  
   
  DEFAULT_SCHEMA **=** { *schemaName* | NULL }  
@@ -128,15 +128,15 @@ ALTER USER userName
 > [!NOTE]  
 >  Questa opzione è disponibile solo per gli utenti contenuti. Vedere [Database indipendenti](../../relational-databases/databases/contained-databases.md) e [sp_migrate_user_to_contained &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-migrate-user-to-contained-transact-sql.md) per altre informazioni.  
   
- OLD_PASSWORD **=***'oldpassword'*  
- **Si applica a**: da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+ OLD_PASSWORD **=**_'oldpassword'_  
+ **Si applica a**: da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] fino a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
  Password dell'utente corrente che verrà sostituita da '*password*'. Per le password viene fatta distinzione tra maiuscole e minuscole. *OLD_PASSWORD* è necessaria per modificare una password, a meno che non si disponga dell'autorizzazione **ALTER ANY USER**. Si richiede *OLD_PASSWORD* per impedire agli utenti con autorizzazione **IMPERSONATION** di modificare la password.  
   
 > [!NOTE]  
 >  Questa opzione è disponibile solo per gli utenti contenuti.  
   
- DEFAULT_LANGUAGE **=***{ NONE | \<lcid> | \<language name> | \<language alias> }*  
+ DEFAULT_LANGUAGE **=**_{ NONE | \<lcid> | \<language name> | \<language alias> }_  
  **Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Specifica una lingua predefinita da assegnare all'utente. Se questa opzione è impostata su NONE, la lingua predefinita viene impostata sulla lingua predefinita corrente del database. Se la lingua predefinita del database viene modificata in seguito, la lingua predefinita dell'utente rimarrà invariata. *DEFAULT_LANGUAGE* può essere l'ID locale (lcid), il nome della lingua o l'alias della lingua.  
@@ -228,7 +228,7 @@ GO
 ALTER USER Philip   
 WITH  NAME = Philipe   
     , DEFAULT_SCHEMA = Development   
-    , PASSWORD = 'W1r77TT98%ab@#’ OLD_PASSWORD = 'New Devel0per'   
+    , PASSWORD = 'W1r77TT98%ab@#' OLD_PASSWORD = 'New Devel0per'   
     , DEFAULT_LANGUAGE  = French ;  
 GO  
 ```  

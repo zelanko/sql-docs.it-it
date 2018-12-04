@@ -18,12 +18,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 7f0c8c9d13eca087db3d7202d57c058527e2c073
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d8f59034d6826bd1af3f1c48c81674dfc039b85e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47610319"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52545469"
 ---
 # <a name="using-multiple-active-result-sets-mars"></a>Utilizzo di MARS (Multiple Active Result Set)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -107,7 +107,7 @@ Data Source=MSSQL; Initial Catalog=AdventureWorks; Integrated Security=SSPI; Mul
   
  Le modifiche apportate dalle informative e i blocchi atomici che sono di tipo interleaved sono isolate tra loro. Ad esempio, se un'istruzione o un blocco atomic apporta alcune modifiche e quindi restituisce l'esecuzione di un'altra istruzione, la nuova istruzione non vedranno le modifiche apportate dalla prima istruzione. Inoltre, quando la prima istruzione riprende l'esecuzione, non rileverà eventuali modifiche apportate da tutte le altre istruzioni. Le istruzioni visualizzate solo le modifiche che sono completate e commit eseguite prima dell'avvio dell'istruzione.  
   
- Una nuova transazione utente può essere avviata all'interno della transazione utente corrente usando l'istruzione BEGIN TRANSACTION: questo è supportato solo in modalità di interoperabilità in modo che l'istruzione BEGIN TRANSACTION può essere chiamato solo da un'istruzione T-SQL e non all'interno di un compilate in modo nativo stored procedura. È possibile creare un salvataggio scegliere in una transazione con transazioni di salvare o una chiamata API a transazione. Save(save_point_name) per eseguire il rollback del punto di salvataggio. Questa funzionalità è abilitata solo da istruzioni T-SQL e non da all'interno di alle stored procedure compilate.  
+ Una nuova transazione utente può essere avviata all'interno della transazione utente corrente usando l'istruzione BEGIN TRANSACTION: questo è supportato solo in modalità di interoperabilità in modo che l'istruzione BEGIN TRANSACTION può essere chiamato solo da un'istruzione T-SQL e non da all'interno di un compilate in modo nativo stored procedura. È possibile creare un salvataggio scegliere in una transazione con transazioni di salvare o una chiamata API a transazione. Save(save_point_name) per eseguire il rollback del punto di salvataggio. Questa funzionalità è abilitata solo da istruzioni T-SQL e non da all'interno di alle stored procedure compilate.  
   
  **Gli indici columnstore e MARS**  
   

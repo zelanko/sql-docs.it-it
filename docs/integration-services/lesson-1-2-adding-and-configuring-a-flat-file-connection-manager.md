@@ -11,12 +11,12 @@ ms.assetid: 9a77dd32-d8c2-4961-ad37-2a971f9d6043
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c8ed30954131f756401f054c35992d3339dfddb5
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: cc3bd44753305f7509a8777c48265f3f0edd2f2c
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51638418"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617661"
 ---
 # <a name="lesson-1-2---adding-and-configuring-a-flat-file-connection-manager"></a>Lezione 1-2 - Aggiunta e configurazione di una gestione connessione file flat
 In questa attività si aggiungerà una gestione connessione file flat al pacchetto appena creato. Una gestione connessione file flat abilita un pacchetto all'estrazione di dati da un file flat. Utilizzando tale gestione connessione è possibile specificare il nome file e la posizione, le impostazioni locali e la tabella codici e il formato del file, inclusi i delimitatori di colonna, da applicare quando il pacchetto estrae i dati dal file flat. È anche possibile specificare manualmente il tipo di dati per le singole colonne o usare la finestra di dialogo **Suggerisci tipo di colonne** per eseguire automaticamente il mapping delle colonne di dati estratti ai tipi di dati di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
@@ -43,7 +43,7 @@ Gestione connessione file flat fornisce informazioni sulle impostazioni locali p
   
     I dati di esempio sono inclusi nei pacchetti di lezioni di [!INCLUDE[ssIS](../includes/ssis-md.md)] . Per scaricare i dati di esempio e i pacchetti di lezioni, effettuare le operazioni seguenti.  
   
-    1.  Passare alla pagina relativa agli [esempi di prodotti di Integration Services](https://go.microsoft.com/fwlink/?LinkId=275027)  
+    1.  Passare alla pagina relativa agli [esempi di prodotti di Integration Services](https://www.microsoft.com/download/details.aspx?id=56827)  
   
     2.  Fare clic sulla scheda **DOWNLOADS** .  
   

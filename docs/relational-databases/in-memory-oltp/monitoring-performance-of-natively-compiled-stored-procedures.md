@@ -12,12 +12,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8f04159b96b441370043054660869b7a7117a6ef
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 49c5203d03ed1a216f4aedc6913ea6e1bddefa2d
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51657770"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52711512"
 ---
 # <a name="monitoring-performance-of-natively-compiled-stored-procedures"></a>Monitoraggio delle prestazioni di stored procedure compilate in modo nativo
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -32,7 +32,6 @@ ms.locfileid: "51657770"
 select [definition] from sys.sql_modules where object_id=object_id  
 ```  
   
- Per altre informazioni sull'evento esteso **sp_statement_completed** , vedere l'articolo che spiega [come recuperare l'istruzione che ha causato un evento](https://blogs.msdn.com/b/extended_events/archive/2010/05/07/making-a-statement-how-to-retrieve-the-t-sql-statement-that-caused-an-event.aspx).  
   
 ## <a name="using-data-management-views-and-query-store"></a>Uso di viste di Gestione dati e di Query Store
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e [!INCLUDE[ssSDS](../../includes/sssds-md.md)] supportano la raccolta delle statistiche di esecuzione per le stored procedure compilate in modo nativo, sia a livello di routine che a livello di query. La raccolta delle statistiche di esecuzione non è abilitata per impostazione predefinita a causa dell'impatto sulle prestazioni.  

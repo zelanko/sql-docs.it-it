@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: david-puglielli
 ms.author: v-dapugl
 manager: v-hakaka
-ms.openlocfilehash: 34d4bc2342397f5809ef16ef59ed342d6c86d421
-ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
+ms.openlocfilehash: 6afbf85f5e141736ac4a78dc381205228bd5ddaa
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49460376"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52527105"
 ---
 # <a name="idle-connection-resiliency"></a>Resilienza delle connessioni inattive
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -32,7 +32,7 @@ Se il prodotto dei **ConnectRetryCount** moltiplicato **ConnectRetryInterval** m
 
 #### <a name="remarks"></a>Remarks
 
-Resilienza della connessione si applica quando la connessione rimane inattiva. Gli errori che si verificano durante l'esecuzione di una transazione, ad esempio, non attiveranno tentativi di riconnessione: non riuscirà perché in caso contrario, potrebbe essere previsto. Le situazioni seguenti, note come gli stati di sessione non recuperabili, non attiva i tentativi di riconnessione:
+Resilienza della connessione si applica quando la connessione rimane inattiva. Gli errori che si verificano durante l'esecuzione di una transazione, ad esempio, non attiveranno tentativi di riconnessione - genereranno errori perché in caso contrario, potrebbe essere previsto. Le situazioni seguenti, note come gli stati di sessione non recuperabili, non attiva i tentativi di riconnessione:
 
 * Tabelle temporanee
 * Cursori globali e locali

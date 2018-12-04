@@ -19,12 +19,12 @@ ms.assetid: 04b35145-1cca-45f4-9eb7-990abf2e647d
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6aae24935aea1c7ca452f199340cd1dca7299a4f
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: b45bd2df29628717d8cb1b2d1ba66a858a03f7a3
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51675350"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52521487"
 ---
 # <a name="generate-an-inline-xsd-schema"></a>Generazione di uno schema XSD inline
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -241,7 +241,7 @@ for    XML RAW, ELEMENTS, XMLSCHEMA
   
  Di seguito è riportato il codice XML generato, nel quale è visualizzata solo una frazione dello schema XSD inline:  
   
- `…`  
+ `...`  
   
  `<xsd:schema targetNamespace="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:xsd="https://www.w3.org/2001/XMLSchema" xmlns:sqltypes="https://schemas.microsoft.com/sqlserver/2004/sqltypes" elementFormDefault="qualified">`  
   
@@ -279,7 +279,7 @@ for    XML RAW, ELEMENTS, XMLSCHEMA
   
 -   Poiché il valore `DealerPrice` è NULL nella tabella, nel risultato viene restituito solo `ListPrice` come elemento <`Price`>. Se si aggiunge il parametro `XSINIL` alla direttiva ELEMENTS, si otterranno entrambi gli elementi con il valore `xsi:nil` impostato su TRUE per l'elemento <`Price`> corrispondente a DealerPrice. Si otterranno inoltre due elementi figlio <`Price`> nella definizione del tipo complesso <`row`> dello schema XSD inline, con l'attributo `nillable` impostato su TRUE per entrambi. Di seguito è riportato un frammento che rappresenta un risultato parziale:  
   
- `…`  
+ `...`  
   
  `<xsd:schema targetNamespace="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:xsd="https://www.w3.org/2001/XMLSchema" xmlns:sqltypes="https://schemas.microsoft.com/sqlserver/2004/sqltypes" elementFormDefault="qualified">`  
   
@@ -335,7 +335,7 @@ FOR XML RAW, ELEMENTS, XMLSCHEMA
   
  Di seguito è riportato il risultato. nel quale è visualizzato solo un frammento dello schema XSD inline.  
   
- `…`  
+ `...`  
   
  `<xsd:schema targetNamespace="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:xsd="https://www.w3.org/2001/XMLSchema" xmlns:sqltypes="https://schemas.microsoft.com/sqlserver/2004/sqltypes" elementFormDefault="qualified">`  
   
@@ -404,7 +404,7 @@ FOR XML RAW, ELEMENTS, XMLSCHEMA
   
  Nella query seguente, a Col2 e Col3 sono assegnati gli stessi alias. Nel risultato vengono pertanto generati due elementi di pari livello con lo stesso nome ed entrambi figli dell'elemento <`raw`>. Entrambe le colonne sono di tipo diverso e possono essere NULL. Di seguito è riportato il risultato. nel quale è visualizzato solo uno schema XSD inline parziale.  
   
- `…`  
+ `...`  
   
  `<xsd:schema targetNamespace="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:xsd="https://www.w3.org/2001/XMLSchema" xmlns:sqltypes="https://schemas.microsoft.com/sqlserver/2004/sqltypes" elementFormDefault="qualified">`  
   

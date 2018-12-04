@@ -16,19 +16,19 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: d0086ada5f1399de191670dc415fca2e1ca00bce
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 5bf463a531bad6c7d03a4b7d6439a71539fe9df8
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606941"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52521468"
 ---
 # <a name="ole-db-driver-for-sql-server-ole-db-interfaces"></a>Driver OLE DB per interfacce SQL Server (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Il driver OLE DB per SQL Server espone interfacce ai consumer che richiedono l'accesso ai dati su uno o più computer in cui è in esecuzione [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Il Driver OLE DB per SQL Server è un provider conforme a 2.0 versione OLE DB.  
+  Il driver OLE DB per SQL Server espone interfacce ai consumer che richiedono l'accesso ai dati su uno o più computer in cui è in esecuzione [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Il Driver OLE DB per SQL Server è provider OLE DB versione 2.0-conformi.  
   
  In questa guida di riferimento alla programmazione del driver OLE DB per SQL Server non vengono descritte tutte le interfacce e i metodi OLE DB, ma solo le interfacce e i metodi che hanno un comportamento specifico del provider quando usano il driver OLE DB per SQL Server.  
   

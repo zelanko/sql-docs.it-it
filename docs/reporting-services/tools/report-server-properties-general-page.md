@@ -10,12 +10,12 @@ f1_keywords:
 ms.assetid: 23537d52-4356-450f-a671-5921cef2431f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 814787bdc97347c320814be4f6da0a742d6fe985
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9c9079baf374b6ab60cf275aaa6551eba5385e79
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47725429"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52712032"
 ---
 # <a name="report-server-properties-general-page"></a>Proprietà del server di report (pagina Generale)
   Questa pagina consente di visualizzare o modificare il titolo utilizzato in Gestione report, abilitare o disabilitare la cartella Report personali, selezionare una definizione di ruolo per la sicurezza della cartella Report personali e abilitare o disabilitare il controllo di stampa client.  
@@ -31,11 +31,11 @@ ms.locfileid: "47725429"
  **Nome**  
  Digitare un nome che verrà visualizzato nella parte superiore del portale Web. Per impostazione predefinita, il valore è [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Il nome specificato compare solamente in Gestione report.  
   
- **Versione**  
+ **Version**  
  Questa proprietà è di sola lettura. Specifica la versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in uso.  
   
  **Edizione**  
- Questa proprietà è di sola lettura. Viene specificata l'istanza corrente del server di report. Gestione report non è disponibile in tutte le edizioni di [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per un elenco delle funzionalità supportate dalle edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [Funzionalità supportate dalle edizioni di SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
+ Questa proprietà è di sola lettura. Viene specificata l'istanza corrente del server di report. Gestione report non è disponibile in tutte le edizioni di [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per un elenco delle funzionalità supportate dalle edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [Edizioni e funzionalità supportate di SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md).  
   
  **Modalità di autenticazione**  
  Questa proprietà è di sola lettura. che identifica i tipi di richieste di autenticazione accettati dall'istanza del server di report. Per modificare la modalità di autenticazione, è necessario modificare il file **RSReportServer.config** . Per altre informazioni, vedere [Autenticazione con il server di report](../../reporting-services/security/authentication-with-the-report-server.md).  

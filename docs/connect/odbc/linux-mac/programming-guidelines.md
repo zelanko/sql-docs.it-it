@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2edaeee9d073cb0c12a509bd23e3db9edf4b3894
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 9a8fa77ed1819d22eb90ea4fb0a7308122f708e1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51602186"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52522951"
 ---
 # <a name="programming-guidelines"></a>Linee guida per la programmazione
 
@@ -123,7 +123,7 @@ In ODBC Driver 13 e 13.1, quando caratteri multibyte UTF-8 o caratteri sostituti
 1.  È possibile effettuare una connessione amministrativa dedicata (DAC) usando l'autenticazione [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e **host, porta**. Un membro del ruolo Sysadmin deve prima individuare la porta DAC. Visualizzare [connessione di diagnostica per gli amministratori di Database](https://docs.microsoft.com/sql/database-engine/configure-windows/diagnostic-connection-for-database-administrators#dac-port) per individuare la modalità. Ad esempio, se la porta DAC è 33000, è possibile connettersi a questa porta con `sqlcmd` come indicato di seguito:  
 
     ```
-    sqlcmd –U <user> -P <pwd> -S <host>,33000
+    sqlcmd -U <user> -P <pwd> -S <host>,33000
     ```
 
     > [!NOTE]  

@@ -17,12 +17,12 @@ ms.assetid: aef0c4fa-ba67-413d-9359-1a67682fdaab
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 5ad6102a7d6ddef80770d028c5832d1af6fb06f6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 73b2dc1fcf69cb7adef45235bc91937fe00aeac7
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47598093"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542635"
 ---
 # <a name="back-up-and-restore-of-system-databases-sql-server"></a>Backup e ripristino di Database di sistema (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "47598093"
 |[master](../../relational-databases/databases/master-database.md)|Nel database vengono registrate tutte le informazioni a livello di sistema relative a un sistema [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|Sì|Simple|Eseguire il backup di **master** con la frequenza necessaria a garantire una sufficiente protezione dei dati in base alle esigenze aziendali. È consigliabile pianificare i backup con regolarità, pianificazione che è possibile integrare con backup aggiuntivi dopo un aggiornamento importante.|  
 |[model](../../relational-databases/databases/model-database.md)|Modello per tutti i database creati nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|Sì|Configurabile dall'utente*|Eseguire il backup di **model** solo se necessario in base alle esigenze aziendali, ad esempio immediatamente dopo la personalizzazione delle opzioni del database.<br /><br /> **Procedura consigliata:** creare solo backup completi del database **model**in base alle esigenze. Poiché nel database **model** vengono apportate solo di rado lievi modifiche, il backup del log non è necessario.|  
 |[msdb](../../relational-databases/databases/msdb-database.md)|Il database utilizzato da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent per la pianificazione di avvisi e processi e per la registrazione di operatori. **msdb** contiene anche tabelle di cronologia, ad esempio tabelle di cronologia di backup e ripristino.|Sì|Con registrazione minima (impostazione predefinita)|Eseguire il backup di **msdb** a ogni aggiornamento.|  
-|[Resource](../../relational-databases/databases/resource-database.md) (RDB)|Database di sola lettura che include copie di tutti gli oggetti di sistema forniti con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|no|—|Il database **Resource** risiede nel file mssqlsystemresource.mdf, che contiene solo codice. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non può quindi eseguire il backup del database **Resource** .<br /><br /> Nota: è possibile eseguire un backup basato su file o su disco del file mssqlsystemresource.mdf considerando il file un file binario (EXE) anziché un file di database. Non è tuttavia possibile utilizzare la funzionalità di ripristino di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] su questi backup. Il ripristino di una copia di backup di mssqlsystemresource.mdf può essere eseguito solo manualmente, prestando attenzione a non sovrascrivere il database **Resource** corrente con una versione non aggiornata e potenzialmente non sicura.|  
+|[Resource](../../relational-databases/databases/resource-database.md) (RDB)|Database di sola lettura che include copie di tutti gli oggetti di sistema forniti con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|no|-|Il database **Resource** risiede nel file mssqlsystemresource.mdf, che contiene solo codice. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non può quindi eseguire il backup del database **Resource** .<br /><br /> Nota: è possibile eseguire un backup basato su file o su disco del file mssqlsystemresource.mdf considerando il file un file binario (EXE) anziché un file di database. Non è tuttavia possibile utilizzare la funzionalità di ripristino di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] su questi backup. Il ripristino di una copia di backup di mssqlsystemresource.mdf può essere eseguito solo manualmente, prestando attenzione a non sovrascrivere il database **Resource** corrente con una versione non aggiornata e potenzialmente non sicura.|  
 |[tempdb](../../relational-databases/databases/tempdb-database.md)|Area di lavoro per il mantenimento dei set di risultati temporanei o intermedi. Questo database viene ricreato ogni volta che viene avviata un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Quando l'istanza del server viene chiusa, i dati inclusi in **tempdb** vengono eliminati in modo definitivo.|no|Simple|Non è possibile eseguire il backup del database di sistema **tempdb** .|  
 |[Configurare la distribuzione](../../relational-databases/replication/configure-distribution.md)|Database esistente solo se il server è configurato come server di distribuzione repliche. In questo database sono memorizzati metadati e dati della cronologia per tutti i tipi di replica, nonché transazioni per la replica transazionale.|Sì|Simple|Per informazioni su quando eseguire il backup del database **distribution**, vedere [Eseguire il backup e ripristino di database replicati](../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md).|  
   
@@ -63,7 +63,7 @@ ms.locfileid: "47598093"
   
 ##  <a name="RelatedTasks"></a> Attività correlate  
   
--   [Creare un backup completo del database &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)  
+-   [Creazione di un backup completo del database &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)  
   
 -   [Ripristini di database completi &#40;modello di recupero con registrazione minima&#41;](../../relational-databases/backup-restore/complete-database-restores-simple-recovery-model.md)  
   

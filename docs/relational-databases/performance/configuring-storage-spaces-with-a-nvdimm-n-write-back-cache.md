@@ -10,12 +10,12 @@ ms.assetid: 861862fa-9900-4ec0-9494-9874ef52ce65
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 8bba028ef8c2d0bcc5c3a3c328cc5be0eabab9c2
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: abe4c1e52fbb43f7c2c1ffbe4a7e6c40c45fda78
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51665271"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52528336"
 ---
 # <a name="configuring-storage-spaces-with-a-nvdimm-n-write-back-cache"></a>Configurazione di spazi di archiviazione con una cache write-back NVDIMM-N
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ $pd | Select FriendlyName, MediaType, BusType
  Con la variabile $pd contenente i dischi fisici è facile creare il pool di archiviazione usando il cmdlet New-StoragePool di PowerShell.  
   
 ```  
-New-StoragePool –StorageSubSystemFriendlyName “Windows Storage*” –FriendlyName NVDIMM_Pool –PhysicalDisks $pd  
+New-StoragePool -StorageSubSystemFriendlyName "Windows Storage*" -FriendlyName NVDIMM_Pool -PhysicalDisks $pd  
 ```  
   
  ![New-StoragePool](../../relational-databases/performance/media/new-storagepool.png "New-StoragePool")  
@@ -62,7 +62,7 @@ New-StoragePool –StorageSubSystemFriendlyName “Windows Storage*” –Friend
  Dopo aver creato un pool, il passaggio successivo consiste nel creare e formattare un disco virtuale. In questo caso verrà creato 1 solo disco virtuale ed è possibile usare il cmdlet New-Volume di PowerShell per semplificare questo processo:  
   
 ```  
-New-Volume –StoragePool (Get-StoragePool –FriendlyName NVDIMM_Pool) –FriendlyName Log_Space –Size 300GB –FileSystem NTFS –AccessPath S: -ResiliencySettingName Mirror  
+New-Volume -StoragePool (Get-StoragePool -FriendlyName NVDIMM_Pool) -FriendlyName Log_Space -Size 300GB -FileSystem NTFS -AccessPath S: -ResiliencySettingName Mirror  
 ```  
   
  ![New-Volume](../../relational-databases/performance/media/new-volume.png "New-Volume")  

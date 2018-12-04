@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daveng
 manager: kenvh
-ms.openlocfilehash: d040c333aec94cc1de41df03906470356a530faa
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 98f49213afaaac17ea41a366bf4888043cc61045
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51605631"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52529438"
 ---
 # <a name="driver-history-for-microsoft-sql-server"></a>Cronologia di driver per Microsoft SQL Server
 
@@ -139,7 +139,7 @@ Tecnologie obsolete sono le tecnologie che non sono stati avanzati o aggiornate 
 
 I componenti seguenti sono considerati obsoleti:
 
-* **DB-Library:** DB-Library è un modello di programmazione specifici per SQL Server che include le API C. Sono non stati apportati alcuna modifica in DB-Library dopo SQL Server 6.5. Rilascio della versione finale è stato effettuato con SQL Server 2000 e verrà non essere trasferita al sistema operativo Windows a 64 bit.
-* **Embedded SQL (E-SQL):** E-SQL è un modello di programmazione specifici per SQL Server che consente di istruzioni Transact-SQL per essere incorporati nel codice Visual C#. Miglioramenti della funzionalità non sono stati apportati alle istruzioni SQL E SQL Server 6.5. Rilascio della versione finale è stato effettuato con SQL Server 2000 e verrà non essere trasferita al sistema operativo Windows a 64 bit.
+* **DB-Library:** DB-Library è un modello di programmazione specifiche di SQL Server che include le API C. Sono non stati apportati alcuna modifica in DB-Library dopo SQL Server 6.5. Rilascio della versione finale è stato effettuato con SQL Server 2000 e verrà non essere trasferita al sistema operativo Windows a 64 bit.
+* **Embedded SQL (E-SQL):** E-SQL è un modello di programmazione specifiche di SQL Server che consente di istruzioni Transact-SQL per essere incorporati nel codice Visual C#. Miglioramenti della funzionalità non sono stati apportati alle istruzioni SQL E SQL Server 6.5. Rilascio della versione finale è stato effettuato con SQL Server 2000 e verrà non essere trasferita al sistema operativo Windows a 64 bit.
 * **Data Access Objects (DAO):** DAO fornisce l'accesso ai database JET (accesso). Questa API può essere usata da Microsoft Visual Basic, Microsoft Visual C++ e linguaggi di scripting. È stato incluso in Microsoft Office 2000 e Office XP. 3.6 DAO è la versione finale di questa tecnologia. Non sarà disponibile nel sistema operativo Windows a 64 bit.
 * **Oggetti dati remoti (RDO):** RDO è stato progettato specificamente per l'accesso remoto alle origini dati relazionali ODBC e ancora più facile utilizzare ODBC senza codice di applicazione complesse. È stato incluso con Microsoft Visual Basic le versioni 4, 5 e 6. RDO versione 2.0 è la versione finale di questa tecnologia.

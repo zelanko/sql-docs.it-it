@@ -10,12 +10,12 @@ ms.assetid: 1b7c6dbb-b40e-4822-9caa-608e1056af8e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ae11b65eab37e07286b5d06a7c09305ba5020095
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 16a9770c05ecbc81b0fc5696f83285127ca7d8a1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47819409"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52528385"
 ---
 # <a name="remove-data-quality-server-objects"></a>Rimuovere oggetti server Data Quality Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "47819409"
  È possibile eliminare questi oggetti in SQL Server Management Studio facendo clic con il pulsante destro del mouse sull'oggetto e scegliendo **Elimina** del menu di scelta rapida.  
   
 > [!IMPORTANT]  
->  Se si disinstalla solo [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] da un'istanza di SQL Server utilizzando il parametro della riga di comando `–uninstall` dal prompt dei comandi, tutti gli oggetti DQS vengono eliminati come parte del processo di disinstallazione. Non è necessario eliminarli manualmente dopo la disinstallazione di [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]. Per disinstallare [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] dal prompt dei comandi, digitare il comando seguente al prompt dei comandi e premere INVIO:   
+>  Se si disinstalla solo [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] da un'istanza di SQL Server utilizzando il parametro della riga di comando `-uninstall` dal prompt dei comandi, tutti gli oggetti DQS vengono eliminati come parte del processo di disinstallazione. Non è necessario eliminarli manualmente dopo la disinstallazione di [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]. Per disinstallare [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] dal prompt dei comandi, digitare il comando seguente al prompt dei comandi e premere INVIO:   
 > `dqsinstaller.exe -uninstall`  
   
 ## <a name="uninstall-sql-server-instance-containing-data-quality-server"></a>Disinstallare l'istanza di SQL Server contenente il server DQS  

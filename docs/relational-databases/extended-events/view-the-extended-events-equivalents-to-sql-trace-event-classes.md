@@ -16,12 +16,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ce3b05fb49206be29106bb84b2e4291f337aa261
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3dca735754367f7ca69fb36f6e5437e421c55a30
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47635439"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52537599"
 ---
 # <a name="view-the-extended-events-equivalents-to-sql-trace-event-classes"></a>Visualizzare gli eventi estesi equivalenti alle classi di evento di traccia SQL
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "47635439"
   
 -   Dall'editor di query in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]eseguire la query seguente:  
   
-    ```  
+    ```sql  
     USE MASTER;  
     GO  
     SELECT DISTINCT  
@@ -62,7 +62,7 @@ ms.locfileid: "47635439"
     -   Per la colonna di Traccia SQL viene eseguito il mapping a uno dei campi dati associati con l'evento degli eventi estesi.  
   
         > [!NOTE]  
-        >  Ogni evento degli eventi estesi dispone di un set predefinito di campi dati che vengono inclusi automaticamente nel set di risultati.  
+        > Ogni evento degli eventi estesi dispone di un set predefinito di campi dati che vengono inclusi automaticamente nel set di risultati.  
   
     -   La colonna relativa all'azione non dispone di un equivalente significativo degli eventi estesi. Ne è un esempio la colonna EventClass in Traccia SQL. Questo colonna non è necessaria negli eventi estesi in quanto il nome dell'evento svolge lo stesso ruolo.  
   

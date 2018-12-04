@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6fed96fa278f64a5fd8628802c1875f2ca8195f7
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 4b9d49756a4edb78fcda40f4c4d86bfbb299904d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51664641"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52543503"
 ---
 # <a name="a-guide-to-query-processing-for-memory-optimized-tables"></a>Guida all'elaborazione delle query per le tabelle con ottimizzazione per la memoria
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -226,7 +226,7 @@ Esecuzione di stored procedure compilate in modo nativo.
   
  La chiamata di una stored procedure compilata in modo nativo viene descritta nel modo riportato di seguito.  
   
-1.  L'utente esegue un'istruzione **EXEC***usp_myproc*.  
+1.  L'utente esegue un'istruzione **EXEC**_usp_myproc_ .  
   
 2.  Il parser estrae il nome e i parametri della stored procedure.  
   
