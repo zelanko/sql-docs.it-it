@@ -132,20 +132,26 @@ items:
         href: ../relational-databases/sql-trace/sql-trace.md
     - name: Ottimizzare
       items:
+      - name: Database Experimentation Assistant
+        href: https://www.microsoft.com/download/details.aspx?id=54090
       - name: OLTP in memoria +
         href: ../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md
       - name: Indici +
         href: ../relational-databases/indexes/indexes.md
       - name: Partizioni +
         href: ../relational-databases/partitions/partitioned-tables-and-indexes.md
+      - name: Controllo prestazioni +
+        href: ../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md
+      - name: Strumenti per il monitoraggio e l'ottimizzazione delle prestazioni +
+        href: ../relational-databases/performance/performance-monitoring-and-tuning-tools.md
       - name: Resource Governor +
         href: ../relational-databases/resource-governor/resource-governor.md
-      - name: Operatori Showplan
+      - name: Guida di riferimento a operatori Showplan logici e fisici
         href: showplan-logical-and-physical-operators-reference.md
       - name: Statistiche +
         href: ../relational-databases/statistics/statistics.md
-      - name: Prestazioni +
-        href: ../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md
+      - name: Ottimizzazione del database tramite un carico di lavoro di Archivio query
+        href: ../relational-databases/performance/tuning-database-using-workload-from-query-store.md
   - name: PolyBase +
     href: ../relational-databases/polybase/polybase-guide.md
   - name: Eseguire query sui dati
@@ -204,9 +210,9 @@ items:
     href: ../relational-databases/system-tables/system-tables-transact-sql.md
   - name: Viste di sistema +
     href: ../relational-databases/system-views/replication-views-transact-sql.md
-ms.openlocfilehash: 8c23236b2dad073616d1d3a5ee82f475bde0119a
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 63116a51771db804d7e0a30dac73f24934c29c51
+ms.sourcegitcommit: 60739bcb48ccce17bca4e11a85df443e93ca23e3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51641008"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52439753"

@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 62fefedaa417e73820a7e14df9bf90f6215b9161
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: ed7ba4a6b5b2f69c51f06a4dbf2947d97981c38f
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51702449"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52419102"
 ---
 # <a name="microsoft-analytics-platform-system"></a>Piattaforma di strumenti analitici Microsoft  
 La piattaforma di strumenti analitici Microsoft, una piattaforma dati progettata per il data warehousing e l'analisi di Big Data, offre integrazione completa dei dati, elaborazione di query ad alta velocità, archiviazione con scalabilità elevata e manutenzione semplice per le soluzioni di business intelligence end-to-end.  
@@ -27,7 +27,7 @@ La tecnologia PolyBase combina i dati PDW relazionali con i dati Hadoop di più 
   
 La piattaforma di strumenti analitici viene spedita al data center come appliance con hardware e software preinstallati e preconfigurati per l'esecuzione di più carichi di lavoro. Quando si acquista la piattaforma di strumenti analitici, si acquistano i nodi di calcolo per PDW a seconda dei requisiti aziendali.  
   
-La piattaforma di strumenti analitici non è solo veloce e scalabile, ma è anche progettata con ridondanza elevata e disponibilità elevata, che ne fanno una piattaforma affidabile per la maggior parte dei dati critici aziendali. La piattaforma di strumenti analitici, essendo progettata per la massima semplicità, può essere usata e gestita facilmente. La tecnologia PolyBase di PDW per l'analisi dei dati Hadoop e l'integrazione con gli strumenti di business intelligence ne fanno una piattaforma completa per la compilazione di soluzioni end-to- end.  
+La piattaforma di strumenti analitici non è solo veloce e scalabile, ma è anche progettata con ridondanza elevata e disponibilità elevata, che ne fanno una piattaforma affidabile per la maggior parte dei dati critici aziendali. La piattaforma di strumenti analitici, essendo progettata per la massima semplicità, può essere usata e gestita facilmente. La tecnologia PolyBase di PDW per l'analisi dei dati Hadoop e l'integrazione con gli strumenti di business intelligence ne fanno una piattaforma completa per la compilazione di soluzioni end-to-end.  
   
   
 ## <a name="parallel-data-warehouse-software-designed-for-massively-parallel-processing"></a>Data warehouse parallela, software progettato per l'elaborazione parallela elevata
@@ -39,7 +39,7 @@ Usare PDW come componente principale di data warehousing relazionale delle soluz
   
 Oltre a raggiungere prestazioni eccellenti per le query, PDW consente facilmente di:  
   
--   Espandere la data warehouse da pochi terabyte a più di 6 petabyte di dati in una singola appliance aggiungendo "unità di scala" al sistema esistente  
+-   Espandere il data warehouse da pochi terabyte a più di 6 petabyte di dati in una singola appliance aggiungendo "unità di scala" al sistema esistente  
   
 -   Considerare i dati sempre attendibili grazie alla ridondanza elevata e alla disponibilità elevata predefinite  
   

@@ -1,32 +1,119 @@
 items:
 - name: Centro prestazioni per il motore di database di SQL Server e il database SQL di Azure
   href: performance-center-for-sql-server-database-engine-and-azure-sql-database.md
-- name: Configurazione di spazi di archiviazione con una cache write-back NVDIMM-N
-  href: configuring-storage-spaces-with-a-nvdimm-n-write-back-cache.md
 - name: Ottimizzazione automatica
   href: ../automatic-tuning/automatic-tuning.md
-- name: Stima della cardinalità
-  href: cardinality-estimation-sql-server.md
+- name: Configurazione di spazi di archiviazione con una cache write-back NVDIMM-N
+  href: configuring-storage-spaces-with-a-nvdimm-n-write-back-cache.md
+- name: Piani di esecuzione
+  href: execution-plans.md
+  items:
+  - name: Infrastruttura di profilatura query
+    href: query-profiling-infrastructure.md
+  - name: Visualizzare e salvare piani di esecuzione
+    href: display-and-save-execution-plans.md
+    items:
+    - name: Visualizzazione del piano di esecuzione stimato
+      href: display-the-estimated-execution-plan.md
+    - name: Visualizzazione di un piano di esecuzione effettivo
+      href: display-an-actual-execution-plan.md
+    - name: Salvataggio di un piano di esecuzione in formato XML
+      href: save-an-execution-plan-in-xml-format.md
+  - name: Confrontare e analizzare i piani di esecuzione
+    href: compare-and-analyze-execution-plans.md
+    items:
+    - name: Confrontare i piani di esecuzione
+      href: compare-execution-plans.md
+    - name: Analizzare un piano di esecuzione effettivo
+      href: analyze-an-actual-execution-plan.md
+  - name: Guide di piano
+    href: plan-guides.md
+    items:
+    - name: Creare una nuova guida di piano
+      href: create-a-new-plan-guide.md
+    - name: Creare una guida di piano per le query con parametri
+      href: create-a-plan-guide-for-parameterized-queries.md
+    - name: Definizione delle funzionalità di parametrizzazione delle query tramite guide di piano
+      href: specify-query-parameterization-behavior-by-using-plan-guides.md
+    - name: Applicare un piano di query fisso a una guida di piano
+      href: apply-a-fixed-query-plan-to-a-plan-guide.md
+    - name: Associazione degli hint per le query a una guida di piano
+      href: attach-query-hints-to-a-plan-guide.md
+    - name: Visualizzare le proprietà delle guide di piano
+      href: view-plan-guide-properties.md
+    - name: Usare SQL Server Profiler per creare e testare guide di piano
+      href: use-sql-server-profiler-to-create-and-test-plan-guides.md
+    - name: Convalidare le guide di piano dopo l'aggiornamento
+      href: validate-plan-guides-after-upgrade.md
+    - name: Eliminare una guida di piano
+      href: delete-a-plan-guide.md
+    - name: Abilitare o disabilitare una guida di piano
+      href: enable-or-disable-a-plan-guide.md
 - name: Elaborazione di query intelligenti
   href: intelligent-query-processing.md
   items:
   - name: Elaborazione di query adattive
     href: adaptive-query-processing.md
+  - name: Inlining di funzioni definite dall'utente scalari
+    href: ../user-defined-functions/scalar-udf-inlining.md
 - name: Monitoraggio e ottimizzazione delle prestazioni
   href: monitor-and-tune-for-performance.md
   items:
   - name: Monitorare i componenti di SQL Server
     href: monitor-sql-server-components.md
+    items:
+    - name: Monitoraggio attività
+      href: ../performance-monitor/activity-monitor.md
+    - name: Viste e funzioni a gestione dinamica
+      href: ../system-dynamic-management-views/system-dynamic-management-views.md
+    - name: Eventi estesi
+      href: ../extended-events/extended-events.md
+    - name: SQL Server Profiler
+      href: ../../tools/sql-server-profiler/sql-server-profiler.md
+    - name: Traccia SQL
+      href: ../sql-trace/sql-trace.md
   - name: Strumenti per il monitoraggio e l'ottimizzazione delle prestazioni
     href: performance-monitoring-and-tuning-tools.md
+    items:
+    - name: Live Query Statistics
+      href: live-query-statistics.md
+    - name: Ottimizzazione guidata motore di database
+      href: database-engine-tuning-advisor.md
+      items:
+      - name: Avvio e utilizzo di Ottimizzazione guidata motore di database
+        href: start-and-use-the-database-engine-tuning-advisor.md
+      - name: Riduzione del carico di ottimizzazione del server di produzione
+        href: reduce-the-production-server-tuning-load.md
+        items:
+        - name: Considerazioni relative all'utilizzo di server di prova
+          href: considerations-for-using-test-servers.md
+      - name: Visualizzare e utilizzare l'output di Ottimizzazione guidata motore di database
+        href: view-and-work-with-the-output-from-the-database-engine-tuning-advisor.md
+      - name: Indicazioni relative agli indici columnstore in Ottimizzazione guidata motore di database
+        href: columnstore-index-recommendations-in-database-engine-tuning-advisor-dta.md
+      - name: Ottimizzazione del database tramite un carico di lavoro di Archivio query
+        href: tuning-database-using-workload-from-query-store.md
+      - name: Miglioramenti delle prestazioni mediante le indicazioni di Ottimizzazione guidata motore di database
+        href: performance-improvements-using-dta-recommendations.md
+  - name: Aggiornamento di database mediante l'Assistente ottimizzazione query
+    href: upgrade-dbcompat-using-qta.md
+  - name: Monitoraggio delle prestazioni tramite Archivio Query
+    href: monitoring-performance-by-using-the-query-store.md
+    items:
+    - name: Uso di Archivio query con OLTP in-memoria
+      href: using-the-query-store-with-in-memory-oltp.md
+    - name: Procedure consigliate per l'archivio query
+      href: best-practice-with-the-query-store.md
+    - name: Scenari di utilizzo dell'Archivio query
+      href: query-store-usage-scenarios.md
+    - name: Come Archivio query raccoglie i dati
+      href: how-query-store-collects-data.md
   - name: Definire una base di riferimento delle prestazioni
     href: establish-a-performance-baseline.md
   - name: Isolare i problemi relativi alle prestazioni
     href: isolate-performance-problems.md
   - name: Individuare i colli di bottiglia
     href: identify-bottlenecks.md
-  - name: Inlining di funzioni definite dall'utente scalari
-    href: ../user-defined-functions/scalar-udf-inlining.md
   - name: Usare DMV per determinare l'uso e le prestazioni delle viste
     href: use-dmvs-determine-usage-performance-views.md
   - name: Monitoraggio delle prestazioni e dell'attività del server
@@ -48,77 +135,47 @@ items:
       href: save-showplan-xml-events-separately-sql-server-profiler.md
     - name: Salvataggio della classe di eventi Showplan XML Statistics Profile Events in file distinti (SQL Server Profiler)
       href: save-showplan-xml-statistics-profile-events-separately-sql-server-profiler.md
-  - name: Visualizzare e salvare piani di esecuzione
-    href: display-and-save-execution-plans.md
-    items:
-    - name: Visualizzazione del piano di esecuzione stimato
-      href: display-the-estimated-execution-plan.md
-    - name: Visualizzazione di un piano di esecuzione effettivo
-      href: display-an-actual-execution-plan.md
-    - name: Salvataggio di un piano di esecuzione in formato XML
-      href: save-an-execution-plan-in-xml-format.md
-  - name: Live Query Statistics
-    href: live-query-statistics.md
-  - name: Monitoraggio delle prestazioni con Archivio query
-    href: monitoring-performance-by-using-the-query-store.md
-  - name: Uso di Archivio query con OLTP in-memoria
-    href: using-the-query-store-with-in-memory-oltp.md
-  - name: Procedure consigliate per l'archivio query
-    href: best-practice-with-the-query-store.md
-  - name: Scenari di utilizzo dell'Archivio query
-    href: query-store-usage-scenarios.md
-  - name: Come Archivio query raccoglie i dati
-    href: how-query-store-collects-data.md
-- name: Ottimizzazione guidata motore di database
-  href: database-engine-tuning-advisor.md
+    - name: Utilizzare la sessione system_health
+      href: ../extended-events/use-the-system-health-session.md
+  - name: Monitoraggio dell'utilizzo delle risorse (Monitor di sistema)
+    href: ../performance-monitor/monitor-resource-usage-system-monitor.md
+- name: Meccanismi interni e architettura
+  href: ../sql-server-guides.md
   items:
-  - name: Avvio e utilizzo di Ottimizzazione guidata motore di database
-    href: start-and-use-the-database-engine-tuning-advisor.md
-  - name: Riduzione del carico di ottimizzazione del server di produzione
-    href: reduce-the-production-server-tuning-load.md
+  - name: Stima della cardinalità
+    href: cardinality-estimation-sql-server.md
+  - name: Cursori
+    href: ../cursors.md
+  - name: Processo di pulizia di record fantasma
+    href: ../ghost-record-cleanup-process-guide.md
+  - name: Architettura e progettazione di indici
+    href: ../sql-server-index-design-guide.md
+  - name: Join
+    href: joins.md
+  - name: Architettura di gestione della memoria
+    href: ../memory-management-architecture-guide.md
     items:
-    - name: Considerazioni relative all'utilizzo di server di prova
-      href: considerations-for-using-test-servers.md
-  - name: Visualizzare e utilizzare l'output di Ottimizzazione guidata motore di database
-    href: view-and-work-with-the-output-from-the-database-engine-tuning-advisor.md
-  - name: Indicazioni relative agli indici columnstore in Ottimizzazione guidata motore di database
-    href: columnstore-index-recommendations-in-database-engine-tuning-advisor-dta.md
-  - name: Ottimizzazione del database tramite un carico di lavoro dell'archivio query
-    href: tuning-database-using-workload-from-query-store.md
-  - name: Miglioramenti delle prestazioni mediante le indicazioni di Ottimizzazione guidata motore di database
-    href: performance-improvements-using-dta-recommendations.md
-- name: Guide di piano
-  href: plan-guides.md
-  items:
-  - name: Creare una nuova guida di piano
-    href: create-a-new-plan-guide.md
-  - name: Creare una guida di piano per le query con parametri
-    href: create-a-plan-guide-for-parameterized-queries.md
-  - name: Definizione delle funzionalità di parametrizzazione delle query tramite guide di piano
-    href: specify-query-parameterization-behavior-by-using-plan-guides.md
-  - name: Applicare un piano di query fisso a una guida di piano
-    href: apply-a-fixed-query-plan-to-a-plan-guide.md
-  - name: Associazione degli hint per le query a una guida di piano
-    href: attach-query-hints-to-a-plan-guide.md
-  - name: Visualizzare le proprietà delle guide di piano
-    href: view-plan-guide-properties.md
-  - name: Usare SQL Server Profiler per creare e testare guide di piano
-    href: use-sql-server-profiler-to-create-and-test-plan-guides.md
-  - name: Convalidare le guide di piano dopo l'aggiornamento
-    href: validate-plan-guides-after-upgrade.md
-  - name: Eliminare una guida di piano
-    href: delete-a-plan-guide.md
-  - name: Abilitare o disabilitare una guida di piano
-    href: enable-or-disable-a-plan-guide.md
-- name: Monitoraggio dell'utilizzo delle risorse (Monitor di sistema)
-  href: ../performance-monitor/monitor-resource-usage-system-monitor.md
-- name: Join
-  href: joins.md
-- name: 'Sottoquery:'
-  href: subqueries.md
-ms.openlocfilehash: c1a06a77f377871a652f8295897e8e912ef353f2
-ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
+    - name: Lettura di pagine
+      href: ../reading-pages.md
+    - name: Scrittura di pagine
+      href: ../writing-pages.md
+  - name: Architettura pagine ed extent
+    href: ../pages-and-extents-architecture-guide.md
+  - name: Architettura di elaborazione delle query
+    href: ../query-processing-architecture-guide.md
+  - name: Guida di riferimento a operatori Showplan logici e fisici
+    href: ../showplan-logical-and-physical-operators-reference.md
+  - name: 'Sottoquery:'
+    href: subqueries.md
+  - name: Architettura dei thread e delle attività
+    href: ../thread-and-task-architecture-guide.md
+  - name: Architettura e gestione del log delle transazioni
+    href: ../sql-server-transaction-log-architecture-and-management-guide.md
+  - name: Controllo delle versioni delle righe e blocco della transazione
+    href: ../sql-server-transaction-locking-and-row-versioning-guide.md
+ms.openlocfilehash: 2bf87948dbeb01794c7af547586e1204613994be
+ms.sourcegitcommit: f1cf91e679d1121d7f1ef66717b173c22430cb42
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51221527"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52586224"
