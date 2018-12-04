@@ -13,12 +13,12 @@ ms.assetid: 61a2ec0d-1bcb-4231-bea0-cff866c21463
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 039b47f1a2affd12f53a8c45c931348eb4a2077e
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 21021402a10494306a3b667c5f7b83977dc7d205
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51604761"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512545"
 ---
 # <a name="connecting-with-sqlcmd"></a>Connessione con sqlcmd
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -28,8 +28,8 @@ L'utilità [sqlcmd](https://go.microsoft.com/fwlink/?LinkID=154481) è disponibi
 I comandi seguenti mostrano come usare l'autenticazione di Windows (Kerberos) e [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] l'autenticazione, rispettivamente:
   
 ```  
-sqlcmd –E –Sxxx.xxx.xxx.xxx  
-sqlcmd –Sxxx.xxx.xxx.xxx –Uxxx -Pxxx  
+sqlcmd -E -Sxxx.xxx.xxx.xxx  
+sqlcmd -Sxxx.xxx.xxx.xxx -Uxxx -Pxxx  
 ```  
   
 ## <a name="available-options"></a>Opzioni disponibili
@@ -58,7 +58,7 @@ Nella versione corrente, sono disponibili le opzioni seguenti:
   
 - -H Specifica il nome di una workstation.  
   
-- -i *file_input*[,*file_input*[,…]] Identifica il file che contiene un batch di istruzioni SQL o stored procedure.  
+- -i *file_input*[,*file_input*[,…]] Identifica il file che contiene un batch di istruzioni o stored procedure SQL.  
   
 - -I Set di `SET QUOTED_IDENTIFIER` opzione di connessione su ON.  
   
@@ -75,7 +75,7 @@ Dichiara il tipo di carico di lavoro dell'applicazione in caso di connessione a 
 - -m *livello_errore* Controlla i messaggi di errore inviati a stdout.  
   
 - **-M**_a più subnet\_failover_  
-Specificare sempre **-M** in caso di connessione al listener di un gruppo di disponibilità di [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] o a un'istanza del cluster di failover di [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]. **-M** consente un rilevamento più veloce dei failover e una connessione più rapida al server attualmente attivo. Se non si specifica **–M** , significa che l'opzione **-M** è disattivata. Per altre informazioni sulle [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)], vedere [Driver ODBC in Linux e macOS - disponibilità elevata e ripristino di emergenza](../../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md).  
+Specificare sempre **-M** in caso di connessione al listener di un gruppo di disponibilità di [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] o a un'istanza del cluster di failover di [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]. **-M** consente un rilevamento più veloce dei failover e una connessione più rapida al server attualmente attivo. Se non si specifica **-M**, significa che l'opzione **-M** è disattivata. Per altre informazioni sulle [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)], vedere [Driver ODBC in Linux e macOS - disponibilità elevata e ripristino di emergenza](../../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md).  
   
 > [!NOTE]  
 > **-M** non è supportata in CTP per SUSE Linux. È tuttavia possibile specificare la parola chiave **MultiSubnetFailover=Yes** in un file DSN passato a `sqlcmd`. Per altre informazioni, vedere "Supporto di DSN in `sqlcmd` e `bcp`" alla fine di questo argomento.  
@@ -184,7 +184,7 @@ Nella riga di comando, combinare `a.sql` e `b.sql` in `c.sql` usando i comandi s
   
 Eseguire `sqlcmd` e usare `c.sql` come file di input:  
   
-    slqcmd -S<…> -P<..> –U<..> -I c.sql  
+    slqcmd -S<...> -P<..> -U<..> -I c.sql  
 
 - -z *password* Cambia password.  
   
@@ -222,9 +222,9 @@ In un DSN in Linux o macOS sono supportate le voci seguenti:
   
 In un DSN, solo la voce DRIVER è obbligatoria, ma per connettersi a un server, `sqlcmd` o `bcp` richiede il valore nella voce SERVER.  
 
-Se è specificata la stessa opzione sia nel DSN che nella riga di comando di `sqlcmd` o di `bcp`, l'opzione della riga di comando sostituisce il valore usato nel DSN. Se ad esempio il DSN include una voce DATABASE e la riga di comando di `sqlcmd` include **-d**, viene usato il valore passato a **-d**. Se nel DSN è specificato **Trusted_Connection=yes**, viene usata l'autenticazione Kerberos e il nome utente (**–U**) e la password (**–P**), se specificati, vengono ignorati.
+Se è specificata la stessa opzione sia nel DSN che nella riga di comando di `sqlcmd` o di `bcp`, l'opzione della riga di comando sostituisce il valore usato nel DSN. Se ad esempio il DSN include una voce DATABASE e la riga di comando di `sqlcmd` include **-d**, viene usato il valore passato a **-d**. Se si specifica **Trusted_Connection=yes** nel DNS, viene usata l'autenticazione Kerberos e il nome utente (**-U**) e la password (**-P**), se specificati, vengono ignorati.
 
-Gli script esistenti che richiamano `isql` possono essere modificati per l'uso di `sqlcmd` definendo l'alias seguente: `alias isql="sqlcmd –D"`.  
+Gli script esistenti che richiamano `isql` possono essere modificati per l'uso di `sqlcmd` definendo l'alias seguente: `alias isql="sqlcmd -D"`.  
 
 ## <a name="see-also"></a>Vedere anche  
 [Connessione a **bcp**](../../../connect/odbc/linux-mac/connecting-with-bcp.md)  

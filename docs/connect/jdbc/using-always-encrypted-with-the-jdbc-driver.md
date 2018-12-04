@@ -11,12 +11,12 @@ ms.assetid: 271c0438-8af1-45e5-b96a-4b1cabe32707
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2f9eded908271973415987155de5cf1efdc906db
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 4659c6571f8afbcdb757141e03df51ac54d0835e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600971"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52510725"
 ---
 # <a name="using-always-encrypted-with-the-jdbc-driver"></a>Uso di Always Encrypted con il driver JDBC
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -57,7 +57,7 @@ Per i provider dell'archivio chiavi pre-registrato, non è necessario apportare 
 Tutti questi provider dell'archivio chiavi sono descritte più dettagliatamente nelle sezioni che seguono. È sufficiente implementare un provider dell'archivio chiavi per l'uso di Always Encrypted.
 
 ### <a name="using-azure-key-vault-provider"></a>Uso del provider dell'insieme di credenziali delle chiavi di Azure
-Azure Key Vault rappresenta una scelta valida per archiviare e gestire le chiavi master delle colonne per Always Encrypted, soprattutto se l'applicazione è ospitata in Azure. Microsoft JDBC Driver per SQL Server include un provider predefinito, SQLServerColumnEncryptionAzureKeyVaultProvider, per le applicazioni che dispongono di chiavi archiviate in Azure Key Vault. Il nome di questo provider è AZURE_KEY_VAULT. Per usare il provider di archivio di Azure Key Vault, uno sviluppatore di applicazioni deve creare l'insieme di credenziali e le chiavi in Azure Key Vault e creare una registrazione dell'App in Azure Active Directory. L'applicazione registrata deve essere concesso ottenere, Decrypt, Encrypt, Unwrap Key, Wrap Key e verificare le autorizzazioni nei criteri di accesso definiti per l'insieme di credenziali delle chiavi creato per l'uso con crittografia sempre attiva. Per altre informazioni su come configurare l'insieme di credenziali delle chiavi e creare una chiave master della colonna, vedere [Azure Key Vault – passo a passo](https://blogs.technet.microsoft.com/kv/2015/06/02/azure-key-vault-step-by-step/) e [creazione di chiavi Master della colonna in Azure Key Vault](../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md#creating-column-master-keys-in-azure-key-vault).
+Azure Key Vault rappresenta una scelta valida per archiviare e gestire le chiavi master delle colonne per Always Encrypted, soprattutto se l'applicazione è ospitata in Azure. Microsoft JDBC Driver per SQL Server include un provider predefinito, SQLServerColumnEncryptionAzureKeyVaultProvider, per le applicazioni che dispongono di chiavi archiviate in Azure Key Vault. Il nome di questo provider è AZURE_KEY_VAULT. Per usare il provider di archivio di Azure Key Vault, uno sviluppatore di applicazioni deve creare l'insieme di credenziali e le chiavi in Azure Key Vault e creare una registrazione dell'App in Azure Active Directory. L'applicazione registrata deve essere concesso ottenere, Decrypt, Encrypt, Unwrap Key, Wrap Key e verificare le autorizzazioni nei criteri di accesso definiti per l'insieme di credenziali delle chiavi creato per l'uso con crittografia sempre attiva. Per altre informazioni su come configurare l'insieme di credenziali delle chiavi e creare una chiave master della colonna, vedere [Azure Key Vault - passo a passo](https://blogs.technet.microsoft.com/kv/2015/06/02/azure-key-vault-step-by-step/) e [creazione di chiavi Master della colonna in Azure Key Vault](../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md#creating-column-master-keys-in-azure-key-vault).
 
 Per gli esempi in questa pagina, se è stato creato un insieme di credenziali delle chiavi di Azure basato su chiave master della colonna e la chiave di crittografia di colonna usando SQL Server Management Studio, lo script T-SQL per ricrearle potrebbe essere simile a questo esempio con il proprio specifico **KEY_ PERCORSO** e **ENCRYPTED_VALUE**:
 
@@ -106,7 +106,7 @@ SQLServerConnection.registerColumnEncryptionKeyStoreProviders(keyStoreMap);
 > Per un esempio di come includere queste dipendenze in un progetto Maven, vedere [scaricare ADAL4J AKV dipendenze e con Apache Maven](https://github.com/Microsoft/mssql-jdbc/wiki/Download-ADAL4J-And-AKV-Dependencies-with-Apache-Maven)
 
 ### <a name="using-windows-certificate-store-provider"></a>Uso del provider per l'archivio certificati Windows
-SqlColumnEncryptionCertificateStoreProvider consente di archiviare le chiavi master della colonna nell'archivio certificati Windows. Usare la procedura guidata Always Encrypted di SQL Server Management Studio (SSMS) o altri strumenti supportati per creare la chiave master della colonna e la crittografia di colonna definizioni chiave nel database. La stessa procedura guidata può essere utilizzata per generare un certificato autofirmato in Store il certificato di Windows che può essere utilizzato come chiave master della colonna per i dati sempre crittografati. Per altre informazioni sulla chiave master della colonna e sintassi T-SQL della colonna crittografia chiave, vedere [CREATE COLUMN MASTER KEY](../../t-sql/statements/create-column-master-key-transact-sql.md) e [CREATE COLUMN ENCRPTION KEY](../../t-sql/statements/create-column-encryption-key-transact-sql.md) rispettivamente.
+SqlColumnEncryptionCertificateStoreProvider consente di archiviare le chiavi master della colonna nell'archivio certificati Windows. Usare la procedura guidata Always Encrypted di SQL Server Management Studio (SSMS) o altri strumenti supportati per creare la chiave master della colonna e la crittografia di colonna definizioni chiave nel database. La stessa procedura guidata può essere utilizzata per generare un certificato autofirmato in Store il certificato di Windows che può essere utilizzato come chiave master della colonna per i dati sempre crittografati. Per altre informazioni sulla chiave master della colonna e sintassi T-SQL della colonna crittografia chiave, vedere [CREATE COLUMN MASTER KEY](../../t-sql/statements/create-column-master-key-transact-sql.md) e [CREATE COLUMN ENCRYPTION KEY](../../t-sql/statements/create-column-encryption-key-transact-sql.md) rispettivamente.
 
 Il nome del SQLServerColumnEncryptionCertificateStoreProvider è MSSQL_CERTIFICATE_STORE e può eseguire query di getName() API dell'oggetto del provider. Viene automaticamente registrato dal driver ed è possibile usare facilmente senza apportare modifiche dell'applicazione.
 
@@ -130,7 +130,7 @@ WITH VALUES
 ```
 
 > [!IMPORTANT]
-> Mentre altri provider di archivio chiavi in questo articolo sono disponibili in tutte le piattaforme supportate dal driver, l'implementazione SQLServerColumnEncryptionCertificateStoreProvider del driver JDBC è disponibile Windows solo nei sistemi operativi. E presenta una dipendenza su sqljdbc_auth disponibile nel pacchetto di driver. Per usare questo provider, copiare il file sqljdbc_auth.dll in una directory nel percorso di sistema Windows nel computer in cui è installato il driver JDBC. In alternativa è possibile impostare la proprietà di sistema java.libary.path in modo da specificare la directory di sqljdbc_auth.dll. Se si esegue Java Virtual Machine (JVM) a 32 bit, utilizzare il file sqljdbc_auth.dll nella cartella x86, anche se la versione del sistema operativo è x64. Se si esegue JVM a 64 bit in un processore x64, utilizzare il file sqljdbc_auth.dll nella cartella x64. Ad esempio, se si usa il driver JVM a 32 bit e il driver JDBC è installato nella directory predefinita, specificare il percorso della DLL tramite l'argomento seguente della VM (Virtual Machine) quando l'applicazione Java viene avviata: `-Djava.library.path=C:\Microsoft JDBC Driver <version> for SQL Server\sqljdbc_<version>\enu\auth\x86`
+> Mentre altri provider di archivio chiavi in questo articolo sono disponibili in tutte le piattaforme supportate dal driver, l'implementazione SQLServerColumnEncryptionCertificateStoreProvider del driver JDBC è disponibile Windows solo nei sistemi operativi. E presenta una dipendenza su sqljdbc_auth disponibile nel pacchetto di driver. Per usare questo provider, copiare il file sqljdbc_auth.dll in una directory nel percorso di sistema Windows nel computer in cui è installato il driver JDBC. In alternativa è possibile impostare la proprietà di sistema java.library.path in modo da specificare la directory di sqljdbc_auth.dll. Se si esegue Java Virtual Machine (JVM) a 32 bit, utilizzare il file sqljdbc_auth.dll nella cartella x86, anche se la versione del sistema operativo è x64. Se si esegue JVM a 64 bit in un processore x64, utilizzare il file sqljdbc_auth.dll nella cartella x64. Ad esempio, se si usa il driver JVM a 32 bit e il driver JDBC è installato nella directory predefinita, specificare il percorso della DLL tramite l'argomento seguente della VM (Virtual Machine) quando l'applicazione Java viene avviata: `-Djava.library.path=C:\Microsoft JDBC Driver <version> for SQL Server\sqljdbc_<version>\enu\auth\x86`
 
 ### <a name="using-java-key-store-provider"></a>Usando Java Key Store provider
 Il driver JDBC è disponibile in un’implementazione predefinita del provider dell’archivio chiavi per l’archivio chiavi Java. Se il **keyStoreAuthentication** proprietà della stringa di connessione è presente nella stringa di connessione e impostarlo su "JavaKeyStorePassword", il driver automaticamente crea un'istanza e registra il provider per Java Key Store. Il nome del provider di Java Key Store è MSSQL_JAVA_KEYSTORE. Questo nome è anche possibile eseguire query usando l'API SQLServerColumnEncryptionJavaKeyStoreProvider.getName(). 
@@ -260,7 +260,7 @@ import com.microsoft.sqlserver.jdbc.SQLServerException;
  */
 public class AlwaysEncrypted {
     // Alias of the key stored in the keystore.
-    private static String keyAlias = "<proide key alias>";
+    private static String keyAlias = "<provide key alias>";
 
     // Name by which the column master key will be known in the database.
     private static String columnMasterKeyName = "MyCMK";

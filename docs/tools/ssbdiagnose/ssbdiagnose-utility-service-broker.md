@@ -26,12 +26,12 @@ ms.assetid: 0c1636e8-a3db-438e-be4c-1ea40d1f4877
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 66a576c33b805fb350b465ea47d2588e0dae7036
-ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
+ms.openlocfilehash: 23985f7a9c78993e154babdcbdd9980334f0fc36
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51291788"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52541328"
 ---
 # <a name="ssbdiagnose-utility-service-broker"></a>Utilità ssbdiagnose (Service Broker)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -93,7 +93,7 @@ ssbdiagnose
   [ CONNECT TO <connectionoptions> ] [ ...n]  
   
 <connectionoptions> ::=  
-    [ –E | { -U login_id [ -P password ] } ]  
+    [ -E | { -U login_id [ -P password ] } ]  
   [ -S server_name[\instance_name] ]  
   [ -d database_name ]  
   [ -l login_timeout ]  
@@ -207,7 +207,7 @@ WHERE database_id = DB_ID();
  **\<runtimeconnectionoptions >**  
  Specifica le informazioni di connessione per i database che contengono i servizi associati agli elementi di conversazione monitorati. Se tutti i servizi si trovano nello stesso database, è necessario specificare solo una clausola **CONNECT TO** , mentre se i servizi si trovano in database separati è necessario specificare una clausola **CONNECT TO** per ogni database. Se **runtimeconnectionoptions** non viene specificato, **ssbdiagnose** usa le informazioni di connessione di **baseconnectionoptions**.  
   
- **–E**  
+ **-E**  
  Apre una connessione con autenticazione di Windows a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] usando l'account di Windows corrente come ID di accesso. Le credenziali di accesso devono corrispondere a un membro del ruolo predefinito del server **sysadmin** .  
   
  L'opzione -E consente di ignorare le impostazioni relative all'utente e alla password delle variabili di ambiente SQLCMDUSER e SQLCMDPASSWORD.  
@@ -221,7 +221,7 @@ WHERE database_id = DB_ID();
   
  Se non viene specificata né **-E** né **-U** , **ssbdiagnose** usa il valore della variabile di ambiente SQLCMDUSER. Se SQLCMDUSER non è impostata, **ssbdiagnose** tenta di effettuare la connessione usando la modalità di autenticazione di Windows basata sull'account di Windows dell'utente che esegue **ssbdiagnose**.  
   
- Se si usa l'opzione **-U** in combinazione con l'opzione **-E** , viene generato un messaggio di errore. Se l'opzione **–U** è seguita da più di un argomento, viene generato un messaggio di errore e il programma viene chiuso.  
+ Se si usa l'opzione **-U** in combinazione con l'opzione **-E** , viene generato un messaggio di errore. Se l'opzione **-U** è seguita da più di un argomento, viene generato un messaggio di errore e il programma viene chiuso.  
   
  **-P** *password*  
  Specifica la password per l'ID di accesso **-U** . Alle password viene applicata la distinzione tra maiuscole e minuscole. Se si usa l'opzione **-U** senza usare **-P** , **ssbdiagnose** usa il valore della variabile di ambiente SQLCMDPASSWORD. Se SQLCMDPASSWORD non è impostata, **ssbdiagnose** richiede l'immissione di una password.  

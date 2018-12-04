@@ -11,12 +11,12 @@ ms.assetid: 98fa7488-aac3-45b4-8aa4-83ed6ab638b4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e46023a364a39950a2fe82fef0cc8357bed6d601
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 01e3d8b002df2f939528bef8d4faa39d3a5c72f1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47762409"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52520205"
 ---
 # <a name="understanding-data-type-conversions"></a>Informazioni sulle conversioni dei tipi di dati
 
@@ -26,11 +26,11 @@ Per semplificare la conversione dei tipi di dati del linguaggio di programmazion
 
 ## <a name="getter-method-conversions"></a>Conversioni dei metodi di richiamo
 
-Sulla base dei tipi di dati [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], il grafico seguente contiene la mappa di conversione del driver JDBC per i metodi get\<Type() della classe [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) e le conversioni supportate nei metodi get\<Type() della classe [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md).
+Sulla base dei tipi di dati [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], il grafico seguente contiene la mappa di conversione del driver JDBC per i metodi get\<Type>() della classe [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) e le conversioni supportate nei metodi get\<Type>() della classe [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md).
 
 ![JDBCGetterConversions](../../connect/jdbc/media/jdbcgetterconversions.gif "JDBCGetterConversions")
 
-Sono disponibili tre categorie di conversione supportate dai metodi di richiamo del driver JDBC:
+Sono disponibili tre categorie di conversione supportate dai metodi getter del driver JDBC:
 
 - **Senza perdita di dati (x)**: conversioni nei casi in cui il tipo di richiamo è inferiore o identico al tipo di server sottostante. Ad esempio, quando si esegue la chiamata a getBigDecimal in una colonna decimale del server sottostante, la conversione non è necessaria.
 
@@ -74,7 +74,7 @@ Il server cercherà di eseguire la conversione e restituirà degli errori in cas
 
 Nel caso del **stringa** tipo di dati, se il valore supera la lunghezza di **VARCHAR**, viene eseguito il mapping **LONGVARCHAR**. Analogamente, **NVARCHAR** esegue il mapping ai **LONGNVARCHAR** se il valore supera la lunghezza di **NVARCHAR**. Lo stesso vale per **byte[]**. Valori più lunghi **VARBINARY** diventano **LONGVARBINARY**.
 
-Sono disponibili due categorie di conversione supportate dai metodi di impostazione del driver JDBC:
+Sono disponibili due categorie di conversione supportate dai metodi setter del driver JDBC:
 
 - **Senza perdita di dati (x)**: conversioni per i casi numerici in cui il tipo di impostazione è inferiore o identico al tipo di server sottostante. Ad esempio, quando si esegue la chiamata a setBigDecimal in una colonna **decimale** del server sottostante, la conversione non è necessaria. Per la conversione da un tipo numeric a un tipo character, il tipo di dati **numeric** Java viene convertito in una **stringa**. Ad esempio, la chiamata a setDouble con un valore pari a "53" in una colonna varchar(50) produrrà un valore character "53" nella colonna di destinazione.
 

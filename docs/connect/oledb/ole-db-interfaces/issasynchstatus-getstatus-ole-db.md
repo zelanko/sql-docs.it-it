@@ -16,12 +16,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: c8b7efac3068cc95af65e13db1492f935871bf66
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 1920ce001879baf01a337898c452493dccd430f3
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51031063"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52505070"
 ---
 # <a name="issasynchstatusgetstatus-ole-db"></a>ISSAsynchStatus::GetStatus (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -74,7 +74,7 @@ HRESULT GetStatus(
  DBASYNCHPHASE_CANCELED: l'elaborazione asincrona dell'oggetto è stata interrotta. Il metodo **ISSAsynchStatus::GetStatus** restituisce DB_E_CANCELED. Se l'operazione asincrona è il risultato della chiamata a **ICommand::Execute** per un comando che aggiorna, elimina o inserisce righe, *pulProgress* è uguale al numero totale di righe, per tutti i set di parametri, interessate dal comando prima dell'annullamento.  
   
  *ppwszStatusText*[in/out]  
- Puntatore alla memoria contenente informazioni aggiuntive sull'operazione. Un provider può utilizzare questo valore per distinguere tra elementi differenti di un'operazione, ad esempio le diverse risorse a cui si accede. Questa stringa viene localizzata in base alla proprietà DBPROP_INIT_LCID dell'oggetto origine dati.  
+ Puntatore alla memoria contenente informazioni aggiuntive sull'operazione. Un provider può usare questo valore per distinguere tra elementi differenti di un'operazione, ad esempio le diverse risorse a cui si accede. Questa stringa viene localizzata in base alla proprietà DBPROP_INIT_LCID dell'oggetto origine dati.  
   
  Se *ppwszStatusText* è non Null nell'input, il provider restituisce lo stato associato allo specifico elemento identificato da *ppwszStatusText*. Se *ppwszStatusText* non indica un elemento di *eOperation*, il provider restituisce S_OK con *pulProgress* e *pulProgressMax* impostati sullo stesso valore. Se il provider non distingue tra elementi basati su un identificatore testuale, imposta *ppwszStatusText* su NULL e restituisce informazioni sull'operazione nel suo complesso. In caso contrario, se *ppwszStatusText* è non Null nell'input, il provider lascia *ppwszStatusText* invariato.  
   

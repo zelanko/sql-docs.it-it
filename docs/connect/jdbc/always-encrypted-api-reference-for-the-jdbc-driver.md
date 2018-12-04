@@ -11,12 +11,12 @@ ms.assetid: 6962a2aa-9508-4d4f-a78c-905e2bc68615
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 691e1c573e2f96c0727970fac858bcfe761d22fc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1605b608550446ecb31a79e6074a7e8cfa7ea916
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47831069"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52420703"
 ---
 # <a name="always-encrypted-api-reference-for-the-jdbc-driver"></a>Informazioni di riferimento sull'API Always Encrypted per il driver JDBC
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "47831069"
 |Nuova parola chiave della stringa di connessione:<br /><br /> columnEncryptionSetting|columnEncryptionSetting=Enabled abilita la funzionalità Always Encrypted per la connessione e columnEncryptionSetting=Disabled la disabilita. I valori accettati sono Enabled/Disabled. Il valore predefinito è Disabled.|  
 |Nuovi metodi:<br /><br /> `public static void setColumnEncryptionTrustedMasterKeyPaths(Map<String, List\<String>> trustedKeyPaths)`<br /><br /> `public static void updateColumnEncryptionTrustedMasterKeyPaths(String server, List\<String> trustedKeyPaths)`<br /><br /> `public static void removeColumnEncryptionTrustedMasterKeyPaths(String server)`|Consente di impostare, aggiornare o rimuovere un elenco di percorsi principali attendibili per un server di database. Se durante l'elaborazione di una query dell'applicazione, il driver riceve il percorso di una chiave che non è presente nell'elenco, la query ha esito negativo. Questa proprietà garantisce una maggiore protezione da attacchi alla sicurezza in cui un'istanza compromessa di SQL Server invia falsi percorsi delle chiavi, causando potenzialmente la perdita delle credenziali dell'archivio di chiavi.|  
 |Nuovo metodo:<br /><br /> `public static Map<String, List\<String>> getColumnEncryptionTrustedMasterKeyPaths()`|Restituisce un elenco di percorsi attendibili delle chiavi per un server di database.|  
-|Nuovo metodo:<br /><br /> `public static void registerColumnEncryptionKeyStoreProviders (Map\<String, SQLServerColumnEncryptionKeyStoreProvider> clientKeyStoreProviders)`|Consente di registrare provider personalizzati per gli archivi delle chiavi. È un dizionario che esegue il mapping dei nomi dei provider degli archivi delle chiavi per le implementazioni del provider dell'archivio delle chiavi.<br /><br /> Per usare l'archivio chiavi JVM è necessario creare un'istanza di un oggetto SQLServerColumnEncryptionJVMKeyStoreProvider con le credenziali keystore di JVM e registrarla con il driver. Il nome per questo provider deve essere MSSQL_JVM_KEYSTORE.<br /><br /> Per usare l'archivio di Azure Key Vault, è necessario creare un'istanza di un oggetto SQLServerColumnEncryptionAzureKeyStoreProvider e registrarlo con il driver. Il nome per questo provider deve essere 'AZURE_KEY_VAULT'.|
+|Nuovo metodo:<br /><br /> `public static void registerColumnEncryptionKeyStoreProviders (Map\<String, SQLServerColumnEncryptionKeyStoreProvider> clientKeyStoreProviders)`|Consente di registrare provider personalizzati per gli archivi delle chiavi. È un dizionario che esegue il mapping dei nomi dei provider degli archivi delle chiavi per le implementazioni del provider dell'archivio delle chiavi.<br /><br /> Per usare l'archivio chiavi JVM è necessario creare un'istanza di un oggetto SQLServerColumnEncryptionJVMKeyStoreProvider con le credenziali keystore di JVM e registrarla con il driver. Il nome per questo provider deve essere 'MSSQL_JVM_KEYSTORE'.<br /><br /> Per usare l'archivio di Azure Key Vault, è necessario creare un'istanza di un oggetto SQLServerColumnEncryptionAzureKeyStoreProvider e registrarlo con il driver. Il nome per questo provider deve essere 'AZURE_KEY_VAULT'.|
 |`public final boolean getSendTimeAsDatetime()`|Restituisce l'impostazione della proprietà di connessione sendTimeAsDatetime.|
 |`public void setSendTimeAsDatetime(boolean sendTimeAsDateTimeValue)`|Modifica l'impostazione della proprietà di connessione sendTimeAsDatetime.|
 

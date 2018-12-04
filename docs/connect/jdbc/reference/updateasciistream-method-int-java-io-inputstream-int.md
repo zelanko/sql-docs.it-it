@@ -16,12 +16,12 @@ ms.assetid: d07944b8-7001-49b5-b3b3-0676f71e17cf
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 430bda14f1c9c69a11e6b6617e34b774a9fa01c7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dcbd78376e21f5b3e0e0bff0e0a344da10a8ae7a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47713029"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52534947"
 ---
 # <a name="updateasciistream-method-int-javaioinputstream-int"></a>Metodo updateAsciiStream (int, java.io.InputStream, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

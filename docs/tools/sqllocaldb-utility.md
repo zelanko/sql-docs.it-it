@@ -15,12 +15,12 @@ ms.assetid: d785cdb7-1ea0-4871-bde9-1ae7881190f5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d845b000daa4610fc19e573342faaef361c0de01
-ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
+ms.openlocfilehash: 19902c030538d0384c89dd632aaf1d6f8c728048
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51292087"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52538782"
 ---
 # <a name="sqllocaldb-utility"></a>Utilità SqlLocalDB
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ SqlLocalDB.exe
  Avvia l'istanza specificata di **LocalDB** di [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]. Quando ha esito positivo, l'istruzione restituisce l'indirizzo della named pipe del **database locale**.  
   
  [ **stop** | **p** ] *\<instance-name>* [**-i** ] [**-k** ]  
- Arresta l'istanza specificata di **LocalDB** di [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]. Aggiungere **-i** per richiedere l'arresto dell'istanza con l'opzione **NOWAIT** . Aggiungere **-k** per terminare il processo dell'istanza senza contattarlo.  
+ Arresta l'istanza specificata di **LocalDB** di [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]. Aggiungere **-i** per richiedere l'arresto dell'istanza con l'opzione **NOWAIT**. Aggiungere **-k** per terminare il processo dell'istanza senza contattarlo.  
   
  [ **info** | **i** ] [ *\<instance-name>* ]  
  Elenca tutte le istanze di [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]**LocalDB** di proprietà dell'utente corrente.  
@@ -99,7 +99,7 @@ SqlLocalDB.exe share "DeptLocalDB" "DeptSharedLocalDB"
 SqlLocalDB.exe start "DeptLocalDB"  
 SqlLocalDB.exe info "DeptLocalDB"  
 REM The previous statement outputs the Instance pipe name for the next step  
-sqlcmd –S np:\\.\pipe\LOCALDB#<use your pipe name>\tsql\query  
+sqlcmd -S np:\\.\pipe\LOCALDB#<use your pipe name>\tsql\query  
 CREATE LOGIN NewLogin WITH PASSWORD = 'Passw0rd!!@52';   
 GO  
 CREATE USER NewLogin;  
@@ -110,7 +110,7 @@ EXIT
  Eseguire il codice riportato di seguito per connettersi all'istanza condivisa di **LocalDB** utilizzando l'account di accesso `NewLogin` .  
   
 ```  
-sqlcmd –S (localdb)\.\DeptSharedLocalDB -U NewLogin -P Passw0rd!!@52  
+sqlcmd -S (localdb)\.\DeptSharedLocalDB -U NewLogin -P Passw0rd!!@52  
 ```  
   
 ## <a name="see-also"></a>Vedere anche  

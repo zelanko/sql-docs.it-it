@@ -10,12 +10,12 @@ ms.assetid: 6fffee7d-891f-4d9d-b2c3-dd19855a1c2c
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ec8999398feb77b44386111daae449b560bcf1da
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 73aca1900afc191dd3df795b1716b624d5c36201
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51666280"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52527655"
 ---
 # <a name="distributed-replay-requirements"></a>Requisiti relativi a Riesecuzione distribuita
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "51666280"
   
 -   Singolo file di traccia con estensione `.trc` .  
   
--   Set di file di traccia di rollover che rispettano la convenzione di denominazione per il rollover dei file, ad esempio `<TraceFile>.trc`, `<TraceFile>_1.trc`, `<TraceFile>_2.trc`, `<TraceFile>_3.trc`, … `<TraceFile>_n.trc`.  
+-   Set di file di traccia di rollover che rispettano la convenzione di denominazione per il rollover dei file, ad esempio `<TraceFile>.trc`, `<TraceFile>_1.trc`, `<TraceFile>_2.trc`, `<TraceFile>_3.trc`, ... `<TraceFile>_n.trc`.  
   
 ### <a name="input-trace-events-and-columns"></a>Eventi e colonne della traccia di input  
  I dati di traccia di input devono contenere colonne ed eventi specifici, che devono essere rieseguiti da Riesecuzione distribuita. Il modello **TSQL_Replay** in [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] contiene tutte le colonne e tutti gli eventi necessari, oltre a informazioni aggiuntive. Per altre informazioni sul modello, vedere [Requisiti per la riproduzione](../../tools/sql-server-profiler/replay-requirements.md).  

@@ -13,12 +13,12 @@ ms.assetid: 8ae70041-f3d9-46e4-8fa8-31088572a9f8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9d4b12736ccbf670b12312b372410879c8a08a9e
-ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
+ms.openlocfilehash: f56669ce6fdb9bdc71017afa351e0f2b31f0b9d3
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51291857"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52508053"
 ---
 # <a name="sqllogship-application"></a>Applicazione sqllogship
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "51291857"
   
 ```  
   
-sqllogship -server instance_name { -backup primary_id | -copy secondary_id | -restore secondary_id } [ –verboselevel level ] [ –logintimeout timeout_value ] [ -querytimeout timeout_value ]  
+sqllogship -server instance_name { -backup primary_id | -copy secondary_id | -restore secondary_id } [ -verboselevel level ] [ -logintimeout timeout_value ] [ -querytimeout timeout_value ]  
 ```  
   
 ## <a name="arguments"></a>Argomenti  
@@ -52,7 +52,7 @@ sqllogship -server instance_name { -backup primary_id | -copy secondary_id | -re
   
  Tutti i file di backup nella directory di destinazione creati dopo il punto di ripristino più recente vengono ripristinati nel database o nei database secondari. L'applicazione **sqllogship** elimina quindi tutti i file di backup meno recenti in base al periodo di conservazione dei file. La cronologia per l'operazione di ripristino viene poi registrata dall'applicazione nel server secondario e nel server di monitoraggio. L'applicazione esegue infine **sp_cleanup_log_shipping_history**che elimina le informazioni sulla cronologia meno recenti in base al periodo di conservazione.  
   
- **–verboselevel** *level*  
+ **-verboselevel** *level*  
  Specifica il livello di messaggi aggiunti alla cronologia di log shipping. *level* può essere uno dei valori interi seguenti:  
   
 |level|Descrizione|  
@@ -63,7 +63,7 @@ sqllogship -server instance_name { -backup primary_id | -copy secondary_id | -re
 |**3**|L'output include messaggi informativi, di avviso e di gestione degli errori. Si tratta del valore predefinito.|  
 |4|L'output include tutti i messaggi di debug e di traccia.|  
   
- **–logintimeout** *timeout_value*  
+ **-logintimeout** *timeout_value*  
  Specifica la quantità di tempo assegnata per un tentativo di accesso all'istanza del server prima del timeout. Il valore predefinito è 15 secondi. *timeout_value* is **int**_._  
   
  **-querytimeout** *timeout_value*  

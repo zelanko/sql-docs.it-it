@@ -21,12 +21,12 @@ ms.assetid: a0b210ce-9b58-4709-80cb-9363b68a1f5a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b9a091731d5eccbf7dca054450d4735077ad7d6d
-ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
+ms.openlocfilehash: 719e891168fcf6a0ce094d67ec8186c653d00f49
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51292497"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52529117"
 ---
 # <a name="dta-utility"></a>dta - utilità
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ dta
 [ -? ] |  
 [  
       [ -S server_name[ \instance ] ]  
-      { { -U login_id [-P password ] } | –E  }  
+      { { -U login_id [-P password ] } | -E  }  
       { -D database_name [ ,...n ] }  
       [ -d database_name ]   
       [ -Tl table_list | -Tf table_list_file ]  
@@ -106,13 +106,13 @@ dta
  Specifica il nome di ogni database da ottimizzare. Il primo database è il database predefinito. Per specificare più database, separare i relativi nomi con una virgola, ad esempio:  
   
 ```  
-dta –D database_name1, database_name2...  
+dta -D database_name1, database_name2...  
 ```  
   
- In alternativa, è possibile specificare più database utilizzando l'argomento **–D** per ogni nome di database, ad esempio:  
+ In alternativa, è possibile specificare più database usando l'argomento **-D** per ogni nome di database, ad esempio:  
   
 ```  
-dta –D database_name1 -D database_name2... n  
+dta -D database_name1 -D database_name2... n  
 ```  
   
  L'argomento **-D** è obbligatorio. Se si omette l'argomento **-d** , **dta** si connette inizialmente al database specificato nella prima clausola `USE database_name` del carico di lavoro. Se non è presente alcuna clausola `USE database_name` esplicita nel carico di lavoro, è necessario usare l'argomento **-d** .  
@@ -152,7 +152,7 @@ dta -d AdventureWorks2012 ...
   
 |Parametro|Valore predefinito|Dettagli|  
 |---------------|-------------------|-------------|  
-|*database_name*|*database_name* specificato con l'opzione **–D**||  
+|*database_name*|*database_name* specificato con l'opzione **-D**||  
 |*owner_name*|**dbo**|*owner_name* deve essere **dbo**. Se si specifica un qualsiasi altro valore, l'esecuzione di **dta** ha esito negativo e viene restituito un errore.|  
 |*table_name*|None||  
   
@@ -214,10 +214,10 @@ dta -d AdventureWorks2012 ...
  Specifica l'identificatore numerico per la sessione di ottimizzazione. Se omesso, **dta** genera un numero di identificazione. È possibile utilizzare questo identificatore per visualizzare le informazioni relative alle sessioni di ottimizzazione correnti. Se per **-ID**non si specifica alcun valore, è necessario specificare un nome di sessione usando **-s**.  
   
  **-ip**  
- Specifica che la cache dei piani deve essere utilizzata come carico di lavoro. Vengono analizzati i primi 1.000 eventi della cache dei piani per i database selezionati in modo esplicito. Questo valore può essere modificato tramite l'opzione **–n** .  
+ Specifica che la cache dei piani deve essere utilizzata come carico di lavoro. Vengono analizzati i primi 1.000 eventi della cache dei piani per i database selezionati in modo esplicito. Questo valore può essere modificato tramite l'opzione **-n**.  
  
 **-iq**  
- Specifica che il Query Store sia usato come carico di lavoro. Vengono analizzati i primi 1.000 eventi del Query Store per i database selezionati in modo esplicito. Questo valore può essere modificato tramite l'opzione **–n** .  Per altre informazioni, vedere [Archivio query](../../relational-databases/performance/how-query-store-collects-data.md) e [Ottimizzazione del database tramite un carico di lavoro dell'archivio query](../../relational-databases/performance/tuning-database-using-workload-from-query-store.md).
+ Specifica che il Query Store sia usato come carico di lavoro. Vengono analizzati i primi 1.000 eventi del Query Store per i database selezionati in modo esplicito. Questo valore può essere modificato tramite l'opzione **-n**.  Per altre informazioni, vedere [Archivio query](../../relational-databases/performance/how-query-store-collects-data.md) e [Ottimizzazione del database tramite un carico di lavoro dell'archivio query](../../relational-databases/performance/tuning-database-using-workload-from-query-store.md).
  ||  
 |-|  
 |**Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
@@ -233,7 +233,7 @@ dta -d AdventureWorks2012 ...
   
 |Parametro|Valore predefinito|  
 |---------------|-------------------|  
-|*database_name*|*database_name* specificato con l'opzione **–D** .|  
+|*database_name*|*database_name* specificato con l'opzione **-D**.|  
 |*owner_name*|**dbo**|  
 |*table_name*|Nessuna.|  
   
@@ -371,7 +371,7 @@ In questo caso, DTA verrà usare Query Store come origine del carico di lavoro e
  Questo esempio usa una connessione sicura (`-E`) per connettersi al database **tpcd1G** in MyServer per analizzare un carico di lavoro e creare indicazioni. Scrive l'output in un file di script denominato script.sql. Se script.sql esiste già, l'utilità **dta** sovrascriverà il file in quanto è stato specificato l'argomento `-F` . La sessione di ottimizzazione viene eseguita per un periodo illimitato di tempo per garantire l'analisi completa del carico di lavoro (`-A 0`). L'indicazione deve fornire un miglioramento minimo del 5% (`-m 5`). **dta** deve includere indici e viste indicizzate nell'indicazione finale (`-fa IDX_IV`).  
   
 ```  
-dta –S MyServer –E -D tpcd1G -if tpcd_22.sql -F –of script.sql –A 0 -m 5 -fa IDX_IV  
+dta -S MyServer -E -D tpcd1G -if tpcd_22.sql -F -of script.sql -A 0 -m 5 -fa IDX_IV  
 ```  
   
  **B. Limitazione dell'utilizzo del disco**  
@@ -379,7 +379,7 @@ dta –S MyServer –E -D tpcd1G -if tpcd_22.sql -F –of script.sql –A 0 -m 5
  Nell'esempio seguente viene limitata la dimensione totale del database, che include i dati non elaborati e gli indici aggiuntivi, a 3 GB (`-B 3000`) e l'output viene reindirizzato su d:\result_dir\script1.sql. Il tempo di esecuzione non è maggiore di 1 ora (`-A 60`).  
   
 ```  
-dta –D tpcd1G –if tpcd_22.sql -B 3000 –of "d:\result_dir\script1.sql" –A 60  
+dta -D tpcd1G -if tpcd_22.sql -B 3000 -of "d:\result_dir\script1.sql" -A 60  
 ```  
   
  **C. Limitazione del numero di query ottimizzate**  
@@ -387,7 +387,7 @@ dta –D tpcd1G –if tpcd_22.sql -B 3000 –of "d:\result_dir\script1.sql" –A
  Nell'esempio seguente il numero di query lette dal file orders_wkld.sql viene limitato a un massimo di 10 (`-n 10`) oppure il tempo di esecuzione viene limitato a 15 minuti (`-A 15`), a seconda di quale dei due eventi si verifica per primo. Per assicurarsi che tutte e 10 le query vengano ottimizzate, specificare un tempo di ottimizzazione illimitato tramite `-A 0`. Se il fattore tempo è rilevante, specificare un limite di tempo adeguato impostando il numero di minuti disponibili per l'ottimizzazione con l'argomento `-A` come illustrato nell'esempio seguente.  
   
 ```  
-dta –D orders –if orders_wkld.sql –of script.sql –A 15 -n 10  
+dta -D orders -if orders_wkld.sql -of script.sql -A 15 -n 10  
 ```  
   
  **D. Ottimizzazione di tabelle specifiche elencate in un file**  
@@ -413,7 +413,7 @@ AdventureWorks2012.Production.Product  2000000
  La durata dell'ottimizzazione è pari a 2 ore (`-A 120`) e l'output viene scritto in un file XML (`-ox XMLTune.xml`).  
   
 ```  
-dta –D pubs –if pubs_wkld.sql –ox XMLTune.xml –A 120 –Tf table_list.txt  
+dta -D pubs -if pubs_wkld.sql -ox XMLTune.xml -A 120 -Tf table_list.txt  
 ```  
   
 ## <a name="see-also"></a>Vedere anche  

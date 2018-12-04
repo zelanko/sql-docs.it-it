@@ -11,12 +11,12 @@ ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3d9d4b29c8f7c58cfb40597752e97f47be3de1ce
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: a06f7360460aef57c9c103474f620796cff31d2e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600231"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52536637"
 ---
 # <a name="features-of-the-microsoft-odbc-driver-for-sql-server-on-windows"></a>Funzionalità di Microsoft ODBC Driver for SQL Server in Windows
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -36,9 +36,9 @@ ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] con
   
 Questa versione del driver ODBC per [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] contiene le nuove funzionalità seguenti:  
   
-### <a name="bcpexe-l-option-for-specifying-a-login-timeout"></a>opzione – l bcp.exe per specificare un timeout di accesso
+### <a name="bcpexe--l-option-for-specifying-a-login-timeout"></a>opzione -l bcp.exe per specificare un timeout di accesso
  
-L'opzione –l specifica il numero di secondi che devono trascorrere prima che si verifichi il timeout di un accesso di `bcp.exe` a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] quando si prova la connessione a un server. Il timeout di accesso predefinito è 15 secondi. Il valore del timeout deve essere un numero compreso tra 0 e 65534. Se il valore specificato non è numerico o non è compreso in tale intervallo, `bcp.exe` genera un messaggio di errore. Un valore pari a 0 specifica un timeout infinito. Un timeout di accesso inferiore a (circa) 10 secondi non è affidabile.  
+L'opzione -l specifica il numero di secondi che devono trascorrere prima che si verifichi il timeout di un accesso `bcp.exe` a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] quando si prova la connessione a un server. Il timeout di accesso predefinito è 15 secondi. Il valore del timeout deve essere un numero compreso tra 0 e 65534. Se il valore specificato non è numerico o non è compreso in tale intervallo, `bcp.exe` genera un messaggio di errore. Un valore pari a 0 specifica un timeout infinito. Un timeout di accesso inferiore a (circa) 10 secondi non è affidabile.  
   
 ### <a name="driver-aware-connection-pooling"></a>Pool di connessioni compatibile con il driver  
 Il driver ODBC per [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supporta il [pool di connessioni compatibile con il driver](https://msdn.microsoft.com/library/hh405031(VS.85).aspx). Per altre informazioni, vedere [Driver-Aware Connection Pooling in the ODBC Driver for SQL Server](../../../connect/odbc/windows/driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server.md).  
@@ -53,7 +53,7 @@ Per garantire che le applicazioni rimangano connesse a un database SQL di Micros
 
 Nelle [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, il `-y0` opzione per `sqlcmd.exe` causato output risulta troncato in corrispondenza di 1 MB se la larghezza di visualizzazione è 0.
   
-A partire da ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], non esiste limite alla quantità di dati recuperabili in un'unica colonna quando è specificato `–y0`. `sqlcmd.exe` ora trasmette colonne di dimensioni pari a 2 GB (massimo per il tipo di dati [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]).  
+A partire da ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], non esiste limite alla quantità di dati recuperabili in un'unica colonna quando è specificato `-y0`. `sqlcmd.exe` ora trasmette colonne di dimensioni pari a 2 GB (massimo per il tipo di dati [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]).  
   
 Un'altra differenza è che se si specifica sia `-h` e `-y0` genera ora un errore di creazione di report, le opzioni sono incompatibili. `-h`, che specifica il numero di righe da stampare tra le intestazioni di colonna e che non è mai stato compatibile con `-y0`, veniva ignorato anche se non venivano stampate intestazioni.
   

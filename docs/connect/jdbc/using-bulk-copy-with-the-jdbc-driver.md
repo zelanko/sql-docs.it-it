@@ -11,12 +11,12 @@ ms.assetid: 21e19635-340d-49bb-b39d-4867102fb5df
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a8a936373f299530f4bd98f2873d10727c980cce
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b4d7fabdf0f3de8c413a4621e6adb646cb1122e7
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47741759"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52534687"
 ---
 # <a name="using-bulk-copy-with-the-jdbc-driver"></a>Utilizzo della copia bulk con il driver JDBC
 
@@ -46,7 +46,7 @@ Le tabelle BulkCopyDemoMatchingColumns e BulkCopyDemoDifferentColumns sono entra
 Alcuni esempi di codice illustrano come utilizzare una sola classe SQLServerBulkCopy per scrivere in più tabelle. Per questi esempi, vengono utilizzate le tabelle BulkCopyDemoOrderHeader e BulkCopyDemoOrderDetail come tabelle di destinazione. Queste tabelle sono basate sulle tabelle Sales.SalesOrderHeader e Sales.SalesOrderDetail del database AdventureWorks.  
   
 > [!NOTE]  
-> Gli esempi di codice per SQLServerBulkCopy vengono forniti solo per illustrare la sintassi per l'utilizzo di SQLServerBulkCopy. Se le tabelle di origine e di destinazione si trovano nella stessa istanza di SQL Server, è più semplice e rapido utilizzare un'istruzione Transact-SQL INSERT ... SELECT per copiare i dati.  
+> Gli esempi di codice per SQLServerBulkCopy vengono forniti solo per illustrare la sintassi per l'utilizzo di SQLServerBulkCopy. Se le tabelle di origine e di destinazione si trovano nella stessa istanza di SQL Server, è più semplice e rapido usare un'istruzione Transact-SQL INSERT ... SELECT per copiare i dati.  
 
 ### <a name="table-setup"></a>Impostazione delle tabelle  
 
@@ -144,7 +144,7 @@ L'approccio più semplice per eseguire un'operazione di copia bulk di SQL Server
 L'applicazione riportata di seguito illustra come caricare i dati utilizzando la classe SQLServerBulkCopy. In questo esempio, viene utilizzato un ResultSet per copiare i dati dalla tabella Production.Product nel database AdventureWorks di SQL Server in una tabella simile dello stesso database.  
   
 > [!IMPORTANT]  
-> Questo esempio non funzionerà, a meno che non siano state create le tabelle di lavoro come descritto in [Impostazione delle tabelle](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md#BKMK_TableSetup). Questo codice viene fornito solo per illustrare la sintassi per l'utilizzo di SQLServerBulkCopy. Se le tabelle di origine e di destinazione si trovano nella stessa istanza di SQL Server, è più semplice e rapido utilizzare un'istruzione Transact-SQL INSERT ... SELECT per copiare i dati.  
+> Questo esempio non funzionerà, a meno che non siano state create le tabelle di lavoro come descritto in [Impostazione delle tabelle](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md#BKMK_TableSetup). Questo codice viene fornito solo per illustrare la sintassi per l'utilizzo di SQLServerBulkCopy. Se le tabelle di origine e di destinazione si trovano nella stessa istanza di SQL Server, è più semplice e rapido usare un'istruzione Transact-SQL INSERT ... SELECT per copiare i dati.  
 
 ```java
 import java.sql.Connection;
@@ -238,7 +238,7 @@ try (Connection con = DriverManager.getConnection(connectionUrl);
 Se si eseguono più operazioni di copia bulk utilizzando lo stesso oggetto SQLServerBulkCopy, non vi sono restrizioni relativamente al fatto che le informazioni di origine o di destinazione sono uguali o diverse in ogni operazione. È tuttavia necessario assicurarsi che le informazioni di associazione delle colonne siano impostate correttamente ogni volta che si esegue la scrittura nel server.  
   
 > [!IMPORTANT]  
-> Questo esempio non funzionerà, a meno che non siano state create le tabelle di lavoro come descritto in [Impostazione delle tabelle](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md#BKMK_TableSetup). Questo codice viene fornito solo per illustrare la sintassi per l'utilizzo di SQLServerBulkCopy. Se le tabelle di origine e di destinazione si trovano nella stessa istanza di SQL Server, è più semplice e rapido utilizzare un'istruzione Transact-SQL INSERT ... SELECT per copiare i dati.  
+> Questo esempio non funzionerà, a meno che non siano state create le tabelle di lavoro come descritto in [Impostazione delle tabelle](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md#BKMK_TableSetup). Questo codice viene fornito solo per illustrare la sintassi per l'utilizzo di SQLServerBulkCopy. Se le tabelle di origine e di destinazione si trovano nella stessa istanza di SQL Server, è più semplice e rapido usare un'istruzione Transact-SQL INSERT ... SELECT per copiare i dati.  
 
 ```java
 import java.sql.Connection;
@@ -367,7 +367,7 @@ Nell'esempio la tabella di origine e la tabella di destinazione includono una co
 L'operazione di copia bulk viene eseguita con la proprietà **BatchSize** impostata su 10. Quando è rilevata la riga non valida, viene generata un'eccezione. In questo primo esempio, l'operazione di copia bulk è non transazionale. Viene eseguito il commit di tutti i batch copiati fino al punto dell'errore. Viene eseguito il rollback del batch che contiene la chiave duplicata e l'operazione di copia bulk viene interrotta prima dell'elaborazione di altri batch.  
   
 > [!NOTE]  
-> Questo esempio non funzionerà, a meno che non siano state create le tabelle di lavoro come descritto in [Impostazione delle tabelle](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md#BKMK_TableSetup). Questo codice viene fornito solo per illustrare la sintassi per l'utilizzo di SQLServerBulkCopy. Se le tabelle di origine e di destinazione si trovano nella stessa istanza di SQL Server, è più semplice e rapido utilizzare un'istruzione Transact-SQL INSERT ... SELECT per copiare i dati.  
+> Questo esempio non funzionerà, a meno che non siano state create le tabelle di lavoro come descritto in [Impostazione delle tabelle](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md#BKMK_TableSetup). Questo codice viene fornito solo per illustrare la sintassi per l'utilizzo di SQLServerBulkCopy. Se le tabelle di origine e di destinazione si trovano nella stessa istanza di SQL Server, è più semplice e rapido usare un'istruzione Transact-SQL INSERT ... SELECT per copiare i dati.  
 
 ```java
 import java.sql.Connection;
@@ -476,7 +476,7 @@ copyOptions.setUseInternalTransaction(true);
 La seguente applicazione è simile a **BulkCopyNonTransacted**, con una sola eccezione: in questo esempio, l'operazione di copia bulk è inclusa in una transazione esterna di maggiori dimensioni. Quando si verifica l'errore di violazione della chiave primaria, viene eseguito il rollback dell'intera transazione e non vengono aggiunte righe alla tabella di destinazione.
 
 > [!NOTE]  
-> Questo esempio non funzionerà, a meno che non siano state create le tabelle di lavoro come descritto in [Impostazione delle tabelle](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md#BKMK_TableSetup). Questo codice viene fornito solo per illustrare la sintassi per l'utilizzo di SQLServerBulkCopy. Se le tabelle di origine e di destinazione si trovano nella stessa istanza di SQL Server, è più semplice e rapido utilizzare un'istruzione Transact-SQL INSERT ... SELECT per copiare i dati.  
+> Questo esempio non funzionerà, a meno che non siano state create le tabelle di lavoro come descritto in [Impostazione delle tabelle](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md#BKMK_TableSetup). Questo codice viene fornito solo per illustrare la sintassi per l'utilizzo di SQLServerBulkCopy. Se le tabelle di origine e di destinazione si trovano nella stessa istanza di SQL Server, è più semplice e rapido usare un'istruzione Transact-SQL INSERT ... SELECT per copiare i dati.  
 
 ```java
 import java.sql.Connection;
@@ -575,7 +575,7 @@ public class BulkCopyExistingTransactions {
   
 1. Aprire **SQL Server Management Studio** e connettersi a SQL Server con il database AdventureWorks.  
   
-2. Espandere i database, fare clic con il pulsante destro del mouse sul database AdventureWorks, selezionare **Attività** e quindi **Esporta dati**.  
+2. Espandere i database, fare clic con il pulsante destro del mouse sul database AdventureWorks e scegliere **Attività**, **Esporta dati**.  
   
 3. Per l'origine dati, selezionare l'**origine dati** che consente di connettersi a SQL Server (ad esempio SQL Server Native Client 11.0), controllare la configurazione e quindi fare clic su **Avanti**  
   
@@ -759,7 +759,7 @@ La classe SQLServerBulkCopy può essere utilizzata per scrivere dati solo in tab
 | Stringa getColumnName(int column)    | Ottenere il nome della colonna specificata.                                                                                                                                                                                                                                                                      |
 | Int getColumnType (colonna di tipo int)       | Ottenere il tipo di dati JDBC della colonna specificata.                                                                                                                                                                                                                                                            |
 | Int getPrecision (colonna di tipo int)        | Ottenere la precisione per la colonna specificata.                                                                                                                                                                                                                                                                |
-| Oggetto getRowData()]               | Ottenere i dati per la riga corrente come una matrice di oggetti.<br /><br /> Ogni oggetto deve corrispondere al tipo di linguaggio Java utilizzato per rappresentare il tipo di dati JDBC indicato per la colonna specificata.  Per ulteriori informazioni sui mapping appropriati, vedere "Informazioni sui tipi di dati del driver JDBC". |
+| Oggetto getRowData()]               | Ottenere i dati per la riga corrente come una matrice di oggetti.<br /><br /> Ogni oggetto deve corrispondere al tipo di linguaggio Java utilizzato per rappresentare il tipo di dati JDBC indicato per la colonna specificata.  Per altre informazioni sui mapping appropriati, vedere 'Informazioni sui tipi di dati del driver JDBC'. |
 | Int getScale (colonna di tipo int)            | Ottenere la scala per la colonna specificata.                                                                                                                                                                                                                                                                    |
 | Booleano isAutoIncrement (colonna di tipo int) | Indica se la colonna rappresenta una colonna Identity.                                                                                                                                                                                                                                            |
 | Next (booleano)                      | Passa alla riga di dati successiva.                                                                                                                                                                                                                                                                         |

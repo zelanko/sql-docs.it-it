@@ -11,22 +11,22 @@ ms.assetid: b39461d3-48d6-4048-8300-1a886c00756d
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ebdaa05923df2437c0d8d5bafc2bfa86b0a76de9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b794a8c93fd7a9c83e783a04999cbeb8a9e58f48
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47750109"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52510496"
 ---
 # <a name="using-advanced-data-types"></a>Utilizzo di tipi di dati avanzati
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-In [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] vengono usati i tipi di dati JDBC avanzati per convertire i tipi di dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un formato comprensibile nel linguaggio di programmazione Java.  
+In [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] vengono utilizzati i tipi di dati JDBC avanzati per convertire i tipi di dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un formato comprensibile nel linguaggio di programmazione Java.  
   
 ## <a name="remarks"></a>Remarks
 
-Nella tabella seguente sono riportati i mapping predefiniti tra i tipi di dati avanzati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], JDBC e del linguaggio di programmazione Java.  
+Nella tabella seguente sono riportati i mapping predefiniti tra i tipi di dati avanzati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], JDBC e del linguaggio di programmazione Java:  
   
 |Tipi di SQL Server|Tipi JDBC (java.sql.Types)|Tipi del linguaggio Java|  
 |----------------------|-----------------------------------|-------------------------|  
@@ -49,7 +49,7 @@ Nel driver JDBC sono implementati tutti i metodi delle interfacce java.sql.Blob,
 
 ## <a name="large-value-data-types"></a>Tipi di dati per valori di grandi dimensioni
 
-Nelle versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l'uso di tipi di dati per valori di grandi dimensioni richiedeva particolari operazioni di gestione. I tipi di dati per valori di grandi dimensioni sono quelli che superano le dimensioni di riga massime di 8 KB. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è stato introdotto un identificatore max per i tipi di dati **varchar**, **nvarchar** e **varbinary** per consentire l'archiviazione di valori fino a 2^31 byte. Le colonne di tabella e le variabili [!INCLUDE[tsql](../../includes/tsql-md.md)] possono specificare tipi di dati **varchar(max)**, **nvarchar(max)** o **varbinary(max)**.  
+Nelle precedenti versioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l'utilizzo di tipi di dati per valori di grandi dimensioni richiedeva particolari operazioni di gestione. I tipi di dati per valori di grandi dimensioni sono quelli che superano le dimensioni di riga massime di 8 KB. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è stato introdotto un identificatore max per i tipi di dati **varchar**, **nvarchar** e **varbinary** per consentire l'archiviazione di valori fino a 2^31 byte. Le colonne di tabella e le variabili [!INCLUDE[tsql](../../includes/tsql-md.md)] possono specificare tipi di dati **varchar(max)**, **nvarchar(max)** o **varbinary(max)**.  
 
 Gli scenari principali di utilizzo di tipi per valori di grandi dimensioni riguardano il recupero di tali tipi di dati da un database o l'aggiunta degli stessi a un database. Nelle sezioni seguenti vengono descritti i diversi approcci adottabili per eseguire queste attività.  
 
@@ -164,7 +164,7 @@ Per altre informazioni sul tipo di dati **xml**, vedere l'argomento "Tipo di dat
 
 L'introduzione di tipi definiti dall'utente (UDT, User-Defined Type) in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] estende il sistema di tipi SQL consentendo di archiviare oggetti e strutture di dati personalizzate in un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. I tipi definiti dall'utente possono contenere più tipi di dati e possono assumere comportamenti, differenziandoli dai tipi di dati alias tradizionali costituiti da un singolo tipo di dati di sistema [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. I tipi di dati UDT vengono definiti utilizzando uno qualsiasi dei linguaggi supportati dalla funzionalità CLR (Common Language Runtime) di Microsoft .NET in grado di produrre codice verificabile, tra cui Microsoft Visual C# e Visual Basic .NET. I dati vengono esposti come campi e proprietà di una classe o una struttura basata su .NET Framework e i comportamenti vengono definiti dai metodi della classe o della struttura in questione.  
   
-In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è possibile usare un tipo di dati UDT come definizione di colonna di una tabella, come variabile in un batch [!INCLUDE[tsql](../../includes/tsql-md.md)] o come argomento di una funzione o una stored procedure [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è possibile utilizzare un tipo di dati UDT come definizione di colonna di una tabella, come variabile in un batch [!INCLUDE[tsql](../../includes/tsql-md.md)] o come argomento di una funzione o una stored procedure [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
 Per altre informazioni sui tipi di dati definiti dall'utente, vedere la sezione sull'uso e la modifica delle istanze dei tipi definiti dall'utente nella documentazione online di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
