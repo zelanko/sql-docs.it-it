@@ -44,7 +44,7 @@ Nella tabella seguente viene illustrata la modalità di assegnazione dei nomi pe
 |Tipo di istanza|Nome oggetto|  
 |-----------------|---------------|  
 |Default|**SQLAgent:**_oggetto_:_contatore_|  
-|Denominato|**SQLAgent$**<br /> **& #42; nome_istanza& #42; :**_oggetto_:_contatore_|  
+|Denominato|**SQLAgent$**<br /> **&#42; nome_istanza&#42; :**_oggetto_:_contatore_|  
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] include gli oggetti prestazione seguenti per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
   
