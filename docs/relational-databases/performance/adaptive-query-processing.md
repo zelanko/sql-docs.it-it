@@ -2,7 +2,7 @@
 title: Elaborazione di query adattive nei database Microsoft SQL | Microsoft Docs
 description: Funzionalità per l'elaborazione di query adattive e il miglioramento delle prestazioni delle query in SQL Server (2017 e versioni successive) e nel database SQL di Azure.
 ms.custom: ''
-ms.date: 10/15/2018
+ms.date: 11/15/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -14,25 +14,27 @@ author: joesackmsft
 ms.author: josack
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 60f02a303e6e085dc14a165ec51e316a2bc88f8e
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: f4494b91315c8d2cd155e2ac80d6b5005685ff32
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51031198"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52503410"
 ---
 # <a name="adaptive-query-processing-in-sql-databases"></a>Elaborazione di query adattive nei database SQL
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 Questo articolo presenta funzionalità per l'elaborazione di query adattive che consentono di migliorare le prestazioni delle query in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) e [!INCLUDE[ssSDS](../../includes/sssds-md.md)]:
-- Feedback delle concessioni di memoria in modalità batch.
-- Join adattivo in modalità batch.
-- Esecuzione interleaved. 
+- Feedback delle concessioni di memoria in modalità batch
+- Join adattivo in modalità batch
+- Esecuzione interleaved
 
-A livello generale una query di SQL Server viene eseguita come indicato di seguito:
+A livello generale [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] esegue una query come indicato di seguito:
 1. Il processo di ottimizzazione query genera un set di piani di esecuzione possibili per una query specifica. In questa fase viene stimato il costo dei vari piani e viene usato il piano con il costo stimato minore.
 1. Il processo di esecuzione query seleziona il piano scelto da Query Optimizer e lo usa per l'esecuzione.
-    
+
+Per altre informazioni sulle modalità di elaborazione ed esecuzione delle query in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere la [Guida sull'architettura di elaborazione delle query](../../relational-databases/query-processing-architecture-guide.md).
+
 In alcuni casi il piano scelto da Query Optimizer non è ottimale per diversi motivi. Ad esempio è possibile che il numero stimato di righe del flusso del piano di query non sia corretto. I costi stimati aiutano a determinare il piano che viene selezionato per l'uso nell'esecuzione. Se le stime di cardinalità non sono corrette viene comunque usato il piano originale anche se le ipotesi di partenza non erano adeguate.
 
 ![Funzionalità dell'elaborazione di query adattive](./media/1_AQPFeatures.png)
@@ -88,7 +90,7 @@ La memoria concessa reale è conforme al limite di memoria per le query determin
 ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK = ON;
 ```
 
-Quando è abilitata, questa impostazione viene visualizzata come abilitata in sys. database_scoped_configurations.
+Quando è abilitata, questa impostazione viene visualizzata come abilitata in [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md).
 
 Per abilitare nuovamente i commenti della concessione di memoria in modalità batch per tutte le esecuzioni di query provenienti dal database, eseguire l'istruzione seguente all'interno del contesto del database applicabile:
 
@@ -96,7 +98,7 @@ Per abilitare nuovamente i commenti della concessione di memoria in modalità ba
 ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK = OFF;
 ```
 
-È anche possibile disabilitare i commenti della concessione di memoria in modalità batch per una query specifica, definendo DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK come hint per la query USE HINT.  Ad esempio
+È anche possibile disabilitare i commenti sulla concessione di memoria in modalità batch per una query specifica definendo `DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK` come [hint per la query USE HINT](../../t-sql/queries/hints-transact-sql-query.md#use_hint). Ad esempio
 
 ```sql
 SELECT * FROM Person.Address  
@@ -107,23 +109,23 @@ OPTION (USE HINT ('DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK'));
 L'hint per la query USE HINT ha la precedenza rispetto una configurazione con ambito database o un'impostazione del flag di traccia.
 
 ## <a name="row-mode-memory-grant-feedback"></a>Feedback delle concessioni di memoria in modalità riga
-**Si applica a**: database SQL come funzionalità in anteprima pubblica
+**Si applica a:** [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] come funzionalità di anteprima pubblica
 
 > [!NOTE]
 > Il feedback delle concessioni di memoria in modalità riga è una funzionalità di anteprima pubblica.  
 
 Il feedback delle concessioni di memoria in modalità riga estende la funzionalità di feedback delle concessioni di memoria in modalità batch adattando le dimensioni delle concessioni di memoria sia per gli operatori in modalità batch che per quelli in modalità riga.  
 
-Per abilitare l'anteprima pubblica del feedback delle concessioni di memoria in modalità riga nel database SQL di Azure, abilitare il livello di compatibilità del database 150 per il database a cui si è connessi quando si esegue la query.
+Per abilitare l'anteprima pubblica dei commenti sulla concessione di memoria in modalità riga in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], abilitare il livello di compatibilità del database 150 per il database a cui si è connessi quando si esegue la query.
 
 L'attività di feedback delle concessioni di memoria in modalità riga sarà visibile tramite l'XEvent **memory_grant_updated_by_feedback**. 
 
-A partire dal feedback delle concessioni di memoria in modalità riga, verranno visualizzati due nuovi attributi di piano di query per i piani di post-esecuzione effettivi: **IsMemoryGrantFeedbackAdjusted** e **LastRequestedMemory**, che vengono aggiunti all'elemento XML per i piani di query MemoryGrantInfo. 
+Con i commenti sulla concessione di memoria in modalità riga, verranno visualizzati due nuovi attributi di piano di query per i piani di post esecuzione effettivi: ***IsMemoryGrantFeedbackAdjusted*** e ***LastRequestedMemory*** che vengono aggiunti all'elemento XML per i piani di query *MemoryGrantInfo*. 
 
-LastRequestedMemory mostra la memoria concessa in kilobyte (KB) dall'esecuzione della query precedente. L'attributo IsMemoryGrantFeedbackAdjusted consente di controllare lo stato del feedback delle concessioni di memoria per l'istruzione all'interno di un piano di esecuzione query effettivo. I valori esposti in questo attributo sono i seguenti:
+*LastRequestedMemory* mostra la memoria concessa in kilobyte (KB) dall'esecuzione della query precedente. L'attributo *IsMemoryGrantFeedbackAdjusted* consente di controllare lo stato dei commenti sulla concessione di memoria per l'istruzione all'interno di un piano di esecuzione query effettivo. I valori esposti in questo attributo sono i seguenti:
 
 | Valore di IsMemoryGrantFeedbackAdjusted | Descrizione |
-|--- |--- |
+|---|---|
 | No: First Execution | Il feedback delle concessioni di memoria non regola la memoria per la prima compilazione e l'esecuzione associata.  |
 | No: Accurate Grant | In assenza di spill su disco e se l'istruzione usa almeno il 50% della memoria concessa, il feedback delle concessioni di memoria non viene attivato. |
 | No: Feedback disabled | Se il feedback delle concessioni di memoria viene attivato continuamente e alterna tra operazioni di aumento della memoria e riduzione della memoria, il feedback delle concessioni di memoria verrà disabilitato per l'istruzione. |
@@ -131,7 +133,7 @@ LastRequestedMemory mostra la memoria concessa in kilobyte (KB) dall'esecuzione 
 | Yes: Stable | Il feedback delle concessioni di memoria è stato applicato e la memoria concessa è ora stabile, ovvero quella concessa per l'esecuzione precedente è uguale a quella concessa per l'esecuzione corrente. |
 
 > [!NOTE]
-> Gli attributi del piano per il feedback delle concessioni di memoria in modalità riga sono visibili nei piani grafici di esecuzione delle query di SQL Server Management Studio nella versione 17.9 e versioni successive. 
+> Gli attributi del piano per i commenti sulla concessione di memoria in modalità riga sono visibili nei piani grafici di esecuzione delle query di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] nella versione 17.9 e nelle versioni successive. 
 
 ### <a name="disabling-row-mode-memory-grant-feedback-without-changing-the-compatibility-level"></a>Disabilitazione del feedback delle concessioni di memoria in modalità riga senza modificare il livello di compatibilità
 È possibile disabilitare il feedback delle concessioni di memoria in modalità riga nell'ambito del database o dell'istruzione mantenendo comunque la compatibilità sul livello 150 o superiore. Per disabilitare il feedback delle concessioni di memoria in modalità riga per tutte le esecuzioni di query provenienti dal database, eseguire l'istruzione seguente all'interno del contesto del database applicabile:
@@ -146,7 +148,7 @@ Per riabilitare il feedback delle concessioni di memoria in modalità riga per t
 ALTER DATABASE SCOPED CONFIGURATION SET ROW_MODE_MEMORY_GRANT_FEEDBACK = ON;
 ```
 
-È anche possibile disabilitare il feedback delle concessioni di memoria in modalità riga per una query specifica, definendo DISABLE_ROW_MODE_MEMORY_GRANT_FEEDBACK come hint per la query USE HINT.  Ad esempio
+È anche possibile disabilitare i commenti sulla concessione di memoria in modalità riga per una query specifica definendo `DISABLE_ROW_MODE_MEMORY_GRANT_FEEDBACK` come [hint per la query USE HINT](../../t-sql/queries/hints-transact-sql-query.md#use_hint). Ad esempio
 
 ```sql
 SELECT * FROM Person.Address  
@@ -166,28 +168,26 @@ Il funzionamento è il seguente:
 La query seguente illustra un esempio di join adattivo:
 
 ```sql
-SELECT  [fo].[Order Key], [si].[Lead Time Days],
-[fo].[Quantity]
+SELECT [fo].[Order Key], [si].[Lead Time Days], [fo].[Quantity]
 FROM [Fact].[Order] AS [fo]
 INNER JOIN [Dimension].[Stock Item] AS [si]
        ON [fo].[Stock Item Key] = [si].[Stock Item Key]
 WHERE [fo].[Quantity] = 360;
 ```
 
-La query restituisce 336 righe. Se si attiva [Statistiche query dinamiche](../../relational-databases/performance/live-query-statistics.MD), viene visualizzato il piano seguente:
+La query restituisce 336 righe. Se si attiva [Statistiche query dinamiche](../../relational-databases/performance/live-query-statistics.md), viene visualizzato il piano seguente:
 
 ![Risultato della query: 336 righe](./media/4_AQPStats336Rows.png)
 
 Nel piano viene visualizzato quanto segue:
 1. È presente un'Analisi indice Columnstore che specifica righe per la fase di compilazione dell'hash join.
 1. È presente il nuovo operatore Join adattivo. L'operatore definisce la soglia usata per il passaggio a un piano Cicli annidati. In questo esempio la soglia corrisponde a 78 righe. Se il risultato è &gt;= 78 righe, verrà usato un hash join. Se è inferiore alla soglia, verrà usato un join a cicli annidati.
-1. Poiché le righe restituite sono 336, la soglia viene superata: il secondo ramo rappresenta la fase di probe di un'operazione hash join standard. Si noti che Statistiche sulle query dinamiche visualizza le righe del flusso tra gli operatori, in questo caso "672 di 672".
+1. Poiché le righe restituite sono 336, la soglia viene superata: il secondo ramo rappresenta la fase di probe di un'operazione hash join standard. Si noti che Statistiche query dinamiche visualizza le righe del flusso tra gli operatori, in questo caso "672 di 672".
 1. L'ultimo ramo è la Ricerca indice cluster che il join a cicli annidati avrebbe usato se la soglia non fosse stata superata. Il valore visualizzato è "0 di 336" righe (il ramo non viene usato).
  Ora si confronti il piano con la stessa query, ma questa volta per un valore *Quantità* che ha una sola riga nella tabella:
  
 ```sql
-SELECT  [fo].[Order Key], [si].[Lead Time Days],
-[fo].[Quantity]
+SELECT [fo].[Order Key], [si].[Lead Time Days], [fo].[Quantity]
 FROM [Fact].[Order] AS [fo]
 INNER JOIN [Dimension].[Stock Item] AS [si]
        ON [fo].[Stock Item Key] = [si].[Stock Item Key]
@@ -229,7 +229,7 @@ Alcune condizioni rendono un join logico idoneo per un join adattivo in modalit�
 - Il livello di compatibilità del database è 140.
 - La query è un'istruzione SELECT (attualmente le istruzioni di modifica dei dati non sono idonee).
 - Il join è idoneo per l'esecuzione in un algoritmo fisico di join a cicli annidati indicizzati o di hash join.
-- L'hash join usa la modalità batch con un indice Columnstore nella query globale o una tabella Columnstore indicizzata alla quale fa riferimento direttamente il join.
+- L'hash join usa la modalità batch con un indice Columnstore nella query globale o una tabella Columnstore indicizzata a cui fa riferimento direttamente il join.
 - Il primo elemento figlio (riferimento esterno) deve essere identico per le soluzioni alternative generate dal join a cicli annidati e dall'hash join.
 
 ### <a name="adaptive-joins-and-nested-loop-efficiency"></a>Efficienza dei join adattivi e dei join a cicli annidati
@@ -249,14 +249,14 @@ Per disabilitare i join adattivi per tutte le esecuzioni di query provenienti da
 ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_BATCH_MODE_ADAPTIVE_JOINS = ON;
 ```
 
-Quando è abilitata, questa impostazione viene visualizzata come abilitata in sys. database_scoped_configurations.
+Quando è abilitata, questa impostazione viene visualizzata come abilitata in [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md).
 Per abilitare nuovamente i join adattivi per tutte le esecuzioni di query provenienti dal database, eseguire l'istruzione seguente all'interno del contesto del database applicabile:
 
 ```sql
 ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_BATCH_MODE_ADAPTIVE_JOINS = OFF;
 ```
 
-È anche possibile disabilitare i join adattivi per una query specifica, definendo DISABLE_BATCH_MODE_ADAPTIVE_JOINS come hint per la query USE HINT.  Ad esempio
+È anche possibile disabilitare i join adattivi per una query specifica, definendo `DISABLE_BATCH_MODE_ADAPTIVE_JOINS` come [hint per la query USE HINT](../../t-sql/queries/hints-transact-sql-query.md#use_hint). Ad esempio
 
 ```sql
 SELECT s.CustomerID,
@@ -264,18 +264,19 @@ SELECT s.CustomerID,
        sc.CustomerCategoryName
 FROM Sales.Customers AS s
 LEFT OUTER JOIN Sales.CustomerCategories AS sc
-ON s.CustomerCategoryID = sc.CustomerCategoryID
+       ON s.CustomerCategoryID = sc.CustomerCategoryID
 OPTION (USE HINT('DISABLE_BATCH_MODE_ADAPTIVE_JOINS')); 
 ```
 
 L'hint per la query USE HINT ha la precedenza rispetto una configurazione con ambito database o un'impostazione del flag di traccia.
 
 ## <a name="interleaved-execution-for-multi-statement-table-valued-functions"></a>Esecuzione interleaved per funzioni con valori di tabella a più istruzioni
-L'esecuzione interleaved cambia il limite unidirezionale tra le fasi di ottimizzazione ed esecuzione nel caso di un'esecuzione a query singola e consente l'adattamento dei piani in base alle stime di cardinalità aggiornate. Se durante l'ottimizzazione viene rilevato un candidato per l'esecuzione interleaved, che attualmente corrisponde a una **funzione con valori di tabella a più istruzioni (MSTVF, Multi-Statement Table Valued Function)** si sospende l'ottimizzazione, si esegue il sottoalbero appropriato, si acquisiscono stime di cardinalità accurate e quindi si riprende l'ottimizzazione per le operazioni downstream.
-Le funzioni MSTVF hanno una stima di cardinalità predefinita pari a 100 in [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e pari a 1 nelle versioni precedenti. L'esecuzione interleaved riduce i problemi di prestazioni del carico di lavoro dovute alle stime della cardinalità fisse associate alle funzioni con valori di tabella a più istruzioni.
+L'esecuzione interleaved cambia il limite unidirezionale tra le fasi di ottimizzazione ed esecuzione nel caso di un'esecuzione a query singola e consente l'adattamento dei piani in base alle stime di cardinalità aggiornate. Se durante l'ottimizzazione viene rilevato un candidato per l'esecuzione interleaved, che attualmente corrisponde a una **funzione con valori di tabella con istruzioni multiple (MSTVF, Multi-Statement Table Valued Function)** si sospende l'ottimizzazione, si esegue il sottoalbero appropriato, si acquisiscono stime di cardinalità accurate e quindi si riprende l'ottimizzazione per le operazioni downstream.   
 
-L'immagine seguente visualizza un output di statistiche query in tempo reale, un subset di un piano di esecuzione complessivo che visualizza l'impatto delle stime della cardinalità fisse da funzioni MSTVF. È possibile visualizzare il flusso di righe effettivo e le righe stimate. Tre aree del piano sono degne di nota (il flusso va da destra a sinistra):
-1. L'analisi di tabella MSTVF include una stima fissa pari a 100 righe. In questo esempio tuttavia il flusso della scansione tabella MSTVF registra 527.597 righe, come visualizzato in Statistiche query dinamiche nel confronto *527597 di 100* tra valore effettivo e valore stimato. Si tratta di una deviazione notevole rispetto alla stima fissa.
+Le funzioni con valori di tabella con istruzioni multiple (MSTVF) hanno una stima di cardinalità predefinita pari a 100 a partire da [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e pari a 1 nelle versioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] precedenti. L'esecuzione interleaved riduce i problemi di prestazioni del carico di lavoro dovute alle stime della cardinalità fisse associate alle funzioni con valori di tabella con istruzioni multiple (MSTVF). Per altre informazioni sulle funzioni con valori di tabella con istruzioni multiple (MSTVF), vedere [Creazione di funzioni definite dall'utente (Motore di database)](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#TVF).
+
+L'immagine seguente visualizza un output di [Statistiche query dinamiche](../../relational-databases/performance/live-query-statistics.md), un subset di un piano di esecuzione complessivo che visualizza l'impatto delle stime della cardinalità fisse da funzioni con valori di tabella con istruzioni multiple (MSTVF). È possibile visualizzare il flusso di righe effettivo e le righe stimate. Tre aree del piano sono degne di nota (il flusso va da destra a sinistra):
+1. L'analisi di tabella MSTVF include una stima fissa pari a 100 righe. In questo esempio tuttavia il flusso della scansione di tabella MSTVF registra 527.597 righe, come visualizzato in Statistiche query dinamiche nel confronto *527597 di 100* tra valore effettivo e valore stimato. Si tratta di una deviazione notevole rispetto alla stima fissa.
 1. Per l'operazione di join a cicli annidati è previsto che il lato esterno del join restituisca solo 100 righe. Dato l'elevato numero di righe di fatto restituite dalla funzione MSTVF, in questo caso può risultare utile la scelta di un altro algoritmo di join.
 1. Per l'operazione Hash Match osservare il piccolo simbolo di avviso, che in questo caso indica un evento di distribuzione su disco.
 
@@ -297,10 +298,10 @@ In generale, maggiore è lo scarto tra il numero di righe stimato e il numero re
 L'esecuzione interleaved può risultare vantaggiosa nelle query in cui:
 1. Si registra uno scarto notevole tra il numero di righe stimato e il numero reale nel set di risultati intermedio (in questo caso la funzione MSTVF).
 1. La query nel suo complesso è sensibile alla variazione delle dimensioni del risultato intermedio. Ciò accade di solito quando nel piano della query è presente un albero complesso sopra il sottoalbero.
-Una semplice istruzione "SELECT *" di una funzione MSTVF non trae vantaggio dall'esecuzione interleaved.
+Una semplice istruzione `SELECT *` di una funzione MSTVF non trae vantaggio dall'esecuzione interleaved.
 
 ### <a name="interleaved-execution-overhead"></a>Sovraccarichi dell'esecuzione interleaved
-Il sovraccarico previsto è minimo o nullo. Le funzione con valori di tabella a più istruzioni venivano già materializzate prima dell'introduzione dell'esecuzione interleaved, ma ora grazie all'abilitazione dell'ottimizzazione differita tali funzioni sfruttano la stima della cardinalità del set di righe materializzate.
+Il sovraccarico previsto è minimo o nullo. Le funzioni con valori di tabella con istruzioni multiple (MSTVF) venivano già materializzate prima dell'introduzione dell'esecuzione interleaved, ma ora grazie all'abilitazione dell'ottimizzazione differita tali funzioni sfruttano la stima della cardinalità del set di righe materializzate.
 È possibile che in seguito alle modifiche alcuni piani registrino un miglioramento della cardinalità per il sottoalbero ma una riduzione dell'efficienza per la query nel suo complesso. La prevenzione può includere il ripristino del livello di compatibilità o l'uso dell'Archivio query per imporre la versione non regredita del piano.
 
 ### <a name="interleaved-execution-and-consecutive-executions"></a>Esecuzione interleaved ed esecuzioni consecutive
@@ -339,18 +340,18 @@ Un'istruzione che usa `OPTION (RECOMPILE)` crea un nuovo piano usando l'esecuzio
 ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_INTERLEAVED_EXECUTION_TVF = ON;
 ```
 
-Quando è abilitata, questa impostazione viene visualizzata come abilitata in sys. database_scoped_configurations.
+Quando è abilitata, questa impostazione viene visualizzata come abilitata in [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md).
 Per abilitare nuovamente l'esecuzione interleaved per tutte le esecuzioni di query provenienti dal database, eseguire l'istruzione seguente all'interno del contesto del database applicabile:
 
 ```sql
 ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_INTERLEAVED_EXECUTION_TVF = OFF;
 ```
 
-È anche possibile disabilitare l'esecuzione interleave per una query specifica definendo DISABLE_INTERLEAVED_EXECUTION_TVF come hint per la query USE HINT.  Ad esempio
+È anche possibile disabilitare l'esecuzione interleaved per una query specifica definendo `DISABLE_INTERLEAVED_EXECUTION_TVF` come [hint per la query USE HINT](../../t-sql/queries/hints-transact-sql-query.md#use_hint). Ad esempio
 
 ```sql
-SELECT  [fo].[Order Key], [fo].[Quantity], [foo].[OutlierEventQuantity]
-FROM    [Fact].[Order] AS [fo]
+SELECT [fo].[Order Key], [fo].[Quantity], [foo].[OutlierEventQuantity]
+FROM [Fact].[Order] AS [fo]
 INNER JOIN [Fact].[WhatIfOutlierEventQuantity]('Mild Recession',
                             '1-01-2013',
                             '10-15-2014') AS [foo] ON [fo].[Order Key] = [foo].[Order Key]
@@ -371,5 +372,6 @@ L'hint per la query USE HINT ha la precedenza rispetto una configurazione con am
 [Guida sull'architettura di elaborazione delle query](../../relational-databases/query-processing-architecture-guide.md)    
 [Guida di riferimento a operatori Showplan logici e fisici](../../relational-databases/showplan-logical-and-physical-operators-reference.md)    
 [Join](../../relational-databases/performance/joins.md)    
-[Demonstrating Adaptive Query Processing](https://github.com/joesackmsft/Conferences/blob/master/Data_AMP_Detroit_2017/Demos/AQP_Demo_ReadMe.md) (Dimostrazione dell'elaborazione di query adattive)          
-
+[Demonstrating Adaptive Query Processing](https://github.com/joesackmsft/Conferences/blob/master/Data_AMP_Detroit_2017/Demos/AQP_Demo_ReadMe.md)   (Dimostrazione dell'elaborazione di query adattive)  
+[Hint per la query USE HINT](../../t-sql/queries/hints-transact-sql-query.md#use_hint)   
+[Creare funzioni definite dall'utente (motore di database)](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#TVF)  

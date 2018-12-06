@@ -14,12 +14,12 @@ author: joesackmsft
 ms.author: josack
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c4269cc9f61ecd1bd3130fe7fab0f1e5a1ae65bf
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: d48f9fd87ff375a518b038d9ed4ef4a8d42675cc
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51660953"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52403926"
 ---
 # <a name="intelligent-query-processing-in-sql-databases"></a>Elaborazione di query intelligenti nei database SQL
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -29,10 +29,15 @@ La famiglia di funzionalità di **elaborazione di query intelligenti** include f
 ![Funzionalità di elaborazione di query intelligenti](./media/3_IQPFeatureFamily.png)
 
 ## <a name="adaptive-query-processing"></a>Elaborazione di query adattive
-La famiglia di funzionalità di elaborazione di query adattive include miglioramenti di elaborazione delle query che adattano le strategie di ottimizzazione alle condizioni di runtime del carico di lavoro dell'applicazione. Questi miglioramenti includono: join adattivi in modalità batch, feedback delle concessioni di memoria ed esecuzione interleaved per funzioni con valori di tabella a più istruzioni.
+La famiglia di funzionalità di elaborazione di query adattive include miglioramenti di elaborazione delle query che adattano le strategie di ottimizzazione alle condizioni di runtime del carico di lavoro dell'applicazione. Fanno parte di questi miglioramenti: 
+-  Join adattivi in modalità batch
+-  Feedback della concessione di memoria
+-  Esecuzione interleaved per funzioni con valori di tabella a più istruzioni
 
 ### <a name="batch-mode-adaptive-joins"></a>Join adattivi in modalità batch
 Questa funzionalità consente al piano di passare in modo dinamico a una strategia di join più efficace durante l'esecuzione di un singolo piano memorizzato nella cache.
+
+Per altre informazioni sui join adattivi in modalità batch, vedere [Elaborazione di query adattive nei database SQL](../../relational-databases/performance/adaptive-query-processing.md).
 
 ### <a name="row-and-batch-mode-memory-grant-feedback"></a>Disabilita il feedback delle concessioni di memoria in modalità riga e batch
 > [!NOTE]
@@ -40,10 +45,12 @@ Questa funzionalità consente al piano di passare in modo dinamico a una strateg
 
 Questa funzionalità ricalcola la memoria effettiva necessaria per una query e poi aggiorna il valore di concessione per il piano memorizzato nella cache, riducendo il numero eccessivo di concessioni che limita la concorrenza e correggendo il numero insufficiente di concessioni che causa costose distribuzioni su disco.
 
-### <a name="interleaved-execution-for-multi-statement-table-valued-functions-mstvfs"></a>Esecuzione interleaved per funzioni con valori di tabella a più istruzioni
-Con l'esecuzione interleaved, il conteggio effettivo delle righe viene usato per adottare decisioni più mirate relativamente a un piano di query downstream. 
+Per altre informazioni sul feedback delle concessioni di memoria, vedere [Elaborazione di query adattive nei database SQL](../../relational-databases/performance/adaptive-query-processing.md).
 
-Per altre informazioni, vedere [Elaborazione di query adattive nei database SQL](../../relational-databases/performance/adaptive-query-processing.md).
+### <a name="interleaved-execution-for-multi-statement-table-valued-functions-mstvfs"></a>Esecuzione interleaved per funzioni con valori di tabella a più istruzioni
+Con l'esecuzione interleaved, il conteggio effettivo delle righe viene usato per adottare decisioni più mirate relativamente a un piano di query downstream. Per ulteriori informazioni sulle funzioni con valori di tabella con più istruzioni, vedere [Funzione con valori di tabella](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#TVF).
+
+Per altre informazioni sull'esecuzione interleaved, vedere [Elaborazione di query adattive nei database SQL](../../relational-databases/performance/adaptive-query-processing.md).
 
 ## <a name="table-variable-deferred-compilation"></a>Compilazione posticipata delle variabili di tabella
 > [!NOTE]
@@ -59,7 +66,7 @@ Per altre informazioni, vedere [Compilazione posticipata delle variabili di tabe
 > [!NOTE]
 > L'inlining di funzioni definite dall'utente scalari è una funzionalità di anteprima pubblica.  
 
-L'inlining di funzioni definite dall'utente scalari trasforma automaticamente le funzioni definite dall'utente (UDF) scalari in espressioni relazionali e le incorpora nella query SQL chiamante, migliorando così le prestazioni dei carichi di lavoro che usano funzioni definite dall'utente scalari. L'inlining di funzioni definite dall'utente scalari facilita l'ottimizzazione basata sui costi delle operazioni all'interno di funzioni definite dall'utente e genera piani efficienti orientati ai set e paralleli, invece di piani di esecuzione seriali, inefficienti e iterativi. Questa funzionalità è abilitata per impostazione predefinita nel livello di compatibilità del database 150.
+L'inlining di funzioni definite dall'utente scalari trasforma automaticamente le [funzioni definite dall'utente (UDF) scalari](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#Scalar) in espressioni relazionali e le incorpora nella query SQL chiamante, migliorando così le prestazioni dei carichi di lavoro che usano funzioni definite dall'utente scalari. L'inlining di funzioni definite dall'utente scalari facilita l'ottimizzazione basata sui costi delle operazioni all'interno di funzioni definite dall'utente e genera piani efficienti orientati ai set e paralleli, invece di piani di esecuzione seriali, inefficienti e iterativi. Questa funzionalità è abilitata per impostazione predefinita nel livello di compatibilità del database 150.
 
 Per altre informazioni, vedere [Inlining di funzioni definite dall'utente scalari](https://docs.microsoft.com/sql/relational-databases/user-defined-functions/scalar-udf-inlining?view=sqlallproducts-allversions).
 
@@ -76,9 +83,9 @@ Per altre informazioni, vedere [APPROX_COUNT_DISTINCT (Transact-SQL)](../../t-sq
 > La modalità batch per rowstore è una funzionalità in anteprima pubblica.  
 
 ### <a name="background"></a>Informazioni preliminari
-SQL Server 2012 ha introdotto una nuova funzionalità per l'accelerazione dei carichi di lavoro analitici: gli indici columnstore. In ogni versione successiva sono stati estesi i casi d'uso e migliorate le prestazioni degli indici columnstore. Fino ad ora, tutte queste capacità sono state esposte e documentate come una singola funzionalità: si creano gli indici columnstore per le tabelle e il carico di lavoro analitico "è semplicemente più veloce". Dietro le quinte, tuttavia, esistono due set di tecnologie correlate ma distinte:
+[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ha introdotto una nuova funzionalità per l'accelerazione dei carichi di lavoro analitici: gli indici columnstore. In ogni versione successiva sono stati estesi i casi d'uso e migliorate le prestazioni degli indici columnstore. Fino ad ora, tutte queste capacità sono state esposte e documentate come una singola funzionalità: si creano gli indici columnstore per le tabelle e il carico di lavoro analitico "è semplicemente più veloce". Dietro le quinte, tuttavia, esistono due set di tecnologie correlate ma distinte:
 - Gli indici **columnstore** consentono alle query analitiche di accedere solo ai dati nelle colonne necessarie. Il formato columnstore supporta inoltre una compressione molto più efficace rispetto al risultato ottenuto con la compressione di pagina negli indici "rowstore" tradizionali. 
-- L'elaborazione in **modalità batch** consente agli operatori di query di elaborare i dati in modo più efficiente intervenendo su un batch di righe alla volta, invece che su una riga alla volta. All'elaborazione in modalità batch sono associati numerosi altri miglioramenti per la scalabilità.
+- L'elaborazione in **modalità batch** consente agli operatori di query di elaborare i dati in modo più efficiente intervenendo su un batch di righe alla volta, invece che su una riga alla volta. All'elaborazione in modalità batch sono associati numerosi altri miglioramenti per la scalabilità. Per altre informazioni sulla modalità batch, vedere [Modalità di esecuzione](../../relational-databases/query-processing-architecture-guide.md#execution-modes).
 
 I due set di funzionalità interagiscono per migliorare I/O e utilizzo della CPU:
 - Gli indici columnstore consentono di inserire in memoria una maggiore quantità di dati, con conseguente riduzione delle esigenze di I/O.
@@ -117,6 +124,7 @@ Se si usa la modalità batch per rowstore, nel piano di esecuzione della query l
 
 ### <a name="configuring-batch-mode-on-rowstore"></a>Configurazione della modalità batch per rowstore
 La configurazione con ambito database BATCH_MODE_ON_ROWSTORE è attivata per impostazione predefinita e può essere usata per disabilitare la modalità batch per rowstore senza richiedere una modifica del livello di compatibilità del database:
+
 ```sql
 -- Disabling batch mode on rowstore
 ALTER DATABASE SCOPED CONFIGURATION SET BATCH_MODE_ON_ROWSTORE = OFF;
@@ -124,7 +132,9 @@ ALTER DATABASE SCOPED CONFIGURATION SET BATCH_MODE_ON_ROWSTORE = OFF;
 -- Enabling batch mode on rowstore
 ALTER DATABASE SCOPED CONFIGURATION SET BATCH_MODE_ON_ROWSTORE = ON;
 ```
+
 È possibile disabilitare la modalità batch per rowstore tramite la configurazione con ambito database, ma eseguire comunque l'override dell'impostazione a livello di query tramite l'hint per la query ALLOW_BATCH_MODE. L'esempio seguente abilita la modalità batch per rowstore anche con la funzionalità disabilitata tramite la configurazione con ambito database:
+
 ```sql
 SELECT [Tax Rate], [Lineage Key], [Salesperson Key], SUM(Quantity) AS SUM_QTY, SUM([Unit Price]) AS SUM_BASE_PRICE, COUNT(*) AS COUNT_ORDER
 FROM Fact.OrderHistoryExtended
@@ -133,7 +143,9 @@ GROUP BY [Tax Rate], [Lineage Key], [Salesperson Key]
 ORDER BY [Tax Rate], [Lineage Key], [Salesperson Key]
 OPTION(RECOMPILE, USE HINT('ALLOW_BATCH_MODE'));
 ```
+
 È anche possibile disabilitare la modalità batch per rowstore per una query specifica usando l'hint per la query DISALLOW_BATCH_MODE. Ad esempio
+
 ```sql
 SELECT [Tax Rate], [Lineage Key], [Salesperson Key], SUM(Quantity) AS SUM_QTY, SUM([Unit Price]) AS SUM_BASE_PRICE, COUNT(*) AS COUNT_ORDER
 FROM Fact.OrderHistoryExtended

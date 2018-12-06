@@ -22,12 +22,12 @@ ms.assetid: c75cf73d-0268-4c57-973d-b8a84ff801fa
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 715803e27516df04c0fb1267ceabc8a162d5da4b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b189c99b2a225161eaa675e749464245cd830538
+ms.sourcegitcommit: f1cf91e679d1121d7f1ef66717b173c22430cb42
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47747829"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52586204"
 ---
 # <a name="deallocate-transact-sql"></a>DEALLOCATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -39,49 +39,48 @@ ms.locfileid: "47747829"
 ## <a name="syntax"></a>Sintassi  
   
 ```  
-  
 DEALLOCATE { { [ GLOBAL ] cursor_name } | @cursor_variable_name }  
 ```  
   
 ## <a name="arguments"></a>Argomenti  
  *cursor_name*  
- Nome di un cursore già dichiarato. Se esistono sia un cursore globale che un cursore locale con il nome *cursor_name*, *cursor_name* indica il cursore globale se viene specificata la parola chiave GLOBAL e il cursore locale se la parola chiave GLOBAL viene omessa.  
+ Nome di un cursore già dichiarato. Se esistono sia un cursore globale che un cursore locale con il nome *cursor_name*, *cursor_name* indica il cursore globale se viene specificata la parola chiave `GLOBAL` e il cursore locale se la parola chiave `GLOBAL` viene omessa.  
   
  @*cursor_variable_name*  
  Nome di una variabile di **cursore**. @*cursor_variable_name* deve essere di tipo **cursor**.  
   
 ## <a name="remarks"></a>Remarks  
- Le istruzioni che hanno effetto sui cursori utilizzano un nome di cursore o una variabile di cursore per fare riferimento al cursore. L'istruzione DEALLOCATE elimina l'associazione tra un cursore e il nome di cursore o la variabile di cursore. Se il nome o la variabile è l'ultimo riferimento al cursore, il cursore viene deallocato e le risorse da esso utilizzate vengono rilasciate. I blocchi di scorrimento utilizzati per proteggere l'isolamento delle operazioni di recupero vengono rilasciati dall'istruzione DEALLOCATE. I blocchi a livello di transazione utilizzati per proteggere gli aggiornamenti, inclusi gli aggiornamenti posizionati eseguiti con il cursore, vengono mantenuti attivi fino al termine della transazione.  
+Le istruzioni che hanno effetto sui cursori utilizzano un nome di cursore o una variabile di cursore per fare riferimento al cursore. L'istruzione `DEALLOCATE` elimina l'associazione tra un cursore e il nome di cursore o la variabile di cursore. Se il nome o la variabile è l'ultimo riferimento al cursore, il cursore viene deallocato e le risorse da esso utilizzate vengono rilasciate. I blocchi di scorrimento utilizzati per proteggere l'isolamento delle operazioni di recupero vengono rilasciati dall'istruzione `DEALLOCATE`. I blocchi a livello di transazione utilizzati per proteggere gli aggiornamenti, inclusi gli aggiornamenti posizionati eseguiti con il cursore, vengono mantenuti attivi fino al termine della transazione.  
   
- L'istruzione DECLARE CURSOR consente di allocare un cursore e di associarlo a un nome di cursore.  
+L'istruzione `DECLARE CURSOR` consente di allocare un cursore e di associarlo a un nome di cursore.  
   
-```  
+```sql  
 DECLARE abc SCROLL CURSOR FOR  
 SELECT * FROM Person.Person;  
 ```  
   
- Il nome associato a un cursore potrà essere utilizzato per un altro cursore dello stesso ambito (GLOBAL o LOCAL) solo dopo la deallocazione del primo cursore.  
+Il nome associato a un cursore potrà essere utilizzato per un altro cursore dello stesso ambito (globale o locale) solo dopo la deallocazione del primo cursore.  
   
  Una variabile di cursore può essere associata a un cursore in uno dei due modi seguenti:  
   
--   È possibile specificarne il nome, utilizzando un'istruzione SET che associa un cursore a una variabile di cursore.  
+-   È possibile specificarne il nome, utilizzando un'istruzione `SET` che associa un cursore a una variabile di cursore.  
   
-    ```  
+    ```sql  
     DECLARE @MyCrsrRef CURSOR;  
     SET @MyCrsrRef = abc;  
     ```  
   
 -   È possibile creare un cursore e associarlo a una variabile senza utilizzare una precedente definizione di nome di cursore.  
   
-    ```  
+    ```sql  
     DECLARE @MyCursor CURSOR;  
     SET @MyCursor = CURSOR LOCAL SCROLL FOR  
     SELECT * FROM Person.Person;  
     ```  
   
- Un'istruzione DEALLOCATE @*cursor_variable_name* elimina solo il riferimento al cursore dalla variabile specificata. La variabile verrà deallocata solo quando non sarà più compresa nell'ambito al termine dell'esecuzione del batch, della stored procedure o del trigger. Dopo l'esecuzione di un'istruzione DEALLOCATE @*cursor_variable_name*, è possibile associare la variabile a un altro cursore tramite l'istruzione SET.  
+ Un'istruzione `DEALLOCATE <@cursor_variable_name>` elimina solo il riferimento al cursore dalla variabile specificata. La variabile verrà deallocata solo quando non sarà più compresa nell'ambito al termine dell'esecuzione del batch, della stored procedure o del trigger. Dopo l'esecuzione di un'istruzione `DEALLOCATE <@cursor_variable_name>` è possibile associare la variabile a un altro cursore tramite l'istruzione SET.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
   
@@ -96,15 +95,15 @@ SET @MyCursor = CURSOR LOCAL SCROLL FOR
 GO  
 ```  
   
- Non è necessario deallocare una variabile di cursore in modo esplicito. La variabile viene deallocata in modo implicito quando non è più compresa nell'ambito.  
+Non è necessario deallocare una variabile di cursore in modo esplicito. La variabile viene deallocata in modo implicito quando non è più compresa nell'ambito.  
   
 ## <a name="permissions"></a>Permissions  
- Le autorizzazioni DEALLOCATE vengono assegnate per impostazione predefinita a qualsiasi utente valido.  
+ Le autorizzazioni per l'istruzione `DEALLOCATE` vengono assegnate per impostazione predefinita a qualsiasi utente valido.  
   
 ## <a name="examples"></a>Esempi  
  Nello script seguente viene illustrato come i cursori sono persistenti fino alla deallocazione dell'ultimo nome o dell'ultima variabile in cui vi viene fatto riferimento.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 -- Create and open a global named cursor that  

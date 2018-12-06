@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: d81bb03a-a89e-4fc1-a62b-886fb5338150
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b44b5afff54cf0630e3bde1d5668862d1d969133
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: 62048b27a917684188c8d8c47cfc67817ed63efa
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813734"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52528585"
 ---
 # <a name="sample-reporting-services-rsexe-script-to-copy-content-between-report-servers"></a>Script di esempio rs.exe di Reporting Services per la copia di contenuto tra server di report
 
@@ -202,7 +202,7 @@ Lo script può essere utilizzato per copiare il contenuto tra server di report n
 |Parametro|Descrizione|Obbligatorio|  
 |---------------|-----------------|--------------|  
 |**-s** Source_URL|URL del server di report di origine|Sì|  
-|**-u** dominio\password **–p** password|Credenziali per il server di origine.|FACOLTATIVO, se non viene impostato vengono utilizzate le credenziali predefinite|  
+|**-u** dominio\password **-p** password|Credenziali per il server di origine.|FACOLTATIVO, se non viene impostato vengono utilizzate le credenziali predefinite|  
 |**-v st**="SITE"||FACOLTATIVO Questo parametro viene utilizzato solo per i server di report in modalità SharePoint.|  
 |**- v f**="SOURCEFOLDER"|Impostato su "/" per eseguire la migrazione di tutti gli elementi o su un valore come "/cartella/sottocartella" per una migrazione parziale. Vengono copiati tutti gli elementi in questa cartella|FACOLTATIVO, l'impostazione predefinita è "/".|  
 |**-v ts**="TARGET_URL"|URL del server RS di destinazione||  
@@ -227,7 +227,7 @@ rs.exe -i ssrs_migration.rss -e Mgmt2010 -s https://SourceServer/ReportServer -u
 ```  
   
 ###  <a name="bkmk_native_2_sharepoint_root"></a> Da modalità nativa a modalità SharePoint - sito radice  
- Nell'esempio seguente viene eseguita la migrazione da un server **SourceServer** in modalità nativa al "sito radice" di un server **TargetServer**in modalità SharePoint. Viene eseguita la migrazione delle cartelle "Reports" e "Data Sources" del server in modalità nativa come nuove raccolte nella distribuzione di SharePoint.  
+ Nell'esempio seguente viene eseguita la migrazione da un server **SourceServer** in modalità nativa al "sito radice" di un server **TargetServer** in modalità SharePoint. Viene eseguita la migrazione delle cartelle "Reports" e "Data Sources" del server in modalità nativa come nuove raccolte nella distribuzione di SharePoint.  
   
  ![ssrs_rss_migrate_root_site](../../reporting-services/tools/media/ssrs-rss-migrate-root-site.gif "ssrs_rss_migrate_root_site")  
   

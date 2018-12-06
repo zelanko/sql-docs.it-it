@@ -30,12 +30,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 77b782d10d323ea7e548a149a873812359552345
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3374d7ae2f86ce27de46fad9027f78a040ca356b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47674929"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52545747"
 ---
 # <a name="trycatch-transact-sql"></a>TRY...CATCH (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -64,29 +64,29 @@ END CATCH
  Qualsiasi gruppo di istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] in un batch o racchiuse in un blocco BEGIN…END.  
   
 ## <a name="remarks"></a>Remarks  
- Un costrutto TRY…CATCH intercetta tutti gli errori di esecuzione con livello di gravità superiore a 10 che non determinano la chiusura della connessione al database.  
+ Un costrutto TRY...CATCH intercetta tutti gli errori di esecuzione con livello di gravità superiore a 10 che non determinano la chiusura della connessione al database.  
   
  Un blocco TRY deve essere immediatamente seguito da un blocco CATCH associato. L'inclusione di qualsiasi altra istruzione tra le istruzioni END TRY e BEGIN CATCH genera un errore di sintassi.  
   
- Un costrutto TRY…CATCH non può estendersi a più batch. Un costrutto TRY…CATCH non può estendersi a più blocchi di istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)]. Ad esempio, un costrutto TRY…CATCH non può estendersi a due blocchi BEGIN…END di istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] e non può estendersi a un costrutto IF…ELSE.  
+ Un costrutto TRY...CATCH non può estendersi a più batch. Un costrutto TRY...CATCH non può estendersi a più blocchi di istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)]. Ad esempio, un costrutto TRY...CATCH non può estendersi a due blocchi BEGIN…END di istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] e non può estendersi a un costrutto IF…ELSE.  
   
  Se non si verificano errori nel codice racchiuso in un blocco TRY, al termine dell'esecuzione dell'ultima istruzione nel blocco TRY il controllo passa all'istruzione immediatamente successiva all'istruzione END CATCH associata. Se si verifica un errore nel codice racchiuso in un blocco TRY, il controllo passa alla prima istruzione nel blocco CATCH associato. Se l'istruzione END CATCH è l'ultima istruzione in una stored procedure o un trigger, il controllo viene restituito all'istruzione che ha chiamato la stored procedure o attivato il trigger.  
   
  Al termine del codice nel blocco CATCH, il controllo passa all'istruzione immediatamente successiva all'istruzione END CATCH. Gli errori intercettati da un blocco CATCH non vengono restituiti all'applicazione chiamante. Se qualsiasi parte delle informazioni sugli errori deve essere restituita all'applicazione, il codice nel blocco CATCH deve utilizzare a tale scopo meccanismi come i set di risultati SELECT o le istruzioni RAISERROR e PRINT.  
   
- I costrutti TRY…CATCH possono essere nidificati. I costrutti TRY…CATCH nidificati possono essere contenuti in un blocco TRY oppure in un blocco CATCH. Ad esempio, un blocco CATCH può contenere un costrutto TRY…CATCH incorporato per gestire gli errori rilevati dal codice CATCH.  
+ I costrutti TRY...CATCH possono essere nidificati. I costrutti TRY...CATCH nidificati possono essere contenuti in un blocco TRY oppure in un blocco CATCH. Ad esempio, un blocco CATCH può contenere un costrutto TRY...CATCH incorporato per gestire gli errori rilevati dal codice CATCH.  
   
- Gli errori rilevati in un blocco CATCH vengono considerati come gli errori generati in qualsiasi altra posizione. Se il blocco CATCH contiene un costrutto TRY…CATCH nidificato, qualsiasi errore nel blocco TRY nidificato passerà il controllo al blocco CATCH nidificato. Se non esiste un costrutto TRY…CATCH nidificato, l'errore viene restituito al chiamante.  
+ Gli errori rilevati in un blocco CATCH vengono considerati come gli errori generati in qualsiasi altra posizione. Se il blocco CATCH contiene un costrutto TRY...CATCH nidificato, qualsiasi errore nel blocco TRY nidificato passerà il controllo al blocco CATCH nidificato. Se non esiste un costrutto TRY...CATCH nidificato, l'errore viene restituito al chiamante.  
   
- I costrutti TRY…CATCH rilevano gli errori non gestiti dalle stored procedure o dai trigger eseguiti dal codice in un blocco TRY. In alternativa, le stored procedure o i trigger possono contenere i propri costrutti TRY…CATCH per gestire gli errori generati dal proprio codice. Ad esempio, quando un blocco TRY esegue una stored procedure e si verifica un errore nella stored procedure, l'errore può essere gestito nei modi seguenti:  
+ I costrutti TRY...CATCH rilevano gli errori non gestiti dalle stored procedure o dai trigger eseguiti dal codice in un blocco TRY. In alternativa, le stored procedure o i trigger possono contenere i propri costrutti TRY...CATCH per gestire gli errori generati dal proprio codice. Ad esempio, quando un blocco TRY esegue una stored procedure e si verifica un errore nella stored procedure, l'errore può essere gestito nei modi seguenti:  
   
--   Se la stored procedure non include uno specifico costrutto TRY…CATCH, l'errore restituisce il controllo al blocco CATCH associato al blocco TRY contenente l'istruzione EXECUTE.  
+-   Se la stored procedure non include uno specifico costrutto TRY...CATCH, l'errore restituisce il controllo al blocco CATCH associato al blocco TRY contenente l'istruzione EXECUTE.  
   
--   Se la stored procedure include un costrutto TRY…CATCH, l'errore trasferisce il controllo al blocco CATCH nella stored procedure. Al termine del codice del blocco CATCH, il controllo viene restituito all'istruzione immediatamente successiva all'istruzione EXECUTE che ha chiamato la stored procedure.  
+-   Se la stored procedure include un costrutto TRY...CATCH, l'errore trasferisce il controllo al blocco CATCH nella stored procedure. Al termine del codice del blocco CATCH, il controllo viene restituito all'istruzione immediatamente successiva all'istruzione EXECUTE che ha chiamato la stored procedure.  
   
  Le istruzioni GOTO non possono essere utilizzate per immettere un blocco TRY o CATCH. Le istruzioni GOTO possono essere utilizzate per passare a un'etichetta all'interno dello stesso blocco TRY o CATCH oppure per uscire da un blocco TRY o CATCH.  
   
- Il costrutto TRY…CATCH non può essere utilizzato in una funzione definita dall'utente.  
+ Il costrutto TRY...CATCH non può essere utilizzato in una funzione definita dall'utente.  
   
 ## <a name="retrieving-error-information"></a>Recupero delle informazioni sugli errori  
  Nell'ambito di un blocco CATCH, è possibile utilizzare le funzioni di sistema seguenti per ottenere informazioni sull'errore che ha causato l'esecuzione del blocco CATCH:  
@@ -103,7 +103,7 @@ END CATCH
   
 -   [ERROR_MESSAGE()](../../t-sql/functions/error-message-transact-sql.md) restituisce il testo completo del messaggio di errore. Il testo include i valori forniti da qualsiasi parametro sostituibile, ad esempio lunghezze, nomi di oggetti oppure orari.  
   
- Queste funzioni restituiscono NULL se vengono chiamate all'esterno dell'ambito del blocco CATCH. È possibile recuperare informazioni sugli errori utilizzando queste funzioni in qualsiasi posizione all'interno dell'ambito del blocco CATCH. Nello script seguente, ad esempio, viene illustrata una stored procedure contenente funzioni di gestione degli errori. Nel blocco `CATCH` di un costrutto `TRY…CATCH` viene chiamata la stored procedure e vengono restituite informazioni sull'errore.  
+ Queste funzioni restituiscono NULL se vengono chiamate all'esterno dell'ambito del blocco CATCH. È possibile recuperare informazioni sugli errori utilizzando queste funzioni in qualsiasi posizione all'interno dell'ambito del blocco CATCH. Nello script seguente, ad esempio, viene illustrata una stored procedure contenente funzioni di gestione degli errori. Nel blocco `CATCH` di un costrutto `TRY...CATCH` viene chiamata la stored procedure e vengono restituite informazioni sull'errore.  
   
 ```sql  
 -- Verify that the stored procedure does not already exist.  
@@ -135,18 +135,18 @@ END CATCH;
   
  Le funzioni ERROR\_\* possono essere utilizzate anche in un blocco `CATCH` all'interno di una [stored procedure con compilazione nativa](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md).  
   
-## <a name="errors-unaffected-by-a-trycatch-construct"></a>Errori su cui il costrutto TRY…CATCH non ha alcun effetto  
- I costrutti TRY…CATCH non intercettano le condizioni seguenti:  
+## <a name="errors-unaffected-by-a-trycatch-construct"></a>Errori su cui il costrutto TRY...CATCH non ha alcun effetto  
+ I costrutti TRY...CATCH non intercettano le condizioni seguenti:  
   
 -   Avvisi o messaggi informativi con livello di gravità minore o uguale a 10.  
   
--   Errori con livello di gravità maggiore o uguale a 20 che determinano l'arresto dell'elaborazione dell'attività di [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] per la sessione. Se si verifica un errore con livello di gravità maggiore o uguale a 20 e la connessione al database non viene interrotta, l'errore verrà gestito da TRY…CATCH.  
+-   Errori con livello di gravità maggiore o uguale a 20 che determinano l'arresto dell'elaborazione dell'attività di [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] per la sessione. Se si verifica un errore con livello di gravità maggiore o uguale a 20 e la connessione al database non viene interrotta, l'errore verrà gestito da TRY...CATCH.  
   
 -   Situazioni di attenzione, richieste di interruzione dei client o interruzione delle connessioni client.  
   
 -   Quando la sessione viene terminata da un amministratore di sistema tramite l'istruzione KILL.  
   
- I tipi di errore seguenti non vengono gestiti da un blocco CATCH quando si verificano allo stesso livello di esecuzione del costrutto TRY…CATCH:  
+ I tipi di errore seguenti non vengono gestiti da un blocco CATCH quando si verificano allo stesso livello di esecuzione del costrutto TRY...CATCH:  
   
 -   Errori di compilazione, ad esempio errori di sintassi, che impediscono l'esecuzione di un batch.  
   
@@ -154,9 +154,9 @@ END CATCH;
   
  Questi errori sono restituiti al livello che ha eseguito il batch, la stored procedure o il trigger.  
   
- In caso di errore durante la compilazione o durante la ricompilazione a livello di istruzione a un livello di esecuzione inferiore (ad esempio, durante l'esecuzione di sp_executesql o di una stored procedure definita dall'utente) all'interno del blocco TRY, l'errore si verifica a un livello inferiore rispetto al costrutto TRY…CATCH e verrà gestito dal blocco CATCH associato.  
+ In caso di errore durante la compilazione o durante la ricompilazione a livello di istruzione a un livello di esecuzione inferiore (ad esempio, durante l'esecuzione di sp_executesql o di una stored procedure definita dall'utente) all'interno del blocco TRY, l'errore si verifica a un livello inferiore rispetto al costrutto TRY...CATCH e verrà gestito dal blocco CATCH associato.  
   
- Nell'esempio seguente viene illustrato come un errore di risoluzione dei nomi degli oggetti generato da un'istruzione `SELECT` non venga intercettato dal costrutto `TRY…CATCH`, ma venga intercettato dal blocco `CATCH` quando la stessa istruzione `SELECT` viene eseguita all'interno di una stored procedure.  
+ Nell'esempio seguente viene illustrato come un errore di risoluzione dei nomi degli oggetti generato da un'istruzione `SELECT` non venga intercettato dal costrutto `TRY...CATCH`, ma venga intercettato dal blocco `CATCH` quando la stessa istruzione `SELECT` viene eseguita all'interno di una stored procedure.  
   
 ```sql  
 BEGIN TRY  
@@ -171,9 +171,9 @@ BEGIN CATCH
 END CATCH  
 ```  
   
- L'errore non viene intercettato e il controllo passa dal costrutto `TRY…CATCH` al livello immediatamente superiore.  
+ L'errore non viene intercettato e il controllo passa dal costrutto `TRY...CATCH` al livello immediatamente superiore.  
   
- Eseguendo l'istruzione `SELECT` all'interno di una stored procedure, l'errore si verificherà a un livello inferiore rispetto al blocco `TRY`. L'errore verrà gestito dal costrutto `TRY…CATCH`.  
+ Eseguendo l'istruzione `SELECT` all'interno di una stored procedure, l'errore si verificherà a un livello inferiore rispetto al blocco `TRY`. L'errore verrà gestito dal costrutto `TRY...CATCH`.  
   
 ```sql  
 -- Verify that the stored procedure does not exist.  
@@ -205,7 +205,7 @@ END CATCH;
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-using-trycatch"></a>A. Utilizzo di TRY…CATCH  
+### <a name="a-using-trycatch"></a>A. Utilizzo di TRY...CATCH  
  Nell'esempio seguente viene illustrata un'istruzione `SELECT` che genera un errore di divisione per zero. L'errore determina il passaggio dell'esecuzione al blocco `CATCH` associato.  
   
 ```sql  
@@ -225,8 +225,8 @@ END CATCH;
 GO  
 ```  
   
-### <a name="b-using-trycatch-in-a-transaction"></a>B. Utilizzo di TRY…CATCH in una transazione  
- Nell'esempio seguente viene illustrato il funzionamento di un blocco `TRY…CATCH` all'interno di una transazione. L'istruzione all'interno del blocco `TRY` genera un errore di violazione di vincolo.  
+### <a name="b-using-trycatch-in-a-transaction"></a>B. Utilizzo di TRY...CATCH in una transazione  
+ Nell'esempio seguente viene illustrato il funzionamento di un blocco `TRY...CATCH` all'interno di una transazione. L'istruzione all'interno del blocco `TRY` genera un errore di violazione di vincolo.  
   
 ```sql  
 BEGIN TRANSACTION;  
@@ -254,8 +254,8 @@ IF @@TRANCOUNT > 0
 GO  
 ```  
   
-### <a name="c-using-trycatch-with-xactstate"></a>C. Utilizzo di TRY…CATCH con XACT_STATE  
- Nell'esempio seguente viene illustrato come utilizzare il costrutto `TRY…CATCH` per gestire gli errori che si verificano all'interno di una transazione. La funzione `XACT_STATE` determina se è necessario eseguire il commit o il rollback della transazione. In this example, l'evento `SET XACT_ABORT` è `ON`. Rende pertanto bloccata la transazione quando si verifica l'errore di violazione di vincolo.  
+### <a name="c-using-trycatch-with-xactstate"></a>C. Utilizzo di TRY...CATCH con XACT_STATE  
+ Nell'esempio seguente viene illustrato come utilizzare il costrutto `TRY...CATCH` per gestire gli errori che si verificano all'interno di una transazione. La funzione `XACT_STATE` determina se è necessario eseguire il commit o il rollback della transazione. In this example, l'evento `SET XACT_ABORT` è `ON`. Rende pertanto bloccata la transazione quando si verifica l'errore di violazione di vincolo.  
   
 ```sql  
 -- Check to see whether this stored procedure exists.  
@@ -323,7 +323,7 @@ GO
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="d-using-trycatch"></a>D. Utilizzo di TRY…CATCH  
+### <a name="d-using-trycatch"></a>D. Utilizzo di TRY...CATCH  
  Nell'esempio seguente viene illustrata un'istruzione `SELECT` che genera un errore di divisione per zero. L'errore determina il passaggio dell'esecuzione al blocco `CATCH` associato.  
   
 ```sql  

@@ -17,12 +17,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6ee365b25b272d0a442632d23cbd407bb21090a2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d12db3ef11d3dc4d658b7126319ea53ddf12a91f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47603579"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535356"
 ---
 # <a name="configure-always-encrypted-using-sql-server-management-studio"></a>Configure Always Encrypted using SQL Server Management Studio (Configurare Always Encrypted usando SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -97,7 +97,7 @@ Per disabilitare Always Encrypted per una connessione di database, specificare `
 >  [!TIP] 
 >  Per abilitare e disabilitare Always Encrypted per una finestra dell'editor di query esistente:   
 >  1.   Fare clic con il pulsante destro del mouse in un punto qualsiasi all'interno della finestra dell'editor di query.
->  2.   Selezionare **Connessione** > **Cambia connessione...** 
+>  2.   Selezionare **Connessione** > **Cambia connessione**. 
 >  3.   Fare clic su **Opzioni** >>
 >  4.   Selezionare la scheda **Proprietà aggiuntive** e digitare `Column Encryption Setting=Enabled` (per abilitare il comportamento di Always Encrypted) o rimuovere l'impostazione (per disabilitare il comportamento di Always Encrypted).   
 >  5.   Fare clic su **Connetti**.   
@@ -121,14 +121,14 @@ La funzionalità Parametrizzazione per Always Encrypted è disabilitata per impo
 
 Per abilitare o disabilitare la funzionalità Parametrizzazione per Always Encrypted per la finestra dell'editor di query corrente:   
 1.  Selezionare **Query** dal menu principale.   
-2.  Selezionare **Opzioni query...**   
+2.  Selezionare **Opzioni query**.   
 3.  Passare a **Esecuzione** > **Avanzata**.   
 4.  Selezionare o deselezionare **Abilita parametrizzazione per Always Encrypted**.   
 5.  Fare clic su **OK**.   
 
 Per abilitare/disabilitare la funzionalità Parametrizzazione per Always Encrypted per future finestre dell'editor di query:   
 1.  Selezionare **Strumenti** dal menu principale.   
-2.  Selezionare **Opzioni...**   
+2.  Selezionare **Opzioni**.   
 3.  Passare a **Esecuzione query** > **SQL Server** > **Avanzata**.   
 4.  Selezionare o deselezionare **Abilita parametrizzazione per Always Encrypted**.   
 5.  Fare clic su **OK**.   
@@ -209,7 +209,7 @@ WHERE [SSN] = @SSN;
 
 Per eseguire le query su colonne crittografate, incluse le query che recuperano i dati in testo crittografato, sono necessarie le autorizzazioni `VIEW ANY COLUMN MASTER KEY DEFINITION` e `VIEW ANY COLUMN ENCRYPTION KEY DEFINITION` nel database.   
 Oltre a queste autorizzazioni, per decrittografare i risultati delle query o per crittografare i parametri di query (generati dalla parametrizzazione delle variabili Transact-SQL), è necessario anche accedere alla chiave master della colonna proteggendo le colonne di destinazione:   
-- **Archivio certificati - Computer locale** : è necessario avere l'accesso `Read` al certificato usato come chiave master della colonna o essere l'amministratore del computer.   
+- **Archivio certificati - Computer locale**: è necessario avere l'accesso `Read` al certificato usato come chiave master della colonna o essere l'amministratore del computer.   
 - **Insieme di credenziali delle chiavi di Azure** : sono necessarie le autorizzazioni `get`, `unwrapKey`e verify per l'insieme di credenziali contenente la chiave master della colonna.   
 - **Provider dell'archivio chiavi (CNG)** : l'autorizzazione e le credenziali necessarie quando si usa un archivio chiavi o una chiave, in base all'archivio e alla configurazione KSP.   
 - **Provider del servizio di crittografia (CAPI)** : l'autorizzazione e le credenziali necessarie quando si usa un archivio chiavi o una chiave, in base all'archivio e alla configurazione CSP.   
@@ -226,10 +226,10 @@ La finestra di dialogo **Nuova chiave master della colonna** consente di generar
 2.  Fare clic con il pulsante destro del mouse sulla cartella **Chiavi master della colonna** e selezionare **Nuova chiave master della colonna**. 
 3.  Nella finestra di dialogo **Nuova chiave master della colonna** immettere il nome dell'oggetto metadati della chiave master della colonna.
 4.  Selezionare un archivio chiavi:
-    - **Archivio certificati - Utente corrente** : indica il percorso dell'archivio certificati Utente corrente nell'archivio certificati di Windows, ovvero nell'archivio personale. 
-    - **Archivio certificati - Computer locale** : indica il percorso dell'archivio certificati Computer locale nell'archivio certificati di Windows. 
-    - **Insieme di credenziali delle chiavi di Azure** : è necessario accedere ad Azure facendo clic su **Accedi**. Eseguito l'accesso, sarà possibile selezionare uno degli abbonamenti di Azure e un insieme di credenziali delle chiavi.
-    - **Provider dell'archivio chiavi (CNG)** : indica un archivio chiavi che è accessibile tramite un provider dell'archivio chiavi (KSP) che implementa l'API CNG (Cryptography Next Generation). In genere, questo tipo di archivio è un modulo di protezione hardware (HSM). Dopo aver selezionato questa opzione, è necessario selezionare un provider dell'archivio chiavi. Viene selezionato per impostazione predefinita il**provider dell'archivio chiavi del software Microsoft** . Per usare una chiave master della colonna archiviata in un HSM, selezionare un provider dell'archivio chiavi per il dispositivo, che deve essere installato e configurato nel computer prima di aprire la finestra di dialogo.
+    - **Archivio certificati - Utente corrente**: indica il percorso dell'archivio certificati Utente corrente nell'archivio certificati di Windows, ovvero nell'archivio personale. 
+    - **Archivio certificati - Computer locale**: indica il percorso dell'archivio certificati Computer locale nell'archivio certificati di Windows. 
+    - **Azure Key Vault**: è necessario accedere ad Azure facendo clic su **Accedi**. Eseguito l'accesso, sarà possibile selezionare uno degli abbonamenti di Azure e un insieme di credenziali delle chiavi.
+    - **Provider dell'archivio chiavi (CNG)**: indica un archivio chiavi che è accessibile tramite un provider dell'archivio chiavi (KSP) che implementa l'API CNG (Cryptography Next Generation). In genere, questo tipo di archivio è un modulo di protezione hardware (HSM). Dopo aver selezionato questa opzione, è necessario selezionare un provider dell'archivio chiavi. Viene selezionato per impostazione predefinita il**provider dell'archivio chiavi del software Microsoft** . Per usare una chiave master della colonna archiviata in un HSM, selezionare un provider dell'archivio chiavi per il dispositivo, che deve essere installato e configurato nel computer prima di aprire la finestra di dialogo.
     -   **Provider del servizio di crittografia** : un archivio chiavi accessibile attraverso un provider del servizio di crittografia (CSP) che implementa l'API di crittografia (CAPI). In genere, questo archivio è un modulo di protezione hardware (HSM). Dopo aver selezionato questa opzione, è necessario selezionare un provider del servizio di crittografia.  Per usare una chiave master della colonna archiviata in un HSM, selezionare un provider del servizio di crittografia per il dispositivo, che deve essere installato e configurato nel computer prima di aprire la finestra di dialogo.
     
     >   [!NOTE]
@@ -261,17 +261,17 @@ SQL Server Management Studio genera una nuova chiave di crittografia della colon
 
 Sono necessarie le autorizzazioni *ALTER ANY ENCRYPTION MASTER KEY* e *VIEW ANY COLUMN MASTER KEY DEFINITION* del database per creare nella finestra di dialogo i metadati della chiave di crittografia della colonna e accedere ai metadati della chiave master della colonna.
 Per accedere a un archivio chiavi e usare la chiave master della colonna, è possibile richiedere le autorizzazioni per l'archivio chiavi e/o la chiave:
-- **Archivio certificati - Computer locale** : è necessario avere accesso in lettura al certificato usato come chiave master della colonna o essere l'amministratore del computer.
-- **Insieme di credenziali delle chiavi di Azure** : sono necessarie le autorizzazioni *get*, *unwrapKey*, *wrapKey*, *sign*e *verify*  per l'insieme di credenziali contenente la chiave master della colonna.
-- **Provider dell'archivio chiavi (CNG)** : l'autorizzazione e le credenziali obbligatorie potrebbero essere richieste quando si usa un archivio chiavi o una chiave, in base all'archivio e alla configurazione KSP.
-- **Provider del servizio di crittografia (CAPI)** : potrebbero essere richieste l'autorizzazione e le credenziali obbligatorie quando si usa un archivio chiavi o una chiave, in base all'archivio e alla configurazione CSP.
+- **Archivio certificati - Computer locale**: è necessario avere accesso in lettura al certificato usato come chiave master della colonna o essere l'amministratore del computer.
+- **Azure Key Vault**: sono necessarie le autorizzazioni *get*, *unwrapKey*, *wrapKey*, *sign* e *verify* per l'insieme di credenziali contenente la chiave master della colonna.
+- **Provider dell'archivio chiavi (CNG)**: l'autorizzazione e le credenziali obbligatorie potrebbero essere richieste quando si usa un archivio chiavi o una chiave, in base all'archivio e alla configurazione KSP.
+- **Provider del servizio di crittografia (CAPI)**: potrebbero essere richieste l'autorizzazione e le credenziali obbligatorie quando si usa un archivio chiavi o una chiave, in base all'archivio e alla configurazione CSP.
 
 Per altre informazioni, vedere [Creare e archiviare chiavi master della colonna (Always Encrypted)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md).
 
 <a name="rotatecmk"></a>
 ## <a name="rotating-column-master-keys"></a>Rotazione delle chiavi master di colonna
 
-La rotazione di una chiave master della colonna è il processo di sostituzione di una chiave master della colonna esistente con la nuova chiave. Potrebbe essere necessario ruotare una chiave se questa è stata compromessa oppure per conformità ai criteri e alle normative dell'organizzazione che impongono la rotazione a intervalli regolari delle chiavi crittografiche . La rotazione delle chiavi master della colonna interessa la decrittografia delle chiavi di crittografia della colonna che sono protette dalla chiave master corrente della colonna, la loro successiva crittografia tramite la chiave master nuova della colonna e l'aggiornamento dei metadati per entrambi i tipi di chiavi. Per altre informazioni, vedere [Panoramica della gestione delle chiavi per Always Encrypted](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md).
+La rotazione di una chiave master della colonna è il processo di sostituzione di una chiave master della colonna esistente con la nuova chiave. Potrebbe essere necessario ruotare una chiave se questa è stata compromessa oppure per conformità ai criteri e alle normative dell'organizzazione che impongono la rotazione a intervalli regolari delle chiavi crittografiche. La rotazione delle chiavi master della colonna interessa la decrittografia delle chiavi di crittografia della colonna che sono protette dalla chiave master corrente della colonna, la loro successiva crittografia tramite la chiave master nuova della colonna e l'aggiornamento dei metadati per entrambi i tipi di chiavi. Per altre informazioni, vedere [Panoramica della gestione delle chiavi per Always Encrypted](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md).
 
 **Passaggio 1: Eseguire il provisioning di una nuova chiave master della colonna**
 
@@ -297,8 +297,8 @@ SQL Server Management Studio ottiene i metadati delle chiavi di crittografia del
 
 In questo passaggio è necessario verificare che tutte le applicazioni client in uso che eseguono query nelle colonne del database protette dalla chiave master della colonna in fase di rotazione siano in grado di accedere alla nuova chiave master della colonna, ad esempio le colonne del database crittografate con una chiave di crittografia della colonna crittografata con la chiave master della colonna. Questo passaggio dipende dal tipo di archivio chiavi in cui si trova la nuova chiave master della colonna. Ad esempio
 - Se la nuova chiave master della colonna è un certificato archiviato nell'archivio certificati di Windows, è necessario distribuire il certificato nella posizione dell'archivio dei certificati (*Utente corrente* o *Computer locale*) e nella posizione specificata nel percorso della chiave master della colonna nel database. L'applicazione deve poter accedere al certificato:
-    - Se il certificato viene archiviato nel percorso dell'archivio certificati *Utente corrente* , deve essere importato nell'archivio Utente corrente dell'identità Windows dell'applicazione (utente).
-    - Se il certificato viene archiviato nel percorso dell'archivio certificati *Computer locale* , l'identità Windows dell'applicazione deve disporre dell'autorizzazione per accedere al certificato.
+    - Se il certificato viene archiviato nel percorso dell'archivio certificati *Utente corrente*, deve essere importato nell'archivio Utente corrente dell'identità Windows dell'applicazione (utente).
+    - Se il certificato viene archiviato nel percorso dell'archivio certificati *Computer locale*, l'identità Windows dell'applicazione deve disporre dell'autorizzazione per accedere al certificato.
 - Se la nuova chiave master della colonna viene archiviata nell'insieme di credenziali delle chiavi di Microsoft Azure, deve essere implementata per l'autenticazione in Azure e deve essere autorizzata ad accedere alla chiave.
 
 Per i dettagli,vedere [Creare e archiviare chiavi master della colonna (Always Encrypted)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md).
@@ -336,16 +336,16 @@ Se si sceglie di rimuovere la definizione della chiave master della colonna prec
 
 La rotazione di una chiave master della colonna richiede le seguenti autorizzazioni di database:
 
-- **ALTER ANY COLUMN MASTER KEY** : richiesta per creare i metadati per la nuova chiave master della colonna ed eliminare i metadati per la chiave master della colonna precedente.
-- **ALTER ANY COLUMN ENCRYPTION KEY** : richiesta per modificare i metadati della chiave di crittografia della colonna (aggiunta di nuovi valori crittografati).
+- **ALTER ANY COLUMN MASTER KEY**: richiesta per creare i metadati per la nuova chiave master della colonna ed eliminare i metadati per la chiave master della colonna precedente.
+- **ALTER ANY COLUMN ENCRYPTION KEY**: richiesta per modificare i metadati della chiave di crittografia della colonna (aggiunta di nuovi valori crittografati).
 - **VIEW ANY COLUMN MASTER KEY DEFINITION** : richiesta per accedere e leggere i metadati delle chiavi master della colonna.
 - **VIEW ANY COLUMN ENCRYPTION KEY DEFINITION** : richiesta per accedere e leggere i metadati delle chiavi di crittografia della colonna. 
 
 È necessario essere in grado di accedere sia alla chiave master della colonna precedente, sia alla nuova chiave master della colonna nei rispettivi archivi chiavi. Per accedere a un archivio chiavi e usare una chiave master della colonna, è possibile richiedere le autorizzazioni per l'archivio chiavi e/o la chiave:
-- **Archivio certificati - Computer locale** : è necessario avere accesso in lettura al certificato usato come chiave master della colonna o essere l'amministratore del computer.
-- **Insieme di credenziali delle chiavi di Azure** : sono necessarie le autorizzazioni *create*, *get*, *unwrapKey*, *wrapKey*, *sign*e *verify* per l'insieme di credenziali contenente le chiavi master della colonna.
-- **Provider dell'archivio chiavi (CNG)** : l'autorizzazione e le credenziali obbligatorie potrebbero essere richieste quando si usa un archivio chiavi o una chiave, in base all'archivio e alla configurazione KSP.
-- **Provider del servizio di crittografia (CAPI)** : potrebbero essere richieste l'autorizzazione e le credenziali obbligatorie quando si usa un archivio chiavi o una chiave, in base all'archivio e alla configurazione CSP.
+- **Archivio certificati - Computer locale**: è necessario avere accesso in lettura al certificato usato come chiave master della colonna o essere l'amministratore del computer.
+- **Azure Key Vault**: sono necessarie le autorizzazioni *create*, *get*, *unwrapKey*, *wrapKey*, *sign*e *verify* per l'insieme di credenziali contenente le chiavi master della colonna.
+- **Provider dell'archivio chiavi (CNG)**: l'autorizzazione e le credenziali obbligatorie potrebbero essere richieste quando si usa un archivio chiavi o una chiave, in base all'archivio e alla configurazione KSP.
+- **Provider del servizio di crittografia (CAPI)**: potrebbero essere richieste l'autorizzazione e le credenziali obbligatorie quando si usa un archivio chiavi o una chiave, in base all'archivio e alla configurazione CSP.
 
 Per altre informazioni, vedere [Creare e archiviare chiavi master della colonna (Always Encrypted)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md).
 
@@ -361,24 +361,24 @@ Per ruotare una chiave di crittografia della colonna, usare la procedura guidata
 1.  Aprire la procedura guidata per il database: fare clic con il pulsante destro del mouse sul database, scegliere **Attività**, quindi fare clic su **Crittografa colonne**.
 2.  Leggere la pagina **Introduzione** , quindi fare clic su **Avanti**.
 3.  Nella pagina **Selezione colonne** espandere le tabelle e individuare tutte le colonne da sostituire che attualmente vengono crittografate con la chiave di crittografia della colonna precedente.
-4.  Per ogni colonna crittografata con la chiave di crittografia precedente, impostare **Chiave di crittografia** su una nuova chiave generata automaticamente. **Nota:** in alternativa, è possibile creare una nuova chiave di crittografia della colonna prima di eseguire la procedura guidata. Vedere la sezione *Provisioning delle chiavi di crittografia della colonna* .
-5.  Nella pagina **Configurazione chiave master** selezionare un percorso in cui archiviare la nuova chiave, selezionare un'origine della chiave master e quindi fare clic su **Avanti**. **Nota:** se si usa una chiave di crittografia della colonna già esistente (non una generata automaticamente), non deve essere eseguita alcuna azione in questa pagina.
+4.  Per ogni colonna crittografata con la chiave di crittografia precedente, impostare **Chiave di crittografia** su una nuova chiave generata automaticamente. **Nota:** in alternativa, è possibile creare una nuova chiave di crittografia della colonna prima di eseguire la procedura guidata. Vedere la sezione *Provisioning delle chiavi di crittografia della colonna*.
+5.  Nella pagina **Configurazione chiave master** , selezionare un percorso per archiviare la nuova chiave, selezionare un'origine della chiave master e quindi fare clic su **Avanti**. **Nota:** se si usa una chiave di crittografia della colonna già esistente (non una generata automaticamente), non deve essere eseguita alcuna azione in questa pagina.
 6.  Nella pagina **Convalida**scegliere se eseguire lo script immediatamente o creare uno script di PowerShell, quindi fare clic su **Avanti**.
 7.  Nella pagina **Riepilogo** esaminare le opzioni selezionate, quindi fare clic su **Fine** e chiudere la procedura guidata quando viene completata.
 8.  In **Esplora oggetti**passare alla cartella **Sicurezza/Chiavi con crittografia sempre attiva/Chiavi di crittografia della colonna** e individuare la chiave di crittografia della colonna precedente da rimuovere dal database. Fare clic sulla chiave con il pulsante destro del mouse e selezionare **Elimina**.
 
 ### <a name="permissions"></a>Permissions
 
-La rotazione di una chiave di crittografia della colonna richiede le seguenti autorizzazioni di database: **ALTER ANY COLUMN MASTER KEY** : richiesta se si usa una nuova chiave di crittografia della colonna generata automaticamente (verranno generati anche una nuova chiave master della colonna e i relativi metadati).
-**ALTER ANY COLUMN ENCRYPTION KEY** : richiesta per aggiungere metadati per la nuova chiave di crittografia della colonna.
+La rotazione di una chiave di crittografia della colonna richiede le seguenti autorizzazioni di database: **ALTER ANY COLUMN MASTER KEY**: richiesta se si usa una nuova chiave di crittografia della colonna generata automaticamente (verranno generati anche una nuova chiave master della colonna e i relativi metadati).
+**ALTER ANY COLUMN ENCRYPTION KEY**: richiesta per aggiungere metadati per la nuova chiave di crittografia della colonna.
 **VIEW ANY COLUMN MASTER KEY DEFINITION** : richiesta per accedere e leggere i metadati delle chiavi master della colonna.
 **VIEW ANY COLUMN ENCRYPTION KEY DEFINITION** : richiesta per accedere e leggere i metadati delle chiavi di crittografia della colonna.
 
 È necessario essere in grado di accedere alle chiavi master sia per la nuova chiave di crittografia della colonna, sia per la chiave di crittografia precedente. Per accedere a un archivio chiavi e usare una chiave master della colonna, è possibile richiedere le autorizzazioni per l'archivio chiavi e/o la chiave:
-- **Archivio certificati - Computer locale** : è necessario avere accesso in lettura al certificato usato come chiave master della colonna o essere l'amministratore del computer.
-- **Insieme di credenziali delle chiavi di Azure** : sono necessarie le autorizzazioni get, unwrapKey e verify per l'insieme di credenziali contenente la chiave master della colonna.
-- **Provider dell'archivio chiavi (CNG)** : l'autorizzazione e le credenziali obbligatorie potrebbero essere richieste quando si usa un archivio chiavi o una chiave, in base all'archivio e alla configurazione KSP.
-- **Provider del servizio di crittografia (CAPI)** : potrebbero essere richieste l'autorizzazione e le credenziali obbligatorie quando si usa un archivio chiavi o una chiave, in base all'archivio e alla configurazione CSP.
+- **Archivio certificati - Computer locale**: è necessario avere accesso in lettura al certificato usato come chiave master della colonna o essere l'amministratore del computer.
+- **Azure Key Vault**: sono necessarie le autorizzazioni get, unwrapKey e verify per l'insieme di credenziali contenente la chiave master della colonna.
+- **Provider dell'archivio chiavi (CNG)**: l'autorizzazione e le credenziali obbligatorie potrebbero essere richieste quando si usa un archivio chiavi o una chiave, in base all'archivio e alla configurazione KSP.
+- **Provider del servizio di crittografia (CAPI)**: potrebbero essere richieste l'autorizzazione e le credenziali obbligatorie quando si usa un archivio chiavi o una chiave, in base all'archivio e alla configurazione CSP.
 
 Per altre informazioni, vedere [Creare e archiviare chiavi master della colonna (Always Encrypted)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md).
 
@@ -407,10 +407,10 @@ Per eseguire un'operazione di aggiornamento dell'applicazione livello dati se Al
 *ALTER ANY COLUMN MASTER KEY*, *ALTER ANY COLUMN ENCRYPTION KEY*, *VIEW ANY COLUMN MASTER KEY DEFINITION*, *VIEW ANY COLUMN ENCRYPTION KEY DEFINITION*
 
 Se l'operazione di aggiornamento attiva un'operazione di crittografia dei dati, è necessario essere in grado di accedere alle chiavi master della colonna configurate per le colonne interessate:
-- **Archivio certificati - Computer locale** : è necessario avere accesso in lettura al certificato usato come chiave master della colonna o essere l'amministratore del computer.
-- **Insieme di credenziali delle chiavi di Azure** : sono necessarie le autorizzazioni *create*, *get*, *unwrapKey*, *wrapKey*, *sign*e *verify* per l'insieme di credenziali contenente la chiave master della colonna.
-- **Provider dell'archivio chiavi (CNG)** : l'autorizzazione e le credenziali obbligatorie potrebbero essere richieste quando si usa un archivio chiavi o una chiave, in base all'archivio e alla configurazione KSP.
-- **Provider del servizio di crittografia (CAPI)** : potrebbero essere richieste l'autorizzazione e le credenziali obbligatorie quando si usa un archivio chiavi o una chiave, in base all'archivio e alla configurazione CSP.
+- **Archivio certificati - Computer locale**: è necessario avere accesso in lettura al certificato usato come chiave master della colonna o essere l'amministratore del computer.
+- **Azure Key Vault**: sono necessarie le autorizzazioni *create*, *get*, *unwrapKey*, *wrapKey*, *sign*e *verify* per l'insieme di credenziali contenente la chiave master della colonna.
+- **Provider dell'archivio chiavi (CNG)**: l'autorizzazione e le credenziali obbligatorie potrebbero essere richieste quando si usa un archivio chiavi o una chiave, in base all'archivio e alla configurazione KSP.
+- **Provider del servizio di crittografia (CAPI)**: potrebbero essere richieste l'autorizzazione e le credenziali obbligatorie quando si usa un archivio chiavi o una chiave, in base all'archivio e alla configurazione CSP.
 
 Per altre informazioni, vedere [Creare e archiviare chiavi master della colonna (Always Encrypted)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md).
 
@@ -451,10 +451,10 @@ Nella tabella seguente sono riportati gli scenari di migrazione possibili con le
 Per **crittografare** o **decrittografare** i dati memorizzati nell'origine dati, sono necessarie le autorizzazioni *VIEW ANY COLUMN MASTER KEY DEFINITION* e *VIEW ANY COLUMN ENCRYPTION KEY DEFINITION* nel database di origine.
 
 È anche necessario accedere alle chiavi master della colonna, configurate per le colonne, in cui sono archiviati i dati da crittografare o decrittografare:
-- **Archivio certificati - Computer locale** : è necessario avere accesso in lettura al certificato usato come chiave master della colonna o essere l'amministratore del computer.
-- **Insieme di credenziali delle chiavi di Azure** : sono necessarie le autorizzazioni get, unwrapKey, wrapKey, sign e verify per l'insieme di credenziali contenente la chiave master della colonna.
-- **Provider dell'archivio chiavi (CNG)** : l'autorizzazione e le credenziali richieste quando si usa un archivio chiavi o una chiave, in base all'archivio e alla configurazione KSP.
-- **Provider del servizio di crittografia (CAPI)** : l'autorizzazione e le credenziali richieste quando si usa un archivio chiavi o una chiave, in base all'archivio e alla configurazione CSP.
+- **Archivio certificati - Computer locale**: è necessario avere accesso in lettura al certificato usato come chiave master della colonna o essere l'amministratore del computer.
+- **Azure Key Vault**: sono necessarie le autorizzazioni get, unwrapKey, wrapKey, sign e verify per l'insieme di credenziali contenente la chiave master della colonna.
+- **Provider dell'archivio chiavi (CNG)**: l'autorizzazione e le credenziali necessarie quando si usa un archivio chiavi o una chiave, in base all'archivio e alla configurazione KSP.
+- **Provider del servizio di crittografia (CAPI)**: l'autorizzazione e le credenziali richieste quando si usa un archivio chiavi o una chiave, in base all'archivio e alla configurazione CSP.
 Per altre informazioni, vedere [Creare e archiviare chiavi master della colonna (Always Encrypted)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md).
 
 ## <a name="see-also"></a>Vedere anche

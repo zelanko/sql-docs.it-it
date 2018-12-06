@@ -10,12 +10,12 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 23dee7c1639f030e5dfbb2cb44309a100bf01861
-ms.sourcegitcommit: 448106b618fe243e418bbfc3daae7aee8d8553d2
+ms.openlocfilehash: 25728b2c12d31d53f9638d08c952d75ae929bf9c
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48264901"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52393984"
 ---
 # <a name="mechanics-and-guidelines-of-lease-cluster-and-health-check-timeouts"></a>Funzionamento e linee guida per i timeout lease, cluster e controllo integrità 
 
@@ -39,13 +39,13 @@ Se il rilevamento dell'integrità non segnala un aggiornamento alla DLL della ri
 
 ## <a name="lease-mechanism"></a>Meccanismo lease  
 
-A differenza di quanto accade in altri meccanismi di failover, nel meccanismo lease l'istanza di SQL Server svolge un ruolo attivo. Quando si porta online il gruppo di disponibilità online come replica primaria, l'istanza di SQL Server genera un thread di lavoro lease dedicato per il gruppo di disponibilità. Il ruolo di lavoro lease condivide una piccola area della memoria con l'host di risorse contenente eventi lease di arresto e rinnovo. Il ruolo di lavoro lease e l'host di risorse funzionano in modo circolare, segnalando il rispettivo evento di rinnovo lease e quindi diventando inattivi in attesa che l'altro elemento segnali il proprio evento di rinnovo lease o l'evento di arresto. Sia l'host di risorse che il thread lease di SQL Server gestiscono un valore time-to-live, che viene aggiornato ogni volta che il thread si attiva con la segnalazione dell'altro thread. Se il time-to-live viene raggiunto durante l'attesa del segnale, il lease scade e la replica esegue la transizione allo stato di risoluzione per il gruppo di disponibilità specifico. Se viene segnalato l'evento di arresto lease, la replica esegue la transizione a un ruolo di risoluzione. 
+A differenza di quanto accade in altri meccanismi di failover, nel meccanismo lease l'istanza di SQL Server svolge un ruolo attivo. Il meccanismo lease viene usato come convalida "Looks Alive" tra l'host risorse cluster e il processo di SQL Server. Con il meccanismo ci si assicura che i due lati, cioè il servizio cluster e il servizio SQL Server, abbiano contatti frequenti e che si controllino a vicenda lo stato per impedire, in definitiva, uno scenario split brain.  Quando si porta online il gruppo di disponibilità online come replica primaria, l'istanza di SQL Server genera un thread di lavoro lease dedicato per il gruppo di disponibilità. Il ruolo di lavoro lease condivide una piccola area della memoria con l'host di risorse contenente eventi lease di arresto e rinnovo. Il ruolo di lavoro lease e l'host di risorse funzionano in modo circolare, segnalando il rispettivo evento di rinnovo lease e quindi diventando inattivi in attesa che l'altro elemento segnali il proprio evento di rinnovo lease o di arresto. Sia l'host di risorse che il thread lease di SQL Server gestiscono un valore time-to-live, che viene aggiornato ogni volta che il thread si attiva con la segnalazione dell'altro thread. Se il time-to-live viene raggiunto durante l'attesa del segnale, il lease scade e la replica esegue la transizione allo stato di risoluzione per il gruppo di disponibilità specifico. Se viene segnalato l'evento di arresto lease, la replica esegue la transizione a un ruolo di risoluzione. 
 
 ![image](media/availability-group-lease-healthcheck-timeout/image1.png) 
 
 Il meccanismo lease applica la sincronizzazione tra SQL Server e il cluster di failover di Windows Server. Quando viene eseguito un comando di failover, il servizio cluster esegue una chiamata offline alla DLL della risorsa della replica primaria corrente. Prima la risorsa DLL prova a portare offline il gruppo di disponibilità tramite una stored procedure. Se la stored procedure ha esito negativo o registra un timeout, l'errore viene segnalato al servizio cluster, che esegue un comando di interruzione. Anche tale comando prova a eseguire la stessa stored procedure, ma questa volta il cluster non attende che la DLL della risorsa segnali la riuscita o l'errore prima di portare online il gruppo di disponibilità su una nuova replica. Se questa seconda chiamata di procedura ha esito negativo, l'host di risorse deve fare affidamento sul meccanismo lease per portare offline l'istanza. Quando la DLL della risorsa viene chiamata per portare offline il gruppo di disponibilità la DLL della risorsa segnala l'evento di arresto lease, attivando il thread di lavoro lease di SQL Server per portare offline il gruppo di disponibilità. Anche se questo evento di arresto non viene segnalato, il lease scade e la replica passa allo stato di risoluzione. 
 
-Il lease è principalmente un meccanismo di sincronizzazione tra l'istanza primaria e il cluster, ma può anche creare condizioni di errore in casi per cui non sarebbe stato necessario eseguire il failover. Ad esempio un uso intensivo della CPU o di tempdb può sottrarre risorse al thread di lavoro lease, impedendo il rinnovo del lease dall'istanza SQL e provocando un failover. 
+Il lease è principalmente un meccanismo di sincronizzazione tra l'istanza primaria e il cluster, ma può anche creare condizioni di errore in casi per cui non sarebbe stato necessario eseguire il failover. Ad esempio, condizioni come utilizzo elevato della CPU, memoria insufficiente, mancata risposta da parte del processo SQL durante la generazione di un dump di memoria, blocco a livello di sistema o utilizzo elevato di tempdb possono sottrarre risorse al thread di lavoro lease, impedendo il rinnovo del lease da parte dell'istanza SQL Server e causando un failover. 
 
 ## <a name="guidelines-for-cluster-timeout-values"></a>Linee guida per i valori di timeout cluster 
 

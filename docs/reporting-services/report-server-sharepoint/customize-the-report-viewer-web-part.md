@@ -1,26 +1,26 @@
 ---
 title: Personalizzare la web part Visualizzatore report | Microsoft Docs
-ms.date: 09/25/2017
+ms.date: 11/26/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: bd5749c287f76dd018066ba6e63b3006e6f7d118
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 6676e1ae64161d042fa32976bedc5c32288477ca
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021525"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52411638"
 ---
 # <a name="customize-the-report-viewer-web-part"></a>Personalizzare la web part Visualizzatore report
 
-[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)]
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2016-2019](../../includes/ssrs-appliesto-sharepoint-2016-2019.md)] [!INCLUDE[ssrs-appliesto-not-sharepoint-online](../../includes/ssrs-appliesto-not-sharepoint-online.md)]
 
 [!INCLUDE [ssrs-previous-versions](../../includes/ssrs-previous-versions.md)]
 
-È possibile usare la web part Visualizzatore report per visualizzare report eseguiti in un server di report configurato per l'integrazione con SharePoint. I report che è possibile visualizzare includo file di definizione dei report, con estensione rdl, e report di Generatore report. I report vengono aperti automaticamente nella web part Visualizzatore report in una nuova pagina, ma è anche possibile aggiungere la web part Visualizzatore report a una pagina Web o a un sito esistente se si vuole che il report sia sempre visibile all'interno della pagina.
+È possibile usare la web part Visualizzatore report per visualizzare report eseguiti in un server di report configurato per l'integrazione con SharePoint. I report che è possibile visualizzare includo file di definizione dei report, con estensione rdl, e report di Generatore report. I report verranno aperti automaticamente in una nuova pagina della web part Visualizzatore report. Se si desidera che un determinato report sia sempre visibile nella pagina, aggiungere una web part Visualizzatore report a un sito o a una pagina Web esistente.
 
 > [!NOTE]
 > Anche se hanno lo stesso nome, la web part Visualizzatore report installata tramite il componente aggiuntivo [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] è diversa dalla web part Visualizzatore report inclusa nel file RSWebParts.cab. Le istruzioni contenute in questo argomento sono specifiche per la web part Visualizzatore report installata tramite il componente aggiuntivo [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].
@@ -41,7 +41,7 @@ ms.locfileid: "50021525"
   
 ### <a name="change-default-properties"></a>Modificare le proprietà predefinite
 
- La web part Visualizzatore report include proprietà predefinite ottimali per l'apertura di report su richiesta da una raccolta o una cartella. Per impostazione predefinita tutti i controlli disponibili si trovano sulla barra degli strumenti, mentre l'altezza e la larghezza sono impostate in modo da usare tutto lo spazio disponibile nella pagina Web. Per modificare le proprietà predefinite è possibile personalizzare la web part tramite **Impostazioni sito**.  
+ La web part Visualizzatore report include proprietà predefinite ottimali per l'apertura di report su richiesta da una raccolta o una cartella. Per impostazione predefinita, tutti i controlli disponibili vengono visualizzati nella barra degli strumenti. Altezza e larghezza sono impostate per usare tutto lo spazio disponibile nella pagina Web. Per modificare le proprietà predefinite è possibile personalizzare la web part tramite **Impostazioni sito**.  
   
 1.  Scegliere **Impostazioni sito** dal menu **Azioni sito**.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "50021525"
   
 ### <a name="customize-an-embedded-report-viewer-in-a-web-page"></a>Personalizzare un Visualizzatore report incorporato in una pagina Web
 
- È possibile impostare proprietà per adattare il Visualizzatore report alla pagina Web. Al visualizzatore possono essere applicati lo stesso stile e gli stessi colori della pagina che lo contiene. È possibile nascondere completamente o in parte la barra degli strumenti, la mappa documento e l'area dei parametri per sfruttare al massimo l'area di visualizzazione del report all'interno dello spazio assegnato. Il report utilizza sempre gli stili definiti al momento della sua creazione. Non è possibile personalizzare l'aspetto del report dopo la pubblicazione in una raccolta di SharePoint.  
+ È possibile impostare proprietà per adattare il Visualizzatore report alla pagina Web. Al visualizzatore possono essere applicati lo stesso stile e gli stessi colori della pagina che lo contiene. È possibile nascondere completamente o in parte la barra degli strumenti, la mappa documento e l'area dei parametri per sfruttare al massimo l'area di visualizzazione del report all'interno dello spazio assegnato. Per il report vengono sempre utilizzati gli stili definiti al momento della creazione. Non è concesso personalizzare l'aspetto del report dopo la sua pubblicazione in una raccolta di SharePoint.  
   
  Se si incorpora la web part Visualizzatore report in una pagina Web, è consigliabile impostare la proprietà **URL report** su un report specifico. In caso contrario, nel Visualizzatore report verranno visualizzate le istruzioni per il collegamento di un report. Non è possibile personalizzare o rimuovere le istruzioni.  
   

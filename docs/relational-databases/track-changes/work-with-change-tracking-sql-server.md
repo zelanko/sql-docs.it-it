@@ -22,12 +22,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ad1d14ef3d727aab417a9b755aeff56fb3d2687d
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: e2f41329c10544686194524327ddb7fd560cb57d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51559228"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514150"
 ---
 # <a name="work-with-change-tracking-sql-server"></a>Utilizzare il rilevamento delle modifiche (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "51559228"
   
 -   Il client chiamante ha ottenuto le modifiche e conosce tutte le modifiche fino all'ultima versione sincronizzata compresa.  
   
--   Tutte le modifiche eseguite dopo l'ultima versione sincronizzata verranno pertanto restituite in CHANGETABLE(CHANGES…).  
+-   Tutte le modifiche eseguite dopo l'ultima versione sincronizzata verranno pertanto restituite in CHANGETABLE(CHANGES …).  
   
      Nella figura seguente viene illustrato il modo in cui CHANGETABLE(CHANGES ...) viene utilizzata per ottenere modifiche.  
   
@@ -108,7 +108,7 @@ ON
 SET @synchronization_version = CHANGE_TRACKING_CURRENT_VERSION()  
 ```  
   
- Quando in un'applicazione vengono ottenute modifiche, è necessario utilizzare sia CHANGETABLE(CHANGES…) che CHANGE_TRACKING_CURRENT_VERSION(), come illustrato nell'esempio seguente.  
+ Quando in un'applicazione vengono ottenute modifiche, è necessario utilizzare sia CHANGETABLE(CHANGES …) che CHANGE_TRACKING_CURRENT_VERSION(), come illustrato nell'esempio seguente.  
   
 ```sql  
 -- Obtain the current synchronization version. This will be used the next time CHANGETABLE(CHANGES...) is called.  
@@ -233,9 +233,9 @@ ON
   
 3.  Ottenere la versione da utilizzare successivamente tramite CHANGE_TRACKING_CURRENT_VERSION().  
   
-4.  Ottenere le modifiche per la tabella Sales utilizzando CHANGETABLE(CHANGES …).  
+4.  Ottenere le modifiche per la tabella Sales utilizzando CHANGETABLE(CHANGES …)  
   
-5.  Ottenere le modifiche per la tabella SalesOrders utilizzando CHANGETABLE(CHANGES …).  
+5.  Ottenere le modifiche per la tabella SalesOrders utilizzando CHANGETABLE(CHANGES …)  
   
 6.  Eseguire il commit della transazione.  
   
@@ -303,7 +303,7 @@ COMMIT TRAN
   
  Per eseguire le operazioni precedenti, un'applicazione di sincronizzazione può utilizzare le funzioni seguenti:  
   
--   CHANGETABLE(VERSION…)  
+-   CHANGETABLE(VERSION...)  
   
      Quando un'applicazione apporta modifiche, può utilizzare questa funzione per verificare la presenza di conflitti. La funzione ottiene le informazioni sul rilevamento delle modifiche più recenti per una riga specificata in una tabella con rilevamento. In tali informazioni è inclusa la versione della riga in cui è stata eseguita l'ultima modifica. Questa informazione consente a un'applicazione di determinare se la riga è stata modificata dopo l'ultima sincronizzazione dell'applicazione stessa.  
   
@@ -314,7 +314,7 @@ COMMIT TRAN
 ### <a name="checking-for-conflicts"></a>Verifica della presenza di conflitti  
  In uno scenario di sincronizzazione bidirezionale l'applicazione client deve determinare se una riga non è stata aggiornata dall'ultima volta in cui l'applicazione ha ottenuto le modifiche.  
   
- Nell'esempio seguente viene illustrato come utilizzare la funzione CHANGETABLE(VERSION ...) per verificare la presenza di conflitti nel modo più efficiente, senza eseguire una query separata. Nell'esempio, `CHANGETABLE(VERSION …)` determina `SYS_CHANGE_VERSION` per la riga specificata da `@product id`. `CHANGETABLE(CHANGES …)` può ottenere le stesse informazioni, ma sarebbe meno efficiente. Se il valore di `SYS_CHANGE_VERSION` per la riga è maggiore del valore di `@last_sync_version`, si verifica un conflitto. In questo caso la riga non verrà aggiornata. Il controllo `ISNULL()` è necessario perché per la riga potrebbero non essere disponibili informazioni sulle modifiche. Nel caso in cui la riga non sia stata aggiornata dal momento in cui è stato abilitato il rilevamento delle modifiche o dal momento in cui le informazioni sulle modifiche sono state eliminate, non sarebbe infatti disponibile alcuna informazione sulle modifiche.  
+ Nell'esempio seguente viene illustrato come utilizzare la funzione CHANGETABLE(VERSION ...) per verificare la presenza di conflitti nel modo più efficiente, senza eseguire una query separata. Nell'esempio, `CHANGETABLE(VERSION ...)` determina `SYS_CHANGE_VERSION` per la riga specificata da `@product id`. `CHANGETABLE(CHANGES ...)` può ottenere le stesse informazioni, ma sarebbe meno efficiente. Se il valore di `SYS_CHANGE_VERSION` per la riga è maggiore del valore di `@last_sync_version`, si verifica un conflitto. In questo caso la riga non verrà aggiornata. Il controllo `ISNULL()` è necessario perché per la riga potrebbero non essere disponibili informazioni sulle modifiche. Nel caso in cui la riga non sia stata aggiornata dal momento in cui è stato abilitato il rilevamento delle modifiche o dal momento in cui le informazioni sulle modifiche sono state eliminate, non sarebbe infatti disponibile alcuna informazione sulle modifiche.  
   
 ```sql  
 -- Assumption: @last_sync_version has been validated.  
@@ -392,9 +392,9 @@ SET TRANSACTION ISOLATION LEVEL SNAPSHOT;
 BEGIN TRAN  
     -- Verify that last_sync_version is valid.  
     IF (@last_sync_version <  
-CHANGE_TRACKING_MIN_VALID_VERSION(OBJECT_ID(‘SalesLT.Product’)))  
+CHANGE_TRACKING_MIN_VALID_VERSION(OBJECT_ID('SalesLT.Product')))  
     BEGIN  
-       RAISERROR (N’Last_sync_version too old’, 16, -1);  
+       RAISERROR (N'Last_sync_version too old', 16, -1);  
     END  
     ELSE  
     BEGIN  

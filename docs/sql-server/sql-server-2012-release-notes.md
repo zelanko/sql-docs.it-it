@@ -13,12 +13,12 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
-ms.openlocfilehash: c53f178bb532eb038d4c06ca882d067aa7ae4eb5
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: d1e3b8c76da30f9216b8f5d44df40b92360350dc
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51703939"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52540560"
 ---
 # <a name="sql-server-2012-release-notes"></a>Note sulla versione di SQL Server 2012
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -308,7 +308,7 @@ Si verificano problemi con l'attività Elaborazione Analysis Services quando si 
   
 **Soluzione alternativa**: per evitare questo problema, abilitare IPv4 o usare i passaggi riportati di seguito per aggiungere una voce del Registro di sistema e creare un ACL per abilitare il visualizzatore della Guida per IPv6:  
   
-1.  Creare una voce del Registro di sistema con il nome "IPv6" e un valore pari a "1 (DWORD(32 bit))" in HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Help\v1.0.  
+1.  Creare una chiave del Registro di sistema con il nome "IPv6" e un valore pari a "1 (DWORD(32 bit))" in HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Help\v1.0.  
   
 2.  Impostare gli ACL di sicurezza per la porta per IPv6 eseguendo il comando riportato di seguito da una finestra CMD in modalità amministratore:  
   
@@ -403,7 +403,7 @@ Problema: può essere visualizzato l'errore seguente se si apre una Knowledge Ba
   
 Questo errore è causato dalla differenza della modalità di confronto di stringhe nel database SQL Server e in C# da parte di DQS. Per il confronto di stringhe non viene applicata la distinzione tra maiuscole e minuscole nel database SQL Server, mentre viene applicata in C#.  
   
-Di seguito viene fornito un esempio per illustrare questo comportamento. Si consideri un utente, Domain\user1. L'utente accede al computer client Data Quality usando l'account "user1" e lavora in una Knowledge Base. Tramite DQS la Knowledge Base recente viene archiviata per ogni utente come un record nella tabella A_CONFIGURATION del database DQS_MAIN. In questo caso, il record sarà archiviato con il nome seguente: RecentList:KB:Domain\user1. Successivamente, l'utente accede al computer client Data Quality come "User1" (si noti la U maiuscola) e cerca di aprire la Knowledge Base nell'elenco **Knowledge Base recente** per l'attività di gestione del dominio. Tramite il codice sottostante in DQS vengono confrontate le due stringhe RecentList:KB:DOMAIN\user1 e DOMAIN\User1 e, considerando il confronto di stringhe a cui viene applicata la distinzione tra maiuscole e minuscole in C#, le stringhe non corrisponderanno. Di conseguenza, mediante DQS verrà effettuato il tentativo di inserimento di un nuovo record per l'utente (User1) nella tabella A_CONFIGURATION del database DQS_MAIN. Tuttavia, a causa del confronto di stringhe a cui non viene applicata la distinzione tra maiuscole e minuscole nel database SQL, la stringa è già presente nella tabella A_CONFIGURATION del database DQS_MAIN e l'operazione di inserimento non verrà completata correttamente.  
+Di seguito viene fornito un esempio per illustrare questo comportamento. Si consideri un utente, Domain\user1. L'utente accede al computer Data Quality Client usando l'account "user1" e lavora in una Knowledge Base. Tramite DQS la Knowledge Base recente viene archiviata per ogni utente come un record nella tabella A_CONFIGURATION del database DQS_MAIN. In questo caso, il record sarà archiviato con il nome seguente: RecentList:KB:Domain\user1. Successivamente, l'utente accede al computer Data Quality Client come "User1" (si noti la U maiuscola) e cerca di aprire la Knowledge Base nell'elenco **Knowledge Base recente** per l'attività di gestione del dominio. Tramite il codice sottostante in DQS vengono confrontate le due stringhe RecentList:KB:DOMAIN\user1 e DOMAIN\User1 e, considerando il confronto di stringhe a cui viene applicata la distinzione tra maiuscole e minuscole in C#, le stringhe non corrisponderanno. Di conseguenza, mediante DQS verrà effettuato il tentativo di inserimento di un nuovo record per l'utente (User1) nella tabella A_CONFIGURATION del database DQS_MAIN. Tuttavia, a causa del confronto di stringhe a cui non viene applicata la distinzione tra maiuscole e minuscole nel database SQL, la stringa è già presente nella tabella A_CONFIGURATION del database DQS_MAIN e l'operazione di inserimento non verrà completata correttamente.  
   
 **Soluzione alternativa:** per risolvere il problema, è possibile effettuare una delle operazioni seguenti:  
   

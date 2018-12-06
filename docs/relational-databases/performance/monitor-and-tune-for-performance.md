@@ -30,12 +30,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bbfac38c561a8943a6e15753f3ba20f9ca534311
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fbfda8b5768242980d61cce90f1ca16f5de6aa9f
+ms.sourcegitcommit: f1cf91e679d1121d7f1ef66717b173c22430cb42
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47667769"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52586264"
 ---
 # <a name="monitor-and-tune-for-performance"></a>Monitoraggio e ottimizzazione delle prestazioni
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "47667769"
 -   Risolvere problemi o eseguire il debug dei componenti di applicazione, ad esempio di stored procedure.  
   
 ## <a name="monitoring-in-a-dynamic-environment"></a>Monitoraggio in un ambiente dinamico  
-I cambiamenti delle condizioni comportano variazioni nelle prestazioni. Nel corso delle valutazioni, è possibile analizzare le variazioni delle prestazioni in relazione ad aumento del numero di utenti, modifica dei metodi di connessione e accesso degli utenti, aumento dei contenuti del database, cambiamento nelle applicazioni client, variazione dei dati nelle applicazioni, aumento della complessità delle query e incremento del traffico di rete. L'uso di strumenti per il monitoraggio delle prestazioni consente di associare alcune variazioni nelle prestazioni con cambiamenti nelle condizioni e complessità delle query. **Esempi:**:  
+I cambiamenti delle condizioni comportano variazioni nelle prestazioni. Nel corso delle valutazioni, è possibile analizzare le variazioni delle prestazioni in relazione ad aumento del numero di utenti, modifica dei metodi di connessione e accesso degli utenti, aumento dei contenuti del database, cambiamento nelle applicazioni client, variazione dei dati nelle applicazioni, aumento della complessità delle query e incremento del traffico di rete. L'uso di strumenti per il monitoraggio delle prestazioni consente di associare alcune variazioni nelle prestazioni con cambiamenti nelle condizioni e complessità delle query. **Esempi:**  
   
 -   Il monitoraggio dei tempi di risposta delle query più frequenti consente di determinare se sono necessarie modifiche alle query o agli indici nelle tabelle in cui le query vengono eseguite.  
   
@@ -61,30 +61,29 @@ I cambiamenti delle condizioni comportano variazioni nelle prestazioni. Nel cors
   
 -   Il monitoraggio dei tentativi di connessione a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]consente di determinare se il sistema di sicurezza è adeguato e di verificare il funzionamento di applicazioni o sistemi di sviluppo.  
   
- I tempi di risposta corrispondono al tempo necessario per la restituzione all'utente della prima riga del set di risultati come conferma visiva dell'elaborazione di una query. La velocità effettiva corrisponde al numero totale di query gestite dal server in un determinato periodo di tempo.  
+I tempi di risposta corrispondono al tempo necessario per la restituzione all'utente della prima riga del set di risultati come conferma visiva dell'elaborazione di una query. La velocità effettiva corrisponde al numero totale di query gestite dal server in un determinato periodo di tempo.  
   
- Con l'aumentare del numero di utenti, aumenta la concorrenza per le risorse del server, che a sua volta comporta un incremento dei tempi di risposta e una diminuzione generale della velocità effettiva.  
+Con l'aumentare del numero di utenti, aumenta la concorrenza per le risorse del server, che a sua volta comporta un incremento dei tempi di risposta e una diminuzione generale della velocità effettiva.  
   
 ## <a name="monitoring-and-performance-tuning-tasks"></a>Attività di monitoraggio e ottimizzazione delle prestazioni  
   
 |Argomento| Attività|  
 |-----------|----------------------|  
-|[Monitorare i componenti di SQL Server](../../relational-databases/performance/monitor-sql-server-components.md)|Passaggi necessari per monitorare qualsiasi componente di SQL Server.|  
-|[Strumenti per il monitoraggio e l'ottimizzazione delle prestazioni](../../relational-databases/performance/performance-monitoring-and-tuning-tools.md)|Elenca gli strumenti di monitoraggio e ottimizzazione disponibili con SQL Server.|  
+|[Monitorare i componenti di SQL Server](../../relational-databases/performance/monitor-sql-server-components.md)|Procedure necessarie per monitorare qualsiasi componente di SQL Server, ad esempio Monitoraggio attività, eventi estesi, viste e funzioni a gestione dinamica e così via.|  
+|[Strumenti per il monitoraggio e l'ottimizzazione delle prestazioni](../../relational-databases/performance/performance-monitoring-and-tuning-tools.md)|Elenca gli strumenti di monitoraggio e ottimizzazione disponibili con SQL Server, ad esempio Statistiche query dinamiche e Ottimizzazione guidata motore di database.|  
+|[Aggiornamento di database mediante l'Assistente ottimizzazione query](../../relational-databases/performance/upgrade-dbcompat-using-qta.md)|Mantenere stabili le prestazioni del carico di lavoro durante l'aggiornamento a un livello di compatibilità più recente del database.|  
+|[Monitoraggio delle prestazioni tramite Archivio query](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)|Usare l'archivio query per acquisire automaticamente una cronologia di query, piani e statistiche di runtime e conservarle per la consultazione.|  
 |[Definire una base di riferimento delle prestazioni](../../relational-databases/performance/establish-a-performance-baseline.md)|Come definire una baseline delle prestazioni.|  
 |[Isolare i problemi relativi alle prestazioni](../../relational-databases/performance/isolate-performance-problems.md)|Isolare problemi di prestazioni del database.|  
 |[Individuare i colli di bottiglia](../../relational-databases/performance/identify-bottlenecks.md)|Monitorare e tenere traccia delle prestazioni del server per identificare colli di bottiglia.|  
+|[Usare DMV per determinare le statistiche di utilizzo e le prestazioni delle viste](../../relational-databases/performance/use-dmvs-determine-usage-performance-views.md)|Illustra la metodologia e gli script usati per ottenere informazioni sulle prestazioni delle query.|  
 |[Monitoraggio delle prestazioni e dell'attività del server](../../relational-databases/performance/server-performance-and-activity-monitoring.md)|Usare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e gli strumenti di monitoraggio delle prestazioni e delle attività di Windows.|  
-|[Visualizzare e salvare piani di esecuzione](../../relational-databases/performance/display-and-save-execution-plans.md)|Visualizzare e salvare piani di esecuzione in un file in formato XML.|  
-|[Statistiche sulle query dinamiche](../../relational-databases/performance/live-query-statistics.md)|Visualizzare statistiche in tempo reale relative ai passaggi per l'esecuzione di query.|  
-|[Monitoraggio delle prestazioni con Archivio query](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)|Usare l'archivio query per acquisire automaticamente una cronologia di query, piani e statistiche di runtime e conservarle per la consultazione.|  
-|[Uso di Archivio query con OLTP in-memoria](../../relational-databases/performance/using-the-query-store-with-in-memory-oltp.md)|Considerazioni sulle tabelle con ottimizzazione per la memoria.|  
-|[Procedure consigliate per l'archivio query](../../relational-databases/performance/best-practice-with-the-query-store.md)|Consigli sull'uso dell'archivio query.|  
+|[Monitoraggio dell'utilizzo delle risorse](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)|Utilizzo di Monitoraggio di sistema, noto anche come perfmon, per misurare le prestazioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando i contatori delle prestazioni.|  
+
   
 ## <a name="see-also"></a>Vedere anche  
- [Amministrazione automatizzata in un'organizzazione](../../ssms/agent/automated-administration-across-an-enterprise.md)   
- [Ottimizzazione guidata motore di database](../../relational-databases/performance/database-engine-tuning-advisor.md)   
- [Monitoraggio dell'utilizzo delle risorse &#40;Monitor di sistema&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)   
- [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)  
+ [Amministrazione automatizzata in un'organizzazione](../../ssms/agent/automated-administration-across-an-enterprise.md)    
+ [Confrontare e analizzare i piani di esecuzione](../../relational-databases/performance/compare-and-analyze-execution-plans.md)    
+ [Visualizzare e salvare piani di esecuzione](../../relational-databases/performance/display-and-save-execution-plans.md)    
   
   

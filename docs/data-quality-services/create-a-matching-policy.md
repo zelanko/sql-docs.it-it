@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 f1_keywords:
 - sql13.dqs.kb.kbmatchingmap.f1
@@ -16,12 +15,12 @@ ms.assetid: cce77a06-ca31-47b6-8146-22edf001d605
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2a8c91398f1543e2ebc23030ab56c6eea42027e0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 73ef1d5301310656cfcb02aef7d488541968d8a9
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47672399"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617691"
 ---
 # <a name="create-a-matching-policy"></a>Creazione di criteri di corrispondenza
 
@@ -133,7 +132,7 @@ ms.locfileid: "47672399"
   
     -   In **Filtro**selezionare **Con corrispondenza** per visualizzare tutte le righe con corrispondenza e il relativo punteggio. Le righe che non vengono considerate corrispondenze (cioè che presentano un punteggio di corrispondenza inferiore a quello minimo) non vengono visualizzate nella tabella dei risultati di corrispondenza. Selezionare **Senza corrispondenza** per visualizzare tutte le righe non corrispondenti e non quelle corrispondenti.  
   
-    -   Nella casella di riepilogo a discesa **Percentuale**selezionare una percentuale dall'elenco in incrementi di 5. Tutte le righe con un punteggio di corrispondenza maggiore o uguale a tale percentuale verranno visualizzate nella tabella dei risultati di corrispondenza.  
+    -   Nella casella di riepilogo a discesa **Percentuale** selezionare una percentuale dall'elenco in incrementi di 5. Tutte le righe con un punteggio di corrispondenza maggiore o uguale a tale percentuale verranno visualizzate nella tabella dei risultati di corrispondenza.  
   
     -   Se si fa doppio clic su un record nella tabella dei risultati di corrispondenza, in DQS viene visualizzata la schermata popup **Dettagli punteggio corrispondente** in cui sono visibili il record pivot e il record di origine (nonché i valori in tutti i relativi campi), il punteggio tra tali record e un drill-down della loro corrispondenza. Nel drill-down vengono visualizzati i valori in ogni campo del record pivot e del record di origine, in modo da poterli confrontare, e il punteggio di corrispondenza tramite cui ogni campo contribuisce al punteggio di corrispondenza complessivo per i due record.  
   
@@ -165,7 +164,7 @@ ms.locfileid: "47672399"
   
     -   In **Filtro**selezionare **Con corrispondenza** per visualizzare tutte le righe con corrispondenza e il relativo punteggio. Le righe che non vengono considerate corrispondenze (cioè che presentano un punteggio di corrispondenza inferiore a quello minimo) non vengono visualizzate nella tabella dei risultati di corrispondenza. Selezionare **Senza corrispondenza** per visualizzare tutte le righe non corrispondenti e non quelle corrispondenti.  
   
-    -   Nella casella di riepilogo a discesa **Percentuale**selezionare una percentuale dall'elenco in incrementi di 5. Tutte le righe con un punteggio di corrispondenza maggiore o uguale a tale percentuale verranno visualizzate nella tabella dei risultati di corrispondenza.  
+    -   Nella casella di riepilogo a discesa **Percentuale** selezionare una percentuale dall'elenco in incrementi di 5. Tutte le righe con un punteggio di corrispondenza maggiore o uguale a tale percentuale verranno visualizzate nella tabella dei risultati di corrispondenza.  
   
     -   Se si fa doppio clic su un record nella tabella dei risultati di corrispondenza, in DQS viene visualizzata la schermata popup **Dettagli punteggio corrispondente** in cui sono visibili il record pivot e il record di origine (nonché i valori in tutti i relativi campi), il punteggio tra tali record e un drill-down della loro corrispondenza. Nel drill-down vengono visualizzati i valori in ogni campo del record pivot e del record di origine, in modo da poterli confrontare, e il punteggio di corrispondenza tramite cui ogni campo contribuisce al punteggio di corrispondenza complessivo per i due record.  
   
@@ -184,7 +183,7 @@ ms.locfileid: "47672399"
   
     -   **Annulla - Rimani nella schermata corrente**: la finestra popup verrà chiusa e verrà di nuovo visualizzata la schermata Gestione dominio.  
   
-8.  Fare clic su **Chiudi** per salvare il lavoro e tornare alla home page di DQS. Nello stato della Knowledge Base verrà visualizzata la stringa "Criteri di corrispondenza -" e lo stato corrente. Se si è fatto clic su **Chiudi** dalla schermata **Risultati corrispondenza** , nello stato verrà visualizzata la stringa seguente: "Criteri di corrispondenza - Risultati". Se si è fatto clic su Chiudi dalla schermata **Criteri di corrispondenza** , nello stato verrà visualizzata la stringa seguente: "Criteri di corrispondenza - Criteri di corrispondenza". Dopo avere fatto clic su **Chiudi**per eseguire l'attività **Individuazione informazioni** è necessario tornare all'attività **Criteri di corrispondenza** ; fare clic su **Fine**, quindi su **Sì** per pubblicare la Knowledge Base o su **No** per salvare il lavoro nella Knowledge Base e uscire.  
+8.  Fare clic su **Chiudi** per salvare il lavoro e tornare alla home page di DQS. Nello stato della Knowledge Base verrà visualizzata la stringa "Criteri di corrispondenza -" e lo stato corrente. Se si è fatto clic su **Chiudi** dalla schermata **Risultati corrispondenza** , nello stato verrà visualizzata la stringa seguente: "Criteri di corrispondenza - Risultati". Se si è fatto clic su Chiudi dalla schermata **Criteri di corrispondenza**, nello stato verrà visualizzata la stringa seguente: "Criteri di corrispondenza - Criteri di corrispondenza". Dopo avere fatto clic su **Chiudi**per eseguire l'attività **Individuazione informazioni** è necessario tornare all'attività **Criteri di corrispondenza** ; fare clic su **Fine**, quindi su **Sì** per pubblicare la Knowledge Base o su **No** per salvare il lavoro nella Knowledge Base e uscire.  
   
     > [!NOTE]  
     >  Clic su **Chiudi** mentre un processo di corrispondenza è in esecuzione, tale processo non verrà interrotto quando si fa clic su **Chiudi**. È possibile riaprire la Knowledge Base e verificare che il processo sia ancora in esecuzione oppure, se completato, che ne vengano visualizzati i risultati. Se il processo non è stato completato, lo stato di avanzamento verrà visualizzato sullo schermo.  

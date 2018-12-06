@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b8d18d3d-9db0-43e7-8286-7b46cc3a37ed
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8fe389985659013e88009822eb20cf21302423e6
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 2d69df56647cb378bee2627344a8db09df2bfa57
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50029430"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52712552"
 ---
 # <a name="what-is-sql-server-reporting-services-ssrs"></a>Che cos'è SQL Server Reporting Services (SSRS)?
 
@@ -36,7 +36,7 @@ Creare, distribuire e gestire report impaginati e per dispositivi mobili di Repo
 
 SQL Server Reporting Services è una soluzione che i clienti distribuiscono nella propria sede per la creazione, la pubblicazione e la gestione di report, in modo da inviarli agli utenti giusti in diversi modi, tramite visualizzazione su Web browser, su un dispositivo mobile o come messaggio di posta elettronica nella casella di posta in arrivo.
 
-Per SQL Server 2016, Reporting Services offre una famiglia di prodotti aggiornata:
+SQL Server Reporting Services offre una famiglia di prodotti aggiornata:
 
 * **Report impaginati "tradizionali"** aggiornati, in modo da poter creare report dall'aspetto moderno, con strumenti aggiornati e nuove funzionalità per crearli.
 * **Nuovi report per dispositivi mobili** con un layout reattivo, in grado di adattarsi a diversi dispositivi e a diverse modalità di orientamento.
@@ -46,7 +46,7 @@ Nelle sezioni che seguono sono disponibili informazioni più dettagliate.
 
 ### <a name="whats-new-in-reporting-services"></a>Novità di Reporting Services
 
-Queste fonti consentono di rimanere aggiornati sulle nuove funzionalità di SQL Server 2016 Reporting Services.
+Queste fonti consentono di rimanere aggiornati sulle nuove funzionalità di SQL Server Reporting Services.
 
 * [Novità di Reporting Services](../reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)
 * [Blog del team di SQL Server Reporting Services](https://blogs.msdn.microsoft.com/sqlrsteamblog/)
@@ -69,11 +69,11 @@ Questo carico di lavoro BI di base esiste tuttora e pertanto è stato modernizza
 
 ![ssrs-mobile-reports](../reporting-services/media/ssrs-mobile-reports.png)
 
-Con il mobile computing, i dispositivi necessari per lavorare sono cambiati e pertanto le persone hanno esigenze diverse per quanto riguarda la generazione di report. I report con layout fisso non sono adatti all'uso di tablet e smartphone. Un elemento progettato per uno schermo ampio di PC non viene visualizzato in modo ottimale sul display di uno smartphone che, oltre ad avere dimensioni più piccole, consente l'orientamento orizzontale o verticale.
+Con il mobile computing, i dispositivi necessari per lavorare sono cambiati e pertanto le persone hanno esigenze diverse per quanto riguarda la generazione di report. I report con layout fisso non sono adatti per tablet e smartphone. Un elemento progettato per uno schermo ampio di PC non viene visualizzato in modo ottimale sul display di uno smartphone che, oltre ad avere dimensioni più piccole, consente l'orientamento orizzontale o verticale.
 
 Con questi formati di schermo notevolmente diversi, non è necessario un layout fisso, ma un layout reattivo, in grado di adattarsi a diversi dispositivi e a diverse modalità di orientamento. È stato quindi aggiunto un nuovo tipo di report, per dispositivi mobili, che è basato sulla tecnologia Datazen, acquisita da Microsoft circa un anno fa e integrata nel prodotto. È possibile eseguire la migrazione dei report Datazen esistenti in Reporting Services con [SQL Server Migration Assistant for Datazen](https://www.microsoft.com/download/details.aspx?id=53128). 
 
-I report per dispositivi mobili vengono creati con la nuova app [Mobile Report Publisher](../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md) . Di conseguenza, usando le [app Power BI per dispositivi mobili](https://powerbi.microsoft.com/documentation/powerbi-power-bi-apps-for-mobile-devices/) native per Windows 10, iOS, Android e HTML5, è possibile accedere ai dati presenti nel cloud di Power BI e ai dati locali di SQL Server 2016 Reporting Services. Mentre si creano le visualizzazioni, Mobile Report Publisher genera automaticamente dati di esempio per ciascuna, permettendo così di visualizzare in anteprima l'aspetto dei dati e di scegliere il tipo di dati adatto a ogni visualizzazione.
+I report per dispositivi mobili vengono creati con la nuova app [Mobile Report Publisher](../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md) . Di conseguenza, usando le [app Power BI per dispositivi mobili](https://powerbi.microsoft.com/documentation/powerbi-power-bi-apps-for-mobile-devices/) native per Windows 10, iOS, Android e HTML5, è possibile accedere ai dati presenti nel cloud di Power BI e ai dati locali di SQL Server Reporting Services. Mentre si creano le visualizzazioni, Mobile Report Publisher genera automaticamente dati di esempio per ciascuna, permettendo così di visualizzare in anteprima l'aspetto dei dati e di scegliere il tipo di dati adatto a ogni visualizzazione.
 
 ## <a name="web-portal"></a>Portale Web
 
