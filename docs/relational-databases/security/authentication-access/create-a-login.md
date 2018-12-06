@@ -24,12 +24,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bc1eb47e6cde8ff1fb34bde4bf82f4d79013d90e
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 3702cdd2e09b101b3a779926fa170a976b39c958
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51675419"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52516636"
 ---
 # <a name="create-a-login"></a>Creazione di un account di accesso
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -56,19 +56,19 @@ ms.locfileid: "51675419"
   
 1.  In Esplora oggetti espandere la cartella dell'istanza del server in cui si desidera creare il nuovo account di accesso.  
   
-2.  Fare clic con il pulsante destro del mouse sulla cartella **Sicurezza** , scegliere **Nuovo**, quindi selezionare **Account di accesso**.  
+2.  Fare clic con il pulsante destro del mouse sulla cartella **Sicurezza**, scegliere **Nuovo** e selezionare **Account di accesso...**.  
   
-3.  Nella pagina **Generale** della finestra di dialogo **Nuovo account di accesso** immettere il nome di un utente nella casella **Nome account di accesso** . In alternativa, fare clic su **Cerca…** per aprire la finestra di dialogo **Seleziona utente o gruppo** .  
+3.  Nella pagina **Generale** della finestra di dialogo **Account di accesso - Nuovo** immettere il nome di un utente nella casella **Nome account di accesso**. In alternativa, fare clic su **Cerca...** per aprire la finestra di dialogo **Seleziona un utente o un gruppo**.  
   
      Se si fa clic su **Cerca...**:  
   
-    1.  In **Selezionare questo tipo di oggetto**fare clic su **Tipi di oggetti...** per aprire la finestra di dialogo **Tipi di oggetti** e selezionare tutte le seguenti opzioni o solo alcune di esse: **Entità di sicurezza predefinite**, **Gruppi**e **Utenti**. Le opzioni**Entità di sicurezza predefinite** e **Utenti** sono selezionate per impostazione predefinita. Al termine, fare clic su **OK**.  
+    1.  In **Selezionare questo tipo di oggetto** fare clic su **Tipi di oggetti...** per aprire la finestra di dialogo **Tipi di oggetto** e selezionare alcune o tutte le opzioni seguenti: **Entità di sicurezza predefinite**, **Gruppi** e **Utenti**. Le opzioni**Entità di sicurezza predefinite** e **Utenti** sono selezionate per impostazione predefinita. Al termine, fare clic su **OK**.  
   
-    2.  In **Da questo percorso**fare clic su **Percorsi...** per aprire la finestra di dialogo **Percorsi** e selezionare uno dei percorsi del server disponibili. Al termine, fare clic su **OK**.  
+    2.  In **Da questo percorso** fare clic su **Percorsi...** per aprire la finestra di dialogo **Percorsi** e selezionare uno dei percorsi server disponibili. Al termine, fare clic su **OK**.  
   
     3.  In **Immettere il nome dell'oggetto da selezionare (esempi)**, immettere il nome dell'utente o del gruppo che si desidera trovare. Per ulteriori informazioni, vedere [Finestra di dialogo Seleziona utenti, computer o gruppi](https://technet.microsoft.com/library/cc771712.aspx).  
   
-    4.  Fare clic su **Avanzate...** per le opzioni di ricerca più avanzate. Per altre informazioni, vedere [Finestra di dialogo Seleziona utenti, computer o gruppi - Pagina Avanzate](https://technet.microsoft.com/library/cc733110.aspx).  
+    4.  Fare clic su **Avanzate...** per opzioni di ricerca più avanzate. Per altre informazioni, vedere [Finestra di dialogo Seleziona utenti, computer o gruppi - Pagina Avanzate](https://technet.microsoft.com/library/cc733110.aspx).  
   
     5.  Fare clic su **OK**.  
   
@@ -99,7 +99,7 @@ ms.locfileid: "51675419"
 11. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ### <a name="additional-options"></a>Opzioni aggiuntive  
- La finestra di dialogo **Nuovo account di accesso** offre inoltre opzioni in altre quattro pagine: **Ruoli del server**, **Mapping utenti**, **Entità a protezione diretta**e **Stato**.  
+ La finestra di dialogo **Account di accesso - Nuovo** offre opzioni anche in altre quattro pagine: **Ruoli del server**, **Mapping utenti**, **Entità a protezione diretta** e **Stato**.  
   
 ### <a name="server-roles"></a>Ruoli del server  
  Nella pagina **Ruoli del server** sono elencati tutti i possibili ruoli che possono essere assegnati al nuovo account accesso. Sono disponibili le opzioni seguenti:  
@@ -165,23 +165,23 @@ ms.locfileid: "51675419"
   
 1.  Fare clic su **Cerca**.  
   
-2.  Nella finestra di dialogo **Aggiungi oggetti** selezionare una delle opzioni seguenti: **Oggetti specifici**, **Tutti gli oggetti di tipo** o **Il server** _nome\_server_. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+2.  Nella finestra di dialogo **Aggiungi oggetti** selezionare una delle opzioni seguenti: **Oggetti specifici...**, **Tutti gli oggetti di tipo...** o **Il server**_nome\_server_. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
     > **NOTA:** quando si seleziona **Il server** _nome\_server_, la griglia superiore viene automaticamente compilata con tutti gli oggetti a protezione diretta di tale server.  
   
-3.  Se si seleziona **Oggetti specifici…**:  
+3.  Se si seleziona **Oggetti specifici...**:  
   
-    1.  Nella finestra di dialogo **Seleziona oggetti** , fare clic su **Tipi di oggetti...** sotto **Selezionare i tipi di oggetti seguenti**.  
+    1.  Nella finestra di dialogo **Seleziona oggetti** in **Selezionare i tipi di oggetti seguenti** fare clic su **Tipi di oggetti...**.  
   
     2.  Nella casella del finestra di dialogo **Seleziona tipi di oggetti** e selezionare tutte le seguenti opzioni o solo alcune di esse: **Endpoint**, **Account di accesso**, **Server**, **Gruppi di disponibilità**e **Ruoli del server**. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-    3.  In **Immettere i nomi degli oggetti da selezionare (esempi)**, fare clic su **Sfoglia…**.  
+    3.  In **Immettere i nomi degli oggetti da selezionare (esempi)** fare clic su **Sfoglia...**.  
   
     4.  Nella finestra di dialogo **Cerca oggetti** , selezionare gli oggetti disponibili del tipo selezionato nella finestra di dialogo **Seleziona tipi di oggetti** , quindi fare clic su **OK**.  
   
     5.  Nella finestra di dialogo **Seleziona oggetti** fare clic su **OK**.  
   
-4.  Se nella casella del finestra di dialogo **Seleziona tipi di oggetti**è stata selezionata l'opzione **Tutti gli oggetti di tipo...** e selezionare tutte le seguenti opzioni o solo alcune di esse: **Endpoint**, **Account di accesso**, **Server**, **Gruppi di disponibilità**e **Ruoli del server**. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+4.  Se nella finestra di dialogo **Seleziona tipi di oggetti** è stata selezionata l'opzione **Tutti gli oggetti di tipo...**, selezionare alcuni o tutti i tipi di oggetto seguenti: **Endpoint**, **Accessi**, **Server**, **Gruppi di disponibilità** e **Ruoli del server**. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
  **Nome**  
  Nome di ogni entità o entità a sicurezza diretta aggiunto alla griglia.  

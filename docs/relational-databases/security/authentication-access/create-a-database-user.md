@@ -25,12 +25,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f3b2ec3e4a055d331799efab64223012b162a1fc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 11e155be4678c2cb57b9b551b412570e4578eb46
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47648109"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52516663"
 ---
 # <a name="create-a-database-user"></a>Creazione di un utente di database
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -74,9 +74,9 @@ ms.locfileid: "47648109"
   
 2.  Espandere il database in cui si desidera creare il nuovo utente del database.  
   
-3.  Fare clic con il pulsante destro del mouse sulla cartella **Sicurezza** e scegliere **Nuovo**e quindi **Utente**.  
+3.  Fare clic con il pulsante destro del mouse sulla cartella **Sicurezza**, scegliere **Nuovo** e quindi **Utente...**.  
   
-4.  Nella finestra di dialogo **Utente di database - Nuovo** nella pagina **Generale** selezionare uno dei seguenti tipi di utente nell'elenco **Tipo utente** :  
+4.  Nella finestra di dialogo **Utente database - Nuovo** nella pagina **Generale** selezionare uno dei tipi di utente seguenti nell'elenco **Tipo utente**:  
   
     -   **utente SQL con account di accesso**  
   
@@ -93,10 +93,10 @@ ms.locfileid: "47648109"
 5.  Quando si seleziona un'opzione, le restanti opzioni nella finestra di dialogo potrebbero cambiare. Alcune opzioni si applicano solo a tipi specifici di utenti di database. Alcune opzioni possono essere lasciate vuote e in questo caso verrà usato il valore predefinito.  
   
      **Nome utente**  
-     Immettere un nome per il nuovo utente. Se si è scelto **Utente di Windows** nell'elenco **Tipo utente** , è possibile fare clic sui puntini di sospensione **(...)** per aprire la finestra di dialogo **Select User or Group** (Seleziona utente o gruppo).  
+     Immettere un nome per il nuovo utente. Se si è scelto **Utente di Windows** nell'elenco **Tipo utente**, è anche possibile fare clic sui puntini di sospensione **(...)** per aprire la finestra di dialogo **Seleziona utente o gruppo**.  
   
      **Nome account di accesso**  
-     Immettere l'account di accesso per l'utente. In alternativa, fare clic sui puntini di sospensione **(...)** per aprire la finestra di dialogo **Seleziona account di accesso** . È disponibile**Nome account di accesso** se si seleziona **Utente SQL con account di accesso** o **Utente di Windows** dall'elenco **Tipo di utente** .  
+     Immettere l'account di accesso per l'utente. In alternativa, fare clic sui puntini di sospensione **(...)** per aprire la finestra di dialogo **Seleziona account di accesso**. È disponibile**Nome account di accesso** se si seleziona **Utente SQL con account di accesso** o **Utente di Windows** dall'elenco **Tipo di utente** .  
   
      **Password** e **Conferma password**  
      Immettere una password per gli utenti che eseguono l'autenticazione nel database.  
@@ -105,7 +105,7 @@ ms.locfileid: "47648109"
      Immettere la lingua predefinita dell'utente.  
   
      **Schema predefinito**  
-     Immettere lo schema che diventerà proprietario degli oggetti creati da questo utente. In alternativa, fare clic sui puntini di sospensione **(...)** per aprire la finestra di dialogo **Seleziona schema** . È disponibile**Schema predefinito** se si seleziona **Utente SQL con account di accesso**, **Utente SQL senza account di accesso**o **Utente di Windows** nell'elenco **Tipo di utente** .  
+     Immettere lo schema che diventerà proprietario degli oggetti creati da questo utente. In alternativa, fare clic sui puntini di sospensione **(...)** per aprire la finestra di dialogo **Seleziona schema**. È disponibile**Schema predefinito** se si seleziona **Utente SQL con account di accesso**, **Utente SQL senza account di accesso**o **Utente di Windows** nell'elenco **Tipo di utente** .  
   
      **Nome certificato**  
      Immettere il certificato da usare per l'utente del database. In alternativa, fare clic sui puntini di sospensione **(...)** per aprire la finestra di dialogo **Seleziona certificato**. È disponibile**Nome certificato** se si seleziona **Utente con mapping eseguito a un certificato** dall'elenco **Tipo di utente** .  
@@ -116,7 +116,7 @@ ms.locfileid: "47648109"
 6.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ### <a name="additional-options"></a>Opzioni aggiuntive  
- La finestra di dialogo **Utente di Database - Nuovo** offre inoltre opzioni in altre quattro pagine: **Schemi di proprietà**, **Appartenenza**, **Entità a protezione diretta**e **Proprietà estese**.  
+ La finestra di dialogo **Utente database - Nuovo** presenta diverse opzioni anche in altre quattro pagine: **Schemi di proprietà**, **Appartenenza**, **Entità a protezione diretta** e **Proprietà estese**.  
   
 -   Nella pagina **Schemi di proprietà** sono elencati tutti i possibili schemi che possono essere di proprietà del nuovo utente del database. Per aggiungere schemi o rimuoverli da un utente del database, in **Schemi di proprietà di questo utente**selezionare o deselezionare le caselle di controllo accanto agli schemi.  
   
@@ -136,7 +136,7 @@ ms.locfileid: "47648109"
      Consente di visualizzare o specificare le proprietà estese relative all'oggetto. Ogni proprietà estesa è composta da una coppia nome/valore di metadati associati all'oggetto.  
   
      **Puntini di sospensione (...)**  
-     Fare clic sui puntini di sospensione **(…)** dopo **Valore** per visualizzare la finestra di dialogo **Valore per proprietà estesa** . Digitare o visualizzare il valore della proprietà estesa in questa finestra di dimensioni maggiori. Per ulteriori informazioni, vedere [Finestra di dialogo Valore per proprietà estesa](../../databases/value-for-extended-property-dialog-box.md).  
+     Fare clic sui puntini di sospensione **(…)** dopo **Valore** per visualizzare la finestra di dialogo **Valore per Proprietà estesa**. Digitare o visualizzare il valore della proprietà estesa in questa finestra di dimensioni maggiori. Per ulteriori informazioni, vedere [Finestra di dialogo Valore per proprietà estesa](../../databases/value-for-extended-property-dialog-box.md).  
   
      **Elimina**  
      Consente di eliminare la proprietà estesa selezionata.  

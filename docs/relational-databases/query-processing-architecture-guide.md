@@ -1,7 +1,7 @@
 ---
 title: Guida sull'architettura di elaborazione delle query | Microsoft Docs
 ms.custom: ''
-ms.date: 06/06/2018
+ms.date: 11/15/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -16,12 +16,12 @@ ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: d85ac4addb2b1ec0e709a4e0fd72f0ca0be46f86
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 89a7be267cfe6f4e60961e6d9a6610897cb5718d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701479"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542517"
 ---
 # <a name="query-processing-architecture-guide"></a>Guida sull'architettura di elaborazione delle query
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -350,16 +350,19 @@ I piani di esecuzione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 
 
 ![execution_context](../relational-databases/media/execution-context.gif)
 
-Quando in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] viene eseguita un'istruzione SQL, il motore relazionale esegue prima di tutto una ricerca nella cache dei piani per verificare se è presente un piano di esecuzione esistente per la stessa istruzione SQL. L'eventuale piano esistente trovato viene riutilizzato in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], evitando così l'overhead associato alla ricompilazione dell'istruzione SQL. Se non esiste già un piano di esecuzione, in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] viene generato un nuovo piano per la query.
+Quando in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] viene eseguita un'istruzione SQL, il motore relazionale esegue prima di tutto una ricerca nella cache dei piani per verificare se è presente un piano di esecuzione esistente per la stessa istruzione SQL. L'istruzione SQL si qualifica come esistente se corrisponde letteralmente a un'istruzione SQL eseguita in precedenza con un piano memorizzato nella cache, carattere per carattere. L'eventuale piano esistente trovato viene riutilizzato in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], evitando così l'overhead associato alla ricompilazione dell'istruzione SQL. Se non esiste già un piano di esecuzione, in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] viene generato un nuovo piano per la query.
 
 In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] è disponibile un algoritmo efficiente per l'individuazione di piani di esecuzione esistenti per una specifica istruzione SQL. Nella maggior parte dei sistemi, le risorse minime utilizzate da questa analisi sono inferiori a quelle risparmiate riutilizzando i piani esistenti anziché compilando ogni istruzione SQL.
 
-Per gli algoritmi che consentono di trovare la corrispondenza tra le nuove istruzioni SQL e i piani di esecuzione esistenti inutilizzati nella cache è necessario che i riferimenti agli oggetti siano completi. Per la prima delle istruzioni `SELECT` seguenti, ad esempio, non viene trovata la corrispondenza con un piano esistente, come avviene invece per la seconda:
+Per gli algoritmi che consentono di trovare la corrispondenza tra le nuove istruzioni SQL e i piani di esecuzione esistenti inutilizzati nella cache è necessario che i riferimenti agli oggetti siano completi. Ad esempio, si supponga che `Person` è lo schema predefinito per l'utente che esegue le istruzioni `SELECT` seguenti. In questo esempio non è necessario che la tabella `Person` sia completa per essere eseguita. Per la seconda istruzione non viene trovata una corrispondenza a un piano esistente, mentre per la terza viene trovata una corrispondenza:
 
 ```sql
 SELECT * FROM Person;
-
+GO
 SELECT * FROM Person.Person;
+GO
+SELECT * FROM Person.Person;
+GO
 ```
 
 ### <a name="removing-execution-plans-from-the-plan-cache"></a>Rimozione di piani di esecuzione dalla cache dei piani
@@ -637,7 +640,6 @@ In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], il modello di prepara
 * L'applicazione può controllare il momento della creazione del piano di esecuzione e del suo riutilizzo.
 * Il modello di preparazione/esecuzione è utilizzabile con altri database, incluse le versioni precedenti di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
 
- 
 ### <a name="ParamSniffing"></a> Analisi dei parametri
 Il termine "analisi dei parametri" si riferisce a un processo in base al quale [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] individua i valori dei parametri correnti durante la compilazione o ricompilazione e li passa a Query Optimizer in modo che possano essere usati per generare piani di esecuzione di query potenzialmente più efficienti.
 
@@ -655,6 +657,24 @@ I valori dei parametri vengono individuati durante la compilazione o ricompilazi
 In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] è possibile eseguire query parallele, che consentono di ottimizzare l'esecuzione delle query e le operazioni sugli indici nei computer che dispongono di più microprocessori (CPU). La possibilità di eseguire una query o un'operazione sugli indici in parallelo in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usando diversi thread di lavoro del sistema operativo assicura maggiore velocità ed efficienza.
 
 Durante l'ottimizzazione delle query, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ricerca le query o le operazioni sugli indici che potrebbero trarre vantaggio dall'esecuzione parallela. Nel piano di esecuzione di tali query [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] inserisce operatori di scambio per preparare la query all'esecuzione parallela. Un operatore di scambio è un operatore del piano di esecuzione della query responsabile della gestione dei processi, della ridistribuzione dei dati e del controllo di flusso. L'operatore di scambio include gli operatori logici `Distribute Streams`, `Repartition Streams`e `Gather Streams` come sottotipi, ognuno dei quali può essere incluso nell'output Showplan del piano di esecuzione parallela di una query. 
+
+> [!IMPORTANT]
+> Alcuni costrutti impediscono a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] di applicare il parallelismo nell'intero piano di esecuzione o in parti del piano di esecuzione.
+
+I costrutti che impediscono il parallelismo includono:
+>
+> - **Funzioni definite dall'utente scalari**    
+>   Per altre informazioni sulle funzioni definite dall'utente scalari, vedere [Creare funzioni definite dall'utente](../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#Scalar). A partire da [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)], il [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] può eseguire l'inline di queste funzioni e sbloccare l'uso del parallelismo durante l'elaborazione delle query. Per altre informazioni sull'inlining di funzioni definite dall'utente scalari, vedere [Elaborazione di query intelligenti](../relational-databases/performance/intelligent-query-processing.md#scalar-udf-inlining).
+> - **Remote Query**    
+>   Per altre informazioni su Remote Query, vedere [Guida di riferimento a operatori Showplan logici e fisici](../relational-databases/showplan-logical-and-physical-operators-reference.md).
+> - **Cursori dinamici**    
+>   Per altre informazioni sui cursori, vedere [DECLARE CURSOR](../t-sql/language-elements/declare-cursor-transact-sql.md).
+> - **Query ricorsive**    
+>   Per altre informazioni sulla ricorsione, vedere [Linee guida per la definizione e l'utilizzo delle espressioni di tabella comuni ricorsive](../t-sql/queries/with-common-table-expression-transact-sql.md#guidelines-for-defining-and-using-recursive-common-table-expressions) e [Recursion in T-SQL](https://msdn.microsoft.com/library/aa175801(v=sql.80).aspx) (Ricorsione in T-SQL).
+> - **Funzioni con valori di tabella**    
+>   Per altre informazioni sulle funzioni con valori di tabella, vedere [Creazione di funzioni definite dall'utente (Motore di database)](../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#TVF).
+> - **Parola chiave TOP**    
+>   Per altre informazioni, vedere [TOP (Transact-SQL)](../t-sql/queries/top-transact-sql.md).
 
 Dopo l'inserimento degli operatori di scambio, si ottiene un piano di esecuzione parallela della query. Questo tipo di piano può usare più di un thread di lavoro. In un piano di esecuzione seriale, usato da una query non parallela, l'esecuzione è invece affidata a un solo thread di lavoro. Il numero effettivo di thread di lavoro usati da una query parallela viene determinato al momento dell'inizializzazione del piano di esecuzione della query e dipende dalla complessità del piano e dal grado di parallelismo. Il grado di parallelismo determina il numero massimo di CPU usate, ma non il numero di thread di lavoro usati. Il valore del grado di parallelismo viene impostato a livello del server e può essere modificato usando la stored procedure di sistema sp_configure. Questo valore può essere sostituito per singole istruzioni di query o di indice specificando l'hint per la query `MAXDOP` o l'opzione di indice `MAXDOP` . 
 
@@ -1098,4 +1118,6 @@ GO
  [Procedure consigliate per l'archivio query](../relational-databases/performance/best-practice-with-the-query-store.md)  
  [Stima della cardinalità](../relational-databases/performance/cardinality-estimation-sql-server.md)  
  [Elaborazione di query adattive](../relational-databases/performance/adaptive-query-processing.md)   
- [Ordine di precedenza degli operatori](../t-sql/language-elements/operator-precedence-transact-sql.md)
+ [Ordine di precedenza degli operatori](../t-sql/language-elements/operator-precedence-transact-sql.md)    
+ [Piani di esecuzione](../relational-databases/performance/execution-plans.md)    
+ [Centro prestazioni per il motore di database di SQL Server e il database SQL di Azure](../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md)

@@ -11,12 +11,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 4128ed5937688ebd681c0fd99f7d346d66b0f263
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: b287e4f806f02f2b86493813f29776e118017fb8
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600741"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52405126"
 ---
 # <a name="upgrade-master-data-services"></a>Aggiornare Master Data Services
 
@@ -150,7 +150,7 @@ ms.locfileid: "51600741"
 3.  Aggiornare lo schema del database MDS, creare un'applicazione Web e associare la nuova applicazione Web al database MDS aggiornato. Per le istruzioni, vedere i passaggi da 2 a 4 in [Aggiornare senza aggiornamento del motore di database](#noengine)  
   
 ## <a name="troubleshooting"></a>Risoluzione dei problemi  
- **Problema:** quando si apre l'applicazione Web [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] o [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], viene visualizzato un messaggio di errore indicante che la versione del client non è compatibile con quella del database.  
+ **Problema:** quando si apre l'applicazione Web [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] o [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] viene visualizzato un messaggio di errore indicante che la versione del client non è compatibile con quella del database.  
   
  **Soluzione:** questo problema si verifica quando un'applicazione Web Gestione dati master di [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] o [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] prova ad accedere a un database che è stato aggiornato a [!INCLUDE[ssSQL16](../../includes/sssqlv14-md.md)] Master Data Services. È necessario quindi usare un'applicazione Web [!INCLUDE[ssSQL16](../../includes/sssqlv14-md.md)].  
   

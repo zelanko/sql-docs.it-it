@@ -11,12 +11,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: erikre
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: a83aa8029ce66db969256ee672ae9418d1bc48a6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 252353bd71cbbc5d3cdeb18ae0bcf49b7be440b0
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47635019"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52395454"
 ---
 # <a name="analysis-services-with-always-on-availability-groups"></a>Analysis Services con i gruppi di disponibilità AlwaysOn
 
@@ -120,11 +120,11 @@ ms.locfileid: "47635019"
   
 3.  Modificare lo script sostituendo i segnaposto con valori validi per la distribuzione:  
   
-    -   Sostituire 'Computer01' con il nome dell'istanza del server in cui è ospitata la replica primaria.  
+    -   Sostituire "Computer01" con il nome dell'istanza del server in cui è ospitata la replica primaria.  
   
-    -   Sostituire 'Computer02' con il nome dell'istanza del server in cui è ospitata la replica secondaria.  
+    -   Sostituire "Computer02" con il nome dell'istanza del server in cui è ospitata la replica secondaria.  
   
-    -   Sostituire 'contoso.com' con il nome del dominio oppure ometterlo dallo script se tutti i computer si trovano nello stesso dominio. Mantenere il numero di porta se il listener utilizza la porta predefinita. La porta effettivamente utilizzata dal listener è elencata nella pagina delle proprietà di [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)].  
+    -   Sostituire "contoso.com" con il nome del dominio oppure ometterlo dallo script se tutti i computer si trovano nello stesso dominio. Mantenere il numero di porta se il listener utilizza la porta predefinita. La porta effettivamente utilizzata dal listener è elencata nella pagina delle proprietà di [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)].  
   
 4.  Eseguire lo script.  
   

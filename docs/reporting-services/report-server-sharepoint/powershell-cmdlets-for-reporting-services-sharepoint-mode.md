@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 9682be8f89a78a959cba3e4991c3405b0326f125
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: b9ae80895fa2cfd316e455e5084e5c1330365a62
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813784"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52504298"
 ---
 # <a name="powershell-cmdlets-for-reporting-services-sharepoint-mode"></a>Cmdlet di PowerShell per la modalità SharePoint di Reporting Services
 
@@ -34,7 +34,7 @@ Quando si installa la modalità SharePoint di SQL Server 2016 Reporting Services
 
 ## <a name="cmdlet-summary"></a>Riepilogo cmdlet
 
- Per eseguire i cmdlet è necessario aprire la shell di gestione SharePoint. È anche possibile usare l'editor dell'interfaccia utente grafica incluso in Microsoft Windows, **Windows PowerShell Integrated Scripting Environment (ISE)**. Per altre informazioni, vedere [Starting Windows PowerShell on Windows Server (Avvio di Windows PowerShell su Windows Server)](https://technet.microsoft.com/library/hh847814.aspx). Nei riepiloghi di cmdlet seguenti, i riferimenti ai database delle applicazioni di servizio indicano tutti i database creati e usati da un'applicazione di servizio Reporting Services. Sono inclusi i database di configurazione, di avvisi e temporaneo.  
+ Per eseguire i cmdlet è necessario aprire la shell di gestione SharePoint. È anche possibile usare l'editor dell'interfaccia utente grafica incluso in Microsoft Windows, **Windows PowerShell Integrated Scripting Environment (ISE)**. Per altre informazioni, vedere [Starting Windows PowerShell on Windows Server (Avvio di Windows PowerShell su Windows Server)](https://technet.microsoft.com/library/hh847814.aspx). Nei riepiloghi di cmdlet che seguono, i riferimenti ai "database" delle applicazioni di servizio indicano tutti i database creati e usati da un'applicazione di servizio Reporting Services. Sono inclusi i database di configurazione, di avvisi e temporaneo.  
   
  Se quando si digitano gli esempi di PowerShell si visualizza un messaggio di errore simile al seguente:  
   
@@ -117,7 +117,7 @@ Quando si installa la modalità SharePoint di SQL Server 2016 Reporting Services
  Restituire un elenco di cmdlet contenenti "SPRS" nel nome. Questo rappresenta l'elenco completo dei cmdlet di Reporting Services.  
   
 ```  
-Get-command –noun *SPRS*  
+Get-command -noun *SPRS*  
 ```  
   
  In alternativa, con un livello leggermente maggiore di dettaglio, inoltrare tramite pipe in un file di testo denominato commandlist.txt.  
@@ -150,7 +150,7 @@ Get-content -path C:\Users\testuser\AppData\Local\Temp\rs_sp_0.log | select-stri
   
 ## <a name="detailed-samples"></a>Esempi dettagliati
 
- Oltre ai seguenti esempi, vedere la sezione “Script di Windows PowerShell” nell'argomento [Script di Windows PowerShell per i passaggi da 1 a 4](../../reporting-services/install-windows/install-the-first-report-server-in-sharepoint-mode.md#bkmk_full_script).  
+ Oltre ai seguenti esempi, vedere la sezione "Script di Windows PowerShell" nell'argomento [Script di Windows PowerShell per i passaggi da 1 a 4](../../reporting-services/install-windows/install-the-first-report-server-in-sharepoint-mode.md#bkmk_full_script).  
   
 ### <a name="create-a-reporting-services-service-application-and-proxy"></a>Creare un proxy e un'applicazione di servizio Reporting Services
 
@@ -164,15 +164,15 @@ Get-content -path C:\Users\testuser\AppData\Local\Temp\rs_sp_0.log | select-stri
   
 ```  
 # Create service application and service application proxy  
-$appPool = Get-SPServiceApplicationPool “My App Pool”  
-$serviceApp = New-SPRSServiceApplication “My RS Service App” –ApplicationPool $appPool  
-$serviceAppProxy = New-SPRSServiceApplicationProxy –Name “My RS Service App Proxy” –ServiceApplication $serviceApp  
+$appPool = Get-SPServiceApplicationPool "My App Pool"  
+$serviceApp = New-SPRSServiceApplication "My RS Service App" -ApplicationPool $appPool  
+$serviceAppProxy = New-SPRSServiceApplicationProxy -Name "My RS Service App Proxy" -ServiceApplication $serviceApp  
   
 # Add service application proxy to default proxy group.  Any web application that uses the default proxy group will now be able to use this service application.  
-Get-SPServiceApplicationProxyGroup –default | Add-SPServiceApplicationProxyGroupMember –Member $serviceAppProxy  
+Get-SPServiceApplicationProxyGroup -default | Add-SPServiceApplicationProxyGroupMember -Member $serviceAppProxy  
   
-# Grant application pool account access to the port 80 web application’s content database.  
-$webApp = Get-SPWebApplication “https://sitename”  
+# Grant application pool account access to the port 80 web application's content database.  
+$webApp = Get-SPWebApplication "https://sitename"  
 $appPoolAccountName = $appPool.ProcessAccount.LookupName()  
 $webApp.GrantAccessToProcessIdentity($appPoolAccountName)  
   
@@ -186,32 +186,32 @@ $webApp.GrantAccessToProcessIdentity($appPoolAccountName)
 $app=get-sprsserviceapplication -Name "My RS Service App"  
 $emailCfg = Get-SPRSExtension -identity $app -ExtensionType "Delivery" -name "Report Server Email" | select -ExpandProperty ConfigurationXml   
 $emailXml = [xml]$emailCfg   
-$emailXml.SelectSingleNode("//SMTPServer").InnerText = “<email server name>”  
+$emailXml.SelectSingleNode("//SMTPServer").InnerText = "<email server name>"  
 $emailXml.SelectSingleNode("//SendUsing").InnerText = "2"  
 $emailXml.SelectSingleNode("//SMTPAuthenticate").InnerText = "2"  
 $emailXml.SelectSingleNode("//From").InnerText = '<your FROM email address>'  
 Set-SPRSExtension -identity $app -ExtensionType "Delivery" -name "Report Server Email" -ExtensionConfiguration $emailXml.OuterXml  
 ```  
   
- Nell'esempio precedente, se non si conosce il nome esatto dell'applicazione di servizio, è possibile riscrivere la prima istruzione per ottenere l'applicazione di servizio in base a una ricerca del nome parziale. Esempio:  
+ Nell'esempio precedente, se non si conosce il nome esatto dell'applicazione di servizio, è possibile riscrivere la prima istruzione per ottenere l'applicazione di servizio in base a una ricerca del nome parziale. Ad esempio  
   
 ```  
 $app=get-sprsserviceapplication | where {$_.name -like " ssrs_testapp *"}  
 ```  
   
- Lo script seguente restituisce i valori di configurazione correnti per l'estensione per il recapito tramite posta elettronica del server di report per l'applicazione di servizio denominata "Applicazione di Reporting Services". Il primo passaggio consente di impostare il valore della variabile $app sull'oggetto applicazione di servizio denominato "My RS Service App"  
+ Lo script seguente restituisce i valori di configurazione correnti per l'estensione per il recapito via posta elettronica del server di report per l'applicazione di servizio denominata "Reporting Services Application". Il primo passaggio consente di impostare il valore della variabile $app sull'oggetto applicazione di servizio denominato "My RS Service App"  
   
- La seconda istruzione consente di ottenere l'estensione per il recapito "Report Server Email" per l'oggetto applicazione di servizio nella variabile $app e di selezionare configurationXML.  
+ La seconda istruzione consente di ottenere l'estensione per il recapito "Report Server Email" per l'oggetto applicazione di servizio nella variabile $app e di selezionare configurationXML  
   
 ```  
-$app=get-sprsserviceapplication –Name "Reporting Services Application"  
+$app=get-sprsserviceapplication -Name "Reporting Services Application"  
 Get-SPRSExtension -identity $app -ExtensionType "Delivery" -name "Report Server Email" | select -ExpandProperty ConfigurationXml  
 ```  
   
  È inoltre possibile riscrivere le due istruzioni sopra riportate come un'unica istruzione:  
   
 ```  
-get-sprsserviceapplication –Name "Reporting Services Application" | Get-SPRSExtension -ExtensionType "Delivery" -name "Report Server Email" | select -ExpandProperty ConfigurationXml  
+get-sprsserviceapplication -Name "Reporting Services Application" | Get-SPRSExtension -ExtensionType "Delivery" -name "Report Server Email" | select -ExpandProperty ConfigurationXml  
 ```  
   
 ### <a name="get-and-set-properties-of-the-reporting-service-application-database"></a>Ottenere e impostare le proprietà del database di un'applicazione Reporting Service
@@ -237,13 +237,13 @@ get-SPRSDatabase | select id, querytimeout,connectiontimeout, status, server, Se
      `ServiceInstance   : SPDatabaseServiceInstance`  
   
 ```  
-Set-SPRSDatabase –identity 56f8d1bc-cb04-44cf-bd41-a873643c5a14 -QueryTimeout 300  
+Set-SPRSDatabase -identity 56f8d1bc-cb04-44cf-bd41-a873643c5a14 -QueryTimeout 300  
 ```  
   
  Per verificare il valore impostato, eseguire di nuovo il cmdlet GET.  
   
 ```  
-Get-SPRSDatabase –identity 56f8d1bc-cb04-44cf-bd41-a873643c5a14 | select id, querytimeout,connectiontimeout, status, server, ServiceInstance  
+Get-SPRSDatabase -identity 56f8d1bc-cb04-44cf-bd41-a873643c5a14 | select id, querytimeout,connectiontimeout, status, server, ServiceInstance  
 ```  
   
 ### <a name="list-reporting-services-data-extensions"></a>Elencare le estensioni dei dati di Reporting Services
@@ -255,7 +255,7 @@ $apps = Get-SPRSServiceApplication
 foreach ($app in $apps)   
 {  
 Write-host -ForegroundColor "yellow" Service App Name $app.Name  
-Get-SPRSExtension -identity $app -ExtensionType “Data” | select name,extensiontype | Format-Table -AutoSize  
+Get-SPRSExtension -identity $app -ExtensionType "Data" | select name,extensiontype | Format-Table -AutoSize  
 }  
 ```  
   

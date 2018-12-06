@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 851a19a8-07ab-4d42-992f-1986c4c8df55
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9e7dfa2d347f020fc0514536680dce4343ee625c
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: a912718146d2c106072615577c130b2da576a578
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021455"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518507"
 ---
 # <a name="upgrade-and-migrate-reporting-services"></a>Upgrade and Migrate Reporting Services
 
@@ -25,7 +25,7 @@ ms.locfileid: "50021455"
 
   Questo argomento offre una panoramica delle opzioni di aggiornamento e migrazione per SQL Server Reporting Services. Sono disponibili due approcci generali per l'aggiornamento di una distribuzione di SQL Server Reporting Services:  
   
--   **Aggiornamento:** vengono aggiornati i componenti di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] nei server e nelle istanze in cui sono attualmente installati. Si tratta dell'aggiornamento comunemente definito "sul posto". L'aggiornamento sul posto non è supportato da una modalità all'altra del server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Non è possibile ad esempio eseguire l'aggiornamento da un server di report in modalità nativa a un server di report in modalità SharePoint. È possibile eseguire la migrazione degli elementi del report da una modalità all'altra. Per ulteriori informazioni, vedere la sezione relativa alla migrazione dalla modalità nativa alla modalità SharePoint più avanti in questo documento.  
+-   **Aggiornamento:** vengono aggiornati i componenti di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] nei server e nelle istanze in cui sono attualmente installati. Si tratta dell'aggiornamento comunemente definito "sul posto". L'aggiornamento sul posto non è supportato da una modalità all'altra del server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Non è possibile ad esempio eseguire l'aggiornamento da un server di report in modalità nativa a un server di report in modalità SharePoint. È possibile eseguire la migrazione degli elementi del report da una modalità all'altra. Per altre informazioni, vedere la sezione relativa alla migrazione dalla modalità nativa alla modalità SharePoint più avanti in questo documento.  
   
 -   **Migrazione**: viene installato e configurato un nuovo ambiente SharePoint, vengono copiate risorse ed elementi di report nel nuovo ambiente che viene configurato in modo da usare il contesto esistente. Un tipo di migrazione di livello inferiore consiste nel copiare i database di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , i file di configurazione e, se si utilizza la modalità SharePoint, i database di contenuto di SharePoint.  
     
@@ -189,7 +189,7 @@ ms.locfileid: "50021455"
   
 -   Installare la versione SQL Server Reporting Services del componente aggiuntivo [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] per SharePoint in ogni front-end Web della farm. È possibile installare il componente aggiuntivo mediante l'Installazione guidata di SQL Server Reporting Services oppure è possibile scaricarlo.  
   
--   Eseguire l'installazione di SQL Server Reporting Services per aggiornare la modalità SharePoint per ogni 'server di report'. L'installazione guidata di SQL Server installerà il servizio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e creerà una nuova applicazione di servizio. 
+-   Eseguire l'installazione di SQL Server Reporting Services per aggiornare la modalità SharePoint per ogni "server di report". L'installazione guidata di SQL Server installerà il servizio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e creerà una nuova applicazione di servizio. 
   
   
 ##  <a name="bkmk_migration_considerations"></a> Considerazioni sulla migrazione  

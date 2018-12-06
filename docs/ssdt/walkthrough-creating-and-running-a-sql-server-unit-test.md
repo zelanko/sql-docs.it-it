@@ -11,12 +11,12 @@ ms.assetid: 992c1d8e-3729-438b-9ef4-cd103e28f145
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 86f54b31eb9bab93b6a4a3be918e1011f023ab5b
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 71be318c40c5776440bf427cad57ed3fb903e55a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51666520"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52540930"
 ---
 # <a name="walkthrough-creating-and-running-a-sql-server-unit-test"></a>Procedura dettagliata: Creazione ed esecuzione di uno unit test di SQL Server
 In questa procedura dettagliata viene creato uno unit test di SQL Server tramite cui viene verificato il comportamento di diverse stored procedure. Vengono creati unit test di SQL Server per semplificare l'identificazione di eventuali difetti del codice che potrebbero causare il comportamento non corretto dell'applicazione. È possibile eseguire test dell'applicazione e unit test di SQL Server come parte di un gruppo di test automatizzato.  
@@ -556,7 +556,7 @@ Per i test, si presuppone che il database venga avviato in uno stato pulito. Ver
   
 4.  Nel riquadro **Condizioni di test** selezionare **Schema previsto** nell'elenco, quindi fare clic su **Aggiungi condizione di test**.  
   
-5.  Nella finestra **Proprietà** fare clic sul pulsante Sfoglia ('**…**') nella proprietà **Configurazione**.  
+5.  Nella finestra **Proprietà** fare clic sul pulsante Sfoglia (**...**) nella proprietà **Configurazione**.  
   
 6.  Nella finestra di dialogo **Configurazione per expectedSchemaCondition1** specificare una connessione al database. Ad esempio, se venisse usato il percorso di distribuzione predefinito, ossia il database LocalDB, si farebbe clic su **Nuova connessione** e si specificherebbe **(LocalDB)\Projects**. Successivamente, scegliere il nome del database.  
   
@@ -621,7 +621,7 @@ Per i test, si presuppone che il database venga avviato in uno stato pulito. Ver
   
 13. Nel riquadro **Condizioni di test** selezionare **Checksum di dati** nell'elenco, quindi fare clic su **Aggiungi condizione di test**.  
   
-14. Nella finestra **Proprietà** fare clic sul pulsante Sfoglia ('**…**') nella proprietà **Configurazione**.  
+14. Nella finestra **Proprietà** fare clic sul pulsante Sfoglia (**...**) nella proprietà **Configurazione**.  
   
 15. Nella finestra di dialogo **Configurazione per checksumCondition1** specificare una connessione al database.  
   

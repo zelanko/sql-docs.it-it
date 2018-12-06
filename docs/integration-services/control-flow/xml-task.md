@@ -17,12 +17,12 @@ ms.assetid: 9f761846-390e-46d5-9db7-858943d40849
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fb9fcf4c03fdf2fb17d69d2d0f0b624d111f7e3f
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: e5dcf629121edc7d4502b0cedbf9825e74813587
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51639678"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52530649"
 ---
 # <a name="xml-task"></a>Attività XML
   L'attività XML consente di eseguire operazioni su dati in formato XML. Tramite questa attività un pacchetto può recuperare documenti XML, applicare operazioni ai documenti utilizzando fogli di stile XSLT (Extensible Stylesheet Language Transformation) ed espressioni XPath, unire più documenti oppure convalidare, confrontare e salvare i documenti aggiornati in file e variabili.  
@@ -165,7 +165,7 @@ ms.locfileid: "51639678"
 |**Variabile**|Consente di impostare l'origine su una variabile contenente il documento XML.|  
   
  **Origine**  
- Se l'opzione **Origine** è impostata su **Input diretto**, specificare il codice XML oppure fare clic sul pulsante con i puntini di sospensione **(…)** e quindi indicare il codice XML tramite la finestra di dialogo **Editor origine documento**.  
+ Se l'opzione **Origine** è impostata su **Input diretto**, specificare il codice XML oppure fare clic sul pulsante con i puntini di sospensione **(...)** e quindi indicare il codice XML usando la finestra di dialogo **Editor origine documento**.  
   
  Se l'opzione **Origine** è impostata su **Connessione file**, selezionare una gestione connessione file oppure fare clic su \<**Nuova connessione...**> per creare una nuova gestione connessione.  
   
@@ -226,7 +226,7 @@ ms.locfileid: "51639678"
 |**Variabile**|Consente di impostare l'origine su una variabile contenente il documento XML.|  
   
  **SecondOperand**  
- Se la proprietà **SecondOperandType** è impostata su **Input diretto**, specificare il codice XML oppure fare clic sul pulsante con i puntini di sospensione **(…)** e quindi indicare il codice XML tramite la finestra di dialogo **Editor origine**.  
+ Se la proprietà **SecondOperandType** è impostata su **Input diretto**, specificare il codice XML oppure fare clic sul pulsante con i puntini di sospensione **(...)** e quindi indicare il codice XML usando la finestra di dialogo **Editor origine**.  
   
  Se la proprietà **SecondOperandType** è impostata su **Connessione file**, selezionare una gestione connessione file oppure fare clic su \<**Nuova connessione...**> per creare una nuova gestione connessione.  
   
@@ -272,7 +272,7 @@ ms.locfileid: "51639678"
 |**Variabile**|Consente di impostare l'origine su una variabile contenente il documento XML.|  
   
  **SecondOperand**  
- Se la proprietà **SecondOperandType** è impostata su **Input diretto**, specificare il codice XML oppure fare clic sul pulsante con i puntini di sospensione **(…)** e quindi indicare il codice XML tramite la finestra di dialogo **Editor origine**.  
+ Se la proprietà **SecondOperandType** è impostata su **Input diretto**, specificare il codice XML oppure fare clic sul pulsante con i puntini di sospensione **(...)** e quindi indicare il codice XML usando la finestra di dialogo **Editor origine**.  
   
  Se la proprietà **SecondOperandType** è impostata su **Connessione file**, selezionare una gestione connessione file oppure fare clic su \<**Nuova connessione...**> per creare una nuova gestione connessione.  
   
@@ -318,7 +318,7 @@ ms.locfileid: "51639678"
 |**Variabile**|Consente di impostare l'origine su una variabile contenente il documento XML.|  
   
  **SecondOperand**  
- Se la proprietà **SecondOperandType** è impostata su **Input diretto**, specificare il codice XML oppure fare clic sul pulsante con i puntini di sospensione **(…)** e quindi indicare il codice XML tramite la finestra di dialogo **Editor origine**.  
+ Se la proprietà **SecondOperandType** è impostata su **Input diretto**, specificare il codice XML oppure fare clic sul pulsante con i puntini di sospensione **(...)** e quindi indicare il codice XML usando la finestra di dialogo **Editor origine**.  
   
  Se la proprietà **SecondOperandType** è impostata su **Connessione file**, selezionare una gestione connessione file oppure fare clic su \<**Nuova connessione...**> per creare una nuova gestione connessione.  
   
@@ -353,7 +353,7 @@ ms.locfileid: "51639678"
 |**Variabile**|Consente di impostare l'origine su una variabile contenente il documento XML.|  
   
  **XPathStringSource**  
- Se la proprietà **XPathStringSourceType** è impostata su **Input diretto**, specificare il codice XML oppure fare clic sul pulsante con i puntini di sospensione **(…)** e quindi indicare il codice XML tramite la finestra di dialogo **Editor origine documento**.  
+ Se la proprietà **XPathStringSourceType** è impostata su **Input diretto**, specificare il codice XML oppure fare clic sul pulsante con i puntini di sospensione **(...)** e quindi indicare il codice XML usando la finestra di dialogo **Editor origine documento**.  
   
  Se la proprietà **XPathStringSourceType** è impostata su **Connessione file**, selezionare una gestione connessione file oppure fare clic su \<**Nuova connessione...**> per creare una nuova gestione connessione.  
   
@@ -398,7 +398,7 @@ ms.locfileid: "51639678"
 |**Variabile**|Consente di impostare l'origine su una variabile contenente il documento XML.|  
   
  **SecondOperand**  
- Se la proprietà **SecondOperandType** è impostata su **Input diretto**, specificare il codice XML oppure fare clic sul pulsante con i puntini di sospensione **(…)** e quindi indicare il codice XML tramite la finestra di dialogo **Editor origine documento** .  
+ Se la proprietà **SecondOperandType** è impostata su **Input diretto**, specificare il codice XML oppure fare clic sul pulsante con i puntini di sospensione **(...)** e quindi indicare il codice XML usando la finestra di dialogo **Editor origine documento**.  
   
  Se la proprietà **SecondOperandType** è impostata su **Connessione file**, selezionare una gestione connessione file oppure fare clic su \<**Nuova connessione...**> per creare una nuova gestione connessione.  
   
@@ -473,7 +473,7 @@ ms.locfileid: "51639678"
 |**Variabile**|Consente di impostare l'origine su una variabile contenente il documento XML.|  
   
  **SecondOperand**  
- Se la proprietà **SecondOperandType** è impostata su **Input diretto**, specificare il codice XML oppure fare clic sul pulsante con i puntini di sospensione **(…)** e quindi indicare il codice XML tramite la finestra di dialogo **Editor origine documento** .  
+ Se la proprietà **SecondOperandType** è impostata su **Input diretto**, specificare il codice XML oppure fare clic sul pulsante con i puntini di sospensione **(...)** e quindi indicare il codice XML usando la finestra di dialogo **Editor origine documento**.  
   
  Se la proprietà **SecondOperandType** è impostata su **Connessione file**, selezionare una gestione connessione file oppure fare clic su \<**Nuova connessione...**> per creare una nuova gestione connessione.  
   
@@ -519,7 +519,7 @@ ms.locfileid: "51639678"
 |**Variabile**|Consente di impostare l'origine su una variabile contenente il documento XML.|  
   
  **SecondOperand**  
- Se la proprietà **SecondOperandType** è impostata su **Input diretto**, specificare il codice XML oppure fare clic sul pulsante con i puntini di sospensione **(…)** e quindi indicare il codice XML tramite la finestra di dialogo **Editor origine documento** .  
+ Se la proprietà **SecondOperandType** è impostata su **Input diretto**, specificare il codice XML oppure fare clic sul pulsante con i puntini di sospensione **(...)** e quindi indicare il codice XML usando la finestra di dialogo **Editor origine documento**.  
   
  Se la proprietà **SecondOperandType** è impostata su **Connessione file**, selezionare una gestione connessione file oppure fare clic su \<**Nuova connessione...**> per creare una nuova gestione connessione.  
   

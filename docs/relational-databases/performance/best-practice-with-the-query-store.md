@@ -1,7 +1,7 @@
 ---
 title: Procedure consigliate per l'archivio query | Microsoft Docs
 ms.custom: ''
-ms.date: 11/24/2016
+ms.date: 11/29/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -14,15 +14,15 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8903afa017c51439e023dd40b33abadba5282885
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: a727c599dc5a2b7c21d07a415f6ba9490c7e96cd
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51657840"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52712119"
 ---
 # <a name="best-practice-with-the-query-store"></a>Procedure consigliate per l'archivio query
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
   Questo argomento descrive le procedure consigliate per l'uso di Query Store con il carico di lavoro.  
   
@@ -48,11 +48,11 @@ I parametri predefiniti sono sufficienti per iniziare, ma è opportuno monitorar
   
  Di seguito sono riportate alcune linee guida per l'impostazione dei valori dei parametri:  
   
- **Dimensioni massime (MB):** specifica il limite per lo spazio dati che l'archivio query può occupare all'interno del database.  Si tratta dell'impostazione più importante, che influisce direttamente sulla modalità di funzionamento dell'archivio query.  
+ **Dimensioni massime (MB):** specifica il limite per lo spazio dati che l'archivio query può occupare all'interno del database. Si tratta dell'impostazione più importante, che influisce direttamente sulla modalità di funzionamento dell'archivio query.  
   
  Mentre l'archivio query raccoglie query, piani di esecuzione e statistiche, le sue dimensioni nel database aumentano fino a quando non viene raggiunto questo limite. A quel punto, l'archivio query passa automaticamente alla modalità operativa di sola lettura e smette di raccogliere nuovi dati. Questo si riflette negativamente sull'accuratezza dell'analisi delle prestazioni.  
   
- Il valore predefinito (100 MB) potrebbe non essere sufficiente se il carico di lavoro genera un numero elevato di query e piani diversi o se si vuole conservare la cronologia delle query per un periodo di tempo più lungo. Tenere traccia dell'utilizzo dello spazio e aumentare le Dimensioni massime (MB) per impedire che l'archivio query passi alla modalità di sola lettura.  Usare [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] o eseguire lo script seguente per ottenere informazioni aggiornate sulle dimensioni dell'archivio query:  
+ Il valore predefinito (100 MB) potrebbe non essere sufficiente se il carico di lavoro genera un numero elevato di query e piani diversi o se si vuole conservare la cronologia delle query per un periodo di tempo più lungo. Tenere traccia dell'utilizzo dello spazio e aumentare le Dimensioni massime (MB) per impedire che l'archivio query passi alla modalità di sola lettura. Usare [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] o eseguire lo script seguente per ottenere informazioni aggiornate sulle dimensioni dell'archivio query:  
   
 ```sql 
 USE [QueryStoreDB];  
@@ -69,11 +69,24 @@ FROM sys.database_query_store_options;
 ALTER DATABASE [QueryStoreDB]  
 SET QUERY_STORE (MAX_STORAGE_SIZE_MB = 1024);  
 ```  
-  
- **Intervallo di raccolta statistiche:** definisce il livello di granularità delle statistiche di runtime raccolte. Il valore predefinito è 1 ora. È possibile usare un valore inferiore se è necessaria una maggiore granularità o maggiore rapidità nel rilevare e limitare i problemi, ma questo influisce direttamente sulle dimensioni dei dati dell'archivio query. Usare SSMS o Transact-SQL per impostare un valore diverso per Intervallo di raccolta statistiche:  
+
+ **Intervallo di scaricamento dati:** definisce la frequenza in secondi per rendere persistenti le statistiche di runtime raccolte su disco (il valore predefinito è 900 secondi, che corrisponde a 15 minuti). Valutare la possibilità di usare un valore più elevato se il carico di lavoro non genera un numero elevato di query e piani diversi o se è possibile attendere più tempo per rendere persistenti i dati prima della chiusura di un database. 
+ 
+> [!NOTE]
+> L'uso del flag di traccia 7745 impedirà la scrittura su disco dei dati di Query Store nel caso di un comando di failover o arresto. Per altri dettagli, vedere la sezione [Usare i flag di traccia nei server critici per migliorare il ripristino di emergenza](#Recovery).
+
+Usare [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)] per impostare un valore diverso per Intervallo di scaricamento dati:  
   
 ```sql  
-ALTER DATABASE [QueryStoreDB] SET QUERY_STORE (INTERVAL_LENGTH_MINUTES = 60);  
+ALTER DATABASE [QueryStoreDB] 
+SET QUERY_STORE (DATA_FLUSH_INTERVAL_SECONDS = 900);  
+```  
+
+ **Intervallo di raccolta statistiche:** definisce il livello di granularità delle statistiche di runtime raccolte. Il valore predefinito è 60 minuti. È possibile usare un valore inferiore se è necessaria una maggiore granularità o maggiore rapidità nel rilevare e limitare i problemi, ma questo influisce direttamente sulle dimensioni dei dati dell'archivio query. Usare [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)] per impostare un valore diverso per Intervallo di raccolta statistiche:  
+  
+```sql  
+ALTER DATABASE [QueryStoreDB] 
+SET QUERY_STORE (INTERVAL_LENGTH_MINUTES = 60);  
 ```  
   
  **Soglia per query non aggiornate (giorni):** criteri di pulizia basati sul tempo che controllano il periodo di conservazione di statistiche di runtime persistenti e query inattive.  
@@ -97,11 +110,11 @@ SET QUERY_STORE (SIZE_BASED_CLEANUP_MODE = AUTO);
   
  **Modalità di acquisizione archivio query:** specifica i criteri di acquisizione delle query per l'archivio query.  
   
--   **All** : vengono acquisite tutte le query. Si tratta dell'opzione predefinita.  
+-   **All**: vengono acquisite tutte le query. Si tratta dell'opzione predefinita.  
   
--   **Auto** : le query poco frequenti e le query con durata di compilazione ed esecuzione non significativa vengono ignorate. Le soglie per la durata della fase di esecuzione, la compilazione e il conteggio esecuzioni vengono determinate internamente.  
+-   **Auto**: le query poco frequenti e le query con durata di compilazione ed esecuzione non significativa vengono ignorate. Le soglie per la durata della fase di esecuzione, la compilazione e il conteggio esecuzioni vengono determinate internamente.  
   
--   **None** l'archivio query smette di acquisire nuove query.  
+-   **None**: l'archivio query smette di acquisire nuove query.  
   
  Lo script seguente imposta la modalità di acquisizione query su Auto:  
   
@@ -132,7 +145,7 @@ Le viste dell'archivio query di[!INCLUDE[ssManStudio](../../includes/ssmanstudio
   
  L'immagine seguente mostra come trovare le viste dell'archivio query:  
   
- ![query-store-views](../../relational-databases/performance/media/query-store-views.png "query-store-views")  
+ ![Viste di query Store](../../relational-databases/performance/media/objectexplorerquerystore_sql17.png "Viste di Query Store")  
   
  La tabella seguente illustra quando usare ognuna delle viste dell'archivio query:  
   
@@ -143,10 +156,11 @@ Le viste dell'archivio query di[!INCLUDE[ssManStudio](../../includes/ssmanstudio
 |Prime query per consumo risorse|Scegliere una metrica di esecuzione di interesse e trovare le query con i valori più estremi in un intervallo di tempo specificato. <br />Usare questa vista per concentrare l'attenzione sulle query più rilevanti che hanno l'impatto maggiore sul consumo delle risorse di database.|  
 |Query con piani forzati|Elenca i piani forzati in precedenza tramite Query Store. <br />Usare questa vista per accedere rapidamente a tutti i piani attualmente forzati.|  
 |Query con variazione elevata|Analizzare le query con variazione di esecuzione elevata in relazione alle dimensioni disponibili, ad esempio Durata, Tempo CPU, I/O e Utilizzo memoria nell'intervallo di tempo desiderato.<br />Usare questa vista per identificare le query con prestazioni molto variabili che possono influire negativamente sull'esperienza utente in tutte le applicazioni.|  
+|Statistiche di attesa query|Consente di analizzare le categorie di attesa più attive in un database e le query che contribuiscono maggiormente alla categoria di attesa selezionata.<br />Usare questa vista per analizzare le statistiche di attesa e identificare le query che possono influire negativamente sull'esperienza utente in tutte le applicazioni.<br /><br />**Si applica a:** a partire da [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] v18.0 e [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]|  
 |Query rilevate|Tenere traccia dell'esecuzione delle query più importanti in tempo reale. In genere, questa vista viene usata in presenza di query con piani forzati per garantire la stabilità delle prestazioni delle query.|
   
 > [!TIP]  
->  Per informazioni dettagliate sull'uso di [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] per identificare le prime query per consumo risorse e correggere le query regredite a causa della modifica di una scelta del piano, vedere i [post relativi all'archivio query nei blog di @Azure](https://azure.microsoft.com/blog/query-store-a-flight-data-recorder-for-your-database/).  
+> Per informazioni dettagliate sull'uso di [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] per identificare le prime query per consumo risorse e correggere le query regredite a causa della modifica di una scelta del piano, vedere i [post relativi all'archivio query nei blog di @Azure](https://azure.microsoft.com/blog/query-store-a-flight-data-recorder-for-your-database/).  
   
  Quando si identifica una query con prestazioni non ottimali, l'azione correttiva dipende dalla natura del problema.  
   

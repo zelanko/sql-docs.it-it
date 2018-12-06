@@ -11,12 +11,12 @@ ms.assetid: d44935ce-63bf-46df-976a-5a54866c8119
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a8fa6573f852eebe34801db57ba62cd29f9da3e5
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 9841763f003b0a177913da72cf6dd3efd0c4d3d3
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51659140"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52523419"
 ---
 # <a name="walkthrough-extend-database-project-build-to-generate-model-statistics"></a>Procedura dettagliata: Estendere la compilazione del progetto del database per generare statistiche del modello
 È possibile creare un collaboratore alla compilazione per eseguire azioni personalizzate quando si compila un progetto di database. In questa procedura dettagliata, si crea un collaboratore alla compilazione denominato ModelStatistics che restituisce statistiche dal modello di database SQL quando si compila un progetto di database. Poiché questo collaboratore alla compilazione accetta i parametri durante la compilazione, sono richiesti alcuni passaggi aggiuntivi.  
@@ -46,7 +46,7 @@ I collaboratori alla compilazione vengono eseguiti durante la compilazione del p
   
 -   Generazione di statistiche del modello e segnalazione all'utente. Questo è l'esempio qui riportato.  
   
-Il punto di ingresso principale per i collaboratori alla compilazione è il metodo OnExecute. Tutte le classi che ereditano da BuildContributor devono implementare questo metodo. A questo metodo un oggetto BuildContributorContext che contiene tutti i dati pertinenti per la compilazione, quali il modello del database, le proprietà della compilazione e argomenti o file utilizzati dai collaboratori alla compilazione.  
+Il punto di ingresso principale per i collaboratori alla compilazione è il metodo OnExecute. Tutte le classi che ereditano da BuildContributor devono implementare questo metodo. A questo metodo viene passato un oggetto BuildContributorContext che contiene tutti i dati pertinenti per la compilazione, ad esempio il modello del database, le proprietà della compilazione e gli argomenti o file che dovranno essere usati da chi collabora alla compilazione.  
   
 **TSqlModel e API del modello di database**  
   
@@ -56,8 +56,8 @@ Di seguito sono riportati alcuni dei comandi utilizzati dal collaboratore di ese
   
 |**Classe**|**Metodo/proprietà**|**Descrizione**|  
 |-------------|------------------------|-------------------|  
-|[TSqlModel](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlmodel.aspx)|GetObjects()|Esegue una query al modello per gli oggetti ed è il punto di ingresso principale all'API del modello. È possibile eseguire query solo sui tipi di livello superiore quali tabella o vista, tipi quali le colonne possono essere trovati solo attraversando il modello. Se non è specificato alcun filtro ModelTypeClass, verranno restituiti tutti i tipi di livello superiore.|  
-|[TSqlObject](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlobject.aspx)|GetReferencedRelationshipInstances()|Trova le relazioni agli elementi a cui l'elemento TSqlObject corrente fa riferimento. Ad esempio, per una tabella restituire oggetti quali le colonne della tabella. In questo caso, è possibile utilizzare un filtro ModelRelationshipClass per specificare le relazioni esatte su cui eseguire la query (ad esempio, utilizzando il filtro "Table.Columns" si assicura che vengano restituite solo le colonne).<br /><br />Sono presenti vari metodi simili, quali GetReferencingRelationshipInstances, GetChildren e GetParent. Per ulteriori informazioni, vedere la documentazione dell'API.|  
+|[TSqlModel](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlmodel.aspx)|GetObjects()|Esegue una query al modello per gli oggetti ed è il punto di ingresso principale all'API del modello. È possibile eseguire query solo sui tipi di livello superiore, ad esempio, le tabelle o le viste. Altri tipi, ad esempio le colonne, si possono individuare solo con l'attraversamento del modello. Se non è specificato alcun filtro ModelTypeClass, verranno restituiti tutti i tipi di livello superiore.|  
+|[TSqlObject](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlobject.aspx)|GetReferencedRelationshipInstances()|Trova le relazioni agli elementi a cui l'elemento TSqlObject corrente fa riferimento. Ad esempio, per una tabella vengono restituiti oggetti come le colonne della tabella. In questo caso è possibile usare un filtro ModelRelationshipClass per specificare le relazioni esatte su cui eseguire la query. Ad esempio, usando il filtro "Table.Columns" si assicura che vengano restituite solo le colonne.<br /><br />Sono presenti vari metodi simili, quali GetReferencingRelationshipInstances, GetChildren e GetParent. Per ulteriori informazioni, vedere la documentazione dell'API.|  
   
 **Identificazione univoca del collaboratore**  
   
@@ -68,7 +68,7 @@ Durante il processo di compilazione, i collaboratori personalizzati vengono cari
   
 ```  
   
-In questo caso il primo parametro all'attributo deve essere un identificatore univoco che verrà utilizzato per identificare il collaboratore nei file del progetto. È consigliabile combinare lo spazio dei nomi della libreria (in questa procedura dettagliata "ExampleContributors") con il nome della classe (in questa procedura dettagliata "ModelStatistics"), per produrre l'identificatore. Verrà illustrato come questo spazio dei nomi viene utilizzato per specificare che il collaboratore deve essere eseguito più avanti nella procedura dettagliata.  
+In questo caso il primo parametro all'attributo deve essere un identificatore univoco, che verrà usato per identificare il collaboratore nei file del progetto. È consigliabile combinare lo spazio dei nomi della libreria (in questa procedura dettagliata "ExampleContributors") con il nome della classe (in questa procedura dettagliata "ModelStatistics"), per produrre l'identificatore. Verrà illustrato come questo spazio dei nomi viene utilizzato per specificare che il collaboratore deve essere eseguito più avanti nella procedura dettagliata.  
   
 ## <a name="CreateBuildContributor"></a>Creare un collaboratore alla compilazione  
 Per creare un collaboratore alla compilazione, è necessario effettuare le attività seguenti:  
@@ -480,7 +480,7 @@ Questa operazione può essere eseguita in due modi:
   
     ```  
     /// <PropertyGroup>  
-    ///     <ContributorArguments Condition="'$(Configuration)' == 'Debug'”>  
+    ///     <ContributorArguments Condition="'$(Configuration)' == 'Debug'">  
     ///         $(ContributorArguments);ModelStatistics.GenerateModelStatistics=true;ModelStatistics.SortModelStatisticsBy="name";  
     ///     </ContributorArguments>  
     /// <PropertyGroup>  
@@ -493,9 +493,9 @@ Questa operazione può essere eseguita in due modi:
   
     1.  Passare a %Program Files%\MSBuild\\.  
   
-    2.  Creare una nuova cartella "MyContributors" dove i file targets verranno archiviati.  
+    2.  Creare una nuova cartella "MyContributors" in cui archiviare i file TARGETS.  
   
-    3.  Creare un nuovo file "MyContributors.targets" in questa directory, aggiungere il testo seguente e salvare il file:  
+    3.  Creare un nuovo file "MyContributors.targets" in questa directory, aggiungere il testo seguente e quindi salvare il file:  
   
         ```  
         <?xml version="1.0" encoding="utf-8"?>  
@@ -517,13 +517,13 @@ Questa operazione può essere eseguita in due modi:
 Dopo aver seguito uno di questi approcci, è possibile utilizzare MSBuild per passare i parametri per compilazioni della riga di comando.  
   
 > [!NOTE]  
-> È necessario aggiornare sempre la proprietà "BuildContributors" per specificare il proprio ID collaboratore. Si tratta dello stesso ID utilizzato nell'attributo "ExportBuildContributor" nel file di origine del collaboratore. Senza questo il collaboratore non verrà eseguito durante la compilazione del progetto. La proprietà "ContributorArguments" deve essere aggiornata solo se si dispone degli argomenti richiesti per l'esecuzione del collaboratore.  
+> È necessario aggiornare sempre la proprietà "BuildContributors" per specificare il proprio ID collaboratore. Si tratta dello stesso ID usato nell'attributo "ExportBuildContributor" nel file di origine del collaboratore. Senza questo il collaboratore non verrà eseguito durante la compilazione del progetto. La proprietà "ContributorArguments" deve essere aggiornata solo se si hanno argomenti richiesti per l'esecuzione del collaboratore.  
   
 ### <a name="build-the-sql-project"></a>Compilare il progetto SQL.  
   
 ##### <a name="to-rebuild-your-database-project-by-using-msbuild-and-generate-statistics"></a>Per ricompilare il progetto di database utilizzando MSBuild e generare statistiche  
   
-1.  In Visual Studio fare clic con il pulsante destro del mouse sul progetto e scegliere "Ricompila". In questo modo il progetto verrà ricompilato ed è necessario verificare le statistiche del modello generate, con l'output incluso nell'output di compilazione e salvato in ModelStatistics.xml. Si noti che può essere necessario scegliere "Mostra tutti i file" in Esplora soluzioni per visualizzare il file xml.  
+1.  In Visual Studio fare clic con il pulsante destro del mouse sul progetto e selezionare "Ricompila". In questo modo il progetto verrà ricompilato ed è necessario verificare le statistiche del modello generate, con l'output incluso nell'output di compilazione e salvato in ModelStatistics.xml. Si noti che può essere necessario scegliere "Mostra tutti i file" in Esplora soluzioni per visualizzare il file XML.  
   
 2.  Aprire un prompt dei comandi di Visual Studio: dal menu **Start** scegliere **Tutti i programmi**, fare clic su **Microsoft Visual Studio <Visual Studio Version>**, **Strumenti di Visual Studio** e quindi scegliere **Prompt dei comandi di Visual Studio (<Visual Studio Version>)**.  
   

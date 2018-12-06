@@ -11,12 +11,12 @@ helpviewer_keywords:
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e4d12f59b94771a73f6f3b5db5290747940c768d
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 1c72f5294a7727b7d5a7903e0c12f8daa8c93cbf
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51700939"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52394150"
 ---
 # <a name="upgrade-sql-server-instances-running-on-windows-server-20082008-r22012-clusters"></a>Aggiornare istanze di SQL Server in esecuzione in cluster di Windows Server 2008/2008 R2/2012
 
@@ -107,7 +107,7 @@ Se l'ambiente di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] us
 
 7.  Copiare i database di sistema dai computer originali ai rispettivi computer di destinazione paralleli.
 
-8.  In Gestione cluster di failover nell'ambiente originale modificare il nome della risorsa 'Nome server' di ogni ruolo di istanza di cluster di failover di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].
+8.  In Gestione cluster di failover nell'ambiente originale modificare il nome della risorsa "Nome server" di ogni ruolo di istanza di cluster di failover di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].
 
 9.  Riportare online solo la risorsa Nome server rinominata per ognuno dei ruoli di istanza di cluster di failover di SQL Server.
 
@@ -122,7 +122,7 @@ Se l'ambiente di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] us
 
 ## <a name="scenario-3-windows-cluster-has-both-sql-fcis-and-sql-server-availability-groups"></a>Scenario 3: cluster Windows con istanze del cluster di failover e gruppi di disponibilità di SQL Server
 
-Se la configurazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] non usa istanze di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] autonome ma solo istanze di cluster di failover di SQL Server all'interno di almeno un gruppo di disponibilità, è possibile eseguire la migrazione in un nuovo cluster tramite metodi simili a quelli dello scenario senza gruppi di disponibilità e senza istanze autonome. Prima di copiare le tabelle di sistema nei dischi condivisi delle istanze di cluster di failover di destinazione, è necessario rilasciare tutti i gruppi di disponibilità nell'ambiente originale. Dopo la migrazione di tutti i database nei computer di destinazione, i gruppi di disponibilità verranno ricreati con gli stessi nomi di schema e di listener. In questo modo, nel cluster di destinazione le risorse WSFC verranno formate e gestite correttamente. **È necessario abilitare Always On in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Configuration Manager per ogni computer nell'ambiente di destinazione prima della migrazione.**
+Se la configurazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] non usa istanze di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] autonome, ma solo istanze di cluster di failover di SQL Server all'interno di almeno un gruppo di disponibilità, è possibile eseguire la migrazione in un nuovo cluster tramite metodi simili a quelli dello scenario senza gruppi di disponibilità e senza istanze autonome. Prima di copiare le tabelle di sistema nei dischi condivisi delle istanze di cluster di failover di destinazione, è necessario rilasciare tutti i gruppi di disponibilità nell'ambiente originale. Dopo la migrazione di tutti i database nei computer di destinazione, i gruppi di disponibilità verranno ricreati con gli stessi nomi di schema e di listener. In questo modo, nel cluster di destinazione le risorse WSFC verranno formate e gestite correttamente. **È necessario abilitare Always On in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Configuration Manager per ogni computer nell'ambiente di destinazione prima della migrazione.**
 
 ### <a name="to-perform-the-upgrade"></a>Per eseguire l'aggiornamento
 
@@ -142,7 +142,7 @@ Se la configurazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.
 
 8.  Copiare i database di sistema dai computer originali ai rispettivi computer di destinazione paralleli.
 
-9.  In Gestione cluster di failover nell'ambiente originale modificare il nome della risorsa 'Nome server' di ogni ruolo di istanza di cluster di failover di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].
+9.  In Gestione cluster di failover nell'ambiente originale modificare il nome della risorsa "Nome server" di ogni ruolo di istanza di cluster di failover di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].
 
 10. Riportare online solo la risorsa Nome server rinominata per ognuno dei ruoli di istanza di cluster di failover di SQL Server.
 
@@ -160,7 +160,7 @@ Se la configurazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.
 
 ## <a name="scenario-4-windows-cluster-with-standalone-sql-server-instances-and-no-availability-groups"></a>Scenario 4: cluster Windows con istanze di SQL Server autonome e nessun gruppo di disponibilità
 
-La migrazione di un cluster con istanze autonome è un processo simile alla migrazione di un cluster di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] contenente solo istanze di cluster di failover. Tuttavia, anziché modificare il nome rete virtuale della risorsa cluster nome rete dell'istanza di cluster di failover, si modifica il nome del computer originale autonomo e si "ruba" il nome del computer precedente nel computer di destinazione. Questa operazione comporta un tempo di inattività aggiuntivo rispetto agli scenari senza istanze autonome, poiché non è possibile aggiungere il computer autonomo di destinazione al cluster WSFC finché il nome rete del computer precedente non è stato acquisito.
+La migrazione di un cluster con istanze autonome è un processo simile alla migrazione di un cluster di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] contenente solo istanze di cluster di failover. Tuttavia, anziché modificare il nome rete virtuale della risorsa cluster nome rete dell'istanza di cluster di failover, si modifica il nome del computer originale autonomo e si "ruba" il nome del computer precedente nel computer di destinazione. Questa operazione comporta un tempo di inattività aggiuntivo rispetto agli scenari senza istanze autonome, poiché non è possibile aggiungere il computer autonomo di destinazione al cluster WSFC finché non è stato acquisito il nome rete del computer precedente.
 
 ###  <a name="to-perform-the-upgrade"></a>Per eseguire l'aggiornamento
 
@@ -180,7 +180,7 @@ La migrazione di un cluster con istanze autonome è un processo simile alla migr
 
 8.  Copiare i database di sistema nei computer di destinazione.
 
-9.  In Gestione Cluster di failover nell'ambiente originale modificare il nome della risorsa 'Nome server' di ogni ruolo di istanza di cluster di failover di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usando un nome nuovo univoco.
+9.  In Gestione cluster di failover nell'ambiente originale modificare il nome della risorsa "Nome server" di ogni ruolo di istanza di cluster di failover di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usando un nome nuovo univoco.
 
 10. Riportare online solo la risorsa Nome server rinominata per ognuno dei ruoli di istanza di cluster di failover di SQL Server.
 
@@ -218,7 +218,7 @@ La migrazione di un cluster che usa gruppi di disponibilità con repliche autono
 
 9.  Copiare i database di sistema nei computer di destinazione.
 
-10. In Gestione cluster di failover nell'ambiente originale modificare il nome della risorsa 'Nome server' di ogni ruolo di istanza di cluster di failover di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usando un nome nuovo univoco.
+10. In Gestione cluster di failover nell'ambiente originale modificare il nome della risorsa "Nome server" di ogni ruolo di istanza di cluster di failover di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usando un nome nuovo univoco.
 
 11. Riportare online solo la risorsa Nome server rinominata per ognuno dei ruoli di istanza di cluster di failover di SQL Server.
 

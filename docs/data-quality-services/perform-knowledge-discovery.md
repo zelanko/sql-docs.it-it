@@ -5,8 +5,7 @@ ms.date: 06/04/2013
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 f1_keywords:
 - sql13.dqs.kb.kbterms.f1
@@ -17,12 +16,12 @@ ms.assetid: 34a0ea16-02e6-46ed-90bc-dede68687f63
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 500508952a99d773b0349bb930dc04e5abfb8701
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 07db48d0c1dbac3d071dc1574295c9c471cfabb4
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47738029"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617831"
 ---
 # <a name="perform-knowledge-discovery"></a>Esecuzione dell'individuazione delle informazioni
 
@@ -153,15 +152,15 @@ ms.locfileid: "47738029"
   
 2.  Trovare tutte le correzioni proposte da Data Quality Services impostando **Filtro** su **Errori**. Verificare che il valore sia effettivamente in errore e che il valore nella colonna **Correggi in** sia appropriato.  
   
-3.  Impostare **Filtro** su **Tutti i valori** e verificare che lo stato dei valori sia appropriato. Per modificare lo stato di un valore, selezionare il valore, quindi fare clic sul pulsante **Imposta i valori di dominio selezionati come corretti** (segno di spunta), sul pulsante **Imposta i valori di dominio selezionati come errori** (croce) o sul pulsante **Imposta i valori di dominio selezionati come non validi** (triangolo).  
+3.  Impostare **Filtro** su **Tutti i valori** e verificare che lo stato dei valori sia appropriato. Per modificare lo stato di un valore, selezionare il valore e quindi fare clic sul pulsante **Imposta i valori di dominio selezionati come corretti** (segno di spunta), sul pulsante **Imposta i valori di dominio selezionati come errori** (croce) o sul pulsante **Imposta i valori di dominio selezionati come non validi** (triangolo).  
   
 4.  Per modificare lo stato di un valore, procedere come segue:  
   
-    1.  **Imposta i valori di dominio selezionati come corretti**: per modificare lo stato di un valore da Errori o Non validi in Corretti, selezionare il valore, quindi fare clic sull'icona **Imposta i valori di dominio selezionati come corretti** (segno di spunta) dalla freccia in giù nella barra delle icone o dall'elenco a discesa Tipo. Se il valore in errore o non valido viene raggruppato con un valore corretto, eliminare il valore dopo l'operazione.  
+    1.  **Imposta i valori di dominio selezionati come corretti**: per modificare lo stato di un valore da Errore o Non valido in Corretto, selezionare il valore e quindi scegliere **Imposta i valori di dominio selezionati come corretti** (segno di spunta) dalla freccia in giù nella barra delle icone o dall'elenco a discesa Tipo. Se il valore in errore o non valido viene raggruppato con un valore corretto, eliminare il valore dopo l'operazione.  
   
-    2.  **Imposta i valori di dominio selezionati come errori**: per modificare lo stato di un valore da Corretti o Non validi in Errori, selezionare il valore, quindi fare clic sull'icona **Imposta i valori di dominio selezionati come errori** (croce) dalla freccia in giù nella barra delle icone o dall'elenco a discesa Tipo. È possibile immettere una correzione nella colonna **Correggi in** o lasciarla vuota.  
+    2.  **Imposta i valori di dominio selezionati come errori**: per modificare lo stato di un valore da Corretto o Non valido in Errore, selezionare il valore e quindi scegliere l'icona **Imposta i valori di dominio selezionati come errori** (croce) dalla freccia in giù nella barra delle icone o dall'elenco a discesa Tipo. È possibile immettere una correzione nella colonna **Correggi in** o lasciarla vuota.  
   
-    3.  **Imposta i valori di dominio selezionati come non validi**: per modificare lo stato di un valore da Corretti o Errori in Non validi, selezionare il valore, quindi fare clic sull'icona **Imposta i valori di dominio selezionati come non validi** (triangolo) dalla freccia in giù nella barra delle icone o dall'elenco a discesa Tipo. È possibile immettere una correzione nella colonna **Correggi in** o lasciarla vuota.  
+    3.  **Imposta i valori di dominio selezionati come non validi**: per modificare lo stato di un valore da Corretto o Errore in Non valido, selezionare il valore e quindi scegliere l'icona **Imposta i valori di dominio selezionati come non validi** (triangolo) dalla freccia in giù nella barra delle icone o dall'elenco a discesa Tipo. È possibile immettere una correzione nella colonna **Correggi in** o lasciarla vuota.  
   
     4.  **Correggi in**: dopo avere impostato un valore come in errore o non invalido, immettere un nuovo valore nella colonna **Correggi in** . In DQS verrà aggiunta una nuova riga per il valore sostitutivo che verrà designato come valore corretto, quindi verranno raggruppati i due valori. Il nuovo valore verrà visualizzato come valore iniziale, con il valore iniziale in grassetto e il valore in errore o non valido rientrato.  
   
@@ -201,7 +200,7 @@ ms.locfileid: "47738029"
   
     -   **Annulla** per terminare l'attività di individuazione delle informazioni. Il lavoro verrà perso e sarà visualizzata di nuovo la home page di DQS.  
   
-    -   **Chiudi** per salvare il lavoro e tornare alla home page di DQS. La Knowledge Base verrà bloccata e lo stato della Knowledge Base nella relativa tabella della schermata **Apri Knowledge Base** sarà **Individuazione - Gestione valore**.  
+    -   **Chiudi** per salvare il lavoro e tornare alla home page di DQS. La Knowledge Base verrà bloccata e lo stato della Knowledge Base nella relativa tabella della schermata **Apri Knowledge Base** sarà **Discovery - Value Management** (Individuazione - Gestione valore).  
   
     -   Fare clic su **Indietro** per tornare alla pagina **Individua** . Dopo avere fatto clic su **Chiudi**per eseguire l'attività Gestione dominio è necessario fare clic su **Individuazione informazioni** nella schermata **Apri Knowledge Base** , passare alla schermata **Gestione Knowledge Base: Gestisci termini di dominio** , fare clic su **Fine**, quindi fare clic su **Sì** per pubblicare la Knowledge Base o su **No** per salvare il lavoro nella Knowledge Base e uscire.  
   

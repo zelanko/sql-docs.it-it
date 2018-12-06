@@ -19,12 +19,12 @@ ms.assetid: bea8ce8d-cf63-4257-840a-fc9adceade8c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9c6e008139eb9e52583045690cdc51b812ef8e73
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 5723f60855952e9e14e7cdff07ac312d10e38732
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51642268"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52526613"
 ---
 # <a name="deploy-integration-services-ssis-projects-and-packages"></a>Distribuire progetti e pacchetti di Integration Services (SSIS)
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] supporta due modelli di distribuzione, ovvero il modello di distribuzione del progetto e il modello di distribuzione del pacchetto legacy. Tramite il modello di distribuzione del progetto è possibile distribuire i progetti nel server [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
@@ -100,7 +100,7 @@ Per altre informazioni sull'errore descritto in questa sezione e sulle autorizza
   
  Per distribuire un progetto nel server [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , completare le attività seguenti:  
   
-1.  Se necessario, creare un catalogo SSISDB. Per altre informazioni, vedere [Catalogo SSIS](../../integration-services/catalog/ssis-catalog.md).  
+1.  Creare un catalogo SSISDB, se non è stato ancora creato. Per altre informazioni, vedere [Catalogo SSIS](../../integration-services/catalog/ssis-catalog.md).  
   
 2.  Convertire il progetto nel modello di distribuzione del progetto eseguendo la **Conversione guidata progetto di Integration Services** . Per ulteriori informazioni, vedere le istruzioni riportate di seguito: [Per convertire un progetto nel modello di distribuzione del progetto](#convert)  
   
@@ -293,7 +293,7 @@ Avviare la procedura guidata in uno dei due modi seguenti:
 
 **OR**
 
- - Cercare il file eseguibile **ISDeploymentWizard.exe** nella cartella di installazione di SQL Server; ad esempio: "C:\Programmi (x86) \Microsoft SQL Server\130\DTS\Binn". 
+ - Cercare il file eseguibile **ISDeploymentWizard.exe** nella cartella di installazione di SQL Server, ad esempio "C:\Programmi (x86)\Microsoft SQL Server\130\DTS\Binn". 
  
  > **NOTA:** se viene visualizzata la pagina **Introduzione** , fare clic su **Avanti** per passare alla pagina **Seleziona origine** . 
  
@@ -318,7 +318,7 @@ Avviare la procedura guidata in uno dei due modi seguenti:
 #### <a name="select-source"></a>Seleziona origine  
  La pagina **Seleziona origine** in **Distribuzione guidata Integration Services** mostra le impostazioni specifiche per il modello di distribuzione del pacchetto al momento della selezione dell'opzione **Distribuzione di pacchetti** per il **modello di distribuzione**.  
   
- Per selezionare i pacchetti di origine, fare clic sul pulsante **Sfoglia…** per selezionare la **cartella** that contains the packages or type the cartella path in the **Packages cartella path** e fare clic sul pulsante **Aggiorna** nella parte inferiore della pagina. A questo punto, tutti i pacchetti dovrebbero essere visualizzati nella cartella specificata nella casella di riepilogo. Per impostazione predefinita, tutti i pacchetti sono selezionati. Fare clic sulla **casella di controllo** nella prima colonna per scegliere i pacchetti da distribuire nel server.  
+ Per selezionare i pacchetti di origine, fare clic sul pulsante **Sfoglia...** per selezionare la **cartella** contenente i pacchetti o digitarne il percorso nella casella di testo **Percorso cartella pacchetti** e fare clic sul pulsante **Aggiorna** nella parte inferiore della pagina. A questo punto, tutti i pacchetti dovrebbero essere visualizzati nella cartella specificata nella casella di riepilogo. Per impostazione predefinita, tutti i pacchetti sono selezionati. Fare clic sulla **casella di controllo** nella prima colonna per scegliere i pacchetti da distribuire nel server.  
   
  Fare riferimento alle colonne **Stato** e **Messaggio** per verificare lo stato del pacchetto. Se lo stato è impostato su **Pronto** o **Avviso**, la distribuzione guidata non blocca il processo di distribuzione. Al contrario, se lo stato è impostato su **Errore**, la procedura guidata interrompe la distribuzione dei pacchetti selezionati. Per visualizzare il dettaglio dei messaggi di avviso/errore, fare clic sul collegamento nella colonna **Messaggio** .  
   
@@ -327,7 +327,7 @@ Avviare la procedura guidata in uno dei due modi seguenti:
  Se lo stato di tutti i pacchetti selezionati non è impostato su **Errore**, verrà abilitato il pulsante **Avanti** per proseguire con il processo di distribuzione dei pacchetti.  
   
 #### <a name="select-destination"></a>Seleziona destinazione  
- Dopo aver selezionato le origini dei pacchetti, fare clic sul pulsante **Avanti** per passare alla pagina **Seleziona destinazione** . I pacchetti devono essere distribuiti in un progetto nel catalogo SSIS (SSISDB). Prima di distribuirli, verificare quindi che il progetto di destinazione esista già nel catalogo SSIS. In caso contrario, creare un progetto vuoto. Nella pagina **Seleziona destinazione** digitare il nome del server nella casella di testo **Nome server** oppure fare clic sul pulsante **Sfoglia…** per selezionare un'istanza del server. Quindi fare clic sul pulsante **Sfoglia…** accanto alla casella di testo **Percorso** per specificare il progetto di destinazione. Se il progetto non esiste, fare clic su **Nuovo progetto…** per creare un progetto vuoto come progetto di destinazione. Il progetto **DEVE** essere creato in una cartella.  
+ Dopo aver selezionato le origini dei pacchetti, fare clic sul pulsante **Avanti** per passare alla pagina **Seleziona destinazione** . I pacchetti devono essere distribuiti in un progetto nel catalogo SSIS (SSISDB). Prima di distribuirli, verificare quindi che il progetto di destinazione esista già nel catalogo SSIS. In caso contrario, creare un progetto vuoto. Nella pagina **Seleziona destinazione** digitare il nome del server nella casella di testo **Nome server** oppure fare clic sul pulsante **Sfoglia...** per selezionare un'istanza del server. Quindi fare clic sul pulsante **Sfoglia...** accanto alla casella di testo **Percorso** per specificare il progetto di destinazione. Se il progetto non esiste, fare clic su **Nuovo progetto...** per creare un progetto vuoto come progetto di destinazione. Il progetto **DEVE** essere creato in una cartella.  
   
 #### <a name="review-and-deploy"></a>Verifica e distribuisci  
  Fare clic su **Avanti** nella pagina **Seleziona destinazione** per passare alla pagina **Verifica** nella **Distribuzione guidata Integration Services**. Nella pagina della verifica rivedere il report di riepilogo sull'azione di distribuzione. Dopo la verifica, fare clic sul pulsante **Distribuisci** per eseguire l'azione di distribuzione.  
@@ -336,7 +336,7 @@ Avviare la procedura guidata in uno dei due modi seguenti:
  Al termine del processo di distribuzione, verrà visualizzata la pagina **Risultati** . Nella pagina **Risultati** esaminare i risultati di ogni passaggio nel processo di distribuzione. Nella pagina **Risultati** fare clic su **Salva report** per salvare il report di distribuzione o su **Chiudi** per chiudere la procedura guidata.  
 
 ## <a name="create-and-map-a-server-environment"></a>Creare ed eseguire il mapping di un ambiente server
-  Si crea un ambiente server per specificare i valori di runtime per i pacchetti contenuti in un progetto che è stato distribuito nel server [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . È quindi possibile eseguire il mapping delle variabili di ambiente ai parametri, per un pacchetto specifico, per i pacchetti del punto di ingresso o per tutti i pacchetti di un progetto specificato. Un pacchetto del punto di ingresso è in genere un pacchetto padre che esegue un pacchetto figlio.  
+  Creare un ambiente server per specificare i valori di runtime per i pacchetti contenuti in un progetto distribuito nel server [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. È quindi possibile eseguire il mapping delle variabili di ambiente ai parametri, per un pacchetto specifico, per i pacchetti del punto di ingresso o per tutti i pacchetti di un progetto specificato. Un pacchetto del punto di ingresso è in genere un pacchetto padre che esegue un pacchetto figlio.  
   
 > [!IMPORTANT]  
 >  Per un'esecuzione specifica, un pacchetto può essere eseguito solo con i valori contenuti in un ambiente server singolo.  
@@ -380,7 +380,7 @@ Avviare la procedura guidata in uno dei due modi seguenti:
 7.  Per creare lo script dell'ambiente, fare clic su **Script**. Per impostazione predefinita, lo script viene visualizzato in una nuova finestra dell'editor di query.  
   
     > [!TIP]  
-    >  È necessario fare clic su **Script** dopo aver apportato una o più modifiche alle proprietà dell'ambiente, ad esempio se si aggiunge una variabile, e prima di fare clic su **OK** nella finestra di dialogo **Proprietà ambiente** . In caso contrario, non viene creato alcuno script.  
+    >  È necessario fare clic su **Script** dopo aver apportato una o più modifiche alle proprietà dell'ambiente, ad esempio se si aggiunge una variabile, e prima di fare clic su **OK** nella finestra di dialogo **Proprietà ambiente**. In caso contrario, non viene creato alcuno script.  
   
 8.  Fare clic su **OK** per salvare le modifiche apportate alle proprietà di ambiente.  
   
@@ -711,7 +711,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
 ###  <a name="review"></a> Impostare le opzioni nella pagina Verifica  
  Usare la pagina **Verifica** per confermare le opzioni selezionate per la conversione del progetto.  
   
- **Previous**  
+ **Indietro**  
  Fare clic su questo pulsante per modificare un'opzione.  
   
  **Converti**  

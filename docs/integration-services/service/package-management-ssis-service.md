@@ -28,12 +28,12 @@ ms.assetid: 0261ed9e-3b01-4e37-a9d4-d039c41029b6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 964ebe774bb33279fef618b31f5edc2bdb73266f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 141810965960031cf004f9c9999943760bc6c810
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47701629"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52532079"
 ---
 # <a name="package-management-ssis-service"></a>Gestione dei pacchetti (servizio SSIS)
   La gestione dei pacchetti include monitoraggio, gestione, importazione ed esportazione di pacchetti.  
@@ -139,19 +139,19 @@ Per arrestare un pacchetto in esecuzione dalla cartella **Pacchetti in esecuzion
   
     -   Per importare il pacchetto da un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], selezionare l'opzione **SQL Server** , specificare il server e selezionare la modalità di autenticazione. Se si seleziona l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , specificare un nome utente e una password.  
   
-         Fare clic sul pulsante Sfoglia **(…)**, selezionare il pacchetto da importare e quindi fare clic su **OK**.  
+         Fare clic sul pulsante Sfoglia **(...)**, selezionare il pacchetto da importare e quindi fare clic su **OK**.  
   
     -   Per importare il pacchetto dal file system, selezionare l'opzione **File system** .  
   
-         Fare clic sul pulsante Sfoglia **(…)**, selezionare il pacchetto da importare e quindi fare clic su **Apri**.  
+         Fare clic sul pulsante Sfoglia **(...)**, selezionare il pacchetto da importare e quindi fare clic su **Apri**.  
   
     -   Per importare il pacchetto dall'archivio pacchetti [!INCLUDE[ssIS](../../includes/ssis-md.md)] , selezionare l'opzione **Archivio pacchetti SSIS** e specificare il server.  
   
-         Fare clic sul pulsante Sfoglia **(…)**, selezionare il pacchetto da importare e quindi fare clic su **OK**.  
+         Fare clic sul pulsante Sfoglia **(...)**, selezionare il pacchetto da importare e quindi fare clic su **OK**.  
   
 7.  Facoltativamente, aggiornare il nome del pacchetto.  
   
-8.  Per aggiornare il livello di protezione del pacchetto, fare clic sul pulsante Sfoglia **(…)** e specificare un livello di protezione diverso usando la finestra di dialogo **Livello di protezione pacchetto** . Se l'opzione **Crittografa tutti i dati sensibili con una password** o **Crittografa tutti i dati con una password** è selezionata, digitare e confermare una password.  
+8.  Per aggiornare il livello di protezione del pacchetto, fare clic sul pulsante Sfoglia **(...)** e specificare un livello di protezione diverso usando la finestra di dialogo **Livello di protezione pacchetto**. Se l'opzione **Crittografa tutti i dati sensibili con una password** o **Crittografa tutti i dati con una password** è selezionata, digitare e confermare una password.  
   
 9. Fare clic su **OK** per completare l'importazione.  
   
@@ -175,17 +175,17 @@ Per arrestare un pacchetto in esecuzione dalla cartella **Pacchetti in esecuzion
   
     -   Per esportare il pacchetto in un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], selezionare l'opzione **SQL Server** , specificare il server e selezionare la modalità di autenticazione. Se si seleziona l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , specificare un nome utente e una password.  
   
-         Fare clic sul pulsante Sfoglia **(…)** ed espandere la cartella **Pacchetti SSIS** per individuare la cartella in cui salvare il pacchetto. Facoltativamente, aggiornare il nome predefinito del pacchetto e quindi scegliere **OK**.  
+         Fare clic sul pulsante Sfoglia **(...)** ed espandere la cartella **Pacchetti SSIS** per individuare la cartella in cui salvare il pacchetto. Facoltativamente, aggiornare il nome predefinito del pacchetto e quindi scegliere **OK**.  
   
     -   Per esportare il pacchetto nel file system, selezionare l'opzione **File system** .  
   
-         Fare clic sul pulsante Sfoglia **(…)** per individuare la cartella in cui esportare il pacchetto, digitare il nome del file del pacchetto e quindi scegliere **Salva**.  
+         Fare clic sul pulsante Sfoglia **(...)** per individuare la cartella in cui esportare il pacchetto, digitare il nome del file del pacchetto e quindi scegliere **Salva**.  
   
     -   Per eseguire l'esportazione nell'archivio pacchetti [!INCLUDE[ssIS](../../includes/ssis-md.md)] , selezionare l'opzione **Archivio pacchetti SSIS** e specificare il server.  
   
-         Fare clic sul pulsante Sfoglia **(…)**, espandere la cartella **Pacchetti SSIS** e selezionare la cartella in cui salvare il pacchetto. Facoltativamente, immettere un nuovo nome per il pacchetto nella casella di testo **Nome pacchetto** . [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+         Fare clic sul pulsante Sfoglia **(...)**, espandere la cartella **Pacchetti SSIS** e selezionare la cartella in cui si vuole salvare il pacchetto. Facoltativamente, immettere un nuovo nome per il pacchetto nella casella di testo **Nome pacchetto** . [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-7.  Per aggiornare il livello di protezione del pacchetto, fare clic sul pulsante Sfoglia **(…)** e specificare un livello di protezione diverso usando la finestra di dialogo **Livello di protezione pacchetto**. Se l'opzione **Crittografa tutti i dati sensibili con una password** o **Crittografa tutti i dati con una password** è selezionata, digitare e confermare una password.  
+7.  Per aggiornare il livello di protezione del pacchetto, fare clic sul pulsante Sfoglia **(...)** e specificare un livello di protezione diverso usando la finestra di dialogo **Livello di protezione pacchetto**. Se l'opzione **Crittografa tutti i dati sensibili con una password** o **Crittografa tutti i dati con una password** è selezionata, digitare e confermare una password.  
   
 8.  Scegliere **OK** per completare l'esportazione.  
 
@@ -221,13 +221,13 @@ Per arrestare un pacchetto in esecuzione dalla cartella **Pacchetti in esecuzion
  Se si usa l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , specificare una password.  
   
  **Percorso pacchetto**  
- Digitare il percorso del pacchetto oppure fare clic sul pulsante Sfoglia **(…)** per individuare il pacchetto.  
+ Digitare il percorso del pacchetto oppure fare clic sul pulsante Sfoglia **(...)** per individuare il pacchetto.  
   
  **Nome pacchetto**  
  Se lo si desidera, rinominare il pacchetto. Il nome predefinito è il nome del pacchetto da importare.  
   
  **Livello di protezione**  
- Fare clic sul pulsante Sfoglia **(…)** e aggiornare il livello di protezione nella finestra di dialogo **Livello di protezione pacchetto** . Per altre informazioni, vedere [Finestra di dialogo Livello di protezione pacchetto e Livello di protezione del progetto](../../integration-services/security/access-control-for-sensitive-data-in-packages.md#protection_dialog).  
+ Fare clic sul pulsante Sfoglia **(...)** e aggiornare il livello di protezione nella finestra di dialogo **Livello di protezione pacchetto**. Per altre informazioni, vedere [Finestra di dialogo Livello di protezione pacchetto e Livello di protezione del progetto](../../integration-services/security/access-control-for-sensitive-data-in-packages.md#protection_dialog).  
 
 ## <a name="export-package-dialog-box-ui-reference"></a>Riferimento all'interfaccia utente della finestra di dialogo Esporta pacchetto
   Usare la finestra di dialogo **Esporta pacchetto** disponibile in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]per esportare un pacchetto [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] in un percorso diverso ed eventualmente modificare il livello di protezione del pacchetto.  
@@ -261,10 +261,10 @@ Per arrestare un pacchetto in esecuzione dalla cartella **Pacchetti in esecuzion
  Se si usa l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , specificare una password.  
   
  **Percorso pacchetto**  
- Digitare il percorso del pacchetto oppure fare clic sul pulsante Sfoglia ( **…** ) e individuare la cartella in cui archiviare il pacchetto.  
+ Digitare il percorso del pacchetto oppure fare clic sul pulsante Sfoglia **(...)** e individuare la cartella in cui archiviare il pacchetto.  
   
  **Livello di protezione**  
- Fare clic sul pulsante Sfoglia ( **…** ) e aggiornare il livello di protezione nella finestra di dialogo **Livello di protezione pacchetto** . Per altre informazioni, vedere [Finestra di dialogo Livello di protezione pacchetto e Livello di protezione del progetto](../../integration-services/security/access-control-for-sensitive-data-in-packages.md#protection_dialog).  
+ Fare clic sul pulsante Sfoglia **(...)** e aggiornare il livello di protezione nella finestra di dialogo **Livello di protezione pacchetto**. Per altre informazioni, vedere [Finestra di dialogo Livello di protezione pacchetto e Livello di protezione del progetto](../../integration-services/security/access-control-for-sensitive-data-in-packages.md#protection_dialog).  
 
 ## <a name="back-up-and-restore-packages"></a>Eseguire il backup e il ripristino dei pacchetti
   

@@ -13,12 +13,12 @@ ms.assetid: d32d9761-93fb-4020-bf82-231439c6f3ac
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 126dad89a25ccf1a11958676cb0be439fb4aac65
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 968ae6356d2f9d9b84b8cf2d5bf6b012b000b7b2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51641568"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52521235"
 ---
 # <a name="walkthrough-publish-an-ssis-package-as-a-sql-view"></a>Procedura dettagliata: Pubblicare un pacchetto SSIS come vista SQL
   Questa procedura dettagliata fornisce le informazioni necessarie per pubblicare un pacchetto SSIS come vista SQL in un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -243,7 +243,7 @@ GO
  La sintassi per la funzione OPENQUERY è:  
   
 ```sql 
-SELECT * FROM OPENQUERY(<LinkedServer Name>, N’Folder=<Folder Name from SSIS Catalog>; Project=<SSIS Project Name>; Package=<SSIS Package Name>; Use32BitRuntime=[True | False];Parameters=”<parameter_name_1>=<value1>; parameter_name_2=<value2>”;Timeout=<Number of Seconds>;’)  
+SELECT * FROM OPENQUERY(<LinkedServer Name>, N'Folder=<Folder Name from SSIS Catalog>; Project=<SSIS Project Name>; Package=<SSIS Package Name>; Use32BitRuntime=[True | False];Parameters="<parameter_name_1>=<value1>; parameter_name_2=<value2>";Timeout=<Number of Seconds>;')  
 ```  
   
  I parametri Folder, Project e Package sono obbligatori. Use32BitRuntime, Timeout e Parameters sono facoltativi.  

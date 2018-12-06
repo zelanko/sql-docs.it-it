@@ -12,12 +12,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a209033dc614ad2cccd6c1138d89c462f5152a7e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b0b63123e9d48ca7f89d888dca82b6b988942893
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47698599"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52417942"
 ---
 # <a name="manage-retention-of-historical-data-in-system-versioned-temporal-tables"></a>Gestire la conservazione dei dati cronologici nelle tabelle temporali con controllo delle versioni di sistema
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -184,7 +184,7 @@ COMMIT ;
   
 > **NOTA:** vedere la sezione Considerazioni sulle prestazioni con il partizionamento delle tabelle più avanti per informazioni sulle conseguenze dell'uso di RANGE LEFT invece di RANGE RIGHT sulle prestazioni durante la configurazione del partizionamento.  
   
- Si noti che la prima e l'ultima partizione sono "aperte" sul limite inferiore e superiore, rispettivamente, per assicurare che ogni nuova riga abbia una partizione di destinazione, indipendentemente dal valore della colonna di partizionamento.   
+ Si noti che la prima e l'ultima partizione sono "aperte" rispettivamente sul limite inferiore e superiore, per garantire che ogni nuova riga abbia una partizione di destinazione, indipendentemente dal valore della colonna di partizionamento.   
 Con il passare del tempo, le nuove righe della tabella di cronologia verranno inserite in partizioni superiori. Quando la sesta partizione viene riempita, si raggiunge il limite del periodo di conservazione specificato. Questo è il momento in cui avviare per la prima volta l'attività ricorrente di manutenzione della partizione. Questa attività deve essere pianificata per l'esecuzione periodica, una volta al mese in questo esempio.  
   
  La figura seguente illustra le attività ricorrenti di manutenzione della partizione. Vedere la procedura dettagliata più avanti.  
@@ -341,7 +341,7 @@ COMMIT TRANSACTION
   
  In uno scenario con finestra temporale scorrevole, si rimuove sempre il limite inferiore della partizione.  
   
--   Caso RANGE LEFT: nel caso di RANGE LEFT, il limite inferiore della partizione appartiene alla partizione 1, che è vuota, dopo il cambio di partizioni, quindi MERGE RANGE non provocherà alcuno spostamento di dati.  
+-   Caso RANGE LEFT: con RANGE LEFT il limite inferiore della partizione appartiene alla partizione 1, che è vuota, dopo il cambio di partizioni, quindi MERGE RANGE non provocherà alcuno spostamento di dati.  
   
 -   Caso RANGE RIGHT: nel caso di RANGE RIGHT, il limite inferiore della partizione appartiene alla partizione 2, che non è vuota perché è stato presupposto che la partizione 1 sia stata vuotata dalla disattivazione. In questo caso MERGE RANGE provocherà lo spostamento di dati, perché i dati dalla partizione 2 verranno spostati nella partizione 1. Per evitare questo problema, è necessario che RANGE RIGHT nello scenario con finestra temporale scorrevole abbia la partizione 1, che è sempre vuota. Se si usa RANGE RIGHT, è quindi necessario creare e mantenere una partizione aggiuntiva rispetto al caso di RANGE LEFT.  
   

@@ -1,7 +1,7 @@
 ---
 title: SQL Server Management Studio - Log delle modifiche (SSMS) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/16/2018
+ms.date: 11/22/2018
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.assetid: 3dc76cc1-3b4c-4719-8296-f69ec1b476f9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: fd9e5b79aaf16454e74eb1e63325f95bf5f45a40
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: db6f79e16f65494bdb45b297324541668d69d567
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51703989"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52712732"
 ---
 # <a name="sql-server-management-studio---changelog-ssms"></a>SQL Server Management Studio - Changelog (SSMS)
 
@@ -111,7 +111,7 @@ Analysis Services (AS):
 Integration Services:
 
 - Risolto un problema side-by-side per cui la distribuzione guidata non riusciva a connettersi a SQL Server se nello stesso computer erano installati sia SQL Server 2019 che SSMS 18.0.
-- Risolto un problema per cui l'attività di pianificazione della manutenzione non poteva essere modifica al momento della progettazione della pianificazione della manutenzione.
+- Risolto un problema per cui l'attività di pianificazione della manutenzione non poteva essere modificata al momento della progettazione della pianificazione della manutenzione.
 - Risolto un problema per cui la distribuzione guidata si bloccava quando il progetto in distribuzione veniva rinominato.
 - Abilitata l'impostazione dell'ambiente nella funzionalità di pianificazione di Azure-SSIS IR.
 
@@ -198,10 +198,10 @@ SSMS non viene aggiunto alla variabile di ambiente PATH:
 
 - Il percorso di SSMS.EXE (e degli strumenti in generale) non viene più aggiunto alla variabile PATH. Gli utenti possono aggiungerlo direttamente o tramite il menu Start se usano una versione recente di Windows.
 
-Supporto per [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)]
+Supporto per [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]
 
-- Questa è la prima versione di SSMS che *supporta completamente* [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)] (compatLevel 150 e così via).
-- Supporto di "BATCH_STARTED_GROUP" e "BATCH_COMPLETED_GROUP" nella [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)] e in Istanza gestita in SSMS.
+- Questa è la prima versione di SSMS che *supporta completamente* [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] (compatLevel 150 e così via).
+- Supporto di "BATCH_STARTED_GROUP" e "BATCH_COMPLETED_GROUP" in [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] e in Istanza gestita in SSMS.
 - GraphDB: è stato aggiunto un flag nello showplan per la sequenza Graph TC.
 - Always Encrypted: è stato aggiunto il supporto di [Always Encrypted con enclave sicuri](../relational-databases/security/encryption/always-encrypted-enclaves.md).
   - La finestra di dialogo Connessione ha una nuova scheda "Always Encrypted" quando l'utente fa clic sul pulsante "Opzioni" per abilitare e configurare il supporto degli enclave.
@@ -430,7 +430,36 @@ SSIS
 - Il pacchetto non può essere distribuito o eseguito correttamente quando è destinato a una versione meno recente di SQL Server e nel contempo include Attività script o il componente script.
 - SSMS non può connettersi a Integration Services remoto.
 
-## <a name="ssms-179-latest-ga-release"></a>SSMS 17.9 (release GA più recente)
+
+## <a name="ssms-1791-latest-ga-release"></a>SSMS 17.9.1 (versione GA più recente)
+
+![Scaricare](../ssdt/media/download.png) [SSMS 17.9.1](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x409)
+
+- Numero di versione: 17.9.1<br>
+- Numero di build: 14.0.17289.0<br>
+- Data di rilascio: 21 novembre 2018
+
+17.9.1 è un aggiornamento di piccole dimensioni della versione 17.9 con le correzioni di bug seguenti:
+
+- Risolto un problema per il quale la connessione degli utenti veniva chiusa e riaperta ogni volta che veniva chiamata una query durante l'uso dell'autenticazione "Active Directory - Universale con supporto MFA" con l'editor di query SQL. Gli effetti collaterali della chiusura della connessione includevano il rilascio imprevisto delle tabelle temporanee e talvolta l'assegnazione di un nuovo SPID alla connessione.
+- Risolto un problema che persisteva da tempo per cui il piano di ripristino poteva non trovare o generare un piano di ripristino inefficiente in determinate condizioni.
+- Risolto un problema nella procedura guidata "Importa applicazione livello dati" che poteva causare un errore durante la connessione a un database SQL di Azure.
+
+
+
+> [!NOTE]
+> Le versioni di SSMS 17.x localizzate in lingue diverse dall'inglese e installate in Windows 8, Windows 7, Windows Server 2012 e Windows Server 2008 R2 richiedono il [pacchetto di aggiornamento della sicurezza KB 2862966](https://support.microsoft.com/kb/2862966).
+
+[Cinese (semplificato)](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x804) | [Cinese (tradizionale)](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x404) | [Inglese (Stati Uniti)](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x409) | [Francese](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x40c) | [Tedesco](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x410) | [Giapponese](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x412) | [Portoghese (Brasile)](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x416) | [Russo](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x419) | [Spagnolo](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x40a)
+
+
+
+
+
+
+
+
+## <a name="ssms-179"></a>SSMS 17.9
 
 ![Scaricare](../ssdt/media/download.png) [SSMS 17.9](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x409)
 
@@ -496,7 +525,7 @@ Monitoraggio attività:
 
 Integrazione di Microsoft Azure: 
 
-- Correzione di un problema a causa del quale SQL Server Management Studio mostra solo le prime 50 sottoscrizioni (finestre di dialogo Always Encrypted, finestre di dialogo per il backup/ripristino d URL e così via). 
+- Correzione di un problema a causa del quale SQL Server Management Studio mostra solo le prime 50 sottoscrizioni (finestre di dialogo Always Encrypted, finestre di dialogo per il backup/ripristino da URL e così via). 
 - Risolto un problema a causa del quale SSMS generava un'eccezione ("L'indice non è compreso nell'intervallo") durante il tentativo di accedere a un account di Microsoft Azure senza account di archiviazione (nella finestra di dialogo per il ripristino del backup da URL). 
 
 Scripting per gli oggetti: 
@@ -978,7 +1007,7 @@ Disponibile a livello generale | Numero di build: 14.0.17199.0
 **SQL Server Management Studio (SSMS) - Generale**
 
 - Le funzionalità di SSMS riportate di seguito non sono supportate per l'autenticazione di Azure AD tramite agente utente con MFA:
-   - La procedura Ottimizzazione guidata motore di database non è supportata per l'autenticazione di Azure AD: esiste un problema noto a causa del quale il messaggio di errore visualizzato all'utente è poco chiaro: "Impossibile caricare il file o l'assembly 'Microsoft.IdentityModel.Clients.ActiveDirectory,…", invece del previsto "Ottimizzazione guidata motore di database non supporta database SQL di Microsoft Azure." (DTAClient)".
+   - La procedura Ottimizzazione guidata motore di database non è supportata per l'autenticazione di Azure AD: esiste un problema noto a causa del quale il messaggio di errore visualizzato all'utente è poco chiaro: "Impossibile caricare il file o l'assembly 'Microsoft.IdentityModel.Clients.ActiveDirectory,…", invece del previsto "Ottimizzazione guidata motore di database non supporta database SQL di Microsoft Azure (DTAClient)".
 - Il tentativo di analizzare una query in DTA restituisce un errore: "L'oggetto deve implementare IConvertible. (mscorlib)".
 - *Query regredite* non è disponibile nell'elenco di report Query Store in Esplora oggetti.
    - Soluzione alternativa: fare clic con il pulsante destro del mouse sul nodo **Query Store** e selezionare **View Regressed Queries** (Visualizza le query regredite).
@@ -1061,7 +1090,7 @@ The connection is broken and recovery is not possible. The client driver attempt
   - La finestra di progettazione **Nuova tabella/vista** mostra il prompt di accesso obsoleto e non funziona per l'autenticazione di Azure AD.
   - La funzionalità **Modifica le prime 200 righe** non supporta l'autenticazione di Azure AD.
   - Il componente **Server registrato** non supporta l'autenticazione di Azure AD.
-  - L'**Ottimizzazione guidata motore di database** non è supportata per l'autenticazione di Azure AD. C'è un problema noto in cui il messaggio di errore mostrato all'utente non è molto utile: *Impossibile caricare il file o l'assembly 'Microsoft.IdentityModel.Clients.ActiveDirectory…*, anziché il messaggio previsto *Ottimizzazione guidata motore di database non supporta il database SQL di Microsoft Azure*  (DTAClient).
+  - L'**Ottimizzazione guidata motore di database** non è supportata per l'autenticazione di Azure AD. Esiste un problema noto a causa del quale il messaggio di errore visualizzato all'utente è poco chiaro: *Impossibile caricare il file o l'assembly 'Microsoft.IdentityModel.Clients.ActiveDirectory,…*, invece del previsto *Ottimizzazione guidata motore di database non supporta database SQL di Microsoft Azure*  (DTAClient).
 
 **Analysis Services (AS)**
 
@@ -1271,7 +1300,7 @@ https://connect.microsoft.com/SQLServer/feedback/details/3106561/sql-server-mana
 - Risolto un problema di troncamento dell'interfaccia utente nella finestra di dialogo "Nuova registrazione server"
 - Risolto un problema dell'interfaccia utente delle condizioni DMF a causa del quale le espressioni che contengono valori costanti stringa con virgolette vengono aggiornate in modo non corretto
 - Risolto un problema che potrebbe causare l'arresto anomalo di SSMS durante l'esecuzione di report personalizzati
-- Aggiunta della voce di menu per l'esecuzione con scalabilità orizzontale al nodo della cartella
+- È stata aggiunta la voce "Esecuzione" al menu Aggiungi a livello nel nodo delle cartelle
 - Risolto un problema con la funzionalità di elenco di IP consentiti dal firewall di database Azure SQL
 - Risolto un problema in SSMS che ha causato un'eccezione di tipo Riferimento all'oggetto non impostato durante la modifica dell'origine della partizione multidimensionale
 - Risolto un problema in SSMS che ha causato un'eccezione di tipo Riferimento all'oggetto non impostato durante l'eliminazione di un assembly cliente dal server AS multidimensionale

@@ -14,12 +14,12 @@ ms.assetid: 8f625d5a-763c-4440-97b8-4b823a6e2439
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 7b69a59b2b4741894a6242998b67a9b7f9f3d5fe
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 2c82a2400020baf0d97cda595c630c2b7b55a9b1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51604341"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52504508"
 ---
 # <a name="whats-new-in-database-engine---sql-server-2016"></a>Novità del motore di database - SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -225,7 +225,7 @@ Il campionamento dei dati per la generazione di statistiche ora avviene in paral
 ### <a name="sublinear-threshold-for-update-of-statistics"></a>Soglia sublineare per l'aggiornamento delle statistiche
 L'aggiornamento automatico delle statistiche ora è più aggressivo sulle tabelle di grandi dimensioni (con il livello di compatibilità 130). A partire da SQL Server 2016, la soglia per l'attivazione dell'aggiornamento automatico delle statistiche è 20%; per le tabelle più grandi questa soglia inizierà a decrescere (sempre in percentuale) man mano che aumentano le righe nella tabella. Non è necessario impostare il flag di traccia 2371 per ridurre la soglia. 
 ### <a name="other-enhancements"></a>Altri miglioramenti
-Insert in un'istruzione Insert-select è multi-thread o può avere un piano parallelo (con il livello di compatibilità 130). Per ottenere un piano parallelo, l'istruzione INSERT … SELECT deve usare l'hint TABLOCK. Per altre informazioni, vedere il post di blog su [Insert Select in parallelo](https://blogs.msdn.microsoft.com/sqlcat/2016/07/06/sqlsweet16-episode-3-parallel-insert-select/)
+Insert in un'istruzione Insert-select è multi-thread o può avere un piano parallelo (con il livello di compatibilità 130). Per ottenere un piano parallelo, l'istruzione INSERT ... SELECT deve usare l'hint TABLOCK. Per altre informazioni, vedere il post di blog su [Insert Select in parallelo](https://blogs.msdn.microsoft.com/sqlcat/2016/07/06/sqlsweet16-episode-3-parallel-insert-select/)
 
 ## <a name="live-query-statistics"></a>Statistiche sulle query dinamiche
  [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] consente di visualizzare il piano di esecuzione dinamico di una query attiva. Il piano dinamico delle query offre informazioni approfondite in tempo reale sul processo di esecuzione della query, man mano che i controlli passano da un operatore del piano di query a un altro. Per altre informazioni, vedere [Live Query Statistics](../relational-databases/performance/live-query-statistics.md).
@@ -293,7 +293,7 @@ SQL Server 2016 aggiunge il supporto predefinito per l'importazione e l'esportaz
  Per altre informazioni, vedere [PolyBase Guide](../relational-databases/polybase/polybase-guide.md)(Guida a PolyBase).
 
 ## <a name="stretch-database"></a>Stretch database
- Stretch Database è una nuova funzionalità di [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] che esegue la migrazione dei dati cronologici in modo trasparente e sicuro nel cloud di Microsoft Azure. È possibile accedere direttamente ai dati di SQL Server a prescindere che si trovino in locale o che siano stati estesi nel cloud. Impostare i criteri che determinano le posizioni di archiviazione dei dati e SQL Server gestisce il trasferimento dei dati in background. L'intera tabella è sempre online e disponibile per le query. L'estensione database non richiede modifiche alle query o alle applicazioni esistenti: il percorso dei dati è completamente trasparente per l'applicazione. Per ulteriori informazioni, vedere [Stretch Database](../sql-server/stretch-database/stretch-database.md).
+ Stretch Database è una nuova funzionalità di [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] che esegue la migrazione dei dati cronologici in modo trasparente e sicuro nel cloud di Microsoft Azure. È possibile accedere direttamente ai dati di SQL Server a prescindere dal fatto che si trovino in locale o siano stati estesi nel cloud. Impostare i criteri che determinano le posizioni di archiviazione dei dati e SQL Server gestisce il trasferimento dei dati in background. L'intera tabella è sempre online e disponibile per le query. Stretch Database non richiede modifiche alle query o alle applicazioni esistenti: il percorso dei dati è completamente trasparente per l'applicazione. Per ulteriori informazioni, vedere [Stretch Database](../sql-server/stretch-database/stretch-database.md).
  
 ## <a name="support-for-utf-8"></a>Supporto per UTF-8
 [L'utilità bcp](../tools/bcp-utility.md), [BULK INSERT](../t-sql/statements/bulk-insert-transact-sql.md) e [OPENROWSET](../t-sql/functions/openrowset-transact-sql.md) supportano ora la tabella codici UTF-8. Per altre informazioni, vedere questi argomenti in [Creare un file di formato &#40;SQL Server&#41;](../relational-databases/import-export/create-a-format-file-sql-server.md).
@@ -382,7 +382,7 @@ La sicurezza a livello di riga introduce il controllo di accesso basato su predi
 
 
 ### <a name="always-encrypted"></a>Crittografia sempre attiva
-Con Always Encrypted, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] può eseguire operazioni sui dati crittografati e la chiave di crittografia risiede con l'applicazione all'interno dell'ambiente attendibile del cliente e non nel server. La funzionalità Crittografia sempre attiva protegge i dati dei clienti, in modo che gli amministratori del database non abbiano accesso ai dati di testo normale. Le operazioni di crittografia e decrittografia dei dati avvengono in modo trasparente a livello di driver, riducendo al minimo le modifiche da apportare alle applicazioni esistenti. Per altre informazioni, vedere [Always Encrypted &#40;Motore di database&#41;](../relational-databases/security/encryption/always-encrypted-database-engine.md).
+Con Always Encrypted, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] è in grado di eseguire operazioni sui dati crittografati e la chiave di crittografia risiede con l'applicazione all'interno dell'ambiente attendibile del cliente e non nel server. La funzionalità Crittografia sempre attiva protegge i dati dei clienti, in modo che gli amministratori del database non abbiano accesso ai dati di testo normale. Le operazioni di crittografia e decrittografia dei dati avvengono in modo trasparente a livello di driver, riducendo al minimo le modifiche da apportare alle applicazioni esistenti. Per altre informazioni, vedere [Always Encrypted &#40;Motore di database&#41;](../relational-databases/security/encryption/always-encrypted-database-engine.md).
 
 
 ### <a name="dynamic-data-masking"></a>Mascheramento dati dinamici
@@ -426,7 +426,7 @@ Due gruppi di disponibilità in due istanze distinte di Windows Server Failover 
 
 Il seeding diretto consente di eseguire automaticamente il seeding di una replica secondaria in rete invece di eseguire il seeding manuale, che richiede il ripristino di un backup fisico del database di destinazione nella replica secondaria. Il seeding diretto viene specificato impostando **SEEDING_MODE=AUTOMATIC** nell'istruzione [CREATE AVAILABILITY GROUP &#40;Transact-SQL&#41;](../t-sql/statements/create-availability-group-transact-sql.md) o [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../t-sql/statements/alter-availability-group-transact-sql.md). È anche necessario specificare **GRANT CREATE ANY DATABASE** con [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../t-sql/statements/alter-availability-group-transact-sql.md) in ogni replica secondaria usata con il seeding diretto.
 
-**Miglioramenti delle prestazioni**: la velocità effettiva di sincronizzazione dei gruppi di disponibilità è stata aumentata di ~10 volte tramite la compressione più veloce e parallela dei blocchi di log nella replica primaria, un protocollo di sincronizzazione ottimizzato e la decompressione parallela e il ripristino dei record di log nella replica secondaria. Ciò ottimizza l'aggiornamento delle repliche secondarie leggibili e riduce il tempo di ripristino del database in caso di failover. Si noti che il ripristino per le tabelle ottimizzate per la memoria non è ancora parallelo in SQL Server 2016.
+**Miglioramenti delle prestazioni**: la velocità effettiva di sincronizzazione dei gruppi di disponibilità è stata aumentata di ~10 volte sfruttando la compressione parallela e più veloce dei blocchi di log nella replica primaria, un protocollo di sincronizzazione ottimizzato e la decompressione e il rollforward paralleli dei record di log nella replica secondaria. Ciò ottimizza l'aggiornamento delle repliche secondarie leggibili e riduce il tempo di ripristino del database in caso di failover. Si noti che il ripristino per le tabelle ottimizzate per la memoria non è ancora parallelo in SQL Server 2016.
 
 ## <a name="replication-enhancements"></a>Miglioramenti della replica
 - È ora supportata la replica delle tabelle ottimizzate per la memoria. Per altre informazioni, vedere [Replica in sottoscrittori di tabelle con ottimizzazione per la memoria](../relational-databases/replication/replication-to-memory-optimized-table-subscribers.md).

@@ -11,12 +11,12 @@ ms.assetid: f855e931-7502-44bd-8a8b-b8543645c7f4
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 1b0c54bf494055567e7a8c8fc59fe001ac843cfa
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: dfd06b590ba54efc935bab1bbe8c898101e827ae
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51671688"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518614"
 ---
 # <a name="resolve-out-of-memory-issues"></a>Risolvere i problemi di memoria insufficiente
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,11 +29,11 @@ ms.locfileid: "51671688"
 |-----------|--------------|  
 |[Risoluzione degli errori di ripristino del database dovuti a memoria insufficiente](#bkmk_resolveRecoveryFailures)|Operazioni da eseguire se viene visualizzato il messaggio di errore "Operazione di ripristino non riuscita per il database '*\<NomeDatabase>*'. Memoria insufficiente nel pool di risorse '*\<NomePoolRisorse>*'."|  
 |[Risoluzione dell'impatto delle condizioni di memoria insufficiente sul carico di lavoro](#bkmk_recoverFromOOM)|Operazioni da eseguire nel caso in cui i problemi di memoria insufficiente incidono negativamente sulle prestazioni.|  
-|[Risoluzione degli errori di allocazione della pagina dovuti a memoria insufficiente quando è disponibile memoria sufficiente](#bkmk_PageAllocFailure)|Operazioni da eseguire se viene visualizzato il messaggio di errore "È in corso la disabilitazione delle allocazioni di pagine per il database '*\<NomeDatabase>*'. Memoria insufficiente nel pool di risorse *\<NomePoolRisorse>*'. …" quando è disponibile memoria sufficiente per l'operazione.|
+|[Risoluzione degli errori di allocazione della pagina dovuti a memoria insufficiente quando è disponibile memoria sufficiente](#bkmk_PageAllocFailure)|Operazioni da eseguire se viene visualizzato il messaggio di errore "È in corso la disabilitazione delle allocazioni di pagine per il database '*\<NomeDatabase>*'. Memoria insufficiente nel pool di risorse '*\<NomePoolRisorse>*'. ..." quando la memoria disponibile è sufficiente per l'operazione.|
 |[Procedure consigliate sull'uso di OLTP in memoria in un ambiente di VM](#bkmk_VMs)|Aspetti da tenere presenti quando si usa OLTP in memoria in un ambiente virtualizzato.|
   
 ##  <a name="bkmk_resolveRecoveryFailures"></a> Risoluzione degli errori di ripristino del database dovuti a memoria insufficiente  
- Quando si prova a ripristinare un database, è possibile che venga visualizzato il messaggio di errore "L'operazione di ripristino non è riuscita per il database '*\<NomeDatabase>*'. Memoria insufficiente nel pool di risorse *\<NomePoolRisorse>*'." Questo errore indica che la memoria disponibile del server non è sufficiente per il ripristino del database. 
+ Quando si prova a ripristinare un database, è possibile che venga visualizzato il messaggio di errore "Operazione di ripristino non riuscita per il database '*\<NomeDatabase>*'. Memoria insufficiente nel pool di risorse '*\<NomePoolRisorse>*'." Questo errore indica che la memoria disponibile del server non è sufficiente per il ripristino del database. 
    
 La memoria disponibile del server in cui viene ripristinato un database deve essere sufficiente per le tabelle ottimizzate per la memoria nel backup del database. In caso contrario, il database non verrà portato online e verrà contrassegnato come sospetto.  
   
@@ -79,7 +79,7 @@ Se la memoria fisica del server è sufficiente, ma viene comunque visualizzato q
 2.  [Intraprendere un'azione correttiva](#bkmk_takeCorrectiveAction)  
   
 ###  <a name="bkmk_openDAC"></a> Aprire una connessione amministrativa dedicata (DAC)  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] offre una connessione amministrativa dedicata (DAC). La connessione DAC consente a un amministratore di accedere a un'istanza in esecuzione del motore di database di SQL Server per risolvere i problemi sul server, anche quando il server non risponde ad altre connessioni client. La connessione DAC è disponibile tramite l'utilità `sqlcmd` e [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] offre una connessione amministrativa dedicata (DAC). La connessione DAC consente a un amministratore di accedere a un'istanza in esecuzione del motore di database di SQL Server per risolvere i problemi presenti nel server, anche quando il server non risponde ad altre connessioni client. La connessione DAC è disponibile tramite l'utilità `sqlcmd` e [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
  Per informazioni sull'uso della connessione DAC tramite SSMS o `sqlcmd`, vedere [Connessione di diagnostica per gli amministratori di database](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md).  
   
@@ -89,7 +89,7 @@ Se la memoria fisica del server è sufficiente, ma viene comunque visualizzato q
 #### <a name="free-up-existing-memory"></a>Liberare memoria esistente  
   
 ##### <a name="delete-non-essential-memory-optimized-table-rows-and-wait-for-garbage-collection"></a>Eliminare le righe non essenziali delle tabelle con ottimizzazione per la memoria e attendere la procedura di Garbage Collection  
- È possibile rimuovere le righe non essenziali da una tabella con ottimizzazione per la memoria. Il Garbage Collector restituisce la memoria usata da queste righe alla memoria disponibile. Il motore OLTP in memoria raccoglie rapidamente le righe di Garbage Collection. Tuttavia, una transazione con esecuzione prolungata può impedire il processo di Garbage Collection. Ad esempio, se si dispone di una transazione che viene eseguita per 5 minuti, tutte le versioni di riga create a causa delle operazioni di aggiornamento/eliminazione mentre la transazione è attiva non possono essere sottoposte al processo di Garbage Collection.  
+ È possibile rimuovere le righe non essenziali da una tabella con ottimizzazione per la memoria. Il Garbage Collector restituisce la memoria usata da queste righe alla memoria disponibile. Il motore OLTP in memoria raccoglie rapidamente le righe di Garbage Collection. Tuttavia, una transazione con esecuzione prolungata può impedire il processo di Garbage Collection. Ad esempio, nel caso di una transazione in esecuzione per 5 minuti, le versioni di riga create a causa delle operazioni di aggiornamento/eliminazione mentre la transazione era attiva non possono essere sottoposte al processo di Garbage Collection.  
   
 ##### <a name="move-one-or-more-rows-to-a-disk-based-table"></a>Spostare una o più righe in una tabella basata su disco  
  Gli articoli di Technet riportati di seguito offrono istruzioni sullo spostamento di righe da una tabella ottimizzata per la memoria a una tabella basata su disco.  
@@ -130,7 +130,7 @@ GO
  Per informazioni sui valori massimi per MAX_MEMORY_PERCENT, vedere la sezione dell'argomento che riporta le [percentuali di memoria disponibile per indici e tabelle ottimizzate per la memoria](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#bkmk_PercentAvailable).  
   
 ##### <a name="install-additional-memory"></a>Installare memoria aggiuntiva  
- Infine, la soluzione migliore, se possibile, prevede l'installazione di ulteriore memoria fisica. In questo caso, tenere presente che probabilmente sarà possibile aumentare anche il valore di MAX_MEMORY_PERCENT (vedere l'argomento secondario [Cambiare MIN_MEMORY_PERCENT e MAX_MEMORY_PERCENT in un pool esistente](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#bkmk_ChangeAllocation)) poiché [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] potrebbe non richiedere ulteriore memoria, consentendo di rendere disponibile la maggior parte se non tutta la memoria appena installata per il pool di risorse.  
+ Infine, la soluzione migliore, se possibile, prevede l'installazione di ulteriore memoria fisica. In questo caso, tenere presente che probabilmente sarà possibile aumentare anche il valore di MAX_MEMORY_PERCENT (vedere l'argomento [Modificare il valore di MIN_MEMORY_PERCENT e MAX_MEMORY_PERCENT in un pool esistente](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#bkmk_ChangeAllocation)) poiché [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] potrebbe non necessitare di ulteriore memoria, consentendo di rendere disponibile la maggior parte se non tutta la memoria appena installata per il pool di risorse.  
   
 > [!IMPORTANT]  
 >  Se il server è in esecuzione in una VM e non è dedicato, impostare il valore di MIN_MEMORY_PERCENT e MAX_MEMORY_PERCENT sullo stesso valore.   
@@ -153,7 +153,7 @@ Quando si esegue la virtualizzazione di un database con tabelle ottimizzate per 
 -  Se si usa min server memory, è consigliabile assegnare solo la quantità di memoria necessaria in modo che rimanga memoria sufficiente per altri processi (evitando quindi il paging).
 -  Non impostare un valore di preallocazione della memoria troppo elevato. In caso contrario, è possibile che non ci sia memoria sufficiente per altri processi che la richiedono, con conseguente paging della memoria.
 
-Se si seguono le procedure sopra indicate per un database con tabelle ottimizzate per la memoria, un tentativo di ripristinare e recuperare un database potrebbe far sì che il database rimanga nello stato "Recupero in sospeso", anche se la quantità di memoria è sufficiente per il recupero del database. Il motivo è che all'avvio di OLTP in memoria i dati vengono inseriti nella memoria in maniera più drastica rispetto all'allocazione della memoria al database da parte dell'allocazione dinamica della memoria.
+Se si seguono le procedure sopra indicate per un database con tabelle ottimizzate per la memoria, un tentativo di ripristinare e recuperare il database potrebbe determinare lo stato di "Recupero in sospeso" anche se la quantità di memoria disponibile è sufficiente per il recupero del database. Il motivo è che all'avvio di OLTP in memoria i dati vengono inseriti nella memoria in maniera più drastica rispetto all'allocazione della memoria al database da parte dell'allocazione dinamica della memoria.
 
 ### <a name="resolution"></a>Soluzione
 Per risolvere questo problema, preallocare al database una quantità di memoria sufficiente per il recupero o il riavvio del database, anziché un valore minimo che si basa sulla memoria dinamica per ottenere memoria aggiuntiva se necessario.

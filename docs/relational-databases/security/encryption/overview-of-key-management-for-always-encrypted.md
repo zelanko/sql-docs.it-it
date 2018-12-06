@@ -12,12 +12,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4399368e139d9ba6875e7b724c2c401bab8b7615
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b9250b8e8ceb392973c5799d8cf473d8b94a267b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47790231"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535392"
 ---
 # <a name="overview-of-key-management-for-always-encrypted"></a>Overview of Key Management for Always Encrypted (Panoramica della gestione delle chiavi per Always Encrypted)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ Il processo di gestione delle chiavi può essere suddiviso nelle attività di al
 
 - **Provisioning della chiave** : creazione delle chiavi fisiche in un archivio chiavi attendibile, ad esempio nell'archivio certificati Windows, nell'insieme di credenziali delle chiavi di Azure o in un modulo di sicurezza hardware, crittografia delle chiavi di crittografia della colonna con le chiavi master della colonna e creazione dei metadati per entrambi i tipi di chiavi nel database.
 
-- **Rotazione delle chiavi** : sostituzione periodica di una chiave esistente con una nuova. Potrebbe essere necessario ruotare una chiave se questa è stata compromessa oppure per conformità ai criteri e alle normative dell'organizzazione che impongono la rotazione delle chiavi crittografiche. 
+- **Rotazione delle chiavi** : sostituzione periodica di una chiave esistente con una nuova. Può essere necessario ruotare una chiave se questa è stata compromessa oppure per conformità ai criteri e alle normative dell'organizzazione che impongono la rotazione delle chiavi crittografiche. 
 
 
 ## <a name="KeyManagementRoles"></a> Ruoli di gestione delle chiavi
@@ -52,7 +52,7 @@ Il processo di gestione delle chiavi può essere suddiviso nelle attività di al
 Per la gestione delle chiavi Always Encrypted esistono due ruoli utente distinti: gli amministratori della sicurezza e gli amministratori del database:
 
 - **Amministratore della sicurezza** : genera le chiavi di crittografia della colonna e le chiavi master della colonna, oltre agli archivi delle chiavi contenenti le chiavi master della colonna. Per eseguire queste attività, un amministratore della sicurezza deve essere in grado di accedere alle chiavi e all'archivio delle chiavi, ma non ha bisogno di accedere al database.
-- **Amministratore del database** : gestisce i metadati relativi alle chiavi nel database. Per eseguire attività di gestione delle chiavi, un amministratore del database deve essere in grado di gestire i metadati delle chiavi nel database, ma non ha bisogno di accedere alle chiavi o all'archivio delle chiavi che contiene le chiavi master della colonna.
+- **Amministratore del database**: gestisce i metadati relativi alle chiavi nel database. Per eseguire attività di gestione delle chiavi, un amministratore del database deve essere in grado di gestire i metadati delle chiavi nel database, ma non ha bisogno di accedere alle chiavi o all'archivio delle chiavi che contiene le chiavi master della colonna.
 
 Considerando i ruoli sopra descritti, le attività di gestione delle chiavi per Always Encrypted possono essere eseguite in due modi diversi: *con la separazione dei ruoli*e *senza la separazione dei ruoli*. A seconda delle esigenze dell'organizzazione è possibile selezionare il processo di gestione delle chiavi che meglio si adatta alle proprie esigenze.
 
@@ -70,14 +70,14 @@ Se le chiavi Always Encrypted vengono gestite senza separazione dei ruoli, un un
 
 Le chiavi Always Encrypted possono essere gestite tramite [SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/ms174173.aspx) e [PowerShell](../../scripting/sql-server-powershell.md):
 
-- **SQL Server Management Studio (SSMS)** : fornisce finestre di dialogo e procedure guidate che consentono di combinare attività legate all'accesso all'archivio delle chiavi e all'accesso al database. SSMS quindi non supporta la separazione dei ruoli ma semplifica la configurazione delle chiavi. Per altre informazioni sulla gestione delle chiavi con SSMS, vedere:
+- **SQL Server Management Studio (SSMS)**: mette a disposizione finestre di dialogo e procedure guidate che consentono di combinare attività legate all'accesso all'archivio delle chiavi e all'accesso al database. SSMS quindi non supporta la separazione dei ruoli ma semplifica la configurazione delle chiavi. Per altre informazioni sulla gestione delle chiavi con SSMS, vedere:
     - [Provisioning delle chiavi master della colonna](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md#provisioncmk)
     - [Provisioning delle chiavi di crittografia della colonna](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md#provisioncek)
     - [Rotazione delle chiavi master di colonna](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md#rotatecmk)
     - [Rotazione delle chiavi di crittografia della colonna](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md#rotatecek)
 
 
-- **SQL Server PowerShell** : include cmdlet per la gestione delle chiavi Always Encrypted con e senza la separazione dei ruoli. Per altre informazioni, vedere:
+- **SQL Server PowerShell**: include cmdlet per la gestione delle chiavi Always Encrypted con e senza la separazione dei ruoli. Per altre informazioni, vedere:
     - [Configure Always Encrypted Keys using PowerShell (Configurare le chiavi Always Encrypted tramite PowerShell)](../../../relational-databases/security/encryption/configure-always-encrypted-keys-using-powershell.md)
     - [Ruotare le chiavi Always Encrypted tramite PowerShell](../../../relational-databases/security/encryption/rotate-always-encrypted-keys-using-powershell.md)
 

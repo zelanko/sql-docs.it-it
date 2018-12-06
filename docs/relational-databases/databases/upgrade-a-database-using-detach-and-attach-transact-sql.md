@@ -1,7 +1,7 @@
 ---
 title: Aggiornare un database usando le operazioni di scollegamento e collegamento (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 11/26/2018
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -18,16 +18,16 @@ ms.assetid: 99f66ed9-3a75-4e38-ad7d-6c27cc3529a9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ea74651b778570910e020f55a28226a1ec2e8055
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 0b6b540227212058518a62debc6b113f31beab37
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558908"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52394078"
 ---
 # <a name="upgrade-a-database-using-detach-and-attach-transact-sql"></a>Aggiornamento di un database utilizzando le operazioni di scollegamento e collegamento (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  In questo argomento si illustra come utilizzare le operazioni di collegamento e scollegamento per aggiornare un database di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Dopo essere stato collegato a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], il database è immediatamente disponibile e viene aggiornato automaticamente.  
+In questo argomento si illustra come utilizzare le operazioni di collegamento e scollegamento per aggiornare un database di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Dopo essere stato collegato a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], il database è immediatamente disponibile e viene aggiornato automaticamente. Questo impedisce l'uso del database con una versione precedente di [!INCLUDE[ssde_md](../../includes/ssde_md.md)]. Tuttavia l'aggiornamento dei metadati non interessa l'impostazione [Livello di compatibilità database](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) per un database. Per altre informazioni, vedere [Livello di compatibilità del database dopo l'aggiornamento](#dbcompat) più avanti in questo argomento.  
   
  **Contenuto dell'argomento**  
   
@@ -41,7 +41,9 @@ ms.locfileid: "51558908"
   
      [Utilizzo delle operazioni di collegamento e scollegamento](#SSMSProcedure)  
   
--   **Completamento:**  [Dopo l'aggiornamento di un database di SQL Server](#FollowUp)  
+-   **Completamento:**    
+
+     [Dopo l'aggiornamento di un database SQL Server](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> Prima di iniziare  
   
@@ -58,7 +60,7 @@ ms.locfileid: "51558908"
     -   Se si collega il database a un'istanza del server diversa (indipendentemente dalla versione), è necessario eseguire **sp_removedbreplication** per rimuovere la replica al termine dell'operazione di collegamento. Per altre informazioni, vedere [sp_removedbreplication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md).  
   
 ###  <a name="Recommendations"></a> Indicazioni  
- È consigliabile evitare di collegare o ripristinare database provenienti da origini sconosciute o non attendibili. Tali database possono contenere codice dannoso che potrebbe eseguire codice [!INCLUDE[tsql](../../includes/tsql-md.md)] indesiderato o causare errori modificando lo schema o la struttura fisica di database. Prima di utilizzare un database da un'origine sconosciuta o non attendibile, eseguire [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) sul database in un server non di produzione ed esaminare il codice contenuto nel database, ad esempio le stored procedure o altro codice definito dall'utente.  
+È consigliabile evitare di collegare o ripristinare database provenienti da origini sconosciute o non attendibili. Tali database possono contenere codice dannoso che potrebbe eseguire codice [!INCLUDE[tsql](../../includes/tsql-md.md)] indesiderato o causare errori modificando lo schema o la struttura fisica di database. Prima di utilizzare un database da un'origine sconosciuta o non attendibile, eseguire [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) sul database in un server non di produzione ed esaminare il codice contenuto nel database, ad esempio le stored procedure o altro codice definito dall'utente.  
   
 ##  <a name="SSMSProcedure"></a> Per aggiornare un database utilizzando le operazioni di collegamento e scollegamento  
   
@@ -78,7 +80,7 @@ ms.locfileid: "51558908"
   
 1.  Scollegare il database eseguendo le istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] riportate di seguito:  
   
-    ```  
+    ```sql  
     USE master;  
     GO  
     EXEC sp_detach_db @dbname = N'MyDatabase';  
@@ -88,13 +90,13 @@ ms.locfileid: "51558908"
 2.  Copiare i dati e i file di log nel nuovo percorso utilizzando il metodo scelto.  
   
     > [!IMPORTANT]  
-    >  Nel caso di un database di produzione, posizionare su dischi separati il database e il log delle transazioni.  
+    > Nel caso di un database di produzione, è preferibile posizionare il database e il log delle transazioni su dischi separati. Le due entità hanno requisiti di I/O e crescita dei file diversi, pertanto la procedura consigliata è la separazione del database e del log delle transazioni.  
   
-     Per copiare i file in rete su un disco di un computer remoto, utilizzare il nome UNC (Universal Naming Convention) della posizione remota. Il formato di un nome UNC è **\\\\***Nomeserver***\\***Nomecondivisione***\\***Percorso***\\***Nomefile*. Come per la scrittura di file nel disco rigido locale, è necessario che l'account utente utilizzato dall'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]disponga delle autorizzazioni appropriate per la lettura o la scrittura di un file nel disco remoto.  
+    Per copiare i file in rete su un disco di un computer remoto, utilizzare il nome UNC (Universal Naming Convention) della posizione remota. Il formato di un nome UNC è `\\Servername\Sharename\Path\Filename`. Come per la scrittura di file nel disco rigido locale, è necessario che l'account utente utilizzato dall'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]disponga delle autorizzazioni appropriate per la lettura o la scrittura di un file nel disco remoto.  
   
 3.  Collegare il database spostato e, facoltativamente, il relativo log tramite l'esecuzione dell'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] seguente:  
   
-    ```  
+    ```sql  
     USE master;  
     GO  
     CREATE DATABASE MyDatabase   
@@ -104,18 +106,18 @@ ms.locfileid: "51558908"
     GO  
     ```  
   
-     In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]un database appena collegato non è immediatamente visibile in Esplora oggetti. Per visualizzarlo, in Esplora oggetti scegliere **Aggiorna** dal menu **Visualizza**. Quando si espande il nodo **Database** in Esplora oggetti, il database appena collegato viene visualizzato nell'elenco dei database.  
+    In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]un database appena collegato non è immediatamente visibile in Esplora oggetti. Per visualizzarlo, in Esplora oggetti scegliere **Aggiorna** dal menu **Visualizza**. Quando si espande il nodo **Database** in Esplora oggetti, il database appena collegato viene visualizzato nell'elenco dei database.  
   
 ##  <a name="FollowUp"></a> Completamento: Dopo l'aggiornamento di un database di SQL Server  
- Se il database include indici full-text, il processo di aggiornamento li importa, li reimposta o li ricompila, a seconda dell'impostazione della proprietà del server **upgrade_option** . Se l'opzione di aggiornamento è impostata per l'importazione (**upgrade_option** = 2) o la ricompilazione (**upgrade_option** = 0), gli indici full-text non saranno disponibili durante l'aggiornamento. A seconda della quantità di dati indicizzati, l'importazione può richiedere diverse ore, mentre la ricompilazione può risultare dieci volte più lunga. Si noti inoltre che quando l'opzione di aggiornamento è impostata sull'importazione, gli indici full-text associati vengono ricompilati se non è disponibile un catalogo full-text. Per modificare l'impostazione della proprietà del server **upgrade_option** , usare [sp_fulltext_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md).  
+Se il database include indici full-text, il processo di aggiornamento li importa, li reimposta o li ricompila, a seconda dell'impostazione della proprietà del server **upgrade_option** . Se l'opzione di aggiornamento è impostata per l'importazione (**upgrade_option** = 2) o la ricompilazione (**upgrade_option** = 0), gli indici full-text non saranno disponibili durante l'aggiornamento. A seconda della quantità di dati indicizzati, l'importazione può richiedere diverse ore, mentre la ricompilazione può risultare dieci volte più lunga. Si noti inoltre che quando l'opzione di aggiornamento è impostata sull'importazione, gli indici full-text associati vengono ricompilati se non è disponibile un catalogo full-text. Per modificare l'impostazione della proprietà del server **upgrade_option** , usare [sp_fulltext_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md).  
   
-### <a name="database-compatibility-level-after-upgrade"></a>Livello di compatibilità del database dopo l'aggiornamento  
- Se il livello di compatibilità di un database utente è 100 o superiore prima dell'aggiornamento, rimane invariato dopo l'aggiornamento. Se il livello di compatibilità è 90 prima dell'aggiornamento, nel database aggiornato questo valore viene impostato su 100, cioè sul livello di compatibilità inferiore supportato in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Per altre informazioni, vedere [Livello di compatibilità ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
+### <a name="dbcompat"></a> Livello di compatibilità del database dopo l'aggiornamento  
+Se il livello di compatibilità di un database utente è 100 o superiore prima dell'aggiornamento, rimane invariato dopo l'aggiornamento. Se il livello di compatibilità è 90 prima dell'aggiornamento, nel database aggiornato questo valore viene impostato su 100, cioè sul livello di compatibilità inferiore supportato in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Per altre informazioni, vedere [Livello di compatibilità ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
   
 ### <a name="managing-metadata-on-the-upgraded-server-instance"></a>Gestione dei metadati nell'istanza del server aggiornata  
- Quando si collega un database a un'altra istanza del server, per garantire un sistema consistente a utenti e applicazioni, potrebbe essere necessario ricreare tutti i metadati del database o parte di essi, tra cui account di accesso, processi e autorizzazioni, nell'altra istanza del server. Per altre informazioni, vedere [Gestione dei metadati quando si rende disponibile un database in un'altra istanza del server &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md).  
+Quando si collega un database a un'altra istanza del server, per garantire un sistema consistente a utenti e applicazioni, potrebbe essere necessario ricreare tutti i metadati del database o parte di essi, tra cui account di accesso, processi e autorizzazioni, nell'altra istanza del server. Per altre informazioni, vedere [Gestione dei metadati quando si rende disponibile un database in un'altra istanza del server &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md).  
   
 ### <a name="service-master-key-and-database-master-key-encryption-changes-from-3des-to-aes"></a>Modifica della crittografia della chiave master di servizio e della chiave master di database da 3DES a AES  
- [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive usano l'algoritmo di crittografia AES per proteggere la chiave master del servizio (SMK) e la chiave master del database (DMK). AES è un algoritmo di crittografia più recente rispetto a 3DES utilizzato nelle versioni precedenti. Quando un database viene collegato per la prima volta a una nuova istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]o ripristinato, nel server non è ancora archiviata una copia della chiave master del database, crittografata dalla chiave master del servizio. È necessario usare l'istruzione **OPEN MASTER KEY** per decrittografare la chiave master del database. Dopo aver decrittografato la DMK, è possibile usare l'istruzione **ALTER MASTER KEY REGENERATE** per abilitare la decrittografia automatica per le operazioni successive, in modo da fornire al server una copia della DMK crittografata con la chiave master del servizio (SMK). Quando un database è stato aggiornato da una versione precedente, la DMK deve essere rigenerata per usare l'algoritmo AES più recente. Per altre informazioni sulla rigenerazione della DMK, vedere [ALTER MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-master-key-transact-sql.md). Il tempo richiesto per rigenerare la chiave DMK e aggiornarla ad AES dipende dal numero di oggetti protetti dalla DMK. È necessario rigenerare la chiave DMK per l'aggiornamento ad AES una sola volta e l'operazione non influenza le rigenerazioni future che fanno parte di una strategia di rotazione della chiave.  
+ [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive usano l'algoritmo di crittografia AES per proteggere la chiave master del servizio (SMK) e la chiave master del database (DMK). AES è un algoritmo di crittografia più recente rispetto a 3DES utilizzato nelle versioni precedenti. Quando un database viene collegato per la prima volta a una nuova istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]o ripristinato, nel server non è ancora archiviata una copia della chiave master del database, crittografata dalla chiave master del servizio. È necessario usare l'istruzione `OPEN MASTER KEY` per decrittografare la chiave master del database (DMK). Dopo aver decrittografato la DMK, è possibile usare l'istruzione `ALTER MASTER KEY REGENERATE` per abilitare la decrittografia automatica per le operazioni successive, in modo da fornire al server una copia della DMK crittografata con la chiave master del servizio (SMK). Quando un database è stato aggiornato da una versione precedente, la DMK deve essere rigenerata per usare l'algoritmo AES più recente. Per altre informazioni sulla rigenerazione della DMK, vedere [ALTER MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-master-key-transact-sql.md). Il tempo richiesto per rigenerare la chiave DMK e aggiornarla ad AES dipende dal numero di oggetti protetti dalla DMK. È necessario rigenerare la chiave DMK per l'aggiornamento ad AES una sola volta e l'operazione non influenza le rigenerazioni future che fanno parte di una strategia di rotazione della chiave.  
   
   

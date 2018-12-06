@@ -15,18 +15,18 @@ ms.assetid: 22902fd0-eb39-4f18-af94-3fcb69d2a3a4
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 732cc1fb83248104d7f7487855961bf7969d7fae
-ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
+ms.openlocfilehash: c0b900cc31b9bacf0658422c9953dedec4ee9659
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51217120"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52517456"
 ---
 # <a name="update-statistics-task-maintenance-plan"></a>Attività Aggiorna statistiche (Piano di manutenzione)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Usare la finestra di dialogo **Attività Aggiorna statistiche** per aggiornare le informazioni di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sui dati contenuti nelle tabelle e negli indici. Questa attività consente di eseguire un nuovo campionamento delle statistiche di distribuzione di tutti gli indice creati per le tabelle utente del database. Le statistiche di distribuzione vengono utilizzate da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per ottimizzare le operazioni di navigazione tra le tabelle durante l'elaborazione delle istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] . Per compilare automaticamente le statistiche di distribuzione, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] esegue, per ogni indice, un campionamento periodico dei dati della tabella corrispondente La dimensione del campione è basata sul numero di righe della tabella e sulla frequenza di modifica dei dati. Questa opzione consente di eseguire un ulteriore campionamento utilizzando una determinata percentuale di dati delle tabelle. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa queste informazioni per creare piani di query più efficienti.  
   
- Questa attività esegue l'istruzione UPDATE STATISTICS.  
+Questa attività esegue l'istruzione `UPDATE STATISTICS`.  
   
 ## <a name="options"></a>Opzioni  
  **Connessione**  
@@ -54,7 +54,8 @@ ms.locfileid: "51217120"
   
      Consente di generare un piano per l'esecuzione di attività di manutenzione solo sui database selezionati. Se si sceglie questa opzione, è necessario selezionare almeno un database nell'elenco.  
   
- **Nota** I piani di manutenzione vengono eseguiti solo su database il cui livello di compatibilità è impostato su 80 o su un valore superiore. I database per cui è impostato un livello di compatibilità 70 o inferiore non vengono visualizzati.  
+ > [!NOTE]
+ > I piani di manutenzione vengono eseguiti solo nei database per i quali è impostato un livello di compatibilità 80 o superiore. I database per cui è impostato un livello di compatibilità 70 o inferiore non vengono visualizzati.  
   
  **Oggetto**  
  Consente di limitare la griglia **Selezione** per visualizzare tabelle, viste o entrambe.  
@@ -84,7 +85,7 @@ ms.locfileid: "51217120"
  Consente di visualizzare le istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] eseguite sul server per questa attività, in base alle opzioni selezionate.  
   
 > [!NOTE]  
->  Se il numero di oggetti interessato dall'attività è elevato, la visualizzazione del codice potrebbe richiedere una considerevole quantità di tempo.  
+> Se il numero di oggetti interessato dall'attività è elevato, la visualizzazione del codice potrebbe richiedere una considerevole quantità di tempo.  
   
 ## <a name="new-connection-dialog-box"></a>Finestra di dialogo Nuova connessione  
  **Nome connessione**  
@@ -112,6 +113,6 @@ ms.locfileid: "51217120"
  Consente di specificare una password da utilizzare per l'autenticazione. Questa opzione non è disponibile.  
   
 ## <a name="see-also"></a>Vedere anche  
- [UPDATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/update-statistics-transact-sql.md)  
-  
-  
+ [UPDATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/update-statistics-transact-sql.md)    
+ [sp_updatestats](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md)    
+ [Adaptive Index Defrag](https://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag) (Deframmentazione dell'indice adattativo)

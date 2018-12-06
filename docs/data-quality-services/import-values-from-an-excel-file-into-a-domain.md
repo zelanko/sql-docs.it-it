@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 f1_keywords:
 - sql13.dqs.kb.importfailing.f1
@@ -16,12 +15,12 @@ ms.assetid: 04cde693-2043-477f-8417-fcc463ca7195
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3fd18c3f8614a47a96f5a917fdeb6e59025a2590
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 394fbfd149e9631148ca495675d93bda0ed652f1
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47828589"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52616891"
 ---
 # <a name="import-values-from-an-excel-file-into-a-domain"></a>Importare i valori da un file di Excel in un dominio
 
@@ -67,9 +66,9 @@ ms.locfileid: "47828589"
   
 10. Fare clic su **OK**. Verrà visualizzato un indicatore di stato in cui è riportato il numero di valori importati e non importati e il numero totale di valori. Fare clic sul pulsante **Annulla** per annullare il processo.  
   
-11. Verificare che nella finestra di dialogo **Importa valori di dominio** venga visualizzato "Importazione completata". Controllare in questa finestra di dialogo quali valori sono stati importati e quali non lo sono stati. Viene indicato il nome del file e il percorso, lo stato di completamento dell'operazione, il numero di valori importati e non importati e il numero totale di valori elaborati.  
+11. Verificare che nella finestra di dialogo **Importa valori di dominio** sia visualizzato "Importazione completata". Controllare in questa finestra di dialogo quali valori sono stati importati e quali non lo sono stati. La finestra indica il nome e il percorso del file, lo stato di completamento dell'operazione, il numero di valori importati e non importati e il numero totale di valori elaborati.  
   
-12. Per i valori che non sono stati importati correttamente, fare clic su **Log** per visualizzare la finestra di dialogo **Importa valori di dominio - Valori errati** per vedere il motivo per cui l'operazione di importazione non è riuscita. Nella colonna **Valore errato** vengono visualizzati i valori di cui non è stato possibile eseguire l'importazione da un file di Excel in un dominio e nella colonna **Motivo** viene descritto il motivo per cui l'importazione non è riuscita. Fare clic su **Copia negli Appunti** per copiare la tabella **Valore errato** negli Appunti da cui è possibile copiarla in un altro programma, ad esempio un foglio di calcolo di Excel o un file di Blocco note. Fare clic su **OK** per chiudere la finestra di dialogo **Valori errati** .  
+12. Per i valori che non sono stati importati, fare clic su **Log** per visualizzare la finestra di dialogo **Importa valori di dominio - Valori errati** per vedere il motivo per cui l'operazione di importazione non è riuscita. Nella colonna **Valore errato** vengono visualizzati i valori di cui non è stato possibile eseguire l'importazione da un file di Excel in un dominio e nella colonna **Motivo** viene descritto il motivo per cui l'importazione non è riuscita. Fare clic su **Copia negli Appunti** per copiare la tabella **Valore errato** negli Appunti da cui è possibile copiarla in un altro programma, ad esempio un foglio di calcolo di Excel o un file di Blocco note. Fare clic su **OK** per chiudere la finestra di dialogo **Valori errati** .  
   
 13. Fare clic su **OK** per completare l'operazione di importazione e chiudere la finestra di dialogo. Al termine dell'importazione, l'elenco di valori di dominio nella pagina **Valori di dominio** viene aggiornato per includere i nuovi valori importati. Il filtro viene modificato in **Tutti i valori** e viene selezionato **Mostra solo nuovi** . Quando dopo l'operazione di importazione si seleziona **Mostra solo nuovi** , verranno visualizzati solo i valori importati dal file di Excel.  
   
@@ -102,7 +101,7 @@ ms.locfileid: "47828589"
   
 -   Un valore in contrasto con una regola di dominio verrà importato come valore non valido.  
   
--   Se un valore non è del tipo di dati del dominio o è null, non verrà importato dal file.  
+-   Se un valore non è del tipo di dati del dominio o è Null, non verrà importato dal file.  
   
 -   I valori vengono importati nell'ordine in cui vengono visualizzati nel file.  
   
@@ -116,7 +115,7 @@ ms.locfileid: "47828589"
   
     -   Il formato previsto è che i valori della prima colonna saranno valori iniziali, mentre dalla seconda colonna in poi saranno sinonimi.  
   
-    -   È possibile importare più sinonimi nella stessa riga o in righe diverse. Se ad esempio si desidera importare "NYC" e "New York City" come sinonimi per "New York", è possibile importare una sola riga con "New York" nella colonna 1, "NYC" nella colonna 2 e "New York City" nella colonna 3. In alternativa, è possibile importare una riga con "New York" nella colonna 1 e "NYC" nella colonna 2 e un'altra riga con "New York" nella colonna 1 e "New York City" nella colonna 2. Si noti che se il valore "New York" esiste già nel dominio, verranno aggiunti solo i sinonimi e non verrà visualizzato alcun messaggio di errore durante il processo di importazione in cui viene indicato che il valore esiste già. Se il primo valore non esiste già, verrà aggiunto al dominio.  
+    -   È possibile importare più sinonimi nella stessa riga o in righe diverse. Se ad esempio si desidera importare "NYC" e "New York City" come sinonimi per "New York", è possibile importare una sola riga con "New York" nella colonna 1, "NYC" nella colonna 2 e "New York City" nella colonna 3. In alternativa, è possibile importare una riga con "New York" nella colonna 1 e "NYC" nella colonna 2 e un'altra riga con "New York" nella colonna 1 e "New York City" nella colonna 2. Si noti che se il valore "New York" è già presente nel dominio, verranno aggiunti solo i sinonimi e durante il processo di importazione non verrà visualizzato alcun messaggio di errore in cui si indica che il valore esiste già. Se il primo valore non esiste già, verrà aggiunto al dominio.  
   
  Al file di Excel utilizzato per l'importazione vengono applicate le regole seguenti:  
   

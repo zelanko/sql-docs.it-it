@@ -22,21 +22,21 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cd501cd54a4726033b8c2a1b746148ec17f3dc8a
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 877fbd597ce603427c9bdcca00b2ecdeffbb2180
+ms.sourcegitcommit: f1cf91e679d1121d7f1ef66717b173c22430cb42
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701755"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52586294"
 ---
 # <a name="update-statistics-transact-sql"></a>UPDATE STATISTICS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Aggiorna le statistiche di ottimizzazione query in una tabella o una vista indicizzata. Per impostazione predefinita, Query Optimizer aggiorna già le statistiche come necessario per migliorare il piano di query. In alcuni casi è possibile migliorare le prestazioni di esecuzione delle query tramite UPDATE STATISTICS o la stored procedure [sp_updatestats](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md) per aggiornare le statistiche più di frequente rispetto agli aggiornamenti predefiniti.  
+Aggiorna le statistiche di ottimizzazione query in una tabella o una vista indicizzata. Per impostazione predefinita, Query Optimizer aggiorna già le statistiche come necessario per migliorare il piano di query. In alcuni casi è possibile migliorare le prestazioni di esecuzione delle query usando `UPDATE STATISTICS` o la stored procedure [sp_updatestats](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md) per aggiornare le statistiche più di frequente rispetto agli aggiornamenti predefiniti.  
   
- Sebbene consenta di garantire che le query vengano compilate con statistiche aggiornate, l'aggiornamento delle statistiche causa la ricompilazione delle query. Si consiglia di non aggiornare le statistiche troppo frequentemente perché è necessario mantenere un equilibrio a livello di prestazioni tra la necessità di migliorare i piani di query e il tempo necessario per la ricompilazione delle query. Tale equilibrio dipende dall'applicazione in uso. Per le operazioni UPDATE STATISTICS è possibile usare tempdb per ordinare l'esempio di righe per la compilazione di statistiche.  
+Sebbene consenta di garantire che le query vengano compilate con statistiche aggiornate, l'aggiornamento delle statistiche causa la ricompilazione delle query. Si consiglia di non aggiornare le statistiche troppo frequentemente perché è necessario mantenere un equilibrio a livello di prestazioni tra la necessità di migliorare i piani di query e il tempo necessario per la ricompilazione delle query. Tale equilibrio dipende dall'applicazione in uso. Per le operazioni `UPDATE STATISTICS` è possibile usare tempdb per ordinare l'esempio di righe per la compilazione di statistiche.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -57,7 +57,7 @@ UPDATE STATISTICS table_or_indexed_view_name
             | SAMPLE number { PERCENT | ROWS }   
               [ [ , ] PERSIST_SAMPLE_PERCENT = { ON | OFF } ]    
             | RESAMPLE   
-              [ ON PARTITIONS ( { <partition_number> | <range> } [, …n] ) ]  
+              [ ON PARTITIONS ( { <partition_number> | <range> } [, ...n] ) ]  
             | <update_stats_stream_option> [ ,...n ]  
         ]   
         [ [ , ] [ ALL | COLUMNS | INDEX ]   
@@ -131,7 +131,7 @@ Se **ON**, le statistiche mantengono la percentuale di campionamento impostata p
  
  **Si applica a**: da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] (a partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU4) fino a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] (a partire da [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU1).  
  
- ON PARTITIONS ( { \<partition_number> | \<range> } [, …n] ) ] Forza la rielaborazione delle statistiche a livello foglia che coprono le partizioni specificate nella clausola ON PARTITIONS e successivamente ne determina il merge per compilare le statistiche globali. L'opzione WITH RESAMPLE è necessaria in quanto non è possibile eseguire il merge di statistiche di partizioni compilate con frequenze di campionamento differenti.  
+ ON PARTITIONS ( { \<partition_number> | \<range> } [, ...n] ) ] Forza la rielaborazione delle statistiche a livello foglia che coprono le partizioni specificate nella clausola ON PARTITIONS e successivamente ne determina il merge per compilare le statistiche globali. L'opzione WITH RESAMPLE è necessaria in quanto non è possibile eseguire il merge di statistiche di partizioni compilate con frequenze di campionamento differenti.  
   
 **Si applica a**: da [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
@@ -183,25 +183,28 @@ MAXDOP = *max_degree_of_parallelism*
 
 ## <a name="remarks"></a>Remarks  
   
-## <a name="when-to-use-update-statistics"></a>Utilizzo di UPDATE STATISTICS  
- Per altre informazioni sulle situazioni in cui usare UPDATE STATISTICS, vedere [Statistiche](../../relational-databases/statistics/statistics.md).  
+### <a name="when-to-use-update-statistics"></a>Utilizzo di UPDATE STATISTICS  
+ Per altre informazioni sulle situazioni in cui si usa `UPDATE STATISTICS`, vedere [Statistiche](../../relational-databases/statistics/statistics.md).  
 
-## <a name="limitations-and-restrictions"></a>Limitazioni e restrizioni  
+### <a name="limitations-and-restrictions"></a>Limitazioni e restrizioni  
 * L'aggiornamento delle statistiche non è supportato per le tabelle esterne. Per aggiornare le statistiche in una tabella esterna, eliminare e ricreare le statistiche.  
-* L'opzione MAXDOP non è compatibile con le opzioni STATS_STREAM, ROWCOUNT e PAGECOUNT.
-* L'opzione MAXDOP è limitata dall'impostazione MAX_DOP del gruppo di carico di lavoro di Resource Governor, se in uso.
+* L'opzione `MAXDOP` non è compatibile con le opzioni `STATS_STREAM`, `ROWCOUNT` e `PAGECOUNT`.
+* L'opzione `MAXDOP` è limitata dall'impostazione `MAX_DOP` del gruppo di carico di lavoro di Resource Governor, se in uso.
 
-## <a name="updating-all-statistics-with-spupdatestats"></a>Aggiornamento di tutte le statistiche con sp_updatestats  
- Per informazioni sull'aggiornamento delle statistiche per tutte le tabelle interne e definite dall'utente nel database, vedere la stored procedure [sp_updatestats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md). Il comando riportato di seguito chiama ad esempio sp_updatestats per aggiornare tutte le statistiche per il database.  
+### <a name="updating-all-statistics-with-spupdatestats"></a>Aggiornamento di tutte le statistiche con sp_updatestats  
+Per informazioni sull'aggiornamento delle statistiche per tutte le tabelle interne e definite dall'utente nel database, vedere la stored procedure [sp_updatestats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md). Il comando riportato di seguito chiama ad esempio sp_updatestats per aggiornare tutte le statistiche per il database.  
   
 ```sql  
 EXEC sp_updatestats;  
 ```  
+
+### <a name="automatic-index-and-statistics-management"></a>Gestione automatica dell'indice e delle statistiche
+Sfruttare le soluzioni, ad esempio la [deframmentazione dell'indice adattativo](https://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag), per gestire automaticamente la deframmentazione dell'indice e gli aggiornamenti delle statistiche per uno o più database. Questa procedura sceglie automaticamente se ricompilare o riorganizzare un indice in base al relativo livello di frammentazione, tra gli altri parametri, e aggiornare le statistiche con una soglia lineare.
   
-## <a name="determining-the-last-statistics-update"></a>Determinazione dell'ultimo aggiornamento delle statistiche  
+### <a name="determining-the-last-statistics-update"></a>Determinazione dell'ultimo aggiornamento delle statistiche  
  Per determinare la data dell'ultimo aggiornamento delle statistiche, usare la funzione [STATS_DATE](../../t-sql/functions/stats-date-transact-sql.md) .  
   
-## <a name="pdw--sql-data-warehouse"></a>PDW / SQL Data Warehouse  
+### <a name="pdw--sql-data-warehouse"></a>PDW / SQL Data Warehouse  
  La sintassi seguente non è supportata da PDW / SQL Data Warehouse  
   
 ```sql  
@@ -225,7 +228,7 @@ update statistics t1 (a) with stats_stream = 0x01;
 ```  
   
 ## <a name="permissions"></a>Permissions  
- È richiesta l'autorizzazione ALTER per la tabella o la vista.  
+ È richiesta l'autorizzazione `ALTER` per la tabella o la vista.  
   
 ## <a name="examples"></a>Esempi  
   
@@ -306,8 +309,5 @@ UPDATE STATISTICS Customer;
  [sp_autostats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-autostats-transact-sql.md)   
  [sp_updatestats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md)   
  [STATS_DATE &#40;Transact-SQL&#41;](../../t-sql/functions/stats-date-transact-sql.md)  
- [sys.dm_db_stats_properties &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md) [sys.dm_db_stats_histogram &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md) 
-  
-
-
-
+ [sys.dm_db_stats_properties &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md)    
+ [sys.dm_db_stats_histogram &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md)   

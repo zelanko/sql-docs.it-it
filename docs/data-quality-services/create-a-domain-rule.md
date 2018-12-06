@@ -5,8 +5,7 @@ ms.date: 11/08/2011
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 f1_keywords:
 - sql13.dqs.dm.testdomainrule.f1
@@ -15,12 +14,12 @@ ms.assetid: 339fa10d-e22c-4468-b366-080c33f1a23f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e330306aac704bc2cb94885777449731e9648230
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 865c5a9430f7c17f120e96b015ffe2818a68801f
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699180"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617641"
 ---
 # <a name="create-a-domain-rule"></a>Creare una regola di dominio
 
@@ -83,7 +82,7 @@ ms.locfileid: "51699180"
   
 3.  Fare clic sull'icona **Testa la regola di dominio su tutti i termini** .  
   
-4.  Controllare la validità di ogni termine. Un spegno di spunta significa "corretto", una X significa "errore" e un triangolo significa "non valido".  
+4.  Controllare la validità di ogni termine. Un segno di spunta significa "corretto", una croce significa "errore" e un triangolo significa "non valido".  
   
 5.  Al termine, fare clic su **Chiudi** nella finestra di dialogo del test.  
   
@@ -110,7 +109,7 @@ ms.locfileid: "51699180"
   
  Quando viene applicata una regola di dominio e un valore del dominio non supera la regola, il valore viene definito Non validi. Un valore definito Non validi verrà modificato in Corretti se la regola che fa sì che il valore non sia valido viene eliminata o disattivata oppure se la regola viene modificata affinché il valore superi la regola. Se un valore viene definito Non validi manualmente (nella scheda Valori di dominio dell'attività di gestione del dominio) e la regola che il valore non supera viene eliminata, disattivata o modificata, il valore rimarrà Non validi in base alla designazione manuale.  
   
- Una regola di dominio con una condizione definitiva applicherà la logica delle regole ai sinonimi del valore nella condizione o nelle condizioni, oltre ai valori stessi. Le condizioni definitive sono: Il valore è uguale a, Il valore è diverso da, Il valore è in o Il valore non è in. Si supponga ad esempio di disporre della regola di dominio seguente: "Per 'City', il valore è uguale a 'Los Angeles'". Se 'Los Angeles e 'LA' sono sinonimi, entrambi saranno corretti. Se invece la regola non contiene una condizione definitiva, ad esempio "Per City, il valore termina con "s", "Los Angeles" risulta corretto, mentre il sinonimo "LA" rappresenta un errore.  
+ Una regola di dominio con una condizione definitiva applicherà la logica delle regole ai sinonimi del valore nella condizione o nelle condizioni, oltre ai valori stessi. Le condizioni definitive sono: Il valore è uguale a, Il valore è diverso da, Il valore è in o Il valore non è in. Si supponga ad esempio di avere la regola di dominio seguente: "Per 'City', il valore è uguale a 'Los Angeles'". Se 'Los Angeles' e 'LA' sono sinonimi, entrambi saranno corretti. Se invece la regola non contiene una condizione definitiva, ad esempio "Per City, il valore termina con "s", "Los Angeles" risulta corretto, mentre il sinonimo "LA" rappresenta un errore.  
   
  Durante la creazione di una regola di dominio è possibile scegliere tra diverse alternative. Ad esempio, per verificare se i valori iniziano con la lettera A, B o C, è possibile creare una regola semplice con una condizione complessa, ad esempio un'espressione regolare con i caratteri barra verticale, oppure è possibile creare una regola complessa che contiene diverse condizioni semplici. Un esempio della prima regola è "Il valore contiene l'espressione regolare (^A|^B|^C)". Un esempio della seconda regola è "'Il valore inizia con A' OR 'Il valore inizia con B' OR 'Il valore inizia con C'".  
   
@@ -129,11 +128,11 @@ ms.locfileid: "51699180"
 |Il valore è data/ora|Solo i valori che contengono un tipo di dati data/ora di SQL Server saranno validi, ad esempio datetime, time, date, ecc.|Operando di esempio: N/D<br /><br /> Valori validi: 1916-06-04; 1916-06-04 18:24:24; March 21, 2001; 5/18/2011; 18:24:24<br /><br /> Valori non validi: March 213, 2006|  
 |Il valore è in|Solo i valori presenti nel set dell'operando saranno validi.<br /><br /> Per immettere i valori nel set, fare clic nella casella di testo dell'operando, immettere il primo valore, premere Invio, immettere il secondo valore, ripetere le operazioni per tutti i valori che si desidera immettere nel set, quindi fare di nuovo clic nella casella di testo dell'operando. In DQS verrà aggiunta una virgola tra i valori nel set. Se si immette una singola stringa con virgole senza ritorno a capo, ad esempio "A1, B1", tale stringa verrà considerata come un singolo valore nel set.|Operando di esempio: [A1, B1]<br /><br /> Valori validi: A1, B1<br /><br /> Valori non validi: AA, 11|  
 |Il valore non è in|Solo i valori non presenti nel set dell'operando saranno validi.|Operando di esempio: [A1, B1]<br /><br /> Valori validi: AA, 11<br /><br /> Valori non validi: A1, B1|  
-|Il valore corrisponde al modello|Solo i valori che corrispondono al modello di caratteri, cifre o caratteri speciali dell'operando saranno validi.<br /><br /> Qualsiasi lettera (A…Z) può essere utilizzata come modello per qualsiasi lettera, senza distinzione tra maiuscole e minuscole. Qualsiasi cifra (0…9) può essere utilizzata come modello per qualsiasi cifra. Qualsiasi carattere speciale, tranne lettere o cifre, può essere utilizzato come modello per se stesso. Le parentesi quadre, [], definiscono la corrispondenza facoltativa.|Operando di esempio: AA:000 (modello di due caratteri *qualsiasi* seguiti da due punti (:), seguiti da tre cifre *qualsiasi* ).<br /><br /> Valori validi: AB:012, df:257<br /><br /> Valori non validi: abc:123, FJ-369<br /><br /> Per ulteriori informazioni sulle regole basate su un modello in DQS e gli esempi, vedere [Ricerche nelle regole di dominio DQS](https://blogs.msdn.com/b/dqs/archive/2012/10/08/pattern-matching-in-dqs-domain-rules.aspx).|  
+|Il valore corrisponde al modello|Solo i valori che corrispondono al modello di caratteri, cifre o caratteri speciali dell'operando saranno validi.<br /><br /> È possibile usare qualsiasi lettera (A...Z) come modello per qualsiasi lettera, senza distinzione tra maiuscole e minuscole. È possibile usare qualsiasi cifra (0...9) come modello per qualsiasi cifra. Qualsiasi carattere speciale, tranne lettere o cifre, può essere utilizzato come modello per se stesso. Le parentesi quadre, [], definiscono la corrispondenza facoltativa.|Operando di esempio: AA:000 (modello di due caratteri *qualsiasi* seguiti da due punti (:), seguiti da tre cifre *qualsiasi* ).<br /><br /> Valori validi: AB:012, df:257<br /><br /> Valori non validi: abc:123, FJ-369<br /><br /> Per ulteriori informazioni sulle regole basate su un modello in DQS e gli esempi, vedere [Ricerche nelle regole di dominio DQS](https://blogs.msdn.com/b/dqs/archive/2012/10/08/pattern-matching-in-dqs-domain-rules.aspx).|  
 |Il valore non corrisponde al modello|Solo i valori che non corrispondono al modello di caratteri, cifre o caratteri speciali dell'operando saranno validi.|Operando di esempio: A1 (il valore non deve corrispondere a un modello formato da un carattere *qualsiasi* seguito da una cifra *qualsiasi* ).<br /><br /> Valori validi: AB1, A, A:5<br /><br /> Valori non validi: B7, c9|  
 |Il valore contiene il modello|Solo i valori che contengono il modello di caratteri, cifre o caratteri speciali dell'operando saranno validi.|Operando di esempio: AA-12 (il valore contiene un modello di due caratteri *qualsiasi* seguiti da un trattino (-), seguito da due cifre *qualsiasi* ).<br /><br /> Valori validi: AAA-01, ab-975<br /><br /> Valori non validi: A7, AA-6, C-45, aa;98|  
 |Il valore non contiene il modello|Solo i valori che non contengono il modello di caratteri dell'operando saranno validi.|Operando di esempio: AB-12 (il valore non deve contenere un modello di due caratteri *qualsiasi* seguiti da un trattino (-), seguito da due cifre *qualsiasi* ).<br /><br /> Valori validi: A7, AA-6, C-45, aa;98<br /><br /> Valori non validi: AAA-01, ab-975|  
-|Valore corrispondente a un'espressione regolare|Solo i valori uguali all'espressione regolare dell'operando saranno considerati validi.<br /><br /> Non includere l'ancoraggio "^" o l'ancoraggio "$" all'espressione regolare perché in DQS tali ancoraggi vengono aggiunti automaticamente a una clausola che contiene la condizione Il valore è uguale all'espressione regolare. In alternativa, è possibile includere l'espressione regolare contenente gli ancoraggi "^" e "$" tra parentesi. Per ulteriori informazioni sulle espressioni regolari, vedere [Elementi del linguaggio di espressioni regolari](https://go.microsoft.com/fwlink/?LinkId=225561).|Operando di esempio: [1-5] + (ogni carattere deve essere una cifra numerica compresa tra 1 e 5, ripetuta una o più volte)<br /><br /> Valori validi: 123, 12345, 14352<br /><br /> Valori non validi: 456, ABC|  
+|Valore corrispondente a un'espressione regolare|Solo i valori uguali all'espressione regolare dell'operando saranno considerati validi.<br /><br /> Non includere l'ancoraggio "^" o l'ancoraggio "$" nell'espressione regolare perché in DQS tali ancoraggi vengono aggiunti automaticamente a una clausola che contiene la condizione Il valore è uguale all'espressione regolare. In alternativa, è possibile includere l'espressione regolare contenente gli ancoraggi "^" e "$" tra parentesi. Per ulteriori informazioni sulle espressioni regolari, vedere [Elementi del linguaggio di espressioni regolari](https://go.microsoft.com/fwlink/?LinkId=225561).|Operando di esempio: [1-5] + (ogni carattere deve essere una cifra numerica compresa tra 1 e 5, ripetuta una o più volte)<br /><br /> Valori validi: 123, 12345, 14352<br /><br /> Valori non validi: 456, ABC|  
 |Valore non corrispondente a un'espressione regolare|Solo i valori che non corrispondono all'espressione regolare dell'operando saranno considerati validi.|Operando di esempio: [1-5] + (la stringa non deve essere costituita solo da cifre numeriche comprese tra 1 e 5)<br /><br /> Valori validi: 456, ABC<br /><br /> Valori non validi: 123, 123456, 14352|  
   
   

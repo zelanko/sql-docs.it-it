@@ -15,12 +15,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: bb130bbf8c3c2e66bd5b64458ca5f07b83f9b532
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: adf5a2daee8231746a3ed364619f511f05d011f6
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606771"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52405226"
 ---
 # <a name="change-the-database-compatibility-level-and-use-the-query-store"></a>Modificare il livello di compatibilità del database e usare Query Store
 

@@ -1,6 +1,6 @@
 ---
-title: Generatore report in SQL Server 2016 | Microsoft Docs
-ms.date: 03/30/2017
+title: Generatore report in SQL Server | Microsoft Docs
+ms.date: 11/29/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-builder
@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 55bf4f9c-d037-412f-ae57-3fc39ce32fa5
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 15762e449c61642989dd507897682d30b4c1421d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 381f0070a8e045aeec707c1f8dc9a6df9cd157d9
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47690959"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52711419"
 ---
-# <a name="report-builder-in-sql-server-2016"></a>Generatore report in SQL Server 2016
-  [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] è uno strumento per la creazione di report impaginati, per gli utenti aziendali che preferiscono lavorare in un ambiente autonomo anziché usare Progettazione report in Visual Studio.  Quando si progetta un report impaginato, si crea una definizione del report che specifica dove ottenere i dati, quali dati ottenere e come visualizzarli. Quando si esegue il report, l'elaboratore di report usa la definizione del report specificata, recupera i dati e li combina con il layout per generare il report. È possibile visualizzare l'anteprima dei report in [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] e pubblicare il report in un server di report [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in modalità nativa o in modalità integrata SharePoint dove potrà essere eseguito da altri utenti.  
+# <a name="report-builder-in-sql-server"></a>Generatore report in SQL Server
+  [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] è uno strumento per la creazione di report impaginati, per gli utenti aziendali che preferiscono lavorare in un ambiente autonomo anziché usare Progettazione report in Visual Studio.  Quando si progetta un report impaginato, si crea una definizione del report che specifica dove ottenere i dati, quali dati ottenere e come visualizzarli. Quando si esegue il report, l'elaboratore di report usa la definizione del report specificata, recupera i dati e li combina con il layout per generare il report. È possibile visualizzare il report in anteprima in [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]. Pubblicare quindi il report in un server di report [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in modalità nativa o in modalità integrata SharePoint (2016 e versioni precedenti). È anche possibile pubblicare un report impaginato nel servizio Power BI. Sono disponibili altre informazioni sui [report impaginati in Power BI Premium](https://docs.microsoft.com/power-bi/paginated-reports-report-builder-power-bi) (anteprima).
   
  ![rs_GettingStartedReport](../../reporting-services/report-builder/media/rs-gettingstartedreport.png "rs_GettingStartedReport")  
   
@@ -71,7 +71,7 @@ ms.locfileid: "47690959"
   
   [Installare Generatore report](../../reporting-services/install-windows/install-report-builder.md)
 
-  [Novità di Reporting Services e Generatore report per SQL Server 2016](~/reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)  
+  [Novità di SQL Server Reporting Services e Generatore report](~/reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)  
   Descrive le nuove funzionalità disponibili in questa versione di [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] e [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)].   
   [Esercitazione: Creazione di un report grafico rapido offline](../../reporting-services/report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md)  
  Presenta [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] e le procedure guidate disponibili per la creazione di report. Viene inoltre fornito un set di dati iniziale da utilizzare per evitare di connettersi a un'origine dati.  
@@ -80,7 +80,7 @@ ms.locfileid: "47690959"
  Vengono fornite informazioni sugli aspetti che è necessario considerare prima di iniziare a compilare il report.  
   
  [Concetti relativi alla creazione di report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md)  
- Definisce i concetti chiave usati in tutta la documentazione relativa a [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)].  
+ Definisce i concetti chiave usati in tutta la documentazione relativa a [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] .  
   
  [Visualizzazione di progettazione report &#40;Generatore report&#41;](../../reporting-services/report-builder/report-design-view-report-builder.md)  
  Vengono illustrati i diversi riquadri e le diverse aree della visualizzazione di progettazione report.  

@@ -11,12 +11,12 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
-ms.openlocfilehash: b8b6a33afa780324d6dd3271111a99c4ea68e486
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: d4346f3c30020d49f49deab4988b754a31ec401f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699688"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52503490"
 ---
 # <a name="sql-server-2014-release-notes"></a>SQL Server 2014 Release Notes
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -292,7 +292,7 @@ Se si è già verificato il problema relativo ai valori instance_id non corrispo
 ### <a name="SSRS"></a>Reporting Services (RTM)
   
 #### <a name="the-sql-server-2012-reporting-services-native-mode-report-server-cannot-run-side-by-side-with-sql-server-2014-reporting-services-sharepoint-components"></a>Il server di report in modalità nativa SQL Server 2012 Reporting Services non può essere eseguito side-by-side con componenti di SharePoint di SQL Server 2014 Reporting Services  
-**Problema:** il servizio Windows in modalità nativa di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 'SQL Server Reporting Services' (ReportingServicesService.exe) non viene avviato quando sono presenti componenti di SharePoint di [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] installati nello stesso server.  
+**Problema:** il servizio Windows in modalità nativa di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SQL Server Reporting Services (ReportingServicesService.exe) non viene avviato quando sono presenti componenti di SharePoint di [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] installati nello stesso server.  
   
 **Soluzione alternativa:** disinstallare i componenti di SharePoint di [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] e riavviare il servizio Windows di Microsoft SQL Server 2012 Reporting Services.  
   
@@ -359,7 +359,7 @@ Ciò è dovuto al fatto che i listener del gruppo di disponibilità richiedono l
   
 **Soluzione alternativa:**  
   
-1.  Scaricare il provider MSOLAP.5 dal Feature Pack di [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] . Installare il provider nei server applicazioni in cui viene eseguito Excel Services. Per ulteriori informazioni, vedere la sezione "Microsoft Analysis Services OLE DB Provider per Microsoft SQL Server 2012 SP1" in [Microsoft SQL Server 2012 SP1 Feature Pack](https://www.microsoft.com/download/details.aspx?id=35580).  
+1.  Scaricare il provider MSOLAP.5 dal Feature Pack di [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] . Installare il provider nei server applicazioni in cui viene eseguito Excel Services. Per altre informazioni, vedere la sezione "Provider OLE DB Microsoft Analysis Services per Microsoft SQL Server 2012 SP1" di [Microsoft SQL Server 2012 SP1 Feature Pack](https://www.microsoft.com/download/details.aspx?id=35580).  
   
 2.  Registrare MSOLAP.5 come provider attendibile con Excel Services di SharePoint. Per ulteriori informazioni, vedere [Aggiungere MSOLAP.5 come provider di dati attendibile in Excel Services](https://technet.microsoft.com/library/hh758436.aspx).  
   
@@ -374,7 +374,7 @@ Ciò è dovuto al fatto che i listener del gruppo di disponibilità richiedono l
   
 **Soluzione alternativa:**  
   
-1.  Scaricare il provider MSOLAP.5 dal Feature Pack di [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] . Installare il provider nei server applicazioni in cui viene eseguito Excel Services. Per ulteriori informazioni, vedere la sezione "Microsoft Analysis Services OLE DB Provider per Microsoft SQL Server 2012 SP1" in [Microsoft SQL Server 2012 SP1 Feature Pack](https://www.microsoft.com/download/details.aspx?id=35580).  
+1.  Scaricare il provider MSOLAP.5 dal Feature Pack di [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] . Installare il provider nei server applicazioni in cui viene eseguito Excel Services. Per altre informazioni, vedere la sezione "Provider OLE DB Microsoft Analysis Services per Microsoft SQL Server 2012 SP1" di [Microsoft SQL Server 2012 SP1 Feature Pack](https://www.microsoft.com/download/details.aspx?id=35580).  
   
 2.  Registrare MSOLAP.5 come provider attendibile con Excel Services di SharePoint. Per ulteriori informazioni, vedere [Aggiungere MSOLAP.5 come provider di dati attendibile in Excel Services](https://technet.microsoft.com/library/hh758436.aspx).  
   

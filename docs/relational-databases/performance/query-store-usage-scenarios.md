@@ -1,7 +1,7 @@
 ---
 title: Scenari d'uso dell'archivio query | Microsoft Docs
 ms.custom: ''
-ms.date: 02/02/2018
+ms.date: 11/29/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -14,36 +14,32 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d556922a6bdb0e6edd538630e34dd21d428f2953
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 4c28419488adc2f0d8123c9052466659fb9fdfd9
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51673830"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52711202"
 ---
 # <a name="query-store-usage-scenarios"></a>Scenari di utilizzo dell'Archivio query
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
   Archivio query può essere usato in diversi scenari in cui è fondamentale rilevare e garantire prestazioni prevedibili del carico di lavoro. Di seguito sono riportati alcuni esempi:  
   
 -   Individuare e risolvere le query con regressioni nella scelta del piano  
-  
 -   Identificare e ottimizzare le prime query per consumo di risorse  
-  
 -   Test A/B  
-  
 -   Mantenere la stabilità delle prestazioni durante l'aggiornamento alla nuova versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
-  
 -   Identificare e migliorare i carichi di lavoro ad hoc  
   
 ## <a name="pinpoint-and-fix-queries-with-plan-choice-regressions"></a>Individuare e risolvere le query con regressioni nella scelta del piano  
- Durante l'esecuzione di query normali, Query Optimizer può scegliere un piano diverso se alcuni input importanti vengono modificati, ad esempio se viene modificata la cardinalità dei dati, se vengono creati, modificati o eliminati indici, se vengono aggiornate le statistiche e così via. In generale, il nuovo piano è migliore o uguale a quello usato in precedenza. Tuttavia, a volte il nuovo piano risulta decisamente peggiore. In questi casi si parla di regressione nella scelta del piano. Prima di Query Store, identificare e risolvere questo problema risultava molto difficile perché [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non forniva un archivio dati predefinito che gli utenti potessero esaminare per i piani di esecuzione usati nel corso del tempo.  
+ Durante l'esecuzione di query normali, Query Optimizer può scegliere un piano diverso se alcuni input importanti vengono modificati, ad esempio se viene modificata la cardinalità dei dati, se vengono creati, modificati o eliminati indici, se vengono aggiornate le statistiche e così via. In generale, il nuovo piano è migliore o uguale a quello usato in precedenza. Tuttavia, a volte il nuovo piano risulta decisamente peggiore. In questi casi si parla di regressione nella scelta del piano. Prima di Query Store, identificare e risolvere questo problema risultava difficile perché [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non offriva un archivio dati predefinito che gli utenti potessero esaminare per i piani di esecuzione usati nel corso del tempo.  
   
  Con Query Store, è possibile eseguire rapidamente le operazioni seguenti:  
   
 -   Identificare tutte le query le cui metriche di esecuzione siano peggiorate nel periodo di tempo di interesse (ultima ora, giorno, settimana e così via). Usare **Query regredite** in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] per velocizzare l'analisi.  
   
--   Tra le query regredite è molto semplice trovare quelle con più piani e che hanno subito un peggioramento a causa di una scelta errata di un piano. Usare il riquadro **Riepilogo piano** in **Query regredite** per visualizzare tutti i piani per una query regredita e le relative prestazioni della query nel tempo.  
+-   Tra le query regredite è semplice trovare quelle con più piani e che hanno subito un peggioramento a causa di una scelta errata di un piano. Usare il riquadro **Riepilogo piano** in **Query regredite** per visualizzare tutti i piani per una query regredita e le relative prestazioni della query nel tempo.  
   
 -   Forzare il piano precedente dalla cronologia se ha dimostrato di essere più efficace. Usare il pulsante **Forza piano** in **Query regredite** per forzare un piano selezionato per la query.  
   
@@ -60,7 +56,7 @@ ms.locfileid: "51673830"
   
  Esaminare il riepilogo del piano a destra per analizzare la cronologia di esecuzione e avere informazioni sui diversi piani e sulle statistiche di runtime. Usare il riquadro inferiore per esaminare i diversi piani o per eseguire un confronto visivo con il rendering in modalità affiancata (usare il pulsante Confronta).  
   
-Quando si rileva una query con prestazioni non ottimali, l'azione correttiva dipende dalla natura del problema:  
+Quando si identifica una query con prestazioni non ottimali, l'azione correttiva dipende dalla natura del problema.  
   
 1.  Se la query è stata eseguita con più piani e l'ultimo piano è significativamente peggiore del piano precedente, è possibile usare il meccanismo di utilizzo forzato del piano per essere certi che [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] userà il piano ottimale per le esecuzioni successive  
   
@@ -148,7 +144,7 @@ Usare la metrica **Conteggio esecuzioni** per verificare se le prime query sono 
 In alternativa, è possibile eseguire script [!INCLUDE[tsql](../../includes/tsql-md.md)] per ottenere il numero totale di testi della query, query e piani nel sistema e determinarne le differenze confrontando query_hash e plan_hash:  
   
 ```sql  
-/*Do cardinality analysis when suspect on ad hoc workloads*/  
+--Do cardinality analysis when suspect on ad hoc workloads
 SELECT COUNT(*) AS CountQueryTextRows FROM sys.query_store_query_text;  
 SELECT COUNT(*) AS CountQueryRows FROM sys.query_store_query;  
 SELECT COUNT(DISTINCT query_hash) AS CountDifferentQueryRows FROM  sys.query_store_query;  
@@ -169,7 +165,7 @@ Se si ha il controllo del codice dell'applicazione, è possibile valutare l'oppo
 L'approccio che prevede l'uso di singoli modelli di query richiede la creazione di guide di piano:  
   
 ```sql  
-/*Apply plan guide for the selected query template*/  
+--Apply plan guide for the selected query template 
 DECLARE @stmt nvarchar(max);  
 DECLARE @params nvarchar(max);  
 EXEC sp_get_query_template   
@@ -191,7 +187,7 @@ La soluzione che include le guide di piano è più precisa, ma richiede più lav
 Se tutte o la maggior parte delle query sono idonee alla parametrizzazione automatica, valutare la modifica di `FORCED PARAMETERIZATION` per l'intero database:  
   
 ```sql  
-/*Apply forced parameterization for entire database*/  
+--Apply forced parameterization for entire database  
 ALTER DATABASE <database name> SET PARAMETERIZATION FORCED;  
 ```  
 

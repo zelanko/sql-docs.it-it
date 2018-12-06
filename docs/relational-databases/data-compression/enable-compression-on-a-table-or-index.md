@@ -24,12 +24,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 838fd86c8293554eb1c6d546b789c1dc60a2a658
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: 07a13b9a2d6cf54922e0e2ca5d718909a61fd831
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48906451"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52502988"
 ---
 # <a name="enable-compression-on-a-table-or-index"></a>Abilitare la compressione in una tabella o un indice
 
@@ -74,7 +74,7 @@ ms.locfileid: "48906451"
   
 2.  Per comprimere un indice, espandere la tabella contenente l'indice che si desidera comprimere, quindi espandere la cartella **Indici** .  
   
-3.  Fare clic con il pulsante destro del mouse sulla tabella o sull'indice da comprimere, scegliere **Archiviazione** e selezionare **Gestione compressione**.  
+3.  Fare clic con il pulsante destro del mouse sulla tabella o sull'indice da comprimere, scegliere **Archiviazione** e selezionare **Gestione compressione...**.  
   
 4.  In Compressione guidata dati nella pagina **Compressione guidata dati** fare clic su **Avanti**.  
   
@@ -145,15 +145,15 @@ ms.locfileid: "48906451"
   
             -   Se si seleziona **Mensile**, selezionare **Giorno** oppure **Ogni**.  
   
-                -   Se si seleziona **Giorno**, immettere sia la data del mese in cui si desidera sia eseguita la pianificazione del processo sia la frequenza in base alla quale si ripete questa pianificazione nei mesi. Ad esempio, se si desidera che la pianificazione del processo venga eseguita il giorno 15 del mese e a mesi alterni, selezionare **Giorno** e immettere "15" nella prima casella e "2" nella seconda casella. Si noti che il numero più grande consentito nella seconda casella è "99".  
+                -   Se si seleziona **Giorno**, immettere sia la data del mese in cui si desidera sia eseguita la pianificazione del processo sia la frequenza in base alla quale si ripete questa pianificazione nei mesi. Ad esempio, se si vuole che la pianificazione del processo sia eseguita il giorno 15 del mese a mesi alterni, selezionare **Giorno** e immettere "15" nella prima casella e "2" nella seconda casella. Si noti che il numero più grande consentito nella seconda casella è "99".  
   
-                -   Se si sceglie **Ogni**, selezionare il giorno specifico della settimana del mese in cui si desidera sia eseguita la pianificazione del processo e la frequenza in base alla quale si ripete questa pianificazione nei mesi. Ad esempio, se si desidera che la pianificazione del processo sia eseguita l'ultimo giorno feriale del mese e a mesi alterni, selezionare **Giorno**, **ultimo** nel primo elenco e **giorno feriale** nel secondo elenco, quindi immettere "2" nell'ultima casella. Nei primi due elenchi è anche possibile selezionare **primo**, **secondo**, **terzo**o **quarto**, nonché i giorni della settimana specifici, ad esempio domenica o mercoledì. Si noti che il numero più grande consentito nell'ultima casella è "99".  
+                -   Se si sceglie **Ogni**, selezionare il giorno specifico della settimana del mese in cui si desidera sia eseguita la pianificazione del processo e la frequenza in base alla quale si ripete questa pianificazione nei mesi. Ad esempio, se si vuole che la pianificazione del processo sia eseguita l'ultimo giorno feriale del mese a mesi alterni, selezionare **Giorno**, selezionare **ultimo** nel primo elenco e **giorno feriale** nel secondo elenco, quindi immettere "2" nell'ultima casella. Nei primi due elenchi è anche possibile selezionare **primo**, **secondo**, **terzo**o **quarto**, nonché i giorni della settimana specifici, ad esempio domenica o mercoledì. Si noti che il numero più grande consentito nell'ultima casella è "99".  
   
         2.  In **Frequenza giornaliera**specificare la frequenza in base alla quale si ripete la pianificazione del processo in quel determinato giorno:  
   
             -   Se si seleziona **Una sola volta alle**, immettere l'ora specifica del giorno in cui deve essere eseguita la pianificazione del processo nella casella **Una sola volta alle** . Immettere l'ora, il minuto e il secondo del giorno, nonché AM o PM.  
   
-            -   Se si seleziona **Ogni**specificare la frequenza in base alla quale la pianificazione del processo viene eseguita durante il giorno scelto in **Frequenza**. Ad esempio, se si vuole che la pianificazione del processo sia ripetuta ogni 2 ore durante il giorno scelto per questa pianificazione, selezionare **Ogni**, immettere "2" nella prima casella, quindi selezionare **ora/e** nell'elenco. In questo elenco è anche possibile selezionare **minuto/i** e **secondo/i**. Si noti che il numero più grande consentito nella prima casella è "100".  
+            -   Se si seleziona **Ogni**specificare la frequenza in base alla quale la pianificazione del processo viene eseguita durante il giorno scelto in **Frequenza**. Ad esempio, se si vuole che la pianificazione del processo sia ripetuta ogni 2 ore durante il giorno scelto per questa pianificazione, selezionare **Ogni**, immettere "2" nella prima casella e quindi selezionare **ora/e** nell'elenco. In questo elenco è anche possibile selezionare **minuto/i** e **secondo/i**. Si noti che il numero più grande consentito nella prima casella è "100".  
   
                  Nella casella **A partire dalle** immettere l'ora in cui dovrebbe iniziare l'esecuzione della pianificazione del processo. Nella casella **Fino alle** immettere l'ora in cui dovrebbe terminare la ripetizione della pianificazione del processo. Immettere l'ora, il minuto e il secondo del giorno, nonché AM o PM.  
   

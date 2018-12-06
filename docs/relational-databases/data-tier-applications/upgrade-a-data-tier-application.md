@@ -23,12 +23,12 @@ ms.assetid: c117df94-f02b-403f-9383-ec5b3ac3763c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c20a95bcdb8c91059c63590c333c71a10542473a
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 31b1fb369ee6b5007e79c96ebb7a536d6e2a147e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43814047"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514043"
 ---
 # <a name="upgrade-a-data-tier-application"></a>Upgrade a Data-tier Application
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,13 +44,13 @@ ms.locfileid: "43814047"
 ###  <a name="ChoseDACUpgOptions"></a> Scelta delle opzioni di aggiornamento dell'applicazione livello dati  
  Sono disponibili quattro opzioni per un aggiornamento sul posto:  
   
--   **Ignora perdita dati** : se è **True**, l'aggiornamento prosegue anche se alcune delle operazioni implicano la perdita di dati. Se è **False**, queste operazioni comporteranno l'interruzione dell'aggiornamento. Ad esempio, se una tabella nel database corrente non è presente nello schema della nuova applicazione livello dati, la tabella viene rilasciata se è specificato **True** . L'impostazione predefinita è **True**.  
+-   **Ignora perdita dati**: se è **True**, l'aggiornamento prosegue anche se alcune delle operazioni implicano la perdita di dati. Se è **False**, queste operazioni comporteranno l'interruzione dell'aggiornamento. Ad esempio, se una tabella nel database corrente non è presente nello schema della nuova applicazione livello dati, la tabella viene rilasciata se è specificato **True** . L'impostazione predefinita è **True**.  
   
--   **Blocca in caso di su modifiche** : se è **True**, l'aggiornamento viene terminato qualora lo schema del database sia diverso da quello definito nell'applicazione livello dati precedente. Se è **False**, l'aggiornamento continua anche se vengono rilevate delle modifiche. L'impostazione predefinita è **False**.  
+-   **Blocca in caso di su modifiche**: se è **True**, l'aggiornamento viene terminato se lo schema del database è diverso da quello definito nell'applicazione livello dati precedente. Se è **False**, l'aggiornamento continua anche se vengono rilevate delle modifiche. L'impostazione predefinita è **False**.  
   
--   **Rollback in caso di errore** : se è **True**, l'aggiornamento è incluso in una transazione e, in caso di errori, verrà effettuato un tentativo di rollback. Se è **False**, viene eseguito il commit di tutte le modifiche nel momento in cui vengono apportate e, in caso di errori, potrebbe essere necessario ripristinare un backup precedente del database. L'impostazione predefinita è **False**.  
+-   **Rollback in caso di errore**: se è **True**, l'aggiornamento è incluso in una transazione e, in caso di errori, verrà effettuato un tentativo di rollback. Se è **False**, viene eseguito il commit di tutte le modifiche nel momento in cui vengono apportate e, in caso di errori, potrebbe essere necessario ripristinare un backup precedente del database. L'impostazione predefinita è **False**.  
   
--   **Ignora convalida criteri** : se è **True**, i criteri di selezione server dell'applicazione livello dati non vengono valutati. Se è If **False**, i criteri vengono valutati e l'aggiornamento si arresta in caso di errore di convalida. L'impostazione predefinita è **False**.  
+-   **Ignora convalida criteri**: se è **True**, i criteri di selezione server dell'applicazione livello dati non vengono valutati. Se è If **False**, i criteri vengono valutati e l'aggiornamento si arresta in caso di errore di convalida. L'impostazione predefinita è **False**.  
   
 ###  <a name="LimitationsRestrictions"></a> Limitazioni e restrizioni  
  È possibile eseguire aggiornamenti dell'applicazione livello dati solo in [!INCLUDE[ssSDS](../../includes/sssds-md.md)]o [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 4 (SP4) o versioni successive.  
@@ -83,7 +83,7 @@ ms.locfileid: "43814047"
   
 2.  Espandere il nodo **Gestione** , quindi espandere il nodo **Applicazioni livello dati** .  
   
-3.  Fare clic con il pulsante destro del mouse sul nodo dell'applicazione livello dati da aggiornare e quindi scegliere **Aggiorna applicazione livello dati**  
+3.  Fare clic con il pulsante destro del mouse sul nodo dell'applicazione livello dati da aggiornare e quindi scegliere **Aggiorna applicazione livello dati**.  
   
 4.  Completare le finestre di dialogo della procedura guidata.  
   
@@ -178,7 +178,7 @@ ms.locfileid: "43814047"
 ## <a name="options-page"></a>Pagina Opzioni  
  Utilizzare questa pagina per selezionare l'opzione Rollback in caso di errore per l'aggiornamento.  
   
- **Rollback in caso di errore** - Selezionare questa opzione per includere l'aggiornamento in una transazione su cui la procedura guidata può tentare di eseguire il rollback se si verificano errori. Per ulteriori informazioni sull'opzione, vedere [Scelta delle opzioni di aggiornamento dell'applicazione livello dati](#ChoseDACUpgOptions).  
+ **Rollback in caso di errore**: selezionare questa opzione per includere l'aggiornamento in una transazione su cui la procedura guidata può provare a eseguire il rollback se si verificano errori. Per ulteriori informazioni sull'opzione, vedere [Scelta delle opzioni di aggiornamento dell'applicazione livello dati](#ChoseDACUpgOptions).  
   
  **Ripristina impostazioni predefinite**: consente di ripristinare l'impostazione predefinita dell'opzione, ovvero False.  
   
@@ -193,13 +193,13 @@ ms.locfileid: "43814047"
   
  **Le azioni seguenti saranno utilizzate per aggiornare l'applicazione livello dati.** Controllare le informazioni visualizzate per assicurarsi che le azioni che verranno eseguite siano corrette. Nella colonna **Azione** sono visualizzate le azioni, ad esempio le istruzioni Transact-SQL, che verranno eseguite per eseguire l'aggiornamento. Nella colonna **Perdita di dati** sarà contenuto un avviso qualora l'azione associata possa comportare l'eliminazione di dati.  
   
- **Aggiorna** - Consente di aggiornare l'elenco di azioni.  
+ **Aggiorna**: consente di aggiornare l'elenco di azioni.  
   
- **Salva report azioni** - Consente di salvare il contenuto della finestra delle azioni in un file HTML.  
+ **Salva report azioni**: consente di salvare il contenuto della finestra delle azioni in un file HTML.  
   
  **Continua ignorando la possibile perdita delle modifiche** specifica che l'utente è consapevole che alcuni degli oggetti o dei dati nel database corrente non saranno presenti nel nuovo database e che vuole procedere con l'aggiornamento. Scegliere questo pulsante solo se il report delle modifiche è stato analizzato e si conoscono i passaggi che è necessario eseguire per trasferire manualmente oggetti o dati necessari nel nuovo database. In caso di dubbi, fare clic sul pulsante **Salva report azioni** per salvare il report delle modifiche e sul pulsante **Salva script** per salvare lo script Transact-SQL, quindi scegliere **Annulla**. Analizzare il report e lo script, pianificare come trasferire gli oggetti e i dati necessari al termine dell'aggiornamento, quindi riavviare la procedura guidata.  
   
- **Salva script** salva in un file di testo le istruzioni Transact-SQL che verranno usate per eseguire l'aggiornamento.  
+ **Salva script**: salva in un file di testo le istruzioni Transact-SQL che verranno usate per eseguire l'aggiornamento.  
   
  **Ripristina impostazioni predefinite**: consente di ripristinare l'impostazione predefinita dell'opzione, ovvero False.  
   

@@ -11,12 +11,12 @@ ms.assetid: 9ead8470-93ba-44e3-8848-b59322e37621
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: deed72fce55d5e80f54ba53596c213288aae249d
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: daae5aa71c227591a3349de4abd6526e83131f8c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51664630"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512615"
 ---
 # <a name="walkthrough-extend-database-project-deployment-to-analyze-the-deployment-plan"></a>Procedura dettagliata: estendere la distribuzione del progetto di database per analizzare il piano di distribuzione
 È possibile creare collaboratori alla distribuzione per eseguire azioni personalizzate quando si distribuisce un progetto SQL. È possibile creare un elemento DeploymentPlanModifier o DeploymentPlanExecutor. Utilizzare DeploymentPlanModifier per modificare il piano prima di eseguirlo e DeploymentPlanExecutor per eseguire operazioni mentre il piano è in esecuzione. In questa procedura dettagliata viene creato un elemento DeploymentPlanExecutor denominato DeploymentUpdateReportContributor che crea un report sulle azioni eseguite quando si distribuisce un progetto di database. Poiché questo collaboratore alla compilazione accetta un parametro per controllare se il report viene generato, è necessario eseguire un'operazione necessaria aggiuntiva.  
@@ -92,7 +92,7 @@ Per creare un collaboratore alla distribuzione, è necessario effettuare le atti
         /// passed as an additional argument to the DacServices API. To set in a project file, add the following:  
         ///   
         /// <PropertyGroup>  
-        ///     <ContributorArguments Condition="'$(Configuration)' == 'Debug’”>  
+        ///     <ContributorArguments Condition="'$(Configuration)' == 'Debug'">  
         /// $(ContributorArguments);DeploymentUpdateReportContributor.GenerateUpdateReport=true;  
         ///     </ContributorArguments>  
         /// <PropertyGroup>  
@@ -114,7 +114,7 @@ Per creare un collaboratore alla distribuzione, è necessario effettuare le atti
   
     ```  
   
-    In questo caso il primo parametro all'attributo deve essere un identificatore univoco che verrà utilizzato per identificare il collaboratore nei file del progetto. È consigliabile combinare lo spazio dei nomi della libreria (in questa procedura dettagliata MyDeploymentContributor) con il nome della classe (in questa procedura dettagliata DeploymentUpdateReportContributor), per produrre l'identificatore.  
+    In questo caso il primo parametro all'attributo deve essere un identificatore univoco, che verrà usato per identificare il collaboratore nei file del progetto. È consigliabile combinare lo spazio dei nomi della libreria (in questa procedura dettagliata MyDeploymentContributor) con il nome della classe (in questa procedura dettagliata DeploymentUpdateReportContributor), per produrre l'identificatore.  
   
 3.  Successivamente, aggiungere il membro seguente che verrà utilizzato per consentire al provider di accettare un parametro della riga di comando:  
   
@@ -526,7 +526,7 @@ Per creare un collaboratore alla distribuzione, è necessario effettuare le atti
     |-----------------|--------------------|  
     |Membri di classe|[TSqlModel](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlmodel.aspx), [ModelComparisonResult](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.modelcomparisonresult.aspx), [DeploymentStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentstep.aspx)|  
     |Metodo WriteReport|XmlWriter e XmlWriterSettings|  
-    |Metodo ReportPlanOperations|I tipi di interesse includono i seguenti: [DeploymentStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentstep.aspx), [SqlRenameStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.sqlrenamestep.aspx), [SqlMoveSchemaStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.sqlmoveschemastep.aspx), [SqlTableMigrationStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.sqltablemigrationstep.aspx), [CreateElementStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.createelementstep.aspx), [AlterElementStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.alterelementstep.aspx), [DropElementStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.dropelementstep.aspx).<br /><br />Sono presenti altri passaggi. Per un elenco completo, vedere la documentazione dell'API.|  
+    |Metodo ReportPlanOperations|I tipi di interesse includono i seguenti: [DeploymentStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentstep.aspx), [SqlRenameStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.sqlrenamestep.aspx), [SqlMoveSchemaStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.sqlmoveschemastep.aspx), [SqlTableMigrationStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.sqltablemigrationstep.aspx), [CreateElementStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.createelementstep.aspx), [AlterElementStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.alterelementstep.aspx), [DropElementStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.dropelementstep.aspx).<br /><br />Esistono alcuni altri passaggi. Per un elenco completo, vedere la documentazione dell'API.|  
     |GetElementCategory|[TSqlObject](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlobject.aspx)|  
     |GetElementName|[TSqlObject](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlobject.aspx)|  
   
@@ -586,7 +586,7 @@ Il secondo metodo consiste nel creare un file targets contenente gli argomenti d
   
 1.  Passare a %Programmi%\MSBuild.  
   
-2.  Creare una nuova cartella "MyContributors" dove i file targets verranno archiviati.  
+2.  Creare una nuova cartella "MyContributors" in cui archiviare i file TARGETS.  
   
 3.  Creare un nuovo file "MyContributors.targets" in questa directory, aggiungere il testo seguente e salvare il file:  
   
@@ -610,10 +610,10 @@ Il secondo metodo consiste nel creare un file targets contenente gli argomenti d
 Dopo aver seguito uno di questi approcci, è possibile utilizzare MSBuild per passare i parametri per compilazioni della riga di comando.  
   
 > [!NOTE]  
-> È necessario aggiornare sempre la proprietà "DeploymentContributors" per specificare il proprio ID collaboratore. Si tratta dello stesso ID utilizzato nell'attributo "ExportDeploymentPlanExecutor" nel file di origine del collaboratore. Senza questo il collaboratore non verrà eseguito durante la compilazione del progetto. La proprietà "ContributorArguments" deve essere aggiornata solo se si dispone degli argomenti richiesti per l'esecuzione del collaboratore.  
+> È necessario aggiornare sempre la proprietà "DeploymentContributors" per specificare il proprio ID collaboratore. Si tratta dello stesso ID usato nell'attributo "ExportDeploymentPlanExecutor" nel file di origine del collaboratore. Senza questo il collaboratore non verrà eseguito durante la compilazione del progetto. La proprietà "ContributorArguments" deve essere aggiornata solo se si hanno argomenti richiesti per l'esecuzione del collaboratore.  
   
 ### <a name="deploy-the-database-project"></a>Distribuire il progetto di database  
-Il progetto può essere pubblicato o distribuito normalmente in Visual Studio. È sufficiente aprire una soluzione contenente il progetto SQL e scegliere l'opzione "Pubblica". dal menu di scelta rapida per il progetto o usare F5 per una distribuzione di debug in LocalDB. In questo esempio verrà usata la finestra di dialogo "Pubblica..." per generare uno script di distribuzione.  
+Il progetto può essere pubblicato o distribuito normalmente in Visual Studio. È sufficiente aprire una soluzione contenente il progetto SQL e scegliere l'opzione "Pubblica..." dal menu di scelta rapida per il progetto o usare F5 per una distribuzione di debug in Local DB. In questo esempio verrà usata la finestra di dialogo "Pubblica..." per generare uno script di distribuzione.  
   
 ##### <a name="to-deploy-your-sql-project-and-generate-a-deployment-report"></a>Per distribuire il progetto SQL e generare un report di distribuzione  
   

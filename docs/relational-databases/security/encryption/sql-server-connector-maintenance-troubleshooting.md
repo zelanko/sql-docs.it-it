@@ -12,12 +12,12 @@ ms.assetid: 7f5b73fc-e699-49ac-a22d-f4adcfae62b1
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: 1acf0e20eb84502fdba5915dfafbf5d4873130c8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b7bf2dcebf6b9b453a0f5ff839b9eb627698899e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47649509"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52520686"
 ---
 # <a name="sql-server-connector-maintenance-amp-troubleshooting"></a>Manutenzione e risoluzione dei problemi di Connettore SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,8 +30,8 @@ ms.locfileid: "47649509"
 ### <a name="key-rollover"></a>Rollover della chiave  
   
 > [!IMPORTANT]  
->  Connettore [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] richiede che il nome della chiave usi soli i caratteri "a-z", "A-Z", "0-9", e "-", con un limite di 26 caratteri.   
-> Versioni diverse della chiave con lo stesso nome di chiave nell'insieme di credenziali delle chiavi di Azure non funzioneranno con il Connettore [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Per ruotare una chiave dell'insieme di credenziali delle chiavi di Azure usata da [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], è necessario creare una nuova chiave con un nuovo nome.  
+>  Il Connettore [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] richiede che nel nome della chiave vengano usati solo i caratteri "a-z", "A-Z", "0-9" e "-", con un limite di 26 caratteri.   
+> Versioni diverse della chiave con lo stesso nome di chiave nell'insieme di credenziali delle chiavi di Azure non funzioneranno con il Connettore [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Per ruotare una chiave di Azure Key Vault usata da [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], è necessario creare una nuova chiave con un nuovo nome.  
   
  In genere, il controllo delle versioni delle chiavi asimmetriche del server per la crittografia di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] deve essere eseguito ogni 1-2 anni. È importante notare che, anche se l'insieme di credenziali delle chiavi consente il controllo delle versioni delle chiavi, i clienti non dovrebbero usare questa funzionalità per implementare il controllo delle versioni. Connettore [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] non può gestire le modifiche alla versione della chiave nell'insieme di credenziali delle chiavi. Per implementare il controllo delle versioni delle chiavi, è necessario che il cliente crei una nuova chiave nell'insieme di credenziali delle chiavi e quindi crittografi di nuovo la chiave di crittografia dei dati in [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)].  
   
@@ -71,7 +71,7 @@ ms.locfileid: "47649509"
     ```sql  
     CREATE CREDENTIAL Azure_EKM_TDE_cred2  
         WITH IDENTITY = 'ContosoDevKeyVault',   
-       SECRET = 'EF5C8E094D2A4A769998D93440D8115DAADsecret123456789=’   
+       SECRET = 'EF5C8E094D2A4A769998D93440D8115DAADsecret123456789='   
     FOR CRYPTOGRAPHIC PROVIDER EKM;  
   
     ALTER LOGIN TDE_Login2  
@@ -119,7 +119,7 @@ Se è in uso la versione 1.0.0.440 o una versione precedente, seguire questa pro
   
 3.  Disinstallare Connettore [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usando Programmi e funzionalità di Windows.  
   
-     In alternativa, è possibile rinominare la cartella in cui si trova il file DLL. Il nome predefinito della cartella è "[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] per Insieme credenziali chiavi Microsoft Azure".  
+     In alternativa, è possibile rinominare la cartella in cui si trova il file DLL. Il nome predefinito della cartella è "[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] per Microsoft Azure Key Vault".  
   
 4.  Installare la versione più recente del Connettore [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dall'Area download Microsoft.  
   
@@ -148,7 +148,7 @@ In sintesi, ecco i passaggi necessari:
   
 * Eseguire il backup della chiave dell'insieme di credenziali usando il cmdlet di Powershell Backup-AzureKeyVaultKey.  
 * In caso di errore dell'insieme di credenziali, crearne uno nuovo nella stessa area geografica*. L'utente che lo crea deve trovarsi nella stessa directory predefinita dell'entità servizio configurata per SQL Server.  
-* Ripristinare la chiave per il nuovo insieme di credenziali usando il cmdlet Restore-AzureKeyVaultKey di Powershell, che consente di ripristinare la chiave usando lo stesso nome che aveva in precedenza. Se esiste già una chiave con lo stesso nome, il ripristino non riesce.  
+* Ripristinare la chiave nel nuovo insieme di credenziali usando il cmdlet di Powershell Restore-AzureKeyVaultKey che consente di ripristinare la chiave usando lo stesso nome che aveva in precedenza. Se esiste già una chiave con lo stesso nome, il ripristino non riesce.  
 * Concedere le autorizzazioni all'entità servizio di SQL Server per l'uso di questo nuovo insieme di credenziali.  
 * Modificare le credenziali di SQL Server usate dal motore di database in modo da riflettere il nuovo nome dell'insieme di credenziali, se necessario.  
   
@@ -159,7 +159,7 @@ I backup delle chiavi possono essere ripristinati nelle aree di Azure, a condizi
 ### <a name="on-azure-key-vault"></a>Informazioni sull'insieme di credenziali delle chiavi di Azure  
   
 **Come funzionano le operazioni relative alla chiave nell'insieme di credenziali delle chiavi di Azure?**  
- la chiave asimmetrica nell'insieme di credenziali delle chiavi viene usata per proteggere le chiavi di crittografia di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Solo la parte pubblica della chiave asimmetrica lascia sempre l'insieme di credenziali. La parte privata non viene mai esportata dall'insieme di credenziali. Tutte le operazioni crittografiche che usano la chiave asimmetrica vengono eseguite nel servizio dell'insieme di credenziali delle chiavi di Azure e sono protette dalla sicurezza del servizio.  
+ la chiave asimmetrica nell'insieme di credenziali delle chiavi viene usata per proteggere le chiavi di crittografia di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Solo la parte pubblica della chiave asimmetrica lascia sempre l'insieme di credenziali. La parte privata non viene mai esportata dall'insieme di credenziali. Tutte le operazioni di crittografia che usano la chiave asimmetrica vengono eseguite all'interno del servizio Azure Key Vault e sono protette dal sistema di sicurezza del servizio.  
   
  **Che cos'è un URI della chiave?**  
  Ogni chiave nell'insieme di credenziali delle chiavi di Azure ha un URI (Uniform Resource Identifier) che può essere usato per fare riferimento alla chiave dell'applicazione. Usare il formato `https://ContosoKeyVault.vault.azure.net/keys/ContosoFirstKey` per ottenere la versione corrente e usare il formato `https://ContosoKeyVault.vault.azure.net/keys/ContosoFirstKey/cgacf4f763ar42ffb0a1gca546aygd87` per ottenere una versione specifica.  
@@ -212,7 +212,7 @@ Codice di errore  |Simbolo  |Descrizione
 5 | scp_err_AuthFailure | L'autenticazione con il provider EKM non è riuscita.    
 6 | scp_err_InvalidArgument | L'argomento specificato non è valido.    
 7 | scp_err_ProviderError | Si è verificato un errore non specificato nel provider EKM rilevato dal motore SQL.    
-2049 | scp_err_KeyNameDoesNotFitThumbprint | Il nome della chiave è troppo lungo l'identificazione personale del motore SQL. Il nome della chiave non deve superare i 26 caratteri.    
+2049 | scp_err_KeyNameDoesNotFitThumbprint | Il nome della chiave è troppo lungo per il sistema di identificazione personale del motore SQL. Il nome della chiave non deve superare i 26 caratteri.    
 2050 | scp_err_PasswordTooShort | La stringa del segreto, che rappresenta la concatenazione dell'ID client e del segreto di AAD, contiene un numero di caratteri inferiore a 32.    
 2051 | scp_err_OutOfMemory | La memoria del motore SQL è insufficiente e non è stato possibile allocare memoria per il provider EKM.    
 2052 | scp_err_ConvertKeyNameToThumbprint | La conversione del nome della chiave in identificazione personale non è riuscita.    
@@ -238,17 +238,17 @@ Codice di errore  |Simbolo  |Descrizione
 3018 | ErrorHttpQueryHeaderUpdateBufferLength | Non è possibile aggiornare la lunghezza del buffer quando si eseguono query sull'intestazione della risposta.    
 3019 | ErrorHttpReadData | Non è possibile leggere i dati della risposta a causa di un errore di rete. 
 3076 | ErrorHttpResourceNotFound | Il server ha risposto 404, perché il nome della chiave non è stato trovato. Assicurarsi che il nome della chiave sia presente nell'insieme di credenziali.
-3077 | ErrorHttpOperationForbidden | Il server ha risposto 403, perché l'utente non ha le autorizzazioni appropriate per eseguire l'azione. Assicurarsi di avere le autorizzazioni per l'operazione specificata. Per il corretto funzionamento, il connettore richiede almeno le autorizzazioni "get, list, wrapKey, unwrapKey".   
+3077 | ErrorHttpOperationForbidden | Il server ha restituito l'errore 403 perché l'utente non ha le autorizzazioni appropriate per eseguire l'azione. Assicurarsi di avere le autorizzazioni per l'operazione specificata. Per il corretto funzionamento, il connettore richiede almeno le autorizzazioni "get, list, wrapKey, unwrapKey".   
   
-Se il codice di errore visualizzato non è presente in questa tabella, di seguito sono riportate alcune altre condizioni che potrebbero essere causa dell'errore:   
+Se il codice di errore non è presente in questa tabella, di seguito sono riportate alcune altre condizioni che potrebbero essere causa dell'errore:   
   
--   Non si ha un accesso a Internet, quindi non è possibile accedere all'insieme di credenziali delle chiavi di Azure. Verificare la connessione a Internet.  
+-   Non si ha accesso a Internet, quindi non è possibile accedere ad Azure Key Vault. Verificare la connessione Internet.  
   
 -   Il servizio dell'insieme di credenziali delle chiavi potrebbe non essere attivo. Riprovare in un altro momento.  
   
 -   La chiave asimmetrica dell'insieme di credenziali delle chiavi di Azure o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]potrebbe essere stata eliminata. Ripristinare la chiave.  
   
--   Se viene visualizzato l'errore "Impossibile caricare la libreria", verificare che sia installata la versione più recente di Visual Studio C++ Redistributable nella versione di SQL Server in esecuzione. La tabella seguente specifica la versione da installare dall'Area download Microsoft.   
+-   Se viene visualizzato l'errore "Impossibile caricare la libreria", verificare che sia installata la versione di Visual Studio C++ Redistributable appropriata in base alla versione di SQL Server in esecuzione. La tabella seguente specifica la versione da installare dall'Area download Microsoft.   
   
 Versione di SQL Server  |Collegamento di installazione ridistribuibile    
 ---------|--------- 

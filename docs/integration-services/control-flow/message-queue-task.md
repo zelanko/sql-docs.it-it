@@ -22,12 +22,12 @@ ms.assetid: ae1d8fad-6649-4e93-b589-14a32d07da33
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 61956bf22dc15c95d986317d3a3cf18e9ca4d58b
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: d100819807cd669803ef698d4614373b0b997905
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51639888"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52503987"
 ---
 # <a name="message-queue-task"></a>Message Queue Task
   L'attività Message Queue consente di usare Microsoft Message Queuing (noto anche come MSMQ) per scambiare messaggi tra pacchetti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] o per inviare messaggi a una coda di applicazione elaborata da un'applicazione personalizzata. I messaggi possono essere in forma di testo semplice, di file o di variabili con i rispettivi valori.  
@@ -153,17 +153,17 @@ ms.locfileid: "51639888"
   
 #### <a name="messagetype--data-file-message"></a>MessageType = Messaggio file di dati  
  **DataFileMessage**  
- Consente di digitare il percorso del file di dati o di trovare il file usando il pulsante **(…)** .  
+ Digitare il percorso del file di dati o fare clic sui puntini di sospensione **(...)** e quindi individuare il file.  
   
 #### <a name="messagetype--variable-message"></a>MessageType = Messaggio variabili  
  **VariableMessage**  
- Consente di digitare i nomi delle variabili o di selezionare le variabili usando il pulsante **(…)** . Le variabili sono separate da virgole.  
+ Digitare i nomi delle variabili o fare clic sui puntini di sospensione **(...)** e quindi selezionare le variabili. Le variabili sono separate da virgole.  
   
  **Argomenti correlati:** Seleziona variabili  
   
 #### <a name="messagetype--string-message"></a>MessageType = Messaggio stringa  
  **StringMessage**  
- Consente di digitare il messaggio stringa direttamente o nella finestra di dialogo **Immettere il messaggio stringa** visualizzata facendo clic sul pulsante **(…)** .  
+ Digitare il messaggio stringa o fare clic sui puntini di sospensione **(...)** e quindi digitare il messaggio nella finestra di dialogo **Immettere il messaggio stringa**.  
   
 ## <a name="message-queue-task-editor-receive-page"></a>Editor attività Message Queue (pagina Ricezione)
   Usare la pagina **Ricezione** della finestra di dialogo **Editor attività Message Queue** per configurare un'attività Message Queue che consenta di ricevere messaggi di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Message Queuing (MSMQ).  
@@ -192,7 +192,7 @@ ms.locfileid: "51639888"
   
 #### <a name="messagetype--data-file-message"></a>MessageType = Messaggio file di dati  
  **SaveFileAs**  
- Digitare il percorso del file da usare oppure fare clic sul pulsante con i puntini di sospensione **(…)** per individuare il file.  
+ Digitare il percorso del file da usare o fare clic sul pulsante con i puntini di sospensione **(...)** e quindi individuare il file.  
   
  **Overwrite**  
  Consente di indicare se sovrascrivere i dati in un file esistente durante il salvataggio del contenuto di un messaggio con file di dati. Il valore predefinito è **False**.  
@@ -212,8 +212,8 @@ ms.locfileid: "51639888"
  Questa opzione è di sola lettura. Può essere vuota o contenere il GUID di un pacchetto se la proprietà Filter è stata impostata in precedenza.  
   
 ##### <a name="filter--from-package"></a>Filter = Dal pacchetto  
- **Identifier**  
- Se si sceglie di applicare un filtro, digitare l'identificatore univoco del pacchetto dal quale possono essere ricevuti i messaggi oppure fare clic sul pulsante con i puntini di sospensione **(…)** per specificare il pacchetto.  
+ **Identificatore**  
+ Se si sceglie di applicare un filtro, digitare l'identificatore univoco del pacchetto da cui si possono ricevere i messaggi oppure fare clic sul pulsante con i puntini di sospensione **(...)** e specificare il pacchetto.  
   
  **Argomenti correlati:** [Seleziona pacchetto](../../integration-services/control-flow/select-a-package.md)  
   
@@ -227,7 +227,7 @@ ms.locfileid: "51639888"
 |**Dal pacchetto**|Il messaggio riceve solo messaggi dal pacchetto specificato. La selezione del valore determina la visualizzazione dell'opzione dinamica **Identifier**.|  
   
  **Variabile**  
- Digitare il nome della variabile oppure fare clic su \<**Nuova variabile…**> per configurare una nuova variabile.  
+ Digitare il nome della variabile oppure fare clic su \<**Nuova variabile...**> per configurare una nuova variabile.  
   
  **Argomenti correlati:** [Aggiungi variabile](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
@@ -238,8 +238,8 @@ ms.locfileid: "51639888"
  Questa opzione è vuota.  
   
 ##### <a name="filter--from-package"></a>Filter = Dal pacchetto  
- **Identifier**  
- Se si sceglie di applicare un filtro, digitare l'identificatore univoco del pacchetto dal quale possono essere ricevuti i messaggi oppure fare clic sul pulsante con i puntini di sospensione **(…)** per specificare il pacchetto.  
+ **Identificatore**  
+ Se si sceglie di applicare un filtro, digitare l'identificatore univoco del pacchetto da cui si possono ricevere i messaggi oppure fare clic sul pulsante con i puntini di sospensione **(...)** e specificare il pacchetto.  
   
  **Argomenti correlati:** [Seleziona pacchetto](../../integration-services/control-flow/select-a-package.md)  
   
@@ -272,7 +272,7 @@ ms.locfileid: "51639888"
  Specificare la stringa con cui confrontare il messaggio, a meno che l'opzione **Compare** sia impostata su **Nessuno**.  
   
  **Variabile**  
- Digitare il nome della variabile per la memorizzazione del messaggio ricevuto oppure fare clic su \<**Nuova variabile…**> per configurare una nuova variabile.  
+ Digitare il nome della variabile per la memorizzazione del messaggio ricevuto oppure fare clic su \<**Nuova variabile...**> e quindi configurare una nuova variabile.  
   
  **Argomenti correlati:** [Aggiungi variabile](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   

@@ -14,12 +14,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5283ad5eacfc569e07272df069c04fe4f42efcfa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7266d3d1021592fc236e75f3893ec01aa29bb19f
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47771399"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52398744"
 ---
 # <a name="modify-statistics"></a>Modificare statistiche
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -62,7 +62,7 @@ ms.locfileid: "47771399"
   
 5.  Fare clic con il pulsante destro del mouse sull'oggetto statistiche che si vuole modificare e scegliere **Proprietà**.  
   
-6.  Nella pagina **nome_statistichee** *Proprietà statistiche -*  **nome_statistiche** fare clic su **Aggiungi**, **Rimuovi**, **Sposta su**o **Sposta giù**o any combination, to alter the properties of the statistics. Si noti che la posizione di una colonna nella griglia **Colonne statistiche** può avere un impatto significativo sull'utilità delle statistiche.  
+6.  Nella pagina **nome_statistichee** *Proprietà statistiche -* **nome_statistiche** fare clic su **Aggiungi**, **Rimuovi**, **Sposta su**o **Sposta giù**o qualsiasi combinazione, per modificare le proprietà delle statistiche. Si noti che la posizione di una colonna nella griglia **Colonne statistiche** può avere un impatto significativo sull'utilità delle statistiche.  
   
 7.  Fare clic su **OK**.  
   

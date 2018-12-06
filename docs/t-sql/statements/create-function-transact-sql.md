@@ -12,6 +12,8 @@ f1_keywords:
 - CREATE FUNCTION
 - CREATE_FUNCTION_TSQL
 - FUNCTION_TSQL
+- TVF
+- MSTVF
 dev_langs:
 - TSQL
 helpviewer_keywords:
@@ -31,17 +33,20 @@ helpviewer_keywords:
 - nesting user-defined functions
 - deterministic functions
 - scalar-valued functions
+- scalar UDF
+- MSTVF
+- TVF
 - functions [SQL Server], invoking
 ms.assetid: 864b393f-225f-4895-8c8d-4db59ea60032
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 90c31ce4210cb05b205459c63bd616c8bba382d3
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 008707aee498d5c63f1ef8a2d67e7166bf7eb4f4
+ms.sourcegitcommit: 4182a1e8be69373dde2fe778f19cab9cd78e447c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51704069"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51818517"
 ---
 # <a name="create-function-transact-sql"></a>CREATE FUNCTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -68,10 +73,10 @@ Crea una funzione definita dall'utente in [!INCLUDE[ssNoVersion](../../includes/
 -   Usare una funzione inline come predicato di filtro per un criterio di sicurezza  
   
 > [!NOTE]  
->  In questo argomento viene illustrata l'integrazione di .NET Framework CLR in SQL Server. L'integrazione di CLR non si applica al database SQL di Azure.
+> In questo argomento viene illustrata l'integrazione di CLR di .NET Framework in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. L'integrazione di CLR non si applica a [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 > [!NOTE]  
->  Per Azure SQL Data Warehouse, vedere l'articolo [CREATE FUNCTION (SQL Data Warehouse)](https://docs.microsoft.com/sql/t-sql/statements/create-function-sql-data-warehouse?view=aps-pdw-2016).
+> Per [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], vedere [CREATE FUNCTION (SQL Data Warehouse)](../../t-sql/statements/create-function-sql-data-warehouse.md).
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -268,12 +273,12 @@ RETURNS return_data_type
   
 ## <a name="arguments"></a>Argomenti
 *OR ALTER*  
- **Si applica a**: Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1).  
+ **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
  Modifica la funzione in modo condizionale solo se esiste già. 
  
 > [!NOTE]  
->  Sintassi [OR ALTER] facoltativa per CLR è disponibile a partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU1.   
+> Sintassi [OR ALTER] facoltativa per CLR è disponibile a partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU1.   
  
  *schema_name*  
  Nome dello schema a cui appartiene la funzione definita dall'utente.  
@@ -282,7 +287,7 @@ RETURNS return_data_type
  Nome della funzione definita dall'utente. I nomi di funzione devono essere conformi alle regole per gli [identificatori](../../relational-databases/databases/database-identifiers.md) e devono essere univoci all'interno del database e rispetto al relativo schema.  
   
 > [!NOTE]  
->  È necessario apporre le parentesi dopo il nome della funzione anche se non viene specificato alcun parametro.  
+> È necessario apporre le parentesi dopo il nome della funzione anche se non viene specificato alcun parametro.  
   
  @*parameter_name*  
  Parametro della funzione definita dall'utente. È possibile dichiarare uno o più parametri.  
@@ -292,24 +297,22 @@ RETURNS return_data_type
  Specificare un nome di parametro utilizzando come primo carattere il simbolo di chiocciola (@). I nomi di parametro devono essere conformi alle regole per gli identificatori. I parametri sono locali rispetto alla funzione. È pertanto possibile utilizzare gli stessi nomi di parametro in altre funzioni. I parametri possono rappresentare solo costanti, non nomi di tabella, di colonna o di altri oggetti di database.  
   
 > [!NOTE]  
->  ANSI_WARNINGS non viene applicata quando vengono passati parametri a una stored procedure, una funzione definita dall'utente oppure in caso di dichiarazione e impostazione delle variabili in un'istruzione batch. Se, ad esempio, la variabile viene definita come **char(3)** e quindi impostata su un valore maggiore di tre caratteri, i dati verranno troncati alla dimensione definita e l'istruzione INSERT o UPDATE avrà esito positivo.  
+> ANSI_WARNINGS non viene applicata quando vengono passati parametri a una stored procedure, una funzione definita dall'utente oppure in caso di dichiarazione e impostazione delle variabili in un'istruzione batch. Se, ad esempio, la variabile viene definita come **char(3)** e quindi impostata su un valore maggiore di tre caratteri, i dati verranno troncati alle dimensioni definite e l'istruzione `INSERT` o `UPDATE` avrà esito positivo.  
   
  [ *type_schema_name*. ] *parameter_data_type*  
  Tipo di dati del parametro e, facoltativamente, lo schema a cui appartiene. Per le funzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] sono consentiti tutti i tipi di dati, compresi i tipi CLR definiti dall'utente e i tipi di tabella definiti dall'utente, eccetto il tipo di dati **timestamp**. Per le funzioni CLR sono consentiti tutti i tipi di dati, inclusi i tipi CLR definiti dall'utente, eccetto i tipi di dati **text**, **ntext**, **image**, i tipi di dati definiti dall'utente e **timestamp**. Non è possibile specificare i tipi non scalari,**cursor** e **table**, come tipo di dati dei parametri nelle funzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] o CLR.  
   
- Se *type_schema_name* non viene specificato, [!INCLUDE[ssDE](../../includes/ssde-md.md)] cerca *scalar_parameter_data_type* nell'ordine seguente:  
+Se *type_schema_name* non viene specificato, [!INCLUDE[ssDE](../../includes/ssde-md.md)] cerca *scalar_parameter_data_type* nell'ordine seguente:  
   
 -   Schema contenente i nomi dei tipi di dati di sistema di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
-  
 -   Schema predefinito dell'utente corrente nel database corrente.  
-  
 -   Schema **dbo** nel database corrente.  
   
- [ =*default* ]  
- Valore predefinito del parametro. Se viene definito un valore *default*, è possibile eseguire la funzione senza specificare un valore per il parametro corrispondente a tale valore.  
+[ =*default* ]  
+Valore predefinito del parametro. Se viene definito un valore *default*, è possibile eseguire la funzione senza specificare un valore per il parametro corrispondente a tale valore.  
   
 > [!NOTE]  
->  È possibile specificare parametri predefiniti per le funzioni CLR, ad eccezione dei tipi di dati **varchar(max)** e **varbinary(max)**.  
+> È possibile specificare parametri predefiniti per le funzioni CLR, ad eccezione dei tipi di dati **varchar(max)** e **varbinary(max)**.  
   
  Se a un parametro della funzione è associato un valore predefinito, alla chiamata della funzione è necessario specificare la parola chiave DEFAULT per recuperare il valore predefinito. Questo comportamento risulta diverso dall'utilizzo di parametri con valore predefinito nelle stored procedure in cui l'omissione del parametro implica l'utilizzo del valore predefinito. Tuttavia, la parola chiave DEFAULT non è richiesta in caso di richiamo di una funzione scalare tramite l'istruzione EXECUTE.  
   
@@ -320,11 +323,11 @@ RETURNS return_data_type
  Valore restituito di una funzione scalare definita dall'utente. Per le funzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] sono consentiti tutti i tipi di dati, compresi i tipi CLR definiti dall'utente, eccetto il tipo di dati **timestamp**. Per le funzioni CLR, sono consentiti tutti i tipi di dati, compresi i tipi CLR definiti dall'utente, eccetto i tipi di dati **text**, **ntext**, **image** e **timestamp**. Non è possibile specificare un tipo non scalare,**cursor** o **table**, come tipo di dati restituito nelle funzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] o CLR.  
   
  *function_body*  
- Specifica che una serie di istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)], che nel loro complesso non producono alcun effetto collaterale, ad esempio la modifica di una tabella, definisce il valore della funzione. *function_body* viene usato solo in funzioni scalari e funzioni composte da più istruzioni con valori di tabella.  
+ Specifica che una serie di istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)], che nel loro complesso non producono alcun effetto collaterale, ad esempio la modifica di una tabella, definisce il valore della funzione. *function_body* viene usato solo in funzioni scalari e funzioni con valori di tabella con istruzioni multiple.  
   
  Nelle funzioni scalari *function_body* corrisponde a una serie di istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] che in combinazione restituiscono un valore scalare.  
   
- Nelle funzioni composte da più istruzioni con valori di tabella *function_body* corrisponde a una serie di istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] che popolano una variabile restituita TABLE.  
+ Nelle funzioni con valori di tabella con istruzioni multiple *function_body* corrisponde a una serie di istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] che popolano una variabile restituita TABLE.  
   
  *scalar_expression*  
  Specifica il valore scalare restituito dalla funzione scalare.  
@@ -332,19 +335,17 @@ RETURNS return_data_type
  TABLE  
  Specifica che il valore restituito della funzione con valori di tabella è una tabella. Alle funzioni con valori di tabella è possibile passare solo costanti e @*local_variables*.  
   
- Nelle funzioni inline con valori di tabella, il valore restituito TABLE viene definito tramite una sola istruzione SELECT. Alle funzioni inline non sono associate variabili restituite.  
+ Nelle funzioni inline con valori di tabella il valore restituito TABLE viene definito tramite una sola istruzione SELECT. Alle funzioni inline non sono associate variabili restituite.  
   
- Nelle funzioni a istruzioni multiple con valori di tabella, @*return_variable* è una variabile TABLE usata per l'archiviazione e l'accumulo delle righe da restituire come valore della funzione.È possibile specificare  @*return_variable* solo per le funzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] e non per le funzioni CLR.  
-  
-> [!WARNING]  
->  La creazione di un join di una funzione con valori di tabella con istruzioni multiple in una clausola **FROM** è possibile, ma può comportare prestazioni scarse. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non è possibile utilizzare tutte le tecniche ottimizzate con alcune istruzioni che possono essere incluse in una funzione con istruzioni multiple, comportando un piano di query non ottimale. Per ottenere le migliori prestazioni possibili, utilizzare i join tra le tabelle di base anziché tra le funzioni, quando possibile.  
+ <a name="mstvf"></a>Nelle funzioni con valori di tabella con istruzioni multiple @*return_variable* è una variabile TABLE usata per l'archiviazione e l'accumulo delle righe da restituire come valore della funzione.È possibile specificare  @*return_variable* solo per le funzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] e non per le funzioni CLR.  
   
  *select_stmt*  
  Istruzione SELECT che definisce il valore restituito di una funzione inline con valori di tabella.  
   
  ORDER (\<order_clause>) specifica l'ordine in base a cui vengono restituiti i risultati dalla funzione con valori di tabella. Per altre informazioni, vedere la sezione "[Uso dell'ordinamento nelle funzioni CLR con valori di tabella](#using-sort-order-in-clr-table-valued-functions)" più avanti in questo argomento.  
   
- EXTERNAL NAME \<method_specifier> *assembly_name*.*class_name*.*method_name* **Si applica a** : da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ EXTERNAL NAME \<method_specifier> *assembly_name*.*class_name*.*method_name*    
+ **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP1 a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])
   
  Specifica l'assembly e il metodo a cui dovrà fare riferimento il nome della funzione creata.  
   
@@ -360,18 +361,19 @@ RETURNS return_data_type
     `SELECT * FROM sys.assembly_modules;`(Indici per tabelle con ottimizzazione per la memoria).  
     Il metodo deve essere statico.  
   
- In un tipico esempio di MyFood.DLL, in cui tutti i tipi sono nello spazio dei nomi MyFood, il valore `EXTERNAL NAME` potrebbe essere:   
+In un tipico esempio di MyFood.DLL, in cui tutti i tipi sono nello spazio dei nomi MyFood, il valore `EXTERNAL NAME` potrebbe essere:   
 `MyFood.[MyFood.MyClass].MyStaticMethod`  
   
 > [!NOTE]  
->  Per impostazione predefinita, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non può eseguire il codice CLR. È possibile creare, modificare ed eliminare gli oggetti di database che fanno riferimento a moduli CLR; tuttavia non è possibile eseguire questi riferimenti in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] finché non viene abilitata l'opzione [clr enabled option](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md). Per abilitare questa opzione, usare [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md).  
+> Per impostazione predefinita, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non può eseguire il codice CLR. È possibile creare, modificare ed eliminare gli oggetti di database che fanno riferimento a moduli CLR; tuttavia non è possibile eseguire questi riferimenti in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] finché non viene abilitata l'opzione [clr enabled option](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md). Per abilitare questa opzione, usare [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md).  
   
 > [!NOTE]  
->  Questa opzione non è disponibile in un database indipendente.  
+> Questa opzione non è disponibile in un database indipendente.  
   
  *\<* table_type_definition*>* ( { \<column_definition> \<column_constraint>    | \<computed_column_definition> }    [ \<table_constraint> ] [ ,...*n* ] ) Definisce il tipo di dati table per una funzione [!INCLUDE[tsql](../../includes/tsql-md.md)]. La dichiarazione di tabella include definizioni di colonna, nonché vincoli di colonna o tabella. La tabella viene sempre inserita nel filegroup primario.  
   
- \< clr_table_type_definition >  ( { *column_name**data_type* } [ ,...*n* ] ) **Si applica a**: da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([in anteprima in alcune aree](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)).|  
+ \< clr_table_type_definition >  ( { *column_name**data_type* } [ ,...*n* ] )    
+ **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP1 a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), e ad [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] ([anteprima in alcune aree](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)).  
   
  Definisce i tipi di dati della tabella per una funzione CLR. La dichiarazione di tabella include solo nomi di colonna e tipi di dati. La tabella viene sempre inserita nel filegroup primario.  
   
@@ -395,7 +397,7 @@ RETURNS return_data_type
  Specifica che la funzione includerà una o più delle opzioni seguenti.  
   
  ENCRYPTION  
- **Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP1 a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])  
   
  Indica che il testo originale dell'istruzione CREATE FUNCTION verrà convertito da [!INCLUDE[ssDE](../../includes/ssde-md.md)] in un formato offuscato. L'output dell'offuscamento non è visibile direttamente nelle viste del catalogo. Gli utenti che non hanno accesso a tabelle di sistema o file del database non possono recuperare il testo offuscato. Il testo è tuttavia disponibile per gli utenti con privilegi che consentono l'accesso alle tabelle di sistema attraverso la [porta DAC](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md) o l'accesso diretto a file del database. Gli utenti in grado di collegare un debugger al processo del server possono inoltre recuperare la procedura originale dalla memoria in fase di esecuzione. Per altre informazioni sull'accesso ai metadati di sistema, vedere [Configurazione della visibilità dei metadati](../../relational-databases/security/metadata-visibility-configuration.md).  
   
@@ -408,9 +410,9 @@ RETURNS return_data_type
   
 -   La funzione viene eliminata.  
   
--   La funzione viene modificata tramite l'istruzione ALTER senza specificare l'opzione SCHEMABINDING.  
+-   La funzione viene modificata tramite l'istruzione `ALTER` senza specificare l'opzione `SCHEMABINDING`.  
   
- Una funzione può essere associata a uno schema solo se vengono soddisfatte le condizioni seguenti:  
+Una funzione può essere associata a uno schema solo se vengono soddisfatte le condizioni seguenti:  
   
 -   Si tratta di una funzione [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
@@ -420,10 +422,10 @@ RETURNS return_data_type
   
 -   La funzione e gli oggetti a cui fa riferimento appartengono allo stesso database.  
   
--   L'utente che ha eseguito l'istruzione CREATE FUNCTION dispone dell'autorizzazione REFERENCES per gli oggetti di database a cui la funzione fa riferimento.  
+-   L'utente che ha eseguito l'istruzione `CREATE FUNCTION` dispone dell'autorizzazione `REFERENCES` per gli oggetti di database a cui la funzione fa riferimento.  
   
 RETURNS NULL ON NULL INPUT | **CALLED ON NULL INPUT**  
-Specifica l'attributo **OnNULLCall** di una funzione a valori scalari. Se omesso, viene utilizzata l'opzione CALLED ON NULL INPUT per impostazione predefinita. Ciò significa che viene eseguito il corpo della funzione anche se come argomento viene passato NULL.  
+Specifica l'attributo **OnNULLCall** di una funzione scalare. Se omesso, viene utilizzata l'opzione CALLED ON NULL INPUT per impostazione predefinita. Ciò significa che viene eseguito il corpo della funzione anche se come argomento viene passato NULL.  
   
 Se in una funzione CLR si specifica l'opzione RETURNS NULL ON NULL INPUT, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituisce NULL se uno qualsiasi degli argomenti ricevuti è NULL senza effettivamente richiamare il corpo della funzione. Se per il metodo di una funzione CLR specificato in \<method_specifier> è stato definito un attributo personalizzato impostato su RETURNS NULL ON NULL INPUT, ma l'istruzione CREATE FUNCTION include CALLED ON NULL INPUT, l'istruzione CREATE FUNCTION risulta prioritaria. Non è possibile specificare l'attributo **OnNULLCall** per le funzioni CLR con valori di tabella. 
   
@@ -431,9 +433,9 @@ Clausola EXECUTE AS
 Specifica il contesto di sicurezza nel quale viene eseguita la funzione definita dall'utente. Sarà pertanto possibile controllare l'account utente utilizzato da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per convalidare le autorizzazioni per qualsiasi oggetto di database a cui la funzione fa riferimento.  
   
 > [!NOTE]  
->  Non è possibile specificare la clausola EXECUTE AS per le funzioni inline con valori di tabella.
+> Non è possibile specificare la clausola `EXECUTE AS` per le funzioni inline con valori di tabella.
   
- Per altre informazioni, vedere [Clausola EXECUTE AS &#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-clause-transact-sql.md).  
+Per altre informazioni, vedere [Clausola EXECUTE AS &#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-clause-transact-sql.md).  
 
 INLINE = { ON | OFF }  
 Specifica se questa funzione scalare definita dall'utente deve essere impostata come inline. Questa clausola è applicabile solo alle funzioni scalari definite dall'utente. La clausola `INLINE` non è obbligatoria. Se la clausola `INLINE` viene omessa, viene automaticamente impostata su ON/OFF in base al fatto che possa essere eseguito l'inline della funzione. Se viene specificato `INLINE=ON` ma la funzione definita dall'utente non è idonea per l'inlining, viene generato un errore. Per altre informazioni, vedere [Inlining di funzioni definite dall'utente scalari](../../relational-databases/user-defined-functions/scalar-udf-inlining.md).
@@ -456,7 +458,8 @@ Specifica se questa funzione scalare definita dall'utente deve essere impostata 
   
  La clausola COLLATE consente di modificare le regole di confronto solo per le colonne con tipo di dati **char**, **varchar**, **nchar** e **nvarchar**.  
   
- Non è possibile specificare l'opzione COLLATE per le funzioni CLR con valori di tabella.  
+ > [!NOTE]
+ > Non è possibile specificare la clausola `COLLATE` per le funzioni CLR con valori di tabella.  
   
  ROWGUIDCOL  
  Indica che la nuova colonna è un identificatore univoco di riga globale. È possibile designare come colonna ROWGUIDCOL una sola colonna di tipo **uniqueidentifier** per ogni tabella. La proprietà ROWGUIDCOL può essere assegnata solo a una colonna **uniqueidentifier**.  
@@ -533,12 +536,15 @@ Specifica se questa funzione scalare definita dall'utente deve essere impostata 
  Specifica se sono consentiti blocchi a livello di pagina. Il valore predefinito è ON.  
   
 ## <a name="best-practices"></a>Procedure consigliate  
- Se una funzione definita dall'utente non viene creata tramite la clausola SCHEMABINDING, le modifiche apportate agli oggetti sottostanti possono influire sulla definizione della funzione e produrre risultati imprevisti quando viene richiamata. È consigliabile implementare uno dei metodi seguenti per assicurarsi che la funzione non diventi obsoleta in seguito a modifiche degli oggetti sottostanti:  
+Se una funzione definita dall'utente non viene creata tramite la clausola `SCHEMABINDING`, le modifiche apportate agli oggetti sottostanti possono influire sulla definizione della funzione e generare risultati imprevisti quando viene richiamata. È consigliabile implementare uno dei metodi seguenti per assicurarsi che la funzione non diventi obsoleta in seguito a modifiche degli oggetti sottostanti:  
   
--   Specificare la clausola WITH SCHEMABINDING quando si crea la funzione. In questo modo, gli oggetti a cui si fa riferimento nella definizione della funzione possono essere modificati solo se viene modificata anche la funzione.  
+-   Specificare la clausola `WITH SCHEMABINDING` quando si crea la funzione. In questo modo, gli oggetti a cui si fa riferimento nella definizione della funzione possono essere modificati solo se viene modificata anche la funzione.  
   
 -   Eseguire la stored procedure [sp_refreshsqlmodule](../../relational-databases/system-stored-procedures/sp-refreshsqlmodule-transact-sql.md) dopo avere modificato qualsiasi oggetto specificato nella definizione della funzione.  
   
+> [!IMPORTANT]  
+> Per altre informazioni e considerazioni sulle prestazioni delle funzioni inline con valori di tabella e delle funzioni con valori di tabella con istruzioni multiple, vedere [Creare funzioni definite dall'utente &#40;Motore di database&#41;](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md). 
+
 ## <a name="data-types"></a>Tipi di dati  
  Se si specificano parametri in una funzione CLR, essi dovranno essere di tipo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] come precedentemente definito per *scalar_parameter_data_type*. Per informazioni sul confronto tra i tipi di dati di sistema di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e i tipi di dati di integrazione CLR oppure i tipi di dati CLR di [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], vedere [Mapping dei dati dei parametri CLR](../../relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md).  
   
@@ -555,26 +561,26 @@ Specifica se questa funzione scalare definita dall'utente deve essere impostata 
  Per altre informazioni sulla programmazione delle funzioni CLR, vedere [Funzioni CLR definite dall'utente](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-functions.md).  
   
 ## <a name="general-remarks"></a>Osservazioni generali  
- È possibile richiamare funzioni a valori scalari laddove vengono utilizzate espressioni scalari. Sono incluse le colonne calcolate e le definizioni dei vincoli CHECK. Le funzioni a valori scalari possono essere eseguite anche tramite l'uso dell'istruzione [EXECUTE](../../t-sql/language-elements/execute-transact-sql.md). È necessario richiamare funzioni a valori scalari utilizzando almeno il nome in due parti della funzione. Per altre informazioni sui nomi a più parti, vedere [Convenzioni della sintassi Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md). Le funzioni con valori di tabella possono essere richiamate dove sono consentite le espressioni di tabella nella clausola FROM delle istruzioni SELECT, INSERT, UPDATE o DELETE. Per altre informazioni, vedere [Eseguire funzioni definite dall'utente](../../relational-databases/user-defined-functions/execute-user-defined-functions.md).  
+ È possibile richiamare funzioni scalari laddove vengono usate espressioni scalari. Sono incluse le colonne calcolate e le definizioni dei vincoli CHECK. Le funzioni scalari possono essere eseguite anche tramite l'uso dell'istruzione [EXECUTE](../../t-sql/language-elements/execute-transact-sql.md). È necessario richiamare funzioni scalari usando almeno il nome in due parti della funzione (*<schema>.<function>*). Per altre informazioni sui nomi a più parti, vedere [Convenzioni della sintassi Transact-SQL (Transact-SQL)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md). Le funzioni con valori di tabella possono essere richiamate laddove sono consentite le espressioni di tabella nella clausola `FROM` delle istruzioni `SELECT`, `INSERT`, `UPDATE`, o `DELETE`. Per altre informazioni, vedere [Eseguire funzioni definite dall'utente](../../relational-databases/user-defined-functions/execute-user-defined-functions.md).  
   
 ## <a name="interoperability"></a>Interoperabilità  
  In una funzione le istruzioni seguenti sono valide:  
   
 -   Istruzioni di assegnazione.  
-  
--   Istruzioni per il controllo di flusso, escluse le istruzioni TRY...CATCH.  
-  
--   Istruzioni DECLARE che definiscono le variabili dati locali e i cursori locali.  
-  
--   Istruzioni SELECT contenenti gli elenchi di selezione con espressioni che assegnano valori alle variabili locali.  
-  
--   Operazioni di cursore che fanno riferimento a cursori locali dichiarati, aperti, chiusi e deallocati nella funzione. Sono consentite solo istruzioni FETCH che assegnano valori alle variabili locali tramite la clausola INTO. Non sono consentite istruzioni FETCH che restituiscono dati al client.  
-  
--   Istruzioni INSERT, UPDATE e DELETE che modificano le variabili di tabella locali.  
-  
--   Istruzioni EXECUTE che richiamano stored procedure estese.  
-  
--   Per altre informazioni, vedere [Creare funzioni definite dall'utente &#40;Motore di database&#41;](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md).  
+
+-   Istruzioni per il controllo di flusso, ad eccezione delle istruzioni `TRY...CATCH`.  
+
+-   Istruzioni `DECLARE` che definiscono le variabili dati locali e i cursori locali.  
+
+-   Istruzioni `SELECT` contenenti gli elenchi di selezione con espressioni che assegnano valori alle variabili locali.  
+
+-   Operazioni di cursore che fanno riferimento a cursori locali dichiarati, aperti, chiusi e deallocati nella funzione. Sono consentite solo istruzioni `FETCH` che assegnano valori alle variabili locali tramite la clausola `INTO`. Non sono consentite istruzioni `FETCH` che restituiscono dati al client.  
+
+-   Istruzioni `INSERT`, `UPDATE` e `DELETE` che modificano le variabili di tabella locali.  
+
+-   Istruzioni `EXECUTE` che chiamano stored procedure estese.  
+
+Per altre informazioni, vedere [Creare funzioni definite dall'utente &#40;Motore di database&#41;](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md).  
   
 ### <a name="computed-column-interoperability"></a>Interoperabilità delle colonne calcolate  
  Le funzioni presentano le proprietà seguenti. I valori di tali proprietà determinano se le funzioni sono utilizzabili nelle colonne calcolate che possono essere persistenti o indicizzate.  
@@ -591,19 +597,17 @@ Specifica se questa funzione scalare definita dall'utente deve essere impostata 
   
  Per visualizzare i valori correnti di queste proprietà, usare [OBJECTPROPERTYEX](../../t-sql/functions/objectpropertyex-transact-sql.md).  
   
- Le funzioni devono essere create con associazione allo schema per essere deterministiche.  
+> [!IMPORTANT]
+> Le funzioni devono essere create con `SCHEMABINDING` per essere deterministiche.  
   
- È possibile utilizzare una colonna calcolata che richiama una funzione definita dall'utente in un indice se per le proprietà della funzione definita dall'utente sono stati impostati i valori seguenti:  
+È possibile utilizzare una colonna calcolata che richiama una funzione definita dall'utente in un indice se per le proprietà della funzione definita dall'utente sono stati impostati i valori seguenti:  
   
 -   **IsDeterministic** = true  
-  
 -   **IsSystemVerified** = true (a meno che la colonna calcolata non sia persistente)  
-  
--   **UserDataAccess** = false  
-  
+-   **UserDataAccess** = false    
 -   **SystemDataAccess** = false  
   
- Per altre informazioni, vedere [Indici per le colonne calcolate](../../relational-databases/indexes/indexes-on-computed-columns.md).  
+Per altre informazioni, vedere [Indici per le colonne calcolate](../../relational-databases/indexes/indexes-on-computed-columns.md).  
   
 ### <a name="calling-extended-stored-procedures-from-functions"></a>Chiamata di stored procedure estese da funzioni  
  Una stored procedure estesa, quando viene richiamata dall'interno di una funzione, non può restituire set di risultati al client. Le API ODS che restituiscono set di risultati al client restituiscono FAIL. La stored procedure estesa può riconnettersi a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], tuttavia è necessario che non partecipi alla stessa transazione della funzione che l'ha richiamata.  
@@ -613,44 +617,44 @@ Specifica se questa funzione scalare definita dall'utente deve essere impostata 
 ## <a name="limitations-and-restrictions"></a>Limitazioni e restrizioni  
  Non è possibile utilizzare funzioni definite dall'utente per eseguire azioni che modificano lo stato del database.  
   
- Le funzioni definite dall'utente non possono contenere una clausola OUTPUT INTO che ha una tabella come destinazione.  
+ Le funzioni definite dall'utente non possono contenere una clausola `OUTPUT INTO` che ha una tabella come destinazione.  
   
  Nella definizione di una funzione [!INCLUDE[ssSB](../../includes/sssb-md.md)] definita dall'utente non è possibile includere le istruzioni di [!INCLUDE[tsql](../../includes/tsql-md.md)] seguenti:  
   
--   BEGIN DIALOG CONVERSATION  
+-   `BEGIN DIALOG CONVERSATION`  
   
--   END CONVERSATION  
+-   `END CONVERSATION`  
   
--   GET CONVERSATION GROUP  
+-   `GET CONVERSATION GROUP`  
   
--   MOVE CONVERSATION  
+-   `MOVE CONVERSATION`  
   
--   RECEIVE  
+-   `RECEIVE`  
   
--   SEND  
+-   `SEND`  
   
- È possibile nidificare le funzioni definite dall'utente, ovvero una funzione definita dall'utente ne può richiamare un'altra. Il livello di nidificazione aumenta all'avvio della funzione richiamata e diminuisce al termine dell'esecuzione della funzione. Le funzioni definite dall'utente possono essere nidificate fino a un massimo di 32 livelli. Se viene superato il livello massimo di nidificazioni, l'intera sequenza di funzioni chiamanti ha esito negativo. Qualsiasi riferimento al codice gestito presente in una funzione [!INCLUDE[tsql](../../includes/tsql-md.md)] definita dall'utente viene considerato come un livello nel contesto del limite di 32 livelli di nidificazione. I metodi richiamati da codice gestito non vengono inclusi nel conteggio per questo limite.  
+È possibile nidificare le funzioni definite dall'utente, ovvero una funzione definita dall'utente ne può richiamare un'altra. Il livello di nidificazione aumenta all'avvio della funzione richiamata e diminuisce al termine dell'esecuzione della funzione. Le funzioni definite dall'utente possono essere nidificate fino a un massimo di 32 livelli. Se viene superato il livello massimo di nidificazioni, l'intera sequenza di funzioni chiamanti ha esito negativo. Qualsiasi riferimento al codice gestito presente in una funzione [!INCLUDE[tsql](../../includes/tsql-md.md)] definita dall'utente viene considerato come un livello nel contesto del limite di 32 livelli di nidificazione. I metodi richiamati da codice gestito non vengono inclusi nel conteggio per questo limite.  
   
 ### <a name="using-sort-order-in-clr-table-valued-functions"></a>Utilizzo dell'ordinamento nelle funzioni CLR con valori di tabella  
- Quando si utilizza la clausola ORDER in funzioni CLR con valori di tabella, attenersi alle linee guida seguenti:  
+Quando si usa la clausola `ORDER` in funzioni CLR con valori di tabella, attenersi alle linee guida seguenti:  
   
 -   È necessario assicurarsi che i risultati siano ordinati sempre in base all'ordine specificato. Se i risultati non sono nell'ordine specificato, in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verrà generato un messaggio di errore quando viene eseguita la query.  
   
--   Se è specificata una clausola ORDER, l'output della funzione con valori di tabella deve essere ordinato in base alle regole di confronto della colonna (esplicite o implicite). Se, ad esempio, le regole di confronto della colonna sono impostate per il cinese (in base a quanto specificato nella DDL per la funzione con valori di tabella o ottenuto dalle regole di confronto del database), i risultati restituiti devono essere ordinati in base alle regole di ordinamento per il cinese.  
+-   Se è specificata una clausola `ORDER`, l'output della funzione con valori di tabella deve essere ordinato in base alle regole di confronto della colonna (esplicite o implicite). Se, ad esempio, le regole di confronto della colonna sono impostate per il cinese (in base a quanto specificato nella DDL per la funzione con valori di tabella o ottenuto dalle regole di confronto del database), i risultati restituiti devono essere ordinati in base alle regole di ordinamento per il cinese.  
   
--   La clausola ORDER, se specificata, viene sempre verificata da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] quando vengono restituiti i risultati, indipendentemente dal fatto che venga utilizzata da Query Processor per eseguire ulteriori ottimizzazioni. Utilizzare la clausola ORDER solo se si è certi che sia utile per Query Processor.  
+-   La clausola [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], se specificata, viene sempre verificata da `ORDER` quando vengono restituiti i risultati, indipendentemente dal fatto che venga usata da Query Processor per eseguire altre ottimizzazioni. Usare la clausola `ORDER` solo se si è certi che sia utile per Query Processor.  
   
--   Query Processor di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizza automaticamente la clausola ORDER nei casi seguenti:  
+-   Query Processor di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa automaticamente la clausola `ORDER` nei casi seguenti:  
   
-    -   Query di inserimento in cui la clausola ORDER è compatibile con un indice.  
+    -   Query di inserimento in cui la clausola `ORDER` è compatibile con un indice.  
   
-    -   Clausole ORDER BY compatibili con la clausola ORDER.  
+    -   Clausole `ORDER BY` compatibili con la clausola `ORDER`.  
   
-    -   Aggregazioni in cui GROUP BY è compatibile con la clausola ORDER.  
+    -   Aggregazioni, in cui `GROUP BY` è compatibile con la clausola `ORDER`.  
   
-    -   Aggregazioni DISTINCT in cui le colonne distinte sono compatibili con la clausola ORDER.  
+    -   Aggregazioni `DISTINCT` in cui le colonne distinte sono compatibili con la clausola `ORDER`.  
   
- La clausola ORDER non garantisce risultati ordinati quando viene eseguita una query SELECT, a meno che nella query non venga specificata anche la clausola ORDER BY. Vedere [sys.function_order_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-function-order-columns-transact-sql.md) per informazioni su come eseguire una query relativa alle colonne incluse nell'ordinamento per le funzioni con valori di tabella.  
+La clausola `ORDER` non garantisce risultati ordinati quando viene eseguita una query SELECT, a meno che nella query non venga specificata anche la clausola `ORDER BY`. Vedere [sys.function_order_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-function-order-columns-transact-sql.md) per informazioni su come eseguire una query relativa alle colonne incluse nell'ordinamento per le funzioni con valori di tabella.  
   
 ## <a name="metadata"></a>Metadati  
  Nella tabella seguente vengono elencate le viste del catalogo di sistema utilizzate per restituire i metadati sulle funzioni definite dall'utente.  
@@ -663,14 +667,17 @@ Specifica se questa funzione scalare definita dall'utente deve essere impostata 
 |[sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md)|Visualizza gli oggetti sottostanti a cui fa riferimento una funzione.|  
   
 ## <a name="permissions"></a>Permissions  
- È necessario disporre dell'autorizzazione CREATE FUNCTION nel database e dell'autorizzazione ALTER per lo schema in cui la funzione è in fase di creazione. Se per la funzione viene specificato un tipo definito dall'utente, è necessario disporre dell'autorizzazione EXECUTE per tale tipo.  
+ È necessario disporre dell'autorizzazione `CREATE FUNCTION` nel database e dell'autorizzazione `ALTER` per lo schema in cui la funzione è in fase di creazione. Se per la funzione viene specificato un tipo definito dall'utente, è necessario disporre dell'autorizzazione `EXECUTE` per tale tipo.  
   
 ## <a name="examples"></a>Esempi  
-  
+
+> [!NOTE]
+> Per altri esempi e considerazioni sulle prestazioni delle funzioni definite dall'utente, vedere [Creare funzioni definite dall'utente &#40;Motore di database&#41;](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md). 
+
 ### <a name="a-using-a-scalar-valued-user-defined-function-that-calculates-the-iso-week"></a>A. Utilizzo di una funzione definita dall'utente a valori scalari per il calcolo della settimana ISO  
  Nell'esempio seguente viene creata la funzione definita dall'utente `ISOweek`. Questa funzione calcola il numero di settimana ISO in base a un argomento di data specificato. Per consentire alla funzione di eseguire il calcolo correttamente, è necessario richiamare `SET DATEFIRST 1` prima della funzione.  
   
- L'esempio illustra anche l'uso della clausola [EXECUTE AS](../../t-sql/statements/execute-as-clause-transact-sql.md) per specificare il contesto di protezione in cui è possibile eseguire una stored procedure. Nell'esempio, l'opzione `CALLER` specifica che la procedura verrà eseguita nel contesto dell'utente che l'ha richiamata. Le altre opzioni che è possibile specificare sono SELF, OWNER e *user_name*.  
+ L'esempio illustra anche l'uso della clausola [EXECUTE AS](../../t-sql/statements/execute-as-clause-transact-sql.md) per specificare il contesto di protezione in cui è possibile eseguire una stored procedure. Nell'esempio, l'opzione `CALLER` specifica che la procedura verrà eseguita nel contesto dell'utente che l'ha richiamata. Le altre opzioni che è possibile specificare sono `SELF`, `OWNER` e *user_name*.  
   
  Di seguito è riportata la chiamata della funzione, in cui `DATEFIRST` è impostato su `1`.  
   
@@ -783,7 +790,7 @@ GO
 ### <a name="d-creating-a-clr-function"></a>D. Creazione di una funzione CLR  
  L'esempio crea la funzione CLR `len_s`, ma prima che venga effettivamente creata la funzione, l'assembly `SurrogateStringFunction.dll` viene registrato nel database locale.  
   
-**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP1 a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])  
   
 ```sql  
 DECLARE @SamplesPath nvarchar(1024);  
@@ -817,10 +824,11 @@ JOIN sys.objects AS o ON m.object_id = o.object_id
 GO  
 ```  
   
- La definizione delle funzioni create tramite l'opzione ENCRYPTION non possono essere visualizzate mediante la vista del catalogo sys.sql_modules. Vengono tuttavia visualizzate altre informazioni sulle funzioni crittografate.  
+ La definizione delle funzioni create tramite l'opzione `ENCRYPTION` non possono essere visualizzate tramite la vista sys.sql_modules. Vengono tuttavia visualizzate altre informazioni sulle funzioni crittografate.  
   
 ## <a name="see-also"></a>Vedere anche  
- [ALTER FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-function-transact-sql.md)   
+ [Creare funzioni definite dall'utente &#40;Motore di database&#41;](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md)   
+ [ALTER FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-function-transact-sql.md)    
  [DROP FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/drop-function-transact-sql.md)   
  [OBJECTPROPERTYEX &#40;Transact-SQL&#41;](../../t-sql/functions/objectpropertyex-transact-sql.md)   
  [sys.sql_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)   
@@ -828,7 +836,6 @@ GO
  [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)   
  [Funzioni CLR definite dall'utente](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-functions.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
- [CREATE SECURITY POLICY &#40;Transact-SQL&#41;](../../t-sql/statements/create-security-policy-transact-sql.md)  
+ [CREATE SECURITY POLICY &#40;Transact-SQL&#41;](../../t-sql/statements/create-security-policy-transact-sql.md)   
   
  
-

@@ -1,7 +1,7 @@
 ---
 title: Monitoraggio delle prestazioni con Query Store | Microsoft Docs
 ms.custom: ''
-ms.date: 07/23/2018
+ms.date: 11/29/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -15,15 +15,15 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1c8daab3f7a68ee846d8f02012d572a1687058cc
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: e36a66564564bb468592df491e12d97a87d5dc4b
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51673330"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52711502"
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>Monitoraggio delle prestazioni con Query Store
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
   La funzionalità Archivio query di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mostra informazioni dettagliate sulle prestazioni e sulla scelta del piano di query. Semplifica la risoluzione dei problemi di prestazioni in quanto consente di individuare rapidamente le variazioni delle prestazioni causate da modifiche nei piani di query. Archivio query acquisisce automaticamente una cronologia delle query, dei piani e delle statistiche di runtime e li conserva per la consultazione. I dati vengono separati in base a intervalli di tempo, consentendo di visualizzare i modelli di utilizzo del database e capire quando sono state apportate modifiche al piano di query nel server. Per configurare l'archivio query, è possibile usare l'opzione [ALTER DATABASE SET](../../t-sql/statements/alter-database-transact-sql-set-options.md) . 
   
@@ -101,18 +101,30 @@ INNER JOIN sys.query_store_query_text AS Txt
 ```  
  
 ##  <a name="Regressed"></a> Usare la funzionalità Query regredite  
- Dopo aver abilitato Archivio query, aggiornare la parte del database del riquadro Esplora oggetti per aggiungere la sezione **Archivio query** .  
+Dopo aver abilitato Archivio query, aggiornare la parte del database del riquadro Esplora oggetti per aggiungere la sezione **Archivio query** .  
   
- ![Struttura ad albero di Archivio query in Esplora oggetti](../../relational-databases/performance/media/objectexplorerquerystore.PNG "Struttura ad albero di Archivio query in Esplora oggetti")  
+![Struttura ad albero di Query Store di SQL Server 2016 in Esplora oggetti di SSMS](../../relational-databases/performance/media/objectexplorerquerystore.PNG "Struttura ad albero di Query Store di SQL Server 2016 in Esplora oggetti di SSMS")   ![Struttura ad albero di Query Store di SQL Server 2017 in Esplora oggetti di SSMS](../../relational-databases/performance/media/objectexplorerquerystore_sql17.PNG "Struttura ad albero di Query Store di SQL Server 2017 in Esplora oggetti di SSMS") 
   
- Selezionare **Query regredite** per aprire il riquadro **Query regredite** in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Nel riquadro Query regredite sono visualizzati i piani e le query presenti nell'archivio query. Usare le caselle a discesa nella parte superiore per selezionare le query in base a diversi criteri. Selezionare un piano per visualizzare il piano di query con interfaccia grafica. Sono disponibili pulsanti per visualizzare la query di origine, forzare e annullar e la forzatura di un piano di query e aggiornare la visualizzazione.  
+Selezionare **Query regredite** per aprire il riquadro **Query regredite** in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Nel riquadro Query regredite sono visualizzati i piani e le query presenti nell'archivio query. Usare le caselle a discesa nella parte superiore per filtrare le query in base a criteri diversi: **Durata (ms)** (predefinito), Tempo CPU (ms), Letture logiche (KB), Scritture logiche (KB), Letture fisiche (KB), Tempo CLR (ms), DOP, Utilizzo memoria (KB), Conteggio righe, Memoria log usata (KB), Memoria database temporaneo usata (KB) e Tempo di attesa (ms).  
+Selezionare un piano per visualizzare il piano di query con interfaccia grafica. Sono disponibili pulsanti che consentono di visualizzare la query di origine, forzare e annullare la forzatura di un piano di query, passare dai formati griglia ai grafici e viceversa, confrontare piani selezionati (se è selezionato più di un piano) e aggiornare la visualizzazione.  
   
- ![Query regredite in Esplora oggetti](../../relational-databases/performance/media/objectexplorerregressedqueries.PNG "Query regredite in Esplora oggetti")  
+![Query regredite di SQL Server 2016 in Esplora oggetti di SSMS](../../relational-databases/performance/media/objectexplorerregressedqueries.PNG "Query regredite di SQL Server 2016 in Esplora oggetti di SSMS")  
   
- Per forzare un piano, selezionare una query e un piano, quindi fare clic su **Forza piano**. È possibile forzare solo piani che sono stati salvati dalla funzionalità del piano di query e che sono ancora presenti nella relativa cache.  
+Per forzare un piano, selezionare una query e un piano, quindi fare clic su **Forza piano**. È possibile forzare solo piani che sono stati salvati dalla funzionalità del piano di query e che sono ancora presenti nella relativa cache.
+
 ##  <a name="Waiting"></a> Ricerca di query di attesa
 
-A partire da [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CTP 2.0 e [!INCLUDE[ssSDS](../../includes/sssds-md.md)], in Query Store sono disponibili le statistiche di attesa per ogni query nel corso del tempo. In Query Store i tipi di attesa sono raggruppati in **categorie di attesa**. In [sys.query_store_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md#wait-categories-mapping-table) è disponibile il mapping delle categorie di attesa ai tipi di attesa.
+A partire da [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CTP 2.0 e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], in Query Store sono disponibili le statistiche di attesa per ogni query nel corso del tempo. In Query Store i tipi di attesa sono raggruppati in **categorie di attesa**. In [sys.query_store_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md#wait-categories-mapping-table) è disponibile il mapping delle categorie di attesa ai tipi di attesa.
+
+Selezionare **Statistiche di attesa query** per aprire il riquadro **Statistiche di attesa query** in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] v18 o versione successiva. Il riquadro Statistiche di attesa query visualizza un grafico a barre contenente le categorie di attesa principali in Query Store. Usare l'elenco a discesa nella parte superiore per selezionare un criterio di aggregazione per il tempo di attesa: medio, max, min, deviazione standard e **totale** (impostazione predefinita).
+
+ ![Statistiche di attesa query di SQL Server 2017 in Esplora oggetti di SSMS](../../relational-databases/performance/media/query-store-waits.PNG "Statistiche di attesa query di SQL Server 2017 in Esplora oggetti di SSMS")
+
+Selezionare una categoria di attesa facendo clic sulla barra. Verrà visualizzata una vista dettagliata sulla categoria di attesa selezionata. Questo nuovo grafico a barre contiene le query che hanno contribuito a tale categoria di attesa. 
+  
+ ![Vista dettagliata delle statistiche di attesa query di SQL Server 2017 in Esplora oggetti di SSMS](../../relational-databases/performance/media/query-store-waits-detail.PNG "Vista dettagliata delle statistiche di attesa query di SQL Server 2017 in Esplora oggetti di SSMS")
+
+Usare la casella nella parte superiore per filtrare le query in base a diversi criteri di tempo di attesa per la categoria di attesa selezionata: medio, max, min, deviazione standard e **totale** (impostazione predefinita). Selezionare un piano per visualizzare il piano di query con interfaccia grafica. Sono disponibili pulsanti per visualizzare la query di origine, forzare e annullar e la forzatura di un piano di query e aggiornare la visualizzazione.  
 
 Le **categorie di attesa** raggruppano tipi di attesa diversi in bucket simili per natura. Per le varie categorie di attesa è necessario un'analisi di completamento diversa per risolvere il problema. Per i tipi di attesa della stessa categoria la risoluzione dei problemi è invece molto simile. Specificando la query interessata come prima nelle attese, si indica la parte mancante necessaria a completare le analisi in modo corretto.
 
@@ -127,7 +139,6 @@ Di seguito sono descritti alcuni esempi su come ottenere informazioni dettagliat
 |Attese di SOS_SCHEDULER_YIELD elevate per database|Attese di CPU elevate in Query Store per query specifiche|Individuare la prime query per utilizzo CPU in Query Store. Tra queste query identificare quelle in cui la tendenza di utilizzo CPU elevato è correlata ad attese di CPU elevate per le query interessate. Concentrarsi sull'ottimizzazione di queste query: considerare la possibilità di una regressione del piano o la mancanza di un indice.|
 
 ##  <a name="Options"></a> Opzioni di configurazione 
-
 Le opzioni seguenti sono disponibili per la configurazione dei parametri dell'archivio query.
 
 *OPERATION_MODE*  
@@ -555,19 +566,23 @@ OPTION (MERGE JOIN);
 ```  
  
 ###  <a name="Stability"></a> Misure per garantire la stabilità delle prestazioni di esecuzione delle query  
- Per le query eseguite più volte è possibile notare che [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa piani diversi che comportano durate e utilizzi diversi delle risorse. Archivio query consente di rilevare il momento in cui si verifica una regressione delle prestazioni di esecuzione delle query e di determinare il piano ottimale in un periodo di interesse. È quindi possibile forzare il piano ottimale per le future esecuzioni delle query.  
+Per le query eseguite più volte è possibile notare che [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa piani diversi che comportano durate e utilizzi diversi delle risorse. Archivio query consente di rilevare il momento in cui si verifica una regressione delle prestazioni di esecuzione delle query e di determinare il piano ottimale in un periodo di interesse. È quindi possibile forzare il piano ottimale per le future esecuzioni delle query.  
   
- È anche possibile identificare incoerenze nelle prestazioni di una query con parametri (impostati sia automaticamente che manualmente). Tra i diversi piani è possibile identificare quello più rapido e adatto per tutti o per la maggior parte dei valori di parametro e forzarne l'uso in modo da garantire prestazioni prevedibili per un ampio numero di scenari utente.  
+È anche possibile identificare incoerenze nelle prestazioni di una query con parametri (impostati sia automaticamente che manualmente). Tra i diversi piani è possibile identificare quello più rapido e adatto per tutti o per la maggior parte dei valori di parametro e forzarne l'uso in modo da garantire prestazioni prevedibili per un ampio numero di scenari utente.  
   
- **Forzare un piano per una query (applicando criteri di utilizzo forzato).** Quando si forza un piano per una determinata query, la query viene sempre eseguita con il piano di cui è stato forzato l'utilizzo.  
-  
+ ### <a name="force-a-plan-for-a-query-apply-forcing-policy"></a>Forzare un piano per una query (applicando criteri di utilizzo forzato)
+
+Quando si forza un piano per una determinata query, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prova a forzare il piano in Query Optimizer. Se l'uso forzato del piano ha esito negativo, viene generato un XEvent e a query optimizer viene richiesto di ottimizzare in modo normale.
+
 ```sql  
 EXEC sp_query_store_force_plan @query_id = 48, @plan_id = 49;  
 ```  
   
- Se si usa **sp_query_store_force_plan** , è possibile forzare solo piani che sono stati registrati da Archivio query come piani per tale query. In altre parole, gli unici piani disponibili per una query sono quelli già usati per eseguire tale query mentre Archivio query era attivo.  
+Se si usa **sp_query_store_force_plan** , è possibile forzare solo piani che sono stati registrati da Archivio query come piani per tale query. In altre parole, gli unici piani disponibili per una query sono quelli già usati per eseguire tale query mentre Archivio query era attivo.  
   
- **Rimuovere l'utilizzo forzato del piano per una query.** Per impiegare di nuovo Query Optimizer di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per calcolare il piano di query ottimale, usare **sp_query_store_unforce_plan** per annullare l'utilizzo forzato del piano selezionato per la query.  
+### <a name="remove-plan-forcing-for-a-query"></a>Rimuovere l'utilizzo forzato del piano per una query
+
+Per impiegare di nuovo Query Optimizer di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per calcolare il piano di query ottimale, usare **sp_query_store_unforce_plan** per annullare l'utilizzo forzato del piano selezionato per la query.  
   
 ```sql  
 EXEC sp_query_store_unforce_plan @query_id = 48, @plan_id = 49;  

@@ -17,12 +17,12 @@ ms.assetid: 76fb3eca-6b08-4610-8d79-64019dd56c44
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 177d49376d7ed69c8a6ed14fa68326b1d54003fc
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: b02b430acbc2fc56942e1c7287ea1c7e4527ccc4
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51603571"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52408888"
 ---
 # <a name="listeners-client-connectivity-application-failover"></a>Listener, connettività client e failover dell'applicazione
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -183,7 +183,7 @@ Server=tcp:AGListener,1433;Database=AdventureWorks;IntegratedSecurity=SSPI;Appli
  Se il gruppo di disponibilità viene riportato online durante un tentativo di connessione dell'applicazione client, ma prima del periodo di timeout della connessione, è possibile che il driver client si connetta correttamente durante uno di questi tentativi interni senza che si verifichi alcun errore.  
   
 ##  <a name="SupportAgMultiSubnetFailover"></a> Supporto del failover su più subnet del gruppo di disponibilità  
- Se si utilizzano librerie client che supportano l'opzione di connessione MultiSubnetFailover nella stringa di connessione, è possibile ottimizzare il failover del gruppo di disponibilità su un'altra subnet impostando MultiSubnetFailover su “True” o "Yes", a seconda della sintassi del provider utilizzato.  
+ Se si usano librerie client che supportano l'opzione di connessione MultiSubnetFailover nella stringa di connessione, è possibile ottimizzare il failover del gruppo di disponibilità su un'altra subnet impostando MultiSubnetFailover su "True" o "Yes", a seconda della sintassi del provider in uso.  
   
 > [!NOTE]  
 >  È consigliabile utilizzare questa impostazione per le connessioni con una o più subnet a listener di gruppi di disponibilità e a istanze del cluster di failover di SQL Server.  Abilitando questa opzione si aggiungono ulteriori ottimizzazioni, anche per scenari con una sola subnet.  

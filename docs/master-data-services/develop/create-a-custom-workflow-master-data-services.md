@@ -11,12 +11,12 @@ ms.assetid: 8e4403e9-595c-4b6b-9d0c-f6ae1b2bc99d
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 374971541d49ebd55449c500b3d61a6ed1296ff3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ffee06e8a6372f146996673c425a89000eda0a1d
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47766085"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52420662"
 ---
 # <a name="create-a-custom-workflow-master-data-services"></a>Creare un flusso di lavoro personalizzato (Master Data Services)
 
@@ -62,9 +62,9 @@ ms.locfileid: "47766085"
   
 2.  Aggiungere un riferimento a Microsoft.MasterDataServices.WorkflowTypeExtender.dll. Questo assembly è disponibile in \<cartella di installazione>\Master Data Services\WebApplication\bin.  
   
-3.  Aggiungere ‘using Microsoft.MasterDataServices.Core.Workflow;’ al file del codice C#.  
+3.  Aggiungere 'using Microsoft.MasterDataServices.Core.Workflow;' al file di codice C#.  
   
-4.  Ereditare da <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender> nella dichiarazione di classe. La dichiarazione di classe deve essere simile a: ‘public class WorkflowTester : IWorkflowTypeExtender’.  
+4.  Ereditare da <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender> nella dichiarazione di classe. La dichiarazione di classe deve essere simile a: 'public class WorkflowTester : IWorkflowTypeExtender'.  
   
 5.  Implementare l'interfaccia <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender>. Viene chiamato il metodo <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender.StartWorkflow%2A> da SQL Server MDS Workflow Integration Service per avviare il flusso di lavoro.  
   
@@ -118,7 +118,7 @@ ms.locfileid: "47766085"
 6.  Avviare SQL Server MDS Workflow Integration Service mediante lo snap-in Servizi. A tale scopo, trovare SQL Server MDS Workflow Integration Service nello snap-in Servizi, selezionarlo e fare clic sul collegamento **Avvia**.  
   
 ### <a name="create-a-workflow-business-rule"></a>Creare una regola business del flusso di lavoro  
- Utilizzare [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] per creare e pubblicare una regola business che, quando applicata, consente di avviare il flusso di lavoro. È necessario assicurarsi che la regola business contenga le azioni che modificano i valori dell'attributo, in modo tale che una volta applicata la regola restituisca false. Ad esempio, la regola business potrebbe restituire true quando un valore dell'attributo Price è maggiore di 500 e il valore dell'attributo Approved è vuoto. La regola può includere quindi due azioni: una per impostare il valore dell'attributo Approved su Pending e l'altra per avviare il flusso di lavoro. In alternativa, è possibile creare una regola che utilizzi la condizione “has changed” e aggiungere gli attributi ai gruppi rilevamento modifiche. Per altre informazioni sulle regole business, vedere [Regole business &#40;Master Data Services&#41;](../../master-data-services/business-rules-master-data-services.md).  
+ Utilizzare [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] per creare e pubblicare una regola business che, quando applicata, consente di avviare il flusso di lavoro. È necessario assicurarsi che la regola business contenga le azioni che modificano i valori dell'attributo, in modo tale che una volta applicata la regola restituisca false. Ad esempio, la regola business potrebbe restituire true quando un valore dell'attributo Price è maggiore di 500 e il valore dell'attributo Approved è vuoto. La regola può includere quindi due azioni: una per impostare il valore dell'attributo Approved su Pending e l'altra per avviare il flusso di lavoro. In alternativa, è possibile creare una regola che utilizzi la condizione "has changed" e aggiungere gli attributi ai gruppi rilevamento modifiche. Per altre informazioni sulle regole business, vedere [Regole business &#40;Master Data Services&#41;](../../master-data-services/business-rules-master-data-services.md).  
   
  Per creare una regola business che avvia un flusso di lavoro personalizzato in [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)], effettuare i passaggi seguenti:  
   

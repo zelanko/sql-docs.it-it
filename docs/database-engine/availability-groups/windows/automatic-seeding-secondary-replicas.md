@@ -3,7 +3,7 @@ title: Seeding automatico per le repliche secondarie (SQL Server) | Microsoft Do
 description: Usare il seeding automatico per inizializzare le repliche secondarie.
 services: data-lake-analytics
 ms.custom: ''
-ms.date: 09/25/2017
+ms.date: 11/27/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: high-availability
@@ -14,17 +14,17 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b519e70c46f697c4ef819f59c122fba6c4e40ea2
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: d6a8359fede2b688292fa47e59a64d5ef43d424d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51603621"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52506695"
 ---
 # <a name="automatic-seeding-for-secondary-replicas"></a>Seeding automatico per le repliche secondarie
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-In SQL Server 2012 e 2014, l'unico modo per inizializzare una replica secondaria in un gruppo di disponibilità AlwaysOn di SQL Server consiste nell'usare le operazioni di backup, copia e ripristino. SQL Server 2016 introduce una nuova funzionalità per inizializzare una replica secondaria: il *seeding automatico*. Il seeding automatico usa il trasporto del flusso di log per trasmettere il backup mediante un'infrastruttura VDI nella replica secondaria per ogni database del gruppo di disponibilità tramite endpoint configurati. Questa nuova funzionalità può essere usata durante la creazione iniziale di un gruppo di disponibilità o quando viene aggiunto un database a un gruppo di disponibilità. Il seeding automatico si trova in tutte le edizioni di SQL Server che supportano i gruppi di disponibilità Always On e può essere usato sia con i gruppi di disponibilità tradizionali che con i [gruppi di disponibilità distribuiti](distributed-availability-groups.md).
+In SQL Server 2012 e 2014, l'unico modo per inizializzare una replica secondaria in un gruppo di disponibilità AlwaysOn di SQL Server consiste nell'usare le operazioni di backup, copia e ripristino. SQL Server 2016 introduce una nuova funzionalità per l'inizializzazione di una replica secondaria: il *seeding automatico*. Il seeding automatico usa il trasporto del flusso di log per trasmettere il backup mediante un'infrastruttura VDI nella replica secondaria per ogni database del gruppo di disponibilità tramite endpoint configurati. Questa nuova funzionalità può essere usata durante la creazione iniziale di un gruppo di disponibilità o quando viene aggiunto un database a un gruppo di disponibilità. Il seeding automatico si trova in tutte le edizioni di SQL Server che supportano i gruppi di disponibilità Always On e può essere usato sia con i gruppi di disponibilità tradizionali che con i [gruppi di disponibilità distribuiti](distributed-availability-groups.md).
 
 ## <a name="considerations"></a>Considerazioni
 
@@ -117,16 +117,14 @@ L'impostazione di `SEEDING_MODE` in una replica primaria durante l'istruzione `C
 
 In un'istanza che diventa una replica secondaria, dopo l'aggiunta dell'istanza al log di SQL Server viene aggiunto il messaggio seguente:
 
->Alla replica di disponibilità locale per il gruppo di disponibilità 'AGName' non è stata concessa l'autorizzazione per creare i database sebbene `SEEDING_MODE` sia impostato su `AUTOMATIC`. Usare `ALTER AVAILABILITY GROUP … GRANT CREATE ANY DATABASE` per consentire la creazione di database di cui è stato effettuato il seeding dalla replica di disponibilità primaria.
+>Alla replica di disponibilità locale per il gruppo di disponibilità 'AGName' non è stata concessa l'autorizzazione per creare i database sebbene `SEEDING_MODE` sia impostato su `AUTOMATIC`. Usare `ALTER AVAILABILITY GROUP ... GRANT CREATE ANY DATABASE` per consentire la creazione di database di cui è stato effettuato il seeding dalla replica di disponibilità primaria.
 
 ### <a name = "grantCreate"></a> Concedere le autorizzazioni di creazione di database sulla replica secondaria al gruppo di disponibilità
 
 Dopo l'aggiunta, concedere al gruppo di disponibilità l'autorizzazione per la creazione di database nell'istanza di replica secondaria di SQL Server. Per consentire il funzionamento del seeding automatico, il gruppo di disponibilità necessita dell'autorizzazione per la creazione di un database. 
 
 >[!TIP]
->Quando il gruppo di disponibilità crea un database in una replica secondaria, imposta il proprietario del database come l'account che ha eseguito l'istruzione `ALTER AVAILABILITY GROUP` per concedere l'autorizzazione per la creazione di qualsiasi database. La maggior parte delle applicazioni richiede che il proprietario del database sulla replica secondaria corrisponda al proprietario nella replica primaria.
->
->Per assicurare che tutti i database vengano creati con lo stesso proprietario di database della replica primaria, eseguire il comando di esempio seguente nel contesto di sicurezza dell'account di accesso corrispondente al proprietario del database nella replica primaria. Si noti che tale account di accesso necessita dell'autorizzazione `ALTER AVAILABILITY GROUP`. 
+>Quando il gruppo di disponibilità crea un database in una replica secondaria imposta "sa", più precisamente l'account con sid 0x01, come proprietario del database. 
 >
 >Per modificare il proprietario del database dopo la creazione automatica di un database da parte di una replica secondaria, usare `ALTER AUTHORIZATION`. Vedere [ALTER AUTHORIZATION (Transact-SQL)](../../../t-sql/statements/alter-authorization-transact-sql.md).
  
@@ -221,7 +219,7 @@ CREATE EVENT SESSION [AG_autoseed] ON SERVER
     ADD EVENT sqlserver.hadr_physical_seeding_restore_state_change,
     ADD EVENT sqlserver.hadr_physical_seeding_submit_callback
     ADD TARGET package0.event_file(
-        SET filename=N’autoseed.xel’,
+        SET filename=N'autoseed.xel',
         max_file_size=(5),
         max_rollover_files=(4)
         )

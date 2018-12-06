@@ -53,12 +53,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7e0989f8f24e3764c63ca30b7ed980c9a4852165
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 6456a8ad03e4f0cb86c5299f1d817775688c1330
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51702679"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535587"
 ---
 # <a name="odbc-scalar-functions-transact-sql"></a>Funzioni scalari ODBC (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -95,12 +95,12 @@ ms.locfileid: "51702679"
 |CURTIME() (ODBC 3.0)|Restituisce l'ora locale corrente.|  
 |DAYNAME( date_exp ) (ODBC 2.0)|Restituisce una stringa di caratteri che contiene il nome, specifico dell'origine dati, del giorno (ad esempio, da Sunday a Saturday o da Sun a Sat per un'origine dati che utilizza l'inglese o da lunedì a domenica per un'origine dati che utilizza l'italiano) per la parte relativa al giorno dell'argomento date_exp.|  
 |DAYOFMONTH( date_exp ) (ODBC 1.0)|Restituisce il giorno del mese in base al campo del mese in date_exp come valore intero nell'intervallo da 1 a 31.|  
-|DAYOFWEEK( date_exp ) (ODBC 1.0)|Restituisce il giorno della settimana in base al campo della settimana in date_exp come valore intero nell'intervallo da 1 a 7, dove 1 corrisponde al lunedì.|  
+|DAYOFWEEK( date_exp ) (ODBC 1.0)|Restituisce il giorno della settimana in base al campo della settimana in date_exp come valore intero nell'intervallo da 1 a 7, dove 1 rappresenta il lunedì.|  
 |HOUR( time_exp ) (ODBC 1.0)|Restituisce l'ora in base al campo dell'ora in time_exp come valore intero nell'intervallo da 0 a 23.|  
 |MINUTE( time_exp ) (ODBC 1.0)|Restituisce i minuti in base al campo dei minuti in time_exp come valore intero nell'intervallo da 0 a 59.|  
 |SECOND( time_exp ) (ODBC 1.0)|Restituisce i secondi in base al campo dei secondi in time_exp come valore intero nell'intervallo da 0 a 59.|  
-|MONTHNAME( date_exp ) (ODBC 2.0)|Restituisce una stringa di caratteri che contiene il nome, specifico dell'origine dati, del mese (ad esempio, da January a December o da Jan a Dec per un'origine dati che utilizza l'inglese o da gennaio a dicembre per un'origine dati che utilizza l'italiano) per la parte relativa al mese dell'argomento date_exp.|  
-|QUARTER( date_exp ) (ODBC 1.0)|Restituisce il trimestre relativo a date_exp come valore intero nell'intervallo da 1 a 4, dove 1 corrisponde al periodo 1 gennaio-31 marzo.|  
+|MONTHNAME( date_exp ) (ODBC 2.0)|Restituisce una stringa di caratteri che contiene il nome, specifico dell'origine dati, del mese (ad esempio, da January a December o da Jan a Dec per un'origine dati che usa l'inglese o da gennaio a dicembre per un'origine dati che usa l'italiano) per la parte relativa al mese dell'argomento date_exp.|  
+|QUARTER( date_exp ) (ODBC 1.0)|Restituisce il trimestre in date_exp come valore intero nell'intervallo da 1 a 4, dove 1 rappresenta il periodo dal 1º gennaio al 31 marzo.|  
 |WEEK( date_exp ) (ODBC 1.0)|Restituisce la settimana dell'anno in base al campo della settimana in date_exp come valore intero nell'intervallo da 1 a 53.|  
   
 ## <a name="examples"></a>Esempi  

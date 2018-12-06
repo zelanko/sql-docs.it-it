@@ -12,37 +12,42 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ad3dd62bbf82314be6b981944186711eaa5ce62b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4f672c1b3d7ff8d4480e6fb1647058c50715b657
+ms.sourcegitcommit: 1f10e9df1c523571a8ccaf3e3cb36a26ea59a232
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47766072"
+ms.lasthandoff: 11/17/2018
+ms.locfileid: "51858566"
 ---
 # <a name="scalability"></a>Scalabilità
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  SQL Server 2016 contiene miglioramenti alla scalabilità per l'archiviazione su disco per le tabelle ottimizzate per la memoria.  
+[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] contiene miglioramenti di scalabilità dell'archiviazione su disco per le tabelle ottimizzate per la memoria. 
+
+## <a name="multiple-threads-to-persist-memory-optimized-tables"></a>Più thread per rendere persistenti le tabelle ottimizzate per la memoria  
   
--   **Più thread per rendere persistenti le tabelle ottimizzate per la memoria**  
+[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ha un unico thread di gestione dei checkpoint offline che analizza il log delle transazioni per rilevare le modifiche apportate alle tabelle ottimizzate per la memoria e le rende persistenti nei file di checkpoint, ad esempio nei file di dati e differenziali. In computer con un numero elevato di core, un unico thread di gestione dei checkpoint offline può non essere sufficiente.  
   
-     Nella versione precedente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]era presente un solo thread di gestione del checkpoint offline che analizzava il log delle transazioni per le modifiche alle tabelle ottimizzate per la memoria e le rendeva persistenti nei file del checkpoint, ad esempio nei file di dati e differenziali. Con un numero elevato di core, un solo thread di gestione del checkpoint offline potrebbe non essere sufficiente.  
+A partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], la persistenza delle modifiche apportate alle tabelle ottimizzate per la memoria è affidata a più thread simultanei.  
   
-     In [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]sono disponibili più thread simultanei responsabili della persistenza delle modifiche nelle tabelle ottimizzate per la memoria.  
+## <a name="multi-threaded-recovery"></a>Recupero multithread
+Nella versione precedente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]l'applicazione del log come parte dell'operazione di recupero era a thread singolo. A partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], l'applicazione del log è multithread.  
   
--   **Recupero multithread**  
+## <a name="merge-operation"></a>Operazione MERGE  
+Ora l'operazione MERGE è multithread.  
+   
+> [!NOTE]
+> L'unione manuale è stata disabilitata perché si prevede che il carico possa essere gestito da un'unione multithread. 
+
+## <a name="dynamic-management-views"></a>DMV  
+Le DMV [sys.dm_db_xtp_checkpoint_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-stats-transact-sql.md) e [sys.dm_db_xtp_checkpoint_files &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql.md) sono state modificate in modo significativo.  
+
+## <a name="storage-management"></a>Gestione dell'archiviazione
+Il motore OLTP in memoria continua a usare i filegroup ottimizzati per la memoria in base a FILESTREAM, ma i singoli file nel filegroup vengono disaccoppiati da FILESTREAM. Questi file sono completamente gestiti dal motore di OLTP in memoria, ad esempio per le operazioni di creazione, eliminazione e Garbage Collection. 
+
+> [!NOTE]
+> [DBCC SHRINKFILE &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-shrinkfile-transact-sql.md) non è supportato.  
   
-     Nella versione precedente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]l'applicazione del log come parte dell'operazione di recupero era a thread singolo. In [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]l'applicazione del log è multithread.  
-  
--   **Operazione MERGE**  
-  
-     Ora l'operazione MERGE è multithread.  
-  
--   **DMV**  
-  
-     Sono state apportate modifiche significative a [sys.dm_db_xtp_checkpoint_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-stats-transact-sql.md) e [sys.dm_db_xtp_checkpoint_files &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql.md).  
-  
- L'unione manuale è stata disabilitata perché si prevede che il carico possa essere gestito da un'unione multithread.  
-  
- Il motore OLTP in memoria continua a usare i filegroup ottimizzati per la memoria in base a FILESTREAM, ma i singoli file nel filegroup vengono disaccoppiati da FILESTREAM. Questi file sono completamente gestiti dal motore di OLTP in memoria, ad esempio per le operazioni di creazione, eliminazione e Garbage Collection. [DBCC SHRINKFILE &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-shrinkfile-transact-sql.md) non è supportato.  
-  
-  
+## <a name="see-also"></a>Vedere anche   
+[Creazione e gestione dell'archiviazione per gli oggetti con ottimizzazione per la memoria](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md)     
+[Database Files and Filegroups](../../relational-databases/databases/database-files-and-filegroups.md)    
+[Opzioni per file e filegroup ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)    

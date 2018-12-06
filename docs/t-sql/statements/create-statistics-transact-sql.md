@@ -27,12 +27,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 32e830639abf73e85051486c8fa542bc0d1842a9
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: ae5faf4c861de4849289fe8752633caca0347976
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51560196"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52523292"
 ---
 # <a name="create-statistics-transact-sql"></a>CREATE STATISTICS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -75,7 +75,7 @@ ON { table_or_indexed_view_name } ( column [ ,...n ] )
     <disjunct> | <comparison>  
   
 <disjunct> ::=  
-        column_name IN (constant ,…)  
+        column_name IN (constant ,...)  
   
 <comparison> ::=  
         column_name <comparison_op> constant  
@@ -110,7 +110,7 @@ CREATE STATISTICS statistics_name
     <disjunct> | <comparison>  
   
 <disjunct> ::=  
-        column_name IN (constant ,…)  
+        column_name IN (constant ,...)  
   
 <comparison> ::=  
         column_name <comparison_op> constant  
@@ -126,7 +126,7 @@ CREATE STATISTICS statistics_name
  *table_or_indexed_view_name*  
  Nome della tabella, della vista indicizzata o della tabella esterna su cui creare le statistiche. Per creare statistiche su un altro database, specificare un nome di tabella completo.  
   
- *column [ ,…n]*  
+ *column [ ,...n]*  
  Una o più colonne da includere nelle statistiche. Le colonne devono essere in ordine di priorità da sinistra a destra. Per creare l'istogramma viene usata solo la prima colonna. Per le statistiche di correlazione tra colonne, denominate densità, vengono usate tutte le colonne.  
   
  È possibile specificare qualsiasi colonna utilizzabile come colonna chiave di indice, con le eccezioni seguenti:  

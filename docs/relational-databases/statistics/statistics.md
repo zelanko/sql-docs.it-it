@@ -24,12 +24,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 96a2e1c791ba80a7aba39cd77e309228404a04a8
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 7e7ddca2a5f33e26cb60a9e45068fcaacc10a294
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51697392"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52506574"
 ---
 # <a name="statistics"></a>Statistiche
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "51697392"
 Un **istogramma** misura la frequenza di occorrenza per ogni valore distinto in un set di dati. Query Optimizer calcola un istogramma nei valori di colonna nella prima colonna chiave dell'oggetto statistiche, selezionando i valori di colonna tramite il campionamento statistico delle righe o un'analisi completa di tutte le righe della tabella o della vista. Se l'istogramma viene creato da un set campionato di righe, i totali archiviati per numero di righe e numero di valori distinct sono stime e non è necessario che siano numeri interi.
 
 > [!NOTE]
-> <a name="frequency"></a> In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gli istogrammi vengono creati solo per una colonna singola, ovvero la prima colonna nel set di colonne chiave dell'oggetto statistiche.
+> <a name="frequency"></a> In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gli istogrammi vengono creati solo per una singola colonna, ovvero la prima colonna nel set di colonne chiave dell'oggetto statistiche.
   
 Per creare l'istogramma, Query Optimizer ordina i valori di colonna, calcola il numero di valori che corrispondono a ogni valore distinct di colonna, quindi aggrega i valori di colonna in un massimo di 200 intervalli contigui dell'istogramma. Ogni intervallo dell'istogramma comprende un insieme di valori di colonna seguiti da un valore di colonna pari al limite superiore. Nell'insieme sono inclusi tutti i possibili valori di colonna compresi tra i valori limite, esclusi questi ultimi. Il minore tra i valori di colonna ordinati costituisce il limite superiore per il primo intervallo dell'istogramma.
 
@@ -70,7 +70,7 @@ Per ogni passaggio dell'istogramma sopra citato:
 -   Le linee punteggiate rappresentano i valori campionati usati per stimare il numero complessivo dei valori distinti nell'intervallo (*distinct_range_rows*) e il numero complessivo dei valori nell'intervallo (*range_rows*). Query Optimizer usa *range_rows* e *distinct_range_rows* per calcolare *average_range_rows* e non archivia i valori campionati.   
   
 #### <a name="density"></a>Vettore di densità  
-La **densità** è rappresentata da informazioni sul numero di duplicati in una colonna o combinazione di colonne specifica e viene calcolata con la formula 1/(numero di valori distinti). Per ottimizzare le stime relative alla cardinalità per query che restituiscono più colonne della stessa tabella o vista indicizzata, Query Optimizer utilizza le densità. Man mano che la densità diminuisce, aumenta la selettività di un valore. Ad esempio, in una tabella che rappresenta automobili, molte automobili vengono prodotte dallo stesso costruttore, ma a ciascuna è assegnato un numero di identificazione univoco. Un indice basato sul numero di identificazione del veicolo è più selettivo rispetto all'indice del produttore, perché il numero di identificazione del veicolo ha una densità minore rispetto produttore. 
+La **densità** è rappresentata da informazioni sul numero di duplicati in una colonna o combinazione di colonne specifica e viene calcolata con la formula 1/(numero di valori distinti). Per ottimizzare le stime relative alla cardinalità per query che restituiscono più colonne della stessa tabella o vista indicizzata, Query Optimizer utilizza le densità. Man mano che la densità diminuisce, aumenta la selettività di un valore. Ad esempio, in una tabella che rappresenta automobili, molte automobili vengono prodotte dallo stesso costruttore, ma a ciascuna è assegnato un numero di identificazione univoco. Un indice basato sul numero di identificazione del veicolo è più selettivo rispetto all'indice basato sul produttore, perché il numero di identificazione del veicolo ha una densità minore rispetto al produttore. 
 
 > [!NOTE]
 > La frequenza è rappresentata dalle informazioni sull'occorrenza di ogni valore distinto nella prima colonna chiave dell'oggetto statistiche e viene calcolata con la formula conteggio delle righe * densità. Nelle colonne con valori univoci è possibile trovare una frequenza massima pari a 1.

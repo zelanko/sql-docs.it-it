@@ -1,7 +1,7 @@
 ---
 title: Modalità di raccolta dei dati dell'archivio query | Microsoft Docs
 ms.custom: ''
-ms.date: 09/13/2016
+ms.date: 11/29/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -14,15 +14,15 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bb78849cf72f9cb38a6d99082e21e8c4d0c6b4c9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a5d262b72fec278e037c99662d1d5aecd93190cf
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47775059"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52711073"
 ---
 # <a name="how-query-store-collects-data"></a>Come Archivio query raccoglie i dati
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
   Archivio query funziona come un' **utilità di traccia eventi** che raccoglie costantemente informazioni di compilazione e runtime correlate alle query e ai piani. I dati relativi alle query sono resi persistenti nelle tabelle interne e presentati agli utenti mediante una serie di viste.  
   
@@ -30,8 +30,7 @@ ms.locfileid: "47775059"
  Il diagramma seguente mostra le viste di Archivio query e le loro relazioni logiche, con le informazioni della fase di compilazione presentate come entità blu:  
   
  ![query-store-process-2views](../../relational-databases/performance/media/query-store-process-2views.png "query-store-process-2views")  
-  
- **Descrizioni delle viste**  
+**Descrizioni delle viste**  
   
 |Vista|Descrizione|  
 |----------|-----------------|  
@@ -42,7 +41,7 @@ ms.locfileid: "47775059"
 |**sys.query_store_runtime_stats_interval**|Archivio query divide il tempo in finestre temporali (intervalli) generate automaticamente e archivia le statistiche aggregate per tale intervallo per ogni piano eseguito. La dimensione dell'intervallo è controllata dall'opzione di configurazione Intervallo raccolta statistiche (in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]) o `INTERVAL_LENGTH_MINUTES` usando [Opzioni di ALTER DATABASE SET &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md).|  
 |**sys.query_store_runtime_stats**|Statistiche di runtime aggregate per i piani eseguiti. Tutte le metriche acquisite sono espresse nella forma di quattro funzioni statistiche: media, minimo, massimo e deviazione standard.|  
   
- Per ulteriori informazioni sulle viste di Archivio query, vedere la sezione **Viste, funzioni e procedure correlate** di [Monitoraggio delle prestazioni tramite Archivio query](monitoring-performance-by-using-the-query-store.md).  
+ Per altre informazioni sulle viste di Query Store, vedere la sezione **Viste, funzioni e procedure correlate** di [Monitoraggio delle prestazioni con Query Store](monitoring-performance-by-using-the-query-store.md).  
   
 ## <a name="query-processing"></a>Elaborazione delle query  
  Archivio query interagisce con la pipeline di elaborazione delle query nei seguenti punti chiave:  
@@ -63,10 +62,10 @@ ms.locfileid: "47775059"
   
  ![query-store-process-3plan](../../relational-databases/performance/media/query-store-process-3.png "query-store-process-3plan")  
   
- In caso di arresto anomalo del sistema, Archivio query può perdere i dati di runtime fino alla quantità definita con `DATA_FLUSH_INTERVAL_SECONDS`. Il valore predefinito di 900 secondi (15 minuti) rappresenta un punto di equilibrio ottimale tra le prestazioni di acquisizione delle query e la disponibilità dei dati.  
-In caso di uso intenso della memoria, le statistiche di runtime possono essere scaricate su disco prima di quanto definito con `DATA_FLUSH_INTERVAL_SECONDS`.  
+ In caso di arresto anomalo del sistema, Query Store può perdere i dati di runtime fino alla quantità definita con `DATA_FLUSH_INTERVAL_SECONDS`. Il valore predefinito di 900 secondi (15 minuti) rappresenta un punto di equilibrio ottimale tra le prestazioni di acquisizione delle query e la disponibilità dei dati.  
+In caso di uso intenso della memoria nel sistema, le statistiche di runtime possono essere scaricate su disco prima di quanto definito con `DATA_FLUSH_INTERVAL_SECONDS`.  
 Durante la lettura dei dati di Archivio query, i dati in memoria e su disco sono unificati in modo trasparente.
-In caso di chiusura della sessione o di riavvio o arresto anomalo dell'applicazione client, le statistiche sulla query non verranno registrate.  
+Se una sessione viene terminata o in caso di riavvio o arresto anomalo dell'applicazione client, non verranno registrate le statistiche di query.  
   
  ![query-store-process-4planinfo](../../relational-databases/performance/media/query-store-process-4planinfo.png "query-store-process-4planinfo")    
 

@@ -11,12 +11,12 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 591dbbc9772378efccb37ca2f7b3af94d37f4529
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 246fa155a8de930cd81d65df633d3f47bed9f56e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51677141"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52534768"
 ---
 # <a name="configure-always-encrypted-with-secure-enclaves"></a>Configurare Always Encrypted con enclave sicuri
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -159,7 +159,7 @@ La procedura seguente crea le chiavi abilitate per l'enclave (richiede SQL Serve
 2. In **Esplora oggetti** espandere il database e passare a **Sicurezza** > **Chiavi Always Encrypted**.
 3. Effettuare il provisioning di una nuova chiave master della colonna abilitata per l'enclave:
 
-    1. Fare clic con il pulsante destro del mouse su **Chiavi Always Encrypted** e scegliere **Nuova chiave master della colonna**.
+    1. Fare clic con il pulsante destro del mouse su **Chiavi Always Encrypted** e selezionare **Nuova chiave master della colonna...**.
     2. Selezionare il nome della chiave master della colonna.
     3. Assicurarsi di selezionare **Archivio certificati Windows (Utente corrente o Computer locale)** o **Azure Key Vault**.
     4. Selezionare **Consenti calcoli enclave**.
@@ -213,7 +213,7 @@ New-SqlColumnEncryptionKey -Name $cekName -InputObject $database -ColumnMasterKe
 ```
 
 
-### <a name="provisioning-enclave-enabled-keys--azure-key-vault"></a>Effettuare il provisioning di chiavi abilitate per l'enclave - Azure Key Vault
+### <a name="provisioning-enclave-enabled-keys---azure-key-vault"></a>Effettuare il provisioning di chiavi abilitate per l'enclave - Azure Key Vault
 
 Nel computer client/di sviluppo aprire Windows PowerShell ISE ed eseguire lo script seguente.
 
@@ -237,7 +237,7 @@ $akvKeyName = "<key name>"
 $azureCtx = Set-AzureRMConteXt -SubscriptionId $SubscriptionId
 
 # Create a new resource group - skip, if your desired group already exists.
-New-AzureRmResourceGroup –Name $resourceGroup –Location $azureLocation
+New-AzureRmResourceGroup -Name $resourceGroup -Location $azureLocation
 
 # Create a new key vault - skip if your vault already exists.
 New-AzureRmKeyVault -VaultName $akvName -ResourceGroupName $resourceGroup -Location $azureLocation
@@ -511,7 +511,7 @@ Ecco i tre approcci per l'abilitazione degli enclave per colonne esistenti:
 - Svantaggi:
   - Non supporta la modifica del tipo di crittografia da deterministica a casuale, quindi anche se rende disponibile la crittografia sul posto per le colonne crittografate in modo deterministico, non abilita i calcoli avanzati.
   - Non consente di convertire in modo selettivo alcune delle colonne, associate a una determinata chiave master della colonna.
-  - Introduce il sovraccarico della gestione delle chiavi perché è necessario creare una nuova chiave master della colonna e renderla disponibile per le applicazioni che eseguono query sulle colonne interessate.  
+  - Introduce l'overhead di gestione delle chiavi: è necessario creare una nuova chiave master della colonna e renderla disponibile per le applicazioni che eseguono query sulle colonne interessate.  
 
 
 #### <a name="option-2-this-approach-involves-two-steps-1-rotating-the-column-master-key-as-in-option-1-and-2-re-encrypting-a-subset-of-deterministically-encrypted-columns-using-randomized-encryption-to-enable-rich-computations-for-those-columns"></a>Opzione 2: questo approccio comporta due passaggi: 1) ruotare la chiave master della colonna (come nell'opzione 1) e 2) crittografare nuovamente un subset di colonne crittografate in modo deterministico con la crittografia casuale, per abilitare i calcoli avanzati per tali colonne.
@@ -522,7 +522,7 @@ Ecco i tre approcci per l'abilitazione degli enclave per colonne esistenti:
   
 - Svantaggi:
   - Non consente di convertire in modo selettivo alcune delle colonne, associate a una determinata chiave master della colonna.
-  - Introduce il sovraccarico della gestione delle chiavi perché è necessario creare una nuova chiave master della colonna e renderla disponibile per le applicazioni che eseguono query sulle colonne interessate.
+  - Introduce l'overhead di gestione delle chiavi: è necessario creare una nuova chiave master della colonna e renderla disponibile per le applicazioni che eseguono query sulle colonne interessate.
 
 #### <a name="option-3-re-encrypting-selected-columns-with-a-new-enclave-enabled-column-encryption-key-and-randomized-encryption-if-needed-on-the-client-side"></a>Opzione 3: crittografare nuovamente le colonne selezionate con una nuova chiave di crittografia di colonna abilitata per l'enclave e la crittografia casuale (se necessario) sul lato client.
   
@@ -758,7 +758,7 @@ Il modo più rapido per provare query avanzate sulle colonne abilitate per l'enc
 2.  Abilitare Parametrizzazione per Always Encrypted.
     
     1.  Selezionare **Query** dal menu principale di SQL Server Management Studio.
-    2.  Selezionare **Opzioni query...**
+    2.  Selezionare **Opzioni query...**.
     3.  Passare a **Esecuzione** > **Avanzata**.
     4.  Selezionare o deselezionare Abilita parametrizzazione per Always Encrypted.
     5.  Fare clic su OK.

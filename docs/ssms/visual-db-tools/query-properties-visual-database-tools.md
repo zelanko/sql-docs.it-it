@@ -14,12 +14,12 @@ ms.assetid: 07495669-6ed5-4004-904e-aae1230be5e4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7d5564de165e053a871202798ee55b07f2dccc1c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8c274b4e442d161071960af4578ccf7485050b26
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47733926"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52524825"
 ---
 # <a name="query-properties-visual-database-tools"></a>Proprietà delle query (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -62,10 +62,10 @@ Specifica che sono disponibili opzioni aggiuntive per le query basate su query d
 Specifica che tutte le colonne di tutte le tabelle nella query corrente saranno presenti nel set di risultati. Selezionare questa opzione equivale a specificare un asterisco (*) al posto dei singoli nomi di colonne dopo la parola chiave SELECT nell'istruzione SQL.  
   
 **Elenco parametri query**  
-Visualizza i parametri della query. Per modificarli, fare clic sulla proprietà e quindi sui puntini di sospensione **(…)** a destra della proprietà. (si applica solo a OLE DB generico).  
+Visualizza i parametri della query. Per modificarli, fare clic sulla proprietà e quindi sui puntini di sospensione **(...)** a destra della proprietà. (si applica solo a OLE DB generico).  
   
 **Commento SQL**  
-Visualizza una descrizione delle istruzioni SQL. Per visualizzare la descrizione completa o modificarla, fare clic su di essa, quindi sui puntini di sospensione **(…)** a destra della proprietà. Nei commenti è possibile specificare ad esempio chi utilizza la query e quando (si applica solo a database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 o versione successiva).  
+Visualizza una descrizione delle istruzioni SQL. Per visualizzare la descrizione completa o modificarla, fare clic su di essa, quindi sui puntini di sospensione **(...)** a destra della proprietà. Nei commenti è possibile specificare ad esempio chi utilizza la query e quando (si applica solo a database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 o versione successiva).  
   
 **Categoria Specifica Top**  
 Viene espansa per visualizzare le proprietà relative alle proprietà **In alto**, **Percentuale**, **Espressione**e **Con valori equivalenti** .  

@@ -11,12 +11,12 @@ author: Minewiskan
 ms.author: owend
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: erikre
-ms.openlocfilehash: 9d68be09f17fcb9cbd084c5567c7edae87e0ca5a
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 921994834433e7a4e2e081d6b8b43ce6294f6e09
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51605421"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518297"
 ---
 # <a name="upgrade-power-pivot-for-sharepoint"></a>Aggiornare Power Pivot per SharePoint
 
@@ -84,7 +84,7 @@ ms.locfileid: "51605421"
   
     1.  Nell'Installazione guidata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fare clic su **Installazione**.  
   
-    2.  Fare clic su **Aggiorna da SQL Server...**.  
+    2.  Fare clic su **Aggiorna da SQL Server**.  
   
     3.  Nella pagina **Seleziona istanza** selezionare il nome dell'istanza di **POWERPIVOT** , quindi fare clic su **Avanti**.  
   
@@ -104,7 +104,7 @@ ms.locfileid: "51605421"
   
          Dal menu **Start** scegliere **Tutti i programmi**, fare clic su [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], **Strumenti di configurazione**e successivamente selezionare **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per SharePoint 2013**. Si noti che lo strumento è elencato solo se [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] è installato nel server locale.  
   
-    2.  All'avvio, lo strumento di configurazione controlla lo stato dell'aggiornamento della soluzione farm [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] e delle soluzioni delle applicazioni Web [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Se vengono rilevate versioni precedenti di queste soluzioni, verrà visualizzato il messaggio "**Sono state rilevate versioni più recenti dei file di soluzione [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]. Selezionare l'opzione di aggiornamento per aggiornare la farm**." Fare clic su **OK** per chiudere il messaggio di convalida del sistema.  
+    2.  All'avvio, lo strumento di configurazione controlla lo stato dell'aggiornamento della soluzione farm [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] e delle soluzioni delle applicazioni Web [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Se vengono rilevate versioni precedenti di queste soluzioni, verrà visualizzato il messaggio "**Sono state rilevate versioni più recenti dei file di soluzione [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]. Selezionare l'opzione di aggiornamento per aggiornare la farm**". Fare clic su **OK** per chiudere il messaggio di convalida del sistema.  
   
     3.  Fare clic su **Aggiorna funzionalità, servizi, applicazioni e soluzioni**, quindi fare clic su **OK**.  
   
@@ -125,7 +125,7 @@ ms.locfileid: "51605421"
   
     8.  Per continuare, scegliere **Sì** .  
   
-    9. Il completamento dell'aggiornamento delle soluzioni e delle funzionalità nella farm può richiedere diversi minuti. Durante questo periodo di tempo, le richieste di connessione [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ai dati **avranno esito negativo** con errori di tipo "**Impossibile aggiornare i dati**" o "**Errore durante il tentativo di eseguire l'azione richiesta. Riprovare**." Al termine dell'aggiornamento, il server diventerà disponibile e questi errori non si verificheranno più.  
+    9. Il completamento dell'aggiornamento delle soluzioni e delle funzionalità nella farm può richiedere diversi minuti. Durante questo periodo di tempo, le richieste di connessione ai dati [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] **avranno esito negativo** con errori di tipo "**Impossibile aggiornare i dati**" o "**Errore durante il tentativo di eseguire l'azione richiesta. Riprovare**". Al termine dell'aggiornamento, il server diventerà disponibile e questi errori non si verificheranno più.  
   
      Per ulteriori informazioni, vedere quanto segue:  
   
@@ -172,7 +172,7 @@ ms.locfileid: "51605421"
   
     1.  Dal menu **Start** scegliere **Tutti i programmi**, fare clic su [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], **Strumenti di configurazione**, quindi su **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Strumento di configurazione**. Si noti che lo strumento è elencato solo se [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] è installato nel server locale.  
   
-    2.  All'avvio, lo strumento di configurazione controlla lo stato dell'aggiornamento della soluzione farm [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] e delle soluzioni delle applicazioni Web [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Se vengono rilevate versioni precedenti di queste soluzioni, verrà visualizzato il messaggio "Sono state rilevate versioni più recenti dei file di soluzione [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Selezionare l'opzione di aggiornamento per aggiornare la farm". Fare clic su **OK** per chiudere la finestra di messaggio.  
+    2.  All'avvio, lo strumento di configurazione controlla lo stato dell'aggiornamento della soluzione farm [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] e delle soluzioni delle applicazioni Web [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Se vengono rilevate versioni precedenti di queste soluzioni, viene visualizzato il messaggio "Sono state rilevate versioni più recenti dei file di soluzione [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]. Selezionare l'opzione di aggiornamento per aggiornare la farm". Fare clic su **OK** per chiudere la finestra di messaggio.  
   
     3.  Fare clic su **Aggiorna funzionalità, servizi, applicazioni e soluzioni**, quindi su **OK** per continuare.  
   
@@ -197,11 +197,11 @@ ms.locfileid: "51605421"
         > [!IMPORTANT]  
         >  È necessario elaborare sempre per prima la prima azione **Aggiornare la soluzione farm**. Con questa azione verranno registrati i cmdlet di PowerShell utilizzati per configurare il server. Se viene generato un errore per questa azione, non continuare. Utilizzare invece le informazioni fornite dall'errore per diagnosticare e risolvere il problema prima di elaborare ulteriori azioni nell'elenco attività.  
   
-    8.  Fare clic su **Esegui** per eseguire tutte le azioni valide per questa attività. L'opzione**Esegui** è disponibile solo dopo il superamento del controllo di convalida. Quando si fa clic su **Esegui**, viene visualizzato l'avviso seguente in cui si ricorda che le azioni vengono elaborate in modalità batch: "Tutte le impostazioni di configurazione contrassegnate come valide nello strumento verranno applicate alla farm di SharePoint. Continuare?"  
+    8.  Fare clic su **Esegui** per eseguire tutte le azioni valide per questa attività. L'opzione**Esegui** è disponibile solo dopo il superamento del controllo di convalida. Quando si fa clic su **Esegui** viene visualizzato l'avviso seguente, che indica che le azioni vengono elaborate in modalità batch: "Tutte le impostazioni di configurazione contrassegnate come valide nello strumento verranno applicate alla farm di SharePoint. Continuare?"  
   
     9. Per continuare, scegliere **Sì** .  
   
-    10. Il completamento dell'aggiornamento delle soluzioni e delle funzionalità nella farm può richiedere diversi minuti. Durante questo periodo di tempo, le richieste di connessione ai dati [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] avranno esito negativo con errori di tipo "Impossibile aggiornare i dati" o "Errore durante il tentativo di eseguire l'azione richiesta. Riprovare". Al termine dell'aggiornamento, il server diventerà disponibile e questi errori non si verificheranno più.  
+    10. Il completamento dell'aggiornamento delle soluzioni e delle funzionalità nella farm può richiedere diversi minuti. Durante questo periodo di tempo le richieste di connessione ai dati [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] avranno esito negativo con errori di tipo "Impossibile aggiornare i dati" o "Errore durante il tentativo di eseguire l'azione richiesta. Riprovare". Al termine dell'aggiornamento, il server diventerà disponibile e questi errori non si verificheranno più.  
   
 8.  **Ripetere il processo** per ogni servizio SQL Server Analysis Services ([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]) nella farm: 1) Eseguire il programma di installazione di SQL Server. 2) Eseguire lo strumento di configurazione [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
   
@@ -216,15 +216,15 @@ ms.locfileid: "51605421"
     1.  Avviare la shell di gestione SharePoint 2010 come amministratore, quindi eseguire il comando indicato di seguito per visualizzare i processi in coda:  
   
         ```  
-        Stsadm –o enumdeployments  
+        Stsadm -o enumdeployments  
         ```  
   
     2.  Esaminare le distribuzioni esistenti cercando le informazioni seguenti: **Tipo** è Retraction o Deployment, **File** è powerpivotwebapp.wsp o powerpivotfarm.wsp.  
   
-    3.  Per le distribuzioni o i ritiri correlati alle soluzioni [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , copiare il valore GUID per **JobId** , quindi incollarlo nel comando seguente. Per copiare il GUID, usare i comandi Contrassegna, Copia e Incolla del menu Modifica della shell:  
+    3.  Per le distribuzioni o i ritiri correlati alle soluzioni [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)], copiare il valore GUID per **JobId** e incollarlo nel comando seguente. Per copiare il GUID, usare i comandi Contrassegna, Copia e Incolla del menu Modifica della shell:  
   
         ```  
-        Stsadm –o canceldeployment –id “<GUID>”  
+        Stsadm -o canceldeployment -id "<GUID>"  
         ```  
   
     4.  Riprovare l'attività nello strumento di configurazione facendo clic su **Convalida** , quindi su **Esegui**.  

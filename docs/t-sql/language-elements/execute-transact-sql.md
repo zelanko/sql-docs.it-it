@@ -32,12 +32,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e8a2a8539b63df48520777276dac4e66867e8634
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a729dac9bba3f8ace1f117b6317d24ec541fcc19
+ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47799709"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52641022"
 ---
 # <a name="execute-transact-sql"></a>EXECUTE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -235,6 +235,8 @@ Execute a character string
   
  Se il valore di un parametro è il nome di un oggetto, una stringa di caratteri o un nome qualificato dal nome del database o dello schema, l'intero nome deve essere racchiuso tra virgolette singole. Se il valore di un parametro è rappresentato da una parola chiave, questa deve essere racchiusa tra virgolette doppie.  
   
+Se si passa una singola parola che non inizia con `@` e che non è racchiusa tra virgolette, ad esempio se si omette `@` nel nome di un parametro, la parola viene considerata come una stringa di tipo nvarchar, nonostante le virgolette mancanti.
+
  Se nel modulo è definito un valore predefinito, l'utente può eseguire il modulo senza specificare un parametro.  
   
  Il valore predefinito può essere inoltre NULL. In genere nella definizione del modulo sono specificate le operazioni da eseguire se un valore di parametro è NULL.  
@@ -287,7 +289,7 @@ Execute a character string
  Stringa costante contenente il comando da passare al server collegato. Se si specifica N, la stringa viene interpretata come di tipo **nvarchar**.  
   
  [?]  
- Indica i parametri per i quali vengono specificati i valori nell'elenco \<arg-list> dei comandi pass-through usati in un'istruzione EXEC('…', \<arg-list>) AT \<linkedsrv>.  
+ Indica i parametri per i quali vengono specificati i valori nell'elenco \<arg-list> dei comandi pass-through usati in un'istruzione EXEC('...', \<arg-list>) AT \<linkedsrv>.  
   
  AT *linked_server_name*  
 **Si applica a**: da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
@@ -295,7 +297,7 @@ Execute a character string
  Specifica che *command_string* viene eseguita in *linked_server_name* e che gli eventuali risultati vengono restituiti al client. *linked_server_name* deve fare riferimento a una definizione esistente nel server locale di un server collegato. I server collegati vengono definiti tramite [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md).  
   
  WITH \<execute_option>  
- Opzioni di esecuzione possibili. Le opzioni RESULT SETS non possono essere specificate in un'istruzione INSERT...EXEC.  
+ Opzioni di esecuzione possibili. Non è possibile specificare opzioni RESULT SETS in un'istruzione INSERT...EXEC.  
   
 |Nome|Definizione|  
 |----------|----------------|  
@@ -315,7 +317,7 @@ Execute a character string
 |schema_name|Nome dello schema proprietario della tabella, della vista o della funzione con valori di tabella.|  
 |table_name &#124; view_name &#124; table_valued_function_name|Specifica che le colonne restituite saranno quelle specificate nella tabella, nella vista o nella funzione con valori di tabella denominata. La sintassi degli oggetti AS non supporta i sinonimi, le tabelle temporanee e le variabili di tabella.|  
 |AS TYPE [schema_name.]table_type_name|Specifica che le colonne restituite saranno quelle specificate nel tipo della tabella.|  
-|AS FOR XML|Specifica che i risultati XML dell'istruzione o della stored procedure chiamata dall'istruzione EXECUTE vengono convertiti nel formato come se fossero prodotti da un'istruzione SELECT … FOR XML … . Tutta la formattazione dalle direttive type nell'istruzione originale viene rimossa e i risultati vengono restituiti come se non fosse stata specificata alcuna direttiva type. AS FOR XML non converte i risultati tabulari non XML dall'istruzione o dalla stored procedure eseguita in XML.|  
+|AS FOR XML|Specifica che i risultati XML dell'istruzione o della stored procedure chiamata dall'istruzione EXECUTE vengono convertiti nel formato come se fossero prodotti da un'istruzione SELECT ... FOR XML ... Tutta la formattazione dalle direttive type nell'istruzione originale viene rimossa e i risultati vengono restituiti come se non fosse stata specificata alcuna direttiva type. AS FOR XML non converte i risultati tabulari non XML dall'istruzione o dalla stored procedure eseguita in XML.|  
   
 |Nome|Definizione|  
 |----------|----------------|  

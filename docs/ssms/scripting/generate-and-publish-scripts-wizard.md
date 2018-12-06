@@ -44,12 +44,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 409da0193276741d11a09d14018d016afbe449a6
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 846769ff6330edf5576e4342a3c145829a18196a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51700269"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52530565"
 ---
 # <a name="generate-and-publish-scripts-wizard"></a>Genera e pubblica script
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -122,7 +122,7 @@ Per una esercitazione più dettagliata sull'uso della procedura guidata Genera e
   
  **Opzioni** : se si vuole che gli script vengano salvati in un percorso specifico, selezionare **Salva script in un percorso specifico**. È possibile eseguire in un secondo momento gli script in a un'istanza del motore di database o in [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Se si desidera pubblicare gli oggetti di database in un provider di hosting Web remoto tramite una procedura guidata, selezionare **Pubblica su servizio Web**.  
   
- **Salva script in un percorso specifico**: consente di salvare uno o più file script Transact-SQL in un percorso specificato.  
+ **Salva script in un percorso specifico**: consente di salvare uno o più file script Transact-SQL in un percorso specificato dall'utente.  
 
   ![Salvare](media/generate-and-publish-scripts-wizard/save.png)   
   
@@ -149,7 +149,7 @@ Per una esercitazione più dettagliata sull'uso della procedura guidata Genera e
   
  **Opzioni** : consente di specificare le opzioni avanzate selezionando un valore tra quelli disponibili nell'elenco visualizzato a destra di ciascuna opzione.  
   
- **Generale** : le opzioni seguenti si applicano all'intero script.  
+ **Generale**: le opzioni seguenti si applicano all'intero script.  
   
 -   **Riempimento ANSI** : consente di includere **ANSI PADDING ON** nello script. Il valore predefinito è **True**.  
   
@@ -199,7 +199,7 @@ Per una esercitazione più dettagliata sull'uso della procedura guidata Genera e
   
 -   **Genera script per il rilevamento modifiche** : consente di generare script per il rilevamento delle modifiche se è abilitato nel database di origine o nelle tabelle del database di origine. Il valore predefinito è **False**. Per altre informazioni, vedere [Informazioni sul rilevamento delle modifiche &#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-tracking-sql-server.md).  
   
--   **Script per vincoli CHECK** : consente di aggiungere i vincoli **CHECK** allo script. Il valore predefinito è **True**. I vincoli**CHECK** richiedono che i dati immessi in una tabella rispettino una condizione specificata. Per altre informazioni, vedere [Unique Constraints and Check Constraints](../../relational-databases/tables/unique-constraints-and-check-constraints.md).  
+-   **Script per vincoli CHECK**: consente di aggiungere vincoli **CHECK** allo script. Il valore predefinito è **True**. I vincoli**CHECK** richiedono che i dati immessi in una tabella rispettino una condizione specificata. Per altre informazioni, vedere [Unique Constraints and Check Constraints](../../relational-databases/tables/unique-constraints-and-check-constraints.md).  
   
 -   **Genera script per le opzioni di compressione dati** : consente di includere le opzioni di compressione dati, se sono configurate nel database di origine o nelle tabelle del database di origine. Per altre informazioni, vedere [Data Compression](../../relational-databases/data-compression/data-compression.md). Il valore predefinito è **False**.  
   
@@ -239,7 +239,7 @@ Per una esercitazione più dettagliata sull'uso della procedura guidata Genera e
   
  **Opzioni** : consente di specificare le opzioni avanzate selezionando un valore tra quelli disponibili nell'elenco visualizzato a destra di ciascuna opzione.  
   
- **Generale** : le opzioni seguenti si applicano all'intera pubblicazione.  
+ **Generale**: le opzioni seguenti si applicano all'intera pubblicazione.  
   
 1.  **Converti UDDT in tipi di base** : se è impostato su **True**, i tipi di dati definiti dall'utente (UDDT) vengono convertiti nei tipi di dati di base sottostanti che erano stati usati per crearli. Usare **True** se il tipo di dati UDDT non esiste nel database in cui verrà eseguito lo script. Se è impostato su **False**, vengono usati gli UDDT. Il valore predefinito è **False**.  
   
@@ -265,7 +265,7 @@ Per una esercitazione più dettagliata sull'uso della procedura guidata Genera e
   
 12. **Tipi di dati da pubblicare**: consente di selezionare cosa deve essere inserito negli script: **Solo dati**, **Solo schema** o entrambi. Il valore predefinito è **Schema e dati**.  
   
- **Opzioni di pubblicazione** : consente di specificare se usare le transazioni per la pubblicazione sul provider di hosting Web.  
+ **Opzioni di pubblicazione**: consente di specificare se usare transazioni per la pubblicazione nel provider di hosting Web.  
   
 1.  **Pubblicazione con transazione** : consente di usare le transazioni per la pubblicazione su un provider di hosting Web remoto. Se il database di destinazione non può completare la pubblicazione, viene eseguito il rollback delle transazioni. Il valore predefinito è **True**.  
   
@@ -340,7 +340,7 @@ Per una esercitazione più dettagliata sull'uso della procedura guidata Genera e
  
 ## <a name="generating-scripts-on-azure-sql-data-warehouse"></a>Generazione di script in Azure SQL Data Warehouse  
 
-Se la sintassi generata quando si usa "Script come" non corrisponde alla sintassi di [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] o se viene visualizzato un messaggio di errore, potrebbe essere necessario impostare le opzioni di scripting in SQL Server Management Studio su [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)].  
+Se la sintassi generata tramite "Script come..." non corrisponde alla sintassi di [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] o se viene visualizzato un messaggio di errore, può essere necessario impostare le opzioni di scripting in SQL Server Management Studio su [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)].  
 
 ### <a name="how-to-set-default-scripting-options-to-sql-data-warehouse"></a>Come impostare le opzioni di scripting su SQL Data Warehouse  
 

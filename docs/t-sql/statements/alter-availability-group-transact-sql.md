@@ -23,12 +23,12 @@ ms.assetid: f039d0de-ade7-4aaf-8b7b-d207deb3371a
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 665fd5db9f42f79965c937a60bf3ebfdb729b217
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 7098114ba6a69b65ba689f00a726bb93c93b6a2a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51703949"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52528778"
 ---
 # <a name="alter-availability-group-transact-sql"></a>ALTER AVAILABILITY GROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -56,10 +56,10 @@ ALTER AVAILABILITY GROUP group_name
    | DENY CREATE ANY DATABASE  
    | FAILOVER  
    | FORCE_FAILOVER_ALLOW_DATA_LOSS   
-   | ADD LISTENER ‘dns_name’ ( <add_listener_option> )  
-   | MODIFY LISTENER ‘dns_name’ ( <modify_listener_option> )  
-   | RESTART LISTENER ‘dns_name’  
-   | REMOVE LISTENER ‘dns_name’  
+   | ADD LISTENER 'dns_name' ( <add_listener_option> )  
+   | MODIFY LISTENER 'dns_name' ( <modify_listener_option> )  
+   | RESTART LISTENER 'dns_name'  
+   | REMOVE LISTENER 'dns_name'  
    | OFFLINE  
   }  
 [ ; ]  
@@ -92,8 +92,8 @@ ALTER AVAILABILITY GROUP group_name
      } )  
      | PRIMARY_ROLE ( {   
             [ ALLOW_CONNECTIONS = { READ_WRITE | ALL } ]   
-        [,] [ READ_ONLY_ROUTING_LIST = { ( ‘<server_instance>’ [ ,...n ] ) | NONE } ]  
-        [,] [ READ_WRITE_ROUTING_URL = { ( ‘<server_instance>’ ) ] 
+        [,] [ READ_ONLY_ROUTING_LIST = { ( '<server_instance>' [ ,...n ] ) | NONE } ]  
+        [,] [ READ_WRITE_ROUTING_URL = { ( '<server_instance>' ) ] 
      } )  
      | SESSION_TIMEOUT = integer
   
@@ -111,7 +111,7 @@ ALTER AVAILABILITY GROUP group_name
           } )  
      | PRIMARY_ROLE ( {   
           ALLOW_CONNECTIONS = { READ_WRITE | ALL }   
-        | READ_ONLY_ROUTING_LIST = { ( ‘<server_instance>’ [ ,...n ] ) | NONE }   
+        | READ_ONLY_ROUTING_LIST = { ( '<server_instance>' [ ,...n ] ) | NONE }   
           } )  
      | SESSION_TIMEOUT = seconds  
     )   
@@ -140,12 +140,12 @@ ALTER AVAILABILITY GROUP group_name
    }  
   
   <network_subnet_option> ::=  
-     ‘four_part_ipv4_address’, ‘four_part_ipv4_mask’    
+     'four_part_ipv4_address', 'four_part_ipv4_mask'    
   
   <ip_address_option> ::=  
      {   
-        ‘four_part_ipv4_address’, ‘four_part_ipv4_mask’  
-      | ‘ipv6_address’  
+        'four_part_ipv4_address', 'four_part_ipv4_mask'  
+      | 'ipv6_address'  
      }  
   
 <modify_listener_option>::=  
@@ -193,7 +193,7 @@ ALTER AVAILABILITY GROUP group_name
   
  Supportato solo nella replica primaria.  
   
- I livelli delle condizioni di errore (1-5) vanno dal livello 1, meno restrittivo, al livello 5, più restrittivo. Un livello della condizione specifico include tutti i livelli meno restrittivi. Il livello della condizione più restrittivo, ovvero il livello 5, include pertanto i quattro livelli della condizione meno restrittivi (1-4), il livello 4 include i livelli 1-3 e così via. Nella tabella seguente viene descritta la condizione di errore che corrisponde a ciascun livello.  
+ I livelli delle condizioni di errore (1-5) vanno dal livello 1, il meno restrittivo, al livello 5, il più restrittivo. Un livello della condizione specifico include tutti i livelli meno restrittivi. Il livello della condizione più restrittivo, ovvero il livello 5, include pertanto i quattro livelli della condizione meno restrittivi (1-4), il livello 4 include i livelli 1-3 e così via. Nella tabella seguente viene descritta la condizione di errore che corrisponde a ciascun livello.  
   
 |Level|Condizione di errore|  
 |-----------|-----------------------|  
@@ -337,7 +337,7 @@ ALTER AVAILABILITY GROUP group_name
   
  Per altre informazioni, vedere [Repliche secondarie attive: Backup in repliche secondarie &#40;gruppi di disponibilità Always On&#41;](../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).  
   
- SECONDARY_ROLE **(** … **)**  
+ SECONDARY_ROLE **(** ... **)**  
  Specifica le impostazioni specifiche di ruolo che verranno applicate se questa replica di disponibilità è attualmente proprietaria del ruolo secondario (ovvero ogni volta che è una replica secondaria). All'interno delle parentesi, specificare uno o entrambe opzioni per il ruolo secondario. Se si specificano entrambe, usare un elenco delimitato da virgole.  
   
  Le opzioni per il ruolo secondario sono le seguenti:  
@@ -366,7 +366,7 @@ ALTER AVAILABILITY GROUP group_name
 > [!NOTE]  
 >  Per un'istanza denominata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], il listener Transact-SQL deve essere configurato per usare una porta specifica. Per altre informazioni, vedere [Configurazione di un server per l'attesa su una porta TCP specifica &#40;Gestione configurazione SQL Server&#41;](../../database-engine/configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port.md).  
   
- PRIMARY_ROLE **(** … **)**  
+ PRIMARY_ROLE **(** ... **)**  
  Specifica le impostazioni specifiche di ruolo che verranno applicate se questa replica di disponibilità è attualmente proprietaria del ruolo primario (ovvero ogni volta che è una replica primaria). All'interno delle parentesi, specificare uno o entrambe opzioni per il ruolo primario. Se si specificano entrambe, usare un elenco delimitato da virgole.  
   
  Le opzioni per il ruolo primario sono le seguenti:  
@@ -380,7 +380,7 @@ ALTER AVAILABILITY GROUP group_name
  ALL  
  Sono consentite tutte le connessioni ai database nella replica primaria. Questo è il comportamento predefinito.  
   
- READ_ONLY_ROUTING_LIST **=** { **(‘**\<server_instance>**’** [ **,**...*n* ] **)** | NONE }  
+ READ_ONLY_ROUTING_LIST **=** { **('**\<server_instance>**'** [ **,**...*n* ] **)** | NONE }  
  Specifica un elenco delimitato da virgole di istanze del server in cui sono ospitate repliche di disponibilità per questo gruppo di disponibilità che soddisfano i requisiti seguenti quando vengono eseguite nel ruolo secondario:  
   
 -   Sono configurate per consentire tutte le connessioni o connessioni in sola lettura (vedere l'argomento ALLOW_CONNECTIONS dell'opzione SECONDARY_ROLE, sopra).  
@@ -408,7 +408,7 @@ ALTER AVAILABILITY GROUP group_name
  Per altre informazioni sul periodo di timeout della sessione, vedere [Panoramica di Gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md).  
   
  MODIFY REPLICA ON  
- Modifica qualsiasi replica del gruppo di disponibilità. L'elenco di repliche da modificare contiene l'indirizzo dell'istanza del server e una clausola WITH (.) per ogni replica.  
+ Modifica qualsiasi replica del gruppo di disponibilità. L'elenco di repliche da modificare contiene l'indirizzo dell'istanza del server e una clausola WITH (...) per ogni replica.  
   
  Supportato solo nella replica primaria.  
   
@@ -450,7 +450,7 @@ Avvia un failover manuale del gruppo di disponibilità senza perdita di dati nel
   
  Per informazioni su limitazioni, prerequisiti e consigli per il failover forzato e sull'effetto di un failover forzato sui database primari precedenti nel gruppo di disponibilità, vedere [Eseguire un failover manuale forzato di un gruppo di disponibilità &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md).  
   
- ADD LISTENER **‘**_dns\_name_**’(** \<add_listener_option> **)**  
+ ADD LISTENER **'**_dns\_name_**'(** \<add_listener_option> **)**  
  Definisce un nuovo listener per il gruppo di disponibilità. Supportato solo nella replica primaria.  
   
 > [!IMPORTANT]  
@@ -534,7 +534,7 @@ Avvia un failover manuale del gruppo di disponibilità senza perdita di dati nel
  \<add_listener_option>  
  ADD LISTENER accetta una delle opzioni seguenti:  
   
- WITH DHCP [ ON { **(‘**_four\_part\_ipv4\_address_**’,‘**_four\_part\_ipv4\_mask_**’)** } ]  
+ WITH DHCP [ ON { **('**_four\_part\_ipv4\_address_**','**_four\_part\_ipv4\_mask_**')** } ]  
  Specifica che il listener del gruppo di disponibilità userà il protocollo DHCP (Dynamic Host Configuration Protocol).  Facoltativamente, utilizzare la clausola ON per identificare la rete su cui verrà creato il listener. DHCP è limitato a una sola subnet utilizzata per ogni istanza del server nel cui gruppo di disponibilità è ospitata una replica di disponibilità.  
   
 > [!IMPORTANT]  
@@ -544,7 +544,7 @@ Avvia un failover manuale del gruppo di disponibilità senza perdita di dati nel
   
  `WITH DHCP ON ('10.120.19.0','255.255.254.0')`  
   
- WITH IP **(** { **(‘**_four\_part\_ipv4\_address_**’,‘**_four\_part\_ipv4\_mask_**’)** | **(‘**_ipv6\_address_**’)** } [ **,** ..._n_ ] **)** [ **,** PORT **=**_listener\_port_ ]  
+ WITH IP **(** { **('**_four\_part\_ipv4\_address_**','**_four\_part\_ipv4\_mask_**')** | **('**_ipv6\_address_**')** } [ **,** ..._n_ ] **)** [ **,** PORT **=**_listener\_port_ ]  
  Specifica che, anziché usare DHCP, nel listener del gruppo di disponibilità saranno usati uno o più indirizzi IP statici. Per creare un gruppo di disponibilità tra più subnet, viene richiesto un indirizzo IP statico nella configurazione del listener per ogni subnet. Per una determinata subnet, l'indirizzo IP statico può essere un indirizzo IPv4 o IPv6. Contattare l'amministratore di rete per ottenere un indirizzo IP statico per ogni subnet in cui verrà ospitata una replica di disponibilità per il nuovo gruppo di disponibilità.  
   
  Ad esempio  
@@ -567,22 +567,22 @@ Avvia un failover manuale del gruppo di disponibilità senza perdita di dati nel
   
  Ad esempio: `WITH IP ( ('2001::4898:23:1002:20f:1fff:feff:b3a3') ) , PORT = 7777`  
   
- MODIFY LISTENER **‘**_dns\_name_**’(** \<modify\_listener\_option\> **)**  
+ MODIFY LISTENER **'**_dns\_name_**'(** \<modify\_listener\_option\> **)**  
  Modifica un listener del gruppo di disponibilità esistente. Supportato solo nella replica primaria.  
   
  \<modify\_listener\_option\>  
  MODIFY LISTENER accetta una delle opzioni seguenti:  
   
- ADD IP { **(‘**_four\_part\_ipv4\_address_**’,‘**_four\_part\_ipv4_mask_**’)** \| <b>(‘</b>dns\_name*ipv6\_address*__’)__ }  
+ ADD IP { **('**_four\_part\_ipv4\_address_**','**_four\_part\_ipv4_mask_**')** \| <b>('</b>dns\_name*ipv6\_address*__')__ }  
  Aggiunge l'indirizzo IP specificato al listener del gruppo di disponibilità specificato da *dns\_name*.  
   
  PORT **=** *listener_port*  
  Vedere la descrizione di questo argomento più indietro in questa sezione.  
   
- RESTART LISTENER **‘**_dns\_name_**’**  
+ RESTART LISTENER **'**_dns\_name_**'**  
  Consente di riavviare il listener associato al nome DNS specificato. Supportato solo nella replica primaria.  
   
- REMOVE LISTENER **‘**_dns\_name_**’**  
+ REMOVE LISTENER **'**_dns\_name_**'**  
  Consente di rimuovere il listener associato al nome DNS specificato. Supportato solo nella replica primaria.  
   
  OFFLINE  
