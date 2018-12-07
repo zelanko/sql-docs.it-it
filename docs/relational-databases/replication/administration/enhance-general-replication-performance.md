@@ -22,12 +22,12 @@ ms.assetid: 895b1ad7-ffb9-4a5c-bda6-e1dfbd56d9bf
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1c57fd45ac2633e8027e916055b2850033bf69e7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8d10759ad75dd1df48aa3f59d3c17ab9f632755d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47665039"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52539192"
 ---
 # <a name="enhance-general-replication-performance"></a>Miglioramento delle prestazioni generali della replica
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -98,7 +98,7 @@ ms.locfileid: "47665039"
   
      Le modifiche possono essere partizionate pubblicando subset di dati in ogni Sottoscrittore oppure facendo in modo che un'applicazione indirizzi le modifiche relative a una specifica riga a uno determinato nodo:  
   
-    -   La replica di tipo merge supporta la pubblicazione dei subset di dati utilizzando filtri con parametri con una singola pubblicazione. Per altre informazioni sui filtri di riga con parametri, vedere [Filtri di riga con parametri](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
+    -   La replica di tipo merge supporta la pubblicazione dei subset di dati utilizzando filtri con parametri con una singola pubblicazione. Per altre informazioni, vedere [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
     -   La replica transazionale supporta la pubblicazione dei subset di dati utilizzando filtri statici con più pubblicazioni. Per altre informazioni, vedere [Filtrare i dati pubblicati](../../../relational-databases/replication/publish/filter-published-data.md).  
   
@@ -154,11 +154,11 @@ ms.locfileid: "47665039"
   
 -   Ridurre i livelli di dettaglio degli agenti di replica eccetto durante le operazioni iniziali di verifica, monitoraggio o debug.  
   
-     Ridurre i parametri **–HistoryVerboseLevel** e **–OutputVerboseLevel** degli agenti di distribuzione o di merge. per ridurre il numero di nuove righe inserite ai fini del rilevamento della cronologia e dell'output degli agenti. I messaggi precedenti sulla cronologia con lo stesso stato vengono invece aggiornati in base alle nuove informazioni relative alla cronologia. Aumentare i livelli di dettaglio ai fini della verifica, del monitoraggio e del debug in modo da ottenere il maggior numero possibile di informazioni sull'attività degli agenti.  
+     Ridurre i parametri **-HistoryVerboseLevel** e **-OutputVerboseLevel** degli agenti di distribuzione o di merge. per ridurre il numero di nuove righe inserite ai fini del rilevamento della cronologia e dell'output degli agenti. I messaggi precedenti sulla cronologia con lo stesso stato vengono invece aggiornati in base alle nuove informazioni relative alla cronologia. Aumentare i livelli di dettaglio ai fini della verifica, del monitoraggio e del debug in modo da ottenere il maggior numero possibile di informazioni sull'attività degli agenti.  
   
--   Usare il parametro **–MaxBCPThreads** dell'agente snapshot, dell'agente di merge e dell'agente di distribuzione in modo che il numero di thread specificati non superi il numero di processori installati nel computer. Questo parametro specifica il numero di operazioni di copia bulk che è possibile eseguire in parallelo quando lo snapshot viene creato e applicato.  
+-   Usare il parametro **-MaxBCPThreads** dell'agente snapshot, dell'agente di merge e dell'agente di distribuzione in modo che il numero di thread specificati non superi il numero di processori installati nel computer. Questo parametro specifica il numero di operazioni di copia bulk che è possibile eseguire in parallelo quando lo snapshot viene creato e applicato.  
   
--   Usare il parametro **–UseInprocLoader** dell'agente di distribuzione e dell'agente di merge, tenendo presente che non è possibile usarlo se le tabelle pubblicate includono colonne XML. Grazie alla specifica di tale parametro, l'agente utilizzerà il comando BULK INSERT al momento dell'applicazione dello snapshot.  
+-   Usare il parametro **-UseInprocLoader** dell'agente di distribuzione e dell'agente di merge, tenendo presente che non è possibile usarlo se le tabelle pubblicate includono colonne XML. Grazie alla specifica di tale parametro, l'agente utilizzerà il comando BULK INSERT al momento dell'applicazione dello snapshot.  
   
  I parametri degli agenti possono essere specificati nei profili agente e dalla riga di comando. Per altre informazioni, vedere:  
   

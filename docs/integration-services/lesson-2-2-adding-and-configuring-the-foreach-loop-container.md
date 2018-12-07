@@ -11,12 +11,12 @@ ms.assetid: 88a973cc-0f23-4ecf-adb6-5b06279c2df6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 193794ba5d5553036b6fc2018d3e8d8a5ce4401d
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 492691c3fd6c8cd9206b591aa2302bc62a658daa
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51642168"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52527135"
 ---
 # <a name="lesson-2-2---adding-and-configuring-the-foreach-loop-container"></a>Lezione 2-2 - Aggiunta e configurazione del contenitore Ciclo Foreach
 In questa attività verrà aggiunta la capacità di creare un ciclo in una cartella di file flat e applicare la stessa trasformazione del flusso di dati utilizzata nella lezione 1 a ognuno di questi file flat. Ciò si ottiene tramite l'aggiunta e la configurazione di un contenitore Ciclo Foreach al flusso di controllo.  
@@ -74,7 +74,7 @@ Dopo aver apportato tali modifiche al pacchetto, quando questo viene eseguito, i
   
 1.  Fare clic su **Mapping variabili**.  
   
-2.  Nella colonna **Variabile** della pagina **Mapping variabili**, fare clic sulla cella vuota e selezionare **\<Nuova variabile>**.  
+2.  Nella colonna **Variabile** della pagina **Mapping variabili**, fare clic sulla cella vuota e selezionare **\<Nuova variabile...>**.  
   
 3.  Nella finestra di dialogo **Aggiungi variabile** digitare **varFileName**per **Nome**.  
   

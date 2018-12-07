@@ -6,12 +6,12 @@ ms.prod_service: reporting-services-native
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: dced97164a9ba37fe6a2f5102f109c4c3c4ac90f
-ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
+ms.openlocfilehash: 60ed9bf8c11dba87df9c41ed1caae0413ed32bc5
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50050902"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52712222"
 ---
 # <a name="create-a-report-server-database"></a>Creare un database del server di report
 
@@ -66,7 +66,7 @@ ms.locfileid: "50050902"
 >  Il server di report e l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che ospita il database del server di report possono trovarsi in domini diversi. Per la distribuzione in Internet, è pratica comune utilizzare un server protetto da firewall. Se si configura un server di report per l'accesso a Internet, utilizzare credenziali di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per connettersi all'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] protetta dal firewall e utilizzare IPSEC per proteggere la connessione.  
   
 ## <a name="database-server-edition-requirements"></a>Requisiti relativi all'edizione del server di database  
- Quando si crea un database del server di report, tenere presente che non tutte le edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] possono essere usate per ospitare il database. Per altre informazioni, vedere [Requisiti dell'edizione server del database del server di report](../reporting-services-features-supported-by-the-editions-of-sql-server-2016.md#report-server-database-server-edition-requirements) di [Funzionalità di Reporting Services supportate dalle edizioni di SQL Server 2016](../reporting-services-features-supported-by-the-editions-of-sql-server-2016.md).  
+ Quando si crea un database del server di report, tenere presente che non tutte le edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] possono essere usate per ospitare il database. Per altre informazioni, vedere [Requisiti dell'edizione server del database del server di report](../reporting-services-features-supported-by-the-editions-of-sql-server-2016.md#report-server-database-server-edition-requirements) di [Funzionalità di Reporting Services supportate dalle edizioni di SQL Server 2017](../reporting-services-features-supported-by-the-editions-of-sql-server-2016.md).  
 
 ## <a name="next-steps"></a>Passaggi successivi
 

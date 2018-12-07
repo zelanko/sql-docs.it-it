@@ -21,12 +21,12 @@ ms.assetid: 1e07cf56-b4b7-4c49-8ddd-c276812a7148
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 35f30ac6e2e597f822fde99d52840a2d39ac23ce
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5a6e778155ad0a470bd5b9e97484aea94d205055
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47608974"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52537304"
 ---
 # <a name="use-having-and-where-clauses-in-the-same-query-visual-database-tools"></a>Utilizzo delle clausole HAVING e WHERE nella stessa query (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,7 +38,7 @@ La clausola HAVING è analoga alla clausola WHERE ma è applicabile solo ai grup
   
 -   Successivamente viene applicata la clausola HAVING alle righe del set di risultati. Nell'output della query saranno visualizzati solo i gruppi che soddisfano le condizioni HAVING. La clausola HAVING può essere applicata solo alle colonne presenti anche nella clausola GROUP BY o in una funzione di aggregazione.  
   
-Si supponga ad esempio di unire le tabelle `titles` e `publishers` per creare una query in cui sia visualizzato il prezzo medio dei libri per un set di editori, limitando la ricerca a un set specifico di editori, ad esempio quelli dello stato della California, e a un prezzo medio maggiore di 10 dollari.  
+Si supponga ad esempio di unire le tabelle `titles` e `publishers` per creare una query in cui sia visualizzato il prezzo medio dei libri per un set di editori, limitando la ricerca a un set specifico di editori, ad esempio quelli dello stato della California. e a un prezzo medio maggiore di 10 dollari.  
   
 In questo caso, prima di calcolare il prezzo medio è possibile stabilire la prima condizione con una clausola WHERE che escluda tutti gli editori che non si trovano in California. La seconda condizione richiede una clausola HAVING, in quanto la condizione è basata sui risultati del raggruppamento e del riepilogo di dati. L'istruzione SQL risultante sarà analoga alla seguente:  
   

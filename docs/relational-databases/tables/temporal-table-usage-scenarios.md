@@ -11,12 +11,12 @@ ms.assetid: 4b8fa2dd-1790-4289-8362-f11e6d63bb09
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: f0c9ddcd2fecd498e6bb00458bfde1e07b1d431b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f25c7527000cb95878b60f4dfe05be4b47f943bb
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47747439"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52532738"
 ---
 # <a name="temporal-table-usage-scenarios"></a>Scenari di utilizzo delle tabelle temporali
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -136,9 +136,9 @@ FROM Employee
   
 > [!TIP]  
 >  Le condizioni del filtro specificate nelle clausole temporali con FOR SYSTEM_TIME hanno requisiti SARG-able (Search ARGument ABLE), ovvero SQL Server può usare l'indice cluster sottostante per eseguire una ricerca anziché un'operazione di analisi.   
-> Se si esegue direttamente una query sulla tabella di cronologia, assicurarsi che la condizione di filtro abbia i requisiti SARGable specificando i filtri nel formato \<colonna PERIOD>  {< | > | =, …} date_condition AT TIME ZONE 'UTC'.  
+> Se si esegue direttamente una query sulla tabella di cronologia, assicurarsi che la condizione di filtro abbia i requisiti SARGable specificando i filtri nel formato \<colonna PERIOD>  {< | > | =, ...} date_condition AT TIME ZONE 'UTC'.  
 > Se si applica AT TIME ZONE alle colonne del periodo, SQL Server esegue un'analisi di tabella/indice, che può risultare molto costosa. Per ovviare a questo tipo di condizione nelle query:  
-> \<colonna PERIOD>  AT TIME ZONE '\<<fuso orario'  >  {< | > | =, …} date_condition.  
+> \<colonna PERIOD>  AT TIME ZONE '\<<fuso orario>'  >  {< | > | =, ...} date_condition.  
   
  Vedere anche: [Querying Data in a System-Versioned Temporal Table](../../relational-databases/tables/querying-data-in-a-system-versioned-temporal-table.md)(Esecuzione di query sui dati in una tabella temporale con controllo delle versioni di sistema).  
   
@@ -446,7 +446,7 @@ FROM CTE
  L'esempio seguente illustra il processo presupponendo che la tabella delle dimensioni DimLocation abbia già ValidFrom e ValidTo come colonne datetime2, che non ammettono i valori Null, popolate dal processo ETL:  
   
 ```  
-/*Move “closed” row versions into newly created history table*/  
+/*Move "closed" row versions into newly created history table*/  
 SELECT * INTO  DimLocationHistory  
     FROM DimLocation  
         WHERE ValidTo < '9999-12-31 23:59:59.99';  

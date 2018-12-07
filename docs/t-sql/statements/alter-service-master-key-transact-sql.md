@@ -25,12 +25,12 @@ ms.assetid: a1e9be0e-4115-47d8-9d3a-3316d876a35e
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: e93a5f78129b0d3ca9d687600a99b35dbf2be203
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4580926a6aff40e5c2d4b7da588cf394b6bdfcda
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47651779"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52516171"
 ---
 # <a name="alter-service-master-key-transact-sql"></a>ALTER SERVICE MASTER KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -101,7 +101,7 @@ ALTER SERVICE MASTER KEY
 > [!CAUTION]  
 >  La chiave master del servizio è l'elemento radice della gerarchia di crittografia di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Con la chiave master del servizio vengono protetti direttamente o indirettamente tutte le altre chiavi e tutti i segreti nell'albero. Se non è possibile decrittografare una chiave dipendente durante una rigenerazione forzata, i dati protetti dalla chiave andranno perduti.  
   
- Se si sposta SQL in un altro computer, è necessario utilizzare lo stesso account del servizio per decrittografare SMK. Tramite SQL Server verrà corretta automaticamente la crittografia dell'account del computer.  
+ Se si sposta SQL in un altro computer, è necessario usare lo stesso account del servizio per decrittografare SMK. SQL Server correggerà automaticamente la crittografia dell'account del computer.  
   
 ## <a name="permissions"></a>Permissions  
  È richiesta l'autorizzazione CONTROL SERVER per il server.  

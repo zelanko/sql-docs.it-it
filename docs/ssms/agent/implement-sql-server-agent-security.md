@@ -17,12 +17,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 71e15d2c5bec349b20a87023912a80864563e8ca
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 61b886408c25f2200140609879421623f25cb81b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51696170"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52521673"
 ---
 # <a name="implement-sql-server-agent-security"></a>Implementazione della sicurezza di SQL Server Agent
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -72,13 +72,13 @@ Per migliorare la sicurezza dell'implementazione di [!INCLUDE[ssNoVersion](../..
   
 -   ACE dipende dalle DLL di configurazione seguenti di proprietà di SSDP, perché le API delle DLL vengono richiamate da ACE:  
   
-    -   **SCO** : Microsoft.SqlServer.Configuration.Sco.dll, incluse le nuove convalide SCO per gli account virtuali  
+    -   **SCO**: Microsoft.SqlServer.Configuration.Sco.dll, incluse le nuove convalide SCO per gli account virtuali  
   
-    -   **Cluster** : Microsoft.SqlServer.Configuration.Cluster.dll  
+    -   **Cluster**: Microsoft.SqlServer.Configuration.Cluster.dll  
   
-    -   **SFC** : Microsoft.SqlServer.Configuration.SqlConfigBase.dll  
+    -   **SFC**: Microsoft.SqlServer.Configuration.SqlConfigBase.dll  
   
-    -   **Extension** : Microsoft.SqlServer.Configuration.ConfigExtension.dll  
+    -   **Extension**: Microsoft.SqlServer.Configuration.ConfigExtension.dll  
   
 ## <a name="see-also"></a>Vedere anche  
 [Utilizzo dei ruoli predefiniti](../../reporting-services/security/role-definitions-predefined-roles.md)  

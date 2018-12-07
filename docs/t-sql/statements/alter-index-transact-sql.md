@@ -47,12 +47,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6492f067d05a3606c5304e473162c8eabdcee5f0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bddf69ebe967767c67f92782afdaaa2484fe2531
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47845709"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52537777"
 ---
 # <a name="alter-index-transact-sql"></a>ALTER INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -75,7 +75,7 @@ ALTER INDEX { index_name | ALL } ON <object>
     | DISABLE  
     | REORGANIZE  [ PARTITION = partition_number ] [ WITH ( <reorganize_option>  ) ]  
     | SET ( <set_index_option> [ ,...n ] )   
-    | RESUME [WITH (<resumable_index_options>,[…n])]
+    | RESUME [WITH (<resumable_index_options>,[...n])]
     | PAUSE
     | ABORT
 }  
@@ -447,7 +447,7 @@ ALLOW_ROW_LOCKS **=** { **ON** | OFF }
  Specifica se sono consentiti blocchi di riga. Il valore predefinito è ON.  
   
  ON  
- I blocchi di riga sono consentiti durante l'accesso all'indice. Il [!INCLUDE[ssDE](../../includes/ssde-md.md)] determina quando utilizzare blocchi di riga.  
+ I blocchi di riga sono consentiti durante l'accesso all'indice. Il [!INCLUDE[ssDE](../../includes/ssde-md.md)] determina quando usare blocchi di riga.  
   
  OFF  
  I blocchi di riga non vengono utilizzati.  
@@ -459,7 +459,7 @@ ALLOW_PAGE_LOCKS **=** { **ON** | OFF }
  Specifica se sono consentiti blocchi a livello di pagina. Il valore predefinito è ON.  
   
  ON  
- I blocchi a livello di pagina sono consentiti durante l'accesso all'indice. Il [!INCLUDE[ssDE](../../includes/ssde-md.md)] determina quando utilizzare blocchi a livello di pagina.  
+ I blocchi a livello di pagina sono consentiti durante l'accesso all'indice. Il [!INCLUDE[ssDE](../../includes/ssde-md.md)] determina quando usare blocchi a livello di pagina.  
   
  OFF  
  I blocchi a livello di pagina non vengono utilizzati.  
@@ -720,7 +720,7 @@ La ricompilazione dell'indice online viene specificata come ripristinabile usand
  
 -  Se si esegue nuovamente l'istruzione ALTER INDEX REBUILD originale con gli stessi parametri viene ripresa un'operazione di ricompilazione dell'indice sospesa. È possibile riprendere un'operazione di ricompilazione dell'indice sospesa anche eseguendo l'istruzione ALTER INDEX RESUME.
 -  L'opzione SORT_IN_TEMPDB=ON non è supportata per l'indice ripristinabile 
--  Il comando DDL con RESUMABLE=ON non può essere eseguito all'interno di una transazione esplicita (non può far parte del blocco di commit BEGIN TRAN...).
+-  Il comando DDL con RESUMABLE=ON non può essere eseguito all'interno di una transazione esplicita (non può far parte del blocco BEGIN TRAN …).
 -  Solo le operazioni sugli indici sospese sono ripristinabili.
 -  Quando si riprende un'operazione sull'indice che è stata sospesa, è possibile modificare il valore MAXDOP impostandone uno nuovo.  Se l'opzione MAXDOP non viene specificata quando si riprende un'operazione sull'indice sospesa, viene usato l'ultimo valore MAXDOP. Se l'opzione MAXDOP non è affatto specificata per un'operazione di ricompilazione dell'indice, viene usato il valore predefinito.
 - Per sospendere immediatamente l'operazione sull'indice, è possibile arrestare il comando in corso (CTRL-C) oppure eseguire il comando ALTER INDEX PAUSE o il comando KILL di *session_id*. Quando il comando viene sospeso, è possibile riprenderlo usando l'opzione RESUME.
@@ -768,7 +768,7 @@ Agli indici partizionati vengono applicate le restrizioni seguenti:
 -   La sintassi ALTER INDEX \<index> ... REBUILD WITH ... consente di ricompilare tutte le partizioni dell'indice.  
   
 ## <a name="statistics"></a>Statistiche  
- Quando si esegue **ALTER INDEX ALL...** su una tabella, vengono aggiornate solo le statistiche associate agli indici. Le statistiche automatiche o manuali create sulla tabella, anziché su un indice, non vengono aggiornate.  
+ Quando si esegue **ALTER INDEX ALL ...** su una tabella, vengono aggiornate solo le statistiche associate agli indici. Le statistiche automatiche o manuali create sulla tabella, anziché su un indice, non vengono aggiornate.  
   
 ## <a name="permissions"></a>Permissions  
  Per eseguire l'istruzione ALTER INDEX, è necessario disporre almeno dell'autorizzazione ALTER per la tabella o la vista.  

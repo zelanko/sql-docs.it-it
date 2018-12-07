@@ -12,12 +12,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 49e547f591debaf4bfd3497a2a4c2d1d5580bca8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 907cd0278119351c9bfabf2c2c64e514a7840c7a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47739739"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52531541"
 ---
 # <a name="get-started-with-columnstore-for-real-time-operational-analytics"></a>Introduzione a columnstore per l'analisi operativa in tempo reale
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -130,7 +130,7 @@ ms.locfileid: "47739739"
   
 ```  
 --Use a filtered condition to separate hot data in a rowstore table  
--- from “warm” data in a columnstore index.  
+-- from "warm" data in a columnstore index.  
   
 -- create the table  
 CREATE TABLE  orders (  
@@ -218,7 +218,7 @@ WHERE object_id = object_id('FactOnlineSales2')
 ORDER BY created_time DESC  
 ```  
   
- Se il numero di righe eliminate in rowgroup compressi è maggiore del 20%, per stabilizzare i rowgroup precedenti con variante inferiore al 5% (indicati come rowgroup inattivi) impostare COMPRESSION_DELAY = (youngest_rowgroup_created_time – current_time). Si noti che questo approccio funziona in modo ottimale con un carico di lavoro stabile e relativamente omogeneo.  
+ Se il numero di righe eliminate in rowgroup compressi è maggiore del 20%, per stabilizzare i rowgroup precedenti con variante inferiore al 5% (indicati come rowgroup inattivi) impostare COMPRESSION_DELAY = (youngest_rowgroup_created_time - current_time). Si noti che questo approccio funziona in modo ottimale con un carico di lavoro stabile e relativamente omogeneo.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Guida agli indici columnstore](../../relational-databases/indexes/columnstore-indexes-overview.md)   

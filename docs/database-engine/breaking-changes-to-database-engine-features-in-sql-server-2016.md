@@ -1,7 +1,7 @@
 ---
 title: Modifiche di rilievo apportate alle funzionalità del Motore di database in SQL Server 2016 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/15/2016
+ms.date: 11/27/2016
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
@@ -14,17 +14,17 @@ ms.assetid: 47edefbd-a09b-4087-937a-453cd5c6e061
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c2680ee81bbf2f4b49eb3835bb18a3d4b712f8c5
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 83725ee74e17a91465356b426b13afc0c265f851
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51602691"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52536380"
 ---
 # <a name="breaking-changes-to-database-engine-features-in-sql-server-2016"></a>Modifiche di rilievo apportate alle funzionalità del Motore di database in SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  Questo argomento descrive le modifiche di rilievo nel [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)][!INCLUDE[ssDE](../includes/ssde-md.md)] e versioni precedenti di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Tali modifiche potrebbero interrompere il funzionamento di applicazioni, funzionalità o script basati su versioni precedenti di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. È possibile che questi problemi si verifichino quando viene effettuato un aggiornamento.  
+  In questo argomento si illustrano le modifiche di rilievo apportate al [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] di [!INCLUDE[ssDE](../includes/ssde-md.md)] e alle versioni precedenti di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Tali modifiche potrebbero interrompere il funzionamento di applicazioni, funzionalità o script basati su versioni precedenti di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. È possibile che questi problemi si verifichino quando viene effettuato un aggiornamento.  
   
 ##  <a name="SQL15"></a> Modifiche di rilievo in [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]  
   
@@ -35,15 +35,15 @@ ms.locfileid: "51602691"
 -   Se si usano gli algoritmi di hash MD2, MD4, MD5, SHA o SHA1 (scelta non consigliata), è necessario impostare il livello di compatibilità del database su un valore inferiore a 130.  
 
 -   Nel livello di compatibilità del database 130, le conversioni implicite dai tipi di dati **datetime** a **datetime2** mostrano una maggiore precisione prevedendo i millisecondi frazionari, risultanti in diversi valori convertiti. Usare il cast esplicito per il tipo di dati datetime2 ogni volta che si presenta uno scenario di confronto misto tra tipi di dati datetime e datetime2. Per altre informazioni, fare riferimento a questo [articolo del supporto tecnico Microsoft](https://support.microsoft.com/help/4010261).
-  
-## <a name="previous-versions"></a>Versioni precedenti  
-  
--   [Modifiche di rilievo apportate alle funzionalità del motore di database in SQL Server 2014](breaking-changes-to-database-engine-features-in-sql-server-2016.md)  
-  
--   [Modifiche di rilievo apportate alle funzionalità del motore di database in SQL Server 2012](breaking-changes-to-database-engine-features-in-sql-server-2016.md)  
-  
--   [Modifiche di rilievo apportate alle funzionalità del motore di database in SQL Server 2008](breaking-changes-to-database-engine-features-in-sql-server-2016.md)  
-  
+
+## <a name="previous-versions"></a> Versioni precedenti  
+
+Per informazioni sulle modifiche di rilievo in SQL Server versione 2014 e in alcune versioni precedenti, vedere [Modifiche che possono causare problemi di funzionamento apportate alle funzionalità del Motore di database in SQL Server 2014](https://docs.microsoft.com/sql/database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016?view=sql-server-2014#SQL14).
+
+#### <a name="archived-documentation-for-very-old-versions-of-sql-server"></a>Documentazione archiviata per versioni molto vecchie di SQL Server
+
+[!INCLUDE[Archived documentation for very old versions of SQL Server](../includes/paragraph-content/previous-versions-archive-documentation-sql-server.md)]
+
 ## <a name="see-also"></a>Vedere anche  
  [Funzionalità del motore di database deprecate in SQL Server 2016](../database-engine/deprecated-database-engine-features-in-sql-server-2016.md)   
  [Funzionalità del motore di database non più usate in SQL Server 2016](../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)   

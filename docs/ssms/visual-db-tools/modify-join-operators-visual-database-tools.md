@@ -15,12 +15,12 @@ ms.assetid: d1dcdcfd-166c-4147-85ab-43cadc63819b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0862cc4baffd68b42723ff4037e48613170d488d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e22d55490c9149a857d74b7719d88fd7b25ea9a8
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47768209"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52504616"
 ---
 # <a name="modify-join-operators-visual-database-tools"></a>Modifica di operatori di join (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,7 +30,7 @@ Per impostazione predefinita, in [Progettazione query e Progettazione viste](../
   
 1.  Nel [riquadro Diagramma](../../ssms/visual-db-tools/diagram-pane-visual-database-tools.md)fare clic con il pulsante destro del mouse sulla linea di join da modificare e scegliere **Proprietà** dal menu di scelta rapida.  
   
-2.  Nella finestra Proprietà fare clic su **Tipo e condizione di join** e fare clic sui **puntini di sospensione (…)** a destra della proprietà.  
+2.  Nella finestra Proprietà fare clic su **Tipo e condizione di join** e fare clic sui **puntini di sospensione (...)** a destra della proprietà.  
   
 3.  Nella finestra di dialogo **Join** selezionare un nuovo operatore.  
   

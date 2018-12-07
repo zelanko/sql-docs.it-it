@@ -15,12 +15,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 88ed8266a4de04df116989953b3e5b43a162e265
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cbe7f38f6132e79f1938936c0914bae236ea5a03
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818135"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52543625"
 ---
 # <a name="create-synonyms"></a>Creare sinonimi
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "47818135"
   
 1.  In **Esplora oggetti**espandere il database in cui si desidera creare la nuova vista.  
   
-2.  Fare clic con il pulsante destro del mouse sulla cartella **Sinonimi** , quindi selezionare **Nuovo sinonimo**.  
+2.  Fare clic con il pulsante destro del mouse sulla cartella **Sinonimi**, quindi selezionare **Nuovo sinonimo...**.  
   
 3.  Nella finestra di dialogo **Aggiungi sinonimo** immettere le informazioni riportate di seguito.  
   

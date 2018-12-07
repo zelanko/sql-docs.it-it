@@ -14,12 +14,12 @@ ms.assetid: 8e4a1f0a-8a42-4733-be8d-e21d6dbddb33
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 23c5961e3cc5c194690f99c8e614adf402ef31c7
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 86bd76e7d1e4cfce15343355a915d5d1bf5a0d9d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701960"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52504076"
 ---
 # <a name="create-queries-using-something-besides-a-table-visual-database-tools"></a>Creazione di query mediante l'utilizzo di altre origini oltre a una tabella (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -133,7 +133,7 @@ Per altre informazioni sull'aggiunta di una tabella a una query, vedere [Aggiunt
 ## <a name="using-a-user-defined-function-in-place-of-a-table"></a>Utilizzo di una funzione definita dall'utente al posto di una tabella  
 In SQL Server 2000 o versione successiva è possibile creare una funzione definita dall'utente che restituisca una tabella. Tali funzioni risultano utili per l'esecuzione di logiche procedurali o complesse.  
   
-Si supponga ad esempio che la tabella dei dipendenti contenga un'ulteriore colonna, employee.manager_emp_id, e che una chiave esterna di manager_emp_id sia presente in employee.emp_id. All'interno di ciascuna riga della tabella dei dipendenti, la colonna manager_emp_id indica il superiore di un dipendente o più precisamente, indica l'emp_id del superiore del dipendente. È possibile creare una funzione definita dall'utente che restituisca una tabella contenente una riga per ciascun dipendente facente parte della gerarchia organizzativa di un particolare responsabile di alto livello. La funzione potrebbe essere denominata fn_GetWholeTeam e progettata in modo da accettare una variabile di input, ovvero l'emp_id del responsabile di cui si desidera recuperare il team.  
+Si supponga ad esempio che la tabella dei dipendenti contenga un'ulteriore colonna, employee.manager_emp_id, e che una chiave esterna di manager_emp_id sia presente in employee.emp_id. All'interno di ciascuna riga della tabella dei dipendenti, la colonna manager_emp_id indica il superiore di un dipendente o più precisamente, indica l'emp_id del superiore del dipendente. È possibile creare una funzione definita dall'utente che restituisca una tabella contenente una riga per ciascun dipendente facente parte della gerarchia organizzativa di un particolare responsabile di alto livello. La funzione potrebbe essere denominata fn_GetWholeTeam e progettata in modo da accettare una variabile di input, ovvero l'emp_id del responsabile di cui si vuole recuperare il team.  
   
 È possibile scrivere una query che utilizzi la funzione fn_GetWholeTeam come origine dei dati. Il codice SQL risultante potrebbe essere simile al seguente:  
   

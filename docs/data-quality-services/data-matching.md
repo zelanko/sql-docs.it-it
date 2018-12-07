@@ -5,19 +5,18 @@ ms.date: 10/01/2012
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: fe66d098-bec3-4258-b42a-479ae460feb3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d2f587ce68a05e8c09438323d8ce3bc75bb3d2ed
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0464dc24bcb2842c822ac2b2a38e19283b428ad2
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47702129"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617361"
 ---
 # <a name="data-matching"></a>Corrispondenza di dati
 
@@ -69,7 +68,7 @@ ms.locfileid: "47702129"
   
  Un progetto di corrispondenza dei dati è costituito da un processo computerizzato e da un processo interattivo. Il progetto corrispondente applica le regole di corrispondenza nei criteri di corrispondenza all'origine dati da valutare. Tale processo consente di valutare le probabilità che due righe coincidano tramite un punteggio di corrispondenza. Verranno considerati corrispondenti solo i record con probabilità di corrispondenza maggiori di un valore impostato dall'amministratore dei dati nei criteri di corrispondenza.  
   
- Quando DQS esegue l'analisi di corrispondenza, viene creato un cluster di record che DQS considera corrispondenze. DQS identifica casualmente uno dei record in ogni cluster come record pivot o principale. L'amministratore dei dati verifica i risultati corrispondenti e rifiuta qualsiasi record che non rappresenti una corrispondenza appropriata per un cluster. L'amministratore dei dati seleziona quindi una regola di sopravvivenza che DQS utilizzerà per determinare il record che supererà il processo di corrispondenza e sostituirà i record corrispondenti. La regola di sopravvivenza può essere "Record pivot" (il valore predefinito), "Il record più completo e più lungo", "Record più completo" o "Record più lungo". DQS determina il record superstite (principale) in ogni cluster in base al record che più si avvicina a soddisfare il criterio o criteri della regola di sopravvivenza. Se più record in un cluster specifico sono conformi alla regola di sopravvivenza, DQS ne seleziona uno in modo casuale. DQS consente di visualizzare i cluster che presentano record comuni come un solo cluster mediante la selezione dell'opzione "Mostra cluster non sovrapposti". Per visualizzare i risultati in base questa impostazione, il processo di corrispondenza deve essere eseguito.  
+ Quando DQS esegue l'analisi di corrispondenza, viene creato un cluster di record che DQS considera corrispondenze. DQS identifica casualmente uno dei record in ogni cluster come record pivot o principale. L'amministratore dei dati verifica i risultati corrispondenti e rifiuta qualsiasi record che non rappresenti una corrispondenza appropriata per un cluster. L'amministratore dei dati seleziona quindi una regola di sopravvivenza che DQS utilizzerà per determinare il record che supererà il processo di corrispondenza e sostituirà i record corrispondenti. La regola di sopravvivenza può essere "Record pivot" (il valore predefinito), "Il record più completo e più lungo", "Record più completo" o "Record più lungo". DQS determina il record superstite (principale) in ogni cluster in base al record che più si avvicina a soddisfare il criterio o criteri della regola di sopravvivenza. Se più record in un cluster specifico sono conformi alla regola di sopravvivenza, DQS ne seleziona uno in modo casuale. DQS consente di visualizzare i cluster che presentano record comuni come un solo cluster selezionando l'opzione "Mostra cluster non sovrapposti". Per visualizzare i risultati in base questa impostazione, il processo di corrispondenza deve essere eseguito.  
   
  È possibile esportare i risultati del processo di corrispondenza in una tabella di SQL Server o in un file csv. È possibile esportare risultati della corrispondenza in due modi: record corrispondenti e record non corrispondenti, oppure record superstiti che includono solo il record superstite per un cluster nonché i risultati non corrispondenti. Nei record superstiti, se lo stesso record viene identificato come superstite per più cluster, tale record verrà esportato solo una volta.  
   

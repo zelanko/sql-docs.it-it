@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0c4618fc4c6b352e119fb4c4686820ee8077dfab
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 270528218e23d230ecb8b8ea4dc5bde6baaa6440
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47848399"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52545720"
 ---
 # <a name="import-data-from-excel-or-export-data-to-excel-with-sql-server-integration-services-ssis"></a>Importare i dati da Excel o esportarli in Excel con SQL Server Integration Services (SSIS)
 
@@ -172,7 +172,7 @@ Dopo aver selezionato o immesso gli oggetti di Excel da importare o esportare, Ã
 
 Il driver per Excel riconosce solo un set limitato di tipi di dati. Tutte le colonne numeriche vengono interpretate come valori double (DT_R8) e tutte le colonne di tipo stringa (con tipo di dati diverso da memo) vengono interpretate come stringhe Unicode di 255 caratteri (DT_WSTR). SSIS esegue il mapping dei tipi di dati di Excel nel modo seguente:
 
--   Numero â€“ Numero a virgola mobile e precisione doppia (DT_R8)
+-   Numero - Numero a virgola mobile e precisione doppia (DT_R8)
 
 -   Valuta - Valuta (DT_CY)
 

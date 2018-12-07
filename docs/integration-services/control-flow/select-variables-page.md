@@ -16,17 +16,17 @@ ms.assetid: e62083ec-d127-48ea-aaa4-cca6017a29cb
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6083c77a8bb3474507b8a555dbeaf6e627cf3cb7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d75e66a4641ae5624a99b6c4bea88d14f93bbc1a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47808129"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52528225"
 ---
 # <a name="select-variables-page"></a>Pagina Seleziona variabili
   Usare la finestra di dialogo **Seleziona variabili** per selezionare una o più variabili per le proprietà **ReadOnlyVariables** e **ReadWriteVariables** durante la configurazione di un'attività Script o di un componente Script.  
   
- Per aprire la finestra di dialogo **Seleziona variabili** , nella pagina **Script** della finestra di dialogo **Editor trasformazione Script** individuare la proprietà **ReadOnlyVariables**o **ReadWriteVariables** in **Proprietà personalizzate** , quindi fare clic sul pulsante con i puntini di sospensione (…) associato alla proprietà.  
+ Per aprire la finestra di dialogo **Seleziona variabili**, nella pagina **Script** della finestra di dialogo **Editor trasformazione Script** trovare la proprietà **ReadOnlyVariables**o **ReadWriteVariables** in **Proprietà personalizzate**, quindi fare clic sul pulsante con i puntini di sospensione (...) associato alla proprietà.  
   
 ## <a name="options"></a>Opzioni  
  Casella di selezione  

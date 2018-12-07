@@ -11,12 +11,12 @@ ms.assetid: ''
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 8d6625b72cadddb7c6f587f664ae5134730f9939
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 86a56f8394dbddccf00025b750256364aa51e99d
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47692189"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52395683"
 ---
 # <a name="high-availability-and-disaster-recovery-for-master-data-services"></a>Disponibilità elevata e ripristino di emergenza per Master Data Services
 
@@ -92,7 +92,7 @@ In questa sezione vengono trattate le attività seguenti.
 
 Come illustrato nella figura 1 nella sezione precedente, la soluzione descritta in questo articolo include Windows Server Failover Cluster (WSFC). È necessario configurare WSFC perché SQL AlwaysOn dipende da WFSC per il failover e il rilevamento degli errori.
 
-WSFC è una funzionalità che migliora la disponibilità elevata di applicazioni e servizi. È costituita da un gruppo di istanze di Windows Server indipendenti che eseguono il servizio cluster di failover Microsoft. Le istanze di Windows Server, o nodi come vengono talvolta chiamate, sono connesse in modo che possano comunicare tra loro rendendo possibile il rilevamento degli errori. WSFC offre la funzionalità di rilevamento degli errori e il failover. Se un nodo o un servizio del cluster hanno esito negativo, viene rilevato l'errore e un altro nodo inizia automaticamente o manualmente ad offrire i servizi ospitati sul nodo in errore. Di conseguenza, le interruzioni per gli utenti sono minime e la disponibilità del servizio è migliorata.  
+WSFC è una funzionalità che migliora la disponibilità elevata di applicazioni e servizi. È costituita da un gruppo di istanze di Windows Server indipendenti che eseguono il servizio cluster di failover Microsoft. Le istanze di Windows Server, o nodi come vengono talvolta chiamate, sono connesse in modo che possano comunicare tra loro rendendo possibile il rilevamento degli errori. WSFC offre la funzionalità di rilevamento degli errori e il failover. Se un nodo o un servizio del cluster hanno esito negativo, viene rilevato l'errore e un altro nodo inizia automaticamente o manualmente ad offrire i servizi ospitati sul nodo in errore. Di conseguenza, le interruzioni per gli utenti sono minime e la disponibilità del servizio è migliorata.  
 
 ### <a name="prerequisites"></a>Prerequisites
 
@@ -156,8 +156,8 @@ Quando la funzionalità WSFC è installata in tutte le istante, è possibile con
 7.  Nella pagina **Riepilogo** controllare eventuali messaggi di avviso o errore.
 
     Gli errori devono essere corretti. Tuttavia, gli avvisi possono non costituire un problema. Un messaggio di avviso significa che l'elemento testato potrebbe soddisfare il requisito, ma c'è qualcosa da controllare. Ad esempio, nella figura 7 è illustrato un avviso "Convalida latenza di accesso al disco" che potrebbe essere dovuto al fatto che il disco è temporaneamente occupato da altre attività. Il messaggio può essere ignorato. Per altri dettagli, vedere la documentazione online per ogni messaggio di avviso e di errore. Vedere Figura 7.
- 
-    ![Convalida guidata configurazione, pagina Convalida in corso](media/Fig6_ValidationTests.png)
+ 
+![Convalida guidata configurazione, pagina Convalida in corso](media/Fig6_ValidationTests.png)
 
     Figura 6
 
@@ -326,7 +326,7 @@ Il gruppo di disponibilità può essere creato solo sui database esistenti. Pert
     d.  Immettere DHCP nella casella di testo **Modalità di rete** e fare clic su **Avanti** per continuare.
 
     >[!NOTE] 
-    >Facoltativamente, è possibile scegliere "Indirizzo IP statico" come **Modalità di rete** e immettere un indirizzo IP statico. È anche possibile immettere una porta diversa dalla 1433. 
+    >Facoltativamente, è possibile scegliere "Indirizzo IP statico" come **Modalità di rete** e immettere un indirizzo IP statico. È anche possibile immettere una porta diversa dalla 1433. 
 
     ![Configurare il listener](media/Fig18_AvailabilityGroupCreateListener.png)
 
@@ -338,7 +338,7 @@ Il gruppo di disponibilità può essere creato solo sui database esistenti. Pert
 
     ![Configurazione della sincronizzazione dei dati](media/Fig19_AvailabilityGroupDataSync.png)
 
-    Figura 19 
+    Figura 19 
 
 10. Nella pagina **Convalida** assicurarsi che tutte le convalide siano state passate correttamente e correggere eventuali errori. Per continuare, fare clic su **Avanti** .
 
@@ -354,11 +354,11 @@ Il gruppo di disponibilità può essere creato solo sui database esistenti. Pert
 
     ![Visualizzazione del dashboard](media/Fig20_ShowDashboard.png)
 
-    Figura 20 
+    Figura 20 
 
 3.  Fare clic su **Failover** per eseguire il failover in una replica sincrona e in una replica asincrona. In questo modo è possibile verificare che il failover avvenga senza problemi.
 
- L'installazione di AlwaysOn è stata completata.
+ L'installazione di AlwaysOn è stata completata.
 
 Per altre informazioni sul gruppo di disponibilità AlwaysOn, vedere [Gruppi di disponibilità AlwaysOn di SQL Server 2016](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/always-on-availability-groups-sql-server).
 

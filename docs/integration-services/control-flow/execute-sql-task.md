@@ -21,12 +21,12 @@ ms.assetid: bebb2e8c-0410-43b2-ac2f-6fc80c8f2e9e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: cd627ea368aea84611863b491ee3b0aaab1cc190
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 674dd31df5acbe93fd48ad9b0b3ab504cebbc98a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51641822"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52504069"
 ---
 # <a name="execute-sql-task"></a>Attività Esegui SQL
   L'attività Esegui SQL consente di eseguire istruzioni SQL o stored procedure da un pacchetto. L'attività può includere una o più istruzioni SQL che vengono eseguite in ordine sequenziale. È possibile utilizzare l'attività Esegui SQL per gli scopi seguenti:  
@@ -181,7 +181,7 @@ Per sapere di più sul linguaggio di query Transact-SQL, vedere [Guida di riferi
   
 #### <a name="sqlsourcetype--direct-input"></a>SQLSourceType = Input diretto  
  **SQLStatement**  
- Digitare l'istruzione SQL da eseguire nella casella di opzione oppure fare clic sul pulsante (…) per digitare l'istruzione SQL nella finestra di dialogo **Immetti query SQL** o fare clic su **Compila query** per comporre l'istruzione tramite la finestra di dialogo **Generatore di query** .  
+ Digitare l'istruzione SQL da eseguire nella casella di opzione oppure fare clic sul pulsante (...) per digitare l'istruzione SQL nella finestra di dialogo **Immetti query SQL** o fare clic su **Compila query** per comporre l'istruzione con la finestra di dialogo **Generatore di query**.  
   
  **Argomenti correlati:** [Generatore query](https://msdn.microsoft.com/library/780752c9-6e3c-4f44-aaff-4f4d5e5a45c5)  
   
@@ -278,10 +278,10 @@ Le istruzioni SQL e le stored procedure usano spesso parametri di **input** , pa
   
 |Tipo di connessione|Marcatore di parametro|Nome parametro|Comando SQL di esempio|  
 |---------------------|----------------------|--------------------|-------------------------|  
-|ADO|?|Param1, Param2, …|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
+|ADO|?|Param1, Param2, ...|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
 |[!INCLUDE[vstecado](../../includes/vstecado-md.md)]|\@\<nome parametro>|\@\<nome parametro>|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = \@parmContactID|  
-|ODBC|?|1, 2, 3, …|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
-|EXCEL e OLE DB|?|0, 1, 2, 3, …|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
+|ODBC|?|1, 2, 3, ...|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
+|EXCEL e OLE DB|?|0, 1, 2, 3, ...|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
   
 #### <a name="use-parameters-with-adonet-and-ado-connection-managers"></a>Usare parametri con le gestioni connessioni ADO.NET e ADO  
  [!INCLUDE[vstecado](../../includes/vstecado-md.md)] e le gestioni connessioni ADO hanno requisiti specifici per i comandi SQL che usano parametri:  
@@ -440,10 +440,10 @@ In questa sezione viene descritto come usare un'istruzione SQL con parametri nel
   
     |Tipo di connessione|Nome parametro|  
     |---------------------|--------------------|  
-    |ADO|Param1, Param2, …|  
+    |ADO|Param1, Param2, ...|  
     |ADO.NET e SQLMOBILE|\@\<nome parametro>|  
-    |ODBC|1, 2, 3, …|  
-    |EXCEL e OLE DB|0, 1, 2, 3, …|  
+    |ODBC|1, 2, 3, ...|  
+    |EXCEL e OLE DB|0, 1, 2, 3, ...|  
   
 10. Selezionare una variabile nell'elenco **Nome variabile** . Per altre informazioni, vedere [Aggiungere, eliminare o modificare l'ambito di una variabile definita dall'utente in un pacchetto](https://msdn.microsoft.com/library/cbf40c7f-3c8a-48cd-aefa-8b37faf8b40e).  
   
@@ -464,7 +464,7 @@ In questa sezione viene descritto come usare un'istruzione SQL con parametri nel
 ##  <a name="Return_codes"></a> Recuperare i valori dei codici restituiti  
  Una stored procedure può restituire un valore intero, denominato codice restituito, per indicare lo stato di esecuzione di una procedura. Per implementare codici restituiti nell'attività Esegui SQL, è necessario usare parametri di tipo **ReturnValue** .  
   
- Nella tabella seguente sono elencati, per tipo di gestione connessione, esempi di comandi EXEC che implementano codici restituiti. In tutti gli esempi viene usato un parametro di **input** . Le regole che determinano la modalità di utilizzo di indicatori di parametro e nomi di parametro sono identiche per tutti i tipi di parametro:**Input**, **Output**e **ReturnValue**.  
+ Nella tabella seguente sono elencati, per tipo di gestione connessione, esempi di comandi EXEC che implementano codici restituiti. In tutti gli esempi viene usato un parametro di **input** . Le regole che determinano la modalità d'uso di indicatori di parametro e nomi di parametro sono identiche per tutti i tipi di parametro:**Input**, **Output**e **ReturnValue**.  
   
  In alcune sintassi non è supportato l'utilizzo di valori letterali come parametri. In tali casi è necessario specificare il valore del parametro utilizzando una variabile.  
   

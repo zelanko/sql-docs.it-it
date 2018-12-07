@@ -35,12 +35,12 @@ ms.assetid: db65c726-9892-480c-873b-3af29afcee44
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ee630731ac4cfa1648eb6096f5c80ee817d0d989
-ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
+ms.openlocfilehash: 533447273bb174eadeace6cd3b8a2b2f95504811
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51217939"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52544150"
 ---
 # <a name="use-the-maintenance-plan-wizard"></a>Utilizzare la Creazione guidata piano di manutenzione
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -113,15 +113,15 @@ Per impedire questa elevazione dei privilegi durante l'esecuzione di piani di ma
   
                 -   Se si seleziona **Mensile**, selezionare **Giorno** oppure **Ogni**.  
   
-                    -   Se si seleziona **Giorno**, immettere sia la data del mese in cui si desidera sia eseguita la pianificazione del processo sia la frequenza in base alla quale si ripete questa pianificazione nei mesi. Ad esempio, se si desidera che la pianificazione del processo venga eseguita il giorno 15 del mese e a mesi alterni, selezionare **Giorno** e immettere "15" nella prima casella e "2" nella seconda casella. Si noti che il numero più grande consentito nella seconda casella è "99".  
+                    -   Se si seleziona **Giorno**, immettere sia la data del mese in cui si desidera sia eseguita la pianificazione del processo sia la frequenza in base alla quale si ripete questa pianificazione nei mesi. Ad esempio, se si vuole che la pianificazione del processo sia eseguita il giorno 15 del mese a mesi alterni, selezionare **Giorno** e immettere "15" nella prima casella e "2" nella seconda casella. Si noti che il numero più grande consentito nella seconda casella è "99".  
   
-                    -   Se si sceglie **Ogni**, selezionare il giorno specifico della settimana del mese in cui si desidera sia eseguita la pianificazione del processo e la frequenza in base alla quale si ripete questa pianificazione nei mesi. Ad esempio, se si desidera che la pianificazione del processo sia eseguita l'ultimo giorno feriale del mese e a mesi alterni, selezionare **Giorno**, **ultimo** nel primo elenco e **giorno feriale** nel secondo elenco, quindi immettere "2" nell'ultima casella. Nei primi due elenchi è anche possibile selezionare **primo**, **secondo**, **terzo**o **quarto**, nonché i giorni della settimana specifici, ad esempio domenica o mercoledì. Si noti che il numero più grande consentito nell'ultima casella è "99".  
+                    -   Se si sceglie **Ogni**, selezionare il giorno specifico della settimana del mese in cui si desidera sia eseguita la pianificazione del processo e la frequenza in base alla quale si ripete questa pianificazione nei mesi. Ad esempio, se si vuole che la pianificazione del processo sia eseguita l'ultimo giorno feriale del mese a mesi alterni, selezionare **Giorno**, selezionare **ultimo** nel primo elenco e **giorno feriale** nel secondo elenco, quindi immettere "2" nell'ultima casella. Nei primi due elenchi è anche possibile selezionare **primo**, **secondo**, **terzo**o **quarto**, nonché i giorni della settimana specifici, ad esempio domenica o mercoledì. Si noti che il numero più grande consentito nell'ultima casella è "99".  
   
             2.  In **Frequenza giornaliera**specificare la frequenza in base alla quale si ripete la pianificazione del processo in quel determinato giorno:  
   
                 -   Se si seleziona **Una sola volta alle**, immettere l'ora specifica del giorno in cui deve essere eseguita la pianificazione del processo nella casella **Una sola volta alle** . Immettere l'ora, il minuto e il secondo del giorno, nonché AM o PM.  
   
-                -   Se si seleziona **Ogni**specificare la frequenza in base alla quale la pianificazione del processo viene eseguita durante il giorno scelto in **Frequenza**. Ad esempio, se si vuole che la pianificazione del processo sia ripetuta ogni 2 ore durante il giorno scelto per questa pianificazione, selezionare **Ogni**, immettere "2" nella prima casella, quindi selezionare **ora/e** nell'elenco. In questo elenco è anche possibile selezionare **minuto/i** e **secondo/i**. Si noti che il numero più grande consentito nella prima casella è "100".  
+                -   Se si seleziona **Ogni**specificare la frequenza in base alla quale la pianificazione del processo viene eseguita durante il giorno scelto in **Frequenza**. Ad esempio, se si vuole che la pianificazione del processo sia ripetuta ogni 2 ore durante il giorno scelto per questa pianificazione, selezionare **Ogni**, immettere "2" nella prima casella e quindi selezionare **ora/e** nell'elenco. In questo elenco è anche possibile selezionare **minuto/i** e **secondo/i**. Si noti che il numero più grande consentito nella prima casella è "100".  
   
                      Nella casella **A partire dalle** immettere l'ora in cui dovrebbe iniziare l'esecuzione della pianificazione del processo. Nella casella **Fino alle** immettere l'ora in cui dovrebbe terminare la ripetizione della pianificazione del processo. Immettere l'ora, il minuto e il secondo del giorno, nonché AM o PM.  
   
@@ -143,7 +143,7 @@ Per impedire questa elevazione dei privilegi durante l'esecuzione di piani di ma
   
     > **NOTA:** le attività selezionate qui determinano le pagine che sarà necessario completare dopo la pagina **Selezione ordine attività di manutenzione** di seguito.  
   
-8.  Nella pagina **Selezione ordine attività di manutenzione** selezionare un'attività e fare clic su **Sposta su…** o **Sposta giù…** per modificare il relativo ordine di esecuzione. Al termine, o dopo avere raggiunto l'ordine di attività desiderato, scegliere **Avanti**.  
+8.  Nella pagina **Selezione ordine attività di manutenzione** selezionare un'attività e fare clic su **Sposta su...** o **Sposta giù...** per modificare il relativo ordine di esecuzione. Al termine, o dopo avere raggiunto l'ordine di attività desiderato, scegliere **Avanti**.  
   
     > **NOTA:** se è stato selezionato **Pianificazioni separate per ogni attività** nella pagina **Selezione proprietà piano** precedente, in questa pagina non sarà possibile modificare l'ordine delle attività di manutenzione.  
   
@@ -206,7 +206,7 @@ Casella di controllo**Includi indici**
   
 ## <a name="define-the-index-tasks"></a>Definizione delle attività dell'indice  
   
-1.  Nella pagina **Definizione attività Riorganizza indice** selezionare il server o i server in cui le pagine dell'indice verranno spostate in un ordine di ricerca più efficiente. In questa attività viene utilizzata l'istruzione `ALTER INDEX … REORGANIZE`. Per altre informazioni, vedere [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md). Al termine, fare clic su **Avanti**.  
+1.  Nella pagina **Definizione attività Riorganizza indice** selezionare il server o i server in cui le pagine dell'indice verranno spostate in un ordine di ricerca più efficiente. In questa attività viene utilizzata l'istruzione `ALTER INDEX ... REORGANIZE`. Per altre informazioni, vedere [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md). Al termine, fare clic su **Avanti**.  
   
      In questa pagina sono disponibili le opzioni seguenti.  
   
@@ -220,9 +220,9 @@ Casella di controllo**Includi indici**
      Specificare le tabelle o gli indici su cui verrà eseguita l'attività. Questa opzione non è disponibile quando si seleziona **Tabelle e viste** nella casella Oggetto.  
   
      Casella di controllo**Compatta oggetti di grandi dimensioni**   
-     Dealloca spazio per tabelle e viste, se possibile. Questa opzione utilizza l'istruzione `ALTER INDEX … LOB_COMPACTION = ON`  
+     Dealloca spazio per tabelle e viste, se possibile. Questa opzione utilizza l'istruzione `ALTER INDEX ... LOB_COMPACTION = ON`  
   
-2.  Nella pagina **Definizione attività Ricompila indice** selezionare il database o i database in cui verranno creati più indici. In questa attività viene utilizzata l'istruzione `ALTER INDEX … REBUILD PARTITION`. Per altre informazioni, vedere [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)). Al termine, fare clic su **Avanti**.  
+2.  Nella pagina **Definizione attività Ricompila indice** selezionare il database o i database in cui verranno creati più indici. In questa attività viene utilizzata l'istruzione `ALTER INDEX ... REBUILD PARTITION`. Per altre informazioni, vedere [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)). Al termine, fare clic su **Avanti**.  
   
      In questa pagina sono disponibili le opzioni seguenti.  
   
@@ -423,7 +423,7 @@ Casella di controllo**Includi indici**
     |**Comprimi backup**|Fare clic su questa opzione per comprimere il backup, indipendentemente dall'impostazione predefinita a livello di server.<br /><br /> **\*\* Importante \*\*** Per impostazione predefinita, la compressione aumenta significativamente l'uso della CPU e la CPU aggiuntiva usata dal processo di compressione può avere un impatto negativo sulle operazioni simultanee. Potrebbe pertanto essere necessario creare backup compressi con priorità bassa in una sessione in cui l'utilizzo della CPU è limitato da Resource Governor. Per ulteriori informazioni, vedere [Utilizzo di Resource Governor per limitare l'utilizzo della CPU da parte della compressione dei backup &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md).|  
     |**Non comprimere il backup**|Fare clic su questa opzione per creare un backup non compresso, indipendentemente dall'impostazione predefinita a livello di server.|  
   
-2.  Nella pagina **Definizione attività Backup database (differenziale)** selezionare il database o i database su cui eseguire un backup parziale. Per ulteriori informazioni sulle opzioni disponibili in questa pagina, vedere l'elenco delle definizioni nel passaggio 16. In questa attività viene utilizzata l'istruzione `BACKUP DATABASE … WITH DIFFERENTIAL`. Per altre informazioni, vedere [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md).  Al termine, fare clic su **Avanti**.  
+2.  Nella pagina **Definizione attività Backup database (differenziale)** selezionare il database o i database su cui eseguire un backup parziale. Per ulteriori informazioni sulle opzioni disponibili in questa pagina, vedere l'elenco delle definizioni nel passaggio 16. In questa attività viene utilizzata l'istruzione `BACKUP DATABASE ... WITH DIFFERENTIAL`. Per altre informazioni, vedere [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md).  Al termine, fare clic su **Avanti**.  
   
 3.  Nella pagina **Definizione attività Backup database (log trans)** selezionare il database o i database su cui eseguire un backup per un log delle transazioni. Per ulteriori informazioni sulle opzioni disponibili in questa pagina, vedere l'elenco delle definizioni nel passaggio 16. In questa attività viene utilizzata l'istruzione `BACKUP LOG`. Per altre informazioni, vedere [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md). Al termine, fare clic su **Avanti**.  
   

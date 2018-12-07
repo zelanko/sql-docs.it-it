@@ -20,12 +20,12 @@ ms.assetid: a4bfc925-3ef6-431e-b1dd-7e0023d3a92d
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f04de3c323f5655e7503d6d375df536897654740
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: b55b675cf28bd0e61dd74b011aad9c50cd8325fa
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51641388"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52531607"
 ---
 # <a name="use-property-expressions-in-packages"></a>utilizzo delle espressioni di proprietà nei pacchetti
   Un'espressione di proprietà è un'espressione assegnata a una proprietà per consentire l'aggiornamento dinamico della proprietà in fase di esecuzione. Un'espressione di proprietà, ad esempio, consente di aggiornare la riga A utilizzata dall'attività Invia messaggi inserendo un indirizzo di posta elettronica archiviato in una variabile.  
@@ -70,7 +70,7 @@ ms.locfileid: "51641388"
   
  ![Interfaccia utente per espressioni di proprietà](../../integration-services/expressions/media/ssis-propertyexpressionui.gif "Interfaccia utente per espressioni di proprietà")  
   
- Nella finestra **Proprietà** e nella pagina **Espressioni** fare clic sul pulsante Sfoglia **(…)** al livello della raccolta **Espressioni** per aprire la finestra di dialogo **Editor espressioni di proprietà** . Nella finestra Editor espressioni di proprietà è possibile eseguire il mapping una proprietà a un'espressione e digitare espressioni di proprietà. Se per creare e convalidare l'espressione si desidera usare gli strumenti grafici, fare clic sul pulsante Sfoglia **(…)** al livello dell'espressione per aprire la finestra di dialogo **Generatore di espressioni** , quindi creare o modificare e facoltativamente convalidare l'espressione.  
+ Nella finestra **Proprietà** e nella pagina **Espressioni** fare clic sul pulsante Sfoglia **(...)** al livello della raccolta **Espressioni** per aprire la finestra di dialogo **Editor espressioni di proprietà**. Nella finestra Editor espressioni di proprietà è possibile eseguire il mapping una proprietà a un'espressione e digitare espressioni di proprietà. Se per creare e convalidare l'espressione si vogliono usare gli strumenti grafici, fare clic sul pulsante Sfoglia **(...)** al livello dell'espressione per aprire la finestra di dialogo **Generatore di espressioni**, quindi creare o modificare e facoltativamente convalidare l'espressione.  
   
  È possibile accedere alla finestra di dialogo **Generatore di espressioni** anche dalla finestra di dialogo **Editor espressioni di proprietà** .  
   

@@ -14,12 +14,12 @@ f1_keywords:
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 790c7b1e50b029ab2cf2cbf4ad41bd80cf11cb0c
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: aa18c7b1a6aeaccb448c7006e8d4430d436a2516
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51641827"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52511259"
 ---
 # <a name="odata-connection-manager"></a>Gestione connessione OData
  Connettersi a un'origine dati OData con una gestione connessione OData. Un componente di origine OData usa una gestione connessione OData per connettersi a un'origine OData e utilizzare i dati del servizio. Per ulteriori informazioni, vedere [OData Source](../../integration-services/data-flow/odata-source.md).  
@@ -27,7 +27,7 @@ ms.locfileid: "51641827"
 ## <a name="adding-an-odata-connection-manager-to-an-ssis-package"></a>Aggiunta di una gestione connessione OData a un pacchetto SSIS  
  È possibile aggiungere una nuova gestione connessione OData a un pacchetto SSIS in tre modi:  
   
--   Fare clic sul pulsante **Nuovo** in **Editor origine OData**  
+-   Fare clic sul pulsante **Nuovo...** in **Editor origine OData**  
   
 -   Fare clic con il pulsante destro del mouse sulla cartella **Gestioni connessioni** in **Esplora soluzioni**e quindi fare clic su **Nuova gestione connessione**. Selezionare **ODATA** per **Tipo gestione connessione**.  
   

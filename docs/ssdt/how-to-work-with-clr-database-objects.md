@@ -13,12 +13,12 @@ ms.assetid: 4a28d43d-eb5e-444d-aace-5df691f38709
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f339b8c73a2bed5a36f61fd1afea7f01afc433dc
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 8192bd6c074f5ed90868af9f256935e6222fc525
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51659121"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52396884"
 ---
 # <a name="how-to-work-with-clr-database-objects"></a>Procedura: Utilizzo di oggetti di database CLR
 In aggiunta al linguaggio di programmazione Transact\-SQL, è possibile usare i linguaggi .NET Framework per creare oggetti di database che recuperano e aggiornano i dati. Gli oggetti di database scritti in codice gestito vengono denominati oggetti di database CLR (Common Language Runtime) di SQL Server. Per una spiegazione dei vantaggi derivanti dall'uso di oggetti di database CLR ospitati in SQL Server, nonché per informazioni su come scegliere tra Transact\-SQL e CLR, vedere [Vantaggi dell'integrazione con CLR](../relational-databases/clr-integration/clr-integration-overview.md) e [Vantaggi dell'uso di codice gestito per creare oggetti di database](https://msdn.microsoft.com/library/k2e1fb36.aspx).  
@@ -83,7 +83,7 @@ Per altre informazioni sui requisiti di compilazione di oggetti di database CLR,
   
 1.  In **Esplora oggetti di SQL Server** passare al database locale in cui viene distribuito il progetto.  
   
-2.  Per impostazione predefinita, l'integrazione con CLR è disattivata in SQL Server. Per utilizzare oggetti di database CLR, è necessario abilitare l'integrazione CLR. A tale scopo, utilizzare l'opzione "clr enabled" della stored procedure sp_configure. Per altre informazioni, vedere l'argomento relativo all'[opzione clr enabled](../relational-databases/clr-integration/clr-integration-enabling.md).  
+2.  Per impostazione predefinita, l'integrazione con CLR è disattivata in SQL Server. Per utilizzare oggetti di database CLR, è necessario abilitare l'integrazione CLR. A tale scopo, usare l'opzione "clr enabled" della stored procedure sp_configure. Per altre informazioni, vedere l'argomento relativo all'[opzione clr enabled](../relational-databases/clr-integration/clr-integration-enabling.md).  
   
     Fare clic con il pulsante destro del mouse sul database e selezionare **Nuova query**. Nel riquadro della query incollare il codice seguente e premere il pulsante **Esegui query**.  
   

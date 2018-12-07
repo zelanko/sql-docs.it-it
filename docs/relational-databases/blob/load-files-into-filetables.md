@@ -15,12 +15,12 @@ ms.assetid: dc842a10-0586-4b0f-9775-5ca0ecc761d9
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 894570fc0f262c499bcadffc5c8d6d4bf6549b67
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 75f0c0b036a261c7262934f1ac03c4a0edf4e2f5
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47674959"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52526715"
 ---
 # <a name="load-files-into-filetables"></a>Caricamento di file in FileTable
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -89,7 +89,7 @@ UPDATE PhotoMetadata
   
     -   BULK INSERT con clausola CHECK_CONSTRAINTS.  
   
-    -   INSERT INTO … SELECT * FROM OPENROWSET(BULK …) senza la clausola IGNORE_CONSTRAINTS.  
+    -   INSERT INTO ... SELECT * FROM OPENROWSET(BULK ...) senza la clausola IGNORE_CONSTRAINTS.  
   
 -   Le operazioni di caricamento bulk che non applicano vincoli hanno esito negativo a meno i vincoli definiti dal sistema della tabella FileTable non siano stati disabilitati. Questa categoria include le operazioni seguenti:  
   
@@ -97,7 +97,7 @@ UPDATE PhotoMetadata
   
     -   BULK INSERT senza clausola CHECK_CONSTRAINTS.  
   
-    -   INSERT INTO … SELECT * FROM OPENROWSET(BULK …) con la clausola IGNORE_CONSTRAINTS.  
+    -   INSERT INTO ... SELECT * FROM OPENROWSET(BULK ...) con la clausola IGNORE_CONSTRAINTS.  
   
 ###  <a name="HowToBulkLoad"></a> Procedura: Caricamento bulk di file in una tabella FileTable  
  È possibile utilizzare diversi metodi per eseguire il caricamento bulk di file in una tabella FileTable:  
@@ -114,7 +114,7 @@ UPDATE PhotoMetadata
   
     -   Disabilitare lo spazio dei nomi FileTable ed eseguire una chiamata senza la clausola **CHECK_CONSTRAINTS** . Riabilitare quindi lo spazio dei nomi FileTable.  
   
--   **INSERT INTO … SELECT \* FROM OPENROWSET(BULK …)**  
+-   **INSERT INTO ... SELECT \* FROM OPENROWSET(BULK ...)**  
   
     -   Eseguire una chiamata con la clausola **IGNORE_CONSTRAINTS** .  
   
@@ -127,6 +127,6 @@ UPDATE PhotoMetadata
   
 ## <a name="see-also"></a>Vedere anche  
  [Accesso a tabelle FileTable tramite Transact-SQL](../../relational-databases/blob/access-filetables-with-transact-sql.md)   
- [Accedere alle tabelle FileTable con API di input/output dei file](../../relational-databases/blob/access-filetables-with-file-input-output-apis.md)  
+ [Accedere alle tabelle FileTable con API di Input-Output dei file](../../relational-databases/blob/access-filetables-with-file-input-output-apis.md)  
   
   

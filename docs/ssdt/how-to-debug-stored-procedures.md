@@ -13,12 +13,12 @@ ms.assetid: e3c8707f-0f6b-4265-8a5a-81f079330b52
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 70ed380939046fd66f3d829c96d798190c039918
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8b0aafe7ed2eddd189f57929b9d4ed971540dc57
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47605149"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52533427"
 ---
 # <a name="how-to-debug-stored-procedures"></a>Procedura: Debug di stored procedure
 Il debugger Transact\-SQL consente di eseguire il debug di stored procedure in modo interattivo visualizzando lo stack di chiamate SQL, i parametri e le variabili locali per la stored procedure SQL. Come accade per l'esecuzione del debug in altri linguaggi di programmazione, è possibile visualizzare e modificare parametri e variabili locali, visualizzare variabili globali, nonché controllare e gestire punti di interruzione durante l'esecuzione del debug dello script Transact\-SQL.  
@@ -57,7 +57,7 @@ In questo esempio viene illustrato come creare ed eseguire il debug di una store
   
 7.  Premere la freccia a discesa sul pulsante freccia verde nella barra degli strumenti dell'Editor Transact\-SQL e selezionare **Esegui con debugger** per eseguire la query contestualmente al debug.  
   
-8.  In alternativa, è possibile avviare il debug da Esplora oggetti di SQL Server. Fare clic con il pulsante destro del mouse sulla stored procedure **AddProduct** (all'interno di **Locale** ->  database **TradeDev** -> **Programmazione** -> **Stored procedure**). Selezionare **Debug procedura**. Se per l'oggetto vengono richiesti parametri, verrà visualizzata la finestra di dialogo **Debug procedura** con una tabella contenente una riga per ogni parametro. In ogni riga della tabella sono presenti due colonne: una per il nome del parametro e un'altra per il relativo valore. Immettere i valori per ogni parametro e fare clic su OK.  
+8.  In alternativa, è possibile avviare il debug da Esplora oggetti di SQL Server. Fare clic con il pulsante destro del mouse sulla stored procedure **AddProduct** (all'interno di **Locale** ->  database **TradeDev** -> **Programmazione** -> **Stored procedure**). Selezionare **Debug procedura...**. Se per l'oggetto vengono richiesti parametri, verrà visualizzata la finestra di dialogo **Debug procedura** con una tabella contenente una riga per ogni parametro. In ogni riga della tabella sono presenti due colonne: una per il nome del parametro e un'altra per il relativo valore. Immettere i valori per ogni parametro e fare clic su OK.  
   
 9. Verificare che la finestra **Variabili locali** sia aperta. In caso contrario, scegliere **Finestre** dal menu **Debug**, quindi **Locale**.  
   

@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: c99495c3-899b-4c84-af87-76e96d4afa23
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 238461d1d191c9e62fa713e46c7483c09df51f38
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 8e9d481e03efdcfb7ff109998eda3f4b2f6f3a3d
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031730"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52711602"
 ---
 # <a name="report-builder-tutorials"></a>Esercitazioni di Generatore report
 
@@ -71,7 +71,7 @@ Seguire i passaggi descritti in questa esercitazione per usare espressioni che c
 ## <a name="next-steps"></a>Passaggi successivi
 
 [Visualizzazione di progettazione report](../reporting-services/report-builder/report-design-view-report-builder.md)  
-[Generatore report in SQL Server 2016](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
+[Generatore report in SQL Server](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
 [Esercitazione: Creare un report grafico rapido offline](../reporting-services/report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md)  
 
 Altre domande? [Visitare il forum su Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)

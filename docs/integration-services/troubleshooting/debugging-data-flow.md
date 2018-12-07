@@ -17,12 +17,12 @@ ms.assetid: 1c574f1b-54f7-4c05-8e42-8620e2c1df0f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0f9ea0da85324aa74b7ce9af17ab64b743a8f031
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 38152544ed3f0684cc13db7c2f429b46ed9ef5b1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51638748"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52521537"
 ---
 # <a name="debugging-data-flow"></a>Debug di un flusso di dati
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] e Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] includono funzionalità e strumenti che è possibile usare per la risoluzione dei problemi dei flussi di dati in un pacchetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
@@ -89,9 +89,9 @@ order by source_component_name, destination_component_name
   
 -   **total_rows** : somma di tutte le righe inviate dal componente  
   
--   **wall_clock_time_ms** : tempo totale di esecuzione trascorso, in millisecondi, per ogni componente  
+-   **wall_clock_time_ms**: tempo totale di esecuzione trascorso, in millisecondi, per ogni componente  
   
--   **num_rows_per_millisecond** : numero di righe per millisecondi inviate da ogni componente  
+-   **num_rows_per_millisecond**: numero di righe per millisecondi inviate da ogni componente  
   
  La clausola **HAVING** viene usata per impedire un errore di divisione per zero nei calcoli.  
   

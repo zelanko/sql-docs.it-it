@@ -14,12 +14,12 @@ ms.assetid: 457b1140-4819-4def-8f7c-54a406e6db12
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b9ff20c6ea926a20d0637f5d62add4bec0a9d475
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6a06a4f8bf7474cd2379886dc78cbdddc6a05cab
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47684819"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52545388"
 ---
 # <a name="select-initial-data-synchronization-page-always-on-availability-group-wizards"></a>Pagina Seleziona sincronizzazione dati iniziale (procedure guidate gruppi di disponibilità Always On)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -11,12 +11,12 @@ ms.assetid: 55d8be9c-9282-47d3-be7f-e2c26f00c95e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8da09c20837b060606b087c0edebb7bf9713675e
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 34cea0d4a251266d21218cefaee2d5f122e574ff
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51671246"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52543896"
 ---
 # <a name="using-transact-sql-assertions-in-sql-server-unit-tests"></a>Utilizzo di asserzioni Transact-SQL in unit test di SQL Server
 In uno unit test di SQL Server, uno script di test Transact\-SQL viene eseguito e restituisce un risultato. Talvolta, i risultati vengono restituiti come set di risultati. È possibile convalidare i risultati utilizzando le condizioni di test. È ad esempio possibile utilizzare una condizione di test per controllare il numero di righe restituite in un determinato set di risultati o per verificare il tempo necessario per l'esecuzione di un test specifico. Per altre informazioni sulle condizioni di test, vedere [Uso delle condizioni di test negli unit test di SQL Server](../ssdt/using-test-conditions-in-sql-server-unit-tests.md).  

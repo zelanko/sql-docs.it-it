@@ -15,12 +15,12 @@ ms.assetid: dd5ba503-7607-45d9-ad0d-909faaade179
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 8ebd4835fe24846df21b887841813f7cac596f7c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d39d78d9fef6756804f69c8fb49ed1e880d94767
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47598166"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52395386"
 ---
 # <a name="database-object-security-master-data-services"></a>Sicurezza di oggetti di database (Master Data Services)
 
@@ -45,7 +45,7 @@ ms.locfileid: "47598166"
 -   [Configurazione di impostazioni di sistema](#SysSettings)  
   
 ##  <a name="Staging"></a> Dati di gestione temporanea  
- Nella tabella seguente, in ogni entità a protezione diretta la parola 'name' fa parte del nome. Viene indicato il nome della tabella di staging specificato quando viene creata un'entità. Per altre informazioni, vedere [Panoramica: Importazione di dati da tabelle &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md)  
+ Nella tabella seguente, in ogni entità a protezione diretta la parola "name" fa parte del nome. Viene indicato il nome della tabella di staging specificato quando viene creata un'entità. Per altre informazioni, vedere [Panoramica: Importazione di dati da tabelle &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md)  
   
 |Azione|Entità a protezione diretta|Permissions|  
 |------------|----------------|-----------------|  

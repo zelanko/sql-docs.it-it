@@ -16,12 +16,12 @@ ms.assetid: 4bfe5734-3003-4165-afd4-b1131ea26e2b
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: e397d797568d14cd184d8246425db13d9fb2a0b6
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 2d80647230c13b31ca9e5ae540798609fc93f527
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51697679"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52527397"
 ---
 # <a name="restore-statements---arguments-transact-sql"></a>Istruzioni RESTORE: argomenti (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -389,7 +389,7 @@ FILE **=**{ *backup_set_file_number* | **@**_backup\_set\_file\_number_ }
  CONTINUE_AFTER_ERROR  
  Specifica che l'operazione di ripristino deve continuare dopo il rilevamento di un errore.  
   
- Se un backup contiene pagine danneggiate, è consigliabile ripetere l'operazione di ripristino utilizzando un backup alternativo senza errori, ad esempio una copia di backup creata prima del danneggiamento delle pagine. Come ultima risorsa, tuttavia, è possibile ripristinare un backup danneggiato utilizzando l'opzione CONTINUE_AFTER_ERROR dell'istruzione di ripristino e tentare di recuperare i dati.  
+ Se un backup contiene pagine danneggiate, è consigliabile ripetere l'operazione di ripristino usando un backup alternativo senza errori, ad esempio una copia di backup creata prima del danneggiamento delle pagine. Come ultima risorsa, tuttavia, è possibile ripristinare un backup danneggiato utilizzando l'opzione CONTINUE_AFTER_ERROR dell'istruzione di ripristino e tentare di recuperare i dati.  
   
 ##### <a name="filestream-options"></a>Opzioni FILESTREAM  
  FILESTREAM ( DIRECTORY_NAME =*directory_name* )  
@@ -586,16 +586,16 @@ Quando si configura la replica per l'uso del log shipping, è consigliabile usar
   
 |Opzione WITH|RESTORE|RESTORE FILELISTONLY|RESTORE HEADERONLY|RESTORE LABELONLY|RESTORE REWINDONLY|RESTORE VERIFYONLY|  
 |-----------------|-------------|--------------------------|------------------------|-----------------------|------------------------|------------------------|  
-|{ CHECKSUM<br /><br /> &#124; NO_CHECKSUM }|√|√|√|√|—|√|  
-|{ CONTINUE_AFTER_ERROR<br /><br /> &#124; STOP_ON_ERROR }|√|√|√|√|—|√|  
-|FILE<sup>1</sup>|√|√|√|—|—|√|  
-|LOADHISTORY|—|—|—|—|—|√|  
-|MEDIANAME|√|√|√|√|—|√|  
-|MEDIAPASSWORD|√|√|√|√|—|√|  
-|MOVE|√|—|—|—|—|√|  
-|PASSWORD|√|√|√|—|—|√|  
-|{ REWIND &#124; NOREWIND }|√|Solo REWIND|Solo REWIND|Solo REWIND|—|√|  
-|STATS|√|—|—|—|—|√|  
+|{ CHECKSUM<br /><br /> &#124; NO_CHECKSUM }|√|√|√|√|-|√|  
+|{ CONTINUE_AFTER_ERROR<br /><br /> &#124; STOP_ON_ERROR }|√|√|√|√|-|√|  
+|FILE<sup>1</sup>|√|√|√|-|-|√|  
+|LOADHISTORY|-|-|-|-|-|√|  
+|MEDIANAME|√|√|√|√|-|√|  
+|MEDIAPASSWORD|√|√|√|√|-|√|  
+|MOVE|√|-|-|-|-|√|  
+|PASSWORD|√|√|√|-|-|√|  
+|{ REWIND &#124; NOREWIND }|√|Solo REWIND|Solo REWIND|Solo REWIND|-|√|  
+|STATS|√|-|-|-|-|√|  
 |{ UNLOAD &#124; NOUNLOAD }|√|√|√|√|√|√|  
   
  <sup>1</sup> FILE **=**_backup\_set\_file\_number_, che è diversa da {FILE | FILEGROUP}.  

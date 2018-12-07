@@ -5,7 +5,7 @@ ms.date: 05/03/2016
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology: performance-monitor
+s.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLServer:Deprecated Features
@@ -16,12 +16,12 @@ ms.assetid: e95de9d6-c950-41cd-8aaa-be529c6de198
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 179829be2e7aed6e6e71d31c5baadc57bfeb1e38
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 07fe67c8d52f69f018acb68f64782be4af0c6c00
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51665410"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52523336"
 ---
 # <a name="sql-server-deprecated-features-object"></a>Oggetto SQL Server:Deprecated Features
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -134,9 +134,9 @@ La tabella seguente descrive l'oggetto prestazione **Deprecated Features** di SQ
 |PERMISSIONS|Sono stati rilevati riferimenti alla funzione intrinseca PERMISSIONS. Eseguire una query su sys.fn_my_permissions. Si verifica una volta per ogni query.|  
 |ProcNums|È stata rilevata la sintassi deprecata ProcNums. Riscrivere le istruzioni per rimuovere i riferimenti. Si verifica una volta per ogni compilazione.|  
 |READTEXT|È stata rilevata la sintassi READTEXT. Riscrivere le applicazioni in modo che utilizzino il tipo di dati **varchar(max)** e rimuovere la sintassi dei tipi di dati **text** . Si verifica una volta per ogni query.|  
-|RESTORE DATABASE o LOG WITH DBO_ONLY|È stata rilevata la sintassi RESTORE … WITH DBO_ONLY. In alternativa, usare RESTORE … RESTRICTED_USER.|  
-|RESTORE DATABASE o LOG WITH MEDIAPASSWORD|È stata rilevata la sintassi RESTORE … WITH MEDIAPASSWORD. La sintassi WITH MEDIAPASSWORD fornisce una sicurezza insufficiente e deve essere rimossa.|  
-|RESTORE DATABASE o LOG WITH PASSWORD|È stata rilevata la sintassi RESTORE … WITH PASSWORD. La sintassi WITH PASSWORD fornisce una sicurezza insufficiente e deve essere rimossa.|  
+|RESTORE DATABASE o LOG WITH DBO_ONLY|È stata rilevata la sintassi RESTORE ... WITH DBO_ONLY. In alternativa, usare RESTORE ... RESTRICTED_USER.|  
+|RESTORE DATABASE o LOG WITH MEDIAPASSWORD|È stata rilevata la sintassi RESTORE ... WITH MEDIAPASSWORD. La sintassi WITH MEDIAPASSWORD fornisce una sicurezza insufficiente e deve essere rimossa.|  
+|RESTORE DATABASE o LOG WITH PASSWORD|È stata rilevata la sintassi RESTORE ... WITH PASSWORD. La sintassi WITH PASSWORD fornisce una sicurezza insufficiente e deve essere rimossa.|  
 |Restituzione di risultati da un trigger|Questo evento si verifica una volta per ogni chiamata del trigger. Riscrivere il trigger in modo che non restituisca set di risultati.|  
 |ROWGUIDCOL|È stata rilevata la sintassi ROWGUIDCOL. Riscrivere le istruzioni in modo che utilizzino la sintassi $rowguid. Si verifica una volta per ogni compilazione.|  
 |SET ANSI_NULLS OFF|È stata rilevata la sintassi SET ANSI_NULLS OFF. Rimuovere questa sintassi deprecata. Si verifica una volta per ogni compilazione.|  
@@ -173,13 +173,13 @@ La tabella seguente descrive l'oggetto prestazione **Deprecated Features** di SQ
 |sp_configure 'ft notify bandwidth (min)'|È stata rilevata l'opzione ft notify bandwidth (min) di sp_configure. Non usare. Si verifica una volta per ogni query.|  
 |sp_configure 'locks'|È stata rilevata l'opzione locks di sp_configure. I blocchi non sono più configurabili. Non usare. Si verifica una volta per ogni query.|  
 |sp_configure 'open objects'|È stata rilevata l'opzione open objects di sp_configure. Il numero di oggetti aperti non è più configurabile. Non usare. Si verifica una volta per ogni query.|  
-|sp_configure 'priority boost'|È stata rilevata l'opzione priority boost di sp_configure. Non usare. Si verifica una volta per ogni query. In alternativa, usare l'opzione start /high … program.exe di Windows.|  
+|sp_configure 'priority boost'|È stata rilevata l'opzione priority boost di sp_configure. Non usare. Si verifica una volta per ogni query. In alternativa, usare l'opzione start /high ... program.exe di Windows.|  
 |sp_configure 'remote proc trans'|È stata rilevata l'opzione remote proc trans di sp_configure. Non usare. Si verifica una volta per ogni query.|  
 |sp_configure 'set working set size'|È stata rilevata l'opzione set working set size di sp_configure Le dimensioni del working set non sono più configurabili. Non usare. Si verifica una volta per ogni query.|  
 |sp_control_dbmasterkey_password|La stored procedure sp_control_dbmasterkey_password non controlla se una chiave master è esistente. Questo è consentito solo per la compatibilità con le versioni precedenti, ma viene visualizzato un avviso. Questo comportamento è deprecato. In una versione futura la chiave master deve esistere e la password usata nella stored procedure sp_control_dbmasterkey_password deve essere una delle password usate per crittografare la chiave master del database.|  
 |sp_create_removable|È stata rilevata la procedura sp_create_removable. In alternativa, usare CREATE DATABASE. Si verifica una volta per ogni query.|  
 |sp_db_vardecimal_storage_format|È stato rilevato l'utilizzo del formato di archiviazione **vardecimal** . Usare la compressione dei dati.|  
-|sp_dbcmptlevel|È stata rilevata la procedura sp_dbcmptlevel. In alternativa, usare ALTER DATABASE … SET COMPATIBILITY_LEVEL. Si verifica una volta per ogni query.|  
+|sp_dbcmptlevel|È stata rilevata la procedura sp_dbcmptlevel. Utilizzare ALTER DATABASE ... SET COMPATIBILITY_LEVEL. Si verifica una volta per ogni query.|  
 |sp_dbfixedrolepermission|È stata rilevata la procedura sp_dbfixedrolepermission. Non usare. Si verifica una volta per ogni query.|  
 |sp_dboption|È stata rilevata la procedura sp_dboption. In alternativa, usare ALTER DATABASE e DATABASEPROPERTYEX. Si verifica una volta per ogni compilazione.|  
 |sp_dbremove|È stata rilevata la procedura sp_dbremove. In alternativa, usare DROP DATABASE. Si verifica una volta per ogni query.|  

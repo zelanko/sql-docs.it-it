@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: d9e30521-f8ae-4c45-89c3-d40727f622f7
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 6a241d0c1bde3eea57c21ca8a14b465a79aa89c3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5a97a0cfc446a32e02172d22391dec8e5ca13af6
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47627889"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52712352"
 ---
 # <a name="tutorial-creating-a-basic-table-report-report-builder"></a>Esercitazione: Creazione di un report tabella semplice (Generatore report)
 In questa esercitazione viene illustrato come creare un report tabella semplice basato sui dati di vendita di esempio. Nell'illustrazione seguente viene mostrato il report che verrà creato.  
@@ -312,7 +312,7 @@ Il report verrà salvato sul server di report. Il nome del server di report al q
 4.  Fare clic su **Salva**.  
   
 ## <a name="Export"></a>7. Esportare il report  
-I report possono essere esportati in formati differenti, ad esempio come file Microsoft Excel e CSV. Per altre informazioni, vedere [Export Reports &#40;Report Builder and SSRS&#41;](../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md).  
+I report possono essere esportati in formati differenti, ad esempio come file Microsoft Excel e CSV. Per altre informazioni, vedere [Esportare report &#40;Generatore Report e SSRS&#41;](../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md).  
   
 In questa esercitazione, si esporterà il report in Excel e si imposterà una proprietà nel report per fornire un nome personalizzato per la scheda della cartella di lavoro.  
   
@@ -355,6 +355,6 @@ La procedura dettagliata per la creazione di un report tabella semplice è termi
   
 ## <a name="see-also"></a>Vedere anche  
 [Esercitazioni di Generatore report](../reporting-services/report-builder-tutorials.md)  
-[Generatore report in SQL Server 2016](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
+[Generatore report in SQL Server](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
   
 

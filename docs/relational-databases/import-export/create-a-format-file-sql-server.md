@@ -14,12 +14,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cdf0e6510d566fbf2ad31ebf9996ca27ad444eda
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 7130114f33159290dd6917db87638140838ee8c2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51677130"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52538080"
 ---
 # <a name="create-a-format-file-sql-server"></a>Creazione di un file di formato (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -152,7 +152,7 @@ Il seguente file di formato di esempio per una tabella con 5 colonne include le 
   
 ```  
   
- Se si prova a importare i dati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando `bcp in –c –C65001 –f format_file` ..." oppure "`BULK INSERT`/`OPENROWSET` … `FORMATFILE='format_file' CODEPAGE=65001` ...", le informazioni su regole di confronto/tabella codici avranno la priorità rispetto all'opzione 65001.  
+ Se si prova a importare i dati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando `bcp in -c -C65001 -f format_file` ..." o "`BULK INSERT`/`OPENROWSET` ... `FORMATFILE='format_file' CODEPAGE=65001` ...", le informazioni su regole di confronto/tabella codici avranno la priorità rispetto all'opzione 65001.  
 Di conseguenza, se si genera un file di formato, è necessario eliminare manualmente le informazioni sulle regole di confronto dal file di formato generato prima di iniziare a reimportare i dati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
 Ecco un esempio di file di formato senza le informazioni sulle regole di confronto.  
   
@@ -203,7 +203,7 @@ Ecco un esempio di file di formato senza le informazioni sulle regole di confron
  Al prompt dei comandi di Windows digitare il comando `bcp` seguente:  
   
 ```cmd
-bcp AdventureWorks2012.HumanResources.Department format nul -c -x -f Department-c..xml –t, -T  
+bcp AdventureWorks2012.HumanResources.Department format nul -c -x -f Department-c..xml -t, -T  
 ```  
   
  Il file di formato generato, `Department-c.xml`, contiene gli elementi XML seguenti:  

@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 8b830ba5-4d64-4348-a2b1-76b9338a1462
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d4e262ab70d75ef1f8ddff4772ceaf7adc68fec3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b1e2cf655389529c6211ad2ed29ba2e9a309dcfa
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47701349"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542466"
 ---
 # <a name="create-a-recursive-hierarchy-group-report-builder-and-ssrs"></a>Creare un gruppo di gerarchie ricorsive (Generatore report e SSRS)
 Nei report impaginati di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , un gruppo di gerarchie ricorsive organizza i dati da un unico set di dati di un report in cui sono inclusi più livelli gerarchici, ad esempio il report per definire la struttura di relazioni tra dipendenti e manager in una gerarchia organizzativa.  
@@ -48,7 +48,7 @@ Nei report impaginati di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-m
     > [!NOTE]  
     >  Se il riquadro Proprietà non è visualizzato, fare clic su **Proprietà** nella scheda **Visualizza** .  
   
-2.  Nel riquadro Proprietà espandere il nodo **Riempimento**, fare clic su **A sinistra**, quindi selezionare **\<Espressione…>** dall'elenco a discesa.  
+2.  Nel riquadro Proprietà espandere il nodo **Riempimento**, fare clic su **A sinistra**, quindi selezionare **\<Espressione...>** dall'elenco a discesa.  
   
 3.  Nel riquadro Espressione digitare l'espressione seguente:  
   

@@ -21,12 +21,12 @@ ms.assetid: fe0b7cbc-fe8e-4fe2-95b4-2953efff5869
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2504bc45e358ebbf35b279e07be511f7a6041956
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 2bb26e75401f7dfd93e23c197a8e1419ad21cb2e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51641288"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52528449"
 ---
 # <a name="send-mail-task"></a>Invia messaggi - attività
   L'attività Invia messaggi consente di inviare un messaggio di posta elettronica. Tramite l'attività Invia messaggi un pacchetto può inviare messaggi quando le attività nel flusso di lavoro del pacchetto vengono completate o non riescono oppure in risposta a un evento generato dal pacchetto in fase di esecuzione. È ad esempio possibile utilizzare questa attività per notificare all'amministratore di un database l'esito positivo o negativo dell'attività Backup database.  
@@ -102,7 +102,7 @@ ms.locfileid: "51641288"
   
 ### <a name="options"></a>Opzioni  
  **SMTPConnection**  
- Selezionare una gestione connessione SMTP nell'elenco oppure fare clic su **\<Nuova connessione>** per creare una nuova gestione connessione.  
+ Selezionare una gestione connessione SMTP nell'elenco oppure fare clic su **\<Nuova connessione...>** per creare una nuova gestione connessione.  
   
 > [!IMPORTANT]  
 >  La gestione connessione SMTP supporta solo l'autenticazione anonima e l'autenticazione di Windows. Non supporta l'autenticazione di base.  
@@ -146,17 +146,17 @@ ms.locfileid: "51641288"
   
 #### <a name="messagesourcetype--direct-input"></a>MessageSourceType = Input diretto  
  **MessageSource**  
- Digitare il testo del messaggio oppure fare clic sul pulsante Sfoglia (…), quindi digitare il messaggio nella finestra di dialogo **Origine messaggio** .  
+ Digitare il testo del messaggio oppure fare clic sul pulsante Sfoglia (...), quindi digitare il messaggio nella finestra di dialogo **Origine messaggio**.  
   
 #### <a name="messagesourcetype--file-connection"></a>MessageSourceType = Connessione file  
  **MessageSource**  
- Selezionare una gestione connessione file nell'elenco o fare clic su \<**Nuova connessione**> per creare una nuova gestione connessione.  
+ Selezionare una gestione connessione file nell'elenco oppure crearne una nuova facendo clic su \<**Nuova connessione**.  
   
  **Argomenti correlati:** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
 #### <a name="messagesourcetype--variable"></a>MessageSourceType = Variabile  
  **MessageSource**  
- Selezionare una variabile nell'elenco oppure fare clic su \<**Nuova variabile**> per crearne una nuova.  
+ Selezionare una variabile nell'elenco oppure crearne una nuova facendo clic su \<**Nuova variabile**.  
   
  **Argomenti correlati:** [Variabili di Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Aggiungi variabile](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   

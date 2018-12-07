@@ -16,12 +16,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 robots: noindex,nofollow
-ms.openlocfilehash: 7018c0f71f51fa482ef0c1fad78b1aac20bf79cd
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 7ef6aa3dbfb10b0b17a6648270541c5e87e2142d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701063"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535723"
 ---
 # <a name="installation-wizard-help"></a>Guida dell'Installazione guidata
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ Ogni istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è cos
  Per ulteriori informazioni, vedere [Maximum Capacity Specifications for SQL Server](../maximum-capacity-specifications-for-sql-server.md).  
   
 ### <a name="options"></a>Opzioni  
- Solo istanze del cluster di failover: specificare il nome di rete del cluster di failover di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Questo nome identifica l'istanza del cluster di failover nella rete.  
+ Solo istanze del cluster di failover: specificare il nome di rete del cluster di failover di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Questo nome identifica l'istanza del cluster di failover nella rete.  
   
  Istanza predefinita o denominata: nel determinare se installare un'istanza predefinita o denominata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], tenere presenti le informazioni seguenti:  
   
@@ -451,6 +451,6 @@ Utilizzare la pagina **Istanze utente** per generare un'istanza distinta del [!I
   
  Verificare che il campo **Utente a cui concedere i privilegi** contenga DomainName\UserName dell'utente le cui autorizzazioni devono essere aggiornate. Nell'elenco delle istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] incluso nel riquadro **Privilegi disponibili** selezionare il ruolo da aggiornare e quindi fare clic sulla freccia a destra. Per aggiungere l'utente a tutti i ruoli disponibili per tutte le istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , fare clic sulla doppia freccia a destra.  
   
- Al termine delle selezioni, [!INCLUDE[clickOK](../../includes/clickok-md.md)]per implementare le modifiche apportate. Per chiudere lo strumento senza apportare alcuna modifica, fare clic su **Annulla**.  
+ Al termine delle selezioni, [!INCLUDE[clickOK](../../includes/clickok-md.md)] per implementare le modifiche apportate. Per chiudere lo strumento senza apportare alcuna modifica, fare clic su **Annulla**.  
   
   

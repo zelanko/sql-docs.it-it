@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 f1_keywords:
 - sql13.dqs.dqproject.interactivecleansing.f1
@@ -17,12 +16,12 @@ ms.assetid: c96b13ad-02a6-4646-bcc7-b4a8d490f5cc
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 94800c20ae6b5ad5dfc45f9a17779242cd430286
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: af37e0dd65edebe2037d305d085e5c65872d03f8
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47822039"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617651"
 ---
 # <a name="cleanse-data-using-dqs-internal-knowledge"></a>Pulizia dei dati mediante le informazioni interne di DQS
 
@@ -38,7 +37,7 @@ ms.locfileid: "47822039"
   
 -   È necessario avere specificato valori soglia adatti per l'attività di pulizia. Per informazioni su questa operazione, vedere [Configurazione dei valori soglia per le attività di pulizia e di individuazione delle corrispondenze](../data-quality-services/configure-threshold-values-for-cleansing-and-matching.md).  
   
--   È necessario che in [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] sia disponibile una Knowledge Base DQS con cui confrontare i dati di origine ed eseguirne la pulizia. La Knowledge Base deve inoltre contenere informazioni sul tipo di dati da pulire. Se si desidera pulire dati di origine che contengono indirizzi in Italia, ad esempio, è necessario disporre di una Knowledge Base creata in base a dati di esempio di alta qualità per indirizzi italiani.  
+-   È necessario che in [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] sia disponibile una Knowledge Base DQS con cui confrontare i dati di origine ed eseguirne la pulizia. La Knowledge Base deve inoltre contenere informazioni sul tipo di dati da pulire. Se si vogliono pulire dati di origine che contengono indirizzi in Italia, ad esempio, è necessario aver creato una Knowledge Base in base a dati di esempio di alta qualità per indirizzi italiani.  
   
 -   Se i dati di origine da pulire si trovano in un file di Excel, è necessario che Microsoft Excel sia installato nel computer [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] . In caso contrario, non sarà possibile selezionare il file di Excel nella fase di mapping. I file creati da Microsoft Excel potranno presentare l'estensione xlsx, xls o csv. Se viene utilizzata la versione a 64 bit di Excel, sono supportati solo i file di Excel 2003 (xls), mentre non sono supportati file di Excel 2007 o 2010 (xlsx). Se si utilizza una versione a 64 bit di Excel 2007 o 2010, salvare il file come file xls o csv o installare una versione a 32 bit di Excel.  
   
@@ -129,7 +128,7 @@ ms.locfileid: "47822039"
   
     -   Nel riquadro inferiore vengono visualizzate occorrenze singole del valore di dominio selezionato nel riquadro superiore destro. Nel superiore destro vengono visualizzate le informazioni seguenti: una casella per specificare un altro valore (corretto), il livello di confidenza (non disponibile per i valori nella scheda **Corretti** ), il motivo per l'azione DQS sul valore, l'opzione per approvare e rifiutare le correzioni, i suggerimenti per il valore e il valore originale.  
   
-3.  Se è stata abilitata la funzionalità **Correttore ortografico** per un dominio durante la sua creazione, vengono visualizzati dei caratteri di sottolineatura rossi ondulati insieme a quei valori di dominio identificati come potenziali errori. La sottolineatura viene visualizzata per l'intero valore. Se ad esempio "New York" è stato erroneamente digitato "Neu York", la sottolineatura rossa verrà visualizzata sotto "Neu York" e non solo sotto "Neu." Se si fa clic con il pulsante destro del mouse sul valore, verranno visualizzate le correzioni suggerite. Se sono presenti più di 5 suggerimenti, è possibile fare clic su **Ulteriori suggerimenti** nel menu di scelta rapida per visualizzare quelli rimanenti. Così come avviene per la visualizzazione degli errori, i suggerimenti rappresentano sostituzioni per l'intero valore. Il suggerimento visualizzato per l'esempio precedente sarà ad esempio "New York" e non solo "New". È possibile scegliere uno dei suggerimenti o aggiungere al dizionario una voce da visualizzare per quel valore. I valori vengono archiviati nel dizionario a livello di account utente. Quando si seleziona un suggerimento dal menu di scelta rapida del correttore ortografico, tale suggerimento viene aggiunto alla colonna **Correggi in** . Se si seleziona un suggerimento nella colonna **Correggi in** , tuttavia, il valore nella colonna viene sostituito dal suggerimento selezionato.  
+3.  Se è stata abilitata la funzionalità **Correttore ortografico** per un dominio durante la sua creazione, vengono visualizzati dei caratteri di sottolineatura rossi ondulati insieme a quei valori di dominio identificati come potenziali errori. La sottolineatura viene visualizzata per l'intero valore. Se ad esempio "New York" è stato erroneamente digitato "Neu York", la sottolineatura rossa verrà visualizzata sotto "Neu York" e non solo sotto "Neu". Se si fa clic con il pulsante destro del mouse sul valore, verranno visualizzate le correzioni suggerite. Se sono presenti più di 5 suggerimenti, è possibile fare clic su **Ulteriori suggerimenti** nel menu di scelta rapida per visualizzare quelli rimanenti. Così come avviene per la visualizzazione degli errori, i suggerimenti rappresentano sostituzioni per l'intero valore. Il suggerimento visualizzato per l'esempio precedente sarà ad esempio "New York" e non solo "New". È possibile scegliere uno dei suggerimenti o aggiungere al dizionario una voce da visualizzare per quel valore. I valori vengono archiviati nel dizionario a livello di account utente. Quando si seleziona un suggerimento dal menu di scelta rapida del correttore ortografico, tale suggerimento viene aggiunto alla colonna **Correggi in** . Se si seleziona un suggerimento nella colonna **Correggi in** , tuttavia, il valore nella colonna viene sostituito dal suggerimento selezionato.  
   
      La funzionalità di correzione ortografica è abilitata per impostazione predefinita nella fase di pulizia interattiva. È possibile disabilitare il correttore ortografico nella fase di pulizia interattiva facendo clic sull'icona **Abilita/Disabilita correttore ortografico** o facendo clic con il pulsante destro del mouse nell'area dei valori di dominio e scegliendo **Correttore ortografico** dal menu di scelta rapida. Per abilitarlo nuovamente, seguire la stessa procedura.  
   
@@ -150,9 +149,9 @@ ms.locfileid: "47822039"
   
     1.  **SQL Server**: scegliere **DQS_STAGING_DATA** come database di destinazione se si desidera esportare i dati in esso, quindi specificare un nome di tabella che verrà creata per archiviare i dati esportati. Altrimenti, se si desidera esportare i dati in un database diverso, sceglierlo e specificare un nome di tabella che verrà creata per archiviare i dati esportati. Il database di destinazione deve essere presente nella stessa istanza di SQL Server di [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] per essere visualizzato nell'elenco a discesa **Database** .  
   
-    2.  **File CSV**: fare clic su **Sfoglia**e specificare il nome e il percorso del file csv nel quale si desidera esportare i dati puliti. È anche possibile digitare il nome per il file csv insieme al percorso completo in cui si desidera esportare i dati puliti, ad esempio, "C:\ExportedData.csv". Il file viene salvato nel computer in cui è installato [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] .  
+    2.  **File CSV**: fare clic su **Sfoglia**e specificare il nome e il percorso del file csv nel quale si desidera esportare i dati puliti. È anche possibile digitare il nome per il file csv insieme al percorso completo in cui si desidera esportare i dati puliti, Ad esempio, "c:\ExportedData.csv". Il file viene salvato nel computer in cui è installato [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] .  
   
-    3.  **File di Excel**: fare clic su **Sfoglia**e specificare il nome e il percorso del file di Excel nel quale si desidera esportare i dati puliti. È anche possibile digitare il nome per il file di Excel insieme al percorso completo in cui si desidera esportare i dati puliti, Ad esempio, "C:\ExportedData.xlsx”. Il file viene salvato nel computer in cui è installato [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] .  
+    3.  **File di Excel**: fare clic su **Sfoglia**e specificare il nome e il percorso del file di Excel nel quale si desidera esportare i dati puliti. È anche possibile digitare il nome per il file di Excel insieme al percorso completo in cui si desidera esportare i dati puliti, Ad esempio, "c:\ExportedData.xlsx". Il file viene salvato nel computer in cui è installato [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] .  
   
 2.  Selezionare la casella di controllo **Standardizzare output** per standardizzare l'output in base al formato selezionato per il dominio. Ad esempio, modificare il valore stringa in caratteri maiuscoli o cambiare al maiuscolo l'iniziale della parola. Per informazioni sulla specifica del formato di output di un dominio, vedere l'elenco **Formato output in** in [Imposta proprietà del dominio](../data-quality-services/set-domain-properties.md).  
   

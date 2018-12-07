@@ -20,12 +20,12 @@ ms.assetid: f212397d-1bfd-496b-a246-668952891d09
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2684a24c333014ee351359ee229d32603ee11acd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bc8f5b10cd0dce7b3d9b6e8acc5b6018eff0e85a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47833399"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52515456"
 ---
 # <a name="monitor-performance-with-replication-monitor"></a>Monitoraggio delle prestazioni con Monitoraggio replica
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -77,7 +77,7 @@ ms.locfileid: "47833399"
   
     |Eccellenti|Buone|Discrete|Scarse|Critico|  
     |---------------|----------|----------|----------|--------------|  
-    |0 – 34%|35 – 59%|60 – 84%|85 – 99%|100% +|  
+    |0 - 34%|35 - 59%|60 - 84%|85 - 99%|100% +|  
   
 -   Per la replica di tipo merge la qualità delle prestazioni è indipendente dalla soglia. La soglia di elaborazione delle righe determina in realtà se il valore **Prestazioni critiche** viene visualizzato nella colonna **Stato** . La qualità delle prestazioni è determinata dal confronto tra le prestazioni delle singole sottoscrizioni e le prestazioni medie cronologiche delle sottoscrizioni, che utilizzano lo stesso tipo di connessione (remota o LAN), rispetto alla pubblicazione. In Monitoraggio replica viene visualizzato un valore dopo cinque sincronizzazioni con 50 o più modifiche eseguite con lo stesso tipo di connessione. Se sono state eseguite meno di cinque sincronizzazioni con 50 o più modifiche oppure la sincronizzazione più recente include meno di 50 modifiche, in Monitoraggio replica non viene visualizzato alcun valore.  
   
@@ -85,7 +85,7 @@ ms.locfileid: "47833399"
   
     |Eccellenti|Buone|Discrete|Scarse|  
     |---------------|----------|----------|----------|  
-    |151+%|76 – 150%|26 – 75%|0 – 25%|  
+    |151+%|76 - 150%|26 - 75%|0 - 25%|  
   
  Per altre informazioni sulla visualizzazione delle informazioni relative alle sottoscrizioni, vedere [Visualizzare le informazioni ed eseguire attività per una sottoscrizione &#40;Monitoraggio replica&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-subscription-replication-monitor.md).  
   
@@ -100,6 +100,6 @@ ms.locfileid: "47833399"
   
 ## <a name="see-also"></a>Vedere anche  
  [Monitoraggio della replica](../../../relational-databases/replication/monitor/monitoring-replication-overview.md)   
- [Impostare valori di soglia e avvisi in Monitoraggio replica](../../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md)  
+ [Set Thresholds and Warnings in Replication Monitor](../../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md)  
   
   

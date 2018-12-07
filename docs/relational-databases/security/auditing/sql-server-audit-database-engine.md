@@ -17,12 +17,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 511436c7c6c5fc73f3bb8a5c02a91ea01f3e8791
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 2736c3cf0d8373b80a41277a6b80b4b12b0ecd3a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51670562"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52510698"
 ---
 # <a name="sql-server-audit-database-engine"></a>SQL Server Audit (Database Engine)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -116,7 +116,7 @@ ms.locfileid: "51670562"
 ## <a name="considerations"></a>Considerazioni  
  Se durante la fase iniziale del controllo si verifica un errore, il server non si avvierà. In questo caso, per avviare il server è possibile usare l'opzione **-f** della riga di comando.  
   
- Se in seguito a un errore a livello del controllo il server si arresta o non si avvia perché per il controllo è specificata l'impostazione ON_FAILURE=SHUTDOWN, l'evento MSG_AUDIT_FORCED_SHUTDOWN verrà scritto nel registro. Poiché l'arresto si verificherà quando questa impostazione viene incontrata la prima volta, l'evento verrà scritto solo una volta. Tale evento viene scritto dopo il messaggio di errore relativo al controllo che provoca l'arresto. Per ignorare l'arresto provocato dal controllo, un amministratore può avviare [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in modalità utente singolo usando il flag **–m** . Se l'avvio viene eseguito in modalità utente singolo, verrà effettuato il downgrade di qualsiasi controllo per la cui sessione è specificata l'esecuzione di ON_FAILURE=SHUTDOWN come ON_FAILURE=CONTINUE. Se [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] viene avviato tramite il flag **–m** , nel log degli errori verrà scritto il messaggio MSG_AUDIT_SHUTDOWN_BYPASSED.  
+ Se in seguito a un errore a livello del controllo il server si arresta o non si avvia perché per il controllo è specificata l'impostazione ON_FAILURE=SHUTDOWN, l'evento MSG_AUDIT_FORCED_SHUTDOWN verrà scritto nel registro. Poiché l'arresto si verificherà quando questa impostazione viene incontrata la prima volta, l'evento verrà scritto solo una volta. Tale evento viene scritto dopo il messaggio di errore relativo al controllo che provoca l'arresto. Per ignorare l'arresto provocato dal controllo, un amministratore può avviare [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in modalità utente singolo usando il flag **-m**. Se l'avvio viene eseguito in modalità utente singolo, verrà effettuato il downgrade di qualsiasi controllo per la cui sessione è specificata l'esecuzione di ON_FAILURE=SHUTDOWN come ON_FAILURE=CONTINUE. Se [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] viene avviato con il flag **-m**, nel log degli errori verrà scritto il messaggio MSG_AUDIT_SHUTDOWN_BYPASSED.  
   
  Per altre informazioni sulle opzioni di avvio del servizio, vedere [Opzioni di avvio del servizio del motore di database](../../../database-engine/configure-windows/database-engine-service-startup-options.md).  
   

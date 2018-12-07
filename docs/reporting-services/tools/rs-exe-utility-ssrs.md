@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: bd6f958f-cce6-4e79-8a0f-9475da2919ce
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 74e64506ec3ba27a3caf87292556ab22c5609c57
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: 6e2231b51551972536d9ea534f53d5a0a2cbbfc7
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813044"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52543956"
 ---
 # <a name="rsexe-utility-ssrs"></a>RS.exe Utility (SSRS)
   L'utilità rs.exe elabora lo script fornito in un file di input. Utilizzare questa utilità per automatizzare le attività di amministrazione e distribuzione dei server di report.  
@@ -84,7 +84,7 @@ rs {-?}
  (Facoltativo) Specifica che i comandi del file di script vengano eseguiti come batch. Se uno o più comandi hanno esito negativo, verrà eseguito il rollback dell'intero batch. Vi sono tuttavia comandi non eseguibili in batch. Tali comandi verranno eseguiti normalmente e verrà eseguito un rollback solo in caso di eccezioni generate e non gestite nell'ambito dello script. Se lo script gestisce un'eccezione e completa normalmente la routine **Main**, verrà eseguito il commit del batch. Se si omette questo parametro, i comandi verranno eseguiti senza la creazione di un batch. Per altre informazioni, vedere [Batching Methods](../../reporting-services/report-server-web-service-net-framework-soap-headers/batching-methods.md).  
   
  **-v** *globalvar*  
- (Facoltativo) Consente di specificare le variabili globali utilizzate nello script. Se lo script utilizza variabili globali, è necessario specificare questo argomento. Il valore specificato deve essere valido per la variabile globale definita nel file con estensione rss. È necessario specificare una variabile globale per ogni argomento **–v** .  
+ (Facoltativo) Consente di specificare le variabili globali utilizzate nello script. Se lo script utilizza variabili globali, è necessario specificare questo argomento. Il valore specificato deve essere valido per la variabile globale definita nel file con estensione rss. È necessario specificare una variabile globale per ogni argomento **-v**.  
   
  L'argomento **-v** viene specificato nella riga di comando e consente di impostare il valore per una variabile globale definita in fase di esecuzione nello script. Se, ad esempio, lo script contiene un variabile denominata *parentFolder*, è possibile specificare un nome per la cartella nella riga di comando:  
   
@@ -104,7 +104,7 @@ rs {-?}
  Nell'esempio seguente viene illustrato come specificare il file script contenente lo script di [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET e i metodi del servizio Web che si desidera eseguire.  
   
 ```  
-rs –i c:\scriptfiles\script_copycontent.rss -s https://localhost/reportserver  
+rs -i c:\scriptfiles\script_copycontent.rss -s https://localhost/reportserver  
 ```  
   
  Per un esempio dettagliato, vedere [Script di esempio rs.exe di Reporting Services per la copia di contenuto tra server di report](../../reporting-services/tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md).  

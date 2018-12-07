@@ -17,12 +17,12 @@ ms.assetid: e38d5ce4-e538-4ab9-be67-7046e0d9504e
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: e865ccf2810b9dc701bfe942245d59bcb1ecf9d4
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: b6d10f1d16c31ad3af67e193a8bc684be0c66c1f
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51605491"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52395481"
 ---
 # <a name="register-a-service-principal-name-for-kerberos-connections"></a>Registrazione di un nome dell'entità servizio per le connessioni Kerberos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;
  L'autenticazione di Windows è il metodo preferito per l'autenticazione in SQL Server da parte degli utenti. I client che utilizzano l'autenticazione di Windows vengono autenticati tramite NTLM o Kerberos. In un ambiente Active Directory l'autenticazione Kerberos viene sempre tentata per prima. L'autenticazione Kerberos non è disponibile per client [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] che utilizzano named pipe.  
   
 ##  <a name="Permissions"></a> Permissions  
- Quando il servizio [!INCLUDE[ssDE](../../includes/ssde-md.md)] viene avviato, tenta di registrare il nome dell'entità servizio (SPN). Se l'account che avvia SQL Server non dispone dell'autorizzazione necessaria per registrare un nome SPN in Servizi di dominio Active Directory, questa chiamata non riesce e viene registrato un messaggio di avviso nel registro eventi applicazioni nonché nel log degli errori di SQL Server. Per registrare il nome SPN, è necessario che il [!INCLUDE[ssDE](../../includes/ssde-md.md)] venga eseguito con un account predefinito, ad esempio Sistema locale (non consigliato) o NETWORK SERVICE, oppure con un account che dispone dell'autorizzazione necessaria per registrare un nome SPN, ad esempio un account di amministratore di dominio. Quando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene eseguito nel sistema operativo  [!INCLUDE[win7](../../includes/win7-md.md)] o  [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] , è possibile eseguire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizzando un account virtuale o un account dei servizi gestiti (MSA). Entrambi gli account virtuali e MSA possono registrare un SPN. Se [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non viene eseguito con nessuno di questi account, il nome SPN non viene registrato all'avvio e l'amministratore di dominio lo dovrà registrare manualmente.  
+ Quando il servizio [!INCLUDE[ssDE](../../includes/ssde-md.md)] viene avviato, tenta di registrare il nome dell'entità servizio (SPN). Se l'account che avvia SQL Server non ha l'autorizzazione necessaria per registrare un nome SPN in Servizi di dominio Active Directory, questa chiamata non riesce e viene registrato un messaggio di avviso nel registro eventi applicazioni nonché nel log degli errori di SQL Server. Per registrare il nome SPN, è necessario che il [!INCLUDE[ssDE](../../includes/ssde-md.md)] venga eseguito con un account predefinito, ad esempio Sistema locale (non consigliato) o NETWORK SERVICE, oppure con un account che dispone dell'autorizzazione necessaria per registrare un nome SPN, ad esempio un account di amministratore di dominio. Quando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene eseguito nel sistema operativo  [!INCLUDE[win7](../../includes/win7-md.md)] o  [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] , è possibile eseguire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizzando un account virtuale o un account dei servizi gestiti (MSA). Entrambi gli account virtuali e MSA possono registrare un SPN. Se [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non viene eseguito con nessuno di questi account, il nome SPN non viene registrato all'avvio e l'amministratore di dominio lo dovrà registrare manualmente.  
   
 > [!NOTE]  
 >  Quando il dominio di Windows è configurato per essere eseguito a un livello funzionale inferiore a quello di [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] Windows Server 2008 R2, l'Account dei servizi gestiti non disporrà delle autorizzazioni necessarie per registrare i nomi SPN per il servizio [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] . Se l'autenticazione Kerberos è richiesta, l'amministratore di dominio deve registrare manualmente i nomi SPN di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sull'Account dei servizi gestiti.  

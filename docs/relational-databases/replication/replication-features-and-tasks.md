@@ -15,16 +15,16 @@ ms.assetid: 47c613e4-7fe9-462a-89b4-659b14825b70
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e14fb28098d46265bd962ee86ccb559fe706c4c2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8e66e135262c31f5e793c5609049ff13092e5d33
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47831685"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52511232"
 ---
 # <a name="replication-features-and-tasks"></a>Caratteristiche e attività di replica
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  In questo argomento sono incluse le informazioni che consentono a qualsiasi tipologia di utente (designer, sviluppatore, analista o amministratore) di progettare e implementare soluzioni di replica.  
+  Questo argomento include informazioni utili a qualsiasi tipologia di utente (designer, sviluppatore, analista o amministratore) per progettare e implementare soluzioni di replica.  
   
 ## <a name="in-this-section"></a>Contenuto della sezione  
   

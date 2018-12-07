@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 f1_keywords:
 - sql13.dqs.dm.refdata.f1
@@ -15,12 +14,12 @@ ms.assetid: 36af981c-d0d0-4dc6-afe5-bbb3c97845dc
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2a317f61002d185b73c146a8fd1392252211928c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 358b1779ebc24f17035cb50eda77c7249456ff9a
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47730819"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617082"
 ---
 # <a name="attach-domain-or-composite-domain-to-reference-data"></a>Collegare un dominio o un dominio composito ai dati di riferimento
 
@@ -34,9 +33,9 @@ ms.locfileid: "47730819"
 > [!WARNING]  
 >  Il dominio composito collegato a un servizio dati di riferimento è disponibile nell'elenco a discesa dei domini durante il mapping dei domini alle colonne nello schema del servizio dati di riferimento. Non eseguire il mapping del dominio composito a una colonna nello schema del servizio dati di riferimento; è necessario eseguire il mapping solo dei singoli domini all'interno di un dominio composito alle colonne appropriate nello schema del servizio dati di riferimento. In caso contrario, si verificherà un errore.  
   
- Uno schema di servizio dati di riferimento può contenere una colonna obbligatoria di cui è necessario eseguire il mapping con il dominio appropriato qualora si scegliesse di utilizzare il servizio dati di riferimento. La colonna obbligatoria in uno schema dati di riferimento viene identificata con "(M)" per il nome della colonna. Ad esempio, **AddressLine** è la colonna di schema obbligatoria in **Melissa Data – Address Data** e **CompanyName** è la colonna di schema obbligatoria in **Digital Trowel Inc. – Us companies and professional data for SQL users**.  
+ Uno schema di servizio dati di riferimento può contenere una colonna obbligatoria di cui è necessario eseguire il mapping con il dominio appropriato qualora si scegliesse di utilizzare il servizio dati di riferimento. La colonna obbligatoria in uno schema dati di riferimento viene identificata con "(M)" per il nome della colonna. Ad esempio, **AddressLine** è la colonna di schema obbligatoria in **Melissa Data - Address Data** e **CompanyName** è la colonna di schema obbligatoria in **Digital Trowel Inc. - Us companies and professional data for SQL users**.  
   
- In questo argomento, si creeranno quattro domini: **Riga indirizzo**, **Città**, **Stato**e **CAP**in un dominio composito, **Verifica indirizzo**, collegare il dominio composito al servizio dati di riferimento **Melissa Data – Controllo indirizzo** , quindi eseguire il mapping dei singoli domini all'interno del dominio composito alle colonne appropriate nello schema del servizio dati di riferimento.  
+ In questo argomento, si creeranno quattro domini: **Riga indirizzo**, **Città**, **Stato**e **CAP**in un dominio composito, **Verifica indirizzo**, collegare il dominio composito al servizio dati di riferimento **Melissa Data - Controllo indirizzo**, quindi eseguire il mapping dei singoli domini all'interno del dominio composito alle colonne appropriate nello schema del servizio dati di riferimento.  
   
 ## <a name="before-you-begin"></a>Prima di iniziare  
   
@@ -66,7 +65,7 @@ ms.locfileid: "47730819"
   
 8.  Nella finestra di dialogo **Catalogo dei provider di dati di riferimento online** :  
   
-    1.  In **DataMarket Data Quality Services**selezionare la casella **Melissa Data - Controllo indirizzo** .  
+    1.  In **DataMarket Data Quality Services**selezionare la casella **Melissa Data - Controllo indirizzo**.  
   
     2.  Eseguire il mapping delle colonne del servizio dati di riferimento Melissa Data - Controllo indirizzo con i domini appropriati (Riga indirizzo, Città, Stato e CAP). Per eseguire il mapping delle colonne, selezionare una colonna del servizio dati di riferimento nella colonna **Schema servizio dati di riferimento** , quindi selezionare il dominio appropriato nella colonna **Dominio** . Per aggiungere più righe nella tabella, fare clic sull'icona **Aggiungi voce di schema** .  
   

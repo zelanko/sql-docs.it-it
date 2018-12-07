@@ -22,12 +22,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 542ce78c267dc863f18604dd8ba43f2e4c5c6cf2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e26e17abccd023172dee0d42d06d519ef72f87e4
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47760609"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52538364"
 ---
 # <a name="search-for-words-close-to-another-word-with-near"></a>Ricerca di parole vicine a un'altra parola con NEAR
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -60,11 +60,11 @@ La sintassi di base di **NEAR** è la seguente:
   
  {  
   
- *search_term* [ ,…*n* ]  
+ *search_term* [ ,...*n* ]  
   
  |  
   
- (*search_term* [ ,…*n* ] ) [, <maximum_distance> [, <match_order> ] ]  
+ (*search_term* [ ,...*n* ] ) [, <maximum_distance> [, <match_order> ] ]  
   
  }  
   
@@ -129,7 +129,7 @@ GO
 CONTAINS(column_name, 'NEAR((term1, term2), 5, TRUE) AND term3')  
 ```  
   
- Non è possibile combinare NEAR con un termine generazionale (ISABOUT …) o un termine ponderato (FORMSOF …).  
+ Non è possibile combinare NEAR con un termine generazionale (ISABOUT ...) o un termine ponderato (FORMSOF ...).  
   
 ##  <a name="Additional_Considerations"></a> Altre informazioni sulle ricerche di prossimità  
    
@@ -159,4 +159,4 @@ CONTAINS(column_name, 'NEAR((term1, term2), 5, TRUE) AND term3')
 ## <a name="see-also"></a>Vedere anche  
  [CONTAINS &#40;Transact-SQL&#41;](../../t-sql/queries/contains-transact-sql.md)  
  [CONTAINSTABLE &#40;Transact-SQL&#41;](../../relational-databases/system-functions/containstable-transact-sql.md)   
- [Eseguire query con ricerca full-text](../../relational-databases/search/query-with-full-text-search.md)   
+ [Esecuzione della query con ricerca Full-Text](../../relational-databases/search/query-with-full-text-search.md)   

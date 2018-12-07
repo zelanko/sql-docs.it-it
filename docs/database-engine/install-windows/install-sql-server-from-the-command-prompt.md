@@ -85,12 +85,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 59cbf31d79862a3ba363cc2ee4c5750ccf5db1d9
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 08aab46bc5e8914ec596e0e326fefc40248c26c4
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51605921"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52532465"
 ---
 # <a name="install-sql-server-from-the-command-prompt"></a>Installare SQL Server dal prompt dei comandi
 
@@ -797,7 +797,7 @@ setup.exe /q /ACTION=CompleteFailoverCluster /InstanceName="<Insert Instance Nam
  Per aggiungere un nodo a un'istanza del cluster di failover esistente con il [!INCLUDE[ssDE](../../includes/ssde-md.md)] e [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. 
   
 ```  
-setup.exe /q /ACTION=AddNode /INSTANCENAME="<Insert Instance Name>" /SQLSVCACCOUNT="<SQL account that is used on other nodes>" /SQLSVCPASSWORD="<password for SQL account>" /AGTSVCACCOUNT="<SQL Server Agent account that is used on other nodes>", /AGTSVCPASSWORD="<SQL Server Agent account password>" /ASSVCACCOUNT="<AS account that is used on other nodes>" /ASSVCPASSWORD=”<password for AS account>” /INDICATEPROGRESS /IACCEPTSQLSERVERLICENSETERMS /FAILOVERCLUSTERIPADDRESSES="IPv4;xx.xxx.xx.xx;ClusterNetwork1;xxx.xxx.xxx.x" /CONFIRMIPDEPENDENCYCHANGE=0  
+setup.exe /q /ACTION=AddNode /INSTANCENAME="<Insert Instance Name>" /SQLSVCACCOUNT="<SQL account that is used on other nodes>" /SQLSVCPASSWORD="<password for SQL account>" /AGTSVCACCOUNT="<SQL Server Agent account that is used on other nodes>", /AGTSVCPASSWORD="<SQL Server Agent account password>" /ASSVCACCOUNT="<AS account that is used on other nodes>" /ASSVCPASSWORD="<password for AS account>" /INDICATEPROGRESS /IACCEPTSQLSERVERLICENSETERMS /FAILOVERCLUSTERIPADDRESSES="IPv4;xx.xxx.xx.xx;ClusterNetwork1;xxx.xxx.xxx.x" /CONFIRMIPDEPENDENCYCHANGE=0  
 ```  
   
 #### <a name="remove-node-parameters"></a>Parametri per la rimozione di un nodo  
@@ -889,7 +889,7 @@ setup.exe /q /ACTION=RemoveNode /INSTANCENAME="<Insert Instance Name>" [/INDICAT
   
  Il ruolo AllFeatures_WithDefaults rappresenta il comportamento predefinito per le edizioni di [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] e consente di ridurre il numero di finestre di dialogo presentate all'utente. Può essere specificato dalla riga di comando in caso di installazione di un'edizione di SQL Server diversa da [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]. 
   
-|Role|Descrizione|Elementi installati|  
+|Role|Descrizione|Elementi installati...|  
 |----------|-----------------|---------------|  
 |SPI_AS_ExistingFarm|Viene installato [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] come istanza denominata di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] in una farm [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] esistente o in un server autonomo.|Motore di calcolo di[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] preconfigurato per l'elaborazione e l'archiviazione dei dati in memoria.<br /><br /> Pacchetti della soluzione[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] <br /><br /> Programma di installazione per [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)]<br /><br /> documentazione online di SQL Server|  
 |SPI_AS_NewFarm|Vengono installati [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e il [!INCLUDE[ssDE](../../includes/ssde-md.md)] come istanza denominata di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] in una nuova farm Office [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] non configurata o in un server autonomo. Il programma di installazione di SQL Server consentirà la configurazione della farm durante l'installazione del ruolo della funzionalità.|Motore di calcolo di[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] preconfigurato per l'elaborazione e l'archiviazione dei dati in memoria.<br /><br /> Pacchetti della soluzione[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] <br /><br /> documentazione online di SQL Server<br /><br /> [!INCLUDE[ssDE](../../includes/ssde-md.md)]<br /><br /> Strumenti di configurazione<br /><br /> [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]|  

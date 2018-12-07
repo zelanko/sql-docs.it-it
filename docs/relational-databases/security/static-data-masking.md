@@ -11,19 +11,19 @@ author: egranet
 ms.author: esgranet
 manager: ajayj
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 50b39571179528f96f19370c4935b87e457b214f
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 18dd28aeb4c1678b4b6ae454c065d3d96770cb5a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51662997"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52539111"
 ---
 # <a name="static-data-masking"></a>Maschera dati statica
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 La maschera dati statica è un componente di [SQL Server Management Studio](../../ssms/sql-server-management-studio-ssms.md) 18.0 anteprima 5 e versioni successive. La versione di anteprima più recente di SQL Server Management Studio può essere scaricata [qui](../../ssms/download-sql-server-management-studio-ssms.md). 
 
-![Maschera dati statica](../../relational-databases/security/media/sql-static-data-masking/static_data_masking_intro_image.PNG)
+![Mascheramento dei dati statico](../../relational-databases/security/media/sql-static-data-masking/static_data_masking_intro_image.PNG)
 
 
 ## <a name="what-is-static-data-masking"></a>Cos'è la maschera dati statica? 
@@ -88,7 +88,7 @@ La sostituzione avviene a livello di archiviazione. Di conseguenza, non sarà po
 
 Di seguito è riportata una guida dettagliata per l'esecuzione della maschera dati statica. 
  
-1. Avviare SQL Server Management Studio. Connettersi al database. Nel riquadro **Esplora oggetti** sul lato sinistro espandere la cartella Database. Fare clic con il pulsante destro del mouse sul database da mascherare. Fare clic su **Attività**. Fare clic su **Maschera database… (anteprima)**.
+1. Avviare SQL Server Management Studio. Connettersi al database. Nel riquadro **Esplora oggetti** sul lato sinistro espandere la cartella Database. Fare clic con il pulsante destro del mouse sul database da mascherare. Fare clic su **Attività**. Fare clic su **Maschera database... (anteprima)**.
  
  ![Menu Attività](../../relational-databases/security/media/sql-static-data-masking/task_data_masking.PNG)
  
@@ -135,7 +135,7 @@ La maschera NULL sostituisce tutti i valori nella colonna con NULL. Se la colonn
 
 ### <a name="single-value-masking"></a>Maschera a valore singolo
 
-La maschera a valore singolo sostituisce tutti i valori nella colonna con un singolo valore fisso. Questo valore è specificato dall'utente. Il formato dell'input deve essere convertibile nel tipo della colonna selezionata. Per specificare il valore, fare clic su **Configura...** , specificare un valore e quindi fare clic su **Okay**. 
+La maschera a valore singolo sostituisce tutti i valori nella colonna con un singolo valore fisso. Questo valore è specificato dall'utente. Il formato dell'input deve essere convertibile nel tipo della colonna selezionata. Per specificare il valore, fare clic su **Configura...**, specificare un valore e quindi fare clic su **Okay**. 
 
 ![Parametro della maschera a valore singolo](../../relational-databases/security/media/sql-static-data-masking/single_value_parameter.PNG)
 

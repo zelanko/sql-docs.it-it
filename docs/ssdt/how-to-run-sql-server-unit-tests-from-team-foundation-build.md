@@ -11,12 +11,12 @@ ms.assetid: 24f5b85d-d6f9-415f-b09f-933b78dc0b67
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: fe4b6dd462a8f8fec6797c26f7ae0461c4b0a4ce
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 1857f503abe300127d92c26ba5591407b863ebc0
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51669860"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52527924"
 ---
 # <a name="how-to-run-sql-server-unit-tests-from-team-foundation-build"></a>Procedura: Eseguire unit test di SQL Server da Team Foundation Build
 È possibile usare Team Foundation Build per eseguire gli unit test di SQL Server come parte di un test di verifica della compilazione (BVT). È possibile configurare gli unit test per distribuire il database, generare dati di test e quindi eseguire i test selezionati. Se non si ha familiarità con Team Foundation Build, è consigliabile esaminare le informazioni riportate di seguito prima di applicare le procedure descritte in questo argomento:  
@@ -93,7 +93,7 @@ In genere, quando si crea una definizione di compilazione per eseguire unit test
   
 2.  Selezionare un test.  
   
-3.  Nel riquadro delle proprietà fare clic su **Categorie di test**, quindi sui puntini di sospensione (…) nella colonna più a destra.  
+3.  Nel riquadro delle proprietà fare clic su **Categorie di test**, quindi sui puntini di sospensione (...) nella colonna più a destra.  
   
 4.  Nella casella **Aggiungi nuova categoria** della finestra **Categoria test** digitare un nome per la nuova categoria di test.  
   
@@ -252,7 +252,7 @@ In questa procedura vengono archiviati tutti i file della soluzione. In questi f
   
 5.  Nella barra di navigazione fare clic su **Processo**.  
   
-6.  Nel gruppo **Obbligatorio** di **Elementi da compilare** fare clic sul pulsante Sfoglia (…).  
+6.  Nel gruppo **Obbligatorio** di **Elementi da compilare** fare clic sul pulsante Sfoglia (...).  
   
 7.  Nella finestra di dialogo **Editor elenco di progetti di compilazione** fare clic su **Aggiungi**.  
   

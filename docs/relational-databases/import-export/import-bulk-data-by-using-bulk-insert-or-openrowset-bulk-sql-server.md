@@ -23,20 +23,20 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 20ce7b15fcfedfe77ff3a03a4dfde1e47969ffad
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c004a991872257baa045be6e0253d7d63979f2f7
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47701929"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542439"
 ---
 # <a name="import-bulk-data-by-using-bulk-insert-or-openrowsetbulk-sql-server"></a>Importazione di dati per operazioni bulk con BULK INSERT o OPENROWSET(BULK...) (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-  In questo argomento viene fornita una panoramica sull'utilizzo dell'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] BULK INSERT e dell'istruzione INSERT...SELECT * FROM OPENROWSET(BULK...) per effettuare l'importazione bulk di dati da un file di dati in una tabella di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . L'argomento include inoltre considerazioni sulla sicurezza per l'utilizzo di BULK INSERT e OPENROWSET(BULK…), nonché sull'utilizzo di questi metodi per l'importazione bulk da un'origine dei dati remota.  
+  In questo argomento viene fornita una panoramica sull'utilizzo dell'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] BULK INSERT e dell'istruzione INSERT...SELECT * FROM OPENROWSET(BULK...) per effettuare l'importazione bulk di dati da un file di dati in una tabella di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . L'argomento include anche considerazioni sulla sicurezza per l'uso di BULK INSERT e OPENROWSET(BULK…), nonché sull'uso di questi metodi per l'importazione bulk da un'origine dei dati remota.  
   
 > [!NOTE]
-> Quando si utilizza BULK INSERT o OPENROWSET(BULK…), è importante comprendere in che modo la versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gestisce la rappresentazione. Per ulteriori informazioni, vedere la sezione "Considerazioni sulla sicurezza" di seguito in questo argomento.  
+> Quando si usa BULK INSERT o OPENROWSET(BULK...), è importante comprendere in che modo la versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gestisce la rappresentazione. Per ulteriori informazioni, vedere la sezione "Considerazioni sulla sicurezza" di seguito in questo argomento.  
   
 ## <a name="bulk-insert-statement"></a>BULK INSERT - istruzione  
  L'istruzione BULK INSERT consente di caricare dati da un file di dati a una tabella. Questa funzionalità è analoga a quella dell'opzione **in** del comando **bcp** , ma il file di dati viene letto dal processo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Per una descrizione della sintassi di BULK INSERT, vedere [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md).  
@@ -50,7 +50,7 @@ ms.locfileid: "47701929"
   
 -   [Mantenere i valori Identity durante l'importazione in blocco dei dati &#40;SQL Server&#41;](../../relational-databases/import-export/keep-identity-values-when-bulk-importing-data-sql-server.md)  
   
--   [Mantenere i valori Null o usare i valori predefiniti durante l'importazione in blocco &#40;SQL Server&#41;](../../relational-databases/import-export/keep-nulls-or-use-default-values-during-bulk-import-sql-server.md)  
+-   [Mantenimento dei valori Null o uso dei valori predefiniti durante un'importazione bulk &#40;SQL Server&#41;](../../relational-databases/import-export/keep-nulls-or-use-default-values-during-bulk-import-sql-server.md)  
   
 -   [Impostazione dei caratteri di terminazione del campo e della riga &#40;SQL Server&#41;](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md)  
   
@@ -68,12 +68,12 @@ ms.locfileid: "47701929"
   
 -   [Utilizzo di un file di formato per eseguire il mapping tra le colonne della tabella e i campi del file di dati &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)  
   
-## <a name="openrowsetbulk-function"></a>Funzione OPENROWSET(BULK…)  
- Al provider bulk per set di righe OPENROWSET si accede chiamando la funzione OPENROWSET e specificando l'opzione BULK. La funzione OPENROWSET(BULK…) consente di accedere ai dati remoti tramite connessione a un'origine dei dati remota, ad esempio un file di dati, mediante un provider OLE DB.  
+## <a name="openrowsetbulk-function"></a>OPENROWSET(BULK...) Funzione  
+ Al provider bulk per set di righe OPENROWSET si accede chiamando la funzione OPENROWSET e specificando l'opzione BULK. La funzione OPENROWSET(BULK...) consente di accedere ai dati remoti connettendosi a un'origine dei dati remota, ad esempio un file di dati, con un provider OLE DB.  
 
 **Si applica a:** `OPENROWSET` non è disponibile in [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].
   
- Per eseguire l'importazione bulk dei dati, chiamare OPENROWSET(BULK…) da una clausola SELECT…FROM all'interno di un'istruzione INSERT. La sintassi di base per l'importazione bulk dei dati è la seguente:  
+ Per eseguire l'importazione bulk dei dati, chiamare OPENROWSET(BULK...) da una clausola SELECT...FROM all'interno di un'istruzione INSERT. La sintassi di base per l'importazione bulk dei dati è la seguente:  
   
  INSERT ... SELECT * FROM OPENROWSET(BULK...).  
   
@@ -109,7 +109,7 @@ ms.locfileid: "47701929"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows possono essere configurati in modo da abilitare un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per connettersi a un'altra istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] trasmettendo le credenziali di un utente di Windows autenticato. Questa configurazione è nota come *rappresentazione* o *delega*. La comprensione delle modalità di gestione della sicurezza da parte della versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ai fini della rappresentazione dell'utente rappresenta un elemento importante quando si usa BULK INSERT o OPENROWSET. La rappresentazione utente fa sì che i file di dati possano trovarsi su un computer diverso rispetto al processo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o all'utente. Se, ad esempio, un utente nel **Computer_A** ha accesso a un file di dati presente nel **Computer_B**e la delega delle credenziali è stata impostata in modo corretto, l'utente potrà connettersi a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in esecuzione nel **Computer_C**, accedere al file di dati nel **Computer_B**ed effettuare un'importazione in blocco dei dati dal file in una tabella nel **Computer_C**.  
   
 ## <a name="bulk-importing-from-a-remote-data-file"></a>Importazione bulk da un file di dati remoto  
- Per usare BULK INSERT o INSERT...SELECT \* FROM OPENROWSET(BULK...) per effettuare l'importazione in blocco dei dati da un altro computer, è necessario che il file di dati sia condiviso tra i due computer. Per specificare un file di dati condiviso usare il relativo nome UNC (Universal Naming Convention), il cui formato generico è **\\\\***Nomeserver***\\***Nomecondivisione***\\***Percorso***\\***Nomefile*. Inoltre, è necessario che all'account utilizzato per l'accesso al file di dati siano state concesse le autorizzazioni richieste per la lettura del file sul disco remoto.  
+ Per usare BULK INSERT o INSERT...SELECT \* FROM OPENROWSET(BULK...) per effettuare l'importazione in blocco dei dati da un altro computer, è necessario che il file di dati sia condiviso tra i due computer. Per specificare un file di dati condiviso, usare il relativo nome UNC (Universal Naming Convention), il cui formato generico è **\\\\**_Nomeserver_**\\**_Nomecondivisione_**\\**_Percorso_**\\**_Nomefile_. Inoltre, è necessario che all'account utilizzato per l'accesso al file di dati siano state concesse le autorizzazioni richieste per la lettura del file sul disco remoto.  
   
  Ad esempio, l'istruzione `BULK INSERT` seguente esegue l'importazione bulk dei dati nella tabella `SalesOrderDetail` del database `AdventureWorks` da un file di dati denominato `newdata.txt`. Tale file di dati è memorizzato in una cartella condivisa denominata `\dailyorders` e presente in una directory condivisa di rete denominata `salesforce` in un sistema denominato `computer2`.  
   

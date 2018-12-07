@@ -27,12 +27,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bcf25195821c42d5120fc5d248b364ce23e24ed0
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: f8e9090e92baba8f67ee7ad0303103f41c66ace9
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51700319"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52532174"
 ---
 # <a name="delete-transact-sql"></a>DELETE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -173,7 +173,7 @@ DELETE FROM [database_name . [ schema ] . | schema. ] table_name
  Usare la funzione @@ROWCOUNT per restituire il numero di righe eliminate nell'applicazione client. Per altre informazioni, vedere [@@ROWCOUNT &#40;Transact-SQL&#41;](../../t-sql/functions/rowcount-transact-sql.md).  
   
 ## <a name="error-handling"></a>Gestione degli errori  
- È possibile implementare la gestione degli errori per l'istruzione DELETE specificando l'istruzione in un costrutto TRY…CATCH.  
+ È possibile implementare la gestione degli errori per l'istruzione DELETE specificando l'istruzione in un costrutto TRY...CATCH.  
   
  L'istruzione DELETE può avere esito negativo se viola un trigger o tenta di rimuovere una riga a cui fanno riferimento i dati di un'altra tabella contenente un vincolo FOREIGN KEY. Se l'istruzione DELETE tenta di rimuovere più righe e l'eliminazione di una qualsiasi di queste righe viola un trigger o un vincolo, l'istruzione viene annullata, viene restituito un errore e non viene rimossa alcuna riga.  
   

@@ -9,12 +9,12 @@ ms.topic: tutorial
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b9294d9208b9cafc3610a9682c13cebcc970669e
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 792791cf7ac6abebc56f1b59381fb5d18e83d237
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51672940"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52417482"
 ---
 # <a name="improve-polybase-scale-out-groups-on-windows"></a>Migliorare i gruppi con scalabilità orizzontale PolyBase in Windows
 

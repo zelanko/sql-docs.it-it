@@ -13,12 +13,12 @@ ms.assetid: 39a51586-6977-4c45-b80b-0157a54ad510
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0304d7e1a27d9ff31be603ee4d3248f9b4c472eb
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 621d19785793115c924243fd750b2d78c503c1ba
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51638799"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52545790"
 ---
 # <a name="incorporate-a-data-profiling-task-in-package-workflow"></a>Incorporamento di un'attività Profiling dati nel flusso di lavoro del pacchetto
   Il profiling dati e la pulizia non sono attività potenziali per un processo automatizzato nelle fasi iniziali. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]l'output dell'attività Profiling dati richiede di solito un'analisi visiva e una valutazione umana per determinare se le violazioni segnalate sono significative o eccessive. Anche dopo il riconoscimento di problemi di qualità dei dati, è comunque necessario definire con attenzione un piano ben studiato per tentare di individuare l'approccio migliore per la pulizia.  
@@ -264,7 +264,7 @@ ms.locfileid: "51638799"
   
 8.  Chiudere l'ambiente di sviluppo dello script, quindi l'editor attività Script.  
   
-#### <a name="alternative-codereading-the-profile-output-from-a-variable"></a>Codice alternativo: lettura dell'output del profilo da una variabile  
+#### <a name="alternative-code-reading-the-profile-output-from-a-variable"></a>Codice alternativo: lettura dell'output del profilo da una variabile  
  La procedura riportata in precedenza indica come caricare l'output dell'attività Profiling dati da un file. Un metodo alternativo consiste nel caricare questo output da una variabile del pacchetto. A tale scopo, è necessario apportare le modifiche seguenti al codice di esempio:  
   
 -   Chiamare il metodo **LoadXml** della classe **XmlDocument** anziché il metodo **Load** .  

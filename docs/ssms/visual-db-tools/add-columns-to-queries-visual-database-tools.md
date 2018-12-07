@@ -16,19 +16,19 @@ ms.assetid: 82f3ba72-3d72-4fb1-8179-2a953a782787
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: db9e0371282532c2ef70db963dfbb48b45cafa02
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2c87f8b4d9cca7ac486c680bd8e758c8b81ae1e3
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47641459"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52516968"
 ---
 # <a name="add-columns-to-queries-visual-database-tools"></a>Aggiunta di colonne a query (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 Per utilizzare una colonna in una query, è necessario aggiungerla alla query. È possibile aggiungere una colonna per visualizzarla nell'output della query, per utilizzarla per l'ordinamento oppure per ricercarne o riepilogarne il contenuto. È possibile decidere quali colonne utilizzate nella query devono essere incluse nel riquadro Risultati quando viene eseguita la query. Per altre informazioni, vedere [Rimuovere colonne dai risultati della query &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/remove-columns-from-query-results-visual-database-tools.md).  
   
 > [!NOTE]  
-> Per visualizzare il tipo di dati di una colonna in Progettazione query e Progettazione viste, selezionare la tabella o l'oggetto con valori di tabella nel **riquadro Diagramma** e nella finestra delle proprietà fare clic su Elenco colonne. Fare clic sui **puntini di sospensione (…)** per aprire la finestra di dialogo **Elenco colonne** .  
+> Per visualizzare il tipo di dati di una colonna in Progettazione query e Progettazione viste, selezionare la tabella o l'oggetto con valori di tabella nel **riquadro Diagramma** e nella finestra delle proprietà fare clic su Elenco colonne. Fare clic sui **puntini di sospensione (...)** per aprire la finestra di dialogo **Elenco colonne**.  
   
 Ovunque si utilizzi una colonna in una query, è anche possibile utilizzare un'espressione costituita da una qualunque combinazione di colonne, valori letterali, operatori e funzioni.  
   

@@ -15,12 +15,12 @@ ms.assetid: 47d69e37-8778-4630-809b-2261b5c41c2c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e22a148595e8aac059193a21a1b5d4688f5d6f4c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ecf449319df1d2edc24a061165a983ba08b24347
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47686559"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542380"
 ---
 # <a name="create-alter-and-drop-filetables"></a>Creare, modificare e rilasciare FileTables
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -98,7 +98,7 @@ GO
   
 -   Poiché una tabella FileTable contiene una colonna FILESTREAM, tale tabella richiede un filegroup FILESTREAM valido. È eventualmente possibile specificare un filegroup FILESTREAM valido come parte del comando **CREATE TABLE** per la creazione di una tabella FileTable. Se non si specifica un filegroup, la tabella FileTable utilizza il filegroup FILESTREAM predefinito per il database. Se il database non include un filegroup FILESTREAM, viene generato un errore.  
   
--   Non è possibile creare un vincolo di tabella come parte di un'istruzione **CREATE TABLE…AS FILETABLE** . Sarà tuttavia possibile aggiungere il vincolo in seguito utilizzando un'istruzione **ALTER TABLE** .  
+-   Non è possibile creare un vincolo di tabella come parte di un'istruzione **CREATE TABLE...AS FILETABLE**. Sarà tuttavia possibile aggiungere il vincolo in seguito utilizzando un'istruzione **ALTER TABLE** .  
   
 -   Non è possibile creare una tabella FileTable nel database **tempdb** o in qualsiasi altro database di sistema.  
   

@@ -14,12 +14,12 @@ ms.assetid: 6012e120-5f72-4f4f-ae6e-f9a57ae1dea7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b7b84f8d8de17b64d99b8e308ab45c36479b4a2b
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 5dc61811562a8c9fb121d170d89b0b28806b29f4
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51668888"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52516703"
 ---
 # <a name="how-to-change-target-platform-and-publish-a-database-project"></a>Procedura: Modifica della piattaforma di destinazione e pubblicazione di un progetto di database
 È possibile impostare la versione di destinazione di SQL Server per il progetto di database SQL Server Data Tools (SSDT) su qualsiasi istanza supportata di SQL Server (SQL Server 2005, 2008, 2008 R2, Microsoft SQL Server 2012 o SQL Azure). In questo modo, è possibile centralizzare lo sviluppo del database in un unico progetto, ma la pubblicazione viene eseguita in più versioni di istanze di SQL Server in base alle esigenze.  
@@ -63,7 +63,7 @@ In SSDT, l'esecuzione di questa attività risulta semplice poiché viene presa i
   
 6.  Inoltre, è possibile salvare le impostazioni di pubblicazione in un profilo affinché sia possibile riutilizzare le stesse impostazioni per operazioni di pubblicazione future. A tale scopo, fare clic sul pulsante **Salva profilo con nome** nella finestra di dialogo **Database di pubblicazione** . In futuro, è possibile fare clic sul pulsante **Carica profilo** quando si desidera ricaricare le impostazioni esistenti.  
   
-7.  Si notino i messaggi nella finestra **Operazioni degli strumenti dati** . Fare clic sul collegamento "Visualizza anteprima" a destra di **Creazione anteprima di pubblicazione…** In tal modo verrà aperta l'anteprima report della distribuzione. Se la piattaforma di destinazione del progetto non è identica al server di database in cui viene pubblicato il progetto, tramite SSDT verrà generato un avviso in questo report.  Se, ad esempio, la piattaforma di destinazione del progetto è Microsoft SQL Server 2012 e si tenta di pubblicare il progetto in un'istanza del server SQL Server 2008 R2, verrà visualizzato il seguente avviso nella finestra di**output**:  
+7.  Si notino i messaggi nella finestra **Operazioni degli strumenti dati** . Fare clic sul collegamento "Visualizza anteprima" a destra di **Creazione anteprima di pubblicazione...** In tal modo verrà aperta l'anteprima report della distribuzione. Se la piattaforma di destinazione del progetto non è identica al server di database in cui viene pubblicato il progetto, SSDT genererà un avviso in questo report.  Se, ad esempio, la piattaforma di destinazione del progetto è Microsoft SQL Server 2012 e si prova a pubblicare il progetto in un'istanza del server SQL Server 2008 R2, verrà visualizzato il seguente avviso nella finestra di**output**:  
   
 **Un progetto in cui si specifica Microsoft SQL Server 2012 come piattaforma di destinazione può riscontrare problemi di compatibilità con SQL Server 2008**    Se in tale progetto sono incluse entità (ad esempio, un oggetto Sequence) introdotte in Microsoft SQL Server 2012, l'operazione di pubblicazione non verrà completata.  
   

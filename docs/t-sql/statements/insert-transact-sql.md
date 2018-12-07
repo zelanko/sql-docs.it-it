@@ -33,12 +33,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e2c24413499991277e93c882c581cc57a7c07478
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: be8577fca914627434314fa4b7352d6610ff72c2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51704049"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52522907"
 ---
 # <a name="insert-transact-sql"></a>INSERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -307,7 +307,7 @@ Per informazioni specifiche sull'inserimento di dati in tabelle grafici SQL, ved
   
 ### <a name="best-practices-for-bulk-importing-data"></a>Procedure consigliate per l'importazione bulk di dati  
   
-#### <a name="using-insert-intoselect-to-bulk-import-data-with-minimal-logging"></a>Utilizzo di INSERT INTO...SELECT per eseguire l'importazione bulk dei dati con registrazione minima  
+#### <a name="using-insert-intoselect-to-bulk-import-data-with-minimal-logging"></a>Uso di INSERT INTO...SELECT per eseguire l'importazione bulk dei dati con registrazione minima  
  È possibile usare `INSERT INTO <target_table> SELECT <columns> FROM <source_table>` per trasferire in modo efficiente un numero elevato di righe da una tabella, ad esempio una tabella di staging, in un'altra tabella con registrazione minima. La registrazione minima può migliorare le prestazioni dell'istruzione e ridurre la possibilità che l'operazione riempia lo spazio del log delle transazioni disponibile durante la transazione.  
   
  Per utilizzare la registrazione minima con questa istruzione, sono necessari i requisiti seguenti:  
@@ -322,7 +322,7 @@ Per informazioni specifiche sull'inserimento di dati in tabelle grafici SQL, ved
   
 Per le righe inserite in un heap come risultato di un'azione di inserimento in un'istruzione MERGE può essere eseguita la registrazione minima.  
   
- A differenza dell'istruzione BULK INSERT, che contiene un blocco di aggiornamento bulk meno restrittivo, l'istruzione INSERT INTO…SELECT con l'hint TABLOCK contiene un blocco esclusivo (X) sulla tabella che non consente di inserire righe utilizzando operazioni di inserimento parallele.  
+ A differenza dell'istruzione BULK INSERT, che contiene un blocco di aggiornamento bulk meno restrittivo, l'istruzione INSERT INTO...SELECT con l'hint TABLOCK contiene un blocco esclusivo (X) sulla tabella che non consente di inserire righe utilizzando operazioni di inserimento parallele.  
   
 #### <a name="using-openrowset-and-bulk-to-bulk-import-data"></a>Utilizzo di OPENROWSET e BULK per l'importazione bulk dei dati  
  La funzione OPENROWSET può accettare gli hint di tabella seguenti i quali supportano le ottimizzazioni per il caricamento bulk con l'istruzione INSERT:  
@@ -380,7 +380,7 @@ Queste ottimizzazioni sono simili a quelle disponibili con il comando BULK INSER
     ```  
   
 ## <a name="error-handling"></a>Gestione degli errori  
- È possibile implementare la gestione degli errori per l'istruzione INSERT specificando l'istruzione in un costrutto TRY…CATCH.  
+ È possibile implementare la gestione degli errori per l'istruzione INSERT specificando l'istruzione in un costrutto TRY...CATCH.  
   
  Se un'istruzione INSERT viola un vincolo o una regola oppure il valore non è compatibile con il tipo di dati della colonna, l'istruzione ha esito negativo e viene restituito un messaggio di errore.  
   
@@ -406,7 +406,7 @@ In Parallel Data Warehouse la clausola ORDER BY non è valida in VIEWS, CREATE T
 ## <a name="security"></a>Security  
  Durante una connessione a un server collegato, il server mittente fornisce un nome di account di accesso e una password per connettersi al server ricevente per suo conto. Perché la connessione funzioni, è necessario creare un mapping dell'account di accesso tra i server collegati usando [sp_addlinkedsrvlogin](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md).  
   
- Quando si utilizza OPENROWSET(BULK…), è essenziale comprendere il modo in cui la rappresentazione viene gestita da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per altre informazioni, vedere "Considerazioni sulla sicurezza" [Importazione di dati per operazioni bulk con BULK INSERT o OPENROWSET&#40;BULK...&#41; &#40;SQL Server&#41;](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md).  
+ Quando si usa OPENROWSET(BULK...), è essenziale comprendere il modo in cui la rappresentazione viene gestita da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per altre informazioni, vedere "Considerazioni sulla sicurezza" [Importazione di dati per operazioni bulk con BULK INSERT o OPENROWSET&#40;BULK...&#41; &#40;SQL Server&#41;](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md).  
   
 ### <a name="permissions"></a>Permissions  
  È richiesta l'autorizzazione INSERT per la tabella di destinazione.  
@@ -421,10 +421,10 @@ In Parallel Data Warehouse la clausola ORDER BY non è valida in VIEWS, CREATE T
 |--------------|------------------------------|  
 |[Sintassi di base](#BasicSyntax)|INSERT • costruttore di valori di tabella|  
 |[Gestione dei valori di colonna](#ColumnValues)|IDENTITY • NEWID • valori predefiniti • tipi definiti dall'utente|  
-|[Inserimento di dati da altre tabelle](#OtherTables)|INSERT…SELECT • INSERT…EXECUTE • espressione di tabella comune WITH • TOP • OFFSET FETCH|  
+|[Inserimento di dati da altre tabelle](#OtherTables)|INSERT...SELECT • INSERT...EXECUTE • espressione di tabella comune WITH • TOP • OFFSET FETCH|  
 |[Indicazione di oggetti di destinazione diversi dalle tabelle standard](#TargetObjects)|Viste • variabili di tabella|  
 |[Inserimento di righe in una tabella remota](#RemoteTables)|Server collegato • funzione per set di righe OPENQUERY • funzione per set di righe OPENDATASOURCE|  
-|[Caricamento bulk di dati da tabelle o file di dati](#BulkLoad)|INSERT…SELECT • funzione OPENROWSET|  
+|[Caricamento bulk di dati da tabelle o file di dati](#BulkLoad)|INSERT...SELECT • funzione OPENROWSET|  
 |[Override del comportamento predefinito di Query Optimizer tramite hint](#TableHints)|Hint di tabella|  
 |[Acquisizione dei risultati dell'istruzione INSERT](#CaptureResults)|Clausola OUTPUT|  
   
@@ -537,7 +537,7 @@ INSERT INTO dbo.Points (PointValue) VALUES (CAST ('1,99' AS Point));
  Negli esempi contenuti in questa sezione vengono illustrati i metodi per l'inserimento di righe da una tabella in un'altra.  
   
 #### <a name="h-using-the-select-and-execute-options-to-insert-data-from-other-tables"></a>H. Utilizzo delle opzioni SELECT ed EXECUTE per inserire dati da altre tabelle  
- Nell'esempio seguente viene illustrato come inserire dati da una tabella in un'altra tramite l'istruzione INSERT…SELECT o INSERT…EXECUTE. Ogni metodo è basato su un'istruzione SELECT su più tabelle, in cui l'elenco di colonne include un'espressione e un valore letterale.  
+ Nell'esempio seguente viene illustrato come inserire dati da una tabella in un'altra usando l'istruzione INSERT...SELECT o INSERT...EXECUTE. Ogni metodo è basato su un'istruzione SELECT su più tabelle, in cui l'elenco di colonne include un'espressione e un valore letterale.  
   
  La prima istruzione INSERT usa un'istruzione SELECT per derivare i dati dalle tabelle di origine (`Employee`, `SalesPerson` e `Person`) nel database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] e archiviare il set di risultati nella tabella `EmployeeSales`. Nella seconda istruzione INSERT viene utilizzata la clausola EXECUTE per chiamare una stored procedure che contiene l'istruzione SELECT. Nella terza istruzione INSERT viene utilizzata la clausola EXECUTE per fare riferimento all'istruzione SELECT come stringa letterale.  
   
@@ -812,7 +812,7 @@ WHERE T2.YearMeasured = 2009 and T2.Speed > 40;
  Negli esempi di questa sezione vengono illustrati due metodi per eseguire il caricamento bulk dei dati in una tabella tramite l'istruzione INSERT.  
   
 #### <a name="q-inserting-data-into-a-heap-with-minimal-logging"></a>Q. Inserimento di dati in un heap con registrazione minima  
- Nell'esempio seguente viene creata una nuova tabella (heap) in cui vengono inseriti dati da un'altra tabella con registrazione minima. L'esempio presuppone che il modello di recupero del database `AdventureWorks2012` sia impostato su FULL. Per assicurare l'utilizzo della registrazione minima, il modello di recupero del database `AdventureWorks2012` viene impostato su BULK_LOGGED prima che le righe vengano inserite e reimpostato su FULL dopo l'istruzione INSERT INTO...SELECT. Inoltre, viene specificato l'hint TABLOCK per la tabella di destinazione `Sales.SalesHistory`. In tal modo, si assicura l'utilizzo da parte dell'istruzione di uno spazio minimo nel log delle transazioni con risultati efficienti.  
+ Nell'esempio seguente viene creata una nuova tabella (heap) in cui vengono inseriti dati da un'altra tabella con registrazione minima. L'esempio presuppone che il modello di recupero del database `AdventureWorks2012` sia impostato su FULL. Per assicurare l'uso della registrazione minima, il modello di recupero del database `AdventureWorks2012` viene impostato su BULK_LOGGED prima che le righe vengano inserite e reimpostato su FULL dopo l'istruzione INSERT INTO...SELECT. Inoltre, viene specificato l'hint TABLOCK per la tabella di destinazione `Sales.SalesHistory`. In tal modo, si assicura l'utilizzo da parte dell'istruzione di uno spazio minimo nel log delle transazioni con risultati efficienti.  
   
 ```sql
 -- Create the target heap.  

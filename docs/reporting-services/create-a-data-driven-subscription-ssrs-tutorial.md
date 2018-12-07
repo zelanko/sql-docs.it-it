@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 79ab0572-43e9-4dc4-9b5a-cd8b627b8274
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: fa047ea7506c4fd9111345e0b5cbb6beca877356
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 20bcd05c479debbbb17883d354390899c1a1f10c
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47815405"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52712522"
 ---
 # <a name="create-a-data-driven-subscription-ssrs-tutorial"></a>Creare una sottoscrizione guidata dai dati (esercitazione su SSRS)
 Questa esercitazione di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] illustra i concetti di sottoscrizioni guidate dai dati attraverso un semplice esempio che crea una sottoscrizione guidata dai dati per generare e salvare l'output di un report filtrato in una condivisione di file. 
@@ -56,7 +56,7 @@ L'esercitazione usa il report *SalesOrder* creato nell'esercitazione [Creare un 
   
 Per utilizzare l'esercitazione è necessario che nel computer sia installato quanto segue:  
   
--   Un'edizione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] che supporta sottoscrizioni guidate dai dati. Per altre informazioni, vedere [Edizioni e componenti di SQL Server 2016](../sql-server/editions-and-components-of-sql-server-2016.md).  
+-   Un'edizione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] che supporta sottoscrizioni guidate dai dati. Per altre informazioni, vedere [Edizioni e funzionalità di SQL Server 2017](../sql-server/editions-and-components-of-sql-server-2017.md).  
   
 -   Il server di report deve essere eseguito in modalità nativa. L'interfaccia utente descritta in questa esercitazione è basata su un server di report in modalità nativa. Le sottoscrizioni sono supportate in server di report in modalità SharePoint ma l'interfaccia utente sarà diversa da quella descritta in questa esercitazione.  
   

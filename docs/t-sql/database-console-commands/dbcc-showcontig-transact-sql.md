@@ -24,12 +24,12 @@ ms.assetid: 1df2123a-1197-4fff-91a3-25e3d8848aaa
 author: uc-msft
 ms.author: umajay
 manager: craigg
-ms.openlocfilehash: 1937d8b4da1b824b0a1b46808b5e03f9bbdc77d9
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 2d66330f4c575972b019d7df68cf0f1d00f2fab4
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51697589"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52510713"
 ---
 # <a name="dbcc-showcontig-transact-sql"></a>DBCC SHOWCONTIG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -163,7 +163,7 @@ Per ridurre il livello di frammentazione di un indice molto frammentato, è poss
 -   Eliminare e ricreare un indice cluster.  
      Quando si ricrea un indice cluster, i dati vengono riorganizzati e si ottengono pagine di dati complete. È possibile configurare il livello di riempimento tramite l'opzione FILLFACTOR dell'istruzione CREATE INDEX. Questo metodo presenta due svantaggi, ovvero l'indice rimane offline durante l'operazione di eliminazione o ricostruzione e l'operazione è atomica. Se la creazione dell'indice viene interrotta, l'indice non viene ricreato.  
 -   Ridisporre in ordine logico le pagine del livello foglia dell'indice.  
-     Per ridisporre in ordine logico le pagine del livello foglia dell'indice, utilizzare ALTER INDEX…REORGANIZE. L'operazione viene eseguita online e pertanto l'indice rimane disponibile durante l'esecuzione dell'istruzione. È inoltre possibile interrompere l'operazione senza perdere il lavoro completato. Con questo metodo, tuttavia, i dati non vengono riorganizzati in modo altrettanto efficiente di quanto consentito dall'operazione di eliminazione o ricostruzione di un indice cluster.  
+     Per ridisporre in ordine logico le pagine del livello foglia dell'indice, usare ALTER INDEX...REORGANIZE. L'operazione viene eseguita online e pertanto l'indice rimane disponibile durante l'esecuzione dell'istruzione. È inoltre possibile interrompere l'operazione senza perdere il lavoro completato. Con questo metodo, tuttavia, i dati non vengono riorganizzati in modo altrettanto efficiente di quanto consentito dall'operazione di eliminazione o ricostruzione di un indice cluster.  
 -   Ricompilare l'indice.  
      Per ricompilare l'indice, utilizzare ALTER INDEX con REBUILD. Per altre informazioni, vedere [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md).  
   

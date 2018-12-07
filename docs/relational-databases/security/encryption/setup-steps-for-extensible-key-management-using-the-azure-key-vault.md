@@ -14,12 +14,12 @@ ms.assetid: c1f29c27-5168-48cb-b649-7029e4816906
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: 422b8e8d8436430ec01cd92045e951850ee913ff
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 253dd918fb3fec410e2bcf28d6fba7cd24786d04
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51663357"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52522917"
 ---
 # <a name="sql-server-tde-extensible-key-management-using-azure-key-vault---setup-steps"></a>Extensible Key Management TDE di SQL Server con Azure Key Vault - Passaggi di configurazione
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -147,7 +147,7 @@ Versione di SQL Server  |Collegamento di installazione ridistribuibile
 4.  **Concedere le autorizzazioni per consentire all'entità servizio di Azure Active Directory di accedere all'insieme di credenziali delle chiavi**  
   
      È possibile autorizzare altri utenti e applicazioni a usare l'insieme di credenziali delle chiavi.   
-    In questo caso, l'entità servizio di Azure Active Directory creata nella parte 1 viene usata per autorizzare l'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
+    In questo caso, l'entità servizio di Azure Active Directory creata nella parte 1 viene usata per autorizzare l'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
     > [!IMPORTANT]  
     >  L'entità servizio di Azure Active Directory deve avere almeno le autorizzazioni `get`, `wrapKey` e `unwrapKey` per l'insieme di credenziali delle chiavi.  
@@ -190,16 +190,16 @@ Versione di SQL Server  |Collegamento di installazione ridistribuibile
     -   **Protetta da HSM:** creata e protetta da un modulo di protezione hardware (HSM) per una maggiore sicurezza. Il costo è di circa 1 dollaro per ogni versione della chiave.  
   
         > [!IMPORTANT]  
-        >  Connettore SQL Server richiede che il nome della chiave usi solo i caratteri "a-z", "A-Z", "0-9", e "-", con un limite di 26 caratteri.   
-        > Versioni diverse della chiave con lo stesso nome di chiave nell'insieme di credenziali delle chiavi di Azure non funzioneranno con il Connettore [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Per ruotare una chiave dell'insieme di credenziali delle chiavi di Azure usata da [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], vedere i passaggi relativi al rollover della chiave in [Manutenzione e risoluzione dei problemi di Connettore SQL Server](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md).  
+        >  Connettore SQL Server richiede che il nome della chiave usi solo i caratteri "a-z", "A-Z", "0-9" e "-", con un limite di 26 caratteri.   
+        > Versioni diverse della chiave con lo stesso nome di chiave nell'insieme di credenziali delle chiavi di Azure non funzioneranno con il Connettore [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Per ruotare una chiave di Azure Key Vault usata da [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], vedere i passaggi relativi al rollover della chiave in [Manutenzione e risoluzione dei problemi di Connettore SQL Server](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md).  
 
     ### <a name="import-an-existing-key"></a>Importare una chiave esistente   
   
     Se si ha una chiave protetta da software RSA a 2048 bit, è possibile caricarla nell'insieme di credenziali delle chiavi di Azure. Ad esempio, se si vuole caricare nell'insieme di credenziali delle chiavi di Azure un file PFX salvato nell'unità `C:\\` in un file denominato `softkey.pfx` , digitare quanto segue per impostare la variabile `securepfxpwd` per una password di `12987553` per il file PFX:  
   
     ``` powershell  
-    $securepfxpwd = ConvertTo-SecureString –String '12987553' `  
-      –AsPlainText –Force  
+    $securepfxpwd = ConvertTo-SecureString -String '12987553' `  
+      -AsPlainText -Force  
     ```  
   
     Quindi digitare quanto segue per importare la chiave dal file PFX, che protegge la chiave con l'hardware (consigliato) nel servizio dell'insieme di credenziali delle chiavi:  
@@ -242,7 +242,7 @@ Versione di SQL Server  |Collegamento di installazione ridistribuibile
  È possibile scaricare il Connettore SQL Server dall' [Area download Microsoft](https://go.microsoft.com/fwlink/p/?LinkId=521700). Questa operazione deve essere eseguita dall'amministratore del computer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
 
 > [!NOTE]  
->  Le versioni 1.0.0.440 e precedenti sono state sostituite e non sono più supportate negli ambienti di produzione. Eseguire l'aggiornamento alla versione 1.0.1.0 o successiva visitando l' [Area download Microsoft](https://www.microsoft.com/download/details.aspx?id=45344) e seguendo le istruzioni nella pagina [Manutenzione e risoluzione dei problemi di Connettore SQL Server](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md) in "Aggiornamento del Connettore SQL Server".
+>  Le versioni 1.0.0.440 e precedenti sono state sostituite e non sono più supportate negli ambienti di produzione. Eseguire l'aggiornamento alla versione 1.0.1.0 o successiva visitando l'[Area download Microsoft](https://www.microsoft.com/download/details.aspx?id=45344) e seguendo le istruzioni nella pagina [Manutenzione e risoluzione dei problemi di Connettore SQL Server](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md) in "Aggiornamento del Connettore SQL Server".
 
 > [!NOTE]  
 > La versione 1.0.5.0 presenta una modifica che causa un'interruzione, associata all'algoritmo di identificazione personale. Dopo l'aggiornamento alla versione 1.0.5.0 può verificarsi un errore di ripristino del database. Consultare l'articolo della KB [447099](https://support.microsoft.com/help/4470999/db-backup-problems-to-sql-server-connector-for-azure-1-0-5-0).

@@ -12,12 +12,12 @@ ms.assetid: 27914c8b-8951-4b7d-914d-1cbf528dd248
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 24b21d901e30af96362198001033d56c51d6c9e4
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 4cff9d79f6c357d419f6ef058e58ea4cc1da4e2a
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51700377"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52416772"
 ---
 # <a name="filter-operators-master-data-services"></a>Operatori di filtro (Master Data Services)
 

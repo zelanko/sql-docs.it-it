@@ -7,12 +7,12 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: a3a822ddfdd954e0811e83ca4c92a2c3dc7e5b90
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: a3f79fd96bdfb51bb9ca0301552876a536336df7
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51812974"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52712652"
 ---
 # <a name="install-sql-server-reporting-services-2017-and-later"></a>Installare SQL Server Reporting Services 2017 e versioni successive
 
@@ -124,7 +124,7 @@ Se si accede al server di report da un computer remoto, se è presente un firewa
 
 ## <a name="related-information"></a>Informazioni correlate
 
-Per informazioni su come installare la modalità nativa di SQL Server 2016 Reporting Services, vedere [Installare un server di report in modalità nativa di Reporting Services](install-reporting-services-native-mode-report-server.md). Per informazioni su come installare SQL Server 2016 Reporting Services in modalità integrata SharePoint, vedere [Installare il primo server di report in modalità SharePoint](install-the-first-report-server-in-sharepoint-mode.md).
+Per informazioni su come installare la modalità nativa di SQL Server Reporting Services, vedere [Installare un server di report in modalità nativa di Reporting Services](install-reporting-services-native-mode-report-server.md). Per informazioni su come installare SQL Server 2016 Reporting Services (e versioni precedenti) in modalità integrata SharePoint, vedere [Installare il primo server di report in modalità SharePoint](install-the-first-report-server-in-sharepoint-mode.md).
 
 ## <a name="next-steps"></a>Passaggi successivi
 

@@ -18,12 +18,12 @@ ms.assetid: 74bc40bb-9f57-44e4-8988-1d69c0585eb6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 791253a685908baf69fe789aabd199a5cad7e921
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 0775eb7bd5cb87c902a6871eeebd4409dbe0cf2f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600751"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52531535"
 ---
 # <a name="configure-backup-on-availability-replicas-sql-server"></a>Configurare il backup su repliche di disponibilità (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -188,8 +188,8 @@ ms.locfileid: "51600751"
 ```  
 IF (NOT sys.fn_hadr_backup_is_preferred_replica(@DBNAME))  
 BEGIN  
-      Select ‘This is not the preferred replica, exiting with success’;  
-      RETURN 0 – This is a normal, expected condition, so the script returns success  
+      Select 'This is not the preferred replica, exiting with success';  
+      RETURN 0 - This is a normal, expected condition, so the script returns success  
 END  
 BACKUP DATABASE @DBNAME TO DISK=<disk>  
    WITH COPY_ONLY;  
@@ -198,7 +198,7 @@ BACKUP DATABASE @DBNAME TO DISK=<disk>
  Generando uno script per un processo di backup con questo tipo di logica è possibile pianificare il processo affinché venga eseguito in ogni replica di disponibilità presente nella stessa pianificazione. Ognuno di questi processi analizza gli stessi dati per determinare il processo da eseguire, pertanto solo uno dei processi pianificati procede effettivamente alla fase di backup.  In caso di failover, nessuno degli script o processi deve essere modificato. Inoltre, se si riconfigura un gruppo di disponibilità per aggiungere una replica di disponibilità, la gestione del processo di backup richiede la copia o la pianificazione del processo di backup. Se si rimuove una replica di disponibilità, eliminare semplicemente il processo di backup dall'istanza del server che la ospitava.  
   
 > [!TIP]  
->  Se si usa la[Creazione guidata piano di manutenzione](../../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md)per creare un processo di backup specifico, il processo includerà automaticamente la logica di scripting che chiama e controlla la funzione **sys.fn_hadr_backup_is_preferred_replica** . Tuttavia, il processo di backup non restituirà il messaggio che indica che non si tratta della replica Assicurarsi di creare i processi per ogni database di disponibilità in ogni istanza del server che ospita una replica di disponibilità per il gruppo di disponibilità.  
+>  Se si usa la[Creazione guidata piano di manutenzione](../../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md)per creare un processo di backup specifico, il processo includerà automaticamente la logica di scripting che chiama e controlla la funzione **sys.fn_hadr_backup_is_preferred_replica** . Tuttavia, il processo di backup non restituirà il messaggio che indica che non si tratta della replica preferita. Assicurarsi di creare i processi per ogni database di disponibilità in ogni istanza del server che ospita una replica di disponibilità per il gruppo di disponibilità.  
   
 ##  <a name="ForInfoAboutBuPref"></a> Per ottenere informazioni sulle impostazioni delle preferenze di backup  
  Gli elementi seguenti sono utili per ottenere informazioni pertinenti per il backup di una replica secondaria.  

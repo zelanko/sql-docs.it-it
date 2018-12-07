@@ -11,12 +11,12 @@ ms.assetid: 8aa7d690-4649-4c0a-ac6f-9504637ee426
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ec1faa2c0fc16037f80857217f3f854503915dd1
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 77c3644de5503ac35121c954c8dda4137322ea0a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51642143"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52504123"
 ---
 # <a name="lesson-5-1---copying-the-lesson-4-package"></a>Lezione 5-1 - Copia del pacchetto della lezione 4
 In questa attività si procederà alla creazione di una copia del pacchetto creato nella lezione 4, denominato Lesson 4.dtsx. In alternativa, è possibile aggiungere al progetto il pacchetto completo della lezione 4 incluso nell'esercitazione e, successivamente, copiarlo. Questa nuova copia verrà usata per tutto il seguito della lezione 5.  
@@ -49,7 +49,7 @@ In questa attività si procederà alla creazione di una copia del pacchetto crea
   
 3.  Nella finestra di dialogo **Aggiungi copia del pacchetto esistente** , in **Posizione pacchetto**, selezionare **File system**.  
   
-4.  Fare clic sul pulsante sfoglia **(…)** , passare a **Lesson 4.dtsx** nel computer, quindi fare clic su **Apri**.  
+4.  Fare clic sul pulsante sfoglia **(...)**, passare a **Lesson 4.dtsx** nel computer, quindi fare clic su **Apri**.  
   
     Per scaricare tutti i pacchetti di lezioni di questa esercitazione, effettuare le operazioni seguenti.  
   

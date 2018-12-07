@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 32be8fcc-e87d-4c45-a644-dff45776a981
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b3ea8e6931ef27faf80d1bd5f2aa23c9e5499266
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ed90c887a9aeaeca9939511e215464b0b51ba226
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47699749"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52711672"
 ---
 # <a name="report-builder-authoring-environment-ssrs"></a>Ambiente di creazione di Generatore report (SSRS)
   Generatore report [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] è un ambiente di creazione e modifica autonomo per la creazione di report impaginati di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] all'esterno di Visual Studio. Quando si progetta un report, si specifica dove ottenere i dati, quali dati ottenere e come visualizzarli. Quando si esegue il report, Elaborazione report utilizza tutte le informazioni specificate, recupera i dati e li combina con il layout per generare il report. È possibile installarlo dal portale Web di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] o dall'Area download Microsoft.  
@@ -41,7 +41,7 @@ ms.locfileid: "47699749"
   
 -   Salvare il report e gli elementi correlati in una raccolta di SharePoint, in un server di report o nel computer locale.  
   
- Generatore report e Progettazione report condividono molte caratteristiche. Ulteriori informazioni su [Report Builder in SQL Server 2016](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md).  
+ Generatore report e Progettazione report condividono molte caratteristiche. Altre informazioni su [Report Builder in SQL Server](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Install Report Builder](../../reporting-services/install-windows/install-report-builder.md)   

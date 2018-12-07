@@ -14,12 +14,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 66f33552c8ccd615cfb2894da0ef3ba337a43cc7
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: bc09bcca6e70d80e256cba8cd8a1ad6a477a4742
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51681329"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52545536"
 ---
 # <a name="tutorial-configure-replication-between-a-server-and-mobile-clients-merge"></a>Esercitazione: Configurare la replica tra un server e più client per dispositivi mobili (replica di tipo merge)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -205,7 +205,7 @@ In questa sezione si aggiungerà una sottoscrizione alla pubblicazione di tipo m
 
    ![Selezioni per aggiungere un database al sottoscrittore](media/tutorial-replicating-data-with-mobile-clients/addsubdb.png)
   
-8. Nella pagina **Sicurezza agente di merge** selezionare il pulsante con i tre puntini (**…**). Immettere <*Nome_computer_sottoscrittore*>**\repl_merge** nella casella **Account processo** e specificare la password per questo account. Selezionare **OK**, **Avanti** e quindi di nuovo **Avanti**.  
+8. Nella pagina **Sicurezza agente di merge** selezionare il pulsante con i tre puntini (**...**). Immettere <*Nome_computer_sottoscrittore*>**\repl_merge** nella casella **Account processo** e specificare la password per questo account. Selezionare **OK**, **Avanti** e quindi di nuovo **Avanti**.  
 
    ![Selezioni per la sicurezza dell'agente di merge](media/tutorial-replicating-data-with-mobile-clients/mergeagentsecurity.png)
 

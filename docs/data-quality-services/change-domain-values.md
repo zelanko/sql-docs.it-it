@@ -5,8 +5,7 @@ ms.date: 11/08/2011
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 f1_keywords:
 - sql13.dqs.dm.values.f1
@@ -14,12 +13,12 @@ ms.assetid: 8c90ab70-3aea-4eaf-a174-4159485c87d3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 21e2f8c20e4a1fcaadeb8747ed2f9fde29d9c10b
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: e9a804f90b3e318c9cfd665502b8f3349bf16ce7
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699923"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617591"
 ---
 # <a name="change-domain-values"></a>Modificare i valori di dominio
 
@@ -67,15 +66,15 @@ ms.locfileid: "51699923"
   
 3.  **Dall'elenco di domini** nella pagina **Gestione dominio** selezionare il dominio per il quale si desidera modificare i valori o creare un nuovo dominio. Se è necessario creare un nuovo dominio, vedere [Crea un dominio](../data-quality-services/create-a-domain.md). Fare clic sulla scheda **Valori di dominio** .  
   
-4.  Visualizzare i valori che è necessario modificare nella tabella **Valore** . Per altre informazioni, vedere [How to Display the Appropriate Values](#Display) più avanti.  
+4.  Visualizzare i valori che è necessario modificare nella tabella **Valore** . Per altre informazioni, vedere [Modalità di visualizzazione dei valori appropriati](#Display) più avanti.  
   
 5.  Per modificare lo stato di un valore, procedere come segue:  
   
-    -   **Imposta i valori di dominio selezionati come corretti**: per modificare lo stato di un valore da Errori o Non validi in Corretti, selezionare il valore, quindi fare clic sull'icona **Imposta i valori di dominio selezionati come corretti** (segno di spunta) dalla freccia in giù nella barra delle icone o dall'elenco a discesa Tipo. Se il valore in errore o non valido viene raggruppato con un valore corretto, eliminare il valore dopo l'operazione.  
+    -   **Imposta i valori di dominio selezionati come corretti**: per modificare lo stato di un valore da Errore o Non valido in Corretto, selezionare il valore e quindi scegliere **Imposta i valori di dominio selezionati come corretti** (segno di spunta) dalla freccia in giù nella barra delle icone o dall'elenco a discesa Tipo. Se il valore in errore o non valido viene raggruppato con un valore corretto, eliminare il valore dopo l'operazione.  
   
-    -   **Imposta i valori di dominio selezionati come errori**: per modificare lo stato di un valore da Corretti o Non validi in Errori, selezionare il valore, quindi fare clic sull'icona **Imposta i valori di dominio selezionati come errori** (croce) dalla freccia in giù nella barra delle icone o dall'elenco a discesa Tipo. È possibile immettere una correzione nella colonna **Correggi in** o lasciarla vuota.  
+    -   **Imposta i valori di dominio selezionati come errori**: per modificare lo stato di un valore da Corretto o Non valido in Errore, selezionare il valore e quindi scegliere l'icona **Imposta i valori di dominio selezionati come errori** (croce) dalla freccia in giù nella barra delle icone o dall'elenco a discesa Tipo. È possibile immettere una correzione nella colonna **Correggi in** o lasciarla vuota.  
   
-    -   **Imposta i valori di dominio selezionati come non validi**: per modificare lo stato di un valore da Corretti o Errori in Non validi, selezionare il valore, quindi fare clic sull'icona **Imposta i valori di dominio selezionati come non validi** (triangolo) dalla freccia in giù nella barra delle icone o dall'elenco a discesa Tipo. È possibile immettere una correzione nella colonna **Correggi in** o lasciarla vuota.  
+    -   **Imposta i valori di dominio selezionati come non validi**: per modificare lo stato di un valore da Corretto o Errore in Non valido, selezionare il valore e quindi scegliere l'icona **Imposta i valori di dominio selezionati come non validi** (triangolo) dalla freccia in giù nella barra delle icone o dall'elenco a discesa Tipo. È possibile immettere una correzione nella colonna **Correggi in** o lasciarla vuota.  
   
     -   **Correggi in**: dopo avere impostato un valore come in errore o non invalido, immettere un nuovo valore nella colonna **Correggi in** . In DQS verrà aggiunta una nuova riga per il valore sostitutivo che verrà designato come valore corretto, quindi verranno raggruppati i due valori. Il nuovo valore verrà visualizzato come valore iniziale, con il valore iniziale in grassetto e il valore in errore o non valido rientrato.  
   
@@ -113,7 +112,7 @@ ms.locfileid: "51699923"
   
 -   **Corretti:** si tratta di un valore che appartiene al dominio e non contiene errori di sintassi. Ad esempio, "Chicago" in un dominio Città è corretto.  
   
--   **Errori:** si tratta di un valore che appartiene al dominio, ma è un valore non corretto. Ad esempio, "Shicago" anziché "Chicago" in un dominio Città è in errore. In DQS un valore viene definito come in errore quando nel processo di individuazione vengono rilevati un errore di sintassi e una correzione associata. Gli errori di sintassi includono gli errori di ortografia.  
+-   **Errori:** si tratta di un valore che appartiene al dominio, ma è un valore non corretto. Ad esempio, "Shicago" anziché "Chicago" in un dominio Città è un errore. In DQS un valore viene definito come in errore quando nel processo di individuazione vengono rilevati un errore di sintassi e una correzione associata. Gli errori di sintassi includono gli errori di ortografia.  
   
 -   **Non validi:** si tratta di un valore che non appartiene al dominio e a cui non è associata una correzione. Ad esempio, il valore "12345" in un dominio Città non è valido. In DQS un valore viene definito come non valido quando non supera una regola di dominio.  
   

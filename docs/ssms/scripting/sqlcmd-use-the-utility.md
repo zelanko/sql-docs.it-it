@@ -18,12 +18,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e7dd2bd8733c3de4a7ca14000fb56f11e9a63780
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 0730dc681a4faa61425803f98dc091a0fb745b1e
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51643123"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617876"
 ---
 # <a name="sqlcmd---use-the-utility"></a>sqlcmd - Usare l'utilità
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -479,7 +479,7 @@ ms.locfileid: "51643123"
   
 -   L'opzione -N viene utilizzata dal client per richiedere una connessione crittografata. Equivale all'opzione ADO.net `ENCRYPT = true`.  
   
--   L'opzione –C viene utilizzata dal client per configurare l'attendibilità implicita del certificato del server senza necessità di convalida. Equivale all'opzione ADO.net `TRUSTSERVERCERTIFICATE = true`.  
+-   L'opzione -C viene usata dal client per configurare l'attendibilità implicita del certificato del server senza necessità di convalida. Equivale all'opzione ADO.net `TRUSTSERVERCERTIFICATE = true`.  
   
  Il servizio [!INCLUDE[ssSDS](../../includes/sssds-md.md)] non supporta tutte le opzioni `SET` disponibili in un'istanza di SQL Server. Nelle opzioni seguenti viene generato un errore quando l'opzione `SET` corrispondente è impostata su `ON` o `OFF`:  
   
@@ -505,21 +505,21 @@ ms.locfileid: "51643123"
  Effettuare la connessione utilizzando le credenziali di Windows e la comunicazione crittografata:  
   
 ```  
-SQLCMD –E –N  
+SQLCMD -E -N  
   
 ```  
   
  Effettuare la connessione utilizzando le credenziali di Windows e un certificato server attendibile:  
   
 ```  
-SQLCMD –E –C  
+SQLCMD -E -C  
   
 ```  
   
  Effettuare la connessione utilizzando le credenziali di Windows, la comunicazione crittografata e un certificato server attendibile:  
   
 ```  
-SQLCMD –E –N –C  
+SQLCMD -E -N -C  
   
 ```  
   
@@ -528,28 +528,28 @@ SQLCMD –E –N –C
  Effettuare la connessione utilizzando le credenziali di Windows, la comunicazione crittografata e un certificato server attendibile:  
   
 ```  
-SQLCMD –E  
+SQLCMD -E  
   
 ```  
   
  Effettuare la connessione utilizzando le credenziali di Windows, la comunicazione crittografata e un certificato server attendibile:  
   
 ```  
-SQLCMD –E –N  
+SQLCMD -E -N  
   
 ```  
   
  Effettuare la connessione utilizzando le credenziali di Windows, la comunicazione crittografata e un certificato server attendibile:  
   
 ```  
-SQLCMD –E –T  
+SQLCMD -E -C  
   
 ```  
   
  Effettuare la connessione utilizzando le credenziali di Windows, la comunicazione crittografata e un certificato server attendibile:  
   
 ```  
-SQLCMD –E –N –C  
+SQLCMD -E -N -C  
   
 ```  
   

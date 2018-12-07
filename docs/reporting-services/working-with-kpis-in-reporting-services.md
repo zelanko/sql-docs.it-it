@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: a28cf500-6d47-4268-a248-04837e7a09eb
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0cd0827109cff1cda866ed8a0d85f9cb37ab54f6
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: c9612cb4cf45ec71bb511750bab9a84914a0e7f5
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021585"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52712492"
 ---
 # <a name="working-with-kpis-in-reporting-services"></a>Usare gli indicatori KPI in Reporting Services
 
@@ -21,7 +21,7 @@ ms.locfileid: "50021585"
 
 Un indicatore di prestazioni chiave (KPI, Key Performance Indicator) è un'indicazione visiva che comunica il progresso compiuto verso un obiettivo.  Gli indicatori KPI consentono a team, manager e aziende di valutare con rapidità l'avanzamento compiuto verso risultati misurabili.   
   
-Grazie agli indicatori KPI, SQL Server 2016 Reporting Services consente di rispondere con facilità alle domande seguenti:  
+Grazie agli indicatori KPI, SQL Server Reporting Services consente di rispondere con facilità alle domande seguenti:  
   
 -   A che punto sono rispetto al raggiungimento dell'obiettivo?  
   
@@ -68,7 +68,7 @@ Per usare i dati di un nuovo set di dati condiviso, eseguire le operazioni segue
   
     ![rsCreateKPI3](../reporting-services/media/rscreatekpi3.png)  
   
-2.  Selezionare i **puntini di sospensione (…)** nella casella dei dati. Verrà visualizzata la schermata **Scegliere un set di dati** .  
+2.  Selezionare i **puntini di sospensione (...)** nella casella dei dati. Verrà visualizzata la schermata **Scegliere un set di dati** .  
   
     ![rsCreateKPI4](../reporting-services/media/rscreatekpi4.png)  
   
@@ -90,7 +90,7 @@ Per usare i dati di un nuovo set di dati condiviso, eseguire le operazioni segue
   
 Per rimuovere un indicatore KPI eseguire una delle operazioni seguenti.  
   
-1.  Selezionare i **puntini di sospensione (…)** dell'indicatore KPI da rimuovere. Selezionare **Gestisci**.  
+1.  Selezionare i **puntini di sospensione (...)** dell'indicatore KPI da rimuovere. Selezionare **Gestisci**.  
   
     ![rsRemoveKPI1](../reporting-services/media/rsremovekpi1.png)  
   

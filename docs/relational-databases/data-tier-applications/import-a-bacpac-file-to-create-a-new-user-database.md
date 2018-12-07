@@ -26,12 +26,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2227cb838c52bf309373a6d67f4d006841e30a4f
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: c92dc9aad30134f0d9b8b834798a416fb610e142
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51673670"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52521236"
 ---
 # <a name="import-a-bacpac-file-to-create-a-new-user-database"></a>Importare un file BACPAC per creare un nuovo database utente
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -90,18 +90,18 @@ ms.locfileid: "51673670"
   
  **Opzioni**  
   
--   **Non visualizzare più questa pagina.** – Selezionare la casella di controllo per evitare che la pagina Introduzione venga visualizzata nuovamente in futuro.  
+-   **Non visualizzare più questa pagina** Selezionare la casella di controllo per evitare che la pagina Introduzione venga visualizzata nuovamente in futuro.  
   
--   **Avanti** : passa alla pagina **Impostazioni di importazione** .  
+-   **Avanti**: passa alla pagina **Impostazioni di importazione**.  
   
--   **Annulla** : annulla l'operazione e chiude la procedura guidata.  
+-   **Annulla**: annulla l'operazione e chiude la procedura guidata.  
   
 ###  <a name="Import_settings"></a> Pagina Impostazioni di importazione  
  Utilizzare questa pagina per specificare il percorso del file con estensione bacpac da importare.  
   
--   **Importa da disco locale** : fare clic su **Sfoglia** per selezionare un percorso nel computer locale o specificare il percorso nell'apposito campo. Il nome del percorso deve includere un nome file e l'estensione .bacpac.  
+-   **Importa da disco locale**: fare clic su **Sfoglia** per selezionare un percorso nel computer locale o specificare il percorso nell'apposito campo. Il nome del percorso deve includere un nome file e l'estensione .bacpac.  
   
--   **Importa da Azure** : importa un file BACPAC da un contenitore di Microsoft Azure. È necessario connettersi a un contenitore di Microsoft Azure per convalidare questa opzione. Questa opzione richiede inoltre che si specifichi una directory locale per il file temporaneo. Il file temporaneo verrà creato nel percorso specificato, dove rimarrà una volta completata l'operazione.  
+-   **Importa da Azure**: importa un file BACPAC da un contenitore di Microsoft Azure. È necessario connettersi a un contenitore di Microsoft Azure per convalidare questa opzione. Questa opzione richiede inoltre che si specifichi una directory locale per il file temporaneo. Il file temporaneo verrà creato nel percorso specificato, dove rimarrà una volta completata l'operazione.  
   
      Quando si esplora Azure, sarà possibile passare tra contenitori all'interno di un solo account. È necessario specificare un solo file bacpac per continuare l'operazione di importazione. È possibile ordinare colonne in base a **Nome**, **Dimensioni**o **Data modifica**.  
   
@@ -112,11 +112,11 @@ ms.locfileid: "51673670"
   
  **Per un'istanza locale di SQL Server:**  
   
--   **Nome nuovo database** : specificare un nome per il database importato.  
+-   **Nome nuovo database**: specificare un nome per il database importato.  
   
--   **Percorso file di dati** : fornire una directory locale per i file di dati. Fare clic su **Sfoglia** per selezionare un percorso nel computer locale o specificare il percorso nell'apposito campo.  
+-   **Percorso file di dati**: fornire una directory locale per i file di dati. Fare clic su **Sfoglia** per selezionare un percorso nel computer locale oppure specificare il percorso nell'apposito campo.  
   
--   **Percorso file di log** : specificare una directory locale per i file di log. Fare clic su **Sfoglia** per selezionare un percorso nel computer locale o specificare il percorso nell'apposito campo.  
+-   **Percorso file di log**: specificare una directory locale per i file di log. Fare clic su **Sfoglia** per selezionare un percorso nel computer locale oppure specificare il percorso nell'apposito campo.  
   
  Scegliere **Avanti**per continuare.  
   

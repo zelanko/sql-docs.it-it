@@ -11,12 +11,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8479d93deaee81cf45e282a05d46596a0d4f332a
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 22365cc7a483b285f583268856a979a694eeabab
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51659504"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52537273"
 ---
 # <a name="import-json-documents-into-sql-server"></a>Importare documenti JSON in SQL Server
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -139,10 +139,10 @@ SELECT value
 OPENROWSET legge un singolo valore di testo dal file, lo restituisce come BulkColumn e lo passa alla funzione OPENJSON. OPENJSON esegue l'iterazione della matrice di oggetti JSON nella matrice BulkColumn e restituisce un libro, formattato come JSON, in ogni riga:
 
 ```json
-{"id":"978-0641723445", "cat":["book","hardcover"], "name":"The Lightning Thief", … }
-{"id":"978-1423103349", "cat":["book","paperback"], "name":"The Sea of Monsters", … }
-{"id":"978-1857995879", "cat":["book","paperback"], "name":"Sophie’s World : The Greek", … } 
-{"id":"978-1933988177", "cat":["book","paperback"], "name":"Lucene in Action, Second", … }
+{"id":"978-0641723445", "cat":["book","hardcover"], "name":"The Lightning Thief", ... }
+{"id":"978-1423103349", "cat":["book","paperback"], "name":"The Sea of Monsters", ... }
+{"id":"978-1857995879", "cat":["book","paperback"], "name":"Sophie's World : The Greek", ... } 
+{"id":"978-1933988177", "cat":["book","paperback"], "name":"Lucene in Action, Second", ... }
 ```
 
 ### <a name="example-3"></a>Esempio 3
@@ -162,7 +162,7 @@ In questo esempio, OPENROWSET(BULK) legge il contenuto del file e passa il conte
 |---|---|---|---|---|
 978-0641723445|The Lightning Thief|12,5|384|Rick Riordan| 
 978-1423103349|The Sea of Monsters|6,49|304|Rick Riordan| 
-978-1857995879|Sophie’s World : The Greek Philosophers|3,07|64|Jostein Gaarder| 
+978-1857995879|Sophie’s World: The Greek Philosophers|3,07|64|Jostein Gaarder| 
 978-1933988177|Lucene in Action, Second Edition|30,5|475|Michael McCandless|
 ||||||
 

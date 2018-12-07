@@ -9,12 +9,12 @@ ms.assetid: 8c234077-b670-45c0-803f-51c5a5e0866e
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: ccf3376c13ef02699913d5d494d5752d35f13006
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 9e0032e303951ebfc531b3feb0831f1a48061914
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021605"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52539933"
 ---
 # <a name="reporting-services-data-alerts"></a>Reporting Services Data Alerts
 
@@ -35,9 +35,9 @@ Di seguito sono riepilogate le aree principali relative agli avvisi dati di [!IN
 
 -   **Definizione e salvataggio di definizioni di avviso dati**: viene eseguito un report, vengono create regole che identificano i valori dei dati interessanti, viene definito un criterio di ricorrenza per l'invio del messaggio di avviso dati e vengono specificati i destinatari del messaggio di avviso.  
   
--   **Esecuzione di definizioni di avviso dati**: tramite il servizio avvisi, le definizioni di avviso vengono elaborate a un'ora pianificata, i dati del report vengono recuperati e vengono create istanze di avviso dati in base alle regole nella definizione di avviso.  
+-   **Esecuzione di definizioni di avviso dati**: grazie al servizio avvisi, le definizioni di avviso vengono elaborate a un'ora pianificata, i dati del report vengono recuperati e vengono create istanze di avviso dati in base alle regole nella definizione di avviso.  
   
--   **Recapito di messaggi di avviso dati ai destinatari**: tramite il servizio avvisi viene creata un'istanza di avviso e viene inviato un messaggio di avviso ai destinatari tramite posta elettronica.  
+-   **Recapito di messaggi di avviso dati ai destinatari**: grazie al servizio avvisi viene creata un'istanza di avviso e viene inviato un messaggio di avviso ai destinatari via posta elettronica.  
   
  Il proprietario di un avviso dati può inoltre visualizzare informazioni sugli avvisi dati, nonché eliminare e modificare le definizioni di avviso dati. Un avviso ha un solo proprietario, cioè la persona che lo ha creato.  
   
@@ -190,7 +190,7 @@ Di seguito sono riepilogate le aree principali relative agli avvisi dati di [!IN
   
  `<IsAlertingService>True</IsAlertingService>`  
   
- `…`  
+ `...`  
   
  `</Service>`  
   

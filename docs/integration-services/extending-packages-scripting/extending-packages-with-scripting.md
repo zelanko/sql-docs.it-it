@@ -15,17 +15,17 @@ ms.assetid: 67fe18ef-f3aa-41d4-9b9d-5defd4618c4b
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c66db1148c702bcfce378648e3d0b3bc59563508
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5928217d9ca44cf03fda79009da42a52e7f0614a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47621269"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52517258"
 ---
 # <a name="extending-packages-with-scripting"></a>Estensione di pacchetti tramite scripting
   Se i componenti predefiniti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] non soddisfano i propri requisiti, è possibile estendere le funzionalità di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] utilizzando il codice per definire estensioni personalizzate. Per l'estensione dei pacchetti sono disponibili due opzioni discrete: è possibile scrivere codice all'interno dei potenti wrapper forniti dall'attività Script e dal componente script oppure creare da zero estensioni personalizzate di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] derivando dalla classe di base fornita dal modello a oggetti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
- In questa sezione viene esaminata la più semplice delle due opzioni, ovvero l'estensione di pacchetti tramite scripting.  
+ In questa sezione viene esaminata la più semplice delle due opzioni, ovvero l'estensione di pacchetti con lo scripting.  
   
  Con poche righe di codice è possibile estendere il flusso di controllo e il flusso di dati di un pacchetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] utilizzando l'attività Script e il componente di script. Entrambi gli oggetti usano l'ambiente di sviluppo di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA) e il linguaggio di programmazione [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic o [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C# e sfruttano tutte le funzionalità della libreria di classi [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] e degli assembly personalizzati. L'attività Script e il componente script consentono allo sviluppatore di creare funzionalità personalizzate senza la necessità di scrivere tutto il codice dell'infrastruttura normalmente richiesto per lo sviluppo di un'attività personalizzata o di un componente del flusso di dati personalizzato.  
   

@@ -15,12 +15,12 @@ ms.assetid: 4c8b1681-d8fe-4f92-b76f-a396eb921c0c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bbca50777271309b338940abc2bfde8c8d6ae679
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 74efb5537a801e7c01d9a11a2ef9cd219e46312a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47793569"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52532151"
 ---
 # <a name="property-expressions-editor"></a>Editor espressioni di proprietà
   Usare la finestra di dialogo **Editor espressioni di proprietà** per creare, modificare o eliminare le espressioni di proprietà che aggiornano i valori delle proprietà.  
@@ -35,7 +35,7 @@ ms.locfileid: "47793569"
 > [!NOTE]  
 >  I nomi delle variabili di sistema e delle variabili definite dall'utente devono essere specificati rispettando la distinzione tra maiuscole e minuscole.  
   
- **Espressione (...)**  
+ **Expression (...)**  
  Fare clic sui puntini di sospensione per aprire la finestra di dialogo **Generatore di espressioni** . Per altre informazioni, vedere [Generatore di espressioni](../../integration-services/expressions/expression-builder.md).  
   
  **Elimina**  
@@ -46,6 +46,6 @@ ms.locfileid: "47793569"
  [Variabili di Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md)   
  [Variabili di sistema](../../integration-services/system-variables.md)   
  [Espressioni di Integration Services &#40;SSIS&#41;](../../integration-services/expressions/integration-services-ssis-expressions.md)   
- [Uso delle espressioni di proprietà nei pacchetti](../../integration-services/expressions/use-property-expressions-in-packages.md)  
+ [Utilizzo delle espressioni di proprietà nei pacchetti](../../integration-services/expressions/use-property-expressions-in-packages.md)  
   
   

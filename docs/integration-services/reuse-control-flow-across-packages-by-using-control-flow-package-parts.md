@@ -16,12 +16,12 @@ ms.assetid: 1edc91d9-1fab-4fe5-aed3-6f581fe32c18
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5951daccc88e8593c27365254d208c4b2ee84118
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 11b6d7d881a034fa79315c37345d7845d868fc2b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47753789"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542646"
 ---
 # <a name="reuse-control-flow-across-packages-by-using-control-flow-package-parts"></a>Riusare il flusso di controllo dei pacchetti tramite le parti del pacchetto del flusso di controllo
   Salvare un'attività o un contenitore di flusso di controllo di uso comune in un file di parte autonomo (file con estensione dtsxp) e riusarli più volte in uno o più pacchetti usando le parti del flusso di controllo. Questa riusabilità semplifica la progettazione e la manutenzione dei pacchetti SSIS.  
@@ -80,7 +80,7 @@ ms.locfileid: "47753789"
  **Opzioni**  
   
  **Percorso della parte del pacchetto**  
- Digitare il percorso del file di parte o fare clic sul pulsante Sfoglia (...) e individuare il file di parte da copiare o a cui fare riferimento.  
+ Digitare il percorso del file di parte o fare clic sul pulsante Sfoglia (...) e trovare il file di parte da copiare o a cui fare riferimento.  
   
  **Aggiungi come riferimento**  
  -   Se viene selezionata questa opzione, la parte viene aggiunta al progetto di Servizi di integrazione come riferimento. Selezionare questa opzione quando si desidera fare riferimento a una singola copia di un file di parte in più progetti di Servizi di integrazione.  

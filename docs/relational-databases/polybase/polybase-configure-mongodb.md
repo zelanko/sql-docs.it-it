@@ -10,12 +10,12 @@ author: Abiola
 ms.author: aboke
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 39889d49702394f0aec8f79c328e28ba318c9864
-ms.sourcegitcommit: 70e47a008b713ea30182aa22b575b5484375b041
+ms.openlocfilehash: 68fb5c69d30e9ba30f27bcd23347ed5543c7e792
+ms.sourcegitcommit: f62f70298651d6223fa5d215b6a7a0d2ffecbd0d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49806741"
+ms.lasthandoff: 11/19/2018
+ms.locfileid: "51947586"
 ---
 # <a name="configure-polybase-to-access-external-data-in-mongodb"></a>Configurare PolyBase per l'accesso a dati esterni in MongoDB
 
@@ -38,7 +38,7 @@ In questa sezione verranno creare questi oggetti:
 - CREATE EXTERNAL TABLE (Transact-SQL)
 - CREATE STATISTICS (Transact-SQL)
 
-1. Creare una chiave master nel database, se non ne esiste già. Questo passaggio è necessario per crittografare il segreto delle credenziali.
+1. Creare una chiave master nel database, se non esiste già. Questo passaggio è necessario per crittografare il segreto delle credenziali.
 
      ```sql
       CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'password';  

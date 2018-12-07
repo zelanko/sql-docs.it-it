@@ -13,18 +13,18 @@ ms.assetid: 9ebd08b6-fa93-4581-bb6c-96b51d2c895c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 61ce02c05248eb5041c54abe1106109843d97507
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3e347f35f176a1c0419d160206cbcb6ee9313590
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47754689"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52515385"
 ---
 # <a name="column-list-dialog-box-visual-database-tools"></a>Finestra di dialogo Elenco colonne (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 Quando si scrive una query, può essere utile visualizzare un elenco delle colonne disponibili negli oggetti valutati a livello di tabella selezionati.  
   
-Per accedere a questa finestra di dialogo, dal menu **Progettazione query** nel riquadro diagramma fare clic con il pulsante destro del mouse sull'intestazione di un oggetto valutato a livello di tabella e quindi scegliere **Proprietà**. Nella finestra **Proprietà** fare clic sul campo **Elenco colonne** . e quindi sui puntini di sospensione **(…)** a destra del campo.  
+Per accedere a questa finestra di dialogo, dal menu **Progettazione query** nel riquadro diagramma fare clic con il pulsante destro del mouse sull'intestazione di un oggetto valutato a livello di tabella e quindi scegliere **Proprietà**. Nella finestra **Proprietà** fare clic sul campo **Elenco colonne** . Quindi fare clic sui puntini di sospensione **(...)** a destra del campo.  
   
 In questa finestra di dialogo vengono visualizzati un elenco delle colonne dell'oggetto valutato a livello di tabella selezionato e le proprietà di base, ad esempio i tipi di dati e se nelle colonne sono consentiti i valori Null.  
   

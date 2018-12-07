@@ -20,12 +20,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 392e21cdf50dc537e5bf6cdfcadf18771e66aad7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ca0c77ccf18d47f14c7f9eb286158bb8d4642ddf
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47759689"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617761"
 ---
 # <a name="binarychecksum--transact-sql"></a>BINARY_CHECKSUM (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -77,7 +77,7 @@ o Gestione configurazione
   
 Ad esempio, le stringhe "McCavity" e "Mccavity" hanno valori BINARY_CHECKSUM diversi. In un server in cui la distinzione tra maiuscole e minuscole è irrilevante, invece, la funzione CHECKSUM restituisce per queste stringhe gli stessi valori di checksum. È consigliabile evitare il confronto tra valori CHECKSUM e valori BINARY_CHECKSUM.
  
-BINARY_CHECKSUM supporta fino a 8000 caratteri di tipo **varbinary(max)** e fino a 255 caratteri di tipo **nvarchar(max)**.
+BINARY_CHECKSUM supporta qualsiasi lunghezza di tipo **varbinary(max)** e fino a 255 caratteri di tipo **nvarchar(max)**.
   
 ## <a name="examples"></a>Esempi  
 Nell'esempio seguente la funzione `BINARY_CHECKSUM` viene usata per rilevare le modifiche in una riga di tabella.

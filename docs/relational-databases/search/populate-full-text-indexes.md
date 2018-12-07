@@ -26,12 +26,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c80abd458a0275aeed00c2e97f29d07b0ce17f07
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6d313a2e98bd80a5b2621fd7ce8b30b70cb63f0b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47715029"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52537418"
 ---
 # <a name="populate-full-text-indexes"></a>Popolamento degli indici full-text
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -100,9 +100,9 @@ Esistono due tipi di rilevamento delle modifiche:
   
      **Per avviare il rilevamento delle modifiche con il popolamento automatico**  
   
-    -   [CREATE FULLTEXT INDEX](../../t-sql/statements/create-fulltext-index-transact-sql.md) … WITH CHANGE_TRACKING AUTO  
+    -   [CREATE FULLTEXT INDEX](../../t-sql/statements/create-fulltext-index-transact-sql.md) ... WITH CHANGE_TRACKING AUTO  
   
-    -   [ALTER FULLTEXT INDEX](../../t-sql/statements/alter-fulltext-index-transact-sql.md) … SET CHANGE_TRACKING AUTO  
+    -   [ALTER FULLTEXT INDEX](../../t-sql/statements/alter-fulltext-index-transact-sql.md) ... SET CHANGE_TRACKING AUTO  
   
     **Esempio: modificare un indice full-text per l'uso del rilevamento delle modifiche automatico**  
     Nell'esempio seguente viene creato un indice full-text della tabella `HumanResources.JobCandidate` del database di esempio `AdventureWorks` per l'utilizzo del rilevamento delle modifiche con il popolamento automatico.  
@@ -116,13 +116,13 @@ Esistono due tipi di rilevamento delle modifiche:
   
 -   **Popolamento manuale**  
   
-     Se si specifica CHANGE_TRACKING MANUAL, il motore di ricerca full-text utilizza il popolamento manuale per l'indice full-text. Al termine del popolamento completo iniziale, le modifiche vengono rilevate man mano che i dati vengono modificati nella tabella di base. Non vengono invece propagate nell'indice full-text finché non viene eseguita un'istruzione ALTER FULLTEXT INDEX … START UPDATE POPULATION . Per chiamare questa istruzione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] periodicamente, è possibile utilizzare [!INCLUDE[tsql](../../includes/tsql-md.md)] Agent.  
+     Se si specifica CHANGE_TRACKING MANUAL, il motore di ricerca full-text utilizza il popolamento manuale per l'indice full-text. Al termine del popolamento completo iniziale, le modifiche vengono rilevate man mano che i dati vengono modificati nella tabella di base. Non vengono invece propagate nell'indice full-text finché non viene eseguita un'istruzione ALTER FULLTEXT INDEX ... START UPDATE POPULATION . Per chiamare questa istruzione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] periodicamente, è possibile utilizzare [!INCLUDE[tsql](../../includes/tsql-md.md)] Agent.  
   
      **Per avviare il rilevamento delle modifiche con il popolamento manuale**  
   
-    -   [CREATE FULLTEXT INDEX](../../t-sql/statements/create-fulltext-index-transact-sql.md) … WITH CHANGE_TRACKING MANUAL  
+    -   [CREATE FULLTEXT INDEX](../../t-sql/statements/create-fulltext-index-transact-sql.md) ... WITH CHANGE_TRACKING MANUAL  
   
-    -   [ALTER FULLTEXT INDEX](../../t-sql/statements/alter-fulltext-index-transact-sql.md) … SET CHANGE_TRACKING MANUAL  
+    -   [ALTER FULLTEXT INDEX](../../t-sql/statements/alter-fulltext-index-transact-sql.md) ... SET CHANGE_TRACKING MANUAL  
   
     **Esempio: creare un indice full-text con il rilevamento delle modifiche manuale**  
     Nell'esempio seguente viene creato un indice full-text che utilizzerà il rilevamento delle modifiche con popolamento manuale nella tabella `HumanResources.JobCandidate` del database di esempio `AdventureWorks` .  
@@ -150,9 +150,9 @@ Esistono due tipi di rilevamento delle modifiche:
    
 ### <a name="disable-change-tracking"></a>Disabilitare il rilevamento delle modifiche 
   
--   [CREATE FULLTEXT INDEX](../../t-sql/statements/create-fulltext-index-transact-sql.md) … WITH CHANGE_TRACKING OFF  
+-   [CREATE FULLTEXT INDEX](../../t-sql/statements/create-fulltext-index-transact-sql.md) ... WITH CHANGE_TRACKING OFF  
   
--   [ALTER FULLTEXT INDEX](../../t-sql/statements/alter-fulltext-index-transact-sql.md) … SET CHANGE_TRACKING OFF  
+-   [ALTER FULLTEXT INDEX](../../t-sql/statements/alter-fulltext-index-transact-sql.md) ... SET CHANGE_TRACKING OFF  
    
   
 ## <a name="incremental-population-based-on-a-timestamp"></a>Popolamento incrementale basato su timestamp  

@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9d11d055-a3be-45aa-99a7-46447a94ed42
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7a08ece8729125bf1cc60bb96385d58ba5c3a6ee
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: 13e03572ee4ce886288f1c72b89a97b476d3b35c
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813864"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52712572"
 ---
 # <a name="data-sources-supported-by-reporting-services-ssrs"></a>Origini dei dati supportate da Reporting Services (SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] recupera i dati di report dalle origini dati tramite un livello di dati modulare ed estensibile che usa estensioni per l'elaborazione dati. Per recuperare dati di report da un'origine dati, è necessario selezionare un'estensione per l'elaborazione dati che supporti il tipo di origine dati, la versione del software in esecuzione su di essa e la relativa piattaforma (32 bit o 64 bit [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]).  
@@ -68,7 +68,7 @@ ms.locfileid: "51813864"
  Per altre informazioni sulle estensioni per l'elaborazione dati personalizzate, vedere [Implementazione di un'estensione per l'elaborazione dati](../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md). Per altre informazioni sui provider di dati [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] standard, vedere lo spazio dei nomi <xref:System.Data> .   
   
 ## <a name="platform-support-for-report-data-sources"></a>Supporto delle piattaforme per le origini dei dati del report  
- Le origini dati utilizzabili in una distribuzione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] variano in base all'edizione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , alla versione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e alla piattaforma. Per altre informazioni sulle funzionalità, vedere [Funzionalità di Reporting Services supportate dalle edizioni di SQL Server 2016](../../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md). Nella tabella disponibile più avanti in questo argomento sono disponibili informazioni sulle origini dei dati supportate per versione e piattaforma.  
+ Le origini dati utilizzabili in una distribuzione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] variano in base all'edizione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , alla versione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e alla piattaforma. Per altre informazioni sulle funzionalità, vedere [Funzionalità di Reporting Services supportate dalle edizioni di SQL Server](../../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md). Nella tabella disponibile più avanti in questo argomento sono disponibili informazioni sulle origini dei dati supportate per versione e piattaforma.  
   
  Le considerazioni sulle piattaforme per le origini dei dati di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sono diverse per il client di creazione dei report rispetto a quelle per il server di report.  
   

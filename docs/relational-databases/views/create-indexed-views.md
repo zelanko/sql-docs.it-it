@@ -1,7 +1,7 @@
 ---
 title: Creare viste indicizzate | Microsoft Docs
 ms.custom: ''
-ms.date: 01/22/2018
+ms.date: 11/19/2018
 ms.prod: sql
 ms.prod_service: table-view-index, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c37482e2adb298af1c2d650c5a6c0e5d06ece2b4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f29c5c3fbe0a0d9e3e8bb724ad2f7b2af7ad545e
+ms.sourcegitcommit: eb1f3a2f5bc296f74545f17d20c6075003aa4c42
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47650969"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52191051"
 ---
 # <a name="create-indexed-views"></a>Creazione di viste indicizzate
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -66,7 +66,8 @@ Per essere certi che le viste possano essere gestite in modo corretto e restitui
 |ARITHABORT|ON|ON|OFF|OFF|  
 |CONCAT_NULL_YIELDS_NULL|ON|ON|ON|OFF|  
 |NUMERIC_ROUNDABORT|OFF|OFF|OFF|OFF|  
-|QUOTED_IDENTIFIER|ON|ON|ON|OFF|  
+|QUOTED_IDENTIFIER|ON|ON|ON|OFF| 
+|&nbsp;|&nbsp;|&nbsp;|&nbsp;|&nbsp;|
   
 <sup>1</sup> L'impostazione di `ANSI_WARNINGS` su ON imposta in modo implicito `ARITHABORT` su ON.  
   
@@ -107,6 +108,7 @@ Oltre alle impostazioni delle opzioni SET e ai requisiti relativi alle funzioni 
     |PRECISE = TRUE|Deve essere dichiarata in modo esplicito come attributo del metodo di .NET Framework.|  
     |DATA ACCESS = NO SQL|Determinata dall'impostazione dell'attributo DataAccess su DataAccessKind.None e dell'attributo SystemDataAccess su SystemDataAccessKind.None.|  
     |EXTERNAL ACCESS = NO|Per le routine CLR il valore predefinito di questa proprietà è NO.|  
+    |&nbsp;|&nbsp;|
   
 -   La vista deve essere creata usando l'opzione `WITH SCHEMABINDING`.  
   
@@ -126,6 +128,7 @@ Oltre alle impostazioni delle opzioni SET e ai requisiti relativi alle funzioni 
     |Variabili di tabella|`OUTER APPLY` o `CROSS APPLY`|`PIVOT`, `UNPIVOT`|  
     |Set di colonne di tipo sparse|Funzione con valori di tabella inline o con istruzioni multiple|`OFFSET`|  
     |`CHECKSUM_AGG`|||  
+    |&nbsp;|&nbsp;|&nbsp;|
   
      <sup>1</sup> La vista indicizzata può contenere colonne di tipo **float** che, tuttavia, non possono essere incluse nella chiave di indice cluster.  
   
@@ -152,8 +155,9 @@ Durante l'esecuzione di DML, ad esempio di `UPDATE`, `DELETE` o `INSERT`, in una
   
  È possibile disabilitare gli indici di tabelle e viste. Quando l'indice cluster di una tabella è disabilitato, anche gli indici delle viste associate alla tabella sono disabilitati.  
  
-<a name="nondeterministic"></a> Le espressioni che prevedono la conversione implicita di stringhe di caratteri nel tipo di dati **datetime** o **smalldatetime** sono considerate non deterministiche. Ciò è dovuto al fatto che i risultati dipendono dalle impostazioni LANGUAGE e DATEFORMAT della sessione del server. I risultati dell'espressione `CONVERT (datetime, '30 listopad 1996', 113)` dipendono ad esempio dall'impostazione LANGUAGE, in quanto la stringa '`listopad`' indica mesi diversi in diverse lingue. Analogamente, nell'espressione `DATEADD(mm,3,'2000-12-01')` [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] interpreta la stringa `'2000-12-01'` sulla base dell'impostazione DATEFORMAT. Anche la conversione implicita di dati di tipo carattere non Unicode tra regole di confronto viene considerata non deterministica  
-  
+<a name="nondeterministic"></a> Le espressioni che prevedono la conversione implicita di stringhe di caratteri nel tipo di dati **datetime** o **smalldatetime** sono considerate non deterministiche. Per altre informazioni, vedere [Nondeterministic conversion of literal date strings into DATE values](../../t-sql/data-types/nondeterministic-convert-date-literals.md) (Conversione non deterministica di stringhe di valori letterali in valori DATE).
+
+
 ###  <a name="Security"></a> Sicurezza  
   
 ####  <a name="Permissions"></a> Permissions  

@@ -8,15 +8,15 @@ ms.topic: conceptual
 ms.assetid: 3f226bc8-614e-4dac-9078-3448a83342b5
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9766b511d5dfce57dd91a4f19466249e00ad7ad8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 14d0cb8c5b4f5c11ee979724a7ebe519abfdf3f0
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47816319"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52396445"
 ---
 # <a name="lesson-1-create-a-new-web-site"></a>Lezione 1: Creare un nuovo sito Web
-In questa lezione viene illustrato come creare un nuovo progetto di sito Web utilizzando il modello di sito Web ASP.NET per Visual C#.  
+In questa lezione viene illustrato come creare un nuovo progetto di sito Web usando il modello di sito Web ASP.NET per Visual C#.  
   
 ## <a name="to-create-a-new-website"></a>Per creare un nuovo sito Web  
   

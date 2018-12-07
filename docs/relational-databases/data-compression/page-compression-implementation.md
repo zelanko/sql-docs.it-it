@@ -15,12 +15,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d9b49921f564d3b6eca8dc305ee4d5090f2ebb7a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9256ecdba8aa898cc0eb927f90a2f4f6e6a6a6e1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47722699"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52516756"
 ---
 # <a name="page-compression-implementation"></a>Implementazione della compressione di pagina
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "47722699"
   
 3.  Compressione basata su dizionario  
   
- Quando si utilizza la compressione di pagina, per le pagine di indici che non si trovano a livello foglia viene utilizzata solo la compressione di riga. Per altre informazioni sulla compressione di riga, vedere [Implementazione della compressione di riga](../../relational-databases/data-compression/row-compression-implementation.md).  
+ Quando si usa la compressione di pagina, per le pagine di indici che non si trovano a livello foglia viene usata solo la compressione di riga. Per altre informazioni sulla compressione di riga, vedere [Implementazione della compressione di riga](../../relational-databases/data-compression/row-compression-implementation.md).  
   
 ## <a name="prefix-compression"></a>Compressione basata su prefisso  
  Per ogni pagina da comprimere, la compressione basata su prefisso viene eseguita mediante i passaggi seguenti:  

@@ -12,23 +12,23 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: dca46f2aa08235e69c93efb4a9538ef5004b71b5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e52e83a630a81b87f30e2c07d954fc9bb14696d9
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47652989"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617841"
 ---
 # <a name="rotate-always-encrypted-keys-using-powershell"></a>Ruotare le chiavi di Always Encrypted con PowerShell
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 In questo articolo sono descritti i passaggi per ruotare le chiavi per Always Encrypted usando il modulo PowerShell SqlServer. Per informazioni su come usare il modulo PowerShell SqlServer per Always Encrypted, vedere [Configurare Always Encrypted tramite PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md).
 
-La rotazione delle chiavi Always Encrypted è il processo di sostituzione di una chiave esistente con una nuova. Potrebbe essere necessario ruotare una chiave se questa è stata compromessa oppure per conformità ai criteri e alle normative dell'organizzazione che impongono la rotazione a intervalli regolari delle chiavi crittografiche . 
+La rotazione delle chiavi Always Encrypted è il processo di sostituzione di una chiave esistente con una nuova. Potrebbe essere necessario ruotare una chiave se questa è stata compromessa oppure per conformità ai criteri e alle normative dell'organizzazione che impongono la rotazione a intervalli regolari delle chiavi crittografiche. 
 
 Always Encrypted usa due tipi di chiavi, quindi ci sono due flussi di lavoro principali per la rotazione delle chiavi: rotazione delle chiavi master della colonna e rotazione delle chiavi di crittografia della colonna.
 
-* **Rotazione della chiave di crittografia della colonna** : comporta la decrittografia dei dati crittografati con la chiave corrente e la nuova crittografia dei dati tramite la nuova chiave di crittografia della colonna. Poiché la rotazione di una chiave di crittografia della colonna richiede l'accesso alle chiavi e al database, questa può solo essere eseguita senza la separazione dei ruoli.
+* **Rotazione della chiave di crittografia della colonna** : comporta la decrittografia dei dati crittografati con la chiave corrente e la nuova crittografia dei dati tramite la nuova chiave di crittografia della colonna. Dal momento che la rotazione di una chiave di crittografia della colonna richiede l'accesso alle chiavi e al database, questa può solo essere eseguita senza la separazione dei ruoli.
 * **Rotazione delle chiavi master della colonna** : comporta la decrittografia delle chiavi di crittografia della colonna che sono protette dalla chiave master corrente della colonna, la nuova crittografia tramite la nuova chiave master della colonna e l'aggiornamento dei metadati per entrambi i tipi di chiavi. La rotazione delle chiavi master della colonna può essere completata con o senza la separazione dei ruoli (quando si usa il modulo PowerShell SqlServer).
 
 

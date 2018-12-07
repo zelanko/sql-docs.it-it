@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: fb0bc38f-dc56-4350-8457-cd135c0346e1
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2115aa8933396d14f6f6f32e0c02f85f75321700
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 7cab15eb6feb4a502957c7e8a1b929601cd6fd1a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50029190"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52537355"
 ---
 # <a name="working-with-paginated-reports-web-portal"></a>Utilizzo di report impaginati (portale web)
 
@@ -124,7 +124,7 @@ Una sottoscrizione di Reporting Services è una configurazione che recapita un r
 ![ssRSWebPortal-report-subscription1](../reporting-services/media/ssrswebportal-report-subscription1.png)
    
 ## <a name="dependent-items"></a>Elementi dipendenti  
-La pagina Elementi dipendenti consente di visualizzare l'elenco degli elementi a cui si fa riferimento in questo report. Per ognuno di essi un'icona indica di che tipo di elemento si tratta. Facendo clic sui **puntini di sospensione (…)** è possibile eseguire altre operazioni su ogni elemento.  
+La pagina Elementi dipendenti consente di visualizzare l'elenco degli elementi a cui si fa riferimento in questo report. Per ognuno di essi un'icona indica di che tipo di elemento si tratta. Facendo clic sui **puntini di sospensione (...)** è possibile eseguire altre operazioni su ogni elemento.  
   
 ## <a name="caching"></a>Memorizzazione nella cache  
 Per la memorizzazione nella cache di un report impaginato sono disponibili varie opzioni. Per iniziare, è necessario effettuare una semplice selezione.  

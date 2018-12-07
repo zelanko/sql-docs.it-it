@@ -23,12 +23,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ed9b7d2b24b2687de6e5736e6ef2ca523c2ade6a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 801cdcf393ebadb9c0fd287fdd97e65cad87c284
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47635959"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52533024"
 ---
 # <a name="date-transact-sql"></a>date (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -83,7 +83,7 @@ Nelle tabelle seguenti sono illustrati i formati di valore letterale stringa sup
 |yyyy-mm-ddTZD|Specificamente supportato per l'utilizzo di XML/SOAP.<br /><br /> TZD è l'identificatore del fuso orario (Z, + hh:mm o - hh:mm):<br /><br /> -   hh:mm rappresenta la differenza di fuso orario. hh è un numero di due cifre, compreso tra 0 e 14, che rappresenta il numero di ore della differenza di fuso orario.<br />-   MM è un numero di due cifre, compreso tra 0 e 59, che rappresenta il numero di minuti aggiuntivi della differenza di fuso orario.<br />-   + (più) o - (meno) è il segno obbligatorio della differenza di fuso orario. Indica che la differenza di fuso orario viene aggiunta o sottratta dall'ora UTC (Coordinated Universal Times) per ottenere l'ora locale. L'intervallo valido della differenza di fuso orario è da -14:00 a +14:00.|  
   
 ## <a name="ansi-and-iso-8601-compliance"></a>Conformità agli standard ANSI e ISO 8601  
-L'elemento **date** è conforme alla definizione dello standard ANSI SQL per il calendario gregoriano: "NOTE 85 - Datetime data types will allow dates in the Gregorian format to be stored in the date range 0001–01–01 CE through 9999–12–31 CE". (NOTE 85 - I tipi di dati datetime consentono che le date nel formato gregoriano siano archiviate nell'intervallo da 01-01-0001 a 31-12-9999).
+L'elemento **date** è conforme alla definizione dello standard ANSI SQL per il calendario gregoriano: "NOTE 85 - Datetime data types will allow dates in the Gregorian format to be stored in the date range 0001-01-01–9999-12-31–01 CE through 9999–12–31 CE". (NOTE 85 - I tipi di dati datetime consentono che le date nel formato gregoriano siano archiviate nell'intervallo da 01-01-0001 a 31-12-9999).
   
 Il formato predefinito dei valori letterali stringa utilizzato per i client legacy è conforme al formato standard SQL, definito come AAAA-MM-GG. Questo formato è lo stesso della definizione ISO 8601 per DATE.
   

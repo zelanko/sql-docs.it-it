@@ -15,12 +15,12 @@ ms.assetid: 92b47a2b-21b5-460a-885d-6cc4bb567249
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 170b40c086e3fe2c9d3ec7fbf3278a5ceeabe080
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6d269e2e18c7c098e5f4149f4083d81a228b89da
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47783989"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52527933"
 ---
 # <a name="select-a-package"></a>Seleziona pacchetto
   Utilizzare la finestra di dialogo **Seleziona pacchetto** per specificare il pacchetto da cui l'attività Message Queue può ricevere messaggi.  
@@ -53,11 +53,11 @@ ms.locfileid: "47783989"
  Se si usa l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , specificare il nome utente da usare per l'accesso al server.  
   
  **Password**  
- Se si usa l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , specificare una password.  
+ Se si utilizza l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , specificare una password.  
   
 ### <a name="location--dtsx-file"></a>Percorso = File DTSX  
  **Nome file**  
- Specificare il percorso di un pacchetto oppure fare clic sul pulsante Sfoglia **(…)** per individuare il pacchetto.  
+ Specificare il percorso di un pacchetto oppure fare clic sul pulsante Sfoglia **(...)** per trovare il pacchetto.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Attività Message Queue](../../integration-services/control-flow/message-queue-task.md)  

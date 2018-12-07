@@ -11,12 +11,12 @@ ms.assetid: 45d66152-883a-49a7-a877-2e8ab45f8f79
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 637993cecd7b5a7c750956042b245f670d9aa0f1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1cbccb0ba6fa66cba9b8e57e628bef4710414cf7
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47628629"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52533389"
 ---
 # <a name="define-a-state-variable"></a>Definire una variabile di stato
   In questa procedura viene descritto come definire una variabile del pacchetto in cui è archiviato lo stato CDC.  
@@ -33,7 +33,7 @@ ms.locfileid: "47628629"
 |**CS**|Viene contrassegnato il punto di inizio dell'intervallo di elaborazione corrente (inizio corrente).|  
 |**\<cs-lsn>**|Si tratta dell'ultimo numero di sequenza del file di log (LSN) elaborato nell'esecuzione CDC precedente.|  
 |**CE**|Viene contrassegnato il punto di fine dell'intervallo di elaborazione corrente (fine corrente). La presenza del componente CE nello stato CDC indica che un pacchetto CDC è attualmente in fase di elaborazione o che si è verificato un errore di esecuzione di un pacchetto CDC prima del completamento dell'elaborazione dell'intervallo di elaborazione CDC.|  
-|**\<ce-lsn>**|Si tratta dell'ultimo LSN da elaborare nell'esecuzione CDC corrente. Viene sempre presupposto che l'ultimo numero di sequenza da elaborare sia il valore massimo (0xFFF…).|  
+|**\<ce-lsn>**|Si tratta dell'ultimo LSN da elaborare nell'esecuzione CDC corrente. Viene sempre presupposto che l'ultimo numero di sequenza da elaborare sia il valore massimo (0xFFF...).|  
 |**IR**|Viene contrassegnato l'intervallo di elaborazione iniziale.|  
 |**\<ir-start>**|Si tratta di un numero LSN di una modifica appena prima dell'avvio del caricamento iniziale.|  
 |**\<ir-end>**|Si tratta di un numero LSN di una modifica appena dopo il completamento del caricamento iniziale.|  
@@ -87,6 +87,6 @@ ms.locfileid: "47628629"
   
 ## <a name="see-also"></a>Vedere anche  
  [Attività di controllo CDC](../../integration-services/control-flow/cdc-control-task.md)   
- [Editor dell'attività di controllo CDC](../../integration-services/control-flow/cdc-control-task-editor.md)  
+ [Editor attività Controllo CDC](../../integration-services/control-flow/cdc-control-task-editor.md)  
   
   

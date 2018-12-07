@@ -12,12 +12,12 @@ ms.assetid: 50dd0a0b-a407-4aeb-bc8b-b02a793aa30a
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: cb90a4311a1fe37905d5962e66572f7431db7a2a
-ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
+ms.openlocfilehash: 18f025f4ba212849d3823466d6555733f305ac91
+ms.sourcegitcommit: ba7fb4b9b4f0dbfe77a7c6906a1fde574e5a8e1e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49085257"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52302694"
 ---
 # <a name="database-engine-tuning-advisor"></a>Database Engine Tuning Advisor
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "49085257"
 -   Gestire lo spazio di archiviazione  
   
 ## <a name="database-engine-tuning-advisor-benefits"></a>Vantaggi di Ottimizzazione guidata motore di database  
- L'ottimizzazione della prestazione delle query può essere difficile senza una conoscenza approfondita della struttura del database e delle query eseguite nel database. Ottimizzazione guidata motore di database può rendere più facile questa attività grazie all'analisi della cache dei piano di query corrente o di un carico di lavoro delle query [!INCLUDE[tsql](../../includes/tsql-md.md)] creato e consigliando una progettazione fisica adatta. Per gli amministratori di database più avanzati, DTA espone un meccanismo potente per eseguire analisi di simulazione esplorativa di diverse alternative di progettazione fisica. DTA può fornire le informazioni seguenti.  
+ L'ottimizzazione della prestazione delle query può essere difficile senza una conoscenza approfondita della struttura del database e delle query eseguite nel database. **Ottimizzazione guidata motore di database (DTA)** può rendere più facile questa attività grazie all'analisi della cache dei piano di query corrente o di un carico di lavoro delle query [!INCLUDE[tsql](../../includes/tsql-md.md)] creato e consigliando una progettazione fisica adatta. Per gli amministratori di database più avanzati, DTA espone un meccanismo potente per eseguire analisi di simulazione esplorativa di diverse alternative di progettazione fisica. DTA può fornire le informazioni seguenti.  
   
 -   Consigliare la combinazione di indici rowstore e [columnstore](../../relational-databases/performance/columnstore-index-recommendations-in-database-engine-tuning-advisor-dta.md) ottimale per i database usando Query Optimizer per analizzare le query in un carico di lavoro.  
   
@@ -50,10 +50,10 @@ ms.locfileid: "49085257"
 
 -   Considerare le alternative in cui vengono indicate possibili scelte di progettazione sotto forma di configurazioni ipotetiche da sottoporre alla valutazione di Ottimizzazione guidata motore di database.
 
--  Ottimizzare i carichi di lavoro da un'ampia gamma di origini, tra cui archivio query di SQL Server, cache dei piani, file o tabella di traccia di SQL Server Profiler o un file .SQL.
+-   Ottimizzare i carichi di lavoro da un'ampia gamma di origini, tra cui archivio query di SQL Server, cache dei piani, file o tabella di traccia di SQL Server Profiler o un file .SQL.
 
   
- Ottimizzazione guidata motore di database consente di gestire i seguenti tipi di carico di lavoro delle query.  
+Ottimizzazione guidata motore di database consente di gestire i seguenti tipi di carico di lavoro delle query:  
   
 -   Solo query di elaborazione delle transazioni online (OLTP)  
   
@@ -66,22 +66,22 @@ ms.locfileid: "49085257"
 -   Carichi di lavoro elevati in termini di aggiornamento (più modifiche di dati che query)  
   
 ## <a name="dta-components-and-concepts"></a>Componenti e concetti DTA  
- Interfaccia utente grafica di Ottimizzazione guidata motore di database  
+ **Interfaccia utente grafica di Ottimizzazione guidata motore di database**  
  Un'interfaccia di facile utilizzo nella quale è possibile specificare il carico di lavoro e selezionare diverse opzioni di ottimizzazione.  
   
  Utilità**dta**   
  Versione del prompt dei comandi di Ottimizzazione guidata motore di database. L'utilità **dta** è stata sviluppata per consentire l'utilizzo della funzionalità Ottimizzazione guidata motore di database in applicazioni e script.  
   
- carico di lavoro  
+ **Carico di lavoro**  
  File script Transact-SQL, file di traccia, o tabella di traccia che contiene un carico di lavoro rappresentativo per i database che si desidera ottimizzare. A partire da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], è possibile specificare la cache dei piani come carico di lavoro.  A partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], è possibile [specificare Query Store come carico di lavoro](../../relational-databases/performance/tuning-database-using-workload-from-query-store.md). 
   
- file di input XML  
- File in formato XML che Ottimizzazione guidata motore di database può utilizzare per ottimizzare i carichi di lavoro. Il file di input XML supporta le opzioni di ottimizzazione avanzate che non sono disponibili nella GUI o nell'utilità **dta** .  
+ **File di input XML**  
+ File in formato XML che Ottimizzazione guidata motore di database può usare per ottimizzare i carichi di lavoro. Il file di input XML supporta le opzioni di ottimizzazione avanzate che non sono disponibili nella GUI o nell'utilità **dta** .  
   
 ## <a name="limitations-and-restrictions"></a>Limitazioni e restrizioni  
  Ottimizzazione guidata motore di database presenta le seguenti limitazioni e restrizioni.  
   
--   Non può aggiungere o rilasciare gli indici univoci o gli indici che impongono vincoli PRIMARY KEY o UNIQUE.  
+-   Non può aggiungere o rilasciare gli indici univoci o gli indici che impongono vincoli `PRIMARY KEY` o `UNIQUE`.  
   
 -   Non può analizzare un database impostato su modalità utente singolo.  
   

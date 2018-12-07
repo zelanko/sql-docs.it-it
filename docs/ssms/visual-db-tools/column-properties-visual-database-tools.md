@@ -17,12 +17,12 @@ ms.assetid: e549a2a8-4154-4ec8-b146-614564169b39
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5ce67b078a4410f67a1c877951e83dece65af1b6
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: b6914306472ae5eb438c8d7384f2a5e0d9128c17
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51698779"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52527077"
 ---
 # <a name="column-properties-visual-database-tools"></a>Proprietà colonne (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -113,7 +113,7 @@ Indica il numero massimo di cifre ammesse dopo la virgola decimale nei tipi di d
 Viene espansa per visualizzare le proprietà rimanenti.  
   
 **Regole di confronto**  
-Indica l'impostazione delle regole di confronto per la colonna selezionata. Per modificare questa impostazione, scegliere **Regole di confronto** e fare clic sui puntini di sospensione **(…)** a destra del valore.  
+Indica l'impostazione delle regole di confronto per la colonna selezionata. Per modificare questa impostazione, scegliere **Regole di confronto** e fare clic sui puntini di sospensione **(...)** a destra del valore.  
   
 **Categoria Specifica colonna calcolata**  
 Si espande per visualizzare le proprietà **Formula** e **Persistente**. Se la colonna è calcolata, verrà visualizzata anche la formula. Per modificare la formula, espandere questa categoria e apportare la modifica nella proprietà **Formula** .  
@@ -128,7 +128,7 @@ Consente di salvare la colonna calcolata con l'origine dei dati. Una colonna cal
 Consente di visualizzare informazioni sul tipo di dati del campo, nello stesso formato dell'istruzione SQL CREATE TABLE. Un campo contenente ad esempio una stringa di lunghezza variabile con un massimo di 20 caratteri viene rappresentato come "varchar(20)". Per modificare questa proprietà, digitare direttamente il valore desiderato.  
   
 **Descrizione**  
-Consente di visualizzare la descrizione della colonna. Per visualizzare la descrizione completa o modificarla, fare clic su Descrizione e sui puntini di sospensione **(…)** a destra della proprietà.  
+Consente di visualizzare la descrizione della colonna. Per visualizzare la descrizione completa o modificarla, fare clic su Descrizione e sui puntini di sospensione **(...)** a destra della proprietà.  
   
 **Categoria Specifica full-text**  
 Viene espansa per visualizzare le proprietà specifiche per le colonne full-text.  

@@ -13,12 +13,12 @@ ms.assetid: fb420903-df54-4016-bab6-49e6dfbdedc7
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: 9b4036967c0e542aa418fe80cf42c60c602a1ae1
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: 1549c672211d328a723ab8eb056e8f227f1107ca
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49169301"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52521107"
 ---
 # <a name="move-a-tde-protected-database-to-another-sql-server"></a>Spostare un database protetto da TDE in un'altra istanza di SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ Le procedure riportate di seguito mostrano che è necessario creare un database 
   
 4.  Nella finestra di dialogo **Nuovo database** digitare il nome del nuovo database nella casella **Nome database** .  
   
-5.  Nella casella **Proprietario** digitare il nome del proprietario del nuovo database. In alternativa, fare clic sui puntini di sospensione **(...)** per aprire la finestra di dialogo **Seleziona proprietario database** . Per altre informazioni sulla creazione di un nuovo database, vedere [Create a Database](../../../relational-databases/databases/create-a-database.md).  
+5.  Nella casella **Proprietario** digitare il nome del proprietario del nuovo database. In alternativa, fare clic sui puntini di sospensione **(...)** per aprire la finestra di dialogo **Seleziona proprietario database**. Per altre informazioni sulla creazione di un nuovo database, vedere [Create a Database](../../../relational-databases/databases/create-a-database.md).  
   
 6.  In Esplora oggetti fare clic sul segno più per espandere la cartella **Database** .  
   
@@ -142,7 +142,7 @@ Le procedure riportate di seguito mostrano che è necessario spostare un databas
   
 ###  <a name="SSMSMove"></a> Utilizzo di SQL Server Management Studio  
   
-1.  In Esplora oggetti fare clic con il pulsante destro del mouse sul database crittografato in precedenza, scegliere **Attività** e fare clic su **Scollega…**.  
+1.  In Esplora oggetti fare clic con il pulsante destro del mouse sul database crittografato in precedenza, scegliere **Attività** e fare clic su **Scollega...**.  
   
      Nella finestra di dialogo **Scollega database** sono disponibili le opzioni seguenti.  
   
@@ -172,7 +172,7 @@ Le procedure riportate di seguito mostrano che è necessario spostare un databas
   
     -   Quando un database è coinvolto nella replica, lo **Stato** è **Non pronto** e nella colonna **Messaggio** viene visualizzato **Database replicato**.  
   
-    -   Quando un database ha una o più connessioni attive, il valore di **Stato** è **Non pronto** e la colonna **Messaggio** visualizza **Connessioni attive**: __\<numero\_di\_connessioni\_attive\>, ad esempio **Connessioni attive: 1**. Prima di poter scollegare il database è necessario disconnettere tutte le connessioni attive selezionando **Interrompi connessioni**.  
+    -   Quando un database ha una o più connessioni attive, il valore di **Stato** è **Non pronto** e la colonna **Messaggio** visualizza _\<Connessioni attive: numero\_di\_connessioni\_attive\>_****, ad esempio **Connessioni attive: 1**. Prima di poter scollegare il database è necessario disconnettere tutte le connessioni attive selezionando **Interrompi connessioni**.  
   
      Per ottenere ulteriori informazioni su un messaggio, fare clic sul testo del collegamento ipertestuale per aprire Monitoraggio attività.  
   
@@ -186,7 +186,7 @@ Le procedure riportate di seguito mostrano che è necessario spostare un databas
   
 6.  Ricreare il certificato del server usando il file di backup del certificato del server originale. Per altre informazioni, vedere **Uso di Transact-SQL** di seguito.  
   
-7.  In Esplora oggetti in [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], fare clic con il pulsante destro del mouse sulla cartella **Database** e selezionare **Collega…**.  
+7.  In Esplora oggetti in [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], fare clic con il pulsante destro del mouse sulla cartella **Database** e selezionare **Collega...**.  
   
 8.  Nella finestra di dialogo **Collega database** , in **Database da collegare**fare clic su **Aggiungi**.  
   
@@ -234,7 +234,7 @@ Le procedure riportate di seguito mostrano che è necessario spostare un databas
      Consente di rimuovere il file selezionato dalla griglia **Database da collegare** .  
   
      **"** *<database_name>* **" dettagli database**  
-     Consente di visualizzare i nomi dei file da collegare. Per verificare o modificare il percorso di un file, fare clic sul pulsante **Sfoglia** (**…**).  
+     Consente di visualizzare i nomi dei file da collegare. Per verificare o modificare il percorso di un file, fare clic sul pulsante **Sfoglia** (**...**).  
   
     > [!NOTE]  
     >  Se il file non esiste, nella colonna **Messaggio** verrà visualizzato il testo "File non trovato". Se non rilevato, un file di log può trovarsi in un'altra directory o essere stato eliminato. È necessario aggiornare il percorso del file nella griglia **Dettagli database** in modo che indichi la posizione corretta oppure rimuovere il file di log dalla griglia. Se non viene rilevato un file di dati con estensione ndf, è necessario aggiornare il percorso nella griglia in modo che indichi la posizione corretta.  

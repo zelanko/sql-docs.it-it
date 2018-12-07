@@ -5,8 +5,7 @@ ms.date: 06/04/2013
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 f1_keywords:
 - sql13.dqs.kb.openkb.f1
@@ -14,12 +13,12 @@ ms.assetid: a5f010a5-b762-41c9-881b-bf0c192dca83
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0b96887fc805833fd8339798bbecdf22f6ce3159
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e724810a6626a15b9a2a81cfce9354c126680366
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47667566"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617791"
 ---
 # <a name="open-a-knowledge-base"></a>Apertura di una Knowledge Base
 
@@ -82,7 +81,7 @@ ms.locfileid: "47667566"
 ##  <a name="State"></a> Stato di una Knowledge Base  
  Nel campo Stato viene indicata la fase di un'attività a cui si trova la Knowledge Base. Se si apre la Knowledge Base, verrà aperta in quella fase.  
   
--   **\<Vuoto>**: il campo Stato è vuoto se la Knowledge Base è stata pubblicata facendo clic su **Pubblica** nell'attività Gestione dominio e quindi su **Yes – Publish the knowledge base and exit** (Sì - Pubblica la Knowledge Base e chiudi).  
+-   **\<Vuoto>**: il campo Stato è vuoto se la Knowledge Base è stata pubblicata facendo clic su **Pubblica** nell'attività Gestione dominio e quindi su **Sì - Pubblica la Knowledge Base e chiudi**.  
   
 -   **In lavorazione**: il lavoro sulla Knowledge Base è stato salvato facendo clic su **Pubblica** nell'attività Gestione dominio e quindi su **No - Salva il lavoro relativo alla Knowledge Base e chiudi**.  
   
@@ -92,10 +91,10 @@ ms.locfileid: "47667566"
   
 -   **Individuazione - Individuazione**: la Knowledge Base è stata chiusa nella pagina **Gestione Knowledge Base: Analizza** . La Knowledge Base è bloccata e l'attività di gestione del dominio non è disponibile.  
   
--   **Individuazione - Gestione valore**: la Knowledge Base è stata chiusa nella pagina **Gestione Knowledge Base: Gestisci termini di dominio** . La Knowledge Base è bloccata e l'attività di gestione del dominio non è disponibile.  
+-   **Individuazione - Gestione valore**: la Knowledge Base è stata chiusa nella pagina **Gestione Knowledge Base: Gestisci termini di dominio**. La Knowledge Base è bloccata e l'attività di gestione del dominio non è disponibile.  
   
--   **Criteri di corrispondenza - Criteri di corrispondenza**: la Knowledge Base è stata chiusa nella pagina **Criteri di corrispondenza - Criteri di corrispondenza** . La Knowledge Base è bloccata e le attività di gestione del dominio e di individuazione delle informazioni non sono disponibili.  
+-   **Criteri di corrispondenza - Criteri di corrispondenza**: la Knowledge Base è stata chiusa nella pagina **Criteri di corrispondenza - Criteri di corrispondenza**. La Knowledge Base è bloccata e le attività di gestione del dominio e di individuazione delle informazioni non sono disponibili.  
   
--   **Criteri di corrispondenza - Risultati corrispondenza**: la Knowledge Base è stata chiusa nella pagina **Criteri di corrispondenza - Risultati corrispondenza** . La Knowledge Base è bloccata e le attività di gestione del dominio e di individuazione delle informazioni non sono disponibili.  
+-   **Criteri di corrispondenza - Risultati corrispondenza**: la Knowledge Base è stata chiusa nella pagina **Criteri di corrispondenza - Risultati corrispondenza**. La Knowledge Base è bloccata e le attività di gestione del dominio e di individuazione delle informazioni non sono disponibili.  
   
   

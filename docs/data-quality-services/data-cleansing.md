@@ -5,19 +5,18 @@ ms.date: 10/01/2012
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: e67136cc-f8c6-4cb3-ba0b-c966c636256c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d17a0c27fa6ae4ed3c8cb609a41c44ad0342adae
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2505215ccc58c9f85d256a5aa4a9de1d292cb5e8
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47653269"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617611"
 ---
 # <a name="data-cleansing"></a>Data Cleansing
 
@@ -33,7 +32,7 @@ ms.locfileid: "47653269"
   
 -   Fornisce un processo a due passaggi per pulire i dati: *assistito da computer* e *interattivo*. Nel processo assistito da computer vengono utilizzate le informazioni di una Knowledge Base DQS per elaborare automaticamente i dati e vengono suggerite sostituzioni/correzioni. Nel passaggio interattivo successivo l'amministratore dei dati può approvare, rifiutare o modificare le modifiche proposte da DQS nel corso della pulizia assistita da computer.  
   
--   Standardizza e arricchisce dati dei clienti tramite valori e regole di dominio e dati di riferimento. Un esempio può essere la standardizzazione del termine "Lgo" in "Largo" o l'arricchimento dei dati con l'inserimento di elementi mancanti tramite la modifica di "1 Microsoft way Redmond 98006" in "1 Microsoft Way, Redmond, WA 98006, Stati Uniti".  
+-   Standardizza e arricchisce dati dei clienti tramite valori e regole di dominio e dati di riferimento. Un esempio può essere la standardizzazione del termine "Lgo" in "Largo" o l'arricchimento dei dati con l'inserimento di elementi mancanti modificando "1 Microsoft way Redmond 98006" in "1 Microsoft Way, Redmond, WA 98006, Stati Uniti".  
   
 -   Fornisce all'utente un'interfaccia simile a una procedura guidata semplice, intuitiva e coerente per spostarsi all'interno di dati e controllare errori in set di dati molto grandi.  
   
@@ -70,7 +69,7 @@ ms.locfileid: "47653269"
   
 -   **Suggeriti**: valori per i quali sono stati trovati suggerimenti con un livello di confidenza superiore al valore *soglia di suggerimento automatico* ma inferiore al valore *soglia di correzione automatica* . È necessario analizzare questi valori e approvarli o rifiutarli nel modo appropriato.  
   
--   **Nuovi**: valori validi per i quali non sono disponibili informazioni sufficienti (suggerimenti) in DQS e dei quali non è pertanto possibile eseguire il mapping a nessuna altra scheda. Questa scheda contiene inoltre valori che presentano un livello di confidenza inferiore al valore *soglia di suggerimento automatico*, ma sufficientemente elevato per essere contrassegnati come validi.  
+-   **Nuovi**: valori validi per i quali non sono disponibili informazioni sufficienti (suggerimenti) in DQS e dei quali non è pertanto possibile eseguire il mapping a nessuna altra scheda. Questa scheda contiene inoltre valori che presentano un livello di confidenza inferiore al valore *soglia di suggerimento automatico* , ma sufficientemente elevato per essere contrassegnati come validi.  
   
 -   **Non validi**: valori contrassegnati come non validi nel dominio della Knowledge Base o valori non conformi a una regola di dominio o ai dati di riferimento. Questa scheda conterrà anche valori rifiutati dall'utente nelle altre quattro schede durante il processo di pulizia interattiva.  
   
@@ -92,7 +91,7 @@ ms.locfileid: "47653269"
  ![Pulizia dei dati in Data Quality Client](../data-quality-services/media/dqs-cleansingindqsclient.gif "Pulizia dei dati in Data Quality Client")  
   
 ##  <a name="Leading"></a> Correzione del valore iniziale  
- La correzione del valore iniziale si applica ai valori di dominio con sinonimi, quando l'utente desidera utilizzare uno dei sinonimi come valore iniziale, anziché altri, per rappresentare il valore in modo coerente. Ad esempio, "New York", "NYC" e "Grande mela" sono sinonimi e l'utente desidera utilizzare "New York" come valore iniziale, anziché "NYC" e "Grande mela". DQS supporta la correzione del valore iniziale durante il processo di pulizia per consentire di standardizzare i dati. La correzione del valore iniziale viene effettuata solo se il dominio è stato opportunamente abilitato al momento della creazione. Per impostazione predefinita, tutti i domini sono abilitati per la correzione del valore iniziale a meno che sia stata deselezionata la casella di controllo **Utilizza valori iniziali** durante la creazione di un dominio. Per ulteriori informazioni su questa casella di controllo, vedere [Set Domain Properties](../data-quality-services/set-domain-properties.md).  
+ La correzione del valore iniziale si applica ai valori di dominio con sinonimi, quando l'utente desidera utilizzare uno dei sinonimi come valore iniziale, anziché altri, per rappresentare il valore in modo coerente. Ad esempio, "New York", "NYC" e "Grande mela" sono sinonimi e l'utente vuole usare "New York" come valore iniziale, anziché "NYC" e "Grande mela". DQS supporta la correzione del valore iniziale durante il processo di pulizia per consentire di standardizzare i dati. La correzione del valore iniziale viene effettuata solo se il dominio è stato opportunamente abilitato al momento della creazione. Per impostazione predefinita, tutti i domini sono abilitati per la correzione del valore iniziale a meno che sia stata deselezionata la casella di controllo **Utilizza valori iniziali** durante la creazione di un dominio. Per ulteriori informazioni su questa casella di controllo, vedere [Set Domain Properties](../data-quality-services/set-domain-properties.md).  
   
 ##  <a name="Standardize"></a> Standardizzazione dei dati puliti  
  È possibile scegliere se esportare i dati puliti nel formato standardizzato basato sul formato di output definito per i domini. Durante la creazione di un dominio, è possibile selezionare la formattazione che verrà applicata alla restituzione dei valori dei dati nel dominio. Per ulteriori informazioni sulla specifica dei formati di output per un dominio, vedere l'elenco **Formato output in** in [Set Domain Properties](../data-quality-services/set-domain-properties.md).  

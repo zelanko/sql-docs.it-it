@@ -26,12 +26,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 48f4de868657978e62285907d4f513b313f484b5
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: f04a60e28b96c97890ab34157df50bd1dfc39891
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699829"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52526404"
 ---
 # <a name="select---over-clause-transact-sql"></a>Clausola SELECT - OVER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -132,7 +132,7 @@ OVER ( [ PARTITION BY value_expression ] [ order_by_clause ] )
   
  Limita ulteriormente le righe all'interno della partizione specificando i punti iniziali e finali. A tale scopo, è necessario specificare un intervallo di righe rispetto alla riga corrente in base all'associazione logica o all'associazione fisica. L'associazione fisica viene eseguita mediante la clausola ROWS.  
   
- La clausola ROWS limita le righe all'interno di una partizione specificando un numero fisso di righe precedenti o successive alla riga corrente. In alternativa, la clausola RANGE limita logicamente le righe all'interno di una partizione specificando un intervallo di valori rispetto al valore nella riga corrente. Le righe precedenti e successive vengono definite in base all'ordinamento nella clausola ORDER BY. La cornice di finestra "RANGE … CURRENT ROW …" include tutte le righe che contengono gli stessi valori nell'espressione ORDER BY della riga corrente. Ad esempio, ROWS BETWEEN 2 PRECEDING AND CURRENT ROW significa che la finestra di righe a cui viene applicata la funzione è di tre righe, a partire dalle 2 righe precedenti fino alla riga corrente inclusa.  
+ La clausola ROWS limita le righe all'interno di una partizione specificando un numero fisso di righe precedenti o successive alla riga corrente. In alternativa, la clausola RANGE limita logicamente le righe all'interno di una partizione specificando un intervallo di valori rispetto al valore nella riga corrente. Le righe precedenti e successive vengono definite in base all'ordinamento nella clausola ORDER BY. La cornice di finestra "RANGE ... CURRENT ROW ..." include tutte le righe che contengono gli stessi valori nell'espressione ORDER BY della riga corrente. Ad esempio, ROWS BETWEEN 2 PRECEDING AND CURRENT ROW significa che la finestra di righe a cui viene applicata la funzione è di tre righe, a partire dalle 2 righe precedenti fino alla riga corrente inclusa.  
   
 > [!NOTE]  
 >  ROWS o RANGE richiede che venga specificata la clausola ORDER BY. Se ORDER BY contiene più espressioni di ordinamento, CURRENT ROW FOR RANGE considera tutte le colonne nell'elenco ORDER BY per la determinazione della riga corrente.  

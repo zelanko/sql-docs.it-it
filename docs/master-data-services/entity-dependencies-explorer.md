@@ -14,12 +14,12 @@ ms.assetid: 9d922118-1412-4a9d-9c02-70d6c48d6c0d
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 49528d0fda3bbbe9798a4a7bdce2cbdd5b7369f1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 87d9d0ea6ea2310f305eb6cb58ec8e39ecab8649
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47820015"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52416672"
 ---
 # <a name="entity-dependencies-explorer"></a>Esplorazione delle dipendenze di entità
 

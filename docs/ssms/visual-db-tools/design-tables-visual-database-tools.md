@@ -18,12 +18,12 @@ ms.assetid: c49e0155-5dcb-481f-9538-e1bde77105e2
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ff738c43095548ea6667deadf0eb80c4c6818ec3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f4dcdc69317db78546a5dcc2550ebfc58b02ab36
+ms.sourcegitcommit: b5cea9c67c7f896944065f09dace17b4929a34f7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47805481"
+ms.lasthandoff: 11/21/2018
+ms.locfileid: "52267856"
 ---
 # <a name="create-and-update-database-tables"></a>Creare e aggiornare le tabelle di database
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -64,3 +64,4 @@ Progettazione tabelle è uno strumento visivo che consente di progettare e visua
 [Indici](../../relational-databases/indexes/indexes.md)  
 [Tipi di dati (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)  
 [Scaricare SQL Server Management Studio (SSMS)](../download-sql-server-management-studio-ssms.md)  
+[Creare un database e aggiungere tabelle in Visual Studio](/visualstudio/data-tools/create-a-sql-database-by-using-a-designer)

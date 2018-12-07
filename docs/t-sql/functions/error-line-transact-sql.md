@@ -23,17 +23,17 @@ ms.assetid: 47335734-0baf-45a6-8b3b-6c4fd80d2cb8
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: fe54b0a56e90dd7c4645fd0e78db7e97f6c838f1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b9c847b6b04aa4ec1a67b89bf3fa6473b91e13bf
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47770979"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52515876"
 ---
 # <a name="errorline-transact-sql"></a>ERROR_LINE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Questa funzione restituisce il numero di riga dell'occorrenza di un errore che ha causato l'esecuzione del blocco CATCH di un costrutto TRY…CATCH.  
+Questa funzione restituisce il numero di riga dell'occorrenza di un errore che ha causato l'esecuzione del blocco CATCH di un costrutto TRY...CATCH.  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -58,7 +58,7 @@ Una chiamata a `ERROR_LINE` può verificarsi da un qualsiasi punto nell'ambito d
   
 `ERROR_LINE` restituisce il numero di riga in cui si è verificato un errore, indipendentemente dalla posizione della chiamata a `ERROR_LINE` nell'ambito del blocco CATCH e dal numero di chiamate a `ERROR_LINE`. Questo tipo di comportamento è in contrasto con funzioni come @@ERROR. @@ERROR restituisce un numero di errore nell'istruzione immediatamente successiva a quella che ha provocato un errore o nella prima istruzione di un blocco CATCH.  
   
-Nei blocchi CATCH nidificati `ERROR_LINE` restituisce il numero di riga dell'errore specifico dell'ambito del blocco CATCH che vi fa riferimento. Ad esempio, il blocco CATCH di un costrutto TRY…CATCH potrebbe contenere un costrutto TRY…CATCH nidificato. All'interno del blocco CATCH nidificato `ERROR_LINE` restituisce il numero di riga per l'errore che ha richiamato il blocco CATCH nidificato. Se `ERROR_LINE` viene eseguita nel blocco CATCH esterno, restituisce il numero di riga per l'errore che ha richiamato il blocco CATCH specifico.  
+Nei blocchi CATCH nidificati `ERROR_LINE` restituisce il numero di riga dell'errore specifico dell'ambito del blocco CATCH che vi fa riferimento. Ad esempio, il blocco CATCH di un costrutto TRY...CATCH potrebbe contenere un costrutto TRY...CATCH nidificato. All'interno del blocco CATCH nidificato `ERROR_LINE` restituisce il numero di riga per l'errore che ha richiamato il blocco CATCH nidificato. Se `ERROR_LINE` viene eseguita nel blocco CATCH esterno, restituisce il numero di riga per l'errore che ha richiamato il blocco CATCH specifico.  
   
 ## <a name="examples"></a>Esempi  
   

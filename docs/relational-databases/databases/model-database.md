@@ -1,7 +1,7 @@
 ---
 title: Database model | Microsoft Docs
 ms.custom: ''
-ms.date: 03/04/2016
+ms.date: 11/19/2018
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -15,12 +15,12 @@ ms.assetid: 4e4f739b-fd27-4dce-8be6-3d808040d8d7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cf51363b4dc2e09e0a86de1d02be5bc60de5a318
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 9febf511aef30bde1b01a5cad8eba3e3f8845b2f
+ms.sourcegitcommit: eb1f3a2f5bc296f74545f17d20c6075003aa4c42
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558828"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52191031"
 ---
 # <a name="model-database"></a>Database model
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,9 +43,9 @@ ms.locfileid: "51558828"
 |----------|------------------|-------------------|-----------------|  
 |Dati primari|modeldev|model.mdf|Aumento automatico di 64 MB fino a quando il disco risulta pieno.|  
 |File di log|modellog|modellog.ldf|Aumento automatico di 64 MB fino a un massimo di 2 terabyte.|  
-  
- Per le versioni precedenti a [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], vedere [Database model](../../2014/relational-databases/databases/model-database.md) per i valori predefiniti di aumento delle dimensioni dei file.  
-  
+
+Per SQL Server 2014, vedere [Database model](https://docs.microsoft.com/sql/relational-databases/databases/model-database?view=sql-server-2014) per i valori predefiniti di aumento delle dimensioni dei file.  
+
  Per spostare il database **modello** o i file di log, vedere [Spostare i database di sistema](../../relational-databases/databases/move-system-databases.md).  
   
 ### <a name="database-options"></a>Opzioni di database  

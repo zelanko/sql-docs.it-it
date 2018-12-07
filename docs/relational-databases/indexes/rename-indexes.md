@@ -16,12 +16,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7547210622ca3a1bf9aa33ffb4b6d143b4a943d5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8b61ab4da7de38c045fe222a6c0784b7032658ba
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47653641"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52511456"
 ---
 # <a name="rename-indexes"></a>Ridenominazione di indici
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -70,7 +70,7 @@ ms.locfileid: "47653641"
   
 7.  Scegliere **Chiudi**.  
   
-8.  Scegliere **Salva***nome_tabella* dal menu **File**.  
+8.  Nel menu **File** scegliere **Salva**_table_name_.  
   
 #### <a name="to-rename-an-index-by-using-object-explorer"></a>Per rinominare un indice utilizzando Esplora oggetti  
   

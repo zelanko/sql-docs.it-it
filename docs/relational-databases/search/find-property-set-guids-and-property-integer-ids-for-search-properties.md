@@ -15,18 +15,18 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 85e6537fe5b9df976724d9d2392f14520ccf48d5
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: bb9628196ae08e94b9076e9e1bb422eaad0331e0
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51657810"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52532145"
 ---
 # <a name="find-property-set-guids-and-property-integer-ids-for-search-properties"></a>Trovare GUID del set di proprietà e ID di tipo integer delle proprietà per le proprietà di ricerca
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   In questo argomento viene illustrato come ottenere i valori richiesti prima di poter aggiungere una proprietà a un elenco delle proprietà di ricerca e abilitarlo per la ricerca full-text. In questi valori sono inclusi il GUID del set di proprietà e l'identificatore di tipo integer di una proprietà del documento.  
   
- Le proprietà del documento estratte usando filtri IFilter dai dati binari, vale a dire i dati archiviati in una colonna di tipi di dati **varbinary**, **varbinary(max)** (incluso **FILESTREAM**) o **image** , possono essere rese disponibili per la ricerca full-text. Per consentire la ricerca in una proprietà estratta, è necessario aggiungere la proprietà manualmente a un elenco delle proprietà di ricerca. È inoltre necessario che l'elenco delle proprietà di ricerca sia associato a uno o più indici full-text. Per altre informazioni, vedere [Eseguire ricerche nelle proprietà dei documenti con elenchi delle proprietà di ricerca](../../relational-databases/search/search-document-properties-with-search-property-lists.md).  
+ Le proprietà del documento estratte usando filtri IFilter dai dati binari, vale a dire i dati archiviati in una colonna di tipi di dati **varbinary**, **varbinary(max)** (incluso **FILESTREAM**) o **image**, possono essere rese disponibili per la ricerca full-text. Per consentire la ricerca in una proprietà estratta, è necessario aggiungere la proprietà manualmente a un elenco delle proprietà di ricerca. È inoltre necessario che l'elenco delle proprietà di ricerca sia associato a uno o più indici full-text. Per altre informazioni, vedere [Eseguire ricerche nelle proprietà dei documenti con elenchi delle proprietà di ricerca](../../relational-databases/search/search-document-properties-with-search-property-lists.md).  
   
  Per poter aggiungere una proprietà disponibile a un elenco di proprietà, è necessario trovare due informazioni sulla proprietà:  
   
@@ -78,10 +78,10 @@ ms.locfileid: "51657810"
 .  
 propertyDescription  
 name = System.Author  
-…  
+...  
 formatID = F29F85E0-4FF9-1068-AB91-08002B27B3D9  
 propID = 4  
-…  
+...  
 ```  
   
  Per la descrizione completa della proprietà, vedere [System.Author](https://go.microsoft.com/fwlink/?LinkId=144337) nella documentazione di Windows Search.  

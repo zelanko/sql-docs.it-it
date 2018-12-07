@@ -18,12 +18,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e3a171b8a55394ae974cdc9e891e94bd84c9511f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bc197fdb8571df79e1ea39cf49086a1cea68b4f0
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47653369"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52543799"
 ---
 # <a name="specify-field-and-row-terminators-sql-server"></a>Impostazione dei caratteri di terminazione del campo e della riga (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "47653369"
 |Barra rovesciata*|\\\|  
 |Carattere di terminazione Null (non visibile)**|\0|  
 |Tutti i caratteri stampabili (i caratteri di controllo non sono stampabili, ad eccezione dei caratteri Null, di tabulazione, di nuova riga e di ritorno a capo)|(*, A, t, l e così via)|  
-|Stringa costituita da un massimo di 10 caratteri stampabili, inclusi alcuni o tutti i caratteri di terminazione descritti sopra|(**\t\*\*, end, !!!!!!!!!!, \t—\n e così via)|  
+|Stringa costituita da un massimo di 10 caratteri stampabili, inclusi alcuni o tutti i caratteri di terminazione descritti sopra|(**\t\*\*, end, !!!!!!!!!!, \t-\n e così via)|  
   
  *Per generare un carattere di controllo, è possibile utilizzare solo i caratteri t, n, r, 0 e '\0' in associazione al carattere di escape barra rovesciata.  
   
