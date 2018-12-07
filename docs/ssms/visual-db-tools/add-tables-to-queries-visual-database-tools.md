@@ -15,16 +15,16 @@ ms.assetid: 6551aa7e-31a1-4636-852a-819bc53d658b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8fc0698d476b89ded113e0485a50c2c485880ff5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6bd5f44a6e9c4907aa320a42ce89d5fdcf80e457
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47598992"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52511830"
 ---
 # <a name="add-tables-to-queries-visual-database-tools"></a>Aggiunta di tabelle a query (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-Quando si crea una query, si recuperano dati da una tabella o da altri oggetti con struttura di tabelle, come viste e alcune funzioni definite dall'utente. Per usare uno qualsiasi di questi oggetti nelle query, è necessario aggiungerlo nel **riquadro Diagramma**.  
+Quando si crea una query, si recuperano dati da una tabella o da altri oggetti strutturati come tabelle, come viste e alcune funzioni definite dall'utente. Per usare uno qualsiasi di questi oggetti nelle query, è necessario aggiungerlo nel **riquadro Diagramma**.  
   
 ### <a name="to-add-a-table-or-table-valued-object-to-a-query"></a>Per aggiungere una tabella o un oggetto con valori di tabella a una query  
   
@@ -50,7 +50,7 @@ Se non si dispone di diritti di accesso sufficienti o se il provider non è in g
   
 3.  Aprire Progettazione query dalla query esistente. A questo punto saranno aperte due istanze di Progettazione query.  
   
-4.  Visualizzare il **riquadro SQL** relativo alla query interna, ovvero la query esistente da includere nella nuova query esterna.  
+4.  Visualizzare il **riquadro SQL** per la query interna, ossia la query esistente da includere nella nuova query esterna.  
   
 5.  Selezionare tutto il testo presente nel **riquadro SQL**e copiarlo negli Appunti.  
   

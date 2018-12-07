@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: df4c38d4-bfcc-41c4-aa6d-952ca6fd7a2e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a48d24c6250160fe5ade5a941c5591c358fc1908
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 945ee262e8d507a62aa954eec847e3b7bd4ac308
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031682"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52524488"
 ---
 # <a name="add-a-data-bound-image-report-builder-and-ssrs"></a>Aggiungere un'immagine con associazione a dati (Generatore report e SSRS)
   Un report può includere un riferimento a un'immagine archiviata in un database. Tale immagine è nota come *immagine con associazione a dati*. Le immagini visualizzate insieme ai nomi di prodotti in un catalogo sono esempi di immagini con associazione a dati.  
@@ -35,11 +35,11 @@ ms.locfileid: "50031682"
   
 5.  (Facoltativo) Nella casella di testo **Descrizione comando** digitare il testo da visualizzare quando il puntatore del mouse viene posizionato nel report sottoposto a rendering per HTML.  
   
-6.  In **Selezionare l'origine dell'immagine**selezionare **Database**.  
+6.  In **Selezionare l'origine dell'immagine** selezionare **Database**.  
   
-7.  In **Utilizzare questo campo**selezionare il campo che contiene le immagini nel report.  
+7.  In **Utilizzare questo campo** selezionare il campo che contiene le immagini nel report.  
   
-8.  In **Utilizzare questo tipo MIME**selezionare il tipo MIME, o il formato di file, dell'immagine, ad esempio bmp.  
+8.  In **Utilizzare questo tipo MIME** selezionare il tipo MIME, o il formato di file, dell'immagine, ad esempio bmp.  
   
 9. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

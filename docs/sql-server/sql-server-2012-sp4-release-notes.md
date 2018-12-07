@@ -175,7 +175,7 @@ Nei dettagli interni dell'errore sarà presente un messaggio simile al seguente:
   
 -   "Il valore 'SharePoint Principal' non è supportato per la proprietà della stringa di connessione 'User Identity'".  
   
-**Soluzione alternativa:** installare il pacchetto di installazione di PowerPivot per SharePoint 2013 (**spPowerPivot.msi**) in SharePoint Server 2013. Il pacchetto di installazione è disponibile come parte del Feature Pack di [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] . Il Feature Pack può essere scaricato dall'Area Download [!INCLUDE[msCoName](../includes/msconame-md.md)] in corrispondenza di [SQL Server 2012 SP1 Feature Pack](https://go.microsoft.com/fwlink/p/?LinkID=268266)(http://go.microsoft.com/fwlink/p/?LinkID=268266).  
+**Soluzione alternativa:** installare il pacchetto di installazione di PowerPivot per SharePoint 2013 (**spPowerPivot.msi**) in SharePoint Server 2013. Il pacchetto di installazione è disponibile come parte del Feature Pack di [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] . Il Feature Pack può essere scaricato dall'Area Download [!INCLUDE[msCoName](../includes/msconame-md.md)] in corrispondenza di [SQL Server 2012 SP1 Feature Pack](https://go.microsoft.com/fwlink/p/?LinkID=268266)  
   
 #### <a name="power-view-sheets-in-a-powerpivot-workbook-are-deleted-after-a-scheduled-data-refresh"></a>I fogli di Power View in una cartella di lavoro di PowerPivot vengono eliminati dopo un aggiornamento dati pianificato  
 **Problema**: nel componente aggiuntivo PowerPivot per SharePoint l'uso di **Scheduled Data Refresh** in una cartella di lavoro con Power View comporterà l'eliminazione di tutti i fogli di Power View.  

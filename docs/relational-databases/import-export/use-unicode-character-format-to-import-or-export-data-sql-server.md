@@ -15,12 +15,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 41f52b1a60ebc5fc456b0b90b998c173356c5c7e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6f81e94012e4c976dc1d4fdb1013ec34e22ff51d
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47809639"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52413308"
 ---
 # <a name="use-unicode-character-format-to-import-or-export-data-sql-server"></a>Utilizzo del formato carattere Unicode per l'importazione o l'esportazione di dati (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -163,7 +163,7 @@ REM Review results is SSMS
 ```
 
 ### **Uso di bcp e del formato carattere Unicode per l'importazione di dati con un file di formato non XML**<a name="bcp_widechar_import_fmt"></a>
-Opzioni **-w** e **-f** switches e **IN** comme.  Sarà necessario adottare una soluzione alternativa poiché in questo esempio vengono usati bcp, un file di formato, un carattere Unicode e il primo campo dati del file di dati è di tipo non carattere.  Vedere [Considerazioni speciali sull'uso del formato carattere Unicode, di bcp e di un file di formato](#special_considerations)più indietro.  Il file di dati `myWidechar.bcp` verrà modificato aggiungendo un record "fittizio" che successivamente verrà ignorato con l'opzione `-F 2` .
+Opzioni **-w** e **-f** switches e **IN** comme.  Sarà necessario adottare una soluzione alternativa poiché in questo esempio vengono usati bcp, un file di formato, un carattere Unicode e il primo campo dati del file di dati è di tipo non carattere.  Vedere [Considerazioni speciali sull'uso del formato carattere Unicode, di bcp e di un file di formato](#special_considerations)più indietro.  Il file di dati `myWidechar.bcp` verrà modificato aggiungendo un record "fittizio" che successivamente verrà ignorato con l'opzione `-F 2`.
 
 Al prompt dei comandi, immettere i comandi seguenti e seguire i passaggi di modifica:
 ```

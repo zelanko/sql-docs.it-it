@@ -19,12 +19,12 @@ ms.assetid: decc0760-029e-4baf-96c9-4a64073df1c2
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: f0b85a5127a71b19e090ccc9bff1f018cc803b1d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a482767c416e1adf4de30d6493c4c79ca07d2398
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47685388"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52420376"
 ---
 # <a name="alter-sequence-transact-sql"></a>ALTER SEQUENCE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ ALTER SEQUENCE [schema_name. ] sequence_name
  Valore successivo che verrà restituito dall'oggetto sequenza. Se specificato, il valore RESTART WITH deve essere un numero intero minore o uguale al valore massimo e maggiore o uguale al valore minimo dell'oggetto sequenza. Se il valore WITH viene omesso, la numerazione della sequenza ricomincia in base alle opzioni CREATE SEQUENCE originali.  
   
  INCREMENT BY \<constant>  
- Valore utilizzato per incrementare (o diminuire, in caso di valore negativo) il valore di base dell'oggetto sequenza per ogni chiamata alla funzione NEXT VALUE FOR. Se l'incremento è un valore negativo, l'oggetto sequenza ha un ordine decrescente, in caso contrario avrà un ordine crescente. L'incremento non può essere 0.  
+ Valore usato per incrementare (o diminuire, in caso di valore negativo) il valore di base dell'oggetto sequenza per ogni chiamata alla funzione NEXT VALUE FOR. Se l'incremento è un valore negativo, l'oggetto sequenza ha un ordine decrescente, in caso contrario avrà un ordine crescente. L'incremento non può essere 0.  
   
  [ MINVALUE \<constant> | NO MINVALUE ]  
  Specifica i limiti per l'oggetto sequenza. Se viene specificato NO MINVALUE, viene utilizzato il valore possibile minimo del tipo di dati della sequenza.  

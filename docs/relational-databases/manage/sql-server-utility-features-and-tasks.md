@@ -18,19 +18,19 @@ ms.assetid: 6e6cbd25-6b1c-4e21-9ade-4584e243fd8f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 60099ea8f029f8e1b6687a1d69e12cb76f520c61
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: cf446db934f1088882bd19e2095aa99b1a5a025a
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51656561"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52409428"
 ---
 # <a name="sql-server-utility-features-and-tasks"></a>Attività e funzionalità di Utilità SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] necessitano di gestire l'ambiente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nel suo complesso e questa esigenza viene soddisfatta in questa versione tramite il concetto di gestione delle applicazioni e multiserver in Utilità [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="benefits-of-the-sql-server-utility"></a>Vantaggi di Utilità SQL Server  
- Utilità [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consente di modellare le entità relative all'ambiente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]di un'organizzazione in una visualizzazione unificata. I punti di visualizzazione di Esplora utilità e Utilità [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) offrono agli amministratori una visualizzazione olistica dell'integrità delle risorse di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tramite un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che funge da punto di controllo dell'utilità. La combinazione di dati riepilogativi e dettagliati visualizzata nel punto di controllo dell'utilità sia per i criteri di sottoutilizzo che per quelli di sovrautilizzo e per vari parametri principali consente di identificare facilmente le possibilità di consolidamento delle risorse e il sovrautilizzo delle risorse. I criteri di integrità sono configurabili e possono essere modificati per impostare soglie di utilizzo delle risorse più alte o più basse. È possibile modificare i criteri di monitoraggio globali o configurare criteri di monitoraggio singoli per ogni entità gestita in Utilità [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+ Utilità [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consente di modellare le entità relative all'ambiente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di un'organizzazione in una visualizzazione unificata. I punti di visualizzazione di Esplora utilità e Utilità [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) offrono agli amministratori una visualizzazione olistica dell'integrità delle risorse di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tramite un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che funge da punto di controllo dell'utilità. La combinazione di dati riepilogativi e dettagliati visualizzata nel punto di controllo dell'utilità sia per i criteri di sottoutilizzo che per quelli di sovrautilizzo e per vari parametri principali consente di identificare facilmente le possibilità di consolidamento delle risorse e il sovrautilizzo delle risorse. I criteri di integrità sono configurabili e possono essere modificati per impostare soglie di utilizzo delle risorse più alte o più basse. È possibile modificare i criteri di monitoraggio globali o configurare criteri di monitoraggio singoli per ogni entità gestita in Utilità [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ##  <a name="typical_scenarios"></a> Introduzione a Utilità SQL Server  
  Lo scenario utente tipico prevede innanzitutto la creazione di un punto di controllo dell'utilità che stabilisce il punto ragionevole centrale per Utilità [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Il punto di controllo dell'utilità fornisce una visualizzazione consolidata dell'integrità delle risorse raccolta da istanze gestite di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in Utilità [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . In seguito alla creazione del punto di controllo dell'utilità, le istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengono registrate in Utilità [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in modo che possano essere gestite dal punto di controllo dell'utilità.  

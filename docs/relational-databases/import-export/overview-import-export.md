@@ -11,12 +11,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dab18fa010b0bc5d85ebeb16f00bcbce49921786
-ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
+ms.openlocfilehash: fa36b331f42835a4b1bf6b25651a59669cb56ac9
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51215929"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52390494"
 ---
 # <a name="import-and-export-data-from-sql-server-and-azure-sql-database"></a>Importare ed esportare dati da SQL Server e dal database SQL di Microsoft Azure
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "51215929"
 ### <a name="use-the-import-flat-file-wizard"></a>Usare la procedura guidata Importa file flat
 Se non sono necessarie tutte le opzioni di configurazione disponibili nell'Importazione/Esportazione guidata e in altri strumenti, è possibile importare un file di testo in SQL Server usando la **procedura guidata Importa file flat** in SQL Server Management Studio (SSMS). Per altre informazioni, vedere gli articoli seguenti:
 - [Procedura guidata per l'importazione di file flat in SQL](import-flat-file-wizard.md)
-- [What’s new in SQL Server Management Studio 17.3](https://blogs.technet.microsoft.com/dataplatforminsider/2017/10/10/whats-new-in-sql-server-management-studio-17-3/) (Novità di SQL Server Management Studio 17.3)
+- [What's new in SQL Server Management Studio 17.3](https://blogs.technet.microsoft.com/dataplatforminsider/2017/10/10/whats-new-in-sql-server-management-studio-17-3/) (Novità di SQL Server Management Studio 17.3)
 - [Introducing the new Import Flat File Wizard in SSMS 17.3](https://channel9.msdn.com/Shows/Data-Exposed/Introducing-the-new-Import-Flat-File-Wizard-in-SSMS-173) (Introduzione alla nuova procedura guidata Importa file flat in SSMS 17.3)
 
 ### <a name="use-the-sql-server-import-and-export-wizard"></a>Usare Importazione/Esportazione guidata SQL Server

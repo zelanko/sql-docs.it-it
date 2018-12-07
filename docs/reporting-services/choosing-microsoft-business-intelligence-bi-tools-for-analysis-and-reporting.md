@@ -8,19 +8,19 @@ ms.topic: conceptual
 ms.assetid: d0e16108-7123-4788-87b3-05db962dbc94
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2e4f359f5ba8a1a55452985375e3c6f0754e5f6b
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 95806dd597798b5a8a629d8b49d8502fff4de9ae
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031660"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52399174"
 ---
 # <a name="choosing-microsoft-business-intelligence-bi-tools-for-analysis-and-reporting"></a>Scelta degli strumenti di business intelligence (BI) di Microsoft per l'analisi e la creazione di report
 La scelta dello strumento di business intelligence appropriato può risultare complessa. Scoprire le diverse offerte Microsoft e trovare quello più adatto alle proprie esigenze.
 
 Nella tabella seguente viene indicato il mapping dei carichi di lavoro per l'analisi dei dati e gli strumenti di Business Intelligence di Microsoft più appropriati per i carichi di lavoro. Per ulteriori informazioni su un prodotto, fare clic sul relativo collegamento nella tabella.  
   
- Per una breve panoramica di questi strumenti che permetta di definire quelli più appropriati, vedere la pagina sull' [introduzione agli strumenti di Microsoft Business Intelligence (BI)](https://msdn.microsoft.com/library/dn655131.aspx).  
+ Per una breve panoramica di questi strumenti che permetta di definire quelli più appropriati, vedere la pagina sull'[introduzione agli strumenti di Microsoft Business Intelligence (BI)](https://msdn.microsoft.com/library/dn655131.aspx).  
   
 |Carichi di lavoro|Utente|||Strumenti di Business Intelligence|||  
 |---------------|----------|-|-|--------------|-|-|  

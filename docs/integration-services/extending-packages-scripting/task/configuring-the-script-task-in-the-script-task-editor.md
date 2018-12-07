@@ -17,12 +17,12 @@ ms.assetid: 232de0c9-b24d-4c38-861d-6c1f4a75bdf3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 87c6ae53c34ab0c960efc1a5347c6ff01c74f0df
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4ecf4ed7f81f4d490f9f5c966627377f93acaeb6
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47805519"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542054"
 ---
 # <a name="configuring-the-script-task-in-the-script-task-editor"></a>Configurazione dell'attività Script nell'editor attività Script
   Prima di scrivere codice personalizzato nell'attività Script, configurarne le principali proprietà nelle tre pagine di **Editor attività Script**. È possibile configurare proprietà di attività aggiuntive che non sono specifiche dell'attività Script utilizzando la finestra Proprietà.  
@@ -52,7 +52,7 @@ ms.locfileid: "47805519"
 > [!NOTE]  
 >  Per i nomi delle variabili viene fatta distinzione tra maiuscole e minuscole.  
   
- Per selezionare le variabili, fare clic sui puntini di sospensione (**…**) accanto al campo della proprietà. Per altre informazioni, vedere [Pagina Seleziona variabili](../../../integration-services/control-flow/select-variables-page.md).  
+ Per selezionare le variabili, fare clic sui puntini di sospensione (**...**) accanto al campo della proprietà. Per altre informazioni, vedere [Pagina Seleziona variabili](../../../integration-services/control-flow/select-variables-page.md).  
   
 ### <a name="edit-script-button"></a>Pulsante Modifica script  
  Il pulsante **Modifica script** avvia l'ambiente di sviluppo di VSTA in cui scrivere lo script personalizzato. Per altre informazioni, vedere [Scrittura di codice e debug dell'attività Script](../../../integration-services/extending-packages-scripting/task/coding-and-debugging-the-script-task.md).  

@@ -12,18 +12,18 @@ ms.assetid: b82f6f81-6e9c-4918-9ea9-4ab5f5d11b15
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 279198ba384acf33656d7567ed417a633eae7266
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0e607136bf7e13994e931166831b68d531d229dc
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47826409"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52404526"
 ---
 # <a name="automatically-generate-attribute-values-other-than-code-master-data-services"></a>Generare automaticamente valori per attributi diversi da Code (Master Data Services)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]vengono automaticamente generati valori per l'attributo di un'entità quando si vuole che un valore intero venga assegnato automaticamente come valore ogni volta che viene applicata una regola di business.  
+  In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] vengono automaticamente generati valori per l'attributo di un'entità quando si vuole che un valore intero venga assegnato automaticamente come valore ogni volta che viene applicata una regola di business.  
   
 ## <a name="prerequisites"></a>Prerequisites  
  Per eseguire questa procedura:  
@@ -54,7 +54,7 @@ ms.locfileid: "47826409"
   
 9. Nel riquadro **Componenti** espandere il nodo **Azioni** .  
   
-10. Nel nodo Valore predefinito fare clic su **assume un valore generato** e trascinarlo sull'etichetta **Azioni** del riquadro **THEN** .  
+10. Nel nodo Valore predefinito fare clic su **assume un valore generato** e trascinarlo sull'etichetta **Azioni** del riquadro **THEN**.  
   
 11. Nel riquadro **Attributi** fare clic sull'attributo con il valore che si vuole generare e trascinarlo sull'etichetta **Seleziona attributo** del riquadro **Modifica azione** .  
   
@@ -78,7 +78,7 @@ ms.locfileid: "47826409"
   
 ## <a name="see-also"></a>Vedere anche  
  [Creazione di codice automatica &#40;Master Data Services&#41;](../master-data-services/automatic-code-creation-master-data-services.md)   
- [Regole business &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)   
+ [Regole di business &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)   
  [Convalida &#40;Master Data Services&#41;](../master-data-services/validation-master-data-services.md)  
   
   

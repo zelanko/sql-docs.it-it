@@ -12,12 +12,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cb0e8200fb90dd4455c60f650c5fd3e9f5afddd7
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: eae7dfb2a198cf7cb3b1563f8f5b35c5fbb0b4eb
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51665520"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52409618"
 ---
 # <a name="creating-a-system-versioned-temporal-table"></a>Creazione di una tabella temporale con controllo delle versioni di sistema
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "51665520"
 -   Tabella temporale con una tabella di cronologia definita dall'utente creata in precedenza: si crea la tabella di cronologia più adatta alle esigenze e poi si fa riferimento alla tabella durante la creazione della tabella temporale.  
   
 ## <a name="creating-a-temporal-table-with-an-anonymous-history-table"></a>Creazione di una tabella temporale con una tabella di cronologia anonima  
- Creare una tabella temporale con una tabella di cronologia "anonima" è una soluzione comoda per poter generare rapidamente oggetti, specialmente nei prototipi e negli ambienti di test. È inoltre il modo più semplice di creare una tabella temporale in quanto non richiede alcun parametro nella clausola **SYSTEM_VERSIONING** . Nell'esempio seguente viene creata una nuova tabella con il controllo delle versioni di sistema attivato, senza definire il nome della tabella di cronologia.  
+ Creare una tabella temporale con una tabella di cronologia "anonima" è una soluzione comoda per poter generare rapidamente oggetti, specialmente nei prototipi e negli ambienti di test. È inoltre il modo più semplice di creare una tabella temporale in quanto non richiede alcun parametro nella clausola **SYSTEM_VERSIONING**. Nell'esempio seguente viene creata una nuova tabella con il controllo delle versioni di sistema attivato, senza definire il nome della tabella di cronologia.  
   
 ```  
 CREATE TABLE Department   

@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 1e8665fe9028def0d8ad2c6f15010b51fe5b5fe9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 10e04d4864ac3f6ecf7c59f989a8886cee2409d5
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47708755"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52414778"
 ---
 # <a name="reporting-services-site-settings-and-site-features-sharepoint-mode"></a>Funzionalità e impostazioni del sito di Reporting Services (modalità SharePoint)
 
@@ -34,7 +34,7 @@ La modalità SharePoint di Reporting Services include diverse funzionalità pers
   
 ## <a name="open-the-reporting-services-site-settings-page"></a>Aprire la pagina Impostazioni sito di Reporting Services
   
-1.  Selezionare **Impostazioni sito** dal menu **Azioni sito**del sito di SharePoint.  
+1.  Selezionare **Impostazioni sito** dal menu **Azioni sito** del sito di SharePoint.  
   
 2.  Nella sezione **Reporting Services** selezionare **Impostazioni del sito per Reporting Services**.  
   

@@ -20,12 +20,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e268c036ffb1805c968017a566b2e319507490e5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f145386e82132316484beb6757c47007d8144f11
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47839734"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52391926"
 ---
 # <a name="lastvalue-transact-sql"></a>LAST_VALUE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
@@ -103,7 +103,7 @@ Information Services        Trenary                 50.4808      2003-01-12   20
 ### <a name="b-using-firstvalue-and-lastvalue-in-a-computed-expression"></a>B. Utilizzo di FIRST_VALUE e LAST_VALUE in un'espressione calcolata  
  Nell'esempio seguente vengono utilizzate le funzioni FIRST_VALUE e LAST_VALUE nelle espressioni calcolate per mostrare la differenza tra il valore della quota vendite per il trimestre corrente e il primo e ultimo trimestre dell'anno rispettivamente per un numero specificato di dipendenti. La funzione FIRST_VALUE restituisce il valore delle quote vendite per il primo trimestre dell'anno e lo sottrae dal valore delle quote vendite per il trimestre corrente. Viene restituito nella colonna derivata denominata DifferenceFromFirstQuarter. Per il primo trimestre dell'anno il valore della colonna DifferenceFromFirstQuarter è 0. La funzione LAST_VALUE restituisce il valore delle quote vendite per l'ultimo trimestre dell'anno e lo sottrae dal valore delle quote vendite per il trimestre corrente. Viene restituito nella colonna derivata denominata DifferenceFromLastQuarter. Per l'ultimo trimestre dell'anno il valore della colonna DifferenceFromLastQuarter è 0.  
   
- In questo esempio è richiesta la clausola “RANGE BETWEEN CURRENT ROW AND UNBOUNDED FOLLOWING” per la restituzione di valori diversi da zero nella colonna DifferenceFromLastQuarter, come illustrato di seguito. L'intervallo predefinito è “RANGE BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW”. Se nell'esempio si usa l'intervallo predefinito in questione, o se non si include alcun intervallo determinando quindi l'uso dell'intervallo predefinito, nella colonna DifferenceFromLastQuarter verranno restituiti valori pari a zero. Per altre informazioni, vedere [Clausola OVER - &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
+ In questo esempio è richiesta la clausola "RANGE BETWEEN CURRENT ROW AND UNBOUNDED FOLLOWING" per la restituzione di valori diversi da zero nella colonna DifferenceFromLastQuarter, come illustrato di seguito. L'intervallo predefinito è "RANGE BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW". Se nell'esempio si usa l'intervallo predefinito in questione, o se non si include alcun intervallo determinando quindi l'uso dell'intervallo predefinito, nella colonna DifferenceFromLastQuarter verranno restituiti valori pari a zero. Per altre informazioni, vedere [Clausola OVER - &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
   
 ```  
 USE AdventureWorks2012;  

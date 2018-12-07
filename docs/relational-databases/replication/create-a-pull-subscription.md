@@ -17,12 +17,12 @@ ms.assetid: 41d1886d-59c9-41fc-9bd6-a59b40e0af6e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9395b0437c61bc0d680a701aae72e4df53c19cb4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ae91aeb2cf31e7855f4f6caa7c1b916c3ef1a968
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47781179"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52503497"
 ---
 # <a name="create-a-pull-subscription"></a>Creazione di una sottoscrizione pull
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -119,9 +119,9 @@ ms.locfileid: "47781179"
   
 2.  Nel Sottoscrittore eseguire [sp_addmergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md). Specificare i parametri **@publisher**, **@publisher_db**, **@publication**e i parametri seguenti:  
   
-    -   **@subscriber_type** : specificare **local** per una sottoscrizione client e **global** per una sottoscrizione server.  
+    -   **@subscriber_type**: specificare **local** per una sottoscrizione client e **global** per una sottoscrizione server.  
   
-    -   **@subscription_priority** : specificare la priorità della sottoscrizione (l'intervallo di valori consentito è compreso tra**0,00** e **99,99**). Questo parametro è obbligatorio solo per una sottoscrizione server.  
+    -   **@subscription_priority**: specificare la priorità della sottoscrizione (l'intervallo di valori consentito è compreso tra**0,00** e **99,99**). Questo parametro è obbligatorio solo per una sottoscrizione server.  
   
          Per altre informazioni, vedere [Rilevamento e risoluzione avanzati dei conflitti nella replica di tipo merge](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md).  
   

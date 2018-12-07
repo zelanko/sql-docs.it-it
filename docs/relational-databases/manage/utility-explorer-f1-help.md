@@ -20,12 +20,12 @@ ms.assetid: 8697e4a4-4f59-4cda-af71-7de86005bd4a
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 84db1d36a782fc054129b1ff753b620e82684499
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 0468195ebe718db73dfa4a302185b677f76c6896
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51675370"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52413168"
 ---
 # <a name="utility-explorer-f1-help"></a>Guida sensibile al contesto di Gestione Utilità
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -152,7 +152,7 @@ ms.locfileid: "51675370"
   
     -   Freccia in giù verde - Lo stato di integrità di almeno un filegroup o gruppo file di log è sottoutilizzato, nessun filegroup o gruppo di file di log è sovrautilizzato.  
   
-    -   Freccia in su rossa - Lo stato di integrità di almeno un filegroup o il gruppo file di log è sovrautilizzato. Notare che se il database si trova nello stato di "emergenza", lo stato di integrità visualizzerà lo spazio sovrautilizzato del file di log.  
+    -   Freccia in su rossa - Lo stato di integrità di almeno un filegroup o il gruppo file di log è sovrautilizzato. Si noti che se il database si trova in stato di "emergenza", lo stato di integrità visualizzerà lo spazio sovrautilizzato del file di log.  
   
      Per visualizzare o modificare i limiti dei criteri di spazio per i file, fare clic sulla scheda **Utilizzo spazio di archiviazione** .  
   
@@ -216,7 +216,7 @@ ms.locfileid: "51675370"
   
 -   Freccia in giù verde - Lo spazio file per almeno un file di dati nel filegroup è sottoutilizzato e nessun file nel filegroup è sovrautilizzato.  
   
--   Freccia in su rossa - Lo spazio file per tutti i file di dati nel filegroup è sovrautilizzato. Notare che se il database si trova nello stato di "emergenza", lo stato di integrità visualizzerà lo spazio sovrautilizzato del file di log.  
+-   Freccia in su rossa - Lo spazio file per tutti i file di dati nel filegroup è sovrautilizzato. Si noti che se il database si trova in stato di "emergenza", lo stato di integrità visualizzerà lo spazio sovrautilizzato del file di log.  
   
  Per visualizzare i file in base al volume, selezionare il pulsante di opzione **Volume** nella selezione **Raggruppa file per:** . Il grafico della cronologia di utilizzo dello spazio di archiviazione consente di visualizzare lo spazio file utilizzato da tutti i file di dati e da tutti i file di log nel volume di archiviazione. Espandere l'albero per visualizzare i dettagli relativi ai singoli file di dati e file di log del database.  
   

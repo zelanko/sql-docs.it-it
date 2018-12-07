@@ -18,12 +18,12 @@ ms.assetid: ecfd783e-7dbb-4a6c-b5ab-c6c27d5dd57f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d03661990e6316b7faa223cac63c8c63939fb998
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: f820161dcf242a06054e3f64198aad1f827ed3dd
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606011"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52395354"
 ---
 # <a name="connect-to-the-database-engine-using-extended-protection"></a>Connessione al motore di database mediante la protezione estesa
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "51606011"
 >  Per impostazione predefinita, in Windows la **protezione estesa** non è abilitata. Per informazioni su come abilitare la **protezione estesa** in Windows, vedere la pagina relativa alla [protezione estesa per l'autenticazione](https://support.microsoft.com/kb/968389).  
   
 ## <a name="description-of-extended-protection"></a>Descrizione della protezione estesa  
- La**protezione estesa** utilizza l'associazione al servizio e l'associazione di canale per impedire un attacco di tipo relay per l'autenticazione. In un attacco di questo tipo un client che può eseguire l'autenticazione NTLM, ad esempio Esplora risorse, [!INCLUDE[msCoName](../../includes/msconame-md.md)] Outlook, un'applicazione .NET SqlClient e così via, si connette all'autore dell'attacco, ad esempio un file server CIFS dannoso. L'autore utilizza le credenziali del client per mascherarsi ed eseguire l'autenticazione per un servizio, ad esempio un'istanza del servizio [!INCLUDE[ssDE](../../includes/ssde-md.md)] .  
+ La**protezione estesa** utilizza l'associazione al servizio e l'associazione di canale per impedire un attacco di tipo relay per l'autenticazione. In un attacco di questo tipo un client che può eseguire l'autenticazione NTLM, ad esempio Esplora risorse, [!INCLUDE[msCoName](../../includes/msconame-md.md)] Outlook, un'applicazione .NET SqlClient e così via, si connette all'autore dell'attacco, ad esempio un file server CIFS dannoso. L'autore usa le credenziali del client per mascherarsi ed eseguire l'autenticazione per un servizio, ad esempio un'istanza del servizio [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
  Questo attacco presenta due varianti:  
   

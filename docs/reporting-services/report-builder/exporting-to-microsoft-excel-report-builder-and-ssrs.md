@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 74f726fc-2167-47af-9093-1644e03ef01f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d1e0f1af0b3dff47607960d8c2d37af84f4b00fc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 71ba67e4abb97a0de9ed4143adcd072b2f3eef8a
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47663119"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52400025"
 ---
 # <a name="exporting-to-microsoft-excel-report-builder-and-ssrs"></a>Esportazione in Microsoft Excel (Generatore report e SSRS)
   L'estensione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] per il rendering di Excel consente di eseguire il rendering di un report [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] impaginato nel formato [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] (con estensione xlsx). Con l'estensione per il rendering di Excel, la larghezza delle colonne in Excel si riflette con più accuratezza nella larghezza delle colonne nei report.  
@@ -161,7 +161,7 @@ ms.locfileid: "47663119"
   
  `<Extension Name="EXCEL" Type="Microsoft.ReportingServices.Rendering.ExcelRenderer.ExcelRenderer,Microsoft.ReportingServices.ExcelRendering" Visible="false"/>`  
   
- L'estensione EXCELOPENXML consente di definire il renderer di Excel per i file Excel (con estensione xlsx) correnti. L'estensione EXCEL consente di definire la versione Excel 2003. `Visible = “false”` indica che il renderer di Excel 2003 è nascosto. Per altre informazioni, vedere [File di configurazione RsReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md) e [File di configurazione RSReportDesigner](../../reporting-services/report-server/rsreportdesigner-configuration-file.md).  
+ L'estensione EXCELOPENXML consente di definire il renderer di Excel per i file Excel (con estensione xlsx) correnti. L'estensione EXCEL consente di definire la versione Excel 2003. `Visible = "false"` indica che il renderer di Excel 2003 è nascosto. Per altre informazioni, vedere [File di configurazione RsReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md) e [File di configurazione RSReportDesigner](../../reporting-services/report-server/rsreportdesigner-configuration-file.md).  
   
 ### <a name="differences-between-the-current-xlsx-excel-and-excel-2003-renderers"></a>Differenze tra i renderer di Excel (con estensione xlsx) correnti ed Excel 2003  
  I report, di cui è stato eseguito il rendering tramite i renderer di Excel (con estensione xlsx) correnti o Excel 2003, sono in genere identici e solo in rare circostanze si noteranno differenze tra i due formati. Nella tabella seguente vengono confrontati i renderer di Excel ed Excel 2003.  

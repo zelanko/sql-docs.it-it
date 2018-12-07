@@ -24,12 +24,12 @@ ms.assetid: 72f5afa3-d636-410b-9e81-2ffa27772a8c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6cf546af42ff08a587c0d786026d2b89efffa296
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 4efe82fa71303bdaf4f8615c80ce45ae3dfda857
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51639138"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514122"
 ---
 # <a name="integration-services-ssis-connections"></a>Connessioni in Integration Services (SSIS)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] vengono utilizzate le connessioni per eseguire varie attività e implementare le funzionalità di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] seguenti:  
@@ -159,7 +159,7 @@ Una gestione connessione può essere creata al livello del pacchetto o al livell
   
     -   Fare clic sul tipo di gestione connessione da aggiungere al pacchetto.  
   
-         -oppure-  
+         oppure  
   
     -   Se il tipo desiderato non è incluso nell'elenco, fare clic su **Nuova connessione** . Verrà visualizzata la finestra di dialogo **Aggiungi gestione connessione SSIS** . Selezionare un tipo di gestione connessione, quindi fare clic su **OK**.  
   

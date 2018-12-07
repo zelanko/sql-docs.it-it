@@ -11,12 +11,12 @@ ms.assetid: 07508c40-6c08-4359-96cd-8ff17671244d
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 308898cb506dcfe34b27b7081109c77251e2dc15
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 16dc3c5cba0a37adb461e8f1768774bc1592f4c6
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47599479"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52412388"
 ---
 # <a name="odbc-destination-custom-properties"></a>Proprietà personalizzate della destinazione ODBC
   Nella tabella seguente vengono descritte le proprietà personalizzate della destinazione ODBC. È possibile impostare tutte le proprietà dalle espressioni di proprietà SSIS.  

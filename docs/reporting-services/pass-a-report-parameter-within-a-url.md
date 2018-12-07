@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: f93a94cc-27b5-435a-aa85-69e6ec6459ad
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a45460437b050275e2f679d64a5bd6a3fd5c4534
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: b0848b6c5d34470964bc363b827e82c466f78326
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51812824"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52390484"
 ---
 # <a name="pass-a-report-parameter-within-a-url"></a>Passare un parametro del report in un URL
   È possibile passare parametri del report a un report includendoli in un URL del report. Questi parametri URL non hanno il prefisso in quanto vengono passati direttamente al motore di elaborazione dei report.  
@@ -46,7 +46,7 @@ ms.locfileid: "51812824"
 parameter=value  
 ```  
   
- Per specificare ad esempio due parametri, "ReportMonth" e "ReportYear", definiti in un report, utilizzare l'URL seguente relativo a un server di report in modalità nativa:  
+ Per specificare ad esempio due parametri, "ReportMonth" e "ReportYear", definiti in un report, usare l'URL seguente relativo a un server di report in modalità nativa:  
   
 ```  
 https://myrshost/ReportServer?/AdventureWorks 2008R2/Employee_Sales_Summary_2008R2&ReportMonth=3&ReportYear=2008  
@@ -97,7 +97,7 @@ https://myserver/Reportserver?/SQL+Server+User+Education+Team/_ContentTeams/fold
 https://myserver/Reportserver?/SQL+Server+User+Education+Team/_ContentTeams/folder123/team+project+report&teamgrouping2=xgroup&teamgrouping1=ygroup&OrderID=747&OrderID=787&OrderID=12  
 ```  
   
- Nell'esempio di URL seguente viene passato un singolo parametro *SellStartDate* con un valore "7/1/2005 ", per un server di report in modalità nativa.  
+ Nell'esempio di URL seguente viene passato un singolo parametro *SellStartDate* con un valore "7/1/2005", per un server di report in modalità nativa.  
   
 ```  
 https://myserver/ReportServer/Pages/ReportViewer.aspx?%2fProduct_and_Sales_Report_AdventureWorks&SellStartDate=7/1/2005  

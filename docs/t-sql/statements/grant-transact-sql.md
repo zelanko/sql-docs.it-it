@@ -26,12 +26,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 256fd27b738070b1f18e77cd89b0fe8e75fbf952
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6105d05a89ad05b0b20d45cb67f394796811e0ac
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47779636"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52505292"
 ---
 # <a name="grant-transact-sql"></a>GRANT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -135,7 +135,7 @@ L'uso di AS in questa istruzione non implica la possibilità di rappresentare un
  La stored procedure di sistema sp_helprotect visualizza le autorizzazioni per un'entità a protezione diretta a livello di database.  
   
 ## <a name="with-grant-option"></a>WITH GRANT OPTION  
- **GRANT** … **WITH GRANT OPTION** specifica che l'entità di sicurezza che riceve l'autorizzazione ha la possibilità di concedere l'autorizzazione specificata ad altri account di sicurezza. Se l'entità che riceve l'autorizzazione è un ruolo o un gruppo di Windows, è necessario usare la clausola **AS** quando l'autorizzazione per gli oggetti deve essere concessa ulteriormente a utenti che non sono membri del gruppo o del ruolo. Poiché un'istruzione **GRANT** può essere eseguita solo da un utente, anziché da un gruppo o da un ruolo, è necessario che un membro specifico del gruppo o del ruolo usi la clausola **AS** per chiamare in modo esplicito l'appartenenza a un gruppo o a un ruolo per la concessione dell'autorizzazione. Nell'esempio seguente viene illustrato l'uso di **WITH GRANT OPTION** quando viene concesso a un ruolo o a un gruppo di Windows.  
+ **GRANT** ... **WITH GRANT OPTION** specifica che l'entità di sicurezza che riceve l'autorizzazione ha la possibilità di concedere l'autorizzazione specificata ad altri account di sicurezza. Se l'entità che riceve l'autorizzazione è un ruolo o un gruppo di Windows, è necessario usare la clausola **AS** quando l'autorizzazione per gli oggetti deve essere concessa ulteriormente a utenti che non sono membri del gruppo o del ruolo. Poiché un'istruzione **GRANT** può essere eseguita solo da un utente, anziché da un gruppo o da un ruolo, è necessario che un membro specifico del gruppo o del ruolo usi la clausola **AS** per chiamare in modo esplicito l'appartenenza a un gruppo o a un ruolo per la concessione dell'autorizzazione. Nell'esempio seguente viene illustrato l'uso di **WITH GRANT OPTION** quando viene concesso a un ruolo o a un gruppo di Windows.  
   
 ```  
 -- Execute the following as a database owner  

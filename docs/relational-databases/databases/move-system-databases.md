@@ -28,12 +28,12 @@ ms.assetid: 72bb62ee-9602-4f71-be51-c466c1670878
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e1de19a956656b744b5f3e21e3efc21c971c6857
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: eb3ae1a8437ddf73b371f317d6a9c85f200cff8c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558818"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52531477"
 ---
 # <a name="move-system-databases"></a>Spostare i database di sistema
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -151,11 +151,11 @@ ms.locfileid: "51558818"
   
 3.  Nella finestra di dialogo **Proprietà (***nome_istanza***) di SQL Server** fare clic sulla scheda **Parametri di avvio**.  
   
-4.  Nella casella **Parametri esistenti** selezionare il parametro –d per spostare il file di dati master. Per salvare le modifiche, fare clic su **Aggiorna** .  
+4.  Nella casella **Parametri esistenti** selezionare il parametro -d per spostare il file di dati master. Per salvare le modifiche, fare clic su **Aggiorna** .  
   
      Nella casella **Specificare un parametro di avvio** impostare il parametro sul nuovo percorso del database master.  
   
-5.  Nella casella **Parametri esistenti** selezionare il parametro –l per spostare il file di log master. Per salvare le modifiche, fare clic su **Aggiorna** .  
+5.  Nella casella **Parametri esistenti** selezionare il parametro -l per spostare il file di log master. Per salvare le modifiche, fare clic su **Aggiorna** .  
   
      Nella casella **Specificare un parametro di avvio** impostare il parametro sul nuovo percorso del database master.  
   

@@ -11,12 +11,12 @@ ms.assetid: a96486e9-f79b-4b24-bfaf-56203dd0e435
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 040fea749664fb63fa2911a2d4fcaab5185af912
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 2dc364cc2665d800e311625d754716e4582b6b65
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51638904"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52392864"
 ---
 # <a name="the-oracle-cdc-databases"></a>Database Oracle CDC
   Un'istanza di Oracle CDC è associata a un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dallo stesso nome nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di destinazione. Questo database è denominato database Oracle CDC o CDC.  
@@ -115,7 +115,7 @@ ms.locfileid: "51638904"
 |target_max_batched_transactions|100|1|1000|True|Numero massimo di transazioni Oracle che è possibile elaborare come una transazione nell'aggiornamento delle tabelle SQL Server CT.|  
 |target_idle_lsn_update_interval|10|0|1|False|L'intervallo, in secondi, per l'aggiornamento della tabella **lsn_time_mapping** quando nelle tabelle acquisite non è presente alcuna attività.|  
 |trace_retention_period|24|1|24*31|False|Periodo di tempo, in ore, durante cui i messaggi vengono mantenuti nella tabella di traccia.|  
-|sql_reconnect_interval|2|2|3600|False|Periodo di tempo, in secondi, che deve trascorrere prima della riconnessione a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Questo intervallo viene utilizzato in aggiunta al timeout della connessione del client [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
+|sql_reconnect_interval|2|2|3600|False|Periodo di tempo, in secondi, che deve trascorrere prima della riconnessione a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Questo intervallo viene usato in aggiunta al timeout della connessione del client [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |sql_reconnect_limit|-1|-1|-1|False|Numero massimo di riconnessioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Il valore predefinito -1 indica che vengono effettuati tentativi di riconnessione fino all'arresto del processo.|  
 |cdc_restart_limit|6|-1|3600|False|Nella maggior parte dei casi, tramite il servizio CDC un'istanza di CDC terminata in modo anomalo viene riavviata automaticamente. Con questa proprietà si definisce il numero di errori all'ora dopo i quali viene arrestato il riavvio dell'istanza. Il valore -1 indica che l'istanza deve essere sempre riavviata.<br /><br /> Dopo qualsiasi aggiornamento della tabella di configurazione, ricomincia il riavvio dell'istanza.|  
 |cdc_memory_report|0|0|1000|False|Se il valore del parametro è stato modificato, nella tabella di traccia viene stampato il report della memoria dell'istanza di CDC.|  

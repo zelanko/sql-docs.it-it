@@ -14,12 +14,12 @@ ms.assetid: 9c9479c1-9bfc-4039-837e-e53fce67723d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7001819d4603c392b034d54fffaee7b901400c20
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1b253e8b820652bf76771047e498dabd119bcb81
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47779279"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52396144"
 ---
 # <a name="how-to-create-database-objects-using-table-designer"></a>Procedura: Creazione di oggetti di database tramite Progettazione tabelle
 Il nuovo nodo **SQL Server** in **Esplora oggetti di SQL Server** non solo è visivamente molto simile a SSMS, ma consente di creare nuovi oggetti tramite menu contestuali con un funzionamento è simile ai corrispondenti di SSMS.  

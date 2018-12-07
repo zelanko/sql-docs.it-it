@@ -15,12 +15,12 @@ ms.assetid: 10183c8d-b1be-420f-972a-96ea97d4f4d8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c1089176ed6b47ab7001f0a505b7d475bf1241c4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 179c3418f6d8c13c4974d6b5b023e1905140c6a3
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47662389"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52410208"
 ---
 # <a name="configure-dialog-box"></a>Finestra di dialogo Configura
   Utilizzare la finestra di dialogo **Configura** per configurare i parametri, le gestioni connessioni e i riferimenti agli ambienti per pacchetti e progetti.  
@@ -80,7 +80,7 @@ ms.locfileid: "47662389"
 ##  <a name="references"></a> Impostare le opzioni nella pagina Riferimenti  
  Utilizzare la pagina **Riferimenti** per aggiungere e rimuovere i riferimenti agli ambienti e accedere alle proprietà dell'ambiente.  
   
- Un ambiente specifica i valori di runtime per i pacchetti contenuti nei progetti distribuiti nel server [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
+ Un ambiente specifica i valori di runtime per i pacchetti contenuti nei progetti distribuiti nel server [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
  **Ambiente**  
  Elenca l'ambiente  

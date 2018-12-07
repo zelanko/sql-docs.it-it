@@ -12,12 +12,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 04ca2c0792b1b10ffd4baf182ac8aa12fb5c1f04
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 92b1b2098d1486c8dbc6958c9668387c815047d8
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47810437"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52403446"
 ---
 # <a name="modifying-data-in-a-system-versioned-temporal-table"></a>Modifica dei dati in una tabella temporale con controllo delle versioni di sistema
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -121,7 +121,7 @@ SWITCH TO [dbo].[Department] PARTITION 2;
   
 ```  
   
- Se si tenta di eseguire l’istruzione PARTITION SWITCH da una tabella priva di definizione del periodo verrà visualizzato il messaggio di errore: `Msg 13577, Level 16, State 1, Line 25    ALTER TABLE SWITCH statement failed on table 'MyDB.dbo.Staging_Department_2015_09_26' because target table has SYSTEM_TIME PERIOD while source table does not have it.`  
+ Se si tenta di eseguire l'istruzione PARTITION SWITCH da una tabella priva di definizione del periodo verrà visualizzato il messaggio di errore: `Msg 13577, Level 16, State 1, Line 25    ALTER TABLE SWITCH statement failed on table 'MyDB.dbo.Staging_Department_2015_09_26' because target table has SYSTEM_TIME PERIOD while source table does not have it.`  
   
 ## <a name="updating-data"></a>Aggiornamento dati  
  I dati nella tabella corrente vengono aggiornati con una normale istruzione **UPDATE** . È possibile aggiornare i dati nella tabella corrente dalla tabella di cronologia per lo scenario "oops". Non è tuttavia possibile aggiornare le colonne **PERIOD** né aggiornare direttamente i dati nella tabella di cronologia se **SYSTEM_VERSIONING = ON**.   

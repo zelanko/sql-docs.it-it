@@ -13,12 +13,12 @@ ms.assetid: b845e73a-bb01-4de2-aac2-8ac12abebc95
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5fb665581f6a85e073e900c18547ee20406a7582
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: fd75ed198aa454c25a1be027c9bbb68f15142730
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51700760"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52407718"
 ---
 # <a name="view-cluster-quorum-nodeweight-settings"></a>Visualizzare le impostazioni NodeWeight per il quorum del cluster
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -73,7 +73,7 @@ SELECT  member_name, member_state_desc, number_of_quorum_votes
 4.  Restituire le proprietà del nodo del cluster in un formato leggibile.  
   
 ### <a name="example-powershell"></a>Esempio (Powershell)  
- Nell'esempio seguente vengono restituite alcune delle proprietà del nodo per il cluster denominato "Cluster001."  
+ Nell'esempio seguente vengono restituite alcune delle proprietà del nodo per il cluster denominato "Cluster001".  
   
 ```powershell  
 Import-Module FailoverClusters  
@@ -87,7 +87,7 @@ $nodes | Format-Table -property NodeName, State, NodeWeight
 ##  <a name="CommandPromptProcedure"></a> Utilizzo di Cluster.exe  
   
 > [!NOTE]  
->  L'utilità cluster.exe è deprecata nella versione [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] .  Utilizzare PowerShell con il clustering di failover per lo sviluppo futuro.  L'utilità cluster.exe verrà rimossa nella versione successiva di Windows Server. Per altre informazioni, vedere [Mapping Cluster.exe Commands to Windows PowerShell Cmdlets for Failover Clusters](https://technet.microsoft.com/library/ee619744\(WS.10\).aspx)(Mapping di comandi Cluster.exe a cmdlet di Windows PowerShell per i cluster di failover).  
+>  L'utilità cluster.exe è deprecata nella versione [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)].  Utilizzare PowerShell con il clustering di failover per lo sviluppo futuro.  L'utilità cluster.exe verrà rimossa nella versione successiva di Windows Server. Per altre informazioni, vedere [Mapping Cluster.exe Commands to Windows PowerShell Cmdlets for Failover Clusters](https://technet.microsoft.com/library/ee619744\(WS.10\).aspx)(Mapping di comandi Cluster.exe a cmdlet di Windows PowerShell per i cluster di failover).  
   
 ##### <a name="to-view-nodeweight-settings"></a>Per visualizzare le impostazioni NodeWeight  
   
@@ -96,7 +96,7 @@ $nodes | Format-Table -property NodeName, State, NodeWeight
 2.  Utilizzare **cluster.exe** per restituire lo stato del nodo e i valori NodeWeight  
   
 ### <a name="example-clusterexe"></a>Esempio (Cluster.exe)  
- Nell'esempio seguente vengono restituite alcune delle proprietà del nodo per il cluster denominato "Cluster001."  
+ Nell'esempio seguente vengono restituite alcune delle proprietà del nodo per il cluster denominato "Cluster001".  
   
 ```ms-dos  
 cluster.exe Cluster001 node /status /properties  

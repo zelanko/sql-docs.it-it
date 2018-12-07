@@ -11,17 +11,17 @@ ms.assetid: 055d86c9-befd-4e63-acb1-6dfe833549d2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7d44c57600719b35340295723f0ab25b4e1ae56f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c89486bb4d33ba52d1e0516d51eede715ddd9987
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47808669"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52405649"
 ---
 # <a name="catalogsetexecutionparametervalue-ssisdb-database"></a>catalog.set_execution_parameter_value (database SSISDB)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Imposta il valore di un parametro per un'istanza di esecuzione nel catalogo di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
+  Imposta il valore di un parametro per un'istanza di esecuzione nel catalogo di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
  Non è possibile modificare un valore di parametro in seguito all'avvio di un'istanza di esecuzione.  
   
@@ -89,7 +89,7 @@ catalog.set_execution_parameter_value [ @execution_id = execution_id
 |---------------|-----------|  
 |*execution_id*|Identificatore univoco per l'istanza di esecuzione|  
 |*object_type*|50|  
-|*parameter_name*|‘DUMP_ON_ERROR|  
+|*parameter_name*|'DUMP_ON_ERROR|  
 |*parameter_value*|1|  
   
  Per specificare che il server di Integration Services generi file di dump quando si verificano eventi durante un'esecuzione del pacchetto, impostare i valori dei parametri seguenti per un'istanza di esecuzione che non è stata eseguita.  
@@ -98,7 +98,7 @@ catalog.set_execution_parameter_value [ @execution_id = execution_id
 |---------------|-----------|  
 |*execution_id*|Identificatore univoco per l'istanza di esecuzione|  
 |*object_type*|50|  
-|*parameter_name*|‘DUMP_ON_EVENT|  
+|*parameter_name*|'DUMP_ON_EVENT|  
 |*parameter_value*|1|  
   
  Per specificare gli eventi durante l'esecuzione del pacchetto che inducono il server di Integration Services a generare file di dump, impostare i valori dei parametri seguenti per un'istanza di esecuzione che non è stata eseguita. Separare più codici evento utilizzando un punto e virgola.  

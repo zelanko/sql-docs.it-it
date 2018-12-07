@@ -11,12 +11,12 @@ ms.assetid: 1c0efed1-c2b3-4f20-a3a1-ad91283b7c0a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 508f752b04307e8930b19f0175608667c5ef1d90
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 24f5bb65aa7c9545bbe1842f97e8f43546c14848
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47788539"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52411488"
 ---
 # <a name="tokencount-ssis-expression"></a>TOKENCOUNT (espressione SSIS)
   Restituisce il numero di token in una stringa che contiene token separati dai delimitatori specificati.  
@@ -32,7 +32,7 @@ TOKENCOUNT(character_expression, delimiter_string)
  Stringa che contiene token separati da delimitatori.  
   
  *delimiter_string*  
- Stringa che contiene caratteri delimitatori. Ad esempio, "; ,” contiene i caratteri delimitatori punto e virgola, spazio e virgola.  
+ Stringa che contiene caratteri delimitatori. Ad esempio, "; ," contiene i caratteri delimitatori punto e virgola, spazio e virgola.  
   
 ## <a name="result-types"></a>Tipi restituiti  
  DT_I4  

@@ -1,22 +1,22 @@
 ---
 title: Aggiungere la web part Visualizzatore di report di SQL Server Reporting Services in una pagina di SharePoint | Microsoft Docs
-ms.date: 09/26/2017
+ms.date: 11/26/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c9e8950edd84f57e4e751533799faba451234ca0
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: 39379fa6d6471f9d0d624dbbd2b05331c7e7a36a
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813024"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52398350"
 ---
 # <a name="add-sql-server-reporting-services-report-viewer-web-part-to-a-sharepoint-page"></a>Aggiungere la web part Visualizzatore di report di SQL Server Reporting Services in una pagina di SharePoint
 
-[!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2016-2019](../../includes/ssrs-appliesto-sharepoint-2016-2019.md)] [!INCLUDE[ssrs-appliesto-not-sharepoint-online](../../includes/ssrs-appliesto-not-sharepoint-online.md)]
 
 Visualizzare un report, da SQL Server Reporting Services o dal server di report di Power BI aggiungendo una web part Visualizzatore di report a una pagina di SharePoint.
 
@@ -56,7 +56,7 @@ Per configurare la web part in modo da puntare al report specifico, eseguire le 
 
     ![Modificare la pagina Web dal menu a discesa della web part.](media/sharepoint-edit-web-part.png)
 
-2. Immettere l'**URL server di report** per il server di report che ospita il report. Dovrebbe essere simile a *https://myrsserver/reportserver*.
+2. Immettere l'**URL server di report** per il server di report che ospita il report. L'URL dovrebbe essere simile a *https://myrsserver/reportserver*.
 
 3. Immettere il percorso e il nome del report che si vuole visualizzare nella web part. Il percorso e il nome dovranno essere simili a */AdventureWorks Sample Reports/Company Sales*. In questo esempio, il report *Company Sales* si trova in una cartella denominata *AdventureWorks Sample Reports*.
 

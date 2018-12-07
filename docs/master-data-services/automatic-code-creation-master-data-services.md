@@ -12,12 +12,12 @@ ms.assetid: 9adbd5e1-f28c-4fb5-afa7-082de2831f3e
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 24965436108df067d7bd4ea10b4ad1e71b9ce69e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2f77a3a5ffd40ea3f279f64a42c173625b95e4bd
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47727279"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52394274"
 ---
 # <a name="automatic-code-creation-master-data-services"></a>Creazione di codice automatica (Master Data Services)
 
@@ -46,7 +46,7 @@ ms.locfileid: "47727279"
   
 -   [Panoramica di Master Data Services (MDS)](../master-data-services/master-data-services-overview-mds.md)  
   
--   [Regole business &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)  
+-   [Regole di business &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)  
   
 -   [Entità &#40;Master Data Services&#41;](../master-data-services/entities-master-data-services.md)  
   

@@ -13,12 +13,12 @@ ms.assetid: 4b44f6b9-2359-452f-8bb1-5520f2528483
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4a529efc45194a701376fc347d6a3f115db19430
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: c62934d6ffe221acd483d316461e0b2c72cc0c46
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558738"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52413414"
 ---
 # <a name="contained-database-collations"></a>Regole di confronto dei database indipendenti
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -165,7 +165,7 @@ JOIN #T2
   
 -   Il riferimento più trovare più corrispondenze originariamente distinte. Anche in questo caso verrà generato un errore.  
   
- Di seguito vengono utilizzati alcuni esempi per illustrare questo comportamento, presupponendo l'uso di un database parzialmente indipendente, denominato `MyCDB` , con regole di confronto del database impostate sulle regole di confronto predefinite **Latin1_General_100_CI_AS_WS_KS_SC**. Si supponga che le regole di confronto dell'istanza siano **Latin1_General_100_CS_AS_WS_KS_SC**. la sola differenza tra le due regole di confronto riguarda la distinzione tra maiuscole e minuscole.  
+ Di seguito vengono usati alcuni esempi per illustrare questo comportamento, presupponendo l'uso di un database parzialmente indipendente, denominato `MyCDB`, con regole di confronto del database impostate sulle regole di confronto predefinite **Latin1_General_100_CI_AS_WS_KS_SC**. Si supponga che le regole di confronto dell'istanza siano **Latin1_General_100_CS_AS_WS_KS_SC**. la sola differenza tra le due regole di confronto riguarda la distinzione tra maiuscole e minuscole.  
   
 ### <a name="example-1"></a>Esempio 1  
  Nell'esempio seguente viene illustrato il caso in cui il riferimento trova esattamente una corrispondenza.  

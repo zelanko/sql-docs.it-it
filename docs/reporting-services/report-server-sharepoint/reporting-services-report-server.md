@@ -7,12 +7,12 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: fe29406395b782b2bf25367e22f6f23f9bff0505
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 624d00d0c9cd27acbaa00fefa52f6880c7a69916
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021625"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52400585"
 ---
 # <a name="reporting-services-report-server"></a>Server di report di Reporting Services
 
@@ -43,7 +43,7 @@ Un server di report di Reporting Services viene eseguito in una delle due modali
   
 -   **Modalità SharePoint**, in cui un server di report viene installato come parte di una server farm di SharePoint.  Distribuire e configurare la modalità SharePoint usando i comandi PowerShell o le pagine di gestione del contenuto di SharePoint.  
   
- In SQL Server Reporting Services non è possibile passare un server di report da una modalità all'altra. Se si desidera modificare il tipo di server di report usato dall'ambiente, è necessario installare la modalità desiderata del server di report e copiare o spostare gli elementi del report o il database del server di report dal server di report precedente in quello nuovo. Questo processo viene in genere chiamato "migrazione". I passaggi necessari per eseguire la migrazione dipendono dalla modalità con cui si esegue questa operazione e dalla versione dalla quale si esegue la migrazione. Per altre informazioni, vedere [Upgrade and Migrate Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)  
+ In SQL Server Reporting Services non è possibile passare un server di report da una modalità all'altra. Se si desidera modificare il tipo di server di report usato dall'ambiente, è necessario installare la modalità desiderata del server di report e copiare o spostare gli elementi del report o il database del server di report dal server di report precedente in quello nuovo. Questo processo viene in genere chiamato 'migrazione'. I passaggi necessari per eseguire la migrazione dipendono dalla modalità con cui si esegue questa operazione e dalla versione dalla quale si esegue la migrazione. Per altre informazioni, vedere [Upgrade and Migrate Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)  
   
 ## <a name="feature-comparison-of-sharepoint-and-native-mode"></a>Confronto tra le funzionalità delle modalità SharePoint e nativa
   

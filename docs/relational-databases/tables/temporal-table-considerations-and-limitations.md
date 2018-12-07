@@ -12,12 +12,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a238d92b6fbb9e025f304f0c5e957ff2d15a6975
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f88363967571c2f6401be42659b5b00ec3811b07
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47770459"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52410088"
 ---
 # <a name="temporal-table-considerations-and-limitations"></a>Considerazioni e limitazioni delle tabelle temporali
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -66,7 +66,7 @@ ms.locfileid: "47770459"
   
     -   **Change Data Capture e Change Data Tracking:** supportati solo per la tabella corrente  
   
-    -   **Replica snapshot e transazionale**: supportata solo per un singolo server di pubblicazione senza attivazione di tabella temporale e per un sottoscrittore con attivazione di tabella temporale. In questo caso, il server di pubblicazione viene usato per un carico di lavoro OLTP, mentre il sottoscrittore viene usato per la ripartizione di report, inclusa l'esecuzione di query AS OF.    
+    -   **Replica snapshot e transazionale**: supportata solo per un singolo server di pubblicazione senza attivazione di tabella temporale e per un sottoscrittore con attivazione di tabella temporale. In questo caso, il server di pubblicazione viene usato per un carico di lavoro OLTP, mentre il sottoscrittore viene usato per la ripartizione di report, inclusa l'esecuzione di query 'AS OF'.    
         L'uso di più sottoscrittori non è supportato poiché questo scenario potrebbe comportare dati temporali incoerenti in quanto ognuno di essi dipenderebbe dall'orologio di sistema locale.  
   
     -   **Replica di tipo merge:** non supportata per le tabelle temporali  

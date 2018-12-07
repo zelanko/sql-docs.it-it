@@ -24,12 +24,12 @@ ms.assetid: 873a2fa0-2a02-41fc-a80a-ec9767f36a8a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6fb8aaaabd83d6e5f5f234c58f3c9dcfab1ee7fa
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: e9eccb240bbce57f16442092996698dc619f5fab
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51640134"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52525321"
 ---
 # <a name="ole-db-destination"></a>Destinazione OLE DB
   La destinazione OLE DB consente di caricare dati in un'ampia gamma di database conformi con OLE DB, tramite una tabella o vista di database oppure un comando SQL. L'origine OLE DB, ad esempio, può caricare dati nelle tabelle dei database di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Access e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -161,7 +161,7 @@ ms.locfileid: "51640134"
 > [!NOTE]  
 >  Quando si fa clic su **Nuova**, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] genera un'istruzione CREATE TABLE predefinita basata sull'origine dati connessa. Questa istruzione CREATE TABLE predefinita non includerà l'attributo FILESTREAM anche se la tabella di origine include una colonna con l'attributo FILESTREAM dichiarato. Per eseguire un componente [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] con l'attributo FILESTREAM, implementare innanzitutto l'archiviazione di FILESTREAM nel database di destinazione. Aggiungere quindi l'attributo FILESTREAM all'istruzione CREATE TABLE nella finestra di dialogo **Crea tabella**. Per altre informazioni, vedere [Dati BLOB &#40;Binary Large Object&#41; &#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md).  
   
-#### <a name="data-access-mode--table-or-view--fast-load"></a>Modalità di accesso ai dati = Tabella o vista - Caricamento rapido  
+#### <a name="data-access-mode--table-or-view---fast-load"></a>Modalità di accesso ai dati = Tabella o vista - Caricamento rapido  
  **Nome tabella o vista**  
  Consente di selezionare una tabella o vista del database nell'elenco o di creare una nuova tabella facendo clic su **Nuova**.  
   
@@ -204,7 +204,7 @@ ms.locfileid: "51640134"
  **Nome variabile**  
  Consente di selezionare la variabile che contiene il nome della tabella o vista.  
   
-#### <a name="data-access-mode--table-name-or-view-name-variable--fast-load"></a>Modalità di accesso ai dati = Variabile nome vista o nome tabella - Caricamento rapido  
+#### <a name="data-access-mode--table-name-or-view-name-variable---fast-load"></a>Modalità di accesso ai dati = Variabile nome vista o nome tabella - Caricamento rapido  
  **Nome variabile**  
  Consente di selezionare la variabile che contiene il nome della tabella o vista.  
   

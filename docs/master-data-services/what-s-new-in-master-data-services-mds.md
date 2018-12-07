@@ -12,12 +12,12 @@ ms.assetid: ad530f60-d480-4457-ba7a-93a10c8a1695
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 0ba960c94e1620b0381796a2e26112af21a3a9a1
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 657308bcf378b6e35a360a2c6ad39a807c03e086
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51696840"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52392341"
 ---
 # <a name="what39s-new-in-master-data-services-mds"></a>Novità in Master Data Services (MDS)
 
@@ -82,7 +82,7 @@ ms.locfileid: "51696840"
   
  Ora l'autorizzazione di amministratore può essere assegnata a un utente in modo esplicito al livello del modello. Ciò significa che l'utente non perderà l'autorizzazione di amministratore se in un secondo momento gli vengono assegnate autorizzazioni nel sottoalbero di modello, ad esempio per il livello di entità.  
   
- In questa versione di [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]vengono forniti altri livelli di autorizzazioni grazie all'introduzione di questi nuovi tipi: lettura, creazione, aggiornamento ed eliminazione. Ad esempio, un utente che ha solo l'autorizzazione di aggiornamento ora può aggiornare i dati master senza creare o eliminare i dati. Quando si concede l'autorizzazione di creazione, aggiornamento o eliminazione, all'utente viene assegnata automaticamente anche l'autorizzazione di lettura. È anche possibile combinare le autorizzazioni di lettura, creazione, aggiornamento ed eliminazione.  
+ In questa versione di [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] vengono forniti altri livelli di autorizzazioni grazie all'introduzione di questi nuovi tipi: lettura, creazione, aggiornamento ed eliminazione. Ad esempio, un utente che ha solo l'autorizzazione di aggiornamento ora può aggiornare i dati master senza creare o eliminare i dati. Quando si concede l'autorizzazione di creazione, aggiornamento o eliminazione, all'utente viene assegnata automaticamente anche l'autorizzazione di lettura. È anche possibile combinare le autorizzazioni di lettura, creazione, aggiornamento ed eliminazione.  
   
  Durante l'aggiornamento a [!INCLUDE[ssSQL15](../includes/sssql15-md.md)][!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], le autorizzazioni precedenti vengono convertite nelle nuove autorizzazioni, come illustrato nella tabella seguente.  
   

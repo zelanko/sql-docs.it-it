@@ -24,12 +24,12 @@ ms.assetid: 3d71df39-126b-4c8e-bd77-128bbd5b0887
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ae61a794d9eea4a9fbd0aae72ec0bcdd1d636988
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: ec072be872bbee61b00839b70327fa3397f1fe92
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49169111"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52506245"
 ---
 # <a name="execute-package-utility-dtexecui"></a>Utilità di esecuzione pacchetti (dtexecui.exe)
   Utilizzare l' **Utilità di esecuzione pacchetti** per eseguire i pacchetti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Tramite l'utilità è possibile eseguire i pacchetti archiviati in una delle tre posizioni seguenti: database di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , archivio pacchetti [!INCLUDE[ssIS](../../includes/ssis-md.md)] e file system. Questa interfaccia utente, che può essere avviata da [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oppure digitando **dtexecui** al prompt dei comandi, può essere usata in alternativa all'esecuzione di pacchetti usando lo strumento del prompt dei comandi **DTExec** .  
@@ -99,11 +99,11 @@ ms.locfileid: "49169111"
 >  Se possibile, usare l'autenticazione di Windows.  
   
  **Pacchetto**  
- Digitare il nome del pacchetto o fare clic sul pulsante con i puntini di sospensione **(…)** per individuare il pacchetto mediante la finestra di dialogo **Seleziona pacchetto SSIS** .  
+ Digitare il nome del pacchetto o fare clic sul pulsante con i puntini di sospensione **(...)** per individuare il pacchetto mediante la finestra di dialogo **Seleziona pacchetto SSIS**.  
   
 #### <a name="package-source--file-system"></a>Origine pacchetto = File system  
  **Pacchetto**  
- Digitare il nome del pacchetto o fare clic sul pulsante con i puntini di sospensione **(…)** per individuare il pacchetto mediante la finestra di dialogo Apri. Per impostazione predefinita, nella finestra di dialogo vengono elencati solo i file con estensione dtsx.  
+ Digitare il nome del pacchetto o fare clic sul pulsante con i puntini di sospensione **(...)** per individuare il pacchetto mediante la finestra di dialogo Apri. Per impostazione predefinita, nella finestra di dialogo vengono elencati solo i file con estensione dtsx.  
   
 #### <a name="package-source--ssis-package-store"></a>Origine pacchetto = Archivio pacchetti SSIS  
  **Server**  
@@ -119,7 +119,7 @@ ms.locfileid: "49169111"
  Questa opzione non è disponibile se si esegue un pacchetto incluso nell' **Archivio pacchetti SSIS**.  
   
  **Pacchetto**  
- Digitare il nome del pacchetto o fare clic sul pulsante con i puntini di sospensione **(…)** per individuare il pacchetto mediante la finestra di dialogo **Seleziona pacchetto SSIS** .  
+ Digitare il nome del pacchetto o fare clic sul pulsante con i puntini di sospensione **(...)** per individuare il pacchetto mediante la finestra di dialogo **Seleziona pacchetto SSIS**.  
   
 ## <a name="configurations-page"></a>Pagina Configurazioni  
  Utilizzare la pagina **Configurazioni** della finestra di dialogo **Utilità di esecuzione pacchetti** per selezionare i file di configurazione da caricare in fase di esecuzione e di specificare l'ordine in cui devono essere caricati.  
@@ -207,7 +207,7 @@ ms.locfileid: "49169111"
  Elenca i file del checkpoint utilizzati dal pacchetto, se si abilitano i checkpoint del pacchetto.  
   
  **Sfoglia**  
- Fare clic sul pulsante Sfoglia **(…)** per individuare il file del checkpoint tramite la finestra di dialogo **Apri** , se si abilitano i checkpoint del pacchetto. Se è già stato specificato un file del checkpoint, questo viene sostituito dal file selezionato.  
+ Fare clic sul pulsante Sfoglia **(...)** per individuare il file del checkpoint tramite la finestra di dialogo **Apri**, se si abilitano i checkpoint del pacchetto. Se è già stato specificato un file del checkpoint, questo viene sostituito dal file selezionato.  
   
  **Ignora opzioni di riavvio**  
  Indica se ignorare le opzioni di riavvio, se si abilitano i checkpoint del pacchetto.  

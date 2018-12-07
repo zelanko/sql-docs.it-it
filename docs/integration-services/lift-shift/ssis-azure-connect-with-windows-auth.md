@@ -11,12 +11,12 @@ author: swinarko
 ms.author: sawinark
 ms.reviewer: douglasl
 manager: craigg
-ms.openlocfilehash: 612c118fe490afe8de7c794c1f1ff6327766a508
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: 61d4d29b0dfc7fe67097c6cb61547c1c65dd79f1
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49119978"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52411878"
 ---
 # <a name="connect-to-data-sources-and-file-shares-with-windows-authentication-from-ssis-packages-in-azure"></a>Connettersi a origini dati e condivisioni file con l'autenticazione di Windows da pacchetti SSIS in Azure
 È possibile usare l'autenticazione di Windows per connettersi alle origini dati e alle condivisioni file nella stessa rete virtuale del runtime di integrazione Azure-SSIS, sia in locale che nelle macchine virtuali di Azure e in File di Azure. Esistono tre metodi per la connessione alle origini dati e alle condivisioni file con l'autenticazione di Windows da pacchetti SSIS in esecuzione nel runtime di integrazione Azure-SSIS:

@@ -25,12 +25,12 @@ helpviewer_keywords:
 - information types
 - data classification
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 8926d9f39722bac3d70bc10aba6970ff32a5bb17
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 075615be9adac78aa59e6dfad1934fc4d7993bf3
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51703369"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52392986"
 ---
 # <a name="drop-sensitivity-classification-transact-sql"></a>DROP SENSITIVITY CLASSIFICATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -60,7 +60,7 @@ Si tratta del nome della colonna del database da cui rimuovere la classificazion
 
 ## <a name="remarks"></a>Remarks  
 
-- È possibile eliminare più classificazioni di oggetti usando una sola istruzione ‘DROP SENSITIVITY CLASSIFICATION’.
+- È possibile eliminare più classificazioni di oggetti usando una sola istruzione 'DROP SENSITIVITY CLASSIFICATION'.
 
 ## <a name="permissions"></a>Permissions  
 

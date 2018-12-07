@@ -13,12 +13,12 @@ ms.assetid: 8bb15b97-9827-46bc-aca6-068534ab18c4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 051fb627684e8a094ac0f39d5fffad9d9e399d0f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0d7544f30f065b9acbef3efc55ac7165b58da2e6
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47841629"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52417917"
 ---
 # <a name="hadoop-connection-manager"></a>Gestione connessione Hadoop
   Gestione connessione Hadoop consente al pacchetto SQL Server Integration Services (SSIS) di connettersi a un cluster Hadoop usando i valori specificati per le proprietà.  
@@ -41,7 +41,7 @@ ms.locfileid: "47841629"
   
          ![Screenshot di Editor gestione connessione Hadoop con autenticazione Kerberos](../../integration-services/connection-manager/media/hadoop-cm-kerberos.png "Editor gestione connessione Hadoop con autenticazione Kerberos")  
   
-    4.  Per **Utente WebHCat**immettere l' **Utente** autorizzato ad accedere a WebHCat.  
+    4.  Per **Utente WebHCat**immettere l'**utente** autorizzato ad accedere a WebHCat.  
   
     5.  Se si seleziona l'autenticazione **Kerberos** , immettere la **Password** e il **Dominio**dell'utente.  
   
@@ -70,7 +70,7 @@ Esistono due opzioni per configurare l'ambiente locale per poter usare l'autenti
 
 #### <a name="requirements"></a>Requisiti:
 
--   Il computer gateway deve fare parte dell'area di autenticazione Kerberos e non può fare parte di domini Windows.
+-   Il computer gateway deve essere aggiunto all'area di autenticazione Kerberos e non può essere aggiunto a domini Windows.
 
 #### <a name="how-to-configure"></a>Modalità di configurazione:
 

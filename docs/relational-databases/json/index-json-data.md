@@ -14,12 +14,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7a4c0341041bcd2cbf6845e7fd261e16b6028260
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 25abbb1cc11706b58c93d0884e024ad54fd280e1
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51668700"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52395896"
 ---
 # <a name="index-json-data"></a>Indicizzazione dei dati JSON
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -128,7 +128,7 @@ CREATE INDEX idx_name
 ON JsonCollection(vName)
 ```  
   
-I comandi precedenti creano un indice standard per la colonna calcolata `vName`, che rappresenta il valore della proprietà `$.name` JSON. Nella tabella codici per il serbo (cirillico), l'ordine delle lettere è ‘А’,’Б’,’В’,’Г’,’Д’,’Ђ’,’Е’, ecc. L'ordine degli elementi nell'indice è conforme alle regole per il serbo (cirillico) perché il risultato della funzione `JSON_VALUE` eredita le regole di confronto dalla colonna di origine. Nell'esempio seguente viene eseguita una query su questa raccolta e i risultati vengono ordinati in base al nome.  
+I comandi precedenti creano un indice standard per la colonna calcolata `vName`, che rappresenta il valore della proprietà `$.name` JSON. Nella tabella codici per il serbo (cirillico), l'ordine delle lettere è 'А','Б','В','Г','Д','Ђ','Е', ecc. L'ordine degli elementi nell'indice è conforme alle regole per il serbo (cirillico) perché il risultato della funzione `JSON_VALUE` eredita le regole di confronto dalla colonna di origine. Nell'esempio seguente viene eseguita una query su questa raccolta e i risultati vengono ordinati in base al nome.  
   
 ```sql  
 SELECT JSON_VALUE(json,'$.name'),*

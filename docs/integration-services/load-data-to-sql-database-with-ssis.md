@@ -12,12 +12,12 @@ ms.date: 08/20/2018
 ms.author: douglasl
 author: douglaslMS
 manager: craigg-msft
-ms.openlocfilehash: 8151b4e46e3a36eebc54642075aeb9b8648ac927
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1b25f4ecde0a80aef19e94b2d1f1b572529bcfd6
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47705499"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52412688"
 ---
 # <a name="load-data-into-sql-server-or-azure-sql-database-with-sql-server-integration-services-ssis"></a>Caricare dati in SQL Server o nel database SQL di Azure con SQL Server Integration Services (SSIS)
 
@@ -125,7 +125,7 @@ Viene aperto Visual Studio e viene creato un nuovo progetto di Integration Servi
    
     ![][10]
    
-    In un pacchetto SSIS tipico è possibile usare diversi altri componenti dalla casella degli strumenti SSIS tra l'origine e la destinazione per ristrutturare, trasformare e pulire i dati mentre attraversano il flusso di dati SSIS. Per mantenere più semplice possibile questo esempio, viene eseguita la connessione dell'origine direttamente alla destinazione.
+    In un pacchetto SSIS tipico è possibile usare diversi altri componenti dalla casella degli strumenti SSIS tra l'origine e la destinazione per ristrutturare, trasformare e pulire i dati mentre attraversano il flusso di dati SSIS. Per mantenere questo esempio il più semplice possibile, viene eseguita la connessione dell'origine direttamente alla destinazione.
 
 ## <a name="configure-the-destination-adapter"></a>Configurare l'adattatore di destinazione
 1. Fare doppio clic sull'adattatore di destinazione per aprire l'**Editor destinazione ADO.NET**.

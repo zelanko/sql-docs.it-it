@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 0903c7b2-ac59-45f1-b7d0-922ecd9d76f8
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7309f4669a0672ca65b0c74961c14e83d073a4c6
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: ab97e64bacf15cf95c6594f45edceac05a24eef2
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50030380"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52403006"
 ---
 # <a name="reporting-services-in-sql-server-data-tools-ssdt"></a>Reporting Services in SQL Server Data Tools (SSDT)
 
@@ -237,7 +237,7 @@ ms.locfileid: "50030380"
   
 
 ##  <a name="bkmk_SourceControl"></a> Controllo del codice sorgente  
- [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] può essere integrato con i plug-in di origine. Usare le pagine Progetti e soluzioni della finestra di dialogo Opzioni** per specificare il plug-in e configurare le proprietà.  
+ [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] può essere integrato con i plug-in di origine. Usare le pagine Progetti e soluzioni della finestra di dialogo **Opzioni** per specificare il plug-in e configurare le proprietà.  
   
 ##  <a name="bkmk_CustomReportTemplates"></a> Modelli di report personalizzati  
  Per utilizzare report personalizzati come modelli per nuovi report, è sufficiente copiarli nella cartella ReportProject nel computer in cui è installato [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] . Per impostazione predefinita, questa cartella si trova nel percorso seguente: `<drive>:\Program Files\Microsoft Visual Studio 14.0\Common7\IDE\Private Assemblies\ProjectItems\ReportProject`. Quando si aggiunge un nuovo elemento al progetto report, il report personalizzato viene visualizzato nel riquadro dei Modelli.  

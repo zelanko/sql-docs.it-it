@@ -9,18 +9,18 @@ ms.topic: conceptual
 ms.assetid: a5a8dbf6-4c3a-435d-8188-d6656c32f229
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a9aaa281d1d91c8031182133976f1395417c4502
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: a57b58490f6a2bfd8f0d5e8880402f1e136abd7e
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51812594"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52710862"
 ---
 # <a name="create-mobile-reports-with-sql-server-mobile-report-publisher"></a>Creare report per dispositivi mobili con SQL Server Mobile Report Publisher
 Informazioni su report per dispositivi mobili di [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , ottimizzati per i dispositivi mobili e connessi ai dati locali, con un'ampia gamma di visualizzazioni dei dati. 
 
 >[!NOTE]
->  È necessario eseguire la migrazione del contenuto di Datazen Server, ad esempio dashboard e indicatori KPI, a un server di SQL Server 2016 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]? Provare a usare [Migration Assistant di SQL Server per Datazen](https://www.microsoft.com/download/details.aspx?id=53128). 
+>  È necessario eseguire la migrazione del contenuto di Datazen Server, ad esempio dashboard e indicatori KPI, a un server di SQL Server [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]? Provare a usare [Migration Assistant di SQL Server per Datazen](https://www.microsoft.com/download/details.aspx?id=53128). 
  
 ![SS_MRP_LayoutTabSm](../../reporting-services/media/ss-mrp-layouttabsm.png)  
 
@@ -35,7 +35,7 @@ Con [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-long.md)]è possibil
 Questi articoli includono informazioni utili per iniziare.
 -  Scaricare [SQL Server Mobile Report Publisher](https://go.microsoft.com/fwlink/?LinkID=733527)  
 -  [Creare un report per dispositivi mobili di Reporting Services](../../reporting-services/mobile-reports/create-a-reporting-services-mobile-report.md)  
--  Blog di Christopher Finlan che descrive la[procedura dettagliata per creare report per dispositivi mobili e indicatori KPI in SQL Server 2016 Reporting Services](https://christopherfinlan.com/2015/12/21/how-to-create-mobile-reports-and-kpis-in-sql-server-reporting-services-2016-an-end-to-end-walkthrough/)   
+-  Blog di Christopher Finlan che descrive la [procedura dettagliata per creare report per dispositivi mobili e indicatori KPI in SQL Server Reporting Services](https://christopherfinlan.com/2015/12/21/how-to-create-mobile-reports-and-kpis-in-sql-server-reporting-services-2016-an-end-to-end-walkthrough/)  
 - [Design first, or data first](../../reporting-services/mobile-reports/design-first-or-data-first-when-creating-in-reporting-services-mobile-reports.md)(Iniziare con la progettazione o con i dati): decidere se iniziare a progettare il report con dati simulati o con i propri dati.  
 - [Dati per report di Reporting Services per dispositivi mobili](../../reporting-services/mobile-reports/data-for-reporting-services-mobile-reports.md): usare dati da set di dati condivisi o preparare dati da cartelle di lavoro di Excel per usarli nei report per dispositivi mobili.
 - [How data refresh works in mobile reports and KPIs in Reporting Services](https://christopherfinlan.com/2016/02/10/so-refreshinghow-data-refresh-works-with-mobile-reports-and-kpis-in-reporting-services/) (Come funziona l'aggiornamento dei dati nei report per dispositivi mobili e negli indicatori KPI): blog di Christopher Finlan che descrive come impostare la memorizzazione nella cache di set di dati condivisi per controllare la frequenza dell'aggiornamento dei dati e velocizzare le prestazioni dei report.

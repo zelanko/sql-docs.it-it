@@ -15,12 +15,12 @@ ms.assetid: bf5e87df-91a4-49f9-ae88-2a6dcf644510
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ca1ecc06039f8bdfbf4516778a04f9c191544e45
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: 4cf7b351726ab07313dff9272bd4411957f05cb2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49168895"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507093"
 ---
 # <a name="add-a-database-mirroring-witness-using-windows-authentication-transact-sql"></a>Aggiungere un server di controllo del mirroring del database tramite l'autenticazione di Windows (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +64,7 @@ ms.locfileid: "49168895"
   
      dove \<*indirizzo-sistema>* è una stringa che identifica in maniera univoca il computer di destinazione e \<*porta>* è il numero di porta usato dall'endpoint del mirroring dell'istanza del server partner. Per altre informazioni, vedere [Specificare un indirizzo di rete del server &#40;Mirroring del database&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md).  
   
-     Ad esempio, sull'istanza del server principale l'istruzione ALTER DATABASE seguente imposta il server di controllo del mirroring. Il nome del database è **AdventureWorks**, l'indirizzo del sistema è DBSERVER3, ovvero il nome del server di controllo del mirroring, e la porta utilizzata dall'endpoint del mirroring del database del server di controllo del mirroring è `7022`:  
+     Ad esempio, sull'istanza del server principale l'istruzione ALTER DATABASE seguente imposta il server di controllo del mirroring. Il nome del database è **AdventureWorks**, l'indirizzo del sistema è DBSERVER3, ovvero il nome del server di controllo del mirroring, e la porta usata dall'endpoint del mirroring del database del server di controllo del mirroring è `7022`:  
   
     ```  
     ALTER DATABASE AdventureWorks   

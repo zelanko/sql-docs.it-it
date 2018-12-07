@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: e2358653-35bc-4496-810a-d3ccf02f229f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d525d686b8be1e17214dd8908017b86358f87ec2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d78d5bd802b1c194cb4b1cf09a81a1eecc9f54df
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47605999"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52413697"
 ---
 # <a name="page-layout-and-rendering-report-builder-and-ssrs"></a>Layout e rendering della pagina (Generatore report e SSRS)
 Leggere le informazioni sulle estensioni per il rendering di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] per i report impaginati in modo da ottenere il report desiderato in termini di layout di pagina, interruzioni di pagina e formato della carta. 

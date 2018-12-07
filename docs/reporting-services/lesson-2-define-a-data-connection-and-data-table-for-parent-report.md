@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: f02dee0c-85ad-45d4-b707-10e9e8541db9
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4d284bc507c3398c85cf823528f17fdbd671e96a
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 43cd64469ef5a1cf08b1c99e42ee5f6dd20ab85b
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021775"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52391724"
 ---
 # <a name="lesson-2-define-a-data-connection-and-data-table-for-parent-report"></a>Lezione 2: Definire una connessione dati e una tabella di dati per il report padre
 Dopo aver creato un nuovo progetto di sito Web utilizzando il modello di sito Web ASP.NET per Visual C#, il passaggio successivo consiste nel creare una connessione dati e una tabella di dati per il report padre. In questa esercitazione la connessione dati è al database AdventureWorks2014.  
@@ -30,7 +30,7 @@ Dopo aver creato un nuovo progetto di sito Web utilizzando il modello di sito We
   
 4.  Nella pagina **Seleziona connessione dati** fare clic su **Nuova connessione**.  
   
-5.  Se si tratta della prima creazione di un'origine dati in Visual Studio, viene visualizzata la pagina **Scegli origine dati** . Nella casella **Origine dati** selezionare **Microsoft SQL Server**.  
+5.  Se si tratta della prima creazione di un'origine dati in Visual Studio, viene visualizzata la pagina **Scegli origine dati**. Nella casella **Origine dati** selezionare **Microsoft SQL Server**.  
   
 6.  Nella finestra di dialogo **Aggiungi connessione** effettuare i passaggi seguenti:  
   

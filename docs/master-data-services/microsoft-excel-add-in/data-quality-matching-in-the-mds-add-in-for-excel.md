@@ -11,12 +11,12 @@ ms.assetid: be78d051-0d56-46d3-bb89-327e218dadd6
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 76f25db84d074a9aeb544daf2fe33b512836daf7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4f706344fb2e3f194cb059e5d0d0338aaf7adc06
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47713099"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52402697"
 ---
 # <a name="data-quality-matching-in-the-mds-add-in-for-excel"></a>Corrispondenza Data Quality nel componente aggiuntivo MDS per Excel
 
@@ -24,7 +24,7 @@ ms.locfileid: "47713099"
 
   Con il tempo, sarà necessario aggiungere ulteriori dati al repository MDS. Prima di aggiungere i dati, può essere utile confrontare i nuovi dati con quelli già gestiti in MDS, per verificare che non si stiano aggiungendo dati duplicati o non accurati.  
   
- In [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] MDS viene utilizzata la funzionalità Data Quality Services (DQS) di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per mettere in corrispondenza i dati simili. Quando si utilizza la funzionalità di ricerca di corrispondenza nel componente aggiuntivo, i record simili vengono raggruppati e viene visualizzato un punteggio che rappresenta l'accuratezza del risultato. Per altre informazioni sulla funzionalità di ricerca di corrispondenza fornita da DQS, vedere [Corrispondenza di dati](../../data-quality-services/data-matching.md).  
+ In [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] MDS viene usata la funzionalità Data Quality Services (DQS) di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per mettere in corrispondenza i dati simili. Quando si utilizza la funzionalità di ricerca di corrispondenza nel componente aggiuntivo, i record simili vengono raggruppati e viene visualizzato un punteggio che rappresenta l'accuratezza del risultato. Per altre informazioni sulla funzionalità di ricerca di corrispondenza fornita da DQS, vedere [Corrispondenza di dati](../../data-quality-services/data-matching.md).  
   
 ## <a name="workflow-for-data-quality-matching"></a>Flusso di lavoro per la corrispondenza Data Quality  
  Quando si usa DQS con [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]MDS, usare il flusso di lavoro seguente:  

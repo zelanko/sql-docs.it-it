@@ -14,12 +14,12 @@ ms.assetid: abeadfa4-a14d-469a-bacf-75812e48fac1
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b8b2f1352c2eadb34780f1e5148f06059b7d4e13
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2522a2efa2edfb899d2693e6f4746edd85f2d7fe
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47596042"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52420402"
 ---
 # <a name="configure-the-max-worker-threads-server-configuration-option"></a>Configurare l'opzione di configurazione del server max worker threads
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -70,10 +70,10 @@ ms.locfileid: "47596042"
     
     Usando la formula seguente:
     
-    |Numero di CPU|computer a 32 bit|Computer a 64 bit|  
+    |Numero di CPU|Computer a 32 bit|Computer a 64 bit|  
     |------------|------------|------------| 
     |\<= 4 processori|256|512|
-    |\> 4 processori|256 + ((CPU logica - 4) * 8)|512 + ((CPU logiche - 4) * 16)| 
+    |\> 4 processori|256 + ((CPU logica - 4) * 8)|512 + ((CPU logica - 4) * 16)| 
   
     > [!NOTE]  
     > [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non può più essere installato in un sistema operativo a 32 bit. I valori per i computer a 32 bit vengono indicati per offrire assistenza ai clienti che eseguono [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e versioni precedenti.   Si consiglia 1024 come numero massimo di thread di lavoro per un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in esecuzione in un computer a 32 bit.  
@@ -102,7 +102,7 @@ ms.locfileid: "47596042"
   
 ###  <a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorizzazioni  
  Le autorizzazioni di esecuzione per **sp_configure** senza alcun parametro o solo con il primo parametro vengono assegnate per impostazione predefinita a tutti gli utenti. Per eseguire **sp_configure** con entrambi i parametri per la modifica di un'opzione di configurazione o per l'esecuzione dell'istruzione RECONFIGURE, a un utente deve essere concessa l'autorizzazione a livello di server ALTER SETTINGS. L'autorizzazione ALTER SETTINGS è assegnata implicitamente ai ruoli predefiniti del server **sysadmin** e **serveradmin** .  
   
 ##  <a name="SSMSProcedure"></a> Uso [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  

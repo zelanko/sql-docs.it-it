@@ -22,12 +22,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 94b77d9ce0e036e0b3c5727d3731d0effc074f33
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 09422e46babcb966fdc4c86153e91439a5e46c88
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47782449"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507395"
 ---
 # <a name="create-table-transact-sql-identity-property"></a>CREATE TABLE (Transact-SQL) IDENTITY (proprietà)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -64,13 +64,13 @@ IDENTITY [ (seed , increment) ]
   
  Tramite la proprietà Identity in una colonna non viene garantito quanto riportato di seguito:  
   
--   **Univocità del valore**. L'univocità deve essere applicata tramite un vincolo **PRIMARY KEY** o **UNIQUE** o un indice **UNIQUE**.  
+-   **Univocità del valore**. L'univocità deve essere applicata con un vincolo **PRIMARY KEY** o **UNIQUE** o un indice **UNIQUE**.  
   
--   **Valori consecutivi in una transazione**. In una transazione con la quale vengono inserite più righe non viene garantito il recupero di valori consecutivi per le righe, dal momento che si possono verificare altri inserimenti simultanei nella tabella. Se i valori devono essere consecutivi, nella transazione deve essere usato un blocco esclusivo sulla tabella o il livello di isolamento **SERIALIZABLE**.  
+-   **Valori consecutivi in una transazione**. In una transazione con cui vengono inserite più righe non viene garantito il recupero di valori consecutivi per le righe, perché si possono verificare altri inserimenti simultanei nella tabella. Se i valori devono essere consecutivi, nella transazione deve essere usato un blocco esclusivo sulla tabella o il livello di isolamento **SERIALIZABLE**.  
   
--   **Valori consecutivi dopo il riavvio del server o altri errori**. Tramite [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è possibile memorizzare nella cache valori Identity per motivi di prestazioni e alcuni dei valori assegnati possono essere persi durante un errore del database o il riavvio del server. Questo può comportare dei gap nel valore Identity al momento dell'inserimento. Se i gap non sono accettabili, l'applicazione dovrà usare un meccanismo specifico per generare i valori chiave. L'uso di un generatore di sequenze con l'opzione **NOCACHE** può limitare i gap a transazioni di cui non è mai eseguito il commit.  
+-   **Valori consecutivi dopo il riavvio del server o altri errori** -[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] potrebbe memorizzare nella cache valori Identity per motivi di prestazioni e alcuni valori assegnati possono andare persi durante un errore del database o un riavvio del server. Questo può comportare dei gap nel valore Identity al momento dell'inserimento. Se i gap non sono accettabili, l'applicazione dovrà usare un meccanismo specifico per generare i valori chiave. L'uso di un generatore di sequenze con l'opzione **NOCACHE** può limitare i gap a transazioni di cui non è mai eseguito il commit.  
   
--   **Riuso di valori**. In caso di una determinata proprietà Identity con un valore di inizializzazione/incremento specifico, i valori Identity non vengono riusati dal motore. Se una particolare istruzione INSERT non riesce o se viene eseguito il rollback di quest'ultima, i valori Identity usati vengono persi e non saranno generati di nuovo. Questa condizione può comportare dei gap quando vengono generati i successivi valori Identity.  
+-   **Riuso di valori**. Per una determinata proprietà Identity con valore di inizializzazione/incremento specifico, i valori Identity non vengono riusati dal motore. Se una particolare istruzione INSERT non riesce o se viene eseguito il rollback di quest'ultima, i valori Identity usati vengono persi e non saranno generati di nuovo. Questa condizione può comportare dei gap quando vengono generati i successivi valori Identity.  
   
  Queste restrizioni fanno parte della progettazione per migliorare le prestazioni e perché sono accettabili in molte situazioni comuni. Se non è possibile usare valori Identity a causa di queste restrizioni, creare una tabella separata contenente un valore corrente e gestire l'accesso all'assegnazione di numeri e tabelle con l'applicazione.  
   

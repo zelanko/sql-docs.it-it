@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: adb9e24e86f6552c9d08a5c495f4e04283eaa7f8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 51485f1d1bbe120b42371c9d04a9d4576ac8d0d4
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47628429"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52391544"
 ---
 # <a name="unsupported-sql-server-features-for-in-memory-oltp"></a>Funzionalità di SQL Server non supportate per OLTP in memoria
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ Le funzionalità di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in
 |-------------------------|-------------------------|  
 |Compressione dei dati per tabelle ottimizzate per la memoria.|È possibile utilizzare la funzionalità di compressione dei dati per comprimere i dati in un database e ridurre le dimensioni del database. Per altre informazioni, vedere [Data Compression](../../relational-databases/data-compression/data-compression.md).|  
 |Partizionamento di tabelle ottimizzate per la memoria, di indici HASH e di indici non cluster.|I dati di tabelle e indici partizionati vengono divisi in unità distribuibili tra più filegroup in un database. Per ulteriori informazioni, vedere [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md).|  
-| Replica | Le configurazioni di replica diverse dalla replica transazionale in tabelle ottimizzate per la memoria nei sottoscrittori non sono compatibili con tabelle o viste che fanno riferimento a tabelle ottimizzate per la memoria.<br /><br />Se è presente un filegroup ottimizzato per la memoria, la replica con sync_mode="snapshot del database" non è supportata.<br /><br />Per altre informazioni, vedere [Replica in sottoscrittori di tabelle con ottimizzazione per la memoria](../../relational-databases/replication/replication-to-memory-optimized-table-subscribers.md).|
+| Replica | Le configurazioni di replica diverse dalla replica transazionale in tabelle ottimizzate per la memoria nei sottoscrittori non sono compatibili con tabelle o viste che fanno riferimento a tabelle ottimizzate per la memoria.<br /><br />Se è presente un filegroup ottimizzato per la memoria, la replica con sync_mode='snapshot del database' non è supportata.<br /><br />Per altre informazioni, vedere [Replica in sottoscrittori di tabelle con ottimizzazione per la memoria](../../relational-databases/replication/replication-to-memory-optimized-table-subscribers.md).|
 |Mirroring|Il mirroring del database non è supportato per i database con un filegroup MEMORY_OPTIMIZED_DATA. Per altre informazioni sul mirroring, vedere [Mirroring del Database &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md).|  
 |Ricompilazione del log|La ricompilazione del log, tramite il comando attach o l'istruzione ALTER DATABASE, non è supportata per i database che contengono un filegroup MEMORY_OPTIMIZED_DATA.|  
 |Server collegato|Non è possibile accedere a server collegati nella stessa query o transazione come tabelle ottimizzate per la memoria. Per altre informazioni, vedere [Server collegati &#40;Motore di database&#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md).|  
