@@ -11,12 +11,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 058272ca68136c3a1f00a20ef3036c5c9704c659
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 863e28c5a2545523161135821c420c1711ebf4e5
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51602541"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52513769"
 ---
 # <a name="install-sql-server-with-sysprep"></a>Installare SQL Server con SysPrep
 
@@ -114,13 +114,13 @@ Per altre informazioni sulle edizioni di [!INCLUDE[ssNoVersion](../../includes/s
   
 11. Nella pagina Configurazione dell'istanza specificare l'ID istanza per l'istanza. Per continuare, fare clic su **Avanti** . 
   
-     **ID istanza** : ID istanza usato per identificare le directory di installazione e le chiavi del Registro di sistema per l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si tratta del caso delle istanze predefinite e delle istanze denominate. Se durante il passaggio per il completamento l'istanza predisposta viene completata come istanza predefinita, il nome dell'istanza viene sovrascritto come MSSQLSERVER. L'ID istanza rimane lo stesso di quello specificato. 
+     **ID istanza**: ID istanza usato per identificare le directory di installazione e le chiavi del Registro di sistema per l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si tratta del caso delle istanze predefinite e delle istanze denominate. Se durante il passaggio per il completamento l'istanza predisposta viene completata come istanza predefinita, il nome dell'istanza viene sovrascritto come MSSQLSERVER. L'ID istanza rimane lo stesso di quello specificato. 
   
-     **Directory radice istanza** : per impostazione predefinita, la directory radice dell'istanza è [!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]. Per specificare una directory radice non predefinita, usare il campo disponibile o fare clic su **Sfoglia** per individuare una cartella di installazione. La directory specificata nel passaggio relativo alla preparazione sarà utilizzata durante la configurazione nel passaggio per il completamento. 
+     **Directory radice istanza**: per impostazione predefinita, la directory radice dell'istanza è [!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]. Per specificare una directory radice non predefinita, usare il campo disponibile o fare clic su **Sfoglia** per individuare una cartella di installazione. La directory specificata nel passaggio relativo alla preparazione sarà utilizzata durante la configurazione nel passaggio per il completamento. 
   
      Tutti i Service Pack e gli aggiornamenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verranno applicati a ogni componente di un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
   
-     **Istanze installate** : nella griglia vengono visualizzate le istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] presenti nel computer in cui viene eseguito il programma di installazione. 
+     **Istanze installate**: nella griglia vengono visualizzate le istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] presenti nel computer in cui viene eseguito il programma di installazione. 
   
 12. Nella pagina **Requisiti di spazio su disco** viene calcolato lo spazio su disco necessario per le funzionalità specificate. Tale spazio viene quindi confrontato con lo spazio su disco disponibile. 
   
@@ -163,9 +163,9 @@ Per altre informazioni sulle edizioni di [!INCLUDE[ssNoVersion](../../includes/s
   
 9. Nella pagina Configurazione dell'istanza specificare il nome dell'istanza per l'istanza predisposta. Questo nome corrisponde a quello dell'istanza una volta che è stata completata la configurazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per continuare, fare clic su **Avanti** . 
   
-     **ID istanza** : ID istanza usato per identificare le directory di installazione e le chiavi del Registro di sistema per l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si tratta del caso delle istanze predefinite e delle istanze denominate. Se durante il passaggio per il completamento l'istanza predisposta viene completata come istanza predefinita, il nome dell'istanza viene sovrascritto come MSSQLSERVER. L'ID istanza rimane lo stesso di quello specificato durante il passaggio relativo alla preparazione. 
+     **ID istanza**: ID istanza usato per identificare le directory di installazione e le chiavi del Registro di sistema per l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si tratta del caso delle istanze predefinite e delle istanze denominate. Se durante il passaggio per il completamento l'istanza predisposta viene completata come istanza predefinita, il nome dell'istanza viene sovrascritto come MSSQLSERVER. L'ID istanza rimane lo stesso di quello specificato durante il passaggio relativo alla preparazione. 
   
-     **Directory radice istanza** : verrà usata la directory specificata nel passaggio relativo alla preparazione e non sarà possibile modificarla nel corso di tale passaggio. 
+     **Directory radice istanza**: verrà usata la directory specificata nel passaggio della preparazione, che non potrà essere modificata in questo passaggio. 
   
      Tutti i Service Pack e gli aggiornamenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verranno applicati a ogni componente di un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
   
@@ -173,7 +173,7 @@ Per altre informazioni sulle edizioni di [!INCLUDE[ssNoVersion](../../includes/s
   
 10. Il flusso di lavoro relativo alla parte restante di questo articolo dipende dalle funzionalità selezionate durante il passaggio relativo alla preparazione. Le pagine visualizzate dipendono dalle selezioni effettuate. 
   
-11. Nella pagina **Configurazione server** - Account di servizio specificare gli account di accesso per i servizi [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . I servizi effettivamente configurati in questa pagina dipendono dalle funzionalità selezionate per l'installazione. 
+11. Nella pagina **Configurazione server** - Account di servizio specificare gli account di accesso per i servizi [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. I servizi effettivamente configurati in questa pagina dipendono dalle funzionalità selezionate per l'installazione. 
   
      È possibile assegnare lo stesso account di accesso a tutti i servizi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oppure configurare singolarmente l'account di ogni servizio. È inoltre possibile specificare se i servizi verranno avviati automaticamente, manualmente o se sono disabilitati. [!INCLUDE[msCoName](../../includes/msconame-md.md)] consiglia di configurare gli account del servizio singolarmente per assegnare i privilegi minimi a ogni servizio, in modo che ai servizi [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengano concesse le autorizzazioni minime necessarie per completare le attività. Per altre informazioni, vedere [Configurazione Server - Account di servizio](https://msdn.microsoft.com/library/c283702d-ab20-4bfa-9272-f0c53c31cb9f) e [Configurare account di servizio e autorizzazioni di Windows](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md). 
   

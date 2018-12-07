@@ -21,12 +21,12 @@ ms.assetid: a801c619-611b-4e82-a8d8-d1e01691b7a1
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ff7bffcb3a31a697300d98e0de03a7f3e3111701
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: f928fcfc873e1a5e6209338b075a9df0ff543691
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51681339"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52509787"
 ---
 # <a name="enroll-an-instance-of-sql-server-sql-server-utility"></a>Registrare un'istanza di SQL Server (Utilità SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -72,7 +72,7 @@ ms.locfileid: "51681339"
 >  L'esecuzione side-by-side del set di raccolta di Utilità [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e dei set di raccolta non appartenenti a Utilità [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è supportata. Ciò significa che un'istanza gestita di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] può essere monitorata da altri set di raccolta anche se l'istanza è membro di un'utilità di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Si noti tuttavia che tutti i set di raccolta sull'istanza gestita caricheranno i propri dati nel data warehouse di gestione dell'utilità. Per altre informazioni, vedere [Considerazioni per l'esecuzione di set di raccolta dell'utilità e non appartenenti all'utilità nella stessa istanza di SQL Server](../../relational-databases/manage/run-utility-and-non-utility-collection-sets-on-same-sql-instance.md) e [Configure Your Utility Control Point Data Warehouse &#40;SQL Server Utility&#41;](../../relational-databases/manage/configure-your-utility-control-point-data-warehouse-sql-server-utility.md) (Configurare il data warehouse del punto di controllo dell'utilità -Utilità SQL Server).  
   
 ## <a name="wizard-steps"></a>Passaggi della procedura guidata  
- Nelle sezioni seguenti sono fornite informazioni dettagliate su ogni pagina del flusso di lavoro della procedura guidata. Fare clic su un collegamento nell'elenco riportato di seguito per passare ai dettagli per una pagina della procedura guidata: Per altre informazioni su uno script di PowerShell per questa operazione, vedere l' [esempio](#PowerShell_enroll)relativo a PowerShell.  
+ Nelle sezioni seguenti sono fornite informazioni dettagliate su ogni pagina del flusso di lavoro della procedura guidata. Fare clic su un collegamento nell'elenco riportato di seguito per passare ai dettagli per una pagina della procedura guidata: Per altre informazioni su uno script di PowerShell per questa operazione, vedere l'[esempio](#PowerShell_enroll) relativo a PowerShell.  
   
 -   [Introduzione alla procedura guidata Registra istanza](#Welcome)  
   
@@ -89,9 +89,9 @@ ms.locfileid: "51681339"
 -   [Registrazione dell'istanza di SQL Server](#Enrolling)  
   
 ##  <a name="Welcome"></a> Introduzione alla procedura guidata Registra istanza  
- Per avviare la procedura guidata, espandere l'albero in Esplora utilità fino a visualizzare un punto di controllo dell'utilità, fare clic con il pulsante destro del mouse su **Istanze gestite**e scegliere **Aggiungi istanza gestita**.  
+ Per avviare la procedura guidata, espandere l'albero in Esplora utilità fino a visualizzare un punto di controllo dell'utilità, fare clic con il pulsante destro del mouse su **Istanze gestite** e scegliere **Aggiungi istanza gestita**.  
   
- Scegliere **Avanti**per continuare.  
+ Scegliere **Avanti** per continuare.  
   
 ##  <a name="Instance_name"></a> Specificare l'istanza di SQL Server  
  Per selezionare un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dalla finestra di dialogo della connessione, fare clic su **Connetti**. Specificare il nome del computer e il nome dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nel formato NomeComputer\NomeIstanza. Per altre informazioni, vedere [Connetti al server &#40;Motore di database&#41;](https://msdn.microsoft.com/library/ee9017b4-8a19-4360-9003-9e6484082d41).  
@@ -176,7 +176,7 @@ ms.locfileid: "51681339"
 >  Per altre informazioni sulla risoluzione di questo errore, vedere [Attività e funzionalità di Utilità SQL Server](https://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453).  
   
 > [!IMPORTANT]  
->  Non modificare le proprietà del set di raccolta "Informazioni utilità" in un'istanza gestita di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]e non abilitare/disabilitare manualmente la raccolta dati, in quanto viene controllata da un processo dell'agente Utilità.  
+>  Non modificare le proprietà del set di raccolta "Informazioni utilità" in un'istanza gestita di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e non abilitare/disabilitare manualmente la raccolta dati, in quanto viene controllata da un processo dell'agente Utilità.  
   
  Dopo avere completato la Registrazione guidata istanza, fare clic sul nodo **Istanze gestite** nel riquadro di navigazione di **Esplora utilità** in SSMS. Le istanze registrate di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengono visualizzate nella visualizzazione elenco nel riquadro **Contenuto Esplora utilità** .  
   

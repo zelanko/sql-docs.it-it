@@ -14,12 +14,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c73e625f6447d5afd1e60acf8ec0e9159dcdb04e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 00d28b0750ba599e4bc73fa2ec6586271b683545
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47849589"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52410858"
 ---
 # <a name="getting-started-with-database-engine-permissions"></a>Introduzione alle autorizzazioni del motore di database
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -104,7 +104,7 @@ AUTHORIZATION  PERMISSION  ON  SECURABLE::NAME  TO  PRINCIPAL;
   
 -   `PERMISSION` stabilisce l'azione consentita o quella non consentita. [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] può specificare 230 autorizzazioni. [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] contiene meno autorizzazioni perché alcune azioni non sono rilevanti in Azure. Le autorizzazioni sono elencate nell'argomento [Autorizzazioni &#40;motore di database&#41;](../../../relational-databases/security/permissions-database-engine.md) e nel grafico riportato più avanti.  
   
--   `ON SECURABLE::NAME` specifica il tipo di oggetto a protezione diretta (server, oggetto server, database o oggetto di database) e il nome corrispondente. Alcune autorizzazioni non richiedono `ON SECURABLE::NAME` perché non è ambiguo o non è appropriato nel contesto. Ad esempio, l'autorizzazione `CREATE TABLE` non richiede la clausola `ON SECURABLE::NAME` . Ad esempio, l'istruzione `GRANT CREATE TABLE TO Mary;` consente a Mary di creare tabelle.  
+-   `ON SECURABLE::NAME` specifica il tipo di oggetto a protezione diretta (server, oggetto server, database o oggetto di database) e il nome corrispondente. Alcune autorizzazioni non richiedono `ON SECURABLE::NAME` perché non è ambiguo o non è appropriato nel contesto. Ad esempio, con l'autorizzazione `CREATE TABLE` non è richiesta la clausola `ON SECURABLE::NAME`. Ad esempio, l'istruzione `GRANT CREATE TABLE TO Mary;` consente a Mary di creare tabelle.  
   
 -   `PRINCIPAL` è l'entità di sicurezza (account di accesso, utente o ruolo) che riceve o perde l'autorizzazione. Concedere le autorizzazioni ai ruoli quando possibile.  
   
@@ -126,7 +126,7 @@ GRANT UPDATE ON OBJECT::Production.Parts TO PartsTeam;
 -   Se l'amministratore esegue `DENY SELECT ON OBJECT::OrderStatus TO Sales;` in modo non corretto, a Ted, come membro del ruolo Sales, verrà negata l'autorizzazione `SELECT` perché l'istruzione `DENY` per il gruppo Sales prevale sull'istruzione  `GRANT`personale.  
   
 > [!NOTE]  
->  Le autorizzazioni possono essere configurate con [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]. Cercare l'oggetto a protezione diretta in Esplora oggetti, fare clic con il pulsante destro del mouse sull'oggetto e quindi scegliere **Proprietà**. Selezionare la pagina **Autorizzazioni** . Per informazioni sull'uso della pagina delle autorizzazioni, vedere [Permissions or Securables Page](../../../relational-databases/security/permissions-or-securables-page.md).  
+>  Le autorizzazioni possono essere configurate con [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]. Cercare l'oggetto a protezione diretta in Esplora oggetti, fare clic con il pulsante destro del mouse sull'oggetto e quindi scegliere **Proprietà**. Selezionare la pagina **Autorizzazioni** . Per informazioni sull'uso della pagina delle autorizzazioni, vedere [Pagina Autorizzazioni o Entità a sicurezza diretta](../../../relational-databases/security/permissions-or-securables-page.md).  
   
 ## <a name="permission-hierarchy"></a>Gerarchia delle autorizzazioni  
  Le autorizzazioni hanno una gerarchia padre/figlio, ovvero se si concede l'autorizzazione `SELECT` per un database, tale autorizzazione include l'autorizzazione `SELECT` per tutti gli schemi (figlio) presenti nel database. Se si concede l'autorizzazione `SELECT` per uno schema, tale autorizzazione include l'autorizzazione `SELECT` per tutte le tabelle e le viste (figlio) presenti nello schema. Le autorizzazioni sono transitive, ovvero se si concede l'autorizzazione `SELECT` per un database, tale autorizzazione include l'autorizzazione `SELECT` per tutti gli schemi (figlio) e tutte le tabelle e le viste (nipote).  

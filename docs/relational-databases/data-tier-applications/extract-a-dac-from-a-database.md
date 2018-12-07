@@ -20,12 +20,12 @@ ms.assetid: ae52a723-91c4-43fd-bcc7-f8de1d1f90e5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0b75a298bf86bd1a87308e8136b531c323307e4d
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: f8073ee3b527602d8d9d750923547b8fc5259d75
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43811347"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514105"
 ---
 # <a name="extract-a-dac-from-a-database"></a>Estrarre un'applicazione livello dati da un database
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "43811347"
   
 2.  Espandere il nodo di **Database** .  
   
-3.  Fare clic con il pulsante destro del mouse sul nodo del database da cui si deve estrarre l'applicazione livello dati, scegliere **Attività**e selezionare **Estrai applicazione livello dati**  
+3.  Fare clic con il pulsante destro del mouse sul nodo del database da cui si deve estrarre l'applicazione livello dati, scegliere **Attività** e quindi selezionare **Estrai applicazione livello dati**.  
   
 4.  Completare le finestre di dialogo della procedura guidata.  
   

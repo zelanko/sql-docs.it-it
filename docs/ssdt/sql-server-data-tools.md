@@ -13,17 +13,17 @@ ms.assetid: 5f08f15a-851d-4026-a557-28b3c6492efe
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b7e305cc2ceb178b0adb812d8215022f981d2c95
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 77d24c998c17e9fb265defa252b37b955e451bda
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47763909"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52414668"
 ---
 # <a name="sql-server-data-tools"></a>SQL Server Data Tools
 SQL Server Data Tools (SSDT) trasforma lo sviluppo dei database, introducendo un modello diffuso e dichiarativo che si estende a tutte le fasi di sviluppo di database all'interno di Visual Studio. È possibile usare le funzionalità di progettazione di SSDT Transact\-SQL per creare, gestire ed eseguire il debug e il refactoring di database. È possibile utilizzare un progetto di database o direttamente un'istanza del database connessa in locale o ospitata.  
   
-Gli sviluppatori possono usare i comuni strumenti di Visual Studio per lo sviluppo di database, Strumenti come, ad esempio, navigazione nel codice, IntelliSense, supporto del linguaggio di programmazione equiparabile a quello disponibile per C# e Visual Basic, convalida specifica della piattaforma, debug e modifica dichiarativa nell'editor Transact\-SQL. SSDT fornisce inoltre una Progettazione tabelle visiva per creare e modificare tabelle in progetti di database o istanze del database connesse. Mentre si lavora sui progetti di database in un ambiente basato su team, è possibile utilizzare il controllo della versione per tutti i file. Al momento della pubblicazione del progetto, è possibile scegliere di pubblicare in tutte le piattaforme SQL supportate, incluso Database SQL e SQL Server. La funzionalità di convalida della piattaforma di SSDT garantisce il funzionamento degli script nella destinazione specificata.  
+Gli sviluppatori possono usare i comuni strumenti di Visual Studio per lo sviluppo di database, Strumenti come, ad esempio, navigazione nel codice, IntelliSense, supporto del linguaggio di programmazione equiparabile a quello disponibile per C# e Visual Basic, convalida specifica della piattaforma, debug e modifica dichiarativa nell'editor Transact\-SQL. SSDT fornisce inoltre una Progettazione tabelle visiva per creare e modificare tabelle in progetti di database o istanze del database connesse. Mentre si lavora sui progetti di database in un ambiente basato su team, è possibile utilizzare il controllo della versione per tutti i file. Al momento della pubblicazione del progetto, è possibile eseguire la pubblicazione in tutte le piattaforme SQL supportate, inclusi il database SQL e SQL Server. La funzionalità di convalida della piattaforma di SSDT garantisce il funzionamento degli script nella destinazione specificata.  
   
 Esplora oggetti di SQL Server in Visual Studio offre una visualizzazione degli oggetti di database simile a SQL Server Management Studio. Esplora oggetti di SQL Server semplifica l'amministrazione del database e il lavoro di progettazione. È possibile creare, modificare, rinominare ed eliminare facilmente tabelle, stored procedure, tipi e funzioni. È anche possibile modificare dati di tabelle, confrontare schemi o eseguire query usando i menu contestuali direttamente da Esplora oggetti di SQL Server.  
   

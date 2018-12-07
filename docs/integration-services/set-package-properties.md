@@ -26,12 +26,12 @@ ms.assetid: 13f81c3e-2b18-4f83-b445-a2f4a2c560aa
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bb0840c67ff34759e9d17426b33ce2d32f4e1143
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: bb7ed2c7f9989344a44a2ad2de9a59d2c4a2e1fa
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51642242"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52525257"
 ---
 # <a name="set-package-properties"></a>Impostazione delle proprietà di un pacchetto
   Quando viene creato un pacchetto in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] utilizzando l'interfaccia grafica offerta da [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , è possibile impostare le proprietà dell'oggetto pacchetto nella finestra Proprietà.  
@@ -118,8 +118,8 @@ ms.locfileid: "51642242"
   
 |Proprietà|Descrizione|  
 |--------------|-----------------|  
-|**Configurazioni**|Raccolta delle configurazioni utilizzate dal pacchetto. Per visualizzare e configurare le configurazioni del pacchetto, fare clic sul pulsante Sfoglia **(…)** .|  
-|**Espressioni**|Per creare espressioni per le proprietà del pacchetto, fare clic sul pulsante Sfoglia **(…)** .<br /><br /> È possibile creare espressioni di proprietà per tutte le proprietà del pacchetto incluse nel modello a oggetti, non solo per quelle elencate nella finestra Proprietà.<br /><br /> Per altre informazioni, vedere [Utilizzo delle espressioni di proprietà nei pacchetti](../integration-services/expressions/use-property-expressions-in-packages.md).<br /><br /> Per visualizzare le espressioni di proprietà esistenti, espandere **Expressions**. Per modificare e valutare un'espressione, fare clic sul pulsante Sfoglia **(…)** nella casella di testo dell'espressione.|  
+|**Configurazioni**|Raccolta delle configurazioni utilizzate dal pacchetto. Per visualizzare e configurare le configurazioni del pacchetto, fare clic sul pulsante Sfoglia **(...)**.|  
+|**Espressioni**|Per creare espressioni per le proprietà del pacchetto, fare clic sul pulsante Sfoglia **(...)**.<br /><br /> È possibile creare espressioni di proprietà per tutte le proprietà del pacchetto incluse nel modello a oggetti, non solo per quelle elencate nella finestra Proprietà.<br /><br /> Per altre informazioni, vedere [Utilizzo delle espressioni di proprietà nei pacchetti](../integration-services/expressions/use-property-expressions-in-packages.md).<br /><br /> Per visualizzare le espressioni di proprietà esistenti, espandere **Expressions**. Per modificare e valutare un'espressione, fare clic sul pulsante Sfoglia **(...)** nella casella di testo dell'espressione.|  
 |**ForceExecutionResult**|Risultato dell'esecuzione del pacchetto. I valori sono **None**, **Success**, **Failure**e **Completion**. Il valore predefinito di questa proprietà è **None**. Per altre informazioni, vedere T:Microsoft.SqlServer.Dts.Runtime.DTSForcedExecResult.|  
 |**LocaleId**|Impostazioni locali Microsoft Win32. Il valore predefinito di questa proprietà è costituito dalle impostazioni locali del sistema operativo sul computer locale.|  
 |**LoggingMode**|Valore che specifica il comportamento di registrazione del pacchetto. I possibili valori sono **Disabled**, **Enabled**e **UseParentSetting**. Il valore predefinito di questa proprietà è **UseParentSetting**. Per ulteriori informazioni, vedere <xref:Microsoft.SqlServer.Dts.Runtime.DTSLoggingMode>.|  

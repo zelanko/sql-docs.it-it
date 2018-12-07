@@ -13,12 +13,12 @@ ms.assetid: 4a121375-7424-4444-b876-baefa8fe9015
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4cde2a5c082da3c87684ff6a32a12feb171c70ef
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 068d92c4913a59e9c18c601d2c21b8b3c80a0a19
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51697579"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52520229"
 ---
 # <a name="force-a-wsfc-cluster-to-start-without-a-quorum"></a>Forzare l'avvio di un cluster WSFC senza un quorum
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "51697579"
   
 1.  Aprire Gestione cluster di failover e connettersi al nodo del cluster desiderato per forzare la modalità online.  
   
-2.  Nel riquadro **Azioni** scegliere **Forza avvio del cluster**, quindi **Sì - Forza l'avvio del cluster**.  
+2.  Nel riquadro **Azioni** fare clic su **Forza avvio del cluster** e quindi su **Sì - Forza l'avvio del cluster**.  
   
 3.  Nel riquadro sinistro, nell'albero **Gestione cluster di failover** fare clic sul nome del cluster.  
   
@@ -60,9 +60,9 @@ ms.locfileid: "51697579"
   
 3.  Utilizzare `Stop-ClusterNode` per assicurarsi che il servizio cluster sia stato arrestato.  
   
-4.  Utilizzare `Start-ClusterNode` con `–FixQuorum` per forzare l'avvio del servizio cluster.  
+4.  Utilizzare `Start-ClusterNode` con `-FixQuorum` per forzare l'avvio del servizio cluster.  
   
-5.  Utilizzare `Get-ClusterNode` con `–Propery NodeWieght = 1` per impostare il valore che garantisca che il nodo è un membro votante del quorum.  
+5.  Utilizzare `Get-ClusterNode` con `-Propery NodeWieght = 1` per impostare il valore che garantisca che il nodo è un membro votante del quorum.  
   
 6.  Restituire le proprietà del nodo del cluster in un formato leggibile.  
   
@@ -73,8 +73,8 @@ ms.locfileid: "51697579"
 Import-Module FailoverClusters  
   
 $node = "Always OnSrv02"  
-Stop-ClusterNode –Name $node  
-Start-ClusterNode –Name $node -FixQuorum  
+Stop-ClusterNode -Name $node  
+Start-ClusterNode -Name $node -FixQuorum  
   
 (Get-ClusterNode $node).NodeWeight = 1  
   

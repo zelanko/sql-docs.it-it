@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 18c90a36-48bf-4805-a960-2d1e8f00c2dc
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 98a4d2d4bcc7faeb18352360b51b5fe4dcf722c1
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 4dbe5d5afdf507f3edfd68135aa8ee14aee5ae08
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50030830"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52711143"
 ---
 # <a name="tutorial-add-a-sparkline-to-your-report-report-builder"></a>Esercitazione: Aggiungere un grafico sparkline al report (Generatore report)
 
@@ -220,12 +220,12 @@ I valori in **SalesDate** vengono visualizzati nel formato di data predefinito e
   
     Si noti che le barre nei grafici sparkline non sono allineate l'una all'altra. Nella seconda riga di dati sono presenti solo quattro barre; pertanto le barre risultano più ampie di quelle nella prima riga, che ne contiene sei. Non è possibile confrontare i valori di ogni prodotto per giorno. È necessario allineare.  
   
-    Si noti anche che per ogni riga, la barra più alta corrisponde all'altezza della riga stessa. Anche questo è fuorviante, in quanto i valori più grandi per ogni riga non sono uguali. Il valore più grande per Budget Movie-Maker è $10.400, mentre il valore più grande per Slim Digital è $26.576, più del doppio. Inoltre, le barre più grandi in quelle due righe hanno all'incirca la stessa altezza. È necessario usare la stessa scala per tutti i grafici sparkline.  
+    Si noti anche che per ogni riga, la barra più alta corrisponde all'altezza della riga stessa. Anche questo è fuorviante, perché i valori più grandi per ogni riga non sono uguali. Il valore più grande per Budget Movie-Maker è $10.400, mentre per Slim Digital è $26.576, ossia più del doppio. Inoltre, le barre più grandi in quelle due righe hanno all'incirca la stessa altezza. È necessario usare la stessa scala per tutti i grafici sparkline.  
   
      ![report-builder-sparkline-misaligned](../reporting-services/media/report-builder-sparkline-misaligned.png)
   
 ## <a name="AlignSparklines"></a>4. Allineare i grafici sparkline verticalmente e orizzontalmente  
-I grafici sparkline risultano di difficile lettura quando in essi non vengono usate le stesse misure. È necessario che vi sia corrispondenza tra gli assi orizzontale e verticale di ognuno.  
+I grafici sparkline risultano di difficile lettura quando non usano tutti le stesse misure. È necessario che vi sia corrispondenza tra gli assi orizzontale e verticale di ognuno.  
    
 1.  Fare clic su **Progettazione** per tornare alla visualizzazione Struttura.  
   
@@ -319,6 +319,6 @@ Il report verrà salvato sul server di report. Il nome del server di report al q
 L'esercitazione sulla creazione di un report tabella con grafici sparkline è terminata. Per altre informazioni, vedere [Grafici sparkline e barre dei dati](../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md).  
   
 [Esercitazioni di Generatore report](../reporting-services/report-builder-tutorials.md) 
-[Generatore report in SQL Server 2016](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
+[Generatore report in SQL Server](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
 
 Altre domande? [Visitare il forum su Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)

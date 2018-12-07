@@ -1,7 +1,7 @@
 ---
 title: Traccia SQL | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 11/27/2018
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -11,30 +11,32 @@ ms.assetid: 83c6d1d9-19ce-43fe-be9a-45aaa31f20cb
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: fc3432906e9d96b10def455aea07d4ef22cfe89d
-ms.sourcegitcommit: ddb682c0061c2a040970ea88c051859330b8ac00
+ms.openlocfilehash: de20ad37cf5393f2498f00b7d5b1e78bd5285b34
+ms.sourcegitcommit: 60739bcb48ccce17bca4e11a85df443e93ca23e3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51571450"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52439803"
 ---
 # <a name="sql-trace"></a>Traccia SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  In Traccia SQL vengono raccolti unicamente gli eventi che rappresentano istanze delle classi di evento elencate nella definizione di traccia. Tali eventi possono essere esclusi dalla traccia tramite un filtro oppure essere inseriti in coda per la relativa destinazione. La destinazione può essere un file o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO), che è in grado di utilizzare le informazioni della traccia nelle applicazioni che gestiscono [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+In Traccia SQL vengono raccolti unicamente gli eventi che rappresentano istanze delle classi di evento elencate nella definizione di traccia. Tali eventi possono essere esclusi dalla traccia tramite un filtro oppure essere inseriti in coda per la relativa destinazione. La destinazione può essere un file o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO), che è in grado di utilizzare le informazioni della traccia nelle applicazioni che gestiscono [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-> [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] In alternativa, usare Eventi estesi.  
-  
+> [!IMPORTANT]
+> Traccia SQL e [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] sono deprecati. Anche lo spazio dei nomi *Microsoft.SqlServer.Management.Trace* che contiene gli oggetti Trace e Replay di Microsoft SQL Server è deprecato. 
+> [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 
+> In alternativa, usare Eventi estesi. Per altre informazioni sugli [eventi estesi](../../relational-databases/extended-events/extended-events.md), vedere [Avvio rapido: Eventi estesi in SQL Server](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md) e [Profiler XEvent di SSMS](../../relational-databases/extended-events/use-the-ssms-xe-profiler.md).
+
 ## <a name="benefits-of-sql-trace"></a>Vantaggi di Traccia SQL  
- In Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono disponibili stored procedure di sistema [!INCLUDE[tsql](../../includes/tsql-md.md)] per la creazione di tracce per un'istanza di [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. È possibile utilizzare tali stored procedure di sistema all'interno di applicazioni personalizzate per creare tracce in modo manuale anziché tramite [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]. Ciò consente di creare applicazioni personalizzate in grado di soddisfare esigenze aziendali specifiche.  
+In Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono disponibili stored procedure di sistema [!INCLUDE[tsql](../../includes/tsql-md.md)] per la creazione di tracce per un'istanza di [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. È possibile utilizzare tali stored procedure di sistema all'interno di applicazioni personalizzate per creare tracce in modo manuale anziché tramite [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]. Ciò consente di creare applicazioni personalizzate in grado di soddisfare esigenze aziendali specifiche.  
   
 ## <a name="sql-trace-architecture"></a>Architettura di Traccia SQL  
- L'origine di un evento può essere qualsiasi origine che genera l'evento di traccia, ad esempio batch [!INCLUDE[tsql](../../includes/tsql-md.md)] o eventi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] quali i deadlock. Per altre informazioni sulle classi degli eventi, vedere [Guida di riferimento alla classe di evento SQL Server](../../relational-databases/event-classes/sql-server-event-class-reference.md). Dopo che è stato generato un evento, se la classe di evento è stata inclusa in una definizione di traccia, le informazioni relative all'evento verranno raccolte dalla traccia. Se nella definizione di traccia sono stati definiti filtri per la classe di evento, tali filtri verranno applicati e le informazioni sull'evento di traccia verranno passate a una coda. Le informazioni di traccia verranno quindi scritte in un file o potranno essere utilizzate da SMO nelle applicazioni, ad esempio [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]. Nella figura seguente viene illustrata la modalità di raccolta degli eventi in Traccia SQL durante la creazione di una traccia.  
+L'origine di un evento può essere qualsiasi origine che genera l'evento di traccia, ad esempio batch [!INCLUDE[tsql](../../includes/tsql-md.md)] o eventi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] quali i deadlock. Per altre informazioni sulle classi degli eventi, vedere [Guida di riferimento alla classe di evento SQL Server](../../relational-databases/event-classes/sql-server-event-class-reference.md). Dopo che è stato generato un evento, se la classe di evento è stata inclusa in una definizione di traccia, le informazioni relative all'evento verranno raccolte dalla traccia. Se nella definizione di traccia sono stati definiti filtri per la classe di evento, tali filtri verranno applicati e le informazioni sull'evento di traccia verranno passate a una coda. Le informazioni di traccia verranno quindi scritte in un file o potranno essere utilizzate da SMO nelle applicazioni, ad esempio [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]. Nella figura seguente viene illustrata la modalità di raccolta degli eventi in Traccia SQL durante la creazione di una traccia.  
   
- ![Processo di traccia degli eventi del motore di database](../../relational-databases/sql-trace/media/tracarch.gif "Processo di traccia degli eventi del motore di database")  
+![Processo di traccia degli eventi del motore di database](../../relational-databases/sql-trace/media/tracarch.gif "Processo di traccia degli eventi del motore di database")  
   
 ## <a name="sql-trace-terminology"></a>Terminologia relativa a Traccia SQL  
- Di seguito vengono definiti i concetti fondamentali di Traccia SQL.  
+Di seguito vengono definiti i concetti fondamentali di Traccia SQL.  
   
  **Evento**  
  L'occorrenza di un'azione con un'istanza di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
@@ -70,7 +72,7 @@ ms.locfileid: "51571450"
  In [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], tabella creata quando viene salvata una traccia in una tabella.  
   
 ## <a name="use-data-columns-to-describe-returned-events"></a>Utilizzare le colonne di dati per descrivere gli eventi restituiti  
- Traccia SQL utilizza le colonne di dati nell'output di traccia per descrivere gli eventi restituiti quando viene eseguita la traccia. Nella tabella seguente vengono descritte le colonne di dati di [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] che sono le stesse utilizzate da Traccia SQL e vengono indicate le colonne selezionate per impostazione predefinita.  
+Traccia SQL utilizza le colonne di dati nell'output di traccia per descrivere gli eventi restituiti quando viene eseguita la traccia. Nella tabella seguente vengono descritte le colonne di dati di [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] che sono le stesse utilizzate da Traccia SQL e vengono indicate le colonne selezionate per impostazione predefinita.  
   
 |Colonna di dati|Numero colonna|Descrizione|  
 |-----------------|-------------------|-----------------|  

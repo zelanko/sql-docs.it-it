@@ -11,12 +11,12 @@ ms.assetid: be0ec384-e03b-4483-96ca-02b289804d6a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: eadcee634436016626d6096544035e29c0d9c27e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 506987635969a1f9a6b6484e7deeda02712f9eb6
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47599449"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52398004"
 ---
 # <a name="user-roles"></a>Ruoli utente
   In questa sezione sono descritti i ruoli utente per il servizio Change Data Capture per Oracle di Attunity. I ruoli descritti sono ruoli del database [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , ruoli di Windows o ruoli del database Oracle.  
@@ -100,7 +100,7 @@ ms.locfileid: "47599449"
 ### <a name="oracle-cdc-service-user"></a>Utente del servizio Oracle CDC  
  L'utente del servizio Oracle CDC di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è un account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizzato dal servizio Oracle CDC per eseguire il lavoro in MSXDBCDC e in tutte le istanze di Oracle CDC (database CDC) gestite da questo servizio.  
   
- L'utente del servizio Oracle CDC di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  
+ L'utente del servizio Oracle CDC di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
 -   Deve essere membro dei ruoli predefiniti del database **db_dlladmin**, **db_datareader**e **db_datawriter** per tutti i database CDC gestiti dal server.  
   
@@ -129,7 +129,7 @@ ms.locfileid: "47599449"
   
  L'amministratore del database Oracle può ottenere script Oracle SQL da eseguire in modo da poterli valutare prima dell'esecuzione. L'amministratore del database Oracle può inoltre eseguire direttamente script Oracle SQL da Oracle CDC Designer Console.  
   
- Se l'amministratore del database Oracle sceglie di utilizzare Oracle CDC Designer Console, le credenziali di amministratore non vengono mantenute a eccezione del contesto (finestra di dialogo) in cui sono utilizzate.  
+ Se l'amministratore del database Oracle sceglie di usare Oracle CDC Designer Console, le credenziali di amministratore non vengono mantenute a eccezione del contesto (finestra di dialogo) in cui vengono usate.  
   
  L'amministratore del database Oracle collabora con l'amministratore del servizio Oracle CDC alla configurazione delle istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Oracle CDC.  
   

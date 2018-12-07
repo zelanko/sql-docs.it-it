@@ -11,12 +11,12 @@ ms.assetid: 7f1616c2-2b4e-4010-be50-27d7b897403a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b7638d36f78853612c312880cd9698625af1ffe3
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: ba8f4ef0845ebad226eb8a57edb15347eacf5814
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51640478"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52541959"
 ---
 # <a name="lesson-2-1---copying-the-lesson-1-package"></a>Lezione 2-1 - Copia del pacchetto della lezione 1
 In questa attività si procederà alla creazione di una copia del pacchetto della lezione 1, denominato Lesson 1.dtsx. Se non è stata completata la lezione 1, è possibile aggiungere al progetto il pacchetto completo della lezione 1 incluso nell'esercitazione e quindi copiarlo. Questa nuova copia verrà usata per tutto il seguito della lezione 2.  
@@ -47,9 +47,9 @@ In questa attività si procederà alla creazione di una copia del pacchetto dell
   
 2.  In Esplora soluzioni fare clic con il pulsante destro del mouse su **Pacchetti SSIS**e scegliere **Aggiungi pacchetto esistente**.  
   
-3.  Nella finestra di dialogo **Aggiungi copia del pacchetto esistente** in **Posizione pacchetto**selezionare **File system**.  
+3.  Nella finestra di dialogo **Aggiungi copia del pacchetto esistente** , in **Posizione pacchetto**, selezionare **File system**.  
   
-4.  Fare clic sul pulsante **(…)** , passare a **Lesson 1.dtsx** nel computer e quindi fare clic su **Apri**.  
+4.  Fare clic sul pulsante Sfoglia **(...)**, passare a **Lesson 1.dtsx** nel computer e quindi fare clic su **Apri**.  
   
     Per scaricare tutti i pacchetti di lezioni di questa esercitazione, effettuare le operazioni seguenti.  
   

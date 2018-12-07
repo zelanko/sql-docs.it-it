@@ -17,12 +17,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: d3decb6d23f7194876e8723c299472beca1d85d0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b061aa89ef6c10789511f05c4ca0763bd54a860d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47793110"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52524964"
 ---
 # <a name="send-sql-server-agent-error-messages"></a>Send SQL Server Agent Error Messages
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -73,7 +73,7 @@ Per altre informazioni sulle autorizzazioni di Windows necessarie per l'account 
   
 2.  Fare clic con il pulsante destro del mouse su **SQL Server Agent** e scegliere **Proprietà**.  
   
-3.  Nella finestra di dialogo **Proprietà SQL Server Agent -**_nome\_server_ in **Log degli errori** nella pagina **Generale** digitare il nome utente o il nome computer a cui inviare messaggi di errore nella casella **Destinatario Net Send**.  
+3.  Nella finestra di dialogo **Proprietà SQL Server Agent -**_nome\_server_ digitare in **Log degli errori** nella pagina **Generale** il nome utente o il nome computer a cui inviare i messaggi di errore nella casella **Destinatario Net Send**.  
   
 4.  Fare clic su **OK**.  
   

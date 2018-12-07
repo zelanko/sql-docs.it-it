@@ -15,12 +15,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b3b9207af9dcf70db110768dbf4f6895767d22f0
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: e00bb3652d3692f498bbbb2cd6cae2330865b841
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51643266"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52530393"
 ---
 # <a name="code-outlining"></a>Struttura del codice
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "51643266"
   
  ![Codice XML con il nodo interno nascosto](../../ssms/scripting/media/editoutlinexmlinnercol.gif "Codice XML con il nodo interno nascosto")  
   
- Quando si sposta il puntatore sulla casella in cui sono presenti i tre punti (…), il codice contenuto nell'area compressa viene visualizzato in una descrizione di comando, come illustrato nella figura seguente.  
+ Quando si sposta il puntatore sulla casella in cui sono presenti i tre punti (...), il codice contenuto nell'area compressa viene visualizzato in una descrizione di comando, come illustrato nella figura seguente.  
   
  ![Codice XML con una descrizione comando che mostra il codice nascosto](../../ssms/scripting/media/editoutlinexmlmouse.gif "Codice XML con una descrizione comando che mostra il codice nascosto")  
   

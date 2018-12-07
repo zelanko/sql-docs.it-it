@@ -14,12 +14,12 @@ ms.assetid: 090890ee-7620-4a08-8e15-d2fbc71dd12f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 03c2b23d2a4d320c7a96f04788bb2354aacabad5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 65ce518617b3e7728e503504bfea838fee4f1beb
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47698609"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52400894"
 ---
 # <a name="select-rows-to-migrate-by-using-a-filter-function-stretch-database"></a>Selezionare le righe di cui eseguire la migrazione tramite una funzione di filtro (Stretch Database)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
@@ -139,7 +139,7 @@ RETURN  SELECT 1 AS is_eligible
 ### <a name="constant-expressions"></a>Espressioni costanti  
  Le costanti usate in una funzione di filtro possono essere costituite da qualsiasi espressione deterministica che può essere valutata quando si definisce la funzione. Le espressioni costanti possono contenere gli elementi seguenti.  
   
--   Valori letterali. Ad esempio, `N’abc’, 123`.  
+-   Valori letterali. Ad esempio, `N'abc', 123`.  
   
 -   Espressioni algebriche. Ad esempio, `123 + 456`.  
   
@@ -200,7 +200,7 @@ ALTER TABLE SensorTelemetry
   
 ## <a name="addafterwiz"></a>Aggiungere una funzione di filtro dopo l'esecuzione della procedura guidata  
   
-Se si vuole usare una funzione che non è possibile creare nell' **Abilitazione guidata del database per l'estensione** , è possibile eseguire l'istruzione **ALTER TABLE** per specificare una funzione, dopo l'uscita dalla procedura guidata. Prima di applicare una funzione, tuttavia, è necessario interrompere la migrazione dei dati in corso e ripristinare i dati migrati. Per altre informazioni sul perché è necessario, vedere [Sostituire una funzione di filtro esistente](#replacePredicate).
+Se si vuole usare una funzione che non è possibile creare nell'**Abilitazione guidata del database per l'estensione**, è possibile eseguire l'istruzione **ALTER TABLE** per specificare una funzione, dopo l'uscita dalla procedura guidata. Prima di applicare una funzione, tuttavia, è necessario interrompere la migrazione dei dati in corso e ripristinare i dati migrati. Per altre informazioni sul perché è necessario, vedere [Sostituire una funzione di filtro esistente](#replacePredicate).
   
 1. Invertire la direzione della migrazione e ripristinare i dati già migrati. Non è possibile annullare questa operazione dopo l'avvio. In Azure, poi, i trasferimenti di dati in uscita (traffico in uscita) sono soggetti ad addebito. Per altre informazioni, vedere [Dettagli prezzi dei trasferimenti di dati](https://azure.microsoft.com/pricing/details/data-transfers/).  
   

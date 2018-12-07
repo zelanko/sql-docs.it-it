@@ -18,12 +18,12 @@ ms.assetid: 5c7206f1-7d6a-4923-8dff-3c4912da4157
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 20a92ccb6d9bfbc84fa13b7d26528544ae027a51
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: f6dde11eba11acc7e0136c34025e74fead99f9e1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51642348"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52502612"
 ---
 # <a name="web-service-task"></a>Attività Servizio Web
   L'attività Servizio Web esegue un metodo di servizio Web. È possibile utilizzare l'attività Servizio Web per gli scopi seguenti:  
@@ -84,7 +84,7 @@ ms.locfileid: "51642348"
   
 ### <a name="options"></a>Opzioni  
  **HTTPConnection**  
- Selezionare una gestione connessione nell'elenco o creare una nuova gestione connessione facendo clic su \<**Nuova connessione**>.  
+ Selezionare una gestione connessione nell'elenco oppure crearne una nuova facendo clic su \<**Nuova connessione**>.  
   
 > [!IMPORTANT]  
 >  La gestione connessione HTTP supporta solo l'autenticazione anonima e l'autenticazione di base. Non supporta l'autenticazione di Windows.  
@@ -92,7 +92,7 @@ ms.locfileid: "51642348"
  **Argomenti correlati**: [Gestione connessione HTTP](../../integration-services/connection-manager/http-connection-manager.md), [Editor gestione connessione HTTP &#40;pagina Server&#41;](../../integration-services/connection-manager/http-connection-manager-editor-server-page.md)  
   
  **WSDLFile**  
- Consente di digitare il percorso completo di un file WSDL presente localmente nel computer o di trovare il file usando il pulsante Sfoglia **(…)** .  
+ Digitare il percorso completo di un file WSDL presente in locale nel computer oppure fare clic sul pulsante sfoglia **(...)** e individuare il file.  
   
  Sezionare il file WSDL presente nel computer, se è già stato scaricato manualmente. Se invece il file WSDL non è stato ancora scaricato, attenersi alla seguente procedura:  
   
@@ -137,7 +137,7 @@ ms.locfileid: "51642348"
  Consente di selezionare nell'elenco il metodo Web che l'attività deve eseguire.  
   
  **WebMethodDocumentation**  
- Digitare la descrizione del metodo Web oppure fare clic sul pulsante Sfoglia **(…)** e quindi digitare la descrizione nella finestra di dialogo **Documentazione metodo Web** .  
+ Digitare una descrizione del metodo Web oppure fare clic sul pulsante sfoglia **(...)** e quindi digitare la descrizione nella finestra di dialogo **Documentazione metodo Web**.  
   
  **Nome**  
  Elenca i nomi degli input per il metodo Web.  
@@ -170,13 +170,13 @@ ms.locfileid: "51642348"
   
 #### <a name="outputtype--file-connection"></a>OutputType = Connessione file  
  **File**  
- Selezionare una gestione connessione file nell'elenco o fare clic su \<**Nuova connessione**> per creare una nuova gestione connessione.  
+ Selezionare una gestione connessione file nell'elenco oppure crearne una nuova facendo clic su \<**Nuova connessione**>.  
   
  **Argomenti correlati:** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
 #### <a name="outputtype--variable"></a>OutputType = Variabile  
  **Variabile**  
- Selezionare una variabile nell'elenco oppure fare clic su \<**Nuova variabile**> per crearne una nuova.  
+ Selezionare una variabile nell'elenco oppure crearne una nuova facendo clic su \<**Nuova variabile**>.  
   
  **Argomenti correlati**  [Variabili di Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Aggiungere una variabile](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   

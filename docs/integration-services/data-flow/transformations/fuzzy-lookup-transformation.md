@@ -34,12 +34,12 @@ ms.assetid: 019db426-3de2-4ca9-8667-79fd9a47a068
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 851f89487199b1deae2086352a255374621688c6
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: ad931e49146aacdfcae92cca008ffce681ae5dd4
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51638818"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52540890"
 ---
 # <a name="fuzzy-lookup-transformation"></a>Ricerca fuzzy - trasformazione
   La trasformazione Ricerca fuzzy esegue attività di pulitura dei dati, ad esempio standardizzazione, correzione e inserimento di valori mancanti.  
@@ -123,7 +123,7 @@ ms.locfileid: "51638818"
 ## <a name="temporary-tables-and-indexes"></a>Tabelle e indici temporanei  
  In fase di esecuzione la trasformazione Ricerca fuzzy crea oggetti temporanei, ad esempio tabelle e indici, nel database di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] a cui la trasformazione si connette. Le dimensioni delle tabelle e degli indici temporanei sono proporzionali al numero di righe e token della tabella di riferimento e al numero di token creati dalla trasformazione Ricerca fuzzy. Questi oggetti temporanei pertanto possono utilizzare potenzialmente una quantità di spazio su disco considerevole. La trasformazione esegue inoltre query sulle tabelle temporanee. È pertanto consigliabile connettere la trasformazione Ricerca fuzzy a un'istanza di un database di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] non di produzione, soprattutto se lo spazio su disco disponibile nel server di produzione è ridotto.  
   
- Le prestazioni della trasformazione possono risultare migliori se le tabelle e gli indici utilizzati si trovano sullo stesso computer locale. Se la tabella di riferimento utilizzata dalla trasformazione Ricerca fuzzy si trova nel server di produzione, è consigliabile copiarla in un server non di produzione e configurare la trasformazione per l'accesso alla copia della tabella. In tal modo le risorse del server di produzione non vengono utilizzate dalle query di ricerca. La trasformazione Ricerca fuzzy, inoltre, mantiene l'indice delle corrispondenze, ovvero se MatchIndexOptionsis è impostata su **GenerateAndMaintainNewIndex**, la tabella di riferimento può risultare bloccata per l'intera durata dell'operazione di pulizia dei dati per impedirne l'accesso da parte di altri utenti e applicazioni.  
+ Le prestazioni della trasformazione possono risultare migliori se le tabelle e gli indici utilizzati si trovano sullo stesso computer locale. Se la tabella di riferimento utilizzata dalla trasformazione Ricerca fuzzy si trova nel server di produzione, è consigliabile copiarla in un server non di produzione e configurare la trasformazione per l'accesso alla copia della tabella. In tal modo le risorse del server di produzione non vengono utilizzate dalle query di ricerca. La trasformazione Ricerca fuzzy, inoltre, esegue la manutenzione dell'indice delle corrispondenze. In caso di impostazione di MatchIndexOptions su **GenerateAndMaintainNewIndex**, quindi, la trasformazione potrebbe bloccare la tabella di riferimento per la durata dell'operazione di pulizia dei dati e impedirne l'accesso da parte di altri utenti e applicazioni.  
   
 ## <a name="configuring-the-fuzzy-lookup-transformation"></a>Configurazione della trasformazione Ricerca fuzzy  
  È possibile impostare le proprietà tramite Progettazione [!INCLUDE[ssIS](../../../includes/ssis-md.md)] o a livello di codice.  

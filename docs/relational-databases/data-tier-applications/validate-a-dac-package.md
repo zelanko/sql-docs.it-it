@@ -16,12 +16,12 @@ ms.assetid: 726ffcc2-9221-424a-8477-99e3f85f03bd
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b39b9349d1ae4a9bb986808f6af2c6fbb7e96f9f
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 29449a8caceb76e6f4b0e5229b05603de2d6a8f3
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43810107"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518674"
 ---
 # <a name="validate-a-dac-package"></a>Convalida di un pacchetto di applicazioni livello dati
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,15 +39,15 @@ ms.locfileid: "43810107"
   
  **Visualizzare un'applicazione livello dati in SQL Server Developer Tools**  
   
-1.  Aprire il menu **File** , selezionare **Nuovo**, quindi selezionare **Progetto…**.  
+1.  Aprire il menu **File**, selezionare **Nuovo** e quindi **Progetto**.  
   
 2.  Selezionare il modello di progetto di **SQL Server** e specificare un **Nome**, una **Percorso**e un **Nome soluzione**.  
   
-3.  In **Esplora soluzioni**, fare clic con il pulsante destro del mouse sul nodo del progetto e selezionare **Proprietà…**.  
+3.  In **Esplora soluzioni** fare clic con il pulsante destro del mouse sul nodo del progetto e scegliere **Proprietà**.  
   
 4.  Nella scheda **Impostazioni progetto** selezionare la casella di controllo **Applicazione livello dati (file .dacpac)** nella sezione **Tipi di output** e quindi chiudere la finestra di dialogo delle proprietà.  
   
-5.  In **Esplora soluzioni**fare clic con il pulsante destro del mouse sul nodo del progetto e scegliere **Importa applicazione livello dati**.  
+5.  In **Esplora soluzioni** fare clic con il pulsante destro del mouse sul nodo del progetto e scegliere **Importa applicazione livello dati**.  
   
 6.  Usare **Esplora soluzioni** per aprire tutti i file dell'applicazione livello dati, ad esempio i criteri di selezione dei server e gli script pre-distribuzione e post-distribuzione.  
   

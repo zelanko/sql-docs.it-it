@@ -55,18 +55,17 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3b5aaa932ce2e41122d2b133c7260e5eeafc1a7a
-ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
+ms.openlocfilehash: 679eb8412f4633af845efc7c5520c351f9749822
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50971032"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518332"
 ---
 # <a name="create-index-transact-sql"></a>CREATE INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 > [!div class="nextstepaction"]
-> [Contribuisci a migliorare la documentazione di SQL Server](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)> [!div class="nextstepaction"]
 > [Contribuisci a migliorare la documentazione di SQL Server](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
 
 Crea un indice relazionale per una tabella o una vista. Viene detto anche indice rowstore, perché è un indice ad albero b-tree sia cluster che non cluster. È possibile creare un indice rowstore prima che siano presenti dati nella tabella. Usare un indice rowstore per migliorare le prestazioni delle query, in particolare quando le query effettuano le selezioni da colonne specifiche o richiedono valori da organizzare in base a un ordine particolare.  
@@ -575,7 +574,7 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
 );  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  L'istruzione CREATE INDEX viene ottimizzata come qualsiasi altra query. Al fine di limitare le operazioni di I/O, è possibile che Query Processor scelga di sottoporre ad analisi un altro indice anziché eseguire un'analisi di tabella. In alcune situazioni è possibile che l'operazione di ordinamento venga eliminata. Nei computer multiprocessore l'istruzione CREATE INDEX può utilizzare più processori per eseguire le operazioni di analisi e ordinamento associate alla creazione dell'indice, in modo identico alle altre query. Per altre informazioni, vedere [Configurazione di operazioni parallele sugli indici](../../relational-databases/indexes/configure-parallel-index-operations.md).  
   
  L'operazione di creazione dell'indice può essere sottoposta a una registrazione minima se è impostato il modello di recupero del database con registrazione minima o con registrazione minima delle operazioni bulk.  
@@ -731,7 +730,7 @@ Per l'esecuzione di operazioni sull'indice ripristinabili, è necessario attener
 - Per sospendere immediatamente l'operazione sull'indice, è possibile arrestare il comando in corso (CTRL-C) oppure eseguire il comando [ALTER INDEX](alter-index-transact-sql.md) PAUSE o il comando KILL `<session_id>`. Quando il comando viene sospeso, è possibile riprenderlo usando il comando [ALTER INDEX](alter-index-transact-sql.md). 
 - Eseguendo nuovamente l'istruzione CREATE INDEX originale per l'indice ripristinabile, un'operazione di creazione indice sospesa riprende automaticamente.
 - L'opzione SORT_IN_TEMPDB=ON non è supportata per l'indice ripristinabile. 
-- Il comando DDL con RESUMABLE=ON non può essere eseguito all'interno di una transazione esplicita (non può far parte del blocco BEGIN TRAN … COMMIT).
+- Il comando DDL con RESUMABLE=ON non può essere eseguito all'interno di una transazione esplicita (non può far parte del blocco BEGIN TRAN ... COMMIT).
 - Per riprendere/interrompere la creazione o la ricompilazione di un indice, usare la sintassi T-SQL [ALTER INDEX](alter-index-transact-sql.md)
 
 > [!NOTE]
@@ -778,7 +777,7 @@ Le funzionalità seguenti sono disabilitate per le operazioni di creazione dell'
   
  Per valutare il modo in cui la modifica dello stato di compressione influirà su una tabella, un indice o una partizione, usare la stored procedure [sp_estimate_data_compression_savings](../../relational-databases/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql.md) .  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione ALTER per la tabella o la vista. L'utente deve essere un membro del ruolo predefinito del server **sysadmin** o dei ruoli predefiniti del database **db_ddladmin** e **db_owner** .  
   
 ## <a name="limitations-and-restrictions"></a>Limitazioni e restrizioni  

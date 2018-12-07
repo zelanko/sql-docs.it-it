@@ -18,17 +18,17 @@ ms.assetid: 677a0719-7b9a-4f0b-bc61-41634563f924
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6764a93f2dc1f6cb81d1c592a3392c12aa86bb41
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dc3aec9795bd8d002602020e97d061b358ad55c9
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47674989"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52506853"
 ---
 # <a name="certencoded-transact-sql"></a>CERTENCODED (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-Questa funzione restituisce la parte pubblica di un certificato in formato binario. Questa funzione accetta un ID certificato come argomento e restituisce il certificato codificato. Per creare un nuovo certificato passare il risultato binario a **CREATE CERTIFICATE … WITH BINARY**.
+Questa funzione restituisce la parte pubblica di un certificato in formato binario. Questa funzione accetta un ID certificato come argomento e restituisce il certificato codificato. Per creare un nuovo certificato passare il risultato binario a **CREATE CERTIFICATE ... WITH BINARY**.
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -43,10 +43,10 @@ CERTENCODED ( cert_id )
 ## <a name="return-types"></a>Tipi restituiti
 **varbinary**
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
 Usare **CERTENCODED** e **CERTPRIVATEKEY** insieme per restituire parti diverse di un certificato in formato binario.
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
 **CERTENCODED** è disponibile pubblicamente.
   
 ## <a name="examples"></a>Esempi  

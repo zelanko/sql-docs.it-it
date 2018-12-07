@@ -14,12 +14,12 @@ ms.assetid: 9e4060ba-80c3-468f-bccb-e12e99f672c2
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f38f7da3ae5dc67a8f4282f38e5d8ebd6b110129
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: cf2d4565166dc94569a7bb3815ce3d69112116c6
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699459"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518385"
 ---
 # <a name="indexes---keys-dialog-box-visual-database-tools"></a>Finestra di dialogo Indici/chiavi (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -42,7 +42,7 @@ Elimina la chiave o l'indice selezionato nell'elenco **Selected Primary/Unique K
 Se viene espansa, visualizza le proprietà **Colonne**, **Univoco**e **Tipo**.  
   
 **Colonne**  
-Elenca i criteri di ordinamento selezionati per le colonne nella chiave o nell'indice e consente di accedere a una finestra di dialogo in cui è possibile definire i criteri di ordinamento. Per visualizzare la finestra di dialogo, fare clic su **Colonne** e quindi sui puntini di sospensione (…) a destra del campo della proprietà.  
+Elenca i criteri di ordinamento selezionati per le colonne nella chiave o nell'indice e consente di accedere a una finestra di dialogo in cui è possibile definire i criteri di ordinamento. Per visualizzare la finestra di dialogo, fare clic su **Colonne** e quindi sui puntini di sospensione (...) a destra del campo della proprietà.  
   
 **Univoco**  
 Indica se i dati immessi nell'indice o nella chiave devono essere univoci. Questa proprietà non è disponibile per gli indici XML.  
@@ -57,7 +57,7 @@ Se viene espansa, visualizza i campi delle proprietà **Nome** e **Descrizione**
 Visualizza il nome della chiave o dell'indice. Quando si crea un nuovo indice, gli viene assegnato un nome predefinito sulla base della tabella presente nella finestra attiva di Progettazione tabelle. Il nome può essere modificato in qualunque momento.  
   
 **Descrizione**  
-Consente di immettere una descrizione della chiave o dell'indice. Per inserire una descrizione più dettagliata, fare clic su **Descrizione** e quindi sui puntini di sospensione (**…**) a destra del campo della proprietà. Viene così visualizzata un'area più grande in cui scrivere il testo.  
+Consente di immettere una descrizione della chiave o dell'indice. Per inserire una descrizione più dettagliata, fare clic su **Descrizione** e sui puntini di sospensione (**...**) a destra del campo della proprietà. Viene così visualizzata un'area più grande in cui scrivere il testo.  
   
 **Categoria Progettazione tabelle**  
 Se viene espansa, visualizza le informazioni relative a **Crea come CLUSTERED**.  

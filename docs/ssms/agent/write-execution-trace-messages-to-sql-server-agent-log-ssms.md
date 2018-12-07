@@ -18,12 +18,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: f2c1c9c494afd89627e397347870db2d1604886a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c1d1b2e646eb12fbfb1b0226cb20a8a97bf92b5c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47696800"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52508553"
 ---
 # <a name="write-execution-trace-messages-to-the-sql-server-agent-error-log-sql-server-management-studio"></a>Write Execution Trace Messages to the SQL Server Agent Error Log (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -73,7 +73,7 @@ Per altre informazioni sulle autorizzazioni di Windows necessarie per l'account 
   
 2.  Fare clic con il pulsante destro del mouse su **SQL Server Agent** e scegliere **Proprietà**.  
   
-3.  Nella finestra di dialogo **Proprietà SQL Server Agent -**_nome\_server_ in **Log degli errori** nella pagina **Generale** selezionare la casella di controllo **Includi messaggi di traccia esecuzione**.  
+3.  Nella finestra di dialogo **Proprietà SQL Server Agent -**_nome\_server_ selezionare in **Log degli errori** nella pagina **Generale** la casella di controllo **Includi messaggi di traccia esecuzione**.  
   
 4.  Fare clic su **OK**.  
   

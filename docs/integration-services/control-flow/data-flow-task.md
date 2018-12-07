@@ -19,12 +19,12 @@ ms.assetid: c27555c4-208c-43c8-b511-a4de2a8a3344
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 77947ba03e3f094077c950981a394a3566e24f0e
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 27976be0f3b6091450650f2bf3a73d1afbe42d20
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51639093"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518467"
 ---
 # <a name="data-flow-task"></a>Attività Flusso di dati
   L'attività Flusso di dati incapsula il motore flusso di dati che consente di spostare i dati dalle origini alle destinazioni e offre la possibilità di trasformare, pulire e modificare i dati durante lo spostamento. L'aggiunta di un'attività Flusso di dati al flusso di controllo di un pacchetto consente al pacchetto di estrarre, trasformare e caricare dati.  
@@ -56,7 +56,7 @@ ms.locfileid: "51639093"
 |**OnPipelinePrePrimeOutput**|Indica che il componente sta per ricevere una chiamata dal metodo **PrimeOutput** . A seconda del flusso di dati, è possibile che vengano scritte più voci di log.|  
 |**OnPipelineRowsSent**|Specifica il numero delle righe inviate all'input di un componente da una chiamata al metodo **ProcessInput** . La voce di log include il nome del componente.|  
 |**PipelineBufferLeak**|Fornisce informazioni su tutti i componenti che hanno mantenuto attivi i buffer dopo la chiusura di Gestione buffer. Se vi è ancora un buffer attivo, le risorse dei buffer non sono state rilasciate e potrebbero verificarsi perdite di memoria. Nella voce di log vengono indicati il nome del componente e l'ID del buffer.|  
-|**PipelineComponentTime**|Indica la quantità di tempo (in millisecondi) utilizzata dal componente per ciascuno dei cinque passaggi principali dell'elaborazione, ovvero Validate, PreExecute, PostExecute, ProcessInput e ProcessOutput.|  
+|**PipelineComponentTime**|Indica la quantità di tempo (in millisecondi) impiegata dal componente per ognuno dei cinque passaggi principali dell'elaborazione, ovvero Validate, PreExecute, PostExecute, ProcessInput e ProcessOutput.|  
 |**PipelineExecutionPlan**|Specifica il piano di esecuzione del flusso di dati. Il piano di esecuzione offre informazioni sulle modalità di invio dei buffer ai componenti. Insieme alla voce di log PipelineExecutionTrees, queste informazioni illustrano ciò che avviene nell'attività Flusso di dati.|  
 |**PipelineExecutionTrees**|Specifica gli alberi di esecuzione del layout nel flusso di dati. L'utilità di pianificazione del motore flusso di dati utilizza tali alberi per compilare il piano di esecuzione del flusso di dati.|  
 |**PipelineInitialization**|Fornisce le informazioni di inizializzazione relative all'attività, che includono le directory da utilizzare per l'archiviazione temporanea dei dati BLOB, le dimensioni predefinite del buffer e il numero di righe in un buffer. A seconda della configurazione dell'attività Flusso di dati, è possibile che vengano scritte più voci di log.|  

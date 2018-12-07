@@ -47,12 +47,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 32f201e6eb386119fd61aa9fb34fdc90a7ab4b25
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 67e1f72fef6c10551f3d0670aff694777f52e391
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51559450"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512123"
 ---
 # <a name="create-procedure-transact-sql"></a>CREATE PROCEDURE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -374,7 +374,7 @@ Per altri esempi, vedere [Esempi](#Examples) verso la fine di questo argomento.
   
 -   Usare le transazioni esplicite tramite BEGIN/COMMIT TRANSACTION mantenendole più brevi possibili. Transazioni lunghe implicano un blocco dei record più lungo e un rischio maggiore di deadlock.  
   
--   Per la gestione degli errori all'interno di una procedura usare la funzionalità TRY…CATCH di [!INCLUDE[tsql](../../includes/tsql-md.md)] che consente di incapsulare un blocco intero di istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)]. In questo modo vengono garantiti un minor overhead delle prestazioni e una segnalazione errori più precisa con un utilizzo inferiore della programmazione.  
+-   Per la gestione degli errori all'interno di una procedura usare la funzionalità TRY...CATCH di [!INCLUDE[tsql](../../includes/tsql-md.md)] che consente di incapsulare un blocco intero di istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)]. In questo modo vengono garantiti un minor overhead delle prestazioni e una segnalazione errori più precisa con un utilizzo inferiore della programmazione.  
   
 -   Usare la parola chiave DEFAULT in tutte le colonne della tabella a cui viene fatto riferimento dalle istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE TABLE o ALTER TABLE presenti nel corpo della procedura. In questo modo è possibile evitare di passare NULL alle colonne che non accettano valori Null.  
   
@@ -463,7 +463,7 @@ GO
   
 ## <a name="security"></a>Security  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>Autorizzazioni  
  Sono richieste l'autorizzazione **CREATE PROCEDURE** per il database e **ALTER** per lo schema in cui viene creata la procedura. In alternativa, è richiesta l'appartenenza al ruolo predefinito del database **db_ddladmin**.  
   
  Per le stored procedure CLR è necessaria la proprietà dell'assembly a cui viene fatto riferimento nella clausola EXTERNAL NAME oppure l'autorizzazione **REFERENCES** per tale assembly.  
@@ -498,7 +498,7 @@ GO
 |[Sintassi di base](#BasicSyntax)|CREATE PROCEDURE|  
 |[Passaggio di parametri](#Parameters)|@parameter <br> &nbsp;&nbsp; • = predefinito <br> &nbsp;&nbsp; • OUTPUT <br> &nbsp;&nbsp; • tipo di parametro con valori di tabella <br> &nbsp;&nbsp; • CURSOR VARYING|  
 |[Modifica dei dati tramite una stored procedure](#Modify)|UPDATE|  
-|[Gestione degli errori](#Error)|TRY…CATCH|  
+|[Gestione degli errori](#Error)|TRY...CATCH|  
 |[Offuscamento della definizione della procedura](#Encrypt)|WITH ENCRYPTION|  
 |[Ricompilazione forzata della procedura](#Recompile)|WITH RECOMPILE|  
 |[Impostazione del contesto di sicurezza](#Security)|EXECUTE AS|  
@@ -797,8 +797,8 @@ EXEC HumanResources.Update_VacationHours 40;
 ###  <a name="Error"></a> Gestione degli errori  
  Negli esempi contenuti in questa sezione vengono illustrati i metodi per gestire gli errori che potrebbero verificarsi durante l'esecuzione della stored procedure.  
   
-#### <a name="j-using-trycatch"></a>J. Utilizzo di TRY…CATCH  
- Nell'esempio seguente viene illustrato l'utilizzo di un costrutto TRY…CATCH per restituire informazioni sugli errori rilevati durante l'esecuzione di una stored procedure.  
+#### <a name="j-using-trycatch"></a>J. Utilizzo di TRY...CATCH  
+ Nell'esempio seguente viene illustrato l'uso di un costrutto TRY...CATCH per restituire informazioni sugli errori rilevati durante l'esecuzione di una stored procedure.  
   
 ```sql  
 CREATE PROCEDURE Production.uspDeleteWorkOrder ( @WorkOrderID int )  

@@ -11,12 +11,12 @@ ms.assetid: 0216266d-d866-4ea2-bbeb-955965f4d7c2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: dbb13ae1c48166df820375ff42be24fab19df579
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 714136a95b47626b0d8db0875a6b3d72402a472f
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47717329"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52407348"
 ---
 # <a name="integration-services-ssis-in-a-cluster"></a>Integration Services (SSIS) in un cluster
   In [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] il clustering non è consigliato, poiché il servizio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] non è un servizio cluster o compatibile con i cluster né supporta il failover tra nodi del cluster. In un ambiente cluster è pertanto necessario installare e avviare [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] come servizio autonomo in ogni nodo del cluster.  
@@ -99,7 +99,7 @@ In questa sezione vengono fornite le istruzioni necessarie per la configurazione
   
 4.  Scegliere **Nuovo** dal menu **File**e quindi fare clic su **Risorsa**.  
   
-5.  Nella pagina **Nuova risorsa** della procedura guidata di creazione di una nuova risorsa selezionare **"Servizio generico"** come **Tipo di servizio**. Non modificare il valore di **Gruppo**. Scegliere **Avanti**.  
+5.  Nella pagina **Nuova risorsa** della procedura guidata per la creazione di risorse selezionare **"Servizio generico"** come **Tipo di servizio**. Non modificare il valore di **Gruppo**. Scegliere **Avanti**.  
   
 6.  Nella pagina **Proprietari possibili** aggiungere o rimuovere i nodi del cluster come possibili proprietari della risorsa. Scegliere **Avanti**.  
   

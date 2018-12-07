@@ -12,12 +12,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 67fe252e91145a427e7bd42064733ae78835d8cc
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: c33b07af2ad43f15913580ce55c173d04a876366
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51667590"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52511536"
 ---
 # <a name="columnstore-indexes---defragmentation"></a>Indici columnstore - Deframmentazione
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -182,7 +182,7 @@ Usare l'esempio in [sys.dm_db_column_store_row_group_physical_stats &#40;Transac
 ## <a name="rebuild"></a> Usare ALTER INDEX REORGANIZE per deframmentare un indice columnstore offline  
  Per [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e versioni successive, la ricompilazione dell'indice columnstore in genere non è necessaria perché `REORGANIZE` esegue gli aspetti principali di una ricompilazione in background come operazione online.  
   
- La ricompilazione di un indice columnstore consente di rimuovere la frammentazione e spostare tutte le righe nel columnstore. È possibile usare [CREATE COLUMNSTORE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md) o [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md) per eseguire la ricompilazione completa di un indice columnstore cluster esistente. Inoltre, è possibile usare ALTER INDEX... REBUILD per ricompilare una partizione specifica.  
+ La ricompilazione di un indice columnstore consente di rimuovere la frammentazione e spostare tutte le righe nel columnstore. È possibile usare [CREATE COLUMNSTORE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md) o [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md) per eseguire la ricompilazione completa di un indice columnstore cluster esistente. È anche possibile usare ALTER INDEX ... REBUILD per ricompilare una partizione specifica.  
   
 ### <a name="rebuild-process"></a>Processo di ricompilazione  
  Per ricompilare un indice columnstore, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  

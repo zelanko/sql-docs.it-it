@@ -13,12 +13,12 @@ ms.assetid: e3d1c86c-1e58-4d2c-b625-d1b591b221aa
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 10f5d9c55f25221ae767a960393f7d7d775eff96
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 852651601ba7264c079a42c82a4bbb626d902328
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51659214"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52529883"
 ---
 # <a name="using-test-conditions-in-sql-server-unit-tests"></a>Utilizzo di condizioni di test in unit test di SQL Server
 In uno unit test di SQL Server vengono eseguiti uno o più script di test Transact\-SQL. I risultati possono essere valutati nello script Transact\-SQL e nell'istruzione THROW o RAISERROR usata per restituire un errore e interrompere il test. In alternativa, per valutare i risultati è possibile definire nel test le relative condizioni. Tramite il test viene restituita un'istanza della classe [SqlExecutionResult](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.sqlexecutionresult.aspx). Nell'istanza di questa classe sono contenuti uno o più set di dati, il tempo di esecuzione e le righe interessate dallo script. Tutte queste informazioni vengono raccolte durante l'esecuzione dello script. Questi risultati possono essere valutati usando le condizioni di test. SQL Server Data Tools fornisce un set di condizioni di test predefinite. È anche possibile creare e usare condizioni personalizzate. Vedere [Condizioni di test personalizzate per unit test di SQL Server](../ssdt/custom-test-conditions-for-sql-server-unit-tests.md).  
@@ -88,7 +88,7 @@ Dopo avere aggiunto una condizione di test Checksum di dati allo unit test del d
   
 3.  (Facoltativo) È possibile modificare la proprietà **(Nome)** della condizione di test per renderla più descrittiva.  
   
-4.  Nella proprietà **Configurazione** fare clic sul pulsante Sfoglia (**…**).  
+4.  Nella proprietà **Configurazione** fare clic sul pulsante Sfoglia (**...**).  
   
     Verrà visualizzata la finestra di dialogo **Configurazione per NomeCondizioneTest** .  
   
@@ -118,7 +118,7 @@ Dopo aver aggiunto una condizione di test Schema previsto allo unit test di SQL 
   
 3.  (Facoltativo) È possibile modificare la proprietà **(Nome)** della condizione di test per renderla più descrittiva.  
   
-4.  Nella proprietà **Configurazione** fare clic sul pulsante Sfoglia (**…**).  
+4.  Nella proprietà **Configurazione** fare clic sul pulsante Sfoglia (**...**).  
   
     Verrà visualizzata la finestra di dialogo **Configurazione per NomeCondizioneTest** .  
   

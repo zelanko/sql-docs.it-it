@@ -9,12 +9,12 @@ ms.assetid: 8464ab9d-afe1-4490-955f-9f3319bcbf8d
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: c96de7a5f5141e97a9e3670711e09eb3c20cd324
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: f58c39fb0be119da6164b62d91d3e3da8e0a5c48
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021615"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52504115"
 ---
 # <a name="create-a-data-alert-in-data-alert-designer"></a>Creare un avviso dati nella finestra di progettazione Avviso dati
 
@@ -75,9 +75,9 @@ Le definizioni di avviso dati vengono create nella finestra di progettazione Avv
   
 10. Digitare il valore di confronto.  
   
-11. Facoltativamente, fare di nuovo clic sui puntini di sospensione **(...)** .  
+11. Facoltativamente, fare di nuovo clic sui puntini di sospensione **(...)**.  
   
-     I puntini di sospensione **(...)** vengono visualizzati sulla riga contenente la prima clausola.  
+     I puntini di sospensione **(...)** vengono visualizzati nella riga contenente la prima clausola.  
   
      Una clausola OR viene aggiunta nella parte inferiore e all'interno della regola AND.  
   

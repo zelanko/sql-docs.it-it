@@ -12,12 +12,12 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f17ff228c8cf71cc766c6f6fe43a6917577fe983
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0024663d9d16d191338abfa2604e6c969f0d58e5
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47788519"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52415078"
 ---
 # <a name="domain-independent-availability-groups"></a>Gruppi di disponibilità indipendenti dal dominio
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ Per la distribuzione di un gruppo di disponibilità indipendente dal dominio occ
 
 ## <a name="set-and-verify-the-dns-suffix-on-all-replica-servers"></a>Impostare e verificare il suffisso DNS in tutti i server di replica
 
-Per un cluster di gruppi di lavoro di un gruppo di disponibilità indipendente dal dominio, è necessario un suffisso DNS comune. Per impostare e verificare il suffisso DNS in ogni istanza di Windows Server che ospiterà una replica per il gruppo di disponibilità, seguire questa procedura:
+Per un cluster di gruppi di lavoro di un gruppo di disponibilità indipendente dal dominio è necessario un suffisso DNS comune. Per impostare e verificare il suffisso DNS in ogni istanza di Windows Server che ospiterà una replica per il gruppo di disponibilità, seguire questa procedura:
 
 1. Usando i tasti di scelta rapida tasto WINDOWS + X, selezionare Sistema.
 2. Se il nome del computer e il nome completo del computer sono uguali, il suffisso DNS non è stato impostato. Ad esempio, se il nome del computer è ALLAN, il valore del nome completo del computer non può essere semplicemente ALLAN, ma dovrebbe essere simile ad ALLAN.SQLHA.LAB. SQLHA.LAB è il suffisso DNS. Il valore del gruppo di lavoro deve essere GRUPPO DI LAVORO. Se è necessario impostare il suffisso DNS, selezionare Cambia impostazioni.

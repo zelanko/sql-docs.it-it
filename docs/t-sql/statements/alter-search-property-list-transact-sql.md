@@ -24,12 +24,12 @@ ms.assetid: 0436e4a8-ca26-4d23-93f1-e31e2a1c8bfb
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 652603c40a2d38381441ea27e96e9b22525ea969
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3d35982c6c1b26b957f1aa59b934106f4c09edc8
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47708919"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52529297"
 ---
 # <a name="alter-search-property-list-transact-sql"></a>ALTER SEARCH PROPERTY LIST (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -107,7 +107,7 @@ SELECT property_int_id FROM sys.registered_search_properties;
  DROP  
  Elimina la proprietà specificata dall'elenco delle proprietà specificato da *list_name*. L'eliminazione di una proprietà ne annulla la registrazione, pertanto non è più possibile effettuare ricerche che la riguardino.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Ogni indice full-text può disporre di un solo elenco delle proprietà di ricerca.  
   
  Per consentire l'esecuzione di query su una proprietà di ricerca specificata, è necessario aggiungerla all'elenco delle proprietà di ricerca dell'indice full-text, quindi ripopolare l'indice.  
@@ -170,13 +170,13 @@ GO
   
 -   [ALTER FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-fulltext-index-transact-sql.md)  
   
-##  <a name="Permissions"></a> Permissions  
+##  <a name="Permissions"></a> Autorizzazioni  
  È necessario disporre dell'autorizzazione CONTROL per l'elenco di proprietà.  
   
 ## <a name="examples"></a>Esempi  
   
 ### <a name="a-adding-a-property"></a>A. Aggiunta di una proprietà  
- Nell'esempio seguente vengono aggiunte diverse proprietà (`Title`, `Author` e `Tags`) a un elenco delle proprietà denominato `DocumentPropertyList`.  
+ Nell'esempio seguente vengono aggiunte diverse proprietà, come `Title`, `Author` e `Tags`, a un elenco di proprietà denominato `DocumentPropertyList`.  
   
 > [!NOTE]  
 >  Per un esempio in cui viene creato l'elenco di proprietà `DocumentPropertyList`, vedere [CREATE SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](../../t-sql/statements/create-search-property-list-transact-sql.md).  

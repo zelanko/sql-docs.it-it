@@ -18,12 +18,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d5dadd6da3f1f39060f8ec0f96e1034f42670300
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fa37094aa6e41da48de776e7bb73b98096cae503
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47603249"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52523494"
 ---
 # <a name="create-filtered-indexes"></a>Creare indici filtrati
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -113,17 +113,17 @@ ms.locfileid: "47603249"
   
 3.  Fare clic sul segno più per espandere la tabella in cui si desidera creare un indice filtrato.  
   
-4.  Fare clic con il pulsante destro del mouse sulla cartella **Indici** , scegliere **Nuovo indice**e selezionare **Indice non cluster...**.  
+4.  Fare clic con il pulsante destro del mouse sulla cartella **Indici**, scegliere **Nuovo indice** e selezionare **Indice non cluster**.  
   
 5.  Nella pagina **Generale** della finestra di dialogo **Nuovo indice** immettere il nome del nuovo indice nella casella **Nome indice** .  
   
-6.  In **Colonne chiave indice**fare clic su **Aggiungi**.  
+6.  In **Colonne chiave indice** fare clic su **Aggiungi**.  
   
 7.  Nella finestra di dialogo **Seleziona colonne da**_nome\_tabella_ selezionare le caselle di controllo delle colonne della tabella da aggiungere all'indice univoco.  
   
 8.  Fare clic su **OK**.  
   
-9. In **Espressione filtro** della pagina **Filtro**immettere l'espressione SQL che verrà utilizzata per creare l'indice filtrato.  
+9. Nella pagina **Filtro** immettere l'espressione SQL che verrà usata per creare l'indice filtrato in **Espressione filtro**.  
   
 10. Fare clic su **OK**.  
   

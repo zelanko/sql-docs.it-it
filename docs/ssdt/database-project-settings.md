@@ -41,12 +41,12 @@ ms.assetid: 34418730-1aaa-4948-aee2-8f1e62cda85c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8eb14ed03dc43a1a27254a1998f84b786e39694d
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 94eea6f9e8d76875c11a6e52de423812c16b255e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51671406"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52516022"
 ---
 # <a name="database-project-settings"></a>Impostazioni del progetto di database
 Le impostazioni del progetto di database vengono usate per controllare gli aspetti delle configurazioni relative a database, debug e compilazione. Tali impostazioni sono suddivise nelle categorie seguenti.  
@@ -102,7 +102,7 @@ Le impostazioni della tabella seguente si applicano a tutte le configurazioni di
 > [!IMPORTANT]  
 > La funzionalità Verifica Transact-SQL estesa verrà rimossa a partire dalla successiva versione della funzionalità di SQL Server Data Tools e dalla successiva versione principale di Visual Studio.  
   
-Verifica Transact-SQL estesa è una funzionalità disponibile nel sistema del progetto di database che consente agli sviluppatori di inviare il proprio progetto di database al servizio Transact-SQL Compiler Service in fase di compilazione, per la convalida del codice a fronte del parser e dell'interprete del motore di SQL Server.  
+La verifica Transact-SQL estesa è una funzionalità disponibile nel sistema del progetto di database che consente agli sviluppatori di inviare il proprio progetto di database a Servizio di compilazione Transact-SQL in fase di compilazione per la convalida del codice rispetto al parser e all'interprete del motore di SQL Server.  
   
 ### <a name="transact-sql-compiler-service"></a>Transact-SQL Compiler Service  
 Il Servizio di compilazione Transact-SQL è un componente basato sul motore di database di Microsoft SQL Server 2012. Questo servizio consente di convalidare la sintassi e la semantica delle istruzioni DDL con la stessa affidabilità del motore di database di Microsoft SQL Server 2012. Ciò significa implicitamente che il Servizio di compilazione non supporta la sintassi o le funzionalità deprecate in Microsoft SQL Server 2012. Per ulteriori informazioni sulle funzionalità deprecate, vedere [Funzionalità del Motore di database non più utilizzate in SQL Server 2012](../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md).  
@@ -162,7 +162,7 @@ Per informazioni sulle opzioni dell'assembly, vedere [Finestra di dialogo Inform
 Per informazioni sulla firma, vedere la sezione **Firma degli assembly** dell'argomento [Pagina firma, Progettazione progetti](https://msdn.microsoft.com/library/0k50fs3b.aspx?queryresult=true) .  
   
 ## <a name="bkmk_sqlclr_sqlclrbuild"></a>SQLCLR e Compilazione SQLCLR  
-Nelle pagine delle proprietà **SQLCLR** e **Compilazione SQLCLR** sono contenute molte impostazioni per l'utilizzo di oggetti CLR SQL nel progetto in uso. In particolare, nella pagina delle proprietà **SQLCLR** è disponibile un'impostazione a livello di autorizzazione con cui è possibile impostare le autorizzazioni per l'assembly SQLCLR. È inoltre disponibile l'impostazione "Genera DDL" per controllare se vengono generate istruzioni DDL (Dynamic Data Language) per gli oggetti SQLCLR che sono stati aggiunti al progetto. Nella pagina delle proprietà **Compilazione** SQLCLR sono contenute tutte le opzioni del compilatore che è possibile impostare per configurare la compilazione di codice SQLCLR nel progetto.  
+Nelle pagine delle proprietà **SQLCLR** e **Compilazione SQLCLR** sono contenute molte impostazioni per l'utilizzo di oggetti CLR SQL nel progetto in uso. In particolare, nella pagina delle proprietà **SQLCLR** è disponibile un'impostazione a livello di autorizzazione con cui è possibile impostare le autorizzazioni per l'assembly SQLCLR. È anche disponibile l'impostazione "Genera DDL" per controllare se vengono generate istruzioni DDL (Dynamic Data Language) per gli oggetti SQLCLR che sono stati aggiunti al progetto. Nella pagina delle proprietà **Compilazione** SQLCLR sono contenute tutte le opzioni del compilatore che è possibile impostare per configurare la compilazione di codice SQLCLR nel progetto.  
   
 Nella pagina delle proprietà **Compilazione SQLCLR** sono contenute le impostazioni di compilazione avanzate per compilare oggetti CLR SQL nel progetto in uso. Vengono fornite diverse opzioni basate sul linguaggio (VB o C#) utilizzato per codificare oggetti SQL CLR.  
   

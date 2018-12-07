@@ -15,12 +15,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 403f29c972b8137a7f2181962ce48a796ac4c753
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ac96a7ea691a02c61aa132ea0efcdf5bc2d68ab1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47817589"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52513753"
 ---
 # <a name="control-transaction-durability"></a>Controllo della durabilità delle transazioni
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -95,19 +95,19 @@ ms.locfileid: "47817589"
  L'amministratore del database può controllare se gli utenti possono utilizzare le transazioni con durabilità ritardata in un database con l'istruzione seguente. È necessario impostare il valore per la durabilità ritardata con ALTER DATABASE.    
     
 ```sql    
-ALTER DATABASE … SET DELAYED_DURABILITY = { DISABLED | ALLOWED | FORCED }    
+ALTER DATABASE ... SET DELAYED_DURABILITY = { DISABLED | ALLOWED | FORCED }    
 ```    
     
  **DISABLED**    
  [impostazione predefinita] Con questa impostazione, tutte le transazioni di cui è stato eseguito il commit nel database sono completamente durevoli, indipendentemente dall'impostazione del livello di commit (DELAYED_DURABILITY=[ON | OFF]). Non è necessaria alcuna modifica e ricompilazione delle stored procedure. In questo modo è possibile garantire che i dati non verranno in alcun modo messi in pericolo dalla durabilità ritardata.    
     
  **ALLOWED**    
- Con questa impostazione, la durabilità di ogni transazione viene determinata a livello di transazione - DELAYED_DURABILITY = { *OFF* | ON }. Per altre informazioni, vedere [Controllo a livello di blocco atomico - Stored procedure compilate in modo nativo](../../relational-databases/logs/control-transaction-durability.md#CompiledProcControl) e [Controllo a livello di COMMIT – Transact-SQL](../../relational-databases/logs/control-transaction-durability.md#bkmk_T-SQLControl) .    
+ Con questa impostazione, la durabilità di ogni transazione viene determinata a livello di transazione (DELAYED_DURABILITY = { *OFF* | ON }). Per altre informazioni, vedere [Controllo a livello di blocco atomico: stored procedure compilate in modo nativo](../../relational-databases/logs/control-transaction-durability.md#CompiledProcControl) e [Controllo a livello di COMMIT - Transact-SQL](../../relational-databases/logs/control-transaction-durability.md#bkmk_T-SQLControl).    
     
  **FORCED**    
  Con questa impostazione, ogni transazione di cui viene eseguito il commit nel database è con durabilità ritardata. Indipendentemente dal fatto che venga specificata una transazione completamente durevole (DELAYED_DURABILITY = OFF) o non venga specificata alcuna impostazione, la transazione è con durabilità ritardata. Tale impostazione risulta utile quando è necessario specificare le transazioni con durabilità ritardata per un database e non si desidera modificare il codice dell'applicazione.    
     
-###  <a name="CompiledProcControl"></a> Controllo a livello di blocco atomico - Stored procedure compilate in modo nativo    
+###  <a name="CompiledProcControl"></a> Controllo a livello di blocco atomico: stored procedure compilate in modo nativo    
  Il codice seguente va inserito nel blocco atomico.    
     
 ```sql    
@@ -123,14 +123,14 @@ DELAYED_DURABILITY = { OFF | ON }
  **Codice di esempio:**    
     
 ```sql    
-CREATE PROCEDURE <procedureName> …    
+CREATE PROCEDURE <procedureName> ...    
 WITH NATIVE_COMPILATION, SCHEMABINDING, EXECUTE AS OWNER    
 AS BEGIN ATOMIC WITH     
 (    
     DELAYED_DURABILITY = ON,    
     TRANSACTION ISOLATION LEVEL = SNAPSHOT,    
     LANGUAGE = N'English'    
-    …    
+    ...    
 )    
 END    
 ```    

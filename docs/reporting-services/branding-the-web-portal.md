@@ -7,18 +7,18 @@ ms.technology: reporting-services
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: fd469eb38d23a72037ab34dc6cceb45da39411a6
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: 01c93f13a94533c6562516ca398d76034564beb7
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51812994"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52397709"
 ---
 # <a name="branding-the-web-portal"></a>Personalizzazione del portale Web
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
 
-È possibile modificare l'aspetto del portale Web personalizzandolo in base all'azienda. Questa operazione viene eseguita tramite un pacchetto del marchio. Il pacchetto del marchio è stato progettato in modo non sia necessaria una conoscenza approfondita dei fogli di stile CSS per poterlo creare.  
+È possibile modificare l'aspetto del portale Web personalizzandolo in base all'azienda. Questa operazione viene eseguita tramite un pacchetto del marchio. Il pacchetto del marchio è stato progettato in modo che per crearlo non sia necessaria una conoscenza approfondita dei fogli di stile CSS.  
   
 <iframe width="560" height="315" src="https://www.youtube.com/embed/m08kLuofwFA?list=PLv2BtOtLblH3F--8WmK9QcLbx6dV_lVkL" frameborder="0" allowfullscreen></iframe>  
    
@@ -104,7 +104,7 @@ La prima volta che ci si connette a un server con Mobile Report Publisher dove �
   
 ![ssRSBrandingMobileReportPublisher](../reporting-services/media/ssrsbrandingmobilereportpublisher.png)  
   
-È quindi possibile usare quel tema nei report per dispositivi mobili che verranno creati, anche se non sono per lo stesso server su cui il tema è distribuito.   
+È quindi possibile usare tale tema nei report per dispositivi mobili che verranno creati, anche se non sono per lo stesso server in cui il tema è distribuito.   
   
 ### <a name="using-a-logo"></a>Uso di un logo
   

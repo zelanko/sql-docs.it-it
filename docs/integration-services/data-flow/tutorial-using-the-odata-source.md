@@ -11,12 +11,12 @@ ms.assetid: 2c64cf8b-5edb-48df-8ffe-697096258f71
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7cda725134aeba441a1cd6a59c7d3e7ae57d76de
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 841892faace82677df0bbd8939a147d2c65b363f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51637758"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52513000"
 ---
 # <a name="tutorial-using-the-odata-source"></a>Esercitazione: utilizzo dell'origine OData
   In questa esercitazione viene eseguito il processo per estrarre la raccolta **Dipendenti** del servizio **Northwind** OData di esempio (https://services.odata.org/V3/Northwind/Northwind.svc/) e caricarla in un file flat.  
@@ -43,7 +43,7 @@ ms.locfileid: "51637758"
   
 4.  Fare doppio clic sul componente **Origine OData** per aprire la finestra di dialogo **Editor origine OData**.  
   
-5.  Fare clic su **Nuovo…** per aggiungere una nuova gestione connessione OData.  
+5.  Fare clic su **Nuovo** per aggiungere una nuova gestione connessione OData.  
   
 6.  Immettere l'URL del servizio OData in **percorso documento di servizio**. Può essere l'URL del documento di servizio o l'URL di un'entità o di un feed specifico. Ai fini di questa esercitazione, immettere l'URL del documento di servizio: [https://services.odata.org/V3/Northwind/Northwind.svc/](https://services.odata.org/V3/Northwind/Northwind.svc/).  
   

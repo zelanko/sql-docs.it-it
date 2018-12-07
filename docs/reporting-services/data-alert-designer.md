@@ -16,12 +16,12 @@ ms.assetid: b2018116-cf1a-4e54-b29c-39e0ca2bda77
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 7de5dfc840c02faac0d915dc75b83ab82fd489fe
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 16688920d157a9f0fcbd68a12b3112418a81237e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031170"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52511664"
 ---
 # <a name="data-alert-designer"></a>Finestra di progettazione Avviso dati
 
@@ -153,13 +153,13 @@ Le definizioni di avviso dati vengono create e modificate nella finestra di prog
 ### <a name="schedule-settings"></a>Impostazioni di pianificazione  
  Tramite la pianificazione definita per l'avviso dati viene stabilito il criterio di ricorrenza per l'invio del messaggio di avviso dati, nonché quando avviare e arrestare l'invio dei messaggi di avviso. I criteri prevedono singola occorrenza, minuto, giornaliero e settimanale. Anche se un avviso dispone di una sola pianificazione, utilizzando tali intervalli è possibile creare criteri di ricorrenza complessi in grado di soddisfare la maggior parte delle esigenze aziendali. Di seguito sono riportati esempi di criteri di ricorrenza comuni da utilizzare nelle pianificazioni:  
   
--   **Giornaliera, ogni 10 giorni** : gli avvisi vengono inviati una volta al giorno, ogni 10 giorni.  
+-   **Giornaliera, ogni 10 giorni**: gli avvisi vengono inviati una volta al giorno, ogni 10 giorni.  
   
--   **Settimanale, ogni 2 settimane di lunedì** : gli avvisi vengono inviati solo ogni due settimane di lunedì.  
+-   **Settimanale, ogni 2 settimane di lunedì**: gli avvisi vengono inviati solo ogni due settimane di lunedì.  
   
--   **Oraria, ogni 12 ore** : gli avvisi vengono inviati ogni 12 ore.  
+-   **Oraria, ogni 12 ore**: gli avvisi vengono inviati ogni 12 ore.  
   
--   **Minuto, ogni 30 minuti** : gli avvisi vengono inviati ogni 30 minuti.  
+-   **Minuto, ogni 30 minuti**: gli avvisi vengono inviati ogni 30 minuti.  
   
  Il criterio di ricorrenza consente di specificare quando viene inviato l'avviso. Se le regole vengono soddisfatte durante l'intervallo specificato dal criterio, l'avviso non viene inviato fino alla fine dell'intervallo.  
   

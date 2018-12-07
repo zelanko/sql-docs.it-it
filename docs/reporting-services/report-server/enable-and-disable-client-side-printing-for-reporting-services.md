@@ -13,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: 0e709c96-7517-4547-8ef6-5632f8118524
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: eba94f256e5b8a9f8d335076e65765d507622cea
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 05f63018eb5af5ec4c3a12c9bce14b550512471e
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50030170"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52711943"
 ---
 # <a name="enable-and-disable-client-side-printing-for-reporting-services"></a>Abilitare e disabilitare la stampa sul lato client per Reporting Services
 
   Il pulsante di stampa nella barra degli strumenti del visualizzatore di report usa il formato PDF (Portable Document Format) per la stampa sul lato client dei report di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] visualizzati in un browser. La nuova esperienza di stampa remota usa l'estensione per il rendering PDF inclusa in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]per il rendering dei report in formato PDF. È possibile scaricare un modulo PDF del report oppure, se è installata un'applicazione per la visualizzazione dei file PDF, il pulsante di stampa visualizza una finestra di dialogo con gli elementi di configurazione della pagina comuni, ad esempio le dimensioni e l'orientamento della pagina e l'anteprima del file PDF. Sebbene la funzionalità di stampa sul alto client sia abilitata per impostazione predefinita, è possibile disabilitarla per evitare che venga utilizzata.  
   
- Le versioni precedenti di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usano un controllo ActiveX per il quale è necessario il download nel computer client dal server di report. Se si aggiorna il server di report a SQL Server 2016, il controllo di stampa non viene rimosso dal server di report né dai computer client.  
+ Le versioni precedenti di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usano un controllo ActiveX per il quale è necessario il download nel computer client dal server di report. Se si aggiorna il server di report a SQL Server 2016 o versioni successive, il controllo di stampa non viene rimosso dal server di report né dai computer client.  
 
 ##  <a name="bkmk_clientside_printexpereince"></a> L'esperienza di stampa  
  Quando si fa clic sul pulsante di stampa ![htmlviewer_print](../../reporting-services/report-server/media/htmlviewer-print.png "htmlviewer_print") nella barra degli strumenti del visualizzatore di report, l'esperienza varia in base alle applicazioni di visualizzazione dei file PDF installate nel computer client e al browser in uso.   È possibile scaricare il file PDF o configurare le opzioni di stampa da una finestra di dialogo, o eseguire entrambe le operazioni, a seconda del computer client.  
@@ -98,7 +98,7 @@ Dim rs As New ReportingService()
         Dim props(0) As [Property]  
         Dim setProp As New [Property]  
         setProp.Name = "EnableClientPrinting"  
-        setProp.Value = “False”   
+        setProp.Value = "False"   
         props(0) = setProp  
         Try  
             rs.SetSystemProperties(props)  

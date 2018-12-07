@@ -13,12 +13,12 @@ ms.assetid: 89cb0055-5262-447f-8464-7203d4caba78
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 77c42bdf35fce0bb2106e99818e14d5b42992647
-ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
+ms.openlocfilehash: d20532a4fb3aad70ca2ff972d6236680db221768
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51217199"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52525640"
 ---
 # <a name="job-activity-monitor-filter-settings"></a>Monitoraggio attività processi (Impostazioni filtro)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ ms.locfileid: "51217199"
  In questa casella senza nome viene visualizzata una breve descrizione dei criteri nel momento in cui vengono selezionati.  
   
  **Applica filtro**  
- Per applicare il filtro, fare clic su **Applica****filtro** e quindi su **OK**. Per conservare le impostazioni di filtro nella finestra di dialogo **Impostazioni****filtro** senza applicarle, deselezionare **Applica****filtro**e quindi fare clic su **OK**in modo da visualizzare tutte le righe.  
+ Per applicare il filtro, fare clic su **Applica filtro** e quindi su **OK**. Per conservare le impostazioni di filtro nella finestra di dialogo **Impostazioni filtro** senza applicarle, deselezionare **Applica filtro** e quindi fare clic su **OK** in modo da visualizzare tutte le righe.  
   
  **Clear**  
  Consente di ripristinare le impostazioni di filtro predefinite.  

@@ -31,12 +31,12 @@ ms.assetid: dd6cc2ba-631f-4adf-89dc-29ef449c6933
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fcaca36529f0a3592a96b943184ef7f26ab59d52
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 12f91e676983cea041d966a0306fb1faf636019b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51642237"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52505933"
 ---
 # <a name="foreach-loop-container"></a>Contenitore Ciclo Foreach
   Il contenitore Ciclo Foreach definisce un flusso di controllo ripetuto all'interno di un pacchetto. L'implementazione del ciclo è simile alla struttura del ciclo **Foreach** nei linguaggi di programmazione. In un pacchetto per l'esecuzione del ciclo viene utilizzato un enumeratore Foreach.  Il contenitore Ciclo Foreach ripete il flusso di controllo per ogni membro di un enumeratore specificato.  
@@ -155,7 +155,7 @@ Questa procedura descrive la configurazione di un contenitore Ciclo Foreach, inc
   
     -   Per usare l'enumeratore Foreach SMO, selezionare una connessione ADO.NET esistente oppure fare clic su **Nuova connessione** nell'elenco **Connessione** e quindi digitare la stringa da usare oppure fare clic su **Sfoglia**. Se si fa clic su **Sfoglia**, nella finestra di dialogo **Seleziona enumerazione SMO** selezionare il tipo di oggetto da enumerare e il tipo di enumerazione e quindi fare clic su **OK**.  
   
-6.  Facoltativamente, fare clic sul pulsante Sfoglia **(…)** nella casella di testo **Espressioni** della pagina **Raccolta** per creare le espressioni che aggiornano i valori delle proprietà. Per altre informazioni, vedere [Aggiunta o modifica di un'espressione di proprietà](../../integration-services/expressions/add-or-change-a-property-expression.md).  
+6.  Facoltativamente, fare clic sul pulsante sfoglia **(...)** nella casella di testo **Espressioni** della pagina **Raccolta** per creare espressioni che aggiornano i valori delle proprietà. Per altre informazioni, vedere [Aggiunta o modifica di un'espressione di proprietà](../../integration-services/expressions/add-or-change-a-property-expression.md).  
   
     > [!NOTE]  
     >  Le proprietà incluse nell'elenco **Proprietà** variano a seconda dell'enumeratore.  
@@ -213,7 +213,7 @@ Utilizzare la pagina **Generale** della finestra di dialogo **Editor ciclo Forea
 |**Enumeratore Foreach file di ADLS**|Enumerare i file nella directory di Data Lake Store specificata. La selezione di questo valore determina la visualizzazione delle opzioni dinamiche nella sezione **Enumeratore Foreach file di ADLS**.|
   
  **Espressioni**  
- Fare clic su **Espressioni** o espandere questa voce per visualizzare l'elenco delle espressioni di proprietà esistenti. Fare clic sul pulsante con i puntini di sospensione **(…)** per aggiungere un'espressione di proprietà per una proprietà dell'enumeratore oppure per modificare o valutare un'espressione di proprietà esistente.  
+ Fare clic su **Espressioni** o espandere questa voce per visualizzare l'elenco delle espressioni di proprietà esistenti. Fare clic sul pulsante con i puntini di sospensione **(...)** per aggiungere un'espressione di proprietà per una proprietà dell'enumeratore oppure per modificare e valutare un'espressione di proprietà esistente.  
   
  **Argomenti correlati**: [Espressioni di Integration Services &#40;SSIS&#41;](../../integration-services/expressions/integration-services-ssis-expressions.md), [Editor espressioni di proprietà](../../integration-services/expressions/property-expressions-editor.md), [Generatore di espressioni](../../integration-services/expressions/expression-builder.md)  
   
@@ -240,11 +240,11 @@ Utilizzare la pagina **Generale** della finestra di dialogo **Editor ciclo Forea
  Consente di specificare i file da enumerare.  
   
 > [!NOTE]  
->  Utilizzare i caratteri jolly (*) per specificare i file da includere nella raccolta. Ad esempio, per includere file con nomi che contengono "abc", usare il filtro seguente: \*abc\*.  
+>  Utilizzare i caratteri jolly (*) per specificare i file da includere nella raccolta. Per includere i file i cui nomi contengono "abc", ad esempio, usare il filtro seguente: \*abc\*.  
 >   
 >  Quando si specifica un'estensione per il nome di file, l'enumeratore restituisce anche i file che presentano la stessa estensione con altri caratteri aggiunti. Si tratta dello stesso comportamento del comando **dir** del sistema operativo, che prevede anch'esso il confronto dei nomi di file 8.3 per la compatibilità con le versioni precedenti. Questo comportamento dell'enumeratore può provocare risultati imprevisti. Se, ad esempio, si desidera enumerare solo file di Excel 2003 e si specifica "* .xls", l'enumeratore restituisce anche i file di Excel 2007 perché presentano l'estensione xlsx.  
 >   
->  È possibile usare un'espressione per specificare i file da includere in una raccolta, espandendo **Espressioni** nella pagina **Raccolta** , selezionando la proprietà **FileSpec** e facendo clic sul pulsante con i puntini di sospensione (...) per aggiungere l'espressione di proprietà.  
+>  È possibile usare un'espressione per specificare i file da includere in una raccolta espandendo **Espressioni** nella pagina **Raccolta**, selezionando la proprietà **FileSpec** e quindi facendo clic sul pulsante con i puntini di sospensione (...) per aggiungere l'espressione di proprietà.  
   
  **Completo**  
  Selezionare questa opzione per recuperare il percorso completo dei nomi di file. Se nell'opzione File si specificano caratteri jolly, i percorsi completi restituiti corrisponderanno al filtro.  
@@ -347,7 +347,7 @@ Utilizzare la pagina **Generale** della finestra di dialogo **Editor ciclo Forea
 |**Variabile**|Consente di impostare l'origine su una variabile contenente il documento XML.|  
   
  **DocumentSource**  
- Se la proprietà **DocumentSourceType** è impostata su **Input diretto**, indicare il codice XML oppure fare clic sul pulsante con i puntini di sospensione (…) per specificare il codice XML tramite la finestra di dialogo **Editor origine documento**.  
+ Se la proprietà **DocumentSourceType** è impostata su **Input diretto**, specificare il codice XML oppure fare clic sul pulsante con i puntini di sospensione (...) per specificarlo usando la finestra di dialogo **Editor origine documento**.  
   
  Se la proprietà **DocumentSourceType** è impostata su **Connessione file**, selezionare una gestione connessione file oppure fare clic su \<**Nuova connessione**> per creare una nuova gestione connessione.  
   

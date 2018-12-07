@@ -23,17 +23,17 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6e0b6dacfa0facce9da804dac8406885e7228e4c
-ms.sourcegitcommit: 93e3bb8941411b808e00daa31121367e96fdfda1
+ms.openlocfilehash: 7a8784072fe01c8da2af3af601126957583f9ebf
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49359284"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52515797"
 ---
 # <a name="errorseverity-transact-sql"></a>ERROR_SEVERITY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-Questa funzione restituisce il valore di gravità dell'errore quando si verifica un errore, se tale errore ha causato l'esecuzione del blocco CATCH di un costrutto TRY…CATCH.  
+Questa funzione restituisce il valore di gravità dell'errore dove questo si verifica, se l'errore ha causato l'esecuzione del blocco CATCH di un costrutto TRY...CATCH.  
 
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

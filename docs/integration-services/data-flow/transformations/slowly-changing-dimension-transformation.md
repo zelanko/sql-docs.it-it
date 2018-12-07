@@ -18,12 +18,12 @@ ms.assetid: f8849151-c171-4725-bd25-f2c33a40f4fe
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d334d7aac70cdbadef5bdeede6d9f3a53c74caa7
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 9aeb16eff9632fe5a6859985f70e8aefddd0fea4
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51638328"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52414538"
 ---
 # <a name="slowly-changing-dimension-transformation"></a>Dimensione a modifica lenta - trasformazione
   La trasformazione Dimensione a modifica lenta consente di coordinare l'aggiornamento e l'inserimento dei record nelle tabelle delle dimensioni dei data warehouse. È ad esempio possibile usare questa trasformazione per configurare gli output che inseriscono e aggiornano i record nella tabella DimProduct del database [!INCLUDE[ssSampleDBDWobject](../../../includes/sssampledbdwobject-md.md)] con i dati della tabella Production.Products del database OLTP AdventureWorks.  
@@ -69,7 +69,7 @@ ms.locfileid: "51638328"
 |------------|-----------------|----------------------------|  
 |**Output aggiornamenti attributi modificabili**|Il record nella tabella di ricerca è stato aggiornato. Questo output viene utilizzato per le righe con attributi modificabili.|Una trasformazione Comando OLE DB aggiorna il record utilizzando un'istruzione UPDATE.|  
 |**Output attributo fisso**|Per i valori nelle righe che non devono essere modificate non esiste alcuna corrispondenza con i valori nella tabella di ricerca. Questo output viene utilizzato per le righe con attributi fissi.|Non viene creato alcun flusso di dati predefinito. Se la trasformazione è configurata in modo da continuare anche in caso di rilevamento di modifiche alle colonne con attributi fissi, sarà necessario creare un flusso di dati che acquisisca tali righe.|  
-|**Output inserimenti attributo cronologico**|La tabella di ricerca contiene almeno una riga corrispondente. La riga contrassegna come "corrente" ora viene contrassegnata come "scaduta". Questo output viene utilizzato per le righe con attributi cronologici.|Le trasformazioni Colonna derivata creano colonne per gli indicatori di riga scaduta e di riga corrente. Una trasformazione del comando OLE DB aggiorna il record che ora deve essere contrassegnato come "scaduto". La riga con i valori della colonna nuovi è indirizzata a Nuovo Output, dove viene inserita e contrassegna come "corrente".|  
+|**Output inserimenti attributo cronologico**|La tabella di ricerca contiene almeno una riga corrispondente. La riga contrassegna come "corrente" viene ora contrassegnata come "scaduta". Questo output viene utilizzato per le righe con attributi cronologici.|Le trasformazioni Colonna derivata creano colonne per gli indicatori di riga scaduta e di riga corrente. Una trasformazione del comando OLE DB aggiorna il record che ora deve essere contrassegnato come "scaduto". La riga con i valori della colonna nuovi è indirizzata a Nuovo Output, dove viene inserita e contrassegna come "corrente".|  
 |**Output aggiornamenti membro derivato**|Vengono inserite righe per membri di dimensione derivati. Questo output viene utilizzato per le righe dei membri derivati.|Una trasformazione Comando OLE DB aggiorna il record utilizzando un'istruzione SQL UPDATE.|  
 |**Nuovo output**|La tabella di ricerca non contiene righe corrispondenti. La riga viene aggiunta alla tabella delle dimensioni. Questo output viene utilizzato per le nuove righe e per le modifiche alle righe con attributi cronologici.|Una trasformazione Colonna derivata imposta l'indicatore di riga corrente e una destinazione OLE DB inserisce la riga.|  
 |**Output non modificato**|I valori nella tabella di ricerca corrispondono a quelli della riga. Questo output viene utilizzato per le righe non modificate.|Non viene creato alcun flusso di dati perché la trasformazione Dimensione a modifica lenta non esegue alcuna operazione. Se si desidera acquisire queste righe, sarà necessario creare un flusso di dati per questo output.|  

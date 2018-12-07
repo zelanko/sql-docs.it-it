@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: addd6137-4b6e-4e88-a7e8-9600fcd1ccce
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9ed4c6eb7a61f28b22a349f2ef2511cba382a3b3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 94dba56cee823d5e8df68244b4d8d44fee5c98a2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47730859"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52529774"
 ---
 # <a name="highlight-chart-data-by-adding-strip-lines-report-builder-and-ssrs"></a>Evidenziare i dati del grafico mediante l'aggiunta di strisce (Generatore report e SSRS)
   Le strisce o bande sono intervalli orizzontali o verticali che applicano un'ombreggiatura allo sfondo del grafico a intervalli regolari o personalizzati. È possibile utilizzare le strisce per:  
@@ -47,7 +47,7 @@ ms.locfileid: "47730859"
   
      Nella finestra Proprietà verranno visualizzate le proprietà dell'asse.  
   
-2.  Nella sezione **Aspetto** del riquadro Proprietà, per la proprietà StripLines fare clic sul pulsante di modifica della raccolta (…) per aprire **Editor raccolte ChartStripLine**.  
+2.  Nella sezione **Aspetto** del riquadro Proprietà fare clic sul pulsante di modifica della raccolta (...) per la proprietà StripLines per aprire **Editor raccolte ChartStripLine**.  
   
 3.  Fare clic su **Aggiungi** per aggiungere una nuova striscia alla raccolta.  
   

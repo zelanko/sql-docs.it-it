@@ -13,12 +13,12 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d2589c948149b92541910b68e7da3c6cca414d2b
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 3f7e80b878583932976c85f7fa390ed546a67587
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51667181"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52401124"
 ---
 # <a name="always-encrypted-cryptography"></a>Crittografia sempre attiva
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "51667181"
 ## <a name="data-encryption-algorithm"></a>Algoritmo di crittografia dei dati  
  La funzionalità Always Encrypted usa l'algoritmo **AEAD_AES_256_CBC_HMAC_SHA_256** per crittografare i dati nel database.  
   
- **AEAD_AES_256_CBC_HMAC_SHA_256** deriva dalla bozza della specifica illustrata qui [https://tools.ietf.org/html/draft-mcgrew-aead-aes-cbc-hmac-sha2-05](https://tools.ietf.org/html/draft-mcgrew-aead-aes-cbc-hmac-sha2-05). L’algoritmo usa uno schema di crittografia autenticata con dati associati che adotta l’approccio Encrypt-then-MAC. Tale approccio prevede prima la crittografia del testo non crittografato e quindi la generazione del MAC in base al testo crittografato risultante.  
+ **AEAD_AES_256_CBC_HMAC_SHA_256** deriva dalla bozza della specifica illustrata qui [https://tools.ietf.org/html/draft-mcgrew-aead-aes-cbc-hmac-sha2-05](https://tools.ietf.org/html/draft-mcgrew-aead-aes-cbc-hmac-sha2-05). L'algoritmo usa uno schema di crittografia autenticata con dati associati che adotta l'approccio Encrypt-then-MAC. Tale approccio prevede prima la crittografia del testo non crittografato e quindi la generazione del MAC in base al testo crittografato risultante.  
   
  Per nascondere i modelli, l'algoritmo **AEAD_AES_256_CBC_HMAC_SHA_256** usa la modalità operativa CBC (Cipher Block Chaining), che prevede l'immissione nel sistema di un valore iniziale denominato IV (vettore di inizializzazione). La descrizione completa della modalità CBC è reperibile nella pagina [https://csrc.nist.gov/publications/nistpubs/800-38a/sp800-38a.pdf](https://csrc.nist.gov/publications/nistpubs/800-38a/sp800-38a.pdf).  
   
@@ -50,13 +50,13 @@ ms.locfileid: "51667181"
   
 -   Deterministico  
   
- Nella crittografia casuale l’IV viene generato in modo casuale. Di conseguenza, quando viene crittografato lo stesso testo non crittografato, viene generato un testo crittografato diverso, impedendo così l'intercettazione delle informazioni.  
+ Nella crittografia casuale l'IV viene generato in modo casuale. Di conseguenza, quando viene crittografato lo stesso testo non crittografato, viene generato un testo crittografato diverso, impedendo così l'intercettazione delle informazioni.  
   
 ```  
 When using randomized encryption: IV = Generate cryptographicaly random 128bits  
 ```  
   
- Nella crittografia deterministica l’IV non è generato casualmente ma derivato dal valore del testo non crittografato usando l'algoritmo seguente:  
+ Nella crittografia deterministica l'IV non è generato casualmente ma derivato dal valore del testo non crittografato usando l'algoritmo seguente:  
   
 ```  
 When using deterministic encryption: IV = HMAC-SHA-256( iv_key, cell_data ) truncated to 128 bits.  
@@ -71,7 +71,7 @@ iv_key = HMAC-SHA-256(CEK, "Microsoft SQL Server cell IV key" + algorithm + CEK_
  Il troncamento del valore HMAC viene eseguito per riempire 1 blocco di dati come necessario per IV.    
 Di conseguenza, la crittografia deterministica genera sempre lo stesso testo crittografato per i valori di un determinato testo non crittografato, consentendo l'inferenza se due valori di testo non crittografato sono uguali rispetto ai relativi valori del testo crittografato. Questa limitata intercettazione delle informazioni consente al sistema di database di supportare il confronto delle uguaglianze per i valori delle colonne crittografate.  
   
- La crittografia deterministica è più efficace nel nascondere i modelli rispetto ad alternative quali, ad esempio, l’uso di un valore IV predefinito.  
+ La crittografia deterministica è più efficace nel nascondere i modelli rispetto ad alternative quali, ad esempio, l'uso di un valore IV predefinito.  
   
 ### <a name="step-2-computing-aes256cbc-ciphertext"></a>Passaggio 2: Calcolo del testo crittografato AES_256_CBC  
  Dopo avere calcolato l'IV viene generato il testo crittografato **AES_256_CBC** :  
@@ -101,7 +101,7 @@ mac_key = HMAC-SHA-256(CEK, "Microsoft SQL Server cell MAC key" + algorithm + CE
 ```  
   
 ### <a name="step-4-concatenation"></a>Passaggio 4: Concatenazione  
- Infine, il valore crittografato è generato concatenando il byte della versione dell’algoritmo, il MAC, l’IV e il testo crittografato AES_256_CBC:  
+ Infine, il valore crittografato è generato concatenando il byte della versione dell'algoritmo, il MAC, l'IV e il testo crittografato AES_256_CBC:  
   
 ```  
 aead_aes_256_cbc_hmac_sha_256 = versionbyte + MAC + IV + aes_256_cbc_ciphertext  

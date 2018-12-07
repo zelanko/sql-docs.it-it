@@ -11,12 +11,12 @@ ms.assetid: 486ee339-165b-4aeb-b760-d2ba023d7d0a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1caa27c607c82da066e350113d8c29e412c2ce39
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 289fd23355fabab6ddbbbde34b2bbdfaeb57753f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47731359"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52505889"
 ---
 # <a name="specify-paths-and-optimization-hints-for-selective-xml-indexes"></a>Specificare percorsi e hint di ottimizzazione per indici XML selettivi
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -74,7 +74,7 @@ mypath03 = '/a/b/d'
 )  
 ```  
   
- La modalità di mapping definito dall'utente consente di specificare un tipo e la cardinalità del nodo per ottenere prestazioni migliori. Questo miglioramento nelle prestazioni viene tuttavia conseguito a discapito della sicurezza (poiché un cast potrebbe avere esito negativo), in quanto la corrispondenza con l'indice XML selettivo viene effettuata solo per il tipo specificato.  
+ La modalità di mapping definito dall'utente consente di specificare un tipo e la cardinalità del nodo per ottenere prestazioni migliori. Questo miglioramento delle prestazioni viene tuttavia conseguito a discapito della sicurezza, perché un cast potrebbe avere esito negativo, e della generalità, perché la corrispondenza con l'indice XML selettivo viene rilevata solo per il tipo specificato.  
   
  Di seguito sono indicati i tipi XQuery supportati per i dati XML non tipizzati:  
   
@@ -103,8 +103,8 @@ mypath= '/a/b' as XQUERY 'node()',
 pathX = '/a/b/c' as XQUERY 'xs:double' SINGLETON,  
 pathY = '/a/b/d' as XQUERY 'xs:string' MAXLENGTH(200) SINGLETON  
 )  
--- mypath – Only the node value is needed; storage is saved.  
--- pathX – Performance is improved; secondary indexes are possible.  
+-- mypath - Only the node value is needed; storage is saved.  
+-- pathX - Performance is improved; secondary indexes are possible.  
 -- pathY - Performance is improved; secondary indexes are possible; storage is saved.  
 ```  
   
@@ -351,7 +351,7 @@ WHERE T.xmldata.exist('
   
  L'utilizzo di hint di ottimizzazione è facoltativo. È sempre possibile accettare i mapping predefiniti, affidabili ma non necessariamente in grado di garantire livelli ottimali di prestazioni e archiviazione.  
   
- Alcuni hint di ottimizzazione, ad esempio l'hint SINGLETON, introducono vincoli ai dati. In alcuni casi, potrebbero verificarsi errori se non si rispettano tali vincoli.  
+ Alcuni hint di ottimizzazione, ad esempio l'hint SINGLETON, introducono vincoli sui dati. In alcuni casi, potrebbero verificarsi errori se non si rispettano tali vincoli.  
   
 ### <a name="benefits-of-optimization-hints"></a>Vantaggi degli hint di ottimizzazione  
  Nella tabella seguente vengono identificati gli hint di ottimizzazione che supportano livelli più efficienti di prestazioni e archiviazione.  

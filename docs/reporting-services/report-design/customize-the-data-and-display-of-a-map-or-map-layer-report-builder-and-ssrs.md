@@ -21,12 +21,12 @@ f1_keywords:
 ms.assetid: fdd9b994-d138-4990-a291-279b0249eb72
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a17aac87516dcc3903c6802435762f962258efe9
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 8afb64d468c895e0cfa52e8c7380ab54501180ac
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50028790"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52538728"
 ---
 # <a name="customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs"></a>Personalizzare i dati e la visualizzazione di una mappa o di un livello mappa (Generatore report e SSRS)
   Dopo aver aggiunto una mappa o un livello mappa a un [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] report impaginato usando una procedura guidata, è possibile modificare l'aspetto della mappa nel report. È possibile apportare dei miglioramenti tenendo in considerazione i concetti seguenti:  
@@ -117,7 +117,7 @@ ms.locfileid: "50028790"
  Per altre informazioni sui livelli, vedere [aggiungere, modificare o eliminare una mappa o livello mappa &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md).  
   
 ##  <a name="DataGrouping"></a> Modificare il raggruppamento dati per il livello  
- È possibile personalizzare la modalità di aggregazione dei dati spaziali per forme proprie. Per impostare le proprietà di gruppo per un livello, selezionare il livello nel riquadro della mappa, nel riquadro Proprietà per il livello fare clic su **Gruppo**, quindi fare clic sui puntini di sospensione (…) per aprire le Proprietà gruppo. In questa finestra di dialogo è possibile specificare le espressioni di raggruppamento, creare variabili di gruppo nonché filtrare dati utilizzati per il raggruppamento.  
+ È possibile personalizzare la modalità di aggregazione dei dati spaziali per forme proprie. Per impostare le proprietà di gruppo per un livello, selezionare il livello nel riquadro della mappa e nel riquadro Proprietà per il livello fare clic su **Gruppo** e quindi sui puntini di sospensione (...) per aprire Proprietà gruppo. In questa finestra di dialogo è possibile specificare le espressioni di raggruppamento, creare variabili di gruppo nonché filtrare dati utilizzati per il raggruppamento.  
   
  L'espressione di raggruppamento consente di specificare come vengono aggregati i dati analitici che hanno una relazione con i dati spaziali per ogni elemento della mappa sul livello. Per impostazione predefinita, l'espressione di raggruppamento è il set di campi delle corrispondenze specificato per la relazione tra i dati spaziali e i dati analitici. Ad esempio, per una mappa a bolle in cui sono visualizzati i percorsi delle città e le dimensioni della popolazione per regione o area, i campi delle corrispondenze includono il nome della città [Città] e il nome dell'area [Area] dal momento che possono esistere più città con lo stesso nome. Nell'espressione di raggruppamento corrispondente sono inclusi due campi: [City] e [Region].  
   

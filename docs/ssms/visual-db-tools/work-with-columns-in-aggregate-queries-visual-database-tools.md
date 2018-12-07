@@ -16,12 +16,12 @@ ms.assetid: 1b82681f-3d4f-4b9a-bb1d-2060e44f2577
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 393bc1e434071c82bc198531e855f9c355feaac6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3b3d6a176379c4cdfae4509e3ab3988202831c49
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47819249"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52540651"
 ---
 # <a name="work-with-columns-in-aggregate-queries-visual-database-tools"></a>Utilizzo di colonne in query di aggregazione (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -57,7 +57,7 @@ I seguenti principi descrivono come fare riferimento a colonne nelle condizioni 
     WHERE price > 10  
     ```  
   
--   Se si crea una condizione di ricerca che coinvolge una colonna utilizzata anche in una clausola GROUP BY o in una funzione di aggregazione, la condizione di ricerca potrà essere indicata come una clausola WHERE o HAVING. La clausola da utilizzare può essere scelta quando si definisce la condizione. La seguente istruzione consente di calcolare, ad esempio, il prezzo medio dei libri di ogni editore, quindi visualizza la media calcolata per gli editori il cui prezzo medio è maggiore di 10 dollari.  
+-   Se si crea una condizione di ricerca che coinvolge una colonna usata anche in una clausola GROUP BY o in una funzione di aggregazione, la condizione di ricerca potrà essere indicata come una clausola WHERE o HAVING. La clausola da usare può essere scelta quando si definisce la condizione. La seguente istruzione consente di calcolare, ad esempio, il prezzo medio dei libri di ogni editore, quindi visualizza la media calcolata per gli editori il cui prezzo medio è maggiore di 10 dollari.  
   
     ```  
     SELECT pub_id, AVG(price)  

@@ -24,12 +24,12 @@ ms.assetid: c4bbefa6-172b-4547-99a1-a0b38e3e2b05
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 694f1c2d29ced11a4f66a05bd983fe704e1be241
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 8b172eb0635c54bf6b9e0289ac220676eb08fd9c
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51642378"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52411988"
 ---
 # <a name="data-flow-performance-features"></a>Funzionalità delle prestazioni del flusso di dati
   In questo argomento sono inclusi alcuni suggerimenti sulla progettazione di pacchetti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] per evitare problemi di prestazioni comuni. Sono inoltre fornite informazioni sugli strumenti e sulle funzionalità che è possibile usare per risolvere i problemi relativi alle prestazioni dei pacchetti.  
@@ -175,7 +175,7 @@ ms.locfileid: "51642378"
   
 -   Articolo tecnico relativo alle [tecniche di ottimizzazione delle prestazione in Integration Services](https://go.microsoft.com/fwlink/?LinkId=98900), disponibile su technet.microsoft.com  
   
--   Articolo tecnico sull' [aumento della velocità effettiva delle pipeline suddividendo le trasformazioni sincrone in più attività](https://sqlcat.com/technicalnotes/archive/2010/08/18/increasing-throughput-of-pipelines-by-splitting-synchronous-transformations-into-multiple-tasks.aspx)su sqlcat.com  
+-   Articolo tecnico sull'[aumento della velocità effettiva delle pipeline suddividendo le trasformazioni sincrone in più attività](https://sqlcat.com/technicalnotes/archive/2010/08/18/increasing-throughput-of-pipelines-by-splitting-synchronous-transformations-into-multiple-tasks.aspx) su sqlcat.com  
   
 -   Articolo tecnico relativo alla [guida alle prestazioni del caricamento dati](https://go.microsoft.com/fwlink/?LinkId=220816)sul sito msdn.microsoft.com  
   
@@ -191,13 +191,13 @@ ms.locfileid: "51642378"
   
 -   Serie di video sulla [progettazione e il perfezionamento delle prestazioni dei pacchetti SSIS nell'organizzazione (Serie di video su SQL)](https://go.microsoft.com/fwlink/?LinkId=400878)  
   
--   Video sull' [ottimizzazione del flusso di dati del pacchetto SSIS nell'organizzazione (video di SQL Server)](https://technet.microsoft.com/sqlserver/ff686901.aspx), su technet.microsoft.com  
+-   Video sull'[ottimizzazione del flusso di dati del pacchetto SSIS nell'organizzazione (video di SQL Server)](https://technet.microsoft.com/sqlserver/ff686901.aspx) su technet.microsoft.com  
   
 -   Video sulle [informazioni sui buffer del flusso di dati SSIS (video di SQL Server)](https://technet.microsoft.com/sqlserver/ff686905.aspx), su technet.microsoft.com  
   
 -   Video, [Modelli di progettazione per prestazioni del servizio di integrazione di Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkID=233698&clcid=0x409)su channel9.msdn.com.  
   
--   Presentazione relativa all' [utilizzo dei miglioramenti al motore del flusso di dati di SQL Server 2008 SSIS da parte di Microsoft IT](https://go.microsoft.com/fwlink/?LinkId=217660), su sqlcat.com.  
+-   Presentazione relativa all'[utilizzo dei miglioramenti al motore del flusso di dati di SQL Server 2008 SSIS da parte di Microsoft IT](https://go.microsoft.com/fwlink/?LinkId=217660) su sqlcat.com.  
   
 -   Video relativo al [server di distribuzione di dati bilanciati](https://go.microsoft.com/fwlink/?LinkID=226278&clcid=0x409)sul sito technet.microsoft.com.  
   

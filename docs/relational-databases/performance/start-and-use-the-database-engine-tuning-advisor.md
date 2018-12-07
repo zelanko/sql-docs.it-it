@@ -19,12 +19,12 @@ ms.assetid: a4e3226a-3917-4ec8-bdf0-472879d231c9
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 8cbdfeec8b603c4ca474088e0134f9fb2c319c08
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 926b099e6cadadb130717159188f2fcc87dbc218
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661128"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52517668"
 ---
 # <a name="start-and-use-the-database-engine-tuning-advisor"></a>Avvio e utilizzo di Ottimizzazione guidata motore di database
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -245,16 +245,16 @@ Per altre informazioni, vedere [Ottimizzazione del database tramite un carico di
     dta -E -D DatabaseName -ip -s SessionName  
     ```  
   
-2.  Per modificare il numero di eventi da utilizzare per l'analisi, specificare l'opzione **-n** . Nell'esempio seguente viene aumentato a 2.000 il numero di voci della cache.  
+2.  Per modificare il numero di eventi da usare per l'analisi, specificare l'opzione **-n**. Nell'esempio seguente viene aumentato a 2.000 il numero di voci della cache.  
   
     ```  
-    dta -E -D DatabaseName -ip –n 2000-s SessionName1  
+    dta -E -D DatabaseName -ip -n 2000-s SessionName1  
     ```  
   
 3.  Per analizzare eventi per tutti i database nell'istanza, specificare l'opzione **-ipf** .  
   
     ```  
-    dta -E -D DatabaseName -ip –ipf –n 2000 -s SessionName2  
+    dta -E -D DatabaseName -ip -ipf -n 2000 -s SessionName2  
     ```  
   
 ##### <a name="to-tune-a-database-by-using-a-workload-and-dta-utility-default-settings"></a>Per ottimizzare un database utilizzando un carico di lavoro e le impostazioni predefinite dell'utilità dta  

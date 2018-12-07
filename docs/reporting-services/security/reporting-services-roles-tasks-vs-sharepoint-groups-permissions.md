@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 429f1dbb-183a-4097-bd1b-693da9fe7a36
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 64339c62cfe6d37e1117febd797ae43d6d43bdc2
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: b099941ce9b51583647cd29d0114cd795bf051ba
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813298"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52397195"
 ---
 # <a name="reporting-services-roles-tasks-vs-sharepoint-groups-permissions"></a>Ruoli-attività di Reporting Services e autorizzazioni-gruppi di SharePoint
   In questo argomento vengono confrontate le funzionalità di autorizzazione basata su ruoli e attività nella modalità nativa di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] con le funzionalità di sicurezza dei prodotti SharePoint. In questo argomento vengono confrontate la terminologia e le caratteristiche di ruoli, attività, gruppi di SharePoint, livelli di autorizzazione e autorizzazioni.  
@@ -47,9 +47,9 @@ ms.locfileid: "51813298"
   
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Modalità nativa|SharePoint|  
 |---------------------------------------------|----------------|  
-|**Ruolo** : ad esempio "Gestione contenuto".|**Gruppo** : ad esempio il gruppo predefinito "Visualizzatori".|  
-|---|**Gruppo livelli di autorizzazione** : ad esempio "Solo visualizzazione" per il gruppo "Visualizzatori".|  
-|**Attività** : ad esempio "Gestione di report".|**Autorizzazioni** : ad esempio, nel gruppo "Solo visualizzazione" sono presenti autorizzazioni correlate all'elenco come Visualizzazione elementi, Visualizzazione versioni e Visualizzazione pagine applicazione.|  
+|**Ruolo**: ad esempio "Gestione contenuto".|**Gruppo**: ad esempio il gruppo predefinito "Visualizzatori".|  
+|---|**Gruppo livelli di autorizzazione**: ad esempio "Solo visualizzazione" per il gruppo "Visualizzatori".|  
+|**Attività**: ad esempio "Gestione di report".|**Autorizzazioni**: ad esempio, nel gruppo "Solo visualizzazione" sono presenti autorizzazioni correlate all'elenco come Visualizzazione elementi, Visualizzazione versioni e Visualizzazione pagine applicazione.|  
   
  Per ulteriori informazioni sulle autorizzazioni di SharePoint, vedere [Livelli di autorizzazione e autorizzazioni](https://office.microsoft.com/windows-sharepoint-services-help/permission-levels-and-permissions-HA010100149.aspx) e [Determinare i livelli di autorizzazione e i gruppi in SharePoint 2013](https://technet.microsoft.com/library/cc262690.aspx).  
   

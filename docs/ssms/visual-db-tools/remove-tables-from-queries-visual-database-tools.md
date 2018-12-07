@@ -16,16 +16,16 @@ ms.assetid: 8fea0b4f-99b7-4050-8d6f-a97ffb839619
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ba7a8f577f9b05007e8b6b9a9477e1b3ffd6b441
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: f0d0304757cb8b724a93ce02d03a889bb27e453a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701825"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52532797"
 ---
 # <a name="remove-tables-from-queries-visual-database-tools"></a>Rimozione di tabelle da query (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-Dalla query è possibile rimuovere una tabella o qualsiasi altro oggetto con valori di tabella.  
+È possibile rimuovere una tabella o qualsiasi altro oggetto con valori di tabella dalla query.  
   
 > [!NOTE]  
 > Se viene rimossa una tabella o un oggetto con valori di tabella, la rimozione non riguarderà in alcun modo i dati contenuti nel database, ma solo la query corrente. Per altre informazioni sulla rimozione di una tabella da un database, vedere [Procedura: eliminare tabelle da un database (Visual Database Tools)](https://msdn.microsoft.com/ca6aa3e9-9885-44c3-bafc-aec441fd97ec).  
@@ -34,7 +34,7 @@ Dalla query è possibile rimuovere una tabella o qualsiasi altro oggetto con val
   
 -   Nel **riquadro diagramma**selezionare la tabella, la vista, la funzione definita dall'utente, il sinonimo o la query desiderata e premere CANC oppure fare clic con il pulsante destro del mouse sull'oggetto e scegliere **Rimuovi** nella finestra di dialogo visualizzata. È possibile selezionare e rimuovere più oggetti contemporaneamente.  
   
-    -oppure-  
+    oppure  
   
 -   Rimuovere qualsiasi riferimento all'oggetto nel **riquadro SQL**.  
   

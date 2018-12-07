@@ -23,12 +23,12 @@ ms.assetid: 67683027-2b0f-47aa-b223-604731af8b4d
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: d98dfd2c96322a2ba1b042a0edfcff8f7e6fb518
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: a87156a7987b3386f452944c49076d47fdaffa59
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51696679"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52401326"
 ---
 # <a name="create-event-session-transact-sql"></a>CREATE EVENT SESSION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -39,8 +39,7 @@ ms.locfileid: "51696679"
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
-  
+```    
 CREATE EVENT SESSION event_session_name  
 ON SERVER  
 {  
@@ -230,7 +229,7 @@ ON SERVER
  Specifica se avviare automaticamente questa sessione dell'evento all'avvio di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!NOTE]  
->  Se STARTUP_STATE = ON, la sessione dell'evento viene avviata solo se SQL Server viene arrestato e successivamente riavviato.  
+> Se `STARTUP_STATE = ON`, la sessione dell'evento verrà avviata solo se [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene arrestato e quindi riavviato.  
   
  ON  
  La sessione dell'evento ha inizio all'avvio.  
@@ -238,16 +237,16 @@ ON SERVER
  **OFF**  
  La sessione dell'evento non ha inizio all'avvio.  
   
-## <a name="remarks"></a>Remarks  
- L'ordine di precedenza degli operatori logici prevede NOT come operatore con precedenza massima, seguito da AND e quindi da OR.  
+## <a name="remarks"></a>Osservazioni  
+L'ordine di precedenza degli operatori logici prevede `NOT` come operatore con precedenza massima, seguito da `AND` e quindi da `OR`.  
   
-## <a name="permissions"></a>Permissions  
- È richiesta l'autorizzazione ALTER ANY EVENT SESSION.  
+## <a name="permissions"></a>Autorizzazioni  
+È necessaria l'autorizzazione `ALTER ANY EVENT SESSION`.  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene illustrato come creare una sessione dell'evento denominata `test_session`. In questo esempio vengono aggiunti due eventi e viene utilizzata la destinazione Analisi eventi per Windows.  
   
-```  
+```sql  
 IF EXISTS(SELECT * FROM sys.server_event_sessions WHERE name='test_session')  
     DROP EVENT session test_session ON SERVER;  
 GO  

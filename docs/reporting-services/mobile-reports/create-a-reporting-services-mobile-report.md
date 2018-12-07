@@ -8,15 +8,15 @@ ms.topic: conceptual
 ms.assetid: e84dc855-aede-4fb4-b721-e6d8787961f4
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5f074f3bbdb3b3a7920f1e3ad86270a6bf51059b
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: b3fd0fc3530ec35da61e2314ef7a80a58d9bdd7d
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50030200"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52710702"
 ---
 # <a name="create-a-reporting-services-mobile-report"></a>Creare un report per dispositivi mobili di Reporting Services
-Con SQL Server Mobile Report Publisher è possibile creare rapidamente report per dispositivi mobili di SQL Server 2016 Reporting Services che si adattano alle dimensioni di qualsiasi schermo, in un'area di progettazione con righe e colonne della griglia regolabili ed elementi flessibili del report per dispositivi mobili.  
+Con SQL Server Mobile Report Publisher è possibile creare rapidamente report per dispositivi mobili di SQL Server Reporting Services che si adattano alle dimensioni di qualsiasi schermo, in un'area di progettazione con righe e colonne della griglia di dimensioni variabili ed elementi flessibili dei report per dispositivi mobili.  
   
 La prima volta che si crea un report per dispositivi mobili è possibile installare SQL Server Mobile Report Publisher nel computer locale dal portale Web di Reporting Services. In alternativa, è possibile installarlo dall' [Area download Microsoft](https://go.microsoft.com/fwlink/?LinkID=733527). Successivamente, è possibile avviarlo dal portale Web o in locale.   
     
@@ -62,7 +62,7 @@ La prima volta che si crea un report per dispositivi mobili è possibile install
   
 11. A questo punto è necessario salvare il report. Selezionare l'icona Salva nell'angolo in alto a sinistra e quindi **Salva in locale** o **Salva nel server**.  
   
-   Il salvataggio in un server richiede l'accesso a un server di report di SQL Server 2016 Reporting Services.  
+   Per il salvataggio in un server è necessario accedere a un server di report di SQL Server Reporting Services.  
      
    ### <a name="see-also"></a>Vedere anche  
      

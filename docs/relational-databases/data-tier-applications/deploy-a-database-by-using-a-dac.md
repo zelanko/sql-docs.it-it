@@ -20,12 +20,12 @@ ms.assetid: 08c506e8-4ba0-4a19-a066-6e6a5c420539
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ba87cc9564183c45f4c00765f05bbaa363d231ce
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: ff2967c06b32540b92f40007f66ebe346eedca40
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51673350"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52540388"
 ---
 # <a name="deploy-a-database-by-using-a-dac"></a>Distribuire un database tramite un'applicazione livello dati
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "51673350"
 ###  <a name="Security"></a> Sicurezza  
  Per migliorare la sicurezza, gli account di accesso dell'autenticazione di SQL Server vengono archiviati in un file BACPAC dell'applicazione livello dati senza password. Quando il file BACPAC viene importato, l'account di accesso viene creato come account disabilitato con una password generata. Per abilitare gli account di accesso, è necessario accedere usando un account che dispone dell'autorizzazione ALTER ANY LOGIN e usare ALTER LOGIN per abilitare l'account di accesso e assegnare una nuova password che può essere comunicata all'utente. Questa operazione non è necessaria per gli account di accesso dell'autenticazione di Windows, in quanto le relative password non sono gestite da SQL Server.  
   
-#### <a name="permissions"></a>Permissions  
+#### <a name="permissions"></a>Autorizzazioni  
  Per la procedura guidata sono richieste autorizzazioni di esportazione dell'applicazione livello dati sul database di origine. Per l'account di accesso sono richieste almeno le autorizzazioni ALTER ANY LOGIN e VIEW DEFINITION nell'ambito del database, nonché le autorizzazioni SELECT su **sys.sql_expression_dependencies**. L'esportazione di un'applicazione livello dati può essere effettuata da membri del ruolo predefinito del server securityadmin che sono anche membri del ruolo predefinito del database database_owner nel database dal cui viene esportata l'applicazione livello dati. Possono esportare un'applicazione livello dati anche i membri del ruolo predefinito del server sysadmin o dell'account amministratore di sistema SQL Server predefinito denominato **sa** .  
   
  Per la procedura guidata sono richieste autorizzazioni di importazione dell'applicazione livello dati sull'istanza o sul server di destinazione. L'account di accesso deve essere un membro del ruolo predefinito del server **sysadmin** , **serveradmin** o **dbcreator** con autorizzazioni ALTER ANY LOGIN. È anche possibile importare un'applicazione livello dati usando l'account dell'amministratore di sistema di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] predefinito denominato **sa** . L'importazione di un'applicazione livello dati con gli account di accesso in [!INCLUDE[ssSDS](../../includes/sssds-md.md)] richiede l'appartenenza al ruolo loginmanager o serveradmin. L'importazione di un'applicazione livello dati senza account di accesso in [!INCLUDE[ssSDS](../../includes/sssds-md.md)] richiede l'appartenenza al ruolo dbmanager o serveradmin.  
@@ -69,7 +69,7 @@ ms.locfileid: "51673350"
   
 3.  Espandere il nodo di **Database** .  
   
-4.  Fare clic con il pulsante destro del mouse sul database che si desidera distribuire, selezionare **Attività**, quindi scegliere **Distribuisci database in SQL Azure**  
+4.  Fare clic con il pulsante destro del mouse sul database che si vuole distribuire, selezionare **Attività** e quindi scegliere **Distribuisci database in SQL Azure**.  
   
 5.  Completare le finestre di dialogo della procedura guidata:  
   
@@ -90,24 +90,24 @@ ms.locfileid: "51673350"
   
 -   **Non visualizzare più questa pagina** Selezionare la casella di controllo per evitare che la pagina Introduzione venga visualizzata nuovamente in futuro.  
   
--   **Avanti** : consente di passare alla pagina **Impostazioni di distribuzione** .  
+-   **Avanti**: consente di passare alla pagina **Impostazioni di distribuzione**.  
   
--   **Annulla** : annulla l'operazione e chiude la procedura guidata.  
+-   **Annulla**: annulla l'operazione e chiude la procedura guidata.  
   
 ##  <a name="Deployment_settings"></a> Pagina Impostazioni di distribuzione  
  Usare questa pagina per specificare il server di destinazione e fornire i dettagli sul nuovo database.  
   
  **Host locale:**  
   
--   **Connessione server** : specificare i dettagli della connessione al server, quindi fare clic su **Connetti** per verificare la connessione.  
+-   **Connessione server**: specificare i dettagli della connessione al server e quindi fare clic su **Connetti** per verificare la connessione.  
   
--   **Nome nuovo database** : specificare un nome per il nuovo database.  
+-   **Nome nuovo database**: specificare un nome per il nuovo database.  
   
- **[!INCLUDE[ssSDS](../../includes/sssds-md.md)] :**  
+ **Impostazioni del database [!INCLUDE[ssSDS](../../includes/sssds-md.md)]**:  
   
--   **[!INCLUDE[ssSDS](../../includes/sssds-md.md)]**  – Select the  of [!INCLUDE[ssSDS](../../includes/sssds-md.md)] dal menu a discesa.  
+-   **Edizione di [!INCLUDE[ssSDS](../../includes/sssds-md.md)]**: selezionare l'edizione di [!INCLUDE[ssSDS](../../includes/sssds-md.md)] nel menu a discesa.  
   
--   **Dimensioni massime database** : selezionare le dimensioni massime del database dal menu a discesa.  
+-   **Dimensioni massime database**: selezionare le dimensioni massime del database dal menu a discesa.  
   
  **Altre impostazioni:**  
   

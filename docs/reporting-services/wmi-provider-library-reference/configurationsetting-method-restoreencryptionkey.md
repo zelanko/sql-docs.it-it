@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 37e949f5-15af-4858-848a-f482ee94fcd9
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: cf89b1839fe17df60d97719482c4418f7234eeff
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6d19ecb9c4f14c0f9750a7344a6c2c442785cbb0
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47692232"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52416138"
 ---
 # <a name="configurationsetting-method---restoreencryptionkey"></a>Metodo di ConfigurationSetting - RestoreEncryptionKey
   Riapplica la chiave di crittografia specificata al database del server di report.  
@@ -58,7 +58,7 @@ public void RestoreEncryptionKey(out Byte[] KeyFile, out Int32 Length,
  Restituisce un *HRESULT* che indica l'esito positivo o negativo della chiamata al metodo. Un valore pari a 0 indica l'esito positivo della chiamata al metodo. Un valore diverso da zero indica che si è verificato un errore.  
   
 ## <a name="remarks"></a>Remarks  
- Se nel database del server di report esiste già una voce per il server di report , viene eliminata. La nuova voce viene quindi creata utilizzando la chiave di crittografia specificata e la chiave pubblica del server di report.  
+ Se nel database del server di report esiste già una voce per il server di report , viene eliminata. La nuova voce viene quindi creata usando la chiave di crittografia specificata e la chiave pubblica del server di report.  
   
  Il metodo è più efficace se viene chiamato dopo il metodo [DeleteEncryptionKey](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-deleteencryptionkey.md) , che svuota l'elenco delle chiavi di crittografia.  
   

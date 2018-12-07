@@ -19,12 +19,12 @@ ms.assetid: c1e81ad6-628b-46d4-9b09-d2866517b6ca
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ddb4cc58fed64ddb755e797095d72a31b85885a0
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 35b990e553116d88764f4fa995935bc4ba90b22d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51642008"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512898"
 ---
 # <a name="integration-services-ssis-variables"></a>Variabili di Integration Services (SSIS)
   Nelle variabili vengono archiviati valori che possono essere usati in fase di esecuzione da un pacchetto di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] e dai relativi contenitori, attività e gestori di eventi. Anche gli script nell'attività Script e nel componente script possono utilizzare le variabili. I vincoli di precedenza che definiscono la sequenza delle attività e dei contenitori in un flusso di lavoro possono utilizzare variabili quando le definizioni di vincolo includono espressioni.  
@@ -46,7 +46,7 @@ ms.locfileid: "51642008"
 ## <a name="system-and-user-defined-variables"></a>Variabili definite dall'utente e variabili di sistema  
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] supporta due tipi di variabili: variabili definite dall'utente e variabili di sistema. Le variabili definite dall'utente vengono definite dagli sviluppatori dei pacchetti, mentre quelle di sistema sono definite da [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. È possibile creare un numero illimitato di variabili definite dall'utente, ma non è possibile creare ulteriori variabili di sistema.  
   
- Tutte le variabili, di sistema e definite dall'utente, possono essere utilizzate nelle associazioni di parametro utilizzate dall'attività Esegui SQL per il mapping variabili a parametri nelle istruzioni SQL. Per altre informazioni, vedere [Attività Esegui SQL](../integration-services/control-flow/execute-sql-task.md) e [Parametri e codici restituiti nell'attività Esegui SQL](https://msdn.microsoft.com/library/a3ca65e8-65cf-4272-9a81-765a706b8663).  
+ Tutte le variabili, sia di sistema che definite dall'utente, possono essere usate nelle associazioni di parametro con cui l'attività Esegui SQL esegue il mapping delle variabili ai parametri nelle istruzioni SQL. Per altre informazioni, vedere [Attività Esegui SQL](../integration-services/control-flow/execute-sql-task.md) e [Parametri e codici restituiti nell'attività Esegui SQL](https://msdn.microsoft.com/library/a3ca65e8-65cf-4272-9a81-765a706b8663).  
   
 > [!NOTE]  
 >  Per i nomi delle variabili di sistema e delle variabili definite dall'utente viene fatta distinzione tra maiuscole e minuscole.  
@@ -221,7 +221,7 @@ Usare la finestra di dialogo **Aggiungi variabile** per specificare le propriet�
   
 4.  Selezionare la variabile che si desidera eliminare e quindi fare clic su **Elimina variabile**.  
   
-     Se la variabile non è visualizzata nella finestra Variabili, fare clic su **Opzioni griglia** , quindi selezionare **Mostra variabili di tutti gli ambiti**.  
+     Se la variabile non viene visualizzata nella finestra Variabili, fare clic su **Opzioni griglia** e quindi selezionare **Mostra variabili di tutti gli ambiti**.  
   
 5.  Se viene visualizzata la finestra di dialogo **Conferma eliminazione variabili** , fare clic su **Sì** per confermare.  
   
@@ -237,7 +237,7 @@ Usare la finestra di dialogo **Aggiungi variabile** per specificare le propriet�
   
 4.  Selezionare la variabile e quindi fare clic su **Sposta variabile**.  
   
-     Se la variabile non è visualizzata nella finestra Variabili, fare clic su **Opzioni griglia** , quindi selezionare **Mostra variabili di tutti gli ambiti**.  
+     Se la variabile non viene visualizzata nella finestra Variabili, fare clic su **Opzioni griglia** e quindi selezionare **Mostra variabili di tutti gli ambiti**.  
   
 5.  Nella finestra di dialogo **Seleziona nuovo ambito** selezionare il pacchetto oppure un contenitore, un'attività o un gestore eventi del pacchetto per modificare l'ambito della variabile.  
   

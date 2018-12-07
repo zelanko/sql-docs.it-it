@@ -11,12 +11,12 @@ ms.assetid: cab1c662-5d40-4c16-9f5c-36ff9608810b
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 4ca842edd22eb0b4eadd7a44ededcd30530654f9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 42d00e95ad228d38b3984cb38a3ef5f976a2dad6
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47644479"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52414118"
 ---
 # <a name="setting-properties-for-master-data-services-add-in-for-excel"></a>Impostazione delle proprietà per il componente aggiuntivo Master Data Services per Excel
 
@@ -42,7 +42,7 @@ ms.locfileid: "47644479"
 |Dati: Filtri|Numero massimo di righe|Selezionare la soglia per il numero di righe da caricare, superata la quale verrà generato un avviso di filtro.|  
 |Dati: Filtri|Numero massimo di colonne|Selezionare la soglia per il numero di colonne da caricare, superata la quale verrà generato un avviso di filtro.|  
 |Dati: Formato cella|Modifica il colore quando i valori dell'attributo vengono modificati|Fare clic per specificare che il colore di una cella verrà modificato se si modifica il valore dell'attributo in quella cella quando si aggiorna la tabella dei componenti aggiuntivi di Excel con i nuovi dati del repository MDS.|  
-|Dati: Formato cella|Modifica il colore quando i membri vengono aggiunti|Fare clic per specificare che il colore delle celle di una riga verrà modificato se si aggiunge un nuovo membro alla riga durante l'aggiornamento della tabella dei componenti aggiuntivi di Excel con i nuovi dati del repository MDS.|  
+|Dati: Formato cella|Modifica il colore quando i membri vengono aggiunti|Fare clic per specificare che il colore delle celle di una riga verrà modificato in caso di aggiunta di un nuovo membro alla riga durante l'aggiornamento della tabella dei componenti aggiuntivi di Excel con i nuovi dati del repository MDS.|  
 |Dati: Formato cella|Formato di visualizzazione|Selezionare il formato preferito per visualizzare i valori degli attributi basati su dominio. Le opzioni sono Codice {Name}, Codice e Nome {Code}.|  
   
   

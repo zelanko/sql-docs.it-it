@@ -40,12 +40,12 @@ ms.assetid: 7edc21d4-ccf3-42a9-84c0-3f70333efce6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f0e9e904da503db5e88cc873c376f4ccd59da06f
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 0d0f86f70a4cd496c4f4f32dd0a88077337cf645
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51678020"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52505141"
 ---
 # <a name="configure-database-mail"></a>Configurare Posta elettronica database
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -104,11 +104,11 @@ ms.locfileid: "51678020"
 ###  <a name="Welcome"></a> Pagina introduttiva  
  In questa pagina vengono illustrati i passaggi necessari per configurare Posta elettronica database.  
   
- **Non visualizzare più questa pagina** : selezionare questa opzione per non visualizzare più la pagina introduttiva.  
+ **Non visualizzare più questa pagina**: selezionare questa opzione per non visualizzare più la pagina introduttiva.  
   
- **Avanti** : consente di passare alla pagina **Selezionare un'attività di configurazione** .  
+ **Avanti**: consente di passare alla pagina **Selezionare un'attività di configurazione** .  
   
- **Annulla** : consente di terminare la procedura guidata senza configurare Posta elettronica database  
+ **Annulla**: consente di terminare la procedura guidata senza configurare Posta elettronica database  
   
  [Configurazione guidata Posta elettronica database](#DBWizard)  
   

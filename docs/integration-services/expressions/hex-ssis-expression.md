@@ -14,12 +14,12 @@ ms.assetid: f5d471ee-aeef-421c-b6e1-55b9676c3842
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4a1f1dd3e474845716b6fe9e116dea41b0ce7465
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7b17dbcb21362a60ed9076134256ec99f3c264a8
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47791229"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52517994"
 ---
 # <a name="hex-ssis-expression"></a>HEX (espressione SSIS)
   Viene restituita una stringa che rappresenta il valore esadecimale di un valore integer.  
@@ -38,14 +38,14 @@ HEX(integer_expression)
 ## <a name="result-types"></a>Tipi restituiti  
  DT_WSTR  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  HEX restituisce Null se *integer_expression* è Null.  
   
  L'argomento *integer_expression* argomento deve valutare un numero intero. Per altre informazioni, vedere [Tipi di dati di Integration Services](../../integration-services/data-flow/integration-services-data-types.md).  
   
  Il risultato restituito non include qualificatori, ad esempio il prefisso 0x. Per includere un prefisso, utilizzare l'operatore di concatenazione (+). Per altre informazioni, vedere [+ &#40;concatenazione&#41; &#40;espressione SSIS&#41;](../../integration-services/expressions/concatenate-ssis-expression.md).  
   
- Le lettere da A a F, utilizzate nella notazione esadecimale, vengono visualizzate in maiuscolo.  
+ Le lettere da A a F, usate nella notazione esadecimale, vengono visualizzate in maiuscolo.  
   
  La lunghezza della stringa risultante per i tipi di dati integer è la seguente:  
   

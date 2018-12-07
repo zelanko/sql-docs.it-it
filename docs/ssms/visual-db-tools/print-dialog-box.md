@@ -13,12 +13,12 @@ ms.assetid: 1811cb9e-3791-414d-b8c9-1d61657707f8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5b49e683b948443533019ce23c91bacfc04165c3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c265d14a78f89cf90e7aaa572fa584a5aa69f96f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47689339"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52520214"
 ---
 # <a name="print-dialog-box"></a>Finestra di dialogo Stampa
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -29,7 +29,7 @@ Mediante le opzioni disponibili nella finestra di dialogo **Stampa** è possibil
 Specifica la stampante. Selezionare una stampante dall'elenco. La stampante selezionata diviene la stampante predefinita fino alla chiusura di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o alla selezione di un'altra stampante. Le informazioni visualizzate nei campi sotto l'elenco si applicano alla stampante selezionata.  
   
 **Stato**  
-Descrive la stato della stampante selezionata, ad esempio, occupata o pronta.  
+Descrive la stato della stampante selezionata, che può essere ad esempio occupata o pronta.  
   
 **Tipo**  
 Identifica la stampante selezionata.  

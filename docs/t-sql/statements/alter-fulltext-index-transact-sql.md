@@ -22,12 +22,12 @@ ms.assetid: b6fbe9e6-3033-4d1b-b6bf-1437baeefec3
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: f824f7fec40cf99b55ff97382269413ae82b5c83
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2db3b6241096501190e2d1c8e3978bd349fed7a3
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47662099"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52526203"
 ---
 # <a name="alter-fulltext-index-transact-sql"></a>ALTER FULLTEXT INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -82,7 +82,7 @@ ALTER FULLTEXT INDEX ON table_name
 >  Per informazioni sull'interazione del rilevamento delle modifiche e del parametro WITH NO POPULATION, vedere la sezione "Osservazioni" più avanti in questo argomento.  
   
  MANUAL  
- Specifica che le modifiche rilevate verranno propagate manualmente chiamando l'istruzione ALTER FULLTEXT INDEX … START UPDATE POPULATION [!INCLUDE[tsql](../../includes/tsql-md.md)] (*popolamento manuale*). Per chiamare questa istruzione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] periodicamente, è possibile utilizzare [!INCLUDE[tsql](../../includes/tsql-md.md)] Agent.  
+ Specifica che le modifiche rilevate verranno propagate manualmente chiamando l'istruzione ALTER FULLTEXT INDEX ... START UPDATE POPULATION [!INCLUDE[tsql](../../includes/tsql-md.md)] (*popolamento manuale*). Per chiamare questa istruzione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] periodicamente, è possibile utilizzare [!INCLUDE[tsql](../../includes/tsql-md.md)] Agent.  
   
  AUTO  
  Specifica che le modifiche rilevate verranno propagate automaticamente quando i dati nella tabella di base vengono modificati (*popolamento automatico*). Sebbene le modifiche vengano propagate automaticamente, tali modifiche potrebbero non risultare immediatamente nell'indice full-text. AUTO è l'impostazione predefinita.  
@@ -117,7 +117,7 @@ ALTER FULLTEXT INDEX ON table_name
   
  Se l'argomento *language_term* viene specificato come stringa, corrisponde al valore della colonna **alias** nella tabella di sistema **syslanguages**. La stringa deve essere racchiusa tra virgolette singole chiuse, come in '*language_term*'. Se l'argomento *language_term* viene specificato come valore intero, corrisponde all'LCID effettivo che identifica la lingua. Se si specifica un valore esadecimale, *language_term* è 0x seguito dal valore esadecimale dell'LCID. Il valore esadecimale deve essere composto al massimo da otto cifre, zero iniziali inclusi.  
   
- Se il valore è in formato DBCS (Double-Byte Character Set), verrà convertito in Unicode da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Se il valore è in formato DBCS (Double-Byte Character Set), [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lo convertirà in Unicode.  
   
  Per la lingua specificata in *language_term* è necessario abilitare risorse quali word breaker e stemmer. Se tali risorse non supportano la lingua specificata, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituirà un errore.  
   
@@ -128,7 +128,7 @@ ALTER FULLTEXT INDEX ON table_name
   
  Consente di creare la frase chiave aggiuntiva e gli indici di somiglianza dei documenti che fanno parte dell'indicizzazione semantica statistica. Per altre informazioni, vedere [Ricerca semantica &#40;SQL Server&#41;](../../relational-databases/search/semantic-search-sql-server.md).  
   
- [ **,***...n*]  
+ [ **,**_...n_]  
  Indica che è possibile specificare più colonne per la clausola ADD, ALTER o DROP. Se si specificano più colonne, utilizzare la virgola come separatore.  
   
  WITH NO POPULATION  
@@ -185,7 +185,7 @@ ALTER FULLTEXT INDEX ON table_name
  Modifica l'elenco delle proprietà di ricerca associate all'indice, se presente.  
   
  OFF  
- Specifica che all'indice full-text non deve essere associato alcun elenco di proprietà. Quando si disattiva l'elenco delle proprietà di ricerca di un indice full-text (ALTER FULLTEXT INDEX … SET SEARCH PROPERTY LIST OFF), non sarà più possibile eseguire la ricerca delle proprietà nella tabella di base.  
+ Specifica che all'indice full-text non deve essere associato alcun elenco di proprietà. Quando si disattiva l'elenco delle proprietà di ricerca di un indice full-text (ALTER FULLTEXT INDEX ... SET SEARCH PROPERTY LIST OFF), non sarà più possibile eseguire la ricerca delle proprietà nella tabella di base.  
   
  Per impostazione predefinita, quando si disattiva un elenco delle proprietà di ricerca esistente, l'indice full-text viene ripopolato automaticamente. Se si specifica WITH NO POPULATION quando si disattiva l'elenco delle proprietà di ricerca, il ripopolamento automatico non ha luogo. È tuttavia consigliabile eseguire un popolamento completo su questo indice full-text. Il ripopolamento dell'indice full-text comporta la rimozione dei metadati specifici di ogni proprietà di ricerca eliminata, rendendo più piccolo e più efficiente l'indice full-text.  
   
@@ -285,7 +285,7 @@ ALTER FULLTEXT INDEX ON table_name
     > [!NOTE]  
     >  Potrebbe essere necessario eseguire la ricompilazione per un elenco delle proprietà di ricerca diverso, ad esempio `spl_2`.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  L'utente deve avere l'autorizzazione ALTER per la tabella o la vista indicizzata oppure deve essere un membro del ruolo predefinito del server **sysadmin** o del ruolo predefinito del database **db_ddladmin** o **db_owner**.  
   
  Se si specifica SET STOPLIST, l'utente deve disporre dell'autorizzazione REFERENCES per l'elenco di parole non significative. Se si specifica SET SEARCH PROPERTY LIST, l'utente deve disporre dell'autorizzazione REFERENCES per l'elenco delle proprietà di ricerca. Il proprietario dell'elenco di parole non significative o dell'elenco delle proprietà di ricerca specificato può concedere l'autorizzazione REFERENCES, se il proprietario dispone delle autorizzazioni ALTER FULLTEXT CATALOG.  

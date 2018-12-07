@@ -11,12 +11,12 @@ ms.assetid: 543e7ce7-8639-4281-8a91-85314755e5de
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c51fde6d4fa7587b4fd305d1744934d42e76bad9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ca62b3b637f5983f7448a99fd9073f60a509a809
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47732829"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52526058"
 ---
 # <a name="how-to-outline-and-add-snippets-to-transact-sql-script"></a>Procedura: Struttura e aggiunta di frammenti di codice allo script Transact-SQL
 In SQL Server Data Tools è disponibile una libreria del codice contenente frammenti di codice che è possibile inserire direttamente nell'applicazione. Ogni frammento consente di eseguire un'attività di script completa, quale la creazione di una funzione, di una tabella, di un trigger, di un indice, di una vista, di un tipo di dati definito dall'utente e così via. L'inserimento di un frammento nel codice di origine può essere eseguito con pochi clic del mouse. Questi frammenti consentono di aumentare la produttività riducendo il tempo necessario per digitare.  
@@ -42,7 +42,7 @@ Per impostazione predefinita, nell'Editor Transact\-SQL viene visualizzato tutto
   
 ### <a name="to-outline-code"></a>Per strutturare il codice  
   
-1.  Si noti il segno **–** accanto all'istruzione CREATE TABLE. Fare clic sul segno **-** accanto a una sezione nello script per nasconderla.  
+1.  Si noti il segno **-** accanto all'istruzione CREATE TABLE. Fare clic sul segno **-** accanto a una sezione nello script per nasconderla.  
   
 2.  Fare clic con il pulsante destro del mouse sull'Editor \-SQL e selezionare **Struttura**, quindi **Rimuovi struttura** per rimuovere le informazioni sulla struttura senza influire sul codice sottostante nell'editor.  
   

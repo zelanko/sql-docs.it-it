@@ -13,12 +13,12 @@ ms.assetid: c0b7d7c8-b878-4b7f-8120-d0c6917b583f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 7be978540b673578fb9ca401f25dfab053f4f7e3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2e8a6d88387fb0674cd8d39f44a30358009e44f9
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47854175"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52503975"
 ---
 # <a name="connect-to-microsoft-azure-storage-restore"></a>Connetti ad Archiviazione di Microsoft Azure (Ripristino)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "47854175"
  Specificare la chiave di accesso dell'account di archiviazione di Windows Azure.  
   
  Casella di controllo**Usa endpoint sicuri (HTTPS)**   
- Selezionare questa opzione per stabilire una connessione protetta al servizio di archiviazione Windows Azure (consigliato).  
+ Selezionare questa opzione per stabilire una connessione sicura alla risorsa di archiviazione di Windows Azure (scelta consigliata).  
   
  Casella di controllo**Salva chiave account**   
  Selezionare questa casella di controllo se si desidera memorizzare in SQL Server la chiave di accesso per l'account di archiviazione.  

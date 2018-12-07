@@ -14,12 +14,12 @@ ms.assetid: 474c365b-c451-4b07-b636-1653439f4b1f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 65466a1750ecc340ed10ae961fa1a46d05a22192
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: c491a67b55db4a730db2bb7fcd8977162657e516
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606811"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52410908"
 ---
 # <a name="troubleshoot-connecting-to-the-sql-server-database-engine"></a>Risolvere i problemi di connessione al motore di database di SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +65,7 @@ Questo errore indica in genere che non è possibile trovare il computer SQL Serv
     3.  Viene visualizzato un messaggio simile a **Il server è in attesa su [ 'qualsiasi' \<ipv4> 1433]**. Questo messaggio indica che l'istanza di SQL Server è in attesa su tutti gli indirizzi IP nel computer in uso (per la versione IP 4) ed è in attesa sulla porta TCP 1433. La porta TCP 1433 è in genere la porta usata dal motore di database. Poiché una porta può essere usata da una sola istanza di SQL Server, in presenza di più istanze di SQL Server installate è necessario che alcune istanze usino altri numeri di porta. Prendere nota del numero di porta usato dall'istanza di [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] a cui si sta cercando di connettersi. 
 
     >    [!NOTE] 
-    >    Verrà probabilmente indicato l'indirizzo IP 127.0.0.1. Si tratta dell'indirizzo della scheda di loopback cui è possibile connettersi soltanto da processi nello stesso computer. Può essere utile per la risoluzione dei problemi, ma non può essere usato per connettersi da un altro computer.
+    >    Verrà probabilmente indicato l'indirizzo IP 127.0.0.1. Si tratta dell'indirizzo della scheda di loopback cui è possibile connettersi soltanto da processi nello stesso computer. Può essere utile per la risoluzione dei problemi, ma non può essere usato per la connessione da un altro computer.
 
 ## <a name="enable-protocols"></a>Abilitare i protocolli
 

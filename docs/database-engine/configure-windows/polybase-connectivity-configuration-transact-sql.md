@@ -14,12 +14,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: b877040c532a0ccb7911e4770d33f9e5f7a709c5
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: aa90cb3f34b3aecd236a832a62144914ac2dd249
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51602451"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52415251"
 ---
 # <a name="polybase-connectivity-configuration-transact-sql"></a>Configurazione della connettività di PolyBase (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-pdw-md.md)]
@@ -84,7 +84,7 @@ RECONFIGURE
  **RECONFIGURE**  
  Aggiorna il valore di esecuzione (run_value) in modo che corrisponda al valore di configurazione (config_value). Vedere [Set di risultati](#ResultSets) per le definizioni di run_value e config_value. Il nuovo valore di configurazione impostato da sp_configure diventa effettivo solo dopo l'impostazione del valore di esecuzione con l'istruzione RECONFIGURE.  
   
- Dopo l'esecuzione di RECONFIGURE è necessario arrestare e riavviare il servizio SQL Server. Si noti che con l'arresto del servizio SQL Server verranno arrestati automaticamente i due servizi aggiuntivi Motore PolyBase e Polybase Data Movement. Dopo il riavvio del servizio SQL Server, riavviare questi due servizi, che non si riavviano automaticamente.  
+ Dopo l'esecuzione di RECONFIGURE è necessario arrestare e riavviare il servizio SQL Server. Si noti che con l'arresto del servizio SQL Server verranno arrestati automaticamente i due servizi aggiuntivi Motore PolyBase e Polybase Data Movement. Dopo il riavvio del servizio SQL Server, riavviare questi due servizi, che non vengono riavviati automaticamente.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o 1 (esito negativo)  
@@ -107,7 +107,7 @@ In [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], dopo aver eseguito RECONFIGURE
 ## <a name="limitations-and-restrictions"></a>Limitazioni e restrizioni  
  L'istruzione RECONFIGURE non è consentita in una transazione esplicita o implicita.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Tutti gli utenti possono eseguire **sp_configure** senza parametri o con il parametro @configname .  
   
  Per modificare un valore di configurazione o per eseguire RECONFIGURE, è necessaria l'autorizzazione a livello di server **ALTER SETTINGS** o l'appartenenza al ruolo predefinito del server **sysadmin** .  

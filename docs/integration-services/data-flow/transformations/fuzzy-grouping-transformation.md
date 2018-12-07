@@ -29,12 +29,12 @@ ms.assetid: e43f17bd-9d13-4a8f-9f29-cce44cac1025
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6dd2866ef242ad51a90de24051b5f39c3f68a8f7
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 48b6e5a48822401f543a494b8fd59638c4ea9609
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51638902"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52540879"
 ---
 # <a name="fuzzy-grouping-transformation"></a>Raggruppamento fuzzy - trasformazione
   La trasformazione Raggruppamento fuzzy consente di eseguire attività di pulizia dei dati identificando le righe che con maggiore probabilità sono duplicate e selezionando una riga canonica di dati da utilizzare per la standardizzazione dei dati.  
@@ -44,7 +44,7 @@ ms.locfileid: "51638902"
   
  La trasformazione Raggruppamento fuzzy richiede la connessione a un'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] per la creazione delle tabelle temporanee di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] necessarie all'algoritmo di trasformazione. La connessione deve corrispondere a un utente autorizzato che dispone dell'autorizzazione per la creazione di tabelle nel database.  
   
- Per configurare la trasformazione, è necessario selezionare le colonne di input da utilizzare per l'identificazione di duplicati e il tipo di corrispondenza, fuzzy o esatta, per ogni colonna. Con una corrispondenza esatta vengono raggruppate solo le righe della colonna contenenti gli stessi valori. Questo tipo di corrispondenza può essere applicato alle colonne con qualsiasi tipo di dati di [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] , ad eccezione di DT_TEXT, DT_NTEXT e DT_IMAGE. Con una corrispondenza fuzzy vengono raggruppate le righe contenenti valori simili. Questo tipo di corrispondenza è basato su un punteggio di somiglianza specificato dall'utente. Nella corrispondenza fuzzy è possibile utilizzare solo colonne con tipo di dati DT_WSTR o DT_STR. Per altre informazioni, vedere [Tipi di dati di Integration Services](../../../integration-services/data-flow/integration-services-data-types.md).  
+ Per configurare la trasformazione, è necessario selezionare le colonne di input da usare per l'identificazione di duplicati e il tipo di corrispondenza, fuzzy o esatta, per ogni colonna. Con una corrispondenza esatta vengono raggruppate solo le righe della colonna contenenti gli stessi valori. Questo tipo di corrispondenza può essere applicato alle colonne con qualsiasi tipo di dati di [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] , ad eccezione di DT_TEXT, DT_NTEXT e DT_IMAGE. Con una corrispondenza fuzzy vengono raggruppate le righe contenenti valori simili. Questo tipo di corrispondenza è basato su un punteggio di somiglianza specificato dall'utente. Nella corrispondenza fuzzy è possibile utilizzare solo colonne con tipo di dati DT_WSTR o DT_STR. Per altre informazioni, vedere [Tipi di dati di Integration Services](../../../integration-services/data-flow/integration-services-data-types.md).  
   
  L'output della trasformazione include tutte le colonne di input, una o più colonne con dati standardizzati e una colonna contenente il punteggio di somiglianza. Il punteggio è un valore decimale compreso tra 0 e 1. La riga canonica ha un punteggio di 1. Le altre righe nel raggruppamento fuzzy hanno punteggi che indicano il livello di corrispondenza di queste righe rispetto alla riga canonica. I punteggi più prossimi a 1 indicano una corrispondenza maggiore. Se il raggruppamento fuzzy include righe che sono duplicati esatti della riga canonica, anche queste righe avranno un punteggio di 1. La trasformazione non rimuove le righe duplicate ma le raggruppa creando una chiave di correlazione tra la riga canonica e queste righe.  
   

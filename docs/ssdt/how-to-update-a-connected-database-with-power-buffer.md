@@ -13,12 +13,12 @@ ms.assetid: 4048b7f8-71a9-47ad-b812-3fc1e8066240
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ef93616fb6f96911d08a56326e014305b4e818b3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6d1b5a5c1a20f52d9a0060e54ce38f6cca816a63
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47701529"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52396789"
 ---
 # <a name="how-to-update-a-connected-database-with-power-buffer"></a>Procedura: Aggiornare un database connesso con Power Buffer
 La tecnologia Power Buffer di SQL Server Data Tools consente di applicare facilmente le modifiche al database connesso archiviandole tutte nella sessione corrente. Tutti gli errori causati dalla modifica della finestra Power Buffer (nell'Editor Transact\-SQL o in Progettazione tabelle) vengono visualizzati immediatamente nel riquadro **Elenco errori**, che consente di seguire gli errori identificati per un'ulteriore risoluzione dei problemi. È possibile verificare le modifiche in sospeso finché non si è pronti ad applicarle al database. Durante il processo di aggiornamento, tramite SSDT viene creato automaticamente uno script ALTER in base alle modifiche e vengono visualizzati gli avvisi di tutti i potenziali problemi. È possibile applicare tutte le modifiche accumulate in tutte le finestre Power Buffer aperte allo stesso database o salvare lo script ALTER da distribuire in un secondo momento.  

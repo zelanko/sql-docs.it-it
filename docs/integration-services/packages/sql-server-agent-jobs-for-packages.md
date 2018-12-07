@@ -16,12 +16,12 @@ ms.assetid: ecf7a5f9-b8a7-47f1-9ac0-bac07cb89e31
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 34a278c1ec90d9ddc49771850cf6226e9ee702ba
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 4a2468c9c129c1c2e06101d7d7d1ec44c712f9bb
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51642188"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52400704"
 ---
 # <a name="sql-server-agent-jobs-for-packages"></a>Processi di SQL Server Agent per i pacchetti
   È possibile automatizzare e pianificare l'esecuzione dei pacchetti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] tramite [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. È possibile pianificare i pacchetti distribuiti nel server [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] e archiviati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], nell'archivio pacchetti [!INCLUDE[ssIS](../../includes/ssis-md.md)] e nel file system.  
@@ -120,7 +120,7 @@ ms.locfileid: "51642188"
   
 7.  Nell'elenco **Esegui come** selezionare **Account del servizio SQL Server Agent** oppure selezionare un account proxy che dispone delle credenziali che verranno utilizzate dal passaggio di processo. Per informazioni sulla creazione di un account proxy, vedere [Create a SQL Server Agent Proxy](../../ssms/agent/create-a-sql-server-agent-proxy.md).  
   
-     L'utilizzo di un account proxy anziché dell' **Account del servizio SQL Server Agent** può risolvere i problemi comuni che possono verificarsi quando si esegue un pacchetto tramite [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Per ulteriori informazioni su questi problemi, vedere l'articolo della [!INCLUDE[msCoName](../../includes/msconame-md.md)] Knowledge Base relativo a [un pacchetto SSIS che non viene eseguito quando viene chiamato da un passaggio di processo di SQL Server Agent](https://support.microsoft.com/kb/918760).  
+     L'utilizzo di un account proxy anziché dell'**Account del servizio SQL Server Agent** può risolvere i problemi comuni che possono verificarsi quando si esegue un pacchetto tramite [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Per ulteriori informazioni su questi problemi, vedere l'articolo della [!INCLUDE[msCoName](../../includes/msconame-md.md)] Knowledge Base relativo a [un pacchetto SSIS che non viene eseguito quando viene chiamato da un passaggio di processo di SQL Server Agent](https://support.microsoft.com/kb/918760).  
   
     > **NOTA:** se viene modificata la password per le credenziali usate dall'account proxy, è necessario aggiornare la password delle credenziali. In caso contrario, il passaggio di processo avrà esito negativo.  
   

@@ -11,12 +11,12 @@ ms.assetid: e604a382-95c8-4764-b268-742eb5c6d4cf
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7aaea76c93cdce4864c4a1e2491d542acee30b08
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 456ab997ac599f4525f62a5eb6267600b0767c24
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47829445"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52519644"
 ---
 # <a name="catalogcatalogproperties-ssisdb-database"></a>catalog.catalog_properties (database SSISDB)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -28,12 +28,12 @@ ms.locfileid: "47829445"
 |property_name|**nvarchar(256)**|Nome della proprietà del catalogo.|  
 |property_value|**nvarchar(256)**|Valore della proprietà del catalogo.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  In questa vista viene visualizzata una riga per ogni proprietà del catalogo.
   
 |Nome proprietà|Descrizione|  
 |-------------------|-----------------|  
-|**DEFAULT_EXECUTION_MODE**|La modalità di esecuzione predefinita a livello di server per i pacchetti: `Server` (0) o `Scale Out` (1). |
+|**DEFAULT_EXECUTION_MODE**|Modalità di esecuzione predefinita a livello di server per i pacchetti, ovvero `Server` (0) o `Scale Out` (1). |
 |**ENCRYPTION_ALGORITHM**|Tipo di algoritmo di crittografia utilizzato per crittografare i dati sensibili. Nei valori supportati sono inclusi: `DES`, `TRIPLE_DES`, `TRIPLE_DES_3KEY`, `DESX`, `AES_128`, `AES_192` e `AES_256`. Nota: il database del catalogo deve essere in modalità utente singolo per la modifica di questa proprietà.|
 |**IS_SCALEOUT_ENABLED**|Quando il valore è `True`, la funzionalità SSIS Scale Out è abilitata. Se questa funzionalità non è stata abilitata, questa proprietà potrebbe non comparire nella vista.|
 |**MAX_PROJECT_VERSIONS**|Numero di nuove versioni del progetto che vengono mantenute per un progetto singolo. Se la pulizia delle versioni è abilitata, le versioni precedenti oltre questo conteggio vengono eliminate.|  
@@ -48,7 +48,7 @@ ms.locfileid: "47829445"
 |**VERSION_CLEANUP_ENABLED**|Se il valore è `TRUE`, solo il numero di versioni di progetto **MAX_PROJECT_VERSIONS** viene archiviato nel catalogo, mentre tutte le altre versioni vengono eliminate. Se il valore è **FALSE**, tutte le versioni del progetto vengono archiviate nel catalogo. Nota: la pulizia dell'operazione viene eseguita da un processo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|
 |||
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Per questa vista è necessaria una delle autorizzazioni seguenti:  
   
 -   Appartenenza al ruolo del database **ssis_admin**  

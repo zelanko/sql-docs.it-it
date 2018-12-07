@@ -26,12 +26,12 @@ ms.assetid: d373298b-f6cf-458a-849d-7083ecb54ef5
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c4c3cd3a35cd15d1e9751ba939809a5d596bd2ae
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 1c9c330ab53b83eb46fa60002bc8aa6c0ed72e13
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51603981"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52534670"
 ---
 # <a name="database-engine-service-startup-options"></a>Opzioni di avvio del servizio del motore di database
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -71,13 +71,13 @@ ms.locfileid: "51603981"
 |**-E**|Aumenta il numero di extent allocati per ogni file in un filegroup. Questa opzione può risultare utile per applicazioni del data warehouse per cui il numero di utenti che eseguono analisi dell'indice o dei dati è limitato. Si consiglia di non utilizzarla in altre applicazioni poiché potrebbe influire negativamente sulle prestazioni. Tale opzione non è supportata nelle versioni a 32 bit di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
   
 ## <a name="using-startup-options-for-troubleshooting"></a>Utilizzo delle opzioni di avvio per la risoluzione dei problemi  
- Alcune opzioni di avvio, ad esempio la modalità utente singolo e con configurazione minima, vengono utilizzate principalmente per la risoluzione dei problemi. L'avvio del server con l'opzione **–m** o **–f** per la risoluzione dei problemi risulta più semplice dalla riga di comando, quando si esegue l'avvio manuale di sqlservr.exe.  
+ Alcune opzioni di avvio, ad esempio la modalità utente singolo e con configurazione minima, vengono utilizzate principalmente per la risoluzione dei problemi. L'avvio del server con l'opzione **-m** o **-f** per la risoluzione dei problemi risulta più semplice dalla riga di comando durante l'avvio manuale di sqlservr.exe.  
   
 > [!NOTE]  
 >  Quando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene avviato usando **net start**, le opzioni di avvio usano una barra (/) anziché un trattino (-).  
   
 ## <a name="using-startup-options-during-normal-operations"></a>Utilizzo delle opzioni di avvio durante il funzionamento normale  
- Può essere necessario utilizzare particolari opzioni a ogni avvio di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. L'impostazione di queste opzioni, ad esempio **–g** o l'avvio con un flag di traccia, è più semplice se si configurano i parametri di avvio con Gestione configurazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Questi strumenti consentono di salvare le opzioni di avvio come chiavi del Registro di sistema e di avviare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sempre con le opzioni di avvio.  
+ Può essere necessario utilizzare particolari opzioni a ogni avvio di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. L'impostazione di queste opzioni, ad esempio **-g** o l'avvio con un flag di traccia, è più semplice se si configurano i parametri di avvio con Gestione configurazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Questi strumenti consentono di salvare le opzioni di avvio come chiavi del Registro di sistema e di avviare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sempre con le opzioni di avvio.  
   
 ## <a name="compatibility-support"></a>Informazioni sulla compatibilità  
  Il parametro **-h**  non è supportato in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Questo parametro è stato utilizzato in versioni precedenti di istanze a 32 bit di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per riservare spazio di indirizzi della memoria virtuale per metadati della memoria a caldo quando AWE è abilitato. Per ulteriori informazioni, vedere [Funzionalità di SQL Server obsolete in SQL Server 2016](https://msdn.microsoft.com/library/0678bfbc-5d3f-44f4-89c0-13e8e52404da).  

@@ -16,12 +16,12 @@ ms.assetid: d330aa4e-6ade-4b09-b376-1b15d6c78f7d
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 69a2c06ca2a365814dd87b72d0641d91516def95
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: ca34e83b313a267f607ee9e45f8bf68fd1b0b357
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51703599"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52418772"
 ---
 # <a name="administrators-master-data-services"></a>Amministratori (Master Data Services)
 
@@ -30,7 +30,7 @@ ms.locfileid: "51703599"
   Questo articolo descrive i tipi di amministratori di [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]: amministratori di modelli, amministratori di entità e utenti con privilegi avanzati.  
   
 ## <a name="model-administrators"></a>Amministratori di modelli  
- In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]un amministratore di modelli è un utente a cui è stata assegnata l'autorizzazione di **amministratore** per l'oggetto modello di livello superiore nella scheda **Oggetti modello** . Quando un utente ha l'autorizzazione di amministratore per un particolare modello, tutte le altre autorizzazioni per gli oggetti figlio del modello (autorizzazioni per oggetti e membri modello) sono surclassate dall'autorizzazione di **amministratore** del modello ed effettivamente ignorate.  
+ In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]un amministratore di modelli è un utente a cui è stata assegnata l'autorizzazione di **amministratore** per l'oggetto modello di livello superiore nella scheda **Oggetti modello** . Quando un utente ha l'autorizzazione di amministratore per un determinato modello, tutte le altre autorizzazioni per gli oggetti figlio del modello (autorizzazioni per membri e oggetti del modello) vengono surclassate dall'autorizzazione di **amministratore** del modello e di fatto ignorate.  
   
 -   Se l'utente dispone dell'accesso all'area funzionale **Esplora risorse** , l'utente può aggiungere, eliminare e aggiornare tutti i dati master in questa area.  
   
@@ -41,7 +41,7 @@ ms.locfileid: "51703599"
  Un utente può essere configurato come amministratore di modelli in [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] o a livello di codice. Per altre informazioni, vedere [Creare un amministratore di modelli &#40;Master Data Services&#41;](../master-data-services/create-a-model-administrator-master-data-services.md).  
   
 ## <a name="entity-administrators"></a>Amministratori di entità  
- In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], un amministratore di entità è un utente per cui le autorizzazioni di amministratore sono assegnate all'oggetto entità nella scheda Oggetti modello. Quando un utente ha le autorizzazioni di amministratore per un'entità, tutte le altre autorizzazioni per gli oggetti figlio dell'entità (autorizzazioni per oggetti e membri modello) sono sostituite dalle autorizzazioni amministratore e vengono ignorate.  
+ In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], un amministratore di entità è un utente per cui le autorizzazioni di amministratore sono assegnate all'oggetto entità nella scheda Oggetti modello. Quando un utente ha autorizzazioni di amministratore per un'entità, tutte le altre autorizzazioni per gli oggetti figlio dell'entità (autorizzazioni per membri e oggetti del modello) vengono sostituite dalle autorizzazioni di amministratore e ignorate.  
   
 -   Se l'utente dispone dell'accesso all'area funzionale **Esplora risorse** , l'utente può aggiungere, eliminare e aggiornare tutti i dati master in questa area.  
   
@@ -68,7 +68,7 @@ ms.locfileid: "51703599"
   
 |Tipo di amministratore|Descrizione|  
 |------------------------|-----------------|  
-|[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] Utente con privilegi avanzati|Le autorizzazioni assegnate in [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] non influenzano l'accesso dell'amministratore.<br /><br /> Può essere un utente con privilegi avanzati in autorizzazioni per aree funzionali assegnate in modo esplicito o autorizzazioni ereditate da un gruppo.<br /><br /> Ha automaticamente tutte le autorizzazioni per tutti i modelli.<br /><br /> Dispone automaticamente dell'accesso a tutte le aree funzionali.|  
+|[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] Utente con privilegi avanzati|Le autorizzazioni assegnate in [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] non influiscono sull'accesso dell'amministratore.<br /><br /> Può essere un utente con privilegi avanzati in autorizzazioni per aree funzionali assegnate in modo esplicito o autorizzazioni ereditate da un gruppo.<br /><br /> Ha automaticamente tutte le autorizzazioni per tutti i modelli.<br /><br /> Dispone automaticamente dell'accesso a tutte le aree funzionali.|  
 |Amministratore di modelli|Può essere un amministratore di modelli in base alle autorizzazioni di amministratore assegnate in modo esplicito o in base alle autorizzazioni ereditate da un gruppo.<br /><br /> Dispone dell'accesso solo alle aree funzionali per le quali è stato concesso l'accesso.<br /><br /> Ha automaticamente tutte le autorizzazioni per tutti gli oggetti e i membri nel modello specifico.|  
 |Amministratore di entità|Può essere un amministratore di entità in base alle autorizzazioni di amministratore assegnate in modo esplicito o in base alle autorizzazioni ereditate da un gruppo.<br /><br /> Dispone dell'accesso solo alle aree funzionali per le quali è stato concesso l'accesso.<br /><br /> Ha automaticamente tutte le autorizzazioni per tutti gli oggetti e i membri nell'entità specifica.<br /><br /> Può approvare gli insiemi di modifiche in sospeso se le modifiche all'entità richiedono l'approvazione.|  
   

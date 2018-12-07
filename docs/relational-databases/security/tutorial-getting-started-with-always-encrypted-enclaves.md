@@ -13,12 +13,12 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: c8c9e653781b821d3fcc2e7c2e5dd218b329e22c
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 90a9b797862db65187d991bb6961cdfd0bda8959
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51675360"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52523556"
 ---
 # <a name="tutorial-getting-started-with-always-encrypted-with-secure-enclaves-using-ssms"></a>Esercitazione: Introduzione ad Always Encrypted con enclave sicuri tramite SSMS
 [!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -27,7 +27,7 @@ Questa esercitazione illustra come iniziare a usare [Always Encrypted con enclav
 - Come creare un ambiente semplice per i test e la valutazione di Always Encrypted con enclave sicuri.
 - Come crittografare i dati in locale ed eseguire query avanzate su colonne crittografate usando SQL Server Management Studio (SSMS).
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerequisiti
 
 Per iniziare a usare Always Encrypted con enclave sicuri sono necessari almeno due computer (possono essere macchine virtuali):
 
@@ -295,7 +295,7 @@ Ora è possibile eseguire query avanzate sulle colonne crittografate. Vengono es
 
 1. Abilitare Parametrizzazione per Always Encrypted.
     1. Selezionare **Query** dal menu principale di SQL Server Management Studio.
-    2. Selezionare **Opzioni query...**
+    2. Selezionare **Opzioni query**.
     3. Passare a **Esecuzione** > **Avanzata**.
     4. Selezionare o deselezionare Abilita parametrizzazione per Always Encrypted.
     5. Selezionare OK.

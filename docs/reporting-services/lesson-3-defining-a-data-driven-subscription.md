@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 89197b9b-7502-4fe2-bea3-ed7943eebf3b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ad6781d27078053a67d236c6a96b21fd67e355df
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3ed9f661a49e6ad64642938672f6355a1d19d9f6
+ms.sourcegitcommit: ba7fb4b9b4f0dbfe77a7c6906a1fde574e5a8e1e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47703479"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52302561"
 ---
 # <a name="lesson-3-defining-a-data-driven-subscription"></a>Lesson 3: Defining a Data-Driven Subscription
 In questa lezione dell'esercitazione [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] verranno usate le pagine di sottoscrizione guidata dai dati dei portali Web di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] per connettersi a un'origine dati di sottoscrizione, verrà compilata una query che recupera i dati di sottoscrizione e sarà eseguito il mapping tra il set di risultati e le opzioni di recapito e del report.  
@@ -32,14 +32,17 @@ In questa lezione si presuppone che le lezioni 1 e 2 siano state completate e ch
   
 ## <a name="define-a-description"></a>Definire una descrizione  
 1.  Digitare **Recapito ordine di vendita** nella descrizione.
+
 ## <a name="type"></a>Digitare
 1.  Fare clic su **Sottoscrizione guidata dai dati**.  
+
 ## <a name="schedule"></a>Pianificazione
 1. Nella sezione Pianificazione fare clic su **Pianificazione in base al report**.
 2. Fare clic su **Modifica pianificazione**.
 3.  In **Dettagli pianificazione**fare clic su **Singola occorrenza**.  
 4.  Specificare un'ora di inizio posticipata di alcuni minuti rispetto all'ora corrente.  
 5.  Fare clic su **Applica**.
+
 ## <a name="destination"></a>Destination  
 1.  Nella sezione Destinazione selezionare **Condivisione file di Windows** per il metodo di recapito.  
 
@@ -53,22 +56,24 @@ In questa lezione si presuppone che le lezioni 1 e 2 siano state completate e ch
     data source=localhost; initial catalog=Subscribers
     ```
     
- ## <a name="credentials"></a>Credenziali
- 1. Selezionare **Usa le credenziali seguenti**.
- 2. Selezionare **Nome utente di Windows e password**.
- 3.  In **Nome utente** e **Password**digitare nome utente e password per il dominio. In **Nome utente**specificare sia il dominio che l'account utente.
-     > [!NOTE]  
+## <a name="credentials"></a>Credenziali
+1. Selezionare **Usa le credenziali seguenti**.
+2. Selezionare **Nome utente di Windows e password**.
+3.  In **Nome utente** e **Password**digitare nome utente e password per il dominio. In **Nome utente**specificare sia il dominio che l'account utente.
+    > [!NOTE]  
     > Le credenziali utilizzate per connettersi a un'origine dati del Sottoscrittore non vengono restituite a [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]. Se in seguito si modifica la sottoscrizione, sarà necessario immettere nuovamente la password utilizzata per la connessione all'origine dei dati.
+
 ## <a name="query"></a>Query      
 1.  Nella casella della query digitare la query seguente:  
   
-    ```  
+    ```sql
     Select * from OrderInfo  
     ```  
   
 2.  Specificare un timeout di 30 secondi.  
   
 3.  Fare clic su **Convalida query**e quindi su **Applica**.
+
 ## <a name="delivery-options"></a>Opzioni di recapito
 Compilare i valori seguenti:
 
@@ -91,7 +96,7 @@ Quando la sottoscrizione viene eseguita, nella condivisione file specificata ven
   
 ![Elenco dei file creati dalla sottoscrizione](../reporting-services/media/ssrs-tutorial-datadriven-subscription-filelist.gif "Elenco dei file creati dalla sottoscrizione")  
   
-La pagina di sottoscrizione nel portale Web conterrà la data dell' **Ultima esecuzione** e lo **Stato** della sottoscrizione. 
+La pagina di sottoscrizione nel portale Web conterrà la data dell'**Ultima esecuzione** e lo **Stato** della sottoscrizione. 
 **Nota:** aggiornare la pagina dopo l'esecuzione della sottoscrizione per visualizzare le informazioni aggiornate.  
     
 ![Risultati della sottoscrizione in Gestione report](../reporting-services/media/ssrs-tutorial-datadriven-subscription-status-reportmanager.png "Risultati della sottoscrizione in Gestione report")  

@@ -14,12 +14,12 @@ ms.assetid: f5af876e-f937-4110-ba09-07999c35a699
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1e8d82ed31033d32c714889a2835df95a70bf589
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d49a3b4de2edfb3dc0c027ce54b5f6677d00abb6
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47808549"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535511"
 ---
 # <a name="summarize-or-aggregate-values-for-all-rows-in-a-table-visual-database-tools"></a>Riepilogo o aggregazione di valori per tutte le righe di una tabella (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -47,7 +47,7 @@ Se si aggiunge un criterio di ricerca sarà possibile aggregare il subset delle 
   
 Quando si crea un singolo valore di aggregazione per tutte le righe di una tabella, vengono visualizzati solo i valori aggregati. Se ad esempio si calcola il valore totale della colonna `price` della tabella `titles` , non vengono visualizzati i singoli titoli, i nomi dei server di pubblicazione e così via.  
  
- **!** Quando si crea un subtotale e dunque si creano gruppi, è possibile visualizzare i valori delle colonne per ciascun gruppo. Per informazioni dettagliate, vedere [Raggruppare righe nei risultati di una query &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/group-rows-in-query-results-visual-database-tools.md).  
+ **!** Quando si crea un subtotale e dunque si creano gruppi, è possibile visualizzare i valori delle colonne per ogni gruppo. Per informazioni dettagliate, vedere [Raggruppare righe nei risultati di una query &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/group-rows-in-query-results-visual-database-tools.md).  
 
 ## <a name="aggregate-values-for-all-rows"></a>Aggregare i valori di tutte le righe  
   

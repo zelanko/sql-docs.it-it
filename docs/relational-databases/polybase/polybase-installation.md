@@ -11,12 +11,12 @@ helpviewer_keywords:
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: d786294fb6f5c6c60243912d31bb9339a079a12e
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: f77ab925ebfba6ab1d3fd524d7d740eca58fcba6
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51674230"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52523483"
 ---
 # <a name="install-polybase-on-windows"></a>Installare PolyBase in Windows
 
@@ -180,9 +180,9 @@ SELECT SERVERPROPERTY ('IsPolyBaseInstalled') AS IsPolyBaseInstalled;
 
 L'installazione di PolyBase di SQL Server crea sul computer le regole del firewall seguenti:  
    
-- PolyBase di SQL Server - Motore di database - \<NomeIstanzaSQLServer> (TCP-In)  
+- SQL Server PolyBase - Motore di database - \<NomeIstanzaSQLServer> (TCP-In)  
    
-- PolyBase di SQL Server - Servizi PolyBase - \<NomeIstanzaSQLServer> (TCP-In)  
+- SQL Server PolyBase - Servizi PolyBase - \<NomeIstanzaSQLServer> (TCP-In)  
 
 - PolyBase di SQL Server - SQL Browser - (UDP-In)  
    

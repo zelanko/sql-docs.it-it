@@ -11,12 +11,12 @@ ms.assetid: 005218ab-8dd5-48e9-a185-6bc60cd43a7a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: be26ab7526d4ff270efc1ed11e592ad8552b0b22
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e9ce064f0d1e629ea8492dfbee3292d9a580d676
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47634769"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52505766"
 ---
 # <a name="lesson-5-2---enabling-and-configuring-package-configurations"></a>Lezione 5-2 - Abilitazione e impostazione delle configurazioni dei pacchetti
 In questa attività si convertirà il progetto nel modello di distribuzione del pacchetto e si abiliteranno le configurazioni di pacchetto utilizzando la Configurazione guidata pacchetto. Questa procedura guidata consente di generare un file di configurazione XML contenente le impostazioni di configurazione per la proprietà **Directory** del contenitore Ciclo Foreach. Il valore della proprietà Directory è specificato da una variabile a livello di pacchetto che è possibile aggiornare in fase di esecuzione. Verrà inoltre popolata una cartella di dati di esempio da utilizzare durante il test.  
@@ -40,11 +40,11 @@ In questa attività si convertirà il progetto nel modello di distribuzione del 
   
 7.  Tornare alla scheda **Flusso di controllo** e fare doppio clic sul contenitore **Foreach File in Folder** .  
   
-8.  Nella pagina **Raccolta** di **Editor ciclo Foreach**fare clic su **Espressioni**e quindi sul pulsante con i puntini di sospensione **(…)**.  
+8.  Nella pagina **Raccolta** di **Editor ciclo Foreach** fare clic su **Espressioni** e quindi sul pulsante con i puntini di sospensione **(...)**.  
   
 9. In **Editor espressioni di proprietà**fare clic nell'elenco **Proprietà** e selezionare **Directory**.  
   
-10. Nella casella **Espressione** fare clic sul pulsante con i puntini di sospensione **(…)**.  
+10. Nella casella **Espressione** fare clic sul pulsante con i puntini di sospensione **(...)**.  
   
 11. In **Generatore di espressioni**espandere la cartella Variabili e trascinare la variabile **User::varFolderName** nella casella **Espressione** .  
   
@@ -88,7 +88,7 @@ In questa attività si convertirà il progetto nel modello di distribuzione del 
   
 16. Scegliere **Chiudi**.  
   
-17. La procedura guidata consente di creare un file di configurazione denominato SSISTutorial.dtsConfig, che contiene le impostazioni di configurazione per il**valore** della variabile che imposta la proprietà **Directory** dell'enumeratore.  
+17. La procedura guidata crea un file di configurazione, denominato SSISTutorial.dtsConfig, che contiene le impostazioni di configurazione per il **valore** della variabile che a propria volta imposta la proprietà **Directory** dell'enumeratore.  
   
     > [!NOTE]  
     > In un file di configurazione in genere sono incluse informazioni complesse sulle proprietà del pacchetto; tuttavia per questa esercitazione le uniche informazioni di configurazione saranno  

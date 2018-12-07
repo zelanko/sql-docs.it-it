@@ -16,12 +16,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 79b653f3e93e896c3a7f72f4d3473fac2f34988b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fa1e912b6a0ec2cce562e6ed6506acfb74a3a17e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47648099"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52520973"
 ---
 # <a name="use-sparse-columns"></a>Utilizzo di colonne di tipo sparse
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "47648099"
   
 -   Le viste del catalogo per una tabella contenente colonne di tipo sparse sono identiche a quelle di una tabella tipica. La vista del catalogo sys.columns contiene una riga per ogni colonna della tabella e include un set di colonne, se definito.  
   
--   Le colonne di tipo sparse sono una proprietà del livello dell'archiviazione, piuttosto che la tabella logica. Pertanto un'istruzione SELECT.INTO non viene copiata sopra la proprietà della colonna di tipo sparse in una nuova tabella.  
+-   Le colonne di tipo sparse sono una proprietà del livello dell'archiviazione, piuttosto che la tabella logica. Di conseguenza un'istruzione SELECT...INTO non viene copiata sopra la proprietà della colonna di tipo sparse in una nuova tabella.  
   
 -   La funzione COLUMNS_UPDATED restituisce un valore **varbinary** per indicare tutte le colonne aggiornate durante un'azione DML. I bit restituiti dalla funzione COLUMNS_UPDATED vengono impostati come indicato di seguito:  
   
@@ -89,7 +89,7 @@ ms.locfileid: "47648099"
 |**uniqueidentifier**|16|20|43%|  
 |**data**|3|7|69%|  
   
- **Tipi di dati con lunghezza dipendente dalla precisione**  
+ **Tipi di dati di lunghezza dipendente dalla precisione**  
   
 |Tipo di dati|Byte non di tipo sparse|Byte di tipo sparse|Percentuale valori Null|  
 |---------------|---------------------|------------------|---------------------|  
@@ -103,7 +103,7 @@ ms.locfileid: "47648099"
 |**decimal/numeric(38,s)**|17|21|42%|  
 |**vardecimal(p,s)**|Usare il tipo **decimal** come stima conservativa.|||  
   
- **Tipi di dati con lunghezza dipendente dai dati**  
+ **Tipi di dati di lunghezza dipendente dai dati**  
   
 |Tipo di dati|Byte non di tipo sparse|Byte di tipo sparse|Percentuale valori Null|  
 |---------------|---------------------|------------------|---------------------|  
@@ -119,7 +119,7 @@ ms.locfileid: "47648099"
 ## <a name="in-memory-overhead-required-for-updates-to-sparse-columns"></a>Overhead in memoria necessario per gli aggiornamenti alle colonne di tipo sparse  
  Quando si progettano tabelle con colonne di tipo sparse, ricordare che sono necessari 2 byte aggiuntivi di overhead per ogni colonna di tipo sparse non Null nella tabella quando viene aggiornata una riga. Dato questo requisito di memoria aggiuntivo, gli aggiornamenti potrebbero non riuscire in modo imprevisto con l'errore 576 quando le dimensioni totali della riga, incluso l'overhead di memoria, supera 8019 e nessuna colonna può essere spostata all'esterno della riga.  
   
- Si consideri l'esempio di una tabella contenente 600 colonne di tipo sparse di tipo bigint. Se le colonne non Null sono 571, la dimensione totale su disco è pari a 571 * 12 = 6852 byte. Dopo avere incluso l'overhead di riga aggiuntivo e l'intestazione della colonna di tipo sparse, i byte aumentano a 6895. Per la pagina sono ancora disponibili su disco 1124 byte. Ciò può dare l'impressione che sia possibile aggiornare correttamente le colonne aggiuntive. Durante l'aggiornamento, tuttavia, si verifica un ulteriore overhead in memoria pari a 2\*(numero di colonne di tipo sparse non Null). In questo esempio, incluso l'overhead aggiuntivo – 2 \* 571 = 1142 byte – le dimensioni della riga su disco aumentano a 8037 byte. Queste dimensioni superano le dimensioni massime consentite di 8019 byte. Poiché tutte le colonne sono tipi di dati a lunghezza fissa, non è possibile spostarle all'esterno della riga. Di conseguenza, durante l'aggiornamento si verificherà l'errore 576.  
+ Si consideri l'esempio di una tabella contenente 600 colonne di tipo sparse di tipo bigint. Se le colonne non Null sono 571, la dimensione totale su disco è pari a 571 * 12 = 6852 byte. Dopo avere incluso l'overhead di riga aggiuntivo e l'intestazione della colonna di tipo sparse, i byte aumentano a 6895. Per la pagina sono ancora disponibili su disco 1124 byte. Ciò può dare l'impressione che sia possibile aggiornare correttamente le colonne aggiuntive. Durante l'aggiornamento, tuttavia, si verifica un ulteriore overhead in memoria pari a 2\*(numero di colonne di tipo sparse non Null). In questo esempio, incluso l'overhead aggiuntivo, ovvero 2 \* 571 = 1142 byte, le dimensioni della riga su disco aumentano a 8037 byte. Queste dimensioni superano le dimensioni massime consentite di 8019 byte. Poiché tutte le colonne sono tipi di dati a lunghezza fissa, non è possibile spostarle all'esterno della riga. Di conseguenza, durante l'aggiornamento si verificherà l'errore 576.  
   
 ## <a name="restrictions-for-using-sparse-columns"></a>Restrizioni relative all'utilizzo di colonne di tipo sparse  
  Le colonne di tipo sparse possono essere di qualsiasi tipo di dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e presentano un comportamento analogo a qualsiasi altra colonna, ma con le restrizioni seguenti:  

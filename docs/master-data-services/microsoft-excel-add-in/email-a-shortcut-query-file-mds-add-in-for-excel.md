@@ -11,20 +11,20 @@ ms.assetid: 5d46f20a-b04a-45c7-82af-02a2baaabbd7
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 6361994dfc613ef3a3d9367574047b92555bfe3e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ed28d44aaa89e89ca4769007a5057a97577d2a05
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47854359"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52419302"
 ---
 # <a name="email-a-shortcut-query-file-mds-add-in-for-excel"></a>Inviare tramite posta elettronica un file di query collegamento (componente aggiuntivo MDS per Excel)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  Nel [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]inviare tramite posta elettronica un file di query collegamento a un'altra persona per assicurarsi di usare gli stessi dati. È necessario condividere query anziché salvare il foglio di lavoro e inviarlo tramite posta elettronica.  
+  Nel [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] inviare tramite posta elettronica un file di query collegamento a un'altra persona per assicurarsi di usare gli stessi dati. È necessario condividere query anziché salvare il foglio di lavoro e inviarlo tramite posta elettronica.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Prerequisiti  
  Per eseguire questa procedura:  
   
 -   È necessario che sia installato Outlook 2010 o versioni successive.  

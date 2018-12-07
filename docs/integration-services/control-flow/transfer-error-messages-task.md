@@ -17,19 +17,19 @@ ms.assetid: da702289-035a-4d14-bd74-04461fbfee1b
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d377673177bd5aa2a5ac77b48e93153bdf420f41
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: c189be4aa134ee15314571008ed29a3f53c467d2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51640858"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518781"
 ---
 # <a name="transfer-error-messages-task"></a>Attività Trasferisci messaggi di errore
   L'attività Trasferisci messaggi di errore trasferisce uno o più messaggi di errore definiti dall'utente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tra istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. I messaggi definiti dall'utente sono messaggi con un identificatore che è uguale o maggiore di 50000. I messaggi con identificatore minore di 50000 sono messaggi di errore di sistema e non possono essere trasferiti utilizzando l'attività Trasferisci messaggi di errore.  
   
  È possibile configurare l'attività Trasferisci messaggi di errore per il trasferimento di tutti i messaggi di errore o dei soli messaggi di errore specificati. I messaggi di errore definiti dall'utente possono essere disponibili in lingue diverse. È possibile configurare l'attività per il trasferimento dei soli messaggi nelle lingue selezionate. È necessario che nel server di destinazione sia inclusa la versione del messaggio che utilizza la tabella codici 1033, corrispondente all'inglese americano, per poter trasferire su tale server versioni del messaggio in altre lingue.  
   
- La tabella sysmessages del database master contiene tutti i messaggi di errore, sia di sistema che definiti dall'utente, utilizzati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+ La tabella sysmessages del database master contiene tutti i messaggi di errore, sia di sistema che definiti dall'utente, usati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  I messaggi definiti dall'utente da trasferire potrebbero essere già presenti nella destinazione. Un messaggio di errore è considerato duplicato se l'identificatore e la lingua corrispondono a quelli di un messaggio di errore esistente. È possibile configurare l'attività Trasferisci messaggi di errore per la gestione dei messaggi di errore duplicati nei modi seguenti:  
   
@@ -116,13 +116,13 @@ ms.locfileid: "51640858"
 |**False**|Copia solo i messaggi definiti dall'utente specificati.|  
   
  **ErrorMessagesList**  
- Fare clic sui puntini di sospensione **(…)** per selezionare i messaggi di errore da copiare.  
+ Fare clic sul pulsante sfoglia **(...)** per selezionare i messaggi di errore da copiare.  
   
 > [!NOTE]  
 >  È necessario specificare la proprietà **SourceConnection** prima di poter selezionare i messaggi di errore di cui eseguire la copia.  
   
  **ErrorMessageLanguagesList**  
- Fare clic sui puntini di sospensione **(…)** per selezionare le lingue per cui copiare i messaggi di errore definiti dall'utente nel server di destinazione. Per poter trasferire versioni del messaggio in altre lingue nel server di destinazione, è necessario che in tale server esista una versione us_english (tabella codici 1033) del messaggio.  
+ Fare clic sul pulsante sfoglia **(...)** per selezionare le lingue per cui copiare i messaggi di errore definiti dall'utente nel server di destinazione. Per poter trasferire versioni del messaggio in altre lingue nel server di destinazione, è necessario che in tale server esista una versione us_english (tabella codici 1033) del messaggio.  
   
 > [!NOTE]  
 >  È necessario specificare la proprietà **SourceConnection** prima di poter selezionare i messaggi di errore di cui eseguire la copia.  

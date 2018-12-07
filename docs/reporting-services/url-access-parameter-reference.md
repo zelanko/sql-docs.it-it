@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 1c3e680a-83ea-4979-8e79-fa2337ae12a3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 701c91f58f4629385b70ec2abc750f0edb8d8059
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: e0848c1574a5ca46c1db922be72b0dceedf091ed
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813724"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52515117"
 ---
 # <a name="url-access-parameter-reference"></a>Riferimento ai parametri di accesso con URL
   È possibile usare i seguenti parametri come parte di un URL per configurare l'aspetto dei [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]report. I parametri più comuni sono elencati in questa sezione: I parametri rilevano la distinzione tra maiuscole e minuscole e iniziano con i prefissi di parametro *rs:* se indirizzati al server di report e *rc:* se indirizzati a un visualizzatore HTML. È inoltre possibile specificare parametri specifici per dispositivi o estensioni per il rendering. Per altre informazioni sui parametri specifici per il dispositivo, vedere [Specificare le impostazioni relative alle informazioni sul dispositivo in un URL](../reporting-services/specify-device-information-settings-in-a-url.md).  
@@ -117,7 +117,7 @@ ms.locfileid: "51813724"
   
 -   *Stylesheet*: consente di specificare un foglio di stile da applicare al visualizzatore HTML.  
   
--   Impostazione relativa alle informazioni sul dispositivo: specifica un'impostazione relativa alle informazioni sul dispositivo nel formato `rc:tag=value`, dove *tag* è il nome di un'impostazione relativa alle informazioni sul dispositivo specifica dell'estensione per il rendering usata attualmente (vedere la descrizione del parametro *Format* ). Ad esempio, è possibile usare l'impostazione relativa alle informazioni sul dispositivo *OutputFormat* in modo tale che l'estensione per il rendering IMAGE esegua il rendering del report a un'immagine JPEG usando i parametri seguenti nella stringa di accesso con URL: `…&rs:Format=IMAGE&rc:OutputFormat=JPEG`. Per altre informazioni sulle impostazioni relative alle informazioni sul dispositivo specifiche per l'estensione, vedere [Impostazioni relative alle informazioni sul dispositivo per le estensioni per il rendering &#40;Reporting Services&#41;](../reporting-services/device-information-settings-for-rendering-extensions-reporting-services.md).  
+-   Impostazione relativa alle informazioni sul dispositivo: specifica un'impostazione relativa alle informazioni sul dispositivo nel formato `rc:tag=value`, dove *tag* è il nome di un'impostazione relativa alle informazioni sul dispositivo specifica dell'estensione per il rendering usata attualmente (vedere la descrizione del parametro *Format* ). Ad esempio, è possibile usare l'impostazione relativa alle informazioni sul dispositivo *OutputFormat* in modo tale che l'estensione per il rendering IMAGE esegua il rendering del report a un'immagine JPEG usando i parametri seguenti nella stringa di accesso con URL: `...&rs:Format=IMAGE&rc:OutputFormat=JPEG`. Per altre informazioni sulle impostazioni relative alle informazioni sul dispositivo specifiche per l'estensione, vedere [Impostazioni relative alle informazioni sul dispositivo per le estensioni per il rendering &#40;Reporting Services&#41;](../reporting-services/device-information-settings-for-rendering-extensions-reporting-services.md).  
   
 ##  <a name="bkmk_reportserver"></a> Comandi del server di report (rs:)  
  I comandi del server di report hanno il prefisso *rs:* e vengono usati sul server di report:  
@@ -310,7 +310,7 @@ ms.locfileid: "51813724"
   
 -   *AsyncRender*: determina se il rendering di un report viene eseguito in modo asincrono. Il valore predefinito è **true**con cui si specifica che il rendering di un report viene eseguito in modo asincrono. Deve essere un valore booleano **true** o **false**.  
   
--   *ParamMode*: determina come appare l'area dei messaggi di richiesta del parametro della web part di Visualizzatore report nella visualizzazione Pagina intera. Il valore predefinito è **Full**. I valori validi sono:  
+-   *ParamMode*: determina come viene mostrata l'area dei messaggi di richiesta del parametro della web part Visualizzatore di report nella visualizzazione a pagina intera. Il valore predefinito è **Full**. I valori validi sono:  
   
     -   **Full**: consente di visualizzare l'area dei messaggi di richiesta del parametro.  
   
@@ -324,7 +324,7 @@ ms.locfileid: "51813724"
     https://myspsite/_vti_bin/reportserver?https://myspsite002%fShared+Documents%2fmyreport.rdl&rv:DocMapMode=Displayed&rv:ParamMode=Collapsed  
     ```  
   
--   *DocMapMode*: determina come appare l'area mappa documento della web part di Visualizzatore report nella visualizzazione Pagina intera. Il valore predefinito è **Full**. I valori validi sono:  
+-   *DocMapMode*: determina come viene mostrata l'area mappa documento della web part Visualizzatore di report nella visualizzazione a pagina intera. Il valore predefinito è **Full**. I valori validi sono:  
   
     -   **Full**: consente di visualizzare l'area mappa documento.  
   
@@ -332,7 +332,7 @@ ms.locfileid: "51813724"
   
     -   **Hidden**: consente di nascondere l'area mappa documento.  
   
--   *DockToolBar*: determina se la barra degli strumenti della web part di Visualizzatore report è ancorata alla parte superiore o inferiore. I valori validi sono **Top** e **Bottom**. Il valore predefinito è **Top**.  
+-   *DockToolBar*: determina se la barra degli strumenti della web part Visualizzatore di report sarà ancorata in alto o in basso. I valori validi sono **Top** e **Bottom**. Il valore predefinito è **Top**.  
   
      Ad esempio in modalità **SharePoint** , per ancorare la barra degli strumenti alla parte inferiore.  
   

@@ -17,12 +17,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bddc53e898acd23ab0f29902703ea53c74987730
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b21a93ad09aecc13842f37b488a8230347cab283
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47854819"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514766"
 ---
 # <a name="modify-views"></a>Modifica di viste
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -69,7 +69,7 @@ ms.locfileid: "47854819"
   
     1.  Selezionare o deselezionare le caselle di controllo di qualsiasi elemento che si desidera aggiungere o rimuovere.  
   
-    2.  Fare clic con il pulsante destro del mouse all'interno del riquadro del diagramma, selezionare **Aggiungi tabella**, quindi scegliere le ulteriori colonne da aggiungere alla vista nella finestra di dialogo **Aggiungi tabella** .  
+    2.  Fare clic con il pulsante destro del mouse all'interno del riquadro del diagramma, scegliere **Aggiungi tabella** e quindi selezionare le altre colonne da aggiungere alla vista nella finestra di dialogo **Aggiungi tabella**.  
   
     3.  Fare clic con il pulsante destro del mouse sulla barra del titolo della tabella da rimuovere e selezionare **Rimuovi**.  
   

@@ -14,12 +14,12 @@ ms.assetid: 780ef467-f96e-4373-8235-6dacbedb05a2
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b1c4cbf7909a6ab779d34be4595a0434bdf5812a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 06a68464cbc0eeaa5536deca73497229b0e0e435
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47668229"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52505365"
 ---
 # <a name="sort-rows-visual-database-tools"></a>Ordinamento di righe (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -62,7 +62,7 @@ I risultati delle query possono essere ordinati in diversi modi:
     ORDER BY price DESC  
     ```  
   
--   **È possibile eseguire l'ordinamento in base a colonne derivate** È possibile, ad esempio, creare un set di risultati in cui ogni riga contenga il titolo di un libro, indicando per primi i libri con i diritti d'autore più elevati per una singola copia. Il codice SQL risultante potrebbe essere simile al seguente:  
+-   **È possibile eseguire l'ordinamento in base a colonne derivate**. Ad esempio, si può creare un set di risultati in cui ogni riga contiene il titolo di un libro, riportando per primi i libri con i diritti d'autore più elevati per singola copia. Il codice SQL risultante potrebbe essere simile al seguente:  
   
     ```  
     SELECT title, price * royalty / 100 as royalty_per_unit  
@@ -74,7 +74,7 @@ I risultati delle query possono essere ordinati in diversi modi:
   
     Per calcolare una colonna derivata, è possibile utilizzare la sintassi SQL, come è stato fatto nell'esempio precedente, oppure è possibile utilizzare una funzione definita dall'utente che restituisca un valore scalare. Per ulteriori informazioni sulle funzioni definite dall'utente, vedere la documentazione di SQL Server.  
   
--   **È possibile ordinare righe raggruppate** È possibile ad esempio creare un set di risultati in cui ciascuna riga indichi una città e il numero di autori residenti in tale città, specificando per prime le città con più autori. Il codice SQL risultante potrebbe essere simile al seguente:  
+-   **È possibile ordinare righe raggruppate**. Ad esempio, si può creare un set di risultati in cui ogni riga descrive una città e il numero di autori in tale città, riportando per prime le città con più autori. Il codice SQL risultante potrebbe essere simile al seguente:  
   
     ```  
     SELECT city, state, COUNT(*)  

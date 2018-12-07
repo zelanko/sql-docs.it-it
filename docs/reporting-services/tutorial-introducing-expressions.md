@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 2d05ef4c-5f91-48b2-8795-f0a201a0b3cc
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0bed1d8109d49b7c6f2ba57734f2daa1a5eb056d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7a26065cc1d65e5c187123ead990888aa4de0e60
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47800571"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52410708"
 ---
 # <a name="tutorial-introducing-expressions"></a>Esercitazione: Introduzione alle espressioni
 In questa esercitazione di [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)] vengono usate espressioni e operatori comuni per creare report impaginati di [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] potenti e flessibili. 
@@ -420,9 +420,9 @@ In questa sezione viene aggiunta una colonna e viene usata la funzione **Now** o
 11. Fare clic su **Esegui** per visualizzare l'anteprima del report.  
   
 ## <a name="Indicator"></a>7. Utilizzare un indicatore per mostrare il confronto vendite  
-In questa sezione viene aggiunta una nuova colonna e viene usato un indicatore per indicare se gli acquisti da inizio anno da parte di una persona sono al di sopra o al di sotto della relativa media. La funzione **Round** consente di rimuovere i decimali dai valori.  
+In questa sezione viene aggiunta una nuova colonna e viene usato un indicatore per specificare se gli acquisti effettuati da una persona a partire da inizio anno sono superiori o inferiori alla relativa media. La funzione **Round** consente di rimuovere i decimali dai valori.  
   
-La configurazione dell'indicatore e dei relativi stati richiede numerosi passaggi. Se si vuole, è possibile passare direttamente alla procedura "Per configurare l'indicatore" e copiare e incollare le espressioni complete da questa esercitazione nella finestra di dialogo **Espressione** .  
+La configurazione dell'indicatore e dei relativi stati richiede numerosi passaggi. Se si vuole, è possibile passare direttamente alla procedura "Per configurare l'indicatore" e copiare e incollare le espressioni complete da questa esercitazione nella finestra di dialogo **Espressione**.  
   
 ### <a name="to-add-the--or---avg-sales-column"></a>Per aggiungere la colonna + or - AVG Sales  
   
@@ -587,9 +587,9 @@ Creare un parametro in modo che gli utenti del report possano specificare il col
   
 8. Fare clic su **Parametri** e nell'elenco **Valori** fare doppio clic su **RowColor**.  
   
-22. Immediatamente dopo `Parameters!RowColor.Value`, digitare **, "Bianco")**  
+22. Immediatamente dopo `Parameters!RowColor.Value`, digitare **, "White")**  
   
-    L'espressione completa è: `=IIF(RowNumber(Nothing) MOD 2, Parameters!RowColor.Value, “White”)`  
+    L'espressione completa è: `=IIF(RowNumber(Nothing) MOD 2, Parameters!RowColor.Value, "White")`  
     
     ![Generatore-report-espressione-esercitazione-a righe alternate-colore-espressione](../reporting-services/media/report-builder-expression-tutorial-banded-color-expressn.png)
   

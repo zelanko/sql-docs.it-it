@@ -29,12 +29,12 @@ ms.assetid: d0821526-1603-4ea6-8322-2d901568fbeb
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f20a2bba58605ca7b518fa1a55ba1a75ffb366bb
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 85a35b34610982ac4418e0e8ab05d3e1b188b968
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51638948"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507467"
 ---
 # <a name="term-extraction-transformation"></a>Estrazione termini - trasformazione
   La trasformazione Estrazione termini consente di estrarre termini da un testo in una colonna di input di una trasformazione e quindi scrivere tali termini in una colonna di output della trasformazione. La trasformazione è applicabile solo a testo in lingua inglese, utilizza un dizionario inglese interno e le proprie informazioni sulla lingua inglese.  
@@ -57,7 +57,7 @@ ms.locfileid: "51638948"
 ## <a name="exclusion-terms"></a>Termini di esclusione  
  Facoltativamente, la trasformazione Estrazione termini può fare riferimento a una colonna in una tabella che contiene termini di esclusione, ovvero parole che la trasformazione deve ignorare durante l'estrazione dei termini da un set di dati. Ciò è utile quando è già stato identificato un set di termini non rilevanti per un'azienda o un settore specifico, in genere perché si presentano con una frequenza tale da non essere significativi. Durante l'estrazione di termini da un set di dati che contiene informazioni sul servizio di assistenza clienti per una particolare marca di automobili, ad esempio, è possibile escludere la marca stessa, perché viene citata troppo spesso per essere significativa. I valori nell'elenco di esclusione possono essere pertanto personalizzati in base al set di dati che si sta utilizzando.  
   
- Quando si aggiunge un termine all'elenco di esclusioni, vengono esclusi anche tutti i termini, parole o sintagmi nominali, che contengono tale termine. Ad esempio, se l'elenco di esclusione include la singola parola *dati*, verranno esclusi anche tutti i termini che contengono questa parola, come *dati*, *origine dati* *integrità dei dati*e *convalida dei dati* . Per escludere solo i composti che contengono la parola *dati*, è necessario aggiungerli in modo esplicito all'elenco di esclusione. Ad esempio, per estrarre le incidenze di *dati*escludendo *convalida dei dati*, è necessario aggiungere *convalida dei dati* all'elenco di esclusione e assicurarsi che la parola *dati* venga rimossa dall'elenco.  
+ Quando si aggiunge un termine all'elenco di esclusioni, vengono esclusi anche tutti i termini, ovvero parole o sintagmi nominali, che contengono tale termine. Ad esempio, se l'elenco di esclusione include la singola parola *dati*, verranno esclusi anche tutti i termini che contengono questa parola, come *dati*, *origine dati* *integrità dei dati*e *convalida dei dati* . Per escludere solo i composti che contengono la parola *dati*, è necessario aggiungerli in modo esplicito all'elenco di esclusione. Ad esempio, per estrarre le incidenze di *dati*escludendo *convalida dei dati*, è necessario aggiungere *convalida dei dati* all'elenco di esclusione e assicurarsi che la parola *dati* venga rimossa dall'elenco.  
   
  La tabella di riferimento deve essere una tabella di un database di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] o di Access. La trasformazione Estrazione termini utilizza una connessione OLE DB distinta per connettersi alla tabella di riferimento. Per altre informazioni, vedere [Gestione connessione OLE DB](../../../integration-services/connection-manager/ole-db-connection-manager.md).  
   
@@ -142,7 +142,7 @@ ms.locfileid: "51638948"
   
 -   Caratteri ASCII di interruzione di riga, 0x0d (ritorno a capo) e 0x0a (avanzamento riga). Tali caratteri vengono utilizzati come delimitatori di frase solo se nella riga sono presenti due o più caratteri di interruzione di riga.  
   
--   Segno meno (–). Tale carattere viene utilizzato come delimitatore di frase solo se non è preceduto né seguito da una lettera.  
+-   Segno meno (-). Tale carattere viene utilizzato come delimitatore di frase solo se non è preceduto né seguito da una lettera.  
   
 -   Carattere di sottolineatura (_). Tale carattere viene utilizzato come delimitatore di frase solo se non è preceduto né seguito da una lettera.  
   
@@ -150,7 +150,7 @@ ms.locfileid: "51638948"
   
 -   Combinazioni di numeri, segni di punteggiatura e caratteri alfabetici. Ad esempio, *A23B#99* restituisce il termine *A23B*.  
   
--   Caratteri %, @, &, $, #, \*, :, ;, ., **,** , !, ?, \<, >, +, =, ^, ~, |, \\, /, (, ), [, ], {, }, “ e ‘.  
+-   Caratteri %, @, &, $, #, \*, :, ;, ., **,** , !, ?, \<, >, +, =, ^, ~, |, \\, /, (, ), [, ], {, }, " e '.  
   
     > [!NOTE]  
     >  Gli acronimi che includono uno o più punti (.) non vengono suddivisi in più frasi.  

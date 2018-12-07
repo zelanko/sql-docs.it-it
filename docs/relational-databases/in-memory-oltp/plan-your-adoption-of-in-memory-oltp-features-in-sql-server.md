@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f5e8ebbbd4b9b507e8f41af26be70c676afe61c7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4adfad731797d7c210787bdfaae3defa3e0a12ea
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47803489"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52519556"
 ---
 # <a name="plan-your-adoption-of-in-memory-oltp-features-in-sql-server"></a>Pianificare l'adozione delle funzionalità OLTP in memoria in SQL Server
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -147,7 +147,7 @@ Le variabili di tabella non sono transazionali. Di conseguenza, le [variabili di
 
 ### <a name="b3-readpast-table-hint"></a>B.3 Hint di tabella READPAST
 
-Nessuna query può applicare l' [hint di tabella](../../t-sql/queries/hints-transact-sql-table.md) READPAST alle tabelle ottimizzate per la memoria.
+Nessuna query può applicare l'[hint di tabella](../../t-sql/queries/hints-transact-sql-table.md) READPAST alle tabelle ottimizzate per la memoria.
 
 L'hint READPAST è utile in scenari con più sessioni che accedono e modificano lo stesso set di piccole dimensioni di righe, ad esempio nell'elaborazione di una coda.
 
@@ -216,7 +216,7 @@ Per una panoramica degli indici in tabelle ottimizzate per la memoria, vedere:
 
 Gli indici hash possono rappresentare il formato più veloce per l'accesso a una riga specifica con il valore della chiave primaria preciso tramite l'operatore '**=**'.
 
-- Gli operatori non precisi, ad esempio '**! =**','**>**', o '**BETWEEN**' potrebbero influenzare le prestazioni se usati con un indice hash.
+- Gli operatori non precisi, ad esempio '**! =**','**>**' o '**BETWEEN**' potrebbero influire sulle prestazioni se vengono usati con un indice hash.
 
 - Un indice hash potrebbe non essere la scelta migliore se la velocità di duplicazione del valore chiave diventa troppo elevata.
 
@@ -297,7 +297,7 @@ In SQL Server 2016:
 È possibile rendere gli script Transact-SQL più affidabili per evitare possibili errori di transazione aggiungendo la *logica ripetizione tentativi* agli script. La logica ripetizione tentativi è più utile quando le chiamate UPDATE e DELETE sono frequenti oppure se viene fatto riferimento alla tabella ottimizzata per la memoria da una chiave esterna in un'altra tabella. Per informazioni dettagliate, vedere:
 
 - [Transactions with Memory-Optimized Tables](../../relational-databases/in-memory-oltp/transactions-with-memory-optimized-tables.md)
-- [Limiti di dipendenza delle transazioni nelle tabelle con ottimizzazione per la memoria: errore 41839](https://blogs.msdn.microsoft.com/sqlcat/2016/07/11/transaction-dependency-limits-with-memory-optimized-tables-error-41839/)
+- [Transaction dependency limits with memory optimized tables - Error 41839](https://blogs.msdn.microsoft.com/sqlcat/2016/07/11/transaction-dependency-limits-with-memory-optimized-tables-error-41839/) (Limiti di dipendenza delle transazioni nelle tabelle con ottimizzazione per la memoria: errore 41839)
 
 
 

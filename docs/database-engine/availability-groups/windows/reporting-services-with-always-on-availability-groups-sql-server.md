@@ -13,12 +13,12 @@ ms.assetid: edeb5c75-fb13-467e-873a-ab3aad88ab72
 author: MashaMSFT
 ms.author: mathoma
 manager: erikre
-ms.openlocfilehash: 8dde773d49f9f53c6c35a7a4508b3666180480fd
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 66a1663a0411f91dcf89c294f10f087704ec96e3
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51604951"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52418675"
 ---
 # <a name="reporting-services-with-always-on-availability-groups-sql-server"></a>Reporting Services con i gruppi di disponibilità AlwaysOn (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,9 +52,9 @@ ms.locfileid: "51604951"
   
  Per usare i [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] con  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 2014 e versioni precedenti, è necessario scaricare e installare un hotfix per .Net 3.5 SP1. L'hotfix aggiunge supporto a SQL Client per le funzionalità dei gruppi di disponibilità e per le proprietà della stringa di connessione **ApplicationIntent** e **MultiSubnetFailover**. Se l'hotfix non viene installato in ogni computer in cui si trova il server di report, allora gli utenti che provano a visualizzare un'anteprima dei report visualizzeranno un messaggio di errore simile a quello di seguito riportato e questo verrà scritto nel log di traccia del server di report:  
   
-> **Messaggio di errore:** "Parola chiave non supportata ‘applicationintent’"  
+> **Messaggio di errore:** "Parola chiave non supportata 'applicationintent'"  
   
- Il messaggio viene visualizzato quando si include una delle proprietà dei [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] nella stringa di connessione di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] , ma il server non riconosce la proprietà. Il messaggio di errore annotato verrà visualizzato quando si fa clic sul pulsante "Test connessione" nelle interfacce utente [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] e quando viene visualizzata l'anteprima del report nel caso in cui vengano abilitati errori remoti sui server di report.  
+ Il messaggio viene visualizzato quando si include una delle proprietà dei [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] nella stringa di connessione di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] , ma il server non riconosce la proprietà. Il messaggio di errore annotato verrà visualizzato quando si fa clic sul pulsante "Test connessione" nelle interfacce utente [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] e quando viene visualizzata l'anteprima del report nel caso in cui vengano abilitati errori remoti nei server di report.  
   
  Per altre informazioni relative all'hotfix richiesto, vedere l'articolo della Knowledge Base [KB 2654347 sull'hotfix che introduce il supporto per le funzionalità AlwaysOn di SQL Server 2012 in .NET Framework 3.5 SP1](https://go.microsoft.com/fwlink/?LinkId=242896).  
   
@@ -104,7 +104,7 @@ ms.locfileid: "51604951"
   
 -   Posizione geografica e distanza tra la replica primaria e quella secondaria. Ad esempio, il ritardo è in genere maggiore se le repliche secondarie si trovano in centri dati diversi piuttosto che nello stesso edificio della replica primaria.  
   
--   Configurazione della modalità di disponibilità per ogni replica. La modalità di disponibilità determina se la replica primaria dovrà attendere la scrittura su disco delle transazioni prima di eseguire il commit delle transazioni su un database. Per altre informazioni sulla sezione "Modalità di disponibilità", vedere [Panoramica di Gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md).  
+-   Configurazione della modalità di disponibilità per ogni replica. La modalità di disponibilità determina se la replica primaria dovrà attendere la scrittura su disco delle transazioni prima di eseguire il commit delle transazioni su un database. Per altre informazioni sulla sezione 'Modalità di disponibilità', vedere [Panoramica di Gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md).  
   
  Quando si usano una replica secondaria di sola lettura come origine dati [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] , è importante assicurare che la latenza di aggiornamento soddisfi le esigenze degli utenti del report.  
   
@@ -115,7 +115,7 @@ ms.locfileid: "51604951"
   
 -   **Anteprima modalità server o remota:** se viene visualizzato un messaggio di errore simile a quello riportato di seguito dopo la pubblicazione dei report nel server di report o dopo l'uso dell'anteprima in [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion.md)], questo significa che si sta visualizzando l'anteprima dei report nel server di report e che l'hotfix di .Net Framework 3.5 SP1 per i [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] non è stato installato nel server di report.  
   
-> **Messaggio di errore:** "Parola chiave non supportata ‘applicationintent’"  
+> **Messaggio di errore:** "Parola chiave non supportata 'applicationintent'"  
   
 ##  <a name="bkmk_reportserverdatabases"></a> Database del server di report e gruppi di disponibilità  
  Reporting Services e il Server di report di Power BI offrono supporto limitato nell'uso dei [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] con i database del server di report. I database del server di report possono essere configurati nel gruppo di disponibilità in modo da far parte di una replica; tuttavia, quando si verifica un failover, in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] non verrà usata automaticamente una replica diversa per i database del server di report. L'utilizzo di MultiSubnetFailover con i database del server di report non è supportato.  

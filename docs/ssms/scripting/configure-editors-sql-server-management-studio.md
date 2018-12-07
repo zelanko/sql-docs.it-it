@@ -12,27 +12,27 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4fbc8d15cace6ea33f8b64936e18bae25a28708c
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 8a4d94524bfe9b991f59dfbe21a5160c5b726ef1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51702415"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52501992"
 ---
 # <a name="configure-editors-sql-server-management-studio"></a>Configurazione di editor (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   È possibile personalizzare il funzionamento degli editor di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] configurando le apposite opzioni.  
   
 ## <a name="settng-editor-options"></a>Impostazione delle opzioni degli editor  
- La maggior parte delle opzioni degli editor possono essere impostate scegliendo **Opzioni** dal menu **Strumenti** per visualizzare la finestra di dialogo **Opzioni** . Nella finestra di dialogo **Opzioni** , aprire il nodo **Editor di testo** nel riquadro sinistro per impostare le opzioni di modifica di codice e testo. I nodi in Editor di testo si applicano a editor specifici:  
+ È possibile impostare la maggior parte delle opzioni degli editor scegliendo **Opzioni** dal menu **Strumenti** per visualizzare la finestra di dialogo **Opzioni**. Nella finestra di dialogo **Opzioni** aprire il nodo **Editor di testo** nel riquadro sinistro per impostare le opzioni di modifica di codice e testo. I nodi in Editor di testo si applicano a editor specifici:  
   
-1.  **Tutte le lingue** : le opzioni impostate in questo nodo si applicano a tutti gli editor di [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] . È possibile ignorare queste impostazioni utilizzando gli altri nodi che consentono di configurare opzioni diverse per un editor specifico.  
+1.  **Tutte le lingue**: le opzioni impostate in questo nodo si applicano a tutti gli editor di [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. È possibile ignorare queste impostazioni utilizzando gli altri nodi che consentono di configurare opzioni diverse per un editor specifico.  
   
-2.  **Testo normale** : le opzioni impostate in questo nodo si applicano agli editor di testo, MDX e DMX.  
+2.  **Testo normale**: le opzioni impostate in questo nodo si applicano agli editor di testo, MDX e DMX.  
   
-3.  **Transact-SQL** : le opzioni impostate in questo nodo si applicano all'editor di query del motore di database.  
+3.  **Transact-SQL**: le opzioni impostate in questo nodo si applicano all'editor di query del motore di database.  
   
-4.  **XML** : le opzioni impostate in questo nodo si applicano all'editor XML for Analysis.  
+4.  **XML**: le opzioni impostate in questo nodo si applicano all'editor XML for Analysis.  
   
  Aprire i nodi **Esecuzione query** o **Risultati query** per personalizzare l'esecuzione di query e la modalità di visualizzazione dei risultati.  
   

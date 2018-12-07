@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 054c4a87-60bf-4556-9a8c-8b2d77a534e6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d5489f4086cf8bfb7b2609538a0cda5a1c2515ad
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: 7afbcb496179a583d40a4f194d55c872f43cb293
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50100182"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535613"
 ---
 # <a name="monitor-reporting-services-subscriptions"></a>Monitorare le sottoscrizioni di Reporting Services
   È possibile monitorare le sottoscrizioni di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dall'interfaccia utente, da Windows PowerShell o dai file di log. Le opzioni disponibili per il monitoraggio dipendono dalla modalità del server di report in esecuzione.  
@@ -85,9 +85,9 @@ ms.locfileid: "50100182"
   
 1.  Selezionare la raccolta documenti contenente il report.  
   
-2.  Aprire il menu di scelta rapida del report (**…**).  
+2.  Aprire il menu di scelta rapida del report (**...**).  
   
-3.  Selezionare l'opzione di menu esteso (**…**).  
+3.  Selezionare l'opzione di menu espanso (**...**).  
   
 4.  Selezionare **Gestisci sottoscrizioni**  
   

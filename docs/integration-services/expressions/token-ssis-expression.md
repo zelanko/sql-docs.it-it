@@ -11,12 +11,12 @@ ms.assetid: 9fdd06bf-5bc9-445c-95bf-709e0ca5989b
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 447e132edc25da64984ec6fb165ab0d032cdb1ec
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 19e2499bddf07720bdeba3ba49dd4a07258dd31b
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47747939"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52396956"
 ---
 # <a name="token--ssis-expression"></a>TOKEN (espressione SSIS)
   Restituisce un token (sottostringa) da una stringa in base ai delimitatori specificati che separano i token nella stringa e al numero del token che indica quale token deve essere restituito.  
@@ -32,7 +32,7 @@ TOKEN(character_expression, delimiter_string, occurrence)
  Stringa che contiene token separati da delimitatori.  
   
  *delimiter_string*  
- Stringa che contiene caratteri delimitatori. Ad esempio, "; ,” contiene i caratteri delimitatori punto e virgola, spazio e virgola.  
+ Stringa che contiene caratteri delimitatori. Ad esempio, "; ," contiene i caratteri delimitatori punto e virgola, spazio e virgola.  
   
  *occurrence*  
  Intero con segno o senza segno che specifica il token da restituire. Ad esempio, se si specifica 3 come valore per questo parametro, viene restituito il terzo token nella stringa.  
@@ -58,7 +58,7 @@ TOKEN(character_expression, delimiter_string, occurrence)
 -   È possibile utilizzare variabili e colonne come valori di tutti gli argomenti dell'espressione.  
   
 ## <a name="expression-examples"></a>Esempi di espressione  
- Nell'esempio seguente la funzione TOKEN restituisce "a". La stringa "a little white dog" presenta 4 token "a", "little", "white", "dog" separati dal delimitatore " " (spazio). Il secondo argomento, una stringa delimitatore, specifica il solo delimitatore, lo spazio, da utilizzare per suddividere la stringa di input in token. L'ultimo argomento, 1, specifica che deve essere restituito il primo token. In questa stringa di esempio il primo token è "a".  
+ Nell'esempio seguente la funzione TOKEN restituisce "a". La stringa "a little white dog" contiene 4 token ("a", "little", "white", "dog") separati dal delimitatore " " (spazio). Il secondo argomento, una stringa delimitatore, specifica il solo delimitatore, lo spazio, da utilizzare per suddividere la stringa di input in token. L'ultimo argomento, 1, specifica che deve essere restituito il primo token. In questa stringa di esempio, il primo token è "a".  
   
 ```  
 TOKEN("a little white dog"," ",1)  
@@ -94,7 +94,7 @@ TOKEN("        a little white dog", " ", 1)
 TOKEN("2009/01/01", "/"), 1  
 ```  
   
- Nell'esempio seguente la funzione TOKEN restituisce il nome file dal percorso specificato. Ad esempio, se il valore di User::Path è "c:\programmi\data\myfile.txt", la funzione TOKEN restituisce "myfile.txt". La funzione TOKENCOUNT restituisce 4, mentre la funzione TOKEN restituisce il quarto token, "myfile.txt".  
+ Nell'esempio seguente la funzione TOKEN restituisce il nome file dal percorso specificato. Se il valore di User::Path è "c:\programmi\data\myfile.txt", ad esempio, la funzione TOKEN restituisce "myfile.txt". La funzione TOKENCOUNT restituisce 4, mentre la funzione TOKEN restituisce il quarto token, "myfile.txt".  
   
 ```  
 TOKEN(@[User::Path], "\\", TOKENCOUNT(@[User::Path], "\\"))  

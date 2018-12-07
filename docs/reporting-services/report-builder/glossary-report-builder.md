@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 525820a2-7eba-4982-8518-e6db041b1fc6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 6e96093d286fa9ca7d5d76fd30206043ef8396b9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bddefafa610718710a6b8a41d267ceb8e3b5515d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47857159"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52541801"
 ---
 # <a name="glossary-report-builder"></a>Glossario (Generatore report)
   
@@ -186,7 +186,7 @@ ms.locfileid: "47857159"
 |Indicatore KPI|Vedere: indicatore di prestazioni chiave (KPI)|  
 |campo etichette|Campo del set di dati di un report che identifica un'etichetta per un campo chiave corrispondente. I parametri e le aree dati possono visualizzare l'etichetta per un campo chiave anziché il valore.|  
 |latenza|Quantità di tempo che intercorre tra il completamento di una modifica dei dati in un server e il momento in cui tale modifica è visibile in un altro server.|  
-|latitudine|Coordinata di latitudine espressa come valore in gradi decimali del sistema World Geodetic System (WGS 84). L'intervallo valido è compreso tra -90,0 a +90,0.|  
+|latitudine|Coordinata di latitudine espressa come valore in gradi decimali del sistema World Geodetic System (WGS 84). L'intervallo valido è compreso tra -90,0 e +90,0.|  
 |livello|In un elemento di report mappa, specifica il tipo e la presentazione di un singolo tipo di dati spaziali. Un elemento di report mappa è un contenitore per più livelli.|  
 |LCID|Numero univoco che identifica le impostazioni locali in ambiente Windows.|  
 |legenda|In un grafico, una mappa o un'area dati del misuratore di un report, elemento che fornisce indicazioni tra la presentazione visualizzata dei dati e i valori dei dati sottostanti.|  
@@ -199,7 +199,7 @@ ms.locfileid: "47857159"
 |file di log|File o set di file che contiene i record delle modifiche apportate a un database.|  
 |nome logico|Nome utilizzato da SQL Server per identificare un file.|  
 |operatori logici|Operatori AND, OR e NOT utilizzati per collegare le condizioni di ricerca nelle clausole WHERE.|  
-|longitudine|Coordinata espressa come valore in gradi decimali del sistema World Geodetic System (WGS 84). L'intervallo valido è compreso tra -180 a +180.|  
+|longitudine|Coordinata espressa come valore in gradi decimali del sistema World Geodetic System (WGS 84). L'intervallo valido è compreso tra -180,0 e +180,0.|  
 |relazione molti-a-molti|Relazione tra due tabelle in cui alle righe di ogni tabella corrispondono più righe della tabella correlata. Ogni fattura di vendita, ad esempio, può contenere più prodotti, ma ogni prodotto può essere incluso in più fatture di vendita.|  
 |relazione molti-a-uno|Relazione tra due tabelle in cui una riga di una tabella può essere associata a più righe dell'altra tabella.|  
 |mappa|Elemento di report che funge da contenitore per titoli, diversi tipi di legende e livelli mappa.|  

@@ -39,12 +39,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5118700c017167664b0e33867f43ec6dbd46813d
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 9ab6a40f49ce64e4e157c4eacccb59b6135ed4ff
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51704059"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52520851"
 ---
 # <a name="update-transact-sql"></a>UPDATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -463,7 +463,7 @@ ID     Value
   
 ## <a name="security"></a>Security  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>Autorizzazioni  
  Le autorizzazioni UPDATE sono necessarie nella tabella di destinazione. Se l'istruzione UPDATE include una clausola WHERE oppure l'argomento *expression* nella clausola SET usa una colonna della tabella, sono anche necessarie le autorizzazioni per l'esecuzione dell'istruzione SELECT nella tabella da aggiornare.  
   
  Le autorizzazioni per l'istruzione UPDATE vengono assegnate per impostazione predefinita ai membri del ruolo predefinito del server **sysadmin**, dei ruoli predefiniti del database **db_owner** e **db_datawriter** e al proprietario della tabella. I membri dei ruoli **sysadmin**, **db_owner** e **db_securityadmin** e il proprietario della tabella possono trasferire autorizzazioni ad altri utenti.  
@@ -482,7 +482,7 @@ ID     Value
 |[Aggiornamento di tipi definiti dall'utente](#UDTs)|tipi definiti dall'utente|  
 |[Override del comportamento predefinito di Query Optimizer tramite hint](#TableHints)|hint di tabella • hint per la query|  
 |[Acquisizione dei risultati dell'istruzione UPDATE](#CaptureResults)|Clausola OUTPUT|  
-|[Uso di UPDATE in altre istruzioni](#Other)|Stored procedure • TRY…CATCH|  
+|[Uso di UPDATE in altre istruzioni](#Other)|Stored procedure • TRY...CATCH|  
   
 ###  <a name="BasicSyntax"></a> Sintassi di base  
  Negli esempi contenuti in questa sezione vengono illustrate le funzionalità di base dell'istruzione UPDATE tramite la sintassi minima richiesta.  
@@ -1033,7 +1033,7 @@ GO
 EXEC HumanResources.Update_VacationHours 40;  
 ```  
   
-#### <a name="ac-using-update-in-a-trycatch-block"></a>AC. Utilizzo di UPDATE in un blocco TRY...CATCH  
+#### <a name="ac-using-update-in-a-trycatch-block"></a>AC. Uso di UPDATE in un blocco TRY...CATCH  
  L'esempio seguente usa un'istruzione UPDATE in un blocco TRY...CATCH per gestire gli errori di esecuzione che potrebbero verificarsi durante l'operazione di aggiornamento.  
   
 ```sql  

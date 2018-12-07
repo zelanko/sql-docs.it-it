@@ -19,12 +19,12 @@ ms.assetid: 16fe1c18-4486-424d-81d6-d276ed97482f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9c2284e6e60dfce00888f836da060cb4362db5b2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d73910b856702b2785a39fc2b8ad021f1a6d9405
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47814699"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52519013"
 ---
 # <a name="delete-a-data-tier-application"></a>Eliminazione di un'applicazione livello dati
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "47814699"
 > [!WARNING]  
 >  La ricompilazione di un'istanza di applicazione livello dati mediante la registrazione di un'applicazione livello dati da un database ripristinato o ricollegato non implica la ricreazione di alcune parti dell'applicazione originale, quali i criteri di selezione dei server.  
   
-###  <a name="Permissions"></a> Permissions  
+###  <a name="Permissions"></a> Autorizzazioni  
  Un'applicazione livello dati può essere eliminata unicamente da membri del ruolo predefinito del server **sysadmin** o **serveradmin** oppure dal proprietario del database. È inoltre possibile avviare la procedura guidata usando l'account dell'amministratore di sistema di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] predefinito denominato **sa** .  
   
 ##  <a name="UsingDeleteDACWizard"></a> Utilizzo della procedura guidata Elimina applicazione livello dati  
@@ -67,7 +67,7 @@ ms.locfileid: "47814699"
   
 3.  Espandere il nodo **Applicazioni livello dati** .  
   
-4.  Fare clic con il pulsante destro del mouse sull'applicazione livello dati (DAC) da eliminare, quindi selezionare **Elimina applicazione livello dati**.  
+4.  Fare clic con il pulsante destro del mouse sull'applicazione livello dati (DAC) da eliminare e quindi selezionare **Elimina applicazione livello dati**.  
   
 5.  Completare le finestre di dialogo della procedura guidata.  
   

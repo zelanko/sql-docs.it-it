@@ -19,12 +19,12 @@ ms.assetid: 17c1de2c-637f-45c2-a148-79294bae0af4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b48a90afb091382446900cd1875533f8976810f1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4e9a2cbb66b7b77a9cb87b779baf76f63f627bd2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47693399"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542032"
 ---
 # <a name="save-packages"></a>Salvataggio di pacchetti
   In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] è possibile usare Progettazione [!INCLUDE[ssIS](../includes/ssis-md.md)] per compilare i pacchetti e quindi salvarli nel file system come file XML, con estensione dtsx. È inoltre possibile salvare copie del file XML di un pacchetto nel database msdb in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] o nell'archivio pacchetti. L'archivio pacchetti è costituito dalle cartelle del percorso del file system gestito dal servizio [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
@@ -68,7 +68,7 @@ ms.locfileid: "47693399"
   
 5.  Se si esegue il salvataggio in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], specificare il tipo di autenticazione e, se si utilizza l'autenticazione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , specificare un nome utente e una password.  
   
-6.  Per specificare il percorso del pacchetto, digitarlo oppure fare clic sul pulsante Sfoglia **(…)** per specificare la posizione del pacchetto. Il nome predefinito del pacchetto è Pacchetto. In alternativa, modificare il nome del pacchetto in base alle proprie esigenze.  
+6.  Per specificare il percorso del pacchetto, digitarlo oppure fare clic sul pulsante Sfoglia **(...)** per specificare il percorso del pacchetto. Il nome predefinito del pacchetto è Pacchetto. In alternativa, modificare il nome del pacchetto in base alle proprie esigenze.  
   
      Se per l'opzione **Percorso pacchetto** si seleziona **SQL Server** , il percorso del pacchetto sarà composto dalle cartelle logiche di **msdb** più il nome del pacchetto. Ad esempio, se il pacchetto DownloadMonthlyData è associato alla cartella Finance della cartella MSDB (il nome predefinito della cartella logica radice di **msdb**), il percorso del pacchetto denominato DownloadMonthlyData sarà MSDB/Finance/DownloadMonthlyData.  
   
@@ -78,7 +78,7 @@ ms.locfileid: "47693399"
   
 7.  Controllare il livello di protezione del pacchetto.  
   
-8.  Facoltativamente, per modificare il livello di protezione fare clic sul pulsante Sfoglia **(…)** accanto alla casella **Livello di protezione** .  
+8.  Facoltativamente, per modificare il livello di protezione fare clic sul pulsante Sfoglia **(...)** accanto alla casella **Livello di protezione**.  
   
     -   Nella finestra di dialogo **Livello di protezione pacchetto** selezionare un livello di protezione diverso.  
   

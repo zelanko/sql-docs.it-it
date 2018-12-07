@@ -13,12 +13,12 @@ ms.assetid: 2ef803ee-a9f8-454a-ad63-fedcbe6838d1
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 570a859d3db7a2d5dbe219199bb251515d9862cf
-ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
+ms.openlocfilehash: 436dfee205c5e200d469741075ac2e61b1e7d875
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51217949"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514395"
 ---
 # <a name="create-a-maintenance-plan-maintenance-plan-design-surface"></a>Creare un piano di manutenzione (area di progettazione del piano di manutenzione)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "51217949"
   
 ###  <a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorizzazioni  
  Per creare o gestire piani di manutenzione, è necessario essere membro del ruolo predefinito del server **sysadmin** . In Esplora oggetti il nodo **Piani di manutenzione** viene visualizzato solo per gli utenti membri del ruolo predefinito del server **sysadmin** .  
   
 ##  <a name="SSMSProcedure"></a> Utilizzo dell'area di progettazione del piano di manutenzione  
@@ -201,7 +201,7 @@ ms.locfileid: "51217949"
   
     3.  Nella casella **Nome connessione** nella finestra di dialogo **Proprietà connessione** immettere il nome della connessione che si desidera creare.  
   
-    4.  Nella finestra di dialogo **Selezionare o immettere il nome di un server**in **Specificare le informazioni seguenti per connettersi ai dati di SQL Server** immettere il nome del server SQL che si intende usare o fare clic sui puntini di sospensione **(…)** e selezionare un server nella finestra di dialogo **SQL Server** . Se si seleziona un server nella finestra di dialogo **SQL Server** , fare clic su **OK**.  
+    4.  Nella finestra di dialogo **Selezionare o immettere il nome di un server** in **Specificare le informazioni seguenti per connettersi ai dati di SQL Server** immettere il nome del server SQL che si intende usare o fare clic sui puntini di sospensione **(...)** e selezionare un server nella finestra di dialogo **SQL Server**. Se si seleziona un server nella finestra di dialogo **SQL Server** , fare clic su **OK**.  
   
     5.  In **Immettere le informazioni per l'accesso al server**selezionare **Usa sicurezza integrata di Windows NT** o **Usa nome utente e password specifici**. Se si sceglie di utilizzare un nome utente e una password specifici, immettere tali informazioni rispettivamente nelle caselle **Nome utente** e **Password** .  
   
@@ -217,7 +217,7 @@ ms.locfileid: "51217949"
   
         1.  Se si seleziona **Genera report in un file di testo**, selezionare **Crea nuovo file** o **Accoda a file**.  
   
-        2.  A seconda della selezione effettuata nel passaggio precedente, immettere il nome e il percorso completo del nuovo file o del file da accodare nella casella **Cartella** o **Nome file** . In alternativa, fare clic sui puntini di sospensione **(…)** e selezionare il percorso della cartella o il nome del file dalla finestra di dialogo **Individua cartella -**_nome\_server_ o **Individua file di database -**_nome\_server_.  
+        2.  A seconda della selezione effettuata nel passaggio precedente, immettere il nome e il percorso completo del nuovo file o del file da accodare nella casella **Cartella** o **Nome file** . In alternativa, fare clic sui puntini di sospensione **(...)** e selezionare il percorso della cartella o il nome del file dalla finestra di dialogo **Individua cartella -**_nome\_server_ o **Individua file di database -**_nome\_server_.  
   
         3.  Se si seleziona **Invia report a destinatario di posta elettronica**, nell'elenco **Operatore agente** selezionare il destinatario del report da inviare tramite posta elettronica.  
   

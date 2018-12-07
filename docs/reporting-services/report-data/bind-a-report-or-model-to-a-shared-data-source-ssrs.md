@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 23cc15f2-2883-48e2-bc6c-fa0ab61a2e21
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 83e3d6d960e4fce7e96d9b8195e2a0f06e8f4dd4
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 0a72bb8d81564afbe632a68908baf4bad4dead82
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031340"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507465"
 ---
 # <a name="bind-a-report-to-a-shared-data-source-ssrs"></a>Associare un report a un'origine dati condivisa (SSRS)
   In alcune situazioni, ad esempio quando si sposta un report da un server di test a uno di produzione, può essere necessario salvare il file nel computer locale e quindi caricarlo in un altro server di report. Quando si carica il report nel nuovo server è necessario riassociarlo a un'origine dati condivisa archiviata nel nuovo server di report. Se il report non viene riassociato non funzionerà correttamente quando vi si accede dal nuovo server di report.  
@@ -50,7 +50,7 @@ ms.locfileid: "50031340"
   
 5.  Nell'area **Tipo di connessione** verificare che **Origine dati condivisa** sia selezionata.  
   
-6.  Nell'area **Collegamento origine dati** fare clic sul pulsante con i puntini di sospensione.  
+6.  Nell'area **Collegamento origine dati** fare clic sul pulsante con i puntini di sospensione (...).  
   
 7.  Individuare l'origine dei dati da utilizzare.  
   

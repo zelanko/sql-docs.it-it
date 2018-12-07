@@ -14,12 +14,12 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 15b8c62e501e13ce0145524c140a1c24deb2bcc5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b6f47c0b1139e78119a345cfbb7565500dc346a1
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47653799"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52401084"
 ---
 # <a name="use-sql-server-connector-with-sql-encryption-features"></a>Usare Connettore SQL Server con le funzionalità di crittografia SQL
 [!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../../includes/appliesto-xx-asdb-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "47653799"
  Completare le parti dalla 1 alla 4 dell'argomento [Procedura di installazione di Extensible Key Management con l'insieme di credenziali delle chiavi di Azure](../../../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md)prima di seguire la procedura di questo argomento.  
  
 > [!NOTE]  
->  Le versioni 1.0.0.440 e precedenti sono state sostituite e non sono più supportate in ambienti di produzione. Eseguire l'aggiornamento alla versione 1.0.1.0 o successiva visitando l' [Area download Microsoft](https://www.microsoft.com/download/details.aspx?id=45344) e seguendo le istruzioni nella pagina [Manutenzione e risoluzione dei problemi del Connettore SQL Server](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md) in "Aggiornamento del Connettore SQL Server".  
+>  Le versioni 1.0.0.440 e precedenti sono state sostituite e non sono più supportate negli ambienti di produzione. Eseguire l'aggiornamento alla versione 1.0.1.0 o successiva visitando l'[Area download Microsoft](https://www.microsoft.com/download/details.aspx?id=45344) e seguendo le istruzioni nella pagina [Manutenzione e risoluzione dei problemi di Connettore SQL Server](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md) in "Aggiornamento del Connettore SQL Server".  
   
 ## <a name="transparent-data-encryption-by-using-an-asymmetric-key-from-azure-key-vault"></a>Transparent Data Encryption con una chiave asimmetrica dell'insieme di credenziali delle chiavi di Azure  
  Dopo aver completato le parti dalla 1 alla 4 dell'argomento Procedura di installazione di Extensible Key Management con l'insieme di credenziali delle chiavi di Azure, usare la chiave dell'insieme di credenziali delle chiavi di Azure per crittografare la chiave di crittografia del database con TDE.  
@@ -52,10 +52,10 @@ ms.locfileid: "47653799"
         - Se si usa **Azure pubblico**, sostituire l'argomento `IDENTITY` con il nome dell'insieme di credenziali delle chiavi di Azure della parte II.
         - Se si usa un **cloud privato di Azure** , ad esempio Azure per enti pubblici, Azure Cina o Azure Germania, sostituire l'argomento `IDENTITY` con l'URI dell'insieme di credenziali restituito nella parte II, passaggio 3. Non includere "https://" nell'URI dell'insieme di credenziali.   
   
-    -   Sostituire la prima parte dell'argomento `SECRET` con l' **ID client** di Azure Active Directory della parte 1. In questo esempio l' **ID client** è `EF5C8E094D2A4A769998D93440D8115D`.  
+    -   Sostituire la prima parte dell'argomento `SECRET` con l'**ID client** di Azure Active Directory della parte 1. In questo esempio l'**ID client** è `EF5C8E094D2A4A769998D93440D8115D`.  
   
         > [!IMPORTANT]  
-        >  È necessario rimuovere i trattini dall' **ID Client**.  
+        >  È necessario rimuovere i trattini dall'**ID client**.  
   
     -   Completare la seconda parte dell'argomento `SECRET` con il **segreto client** della parte I. In questo esempio il **segreto client** della parte I è `Replace-With-AAD-Client-Secret`. La stringa finale dell'argomento `SECRET` sarà una lunga sequenza di lettere e numeri *senza trattini*.  
   
@@ -149,10 +149,10 @@ ms.locfileid: "47653799"
         - Se si usa **Azure pubblico**, sostituire l'argomento `IDENTITY` con il nome dell'insieme di credenziali delle chiavi di Azure della parte II.
         - Se si usa un **cloud privato di Azure** , ad esempio Azure per enti pubblici, Azure Cina o Azure Germania, sostituire l'argomento `IDENTITY` con l'URI dell'insieme di credenziali restituito nella parte II, passaggio 3. Non includere "https://" nell'URI dell'insieme di credenziali.    
   
-    -   Sostituire la prima parte dell'argomento `SECRET` con l' **ID client** di Azure Active Directory della parte 1. In questo esempio l' **ID client** è `EF5C8E094D2A4A769998D93440D8115D`.  
+    -   Sostituire la prima parte dell'argomento `SECRET` con l'**ID client** di Azure Active Directory della parte 1. In questo esempio l'**ID client** è `EF5C8E094D2A4A769998D93440D8115D`.  
   
         > [!IMPORTANT]  
-        >  È necessario rimuovere i trattini dall' **ID Client**.  
+        >  È necessario rimuovere i trattini dall'**ID client**.  
   
     -   Completare la seconda parte dell'argomento `SECRET` con il **segreto client** della parte I. In questo esempio il **segreto client** della parte I è `Replace-With-AAD-Client-Secret`. La stringa finale dell'argomento `SECRET` sarà una lunga sequenza di lettere e numeri *senza trattini*.   
   
@@ -214,7 +214,7 @@ ms.locfileid: "47653799"
     
     Per ripristinare un backup del database crittografato con TDE, l'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] di destinazione deve prima di tutto disporre di una copia della chiave dell'insieme di credenziali asimmetrica usata per la crittografia. Ecco come si ottiene questo risultato:  
     
-    - Se la chiave asimmetrica originale usata per TDE non è più nell'insieme di credenziali chiave, ripristinare il backup della chiave dell'insieme di credenziali chiave o reimportare la chiave da un modulo HSM locale. **Importante:** per fare in modo che l'identificazione digitale della chiave corrisponda all'identificazione digitale registrata nel backup del database, la chiave deve avere lo **stesso nome della chiave dell'insieme di credenziali chiave** originale.
+    - Se la chiave asimmetrica originale usata per TDE non è più nell'insieme di credenziali chiave, ripristinare il backup della chiave dell'insieme di credenziali chiave o reimportare la chiave da un modulo HSM locale. **Importante:** per fare in modo che l'identificazione digitale della chiave corrisponda all'identificazione digitale registrata nel backup del database, la chiave deve avere lo **stesso nome della chiave dell'insieme di credenziali delle chiavi** originale.
     
     - Applicare i passaggi 1 e 2 nell'istanza [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] di destinazione.
     

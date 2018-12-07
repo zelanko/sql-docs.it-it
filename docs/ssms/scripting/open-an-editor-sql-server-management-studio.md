@@ -11,12 +11,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3c123c562a9f0d6c581fb6a69fcc52d0126302a6
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 6e2d05ae0034f7826044f2ae2f29a8d6ca2a07df
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51643242"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52508726"
 ---
 # <a name="open-an-editor-sql-server-management-studio"></a>Apertura di un editor (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "51643242"
 ### <a name="limitations-and-restrictions"></a>Limitazioni e restrizioni  
  Se i file vengono condivisi con utenti in altri siti che utilizzano tabelle codici diverse, è necessario salvare il file con la tabella codici Unicode appropriata per evitare errori di lettura del file. Per il salvataggio dei file per gli ambienti UNIX o Macintosh è inoltre necessario assicurarsi di utilizzare il formato di documento appropriato. Nel menu **File** fare clic su **Salva con nome**, **Salva con codifica** dalla freccia a discesa accanto al pulsante **Salva** e quindi scegliere **Unix** o **Macintosh** in **Terminazioni riga**.  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>Autorizzazioni  
  Le operazioni eseguite in un editor del codice sono soggette alle autorizzazioni concesse all'account di autenticazione utilizzato per l'accesso. Se ad esempio si apre una finestra dell'editor di query del [!INCLUDE[ssDE](../../includes/ssde-md.md)] utilizzando l'autenticazione di Windows, non sarà possibile eseguire le istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] che fanno riferimento a oggetti per i quali l'account di Windows non dispone delle autorizzazioni di accesso.  
   
 ## <a name="how-to-open-editors"></a>Procedura: Apertura degli editor  
@@ -37,9 +37,9 @@ ms.locfileid: "51643242"
 ### <a name="using-the-filenew-menu"></a>Utilizzo del menu File/Nuovo  
  Scegliere **Nuovo** dal menu **File**e quindi selezionare una delle opzioni dell'editor di query:  
   
--   **Query con connessione corrente** : consente di aprire una nuova finestra dell'editor del tipo associato alla connessione corrente in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. La finestra dell'editor utilizza le stesse informazioni di autenticazione della connessione corrente. Se ad esempio si seleziona un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] in Esplora oggetti e quindi si usa **Query con connessione corrente**, in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] viene aperto un editor di query del [!INCLUDE[ssDE](../../includes/ssde-md.md)] connesso alla stessa istanza usando le stesse informazioni di autenticazione.  
+-   **Query con connessione corrente**: consente di aprire una nuova finestra dell'editor del tipo associato alla connessione corrente in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. La finestra dell'editor utilizza le stesse informazioni di autenticazione della connessione corrente. Se ad esempio si seleziona un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] in Esplora oggetti e quindi si usa **Query con connessione corrente**, in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] viene aperto un editor di query del [!INCLUDE[ssDE](../../includes/ssde-md.md)] connesso alla stessa istanza usando le stesse informazioni di autenticazione.  
   
--   **Query del motore di database** : consente di aprire un nuovo editor di query del [!INCLUDE[ssDE](../../includes/ssde-md.md)] e una finestra di dialogo per ottenere le informazioni necessarie per connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+-   **Query del motore di database**: consente di aprire un nuovo editor di query del [!INCLUDE[ssDE](../../includes/ssde-md.md)] e una finestra di dialogo per ottenere le informazioni necessarie per connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 -   **Query MDX di Analysis Services** : consente di aprire un nuovo editor di query MDX di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e una finestra di dialogo per ottenere le informazioni necessarie per connettersi a un'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
@@ -55,9 +55,9 @@ ms.locfileid: "51643242"
 ### <a name="using-the-toolbar"></a>Utilizzo della barra degli strumenti  
  Nella barra degli strumenti **Standard** fare clic su uno dei pulsanti seguenti:  
   
--   **Nuova query** : consente di aprire una nuova finestra dell'editor del tipo associato alla connessione corrente in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. La finestra dell'editor utilizza le stesse informazioni di autenticazione della connessione corrente. Se ad esempio si seleziona un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] in Esplora oggetti e quindi si fa clic sul pulsante **Nuova query** , [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] apre un editor di query del [!INCLUDE[ssDE](../../includes/ssde-md.md)] connesso alla stessa istanza usando le stesse informazioni di autenticazione.  
+-   **Nuova query**: consente di aprire una nuova finestra dell'editor del tipo associato alla connessione corrente in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. La finestra dell'editor utilizza le stesse informazioni di autenticazione della connessione corrente. Se ad esempio si seleziona un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] in Esplora oggetti e quindi si fa clic sul pulsante **Nuova query** , [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] apre un editor di query del [!INCLUDE[ssDE](../../includes/ssde-md.md)] connesso alla stessa istanza usando le stesse informazioni di autenticazione.  
   
--   **Query del motore di database** : consente di aprire un nuovo editor di query del [!INCLUDE[ssDE](../../includes/ssde-md.md)] e una finestra di dialogo per ottenere le informazioni necessarie per connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+-   **Query del motore di database**: consente di aprire un nuovo editor di query del [!INCLUDE[ssDE](../../includes/ssde-md.md)] e una finestra di dialogo per ottenere le informazioni necessarie per connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 -   **Query MDX di Analysis Services** : consente di aprire un nuovo editor di query MDX di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e una finestra di dialogo per ottenere le informazioni necessarie per connettersi a un'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   

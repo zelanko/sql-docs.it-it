@@ -20,12 +20,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5a0280b76490e82aa8bbad2d2dd3bf8cb451d81c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a1b80f0d2ee798eea6aafb92d10aae50c14ceee2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47808339"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52541249"
 ---
 # <a name="alter-server-role-transact-sql"></a>ALTER SERVER ROLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-pdw-md.md)]
@@ -65,7 +65,7 @@ Aggiunge l'entità server specificata al ruolo del server. *server_principal* pu
 DROP MEMBER *server_principal*  
 Rimuove l'entità server specificata dal ruolo del server. *server_principal* può essere un account di accesso o un ruolo del server definito dall'utente. *server_principal* non può essere un ruolo predefinito del server, un ruolo del database o sa.  
   
-WITH NAME **=***new_server_role_name*  
+WITH NAME **=**_new_server_role_name_  
 Specifica il nuovo nome del ruolo del server definito dall'utente. Il nome non deve essere già esistente nel server.  
   
 ## <a name="remarks"></a>Remarks  
@@ -167,7 +167,7 @@ ALTER SERVER ROLE LargeRC ADD MEMBER Anna;
 ```  
   
 ### <a name="i-remove-a-login-from-a-resource-class"></a>I. Rimuove un account di accesso da una classe di risorse.  
-L'esempio seguente rimuove l'appartenenza di Anna nel ruolo server `LargeRC`.  
+L'esempio seguente rimuove l'appartenenza di Anna al ruolo del server `LargeRC`.  
   
 ```  
 ALTER SERVER ROLE LargeRC DROP MEMBER Anna;  

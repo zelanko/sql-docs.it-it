@@ -18,12 +18,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 52ba8dd70e7b39dade42d21d3b02e5883be14735
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 514ec88554282cf6e2cf0cc74eb1f35e77091fa9
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47703209"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52539033"
 ---
 # <a name="create-clustered-indexes"></a>Creare indici cluster
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -84,11 +84,11 @@ ms.locfileid: "47703209"
   
 1.  In Esplora oggetti espandere la tabella in cui si desidera creare un indice cluster.  
   
-2.  Fare clic con il pulsante destro del mouse sulla cartella **Indici** , scegliere **Nuovo indice**e selezionare **Indice cluster**.  
+2.  Fare clic con il pulsante destro del mouse sulla cartella **Indici**, scegliere **Nuovo indice** e selezionare **Indice cluster**.  
   
 3.  Nella pagina **Generale** della finestra di dialogo **Nuovo indice** immettere il nome del nuovo indice nella casella **Nome indice** .  
   
-4.  In **Colonne chiave indice**fare clic su **Aggiungi**.  
+4.  In **Colonne chiave indice** fare clic su **Aggiungi**.  
   
 5.  Nella finestra di dialogo **Seleziona colonne da**_nome\_tabella_ selezionare la casella di controllo della colonna della tabella da aggiungere all'indice cluster.  
   

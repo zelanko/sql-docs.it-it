@@ -5,8 +5,7 @@ ms.date: 11/22/2011
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 f1_keywords:
 - sql13.dqs.kb.createcd.f1
@@ -15,12 +14,12 @@ ms.assetid: c7f0bd84-a02e-4a81-885d-985e6415c499
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 275a22b7fca0634fd3ae955ead6c7cbbcd9acf66
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 81173982e9c44b135a3ba98312839ac799461988
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701779"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52616861"
 ---
 # <a name="create-a-composite-domain"></a>Creazione di un dominio composito
 
@@ -39,7 +38,7 @@ ms.locfileid: "51701779"
   
 ###  <a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorizzazioni  
  È necessario disporre del ruolo dqs_kb_editor o dqs_administrator nel database DQS_MAIN per creare un dominio composito.  
   
 ##  <a name="ParsingKnowledgeDiscoveryActivity"></a> Creazione di un dominio composito nell'attività di individuazione delle informazioni  
@@ -98,7 +97,7 @@ ms.locfileid: "51701779"
  Dopo avere creato un dominio composito, è possibile eseguire ulteriori attività di gestione sul dominio, quali l'individuazione delle informazioni per aggiungere informazioni o l'aggiunta di criteri di corrispondenza al dominio. Per altre informazioni, vedere [Eseguire l'individuazione delle informazioni](../data-quality-services/perform-knowledge-discovery.md), [Gestione di un dominio](../data-quality-services/managing-a-domain.md) o [Creare criteri di corrispondenza](../data-quality-services/create-a-matching-policy.md).  
   
 ##  <a name="KnowledgeBaseParsing"></a> Knowledge-Based Parsing  
- Data Quality Services consente di analizzare i dati in base alle informazioni e non solo in base al delimitatore o all'ordine. L'analisi basata sulle informazioni viene utilizzata quando viene eseguito il mapping di dati di origine complessi a un dominio composito e non si utilizzano servizi dati di riferimento. È possibile utilizzare l'analisi basata sulle informazioni per analizzare i dati dall'origine dati nei singoli domini interessati. Con l'analisi basata sulle informazioni, DQS tenterà in primo luogo di utilizzare le informazioni per analizzare dati complessi nei singoli domini. Se possibile, verranno identificate parti della stringa in uno o più domini e la stringa verrà analizzata nei vari domini. Si supponga ad esempio di disporre di un valore complesso denominato "John B. Doe" in un campo di nome completo rappresentato da un dominio composito Full Name. Se DQS identifica "John" come nel dominio Nome e "Doe" come nel dominio Cognome, verrà aggiunto "B." al dominio Secondo nome in base alle informazioni del dominio.  
+ Data Quality Services consente di analizzare i dati in base alle informazioni e non solo in base al delimitatore o all'ordine. L'analisi basata sulle informazioni viene utilizzata quando viene eseguito il mapping di dati di origine complessi a un dominio composito e non si utilizzano servizi dati di riferimento. È possibile utilizzare l'analisi basata sulle informazioni per analizzare i dati dall'origine dati nei singoli domini interessati. Con l'analisi basata sulle informazioni, DQS tenterà in primo luogo di utilizzare le informazioni per analizzare dati complessi nei singoli domini. Se possibile, verranno identificate parti della stringa in uno o più domini e la stringa verrà analizzata nei vari domini. Si supponga ad esempio di disporre di un valore complesso denominato "John B. Doe" in un campo di nome completo rappresentato da un dominio composito Full Name. Se DQS identifica "John" come nel dominio Nome e "Doe" come nel dominio Cognome, verrà aggiunto "B". al dominio Secondo nome in base alle informazioni del dominio.  
   
  È possibile utilizzare l'analisi basata sulle informazioni solo se si seleziona anche l'analisi basata su delimitatore. L'analisi basata sulle informazioni non sostituisce l'analisi basata su delimitatore, ma la rende più efficace. Solo nel caso in cui non esistano informazioni per tale tipo di esecuzione DQS utilizzerà un delimitatore per eseguire l'analisi. In alcune circostanze, DQS può effettuare alcune analisi mediante analisi basata sulle informazioni e altre mediante analisi basata su delimitatore.  
   

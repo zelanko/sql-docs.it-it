@@ -17,12 +17,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ef1ca3b64ee0e70dd71bfcea3fc270790343e204
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: de24fe5caaafc1475e647c84ea5a300c5221e5f0
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661111"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52511777"
 ---
 # <a name="transaction-locking-and-row-versioning-guide"></a>Guida per il controllo delle versioni delle righe e il blocco della transazione
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -130,7 +130,7 @@ ms.locfileid: "51661111"
   
  Se in un batch si verifica un errore di runtime in un'istruzione, ad esempio la violazione di un vincolo, per impostazione predefinita in [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] viene eseguito solo il rollback dell'istruzione che ha generato l'errore. È possibile modificare questo comportamento usando l'istruzione `SET XACT_ABORT`. Dopo l'esecuzione di `SET XACT_ABORT` ON, qualsiasi errore di runtime di un'istruzione comporta il rollback automatico della transazione corrente. `SET XACT_ABORT` non ha alcun effetto sugli errori di compilazione, ad esempio gli errori di sintassi. Per altre informazioni, vedere [SET XACT_ABORT &#40;Transact-SQL&#41;](../t-sql/statements/set-xact-abort-transact-sql.md).  
   
- Quando si verificano errori, è necessario includere un'azione di correzione (`COMMIT` o `ROLLBACK`) nel codice dell'applicazione. Uno strumento efficace per la gestione degli errori, inclusi quelli nelle transazioni, è rappresentato dal costrutto [!INCLUDE[tsql](../includes/tsql-md.md)] `TRY…CATCH`. Per altre informazioni ed esempi che includono le transazioni, vedere [TRY...CATCH &#40;Transact-SQL&#41;](../t-sql/language-elements/try-catch-transact-sql.md). A partire da [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], è possibile usare l'istruzione `THROW` per generare un'eccezione e trasferire l'esecuzione in un blocco `CATCH` di un costrutto `TRY…CATCH`. Per altre informazioni, vedere [THROW &#40;Transact-SQL&#41;](../t-sql/language-elements/throw-transact-sql.md).  
+ Quando si verificano errori, è necessario includere un'azione di correzione (`COMMIT` o `ROLLBACK`) nel codice dell'applicazione. Uno strumento efficace per la gestione degli errori, inclusi quelli nelle transazioni, è rappresentato dal costrutto [!INCLUDE[tsql](../includes/tsql-md.md)] `TRY...CATCH`. Per altre informazioni ed esempi che includono le transazioni, vedere [TRY...CATCH &#40;Transact-SQL&#41;](../t-sql/language-elements/try-catch-transact-sql.md). A partire da [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], è possibile usare l'istruzione `THROW` per generare un'eccezione e trasferire l'esecuzione in un blocco `CATCH` di un costrutto `TRY...CATCH`. Per altre informazioni, vedere [THROW &#40;Transact-SQL&#41;](../t-sql/language-elements/throw-transact-sql.md).  
   
 ##### <a name="compile-and-run-time-errors-in-autocommit-mode"></a>Errori di compilazione e di run-time in modalità autocommit  
  In modalità autocommit, a volte potrebbe sembrare che in un'istanza del [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] venga eseguito il rollback di un intero batch anziché di una sola istruzione SQL. Ciò si verifica solo in caso di errori di compilazione, non di errori di run-time. Un errore di compilazione impedisce infatti a [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] di compilare un piano di esecuzione e non viene pertanto eseguita alcuna parte del batch. Anche se può sembrare che sia stato eseguito il rollback di tutte le istruzioni precedenti a quella che ha generato l'errore, in realtà l'errore impedisce l'esecuzione di qualsiasi elemento del batch. Nell'esempio seguente, a causa di un errore di compilazione non vengono eseguite le istruzioni `INSERT` del terzo batch. In apparenza viene eseguito il rollback delle prime due istruzioni `INSERT`, mentre in realtà tali istruzioni non vengono eseguite.  
@@ -421,7 +421,7 @@ GO
 -   L'hint **TABLOCK** è specificato o l'opzione della tabella **table lock on bulk load** è impostata tramite **sp_tableoption**.  
   
 > [!TIP]  
-> A differenza dell'istruzione BULK INSERT, che contiene un blocco di aggiornamento bulk meno restrittivo, l'istruzione INSERT INTO…SELECT con l'hint TABLOCK contiene un blocco esclusivo (X) sulla tabella che non consente di inserire righe utilizzando operazioni di inserimento parallele.  
+> A differenza dell'istruzione BULK INSERT, che contiene un blocco di aggiornamento bulk meno restrittivo, l'istruzione INSERT INTO...SELECT con l'hint TABLOCK contiene un blocco esclusivo (X) sulla tabella che non consente di inserire righe utilizzando operazioni di inserimento parallele.  
   
 #### <a name="key_range"></a> Blocchi di intervalli di chiavi  
  I blocchi di intervalli di chiavi consentono di proteggere un intervallo di righe incluse in modo implicito in un set di record letto da un'istruzione [!INCLUDE[tsql](../includes/tsql-md.md)] in fase di utilizzo del livello di isolamento Serializable della transazione. Il blocco di intervalli di chiavi impedisce le letture fantasma, Tramite la protezione degli intervalli di chiavi tra righe, tali blocchi impediscono inserimenti o eliminazioni fantasma in un recordset a cui accede una transazione.  
@@ -1839,7 +1839,7 @@ GO
   
  Una transazione con esecuzione prolungata può causare seri problemi a un database, come indicato di seguito:  
   
--   Se l'istanza di un server viene chiusa dopo che una transazione attiva ha eseguito diverse modifiche non sottoposte a commit, la fase di recupero del successivo riavvio può impiegare molto più tempo di quanto specificato dall'opzione di configurazione del server **Intervallo di recupero** o dall'opzione `ALTER DATABASE … SET TARGET_RECOVERY_TIME`. Queste opzioni controllano la frequenza di checkpoint attivi e indiretti, rispettivamente. Per altre informazioni sui tipi di checkpoint, vedere [Checkpoint di database &#40;SQL Server&#41;](../relational-databases/logs/database-checkpoints-sql-server.md).  
+-   Se l'istanza di un server viene chiusa dopo che una transazione attiva ha eseguito diverse modifiche non sottoposte a commit, la fase di recupero del successivo riavvio può impiegare molto più tempo di quanto specificato dall'opzione di configurazione del server **Intervallo di recupero** o dall'opzione `ALTER DATABASE ... SET TARGET_RECOVERY_TIME`. Queste opzioni controllano la frequenza di checkpoint attivi e indiretti, rispettivamente. Per altre informazioni sui tipi di checkpoint, vedere [Checkpoint di database &#40;SQL Server&#41;](../relational-databases/logs/database-checkpoints-sql-server.md).  
   
 -   Inoltre, sebbene una transazione in attesa di una risposta possa produrre un aumento minimo del log, posticipa il troncamento del log in modo indefinito con una conseguente crescita delle relative dimensioni con rischio di riempimento. Se log delle transazioni si riempie, il database non può essere più aggiornato. Per altre informazioni, vedere [Architettura e gestione del log delle transazioni di SQL Server](../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md), [Risolvere i problemi relativi a un log delle transazioni completo &#40;Errore di SQL Server 9002&#41;](../relational-databases/logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md), e [Log delle transazioni &#40;SQL Server&#41;](../relational-databases/logs/the-transaction-log-sql-server.md).  
   

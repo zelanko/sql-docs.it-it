@@ -22,12 +22,12 @@ ms.assetid: c117af35-aa53-44a5-8034-fa8715dc735f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c13158bf5790af4603f691936a0599ddef3c4deb
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 58fa8d8009806f22153a22d63ea83b238140d431
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43820247"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52517446"
 ---
 # <a name="deploy-a-data-tier-application"></a>Distribuire un'applicazione livello dati
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +65,7 @@ La distribuzione di un'applicazione livello dati con accessi in [!INCLUDE[ssSDS]
   
 1.  In **Esplora oggetti**espandere il nodo per le istanze a cui si desidera distribuire l'applicazione livello dati.  
   
-2.  Fare clic con il pulsante destro del mouse sul nodo **Database** e quindi scegliere **Distribuisci applicazione livello dati**  
+2.  Fare clic con il pulsante destro del mouse sul nodo **Database** e quindi selezionare **Distribuisci applicazione livello dati**.  
   
 3.  Completare le finestre di dialogo della procedura guidata e fare clic su Fine.
 Di seguito sono disponibili altre informazioni su alcune delle pagine della procedura guidata: 

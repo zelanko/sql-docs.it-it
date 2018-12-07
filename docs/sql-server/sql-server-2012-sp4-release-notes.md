@@ -11,12 +11,12 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
-ms.openlocfilehash: 611d882b0711d19e8b9015e0d5081c1a22d0d11d
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 49dea1b469a7e8e79810e4a0ab2da6c40b97d3cb
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701099"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52503267"
 ---
 # <a name="sql-server-2012-service-pack-release-notes"></a>Note sulla versione di SQL Server 2012 Service Pack
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -50,13 +50,13 @@ I Service Pack sono disponibili solo online, non sui supporti di installazione, 
 - **Migliore diagnostica di concessione/utilizzo memoria**: nuovo evento XEvent query_memory_grant_usage (backport da Server 2016 SP1)
 - **Aggiunta della traccia di protocollo ai passaggi di negoziazione SSL**: aggiungere informazioni di traccia bit su negoziazione riuscita/non riuscita, ad esempio il protocollo, può essere utile per risolvere problemi di connettività,ad esempio durante la distribuzione di TLS 1.2
 - **Impostazione del livello di compatibilità corretto per il database di distribuzione**: dopo l'installazione del Service Pack il livello di compatibilità del database di distribuzione viene impostato su 90. La modifica del livello era dovuta a un problema nella stored procedure sp_vupgrade_replication. Il Service Pack è stato modificato e ora imposta il livello di compatibilità corretto per il database di distribuzione. 
-- **Nuovo comando DBCC per la clonazione di un database**: è stato aggiunto un nuovo comando DBCC per la clonazione del database che consente agli utenti esperti, ad esempio CSS, di risolvere problemi di database di produzione esistenti clonando lo schema e i metadati e non i dati. La chiamata viene eseguita con DBCC clonedatabase ('source_database_name', 'clone_database_name'). È consigliabile non usare i database clonati in ambienti di produzione. Per vedere se un database è stato generato da una chiamata per la clonazione del database, è possibile usare il comando seguente, selezionare DATABASEPROPERTYEX('clonedb', 'isClone'). Il valore restituito pari a 1 è true e il valore 0 è false. 
+- **Nuovo comando DBCC per la clonazione di un database**: è stato aggiunto un nuovo comando DBCC per la clonazione del database che consente agli utenti esperti, ad esempio CSS, di risolvere problemi di database di produzione esistenti clonando lo schema e i metadati e non i dati. La chiamata viene eseguita con DBCC clonedatabase ('nome_database_origine', 'nome_database_clone'). È consigliabile non usare i database clonati in ambienti di produzione. Per vedere se un database è stato generato da una chiamata per la clonazione del database, è possibile usare il comando seguente, selezionare DATABASEPROPERTYEX('clonedb', 'isClone'). Il valore restituito pari a 1 è true e il valore 0 è false. 
 - **Informazioni sul file TempDB e sulle dimensioni nel log degli errori di SQL**: se le dimensioni e l'aumento automatico sono diversi per i file di dati TempDB durante l'avvio, viene stampato il numero di file e attivato un avviso.
 - **Messaggi di supporto per l'inizializzazione immediata dei file nel log degli errori di SQL Server**: nel log degli errori viene indicato se l'inizializzazione immediata dei file di database è abilitata/disabilitata
 - **Nuova DMF in sostituzione a DBCC INPUTBUFFER**: in sostituzione a DBCC INPUTBUFFER è stata introdotta sys.dm_input_buffer, una nuova funzione a gestione dinamica che usa session_id come parametro
 - **Miglioramento di eventi XEvent in caso di errore di routing di lettura per un gruppo di disponibilità**: attualmente l'evento XEvent read_only_rout_fail viene generato solo in presenza di un elenco di routing. Nessuno dei server contenuto in questo elenco è tuttavia disponibile per le connessioni. Questo miglioramento aggiunge informazioni in caso di risoluzione dei problemi e interessa anche gli elementi di codice in cui è attivo XEvent. 
 - **Gestione migliorata di Service Broker in caso di failover del gruppo di disponibilità**: attualmente quando Service Broker è abilitato in un database del gruppo di disponibilità, durante un failover del gruppo di disponibilità tutte le connessioni a Service Broker che hanno avuto origine nella replica primaria vengono lasciate aperte. Questo miglioramento chiude tutte le connessioni aperte durante un failover del gruppo di disponibilità.
-- **Partizionamento soft-NUMA automatico**: con SQL 2014 SP2 viene introdotto il partizionamento [Soft-NUMA](../database-engine/configure-windows/soft-numa-sql-server.md) automatico quando il flag di traccia 8079 è abilitato a livello del server. Quando il flag di traccia 8079 viene abilitato durante l'avvio, SQL Server 2014 SP2 interroga il layout di hardware e configura automaticamente soft-NUMA nei sistemi che segnalano 8 o più CPU per nodo NUMA. Il comportamento soft-NUMA automatico supporta l'Hyper-Threading (HT/processore logico). Il partizionamento e la creazione di nodi aggiuntivi ridimensionano l'elaborazione in background aumentando il numero di listener tramite scalabilità e le funzionalità di crittografia e di rete. È consigliabile testare le prestazioni del carico di lavoro con la configurazione soft-NUMA automatica prima di attivarlo nell'ambiente di produzione.
+- **Partizionamento soft-NUMA automatico**: con SQL 2014 SP2 viene introdotto il partizionamento [soft-NUMA](../database-engine/configure-windows/soft-numa-sql-server.md) automatico quando il flag di traccia 8079 è abilitato a livello di server. Quando il flag di traccia 8079 viene abilitato durante l'avvio, SQL Server 2014 SP2 interroga il layout di hardware e configura automaticamente soft-NUMA nei sistemi che segnalano 8 o più CPU per nodo NUMA. Il comportamento soft-NUMA automatico supporta l'Hyper-Threading (HT/processore logico). Il partizionamento e la creazione di nodi aggiuntivi ridimensionano l'elaborazione in background aumentando il numero di listener tramite scalabilità e le funzionalità di crittografia e di rete. È consigliabile testare le prestazioni del carico di lavoro con la configurazione soft-NUMA automatica prima di attivarlo nell'ambiente di produzione.
 
 ## <a name="service-pack-3-release-notes"></a>Note sulla versione di Service Pack 3
 
@@ -226,11 +226,11 @@ In precedenza, tramite DACFx non è stato possibile mantenere lo stato (WITH CHE
   
 **Aggiornamenti a SqlPackage.exe (strumento della riga di comando di DACFx)**  
   
--   Estrarre DACPAC con dati. Viene creato un file di snapshot di database (con estensione dacpac) da un database SQL di Windows Azure o SQL Server attivo contenente dati da tabelle utente, oltre allo schema del database. Questi pacchetti possono essere pubblicati in un nuovo database SQL di Windows Azure o SQL Server esistente tramite l'azione Pubblica di SqlPackage.exe. I dati contenuti nel pacchetto sostituiscono quelli esistenti nel database di destinazione.  
+-   Estrarre DACPAC con dati. Viene creato un file di snapshot di database (con estensione dacpac) da un database SQL di Windows Azure o SQL Server attivo contenente dati di tabelle utente oltre allo schema del database. Questi pacchetti possono essere pubblicati in un nuovo database SQL di Windows Azure o SQL Server esistente tramite l'azione Pubblica di SqlPackage.exe. I dati contenuti nel pacchetto sostituiscono quelli esistenti nel database di destinazione.  
   
 -   Esportare BACPAC. Viene creato un file di backup logico (con estensione bacpac) di un database SQL di Windows Azure o SQL Server attivo contenente lo schema del database e i dati utente utilizzabili per eseguire la migrazione di un database da SQL Server locale al database SQL di Windows Azure. I database compatibili con Azure possono essere esportati e quindi importati in un secondo momento tra le versioni supportate di SQL Server.  
   
--   Importare BACPAC. Importare un file con estensione bacpac per creare un nuovo database o popolare un database SQL di Windows Azure o SQL Server vuoto.  
+-   Importare BACPAC. Importare un file con estensione bacpac per creare un nuovo database SQL di Windows Azure o SQL Server o popolarne uno vuoto.  
   
 La documentazione completa di SqlPackage.exe su MSDN è disponibile [qui](https://msdn.microsoft.com/library/hh550080%28v=vs.103%29.aspx).  
   

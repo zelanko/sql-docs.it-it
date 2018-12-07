@@ -15,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1ffa4178e4e0f5fc26dc7545edce4cf5326c17a5
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: ff483bc665f974c9cea0379291a4feb9a3fe55d2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51671408"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507926"
 ---
 # <a name="memory-optimization-advisor"></a>Ottimizzazione guidata per la memoria
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -33,13 +33,13 @@ ms.locfileid: "51671408"
   
 -   Eseguire la migrazione di una tabella e dei dati a una tabella ottimizzata per la memoria (in assenza di funzionalità non supportate).  
     
- Per informazioni sulle metodologie di migrazione, vedere [In-Memory OLTP – Common Workload Patterns and Migration Considerations](https://msdn.microsoft.com/library/dn673538.aspx)(OLTP in memoria: considerazioni sui modelli di carico di lavoro comuni e sulla migrazione).  
+ Per informazioni sulle metodologie di migrazione, vedere [In-Memory OLTP - Common Workload Patterns and Migration Considerations](https://msdn.microsoft.com/library/dn673538.aspx) (OLTP in memoria: considerazioni sulla migrazione e sui modelli di carico di lavoro comuni).  
   
 ## <a name="walkthrough-using-the-memory-optimization-advisor"></a>Procedura dettagliata per l'utilizzo di Ottimizzazione guidata per la memoria  
  In **Esplora oggetti**fare clic con il pulsante destro del mouse sulla tabella che si vuole convertire, quindi selezionare **Ottimizzazione guidata per la memoria**. Verrà visualizzata la pagina introduttiva per **Ottimizzazione guidata per la memoria della tabella**.  
   
 ### <a name="memory-optimization-checklist"></a>Elenco di controllo relativo all'ottimizzazione per la memoria  
- Quando si fa clic su **Avanti** nella pagina introduttiva di **Ottimizzazione guidata per la memoria della tabella**, viene visualizzato l'elenco di controllo relativo all'ottimizzazione per la memoria. Le tabelle con ottimizzazione per la memoria non supportano tutte le funzionalità di una tabella basata su disco. Nell'elenco di controllo relativo all'ottimizzazione per la memoria viene indicato se la tabella basata su disco utilizza qualche funzionalità che non è compatibile con un tabella ottimizzata per la memoria. Poiché l' **Ottimizzazione guidata per la memoria della tabella** non modifica la tabella basata su disco, è possibile effettuare la migrazione della tabella per usare OLTP in memoria. È necessario effettuare queste modifiche manualmente prima di continuare con la migrazione. Per ogni incompatibilità riscontrata, in **Ottimizzazione guidata per la memoria della tabella** viene visualizzato un collegamento a informazioni utili per la modifica delle tabelle basate su disco.  
+ Quando si fa clic su **Avanti** nella pagina introduttiva di **Ottimizzazione guidata per la memoria della tabella**, viene visualizzato l'elenco di controllo relativo all'ottimizzazione per la memoria. Le tabelle con ottimizzazione per la memoria non supportano tutte le funzionalità di una tabella basata su disco. Nell'elenco di controllo relativo all'ottimizzazione per la memoria viene indicato se la tabella basata su disco utilizza qualche funzionalità che non è compatibile con un tabella ottimizzata per la memoria. Poiché l'**Ottimizzazione guidata per la memoria della tabella** non modifica la tabella basata su disco, è possibile effettuare la migrazione della tabella per usare OLTP in memoria. È necessario effettuare queste modifiche manualmente prima di continuare con la migrazione. Per ogni incompatibilità riscontrata, in **Ottimizzazione guidata per la memoria della tabella** viene visualizzato un collegamento a informazioni utili per la modifica delle tabelle basate su disco.  
   
  Se si desidera conservare l'elenco delle incompatibilità, per pianificare la migrazione, fare clic su **Genera report** per generare un elenco HTML.  
   

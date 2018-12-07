@@ -17,12 +17,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 3f973f4894eb79456376250a838b9e71745a83c7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2f79ccd9b759275f3811ed0de2cb84114ce0609f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47678969"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52501984"
 ---
 # <a name="designate-a-fail-safe-operator"></a>Impostazione di un operatore alternativo
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ Un operatore alternativo è un utente che riceve l'avviso nel caso in cui l'oper
   
 ### <a name="Security"></a>Security  
   
-#### <a name="Permissions"></a>Permissions  
+#### <a name="Permissions"></a>Autorizzazioni  
 Solo i membri del ruolo predefinito del server **sysadmin** possono definire operatori alternativi.  
   
 ## <a name="SSMSProcedure"></a>Utilizzo di SQL Server Management Studio  
@@ -67,7 +67,7 @@ Solo i membri del ruolo predefinito del server **sysadmin** possono definire ope
   
 2.  Fare clic con il pulsante destro del mouse su **SQL Server Agent** e scegliere **Proprietà**.  
   
-3.  Nella finestra di dialogo **Proprietà SQL Server Agent -**_nome\_server_ in **Seleziona una pagina** selezionare **Sistema avvisi**.  
+3.  Nella finestra di dialogo **Proprietà SQL Server Agent -**_nome\_server_ selezionare **Sistema avvisi** in **Selezione pagina**.  
   
 4.  In **Operatore alternativo**selezionare **Abilita operatore alternativo**.  
   

@@ -14,12 +14,12 @@ ms.assetid: bed670a3-13bd-4d88-91a1-58d5b9524a97
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b7215ed9f2374a46ffd5034ce8a85ab0f40419ed
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c564788a1d77d9af83de28a2b4dbea022ea28ec1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47840229"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52530789"
 ---
 # <a name="how-to-create-a-snapshot-of-a-project"></a>Procedura: Creazione di uno snapshot di un progetto
 Un file di **applicazione livello dati** fornisce una rappresentazione di sola lettura dello schema del database al momento della creazione. È considerato essenzialmente uno schema del database da cui è possibile importare nuovamente gli oggetti dello schema in un progetto. Inoltre, è possibile confrontarlo con lo schema di un database o di un progetto e aggiornare il database o il progetto affinché rifletta lo schema definito nello snapshot.  
@@ -31,11 +31,11 @@ In caso di errore da parte di un utente in un progetto di database di origine, �
   
 ### <a name="to-create-a-snapshot"></a>Per creare uno snapshot  
   
-1.  Fare clic con il pulsante destro del mouse sul progetto **TradeDev** in **Esplora soluzioni** e selezionare **Applicazione livello dati (\*.dacpac)…**.  
+1.  Fare clic con il pulsante destro del mouse sul progetto **TradeDev** in **Esplora soluzioni** e selezionare **Applicazione livello dati (\*.dacpac)**.  
   
-2.  In SSDT si tenterà innanzitutto di compilare il progetto. Se non si verificano errori di compilazione, in **Esplora soluzioni** viene creata una cartella **Snapshot**, all'interno della quale tramite SSDT viene creato un file con estensione dacpac con formato del nome "<Project Name>_YYYYMMDD_HH-MM-SS.dacpac".  
+2.  In SSDT si tenterà innanzitutto di compilare il progetto. Se non si verificano errori di compilazione, in **Esplora soluzioni** viene creata una cartella **Snapshot**, all'interno della quale SSDT crea un file con estensione dacpac con il formato di nome "<Project Name>_AAAAMMGG_HH-MM-SS.dacpac".  
   
-3.  Fare clic con il pulsante destro del mouse sul file con estensione dacpac e selezionare **Rinomina**. Impostare il nome file predefinito su "TradeDev1.dacpac".  
+3.  Fare clic con il pulsante destro del mouse sul file con estensione dacpac e selezionare **Rinomina**. Modificare il nome file predefinito impostandolo su "TradeDev1.dacpac".  
   
 4.  Fare clic con il pulsante destro del mouse sulla funzione **GetProductsBySupplier** in **Esplora soluzioni** e selezionare **Elimina** per rimuoverla dal progetto.  
   
@@ -43,7 +43,7 @@ In caso di errore da parte di un utente in un progetto di database di origine, �
   
 ### <a name="to-import-a-snapshot"></a>Per importare uno snapshot  
   
-1.  Fare clic con il pulsante destro del mouse sul progetto **TradeDev** in **Esplora soluzioni**, selezionare **Importa** e quindi **Applicazione livello dati (\*.dacpac)…** dai menu contestuali.  
+1.  Fare clic con il pulsante destro del mouse sul progetto **TradeDev** in **Esplora soluzioni** e selezionare **Importa** e quindi **Applicazione livello dati (\*.dacpac)** dai menu di scelta rapida.  
   
 2.  Nella finestra di dialogo **Importa applicazione di livello dati** fare clic su **Sfoglia** per selezionare **TradeDev1.dacpac** da usare come origine dell'importazione.  
   

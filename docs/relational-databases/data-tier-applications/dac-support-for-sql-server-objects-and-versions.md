@@ -13,12 +13,12 @@ ms.assetid: b1b78ded-16c0-4d69-8657-ec57925e68fd
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 85f07a1380cf59db3944ab905d6aca9156a4b94b
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: ec1a3488a8b28054f211e4d68dc329371e4cfb6b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51672040"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52513197"
 ---
 # <a name="dac-support-for-sql-server-objects-and-versions"></a>Supporto dell'applicazione livello dati per oggetti e versioni di SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "51672040"
 |FUNZIONE: con valori di tabella e istruzioni multiple.|FUNZIONE: scalare|  
 |INDICE: cluster|INDICE: non cluster|  
 |INDICE: spaziale|INDICE: univoco|  
-|LOGIN|Permissions|  
+|LOGIN|Autorizzazioni|  
 |Appartenenze a ruoli|SCHEMA|  
 |Statistiche|STORED PROCEDURE: Transact-SQL|  
 |Sinonimi|TABELLA: vincolo CHECK|  
@@ -110,20 +110,20 @@ ms.locfileid: "51672040"
   
 3.  L'operazione di distribuzione non viene completata per le condizioni seguenti nelle colonne sql_variant. Nei casi interessati, verrà visualizzata una finestra di dialogo con il messaggio seguente:  **Operazione non riuscita a causa di limitazioni dei dati in DAC Framework**.  
   
-    -   Tipi di base DATETIME2, SMALLDATETIME e DATE: se il valore non è compreso nell'intervallo DATETIME, ad esempio, l'anno è inferiore al 1753.  
+    -   Tipi di base DATETIME2, SMALLDATETIME e DATE: se il valore non è compreso nell'intervallo DATETIME, ad esempio l'anno è inferiore al 1753.  
   
     -   Tipo di base DECIMAL, NUMERIC: quando la precisione del valore è maggiore di 28.  
   
 ##  <a name="Considerations"></a> Considerazioni aggiuntive per le azioni di distribuzione  
  Si tengano presenti le considerazioni seguenti per le azioni di distribuzione dati di DAC Framework:  
   
--   **Estrazione/Esportazione** : queste limitazioni non sono applicabili alle azioni che usano DAC Framework per creare un pacchetto da un database, ad esempio l'estrazione di un file con estensione dacpac e l'esportazione di un file con estensione bacpac. I dati del pacchetto sono una rappresentazione totalmente fedele dei dati nel database di origine. Se una di queste condizioni è presente nel pacchetto, nel registro di estrazione/esportazione sarà contenuto un riepilogo dei problemi tramite i messaggi indicati in precedenza. In questo modo, l'utente verrà avvisato di potenziali problemi di distribuzione dati con il pacchetto creato. Inoltre, visualizzerà il seguente messaggio di riepilogo contenuto nel registro: **Queste limitazioni non influiscono sulla fedeltà dei valori e tipi di dati archiviati nel pacchetto di applicazione livello dati (DAC) creato da DAC Framework. Le limitazioni sono applicabili unicamente ai valori e tipi di dati derivanti dalla distribuzione di un pacchetto di applicazione livello dati (DAC) in un database. Per altre informazioni sui dati interessati e su come risolvere questa limitazione, vedere** [questo argomento](https://go.microsoft.com/fwlink/?LinkId=267086).  
+-   **Estrazione/Esportazione**: queste limitazioni non sono applicabili alle azioni che usano DAC Framework per creare un pacchetto da un database, ad esempio l'estrazione di un file con estensione dacpac e l'esportazione di un file con estensione bacpac. I dati del pacchetto sono una rappresentazione totalmente fedele dei dati nel database di origine. Se una di queste condizioni è presente nel pacchetto, nel registro di estrazione/esportazione sarà contenuto un riepilogo dei problemi tramite i messaggi indicati in precedenza. In questo modo, l'utente verrà avvisato di potenziali problemi di distribuzione dati con il pacchetto creato. Inoltre, visualizzerà il seguente messaggio di riepilogo contenuto nel registro: **Queste limitazioni non influiscono sulla fedeltà dei valori e tipi di dati archiviati nel pacchetto di applicazione livello dati (DAC) creato da DAC Framework. Le limitazioni sono applicabili unicamente ai valori e tipi di dati derivanti dalla distribuzione di un pacchetto di applicazione livello dati (DAC) in un database. Per altre informazioni sui dati interessati e su come risolvere questa limitazione, vedere** [questo argomento](https://go.microsoft.com/fwlink/?LinkId=267086).  
   
 -   **Distribuzione/Pubblicazione/Importazione**: queste limitazioni si applicano alle azioni che usano DAC Framework per distribuire un pacchetto in un database, ad esempio la distribuzione o pubblicazione di un file con estensione dacpac e l'importazione di un file con estensione bacpac. I dati presenti nel database di destinazione potrebbero non rappresentare in modo totalmente fedele quelli del pacchetto. Nel registro di distribuzione/importazione sarà contenuto un messaggio, indicato in precedenza, per ogni situazione in cui si è verificato il problema. L'operazione verrà bloccata da errori (vedere la categoria 3 precedente), ma continuerà con gli altri avvisi.  
   
      Per altre informazioni sui dati interessati in questo scenario e su come risolvere questa limitazione per le azioni di distribuzione/pubblicazione/importazione, vedere [questo argomento](https://go.microsoft.com/fwlink/?LinkId=267087).  
   
--   **Soluzioni alternative** : le operazioni di estrazione ed esportazione comporteranno la scrittura di file di dati BCP totalmente fedeli nei file con estensione bacpac o dacpac. Per evitare limitazioni, utilizzare l'utilità della riga di comando BCP.exe di SQL Server per distribuire dati totalmente fedeli in un database di destinazione da un pacchetto di applicazione livello dati.  
+-   **Soluzioni alternative**: le operazioni di estrazione ed esportazione comporteranno la scrittura di file di dati BCP totalmente fedeli nei file con estensione bacpac o dacpac. Per evitare limitazioni, utilizzare l'utilità della riga di comando BCP.exe di SQL Server per distribuire dati totalmente fedeli in un database di destinazione da un pacchetto di applicazione livello dati.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Applicazioni livello dati](../../relational-databases/data-tier-applications/data-tier-applications.md)  

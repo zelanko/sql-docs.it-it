@@ -11,12 +11,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: e00e45f15923955d7ae4e65e8d39e92121a33a1b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0a0c98bc640a28642277ad16ca3ec209ddaaf0c3
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47838679"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52541401"
 ---
 # <a name="whats-new-in-database-engine---sql-server-2017"></a>Novità del motore di database - SQL Server 2017
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ Questo argomento descrive i miglioramenti apportati al [!INCLUDE[ssdenoversion-m
 - PERFORMANCE ENHANCEMENT FOR NON CLUSTERED INDEX BUILD ON MEMORY-OPTIMIZED TABLES. Le prestazioni di ricompilazione dell'indice bwtree (non cluster) per le tabelle MEMORY_OPTIMIZED durante il recupero del database sono state notevolmente ottimizzate. Questo miglioramento riduce in modo significativo il tempo di recupero del database quando vengono usati gli indici non cluster.  
 - [sys.dm_os_sys_info](../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md) include tre nuove colonne: socket_count cores_per_socket, numa_node_count. Ciò è utile quando si esegue il server in una macchina virtuale, perché un eccesso di NUMA può causare l'overcommit degli host con conseguenti problemi di prestazioni.
 - Una nuova colonna modified_extent_page_count\, è stata introdotta in [sys.dm_db_file_space_usage](../relational-databases/system-dynamic-management-views/sys-dm-db-file-space-usage-transact-sql.md) per tenere traccia delle modifiche differenziali in ogni file del database. La nuova colonna modified_extent_page_count consente di creare soluzioni di backup intelligente eseguendo un backup differenziale se la percentuale di pagine modificate nel database è inferiore a una determinata soglia, pari ad esempio al 70-80%, altrimenti eseguendo un backup completo del database.
-- SELECT INTO … ON FileGroup - [SELECT INTO](../t-sql/queries/select-into-clause-transact-sql.md) supporta ora il caricamento di una tabella in un filegroup diverso da quello predefinito dell'utente usando la parola chiave **ON** aggiunta nella sintassi SELECT INTO TSQL.
+- SELECT INTO ... ON FileGroup - [SELECT INTO](../t-sql/queries/select-into-clause-transact-sql.md) supporta ora il caricamento di una tabella in un filegroup diverso da quello predefinito dell'utente usando la parola chiave **ON** aggiunta nella sintassi SELECT INTO TSQL.
 - Miglioramenti all'installazione di tempdb: il programma di installazione consente di specificare dimensioni del file tempdb iniziali massime di **256 GB (262.144 MB)** per singolo file con un messaggio di avviso ai clienti se le dimensioni del file vengono impostate su un valore maggiore di 1 GB e se l'inizializzazione immediata dei file non è abilitata. È importante comprendere le implicazioni che derivano dalla scelta di non abilitare l'inizializzazione immediata dei file dove il tempo di installazione può aumentare in modo esponenziale a seconda delle dimensioni iniziali del file di dati tempdb specificato. L'inizializzazione immediata dei file non è applicabile alle dimensioni del log delle transazioni, pertanto se si specifica un valore più grande del log delle transazioni è possibile inevitabilmente che aumenti il tempo di installazione per l'avvio di tempdb durante l'installazione indipendentemente dall'impostazione dell'inizializzazione immediata dei file per l'account del servizio SQL Server.
 - È stata introdotta una nuova DMV [sys.dm_tran_version_store_space_usage](../relational-databases/system-dynamic-management-views/sys-dm-tran-version-store-space-usage.md) per tenere traccia dell'utilizzo dell'archivio versioni per ogni database. Questa nuova DMV è utile per monitorare tempdb per l'utilizzo dell'archivio versioni per pianificare in modo proattivo le dimensioni di tempdb in base all'utilizzo dell'archivio versioni per ogni database senza ripercussioni sulle prestazioni o sovraccarichi di esecuzione nei server di produzione.
 - Una nuova DMF [sys.dm_db_log_info](../relational-databases/system-dynamic-management-views/sys-dm-db-log-info-transact-sql.md) è stata introdotta per esporre le informazioni VLF simili a DBCC LOGINFO per monitorare, segnalare ed evitare potenziali problemi dei log delle transazioni causati dal numero di VLF, dalle dimensioni del VLF o dai problemi di shrinkfile riscontrati dai clienti.

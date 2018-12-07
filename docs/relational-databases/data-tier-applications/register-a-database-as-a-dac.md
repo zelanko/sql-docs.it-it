@@ -19,12 +19,12 @@ ms.assetid: 08e52aa6-12f3-41dd-a793-14b99a083fd5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 53ca1a857e08b538f61067ba6a035a6ceab1e8c6
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: a9a3359957c543c809003c4289207cd4b325ee0c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813994"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52513229"
 ---
 # <a name="register-a-database-as-a-dac"></a>Registrare un database come applicazione livello dati
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "51813994"
   
 2.  Espandere il nodo di **Database** .  
   
-3.  Fare clic con il pulsante destro del mouse sul database da registrare, scegliere **Attività**, quindi selezionare **Registra come applicazione livello dati**.  
+3.  Fare clic con il pulsante destro del mouse sul database da registrare, scegliere **Attività** e quindi selezionare **Registra come applicazione livello dati**.  
   
 4.  Completare le finestre di dialogo della procedura guidata.  
   
@@ -109,7 +109,7 @@ ms.locfileid: "51813994"
  [Utilizzo della procedura guidata Registra applicazione livello dati](#UsingRegisterDACWizard)  
   
 ### <a name="validating-objects"></a>Convalida degli oggetti  
- **Controllo di**  *SchemaName* **.** *ObjectName* **.** - Consente di visualizzare un indicatore di stato durante la verifica delle dipendenze degli oggetti recuperati e della loro validità per l'applicazione livello dati. *SchemaName ***.*** ObjectName* identifica l'oggetto in fase di verifica.  
+ **Controllo di**  *SchemaName* **.** *ObjectName* **.** - Consente di visualizzare un indicatore di stato durante la verifica delle dipendenze degli oggetti recuperati e della loro validità per l'applicazione livello dati. _NomeSchema_**.**_NomeOggetto_ identifica l'oggetto attualmente sottoposto a verifica.  
   
  **< Indietro**: consente di tornare alla pagina **Imposta proprietà** per modificare le voci selezionate.  
   

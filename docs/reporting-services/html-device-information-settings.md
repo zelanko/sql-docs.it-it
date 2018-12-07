@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: f505f478-dd6d-444a-957c-34f7cfb98911
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: df7cb6c2f5c04138d6738eadeb9b352d21f240f5
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: a8acf400f03ec77aff21d839dee132ba5258f54f
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813684"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52403636"
 ---
 # <a name="html-device-information-settings"></a>Impostazioni relative alle informazioni sul dispositivo HTML
 Nella tabella seguente si elencano le impostazioni relative alle informazioni sul dispositivo per il rendering nel formato HTML.  
@@ -41,7 +41,7 @@ Nella tabella seguente si elencano le impostazioni relative alle informazioni su
 |**OutlookCompat**|Indica se eseguire il rendering con metadati aggiuntivi che comportano una visualizzazione migliore del report in Outlook, mentre per altri il valore predefinito è **false**.|  
 |**Parametri**|Indica se mostrare o nascondere l'area dei parametri della barra degli strumenti. Se si imposta questo parametro su **true**, l'area dei parametri della barra degli strumenti viene visualizzata. Il valore predefinito di questo parametro è **true**.|  
 |**PrefixId**|Se usato con **HTMLFragment**, aggiunge il prefisso specificato a tutti gli attributi **ID** nel frammento HTML creato.|  
-|**ReplacementRoot(\*)**|Stringa da anteporre a tutti i collegamenti di drill-through, attivazione/disattivazione e segnalibro nel report quando viene eseguito il rendering al di fuori del controllo ReportViewer. Ad esempio, viene usata per il reindirizzamento della selezione di un utente a una pagina personalizzata.|  
+|**ReplacementRoot(\*)**|Stringa da anteporre a tutti i collegamenti di drill-through, attivazione/disattivazione e segnalibro nel report quando viene eseguito il rendering al di fuori del controllo ReportViewer. Ad esempio, viene usata per il reindirizzamento di un clic utente a una pagina personalizzata.|  
 |**ResourceStreamRoot(\*)**|Stringa da anteporre all'URL per tutte le risorse dell'immagine, ad esempio le immagini per l'attivazione o la disattivazione oppure l'ordinamento.|  
 |**Sezione**|Numero di pagina del report di cui eseguire il rendering. Un valore **0** indica che viene eseguito il rendering di tutte le sezioni del report. Il valore predefinito è **1**.|  
 |**StreamRoot (\*)**|Percorso usato per anteporre un prefisso al valore dell'attributo **src** dell'elemento IMG nel report HTML restituito dal server di report. Per impostazione predefinita, il percorso viene fornito dal server di report. È possibile usare questa impostazione per specificare un percorso radice per le immagini in un report, ad esempio **https://\<nomeserver>/risorse/immaginiazienda**.|  

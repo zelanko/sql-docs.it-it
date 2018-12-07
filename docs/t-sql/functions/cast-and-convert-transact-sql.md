@@ -1,7 +1,7 @@
 ---
 title: CAST e CONVERT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 04/13/2018
+ms.date: 11/19/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -36,12 +36,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 81a94dcde2f149ef16b5e1f42428bac706bbfaf5
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 267e1c145a6a67976f1d057c0c98186f192f9247
+ms.sourcegitcommit: eb1f3a2f5bc296f74545f17d20c6075003aa4c42
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51697459"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52191071"
 ---
 # <a name="cast-and-convert-transact-sql"></a>CAST e CONVERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -325,7 +325,9 @@ Nella tabella seguente vengono elencati gli stili per i quali la conversione da 
 |113|130|  
   
 <sup>1</sup> Ad eccezione degli stili 20 e 21
-  
+
+Per altre informazioni, vedere [Nondeterministic conversion of literal date strings into DATE values](../data-types/nondeterministic-convert-date-literals.md) (Conversione non deterministica di stringhe di valori letterali in valori DATE).
+
 ## <a name="supplementary-characters-surrogate-pairs"></a>Caratteri supplementari (coppie di surrogati)
 A partire da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], quando si usano le regole di confronto per caratteri supplementari (SC), un'operazione CAST da **nchar** o **nvarchar** a un tipo **nchar** o **nvarchar** di lunghezza minore non verrà troncato in una coppia di surrogati. Verrà invece troncato prima del carattere supplementare. Ad esempio, nel frammento di codice seguente `@x` mantiene solo `'ab'`. Lo spazio non è sufficiente per mantenere il carattere supplementare.
   

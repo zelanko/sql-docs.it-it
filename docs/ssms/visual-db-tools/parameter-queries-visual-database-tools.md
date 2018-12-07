@@ -13,12 +13,12 @@ ms.assetid: 4897c41a-324a-47b8-a30b-cbc9e9e19a8b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 323a630d1c3178f079319e00069e311b054f982a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dd110c3ac8a222bb808e1ca5b084e36d4056b367
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47833190"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52505260"
 ---
 # <a name="parameter-queries-visual-database-tools"></a>Query con parametri (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,7 +33,7 @@ WHERE (au_id = ?)
 ```  
   
 ## <a name="where-you-can-use-parameters"></a>Possibili utilizzi dei parametri  
-I parametri possono essere utilizzati come segnaposto per valori letterali (testo o valori numerici). Nella maggior parte dei casi i parametri vengono utilizzati come segnaposto all'interno di condizioni di ricerca per singole righe o per gruppi, ovvero nelle clausole WHERE o HAVING di un'istruzione SQL.  
+È possibile usare i parametri come segnaposto per valori letterali (per valori di testo o numerici). Nella maggior parte dei casi i parametri vengono utilizzati come segnaposto all'interno di condizioni di ricerca per singole righe o per gruppi, ovvero nelle clausole WHERE o HAVING di un'istruzione SQL.  
   
 I parametri possono essere utilizzati nelle espressioni come segnaposto. Si supponga ad esempio di voler calcolare prezzi scontati specificando un valore di sconto diverso a ogni esecuzione della query. A tale scopo, è possibile utilizzare la seguente espressione:  
   

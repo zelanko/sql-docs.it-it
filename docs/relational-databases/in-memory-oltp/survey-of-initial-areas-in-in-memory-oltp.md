@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f70aa8745576c2837d4b957fed9783baa0248f07
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 31a4e59da5f3555f79ac6fe6b82fa2d03721a81b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51657610"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52519455"
 ---
 # <a name="survey-of-initial-areas-in-in-memory-oltp"></a>Indagine sulle aree iniziali di OLTP in memoria
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -92,7 +92,7 @@ Una sequenza di accurati post di blog spiega in modo elegante gli indici columns
 #### <a name="real-time-operational-analytics"></a>Analisi operativa in tempo reale
 
 1. [Analisi operativa in tempo reale con tecnologia In-Memory](https://blogs.technet.microsoft.com/dataplatforminsider/2015/12/09/real-time-operational-analytics-using-in-memory-technology/)
-2. [Analisi operativa in tempo reale: panoramica sugli indici columnstore non cluster (NCCI)](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/02/29/real-time-operational-analytics-using-nonclustered-columnstore-index/)
+2. [Real-Time Operational Analytics - Overview nonclustered columnstore index (NCCI)](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/02/29/real-time-operational-analytics-using-nonclustered-columnstore-index/) (Analisi operativa in tempo reale: panoramica sugli indici columnstore non cluster (NCCI))
 3. [Analisi operativa in tempo reale: un semplice esempio di uso di indici columnstore non cluster e cluster (NCCI) in SQL Server 2016](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/02/29/real-time-operational-analytics-simple-example-using-nonclustered-clustered-columnstore-index-ncci/)
 4. [Analisi operativa in tempo reale: operazioni DML e indici columnstore non cluster (NCCI) in SQL Server 2016](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/04/real-time-operational-analytics-dml-operations-and-nonclustered-columnstore-index-ncci-in-sql-server-2016/)
 5. [Analisi operativa in tempo reale: indici columnstore non cluster (NCCI) filtrati](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/06/real-time-operational-analytics-filtered-nonclustered-columnstore-index-ncci/)
@@ -108,8 +108,8 @@ Una sequenza di accurati post di blog spiega in modo elegante gli indici columns
 #### <a name="bulk-importation-of-data"></a>Importazione bulk di dati
 
 1. [Indici columnstore cluster: caricamento bulk](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2014/07/27/clustered-column-store-index-bulk-loading-the-data/)
-2. [Indici columnstore cluster: ottimizzazioni del caricamento dati con registrazione minima](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/01/10/clustered-columnstore-index-data-load-optimizations-minimal-logging/)
-3. [Indici columnstore cluster: ottimizzazioni del caricamento dati con importazione bulk parallela](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/02/28/clustered-columnstore-index-parallel-bulk-import/)
+2. [Clustered Columnstore Index: Data Load Optimizations - Minimal Logging](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/01/10/clustered-columnstore-index-data-load-optimizations-minimal-logging/) (Indici columnstore cluster: ottimizzazioni del caricamento dati con registrazione minima)
+3. [Indici columnstore cluster: ottimizzazioni del caricamento dati con importazione bulk parallela](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/02/28/clustered-columnstore-index-parallel-bulk-import/) (Indici columnstore cluster: ottimizzazioni del caricamento dati con importazione bulk parallela)
 
 
 

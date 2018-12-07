@@ -10,24 +10,24 @@ helpviewer_keywords:
 ms.assetid: e918986c-af15-48f6-8178-256aed829c6a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 606b6fa37f5dc067cdf134792215fd7c2cd09067
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: 01c235ec53d0b8f70611b8523a4286790623d990
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813214"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52415408"
 ---
 # <a name="configure-the-web-portal"></a>Configurare il portale Web
 
 Il Portale Web è un'applicazione front-end Web usata per visualizzare report, gestire il contenuto del server di report e concedere l'accesso utente a un server di report in modalità nativa. Il portale Web viene installato con il servizio Web ReportServer all'interno della stessa istanza del server di report e facoltativamente configurato se si seleziona l'opzione **Installa la configurazione predefinita della modalità nativa** del programma di installazione. Può essere configurato anche come attività di post-installazione. Questo argomento offre informazioni sui seguenti scenari di configurazione del portale Web:
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerequisiti
 
 Per usare il portale Web, è necessario che vengano soddisfatti i prerequisiti seguenti:
 
 - È necessario disporre di una configurazione minima del server di report. Per altre informazioni sulla configurazione minima di un server di report, vedere [Configurare un server di report](../../reporting-services/report-server/configure-a-report-server-reporting-services-native-mode.md).
 
-- Il server di report deve essere eseguito in modalità nativa. Non è possibile usare il portale Web con un server di report configurato per la modalità integrata SharePoint. In SQL Server 2013 non è possibile passare un server di report da una modalità all'altra. Se si desidera modificare il tipo di server di report utilizzato dall'ambiente, è necessario installare la modalità desiderata del server di report desiderato e copiare o spostare gli elementi del report dal server di report precedente in quello nuovo. Questo processo viene in genere chiamato "migrazione". I passaggi necessari per eseguire la migrazione dipendono dalla modalità con cui si esegue questa operazione e dalla versione dalla quale si esegue la migrazione. Per ulteriori informazioni, vedere [Upgrade and Migrate Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md).
+- Il server di report deve essere eseguito in modalità nativa. Non è possibile usare il portale Web con un server di report configurato per la modalità integrata SharePoint. In SQL Server 2013 non è possibile passare un server di report da una modalità all'altra. Se si desidera modificare il tipo di server di report utilizzato dall'ambiente, è necessario installare la modalità desiderata del server di report desiderato e copiare o spostare gli elementi del report dal server di report precedente in quello nuovo. Questo processo viene in genere chiamato 'migrazione'. I passaggi necessari per eseguire la migrazione dipendono dalla modalità con cui si esegue questa operazione e dalla versione dalla quale si esegue la migrazione. Per ulteriori informazioni, vedere [Upgrade and Migrate Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md).
 
 - È necessario anche aver installato Internet Explorer 11 o versione successiva con gli script abilitati. Per altre informazioni, vedere [Supporto browser per Reporting Services e Power View](../../reporting-services/browser-support-for-reporting-services-and-power-view.md).
 

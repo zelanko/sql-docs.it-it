@@ -15,12 +15,12 @@ ms.assetid: 7b18a04a-2c3d-4efe-a0bc-c3f92be72fd0
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: cc911c9a5a3d02e097945ebfe4a74b8ddd9ee285
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 0f477276ef55689b6d79244f4493246f99aa9d34
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51671560"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514197"
 ---
 # <a name="tutorial-configure-replication-between-two-fully-connected-servers-transactional"></a>Esercitazione: Configurare la replica tra due server sempre connessi (replica transazionale)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -182,7 +182,7 @@ In questa sezione si aggiunge un sottoscrittore alla pubblicazione creata in pre
   
    ![Immissione di un nome per il database di sottoscrizione](media/tutorial-replicating-data-between-continuously-connected-servers/productreplica.png)
   
-8. Nella pagina **Sicurezza agente di distribuzione** selezionare il pulsante con i tre puntini (**…**). Immettere <*Nome_server_pubblicazione*>**\repl_distribution** nella casella **Account processo**, immettere la password per l'account, selezionare **OK**, e quindi selezionare **Avanti**.
+8. Nella pagina **Sicurezza agente di distribuzione** selezionare il pulsante con i puntini di sospensione (**...**). Immettere <*Nome_server_pubblicazione*>**\repl_distribution** nella casella **Account processo**, immettere la password per l'account, selezionare **OK**, e quindi selezionare **Avanti**.
 
    ![Informazioni dell'account di distribuzione nella finestra di dialogo "Sicurezza agente di distribuzione"](media/tutorial-replicating-data-between-continuously-connected-servers/adddistaccount.png)
   
