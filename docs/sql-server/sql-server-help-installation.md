@@ -10,18 +10,20 @@ ms.assetid: 51f8a08c-51d0-41d8-8bc5-1cb4d42622fb
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e9a1ae0aac049fef58d8007c26dce6ce355344a6
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: e05a241d81d4a051bd11dc8ce8b80858627afec0
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51700529"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514526"
 ---
 # <a name="sql-server-offline-help-and-help-viewer"></a>Guida offline di SQL Server e Help Viewer
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 È possibile usare Help Viewer in SQL Server Management Studio (SSMS) o in Visual Studio (VS) per scaricare e installare i pacchetti della Guida di SQL Server da origini online o da un disco e visualizzarli offline. Questo articolo descrive gli strumenti che consentono di installare Help Viewer e spiega come installare il contenuto della Guida offline e come visualizzare la Guida per [!INCLUDE[ssSQL14_md](../includes/sssql14-md.md)], SQL Server 2016 e SQL Server 2017.
+
+Dopo aver scaricato il contenuto in un sistema che ha accesso a Internet, è possibile migrare il contenuto in un sistema che non ha accesso a Internet. 
 
 > [!NOTE]
 > La Guida di SQL Server 2016 e quella di SQL Server 2017 sono combinate, anche se alcuni argomenti riguardano le singole versioni, dove indicato. La maggior parte degli argomenti sono validi per entrambe.
@@ -125,7 +127,8 @@ Per visualizzare la Guida installata in Visual Studio:
    ![Visualizza Guida](../sql-server/media/sql-server-help-installation/viewhelp.png)
 
    Il sommario della Guida viene visualizzato sulla sinistra e l'argomento della Guida selezionato a destra. 
-   
+
+  
 ## <a name="use-help-viewer-v1x"></a>Usare Help Viewer v1.x
 
 Le versioni precedenti di SQL Server Management Studio e Visual Studio usano Help Viewer 1.x, che supporta la Guida di SQL Server 2014. 
@@ -165,6 +168,8 @@ Questa procedura usa Help Viewer 1.x per scaricare la Guida di SQL Server 2014 d
    
    ![HelpViewer1_withContentInstalled_ZoomedIn](../sql-server/media/sql-server-help-installation/helpviewer1-withcontentinstalled-zoomedin.png)  
    
+
+
 ## <a name="view-online-help"></a>Visualizzare la Guida online
 
 Nella Guida appare sempre il contenuto più aggiornato. 
@@ -204,6 +209,22 @@ Quando si preme F1 o si fa clic su **Guida** o **?** in una finestra di dialogo 
 
 >  [!NOTE]
 >  La Guida sensibile al contesto funziona solo quando si è online. Non esistono origini offline per la Guida sensibile al contesto. 
+
+## <a name="systems-without-internet-access"></a>Sistemi senza accesso a Internet
+Dopo aver eseguito i [passaggi indicati in precedenza](#use-help-viewer-v2x) per scaricare il contenuto offline tramite SQL Server Help Viewer in un sistema che ha accesso a Internet, è possibile migrare il contenuto in un sistema senza accesso a Internet. L'operazione può essere eseguita con la procedura seguente. 
+
+  >[!NOTE]
+  >È necessario installare nel sistema offline un software che supporta Help Viewer, ad esempio SQL Server Management Studio. 
+
+1. Aprire Help Viewer (CTRL+ALT+F1).
+1. Selezionare la documentazione desiderata. Ad esempio, filtrare per SQL e selezionare la documentazione tecnica di SQL Server. 
+1. Identificare il percorso fisico dei file sul disco disponibile in **Percorso archivio locale**.
+1. Passare al percorso indicato usando lo strumento di esplorazione del file system. 
+    1.  Il percorso predefinito è: `C:\Program Files (x86)\Microsoft SQL Server\140\Tools\Binn\ManagementStudio\Extensions\Application`
+1. Selezionare le tre cartelle **ContentStore**, **Incoming**, **IndexStore** e copiarle nello stesso percorso nel sistema offline. Potrebbe essere necessario usare un supporto di memorizzazione provvisorio, ad esempio un CD o un'unità USB. 
+1. Dopo aver spostato i file, avviare Help Viewer nel sistema offline per rendere disponibile la documentazione tecnica di SQL Server.
+
+![physical-location-of-offline-content.png](media/sql-server-help-installation/physical-location-of-offline-content.png)
    
 
 ## <a name="next-steps"></a>Passaggi successivi
