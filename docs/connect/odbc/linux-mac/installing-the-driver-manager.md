@@ -52,7 +52,7 @@ Per installare Gestione driver:
   
 5.  Quando si è pronti per l'installazione e il computer può accedere a un sito esterno tramite FTP, eseguire il comando seguente: **./build_dm.sh**.
 
-Se il computer non può accedere a un sito esterno tramite FTP, scaricare `unixODBC-2.3.0.tar.gz`. È possibile ottenere `unixODBC-2.3.0.tar.gz` dal [ https://www.unixodbc.org ](https://www.unixodbc.org/). Fare clic sul collegamento Download** a sinistra nella pagina per passare alla pagina di download. Fare clic sul collegamento appropriato per scaricare unixODBC-2.3.0 (non unixODBC-2.3.1). unixODBC-2.3.1 non è supportato con questa versione di [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Eseguire il comando seguente per iniziare l'installazione di gestione Driver unixODBC: **./build_dm.sh - url di download = file://unixODBC-2.3.0.tar.gz**.  
+Se il computer non può accedere a un sito esterno tramite FTP, scaricare `unixODBC-2.3.0.tar.gz`. È possibile ottenere `unixODBC-2.3.0.tar.gz` dal [ https://www.unixodbc.org ](https://www.unixodbc.org/). Fare clic sul collegamento Download** a sinistra nella pagina per passare alla pagina di download. Fare clic sul collegamento appropriato per scaricare unixODBC-2.3.0 (non unixODBC-2.3.1). unixODBC-2.3.1 non è supportato con questa versione di [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Eseguire il comando seguente per iniziare l'installazione di gestione Driver unixODBC: **./build_dm.sh --download-url=file://unixODBC-2.3.0.tar.gz**.  
 
 6.  Digitare **SÌ** per procedere all'estrazione dei file. Questa fase del processo può richiedere fino a cinque minuti.  
 
@@ -74,9 +74,9 @@ Se l'esecuzione dello script di installazione non viene completata, configurare 
   
 5.  Un prompt dei comandi, eseguire il comando: **CPPFLAGS = "-DSIZEOF_LONG_INT = 8"**.  
   
-6.  Un prompt dei comandi, eseguire il comando: **esportare CPPFLAGS**.  
+6.  Un prompt dei comandi, eseguire il comando: **export CPPFLAGS**.  
   
-7.  Un prompt dei comandi, eseguire il comando: **". / configure-- prefix = / usr - libdir = / usr/lib64 - sysconfdir = e così via, enable-gui = no - enable-driver = no - enable-iconv-con-iconv-char-enc = UTF8 - con-iconv-ucode-enc = UTF16LE"**.  
+7.  Un prompt dei comandi, eseguire il comando: **"./configure --prefix=/usr --libdir=/usr/lib64 --sysconfdir=/etc --enable-gui=no --enable-drivers=no --enable-iconv --with-iconv-char-enc=UTF8 --with-iconv-ucode-enc=UTF16LE"**.  
   
 8.  Al prompt dei comandi (connesso come radice), eseguire il comando: **make**.  
   
