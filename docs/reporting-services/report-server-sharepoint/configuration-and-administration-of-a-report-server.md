@@ -32,7 +32,7 @@ Usare le sezioni seguenti per meglio comprendere concetti, scenari di distribuzi
   
     -   [Gestione avvisi dati per utenti di SharePoint](../../reporting-services/data-alert-manager-for-sharepoint-users.md)  
   
-    -   [Create and Manage Subscriptions for SharePoint Mode Report Servers](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)  
+    -   [Creare e gestire sottoscrizioni per server di report in modalità SharePoint](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)  
   
     -   [Aggiornare le credenziali nelle origini dati dei report da un sito di SharePoint](../../reporting-services/report-data/update-credentials-in-report-data-sources-from-a-sharepoint-site.md)  
   
