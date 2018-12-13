@@ -291,7 +291,7 @@ La funzionalità di distribuzione dei pacchetti incrementale consente di distrib
 Rilasciato Microsoft Connectors v4.0 per Oracle e Teradata. Per il download, vedere [Microsoft Connectors v4.0 for Oracle and Teradata](https://www.microsoft.com/download/details.aspx?id=52950)(Microsoft Connectors v4.0 per Oracle e Teradata).
 
 ### <a name="pdwau5"></a> Rilasciati i connettori per l'appliance del sistema della piattaforma (PDW), aggiornamento 5
-Sono stati rilasciati gli adattatori di destinazione per il caricamento dei dati in PDW con AU5. Per il download degli adattatori, vedere [Analytics Platform System Appliance Update 5 Documentation and Client Tools](https://www.microsoft.com/download/details.aspx?id=51610)(Aggiornamento 5 della piattaforma di strumenti analitici Microsoft - Documentazione e strumenti client).
+Sono stati rilasciati gli adattatori di destinazione per il caricamento dei dati in PDW con AU5. Per il download degli adattatori, vedere [Aggiornamento 5 della piattaforma di strumenti analitici Microsoft - Documentazione e strumenti client](https://www.microsoft.com/download/details.aspx?id=51610).
 
 ### <a name="expanded-connectivity-to-the-cloud"></a>Connettività estesa al cloud
 
@@ -327,7 +327,7 @@ La versione più recente del Feature Pack di Azure include l'attività di carica
  ![Proprietà TargetServerVersion nella finestra di dialogo delle proprietà del progetto](../integration-services/media/targetserverversion2.png "Proprietà TargetServerVersion nella finestra di dialogo delle proprietà del progetto")  
 
 >   [!IMPORTANT]
-> Se si sviluppano estensioni personalizzate di SSIS, vedere [Support multi-targeting in your custom components](../integration-services/extending-packages-custom-objects/support-multi-targeting-in-your-custom-components.md) (Supporto multitargeting nei componenti personalizzati) e [Getting your SSIS custom extensions to be supported by the multi-version support of SSDT 2015 for SQL Server 2016](https://blogs.msdn.microsoft.com/ssis/2016/04/19/getting-your-ssis-custom-extensions-to-be-supported-by-the-multi-version-support-of-ssdt-2015-for-sql-server-2016/)(Ottenere estensioni SSIS personalizzate supportate da più versioni di SSDT 2015 per SQL Server 2016).  
+> Se si sviluppano estensioni personalizzate di SSIS, vedere [Supporto multitargeting nei componenti personalizzati](../integration-services/extending-packages-custom-objects/support-multi-targeting-in-your-custom-components.md) e [Ottenere estensioni SSIS personalizzate supportate da più versioni di SSDT 2015 per SQL Server 2016](https://blogs.msdn.microsoft.com/ssis/2016/04/19/getting-your-ssis-custom-extensions-to-be-supported-by-the-multi-version-support-of-ssdt-2015-for-sql-server-2016/).  
 
 ### <a name="better-management-experience-in-sql-server-management-studio"></a>Migliore esperienza di gestione in SQL Server Management Studio
 
