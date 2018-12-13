@@ -12,7 +12,7 @@ ms.technology: linux
 ms.assetid: b7102919-878b-4c08-a8c3-8500b7b42397
 ms.openlocfilehash: ec5ed0ce61c1b1f48ecc148326b9a1906ff95122
 ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 11/15/2018
 ms.locfileid: "51670820"
@@ -157,7 +157,7 @@ Per informazioni sulla proprietà del cluster Pacemaker, vedere [proprietà clus
 
 ## <a name="create-availability-group-resource"></a>Crea risorsa gruppo di disponibilità
 
-Per creare la risorsa del gruppo di disponibilità, usare `pcs resource create` comando e impostare le proprietà della risorsa. Il comando seguente crea una `ocf:mssql:ag` tipo di risorsa per il gruppo di disponibilità con nome master/slave `ag1`.
+Per creare la risorsa del gruppo di disponibilità, usare `pcs resource create` comando e impostare le proprietà della risorsa. Il comando seguente crea una `ocf:mssql:ag` tipo di risorsa per il gruppo di disponibilità con nome primario/secondario `ag1`.
 
 ```bash
 sudo pcs resource create ag_cluster ocf:mssql:ag ag_name=ag1 meta failure-timeout=30s master notify=true

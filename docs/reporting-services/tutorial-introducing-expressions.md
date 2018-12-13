@@ -102,7 +102,7 @@ In questa sezione vengono creati un report tabella, un'origine dati e un set di 
     -   LastPurchase  
     -   YTDPurchase  
   
-    Poiché in ID Paese/Regione e Acquisti da inizio anno sono inclusi dati numerici, per impostazione predefinita viene applicata l'aggregazione SUM a tali campi, anche se non si vuole sommarli.  
+    Poiché in ID Paese/Area geografica e Acquisti da inizio anno sono inclusi dati numerici, per impostazione predefinita viene applicata l'aggregazione SUM a tali campi, anche se non si vuole sommarli.  
    
 13. Nell'elenco **Valori** fare clic con il pulsante destro del mouse su **IDPaeseRegione** e disattivare la casella di controllo **Somma** .  
   

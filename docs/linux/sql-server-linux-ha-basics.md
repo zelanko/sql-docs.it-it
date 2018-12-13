@@ -11,7 +11,7 @@ ms.custom: sql-linux
 ms.technology: linux
 ms.openlocfilehash: 880ccf036a12d5cc8e7e2bd56aa3bbcc58a2984f
 ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 11/15/2018
 ms.locfileid: "51665675"
@@ -172,7 +172,7 @@ Pacemaker dispone di risorse standard e clone. Le risorse di clonazione sono que
 Quando viene creato un gruppo di disponibilità, richiede un tipo speciale di una risorsa clone denominata una risorsa più stata. Mentre un gruppo di disponibilità ha solo una replica primaria, il gruppo di disponibilità è in esecuzione in tutti i nodi che è configurato per funzionare su e può consentire operazioni quali accesso di sola lettura. Poiché si tratta di un utilizzo "attivo" del nodo, le risorse hanno il concetto di due stati: master e slave. Per altre informazioni, vedere [le risorse più state: risorse che dispongono di più modalità](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/html/Configuring_the_Red_Hat_High_Availability_Add-On_with_Pacemaker/s1-multistateresource-HAAR.html).
 
 #### <a name="resource-groupssets"></a>I gruppi o set di risorse
-Analogamente ai ruoli in un cluster WSFC, un cluster Pacemaker è il concetto di un gruppo di risorse. Un gruppo di risorse (definito set di SLES) è una raccolta di risorse che funzionano insieme e possono eseguire il failover da un nodo a altro come singola unità. Gruppi di risorse non possono contenere le risorse che sono configurate come master/slave; di conseguenza, non è possibile usare per gruppi di disponibilità. Mentre un gruppo di risorse può essere usato per le istanze FCI, non è in genere una configurazione consigliata.
+Analogamente ai ruoli in un cluster WSFC, un cluster Pacemaker è il concetto di un gruppo di risorse. Un gruppo di risorse (definito set di SLES) è una raccolta di risorse che funzionano insieme e possono eseguire il failover da un nodo a altro come singola unità. Gruppi di risorse non possono contenere le risorse che sono configurate come  primaria/secondaria; di conseguenza, non è possibile usare per gruppi di disponibilità. Mentre un gruppo di risorse può essere usato per le istanze FCI, non è in genere una configurazione consigliata.
 
 #### <a name="constraints"></a>Vincoli
 I cluster Wsfc dispone di diversi parametri per le risorse, nonché elementi come dipendenze, che indicano il cluster WSFC di una relazione padre/figlio tra due diverse risorse. Una dipendenza è solo una regola che informa il cluster WSFC risorsa a cui deve essere online prima di tutto.
