@@ -12,7 +12,7 @@ ms.technology: linux
 ms.assetid: e5ad1bdd-c054-4999-a5aa-00e74770b481
 ms.openlocfilehash: 4cce3c1f06978ba0ff5b9630bdaa5f5aebc0ddf1
 ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 11/15/2018
 ms.locfileid: "51667990"
@@ -156,7 +156,7 @@ A questo punto, entrambe le istanze di SQL Server configurate per eseguire con i
 
 3. **Installare l'estensione per la disponibilità elevata**. Per installare l'estensione, seguire la procedura nell'argomento SUSE seguente:
     
-    [Installation and Setup Quick Start](https://www.suse.com/documentation/sle-ha-12/singlehtml/install-quick/install-quick.html) (Guida introduttiva all'installazione e alla configurazione)
+    [Guida introduttiva all'installazione e alla configurazione](https://www.suse.com/documentation/sle-ha-12/singlehtml/install-quick/install-quick.html) 
 
 4. **Installare l'agente delle risorse FCI per SQL Server**. Eseguire i comandi seguenti in entrambi i nodi:
 
