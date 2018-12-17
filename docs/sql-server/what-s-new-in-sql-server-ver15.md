@@ -370,9 +370,9 @@ FROM sys.dm_exec_requests AS d
 
 - **Machine Learning in Linux**: SQL Server 2019 Machine Learning Services (In-Database) è ora supportato in Linux. Il supporto include la stored procedure `sp_execute_external_script`. Per istruzioni relative all'installazione di Machine Learning Services in Linux, vedere [Installare SQL Server 2019 Machine Learning Services (R, Python, Java) in Linux](../linux/sql-server-linux-setup-machine-learning.md).
 
-- **Nuovo registro contenitori**: tutte le immagini del contenitore per [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] e per [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] si trovano ora nel Registro contenitori Microsoft. Il Registro contenitori Microsoft è il registro contenitori ufficiale per la distribuzione di contenitori prodotto Microsoft. Ora vengono anche pubblicate le immagini certificate basate su RHEL.
+- **Nuovo registro contenitori**: tutte le immagini del contenitore per [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] e per [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] si trovano ora nel Registro contenitori Microsoft. Il Registro Container Microsoft è il registro contenitori ufficiale per la distribuzione di contenitori prodotto Microsoft. Ora vengono anche pubblicate le immagini certificate basate su RHEL.
 
-  - Registro contenitori Microsoft: `mcr.microsoft.com/mssql/server:vNext-CTP2.0`
+  - Registro Container Microsoft: `mcr.microsoft.com/mssql/server:vNext-CTP2.0`
   - Immagini del contenitore certificate basate su RHEL: `mcr.microsoft.com/mssql/rhel/server:vNext-CTP2.0`
 
 ## <a id="mds"></a> Master Data Services (CTP 2.0) 

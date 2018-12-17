@@ -45,7 +45,7 @@ items:
       href: deployment-guidance.md
     - name: Distribuire in Minikube
       href: deploy-on-minikube.md
-    - name: Distribuire in AKS
+    - name: Distribuire nel servizio Azure Kubernetes
       href: deploy-on-aks.md
     - name: Eseguire la distribuzione con Kubeadm
       href: deploy-with-kubeadm.md
