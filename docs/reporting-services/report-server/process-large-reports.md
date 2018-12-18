@@ -31,7 +31,7 @@ ms.locfileid: "50020185"
   
  Le dimensioni dei report contenenti dati volatili possono variare in modo significativo da un'esecuzione del report all'altra. In questi casi è opportuno monitorare l'origine dei dati per stabilire gli effetti della volatilità dei dati sul report e l'eventuale necessità di eseguire la procedura indicata in questo argomento.  
   
- Per altre informazioni e suggerimenti sulla diagnosi di errori di timeout e di memoria insufficiente, vedere l'articolo [How to diagnose issues when running reports in the report server](https://go.microsoft.com/fwlink/?LinkId=85634) (Come eseguire la diagnosi durante l'esecuzione di report nel server di report) sul sito Web blogs.msdn.com.  
+ Per altre informazioni e suggerimenti sulla diagnosi di errori di timeout e di memoria insufficiente, vedere l'articolo [Come eseguire la diagnosi durante l'esecuzione di report nel server di report](https://go.microsoft.com/fwlink/?LinkId=85634) sul sito Web blogs.msdn.com.  
   
 ## <a name="configuration-recommendations"></a>Indicazioni relative alla configurazione  
  Per l'esecuzione, il rendering e la visualizzazione dei report sono valide le indicazioni seguenti:  

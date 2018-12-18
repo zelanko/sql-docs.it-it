@@ -90,7 +90,7 @@ Questo errore è in genere dovuto alla mancanza di autorizzazioni DCOM. Per corr
 8.  Fare clic su **OK** due volte e quindi chiudere la console di **Servizi componenti**.
 
 Per altre informazioni sull'errore descritto in questa sezione e sulle autorizzazioni richieste dall'account del servizio SSIS, vedere il post di blog seguente.  
-[System.ComponentModel.Win32Exception: A required privilege is not held by the client while Deploying SSIS Project](https://blogs.msdn.microsoft.com/dataaccesstechnologies/2013/08/20/system-componentmodel-win32exception-a-required-privilege-is-not-held-by-the-client-while-deploying-ssis-project/) (System.ComponentModel.Win32Exception: Privilegio obbligatorio non disponibile per il client durante la distribuzione di un progetto SSIS)
+[System.ComponentModel.Win32Exception: Privilegio obbligatorio non disponibile per il client durante la distribuzione di un progetto SSIS](https://blogs.msdn.microsoft.com/dataaccesstechnologies/2013/08/20/system-componentmodel-win32exception-a-required-privilege-is-not-held-by-the-client-while-deploying-ssis-project/)
 
 ## <a name="deploy-projects-to-integration-services-server"></a>Distribuire progetti nel server Integration Services
   Nella versione corrente di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]è possibile distribuire i progetti nel server [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Con il server [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] è possibile gestire ed eseguire pacchetti, nonché configurare i valori di runtime per i pacchetti tramite ambienti.  
