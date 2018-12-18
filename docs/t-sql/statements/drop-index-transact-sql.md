@@ -264,7 +264,7 @@ Quando un indice cluster viene eliminato offline, vengono rimossi solo i livelli
  Quando si elimina un indice XML non è possibile specificare opzioni né usare la sintassi _table\_or\_view\_name_**.**_index\_name_. Quando viene eliminato un indice XML primario, tutti gli indici XML secondari associati vengono eliminati automaticamente. Per altre informazioni, vedere [Indici XML &#40;SQL Server&#41;](../../relational-databases/xml/xml-indexes-sql-server.md).  
   
 ## <a name="spatial-indexes"></a>Indici spaziali  
- Gli indici spaziali sono supportati solo nelle tabelle. Quando si elimina un indice spaziale non è possibile specificare alcuna opzione né usare ***.**_index\_name_. La sintassi corretta è la seguente:  
+ Gli indici spaziali sono supportati solo nelle tabelle. Quando si elimina un indice spaziale non è possibile specificare alcuna opzione né usare **.**_index\_name_. La sintassi corretta è la seguente:  
   
  DROP INDEX *spatial_index_name* ON *spatial_table_name*;  
   

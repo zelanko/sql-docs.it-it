@@ -137,7 +137,7 @@ ms.locfileid: "52393336"
 -   Quando viene esportato in Word, il testo con effetti carattere in alcuni tipi di carattere può generare glifi imprevisti o mancanti nel report visualizzabile.  
   
 ##  <a name="WordBenefits"></a> Vantaggi dell'utilizzo del renderer di Word  
- Oltre a rendere disponibili per i report esportati le nuove funzionalità di [!INCLUDE[ofprword](../../includes/ofprword-md.md)] , i file con estensione docx tendono anche a essere più piccoli. I report esportati tramite il renderer di Word sono in genere notevolmente più piccoli rispetto agli stessi report esportati utilizzando il renderer di Word 2003.  
+ Oltre a rendere disponibili per i report esportati le nuove funzionalità di [!INCLUDE[ofprword](../../includes/ofprword-md.md)] , i file con estensione *docx tendono anche a essere più piccoli. I report esportati tramite il renderer di Word sono in genere notevolmente più piccoli rispetto agli stessi report esportati utilizzando il renderer di Word 2003.  
   
 ## <a name="backward-compatibility-of-exported-reports"></a>Compatibilità con le versioni precedenti di report esportati  
  È possibile selezionare una modalità di compatibilità di Word e impostare opzioni di compatibilità. Il renderer di Word consente di creare documenti con la modalità di compatibilità abilitata. L'ulteriore salvataggio di documenti con tale modalità disabilitata potrebbe influire sul layout del documento.  
