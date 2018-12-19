@@ -391,7 +391,7 @@ Nella figura seguente viene illustrata la struttura di un indice non cluster in 
  *  `Revision nchar(5)`  
  *  `FileName nvarchar(400)`  
   
- Dal momento che i tipi i dati **nchar** e **nvarchar** richiedono 2 byte per ogni carattere, un indice contenente queste tre colonne supererebbe di 10 byte il limite di 900 byte (455 x 2). Utilizzando la clausola `INCLUDE` dell'istruzione `CREATE INDEX` , è possibile definire la chiave dell'indice come (`Title, Revision`) e `FileName` come colonna non chiave. In questo modo, la dimensione della chiave dell'indice sarebbe pari a 110 byte (55 \* 2) e l'indice conterrebbe ancora tutte le colonne necessarie. Nell'istruzione seguente viene creato un simile indice.  
+ Dal momento che i tipi i dati **nchar** e **nvarchar** richiedono 2 byte per ogni carattere, un indice contenente queste tre colonne supererebbe di 10 byte il limite di 900 byte (455 * 2). Utilizzando la clausola `INCLUDE` dell'istruzione `CREATE INDEX` , è possibile definire la chiave dell'indice come (`Title, Revision`) e `FileName` come colonna non chiave. In questo modo, la dimensione della chiave dell'indice sarebbe pari a 110 byte (55 \* 2) e l'indice conterrebbe ancora tutte le colonne necessarie. Nell'istruzione seguente viene creato un simile indice.  
   
 ```sql  
 CREATE INDEX IX_Document_Title   
