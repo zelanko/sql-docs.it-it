@@ -76,7 +76,7 @@ ID del file. *file_id* è int, non prevede alcun valore predefinito. Gli input v
   
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
-|**database_name**|**sysname**|**Si applica a:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]</br></br>Per SQL Data Warehouse, questo è il nome del database archiviato nel nodo identificato da pdw_node_id. Ogni nodo dispone di un database di tempdb con 13 file. Ogni nodo ha anche un database per ogni distribuzione, e ogni database di distribuzione include 5 file. Ad esempio, se ogni nodo contiene 4 distribuzioni, i risultati mostrano 20 file di database di distribuzione per pdw_node_id. 
+|**database_name**|**sysname**|Nome del database.</br></br>Per SQL Data Warehouse, questo è il nome del database archiviato nel nodo identificato da pdw_node_id. Ogni nodo dispone di un database di tempdb con 13 file. Ogni nodo ha anche un database per ogni distribuzione, e ogni database di distribuzione include 5 file. Ad esempio, se ogni nodo contiene 4 distribuzioni, i risultati mostrano 20 file di database di distribuzione per pdw_node_id. 
 |**database_id**|**smallint**|ID del database.|  
 |**file_id**|**smallint**|ID di file.|  
 |**sample_ms**|**bigint**|Numero di millisecondi dall'avvio del computer. È possibile utilizzare questa colonna per confrontare output diversi di questa funzione.</br></br>Il tipo di dati viene **int** per [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
