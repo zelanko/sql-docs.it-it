@@ -24,7 +24,7 @@ ms.locfileid: "52418032"
   Dopo avere completato il flusso di controllo per un pacchetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] che esegue un caricamento incrementale dei dati delle modifiche, l'attività successiva consiste nella creazione di una funzione con valori di tabella per il recupero di tali dati. Questa funzione deve essere creata solo una volta, prima del primo caricamento incrementale.  
   
 > [!NOTE]  
->  La creazione di una funzione per il recupero dei dati delle modifiche rappresenta il secondo passaggio del processo di creazione di un pacchetto che esegue il caricamento incrementale di tali dati. Per una descrizione del processo completo di creazione del pacchetto, vedere [Change Data Capture &#40;SSIS&#41;](../../integration-services/change-data-capture/change-data-capture-ssis.md) (Modificare i dati di acquisizione &#40;SSIS&#41).  
+>  La creazione di una funzione per il recupero dei dati delle modifiche rappresenta il secondo passaggio del processo di creazione di un pacchetto che esegue il caricamento incrementale di tali dati. Per una descrizione del processo completo di creazione del pacchetto, vedere [Change Data Capture &#40;SSIS &#41;](../../integration-services/change-data-capture/change-data-capture-ssis.md) (Modificare i dati di acquisizione &#40;SSIS &#41;).  
   
 ## <a name="design-considerations-for-change-data-capture-functions"></a>Considerazioni sulla progettazione per le funzioni Change Data Capture  
  Per recuperare i dati delle modifiche, un componente di origine nel flusso di dati del pacchetto chiama una delle funzioni Change Data Capture seguenti:  

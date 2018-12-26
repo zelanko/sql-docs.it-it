@@ -145,7 +145,7 @@ bcp AdventureWorks.HumanResources.Department out C:\myDepartment-c-t.txt -c -t, 
   
 -   INSERT ... SELECT * FROM OPENROWSET(BULK...).  
   
-     Per il provider di set di righe con lettura bulk OPENROWSET, è possibile specificare i caratteri di terminazione solo nel file di formato, ad eccezione dei tipi di dati contenenti oggetti di grandi dimensioni. Se un file di dati di tipo carattere utilizza un carattere di terminazione non predefinito, è necessario definire tale carattere nel file di formato. Per altre informazioni, vedere [Creazione di un file di formato &#40;SQL Server&#41](../../relational-databases/import-export/create-a-format-file-sql-server.md) e [Utilizzo di un file di formato per l'importazione bulk dei dati &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-bulk-import-data-sql-server.md).  
+     Per il provider di set di righe con lettura bulk OPENROWSET, è possibile specificare i caratteri di terminazione solo nel file di formato, ad eccezione dei tipi di dati contenenti oggetti di grandi dimensioni. Se un file di dati di tipo carattere utilizza un carattere di terminazione non predefinito, è necessario definire tale carattere nel file di formato. Per altre informazioni, vedere [Creazione di un file di formato &#40;SQL Server&#41;](../../relational-databases/import-export/create-a-format-file-sql-server.md) e [Utilizzo di un file di formato per l'importazione bulk dei dati &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-bulk-import-data-sql-server.md).  
   
      Per altre informazioni sulla clausola OPENROWSET BULK, vedere [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md).  
 

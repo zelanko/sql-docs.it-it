@@ -72,7 +72,7 @@ ms.locfileid: "52514554"
   
 -   Supporto di chiavi primarie e chiavi esterne usando un indice albero B per imporre questi vincoli su un indice columnstore cluster.  
   
--   Gli indici columnstore hanno un'opzione relativa al ritardo di compressione che riduce al minimo l'impatto che il carico di lavoro transazionale ha sull'analisi operativa in tempo reale.  Questa opzione consente di modificare frequentemente le righe per stabilizzarle prima di comprimerle nel columnstore. Per informazioni dettagliate, vedere [CREATE COLUMNSTORE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md) (Creare un indice columnstore &#40;Transact-SQL&#41) e [Introduzione a columnstore per l'analisi operativa in tempo reale](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md).  
+-   Gli indici columnstore hanno un'opzione relativa al ritardo di compressione che riduce al minimo l'impatto che il carico di lavoro transazionale ha sull'analisi operativa in tempo reale.  Questa opzione consente di modificare frequentemente le righe per stabilizzarle prima di comprimerle nel columnstore. Per informazioni dettagliate, vedere [CREATE COLUMNSTORE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md) (Creare un indice columnstore &#40;Transact-SQL &#41;) e [Introduzione a columnstore per l'analisi operativa in tempo reale](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md).  
   
 ### <a name="performance-for-database-compatibility-level-120-or-130"></a>Prestazioni per il livello di compatibilità del database 120 o 130  
   
