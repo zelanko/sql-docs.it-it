@@ -64,7 +64,7 @@ Salvo alcune eccezioni, le transazioni tra database non sono supportate. Nella t
   
 - Keyset e cursori dinamici sulle query che accedono a tabelle ottimizzate per la memoria. Questi cursori diventano statici e di sola lettura.  
   
-- L'uso di **MERGE INTO***target*, dove *target* è una tabella ottimizzata per la memoria, non è supportato.
+- L'uso di **MERGE INTO** *target*, dove *target* è una tabella ottimizzata per la memoria, non è supportato.
     - **MERGE USING** *source* è supportato per le tabelle ottimizzate per la memoria.  
   
 - Il tipo di dati ROWVERSION (TIMESTAMP) non è supportato. Per altre informazioni, vedere [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md).
