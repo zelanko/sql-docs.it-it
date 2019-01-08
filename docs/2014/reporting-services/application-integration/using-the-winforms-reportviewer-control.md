@@ -14,12 +14,12 @@ ms.assetid: 29fb9f7d-ba65-49fd-9cbc-4c380869de96
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 01149b1f75c78ba5ca6da467abf8955adf41f2f0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 54a38a78f990ff4c2cc48c7277146dd0c2a07ee2
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48170401"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53354825"
 ---
 # <a name="using-the-winforms-reportviewer-control"></a>Utilizzo del controllo Windows Form ReportViewer
   Per visualizzare i report distribuiti in un server di report o presenti in un file system locale, è possibile usare il controllo Windows Form ReportViewer per eseguirne il rendering in un'applicazione Windows.  
@@ -42,7 +42,7 @@ ms.locfileid: "48170401"
   
  Dopo l'aggiunta del controllo al form, viene visualizzato lo smart tag **Attività di ReportViewer** che richiede di selezionare un report.  
   
- Se il report da visualizzare è stato distribuito in un server di report, scegliere l'opzione **\<Server di report>** dall'elenco a discesa **Scegli report**. Dopo avere scelto l'opzione **\<Server di report>**, vengono visualizzate due proprietà aggiuntive: **URL server di report** e **Percorso report**. **URL server di report** è l'indirizzo del server di report e **Percorso report** è il percorso completo del report di cui eseguire il rendering.  
+ Se il report da visualizzare è stato distribuito in un server di report, scegliere l'opzione **\<Server di report>** dall'elenco a discesa **Scegli report**. Dopo il  **\<Server di Report >** opzione è selezionata, vengono visualizzate due proprietà aggiuntive: **Url Server di report** e **percorso Report**. **URL server di report** è l'indirizzo del server di report e **Percorso report** è il percorso completo del report di cui eseguire il rendering.  
   
  ![Selezionare report server](../../../2014/reporting-services/media/windowsapp-serverreportsettings.png "Selezionare report server")  
   
@@ -154,7 +154,7 @@ End Class
   
 3.  Passare al percorso di installazione del progetto dei report di esempio di [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
-     Per scaricare i report di esempio, andare alla pagina [Report di esempio AdventureWorks 2012](http://go.microsoft.com/fwlink/?LinkId=404153)  
+     Per scaricare i report di esempio, andare alla pagina [Report di esempio AdventureWorks 2012](https://go.microsoft.com/fwlink/?LinkId=404153)  
   
 4.  Selezionare il file Sales Order Detail.rdl e fare clic sul pulsante **Aggiungi**.  
   

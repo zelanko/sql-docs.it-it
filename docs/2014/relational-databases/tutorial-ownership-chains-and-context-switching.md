@@ -1,11 +1,10 @@
 ---
-title: 'Esercitazione: Catene di proprietà e cambio di contesto'
+title: 'Esercitazione: Catene di proprietà e cambio di contesto | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - context switching [SQL Server], tutorials
@@ -14,14 +13,14 @@ ms.assetid: db5d4cc3-5fc5-4cf5-afc1-8d4edc1d512b
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 5e46d5f6f28a1d93df5cf92194164a4335501523
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1ae566345f722399982c909244e77c564abb7b53
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48082001"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53369768"
 ---
-# <a name="tutorial-ownership-chains-and-context-switching"></a>Tutorial: Ownership Chains and Context Switching
+# <a name="tutorial-ownership-chains-and-context-switching"></a>Esercitazione: Catene di proprietà e cambio di contesto
   In questa esercitazione viene utilizzato uno scenario per illustrare i concetti sulla sicurezza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] relativi a catene di proprietà e cambio di contesto utente.  
   
 > [!NOTE]  
@@ -96,7 +95,7 @@ GRANT CREATE PROCEDURE
 GO  
 ```  
   
- Per altre informazioni sull'istruzione GRANT, vedere [GRANT &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-transact-sql). Per altre informazioni sulle stored procedure, vedere [Stored procedure &#40;Motore di database&#41;](stored-procedures/stored-procedures-database-engine.md). Per un'anteprima di tutte le autorizzazioni del [!INCLUDE[ssDE](../includes/ssde-md.md)], vedere [http://go.microsoft.com/fwlink/?LinkId=229142](http://go.microsoft.com/fwlink/?LinkId=229142).  
+ Per altre informazioni sull'istruzione GRANT, vedere [GRANT &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-transact-sql). Per altre informazioni sulle stored procedure, vedere [Stored procedure &#40;Motore di database&#41;](stored-procedures/stored-procedures-database-engine.md). Per un'anteprima di tutte le autorizzazioni del [!INCLUDE[ssDE](../includes/ssde-md.md)], vedere [https://go.microsoft.com/fwlink/?LinkId=229142](https://go.microsoft.com/fwlink/?LinkId=229142).  
   
 ## <a name="2-create-a-stored-procedure-to-access-data"></a>2. Creazione di una stored procedure per l'accesso ai dati  
  Per cambiare contesto all'interno di un database, utilizzare l'istruzione EXECUTE AS. EXECUTE AS richiede autorizzazioni IMPERSONATE.  

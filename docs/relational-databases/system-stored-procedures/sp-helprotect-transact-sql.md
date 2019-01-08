@@ -18,12 +18,12 @@ ms.assetid: faaa3e40-1c95-43c2-9fdc-c61a1d3cc0c3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ec91d276308b38a16763dc824989d28fd66fd837
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 23b0ba70ee6141ab8453aa3e6949ceff2d537b2c
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47595651"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591185"
 ---
 # <a name="sphelprotect-transact-sql"></a>sp_helprotect (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,18 +48,18 @@ sp_helprotect [ [ @name = ] 'object_statement' ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@name =** ] **'***object_statement***'**  
- Nome dell'oggetto nel database corrente, o di un'istruzione, a cui sono associate le autorizzazioni di cui si desidera ottenere informazioni. *object_statement* viene **nvarchar(776)**, valore predefinito è NULL, che restituisce tutte le autorizzazioni per oggetti e istruzione. Se il valore è un oggetto, quale una tabella, una vista, una stored procedure o una stored procedure estesa, deve essere un oggetto valido nel database corrente. Il nome dell'oggetto può includere un qualificatore del proprietario nel formato *owner ***.*** oggetto*.  
+ [  **@name =** ] **'**_object_statement_**'**  
+ Nome dell'oggetto nel database corrente, o di un'istruzione, a cui sono associate le autorizzazioni di cui si desidera ottenere informazioni. *object_statement* viene **nvarchar(776)**, valore predefinito è NULL, che restituisce tutte le autorizzazioni per oggetti e istruzione. Se il valore è un oggetto, quale una tabella, una vista, una stored procedure o una stored procedure estesa, deve essere un oggetto valido nel database corrente. Il nome dell'oggetto può includere un qualificatore del proprietario nel formato _owner_**.** _oggetto_.  
   
  Se *object_statement* è un'istruzione, può essere un'istruzione CREATE.  
   
- [  **@username =** ] **'***account_protezione***'**  
+ [  **@username =** ] **'**_account_protezione_**'**  
  Nome dell'entità per cui vengono restituite le autorizzazioni. *account_protezione* viene **sysname**, valore predefinito è NULL, che restituisce tutte le entità nel database corrente. *account_protezione* deve esistere nel database corrente.  
   
- [  **@grantorname =** ] **'***grantor***'**  
+ [  **@grantorname =** ] **'**_grantor_**'**  
  Nome dell'entità mediante la quale vengono concesse le autorizzazioni. *utente che concede* viene **sysname**, valore predefinito è NULL, che restituisce tutte le informazioni relative alle autorizzazioni concesse da qualsiasi entità nel database.  
   
- [  **@permissionarea =** ] **'***tipo***'**  
+ [  **@permissionarea =** ] **'**_tipo_**'**  
  È una stringa di caratteri che indica se visualizzare autorizzazioni per oggetti (stringa di caratteri **o**), le autorizzazioni di istruzione (stringa di caratteri **s**), o entrambi (**os**). *tipo di* viene **varchar (10)**, il valore predefinito è **os**. *tipo di* può essere qualsiasi combinazione dei **o** e **s**, con o senza virgole o spazi tra **o** e **s**.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
@@ -67,7 +67,7 @@ sp_helprotect [ [ @name = ] 'object_statement' ]
   
 ## <a name="result-sets"></a>Set di risultati  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**Proprietario**|**sysname**|Nome del proprietario dell'oggetto.|  
 |**Oggetto**|**sysname**|Nome dell'oggetto.|  
@@ -108,7 +108,7 @@ EXEC sp_helprotect @grantorname = 'dbo';
 EXEC sp_helprotect 'titles';  
 ```  
   
-### <a name="b-listing-the-permissions-for-a-user"></a>B. Visualizzazione dell'elenco delle autorizzazioni per un utente  
+### <a name="b-listing-the-permissions-for-a-user"></a>b. Visualizzazione dell'elenco delle autorizzazioni per un utente  
  Nell'esempio seguente vengono elencate tutte le autorizzazioni disponibili per l'utente `Judy` nel database corrente.  
   
 ```  

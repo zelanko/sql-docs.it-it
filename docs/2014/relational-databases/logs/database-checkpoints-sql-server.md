@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 10/13/2015
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 helpviewer_keywords:
 - automatic checkpoints
@@ -27,31 +26,31 @@ ms.assetid: 98a80238-7409-4708-8a7d-5defd9957185
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2b0271c21b849ee754e0050ea461c86d1f773850
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7f9fec2db69f28f832aa8745cf54ea0ff635f491
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48058533"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53354457"
 ---
 # <a name="database-checkpoints-sql-server"></a>Checkpoint di database (SQL Server)
   In questo argomento viene fornita una panoramica dei checkpoint del database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Un *checkpoint* crea un punto valido noto da cui [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] può iniziare ad applicare le modifiche contenute nel log durante il recupero successivo a un arresto anomalo del sistema.  
   
   
 ##  <a name="Overview"></a> Panoramica dei checkpoint  
- Per motivi legati alle prestazioni, tramite il [!INCLUDE[ssDE](../../includes/ssde-md.md)] vengono apportate modifiche alle pagine del database in memoria, nella cache buffer, ma queste pagine non vengono scritte su disco dopo ogni modifica. Il [!INCLUDE[ssDE](../../includes/ssde-md.md)] pubblica periodicamente un checkpoint su ogni database. Un *checkpoint* scrive le pagine modificate in memoria correnti, note come pagine *dirty*e le informazioni sul log delle transazioni dalla memoria sul disco e registra le informazioni sul log delle transazioni.  
+ Per motivi correlati alle prestazioni, tramite il [!INCLUDE[ssDE](../../includes/ssde-md.md)] vengono apportate modifiche alle pagine del database in memoria, nella cache buffer, ma queste pagine non vengono scritte su disco dopo ogni modifica. Il [!INCLUDE[ssDE](../../includes/ssde-md.md)] pubblica periodicamente un checkpoint su ogni database. Un *checkpoint* scrive le pagine modificate in memoria correnti, note come pagine *dirty*e le informazioni sul log delle transazioni dalla memoria sul disco e registra le informazioni sul log delle transazioni.  
   
  Il [!INCLUDE[ssDE](../../includes/ssde-md.md)] supporta molti tipi di checkpoint: automatici, indiretti, manuali e interni. Nella tabella seguente vengono riepilogati i tipi di checkpoint.  
   
-|nome|[!INCLUDE[tsql](../../includes/tsql-md.md)] Interfaccia|Description|  
+|nome|[!INCLUDE[tsql](../../includes/tsql-md.md)] Interfaccia|Descrizione|  
 |----------|----------------------------------|-----------------|  
 |Automatico|EXEC sp_configure **»`recovery interval`','*`seconds`*'**|Emesso automaticamente in background per rispettare il limite di tempo superiore suggerito dalla `recovery interval` opzione di configurazione del server. I checkpoint automatici vengono eseguiti fino al completamento.  I checkpoint automatici sono limitati in base al numero di scritture in sospeso e al fatto che il [!INCLUDE[ssDE](../../includes/ssde-md.md)] rilevi o meno un aumento della latenza di scrittura superiore ai 20 millisecondi.<br /><br /> Per altre informazioni, vedere [Configurare l'opzione di configurazione del server recovery interval](../../database-engine/configure-windows/configure-the-recovery-interval-server-configuration-option.md).|  
-|Indiretto|ALTER DATABASE … SET TARGET_RECOVERY_TIME **=***target_recovery_time* { SECONDS &#124; MINUTES }|Emesso in background per rispettare un tempo di recupero di destinazione specificato dall'utente per un determinato database. Il tempo di recupero di destinazione predefinito è 0 che comporta l'utilizzo di un approccio euristico dei checkpoint automatici nel database. Se si utilizza ALTER DATABASE per impostare TARGET_RECOVERY_TIME su >0, viene utilizzato questo valore e non l'intervallo di recupero specificato per l'istanza del server.<br /><br /> Per altre informazioni, vedere [Modificare il tempo di recupero di riferimento di un database &#40;SQL Server&#41;](change-the-target-recovery-time-of-a-database-sql-server.md).|  
+|Indiretto|ALTER DATABASE ... SET TARGET_RECOVERY_TIME **=***target_recovery_time* { SECONDS &#124; MINUTES }|Emesso in background per rispettare un tempo di recupero di destinazione specificato dall'utente per un determinato database. Il tempo di recupero di destinazione predefinito è 0 che comporta l'utilizzo di un approccio euristico dei checkpoint automatici nel database. Se si utilizza ALTER DATABASE per impostare TARGET_RECOVERY_TIME su >0, viene utilizzato questo valore e non l'intervallo di recupero specificato per l'istanza del server.<br /><br /> Per altre informazioni, vedere [Modificare il tempo di recupero di riferimento di un database &#40;SQL Server&#41;](change-the-target-recovery-time-of-a-database-sql-server.md).|  
 |Manual|CHECKPOINT [ *checkpoint_duration* ]|Emesso quando si esegue un comando CHECKPOINT [!INCLUDE[tsql](../../includes/tsql-md.md)] . Il checkpoint manuale si verifica nel database corrente per la connessione. Per impostazione predefinita, i checkpoint manuali vengono eseguiti fino al completamento. La limitazione funziona come per i checkpoint automatici.  Facoltativamente, il parametro *checkpoint_duration* specifica una quantità di tempo richiesta, in secondi, per il completamento del checkpoint.<br /><br /> Per altre informazioni, vedere [CHECKPOINT &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/checkpoint-transact-sql).|  
 |Interno|Nessuna.|Emesso da varie operazioni del server quali backup e creazione dello snapshot del database per garantire che le immagini del disco corrispondano allo stato corrente del log.|  
   
 > [!NOTE]  
->  Il `-k` [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] opzione di impostazione avanzata consente a un amministratore di database per limitare il comportamento dei / o basato sulla velocità effettiva del sottosistema i/o per alcuni tipi di checkpoint di checkpoint. Il `-k` opzione di configurazione riguarda i checkpoint automatici e i checkpoint interni e manuali senza limitazione.  
+>  L'opzione di impostazione avanzata `-k` di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consente a un amministratore del database di limitare il comportamento di I/O del checkpoint in base alla velocità effettiva del sottosistema di I/O per alcuni tipi di checkpoint. Il `-k` opzione di configurazione riguarda i checkpoint automatici e i checkpoint interni e manuali senza limitazione.  
   
  Per i checkpoint automatici, manuali e interni, solo le modifiche apportate dopo l'ultimo checkpoint devono essere sottoposte a rollforward durante il recupero del database. Ne consegue una riduzione del tempo necessario per recuperare un database.  
   
@@ -135,7 +134,7 @@ ms.locfileid: "48058533"
   
 ##  <a name="RelatedContent"></a> Contenuto correlato  
   
--   [Architettura fisica del log delle transazioni](http://technet.microsoft.com/library/ms179355.aspx) (nella documentazione online di [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)])  
+-   [Architettura fisica del log delle transazioni](https://technet.microsoft.com/library/ms179355.aspx) (nella documentazione online di [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] )  
   
   
 ## <a name="see-also"></a>Vedere anche  

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- integration-services
+ms.technology: integration-services
 ms.topic: reference
 helpviewer_keywords:
 - connection managers [Integration Services], programming
@@ -14,12 +12,12 @@ ms.assetid: 2686fe84-1ecc-48b8-9160-e7122274bd84
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d532bf8e3cd47f430ccb60470cda996a8c8e6d77
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fd8b5934b8d38d867b7faa5715a4f87394b74ccc
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48206751"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53362183"
 ---
 # <a name="working-with-connection-managers-programmatically"></a>Utilizzo di gestioni connessioni a livello di programmazione
   In [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] il metodo AcquireConnection della classe della gestione connessione associata è quello che viene chiamato più spesso quando si usano gestioni connessioni in codice gestito. Quando si scrive codice gestito, è necessario chiamare il metodo AcquireConnection per usare la funzionalità di una gestione connessione. È necessario chiamare questo metodo sia che il codice gestito venga scritto in un'attività Script, in un componente script, in un oggetto personalizzato o in un'applicazione personalizzata.  
@@ -67,7 +65,7 @@ ms.locfileid: "48206751"
 |WMI|Gestione connessione WMI|`System.Management.ManagementScope`||  
 |SQLMOBILE|Gestione connessione SQL Server Compact|`System.Data.SqlServerCe.SqlCeConnection`||  
   
-![Icona di Integration Services (piccola)](media/dts-16.gif "icona di Integration Services (piccola)")**rimangono fino a Date con Integration Services** <br /> Per i download, gli articoli, gli esempi e i video Microsoft più recenti, oltre alle soluzioni selezionate dalla community, visitare la pagina [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] sul sito MSDN:<br /><br /> [Visita la pagina di Integration Services su MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Per ricevere una notifica automatica su questi aggiornamenti, sottoscrivere i feed RSS disponibili nella pagina.  
+![Icona di Integration Services (piccola)](media/dts-16.gif "icona di Integration Services (piccola)")**rimangono fino a Date con Integration Services**<br /> Per i download, gli articoli, gli esempi e i video Microsoft più recenti, oltre alle soluzioni selezionate dalla community, visitare la pagina [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] sul sito MSDN:<br /><br /> [Visita la pagina di Integration Services su MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Per ricevere una notifica automatica su questi aggiornamenti, sottoscrivere i feed RSS disponibili nella pagina.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Connessione a origini dati nell'attività Script](extending-packages-scripting/task/connecting-to-data-sources-in-the-script-task.md)   

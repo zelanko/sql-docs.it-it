@@ -16,19 +16,19 @@ ms.assetid: 38bb09cc-2652-4971-8373-0cf468cdc7a6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 07c13662da9a558c6c9406a7659c5529114236d8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 54e2a0f5de93ee9f0d760adfd5a95551d19cc782
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48157391"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53364233"
 ---
 # <a name="set-partition-writeback"></a>Impostare tabelle writeback delle partizioni
   Se si abilita un gruppo di misure per la scrittura, gli utenti finali possono modificare i dati del cubo durante la relativa esplorazione; tuttavia, le modifiche vengono salvate in una tabella separata denominata tabella writeback, non nei dati del cubo o nei dati di origine. Gli utenti finali che esplorano una partizione abilitata per la scrittura visualizzano il risultato finale di tutte le modifiche nella tabella writeback per la partizione.  
   
  È possibile esplorare o eliminare i dati writeback, nonché convertirli in una partizione. In una partizione abilitata per la scrittura, è possibile utilizzare i ruoli dei cubi per concedere l'accesso in lettura/scrittura a singoli utenti e gruppi di utenti, nonché per limitare l'accesso a celle o gruppi di celle specifici nella partizione.  
   
- Per un breve video introduttivo al writeback, vedere quello relativo al [writeback in Excel 2010 per Analysis Services](http://go.microsoft.com/fwlink/p/?LinkId=394951). Un'analisi più dettagliata di questa funzionalità è disponibile tramite questa serie di post di blog relativi alla [compilazione di un'applicazione di writeback con Analysis Services (blog)](http://go.microsoft.com/fwlink/?LinkId=394977).  
+ Per un breve video introduttivo al writeback, vedere quello relativo al [writeback in Excel 2010 per Analysis Services](https://go.microsoft.com/fwlink/p/?LinkId=394951). Un'analisi più dettagliata di questa funzionalità è disponibile tramite questa serie di post di blog relativi alla [compilazione di un'applicazione di writeback con Analysis Services (blog)](https://go.microsoft.com/fwlink/?LinkId=394977).  
   
 > [!NOTE]  
 >  Il writeback è supportato solo per i database relazionali e i data mart di SQL Server e solo per i modelli multidimensionali di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
@@ -61,8 +61,8 @@ ms.locfileid: "48157391"
  Per convertire i dati writeback in una partizione, usare la finestra di dialogo **Converti in partizione**, a cui è possibile accedere facendo clic con il pulsante destro del mouse sulla tabella writeback di una partizione abilitata per la scrittura in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. È possibile specificare il nome della partizione e quindi progettare la relativa aggregazione durante la creazione della partizione stessa o in un secondo momento. Per creare l'aggregazione quando si seleziona la partizione, è necessario scegliere di copiare la progettazione dell'aggregazione da una partizione esistente, che in genere, ma non necessariamente, corrisponde alla partizione writeback corrente. È inoltre possibile scegliere di elaborare la partizione durante la creazione.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Partizioni abilitate per scrittura](../multidimensional-models-olap-logical-cube-objects/partitions-write-enabled-partitions.md)   
- [Abilitazione del writeback su un cubo OLAP a livello di cella in Excel 2010](http://go.microsoft.com/fwlink/p/?LinkId=394952)   
- [Abilitazione e protezione dell'immissione di dati con il Writeback di Analysis Services](http://go.microsoft.com/fwlink/p/?LinkId=394953)  
+ [Partizioni abilitate per la scrittura](../multidimensional-models-olap-logical-cube-objects/partitions-write-enabled-partitions.md)   
+ [Abilitazione del writeback su un cubo OLAP a livello di cella in Excel 2010](https://go.microsoft.com/fwlink/p/?LinkId=394952)   
+ [Abilitazione e protezione dell'immissione di dati con il writeback di Analysis Services](https://go.microsoft.com/fwlink/p/?LinkId=394953)  
   
   

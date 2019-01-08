@@ -10,12 +10,12 @@ ms.assetid: 405cdac5-a0d4-47a4-9180-82876b773b82
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 31fbfaefa9efed6e00ae69338b8f4db346176167
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 89fc6a74486cad96be0baee374721e06520acfcb
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48116171"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53362798"
 ---
 # <a name="migrating-to-in-memory-oltp"></a>Migrazione a OLTP in memoria
   In questa sezione viene illustrato come eseguire la migrazione di oggetti di database per utilizzare OLTP in memoria.  
@@ -44,7 +44,7 @@ ms.locfileid: "48116171"
   
 -   [Implementazione di IDENTITY in una tabella con ottimizzazione per la memoria](implementing-identity-in-a-memory-optimized-table.md)  
   
- Per informazioni sulle metodologie di migrazione, vedere la pagina relativa a [In-Memory OLTP - Common Workload Patterns and Migration Considerations](http://msdn.microsoft.com/library/dn673538.aspx)(OLTP in memoria: considerazioni sulla migrazione e sui modelli di carico di lavoro comuni).  
+ Per informazioni sulle metodologie di migrazione, vedere [In-Memory OLTP - Common Workload Patterns and Migration Considerations](https://msdn.microsoft.com/library/dn673538.aspx) (OLTP in memoria: considerazioni sulla migrazione e sui modelli di carico di lavoro comuni).  
   
 ## <a name="see-also"></a>Vedere anche  
  [OLTP in memoria &#40;ottimizzazione per la memoria&#41;](in-memory-oltp-in-memory-optimization.md)   

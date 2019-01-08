@@ -14,12 +14,12 @@ ms.assetid: 6ad23de1-2bab-4933-9122-c09f5565028d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 361b672fa6185bb5c119491128118de8f7030a8c
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: 0e0af29d348ff55b415d22d44bc8e8e48a35d290
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018376"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53355126"
 ---
 # <a name="install-sql-server-2014-from-the-installation-wizard-setup"></a>Installare SQL Server 2014 dall'Installazione guidata (programma di installazione)
   In questo argomento vengono fornite istruzioni dettagliate per installare una nuova istanza di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando l'Installazione guidata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Poiché nell'Installazione guidata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è disponibile un unico albero delle funzionalità per l'installazione di tutti i componenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , non è necessario installarli singolarmente. Per altre informazioni sui vari componenti che possono essere installati, vedere [installazione per SQL Server 2014](installation-for-sql-server.md).  Per altre informazioni su come installare il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] componenti singolarmente, vedere [installare SQL Server 2014](install-sql-server.md).  
@@ -84,7 +84,7 @@ ms.locfileid: "51018376"
   
 12. Nella pagina Configurazione dell'istanza specificare se si desidera installare un'istanza predefinita o un'istanza denominata. Per ulteriori informazioni, vedere [Instance Configuration](../../sql-server/install/instance-configuration.md).  
   
-     **ID istanza** : per impostazione predefinita, come ID istanza viene utilizzato il nome dell'istanza. Tale nome viene utilizzato per identificare le directory di installazione e le chiavi del Registro di sistema per l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si tratta del caso delle istanze predefinite e delle istanze denominate. Per un'istanza predefinita, il nome di istanza e l'ID istanza sono MSSQLSERVER. Per usare un ID istanza non predefinito, specificare un valore differente nella casella di testo **ID istanza** .  
+     **ID istanza** : per impostazione predefinita, come ID istanza viene usato il nome dell'istanza. Tale nome viene utilizzato per identificare le directory di installazione e le chiavi del Registro di sistema per l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si tratta del caso delle istanze predefinite e delle istanze denominate. Per un'istanza predefinita, il nome di istanza e l'ID istanza sono MSSQLSERVER. Per usare un ID istanza non predefinito, specificare un valore differente nella casella di testo **ID istanza** .  
   
     > [!NOTE]  
     >  Le normali istanze autonome di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], sia che si tratti di istanze predefinite o denominate, usano un valore predefinito per l' **ID istanza**.  
@@ -95,7 +95,7 @@ ms.locfileid: "51018376"
   
      Il flusso di lavoro relativo alla parte rimanente dell'installazione dipende dalle funzionalità specificate per l'installazione. Le pagine visualizzate dipendono dalle selezioni effettuate.  
   
-13. Utilizzare la pagina Configurazione server - Account di servizio per specificare gli account di accesso per i servizi [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . I servizi effettivamente configurati in questa pagina dipendono dalle funzionalità selezionate per l'installazione.  
+13. Usare la pagina Configurazione server - Account di servizio per specificare gli account di accesso per i servizi [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. I servizi effettivamente configurati in questa pagina dipendono dalle funzionalità selezionate per l'installazione.  
   
      È possibile assegnare lo stesso account di accesso a tutti i servizi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oppure configurare singolarmente l'account di ogni servizio. È inoltre possibile specificare se i servizi verranno avviati automaticamente, manualmente o se sono disabilitati. [!INCLUDE[msCoName](../../includes/msconame-md.md)] consiglia di configurare gli account del servizio singolarmente per assegnare i privilegi minimi a ogni servizio, in modo che ai servizi [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengano concesse le autorizzazioni minime necessarie per completare le attività. Per altre informazioni, vedere [Configurazione Server - Account di servizio](../../sql-server/install/server-configuration-service-accounts.md) e [Configurare account di servizio e autorizzazioni di Windows](../configure-windows/configure-windows-service-accounts-and-permissions.md).  
   
@@ -104,7 +104,7 @@ ms.locfileid: "51018376"
     > [!IMPORTANT]  
     >  [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)]  
   
-     Utilizzare la pagina Configurazione server - Regole di confronto per specificare regole di confronto non predefinite per il [!INCLUDE[ssDE](../../includes/ssde-md.md)] e [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Per altre informazioni, vedere [Configurazione del server - Regole di confronto](../../sql-server/install/server-configuration-collation.md).  
+     Usare la pagina Configurazione server - Regole di confronto per specificare regole di confronto non predefinite per il [!INCLUDE[ssDE](../../includes/ssde-md.md)] e [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Per altre informazioni, vedere [Configurazione del server - Regole di confronto](../../sql-server/install/server-configuration-collation.md).  
   
 14. Utilizzare la pagina Configurazione del [!INCLUDE[ssDE](../../includes/ssde-md.md)] - Configurazione server per specificare gli elementi seguenti:  
   
@@ -117,20 +117,20 @@ ms.locfileid: "51018376"
      Utilizzare la pagina Configurazione [!INCLUDE[ssDE](../../includes/ssde-md.md)] - Directory dati per specificare directory di installazione non predefinite. Per eseguire l'installazione in directory predefinite, fare clic su **Avanti**.  
   
     > [!IMPORTANT]  
-    >  Se si specificano directory di installazione non predefinite, verificare che le cartelle di installazione siano univoche per l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Nessuna delle directory presenti in questa finestra di dialogo deve essere condivisa con le directory di altre istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Inoltre, l'installazione di SQL Server con le directory dei dati nella cartella radice dell'unità o in un punto di montaggio non riuscirà. Per altre informazioni, vedere [supporto di SQL Server per i volumi montati.](http://support.microsoft.com/kb/819546/en-us)  
+    >  Se si specificano directory di installazione non predefinite, verificare che le cartelle di installazione siano univoche per l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Nessuna delle directory presenti in questa finestra di dialogo deve essere condivisa con le directory di altre istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Inoltre, l'installazione di SQL Server con le directory dei dati nella cartella radice dell'unità o in un punto di montaggio non riuscirà. Per altre informazioni, vedere [supporto di SQL Server per i volumi montati.](https://support.microsoft.com/kb/819546/en-us)  
   
      Per altre informazioni, vedere [Configurazione del motore di database - Directory dati](../../sql-server/install/database-engine-configuration-data-directories.md).  
   
      Utilizzare la pagina Configurazione [!INCLUDE[ssDE](../../includes/ssde-md.md)] - FILESTREAM per abilitare la funzione FILESTREAM per l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per altre informazioni, vedere [Configurazione del Motore di database - Filestream](../../sql-server/install/database-engine-configuration-filestream.md).  
   
-15. Utilizzare la pagina Configurazione [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] - Provisioning account per specificare la modalità server e gli utenti o gli account che disporranno delle autorizzazioni di amministratore per [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. La modalità server determina quali sottosistemi di memoria e archiviazione vengono utilizzati nel server. Tipi di soluzione diversi eseguiti nelle modalità server diverse. Se si intende eseguire database di cubi multidimensionali nel server, scegliere l'opzione predefinita, vale a dire quella relativa alla modalità server multidimensionale e di data mining. Relativamente alle autorizzazioni di amministratore, è necessario specificare almeno un amministratore di sistema per [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Per aggiungere l'account usato per eseguire il programma di installazione di SQL Server, fare clic su **Aggiungi utente corrente**. Per aggiungere o rimuovere account dall'elenco degli amministratori di sistema, fare clic su **Aggiungi** o **Rimuovi**, quindi modificare l'elenco di utenti, gruppi o computer che disporranno di privilegi di amministratore per [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Per altre informazioni sulle autorizzazioni della modalità server e amministratore, vedere [Configurazione di Analysis Services - Provisioning account](../../sql-server/install/analysis-services-configuration-account-provisioning.md).  
+15. Usare la pagina Configurazione [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] - Provisioning account per specificare la modalità server e gli utenti o gli account che disporranno delle autorizzazioni di amministratore per [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. La modalità server determina quali sottosistemi di memoria e archiviazione vengono utilizzati nel server. Tipi di soluzione diversi eseguiti nelle modalità server diverse. Se si intende eseguire database di cubi multidimensionali nel server, scegliere l'opzione predefinita, vale a dire quella relativa alla modalità server multidimensionale e di data mining. Relativamente alle autorizzazioni di amministratore, è necessario specificare almeno un amministratore di sistema per [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Per aggiungere l'account usato per eseguire il programma di installazione di SQL Server, fare clic su **Aggiungi utente corrente**. Per aggiungere o rimuovere account dall'elenco degli amministratori di sistema, fare clic su **Aggiungi** o **Rimuovi**, quindi modificare l'elenco di utenti, gruppi o computer che disporranno di privilegi di amministratore per [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Per altre informazioni sulle autorizzazioni della modalità server e amministratore, vedere [Configurazione di Analysis Services - Provisioning account](../../sql-server/install/analysis-services-configuration-account-provisioning.md).  
   
-     Dopo aver modificato l'elenco, fare clic su **OK**. Verificare l'elenco di amministratori nella finestra di dialogo di configurazione. Quando l'elenco è completo, scegliere **Avanti**.  
+     Dopo aver modificato l'elenco, fare clic su **OK**. Verificare l'elenco di amministratori nella finestra di dialogo di configurazione. Quando l'elenco è completo, fare clic su **Avanti**.  
   
-     Utilizzare la pagina Configurazione di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] - Directory dati per specificare directory di installazione non predefinite. Per eseguire l'installazione in directory predefinite, scegliere **Avanti**.  
+     Utilizzare la pagina Configurazione [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] - Directory dati per specificare directory di installazione non predefinite. Per eseguire l'installazione in directory predefinite, fare clic su **Avanti**.  
   
     > [!IMPORTANT]  
-    >  Se si specificano directory di installazione non predefinite, verificare che le cartelle di installazione siano univoche per l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Nessuna delle directory presenti in questa finestra di dialogo deve essere condivisa con le directory di altre istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Inoltre, l'installazione di SQL Server con le directory dei dati nella cartella radice dell'unità o in un punto di montaggio non riuscirà. Per altre informazioni, vedere [supporto di SQL Server per i volumi montati.](http://support.microsoft.com/kb/819546/en-us)  
+    >  Se si specificano directory di installazione non predefinite, verificare che le cartelle di installazione siano univoche per l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Nessuna delle directory presenti in questa finestra di dialogo deve essere condivisa con le directory di altre istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Inoltre, l'installazione di SQL Server con le directory dei dati nella cartella radice dell'unità o in un punto di montaggio non riuscirà. Per altre informazioni, vedere [supporto di SQL Server per i volumi montati.](https://support.microsoft.com/kb/819546/en-us)  
   
      Per altre informazioni, vedere [Configurazione di Analysis Services - Directory dati](../../sql-server/install/analysis-services-configuration-data-directories.md).  
   
@@ -146,7 +146,7 @@ ms.locfileid: "51018376"
   
 18. Utilizzare la pagina di configurazione del client Riesecuzione distribuita per specificare gli utenti a cui si desidera concedere autorizzazioni amministrative per il servizio client Riesecuzione distribuita. Gli utenti che dispongono di autorizzazioni amministrative disporranno di accesso illimitato al servizio client Riesecuzione distribuita.  
   
-     **Nome controller** è un parametro facoltativo e il valore predefinito è \<*blank*>. Immettere il nome del controller che il computer client comunicherà con per il servizio client Riesecuzione distribuita. Si noti quanto segue:  
+     **Nome controller** è un parametro facoltativo e il valore predefinito è \<*blank*>. Immettere il nome del controller che il computer client comunicherà con per il servizio client Riesecuzione distribuita. Tenere presente quanto segue:  
   
     -   Se è già stato configurato un controller, immettere il nome del controller durante la configurazione di ciascuno client.  
   

@@ -11,12 +11,12 @@ ms.assetid: 45da3d39-278e-4760-a4b3-9932c9547cf2
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 153a7dfafea308c57dd933de633a016871e32e6e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5397095cc8577b174925bea234cbe54c2c49456b
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48221131"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53373913"
 ---
 # <a name="displaying-a-series-with-multiple-data-ranges-on-a-chart-report-builder-and-ssrs"></a>Visualizzazione di una serie con più intervalli di dati in un grafico (Generatore report e SSRS)
   Nel grafico verranno usati i valori minimo e massimo di una serie per calcolare la scala dell'asse. Se una serie nel grafico contiene più intervalli di dati, è possibile che i punti dati vengano nascosti e che solo alcuni di essi risultino facilmente visibili nel grafico. Si supponga ad esempio che in un report vengano visualizzati i totali delle vendite giornaliere per un periodo di 30 giorni.  
@@ -59,14 +59,14 @@ ms.locfileid: "48221131"
   
 -   Il grafico è di tipo polare, radar, a torta, ad anello, a imbuto, a piramide o un tipo qualsiasi di grafico in pila.  
   
- Un esempio di grafico con cambi di scala è disponibile come report di esempio. Per altre informazioni sul download di questo e di altri report di esempio, vedere la pagina relativa ai [report di esempio per Generatore report e Progettazione report](http://go.microsoft.com/fwlink/?LinkId=198283) di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ Un esempio di grafico con cambi di scala è disponibile come report di esempio. Per altre informazioni sul download di questo e di altri report di esempio, vedere la pagina relativa ai [report di esempio per Generatore report e Progettazione report](https://go.microsoft.com/fwlink/?LinkId=198283) di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
 ## <a name="see-also"></a>Vedere anche  
- [Più serie in un grafico &#40;Report e SSRS&#41;](multiple-series-on-a-chart-report-builder-and-ssrs.md)   
+ [Più serie in un grafico &#40;Generatore report e SSRS&#41;](multiple-series-on-a-chart-report-builder-and-ssrs.md)   
  [Formattazione di un grafico &#40;Generatore report e SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)   
- [3D, smussature e altri effetti in un grafico &#40;Report e SSRS&#41;](chart-effects-3d-bevel-and-other-report-builder.md)   
+ [Effetti 3D, smussature e altri effetti in un grafico &#40;Generatore report e SSRS&#41;](chart-effects-3d-bevel-and-other-report-builder.md)   
  [Grafici &#40;Generatore report e SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [Finestra di dialogo Proprietà asse, Opzioni asse &#40;Generatore report e SSRS&#41;](../axis-properties-dialog-box-axis-options-report-builder-and-ssrs.md)   
- [Raccogliere piccole sezioni in un grafico a torta &#40;Report e SSRS&#41;](collect-small-slices-on-a-pie-chart-report-builder-and-ssrs.md)  
+ [Raccogliere piccole sezioni in un grafico a torta &#40;Generatore report e SSRS&#41;](collect-small-slices-on-a-pie-chart-report-builder-and-ssrs.md)  
   
   

@@ -22,12 +22,12 @@ ms.assetid: 26150c09-2dca-46ad-bb01-3cb3165bcc5d
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: e8dafc5dce762810b2348d41e84fd71fcdb2e436
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2b234aba562c095d2861bddec5310cf321b5d331
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47832525"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591065"
 ---
 # <a name="sysspcdcenabletable-transact-sql"></a>sys.sp_cdc_enable_table (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,20 +55,20 @@ sys.sp_cdc_enable_table
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@source_schema =** ] **'***source_schema***'**  
+ [  **@source_schema =** ] **'**_source_schema_**'**  
  Nome dello schema a cui appartiene la tabella di origine. *source_schema* viene **sysname**, non prevede alcun valore predefinito e non può essere NULL.  
   
- [  **@source_name =** ] **'***source_name***'**  
+ [  **@source_name =** ] **'**_source_name_**'**  
  Nome della tabella di origine in cui è possibile abilitare la funzionalità di Change Data Capture. *source_name* viene **sysname**, non prevede alcun valore predefinito e non può essere NULL.  
   
  *source_name* deve esistere nel database corrente. Nelle tabelle di **cdc** dello schema non può essere abilitato per change data capture.  
   
- [  **@role_name =** ] **'***role_name***'**  
+ [  **@role_name =** ] **'**_role_name_**'**  
  Nome del ruolo del database utilizzato per controllare l'accesso ai dati delle modifiche. *role_name* viene **sysname** e deve essere specificato. Se viene impostato in modo esplicito su NULL, non viene utilizzato alcun ruolo di controllo per limitare l'accesso ai dati delle modifiche.  
   
  Il ruolo viene utilizzato se esiste. Se il ruolo non esiste, viene eseguito un tentativo per creare un ruolo del database con il nome specificato. Nel nome del ruolo vengono eliminati gli spazi vuoti nella parte destra della stringa prima di provare a creare il ruolo. Se il chiamante non è autorizzato a creare un ruolo all'interno del database, non è possibile eseguire l'operazione della stored procedure.  
   
- [  **@capture_instance =** ] **'***capture_instance***'**  
+ [  **@capture_instance =** ] **'**_capture_instance_**'**  
  Nome dell'istanza di acquisizione utilizzato per denominare gli oggetti Change Data Capture specifici dell'istanza. *capture_instance* viene **sysname** e non può essere NULL.  
   
  Se non specificato, il nome è derivato dal nome dello schema di origine più il nome della tabella di origine nel formato *schemaname_sourcename*. *capture_instance* non può superare i 100 caratteri e deve essere univoco all'interno del database. Se specificato o derivato, *capture_instance* vengono tagliati gli spazi vuoti a destra della stringa.  
@@ -84,10 +84,10 @@ sys.sp_cdc_enable_table
   
  Se *supports_net_changes* è impostato su 1, *index_name* devono essere specificati, o la tabella di origine deve avere una chiave primaria definita.  
   
- [  **@index_name =** ] **' * * * index_name*'  
+ [  **@index_name =** ] **'**_index_name_'  
  Nome di un indice univoco da utilizzare per identificare in modo univoco le righe nella tabella di origine. *index_name* viene **sysname** e può essere NULL. Se specificato, *index_name* deve essere un indice univoco valido nella tabella di origine. Se *index_name* viene specificato, le colonne indice identificate ha la precedenza su alcuna colonna chiave primaria definite come identificatore di riga univoco per la tabella.  
   
- [  **@captured_column_list =** ] **'***captured_column_list***'**  
+ [  **@captured_column_list =** ] **'**_captured_column_list_**'**  
  Identifica le colonne della tabella di origine da includere nella tabella delle modifiche. *captured_column_list* viene **nvarchar (max)** e può essere NULL. Se il valore è NULL, nella tabella delle modifiche vengono incluse tutte le colonne.  
   
  I nomi delle colonne devono essere colonne valide nella tabella di origine. Le colonne definite in un indice di chiave primaria o le colonne definite in un indice fa riferimento *index_name* deve essere incluso.  
@@ -96,12 +96,12 @@ sys.sp_cdc_enable_table
   
  *captured_column_list* non può contenere i seguenti nomi di colonna riservati: **_ $start_lsn**, **_ $end_lsn**, **_ $seqval**, **_ $ operazione**, e **_ $update_mask**.  
   
- [  **@filegroup_name =** ] **'***filegroup_name***'**  
+ [  **@filegroup_name =** ] **'**_filegroup_name_**'**  
  Filegroup da utilizzare per la tabella delle modifiche creata per l'istanza di acquisizione. *filegroup_name* viene **sysname** e può essere NULL. Se specificato, *filegroup_name* deve essere definito per il database corrente. Se il valore è NULL; viene utilizzato il filegroup predefinito.  
   
  Si consiglia di creare un filegroup separato per modificare le tabelle di acquisizione dei dati delle modifiche.  
   
- [  **@allow_partition_switch=** ] **'***allow_partition_switch***'**  
+ [  **@allow_partition_switch=** ] **'**_allow_partition_switch_**'**  
  Indica se il comando SWITCH PARTITION di ALTER TABLE può essere eseguito su una tabella abilitata per Change Data Capture. *allow_partition_switch* viene **bit**, con un valore predefinito è 1.  
   
  Per le tabelle non partizionate, l'impostazione di cambio è sempre 1 mentre l'impostazione effettiva viene ignorata. Se il cambio viene impostato in modo esplicito su 0 per una tabella non partizionata, viene generato l'avviso 22857 per indicare che è stata ignorata l'impostazione di cambio. Se il cambio viene impostato in modo esplicito su 0 per una tabella partizionata, viene generato l'avviso 22356 per indicare che non saranno consentite operazioni di cambio partizione nella tabella di origine. Infine, se l'impostazione di cambio viene impostata in modo esplicito su 1 o viene utilizzato 1 come valore predefinito e la tabella abilitata viene partizionata, viene generato l'avviso 22855 per indicare che i cambi di partizione non saranno bloccati. Se si verifica un cambio di partizione, Change Data Capture non rileverà le modifiche risultanti dal cambio. In questo modo verranno generate inconsistenze dei dati quando vengono utilizzati i dati delle modifiche.  
@@ -113,7 +113,7 @@ sys.sp_cdc_enable_table
  **0** (esito positivo) o **1** (errore)  
   
 ## <a name="result-sets"></a>Set di risultati  
- Nessuno  
+ None  
   
 ## <a name="remarks"></a>Note  
  Prima di abilitare una tabella per Change Data Capture, è necessario abilitare il database. Per determinare se il database è abilitato per change data capture, eseguire una query di **is_cdc_enabled** colonna il [Sys. Databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) vista del catalogo. Per abilitare il database, usare il [Sys. sp_cdc_enable_db](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-db-transact-sql.md) stored procedure.  
@@ -147,7 +147,7 @@ EXECUTE sys.sp_cdc_enable_table
 GO  
 ```  
   
-### <a name="b-enabling-change-data-capture-by-specifying-additional-optional-parameters"></a>B. Abilitazione di Change Data Capture tramite l'indicazione di parametri aggiuntivi facoltativi  
+### <a name="b-enabling-change-data-capture-by-specifying-additional-optional-parameters"></a>b. Abilitazione di Change Data Capture tramite l'indicazione di parametri aggiuntivi facoltativi  
  Nell'esempio seguente viene abilitata l'acquisizione dei dati delle modifiche per la tabella `HumanResources.Department`. Vengono specificati tutti i parametri tranne `@allow_partition_switch`.  
   
 ```  

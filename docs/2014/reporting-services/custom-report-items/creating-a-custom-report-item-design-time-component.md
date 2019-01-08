@@ -14,12 +14,12 @@ ms.assetid: 323fd58a-a462-4c48-b188-77ebc0b4212e
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: a6654b7ec23e2aae071a7e4ce6cd360b7ef10e4a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 292baa254bffc16650376dbbc30e7193b8bc367c
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48107491"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53358823"
 ---
 # <a name="creating-a-custom-report-item-design-time-component"></a>Creazione di un componente dell'elemento del report personalizzato per la fase di progettazione
   Un componente dell'elemento del report personalizzato per la fase di progettazione è un controllo che può essere utilizzato nell'ambiente Progettazione report di Visual Studio. Il componente dell'elemento del report personalizzato per la fase di progettazione fornisce un'area di progettazione attivata in grado di accettare operazioni di trascinamento della selezione, integrazione con il Visualizzatore proprietà di [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] e la possibilità di fornire editor di proprietà personalizzati.  
@@ -29,9 +29,9 @@ ms.locfileid: "48107491"
  Le proprietà impostate mediante il componente per la fase di progettazione nell'ambiente di sviluppo vengono serializzate e deserializzate dall'ambiente di progettazione host, quindi archiviate come elementi nel file RDL (Report Definition Language). Quando il report viene eseguito dal componente Elaborazione report, le proprietà impostate mediante il componente per la fase di progettazione vengono passate dal componente Elaborazione report a un componente runtime dell'elemento del report personalizzato che esegue il rendering dell'elemento del report personalizzato e lo passa nuovamente a Elaborazione report.  
   
 > [!NOTE]  
->  Il componente dell'elemento del report personalizzato per la fase di progettazione viene implementato come componente [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. In questo documento vengono illustrati dettagli di implementazione specifici del componente dell'elemento del report personalizzato per la fase di progettazione. Per altre informazioni sullo sviluppo di componenti tramite [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], vedere [Components in Visual Studio](http://go.microsoft.com/fwlink/?LinkId=116576) (Componenti in Visual Studio) in MSDN Library.  
+>  Il componente dell'elemento del report personalizzato per la fase di progettazione viene implementato come componente [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. In questo documento vengono illustrati dettagli di implementazione specifici del componente dell'elemento del report personalizzato per la fase di progettazione. Per altre informazioni sullo sviluppo di componenti tramite [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], vedere [Components in Visual Studio](https://go.microsoft.com/fwlink/?LinkId=116576) (Componenti in Visual Studio) in MSDN Library.  
   
- Per un esempio di elemento del report personalizzato completamente implementato, vedere [SQL Server Reporting Services Product Samples](http://go.microsoft.com/fwlink/?LinkId=177889) (Esempi del prodotto SQL Server Reporting Services).  
+ Per un esempio di elemento del report personalizzato completamente implementato, vedere [SQL Server Reporting Services Product Samples](https://go.microsoft.com/fwlink/?LinkId=177889) (Esempi del prodotto SQL Server Reporting Services).  
   
 ## <a name="implementing-a-design-time-component"></a>Implementazione di un componente per la fase di progettazione  
  La classe principale di un componente dell'elemento del report personalizzato per la fase di progettazione viene ereditata dalla classe `Microsoft.ReportDesigner.CustomReportItemDesigner`. Oltre agli attributi standard utilizzati per un controllo [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], la classe del componente deve definire un attributo `CustomReportItem`. Questo attributo deve corrispondere al nome dell'elemento del report personalizzato secondo la definizione presente nel file reportserver.config. Per un elenco di attributi [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], vedere Attributi nella documentazione di [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] SDK.  
@@ -186,7 +186,7 @@ private void OnProportionalScaling(object sender, EventArgs e)
 ```  
   
 ### <a name="using-adornments"></a>Utilizzo delle aree di controllo  
- Le classi di un elemento del report personalizzato possono anche implementare una classe `Microsoft.ReportDesigner.Design.Adornment`. Un'area di controllo consente al controllo dell'elemento del report personalizzato di fornire aree esterne al rettangolo principale dell'area di progettazione. Tali aree possono gestire eventi dell'interfaccia utente, quali clic del mouse e operazioni di trascinamento della selezione. Il `Adornment` definito nella classe la [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] `Microsoft.ReportDesigner` dello spazio dei nomi è un'implementazione pass-through del <xref:System.Windows.Forms.Design.Behavior.Adorner> trovare la classe in Windows Form. Per informazioni complete sulla `Adorner` classe, vedere [BehaviorService](http://go.microsoft.com/fwlink/?LinkId=116673) in MSDN library. Per esempi di codice che implementa una `Microsoft.ReportDesigner.Design.Adornment` classe, vedere [SQL Server Reporting Services Product Samples](http://go.microsoft.com/fwlink/?LinkId=177889).  
+ Le classi di un elemento del report personalizzato possono anche implementare una classe `Microsoft.ReportDesigner.Design.Adornment`. Un'area di controllo consente al controllo dell'elemento del report personalizzato di fornire aree esterne al rettangolo principale dell'area di progettazione. Tali aree possono gestire eventi dell'interfaccia utente, quali clic del mouse e operazioni di trascinamento della selezione. Il `Adornment` definito nella classe la [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] `Microsoft.ReportDesigner` dello spazio dei nomi è un'implementazione pass-through del <xref:System.Windows.Forms.Design.Behavior.Adorner> trovare la classe in Windows Form. Per informazioni complete sulla `Adorner` classe, vedere [BehaviorService](https://go.microsoft.com/fwlink/?LinkId=116673) in MSDN library. Per esempi di codice che implementa una `Microsoft.ReportDesigner.Design.Adornment` classe, vedere [SQL Server Reporting Services Product Samples](https://go.microsoft.com/fwlink/?LinkId=177889).  
   
  Per ulteriori informazioni sulla programmazione e sull'utilizzo di Windows Form in [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], vedere i seguenti argomenti in MSDN Library:  
   
@@ -194,12 +194,12 @@ private void OnProportionalScaling(object sender, EventArgs e)
   
 -   Componenti di [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]  
   
--   Procedura dettagliata: creazione di un controllo di Windows Form che usufruisca delle caratteristiche offerte da Visual Studio in fase di progettazione  
+-   Procedura dettagliata: Creazione di un controllo di Windows Form che consente di sfruttare le funzionalità in fase di progettazione di Visual Studio  
   
 ## <a name="see-also"></a>Vedere anche  
  [Architettura di un elemento del report personalizzato](custom-report-item-architecture.md)   
  [Creazione di un componente runtime dell'elemento del report personalizzato](creating-a-custom-report-item-run-time-component.md)   
  [Librerie di classi dell'elemento del report personalizzato](custom-report-item-class-libraries.md)   
- [Procedura: Distribuzione di un elemento del report personalizzato](how-to-deploy-a-custom-report-item.md)  
+ [Come si fa: Distribuire un elemento del Report personalizzato](how-to-deploy-a-custom-report-item.md)  
   
   

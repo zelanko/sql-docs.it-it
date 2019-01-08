@@ -26,12 +26,12 @@ ms.assetid: 736d8d9a-39f1-4bf8-b81f-2e56c134d12e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b5e644e2e255e23cc00d71f4434a4d0f9b861985
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: a5b13d9d2095df5d464b7102e1527c21c36c4f5c
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43810277"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376183"
 ---
 # <a name="import-a-bacpac-file-to-create-a-new-user-database"></a>Importare un file BACPAC per creare un nuovo database utente
   Importare un file dell'applicazione livello dati (DAC), con estensione bacpac, per creare una copia del database originale, completo dei dati, in una nuova istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] o in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Le operazioni di importazione ed esportazione possono essere combinate per eseguire la migrazione di un'applicazione livello dati o database tra istanze o per creare un backup logico, quale la creazione di una copia locale di un database distribuito in [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
@@ -43,7 +43,7 @@ ms.locfileid: "43810277"
   
 2.  Durante l'importazione viene eseguita la copia bulk di dati dal file di esportazione.  
   
- È disponibile un'applicazione di esempio nelle esercitazioni di [!INCLUDE[ssSDS](../../includes/sssds-md.md)] che è possibile usare per testare l'esportazione e l'importazione di applicazioni livello dati e database. Per istruzioni su come scaricare e usare l'esempio, vedere la pagina relativa all' [importazione e all'esportazione del database per il database SQL di Windows Azure](http://go.microsoft.com/fwlink/?LinkId=219404).  
+ È disponibile un'applicazione di esempio nelle esercitazioni di [!INCLUDE[ssSDS](../../includes/sssds-md.md)] che è possibile usare per testare l'esportazione e l'importazione di applicazioni livello dati e database. Per istruzioni su come scaricare e usare l'esempio, vedere la pagina relativa all' [importazione e all'esportazione del database per il database SQL di Windows Azure](https://go.microsoft.com/fwlink/?LinkId=219404).  
   
 ## <a name="sql-server-utility"></a>Utilità SQL Server  
  Se si importa un'applicazione livello dati in un'istanza gestita del Motore di database, il pacchetto di applicazione livello dati importato viene incorporato in Utilità SQL Server al successivo invio del set di raccolta dell'utilità dall'istanza al punto di controllo dell'utilità. L'applicazione livello dati sarà quindi presente nel nodo **Deployed Data-tier Applications** (Applicazioni livello dati distribuite) in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **Utility Explorer** and reported in the **Deployed Data-tier Applications** details page.  
@@ -91,18 +91,18 @@ ms.locfileid: "43810277"
   
  **Opzioni**  
   
--   **Non visualizzare più questa pagina.** – Selezionare la casella di controllo per evitare che la pagina Introduzione venga visualizzata nuovamente in futuro.  
+-   **Non visualizzare più questa pagina** Selezionare la casella di controllo per evitare che la pagina Introduzione venga visualizzata nuovamente in futuro.  
   
--   **Avanti** : passa alla pagina **Impostazioni di importazione** .  
+-   **Avanti**: passa alla pagina **Impostazioni di importazione**.  
   
--   **Annulla** : annulla l'operazione e chiude la procedura guidata.  
+-   **Annulla**: annulla l'operazione e chiude la procedura guidata.  
   
 ###  <a name="Import_settings"></a> Pagina Impostazioni di importazione  
  Utilizzare questa pagina per specificare il percorso del file con estensione bacpac da importare.  
   
--   **Importa da disco locale** : fare clic su **Sfoglia** per selezionare un percorso nel computer locale o specificare il percorso nell'apposito campo. Il nome del percorso deve includere un nome file e l'estensione .bacpac.  
+-   **Importa da disco locale**: fare clic su **Sfoglia** per selezionare un percorso nel computer locale o specificare il percorso nell'apposito campo. Il nome del percorso deve includere un nome file e l'estensione .bacpac.  
   
--   **Importa da Windows Azure** : importa un file BACPAC da un contenitore Windows Azure. È necessario connettersi a un contenitore Windows Azure per convalidare questa opzione. Questa opzione richiede inoltre che si specifichi una directory locale per il file temporaneo. Il file temporaneo verrà creato nel percorso specificato, dove rimarrà una volta completata l'operazione.  
+-   **Importa da Windows Azure** -Importa un file BACPAC da un contenitore di Windows Azure. È necessario connettersi a un contenitore Windows Azure per convalidare questa opzione. Questa opzione richiede inoltre che si specifichi una directory locale per il file temporaneo. Il file temporaneo verrà creato nel percorso specificato, dove rimarrà una volta completata l'operazione.  
   
      Quando si esplora Windows Azure, sarà possibile passare tra contenitori all'interno di un solo account. È necessario specificare un solo file bacpac per continuare l'operazione di importazione. È possibile ordinare colonne in base a **Nome**, **Dimensioni**o **Data modifica**.  
   
@@ -113,21 +113,21 @@ ms.locfileid: "43810277"
   
  **Per un'istanza locale di SQL Server:**  
   
--   **Nome nuovo database** : specificare un nome per il database importato.  
+-   **Nome nuovo database**: specificare un nome per il database importato.  
   
--   **Percorso file di dati** : fornire una directory locale per i file di dati. Fare clic su **Sfoglia** per selezionare un percorso nel computer locale o specificare il percorso nell'apposito campo.  
+-   **Percorso file di dati**: fornire una directory locale per i file di dati. Fare clic su **Sfoglia** per selezionare un percorso nel computer locale oppure specificare il percorso nell'apposito campo.  
   
--   **Percorso file di log** : specificare una directory locale per i file di log. Fare clic su **Sfoglia** per selezionare un percorso nel computer locale o specificare il percorso nell'apposito campo.  
+-   **Percorso file di log**: specificare una directory locale per i file di log. Fare clic su **Sfoglia** per selezionare un percorso nel computer locale oppure specificare il percorso nell'apposito campo.  
   
  Scegliere **Avanti**per continuare.  
   
  **Per un Database SQL:**  
   
--   **Nome nuovo database** : specificare un nome per il database importato.  
+-   **Nome nuovo database**: specificare un nome per il database importato.  
   
--   **Edizione di [!INCLUDE[ssSDS](../../includes/sssds-md.md)]**: specificare [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Business o [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Web. Per altre informazioni sulle edizioni di [!INCLUDE[ssSDS](../../includes/sssds-md.md)], visitare il sito Web relativo al [database SQL](http://www.windowsazure.com/home/tour/database/) .  
+-   **Edizione di [!INCLUDE[ssSDS](../../includes/sssds-md.md)]**  -specificare [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Business o [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Web. Per altre informazioni sulle edizioni di [!INCLUDE[ssSDS](../../includes/sssds-md.md)], visitare il sito Web relativo al [database SQL](http://www.windowsazure.com/home/tour/database/) .  
   
--   **Dimensione massime database (GB)** : usare il menu a discesa per specificare le dimensioni massime del database.  
+-   **Dimensioni massime del database (GB)** -usare il menu di riepilogo a discesa per specificare le dimensioni massime per il database.  
   
  Scegliere **Avanti**per continuare.  
   

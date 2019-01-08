@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 5281f080-53d5-4679-aa26-f4cd4ac7a2df
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3d961edcab2527cf31342209286bee4c9b51c854
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a4ff7e5568ee16f1b7efa5429fd93d2279b43549
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48164841"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53372593"
 ---
 # <a name="microsoft-connector-11-for-sap-bw"></a>Microsoft Connector 1.1 for SAP BW
   Il [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector 1.1 for SAP BW è un set di tre componenti che consentono di estrarre dati da o caricare i dati in un sistema SAP Netweaver BW versione 7.  
@@ -27,7 +26,7 @@ ms.locfileid: "48164841"
 > [!IMPORTANT]  
 >  L'estrazione di dati da SAP Netweaver BW richiede licenze SAP aggiuntive. Contattare SAP per verificare questi requisiti.  
   
-## <a name="components"></a>Components  
+## <a name="components"></a>Componenti  
  Il [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector 1.1 for SAP BW include i componenti seguenti:  
   
 -   **Origine SAP BW**: l'origine SAP BW è un componente di origine del flusso di dati che consente di estrarre dati da un sistema SAP Netweaver BW versione 7.  
@@ -36,7 +35,7 @@ ms.locfileid: "48164841"
   
 -   **Gestione connessione SAP BW**: la gestione connessione SAP BW connette un'origine SAP BW o una destinazione SAP BW a un sistema SAP Netweaver BW versione 7.  
   
- Per una procedura dettagliata che illustra come configurare e usare la gestione connessione, l'origine e la destinazione SAP BW, vedere il white paper [Using SQL Server Integration Services with SAP BI 7.0](http://go.microsoft.com/fwlink/?LinkId=301897)(Utilizzo dei servizi di integrazione SQL Server con SAP BI 7.0). Nel white paper viene anche indicato come configurare gli oggetti necessari in SAP BW.  
+ Per una procedura dettagliata che illustra come configurare e usare la gestione connessione, l'origine e la destinazione SAP BW, vedere il white paper [Using SQL Server Integration Services with SAP BI 7.0](https://go.microsoft.com/fwlink/?LinkId=301897)(Utilizzo dei servizi di integrazione SQL Server con SAP BI 7.0). Nel white paper viene anche indicato come configurare gli oggetti necessari in SAP BW.  
   
 ## <a name="documentation"></a>Documentazione  
  Questo file della Guida per il [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector 1.1 for SAP BW contiene gli argomenti e le sezioni seguenti:  

@@ -11,19 +11,19 @@ ms.assetid: 0ffc5f44-17d3-42d4-bc2c-baf3b4485e2d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 01f03e9e8149fe0d3b1b9599ff0ec94613efcba4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 011ca5ed5066113a467082e0fe05c6d0f831f25b
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48169231"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53363463"
 ---
 # <a name="configure-reporting-properties-for-power-view-reports"></a>Configurare le proprietà di creazione di report per i report Power View
   In questa lezione supplementare si imposteranno le proprietà dei report per il progetto Adventure Works Internet Sales Model. Con le proprietà dei report risulta più semplice, per gli utenti finali, selezionare e visualizzare i dati del modello in Power View. Si imposteranno inoltre le proprietà per nascondere alcune colonne e tabelle, nonché per creare nuovi dati da utilizzare nei grafici.  
   
  Dopo aver completato questa lezione e ridistribuito il modello in un'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] integrata con SharePoint e [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], è possibile creare un'origine dati, specificare le informazioni sulla connessione dati, avviare Power View e progettare report in base al modello.  
   
- In questa lezione non si illustra come creare e utilizzare i report Power View, bensì viene fornita agli autori del modello tabulare un'introduzione alle proprietà e alle impostazioni che influiscono sulla modalità di visualizzazione dei dati del modello in Power View. Per altre informazioni sulla creazione di report Power View, vedere [Esercitazione: Creazione di un report di esempio in Power View](http://go.microsoft.com/fwlink/?LinkId=221204).  
+ In questa lezione non si illustra come creare e utilizzare i report Power View, bensì viene fornita agli autori del modello tabulare un'introduzione alle proprietà e alle impostazioni che influiscono sulla modalità di visualizzazione dei dati del modello in Power View. Per altre informazioni sulla creazione di report di Power View, vedere [esercitazione: Creare un Report di esempio in Power View](https://go.microsoft.com/fwlink/?LinkId=221204).  
   
  Tempo stimato per il completamento della lezione: **30 minuti**  
   
@@ -41,17 +41,17 @@ ms.locfileid: "48169231"
 ## <a name="model-properties-that-affect-reporting"></a>Proprietà del modello che influiscono sulla creazione di report  
  Quando si crea un modello tabulare, è possibile impostare alcune proprietà in singole colonne e tabelle per migliorare la creazione di report in Power View da parte dell'utente finale. Inoltre, è possibile creare ulteriori dati del modello per supportare la visualizzazione dei dati e altre funzionalità specifiche del client di creazione report. Di seguito sono riportate alcune delle modifiche che verranno apportate all'esempio Adventure Works Internet Sales Model:  
   
--   **Aggiungere nuovi dati** : se si aggiungono nuovi dati in una colonna calcolata usando una formula DAX, vengono create informazioni sulla data in un formato di visualizzazione più semplice nei grafici.  
+-   **Aggiungere nuovi dati** -aggiunta di nuovi dati in una colonna calcolata con una formula DAX create informazioni sulla data in un formato che è più facile da visualizzare nei grafici.  
   
 -   **Nascondere tabelle e colonne inutili per l'utente finale** : con la proprietà **Hidden** è possibile controllare se le tabelle e le relative colonne sono visualizzate nel client di creazione del report. Gli elementi nascosti fanno comunque parte del modello e rimangono disponibili per le query e i calcoli.  
   
--   **Abilitare tabelle con un clic** : per impostazione predefinita, non si verifica alcuna azione se un utente finale fa clic su una tabella nell'elenco di campi. Per modificare questo comportamento in modo che facendo clic su una tabella, questa venga aggiunta al report, è necessario impostare la proprietà Set di campi predefiniti per ogni colonna che si desidera includere nella tabella. Questa proprietà viene impostata nelle colonne della tabella che sarà utilizzata maggiormente dagli utenti finali.  
+-   **Abilitare tabelle con un clic** -per impostazione predefinita, viene eseguita alcuna azione se un utente finale fa clic su una tabella nell'elenco dei campi. Per modificare questo comportamento in modo che facendo clic su una tabella, questa venga aggiunta al report, è necessario impostare la proprietà Set di campi predefiniti per ogni colonna che si desidera includere nella tabella. Questa proprietà viene impostata nelle colonne della tabella che sarà utilizzata maggiormente dagli utenti finali.  
   
 -   **Impostare raggruppamenti ove necessario** : con la proprietà **Keep Unique Rows** è possibile determinare se i valori nella colonna debbano essere raggruppati in base ai valori in un campo diverso, ad esempio un campo dell'identificatore. Per le colonne contenenti valori duplicati, ad esempio la colonna con il nome del cliente, in cui possono essere presenti più clienti di nome Diego Sages, è importante raggruppare i dati, mantenendo righe univoche, nel campo **Identificatore di riga** per offrire agli utenti finali i risultati corretti.  
   
 -   **Impostare tipi e formati di dati** : per impostazione predefinita, in Power View le regole vengono applicate in base al tipo di dati della colonna per determinare se il campo può essere usato come misura. Poiché a ogni visualizzazione dei dati in Power View sono anche applicate regole relative al posizionamento di misure e non misure, è importante impostare il tipo di dati nel modello oppure sostituire l'impostazione predefinita per ottenere il comportamento voluto per l'utente finale.  
   
--   **Impostare la proprietà Sort by Column** : con la proprietà **Sort By Column** è possibile specificare se è preferibile ordinare i valori della colonna in base a valori in un campo diverso. Ad esempio, nella colonna Month Calendar contenente il nome del mese, effettuare l'ordinamento in base alla colonna Month Number.  
+-   **Impostare l'ordinamento per colonna** proprietà - i **Ordina per colonna** proprietà specifica se i valori nella colonna devono essere ordinati dai valori in un campo diverso. Ad esempio, nella colonna Month Calendar contenente il nome del mese, effettuare l'ordinamento in base alla colonna Month Number.  
   
 ## <a name="hide-tables-from-client-tools"></a>Nascondere le tabelle negli strumenti client  
  Poiché nella tabella Product sono già presenti le colonne calcolate Product Category e Product Subcategory, non è necessario che le tabelle Product Category e Product Subcategory siano visibili nelle applicazioni client.  
@@ -137,7 +137,7 @@ ms.locfileid: "48169231"
 7.  Ripetere questi passaggi per la tabella **Product** , selezionando la colonna **Product Id** come identificatore di riga e la colonna **Product Name** dall'elenco **Mantieni righe univoche** . Per **Etichetta predefinita**selezionare **Product Alternate Id**.  
   
 ## <a name="reporting-properties-for-columns"></a>Proprietà report per le colonne  
- Per migliorare la creazione di report del modello è possibile impostare diverse proprietà relative alle colonne di base e alla creazione di report specifici. Ad esempio, gli utenti potrebbero non voler visualizzare tutte le colonne in ogni tabella. Nello stesso modo in cui sono state precedentemente nascoste le tabelle Product Category e Product Subcategory, è possibile nascondere colonne particolari di una tabella che, normalmente, sono visualizzate, utilizzando la proprietà Nascosta di una colonna. Altre proprietà, ad esempio Formato dati e Ordina per colonna, possono influire anche sulla modalità di visualizzazione dei dati delle colonne nei report. Nell'esempio, alcune di esse vengono impostate in colonne particolari. Le altre colonne per cui non è richiesta alcuna azione non vengono mostrate di seguito.  
+ Per migliorare la creazione di report del modello è possibile impostare diverse proprietà relative alle colonne di base e alla creazione di report specifici. Ad esempio, gli utenti potrebbero non voler visualizzare tutte le colonne in ogni tabella. Proprio come le tabelle Product Category e Product Subcategory è stata nascosta in precedenza, tramite proprietà Hidden di una colonna, è possibile nascondere colonne particolari di una tabella che viene visualizzato in caso contrario. Altre proprietà, ad esempio Formato dati e Ordina per colonna, possono influire anche sulla modalità di visualizzazione dei dati delle colonne nei report. Nell'esempio, alcune di esse vengono impostate in colonne particolari. Le altre colonne per cui non è richiesta alcuna azione non vengono mostrate di seguito.  
   
  In questo esempio vengono impostate solo alcune delle diverse proprietà di colonne. Per altre informazioni dettagliate sulle proprietà di creazione di report relativi alle colonne, vedere [Scheda Proprietà colonne &#40;SSAS tabulare&#41;](tabular-models/properties-ssas-tabular.md) nella documentazione online di SQL Server.  
   
@@ -153,17 +153,17 @@ ms.locfileid: "48169231"
   
      **Customer**  
   
-    |colonna|Proprietà|valore|  
+    |colonna|Proprietà|Value|  
     |------------|--------------|-----------|  
     |Geography Id|Hidden|True|  
     |Birth Date|Formato dati|Short Date|  
   
-     **Date**  
+     **Data**  
   
     > [!NOTE]  
-    >  Poiché la tabella Date è stata selezionata come tabella data dei modelli utilizzando l'impostazione Contrassegna come tabella data, illustrata nella Lezione 7: Contrassegna come tabella data, e la colonna Date dell'omonima tabella come colonna da utilizzare come identificatore univoco, la proprietà Row Identifier per la colonna Date sarà impostata automaticamente su True e non potrà essere modificata. Quando si utilizzano funzioni di Business Intelligence per le gerarchie temporali nelle formule DAX, è necessario specificare una tabella relativa alla data. In questo modello sono state create diverse misure utilizzando funzioni di Business Intelligence per le gerarchie temporali per calcolare i dati di vendita per diversi periodi, ad esempio i trimestri precedente e corrente, nonché per essere utilizzati negli indicatori KPI. Per altre informazioni su come specificare una tabella con data, vedere [Specificare Contrassegna come tabella data per l'utilizzo con funzionalità di Business Intelligence per le gerarchie temporali &#40;SSAS tabulare&#41;](tabular-models/specify-mark-as-date-table-for-use-with-time-intelligence-ssas-tabular.md) documentazione online di SQL Server.  
+    >  Poiché la tabella Date è stata selezionata come tabella data dei modelli mediante l'impostazione Contrassegna come tabella data nella lezione 7 e la colonna Date nella tabella Date è stata selezionata come colonna da usare come identificatore univoco, la proprietà Identificatore di riga per la colonna Date verrà automaticamente impostata su True e non può essere modificata. Quando si utilizzano funzioni di Business Intelligence per le gerarchie temporali nelle formule DAX, è necessario specificare una tabella relativa alla data. In questo modello sono state create diverse misure utilizzando funzioni di Business Intelligence per le gerarchie temporali per calcolare i dati di vendita per diversi periodi, ad esempio i trimestri precedente e corrente, nonché per essere utilizzati negli indicatori KPI. Per altre informazioni su come specificare una tabella con data, vedere [Specificare Contrassegna come tabella data per l'utilizzo con funzionalità di Business Intelligence per le gerarchie temporali &#40;SSAS tabulare&#41;](tabular-models/specify-mark-as-date-table-for-use-with-time-intelligence-ssas-tabular.md) documentazione online di SQL Server.  
   
-    |colonna|Proprietà|valore|  
+    |colonna|Proprietà|Value|  
     |------------|--------------|-----------|  
     |date|Formato dati|Short Date|  
     |Day Number of Week|Hidden|True|  
@@ -180,25 +180,25 @@ ms.locfileid: "48169231"
   
      **Geography**  
   
-    |colonna|Proprietà|valore|  
+    |colonna|Proprietà|Value|  
     |------------|--------------|-----------|  
     |Geography Id|Hidden|True|  
     |ID territorio vendita|Hidden|True|  
   
      **Product**  
   
-    |colonna|Proprietà|valore|  
+    |colonna|Proprietà|Value|  
     |------------|--------------|-----------|  
     |Product Id|Hidden|True|  
     |Product Alternate Id|Etichetta predefinita|True|  
     |Product Subcategory Id|Hidden|True|  
-    |Product Start Date|Formato dei dati|Short Date|  
+    |Product Start Date|Formato dati|Short Date|  
     |Product End Date|Formato dati|Short Date|  
     |Large Photo|Hidden|True|  
   
      **Internet Sales**  
   
-    |colonna|Proprietà|valore|  
+    |colonna|Proprietà|Value|  
     |------------|--------------|-----------|  
     |Product Id|Hidden|True|  
     |Customer Id|Hidden|True|  
@@ -211,7 +211,7 @@ ms.locfileid: "48169231"
     |Ship Date|Tipo di dati|Short Date|  
   
 ## <a name="redeploy-the-adventure-works-internet-sales-tabular-model"></a>Ridistribuire il modello tabulare Adventure Works Internet Sales  
- Poiché il modello è stato modificato, è necessario ridistribuirlo. Verranno essenzialmente ripetute le attività eseguite nella [Lezione 14: Distribuire](lesson-13-deploy.md).  
+ Poiché il modello è stato modificato, è necessario ridistribuirlo. Verranno essenzialmente ripetute le attività eseguite in [lezione 14: Distribuire](lesson-13-deploy.md).  
   
 #### <a name="to-redeploy-the-adventure-works-internet-sales-tabular-model"></a>Per ridistribuire il modello tabulare Adventure Works Internet Sales  
   
@@ -222,6 +222,6 @@ ms.locfileid: "48169231"
 ## <a name="next-steps"></a>Passaggi successivi  
  A questo punto è possibile usare Power View per visualizzare i dati del modello. Assicurarsi che agli account di Analysis Services e Reporting Services nel sito di SharePoint siano associate le autorizzazioni di lettura per l'istanza di Analysis Services in cui è stato distribuito il modello.  
   
- Per creare un'origine dati del report di Reporting Services che fa riferimento al modello, vedere la pagina relativa al [tipo di connessione al modello di tabella (SSRS)](http://msdn.microsoft.com/library/hh270317%28v=SQL.110%29.aspx).  
+ Per creare un'origine dati del report di Reporting Services che fa riferimento al modello, vedere la pagina relativa al [tipo di connessione al modello di tabella (SSRS)](https://msdn.microsoft.com/library/hh270317%28v=SQL.110%29.aspx).  
   
   

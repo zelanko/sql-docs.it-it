@@ -1,7 +1,7 @@
 ---
 title: sys.dm_exec_query_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 01/04/2018
+ms.date: 12/18/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -21,17 +21,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e52c264de3e7e2e9e7de8a96f3ad0cdf8dd04066
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e8df3c13b42df1b842d784fedd1720d2e9bfc258
+ms.sourcegitcommit: c51f7f2f5d622a1e7c6a8e2270bd25faba0165e7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47843565"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53626390"
 ---
 # <a name="sysdmexecquerystats-transact-sql"></a>sys.dm_exec_query_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Restituisce statistiche aggregate sulle prestazioni per i piani di query memorizzati nella cache in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La vista contiene una riga per ogni istruzione di query nel piano memorizzato nella cache e la durata delle righe è legata al piano stesso. Quando un piano viene rimosso dalla cache, le righe corrispondenti vengono eliminate da questa vista.  
+  Restituisce dati statistici aggregati sulle prestazioni dei piani di query memorizzati nella cache in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La vista contiene una riga per ogni istruzione di query nel piano memorizzato nella cache e la durata delle righe è legata al piano stesso. Quando un piano viene rimosso dalla cache, le righe corrispondenti vengono eliminate da questa vista.  
   
 > [!NOTE]
 > Una query iniziale di **DM exec_query_stats** potrebbe produrre risultati non accurati se è presente un carico di lavoro attualmente in esecuzione nel server. La riesecuzione della query può garantire risultati più accurati.  
@@ -39,7 +39,7 @@ ms.locfileid: "47843565"
 > [!NOTE]
 > Per chiamare questo elemento dal [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] oppure [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], usare il nome **sys.dm_pdw_nodes_exec_query_stats**.  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**sql_handle**|**varbinary(64)**  |Token che fa riferimento al batch o alla stored procedure di cui fa parte la query.<br /><br /> **valore di sql_handle**, in combinazione con **statement_start_offset** e **statement_end_offset**, può essere utilizzato per recuperare il testo SQL della query chiamando il **sys.dm_exec_sql_ testo** funzione a gestione dinamica.|  
 |**statement_start_offset**|**int**|Indica, in byte e a partire da 0, la posizione iniziale della query descritta dalla riga all'interno del testo del batch o dell'oggetto persistente.|  
@@ -58,7 +58,7 @@ ms.locfileid: "47843565"
 |**min_physical_reads**|**bigint**|Numero minimo di letture fisiche effettuate dal piano durante una singola esecuzione.<br /><br /> È sempre 0 con esecuzione di query su una tabella ottimizzata per la memoria.|  
 |**max_physical_reads**|**bigint**|Numero massimo di letture fisiche effettuate dal piano durante una singola esecuzione.<br /><br /> È sempre 0 con esecuzione di query su una tabella ottimizzata per la memoria.|  
 |**total_logical_writes**|**bigint**|Numero totale di scritture logiche effettuate dalle esecuzioni del piano a partire dalla relativa compilazione.<br /><br /> È sempre 0 con esecuzione di query su una tabella ottimizzata per la memoria.|  
-|**last_logical_writes**|**bigint**|Numero del numero di pagine del pool di buffer diventate dirty durante l'ultima esecuzione del piano. Se una pagina è già dirty (modificata) le scritture non vengono conteggiate.<br /><br /> È sempre 0 con esecuzione di query su una tabella ottimizzata per la memoria.|  
+|**last_logical_writes**|**bigint**|Numero di pagine del pool di buffer diventate dirty durante durante l'ultima esecuzione completata del piano.<br /><br />Dopo che una pagina viene letta, la pagina diventa dirty solo la prima volta che viene modificato. Quando la pagina è dirty, questo numero viene incrementato. Le modifiche successive a una pagina dirty già non interessano questo numero.<br /><br />Questo numero sarà sempre 0 quando si eseguono query di una tabella con ottimizzazione per la memoria.|  
 |**min_logical_writes**|**bigint**|Numero minimo di scritture logiche effettuate dal piano durante una singola esecuzione.<br /><br /> È sempre 0 con esecuzione di query su una tabella ottimizzata per la memoria.|  
 |**max_logical_writes**|**bigint**|Numero massimo di scritture logiche effettuate dal piano durante una singola esecuzione.<br /><br /> È sempre 0 con esecuzione di query su una tabella ottimizzata per la memoria.|  
 |**total_logical_reads**|**bigint**|Numero totale di letture logiche effettuate dalle esecuzioni del piano a partire dalla sua compilazione.<br /><br /> È sempre 0 con esecuzione di query su una tabella ottimizzata per la memoria.|  
@@ -66,7 +66,7 @@ ms.locfileid: "47843565"
 |**min_logical_reads**|**bigint**|Numero minimo di letture logiche effettuate dal piano durante una singola esecuzione.<br /><br /> È sempre 0 con esecuzione di query su una tabella ottimizzata per la memoria.|  
 |**max_logical_reads**|**bigint**|Numero massimo di letture logiche effettuate dal piano durante una singola esecuzione.<br /><br /> È sempre 0 con esecuzione di query su una tabella ottimizzata per la memoria.|  
 |**total_clr_time**|**bigint**|Tempo, espresso in microsecondi (con precisione al millisecondo), utilizzati all'interno [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] oggetti common language runtime (CLR) dalle esecuzioni del piano dopo l'ultima compilazione. Gli oggetti CLR possono essere stored procedure, funzioni, trigger, tipi e aggregazioni.|  
-|**last_clr_time**|**bigint**|Tempo, espresso in microsecondi (con precisione al millisecondo) utilizzati dall'esecuzione all'interno [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] oggetti CLR durante l'ultima esecuzione del piano. Gli oggetti CLR possono essere stored procedure, funzioni, trigger, tipi e aggregazioni.|  
+|**last_clr_time**|**bigint**|Tempo, espresso in microsecondi (con precisione al millisecondo), impiegato dall'ultima esecuzione del piano all'interno di oggetti CLR [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. Gli oggetti CLR possono essere stored procedure, funzioni, trigger, tipi e aggregazioni.|  
 |**min_clr_time**|**bigint**|Tempo minimo di CPU, espresso in microsecondi (con precisione al millisecondo), mai impiegato dal piano durante una singola esecuzione all'interno di oggetti CLR [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. Gli oggetti CLR possono essere stored procedure, funzioni, trigger, tipi e aggregazioni.|  
 |**max_clr_time**|**bigint**|Tempo massimo di CPU, espresso in microsecondi (con precisione al millisecondo), mai impiegato dal piano durante una singola esecuzione all'interno di oggetti CLR [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. Gli oggetti CLR possono essere stored procedure, funzioni, trigger, tipi e aggregazioni.|  
 |**total_elapsed_time**|**bigint**|Tempo totale trascorso, espresso in microsecondi (con precisione al millisecondo), per le esecuzioni completate di questo piano.|  
@@ -105,18 +105,18 @@ ms.locfileid: "47843565"
 |**last_used_threads**|**bigint**|Il numero di thread paralleli usati quando il piano di ultima esecuzione. Sarà sempre 0 per query di una tabella con ottimizzazione per la memoria.<br /><br /> **Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
 |**min_used_threads**|**bigint**|Il numero minimo di thread paralleli usati questo piano è già utilizzato durante l'esecuzione. Sarà sempre 0 per query di una tabella con ottimizzazione per la memoria.<br /><br /> **Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
 |**max_used_threads**|**bigint**|Il numero massimo di thread paralleli usati questo piano è già utilizzato durante l'esecuzione. Sarà sempre 0 per query di una tabella con ottimizzazione per la memoria.<br /><br /> **Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
-|**total_columnstore_segment_reads**|**bigint**|La somma totale dei segmenti columnstore lette dalla query. Non può essere null.<br /><br /> **Si applica a**: a partire [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 e [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|    
-|**last_columnstore_segment_reads**|**bigint**|Il numero di segmenti columnstore letto dall'ultima esecuzione della query. Non può essere null.<br /><br /> **Si applica a**: a partire [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 e [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|    
-|**min_columnstore_segment_reads**|**bigint**|Il numero minimo di mai lette dalla query durante l'esecuzione di uno dei segmenti columnstore. Non può essere null.<br /><br /> **Si applica a**: a partire [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 e [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|    
-|**max_columnstore_segment_reads**|**bigint**|Il numero massimo di segmenti columnstore mai lette dalla query durante l'esecuzione. Non può essere null.<br /><br /> **Si applica a**: a partire [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 e [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|    
-|**total_columnstore_segment_skips**|**bigint**|La somma totale dei segmenti columnstore ignorati dalla query. Non può essere null.<br /><br /> **Si applica a**: a partire [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 e [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|    
-|**last_columnstore_segment_skips**|**bigint**|Il numero di segmenti columnstore ignorati durante l'ultima esecuzione della query. Non può essere null.<br /><br /> **Si applica a**: a partire [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 e [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|    
-|**min_columnstore_segment_skips**|**bigint**|Il numero minimo di mai ignorate dalla query durante l'esecuzione di uno dei segmenti columnstore. Non può essere null.<br /><br /> **Si applica a**: a partire [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 e [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|    
-|**max_columnstore_segment_skips**|**bigint**|Il numero massimo di segmenti columnstore mai ignorate dalla query durante l'esecuzione. Non può essere null.<br /><br /> **Si applica a**: a partire [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 e [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|
-|**total_spills**|**bigint**|Il numero totale di pagine ha distribuito tramite l'esecuzione della query dopo l'ultima compilazione.<br /><br /> **Si applica a**: a partire [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 e [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
-|**last_spills**|**bigint**|Il numero di pagine ha distribuito l'ora dell'ultima che esecuzione della query.<br /><br /> **Si applica a**: a partire [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 e [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
-|**min_spills**|**bigint**|Il numero minimo di pagine in cui questa query è sempre stati distribuiti durante una singola esecuzione.<br /><br /> **Si applica a**: a partire [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 e [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
-|**max_spills**|**bigint**|Il numero massimo di pagine in cui questa query è sempre stati distribuiti durante una singola esecuzione.<br /><br /> **Si applica a**: a partire [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 e [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
+|**total_columnstore_segment_reads**|**bigint**|La somma totale dei segmenti columnstore lette dalla query. Non può essere null.<br /><br /> **Si applica a**: A partire [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 e [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|    
+|**last_columnstore_segment_reads**|**bigint**|Il numero di segmenti columnstore letto dall'ultima esecuzione della query. Non può essere null.<br /><br /> **Si applica a**: A partire [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 e [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|    
+|**min_columnstore_segment_reads**|**bigint**|Il numero minimo di mai lette dalla query durante l'esecuzione di uno dei segmenti columnstore. Non può essere null.<br /><br /> **Si applica a**: A partire [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 e [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|    
+|**max_columnstore_segment_reads**|**bigint**|Il numero massimo di segmenti columnstore mai lette dalla query durante l'esecuzione. Non può essere null.<br /><br /> **Si applica a**: A partire [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 e [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|    
+|**total_columnstore_segment_skips**|**bigint**|La somma totale dei segmenti columnstore ignorati dalla query. Non può essere null.<br /><br /> **Si applica a**: A partire [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 e [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|    
+|**last_columnstore_segment_skips**|**bigint**|Il numero di segmenti columnstore ignorati durante l'ultima esecuzione della query. Non può essere null.<br /><br /> **Si applica a**: A partire [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 e [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|    
+|**min_columnstore_segment_skips**|**bigint**|Il numero minimo di mai ignorate dalla query durante l'esecuzione di uno dei segmenti columnstore. Non può essere null.<br /><br /> **Si applica a**: A partire [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 e [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|    
+|**max_columnstore_segment_skips**|**bigint**|Il numero massimo di segmenti columnstore mai ignorate dalla query durante l'esecuzione. Non può essere null.<br /><br /> **Si applica a**: A partire [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 e [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|
+|**total_spills**|**bigint**|Il numero totale di pagine ha distribuito tramite l'esecuzione della query dopo l'ultima compilazione.<br /><br /> **Si applica a**: A partire [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 e [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
+|**last_spills**|**bigint**|Il numero di pagine ha distribuito l'ora dell'ultima che esecuzione della query.<br /><br /> **Si applica a**: A partire [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 e [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
+|**min_spills**|**bigint**|Il numero minimo di pagine in cui questa query è sempre stati distribuiti durante una singola esecuzione.<br /><br /> **Si applica a**: A partire [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 e [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
+|**max_spills**|**bigint**|Il numero massimo di pagine in cui questa query è sempre stati distribuiti durante una singola esecuzione.<br /><br /> **Si applica a**: A partire [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 e [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
 |**pdw_node_id**|**int**|L'identificatore per il nodo in questa distribuzione.<br /><br /> **Si applica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]| 
 
 > [!NOTE]
@@ -152,7 +152,7 @@ GROUP BY query_stats.query_hash
 ORDER BY 2 DESC;  
 ```  
   
-### <a name="b-returning-row-count-aggregates-for-a-query"></a>B. Restituzione di aggregazioni relative al conteggio delle righe per una query  
+### <a name="b-returning-row-count-aggregates-for-a-query"></a>b. Restituzione di aggregazioni relative al conteggio delle righe per una query  
  Nell'esempio seguente vengono restituite le informazioni di aggregazione relative al conteggio delle righe (totale righe, numero minimo righe, numero massimo righe e ultime righe) per le query.  
   
 ```sql  

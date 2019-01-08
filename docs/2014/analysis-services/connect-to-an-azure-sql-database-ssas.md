@@ -13,12 +13,12 @@ ms.assetid: 4e0344e9-1822-4698-ad22-05f1f341ced7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2b81207d2cb045b330560c652e98b2488aad421b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 94a830bba0339262148a0a7f826f3bcb89371274
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48149211"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53372893"
 ---
 # <a name="connect-to-an-azure-sql-database-ssas"></a>Connessione a un database SQL di Azure (SSAS)
   Questa pagina dell'**Importazione guidata tabella** consente di connettersi a un [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)]. Per accedere alla procedura guidata da [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], dal menu **Modello** selezionare **Importa da origine dati**.  
@@ -26,7 +26,7 @@ ms.locfileid: "48149211"
 > [!NOTE]  
 >  Per la connessione a un set di dati di Azure DataMarket, vedere [Connettersi a un report o a un feed di dati &#40;SSAS&#41;](connect-to-a-report-or-data-feed-ssas.md).  
   
- [!INCLUDE[ssSDS](../includes/sssds-md.md)] è un database ospitato relazionale a cui è possibile connettersi tramite l'autenticazione di SQL Server. Per altre informazioni su [!INCLUDE[ssSDS](../includes/sssds-md.md)], visitare il sito Web relativo al [database SQL](http://go.microsoft.com/fwlink/?LinkID=157856). Per connettersi a un'origine dati, è necessario che nel computer sia installato il provider appropriato.  
+ [!INCLUDE[ssSDS](../includes/sssds-md.md)] è un database ospitato relazionale a cui è possibile connettersi tramite l'autenticazione di SQL Server. Per altre informazioni su [!INCLUDE[ssSDS](../includes/sssds-md.md)], visitare il sito Web relativo al [database SQL](https://go.microsoft.com/fwlink/?LinkID=157856). Per connettersi a un'origine dati, è necessario che nel computer sia installato il provider appropriato.  
   
 > [!NOTE]  
 >  Le credenziali dell'utente corrente vengono utilizzate in caso di selezione di un database in questa pagina. Tuttavia, l'importazione non verrà completata se l'utente specificato nella pagina Impostazioni di rappresentazione non dispone di privilegi sufficienti per leggere dal database selezionato.  

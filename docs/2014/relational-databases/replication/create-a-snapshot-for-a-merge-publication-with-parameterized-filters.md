@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/30/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - parameterized filters [SQL Server replication], snapshots
@@ -15,12 +14,12 @@ ms.assetid: 00dfb229-f1de-4d33-90b0-d7c99ab52dcb
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 10e8c84af197c600c9b89f850ab84fc27fd56e2d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 99aabef0bd8e7ba293c0e66428607fe7fb4642e6
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48217741"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53361934"
 ---
 # <a name="create-a-snapshot-for-a-merge-publication-with-parameterized-filters"></a>Creazione di uno snapshot per una pubblicazione di tipo merge con filtri con parametri
   In questo argomento viene descritto come creare un snapshot per una pubblicazione di tipo merge con i filtri con parametri in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]o Replication Management Objects (RMO).  
@@ -257,7 +256,7 @@ PAUSE
 >  Quando il filtro di un articolo produce partizioni non sovrapposte univoche per ogni sottoscrizione (specificando un valore <xref:Microsoft.SqlServer.Replication.PartitionOptions.NonOverlappingSingleSubscription> per <xref:Microsoft.SqlServer.Replication.MergeArticle.PartitionOption%2A> nel caso della creazione di un articolo di tipo merge), i metadati vengono puliti ogni volta che viene eseguito l'agente di merge. Lo snapshot partizionato scade quindi più rapidamente. Quando si utilizza questa opzione, è consigliabile consentire ai Sottoscrittori di richiedere la generazione degli snapshot. Per ulteriori informazioni, vedere la sezione relativa all'utilizzo delle opzioni di filtro appropriate nell'argomento [Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md).  
   
 > [!IMPORTANT]  
->  Se possibile, richiedere agli utenti di immettere le credenziali di sicurezza in fase di esecuzione. Se è necessario archiviare le credenziali, utilizzare i [servizi di crittografia](http://go.microsoft.com/fwlink/?LinkId=34733) offerti da [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows .NET Framework.  
+>  Se possibile, richiedere agli utenti di immettere le credenziali di sicurezza in fase di esecuzione. Se è necessario archiviare le credenziali, utilizzare i [servizi di crittografia](https://go.microsoft.com/fwlink/?LinkId=34733) offerti da [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows .NET Framework.  
   
 #### <a name="to-create-a-publication-that-allows-subscribers-to-initiate-snapshot-generation-and-delivery"></a>Per creare una pubblicazione che consente ai Sottoscrittori di avviare la generazione e il recapito di snapshot  
   
@@ -265,7 +264,7 @@ PAUSE
   
 2.  Creare un'istanza della classe <xref:Microsoft.SqlServer.Replication.ReplicationDatabase> per il database di pubblicazione, impostare la proprietà <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> sull'istanza di <xref:Microsoft.SqlServer.Management.Common.ServerConnection> del passaggio 1, quindi chiamare il metodo <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> . Se <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> restituisce `false`, verificare che il database esista.  
   
-3.  Se <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.EnabledMergePublishing%2A> proprietà viene `false`, impostarla su `true` e chiamare <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A>.  
+3.  Se la proprietà <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.EnabledMergePublishing%2A> è `false`, impostarla su `true` e chiamare <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A>.  
   
 4.  Creare un'istanza della classe <xref:Microsoft.SqlServer.Replication.MergePublication> e impostare le proprietà seguenti per questo oggetto:  
   
@@ -277,7 +276,7 @@ PAUSE
   
     -   Numero massimo di processi di snapshot dinamici da eseguire per <xref:Microsoft.SqlServer.Replication.MergePublication.MaxConcurrentDynamicSnapshots%2A>. Poiché le richieste di snapshot avviate dal Sottoscrittore possono verificarsi in qualsiasi momento, questa proprietà limita il numero di processi dell'agente snapshot che possono essere eseguiti simultaneamente quando più Sottoscrittori richiedono il rispettivo snapshot partizionato contemporaneamente. Quando è in esecuzione il numero massimo di processi, le richieste aggiuntive di snapshot partizionati vengono inserite nella coda fino al completamento di uno dei processi.  
   
-    -   Usare l'operatore logico OR bit per bit (`|` in Visual c# e `Or` in Visual Basic) operaa a add il valore <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowSubscriberInitiatedSnapshot> a <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A>.  
+    -   Utilizzare l'operatore logico OR bit per bit (`|` in Visual C# e `Or` in Visual Basic) per aggiungere il valore <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowSubscriberInitiatedSnapshot> a <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A>.  
   
     -   Campi <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> e <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> di <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentProcessSecurity%2A> per fornire le credenziali per l'account di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows con cui verrà eseguito il processo dell'agente snapshot.  
   
@@ -291,7 +290,7 @@ PAUSE
   
 6.  Utilizzare la proprietà <xref:Microsoft.SqlServer.Replication.MergeArticle> per aggiungere articoli alla pubblicazione. Specificare la proprietà <xref:Microsoft.SqlServer.Replication.MergeArticle.FilterClause%2A> per almeno un articolo che definisce il filtro con parametri. (Facoltativo) Creare oggetti <xref:Microsoft.SqlServer.Replication.MergeJoinFilter> che definiscono i filtri join tra gli articoli. Per altre informazioni, vedere [definire un articolo](publish/define-an-article.md).  
   
-7.  Se il valore di <xref:Microsoft.SqlServer.Replication.Publication.SnapshotAgentExists%2A> viene `false`, chiamare <xref:Microsoft.SqlServer.Replication.Publication.CreateSnapshotAgent%2A> per creare il processo dell'agente Snapshot iniziale per questa pubblicazione.  
+7.  Se il valore di <xref:Microsoft.SqlServer.Replication.Publication.SnapshotAgentExists%2A> è `false`, chiamare <xref:Microsoft.SqlServer.Replication.Publication.CreateSnapshotAgent%2A> per creare il processo dell'agente snapshot iniziale per questa pubblicazione.  
   
 8.  Chiamare il metodo <xref:Microsoft.SqlServer.Replication.Publication.StartSnapshotGenerationAgentJob%2A> dell'oggetto <xref:Microsoft.SqlServer.Replication.MergePublication> creato nel passaggio 4. In questo modo viene avviato il processo dell'agente che genera lo snapshot iniziale. Per ulteriori informazioni sulla generazione di uno snapshot iniziale e sulla definizione di una pianificazione personalizzata per l'agente snapshot, vedere [Create and Apply the Initial Snapshot](create-and-apply-the-initial-snapshot.md).  
   
@@ -305,11 +304,11 @@ PAUSE
   
 2.  Utilizzare la proprietà <xref:Microsoft.SqlServer.Replication.MergeArticle> per aggiungere articoli alla pubblicazione. Specificare la proprietà <xref:Microsoft.SqlServer.Replication.MergeArticle.FilterClause%2A> per almeno un articolo che definisce il filtro con parametri, quindi creare eventuali oggetti <xref:Microsoft.SqlServer.Replication.MergeJoinFilter> che definiscono filtri join tra gli articoli. Per altre informazioni, vedere [definire un articolo](publish/define-an-article.md).  
   
-3.  Se il valore di <xref:Microsoft.SqlServer.Replication.Publication.SnapshotAgentExists%2A> viene `false`, chiamare <xref:Microsoft.SqlServer.Replication.Publication.CreateSnapshotAgent%2A> per creare il processo dell'agente snapshot per questa pubblicazione.  
+3.  Se il valore di <xref:Microsoft.SqlServer.Replication.Publication.SnapshotAgentExists%2A> è `false`, chiamare <xref:Microsoft.SqlServer.Replication.Publication.CreateSnapshotAgent%2A> per creare il processo dell'agente snapshot per questa pubblicazione.  
   
 4.  Chiamare il metodo <xref:Microsoft.SqlServer.Replication.Publication.StartSnapshotGenerationAgentJob%2A> dell'oggetto <xref:Microsoft.SqlServer.Replication.MergePublication> creato nel passaggio 1. Questo metodo avvia il processo dell'agente che genera lo snapshot iniziale. Per ulteriori informazioni sulla generazione di uno snapshot iniziale e sulla definizione di una pianificazione personalizzata per l'agente snapshot, vedere [Creazione e applicazione dello snapshot iniziale](create-and-apply-the-initial-snapshot.md).  
   
-5.  Verificare la presenza di un valore pari `true` per il <xref:Microsoft.SqlServer.Replication.MergePublication.SnapshotAvailable%2A> proprietà per determinare quando lo snapshot iniziale è pronto per l'uso.  
+5.  (Facoltativo) Verificare la presenza di un valore `true` per la proprietà <xref:Microsoft.SqlServer.Replication.MergePublication.SnapshotAvailable%2A> per determinare quando lo snapshot iniziale è pronto per l'utilizzo.  
   
 6.  Creare un'istanza della classe <xref:Microsoft.SqlServer.Replication.MergePartition> e impostare i criteri di filtro con parametri per il Sottoscrittore utilizzando una o entrambe le proprietà seguenti:  
   

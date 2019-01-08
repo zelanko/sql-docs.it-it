@@ -18,12 +18,12 @@ ms.assetid: 9060aae3-3ddd-40a5-83bb-3ea7ab1ffbd7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2d4f057351f6d3c4713c616c90748c2c6e43524f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6fc52fd7af36d2238c53d8cbd877b7a6d43cd1dd
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47837759"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591485"
 ---
 # <a name="spaddschedule-transact-sql"></a>sp_add_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@schedule_name =** ] **'***schedule_name***'**  
+ [  **@schedule_name =** ] **'**_schedule_name_**'**  
  Nome della pianificazione. *schedule_name* viene **sysname**, non prevede alcun valore predefinito.  
   
  [  **@enabled =** ] *abilitata*  
@@ -64,7 +64,7 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
  [ **@freq_type =** ] *freq_type*  
  Valore che indica la frequenza di esecuzione di un processo *freq_type* viene **int**, il valore predefinito è **0**, i possibili valori sono i seguenti.  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |**1**|Una volta|  
 |**4**|Ogni giorno|  
@@ -90,7 +90,7 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
  [ **@freq_subday_type =** ] *freq_subday_type*  
  Specifica l'unità di misura *freq_subday_interval*. *freq_subday_type* viene **int**, il valore predefinito è **0**, i possibili valori sono i seguenti.  
   
-|valore|Descrizione (unità)|  
+|Value|Descrizione (unità)|  
 |-----------|--------------------------|  
 |**0x1**|All'ora specificata|  
 |**0x2**|Secondi|  
@@ -98,12 +98,12 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
 |**0x8**|Ore|  
   
  [ **@freq_subday_interval =** ] *freq_subday_interval*  
- I numerosi *freq_subday_type* periodi intercorrere tra ogni esecuzione di un processo. *freq_subday_interval* viene **int**, il valore predefinito è **0**. Nota: l'intervallo dovrebbe superare i 10 secondi. *freq_subday_interval* viene ignorato nei casi in cui *freq_subday_type* è uguale a **1**.  
+ I numerosi *freq_subday_type* periodi intercorrere tra ogni esecuzione di un processo. *freq_subday_interval* viene **int**, il valore predefinito è **0**. Nota: Intervallo deve essere più di 10 secondi. *freq_subday_interval* viene ignorato nei casi in cui *freq_subday_type* è uguale a **1**.  
   
  [  **@freq_relative_interval =** ] *freq_relative_interval*  
  Occorrenza di un processo di *freq_interval* ogni mese, se *freq_interval* è 32 (mensile relativa). *freq_relative_interval* viene **int**, il valore predefinito è **0**, i possibili valori sono i seguenti. *freq_relative_interval* viene ignorato nei casi in cui *freq_type* non è uguale a 32.  
   
-|valore|Descrizione (unità)|  
+|Value|Descrizione (unità)|  
 |-----------|--------------------------|  
 |**1**|Primo|  
 |**2**|Secondo|  
@@ -130,13 +130,13 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
  [  **@active_end_time =** ] *active_end_time*  
  Il tempo compresa tra *active_start_date* e *active_end_date* per terminare l'esecuzione di un processo. *active_end_time* viene **int**, il valore predefinito è **235959**, a indicare 59: 11:59 P.M. nel formato a 24 ore e deve essere immesso nel formato HHMMSS.  
   
- [ **@owner_login_name**=] **'***owner_login_name***'**  
+ [ **@owner_login_name**=] **'**_owner_login_name_**'**  
  Nome dell'entità server proprietaria della pianificazione. *owner_login_name* viene **sysname**, con un valore predefinito è NULL, che indica che la pianificazione è di proprietà dell'autore.  
   
- [ **@schedule_uid**= ] *schedule_uid***OUTPUT**  
+ [ **@schedule_uid**=] _valore schedule_uid_**OUTPUT**  
  Identificatore univoco della pianificazione. *valore schedule_uid* è una variabile di tipo **uniqueidentifier**.  
   
- [ **@schedule_id**= ] *schedule_id***OUTPUT**  
+ [ **@schedule_id**=] _schedule_id_**OUTPUT**  
  Identificatore della pianificazione. *schedule_id* è una variabile di tipo **int**.  
   
  [ **@originating_server**= ] *server_name*  
@@ -179,7 +179,7 @@ EXEC dbo.sp_add_schedule
 GO  
 ```  
   
-### <a name="b-creating-a-schedule-attaching-the-schedule-to-multiple-jobs"></a>B. Creazione di una pianificazione e associazione della pianificazione a più processi  
+### <a name="b-creating-a-schedule-attaching-the-schedule-to-multiple-jobs"></a>b. Creazione di una pianificazione e associazione della pianificazione a più processi  
  Nell'esempio seguente viene creata una pianificazione denominata `NightlyJobs`. I processi che utilizzano questa pianificazione vengono eseguiti ogni giorno quando l'ora indicata dal server è `01:00`. Nell'esempio la pianificazione viene collegata al processo `BackupDatabase` e al processo `RunReports`.  
   
 > [!NOTE]  

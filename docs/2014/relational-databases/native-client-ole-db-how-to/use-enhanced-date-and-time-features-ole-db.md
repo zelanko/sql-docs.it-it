@@ -10,20 +10,20 @@ ms.assetid: 50f98cab-8c80-43c5-bc9a-5d2f95f67f17
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 31bdf5f2b1e435496f2b00f141a7387f9e7560eb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b614db01d4128ec30d6d52260a781fffd69e8c8b
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48118861"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53363813"
 ---
 # <a name="use-enhanced-date-and-time-features-ole-db"></a>Usare le funzionalità avanzate di data e ora (OLE DB)
   In questo viene illustrato come utilizzare le caratteristiche di data e ora introdotte in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]. L'esempio Usa i quattro nuovi tipi data e ora (`date`, **fase**, `datetime2`, e `datetimeoffset`) per eseguire comandi con parametri e recuperare risultati di set di righe.  
   
- Per l'esempio è necessario il database di esempio AdventureWorks, che è possibile scaricare dalla home page del sito relativo a [progetti della community ed esempi per Microsoft SQL Server](http://go.microsoft.com/fwlink/?LinkID=85384).  
+ Per l'esempio è necessario il database di esempio AdventureWorks, che è possibile scaricare dalla home page del sito relativo a [progetti della community ed esempi per Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkID=85384).  
   
 > [!IMPORTANT]  
->  Se possibile, usare l'autenticazione di Windows. Se non è disponibile, agli utenti verrà richiesto di immettere le credenziali in fase di esecuzione. Evitare di archiviare le credenziali in un file. Se è necessario rendere persistenti le credenziali, è consigliabile crittografarle usando l'[API di crittografia Win32](http://go.microsoft.com/fwlink/?LinkId=64532).  
+>  Se possibile, usare l'autenticazione di Windows. Se non è disponibile, agli utenti verrà richiesto di immettere le credenziali in fase di esecuzione. Evitare di archiviare le credenziali in un file. Se è necessario rendere persistenti le credenziali, è consigliabile crittografarle usando l'[API di crittografia Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
   
 ## <a name="example"></a>Esempio  
  Il primo listato di codice ([!INCLUDE[tsql](../../includes/tsql-md.md)]) consente di creare una stored procedure utilizzata dall'esempio.  

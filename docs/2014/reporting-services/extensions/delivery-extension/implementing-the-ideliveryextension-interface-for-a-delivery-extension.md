@@ -16,12 +16,12 @@ ms.assetid: ab0344db-510b-403f-8dbf-b9831553765d
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: ff309ae3964bf7346ddf131db61c5d6efea073fe
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1f768da85b70168b090bfde19058926e098cd418
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48143621"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53356489"
 ---
 # <a name="implementing-the-ideliveryextension-interface-for-a-delivery-extension"></a>Implementazione dell'interfaccia IDeliveryExtension per un'estensione per il recapito
   La classe di estensioni per il recapito viene utilizzata per recapitare le notifiche dei report agli utenti in base al contenuto delle notifiche. La classe di estensioni per il recapito fornisce anche l'infrastruttura per la convalida delle impostazioni utente passate all'estensione per il recapito. Questa classe deve inoltre contenere proprietà specifiche che i client possono utilizzare per ottenere informazioni sul nome dell'estensione, sulle impostazioni supportate dall'estensione e sui formati di rendering disponibili per l'estensione per il recapito.  
@@ -35,7 +35,7 @@ L'interfaccia IDeliveryExtension consente la convalida dei dati utente e fornisc
   
  È inoltre possibile utilizzare la classe di estensioni per il recapito per recuperare ed elaborare i dati di configurazione personalizzati archiviati nel file RSReportServer.config. Per ulteriori informazioni sull'elaborazione dei dati di configurazione personalizzati, vedere il metodo <xref:Microsoft.ReportingServices.Interfaces.IExtension.SetConfiguration%2A>.  
   
- Per un'implementazione di esempio della classe **IDeliveryExtension**, vedere la pagina degli [esempi del prodotto SQL Server Reporting Services](http://go.microsoft.com/fwlink/?LinkId=177889).  
+ Per un'implementazione di esempio della classe **IDeliveryExtension**, vedere la pagina degli [esempi del prodotto SQL Server Reporting Services](https://go.microsoft.com/fwlink/?LinkId=177889).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Implementazione di un'estensione per il recapito](../delivery-extension/implementing-a-delivery-extension.md)   

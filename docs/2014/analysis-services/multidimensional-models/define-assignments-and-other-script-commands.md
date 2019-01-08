@@ -16,15 +16,15 @@ ms.assetid: f28b9b22-3dc7-4a45-b4eb-2d023f2c94b8
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c03a6b532dbbc5b243119d20e14856a232180c6a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e8cd32520d29b33cd7e10454347a3331bf13d819
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48196741"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53358693"
 ---
 # <a name="define-assignments-and-other-script-commands"></a>Definire le assegnazioni e altri comandi script
-  Per creare uno script vuoto, nella scheda **Calcoli** di Progettazione cubi fare clic sull'icona **Nuovo comando script** sulla barra degli strumenti. Quando si crea un nuovo script, quest'ultimo viene inizialmente visualizzato con un titolo vuoto nel riquadro **Libreria script** della scheda Calcoli. I caratteri digitati nel riquadro Espressioni calcoli verranno visualizzati come nome dell'elemento in **Libreria script**. Nella prima riga è pertanto opportuno digitare un nome con commenti, in modo da identificare più agevolmente lo script nel riquadro **Libreria script** . Per altre informazioni, vedere [Introduction to MDX Scripting in Microsoft SQL Server 2005](http://go.microsoft.com/fwlink/?LinkId=81892)(Introduzione alla creazione di script MDX in Microsoft SQL Server 2005). Per altre informazioni su problemi di prestazioni relativi a query e calcoli MDX, vedere la sezione relativa alla scrittura di espressioni MDX efficienti nella [Guida alle prestazioni di SQL Server 2005 Analysis Services](http://go.microsoft.com/fwlink/?LinkId=81621).  
+  Per creare uno script vuoto, nella scheda **Calcoli** di Progettazione cubi fare clic sull'icona **Nuovo comando script** sulla barra degli strumenti. Quando si crea un nuovo script, quest'ultimo viene inizialmente visualizzato con un titolo vuoto nel riquadro **Libreria script** della scheda Calcoli. I caratteri digitati nel riquadro Espressioni calcoli verranno visualizzati come nome dell'elemento in **Libreria script**. Nella prima riga è pertanto opportuno digitare un nome con commenti, in modo da identificare più agevolmente lo script nel riquadro **Libreria script** . Per altre informazioni, vedere [Introduction to MDX Scripting in Microsoft SQL Server 2005](https://go.microsoft.com/fwlink/?LinkId=81892)(Introduzione alla creazione di script MDX in Microsoft SQL Server 2005). Per altre informazioni sui problemi di prestazioni correlati a query e calcoli MDX, vedere la sezione "Scrittura efficiente di espressioni MDX" nel [SQL Server 2005 Analysis Services Performance Guide](https://go.microsoft.com/fwlink/?LinkId=81621).  
   
 > [!IMPORTANT]  
 >  Quando si passa inizialmente alla scheda **Calcoli** di Progettazione cubi, nel riquadro **Libreria script** è presente un unico script con un comando CALCULATE. Il comando CALCULATE controlla l'aggregazione delle celle del cubo ed è consigliabile modificarlo solo se si desidera specificare manualmente la modalità di aggregazione delle celle del cubo.  

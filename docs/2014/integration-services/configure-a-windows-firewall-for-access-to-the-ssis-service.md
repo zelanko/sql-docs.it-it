@@ -19,12 +19,12 @@ ms.assetid: 39975cf2-c351-4205-8c39-27a0fadfb010
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 246441fba2e72c95004baa3cdb75320b32648e8b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7160e4622cea397f7b300a1221797349107d38d5
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48154741"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53369993"
 ---
 # <a name="configure-a-windows-firewall-for-access-to-the-ssis-service"></a>Configurare un Windows Firewall per l'accesso al servizio SSIS
     
@@ -36,7 +36,7 @@ ms.locfileid: "48154741"
 > [!IMPORTANT]  
 >  Per gestire i pacchetti archiviati in un server remoto, non è necessario connettersi all'istanza del servizio [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] sul server remoto in questione. Modificare, invece, il file di configurazione per il servizio [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] in modo che in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] vengano visualizzati i pacchetti archiviati nel server remoto. Per altre informazioni, vedere [Configuring the Integration Services Service &#40;SSIS Service&#41;](configuring-the-integration-services-service-ssis-service.md).  
   
- Il servizio [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] usa il protocollo DCOM. Per altre informazioni sul funzionamento del protocollo DCOM in presenza di firewall, vedere l'articolo[Using Distributed COM with Firewalls](http://go.microsoft.com/fwlink/?LinkId=12490)(Uso di COM distribuito con i firewall) in MSDN Library.  
+ Il servizio [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] usa il protocollo DCOM. Per altre informazioni sul funzionamento del protocollo DCOM in presenza di firewall, vedere l'articolo[Using Distributed COM with Firewalls](https://go.microsoft.com/fwlink/?LinkId=12490)(Uso di COM distribuito con i firewall) in MSDN Library.  
   
  Sono disponibili numerosi sistemi firewall. Se si esegue un firewall diverso da windowsfirewall, consultare la documentazione del firewall per informazioni specifiche al sistema in uso.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "48154741"
 5.  Nella finestra di dialogo **Aggiungi porta** digitare **RPC(TCP/135)** o un altro nome descrittivo nella casella **Nome**, digitare **135** nella casella **Numero porta** e quindi selezionare **TCP**.  
   
     > [!IMPORTANT]  
-    >  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] servizio Usa sempre la porta 135. Non è possibile specificare una porta diversa.  
+    >  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] Il servizio usa sempre la porta 135. Non è possibile specificare una porta diversa.  
   
 6.  Nella finestra di dialogo **Aggiungi porta** è possibile scegliere facoltativamente **Cambia ambito** per modificare l'ambito predefinito.  
   
@@ -89,7 +89,7 @@ ms.locfileid: "48154741"
     >  Per configurare Windows Firewall, in questa procedura viene usato l'elemento **Windows Firewall** nel Pannello di controllo. L'elemento **Windows Firewall** configura il firewall solo per il profilo del percorso di rete corrente. È tuttavia anche possibile configurare Windows Firewall usando lo strumento da riga di comando **netsh** o lo snap-in [!INCLUDE[msCoName](../includes/msconame-md.md)] Management Console (MMC) denominato Windows Firewall con protezione avanzata. Per altre informazioni sull'esecuzione di questa operazione, vedere [Configurare Windows Firewall per consentire l'accesso a SQL Server](../../2014/sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Configurazione dell'integrazione dei servizi del servizio &#40;servizio SSIS&#41;](service/integration-services-service-ssis-service.md)   
+ [Configurazione del servizio Integration Services &#40;servizio SSIS&#41;](service/integration-services-service-ssis-service.md)   
  [Servizio Integration Services &#40;servizio SSIS&#41;](service/integration-services-service-ssis-service.md)  
   
   

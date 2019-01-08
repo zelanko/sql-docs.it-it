@@ -15,12 +15,12 @@ ms.assetid: 8227028c-a9c9-489d-bd27-fbf8242634ae
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: 6d89cd1ee72b39c3441a4aea70f3e0ad622b4e49
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 853e85ea84b84f1ed0af040be5d8614feab193b0
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48204491"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53365653"
 ---
 # <a name="choose-an-encryption-algorithm"></a>Scelta di un algoritmo di crittografia
   La crittografia è una delle molte difese in profondità che gli amministratori possono utilizzare per proteggere un'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
@@ -48,7 +48,7 @@ ms.locfileid: "48204491"
 >   
 >  L'utilizzo ripetuto della stessa funzione KEY_GUID RC4 o RC4_128 su blocchi di dati diversi produrrà la stessa chiave RC4 perché [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] non fornisce automaticamente un valore salt. L'utilizzo ripetuto della stessa chiave RC4 è un errore noto che comporta una crittografia molto debole. Per questo motivo le parole chiave RC4 e RC4_128 sono deprecate. [!INCLUDE[ssNoteDepFutureDontUse](../../../includes/ssnotedepfuturedontuse-md.md)]  
   
- Per altre informazioni sugli algoritmi e sulla tecnologia di crittografia, vedere [Concetti chiave sulla sicurezza](http://go.microsoft.com/fwlink/?LinkId=62082) nella Guida per gli sviluppatori di .NET Framework in MSDN.  
+ Per altre informazioni sugli algoritmi e sulla tecnologia di crittografia, vedere [Concetti chiave sulla sicurezza](https://go.microsoft.com/fwlink/?LinkId=62082) nella Guida per gli sviluppatori di .NET Framework in MSDN.  
   
  **Chiarimento relativo agli algoritmi DES:**  
   

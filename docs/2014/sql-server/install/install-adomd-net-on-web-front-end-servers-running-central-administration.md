@@ -11,23 +11,23 @@ ms.assetid: c2372180-e847-4cdb-b267-4befac3faf7e
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: a9a260261a2078ac732c9b3eba2b0c1a9f335cf4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cc17daefbe5e84522fdc46ddf046403260ebf4e3
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48165883"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53367853"
 ---
 # <a name="install-adomdnet-on-web-front-end-servers-running-central-administration"></a>Installare ADOMD.NET in server front-end Web in cui viene eseguita Amministrazione centrale
   Se si installa PowerPivot per SharePoint in una farm che dispone della topologia di Amministrazione centrale, senza Excel Services o PowerPivot per SharePoint, scaricare e installare la libreria client Microsoft ADOMD.NET se si desidera l'accesso completo ai report incorporati nel dashboard di gestione PowerPivot. Alcuni report nel dashboard utilizzano ADOMD.NET per accedere a dati interni relativi all'integrità del server e all'elaborazione query di PowerPivot nella farm.  
   
  **[!INCLUDE[applies](../../includes/applies-md.md)]**  SharePoint 2010  
   
- Per SharePoint 2013, il provider è incluso nel Feature Pack di SQL Server. Per informazioni su come scaricare sppowerpivot. msi, vedere [Microsoft SQL Server 2014 Feature Pack](http://www.microsoft.com/download/details.aspx?id=35577)  
+ Per SharePoint 2013, il provider è incluso nel Feature Pack di SQL Server. Per informazioni su come scaricare sppowerpivot. msi, vedere [Microsoft SQL Server 2014 Feature Pack](https://www.microsoft.com/download/details.aspx?id=35577)  
   
 ### <a name="download-and-install-the-client-library"></a>Scaricare e installare la libreria client  
   
-1.  Nel [pagina Feature Pack di SQL Server 2014](http://go.microsoft.com/fwlink/?LinkID=296473), trovare Microsoft ADOMD.NET.  
+1.  Nel [pagina Feature Pack di SQL Server 2014](https://go.microsoft.com/fwlink/?LinkID=296473), trovare Microsoft ADOMD.NET.  
   
 2.  Scaricare il pacchetto per x64 del programma di installazione `SQL_AS_ADOMD.msi`.  
   

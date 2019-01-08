@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- integration-services
+ms.technology: integration-services
 ms.topic: reference
 dev_langs:
 - VB
@@ -21,12 +19,12 @@ ms.assetid: ff92a96a-8af6-4532-82cc-c0bbff92401b
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e2de2129e268cf749f14bf6c8167de9ef66d516e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 04ad9b053e337ff9c32498ff3f735c9a58148c27
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48055765"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53374353"
 ---
 # <a name="discovering-data-flow-components-programmatically"></a>Individuazione dei componenti del flusso di dati a livello di programmazione
   Dopo avere aggiunto un'attività Flusso di dati a un pacchetto, il passaggio successivo consiste nel determinare quali componenti flusso di dati sono disponibili per l'utilizzo. È possibile individuare a livello di programmazione le origini, le trasformazioni e le destinazioni del flusso di dati installate e disponibili nel computer locale. Per altre informazioni sull'aggiunta di un'attività Flusso di dati al pacchetto, vedere [Aggiunta dell'attività Flusso di dati a livello di programmazione](../building-packages-programmatically/adding-the-data-flow-task-programmatically.md).  
@@ -87,7 +85,7 @@ Module Module1
 End Module  
 ```  
   
-![Icona di Integration Services (piccola)](../media/dts-16.gif "icona di Integration Services (piccola)")**rimangono fino a Date con Integration Services** <br /> Per i download, gli articoli, gli esempi e i video Microsoft più recenti, oltre alle soluzioni selezionate dalla community, visitare la pagina [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sul sito MSDN:<br /><br /> [Visita la pagina di Integration Services su MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Per ricevere una notifica automatica su questi aggiornamenti, sottoscrivere i feed RSS disponibili nella pagina.  
+![Icona di Integration Services (piccola)](../media/dts-16.gif "icona di Integration Services (piccola)")**rimangono fino a Date con Integration Services**<br /> Per i download, gli articoli, gli esempi e i video Microsoft più recenti, oltre alle soluzioni selezionate dalla community, visitare la pagina [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sul sito MSDN:<br /><br /> [Visita la pagina di Integration Services su MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Per ricevere una notifica automatica su questi aggiornamenti, sottoscrivere i feed RSS disponibili nella pagina.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Aggiunta dei componenti del flusso di dati a livello di programmazione](../building-packages-programmatically/adding-data-flow-components-programmatically.md)  

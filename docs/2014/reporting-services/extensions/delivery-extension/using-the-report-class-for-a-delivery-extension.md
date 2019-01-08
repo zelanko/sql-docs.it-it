@@ -15,12 +15,12 @@ ms.assetid: 1145ac63-eafd-452a-82af-16f85b1676dd
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 693c0c18b4ffb2f3ab5209c0133588997c11d539
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 23aaec0ff8130ec246bb99ea63ef16dc7a5b106b
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159571"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53361753"
 ---
 # <a name="using-the-report-class-for-a-delivery-extension"></a>Utilizzo della classe Report per un'estensione per il recapito
   La classe <xref:Microsoft.ReportingServices.Interfaces.Report> rappresenta un report nel database del server di report. Qualsiasi sottoscrizione è associata a un report specifico. Il report è incluso nella notifica. L'estensione per il recapito può utilizzare l'oggetto <xref:Microsoft.ReportingServices.Interfaces.Report> incluso nella notifica per eseguire il rendering del report. L'oggetto <xref:Microsoft.ReportingServices.Interfaces.Report> contiene inoltre proprietà specifiche del report, ad esempio l'URL del report nel server di report e il nome del report. Tutte queste proprietà possono essere utilizzate come parte del provider di recapito.  
@@ -29,7 +29,7 @@ ms.locfileid: "48159571"
   
  L'oggetto <xref:Microsoft.ReportingServices.Interfaces.RenderedOutputFile> che contiene il flusso del report può essere incluso come parte di un recapito.  
   
- Per un esempio su come usare la classe <xref:Microsoft.ReportingServices.Interfaces.Report>, vedere [Esempi del prodotto SQL Server Reporting Services](http://go.microsoft.com/fwlink/?LinkId=177889)  
+ Per un esempio su come usare la classe <xref:Microsoft.ReportingServices.Interfaces.Report>, vedere [Esempi del prodotto SQL Server Reporting Services](https://go.microsoft.com/fwlink/?LinkId=177889)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Implementazione di un'estensione per il recapito](implementing-a-delivery-extension.md)   

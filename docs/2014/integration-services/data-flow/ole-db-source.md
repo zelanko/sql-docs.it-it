@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.oledbsource.f1
@@ -16,12 +15,12 @@ ms.assetid: f87cc5f6-b078-40f3-9d87-7a65e13e4c86
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1b1d37bba3216a22d732c5562108db51925d37bf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b428117cd445cf4cc8f06e588d344924394dcf02
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48120578"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53357599"
 ---
 # <a name="ole-db-source"></a>Origine OLE DB
   L'origine OLE DB consente di estrarre dati da un'ampia gamma di database relazionali conformi con OLE DB, tramite una tabella o vista di database oppure un comando SQL. L'origine OLE DB consente ad esempio di estrarre dati dalle tabelle nei database di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Access o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -93,9 +92,9 @@ ms.locfileid: "48120578"
   
 -   [Editor origine OLE DB &#40;pagina Gestione connessione&#41;](../ole-db-source-editor-connection-manager-page.md)  
   
--   [Editor origine OLE DB &#40;(pagina colonne)&#41;](../ole-db-source-editor-columns-page.md)  
+-   [Editor origine OLE DB &#40;pagina Colonne&#41;](../ole-db-source-editor-columns-page.md)  
   
--   [Editor origine OLE DB &#40;pagina dell'Output degli errori&#41;](../ole-db-source-editor-error-output-page.md)  
+-   [Editor origine OLE DB &#40;pagina Output degli errori&#41;](../ole-db-source-editor-error-output-page.md)  
   
  Nella finestra di dialogo **Editor avanzato** sono disponibili le proprietà che è possibile impostare a livello di codice. Per ulteriori informazioni sulle proprietà che è possibile impostare nella finestra di dialogo **Editor avanzato** o a livello di codice, fare clic su uno degli argomenti seguenti:  
   
@@ -105,20 +104,20 @@ ms.locfileid: "48120578"
   
 ## <a name="related-tasks"></a>Attività correlate  
   
--   [Estrarre dati tramite l'origine OLE DB](ole-db-source.md)  
+-   [Estrazione dei dati tramite l'origine OLE DB](ole-db-source.md)  
   
 -   [Mapping dei parametri di query a variabili in un componente flusso di dati](map-query-parameters-to-variables-in-a-data-flow-component.md)  
   
--   [Impostare le proprietà di un componente del flusso di dati](set-the-properties-of-a-data-flow-component.md)  
+-   [Impostazione delle proprietà di un componente del flusso di dati](set-the-properties-of-a-data-flow-component.md)  
   
 -   [Ordinare i dati per le trasformazioni Unione e Merge Join](transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
   
 ## <a name="related-content"></a>Contenuto correlato  
- Articolo di Wiki sui [connettori SSIS con Oracle](http://go.microsoft.com/fwlink/?LinkId=220670)sul sito Web social.technet.microsoft.com.  
+ Articolo di Wiki sui [connettori SSIS con Oracle](https://go.microsoft.com/fwlink/?LinkId=220670)sul sito Web social.technet.microsoft.com.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Destinazione OLE DB](ole-db-destination.md)   
- [Integration Services &#40;SSIS&#41; le variabili](../integration-services-ssis-variables.md)   
+ [Variabili di Integration Services &#40;SSIS&#41;](../integration-services-ssis-variables.md)   
  [Flusso di dati](data-flow.md)  
   
   

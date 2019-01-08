@@ -11,12 +11,12 @@ ms.assetid: 0a3ae788-e8c8-4a4d-bb15-34c673abcd17
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 67bb3b093d63564c4eaae0144add029e569281f1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 86aa25f148c44343a57e0e55831663155d288830
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48068111"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53374443"
 ---
 # <a name="install-and-uninstall-odata-source-component"></a>Installare e disinstallare il componente di origine OData
   In questo argomento vengono fornite le istruzioni per installare il componente di origine OData nel computer o per eseguirne la rimozione.  
@@ -28,7 +28,7 @@ ms.locfileid: "48068111"
   
 -   SQL Server Integration Services (per l'esecuzione di pacchetti esternamente a Visual Studio)  
   
- Per installare il componente di origine OData, scaricare [Feature Pack di SQL Server 2014](http://go.microsoft.com/fwlink/p/?LinkId=391999) ed eseguire uno dei seguenti file MSI.  
+ Per installare il componente di origine OData, scaricare [Feature Pack di SQL Server 2014](https://go.microsoft.com/fwlink/p/?LinkId=391999) ed eseguire uno dei seguenti file MSI.  
   
 -   ODataSourceForSQLServer2014-amd64.msi per piattaforme a 64 bit  
   

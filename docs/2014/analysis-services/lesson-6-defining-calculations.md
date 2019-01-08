@@ -11,12 +11,12 @@ ms.assetid: e0a1e354-e879-4eb8-bb2b-6c3809e32cb6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: de2a2286527dfa53124aeeb619ee5ab3c8f7753c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7437296543aa762ce51f5a31592a724cd0004419
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48055461"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53361385"
 ---
 # <a name="lesson-6-defining-calculations"></a>Lezione 6: Definizione di calcoli
   In questa lezione verranno descritte le procedure per definire calcoli, che sono espressioni MDX (Multidimensional Expressions) o script. I calcoli consentono di definire membri calcolati e set denominati, nonché di eseguire altri comandi script per estendere le capacità di un cubo di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . È ad esempio possibile eseguire un comando script per definire un sottocubo e quindi assegnare un calcolo alle celle incluse nel sottocubo.  
@@ -42,7 +42,7 @@ ms.locfileid: "48055461"
  Per altre informazioni, vedere [Calcoli](multidimensional-models-olap-logical-cube-objects/calculations.md)e [Calcoli nei modelli multidimensionali](multidimensional-models/calculations-in-multidimensional-models.md).  
   
 > [!NOTE]  
->  I progetti completati per tutte le lezioni in questa esercitazione sono disponibili online. È possibile passare a qualsiasi lezione utilizzando il progetto completato della lezione precedente come punto iniziale. [Fare clic qui](http://go.microsoft.com/fwlink/?LinkID=221866) per scaricare i progetti di esempio usati in questa esercitazione.  
+>  I progetti completati per tutte le lezioni in questa esercitazione sono disponibili online. È possibile passare a qualsiasi lezione utilizzando il progetto completato della lezione precedente come punto iniziale. [Fare clic qui](https://go.microsoft.com/fwlink/?LinkID=221866) per scaricare i progetti di esempio usati in questa esercitazione.  
   
  In questa lezione sono incluse le attività seguenti:  
   
@@ -53,7 +53,7 @@ ms.locfileid: "48055461"
  In questa procedura vengono definiti i set denominati.  
   
 ## <a name="next-lesson"></a>Lezione successiva  
- [Lezione 7: Definizione degli indicatori di prestazioni chiave &#40;KPI&#41;](../analysis-services/lesson-7-defining-key-performance-indicators-kpis.md)  
+ [Lezione 7: Definizione degli indicatori di prestazioni chiave &#40;indicatori KPI&#41;](../analysis-services/lesson-7-defining-key-performance-indicators-kpis.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Scenario di Analysis Services Tutorial](../analysis-services/analysis-services-tutorial-scenario.md)   

@@ -17,12 +17,12 @@ ms.assetid: c6674cd8-0de7-4a5a-9e7c-12ffa49f6fd2
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 204e5828442182065c8f31c96b2af15eafa31788
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c4715b7b0b1cf810a2874e41d1f3ad0bed1a2f59
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48095961"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53356587"
 ---
 # <a name="deploying-a-custom-assembly"></a>Distribuzione di un assembly personalizzato
   Per distribuire un assembly personalizzato in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], inserire l'assembly nelle cartelle dell'applicazione sia di Progettazione report che del server di report. Per impostazione predefinita, agli assembly personalizzati viene concessa l'autorizzazione `Execution` in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Per concedere agli assembly personalizzati altri privilegi oltre all'autorizzazione Execution, è necessario modificare il file di configurazione rssrvpolicy.config per il server di report e il file di configurazione rspreviewpolicy.config per la finestra di anteprima di Progettazione report. In alternativa, è possibile installare l'assembly personalizzato nella Global Assembly Cache (GAC).  
@@ -64,7 +64,7 @@ ms.locfileid: "48095961"
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Uso di assembly personalizzati con i report](using-custom-assemblies-with-reports.md)   
- [Uso di assembly e della Global Assembly Cache](http://go.microsoft.com/fwlink/?LinkId=63912)  
+ [Utilizzo di assembly personalizzati con i report](using-custom-assemblies-with-reports.md)   
+ [Uso di assembly e della Global Assembly Cache](https://go.microsoft.com/fwlink/?LinkId=63912)  
   
   

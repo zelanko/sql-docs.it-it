@@ -1,5 +1,5 @@
 ---
-title: 'Lezione 1: Pubblicazione dei dati tramite la replica di tipo merge | Microsoft Docs'
+title: 'Lezione 1: Pubblicazione dei dati tramite replica di tipo Merge | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -13,19 +13,19 @@ ms.assetid: c3c6e0b6-54cd-4b7d-8efb-2cefe14fcd7f
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 65debc2ad15045984f43e05d0afcf3011c50f2b8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2160f4e2a204f1e1e6b90da9949bd356bc9b7cf5
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48112911"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589265"
 ---
 # <a name="lesson-1-publishing-data-using-merge-replication"></a>Lezione 1: Pubblicazione dei dati tramite la replica di tipo merge
   In questa lezione verrà creata una pubblicazione di tipo merge con [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] per pubblicare un subset delle tabelle **Employee**, **SalesOrderHeader**e **SalesOrderDetail** nel database di esempio [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . Queste tabelle vengono filtrate usando filtri di riga con parametri in modo che ogni sottoscrizione contenga una partizione univoca dei dati. Verrà inoltre aggiunto l'account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usato dall'agente di merge all'elenco di accesso alla pubblicazione. Per eseguire questa esercitazione è necessario avere completato l'esercitazione precedente [Preparazione del server per la replica](tutorial-preparing-the-server-for-replication.md).  
   
 ### <a name="to-create-a-publication-and-define-articles"></a>Per creare una pubblicazione e definire articoli  
   
-1.  Connettersi al server di pubblicazione in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]e quindi espandere il nodo del server.  
+1.  Connettersi al server di pubblicazione in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], quindi espandere il nodo del server.  
   
 2.  Espandere la cartella **Replica** , fare clic con il pulsante destro del mouse su **Pubblicazioni locali**e quindi scegliere **Nuova pubblicazione**.  
   
@@ -84,7 +84,7 @@ ms.locfileid: "48112911"
   
 21. Selezionare **Crea snapshot immediatamente**, deselezionare **Usa la pianificazione seguente per l'esecuzione dell'agente snapshot**e quindi fare clic su **Avanti**.  
   
-22. Nella pagina Sicurezza agente fare clic su **Impostazioni di sicurezza**, digitare \<*Nome_computer>***\repl_snapshot** nella casella **Account processo**, specificare la password per l'account e quindi fare clic su **OK**. Scegliere **Fine**.  
+22. Nella pagina Sicurezza agente fare clic su **Impostazioni di sicurezza**, digitare \<_Nome_computer>_**\repl_snapshot** nella casella **Account processo**, specificare la password per l'account e quindi fare clic su **OK**. Scegliere **Fine**.  
   
 23. Nella pagina Completamento procedura guidata immettere **AdvWorksSalesOrdersMerge** nella casella **Nome pubblicazione** , quindi fare clic su **Fine**.  
   
@@ -108,10 +108,10 @@ ms.locfileid: "48112911"
   
 3.  Selezionare la pagina **Elenco di accesso alla pubblicazione** e fare clic su **Aggiungi**.  
   
-4.  Nella finestra di dialogo Aggiungi accesso alla pubblicazione selezionare *<Nome_computer>***\repl_merge** e quindi fare clic su **OK**. Fare clic su **OK**.  
+4.  Nella finestra di dialogo Aggiungi accesso alla pubblicazione selezionare _<Nome_computer>_**\repl_merge** e quindi fare clic su **OK**. Fare clic su **OK**.  
   
 ## <a name="next-steps"></a>Passaggi successivi  
- In questo modo è stata creata la pubblicazione di tipo merge. Il passaggio successivo consiste nel sottoscrivere la pubblicazione. Vedere [Lezione 2: Creazione di una sottoscrizione per una pubblicazione di tipo merge](lesson-2-creating-a-subscription-to-the-merge-publication.md).  
+ In questo modo è stata creata la pubblicazione di tipo merge. Il passaggio successivo consiste nel sottoscrivere la pubblicazione. Vedere [lezione 2: Creazione di una sottoscrizione per la pubblicazione di tipo Merge](lesson-2-creating-a-subscription-to-the-merge-publication.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Filtrare i dati pubblicati](publish/filter-published-data.md)   

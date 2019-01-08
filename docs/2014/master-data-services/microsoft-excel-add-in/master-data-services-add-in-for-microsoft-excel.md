@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 33d9c8fc-9602-494d-b9ab-8f0f42785974
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: faf49ce16cdf76af644944a2a3cc21700863ade9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f58a349ebf67f710b4ff4722b85328992b3555eb
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48198371"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53371123"
 ---
 # <a name="master-data-services-add-in-for-microsoft-excel"></a>Componente aggiuntivo Master Data Services per Microsoft Excel
   Con il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], elenchi principali di dati di riferimento possono essere distribuiti a ogni persona dell'organizzazione che usa Excel. La sicurezza determina quali utenti dei dati possono eseguire operazioni di visualizzazione e aggiornamento.  
@@ -28,7 +27,7 @@ ms.locfileid: "48198371"
  In [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]è possibile utilizzare Data Quality Services (DQS) per la corrispondenza dei dati prima del caricamento in MDS. In tal modo si impedisce la duplicazione dei dati in MDS.  
   
 > [!IMPORTANT]  
->  È possibile continuare a usare il [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] versione SP1 di Master Data Services componente aggiuntivo per Excel dopo l'aggiornamento di Master Data Services e Data Quality Services per [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CTP2. Tuttavia, una versione precedente del componente aggiuntivo Master Data Services per Excel non funzionerà dopo l'aggiornamento a SQL Server 2014 CTP2. È possibile scaricare il [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] versione SP1 di Master Data Services componente aggiuntivo per Excel dal [qui](http://go.microsoft.com/fwlink/?LinkId=328664).  
+>  È possibile continuare a usare la versione [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 del componente aggiuntivo Master Data Services per Excel dopo l'aggiornamento di Master Data Services e di Data Quality Services a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CTP2. Tuttavia, una versione precedente del componente aggiuntivo Master Data Services per Excel non funzionerà dopo l'aggiornamento a SQL Server 2014 CTP2. È possibile scaricare la versione [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 del componente aggiuntivo Master Data Services per Excel da [qui](https://go.microsoft.com/fwlink/?LinkId=328664).  
   
 ## <a name="terms"></a>Termini  
  Quando si utilizza il componente aggiuntivo, è possibile incontrare i termini seguenti.  

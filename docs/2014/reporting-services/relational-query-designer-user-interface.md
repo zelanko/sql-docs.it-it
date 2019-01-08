@@ -11,12 +11,12 @@ ms.assetid: 4f8aa192-e6fc-4b4e-b107-5a5372ac31d9
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ccde5a1c4b79a5c67182789af7c54e2142156ad5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7288661f0971f9251d7a8acf11f448eb2229975e
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48160461"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53361940"
 ---
 # <a name="relational-query-designer-user-interface"></a>Interfaccia utente di Progettazione query relazionale
   In Progettazione report in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] sono disponibili due finestre Progettazione query, una con interfaccia grafica e una basata su testo, per la creazione di una query che consente di specificare i dati da recuperare da [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] di [!INCLUDE[msCoName](../includes/msconame-md.md)] e [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)] per un set di dati del report. Utilizzare la finestra Progettazione query con interfaccia grafica per esplorare i metadati, compilare in modo interattivo una query e visualizzarne i risultati. Utilizzare Progettazione query basata su testo per visualizzare la query compilata nella finestra Progettazione query con interfaccia grafica o per modificare una query. È inoltre possibile importare una query esistente da un file o un report.  
@@ -86,11 +86,11 @@ ms.locfileid: "48160461"
   
  [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)] viene utilizzato [!INCLUDE[tsql](../includes/tsql-md.md)] e [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)] utilizza [!INCLUDE[DWsql](../includes/dwsql-md.md)]. Entrambi i dialetti del linguaggio SQL supportano la clausola, la parola chiave e le aggregazioni fornite dalla finestra Progettazione query.  
   
- Per altre informazioni su [!INCLUDE[tsql](../includes/tsql-md.md)], vedere la [Guida di riferimento a Transact-SQL &#40;Motore di database& #41;](/sql/t-sql/language-reference) nella [documentazione online](http://go.microsoft.com/fwlink/?LinkId=141687) di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sul sito msdn.microsoft.com.  
+ Per altre informazioni su [!INCLUDE[tsql](../includes/tsql-md.md)], vedere la [Guida di riferimento a Transact-SQL &#40;Motore di database& #41;](/sql/t-sql/language-reference) nella [documentazione online](https://go.microsoft.com/fwlink/?LinkId=141687) di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sul sito msdn.microsoft.com.  
   
  Nella tabella seguente sono elencate le aggregazioni per le quali vengono fornite brevi descrizioni.  
   
-|Aggregate|Description|  
+|Aggregate|Descrizione|  
 |---------------|-----------------|  
 |Avg|Restituisce la media dei valori di un gruppo. Implementa l'aggregazione SQL AVG.|  
 |Count|Restituisce il numero degli elementi contenuti in un gruppo. Implementa l'aggregazione SQL COUNT.|  
@@ -99,7 +99,7 @@ ms.locfileid: "48160461"
 |Max|Restituisce il valore massimo in un gruppo. Implementa l'aggregazione SQL MAX.|  
 |StDev|Restituisce la deviazione statistica standard di tutti i valori di un gruppo. Implementa l'aggregazione SQL STDEV.|  
 |StDevP|Restituisce la deviazione statistica standard relativa al popolamento di tutti i valori nell'espressione specificata di un gruppo. Implementa l'aggregazione SQL STDEVP.|  
-|SUM|Restituisce la somma di tutti i valori del gruppo. Implementa l'aggregazione SQL SUM.|  
+|Sum|Restituisce la somma di tutti i valori del gruppo. Implementa l'aggregazione SQL SUM.|  
 |Var|Restituisce la varianza statistica di tutti i valori del gruppo. Implementa l'aggregazione SQL VAR.|  
 |VarP|Restituisce la varianza statistica del popolamento per tutti i valori del gruppo. Implementa l'aggregazione SQL VARP.|  
 |Avg Distinct|Restituisce medie univoche. Implementa una combinazione dell'aggregazione AVG e della parola chiave DISTINCT.|  
@@ -126,7 +126,7 @@ ms.locfileid: "48160461"
 -   **Rilevamento automatico** Attiva e disattiva la funzionalità di rilevamento automatico che crea automaticamente le relazioni tra tabelle. Se il rilevamento automatico è abilitato, Progettazione query crea relazioni dalle chiavi esterne delle tabelle. In caso contrario, è necessario creare le relazioni manualmente. Quando si selezionano tabelle nel riquadro **Vista di database** , la funzione di rilevamento automatico tenta di creare relazioni. Se si abilita il rilevamento automatico dopo avere creato manualmente join, tali join verranno rimossi.  
   
     > [!IMPORTANT]  
-    >  Quando si usa con [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)] i metadati necessari a creare join non sia disponibile e le relazioni non possono essere rilevate automaticamente. Se la query recupera dati da [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)], è necessario creare tutti i join della tabella manualmente.  
+    >  Se vengono usati con [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)] , i metadati necessari a creare join non vengono forniti e non è possibile rilevare le relazioni automaticamente. Se la query recupera dati da [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)], è necessario creare tutti i join della tabella manualmente.  
   
 -   **Aggiungi relazione** Aggiunge una relazione all'elenco **Relazione** .  
   
@@ -150,7 +150,7 @@ ms.locfileid: "48160461"
   
 -   **Tabella a sinistra** Visualizza il nome della prima tabella che fa parte di una relazione di join.  
   
--   **Tipo di join** Visualizza il tipo di istruzione SQL JOIN usata nella query generata automaticamente. Per impostazione predefinita, se viene rilevato un vincolo di chiave esterna, viene utilizzato INNER JOIN. Altri tipi di join possono essere LEFT JOIN o RIGHT JOIN. Se nessuno di questi tipi di join è applicabile, nella colonna **Tipo di join** viene visualizzato **Nessuna relazione**. Non vengono creati join CROSS JOIN per le tabelle non correlate. È invece necessario creare manualmente relazioni mediante la creazione di un join delle colonne presenti nelle tabelle a sinistra e a destra. Per altre informazioni sui tipi di join, vedere "Nozioni fondamentali sui JOIN" nella [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [documentazione Online di](http://go.microsoft.com/fwlink/?LinkId=141687) sul sito msdn.microsoft.com...  
+-   **Tipo di join** Visualizza il tipo di istruzione SQL JOIN usata nella query generata automaticamente. Per impostazione predefinita, se viene rilevato un vincolo di chiave esterna, viene utilizzato INNER JOIN. Altri tipi di join possono essere LEFT JOIN o RIGHT JOIN. Se nessuno di questi tipi di join è applicabile, nella colonna **Tipo di join** viene visualizzato **Nessuna relazione**. Non vengono creati join CROSS JOIN per le tabelle non correlate. È invece necessario creare manualmente relazioni mediante la creazione di un join delle colonne presenti nelle tabelle a sinistra e a destra. Per altre informazioni su tipi di JOIN, vedere "Nozioni fondamentali sui join" nella [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][Books Online](https://go.microsoft.com/fwlink/?LinkId=141687) on msdn.microsoft.com.  
   
 -   **Tabella a destra** Visualizza il nome della seconda tabella nella relazione di join.  
   
@@ -179,7 +179,7 @@ ms.locfileid: "48160461"
 ### <a name="graphical-query-designer-toolbar"></a>Barra degli strumenti della finestra Progettazione query con interfaccia grafica  
  Nella barra degli strumenti di Progettazione query relazionale sono disponibili i pulsanti seguenti, che consentono di specificare o visualizzare i risultati di una query.  
   
-|Button|Description|  
+|Button|Descrizione|  
 |------------|-----------------|  
 |**Modifica come testo**|Consente di passare alla finestra Progettazione query basata su testo per visualizzare la query generata automaticamente o per modificare la query.|  
 |**Importa**|Consente di importare una query esistente da un file o un report. Sono supportati i tipi di file con estensione sql e rdl.|  

@@ -11,12 +11,12 @@ ms.assetid: f985856b-31d5-4e56-844b-8a8ee38da67e
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 8eb5d5f003076a9a883363f5da4bb7d2bf501577
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: af69191452137761cfaa49d6add0ad39ad3ccdde
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48084761"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53363663"
 ---
 # <a name="sap-netweaver-bi-connection-type-ssrs"></a>Tipo di connessione SAP NetWeaver BI (SSRS)
   Per includere dati da un'origine dati esterna SAP NetWeaver® Business Intelligence nel report, è necessario disporre di un set di dati basato su un'origine dati del report di tipo [!INCLUDE[SAP_DPE_BW_1](../../includes/sap-dpe-bw-1-md.md)]. Questo tipo di origine dati incorporata si basa sull'estensione per i dati per il provider di dati [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework 1.0 per [!INCLUDE[SAP_DPE_BW_1](../../includes/sap-dpe-bw-1-md.md)].  
@@ -72,17 +72,17 @@ DataSource=http://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla
   
   
 ##  <a name="Extended"></a> Proprietà di campo estese  
- L'origine dati [!INCLUDE[SAP_DPE_BW_1](../../includes/sap-dpe-bw-1-md.md)] supporta le proprietà di campo estese. Proprietà di campo estese sono proprietà oltre alla `Value` e `IsMissing` che vengono definite per un campo del set di dati dall'estensione per l'elaborazione dati. Le proprietà estese includono proprietà predefinite e proprietà personalizzate. Le proprietà predefinite sono comuni a più origini dei dati, mentre quelle personalizzate sono specifiche di ogni origine dei dati.  
+ L'origine dati [!INCLUDE[SAP_DPE_BW_1](../../includes/sap-dpe-bw-1-md.md)] supporta le proprietà di campo estese. Le proprietà di campo estese sono proprietà aggiuntive rispetto a `Value` e `IsMissing` definite per un campo del set di dati dall'estensione per l'elaborazione dei dati. Le proprietà estese includono proprietà predefinite e proprietà personalizzate. Le proprietà predefinite sono comuni a più origini dei dati, mentre quelle personalizzate sono specifiche di ogni origine dei dati.  
   
 ### <a name="working-with-field-properties"></a>Utilizzo delle proprietà di campo  
- Le proprietà di campo estese non vengono visualizzate nel riquadro Dati report come elementi che è possibile trascinare nel layout del report. In alternativa, è trascinare il campo padre della proprietà nel report e quindi modificare la proprietà predefinita da `Value` alla proprietà da usare. Se, ad esempio, viene creato il nome campo **Calendar Year/Month Level 01** in Progettazione query MDX trascinando un livello dal riquadro dei metadati al riquadro Query, per fare riferimento alla proprietà estesa personalizzata **Long Name** in un'espressione è possibile usare la sintassi seguente:  
+ Le proprietà di campo estese non vengono visualizzate nel riquadro Dati report come elementi che è possibile trascinare nel layout del report. È invece possibile trascinare nel report il campo padre della proprietà e quindi modificare la proprietà predefinita da `Value` alla proprietà desiderata. Se, ad esempio, viene creato il nome campo **Calendar Year/Month Level 01** in Progettazione query MDX trascinando un livello dal riquadro dei metadati al riquadro Query, per fare riferimento alla proprietà estesa personalizzata **Long Name** in un'espressione è possibile usare la sintassi seguente:  
   
  `=Fields!Calendar_Year_Month_Level_01("Long Name")`  
   
- Il nome di una proprietà di campo estesa viene visualizzato nella descrizione comando quando il puntatore del mouse passa su un campo nel riquadro dei metadati. Per altre informazioni sulle finestre Progettazione query è possibile usare per esplorare i dati sottostanti, vedere [interfaccia utente progettazione Query SAP NetWeaver BI](sap-netweaver-bi-query-designer-user-interface.md).  
+ Il nome di una proprietà di campo estesa viene visualizzato nella descrizione comando quando il puntatore del mouse passa su un campo nel riquadro dei metadati. Per altre informazioni sulle finestre Progettazione query che è possibile usare per esplorare i dati sottostanti, vedere [Interfaccia utente di Progettazione query SAP NetWeaver BI](sap-netweaver-bi-query-designer-user-interface.md).  
   
 > [!NOTE]  
->  I valori per le proprietà di campo estese sono disponibili solo se vengono forniti dall'origine dati quando il report viene eseguito e vengono recuperati i dati per i relativi set di dati. È quindi possibile fare riferimento a tali `Field` i valori delle proprietà in qualsiasi espressione utilizzando la sintassi descritta di seguito. Poiché, tuttavia, questi campi sono specifici del provider di dati in uso e non fanno parte del linguaggio RDL, eventuali modifiche apportate a tali valori non vengono salvate con la definizione del report.  
+>  I valori per le proprietà di campo estese sono disponibili solo se vengono forniti dall'origine dati quando il report viene eseguito e vengono recuperati i dati per i relativi set di dati. È quindi possibile fare riferimento a tali valori delle proprietà dell'elemento `Field` in qualsiasi espressione utilizzando la sintassi descritta di seguito. Poiché, tuttavia, questi campi sono specifici del provider di dati in uso e non fanno parte del linguaggio RDL, eventuali modifiche apportate a tali valori non vengono salvate con la definizione del report.  
   
  Per fare riferimento alle proprietà estese predefinite in un'espressione, utilizzare uno dei due tipi di sintassi seguenti:  
   
@@ -118,7 +118,7 @@ DataSource=http://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla
 ##  <a name="Remarks"></a> Osservazioni  
  Non tutte le modalità di recapito report sono supportate da questo provider di dati. Il recapito di report tramite sottoscrizioni guidate dai dati non è supportato per questa estensione per l'elaborazione dati. Per altre informazioni, vedere [Usare un'origine dati esterna per i dati del Sottoscrittore &#40;sottoscrizione guidata dai dati&#41;](../subscriptions/use-an-external-data-source-for-subscriber-data-data-driven-subscription.md).  
   
- Per altre informazioni, vedere l'articolo relativo all' [utilizzo di SQL Server 2008 Reporting Services con SAP NetWeaver Business Intelligence](http://go.microsoft.com/fwlink/?LinkId=167352).  
+ Per altre informazioni, vedere l'articolo relativo all' [utilizzo di SQL Server 2008 Reporting Services con SAP NetWeaver Business Intelligence](https://go.microsoft.com/fwlink/?LinkId=167352).  
   
   
   
@@ -148,7 +148,7 @@ DataSource=http://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla
  [Raccolta di campi del set di dati &#40;Generatore report e SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md)  
  Vengono fornite informazioni sulla raccolta di campi di set di dati generata dalla query.  
   
- [Origini dati supportate da Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md)  
+ [Origini dei dati supportate da Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md)  
  Vengono fornite informazioni dettagliate sul supporto delle piattaforme e delle versioni per ogni estensione per i dati.  
   
  

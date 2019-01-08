@@ -19,19 +19,19 @@ ms.assetid: 33aac25f-abb4-4f29-af88-4a0dacd80ae7
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8144c1b4008f7c0a7d8280392ee421d5cb0f0a77
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 550483f71344a790225a2d22b1caf09cee16b9f3
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48126873"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53360473"
 ---
 # <a name="usage-scenarios-and-examples-for-common-language-runtime-clr-integration"></a>Scenari di utilizzo ed esempi per l'integrazione con CLR (Common Language Runtime)
   In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono inclusi applicazioni e pacchetti di esempio nonché diversi esempi di codice che consentono di acquisire familiarità con le funzionalità di programmabilità dell'integrazione con Common Language Runtime (CLR).  
   
- Per progetti di Visual Studio completi implementati questi esempi e materiali aggiuntivi, visitare [Microsoft SQL Server Community Projects & Samples in CodePlex](http://go.microsoft.com/fwlink/?LinkID=193935).  
+ Per progetti di Visual Studio completi implementati questi esempi e materiali aggiuntivi, visitare [Microsoft SQL Server Community Projects & Samples in CodePlex](https://go.microsoft.com/fwlink/?LinkID=193935).  
   
-|nome|Description|  
+|nome|Descrizione|  
 |----------|-----------------|  
 |[Accesso al codice nativo da un funzione CLR definita dall'utente](../../../2014/database-engine/dev-guide/accessing-native-code-from-a-clr-udf.md)|Viene illustrato come richiamare una funzione in codice C++ nativo (non gestito) da una funzione definita dall'utente in un assembly, nel database.|  
 |[Esempio Array Parameter](../../../2014/database-engine/dev-guide/array-parameter-sample.md)|Viene illustrato come creare, aggiornare o eliminare un set di righe in un database passando una matrice di informazioni da un client a una stored procedure per l'integrazione con CLR nel server. A tal scopo, viene utilizzato un tipo definito dall'utente (UDT).|  

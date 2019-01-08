@@ -11,12 +11,12 @@ ms.assetid: 24163866-f37a-4c38-982e-c3d79bf64d4c
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 3fbac0b4443a956a30c49ad4aad69d9f32cc4a80
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 069307827be2b364daaed7c08255773f156d6e4d
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48116991"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53353962"
 ---
 # <a name="odbc-connection-type-ssrs"></a>Tipo di connessione ODBC (SSRS)
   Per includere dati da un provider di dati ODBC, è necessario disporre di un set di dati basato su un'origine dati del report di tipo ODBC. Questo tipo di origine dati predefinito è basato sull'estensione per l'elaborazione dati ODBC di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
@@ -50,7 +50,7 @@ Driver={SQL Server Native Client 10.0};Server=server;Database=AdventureWorks;Tru
  Prima che sia possibile compilare una stringa di connessione ODBC, è necessario avere installato i driver ODBC e sviluppare un computer o sistema DSN. Per recuperare correttamente i dati desiderati, è necessario fornire la sintassi della query supportata dal driver. Il supporto dei parametri varia in base al driver. Per altre informazioni, vedere gli argomenti specifici del driver selezionato, ad esempio [SQL Server Native Client &#40;ODBC&#41;](../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md).  
   
 ###### <a name="platform-and-version-information"></a>Informazioni sulla piattaforma e sulla versione  
- Per altre informazioni sui provider dati ODBC specifici, vedere [Origini dei dati supportate da Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md) nella documentazione relativa a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] inclusa nella [documentazione online](http://go.microsoft.com/fwlink/?linkid=121312) di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Per altre informazioni sui provider dati ODBC specifici, vedere [Origini dei dati supportate da Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md) nella documentazione relativa a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] inclusa nella [documentazione online](https://go.microsoft.com/fwlink/?linkid=121312) di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
   
 ##  <a name="HowTo"></a> Procedure  
@@ -78,7 +78,7 @@ Driver={SQL Server Native Client 10.0};Server=server;Database=AdventureWorks;Tru
  [Raccolta di campi del set di dati &#40;Generatore report e SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md)  
  Vengono fornite informazioni sulla raccolta di campi di set di dati generata dalla query.  
   
- [Origini dati supportate da Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md) nella documentazione relativa a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] inclusa nella [documentazione online](http://go.microsoft.com/fwlink/?linkid=121312) di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ [Origini dati supportate da Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md) nella documentazione relativa a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] inclusa nella [documentazione online](https://go.microsoft.com/fwlink/?linkid=121312) di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
  Vengono fornite informazioni dettagliate sul supporto delle piattaforme e delle versioni per ogni estensione per i dati.  
   
   

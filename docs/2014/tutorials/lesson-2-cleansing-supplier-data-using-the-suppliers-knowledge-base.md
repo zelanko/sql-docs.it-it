@@ -13,15 +13,15 @@ ms.assetid: 215c14de-fc3f-46de-a022-bf69b9ea2a96
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d957c5ddb394828ed29f169796bcb2bf19cea6a3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e8366781f25829b0063479c2874a56c184e73bad
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48162591"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53355699"
 ---
 # <a name="lesson-2-cleansing-supplier-data-using-the-suppliers-knowledge-base"></a>Lezione 2: Pulizia dei dati fornitore mediante la Knowledge Base Suppliers
-  In questa lezione si puliscono i dati fornitore in un file di Excel utilizzando la **Suppliers** della knowledge base creata nella prima lezione. Pulizia dei dati in DQS include un' **processo computerizzato** che consente di analizzare la conformità dei dati alle informazioni in una knowledge base e un **processo interattivo** che consente di esaminare e modificare risultati dal processo computerizzato. Tramite la funzionalità di pulizia dei dati vengono identificati i dati errati nell'origine dati e, successivamente, vengono corretti o vengono forniti suggerimenti di correzione. Vengono inoltre standardizzati e arricchiti i dati dei clienti utilizzando i valori di dominio, i valori iniziali per sinonimi, le regole di dominio, le relazioni basate su termini e i dati di riferimento. È possibile approvare o rifiutare in modo interattivo le modifiche proposte dal processo computerizzato. Visualizzare [pulizia dei dati](http://msdn.microsoft.com/library/gg524800.aspx) per altri dettagli.  
+  In questa lezione si puliscono i dati fornitore in un file di Excel utilizzando la **Suppliers** della knowledge base creata nella prima lezione. Pulizia dei dati in DQS include un' **processo computerizzato** che consente di analizzare la conformità dei dati alle informazioni in una knowledge base e un **processo interattivo** che consente di esaminare e modificare risultati dal processo computerizzato. Tramite la funzionalità di pulizia dei dati vengono identificati i dati errati nell'origine dati e, successivamente, vengono corretti o vengono forniti suggerimenti di correzione. Vengono inoltre standardizzati e arricchiti i dati dei clienti utilizzando i valori di dominio, i valori iniziali per sinonimi, le regole di dominio, le relazioni basate su termini e i dati di riferimento. È possibile approvare o rifiutare in modo interattivo le modifiche proposte dal processo computerizzato. Visualizzare [pulizia dei dati](https://msdn.microsoft.com/library/gg524800.aspx) per altri dettagli.  
   
  Nel processo computerizzato vengono utilizzati i seguenti valori soglia che è possibile configurare utilizzando l'apposita opzione nella pagina principale del client DQS.  
   
@@ -29,7 +29,7 @@ ms.locfileid: "48162591"
   
 -   **Punteggio minimo per correzioni automatiche:** punteggio minimo o livello di probabilità utilizzato da DQS per correggere automaticamente un valore.  
   
- Visualizzare [configurare valori soglia per le attività di pulizia e corrispondenza](http://msdn.microsoft.com/library/hh510415.aspx) per informazioni dettagliate su come configurare queste impostazioni.  
+ Visualizzare [configurare valori soglia per le attività di pulizia e corrispondenza](https://msdn.microsoft.com/library/hh510415.aspx) per informazioni dettagliate su come configurare queste impostazioni.  
   
  In questa lezione vengono effettuate le attività seguenti per pulire i dati di input utilizzando la Knowledge Base Suppliers.  
   
@@ -43,7 +43,7 @@ ms.locfileid: "48162591"
   
 5.  Esportare i risultati dal processo di pulizia in un file di Excel.  
   
-6.  Importare i valori dal progetto di pulizia nei domini per ampliare le informazioni nella Knowledge Base con nuovi valori, regole, correzioni e così via  
+6.  Importare i valori dal progetto di pulizia nei domini per ampliare le informazioni nella knowledge base con le nuove regole, valori, correzioni e così via...  
   
 ## <a name="next-step"></a>Passaggio successivo  
  [Attività 1: Creazione di un progetto Data Quality](../../2014/tutorials/task-1-creating-a-data-quality-project.md)  

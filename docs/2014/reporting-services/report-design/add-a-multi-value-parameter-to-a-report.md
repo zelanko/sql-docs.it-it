@@ -11,19 +11,19 @@ ms.assetid: 12ad0e77-4c28-4bbb-ab11-473ae89ec9f1
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 1f113778433e13e68b8847e5f54f1d9ae2bdc6e9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b22f958a0b4bb78e297e23665db36b8c16fe74e4
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48074470"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53363143"
 ---
 # <a name="add-a-multi-value-parameter-to-a-report"></a>Aggiunta di un parametro multivalore a un report
   È possibile aggiungere un parametro a un report che consente all'utente di selezionare più valori per il parametro.  
   
- È possibile passare più valori di parametro al report nell'URL del report. Per un esempio di URL include un parametro multivalore, vedere [passare un parametro di Report in un URL](../pass-a-report-parameter-within-a-url.md).  
+ È possibile passare più valori di parametro al report nell'URL del report. Per un esempio di URL in cui è incluso un parametro multivalore, vedere [Passare un parametro del report in un URL](../pass-a-report-parameter-within-a-url.md).  
   
- Per informazioni su come passare più valori di parametro a una stored procedure, vedere [Utilizzo di parametri a selezione multipla per report SSRS](http://go.microsoft.com/fwlink/?LinkId=321529) nel sito Web mssqltips.com.  
+ Per informazioni su come passare più valori di parametro a una stored procedure, vedere [Utilizzo di parametri a selezione multipla per report SSRS](https://go.microsoft.com/fwlink/?LinkId=321529) nel sito Web mssqltips.com.  
   
 ### <a name="to-add-a-multi-value-parameter"></a>Per aggiungere un parametro multivalore  
   
@@ -45,7 +45,7 @@ ms.locfileid: "48074470"
     ```  
   
     > [!IMPORTANT]  
-    >  Se non si includono le parentesi per racchiudere la variable come mostrato sopra, non viene eseguito il rendering del report e viene visualizzato il messaggio di errore "Dichiarare la variabile scalare".  
+    >  Se non si includono le parentesi che racchiudono la variabile come illustrato in precedenza, il report non riesce a eseguire il rendering e verrà visualizzato l'errore "dichiarare la variabile scalare".  
   
      Un parametro del set di dati per un set di dati incorporato o un set di dati condiviso viene creato automaticamente per la variabile di query. Un parametro del report viene creato automaticamente per il parametro del set di dati.  
   
@@ -79,7 +79,7 @@ ms.locfileid: "48074470"
     ```  
   
     > [!IMPORTANT]  
-    >  Se non si includono le parentesi per racchiudere la variable come mostrato sopra, non viene eseguito il rendering del report e viene visualizzato il messaggio di errore "Dichiarare la variabile scalare".  
+    >  Se non si includono le parentesi che racchiudono la variabile come illustrato in precedenza, il report non riesce a eseguire il rendering e verrà visualizzato l'errore "dichiarare la variabile scalare".  
   
      Un parametro del set di dati per un set di dati incorporato o un set di dati condiviso viene creato automaticamente per la variabile di query. Un parametro del report viene creato automaticamente per il parametro del set di dati.  
   
@@ -94,7 +94,7 @@ ms.locfileid: "48074470"
      Per altre informazioni, vedere [Aggiungere, modificare o eliminare valori disponibili per un parametro di report &#40;Generatore report e SSRS&#41;](add-change-or-delete-available-values-for-a-report-parameter.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Aggiungere parametri di propagazione a un Report &#40;Report e SSRS&#41;](add-cascading-parameters-to-a-report-report-builder-and-ssrs.md)   
- [Aggiungere, modificare o eliminare un parametro di Report &#40;Report e SSRS&#41;](add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)  
+ [Aggiunta di parametri di propagazione a un report &#40;Generatore report e SSRS&#41;](add-cascading-parameters-to-a-report-report-builder-and-ssrs.md)   
+ [Aggiungere, modificare o eliminare un parametro di report &#40;Generatore report e SSRS&#41;](add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)  
   
   

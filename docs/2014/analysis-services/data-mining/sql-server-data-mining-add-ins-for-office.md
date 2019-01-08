@@ -11,12 +11,12 @@ ms.assetid: c9021a19-2c19-4f0a-a293-5f7e0ac2524c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1f27a9834fb8a33ab98f9a8e7c6d309d10056484
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: 3126726849b0f434eb0edb33c9f97cb227ca5b2e
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50099882"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53357242"
 ---
 # <a name="sql-server-data-mining-add-ins-for-office"></a>Componenti aggiuntivi Data mining di SQL Server per Office 2007
   [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Componenti aggiuntivi Data mining di SQL Server per Office è un semplice set di strumenti per l'analisi predittiva che consente l'utilizzo dei dati in Excel al fine di compilare modelli analitici per stima, indicazioni o esplorazione.  
@@ -43,11 +43,11 @@ ms.locfileid: "50099882"
   
      Gli utenti esperti possono compilare le query DMX personalizzate con l' **Editor avanzato query**con trascinamento della selezione o automatizzare le stime usando VBA di Excel.  
   
--   **Documentare e gestire.** Dopo avere creato un set di dati e compilato alcuni modelli, documentare il lavoro e le informazioni essenziali generando un riepilogo statistico dei parametri del modello e dei dati.  
+-   **Documentare e gestire.** Dopo aver creato un set di dati e compilato alcuni modelli, documentare il lavoro e le informazioni essenziali generando un riepilogo statistico dei parametri dei dati e il modello.  
   
--   **Esplorare e visualizzare.** Il data mining non è un'attività che è possibile automatizzare completamente. È necessario esplorare e comprendere i risultati per intraprendere un'azione significativa. I componenti aggiuntivi semplificano l'esplorazione tramite i visualizzatori interattivi dei modelli di Visio ed Excel che consentono di personalizzare i diagrammi del modello e di esportare i grafici e le tabelle in Excel per ulteriori attività di filtro o modifica.  
+-   **Esplorare e visualizzare.** Data mining non è un'attività che può essere completamente automatizzata, è necessario esplorare e comprendere i risultati per intraprendere un'azione significativa. I componenti aggiuntivi semplificano l'esplorazione tramite i visualizzatori interattivi dei modelli di Visio ed Excel che consentono di personalizzare i diagrammi del modello e di esportare i grafici e le tabelle in Excel per ulteriori attività di filtro o modifica.  
   
--   **Distribuire e integrare.** Dopo aver creato un modello utile, inserire il modello in produzione utilizzando gli strumenti di gestione per esportare il modello dal server sperimentale in un'altra istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
+-   **Distribuire e integrare.** Quando si crea un modello utile, inserito il modello in produzione, usando gli strumenti di gestione per esportare il modello dal server sperimentale in un'altra istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
      In alternativa, è possibile lasciare il modello nel server in cui è stato creato, ma aggiornare i dati di training ed eseguire le stime utilizzando script DMX o Integration Services.  
   
@@ -84,6 +84,6 @@ ms.locfileid: "50099882"
   
  A seconda dell'edizione di SQL Server Analysis Services a cui ci si connette, alcuni algoritmi avanzati potrebbero non essere disponibili. Per informazioni, vedere [Funzionalità supportate dalle edizioni di SQL Server 2014](https://msdn.microsoft.com/library/cc645993.aspx).  
   
- Per altre informazioni sull'installazione, vedere la pagina nell'area download: [http://www.microsoft.com/download/details.aspx?id=29061](http://www.microsoft.com/download/details.aspx?id=29061)  
+ Per altre informazioni sull'installazione, vedere la pagina nell'area download: [https://www.microsoft.com/download/details.aspx?id=29061](https://www.microsoft.com/download/details.aspx?id=29061)  
   
   

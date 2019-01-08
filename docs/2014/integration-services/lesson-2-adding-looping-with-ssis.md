@@ -1,25 +1,24 @@
 ---
-title: 'Lezione 2: Aggiungere cicli | Microsoft Docs'
+title: 'Lezione 2: Aggiunta di ciclo | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 01f2ed61-1e5a-4ec6-b6a6-2bd070c64077
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c94cba40d4a78e33e2c272aa0534eeeac87937a7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1bb292712111a478260edc31a562ed7db4c0ac95
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48203871"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53361763"
 ---
-# <a name="lesson-2-adding-looping"></a>Lezione 2: Aggiunta di cicli
-  Nelle [lezione 1: creazione del progetto e il pacchetto di base](lesson-1-create-a-project-and-basic-package-with-ssis.md), è stato creato un pacchetto che estrae i dati da un'unica origine file flat, trasformati i dati usando le trasformazioni ricerca e infine caricati i dati nella  **FactCurrency** tabella dei fatti le **AdventureWorksDW2012** database di esempio.  
+# <a name="lesson-2-adding-looping"></a>Lezione 2: Aggiungere cicli
+  In [lezione 1: Creazione del progetto e il pacchetto di base](lesson-1-create-a-project-and-basic-package-with-ssis.md), è stato creato un pacchetto che estrae i dati da un'unica origine file flat, trasformati i dati usando le trasformazioni ricerca e infine caricati i dati nella **FactCurrency** tabella dei fatti i **AdventureWorksDW2012** database di esempio.  
   
  Tuttavia, per un processo di estrazione, trasformazione e caricamento (ETL, Extract, Transform and Loading) raramente viene usato un unico file flat. In genere durante un processo ETL i dati vengono estratti da più origini file flat. L'estrazione dei dati da più origini richiede un flusso di controllo iterativo. Una delle caratteristiche più attese di [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] consiste nella possibilità di aggiungere facilmente iterazioni o cicli ai pacchetti.  
   
@@ -48,18 +47,18 @@ ms.locfileid: "48203871"
  In questa lezione verrà modificato solo il flusso di controllo, non il flusso di dati.  
   
 > [!IMPORTANT]  
->  Per eseguire questa esercitazione, è necessario il database di esempio **AdventureWorksDW2012** . Per altre informazioni sull'installazione e sulla distribuzione di **AdventureWorksDW2012**, vedere la pagina relativa agli [esempi del prodotto Reporting Services su CodePlex](http://go.microsoft.com/fwlink/p/?LinkID=526910).  
+>  Per eseguire questa esercitazione, è necessario il database di esempio **AdventureWorksDW2012** . Per altre informazioni sull'installazione e sulla distribuzione di **AdventureWorksDW2012**, vedere [Esempi di Reporting Services su CodePlex](https://go.microsoft.com/fwlink/p/?LinkID=526910).  
   
 ## <a name="lesson-tasks"></a>Argomenti della lezione  
  In questa lezione sono incluse le attività seguenti:  
   
 -   [Passaggio 1: Copia del pacchetto della lezione 1](lesson-2-1-copying-the-lesson-1-package.md)  
   
--   [Passaggio 2: Aggiunta e configurazione del contenitore Ciclo Foreach](lesson-2-2-adding-and-configuring-the-foreach-loop-container.md)  
+-   [Passaggio 2: Aggiunta e configurazione del contenitore ciclo Foreach](lesson-2-2-adding-and-configuring-the-foreach-loop-container.md)  
   
--   [Passaggio 3: Modifica della gestione connessione file flat](lesson-2-3-modifying-the-flat-file-connection-manager.md)  
+-   [Passaggio 3: Modifica della gestione connessione File Flat](lesson-2-3-modifying-the-flat-file-connection-manager.md)  
   
--   [Passaggio 4: Test del pacchetto creato nell'esercitazione della lezione 2](lesson-2-4-testing-the-lesson-2-tutorial-package.md)  
+-   [Passaggio 4: Test del pacchetto dell'esercitazione della lezione 2](lesson-2-4-testing-the-lesson-2-tutorial-package.md)  
   
 ## <a name="start-the-lesson"></a>Inizio della lezione  
  [Passaggio 1: Copia del pacchetto della lezione 1](lesson-2-1-copying-the-lesson-1-package.md)  

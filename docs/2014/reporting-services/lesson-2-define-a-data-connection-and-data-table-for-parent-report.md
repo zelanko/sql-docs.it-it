@@ -1,5 +1,5 @@
 ---
-title: 'Lesson 2: Define a Data Connection and Data Table for Child Report (Lezione 2: Definire una connessione dati e una tabella dati per il report padre) | Microsoft Docs'
+title: 'Lezione 2: Definire una connessione dati e un tabella di dati per il Report padre | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,14 @@ ms.assetid: f02dee0c-85ad-45d4-b707-10e9e8541db9
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 13bb0c14b4458122ee94b4a674b86d20bf667d3f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5dba0a87f34c794e22fa52274591bbec0db63f86
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48162651"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53358543"
 ---
-# <a name="lesson-2-define-a-data-connection-and-data-table-for-parent-report"></a>Lezione 2: Definire una connessione dati e una tabella di dati per il report padre
+# <a name="lesson-2-define-a-data-connection-and-data-table-for-parent-report"></a>Lezione 2: definire una connessione dati e una tabella di dati per il report padre
   Dopo aver creato un nuovo progetto di sito Web utilizzando il modello di sito Web ASP.NET per Visual C#, il passaggio successivo consiste nel creare una connessione dati e una tabella di dati per il report padre. In questa esercitazione la connessione dati è al database AdventureWorks2008. È anche possibile scegliere di connettersi al database AdventureWorks2012.  
   
 ### <a name="to-define-a-data-connection-and-data-table-by-adding-a-dataset-for-parent-report"></a>Per definire una connessione dati e l'oggetto DataTable aggiungendo un oggetto DataSet (per il report padre)  
@@ -29,11 +29,11 @@ ms.locfileid: "48162651"
   
      Verrà aggiunto un nuovo file XSD **DataSet1.xsd** al progetto e verrà aperto Progettazione DataSet.  
   
-3.  Dalla finestra Casella degli strumenti trascinare un **[TableAdapter](http://msdn.microsoft.com/library/bz9tthwx\(v=vs.100\).aspx)** controllo all'area di progettazione. Viene avviata la configurazione guidata **TableAdapter** .  
+3.  Dalla finestra della casella degli strumenti trascinare un controllo **[TableAdapter](https://msdn.microsoft.com/library/bz9tthwx\(v=vs.100\).aspx)** nell'area di progettazione. Viene avviata la configurazione guidata **TableAdapter** .  
   
 4.  Nel **Seleziona connessione dati** pagina, fare clic su **nuova connessione**.  
   
-5.  Se si tratta della prima creazione di un'origine dati in Visual Studio, viene visualizzata la pagina **Scegli origine dati** . Nella casella **Origine dati** selezionare **Microsoft SQL Server**.  
+5.  Se si tratta della prima creazione di un'origine dati in Visual Studio, viene visualizzata la pagina **Scegli origine dati**. Nella casella **Origine dati** selezionare **Microsoft SQL Server**.  
   
 6.  Nella finestra di dialogo **Aggiungi connessione** effettuare i passaggi seguenti:  
   
@@ -59,7 +59,7 @@ ms.locfileid: "48162651"
     SELECT ProductID, Name, ProductNumber, SafetyStockLevel, ReorderPoint FROM  Production.Product Order By ProductID  
     ```  
   
-     È anche possibile creare la query facendo clic **generatore di Query**, quindi verificare la query facendo clic **Esegui Query**. Se non vengono restituiti i dati previsti dalla query, è possibile che si stia utilizzando una versione precedente di AdventureWorks. Per altre informazioni sull'installazione di **AdventureWorks2008** versione di AdventureWorks, vedere [procedura dettagliata: installazione del AdventureWorks Database](http://msdn.microsoft.com/library/aa992075\(v=vs.100\).aspx).  
+     È anche possibile creare la query facendo clic **generatore di Query**, quindi verificare la query facendo clic **Esegui Query**. Se non vengono restituiti i dati previsti dalla query, è possibile che si stia utilizzando una versione precedente di AdventureWorks. Per altre informazioni sull'installazione di **AdventureWorks2008** versione di AdventureWorks, vedere [procedura dettagliata: Installazione del Database AdventureWorks](https://msdn.microsoft.com/library/aa992075\(v=vs.100\).aspx).  
   
 11. Nel **scegliere i metodi per generare** pagina, assicurarsi di deselezionare **Crea metodi per inviare aggiornamenti direttamente al database (GenerateDBDirectMethods)**, quindi fare clic su **fine**.  
   

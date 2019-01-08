@@ -12,12 +12,12 @@ ms.assetid: 39ceaac5-42fa-4b5d-bfb6-54403d7f0dc9
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a2114b180a1ecabf3f792437a113b9f4bedef8a8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e9df2b0158504577630caa6830687a2665c91327
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48218221"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53365783"
 ---
 # <a name="failover-policy-for-failover-cluster-instances"></a>Criteri di failover per istanze del cluster di failover
   In un'istanza del cluster di failover (FCI, Failover Cluster Instance) di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , solo un nodo può possedere il gruppo di risorse del cluster WSFC (Windows Server Failover Cluster) a un'ora specificata. Le richieste del client vengono servite tramite questo nodo nell'istanza FCI. In caso di errore e riavvio non eseguito, la proprietà del gruppo viene spostata in un altro nodo WSFC nell'istanza FCI. Questo processo viene chiamato failover. [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] aumenta l'affidabilità di rilevamento dell'errore e offre criteri di failover flessibili.  
@@ -92,7 +92,7 @@ ms.locfileid: "48218221"
   
  Rivedere [sp_server_diagnostics &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql) poiché questa stored procedure di sistema gioca un ruolo importante nei livelli di condizione di errore.  
   
-|Level|Condizione|Description|  
+|Level|Condizione|Descrizione|  
 |-----------|---------------|-----------------|  
 |0|Nessun failover o riavvio automatico|Viene indicato che con qualsiasi condizione di errore non verrà attivato automaticamente alcun failover o riavvio. Questo livello serve solo per scopi di manutenzione del sistema.|  
 |1|Failover o riavvio in caso di server non disponibile|Viene indicato che verrà attivato un riavvio o un failover del server se si verifica la condizione seguente:<br /><br /> Indisponibilità del servizio SQL Server.|  
@@ -104,7 +104,7 @@ ms.locfileid: "48218221"
  *Valore predefinito  
   
 ####  <a name="respond"></a> Risposta agli errori  
- Una volta rilevata una o più condizioni di errore, il servizio WSFC risponde agli errori in base allo stato del quorum WSFC e alle impostazioni di riavvio e failover del gruppo di risorse di FCI. Se l'istanza FCI ha perso il quorum WSFC, l'intera istanza FCI viene portata offline e perde la disponibilità elevata. Se l'istanza FCI ancora mantiene il quorum WSFC, è possibile che il servizio WSFC risponda prima tentando di riavviare il nodo in errore e quindi eseguendo il failover se i tentativi del riavvio non riescono. Le impostazioni di riavvio e failover vengono configurate nello snap-in Gestione cluster di failover. Per altre informazioni su queste impostazioni, vedere [Proprietà \<risorsa>: scheda Criteri](http://technet.microsoft.com/library/cc725685.aspx).  
+ Una volta rilevata una o più condizioni di errore, il servizio WSFC risponde agli errori in base allo stato del quorum WSFC e alle impostazioni di riavvio e failover del gruppo di risorse di FCI. Se l'istanza FCI ha perso il quorum WSFC, l'intera istanza FCI viene portata offline e perde la disponibilità elevata. Se l'istanza FCI ancora mantiene il quorum WSFC, è possibile che il servizio WSFC risponda prima tentando di riavviare il nodo in errore e quindi eseguendo il failover se i tentativi del riavvio non riescono. Le impostazioni di riavvio e failover vengono configurate nello snap-in Gestione cluster di failover. Per altre informazioni su queste impostazioni, vedere [ \<risorsa > proprietà: Scheda Criteri](https://technet.microsoft.com/library/cc725685.aspx).  
   
  Per altre informazioni, vedere [Modalità quorum WSFC e configurazione del voto &#40;SQL Server&#41;](wsfc-quorum-modes-and-voting-configuration-sql-server.md).  
   

@@ -1,62 +1,60 @@
 ---
-title: Funzionalità di SQL Server Reporting Services in SQL Server 2014 non più disponibili | Microsoft Docs
-ms.custom: ''
-ms.date: 06/13/2017
-ms.prod: sql-server-2014
-ms.reviewer: ''
-ms.technology:
-- reporting-services-native
-ms.topic: conceptual
-helpviewer_keywords:
-- discontinued functionality [Reporting Services]
-- Reporting Services, backward compatibility
-- Rsactivate.exe
-- unsupported features [Reporting Services]
-ms.assetid: d529cc96-3483-480b-9bfc-bd28b1d0ef52
+title: Funzionalità non più supportate
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: ec97f47c87abed0a3fd650632458bf4ba956e985
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.prod: reporting-services-2014, sql-server-2014
+ms.reviewer: ''
+ms.prod_service: reporting-services-native, reporting-services-sharepoint
+ms.topic: conceptual
+ms.custom: seodec18
+ms.date: 12/14/2018
+ms.openlocfilehash: f36a55baee21f81305857ba766879d69c73bbdb5
+ms.sourcegitcommit: 2f5773f4bc02bfff4f2924226ac5651eb0c00924
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48100221"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53552973"
 ---
-# <a name="discontinued-functionality-to-sql-server-reporting-services-in-sql-server-2014"></a>Funzionalità non più disponibili in SQL Server Reporting Services in SQL Server 2014
+# <a name="discontinued-functionality-in-sql-server-reporting-services-ssrs"></a>Funzionalità non più supportate in SQL Server Reporting Services (SSRS)
+
   In questo argomento vengono descritte le funzionalità di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] non più disponibili in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Non sono inclusi avvisi relativi al supporto non più disponibile per versioni specifiche del sistema operativo o per [!INCLUDE[msCoName](../includes/msconame-md.md)] Internet Information Services (IIS). Per altre informazioni sui prerequisiti di sistema, vedere [Hardware and Software Requirements for Installing SQL Server 2014](../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).  
   
  Contenuto dell'argomento:  
   
--   [Funzionalità deprecate in SQL Server 2014 Reporting Services](#bkmk_sql14)  
+- [Funzionalità deprecate in SQL Server 2014 Reporting Services](#bkmk_sql14)  
   
--   [Funzionalità deprecate in SQL Server 2012 Reporting Services](#bkmk_rc0)  
+- [Funzionalità deprecate in SQL Server 2012 Reporting Services](#bkmk_rc0)  
   
--   [Funzionalità deprecate in SQL Server 2008 R2 Reporting Services](#bkmk_kj)  
+- [Funzionalità deprecate in SQL Server 2008 R2 Reporting Services](#bkmk_kj)  
   
-##  <a name="bkmk_sql14"></a> [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] Reporting Services non più disponibile la funzionalità  
- In [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] non sono presenti funzionalità di [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] non più disponibili.  
+##  <a name="bkmk_sql14"></a> [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] Reporting Services non più disponibile la funzionalità
+
+ In [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] non sono presenti funzionalità di [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]non più disponibili.  
   
-##  <a name="bkmk_rc0"></a> [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] Reporting Services non più disponibile la funzionalità  
+##  <a name="bkmk_rc0"></a> [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] Reporting Services non più disponibile la funzionalità
+
  In questa sezione vengono descritte le funzionalità di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] non più disponibili in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)].  
   
- In [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] non sono presenti funzionalità di [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] non più disponibili.  
+ In [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] non sono presenti funzionalità di [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]non più disponibili.  
   
-##  <a name="bkmk_kj"></a> Funzionalità deprecate in SQL Server 2008 R2 Reporting Services  
- Questa sezione viene descritto non più disponibile in [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
+##  <a name="bkmk_kj"></a> Funzionalità deprecate in SQL Server 2008 R2 Reporting Services
+
+ In questa sezione vengono descritte le funzionalità non più utilizzate in [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
   
 > [!NOTE]  
->  Poiché SQL Server 2008 R2 è un aggiornamento secondario della versione di SQL Server 2008, è consigliabile rivedere anche il contenuto nella sezione relativa a SQL Server 2008.  
+> Poiché SQL Server 2008 R2 è un aggiornamento secondario della versione di SQL Server 2008, è consigliabile rivedere anche il contenuto nella sezione relativa a SQL Server 2008.
   
-### <a name="64-bit-platform-support"></a>Supporto della piattaforma a 64 bit  
- A partire da [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)], il [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] componente non supporta più server basati su Itanium che eseguono Windows Server 2003 o Windows Server 2003 R2. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] continua a supportare altri sistemi operativi a 64 bit, ad esempio Windows Server°2008 per sistemi basati su Itanium e Windows Server 2008 R2 per sistemi basati su Itanium. Per eseguire l'aggiornamento a [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] da un'installazione di [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] con [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] in un'edizione del sistema basata su Itanium di Windows Server 2003 o Windows Server 2003 R2, è necessario prima aggiornare il sistema operativo.  
+### <a name="64-bit-platform-support"></a>Supporto della piattaforma a 64 bit
+
+ A partire da [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)], il componente [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] non supporta più server basati su Itanium che eseguono Windows Server 2003 o Windows Server 2003 R2. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] continua a supportare altri sistemi operativi a 64 bit, ad esempio Windows Server°2008 per sistemi basati su Itanium e Windows Server 2008 R2 per sistemi basati su Itanium. Per eseguire l'aggiornamento a [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] da un'installazione di [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] con [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] in un'edizione del sistema basata su Itanium di Windows Server 2003 o Windows Server 2003 R2, è necessario prima aggiornare il sistema operativo.  
   
-### <a name="data-source-credentials-in-url-access"></a>Credenziali dell'origine dati nell'accesso a URL  
+### <a name="data-source-credentials-in-url-access"></a>Credenziali dell'origine dati nell'accesso a URL
+
  Le stringhe di parametri URL accesso *dsu:datasourcename = value* e *dsp:datasourcename = valore* ora sono obsolete. Nelle versioni precedenti queste stringhe di parametri sono archiviate in testo normale nella cache del browser e non viene pertanto garantita la sicurezza.  
   
-## <a name="see-also"></a>Vedere anche  
- [Novità &#40;Reporting Services&#41;](what-s-new-reporting-services.md)   
- [Modifiche del comportamento di SQL Server Reporting Services in SQL Server 2014](behavior-changes-to-sql-server-reporting-services-in-sql-server-2016.md)   
- [Funzionalità deprecate di SQL Server Reporting Services in SQL Server 2014](deprecated-features-in-sql-server-reporting-services-ssrs.md)  
-  
-  
+## <a name="next-steps"></a>Passaggi successivi
+
+ - [Novità &#40;Reporting Services&#41;](what-s-new-reporting-services.md)
+ - [Modifiche del comportamento di SQL Server Reporting Services in SQL Server 2014](behavior-changes-to-sql-server-reporting-services-in-sql-server-2016.md)
+ - [Funzionalità deprecate di SQL Server Reporting Services in SQL Server 2014](deprecated-features-in-sql-server-reporting-services-ssrs.md)

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Lookup transformation [Integration Services]
@@ -13,12 +12,12 @@ ms.assetid: 58bc7611-5fb5-4113-9742-10959e06b94c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 872d886f8e38d408b39387329f13c120d1dc5744
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d9b405ee057e843f734310dbf134465d03575efc
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48152191"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53364023"
 ---
 # <a name="implement-a-lookup-transformation-in-full-cache-mode-using-the-cache-connection-manager"></a>Implementazione di una trasformazione Ricerca in modalità Full Cache utilizzando la gestione connessione della cache
   È possibile configurare la trasformazione Ricerca per utilizzare la modalità Full Cache e una gestione connessione della cache. Nella modalità Full Cache, il set di dati di riferimento viene caricato nella cache prima dell'esecuzione della trasformazione Ricerca.  
@@ -50,7 +49,7 @@ ms.locfileid: "48152191"
   
 -   Configurare le gestioni connessione della cache nei diversi pacchetti per l'utilizzo dello stesso file di cache.  
   
- Per altre informazioni, vedere gli argomenti seguenti:  
+ Per altre informazioni, vedere i seguenti argomenti:  
   
 -   [Trasformazione Cache](../data-flow/transformations/cache-transform.md)  
   
@@ -62,7 +61,7 @@ ms.locfileid: "48152191"
   
 -   [Contenitore Sequenza](../control-flow/sequence-container.md)  
   
- Per visualizzare un video che illustra come implementare una trasformazione Ricerca in modalità Full Cache usando la gestione connessione della cache, vedere [How to: Implement a Lookup Transformation in Full Cache Mode (SQL Server Video)](http://go.microsoft.com/fwlink/?LinkId=131031)(Procedura: Implementare una trasformazione Ricerca nella modalità Full Cache).  
+ Per un video che illustra come implementare una trasformazione ricerca in modalità Full Cache utilizzando la gestione connessione Cache, vedere [come: Implementare una trasformazione ricerca in modalità Full Cache (Video di SQL Server)](https://go.microsoft.com/fwlink/?LinkId=131031).  
   
 ### <a name="to-implement-a-lookup-transformation-in-full-cache-mode-in-one-package-by-using-cache-connection-manager-and-a-data-source-in-the-data-flow"></a>Per implementare una trasformazione Ricerca nella modalità Full Cache in un pacchetto utilizzando la gestione connessione della cache e un'origine dati nel flusso di dati  
   
@@ -92,7 +91,7 @@ ms.locfileid: "48152191"
          Se viene digitato un percorso di file che non esiste, il sistema crea il file quando viene eseguito il pacchetto.  
   
     > [!NOTE]  
-    >  Il livello di protezione del pacchetto non si applica al file di cache. Se il file di cache contiene informazioni riservate, utilizzare un elenco di controllo di accesso (ACL) per limitare l'accesso al percorso o alla cartella nella quale verrà archiviato il file. È consigliabile consentire l'accesso solo a determinati account. Per altre informazioni, vedere [Accesso ai file utilizzati dai pacchetti](../access-to-files-used-by-packages.md).  
+    >  Il livello di protezione del pacchetto non si applica al file di cache. Se il file di cache contiene informazioni riservate, utilizzare un elenco di controllo di accesso (ACL) per limitare l'accesso al percorso o alla cartella nella quale verrà archiviato il file. È consigliabile consentire l'accesso solo a determinati account. Per altre informazioni, vedere [Accedere ai file usati dai pacchetti](../access-to-files-used-by-packages.md).  
   
 7.  Configurare la Trasformazione Cache in base alle esigenze. Per altre informazioni, vedere [Editor trasformazione cache &#40;pagina Gestione connessioni&#41;](../cache-transformation-editor-connection-manager-page.md) e [Editor trasformazione cache &#40;pagina Mapping&#41;](../cache-transformation-editor-mappings-page.md).  
   
@@ -281,7 +280,7 @@ ms.locfileid: "48152191"
 9. Eseguire il pacchetto.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Implementare una trasformazione Ricerca in modalità Full Cache tramite la gestione connessione OLE DB](lookup-transformation-full-cache-mode-ole-db-connection-manager.md)   
+ [Implementazione di una trasformazione Ricerca in modalità Full cache utilizzando la gestione connessione OLE DB](lookup-transformation-full-cache-mode-ole-db-connection-manager.md)   
  [Implementare una ricerca in modalità No Cache o Partial Cache](../data-flow/transformations/implement-a-lookup-in-no-cache-or-partial-cache-mode.md)   
  [Trasformazioni di Integration Services](../data-flow/transformations/integration-services-transformations.md)  
   

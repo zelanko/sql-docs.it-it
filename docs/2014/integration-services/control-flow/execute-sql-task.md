@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.executesqltask.f1
@@ -18,12 +17,12 @@ ms.assetid: bebb2e8c-0410-43b2-ac2f-6fc80c8f2e9e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fe677e6b2fb13c3a158c78e0416142b7b15ce975
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 64e3a60d767c100ad66a293f1e588369a140d1e8
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48204821"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53367313"
 ---
 # <a name="execute-sql-task"></a>Attività Esegui SQL
   L'attività Esegui SQL consente di eseguire istruzioni SQL o stored procedure da un pacchetto. L'attività può includere una o più istruzioni SQL che vengono eseguite in ordine sequenziale. È possibile utilizzare l'attività Esegui SQL per gli scopi seguenti:  
@@ -63,7 +62,7 @@ ms.locfileid: "48204821"
 >  L'attività Esegui SQL non è in grado di elaborare correttamente le istruzioni SQL valide scritte al di fuori dell'attività stessa.  
   
 > [!NOTE]  
->  L'attività Esegui SQL utilizza il valore di enumerazione ParseMode `RecognizeAll`. Per altre informazioni, vedere [Spazio dei nomi ManagedBatchParser](http://go.microsoft.com/fwlink/?LinkId=223617).  
+>  L'attività Esegui SQL utilizza il valore di enumerazione ParseMode `RecognizeAll`. Per altre informazioni, vedere [Spazio dei nomi ManagedBatchParser](https://go.microsoft.com/fwlink/?LinkId=223617).  
   
 ## <a name="sending-multiple-statements-in-a-batch"></a>Invio di più istruzioni in un batch  
  Se un'attività Esegui SQL include più istruzioni, sarà possibile raggrupparle ed eseguirle come batch, utilizzando il comando GO per segnalare la fine del batch. Tutte le istruzioni SQL comprese tra due comandi GO vengono inviate in batch al provider OLE DB per l'esecuzione. Il comando SQL può includere più batch separati da comandi GO.  
@@ -81,7 +80,7 @@ ms.locfileid: "48204821"
 -   Se l'attività utilizza un'associazione di parametri, tutte le query incluse nel batch dovranno avere lo stesso numero e gli stessi tipi di parametri.  
   
 ## <a name="running-parameterized-sql-commands"></a>Esecuzione di comandi SQL con parametri  
- Le istruzioni SQL e le stored procedure utilizzano spesso parametri di input, parametri di output e codici restituiti. L'attività Esegui SQL supporta il `Input`, `Output`, e `ReturnValue` i tipi di parametro. Si utilizza il `Input` tipo per i parametri di input `Output` per i parametri di output e `ReturnValue` per i codici restituiti.  
+ Le istruzioni SQL e le stored procedure utilizzano spesso parametri di input, parametri di output e codici restituiti. L'attività Esegui SQL supporta parametri di tipo `Input`, `Output` e `ReturnValue`. Il tipo `Input` viene utilizzato per i parametri di input, il tipo `Output` per i parametri di output e il tipo `ReturnValue` per i codici restituiti.  
   
 > [!NOTE]  
 >  È possibile utilizzare parametri in un'attività Esegui SQL solo se il provider di dati li supporta.  
@@ -96,7 +95,7 @@ ms.locfileid: "48204821"
 ## <a name="troubleshooting-the-execute-sql-task"></a>Risoluzione dei problemi relativi all'attività Esegui SQL  
  È possibile registrare le chiamate eseguite dall'attività Esegui SQL a provider di dati esterni. Questa funzionalità di registrazione può essere utilizzata per risolvere i problemi relativi ai comandi SQL eseguiti dall'attività Esegui SQL. Per registrare le chiamate eseguite dall'attività Esegui SQL a provider di dati esterni, abilitare la registrazione dei pacchetti e selezionare l'evento **Diagnostic** a livello del pacchetto. Per altre informazioni, vedere [Risoluzione dei problemi relativi agli strumenti per l'esecuzione del pacchetto](../troubleshooting/troubleshooting-tools-for-package-execution.md).  
   
- Talvolta un comando SQL o una stored procedure restituiscono più set di risultati. Questi set di risultati includono non solo i set di righe che sono il risultato ottenuto `SELECT` query, ma anche valori singoli che sono il risultato di errori di `RAISERROR` o `PRINT` istruzioni. L'attività ignora gli errori nei set di risultati che si verificano dopo il primo set di risultati in base al tipo di gestione connessione utilizzata:  
+ Talvolta un comando SQL o una stored procedure restituiscono più set di risultati. Tali set di risultati non solo includono i set di righe che sono il risultato di query `SELECT`, ma anche valori singoli che sono il risultato di errori di istruzioni `RAISERROR` o `PRINT`. L'attività ignora gli errori nei set di risultati che si verificano dopo il primo set di risultati in base al tipo di gestione connessione utilizzata:  
   
 -   Se si utilizzano le gestioni connessioni OLE DB e ADO, l'attività ignora i set di risultati che si verificano dopo il primo set di risultati. Pertanto, con tali gestioni connessioni, l'attività ignora un errore restituito da un comando SQL o da una stored procedure quando l'errore non fa parte del primo set di risultati.  
   
@@ -105,7 +104,7 @@ ms.locfileid: "48204821"
 ### <a name="custom-log-entries"></a>Voci di log personalizzate  
  Nella tabella seguente è indicata la voce di log personalizzata disponibile per l'attività Esegui SQL. Per altre informazioni, vedere [Registrazione di Integration Services &#40;SSIS&#41;](../performance/integration-services-ssis-logging.md) e [Messaggi personalizzati per la registrazione](../custom-messages-for-logging.md).  
   
-|Voce di log|Description|  
+|Voce di log|Descrizione|  
 |---------------|-----------------|  
 |`ExecuteSQLExecutingQuery`|Fornisce informazioni sulle fasi di esecuzione dell'istruzione SQL. Vengono scritte voci di log quando l'attività acquisisce la connessione al database, quando inizia a preparare l'istruzione SQL e al termine dell'esecuzione dell'istruzione SQL. La voce di log per la fase di preparazione include l'istruzione SQL utilizzata dall'attività.|  
   
@@ -122,7 +121,7 @@ ms.locfileid: "48204821"
   
 -   Indicare se l'attività salta la fase di preparazione per l'istruzione SQL.  
   
--   Se si utilizza il tipo di connessione ADO, è necessario indicare se l'istruzione SQL è una stored procedure. Per altri tipi di connessione, questa proprietà è di sola lettura e il relativo valore è sempre `false`.  
+-   Se si utilizza il tipo di connessione ADO, è necessario indicare se l'istruzione SQL è una stored procedure. Per altri tipi di connessione questa proprietà è di sola lettura e ha sempre valore `false`.  
   
  È possibile impostare le proprietà a livello di programmazione o tramite Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
   
@@ -138,7 +137,7 @@ ms.locfileid: "48204821"
   
  Per altre informazioni sull'impostazione di queste proprietà in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] , fare clic sull'argomento seguente:  
   
--   [Impostare le proprietà di un'attività o di un contenitore](../set-the-properties-of-a-task-or-container.md)  
+-   [Impostazione delle proprietà di un'attività o di un contenitore](../set-the-properties-of-a-task-or-container.md)  
   
 ## <a name="configuring-the-execute-sql-task-programmatically"></a>Configurazione dell'attività Esegui SQL a livello di codice  
  Per ulteriori informazioni sull'impostazione di queste proprietà a livello di codice, fare clic sull'argomento seguente:  
@@ -159,6 +158,6 @@ ms.locfileid: "48204821"
   
 -   [Guida di riferimento a Transact-SQL &#40;Motore di database&#41;](/sql/t-sql/language-reference)  
   
--   Intervento nel blog relativo alle [nuove funzioni di data e ora in SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=239783)sul sito Web mssqltips.com  
+-   Intervento nel blog relativo alle [nuove funzioni di data e ora in SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=239783)sul sito Web mssqltips.com  
   
   

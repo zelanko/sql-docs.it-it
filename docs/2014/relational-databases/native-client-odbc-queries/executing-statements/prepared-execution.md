@@ -17,15 +17,15 @@ ms.assetid: f3a9d32b-6cd7-4f0c-b38d-c8ccc4ee40c3
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 508d4083549cf1c6db6209be08d23b3fad054845
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 01982222ba5a18086aeadbbec776cba222f0e235
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48207941"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53354219"
 ---
 # <a name="prepared-execution"></a>Esecuzione preparata
-  L'API ODBC definisce l'esecuzione preparata per ridurre l'overhead dell'analisi e della compilazione associato all'esecuzione ripetuta di un'istruzione [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Nell'applicazione viene compilata una stringa di caratteri contenente un'istruzione SQL che viene eseguita in due fasi. Chiama [funzione SQLPrepare](http://go.microsoft.com/fwlink/?LinkId=59360) una volta per l'istruzione analizzata e compilata in un piano di esecuzione per la [!INCLUDE[ssDE](../../../includes/ssde-md.md)]. Viene quindi chiamato **SQLExecute** per ogni esecuzione del piano di esecuzione preparata. con conseguente risparmio dell'overhead correlato all'analisi e alla compilazione in ogni esecuzione. L'esecuzione preparata viene generalmente utilizzata dalle applicazioni per eseguire ripetutamente la stessa istruzione SQL con parametri.  
+  L'API ODBC definisce l'esecuzione preparata per ridurre l'overhead dell'analisi e della compilazione associato all'esecuzione ripetuta di un'istruzione [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Nell'applicazione viene compilata una stringa di caratteri contenente un'istruzione SQL che viene eseguita in due fasi. Chiama [funzione SQLPrepare](https://go.microsoft.com/fwlink/?LinkId=59360) una volta per l'istruzione analizzata e compilata in un piano di esecuzione per la [!INCLUDE[ssDE](../../../includes/ssde-md.md)]. Viene quindi chiamato **SQLExecute** per ogni esecuzione del piano di esecuzione preparata. con conseguente risparmio dell'overhead correlato all'analisi e alla compilazione in ogni esecuzione. L'esecuzione preparata viene generalmente utilizzata dalle applicazioni per eseguire ripetutamente la stessa istruzione SQL con parametri.  
   
  Per la maggior parte dei database, l'esecuzione preparata è più veloce dell'esecuzione diretta per le istruzioni eseguite più di tre o quattro volte, sopratutto perché l'istruzione viene compilata una sola volta, mentre le istruzioni eseguite direttamente vengono compilate ogni volta che vengono eseguite. L'esecuzione preparata può inoltre offrire una riduzione del traffico di rete perché il driver può inviare all'origine dati un identificatore del piano di esecuzione e i valori dei parametri, anziché un'intera istruzione SQL, ogni volta che viene eseguita l'istruzione.  
   

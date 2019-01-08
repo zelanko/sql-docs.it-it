@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: native-client
+ms.technology: ''
 ms.topic: reference
 helpviewer_keywords:
 - system requirements [SQL Server Native Client]
@@ -15,12 +15,12 @@ ms.assetid: 1c8e2f8a-a440-44da-8e3a-af632d34c52c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bba3322fdd55116cb872a8653a515ac449f5a112
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ad87b38ade044414062eba03e94dee415c53fc7e
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48150971"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53365123"
 ---
 # <a name="system-requirements-for-sql-server-native-client"></a>Requisiti di sistema per SQL Server Native Client
   Per usare le caratteristiche di accesso ai dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ad esempio MARS, è necessario verificare che sia installato il software indicato di seguito:  
@@ -29,7 +29,7 @@ ms.locfileid: "48150971"
   
 -   Un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sul server.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client richiede Windows Installer 3.0. Windows Installer 3.0 è già installato nei sistemi operativi [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. Per tutte le altre piattaforme è necessario installarlo in modo esplicito. Per altre informazioni, vedere [Windows Installer 3.0 Redistributable](http://go.microsoft.com/fwlink/?LinkId=46459).  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client richiede Windows Installer 3.0. Windows Installer 3.0 è già installato nei sistemi operativi [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. Per tutte le altre piattaforme è necessario installarlo in modo esplicito. Per altre informazioni, vedere [Windows Installer 3.0 Redistributable](https://go.microsoft.com/fwlink/?LinkId=46459).  
   
 > [!NOTE]  
 >  Assicurarsi di accedere con privilegi di amministratore prima di installare il software.  

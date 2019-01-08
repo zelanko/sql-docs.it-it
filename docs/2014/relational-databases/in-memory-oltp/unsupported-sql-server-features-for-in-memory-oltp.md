@@ -10,17 +10,17 @@ ms.assetid: c39f03a7-e223-4fd7-bd30-142e28f51654
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 76fbfdf3ae8752d4187c43c35d12278b0dbcb792
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 660515f10797e1f11fac22c1baf4ed74e9f67c0c
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48216672"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53375033"
 ---
 # <a name="supported-sql-server-features"></a>Funzionalità di SQL Server supportate
   In questo argomento vengono illustrate le funzionalità di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supportate o non supportate per l'utilizzo con oggetti ottimizzati per la memoria.  
   
-## <a name="includessnoversionincludesssnoversion-mdmd-features-supported-for-in-memory-oltp"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Funzionalità supportate per OLTP In memoria  
+## <a name="includessnoversionincludesssnoversion-mdmd-features-supported-for-in-memory-oltp"></a>Funzionalità di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supportate per OLTP in memoria  
  Le funzionalità di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] indicate di seguito sono supportate in un database contenente oggetti ottimizzati per la memoria, incluso un filegroup ottimizzato per la memoria.  
   
  Per informazioni sui tipi di dati supportati, vedere [Supported Data Types](supported-data-types-for-in-memory-oltp.md).  
@@ -41,7 +41,7 @@ ms.locfileid: "48216672"
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (Indici per tabelle con ottimizzazione per la memoria). Per altre informazioni, vedere [Supporto di SQL Server Management Studio per OLTP in memoria](sql-server-management-studio-support-for-in-memory-oltp.md).  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell. Per ulteriori informazioni, vedere [Panoramica di SQL Server PowerShell](http://msdn.microsoft.com/library/cc281954\(SQL.105\).aspx).  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell. Per ulteriori informazioni, vedere [Panoramica di SQL Server PowerShell](https://msdn.microsoft.com/library/cc281954\(SQL.105\).aspx).  
   
 -   Importazione ed esportazione dei dati per operazioni bulk tramite l'utilità bcp. Per altre informazioni, vedere [Importare ed esportare dati per operazioni bulk usando l'utilità bcp &#40;SQL Server&#41;](../import-export/import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md).  
   
@@ -49,7 +49,7 @@ ms.locfileid: "48216672"
   
 -   Più contenitori in un filegroup di dati ottimizzato per la memoria per archiviare oggetti di OLTP in memoria e ridurre il tempo necessario per il pieno recupero dell'operatività (RTO, Recovery Time Objective).  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] i blocchi di log delle transazioni calcolo del checksum e convalidano.  
+-   Calcolo del checksum e convalida tramite i blocchi del log delle transazioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 -   Nuovo hint di tabella SNAPSHOT. Per altre informazioni, vedere [Hint di tabella &#40;Transact-SQL&#41;](/sql/t-sql/queries/hints-transact-sql-table).  
   
@@ -59,15 +59,15 @@ ms.locfileid: "48216672"
   
 -   Service Broker, con limitazioni. Non è possibile accedere a una coda da una stored procedure compilata in modo nativo, né a una coda in un database remoto in una transazione che accede a tabelle ottimizzate per la memoria.  
   
--   Clustering di failover: nell'offerta di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] AlwaysOn, le istanze del cluster di failover AlwaysOn utilizzano la funzionalità clustering di failover di Windows Server (WSFC, Windows Server Failover Clustering) per fornire la disponibilità elevata in locale tramite la ridondanza a livello di istanza del server: l'istanza del cluster di failover. Per altre informazioni, vedere [Istanze del cluster di failover Always On (SQL Server)](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md).  
+-   Clustering di failover: Come parte di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] AlwaysOn, che offre le istanze del Cluster di Failover AlwaysOn usano la funzionalità di Windows Server Failover Clustering (WSFC) per fornire disponibilità elevata locale tramite ridondanza al cluster di failover di un livello di istanza del server istanza di (file FCI). Per altre informazioni, vedere [Istanze del cluster di failover Always On (SQL Server)](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md).  
   
 -   Integrazione con AlwaysOn: in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono disponibili diverse opzioni per creare la disponibilità elevata per un server o un database, incluso AlwaysOn. Per altre informazioni, vedere [Soluzioni a disponibilità elevata &#40;SQL Server&#41;](../../sql-server/failover-clusters/high-availability-solutions-sql-server.md).  
   
--   Log shipping: il log shipping di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consente di inviare automaticamente i backup del log delle transazioni da un database primario in un'istanza del server primario a uno o più database secondari in istanze separate del server secondario. Per altre informazioni, vedere [Informazioni sul log shipping &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md).  
+-   Log shipping: Il log shipping di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consente di inviare automaticamente i backup del log delle transazioni da un database primario in un'istanza del server primario a uno o più database secondari in istanze separate del server secondario. Per altre informazioni, vedere [Informazioni sul log shipping &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md).  
   
 -   La replica transazionale in tabelle ottimizzate per la memoria nei sottoscrittori è supportata con alcune restrizioni. Per altre informazioni, vedere [Replica in sottoscrittori di tabelle con ottimizzazione per la memoria](../replication/replication-to-memory-optimized-table-subscribers.md).  
   
--   Resource Governor: la funzionalità Resource Governor di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permette di gestire il carico di lavoro e l'utilizzo delle risorse di sistema in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Resource Governor permette di specificare i limiti sulla quantità di CPU, I/O fisico e memoria che le richieste dell'applicazione in ingresso possono utilizzare. Per ulteriori informazioni, vedere [Managing Memory for In-Memory OLTP](../../database-engine/managing-memory-for-in-memory-oltp.md) e [Resource Governor](../resource-governor/resource-governor.md).  
+-   Resource Governor: La funzionalità Resource Governor di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permette di gestire il carico di lavoro e l'utilizzo delle risorse di sistema in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Resource Governor permette di specificare i limiti sulla quantità di CPU, I/O fisico e memoria che le richieste dell'applicazione in ingresso possono utilizzare. Per ulteriori informazioni, vedere [Managing Memory for In-Memory OLTP](../../database-engine/managing-memory-for-in-memory-oltp.md) e [Resource Governor](../resource-governor/resource-governor.md).  
   
 -   In OLTP in memoria sono presenti restrizioni per le tabelle codici supportate per le colonne di tipo (var)char nelle tabelle ottimizzate per la memoria e nelle regole di confronto supportate utilizzate negli indici e nelle stored procedure compilate in modo nativo. Per altre informazioni, vedere [Collations and Code Pages](../../database-engine/collations-and-code-pages.md).  
   
@@ -79,9 +79,9 @@ ms.locfileid: "48216672"
 |Funzionalità non supportata|Descrizione della funzionalità|  
 |-------------------------|-------------------------|  
 |Compressione dei dati per tabelle ottimizzate per la memoria.|È possibile utilizzare la funzionalità di compressione dei dati per comprimere i dati in un database e ridurre le dimensioni del database. Per altre informazioni, vedere [Data Compression](../data-compression/data-compression.md).|  
-|Partizionamento di tabelle ottimizzate per la memoria e di indici HASH.|I dati di tabelle e indici partizionati vengono divisi in unità distribuibili tra più filegroup in un database. Per altre informazioni, vedere [Partitioned Tables and Indexes](../partitions/partitioned-tables-and-indexes.md).|  
+|Partizionamento di tabelle ottimizzate per la memoria e di indici HASH.|I dati di tabelle e indici partizionati vengono divisi in unità distribuibili tra più filegroup in un database. Per ulteriori informazioni, vedere [Partitioned Tables and Indexes](../partitions/partitioned-tables-and-indexes.md).|  
 |Transparent Data Encryption (TDE) sul filegroup di dati ottimizzato per la memoria di un database.|Transparent Data Encryption (TDE) esegue la crittografia e la decrittografia I/O in tempo reale dei file di dati e di log. Per altre informazioni sulla crittografia trasparente del database, vedere [Transparent Data Encryption &#40;TDE&#41;](../security/encryption/transparent-data-encryption.md).<br /><br /> È possibile abilitare TDE in un database contenente oggetti di OLTP in memoria. Se la funzionalità TDE è abilitata, i record del log di OLTP in memoria vengono crittografati. I file del checkpoint per le tabelle durevoli non vengono crittografati, anche se TDE è abilitata nel database.|  
-|Replica|Le configurazioni di replica diverse dalla replica transazionale in tabelle ottimizzate per la memoria nei sottoscrittori non sono compatibili con tabelle o viste che fanno riferimento a tabelle ottimizzate per la memoria. La replica tramite sync_mode="snapshot del database" non è supportata se è presente un filegroup ottimizzato per la memoria. Per altre informazioni, vedere [Replication to Memory-Optimized Table Subscribers](../replication/replication-to-memory-optimized-table-subscribers.md).|  
+|Replica|Le configurazioni di replica diverse dalla replica transazionale in tabelle ottimizzate per la memoria nei sottoscrittori non sono compatibili con tabelle o viste che fanno riferimento a tabelle ottimizzate per la memoria. La replica tramite sync_mode = 'database snapshot' non è supportata se è presente un filegroup ottimizzato per la memoria. Per altre informazioni, vedere [Replica in sottoscrittori di tabelle con ottimizzazione per la memoria](../replication/replication-to-memory-optimized-table-subscribers.md).|  
 |MARS (Multiple Active Result Sets)|MARS (Multiple Active Result Set) non è supportato con le tabelle ottimizzate per la memoria. L'errore può inoltre indicare l'utilizzo di un server collegato. Il server collegato può usare MARS. I server collegati non sono supportati con le tabelle ottimizzate per la memoria. Connettersi direttamente al server e al database che ospita le tabelle ottimizzate per la memoria.|  
 |Mirroring|Il mirroring del database è una soluzione che consente di aumentare la disponibilità di un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Per altre informazioni, vedere [Mirroring del database &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md).|  
 |Ricompilazione del log|La ricompilazione del log, tramite il comando attach o l'istruzione ALTER DATABASE, non è supportata per i database che contengono un filegroup MEMORY_OPTIMIZED_DATA.|  
@@ -105,10 +105,10 @@ ms.locfileid: "48216672"
   
  Salvo alcune eccezioni, le transazioni tra database non sono supportate. Nella tabella seguente vengono descritti i casi supportati e le relative restrizioni. Vedere anche [Query tra database](cross-database-queries.md).  
   
-|Database|Allowed|Description|  
+|Database|Allowed|Descrizione|  
 |---------------|-------------|-----------------|  
-|Database utente, model e msdb|no|Query e transazioni tra database non sono supportate.<br /><br /> Query e transazioni che accedono a tabelle ottimizzate per la memoria o a stored procedure compilate in modo nativo non possono accedere ad altri database, ad eccezione del master del database di sistema (accesso in sola lettura) e di tempdb.|  
-|Database delle risorse e tempdb|Sì|Non vi sono restrizioni per le transazioni tra database che, oltre a un singolo database utente, utilizzano solo un database delle risorse e tempdb.|  
+|Database utente, model e msdb|No|Query e transazioni tra database non sono supportate.<br /><br /> Query e transazioni che accedono a tabelle ottimizzate per la memoria o a stored procedure compilate in modo nativo non possono accedere ad altri database, ad eccezione del master del database di sistema (accesso in sola lettura) e di tempdb.|  
+|Database delle risorse e tempdb|Yes|Non vi sono restrizioni per le transazioni tra database che, oltre a un singolo database utente, utilizzano solo un database delle risorse e tempdb.|  
 |master|Sola lettura|Il commit delle transazioni tra database che riguardano OLTP in memoria e il database master non viene eseguito se sono incluse scritture nel database master. Le transazioni tra database che eseguono solo letture dal master e utilizzano un solo database utente sono consentite.|  
   
 ## <a name="see-also"></a>Vedere anche  

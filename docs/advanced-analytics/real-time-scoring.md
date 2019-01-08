@@ -1,5 +1,5 @@
 ---
-title: Assegnazione dei punteggi in tempo reale in SQL Server machine Learning Services | Microsoft Docs
+title: Assegnazione del punteggio utilizzando sp_rxPredict stored procedure - servizi di SQL Server Machine Learning in tempo reale
 description: Generare stime usando sp_rxPredict, assegnazione dei punteggi dei dati di input in base a un modello con training preliminare scritte in R in SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: dce0928c0675172c503e6783aa25d6cbcaec9b5f
-ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
+ms.openlocfilehash: def60a6de7d5a6f3641a6de88410543e9e592ba4
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46713514"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53645160"
 ---
 # <a name="real-time-scoring-with-sprxpredict-in-sql-server-machine-learning"></a>In tempo reale di assegnazione dei punteggi con sp_rxPredict in SQL Server machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -177,7 +177,7 @@ Si chiama sp\_rxPredict come si procederebbe per un stored procedure. Nella vers
 
 Poiché il formato binario è uguale a quello usato dalla funzione di stima, è possibile usare la tabella di modelli e i dati dell'esempio precedente.
 
-```SQL
+```sql
 DECLARE @irismodel varbinary(max)
 SELECT @irismodel = [native_model_object] from [ml_models]
 WHERE model_name = 'iris.dtree' 

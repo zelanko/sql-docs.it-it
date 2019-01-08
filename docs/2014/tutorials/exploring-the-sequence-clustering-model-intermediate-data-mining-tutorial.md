@@ -11,15 +11,15 @@ ms.assetid: f8a485d5-47ed-4dd5-bb66-ef4d6d463845
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a30991f6104263d4c6f497a721cee340f3dc9e2b
-ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
+ms.openlocfilehash: fe57736160762f90f574f835673e55d19107fa15
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49085477"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590185"
 ---
 # <a name="exploring-the-sequence-clustering-model-intermediate-data-mining-tutorial"></a>Esplorazione del modello Sequence Clustering (Esercitazione intermedia sul data mining)
-  Ora che è stata compilata la **Sequence Clustering with Region** modello, è possibile esaminarlo utilizzando il [!INCLUDE[msCoName](../includes/msconame-md.md)] Visualizzatore Sequence Clustering nel **visualizzatore modello di Data Mining** scheda della finestra di progettazione modelli di Data Mining. Il [!INCLUDE[msCoName](../includes/msconame-md.md)] Visualizzatore Sequence Clustering include cinque schede: **diagramma dei Cluster**, **profili Cluster**, **caratteristiche Cluster**,  **ClusterDiscrimination**, e **transizioni di stato**. Per altre informazioni su come utilizzare questo visualizzatore, vedere [esplorare un modello usando il visualizzatore Microsoft Sequence Clustering](../../2014/analysis-services/data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md).  
+  Ora che è stata compilata la **Sequence Clustering with Region** modello, è possibile esaminarlo utilizzando il [!INCLUDE[msCoName](../includes/msconame-md.md)] Visualizzatore Sequence Clustering nel **visualizzatore modello di Data Mining** scheda della finestra di progettazione modelli di Data Mining. Il [!INCLUDE[msCoName](../includes/msconame-md.md)] Visualizzatore Sequence Clustering include cinque schede: **Diagramma dei cluster**, **profili Cluster**, **caratteristiche del Cluster**, **ClusterDiscrimination**, e **transizionidistato**. Per altre informazioni su come utilizzare questo visualizzatore, vedere [esplorare un modello usando il visualizzatore Microsoft Sequence Clustering](../../2014/analysis-services/data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md).  
   
 -   [Scheda diagramma dei cluster](#bkmk_CDiagram)  
   
@@ -171,7 +171,7 @@ ms.locfileid: "49085477"
  [Torna all'inizio](#bkmk_CDiagram)  
   
 ##  <a name="bkmk_CDiscrim2"></a> Scheda Analisi discriminante tra cluster  
- Il **analisi discriminante tra Cluster** scheda consente di confrontare due cluster, per determinare gli attributi che distinguono un particolare cluster da un altro cluster. La scheda contiene quattro colonne: **variabili**, **valori**, **Cluster 1**, e **Cluster 2**.  È possibile scegliere qualsiasi cluster da utilizzare come **Cluster 1** e **Cluster 2**.  
+ Il **analisi discriminante tra Cluster** scheda consente di confrontare due cluster, per determinare gli attributi che distinguono un particolare cluster da un altro cluster. La scheda contiene quattro colonne: **Le variabili**, **valori**, **Cluster 1**, e **Cluster 2**.  È possibile scegliere qualsiasi cluster da utilizzare come **Cluster 1** e **Cluster 2**.  
   
  Il **variabili** colonna indica il nome dell'attributo, che può essere un nome di colonna o combinazione di nome di colonna e la parola **transizione**. Il **valori** colonna Mostra il valore esatto dell'attributo o della transizione. Le barre ombreggiate nelle colonne relative **Cluster 1** e **Cluster 2** indicano la forza dell'attributo nei cluster che si desidera confrontare. Più lunga è la barra, maggiore è la probabilità che il cluster includa case con tale attributo.  
   
@@ -179,7 +179,7 @@ ms.locfileid: "49085477"
   
 1.  Nel **analisi discriminante tra Cluster** scheda, per **Cluster 1**, selezionare `Pacific Cluster`.  
   
-     Per impostazione predefinita, la selezione per **Cluster 2** diventa **complemento del Pacifico * * * Cluster**.  
+     Per impostazione predefinita, la selezione per **Cluster 2** diventa **complemento del Cluster Pacifico**.  
   
      L'attributo principale che distingue `Pacific Cluster` da tutti gli altri casi è l'area. L'influenza dell'attributo Region sul clustering nasconde gli altri attributi. Per evitare questo effetto, provare a eseguire il confronto tra alcuni dei cluster più piccoli. Questa operazione modifica l'elenco degli attributi, che potrebbe ora includere più transizioni tra modelli.  
   

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 5ae69ddf-27c3-467c-9af1-c89ec383f661
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5df2aac01300c006858a84097bf346875f175c82
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: 306d810d844140caf0d3ee0e5cfe04fcae55e3fa
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120139"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53360003"
 ---
 # <a name="cdc-flow-components"></a>Componenti di flusso CDC
   I componenti Change Data Capture di Attunity per Microsoft [!INCLUDE[ssISCurrent](../../../includes/ssiscurrent-md.md)] consentono agli sviluppatori SSIS di utilizzare CDC e riducono la complessità dei pacchetti CDC.  
@@ -172,7 +171,7 @@ ms.locfileid: "49120139"
 ## <a name="cdc-state"></a>Stato CDC  
  Ad ogni gruppo CDC è associato uno stato, rappresentato da una stringa con un formato specifico. Per altre informazioni, vedere [Attività di controllo CDC](../control-flow/cdc-control-task.md). Nella tabella seguente vengono illustrati i possibili valori dello stato CDC.  
   
-|State|Description|  
+|State|Descrizione|  
 |-----------|-----------------|  
 |0-(INITIAL)|Lo stato esistente prima dell'esecuzione di qualsiasi pacchetto nel gruppo CDC corrente. È anche lo stato quando lo stato CDC è vuoto.<br /><br /> Per altre informazioni sulle operazioni dell'attività di controllo CDC, vedere [Attività di controllo CDC](../control-flow/cdc-control-task.md).|  
 |1-ILSTART (Initial-Load-Started)|Si tratta dello stato esistente quando il pacchetto di caricamento iniziale viene avviato. Si verifica dopo la chiamata dell'attività di controllo CDC dall'operazione **MarkInitialLoadStart** .<br /><br /> Per altre informazioni sulle operazioni dell'attività di controllo CDC, vedere [Attività di controllo CDC](../control-flow/cdc-control-task.md).|  
@@ -191,7 +190,7 @@ ms.locfileid: "49120139"
   
  Dopo avere eseguito correttamente il pacchetto di caricamento iniziale, il pacchetto di aggiornamento Trickle-Feed viene eseguito ripetutamente in base a una pianificazione predeterminata per elaborare le modifiche alle tabelle di origine. Ogni esecuzione del pacchetto di aggiornamento Trickle-Feed è un'esecuzione CDC.  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>In questa sezione  
   
 -   [Origine CDC](cdc-source.md)  
   
@@ -205,17 +204,17 @@ ms.locfileid: "49120139"
   
 ## <a name="related-content"></a>Contenuto correlato  
   
--   Intervento nel blog [CDC in SSIS per SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=242543) nel sito Web mattmasson.com.  
+-   Intervento nel blog [CDC in SSIS per SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=242543) nel sito Web mattmasson.com.  
   
--   Intervento nel blog sull'impostazione del servizio CDC [CDC for Oracle in SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=247827)nel sito Web blogs.msdn.com.  
+-   Intervento nel blog sull'impostazione del servizio CDC [CDC for Oracle in SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=247827)nel sito Web blogs.msdn.com.  
   
--   Articolo tecnico [Installing Microsoft SQL Server 2012 Change Data Capture for Oracle by Attunity](http://go.microsoft.com/fwlink/?LinkId=252958)(Installazione di Microsoft SQL Server 2012 Change Data Capture per Oracle di Attunity) nel sito Web social.technet.microsoft.com.  
+-   Articolo tecnico [Installing Microsoft SQL Server 2012 Change Data Capture for Oracle by Attunity](https://go.microsoft.com/fwlink/?LinkId=252958)(Installazione di Microsoft SQL Server 2012 Change Data Capture per Oracle di Attunity) nel sito Web social.technet.microsoft.com.  
   
--   Articolo tecnico [Troubleshoot Configuration Issues in Microsoft Change Data Capture for Oracle by Attunity](http://go.microsoft.com/fwlink/?LinkId=252960)(Risoluzione dei problemi di configurazione in Microsoft Change Data Capture per Oracle di Attunity) nel sito Web social.technet.microsoft.com.  
+-   Articolo tecnico [Troubleshoot Configuration Issues in Microsoft Change Data Capture for Oracle by Attunity](https://go.microsoft.com/fwlink/?LinkId=252960)(Risoluzione dei problemi di configurazione in Microsoft Change Data Capture per Oracle di Attunity) nel sito Web social.technet.microsoft.com.  
   
--   Articolo tecnico [Troubleshoot CDC Instance Errors in Microsoft Change Data Capture for Oracle by Attunity](http://go.microsoft.com/fwlink/?LinkId=252961)(Risoluzione degli errori di istanze di CDC in Microsoft Change Data Capture per Oracle di Attunity) nel sito Web social.technet.microsoft.com.  
+-   Articolo tecnico [Troubleshoot CDC Instance Errors in Microsoft Change Data Capture for Oracle by Attunity](https://go.microsoft.com/fwlink/?LinkId=252961)(Risoluzione degli errori di istanze di CDC in Microsoft Change Data Capture per Oracle di Attunity) nel sito Web social.technet.microsoft.com.  
   
--   Video [CDC for Oracle Databases using SQL Server Integration Services 2012 (SQL Server Video)](http://technet.microsoft.com/sqlserver/jj218898)(CDC per database Oracle tramite SQL Server Integration Services 2012) nel sito Web technet.microsoft.com.  
+-   Video [CDC for Oracle Databases using SQL Server Integration Services 2012 (SQL Server Video)](https://technet.microsoft.com/sqlserver/jj218898)(CDC per database Oracle tramite SQL Server Integration Services 2012) nel sito Web technet.microsoft.com.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Attività di controllo CDC](../control-flow/cdc-control-task.md)  

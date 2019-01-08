@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: configuration
 ms.topic: conceptual
 f1_keywords:
 - SQL12.SWB.create.ucp.progress.F1
@@ -20,15 +20,15 @@ ms.assetid: d5335124-1625-47ce-b4ac-36078967158c
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 753866ef0ddb01b42bbe6c5f03e007075568d53e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c027b6648da799be5a2b9381a0f19dc437563242
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189271"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53377663"
 ---
 # <a name="create-a-sql-server-utility-control-point-sql-server-utility"></a>Creazione di un punto di controllo dell'utilità di SQL Server (Utilità SQL Server)
-  Un'organizzazione può avere più istanze di Utilità [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e ogni istanza di Utilità [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] può gestire molte istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e applicazioni livello dati. Ogni istanza di Utilità [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ha soltanto un punto di controllo dell'utilità. È necessario creare un nuovo punto di controllo dell'utilità per Utilità [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Ogni istanza gestita di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e ogni applicazione livello dati è membro di una sola istanza di Utilità [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ed è gestita da un singolo punto di controllo dell'utilità.  
+  Un'organizzazione può avere più istanze di Utilità [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e ogni istanza di Utilità [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] può gestire molte istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e applicazioni livello dati. Ogni istanza di Utilità [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ha soltanto un punto di controllo dell'utilità. È necessario creare un nuovo punto di controllo dell'utilità per Utilità [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Ogni istanza gestita di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e ogni applicazione livello dati è membro di una sola utilità di Utilità [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ed è gestita da un singolo punto di controllo dell'utilità.  
   
  Il punto di controllo dell'utilità raccoglie informazioni sulla configurazione e sulle prestazioni delle istanze gestite di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ogni 15 minuti. Queste informazioni vengono archiviate nel data warehouse di gestione dell'utilità (UMDW) nel punto di controllo dell'utilità; il nome del file UMDW è sysutility_mdw. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengono confrontati con i criteri per consentire l'identificazione di colli di bottiglia nell'utilizzo delle risorse e le possibilità di consolidamento.  
   
@@ -76,7 +76,7 @@ ms.locfileid: "48189271"
   
 -   La procedura deve essere eseguita da un utente che disponga di autorizzazioni sysadmin, le stesse necessarie per la creazione di un punto di controllo dell'utilità.  
   
--   Tutte le istanze gestite di SQL Server devono essere rimosse dal punto di controllo dell'utilità, che rappresenta un'istanza gestita di SQL Server. Per ulteriori informazioni, vedere [Procedura: Rimozione di un'istanza di SQL Server da Utilità SQL Server](http://go.microsoft.com/fwlink/?LinkId=169392).  
+-   Tutte le istanze gestite di SQL Server devono essere rimosse dal punto di controllo dell'utilità, che rappresenta un'istanza gestita di SQL Server. Per altre informazioni, vedere [come: Rimuovere un'istanza di SQL Server da utilità SQL Server](https://go.microsoft.com/fwlink/?LinkId=169392).  
   
  Utilizzare questa procedura per rimuovere un punto di controllo dell'utilità di SQL Server da Utilità SQL Server. Al termine dell'operazione sarà nuovamente possibile creare un punto di controllo dell'utilità nell'istanza di SQL Server.  
   
@@ -131,7 +131,7 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
 ##  <a name="Instance_name"></a> Specifica istanza  
  Specificare le informazioni seguenti sul punto di controllo dell'utilità che si desidera creare:  
   
--   **Nome istanza** : per selezionare un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dalla finestra di dialogo della connessione, fare clic su **Connetti**. Specificare il nome del computer e il nome dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nel formato NomeComputer\NomeIstanza.  
+-   **Nome istanza**: per selezionare un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dalla finestra di dialogo della connessione, fare clic su **Connetti**. Specificare il nome del computer e il nome dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nel formato NomeComputer\NomeIstanza.  
   
 -   **Nome utilità** : specificare un nome che verrà usato per identificare Utilità [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in rete.  
   
@@ -220,7 +220,7 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
  Utilizzare l'esempio seguente per creare un nuovo punto di controllo dell'utilità:  
   
 ```  
-> $UtilityInstance = new-object –Type Microsoft.SqlServer.Management.Smo.Server "ComputerName\UCP-Name";  
+> $UtilityInstance = new-object -Type Microsoft.SqlServer.Management.Smo.Server "ComputerName\UCP-Name";  
 > $SqlStoreConnection = new-object -Type Microsoft.SqlServer.Management.Sdk.Sfc.SqlStoreConnection $UtilityInstance.ConnectionContext.SqlConnectionObject;  
 > $Utility = [Microsoft.SqlServer.Management.Utility.Utility]::CreateUtility("Utility", $SqlStoreConnection, "ProxyAccount", "ProxyAccountPassword");  
 ```  

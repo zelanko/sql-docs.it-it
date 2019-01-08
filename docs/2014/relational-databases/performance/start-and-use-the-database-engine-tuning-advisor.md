@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: performance
 ms.topic: conceptual
 f1_keywords:
 - sql12.dta.advancedtuningoptions.f1
@@ -20,18 +19,18 @@ ms.assetid: a4e3226a-3917-4ec8-bdf0-472879d231c9
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d587b8cd2fb4342ddba42ac85a1d595d6b7b23c1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5ec9ec3dacc91fd36b64ec8b68ea66c42bdc3371
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48097821"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53356381"
 ---
 # <a name="start-and-use-the-database-engine-tuning-advisor"></a>Avvio e utilizzo di Ottimizzazione guidata motore di database
   In questo argomento viene descritto come avviare e utilizzare Ottimizzazione guidata motore di database in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Per informazioni su come visualizzare e usare i risultati dopo l'ottimizzazione di un database, vedere [Visualizzare e utilizzare l'output di Ottimizzazione guidata motore di database](database-engine-tuning-advisor.md).  
   
 ##  <a name="Initialize"></a> Inizializzare Ottimizzazione guidata motore di database  
- Al primo utilizzo, è necessario che lo strumento Ottimizzazione guidata motore di database sia avviato da un utente membro del ruolo predefinito del server **sysadmin** . Infatti, devono essere create in diverse tabelle di sistema di `msdb` database per supportare le operazioni di ottimizzazione. L'inizializzazione consente anche agli utenti membri del ruolo predefinito del database **db_owner** di ottimizzare carichi di lavoro nelle tabelle dei database di cui sono proprietari.  
+ Al primo utilizzo, è necessario che lo strumento Ottimizzazione guidata motore di database sia avviato da un utente membro del ruolo predefinito del server **sysadmin** . Questa operazione viene richiesta perché è necessario creare diverse tabelle di sistema nel database `msdb` per supportare operazioni di ottimizzazione. L'inizializzazione consente anche agli utenti membri del ruolo predefinito del database **db_owner** di ottimizzare carichi di lavoro nelle tabelle dei database di cui sono proprietari.  
   
  Un utente con le autorizzazioni di amministratore di sistema deve eseguire una delle azioni seguenti.  
   
@@ -213,7 +212,7 @@ ms.locfileid: "48097821"
 >  La sospensione di Ottimizzazione guidata motore di database non è supportata. Se si fa clic sul pulsante della barra degli strumenti **Avvia analisi** dopo aver fatto clic sui pulsanti della barra degli strumenti **Arresta analisi** o **Arresta analisi (con indicazioni)** , Ottimizzazione guidata motore di database avvia una nuova sessione di ottimizzazione.  
   
 ###  <a name="dta"></a> Utilizzare l'utilità dta  
- L'utilità [dta](../../tools/dta/dta-utility.md) fornisce un file eseguibile dal prompt dei comandi che consente di ottimizzare i database utilizzando le funzionalità di Ottimizzazione guidata motore di database in file batch e script. L'utilità **può essere utilizzato con l'interfaccia grafica di Ottimizzazione guidata motore di database e mediante l'utilità del prompt dei comandi** utilizza le voci della cache dei piani, i file di traccia, le tabelle di traccia e gli script [!INCLUDE[tsql](../../includes/tsql-md.md)] come carichi di lavoro. Utilizza inoltre l'input XML conforme a XML Schema di Ottimizzazione guidata motore di database, disponibile presso il [sito Web di Microsoft specificato](http://go.microsoft.com/fwlink/?linkid=43100).  
+ L'utilità [dta](../../tools/dta/dta-utility.md) fornisce un file eseguibile dal prompt dei comandi che consente di ottimizzare i database utilizzando le funzionalità di Ottimizzazione guidata motore di database in file batch e script. L'utilità **può essere utilizzato con l'interfaccia grafica di Ottimizzazione guidata motore di database e mediante l'utilità del prompt dei comandi** utilizza le voci della cache dei piani, i file di traccia, le tabelle di traccia e gli script [!INCLUDE[tsql](../../includes/tsql-md.md)] come carichi di lavoro. Utilizza inoltre l'input XML conforme a XML Schema di Ottimizzazione guidata motore di database, disponibile presso il [sito Web di Microsoft specificato](https://go.microsoft.com/fwlink/?linkid=43100).  
   
  Prima di ottimizzare un carico di lavoro tramite l'utilità **dta** , considerare quanto segue:  
   
@@ -235,16 +234,16 @@ ms.locfileid: "48097821"
     dta -E -D DatabaseName -ip -s SessionName  
     ```  
   
-2.  Per modificare il numero di eventi da utilizzare per l'analisi, specificare l'opzione **-n** . Nell'esempio seguente viene aumentato a 2.000 il numero di voci della cache.  
+2.  Per modificare il numero di eventi da usare per l'analisi, specificare l'opzione **-n**. Nell'esempio seguente viene aumentato a 2.000 il numero di voci della cache.  
   
     ```  
-    dta -E -D DatabaseName -ip –n 2000-s SessionName1  
+    dta -E -D DatabaseName -ip -n 2000-s SessionName1  
     ```  
   
 3.  Per analizzare eventi per tutti i database nell'istanza, specificare l'opzione **-ipf** .  
   
     ```  
-    dta -E -D DatabaseName -ip –ipf –n 2000 -s SessionName2  
+    dta -E -D DatabaseName -ip -ipf -n 2000 -s SessionName2  
     ```  
   
 ##### <a name="to-tune-a-database-by-using-a-workload-and-dta-utility-default-settings"></a>Per ottimizzare un database utilizzando un carico di lavoro e le impostazioni predefinite dell'utilità dta  
@@ -303,7 +302,7 @@ ms.locfileid: "48097821"
   
  C:\Programmi\Microsoft SQL Server\100\Tools\Binn\schemas\sqlserver\2004\07\dta\dtaschema.xsd  
   
- L'XML Schema di Ottimizzazione guidata [!INCLUDE[ssDE](../../includes/ssde-md.md)] è inoltre disponibile online in questo [sito Web Microsoft](http://go.microsoft.com/fwlink/?linkid=43100&clcid=0x409).  
+ L'XML Schema di Ottimizzazione guidata [!INCLUDE[ssDE](../../includes/ssde-md.md)] è inoltre disponibile online in questo [sito Web Microsoft](https://go.microsoft.com/fwlink/?linkid=43100&clcid=0x409).  
   
  in cui sono disponibili molti XML Schema di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Scorrere la pagina verso il basso fino a visualizzare la riga corrispondente a Ottimizzazione guidata [!INCLUDE[ssDE](../../includes/ssde-md.md)] .  
   
@@ -444,7 +443,7 @@ database_name.owner_name.table_name
  Vengono incluse solo le indicazioni per l'aggiunta di viste indicizzate. Non verranno generate indicazioni per gli indici cluster e non cluster.  
   
  **Includi indici filtrati**  
- Vengono incluse le indicazioni per l'aggiunta di indici filtrati. Questa opzione è disponibile se si seleziona una delle strutture di progettazione fisiche **Indici e viste indicizzate**, **Indici**o **Indici non cluster**.  
+ Vengono incluse le indicazioni per l'aggiunta di indici filtrati. Questa opzione è disponibile se si seleziona una di queste strutture di progettazione fisica: **Indici e viste indicizzate**, **indici**, o **indici non cluster**.  
   
  **Indici**  
  Vengono incluse solo le indicazioni per l'aggiunta di indici cluster e non cluster. Non verranno generate indicazioni per le viste indicizzate.  

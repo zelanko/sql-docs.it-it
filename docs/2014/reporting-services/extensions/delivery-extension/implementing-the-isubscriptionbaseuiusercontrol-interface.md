@@ -16,12 +16,12 @@ ms.assetid: a1e9122c-aa0b-45de-b536-4f1202875ab1
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 7885f486ef19b0fa5424857bc03146f5d0b1c8bd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f87046df4e41f40bc5de5f2a720247738841ff24
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48220771"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376343"
 ---
 # <a name="implementing-the-isubscriptionbaseuiusercontrol-interface-for-a-delivery-extension"></a>Implementazione dell'interfaccia ISubscriptionBaseUIUserControl per un'estensione per il recapito
   Le estensioni per il recapito di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] possono contenere un'implementazione di un'interfaccia utente di sottoscrizione per la raccolta di informazioni specifiche dell'estensione in Gestione report. L'interfaccia utente viene richiamata quando un utente crea una nuova sottoscrizione o ne modifica una esistente. Quando viene creata una nuova sottoscrizione, nell'interfaccia utente vengono visualizzati i valori predefiniti appropriati e gli utenti possono interagire con il provider di recapito. Quando una sottoscrizione viene modificata, l'interfaccia utente viene prepopolata con le informazioni nella sottoscrizione corrente.  
@@ -35,7 +35,7 @@ ms.locfileid: "48220771"
   
  L'interfaccia <xref:Microsoft.ReportingServices.Interfaces.ISubscriptionBaseUIUserControl> estende <xref:Microsoft.ReportingServices.Interfaces.IExtension>. Il controllo utente che implementa <xref:Microsoft.ReportingServices.Interfaces.ISubscriptionBaseUIUserControl> deve anche ereditare da **System.Web.UI.WebControls.WebControl**. Per altre informazioni sulla classe **WebControl**, vedere la Guida per gli sviluppatori di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)].  
   
- Per un esempio di uso dell'interfaccia di <xref:Microsoft.ReportingServices.Interfaces.ISubscriptionBaseUIUserControl>, vedere la pagina degli [esempi del prodotto SQL Server Reporting Services](http://go.microsoft.com/fwlink/?LinkId=177889).  
+ Per un esempio di uso dell'interfaccia di <xref:Microsoft.ReportingServices.Interfaces.ISubscriptionBaseUIUserControl>, vedere la pagina degli [esempi del prodotto SQL Server Reporting Services](https://go.microsoft.com/fwlink/?LinkId=177889).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Implementazione di un'estensione per il recapito](implementing-a-delivery-extension.md)   

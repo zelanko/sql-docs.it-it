@@ -1,5 +1,5 @@
 ---
-title: 'Esercitazione: Creazione di un report tabella semplice (Generatore report) | Microsoft Docs'
+title: 'Esercitazione: Creazione di un Report matrice (Generatore Report) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -11,19 +11,19 @@ ms.assetid: 9ee19c2e-2a8c-4bb0-9274-04a5812c2e96
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 659afc2b2d1536abcf34dad5a40a48efe0f17169
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 45e488f189cf9068531b927b1b28bfde621555da
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159501"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53353389"
 ---
-# <a name="tutorial-creating-a-matrix-report-report-builder"></a>Esercitazione: Creazione di un report matrice (Generatore report)
+# <a name="tutorial-creating-a-matrix-report-report-builder"></a>Esercitazione: Creazione di un Report matrice (Generatore Report)
   In questa esercitazione viene illustrato come creare un report matrice semplice basato su dati di vendita di esempio. La matrice presenta gruppi di righe e di colonne annidati, nonché un gruppo di colonne adiacente. Verrà inoltre illustrato come formattare le colonne e ruotare il testo. Nell'immagine seguente viene illustrato un report simile a quello che verrà creato.  
   
  ![rs_CreateMatixReportTutorial](../../2014/tutorials/media/rs-creatematixreporttutorial.gif "rs_CreateMatixReportTutorial")  
   
- Una versione avanzata del report che verrà creato in questa esercitazione è disponibile come report di esempio di Generatore report di [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Per altre informazioni sul download di questo report di esempio e ad altri utenti, vedere [Report di Generatore report di esempio](http://go.microsoft.com/fwlink/?LinkId=184851).  
+ Una versione avanzata del report che verrà creato in questa esercitazione è disponibile come report di esempio di Generatore report di [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Per altre informazioni sul download di questo report di esempio e ad altri utenti, vedere [Report di Generatore report di esempio](https://go.microsoft.com/fwlink/?LinkId=184851).  
   
 ##  <a name="BackToTop"></a> Lezioni dell'esercitazione  
  In questa esercitazione verranno illustrate le procedure per:  
@@ -48,7 +48,7 @@ ms.locfileid: "48159501"
   
 1.  [Ruotare il testo casella 270 gradi](#RotateTextBox)  
   
- Il tempo stimato per il completare l'esercitazione è di 20 minuti.  
+ Tempo previsto per il completamento di questa esercitazione: 20 minuti.  
   
 ## <a name="requirements"></a>Requisiti  
  Per altre informazioni sui requisiti, vedere [Prerequisiti per le esercitazioni &#40;Generatore report&#41;](../reporting-services/report-builder-tutorials.md).  
@@ -74,7 +74,7 @@ ms.locfileid: "48159501"
   
 5.  Scegliere **Avanti**.  
   
-6.  Nel **scegliere una connessione a un'origine dati** pagina, selezionare un'origine dati esistente o individuare il server di report e quindi selezionare un'origine dati. Se non è disponibile un'origine dati o non si dispone dell'accesso a un server di report, sarà possibile utilizzare un'origine dati incorporata. Per altre informazioni sulla creazione di un'origine dati incorporata, vedere [esercitazione: creazione di un Report tabella semplice &#40;Generatore Report&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+6.  Nel **scegliere una connessione a un'origine dati** pagina, selezionare un'origine dati esistente o individuare il server di report e quindi selezionare un'origine dati. Se non è disponibile un'origine dati o non si dispone dell'accesso a un server di report, sarà possibile utilizzare un'origine dati incorporata. Per altre informazioni sulla creazione di un'origine dati incorporata, vedere [esercitazione: Creazione di un Report tabella semplice &#40;Generatore Report&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
 7.  Scegliere **Avanti**.  
   
@@ -160,7 +160,7 @@ ms.locfileid: "48159501"
   
 13. Scegliere **Fine**.  
   
-     La matrice viene aggiunta all'area di progettazione. Nel riquadro Gruppi di righe vengono visualizzati due gruppi di righe, ovvero Territory e SalesDate. Nel riquadro Gruppi di colonne vengono visualizzati due gruppi di colonne, ovvero Subcategory e Product. I dati dettaglio costituiscono tutti i dati recuperati dalla query del set di dati.  
+     La matrice viene aggiunta all'area di progettazione. Nel riquadro gruppi di righe Mostra due gruppi di righe: Territory e SalesDate. Nel riquadro gruppi di colonne Mostra due gruppi di colonne: SubCategory e Product. I dati dettaglio costituiscono tutti i dati recuperati dalla query del set di dati.  
   
 14. Fare clic su **Esegui** per visualizzare l'anteprima del report.  
   

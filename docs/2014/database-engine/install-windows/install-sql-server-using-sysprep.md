@@ -10,12 +10,12 @@ ms.assetid: 11f4ed8a-aaa9-417b-bdd5-204f551c6bb6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4d9bcc1a87bd4853736cdc43d597e58728b848e1
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: 8ba3763c9ccf28286c61e87f4105c3d3293351dd
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018266"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53371053"
 ---
 # <a name="install-sql-server-2014-using-sysprep"></a>Installare SQL Server 2014 tramite SysPrep
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Le azioni di installazione correlate a SysPrep sono accessibili tramite Centro installazione. Nella pagina **Avanzate** di **Centro installazione** sono disponibili due opzioni: **Preparazione immagine di un'istanza autonoma di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** e **Completamento immagine di un'istanza autonoma predisposta di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**. Nelle sezioni di [preparazione](#prepare) e [completamento](#complete) viene descritto in modo dettagliato il processo di installazione. Per altre informazioni, vedere [Considerazioni sull'installazione di SQL Server tramite SysPrep](considerations-for-installing-sql-server-using-sysprep.md).  
@@ -53,7 +53,7 @@ ms.locfileid: "51018266"
 -   [Modifica o disinstallazione di un'istanza completata di SQL Server.](install-sql-server-using-sysprep.md#bk_modifying_uninstalling)  
   
 ##  <a name="sysprep"></a> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Supporto dei cluster di SysPrep  
- A partire da [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], SysPrep supporta le istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cluster nelle installazioni dalla riga di comando. Per altre informazioni, vedere [Che cos'è SysPrep](http://msdn.microsoft.com/library/cc721940\(v=WS.10\).aspx).  
+ A partire da [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], SysPrep supporta le istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cluster nelle installazioni dalla riga di comando. Per altre informazioni, vedere [Che cos'è SysPrep](https://msdn.microsoft.com/library/cc721940\(v=WS.10\).aspx).  
   
 #### <a name="to-prepare-a-includessnoversionincludesssnoversion-mdmd-failover-cluster-unattended"></a>Per preparare un cluster di failover di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (esecuzione automatica)  
   
@@ -69,7 +69,7 @@ ms.locfileid: "51018266"
   
 3.  Creare il cluster di failover di Windows.  
   
-4.  Eseguire setup.exe con tutti i nodi di `/ACTION=PrepareFailoverCluster`. Esempio:  
+4.  Eseguire setup.exe con tutti i nodi di `/ACTION=PrepareFailoverCluster`. Ad esempio:  
   
     ```  
     setup.exe /q /ACTION=PrepareFailoverCluster /InstanceName=<InstanceName> /Features=SQLEngine  /SQLSVCACCOUNT="<DomainName\UserName>" /SQLSVCPASSWORD="xxxxxxxxxxx"  /IACCEPTSQLSERVERLICENSETERMS  
@@ -131,13 +131,13 @@ ms.locfileid: "51018266"
   
 11. Nella pagina Configurazione dell'istanza specificare l'ID istanza per l'istanza. Per continuare, fare clic su **Avanti** .  
   
-     **ID istanza** : ID istanza usato per identificare le directory di installazione e le chiavi del Registro di sistema per l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si tratta del caso delle istanze predefinite e delle istanze denominate. Se durante il passaggio per il completamento l'istanza predisposta viene completata come istanza predefinita, il nome dell'istanza viene sovrascritto come MSSQLSERVER. L'ID istanza rimane lo stesso di quello specificato.  
+     **ID istanza**: ID istanza usato per identificare le directory di installazione e le chiavi del Registro di sistema per l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si tratta del caso delle istanze predefinite e delle istanze denominate. Se durante il passaggio per il completamento l'istanza predisposta viene completata come istanza predefinita, il nome dell'istanza viene sovrascritto come MSSQLSERVER. L'ID istanza rimane lo stesso di quello specificato.  
   
-     **Directory radice istanza** : per impostazione predefinita, la directory radice dell'istanza è [!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]. Per specificare una directory radice non predefinita, usare il campo disponibile o fare clic su **Sfoglia** per individuare una cartella di installazione. La directory specificata nel passaggio relativo alla preparazione sarà utilizzata durante la configurazione nel passaggio per il completamento.  
+     **Directory radice istanza**: per impostazione predefinita, la directory radice dell'istanza è [!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]. Per specificare una directory radice non predefinita, usare il campo disponibile o fare clic su **Sfoglia** per individuare una cartella di installazione. La directory specificata nel passaggio relativo alla preparazione sarà utilizzata durante la configurazione nel passaggio per il completamento.  
   
      Tutti i Service Pack e gli aggiornamenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verranno applicati a ogni componente di un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-     **Istanze installate** : nella griglia vengono visualizzate le istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] presenti nel computer in cui viene eseguito il programma di installazione.  
+     **Istanze installate**: nella griglia vengono visualizzate le istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] presenti nel computer in cui viene eseguito il programma di installazione.  
   
 12. Nella pagina **Requisiti di spazio su disco** viene calcolato lo spazio su disco necessario per le funzionalità specificate. Tale spazio viene quindi confrontato con lo spazio su disco disponibile.  
   
@@ -171,7 +171,7 @@ ms.locfileid: "51018266"
   
 7.  Nella pagina **Seleziona istanza predisposta** selezionare l'istanza predisposta che si vuole completare dalla casella di riepilogo a discesa. Selezionare l'istanza non configurata nell'elenco **ID istanza** .  
   
-     **Istanze installate** : in questa griglia vengono visualizzate tutte le istanze, comprese quelle predisposte nel computer.  
+     **Istanze installate:** la griglia mostra tutte le istanze, incluse tutte le istanze preparate nel computer.  
   
 8.  Nella pagina **Esame funzionalità** verranno visualizzate le funzionalità selezionate e i componenti inclusi nell'istallazione durante il passaggio relativo alla preparazione. Se si vogliono aggiungere più funzionalità all'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] senza includerle nell'istanza predisposta, è prima necessario completare questo passaggio per completare l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , quindi aggiungere le funzionalità da **Aggiungi funzionalità** in **Centro installazione**.  
   
@@ -180,9 +180,9 @@ ms.locfileid: "51018266"
   
 9. Nella pagina Configurazione dell'istanza specificare il nome dell'istanza per l'istanza predisposta. Questo nome corrisponde a quello dell'istanza una volta che è stata completata la configurazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per continuare, fare clic su **Avanti** .  
   
-     **ID istanza** : ID istanza usato per identificare le directory di installazione e le chiavi del Registro di sistema per l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si tratta del caso delle istanze predefinite e delle istanze denominate. Se durante il passaggio per il completamento l'istanza predisposta viene completata come istanza predefinita, il nome dell'istanza viene sovrascritto come MSSQLSERVER. L'ID istanza rimane lo stesso di quello specificato durante il passaggio relativo alla preparazione.  
+     **ID istanza**: ID istanza usato per identificare le directory di installazione e le chiavi del Registro di sistema per l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si tratta del caso delle istanze predefinite e delle istanze denominate. Se durante il passaggio per il completamento l'istanza predisposta viene completata come istanza predefinita, il nome dell'istanza viene sovrascritto come MSSQLSERVER. L'ID istanza rimane lo stesso di quello specificato durante il passaggio relativo alla preparazione.  
   
-     **Directory radice istanza** : verrà usata la directory specificata nel passaggio relativo alla preparazione e non sarà possibile modificarla nel corso di tale passaggio.  
+     **Directory radice istanza**: verrà usata la directory specificata nel passaggio della preparazione, che non potrà essere modificata in questo passaggio.  
   
      Tutti i Service Pack e gli aggiornamenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verranno applicati a ogni componente di un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -190,7 +190,7 @@ ms.locfileid: "51018266"
   
 10. Il flusso di lavoro relativo alla restante parte di questo argomento dipende dalle funzionalità selezionate durante il passaggio relativo alla preparazione. Le pagine visualizzate dipendono dalle selezioni effettuate.  
   
-11. Nella pagina **Configurazione server** - Account di servizio specificare gli account di accesso per i servizi [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . I servizi effettivamente configurati in questa pagina dipendono dalle funzionalità selezionate per l'installazione.  
+11. Nella pagina **Configurazione server** - Account di servizio specificare gli account di accesso per i servizi [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. I servizi effettivamente configurati in questa pagina dipendono dalle funzionalità selezionate per l'installazione.  
   
      È possibile assegnare lo stesso account di accesso a tutti i servizi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oppure configurare singolarmente l'account di ogni servizio. È inoltre possibile specificare se i servizi verranno avviati automaticamente, manualmente o se sono disabilitati. [!INCLUDE[msCoName](../../includes/msconame-md.md)] consiglia di configurare gli account del servizio singolarmente per assegnare i privilegi minimi a ogni servizio, in modo che ai servizi [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengano concesse le autorizzazioni minime necessarie per completare le attività. Per altre informazioni, vedere [Configurazione Server - Account di servizio](../../sql-server/install/server-configuration-service-accounts.md) e [Configurare account di servizio e autorizzazioni di Windows](../configure-windows/configure-windows-service-accounts-and-permissions.md).  
   
@@ -316,14 +316,14 @@ ms.locfileid: "51018266"
 10. Ripetere i passaggi da 1 a 9 fino a rimuovere tutti i componenti di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] .  
   
 ##  <a name="bk_Modifying_Uninstalling"></a> Modifica o disinstallazione di un'istanza completata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
- Il processo per l'aggiunta o la rimozione di funzionalità o per la disinstallazione di un'istanza completata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è simile al processo per un'istanza installata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per altre informazioni, vedere gli argomenti seguenti:  
+ Il processo per l'aggiunta o la rimozione di funzionalità o per la disinstallazione di un'istanza completata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è simile al processo per un'istanza installata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per altre informazioni, vedere i seguenti argomenti:  
   
 -   [Aggiungere funzionalità a un'istanza di SQL Server 2014 &#40;programma di installazione&#41;](add-features-to-an-instance-of-sql-server-setup.md)  
   
 -   [Disinstallare un'istanza esistente di SQL Server &#40;Setup&#41;](../../sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Informazioni su Windows SysPrep](http://go.microsoft.com/fwlink/?LinkId=143546)   
- [Funzionamento di Windows SysPrepWork](http://go.microsoft.com/fwlink/?LinkId=143547)  
+ [Informazioni su Windows SysPrep](https://go.microsoft.com/fwlink/?LinkId=143546)   
+ [Funzionamento di Windows SysPrepWork](https://go.microsoft.com/fwlink/?LinkId=143547)  
   
   

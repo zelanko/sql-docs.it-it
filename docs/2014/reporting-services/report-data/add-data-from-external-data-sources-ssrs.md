@@ -11,12 +11,12 @@ ms.assetid: 924a2ec3-150c-4bb2-83c9-4c7b440e8c03
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 2f1dff5b37bdf608478105e684a09dab8cae9280
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 527c089b1fd1dc49330ea3ee3c9b3576f7c969ff
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48161951"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53369663"
 ---
 # <a name="add-data-from-external-data-sources-ssrs"></a>Aggiungere dati da origini dati esterne (SSRS)
   Per recuperare dati da un'origine dati esterna, utilizzare una connessione dati. Le informazioni di connessione dati vengono in genere fornite dal proprietario dell'origine dati esterna che è responsabile della concessione delle autorizzazioni e di specificare i tipi di credenziali da utilizzare. Le informazioni di connessione dati vengono salvate come un'origine dati del report. Il tipo di origine dati consente di specificare quale estensione per i dati utilizzare per recuperare i dati.  
@@ -101,14 +101,14 @@ ms.locfileid: "48161951"
 ##  <a name="Related"></a> Sezioni correlate  
  In queste sezioni della documentazione sono incluse informazioni concettuali approfondite sui dati dei report, nonché le informazioni necessarie sulle procedure per definire, personalizzare e usare parti di un report correlate ai dati.  
   
-|Argomento|Description|  
+|Argomento|Descrizione|  
 |-----------|-----------------|  
 |[Aggiungere dati a un Report &#40;Report e SSRS&#41;](report-datasets-ssrs.md)|Viene fornita una panoramica sull'accesso ai dati del report.|  
 |[Connessioni dati, origini dati e stringhe di connessione in Generatore report](../data-connections-data-sources-and-connection-strings-in-report-builder.md)|Vengono fornite informazioni sulle connessioni dati e sulle origini dati.|  
 |[Set di dati condivisi e incorporati del report &#40;Generatore report e SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)|Vengono fornite informazioni sui set di dati incorporati e condivisi.|  
 |[Raccolta di campi del set di dati &#40;Generatore report e SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md)|Vengono fornite informazioni sulla raccolta di campi di set di dati generata dalla query.|  
-|[Origini dati supportate da Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md) nella documentazione relativa a [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] inclusa nella [documentazione online](http://go.microsoft.com/fwlink/?linkid=121312) di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|Vengono fornite informazioni dettagliate sul supporto delle piattaforme e delle versioni per ogni estensione per i dati.|  
-|[Cenni preliminari sulle estensioni per l'elaborazione dati](../extensions/data-processing/data-processing-extensions-overview.md) nella documentazione relativa a [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] inclusa nella [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [di](http://go.microsoft.com/fwlink/?linkid=121312).|Vengono fornite informazioni dettagliate destinate agli utenti avanzati sulle estensioni per i dati.|  
+|[Origini dati supportate da Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md) nella documentazione relativa a [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] inclusa nella [documentazione online](https://go.microsoft.com/fwlink/?linkid=121312) di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|Vengono fornite informazioni dettagliate sul supporto delle piattaforme e delle versioni per ogni estensione per i dati.|  
+|[Cenni preliminari sulle estensioni per l'elaborazione dati](../extensions/data-processing/data-processing-extensions-overview.md) nella documentazione relativa a [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] inclusa nella [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [di](https://go.microsoft.com/fwlink/?linkid=121312).|Vengono fornite informazioni dettagliate destinate agli utenti avanzati sulle estensioni per i dati.|  
   
 
   

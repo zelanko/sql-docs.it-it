@@ -14,21 +14,21 @@ ms.assetid: f289e978-14ca-46ef-9e61-e1fe5fd593be
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1dd92e346a3a1f3dbb04e2a8d726ad4460ca5fc3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 544d4b40c66f345aa563cbc96380639c729ae1d2
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48128131"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53369153"
 ---
 # <a name="use-sql-server-management-studio"></a>Utilizzo di SQL Server Management Studio
   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] (SSMS) è un ambiente integrato per l'accesso, configurazione, la gestione, l'amministrazione e sviluppo di tutti i componenti di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. SSMS integra un'ampia gamma di strumenti grafici con numerosi editor di script avanzati per offrire accesso a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] agli sviluppatori e agli amministratori qualsiasi sia il livello di competenza.  
   
  SSMS unisce in un unico ambiente le funzionalità di Enterprise Manager, Query Analyzer e Analysis Manager inclusi nelle versioni precedenti di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. SSMS funziona inoltre con tutti i componenti di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , ad esempio [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] e [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Gli sviluppatori possono lavorare in un ambiente familiare, mentre gli amministratori di database avranno a disposizione un'unica utilità completa che abbina strumenti grafici di facile utilizzo con ampie capacità di scripting.  
   
- Scaricare e installare SSMS dal [Microsoft Developer Network](http://msdn.microsoft.com/library/dn434042.aspx).  
+ Scaricare e installare SSMS dal [Microsoft Developer Network](https://msdn.microsoft.com/library/dn434042.aspx).  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Caratteristiche in SQL Server Management Studio](features-in-sql-server-management-studio.md)  
  Elenca l'ampio set di caratteristiche incluse in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   

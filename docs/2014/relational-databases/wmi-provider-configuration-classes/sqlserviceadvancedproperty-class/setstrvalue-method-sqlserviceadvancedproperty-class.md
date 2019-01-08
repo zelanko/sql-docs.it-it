@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: wmi
 ms.topic: reference
 api_name:
 - SetStrValue Method (SqlServiceAdvancedProperty Class)
@@ -20,12 +18,12 @@ ms.assetid: 1fededc3-81ba-4b08-83f9-189b96140799
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: da80e6ee5524dd4b5fbd34d28906d671a061d5ef
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d8cb4bb7aec53ebc28a91cc36add1ae810b08d44
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48071842"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53365663"
 ---
 # <a name="setstrvalue-method-sqlserviceadvancedproperty-class"></a>Metodo SetStrValue (classe SqlServiceAdvancedProperty)
   Imposta il valore string di una proprietà.  
@@ -47,7 +45,7 @@ StrValue
   
 #### <a name="parameters"></a>Parametri  
   
-|Parametro|Description|  
+|Parametro|Descrizione|  
 |---------------|-----------------|  
 |*strValue*|Valore string che specifica il valore della proprietà avanzata.|  
   
@@ -58,6 +56,6 @@ StrValue
  Il tipo di valore della proprietà deve essere *string* per impostare la proprietà su un valore string.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Avvio e arresto di servizi](http://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
+ [Avvio e arresto di servizi](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

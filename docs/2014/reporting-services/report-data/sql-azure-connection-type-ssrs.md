@@ -11,15 +11,15 @@ ms.assetid: c84def6c-e8cf-43d9-9912-098171a7ce79
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 567a9bd8e12a60ba686811553efd9af6a87b9b3c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6634e0b09d2a2ea83eb84e252867a4e93c4098f3
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48182531"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53363033"
 ---
 # <a name="sql-azure-connection-type-ssrs"></a>Tipo di connessione a SQL Azure (SSRS)
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] è un database relazionale ospitato basato sul cloud, creato con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tecnologie. Per includere dati da un'origine dati esterna [!INCLUDE[ssSDS](../../includes/sssds-md.md)] nel report, è necessario disporre di un set di dati basato su un'origine dati del report di tipo [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Questo tipo di origine dati predefinito è basato sull'estensione per i dati di [!INCLUDE[ssSDS](../../includes/sssds-md.md)] . Questo tipo di origine dati può essere utilizzato per connettersi e recuperare dati da [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] è un database relazionale ospitato e basato sul cloud, creato con le tecnologie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Per includere dati da un'origine dati esterna [!INCLUDE[ssSDS](../../includes/sssds-md.md)] nel report, è necessario disporre di un set di dati basato su un'origine dati del report di tipo [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Questo tipo di origine dati predefinito è basato sull'estensione per i dati di [!INCLUDE[ssSDS](../../includes/sssds-md.md)] . Questo tipo di origine dati può essere utilizzato per connettersi e recuperare dati da [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
  Questa estensione per i dati supporta parametri multivalore, aggregazioni server e credenziali gestiti separatamente dalla stringa di connessione.  
   
@@ -28,7 +28,7 @@ ms.locfileid: "48182531"
 > [!NOTE]  
 >  Quando si apre una connessione a [!INCLUDE[ssSDS](../../includes/sssds-md.md)], impostare il timeout connessione su 30 secondi.  
   
- Per ulteriori informazioni, vedere la pagina relativa al [database SQL di Windows Azure in MSDN](http://go.microsoft.com/fwlink/?LinkId=206770).  
+ Per ulteriori informazioni, vedere la pagina relativa al [database SQL di Windows Azure in MSDN](https://go.microsoft.com/fwlink/?LinkId=206770).  
   
  Usare le informazioni presenti in questo argomento per compilare un'origine dati. Per istruzioni dettagliate, vedere [aggiungere e verificare una connessione dati o un'origine dati &#40;Generatore Report e SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md).  
   
@@ -54,7 +54,7 @@ Data Source=<host>;Initial Catalog=AdventureWorks; Encrypt=True;
   
 -   Utilizzare un nome utente e una password archiviati. Per negoziare il doppio hop che si verifica quando il database contenente i dati del report è diverso dal server di report, selezionare le opzioni per utilizzare le credenziali come credenziali di Windows. È inoltre possibile scegliere di rappresentare l'utente autenticato dopo essersi connessi all'origine dati.  
   
--   Non sono necessarie credenziali. Per utilizzare questa opzione, è necessario aver configurato l'account di esecuzione automatica sul server di report. Per altre informazioni, vedere [Configurare l'account di esecuzione automatica &#40;Gestione configurazione SSRS&#41;](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md) nella [documentazione relativa a Reporting Services](http://go.microsoft.com/fwlink/?linkid=121312) nel sito msdn.microsoft.com.  
+-   Non sono necessarie credenziali. Per utilizzare questa opzione, è necessario aver configurato l'account di esecuzione automatica sul server di report. Per altre informazioni, vedere [Configurare l'account di esecuzione automatica &#40;Gestione configurazione SSRS&#41;](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md) nella [documentazione relativa a Reporting Services](https://go.microsoft.com/fwlink/?linkid=121312) nel sito msdn.microsoft.com.  
   
  Per altre informazioni, vedere [connessioni dati, origini dati e stringhe di connessione in Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md) oppure [specificare le credenziali in Generatore Report](../specify-credentials-in-report-builder.md).  
   
@@ -79,7 +79,7 @@ Data Source=<host>;Initial Catalog=AdventureWorks; Encrypt=True;
   
  Per altre informazioni, vedere [Interfaccia utente di Progettazione query relazionale &#40;Generatore report&#41;](relational-query-designer-user-interface-report-builder.md) e [Interfaccia utente di Progettazione query basata su testo &#40;Generatore report&#41;](text-based-query-designer-user-interface-report-builder.md).  
   
- La finestra Progettazione query con interfaccia grafica usata da [!INCLUDE[ssSDS](../../includes/sssds-md.md)] offre il supporto predefinito per il raggruppamento e le aggregazioni per semplificare la scrittura di query che recuperano solo dati di riepilogo. Le funzionalità relative al linguaggio [!INCLUDE[tsql](../../includes/tsql-md.md)] sono: la clausola GROUP BY, parola chiave DISTINCT e gli aggregati quali SUM e COUNT. La finestra Progettazione query basata su testo offre il supporto completo per il linguaggio [!INCLUDE[tsql](../../includes/tsql-md.md)] , inclusi il raggruppamento e le aggregazioni. Per altre informazioni su [!INCLUDE[tsql](../../includes/tsql-md.md)], vedere la [Guida di riferimento a Transact-SQL &#40;Motore di database& #41;](/sql/t-sql/language-reference) nella [Documentazione online](http://go.microsoft.com/fwlink/?LinkId=141687) di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sul sito msdn.microsoft.com.  
+ La finestra Progettazione query con interfaccia grafica usata da [!INCLUDE[ssSDS](../../includes/sssds-md.md)] offre il supporto predefinito per il raggruppamento e le aggregazioni per semplificare la scrittura di query che recuperano solo dati di riepilogo. Le funzionalità relative al linguaggio [!INCLUDE[tsql](../../includes/tsql-md.md)] sono: la clausola GROUP BY, parola chiave DISTINCT e gli aggregati quali SUM e COUNT. La finestra Progettazione query basata su testo offre il supporto completo per il linguaggio [!INCLUDE[tsql](../../includes/tsql-md.md)] , inclusi il raggruppamento e le aggregazioni. Per altre informazioni su [!INCLUDE[tsql](../../includes/tsql-md.md)], vedere la [Guida di riferimento a Transact-SQL &#40;Motore di database& #41;](/sql/t-sql/language-reference) nella [Documentazione online](https://go.microsoft.com/fwlink/?LinkId=141687) di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sul sito msdn.microsoft.com.  
   
 ###  <a name="QueryText"></a> Utilizzo di query di tipo Text  
  Nella finestra Progettazione query basata su testo, è possibile digitare i comandi [!INCLUDE[tsql](../../includes/tsql-md.md)] per definire i dati in un set di dati. La query [!INCLUDE[tsql](../../includes/tsql-md.md)] seguente, ad esempio, seleziona i nomi di tutti i dipendenti con mansioni di assistente marketing:  
@@ -124,7 +124,7 @@ WHERE HumanResources.Employee.JobTitle = (@JobTitle)
   
  Se in una stored procedure è presente un parametro con un valore predefinito, è possibile accedere a tale valore utilizzando la parola chiave DEFAULT come valore per il parametro. Se il parametro di query è collegato a un parametro di report, l'utente può digitare o selezionare la parola DEFAULT nella casella di input del parametro di report.  
   
- Per altre informazioni sulle stored procedure, vedere "Stored Procedure (Motore di database)" nella [documentazione online di SQL Server](http://go.microsoft.com/fwlink/?linkid=98335) sul sito msdn.microsoft.com.  
+ Per altre informazioni sulle stored procedure, vedere "Stored Procedure (Motore di database)" nella [documentazione online di SQL Server](https://go.microsoft.com/fwlink/?linkid=98335) sul sito msdn.microsoft.com.  
   
   
   
@@ -139,7 +139,7 @@ SELECT FirstName, LastName FROM HumanResources.Employee E INNER JOIN
 WHERE EmployeeID = (@EmpID)  
 ```  
   
- Per impostazione predefinita, ogni parametro del report dispone di tipo di dati Text e un set di dati creato automaticamente per fornire un elenco a discesa di valori disponibili. Dopo aver creato i parametri di report, potrebbe essere necessario modificare i valori predefiniti. Per altre informazioni, vedere [Report Parameters &#40;Report Builder and Report Designer&#41;](../report-design/report-parameters-report-builder-and-report-designer.md).  
+ Per impostazione predefinita, ogni parametro del report dispone di tipo di dati Text e un set di dati creato automaticamente per fornire un elenco a discesa di valori disponibili. Dopo aver creato i parametri di report, potrebbe essere necessario modificare i valori predefiniti. Per ulteriori informazioni, vedere la pagina relativa al [Parametri report &#40;Generatore report e Progettazione report&#41;](../report-design/report-parameters-report-builder-and-report-designer.md).  
   
   
   
@@ -151,7 +151,7 @@ WHERE EmployeeID = (@EmpID)
  Per altre informazioni, vedere [Tipo di connessione ODBC &#40;SSRS&#41;](odbc-connection-type-ssrs.md).  
   
 ###### <a name="platform-and-version-information"></a>Informazioni sulla piattaforma e sulla versione  
- Per altre informazioni sul supporto della piattaforma e della versione, vedere [Origini dati supportate da Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md) nella documentazione relativa a [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] inclusa nella [documentazione online](http://go.microsoft.com/fwlink/?linkid=121312) di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Per altre informazioni sul supporto della piattaforma e della versione, vedere [Origini dati supportate da Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md) nella documentazione relativa a [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] inclusa nella [documentazione online](https://go.microsoft.com/fwlink/?linkid=121312) di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
   
   
@@ -181,7 +181,7 @@ WHERE EmployeeID = (@EmpID)
  [Raccolta di campi del set di dati &#40;Generatore report e SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md)  
  Vengono fornite informazioni sulla raccolta di campi di set di dati generata dalla query.  
   
- [Origini dati supportate da Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md) nella documentazione relativa a [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] inclusa nella [documentazione online](http://go.microsoft.com/fwlink/?linkid=121312) di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ [Origini dati supportate da Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md) nella documentazione relativa a [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] inclusa nella [documentazione online](https://go.microsoft.com/fwlink/?linkid=121312) di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
  Vengono fornite informazioni dettagliate sul supporto delle piattaforme e delle versioni per ogni estensione per i dati.  
   
   

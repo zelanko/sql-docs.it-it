@@ -13,18 +13,18 @@ ms.assetid: 102ae1d0-973d-4e12-992c-d844bf05160d
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 19a151435ec23ae2e445d80e510c5bca7b066e04
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e9b9a581a4f5331479c7dc5ed87fc5d213e8d465
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48118716"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53377353"
 ---
 # <a name="process-return-codes-and-output-parameters-odbc"></a>Elaborare codici restituiti e parametri di output (ODBC)
   Le stored procedure di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] possono includere parametri di output e codici restituiti di tipo integer. I codici restituiti e parametri di output vengono inviati nell'ultimo pacchetto dal server e non sono disponibili per l'applicazione fino a quando [SQLMoreResults](../native-client-odbc-api/sqlmoreresults.md) restituisce SQL_NO_DATA. Se viene restituito un errore da una stored procedure, chiamare SQLMoreResults per passare al risultato successivo fino a quando non viene restituito SQL_NO_DATA.  
   
 > [!IMPORTANT]  
->  Se possibile, usare l'autenticazione di Windows. Se non è disponibile, agli utenti verrà richiesto di immettere le credenziali in fase di esecuzione. Evitare di archiviare le credenziali in un file. Se è necessario rendere persistenti le credenziali, è consigliabile crittografarle usando l'[API di crittografia Win32](http://go.microsoft.com/fwlink/?LinkId=64532).  
+>  Se possibile, usare l'autenticazione di Windows. Se non è disponibile, agli utenti verrà richiesto di immettere le credenziali in fase di esecuzione. Evitare di archiviare le credenziali in un file. Se è necessario rendere persistenti le credenziali, è consigliabile crittografarle usando l'[API di crittografia Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
   
 ### <a name="to-process-return-codes-and-output-parameters"></a>Per elaborare i codici restituiti e i parametri di output  
   
@@ -39,7 +39,7 @@ ms.locfileid: "48118716"
 ## <a name="example"></a>Esempio  
  In questo esempio viene illustrata l'elaborazione di un codice restituito e di un parametro di output. Questo esempio non è supportato in IA64. L'esempio è stato sviluppato per ODBC versione 3.0 o successiva.  
   
- È necessaria un'origine dati ODBC denominata AdventureWorks, il cui database predefinito è il database di esempio AdventureWorks. È possibile scaricare il database di esempio AdventureWorks dalla home page del sito relativo a [progetti della community ed esempi per Microsoft SQL Server](http://go.microsoft.com/fwlink/?LinkID=85384). Questa origine dati deve essere basata sul driver ODBC fornito dal sistema operativo (il nome del driver è "SQL Server"). Se questo esempio viene compilato ed eseguito come applicazione a 32 bit in un sistema operativo a 64 bit, è necessario creare l'origine dati ODBC con Amministratore ODBC in %windir%\SysWOW64\odbcad32.exe.  
+ È necessaria un'origine dati ODBC denominata AdventureWorks, il cui database predefinito è il database di esempio AdventureWorks. È possibile scaricare il database di esempio AdventureWorks dalla home page del sito relativo a [progetti della community ed esempi per Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkID=85384). Questa origine dati deve essere basata sul driver ODBC fornito dal sistema operativo (il nome del driver è "SQL Server"). Se questo esempio viene compilato ed eseguito come applicazione a 32 bit in un sistema operativo a 64 bit, è necessario creare l'origine dati ODBC con Amministratore ODBC in %windir%\SysWOW64\odbcad32.exe.  
   
  In questo esempio viene eseguita la connessione all'istanza predefinita di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nel computer in uso. Per connettersi a un'istanza denominata, modificare la definizione dell'origine dati ODBC per specificare l'istanza in base al formato: server\istanzadenominata. Per impostazione predefinita, [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] viene installato in un'istanza denominata.  
   

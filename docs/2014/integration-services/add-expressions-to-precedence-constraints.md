@@ -18,27 +18,27 @@ ms.assetid: 5574d89a-a68e-4b84-80ea-da93305e5ca1
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8cee9f40b308c545a9ebc74f2e4f1a88618d5008
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fee423c1000d2be7ebc70f2cfb40e3d83ba24150
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48208281"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53370983"
 ---
 # <a name="add-expressions-to-precedence-constraints"></a>Aggiunta di espressioni ai vincoli di precedenza
   In un vincolo di precedenza è possibile utilizzare un'espressione per definire il vincolo tra due eseguibili: l'eseguibile con precedenza e l'eseguibile soggetto al vincolo. Gli eseguibili possono essere attività o contenitori. L'espressione può essere utilizzata da sola o in combinazione con il risultato dell'esecuzione dell'eseguibile con precedenza. Il risultato dell'esecuzione di un eseguibile può essere Success o Failure. Quando si configura il risultato dell'esecuzione di un vincolo di precedenza è possibile impostare il risultato dell'esecuzione su `Success`, `Failure` o `Completion`. `Success` richiede che l'esecuzione dell'eseguibile con precedenza venga completata correttamente, `Failure` richiede che l'esecuzione dell'eseguibile con precedenza non riesca e `Completion` indica che l'eseguibile soggetto al vincolo deve essere eseguito indipendentemente dall'esito dell'esecuzione dell'attività con precedenza. Per altre informazioni, vedere [Vincoli di precedenza](control-flow/precedence-constraints.md).  
   
- L'espressione, che deve restituire `True` o `False`, deve essere un'espressione di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] valida. e può utilizzare valori letterali, variabili di sistema e personalizzate, nonché le funzioni e gli operatori forniti dalla grammatica delle espressioni di [!INCLUDE[ssIS](../includes/ssis-md.md)]. L'espressione `@Count == SQRT(144) + 10`, ad esempio, utilizza la variabile `Count`, la funzione SQRT e gli operatori di uguaglianza (==) e di addizione (+). Per altre informazioni, vedere [Espressioni di Integration Services &#40;SSIS&#41;](expressions/integration-services-ssis-expressions.md).  
+ L'espressione, che deve restituire `True` o `False`, deve essere un'espressione di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] valida. e può utilizzare valori letterali, variabili di sistema e personalizzate, nonché le funzioni e gli operatori forniti dalla grammatica delle espressioni di [!INCLUDE[ssIS](../includes/ssis-md.md)] . L'espressione `@Count == SQRT(144) + 10`, ad esempio, utilizza la variabile `Count`, la funzione SQRT e gli operatori di uguaglianza (==) e di addizione (+). Per altre informazioni, vedere [Espressioni di Integration Services &#40;SSIS&#41;](expressions/integration-services-ssis-expressions.md).  
   
  Nella figura seguente le attività A e B sono collegate da un vincolo di precedenza che utilizza il risultato di un'esecuzione e un'espressione. Il valore del vincolo è impostato su `Success` e l'espressione è `@X >== @Z`. L'attività B, soggetta al vincolo, viene eseguita solo se l'attività A viene completata e il valore della variabile `X` è maggiore o uguale a quello della variabile `Z`.  
   
  ![Vincolo di precedenza tra due attività](media/mw-dts-03.gif "Vincolo di precedenza tra due attività")  
   
- Per collegare gli eseguibili è inoltre possibile utilizzare più vincoli di precedenza contenenti espressioni diverse. Nella figura seguente, ad esempio, le attività B e C sono collegate all'attività A da vincoli di precedenza che utilizzano risultati di esecuzione ed espressioni. Entrambi i valori del vincolo è impostati su `Success.` un vincolo di precedenza include l'espressione `@X >== @Z`, mentre il vincolo di precedenza include l'espressione `@X < @Z`. A seconda dei valori assunti dalle variabili `X` e `Z`, verrà eseguita l'attività C o l'attività B.  
+ Per collegare gli eseguibili è inoltre possibile utilizzare più vincoli di precedenza contenenti espressioni diverse. Nella figura seguente, ad esempio, le attività B e C sono collegate all'attività A da vincoli di precedenza che utilizzano risultati di esecuzione ed espressioni. I valori di entrambi i vincoli sono impostati su `Success.` Uno dei vincoli di precedenza include l'espressione `@X >== @Z`, mentre l'altro include l'espressione `@X < @Z`. A seconda dei valori assunti dalle variabili `X` e `Z`, verrà eseguita l'attività C o l'attività B.  
   
  ![Espressioni nei vincoli di precedenza](media/mw-dts-04.gif "Espressioni nei vincoli di precedenza")  
   
- Per aggiungere o modificare un'espressione, è possibile usare **Editor vincoli di precedenza** in Progettazione [!INCLUDE[ssIS](../includes/ssis-md.md)] e la finestra Proprietà disponibile in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. La finestra Proprietà non è tuttavia in grado di verificare la sintassi delle espressioni.  
+ Per aggiungere o modificare un'espressione, è possibile usare **Editor vincoli di precedenza** in Progettazione [!INCLUDE[ssIS](../includes/ssis-md.md)] e la finestra Proprietà disponibile in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] . La finestra Proprietà non è tuttavia in grado di verificare la sintassi delle espressioni.  
   
  Se un vincolo di precedenza include un'espressione, sull'area di progettazione delle scheda **Flusso di controllo** verrà visualizzata un'icona accanto al vincolo di precedenza e l'espressione verrà visualizzata nella descrizione comando di tale icona.  
   
@@ -67,7 +67,7 @@ ms.locfileid: "48208281"
 -   [Impostazione delle proprietà di un vincolo di precedenza](../../2014/integration-services/set-the-properties-of-a-precedence-constraint.md)  
   
 ## <a name="external-resources"></a>Risorse esterne  
- Articolo tecnico [SSIS Expression Examples](http://go.microsoft.com/fwlink/?LinkId=220761) (Esempi di espressioni SSIS) nel sito Web social.technet.microsoft.com  
+ Articolo tecnico [SSIS Expression Examples](https://go.microsoft.com/fwlink/?LinkId=220761) (Esempi di espressioni SSIS) nel sito Web social.technet.microsoft.com  
   
 ## <a name="see-also"></a>Vedere anche  
  [Più vincoli di precedenza](../../2014/integration-services/multiple-precedence-constraints.md)   

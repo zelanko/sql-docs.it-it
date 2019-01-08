@@ -10,24 +10,24 @@ ms.assetid: 6a0c9b6a-cf71-4311-82f2-12c445f63935
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: bfc0ef5adeb930988d142a8c4864ff13bcd2964a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 52f1bdf9e748625e1310210c98beeb4401a5dd81
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48064151"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53353142"
 ---
 # <a name="sql-server-backup-and-restore-with-windows-azure-blob-storage-service"></a>Backup e ripristino di SQL Server con il servizio di archiviazione BLOB di Windows Azure
   In questo argomento vengono illustrati i backup di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nel [servizio di archiviazione BLOB di Windows Azure](http://www.windowsazure.com/develop/net/how-to-guides/blob-storage/)e il ripristino dallo stesso. È inoltre disponibile un riepilogo dei vantaggi dell'utilizzo del servizio BLOB di Windows Azure per archiviare i backup di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  SQL Server supporta l'archiviazione di backup nel servizio di archiviazione BLOB di Windows Azure nei modi seguenti:  
   
--   **Gestire i backup in Microsoft Azure:** usando gli stessi metodi per il backup su DISK e TAPE, è ora possibile eseguire il backup in Archiviazione di Microsoft Azure specificando l'URL come destinazione di backup.  È possibile utilizzare questa funzionalità per eseguire il backup manualmente o per configurare la propria strategia di backup allo stesso modo di una risorsa di archiviazione locale o di altre soluzioni esterne. Questa funzionalità viene definita anche **Backup di SQL Server nell'URL**. Per altre informazioni, vedere [SQL Server Backup to URL](sql-server-backup-to-url.md). Questa funzionalità è disponibile in SQL Server 2012 SP1 CU2 o versione successiva.  
+-   **Gestire i backup in Windows Azure:** usando gli stessi metodi per il backup su DISK e TAPE, è ora possibile eseguire il backup in Archiviazione di Microsoft Azure specificando l'URL come destinazione di backup.  È possibile utilizzare questa funzionalità per eseguire il backup manualmente o per configurare la propria strategia di backup allo stesso modo di una risorsa di archiviazione locale o di altre soluzioni esterne. Questa funzionalità viene definita anche **Backup di SQL Server nell'URL**. Per ulteriori informazioni, vedere [SQL Server Backup to URL](sql-server-backup-to-url.md). Questa funzionalità è disponibile in SQL Server 2012 SP1 CU2 o versione successiva.  
   
     > [!NOTE]  
-    >  Per le versioni di SQL Server precedenti a SQL Server 2014, è possibile utilizzare lo strumento per il backup di SQL Server in Windows Azure del componente aggiuntivo per creare i backup nel servizio di archiviazione Windows Azure in modo rapido e semplice. Per ulteriori informazioni, vedere l' [Area download](http://go.microsoft.com/fwlink/?LinkID=324399).  
+    >  Per le versioni di SQL Server precedenti a SQL Server 2014, è possibile utilizzare lo strumento per il backup di SQL Server in Windows Azure del componente aggiuntivo per creare i backup nel servizio di archiviazione Windows Azure in modo rapido e semplice. Per ulteriori informazioni, vedere l' [Area download](https://go.microsoft.com/fwlink/?LinkID=324399).  
   
--   **Gestire i backup con SQL Server in Microsoft Azure:** configurare SQL Server in modo da gestire la strategia di backup e pianificare i backup per un singolo database o più database oppure impostare i valori predefiniti a livello di istanza. Questa funzionalità viene definita  **[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]**. Per ulteriori informazioni, vedere [SQL Server Managed  Backup to Windows Azure](sql-server-managed-backup-to-microsoft-azure.md). Questa funzionalità è disponibile in SQL Server 2014 o versione successiva.  
+-   **Consentire la gestione di SQL Server backup in Microsoft Azure:** configurare SQL Server in modo da gestire la strategia di backup e pianificare i backup per un singolo database o più database oppure impostare i valori predefiniti a livello di istanza. Questa funzionalità viene definita  **[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]**. Per ulteriori informazioni, vedere [SQL Server Managed  Backup to Windows Azure](sql-server-managed-backup-to-microsoft-azure.md). Questa funzionalità è disponibile in SQL Server 2014 o versione successiva.  
   
 ## <a name="benefits-of-using-the-windows-azure-blob-service-for-includessnoversionincludesssnoversion-mdmd-backups"></a>Vantaggi dell'utilizzo del servizio BLOB di Windows Azure per i backup di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
@@ -41,16 +41,16 @@ ms.locfileid: "48064151"
   
      Inoltre, il file di backup che è attualmente archiviato nel servizio di archiviazione BLOB di Windows Azure è direttamente disponibile in un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] locale o in un'altra di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in esecuzione in una macchina virtuale di Windows Azure, senza dover collegare/scollegare il database o scaricare e collegare il disco rigido virtuale.  
   
--   Vantaggi economici: si paga solo il servizio utilizzato. Questo servizio può essere efficace dal punto di vista economico come soluzione di archiviazione esterna e di backup. Per ulteriori informazioni e per i collegamenti, vedere la sezione [Considerazioni sui costi di Windows Azure](#Billing) .  
+-   Vantaggi economici: si paga solo per il servizio usato. Questo servizio può essere efficace dal punto di vista economico come soluzione di archiviazione esterna e di backup. Per ulteriori informazioni e per i collegamenti, vedere la sezione [Considerazioni sui costi di Windows Azure](#Billing) .  
   
 ##  <a name="Billing"></a> Considerazioni sui costi di Azure di Windows:  
  Conoscendo i costi correlati all'archiviazione di Windows Azure è possibile prevedere il costo della creazione e dell'archiviazione dei backup in Windows Azure.  
   
- Per stimare i costi è possibile utilizzare il [calcolatore dei costi di Windows Azure](http://go.microsoft.com/fwlink/?LinkId=277060) .  
+ Per stimare i costi è possibile utilizzare il [calcolatore dei costi di Windows Azure](https://go.microsoft.com/fwlink/?LinkId=277060) .  
   
- **Archiviazione:** i costi dipendono dallo spazio usato e vengono calcolati in base a una scala graduata e a livello di ridondanza. Per ulteriori dettagli e informazioni aggiornate, vedere la sezione **Gestione dati** dell'articolo [Dettagli prezzi](http://go.microsoft.com/fwlink/?LinkId=277059) .  
+ **Spazio di archiviazione:** i costi dipendono dallo spazio usato e vengono calcolati in base a una scala graduata e a livello di ridondanza. Per altri dettagli e informazioni aggiornate, vedere la sezione sulla **gestione dei dati** nell'articolo [Dettagli prezzi](https://go.microsoft.com/fwlink/?LinkId=277059) .  
   
- **Trasferimenti di dati:** i trasferimenti in entrata dei dati in Microsoft Azure sono gratuiti. Per i trasferimenti in uscita viene addebitato il costo relativo all'utilizzo della larghezza di banda e il calcolo viene effettuato in base a una scala graduata specifica per l'area. Per ulteriori informazioni, vedere la sezione [Trasferimenti di dati](http://go.microsoft.com/fwlink/?LinkId=277061) nell'articolo Dettagli prezzi.  
+ **Trasferimenti di dati:** i trasferimenti in entrata dei dati in Microsoft Azure sono gratuiti. Per i trasferimenti in uscita viene addebitato il costo relativo all'utilizzo della larghezza di banda e il calcolo viene effettuato in base a una scala graduata specifica per l'area. Per ulteriori informazioni, vedere la sezione [Trasferimenti di dati](https://go.microsoft.com/fwlink/?LinkId=277061) nell'articolo Dettagli prezzi.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Procedure consigliate e risoluzione dei problemi per il backup di SQL Server nell'URL](sql-server-backup-to-url-best-practices-and-troubleshooting.md)   

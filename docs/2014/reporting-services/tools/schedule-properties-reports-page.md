@@ -13,12 +13,12 @@ ms.assetid: 7db728bd-4b08-43ef-a49a-e8dcdd37cf89
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 635a5428685feff5887b0800388a41f95a108c1a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 999f0b922705e210e6761d7b534490387c8fef74
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48209231"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53363233"
 ---
 # <a name="schedule-properties-reports-page"></a>Proprietà pianificazione (pagina Report)
   Utilizzare questa pagina per visualizzare tutti i report che utilizzano la pianificazione condivisa. È possibile utilizzare le pianificazioni per aggiornare lo snapshot o generare la cronologia del report, attivare una sottoscrizione oppure specificare la data e l'ora di scadenza di una copia del report memorizzata nella cache. Per individuare la modalità di utilizzo della pianificazione, visualizzare le informazioni sulle proprietà e sulla sottoscrizione del report.  
@@ -28,7 +28,7 @@ ms.locfileid: "48209231"
  Per aprire questa pagina, avviare [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], connettersi a un server di report, aprire il **pianificazioni condivise** cartella, fare clic su una pianificazione condivisa, selezionare **le proprietà**, quindi fare clic su **report** .  
   
 > [!NOTE]  
->  Questa funzionalità non è disponibile in ogni edizione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per un elenco delle funzionalità supportate dalle edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [Funzionalità supportate dalle edizioni di SQL Server 2012](http://go.microsoft.com/fwlink/?linkid=232473) (http://go.microsoft.com/fwlink/?linkid=232473).  
+>  Questa funzionalità non è disponibile in ogni edizione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per un elenco delle funzionalità supportate dalle edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [Funzionalità supportate dalle edizioni di SQL Server 2012](https://go.microsoft.com/fwlink/?linkid=232473) (https://go.microsoft.com/fwlink/?linkid=232473).  
   
 ## <a name="options"></a>Opzioni  
  **Cartella**  

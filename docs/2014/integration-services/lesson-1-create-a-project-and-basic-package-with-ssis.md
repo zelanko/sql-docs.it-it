@@ -1,28 +1,27 @@
 ---
-title: 'Lezione 1: Creazione del progetto e un pacchetto di base | Microsoft Docs'
+title: 'Lezione 1: Creazione del progetto e il pacchetto di base | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 84d0b877-603f-4f8e-bb6b-671558ade5c2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 62a4a0737f57d6040d2c166847f191f13d435071
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8ff1883c8940e791d35dfe97c33acc1fe4f4a0e8
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48229484"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53359370"
 ---
 # <a name="lesson-1-creating-the-project-and-basic-package"></a>Lezione 1: Creazione del progetto e del pacchetto di base
   In questa lezione verrà creato un pacchetto ETL semplice tramite cui vengono estratti i dati da un'unica origine file flat, trasformati i dati usando due componenti di trasformazione Ricerca e scritti i dati in questione nella tabella dei fatti **FactCurrency** di **AdventureWorksDW2012**. In questa lezione si imparerà a creare nuovi pacchetti, aggiungere e configurare connessioni origine e destinazione dati e usare nuovi componenti flusso di controllo e flusso di dati.  
   
 > [!IMPORTANT]  
->  Per eseguire questa esercitazione, è necessario il database di esempio **AdventureWorksDW2012** . Per altre informazioni sull'installazione e la distribuzione di **AdventureWorksDW2012**, vedere gli [esempi di Reporting Services su CodePlex](http://go.microsoft.com/fwlink/p/?LinkID=52691).  
+>  Per eseguire questa esercitazione, è necessario il database di esempio **AdventureWorksDW2012** . Per altre informazioni sull'installazione e la distribuzione di **AdventureWorksDW2012**, vedere gli [esempi di Reporting Services su CodePlex](https://go.microsoft.com/fwlink/p/?LinkID=52691).  
   
 ## <a name="understanding-the-package-requirements"></a>Informazioni sui requisiti del pacchetto  
  Per questa esercitazione è richiesto Microsoft SQL Server Data Tools.  
@@ -83,21 +82,21 @@ ms.locfileid: "48229484"
   
 -   [Passaggio 1: Creazione di un nuovo progetto di Integration Services](lesson-1-1-creating-a-new-integration-services-project.md)  
   
--   [Passaggio 2: Aggiunta e configurazione di una gestione connessione file flat](lesson-1-2-adding-and-configuring-a-flat-file-connection-manager.md)  
+-   [Passaggio 2: Aggiunta e configurazione di una gestione connessione File Flat](lesson-1-2-adding-and-configuring-a-flat-file-connection-manager.md)  
   
 -   [Passaggio 3: Aggiunta e configurazione di una gestione connessione OLE DB](lesson-1-3-adding-and-configuring-an-ole-db-connection-manager.md)  
   
--   [Passaggio 4: Aggiunta di un'attività Flusso di dati al pacchetto](lesson-1-4-adding-a-data-flow-task-to-the-package.md)  
+-   [Passaggio 4: Aggiunta di un'attività flusso di dati al pacchetto](lesson-1-4-adding-a-data-flow-task-to-the-package.md)  
   
--   [Passaggio 5: Aggiunta e configurazione dell'origine file flat](lesson-1-5-adding-and-configuring-the-flat-file-source.md)  
+-   [Passaggio 5: Aggiunta e configurazione dell'origine File Flat](lesson-1-5-adding-and-configuring-the-flat-file-source.md)  
   
--   [Passaggio 6: Aggiunta e configurazione delle trasformazioni Ricerca](lesson-1-6-adding-and-configuring-the-lookup-transformations.md)  
+-   [Passaggio 6: Aggiunta e configurazione delle trasformazioni ricerca](lesson-1-6-adding-and-configuring-the-lookup-transformations.md)  
   
 -   [Passaggio 7: Aggiunta e configurazione della destinazione OLE DB](lesson-1-7-adding-and-configuring-the-ole-db-destination.md)  
   
--   [Passaggio 8: Semplificazione della comprensione del pacchetto della lezione 1](lesson-1-8-making-the-lesson-1-package-easier-to-understand.md)  
+-   [Passaggio 8: Effettua la comprensione del pacchetto della lezione 1](lesson-1-8-making-the-lesson-1-package-easier-to-understand.md)  
   
--   [Passaggio 9: Test del pacchetto creato nella lezione 1 dell'esercitazione](lesson-1-9-testing-the-lesson-1-tutorial-package.md)  
+-   [Passaggio 9: Test del pacchetto dell'esercitazione della lezione 1](lesson-1-9-testing-the-lesson-1-tutorial-package.md)  
   
 ## <a name="start-the-lesson"></a>Inizio della lezione  
  [Passaggio 1: Creazione di un nuovo progetto di Integration Services](lesson-1-1-creating-a-new-integration-services-project.md)  

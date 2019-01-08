@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - jobs [Integration Services]
@@ -16,12 +15,12 @@ ms.assetid: ecf7a5f9-b8a7-47f1-9ac0-bac07cb89e31
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: da8e353f9ebd79f0b2934f697cb720f9cc62e3de
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fe378671c1cb9b93ae8262869742c0b01a6d9cac
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48225941"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53369933"
 ---
 # <a name="sql-server-agent-jobs-for-packages"></a>Processi di SQL Server Agent per i pacchetti
   È possibile automatizzare e pianificare l'esecuzione dei pacchetti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] tramite [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. È possibile pianificare i pacchetti distribuiti nel server [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] e archiviati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], nell'archivio pacchetti [!INCLUDE[ssIS](../../includes/ssis-md.md)] e nel file system.  
@@ -55,14 +54,14 @@ ms.locfileid: "48225941"
   
  Per altre informazioni, vedere [Pianificare un pacchetto tramite SQL Server Agent](../schedule-a-package-by-using-sql-server-agent.md).  
   
- Per visualizzare un video in cui viene illustrato come usare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent per l'esecuzione di un pacchetto, vedere la home page del video [Procedura: Automazione dell'esecuzione di un pacchetto SSIS utilizzando SQL Server Agent (video di SQL Server)](http://go.microsoft.com/fwlink/?LinkId=141771)in MSDN Library.  
+ Per un video che illustra come usare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent per eseguire un pacchetto, vedere la home page dei video [come: Automatizzare l'esecuzione del pacchetto tramite SQL Server Agent (Video di SQL Server)](https://go.microsoft.com/fwlink/?LinkId=141771), in MSDN Library.  
   
 ##  <a name="trouble"></a> Risoluzione dei problemi  
  Un passaggio di processo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent potrebbe non riuscire ad avviare un pacchetto anche se il pacchetto viene eseguito correttamente in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] e dalla riga di comando. Per questo problema esistono alcuni motivi comuni e diverse soluzioni consigliate. Per ulteriori informazioni, vedere le risorse seguenti.  
   
--   [!INCLUDE[msCoName](../../includes/msconame-md.md)] Articolo della Knowledge Base [Pacchetto SSIS non viene eseguito quando viene chiamato da un passaggio di processo SQL Server Agent](http://support.microsoft.com/kb/918760)  
+-   [!INCLUDE[msCoName](../../includes/msconame-md.md)] Articolo della Knowledge Base [Pacchetto SSIS non viene eseguito quando viene chiamato da un passaggio di processo SQL Server Agent](https://support.microsoft.com/kb/918760)  
   
--   Video [Risoluzione dei problemi: Esecuzione di un pacchetto con SQL Server Agent (video di SQL Server)](http://go.microsoft.com/fwlink/?LinkId=141772)in MSDN Library.  
+-   Video, [risoluzione dei problemi: L'esecuzione con SQL Server Agent (Video di SQL Server) del pacchetto](https://go.microsoft.com/fwlink/?LinkId=141772), in MSDN Library.  
   
  Dopo l'avvio di un pacchetto tramite un passaggio di processo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, l'esecuzione del pacchetto potrebbe avere esito negativo oppure positivo ma con risultati imprevisti. È possibile utilizzare gli strumenti seguenti per risolvere questi problemi.  
   
@@ -94,16 +93,16 @@ ms.locfileid: "48225941"
   
 ## <a name="external-resources"></a>Risorse esterne  
   
--   Articolo della Knowledge Base [Pacchetto SSIS non viene eseguito quando viene chiamato da un passaggio di processo SQL Server Agent](http://support.microsoft.com/kb/918760)nel sito Web di [!INCLUDE[msCoName](../../includes/msconame-md.md)]  
+-   Articolo della Knowledge Base [Pacchetto SSIS non viene eseguito quando viene chiamato da un passaggio di processo SQL Server Agent](https://support.microsoft.com/kb/918760)nel sito Web di [!INCLUDE[msCoName](../../includes/msconame-md.md)]  
   
--   Video [Risoluzione dei problemi: Esecuzione di un pacchetto con SQL Server Agent (video di SQL Server)](http://go.microsoft.com/fwlink/?LinkId=141772)in MSDN Library  
+-   Video, [risoluzione dei problemi: L'esecuzione con SQL Server Agent (Video di SQL Server) del pacchetto](https://go.microsoft.com/fwlink/?LinkId=141772), in MSDN Library  
   
--   Video [Procedura: Automazione dell'esecuzione di un pacchetto SSIS utilizzando SQL Server Agent (video di SQL Server)](http://go.microsoft.com/fwlink/?LinkId=141771)in MSDN Library  
+-   Video, [come: Automatizzare l'esecuzione del pacchetto tramite SQL Server Agent (Video di SQL Server)](https://go.microsoft.com/fwlink/?LinkId=141771), in MSDN Library  
   
--   Articolo tecnico [Checking SQL Server Agent jobs using Windows PowerShell](http://go.microsoft.com/fwlink/?LinkId=165675)(Verifica dei processi di SQL Server Agent tramite Windows PowerShell) su mssqltips.com  
+-   Articolo tecnico [Checking SQL Server Agent jobs using Windows PowerShell](https://go.microsoft.com/fwlink/?LinkId=165675)(Verifica dei processi di SQL Server Agent tramite Windows PowerShell) su mssqltips.com  
   
--   Articolo tecnico [Auto alert for SQL Agent jobs when they are enabled or disabled](http://go.microsoft.com/fwlink/?LinkId=165676)(Avviso automatico se i processi di SQL Agent sono abilitati o disabilitati) su mssqltips.com  
+-   Articolo tecnico [Auto alert for SQL Agent jobs when they are enabled or disabled](https://go.microsoft.com/fwlink/?LinkId=165676)(Avviso automatico se i processi di SQL Agent sono abilitati o disabilitati) su mssqltips.com  
   
--   Intervento nel blog [Configuring SQL Agent Jobs to Write to Windows Event Log](http://go.microsoft.com/fwlink/?LinkId=220745)(Configurazione dei processi di SQL Agent per la scrittura nel Registro eventi di Windows) su mssqltips.com.  
+-   Intervento nel blog [Configuring SQL Agent Jobs to Write to Windows Event Log](https://go.microsoft.com/fwlink/?LinkId=220745)(Configurazione dei processi di SQL Agent per la scrittura nel Registro eventi di Windows) su mssqltips.com.  
   
   

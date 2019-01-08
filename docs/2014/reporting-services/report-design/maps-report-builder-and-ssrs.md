@@ -18,12 +18,12 @@ ms.assetid: b5e9ef21-11b7-4ed2-838e-d8eecdb5c5f0
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: c0c65216c2a74653cb2752d0183b3d0635a6c3cc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 320737c3a84eb1f01899c14dfb2f4c1eefb60856
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48187961"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53354470"
 ---
 # <a name="maps-report-builder-and-ssrs"></a>Mappe (Generatore report e SSRS)
   Per visualizzare i dati aziendali su uno sfondo geografico, è possibile aggiungere una mappa al report. Il tipo di mappa da selezionare dipende da quali informazioni si desidera comunicare nel report. È possibile aggiungere una mappa che visualizza solo le posizioni, una mappa a bolle in cui le dimensioni di queste ultime variano in base al numero di unità familiari presenti in un'area, una mappa con marcatori in cui lo stile del marcatore cambia a seconda del prodotto più remunerativo per ogni negozio oppure una mappa linea che consente di visualizzare gli itinerari tra i diversi negozi.  
@@ -32,7 +32,7 @@ ms.locfileid: "48187961"
   
  ![rs_MapElements](../media/rs-mapelements.gif "rs_MapElements")  
   
- Per iniziare a usare immediatamente una mappa, vedere [Esercitazione: Report mappa &#40;Generatore report&#41;](../tutorial-map-report-report-builder.md) o la pagina relativa agli [esempi di report (Generatore report e SSRS)](http://go.microsoft.com/fwlink/?LinkId=198283).  
+ Per iniziare a usare immediatamente una mappa, vedere [esercitazione: Report mappa &#40;Generatore Report&#41; ](../tutorial-map-report-report-builder.md) oppure [Report di esempio (Generatore Report e SSRS)](https://go.microsoft.com/fwlink/?LinkId=198283).  
   
 > [!NOTE]  
 >  È possibile salvare mappe separatamente da un report come parti del report.  [!INCLUDE[ssRBrptparts](../../includes/ssrbrptparts-md.md)]  
@@ -83,13 +83,13 @@ ms.locfileid: "48187961"
     > [!NOTE]  
     >  Questa funzionalità di mapping di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usa i dati dei file di forma TIGER/Line forniti gentilmente Census Bureau degli Stati Uniti ([http://www.census.gov/](http://www.census.gov/)). I file di forma TIGER/Line sono un estratto di informazioni geografiche e cartografiche selezionate dal database Census MAF/TIGER e sono messi a disposizione gratuitamente dal Census Bureau degli Stati Uniti. Per altre informazioni sui file di forma TIGER/Line, visitare [http://www.census.gov/geo/www/tiger](http://www.census.gov/geo/www/tiger). Le informazioni sui confini presenti nei file di forma TIGER/Line servono solo per la raccolta dei dati statistici e la tabulazione. La relativa rappresentazione e designazione per scopi statistici non determina un'autorità giurisdizionale oppure diritti di proprietà o titoli, né rappresentano descrizioni geografiche valide a livello legale. Census TIGER e TIGER/Line sono marchi registrati di U.S. Bureau of the Census.  
   
--   **File di forma ESRI.** I file di forma ESRI contengono dati conformi al formato dei dati spaziali dei file di forma Environmental Systems Research Institute, Inc. (ESRI). Essi fanno riferimento a un set di file. I dati nel file con estensione shp specificano le forme geografiche o geometriche. I dati nel file con estensione dbf forniscono gli attributi per le forme. Per visualizzare una mappa in visualizzazione della struttura o eseguirla dal server di report, entrambi i file devono trovarsi nella stessa cartella. Quando si aggiungono dati spaziali da un file con estensione shp sul file system locale, i dati spaziali sono incorporati nel report. Per recuperare i dati spaziali dinamicamente in fase di esecuzione, caricare i file di forma nel server di report e specificarli come origine dei dati spaziali. Per altre informazioni, vedere la pagina relativa alla [ricerca di file di forma ESRI per una mappa](http://go.microsoft.com/fwlink/?linkid=178814).  
+-   **File di forma ESRI.** I file di forma ESRI contengono dati conformi al formato dei dati spaziali dei file di forma Environmental Systems Research Institute, Inc. (ESRI). Essi fanno riferimento a un set di file. I dati nel file con estensione shp specificano le forme geografiche o geometriche. I dati nel file con estensione dbf forniscono gli attributi per le forme. Per visualizzare una mappa in visualizzazione della struttura o eseguirla dal server di report, entrambi i file devono trovarsi nella stessa cartella. Quando si aggiungono dati spaziali da un file con estensione shp sul file system locale, i dati spaziali sono incorporati nel report. Per recuperare i dati spaziali dinamicamente in fase di esecuzione, caricare i file di forma nel server di report e specificarli come origine dei dati spaziali. Per altre informazioni, vedere la pagina relativa alla [ricerca di file di forma ESRI per una mappa](https://go.microsoft.com/fwlink/?linkid=178814).  
   
--   **Dati spaziali di SQL Server archiviati in un database.** È possibile utilizzare una query che specifichi i tipi di dati `SQLGeometry` o `SQLGeography` da un database relazionale di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per altre informazioni, vedere [Panoramica dei tipi di dati spaziali](../../relational-databases/spatial/spatial-data-types-overview.md) in [Documentazione in linea di SQL Server 2008](http://go.microsoft.com/fwlink/?linkid=98335).  
+-   **Dati spaziali di SQL Server archiviati in un database.** È possibile utilizzare una query che specifichi i tipi di dati `SQLGeometry` o `SQLGeography` da un database relazionale di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per altre informazioni, vedere [Panoramica dei tipi di dati spaziali](../../relational-databases/spatial/spatial-data-types-overview.md) in [Documentazione in linea di SQL Server 2008](https://go.microsoft.com/fwlink/?linkid=98335).  
   
      Nel set di risultati visualizzato in Progettazione query ogni riga di dati spaziali viene trattata come un'unità e archiviata in un solo elemento della mappa. Ad esempio se ci sono più punti definiti in una riga nel set di risultati, le proprietà di visualizzazione si applicano a tutti i punti di quell'elemento della mappa.  
   
--   **Posizioni personalizzate create.** È possibile aggiungere manualmente posizioni, ad esempio punti incorporati, a un livello punto incorporato. Per altre informazioni, vedere [aggiungere percorsi personalizzati a una mappa &#40;Generatore Report e SSRS&#41;](add-custom-locations-to-a-map-report-builder-and-ssrs.md).  
+-   **Posizioni personalizzate create.** È possibile aggiungere manualmente posizioni, ad esempio punti incorporati, a un livello punto incorporato. Per altre informazioni, vedere [Aggiungere percorsi personalizzati a una mappa &#40;Generatore report e SSRS&#41;](add-custom-locations-to-a-map-report-builder-and-ssrs.md).  
   
 #### <a name="spatial-data-in-design-view"></a>Dati spaziali in visualizzazione della struttura  
  In visualizzazione della struttura, l'elaboratore di report visualizza dati spaziali di esempio per consentire la progettazione del livello mappa. I dati visualizzati dipendono dalla disponibilità dei dati spaziali:  
@@ -172,9 +172,9 @@ ms.locfileid: "48187961"
   
 -   Se usare una connessione sicura per recuperare le sezioni dal servizio Web di Bing Maps.  
   
- Per istruzioni dettagliate, vedere [aggiungere, modificare o eliminare una mappa o livello mappa &#40;Generatore Report e SSRS&#41;](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md).  
+ Per istruzioni dettagliate, vedere [Aggiungere, modificare o eliminare una mappa o un livello mappa &#40;Generatore report e SSRS&#41;](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md).  
   
- Per altre informazioni sulle tessere mappa, vedere la pagina relativa al [sistema a tessere di Bing Maps](http://go.microsoft.com/fwlink/?linkid=147315). Per altre informazioni sull'utilizzo delle tessere mappa di Bing nel report, vedere [Ulteriori condizioni di utilizzo](http://go.microsoft.com/fwlink/?LinkId=151371) e [Informativa sulla privacy](http://go.microsoft.com/fwlink/?LinkId=151372).  
+ Per altre informazioni sulle tessere mappa, vedere la pagina relativa al [sistema a tessere di Bing Maps](https://go.microsoft.com/fwlink/?linkid=147315). Per altre informazioni sull'utilizzo delle tessere mappa di Bing nel report, vedere [Ulteriori condizioni di utilizzo](https://go.microsoft.com/fwlink/?LinkId=151371) e [Informativa sulla privacy](https://go.microsoft.com/fwlink/?LinkId=151372).  
   
  
   
@@ -244,36 +244,36 @@ ms.locfileid: "48187961"
   
  Le cause radici del mancato ottenimento del risultato desiderato quando si visualizza un report con mappe possono essere molteplici. Per isolare e analizzare ogni problema, può essere utile usare un livello alla volta. Usare il riquadro Mappa per selezionare un livello e attivare o disattivare facilmente la visibilità.  
   
- Per altre informazioni sui report con mappe, vedere [Risoluzione dei problemi relativi alle parti del report: report mappa &#40;Generatore report e SSRS&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
+ Per altre informazioni sui report con mappe, vedere [rapporti di risoluzione dei problemi: Eseguire il mapping di report &#40;Report e SSRS&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
 
   
 ##  <a name="HowTo"></a> Procedure  
  In questa sezione vengono elencate le procedure che illustrano in dettaglio le modalità di utilizzo delle mappe e dei relativi livelli nei report.  
   
--   [Aggiungere, modificare o eliminare una mappa o livello mappa &#40;Report e SSRS&#41;](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)  
+-   [Aggiungere, modificare o eliminare una mappa o un livello mappa &#40;Generatore report e SSRS&#41;](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)  
   
--   [Modificare legende della mappa, scala dei colori e regole associate &#40;Report e SSRS&#41;](change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)  
+-   [Modificare legende della mappa, scala dei colori e regole associate &#40;Generatore report e SSRS&#41;](change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)  
   
--   [Aggiungere percorsi personalizzati a una mappa &#40;Report e SSRS&#41;](add-custom-locations-to-a-map-report-builder-and-ssrs.md)  
+-   [Aggiungere percorsi personalizzati a una mappa &#40;Generatore report e SSRS&#41;](add-custom-locations-to-a-map-report-builder-and-ssrs.md)  
   
  
   
 ##  <a name="Section"></a> Contenuto della sezione  
- [Pianificare un Report mappa &#40;Report e SSRS&#41;](plan-a-map-report-report-builder-and-ssrs.md)  
+ [Pianificare un report mappa &#40;Generatore report e SSRS&#41;](plan-a-map-report-report-builder-and-ssrs.md)  
   
  [Creazione guidata mappa e Creazione guidata livello mappa &#40;Generatore report e SSRS&#41;](map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)  
   
- [Personalizzare i dati e la visualizzazione di una mappa o livello mappa &#40;Report e SSRS&#41;](customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md)  
+ [Personalizzare i dati e la visualizzazione di una mappa o di un livello mappa &#40;Generatore report e SSRS&#41;](customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md)  
   
  [Variare la visualizzazione di poligoni, linee e punti in base a regole e dati analitici &#40;Generatore report e SSRS&#41;](vary-polygon-line-and-point-display-by-rules-and-analytical-data.md)  
   
- [Aggiungere, modificare o eliminare una mappa o livello mappa &#40;Report e SSRS&#41;](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)  
+ [Aggiungere, modificare o eliminare una mappa o un livello mappa &#40;Generatore report e SSRS&#41;](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)  
   
- [Modificare legende della mappa, scala dei colori e regole associate &#40;Report e SSRS&#41;](change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)  
+ [Modificare legende della mappa, scala dei colori e regole associate &#40;Generatore report e SSRS&#41;](change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)  
   
- [Aggiungere percorsi personalizzati a una mappa &#40;Report e SSRS&#41;](add-custom-locations-to-a-map-report-builder-and-ssrs.md)  
+ [Aggiungere percorsi personalizzati a una mappa &#40;Generatore report e SSRS&#41;](add-custom-locations-to-a-map-report-builder-and-ssrs.md)  
   
- [Risolvere i problemi di report: I report di mappa &#40;Report e SSRS&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
+ [Risolvere i problemi di report: Eseguire il mapping di report &#40;Report e SSRS&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
   

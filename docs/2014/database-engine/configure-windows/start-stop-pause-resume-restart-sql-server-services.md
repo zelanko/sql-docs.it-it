@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Configuration Manager, start and stop services
@@ -41,12 +40,12 @@ ms.assetid: 32660a02-e5a1-411a-9e57-7066ca459df6
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 8e451c01400fcf32a3676e0904bf44f226718985
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4b70ae7a69ce316b98c892c4dbf4059bfbc97ca4
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48140714"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53360903"
 ---
 # <a name="start-stop-pause-resume-restart-the-database-engine-sql-server-agent-or-sql-server-browser-service"></a>Avviare, arrestare, sospendere, riprendere, riavviare il motore di database, SQL Server Agent o SQL Server Browser
   In questo argomento viene illustrato come avviare, i comandi arrestare, i comandi sospendere, i comandi riprendere o riavviare [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], i comandi [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser usando Gestione configurazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , i comandi [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], i comandi **net** da un prompt dei comandi, i comandi [!INCLUDE[tsql](../../includes/tsql-md.md)], i comandi or PowerShell.  
@@ -57,7 +56,7 @@ ms.locfileid: "48140714"
   
     -   [Informazioni aggiuntive](#MoreInformation)  
   
-    -   [Security](#Security)  
+    -   [Sicurezza](#Security)  
   
 -   **Istruzioni relative all'utilizzo di:**  
   
@@ -116,7 +115,7 @@ ms.locfileid: "48140714"
 ###  <a name="Security"></a> Sicurezza  
   
 ####  <a name="Permissions"></a> Permissions  
- Per impostazione predefinita, solo i membri del gruppo di amministratori locale possono avviare, arrestare, mettere in pausa, riprendere o riavviare un servizio. Per concedere a utenti non amministratori la possibilità di gestire servizi, vedere [Concedere agli utenti i privilegi per gestire i servizi in Windows Server 2003](http://support.microsoft.com/kb/325349). Il processo è analogo ad altre versioni di Windows.  
+ Per impostazione predefinita, solo i membri del gruppo di amministratori locale possono avviare, arrestare, mettere in pausa, riprendere o riavviare un servizio. Per concedere a utenti non amministratori la possibilità di gestire servizi, vedere [Concedere agli utenti i privilegi per gestire i servizi in Windows Server 2003](https://support.microsoft.com/kb/325349). Il processo è analogo ad altre versioni di Windows.  
   
  L'arresto il [!INCLUDE[ssDE](../../includes/ssde-md.md)] usando il [!INCLUDE[tsql](../../includes/tsql-md.md)] `SHUTDOWN` comando richiede l'appartenenza al **sysadmin** o **serveradmin** ruoli predefiniti del server e non è trasferibile.  
   
@@ -248,7 +247,7 @@ ms.locfileid: "48140714"
   
     -   Per arrestare un servizio, sostituire **net start** con **net stop**.  
   
-##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
  È possibile arrestare il [!INCLUDE[ssDE](../../includes/ssde-md.md)] tramite l'istruzione `SHUTDOWN`.  
   
 #### <a name="to-stop-the-includessdeincludesssde-mdmd-using-includetsqlincludestsql-mdmd"></a>Per arrestare il [!INCLUDE[ssDE](../../includes/ssde-md.md)] tramite [!INCLUDE[tsql](../../includes/tsql-md.md)]  

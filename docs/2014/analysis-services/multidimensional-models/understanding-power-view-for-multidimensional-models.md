@@ -11,12 +11,12 @@ ms.assetid: d0558cae-8209-4242-80c5-2c95981b88b9
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7d2e51be57b608ab9befd537c997d31b893ec6a9
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: f33492191deac22f416aa2f823ea501d72765b36
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50148076"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53362983"
 ---
 # <a name="understanding-power-view-for-multidimensional-models"></a>Informazioni su Power View per modelli multidimensionali
   Questo articolo descrive la funzionalità Power View per modelli multidimensionali di Microsoft SQL Server 2014 e fornisce importanti informazioni destinate agli amministratori e ai professionisti di business intelligence che intendono implementare Power View per modelli multidimensionali nelle relative organizzazioni.  
@@ -47,7 +47,7 @@ ms.locfileid: "50148076"
   
  **Supporto nativo per le query DAX**  
   
- Con questa versione, i modelli multidimensionali supportano le funzioni e le query DAX oltre alle query MDX più tradizionali. Alcune funzioni DAX, ad esempio PATH, non sono applicabili ai modelli multidimensionali. Per una migliore comprensione di DAX e delle differenze rispetto a MDX, vedere [Data Analysis Expressions e MDX](http://msdn.microsoft.com/library/ff487170\(SQL.105\).aspx).  
+ Con questa versione, i modelli multidimensionali supportano le funzioni e le query DAX oltre alle query MDX più tradizionali. Alcune funzioni DAX, ad esempio PATH, non sono applicabili ai modelli multidimensionali. Per una migliore comprensione di DAX e delle differenze rispetto a MDX, vedere [Data Analysis Expressions e MDX](https://msdn.microsoft.com/library/ff487170\(SQL.105\).aspx).  
   
 ## <a name="multidimensional-to-tabular-object-mapping"></a>Mapping di oggetti da multidimensionali a tabulari  
  Analysis Services offre una rappresentazione dei metadati del modello tabulare di un modello multidimensionale. Gli oggetti di un modello multidimensionale sono rappresentati come oggetti tabulari in Power View e in CSDL con annotazioni BI.  
@@ -88,7 +88,7 @@ ms.locfileid: "50148076"
  ![Gruppo di misure nell'elenco di campi di Power View](../media/daxmd-fieldlist-group.gif "gruppo di misure nell'elenco di campi di Power View")  
   
 ### <a name="measures-as-variants"></a>Misure come varianti  
- Le misure nei modelli multidimensionali sono varianti. Ciò significa che le misure non sono fortemente tipizzate e che possono avere tipi di dati diversi. Ad esempio, nell'immagine riportata di seguito la misura Amount nella tabella Financial Reporting è per impostazione predefinita il tipo di dati Currency, ma ha anche un valore stringa "NA" per il subtotale "Statistical Accounts", che è un tipo di dati String. Power View riconosce alcune misure come varianti e mostra la formattazione e i valori corretti nelle diverse visualizzazioni.  
+ Le misure nei modelli multidimensionali sono varianti. Ciò significa che le misure non sono fortemente tipizzate e che possono avere tipi di dati diversi. Ad esempio, nell'immagine seguente, la misura Amount nella tabella Financial Reporting è per impostazione predefinita è di tipo di dati Currency, ma ha anche un valore stringa "NA" per il subtotale "Statistical Accounts", ovvero il tipo di dati stringa. Power View riconosce alcune misure come varianti e mostra la formattazione e i valori corretti nelle diverse visualizzazioni.  
   
  **Misura come variante**  
   
@@ -98,7 +98,7 @@ ms.locfileid: "50148076"
  I modelli tabulari permettono agli utenti di creare misure *implicite* come conteggio, somma o media dei campi. Per i modelli multidimensionali, poiché i dati dell'attributo dimensione sono archiviati in modo diverso, l'esecuzione di query su misure implicite può richiedere molto tempo. Per questo motivo, le misure implicite non sono disponibili in Power View.  
   
 ## <a name="dimensions-attributes-and-hierarchies"></a>Dimensioni, attributi e gerarchie  
- Le dimensioni del cubo vengono esposte come tabelle nei metadati tabulari. Nell'elenco campi di Power View gli attributi dimensione vengono mostrati come colonne nelle cartelle di visualizzazione  Gli attributi dimensione la cui proprietà AttributeHierarchyEnabled è impostata su false, ad esempio l'attributo Birth Date nella dimensione Customer o la proprietà AttributeHierarchyVisible impostata su false, non sono visibili nell'elenco campi di Power View. Le gerarchie multilivello o le gerarchie utente, ad esempio Customer Geography nella dimensione Customer, vengono esposte come gerarchie nell'elenco campi di Power View. Gli elementi UnknownMembers nascosti di un attributo dimensione sono esposti nelle query DAX e in Power View.  
+ Le dimensioni del cubo vengono esposte come tabelle nei metadati tabulari. Nell'elenco campi di Power View gli attributi dimensione vengono mostrati come colonne nelle cartelle di visualizzazione  Gli attributi dimensione con la proprietà AttributeHierarchyEnabled impostata su false (ad esempio, l'attributo Birth Date nella dimensione Customer) o con la proprietà AttributeHierarchyVisible impostata su false non verranno visualizzati nell'elenco campi di Power View. Le gerarchie multilivello o le gerarchie utente, ad esempio Customer Geography nella dimensione Customer, vengono esposte come gerarchie nell'elenco campi di Power View. Gli elementi UnknownMembers nascosti di un attributo dimensione sono esposti nelle query DAX e in Power View.  
   
  **Dimensione, attributi e gerarchie in SQL Server Data Tools (SSDT) e nell'elenco campi di Power View**  
   
@@ -122,7 +122,7 @@ ms.locfileid: "50148076"
   
  I membri calcolati delle gerarchie utente non vengono esposti in Power View. Gli utenti finali non saranno tuttavia in grado di connettersi a un cubo contenente membri calcolati su gerarchie utente.  
   
- Nell'immagine riportata di seguito viene illustrato un report di Power View per un cubo contenente membri calcolati di Business Intelligence per le gerarchie temporali sull'attributo dimensione "Fiscal Date Calculations" nella dimensione Date.  
+ L'immagine seguente mostra un report di Power View per un cubo contenente membri calcolati di business intelligence in attributo della dimensione "Fiscal Date Calculations" nella dimensione Date.  
   
  **Report di Power View con membri calcolati**  
   
@@ -137,7 +137,7 @@ ms.locfileid: "50148076"
  I modelli multidimensionali supportano la sicurezza a livello di dimensione e di cella attraverso i ruoli. Un utente che si connette a un cubo tramite Power View viene autenticato e valutato per accertare che disponga delle autorizzazioni appropriate. Quando si applica la sicurezza a livello di dimensione, i membri di quest'ultima non verranno visti dall'utente in Power View, tuttavia se per un utente è stata definita un'autorizzazione di sicurezza a livello di cella con restrizioni per alcune celle, quell'utente non potrà connettersi al cubo con Power View. In alcuni casi, gli utenti possono vedere dati aggregati se porzioni di questi dati sono calcolate in base a dati sicuri.  
   
 ### <a name="non-aggregatable-attributeshierarchies"></a>Gerarchie/attributi non aggregabili  
- In un modello multidimensionale per gli attributi di una dimensione la proprietà IsAggregatable può essere impostata su false. Ciò significa che l'autore del modello ha specificato che le applicazioni client non devono aggregare i dati tra gerarchie (attributo o multilivello) quando si eseguono query sui dati. In Power View questo attributo dimensione viene esposto come colonna per cui non sono disponibili subtotali. Nell'immagine riportata di seguito è riportato un esempio di una gerarchia non aggregabile: Accounts. Il livello superiore della gerarchia padre-figlio Accounts è non aggregabile, mentre altri livelli lo sono. In una visualizzazione matrice della gerarchia Accounts (primi due livelli), sono visibili i subtotali per Account Level 02, ma non per il livello superiore, Account Level 01.  
+ In un modello multidimensionale per gli attributi di una dimensione la proprietà IsAggregatable può essere impostata su false. Ciò significa che l'autore del modello ha specificato che le applicazioni client non devono aggregare i dati tra gerarchie (attributo o multilivello) quando si eseguono query sui dati. In Power View questo attributo dimensione viene esposto come colonna per cui non sono disponibili subtotali. L'immagine seguente illustra un esempio di gerarchia non aggregabile, ovvero Accounts. Il livello superiore della gerarchia padre-figlio Accounts è non aggregabile, mentre altri livelli lo sono. In una visualizzazione matrice della gerarchia Accounts (primi due livelli), sono visibili i subtotali per Account Level 02, ma non per il livello superiore, Account Level 01.  
   
  **Gerarchia non aggregabile in Power View**  
   
@@ -162,7 +162,7 @@ ms.locfileid: "50148076"
   
  `Data Source=localost;Initial Catalog=AdventureWorksDW-MD;Cube='Direct Sales'`  
   
- I cubi possono presentare metadati e traduzioni di dati specificati per varie lingue all'interno del modello. Per visualizzare le traduzioni (dati e metadati), è necessario aggiungere la proprietà "Locale Identifier" facoltativa alla stringa di connessione nel file RSDS come illustrato di seguito.  
+ I cubi possono presentare metadati e traduzioni di dati specificati per varie lingue all'interno del modello. Per visualizzare le traduzioni (dati e metadati) è necessario aggiungere la proprietà "Locale Identifier" facoltativa alla stringa di connessione nel file RSDS come illustrato di seguito.  
   
  `Data Source=localost;Initial Catalog=AdventureWorksDW-MD;Cube='Adventure Works'; Locale Identifier=3084`  
   
@@ -178,7 +178,7 @@ ms.locfileid: "50148076"
  ![Aggiunta filtro](../media/daxmd-pinnedfilterinpowerview.gif "Aggiunta filtro")  
   
 ## <a name="unsupported-features"></a>Funzionalità non supportate  
- **Power View in Excel 2013** : non supporta la connessione a report per modelli multidimensionali né la loro creazione. In Power View per i modelli multidimensionali sono supportati solo i client Power View basati su browser.  
+ **Power View in Excel 2013** -non supporta la connessione a e la creazione di report per i modelli multidimensionali. In Power View per i modelli multidimensionali sono supportati solo i client Power View basati su browser.  
   
  **Azioni** : non sono supportate nei report Power View o nelle query DAX su un modello multidimensionale.  
   
@@ -187,7 +187,7 @@ ms.locfileid: "50148076"
 > [!NOTE]  
 >  I set denominati e le azioni non supportati impediscono agli utenti di connettersi a e di esplorare i modelli multidimensionali tramite Power View.  
   
- **Sicurezza a livello di cella** : non è supportata nei report Power View.  
+ **Sicurezza a livello di cella** -non è supportato nei report Power View.  
   
 ## <a name="csdlbi-annotations"></a>Annotazioni CSDLBI  
  I metadati dei cubi multidimensionali vengono esposti come modello concettuale basato su Entity Data Model (EDM) dalle annotazioni Conceptual Schema Definition Language with Business Intelligence (CSDLBI).  
@@ -197,13 +197,13 @@ ms.locfileid: "50148076"
  **Richiesta DISCOVER_CSDL_METADATA di esempio**  
   
 ```  
-<Envelopexmlns=”http://schemas.xmlsoap.org/soap/envelope/”>  
+<Envelopexmlns="http://schemas.xmlsoap.org/soap/envelope/">  
    <Body>  
-      <Discoverxmlns=”urn:schemas-microsoft-com:xml-analysis”>  
+      <Discoverxmlns="urn:schemas-microsoft-com:xml-analysis">  
          <RequestType>DISCOVER_CSDL_METADATA</RequestType>  
          <Restrictions>  
             <RestrictionList>  
-              <CATALOG_NAME>”catalogname”<CATALOG_NAME>  
+              <CATALOG_NAME>"catalogname"<CATALOG_NAME>  
             </RestrictionList>  
          </Restrictions>  
          <Properties>  
@@ -218,15 +218,15 @@ ms.locfileid: "50148076"
   
  La richiesta DISCOVER_CSDL_METADATA presenta le restrizioni seguenti:  
   
-|nome|Obbligatorio|Description|  
+|nome|Obbligatorio|Descrizione|  
 |----------|--------------|-----------------|  
-|CATALOG_NAME|Sì|Nome del catalogo\database.|  
+|CATALOG_NAME|Yes|Nome del catalogo\database.|  
 |PERSPECTIVE_NAME|Sì, se il cubo contiene più di una prospettiva. Facoltativo se è presente un solo cubo o una prospettiva predefinita.|Nome del cubo o della prospettiva nel database multidimensionale.|  
-|VERSION|Sì|Versione CSDL richiesta dal client. I costrutti e le funzionalità multidimensionali sono supportati nella versione 2.0.|  
+|VERSION|Yes|Versione CSDL richiesta dal client. I costrutti e le funzionalità multidimensionali sono supportati nella versione 2.0.|  
   
  Il documento CSDL in uscita restituito rappresenta il modello come spazio dei nomi, contenente entità, associazioni e proprietà.  
   
- Per informazioni dettagliate sulle annotazioni CSDLBI per i modelli tabulari, vedere [Riferimento tecnico per le annotazioni di Business Intelligence per CSDL](https://docs.microsoft.com/bi-reference/csdl/technical-reference-for-bi-annotations-to-csdl) in MSDN e [\[MS-CSDLBI\]: Formato di file delle definizioni dello schema concettuale con annotazioni di Business Intelligence](http://msdn.microsoft.com/library/jj161299\(SQL.105\).aspx).  
+ Per informazioni dettagliate sulle annotazioni CSDLBI per i modelli tabulari, vedere [Technical Reference for annotazioni Business Intelligence per CSDL](https://docs.microsoft.com/bi-reference/csdl/technical-reference-for-bi-annotations-to-csdl) su MSDN, e [ \[MS-CSDLBI\]: Formato con annotazioni di Business Intelligence di File Conceptual Schema Definition Language](https://msdn.microsoft.com/library/jj161299\(SQL.105\).aspx).  
   
 ## <a name="client-help-on-officecom"></a>Guida del client su Office.com  
  Negli articoli seguenti, disponibili su Office.com, vengono fornite ulteriori informazioni sulla modalità di visualizzazione degli oggetti del modello multidimensionale in Power View e sulla creazione di un report di esempio:  

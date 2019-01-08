@@ -19,12 +19,12 @@ ms.assetid: 91ac0347-f908-44f5-bd3d-115790223af4
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1e4d13fb24ad337ed6395e8529f4067d8acd2a1c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5bf5ca4c2e27f366a6f5ded97f9a9aa5213db122
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48140641"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53361073"
 ---
 # <a name="create-package-configurations"></a>Creazione di configurazioni dei pacchetti
   Le configurazioni di pacchetto vengono create nella finestra di dialogo **Libreria configurazioni pacchetto** e tramite la Configurazione guidata pacchetto. Per accedere a questi strumenti, fare clic su **Configurazioni pacchetto** nel menu **SSIS** in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
@@ -74,11 +74,11 @@ ms.locfileid: "48140641"
   
  Nella tabella seguente vengono descritte le colonne dell'elenco delle configurazioni visualizzato nella finestra di dialogo **Libreria configurazioni pacchetto** .  
   
-|colonna|Description|  
+|colonna|Descrizione|  
 |------------|-----------------|  
 |**Nome configurazione**|Nome della configurazione.|  
 |**Tipo configurazione**|Tipo di configurazione.|  
-|**Stringa di configurazione**|Posizione della configurazione. La posizione può corrispondere a un percorso, a una variabile di ambiente, a una chiave del Registro di sistema, a un nome di variabile del pacchetto padre oppure a una tabella in un database di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].|  
+|**Stringa di configurazione**|Posizione della configurazione. La posizione può corrispondere a un percorso, a una variabile di ambiente, a una chiave del Registro di sistema, a un nome di variabile del pacchetto padre oppure a una tabella in un database di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .|  
 |**Oggetto di destinazione**|Nome dell'oggetto a cui è associata una proprietà con configurazione. Se la configurazione è un file di configurazione XML, la colonna è vuota in quanto questo tipo di configurazione può aggiornare più oggetti.|  
 |**Proprietà di destinazione**|Nome della proprietà. Se tramite la configurazione si scrive in un file di configurazione XML o in una tabella di SQL Server, la colonna risulta vuota perché la configurazione può aggiornare più oggetti.|  
   
@@ -111,14 +111,14 @@ ms.locfileid: "48140641"
   
 ## <a name="external-resources"></a>Risorse esterne  
   
--   Articolo tecnico [Understanding Integration Services Package Configurations](http://go.microsoft.com/fwlink/?LinkId=165643)(Informazioni sulle configurazioni dei pacchetti di Integration Services) sul sito Web msdn.microsoft.com  
+-   Articolo tecnico [Informazioni sulle configurazioni dei pacchetti di Integration Services](https://go.microsoft.com/fwlink/?LinkId=165643) sul sito Web msdn.microsoft.com  
   
--   Post di blog, [Creating packages in code – Package Configurations](http://go.microsoft.com/fwlink/?LinkId=217663)(Creazione di pacchetti in codice con configurazioni dei pacchetti), su www.sqlis.com.  
+-   Intervento nel blog concernente [creazione di pacchetti nel codice, le configurazioni di pacchetto](https://go.microsoft.com/fwlink/?LinkId=217663), su www.sqlis.com.  
   
--   Post di blog [API Sample – Programmatically add a configuration file to a package](http://go.microsoft.com/fwlink/?LinkId=217664)(esempio di API relativo all'aggiunta a livello di programmazione di un file di configurazione a un pacchetto), su blogs.msdn.com.  
+-   Intervento nel blog concernente [esempio di API: a livello di codice aggiunge un file di configurazione a un pacchetto](https://go.microsoft.com/fwlink/?LinkId=217664), su blogs.msdn.com.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Configurazioni di pacchetto](../../2014/integration-services/package-configurations.md)   
+ [SSIS](../../2014/integration-services/package-configurations.md)   
  [Distribuzione del pacchetto &#40;SSIS&#41;](packages/legacy-package-deployment-ssis.md)   
  [Utilizzo delle variabili a livello di programmazione](building-packages-programmatically/working-with-variables-programmatically.md)  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Data Profiling task [Integration Services], about data profiling
@@ -15,12 +14,12 @@ ms.assetid: 756840e3-aa09-45cd-9951-1a17af4b5925
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9a20b4b2ddaee99a9ce6f2f9efa5ffc5dbbc206a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f656d900051a70998ba00ed54e3e5a2fb545716a
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48119916"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53367093"
 ---
 # <a name="data-profiling-task-and-viewer"></a>Attività Profiling dati e visualizzatore
   L'attività Profiling dati offre funzionalità di profiling dei dati all'interno del processo di estrazione, trasformazione e caricamento dei dati. L'attività Profiling dati offre i vantaggi seguenti:  
@@ -59,17 +58,17 @@ ms.locfileid: "48119916"
  **Passaggio 1: Configurazione dell'attività Profiling dati**  
  L'attività Profiling dati è un'attività che consente di configurare i profili che si desidera calcolare. Viene quindi eseguito il pacchetto contenente l'attività Profiling dati per calcolare i profili. L'attività salva l'output del profilo in formato XML in un file o una variabile del pacchetto.  
   
- **Per altre informazioni:** [Impostazione dell'attività Profiling dati](data-profiling-task.md)  
+ **Per ulteriori informazioni:** [Impostazione dell'attività Profiling dati](data-profiling-task.md)  
   
  **Passaggio 2: Controllo dei profili calcolati dall'attività Profiling dati**  
  Per visualizzare i profili dati calcolati dall'attività Profiling dati, è necessario inviare l'output a un file e quindi utilizzare il visualizzatore del profilo dati. Questo visualizzatore è un'utilità autonoma che consente di visualizzare l'output del profilo in forma di riepilogo e in formato dettagliato con funzionalità di drill-down facoltative.  
   
- **Per altre informazioni:** [Visualizzatore profilo dati](data-profile-viewer.md)  
+ **Per ulteriori informazioni:** [Visualizzatore profilo dati](data-profile-viewer.md)  
   
 ### <a name="addition-of-conditional-logic-to-the-data-profiling-workflow"></a>Aggiunta di logica condizionale al flusso di lavoro del profiling dei dati  
  L'attività Profiling dati non dispone di caratteristiche incorporate che consentono di utilizzare la logica condizionale per connettere questa attività alle attività a valle basate sull'output del profilo. È possibile, tuttavia, aggiungere tale logica in modo semplice, con operazioni di programmazione ridotte, in un'attività Script. L'attività Script, ad esempio, può eseguire una query XPath sul file di output dell'attività Profiling dati. La query può determinare se la percentuale di valori Null in una colonna specifica supera una determinata soglia. Se la percentuale supera la soglia, è possibile interrompere il pacchetto e risolvere il problema nei dati di origine prima di continuare. Per altre informazioni, vedere [Incorporamento di un'attività Profiling dati nel flusso di lavoro del pacchetto](incorporate-a-data-profiling-task-in-package-workflow.md).  
   
 ## <a name="related-content"></a>Contenuto correlato  
- [Pagina relativa allo schema del profiler dati](http://go.microsoft.com/fwlink/?LinkId=251524)  
+ [Pagina relativa allo schema del profiler dati](https://go.microsoft.com/fwlink/?LinkId=251524)  
   
   

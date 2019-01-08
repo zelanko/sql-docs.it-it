@@ -11,12 +11,12 @@ ms.assetid: a458fdf9-fb2a-4fee-9fbd-b38f36e91753
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 74fbdebc3e884b4a1068641e25cf7f656bfdbb11
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 755e70e9ee037cabb33275a848411e40c784d5e9
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48081386"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53363113"
 ---
 # <a name="rendering-data-report-builder-and-ssrs"></a>Rendering dei dati (Generatore report e SSRS)
   Quando si utilizzano i renderer del layout, ad esempio HTML, MHTML, Word, Excel, PDF o Immagine, i dati e la relativa organizzazione rimangono invariati. Quando si esegue l'esportazione utilizzando un formato di renderer di dati, ad esempio CSV (Comma-Separated Value) o XML, non viene eseguito il rendering di alcun elemento del layout visivo. Durante il rendering del report, CSV e XML applicano al corpo del report e al relativo contenuto apposite regole che determinano la modalità di rendering dei dati in tali formati.  
@@ -49,9 +49,9 @@ ms.locfileid: "48081386"
 ## <a name="see-also"></a>Vedere anche  
  [Paginazione in Reporting Services &#40;Generatore report e SSRS&#41;](pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [Tipi di rendering &#40;Generatore report e SSRS&#41;](rendering-behaviors-report-builder-and-ssrs.md)   
- [Funzionalità interattiva per estensioni di Rendering del Report diversi &#40;Report e SSRS&#41;](../report-builder/interactive-functionality-different-report-rendering-extensions.md)   
+ [Funzionalità interattiva per estensioni per il rendering di report differenti &#40;Generatore report e SSRS&#41;](../report-builder/interactive-functionality-different-report-rendering-extensions.md)   
  [Rendering degli elementi del report &#40;Generatore report e SSRS&#41;](rendering-report-items-report-builder-and-ssrs.md)   
  [Elenchi &#40;Generatore report e SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md)   
- [Impostazioni relative alle informazioni sul dispositivo di Reporting Services](http://go.microsoft.com/fwlink/?LinkId=102515)  
+ [Impostazioni relative alle informazioni sul dispositivo di Reporting Services](https://go.microsoft.com/fwlink/?LinkId=102515)  
   
   

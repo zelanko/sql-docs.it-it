@@ -18,17 +18,17 @@ ms.assetid: 4d93489e-e9bb-45b3-8354-21f58209965d
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: cfa444356e2fbefe0e6fad2333b8e565257b3992
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2195c4efcec60b5a350475ab2600b42ef5c93b36
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48192521"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53359563"
 ---
 # <a name="securing-sql-server"></a>Sicurezza di SQL Server
   E possibile considerare la sicurezza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] come una serie di passaggi che interessano quattro aree: la piattaforma, l'autenticazione, gli oggetti (inclusi i dati) e le applicazioni che accedono al sistema. Gli argomenti seguenti guideranno l'utente nella creazione e implementazione di un piano di sicurezza efficace.  
   
- Altre informazioni sulla sicurezza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono disponibili sul sito Web di [SQL Server](http://go.microsoft.com/fwlink/?LinkID=31629) . che include una guida alle procedure consigliate e un elenco di controllo per la sicurezza. Questo sito contiene inoltre informazioni aggiornate sul service pack e i download più recenti.  
+ Altre informazioni sulla sicurezza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono disponibili sul sito Web di [SQL Server](https://go.microsoft.com/fwlink/?LinkID=31629) . che include una guida alle procedure consigliate e un elenco di controllo per la sicurezza. Questo sito contiene inoltre informazioni aggiornate sul service pack e i download più recenti.  
   
 ## <a name="platform-and-network-security"></a>Sicurezza della piattaforma e della rete  
  La piattaforma per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] comprende l'hardware fisico e i sistemi di rete che collegano i client ai server di database, nonché i file binari utilizzati per elaborare le richieste di database.  
@@ -76,7 +76,7 @@ ms.locfileid: "48192521"
 |---------------------------|---------|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] file di programma|[Percorsi dei file per le istanze predefinite e denominate di SQL Server](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md)|  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service pack e aggiornamenti garantiscono una sicurezza avanzata. Per determinare quali sono i service pack più recenti disponibili per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere il sito Web di [SQL Server](http://go.microsoft.com/fwlink/?LinkID=31629) .  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service pack e aggiornamenti garantiscono una sicurezza avanzata. Per determinare quali sono i service pack più recenti disponibili per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere il sito Web di [SQL Server](https://go.microsoft.com/fwlink/?LinkID=31629) .  
   
  È possibile utilizzare lo script seguente per determinare il service pack installato nel sistema:  
   

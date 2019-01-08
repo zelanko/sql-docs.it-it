@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- integration-services
+ms.technology: integration-services
 ms.topic: reference
 ms.assetid: 26616eb8-9e80-434d-b22a-ece1b00f449d
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8b3c563360368f2bdc542e511812460aab623d39
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d7017ef85a86f16c94273db4d78980f510547320
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48229801"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53369861"
 ---
 # <a name="extending-packages-with-custom-objects"></a>Estensione di pacchetti tramite oggetti personalizzati
   Se i componenti forniti in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] non soddisfano i requisiti, è possibile estendere le funzionalità di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] utilizzando il codice per definire estensioni personalizzate. Per l'estensione dei pacchetti sono disponibili due opzioni discrete: è possibile scrivere codice all'interno dei potenti wrapper forniti dall'attività Script e dal componente script oppure creare da zero estensioni personalizzate di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] derivando dalla classe di base fornita dal modello a oggetti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
@@ -26,7 +24,7 @@ ms.locfileid: "48229801"
   
  Quando una soluzione [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] personalizzata richiede una maggiore flessibilità di quanto non forniscano l'attività Script e il componente script oppure quando è necessario un componente riutilizzabile in più pacchetti, il modello a oggetti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] consente di compilare completamente da zero attività personalizzate, componenti flusso di dati e altri oggetti del pacchetto in codice gestito.  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Sviluppo di oggetti personalizzati per Integration Services](developing-custom-objects-for-integration-services.md)  
  Vengono descritti gli oggetti personalizzati che è possibile creare per [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], con un riepilogo dei passaggi e delle impostazioni essenziali.  
   
@@ -51,7 +49,7 @@ ms.locfileid: "48229801"
  [Sviluppo di un componente flusso di dati personalizzato](data-flow/developing-a-custom-data-flow-component.md)  
  Viene descritto come programmare origini, trasformazioni e destinazioni personalizzate del flusso di dati.  
   
-## <a name="reference"></a>Riferimento  
+## <a name="reference"></a>Riferimenti  
  [Guida di riferimento ai messaggi e agli errori di Integration Services](../integration-services-error-and-message-reference.md)  
  Vengono elencati i codici di errore predefiniti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] con i relativi nomi simbolici e le descrizioni.  
   
@@ -62,7 +60,7 @@ ms.locfileid: "48229801"
  [Compilazione di pacchetti a livello di programmazione](../building-packages-programmatically/building-packages-programmatically.md)  
  Viene descritto come creare, configurare, eseguire, caricare, salvare e gestire pacchetti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] a livello di programmazione.  
   
-![Icona di Integration Services (piccola)](../media/dts-16.gif "icona di Integration Services (piccola)")**rimangono fino a Date con Integration Services** <br /> Per i download, gli articoli, gli esempi e i video Microsoft più recenti, oltre alle soluzioni selezionate dalla community, visitare la pagina [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sul sito MSDN:<br /><br /> [Visita la pagina di Integration Services su MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Per ricevere una notifica automatica su questi aggiornamenti, sottoscrivere i feed RSS disponibili nella pagina.  
+![Icona di Integration Services (piccola)](../media/dts-16.gif "icona di Integration Services (piccola)")**rimangono fino a Date con Integration Services**<br /> Per i download, gli articoli, gli esempi e i video Microsoft più recenti, oltre alle soluzioni selezionate dalla community, visitare la pagina [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sul sito MSDN:<br /><br /> [Visita la pagina di Integration Services su MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Per ricevere una notifica automatica su questi aggiornamenti, sottoscrivere i feed RSS disponibili nella pagina.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Confronto tra soluzioni di scripting e oggetti personalizzati](../extending-packages-scripting/comparing-scripting-solutions-and-custom-objects.md)   

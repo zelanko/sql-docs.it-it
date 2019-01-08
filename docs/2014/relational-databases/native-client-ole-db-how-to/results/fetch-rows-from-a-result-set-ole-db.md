@@ -12,27 +12,27 @@ ms.assetid: 8e9916a5-61e1-468e-8a5c-1ab8b5110737
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8c019b7735b70247d0646cccc9f8de277725eec8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3ea6619eede506326cdbb1442f86dc76c44e1765
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48122791"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376273"
 ---
 # <a name="fetch-rows-from-a-result-set-ole-db"></a>Recuperare righe da un set di risultati (OLE DB)
   In questo esempio viene illustrato come recuperare righe da un set di risultati. Questo esempio non è supportato in IA64.  
   
- Per l'esempio è necessario il database di esempio AdventureWorks, che è possibile scaricare dalla home page del sito relativo a [progetti della community ed esempi per Microsoft SQL Server](http://go.microsoft.com/fwlink/?LinkID=85384).  
+ Per l'esempio è necessario il database di esempio AdventureWorks, che è possibile scaricare dalla home page del sito relativo a [progetti della community ed esempi per Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkID=85384).  
   
 > [!IMPORTANT]  
->  Se possibile, usare l'autenticazione di Windows. Se non è disponibile, agli utenti verrà richiesto di immettere le credenziali in fase di esecuzione. Evitare di archiviare le credenziali in un file. Se è necessario rendere persistenti le credenziali, è consigliabile crittografarle usando l'[API di crittografia Win32](http://go.microsoft.com/fwlink/?LinkId=64532).  
+>  Se possibile, usare l'autenticazione di Windows. Se non è disponibile, agli utenti verrà richiesto di immettere le credenziali in fase di esecuzione. Evitare di archiviare le credenziali in un file. Se è necessario rendere persistenti le credenziali, è consigliabile crittografarle usando l'[API di crittografia Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
   
 ## <a name="example"></a>Esempio  
   
-### <a name="description"></a>Description  
+### <a name="description"></a>Descrizione  
  Compilare il listato di codice C++ seguente con ole32.lib oleaut32.lib ed eseguirlo. In questa applicazione viene eseguita la connessione all'istanza predefinita di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nel computer in uso. In alcuni sistemi operativi Windows sarà necessario modificare (local) o (localhost) impostando il valore sul nome dell'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Per connettersi a un'istanza denominata, modificare la stringa di connessione da L"(local)" in L"(local)\\\nome", dove nome rappresenta l'istanza denominata. Per impostazione predefinita, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express viene installato in un'istanza denominata. Verificare che nella variabile di ambiente INCLUDE sia presente la directory che contiene sqlncli.h.  
   
-### <a name="code"></a>codice  
+### <a name="code"></a>Codice  
   
 ```  
 // compile with: ole32.lib oleaut32.lib  

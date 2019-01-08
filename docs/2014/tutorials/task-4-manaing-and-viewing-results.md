@@ -13,19 +13,19 @@ ms.assetid: ecc3ba7e-fecf-478f-8825-6e4764b00e99
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fb0cc2f091ce6365e91dd285e553498cc595c76e
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: 5062f24c679d2d85da09a1dc81d9c487d6536f1f
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49119873"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53377533"
 ---
 # <a name="task-4-manaing-and-viewing-results"></a>Attività 4: Gestione e visualizzazione dei risultati
-  In questa attività si controllano i risultati della pulizia computerizzata; inoltre, si effettua la pulizia interattiva dei dati del fornitore. Visualizzare [fase di pulizia interattiva](http://msdn.microsoft.com/library/hh213061.aspx#Interactive) per altri dettagli.  
+  In questa attività si controllano i risultati della pulizia computerizzata; inoltre, si effettua la pulizia interattiva dei dati del fornitore. Visualizzare [fase di pulizia interattiva](https://msdn.microsoft.com/library/hh213061.aspx#Interactive) per altri dettagli.  
   
 1.  Selezionare **Contact Email** dominio dall'elenco di domini.  
   
-2.  Passare al **valido** scheda nel riquadro di destra. Si noti che alla fine dei due indirizzi di posta elettronica manca la lettera "s". Questi due messaggi di posta elettronica che sono stati trovati non validi dalla regola di dominio che richiede tutti gli indirizzi di posta elettronica al termine **@adventure-works.com** (con del '). In DQS viene applicata la regola di dominio durante la pulizia per stabilire la validità di un indirizzo di posta elettronica. In questa scheda vengono visualizzati i valori del dominio contrassegnati come non validi nella Knowledge Base o che non hanno superato una regola di dominio. In questo caso, i valori in questione non hanno superato la regola di dominio (Email Validation).  
+2.  Passare al **valido** scheda nel riquadro di destra. Si noti che due indirizzi di posta elettronica manca la lettera ' alla fine. Questi due messaggi di posta elettronica che sono stati trovati non validi dalla regola di dominio che richiede tutti gli indirizzi di posta elettronica al termine **@adventure-works.com** (con del '). In DQS viene applicata la regola di dominio durante la pulizia per stabilire la validità di un indirizzo di posta elettronica. In questa scheda vengono visualizzati i valori del dominio contrassegnati come non validi nella Knowledge Base o che non hanno superato una regola di dominio. In questo caso, i valori in questione non hanno superato la regola di dominio (Email Validation).  
   
 3.  Nel **Correggi in** colonna, tipo di messaggio di posta elettronica a destra di indirizzi che terminano con **@adventure-works.com** (con del ').  
   
@@ -71,7 +71,7 @@ ms.locfileid: "49119873"
   
 18. Selezionare il **Address Validation** domain composita dall'elenco di domini.  
   
-19. Nel riquadro destro passare al **corretti** scheda. Dovrebbe gli indirizzi che risultano corrette per il **Melissa Data – controllo indirizzo** servizio DQS nel **Azure Marketplace**.  
+19. Nel riquadro destro passare al **corretti** scheda. Dovrebbe gli indirizzi che risultano corrette per il **Melissa Data - controllo indirizzo** servizio DQS nel **Azure Marketplace**.  
   
 20. Passare al **con correzione** scheda.  
   
@@ -81,7 +81,7 @@ ms.locfileid: "49119873"
   
 22. Si noti che il **Approva** pulsante di opzione è già selezionato per questo elemento nell'elenco. Si tratta del comportamento predefinito per gli elementi nel **con correzione** scheda.  
   
-23. Passare al **suggeriti** scheda. Esaminare le modifiche suggerite per il **Melissa Data – controllo indirizzo** servizio.  
+23. Passare al **suggeriti** scheda. Esaminare le modifiche suggerite per il **Melissa Data - controllo indirizzo** servizio.  
   
 24. **Fare clic su Approva tutti i termini** nel pulsante della barra degli strumenti fare clic **OK** sul **conferma** finestra di messaggio.  
   
@@ -90,6 +90,6 @@ ms.locfileid: "49119873"
 25. Fare clic su **successivo** per passare alle **esportare** pagina.  
   
 ## <a name="next-step"></a>Passaggio successivo  
- [Attività 5: Esportazione dei risultati della pulizia in un file di Excel](../../2014/tutorials/task-5-exporting-cleansing-results-to-an-excel-file.md)  
+ [Attività 5: Esportazione dei risultati in un File di Excel di pulizia](../../2014/tutorials/task-5-exporting-cleansing-results-to-an-excel-file.md)  
   
   

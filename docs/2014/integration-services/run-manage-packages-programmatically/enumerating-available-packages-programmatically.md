@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- integration-services
+ms.technology: integration-services
 ms.topic: reference
 helpviewer_keywords:
 - programmatically enumerate packages [SSIS]
@@ -16,12 +14,12 @@ ms.assetid: 254ec7ee-d3ff-4361-8995-46e9b9c4dc95
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 465d4f2a85939d6bd90dc88e33c9d92ed49af490
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9952b191e2469d56bd7ba3098f1f8a24f206a55a
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48200971"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53374803"
 ---
 # <a name="enumerating-available-packages-programmatically"></a>Enumerazione dei pacchetti disponibili a livello di codice
   Quando si utilizzano i pacchetti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] a livello di codice, può essere necessario determinare se esiste un singolo pacchetto o cartella o enumerare i pacchetti salvati disponibili per il caricamento e l'esecuzione. La classe <xref:Microsoft.SqlServer.Dts.Runtime.Application> dello spazio dei nomi <xref:Microsoft.SqlServer.Dts.Runtime> fornisce un'ampia varietà di metodi e classi per soddisfare questi requisiti.  
@@ -240,7 +238,7 @@ namespace EnumeratePackagesSql_CS
   
  [Torna all'inizio](#top)  
   
-![Icona di Integration Services (piccola)](../media/dts-16.gif "icona di Integration Services (piccola)")**rimangono fino a Date con Integration Services** <br /> Per i download, gli articoli, gli esempi e i video Microsoft più recenti, oltre alle soluzioni selezionate dalla community, visitare la pagina [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sul sito MSDN:<br /><br /> [Visita la pagina di Integration Services su MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Per ricevere una notifica automatica su questi aggiornamenti, sottoscrivere i feed RSS disponibili nella pagina.  
+![Icona di Integration Services (piccola)](../media/dts-16.gif "icona di Integration Services (piccola)")**rimangono fino a Date con Integration Services**<br /> Per i download, gli articoli, gli esempi e i video Microsoft più recenti, oltre alle soluzioni selezionate dalla community, visitare la pagina [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sul sito MSDN:<br /><br /> [Visita la pagina di Integration Services su MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Per ricevere una notifica automatica su questi aggiornamenti, sottoscrivere i feed RSS disponibili nella pagina.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Gestione dei pacchetti &#40;servizio SSIS&#41;](../service/package-management-ssis-service.md)  

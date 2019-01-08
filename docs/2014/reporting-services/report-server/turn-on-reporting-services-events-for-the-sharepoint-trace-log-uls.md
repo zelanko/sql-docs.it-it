@@ -11,12 +11,12 @@ ms.assetid: 81110ef6-4289-405c-a931-e7e9f49e69ba
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 9170643f3d0a96facb68709ad59bc4c8e90dc9a5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2f4f0217fd3941e236e132487041020f0c1ec3f2
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48117251"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53371343"
 ---
 # <a name="turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls"></a>Abilitare gli eventi di Reporting Services per il log di traccia di SharePoint (ULS)
   A partire da [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], tramite i server [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] in modalità SharePoint è possibile scrivere gli eventi di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] nel log di traccia del Servizio di registrazione unificato (ULS, Unified Logging Service) di SharePoint. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] sono disponibili nella pagina di monitoraggio di Amministrazione centrale SharePoint.  
@@ -40,12 +40,12 @@ ms.locfileid: "48117251"
 ##  <a name="bkmk_general"></a> Indicazioni generali per il log ULS  
  Nella tabella seguente sono elencate le categorie e i livelli degli eventi consigliati per il monitoraggio di un ambiente [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] . Quando un evento viene registrato, in ogni voce sono inclusi l'ora di registrazione dell'evento, il nome del processo e l'ID del thread.  
   
-|Category|Level|Description|  
+|Category|Level|Descrizione|  
 |--------------|-----------|-----------------|  
 |Database|Dettagliato|Registra eventi che comportano l'accesso al database.|  
 |Generale|Dettagliato|Registra eventi che comportano l'accesso agli elementi seguenti:<br /><br /> [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] pagine Web<br /><br /> Gestore HTTP Visualizzatore report<br /><br /> Accesso al report (file con estensione rdl)<br /><br /> Origini dati (file con estensione rsds)<br /><br /> URL nel sito di SharePoint (file con estensione smdl)|  
-|Office Server General|Exception|Registra errori di accesso.|  
-|Topologia|Verbose|Registra informazioni sull'utente corrente|  
+|Office Server General|Eccezione|Registra errori di accesso.|  
+|Topologia|Dettagliato|Registra informazioni sull'utente corrente|  
 |web part|Dettagliato|Consente di registrare eventi che comportano l'accesso alla web part Visualizzatore report.|  
   
 ##  <a name="bkmk_turnon"></a> Per abilitare e disabilitare gli eventi di Reporting Services nella categoria Reporting Services  
@@ -87,9 +87,9 @@ Get-SPDiagnosticConfig
   
 1.  **Prodotto:SQL Server Reporting Services**  
   
-2.  **Categoria:** per gli eventi correlati al server viene aggiunta al nome l'indicazione "server di report". Ad esempio, "Runtime avvisi server di report". Questi eventi vengono registrati anche nei file di log del server di report.  
+2.  **Categoria:** Gli eventi correlati al server avrà i caratteri "ReportServer", all'inizio del nome. Ad esempio, "Runtime avvisi server di report". Questi eventi vengono registrati anche nei file di log del server di report.  
   
-3.  **Categoria:** gli eventi correlati a o comunicati da un componente front-end Web non contengono l'indicazione "server di report". Ad esempio, "Proxy applicazione del servizio" Runtime avvisi server di report". Le voci relative al front-end Web contengono un valore CorrelationID, mentre le voci relative al server no.  
+3.  **Categoria:** Gli eventi correlati a o comunicati da un componente front-end web non contengono "ReportServer". Ad esempio, "Proxy applicazione del servizio" Runtime avvisi server di report". Le voci relative al front-end Web contengono un valore CorrelationID, mentre le voci relative al server no.  
   
 ##  <a name="bkmk_list"></a> Elenco di eventi di SQL Server Reporting Services  
  Nella tabella seguente sono elencati gli eventi nella categoria SQL Server Reporting Services:  
@@ -102,7 +102,7 @@ Get-SPDiagnosticConfig
 |Rendering in modalità locale||  
 |Proxy client SOAP||  
 |Pagine dell'interfaccia utente||  
-|Power View|Voci di log scritte nell'API **LogClientTraceEvents** . Queste voci vengono originate dalle applicazioni client, incluso [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], una funzionalità del [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] aggiuntivo per [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] Enterprise Edition.<br /><br /> Tutte le voci di log dell'API LogClientTraceEvents saranno registrate nella **categoria** di "SQL Server Reporting Services" e nell' **area** di "Power View".<br /><br /> Il contenuto di voci registrate con l'area di "Power View" è determinato dall'applicazione client.|  
+|Power View|Voci di log scritte nell'API **LogClientTraceEvents** . Queste voci vengono originate dalle applicazioni client, tra cui [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], una funzionalità del componente aggiuntivo [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] per [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[SPS2010](../../includes/sps2010-md.md)] Enterprise Edition.<br /><br /> Tutte le voci di log dell'API LogClientTraceEvents saranno registrate nella **categoria** di "SQL Server Reporting Services" e nell'**area** di "Power View".<br /><br /> Il contenuto di voci registrate con l'area di "Power View" è determinato dall'applicazione client.|  
 |Runtime avvisi server di report||  
 |Strumento gestione dominio applicazione del server di report||  
 |Risposta nel buffer del server di report||  
@@ -126,7 +126,7 @@ Get-SPDiagnosticConfig
 |Provider del server di report||  
 |Rendering del server di report||  
 |Anteprima report del server di report||  
-|Utilità risorse server di report|Voci di esempio:<br /><br /> Servizi MediumReporting di avvio SKU: valutazione<br /><br /> Copia di MediumEvaluation: scadenza tra 180 giorni|  
+|Utilità risorse server di report|Voci di esempio:<br /><br /> Servizi MediumReporting di avvio SKU Copia di valutazione<br /><br /> Copia di MediumEvaluation: scadenza tra 180 giorni|  
 |Processi in esecuzione del server di report||  
 |Richieste in esecuzione del server di report||  
 |Pianificazione del server di report||  
@@ -143,16 +143,16 @@ Get-SPDiagnosticConfig
  ![Contenuto correlato di PowerShell](../media/rs-powershellicon.jpg "Contenuto correlato di PowerShell")È possibile usare PowerShell per restituire un elenco di eventi correlati a [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] da un file di log ULS. Digitare il comando seguente dalla shell di gestione SharePoint 2010 per ottenere un elenco filtrato di righe del file di log ULS, UESQL11SPOINT-20110606-1530.log, contenenti "**sql server reporting services**":  
   
 ```  
-Get-content -path "C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\14\LOGS\UESQL11SPOINT-20110606-1530.log" | select-string "sql server reporting services”  
+Get-content -path "C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\14\LOGS\UESQL11SPOINT-20110606-1530.log" | select-string "sql server reporting services"  
 ```  
   
  Sono inoltre disponibili numerosi strumenti che è possibile scaricare e che consentono di leggere i log ULS. Ad esempio, [SharePoint LogViewer](http://sharepointlogviewer.codeplex.com/) o il [visualizzatore di log ULS di SharePoint](http://ulsviewer.codeplex.com/workitem/list/basic). Entrambi questi strumenti sono disponibili in CodePlex.  
   
- Per altre informazioni sull'uso di PowerShell per visualizzare dati del log, vedere [Visualizzare i log diagnostici (SharePoint Server 2010)](http://technet.microsoft.com/library/ff463595.aspx)  
+ Per altre informazioni sull'uso di PowerShell per visualizzare dati del log, vedere [Visualizzare i log diagnostici (SharePoint Server 2010)](https://technet.microsoft.com/library/ff463595.aspx)  
   
 ##  <a name="bkmk_trace"></a> Percorso del log di traccia  
  I file dei log di traccia si trovano in genere nella cartella **c:\Programmi\Common files\Microsoft Shared\Web Server Extensions\14\logs** , ma è possibile verificare o modificare il percorso dalla pagina **Registrazione diagnostica** in Amministrazione centrale SharePoint.  
   
- Per altre informazioni e istruzioni per la configurazione della registrazione diagnostica in un server SharePoint in Amministrazione centrale SharePoint 2010, vedere [Configurare le impostazioni della registrazione diagnostica (Windows SharePoint Services)](http://go.microsoft.com/fwlink/?LinkID=114423).  
+ Per altre informazioni e istruzioni per la configurazione della registrazione diagnostica in un server SharePoint in Amministrazione centrale SharePoint 2010, vedere [Configurare le impostazioni della registrazione diagnostica (Windows SharePoint Services)](https://go.microsoft.com/fwlink/?LinkID=114423).  
   
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.wmidatareadertask.f1
@@ -16,12 +15,12 @@ ms.assetid: dae57067-0275-4ac3-8f34-1b9d169f1112
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3d0262328fd3f5a2ed948fb8f2c62781dc19ae17
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 23a6e6fd3c6639abedc0324d2f8831e782270bc1
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48229781"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53363123"
 ---
 # <a name="wmi-data-reader-task"></a>Attività Lettore di dati WMI
   L'attività Lettore di dati WMI esegue query che utilizzano il linguaggio di query di WMI (Windows Management Instrumentation, Strumentazione gestione Windows) per ottenere da WMI informazioni su un sistema informatico. È possibile utilizzare l'attività Lettore di dati WMI per gli scopi seguenti:  
@@ -49,7 +48,7 @@ ms.locfileid: "48229781"
  L'attività Lettore di dati WMI utilizza una gestione connessione WMI per connettersi al server da cui legge le informazioni di WMI. Per altre informazioni, vedere [Gestione connessione WMI](../connection-manager/wmi-connection-manager.md).  
   
 ## <a name="wql-query"></a>Query WQL  
- WQL è un sottolinguaggio di SQL che include estensioni per supportare la notifica degli eventi WMI e altre caratteristiche specifiche di WMI. Per altre informazioni su WQL, vedere la documentazione di Strumentazione gestione Windows in [MSDN Library](http://go.microsoft.com/fwlink/?linkid=7022).  
+ WQL è un sottolinguaggio di SQL che include estensioni per supportare la notifica degli eventi WMI e altre caratteristiche specifiche di WMI. Per altre informazioni su WQL, vedere la documentazione di Strumentazione gestione Windows in [MSDN Library](https://go.microsoft.com/fwlink/?linkid=7022).  
   
 > [!NOTE]  
 >  Le classi WMI variano a seconda della versione di Windows.  
@@ -75,7 +74,7 @@ Select * FROM Win32_QuickFixEngineering
 ## <a name="custom-logging-messages-available-on-the-wmi-data-reader-task"></a>Messaggi di registrazione personalizzati disponibili nell'attività Lettore di dati WMI  
  Nella tabella seguente sono elencate le voci di log personalizzate disponibili per l'attività Lettore di dati WMI. Per altre informazioni, vedere [Registrazione di Integration Services &#40;SSIS&#41;](../performance/integration-services-ssis-logging.md) e [Messaggi personalizzati per la registrazione](../custom-messages-for-logging.md).  
   
-|Voce di log|Description|  
+|Voce di log|Descrizione|  
 |---------------|-----------------|  
 |`WMIDataReaderGettingWMIData`|Indica che l'attività ha iniziato a leggere dati WMI.|  
 |`WMIDataReaderOperation`|Specifica la query WQL eseguita dall'attività.|  
@@ -85,7 +84,7 @@ Select * FROM Win32_QuickFixEngineering
   
  Per informazioni sulle proprietà che è possibile impostare in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] , fare clic su uno degli argomenti seguenti:  
   
--   [Editor attività lettore di dati WMI &#40;pagina Opzioni WMI&#41;](../wmi-data-reader-task-editor-wmi-options-page.md)  
+-   [Editor attività Lettore di dati WMI &#40;pagina Opzioni WMI&#41;](../wmi-data-reader-task-editor-wmi-options-page.md)  
   
 -   [Pagina Espressioni](../expressions/expressions-page.md)  
   
@@ -96,7 +95,7 @@ Select * FROM Win32_QuickFixEngineering
 ## <a name="related-tasks"></a>Attività correlate  
  Per altre informazioni sull'impostazione di queste proprietà in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] , fare clic sull'argomento seguente:  
   
--   [Impostare le proprietà di un'attività o di un contenitore](../set-the-properties-of-a-task-or-container.md)  
+-   [Impostazione delle proprietà di un'attività o di un contenitore](../set-the-properties-of-a-task-or-container.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Attività di Integration Services](integration-services-tasks.md)   

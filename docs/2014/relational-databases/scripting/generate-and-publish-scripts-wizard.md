@@ -43,25 +43,25 @@ ms.assetid: 5ee520ba-ec7e-4199-a441-189e9e264b37
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fc5ba07db49ac27ff5f36762abe6c1f1bcfac1d7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7d7c1da71445659d61fa95dc30bc7f128a1e1d40
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48192857"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53373613"
 ---
 # <a name="generate-and-publish-scripts-wizard"></a>Genera e pubblica script
   È possibile usare la procedura guidata **Genera e pubblica script** per creare script per il trasferimento di un database tra le istanze del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] o di [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. È possibile generare script per un database in un'istanza del motore di database nella rete locale o da [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Gli script generati possono essere eseguiti in un'altra istanza del motore di database o in [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. È inoltre possibile usare la procedura guidata per pubblicare direttamente il contenuto di un database in un servizio Web creato tramite Database Publishing Services. È possibile creare script per un intero database o limitare la creazione a oggetti specifici.  
   
-1.  **Prima di iniziare:**  [Pubblicazione in un servizio ospitato](#PubHostSvc), [Autorizzazioni](#Permissions)  
+1.  **Prima di iniziare:**  [La pubblicazione in un servizio ospitato](#PubHostSvc), [autorizzazioni](#Permissions)  
   
-2.  **Per generare o pubblicare uno script usando la**  [procedura guidata Genera e pubblica script](#GenPubScriptWiz)  
+2.  **Per generare o pubblicare uno script, utilizzando:**  [Genera e pubblica script](#GenPubScriptWiz)  
   
 ## <a name="before-you-begin"></a>Prima di iniziare  
  I database di origine e di destinazione possono trovarsi in [!INCLUDE[ssSDS](../../includes/sssds-md.md)]o in un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] eseguita in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] o versione successiva.  
   
 ###  <a name="PubHostSvc"></a> Pubblicazione in un servizio ospitato  
- Oltre a creare script, la procedura guidata **Genera e pubblica script** può essere usata per pubblicare un database in un tipo specifico di servizio Web di SQL Server ospitato. SQL Server Hosting Toolkit include Database Publishing Services come progetto di origine condiviso su CodePlex. Il progetto Database Publishing Services può essere usato dai provider di hosting Web per compilare un set di servizi Web per facilitare la distribuzione di database nel servizio Web da parte dei clienti. Per altre informazioni sul download di SQL Server Hosting Toolkit, vedere [Database Publishing Services di SQL Server](http://go.microsoft.com/fwlink/?LinkId=142025).  
+ Oltre a creare script, la procedura guidata **Genera e pubblica script** può essere usata per pubblicare un database in un tipo specifico di servizio Web di SQL Server ospitato. SQL Server Hosting Toolkit include Database Publishing Services come progetto di origine condiviso su CodePlex. Il progetto Database Publishing Services può essere usato dai provider di hosting Web per compilare un set di servizi Web per facilitare la distribuzione di database nel servizio Web da parte dei clienti. Per altre informazioni sul download di SQL Server Hosting Toolkit, vedere [Database Publishing Services di SQL Server](https://go.microsoft.com/fwlink/?LinkId=142025).  
   
  Per pubblicare un database in un servizio di hosting Web, selezionare l'opzione **Pubblica su servizio Web** nella pagina **Imposta opzioni di generazione script** della procedura guidata.  
   
@@ -107,7 +107,7 @@ ms.locfileid: "48192857"
  **Annulla** : consente di terminare la procedura guidata senza generare o pubblicare uno script dal database.  
   
 ###  <a name="ChooseObjects"></a> Pagina Seleziona oggetti  
- Usare questa pagina per scegliere quali oggetti si desidera includere negli script generati dalla procedura guidata. Nella pagina successiva della procedura guidata, è possibile salvare gli script nel percorso desiderato oppure usarli per pubblicare oggetti di database su un provider di hosting Web remoto in cui sia installato [Database Publishing Services di SQL Server](http://go.microsoft.com/fwlink/?LinkId=142025).  
+ Usare questa pagina per scegliere quali oggetti si desidera includere negli script generati dalla procedura guidata. Nella pagina successiva della procedura guidata, è possibile salvare gli script nel percorso desiderato oppure usarli per pubblicare oggetti di database su un provider di hosting Web remoto in cui sia installato [Database Publishing Services di SQL Server](https://go.microsoft.com/fwlink/?LinkId=142025).  
   
  **Opzione Genera script per intero database** : fare clic per generare script per tutti gli oggetti nel database e includere uno script per il database stesso.  
   
@@ -124,7 +124,7 @@ ms.locfileid: "48192857"
   
  **Opzioni** : se si vuole che gli script vengano salvati in un percorso specifico, selezionare **Salva script in un percorso specifico**. È possibile eseguire in un secondo momento gli script in a un'istanza del motore di database o in [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Se si desidera pubblicare gli oggetti di database in un provider di hosting Web remoto tramite una procedura guidata, selezionare **Pubblica su servizio Web**.  
   
- **Salva script in un percorso specifico** : consente di salvare uno o più file script Transact-SQL in un percorso specificato.  
+ **Salva script in una posizione specifica** : salvare uno o più. File di script Transact-SQL in un percorso specificato.  
   
 -   **Avanzate** : consente di visualizzare la finestra di dialogo **Opzioni di generazione script avanzate** in cui è possibile selezionare opzioni avanzate per la generazione di script.  
   
@@ -149,7 +149,7 @@ ms.locfileid: "48192857"
   
  **Opzioni** : consente di specificare le opzioni avanzate selezionando un valore tra quelli disponibili nell'elenco visualizzato a destra di ciascuna opzione.  
   
- **Generale** : le opzioni seguenti si applicano all'intero script.  
+ **Generale**: le opzioni seguenti si applicano all'intero script.  
   
 -   **ANSI Padding** -include `ANSI PADDING ON` nello script. Il valore predefinito è **True**.  
   
@@ -191,15 +191,15 @@ ms.locfileid: "48192857"
   
 -   **Generare script per statistiche** -se impostato su **Script per statistiche**, questa opzione include il `CREATE STATISTICS` istruzione per ricreare le statistiche sull'oggetto. L'opzione **Genera script per statistiche e istogrammi** consente inoltre di creare informazioni sugli istogrammi. Il valore predefinito è **Non generare script per statistiche**. Per altre informazioni, vedere [CREATE STATISTICS &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-statistics-transact-sql).  
   
--   **Script per USE DATABASE** -aggiunge il `USE DATABASE` istruzione allo script. Per verificare che gli oggetti di database vengono creati nel database corretto, includere il `USE DATABASE` istruzione. Quando si prevede che lo script da usare in un database diverso, selezionare **False** omettere il `USE DATABASE` istruzione. Il valore predefinito è **True**. Per altre informazioni, vedere [USE &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/use-transact-sql).  
+-   **Script per USE DATABASE** -aggiunge il `USE DATABASE` istruzione allo script. Per verificare che gli oggetti di database vengano creati nel database corretto, includere l'istruzione `USE DATABASE`. Quando si prevede che lo script da usare in un database diverso, selezionare **False** omettere il `USE DATABASE` istruzione. Il valore predefinito è **True**. Per altre informazioni, vedere [USE &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/use-transact-sql).  
   
--   **Tipi di dati per cui generare lo script**: consente di selezionare cosa deve essere inserito negli script: **Solo dati**, **Solo schema** o entrambi. Il valore predefinito è **Solo schema**.  
+-   **Tipi di dati da script** -consente di selezionare cosa deve essere inserito negli script: **Data only**, **solo Schema**, o entrambi. Il valore predefinito è **Solo schema**.  
   
  **Opzioni tabella/vista** : le opzioni seguenti si applicano solo agli script per tabelle o viste.  
   
 -   **Genera script per il rilevamento modifiche** : consente di generare script per il rilevamento delle modifiche se è abilitato nel database di origine o nelle tabelle del database di origine. Il valore predefinito è **False**. Per altre informazioni, vedere [Informazioni sul rilevamento delle modifiche &#40;SQL Server&#41;](../track-changes/about-change-tracking-sql-server.md).  
   
--   **Script per vincoli check** – Adds `CHECK` allo script. Il valore predefinito è **True**. `CHECK` i vincoli sono necessari dati immessi in una tabella rispettino una condizione specificata. Per altre informazioni, vedere [Unique Constraints and Check Constraints](../tables/unique-constraints-and-check-constraints.md).  
+-   **Script per vincoli check** -aggiunge `CHECK` allo script. Il valore predefinito è **True**. I vincoli `CHECK` richiedono che i dati immessi in una tabella rispettino una condizione specificata. Per altre informazioni, vedere [Unique Constraints and Check Constraints](../tables/unique-constraints-and-check-constraints.md).  
   
 -   **Genera script per le opzioni di compressione dati** : consente di includere le opzioni di compressione dati, se sono configurate nel database di origine o nelle tabelle del database di origine. Per altre informazioni, vedere [Data Compression](../data-compression/data-compression.md). Il valore predefinito è **False**.  
   
@@ -237,7 +237,7 @@ ms.locfileid: "48192857"
   
  **Opzioni** : consente di specificare le opzioni avanzate selezionando un valore tra quelli disponibili nell'elenco visualizzato a destra di ciascuna opzione.  
   
- **Generale** : le opzioni seguenti si applicano all'intera pubblicazione.  
+ **Generale**: le opzioni seguenti si applicano all'intera pubblicazione.  
   
 1.  **Converti UDDT in tipi di base** : se è impostato su **True**, i tipi di dati definiti dall'utente (UDDT) vengono convertiti nei tipi di dati di base sottostanti che erano stati usati per crearli. Usare **True** se il tipo di dati UDDT non esiste nel database in cui verrà eseguito lo script. Se è impostato su **False**, vengono usati gli UDDT. Il valore predefinito è **False**.  
   
@@ -261,15 +261,15 @@ ms.locfileid: "48192857"
   
 11. **Genera script per associazioni** : consente di includere nello script inviato al provider per la pubblicazione l'associazione per gli oggetti predefiniti e gli oggetti della regola. Il valore predefinito è **True**. Per altre informazioni, vedere [CREATE DEFAULT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-default-transact-sql) e [CREATE RULE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-rule-transact-sql).  
   
-12. **Tipi di dati da pubblicare**: consente di selezionare cosa deve essere inserito negli script: **Solo dati**, **Solo schema** o entrambi. Il valore predefinito è **Schema e dati**.  
+12. **Tipi di dati da pubblicare** -consente di selezionare cosa deve essere inserito negli script: **Data only**, **solo Schema**, o entrambi. Il valore predefinito è **Schema e dati**.  
   
- **Opzioni di pubblicazione** : consente di specificare se usare le transazioni per la pubblicazione sul provider di hosting Web.  
+ **Opzioni di pubblicazione**: consente di specificare se usare transazioni per la pubblicazione nel provider di hosting Web.  
   
 1.  **Pubblicazione con transazione** : consente di usare le transazioni per la pubblicazione su un provider di hosting Web remoto. Se il database di destinazione non può completare la pubblicazione, viene eseguito il rollback delle transazioni. Il valore predefinito è **True**.  
   
  **Opzioni tabella/vista** : le opzioni seguenti si applicano solo alle tabelle o alle viste.  
   
-1.  **Pubblica vincoli check** -include la creazione di `CHECK` vincoli nel processo di pubblicazione. Il valore predefinito è **True**. `CHECK` i vincoli sono necessari dati immessi in una tabella rispettino una condizione specificata. Per altre informazioni, vedere [Unique Constraints and Check Constraints](../tables/unique-constraints-and-check-constraints.md).  
+1.  **Pubblica vincoli check** -include la creazione di `CHECK` vincoli nel processo di pubblicazione. Il valore predefinito è **True**. I vincoli `CHECK` richiedono che i dati immessi in una tabella rispettino una condizione specificata. Per altre informazioni, vedere [Unique Constraints and Check Constraints](../tables/unique-constraints-and-check-constraints.md).  
   
 2.  **Pubblica chiavi esterne** : consente di includere la creazione di chiavi esterne nel processo di pubblicazione. Il valore predefinito è **True**. Le chiavi esterne indicano e impongono le relazioni tra tabelle. Per altre informazioni, vedere [Primary and Foreign Key Constraints](../tables/primary-and-foreign-key-constraints.md).  
   
@@ -338,6 +338,6 @@ ms.locfileid: "48192857"
   
 ## <a name="see-also"></a>Vedere anche  
  [Installazione di SMO (SQL Server Management Objects)](../server-management-objects-smo/installing-smo.md)   
- [Copiare database in altri server](../databases/copy-databases-to-other-servers.md)  
+ [Copia di database in altri server](../databases/copy-databases-to-other-servers.md)  
   
   

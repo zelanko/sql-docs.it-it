@@ -11,18 +11,18 @@ ms.assetid: a49c4af4-e243-4926-be97-74da1f9d54eb
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2f321f4851a5257ebaacccbc05ecec46ba1baae4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3ed3fc8546ef7bd85934d8b127ff124acc095e29
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48190261"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53373943"
 ---
 # <a name="upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013"></a>Aggiornare le cartelle di lavoro e l'aggiornamento dati pianificato (SharePoint 2013)
-  In questo argomento vengono illustrate l'esperienza utente relativamente alle cartelle di lavoro create in ambienti di PowerPivot precedenti e la modalità di aggiornamento delle cartelle di lavoro di PowerPivot in modo che sia possibile avvalersi delle nuove funzionalità introdotte in questa versione. Per ulteriori informazioni sulle nuove funzionalità, vedere [Novità in PowerPivot](http://go.microsoft.com/fwlink/?LinkID=203917).  
+  In questo argomento vengono illustrate l'esperienza utente relativamente alle cartelle di lavoro create in ambienti di PowerPivot precedenti e la modalità di aggiornamento delle cartelle di lavoro di PowerPivot in modo che sia possibile avvalersi delle nuove funzionalità introdotte in questa versione. Per altre informazioni sulle nuove funzionalità, vedere [What ' s New in PowerPivot](https://go.microsoft.com/fwlink/?LinkID=203917).  
   
 > [!WARNING]  
->  Non è possibile eseguire il rollback dell'aggiornamento per cartelle di lavoro aggiornate automaticamente nel server. Una volta aggiornata, una cartella di lavoro rimane in questo stato. Per utilizzare una versione precedente, è possibile ripubblicare la cartella di lavoro precedente in SharePoint, ripristinare una versione precedente oppure riciclare la cartella di lavoro. Per ulteriori informazioni sul ripristino o riciclo di un documento in SharePoint, vedere [Pianificare di proteggere il contenuto tramite i Cestini e il controllo delle versioni](http://go.microsoft.com/fwlink/?LinkId=238669).  
+>  Non è possibile eseguire il rollback dell'aggiornamento per cartelle di lavoro aggiornate automaticamente nel server. Una volta aggiornata, una cartella di lavoro rimane in questo stato. Per utilizzare una versione precedente, è possibile ripubblicare la cartella di lavoro precedente in SharePoint, ripristinare una versione precedente oppure riciclare la cartella di lavoro. Per ulteriori informazioni sul ripristino o riciclo di un documento in SharePoint, vedere [Pianificare di proteggere il contenuto tramite i Cestini e il controllo delle versioni](https://go.microsoft.com/fwlink/?LinkId=238669).  
   
  In questo argomento sono incluse le sezioni seguenti:  
   
@@ -53,14 +53,14 @@ ms.locfileid: "48190261"
 |Data creazione|\<|Supporto e comportamento|>|  
 |----------------|--------|--------------------------|--------|  
 ||**SQL Server 2008 R2 PowerPivot per SharePoint 2010**|**2012 PowerPivot per SharePoint 2010**|**2012 SP1 PowerPivot per SharePoint 2013**|  
-|**SQL Server 2008 R2 PowerPivot per Excel 2010**|Tutte le funzionalità|**Esperienza:** gli utenti possono interagire con la cartella di lavoro nel browser e utilizzarla come origine dati per altre soluzioni.<br /><br /> **Aggiornamento:** le cartelle di lavoro verranno aggiornate automaticamente nella raccolta documenti se l'aggiornamento automatico è abilitato per il servizio di sistema PowerPivot nella farm di SharePoint.<br /><br /> **Pianificazione dell'aggiornamento dati:** NON supportata. La cartella di lavoro deve essere aggiornata.|**Esperienza:** gli utenti possono interagire con la cartella di lavoro e utilizzarla come origine dati per altre soluzioni.<br /><br /> **Aggiornamento:** l'aggiornamento automatico non è disponibile. Gli utenti devono aggiornare manualmente le cartelle di lavoro di SQL Server 2008 R2 alla versione 2012 o alla versione di Office 2013.<br /><br /> **Pianificazione dell'aggiornamento dati:** NON supportata. La cartella di lavoro deve essere aggiornata.|  
-|**2012 PowerPivot per Excel**|Non supportato|Tutte le funzionalità|**Esperienza:** gli utenti possono interagire con la cartella di lavoro nel browser e utilizzarla come origine dati per altre soluzioni. La pianificazione dell'aggiornamento dati è disponibile.<br /><br /> **Aggiornamento:** l'aggiornamento automatico non è supportato. Gli utenti possono aggiornare manualmente le cartelle di lavoro alla versione di Office 2013.<br /><br /> **Pianificazione dell'aggiornamento dati:** supportata.|  
+|**SQL Server 2008 R2 PowerPivot per Excel 2010**|Tutte le funzionalità|**Esperienza:** gli utenti possono interagire con la cartella di lavoro nel browser e usarla come origine dati per altre soluzioni.<br /><br /> **Eseguire l'aggiornamento:** le cartelle di lavoro verranno aggiornate automaticamente nella raccolta documenti se l'aggiornamento automatico è abilitato per il servizio di sistema PowerPivot nella farm di SharePoint.<br /><br /> **Pianificazione dell'aggiornamento dati:** NON supportato. La cartella di lavoro deve essere aggiornata.|**Esperienza:** gli utenti possono interagire con la cartella di lavoro e usarla come origine dati per altre soluzioni.<br /><br /> **Eseguire l'aggiornamento:** l'aggiornamento automatico non è disponibile. Gli utenti devono aggiornare manualmente le cartelle di lavoro di SQL Server 2008 R2 alla versione 2012 o alla versione di Office 2013.<br /><br /> **Pianificazione dell'aggiornamento dati:** NON supportato. La cartella di lavoro deve essere aggiornata.|  
+|**2012 PowerPivot per Excel**|Non supportato|Tutte le funzionalità|**Esperienza:** gli utenti possono interagire con la cartella di lavoro nel browser e usarla come origine dati per altre soluzioni. La pianificazione dell'aggiornamento dati è disponibile.<br /><br /> **Eseguire l'aggiornamento:** l'aggiornamento automatico non è supportato. Gli utenti possono aggiornare manualmente le cartelle di lavoro alla versione di Office 2013.<br /><br /> **Pianificazione dell'aggiornamento dati:** supportata.|  
 |**Excel 2013**|Non supportato|Non supportato|Tutte le funzionalità|  
   
 ##  <a name="bkmk_to_2012sp1_from_2008r2"></a> Eseguire l'aggiornamento a cartelle di lavoro di SQL Server 2012 Service Pack 1 (SP1) da cartelle di lavoro di SQL Server 2008 R2  
  In questa sezione viene descritto l'aggiornamento alle cartelle di lavoro di SQL Server 2012 SP1 PowerPivot per Excel 2013 da cartelle di lavoro di SQL Server 2008 R2 PowerPivot per Excel 2010.  
   
- **Modifica del comportamento:** le cartelle di lavoro di SQL Server 2008 R2 PowerPivot non verranno aggiornate automaticamente se utilizzate in SQL Server 2012 SP1 PowerPivot per SharePoint 2013. Pertanto, gli aggiornamenti dati pianificati non funzioneranno per le cartelle di lavoro di SQL Server 2008 R2 PowerPivot.  
+ **Modifica del comportamento:** le cartelle di lavoro di SQL Server 2008 R2 PowerPivot non verranno aggiornate automaticamente se usate in SQL Server 2012 SP1 PowerPivot per SharePoint 2013. Pertanto, gli aggiornamenti dati pianificati non funzioneranno per le cartelle di lavoro di SQL Server 2008 R2 PowerPivot.  
   
  Le cartelle di lavoro di SQL Server 2008 R2 verranno aperte in PowerPivot per SharePoint 2013, tuttavia gli aggiornamenti dati pianificati non funzioneranno. Se si esamina la cronologia degli aggiornamenti, verrà visualizzato un messaggio di errore simile al seguente:  
   
@@ -70,7 +70,7 @@ ms.locfileid: "48190261"
   
 -   SQL Server 2012 PowerPivot per Excel 2013.  
   
- **Modalità di aggiornamento di una cartella di lavoro:** l'aggiornamento dati pianificato non funzionerà finché la cartella di lavoro non viene aggiornata alla relativa versione 2012. Per aggiornare la cartella di lavoro e il modello in essa contenuto, completare una delle operazioni seguenti:  
+ **Come aggiornare una cartella di lavoro:** l'aggiornamento dati pianificato non funzionerà finché la cartella di lavoro non viene aggiornata alla relativa versione 2012. Per aggiornare la cartella di lavoro e il modello in essa contenuto, completare una delle operazioni seguenti:  
   
 -   Scaricare e aprire la cartella di lavoro in Microsoft Excel 2010 con il componente aggiuntivo SQL Server 2012 PowerPivot per Excel installato.  
   
@@ -93,7 +93,7 @@ ms.locfileid: "48190261"
   
  Tramite l'aggiornamento di una cartella di lavoro viene risolto l'errore seguente che si verifica quando si tenta l'aggiornamento dati pianificato nella cartella di lavoro della versione della cartella di lavoro precedente:  
   
- "Operazione di aggiornamento per le cartelle di lavoro create con la versione precedente di PowerPivot non disponibile".  
+ "Operazione di aggiornamento per cartelle di lavoro create con la versione precedente di PowerPivot non disponibile".  
   
  **Modalità di aggiornamento di una cartella di lavoro**  
   
@@ -110,15 +110,15 @@ ms.locfileid: "48190261"
   
  Tramite l'aggiornamento di una cartella di lavoro viene risolto l'errore seguente che si verifica quando si tenta l'aggiornamento dati pianificato nella cartella di lavoro della versione della cartella di lavoro precedente:  
   
- "Operazione di aggiornamento per le cartelle di lavoro create con la versione precedente di PowerPivot non disponibile".  
+ "Operazione di aggiornamento per cartelle di lavoro create con la versione precedente di PowerPivot non disponibile".  
   
  **Modalità di aggiornamento di una cartella di lavoro**  
   
  Sono disponibili due modalità per eseguire l'aggiornamento:  
   
-1.  Aggiornare ogni cartella di lavoro manualmente aprendola in Excel in un computer dotato di [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] versione di PowerPivot per Excel e ripubblicarla quindi nel server. Quando si apre la cartella di lavoro nella versione più recente del componente aggiuntivo, vengono eseguite le operazioni interne seguenti: il provider di dati nella stringa di connessione dati della cartella di lavoro viene aggiornato a MSOLAP.5, i metadati vengono aggiornati e le relazioni vengono ricreate per essere conformi a un'implementazione più recente.  
+1.  Aggiornare manualmente ogni cartella di lavoro aprendola in Excel in un computer in cui è installata la versione [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] di PowerPivot per Excel e ripubblicarla quindi nel server. Quando si apre la cartella di lavoro nella versione più recente del componente aggiuntivo, vengono eseguite le operazioni interne seguenti: il provider di dati nella stringa di connessione dati della cartella di lavoro viene aggiornato a MSOLAP.5, i metadati vengono aggiornati e le relazioni vengono ricreate per essere conformi a un'implementazione più recente.  
   
-2.  In alternativa, un amministratore di SharePoint può abilitare la funzionalità di aggiornamento automatico per il servizio di sistema PowerPivot in una farm di SharePoint aggiornare automaticamente un [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] cartella di lavoro di PowerPivot quando pianificazione dell'aggiornamento dati (soli le cartelle di lavoro che sono in esecuzione configurato per l'aggiornamento dati pianificato vengono aggiornate).  
+2.  In alternativa, un amministratore di SharePoint può abilitare la funzionalità di aggiornamento automatico per il servizio di sistema PowerPivot in una farm di SharePoint per eseguire automaticamente l'aggiornamento di una cartella di lavoro di [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] PowerPivot quando viene eseguito l'aggiornamento dati pianificato. Vengono aggiornate solo le cartelle di lavoro configurate per l'aggiornamento dati pianificato.  
   
     > [!NOTE]  
     >  L'aggiornamento automatico è una funzionalità di configurazione del server. Non è possibile abilitarla o disabilitarla per cartelle di lavoro specifiche, librerie o raccolte siti.  
@@ -133,12 +133,12 @@ ms.locfileid: "48190261"
 PS C:\Windows\system32> Get-PowerPivotSystemService  
 ```  
   
- L'output di Get-PowerPivotSystemService è un elenco di proprietà e valori corrispondenti. Dovrebbe essere `WorkbookUpgradeOnDataRefresh` nell'elenco delle proprietà. Se l'aggiornamento automatico è abilitato, sarà impostata su **true** . Se è **false**, procedere al passaggio successivo per abilitare l'aggiornamento automatico delle cartelle di lavoro.  
+ L'output di Get-PowerPivotSystemService è un elenco di proprietà e valori corrispondenti. Nell'elenco di proprietà dovrebbe essere visualizzata `WorkbookUpgradeOnDataRefresh`. Se l'aggiornamento automatico è abilitato, sarà impostata su **true** . Se è **false**, procedere al passaggio successivo per abilitare l'aggiornamento automatico delle cartelle di lavoro.  
   
  Per abilitare l'aggiornamento automatico delle cartelle di lavoro, eseguire il comando seguente:  
   
 ```  
-PS C:\Windows\system32> Set-PowerPivotSystemService –WorkbookUpgradeOnDataRefresh:$true –Confirm:$false  
+PS C:\Windows\system32> Set-PowerPivotSystemService -WorkbookUpgradeOnDataRefresh:$true -Confirm:$false  
 ```  
   
  Dopo avere aggiornato la cartella di lavoro, è possibile utilizzare l'aggiornamento programmato dei dati e le nuove funzionalità del componente aggiuntivo PowerPivot per Excel.  
@@ -148,7 +148,7 @@ PS C:\Windows\system32> Set-PowerPivotSystemService –WorkbookUpgradeOnDataRefr
   
  In base alla modalità di installazione del server, **potrebbe essere necessario** installare una versione precedente del provider OLE DB per Analysis Services prima che sia possibile accedere alle cartelle di lavoro meno recenti e più recenti nello stesso server.  
   
- Si noti che la pubblicazione delle cartelle di lavoro di una versione più recente in istanze di [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] di SQL Server precedenti non è supportata. Tramite un'istanza di [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] non verrà caricata una cartella di lavoro creata nella versione [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] di [!INCLUDE[ssGeminiClient](../../../includes/ssgeminiclient-md.md)] e tramite un'istanza di SQL Server 2012 non verranno caricate cartelle di lavoro di Office 2013 con modelli di dati avanzati creati utilizzando la versione [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] di PowerPivot in Excel.  
+ Si noti che la pubblicazione delle cartelle di lavoro di una versione più recente in istanze di [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] di SQL Server precedenti non è supportata. Tramite un'istanza di [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] non verrà caricata una cartella di lavoro creata nella versione [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] di [!INCLUDE[ssGeminiClient](../../../includes/ssgeminiclient-md.md)]e tramite un'istanza di SQL Server 2012 non verranno caricate cartelle di lavoro di Office 2013 con modelli di dati avanzati creati utilizzando la versione [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] di PowerPivot in Excel.  
   
 ###  <a name="bkmk_msolapxslx"></a> Come verificare le informazioni sul Provider di dati MSOLAP in una cartella di lavoro di PowerPivot  
  Utilizzare le istruzioni seguenti per controllare quale provider OLE DB viene utilizzato in una cartella di lavoro di PowerPivot. Il controllo delle informazioni sulla connessione dati non richiede l'installazione del componente aggiuntivo [!INCLUDE[ssGeminiClient](../../../includes/ssgeminiclient-md.md)] .  

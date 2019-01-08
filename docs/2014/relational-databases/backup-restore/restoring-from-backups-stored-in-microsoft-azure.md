@@ -10,12 +10,12 @@ ms.assetid: 6ae358b2-6f6f-46e0-a7c8-f9ac6ce79a0e
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 5b00513b2522d83605f1d8ee29c9dcf68a86f625
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 549efcd796d9cef721995b48fc5e7b3cc02403a7
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48154811"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53354411"
 ---
 # <a name="restoring-from-backups-stored-in-windows-azure"></a>Ripristino da backup archiviati in Windows Azure
   In questo argomento vengono illustrate le considerazioni relative al ripristino di un database tramite un backup archiviato nel servizio di archiviazione BLOB di Windows Azure. Ciò si applica ai backup creati tramite il backup di SQL Server nell'URL o tramite [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].  
@@ -36,11 +36,11 @@ ms.locfileid: "48154811"
 -   L'attività di ripristino viene utilizzata per ripristinare un database tramite SQL Server Management Studio. Nella pagina dei supporti di backup è ora disponibile l'opzione **URL** per visualizzare i file di backup archiviati nel servizio di archiviazione BLOB di Windows Azure. Inoltre, è necessario fornire le credenziali SQL utilizzate per autenticare l'account di archiviazione. La griglia **Set di backup da ripristinare** viene popolata successivamente con i backup disponibili nell'archiviazione BLOB di Windows Azure. Per altre informazioni, vedere [Restoring from Windows Azure storage Using SQL Server Management Studio](sql-server-backup-to-url.md#RestoreSSMS).  
   
 ### <a name="optimizing-restores"></a>Ottimizzazione dei ripristini  
- Per ridurre il tempo di scrittura di un'operazione di ripristino, aggiungere il diritto utente **Esecuzione attività di manutenzione volume** all'account utente di SQL Server. Per ulteriori informazioni, vedere [Inizializzazione di file di database](http://go.microsoft.com/fwlink/?LinkId=271622). Se l'operazione di ripristino è ancora lenta con l'inizializzazione immediata dei file abilitata, esaminare le dimensioni del file di log nell'istanza in cui è stato eseguito il backup del database. Se le dimensioni del log sono molto grandi (più GB), si prevede un ripristino lento. Durante l'operazione di ripristino il file di log deve essere azzerato; questa operazione richiede una quantità di tempo significativa.  
+ Per ridurre il tempo di scrittura di un'operazione di ripristino, aggiungere il diritto utente **Esecuzione attività di manutenzione volume** all'account utente di SQL Server. Per ulteriori informazioni, vedere [Inizializzazione di file di database](https://go.microsoft.com/fwlink/?LinkId=271622). Se l'operazione di ripristino è ancora lenta con l'inizializzazione immediata dei file abilitata, esaminare le dimensioni del file di log nell'istanza in cui è stato eseguito il backup del database. Se le dimensioni del log sono molto grandi (più GB), si prevede un ripristino lento. Durante l'operazione di ripristino il file di log deve essere azzerato; questa operazione richiede una quantità di tempo significativa.  
   
- Per ridurre i tempi di ripristino è consigliabile usare backup compressi.  Per i backup con dimensioni superiori ai 25 GB, usare l' [utilità AzCopy](http://blogs.msdn.com/b/windowsazurestorage/archive/2012/12/03/azcopy-uploading-downloading-files-for-windows-azure-blobs.aspx) per eseguire il download nell'unità locale e quindi eseguire il ripristino. Per altri suggerimenti e procedure consigliate sui backup, vedere [SQL Server Backup to URL Best Practices and Troubleshooting](sql-server-backup-to-url-best-practices-and-troubleshooting.md).  
+ Per ridurre i tempi di ripristino è consigliabile usare backup compressi.  Per i backup con dimensioni superiori ai 25 GB, usare l' [utilità AzCopy](https://blogs.msdn.com/b/windowsazurestorage/archive/2012/12/03/azcopy-uploading-downloading-files-for-windows-azure-blobs.aspx) per eseguire il download nell'unità locale e quindi eseguire il ripristino. Per altri suggerimenti e procedure consigliate sui backup, vedere [SQL Server Backup to URL Best Practices and Troubleshooting](sql-server-backup-to-url-best-practices-and-troubleshooting.md).  
   
- È inoltre possibile abilitare il flag di traccia 3051 quando si esegue il ripristino per generare un log dettagliato. Questo file di log viene inserito nella directory del log e viene denominato con il formato: BackupToUrl-\<nomeistanza>-\<nomedb>-azione-\<PID>.log. Nel file di log sono incluse informazioni su ogni round trip al Servizio di archiviazione Windows Azure, incluso l'intervallo che può essere utile per individuare il problema.  
+ È inoltre possibile abilitare il flag di traccia 3051 quando si esegue il ripristino per generare un log dettagliato. Questo file di log viene inserito nella directory del log e viene denominato usando il formato BackupToUrl -\<instancename >-\<nomedb > - azione -\<PID >. log. Nel file di log sono incluse informazioni su ogni round trip al Servizio di archiviazione Windows Azure, incluso l'intervallo che può essere utile per individuare il problema.  
   
 ### <a name="topics-on-performing-restore-operations"></a>Argomenti sull'esecuzione delle operazioni di ripristino  
   

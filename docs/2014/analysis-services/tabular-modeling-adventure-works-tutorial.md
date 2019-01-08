@@ -11,15 +11,15 @@ ms.assetid: 140d0b43-9455-4907-9827-16564a904268
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 88f72c98977fae3e99f917de8a1b82198779b1ef
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2693bd51da682e9af0133c8400f2cfeacd2737ca
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48083281"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53373683"
 ---
 # <a name="tabular-modeling-adventure-works-tutorial"></a>Modellazione tabulare (esercitazione di AdventureWorks)
-  In questa esercitazione sono incluse lezioni sulla creazione di un [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]modello tabulare di Analysis Services tramite [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
+  In questa esercitazione sono incluse lezioni sulla creazione di un [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] modello tabulare di Analysis Services tramite [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
   
 ## <a name="what-you-will-learn"></a>Lezioni dell'esercitazione  
  Durante questa esercitazione verranno appresi i concetti seguenti:  
@@ -59,7 +59,7 @@ ms.locfileid: "48083281"
   
 -   [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] (Indici per tabelle con ottimizzazione per la memoria).  
   
--   Database di esempio AdventureWorksDW. Questo database di esempio include i dati necessari per completare questa esercitazione. Per scaricare il database di esempio, vedere [ http://go.microsoft.com/fwlink/?LinkID=335807 ](http://go.microsoft.com/fwlink/?LinkID=335807).  
+-   Database di esempio AdventureWorksDW. Questo database di esempio include i dati necessari per completare questa esercitazione. Per scaricare il database di esempio, vedere [ https://go.microsoft.com/fwlink/?LinkID=335807 ](https://go.microsoft.com/fwlink/?LinkID=335807).  
   
 -   [!INCLUDE[msCoName](../includes/msconame-md.md)] Excel 2003 o versione successiva (per l'utilizzo con la funzionalità Analizza in Excel nella lezione 11)  
   
@@ -68,7 +68,7 @@ ms.locfileid: "48083281"
   
 |Lezione|Tempo stimato per il completamento|  
 |------------|--------------------------------|  
-|[Lezione 1: Creare un nuovo modello di progetto tabulare](lesson-1-create-a-new-tabular-model-project.md)|10 minuti|  
+|[Lezione 1: Creare un nuovo progetto di modello tabulare](lesson-1-create-a-new-tabular-model-project.md)|10 minuti|  
 |[Lezione 2: Aggiungere dati](lesson-2-add-data.md)|20 minuti|  
 |[Lezione 3: Rinominare colonne](rename-columns.md)|20 minuti|  
 |[Lezione 4: Contrassegna come tabella data](lesson-3-mark-as-date-table.md)|3 minuti|  
@@ -94,6 +94,6 @@ ms.locfileid: "48083281"
 |[Configurare le proprietà di creazione di report per i report Power View](supplemental-lesson-configure-reporting-properties-for-power-view-reports.md)configurare le proprietà di creazione di report per i report Power View|30 minuti|  
   
 ## <a name="next-step"></a>Passaggio successivo  
- Per iniziare l'esercitazione, passare alla prima lezione: [Lezione 1: Creare un nuovo modello di progetto tabulare](lesson-1-create-a-new-tabular-model-project.md).  
+ Per iniziare questa esercitazione, passare alla prima lezione: [Lezione 1: Creare un nuovo progetto di modello tabulare](lesson-1-create-a-new-tabular-model-project.md).  
   
   

@@ -17,15 +17,15 @@ ms.assetid: e1f1dccc-9e65-471d-8fd1-b45085c9484a
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: dc448704ef0362c70a957a4e5a1574cd92df3578
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0772ab148c413d685f046a5a238761edf647641b
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48116461"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53363883"
 ---
 # <a name="use-the-availability-group-wizard-sql-server-management-studio"></a>Utilizzare la Creazione guidata Gruppo di disponibilità (SQL Server Management Studio)
-  In questo argomento viene descritto come utilizzare la procedura guidata nuovo gruppo di disponibilità (in [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]) per creare e configurare un gruppo di disponibilità AlwaysOn in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Tramite un *gruppo di disponibilità* vengono definiti un set di database utente di cui verrà eseguito il failover come unità singola e un set di partner di failover, noti come *repliche di disponibilità*, che supportano il failover.  
+  In questo argomento viene descritto come usare la Creazione guidata Gruppo di disponibilità (in [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]) per creare e configurare un gruppo di disponibilità AlwaysOn in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Tramite un *gruppo di disponibilità* vengono definiti un set di database utente di cui verrà eseguito il failover come unità singola e un set di partner di failover, noti come *repliche di disponibilità*, che supportano il failover.  
   
 > [!NOTE]  
 >  Per un'introduzione ai gruppi di disponibilità, vedere [Panoramica di Gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md).  
@@ -34,9 +34,9 @@ ms.locfileid: "48116461"
   
      [Prerequisiti, restrizioni e raccomandazioni](#PrerequisitesRestrictions)  
   
-     [Security](#Security)  
+     [Sicurezza](#Security)  
   
--   **Per creare e configurare un gruppo di disponibilità usando:**  [Creazione guidata gruppo di disponibilità (SQL Server Management Studio)](#RunAGwiz)  
+-   **Per creare e configurare una disponibilità di gruppo, utilizzando:**  [Creazione guidata nuovo gruppo di disponibilità (SQL Server Management Studio)](#RunAGwiz)  
   
 > [!NOTE]  
 >  In alternativa all'utilizzo della Creazione guidata Gruppo di disponibilità, è possibile usare [!INCLUDE[tsql](../../../includes/tsql-md.md)] o i cmdlet di PowerShell per [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Per altre informazioni, vedere [Creare un gruppo di disponibilità &#40;Transact-SQL&#41;](create-an-availability-group-transact-sql.md) o i cmdlet di PowerShell per [Creare un gruppo di disponibilità &#40; PowerShell SQL Server&#41;](../../../powershell/sql-server-powershell.md).  
@@ -111,12 +111,12 @@ ms.locfileid: "48116461"
   
      Se si modifica un database per renderlo idoneo, fare clic su **Aggiorna** per aggiornare la griglia dei database.  
   
-7.  Nella pagina **Specifica repliche** specificare e configurare una o più repliche per il nuovo gruppo di disponibilità. In questa pagina sono incluse quattro schede. Queste schede vengono presentate nella tabella seguente. Per altre informazioni, vedere l'argomento [Pagina Specifica repliche &#40;Creazione guidata Gruppo di disponibilità: Aggiungi replica&#41;](specify-replicas-page-new-availability-group-wizard-add-replica-wizard.md).  
+7.  Nella pagina **Specifica repliche** specificare e configurare una o più repliche per il nuovo gruppo di disponibilità. In questa pagina sono incluse quattro schede. Queste schede vengono presentate nella tabella seguente. Per altre informazioni, vedere la [pagina specifica repliche &#40;Creazione guidata nuovo gruppo di disponibilità: Procedura guidata Aggiungi Replica&#41; ](specify-replicas-page-new-availability-group-wizard-add-replica-wizard.md) argomento.  
   
     |Scheda|Breve descrizione|  
     |---------|-----------------------|  
     |**Repliche**|Usare questa scheda per specificare ogni istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] che ospiterà una replica secondaria. Si noti che la replica primaria sarà ospitata nell'istanza del server a cui si è attualmente connessi.|  
-    |**Endpoint**|Usare questa scheda per verificare eventuali endpoint del mirroring di database esistenti e, inoltre, se tale endpoint risulta mancante in un'istanza del server i cui account del servizio usano l'autenticazione di Windows, per creare l'endpoint automaticamente. **Nota:** se qualsiasi istanza del server è in esecuzione con un account utente non di dominio, è necessario apportare una modifica manuale all'istanza del server prima di continuare con la procedura guidata. Per altre informazioni, vedere la sessione [Prerequisiti](#PrerequisitesRestrictions)più indietro in questo argomento.|  
+    |**Endpoint**|Usare questa scheda per verificare eventuali endpoint del mirroring di database esistenti e, inoltre, se tale endpoint risulta mancante in un'istanza del server i cui account del servizio usano l'autenticazione di Windows, per creare l'endpoint automaticamente. **Nota:**  Se qualsiasi istanza del server è in esecuzione in un account utente non di dominio, è necessario apportare una modifica manuale all'istanza del server prima di continuare con la procedura guidata. Per altre informazioni, vedere la sessione [Prerequisiti](#PrerequisitesRestrictions)più indietro in questo argomento.|  
     |**Preferenze di backup**|Usare questa scheda per specificare le preferenze di backup per il gruppo di disponibilità nel suo complesso e le priorità di backup per le singole repliche di disponibilità.|  
     |**Listener**|Usare questa scheda per creare un listener del gruppo di disponibilità. Per impostazione predefinita, la procedura guidata non crea un listener.|  
   
@@ -196,23 +196,23 @@ ms.locfileid: "48116461"
   
 -   **Blog:**  
   
-     [Su AlwaysON - HADRON serie: Utilizzo del Pool di lavoro per HADRON database abilitati](http://blogs.msdn.com/b/psssql/archive/2012/05/17/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
+     [Su AlwaysON - HADRON serie: Utilizzo del Pool di lavoro per HADRON database abilitati](https://blogs.msdn.com/b/psssql/archive/2012/05/17/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
   
-     [SQL Server AlwaysOn Team blog: Il Blog ufficiale di SQL Server AlwaysOn Team](http://blogs.msdn.com/b/sqlalwayson/)  
+     [SQL Server AlwaysOn Team blog: Il Team Blog ufficiale di SQL Server AlwaysOn](https://blogs.msdn.com/b/sqlalwayson/)  
   
-     [Pagina relativa ai blog del Servizio Supporto Tecnico Clienti per gli ingegneri di SQL Server](http://blogs.msdn.com/b/psssql/)  
+     [Pagina relativa ai blog del Servizio Supporto Tecnico Clienti per gli ingegneri di SQL Server](https://blogs.msdn.com/b/psssql/)  
   
 -   **Video:**  
   
-     [Serie di Microsoft SQL Server nome in codice "Denali" AlwaysOn, parte 1: Presentazione della soluzione di disponibilità elevata di prossima generazione](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
+     [Serie Microsoft SQL Server nome in codice "Denali" AlwaysOn, parte 1: Introduzione della soluzione di disponibilità elevata di prossima generazione](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
   
-     [Serie di Microsoft SQL Server nome in codice "Denali" AlwaysOn, parte 2: Creazione di una soluzione di disponibilità elevata critica tramite Alwasyon](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
+     [Serie Microsoft SQL Server nome in codice "Denali" AlwaysOn, parte 2: Creazione di una soluzione di disponibilità elevata critica tramite Alwasyon](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
   
 -   **White paper:**  
   
-     [Microsoft SQL Server AlwaysOn Solutions Guide for High Availability and Disaster Recovery](http://go.microsoft.com/fwlink/?LinkId=227600)  
+     [Microsoft SQL Server AlwaysOn Solutions Guide for High Availability and Disaster Recovery](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
-     [Pagina relativa ai white paper Microsoft per SQL Server 2012](http://msdn.microsoft.com/library/hh403491.aspx)  
+     [Pagina relativa ai white paper Microsoft per SQL Server 2012](https://msdn.microsoft.com/library/hh403491.aspx)  
   
      [Pagina relativa ai white paper del team di consulenza clienti di SQL Server](http://sqlcat.com/)  
   

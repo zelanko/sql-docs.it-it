@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.dataprofilingtask.f1
@@ -17,12 +16,12 @@ ms.assetid: 248ce233-4342-42c5-bf26-f4387ea152cf
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4119b2ef17bcb735669d25662972ae4c79bbae31
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: 546b52e8e0cc944e279e976bc4709d9fcee076f7
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48906411"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53369963"
 ---
 # <a name="data-profiling-task"></a>Attività Profiling dati
   L'attività Profiling dati calcola i diversi profili che consentono di familiarizzare con un'origine dati e identificare i problemi nei dati che devono essere corretti.  
@@ -30,7 +29,7 @@ ms.locfileid: "48906411"
  È possibile utilizzare l'attività Profiling dati in un pacchetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] per eseguire il profiling dei dati archiviati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e identificare i possibili problemi relativi alla qualità dei dati.  
   
 > [!NOTE]  
->  Questo argomento descrive solo le funzionalità e requisiti dell'attività Profiling dati. Per la procedura dettagliata relativa all'uso dell'attività Profiling dati, vedere la sezione [Attività Profiling dati e visualizzatore](data-profiling-task-and-viewer.md).  
+>  In questo argomento vengono descritti i requisiti e le caratteristiche dell'attività Profiling dati. Per la procedura dettagliata relativa all'uso dell'attività Profiling dati, vedere la sezione [Attività Profiling dati e visualizzatore](data-profiling-task-and-viewer.md).  
   
 ## <a name="requirements-and-limitations"></a>Requisiti e limitazioni  
  L'attività Profiling dati funziona solo con i dati archiviati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. L'attività non funziona con origini dati di terze parti o basate su file.  
@@ -50,7 +49,7 @@ ms.locfileid: "48906411"
   
  Nei cinque profili seguenti vengono analizzate colonne singole.  
   
-|Profili che analizzano colonne singole|Description|  
+|Profili che analizzano colonne singole|Descrizione|  
 |----------------------------------------------|-----------------|  
 |Profilo Distribuzione lunghezze di colonna|Segnala tutte le singole lunghezze dei valori stringa nella colonna selezionata e la percentuale di righe nella tabella che ogni lunghezza rappresenta.<br /><br /> Questo profilo consente di identificare problemi nei dati, ad esempio valori non validi. Si analizza, ad esempio, una colonna che contiene i codici degli stati degli Stati Uniti a due caratteri e si individuano valori con lunghezza superiore a due caratteri.|  
 |Profilo Rapporto di valori Null nella colonna|Segnala la percentuale di valori Null nella colonna selezionata.<br /><br /> Questo profilo consente di identificare problemi nei dati, ad esempio un rapporto di valori di colonna Null inaspettatamente elevato. Si analizza, ad esempio, una colonna contenente CAP e si individua una percentuale eccessivamente elevata di codici mancanti.|  
@@ -60,7 +59,7 @@ ms.locfileid: "48906411"
   
  I seguenti tre profili analizzano più colonne o relazioni tra colonne e tabelle.  
   
-|Profili che consentono di analizzare più colonne|Description|  
+|Profili che consentono di analizzare più colonne|Descrizione|  
 |--------------------------------------------|-----------------|  
 |Profilo Chiave candidata|Segnala se una colonna o un set di colonne è una chiave o una chiave approssimativa, per la tabella selezionata.<br /><br /> Questo profilo consente inoltre di identificare problemi nei dati, ad esempio valori duplicati in una potenziale colonna chiave.|  
 |Profilo Dipendenza funzionale|Segnala la misura in cui i valori in una colonna (la colonna dipendente) dipendono dai valori in un'altra colonna o in un set di colonne (la colonna determinante).<br /><br /> Questo profilo consente inoltre di identificare problemi nei dati, ad esempio valori non validi. Si analizza, ad esempio, la dipendenza tra una colonna che contiene i codici postali ZIP (Stati Uniti) e una colonna che contiene gli stati degli Stati Uniti. Benché uno stesso codice postale debba essere sempre associato allo stesso stato, il profilo individua alcune violazioni di questa dipendenza.|  
@@ -112,12 +111,12 @@ ms.locfileid: "48906411"
 ## <a name="custom-logging-messages-available-on-the-data-profililng-task"></a>Messaggi di registrazione personalizzati disponibili nell'attività Profiling dati  
  Nella tabella seguente sono elencate le voci di log personalizzate disponibili per l'attività Profiling dati. Per altre informazioni, vedere [Registrazione di Integration Services &#40;SSIS&#41;](../performance/integration-services-ssis-logging.md) e [Messaggi personalizzati per la registrazione](../custom-messages-for-logging.md).  
   
-|Voce di log|Description|  
+|Voce di log|Descrizione|  
 |---------------|-----------------|  
 |**DataProfilingTaskTrace**|Fornisce informazioni descrittive sullo stato dell'attività. I messaggi includono le informazioni seguenti:<br /><br /> Avvio elaborazione richieste<br /><br /> Inizio query<br /><br /> Query End<br /><br /> Fine calcolo richiesta|  
   
 ## <a name="output-and-its-schema"></a>Output e relativo schema  
- L'attività Profiling dati restituisce i profili selezionati in un formato XML strutturato in base allo schema DataProfile.xsd. È possibile specificare se questo output XML è salvato in un file o in una variabile del pacchetto. È possibile visualizzare questo schema online all'indirizzo [http://schemas.microsoft.com/sqlserver/2008/DataDebugger/](http://schemas.microsoft.com/sqlserver/2008/DataDebugger/). Nella pagina Web è possibile salvare una copia locale dello schema. È quindi possibile visualizzare la copia locale dello schema in Microsoft [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] o in un altro editor di schemi, in un editor XML o in un editor di testo come Blocco note.  
+ L'attività Profiling dati restituisce i profili selezionati in un formato XML strutturato in base allo schema DataProfile.xsd. È possibile specificare se questo output XML è salvato in un file o in una variabile del pacchetto. È possibile visualizzare questo schema online all'indirizzo [https://schemas.microsoft.com/sqlserver/2008/DataDebugger/](https://schemas.microsoft.com/sqlserver/2008/DataDebugger/). Nella pagina Web è possibile salvare una copia locale dello schema. È quindi possibile visualizzare la copia locale dello schema in Microsoft [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] o in un altro editor di schemi, in un editor XML o in un editor di testo come Blocco note.  
   
  Questo schema per informazioni sulla qualità dei dati può essere utile per:  
   
@@ -125,7 +124,7 @@ ms.locfileid: "48906411"
   
 -   Compilazione di strumenti personalizzati da utilizzare con le informazioni sulla qualità dei dati.  
   
- Lo spazio dei nomi di destinazione viene identificato nello schema come [http://schemas.microsoft.com/sqlserver/2008/DataDebugger/](http://schemas.microsoft.com/sqlserver/2008/DataDebugger/).  
+ Lo spazio dei nomi di destinazione viene identificato nello schema come [https://schemas.microsoft.com/sqlserver/2008/DataDebugger/](https://schemas.microsoft.com/sqlserver/2008/DataDebugger/).  
   
 ## <a name="output-in-the-conditional-workflow-of-a-package"></a>Output nel flusso di lavoro condizionale di un pacchetto  
  I componenti di profiling dei dati non includono la funzionalità predefinita per implementare la logica condizionale nel flusso di lavoro del pacchetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] basata sull'output dell'attività Profiling dati. È tuttavia facile aggiungere questa logica con una programmazione minima in un'attività Script. Con questo codice verrebbe eseguita una query XPath sull'output XML e quindi il risultato verrebbe salvato in una variabile del pacchetto. I vincoli di precedenza che collegano l'attività Script alle attività successive possono utilizzare un'espressione per determinare il flusso di lavoro. Ad esempio, l'attività Script rileva che la percentuale di valori Null in una colonna supera una determinata soglia. Quando questa condizione è vera, potrebbe essere necessario interrompere il pacchetto e risolvere il problema prima di continuare.  

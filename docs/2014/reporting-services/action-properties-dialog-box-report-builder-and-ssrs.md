@@ -34,12 +34,12 @@ ms.assetid: 2c5d915b-4f97-42cf-b8f1-49ca3ff3d0f9
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3ee4a1e9c6430cedb3d8bf34b2978e29c860685d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f68471e05ea1fd8e3b2680e81bd3e8512a2c79bf
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48093631"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53370653"
 ---
 # <a name="action-properties-dialog-box-report-builder-and-ssrs"></a>Finestra di dialogo Proprietà azione (Generatore report e SSRS)
   È possibile utilizzare la finestra di dialogo **Azione** per abilitare opzioni dei collegamenti ipertestuali per un grafico, un misuratore e gli elementi della mappa che supportano i collegamenti. Definire un'azione in modo che un utente possa fare clic sul report e collegarsi a un URL, a un report diverso nello stesso server di report o in un sito di SharePoint integrato con un server di report oppure a un percorso diverso nello stesso report.  
@@ -48,7 +48,7 @@ ms.locfileid: "48093631"
  **Abilita come azione**  
  Selezionare un'opzione per indicare l'azione da eseguire quando l'utente fa clic sull'elemento.  
   
- **Nessuno**  
+ **None**  
  Selezionare questa opzione per indicare che all'elemento non è associata alcuna azione.  
   
  **Vai al report**  
@@ -61,7 +61,7 @@ ms.locfileid: "48093631"
   
  Per un report pubblicato in un server di report configurato per la modalità integrata SharePoint, utilizzare un URL completo, inclusa l'estensione del nome di file (RDL). Ad esempio, http://*\<NomeServerSharePoint > /\<sito >*/Documents/Report1.rdl. I percorsi relativi non sono supportati.  
   
- Per altre informazioni, vedere [Specifica di percorsi di elementi esterni &#40;Generatore report e SSRS&#41;](report-design/specifying-paths-to-external-items-report-builder-and-ssrs.md) nella [documentazione di Generatore report](http://go.microsoft.com/fwlink/?LinkId=154494) nel sito msdn.microsoft.com.  
+ Per altre informazioni, vedere [Specifica di percorsi di elementi esterni &#40;Generatore report e SSRS&#41;](report-design/specifying-paths-to-external-items-report-builder-and-ssrs.md) nella [documentazione di Generatore report](https://go.microsoft.com/fwlink/?LinkId=154494) nel sito msdn.microsoft.com.  
   
  **Utilizzare i parametri seguenti per eseguire il report**  
  Aggiungere un elenco di parametri da passare al report drill-through. I nomi dei parametri devono corrispondere ai parametri definiti per il report di destinazione. Utilizzare i pulsanti **Aggiungi** ed **Elimina** per aggiungere e rimuovere parametri e le frecce SU e GIÙ per ordinare l'elenco di parametri.  
@@ -78,7 +78,7 @@ ms.locfileid: "48093631"
  **Freccia GIÙ**  
  Consente di spostare il parametro di una posizione verso il basso nell'elenco.  
   
- **Nome**  
+ **Name**  
  Digitare il testo che corrisponde al nome di un parametro definito nel report drill-through.  
   
  **Valore**  
@@ -106,6 +106,6 @@ ms.locfileid: "48093631"
  [Guida di Generatore report per finestre di dialogo, riquadri e procedure guidate](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)   
  [Parametri report &#40;Generatore report e Progettazione report&#41;](report-design/report-parameters-report-builder-and-report-designer.md)   
  [Aggiungere un sottoreport e parametri &#40;Generatore report e SSRS&#41;](report-design/add-a-subreport-and-parameters-report-builder-and-ssrs.md)   
- [Ordinamento interattivo, mappe documento e collegamenti &#40;Report e SSRS&#41;](report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)  
+ [Ordinamento interattivo, mappe documento e collegamenti &#40;Generatore report e SSRS&#41;](report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)  
   
   
