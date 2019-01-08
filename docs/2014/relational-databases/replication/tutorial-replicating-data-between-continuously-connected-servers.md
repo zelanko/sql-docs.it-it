@@ -1,11 +1,10 @@
 ---
-title: 'Esercitazione: Replica di dati tra server con connessione continua Microsoft Docs'
+title: 'Esercitazione: Replica continua dei dati tra server con connessione | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - tutorials [SQL Server replication]
@@ -15,12 +14,12 @@ ms.assetid: 7b18a04a-2c3d-4efe-a0bc-c3f92be72fd0
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 382a505f8e7c716f3c2ccd8c117468c376ad6b08
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 32b97d456c42eab89511d8f5a9d1924914ea81ca
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48094621"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52753923"
 ---
 # <a name="tutorial-replicating-data-between-continuously-connected-servers"></a>Esercitazione: Replica di dati tra server con connessione continua
   La replica è una buona soluzione al problema legato al trasferimento dei dati tra server con connessione continua. Le procedure guidate relative alla replica consentono di eseguire in modo semplificato i passaggi necessari per configurare e amministrare una topologia di replica. In questa esercitazione viene descritto come configurare una topologia di replica per server con connessione continua.  
@@ -49,7 +48,7 @@ ms.locfileid: "48094621"
 > [!NOTE]  
 >  In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]è necessario connettersi al server di pubblicazione e al Sottoscrittore mediante un account di accesso membro del ruolo fisso del server **sysadmin** .  
   
- **Tempo previsto per il completamento di questa esercitazione: 30 minuti.**  
+ **Tempo stimato per completare questa esercitazione: 30 minuti.**  
   
 ## <a name="lessons-in-this-tutorial"></a>Lezioni dell'esercitazione  
   

@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - projects [SQL Server Management Studio], files
@@ -18,12 +18,12 @@ ms.assetid: e19d2859-0b97-4727-ac27-c4c226d86b2f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 037b8b76aed407e89a4d8cb0556bd3d8bbcff3ab
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6e8481c1cce3e43287c04678ddae10ac1b0703af
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48119861"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52763133"
 ---
 # <a name="files-that-manage-solutions-and-projects"></a>File per la gestione di soluzioni e progetti
   In questo argomento vengono descritti i tipi di file specifici per [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Per impostazione predefinita, tutte le soluzioni e i relativi progetti vengono creati in \Documenti\SQL Server Management Studio Projects.  
@@ -31,7 +31,7 @@ ms.locfileid: "48119861"
 ## <a name="management-studio-solution-files"></a>File della soluzione di Management Studio  
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] usa tipi di file diversi di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] o [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio. Ciò vuol dire che non è possibile aprire una soluzione [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] o in Visual Studio. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] I file della soluzione consentono a Esplora soluzioni di visualizzare un'interfaccia grafica per la gestione dei file.  
   
-|Estensione|Tipo di file|Description|Creato da|  
+|Estensione|Tipo di file|Descrizione|Creato da|  
 |---------------|---------------|-----------------|----------------|  
 |ssmssln|[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Oggetto della soluzione|Offre l'ambiente con riferimenti alla posizione sul disco di progetti, elementi di progetto e soluzione di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] |[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]|  
   
@@ -40,7 +40,7 @@ ms.locfileid: "48119861"
   
 |Estensione|Modelli di progetto|  
 |---------------|----------------------|  
-|ssmssqlproj|Progetto script [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
+|ssmssqlproj|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Progetto di script|  
 |ssmsasproj|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Progetto di script|  
   
 ## <a name="location-of-solution-level-files"></a>Posizione dei file a livello di soluzione  

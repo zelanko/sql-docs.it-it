@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - hierarchies [Master Data Services], derived hierarchies with explicit caps
@@ -15,12 +14,12 @@ ms.assetid: 6a82ff66-c137-4757-99bb-787d189b4295
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 803ec168404f24ff274ce698515a1a27b61ddd03
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 89b4eccbe26817d25d8c80a56e602fcbc5ab6e8a
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48075617"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52763463"
 ---
 # <a name="derived-hierarchies-with-explicit-caps-master-data-services"></a>Gerarchie derivate con estremità esplicite (Master Data Services)
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], quando i livelli di una gerarchia esplicita vengono usati come livelli principali di una gerarchia derivata, questa viene chiamata gerarchia derivata con estremità esplicita.  

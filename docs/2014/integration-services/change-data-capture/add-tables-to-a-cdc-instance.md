@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - addTabs
@@ -13,12 +12,12 @@ ms.assetid: ad260e19-c021-4035-9311-c02fc96ceaea
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f437cf8a54efcd84f01757b72b278f14a524a8d6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f82b6f68d7186d35fd1657cd56c4aa23fcf82b3e
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48107711"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52769053"
 ---
 # <a name="add-tables-to-a-cdc-instance"></a>Aggiungere tabelle a un'istanza di CDC
   Utilizzare la finestra di dialogo Table Selection per aggiungere tabelle aggiuntive dall'origine Oracle all'istanza di CDC. Le tabelle selezionate vengono aggiunte all'elenco presente nella scheda **Tables** dell'editor delle proprietà.  
@@ -28,14 +27,14 @@ ms.locfileid: "48107711"
  **Per cercare tabelle specifiche**  
  Immettere i criteri di ricerca nel modo illustrato di seguito, quindi scegliere **Cerca**:  
   
--   **Schema**: selezionare uno schema del database dall'elenco. Verranno incluse nell'elenco solo le tabelle aventi questo schema.  
+-   **Schema**: Selezionare uno schema di database dall'elenco. Verranno incluse nell'elenco solo le tabelle aventi questo schema.  
   
--   **Table Name Pattern**: immettere qualsiasi stringa di caratteri. Verranno visualizzate solo le tabelle che includono la stringa di caratteri immessa.  
+-   **Table Name Pattern**: Immettere una stringa di caratteri. Verranno visualizzate solo le tabelle che includono la stringa di caratteri immessa.  
   
 > [!NOTE]  
 >  È possibile immettere criteri in uno o entrambi questi campi.  
   
--   **Display first 1000 matching tables**: per impostazione predefinita questa casella di controllo è selezionata. La visualizzazione è limitata alle prime 1000 tabelle corrispondenti. Se si deseleziona la casella di controllo, vengono visualizzate tutte le tabelle che soddisfano i criteri. Se sono presenti molte tabelle, la visualizzazione dell'elenco potrebbe richiedere molto tempo.  
+-   **Visualizzare i primi 1000 tabelle corrispondenti**: Per impostazione predefinita è selezionata questa casella di controllo. La visualizzazione è limitata alle prime 1000 tabelle corrispondenti. Se si deseleziona la casella di controllo, vengono visualizzate tutte le tabelle che soddisfano i criteri. Se sono presenti molte tabelle, la visualizzazione dell'elenco potrebbe richiedere molto tempo.  
   
  **Per selezionare le tabelle da includere nell'istanza di CDC**  
  Fare clic sulla casella di controllo accanto alle tabelle che si desidera includere, quindi scegliere **Aggiungi**. Le tabelle vengono aggiunte all'elenco nella pagina **Select Tables and Columns** della New Instance Wizard.  
@@ -49,8 +48,8 @@ ms.locfileid: "48107711"
 >  È possibile visualizzare l'elenco di tabelle nel visualizzatore. Quando si utilizza il visualizzatore le informazioni sono in sola lettura. Nel visualizzatore è inoltre incluso un elenco delle colonne acquisite nella tabella. Per informazioni su come accedere al visualizzatore, vedere [How to Manage a CDC Instance](manage-a-cdc-instance.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Come modificare le proprietà di istanza di CDC](how-to-edit-the-cdc-instance-properties.md)   
- [Come gestire un'istanza di CDC](manage-a-cdc-instance.md)   
+ [Procedura di modifica delle proprietà dell'istanza di CDC](how-to-edit-the-cdc-instance-properties.md)   
+ [How to Manage a CDC Instance](manage-a-cdc-instance.md)   
  [Selezionare le tabelle Oracle per l'acquisizione delle modifiche](select-oracle-tables-for-capturing-changes.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: La modalità DirectQuery | Microsoft Docs
+title: La modalità DirectQuery in Analysis Services | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 14c5f32981b6109c0159018ab9c1ebf09ae2f1fa
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: a51b38dacf5a1ebaf67a19bf8b3761800425a347
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38982483"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072468"
 ---
 # <a name="directquery-mode"></a>Modalità DirectQuery
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -45,11 +45,11 @@ I modelli tabulari in modalità DirectQuery presentano alcune restrizioni. Prima
 |||  
 |-|-|  
 |**Area delle funzionalità**|**Restrizione**|  
-|**Origini dei dati**|I modelli DirectQuery possono usare i dati da un solo database relazionale dei tipi seguenti: SQL Server, database SQL di Azure, Oracle e Teradata.  Vedere le origini dati supportate per DirectQuery più avanti in questo articolo per informazioni su versione e provider.| 
+|**Origini dei dati**|I modelli DirectQuery possono usare solo i dati da un solo database relazionale dei tipi seguenti: SQL Server, Database SQL di Azure, Oracle e Teradata.  Vedere le origini dati supportate per DirectQuery più avanti in questo articolo per informazioni su versione e provider.| 
 |**Stored procedure per SQL**|Per i modelli DirectQuery, non è possibile specificare stored procedure in un'istruzione SQL per definire tabelle durante l'uso di Importazione guidata dati. |   
 |**Tabelle calcolate**|Le tabelle calcolate non sono supportate nei modelli DirectQuery. Sono invece supportate le colonne calcolate. Se si tenta di convertire un modello tabulare che contiene una tabella calcolata, viene visualizzato un errore che informa che il modello non può contenere i dati incollati.|  
 |**Limiti di query**|Il limite di riga predefinito è un milione di righe, aumentabile specificando **MaxIntermediateRowSize** nel file msmdsrv ini. Vedere [Proprietà DAX](../../analysis-services/server-properties/dax-properties.md) per informazioni dettagliate.
-|**Formule DAX**|Quando si eseguono query su un modello tabulare in modalità DirectQuery, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] converte tutte le formule DAX e le definizioni di misure in istruzioni SQL. Le formule DAX che contengono elementi non convertibili in sintassi SQL causeranno errori di convalida nel modello.<br /><br /> Questa restrizione riguarda principalmente alcune funzioni DAX. Per le misure, le formule DAX vengono convertite in operazioni basate su set nell'archivio dati relazionale. Per questo motivo, sono supportate tutte le misure create in modo implicito. <br /><br /> Quando si verifica un errore di convalida, è necessario, riscrivere una formula, inserire una funzione diversa o applicare una soluzione alternativa usando colonne derivate nell'origine dati.  Se un modello tabulare include formule contenenti funzioni incompatibili, queste verranno indicate quando si passa alla modalità DirectQuery nella finestra di progettazione. <br /><br />**Nota:**  alcune formule del modello vengono convalidate quando si passa alla modalità DirectQuery, ma restituiscono risultati diversi a seconda che vengano eseguite nella cache o nell'archivio dati relazionale. Il motivo è che i calcoli eseguiti sulla cache usano la semantica del motore di analisi in memoria che contiene molte funzionalità intese a emulare il comportamento di Excel, mentre le query eseguite sui dati archiviati sull'origine dati relazionali usano la semantica di SQL Server.<br /><br /> Archiviazione in SQL  <br /><br /> Per altre informazioni, vedere [compatibilità delle formule DAX in modalità DirectQuery](../../analysis-services/tabular-models/dax-formula-compatibility-in-directquery-mode-ssas-2016.md).|  
+|**Formule DAX**|Quando si eseguono query su un modello tabulare in modalità DirectQuery, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] converte tutte le formule DAX e le definizioni di misure in istruzioni SQL. Le formule DAX che contengono elementi non convertibili in sintassi SQL causeranno errori di convalida nel modello.<br /><br /> Questa restrizione riguarda principalmente alcune funzioni DAX. Per le misure, le formule DAX vengono convertite in operazioni basate su set nell'archivio dati relazionale. Per questo motivo, sono supportate tutte le misure create in modo implicito. <br /><br /> Quando si verifica un errore di convalida, è necessario, riscrivere una formula, inserire una funzione diversa o applicare una soluzione alternativa usando colonne derivate nell'origine dati.  Se un modello tabulare include formule contenenti funzioni incompatibili, queste verranno indicate quando si passa alla modalità DirectQuery nella finestra di progettazione. <br /><br />**Nota:**  Alcune formule del modello vengono convalidate quando si passa alla modalità DirectQuery, ma restituiscono risultati diversi a seconda che vengano eseguite nella cache o nell'archivio dati relazionale. Il motivo è che i calcoli eseguiti sulla cache usano la semantica del motore di analisi in memoria che contiene molte funzionalità intese a emulare il comportamento di Excel, mentre le query eseguite sui dati archiviati sull'origine dati relazionali usano la semantica di SQL Server.<br /><br />Per altre informazioni, vedere [compatibilità delle formule DAX in modalità DirectQuery](../../analysis-services/tabular-models/dax-formula-compatibility-in-directquery-mode-ssas-2016.md).|  
 |**Coerenza delle formula**|In alcuni casi, la stessa formula può restituire risultati diversi in un modello memorizzato nella cache rispetto a un modello DirectQuery che usa unicamente l'archivio dati relazionale. Queste differenze sono una conseguenza delle differenze semantiche tra il motore di analisi in memoria e SQL Server.<br /><br /> Per un elenco completo dei problemi di compatibilità, incluse le funzioni che potrebbero restituire risultati diversi quando il modello viene distribuito in tempo reale, vedere [compatibilità delle formule DAX in modalità DirectQuery (SQL Server Analysis Services)](http://msdn.microsoft.com/981b6a68-434d-4db6-964e-d92f8eb3ee3e).|  
 |**Limitazioni MDX**|Nessun nome di oggetto relativo. Tutti i nomi di oggetto devono essere completi.<br /><br /> Nessuna istruzione MDX con ambito sessione (set denominati, membri calcolati, celle calcolate, totali visualizzati, membri predefiniti e così via), ma è possibile usare costrutti con ambito query, come la clausola 'WITH'.<br /><br /> Nessuna tupla con membri da livelli diversi in clausole sub-SELECT MDX.<br /><br /> Nessuna gerarchia definita dall'utente.<br /><br /> Nessuna query SQL nativa. Normalmente, Analysis Services supporta un subset T-SQL, ma non per modelli DirectQuery.|  
 

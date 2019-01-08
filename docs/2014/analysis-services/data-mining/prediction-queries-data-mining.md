@@ -11,14 +11,14 @@ ms.assetid: e5e6686c-1360-480e-8c0d-8a56204fbed9
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 892ea8d21d03eafc21a98ec6799aa840fddf96a1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 935cd8ec3f4e5069807e914e5af20e39b645deb3
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48094561"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52520168"
 ---
-# <a name="prediction-queries-data-mining"></a>Query di stima (Data mining)
+# <a name="prediction-queries-data-mining"></a>Prediction Queries (Data Mining)
   L'obiettivo di un progetto di data mining tipico consiste nell'utilizzare il modello di data mining per eseguire stime. Ad esempio, potrebbe essere necessario stimare la quantità di tempo di inattività prevista per un determinato cluster di server o generare un punteggio che indichi se è probabile che segmenti di clienti rispondano a una campagna pubblicitaria. Per effettuare tutte queste operazioni, è necessario creare una query di stima.  
   
  A livello funzionale esistono diversi tipi di query di stima supportati in SQL Server, a seconda del tipo di input per la query:  
@@ -59,7 +59,7 @@ ms.locfileid: "48094561"
 ###  <a name="bkmk_PredFunc"></a> Aggiunta di funzioni di stima  
  Oltre a stimare un valore, è possibile personalizzare una query di stima per restituire vari tipi di informazioni correlate alla stima. Ad esempio, se tramite la stima viene creato un elenco di prodotti da consigliare a un cliente, è necessario restituire anche la probabilità per ogni stima, in modo che sia possibile classificarli e presentare all'utente solo i prodotti consigliati.  
   
- A tale scopo, aggiungere *funzioni di stima* alla query. Ogni tipo di modello o di query supporta funzioni specifiche. Ad esempio, i modelli di clustering supportano funzioni di stima speciali che forniscono dettagli aggiuntivi sui cluster creati dal modello, mentre i modelli Time Series dispongono di funzioni che consentono di calcolare le differenze nel corso del tempo. Sono inoltre disponibili funzioni di stima generali che funzionano con quasi tutti i tipi di modello. Per un elenco delle funzioni di stima supportate nei diversi tipi di query, vedere l'argomento sulla guida di riferimento a DMX: [Funzioni di stima correlate &#40;DMX&#41;](/sql/dmx/general-prediction-functions-dmx).  
+ A tale scopo, aggiungere *funzioni di stima* alla query. Ogni tipo di modello o di query supporta funzioni specifiche. Ad esempio, i modelli di clustering supportano funzioni di stima speciali che forniscono dettagli aggiuntivi sui cluster creati dal modello, mentre i modelli Time Series dispongono di funzioni che consentono di calcolare le differenze nel corso del tempo. Sono inoltre disponibili funzioni di stima generali che funzionano con quasi tutti i tipi di modello. Per un elenco di funzioni di stima supportate nei diversi tipi di query, vedere l'argomento di riferimento DMX:  [Funzioni di stima generale &#40;DMX&#41;](/sql/dmx/general-prediction-functions-dmx).  
   
 ###  <a name="bkmk_SingletonQuery"></a> Creazione di query di stima singleton  
  Una query di stima singleton risulta utile se si desidera creare stime rapide in tempo reale. Uno scenario comune potrebbe essere l'acquisizione di informazioni da un cliente tramite, ad esempio, un form in un sito Web, e il successivo invio di tali dati come input a una query di stima singleton. Ad esempio, quando un cliente sceglie un prodotto da un elenco, è possibile utilizzare tale selezione come input per una query che consente di stimare i migliori prodotti da consigliare.  
@@ -67,7 +67,7 @@ ms.locfileid: "48094561"
  Per le query di stima singleton non è necessaria una tabella separata contenente l'input. Al contrario, vengono fornite una o più righe di valori come input del modello e le stime vengono restituite in tempo reale.  
   
 > [!WARNING]  
->  Nonostante il nome, le query di stima singleton non consentono di eseguire solo singole stime, bensì è possibile generare più stime per ogni set di input. Specificare più case di input creando un'istruzione SELECT per ogni case di input e combinandoli con l'operatore UNION.  
+>  Nonostante il nome, le query di stima singleton non solo stime singole-è possibile generare più stime per ogni set di input. Specificare più case di input creando un'istruzione SELECT per ogni case di input e combinandoli con l'operatore UNION.  
   
  Quando si crea una query di stima singleton, è necessario fornire i nuovi dati al modello sotto forma di PREDICTION JOIN. Questo significa che anche se non si esegue il mapping a una tabella effettiva, è necessario assicurarsi che i nuovi dati corrispondano alle colonne esistenti nel modello di data mining. Se le nuove colonne di dati e i nuovi dati corrispondono in modo esatto, il mapping delle colonne verrà eseguito automaticamente in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Questa funzione è denominata *NATURAL PREDICTION JOIN*. Se tuttavia le colonne non corrispondono o se nei nuovi dati non è contenuto lo stesso tipo e la stessa quantità di dati presenti nel modello, è necessario specificare di quali colonne del modello eseguire il mapping ai nuovi dati oppure specificare i valori mancanti.  
   
@@ -147,7 +147,7 @@ FROM
  Se il provider non è in grado di gestire i set di righe gerarchici, è possibile fare in modo che i risultati vengano restituiti in formato flat utilizzando la parola chiave FLATTEN nella query di stima. Per altre informazioni, inclusi esempi di set di righe bidimensionali, vedere [SELECT &#40;DMX&#41;](/sql/dmx/select-dmx).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Query sul contenuto &#40;Data Mining&#41;](content-queries-data-mining.md)   
- [Query di definizione dei dati &#40;Data Mining&#41;](data-definition-queries-data-mining.md)  
+ [Query sul contenuto &#40;Data mining&#41;](content-queries-data-mining.md)   
+ [Query di definizione dei dati &#40;Data mining&#41;](data-definition-queries-data-mining.md)  
   
   

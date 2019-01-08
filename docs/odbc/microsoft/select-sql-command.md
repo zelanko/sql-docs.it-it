@@ -13,12 +13,12 @@ ms.assetid: 2149c3ca-3a71-446d-8d53-3d056e2f301a
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1f44eb85e80135f81d0e2ca1f37657818843a237
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0c2d991afa179fdfbb536853e302b33de8bf12e1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47710059"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52540236"
 ---
 # <a name="select---sql-command"></a>SELECT (comando SQL)
 Recupera i dati da una o più tabelle.  
@@ -35,7 +35,7 @@ SELECT [ALL | DISTINCT]
 FROM [DatabaseName!]Table [Local_Alias]  
    [, [DatabaseName!]Table [Local_Alias] ...]   
 [WHERE JoinCondition [AND JoinCondition  
-…]  
+...]  
    [AND | OR FilterCondition [AND | OR FilterCondition ...]]]  
 [GROUP BY GroupColumn [, GroupColumn ...]]  
 [HAVING FilterCondition]  
@@ -84,13 +84,13 @@ FROM [DatabaseName!]Table [Local_Alias]
   
 -   AVG (*Select_Item*): calcola la media di una colonna di dati numerici.  
   
--   CONTEGGIO (*Select_Item*), ovvero conta il numero di selezionare gli elementi in una colonna. Count conta il numero di righe nell'output della query.  
+-   CONTEGGIO (*Select_Item*)-conta il numero di selezionare gli elementi in una colonna. Count conta il numero di righe nell'output della query.  
   
--   MIN (*Select_Item*): determina il valore più piccolo della *Select_Item* in una colonna.  
+-   MIN (*Select_Item*)-determina il valore più piccolo della *Select_Item* in una colonna.  
   
--   MAX (*Select_Item*): determina il valore più grande della *Select_Item* in una colonna.  
+-   MAX (*Select_Item*)-determina il valore più grande della *Select_Item* in una colonna.  
   
--   SUM (*Select_Item*): somma di una colonna di dati numerici.  
+-   SUM (*Select_Item*)-totali di una colonna di dati numerici.  
   
  È possibile nidificare le funzioni di campo.  
   

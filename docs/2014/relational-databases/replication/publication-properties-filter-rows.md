@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.newpubwizard.pubproperties.filterrows.f1
@@ -13,12 +12,12 @@ ms.assetid: 2c5fdbed-9b10-4818-98cc-cc6b01351318
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a33c0344fd0b195f920919bcabfdbf49fb0b63dc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5a12867b5efe457fa2361a85ac426db07c2760ac
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48065671"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52780383"
 ---
 # <a name="publication-properties-filter-rows"></a>Proprietà pubblicazione, Filtra righe
   La pagina **Filtra righe** della finestra di dialogo **Proprietà pubblicazione** consente di aggiungere, modificare o eliminare filtri progettati per eseguire le operazioni seguenti:  
@@ -51,7 +50,7 @@ ms.locfileid: "48065671"
  Questo riquadro viene popolato di filtri mano a mano che vengono aggiunti agli articoli di tabella nella pubblicazione. Le tabelle con filtri di riga vengono visualizzate nel riquadro come nodi di livello principale. Per le pubblicazioni di tipo merge, le tabelle alle quali sono stati estesi i filtri tramite un filtro di join vengono visualizzate come nodi figlio.  
   
  **Aggiungi**  
- Fare clic su **Aggiungi** per visualizzare una finestra di dialogo che consente di filtrare gli articoli di tabella. Facendo clic su **Aggiungi** per una pubblicazione snapshot o transazionale verrà visualizzata immediatamente una finestra di dialogo. Facendo clic su **Aggiungi** per una pubblicazione di tipo merge verranno visualizzate tre opzioni: **Aggiungi filtro**, **Aggiungi join per estendere il filtro selezionato**e **Genera filtri automaticamente**.  
+ Fare clic su **Aggiungi** per visualizzare una finestra di dialogo che consente di filtrare gli articoli di tabella. Facendo clic su **Aggiungi** per una pubblicazione snapshot o transazionale verrà visualizzata immediatamente una finestra di dialogo. Facendo clic **Add** per un'operazione di merge verranno visualizzate tre opzioni di pubblicazione: **Aggiungi filtro**; **Aggiungi Join per estendere il filtro selezionato**; **Generare automaticamente filtri**.  
   
 -   Selezionare l'opzione **Aggiungi filtro** per visualizzare la finestra di dialogo **Aggiungi filtro** , che consente di applicare i filtri di riga a un articolo di tabella. Nella finestra di dialogo **Aggiungi filtro** è possibile, ad esempio, specificare che una tabella contenente dati sui clienti possa contenere solo dati sui clienti francesi quando viene replicata nei Sottoscrittori.  
   

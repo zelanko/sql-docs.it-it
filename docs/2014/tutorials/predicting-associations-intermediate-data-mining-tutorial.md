@@ -11,12 +11,12 @@ ms.assetid: 9140c5f2-b340-45a6-9c27-d870d15aafea
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 09084760637464c5e985eeb17762959c8576c5ae
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8a66c6284ea53f65351a964e3f24492c569521af
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48222805"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52544258"
 ---
 # <a name="predicting-associations-intermediate-data-mining-tutorial"></a>Stima delle associazioni (Esercitazione intermedia sul data mining)
   Dopo avere elaborato i modelli, è possibile utilizzare le informazioni sulle associazioni archiviate nei modelli per creare stime. Nell'attività finale di questa lezione verrà illustrato come compilare query di stima rispetto nei modelli di associazione creati. In questa lezione si presuppone che l'utente abbia familiarità con l'utilizzo del generatore delle query di stima e desideri apprendere come compilare query di stima mediante modelli di associazione. Per altre informazioni su come usare generatore Query di stima, vedere [interfacce di Data Mining Query](../../2014/analysis-services/data-mining/data-mining-query-tools.md).  
@@ -209,7 +209,7 @@ ms.locfileid: "48222805"
  È possibile provare a creare una query di stima simile in più modelli, per vedere se l'applicazione di filtri modifica i risultati della stima. Per altre informazioni sulla creazione di stime e altri tipi di query, vedere [Association Model Query Examples](../../2014/analysis-services/data-mining/association-model-query-examples.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Contenuto dei modelli di associazione modelli di data mining &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md)   
+ [Contenuto dei modelli di data mining per i modelli di associazione &#40;Analysis Services - Data mining&#41;](../../2014/analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md)   
  [PredictAssociation &#40;DMX&#41;](/sql/dmx/predictassociation-dmx)   
  [Creare una query di stima usando Generatore di query di stima](../../2014/analysis-services/data-mining/create-a-prediction-query-using-the-prediction-query-builder.md)  
   

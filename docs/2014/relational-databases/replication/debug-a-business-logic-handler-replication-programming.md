@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -18,12 +17,12 @@ ms.assetid: edd0d17a-0e9c-4c28-8395-a7d47e8ce3d6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f8bc3dd8ccacf4348002f0a9ca45a63632f7cb08
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 019ff508b10859cae2388636e9189292b498e251
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48148561"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52761513"
 ---
 # <a name="debug-a-business-logic-handler-replication-programming"></a>Debug di un gestore della logica di business (programmazione della replica)
   Utilizzare un gestore della logica di business per richiamare logica di business personalizzata quando viene sincronizzata una sottoscrizione di tipo merge. Per altre informazioni, vedere [Eseguire logiche di business durante la sincronizzazione di tipo merge](merge/execute-business-logic-during-merge-synchronization.md).  

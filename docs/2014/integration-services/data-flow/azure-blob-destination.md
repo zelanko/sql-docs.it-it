@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.afpblobdest.f1
@@ -14,15 +13,15 @@ ms.assetid: 820a1e7a-7182-4c7b-ab56-5b4097a7e042
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5e2927b75a5e7ca441d95a6ce85d64d66f9dabcc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6f114f39d76a5ec764e9bab814123a668a522dbe
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48088487"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52756863"
 ---
 # <a name="azure-blob-destination"></a>Destinazione BLOB di Azure
-  Il componente **Destinazione BLOB di Azure** consente a un pacchetto SSIS di scrivere dati in un BLOB di Azure. I formati di file supportati sono CSV e AVRO. Trascinare **destinazione Blob di Azure** alla finestra di progettazione del flusso di dati e fare doppio clic per visualizzare l'editor).  
+  Il componente **Destinazione BLOB di Azure** consente a un pacchetto SSIS di scrivere dati in un BLOB di Azure. I formati di file supportati sono: CSV e AVRO. Trascinare **destinazione Blob di Azure** alla finestra di progettazione del flusso di dati e fare doppio clic per visualizzare l'editor).  
   
 1.  Nel campo **Gestione connessione di archiviazione di Azure** specificare un'istanza esistente di Gestione connessioni dell'archiviazione di Azure o creare una nuova istanza che fa riferimento a un account di archiviazione di Azure.  
   

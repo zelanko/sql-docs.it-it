@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Compact, connection manager
@@ -15,12 +14,12 @@ ms.assetid: ba627d4d-41f4-49fc-a921-f534cde67770
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4fd067d6f01c168861a42895c36024cb4c0a9aa5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ec47718114d100863db8126a520d5aea74912d87
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48082791"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52818363"
 ---
 # <a name="sql-server-compact-edition-connection-manager"></a>Gestione connessione SQL Server Compact Edition
   Una gestione connessione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact consente la connessione tra un pacchetto e un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact. La destinazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact inclusa in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] usa questa gestione connessione per caricare dati in una tabella di un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact.  
@@ -31,7 +30,7 @@ ms.locfileid: "48082791"
 ## <a name="configuration-the-sql-server-compact-edition-connection-manager"></a>Configurazione della gestione connessione SQL Server Compact Edition  
  Quando si aggiunge un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gestione connessione Compact a un pacchetto, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] crea una connessione di gestione che verrà risolta in un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact connessione in fase di esecuzione, imposta le proprietà di gestione connessione e aggiunge la gestione connessione per il `Connections` raccolta nel pacchetto.  
   
- Il `ConnectionManagerType` della gestione connessione viene impostata su `SQLMOBILE`.  
+ La proprietà `ConnectionManagerType` della gestione connessione viene impostata su `SQLMOBILE`.  
   
  Per configurare la gestione connessione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact, procedere nel modo seguente:  
   
@@ -47,10 +46,10 @@ ms.locfileid: "48082791"
   
  Per ulteriori informazioni sulle proprietà che è possibile impostare in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] , fare clic su uno degli argomenti seguenti:  
   
--   [SQL Server Compact Edition Connection Manager Editor &#40;pagina di connessione&#41;](../sql-server-compact-edition-connection-manager-editor-connection-page.md)  
+-   [Editor gestione connessione SQL Server Compact Edition &#40;pagina Connessione&#41;](../sql-server-compact-edition-connection-manager-editor-connection-page.md)  
   
--   [SQL Server Compact Edition Connection Manager Editor &#40;pagina tutte&#41;](../sql-server-compact-edition-connection-manager-editor-all-page.md)  
+-   [Editor gestione connessione SQL Server Compact Edition &#40;pagina Tutte&#41;](../sql-server-compact-edition-connection-manager-editor-all-page.md)  
   
- Per informazioni sulla configurazione di una gestione connessione a livello di codice, vedere <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> e [aggiunta di connessioni a livello di programmazione](../building-packages-programmatically/adding-connections-programmatically.md).  
+ Per informazioni sulla configurazione di una gestione connessione a livello di programmazione, vedere l'articolo relativo a <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> e [Aggiunta di connessioni a livello di programmazione](../building-packages-programmatically/adding-connections-programmatically.md).  
   
   

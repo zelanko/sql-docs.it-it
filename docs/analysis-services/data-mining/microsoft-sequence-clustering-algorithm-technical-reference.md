@@ -1,5 +1,5 @@
 ---
-title: Riferimento tecnico algoritmo Microsoft Sequence Clustering | Documenti Microsoft
+title: Riferimento tecnico algoritmo Microsoft Sequence Clustering | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: cf5f652cc2cec77fdbcb488710886441788a0631
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 331a7c4df759114e18fd47007058ddc38b2f77d9
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34016468"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52418382"
 ---
 # <a name="microsoft-sequence-clustering-algorithm-technical-reference"></a>Riferimento tecnico per l'algoritmo Microsoft Sequence Clustering
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -93,7 +93,7 @@ ms.locfileid: "34016468"
  Il valore predefinito è 64.  
   
  MAXIMUM_STATES  
- Specifica il numero massimo di stati per un attributo fuori sequenza supportato dall'algoritmo. Se il numero di stati di un attributo fuori sequenza è maggiore del numero massimo, l'algoritmo usa gli stati più frequenti dell'attributo e considera gli stati rimanenti come **Missing**.  
+ Specifica il numero massimo di stati per un attributo fuori sequenza supportato dall'algoritmo. Se il numero di stati per un attributo fuori sequenza è maggiore del numero massimo di stati, l'algoritmo utilizza stati più frequenti dell'attributo e considera gli stati rimanenti come **Missing**.  
   
  Il valore predefinito è 100.  
   
@@ -106,7 +106,7 @@ ms.locfileid: "34016468"
  Si applica alla colonna della struttura di data mining.  
   
  MODEL_EXISTENCE_ONLY  
- Indica che la colonna verrà considerata come se presentasse due stati possibili: **Missing** e **Existing**. Un valore Null viene considerato come valore **Missing** .  
+ Indica che la colonna verrà considerata come se presentasse due stati possibili: **Mancano** e **esistenti**. Un valore Null viene considerato come valore **Missing** .  
   
  Si applica alla colonna del modello di data mining.  
   
@@ -123,22 +123,22 @@ ms.locfileid: "34016468"
 ### <a name="input-and-predictable-columns"></a>Colonne di input e stimabili  
  L'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Sequence Clustering supporta colonne di input e colonne stimabili specifiche, riportate nella tabella seguente. Per altre informazioni sul significato dei tipi di contenuto usati in un modello di data mining, vedere [Tipi di contenuto &#40;Data Mining&#41;](../../analysis-services/data-mining/content-types-data-mining.md).  
   
-|Colonna|Tipi di contenuto|  
+|colonna|Tipi di contenuto|  
 |------------|-------------------|  
 |Attributo di input|Continuous, Cyclical, Discrete, Discretized, Key, Key Sequence, Table e Ordered|  
 |Attributo stimabile|Continuous, Cyclical, Discrete, Discretized, Table e Ordered|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
   
--   Usare la funzione [PredictSequence &#40;DMX&#41;](../../dmx/predictsequence-dmx.md) per la stima delle sequenze. Per ulteriori informazioni sulle edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che supporta la stima basata su sequenze, vedere [funzionalità supportate dalle edizioni di SQL Server 2012](http://go.microsoft.com/fwlink/?linkid=232473) (http://go.microsoft.com/fwlink/?linkid=232473).  
+-   Usare la funzione [PredictSequence &#40;DMX&#41;](../../dmx/predictsequence-dmx.md) per la stima delle sequenze. Per altre informazioni sulle edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che supportano la stima delle sequenze, vedere [funzionalità supportate dalle edizioni di SQL Server 2012](http://go.microsoft.com/fwlink/?linkid=232473) (http://go.microsoft.com/fwlink/?linkid=232473).  
   
 -   L'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Sequence Clustering non supporta l'uso dello standard PMML (Predictive Model Markup Language) per la creazione dei modelli di data mining.  
   
 -   L'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Sequence Clustering supporta il drill-through, l'utilizzo di modelli di data mining OLAP e l'utilizzo di dimensioni di data mining.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Algoritmo Microsoft Sequence Clustering](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)   
+ [Microsoft Sequence Clustering Algorithm](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)   
  [Sequence Clustering Model Query Examples](../../analysis-services/data-mining/sequence-clustering-model-query-examples.md)   
- [Contenuto del modello di data mining per i modelli di Clustering sequenza & #40; Analysis Services - Data Mining & #41;](../../analysis-services/data-mining/mining-model-content-for-sequence-clustering-models.md)  
+ [Contenuto dei modelli di data mining per i modelli Sequence Clustering &#40;Analysis Services - Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-for-sequence-clustering-models.md)  
   
   

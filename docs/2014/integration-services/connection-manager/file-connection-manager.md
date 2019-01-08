@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - folders [Integration Services], connections
@@ -18,22 +17,22 @@ ms.assetid: 019078bc-44ee-4975-9169-0f9a89e3f3be
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ea35467bd5b5209a2e625adc081774ef39492439
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a5d4113fbb2add2cc4dcd0073d714daa86419820
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48119971"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52801634"
 ---
 # <a name="file-connection-manager"></a>gestione connessione file
   Una gestione connessione file consente a un pacchetto di fare riferimento a un file o a una cartella esistente oppure di creare un file o una cartella in fase di esecuzione. Ad esempio, è possibile fare riferimento a un file di Excel. Le informazioni presenti nei file vengono utilizzate da alcuni componenti di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] per effettuare le operazioni. L'attività Esegui SQL può ad esempio fare riferimento a un file che contiene le istruzioni SQL eseguite dall'attività. In altri componenti le operazioni vengono effettuate nei file. Ad esempio, tramite l'attività File System è possibile fare riferimento a un file per copiarlo in una nuova posizione.  
   
 ## <a name="usage-types-of-the-file-connection-manager"></a>Tipi di utilizzo per la gestione connessione file  
- Il `FileUsageType` proprietà della gestione connessione File specifica la modalità di utilizzo della connessione file. La gestione connessione file può creare un file o una cartella oppure utilizzare un file o una cartella esistente.  
+ Tramite la proprietà `FileUsageType` della gestione connessione file viene specificata la modalità di utilizzo della connessione file. La gestione connessione file può creare un file o una cartella oppure utilizzare un file o una cartella esistente.  
   
- Nella tabella seguente sono elencati i valori di `FileUsageType`.  
+ Nella tabella seguente vengono elencati i possibili valori di `FileUsageType`.  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |`0`|La gestione connessione file utilizza un file esistente.|  
 |`1`|La gestione connessione file crea un file.|  
@@ -44,9 +43,9 @@ ms.locfileid: "48119971"
  La gestione connessione file può fare riferimento solo a un file o a una cartella. Per fare riferimento a più file o cartelle, al posto di una gestione connessione file utilizzare una gestione connessione per più file. Per altre informazioni, vedere [Multiple Files Connection Manager](multiple-files-connection-manager.md).  
   
 ## <a name="configuration-of-the-file-connection-manager"></a>Configurazione della gestione connessione file  
- Quando si aggiunge una gestione connessione File a un pacchetto [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] crea una connessione di gestione che verrà risolta in una connessione di File in fase di esecuzione, imposta le proprietà di connessione di File e aggiunge il File di `Connections` insieme del pacchetto.  
+ Quando si aggiunge una gestione connessione file a un pacchetto, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] crea una gestione connessione che in fase di esecuzione verrà risolta in una connessione file, imposta le proprietà della connessione file e la aggiunge alla raccolta `Connections` del pacchetto.  
   
- Il `ConnectionManagerType` della gestione connessione viene impostata su `FILE`.  
+ La proprietà `ConnectionManagerType` della gestione connessione viene impostata su `FILE`.  
   
  Per configurare una gestione connessione file, procedere nel modo seguente:  
   
@@ -60,6 +59,6 @@ ms.locfileid: "48119971"
   
  Per altre informazioni sulle proprietà che è possibile impostare in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] , vedere [Editor gestione connessione file](../file-connection-manager-editor.md).  
   
- Per informazioni sulla configurazione di una gestione connessione a livello di codice, vedere <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> e [aggiunta di connessioni a livello di programmazione](../building-packages-programmatically/adding-connections-programmatically.md).  
+ Per informazioni sulla configurazione di una gestione connessione a livello di programmazione, vedere l'articolo relativo a <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> e [Aggiunta di connessioni a livello di programmazione](../building-packages-programmatically/adding-connections-programmatically.md).  
   
   

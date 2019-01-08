@@ -13,23 +13,23 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: ac7c933c9ae730810b198266cb9b2b3086169092
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8543933aa102a6962846164b7267fad7df222cdd
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47832119"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52393595"
 ---
 # <a name="sysdmpdwrequeststeps-transact-sql"></a>sys.dm_pdw_request_steps (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   Contiene informazioni su tutti i passaggi che compongono una determinata richiesta o una query nel [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]. Elenca una riga per ogni passaggio della query.  
   
-|Nome colonna|Tipo di dati|Description|Intervallo|  
+|Nome colonna|Tipo di dati|Descrizione|Intervallo|  
 |-----------------|---------------|-----------------|-----------|  
 |request_id|**nvarchar(32)**|request_id e step_index costituiscono la chiave per questa visualizzazione.<br /><br /> Id numerico univoco associato alla richiesta.|Vedere in request_id [DM pdw_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md).|  
 |step_index|**int**|request_id e step_index costituiscono la chiave per questa visualizzazione.<br /><br /> La posizione di questo passaggio della sequenza di passaggi che compongono la richiesta.|0 per (n-1) per una richiesta con passaggi n.|  
-|operation_type|**nvarchar(35)**|Tipo di operazione rappresentata da questo passaggio.|**Operazioni del piano di query DMS:** 'ReturnOperation', 'PartitionMoveOperation', 'MoveOperation', 'BroadcastMoveOperation', 'ShuffleMoveOperation', 'TrimMoveOperation', 'CopyOperation', 'DistributeReplicatedTableMoveOperation'<br /><br /> **Operazioni di piano di query SQL:** 'OnOperation', 'RemoteOperation'<br /><br /> **Altre operazioni del piano di query:** 'MetaDataCreateOperation', 'RandomIDOperation'<br /><br /> **Operazioni esterne per le letture:** 'HadoopShuffleOperation', 'HadoopRoundRobinOperation', 'HadoopBroadcastOperation'<br /><br /> **Operazioni esterne per MapReduce:** 'HadoopJobOperation', 'HdfsDeleteOperation'<br /><br /> **Operazioni esterne per le scritture:** 'ExternalExportDistributedOperation', 'ExternalExportReplicatedOperation', 'ExternalExportControlOperation'<br /><br /> Per altre informazioni, vedere "Informazioni sui piani di Query" nel [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].|  
+|operation_type|**nvarchar(35)**|Tipo di operazione rappresentata da questo passaggio.|**Operazioni di piano di query DMS:** 'ReturnOperation', 'PartitionMoveOperation', 'MoveOperation', 'BroadcastMoveOperation', 'ShuffleMoveOperation', 'TrimMoveOperation', 'CopyOperation', 'DistributeReplicatedTableMoveOperation'<br /><br /> **Operazioni di piano di query SQL:** 'OnOperation', 'RemoteOperation'<br /><br /> **Altre operazioni di piano di query:** 'MetaDataCreateOperation', 'RandomIDOperation'<br /><br /> **Operazioni esterne per le letture:** 'HadoopShuffleOperation', 'HadoopRoundRobinOperation', 'HadoopBroadcastOperation'<br /><br /> **Operazioni esterne per MapReduce:** 'HadoopJobOperation', 'HdfsDeleteOperation'<br /><br /> **Operazioni esterne per operazioni di scrittura:** 'ExternalExportDistributedOperation', 'ExternalExportReplicatedOperation', 'ExternalExportControlOperation'<br /><br /> Per altre informazioni, vedere "Informazioni sui piani di Query" nel [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].|  
 |distribution_type|**nvarchar(32)**|Tipo di distribuzione verrà sottoposti a questo passaggio.|'AllNodes', 'AllDistributions', 'AllComputeNodes', 'ComputeNode', 'Distribution', 'SubsetNodes', 'SubsetDistributions', 'Unspecified'|  
 |location_type|**nvarchar(32)**|In cui viene eseguito il passaggio.|'Compute', 'Control', 'DMS'|  
 |status|**nvarchar(32)**|Stato di questo passaggio.|In sospeso, in esecuzione, completato, non è riuscita, UndoFailed, PendingCancel, annullato, annullato, interrotto|  

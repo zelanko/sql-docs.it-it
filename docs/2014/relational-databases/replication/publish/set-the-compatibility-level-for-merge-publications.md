@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - compatibility [SQL Server], replication
@@ -15,12 +14,12 @@ ms.assetid: db47ac73-948b-4d77-b272-bb3565135ea5
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3e3795b11f492a8a691ec8777cb87cf4b8379a76
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7aecff691139b1041a928c42c3df2987c992cd91
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48218014"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52781963"
 ---
 # <a name="set-the-compatibility-level-for-merge-publications"></a>Impostazione del livello di compatibilità per le pubblicazioni di tipo merge
   In questo argomento si illustra come impostare il livello di compatibilità per le pubblicazioni di tipo merge in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Il livello di compatibilità delle pubblicazioni viene utilizzato nella replica di tipo merge per determinare le funzionalità che possono essere utilizzate dalle pubblicazioni in un determinato database.  
@@ -47,7 +46,7 @@ ms.locfileid: "48218014"
   
 -   Nella pagina **Generale** della finestra di dialogo **Proprietà di pubblicazione - \<Pubblicazione>** selezionare il **Livello di compatibilità** desiderato.  
   
-##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
  È possibile impostare il livello di compatibilità per una pubblicazione di tipo merge a livello di programmazione codice quando una pubblicazione viene creata o modificata a livello di programmazione in un secondo momento. Per impostare o modificare questa proprietà di pubblicazione, è possibile utilizzare le stored procedure di replica.  
   
 #### <a name="to-set-the-publication-compatibility-level-for-a-merge-publication"></a>Per impostare il livello di compatibilità per una pubblicazione di tipo merge  

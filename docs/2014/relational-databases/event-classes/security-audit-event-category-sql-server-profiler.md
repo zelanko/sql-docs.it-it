@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -17,19 +16,19 @@ ms.assetid: e64f7695-2f23-4adb-b83d-52f147cc1a2f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cef812c3473ce2089f1fd5f7dc8e6204e787e570
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9f2f854c7a6dbd0d1ab569f87bf053a5b9f45058
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48123501"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52761503"
 ---
 # <a name="security-audit-event-category-sql-server-profiler"></a>Categoria di eventi Security Audit (SQL Server Profiler)
   La categoria di eventi **Security Audit** include gli eventi relativi ai controlli di sicurezza.  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>In questa sezione  
   
-|Argomento|Description|  
+|Argomento|Descrizione|  
 |-----------|-----------------|  
 |[Classe di evento Audit Add DB User](audit-add-db-user-event-class.md)|Indica che un account di accesso è stato aggiunto o rimosso dal database come utente di database.|  
 |[Classe di evento Audit Add Login to Server Role](audit-add-login-to-server-role-event-class.md)|Indica che un account di accesso è stato aggiunto o rimosso da un ruolo predefinito del server.|  

@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: f26ffdf21519a1b5aa2ce26060a2c6d36a53d6ff
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 65374ec0499d6dbb549a14af239c03c06dca4062
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145926"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52545416"
 ---
 # <a name="alter-mining-structure-dmx"></a>ALTER MINING STRUCTURE (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -128,7 +128,7 @@ USING <algorithm> [(<parameter list>)]
 ## <a name="filter-criteria-expressions"></a>Espressioni di criteri di filtro  
  È possibile definire un filtro per limitare i case utilizzati nel modello di data mining. Il filtro può essere applicato alle colonne nella tabella del case, alle righe nella tabella nidificata o a entrambe.  
   
- Le espressioni di criteri di filtro sono predicati DMX semplificati, simili a una clausola WHERE. Le espressioni di filtro sono limitate a formule che utilizzano operatori matematici di base, valori scalari e nomi di colonna. L'operatore EXISTS, che restituisce true se per la sottoquery viene restituita almeno una riga, rappresenta un'eccezione. I predicati possono essere combinati utilizzando gli operatori logici comuni: AND, OR e NOT.  
+ Le espressioni di criteri di filtro sono predicati DMX semplificati, simili a una clausola WHERE. Le espressioni di filtro sono limitate a formule che utilizzano operatori matematici di base, valori scalari e nomi di colonna. L'operatore EXISTS, che restituisce true se per la sottoquery viene restituita almeno una riga, rappresenta un'eccezione. I predicati possono essere combinati utilizzando gli operatori logici comuni: AND, OR e non.  
   
  Per altre informazioni sui filtri utilizzati con modelli di data mining, vedere [filtri per i modelli di Data Mining &#40;Analysis Services - Data Mining&#41;](../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md).  
   
@@ -143,10 +143,10 @@ USING <algorithm> [(<parameter list>)]
  La sintassi dell'elenco dei parametri è la seguente:  
   
 ```  
-[<parameter> = <value>, <parameter> = <value>,…]  
+[<parameter> = <value>, <parameter> = <value>,...]  
 ```  
   
-## <a name="example-1-add-a-model-to-a-structure"></a>Esempio 1: Aggiunta di un modello a una struttura  
+## <a name="example-1-add-a-model-to-a-structure"></a>Esempio 1: Aggiungere un modello a una struttura  
  L'esempio seguente aggiunge un modello di data mining Naive Bayes per la **New Mailing** struttura di data mining e i limiti il numero massimo di attributi indica fino a 50.  
   
 ```  
@@ -161,7 +161,7 @@ ADD MINING MODEL [Naive Bayes]
 USING Microsoft_Naive_Bayes (MAXIMUM_STATES = 50)  
 ```  
   
-## <a name="example-2-add-a-filtered-model-to-a-structure"></a>Esempio 2: Aggiunta di un modello filtrato a una struttura  
+## <a name="example-2-add-a-filtered-model-to-a-structure"></a>Esempio 2: Aggiungere un modello filtrato a una struttura  
  L'esempio seguente aggiunge un modello di data mining `Naive Bayes Women`, per il **New Mailing** struttura di data mining. Il nuovo modello presenta la stessa struttura di base del modello di data mining aggiunto nell'esempio 1, ma i case della struttura di data mining sono limitati ai clienti di sesso femminile di età superiore a 50 anni.  
   
 ```  
@@ -177,7 +177,7 @@ USING Microsoft_Naive_Bayes
 WITH FILTER([Gender] = 'F' AND [Age] >50)  
 ```  
   
-## <a name="example-3-add-a-filtered-model-to-a-structure-with-a-nested-table"></a>Esempio 3: Aggiunta di un modello filtrato a una struttura con una tabella nidificata  
+## <a name="example-3-add-a-filtered-model-to-a-structure-with-a-nested-table"></a>Esempio 3: Aggiungere un modello filtrato a una struttura con una tabella nidificata  
  Nell'esempio seguente viene aggiunto un modello di data mining a una versione modificata della struttura di data mining Market Basket. Struttura di data mining usata nell'esempio è stata modificata per aggiungere un **regione** colonna che contiene gli attributi per l'area del cliente, e un **Income Group** colonna che vengono suddivisi in categorie di reddito del cliente usando i valori **elevata**, **moderato**, o **bassa**.  
   
  La struttura di data mining include anche una tabella nidificata in cui sono elencati gli elementi acquistati dal cliente.  

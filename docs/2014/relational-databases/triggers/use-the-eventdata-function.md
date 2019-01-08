@@ -13,12 +13,12 @@ ms.assetid: 675b8320-9c73-4526-bd2f-91ba42c1b604
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 184e6a3354069ae5a1ed0d6b7557f4b0ac3fa716
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 65103e99a6cba7d21daca85f3295135a43f435a5
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48222651"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52776383"
 ---
 # <a name="use-the-eventdata-function"></a>Utilizzo della funzione EVENTDATA
   La funzione EVENTDATA consente di acquisire le informazioni relative a un evento che attiva un trigger DDL. La funzione restituisce un valore `xml`. XML Schema include le informazioni relative a:  
@@ -95,7 +95,7 @@ ALTER TABLE Person.Address ALTER COLUMN ModifiedDate date;
   
 -   Istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] inclusa nell'evento.  
   
- Anche in questo caso, gli ultimi due elementi vengono acquisiti utilizzando XQuery di `xml` dati generati da EVENTDATA.  
+ Anche in questo caso, per l'acquisizione degli ultimi due elementi viene utilizzato XQuery per i dati `xml` generati da EVENTDATA.  
   
 ```  
 USE AdventureWorks2012;  
@@ -125,7 +125,7 @@ GO
 ```  
   
 > [!NOTE]  
->  Per la restituzione di dati sugli eventi è consigliabile utilizzare il metodo XQuery `value()` anziché il metodo `query()`. Il `query()` metodo restituisce XML e sottoposto a escape e commerciale ritorno a capo e avanzamento riga (CRLF) istanze nell'output, mentre il `value()` metodo rende le istanze CRLF invisibili nell'output.  
+>  Per la restituzione di dati sugli eventi è consigliabile utilizzare il metodo XQuery `value()` anziché il metodo `query()`. Il metodo `query()` restituisce output XML con le istanze CR/LF (ritorno a capo/avanzamento riga) trasformate con il carattere di escape e commerciale (&), mentre il metodo `value()` rende le istanze CR/LF invisibili nell'output.  
   
  Un esempio simile di trigger DDL è disponibile nel database di esempio [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . Per visualizzare l'esempio, individuare la cartella Trigger database utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Questa cartella si trova all'interno della cartella **Programmabilità** del database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] . Fare clic con il pulsante destro del mouse su **ddlDatabseTriggerLog** e scegliere **Crea script per trigger database**. Il trigger DLL **ddlDatabseTriggerLog** è disabilitato per impostazione predefinita.  
   

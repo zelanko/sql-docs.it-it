@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - SQLXMLOLEDB Provider, applying XSL transformations
@@ -18,12 +16,12 @@ ms.assetid: cb5e41ab-dd20-4873-af20-f417bd1bbf6d
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 11f7ce945dcf4b89c6b76ba14e0383bc38ca3c39
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 74f8834ef29e4b5a1cf2b3988585f771cb9d1f1f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48224041"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52800013"
 ---
 # <a name="applying-an-xsl-transformation-sqlxmloledb-provider"></a>Applicazione di una trasformazione XSL (provider SQLXMLOLEDB)
   In questa applicazione ADO di esempio viene eseguita una query SQL e viene applicata una trasformazione XSL al risultato. Impostando la proprietà ClientSideXML su True applica l'elaborazione del set di righe sul lato client. Il sottolinguaggio del comando è impostato su {5d531cb2-e6ed-11d2-b252-00c04f681b71}, in quanto la query SQL è specificata in un modello e questo sottolinguaggio deve essere specificato per l'esecuzione di un modello. La proprietà xsl specifica il file XSL da utilizzare per applicare la trasformazione. Il valore della proprietà percorso di Base viene utilizzato per cercare il file XSL. Se si specifica un percorso del valore della proprietà xsl, il percorso è relativo al percorso specificato nella proprietà percorso di Base.  
@@ -40,7 +38,7 @@ ms.locfileid: "48224041"
   
  La proprietà xsl specificata nell'applicazione. di conseguenza, la trasformazione XSL viene applicata al documento XML generato sul client e il risultato è una tabella a due colonne.  
   
- Per eseguire il comando del modello, è necessario specificare il sottolinguaggio per i modelli XML, ovvero {5d531cb2-e6ed-11d2-b252-00c04f681b71}.  
+ Per eseguire il comando del modello, è necessario specificare il sottolinguaggio per i modelli XML - {5d531cb2-e6ed-11d2-b252-00c04f681b71}.  
   
 > [!NOTE]  
 >  Nel codice è necessario specificare il nome dell'istanza di Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nella stringa di connessione. In questo esempio viene inoltre specificato l'utilizzo di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client come provider di dati, che richiede l'installazione di un software client di rete aggiuntivo. Per altre informazioni, vedere [requisiti di sistema per SQL Server Native Client](../../native-client/system-requirements-for-sql-server-native-client.md).  

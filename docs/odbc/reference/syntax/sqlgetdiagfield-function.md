@@ -20,12 +20,12 @@ ms.assetid: 1dbc4398-97a8-4585-bb77-1f7ea75e24c4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 22ccf063486df9a8afc810d4adeffeb96041a8b9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 386b2352db8912c0af4a1571cbfc2d7e7f5384c6
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47826199"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53203980"
 ---
 # <a name="sqlgetdiagfield-function"></a>Funzione SQLGetDiagField
 **Conformità**  
@@ -100,13 +100,13 @@ SQLRETURN SQLGetDiagField(
 ## <a name="diagnostics"></a>Diagnostica  
  **SQLGetDiagField** non invia i record di diagnostica per se stesso. Usa i seguenti valori restituiti per segnalare il risultato della propria esecuzione:  
   
--   SQL_SUCCESS: La funzione restituito correttamente le informazioni di diagnostica.  
+-   SQL_SUCCESS: La funzione viene restituito correttamente le informazioni di diagnostica.  
   
--   : SQL_SUCCESS_WITH_INFO \* *DiagInfoPtr* è troppo piccolo per contenere il campo di diagnostica richiesto. Di conseguenza, i dati nel campo di diagnostica sono stati troncati. Per determinare che si è verificato un troncamento, l'applicazione deve confrontare *BufferLength* al numero effettivo di byte disponibili, che viene scritto in **StringLengthPtr*.  
+-   SQL_SUCCESS_WITH_INFO: \**DiagInfoPtr* è troppo piccolo per contenere il campo di diagnostica richiesto. Di conseguenza, i dati nel campo di diagnostica sono stati troncati. Per determinare che si è verificato un troncamento, l'applicazione deve confrontare *BufferLength* al numero effettivo di byte disponibili, che viene scritto in **StringLengthPtr*.  
   
 -   SQL_INVALID_HANDLE: L'handle indicato dal *HandleType* e *gestire* non era un handle valido.  
   
--   SQL_ERROR: Una delle seguenti cause:  
+-   SQL_ERROR: Si è verificata una delle operazioni seguenti:  
   
     -   *Il DiagIdentifier* argomento non è uno dei valori validi.  
   
@@ -118,7 +118,7 @@ SQLRETURN SQLGetDiagField(
   
     -   Quando si utilizza la notifica asincrona, l'operazione asincrona sull'handle non è completa.  
   
--   : SQL_NO_DATA *RecNumber* era maggiore del numero di record di diagnostica esistenti per l'handle specificato in *gestire.* La funzione restituisce SQL_NO_DATA anche per qualsiasi positivo *RecNumber* se non sono presenti record di diagnostica per *gestire*.  
+-   SQL_NO_DATA: *RecNumber* era maggiore del numero di record di diagnostica esistenti per l'handle specificato in *gestire.* La funzione restituisce SQL_NO_DATA anche per qualsiasi positivo *RecNumber* se non sono presenti record di diagnostica per *gestire*.  
   
 ## <a name="comments"></a>Commenti  
  Un'applicazione chiama in genere **SQLGetDiagField** a completare una delle tre obiettivi:  
@@ -229,11 +229,11 @@ n-definizione *|"CREA DOMINIO"|SQL_DIAG_CREATE_DOMAIN|
   
 -   I record che non corrispondono a qualsiasi riga vengono visualizzati prima i record che corrispondono a una determinata riga, perché SQL_NO_ROW_NUMBER viene definito come -1.  
   
--   I record per il quale il numero di righe è sconosciuto visualizzato davanti a tutti gli altri record, poiché SQL_ROW_NUMBER_UNKNOWN viene definito come – 2.  
+-   Vengono visualizzati record per il quale il numero di righe è sconosciuto davanti a tutti gli altri record, poiché SQL_ROW_NUMBER_UNKNOWN viene definito come -2.  
   
 -   Per tutti i record relativi a righe specifiche, i record vengono ordinati in base al valore nel campo SQL_DIAG_ROW_NUMBER. Sono elencati tutti gli errori e avvisi della prima riga interessata, e quindi tutti gli errori e avvisi del successivo riga interessata e così via.  
   
-> [!NOTE]  
+> [!NOTE]
 >  ODBC 3 *. x* gestione Driver non ordina i record di stato nella coda di diagnostica se SQLSTATE 01S01 (errore nella riga) viene restituito da un'API ODBC 2 *. x* driver o se SQLSTATE 01S01 (errore nella riga) viene restituito da un database ODBC 3 *. x* driver quando **SQLExtendedFetch** viene chiamato oppure **SQLSetPos** viene chiamato su un cursore che è stato posizionato con **SQLExtendedFetch** .  
   
  All'interno di ogni riga, o per tutti i record che non corrispondono a una riga o per i quali il numero di righe è sconosciuto, o per tutti i record con un numero di riga uguale a SQL_NO_ROW_NUMBER, il primo record elencati è determinato dall'utilizzo di un set di regole di ordinamento. Dopo il primo record, l'ordine dei record che interessano una riga è definito. Un'applicazione non può presupporre che gli errori precedono gli avvisi dopo il primo record. Le applicazioni devono essere analizzati la struttura di dati di diagnostica completa per ottenere informazioni complete su una chiamata a una funzione.  

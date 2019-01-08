@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - modifying article properties
@@ -17,19 +16,19 @@ ms.assetid: f7df51ef-c088-4efc-b247-f91fb2c6ff32
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9cdbbbedacd9f88133e0d17411f441aa5ed884a9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f9f106af7d3464ca1b0f2047fd86e2670389d821
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48149401"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52822595"
 ---
 # <a name="change-publication-and-article-properties"></a>Modifica delle proprietà di pubblicazioni e articoli
   Dopo aver creato una pubblicazione, è possibile modificare la maggior parte delle proprietà della pubblicazione stessa e degli articoli. In alcuni casi è necessario rigenerare lo snapshot e/o reinizializzare le sottoscrizioni. In questo argomento vengono fornite informazioni su tutte le proprietà che, se modificate, richiedono l'esecuzione di una o entrambe le azioni.  
   
 ## <a name="publication-properties-for-snapshot-and-transactional-replication"></a>Proprietà della pubblicazione per la replica snapshot e transazionale  
   
-|Description|Stored procedure|Proprietà|Requisiti|  
+|Descrizione|Stored procedure|Proprietà|Requisiti|  
 |-----------------|----------------------|----------------|------------------|  
 |Modifica del formato snapshot.|**sp_changepublication**|**sync_method**|Nuovo snapshot.|  
 |Modifica della posizione dello snapshot.|**sp_changepublication**|**alt_snapshot_folder**<br /><br /> **snapshot_in_defaultfolder**|Nuovo snapshot.|  
@@ -43,7 +42,7 @@ ms.locfileid: "48149401"
   
 ## <a name="article-properties-for-snapshot-and-transactional-replication"></a>Proprietà degli articoli per la replica snapshot e transazionale  
   
-|Description|Stored procedure|Proprietà|Requisiti|  
+|Descrizione|Stored procedure|Proprietà|Requisiti|  
 |-----------------|----------------------|----------------|------------------|  
 |Eliminazione di un articolo.|**sp_droparticle**|Tutti i parametri.|È possibile eliminare gli articoli prima di creare le sottoscrizioni. È possibile utilizzare le stored procedure per eliminare una sottoscrizione in un articolo. Se si utilizza [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], è necessario eliminare, ricreare e sincronizzare l'intera sottoscrizione. Per altre informazioni, vedere [Aggiungere ed eliminare articoli in pubblicazioni esistenti](add-articles-to-and-drop-articles-from-existing-publications.md).|  
 |Modifica di un filtro colonne.|**sp_articlecolumn**|**@column**<br /><br /> **@operation**|Nuovo snapshot.<br /><br /> Reinizializzazione delle sottoscrizioni.|  
@@ -61,7 +60,7 @@ ms.locfileid: "48149401"
   
 ## <a name="publication-properties-for-merge-replication"></a>Proprietà della pubblicazione per la replica di tipo merge  
   
-|Description|Stored procedure|Proprietà|Requisiti|  
+|Descrizione|Stored procedure|Proprietà|Requisiti|  
 |-----------------|----------------------|----------------|------------------|  
 |Modifica del formato dello snapshot.|**sp_changemergepublication**|**sync_mode**|Nuovo snapshot.|  
 |Modifica della posizione dello snapshot.|**sp_changemergepublication**|**alt_snapshot_folder**<br /><br /> **snapshot_in_defaultfolder**|Nuovo snapshot.|  
@@ -80,7 +79,7 @@ ms.locfileid: "48149401"
   
 ## <a name="article-properties-for-merge-replication"></a>Proprietà degli articoli per la replica di tipo merge  
   
-|Description|Stored procedure|Proprietà|Requisiti|  
+|Descrizione|Stored procedure|Proprietà|Requisiti|  
 |-----------------|----------------------|----------------|------------------|  
 |Eliminazione di un articolo al quale è associato l'ultimo filtro con parametri nella pubblicazione.|**sp_dropmergearticle**|Tutti i parametri.|Nuovo snapshot.<br /><br /> Reinizializzazione delle sottoscrizioni.|  
 |Eliminazione di un articolo padre in un filtro join o in un record logico con l'effetto collaterale di eliminare il join correlato.|**sp_dropmergearticle**|Tutti i parametri.|Nuovo snapshot.<br /><br /> Reinizializzazione delle sottoscrizioni.|  

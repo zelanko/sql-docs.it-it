@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: table-view-index
 ms.topic: conceptual
 helpviewer_keywords:
 - sparse columns, column sets
@@ -14,12 +13,12 @@ ms.assetid: a4f9de95-dc8f-4ad8-b957-137e32bfa500
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 19e99799eac66823d8b243470eb5540c94e22708
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 89dd59aeff7a02f57ac0d34d347496cc97174e2e
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48180661"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52760593"
 ---
 # <a name="use-column-sets"></a>Utilizzare set di colonne
   Nelle tabelle che utilizzano colonne di tipo sparse è possibile definire un set di colonne per restituire tutte le colonne di tipo sparse della tabella. Un set di colonne è una rappresentazione XML non tipizzata che combina tutte le colonne di tipo sparse di una tabella in un output strutturato. Un set di colonne è analogo a una colonna calcolata poiché non è archiviato fisicamente nella tabella, ma differisce da una colonna calcolata poiché è direttamente aggiornabile.  
@@ -94,7 +93,7 @@ ms.locfileid: "48180661"
 ## <a name="inserting-or-modifying-data-in-a-column-set"></a>Inserimento o modifica di dati in un set di colonne  
  Per manipolare i dati di una colonna di tipo sparse, è possibile utilizzare il nome delle colonne singole o fare riferimento al nome del set di colonne e specificarne i valori utilizzando il formato XML del set di colonne stesso. Nella colonna XML le colonne di tipo sparse possono essere visualizzate in qualsiasi ordine.  
   
- Quando i valori di colonna di tipo sparse vengono inseriti o aggiornati usando il set di colonne XML, i valori inseriti nelle colonne di tipo sparse sottostanti vengono convertiti implicitamente dal `xml` tipo di dati. Nel caso di colonne numeriche, un valore vuoto nel codice XML per la colonna numerica viene convertito in una stringa vuota, provocando l'inserimento di uno zero nella colonna numerica come illustrato nell'esempio seguente.  
+ Quando i valori di una colonna di tipo sparse vengono inseriti o aggiornati utilizzando il set di colonne XML, i valori inseriti nelle colonne di tipo sparse sottostanti vengono convertiti implicitamente dal tipo di dati `xml`. Nel caso di colonne numeriche, un valore vuoto nel codice XML per la colonna numerica viene convertito in una stringa vuota, provocando l'inserimento di uno zero nella colonna numerica come illustrato nell'esempio seguente.  
   
 ```  
 CREATE TABLE t (i int SPARSE, cs xml column_set FOR ALL_SPARSE_COLUMNS);  
@@ -108,7 +107,7 @@ GO
  In questo esempio per la colonna `i`non è stato specificato alcun valore, ma è stato inserito il valore `0` .  
   
 ## <a name="using-the-sqlvariant-data-type"></a>Utilizzo del tipo di dati sql_variant  
- Il `sql_variant` tipo date consente di archiviare più tipi di dati diversi, ad esempio `int`, `char`, e `date`. I set di colonne restituiscono informazioni sul tipo di dati, ad esempio scala, precisione e informazioni sulle impostazioni locali, associate a un valore `sql_variant` come attributi nella colonna XML generata. Se si tenta di specificare questi attributi un'istruzione XML generata dall'utente come input per un'operazione di inserimento o di aggiornamento su un set di colonne, alcuni di questi attributi risultano obbligatori e ad alcuni di essi viene assegnato un valore predefinito. Nella tabella seguente vengono elencati i tipi di dati e i valori predefiniti generati dal server quando il valore non viene specificato.  
+ Il tipo di dati `sql_variant` consente di archiviare più tipi di dati diversi, ad esempio `int`, `char` e `date`. I set di colonne restituiscono informazioni sul tipo di dati, ad esempio scala, precisione e informazioni sulle impostazioni locali, associate a un valore `sql_variant` come attributi nella colonna XML generata. Se si tenta di specificare questi attributi un'istruzione XML generata dall'utente come input per un'operazione di inserimento o di aggiornamento su un set di colonne, alcuni di questi attributi risultano obbligatori e ad alcuni di essi viene assegnato un valore predefinito. Nella tabella seguente vengono elencati i tipi di dati e i valori predefiniti generati dal server quando il valore non viene specificato.  
   
 |Tipo di dati|localeID*|sqlCompareOptions|sqlCollationVersion|SqlSortId|Lunghezza massima|Precisione|Scala|  
 |---------------|----------------|-----------------------|-------------------------|---------------|--------------------|---------------|-----------|  
@@ -161,7 +160,7 @@ CREATE TABLE DocumentStoreWithColumnSet
 GO  
 ```  
   
-### <a name="b-inserting-data-to-a-table-by-using-the-names-of-the-sparse-columns"></a>B. Inserimento di dati in una tabella utilizzando i nomi delle colonne di tipo sparse  
+### <a name="b-inserting-data-to-a-table-by-using-the-names-of-the-sparse-columns"></a>b. Inserimento di dati in una tabella utilizzando i nomi delle colonne di tipo sparse  
  Negli esempi seguenti vengono inserite due righe nella tabella creata nell'esempio A. Negli esempi vengono utilizzati i nomi delle colonne di tipo sparse e non si fa riferimento al set di colonne.  
   
 ```  

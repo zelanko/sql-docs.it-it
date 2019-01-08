@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/31/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - transactional replication, updatable subscriptions
@@ -18,12 +17,12 @@ ms.assetid: 8eec95cb-3a11-436e-bcee-bdcd05aa5c5a
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 42af9ddf36f60980ae1bdf2b6152e91159178467
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b8592517c71651b457c660e1d73e683c1c5ed332
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48137071"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52813983"
 ---
 # <a name="updatable-subscriptions-for-transactional-replication"></a>Updatable Subscriptions for Transactional Replication
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +43,7 @@ ms.locfileid: "48137071"
   
  Per abilitare le sottoscrizioni aggiornabili per le pubblicazioni transazionali, [Enable Updating Subscriptions for Transactional Publications](../publish/enable-updating-subscriptions-for-transactional-publications.md)  
   
- Per creare sottoscrizioni aggiornabili per le pubblicazioni transazionali, vedere [creare una sottoscrizione aggiornabile di una pubblicazione transazionale](../create-updatable-subscription-transactional-publication-transact-sql.md)  
+ Per creare sottoscrizioni aggiornabili per le pubblicazioni transazionali, vedere [Create an Updatable Subscription to a Transactional Publication](../create-updatable-subscription-transactional-publication-transact-sql.md)  
   
 ## <a name="switching-between-update-modes"></a>Passaggio da una modalità di aggiornamento all'altra  
  Quando si utilizzano le sottoscrizioni aggiornabili, è possibile specificare che per una sottoscrizione venga utilizzata una modalità di aggiornamento e quindi si passi all'altra se l'applicazione lo richiede. È possibile, ad esempio, specificare che per una sottoscrizione venga utilizzato l'aggiornamento immediato, ma si passi all'aggiornamento in coda se un errore di sistema provoca la perdita della connettività di rete.  
@@ -65,7 +64,7 @@ ms.locfileid: "48137071"
   
 -   La ripubblicazione dei dati non è supportata.  
   
--   La replica aggiunge la colonna **msrepl_tran_version** alle tabelle pubblicate per consentire il rilevamento. A causa di questa colonna aggiuntiva, tutte le `INSERT` istruzioni devono includere un elenco di colonne.  
+-   La replica aggiunge la colonna **msrepl_tran_version** alle tabelle pubblicate per consentire il rilevamento. A causa di questa colonna aggiuntiva, tutte le istruzioni `INSERT` devono includere un elenco di colonne.  
   
 -   Per apportare modifiche allo schema in una tabella di una pubblicazione che supporta le sottoscrizioni aggiornabili, è necessario arrestare tutte le attività nella tabella nel server di pubblicazione e nei Sottoscrittori e propagare a tutti i nodi le modifiche ai dati in sospeso prima di apportare modifiche allo schema. In questo modo le transazioni in sospeso non entrano in conflitto con le modifiche allo schema in sospeso. Dopo avere propagato a tutti i nodi le modifiche dello schema, è possibile riprendere le attività nelle tabelle pubblicate. Per altre informazioni, vedere [Come mettere una topologia di replica in stato di inattività &#40;programmazione Transact-SQL della replica&#41;](../administration/quiesce-a-replication-topology-replication-transact-sql-programming.md).  
   
@@ -77,13 +76,13 @@ ms.locfileid: "48137071"
   
 -   Gli aggiornamenti nel Sottoscrittore vengono propagati al server di pubblicazione, anche se una sottoscrizione è scaduta o inattiva. Verificare che tali sottoscrizioni vengano eliminate o reinizializzate.  
   
--   Se `TIMESTAMP` o `IDENTITY` colonne utilizzate e replicate come tipi di dati di base, valori in queste colonne non devono essere aggiornati nel Sottoscrittore.  
+-   Se le colonne `TIMESTAMP` o `IDENTITY` vengono usate e replicate come tipi di dati di base, i valori contenuti non devono essere aggiornati nel sottoscrittore.  
   
--   I sottoscrittori non possono aggiornare o inserire `text`, `ntext` o `image` valori perché non è possibile leggere dalle tabelle inserite o eliminate all'interno di trigger di rilevamento delle modifiche della replica. Analogamente, i sottoscrittori non possono aggiornare o inserire `text` oppure `image` i valori usando `WRITETEXT` o `UPDATETEXT` perché i dati vengono sovrascritti dal server di pubblicazione. È invece possibile partizionare le `text` e `image` colonne in una diversa tabella e modificare le due tabelle all'interno di una transazione.  
+-   I sottoscrittori non possono aggiornare o inserire valori `text`, `ntext` o `image` perché non è possibile leggere dalle tabelle inserite o eliminate all'interno dei trigger di rilevamento modifiche della replica. In modo analogo, i sottoscrittori non possono aggiornare o inserire valori `text` o `image` tramite `WRITETEXT` o `UPDATETEXT` perché i dati vengono sovrascritti dal server di pubblicazione. È invece possibile partizionare le colonne `text` e `image` in una tabella distinta e modificare le due tabelle all'interno di una transazione.  
   
-     Per aggiornare oggetti di grandi dimensioni in un sottoscrittore, usare i tipi di dati `varchar(max)`, `nvarchar(max)`, `varbinary(max)` anziché `text`, `ntext`, e `image` i tipi di dati, rispettivamente.  
+     Per aggiornare gli oggetti di grandi dimensioni in un sottoscrittore, usare i tipi di dati `varchar(max)`, `nvarchar(max)`, `varbinary(max)` anziché, rispettivamente, `text`, `ntext`, e `image`.  
   
--   Gli aggiornamenti delle chiavi univoche, incluse le chiavi primarie, che generano duplicati, ad esempio, un aggiornamento del form `UPDATE <column> SET <column> =<column>+1` , non sono consentiti e vengono rifiutati in quanto violazioni dell'univocità. Infatti, gli aggiornamenti dei set eseguiti nel Sottoscrittore vengono propagati tramite replica come singole `UPDATE` istruzioni per ogni riga interessata.  
+-   Gli aggiornamenti delle chiavi univoche, incluse le chiavi primarie, che generano duplicati, ad esempio, un aggiornamento del form `UPDATE <column> SET <column> =<column>+1` , non sono consentiti e vengono rifiutati in quanto violazioni dell'univocità. Questo avviene perché gli aggiornamenti dei set eseguiti nel sottoscrittore vengono propagati tramite replica come singole istruzioni `UPDATE` per tutte le righe interessate.  
   
 -   Se il database del Sottoscrittore è partizionato orizzontalmente e nella partizione vi sono righe presenti nel Sottoscrittore ma non nel server di pubblicazione, il Sottoscrittore non potrà aggiornare tali righe. I tentativi di aggiornamento di queste righe generano un errore. In questi casi è necessario eliminare le righe dalla tabella e inserirle di nuovo.  
   
@@ -91,7 +90,7 @@ ms.locfileid: "48137071"
   
 -   Se per l'applicazione sono necessari trigger nel sottoscrittore, i trigger devono essere definiti con l'opzione `NOT FOR REPLICATION` nel server di pubblicazione e nel sottoscrittore. In questo modo, i trigger vengono attivati solo per modifiche ai dati originali, ma non quando le modifiche vengono replicate.  
   
-     Verificare che il trigger definito dall'utente non venga attivato quando il trigger di replica aggiorna la tabella. Questa operazione viene eseguita chiamando la routine `sp_check_for_sync_trigger` nel corpo del trigger definito dall'utente. Per altre informazioni, vedere [sp_addlinkedserver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-check-for-sync-trigger-transact-sql).  
+     Verificare che il trigger definito dall'utente non venga attivato quando il trigger di replica aggiorna la tabella. A tale scopo, chiamare la procedura `sp_check_for_sync_trigger` nel corpo del trigger definito dall'utente. Per altre informazioni, vedere [sp_addlinkedserver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-check-for-sync-trigger-transact-sql).  
   
 ### <a name="immediate-updating"></a>Aggiornamento immediato  
   
@@ -107,11 +106,11 @@ ms.locfileid: "48137071"
   
 -   La chiave primaria viene utilizzata come indicatore di posizione dei record per tutte le query, pertanto non è consigliabile apportare aggiornamenti a colonne chiave primaria quando si utilizza l'aggiornamento in coda. Quando i criteri di risoluzione dei conflitti sono impostati su Prevale il Sottoscrittore, è necessario prestare attenzione durante l'aggiornamento delle chiavi primarie. Se gli aggiornamenti alla chiave primaria vengono eseguiti sia nel Sottoscrittore che nel server di pubblicazione, si ottengono due righe con chiavi primarie diverse.  
   
--   Per le colonne di tipo di dati `SQL_VARIANT`: quando i dati viene inseriti o aggiornati nel Sottoscrittore, ne viene eseguito il mapping nel modo seguente dall'agente di lettura coda quando vengono copiati dal sottoscrittore alla coda:  
+-   Per le colonne del tipo di dati `SQL_VARIANT`:, quando i dati vengono inseriti o aggiornati nel sottoscrittore, ne viene eseguito il mapping dall'agente di lettura coda quando vengono copiati dal sottoscrittore alla coda nel modo illustrato di seguito:  
   
-    -   `BIGINT`, `DECIMAL`, `NUMERIC`, `MONEY`, e `SMALLMONEY` vengono mappati a `NUMERIC`.  
+    -   Viene eseguito il mapping di `BIGINT`, `DECIMAL`, `NUMERIC`, `MONEY` e `SMALLMONEY` a `NUMERIC`.  
   
-    -   `BINARY` e `VARBINARY` vengono mappati a `VARBINARY` dati.  
+    -   Viene eseguito il mapping di `BINARY` e `VARBINARY` ai dati `VARBINARY`.  
   
 ### <a name="conflict-detection-and-resolution"></a>Rilevamento e risoluzione di conflitti  
   

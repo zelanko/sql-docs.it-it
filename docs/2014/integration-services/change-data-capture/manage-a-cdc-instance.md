@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - manIns
@@ -13,12 +12,12 @@ ms.assetid: cfed22c8-c666-40ca-9e73-24d93e85ba92
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c51d2242ec06b4cb68cb054f9214566b0dbf3946
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e4a563a47500a329a79513afb83aff4f93ebda7e
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48099281"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52748263"
 ---
 # <a name="manage-a-cdc-instance"></a>Gestire un'istanza di CDC
   È possibile utilizzare CDC Designer Console per visualizzare le informazioni relative alle istanze create e per gestire l'operazione delle istanze.  
@@ -66,42 +65,42 @@ ms.locfileid: "48099281"
  **Stato**  
  In questa scheda vengono fornite informazioni e statistiche sullo stato corrente dell'istanza di CDC. Sono contenute le informazioni seguenti.  
   
--   **Status**: icona che indica lo stato corrente dell'istanza di CDC. Di seguito vengono descritti gli stati.  
+-   **stato**: Un'icona che indica lo stato corrente dell'istanza di CDC. Di seguito vengono descritti gli stati.  
   
     |||  
     |-|-|  
-    |![Errore](../media/error.gif "errore")|**Error**. L'istanza di Oracle CDC non è in esecuzione perché si è verificato un errore irreversibile. Sono disponibili gli stati secondari seguenti:<br /><br /> **Misconfigured**: si è verificato un errore di configurazione che richiede l'intervento manuale.<br /><br /> **Password Required:** nessuna password impostata per l'istanza di Oracle CDC oppure la password non è valida.<br /><br /> **Unexpected**. Tutti gli altri errori non reversibili.|  
-    |![OK](../media/okay.gif "OK")|**Running**: l'istanza di CDC è in esecuzione ed è in corso l'elaborazione dei record delle modifiche. Sono disponibili gli stati secondari seguenti.<br /><br /> **Idle**: tutti i record delle modifiche sono stati elaborati e archiviati nelle tabelle delle modifiche di destinazione. Non sono presenti transazioni attive.<br /><br /> **Processing**: è in corso l'elaborazione di alcuni record delle modifiche che non sono ancora stati scritti nelle tabelle delle modifiche.|  
-    |![Arrestare](../media/stop.gif "arrestare")|**Stopped**: l'istanza di CDC non è in esecuzione. Lo stato stopped indica che l'istanza di CDC è stata interrotta in modo normale.|  
-    |![In pausa](../media/paused.gif "messo in pausa")|**Paused**: l'istanza di CDC è in esecuzione ma l'elaborazione è stata sospesa in seguito a un errore non irreversibile. Sono disponibili gli stati secondari seguenti:<br /><br /> **Disconnected**: non è possibile stabilire la connessione al database Oracle di origine. L'elaborazione verrà ripresa dopo il ripristino della connessione.<br /><br /> **Storage**: lo spazio di archiviazione è esaurito. L'elaborazione verrà ripresa non appena sarà nuovamente disponibile dello spazio di archiviazione.<br /><br /> **Logger**: il logger è connesso a Oracle ma non è in grado di leggere i log delle transazioni Oracle a causa di un problema temporaneo, ad esempio un log delle transazioni necessario non è disponibile.|  
+    |![Error](../media/error.gif "Error")|**Error**. L'istanza di Oracle CDC non è in esecuzione perché si è verificato un errore irreversibile. Sono disponibili gli stati secondari seguenti:<br /><br /> **Configurazione errata**: Si è verificato un errore di configurazione che richiede l'intervento manuale.<br /><br /> **Password obbligatoria**: È stata impostata alcuna password per l'istanza di Oracle CDC o la password non è valida.<br /><br /> **Unexpected**. Tutti gli altri errori non reversibili.|  
+    |![OK](../media/okay.gif "OK")|**Esecuzione**: L'istanza di CDC è in esecuzione e sta elaborando i record di modifiche. Sono disponibili gli stati secondari seguenti.<br /><br /> **Inattività**: Tutti i record delle modifiche sono stati elaborati e archiviati nelle tabelle delle modifiche di destinazione. Non sono presenti transazioni attive.<br /><br /> **L'elaborazione**: Sono presenti record delle modifiche in fase di processo che non sono ancora stati scritti nelle tabelle delle modifiche.|  
+    |![Arresta](../media/stop.gif "Arresta")|**Arrestato**: L'istanza di CDC non è in esecuzione. Lo stato stopped indica che l'istanza di CDC è stata interrotta in modo normale.|  
+    |![Paused](../media/paused.gif "Paused")|**In pausa**: L'istanza di CDC è in esecuzione ma l'elaborazione è sospesa a causa di un errore non irreversibile. Sono disponibili gli stati secondari seguenti:<br /><br /> **Disconnesso**: Impossibile stabilire la connessione al database Oracle di origine. L'elaborazione verrà ripresa dopo il ripristino della connessione.<br /><br /> **Archiviazione**: Lo spazio di archiviazione è pieno. L'elaborazione verrà ripresa non appena sarà nuovamente disponibile dello spazio di archiviazione.<br /><br /> **Logger**: Il logger è connesso a Oracle ma non è possibile leggere i log delle transazioni Oracle a causa di un problema temporaneo, ad esempio, un log delle transazioni necessario non è disponibile.|  
   
--   **Detailed Status**: stato secondario corrente.  
+-   **Stato dettagliato**: Stato secondario corrente.  
   
--   **Status Message**: ulteriori informazioni sullo stato corrente.  
+-   **Messaggio di stato**: Altre informazioni sullo stato corrente.  
   
--   **Timestamp**: l'ora UTC dell'ultima lettura dello stato di CDC dalla tabella di stato.  
+-   **Timestamp**: L'ora UTC quando ultima lettura dello stato CDC dalla tabella di stato.  
   
--   **Currently Processing**: vengono monitorate le informazioni seguenti in questa sezione.  
+-   **Elaborando**: Vengono monitorate le informazioni seguenti in questa sezione.  
   
-    -   **Last transaction timestamp**: ora locale dell'ultima transazione scritta nelle tabelle relative alle modifiche.  
+    -   **Timestamp dell'ultima transazione**: L'ora locale dell'ultima transazione scritta nelle tabelle delle modifiche.  
   
-    -   **Last change timestamp**: ora locale della modifica più recente rilevata dall'istanza di Oracle CDC nei log delle transazioni del database Oracle di origine. Vengono fornite informazioni sulla latenza corrente dell'istanza di CDC nella lettura del log delle transazioni Oracle.  
+    -   **Ultima modifica apportata timestamp**: L'ora locale della modifica più recente rilevata dall'istanza di Oracle CDC nei log di transazione database Oracle di origine. Vengono fornite informazioni sulla latenza corrente dell'istanza di CDC nella lettura del log delle transazioni Oracle.  
   
-    -   **Transaction log head CN**: numero della modifica più recente letta dal log delle transazioni di Oracle.  
+    -   **Intestazione del log delle transazioni CN**: Il numero più recente modifica (CN) che è stato letto dal log delle transazioni Oracle.  
   
-    -   **Transaction log tail CN**: numero della modifica per il recupero o il riavvio dell'istanza di CDC. L'istanza di Oracle CDC verrà riposizionata su questo percorso in caso di riavvio o di qualsiasi altro tipo di errore, incluso il failover del cluster.  
+    -   **Della parte finale del log delle transazioni CN**: Il numero di modifiche per il ripristino o il riavvio dell'istanza di CDC. L'istanza di Oracle CDC verrà riposizionata su questo percorso in caso di riavvio o di qualsiasi altro tipo di errore, incluso il failover del cluster.  
   
-    -   **Current CN**: numero dell'ultima modifica rilevata nel database Oracle di origine, non nel log delle transazioni.  
+    -   **Current CN**: Numero (SCN) rilevata nel database Oracle di origine (non nel log delle transazioni) dell'ultima modifica.  
   
-    -   **Active transactions**: numero corrente di transazioni Oracle di origine elaborate dall'istanza di Oracle CDC e non ancora sottoposte a commit o a rollback.  
+    -   **Le transazioni attive**: Il numero corrente di transazioni Oracle di origine che elaborate dall'istanza di Oracle CDC e non ancora sottoposte a commit/rollback.  
   
-    -   **Staged transactions**: numero corrente di transazioni Oracle di origine temporanee nella tabella [cdc.xdbcdc_staged_transactions](the-oracle-cdc-databases.md#BKMK_cdcxdbcdc_staged_transactions) .  
+    -   **Le transazioni di staging**: Numero corrente origine Oracle di transazioni gestite temporaneamente per la [CDC. xdbcdc_staged_transactions](the-oracle-cdc-databases.md#BKMK_cdcxdbcdc_staged_transactions) tabella.  
   
--   **Counters**: vengono monitorate le informazioni seguenti in questa sezione.  
+-   **I contatori**: Vengono monitorate le informazioni seguenti in questa sezione.  
   
-    -   **Completed transactions**: numero di transazioni completate dopo l'ultima reimpostazione dell'istanza di CDC. Non sono incluse le transazioni che non contengono tabelle di interesse.  
+    -   **Transazioni completate**: Il numero di transazioni completate dopo l'ultima reimpostazione dell'istanza di CDC. Non sono incluse le transazioni che non contengono tabelle di interesse.  
   
-    -   **Written changes**: numero di modifiche scritte nelle tabelle delle modifiche di SQL Server.  
+    -   **Le modifiche scritte**: Il numero di modifiche scritte in SQL Server tabelle delle modifiche.  
   
  **Oracle**  
  Vengono visualizzate informazioni sull'istanza di CDC e sulla relativa connessione al database Oracle. Questa scheda è di sola lettura. Per modificare queste proprietà, fare clic con il pulsante destro del mouse sull'istanza nel riquadro sinistro e selezionare **Proprietà** oppure scegliere **Proprietà** nel riquadro destro per aprire la finestra di dialogo delle proprietà dell'\<istanza>.  
@@ -119,9 +118,9 @@ ms.locfileid: "48099281"
  Per informazioni su queste proprietà e su come modificarle, vedere [Edit the Advanced Properties](edit-the-advanced-properties.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Come creare l'istanza di Database SQL Server Cambia](how-to-create-the-sql-server-change-database-instance.md)   
+ [Procedura di creazione dell'istanza del database delle modifiche di SQL Server](how-to-create-the-sql-server-change-database-instance.md)   
  [Procedura di visualizzazione delle proprietà dell'istanza di CDC](how-to-view-the-cdc-instance-properties.md)   
- [Come modificare le proprietà di istanza di CDC](how-to-edit-the-cdc-instance-properties.md)   
- [Usare la Procedura guidata nuova istanza](use-the-new-instance-wizard.md)  
+ [Procedura di modifica delle proprietà dell'istanza di CDC](how-to-edit-the-cdc-instance-properties.md)   
+ [Utilizzare la New Instance Wizard](use-the-new-instance-wizard.md)  
   
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.transferloginstask.f1
@@ -15,12 +14,12 @@ ms.assetid: 1df60fd6-c019-405d-8155-c330dbac2cc1
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d22dc265eda8e090d00674e198be2616514b857b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c0506d617a3fe8070ceb0903eb2d4cfc6e62557f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48143902"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52762063"
 ---
 # <a name="transfer-logins-task"></a>Attività Trasferisci account di accesso
   L'attività Trasferisci account di accesso trasferisce uno o più account di accesso tra istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -63,21 +62,21 @@ ms.locfileid: "48143902"
   
 -   Gli account di accesso duplicati vengono ignorati.  
   
- In fase di esecuzione l'attività Trasferisci account di accesso si connette al server di origine e al server di destinazione utilizzando due gestioni di connessione SMO. Le due gestioni vengono configurate separatamente dall'attività Trasferisci account di accesso, che tuttavia vi fa riferimento. Le gestioni connessioni SMO specificano il server e la modalità di autenticazione da utilizzare per l'accesso al server. Per altre informazioni, vedere [Gestione connessione SMO](../connection-manager/smo-connection-manager.md).  
+ In fase di esecuzione l'attività Trasferisci account di accesso si connette al server di origine e al server di destinazione utilizzando due gestioni di connessione SMO. Le due gestioni vengono configurate separatamente dall'attività Trasferisci account di accesso, che tuttavia vi fa riferimento. Le gestioni connessioni SMO specificano il server e la modalità di autenticazione da utilizzare per l'accesso al server. Per altre informazioni, vedere [Gestione connessione file](../connection-manager/smo-connection-manager.md).  
   
  È possibile impostare le proprietà tramite Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] o a livello di codice.  
   
  Per ulteriori informazioni sulle proprietà che è possibile impostare in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] , fare clic su uno degli argomenti seguenti:  
   
--   [Trasferire gli account di accesso attività Editor &#40;pagina Generale&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [Editor attività Trasferisci account di accesso &#40;pagina Generale&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [Trasferire gli account di accesso attività Editor &#40;pagina account di accesso&#41;](../transfer-logins-task-editor-logins-page.md)  
+-   [Editor attività Trasferisci account di accesso &#40;pagina Account di accesso&#41;](../transfer-logins-task-editor-logins-page.md)  
   
 -   [Pagina Espressioni](../expressions/expressions-page.md)  
   
  Per altre informazioni sull'impostazione di queste proprietà in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] , fare clic sull'argomento seguente:  
   
--   [Impostare le proprietà di un'attività o di un contenitore](../set-the-properties-of-a-task-or-container.md)  
+-   [Impostazione delle proprietà di un'attività o di un contenitore](../set-the-properties-of-a-task-or-container.md)  
   
 ## <a name="programmatic-configuration-of-the-transfer-logins-task"></a>Configurazione a livello di codice dell'attività Trasferisci account di accesso  
  Per ulteriori informazioni sull'impostazione di queste proprietà a livello di codice, fare clic sull'argomento seguente:  

@@ -15,12 +15,12 @@ ms.assetid: e72b1dc7-8cda-4ee6-abb5-d438370f04df
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1b9a41fb224d5042c1cc826785ead32376727444
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a2e926047d5423d31307dc344bca5717ca7a77dd
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48105581"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535526"
 ---
 # <a name="transfer-jobs-task-editor-jobs-page"></a>Editor attività Trasferisci processi (pagina Processi)
   Utilizzare la pagina **Processi** della finestra di dialogo **Editor attività Trasferisci processi** per specificare le proprietà relative alla copia di uno o più processi di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent tra due istanze di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Per ulteriori informazioni sull'attività Trasferisci processi, vedere [Transfer Jobs Task](control-flow/transfer-jobs-task.md).  
@@ -40,13 +40,13 @@ ms.locfileid: "48105581"
   
  Per questa proprietà sono disponibili le opzioni elencate nella tabella seguente:  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |**True**|Copia tutti i processi.|  
 |**False**|Copia solo i processi specificati.|  
   
  **JobsList**  
- Fare clic sul pulsante con i puntini di sospensione **(…)** per selezionare i processi da copiare. È necessario selezionare almeno un processo.  
+ Fare clic sul pulsante con i puntini di sospensione **(...)** per selezionare i processi da copiare. È necessario selezionare almeno un processo.  
   
 > [!NOTE]  
 >  Prima di selezionare i processi da copiare, specificare la proprietà **SourceConnection** .  
@@ -58,7 +58,7 @@ ms.locfileid: "48105581"
   
  Per questa proprietà sono disponibili le opzioni elencate nella tabella seguente:  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |**FailTask**|L'attività viene interrotta se nel server di destinazione esistono processi con lo stesso nome.|  
 |**Overwrite**|L'attività sovrascrive i processi con lo stesso nome che si trovano nel server di destinazione.|  
@@ -69,16 +69,16 @@ ms.locfileid: "48105581"
   
  Per questa proprietà sono disponibili le opzioni elencate nella tabella seguente:  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |**True**|Attiva i processi nel server di destinazione.|  
 |**False**|Disabilita i processi nel server di destinazione.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Guida di riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Attività di Integration Services](control-flow/integration-services-tasks.md)   
  [Editor attività Trasferisci processi &#40;pagina Generale&#41;](general-page-of-integration-services-designers-options.md)   
- [Pagina espressioni](expressions/expressions-page.md)   
+ [Pagina Espressioni](expressions/expressions-page.md)   
  [Gestione connessione SMO](connection-manager/smo-connection-manager.md)  
   
   

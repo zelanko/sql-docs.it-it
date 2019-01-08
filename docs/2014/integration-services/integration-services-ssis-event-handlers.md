@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Integration Services packages, events
@@ -22,12 +21,12 @@ ms.assetid: 6f60cf93-35dc-431c-908d-2049c4ab66ba
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 41762bb046e5b118d7802555c2b676378e81df7b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3d7ea5c6424283bd7b8aaa44f8a026ea18a9db30
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48122841"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52751123"
 ---
 # <a name="integration-services-ssis-event-handlers"></a>Gestori eventi di Integration Services (SSIS)
   Durante la fase di esecuzione gli eseguibili, costituiti da pacchetti e contenitori Ciclo Foreach, Ciclo For, Sequenza e Host attività, generano eventi. Quando si verifica un errore, ad esempio, viene generato l'evento OnError. È possibile creare gestori di eventi personalizzati per tali eventi, per estendere le funzionalità dei pacchetti e semplificarne la gestione in fase di esecuzione. I gestori di eventi possono eseguire varie attività, ad esempio:  
@@ -46,7 +45,7 @@ ms.locfileid: "48122841"
   
  ![Pacchetto, Ciclo For, host di attività e attività Esegui SQL](media/mw-dts-eventhandlerpkg.gif "Pacchetto, Ciclo For, host di attività e attività Esegui SQL")  
   
- Solo il pacchetto dispone di un gestore di evento per il proprio evento `OnError`. Se si verifica un errore quando viene eseguita l'attività Esegui SQL, il `OnError` gestore dell'evento per il pacchetto. Il diagramma seguente mostra la sequenza di chiamate che provoca il `OnError` gestore eventi per l'esecuzione del pacchetto.  
+ Solo il pacchetto dispone di un gestore di evento per il proprio evento `OnError`. Se si verifica un errore mentre viene eseguita l'attività Esegui SQL, verrà eseguito il gestore dell'evento `OnError` del pacchetto. Nella figura seguente viene illustrata la sequenza di chiamate che provoca l'esecuzione del gestore dell'evento `OnError` per il pacchetto.  
   
  ![Flusso del gestore dell'evento](media/mw-dts-eventhandlers.gif "Flusso del gestore dell'evento")  
   
@@ -84,7 +83,7 @@ ms.locfileid: "48122841"
 |**OnProgress**|Gestore di evento per l'evento **OnProgress** . Questo evento viene generato da un eseguibile quando compie un avanzamento misurabile.|  
 |**OnQueryCancel**|Gestore di evento per l'evento **OnQueryCancel** . Questo evento viene generato da un eseguibile per determinare se l'esecuzione deve essere arrestata.|  
 |**OnTaskFailed**|Gestore di evento per l'evento **OnTaskFailed** . Questo evento viene generato da un'attività quando non riesce.|  
-|**OnVariableValueChanged**|Gestore di evento per l'evento **OnVariableValueChanged** . Questo evento viene generato da un eseguibile quando il valore di una variabile viene modificato. L'evento viene generato dall'eseguibile in cui è definita la variabile. Questo evento non viene generato se si impostano i **RaiseChangeEvent** proprietà per la variabile a `False`. Per altre informazioni, vedere [Integration Services &#40;SSIS&#41; Variables](integration-services-ssis-variables.md).|  
+|**OnVariableValueChanged**|Gestore di evento per l'evento **OnVariableValueChanged** . Questo evento viene generato da un eseguibile quando il valore di una variabile viene modificato. L'evento viene generato dall'eseguibile in cui è definita la variabile. Questo evento non viene generato se si impostano i **RaiseChangeEvent** proprietà per la variabile a `False`. Per altre informazioni, vedere [Variabili di Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md).|  
 |**OnWarning**|Gestore di evento per l'evento **OnWarning** . Questo evento viene generato da un eseguibile quando viene generato un avviso.|  
   
 ## <a name="configuration-of-an-event-handler"></a>Configurazione di un gestore dell'evento  

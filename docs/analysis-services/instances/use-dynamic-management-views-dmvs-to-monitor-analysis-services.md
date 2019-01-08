@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: d59601d0706b65186ed5f260128c3c44a134d60e
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: 24dd1bce8d7433f55ba64eecb1e7a08396b9e548
+ms.sourcegitcommit: 38076f423663bdbb42f325e3d0624264e05beda1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48906401"
+ms.lasthandoff: 12/06/2018
+ms.locfileid: "52984102"
 ---
 # <a name="dynamic-management-views-dmvs"></a>Viste a gestione dinamica (DMV) 
 
@@ -58,7 +58,7 @@ Select * from SYSTEMRESTRICTSCHEMA ($System.Discover_csdl_metadata, [CATALOG_NAM
 
 ## <a name="examples-and-scenarios"></a>Esempi e scenari
 
-Una query DMV può essere utile per rispondere a domande sulle connessioni e sulle sessioni attive, nonché per verificare quali oggetti stanno utilizzando la maggior parte di memoria o CPU in un momento specifico. Esempio:
+Una query DMV può essere utile per rispondere a domande sulle connessioni e sulle sessioni attive, nonché per verificare quali oggetti stanno utilizzando la maggior parte di memoria o CPU in un momento specifico. Ad esempio:
   
  `Select * from $System.discover_object_activity`  
 Questa query fornisce informazioni sull'oggetto attività dall'ultimo avvio del servizio. 
@@ -93,17 +93,17 @@ WHERE TABLE_TYPE = 'SCHEMA'
 ORDER BY TABLE_NAME ASC  
 ```  
   
-Se una DMV non è disponibile per un determinato set di righe, il server restituirà l'errore: `The <schemarowset> request type was not recognized by the server.` tutti gli altri errori indicano problemi con la sintassi.  
+Se una DMV non è disponibile per un determinato set di righe, il server restituirà l'errore: `The <schemarowset> request type was not recognized by the server.` Tutti gli altri errori indicano problemi con la sintassi.  
 
 I set di righe dello schema sono descritti nelle due protocolli di SQL Server Analysis Services:   
 
-[[MS-SSAS-T]: protocollo tabulare di SQL Server Analysis Services](https://msdn.microsoft.com/library/mt719260) -descrive i set di righe dello schema per i modelli tabulari a livello di compatibilità 1200 e versioni successive.
+[[MS-SSAS-T]: Protocollo tabulare di SQL Server Analysis Services](https://msdn.microsoft.com/library/mt719260) -descrive i set di righe dello schema per i modelli tabulari a livello di compatibilità 1200 e versioni successive.
 
-[[MS-SSAS]: protocollo di SQL Server Analysis Services](https://msdn.microsoft.com/library/ee320606) -descrive i set di righe dello schema per i modelli multidimensionali e modelli tabulari ai livelli di compatibilità 1100 e 1103.
+[[MS-SSAS]: SQL Server Analysis Services protocollo](https://msdn.microsoft.com/library/ee320606) -descrive i set di righe dello schema per i modelli multidimensionali e modelli tabulari ai livelli di compatibilità 1100 e 1103.
 
-### <a name="rowsets-described-in-the-ms-ssas-t-sql-server-analysis-services-tabular-protocol"></a>I set di righe descritto in [MS-SSAS-T]: protocollo tabulare di SQL Server Analysis Services
+### <a name="rowsets-described-in-the-ms-ssas-t-sql-server-analysis-services-tabular-protocol"></a>Set di righe descritto in [MS-SSAS-T]: Protocollo tabulare di SQL Server Analysis Services
 
-|Set di righe  |Description  |
+|Set di righe  |Descrizione  |
 |---------|---------|
 |[TMSCHEMA_ANNOTATIONS](https://msdn.microsoft.com/library/mt704370)|Fornisce informazioni sugli oggetti nel modello di annotazione.|
 |[TMSCHEMA_ATTRIBUTE_HIERARCHIES](https://msdn.microsoft.com/library/mt704362)     |   Fornisce informazioni sugli oggetti AttributeHierarchy per una colonna.      |
@@ -134,9 +134,9 @@ I set di righe dello schema sono descritti nelle due protocolli di SQL Server An
 |[TMSCHEMA_TABLES](https://msdn.microsoft.com/library/mt719250)     |   Fornisce informazioni sugli oggetti tabella nel modello.      |
 |[TMSCHEMA_VARIATIONS](https://msdn.microsoft.com/library/mt825008)|Fornisce informazioni sugli oggetti variazione in ogni colonna.|
 
-### <a name="rowsets-described-in-the-ms-ssas-sql-server-analysis-services-protocol"></a>I set di righe descritto in [MS-SSAS]: protocollo di SQL Server Analysis Services
+### <a name="rowsets-described-in-the-ms-ssas-sql-server-analysis-services-protocol"></a>Set di righe descritto in [MS-SSAS]: Protocollo SQL Server Analysis Services
 
-|Set di righe|Description|  
+|Set di righe|Descrizione|  
 |------------|-----------------|  
 |[DBSCHEMA_CATALOGS](https://msdn.microsoft.com/library/ee302115)|Descrive i cataloghi che sono accessibili nel server.|  
 |[DBSCHEMA_COLUMNS](https://msdn.microsoft.com/library/ee301789)|Restituisce una riga per ogni misura, ogni attributo della dimensione del cubo e ogni colonna del set di righe dello schema, esposto come colonna.|  
@@ -172,7 +172,7 @@ I set di righe dello schema sono descritti nelle due protocolli di SQL Server An
 |[DISCOVER_STORAGE_TABLE_COLUMN_SEGMENTS](https://msdn.microsoft.com/library/ee320710)|Restituisce informazioni sui segmenti di colonna usato per archiviare dati per le tabelle in memoria.|  
 |[DISCOVER_STORAGE_TABLE_COLUMNS](https://msdn.microsoft.com/library/ee302101)|Contiene informazioni sulle colonne utilizzate per rappresentare le colonne di una tabella in memoria.|  
 |[DISCOVER_STORAGE_TABLES](https://msdn.microsoft.com/library/ee302014)|Restituisce le statistiche sulle tabelle in memoria disponibile nel server.|  
-|[DISCOVER_TRACE_COLUMNS]()||  
+|[DISCOVER_TRACE_COLUMNS](https://msdn.microsoft.com/library/ee301342)||  
 |[DISCOVER_TRACE_DEFINITION_PROVIDERINFO](https://msdn.microsoft.com/library/ee301342)|Contiene il set di righe dello schema DISCOVER_TRACE_COLUMNS.|  
 |[DISCOVER_TRACE_EVENT_CATEGORIES](https://msdn.microsoft.com/library/ee320442)|Contiene il set di righe dello schema DISCOVER_TRACE_EVENT_CATEGORIES.|  
 |[DISCOVER_TRACES](https://msdn.microsoft.com/library/ee301643)|Contiene il set di righe dello schema DISCOVER_TRACES.|  

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: ''
 ms.topic: reference
 api_name:
 - LocalDBGetInstances
@@ -18,12 +16,12 @@ ms.assetid: f95a9980-8bc0-426c-8aa1-e2660b6784cf
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 7e35b7b2a3551882ce8b244c5e93aa8ad107b8fc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 92aa65bd2d3aad71f2467efaa7a09f75f20d8f63
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48128591"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52795034"
 ---
 # <a name="localdbgetinstances-function"></a>Funzione LocalDBGetInstances
   Vengono restituite tutte le istanze del database locale di SQL Server Express con la versione specificata.  
@@ -42,10 +40,10 @@ HRESULT LocalDBGetInstances(
   
 ## <a name="parameters"></a>Parametri  
  *pInstanceNames*  
- [Output] Il risultato restituito da questa funzione è costituito da nomi sia di istanze denominate sia di quelle predefinite del database locale nella workstation dell'utente.  
+ [Output] Quando questa funzione viene restituito, contiene i nomi di entrambi denominato e predefinito di istanze del database locale nella workstation dell'utente.  
   
  *lpdwNumberOfInstances*  
- [Input/Output] Per l'input, contiene il numero di slot per i nomi delle istanze nel *pInstanceNames* buffer. In fase di output, è invece incluso il numero di istanze del database locale trovate nella workstation dell'utente.  
+ [Input/Output] Per l'input, contiene il numero di slot per i nomi delle istanze nel *pInstanceNames* buffer. Nell'output contiene il numero di istanze di database locale trovate nella workstation dell'utente.  
   
 ## <a name="returns"></a>Valori di codice restituiti  
  S_OK  

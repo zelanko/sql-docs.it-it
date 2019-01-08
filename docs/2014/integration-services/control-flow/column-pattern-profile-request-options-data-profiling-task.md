@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Data Profiling Task Editor
@@ -13,12 +12,12 @@ ms.assetid: 9ccb8fc5-f65e-41a2-9511-7fa55586eb8b
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 41c79a6390c89c01a5ff7e5c7fe949cbebff6c6c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d22be3bc8d99edd5d8b799e4121e2a591977b255
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48097571"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52767224"
 ---
 # <a name="column-pattern-profile-request-options-data-profiling-task"></a>Opzioni di Richiesta profilo Criteri di ricerca colonna (Attività Profiling dati)
   Usare il riquadro **Proprietà richiesta** della pagina **Richieste profilo** per impostare le opzioni per la **Richiesta profilo Criteri di ricerca colonna** selezionata nel riquadro delle richieste. Un profilo Criteri di ricerca colonna segnala un set di espressioni regolari che analizzano la percentuale specificata di valori in una colonna stringa. Questo profilo consente di identificare eventuali problemi nei dati, ad esempio le stringhe non valide, e può indicare le possibili espressioni regolari da utilizzare in futuro per convalidare nuovi valori. Un profilo di criteri di ricerca di una colonna contenente i codici postali ZIP (Stati Uniti), ad esempio, può produrre le espressioni regolari \d{5}-\d{4}, \d{5} e \d{9}. Se vengono visualizzate altre espressioni regolari, è probabile che i dati contengano valori non validi o in formato non corretto.  
@@ -40,7 +39,7 @@ ms.locfileid: "48097571"
  Tutti i delimitatori vengono normalizzati in un singolo spazio come parte del processo di suddivisione in token, mentre i simboli vengono mantenuti.  
   
 ## <a name="understanding-the-use-of-the-tag-table"></a>Informazioni sull'utilizzo della tabella dei tag  
- È facoltativamente possibile raggruppare token correlati con un singolo tag archiviando i tag e i termini correlati in una tabella speciale creata in un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . La tabella dei tag deve contenere due colonne stringa, denominate "Tag" e "Termine". Tali colonne possono essere di tipo `char`, `nchar`, `varchar`, o `nvarchar`, ma non `text` o `ntext`. È possibile combinare più tag e i termini corrispondenti in una singola tabella. Una richiesta di profilo Criteri di ricerca colonna può utilizzare solo una tabella dei tag. È possibile usare una gestione connessione [!INCLUDE[vstecado](../../includes/vstecado-md.md)] distinta per la connessione alla tabella dei tag. Di conseguenza, la tabella dei tag può essere archiviata in un database diverso o un server diverso dalla tabella di origine.  
+ È facoltativamente possibile raggruppare token correlati con un singolo tag archiviando i tag e i termini correlati in una tabella speciale creata in un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . La tabella dei tag deve contenere due colonne stringa, denominate "Tag" e "Termine". Tali colonne possono essere di tipo `char`, `nchar`, `varchar` o `nvarchar`, ma non `text` o `ntext`. È possibile combinare più tag e i termini corrispondenti in una singola tabella. Una richiesta di profilo Criteri di ricerca colonna può utilizzare solo una tabella dei tag. È possibile usare una gestione connessione [!INCLUDE[vstecado](../../includes/vstecado-md.md)] distinta per la connessione alla tabella dei tag. Di conseguenza, la tabella dei tag può essere archiviata in un database diverso o un server diverso dalla tabella di origine.  
   
  È possibile, ad esempio, raggruppare i valori "East", "West", "North" e "South" eventualmente visualizzati negli indirizzi stradali statunitensi utilizzando il singolo tag "Direction". La tabella seguente rappresenta un esempio di tale tabella dei tag.  
   

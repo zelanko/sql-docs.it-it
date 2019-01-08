@@ -22,21 +22,21 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b7052eec4984d89bd9dfa4c0e94a6e35ed4f4222
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 794baaa127019eb13a77cb98bf90be71d33917b1
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47605480"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52407448"
 ---
 # <a name="sysdmdbmissingindexgroupstats-transact-sql"></a>sys.dm_db_missing_index_group_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Restituisce informazioni di riepilogo su gruppi di indici mancanti, escludendo gli indici spaziali.  
   
- In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], le viste a gestione dinamica non possono esporre le informazioni che influenzerebbero l'indipendenza del database o le informazioni sugli altri database a cui l'utente dispone di accesso. Per evitare di esporre queste informazioni, ogni riga che contiene dati che non appartengono al tenant connesso viene esclusa tramite filtro.  
+ In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], le viste a gestione dinamica non possono esporre le informazioni che influenzerebbero l'indipendenza del database o le informazioni sugli altri database a cui l'utente dispone di accesso. Per evitare di esporre queste informazioni, ogni riga che contiene dati che non appartengono al tenant connesso viene filtrata.  
     
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**group_handle**|**int**|Identifica un gruppo di indici mancanti. Questo identificatore è univoco a livello di server.<br /><br /> Le altre colonne contengono informazioni su tutte le query per cui l'indice del gruppo viene considerati mancante.<br /><br /> Un gruppo di indici contiene un solo indice.|  
 |**unique_compiles**|**bigint**|Numero di compilazioni e ricompilazioni per cui può essere utile questo gruppo di indici mancanti. Il valore di questa colonna può essere determinato dalle compilazioni e ricompilazioni di numerose query diverse.|  
@@ -74,7 +74,7 @@ FROM sys.dm_db_missing_index_group_stats
 ORDER BY avg_total_user_cost * avg_user_impact * (user_seeks + user_scans)DESC;  
 ```  
   
-### <a name="b-find-the-individual-missing-indexes-and-their-column-details-for-a-particular-missing-index-group"></a>B. Trovare i singoli indici mancanti e i relativi dettagli delle colonne per un determinato gruppo di indici mancanti  
+### <a name="b-find-the-individual-missing-indexes-and-their-column-details-for-a-particular-missing-index-group"></a>b. Trovare i singoli indici mancanti e i relativi dettagli delle colonne per un determinato gruppo di indici mancanti  
  La query seguente identifica gli indici mancanti che costituiscono un determinato gruppo di indici mancanti e ne visualizza i dettagli delle colonne. Ai fini di questo esempio, l'handle del gruppo di indici mancanti è 24.  
   
 ```  

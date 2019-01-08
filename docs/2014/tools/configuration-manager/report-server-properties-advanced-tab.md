@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- configmgr-client
+ms.technology: configuration
 ms.topic: conceptual
 ms.assetid: 80aedab6-2be4-409d-88ba-2107e96345fe
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f7a132fe1c70c5020a5e8c4c4247114a1c18402c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 90280725036f3d984b0d7b989e9a802dfec38746
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48184051"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52802082"
 ---
 # <a name="report-server-properties-advanced-tab"></a>Proprietà - Server di report (scheda Avanzate)
   Si tratta del servizio [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Se sono state definite proprietà personalizzate, verranno visualizzate in questa scheda con i rispettivi valori.  

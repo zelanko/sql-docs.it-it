@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.asprocessingtask.f1
@@ -16,12 +15,12 @@ ms.assetid: e5748836-b4ce-4e17-ab6b-617a336f02f4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 42b8ba863f4fbe8c5ce444cd253ea06aec0c7480
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3c5b5d52b1f4b2c2c260854230b53ccbe99aa641
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48050013"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52766543"
 ---
 # <a name="analysis-services-processing-task"></a>Elaborazione Analysis Services - attività
   Con l'attività Elaborazione [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] è possibile elaborare gli oggetti di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] quali modelli tabulari, cubi, dimensioni e modelli di data mining.  
@@ -67,15 +66,15 @@ ms.locfileid: "48050013"
   
  Per ulteriori informazioni sulle proprietà che è possibile impostare in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] , fare clic su uno degli argomenti seguenti:  
   
--   [Editor attività elaborazione di Analysis Services &#40;pagina Generale&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [Editor attività Elaborazione Analysis Services &#40;pagina Generale&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [Editor attività elaborazione di Analysis Services &#40;pagina di Analysis Services&#41;](../analysis-services-processing-task-editor-analysis-services-page.md)  
+-   [Editor attività Elaborazione Analysis Services &#40;pagina Analysis Services&#41;](../analysis-services-processing-task-editor-analysis-services-page.md)  
   
 -   [Pagina Espressioni](../expressions/expressions-page.md)  
   
  Per altre informazioni sull'impostazione di queste proprietà in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] , fare clic sull'argomento seguente:  
   
--   [Impostare le proprietà di un'attività o di un contenitore](../set-the-properties-of-a-task-or-container.md)  
+-   [Impostazione delle proprietà di un'attività o di un contenitore](../set-the-properties-of-a-task-or-container.md)  
   
 ## <a name="programmatic-configuration-of-the-analysis-services-processing-task"></a>Configurazione a livello di codice dell'attività Elaborazione Analysis Services  
  Per ulteriori informazioni sull'impostazione di queste proprietà a livello di codice, fare clic su uno degli argomenti seguenti:  

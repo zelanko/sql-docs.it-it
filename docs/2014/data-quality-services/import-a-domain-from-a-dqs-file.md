@@ -10,19 +10,19 @@ ms.assetid: fabd88b0-22b3-4543-a993-6d5b202ded80
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3153f923cae3a8935dad5e260af5cf5af310de26
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 5a6ef09783b69f6920d5421a52fbe8dbd13ed0e4
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51030158"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52409998"
 ---
 # <a name="import-a-domain-from-a-dqs-file"></a>Importazione di un dominio da un file DQS
   In questo argomento viene descritto come importare un dominio da un file DQS in una Knowledge Base esistente in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Un file di dati DQS viene creato esportando un dominio o una Knowledge Base dall'applicazione [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] . I file di dati DQS sono crittografati, pertanto non è possibile visualizzarne il contenuto.  
   
  L'utilizzo di un file di dati DQS per l'esportazione di un dominio da una Knowledge Base e per l'importazione in un'altra semplifica il processo di generazione delle informazioni e consente di risparmiare tempo e impegno. La procedura permette di condividere un dominio e le relative informazioni con altri utenti, consentendo in tal modo anche ad essi un notevole risparmio di tempo. È possibile importare un singolo dominio o un dominio composito contenente più domini singoli. Un file DQS contenente un singolo dominio include tutti i dati del dominio stesso tra cui i dati di proprietà, valori e regole, tranne le informazioni sui dati di riferimento con mapping. Un file DQS che contiene un dominio composito include tutti i dati di tale dominio, compresi i dati dei domini singoli contenuti al suo interno, nonché le proprietà, i valori, le relazioni e le regole CD del dominio composito stesso, tranne i dati di riferimento con mapping. Verranno importati sia i dati pubblicati che quelli non pubblicati.  
   
- Quando si importa un dominio, il nome del dominio corrisponde al nome del dominio esportato originalmente, a meno che il nome esista già, in qual caso DQS aggiungerà il suffisso "1" al nome. Ciò avviene qualora si importi un dominio composito contenente un dominio singolo con lo stesso nome di un dominio esistente.  
+ Quando si importa un dominio, il nome del dominio corrisponde al nome del dominio esportato originalmente, a meno che il nome esista già, in qual caso DQS aggiungerà il suffisso "_1" al nome. Ciò avviene qualora si importi un dominio composito contenente un dominio singolo con lo stesso nome di un dominio esistente.  
   
 ##  <a name="BeforeYouBegin"></a> Prima di iniziare  
   
@@ -51,7 +51,7 @@ ms.locfileid: "51030158"
   
 6.  Verificare che il dominio importato venga visualizzato nell'elenco **Domini** . Se è stato importato un dominio composito, verificare che sia il dominio composito che i singoli domini in esso contenuti siano visualizzati nell'elenco **Domini** .  
   
-##  <a name="FollowUp"></a> Completamento: Dopo avere importato un dominio da un file DQS  
+##  <a name="FollowUp"></a> Completamento: Dopo aver importato un dominio da un File DQS  
  Dopo avere importato un dominio da un file DQS, è possibile aggiungere informazioni al dominio o utilizzarlo per progetti di pulizia o di individuazione delle corrispondenze, secondo il contenuto del dominio. Per altre informazioni, vedere [Eseguire l'individuazione di informazioni](../../2014/data-quality-services/perform-knowledge-discovery.md), [Gestione di un dominio](../../2014/data-quality-services/managing-a-domain.md), [Gestione di un dominio composito](../../2014/data-quality-services/managing-a-composite-domain.md), [Creare criteri di corrispondenza](../../2014/data-quality-services/create-a-matching-policy.md), [Pulizia dei dati](../../2014/data-quality-services/data-cleansing.md), o [Corrispondenza di dati](../../2014/data-quality-services/data-matching.md).  
   
   

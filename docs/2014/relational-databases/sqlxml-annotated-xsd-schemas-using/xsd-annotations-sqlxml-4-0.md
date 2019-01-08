@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - annotated XSD schemas, annotations listed
@@ -15,17 +13,17 @@ ms.assetid: c62a6785-8d66-40a2-9c5d-80c73d600a3b
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f873df18b11c3f1eef784e03f43a0cbcb0c9fcfc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8cfb0078672a56ba85692fdb836a17ea9c9db302
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48096441"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52758063"
 ---
 # <a name="xsd-annotations-sqlxml-40"></a>Annotazioni XSD (SQLXML 4.0)
   Nella tabella seguente sono elencate le annotazioni XSD introdotte in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], che vengono confrontate con le annotazioni XDR introdotte in [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)].  
   
-|Annotazione XSD|Description|Collegamento all'argomento|Annotazione XDR|  
+|Annotazione XSD|Descrizione|Collegamento all'argomento|Annotazione XDR|  
 |--------------------|-----------------|----------------|--------------------|  
 |`sql:encode`|Quando viene eseguito il mapping a una colonna BLOB di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di un elemento o un attributo XML, è possibile richiedere un URI di riferimento. L'URI può essere utilizzato in seguito per restituire dati BLOB.|[Richiesta di riferimenti URL a dati BLOB utilizzando sql: encode &#40;SQLXML 4.0&#41;](requesting-url-references-to-blob-data-using-sql-encode-sqlxml-4-0.md)|`url-encode`|  
 |`sql:guid`|Consente di specificare se utilizzare un valore GUID generato da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o il valore fornito nell'updategram per la colonna.|[Uso delle annotazioni sql:identity e sql:guid](using-the-sql-identity-and-sql-guid-annotations.md)|Non supportato|  

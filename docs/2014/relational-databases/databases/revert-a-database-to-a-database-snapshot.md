@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - database snapshots [SQL Server], reverting to
@@ -14,12 +13,12 @@ ms.assetid: 8f74dd31-c9ca-4537-8760-0c7648f0787d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1ffd797b5b59e50b97f2306c1509a01b8372c450
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ef9bda4b8eeff394e44ba696e228b121015960b9
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48184301"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52774353"
 ---
 # <a name="revert-a-database-to-a-database-snapshot"></a>Ripristinare un database a uno snapshot del database
   Se i dati in un database online sono danneggiati, in alcuni casi il ripristino del database a un snapshot del database precedente alla data del danno può essere un'alternativa appropriata per ripristinare il database da un backup. Il ripristino di un database può, ad esempio, risultare utile per annullare un errore grave dell'utente verificatosi di recente, come l'eliminazione di una tabella. Tutte le modifiche apportate dopo la creazione dello snapshot verranno tuttavia perse.  
@@ -30,9 +29,9 @@ ms.locfileid: "48184301"
   
      [Prerequisiti](#Prerequisites)  
   
-     [Security](#Security)  
+     [Sicurezza](#Security)  
   
--   **To Revert a Database to a Database Snapshot, using:**  [Transact-SQL](#TsqlProcedure)  
+-   **Per ripristinare un Database a uno Snapshot del Database utilizzando:**  [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> Prima di iniziare  
   
@@ -77,7 +76,7 @@ ms.locfileid: "48184301"
   
 -   Identificare un recente snapshot creato prima dell'errore. Per altre informazioni, vedere [Visualizzare uno snapshot del database &#40;SQL Server&#41;](view-a-database-snapshot-sql-server.md).  
   
--   Eliminare qualsiasi altro snapshot del database attualmente presente nel database. Per altre informazioni, vedere [Eliminare uno snapshot del database &#40;Transact-SQL&#41;](drop-a-database-snapshot-transact-sql.md)o a un'istanza diversa.  
+-   Eliminare qualsiasi altro snapshot del database attualmente presente nel database. Per altre informazioni, vedere [Eliminare uno snapshot del database &#40;Transact-SQL&#41;](drop-a-database-snapshot-transact-sql.md).  
   
 ###  <a name="Security"></a> Sicurezza  
   
@@ -123,7 +122,7 @@ ms.locfileid: "48184301"
   
 -   A. [Ripristino di uno snapshot nel database AdventureWorks](#Reverting_AW)  
   
--   B. [Ripristino di uno snapshot del database Sales](#Reverting_Sales)  
+-   b. [Ripristino di uno snapshot del database Sales](#Reverting_Sales)  
   
 ####  <a name="Reverting_AW"></a> A. Ripristino di uno snapshot nel database AdventureWorks  
  Nell'esempio si presuppone che per il database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] esista un solo snapshot. Per l'esempio in cui viene creato lo snapshot usato per il ripristino, vedere [Creare uno snapshot del database &#40;Transact-SQL&#41;](create-a-database-snapshot-transact-sql.md).  

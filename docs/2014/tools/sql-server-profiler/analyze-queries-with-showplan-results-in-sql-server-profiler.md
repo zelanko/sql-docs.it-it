@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: profiler
 ms.topic: conceptual
 helpviewer_keywords:
 - events [SQL Server], Showplan
@@ -15,12 +14,12 @@ ms.assetid: 6a2f7727-141c-4f59-8613-2e452bc78467
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9f2688868da0866f521693ebed50f7b3b68937a7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0eb13d2997c9b2b29c85489f30a161a96f64c70c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48143861"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52792743"
 ---
 # <a name="analyze-queries-with-showplan-results-in-sql-server-profiler"></a>Analizzare query con risultati SHOWPLAN in SQL Server Profiler
   È possibile aggiungere a una definizione di traccia classi di eventi Showplan che determinano la raccolta e la visualizzazione delle informazioni sul piano della query nella traccia in [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] . È inoltre possibile estrarre eventi Showplan dagli altri eventi raccolti nella traccia e salvarli in un file XML distinto.  
@@ -36,7 +35,7 @@ ms.locfileid: "48143861"
 ## <a name="showplan-events"></a>Eventi Showplan  
  Nella tabella seguente sono elencati e descritti gli eventi di traccia Showplan.  
   
-|Nome evento|Description|  
+|Nome evento|Descrizione|  
 |----------------|-----------------|  
 |**Performance statistics**|Indica la prima volta che uno Showplan compilato viene inserito nella cache, quando viene ricompilato e quando viene eliminato dalla cache del piano. La colonna **TextData** contiene Showplan in formato XML. Per altre informazioni, vedere [Classe di evento Performance Statistics](../../relational-databases/event-classes/performance-statistics-event-class.md).|  
 |**Showplan All**|Visualizza il piano della query dell'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] eseguita con dettagli completi sulla compilazione, ad esempio i costi stimati e gli elenchi di colonne. Per altre informazioni, vedere [Classe di evento Showplan All](../../relational-databases/event-classes/showplan-all-event-class.md).|  

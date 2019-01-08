@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - nullvalue attribute
@@ -18,12 +16,12 @@ ms.assetid: 2354e6e7-1860-471f-8711-4e374c5a4ed2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9097ed23a228a48500d9f40ca8f8e3b3f12b1ba0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0d0d9c0ad613a4453fad62e387a0eb7b0fd67aaa
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48113741"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52777003"
 ---
 # <a name="passing-parameters-to-updategrams-sqlxml-40"></a>Passaggio di parametri agli updategram (SQLXML 4.0)
   Gli updategram sono modelli e in quanto tali è possibile passare loro parametri. Per altre informazioni sul passaggio di parametri ai modelli, vedere [considerazioni sulla sicurezza degli Updategram &#40;SQLXML 4.0&#41;](../security/updategram-security-considerations-sqlxml-4-0.md).  
@@ -41,7 +39,7 @@ ms.locfileid: "48113741"
 -   Negli esempi viene utilizzato il mapping predefinito, ovvero non viene specificato alcuno schema di mapping nell'updategram. Per altri esempi di updategram che utilizzano schemi di mapping, vedere [specifica uno Schema di Mapping con annotazioni in un Updategram &#40;SQLXML 4.0&#41;](specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md).  
   
 ### <a name="a-passing-parameters-to-an-updategram"></a>A. Passaggio di parametri a un updategram  
- In questo esempio l'updategram modifica il cognome di un dipendente nella tabella HumanResources.Shift. All'updategram vengono passati due parametri: ShiftID, utilizzato per identificare in modo univoco un turno, e Name.  
+ In questo esempio l'updategram modifica il cognome di un dipendente nella tabella HumanResources.Shift. L'updategram verrà passato due parametri: ShiftID, utilizzato in modo univoco un turno e assegnare un nome.  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -73,7 +71,7 @@ ms.locfileid: "48113741"
     cmd.Parameters.Append cmd.CreateParameter("@Name",   200, 1, 50, "New Name")  
     ```  
   
-### <a name="b-passing-null-as-a-parameter-value-to-an-updategram"></a>B. Passaggio di NULL come valore di parametro a un updategram  
+### <a name="b-passing-null-as-a-parameter-value-to-an-updategram"></a>b. Passaggio di NULL come valore di parametro a un updategram  
  Durante l'esecuzione di un updategram, il valore "isnull" viene assegnato al parametro che si desidera impostare su NULL. L'updategram converte il valore di parametro "isnull" in NULL e lo elabora di conseguenza.  
   
  Nell'updategram seguente la qualifica di un dipendente viene impostata su NULL:  

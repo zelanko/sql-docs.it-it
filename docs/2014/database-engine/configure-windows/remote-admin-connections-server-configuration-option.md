@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - administrator connections [SQL Server]
@@ -17,12 +16,12 @@ ms.assetid: bf32b60a-7a48-401f-b6be-b5e2e46c413f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: f7a63994b64920f9fa85d31ae551d2078faa8bb9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4e4894fa7e05c863095fdca7b26f448efe176216
+ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48168311"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52640219"
 ---
 # <a name="remote-admin-connections-server-configuration-option"></a>Opzione di configurazione del server remote admin connections
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] offre una connessione amministrativa dedicata (DAC). Questa connessione consente agli amministratori di accedere a un server in esecuzione per eseguire funzioni diagnostiche o istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] , nonché di risolvere i problemi che si verificano nel server, anche quando il server è bloccato o è in esecuzione in uno stato anomalo e non risponde a una connessione del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] . Per impostazione predefinita, la connessione DAC è disponibile solo da un client nel server. Per consentire alle applicazioni client nei computer remoti di utilizzare la connessione DAC, utilizzare l'opzione remote admin connections di sp_configure.  
@@ -31,7 +30,7 @@ ms.locfileid: "48168311"
   
  Nella tabella seguente sono elencati i valori possibili per l'opzione remote admin connections.  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |0|Indica che l'utilizzo della connessione DAC è consentito solo alle connessioni locali.|  
 |1|Indica che l'utilizzo della connessione DAC è consentito alle connessioni remote.|  

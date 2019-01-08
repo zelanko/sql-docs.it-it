@@ -18,12 +18,12 @@ ms.assetid: 88fc1dba-f4cb-47c0-92c2-bf398f4a382e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1e043fd2ea37b9ff790a519311e8db78fa443422
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5a686f78ea5dff8a3ea551016d9fbe9c9046b110
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47659049"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52545496"
 ---
 # <a name="spcursoroption-transact-sql"></a>sp_cursoroption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,17 +43,17 @@ sp_cursoroption cursor, code, value
  *cursor*  
  È un *gestiscono* valore generato da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e restituito dalla routine sp_cursoropen archiviati. *cursore* richiede un' **int** valore di input per l'esecuzione.  
   
- *Codice*  
+ *codice*  
  Consente di specificare i vari fattori dei valori restituiti del cursore. *codice* richiede uno dei seguenti **int** valori di input:  
   
-|valore|Nome|Description|  
+|Value|nome|Descrizione|  
 |-----------|----------|-----------------|  
 |0x0001|TEXTPTR_ONLY|Restituisce il puntatore di testo, anziché i dati effettivi, per determinate colonne di tipo text o image designate.<br /><br /> TEXTPTR_ONLY consente i puntatori di testo da utilizzare come *handle* agli oggetti blob che possono essere recuperati in seguito in modo selettivo o l'aggiornamento usando [!INCLUDE[tsql](../../includes/tsql-md.md)] o funzionalità DBLIB (ad esempio, [!INCLUDE[tsql](../../includes/tsql-md.md)] READTEXT o DBLIB DBWRITETEXT).<br /><br /> Se viene assegnato il valore "0", tutte le colonne di tipo text e image nell'elenco di selezione restituiranno puntatori di testo anziché dati.|  
 |0x0002|CURSOR_NAME|Assegna il nome specificato nel *valore* fino al cursore. A sua volta, consente a ODBC di utilizzare [!INCLUDE[tsql](../../includes/tsql-md.md)] posizionate le istruzioni di aggiornamento ed eliminazione sui cursori aperti mediante sp_cursoropen.<br /><br /> La stringa può essere specificata come qualsiasi tipo di dati Unicode o character.<br /><br /> Poiché [!INCLUDE[tsql](../../includes/tsql-md.md)] le istruzioni UPDATE/DELETE posizionate operano, per impostazione predefinita, nella prima riga in un cursore con sp_cursor SETPOSITION deve essere usato per posizionare il cursore prima di eseguire l'istruzione UPDATE/DELETE posizionata.|  
 |0x0003|TEXTDATA|Restituisce i dati effettivi, anziché il puntatore di testo, per determinate colonne di tipo text o image in recuperi successivi, ovvero annulla l'effetto di TEXTPTR_ONLY.<br /><br /> Se per una colonna specifica è abilitato TEXTDATA, la riga viene nuovamente recuperata o aggiornata e può quindi essere nuovamente impostata su TEXTPTR_ONLY. Analogamente a quanto accade per TEXTPTR_ONLY, il parametro di valore è un intero che specifica il numero di colonna e un valore zero restituisce tutte le colonne di tipo text o image.|  
 |0x0004|SCROLLOPT|Opzione di scorrimento. Per ulteriori informazioni, vedere "Valori dei codici restituiti" più avanti in questo argomento.|  
 |0x0005|CCOPT|Opzioni del controllo della concorrenza. Per ulteriori informazioni, vedere "Valori dei codici restituiti" più avanti in questo argomento.|  
-|0x0006|ROWCOUNT|Numero di righe correntemente nel set di risultati.<br /><br /> Nota: È possibile che ROWCOUNT sia modificato rispetto al valore restituito da sp_cursoropen, se viene utilizzato il popolamento asincrono. Se il numero di righe non è noto, viene restituito -1.|  
+|0x0006|ROWCOUNT|Numero di righe correntemente nel set di risultati.<br /><br /> Nota: È possibile che ROWCOUNT sia modificato rispetto al valore restituito da sp_cursoropen, se viene utilizzato il popolamento asincrono. Viene restituito il valore -1 se il numero di righe è sconosciuto.|  
   
  *Valore*  
  Definisce il valore restituito da *codice*. *valore* è un parametro obbligatorio che richiede un 0x0001, 0x0002 o 0x0003 *codice* valore di input.  
@@ -64,7 +64,7 @@ sp_cursoroption cursor, code, value
 ## <a name="return-code-values"></a>Valori restituiti  
  Il *valore* possono restituire uno dei seguenti parametri *codice* valori.  
   
-|Valore restituito|Description|  
+|Valore restituito|Descrizione|  
 |------------------|-----------------|  
 |0x0004|SCROLLOPT|  
 |0X0005|CCOPT|  
@@ -72,7 +72,7 @@ sp_cursoroption cursor, code, value
   
  Il *valore* parametro restituisce uno dei valori di SCROLLOPT seguenti.  
   
-|Valore restituito|Description|  
+|Valore restituito|Descrizione|  
 |------------------|-----------------|  
 |0x0001|KEYSET|  
 |0x0002|DYNAMIC|  
@@ -81,7 +81,7 @@ sp_cursoroption cursor, code, value
   
  Il *valore* parametro restituisce uno dei valori di CCOPT seguenti.  
   
-|Valore restituito|Description|  
+|Valore restituito|Descrizione|  
 |------------------|-----------------|  
 |0x0001|READ_ONLY|  
 |0x0002|SCROLL_LOCKS|  

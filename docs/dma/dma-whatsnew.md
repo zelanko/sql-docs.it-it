@@ -14,12 +14,12 @@ ms.assetid: ''
 author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 094c49afc97436983417e1916091b150a50d8c4b
-ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
+ms.openlocfilehash: 60145b2433d7b9d2b6cda4453e2d91599b865a86
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49643949"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52410408"
 ---
 # <a name="whats-new-in-data-migration-assistant"></a>Novità di Data Migration Assistant
 Questo articolo elenca le aggiunte in ogni versione di Data Migration Assistant (DMA).
@@ -33,9 +33,9 @@ Il flusso di lavoro di valutazione ti aiuta a rilevare i problemi seguenti, che 
 
 - **Problemi di compatibilità**. DMA inoltre identificati i problemi di compatibilità relativi alle aree seguenti:
 
-    - Modifiche di rilievo: gli oggetti dello schema specifiche che potrebbero compromettere la funzionalità migrazione al database di destinazione.  Si consiglia di correggere questi oggetti dello schema dopo la migrazione del database.
-    - Modifiche del comportamento: gli oggetti dello schema segnalati continuino a funzionare, ma che potrebbero presentare un comportamento diverso, ad esempio un calo delle prestazioni.
-    - Problemi informativi: questi oggetti non avrà impatto sulla migrazione, ma potrebbe sono stati deprecati funzionalità di versioni di SQL Server.
+    - Modifiche di rilievo:  Gli oggetti dello schema specifiche che potrebbero compromettere la funzionalità migrazione al database di destinazione.  Si consiglia di correggere questi oggetti dello schema dopo la migrazione del database.
+    - Modifiche del comportamento: Gli oggetti dello schema segnalati continuino a funzionare, ma che potrebbero presentare un comportamento diverso, ad esempio un calo delle prestazioni.
+    - Problemi informativi:  Questi oggetti non avrà impatto sulla migrazione, ma potrebbero sono stati deprecati funzionalità di che versioni di SQL Server.
 
 Dopo aver completata la valutazione, utilizzare nostri [Azure Database Migration Service](https://azure.microsoft.com/services/database-migration/) (DMS) per eseguire la migrazione dei tuoi database di SQL Server a istanza gestita di Azure SQL Database.  Servizio migrazione del database supporta entrambe [offline](https://docs.microsoft.com/azure/dms/tutorial-sql-server-to-managed-instance) (una tantum) e [online](https://docs.microsoft.com/azure/dms/tutorial-sql-server-managed-instance-online) le migrazioni del database (tempo di inattività minimo) per istanza gestita di Azure SQL Database.
 
@@ -120,7 +120,7 @@ La versione v1.0 di DMA è la versione iniziale, e consente di:
     - Modifiche del comportamento
     - Funzionalità deprecate
 - Individuazione di nuove funzionalità della piattaforma di SQL Server di destinazione che il database può trarre vantaggio da un aggiornamento. Vengono descritti eventuali risultati come funzionalità consigliate e organizzati in categorie nelle aree seguenti:
-    - restazioni
+    - Prestazioni
     - Sicurezza
     - Archiviazione
 -   Esperienze utente moderne per eseguire valutazioni.

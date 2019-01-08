@@ -18,15 +18,15 @@ ms.assetid: ab77eca1-bd48-4fef-b27f-ff5b648e0501
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 09c13d17415f44ba52c57c2323e7fd671ddff0b2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 177972c5ca9841d0d206e9c20fd1450568fdcb8c
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48119401"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52398015"
 ---
 # <a name="lift-chart-analysis-services---data-mining"></a>Grafico di accuratezza (Analysis Services - Data mining)
-  Oggetto **grafico di accuratezza** rappresenta graficamente i miglioramenti da un modello di data mining fornisce rispetto a un'ipotesi casuale. inoltre, consente di misurare la modifica in termini di un *lift* punteggio. Confrontando tali punteggi per varie parti del set di dati e per modelli differenti, è possibile stabilire quale modello sia migliore, nonché quale percentuale dei case nel set di dati potrà trarre profitto dall'applicazione delle stime del modello.  
+  Oggetto **grafico di accuratezza** rappresenta graficamente i miglioramenti da un modello di data mining fornisce rispetto a un'ipotesi casuale. inoltre, consente di misurare la modifica in termini di un *lift* punteggio. Confrontando i punteggi di accuratezza per varie porzioni del set di dati e per modelli differenti, è possibile determinare quale modello sia migliore, nonché quale percentuale dei case nel set di dati può trarre vantaggio dall'applicazione le stime del modello.  
   
  Con un grafico di accuratezza, è possibile confrontare l'accuratezza delle stime per più modelli aventi lo stesso attributo stimabile. Inoltre, è possibile valutare l'accuratezza della stima per un singolo risultato (un solo valore dell'attributo stimabile) o per tutti i risultati (tutti i valori dell'attributo specificato).  
   
@@ -118,6 +118,6 @@ ms.locfileid: "48119401"
  [Torna all'inizio](#bkmk_Top)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Test e convalida &#40;Data Mining&#41;](testing-and-validation-data-mining.md)  
+ [Test e convalida &#40;Data mining&#41;](testing-and-validation-data-mining.md)  
   
   

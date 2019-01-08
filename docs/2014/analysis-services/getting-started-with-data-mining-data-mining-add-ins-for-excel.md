@@ -11,12 +11,12 @@ ms.assetid: cbe10a19-e194-408e-a65b-5fdf3fb1e880
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5c4fe81ed240f210157e450b6c54fe370e22bcb8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3b34ff1ef4f204b2c4a753366aa6e84f678c9ea8
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48094131"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52397765"
 ---
 # <a name="getting-started-with-data-mining-data-mining-add-ins-for-excel"></a>Introduzione al data mining (componenti aggiuntivi Data mining per Excel)
   Il data mining è il processo di individuazione di modelli significativi nei dati. È un complemento naturale del processo di esplorazione e comprensione dei dati tramite gli strumenti tradizionali di Business Intelligence. Gli algoritmi automatici sono in grado di elaborare grandi quantità di dati e di individuare modelli e tendenze altrimenti non evidenti.  
@@ -52,19 +52,19 @@ ms.locfileid: "48094131"
 ## <a name="define-your-goal"></a>Definire l'obiettivo  
  Prima di iniziare, considerare la domanda a cui si desidera effettivamente trovare risposta. L'esplorazione è già esemplificativa di per sé, ma se i risultati devono essere applicati a nuovi dati, si deve essere in grado di indicare chiaramente quali siano le aspettative relative ai risultati del modello e in quale modo verrà valutato se il modello soddisfa gli obiettivi.  
   
- Ad esempio, anziché un obiettivo di "ricerca di nuovi clienti", definire l'obiettivo su qualcosa di più concreto, ad esempio "identificazione dei dati demografici dei clienti che potrebbero acquistare il prodotto, con una probabilità di almeno il 65%".  
+ Ad esempio, anziché un obiettivo di "ricerca di nuovi clienti", definire l'obiettivo su qualcosa di più concreto, ad esempio "identificazione i dati demografici dei clienti aventi maggiori probabilità di acquistare il prodotto, con una probabilità pari ad almeno il 65%".  
   
--   Il set di dati deve contenere almeno un attributo del "risultato" che è possibile utilizzare per il training e la stima. Se non è presente tale attributo, è possibile etichettare manualmente i dati di training oppure utilizzare altre colonne per creare un proxy per il risultato.  
+-   Il set di dati deve contenere almeno un attributo di "risultato" che è possibile usare per il training e stima. Se non è presente tale attributo, è possibile etichettare manualmente i dati di training oppure utilizzare altre colonne per creare un proxy per il risultato.  
   
-     Ad esempio, se si desidera stimare "i migliori clienti potenziali", è consigliabile applicare alcune regole business in anticipo per etichettare i clienti esistenti, in modo che nel data mining si possano utilizzare gli esempi forniti.  
+     Ad esempio, se si desidera stimare "i potenziali clienti migliori", è consigliabile applicare alcune regole business in anticipo per etichettare i clienti esistenti, in modo che il data mining può apprendere dagli esempi forniti.  
   
 -   Se si utilizza un valore che cambia nel tempo e si desiderano stimare le tendenze future, è necessario determinare il livello di granularità dei risultati desiderati. Le stime devono essere mensili, giornaliere o su base annuale? I dati devono essere analizzati utilizzando le stesse unità che devono essere stimate.  
   
-     Con i modelli ciclici, se non si ottengono risultati soddisfacenti con i dati giornalieri, provare con intervalli di tempo diversi oppure provare a utilizzare i giorni della settimana, i mesi o persino le festività.  
+     Con i modelli ciclici, se non si ottengono risultati soddisfacenti con i dati giornalieri, provare a intervalli di tempo diversi oppure provare a usare i giorni della settimana, mesi o persino le festività.  
   
 -   Prima di avviare una procedura guidata per individuare le nuove correlazioni nei dati, esaminare ulteriormente i dati e considerare che specie di relazioni potrebbero essere presenti nel set di dati. Sono presenti variabili contraddittorie? Sono presenti duplicati o proxy?  
   
--   Qual è la metrica in base alla quale sarà valutato il successo del modello? Come capire che il modello è "abbastanza utile"?  
+-   Quali sono le metriche di base alla quale verrà valutato il successo del modello? Come si fa a sapere che il modello è "abbastanza utile"?  
   
 -   Si desidera eseguire stime in base al modello di data mining o soltanto cercare modelli e associazioni interessanti?  
   
@@ -73,7 +73,7 @@ ms.locfileid: "48094131"
   
  È opportuno osservare la distribuzione dei valori e identificare i problemi potenziali, ad esempio valori o segnaposto mancanti.  
   
- Se si intende eseguire il data mining su un set di dati così ampio e complesso da renderne impossibile l'analisi con altri metodi, si può pensare al campionamento o alla riduzione dei dati.  
+ Se si prevede di eseguire il data mining rispetto a un set di dati così ampio e complesso da rendere impossibile analizzarlo con altri metodi, prendere in considerazione il campionamento o la riduzione dei dati.  
   
 -   Come sono distribuiti i dati?  
   
@@ -92,7 +92,7 @@ ms.locfileid: "48094131"
  [Esplorazione e pulizia dei dati](exploring-and-cleaning-data.md)  
   
 ## <a name="validate-your-model"></a>Convalidare il modello  
- Quando si esegue una procedura guidata o uno strumento, l'algoritmo analizza il contenuto dei dati e determina se esiste un modello statisticamente valido. Se l'algoritmo non trova modelli validi, viene visualizzato un messaggio di errore. Tuttavia, anche quando un modello viene correttamente creato, è possibile testarlo per vedere se le supposizioni vengono convalidate. È possibile usare strumenti come il [grafico di accuratezza &#40;componenti aggiuntivi Data Mining di SQL Server&#41; ](accuracy-chart-sql-server-data-mining-add-ins.md) oppure [convalida incrociata &#40;componenti aggiuntivi Data Mining di SQL Server&#41; ](cross-validation-sql-server-data-mining-add-ins.md) per generare statistiche misure di qualità dei modelli.  
+ Quando si esegue una procedura guidata o uno strumento, l'algoritmo analizza il contenuto dei dati e determina se esiste un modello statisticamente valido. Se l'algoritmo non trova modelli validi, si otterrà un messaggio di errore. Tuttavia, anche se è stato creato un modello, è opportuno testare il modello per vedere se le supposizioni vengono convalidate. È possibile usare strumenti come il [grafico di accuratezza &#40;componenti aggiuntivi Data Mining di SQL Server&#41; ](accuracy-chart-sql-server-data-mining-add-ins.md) oppure [convalida incrociata &#40;componenti aggiuntivi Data Mining di SQL Server&#41; ](cross-validation-sql-server-data-mining-add-ins.md) per generare statistiche misure di qualità dei modelli.  
   
  Una volta valutati i risultati del primo modello, è opportuno porsi le domande seguenti:  
   

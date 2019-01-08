@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: b628548b-982b-4e45-abf4-c8e83e3ab1c2
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 0d2e97c16773cd83d208faf711e7c0bebe8282a3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 465b14ab5cb96f3f587222427ea793bbaf225b01
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48107921"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52762403"
 ---
 # <a name="loading-data-mds-add-in-for-excel"></a>Caricamento dei dati (componente aggiuntivo MDS per Excel)
   Nel [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], è necessario caricare dati dal repository MDS in un foglio di lavoro di Excel attivo prima di lavorare con esso. Una volta completato l'utilizzo dei dati, pubblicarlo sul repository MDS in modo che altri utenti possano condividerlo.  
@@ -29,7 +28,7 @@ ms.locfileid: "48107921"
 >  Una cartella di lavoro abilitata per MDS deve essere aperta e aggiornata solo in Excel con il componente aggiuntivo MDS per Excel. L'apertura di una cartella di lavoro abilitata per MDS in Excel su un computer nel quale non è installato il componente aggiuntivo Excel di MDS non è supportata e potrebbe provocare danni al file della cartella di lavoro. Se si desidera condividere dati con altri utenti, inviare tramite posta elettronica un file di query di collegamento a questi ultimi, anziché salvare il foglio di lavoro e inviarlo tramite posta elettronica. Per altre informazioni sulla query, vedere [Inviare tramite posta elettronica un file di query collegamento &#40;componente aggiuntivo MDS per Excel&#41;](email-a-shortcut-query-file-mds-add-in-for-excel.md).  
   
 ## <a name="filtering-data"></a>Filtro dei dati  
- È possibile filtrare i dati prima del caricamento per limitare la quantità di dati che si scaricheranno. Ciò presuppone la scelta degli attributi (colonne) da caricare, l'ordine con cui si desidera visualizzare gli attributi e i membri (righe di dati) che si desidera utilizzare. Per altre informazioni, vedere [filtrare i dati prima del caricamento &#40;il componente aggiuntivo MDS per Excel&#41;](filter-data-before-exporting-mds-add-in-for-excel.md).  
+ È possibile filtrare i dati prima del caricamento per limitare la quantità di dati che si desidera scaricare. Ciò presuppone la scelta degli attributi (colonne) da caricare, l'ordine con cui si desidera visualizzare gli attributi e i membri (righe di dati) che si desidera utilizzare. Per altre informazioni, vedere [filtrare i dati prima del caricamento &#40;il componente aggiuntivo MDS per Excel&#41;](filter-data-before-exporting-mds-add-in-for-excel.md).  
   
 ## <a name="connect-automatically-and-load-frequently-used-data"></a>Connettersi automaticamente e caricare i dati utilizzati frequentemente  
  Se si desidera connettersi sempre allo stesso server e caricare lo stesso set di dati, è possibile creare file di query collegamento che contengano la connessione e filtrino le informazioni. Per altre informazioni sui file di query, vedere [File di query collegamento &#40;componente aggiuntivo MDS per Excel&#41;](shortcut-query-files-mds-add-in-for-excel.md).  
@@ -51,7 +50,7 @@ ms.locfileid: "48107921"
   
 -   [File di query collegamento &#40;componente aggiuntivo MDS per Excel&#41;](shortcut-query-files-mds-add-in-for-excel.md)  
   
--   [Il componente aggiuntivo Master Data Services per Microsoft Excel](master-data-services-add-in-for-microsoft-excel.md)  
+-   [Componente aggiuntivo Master Data Services per Microsoft Excel](master-data-services-add-in-for-microsoft-excel.md)  
   
 -   [Sicurezza &#40;Master Data Services&#41;](../security-master-data-services.md)  
   

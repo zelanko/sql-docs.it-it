@@ -4,18 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: configuration
 ms.topic: conceptual
 ms.assetid: 74012c90-b42e-4171-b27a-9c30cf69ff98
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 031efcdc80028e8366a2e19827f180b78a21af0a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 232beed45a62ad9cef9f43b122d23cb4d0728a78
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48124031"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52759423"
 ---
 # <a name="use-utility-explorer-to-manage-the-sql-server-utility"></a>Utilizzo di Esplora utilità per gestire Utilità SQL Server
   Gestione Utilità, un componente di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], consente di connettersi alle istanze del [!INCLUDE[ssDE](../../includes/ssde-md.md)] per fornire una visualizzazione albero di tutti gli oggetti in Utilità [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Il riquadro del contenuto di Esplora utilità fornisce diverse soluzioni per visualizzare dati riepilogativi e dettagliati sullo stato dell'integrità delle istanze gestite di SQL Server. Esplora utilità fornisce anche un'interfaccia utente per visualizzare e gestire le definizioni dei criteri. Le funzionalità di Esplora utilità variano leggermente a seconda degli oggetti di Utilità [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , ma generalmente includono oggetti, dati e criteri gestiti da Utilità [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Per altre informazioni, vedere [Attività e funzionalità di Utilità SQL Server](sql-server-utility-features-and-tasks.md).  
@@ -37,7 +37,7 @@ ms.locfileid: "48124031"
 ### <a name="sql-server-utility-navigation-pane"></a>Riquadro di navigazione di Utilità SQL Server  
  Il riquadro di navigazione di Esplora utilità fornisce una visualizzazione albero degli oggetti di Utilità [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , raggruppati per punto di controllo dell'utilità. Per espandere le cartelle, fare clic sul segno più (+) o fare doppio clic sul nome del punto di controllo dell'utilità nel riquadro di navigazione di Esplora utilità. Fare clic con il pulsante destro del mouse su cartelle o oggetti per eseguire attività comuni. I nodi nella visualizzazione albero sono i seguenti:  
   
--   Il nodo principale della visualizzazione albero è il punto di controllo dell'utilità. Il nome del nodo viene costruito come: "Nome_Utilità (NomeComputer\Nome_Istanza_PuntoControllo)." Se non è presente un punto di controllo dell'utilità, è necessario crearlo. Se non si è connessi a Utilità [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , è necessario connettersi. Per altre informazioni, vedere [Attività e funzionalità di Utilità SQL Server](sql-server-utility-features-and-tasks.md). Fare clic sul nome del punto di controllo dell'utilità nella visualizzazione albero per popolare il riquadro del contenuto di Esplora utilità di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con i dati della visualizzazione dashboard. Per altre informazioni, vedere [Dashboard Utilità &#40;Utilità SQL Server&#41;](../../database-engine/utility-dashboard-sql-server-utility.md).  
+-   Il nodo principale della visualizzazione albero è il punto di controllo dell'utilità. Il nome del nodo viene costruito come: "Nome_Utilità" (NomeComputer\Nome_Istanza_PuntoControllo). Se non è presente un punto di controllo dell'utilità, è necessario crearlo. Se non si è connessi a Utilità [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , è necessario connettersi. Per altre informazioni, vedere [Attività e funzionalità di Utilità SQL Server](sql-server-utility-features-and-tasks.md). Fare clic sul nome del punto di controllo dell'utilità nella visualizzazione albero per popolare il riquadro del contenuto di Esplora utilità di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con i dati della visualizzazione dashboard. Per altre informazioni, vedere [Dashboard Utilità &#40;Utilità SQL Server&#41;](../../database-engine/utility-dashboard-sql-server-utility.md).  
   
      Fare clic con il pulsante destro del mouse sul nodo del punto di controllo dell'utilità per aggiornare i dati nel dashboard.  
   
@@ -67,6 +67,6 @@ ms.locfileid: "48124031"
 ## <a name="see-also"></a>Vedere anche  
  [Attività e funzionalità di Utilità SQL Server](sql-server-utility-features-and-tasks.md)   
  [Configurare i criteri di integrità &#40;Utilità SQL Server&#41;](configure-health-policies-sql-server-utility.md)   
- [Visualizza](../../ssms/object/object-explorer.md)  
+ [Esplora oggetti](../../ssms/object/object-explorer.md)  
   
   

@@ -14,12 +14,12 @@ ms.assetid: b338a60d-4802-4b68-862a-6dc6a3f75e48
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8cd63693c18b380d328a33ed4f7f947991787313
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 4c8bcf9fc52ef26837d32fa765472e0056469a2a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50147846"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52511317"
 ---
 # <a name="object-naming-rules-analysis-services"></a>Regole di denominazione degli oggetti (Analysis Services)
   In questo argomento vengono descritte le convenzioni di denominazione dell'oggetto, le parole riservate e i caratteri che non possono essere utilizzati nel nome dell'oggetto, nel codice o nello script in [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
@@ -82,10 +82,10 @@ ms.locfileid: "50147846"
   
 |Livello di compatibilità del database e modalità del server|Caratteri riservati consentiti?|  
 |--------------------------------------------------|----------------------------------|  
-|MOLAP (tutte le versioni)|no|  
-|Tabulare - 1050|no|  
-|Tabulare - 1100|no|  
-|Tabulare - 1130 e superiore|Sì|  
+|MOLAP (tutte le versioni)|No|  
+|Tabulare - 1050|No|  
+|Tabulare - 1100|No|  
+|Tabulare - 1130 e superiore|Yes|  
   
  I database possono avere un oggetto ModelType predefinito. L'impostazione predefinita è equivalente a multidimensionale e pertanto non supporta l'utilizzo dei caratteri riservati nei nomi delle colonne.  
   

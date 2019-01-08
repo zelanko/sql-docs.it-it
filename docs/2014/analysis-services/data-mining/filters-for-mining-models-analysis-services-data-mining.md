@@ -17,12 +17,12 @@ ms.assetid: 0f29c19c-4be3-4bc7-ab60-f4130a10d59c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: bb95e8bf7237fcf7ebae4321d14de690ebd0b2c2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 213768938a4fb9497fcbebad15f1dc4b84e1dba9
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48142711"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52395944"
 ---
 # <a name="filters-for-mining-models-analysis-services---data-mining"></a>Filtri per i modelli di data mining (Analysis Services - Data mining)
   I filtri dei modelli basati sui dati consentono di creare modelli di data mining che utilizzano subset di dati in una struttura di data mining. I filtri garantiscono grande flessibilità per la progettazione di strutture di data mining e origini dati, poiché è possibile creare una sola struttura di data mining sulla base di una vista origine dati completa. Sarà quindi possibile creare filtri per utilizzare solo una parte dei dati per il training e il testing di una varietà di modelli, anziché compilare una struttura diversa e i relativi modelli per ciascun subset di dati.  
@@ -51,24 +51,24 @@ ms.locfileid: "48142711"
 ### <a name="creating-model-filters-using-data-mining-designer"></a>Creazione di filtri dei modelli utilizzando la Progettazione modelli di data mining  
  Filtrare un modello nella Progettazione modelli di data mining modificando la proprietà `Filter` del modello di data mining. È possibile digitare direttamente un'espressione di filtro nel riquadro **Proprietà** oppure è possibile aprire una finestra di dialogo del filtro per compilare le condizioni.  
   
- Sono disponibili due finestre di dialogo del filtro. La prima consente di creare le condizioni applicate alla tabella del case. Se l'origine dati contiene più tabelle, selezionare in primo luogo una tabella, quindi selezionare una colonna e specificare gli operatori e le condizioni applicabili alla colonna. È possibile collegare più condizioni usando `AND` / `OR` operatori. Gli operatori disponibili per la definizione dei valori variano a seconda che la colonna contenga valori discreti o continui. Con i valori continui, ad esempio, è possibile usare `greater than` e `less than` operatori. mentre con i valori discreti è possibile utilizzare solo gli operatori `= (equal to)`, `!= (not equal to)`e `is null`.  
+ Sono disponibili due finestre di dialogo del filtro. La prima consente di creare le condizioni applicate alla tabella del case. Se l'origine dati contiene più tabelle, selezionare in primo luogo una tabella, quindi selezionare una colonna e specificare gli operatori e le condizioni applicabili alla colonna. È possibile collegare più condizioni usando `AND` / `OR` operatori. Gli operatori disponibili per la definizione dei valori variano a seconda che la colonna contenga valori discreti o continui. Con i valori continui, ad esempio, è possibile utilizzare gli operatori `greater than` e `less than`. mentre con i valori discreti è possibile utilizzare solo gli operatori `= (equal to)`, `!= (not equal to)`e `is null`.  
   
 > [!NOTE]  
->  Il `LIKE` parola chiave non è supportato. Se si desidera includere più attributi discreti, è necessario creare condizioni distinte e collegarle utilizzando l'operatore `OR`.  
+>  La parola chiave `LIKE` non è supportata. Se si desidera includere più attributi discreti, è necessario creare condizioni distinte e collegarle utilizzando l'operatore `OR`.  
   
  Se le condizioni sono complesse, è possibile aprire la seconda finestra di dialogo del filtro per utilizzare una tabella alla volta. Quando si chiude la seconda finestra di dialogo del filtro, l'espressione viene valutata e quindi combinata con le condizioni di filtro impostate nelle altre colonne nella tabella del case.  
   
 ### <a name="creating-filters-on-nested-tables"></a>Creazione di filtri nelle tabelle nidificate  
  Se la vista origine dati contiene tabelle nidificate, è possibile utilizzare la seconda finestra di dialogo del filtro per compilare condizioni sulle righe nelle tabelle nidificate.  
   
- Se, ad esempio, la tabella del case è riferita ai clienti e nella tabella nidificata vengono indicati i prodotti acquistati da un cliente, è possibile creare un filtro per i clienti che hanno acquistato determinati articoli usando la sintassi seguente nel filtro della tabella nidificata: `[ProductName]=’Water Bottle’ OR ProductName=’Water Bottle Cage'`.  
+ Se, ad esempio, la tabella del case è riferita ai clienti e nella tabella nidificata vengono indicati i prodotti acquistati da un cliente, è possibile creare un filtro per i clienti che hanno acquistato determinati articoli usando la sintassi seguente nel filtro della tabella nidificata: `[ProductName]='Water Bottle' OR ProductName='Water Bottle Cage'`.  
   
- È anche possibile filtrare l'esistenza di un valore specifico nella tabella nidificata utilizzando il `EXISTS` o `NOT EXISTS` parole chiave e una sottoquery. Questo consente di creare condizioni come `EXISTS (SELECT * FROM Products WHERE ProductName=’Water Bottle’)`. `EXISTS SELECT(<subquery>)` restituisce `true` se la tabella nidificata contiene almeno una riga che include il valore `Water Bottle`.  
+ È anche creare un filtro in base all'esistenza di un determinato valore utilizzando le parole chiave `EXISTS` o `NOT EXISTS` e una sottoquery. Questo consente di creare condizioni come `EXISTS (SELECT * FROM Products WHERE ProductName='Water Bottle')`. `EXISTS SELECT(<subquery>)` restituisce `true` se la tabella nidificata contiene almeno una riga che include il valore `Water Bottle`.  
   
- È possibile combinare condizioni nella tabella del case con le condizioni nella tabella nidificata. Ad esempio, nella sintassi seguente è inclusa una condizione nella tabella del case (`Age > 30` ), una sottoquery nella tabella nidificata (`EXISTS (SELECT * FROM Products)`) e più condizioni nella tabella nidificata (`WHERE ProductName=’Milk’  AND Quantity>2`)).  
+ È possibile combinare condizioni nella tabella del case con le condizioni nella tabella nidificata. Ad esempio, nella sintassi seguente è inclusa una condizione nella tabella del case (`Age > 30` ), una sottoquery nella tabella nidificata (`EXISTS (SELECT * FROM Products)`) e più condizioni nella tabella nidificata (`WHERE ProductName='Milk'  AND Quantity>2`)).  
   
 ```  
-(Age > 30 AND EXISTS (SELECT * FROM Products WHERE ProductName=’Milk’  AND Quantity>2) )  
+(Age > 30 AND EXISTS (SELECT * FROM Products WHERE ProductName='Milk'  AND Quantity>2) )  
 ```  
   
  Quando la compilazione del filtro è terminata, il testo del filtro viene valutato da [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], tradotto a un'espressione DMX e quindi salvato con il modello.  
@@ -100,7 +100,7 @@ ms.locfileid: "48142711"
 ### <a name="how-can-i-save-a-filter"></a>Com'è possibile salvare un filtro?  
  L'espressione di filtro viene salvata come script che viene a sua volta archiviato con il modello di data mining o la tabella nidificata associati. Se si elimina il testo del filtro, tale testo può essere ripristinato solo ricreando manualmente l'espressione di filtro. Pertanto, se si creano espressioni di filtro complesse, è necessario creare una copia di backup del testo del filtro.  
   
-### <a name="why-cant-i-see-any-effects-from-the-filter"></a>Perché non è possibile vedere gli effetti del filtro?  
+### <a name="why-cant-i-see-any-effects-from-the-filter"></a>Il motivo per cui non vengono visualizzati tutti gli effetti del filtro?  
  Ogni volta che si modifica o si aggiunge un'espressione di filtro, è necessario rielaborare la struttura e il modello prima che sia possibile visualizzare gli effetti del filtro.  
   
 ### <a name="why-do-i-see-filtered-attributes-in-prediction-query-results"></a>Perché sono presenti attributi filtrati nei risultati della query di stima?  
@@ -122,7 +122,7 @@ ms.locfileid: "48142711"
  Per informazioni sull'uso di filtri dei modelli quando si esegue il test di un modello di data mining, vedere [Scegliere un tipo di grafico di accuratezza e impostare le opzioni del grafico](choose-an-accuracy-chart-type-and-set-chart-options.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Esempi e sintassi del filtro del modello &#40;Analysis Services - Data Mining&#41;](model-filter-syntax-and-examples-analysis-services-data-mining.md)   
- [Test e convalida &#40;Data Mining&#41;](testing-and-validation-data-mining.md)  
+ [Sintassi ed esempi di filtri dei modelli &#40;Analysis Services - Data mining&#41;](model-filter-syntax-and-examples-analysis-services-data-mining.md)   
+ [Test e convalida &#40;Data mining&#41;](testing-and-validation-data-mining.md)  
   
   

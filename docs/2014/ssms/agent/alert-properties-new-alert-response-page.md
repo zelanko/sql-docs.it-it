@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - sql12.ag.alert.response.f1
@@ -12,12 +12,12 @@ ms.assetid: 72daf008-f9ea-4077-b217-5048e7759d3e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 864859365dac094377ab00cb6848f3fb7c3a81f7
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: 135207a16ef49fca4820e0d7872d9c3542628d8b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48906221"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52773793"
 ---
 # <a name="alert-properties-new-alert-response-page"></a>Avviso proprietà-nuovo avviso (pagina risposta)
   Usare questa pagina per specificare un processo che si vuole eseguire e per ottenere un elenco di operatori da notificare in risposta a un avviso di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
@@ -51,7 +51,7 @@ ms.locfileid: "48906221"
  Visualizza la finestra di dialogo **Nuovo operatore** in cui è possibile creare un nuovo operatore.  
   
  **Visualizza operatore**  
- Visualizza la finestra di dialogo **Proprietà** per l'operatore attualmente selezionato. È possibile visualizzare e modificare le proprietà dell'operatore nella **le proprietà dell'operatore** nella finestra di dialogo.  
+ Visualizza la finestra di dialogo **Proprietà** per l'operatore attualmente selezionato. È possibile visualizzare e modificare le proprietà dell'operatore nella finestra di dialogo **Proprietà operatore**.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Avvisi](alerts.md)   

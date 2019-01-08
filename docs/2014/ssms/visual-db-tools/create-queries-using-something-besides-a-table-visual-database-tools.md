@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - user-defined functions [SQL Server], queries
@@ -13,12 +13,12 @@ ms.assetid: 8e4a1f0a-8a42-4733-be8d-e21d6dbddb33
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c30244128ea15d010c9fe179b06424434325574d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f6cd83135da7e5c9f4dac9e41ff562551d14ab20
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48160001"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52768543"
 ---
 # <a name="create-queries-using-something-besides-a-table-visual-database-tools"></a>Creazione di query mediante l'utilizzo di altre origini oltre a una tabella (Visual Database Tools)
   Quando si crea una query di recupero dati, si definiscono le colonne e le righe da estrarre e la posizione dei dati originali. I dati originali in genere sono costituiti da una tabella o da più tabelle unite in join, ma possono anche provenire da origini diverse dalle tabelle, quali viste, query, sinonimi o funzioni definite dall'utente che restituiscono una tabella.  
@@ -136,7 +136,7 @@ FROM
 ## <a name="using-a-user-defined-function-in-place-of-a-table"></a>Utilizzo di una funzione definita dall'utente al posto di una tabella  
  In SQL Server 2000 o versione successiva è possibile creare una funzione definita dall'utente che restituisca una tabella. Tali funzioni risultano utili per l'esecuzione di logiche procedurali o complesse.  
   
- Si supponga ad esempio che la tabella dei dipendenti contenga un'ulteriore colonna, employee.manager_emp_id, e che una chiave esterna di manager_emp_id sia presente in employee.emp_id. All'interno di ciascuna riga della tabella dei dipendenti, la colonna manager_emp_id indica il superiore di un dipendente o più precisamente, indica l'emp_id del superiore del dipendente. È possibile creare una funzione definita dall'utente che restituisca una tabella contenente una riga per ciascun dipendente facente parte della gerarchia organizzativa di un particolare responsabile di alto livello. La funzione potrebbe essere denominata fn_GetWholeTeam e progettata in modo da accettare una variabile di input, ovvero l'emp_id del responsabile di cui si desidera recuperare il team.  
+ Si supponga ad esempio che la tabella dei dipendenti contenga un'ulteriore colonna, employee.manager_emp_id, e che una chiave esterna di manager_emp_id sia presente in employee.emp_id. All'interno di ciascuna riga della tabella dei dipendenti, la colonna manager_emp_id indica il superiore di un dipendente o più precisamente, indica l'emp_id del superiore del dipendente. È possibile creare una funzione definita dall'utente che restituisca una tabella contenente una riga per ciascun dipendente facente parte della gerarchia organizzativa di un particolare responsabile di alto livello. La funzione potrebbe essere denominata fn_GetWholeTeam e progettata in modo da accettare una variabile di input, ovvero l'emp_id del responsabile di cui si vuole recuperare il team.  
   
  È possibile scrivere una query che utilizzi la funzione fn_GetWholeTeam come origine dei dati. Il codice SQL risultante potrebbe essere simile al seguente:  
   

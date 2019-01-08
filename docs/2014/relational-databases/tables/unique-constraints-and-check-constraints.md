@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: table-view-index
 ms.topic: conceptual
 helpviewer_keywords:
 - constraints [SQL Server], Visual Database Tools
@@ -14,12 +13,12 @@ ms.assetid: 637098af-2567-48f8-90f4-b41df059833e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8800491b0c4cb576b7255c1be0648b87daebfcc6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2a8dfd7da9bb1ccc60d18e68ccbe4930a6edb00d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48082311"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52772283"
 ---
 # <a name="unique-constraints-and-check-constraints"></a>Vincoli UNIQUE e CHECK
   I vincoli UNIQUE e CHECK sono due tipi di vincoli che possono essere utilizzati per applicare l'integrità dei dati nelle tabelle di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Si tratta di importanti oggetti di database.  
@@ -46,7 +45,7 @@ ms.locfileid: "48082311"
   
  È possibile applicare più vincoli CHECK a una colonna e inoltre applicare un singolo vincolo CHECK a più colonne creandolo a livello di tabella. È ad esempio possibile usare un vincolo CHECK in più colonne per confermare che a ogni riga con un valore di colonna **country_region** pari a **USA** corrisponda un valore di due caratteri nella colonna **state** . In questo modo è possibile verificare più condizioni simultaneamente.  
   
- I vincoli CHECK simili ai vincoli FOREIGN KEY perché controllano i valori inseriti in una colonna. La differenza consiste nel modo in cui vengono determinati i valori validi. I vincoli FOREIGN KEY ottengono l'elenco di valori validi da un'altra tabella, mentre i vincoli CHECK determinano i valori validi da un'espressione logica.  
+ I vincoli CHECK simili ai vincoli FOREIGN KEY perché controllano i valori inseriti in una colonna. La differenza consiste nel modo in cui determinati i valori che sono validi: I vincoli FOREIGN KEY ottengono l'elenco di valori validi da un'altra tabella, mentre i vincoli CHECK determinano i valori validi da un'espressione logica.  
   
 > [!CAUTION]  
 >  I vincoli che prevedono la conversione implicita o esplicita di tipi di dati possono impedire l'esecuzione di operazioni specifiche. Ad esempio, i vincoli definiti nelle tabelle di origine per il cambio di partizione possono impedire l'esecuzione di un'operazione ALTER TABLE...SWITCH. Evitare la conversione di tipi di dati nelle definizioni dei vincoli.  
@@ -92,7 +91,7 @@ DELETE CheckTbl WHERE col1 = 10;
   
 |Attività|Argomento|  
 |----------|-----------|  
-|Viene descritto come creare un vincolo UNIQUE.|[Creare vincoli UNIQUE](../tables/create-unique-constraints.md)|  
+|Viene descritto come creare un vincolo UNIQUE.|[Creare vincoli univoci](../tables/create-unique-constraints.md)|  
 |Viene descritto come modificare un vincolo UNIQUE.|[Modificare vincoli univoci](../tables/modify-unique-constraints.md)|  
 |Viene descritto come eliminare un vincolo UNIQUE.|[Eliminazione di vincoli univoci](../tables/delete-unique-constraints.md)|  
 |Viene descritto come disabilitare un vincolo CHECK quando un agente di replica inserisce o aggiorna i dati nella tabella.|[Disabilitare un vincolo CHECK per la replica](../tables/disable-check-constraints-for-replication.md)|  

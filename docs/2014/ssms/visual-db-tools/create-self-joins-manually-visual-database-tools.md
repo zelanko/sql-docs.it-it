@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - self-joins
@@ -14,12 +14,12 @@ ms.assetid: 910ed516-cb84-481b-95d0-cba3e89afdba
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 78b17fbcdbc882041cf378a629452c57bc6c3158
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dd8e26099ec7152aac08a11b6f7e38550834d248
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48116031"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52769073"
 ---
 # <a name="create-self-joins-manually-visual-database-tools"></a>Creazione di self-join in modo manuale (Visual Database Tools)
   È possibile unire in join una tabella con se stessa anche se questa non ha una relazione riflessiva nel database. È ad esempio possibile utilizzare un self-join per individuare coppie di autori che risiedono nella stessa città.  
@@ -116,7 +116,7 @@ Cheryl Carson       Abraham Bennet
   
 3.  Fare clic con il pulsante destro del mouse sulla linea di join e scegliere **Proprietà** dal menu di scelta rapida.  
   
-4.  Nella finestra Proprietà fare clic su **Condizione e tipo di join** e sui **puntini di sospensione (…)** a destra della proprietà.  
+4.  Nella finestra Proprietà fare clic su **Condizione e tipo di join** e sui **puntini di sospensione (...)** a destra della proprietà.  
   
 5.  Nella [finestra di dialogo Join](join-dialog-box-visual-database-tools.md) cambiare l'operatore di confronto tra le chiavi primarie secondo necessità. È ad esempio possibile modificare l'operatore minore di (<).  
   

@@ -1,5 +1,5 @@
 ---
-title: Filtri per i modelli di Data Mining (Analysis Services - Data Mining) | Documenti Microsoft
+title: Filtri per i modelli di Data Mining (Analysis Services - Data Mining) | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 4c678773a77b9411eb1a51dbeb85b5eeb5f08b43
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 81592abc0224b2898b64d834857d23484750b326
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34016758"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52410668"
 ---
 # <a name="filters-for-mining-models-analysis-services---data-mining"></a>Filtri per i modelli di data mining (Analysis Services - Data mining)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -54,14 +54,14 @@ ms.locfileid: "34016758"
 ### <a name="creating-filters-on-nested-tables"></a>Creazione di filtri nelle tabelle nidificate  
  Se la vista origine dati contiene tabelle nidificate, è possibile utilizzare la seconda finestra di dialogo del filtro per compilare condizioni sulle righe nelle tabelle nidificate.  
   
- Se, ad esempio, la tabella del case è riferita ai clienti e nella tabella nidificata vengono indicati i prodotti acquistati da un cliente, è possibile creare un filtro per i clienti che hanno acquistato determinati articoli usando la sintassi seguente nel filtro della tabella nidificata: `[ProductName]=’Water Bottle’ OR ProductName=’Water Bottle Cage'`.  
+ Se, ad esempio, la tabella del case è riferita ai clienti e nella tabella nidificata vengono indicati i prodotti acquistati da un cliente, è possibile creare un filtro per i clienti che hanno acquistato determinati articoli usando la sintassi seguente nel filtro della tabella nidificata: `[ProductName]='Water Bottle' OR ProductName='Water Bottle Cage'`.  
   
- È possibile anche creare un filtro in base all'esistenza di un determinato valore usando la parola chiave **EXISTS** o **NOT EXISTS** e una sottoquery. Questo consente di creare condizioni come `EXISTS (SELECT * FROM Products WHERE ProductName=’Water Bottle’)`. `EXISTS SELECT(<subquery>)` restituisce **true** se la tabella nidificata contiene almeno una riga che include il valore `Water Bottle`.  
+ È possibile anche creare un filtro in base all'esistenza di un determinato valore usando la parola chiave **EXISTS** o **NOT EXISTS** e una sottoquery. Questo consente di creare condizioni come `EXISTS (SELECT * FROM Products WHERE ProductName='Water Bottle')`. `EXISTS SELECT(<subquery>)` restituisce **true** se la tabella nidificata contiene almeno una riga che include il valore `Water Bottle`.  
   
- È possibile combinare condizioni nella tabella del case con le condizioni nella tabella nidificata. Ad esempio, nella sintassi seguente è inclusa una condizione nella tabella del case (`Age > 30` ), una sottoquery nella tabella nidificata (`EXISTS (SELECT * FROM Products)`) e più condizioni nella tabella nidificata (`WHERE ProductName=’Milk’  AND Quantity>2`)).  
+ È possibile combinare condizioni nella tabella del case con le condizioni nella tabella nidificata. Ad esempio, nella sintassi seguente è inclusa una condizione nella tabella del case (`Age > 30` ), una sottoquery nella tabella nidificata (`EXISTS (SELECT * FROM Products)`) e più condizioni nella tabella nidificata (`WHERE ProductName='Milk'  AND Quantity>2`)).  
   
 ```  
-(Age > 30 AND EXISTS (SELECT * FROM Products WHERE ProductName=’Milk’  AND Quantity>2) )  
+(Age > 30 AND EXISTS (SELECT * FROM Products WHERE ProductName='Milk'  AND Quantity>2) )  
 ```  
   
  Quando la compilazione del filtro è terminata, il testo del filtro viene valutato da [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], tradotto a un'espressione DMX e quindi salvato con il modello.  
@@ -93,7 +93,7 @@ ms.locfileid: "34016758"
 ### <a name="how-can-i-save-a-filter"></a>Com'è possibile salvare un filtro?  
  L'espressione di filtro viene salvata come script che viene a sua volta archiviato con il modello di data mining o la tabella nidificata associati. Se si elimina il testo del filtro, tale testo può essere ripristinato solo ricreando manualmente l'espressione di filtro. Pertanto, se si creano espressioni di filtro complesse, è necessario creare una copia di backup del testo del filtro.  
   
-### <a name="why-cant-i-see-any-effects-from-the-filter"></a>Perché non è possibile vedere gli effetti del filtro?  
+### <a name="why-cant-i-see-any-effects-from-the-filter"></a>Il motivo per cui non vengono visualizzati tutti gli effetti del filtro?  
  Ogni volta che si modifica o si aggiunge un'espressione di filtro, è necessario rielaborare la struttura e il modello prima che sia possibile visualizzare gli effetti del filtro.  
   
 ### <a name="why-do-i-see-filtered-attributes-in-prediction-query-results"></a>Perché sono presenti attributi filtrati nei risultati della query di stima?  
@@ -116,6 +116,6 @@ ms.locfileid: "34016758"
   
 ## <a name="see-also"></a>Vedere anche  
  [Sintassi ed esempi di filtri dei modelli &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/model-filter-syntax-and-examples-analysis-services-data-mining.md)   
- [Test e convalida & #40; Data Mining & #41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
+ [Test e convalida &#40;Data mining&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
   
   

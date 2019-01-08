@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.suggestdatatypes.f1
@@ -13,12 +12,12 @@ ms.assetid: 8d5652e0-cf57-483f-828b-10f00c08418b
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e2a1706a252ae9e70d214b4231442a201dfac88c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 05ae90b30fb94615c4be8f16efaf5c837fe1856c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48058371"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52756684"
 ---
 # <a name="suggest-column-types-dialog-box-ui-reference"></a>Riferimento all'interfaccia utente della finestra di dialogo Suggerisci tipi di colonne
   Utilizzare la finestra di dialogo **Suggerisci tipi di colonne** per identificare il tipo di dati e la lunghezza delle colonne nella gestione connessione file flat sulla base di un campionamento del contenuto del file.  
@@ -45,7 +44,7 @@ ms.locfileid: "48058371"
  Consente di digitare o selezionare la percentuale della lunghezza delle colonne in base alla quale deve essere aumentata la lunghezza delle colonne per i tipi di dati character. La percentuale deve essere un numero intero.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento ai messaggi e agli errori di Integration Services](../integration-services-error-and-message-reference.md)   
+ [Guida di riferimento ai messaggi e agli errori di Integration Services](../integration-services-error-and-message-reference.md)   
  [Gestione connessione file flat](file-connection-manager.md)  
   
   

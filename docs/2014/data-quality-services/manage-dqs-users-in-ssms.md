@@ -10,12 +10,12 @@ ms.assetid: 955af01d-00da-4c51-9311-f3848749df54
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d17883d39f4579f509eed894735c676f464feeeb
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 8e8dc348946ba0cc8592217a1521fc79900e74ce
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51032186"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52516449"
 ---
 # <a name="manage-dqs-users-in-ssms"></a>Gestione di utenti DQS in SSMS
   In questo argomento viene descritto come creare utenti aggiuntivi nell'istanza di SQL Server utilizzando SQL Server Management Studio e come assegnare loro ruoli [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) nel database DQS_MAIN.  
@@ -33,7 +33,7 @@ ms.locfileid: "51032186"
   
 2.  In Microsoft SQL Server Management Studio espandere l'istanza di SQL Server, quindi espandere **Sicurezza**.  
   
-3.  Fare clic con il pulsante destro del mouse sulla cartella **Sicurezza**scegliere **Nuovo**, quindi selezionare **Account di accesso**.  
+3.  Fare clic con il pulsante destro del mouse sulla cartella **Sicurezza** scegliere **Nuovo**, quindi selezionare **Account di accesso**.  
   
 4.  Nella casella **Nome account di accesso** della finestra di dialogo **Account di accesso - Nuovo** specificare il nome di un utente di Windows, il tipo di autenticazione come **Autenticazione di Windows**e fare clic su **Cerca** per convalidare l'utente.  
   
@@ -42,11 +42,11 @@ ms.locfileid: "51032186"
   
 5.  Al termine della convalida dell'utente, nel riquadro sinistro fare clic su **Mapping utenti** .  
   
-6.  Nel riquadro destro selezionare la casella di controllo sotto la colonna **Mappa** per il database **DQS_MAIN**, quindi selezionare la casella di controllo **dqs_administrator**, **dqs_kb_editor** o **dqs_kb_operator** nel riquadro **Appartenenza a ruoli del database per: DQS_MAIN**, a seconda del livello di accesso necessario all'utente.  
+6.  Nel riquadro di destra, selezionare la casella di controllo sotto le **mappa** colonna per il **DQS_MAIN** del database e quindi selezionare il **dqs_administrator**, **dqs_kb_editor** , o **dqs_kb_operator** casella di controllo di **Database l'appartenenza al ruolo per: Database DQS_MAIN** riquadro, a seconda del livello di accesso necessario per l'utente.  
   
 7.  Nella finestra di dialogo **Account di accesso - Nuovo** fare clic su **OK** per applicare le modifiche.  
   
     > [!NOTE]  
-    >  Se si concede il ruolo **dqs_administrator** a un utente, applicare le modifiche, quindi verificare di nuovo le autorizzazioni utente. Risulteranno selezionate anche le altre due caselle di controllo dei ruoli DQS, cioè **dq_kb_editor** e **dqs_kb_operator**.  
+    >  Se si concede il ruolo **dqs_administrator** a un utente, applicare le modifiche, quindi verificare di nuovo le autorizzazioni utente. Risulteranno selezionate anche le altre due caselle di controllo dei ruoli DQS, cioè**dq_kb_editor** e **dqs_kb_operator**.  
   
   

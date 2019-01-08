@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - automatic joins
@@ -14,12 +14,12 @@ ms.assetid: f152af82-bcb6-49ca-af19-48cdb7fc9ac6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 87d4ea836aa77899985555f0f103651d74578b03
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bab311878966087ef9b6c3f05bb3023d02fdeb20
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48112924"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52780435"
 ---
 # <a name="join-tables-automatically-visual-database-tools"></a>Unione di tabelle in modo automatico (Visual Database Tools)
   Quando si aggiungono due o più tabelle a una query, in [Progettazione query e Progettazione viste](visual-database-tools.md) viene eseguito un tentativo per determinare se le tabelle sono correlate. In caso affermativo, linee di join verranno inserite automaticamente tra i rettangoli che rappresentano le tabelle o gli oggetti con struttura di tabella.  

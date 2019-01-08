@@ -20,12 +20,12 @@ ms.assetid: 01f4590f-427a-4280-a1c3-18de9f7d86c1
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a41829e9cb1f905c82e7cd5f8b179e5e1f777741
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 70fe1ca95f5160f801eaf3528e625116705eda6d
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47771679"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53203810"
 ---
 # <a name="sqlgetenvattr-function"></a>Funzione SQLGetEnvAttr
 **Conformità**  
@@ -70,7 +70,7 @@ SQLRETURN SQLGetEnvAttr(
 ## <a name="diagnostics"></a>Diagnostica  
  Quando **SQLGetEnvAttr** restituisce SQL_ERROR o SQL_SUCCESS_WITH_INFO, un valore SQLSTATE associato possono essere ottenuti chiamando **SQLGetDiagRec** con un *HandleType* di SQL _ HANDLE_ENV e un *gestiscono* dei *EnvironmentHandle*. Nella tabella seguente sono elencati i valori SQLSTATE comunemente restituiti da **SQLGetEnvAttr** e illustra ognuna nel contesto di questa funzione; la notazione "(DM)" precede le descrizioni di SQLSTATE restituiti da Gestione Driver. Il codice restituito a ogni valore SQLSTATE è SQL_ERROR, se non specificato diversamente.  
   
-|SQLSTATE|Errore|Description|  
+|SQLSTATE|Errore|Descrizione|  
 |--------------|-----------|-----------------|  
 |01000|Avviso generale|Messaggio informativo specifico del driver. (Funzione restituisce SQL_SUCCESS_WITH_INFO).|  
 |01004|Stringa troncati di dati a destra|I dati restituiti nella \* *ValuePtr* sono stati troncati per essere *BufferLength* meno il carattere di terminazione null. Viene restituita la lunghezza del valore della stringa non troncato **StringLengthPtr*. (Funzione restituisce SQL_SUCCESS_WITH_INFO).|  
@@ -88,7 +88,7 @@ SQLRETURN SQLGetEnvAttr(
   
  **SQLGetEnvAttr** può essere chiamato in qualsiasi momento tra l'allocazione e la liberazione di un handle di ambiente. Tutti gli attributi di ambiente è stati impostati dall'applicazione per l'ambiente vengono mantenute fino **SQLFreeHandle** viene chiamato sulle *EnvironmentHandle* con un *HandleType*SQL_HANDLE_ENV. Più di un handle di ambiente può essere allocato contemporaneamente in ODBC 3*x*. Un attributo di ambiente in un unico ambiente non viene modificato quando è stato allocato un altro ambiente.  
   
-> [!NOTE]  
+> [!NOTE]
 >  L'attributo di ambiente SQL_ATTR_OUTPUT_NTS è supportato dalle applicazioni conformi agli standard. Quando **SQLGetEnvAttr** viene chiamato, ODBC 3*x* gestione Driver restituisce sempre SQL_TRUE per questo attributo. SQL_ATTR_OUTPUT_NTS può essere impostato su SQL_TRUE solo da una chiamata a **SQLSetEnvAttr**.  
   
 ## <a name="related-functions"></a>Funzioni correlate  

@@ -5,8 +5,7 @@ ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_replmonitorhelpmergesession_TSQL
@@ -17,12 +16,12 @@ ms.assetid: a0400ba8-9609-4901-917e-925e119103a1
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5378f5fc2e62445b55f89cc09b68c414d47c983f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e08a08bbd3343386ed4b07749bde5216ae23c8b4
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47825449"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52789193"
 ---
 # <a name="spreplmonitorhelpmergesession-transact-sql"></a>sp_replmonitorhelpmergesession (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +49,7 @@ sp_replmonitorhelpmergesession [ [ @agent_name = ] 'agent_name' ]
  [ **@hours** =] *ore*  
  Intervallo di tempo, espresso in ore, per cui vengono restituite informazioni sulle sessioni passate dell'agente. *ore* viene **int**, che può essere uno degli intervalli seguenti.  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |< **0**|Restituisce informazioni sulle esecuzioni passate dell'agente, per al massimo 100 esecuzioni.|  
 |**0** (predefinito)|Restituisce informazioni su tutte le esecuzioni passate dell'agente.|  
@@ -59,7 +58,7 @@ sp_replmonitorhelpmergesession [ [ @agent_name = ] 'agent_name' ]
  [ **@session_type** =] *session_type*  
  Filtra il set di risultati in base al risultato finale della sessione. *session_type* viene **int**, i possibili valori sono i seguenti.  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |**1** (impostazione predefinita)|Sessioni dell'agente con esito positivo o da ritentare.|  
 |**0**|Sessioni dell'agente con esito negativo.|  
@@ -75,7 +74,7 @@ sp_replmonitorhelpmergesession [ [ @agent_name = ] 'agent_name' ]
   
 ## <a name="result-sets"></a>Set di risultati  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**Session_id**|**int**|ID della sessione del processo dell'agente.|  
 |**Stato**|**int**|Stato dell'esecuzione dell'agente:<br /><br /> **1** = avvio<br /><br /> **2** = esito positivo<br /><br /> **3** = in corso<br /><br /> **4** = inattivo<br /><br /> **5** = nuovo tentativo<br /><br /> **6** = esito negativo|  

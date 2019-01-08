@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Management Studio [SQL Server], user interface elements
@@ -13,17 +13,17 @@ ms.assetid: 436d9afb-09c3-4838-9b54-4449a5178d0f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ad66640b3f090bc4620832a64f3697e6ab12be0c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 47ce33e0d0a8cf76a90beb1fa3cc6ddfda27606f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48127451"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52764333"
 ---
 # <a name="general-user-interface-elements"></a>Elementi generali dell'interfaccia utente
   L' **Editor**, la finestra **Proprietà** e la **Casella degli strumenti** sono alcuni degli elementi base di [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Finestra di dialogo Informazioni su](about-dialog-box.md)  
  Viene descritta la finestra di dialogo in cui sono riportate informazioni su [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] e sul computer in cui il prodotto è in esecuzione.  
   

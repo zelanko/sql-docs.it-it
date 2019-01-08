@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 10/04/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - identities [SQL Server replication]
@@ -18,12 +17,12 @@ ms.assetid: eb2f23a8-7ec2-48af-9361-0e3cb87ebaf7
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e47126e626c76f25d6c376a3c4247e2caf6de9f0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e89bfac90a0658c8f5ba839632451187ffa9760d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48089851"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52810953"
 ---
 # <a name="replicate-identity-columns"></a>Replica di colonne Identity
   In [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] quando si assegna la proprietà IDENTITY a una colonna, vengono automaticamente generati numeri sequenziali per le nuove righe inserite nella tabella contenente la colonna Identity. Per altre informazioni, vedere [IDENTITY &#40;proprietà&#41; &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql-identity-property). Dato che è possibile includere le colonne Identity come parte della chiave primaria, è importante evitare di inserire valori duplicati nelle colonne Identity. Per utilizzare colonne Identity in una topologia di replica con aggiornamenti in più di un nodo, è necessario che ogni nodo presente nella topologia di replica utilizzi un intervallo di valori Identity diverso, in modo da non generare duplicati.  
@@ -57,7 +56,7 @@ ms.locfileid: "48089851"
  Se dopo un inserimento il server di pubblicazione esaurisce il proprio intervallo di valori Identity, è possibile assegnare automaticamente un nuovo intervallo a condizione che l'inserimento sia stato eseguito da un membro del ruolo predefinito del database **db_owner** . Se l'inserimento è stato eseguito da un utente che non dispone di quel ruolo, è necessario che l'agente di lettura log, l'agente di merge o l'utente che è membro del ruolo **db_owner** esegua la stored procedure [sp_adjustpublisheridentityrange &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adjustpublisheridentityrange-transact-sql). Nel caso di pubblicazioni transazionali, l'agente di lettura log deve essere in esecuzione per allocare automaticamente un nuovo intervallo di valori (per impostazione predefinita l'agente viene eseguito continuamente).  
   
 > [!WARNING]  
->  Durante l'inserimento di un batch di grandi dimensioni, il trigger di replica viene generato solo una volta, non per ogni riga inserita. Questo può causare un errore nell'istruzione di inserimento se un intervallo di valori identity viene esaurito durante un inserimento di grandi dimensioni, ad esempio un `INSERT INTO` istruzione.  
+>  Durante l'inserimento di un batch di grandi dimensioni, il trigger di replica viene generato solo una volta, non per ogni riga inserita. Questa condizione può comportare un errore dell'istruzione di inserimento se un intervallo di valori Identity viene esaurito durante un inserimento di grandi dimensioni, ad esempio un'istruzione `INSERT INTO`.  
   
 |Tipo di dati|Intervallo|  
 |---------------|-----------|  
@@ -99,7 +98,7 @@ ms.locfileid: "48089851"
  Ad esempio, è possibile specificare 10.000 per **@pub_identity_range**, 1000 per **@identity_range** (presupponendo aggiornamenti minori nel Sottoscrittore) e 80% per **@threshold**. Dopo 800 inserimenti in un Sottoscrittore, pari all'80% di 1000, al Sottoscrittore viene assegnato un nuovo intervallo. Dopo 8.000 inserimenti nel server di pubblicazione, al server di pubblicazione viene assegnato un nuovo intervallo. A questo punto vi sarà un gap nell'intervallo di valori Identity della tabella. Specificando una soglia più elevata si avranno gap più piccoli, ma il sistema sarà meno tollerante agli errori. Se per qualche ragione non è possibile eseguire l'agente di distribuzione, i Sottoscrittori potrebbero esaurire più facilmente i valori Identity.  
   
 ## <a name="assigning-ranges-for-manual-identity-range-management"></a>Assegnazione di intervalli per la gestione manuale degli intervalli di valori Identity  
- Se si sceglie la gestione manuale, è necessario verificare che il server di pubblicazione e tutti i Sottoscrittori utilizzino intervalli di valori Identity diversi. Si consideri, ad esempio, una tabella nel server di pubblicazione con una colonna Identity definita come `IDENTITY(1,1)`: la colonna Identity comincia col valore 1 e viene incrementata di 1 ogni volta che viene inserita una riga. Se la tabella nel server di pubblicazione ha 5.000 righe e si prevede una crescita nella tabella superiore alla durata dell'applicazione, per il server di pubblicazione si potrebbe utilizzare l'intervallo 1-10.000. Nel caso vi siano due Sottoscrittori, per il Sottoscrittore A si potrebbe utilizzare l'intervallo 10.001-20.000 e per il Sottoscrittore B l'intervallo 20.001-30.000.  
+ Se si sceglie la gestione manuale, è necessario verificare che il server di pubblicazione e tutti i Sottoscrittori utilizzino intervalli di valori Identity diversi. Si consideri, ad esempio, una tabella nel server di pubblicazione con una colonna Identity definita come `IDENTITY(1,1)`: la colonna Identity comincia col valore 1 e viene incrementata di 1 ogni volta che viene inserita una riga. Se la tabella nel server di pubblicazione ha 5.000 righe e si prevede una crescita nella tabella superiore alla durata dell'applicazione, per il server di pubblicazione si potrebbe utilizzare l'intervallo 1-10.000. Nel caso vi siano due Sottoscrittori, per il Sottoscrittore A si potrebbe usare l'intervallo 10.001-20.000 e per il Sottoscrittore B l'intervallo 20.001-30.000.  
   
  Dopo aver inizializzato un Sottoscrittore con uno snapshot o altri metodi, eseguire DBCC CHECKIDENT per assegnare al Sottoscrittore un punto di partenza per l'intervallo di valori Identity. Ad esempio, nel Sottoscrittore A si eseguirà `DBCC CHECKIDENT('<TableName>','reseed',10001)`, mentre nel Sottoscrittore B si eseguirà `CHECKIDENT('<TableName>','reseed',20001)`.  
   

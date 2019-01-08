@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 7f9be649-cd93-40c1-bc48-0480106f207c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 50cb0d8de78b85a3fc6531c3eb5fb63c450205a2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fe88db4809b69abf292ae0888786bc4606785c3d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48142831"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52773043"
 ---
 # <a name="how-to-manage-a-local-cdc-service"></a>Procedura di gestione di un servizio CDC locale
   In questa procedura viene illustrato come utilizzare CDC Service Configuration Console per gestire servizi CDC specifici.  
@@ -45,7 +44,7 @@ ms.locfileid: "48142831"
   
          È inoltre possibile fare clic con il pulsante destro del mouse sul servizio CDC da eliminare e scegliere **Delete**.  
   
-         **Nota**: se il servizio è in esecuzione al momento dell'eliminazione, il servizio viene arrestato prima di essere eliminato.  
+         **Nota**: Se il servizio è in esecuzione durante l'eliminazione del servizio, il servizio viene arrestato prima di essere eliminati.  
   
          Per eliminare una definizione del servizio Windows di Oracle CDC, è necessario aggiornare l'accesso al database MSXDBCDC nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] associata. Quando si fa clic su **OK** per eliminare il servizio, viene effettuato un tentativo di eliminare la registrazione del servizio Oracle CDC nel database MSXDBCDC. Se l'operazione ha esito negativo a causa della mancanza di autorizzazioni, verrà visualizzata una finestra di dialogo in cui viene richiesto all'utente di immettere un account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con un accesso di aggiornamento al database MSXDBCDC.  
   
@@ -58,6 +57,6 @@ ms.locfileid: "48142831"
          È inoltre possibile fare clic con il pulsante destro del mouse sul servizio CDC in cui si desidera modificare le proprietà e scegliere **Properties**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Gestire un servizio Oracle CDC](manage-an-oracle-cdc-service.md)  
+ [Manage an Oracle CDC Service](manage-an-oracle-cdc-service.md)  
   
   

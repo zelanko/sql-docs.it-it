@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server utility [SQL Server]
@@ -17,18 +17,18 @@ ms.assetid: 6e6cbd25-6b1c-4e21-9ade-4584e243fd8f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 81d816d58780f32eeaca64c1d90257eef1a8aaff
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1d3f61904a1a820df58583212dcbd2e998dbabbd
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48056704"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52767123"
 ---
 # <a name="sql-server-utility-features-and-tasks"></a>Attività e funzionalità di Utilità SQL Server
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] necessitano di gestire l'ambiente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nel suo complesso e questa esigenza viene soddisfatta in questa versione tramite il concetto di gestione delle applicazioni e multiserver in Utilità [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="benefits-of-the-sql-server-utility"></a>Vantaggi di Utilità SQL Server  
- Utilità [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consente di modellare le entità relative all'ambiente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]di un'organizzazione in una visualizzazione unificata. I punti di visualizzazione di Esplora utilità e Utilità [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) offrono agli amministratori una visualizzazione olistica dell'integrità delle risorse di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tramite un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che funge da punto di controllo dell'utilità. La combinazione di dati riepilogativi e dettagliati visualizzata nel punto di controllo dell'utilità sia per i criteri di sottoutilizzo che per quelli di sovrautilizzo e per vari parametri principali consente di identificare facilmente le possibilità di consolidamento delle risorse e il sovrautilizzo delle risorse. I criteri di integrità sono configurabili e possono essere modificati per impostare soglie di utilizzo delle risorse più alte o più basse. È possibile modificare i criteri di monitoraggio globali o configurare criteri di monitoraggio singoli per ogni entità gestita in Utilità [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+ Utilità [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consente di modellare le entità relative all'ambiente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di un'organizzazione in una visualizzazione unificata. I punti di visualizzazione di Esplora utilità e Utilità [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) offrono agli amministratori una visualizzazione olistica dell'integrità delle risorse di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tramite un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che funge da punto di controllo dell'utilità. La combinazione di dati riepilogativi e dettagliati visualizzata nel punto di controllo dell'utilità sia per i criteri di sottoutilizzo che per quelli di sovrautilizzo e per vari parametri principali consente di identificare facilmente le possibilità di consolidamento delle risorse e il sovrautilizzo delle risorse. I criteri di integrità sono configurabili e possono essere modificati per impostare soglie di utilizzo delle risorse più alte o più basse. È possibile modificare i criteri di monitoraggio globali o configurare criteri di monitoraggio singoli per ogni entità gestita in Utilità [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ##  <a name="typical_scenarios"></a> Introduzione a Utilità SQL Server  
  Lo scenario utente tipico prevede innanzitutto la creazione di un punto di controllo dell'utilità che stabilisce il punto ragionevole centrale per Utilità [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Il punto di controllo dell'utilità fornisce una visualizzazione consolidata dell'integrità delle risorse raccolta da istanze gestite di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in Utilità [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . In seguito alla creazione del punto di controllo dell'utilità, le istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengono registrate in Utilità [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in modo che possano essere gestite dal punto di controllo dell'utilità.  
@@ -56,7 +56,7 @@ ms.locfileid: "48056704"
 |Viene descritto come modificare l'account proxy per l'agente di raccolta dati dell'utilità in un'istanza gestita di SQL Server.|[Modificare l'account proxy per il set di raccolta dell'utilità in un'istanza gestita di SQL Server &#40;Utilità SQL Server&#41;](change-proxy-account-for-utility-collection-on-managed-sql-server.md)|  
 |Viene descritto come spostare un punto di controllo dell'utilità da un'istanza di SQL Server a un'altra.|[Spostare un punto di controllo dell'utilità da un'istanza di SQL Server a un'altra &#40;Utilità SQL Server&#41;](move-a-ucp-from-one-instance-of-sql-server-to-another-sql-server-utility.md)|  
 |Viene descritto come rimuovere un punto di controllo dell'utilità.|[Rimuovere un punto di controllo dell'utilità &#40;Utilità SQL Server&#41;](remove-a-utility-control-point-sql-server-utility.md)|  
-|Viene descritto come risolvere i problemi relativi a Utilità SQL Server.|[Attività e funzionalità di Utilità SQL Server](../../database-engine/troubleshoot-the-sql-server-utility.md)|  
+|Viene descritto come risolvere i problemi relativi a Utilità SQL Server.|[Risoluzione dei problemi relativi a Utilità SQL Server](../../database-engine/troubleshoot-the-sql-server-utility.md)|  
 |Viene descritto come risolvere i problemi relativi all'integrità delle risorse di SQL Server.|[Risolvere i problemi relativi all'integrità delle risorse di SQL Server &#40;Utilità SQL Server&#41;](troubleshoot-sql-server-resource-health-sql-server-utility.md)|  
 |Collegamenti agli argomenti della Guida sensibile al contesto di Gestione Utilità.|[Guida sensibile al contesto di Gestione Utilità](utility-explorer-f1-help.md)|  
   

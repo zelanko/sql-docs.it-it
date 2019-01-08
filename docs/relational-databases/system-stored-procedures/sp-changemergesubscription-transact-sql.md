@@ -5,8 +5,7 @@ ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_changemergesubscription_TSQL
@@ -17,12 +16,12 @@ ms.assetid: fd820f35-c189-4e2d-884d-b60c1c469f58
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 57e581985a4fcc5b7d1055748f87aed40c06a5a5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9ac79494bfb0d08503be6e138bce748596eb8165
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47629629"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52819068"
 ---
 # <a name="spchangemergesubscription-transact-sql"></a>sp_changemergesubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,22 +43,22 @@ sp_changemergesubscription [ [ @publication= ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@publication=**] **'***pubblicazione***'**  
+ [  **@publication=**] **'**_pubblicazione_**'**  
  Nome della pubblicazione da modificare. *pubblicazione* viene **sysname**, con un valore predefinito è NULL. La pubblicazione deve essere già esistente e conforme alle regole per gli identificatori.  
   
- [  **@subscriber=**] **'***sottoscrittore***'**  
+ [  **@subscriber=**] **'**_sottoscrittore_**'**  
  Nome del Sottoscrittore. *Sottoscrittore* viene **sysname**, con un valore predefinito è NULL.  
   
- [  **@subscriber_db=**] **'***subscriber_db***'**  
+ [  **@subscriber_db=**] **'**_subscriber_db_**'**  
  Nome del database di sottoscrizione. *subscriber_db*viene **sysname**, con un valore predefinito è NULL.  
   
- [  **@property=**] **'***proprietà***'**  
+ [  **@property=**] **'**_proprietà_**'**  
  Proprietà da modificare per la pubblicazione specificata. *proprietà* viene **sysname**, e può essere uno dei valori nella tabella.  
   
- [  **@value=**] **'***valore***'**  
+ [  **@value=**] **'**_valore_**'**  
  Nuovo valore per l'oggetto specificato *proprietà*. *valore* viene **nvarchar(255**, e può essere uno dei valori nella tabella.  
   
-|Proprietà|valore|Description|  
+|Proprietà|Value|Descrizione|  
 |--------------|-----------|-----------------|  
 |**description**||Descrizione della sottoscrizione di tipo merge.|  
 |**priority**||Priorità della sottoscrizione. La priorità viene utilizzata dal sistema di risoluzione predefinito per eseguire una selezione in caso di conflitti.|  

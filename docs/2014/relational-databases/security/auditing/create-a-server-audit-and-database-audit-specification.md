@@ -15,12 +15,12 @@ ms.assetid: 26ee85de-6e97-4318-b526-900924d96e62
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 21eb8108c8779ca3558336a6d1d46cbeac0a77cc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6b4aa4358259492e1b49672b054eddb8713c7473
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48109874"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52545257"
 ---
 # <a name="create-a-server-audit-and-database-audit-specification"></a>Creazione di un controllo del server e di una specifica del controllo del database
   In questo argomento viene illustrato come creare un controllo del server e la specifica di un controllo del database in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
@@ -33,7 +33,7 @@ ms.locfileid: "48109874"
   
      [Limitazioni e restrizioni](#Restrictions)  
   
-     [Security](#Security)  
+     [Sicurezza](#Security)  
   
 -   **Per creare un controllo del server e una specifica del controllo del database utilizzando:**  
   
@@ -78,7 +78,7 @@ ms.locfileid: "48109874"
   
      Nella finestra di dialogo **Crea specifica controllo database** sono disponibili le opzioni indicate di seguito.  
   
-     **Nome**  
+     **Name**  
      Nome della specifica del controllo del database. Tale nome viene generato automaticamente quando si crea una nuova specifica del controllo del server, ma è modificabile.  
   
      **Controllo**  
@@ -104,7 +104,7 @@ ms.locfileid: "48109874"
   
 4.  Una volta selezionate le opzioni, fare clic su **OK**.  
   
-##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
   
 #### <a name="to-create-a-server-audit"></a>Per creare un controllo del server  
   

@@ -1,7 +1,8 @@
 ---
-title: Consente di monitorare i server e i database in Azure Data Studio widget Insight | Microsoft Docs
-description: Informazioni sui widget insight in Data Studio di Azure.
-ms.custom: tools|sos
+title: Usare il widget Insight per monitorare i server e database
+titleSuffix: Azure Data Studio
+description: Informazioni su widget insight in Azure Data Studio
+ms.custom: seodec18
 ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -10,12 +11,12 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d669b72aadb9fe1ea2ec61c2059a1d932ee52d4d
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: 7fa7317d048d2bb9e19b6e82f5323a3b8ed15751
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49356332"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030195"
 ---
 # <a name="manage-servers-and-databases-with-insight-widgets-in-includename-sosincludesname-sos-shortmd"></a>Gestire server e database con i widget di Insight in [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 

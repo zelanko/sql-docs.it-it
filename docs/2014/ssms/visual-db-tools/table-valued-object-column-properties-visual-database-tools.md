@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - vdt.designers.properties.QueryViewColumn
@@ -12,12 +12,12 @@ ms.assetid: 212d9bcd-aded-4313-a6b9-d7e2270e5954
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b49ee8643b7cc86ea385d1d3ccd458edf5c3283e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 14c2fff96c89ee696df1a437f958e4560bfab142
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48121436"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52771863"
 ---
 # <a name="table-valued-object-column-properties-visual-database-tools"></a>Proprietà colonna dell'oggetto valutato a livello di tabella (Visual Database Tools)
   Queste proprietà vengono visualizzate quando si seleziona una colonna in un oggetto con valori di tabella nel riquadro **Diagramma** di Progettazione query e Progettazione viste.  
@@ -31,7 +31,7 @@ ms.locfileid: "48121436"
  **Categoria Identità**  
  Espandere questa categoria per visualizzare la proprietà **Nome** .  
   
- **Nome**  
+ **Name**  
  Indica il nome della colonna selezionata.  
   
  **Categoria Progettazione query**  
@@ -46,7 +46,7 @@ ms.locfileid: "48121436"
  **Tipo di dati**  
  Mostra il tipo di dati della colonna selezionata.  
   
- **Length**  
+ **Lunghezza**  
  Indica il numero di caratteri o cifre consentiti dal tipo di dati della colonna selezionata. Questa proprietà è disponibile solo per tipi di dati basati su caratteri.  
   
 > [!NOTE]  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - incremental load [Integration Services],multiple tables
@@ -13,12 +12,12 @@ ms.assetid: 39252dd5-09c3-46f9-a17b-15208cfd336d
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: cab69f68fe040600722d22c31ea8a356610e61c7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ef1b57d9c772618bb302baa50fd7f5deb793f1cf
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48204681"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52773003"
 ---
 # <a name="perform-an-incremental-load-of-multiple-tables"></a>Esecuzione di un caricamento incrementale di più tabelle
   Il diagramma incluso nell'argomento [Miglioramento dei caricamenti incrementali tramite Change Data Capture](change-data-capture-ssis.md) illustra un pacchetto di base che esegue un caricamento incrementale in un'unica tabella. Il caricamento di una tabella, tuttavia, non rappresenta un'operazione tanto comune quanto l'esecuzione di un caricamento incrementale di più tabelle.  

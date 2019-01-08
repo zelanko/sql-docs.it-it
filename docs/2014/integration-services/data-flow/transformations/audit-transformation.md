@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.audittrans.f1
@@ -16,20 +15,20 @@ ms.assetid: 8c143682-9c81-4150-83d6-1d9678151d37
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8b6609cda18e6fc0f2942bb37e6939af6123b213
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: de3fd2e357d58d77bc82a551ab88f01db2c1c693
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48156901"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52771273"
 ---
-# <a name="audit-transformation"></a>Trasformazione Controllo
+# <a name="audit-transformation"></a>Controllo - trasformazione
   La trasformazione Controllo consente di includere nel flusso di dati di un pacchetto informazioni sull'ambiente in cui viene eseguito il pacchetto. Ad esempio, il nome del pacchetto, del computer e dell'operatore può essere aggiunto al flusso di dati. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] include variabili di sistema che forniscono queste informazioni.  
   
 ## <a name="system-variables"></a>Variabili di sistema  
  Nella tabella seguente sono descritte le variabili di sistema che possono essere utilizzate dalla trasformazione Controllo.  
   
-|Variabile di sistema|Indice|Description|  
+|Variabile di sistema|Indice|Descrizione|  
 |---------------------|-----------|-----------------|  
 |`ExecutionInstanceGUID`|0|GUID che identifica l'istanza di esecuzione del pacchetto.|  
 |`PackageID`|1|Identificatore univoco del pacchetto.|  

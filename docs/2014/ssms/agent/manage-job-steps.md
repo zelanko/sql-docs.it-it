@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - job steps [SQL Server replication]
@@ -24,12 +24,12 @@ ms.assetid: 51352afc-a0a4-428b-8985-f9e58bb57c31
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 90dcc76466709b1cc3e76406029ea2fffaaea1f5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9a844f429409210b1b7ba6de9784714b5af336eb
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48167189"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52768453"
 ---
 # <a name="manage-job-steps"></a>Gestire passaggi di processo
   Un passaggio di processo è un'operazione eseguita dal processo in un database o in un server. Ogni processo deve essere composto da almeno un passaggio. I passaggi di processo possono essere costituiti dagli elementi seguenti:  
@@ -57,7 +57,7 @@ ms.locfileid: "48167189"
   
 -   Programmi eseguibili e comandi del sistema operativo.  
   
--   Istruzioni[!INCLUDE[tsql](../../includes/tsql-md.md)] .  
+-   [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
 -   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] attività.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "48167189"
   
 -   Il codice di uscita del processo, restituito se il comando ha esito positivo.  
   
--   Comando da eseguire. Per eseguire un comando del sistema operativo, è necessario immettere solo il comando specifico. Per un programma esterno, è necessario immettere il nome del programma e gli argomenti del programma, ad esempio: **C:\Programmi\Microsoft SQL Server\100\Tools\Binn\sqlcmd.exe -e -q "sp_who"**  
+-   Comando da eseguire. Per eseguire un comando del sistema operativo, è necessario immettere solo il comando specifico. Per un programma esterno, questo è il nome del programma e gli argomenti del programma, ad esempio: **C:\Program Files\Microsoft SQL Server\100\Tools\Binn\sqlcmd.exe -e - q "sp_who"**  
   
     > [!NOTE]  
     >  È necessario indicare il percorso completo del programma eseguibile se questo non è incluso in una directory specificata nel percorso di sistema o nel percorso per l'account utente con cui viene eseguito il passaggio di processo.  
@@ -206,7 +206,7 @@ Set oServer = nothing
 |Viene descritto come definire le opzioni per i passaggi di processo Transact-SQL di Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.|[Define Transact-SQL Job Step Options](define-transact-sql-job-step-options.md)|  
 |Viene descritto come creare un passaggio di processo dello script ActiveX.|[Create an ActiveX Script Job Step](create-an-activex-script-job-step.md)|  
 |Viene descritto come creare e definire passaggi di processo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent tramite cui vengono eseguiti comandi e query di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Analysis Services.|[Create an Analysis Services Job Step](create-an-analysis-services-job-step.md)|  
-|Viene descritta quale azione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] occorre eseguire se si verifica un errore durante l'esecuzione del processo.|[Impostare il flusso di interventi in caso di esito positivo o negativo del passaggio di processo](set-job-step-success-or-failure-flow.md)|  
+|Viene descritta quale azione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] occorre eseguire se si verifica un errore durante l'esecuzione del processo.|[Set Job Step Success or Failure Flow](set-job-step-success-or-failure-flow.md)|  
 |Viene descritto come visualizzare informazioni dettagliate sui passaggi di processo nella finestra di dialogo Proprietà passaggio processo.|[Visualizzare informazioni sui passaggi di processo](view-job-step-information.md)|  
 |Viene descritto come eliminare un log dei passaggi di processo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.|[Delete a Job Step Log](delete-a-job-step-log.md)|  
   

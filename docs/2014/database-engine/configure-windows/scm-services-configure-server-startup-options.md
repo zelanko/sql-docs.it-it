@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 01/07/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - parameters [SQL Server], startup options
@@ -17,15 +16,15 @@ ms.assetid: 7a94643c-6460-4baf-bb31-0cb99eaf970d
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 07fc15bf088cf48e0a1b9a30cd68d5c10254d345
-ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
+ms.openlocfilehash: 91a48d4acd771c19617bac26c1393f30334768e8
+ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49072106"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52639489"
 ---
 # <a name="configure-server-startup-options-sql-server-configuration-manager"></a>Configurazione delle opzioni di avvio del server (Gestione configurazione SQL Server)
-  In questo argomento viene descritto come configurare le opzioni di avvio che verranno utilizzate ogni volta che il [!INCLUDE[ssDE](../../includes/ssde-md.md)] viene avviato in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager. Per un elenco delle opzioni di avvio, vedere [Opzioni di avvio del servizio del motore di database](database-engine-service-startup-options.md).  
+  Questo argomento illustra come configurare le opzioni di avvio da usare ogni volta che il [!INCLUDE[ssDE](../../includes/ssde-md.md)] viene avviato in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager. Per un elenco delle opzioni di avvio, vedere [Opzioni di avvio del servizio del motore di database](database-engine-service-startup-options.md).  
   
 ##  <a name="BeforeYouBegin"></a> Prima di iniziare  
   

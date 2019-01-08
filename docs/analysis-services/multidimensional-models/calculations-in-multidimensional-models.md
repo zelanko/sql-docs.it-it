@@ -1,5 +1,5 @@
 ---
-title: Calcoli nei modelli multidimensionali | Documenti Microsoft
+title: Calcoli nei modelli multidimensionali | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: b51dc3cbb0ad98b5f14fdd278c03dc54b43a6b9d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: c72d43c95013074051356c690ac2d7abf0a575e0
+ms.sourcegitcommit: 38076f423663bdbb42f325e3d0624264e05beda1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34023718"
+ms.lasthandoff: 12/06/2018
+ms.locfileid: "52983992"
 ---
 # <a name="calculations-in-multidimensional-models"></a>Calcoli nei modelli multidimensionali
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -28,8 +28,6 @@ ms.locfileid: "34023718"
   
 -   Il riquadro Espressioni di calcolo supporta la visualizzazione Form e visualizzazione Script.  
   
-> [!NOTE]  
->  Per altre informazioni sulla creazione di script MDX, vedere l' [introduzione alla creazione di script MDX in Microsoft SQL Server 2005](http://go.microsoft.com/fwlink/?LinkId=81892)e la sezione relativa alle risorse aggiuntive nella pagina [SQL Server 2005 - Analysis Services](http://go.microsoft.com/fwlink/?LinkId=80853) del sito Web Microsoft TechNet. Per altre informazioni su problemi di prestazioni legati alla progettazione dei cubi, vedere la [guida alle prestazioni di SQL Server 2005 Analysis Services](http://go.microsoft.com/fwlink/?LinkId=81621).  
   
 ## <a name="creating-a-new-calculation"></a>Creazione di un nuovo calcolo  
  Per creare un nuovo calcolo, nella scheda **Calcoli** di Progettazione cubi scegliere **Nuovo membro calcolato** , **Nuovo set denominato**o **Nuovo comando script**dal menu **Cubo**, a seconda del tipo di calcolo da creare. È anche possibile fare clic sui pulsanti corrispondenti sulla barra degli strumenti o fare clic con il pulsante destro del mouse in un punto qualsiasi all'interno del riquadro **Libreria script** e quindi scegliere uno dei comandi dal menu di scelta rapida. In questo modo viene aggiunto un nuovo calcolo al riquadro **Libreria script** e i campi corrispondenti vengono visualizzati nel form di calcolo nel riquadro delle espressioni di calcolo. In caso di creazione di un nuovo script, questa operazione apre la visualizzazione Script nel riquadro Espressioni di calcolo. Per altre informazioni sulla creazione dei tre tipi di calcoli, vedere [Creare membri calcolati](../../analysis-services/multidimensional-models/create-calculated-members.md), [Creare set denominati](../../analysis-services/multidimensional-models/create-named-sets.md)e [Definire le assegnazioni e altri comandi script](../../analysis-services/multidimensional-models/define-assignments-and-other-script-commands.md).  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - databases [SQL Server], size
@@ -16,12 +15,12 @@ ms.assetid: 14f4206d-3afa-4ba9-9849-23e81d63306d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7cd528c27ed34c91a076f79e0bfe8b0d1719a4a4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 02a34ba1e0f441b665c239d60f6398afa4247102
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48069417"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52808993"
 ---
 # <a name="increase-the-size-of-a-database"></a>Aumentare le dimensioni di un database
   In questo argomento si descrive come aumentare le dimensioni di un database in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Il database viene espanso aumentando le dimensioni di un file di dati o di log o esistente oppure aggiungendo un nuovo file al database.  
@@ -32,7 +31,7 @@ ms.locfileid: "48069417"
   
      [Limitazioni e restrizioni](#Restrictions)  
   
-     [Security](#Security)  
+     [Sicurezza](#Security)  
   
 -   **Per aumentare le dimensioni di un database tramite:**  
   
@@ -67,7 +66,7 @@ ms.locfileid: "48069417"
   
 6.  Fare clic su **OK**.  
   
-##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
   
 #### <a name="to-increase-the-size-of-a-database"></a>Per aumentare le dimensioni di un database  
   

@@ -13,19 +13,19 @@ ms.assetid: cbf40c7f-3c8a-48cd-aefa-8b37faf8b40e
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: abc9f00432128750e4b61e971038bbc32dd85e86
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e19b832bc3d7ebf1f883633491b309971cf2938e
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48125701"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52398304"
 ---
 # <a name="add-delete-change-scope-of-user-defined-variable-in-a-package"></a>Aggiungere, eliminare o modificare l'ambito di una variabile definita dall'utente in un pacchetto
   In queste procedure viene descritto come aggiungere, eliminare e modificare l'ambito di una variabile definita dall'utente in un pacchetto tramite la finestra **Variabili**.  
   
- Per altre informazioni sull'ambito delle variabili, vedere [Integration Services &#40;SSIS&#41; Variables](integration-services-ssis-variables.md).  
+ Per altre informazioni sull'ambito delle variabili, vedere [Variabili di Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md).  
   
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] fornisce anche le variabili di sistema che rendono disponibili le informazioni di sistema in fase di esecuzione e sono utilizzabili in contenitori come pacchetti e gestori di eventi. Le variabili di sistema non possono essere eliminate.  
+ In [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] vengono anche fornite variabili di sistema che rendono le informazioni di sistema disponibili durante l'esecuzione e che sono utilizzabili in contenitori come pacchetti e gestori di eventi. Le variabili di sistema non possono essere eliminate.  
   
 ### <a name="to-add-a-variable"></a>Per aggiungere una variabile  
   
@@ -61,7 +61,7 @@ ms.locfileid: "48125701"
   
 4.  Selezionare la variabile che si desidera eliminare e quindi fare clic su **Elimina variabile**.  
   
-     Se la variabile non è visualizzata nella finestra Variabili, fare clic su **Opzioni griglia** , quindi selezionare **Mostra variabili di tutti gli ambiti**.  
+     Se la variabile non viene visualizzata nella finestra Variabili, fare clic su **Opzioni griglia** e quindi selezionare **Mostra variabili di tutti gli ambiti**.  
   
 5.  Se viene visualizzata la finestra di dialogo **Conferma eliminazione variabili** , fare clic su **Sì** per confermare.  
   
@@ -77,14 +77,14 @@ ms.locfileid: "48125701"
   
 4.  Selezionare la variabile e quindi fare clic su **Sposta variabile**.  
   
-     Se la variabile non è visualizzata nella finestra Variabili, fare clic su **Opzioni griglia** , quindi selezionare **Mostra variabili di tutti gli ambiti**.  
+     Se la variabile non viene visualizzata nella finestra Variabili, fare clic su **Opzioni griglia** e quindi selezionare **Mostra variabili di tutti gli ambiti**.  
   
 5.  Nella finestra di dialogo **Seleziona nuovo ambito** selezionare il pacchetto oppure un contenitore, un'attività o un gestore eventi del pacchetto per modificare l'ambito della variabile.  
   
 6.  Per salvare il pacchetto aggiornato, scegliere **Salva elementi selezionati** dal menu **File** .  
   
 ## <a name="see-also"></a>Vedere anche  
- [Integration Services &#40;SSIS&#41; le variabili](integration-services-ssis-variables.md)   
+ [Variabili di Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md)   
  [Utilizzo di variabili nei pacchetti](../../2014/integration-services/use-variables-in-packages.md)   
  [Impostare le proprietà di una variabile definita dall'utente](../../2014/integration-services/set-the-properties-of-a-user-defined-variable.md)   
  [Usare i valori di variabili e parametri in un pacchetto figlio](../../2014/integration-services/use-the-values-of-variables-and-parameters-in-a-child-package.md)  

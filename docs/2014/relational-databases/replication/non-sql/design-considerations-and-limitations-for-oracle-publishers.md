@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - Oracle publishing [SQL Server replication], design considerations and limitations
@@ -13,12 +12,12 @@ ms.assetid: 8d9dcc59-3de8-4d36-a61f-bc3ca96516b6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: db5225c9432f0ea86a90b299e9ff1ede70147e8f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8f9d7183d6e94f5808434090dd8fc998b946ed0f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48191471"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52810893"
 ---
 # <a name="design-considerations-and-limitations-for-oracle-publishers"></a>Considerazioni e limitazioni relative alla progettazione dei server di pubblicazione Oracle
   La pubblicazione da un database Oracle è progettata per funzionare in modo quasi identico alla pubblicazione da un database [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . È tuttavia necessario tenere conto delle limitazioni e dei problemi seguenti:  
@@ -60,7 +59,7 @@ ms.locfileid: "48191471"
   
 -   Tabelle nidificate  
   
--   Viste  
+-   Visualizzazioni  
   
 -   Pacchetti, corpi dei pacchetti, procedure e trigger  
   
@@ -104,7 +103,7 @@ ms.locfileid: "48191471"
   
  È inoltre consigliabile considerare quanto segue:  
   
--   Oracle e [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] consentono di gestire i valori NULL in modo differente. In Oracle sono supportate più righe con valori NULL per le colonne per consentono la specifica di valori NULL e sono incluse in vincoli o indici univoci. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] consente di applicare l'univocità mediante il supporto di una sola riga con un valore NULL per la stessa colonna. Non è possibile pubblicare un vincolo o un indice univoco che consente valori NULL in quanto nel Sottoscrittore si verifica una violazione di vincolo se la tabella pubblicata contiene più righe con valori NULL per una delle colonne incluse nell'indice o nel vincolo.  
+-   Oracle e [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] trattare NULL in modo diverso: Oracle sono supportate più righe con valori NULL per le colonne che ammettono valori NULL e sono incluse in vincoli o indici univoci. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] consente di applicare l'univocità mediante il supporto di una sola riga con un valore NULL per la stessa colonna. Non è possibile pubblicare un vincolo o un indice univoco che consente valori NULL in quanto nel Sottoscrittore si verifica una violazione di vincolo se la tabella pubblicata contiene più righe con valori NULL per una delle colonne incluse nell'indice o nel vincolo.  
   
 -   Durante la verifica dell'univocità, gli spazi vuoti finali in un campo vengono ignorati in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ma non in Oracle.  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - less than (<)
@@ -14,12 +13,12 @@ ms.assetid: 8674afdc-4276-46cb-be08-5aadfe8b9624
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 877c8f762b8f70c68ae3549417e0eeb3e3410473
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1bf00ad5c0fa4478b308ec3feb38a7896e186e81
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48156931"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52799766"
 ---
 # <a name="lt-less-than-ssis-expression"></a>&lt; (minore di) (espressione SSIS)
   Viene eseguito un confronto per determinare se la prima espressione è minore della seconda. L'analizzatore di espressioni converte automaticamente numerosi tipi di dati prima di eseguire il confronto.  
@@ -56,7 +55,7 @@ expression1 < expression2
     > [!NOTE]  
     >  Per i confronti di stringa viene applicata la distinzione tra maiuscole e minuscole, tra caratteri accentati e non accentati, la distinzione Kana e di larghezza.  
   
--   **Date, Time o Date/Time** Sia *expression1* che *expression2* devono restituire uno dei tipi di dati seguenti: DT_DBDATE, DT_DATE, DT_DBTIME, DT_DBTIME2, DT_DBTIMESTAMP, DT_DBTIMESTAMP2, DT_DBTIMESTAPMOFFSET o DT_FILETIME.  
+-   **Data, ora o data/ora** entrambe *expression1* e *expression2* deve restituire uno dei tipi di dati seguenti: DT_DBDATE, DT_DATE, DT_DBTIME, DT_DBTIME2, DT_DBTIMESTAMP, DT_DBTIMESTAMP2, DT_DBTIMESTAPMOFFSET o DT_FILETIME.  
   
     > [!NOTE]  
     >  Il sistema non supporta i confronti tra un'espressione che restituisce un tipo di dati di ora e un'espressione che restituisce una data o un tipo di dati di data/ora. Viene generato un errore.  
@@ -101,10 +100,10 @@ ListPrice < 500
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [&#62;&#40;Maggiore di&#41; &#40;espressione di SSIS&#41;](greater-than-ssis-expression.md)   
+ [&#62; &#40;maggiore di&#41; &#40;espressione SSIS&#41;](greater-than-ssis-expression.md)   
  [&#62;= &#40;maggiore o uguale a&#41; &#40;espressione SSIS&#41;](greater-than-or-equal-to-ssis-expression.md)   
  [&#60;= &#40;minore o uguale a&#41; &#40;espressione SSIS&#41;](less-than-or-equal-to-ssis-expression.md)   
  [Precedenza e associatività degli operatori](operator-precedence-and-associativity.md)   
- [Gli operatori &#40;espressione di SSIS&#41;](operators-ssis-expression.md)  
+ [Operatori &#40;espressione SSIS&#41;](operators-ssis-expression.md)  
   
   

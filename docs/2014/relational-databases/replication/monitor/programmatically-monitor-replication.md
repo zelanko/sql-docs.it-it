@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 dev_langs:
 - TSQL
@@ -29,12 +28,12 @@ ms.assetid: e8bf8850-8da5-4a4f-a399-64232b4e476d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d0b69773070201021390926e6da1a7fdd20d8fce
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 949c8585b3886d0d3f422e76d031b390d248e9a4
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48137286"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52813913"
 ---
 # <a name="programmatically-monitor-replication"></a>Monitoraggio della replica a livello di programmazione
   Monitoraggio replica è uno strumento grafico che consente di monitorare una topologia di replica. È possibile accedere agli stessi dati di monitoraggio a livello di programmazione utilizzando le stored procedure di replica [!INCLUDE[tsql](../../../includes/tsql-md.md)] o gli oggetti RMO (Replication Management Objects). Tali oggetti consentono di programmare le attività seguenti:  
@@ -173,7 +172,7 @@ ms.locfileid: "48137286"
   
 2.  Recuperare un oggetto <xref:Microsoft.SqlServer.Replication.PublisherMonitor> mediante uno dei modi indicati di seguito.  
   
-    -   Creare un'istanza della classe <xref:Microsoft.SqlServer.Replication.PublisherMonitor> . Impostare la proprietà <xref:Microsoft.SqlServer.Replication.PublisherMonitor.Name%2A> per il server di pubblicazione, quindi impostare la proprietà <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> sull'oggetto <xref:Microsoft.SqlServer.Management.Common.ServerConnection> creato nel passaggio 1. Chiamare il metodo <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> per recuperare le proprietà dell'oggetto. Se questo metodo restituisce `false`, il nome dell'autore è stato definito in modo non corretto o la pubblicazione non esiste.  
+    -   Creare un'istanza della classe <xref:Microsoft.SqlServer.Replication.PublisherMonitor> . Impostare la proprietà <xref:Microsoft.SqlServer.Replication.PublisherMonitor.Name%2A> per il server di pubblicazione, quindi impostare la proprietà <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> sull'oggetto <xref:Microsoft.SqlServer.Management.Common.ServerConnection> creato nel passaggio 1. Chiamare il metodo <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> per recuperare le proprietà dell'oggetto. Se questo metodo restituisce `false`, il nome del server di pubblicazione è definito in modo non corretto o la pubblicazione non esiste.  
   
     -   Utilizzare l'oggetto <xref:Microsoft.SqlServer.Replication.PublisherMonitorCollection> a cui si accede mediante la proprietà <xref:Microsoft.SqlServer.Replication.ReplicationMonitor.PublisherMonitors%2A> di un oggetto <xref:Microsoft.SqlServer.Replication.ReplicationMonitor> esistente.  
   
@@ -267,15 +266,15 @@ ms.locfileid: "48137286"
   
     -   *metricID* : un valore <xref:System.Int32> che rappresenta la misurazione del valore soglia di monitoraggio nella tabella riportata di seguito.  
   
-        |valore|Description|  
+        |Value|Descrizione|  
         |-----------|-----------------|  
-        |1|`expiration` -esegue il monitoraggio delle scadenze imminenti delle sottoscrizioni a pubblicazioni transazionali.|  
-        |2|`latency` -esegue il monitoraggio delle prestazioni delle sottoscrizioni di pubblicazioni transazionali.|  
-        |4|`mergeexpiration` -esegue il monitoraggio delle scadenze imminenti delle sottoscrizioni di pubblicazioni di tipo merge.|  
-        |5|`mergeslowrunduration` -Consente di monitorare la durata delle sincronizzazioni di tipo merge attraverso connessioni a larghezza di banda ridotta (accesso remoto).|  
-        |6|`mergefastrunduration` -Consente di monitorare la durata delle sincronizzazioni di tipo merge attraverso connessioni a banda larga (LAN).|  
+        |1|`expiration`: esegue il monitoraggio delle scadenze imminenti delle sottoscrizioni di pubblicazioni transazionali.|  
+        |2|`latency`: esegue il monitoraggio delle prestazioni delle sottoscrizioni di pubblicazioni transazionali.|  
+        |4|`mergeexpiration`: esegue il monitoraggio delle scadenze imminenti delle sottoscrizioni di pubblicazioni di tipo merge.|  
+        |5|`mergeslowrunduration`: esegue il monitoraggio della durata delle sincronizzazioni di tipo merge attraverso connessioni remote a larghezza di banda ridotta.|  
+        |6|`mergefastrunduration`: esegue il monitoraggio della durata delle sincronizzazioni di tipo merge attraverso connessioni LAN ad alta larghezza di banda.|  
         |7|`mergefastrunspeed` - esegue il monitoraggio della frequenza delle sincronizzazioni di tipo merge su connessioni tramite rete locale (LAN) a larghezza di banda elevata.|  
-        |8|`mergeslowrunspeed` -Consente di monitorare la frequenza di sincronizzazione delle sincronizzazioni di tipo merge attraverso connessioni a larghezza di banda ridotta (accesso remoto).|  
+        |8|`mergeslowrunspeed`: esegue il monitoraggio della velocità delle sincronizzazioni di tipo merge attraverso connessioni remote a larghezza di banda ridotta.|  
   
     -   *enable* - <xref:System.Boolean> che indica se la misurazione è attivata per la pubblicazione.  
   

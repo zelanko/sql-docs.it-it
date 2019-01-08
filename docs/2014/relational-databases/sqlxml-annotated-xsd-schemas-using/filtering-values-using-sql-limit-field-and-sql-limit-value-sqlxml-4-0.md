@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - annotated XSD schemas, filtering values
@@ -20,12 +18,12 @@ ms.assetid: c0f7ae92-eeec-430e-a66a-f22c3ae64a5e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 37e724d36094ceac2cb05b059a83de2a415e9476
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: df5907c3d61de7e3d1ce552c65fb5188f1ab33f9
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48224163"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52804463"
 ---
 # <a name="filtering-values-using-sqllimit-field-and-sqllimit-value-sqlxml-40"></a>Filtrare valori tramite sql:limit-field e sql:limit-value (SQLXML 4.0)
   È possibile limitare le righe restituite da una query di database in base a un valore di limitazione. Le annotazioni `sql:limit-field` e `sql:limit-value` vengono utilizzate per identificare la colonna di database che contiene valori di limitazione e per specificare un valore di limitazione specifico da utilizzare per filtrare i dati restituiti.  
@@ -121,7 +119,7 @@ ms.locfileid: "48224163"
     INSERT INTO Addresses values  
                (1, 'Obere Str. 57 Berlin', 'billing')  
     INSERT INTO Addresses values  
-               (1, 'Avda. de la Constitución 2222 México D.F.', 'shipping')  
+               (1, 'Avda. de la Constituci??n 2222 M??xico D.F.', 'shipping')  
     INSERT INTO Addresses values  
                (2, '120 Hanover Sq., London', 'billing')  
     INSERT INTO Addresses values  
@@ -150,13 +148,13 @@ ms.locfileid: "48224163"
   
      Per altre informazioni, vedere [utilizzo di ADO per eseguire query SQLXML](../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
- Risultato:  
+ Questo è il risultato:  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">   
   <Customer CustomerID="1" CompanyName="Company A">   
      <BillTo>Obere Str. 57 Berlin</BillTo>   
-     <ShipTo>Avda. de la Constitución 2222 México D.F.</ShipTo>   
+     <ShipTo>Avda. de la Constituci??n 2222 M??xico D.F.</ShipTo>   
   </Customer>   
   <Customer CustomerID="2" CompanyName="Company B">   
      <BillTo>120 Hanover Sq., London</BillTo>   
@@ -165,7 +163,7 @@ ms.locfileid: "48224163"
 </ROOT>  
 ```  
   
-### <a name="b-limiting-results-based-on-a-discount-value-of-type-real-data"></a>B. Limitare i risultati in base a un valore di sconto con tipo di dati real  
+### <a name="b-limiting-results-based-on-a-discount-value-of-type-real-data"></a>b. Limitare i risultati in base a un valore di sconto con tipo di dati real  
  In questo esempio un database contiene due tabelle:  
   
 -   Orders (OrderID)  
@@ -289,7 +287,7 @@ ms.locfileid: "48224163"
   
 5.  Eseguire il file TestQuery.vbs facendovi clic sopra in Esplora risorse.  
   
-     Risultato:  
+     Questo è il risultato:  
   
     ```  
     <root>  

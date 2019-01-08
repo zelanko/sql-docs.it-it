@@ -15,12 +15,12 @@ ms.assetid: ''
 author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 07fdcf0e38f6b48e70140f1ce5c7d9e29d329267
-ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
+ms.openlocfilehash: 1094d6fd52841a65afa58768dfaee9a05aa20810
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49643969"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53208290"
 ---
 # <a name="analyze-consolidated-assessment-reports-created-by-data-migration-assistant-with-power-bi"></a>Analizzare i report consolidati di valutazione creati dai Data Migration Assistant con Power BI
 
@@ -40,7 +40,7 @@ I report seguenti sono inclusi:
 
 - [Preparazione aggiornamenti in locale](#on-premises-upgrade-readiness--details)
 
-  L'origine dati è la visualizzazione UpgradeSuccessRanking nel database DMAReporting.  Questo report mostra il corretto aggiornamento percentuale per i database valutati.
+  L'origine dati è la visualizzazione UpgradeSuccessRanking nel database DMAReporting.  Questo report mostra il corretto aggiornamento percentuale per i database valutati.
 
 - [Parità delle funzionalità in locale](#on-premise-feature-parity--details)
 
@@ -48,7 +48,7 @@ I report seguenti sono inclusi:
 
 - [Azure SQL DB preparazione aggiornamenti](#azure-sql-db-upgrade-readiness--details)
 
-  L'origine dati è la visualizzazione UpgradeSuccessRanking nel database DMAReporting.  Questo report mostra il corretto aggiornamento percentuale per i database valutato per le migrazioni di database SQL di Azure.
+  L'origine dati è la visualizzazione UpgradeSuccessRanking nel database DMAReporting.  Questo report mostra il corretto aggiornamento percentuale per i database valutato per le migrazioni di database SQL di Azure.
 
 - [Funzionalità di Azure SQL DB non supportati](#azure-sql-db-unsupported-features--details)
 
@@ -74,17 +74,17 @@ I report seguenti sono inclusi:
 
 ![Report del dashboard](../dma/media/DashboardReport.png)
 
-Il dashboard Visualizza informazioni dettagliate su tutte le valutazioni. È possibile utilizzare i filtri dei dati sul lato sinistro per filtrare in base al database o istanza. È possibile utilizzare il grafico a barre per eseguire il drill-in categorie specifiche per vedere dove si trovano i problemi.
+Il dashboard Visualizza informazioni dettagliate su tutte le valutazioni. È possibile utilizzare i filtri dei dati sul lato sinistro per filtrare in base al database o istanza. È possibile utilizzare il grafico a barre per eseguire il drill-in categorie specifiche per vedere dove si trovano i problemi.
 
 Per eseguire il drill-, selezionare il cerchio con freccia in giù nell'angolo superiore destro del grafico a barre.
 
 ![Drill-down categoria](../dma/media/CategoryDrillDown.png)
 
-La sequenza di drill-down viene impostata come illustrato nell'immagine seguente (sotto **asse**). Per modificare la sequenza, trascinare le colonne nell'ordine desiderato.
+La sequenza di drill-down viene impostata come illustrato nell'immagine seguente (sotto **asse**). Per modificare la sequenza, trascinare le colonne nell'ordine desiderato.
 
 ![Visualizzazioni, asse del grafico a barre](../dma/media/VisualizationsAxis.png)
 
-In questa vista diventa ancora più potente quando si filtra prima di tutto per un database specifico e quindi eseguire il drill down i problemi di categoria specifica. Nell'esempio seguente è selezionato, ad esempio il database delle risorse Umane **SQL01** per visualizzare tutti gli oggetti che impediscono le migrazioni (modifiche di rilievo).
+In questa vista diventa ancora più potente quando si filtra prima di tutto per un database specifico e quindi eseguire il drill down i problemi di categoria specifica. Nell'esempio seguente è selezionato, ad esempio il database delle risorse Umane **SQL01** per visualizzare tutti gli oggetti che impediscono le migrazioni (modifiche di rilievo).
 
 ![Modifiche di rilievo per database delle risorse Umane](../dma/media/BreakingChanges.png)
 
@@ -92,9 +92,9 @@ In questa vista diventa ancora più potente quando si filtra prima di tutto per 
 
 ![Report di conformità di aggiornamento in locale](../dma/media/OnPremisesUpgradeReadinessReport.png)
 
-Questo report visualizza un'istantanea del livello di preparazione dei database devono eseguire la migrazione a una versione successiva di SQL Server. I dati in questo report provengono da dbo. UpgradeSuccessFactor\_OnPrem vista nel database DMAReporting.
+Questo report visualizza un'istantanea del livello di preparazione dei database devono eseguire la migrazione a una versione successiva di SQL Server. I dati in questo report provengono da dbo. UpgradeSuccessFactor\_OnPrem vista nel database DMAReporting.
 
-Filtro di istanza e nome del database e usando le schede di punteggio nella parte superiore, è possibile vedere quale versione di database è stato possibile eseguire la migrazione troppo. Ad esempio, se Filtra per il database AdventureWorks 2012, si noterà che il database è pronto a passare a tutte le versioni di SQL Server elencate nel report. Ciò è determinato dal assicurando che non sono presenti modifiche di rilievo per quel database e livello di compatibilità.
+Filtro di istanza e nome del database e usando le schede di punteggio nella parte superiore, è possibile vedere quale versione di database è stato possibile eseguire la migrazione troppo. Ad esempio, se Filtra per il database AdventureWorks 2012, si noterà che il database è pronto a passare a tutte le versioni di SQL Server elencate nel report. Ciò è determinato dal assicurando che non sono presenti modifiche di rilievo per quel database e livello di compatibilità.
 
 ![Fattore di successo aggiornamento per il database AdventureWorks](../dma/media/UpgradeSuccessFactor.png)
 
@@ -104,7 +104,7 @@ Filtro di istanza e nome del database e usando le schede di punteggio nella part
 
 Usare questo report per evidenziare le nuove funzionalità che può essere utilizzata per il database nella versione di SQL Server di destinazione.
 
-Quando si seleziona una funzionalità nel grafico a imbuto, i dati nella parte inferiore che evidenzia gli oggetti che sono interessati dalla funzionalità. Nell'esempio seguente, il **Stretch database per risparmiare spazio di archiviazione** funzionalità sia selezionata e una tabella viene indicata che possono trarre vantaggio da questa funzionalità.
+Quando si seleziona una funzionalità nel grafico a imbuto, i dati nella parte inferiore che evidenzia gli oggetti che sono interessati dalla funzionalità. Nell'esempio seguente, il **Stretch database per risparmiare spazio di archiviazione** funzionalità sia selezionata e una tabella viene indicata che possono trarre vantaggio da questa funzionalità.
 
 ![Consiglio di funzionalità per Stretch Database](../dma/media/FeatureRecommend_StretchDatabase.png)
 
@@ -112,7 +112,7 @@ Quando si seleziona una funzionalità nel grafico a imbuto, i dati nella parte i
 
 ![Report di preparazione aggiornamenti di Azure SQL DB](../dma/media/AzureSQLDBUpgradeReadinessReport.png)
 
-Questo report mostra la conformità del database per eseguire la migrazione al Database SQL di Azure V12. I dati da questo report provengono da dbo. UpgradeSuccessRanking vista nel database DMAReporting.
+Questo report mostra la conformità del database per eseguire la migrazione al Database SQL di Azure V12. I dati da questo report provengono da dbo. UpgradeSuccessRanking vista nel database DMAReporting.
 
 ### <a name="azure-features-parity-report"></a>Report di parità di funzionalità di Azure
 
@@ -120,7 +120,7 @@ Questo report mostra la conformità del database per eseguire la migrazione al D
 
 Usare questo report per evidenziare le *le funzionalità a livello di istanza* che non sono supportate da Azure SQL Database V12.
 
-Quando si seleziona una funzionalità nel grafico a imbuto, i dati nella parte inferiore sono elencate le istanze e funzionalità del database che non sono supportate. Nell'esempio seguente, viene selezionata questa funzionalità: **Always on configurazione gruppo di disponibilità non è supportata nel Database SQL di Azure**.  
+Quando si seleziona una funzionalità nel grafico a imbuto, i dati nella parte inferiore sono elencate le istanze e funzionalità del database che non sono supportate. Nell'esempio seguente, viene selezionata questa funzionalità: **Sempre sulla disponibilità del gruppo configurazione non è supportata nel Database SQL di Azure**.  
 
 ![Sempre nella funzionalità gruppo di disponibilità](../dma/media/Feature_AlwaysOnAvailability.png)
 

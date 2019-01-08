@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: ''
 ms.topic: reference
 helpviewer_keywords:
 - Visual Basic [SMO]
@@ -20,17 +18,17 @@ ms.assetid: a15949ef-88d9-4205-892e-0b66588b4fcc
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 893245a2716ad51b4204d6974f81147e2d51a4dc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e69a3ecab06b800ef1295c8c638b574135bf7b41
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48142021"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52799678"
 ---
 # <a name="programming-specific-tasks"></a>Programmazione di attività specifiche
   Tra le attività specifiche della programmazione tramite oggetti SMO sono incluse operazioni complesse richieste esclusivamente dai programmi che hanno una funzione specifica, ad esempio il backup, il monitoraggio delle statistiche, la replica, la gestione di istanze di oggetti e l'impostazione di opzioni di configurazione.  
   
-|Argomento|Description|  
+|Argomento|Descrizione|  
 |-----------|-----------------|  
 |[Uso di server collegati in SMO](using-linked-servers-in-smo.md)|Viene descritto l'utilizzo in SMO dell'oggetto <xref:Microsoft.SqlServer.Management.Smo.LinkedServer> per collegare server OLE-DB.|  
 |[Configurazione di SQL Server in SMO](configuring-sql-server-in-smo.md)|Viene descritto come visualizzare e modificare le impostazioni di configurazione per l'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in SMO.|  

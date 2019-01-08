@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent, starting
@@ -13,12 +13,12 @@ ms.assetid: 2ea332da-0ede-4d2b-b122-c4c10eaca191
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f96648fa643e4c080e1d7be66052b4739831a940
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0088ef5797b258d3c765a4548e3b1cae9d5e0a14
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48220471"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52783003"
 ---
 # <a name="autostart-sql-server-agent-sql-server-management-studio"></a>Autostart SQL Server Agent (SQL Server Management Studio)
   In questo argomento viene illustrata la configurazione di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent per il riavvio automatico in caso di arresto imprevisto in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -29,7 +29,7 @@ ms.locfileid: "48220471"
   
      [Limitazioni e restrizioni](#Restrictions)  
   
-     [Security](#Security)  
+     [Sicurezza](#Security)  
   
 -   [Per configurare SQL Server Agent per il riavvio automatico tramite SQL Server Management Studio](#SSMSProcedure)  
   

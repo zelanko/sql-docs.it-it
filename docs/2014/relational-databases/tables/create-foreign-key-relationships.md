@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: table-view-index
 ms.topic: conceptual
 helpviewer_keywords:
 - relationships [SQL Server], creating
@@ -13,12 +12,12 @@ ms.assetid: 867a54b8-5be4-46e6-9702-49ae6dabf67c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c1b52e98fe47049640a2ee5a3240d9ad43961bae
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8b5789a277eac84d9753a180b418c05c5fd71d09
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48128776"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52794773"
 ---
 # <a name="create-foreign-key-relationships"></a>Creare relazioni di chiave esterna
   In questo argomento si illustra come creare relazioni di chiave esterna in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Una relazione tra due tabelle consente di stabilire un'associazione tra le righe di una tabella e le righe di un'altra tabella.  
@@ -29,7 +28,7 @@ ms.locfileid: "48128776"
   
      [Limitazioni e restrizioni](#Restrictions)  
   
-     [Security](#Security)  
+     [Sicurezza](#Security)  
   
 -   **Per creare relazioni di chiave esterna utilizzando:**  
   
@@ -84,7 +83,7 @@ ms.locfileid: "48128776"
   
 4.  Fare clic sulla relazione nell'elenco **Relazione selezionata** .  
   
-5.  Fare clic su **Specifica tabelle e colonne** nella griglia a destra, quindi sui puntini di sospensione (**…**) a destra della proprietà.  
+5.  Fare clic su **Specifica tabelle e colonne** nella griglia a destra e quindi sul pulsante con i puntini di sospensione (**...**) a destra della proprietà.  
   
 6.  Nella finestra di dialogo **Tabelle e colonne** selezionare dall'elenco a discesa **Chiave primaria** la tabella che si troverà sul lato chiave primaria della relazione.  
   
@@ -94,7 +93,7 @@ ms.locfileid: "48128776"
   
 8.  Scegliere **OK** per creare la relazione.  
   
-##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
   
 #### <a name="to-create-a-foreign-key-in-a-new-table"></a>Per creare una chiave esterna in una nuova tabella  
   

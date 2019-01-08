@@ -14,12 +14,12 @@ ms.assetid: 298eafca-e01f-4707-8c29-c75546fcd6b0
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: d99c70928dfc1d3de2ff02499c0b33a173cf888a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: df06fb9ccbf4f3683877605e321207f0ca6d997e
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48195141"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52797743"
 ---
 # <a name="dml-triggers"></a>Trigger DML
   Un trigger DML è un tipo speciale di stored procedure che diventa effettiva automaticamente quando viene eseguito un evento del linguaggio DML (Data Manipulation Language) che influisce sulla vista o tabella definita nel trigger. Gli eventi DML includono istruzioni INSERT, UPDATE o DELETE. I trigger DML possono essere utilizzati per applicare regole business e l'integrità dei dati, eseguire query su altre tabelle e includere istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] complesse. Il trigger e l'istruzione che lo attiva vengono considerati come una singola transazione, di cui è possibile eseguire il rollback dal trigger stesso. Se viene rilevato un errore grave, ad esempio un'insufficienza di spazio su disco, viene eseguito automaticamente il rollback dell'intera transazione.  
@@ -59,7 +59,7 @@ ms.locfileid: "48195141"
 |Applicabilità|Tabelle|Tabelle e viste|  
 |Quantità per tabella o vista|Multiplo per azione di trigger (UPDATE, DELETE e INSERT)|Singolo per azione di trigger (UPDATE, DELETE e INSERT)|  
 |Riferimenti di propagazione|Nessuna restrizione|I trigger INSTEAD OF UPDATE e DELETE non sono consentiti in tabelle che rappresentano le destinazioni di vincoli di integrità per operazioni referenziali di propagazione|  
-|Esecuzione|Dopo:<br /><br /> Elaborazione dei vincoli<br />Operazioni referenziali dichiarative<br />Creazione di tabelle**inserted** e **deleted** <br />Operazione di trigger|Prima: elaborazione dei vincoli<br /><br /> Invece di: operazione di trigger<br /><br /> Dopo: creazione di tabelle  **inserted** e **deleted**|  
+|Esecuzione|Dopo:<br /><br /> Elaborazione dei vincoli<br />Operazioni referenziali dichiarative<br />Creazione di tabelle**inserted** e **deleted** <br />Operazione di trigger|Prima di: Elaborazione dei vincoli<br /><br /> In sostituzione di:  Operazione di trigger<br /><br /> Dopo: creazione di tabelle  **inserted** e **deleted**|  
 |Ordine di esecuzione|È possibile specificare la prima e l'ultima esecuzione|Non applicabile|  
 |`varchar(max)`, `nvarchar(max)`, e `varbinary(max)` fa riferimento a colonna nelle **inserito** e **eliminato** tabelle|Allowed|Allowed|  
 |`text`, `ntext`, e `image` fa riferimento a colonna nelle **inserito** e **eliminato** tabelle|Non consentiti|Allowed|  

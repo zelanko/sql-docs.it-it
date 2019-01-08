@@ -21,24 +21,24 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 247b89dcacc30417d01160c490010909cfbf5cfd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2332e4f80e0dded930b22d9f0faf76d80ec09141
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47839079"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52413413"
 ---
 # <a name="sysdmexecquerymemorygrants-transact-sql"></a>sys.dm_exec_query_memory_grants (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Restituisce informazioni su tutte le query che hanno richiesto e sono in attesa di una concessione di memoria o assegnato una concessione di memoria. Le query che non richiedono una concessione di memoria non verranno visualizzati in questa visualizzazione. Ad esempio, l'ordinamento e hash join operazioni hanno concessioni di memoria per l'esecuzione di query, mentre le query senza un' **ORDER BY** clausola non avrà una memoria concedere.  
   
- In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], le viste a gestione dinamica non possono esporre le informazioni che influenzerebbero l'indipendenza del database o le informazioni sugli altri database a cui l'utente dispone di accesso. Per evitare di esporre queste informazioni, ogni riga che contiene dati che non appartengono al tenant connesso viene esclusa tramite filtro. Inoltre, i valori nelle colonne **scheduler_id**, **wait_order**, **pool_id**, **group_id** vengono filtrati; è impostato il valore della colonna su NULL.  
+ In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], le viste a gestione dinamica non possono esporre le informazioni che influenzerebbero l'indipendenza del database o le informazioni sugli altri database a cui l'utente dispone di accesso. Per evitare di esporre queste informazioni, ogni riga che contiene dati che non appartengono al tenant connesso viene filtrata. Inoltre, i valori nelle colonne **scheduler_id**, **wait_order**, **pool_id**, **group_id** vengono filtrati; è impostato il valore della colonna su NULL.  
   
 > [!NOTE]  
 > Per chiamare questo elemento dal [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] oppure [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], usare il nome **sys.dm_pdw_nodes_exec_query_memory_grants**.  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**session_id**|**smallint**|ID (SPID) della sessione nella quale viene eseguita la query.|  
 |**request_id**|**int**|ID della richiesta. Valore univoco nel contesto della sessione.|  
@@ -53,7 +53,7 @@ ms.locfileid: "47839079"
 |**max_used_memory_kb**|**bigint**|Memoria fisica massima utilizzata fino a questo momento, espressa in kilobyte.|  
 |**query_cost**|**float**|Costo stimato della query.|  
 |**timeout_sec**|**int**|Timeout in secondi prima che la query rinunci alla richiesta di concessione di memoria.|  
-|**resource_semaphore_id**|**smallint**|ID non univoco del semaforo di risorsa su cui la query è in attesa.<br /><br /> **Nota:** questo ID è univoco nelle versioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] precedenti a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]. La modifica può influire sulla risoluzione dei problemi relativi all'esecuzione di query. Per ulteriori informazioni, vedere la sezione "Osservazioni" di seguito in questo argomento.|  
+|**resource_semaphore_id**|**smallint**|ID non univoco del semaforo di risorsa su cui la query è in attesa.<br /><br /> **Nota:** L'ID è univoco nelle versioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] precedenti a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]. La modifica può influire sulla risoluzione dei problemi relativi all'esecuzione di query. Per ulteriori informazioni, vedere la sezione "Osservazioni" di seguito in questo argomento.|  
 |**queue_id**|**smallint**|ID della coda nella quale la query sta attendendo la concessione di memoria. È NULL se la memoria è già stata concessa.|  
 |**wait_order**|**int**|Ordine sequenziale delle query in attesa specificata **queue_id**. Questo valore può variare in caso di timeout o di concessione di memoria ad altre query. È NULL se la memoria è già stata concessa.|  
 |**is_next_candidate**|**bit**|Candidato alla concessione di memoria successiva.<br /><br /> 1 = Sì<br /><br /> 0 = No<br /><br /> NULL = Memoria già concessa|  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - publications [SQL Server replication], design and performance
@@ -20,12 +19,12 @@ ms.assetid: f929226f-b83d-4900-a07c-a62f64527c7f
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 72a781fb802609ed778c46e50459a4253dbb3507
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 82452c5e0d4ddff21870ff341673da6d11b18f40
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48175657"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52772021"
 ---
 # <a name="enhance-merge-replication-performance"></a>Miglioramento delle prestazioni della replica di tipo merge
   Dopo aver valutato i suggerimenti relativi alle prestazioni generali descritti in [Miglioramento delle prestazioni generali della replica](enhance-general-replication-performance.md), è opportuno considerare questi ulteriori aspetti specifici della replica di tipo merge.  
@@ -42,7 +41,7 @@ ms.locfileid: "48175657"
   
 -   ‏Si considerino le tabelle in fase di sovranormalizzazione che includono tipi di dati LOB (Large Object).  
   
-     Quando viene eseguita la sincronizzazione, è possibile che l'agente di merge debba leggere e trasferire l'intera riga di dati da un server di pubblicazione o un Sottoscrittore. Se la riga include colonne con dati LOB, questo processo può richiedere l'allocazione di memoria aggiuntiva e influire negativamente sulle prestazioni anche se tali colonne non sono state aggiornate. Per ridurre la probabilità di tale impatto negativo sulle prestazioni, è possibile inserire le colonne LOB in una tabella distinta utilizzando una relazione uno-a-uno con la parte rimanente della riga di dati. I tipi di dati `text`, `ntext`, e `image` sono deprecati. Se è necessario includere dati LOB, è consigliabile usare i tipi di dati `varchar(max)`, `nvarchar(max)`, `varbinary(max)`, rispettivamente.  
+     Quando viene eseguita la sincronizzazione, è possibile che l'agente di merge debba leggere e trasferire l'intera riga di dati da un server di pubblicazione o un Sottoscrittore. Se la riga include colonne con dati LOB, questo processo può richiedere l'allocazione di memoria aggiuntiva e influire negativamente sulle prestazioni anche se tali colonne non sono state aggiornate. Per ridurre la probabilità di tale impatto negativo sulle prestazioni, è possibile inserire le colonne LOB in una tabella distinta utilizzando una relazione uno-a-uno con la parte rimanente della riga di dati. I tipi di dati `text`, `ntext` e `image` sono deprecati. Se è necessario includere dati LOB, è consigliabile utilizzare rispettivamente i tipi di dati `varchar(max)`, `nvarchar(max)` e `varbinary(max)`.  
   
 ## <a name="publication-design"></a>Progettazione della pubblicazione  
   
@@ -101,9 +100,9 @@ ms.locfileid: "48175657"
   
      Se si aggiorna il Sottoscrittore a [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] o versione successiva, viene aggiornato anche l'agente di merge utilizzato dalle sottoscrizioni nel Sottoscrittore. Per poter utilizzare molte delle nuove funzionalità e ottimizzazioni delle prestazioni, è necessario l'agente di merge di [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] o versione successiva.  
   
--   Se la sincronizzazione di una sottoscrizione avviene con una connessione veloce e le modifiche vengono inviate dal server di pubblicazione e dal Sottoscrittore, usare il parametro **–ParallelUploadDownload** per l'agente di merge.  
+-   Se la sincronizzazione di una sottoscrizione avviene con una connessione veloce e le modifiche vengono inviate dal server di pubblicazione e dal Sottoscrittore, usare il parametro **-ParallelUploadDownload** per l'agente di merge.  
   
-     [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] ha introdotto un nuovo parametro dell'agente di merge, ovvero **–ParallelUploadDownload**. L'impostazione di questo parametro consente di elaborare in parallelo le modifiche caricate nel server di pubblicazione e le modifiche scaricate nel Sottoscrittore. Ciò è utile negli ambienti caratterizzati da volumi di traffico elevati con un'ampia larghezza di banda di rete. I parametri degli agenti possono essere specificati nei profili agente e dalla riga di comando. Per altre informazioni, vedere:  
+     In [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] è stato introdotto un nuovo parametro dell'agente di merge, ovvero **-ParallelUploadDownload**. L'impostazione di questo parametro consente di elaborare in parallelo le modifiche caricate nel server di pubblicazione e le modifiche scaricate nel Sottoscrittore. Ciò è utile negli ambienti caratterizzati da volumi di traffico elevati con un'ampia larghezza di banda di rete. I parametri degli agenti possono essere specificati nei profili agente e dalla riga di comando. Per altre informazioni, vedere:  
   
     -   [Usare i profili agenti di replica](../agents/replication-agent-profiles.md)  
   
@@ -141,7 +140,7 @@ ms.locfileid: "48175657"
   
 -   Eseguire occasionalmente la reindicizzazione delle tabelle di sistema per la replica di tipo merge.  
   
-     Come parte della manutenzione per la replica di tipo merge, controllare occasionalmente l'aumento delle dimensioni delle tabelle di sistema associate alla replica di tipo merge: **MSmerge_contents**, **MSmerge_genhistory**e **MSmerge_tombstone**, **MSmerge_current_partition_mappings**e **MSmerge_past_partition_mappings**. Reindicizzare periodicamente queste tabelle. Per altre informazioni, vedere [Riorganizzare e ricompilare gli indici](../../indexes/reorganize-and-rebuild-indexes.md).  
+     Come parte della manutenzione per la replica di tipo merge, controllare occasionalmente l'aumento delle dimensioni delle tabelle di sistema associate alla replica di tipo merge: **MSmerge_contents**, **MSmerge_genhistory**, e **MSmerge_tombstone**, **MSmerge_current_partition_mappings**, e **msmerge _ past_partition_mappings**. Reindicizzare periodicamente queste tabelle. Per altre informazioni, vedere [Riorganizzare e ricompilare gli indici](../../indexes/reorganize-and-rebuild-indexes.md).  
   
 -   Monitorare le prestazioni della sincronizzazione utilizzando la scheda **Cronologia sincronizzazione** in Monitoraggio replica.  
   

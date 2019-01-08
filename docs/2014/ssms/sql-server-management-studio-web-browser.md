@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - hosting Web browsers
@@ -14,12 +14,12 @@ ms.assetid: 493dd3d0-50c6-4d8d-aba1-cd7c3030a581
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bf954bf4e49677ea562e96843f0d69339f73c6a5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4d8969e2a299f501fb35eb56a435c6a2e56a5bb2
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48108831"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52763923"
 ---
 # <a name="sql-server-management-studio-web-browser"></a>Browser di SQL Server Management Studio
   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] contiene una versione di [!INCLUDE[msCoName](../includes/msconame-md.md)] Internet Explorer. Questo browser consente di esplorare URL e di visualizzare la Guida di MSDN Library senza uscire da [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Per accedere al browser, scegliere **Browser** dal menu **Visualizza** e fare clic su **Visualizza browser**.  

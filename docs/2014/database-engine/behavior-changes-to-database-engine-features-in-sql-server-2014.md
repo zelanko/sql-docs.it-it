@@ -15,12 +15,12 @@ ms.assetid: 65eaafa1-9e06-4264-b547-cbee8013c995
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 84c24494797a96670fc6abd5e8fd6fd409b0a705
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a951590c1284f39cb2dfea1f9e97c05a04a3e7ca
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48226271"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52520374"
 ---
 # <a name="behavior-changes-to-database-engine-features-in-sql-server-2014"></a>Differenze di funzionamento delle funzionalità del Motore di database in SQL Server 2014
   In questo argomento vengono descritte le modifiche di comportamento introdotte nel [!INCLUDE[ssDE](../includes/ssde-md.md)]. Queste modifiche influiscono sulle modalità di utilizzo o di interazione delle funzionalità in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] rispetto alle versioni precedenti di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
@@ -36,10 +36,10 @@ ms.locfileid: "48226271"
  Il [SET FMTONLY](/sql/t-sql/statements/set-fmtonly-transact-sql) opzione per la determinazione del formato di una risposta senza eseguire effettivamente la query viene sostituita con [sp_describe_first_result_set &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql), [sp_describe_undeclared_parameters &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql), [DM exec_describe_first_result_set &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql), e [vista exec_describe_first_result_set_for_object &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql).  
   
 ### <a name="changes-to-behavior-in-scripting-a-sql-server-agent-task"></a>Modifiche al comportamento di script di un'attività di SQL Server Agent  
- In [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] se si crea un nuovo processo copiando lo script da un processo esistente, il nuovo potrebbe inavvertitamente influire su quello esistente. Per creare un nuovo processo utilizzando lo script di un processo esistente, eliminare manualmente il parametro *@schedule_uid* che in genere è l'ultimo parametro della sezione tramite cui viene creata la pianificazione del processo in quello esistente. Verrà creata una nuova pianificazione indipendente per il nuovo processo senza influire sui processi esistenti.  
+ In [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]se si crea un nuovo processo copiando lo script da un processo esistente, il nuovo potrebbe inavvertitamente influire su quello esistente. Per creare un nuovo processo utilizzando lo script di un processo esistente, eliminare manualmente il parametro *@schedule_uid* che in genere è l'ultimo parametro della sezione tramite cui viene creata la pianificazione del processo in quello esistente. Verrà creata una nuova pianificazione indipendente per il nuovo processo senza influire sui processi esistenti.  
   
 ### <a name="constant-folding-for-clr-user-defined-functions-and-methods"></a>Elaborazione delle costanti in fase di compilazione per funzioni e metodi CLR definiti dall'utente  
- In [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] è ora possibile eseguire l'elaborazione delle costanti in fase di compilazione per i seguenti oggetti CLR definiti dall'utente:  
+ In [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]è ora possibile eseguire l'elaborazione delle costanti in fase di compilazione per i seguenti oggetti CLR definiti dall'utente:  
   
 -   Funzioni CLR definite dall'utente con valori scalari deterministici.  
   
@@ -78,10 +78,10 @@ select geometry::Parse('POLYGON EMPTY').STEnvelope().ToString()
  Il `LOG` funzione include ora facoltativa *base* parametro. Per altre informazioni, vedere [LOG &#40;Transact-SQL&#41;](/sql/t-sql/functions/log-transact-sql).  
   
 ### <a name="statistics-computation-during-partitioned-index-operations-has-changed"></a>Modifica del calcolo delle statistiche durante operazioni su indici partizionati  
- In [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] le statistiche non vengono create analizzando tutte le righe nella tabella se viene creato o ricompilato un indice partizionato. Query Optimizer utilizza invece l'algoritmo di campionamento predefinito per generare statistiche. Dopo avere aggiornato un database con gli indici partizionati, è possibile notare una differenza nei dati dell'istogramma relativamente a tali indici. Tale cambiamento potrebbe non influire sulle prestazioni di query. Per ottenere statistiche sugli indici partizionati analizzando tutte le righe nella tabella, utilizzare CREATE STATISTICS o UPDATE STATISTICS con la clausola FULLSCAN.  
+ In [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]le statistiche non vengono create analizzando tutte le righe nella tabella se viene creato o ricompilato un indice partizionato. Query Optimizer utilizza invece l'algoritmo di campionamento predefinito per generare statistiche. Dopo avere aggiornato un database con gli indici partizionati, è possibile notare una differenza nei dati dell'istogramma relativamente a tali indici. Tale cambiamento potrebbe non influire sulle prestazioni di query. Per ottenere statistiche sugli indici partizionati analizzando tutte le righe nella tabella, utilizzare CREATE STATISTICS o UPDATE STATISTICS con la clausola FULLSCAN.  
   
 ### <a name="data-type-conversion-by-the-xml-value-method-has-changed"></a>Modifica della conversione del tipo di dati mediante il metodo relativo al valore XML  
- Il comportamento interno del metodo `value` del tipo di dati `xml` è cambiato. Con questo metodo è possibile eseguire un'espressione XQuery sul codice XML ottenendo un valore scalare del tipo di dati specificato di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Il tipo xs deve essere convertito nel tipo di dati di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. In precedenza, con il metodo `value` era possibile convertire internamente il valore di origine in xs:string e, successivamente, convertire xs:string nel tipo di dati di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. In [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] la conversione a xs:string viene ignorata nei casi seguenti:  
+ Il comportamento interno del metodo `value` del tipo di dati `xml` è cambiato. Con questo metodo è possibile eseguire un'espressione XQuery sul codice XML ottenendo un valore scalare del tipo di dati specificato di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Il tipo xs deve essere convertito nel tipo di dati di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . In precedenza, con il metodo `value` era possibile convertire internamente il valore di origine in xs:string e, successivamente, convertire xs:string nel tipo di dati di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. In [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]la conversione a xs:string viene ignorata nei casi seguenti:  
   
 |Tipo di dati XS di origine|Tipo di dati di SQL Server di destinazione|  
 |-------------------------|--------------------------------------|  
@@ -99,10 +99,10 @@ select geometry::Parse('POLYGON EMPTY').STEnvelope().ToString()
  `Arithmetic overflow error converting expression to data type smallint.`  
   
 ### <a name="sqlcmdexe-behavior-change-in-xml-mode"></a>Modifica del comportamento del file sqlcmd.exe in modalità XML  
- Se si utilizza sqlcmd.exe con modalità XML (comando :XML ON) quando si esegue un'istruzione SELECT da T FOR XML …., sono previste modifiche del comportamento.  
+ Sono presenti modifiche del comportamento se si usa sqlcmd.exe con modalità XML (: comando XML ON) quando si esegue un'istruzione SELECT * da T FOR XML...  
   
 ### <a name="dbcc-checkident-revised-message"></a>Revisione del messaggio restituito da DBCC CHECKIDENT  
- Nelle [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], il messaggio restituito dal comando DBCC CHECKIDENT è cambiato solo quando viene utilizzato con RESEED *new_reseed_value* per modificare il valore identity corrente. Il nuovo messaggio è "controllo delle informazioni identity: valore identity corrente '\<valore identity corrente >'. Esecuzione DBCC completata. Se sono stati visualizzati messaggi di errore DBCC, rivolgersi all'amministratore di sistema".  
+ In [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]il messaggio restituito dal comando DBCC CHECKIDENT è cambiato solo se utilizzato con RESEED *new_reseed_value*  per modificare il valore Identity corrente. Il nuovo messaggio è "controllo delle informazioni identity: valore identity corrente '\<valore identity corrente >'. Esecuzione DBCC completata. Se sono stati visualizzati messaggi di errore DBCC, rivolgersi all'amministratore di sistema".  
   
  Nelle versioni precedenti, il messaggio è "controllo delle informazioni identity: valore identity corrente '\<valore identity corrente >', valore della colonna corrente '\<valore della colonna corrente >'. Esecuzione DBCC completata. Se sono stati visualizzati messaggi di errore DBCC, rivolgersi all'amministratore di sistema". Il messaggio è invariato quando DBCC CHECKIDENT viene specificato con NORESEED, senza un secondo parametro o senza il valore reseed. Per altre informazioni, vedere [DBCC CHECKIDENT &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-checkident-transact-sql).  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - connection managers [Integration Services], ADO.NET
@@ -15,19 +14,19 @@ ms.assetid: fc5daa2f-0159-4bda-9402-c87f1035a96f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7452c96f624199bb2dca7d1b817b60ce68dafb42
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c58df877a98ac5c62aeb7d7ca45beed7f129eaf0
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48147554"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52799813"
 ---
 # <a name="adonet-connection-manager"></a>Gestione connessione ADO.NET
   Una gestione connessione [!INCLUDE[vstecado](../../includes/vstecado-md.md)] consente l'accesso di un pacchetto alle origini dati tramite un provider .NET. Questa gestione connessione viene di solito usata per accedere a origini dati quali [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], nonché a origini dati esposte tramite OLE DB e XML in attività personalizzate scritte in codice gestito, usando un linguaggio come C#.  
   
  Quando si aggiunge un [!INCLUDE[vstecado](../../includes/vstecado-md.md)] gestione connessione a un pacchetto [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] crea una connessione di gestione che viene risolto come un [!INCLUDE[vstecado](../../includes/vstecado-md.md)] connessione in fase di esecuzione, imposta le proprietà di gestione connessione e aggiunge la gestione connessione il `Connections` raccolta nel pacchetto.  
   
- Il `ConnectionManagerType` della gestione connessione viene impostata su `ADO.NET`. Il valore di `ConnectionManagerType` è qualificato con il nome del provider .NET utilizzato dalla gestione connessione.  
+ La proprietà `ConnectionManagerType` della gestione connessione viene impostata su `ADO.NET`. Il valore di `ConnectionManagerType` è qualificato con il nome del provider .NET utilizzato dalla gestione connessione.  
   
 ## <a name="adonet-connection-manager-troubleshooting"></a>Risoluzione dei problemi relativi alla gestione connessione ADO.NET  
  È possibile registrare le chiamate eseguite dalla gestione connessione [!INCLUDE[vstecado](../../includes/vstecado-md.md)] a provider di dati esterni. Questa nuova funzionalità di registrazione può essere utilizzata per risolvere i problemi relativi alle connessioni stabilite dalla gestione connessione [!INCLUDE[vstecado](../../includes/vstecado-md.md)] a origini dati esterne. Per registrare le chiamate eseguite dalla gestione connessione [!INCLUDE[vstecado](../../includes/vstecado-md.md)] a provider di dati esterni, abilitare la registrazione dei pacchetti e selezionare l'evento **Diagnostic** a livello di pacchetto. Per altre informazioni, vedere [Risoluzione dei problemi relativi agli strumenti per l'esecuzione del pacchetto](../troubleshooting/troubleshooting-tools-for-package-execution.md).  
@@ -61,9 +60,9 @@ ms.locfileid: "48147554"
   
 -   [Configura gestione connessione ADO.NET](../configure-ado-net-connection-manager.md)  
   
- Per informazioni sulla configurazione di una gestione connessione a livello di codice, vedere <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> e [aggiunta di connessioni a livello di programmazione](../building-packages-programmatically/adding-connections-programmatically.md).  
+ Per informazioni sulla configurazione di una gestione connessione a livello di programmazione, vedere l'articolo relativo a <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> e [Aggiunta di connessioni a livello di programmazione](../building-packages-programmatically/adding-connections-programmatically.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Integration Services &#40;SSIS&#41; le connessioni](integration-services-ssis-connections.md)  
+ [Connessioni in Integration Services &#40;SSIS&#41;](integration-services-ssis-connections.md)  
   
   

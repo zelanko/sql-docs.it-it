@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.newpubwizard.pubproperties.subscriptionoptions.f1
@@ -13,12 +12,12 @@ ms.assetid: 31abd605-b273-419d-86df-d0ecf539a507
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2c36b2de74fd93c36da61e186a1bb3a6a56382d9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9c630646aa81ebaeccf49f729299394419b7099a
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48080521"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52753853"
 ---
 # <a name="publication-properties-subscription-options"></a>Proprietà pubblicazione, Opzioni sottoscrizione
   La pagina **Opzioni sottoscrizione** della finestra di dialogo **Proprietà pubblicazione** consente di visualizzare e impostare le proprietà a livello di pubblicazione associate alle sottoscrizioni. Le proprietà sono raggruppate nelle categorie seguenti:  
@@ -107,7 +106,7 @@ ms.locfileid: "48080521"
   
 ### <a name="filtering"></a>Filtro  
  **Consenti filtri con parametri**  
- Viene impostata in base al fatto che una pubblicazione utilizzi i filtri con parametri. Questa opzione è sempre di sola lettura. Per altre informazioni sui filtri di riga con parametri, vedere [Filtri di riga con parametri](merge/parameterized-filters-parameterized-row-filters.md).  
+ Viene impostata in base al fatto che una pubblicazione utilizzi i filtri con parametri. Questa opzione è sempre di sola lettura. Per altre informazioni, vedere [Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md).  
   
  **Convalida Sottoscrittori**  
  Determina le funzioni da utilizzare per convalidare che un Sottoscrittore disponga della partizione dati corretta. È possibile immettere più valori separandoli con una virgola. Per altre informazioni, vedere [Convalidare le informazioni sulle partizioni per un Sottoscrittore di tipo merge](validate-partition-information-for-a-merge-subscriber.md).  

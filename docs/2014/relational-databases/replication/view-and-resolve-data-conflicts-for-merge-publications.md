@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - merge replication conflict resolution [SQL Server replication], viewing conflicts
@@ -15,12 +14,12 @@ ms.assetid: aeee9546-4480-49f9-8b1e-c71da1f056c7
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0eebecfdb3852445fc8c113d25524414dd03fc13
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8810377a7e676d4376fca3cc52e73d6c507dbd21
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48113021"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52770814"
 ---
 # <a name="view-and-resolve-data-conflicts-for-merge-publications-sql-server-management-studio"></a>Visualizzazione e risoluzione di conflitti di dati per le pubblicazioni di tipo merge (SQL Server Management Studio)
   I conflitti nella replica di tipo merge vengono risolti in base al sistema di risoluzione specificato per ogni articolo. Per impostazione predefinita, i conflitti vengono risolti senza che sia necessario l'intervento dell'utente. È tuttavia possibile visualizzare i conflitti e modificare il risultato della risoluzione nel Visualizzatore conflitti di replica [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
@@ -52,7 +51,7 @@ ms.locfileid: "48113021"
 3.  Fare clic con il pulsante destro del mouse sulla pubblicazione per la quale si desidera visualizzare i conflitti e quindi scegliere **Visualizza conflitti**.  
   
     > [!NOTE]  
-    >  Se è stato specificato il valore **'subscriber'** per la proprietà **conflict_logging** , la voce di menu **Visualizza conflitti** non sarà disponibile. Per visualizzare i conflitti, avviare ConflictViewer.exe dal prompt dei comandi. Per impostazione predefinita, ConflictViewer.exe si trova nella directory Microsoft SQL Server\100\Tools\Binn\VSShell\Common7\IDE. Per un elenco di parametri di avvio validi, eseguire ConflictViewer.exe -?.  
+    >  Se è stato specificato il valore **'subscriber'** per la proprietà **conflict_logging** , la voce di menu **Visualizza conflitti** non sarà disponibile. Per visualizzare i conflitti, avviare ConflictViewer.exe dal prompt dei comandi. Per impostazione predefinita, ConflictViewer.exe si trova nella directory seguente: Microsoft SQL Server\100\Tools\Binn\VSShell\Common7\IDE. Per un elenco di parametri di avvio validi, eseguire ConflictViewer.exe -?.  
   
 4.  Nella finestra di dialogo **Seleziona tabella con conflitti** selezionare un database, una pubblicazione e una tabella per cui visualizzare i conflitti.  
   
@@ -64,7 +63,7 @@ ms.locfileid: "48113021"
   
     -   Selezionare una o più righe nella griglia superiore e quindi fare clic su **Rimuovi**, che equivale a fare clic sul pulsante **Invia riga in conflitto confermata** , senza apportare alcuna modifica ai dati.  
   
-    -   Fare clic sul pulsante delle proprietà (**…**) per visualizzare ulteriori informazioni su una colonna coinvolta in un conflitto.  
+    -   Fare clic sul pulsante delle proprietà (**...**) per visualizzare altre informazioni su una colonna coinvolta in un conflitto.  
   
     -   Modificare i dati nella colonna **Riga in conflitto confermata** o **Riga in conflitto ignorata** prima di inviare i dati, che sono di sola lettura se la colonna è grigia.  
   

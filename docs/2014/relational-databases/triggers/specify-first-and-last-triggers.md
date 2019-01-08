@@ -16,23 +16,23 @@ ms.assetid: 9e6c7684-3dd3-46bb-b7be-523b33fae4d5
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 199b3723decf7ab487b7413eec5a1c4220836d50
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a851a19a7f00afd055bb2ee8f00eaf4621a1e98f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48208651"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52782013"
 ---
 # <a name="specify-first-and-last-triggers"></a>Specifica dei primi e degli ultimi trigger
   È possibile specificare che uno dei trigger AFTER associati a una tabella sia il primo oppure l'ultimo trigger AFTER che viene attivato per ogni azione di trigger INSERT, DELETE e UPDATE. I trigger AFTER compresi fra il primo e l'ultimo vengono eseguiti in base a un ordine non definito.  
   
  Per specificare l'ordine per un trigger AFTER, usare la stored procedure **sp_settriggerorder** . **sp_settriggerorder** ha le opzioni seguenti.  
   
-|Opzione|Description|  
+|Opzione|Descrizione|  
 |------------|-----------------|  
 |**Primo**|Specifica che il trigger DML è il primo trigger AFTER attivato per un'azione di trigger.|  
 |**Ultimo**|Specifica che il trigger DML è l'ultimo trigger AFTER attivato per un'azione di trigger.|  
-|**Nessuno**|Specifica che non esiste un ordine specifico per l'attivazione del trigger DML. Viene utilizzata principalmente per reimpostare un trigger precedentemente designato come primo o ultimo.|  
+|**None**|Specifica che non esiste un ordine specifico per l'attivazione del trigger DML. Viene utilizzata principalmente per reimpostare un trigger precedentemente designato come primo o ultimo.|  
   
  L'esempio seguente mostra l'utilizzo di **sp_settriggerorder**:  
   

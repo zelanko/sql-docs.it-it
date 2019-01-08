@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 720956a936127cf3fec82fabc4e140782fe2e0da
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: f76729b419fccf3d17e66ddd8ab00e8b54b1b264
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50144836"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52398074"
 ---
 # <a name="understanding-the-dmx-select-statement"></a>Informazioni sull'istruzione DMX Select
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "50144836"
   
      In questo caso, è necessario eseguire il drill-through nella struttura di data mining, vale a dire il dominio dati, ed esaminare le singole righe in colonne quali Gender, Bike Buyer e così via.  
   
- **Importante:** tutti gli elementi inclusi nell'elenco dell'espressione o nel **in cui** clausola deve appartenere al dominio dati definito dal **FROM** clausola. Non è possibile combinare i domini dati.  
+ **IMPORTANTE:** Tutti gli elementi inclusi nell'elenco dell'espressione o nel **in cui** clausola deve appartenere al dominio dati definito dalle **FROM** clausola. Non è possibile combinare i domini dati.  
   
 ##  <a name="Select_Types"></a> Selezionare i tipi  
  La sintassi del **seleziona** istruzione supporta molte attività diverse. Utilizzare i modelli seguenti per effettuare queste attività:  
@@ -61,7 +61,7 @@ ms.locfileid: "50144836"
   
  È possibile includere uno di visualizzazione o stima **selezionate** istruzioni all'interno di **FROM** e **in cui** clausole di un prediction join **selezionare** istruzione.  
   
-|Tipo di query|Description|  
+|Tipo di query|Descrizione|  
 |----------------|-----------------|  
 |SELECT FROM [NATURAL] PREDICTION JOIN|Restituisce una stima creata unendo in join le colonne del modello di data mining alle colonne di un'origine dei dati interna.<br /><br /> Per questo tipo di query il dominio è costituito dalle colonne stimabili del modello e dalle colonne dell'origine dei dati di input.<br /><br /> [SELECT FROM &#60;modello&#62; PREDICTION JOIN &#40;DMX&#41;](../dmx/select-from-model-prediction-join-dmx.md)<br /><br /> [Query di stima &#40;Data Mining&#41;](../analysis-services/data-mining/prediction-queries-data-mining.md)|  
 |SELECT FROM  *\<modello >*|Restituisce lo stato più probabile di una colonna stimabile, in base al solo modello di data mining. Questo tipo di query consente di creare rapidamente una stima con un PREDICTION JOIN vuoto.<br /><br /> Per questo tipo di query il dominio è costituito dalle colonne stimabili del modello.<br /><br /> [SELECT FROM &#60;modello&#62; &#40;DMX&#41;](../dmx/select-from-model-dmx.md)<br /><br /> [Query di stima &#40;Data Mining&#41;](../analysis-services/data-mining/prediction-queries-data-mining.md)|  
@@ -71,7 +71,7 @@ ms.locfileid: "50144836"
 ###  <a name="Browsing"></a> Esplorazione  
  È possibile visualizzare il contenuto di un modello di data mining utilizzando i tipi di query seguenti.  
   
-|Tipo di query|Description|  
+|Tipo di query|Descrizione|  
 |----------------|-----------------|  
 |SELECT DISTINCT FROM  *\<modello >*|Restituisce tutti i valori di stato dal modello di data mining per la colonna specificata.<br /><br /> Per questo tipo di query il dominio dati è costituito dal modello di data mining.<br /><br /> [SELECT DISTINCT FROM &#60;modello &#62; &#40;DMX&#41;](../dmx/select-distinct-from-model-dmx.md)<br /><br /> [Query sul contenuto &#40;Data mining&#41;](../analysis-services/data-mining/content-queries-data-mining.md)|  
 |SELECT FROM  *\<modello >*. CONTENUTO|Restituisce il contenuto che descrive il modello di data mining.<br /><br /> Per questo tipo di query il dominio dati è costituito dal set di righe dello schema relativo al contenuto.<br /><br /> [SELECT FROM &#60;modello&#62;. CONTENUTO &#40;DMX&#41;](../dmx/select-from-model-content-dmx.md)<br /><br /> [Query sul contenuto &#40;Data mining&#41;](../analysis-services/data-mining/content-queries-data-mining.md)|  
@@ -83,7 +83,7 @@ ms.locfileid: "50144836"
 ###  <a name="Copying"></a> Copia  
  È possibile copiare un modello di data mining e la struttura di data mining associata in un nuovo modello e, successivamente, rinominare il modello nell'istruzione.  
   
-|Tipo di query|Description|  
+|Tipo di query|Descrizione|  
 |----------------|-----------------|  
 |SELECT INTO  *\<nuovo modello >*|Crea una copia del modello di data mining.<br /><br /> Per questo tipo di query il dominio è costituito dal modello di data mining.<br /><br /> [SELECT INTO &AMP;#40;DMX&AMP;#41;](../dmx/select-into-dmx.md)|  
   
@@ -92,7 +92,7 @@ ms.locfileid: "50144836"
 ###  <a name="Drillthrough"></a> Drill-through  
  Tramite il tipo di query seguente è possibile visualizzare i case utilizzati per il training del modello oppure una rappresentazione di tali case.  
   
-|Tipo di query|Description|  
+|Tipo di query|Descrizione|  
 |----------------|-----------------|  
 |SELECT FROM  *\<modello >*. CASE|Restituisce i case utilizzati per eseguire il training del modello di data mining.<br /><br /> Per questo tipo di query il dominio è costituito dal modello di data mining.<br /><br /> [SELECT FROM &#60;modello&#62;. I casi &#40;DMX&#41;](../dmx/select-from-model-cases-dmx.md)<br /><br /> [Creare query drill-through tramite DMX](../analysis-services/data-mining/create-drillthrough-queries-using-dmx.md)|  
 |SELECT FROM  *\<modello >*. SAMPLE_CASES|Restituisce un case di esempio, rappresentativo dei case utilizzati per eseguire il training del modello di data mining.<br /><br /> Per questo tipo di query il dominio è costituito dal modello di data mining.<br /><br /> [SELECT FROM &#60;modello&#62;. SAMPLE_CASES &#40;DMX&#41;](../dmx/select-from-model-sample-cases-dmx.md)|  

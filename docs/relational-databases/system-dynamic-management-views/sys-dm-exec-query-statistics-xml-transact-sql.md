@@ -17,12 +17,12 @@ ms.assetid: fdc7659e-df41-488e-b2b5-0d79734dfecb
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: e5cb0bdbbbb535293835a0114061d8ca322ec8a8
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 99e51be32264dd90b126860b33abe35c7a27781a
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51675100"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52819103"
 ---
 # <a name="sysdmexecquerystatisticsxml-transact-sql"></a>sys.dm_exec_query_statistics_xml (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ sys.dm_exec_query_statistics_xml(session_id)
 -   [sys.dm_exec_connections](../../relational-databases/system-dynamic-management-views/sys-dm-exec-connections-transact-sql.md)  
 
 ## <a name="table-returned"></a>Tabella restituita
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|
 |session_id|**smallint**|ID della sessione. Non ammette i valori NULL.|
 |request_id|**int**|ID della richiesta. Non ammette i valori NULL.|
@@ -55,7 +55,7 @@ sys.dm_exec_query_statistics_xml(session_id)
 |query_plan|**xml**|Showplan XML con parziale delle statistiche. Ammette valori Null.|
 
 ## <a name="remarks"></a>Note
-Questa funzione di sistema è disponibile a partire [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1.
+Questa funzione di sistema è disponibile a partire [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1. Vedere KB [3190871](https://support.microsoft.com/en-us/help/3190871)
 
 Questa funzione di sistema funziona in entrambe **standard** e **leggero** infrastruttura di analisi delle statistiche di esecuzione di query.  
   
@@ -64,7 +64,7 @@ Questa funzione di sistema funziona in entrambe **standard** e **leggero** infra
   -  [SET STATISTICS PROFILE IN](../../t-sql/statements/set-statistics-profile-transact-sql.md)
   -  il `query_post_execution_showplan` degli eventi esteso.  
   
-**Lightweight** sono disponibile in infrastruttura di analisi statistiche [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 e [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e possono essere abilitati:
+**Lightweight** profilatura infrastruttura delle statistiche sono disponibile in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 e possono essere abilitati:
   -  Con trace flag a livello globale 7412.
   -  Usando il [ *query_thread_profile* ](https://support.microsoft.com/kb/3170113) degli eventi esteso.
   
