@@ -14,12 +14,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b772ebe8af00bee81c6034745b2e21311d09f23a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: b25ee3d20432b5cba03fb745f8d95e51771619ec
+ms.sourcegitcommit: 0330cbd1490b63e88334a9f9e421f4bd31a6083f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52537405"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52886936"
 ---
 # <a name="json-data-in-sql-server"></a>Dati JSON in SQL Server
 [!INCLUDE[appliesto-ss2016-asdb-xxxx-xxx-md.md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -214,27 +214,27 @@ Per altre informazioni, vedere [Formattare i risultati delle query in formato JS
 
 ## <a name="use-cases-for-json-data-in-sql-server"></a>Casi d'uso per dati JSON in SQL Server
 
-Il supporto di JSON in SQL Server e nel database SQL di Azure consente di combinare concetti relazionali e NoSQL. È possibile trasformare facilmente dati relazionali in dati semistrutturati e viceversa. JSON non è tuttavia una sostituzione per i modelli relazionali esistenti. Ecco alcuni casi d'uso specifici che traggono vantaggio dal supporto JSON in SQL Server e nel database SQL. Per altre info, vedere [JSON in SQL Server - Use cases](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2018/01/31/json-in-sql-server-use-cases/) (JSON in SQL Server - Casi d'uso).
+Il supporto di JSON in SQL Server e nel database SQL di Azure consente di combinare concetti relazionali e NoSQL. È possibile trasformare facilmente dati relazionali in dati semistrutturati e viceversa. JSON non è tuttavia una sostituzione per i modelli relazionali esistenti. Ecco alcuni casi d'uso specifici che traggono vantaggio dal supporto JSON in SQL Server e nel database SQL.
 
 ### <a name="simplify-complex-data-models"></a>Semplificare modelli di dati complessi
 
-Valutare la possibilità di denormalizzare il modello di dati con campi JSON al posto di più tabelle figlio. Per altre informazioni, vedere [Simplify data access using de-normalized models](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2018/01/24/simplify-data-access-using-de-normalized-models/) (Semplificare l'accesso ai dati con modelli denormalizzati).
+Valutare la possibilità di denormalizzare il modello di dati con campi JSON al posto di più tabelle figlio.
 
 ### <a name="store-retail-and-e-commerce-data"></a>Archiviare dati di vendita al dettaglio e di e-commerce
 
-Archiviare informazioni sui prodotti con un'ampia gamma di attributi variabili in un modello denormalizzato per una maggiore flessibilità. Per altre informazioni, vedere [Designing Product Catalogs in SQL Server using JSON](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2015/12/21/designing-product-catalogs-in-sql-server-2016-using-json/) (Progettazione di cataloghi di prodotti in SQL Server) e [Indexing data in JSON product catalogs](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2015/12/21/indexing-data-in-json-product-catalogs/) (Indicizzazione dei dati nei cataloghi di prodotti JSON).
+Archiviare informazioni sui prodotti con un'ampia gamma di attributi variabili in un modello denormalizzato per una maggiore flessibilità.
 
 ### <a name="process-log-and-telemetry-data"></a>Elaborare i dati di log e di telemetria
 
-Caricare, eseguire query e analizzare i dati di log archiviati come file JSON con tutte le potenzialità del linguaggio Transact-SQL. Per altre informazioni, vedere la sezione *Log and telemetry data analysis* (Analisi dei dati di log e di telemetria) in [JSON in SQL Server - Use cases](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2018/01/31/json-in-sql-server-use-cases/) (JSON in SQL Server - Casi d'uso).
+Caricare, eseguire query e analizzare i dati di log archiviati come file JSON con tutte le potenzialità del linguaggio Transact-SQL.
 
 ### <a name="store-semi-structured-iot-data"></a>Archiviare dati IoT semistrutturati
 
-Quando è necessario analizzare dati IoT in tempo reale, caricare i dati in ingresso direttamente nel database anziché in una posizione di archiviazione temporanea. Per altre informazioni, vedere [Working with Azure IoT data in Azure SQL Database](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2018/01/23/working-with-azure-iot-data-in-azure-sql-database/) (Utilizzo dei dati IoT di Azure nel database SQL di Azure).
+Quando è necessario analizzare dati IoT in tempo reale, caricare i dati in ingresso direttamente nel database anziché in una posizione di archiviazione temporanea.
 
 ### <a name="simplify-rest-api-development"></a>Semplificare lo sviluppo delle API REST
 
-Trasformare facilmente i dati relazionali dal database nel formato JSON usato dalle API REST che supportano il sito Web. Per altre informazioni, vedere [Simplify REST API development for modern Single-page apps with SQL Server](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2018/01/29/simplify-rest-api-development-modern-single-page-apps-sql-server/) (Semplificare lo sviluppo di API REST per app a pagina singola moderne con SQL Server).
+Trasformare facilmente i dati relazionali dal database nel formato JSON usato dalle API REST che supportano il sito Web.
 
 ## <a name="combine-relational-and-json-data"></a>Combinare dati relazionali e dati JSON
 SQL Server fornisce un modello ibrido per l'archiviazione e l'elaborazione dei dati relazionali e JSON usando il linguaggio Transact-SQL standard. È possibile organizzare le raccolte di documenti JSON in tabelle, stabilire relazioni tra di esse, combinare colonne scalari fortemente tipizzate archiviate in tabelle con coppie chiave-valore flessibili archiviate nelle colonne JSON ed eseguire query su valori scalari e JSON in una o più tabelle usando il linguaggio Transact-SQL completo.
@@ -258,7 +258,7 @@ Per altre informazioni sulle opzioni per l'archiviazione, l'indicizzazione e l'o
 
 È possibile formattare le informazioni archiviate nei file come JSON standard o JSON delimitato da righe. SQL Server può importare il contenuto di file JSON, analizzarlo usando le funzioni **OPENJSON** e **JSON_VALUE** e caricarlo nelle tabelle.  
   
--   Se i documenti JSON vengono archiviati in file locali, unità di rete condivise o posizioni di File di Azure accessibili da SQL Server, è possibile usare l'importazione in blocco per caricare i dati JSON in SQL Server. Per altre informazioni su questo scenario, vedere [Importing JSON files into SQL Server using OPENROWSET (BULK)](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2015/10/07/importing-json-files-into-sql-server-using-openrowset-bulk.aspx)(Importazione di file JSON in SQL Server usando OPENROWSET - BULK).  
+-   Se i documenti JSON vengono archiviati in file locali, unità di rete condivise o posizioni di File di Azure accessibili da SQL Server, è possibile usare l'importazione in blocco per caricare i dati JSON in SQL Server.
   
 -   Se i file JSON delimitati da righe vengono archiviati nell'archivio BLOB di Azure o nel file system di Hadoop, è possibile usare PolyBase per caricare il testo JSON, analizzarlo nel codice Transact-SQL e caricarlo nelle tabelle.  
 
@@ -305,10 +305,7 @@ FROM OPENJSON (@jsonVariable, N'$.Orders.OrdersArray')
   AS SalesOrderJsonData;  
 ```  
   
-È possibile fornire il contenuto della variabile JSON tramite un servizio REST esterno, inviarlo come parametro da un framework JavaScript sul lato client o caricarlo da file esterni. È possibile inserire, aggiornare o unire facilmente i risultati dal testo JSON in una tabella di SQL Server. Per altre informazioni su questo scenario, vedere i post di blog seguenti:
--   [Import JSON data in SQL Server](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2015/09/22/openjson-the-easiest-way-to-import-json-text-into-table/) (Importare i dati JSON in SQL Server)
--   [eseguire l'upsert dei documenti JSON in SQL Server 2016](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/03/upsert-json-documents-in-sql-server-2016)
--   [Load GeoJSON data into SQL Server 2016](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/01/05/loading-geojson-data-into-sql-server/) (Caricare i dati GeoJSON in SQL Server 2016)  
+È possibile fornire il contenuto della variabile JSON tramite un servizio REST esterno, inviarlo come parametro da un framework JavaScript sul lato client o caricarlo da file esterni. È possibile inserire, aggiornare o unire facilmente i risultati dal testo JSON in una tabella di SQL Server.
 
 ## <a name="analyze-json-data-with-sql-queries"></a>Analizzare i dati JSON con query SQL  
 Se è necessario filtrare o aggregare dati JSON per la creazione di report, è possibile usare **OPENJSON** per trasformare i dati JSON in formato relazionale. È quindi possibile usare le funzioni predefinite e [!INCLUDE[tsql](../../includes/tsql-md.md)] standard per preparare i report.  
@@ -351,7 +348,7 @@ WHERE ProductID = 1
 FOR JSON AUTO  
 ```  
   
-Il risultato di questa query è testo JSON interamente conforme alla specifica OData. Formattazione e sequenza di escape vengono gestite da SQL Server. SQL Server può anche formattare i risultati delle query in qualsiasi formato, ad esempio OData JSON o GeoJSON. Per altre informazioni, vedere [Returning spatial data in GeoJSON format](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/01/05/returning-spatial-data-in-geojson-format-part-1) (Restituzione di dati spaziali in formato GeoJSON).  
+Il risultato di questa query è testo JSON interamente conforme alla specifica OData. Formattazione e sequenza di escape vengono gestite da SQL Server. SQL Server può anche formattare i risultati delle query in qualsiasi formato, ad esempio OData JSON o GeoJSON.  
   
 ## <a name="test-drive-built-in-json-support-with-the-adventureworks-sample-database"></a>Test drive del supporto JSON integrato con il database di esempio AdventureWorks
 Per ottenere il database di esempio AdventureWorks, è necessario scaricare almeno il file di database e il file di script ed esempi dall'[Area download Microsoft](https://www.microsoft.com/download/details.aspx?id=49502). 
@@ -378,10 +375,6 @@ Di seguito sono elencate le operazioni possibili con gli script inclusi nel file
   
 ## <a name="learn-more-about-json-in-sql-server-and-azure-sql-database"></a>Altre informazioni su JSON in SQL Server e nel database SQL di Azure  
   
-### <a name="microsoft-blog-posts"></a>Post del blog Microsoft  
-  
-Per soluzioni specifiche, casi d'uso e indicazioni, vedere questi [post del blog sul supporto JSON integrato](https://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) in SQL Server e nel database SQL di Azure.  
-
 ### <a name="microsoft-videos"></a>Video Microsoft
 
 Per un'introduzione visiva al supporto JSON predefinito in SQL Server e nel database SQL di Azure, vedere il video seguente:
