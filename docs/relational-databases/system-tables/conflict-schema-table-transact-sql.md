@@ -5,8 +5,7 @@ ms.date: 01/15/2016
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - conflict_
@@ -19,12 +18,12 @@ ms.assetid: 15ddd536-db03-454e-b9b5-36efe1f756d7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c1341b9e9b1f00494c655ed5a91943fadfbd5b76
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dd226aef62c2d05eead5e2b5f72b2f358422025a
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47614139"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52808903"
 ---
 # <a name="conflictltschemagtlttablegt-transact-sql"></a>conflict_&lt;schema&gt;_&lt;tabella&gt; (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -33,16 +32,16 @@ ms.locfileid: "47614139"
   
  Per la replica peer-to-peer, per impostazione predefinita quando viene rilevato un conflitto si verifica un errore dell'agente di distribuzione. Nel log degli errori viene registrato un errore di conflitto, ma nella tabella dei conflitti non vengono registrati dati, che non sono quindi disponibili per la visualizzazione. Se l'esecuzione dell'agente di distribuzione può continuare, viene registrato localmente un conflitto in ogni nodo in cui è stato rilevato. Per ulteriori informazioni, vedere la sezione relativa alla gestione dei conflitti in [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md).  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |__$originator_id|**int**|ID del nodo in cui ha avuto origine la modifica in conflitto. Per un elenco di ID, eseguire [sp_help_peerconflictdetection](../../relational-databases/system-stored-procedures/sp-help-peerconflictdetection-transact-sql.md).|  
 |__$origin_datasource|**int**|Nodo in cui ha avuto origine la modifica in conflitto.|  
 |__$tranid|**nvarchar (40)**|Numero di sequenza del file di log (LSN) della modifica in conflitto quando applicata a __$origin_datasource.|  
-|__$conflict_type|**int**|Tipo di conflitto. I valori possibili sono i seguenti:<br /><br /> 1: Aggiornamento non riuscito perché la riga locale è stata modificata da un altro aggiornamento oppure è stata eliminata e quindi reinserita.<br /><br /> 2: Aggiornamento non riuscito perché la riga locale è stata già eliminata.<br /><br /> 3: Eliminazione non riuscita perché la riga locale è stata modificata da un altro aggiornamento oppure è stata eliminata e quindi reinserita.<br /><br /> 4: Eliminazione non riuscita perché la riga locale è stata già eliminata.<br /><br /> 5: Inserimento non riuscito perché la riga locale è stata già inserita oppure è stata inserita e quindi aggiornata.|  
+|__$conflict_type|**int**|Tipo di conflitto. I valori possibili sono i seguenti:<br /><br /> 1: Un aggiornamento non è riuscito perché la riga locale è stata modificata da un altro aggiornamento oppure è stato eliminato e quindi reinserito.<br /><br /> 2: Un aggiornamento non è riuscita perché la riga locale è stata già eliminata.<br /><br /> 3: Un'operazione di eliminazione non è riuscita perché la riga locale è stata modificata da un altro aggiornamento oppure è stata eliminata e quindi reinserita.<br /><br /> 4: Un'operazione di eliminazione non riuscita perché la riga locale è stata già eliminata.<br /><br /> 5: Un'istruzione insert non è riuscita perché la riga locale è stata già inserita oppure è stata inserita e quindi aggiornata.|  
 |__$is_winner|**bit**|Indica se la riga presente in questa tabella è la riga confermata, ovvero se è stata applicata al nodo locale.|  
 |__$pre_version|**varbinary (32)**|Versione del database in cui ha avuto origine la modifica in conflitto.|  
-|__$reason_code|**int**|Codice di risoluzione del conflitto. I possibili valori sono i seguenti:<br /><br /> 0<br /><br /> 1<br /><br /> 2<br /><br /> <br /><br /> Per altre informazioni, vedere **_ $reason_text**.|  
-|__$reason_text|**nvarchar (720)**|Risoluzione del conflitto. I possibili valori sono i seguenti:<br /><br /> Risolto (1)<br /><br /> Non risolto (2)<br /><br /> Sconosciuto (0)|  
+|__$reason_code|**int**|Codice di risoluzione del conflitto. Il valore può essere uno dei seguenti:<br /><br /> 0<br /><br /> 1<br /><br /> 2<br /><br /> <br /><br /> Per altre informazioni, vedere **_ $reason_text**.|  
+|__$reason_text|**nvarchar (720)**|Risoluzione del conflitto. Il valore può essere uno dei seguenti:<br /><br /> Risolto (1)<br /><br /> Non risolto (2)<br /><br /> Sconosciuto (0)|  
 |__$update_bitmap|**varbinary (** *n* **)**. Dimensioni variano a seconda del contenuto.|Bitmap che indica le colonne aggiornate nel caso di un conflitto aggiornamento-aggiornamento.|  
 |__$inserted_date|**datetime**|Data e ora in cui la riga in conflitto è stata inserita in questa tabella.|  
 |__$row_id|**timestamp**|Versione della riga associata alla riga che ha causato il conflitto.|  

@@ -1,5 +1,5 @@
 ---
-title: Salvare e caricare gli oggetti di R da SQL Server tramite ODBC | Documenti Microsoft
+title: Salvare e caricare oggetti R da SQL Server tramite ODBC - servizi di SQL Server Machine Learning
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/15/2018
@@ -7,29 +7,29 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 17f9ebc151e7112b04766ea1c644aad0a32bc580
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: c7b874adc53d217c341a5dce689c7c5b4eb70bfe
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31201903"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53431954"
 ---
-# <a name="save-and-load-r-objects-from-sql-server-using-odbc"></a>Salvare e caricare gli oggetti di R da SQL Server tramite ODBC
+# <a name="save-and-load-r-objects-from-sql-server-using-odbc"></a>Salvare e caricare oggetti R da SQL Server tramite ODBC
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 SQL Server R Services può archiviare oggetti R serializzati in una tabella e quindi caricare l'oggetto dalla tabella in base alle necessità, senza dover eseguire nuovamente il codice R o ripetere il training del modello. La possibilità di salvare gli oggetti R in un database è fondamentale per gli scenari di training e salvataggio di un modello e quindi per un uso successivo per l'assegnazione dei punteggi o l'analisi.
 
-Per migliorare le prestazioni di questo passaggio critico, il pacchetto **RevoScaleR** ora include nuove funzioni di serializzazione e deserializzazione che migliorano notevolmente le prestazioni e archiviano l'oggetto in modo più compatto. In questo articolo vengono descritte queste funzioni e sul loro utilizzo.
+Per migliorare le prestazioni di questo passaggio critico, il pacchetto **RevoScaleR** ora include nuove funzioni di serializzazione e deserializzazione che migliorano notevolmente le prestazioni e archiviano l'oggetto in modo più compatto. Questo articolo descrive queste funzioni e come usarli.
 
 ## <a name="overview"></a>Panoramica
 
-Il pacchetto **RevoScaleR** ora include nuove funzioni che rendono più semplice salvare gli oggetti R in SQL Server e quindi leggere gli oggetti dalla tabella di SQL Server. In generale, ogni chiamata di funzione utilizza un archivio di valore chiave semplice, in cui la chiave è il nome dell'oggetto, e il valore associato alla chiave è l'oggetto varbinary R da spostare in o all'esterno di una tabella.
+Il pacchetto **RevoScaleR** ora include nuove funzioni che rendono più semplice salvare gli oggetti R in SQL Server e quindi leggere gli oggetti dalla tabella di SQL Server. In generale, ogni chiamata di funzione Usa un archivio valori chiave semplice, in cui la chiave è il nome dell'oggetto, e il valore associato alla chiave è l'oggetto varbinary R da spostare o all'esterno di una tabella.
 
-Per salvare gli oggetti di R in SQL Server direttamente da un ambiente di R, è necessario:
+Per salvare gli oggetti R in SQL Server direttamente da un ambiente R, è necessario:
 
-+ stabilire una connessione a SQL Server utilizzando il *RxOdbcData* origine dati.
-+ Chiamare le funzioni di nuovo tramite la connessione ODBC
-+ Facoltativamente, è possibile specificare che l'oggetto non serializzato. Quindi, scegliere un nuovo algoritmo di compressione da usare invece l'algoritmo di compressione predefinito.
++ stabilire una connessione a SQL Server usando il *RxOdbcData* origine dati.
++ Chiamare le funzioni nuove tramite la connessione ODBC
++ Facoltativamente, è possibile specificare che l'oggetto non serializzato. Scegliere quindi un nuovo algoritmo di compressione da usare invece l'algoritmo di compressione predefinito.
 
 Per impostazione predefinita, qualsiasi oggetto chiamato da R per lo spostamento in SQL Server viene serializzato e compresso. Al contrario, quando si carica un oggetto da una tabella SQL Server da usare nel codice R, l'oggetto viene deserializzato e decompresso.
 
@@ -43,7 +43,7 @@ Per impostazione predefinita, qualsiasi oggetto chiamato da R per lo spostamento
 
 - `rxListKeys` elenca tutti gli oggetti disponibili come coppie chiave-valore. Ciò consente di determinare i nomi e le versioni degli oggetti R.
 
-Per informazioni dettagliate sulla sintassi di ogni funzione, usare la Guida di R. I dettagli sono disponibili anche nel [riferimento ScaleR](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler).
+Per informazioni dettagliate sulla sintassi di ogni funzione, usare la Guida di R. I dettagli sono disponibili anche nel [riferimento a ScaleR](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler).
 
 ## <a name="how-to-store-r-objects-in-sql-server-using-odbc"></a>Come archiviare gli oggetti R in SQL Server tramite ODBC
 

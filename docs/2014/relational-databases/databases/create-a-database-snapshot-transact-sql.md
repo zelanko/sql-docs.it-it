@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - database snapshots [SQL Server], creating
@@ -13,12 +12,12 @@ ms.assetid: 187fbba3-c555-4030-9bdf-0f01994c5230
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7bb53467361cec415b95f2fe3477f3b0730f33b8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3f577f7798da2ba7b7ee4259ecc98994f713cfc5
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48212201"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52768333"
 ---
 # <a name="create-a-database-snapshot-transact-sql"></a>Creare uno snapshot del database (Transact-SQL)
   L'unico modo per creare uno snapshot del database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è utilizzando [!INCLUDE[tsql](../../includes/tsql-md.md)]. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] non supporta la creazione di snapshot del database.  
@@ -27,11 +26,11 @@ ms.locfileid: "48212201"
   
      [Prerequisiti](#Prerequisites)  
   
-     [Security](#Security)  
+     [Sicurezza](#Security)  
   
-     [Procedura consigliata: Denominazione degli snapshot del database](#Naming)  
+     [Procedura consigliata: Denominazione degli snapshot del Database](#Naming)  
   
--   **Per creare un snapshot del database usando:**[Transact-SQL  ](#TsqlProcedure)  
+-   **Per creare un snapshot del database utilizzando:**  [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> Prima di iniziare  
   
@@ -42,7 +41,7 @@ ms.locfileid: "48212201"
   
 -   Il database di origine deve essere online, a meno che non si tratti di un database mirror nell'ambito di una sessione di mirroring del database.  
   
--   Per creare un snapshot del database in un database mirror, il database deve essere in sincronizzato[stato di mirroring](../../database-engine/database-mirroring/mirroring-states-sql-server.md).  
+-   Per creare uno snapshot del database in un database mirror, è necessario che il database si trovi nello[stato di mirroring](../../database-engine/database-mirroring/mirroring-states-sql-server.md)sincronizzato.  
   
 -   Non è possibile configurare il database di origine come un database condiviso scalabile.  
   
@@ -52,11 +51,11 @@ ms.locfileid: "48212201"
 ###  <a name="Recommendations"></a> Indicazioni  
  In questa sezione vengono illustrate le procedure consigliate seguenti:  
   
--   [Procedura consigliata: Denominazione degli snapshot del database](#Naming)  
+-   [Procedura consigliata: Denominazione degli snapshot del Database](#Naming)  
   
--   [Procedura consigliata: Limitazione del numero di snapshot del database](#Limiting_Number)  
+-   [Procedura consigliata: Limitazione del numero di snapshot del Database](#Limiting_Number)  
   
--   [Procedura consigliata: Connessioni client a uno snapshot del database](#Client_Connections)  
+-   [Procedura consigliata: Connessioni client a uno Snapshot del Database](#Client_Connections)  
   
 ####  <a name="Naming"></a> Procedura consigliata: Denominazione degli snapshot del database  
  Prima di creare gli snapshot è importante considerare il nome da utilizzare. Ogni snapshot del database richiede un nome di database univoco. Per semplificare l'amministrazione, il nome di uno snapshot può contenere informazioni utili a identificare il database, ad esempio:  
@@ -137,7 +136,7 @@ AdventureWorks_snapshot_evening
   
 -   A. [Creazione di uno snapshot del database AdventureWorks](#Creating_on_AW)  
   
--   B. [Creazione di uno snapshot del database Sales](#Creating_on_Sales)  
+-   b. [Creazione di uno snapshot del database Sales](#Creating_on_Sales)  
   
 ####  <a name="Creating_on_AW"></a> A. Creazione di uno snapshot del database AdventureWorks  
  In questo esempio viene creato uno snapshot del database `AdventureWorks` . Il nome dello snapshot, `AdventureWorks_dbss_1800`, e il nome del file sparse corrispondente, `AdventureWorks_data_1800.ss`, indicano l'ora di creazione, ovvero le 18.00 (1800).  
@@ -175,7 +174,7 @@ GO
   
 ##  <a name="RelatedTasks"></a> Attività correlate  
   
--   [Visualizzare uno snapshot del database &#40;SQL Server&#41;](view-a-database-snapshot-sql-server.md)  
+-   [Visualizzazione di uno snapshot del database &#40;SQL Server&#41;](view-a-database-snapshot-sql-server.md)  
   
 -   [Ripristinare un database a uno snapshot del database](revert-a-database-to-a-database-snapshot.md)  
   

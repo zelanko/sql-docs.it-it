@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: dd29389b-928c-4e50-995c-c6af27f97805
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 143746cb73100a28fa6ebd2fc85809bc2cfb9d41
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e15b0a4d2cb4e6aef865cd01c81568e6762db3ca
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48079961"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52784293"
 ---
 # <a name="load-data-from-mds-into-excel"></a>Caricare i dati da MDS in Excel
   Nel [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], è necessario caricare i dati dal repository MDS per utilizzarli.  

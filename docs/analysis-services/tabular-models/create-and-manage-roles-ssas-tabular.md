@@ -1,5 +1,5 @@
 ---
-title: Creare e gestire i ruoli | Microsoft Docs
+title: Creare e gestire i ruoli nei modelli tabulari di Analysis Services | Microsoft Docs
 ms.date: 09/17/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 883eab47796f5cb09d5993fa2b2570cdda3cd2ae
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: 093197db8257cf9be261658f1828783fa01d7cc2
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50099652"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072218"
 ---
 # <a name="create-and-manage-roles"></a>Creare e gestire ruoli 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -42,9 +42,9 @@ ms.locfileid: "50099652"
   
 4.  Nel campo **Autorizzazioni** fare clic sulla freccia GIÙ e quindi selezionare uno dei tipi di autorizzazioni seguenti:  
   
-    |Autorizzazione|Description|  
+    |Autorizzazione|Descrizione|  
     |----------------|-----------------|  
-    |**Nessuno**|I membri non possono apportare alcuna modifica allo schema del modello, né eseguire query sui dati.|  
+    |**None**|I membri non possono apportare alcuna modifica allo schema del modello, né eseguire query sui dati.|  
     |**Lettura**|I membri possono eseguire query sui dati in base ai filtri di riga, ma non possono apportare alcuna modifica allo schema del modello.|  
     |**Lettura ed elaborazione**|I membri possono eseguire query sui dati in base ai filtri a livello di riga ed effettuare le operazioni relative alle opzioni Elabora ed Elabora tutto, ma non possono apportare alcuna modifica allo schema del modello.|  
     |**Process**|I membri possono effettuare le operazioni relative alle opzioni Elabora ed Elabora tutto, ma non possono modificare lo schema del modello, né eseguire query sui dati.|  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.p2pwizard.peers.f1
@@ -13,12 +12,12 @@ ms.assetid: 5377c59f-2e25-4852-a306-c87ae3dca9fd
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5540401d4b0a05c3ebe87742f902e6e16b59498a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 54de95fe39ea6b99139ee040b93160a1a93ff1bf
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48208221"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52776463"
 ---
 # <a name="configure-topology-peer-to-peer-replication"></a>Configura topologia (replica peer-to-peer)
   La pagina **Configura topologia** consente di eseguire attività di configurazione comuni, ad esempio l'aggiunta di nuovi nodi, l'eliminazione di nodi e l'aggiunta di nuove connessioni tra nodi esistenti. Il nodo selezionato nella pagina **Pubblicazione** di questa procedura guidata viene visualizzato nell'area di progettazione. Per specificare le opzioni di configurazione, fare clic con il pulsante destro del mouse su un nodo, su una connessione o sull'area di progettazione.  
@@ -29,7 +28,7 @@ ms.locfileid: "48208221"
 ## <a name="options"></a>Opzioni  
  La pagina **Configura topologia** contiene elementi e opzioni dell'interfaccia che sono disponibili quando si fa clic con il pulsante destro del mouse su un elemento. Nella tabella riportata di seguito viene descritto ogni elemento dell'interfaccia.  
   
-|Elemento dell'interfaccia|Description|  
+|Elemento dell'interfaccia|Descrizione|  
 |-----------------------|-----------------|  
 |Area di progettazione|Consente di visualizzare gli altri elementi dell'interfaccia. Per aggiungere elementi, fare clic con il pulsante destro del mouse sull'area di progettazione.|  
 |![Primo nodo in una topologia](media/p2pwizard-firstnode.gif "Primo nodo in una topologia")|Nodo originale nella topologia. I nuovi nodi vengono inizializzati utilizzando una copia del database di pubblicazione dal nodo originale.|  
@@ -63,7 +62,7 @@ ms.locfileid: "48208221"
   
 ### <a name="options-for-each-node"></a>Opzioni per ogni nodo  
  **Aggiungi nuova connessione peer**  
- Consente di aggiungere una connessione tra due nodi. Se, ad esempio, si aggiunge una connessione tra Nodo A e Nodo B, tramite la replica vengono aggiunte due sottoscrizioni: la prima consente a Nodo A di ricevere le modifiche dalla pubblicazione in Nodo B e la seconda consente a Nodo B di ricevere le modifiche dalla pubblicazione in Nodo A.  
+ Consente di aggiungere una connessione tra due nodi. Ad esempio, se si aggiunge una connessione tra nodo A e nodo B, la replica aggiunge due sottoscrizioni: La prima consente a nodo A di ricevere le modifiche dalla pubblicazione in nodo B e la seconda consente a nodo B di ricevere le modifiche dalla pubblicazione in nodo A.  
   
  **Elimina nodo peer**  
  Consente di rimuovere un nodo dalla topologia. Se, ad esempio, si rimuove Nodo C, la pubblicazione in quel nodo viene rimossa. Vengono rimosse anche le sottoscrizioni tra Nodo A e Nodo C e tra Nodo B e Nodo C. Il database in Nodo C non viene eliminato e la pubblicazione e la distribuzione non vengono disabilitate.  

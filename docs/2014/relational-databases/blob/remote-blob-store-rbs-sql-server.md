@@ -13,12 +13,12 @@ ms.assetid: 31c947cf-53e9-4ff4-939b-4c1d034ea5b1
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3e0b80a483032b1be28780297bacc998a2be0b51
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2d9711b5b9d079df0396ba9874b203a89f26344f
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48181472"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53373014"
 ---
 # <a name="remote-blob-store-rbs-sql-server"></a>Archivio Blob remoto (RBS) (SQL Server)
   Archivio BLOB remoti (RBS) di[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è un componente aggiuntivo facoltativo che consente agli amministratori di database di archiviare oggetti binari di grandi dimensioni in soluzioni di archiviazione apposite anziché direttamente nel server di database principale.  
@@ -50,22 +50,22 @@ ms.locfileid: "48181472"
 ## <a name="rbs-requirements"></a>Requisiti di RBS  
  Per RBS è necessaria l'edizione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise per il server di database principale in cui vengono archiviati i metadati BLOB. Tuttavia, se si utilizza il provider FILESTREAM fornito, è possibile archiviare BLOB nell'edizione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard.  
   
- In RBS è incluso un provider FILESTREAM che consente di utilizzare tale componente per l'archiviazione di BLOB in un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se si desidera utilizzare RBS per l'archiviazione di BLOB in una soluzione di archiviazione diversa, è necessario utilizzare un provider RBS di terze parti sviluppato per tale soluzione di archiviazione o sviluppare un provider RBS personalizzato utilizzando l'API di RBS. Un provider di esempio che consenta di archiviare BLOB nel file system NTFS è disponibile come risorsa per l'apprendimento in [Codeplex](http://go.microsoft.com/fwlink/?LinkId=210190).  
+ In RBS è incluso un provider FILESTREAM che consente di utilizzare tale componente per l'archiviazione di BLOB in un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se si desidera utilizzare RBS per l'archiviazione di BLOB in una soluzione di archiviazione diversa, è necessario utilizzare un provider RBS di terze parti sviluppato per tale soluzione di archiviazione o sviluppare un provider RBS personalizzato utilizzando l'API di RBS. Un provider di esempio che consenta di archiviare BLOB nel file system NTFS è disponibile come risorsa per l'apprendimento in [Codeplex](https://go.microsoft.com/fwlink/?LinkId=210190).  
   
 ## <a name="rbs-security"></a>Sicurezza relativa a RBS  
  Quando si utilizza un provider personalizzato per archiviare BLOB esterni a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], è possibile che siano disponibili altri processi che consentono di ignorare il sistema di sicurezza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Accertarsi di proteggere i BLOB archiviati con autorizzazioni e opzioni di crittografia adatte al supporto di archiviazione utilizzato dal provider personalizzato.  
   
 ##  <a name="rbsresources"></a> Risorse di RBS  
  **Documentazione di RBS**  
- La documentazione di RBS è inclusa nel pacchetto di Windows Installer. Per consultare la documentazione di RBS senza installare tale componente, è possibile visualizzare la versione [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] della documentazione[ disponibile online in MSDN Library](http://go.microsoft.com/fwlink/?LinkId=210192).  
+ La documentazione di RBS è inclusa nel pacchetto di Windows Installer. Per consultare la documentazione di RBS senza installare tale componente, è possibile visualizzare la versione [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] della documentazione[ disponibile online in MSDN Library](https://go.microsoft.com/fwlink/?LinkId=210192).  
   
  **White paper su RBS**  
- Il [white paper sull'archiviazione di BLOB remoti](http://go.microsoft.com/fwlink/?LinkId=210422), disponibile per il download come documento di Microsoft Word, contiene informazioni dettagliate sull'installazione e la configurazione di RBS.  
+ Il [white paper sull'archiviazione di BLOB remoti](https://go.microsoft.com/fwlink/?LinkId=210422), disponibile per il download come documento di Microsoft Word, contiene informazioni dettagliate sull'installazione e la configurazione di RBS.  
   
  **Esempi di RBS**  
- Negli esempi di RBS disponibili in [Codeplex](http://go.microsoft.com/fwlink/?LinkId=210190) viene illustrato come sviluppare un'applicazione RBS e come sviluppare e installare un provider RBS personalizzato.  
+ Negli esempi di RBS disponibili in [Codeplex](https://go.microsoft.com/fwlink/?LinkId=210190) viene illustrato come sviluppare un'applicazione RBS e come sviluppare e installare un provider RBS personalizzato.  
   
  **Blog di RBS**  
- Nel [blog di RBS](http://go.microsoft.com/fwlink/?LinkId=210315) sono disponibili informazioni aggiuntive sulla distribuzione e gestione di RBS.  
+ Nel [blog di RBS](https://go.microsoft.com/fwlink/?LinkId=210315) sono disponibili informazioni aggiuntive sulla distribuzione e gestione di RBS.  
   
   

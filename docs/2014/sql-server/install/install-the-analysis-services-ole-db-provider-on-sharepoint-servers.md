@@ -11,12 +11,12 @@ ms.assetid: 2c62daf9-1f2d-4508-a497-af62360ee859
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: c277319377fda81e0c1f6901b2d20a22b500415c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c24c5f07d18bc8d63ff0d113c762f776dccf9a41
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48128567"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376643"
 ---
 # <a name="install-the-analysis-services-ole-db-provider-on-sharepoint-servers"></a>Installazione del provider OLE DB di Analysis Services nei server di SharePoint
   Il provider Microsoft OLE DB per Analysis Services (MSOLAP) è un'interfaccia utilizzata dalle applicazioni client per interagire con i dati di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Le richieste di connessione ai dati [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] vengono gestite dal provider in un ambiente di SharePoint in cui è installato [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)].  
@@ -50,7 +50,7 @@ ms.locfileid: "48128567"
 ##  <a name="bkmk_why"></a> Il motivo per cui è necessario installare il Provider OLE DB  
  In due scenari è richiesta l'installazione manuale del provider OLE DB nei server della farm.  
   
- **Lo scenario più comune** è quando si dispone di meno recenti e le versioni più recenti di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] le cartelle di lavoro vengono salvate nelle raccolte documenti nella farm. Se gli analisti dell'organizzazione usano il [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] versione di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per Excel e salvano le cartelle di lavoro a un [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] installazione, la cartella di lavoro precedenti non funzioneranno. La stringa di connessione relativa farà riferimento a una versione precedente del provider, che non sarà presente nel server, a meno che non venga installata. L'installazione di entrambe le versioni consentirà l'accesso ai dati per le cartelle di lavoro di PowerPivot create con versioni precedenti e più recenti di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per Excel. Il programma di installazione di [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] non prevede l'installazione della versione [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] del provider. È pertanto necessario installarla manualmente se si utilizzano cartelle di lavoro di una versione precedente.  
+ **Lo scenario più comune** è quando si dispone di meno recenti e le versioni più recenti di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] le cartelle di lavoro vengono salvate nelle raccolte documenti nella farm. Se gli analisti dell'organizzazione usano la versione [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per Excel e salvano le cartelle di lavoro in un'installazione di [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)][!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)], la cartella di lavoro precedente non funziona. Stringa di connessione relativa farà riferimento a una versione precedente del provider, che non sarà presente nel server a meno che non è l'installazione. L'installazione di entrambe le versioni consentirà l'accesso ai dati per le cartelle di lavoro di PowerPivot create con versioni precedenti e più recenti di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per Excel. Il programma di installazione di [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] non prevede l'installazione della versione [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] del provider. È pertanto necessario installarla manualmente se si utilizzano cartelle di lavoro di una versione precedente.  
   
  **Il secondo scenario** quando si dispone di un server in una farm di SharePoint che viene eseguito Excel Services, ma non [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]. In questo caso, è necessario aggiornare manualmente il server applicazioni in cui viene eseguito Excel Services per poter utilizzare una versione più recente del provider. Ciò è necessario per la connessione a un'istanza di PowerPivot per SharePoint. Se Excel Services utilizza una versione meno recente del provider, la richiesta di connessione non riuscirà. Si noti che il provider deve essere installato tramite il programma di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o il pacchetto di installazione di [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] (spPowerPivot.msi) per assicurarsi che tutti i componenti necessari per il supporto di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] siano installati.  
   
@@ -88,7 +88,7 @@ ms.locfileid: "48128567"
   
 4.  Se MSOLAP non è elencato, fare clic su **aggiungere Provider di dati attendibile**.  
   
-5.  In ID Provider, digitare `MSOLAP.5`.  
+5.  In ID provider, digitare `MSOLAP.5`.  
   
 6.  Per Tipo di provider, assicurarsi che sia selezionato OLE DB.  
   
@@ -112,7 +112,7 @@ ms.locfileid: "48128567"
   
 #### <a name="download-the-msolap5-provider-from-the-includesssql11sp1includessssql11sp1-mdmd-feature-pack"></a>Scaricare il provider MSOLAP.5 dal Feature Pack di [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] .  
   
-1.  Passare a [Microsoft® SQL Server® 2012 SP1 Feature Pack](http://www.microsoft.com/download/details.aspx?id=35580)  
+1.  Passare a [Microsoft® SQL Server® 2012 SP1 Feature Pack](https://www.microsoft.com/download/details.aspx?id=35580)  
   
 2.  Fare clic su **istruzioni di installazione**.  
   
@@ -120,7 +120,7 @@ ms.locfileid: "48128567"
   
 4.  Nel **selezione delle caratteristiche** pagina, selezionare **Analysis Services OLE DB Provider per SQL Server**. Deselezionare gli altri componenti e completare l'installazione. Per altre informazioni su sppowerpivot. msi, vedere [installare o disinstallare PowerPivot per SharePoint Add-in &#40;SharePoint 2013&#41;](../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md).  
   
-5.  Registrare MSOLAP.5 come provider attendibile con Excel Services di SharePoint. Per ulteriori informazioni, vedere [Aggiungere MSOLAP.5 come provider di dati attendibile in Excel Services](http://technet.microsoft.com/library/hh758436.aspx).  
+5.  Registrare MSOLAP.5 come provider attendibile con Excel Services di SharePoint. Per ulteriori informazioni, vedere [Aggiungere MSOLAP.5 come provider di dati attendibile in Excel Services](https://technet.microsoft.com/library/hh758436.aspx).  
   
   
 ##  <a name="bkmk_kj"></a> Installare il Provider SQL Server 2008 R2 OLE DB per l'hosting di versioni precedenti delle cartelle di lavoro di versione  
@@ -128,7 +128,7 @@ ms.locfileid: "48128567"
   
 #### <a name="step-1-download-and-install-the-client-library"></a>Passaggio 1: Scaricare e installare la libreria client  
   
-1.  Nel [pagina Feature Pack di SQL Server 2008 R2](http://go.microsoft.com/fwlink/?LinkId=159570), trovare i Provider OLE DB Microsoft Analysis Services per Microsoft SQL Server 2008 R2.  
+1.  Nel [pagina Feature Pack di SQL Server 2008 R2](https://go.microsoft.com/fwlink/?LinkId=159570), trovare i Provider OLE DB Microsoft Analysis Services per Microsoft SQL Server 2008 R2.  
   
 2.  Scaricare il pacchetto per x64 del programma di installazione `SQLServer2008_ASOLEDB10.msi`. Anche se nel nome file è incluso SQLServer2008, si tratta comunque del file corretto per la versione SQL Server 2008 R2 del provider.  
   
@@ -144,7 +144,7 @@ ms.locfileid: "48128567"
   
 3.  Andare alla cartella C:\Windows\assembly\GAC_MSIL\Microsoft.AnalysisServices.ChannelTransport\10.0.0.0__89845dcd8080cc91.  
   
-4.  Immettere il seguente comando `regasm microsoft.analysisservices.channeltransport.dll`.  
+4.  Immettere il comando seguente: `regasm microsoft.analysisservices.channeltransport.dll`  
   
 5.  Ripetere i passaggi precedenti per qualsiasi computer nel quale è stata installata manualmente la versione 2008 R2 del provider.  
   

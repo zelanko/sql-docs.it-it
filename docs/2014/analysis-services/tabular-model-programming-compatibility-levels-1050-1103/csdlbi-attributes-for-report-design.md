@@ -12,20 +12,20 @@ ms.assetid: 61ba3a27-790e-43bc-b421-e01bf2fdbda6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e0865d7a7fa43db751646d6f9debd19463a7ba23
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dce0abecb352071a22e74cb820408fe5b8851fc3
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48153458"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53352528"
 ---
 # <a name="csdlbi-attributes-for-report-design"></a>Attributi CSDLBI per la progettazione di report
   In questa sezione vengono descritti gli attributi nelle estensioni a CSDL per la modellazione tabulare che influiscono sulla progettazione delle query di [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)].  
   
 ## <a name="model-attributes"></a>Attributi di modellazione  
- Questi attributi sono definiti su un sottoelemento dell'elemento di un CSDL [EntityContainer](http://msdn.microsoft.com/library/bb399169.aspx) elemento.  
+ Questi attributi sono definiti su un sottoelemento dell'elemento di un CSDL [EntityContainer](https://msdn.microsoft.com/library/bb399169.aspx) elemento.  
   
-|Nome dell'attributo|Tipo di dati|Description|  
+|Nome dell'attributo|Tipo di dati|Descrizione|  
 |--------------------|---------------|-----------------|  
 |Impostazioni cultura|Testo|Indica le impostazioni cultura utilizzate per i formati della valuta. Se omesso, viene utilizzato EN-US.|  
 |IsRightToLeft|Boolean|Indica se i valori dei campi di testo devono essere letti da destra a sinistra per impostazione predefinita|  
@@ -33,7 +33,7 @@ ms.locfileid: "48153458"
 ## <a name="entity-attributes"></a>Attributi di entità  
  Questi attributi sono definiti su un sottoelemento di un elemento EntitySet o EntityType di CSDL.  
   
-|Nome dell'attributo|Tipo di dati|Description|  
+|Nome dell'attributo|Tipo di dati|Descrizione|  
 |--------------------|---------------|-----------------|  
 |`ReferenceName`|Testo|Identificatore utilizzato per fare riferimento a questa entità in una query DAX. Se omesso, viene utilizzato il nome.|  
 |`Caption`|Testo|Nome visualizzato per l'entità.|  
@@ -48,24 +48,24 @@ ms.locfileid: "48153458"
 |`DefaultLocation`|MemberRef|Riferimento a un campo il cui valore rappresenta il percorso predefinito associato a un'istanza di entità. Se omesso, viene utilizzato il primo campo percorso nell'entità, se presente.|  
   
 ## <a name="field-attributes"></a>Attributi di campo  
- Questi attributi sono definiti su un sottoelemento di una proprietà CSDL o [NavigationProperty](http://msdn.microsoft.com/library/bb387104.aspx) elemento.  
+ Questi attributi sono definiti su un sottoelemento di una proprietà CSDL o [NavigationProperty](https://msdn.microsoft.com/library/bb387104.aspx) elemento.  
   
-|Nome dell'attributo|Tipo di dati|Description|  
+|Nome dell'attributo|Tipo di dati|Descrizione|  
 |--------------------|---------------|-----------------|  
 |`ReferenceName`|Testo|Identificatore utilizzato per fare riferimento a questa entità in una query DAX. Se omesso, viene utilizzato il nome del campo.|  
-|`Caption`|Testo|Nome visualizzato per l'entità. Se omesso, viene utilizzato il valore `ReferenceName` del campo.|  
-|`Documentation`|Text|Testo descrittivo per agevolare la comprensione del significato del campo in ambito aziendale.|  
+|`Caption`|Testo|Nome visualizzato per l'entità. Se omesso, il campo `ReferenceName` viene usato.|  
+|`Documentation`|Testo|Testo descrittivo per agevolare la comprensione del significato del campo in ambito aziendale.|  
 |`Hidden`|Boolean|Indica se il campo deve essere visualizzato. Il valore predefinito è `false` che indica che il campo verrà visualizzato.|  
 |`DisplayFolder`|Testo|Nome (percorso completo) della cartella in cui viene visualizzato questo campo. Se omesso, il campo viene visualizzato alla radice del modello.|  
 |`ContextualNameRule`|Enum|Valore che indica se e come deve essere modificato il nome della proprietà in base al contesto in cui viene utilizzato. I valori possibili sono i seguenti: `None`, `Role`, `Merge`.|  
-|`Alignment`|Enum|Valore che indica come devono essere allineati i valori del campo in una presentazione tabulare. I valori possibili sono i seguenti: `Default`, `Center`, `Left`, `Right`. Se omesso, il valore predefinito determina l'allineamento in base al tipo di dati del campo.|  
-|`FormatString`|Testo|Stringa di formato .NET che indica come deve essere formattato il valore del campo per impostazione predefinita. Se omesso, si presuppone il formato seguente:<br /><br /> : Campi Datetime: data breve regionale o "d"<br />-Funzione di aggregazione di campi a virgola mobile e integrali con un valore predefinito: numero regionale o "n"<br />-Funzione di aggregazione numeri interi non prevede alcun valore predefinito: numero decimale regionale o "d"<br /><br /> Per tutti gli altri tipi di campi, non è applicabile alcuna stringa di formato.|  
+|`Alignment`|Enum|Valore che indica come devono essere allineati i valori del campo in una presentazione tabulare. I valori possibili sono i seguenti: `Default`, `Center`, `Left`, `Right`. Se omesso, il valore predefinito determina l'allineamento basato sul tipo di dati del campo.|  
+|`FormatString`|Testo|Una stringa di formato .NET che indica come deve essere formattato il valore del campo per impostazione predefinita. Se omesso, si presuppone il formato seguente:<br /><br /> : Campi Datetime: data breve regionale o "d"<br />-Funzione di aggregazione di campi a virgola mobile e integrali con un valore predefinito: numero regionale o "n"<br />-Funzione di aggregazione numeri interi non prevede alcun valore predefinito: numero decimale regionale o "d"<br /><br /> Per tutti gli altri tipi di campi, non è applicabile alcuna stringa di formato.|  
 |`Units`|Testo|Simbolo applicato ai valori del campo per esprimere unità. Se omesso, si presuppone che le unità non siano note.|  
-|`Width`|Valore intero|Larghezza preferita in caratteri che deve essere riservata alla visualizzazione dei valori del campo in una presentazione tabulare. Se omesso, una larghezza predefinita viene basata sul tipo di dati del campo.|  
-|`SortDirection`|Enum|Valore che indica la modalità di ordinamento dei valori del campo. I valori possibili sono i seguenti: `Default`, `Ascending`, `Descending`. Se omesso, il valore predefinito assegna una direzione di ordinamento in base al tipo di dati del campo.|  
+|`Width`|Integer|Larghezza preferita espressa in caratteri che deve essere riservata per visualizzare i valori del campo in una presentazione tabulare. Se omesso, una larghezza predefinita si basa sul tipo di dati del campo.|  
+|`SortDirection`|Enum|Valore che indica la modalità di ordinamento dei valori del campo. I valori possibili sono i seguenti: `Default`, `Ascending`, `Descending`. Se omesso, digitare il valore predefinito assegna che una direzione di ordinamento è basata sui dati del campo.|  
 |`IsRightToLeft`|Boolean|Indica se il campo contiene testo che deve essere letto da destra a sinistra. Se omesso, si presuppone l'impostazione del modello.|  
-|`OrderBy`|MemberRef|Riferimento a un altro campo all'interno del modello che definisce l'ordinamento per i valori di questo campo. I valori per i due campi devono presentare un mapping 1:1 oppure il comportamento di ordinamento non è definito. Se omesso, il campo viene ordinato in base al proprio valore.|  
-|`Contents`|Enum|Enumerazione che descrive il sottotipo o il contenuto del campo. Se omesso, non si presuppone alcun sottotipo, a meno che il tipo di dati del campo non sia Binary, nel qual caso si presuppone Image. Per un elenco completo dei tipi di contenuto supportati, vedere la documentazione AMO.|  
+|`OrderBy`|MemberRef|Un riferimento a un altro campo all'interno del modello che definisce l'ordinamento per i valori del campo. I valori per i due campi devono presentare un mapping 1:1 oppure il comportamento di ordinamento non è definito. Se omesso, il campo viene ordinato in base al proprio valore.|  
+|`Contents`|Enum|Enumerazione che descrive il sottotipo o il contenuto del campo. Se omesso, non specifico il sottotipo si presuppone che, a meno che il tipo del campo dati è Binary, nel qual caso si presuppone Image. Per un elenco completo dei tipi di contenuto supportati, vedere la documentazione AMO.|  
 |`DefaultAggregateFunction`|Enum|Valore che indica la funzione predefinita, se presente, generalmente utilizzata per aggregare questo campo. I valori possibili sono i seguenti: `None`, `Sum`, `Average`, `Count`, `Min`, `Max`. Se omesso, si presuppone `Sum` per i campi numerici e `None` per tutti gli altri campi.|  
 |`IsSimpleMeasure`|Boolean|Indica se una misura è soltanto una semplice aggregazione di un campo numerico. Tali aggregazioni possono essere facilmente definite nella query in base alle necessità, pertanto è preferibile ometterle dalla definizione del modello per migliorare le prestazioni. Se omesso, si presuppone `false`.|  
 |`Kpi`<br /><br /> `KpiGoal`<br /><br /> `KpiStatus`|Sottoelemento|Indica che l'elemento della misura deve essere utilizzato come indicatore KPI. Il sottoelemento KPI utilizza gli elementi KpiGoal e KpiStauts per definire l'immagine di visualizzazione associata e gli intervalli di destinazione.|  

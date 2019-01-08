@@ -1,20 +1,21 @@
 ---
-title: Come eseguire una query Oracle da un cluster di big data di SQL Server | Microsoft Docs
+title: Eseguire query sui dati esterni in Oracle
+titleSuffix: SQL Server 2019 big data clusters
 description: Questa esercitazione illustra come eseguire query sui dati di Oracle da un cluster di big data di SQL Server 2019 (anteprima). Creare una tabella esterna su dati in Oracle e quindi eseguire una query.
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 10/12/2018
+ms.date: 12/12/2018
 ms.topic: tutorial
-ms.prod: sql
-ms.openlocfilehash: 7f5383a6faf13f0454439a42efb7524eaeda7c76
-ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
+ms.custom: seodec18
+ms.openlocfilehash: f7a367a41814a7cb590276b10fcfb7c4c8697011
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49644172"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53432154"
 ---
-# <a name="tutorial-query-oracle-from-a-sql-server-big-data-cluster"></a>Esercitazione: Eseguire Query Oracle da un cluster di big data di SQL Server
+# <a name="tutorial-query-oracle-from-a-sql-server-big-data-cluster"></a>Esercitazione: Eseguire una query Oracle da un cluster di big data di SQL Server
 
 Questa esercitazione illustra come eseguire query sui dati di Oracle da un cluster di big data di SQL Server 2019. Per eseguire questa esercitazione, è necessario avere accesso a un server Oracle. Se non si ha accesso, in questa esercitazione può avere un'idea del funzionamento della virtualizzazione dei dati per origini dati esterne in cluster di big data di SQL Server.
 
@@ -29,11 +30,11 @@ In questa esercitazione, apprenderà come:
 
 ## <a id="prereqs"></a> Prerequisiti
 
-* [Distribuire un cluster di big data su Kubernetes](deployment-guidance.md).
-* [Installare Data Studio di Azure e l'estensione di SQL Server 2019](deploy-big-data-tools.md).
-* [Caricare dati di esempio al cluster](#sampledata).
-
-[!INCLUDE [Load sample data](../includes/big-data-cluster-load-sample-data.md)]
+- [Strumenti dei big Data](deploy-big-data-tools.md)
+   - **Kubectl**
+   - **Azure Data Studio**
+   - **Estensione di SQL Server 2019**
+- [Caricare i dati di esempio in cluster i big Data](tutorial-load-sample-data.md)
 
 ## <a name="create-an-oracle-table"></a>Creare una tabella Oracle
 
@@ -61,7 +62,7 @@ La procedura seguente crea una tabella di esempio denominata `INVENTORY` in Orac
 
 Il primo passaggio consiste nel creare un'origine dati esterna che possa accedere al server Oracle.
 
-1. In Azure Data Studio, connettersi all'istanza master di SQL Server del cluster di big data. Per altre informazioni, vedere [connettersi all'istanza master di SQL Server](deploy-big-data-tools.md#master).
+1. In Azure Data Studio, connettersi all'istanza master di SQL Server del cluster di big data. Per altre informazioni, vedere [connettersi all'istanza master di SQL Server](connect-to-big-data-cluster.md#master).
 
 1. Fare doppio clic sulla connessione nel **server** finestra per visualizzare il dashboard di server per l'istanza master di SQL Server. Selezionare **nuova Query**.
 

@@ -1,18 +1,20 @@
 ---
-title: Quali sono i cluster di SQL Server 2019 dei big Data? | Microsoft Docs
+title: Quali sono i cluster di big data?
+titleSuffix: SQL Server 2019 big data clusters
 description: Informazioni sui cluster di big data 2019 di SQL Server (anteprima) che vengono eseguiti su Kubernetes e fornire le opzioni di scalabilità orizzontale per relazionali e dati di HDFS.
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 11/06/2018
+ms.date: 12/06/2018
 ms.topic: overview
 ms.prod: sql
-ms.openlocfilehash: e8cdfff0efe8164df7487b3ba2a5bee6cbf0b940
-ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
+ms.custom: seodec18
+ms.openlocfilehash: 5a44fe9001b7a3bffb67cb3f213bed2ac1065970
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51221707"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030045"
 ---
 # <a name="what-are-sql-server-2019-big-data-clusters"></a>Quali sono i cluster di SQL Server 2019 dei big Data?
 
@@ -75,13 +77,13 @@ Kubernetes è un agente di orchestrazione di contenitori di open source, che è 
 |--|--|
 | **Cluster** | Un cluster Kubernetes è un set di computer, noti come nodi. Un nodo controlla il cluster e viene designato del nodo master; i nodi rimanenti sono nodi di lavoro. Il master di Kubernetes è responsabile per la distribuzione del lavoro tra i ruoli di lavoro e per il monitoraggio dell'integrità del cluster. |
 | **Node** | Un nodo esegue le applicazioni nei contenitori. Può trattarsi di un computer fisico o una macchina virtuale. Un cluster Kubernetes può contenere una combinazione di nodi macchina virtuale e computer fisici. |
-| **POD** | Un pod è l'unità atomica di distribuzione di Kubernetes. Un pod è un gruppo logico di uno o più contenitori e le risorse associate, necessari per eseguire un'applicazione. Ogni pod viene eseguito su un nodo. un nodo può essere eseguito una o più POD. Il master di Kubernetes assegna automaticamente i POD per i nodi del cluster. |
+| **POD** | Un pod è l'unità atomica di distribuzione di Kubernetes. Un pod è un gruppo logico di uno o più contenitori- e associate le risorse necessarie per eseguire un'applicazione. Ogni pod viene eseguito su un nodo. un nodo può essere eseguito una o più POD. Il master di Kubernetes assegna automaticamente i POD per i nodi del cluster. |
 
 Nei cluster di SQL Server i big data, Kubernetes è responsabile per lo stato dei cluster di big data di SQL Server; Kubernetes compila e configura i nodi del cluster, assegna i POD a nodi e monitora l'integrità del cluster.
 
 ### <a name="big-data-clusters-architecture"></a>architettura per big data cluster
 
-I nodi del cluster sono organizzati in tre piani logici: il piano di controllo, nel riquadro calcolo e il piano dati. Ogni piano ha responsabilità diverse nel cluster. Tutti i nodi Kubernetes in un cluster di big data di SQL Server ospita i POD per i componenti di almeno un piano.
+I nodi del cluster sono organizzati in tre piani logici: il piano di controllo, il piano di calcolo e il piano dati. Ogni piano ha responsabilità diverse nel cluster. Tutti i nodi Kubernetes in un cluster di big data di SQL Server ospita i POD per i componenti di almeno un piano.
 
 ![Panoramica dell'architettura](media/big-data-cluster-overview/architecture-diagram-planes.png)
 
@@ -91,7 +93,7 @@ Il piano di controllo offre gestione e sicurezza per il cluster. Contiene il mas
 
 ### <a id="computeplane"></a> Piano di calcolo
 
-Il piano di calcolo offre le risorse di calcolo al cluster. Contiene i nodi in esecuzione SQL Server in Linux POD. I POD nel piano di calcolo sono suddivise *pool di calcolo* per specifiche attività di elaborazione. Un pool di calcolo può agire come un [PolyBase](../relational-databases/polybase/polybase-guide.md) gruppo di scalabilità orizzontale per le query distribuite su origini dati diverse, ovvero, ad esempio HDFS, Oracle, MongoDB o Teradata.
+Il piano di calcolo offre le risorse di calcolo al cluster. Contiene i nodi in esecuzione SQL Server in Linux POD. I POD nel piano di calcolo sono suddivise *pool di calcolo* per specifiche attività di elaborazione. Un pool di calcolo può agire come un [PolyBase](../relational-databases/polybase/polybase-guide.md) gruppo di scalabilità orizzontale per le query distribuite sui dati di diverse origini, quali come HDFS, Oracle, MongoDB o Teradata.
 
 ### <a id="dataplane"></a> Piano dati
 

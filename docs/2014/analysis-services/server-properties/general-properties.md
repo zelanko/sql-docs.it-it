@@ -39,17 +39,17 @@ ms.assetid: 88a8117c-396a-469f-a62d-c6f262504021
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2ad086a7d6ee677fc54241f45d1dbe81e5c4c2d5
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: b854692aa00d953ebd8de783104869b784115277
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48905761"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53369143"
 ---
 # <a name="general-properties"></a>Proprietà generali
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] supporta le proprietà del server elencate nelle tabelle seguenti. In questo argomento vengono documentate le proprietà del server disponibili nel file msmdsrv.ini che non sono incluse in una sezione specifica, ad esempio Sicurezza, Rete o Pool di thread. Per altre informazioni sulle proprietà aggiuntive del server e sulla relativa impostazione, vedere [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md).  
   
- **Si applica a:** modalità server multidimensionale e tabulare, se non specificato diversamente.  
+ **Si applica a:** Modalità server multidimensionale e tabulare, se non diversamente specificato  
   
 ## <a name="non-specific-category"></a>Categoria Non-Specific  
  `AdminTimeout`  
@@ -69,10 +69,10 @@ ms.locfileid: "48905761"
  `CommitTimeout`  
  Proprietà Integer che specifica per quanto tempo (in millisecondi) il server attenderà prima di acquisire un blocco in scrittura allo scopo di eseguire il commit di una transazione. Un periodo di attesa è spesso necessario perché il server deve attendere che eventuali altri blocchi vengano rilasciati prima di acquisire un blocco in scrittura per il commit della transazione.  
   
- Il valore predefinito di questa proprietà è zero (0). Ciò significa che il server attenderà per un periodo di tempo indefinito. Per altre informazioni sulle proprietà correlate al blocco, vedere [SQL Server 2008 R2 Analysis Services Operations Guide](http://go.microsoft.com/fwlink/?LinkID=225539)(Guida operativa di SQL Server 2008 R2 Analysis Services).  
+ Il valore predefinito di questa proprietà è zero (0). Ciò significa che il server attenderà per un periodo di tempo indefinito. Per altre informazioni sulle proprietà correlate al blocco, vedere [SQL Server 2008 R2 Analysis Services Operations Guide](https://go.microsoft.com/fwlink/?LinkID=225539)(Guida operativa di SQL Server 2008 R2 Analysis Services).  
   
  `CoordinatorBuildMaxThreads`  
- Proprietà Integer a 32 bit con segno che definisce il numero massimo di thread allocati alla compilazione di indici di partizioni. Per rendere più veloce l'indicizzazione delle partizioni a scapito della quantità di memoria utilizzata, è necessario aumentare il valore di questa proprietà. Per altre informazioni su questa proprietà, vedere [SQL Server 2008 R2 Analysis Services Operations Guide](http://go.microsoft.com/fwlink/?LinkID=225539)(Guida operativa di SQL Server 2008 R2 Analysis Services).  
+ Proprietà Integer a 32 bit con segno che definisce il numero massimo di thread allocati alla compilazione di indici di partizioni. Per rendere più veloce l'indicizzazione delle partizioni a scapito della quantità di memoria utilizzata, è necessario aumentare il valore di questa proprietà. Per altre informazioni su questa proprietà, vedere [SQL Server 2008 R2 Analysis Services Operations Guide](https://go.microsoft.com/fwlink/?LinkID=225539)(Guida operativa di SQL Server 2008 R2 Analysis Services).  
   
  `CoordinatorCancelCount`  
  Proprietà Integer a 32 bit con segno che definisce la frequenza con la quale il server controlla se si è verificato un evento di annullamento (basato su un conteggio di iterazione interno). Per aumentare la frequenza di controllo degli eventi di annullamento, a scapito delle prestazioni generali, è necessario diminuire il valore di questa proprietà.  
@@ -84,7 +84,7 @@ ms.locfileid: "48905761"
   
  `CoordinatorExecutionMode` in modalità server tabulare viene ignorato.  
   
- Il valore predefinito di questa proprietà è -4. Ciò significa che il funzionamento del server è limitato a 4 operazioni parallele per processore. Per altre informazioni su questa proprietà, vedere [SQL Server 2008 R2 Analysis Services Operations Guide](http://go.microsoft.com/fwlink/?LinkID=225539)(Guida operativa di SQL Server 2008 R2 Analysis Services).  
+ Il valore predefinito di questa proprietà è -4. Ciò significa che il funzionamento del server è limitato a 4 operazioni parallele per processore. Per altre informazioni su questa proprietà, vedere [SQL Server 2008 R2 Analysis Services Operations Guide](https://go.microsoft.com/fwlink/?LinkID=225539)(Guida operativa di SQL Server 2008 R2 Analysis Services).  
   
  `CoordinatorQueryMaxThreads`  
  Proprietà Integer a 32 bit con segno che definisce il numero massimo di thread per segmento di partizione durante la risoluzione delle query. Minore è il numero di utenti concorrenti e maggiore è il valore assegnabile a questa proprietà, a scapito della memoria. Viceversa, se il numero di utenti concorrente è elevato, è necessario abbassare il valore di questa proprietà.  
@@ -96,13 +96,13 @@ ms.locfileid: "48905761"
  Proprietà di stringa che consente l'identificazione del nome della directory in cui sono archiviati i dati.  
   
  `DeploymentMode`  
- Consente di determinare il contesto operativo di un'istanza del server Analysis Services. Questa proprietà viene definita 'modalità server' in finestre di dialogo, messaggi e documentazione. Questa proprietà viene configurata tramite il programma di installazione di SQL Server in base alla modalità server selezionata durante l'installazione di Analysis Services e deve essere considerata solo per uso interno, usando sempre il valore specificato dal programma di installazione.  
+ Consente di determinare il contesto operativo di un'istanza del server Analysis Services. Questa proprietà è definita 'modalità server' in finestre di dialogo, messaggi e documentazione. Questa proprietà viene configurata tramite il programma di installazione di SQL Server in base alla modalità server selezionata durante l'installazione di Analysis Services e deve essere considerata solo per uso interno, usando sempre il valore specificato dal programma di installazione.  
   
  Tra i valori validi per questa proprietà sono inclusi i seguenti:  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
-|0|Si tratta del valore predefinito. Specifica la modalità multidimensionale, usata per i database multidimensionali che usano l'archiviazione MOLAP, HOLAP e ROLAP, nonché i modelli di data mining.|  
+|0|Rappresenta il valore predefinito. Specifica la modalità multidimensionale, usata per i database multidimensionali che usano l'archiviazione MOLAP, HOLAP e ROLAP, nonché i modelli di data mining.|  
 |1|Consente di specificare le istanze di Analysis Services installate come parte di una distribuzione di PowerPivot per SharePoint. Non modificare la proprietà della modalità di distribuzione dell'istanza di Analysis Services che è parte di un'installazione di PowerPivot per SharePoint. I dati PowerPivot non verranno più eseguiti nel server se si cambia modalità.|  
 |2|Specifica la modalità tabulare usata per l'hosting dei database del modello tabulare che usano l'archiviazione in memoria o DirectQuery.|  
   
@@ -129,7 +129,7 @@ ms.locfileid: "48905761"
 > [!NOTE]  
 >  Le query e i processi annullati da questo evento restituiranno il seguente messaggio di errore: "`Server: The operation has been cancelled`"  
   
- Per altre informazioni su questa proprietà, vedere [SQL Server 2008 R2 Analysis Services Operations Guide](http://go.microsoft.com/fwlink/?LinkID=225539)(Guida operativa di SQL Server 2008 R2 Analysis Services).  
+ Per altre informazioni su questa proprietà, vedere [SQL Server 2008 R2 Analysis Services Operations Guide](https://go.microsoft.com/fwlink/?LinkID=225539)(Guida operativa di SQL Server 2008 R2 Analysis Services).  
   
 > [!IMPORTANT]  
 >  `ForceCommitTimeout` si applica ai comandi di elaborazione dei cubi e alle operazioni di writeback.  

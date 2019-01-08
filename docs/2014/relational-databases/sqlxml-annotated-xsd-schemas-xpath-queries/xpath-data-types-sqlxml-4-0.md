@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - mapping XDR types to XPath types [SQLXML]
@@ -29,12 +27,12 @@ ms.assetid: a90374bf-406f-4384-ba81-59478017db68
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 78c7890449a68770d6c6a14a100af061b1394040
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b490a0f4876f911923ed0429f33d332b96768792
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48054751"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52796416"
 ---
 # <a name="xpath-data-types-sqlxml-40"></a>Tipi di dati XPath (SQLXML 4.0)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], XPath e gli elementi XML Schema (XSD) utilizzano tipi di dati molto diversi. XPath, ad esempio, non include tipi di dati integer o di data, mentre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e XSD ne includono diversi. XSD utilizza una precisione in nanosecondi per i valori di ora, mentre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizza al massimo una precisione di 1/300 secondi. Di conseguenza, il mapping di un tipo di dati a un altro non è sempre possibile. Per ulteriori informazioni sul mapping [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] i tipi di dati ai tipi di dati XSD, vedere [coercizioni di tipi di dati e l'annotazione SQL: DataType &#40;SQLXML 4.0&#41;](../sqlxml-annotated-xsd-schemas-using/data-type-coercions-and-the-sql-datatype-annotation-sqlxml-4-0.md).  
@@ -65,7 +63,7 @@ ms.locfileid: "48054751"
 |Nessuno è un set di nodi.|Convertire entrambi gli operandi in `number` e quindi eseguire il confronto.|Convertire entrambi gli operandi in un tipo comune e quindi eseguire il confronto. Convertire in `boolean` se uno degli operandi è `boolean`, in `number` se uno degli operandi è `number`; in caso contrario, convertire in `string`.|  
   
 > [!NOTE]  
->  Poiché gli operatori relazionali XPath convertono sempre gli operandi in `number`, i confronti `string` non sono possibili. Per includere confronti relativi alla data, in SQL Server 2000 è disponibile una variazione alla specifica XPath: quando un operatore relazionale confronta un valore `string` con un valore `string`, un set di nodi con un valore `string` o un set di nodi che restituisce una stringa con un altro set di nodi che restituisce una stringa, viene eseguito un confronto `string` e non un confronto `number`.  
+>  Poiché gli operatori relazionali XPath convertono sempre gli operandi in `number`, i confronti `string` non sono possibili. Per includere confronti relativi alla data, SQL Server 2000 è disponibile una variazione alla specifica XPath: Quando un operatore relazionale Confronta un `string` a un `string`, un set di nodi un `string`, un con valori di stringa di set di nodi in un stringa con valori di set di nodi, o un `string` confronto (non un `number` confronto) viene eseguita.  
   
 ## <a name="node-set-conversions"></a>Conversioni dei set di nodi  
  Le conversioni dei set di nodi non sono sempre intuitive. Un set di nodi viene convertito in un tipo `string` assumendo il valore stringa solo del primo nodo nel set. Un set di nodi viene convertito in `number` tramite la conversione in `string` e quindi convertendo `string` in `number`. Un set di nodi viene convertito in `boolean` verificandone l'esistenza.  
@@ -73,7 +71,7 @@ ms.locfileid: "48054751"
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non esegue la selezione della posizione nei set di nodi: la query XPath `Customer[3]`, ad esempio, indica il terzo cliente. Questo tipo di selezione della posizione non è supportato in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pertanto, le conversioni node-set-to-`string` o node-set-to-`number` come descritto dalla specifica XPath non sono implementate. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizza le semantiche "any" dove la specifica XPath specifica la semantica "first". Ad esempio, basato sulla specifica W3C XPath, la query XPath `Order[OrderDetail/@UnitPrice > 10.0]` seleziona gli ordini con il primo **OrderDetail** con un **UnitPrice** maggiore di 10.0. Nelle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], la query XPath seguente seleziona gli ordini con qualsiasi **OrderDetail** con un **UnitPrice** maggiore di 10.0.  
   
- La conversione in `boolean` genera un test di esistenza e, pertanto, la query XPath `Products[@Discontinued=true()]` equivale all'espressione SQL "Products.Discontinued is not null", non all'espressione SQL "Products.Discontinued = 1". Per rendere la query equivalente all'espressione SQL successiva, convertire innanzitutto il set di nodi in un tipo non `boolean`, ad esempio `number`. Ad esempio, `Products[number(@Discontinued) = true()]`.  
+ La conversione in `boolean` genera un test di esistenza e, pertanto, la query XPath `Products[@Discontinued=true()]` equivale all'espressione SQL "Products.Discontinued is not null", non all'espressione SQL "Products.Discontinued = 1". Per rendere la query equivalente all'espressione SQL successiva, convertire innanzitutto il set di nodi in un tipo non `boolean`, ad esempio `number`. Ad esempio `Products[number(@Discontinued) = true()]`.  
   
  Poiché la maggior parte degli operatori viene definita come TRUE se gli operatori sono TRUE per tutti i nodi nel set di nodi o per uno di essi, queste operazioni restituiscono sempre FALSE se il set di nodi è vuoto. In questo modo, se A è vuoto, sia `A = B` sia `A != B` sono FALSE e `not(A=B)` e `not(A!=B)` sono TRUE.  
   
@@ -149,7 +147,7 @@ CONVERT(float(CONVERT(money, m)) + CONVERT(float(53), 3) = CONVERT(float(53), 3)
   
  Il prefisso "E-" viene aggiunto alla stringa, e il risultato viene quindi confrontato con `N'E-1'`.  
   
-### <a name="b-perform-several-data-type-conversions-in-an-xpath-query"></a>B. Eseguire diverse conversioni dei tipi di dati in una query XPath  
+### <a name="b-perform-several-data-type-conversions-in-an-xpath-query"></a>b. Eseguire diverse conversioni dei tipi di dati in una query XPath  
  Considerare la seguente query XPath specificata su uno schema XSD con annotazioni: `OrderDetail[@UnitPrice * @OrderQty > 98]`  
   
  Questa query XPath restituisce tutti i  **\<OrderDetail >** gli elementi che soddisfano il predicato `@UnitPrice * @OrderQty > 98`. Se il **UnitPrice** annotato con un `fixed14.4` tipo di dati nello schema con annotazione, questo predicato è equivalente all'espressione SQL:  

@@ -20,16 +20,16 @@ ms.assetid: 332e1b4b-b0ed-4e7a-aa4d-4f35f4f4476b
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3d64f536b88d3b6fd8f10fc36b75cd3395c818af
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6e4c15cfe0d82fc4b68115c029334fa7d3ec7410
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47814979"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590284"
 ---
 # <a name="sqlprepare-function"></a>Pagina relativa alla funzione SQLPrepare
 **Conformità**  
- Versione introdotta: Conformità agli standard 1.0 di ODBC: ISO 92  
+ Versione introdotta: Conformità agli standard 1.0 ODBC: ISO 92  
   
  **Riepilogo**  
  **SQLPrepare** prepara una stringa SQL per l'esecuzione.  
@@ -60,7 +60,7 @@ SQLRETURN SQLPrepare(
 ## <a name="diagnostics"></a>Diagnostica  
  Quando **SQLPrepare** restituisce SQL_ERROR o SQL_SUCCESS_WITH_INFO, un valore SQLSTATE associato possono essere ottenuti chiamando **SQLGetDiagRec** con un *HandleType* di SQL _ HANDLE_STMT e un *gestiscono* dei *StatementHandle*. Nella tabella seguente sono elencati i valori SQLSTATE comunemente restituiti da **SQLPrepare** e illustra ognuna nel contesto di questa funzione; la notazione "(DM)" precede le descrizioni di SQLSTATE restituiti da Gestione Driver. Il codice restituito a ogni valore SQLSTATE è SQL_ERROR, se non specificato diversamente.  
   
-|SQLSTATE|Errore|Description|  
+|SQLSTATE|Errore|Descrizione|  
 |--------------|-----------|-----------------|  
 |01000|Avviso generale|Messaggio informativo specifico del driver. (Funzione restituisce SQL_SUCCESS_WITH_INFO).|  
 |01S02|Valore di opzione modificato|Un attributo di istruzione specificato non è valido a causa di condizioni di lavoro di implementazione, pertanto è stata temporaneamente sostituito con un valore simile. (**SQLGetStmtAttr** può essere chiamato per determinare quale sia il valore di sostituzione temporaneamente.) Il valore di sostituzione è valido per il *StatementHandle* fino a quando il cursore è chiuso. Gli attributi di istruzione che è possibile modificare sono: SQL_ATTR_CONCURRENCY SQL_ATTR_CURSOR_TYPE SQL_ATTR_KEYSET_SIZE SQL_ATTR_MAX_LENGTH SQL_ATTR_MAX_ROWS SQL_ATTR_QUERY_TIMEOUT SQL_ATTR_SIMULATE_CURSOR<br /><br /> (Funzione restituisce SQL_SUCCESS_WITH_INFO).|  
@@ -69,7 +69,7 @@ SQLRETURN SQLPrepare(
 |21S02|Livello di tabella derivata corrisponde a elenco di colonne|\**StatementText* contenuti un **CREATE VIEW** istruzione e il numero dei nomi specificato non è lo stesso livello della tabella derivata definita nella specifica di query.|  
 |22018|Valore del carattere non valido per la specifica del cast|**StatementText* conteneva un'istruzione SQL che conteneva un valore letterale o un parametro e il valore è incompatibile con il tipo di dati della colonna della tabella associata.|  
 |22019|Carattere di escape non valido|L'argomento *StatementText* contenuta una **, ad esempio** predicato con un **ESCAPE** nel **dove** clausola e la lunghezza del carattere di escape carattere che segue **ESCAPE** non è uguale a 1.|  
-|22025|Sequenza di escape non valido|L'argomento *StatementText* contenute "**quali** *valore di schema* **ESCAPE** *caratterediescape*"nel **in cui** clausola e il carattere che segue il carattere di escape nel valore del modello è stato"%"né"_".|  
+|22025|Sequenza di escape non valido|L'argomento *StatementText* contenute "**quali** _valore di schema_ **ESCAPE** _caratterediescape_"nel **in cui** clausola e il carattere che segue il carattere di escape nel valore del modello è stato"%"né"_".|  
 |24000|Stato del cursore non valido|(DM) un cursore è stato aperto scegliere il *StatementHandle*, e **SQLFetch** oppure **SQLFetchScroll** fosse stata chiamata.<br /><br /> Un cursore è stato aperto nel *StatementHandle*, ma **SQLFetch** oppure **SQLFetchScroll** non fosse stata chiamata.|  
 |34000|Nome di cursore non valido|\**StatementText* contenuti un posizionati **eliminare** o un oggetto posizionato **UPDATE**, e il cursore fa riferimento l'istruzione preparata non è stato aperto.|  
 |3D000|Nome catalogo non valido|Il nome del catalogo specificato nel *StatementText* non è valido.|  
@@ -102,7 +102,7 @@ SQLRETURN SQLPrepare(
 > [!NOTE]  
 >  Se un'applicazione utilizza **SQLPrepare** preparare e **SQLExecute** per inviare un **COMMIT** oppure **ROLLBACK** istruzione, non sarà interoperabilità tra prodotti DBMS. Per eseguire il commit o rollback della transazione, chiamare **SQLEndTran**.  
   
- Il driver è possibile modificare l'istruzione per usare il modulo di SQL dall'origine dati e quindi inviarlo per l'origine dati per la preparazione. In particolare, il driver consente di modificare le sequenze di escape utilizzate per definire la sintassi SQL per determinate funzionalità. (Per una descrizione della grammatica di istruzione SQL, vedere [sequenze di Escape in ODBC](../../../odbc/reference/develop-app/escape-sequences-in-odbc.md) e [appendice c: SQL grammatica](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md).) Per il driver, un handle di istruzione è simile a un identificatore di istruzione nel codice SQL incorporato. Se l'origine dati supporta gli identificatori di istruzione, il driver può inviare un identificatore di istruzione e i valori dei parametri per l'origine dati.  
+ Il driver è possibile modificare l'istruzione per usare il modulo di SQL dall'origine dati e quindi inviarlo per l'origine dati per la preparazione. In particolare, il driver consente di modificare le sequenze di escape utilizzate per definire la sintassi SQL per determinate funzionalità. (Per una descrizione della grammatica di istruzione SQL, vedere [sequenze di Escape in ODBC](../../../odbc/reference/develop-app/escape-sequences-in-odbc.md) e [appendice c: Grammatica SQL](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md).) Per il driver, un handle di istruzione è simile a un identificatore di istruzione nel codice SQL incorporato. Se l'origine dati supporta gli identificatori di istruzione, il driver può inviare un identificatore di istruzione e i valori dei parametri per l'origine dati.  
   
  Dopo che viene preparata un'istruzione, l'applicazione usa l'handle di istruzione per vedere l'informativa nelle successive chiamate di funzione. L'istruzione preparata associata all'handle di istruzione può essere eseguita nuovamente chiamando **SQLExecute** fino a quando l'applicazione rilascia l'istruzione con una chiamata a **SQLFreeStmt** con l'opzione SQL_DROP o fino a quando non viene utilizzato l'handle di istruzione in una chiamata a **SQLPrepare**, **SQLExecDirect**, o una delle funzioni di catalogo (**SQLColumns**,  **SQLTables**e così via). Dopo l'applicazione viene preparata un'istruzione, è possibile richiedere informazioni sul formato del set di risultati. Per alcune implementazioni, la chiamata **SQLDescribeCol** oppure **SQLDescribeParam** dopo **SQLPrepare** potrebbe non essere più efficiente la chiamata alla funzione dopo **SQLExecute** oppure **SQLExecDirect**.  
   

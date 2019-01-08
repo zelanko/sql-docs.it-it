@@ -16,12 +16,12 @@ ms.assetid: 04fd9d95-4624-420f-a3be-1794309b3a47
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c2d0db051e473a5b84bef5139137e33b91b62d2d
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 749aaffe61033564649f9cd70871f2cb01340757
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51559384"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53363593"
 ---
 # <a name="overview-of-alwayson-availability-groups-sql-server"></a>Panoramica di Gruppi di disponibilità AlwaysOn (SQL Server)
   In questo argomento sono introdotti i concetti di [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] fondamentali per la configurazione e la gestione di uno o più gruppi di disponibilità in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Per un riepilogo dei vantaggi offerti dai gruppi di disponibilità e per una panoramica della terminologia relativa a [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], vedere [Gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](always-on-availability-groups-sql-server.md).  
@@ -29,9 +29,9 @@ ms.locfileid: "51559384"
  Un *gruppo di disponibilità* supporta un ambiente di failover per un set discreto di database utente, noti come *database di disponibilità*, su cui si verifica il failover. Un gruppo di disponibilità supporta un set di database primari e da uno a otto set di database secondari corrispondenti. I database secondari *non* sono backup. Continuare a eseguire il backup dei database e dei log delle transazioni regolarmente.  
   
 > [!TIP]  
->  È possibile creare qualsiasi tipo di backup di un database primario. In alternativa, è possibile creare backup del log e backup completi di sola copia dei database secondari. Per altre informazioni, vedere [Repliche secondarie attive: Backup in repliche secondarie &#40;Gruppi di disponibilità AlwaysOn&#41;](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).  
+>  È possibile creare qualsiasi tipo di backup di un database primario. In alternativa, è possibile creare backup del log e backup completi di sola copia dei database secondari. Per altre informazioni, vedere [repliche secondarie attive: Backup su repliche secondarie &#40;gruppi di disponibilità AlwaysOn&#41;](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).  
   
- Ogni set di database di disponibilità è ospitato da una *replica di disponibilità*. Sono disponibili due tipi di replica di disponibilità: una *replica primaria* in cui sono ospitati i database primari e da una a otto *repliche secondarie*, ognuna ospitante un set di database secondari, che sono usate come destinazione del failover potenziale per il gruppo di disponibilità. Per un gruppo di disponibilità il failover si verifica al livello di una replica di disponibilità. Una replica di disponibilità fornisce la ridondanza solo a livello di database, per il set di database in un gruppo di disponibilità. I failover non sono dovuti a database ritenuti sospetti in seguito a una perdita di un file di dati o al danneggiamento di un log delle transazioni.  
+ Ogni set di database di disponibilità è ospitato da una *replica di disponibilità*. Sono disponibili due tipi di replica di disponibilità: una *replica primaria* in cui sono ospitati i database primari e da una a otto *repliche secondarie*, ognuna ospitante un set di database secondari, che sono usate come destinazione del failover potenziale per il gruppo di disponibilità. Per un gruppo di disponibilità il failover si verifica al livello di una replica di disponibilità. Una replica di disponibilità fornisce la ridondanza solo a livello di database, ovvero per il set di database in un gruppo di disponibilità. I failover non sono dovuti a database ritenuti sospetti in seguito a una perdita di un file di dati o al danneggiamento di un log delle transazioni.  
   
  La replica primaria rende disponibili i database primari per le connessioni in lettura e scrittura dei client e nel processo noto come *sincronizzazione dei dati*che si verifica a livello di database. La replica primaria invia i record di log delle transazioni di ogni database primario a ogni database secondario. Ogni replica secondaria memorizza nella cache i record del log delle transazioni (*finalizza* il log), quindi li applica al database secondario corrispondente. La sincronizzazione dei dati si verifica tra il database primario e ogni database secondario collegato, indipendentemente dagli altri database. Pertanto, un database secondario può essere sospeso o non riuscire senza influire su altri database secondari e un database primario può essere sospeso o non riuscire senza influire su altri database primari.  
   
@@ -62,13 +62,13 @@ ms.locfileid: "51559384"
   
  In una determinata istanza può essere ospitata solo una replica di disponibilità per gruppo di disponibilità. Tuttavia, ogni istanza può essere usata per numerosi gruppi di disponibilità. Un'istanza specificata può essere un'istanza autonoma o un'istanza del cluster di failover di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Se è necessaria la ridondanza a livello di server, usare le istanze del cluster di failover.  
   
- A ogni replica di disponibilità viene assegnato un ruolo iniziale, vale a dire il *ruolo primario* o il *ruolo secondario*, ereditato dai database di disponibilità della replica in questione. È il ruolo a determinare se la replica a cui è stato assegnato ospiterà database di lettura e scrittura o database di sola lettura. La *replica primaria*, a cui viene assegnato il ruolo primario, ospiterà i database di lettura e scrittura, noti come *database primari*. Ad almeno un'altra replica, nota come *replica secondaria*viene assegnato il ruolo secondario. Una replica secondaria ospita i database di sola lettura, noti come database secondari.  
+ A ogni replica di disponibilità viene assegnato un ruolo iniziale, ovvero il *ruolo primario* o il *ruolo secondario*, ereditato dai database di disponibilità della replica in questione. È il ruolo a determinare se la replica a cui è stato assegnato ospiterà database di lettura e scrittura o database di sola lettura. La *replica primaria*, a cui viene assegnato il ruolo primario, ospiterà i database di lettura e scrittura, noti come *database primari*. Ad almeno un'altra replica, nota come *replica secondaria*viene assegnato il ruolo secondario. Una replica secondaria ospita i database di sola lettura, noti come database secondari.  
   
 > [!NOTE]  
 >  Quando il ruolo di una replica di disponibilità è indeterminato, ad esempio durante un failover, i relativi database si trovano temporaneamente nello stato NOT SYNCHRONIZING. Il loro ruolo rimane impostato su RESOLVING finché il ruolo della replica di disponibilità non viene risolto. Se una replica di disponibilità viene risolta nel ruolo primario, i relativi database diventano i database primari. Se una replica di disponibilità viene risolta nel ruolo secondario, i relativi database diventano i database secondari.  
   
 ##  <a name="AvailabilityModes"></a> Modalità di disponibilità  
- La modalità di disponibilità è una proprietà di ogni replica di disponibilità. La modalità di disponibilità determina se la replica primaria eseguirà il commit delle transazioni su un database solo dopo che una determinata replica secondaria avrà scritto su disco i record del log delle transazioni (consolidamento del log). [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] supportano due modalità di disponibilità:*modalità commit asincrono* e *modalità commit sincrono*.  
+ La modalità di disponibilità è una proprietà di ogni replica di disponibilità. La modalità di disponibilità determina se la replica primaria eseguirà il commit delle transazioni su un database solo dopo che una determinata replica secondaria avrà scritto su disco i record del log delle transazioni (consolidamento del log). I [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] supportano due modalità di disponibilità: *modalità commit asincrono* e *modalità commit sincrono*.  
   
 -   **Asynchronous-commit mode**  
   
@@ -85,7 +85,7 @@ ms.locfileid: "51559384"
   
  Sono disponibili tre tipi di failover: automatico, manuale e forzato (con possibile perdita di dati). La forma o le forme di failover supportate da una determinata replica secondaria dipendono dalla relativa modalità di disponibilità e, per la modalità commit sincrono, dalla modalità di failover sulla replica primaria e sulla replica secondaria di destinazione.  
   
--   La modalità commit sincrono supporta due forme di failover:*failover manuale pianificato* e *failover automatico*, se la replica secondaria di destinazione è sincronizzata con avt1. Il supporto per queste forme di failover dipende dall'impostazione della *proprietà della modalità di failover* sui partner di failover. Se la modalità di failover è impostata su "manuale" sulla replica primaria o su quella secondaria, per la replica secondaria è supportato solo il failover manuale. Se la modalità di failover è impostata su "automatico" sia sulla replica primaria sia sulle repliche secondarie, sulla replica secondaria sono supportate entrambe le forme di failover, manuale e automatico.  
+-   La modalità commit sincrono supporta due forme di failover, ovvero *failover manuale pianificato* e *failover automatico*, se la replica secondaria di destinazione è sincronizzata con avt1. Il supporto per queste forme di failover dipende dall'impostazione della *proprietà della modalità di failover* sui partner di failover. Se la modalità di failover è impostata su "manuale" sulla replica primaria o su quella secondaria, per la replica secondaria è supportato solo il failover manuale. Se la modalità di failover è impostata su "automatico" sia sulla replica primaria sia sulle repliche secondarie, sulla replica secondaria sono supportate entrambe le forme di failover, manuale e automatico.  
   
     -   **Failover manuale pianificato** (senza perdita di dati)  
   
@@ -118,11 +118,11 @@ ms.locfileid: "51559384"
   
 -   **Esecuzione di operazioni di backup sulle repliche secondarie**  
   
-     Le repliche secondarie supportano l'esecuzione di backup del log e backup di [sola copia](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md) di un database completo, di file o di un filegroup. È possibile configurare il gruppo di disponibilità per specificare una preferenza per la destinazione dei backup. È importante comprendere che la preferenza non viene applicata da SQL Server, pertanto non incide sui backup ad hoc. L'interpretazione di questa preferenza dipende dalla logica, se presente, di cui viene generato lo script nei processi di backup per ogni database di un determinato gruppo di disponibilità. Per una replica di disponibilità singola, è possibile specificare la priorità di esecuzione dei backup in questa replica rispetto alle altre repliche dello stesso gruppo di disponibilità. Per altre informazioni, vedere [Repliche secondarie attive: Backup in repliche secondarie &#40;Gruppi di disponibilità AlwaysOn&#41;](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).  
+     Le repliche secondarie supportano l'esecuzione di backup del log e backup di [sola copia](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md) di un database completo, di file o di un filegroup. È possibile configurare il gruppo di disponibilità per specificare una preferenza per la destinazione dei backup. È importante comprendere che la preferenza non viene applicata da SQL Server, pertanto non incide sui backup ad hoc. L'interpretazione di questa preferenza dipende dalla logica, se presente, di cui viene generato lo script nei processi di backup per ogni database di un determinato gruppo di disponibilità. Per una replica di disponibilità singola, è possibile specificare la priorità di esecuzione dei backup in questa replica rispetto alle altre repliche dello stesso gruppo di disponibilità. Per altre informazioni, vedere [repliche secondarie attive: Backup su repliche secondarie &#40;gruppi di disponibilità AlwaysOn&#41;](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).  
   
 -   **Accesso in sola lettura a una o più repliche secondarie (repliche secondarie leggibili)**  
   
-     Una replica di disponibilità può essere configurata in modo da consentire l'accesso in sola lettura ai relativi database locali quando svolge il ruolo secondario, sebbene alcune operazioni non siano pienamente supportate. Se inoltre si desidera impedire l'esecuzione dei carichi di lavoro in sola lettura sulla replica primaria, è possibile configurare le repliche in modo da consentire l'accesso in lettura/scrittura solo quando l'esecuzione avviene nel ruolo primario. Per altre informazioni, vedere [Repliche secondarie attive: Repliche secondarie leggibili &#40;Gruppi di disponibilità AlwaysOn&#41;](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
+     Una replica di disponibilità può essere configurata in modo da consentire l'accesso in sola lettura ai relativi database locali quando svolge il ruolo secondario, sebbene alcune operazioni non siano pienamente supportate. Se inoltre si desidera impedire l'esecuzione dei carichi di lavoro in sola lettura sulla replica primaria, è possibile configurare le repliche in modo da consentire l'accesso in lettura/scrittura solo quando l'esecuzione avviene nel ruolo primario. Per altre informazioni, vedere [repliche secondarie attive: Repliche secondarie leggibili &#40;gruppi di disponibilità AlwaysOn&#41;](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
   
      Se un listener del gruppo di disponibilità e una o più repliche secondarie leggibili vengono elaborate da un gruppo di disponibilità, tramite [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] è possibile instradare le richieste di connessione con finalità di lettura a una di tali repliche (*routing di sola lettura*). Per altre informazioni, vedere [Listener del gruppo di disponibilità, connettività client e failover dell'applicazione &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md).  
   
@@ -149,23 +149,23 @@ ms.locfileid: "51559384"
   
 -   **Blog:**  
   
-     [Su AlwaysON - HADRON serie: Utilizzo del Pool di lavoro per HADRON database abilitati](http://blogs.msdn.com/b/psssql/archive/2012/05/17/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
+     [Su AlwaysON - HADRON serie: Utilizzo del Pool di lavoro per HADRON database abilitati](https://blogs.msdn.com/b/psssql/archive/2012/05/17/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
   
-     [SQL Server AlwaysOn Team blog: Il Blog ufficiale di SQL Server AlwaysOn Team](http://blogs.msdn.com/b/sqlalwayson/)  
+     [SQL Server AlwaysOn Team blog: Il Team Blog ufficiale di SQL Server AlwaysOn](https://blogs.msdn.com/b/sqlalwayson/)  
   
-     [Pagina relativa ai blog del Servizio Supporto Tecnico Clienti per gli ingegneri di SQL Server](http://blogs.msdn.com/b/psssql/)  
+     [Pagina relativa ai blog del Servizio Supporto Tecnico Clienti per gli ingegneri di SQL Server](https://blogs.msdn.com/b/psssql/)  
   
 -   **Video:**  
   
-     [Serie di Microsoft SQL Server nome in codice "Denali" AlwaysOn, parte 1: Presentazione della soluzione di disponibilità elevata di prossima generazione](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
+     [Serie Microsoft SQL Server nome in codice "Denali" AlwaysOn, parte 1: Introduzione della soluzione di disponibilità elevata di prossima generazione](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
   
-     [Serie di Microsoft SQL Server nome in codice "Denali" AlwaysOn, parte 2: Creazione di una soluzione di disponibilità elevata critica tramite Alwasyon](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
+     [Serie Microsoft SQL Server nome in codice "Denali" AlwaysOn, parte 2: Creazione di una soluzione di disponibilità elevata critica tramite Alwasyon](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
   
 -   **White paper:**  
   
-     [Microsoft SQL Server AlwaysOn Solutions Guide for High Availability and Disaster Recovery](http://go.microsoft.com/fwlink/?LinkId=227600)  
+     [Microsoft SQL Server AlwaysOn Solutions Guide for High Availability and Disaster Recovery](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
-     [Pagina relativa ai white paper Microsoft per SQL Server 2012](http://msdn.microsoft.com/library/hh403491.aspx)  
+     [Pagina relativa ai white paper Microsoft per SQL Server 2012](https://msdn.microsoft.com/library/hh403491.aspx)  
   
      [Pagina relativa ai white paper del team di consulenza clienti di SQL Server](http://sqlcat.com/)  
   
@@ -178,7 +178,7 @@ ms.locfileid: "51559384"
  [Prerequisiti, restrizioni e consigli per gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)   
  [Creazione e configurazione di gruppi di disponibilità &#40;SQL Server&#41;](creation-and-configuration-of-availability-groups-sql-server.md)   
  [Repliche secondarie attive: Repliche secondarie leggibili &#40;gruppi di disponibilità AlwaysOn&#41;](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
- [Repliche secondarie attive: Backup in repliche secondarie &#40;gruppi di disponibilità AlwaysOn&#41;](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)   
+ [Repliche secondarie attive: Backup su repliche secondarie &#40;gruppi di disponibilità AlwaysOn&#41;](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)   
  [Listener del gruppo di disponibilità, connettività client e failover dell'applicazione &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)  
   
   

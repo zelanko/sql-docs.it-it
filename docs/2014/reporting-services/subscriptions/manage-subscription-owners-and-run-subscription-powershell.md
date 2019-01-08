@@ -11,15 +11,15 @@ ms.assetid: 0fa6cb36-68fc-4fb8-b1dc-ae4f12bf6ff0
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: b1b0c51cd8750cb83ebeccbd0520c0ace32198ff
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ebe7f44d4e2ddc9d6da69daae7787c1b40d5b6e3
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48216021"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53367523"
 ---
 # <a name="use-powershell-to-change-and-list-reporting-services-subscription-owners-and-run-a-subscription"></a>Usare PowerShell per modificare ed elencare i proprietari di sottoscrizioni di Reporting Services ed eseguire una sottoscrizione
-  A partire [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] a livello di codice è possibile trasferire la proprietà di un [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] sottoscrizione da un utente a un altro. In questo argomento sono disponibili alcuni script di Windows PowerShell che possono essere usati per modificare o semplicemente elencare la proprietà delle sottoscrizioni. Ogni esempio include sintassi di esempio per la modalità nativa e la modalità SharePoint. Dopo la modifica del proprietario, la sottoscrizione sarà eseguita nel contesto di protezione del nuovo proprietario e nel campo User!UserID nel report sarà visualizzato il valore relativo al nuovo proprietario. Per altre informazioni sul modello a oggetti chiamato dagli esempi di PowerShell, vedere <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A>  
+  A partire da [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)][!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] è possibile trasferire a livello di programmazione la proprietà di una sottoscrizione [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] da un utente a un altro. In questo argomento sono disponibili alcuni script di Windows PowerShell che possono essere usati per modificare o semplicemente elencare la proprietà delle sottoscrizioni. Ogni esempio include sintassi di esempio per la modalità nativa e la modalità SharePoint. Dopo la modifica del proprietario, la sottoscrizione sarà eseguita nel contesto di protezione del nuovo proprietario e nel campo User!UserID nel report sarà visualizzato il valore relativo al nuovo proprietario. Per altre informazioni sul modello a oggetti chiamato dagli esempi di PowerShell, vedere <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A>  
   
  ![Contenuto correlato di PowerShell](../media/rs-powershellicon.jpg "Contenuto correlato di PowerShell")  
   
@@ -31,50 +31,50 @@ ms.locfileid: "48216021"
   
 -   [Come usare gli script](#bkmk_how_to)  
   
--   [Script: elencare la proprietà di tutte le sottoscrizioni](#bkmk_list_ownership_all)  
+-   [Script: Elencare la proprietà di tutte le sottoscrizioni](#bkmk_list_ownership_all)  
   
--   [Script: elencare tutte le sottoscrizioni di proprietà di un utente specifico](#bkmk_list_all_one_user)  
+-   [Script: Elencare tutte le sottoscrizioni appartenenti a un utente specifico](#bkmk_list_all_one_user)  
   
--   [Script: modificare la proprietà per tutte le sottoscrizioni appartenenti a un utente specifico](#bkmk_change_all)  
+-   [Script: Modificare la proprietà per tutte le sottoscrizioni appartenenti a un utente specifico](#bkmk_change_all)  
   
--   [Script: elencare tutte le sottoscrizioni associate a un report specifico](#bkmk_list_for_1_report)  
+-   [Script: Elencare tutte le sottoscrizioni associate a un report specifico](#bkmk_list_for_1_report)  
   
--   [Script: cambiare la proprietà di una sottoscrizione specifica](#bkmk_change_all_1_subscription)  
+-   [Script: Modificare la proprietà di una sottoscrizione specifica](#bkmk_change_all_1_subscription)  
   
--   [Script: eseguire (attivare) una singola sottoscrizione](#bkmk_run_1_subscription)  
+-   [Script: Eseguire (attivare) una singola sottoscrizione](#bkmk_run_1_subscription)  
   
 ##  <a name="bkmk_how_to"></a> Come usare gli script  
   
 ### <a name="permissions"></a>Permissions  
  In questa sezione sono riepilogati i livelli di autorizzazione necessari per usare ogni metodo della modalità nativa e della modalità SharePoint di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. Gli script in questo argomento usano i metodi seguenti di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] :  
   
--   [Metodo ReportingService2010.ListSubscriptions](http://technet.microsoft.com/library/reportservice2010.reportingservice2010.listsubscriptions.aspx)  
+-   [Metodo ReportingService2010.ListSubscriptions](https://technet.microsoft.com/library/reportservice2010.reportingservice2010.listsubscriptions.aspx)  
   
--   [Metodo ReportingService2010.ChangeSubscriptionOwner](http://technet.microsoft.com/library/reportservice2010.reportingservice2010.changesubscriptionowner.aspx)  
+-   [Metodo ReportingService2010.ChangeSubscriptionOwner](https://technet.microsoft.com/library/reportservice2010.reportingservice2010.changesubscriptionowner.aspx)  
   
--   [ReportingService2010.ListChildren](http://technet.microsoft.com/library/reportservice2010.reportingservice2010.listchildren.aspx)  
+-   [ReportingService2010.ListChildren](https://technet.microsoft.com/library/reportservice2010.reportingservice2010.listchildren.aspx)  
   
--   Il metodo [ReportingService2010.FireEvent](http://technet.microsoft.com/library/reportservice2010.reportingservice2010.fireevent.aspx) è usato solo nell'ultimo script per attivare l'esecuzione di una sottoscrizione specifica. Se non si prevede di usare tale sottoscrizione, è possibile ignorare i requisiti relativi alle autorizzazioni per il metodo FireEvent.  
+-   Il metodo [ReportingService2010.FireEvent](https://technet.microsoft.com/library/reportservice2010.reportingservice2010.fireevent.aspx) è usato solo nell'ultimo script per attivare l'esecuzione di una sottoscrizione specifica. Se non si prevede di usare tale sottoscrizione, è possibile ignorare i requisiti relativi alle autorizzazioni per il metodo FireEvent.  
   
  **Modalità nativa:**  
   
--   List Subscriptions: (HYPERLINK "http://technet.microsoft.com/library/microsoft.reportingservices.interfaces.reportoperation.aspx" ReadSubscription sul report e l'utente è proprietario della sottoscrizione) o ReadAnySubscription  
+-   Elenco sottoscrizioni: (HYPERLINK "https://technet.microsoft.com/library/microsoft.reportingservices.interfaces.reportoperation.aspx" ReadSubscription sul report e l'utente è proprietario della sottoscrizione) o ReadAnySubscription  
   
--   Change Subscriptions: The user must be a member of the BUILTIN\Administrators group  
+-   Modifica sottoscrizioni: l'utente deve essere membro del gruppo BUILTIN\Administrators  
   
--   List Children: ReadProperties on Item  
+-   Elenco figli: ReadProperties su Item  
   
--   Fire Event: GenerateEvents (System)  
+-   Evento di attivazione: GenerateEvents (System)  
   
  **Modalità SharePoint:**  
   
--   List Subscriptions: ManageAlerts o (HYPERLINK "http://technet.microsoft.com/library/microsoft.sharepoint.spbasepermissions.aspx" CreateAlerts sul report e l'utente è proprietario della sottoscrizione e la sottoscrizione è una sottoscrizione pianificata).  
+-   Elenco sottoscrizioni: ManageAlerts o (HYPERLINK "https://technet.microsoft.com/library/microsoft.sharepoint.spbasepermissions.aspx" CreateAlerts sul report e l'utente è proprietario della sottoscrizione e la sottoscrizione è una sottoscrizione pianificata).  
   
--   Change Subscriptions: ManageWeb  
+-   Modifica sottoscrizioni: ManageWeb  
   
--   List Children: ViewListItems  
+-   Elenco figli: ViewListItems  
   
--   Fire Event: ManageWeb  
+-   Evento di attivazione: ManageWeb  
   
  Per altre informazioni, vedere [Confrontare ruoli e attività di Reporting Services con autorizzazioni e gruppi di SharePoint](../reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md).  
   
@@ -134,7 +134,7 @@ $subscriptions | select Path, report, Description, Owner, SubscriptionID, lastex
 ```  
   
 > [!TIP]  
->  Per verificare gli URL del sito in modalità SharePoint, usare il cmdlet **Get-SPSite**di SharePoint. Per altre informazioni, vedere [Get-SPSite](http://technet.microsoft.com/library/ff607950\(v=office.15\).aspx).  
+>  Per verificare gli URL del sito in modalità SharePoint, usare il cmdlet **Get-SPSite**di SharePoint. Per altre informazioni, vedere [Get-SPSite](https://technet.microsoft.com/library/ff607950\(v=office.15\).aspx).  
   
 ##  <a name="bkmk_list_all_one_user"></a> Script: elencare tutte le sottoscrizioni di proprietà di un utente specifico  
  Questo script permette di elencare tutte le sottoscrizioni di proprietà di un utente specifico. È possibile usare questo script per testare la connessione o verificare il percorso del report e l'ID di sottoscrizione da usare in altri script. Questo script è utile se un utente abbandona l'organizzazione e si vuole verificare le sottoscrizioni appartenenti a tale utente, in modo da potere modificare il proprietario o eliminare la sottoscrizione.  

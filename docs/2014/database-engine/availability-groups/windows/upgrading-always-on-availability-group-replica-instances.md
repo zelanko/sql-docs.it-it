@@ -10,17 +10,17 @@ ms.assetid: f670af56-dbcc-4309-9119-f919dcad8a65
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 640a1af48b83474cbeb331268fd4cf1ab808995b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8e9be78ff13d39b4cdcaf60516ac20b9a85648d6
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48155961"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53357069"
 ---
 # <a name="upgrade-and-update-of-availability-group-servers-with-minimal-downtime-and-data-loss"></a>Aggiornamento dei server dei gruppi di disponibilità con tempi di inattività e perdita dei dati minimi
   Quando si aggiornano istanze del server da SQL Server 2012 a un Service Pack o a una versione più recente, è possibile ridurre i tempi di inattività per un gruppo di disponibilità alla durata di un singolo failover manuale eseguendo un aggiornamento in sequenza. L'aggiornamento in sequenza può essere effettuato sia per passare a versioni successive di SQL Server sia per aggiornare la versione corrente con hotfix o Service Pack.  
   
- In questo argomento vengono illustrate esclusivamente le modalità di aggiornamento di SQL Server. Per relative al sistema operativo aggiornamenti eseguiti su istanze di SQL Server a disponibilità elevata, vedere [tra cluster la migrazione dei gruppi di disponibilità AlwaysOn per gli aggiornamenti del sistema operativo](http://msdn.microsoft.com/library/jj873730.aspx)  
+ In questo argomento vengono illustrate esclusivamente le modalità di aggiornamento di SQL Server. Per relative al sistema operativo aggiornamenti eseguiti su istanze di SQL Server a disponibilità elevata, vedere [tra cluster la migrazione dei gruppi di disponibilità AlwaysOn per gli aggiornamenti del sistema operativo](https://msdn.microsoft.com/library/jj873730.aspx)  
   
 ## <a name="rolling-upgradeupdate-best-practices-for-alwayson-availability-groups"></a>Procedure consigliate relative all'aggiornamento in sequenza per i gruppi di disponibilità AlwaysOn  
  Quando si eseguono aggiornamenti dei server, è consigliabile attenersi alle procedure consigliate illustrate di seguito allo scopo di ridurre al minimo i tempi di inattività e la perdita di dati per i gruppi di disponibilità:  
@@ -35,7 +35,7 @@ ms.locfileid: "48155961"
   
 -   Aggiornare sempre prima i nodi di replica secondaria remota, quindi quelli di replica secondaria locale e infine il nodo di replica primaria.  
   
--   I backup non possono essere eseguiti in un database che è in corso di aggiornamento.  Prima di aggiornare le repliche secondarie, configurare la preferenza di backup automatico per l'esecuzione dei backup solo nella replica primaria.  Prima di aggiornare la replica primaria, modificare questa impostazione per l'esecuzione dei backup solo nelle repliche secondarie.  
+-   Non è possibile eseguire backup su un database in corso di aggiornamento.  Prima di eseguire l'aggiornamento delle repliche secondarie, configurare la preferenza per i backup automatici in modo che vengano eseguiti solo sulla replica primaria.  Prima di aggiornare la replica primaria, modificare questa impostazione per l'esecuzione dei backup solo nelle repliche secondarie.  
   
 -   Per evitare failover accidentali del gruppo di disponibilità durante il processo di aggiornamento, prima di iniziare rimuovere il failover di disponibilità da tutte le repliche con commit sincrono.  
   
@@ -115,9 +115,9 @@ ms.locfileid: "48155961"
   
 |Gruppo di disponibilità|Nodo1|Nodo2|Nodo3|  
 |------------------------|-----------|-----------|-----------|  
-|AG1|Primaria|||  
-|AG2||Primaria||  
-|AG3|||Primaria|  
+|AG1|Primario|||  
+|AG2||Primario||  
+|AG3|||Primario|  
   
  In determinate situazioni potrebbe essere opportuno eseguire un aggiornamento in sequenza con bilanciamento del carico articolato come segue:  
   
@@ -139,9 +139,9 @@ ms.locfileid: "48155961"
   
 |Gruppo di disponibilità|Nodo1|Nodo2|Nodo3|  
 |------------------------|-----------|-----------|-----------|  
-|AG1||Primaria||  
-|AG2|Primaria|||  
-|AG3|||Primaria|  
+|AG1||Primario||  
+|AG2|Primario|||  
+|AG3|||Primario|  
   
  Il percorso di aggiornamento e i tempi di inattività per le applicazioni client possono variare a seconda della specifica implementazione in uso.  
   

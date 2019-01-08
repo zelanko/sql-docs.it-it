@@ -1,6 +1,6 @@
 ---
-title: Installare SQL Server 2016 R Services (In-Database) | Microsoft Docs
-description: R in SQL Server è disponibile quando si installa SQL Server 2016 R Services in Windows.
+title: 'Installare SQL Server 2016 R Services (In-Database): SQL Server Machine Learning'
+description: Aggiungere il supporto linguistico a un motore di database in SQL Server 2016 R Services a Windows di programmazione R.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 10/01/2018
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: f4ba4e28a17b0a025b48d41b077d4a536a9be8e9
-ms.sourcegitcommit: ce4b39bf88c9a423ff240a7e3ac840a532c6fcae
+ms.openlocfilehash: 69b3b9a57b2a4f6120c88552ca3100b288968b69
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48878124"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53645320"
 ---
 # <a name="install-sql-server-2016-r-services"></a>Installare SQL Server 2016 R Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -91,6 +91,19 @@ Per le installazioni locali è necessario eseguire il programma di installazione
 
 7. Al termine dell'installazione, se viene richiesto di riavviare il computer, farlo ora. È importante leggere il messaggio visualizzato nell'Installazione guidata al termine dell'installazione. Per altre informazioni, vedere [Visualizzare e leggere i file di log del programma di installazione di SQL Server](https://docs.microsoft.com/sql/database-engine/install-windows/view-and-read-sql-server-setup-log-files).
 
+## <a name="set-environment-variables"></a>Impostare le variabili di ambiente
+
+Per l'integrazione solo con R funzionalità, è consigliabile impostare il **MKL_CBWR** variabile di ambiente [garantire coerenti con l'output](https://software.intel.com/articles/introduction-to-the-conditional-numerical-reproducibility-cnr) dai calcoli Intel Math Kernel Library (MKL).
+
+1. Nel Pannello di controllo, fare clic su **sistema e sicurezza** > **System** > **impostazioni di sistema avanzate**  >   **Le variabili di ambiente**.
+
+2. Creare una nuova variabile di sistema o dell'utente. 
+
+  + Nome della variabile set a `MKL_CBWR`
+  + Impostare il valore della variabile `AUTO`
+
+Questo passaggio richiede un riavvio del server. Se sta tentando di abilitare l'esecuzione dello script, è possibile rimandare il riavvio fino al completamento del tutto il lavoro di configurazione.
+
 <a name="bkmk_enableFeature"></a>
 
 ##  <a name="enable-script-execution"></a>Abilitare l'esecuzione di script
@@ -98,20 +111,20 @@ Per le installazioni locali è necessario eseguire il programma di installazione
 1. Aprire [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. 
 
     > [!TIP]
-    > È possibile scaricare e installare la versione appropriata da questa pagina: [scaricare SQL Server Management Studio (SQL Server Management Studio)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
+    > È possibile scaricare e installare la versione appropriata da questa pagina: [Scaricare SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
     > 
     > È anche possibile provare la versione di anteprima dei [Studio di Azure Data](../../azure-data-studio/what-is.md), che supporta le attività amministrative e query su SQL Server.
   
 2. Connettersi all'istanza in cui è installato Servizi di Machine Learning, fare clic su **nuova Query** per aprire una finestra query ed eseguire il comando seguente:
 
-   ```SQL
+   ```sql
    sp_configure
    ```
     A questo punto, il valore della proprietà `external scripts enabled` deve essere **0**. Ciò avviene perché la funzionalità è disattivata per impostazione predefinita. La funzionalità deve essere abilitata in modo esplicito da un amministratore prima di poter eseguire script R o Python.
      
 3. Per abilitare la funzionalità di script esterne, eseguire l'istruzione seguente:
   
-    ```SQL
+    ```sql
     EXEC sp_configure  'external scripts enabled', 1
     RECONFIGURE WITH OVERRIDE
     ```
@@ -132,7 +145,7 @@ Utilizzare la procedura seguente per verificare che tutti i componenti usati per
 
 1. In SQL Server Management Studio, aprire una nuova finestra query ed eseguire il comando seguente:
     
-    ```SQL
+    ```sql
     EXEC sp_configure  'external scripts enabled'
     ```
 
@@ -144,7 +157,7 @@ Utilizzare la procedura seguente per verificare che tutti i componenti usati per
 
     Aprire una nuova **Query** finestra in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], quindi eseguire uno script simile al seguente:
     
-    ```SQL
+    ```sql
     EXEC sp_execute_external_script  @language =N'R',
     @script=N'
     OutputDataSet <- InputDataSet;
@@ -162,7 +175,7 @@ Utilizzare la procedura seguente per verificare che tutti i componenti usati per
 
 <a name="apply-cu"></a>
 
-## <a name="apply-updates"></a>Applicare gli aggiornamenti
+## <a name="apply-updates"></a>Applicazione degli aggiornamenti
 
 È consigliabile applicare l'aggiornamento cumulativo più recente per il motore di database e i componenti di apprendimento automatico.
 
@@ -170,9 +183,9 @@ Sui dispositivi connessi a internet, gli aggiornamenti cumulativi vengono in gen
 
 Nei server disconnesso, sono necessarie operazioni aggiuntive. Per altre informazioni, vedere [installare nei computer senza accesso a internet > applicare aggiornamenti cumulativi](sql-ml-component-install-without-internet-access.md#apply-cu).
 
-1. Per iniziare è già installata un'istanza di linea di base: la versione iniziale di SQL Server 2016, SQL Server 2016 Service Pack 1 o SQL Server 2016 Service Pack 2.
+1. Iniziare con un'istanza della linea di base già installata: Versione iniziale di SQL Server 2016, SQL Server 2016 Service Pack 1 o SQL Server 2016 Service Pack 2.
 
-2. Passare all'elenco di aggiornamenti cumulativi: [degli aggiornamenti di SQL Server 2016](https://sqlserverupdates.com/sql-server-2016-updates/)
+2. Passare all'elenco di aggiornamenti cumulativi: [Aggiornamenti di SQL Server 2016](https://sqlserverupdates.com/sql-server-2016-updates/)
 
 3. Selezionare l'aggiornamento cumulativo più recente. Un file eseguibile viene scaricato ed estratto automaticamente.
 
@@ -203,7 +216,7 @@ Il database, potrebbe essere necessario gli aggiornamenti di configurazione segu
 * [Aggiungere SQLRUserGroup come utente del database](../../advanced-analytics/security/add-sqlrusergroup-to-database.md)
 
 > [!NOTE]
-> Non tutte le modifiche elencate sono necessari e nessuno potrebbero essere necessarie. I requisiti variano a seconda lo schema di sicurezza, in cui è installato SQL Server e come si prevede che gli utenti per connettersi al database ed eseguire gli script esterni. Altri suggerimenti sulla risoluzione dei problemi sono disponibili qui: [domande frequenti su installazione e aggiornamento](../r/upgrade-and-installation-faq-sql-server-r-services.md)
+> Non tutte le modifiche elencate sono necessari e nessuno potrebbero essere necessarie. I requisiti variano a seconda lo schema di sicurezza, in cui è installato SQL Server e come si prevede che gli utenti per connettersi al database ed eseguire gli script esterni. Altri suggerimenti sulla risoluzione dei problemi sono disponibili qui: [Domande frequenti sull'installazione e sull'aggiornamento](../r/upgrade-and-installation-faq-sql-server-r-services.md)
 
 ## <a name="suggested-optimizations"></a>Delle ottimizzazioni suggerite
 
@@ -242,6 +255,6 @@ Il processo per l'installazione e la gestione dei pacchetti di R è diverso in S
 Gli sviluppatori di R possono iniziare a usare alcuni semplici esempi e informazioni di base del funzionamento di R con SQL Server. Per il passaggio successivo, vedere i collegamenti seguenti:
 
 + [Esercitazione: Eseguire R in T-SQL](../tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md)
-+ [Esercitazione: Nel database analitica per gli sviluppatori di R](../tutorials/sqldev-in-database-r-for-sql-developers.md)
++ [Esercitazione: Analitica nel database per gli sviluppatori di R](../tutorials/sqldev-in-database-r-for-sql-developers.md)
 
 Per visualizzare esempi di machine learning basate su scenari reali, vedere [di Machine learning esercitazioni](../tutorials/machine-learning-services-tutorials.md).

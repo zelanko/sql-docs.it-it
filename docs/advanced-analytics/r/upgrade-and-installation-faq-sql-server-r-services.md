@@ -1,5 +1,5 @@
 ---
-title: Domande frequenti su installazione e aggiornamento per SQL Server Machine Learning | Microsoft Docs
+title: Installazione e aggiornamento domande frequenti (FAQ) - servizi di SQL Server Machine Learning
 ms.custom: sqlseattle
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.author: heidist
 author: HeidiSteen
 manager: cgronlun
-ms.openlocfilehash: 37cd28b895c66d6ddcf1517e79ef6bf4537e2a96
-ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
+ms.openlocfilehash: dd92ba0e080da0dd8ed387ae0a9f3d431232c896
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46712303"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53432854"
 ---
 # <a name="upgrade-and-installation-faq-for-sql-server-machine-learning-or-r-server"></a>Domande frequenti su installazione e aggiornamento per R Server o SQL Server Machine Learning
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -23,7 +23,7 @@ In questo argomento offre risposta ad alcune domande comuni sull'installazione d
 + Alcuni problemi si verificano solo con gli aggiornamenti da versioni non definitive. Pertanto, è consigliabile identificare la versione ed edizione innanzitutto prima di leggere queste note. Per ottenere informazioni sulla versione, eseguire `@@VERSION` in una query da SQL Server Management Studio.
 + Eseguire l'aggiornamento per la versione più recente o una versione del servizio appena possibile per risolvere eventuali problemi che sono stati risolti nelle versioni recenti.
 
-**Si applica a:** SQL Server 2016 R Services, SQL Server 2017 di Machine Learning Services (In-Database)
+**Si applica a:** SQL Server 2016 R Services, SQL Server 2017 Machine Learning Services (In-Database)
 
 ## <a name="requirements-and-restrictions-on-older-versions-of-sql-server-2016"></a>Requisiti e restrizioni per le versioni precedenti di SQL Server 2016 
 

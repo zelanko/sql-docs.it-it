@@ -11,12 +11,12 @@ ms.assetid: 6ae74a8b-0025-450d-94a5-4e601831d420
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 51d3206e4df57c42c0245e13757cdcac1686a313
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 5dc6ccd51a1ce8c64ef301e7435ee9ce21879cb5
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50148406"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53364103"
 ---
 # <a name="tabular-model-data-access"></a>Accesso ai dati di modello tabulare
   L'accesso a database modello tabulare in Analysis Services può essere eseguito dalla maggior parte dei client, delle interfacce e dei linguaggi che si utilizzano per recuperare dati o metadati da un modello multidimensionale. Per altre informazioni, vedere [Accesso ai dati di modelli multidimensionali &#40;Analysis Services - Dati multidimensionali&#41;](../multidimensional-models/mdx/multidimensional-model-data-access-analysis-services-multidimensional-data.md).  
@@ -24,10 +24,10 @@ ms.locfileid: "50148406"
  In questo argomento vengono descritti i client, i linguaggi di query e le interfacce di programmazione che è possibile utilizzare con i modelli tabulari.  
   
 ## <a name="clients"></a>Client  
- Nelle applicazioni client Microsoft seguenti sono supportate connessioni native ai database modello tabulare di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
+ Nelle applicazioni client Microsoft seguenti sono supportate connessioni native ai database modello tabulare di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   
 ### <a name="excel"></a>Excel  
- È possibile connettersi ai database modello tabulare da Excel, utilizzando la visualizzazione dati e le funzionalità dell'analisi di Excel per l'elaborazione dei dati. Per accedere ai dati, è necessario definire una connessione dati di Analysis Services, specificare un server eseguito in modalità server tabulare, quindi scegliere il database che si desidera utilizzare. Per ulteriori informazioni, vedere [Creare una connessione o importare dati da SQL Server Analysis Services](http://go.microsoft.com/fwlink/?linkID=215150).  
+ È possibile connettersi ai database modello tabulare da Excel, utilizzando la visualizzazione dati e le funzionalità dell'analisi di Excel per l'elaborazione dei dati. Per accedere ai dati, è necessario definire una connessione dati di Analysis Services, specificare un server eseguito in modalità server tabulare, quindi scegliere il database che si desidera utilizzare. Per ulteriori informazioni, vedere [Creare una connessione o importare dati da SQL Server Analysis Services](https://go.microsoft.com/fwlink/?linkID=215150).  
   
  Excel è inoltre l'applicazione consigliata per l'esplorazione di modelli tabulari in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Nello strumento è disponibile un'opzione **Analizza in Excel** che consente di avviare una nuova istanza di Excel, creare una cartella di lavoro di Excel e aprire una connessione dati dalla cartella di lavoro al database dell'area di lavoro modello. In caso di esplorazione di dati del modello tabulare in Excel, tenere presente che in Excel vengono generate query sul modello utilizzando il client Tabella pivot di Excel. Di conseguenza, le operazioni all'interno della cartella di lavoro di Excel comportano l'invio al database dell'area di lavoro di query MDX, non di query DAX. Se si utilizza SQL Profiler o un altro strumento di monitoraggio per il monitoraggio di query, è possibile che nella traccia del profiler venga visualizzato MDX e non DAX. Per altre informazioni sulla funzionalità Analizza in Excel, vedere [Analizzare in Excel &#40;SSAS tabulare&#41;](analyze-in-excel-ssas-tabular.md).  
   
@@ -39,7 +39,7 @@ ms.locfileid: "50148406"
  Le query inviate dal client [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] al modello sono pubblicate come istruzioni DAX che è possibile monitorare impostando una traccia sul modello.  Il client pubblica inoltre una richiesta al server per la definizione dello schema iniziale, presentata in base al linguaggio Conceptual Schema Definition Language (CSDL). Per altre informazioni, vedere [CSDL Annotations for Business Intelligence &#40;CSDLBI&#41;](https://docs.microsoft.com/bi-reference/csdl/csdl-annotations-for-business-intelligence-csdlbi)  
   
 ### <a name="sql-server-management-studio"></a>SQL Server Management Studio  
- È possibile utilizzare [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] per gestire le istanze che ospitano modelli tabulari ed eseguire query sui metadati e i dati che contengono. È possibile elaborare i modelli o gli oggetti in un modello, creare e gestire partizioni e impostare la sicurezza che può essere utilizzata per la gestione dell'accesso ai dati. Per altre informazioni, vedere gli argomenti seguenti:  
+ È possibile utilizzare [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] per gestire le istanze che ospitano modelli tabulari ed eseguire query sui metadati e i dati che contengono. È possibile elaborare i modelli o gli oggetti in un modello, creare e gestire partizioni e impostare la sicurezza che può essere utilizzata per la gestione dell'accesso ai dati. Per altre informazioni, vedere i seguenti argomenti:  
   
 -   [Determinare la modalità server di un'istanza di Analysis Services](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   

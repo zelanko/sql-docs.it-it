@@ -11,12 +11,12 @@ ms.assetid: 32be8fcc-e87d-4c45-a644-dff45776a981
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: e9c5505aaed0fba7ff5097c059f11cd0af8f50f7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 67e1fe559e8bbb4c9c484671737223766c4a0554
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48117491"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53358153"
 ---
 # <a name="report-builder-ssrs"></a>Generatore report (SSRS)
   Generatore report è un ambiente per la creazione di report destinato a utenti aziendali che preferiscono lavorare nell'ambiente [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office. Quando si progetta un report, si specifica dove ottenere i dati, quali dati ottenere e come visualizzarli. Quando si esegue il report, Elaborazione report utilizza tutte le informazioni specificate, recupera i dati e li combina con il layout per generare il report.  
@@ -42,10 +42,10 @@ ms.locfileid: "48117491"
   
 -   Salvare i report e gli elementi correlati in una raccolta di SharePoint, in un server di report o nel computer locale.  
   
- Generatore report e Progettazione report condividono molte caratteristiche. Per ulteriori informazioni sul Generatore report, vedere la [documentazione relativa a Generatore report](http://go.microsoft.com/fwlink/?LinkId=154494) nel sito msdn.microsoft.com.  
+ Generatore report e Progettazione report condividono molte caratteristiche. Per ulteriori informazioni sul Generatore report, vedere la [documentazione relativa a Generatore report](https://go.microsoft.com/fwlink/?LinkId=154494) nel sito msdn.microsoft.com.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Configurare l'accesso a Generatore Report](../report-server/configure-report-builder-access.md)   
+ [Configurare l'accesso a Generatore report](../report-server/configure-report-builder-access.md)   
  [Strumenti di Reporting Services](reporting-services-tools.md)   
  [Progettare report con Progettazione report &#40;SSRS&#41;](design-reporting-services-paginated-reports-with-report-designer-ssrs.md)  
   

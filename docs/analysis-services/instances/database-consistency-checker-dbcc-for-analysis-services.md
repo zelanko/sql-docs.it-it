@@ -9,17 +9,17 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 3134ff97059efa61ab2df82a9b7d3c7aa4ee769e
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: bc158c0c5ba35da95fe3bf1af688e12a7b162045
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51697011"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52413088"
 ---
 # <a name="database-consistency-checker-dbcc-for-analysis-services"></a>Database Consistency Checker (DBCC) per Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   DBCC fornisce la convalida su richiesta dei database multidimensionali e tabulari in un'istanza di Analysis Services. È possibile eseguire DBCC in una finestra di query MDX o XMLA in SQL Server Management Studio (SSMS) e tracciare l'output di DBCC in SQL Server Profiler o in sessioni xEvent di SSMS.  
-Il comando accetta una definizione di oggetto e restituisce un set di risultati vuoto o informazioni dettagliate sull'errore se l'oggetto è danneggiato.   Questo articolo illustra come eseguire il comando, interpretare i risultati e risolvere eventuali problemi.  
+Il comando accetta una definizione di oggetto e restituisce un set di risultati vuoto o informazioni dettagliate sull'errore se l'oggetto è danneggiato.   In questo articolo, si sarà informazioni su come eseguire il comando, interpretare i risultati e risolvere eventuali problemi.  
   
  Per i database tabulari, le verifiche di coerenza eseguite da DBCC equivalgono alla convalida predefinita eseguita automaticamente ogni volta che si ricarica, si sincronizza o si ripristina un database.  Al contrario, le verifiche di coerenza per i database multidimensionali si verificano solo quando si esegue DBCC su richiesta.  
   
@@ -72,7 +72,7 @@ Il comando accetta una definizione di oggetto e restituisce un set di risultati 
   
 ```  
   
- Per eseguire DBCC su oggetti a un livello superiore nella catena di oggetti, eliminare tutti gli elementi ID oggetto di livello inferiore non necessari:  
+ Per eseguire DBCC su oggetti superiori nella catena di oggetti, eliminare tutti gli elementi ID oggetto di livello inferiore che non è necessario:  
   
 ```  
 <DBCC xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">  
@@ -92,7 +92,7 @@ Il comando accetta una definizione di oggetto e restituisce un set di risultati 
   
 -   Per**PartitionID** viene eseguito il mapping a un ID partizione.  
   
-## <a name="usage"></a>Utilizzo  
+## <a name="usage"></a>Uso  
  In SQL Server Management Studio è possibile richiamare DBCC tramite una finestra di query MDX o XMLA. Per visualizzare l'output di DBCC, è anche possibile usare [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Profiler o xEvent di Analysis Services. Si noti che i messaggi di DBCC SSAS non vengono segnalati nel registro eventi applicazioni di Windows o nel file msmdsrv.log.  
   
  DBCC verifica l'eventuale danneggiamento dei dati fisici, nonché il danneggiamento dei dati logici che si verificano quando un segmento include membri orfani. Prima di poter eseguire DBCC, il database deve essere elaborato, perché le partizioni remote, vuote o non elaborate vengono ignorate.  
@@ -200,7 +200,7 @@ Execution complete
   
      I messaggi di errore sono elencati di seguito.  
   
-## <a name="reference-consistency-checks-and-errors-for-multidimensional-databases"></a>Riferimento: Verifiche di coerenza ed errori per i database multidimensionali  
+## <a name="reference-consistency-checks-and-errors-for-multidimensional-databases"></a>Informazioni di riferimento: Verifiche di coerenza ed errori per i database multidimensionali  
  Per i database multidimensionali vengono convalidati solo gli indici partizione.  Durante l'esecuzione DBCC crea un indice temporaneo per ogni partizione e lo confronta con l'indice persistente su disco.  La creazione di un indice temporaneo richiede la lettura di tutti i dati dalle partizioni su disco e quindi il mantenimento dell'indice temporaneo in memoria per il confronto. Dato il carico di lavoro aggiuntivo, nel server potrebbe verificarsi una quantità di I/O su disco e un consumo di memoria significativi durante un'esecuzione di DBCC.  
   
  Il rilevamento del danneggiamento dell'indice multidimensionale include i controlli seguenti. Gli errori in questa tabella sono visualizzati nelle tracce xEvent o di Profiler per gli errori a livello di oggetto.  
@@ -212,7 +212,7 @@ Execution complete
 |Indice partizione|Convalida i metadati.<br /><br /> Verifica che ogni membro nell'indice temporaneo possa essere trovato nel file di intestazione dell'indice per il segmento su disco.|Il segmento della partizione è danneggiato.|  
 |Indice partizione|Analizza i segmenti per cercare eventuali danneggiamenti fisici.<br /><br /> Legge il file di indice su disco per ogni membro nell'indice temporaneo e verifica che le dimensioni dei record di indice corrispondano e che le stesse pagine di dati siano contrassegnate come pagine contenenti record per il membro corrente.|Il segmento della partizione è danneggiato.|  
   
-## <a name="reference-consistency-checks-and-errors-for-tabular-databases"></a>Riferimento: Verifiche di coerenza ed errori per i database tabulari  
+## <a name="reference-consistency-checks-and-errors-for-tabular-databases"></a>Informazioni di riferimento: Verifiche di coerenza ed errori per i database tabulari  
  La tabella seguente contiene l'elenco di tutte le verifiche di coerenza eseguite sugli oggetti tabulari, insieme agli errori generati se la verifica indica un danneggiamento. Gli errori in questa tabella sono visualizzati nelle tracce xEvent o di Profiler per gli errori a livello di oggetto.  
   
 ||||  

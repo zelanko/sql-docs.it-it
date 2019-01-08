@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - packages [Integration Services], expressions
@@ -17,23 +16,23 @@ ms.assetid: 26d2e242-7f60-4fa9-a70d-548a80eee667
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 050f82b51537cc7d375ddd04a86e67b8e48a9f06
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f2a8dba54a8e638da5777456341321d38abbb01f
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48192171"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53352323"
 ---
 # <a name="integration-services-ssis-expressions"></a>Espressioni di Integration Services (SSIS)
   Un'espressione è una combinazione di simboli, ovvero identificatori, valori letterali, funzioni e operatori, che restituiscono un singolo valore di dati. È possibile creare espressioni semplici, costituite da un'unica costante, variabile o funzione, In genere le espressioni sono complesse in quanto includono più operatori e funzioni e fanno riferimento a più colonne e variabili. In [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]è possibile usare le espressioni per definire condizioni per istruzioni CASE, creare e aggiornare valori in colonne di dati, assegnare valori a variabili, aggiornare o popolare proprietà in fase di esecuzione, definire vincoli in vincoli di precedenza e definire espressioni usate dal contenitore Ciclo For.  
   
  Le espressioni sono basate su un linguaggio delle espressioni e sull'analizzatore di espressioni. L'analizzatore di espressioni consente di analizzare l'espressione e di verificare se le regole del linguaggio delle espressioni sono rispettate. Per ulteriori informazioni sulla sintassi delle espressioni e sui valori letterali e identificatori supportati, vedere gli argomenti seguenti.  
   
--   [La sintassi &#40;SSIS&#41;](syntax-ssis.md)  
+-   [Sintassi &#40;SSIS&#41;](syntax-ssis.md)  
   
 -   [Valori letterali &#40;SSIS&#41;](numeric-string-and-boolean-literals.md)  
   
--   [Gli identificatori &#40;SSIS&#41;](identifiers-ssis.md)  
+-   [Identificatori &#40;SSIS&#41;](identifiers-ssis.md)  
   
 ## <a name="components-that-use-expressions"></a>Componenti che utilizzano espressioni  
  Le espressioni possono essere usate negli elementi di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] seguenti:  
@@ -64,10 +63,10 @@ ms.locfileid: "48192171"
  Alle variabili è associato un ambito. Nella cartella **Variabili** del Generatore di espressioni sono elencate solo le variabili incluse nell'ambito e utilizzabili. Per altre informazioni, vedere [Variabili di Integration Services &#40;SSIS&#41;](../integration-services-ssis-variables.md).  
   
 ## <a name="related-tasks"></a>Attività correlate  
- [Usare un'espressione in un componente flusso di dati](../use-an-expression-in-a-data-flow-component.md)  
+ [Utilizzo di un'espressione in un componente flusso di dati](../use-an-expression-in-a-data-flow-component.md)  
   
 ## <a name="related-content"></a>Contenuto correlato  
- Articolo tecnico relativo agli [esempi di espressioni SSIS](http://go.microsoft.com/fwlink/?LinkId=220761)nel sito Web social.technet.microsoft.com  
+ Articolo tecnico relativo agli [esempi di espressioni SSIS](https://go.microsoft.com/fwlink/?LinkId=220761)nel sito Web social.technet.microsoft.com  
   
 ## <a name="see-also"></a>Vedere anche  
  [SQL Server Integration Services](../sql-server-integration-services.md)  

@@ -18,12 +18,12 @@ ms.assetid: 94840482-112c-4654-b480-9b456c4c2bca
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 76f51489a449c44dd7d43bab75d504f68e946374
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4ee5620aecfc4e263c16fb9c710b7a41e1564f6e
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47796515"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590595"
 ---
 # <a name="sysmailhelpqueuesp-transact-sql"></a>sysmail_help_queue_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ sysmail_help_queue_sp  [ @queue_type = ] 'queue_type'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ **@queue_type** =] **'***queue_type***'**  
+ [ **@queue_type** =] **'**_queue_type_**'**  
  Argomento facoltativo che elimina messaggi di posta elettronica del tipo specificato come la *queue_type*. *queue_type* viene **nvarchar(6)** non prevede alcun valore predefinito. Possibili valori sono **mail** e **stato**.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
@@ -48,10 +48,10 @@ sysmail_help_queue_sp  [ @queue_type = ] 'queue_type'
   
 ## <a name="result-set"></a>Set di risultati  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**queue_type**|**nvarchar(6)**|Tipo di coda. I valori possibili sono **mail** e **stato**.|  
-|**Lunghezza**|**int**|Numero di elementi di posta nella coda specificata.|  
+|**length**|**int**|Numero di elementi di posta nella coda specificata.|  
 |**state**|**nvarchar(64)**|Stato del server di monitoraggio. I valori possibili sono **INACTIVE** (coda è inattiva), **NOTIFIED** (coda ha ricevuto una notifica al verificarsi), e **RECEIVES_OCCURRING** (coda riceve).|  
 |**last_empty_rowset_time**|**DATA/ORA**|Data e ora dell'ultimo svuotamento della coda, sia nel formato 24 ore sia nel fuso orario GMT.|  
 |**last_activated_time**|**DATA/ORA**|Data e ora dell'ultima attivazione della coda, sia nel formato 24 ore sia nel fuso orario GMT.|  

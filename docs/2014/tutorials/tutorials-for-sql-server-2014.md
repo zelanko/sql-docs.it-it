@@ -18,37 +18,37 @@ ms.assetid: a93667ad-e856-405a-9328-065331b7ab7b
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: b3a2a4fb654603e783a50e46b212f746226132ea
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 07ff9e3ed413b3cb73a4dbfb84bac6961acb1759
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48194471"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53368063"
 ---
 # <a name="tutorials-for-sql-server-2014"></a>Esercitazioni di SQL Server 2014
   [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] vengono introdotte numerose nuove tecnologie e funzionalità.  
   
- In futuro verranno fornite ulteriori esercitazioni. Nel frattempo, è possibile continuare ad apprendere dalle esercitazioni di [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]. In alcuni casi si potrebbero riscontrare differenze minori tra l'interfaccia utente di [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] e [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] e potrebbero esservi differenze minime nei prerequisiti per l'esercitazione. Se in un'esercitazione viene utilizzato uno dei database di [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] , è necessario scaricare e usare la versione [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] .  
+ In futuro verranno fornite ulteriori esercitazioni. Nel frattempo, è possibile continuare ad apprendere dalle esercitazioni di [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] . In alcuni casi si potrebbero riscontrare differenze minori tra l'interfaccia utente di [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] e [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] e potrebbero esservi differenze minime nei prerequisiti per l'esercitazione. Se in un'esercitazione viene utilizzato uno dei database di [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] , è necessario scaricare e usare la versione [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] .  
   
- Se si utilizza un server [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], i provider di dati di [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] sono installati. Per eseguire le esercitazioni, è necessario disporre dei database di esempio di [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] che funzionano con tali provider oppure sono necessari i provider di dati di [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] che funzionano con la versione di [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] dei database di esempio.  
+ Se si utilizza un server [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] , i provider di dati di [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] sono installati. Per eseguire le esercitazioni, è necessario disporre dei database di esempio di [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] che funzionano con tali provider oppure sono necessari i provider di dati di [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] che funzionano con la versione di [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] dei database di esempio.  
   
--   Per scaricare [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] campioni da utilizzare con le esercitazioni, passare a [esempi per SQL Server](http://social.technet.microsoft.com/wiki/contents/articles/3735.sql-server-samples-readme.aspx#About_Crescent_Sample_Images) su CodePlex.  
+-   Per scaricare gli esempi di [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] da usare con le esercitazioni, visitare la pagina di [Esempi per SQL Server](https://social.technet.microsoft.com/wiki/contents/articles/3735.sql-server-samples-readme.aspx#About_Crescent_Sample_Images) sul sito Web CodePlex.  
   
--   Per scaricare una [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] cartella di lavoro e [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] report da utilizzare con [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] esercitazioni, passare a [i file di immagine modello di esempio HelloWorldPicnic in PowerPivot e Power View](http://www.microsoft.com/download/details.aspx?id=26719).  
+-   Per scaricare una cartella di lavoro di [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] e i report di [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] da usare con le esercitazioni di [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] , vedere [File di immagine del modello di esempio HelloWorldPicnic in PowerPivot e Power View](https://www.microsoft.com/download/details.aspx?id=26719).  
   
     > [!NOTE]  
     >  [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] è una funzionalità del [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] aggiuntivo per [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[SPS2010](../includes/sps2010-md.md)] Enterprise Edition.  
   
--   Per scaricare [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] le versioni di [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] i database, passare alla [database di esempio Adventure Works 2014](http://msftdbprodsamples.codeplex.com/releases/view/125550) su CodePlex.  
+-   Per scaricare le versioni di [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] dei database [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] , visitare la pagina relativa ai [database di esempio di Adventure Works 2014](http://msftdbprodsamples.codeplex.com/releases/view/125550) sul sito CodePlex.  
   
--   Per scaricare [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] le versioni di [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] i database, passare alla [Adventure Works per SQL Server 2012](http://msftdbprodsamples.codeplex.com/releases/view/55330) su CodePlex.  
+-   Per scaricare le versioni di [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] dei database [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] , visitare la pagina relativa a [Adventure Works per SQL Server 2012](http://msftdbprodsamples.codeplex.com/releases/view/55330) sul sito CodePlex.  
   
--   Per visualizzare un elenco dei [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] esercitazioni, passare a [esercitazioni](http://msdn.microsoft.com/library/ms167593.aspx) in MSDN library.  
+-   Per visualizzare un elenco di esercitazioni di [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] , vedere la pagina [Esercitazioni](https://msdn.microsoft.com/library/ms167593.aspx) su MSDN Library.  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
- Le esercitazioni sono disponibili per le tecnologie [!INCLUDE[ssSQL14](../includes/sssql14-md.md)].  
+## <a name="in-this-section"></a>In questa sezione  
+ Le esercitazioni sono disponibili per le tecnologie [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] .  
   
-|Technology|Description|  
+|Technology|Descrizione|  
 |----------------|-----------------|  
 |[Esercitazioni su Analysis Services &#40;SSAS&#41;](../analysis-services/analysis-services-tutorials-ssas.md)|Viene illustrato come sviluppare e distribuire modelli tabulari o multidimensionali di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Viene inoltre illustrato come usare strumenti quali PowerPivot per analizzare i dati nei modelli.|  
 |[Esercitazioni su Reporting Services &#40;SSRS&#41;](../reporting-services/reporting-services-tutorials-ssrs.md)|Viene illustrato come creare report di base e sottoscrizioni.|  

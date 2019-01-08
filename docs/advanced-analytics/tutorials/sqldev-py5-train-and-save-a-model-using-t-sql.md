@@ -1,5 +1,6 @@
 ---
-title: Eseguire il training e salvataggio di un modello Python con T-SQL | Microsoft Docs
+title: Eseguire il training e salvataggio di un modello Python con T-SQL - SQL Server Machine Learning
+description: Esercitazione su Python che illustrano come eseguire il training e salvataggio di un modello tramite Transact-SQL in SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/01/2018
@@ -7,12 +8,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: d3917678cb16462f065754dd389be53ae8cd6016
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: a0991f43ed7446cc9b86325d4f536a0787b8dcc1
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51032718"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53645172"
 ---
 # <a name="train-and-save-a-python-model-using-t-sql"></a>Eseguire il training e salvataggio di un modello Python con T-SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -30,7 +31,7 @@ Caricare i moduli e chiamare le funzioni necessarie per creare e il training del
 
     Questa stored procedure deve essere già creata per l'utente, ma è possibile eseguire il codice seguente per crearla:
 
-    ```SQL
+    ```sql
     DROP PROCEDURE IF EXISTS PyTrainTestSplit;
     GO
 
@@ -48,20 +49,10 @@ Caricare i moduli e chiamare le funzioni necessarie per creare e il training del
 
 2. Per dividere i dati mediante una suddivisione personalizzata, eseguire la stored procedure e digitare un numero intero che rappresenta la percentuale di dati allocati al set di training. Ad esempio, l'istruzione seguente allocherà il 60% dei dati al set di training.
 
-    ```SQL
+    ```sql
     EXEC PyTrainTestSplit 60
     GO
     ```
-
-## <a name="add-a-name-column-in-nyctaximodels"></a>Aggiungere una colonna del nome in nyc_taxi_models
-
-Gli script in questa esercitazione archiviano un nome di modello come un'etichetta per i modelli generati. Il nome del modello viene usato nelle query per selezionare un modello di SciKit o revoscalepy.
-
-1. In Management Studio, aprire il **nyc_taxi_models** tabella.
-
-2. Fare doppio clic su **colonne** e fare clic su **nuova colonna**. Impostare il nome di colonna *name*, con un tipo **nchar(250)** e ammette valori null.
-
-    ![Colonna di nome per l'archiviazione dei nomi di modello](media/sqldev-python-newcolumn.png)
 
 ## <a name="build-a-logistic-regression-model"></a>Compilare un modello di regressione logistica
 
@@ -78,7 +69,7 @@ Per renderne più semplice ripetere il training del modello su nuovi dati, esegu
 
 1.  Nelle [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], aprire una nuova **Query** finestra ed eseguire l'istruzione seguente per creare la stored procedure **PyTrainScikit**.  La stored procedure contiene una definizione dei dati di input, quindi non è necessario fornire una query di input.
 
-    ```SQL
+    ```sql
     DROP PROCEDURE IF EXISTS PyTrainScikit;
     GO
 
@@ -117,13 +108,13 @@ Per renderne più semplice ripetere il training del modello su nuovi dati, esegu
 
 2. Eseguire il comando seguente istruzioni SQL per inserire il modello con training nella tabella città di New York\_taxi_models.
 
-    ```SQL
+    ```sql
     DECLARE @model VARBINARY(MAX);
     EXEC PyTrainScikit @model OUTPUT;
     INSERT INTO nyc_taxi_models (name, model) VALUES('SciKit_model', @model);
     ```
 
-    L'elaborazione dei dati e l'adattamento del modello potrebbe richiedere un paio di minuti. I messaggi che sarebbero inoltrati di Python **stdout** flusso vengono visualizzati nel **messaggi** finestra di [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Esempio:
+    L'elaborazione dei dati e l'adattamento del modello potrebbe richiedere un paio di minuti. I messaggi che sarebbero inoltrati di Python **stdout** flusso vengono visualizzati nel **messaggi** finestra di [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Ad esempio:
 
     *Messaggi STDOUT dallo script esterno:*
   *C:\Program Files\Microsoft SQL Server\MSSQL14. MSSQLSERVER\PYTHON_SERVICES\lib\site packages\revoscalepy*
@@ -136,11 +127,11 @@ Per renderne più semplice ripetere il training del modello su nuovi dati, esegu
 
 Questa stored procedure utilizza la nuova **revoscalepy** pacchetto, ovvero un nuovo pacchetto per Python. Contiene gli oggetti, la trasformazione e algoritmi simili a quelli forniti per il linguaggio R **RevoScaleR** pacchetto. 
 
-Usando **revoscalepy**, è possibile creare contesti di calcolo remoti, spostare i dati tra contesti di calcolo, trasformare i dati e Training modelli predittivi usando algoritmi più diffusi, ad esempio la regressione logistica e lineare, alberi delle decisioni, e altre. Per altre informazioni, vedere [What ' s revoscalepy?](../python/what-is-revoscalepy.md)
+Usando **revoscalepy**, è possibile creare contesti di calcolo remoti, spostare i dati tra contesti di calcolo, trasformare i dati e Training modelli predittivi usando algoritmi più diffusi, ad esempio la regressione logistica e lineare, alberi delle decisioni, e altre. Per altre informazioni, vedere [modulo revoscalepy in SQL Server](../python/ref-py-revoscalepy.md) e [revoscalepy di riferimento alle funzioni](https://docs.microsoft.com/r-server/python-reference/revoscalepy/revoscalepy-package).
 
 1. Nelle [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], aprire una nuova **Query** finestra ed eseguire l'istruzione seguente per creare la stored procedure _TrainTipPredictionModelRxPy_.  Poiché la stored procedure include già una definizione dei dati di input, non è necessario fornire una query di input.
 
-    ```SQL
+    ```sql
     DROP PROCEDURE IF EXISTS TrainTipPredictionModelRxPy;
     GO
 
@@ -181,13 +172,13 @@ Usando **revoscalepy**, è possibile creare contesti di calcolo remoti, spostare
 
 2. Eseguire la stored procedure come indicato di seguito per inserire il modello con training **revoscalepy** modello nella tabella *nyc_taxi_models*.
 
-    ```SQL
+    ```sql
     DECLARE @model VARBINARY(MAX);
     EXEC TrainTipPredictionModelRxPy @model OUTPUT;
     INSERT INTO nyc_taxi_models (name, model) VALUES('revoscalepy_model', @model);
     ```
 
-    L'elaborazione dei dati e l'adattamento del modello potrebbe richiedere qualche minuto. I messaggi che sarebbero inoltrati di Python **stdout** flusso vengono visualizzati nel **messaggi** finestra di [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Esempio:
+    L'elaborazione dei dati e l'adattamento del modello potrebbe richiedere qualche minuto. I messaggi che sarebbero inoltrati di Python **stdout** flusso vengono visualizzati nel **messaggi** finestra di [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Ad esempio:
 
     *Messaggi STDOUT dallo script esterno:*
   *C:\Program Files\Microsoft SQL Server\MSSQL14. MSSQLSERVER\PYTHON_SERVICES\lib\site packages\revoscalepy*

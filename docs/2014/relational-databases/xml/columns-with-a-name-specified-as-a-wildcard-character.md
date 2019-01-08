@@ -12,15 +12,15 @@ ms.assetid: d9551df1-5bb4-4c0b-880a-5bb049834884
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4ff6bcd9379e6e20351dacee75cb92e56b79d374
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 899ea4a4f60fb3e8981de4119697864a24f57093
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48056151"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53362799"
 ---
 # <a name="columns-with-a-name-specified-as-a-wildcard-character"></a>Colonne con nome specificato come carattere jolly
-  Se il nome di colonna specificato è un carattere jolly (\*), il contenuto della colonna viene inserito come se non fosse stato specificato alcun nome di colonna. Se questa colonna è diverso da`xml` colonna con tipo di contenuto della colonna viene inserito come nodo di testo, come illustrato nell'esempio seguente:  
+  Se il nome di colonna specificato è un carattere jolly (\*), il contenuto della colonna viene inserito come se non fosse stato specificato alcun nome di colonna. Se la colonna non è di tipo `xml`, il relativo contenuto viene inserito come nodo di testo, come illustrato nell'esempio seguente:  
   
 ```  
 USE AdventureWorks2012;  
@@ -36,9 +36,9 @@ WHERE E.BusinessEntityID=1
 FOR XML PATH;  
 ```  
   
- Risultato:  
+ Questo è il risultato:  
   
- `<row EmpID="1">KenJSánchez</row>`  
+ `<row EmpID="1">KenJS??nchez</row>`  
   
  Se la colonna è di tipo `xml`, viene inserito l'albero XML corrispondente. Ad esempio, la query seguente specifica "*" come nome della colonna che contiene il codice XML restituito dall'espressione XQuery eseguita sulla colonna Instructions.  
   
@@ -46,7 +46,7 @@ FOR XML PATH;
 SELECT   
        ProductModelID,  
        Name,  
-       Instructions.query('declare namespace MI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions"  
+       Instructions.query('declare namespace MI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions"  
                 /MI:root/MI:Location   
               ') as "*"  
 FROM Production.ProductModel  

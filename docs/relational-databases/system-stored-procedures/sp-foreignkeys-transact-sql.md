@@ -18,12 +18,12 @@ ms.assetid: 935fe385-19ff-41a4-8d0b-30618966991d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c3ef9f2aa7ec6f5608e55f84efd35af25c1776a3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b0fc8552157e9864ed45306ec268fefb4eec87bf
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47605179"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589947"
 ---
 # <a name="spforeignkeys-transact-sql"></a>sp_foreignkeys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,34 +46,34 @@ sp_foreignkeys [ @table_server = ] 'table_server'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@table_server =** ] **'***table_server***'**  
+ [  **@table_server =** ] **'**_table_server_**'**  
  Nome del server collegato di cui si desidera ottenere informazioni di tabella. *table_server* viene **sysname**, non prevede alcun valore predefinito.  
   
- [  **@pktab_name =** ] **'***pktab_name***'**  
+ [  **@pktab_name =** ] **'**_pktab_name_**'**  
  Nome della tabella contenente una chiave primaria. *pktab_name* viene **sysname**, con un valore predefinito è NULL.  
   
- [  **@pktab_schema =** ] **'***pktab_schema***'**  
+ [  **@pktab_schema =** ] **'**_pktab_schema_**'**  
  Nome dello schema contenente una chiave primaria. *pktab_schema*viene **sysname**, con un valore predefinito è NULL. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contiene il nome del proprietario.  
   
- [  **@pktab_catalog =** ] **'***pktab_catalog***'**  
+ [  **@pktab_catalog =** ] **'**_pktab_catalog_**'**  
  Nome del catalogo contenente una chiave primaria. *pktab_catalog*viene **sysname**, con un valore predefinito è NULL. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contiene il nome del database.  
   
- [  **@fktab_name =** ] **'***fktab_name***'**  
+ [  **@fktab_name =** ] **'**_fktab_name_**'**  
  Nome della tabella contenente una chiave esterna. *fktab_name*viene **sysname**, con un valore predefinito è NULL.  
   
- [  **@fktab_schema =** ] **'***fktab_schema***'**  
+ [  **@fktab_schema =** ] **'**_fktab_schema_**'**  
  Nome dello schema contenente una chiave esterna. *fktab_schema*viene **sysname**, con un valore predefinito è NULL.  
   
- [  **@fktab_catalog =** ] **'***fktab_catalog***'**  
+ [  **@fktab_catalog =** ] **'**_fktab_catalog_**'**  
  Nome del catalogo contenente una chiave esterna. *fktab_catalog*viene **sysname**, con un valore predefinito è NULL.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  None  
   
 ## <a name="result-sets"></a>Set di risultati  
- Vari prodotti DBMS supportano nomi di tabelle in tre parti (*catalog ***.*** lo schema ***.*** tabella*), adottati nel set di risultati.  
+ Vari prodotti DBMS supportano nomi di tabelle in tre parti (_catalog_**.** _schema_**.** _tabella_), adottati nel set di risultati.  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**PKTABLE_CAT**|**sysname**|Catalogo della tabella contenente la chiave primaria.|  
 |**PKTABLE_SCHEM**|**sysname**|Schema della tabella contenente la chiave primaria.|  

@@ -13,12 +13,12 @@ ms.assetid: a192b094-4d0f-4c21-b911-460ec844a49f
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c00c15a0f5e1c6bc45dbf1d19c216feb468e41fe
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 252d8c44921db82cc634e17e1628f72f18a066e1
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48194911"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52396365"
 ---
 # <a name="integration-services-project-conversion-wizard"></a>Conversione guidata progetto di Integration Services
   Con la **Conversione guidata progetto di Integration Services** è possibile convertire un progetto nel modello di distribuzione del progetto.  
@@ -202,7 +202,7 @@ ms.locfileid: "48194911"
  Selezionare l'ambito del parametro, vale a dire pacchetto o progetto.  
   
 ##  <a name="configureParameters"></a> Impostare le opzioni nella pagina Configura parametri  
- **Nome**  
+ **Name**  
  Viene elencato il nome del parametro.  
   
  **Ambito**  
@@ -222,7 +222,7 @@ ms.locfileid: "48194911"
 ##  <a name="review"></a> Impostare le opzioni nella pagina Verifica  
  Usare la pagina **Verifica** per confermare le opzioni selezionate per la conversione del progetto.  
   
- **Previous**  
+ **Precedente**  
  Fare clic su questo pulsante per modificare un'opzione.  
   
  **Converti**  

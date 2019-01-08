@@ -11,12 +11,12 @@ ms.assetid: 685aa217-de1b-4df2-bf22-095228c40775
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 70b4a8bedc86023c9eaf1304e61573c4840a62bb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 763b1170ad0201c737e06e19c3dac8d58c6712ee
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48194711"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53368883"
 ---
 # <a name="using-a-modified-version-of-the-analysis-services-tutorial-project"></a>Utilizzo di una versione modificata del progetto Analysis Services Tutorial
   Le lezioni rimanenti di questa esercitazione sono basate su una versione migliorata del progetto [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial completato nelle prime tre lezioni. Altre tabelle e calcoli denominati sono stati aggiunti alla vista origine dati **Adventure Works DW 2012** ; sono state aggiunte altre dimensioni al progetto e al cubo [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial. Infine, è stato aggiunto un secondo gruppo di misure contenente le misure di una seconda tabella dei fatti. Il progetto migliorato consente di approfondire la conoscenza delle tecniche per l'aggiunta di funzionalità alla propria applicazione di Business Intelligence senza la necessità di tornare su informazioni già acquisite.  
@@ -25,7 +25,7 @@ ms.locfileid: "48194711"
   
 ## <a name="downloading-and-extracting-the-project-file"></a>Download ed estrazione del file di progetto  
   
-1.  [Fare clic qui](http://go.microsoft.com/fwlink/?LinkID=221866) per accedere alla pagina di download in cui si trovano i progetti di esempio usati in questa esercitazione. I progetti dell'esercitazione sono inclusi nel download **Analysis Services Tutorial SQL Server 2012** .  
+1.  [Fare clic qui](https://go.microsoft.com/fwlink/?LinkID=221866) per accedere alla pagina di download in cui si trovano i progetti di esempio usati in questa esercitazione. I progetti dell'esercitazione sono inclusi nel download **Analysis Services Tutorial SQL Server 2012** .  
   
 2.  Fare clic su **Analysis Services Tutorial SQL Server 2012** per scaricare il pacchetto in cui sono contenuti i progetti per questa esercitazione.  
   
@@ -41,9 +41,9 @@ ms.locfileid: "48194711"
   
 ## <a name="loading-and-processing-the-enhanced-project"></a>Caricamento ed elaborazione del progetto migliorato  
   
-1.  In [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]scegliere **Chiudi soluzione** dal menu **File** per chiudere i file che non verranno usati.  
+1.  Nelle [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]via il **File** menu, fare clic su **Chiudi soluzione** per chiudere i file non è possibile utilizzare.  
   
-2.  Scegliere **Apri** dal menu **File** e fare clic su **Progetto/Soluzione**.  
+2.  Scegliere **Apri** dal menu **File**e fare clic su **Progetto/Soluzione**.  
   
 3.  Passare al percorso in cui sono stati estratti i file di progetto dell'esercitazione.  
   

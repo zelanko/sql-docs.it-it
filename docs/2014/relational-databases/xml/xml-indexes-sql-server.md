@@ -33,15 +33,15 @@ ms.assetid: f5c9209d-b3f3-4543-b30b-01365a5e7333
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3bb1fc2c37d56750a9ed66442e56dd7f9a22b8cb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 09aaf68c28e9f647f2f682de09e3f681bc3d739f
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48106961"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53368123"
 ---
 # <a name="xml-indexes-sql-server"></a>Indici XML (SQL Server)
-  È possibile creare indici XML su `xml` colonne con tipo di dati. Tutti i tag, i valori e i percorsi delle istanze XML presenti nella colonna vengono indicizzati, migliorando le prestazioni delle query. Per le applicazioni in uso l'utilizzo di un indice XML può risultare vantaggioso nelle situazioni seguenti:  
+  È possibile creare indici XML sulle colonne con tipo di dati `xml`. Tutti i tag, i valori e i percorsi delle istanze XML presenti nella colonna vengono indicizzati, migliorando le prestazioni delle query. Per le applicazioni in uso l'utilizzo di un indice XML può risultare vantaggioso nelle situazioni seguenti:  
   
 -   Le query sulle colonne XML sono frequenti nel carico di lavoro. È necessario tenere in considerazione il costo di manutenzione dell'indice XML durante la modifica dei dati.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "48106961"
   
 -   Indice XML secondario  
   
- Il primo indice nella colonna di tipo `xml` deve essere l'indice XML primario, il cui utilizzo consente di supportare i tipi di indici secondari seguenti: PATH, VALUE e PROPERTY. In base al tipo di query, questi indici secondari possono facilitare il miglioramento delle prestazioni delle query.  
+ Il primo indice nella colonna di tipo `xml` deve essere l'indice XML primario, Usa l'indice XML primario, sono supportati i tipi di indici secondari seguenti: PERCORSO valore e proprietà. In base al tipo di query, questi indici secondari possono facilitare il miglioramento delle prestazioni delle query.  
   
 > [!NOTE]  
 >  Non è possibile creare o modificare un indice XML a meno che le opzioni del database siano correttamente impostate per l'utilizzo del tipo di dati `xml`. Per altre informazioni, vedere [Utilizzo della ricerca full-text con colonne XML](use-full-text-search-with-xml-columns.md).  
@@ -61,7 +61,7 @@ ms.locfileid: "48106961"
  Le istanze XML vengono archiviate nelle colonne di tipo `xml` come oggetti BLOB (Binary Large Object). Tali istanze XML possono essere di grandi dimensioni e la rappresentazione binaria archiviata delle istanze del tipo di dati `xml` può raggiungere dimensioni massime di 2 GB. Senza un indice, questi oggetti BLOB vengono suddivisi in fase di esecuzione per valutare una query. Questa suddivisione può richiedere molto tempo. Si consideri ad esempio la query seguente:  
   
 ```  
-WITH XMLNAMESPACES ('http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS "PD")  
+WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS "PD")  
   
 SELECT CatalogDescription.query('  
   /PD:ProductDescription/PD:Summary  
@@ -72,12 +72,12 @@ WHERE CatalogDescription.exist ('/PD:ProductDescription/@ProductModelID[.="19"]'
   
  Per selezionare le istanze XML che soddisfano la condizione della clausola `WHERE` , gli oggetti BLOB XML in ogni riga della tabella `Production.ProductModel` vengono suddivisi in fase di esecuzione. In seguito, viene valutata l'espressione `(/PD:ProductDescription/@ProductModelID[.="19"]`) nel metodo `exist()` . La suddivisione in fase di esecuzione può essere costosa, a seconda delle dimensioni e del numero di istanze archiviate nella colonna.  
   
- Se l'esecuzione di query XML binary large object (BLOB) è comune nell'ambiente dell'applicazione, facilitare l'indicizzazione di `xml` colonne di tipo. Tuttavia, la manutenzione dell'indice durante la modifica dei dati presuppone un costo associato.  
+ Se l'esecuzione di query sugli oggetti BLOB XML è un processo comune nell'ambiente di lavoro specifico, può facilitare l'indicizzazione delle colonne di tipo `xml`. Tuttavia, la manutenzione dell'indice durante la modifica dei dati presuppone un costo associato.  
   
 ## <a name="primary-xml-index"></a>Indice XML primario  
  L'indice XML primario consente di indicizzare tutti i tag, i valori e i percorsi contenuti nelle istanze XML di una colonna XML. Per creare un indice XML primario, è necessario che la tabella contenente la colonna XML da indicizzare includa un indice cluster nella chiave primaria. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa questa chiave primaria per correlare righe nell'indice XML primario con le righe nella tabella che contiene la colonna XML.  
   
- L'indice XML primario è una rappresentazione suddivisa e persistente del BLOB XML nel `xml` colonna tipo di dati. Per ogni BLOB XML contenuto nella colonna, l'indice crea diverse righe di dati. Il numero di righe dell'indice corrisponde approssimativamente al numero di nodi del BLOB XML. Quando una query recupera l'istanza XML completa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornisce l'istanza dalla colonna XML. Le query all'interno delle istanze XML utilizzano l'indice XML primario e possono restituire valori scalari o sottoalberi XML utilizzando l'indice stesso.  
+ L'indice XML primario è una rappresentazione suddivisa e persistente degli oggetti BLOB XML contenuti nella colonna con tipo di dati `xml`. Per ogni BLOB XML contenuto nella colonna, l'indice crea diverse righe di dati. Il numero di righe dell'indice corrisponde approssimativamente al numero di nodi del BLOB XML. Quando una query recupera l'istanza XML completa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornisce l'istanza dalla colonna XML. Le query all'interno delle istanze XML utilizzano l'indice XML primario e possono restituire valori scalari o sottoalberi XML utilizzando l'indice stesso.  
   
  In ogni riga vengono archiviate le informazioni seguenti:  
   
@@ -93,7 +93,7 @@ WHERE CatalogDescription.exist ('/PD:ProductDescription/@ProductModelID[.="19"]'
   
 -   Chiave primaria della tabella di base. La chiave primaria della tabella di base viene duplicata nell'indice XML primario per eseguire un join all'indietro con la tabella di base e il numero massimo di colonne nella chiave primaria della tabella di base è limitato a 15.  
   
- Le informazioni sul nodo vengono utilizzate per valutare e costruire i risultati XML di una query specificata. A scopo di ottimizzazione, il nome di tag e le informazioni sul tipo di nodo vengono codificati come valori integer e per la colonna Path viene utilizzata la stessa codifica. Inoltre, i percorsi vengono archiviati in ordine inverso per consentirne la corrispondenza quando è noto solo il relativo suffisso. Esempio:  
+ Le informazioni sul nodo vengono utilizzate per valutare e costruire i risultati XML di una query specificata. A scopo di ottimizzazione, il nome di tag e le informazioni sul tipo di nodo vengono codificati come valori integer e per la colonna Path viene utilizzata la stessa codifica. Inoltre, i percorsi vengono archiviati in ordine inverso per consentirne la corrispondenza quando è noto solo il relativo suffisso. Ad esempio:  
   
 -   `//ContactRecord/PhoneNumber` in cui sono noti solo gli ultimi due passaggi  
   
@@ -106,7 +106,7 @@ WHERE CatalogDescription.exist ('/PD:ProductDescription/@ProductModelID[.="19"]'
  Ad esempio, la query seguente restituisce informazioni di riepilogo archiviate nella `CatalogDescription``xml` colonna type nella `ProductModel` tabella. La query restituisce informazioni <`Summary`> solo per modelli di prodotti la cui descrizione di catalogo contiene inoltre la descrizione <`Features`>.  
   
 ```  
-WITH XMLNAMESPACES ('http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS "PD")SELECT CatalogDescription.query('  /PD:ProductDescription/PD:Summary') as ResultFROM Production.ProductModelWHERE CatalogDescription.exist ('/PD:ProductDescription/PD:Features') = 1  
+WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS "PD")SELECT CatalogDescription.query('  /PD:ProductDescription/PD:Summary') as ResultFROM Production.ProductModelWHERE CatalogDescription.exist ('/PD:ProductDescription/PD:Features') = 1  
 ```  
   
  In relazione all'indice XML primario, anziché suddividere ogni istanza degli oggetti BLOB XML nella tabella di base, nelle righe dell'indice che corrispondono a ogni oggetto BLOB XML viene eseguita la ricerca sequenziale dell'espressione specificata nel metodo `exist()`. Se il percorso viene individuato nella colonna Path dell'indice, l'elemento <`Summary`> e i relativi sottoalberi vengono recuperati dall'indice XML primario e convertiti in un oggetto BLOB XML come risultato del metodo `query()`.  
@@ -148,7 +148,7 @@ USE AdventureWorks2012;SELECT InstructionsFROM Production.ProductModel WHERE Pro
  Nella query seguente viene illustrato il caso in cui è utile l'indice PATH:  
   
 ```  
-WITH XMLNAMESPACES ('http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS "PD")  
+WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS "PD")  
   
 SELECT CatalogDescription.query('  
   /PD:ProductDescription/PD:Summary  
@@ -172,8 +172,8 @@ WHERE CatalogDescription.exist ('/PD:ProductDescription/@ProductModelID[.="19"]'
   
 ```  
 WITH XMLNAMESPACES (  
-  'http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactInfo' AS CI,  
-  'http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes' AS ACT)  
+  'https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactInfo' AS CI,  
+  'https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes' AS ACT)  
   
 SELECT ContactID   
 FROM   Person.Contact  
@@ -190,7 +190,7 @@ WHERE  AdditionalContactInfo.exist('//ACT:telephoneNumber/ACT:number[.="111-111-
  Ad esempio, per il modello di prodotto `19`, la query seguente recupera i valori degli attributi `ProductModelID` e `ProductModelName` tramite il metodo `value()` . Anziché utilizzare l'indice XML primario o gli altri indici XML secondari, l'indice PROPERTY consente di velocizzare l'esecuzione.  
   
 ```  
-WITH XMLNAMESPACES ('http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS "PD")  
+WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS "PD")  
   
 SELECT CatalogDescription.value('(/PD:ProductDescription/@ProductModelID)[1]', 'int') as ModelID,  
        CatalogDescription.value('(/PD:ProductDescription/@ProductModelName)[1]', 'varchar(30)') as ModelName          

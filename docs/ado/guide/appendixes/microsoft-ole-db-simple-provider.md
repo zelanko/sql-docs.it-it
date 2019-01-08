@@ -15,12 +15,12 @@ ms.assetid: 1e7dc6f0-482c-4103-8187-f890865e40fc
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d67bcc157d069d180a7fd8295ece9f2139d5499c
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 33858c9cc0778e550bf90f574e4443dff033c5d1
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51604641"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53209051"
 ---
 # <a name="microsoft-ole-db-simple-provider-overview"></a>Panoramica di Simple Provider Microsoft OLE DB
 Il Microsoft OLE DB semplici Provider (OSP) consente di ADO accedere ai dati per il quale un provider è stata scritta usando la [OLE DB semplici Provider (OSP) Toolkit](https://msdn.microsoft.com/6e7b7931-9e4a-4151-ae51-672abd3f84a6). I provider di semplici sono utili per accedere alle origini dati che richiedono il supporto OLE DB solo fondamentale, ad esempio le matrici in memoria o documenti XML.
@@ -45,7 +45,7 @@ MSDAOSP
 
  La stringa è costituita da queste parole chiave:
 
-|Parola chiave|Description|
+|Parola chiave|Descrizione|
 |-------------|-----------------|
 |**Provider**|Specifica il provider OLE DB per SQL Server.|
 |**Data Source**|Specifica il nome di un server.|
@@ -57,13 +57,13 @@ MSDAOSP
 
 ```console
 Portfolio
-   Stock
-      Shares
-      Symbol
-      Price
-      Info
-         Company Name
-         WebSite
+   Stock
+      Shares
+      Symbol
+      Price
+      Info
+         Company Name
+         WebSite
 ```
 
  Gli oggetti DSO XML utilizza euristica incorporata per convertire i nodi in un albero XML in capitoli gerarchico **Recordset**.
@@ -73,8 +73,8 @@ Portfolio
 ```console
 Parent Recordset
 Shares, Symbol, Price, $Text
-   Child Recordset
-      Company Name, WebSite, $Text
+   Child Recordset
+      Company Name, WebSite, $Text
 ```
 
  Si noti che i tag di Portfolio e informazioni non vengano rappresentati nella gerarchica **Recordset**. Per una spiegazione delle modalità di DSO XML di conversione degli alberi XML gerarchico **recordset**, vedere le seguenti regole. La colonna $Text è descritto nella sezione seguente.

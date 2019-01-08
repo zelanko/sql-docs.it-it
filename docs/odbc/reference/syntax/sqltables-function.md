@@ -20,16 +20,16 @@ ms.assetid: 60d5068a-7d7c-447c-acc6-f3f2cf73440c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b0930f61ea43fb77e93b9b3ebcb9d20073f1950d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dfe77cba535b78f387a786ddc56f65cf87172644
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47708359"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53212400"
 ---
 # <a name="sqltables-function"></a>Funzione SQLTables
 **Conformità**  
- Versione introdotta: Conformità agli standard 1.0 di ODBC: Open Group  
+ Versione introdotta: Conformità agli standard 1.0 ODBC: Apri gruppo  
   
  **Riepilogo**  
  **SQLTables** restituisce l'elenco di nomi di tabella, catalogo o schema e tipi di tabella, archiviati in un'origine dati specifica. Il driver restituisce le informazioni come set di risultati.  
@@ -92,7 +92,7 @@ SQLRETURN SQLTables(
 ## <a name="diagnostics"></a>Diagnostica  
  Quando **SQLTables** restituisce SQL_ERROR o SQL_SUCCESS_WITH_INFO, un valore SQLSTATE associato possono essere ottenuti chiamando **SQLGetDiagRec** con un *HandleType* di SQL _ HANDLE_STMT e un *gestiscono* dei *StatementHandle*. Nella tabella seguente sono elencati i valori SQLSTATE normalmente restituiti dal **SQLTables** e illustra ognuna nel contesto di questa funzione; la notazione "(DM)" precede le descrizioni di SQLSTATE restituiti da Gestione Driver. Il codice restituito a ogni valore SQLSTATE è SQL_ERROR, se non specificato diversamente.  
   
-|SQLSTATE|Errore|Description|  
+|SQLSTATE|Errore|Descrizione|  
 |--------------|-----------|-----------------|  
 |01000|Avviso generale|Messaggio informativo specifico del driver. (Funzione restituisce SQL_SUCCESS_WITH_INFO).|  
 |08S01|Errore del collegamento di comunicazione|Il collegamento di comunicazione tra il driver e l'origine dati a cui è stato connesso il driver non è stato possibile prima dell'elaborazione di funzione è stata completata.|  
@@ -156,7 +156,7 @@ SQLRETURN SQLTables(
 |TABLE_CAT (ODBC 1.0)|1|Varchar|Nome del catalogo; NULL se non applicabile all'origine dati. Se un driver supporta i cataloghi per alcune tabelle ma non per altri utenti, ad esempio quando i dati vengono recuperati dai diversi DBMS, restituisce una stringa vuota ("") per le tabelle che non dispone di cataloghi.|  
 |TABLE_SCHEM (ODBC 1.0)|2|Varchar|Nome dello schema; NULL se non applicabile all'origine dati. Se un driver supporta gli schemi per alcune tabelle ma non per altri utenti, ad esempio quando i dati vengono recuperati dai diversi DBMS, restituisce una stringa vuota ("") per le tabelle che non hanno schemi.|  
 |TABLE_NAME (ODBC 1.0)|3|Varchar|Nome della tabella.|  
-|TABLE_TYPE (ODBC 1.0)|4|Varchar|Nome tipo di tabella. uno dei seguenti: "TABLE", "Visualizzazione", "Tabella di sistema", "Temporanei globali", "Locale temporanea", "ALIAS", "SINONIMI" o un nome di tipo specifico dell'origine dati.<br /><br /> Il significato di "ALIAS" e "SINONIMI" è specifici del driver.|  
+|TABLE_TYPE (ODBC 1.0)|4|Varchar|Nome tipo di tabella. uno dei seguenti: "TABLE", "Visualizzazione", "Tabella di sistema", "Temporanei globali", "Locale temporanea", "ALIAS", "SINONIMI" o un nome di tipo specifiche dell'origine dati.<br /><br /> Il significato di "ALIAS" e "SINONIMI" è specifici del driver.|  
 |SEZIONE OSSERVAZIONI (ODBC 1.0)|5|Varchar|Descrizione della tabella.|  
   
 ## <a name="example"></a>Esempio  

@@ -18,12 +18,12 @@ ms.assetid: 6ca8fe2c-7b1c-4b59-b4c7-e3b7485df274
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1c9b6b7e6118fc23ef821d85ea6d0ac2f040e69b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c6ac15a78e8689e76fc9687a6cd8784eb1fc4dd2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47603039"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52537874"
 ---
 # <a name="spaddjob-transact-sql"></a>sp_add_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,31 +55,31 @@ sp_add_job [ @job_name = ] 'job_name'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ **@job_name =** ] **'***job_name***'**  
+ [  **@job_name =** ] **'**_job_name_**'**  
  Nome del processo. Il nome deve essere univoco e non può contenere la percentuale (**%**) caratteri. *nome_processo*viene **nvarchar (128)**, non prevede alcun valore predefinito.  
   
  [  **@enabled =** ] *abilitata*  
  Indica lo stato del processo aggiunto. *abilitata*viene **tinyint**, con un valore predefinito è 1 (abilitato). Se **0**, il processo non è abilitato e non viene eseguito in base alla relativa pianificazione; tuttavia, può essere eseguito manualmente.  
   
- [  **@description =** ] **'***descrizione***'**  
+ [  **@description =** ] **'**_descrizione_**'**  
  Descrizione del processo. *Descrizione* viene **nvarchar(512)**, con un valore predefinito è NULL. Se *descrizione* viene non omesso, viene utilizzata "Nessuna descrizione disponibile".  
   
  [ **@start_step_id =** ] *step_id*  
  Numero di identificazione del primo passaggio da eseguire per il processo. *step_id*viene **int**, con un valore predefinito è 1.  
   
- [  **@category_name =** ] **'***categoria***'**  
+ [  **@category_name =** ] **'**_categoria_**'**  
  Categoria per il processo. *categoria*viene **sysname**, con un valore predefinito è NULL.  
   
  [ **@category_id =** ] *category_id*  
  Meccanismo indipendente dal linguaggio per specificare una categoria di processi. *category_id*viene **int**, con un valore predefinito è NULL.  
   
- [ **@owner_login_name =** ] **'***login***'**  
+ [  **@owner_login_name =** ] **'**_account di accesso_**'**  
  Nome dell'account di accesso proprietario del processo. *account di accesso*viene **sysname**, con un valore predefinito è NULL, che viene interpretato come nome account di accesso corrente. Solo i membri del **sysadmin** ruolo predefinito del server può impostare o modificare il valore per **@owner_login_name**. Se gli utenti che non sono membri del **sysadmin** ruolo impostare o modificare il valore di **@owner_login_name**, esecuzione di questa stored procedure ha esito negativo e viene restituito un errore.  
   
  [  **@notify_level_eventlog =** ] *eventlog_level*  
  Valore che indica quando inserire una voce per il processo nel registro applicazioni di Microsoft Windows. *eventlog_level*viene **int**, i possibili valori sono i seguenti.  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |**0**|Never|  
 |**1**|In caso di esito positivo|  
@@ -95,13 +95,13 @@ sp_add_job [ @job_name = ] 'job_name'
  [  **@notify_level_page =** ] *page_level*  
  Valore che indica quando inviare una pagina al termine del processo. *page_level*viene **int**, il valore predefinito è **0**, non ovvero mai. *page_level*Usa gli stessi valori *eventlog_level*.  
   
- [  **@notify_email_operator_name =** ] **'***nome_posta_elettronica***'**  
+ [  **@notify_email_operator_name =** ] **'**_nome_posta_elettronica_**'**  
  Il nome di posta elettronica della persona a cui inviare il messaggio di posta elettronica quando *email_level* viene raggiunto. *nome_posta_elettronica* viene **sysname**, con un valore predefinito è NULL.  
   
- [ **@notify_netsend_operator_name =** ] **'***netsend_name***'**  
+ [  **@notify_netsend_operator_name =** ] **'**_netsend_name_**'**  
  Nome dell'operatore a cui viene inviato il messaggio di rete al termine del processo. *netsend_name*viene **sysname**, con un valore predefinito è NULL.  
   
- [  **@notify_page_operator_name =** ] **'***page_name***'**  
+ [  **@notify_page_operator_name =** ] **'**_page_name_**'**  
  Nome dell'operatore a cui inviare il messaggio sul cercapersone al termine del processo. *page_name*viene **sysname**, con un valore predefinito è NULL.  
   
  [  **@delete_level =** ] *i possibili*  
@@ -110,7 +110,7 @@ sp_add_job [ @job_name = ] 'job_name'
 > [!NOTE]  
 >  Quando *i possibili* viene **3**, il processo viene eseguito una sola volta, indipendentemente dalle pianificazioni definite per il processo. Inoltre, se un processo si autoelimina, viene eliminato anche il contenuto della cronologia corrispondente.  
   
- [ **@job_id =** ] *job_id***OUTPUT**  
+ [  **@job_id =** ] _job_id_**OUTPUT**  
  Numero di identificazione del processo assegnato al processo se creato correttamente. *job_id*è una variabile di output di tipo **uniqueidentifier**, con un valore predefinito è NULL.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
@@ -155,7 +155,7 @@ EXEC dbo.sp_add_job
 GO  
 ```  
   
-### <a name="b-adding-a-job-with-pager-e-mail-and-net-send-information"></a>B. Aggiunta di un processo con informazioni inviate tramite il cercapersone, la posta elettronica e la rete  
+### <a name="b-adding-a-job-with-pager-e-mail-and-net-send-information"></a>b. Aggiunta di un processo con informazioni inviate tramite il cercapersone, la posta elettronica e la rete  
  In questo esempio viene creato il processo `Ad hoc Sales Data Backup` che in caso di esito negativo invia una notifica all'operatore `François Ajenstat` (tramite cercapersone, posta elettronica o messaggio popup di rete), mentre in caso di esito positivo si autoelimina.  
   
 > [!NOTE]  

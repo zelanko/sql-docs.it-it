@@ -11,17 +11,17 @@ ms.assetid: 6b2291bb-1d20-4d08-81cb-a16dd8e01faf
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: eac4792762f96ce689d7b334a3b9584032f494de
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 119fa4121e6f18d9592b60b6fcb8504a1228d848
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48148861"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53353924"
 ---
 # <a name="install-the-stand-alone-version-of-report-builder-report-builder"></a>Installare la versione autonoma di Generatore report (Generatore report)
-  È possibile installare Generatore Report dal [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] feature pack di sul [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkID=168472) o in un percorso come una cartella pubblica per cui dispone il file reportbuilder3_x86.msi, ovvero il pacchetto di Windows Installer per Generatore Report, è stato scaricato.  
+  È possibile installare Generatore Report dal [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] feature pack di sul [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkID=168472) o in un percorso come una cartella pubblica per cui dispone il file reportbuilder3_x86.msi, ovvero il pacchetto di Windows Installer per Generatore Report, è stato scaricato.  
   
- È inoltre possibile eseguire un'installazione dalla riga di comando di Generatore report e immettere argomenti per la personalizzazione dell'installazione. Oltre ai parametri intrinseci MSI standard, è possibile utilizzare i parametri personalizzati specifici di Generatore report: RBINSTALLDIR e REPORTSERVERURL. RBINSTALLDIR specifica la cartella di installazione radice per Generatore report. REPORTSERVERURL specifica il server di report predefinito utilizzato da Generatore report per salvare i report.  
+ È inoltre possibile eseguire un'installazione dalla riga di comando di Generatore report e immettere argomenti per la personalizzazione dell'installazione. Oltre i parametri intrinseci MSI standard, è possibile usare i parametri personalizzati di Generatore Report: RBINSTALLDIR e REPORTSERVERURL. RBINSTALLDIR specifica la cartella di installazione radice per Generatore report. REPORTSERVERURL specifica il server di report predefinito utilizzato da Generatore report per salvare i report.  
   
  Se si vuole eseguire un'installazione invisibile all'utente che non richiede interazioni con l'interfaccia utente, specificare l'opzione **/quiet** . In base alle caratteristiche di progettazione, il flag dell'opzione quiet elimina la visualizzazione degli errori di installazione. Quando si usa questa opzione è quindi consigliabile includere l'opzione **/l** che specifica la registrazione.  
   
@@ -30,7 +30,7 @@ ms.locfileid: "48148861"
   
 ### <a name="to-install-report-builder-from-the-download-site"></a>Per installare Generatore report dal sito di download  
   
-1.  Passare a [Generatore Report di Microsoft SQL Server 2012](http://go.microsoft.com/fwlink/?LinkID=219138) e individuare la sezione Generatore Report della pagina Web.  
+1.  Passare a [Generatore Report di Microsoft SQL Server 2012](https://go.microsoft.com/fwlink/?LinkID=219138) e individuare la sezione Generatore Report della pagina Web.  
   
 2.  Fare clic su **X86 pacchetto**.  
   
@@ -106,7 +106,7 @@ ms.locfileid: "48148861"
   
 ### <a name="to-install-report-builder-from-the-command-line"></a>Per installare Generatore report dalla riga di comando  
   
-1.  Passare a [Generatore Report di Microsoft SQL Server 2012](http://go.microsoft.com/fwlink/?LinkID=219138) e individuare la sezione Generatore Report.  
+1.  Passare a [Generatore Report di Microsoft SQL Server 2012](https://go.microsoft.com/fwlink/?LinkID=219138) e individuare la sezione Generatore Report.  
   
 2.  Fare clic su **X86 pacchetto**.  
   
@@ -124,7 +124,7 @@ ms.locfileid: "48148861"
   
      `msiexec/i ReportBuilder3_.msi /option [value] [/option [value]]`  
   
-     Le due opzioni specifiche dell'installazione di Generatore report sono: RBINSTALLDIR e REPORTSERVERURL. Non è necessario includere questi argomenti nella riga di comando. Di seguito è riportato il comando di base:  
+     Le due opzioni specifiche dell'installazione di Generatore Report sono: RBINSTALLDIR e REPORTSERVERURL. Non è necessario includere questi argomenti nella riga di comando. Di seguito è riportato il comando di base:  
   
      `msiexec /i ReportBuilder3_x86.msi /quiet`  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - IIS server configuration [SQL Server replication]
@@ -15,26 +14,26 @@ ms.assetid: d651186e-c9ca-4864-a444-2cd6943b8e35
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ca646f4df2976d75ee6665731e5c5641bbb8d982
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6f361b15458230c62d8710e56164e1c80de5d95a
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48176071"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53372753"
 ---
 # <a name="configure-iis-for-web-synchronization"></a>Configurazione di IIS per la sincronizzazione Web
   Le procedure descritte in questo argomento rappresentano il secondo passaggio nella configurazione della sincronizzazione Web per la replica di tipo merge. Questo passaggio è successivo all'abilitazione di una pubblicazione per la sincronizzazione Web. Per una panoramica del processo di configurazione, vedere [Configura sincronizzazione Web](configure-web-synchronization.md). Al termine delle procedure indicate in questo argomento, procedere al terzo passaggio, che consiste nella configurazione di una sottoscrizione per l'utilizzo della sincronizzazione Web. Questo terzo passaggio è descritto negli argomenti seguenti:  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Procedura: Configurazione di una sottoscrizione per l'utilizzo della sincronizzazione tramite il Web \(SQL Server Management Studio\)](http://msdn.microsoft.com/library/ms345214.aspx)  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Come si fa: Configurare una sottoscrizione per utilizzare la sincronizzazione Web \(SQL Server Management Studio\)](https://msdn.microsoft.com/library/ms345214.aspx)  
   
--   Programmazione [!INCLUDE[tsql](../../includes/tsql-md.md)] della replica: [Procedura: Configurazione di una sottoscrizione per l'utilizzo della sincronizzazione Web (Programmazione Transact-SQL della replica)](http://msdn.microsoft.com/library/ms345206.aspx)  
+-   Programmazione [!INCLUDE[tsql](../../includes/tsql-md.md)] della replica: [Come si fa: Configurare una sottoscrizione per utilizzare la sincronizzazione Web (programmazione Transact-SQL della replica)](https://msdn.microsoft.com/library/ms345206.aspx)  
   
--   RMO: [Procedura: Configurazione di una sottoscrizione per l'utilizzo di una sottoscrizione Web (Programmazione RMO)](http://msdn.microsoft.com/library/ms345207.aspx)  
+-   RMO: [Come si fa: Configurare una sottoscrizione per utilizzare la sincronizzazione Web (programmazione RMO)](https://msdn.microsoft.com/library/ms345207.aspx)  
   
  Nella sincronizzazione Web viene utilizzato un computer che esegue [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Information Services (IIS) per sincronizzare le sottoscrizioni pull con le pubblicazioni di tipo merge. Sono supportate le versioni 5.0, 6.0 e 7.0 di IIS. La Configurazione guidata sincronizzazione Web non è supportata in IIS versione 7.0.  
   
 > [!IMPORTANT]  
->  Verificare che nell'applicazione venga utilizzato solo [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] o versione successiva e che le versioni precedenti di [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] non siano installate sul server IIS. Le versioni precedenti di [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] possono causare errori come, ad esempio, "Formato di messaggio non valido durante la sincronizzazione Web. Verificare che i componenti di replica siano configurati correttamente nel server Web".  
+>  Verificare che nell'applicazione venga utilizzato solo [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] o versione successiva e che le versioni precedenti di [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] non siano installate sul server IIS. Le versioni precedenti di [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] possono causare errori tra cui: "Formato di messaggio non valido durante la sincronizzazione Web. Verificare che i componenti di replica siano configurati correttamente nel server Web".  
   
 > [!CAUTION]  
 >  Non utilizzare contemporaneamente sia WebSync sia percorsi alternativi della cartella snapshot.  
@@ -83,7 +82,7 @@ ms.locfileid: "48176071"
   
 4.  Fare clic su **OK**.  
   
- Se non è possibile ottenere un certificato server da un'autorità di certificazione, è possibile specificare un certificato per l'esecuzione di test. Per configurare IIS 6.0 per l'esecuzione di test, installare un certificato mediante l'utilità SelfSSL disponibile nel Resource Kit di IIS 6.0. È possibile scaricare gli strumenti dall' [Area download Microsoft](http://go.microsoft.com/fwlink/?LinkId=30958). Per IIS 5.0, visitare il sito [Supporto Tecnico Microsoft](http://go.microsoft.com/fwlink/?LinkId=46229).  
+ Se non è possibile ottenere un certificato server da un'autorità di certificazione, è possibile specificare un certificato per l'esecuzione di test. Per configurare IIS 6.0 per l'esecuzione di test, installare un certificato mediante l'utilità SelfSSL disponibile nel Resource Kit di IIS 6.0. È possibile scaricare gli strumenti dall' [Area download Microsoft](https://go.microsoft.com/fwlink/?LinkId=30958). Per IIS 5.0, visitare il sito [Supporto Tecnico Microsoft](https://go.microsoft.com/fwlink/?LinkId=46229).  
   
 > [!NOTE]  
 >  Affinché un sito Web possa utilizzare SSL, è necessario che a tale sito sia associato un certificato. SelfSSL associa automaticamente il certificato al sito Web predefinito. Se si dispone già di un certificato oppure si installa successivamente un certificato di un'autorità di certificazione, è necessario associare tale certificato in modo esplicito al sito Web utilizzato nella sincronizzazione Web. Assicurarsi che al sito Web utilizzato per la sincronizzazione delle sottoscrizioni sia associato un solo certificato. Se sono associati più certificati, il Sottoscrittore utilizzerà il primo sito Web disponibile.  
@@ -170,7 +169,7 @@ ms.locfileid: "48176071"
   
 8.  Nella pagina **Accesso alla directory** :  
   
-    1.  Fare clic su **Aggiungi**e quindi nella finestra di dialogo **Seleziona Utenti o gruppi** aggiungere gli account che verranno utilizzati dai Sottoscrittori per le connessioni al server IIS. Questi sono gli account che verranno specificati nella **informazioni sul Server Web** pagina della procedura guidata nuova sottoscrizione oppure come valore per il [sp_addmergepullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql) *@internet_login* parametro.  
+    1.  Fare clic su **Aggiungi**e quindi nella finestra di dialogo **Seleziona Utenti o gruppi** aggiungere gli account che verranno utilizzati dai Sottoscrittori per le connessioni al server IIS. Si tratta degli account che verranno specificati nella pagina **Informazioni server Web** della Creazione guidata nuova sottoscrizione oppure come valore per il parametro [sp_addmergepullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql)*@internet_login* .  
   
 9. Nella pagina **Accesso alla condivisione snapshot** immettere la condivisione snapshot. In questa condivisione vengono impostate le autorizzazioni appropriate affinché i Sottoscrittori possano accedere ai file di snapshot. Per altre informazioni sulle autorizzazioni per la condivisione, vedere [Proteggere la cartella snapshot](security/secure-the-snapshot-folder.md).  
   

@@ -1,5 +1,5 @@
 ---
-title: Ottimizzazione delle prestazioni di SQL Server R Services | Microsoft Docs
+title: SQL Server R Services Performance Tuning - SQL Server Machine Learning Services
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/15/2018
@@ -7,12 +7,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: f8f70f4f2436d30ad4a4c5083f7a6ad5a06777af
-ms.sourcegitcommit: 2420c57d2952add3697dbe0467ee1d755c5c2ee5
+ms.openlocfilehash: 9e43e65fc175844c5b08dbd8c435c0854397ce3e
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47217556"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53432294"
 ---
 # <a name="performance-tuning-for-r-in-sql-server"></a>Ottimizzazione delle prestazioni per R in SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -83,11 +83,11 @@ Configurazione e ottimizzazione delle prestazioni richiede la creazione di una s
 
 ## <a name="articles-in-this-series"></a>Articoli di questa serie
 
-+ [Ottimizzazione delle prestazioni per R in SQL Server - hardware](..\r\sql-server-configuration-r-services.md)
++ [Ottimizzazione delle prestazioni per R in SQL Server - hardware](../r/sql-server-configuration-r-services.md)
 
-    Vengono fornite informazioni aggiuntive sulla configurazione dell'hardware che [!INCLUDE [ssNoVersion_md](..\..\includes\ssnoversion-md.md)] viene installato e per la configurazione dell'istanza di SQL Server per supportare al meglio gli script esterni. È particolarmente utile per **gli amministratori del database**.
+    Vengono fornite informazioni aggiuntive sulla configurazione dell'hardware che [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] viene installato e per la configurazione dell'istanza di SQL Server per supportare al meglio gli script esterni. È particolarmente utile per **gli amministratori del database**.
 
-+ [Ottimizzazione delle prestazioni per R in SQL Server - codice e dati di ottimizzazione](..\r\r-and-data-optimization-r-services.md)
++ [Ottimizzazione delle prestazioni per R in SQL Server - codice e dati di ottimizzazione](../r/r-and-data-optimization-r-services.md)
 
     Vengono forniti suggerimenti specifici su come ottimizzare script esterno per evitare problemi noti. È più utile **ai data Scientist**.
 
@@ -95,6 +95,6 @@ Configurazione e ottimizzazione delle prestazioni richiede la creazione di una s
     > Mentre molte delle informazioni in questa sezione si applica a R in generale, alcune informazioni sono specifiche per le funzioni analitiche RevoScaleR. Non sono disponibile per indicazioni dettagliate sulle prestazioni **revoscalepy** e altre librerie di Python è supportato.
     >
 
-+ [Ottimizzazione delle prestazioni per R in SQL Server - metodi e i risultati](..\r\performance-case-study-r-services.md)
++ [Ottimizzazione delle prestazioni per R in SQL Server - metodi e i risultati](../r/performance-case-study-r-services.md)
 
     Riepiloga quali dati sono stati usati i due casi di Studio, come è stata testata sulle prestazioni e risultati di influenza le ottimizzazioni.
