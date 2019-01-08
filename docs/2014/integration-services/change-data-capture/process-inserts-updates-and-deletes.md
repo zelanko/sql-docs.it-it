@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - incremental load [Integration Services],processing data
@@ -13,12 +12,12 @@ ms.assetid: 13a84d21-2623-4efe-b442-4125a7a2d690
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d7cf579c8839b2f990486f9bf5dcca1700dac50e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 22c944306fd73b6acd2dc2d107d5bfdff69d1439
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48066411"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52804910"
 ---
 # <a name="process-inserts-updates-and-deletes"></a>Elaborazione di inserimenti, aggiornamenti ed eliminazioni
   Nel flusso di dati di un pacchetto Integration Services che esegue un caricamento incrementale dei dati delle modifiche la seconda attività consiste nel separare inserimenti, aggiornamenti ed eliminazioni. Sarà quindi possibile utilizzare i comandi appropriati per applicarli alla destinazione.  
@@ -68,10 +67,10 @@ select
 ## <a name="next-step"></a>Passaggio successivo  
  Dopo avere suddiviso le righe per l'elaborazione, il passaggio successivo consiste nell'applicare le modifiche alla destinazione.  
   
- **Argomento successivo:** [Applicazione delle modifiche alla destinazione](apply-the-changes-to-the-destination.md)  
+ **Argomento successivo:** [Applicare le modifiche alla destinazione](apply-the-changes-to-the-destination.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Trasformazione Suddivisione condizionale](../data-flow/transformations/conditional-split-transformation.md)   
- [Dividere un set di dati tramite la trasformazione Suddivisione condizionale](../data-flow/transformations/split-a-dataset-by-using-the-conditional-split-transformation.md)  
+ [Divisione di un set di dati tramite la trasformazione Suddivisione condizionale](../data-flow/transformations/split-a-dataset-by-using-the-conditional-split-transformation.md)  
   
   

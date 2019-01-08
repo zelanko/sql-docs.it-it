@@ -15,12 +15,12 @@ ms.assetid: f09ba8aa-950e-4c0d-961e-970de13200be
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a01d130cc37faa29e2aebe8612fc5e02fef10c78
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 965022adeeee40ca7f8fd45a722b22fa6aa64931
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48099621"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53350617"
 ---
 # <a name="define-named-queries-in-a-data-source-view-analysis-services"></a>Definire query denominate in una vista origine dati (Analysis Services)
   Una query denominata è un'espressione SQL rappresentata come tabella. In una query denominata è possibile specificare un'espressione SQL per la selezione di righe e colonne restituite da una o più tabelle in una o più origini dati. Una query denominata è simile a qualsiasi altra tabella in una vista origine dati con righe e relazioni, con la differenza che la query denominata è basata su un'espressione.  
@@ -36,7 +36,7 @@ ms.locfileid: "48099621"
   
  È necessario che le tabelle e le colonne a cui fa riferimento la query SQL non siano qualificate oppure siano qualificate solo in base al nome della tabella. Per fare riferimento alla colonna SaleAmount di una tabella, ad esempio, è possibile utilizzare `SaleAmount` o `Sales.SaleAmount` , mentre `dbo.Sales.SaleAmount` genera un errore.  
   
- **Nota** In caso di definizione di una query denominata su un'origine dati [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0, una query denominata contenente una sottoquery e una clausola GROUP BY correlate avrà esito negativo. Per altre informazioni, vedere l'articolo [Internal Error with SELECT Statement Containing Correlated Subquery and GROUP BY](http://support.microsoft.com/kb/274729) (Errore interno con l'istruzione SELECT contenente la sottoquery e GROUP BY correlati) della [!INCLUDE[msCoName](../../includes/msconame-md.md)] Knowledge Base.  
+ **Nota** In caso di definizione di una query denominata su un'origine dati [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0, una query denominata contenente una sottoquery e una clausola GROUP BY correlate avrà esito negativo. Per altre informazioni, vedere l'articolo [Internal Error with SELECT Statement Containing Correlated Subquery and GROUP BY](https://support.microsoft.com/kb/274729) (Errore interno con l'istruzione SELECT contenente la sottoquery e GROUP BY correlati) della [!INCLUDE[msCoName](../../includes/msconame-md.md)] Knowledge Base.  
   
 ## <a name="add-or-edit-a-named-query"></a>Aggiungere o modificare una query denominata  
   

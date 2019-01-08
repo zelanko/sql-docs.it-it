@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent alerts, event types
@@ -22,12 +22,12 @@ ms.assetid: 3f57d0f0-4781-46ec-82cd-b751dc5affef
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e4b40106834927506b84959da54aed959c8993ef
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b385e6b02807ed79e2becb127a16e76d04329764
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48067011"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52797053"
 ---
 # <a name="alerts"></a>Avvisi
   Gli eventi vengono generati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e immessi nel registro applicazioni di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent legge il registro applicazioni ed esegue un confronto tra gli eventi e gli avvisi definiti. Quando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent rileva una corrispondenza, viene attivato un avviso, che rappresenta una risposta automatica a un evento. Oltre al controllo degli eventi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent può inoltre eseguire il monitoraggio delle condizioni delle prestazioni e degli eventi WMI (Windows Management Instrumentation).  

@@ -13,12 +13,12 @@ ms.assetid: 78a1d8e8-fa97-476f-8777-84617d145340
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c5cbaa1d648b3de2cdd0b16d233db93bf52635b3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4fe890744f546e02c91630c5bb0115f5b5c8cb9a
+ms.sourcegitcommit: 98324d9803edfa52508b6d5d3554614d0350a0b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48176061"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52321637"
 ---
 # <a name="other-database-engine-upgrade-issues"></a>Altri problemi di aggiornamento del motore di database
   I problemi di aggiornamento seguenti non possono essere rilevati dalla versione corrente di Preparazione aggiornamento. Esaminare i problemi elencati di seguito per valutarne il potenziale impatto sui sistemi.  
@@ -64,7 +64,7 @@ ms.locfileid: "48176061"
 -   HierarchyID  
   
 ## <a name="target-table-of-the-output-into-clause-cannot-have-any-defined-triggers"></a>La tabella di destinazione della clausola OUTPUT INTO non può contenere trigger definiti  
- La clausola OUPUT INTO per una tabella di destinazione che contiene trigger abilitati non è supportata.  
+ OUTPUT in una tabella di destinazione quando la tabella contiene trigger abilitati non è supportato.  
   
 ## <a name="compile-time-error-for-udfs-when-the-target-of-an-output-into-clause-is-a-table"></a>Errore in fase di compilazione per le funzioni definite dall'utente quando la destinazione di una clausola OUTPUT INTO è una tabella  
  Non è possibile utilizzare funzioni definite dall'utente per eseguire azioni che modificano lo stato del database. Ad esempio, una funzione definita dall'utente non può eseguire azioni DDL (CREATE/ALTER/DROP) o DML (INSERT/UPDATE/DELETE) su qualsiasi oggetto, ad eccezione delle variabili di tabella.  

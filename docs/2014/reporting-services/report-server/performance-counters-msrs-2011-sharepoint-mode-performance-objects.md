@@ -18,12 +18,12 @@ ms.assetid: 70bf6980-7845-4ab5-8b2a-ebf526d811a6
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: f89ef5457ba29fb3205e2bf47ce022b315644d5d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 843f0da00a9f7a496c30db9b40fb95cdb2244efe
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48154151"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53349890"
 ---
 # <a name="performance-counters-for-the-msrs-2014-web-service-sharepoint-mode-and-msrs-2014-windows-service-sharepoint-mode-performance-objects-sharepoint-mode"></a>Contatori delle prestazioni per gli oggetti prestazione MSRS 2014 Web Service SharePoint Mode e MSRS 2014 Windows Service SharePoint Mode (modalità SharePoint)
   In questo argomento vengono descritti i contatori delle prestazioni per gli oggetti prestazioni `MSRS 2014 Web Service SharePoint Mode` e `MSRS 2014 Windows Service SharePoint Mode` che fanno parte di una distribuzione in modalità SharePoint di [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)].  
@@ -33,7 +33,7 @@ ms.locfileid: "48154151"
   
  **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] in modalità SharePoint  
   
- Gli oggetti prestazioni sono disponibili nel monitor di prestazioni di Windows (**Perfmon.exe**). Per ulteriori informazioni, vedere la documentazione di Windows. [Profiling di runtime](http://msdn.microsoft.com/library/w4bz2147.aspx).  
+ Gli oggetti prestazioni sono disponibili nel monitor di prestazioni di Windows (**Perfmon.exe**). Per ulteriori informazioni, vedere la documentazione di Windows. [Profiling di runtime](https://msdn.microsoft.com/library/w4bz2147.aspx).  
   
  **Contenuto dell'argomento:**  
   
@@ -44,14 +44,14 @@ ms.locfileid: "48154151"
 -   [Utilizzare i cmdlet di PowerShell per restituire gli elenchi](#bkmk_powershell)  
   
 ##  <a name="bkmk_webservice"></a> Contatori delle prestazioni MSRS 2014 Web Service SharePoint Mode  
- Tramite l'oggetto prestazioni `MSRS 2014 Web Service SharePoint Mode` vengono monitorate le prestazioni del server di report. Questo oggetto prestazione include una raccolta di contatori che consentono di tenere traccia delle elaborazioni nel server di report avviate in genere da operazioni di visualizzazione dei report interattive. Quando si configura questo contatore, è possibile applicarlo a tutte le istanze di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] oppure è possibile selezionare istanze specifiche. I contatori vengono reimpostati ogni volta che il servizio Web ReportServer viene arrestato da [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)].  
+ Tramite l'oggetto prestazioni `MSRS 2014 Web Service SharePoint Mode` vengono monitorate le prestazioni del server di report. Questo oggetto prestazione include una raccolta di contatori che consentono di tenere traccia delle elaborazioni nel server di report avviate in genere da operazioni di visualizzazione dei report interattive. Quando si configura questo contatore, è possibile applicarlo a tutte le istanze di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] oppure è possibile selezionare istanze specifiche. I contatori vengono reimpostati ogni volta che il servizio Web ReportServer viene arrestato da [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] .  
   
- Nella tabella seguente sono elencati i contatori inclusi con il `MSRS 2014 Web Service SharePoint Mode` oggetto delle prestazioni.  
+ Nella tabella seguente sono elencati i contatori inclusi con l'oggetto prestazioni `MSRS 2014 Web Service SharePoint Mode`.  
   
-|Contatore|Description|  
+|Contatore|Descrizione|  
 |-------------|-----------------|  
 |`Active Sessions`|Numero di sessioni attive. Tramite questo contatore viene restituito un conteggio cumulativo di tutte le sessioni del browser generate dalle esecuzioni dei report, indipendentemente dal fatto che siano ancora attive o meno.<br /><br /> Quando i record di sessione vengono rimossi, il contatore viene diminuito. Per impostazione predefinita, le sessioni vengono rimosse dopo dieci minuti di inattività.|  
-|`Cache Hits/Sec`|Numero di richieste al secondo di report memorizzati nella cache. Si tratta di richieste relative a report di nuovo visualizzabili, non delle richieste relative a report elaborati direttamente dalla cache. (Vedere `Total Cache Hits` più avanti in questo argomento.)|  
+|`Cache Hits/Sec`|Numero di richieste al secondo di report memorizzati nella cache. Si tratta di richieste relative a report di nuovo visualizzabili, non delle richieste relative a report elaborati direttamente dalla cache. Vedere `Total Cache Hits` più avanti in questo argomento.|  
 |`Cache Hits/Sec (Semantic Models)`|Numero di richieste al secondo per il modello memorizzato nella cache. Si tratta di richieste relative a report di nuovo visualizzabili, non delle richieste relative a report elaborati direttamente dalla cache.|  
 |`Cache Misses/Sec`|Numero di richieste al secondo che non hanno restituito un report dalla cache. Consente di stabilire se le risorse utilizzate per la memorizzazione nella cache, su disco o in memoria, siano sufficienti.|  
 |`Cache Misses/Sec (Semantic Models)`|Numero di richieste al secondo tramite cui non è stato restituito alcun modello dalla cache. Consente di stabilire se le risorse utilizzate per la memorizzazione nella cache, su disco o in memoria, siano sufficienti.|  
@@ -60,7 +60,7 @@ ms.locfileid: "48154151"
 |`Memory Cache Misses/Sec`|Numero di volte al secondo in cui non è stato possibile recuperare i report dalla cache in memoria.|  
 |`Next Session Requests/Sec`|Numero di richieste al secondo di report aperti in una sessione esistente, ovvero i report di cui è stato eseguito il rendering da una sessione di snapshot.|  
 |`Report Requests`|Numero di richieste di report attualmente attive e gestite dal server di report.|  
-|`Reports Executed/Sec`|Numero di report eseguiti al secondo. Fornisce informazioni statistiche sul volume dei report. Usare questo contatore con `Request/Sec` per confrontare l'esecuzione del report per le richieste di report restituibili dalla cache.|  
+|`Reports Executed/Sec`|Numero di report eseguiti al secondo. Fornisce informazioni statistiche sul volume dei report. Utilizzare questo contatore con `Request/Sec` per confrontare il numero di report eseguiti con il numero di richieste di report restituibili dalla cache.|  
 |`Requests/Sec`|Numero di richieste al secondo inviate al server di report. Questo contatore tiene traccia di tutti i tipi di richieste gestite dal server di report.|  
 |`Total Cache Hits`|Numero totale di richieste di report alla cache dall'avvio del servizio. Il contatore viene reimpostato ogni volta che il servizio Web ReportServer viene arrestato da [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] .|  
 |`Total Cache Hits (Semantic Models)`|Numero totale di richieste per il modello dalla cache dopo l'avvio del servizio. Il contatore viene reimpostato ogni volta che il servizio Web ReportServer viene arrestato da ASP.NET.|  
@@ -76,26 +76,26 @@ ms.locfileid: "48154151"
 ##  <a name="bkmk_windowsservice"></a> Contatori delle prestazioni MSRS 2014 Windows Service SharePoint Mode  
  L'oggetto prestazioni `MSRS 2014 Windows Service SharePoint Mode` consente di monitorare il servizio Windows ReportServer. Questo oggetto prestazione include una raccolta di contatori che consentono di tenere traccia delle elaborazioni di report avviate tramite operazioni pianificate, quali sottoscrizioni e recapiti, snapshot delle esecuzioni dei report e cronologie dei report. Quando si configura questo contatore, è possibile applicarlo a tutte le istanze di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] oppure è possibile selezionare istanze specifiche.  
   
- Nella tabella seguente sono elencati i contatori inclusi nel `MSRS 2014 Windows Service SharePoint mode` oggetto delle prestazioni.  
+ Nella tabella seguente sono elencati i contatori inclusi nell'oggetto prestazioni `MSRS 2014 Windows Service SharePoint mode`.  
   
-|Contatore|Description|  
+|Contatore|Descrizione|  
 |-------------|-----------------|  
 |`Active Sessions`|Numero di sessioni attive archiviate nel database del server di report. Questo contatore restituisce un conteggio cumulativo di tutte le sessioni utilizzabili del browser generate dalle sottoscrizioni del report, indipendentemente dal fatto che siano attive o meno.|  
 |`Alerting: event queue length`||  
 |`Alerting: events processed - CreateSchedule`||  
-|`Alerting: events processed – Delete schedule`||  
-|`Alerting: events processed – DeliverAlert`||  
-|`Alerting: events processed – FireAlert`||  
-|`Alerting: events processed – FireSchedule`||  
-|`Alerting: events processed – GenerateAlert`||  
-|`Alerting: events processed – UpdateSchedule`||  
+|`Alerting: events processed - Delete schedule`||  
+|`Alerting: events processed - DeliverAlert`||  
+|`Alerting: events processed - FireAlert`||  
+|`Alerting: events processed - FireSchedule`||  
+|`Alerting: events processed - GenerateAlert`||  
+|`Alerting: events processed - UpdateSchedule`||  
 |`Cache Flushes/Sec`|Numero di scaricamenti della cache al secondo.|  
-|`Cache Hits/Sec`|Numero di richieste al secondo di report memorizzati nella cache. Si tratta di richieste relative a report di nuovo visualizzabili, non delle richieste relative a report elaborati direttamente dalla cache. (Vedere `Total Cache Hits` più avanti in questo argomento.)|  
+|`Cache Hits/Sec`|Numero di richieste al secondo di report memorizzati nella cache. Si tratta di richieste relative a report di nuovo visualizzabili, non delle richieste relative a report elaborati direttamente dalla cache. Vedere `Total Cache Hits` più avanti in questo argomento.|  
 |`Cache Hits/Sec (Semantic Models)`|Numero di richieste al secondo per i modelli memorizzati nella cache.|  
 |`Cache Misses/Sec`|Numero di richieste al secondo che non hanno restituito un report dalla cache. Consente di stabilire se le risorse utilizzate per la memorizzazione nella cache, su disco o in memoria, siano sufficienti.|  
 |`Cache Misses/Sec (Semantic Models)`|Numero di richieste al secondo tramite cui non è stato restituito alcun modello dalla cache. Consente di stabilire se le risorse utilizzate per la memorizzazione nella cache, su disco o in memoria, siano sufficienti.|  
 |`Delivers/Sec`|Numero di recapiti di report al secondo, da parte di tutte le estensioni per il recapito.|  
-|`Events/Sec`|Numero di eventi elaborati al secondo. Gli eventi monitorati comprendono `SnapshotUpdated` e `TimedSubscription`.|  
+|`Events/Sec`|Numero di eventi elaborati al secondo. Tra gli eventi monitorati sono inclusi `SnapshotUpdated` e `TimedSubscription`.|  
 |`First Session Requests/Sec`|Numero di nuove sessioni di esecuzione del report create al secondo.|  
 |`Memory Cache Hits/Sec`|Numero di volte al secondo in cui è stato possibile recuperare i report dalla cache in memoria. La*cache in memoria* è una parte della cache che archivia i report nella memoria della CPU. Quando viene usata la cache in memoria, il server di report non esegue query su [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] per individuare il contenuto memorizzato nella cache.|  
 |`Memory Cache Misses/Sec`|Numero di volte al secondo in cui non è stato possibile recuperare i report dalla cache in memoria.|  
@@ -121,7 +121,7 @@ ms.locfileid: "48154151"
 |`Total Snapshot Updates`|Numero totale di aggiornamenti di snapshot dell'esecuzione dei report.|  
   
 ##  <a name="bkmk_powershell"></a> Utilizzare i cmdlet di PowerShell per restituire gli elenchi  
- ![Contenuto correlato di PowerShell](../media/rs-powershellicon.jpg "Contenuto correlato di PowerShell")Tramite il seguente script di Windows PowerShell verranno restituiti i set di contatori in cui CounterSetName inizia con "msr"  
+ ![Contenuto correlato di PowerShell](../media/rs-powershellicon.jpg "Contenuto correlato di PowerShell")Con lo script di Windows PowerShell seguente verranno restituiti i set di contatori in cui CounterSetName inizia con "msr".  
   
 ```  
 get-counter -listset msr*  
@@ -137,7 +137,7 @@ CounterSetName     : MSRS 2014 Web Service SharePoint Mode
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Monitoraggio delle prestazioni del Server di Report](monitoring-report-server-performance.md)   
+ [Monitoraggio delle prestazioni del server di report](monitoring-report-server-performance.md)   
  [Contatori delle prestazioni per il MSRS 2014 Web Service e MSRS 2014 Windows Service prestazioni oggetti &#40;modalità nativa&#41;](../report-server/performance-counters-msrs-2011-web-service-performance-objects.md)  
   
   

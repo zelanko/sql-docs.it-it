@@ -1,21 +1,22 @@
 ---
-title: Configurare un gruppo di disponibilità SQL Server per scalabilità in lettura in Linux | Microsoft Docs
-description: ''
+title: Configurare un gruppo di disponibilità SQL Server per scalabilità in lettura in Linux
+titleSuffix: SQL Server
+description: Informazioni sulla configurazione di un SQL Server Always nel gruppo di disponibilità (AG) per i carichi di lavoro di scalabilità in lettura in Linux.
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.date: 02/14/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
+ms.custom: sql-linux, seodec18
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: bbacb8630acf10b5c9d20c50ad40cfba3f036a7c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 014ff123618c04f91c0e2c2a39d5ef8e5690a386
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47677460"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53203870"
 ---
 # <a name="configure-a-sql-server-availability-group-for-read-scale-on-linux"></a>Configurare un gruppo di disponibilità SQL Server per scalabilità in lettura in Linux
 

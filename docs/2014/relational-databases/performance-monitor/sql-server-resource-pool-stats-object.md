@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - Reosurce Pool Stats object
@@ -13,19 +13,19 @@ ms.assetid: bb46e029-fcf9-4aeb-a066-be41e7668fb9
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a1360399717819cfe82f02979de06b9f933fca4f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5fdf00d1291180197f66cd6cb23cf27f10659c68
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48229231"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52791223"
 ---
 # <a name="sql-server-resource-pool-stats-object"></a>SQL Server - Oggetto Statistiche del pool di risorse
   L'oggetto SQLServer: Statistiche del pool di risorse contiene contatori delle prestazioni che forniscono informazioni sulle statistiche del pool di risorse di Resource Governor.  
   
  Ciascun pool di risorse attivo crea un'istanza dell'oggetto prestazioni SQLServer: Statistiche del pool di risorse con lo stesso nome dell'istanza del pool di risorse di Resource Governor. Nella seguente tabella vengono descritti i contatori supportati in questa istanza.  
   
-|Nome contatore|Description|  
+|Nome contatore|Descrizione|  
 |------------------|-----------------|  
 |% di utilizzo CPU|Utilizzo di larghezza di banda della CPU da parte di tutte le richieste in tutti i gruppi del carico di lavoro appartenenti al pool. Viene misurato in relazione al computer e normalizzato a tutte le CPU del sistema. Tale valore viene modificato quando si modifica la quantità di CPU disponibile per il processo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Il valore non è normalizzato secondo i dati ricevuti dal processo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |% di destinazione utilizzo CPU|Valore di destinazione di percentuale di utilizzo della CPU per il pool di risorse in base alle impostazioni di configurazione del pool di risorse e al carico del sistema.|  

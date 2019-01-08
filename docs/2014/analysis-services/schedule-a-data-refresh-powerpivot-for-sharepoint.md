@@ -15,12 +15,12 @@ ms.assetid: 8571208f-6aae-4058-83c6-9f916f5e2f9b
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7b2840a8c4f756ce26c5e915af6860929354bae3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 58764334a6ee1902a09941e9fc9bb9723e517cdf
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48178461"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53363843"
 ---
 # <a name="schedule-a-data-refresh-powerpivot-for-sharepoint"></a>Pianificare un aggiornamento dati (PowerPivot per SharePoint)
   È possibile pianificare aggiornamenti automatici dei dati PowerPivot in una cartella di lavoro di Excel pubblicata in un sito di SharePoint.  
@@ -47,7 +47,7 @@ ms.locfileid: "48178461"
   
  L'origine dati non può essere un documento di Office o un database di Access. Office non supporta l'utilizzo dei componenti per la connettività dei dati di Office in un ambiente server. Se nella cartella di lavoro sono contenuti dati da queste origini, assicurarsi di rimuovere tali origini dall'elenco dell'origine dati nella pianificazione dell'aggiornamento dati.  
   
- La cartella di lavoro deve essere la versione [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]. Se si usano cartelle di lavoro create nella versione precedente di PowerPivot per Excel, la pianificazione dell'aggiornamento dati non funzionerà a meno che non si aggiorni il database alla versione più recente.  
+ La cartella di lavoro deve essere la versione [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] . Se si usano cartelle di lavoro create nella versione precedente di PowerPivot per Excel, la pianificazione dell'aggiornamento dati non funzionerà a meno che non si aggiorni il database alla versione più recente.  
   
  La cartella di lavoro deve essere archiviata al termine dell'operazione di aggiornamento. Un blocco nella cartella di lavoro viene posizionato sul file alla fine dell'aggiornamento dei dati, quando il file viene salvato, anziché quando l'aggiornamento viene avviato.  
   
@@ -154,10 +154,10 @@ ms.locfileid: "48178461"
   
  Se viene visualizzato un messaggio di stato imprevisto (ad esempio l'esito negativo o l'annullamento di un'operazione di aggiornamento), è possibile esaminare il problema controllando le autorizzazioni e la disponibilità dei server.  
   
- Controllare la pagina sulla risoluzione dei problemi relativi all'aggiornamento dati PowerPivot in TechNet WIKI per un supporto sulla risoluzione di problemi di questo tipo. Per altre informazioni, vedere l'articolo sulla [risoluzione dei problemi relativi all'aggiornamento dati PowerPivot](http://go.microsoft.com/fwlink/?LinkId=251594).  
+ Controllare la pagina sulla risoluzione dei problemi relativi all'aggiornamento dati PowerPivot in TechNet WIKI per un supporto sulla risoluzione di problemi di questo tipo. Per altre informazioni, vedere l'articolo sulla [risoluzione dei problemi relativi all'aggiornamento dati PowerPivot](https://go.microsoft.com/fwlink/?LinkId=251594).  
   
 > [!NOTE]  
->  Gli amministratori di SharePoint possono assistere nella risoluzione dei problemi relativi all'aggiornamento dei dati visualizzando i report consolidati sull'aggiornamento dei dati nel Dashboard di gestione PowerPivot in Amministrazione centrale. Per altre informazioni, vedere [PowerPivot Management Dashboard and Usage Data](power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md).  
+>  Gli amministratori di SharePoint possono assistere nella risoluzione dei problemi relativi all'aggiornamento dei dati visualizzando i report consolidati sull'aggiornamento dei dati nel Dashboard di gestione PowerPivot in Amministrazione centrale. Per ulteriori informazioni, vedere [PowerPivot Management Dashboard and Usage Data](power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Aggiornamento dati PowerPivot con SharePoint 2010](powerpivot-data-refresh-with-sharepoint-2010.md)   

@@ -16,15 +16,15 @@ ms.assetid: 7221fa4e-ca4a-4d5c-9f93-1b8a4af7b9e8
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: e051e692361ab70d68103186dd24df8b5f7a6082
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8e5167948e456b721ba831bd8a3d637bb7ea3d3b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48188551"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52810803"
 ---
 # <a name="row-level-security"></a>Sicurezza a livello di riga
-  La sicurezza a livello di consente ai clienti di controllare l'accesso alle righe in una tabella del database in base alle caratteristiche dell'utente che esegue una query (ad esempio, l'appartenenza al gruppo o il contesto di esecuzione). Sicurezza a livello di riga è ora disponibile in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016. Per la descrizione attuale di questa funzionalità, vedere [Sicurezza a livello di riga](https://msdn.microsoft.com/library/dn765131.aspx) nella documentazione corrente.  
+  La sicurezza a livello di consente ai clienti di controllare l'accesso alle righe in una tabella del database in base alle caratteristiche dell'utente che esegue una query (ad esempio, l'appartenenza al gruppo o il contesto di esecuzione). La sicurezza a livello di riga è ora disponibile in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016. Per la descrizione attuale di questa funzionalità, vedere [Sicurezza a livello di riga](https://msdn.microsoft.com/library/dn765131.aspx) nella documentazione corrente.  
   
 ## <a name="see-also"></a>Vedere anche  
  [CREARE criteri di sicurezza &#40;Database SQL di Azure&#41;](/sql/t-sql/statements/create-security-policy-transact-sql)   

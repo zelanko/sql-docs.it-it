@@ -19,12 +19,12 @@ ms.assetid: c040aa78-92b8-41e4-9ae2-eff9fcdddc5b
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 68907320922f0181521a9ff30de708f660e8dd8c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 08c490fd6643d8d440444d46d9ac19673d847938
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48207101"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518633"
 ---
 # <a name="setdatabaseconnection-method-wmi-msreportserverconfigurationsetting"></a>Metodo SetDatabaseConnection (MSReportServer_ConfigurationSetting WMI)
   Imposta la connessione al database del server di report su un database del server di report specifico.  
@@ -55,7 +55,7 @@ public void BackupEncryptionKey(string Server,
   
 -   0: Windows  
   
--   1 – [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+-   1: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
 -   2: servizio Windows  
   
@@ -82,9 +82,9 @@ public void BackupEncryptionKey(string Server,
   
  Il metodo SetDatabaseConnection non verifica che il server di report sia in grado di connettersi al database del server di report tramite i dati specificati.  
   
- Quando viene impostata per la prima volta, la proprietà ConnectionPoolSize viene impostata in base ai seguenti processori: ConnectionPoolSize = #Processors * 75.  
+ Se è impostata per la prima volta, il ConnectionPoolSize viene impostata in base i seguenti processori: ConnectionPoolSize = #Processors * 75.  
   
- Il metodo SetDatabaseConnection non concede autorizzazioni agli account specificati. È necessario chiamare il [GenerateDatabaseRightsScript](configurationsetting-method-generatedatabaserightsscript.md) metodo per ogni account che richiede l'accesso al database del server di report ed eseguire lo script risultante.  
+ Il metodo SetDatabaseConnection non concede autorizzazioni agli account specificati. È necessario chiamare il metodo [GenerateDatabaseRightsScript](configurationsetting-method-generatedatabaserightsscript.md) per ogni account che richiede l'accesso al database del server di report ed eseguire lo script risultante.  
   
 ## <a name="requirements"></a>Requisiti  
  **Spazio dei nomi:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  

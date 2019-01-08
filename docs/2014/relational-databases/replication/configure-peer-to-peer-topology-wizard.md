@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - Configure Peer-to-Peer Topology Wizard
@@ -13,12 +12,12 @@ ms.assetid: 44be3a38-fa2b-4136-9759-b218e212a0c8
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9ee8c94b12cdfa2bd4fcd414a0e6466c9a627516
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 10149e8aa940f53bbde69b3b84ead047ff4a2523
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48116362"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52803103"
 ---
 # <a name="configure-peer-to-peer-topology-wizard"></a>Configurazione guidata topologia peer-to-peer
   In questa sezione vengono fornite informazioni relative a tutte le pagine della Configurazione guidata topologia peer-to-peer:  

@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: supportability
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Trace collector set
@@ -12,12 +12,12 @@ ms.assetid: b6941dc0-50f5-475d-82eb-ce7c68117489
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d057ee45a14550b1ba56b9b15b9e7011e5238db1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a9e37fd917dc2716967623648a62057e45df73dc
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48143441"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52798693"
 ---
 # <a name="use-sql-server-profiler-to-create-a-sql-trace-collection-set-sql-server-management-studio"></a>Utilizzo di SQL Server Profiler per creare un set di raccolta Traccia SQL (SQL Server Management Studio)
   In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] è possibile sfruttare le funzionalità di traccia sul lato server di [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] per esportare una definizione della traccia da usare per creare un set di raccolta che usa il tipo di agente di raccolta Traccia SQL generico. Questo processo è costituito da due operazioni:  
@@ -54,7 +54,7 @@ ms.locfileid: "48143441"
   
 6.  Nella scheda **Generale** eseguire queste operazioni:  
   
-    1.  Nella casella **Nome traccia** digitare il nome da usare per la traccia. In questo esempio il nome della traccia è `SPgt80`.  
+    1.  Nella casella **Nome traccia** digitare il nome da usare per la traccia. Per questo esempio, il nome della traccia è `SPgt80`.  
   
     2.  Nell'elenco **Modello**selezionare il modello da usare per la traccia. Per questo esempio, fare clic su **TSQL_SPs**.  
   
@@ -94,9 +94,9 @@ ms.locfileid: "48143441"
   
 3.  Scorrere lo script ed eseguire le sostituzioni seguenti, indicate nel testo di commento dello script:  
   
-    -   Sostituire **SQLTrace Collection Set Name Here** con il nome che si vuole usare per il set di raccolta. Per questo esempio, denominare il set di raccolta `SPROC_CollectionSet`.  
+    -   Sostituire **SQLTrace Collection Set Name Here** con il nome che si vuole usare per il set di raccolta. Per questo esempio, assegnare al set di raccolta il nome `SPROC_CollectionSet`.  
   
-    -   Sostituire **SQLTrace Collection Item Name Here** con il nome che si vuole usare per l'elemento della raccolta. Per questo esempio, denominare l'elemento della raccolta `SPROC_Collection_Item`.  
+    -   Sostituire **SQLTrace Collection Item Name Here** con il nome che si vuole usare per l'elemento della raccolta. Per questo esempio, assegnare all'elemento della raccolta il nome `SPROC_Collection_Item`.  
   
 4.  Fare clic su **Esegui** per eseguire la query e creare il set di raccolta.  
   

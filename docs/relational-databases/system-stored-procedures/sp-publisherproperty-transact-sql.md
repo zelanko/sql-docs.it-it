@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_publisherproperty
@@ -17,17 +16,17 @@ ms.assetid: 0ed1ebc1-a1bd-4aed-9f46-615c5cf07827
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 002e8a5ffc7a619aeda3e8372e30631e96fa9d30
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 49be961d1bc34bcc06b046e95b73d0b5c8ed33ac
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47679429"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53204400"
 ---
 # <a name="sppublisherproperty-transact-sql"></a>sp_publisherproperty (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Visualizza o modifica proprietà server di pubblicazione per non -[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] i server di pubblicazione. Questa stored procedure viene eseguita nel database di distribuzione.  
+  Visualizza o modifica proprietà server di pubblicazione per non - [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] i server di pubblicazione. Questa stored procedure viene eseguita nel database di distribuzione.  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -47,7 +46,7 @@ sp_publisherproperty [ @publisher = ] 'publisher'
  [**@propertyname** =] **'***propertyname***'**  
  Nome della proprietà da impostare. *PropertyName* viene **sysname**, e può essere uno dei valori seguenti.  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |**xactsetbatching**|Indica se le transazioni nel server di pubblicazione sono raggruppate in set con consistenza transazionale per elaborazioni successive, noti come Xactset. Un valore pari **abilitato** significa che è possibile creare XactSet, ovvero l'impostazione predefinita. Un valore pari **disabilitato** significa che XactSet esistenti vengono elaborati da alcun nuovo XactSet viene creati.|  
 |**xactsetjob**|Indica se è attivo il processo Xactset per la creazione di Xactset. Un valore pari **abilitato** significa che il processo Xactset viene eseguito periodicamente per creazione di XactSet nel server di pubblicazione. Un valore pari **disabilitato** significa che il XactSet vengono creati solo dall'agente di lettura Log quando si esegue il polling server di pubblicazione per le modifiche.|  
@@ -60,7 +59,7 @@ sp_publisherproperty [ @publisher = ] 'publisher'
   
 ## <a name="result-sets"></a>Set di risultati  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**propertyname**|**sysname**|Restituisce le proprietà delle pubblicazioni seguenti che è possibile impostare:<br /><br /> **xactsetbatching**<br /><br /> **xactsetjob**<br /><br /> **xactsetjobinterval**|  
 |**PropertyValue**|**sysname**|È l'impostazione corrente per la proprietà nel **propertyname** colonna.|  
@@ -69,7 +68,7 @@ sp_publisherproperty [ @publisher = ] 'publisher'
  **0** (esito positivo) o **1** (errore)  
   
 ## <a name="remarks"></a>Note  
- **sp_publisherproperty** viene utilizzata nella replica transazionale per non -[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] i server di pubblicazione.  
+ **sp_publisherproperty** viene utilizzata nella replica transazionale per non - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] i server di pubblicazione.  
   
  Quando solo *server di pubblicazione* è specificato, il set di risultati include le impostazioni correnti per tutte le proprietà che è possibile impostare.  
   

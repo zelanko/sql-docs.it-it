@@ -14,12 +14,12 @@ ms.assetid: e8feaca0-7852-422b-895a-319b965d8d9b
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 75de66ef1759cc9e20b98f1f38c9ffa6361d31a0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f8e32b949e6c2868f5478215154df70cdd0e53e9
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48229691"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52519195"
 ---
 # <a name="view-a-sql-server-audit-log"></a>Visualizzazione di un log di controllo di SQL Server
   Questo argomento descrive come visualizzare un log di controllo di SQL Server in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] usando [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)].  
@@ -28,7 +28,7 @@ ms.locfileid: "48229691"
   
 -   **Prima di iniziare:**  
   
-     [Security](#Security)  
+     [Sicurezza](#Security)  
   
 -   **Per visualizzare un log di controllo di SQL Server mediante:**  
   
@@ -49,7 +49,7 @@ ms.locfileid: "48229691"
   
 2.  Espandere la cartella **Controlli** .  
   
-3.  Fare clic con il pulsante destro del mouse sul log di controllo da visualizzare e selezionare **Visualizza log di controllo**. Si aprirà la finestra di dialogo **Visualizzatore file di log -***nome_server*. Per altre informazioni, vedere [Log File Viewer F1 Help](../../logs/log-file-viewer-f1-help.md).  
+3.  Fare clic con il pulsante destro del mouse sul log di controllo da visualizzare e selezionare **Visualizza log di controllo**. Verrà visualizzata la **Visualizzatore File di Log-* * * nome_server* nella finestra di dialogo. Per altre informazioni, vedere [Log File Viewer F1 Help](../../logs/log-file-viewer-f1-help.md).  
   
 4.  Al termine, fare clic su **Chiudi**.  
   

@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - View Designer, Results pane
@@ -22,12 +22,12 @@ ms.assetid: 6309a1bc-a628-4141-8bb5-b35924bd19f9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4fd1a4c2e8cb5eeb644b2ead8ec1c493251b3f39
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 87bfaef1ad5dc4c9b1f907c27955ca3f156038a8
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48152681"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52791323"
 ---
 # <a name="results-pane-visual-database-tools"></a>Results Pane (Visual Database Tools)
   Nel riquadro Risultati vengono visualizzati i risultati dell'ultima query di selezione (SELECT) eseguita. I risultati di altri tipi di query vengono visualizzati in finestre di messaggio. Il riquadro Risultati viene visualizzato automaticamente quando si apre o si crea una query o una vista oppure quando vengono restituiti i dati di una tabella. Se il riquadro Risultati non viene visualizzato per impostazione predefinita, scegliere **Pannello** dal menu **Progettazione query**, quindi **Risultati**.  

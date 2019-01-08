@@ -1,5 +1,6 @@
 ---
-title: Introduzione a SQL Server su Ubuntu | Microsoft Docs
+title: Introduzione a SQL Server in Ubuntu
+titleSuffix: SQL Server
 description: Questa Guida introduttiva illustra come installare SQL Server 2017 o SQL Server 2019 in Ubuntu e quindi creare ed eseguire query di un database con sqlcmd.
 author: rothja
 ms.author: jroth
@@ -7,15 +8,15 @@ manager: craigg
 ms.date: 07/16/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
+ms.custom: sql-linux, seodec18
 ms.technology: linux
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
-ms.openlocfilehash: 917e43dd6a9c78e5199967df58a2d46c4843cf13
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 83f5cdf3f02ffc9a51dfa954347cc57f78e004dd
+ms.sourcegitcommit: de8ef246a74c935c5098713f14e9dd06c4733713
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51677949"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53160549"
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-ubuntu"></a>Guida introduttiva: Installare SQL Server e creare un database in Ubuntu
 
@@ -88,7 +89,7 @@ Per configurare SQL Server in Ubuntu, eseguire i comandi seguenti in un terminal
    ```
 
    > [!TIP]
-   > Le seguenti edizioni di SQL Server 2017 sono concessa in licenza gratuitamente: Evaluation, Developer ed Express.
+   > Le seguenti edizioni di SQL Server 2017 gratuitamente vengono concesso in licenza: Evaluation, Developer ed Express.
 
    > [!NOTE]
    > Assicurarsi di specificare una password complessa per l'account SA (caratteri di lunghezza 8 minimo, incluse le lettere maiuscole e lettere minuscole, cifre in base 10 e/o i simboli non alfanumerici).
@@ -183,7 +184,7 @@ Usare la procedura seguente per installare il **mssql-tools** in Ubuntu.
    >   sudo apt-get install mssql-tools 
    >   ```
 
-1. **Facoltativo**: aggiungere `/opt/mssql-tools/bin/` per il **percorso** variabile di ambiente in una shell bash.
+1. **Facoltativo**: Aggiungere `/opt/mssql-tools/bin/` per il **percorso** variabile di ambiente in una shell bash.
 
    Per rendere **sqlcmd/bcp** accessibile da shell di bash per sessioni di accesso, modificare le **PATH** nel **~/.bash_profile** file con il comando seguente:
 

@@ -11,12 +11,12 @@ ms.assetid: 5599300d-6bcd-4704-aba5-fa98e01c78a9
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: cf6098bdb439e1b8bb78f7d875e3d2b5517f4945
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: df6517d7b714bcb33502da457720a13f9d5a3516
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48218281"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53375023"
 ---
 # <a name="finding-viewing-and-managing-reports-report-builder-and-ssrs-"></a>Ricerca, visualizzazione e gestione dei report (Generatore report SSRS)
   In Generatore report è possibile esplorare le cartelle di un server di report o di un sito di SharePoint per trovare report, origini dati condivise, modelli e altri elementi del report correlati, nonché esplorare il computer per individuare i report locali. Per semplificare la ricerca dei report, in Generatore report viene mantenuto un elenco dei server e dei siti utilizzati recentemente e fornito un accesso diretto alle cartelle Desktop, Documenti e Risorse del computer nel file system del computer.  
@@ -28,7 +28,7 @@ ms.locfileid: "48218281"
   
  Per individuare un report in un server di report o in un sito di SharePoint da Generatore report, è necessario indicare l'URL del server di report o del sito di SharePoint. Quando si installa la prima volta Generatore report, è possibile specificare l'URL da utilizzare, ossia il server o il sito a cui, per impostazione predefinita, viene effettuata la connessione da parte di Generatore report al salvataggio o all'apertura dei report.  
   
- È possibile visualizzare in anteprima i report in Generatore report e Progettazione report quando vengono creati o aggiornati, nonché visualizzarli e gestirli in un server di report tramite Gestione report o in un sito di SharePoint integrato con Reporting Services tramite le funzionalità e gli strumenti di SharePoint predefiniti dopo la pubblicazione dei report. Per altre informazioni, vedere [anteprima dei report in Generatore Report](previewing-reports-in-report-builder.md) e [anteprima dei report](../reports/previewing-reports.md).  
+ È possibile visualizzare in anteprima i report in Generatore report e Progettazione report quando vengono creati o aggiornati, nonché visualizzarli e gestirli in un server di report tramite Gestione report o in un sito di SharePoint integrato con Reporting Services tramite le funzionalità e gli strumenti di SharePoint predefiniti dopo la pubblicazione dei report. Per altre informazioni, vedere [Anteprima di report in Generatore report](previewing-reports-in-report-builder.md) e [Anteprima dei report](../reports/previewing-reports.md).  
   
  Quando i report vengono visualizzati in anteprima in Generatore report e Progettazione report o vengono visualizzati in Gestione report o in un sito di SharePoint, i dati vengono aggiornati e nei report vengono visualizzati i dati correnti dell'origine dati utilizzata dal report. Se si desidera visualizzare un report senza aggiornarne i dati, è possibile utilizzare la cronologia del report e i dati memorizzati nella cache con i report pubblicati. Queste funzionalità non sono disponibili per la visualizzazione in anteprima dei report in Generatore report e Progettazione report.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "48218281"
   
  Per trovare i report su un server di report, è necessario specificare un URL per il server di report e disporre delle autorizzazioni appropriate nelle cartelle in modo da poter leggere e salvare gli elementi del report. Per ottenere l'URL e le autorizzazioni necessarie, rivolgersi all'amministratore di sistema del server di report.  
   
- Dopo aver individuato e aperto il report in Generatore report, è possibile visualizzarlo in anteprima e apportare delle modifiche. Nella visualizzazione in anteprima vengono mostrati i dati correnti. Per altre informazioni, vedere [anteprima dei report in Generatore Report](previewing-reports-in-report-builder.md).  
+ Dopo aver individuato e aperto il report in Generatore report, è possibile visualizzarlo in anteprima e apportare delle modifiche. Nella visualizzazione in anteprima vengono mostrati i dati correnti. Per altre informazioni, vedere [Previewing Reports in Report Builder](previewing-reports-in-report-builder.md).  
   
  Generatore report consente di effettuare le attività seguenti:  
   
@@ -71,7 +71,7 @@ ms.locfileid: "48218281"
   
  Alcune di queste attività potrebbero essere eseguite per conto dell'utente dall'amministratore del server di report. Per altre informazioni sulle attività eseguite in un server di report, vedere [Server di report di Reporting Services &#40;modalità nativa&#41;](../report-server/reporting-services-report-server-native-mode.md).  
   
- In Gestione report sono inclusi in genere cartelle, report, origini dati e modelli di report, nonché la cartella Report personali. Report personali è un'area di lavoro personale utilizzabile per archiviare e gestire i report di cui si è proprietari. Le altre cartelle del server di report sono pubbliche e in genere è necessario disporre di autorizzazioni avanzate per aggiungere o modificare contenuto in tali cartelle. È possibile creare cartelle all'interno di Report personali per migliorare l'organizzazione dei report. Per altre informazioni, vedere [Using My Reports &#40;Generatore Report e SSRS&#41;](using-my-reports-report-builder-and-ssrs.md).  
+ In Gestione report sono inclusi in genere cartelle, report, origini dati e modelli di report, nonché la cartella Report personali. Report personali è un'area di lavoro personale utilizzabile per archiviare e gestire i report di cui si è proprietari. Le altre cartelle del server di report sono pubbliche e in genere è necessario disporre di autorizzazioni avanzate per aggiungere o modificare contenuto in tali cartelle. È possibile creare cartelle all'interno di Report personali per migliorare l'organizzazione dei report. Per altre informazioni, vedere [Uso della cartella Report personali &#40;Generatore report e SSRS&#41;](using-my-reports-report-builder-and-ssrs.md).  
   
  Tramite Gestione report, i report vengono visualizzati nel Visualizzatore HTML di Reporting Services. Il Visualizzatore HTML fornisce un framework per la visualizzazione di report in HTML e include una barra degli strumenti dei report, una sezione relativa ai parametri, una relativa alle credenziali e una mappa documento. Nella barra degli strumenti dei report sono disponibili funzionalità di navigazione, zoom, aggiornamento, ricerca, esportazione, stampa e feed di dati per la pagina. La barra degli strumenti dei report viene inoltre visualizzata in una finestra del browser nella parte superiore dei report quando si accede ad essi tramite un URL. La funzionalità di stampa è facoltativa e deve essere attivata dall'amministratore. Se disponibile, sulla barre degli strumenti dei report viene visualizzata l'icona di una stampante. Nelle illustrazioni seguenti la barra degli strumenti dei report in una finestra Gestione report e le relative funzionalità vengono mostrate in primo piano.  
   
@@ -92,7 +92,7 @@ Barra degli strumenti dei report
   
 |Opzione|Risultato|  
 |------------|------------|  
-|Pulsante**Aggiorna** nella finestra del browser|Visualizza il report archiviato nella cache della sessione. Un cache della sessione viene creata quando un utente apre un report. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Usa le sessioni del browser per garantire un'esperienza di visualizzazione coerente quando un report è aperto.|  
+|Pulsante**Aggiorna** nella finestra del browser|Visualizza il report archiviato nella cache della sessione. Un cache della sessione viene creata quando un utente apre un report. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] vengono usate le sessioni del browser per garantire una visualizzazione coerente quando un report è aperto.|  
 |![Pulsante di aggiornamento del browser nella barra degli strumenti dei report](../media/htmlviewer-refresh.GIF "Pulsante di aggiornamento del browser nella barra degli strumenti dei report")|Quando si fa clic sul pulsante **Aggiorna** sulla barra degli strumenti dei report, il server di report consente di ripetere la query e di aggiornare i dati del report se quest'ultimo viene eseguito su richiesta. Se il report è memorizzato nella cache oppure è uno snapshot, il pulsante **Aggiorna** consente di visualizzare il report archiviato nel database del server di report.|  
 |Combinazione di tasti CTRL+F5|Produce lo stesso risultato che si ottiene facendo clic sul pulsante **Aggiorna** sulla barra degli strumenti dei report.|  
   
@@ -105,7 +105,7 @@ Barra degli strumenti dei report
   
  Per accedere alle pagine dell'applicazione, selezionare azioni specifiche dell'elemento da un menu a discesa in un report o in un altro elemento del server di report in precedenza aggiunto a una raccolta di SharePoint. A seconda dell'elemento selezionato e delle autorizzazioni di cui dispone, l'utente ha la possibilità di creare report in Generatore report, generare modelli e configurare la sicurezza degli elementi dei modelli.  
   
- Per altre informazioni su Reporting Services e la tecnologia SharePoint, vedere [Configurazione e amministrazione di un server di report &#40;modalità SharePoint di Reporting Services&#41;](../configure-administer-report-server-reporting-services-sharepoint-mode.md) nella [documentazione online](http://go.microsoft.com/fwlink/?LinkId=154888) di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nel sito msdn.microsoft.com.  
+ Per altre informazioni su Reporting Services e la tecnologia SharePoint, vedere [Configurazione e amministrazione di un server di report &#40;modalità SharePoint di Reporting Services&#41;](../configure-administer-report-server-reporting-services-sharepoint-mode.md) nella [documentazione online](https://go.microsoft.com/fwlink/?LinkId=154888) di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nel sito msdn.microsoft.com.  
   
 ### <a name="finding-report-server-items-on-a-sharepoint-site"></a>Ricerca di elementi di un server di report in un sito di SharePoint  
  Per impostare le proprietà, è prima necessario individuare l'elemento desiderato. Gli elementi dei server di report sono sempre archiviati in raccolte o in una cartella all'interno di una raccolta.  
@@ -134,7 +134,7 @@ Barra degli strumenti dei report
 
   
 ##  <a name="AboutUserSessions"></a> Informazioni sulle sessioni utente  
- [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Usa le sessioni del browser per garantire la coerenza durante la visualizzazione dei report. Le sessioni si basano sulle connessioni tramite browser, non sugli utenti autenticati. Ogni volta che un utente apre un report in una nuova finestra del browser, viene creata una nuova sessione. Dopo aver stabilito una sessione del browser, si continuerà a utilizzare la versione del report aperta all'inizio della sessione, anche se in seguito il report viene modificato nel server di report. Se ad esempio si apre un report alle 23.00 e l'autore del report pubblica nuovamente lo stesso report alle 23.01, per tutta la durata della sessione sarà disponibile la versione del report aperta alle 23.00.  
+ [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] vengono usate le sessioni del browser per garantire la coerenza durante la visualizzazione dei report. Le sessioni si basano sulle connessioni tramite browser, non sugli utenti autenticati. Ogni volta che un utente apre un report in una nuova finestra del browser, viene creata una nuova sessione. Dopo aver stabilito una sessione del browser, si continuerà a utilizzare la versione del report aperta all'inizio della sessione, anche se in seguito il report viene modificato nel server di report. Se ad esempio si apre un report alle 23.00 e l'autore del report pubblica nuovamente lo stesso report alle 23.01, per tutta la durata della sessione sarà disponibile la versione del report aperta alle 23.00.  
   
  Se si aggiorna un report all'interno della stessa sessione tramite il pulsante **Aggiorna** del browser, verrà visualizzata la versione del report della sessione originale. Se si aggiorna un report su richiesta tramite il pulsante **Aggiorna** sulla barra degli strumenti del report, il report verrà eseguito nuovamente e verranno visualizzati gli eventuali nuovi dati.  
   
@@ -148,13 +148,13 @@ Barra degli strumenti dei report
  [Ricerca e visualizzazione dei report in Gestione Report &#40;Report e SSRS&#41;](finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs.md)  
  Viene descritto l'utilizzo di Gestione report al fine di trovare, visualizzare e gestire i report.  
   
- [Ricerca e visualizzazione di report con un Browser &#40;Report e SSRS&#41;](finding-and-viewing-reports-with-a-browser-report-builder-and-ssrs.md)  
+ [Ricerca e visualizzazione di report con un browser &#40;Generatore report e SSRS&#41;](finding-and-viewing-reports-with-a-browser-report-builder-and-ssrs.md)  
  Viene descritto l'utilizzo di un URL al fine di trovare e visualizzare un report.  
   
- [Ricerca di report e altri elementi &#40;Report e SSRS&#41;](searching-for-reports-and-other-items-report-builder-and-ssrs.md)  
+ [Ricerca di report e altri elementi &#40;Generatore report e SSRS&#41;](searching-for-reports-and-other-items-report-builder-and-ssrs.md)  
  Viene descritto l'utilizzo della funzionalità di ricerca in Gestione report al fine di individuare elementi sul server di report.  
   
- [Cartella report personali tramite &#40;Report e SSRS&#41;](using-my-reports-report-builder-and-ssrs.md)  
+ [Uso della cartella Report personali &#40;Generatore report e SSRS&#41;](using-my-reports-report-builder-and-ssrs.md)  
  Viene descritto l'utilizzo della cartella Report personali come area di lavoro personale al fine di archiviare e gestire i report di cui si è proprietari.  
   
  [Anteprima di report in Generatore report](previewing-reports-in-report-builder.md)  
@@ -163,7 +163,7 @@ Barra degli strumenti dei report
 
   
 ## <a name="see-also"></a>Vedere anche  
- [Salvataggio di report &#40;Generatore Report&#41;](saving-reports-report-builder.md)   
+ [Salvataggio di report &#40;Generatore report&#41;](saving-reports-report-builder.md)   
  [Generatore report in SQL Server 2014](report-builder-in-sql-server-2016.md)   
  [Installazione, disinstallazione e supporto di Generatore report](../install-uninstall-and-report-builder-support.md)  
   

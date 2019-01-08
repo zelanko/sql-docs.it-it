@@ -11,12 +11,12 @@ ms.assetid: d9fe1932-46e7-421b-a8a9-4c54d9576e94
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e43bbb27fc94d9fc7a32fb95b90e0b4e2cd53bd9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2aa21825563ae94a46a7d9fcda6e52e966f12a9a
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189321"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53360253"
 ---
 # <a name="troubleshoot-report-parts-report-builder-and-ssrs"></a>Risoluzione dei problemi relativi alle parti del report (Generatore report e SSRS)
   Questi suggerimenti possono risultare utili durante l'utilizzo di parti del report.  
@@ -27,7 +27,7 @@ ms.locfileid: "48189321"
  Per conoscere le autorizzazioni di cui dispongono i colleghi, chiedere all'amministratore del server di report.  
   
 ## <a name="when-i-search-for-report-parts-that-i-uploaded-to-a-sharepoint-server-i-do-not-see-them-why-not"></a>Impossibilità di visualizzare parti di report caricate in un server SharePoint in seguito alla relativa ricerca  
- È possibile che le parti di report caricate manualmente in una raccolta documenti di SharePoint, anziché pubblicate tramite Generatore report, non vengano visualizzate nella relativa raccolta. Potrebbe essere necessario sincronizzare il server di report utilizzato per la ricerca nella raccolta con il contenuto della raccolta documenti di SharePoint. Per altre informazioni, vedere [attivare la funzionalità di sincronizzazione File Server di Report in Amministrazione centrale SharePoint](../../2014/reporting-services/activate-report-server-file-sync-feature-sharepoint-central-administration.md) nelle [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [documentazione in linea](http://go.microsoft.com/fwlink/?LinkId=154888) sul sito msdn.microsoft.com.  
+ È possibile che le parti di report caricate manualmente in una raccolta documenti di SharePoint, anziché pubblicate tramite Generatore report, non vengano visualizzate nella relativa raccolta. Potrebbe essere necessario sincronizzare il server di report utilizzato per la ricerca nella raccolta con il contenuto della raccolta documenti di SharePoint. Per altre informazioni, vedere [attivare la funzionalità di sincronizzazione File Server di Report in Amministrazione centrale SharePoint](../../2014/reporting-services/activate-report-server-file-sync-feature-sharepoint-central-administration.md) nelle [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [documentazione in linea](https://go.microsoft.com/fwlink/?LinkId=154888) sul sito msdn.microsoft.com.  
   
 ## <a name="why-cant-others-see-the-image-in-their-reports"></a>Impossibilità di visualizzare l'immagine nei report di altri utenti  
  Se si pubblica una parte di report rappresentata da un collegamento a un file di immagine, tale parte di report costituirà in effetti un semplice collegamento. Se altri utenti non riescono a visualizzare l'immagine quando aggiungono la parte di report immagine nei relativi report, potrebbero non disporre delle autorizzazioni per l'immagine a cui ci si sta collegando.  
@@ -44,6 +44,6 @@ ms.locfileid: "48189321"
  Se gli elementi del report presentano un riferimento circolare, non sarà possibile pubblicarli come parti di report. Un elemento del report punta, ad esempio, a un set di dati che a sua volta punta a un parametro. Il parametro, infine, punta nuovamente al set di dati. Sarà necessario anzitutto eliminare uno dei riferimenti prima di poter pubblicare la parte di report.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Parti di report &#40;Report e SSRS&#41;](report-parts-report-builder-and-ssrs.md)  
+ [Parti del report &#40;Generatore report e SSRS&#41;](report-parts-report-builder-and-ssrs.md)  
   
   

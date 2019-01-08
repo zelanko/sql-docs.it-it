@@ -1,5 +1,5 @@
 ---
-title: 'Gestione dominio: elenco domini | Microsoft Docs'
+title: 'Gestione dominio: Elenco di domini | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,14 +12,14 @@ ms.assetid: 8df305f0-97ea-4226-811b-979ed862e1f0
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c0dfc543659bdb8476d880bbe6021d0f3fd27bfd
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 3b0956c98b8e086fe8e44c69001e391d203d376b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51032488"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52520352"
 ---
-# <a name="domain-management-domain-list"></a>Gestione dominio: elenco domini
+# <a name="domain-management-domain-list"></a>Gestione dominio: Elenco di domini
   In questo argomento vengono descritti i controlli dell'elenco Domini nella pagina **Gestione dominio** in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Utilizzare questo riquadro per selezionare un dominio su cui eseguire le operazioni di gestione. Lo stesso riquadro viene utilizzato per tutte le pagine a schede della pagina **Gestione dominio** .  
   
 ## <a name="options"></a>Opzioni  
@@ -35,7 +35,7 @@ ms.locfileid: "51032488"
  Consente di creare un nuovo dominio nella Knowledge Base. Con questo comando viene visualizzata la finestra di dialogo **Crea dominio** . Questo comando è disponibile facendo clic con il pulsante destro del mouse su un dominio o facendo clic sull'icona sopra l'elenco di domini. Per altre informazioni, vedere [Creazione di un dominio](../../2014/data-quality-services/create-a-domain.md).  
   
  **Crea copia del dominio selezionato**  
- Consente di creare una copia esatta del dominio selezionato e di aggiungerla alla Knowledge Base. Il nome sarà il nome del dominio dal quale è stata creata la copia più " – Copy" aggiunto al nome. Questo comando è disponibile facendo clic con il pulsante destro del mouse su un dominio e quindi facendo clic su **Crea copia**o facendo clic sull'icona sopra l'elenco di domini. Non è disponibile per un dominio composito.  
+ Consente di creare una copia esatta del dominio selezionato e di aggiungerla alla Knowledge Base. Il nome sarà il nome del dominio dal quale è stata creata la copia più " - Copy" aggiunto al nome. Questo comando è disponibile facendo clic con il pulsante destro del mouse su un dominio e quindi facendo clic su **Crea copia**o facendo clic sull'icona sopra l'elenco di domini. Non è disponibile per un dominio composito.  
   
  **Importa dominio da file di dati**  
  Consente di importare un dominio da un file DQS. Con questo comando viene visualizzata la finestra di dialogo **Importa da file di dati** che consente di esplorare il file system e di selezionare un file DQS per un singolo dominio o un dominio composito. Questo comando è disponibile facendo clic sull'icona sopra l'elenco di domini. Per altre informazioni, vedere [Consente di importare un dominio da un file DQS](../../2014/data-quality-services/import-a-domain-from-a-dqs-file.md).  

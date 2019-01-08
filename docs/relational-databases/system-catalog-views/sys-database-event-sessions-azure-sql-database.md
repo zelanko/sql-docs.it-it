@@ -12,26 +12,26 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: d65fc1f1ac1620e97e60fe2a6558c23abefde0ae
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 99b5523be4e0c798d9707886df36f9dcba184412
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47856322"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53213600"
 ---
 # <a name="sysdatabaseeventsessions-azure-sql-database"></a>sys.database_event_sessions (database SQL di Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
   Elenca tutte le definizioni di sessione di eventi presenti nel database corrente, in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
-> [!NOTE]  
+> [!NOTE]
 >  La vista del catalogo simili denominata `sys.server_event_sessions` si applica solo al [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ||  
 |-|  
 |**Si applica a**: [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]e a tutte le versioni successive.|  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |event_session_id|**int**|ID univoco della sessione dell'evento. Non ammette i valori Null.|  
 |NAME|**sysname**|Nome definito dall'utente per identificare la sessione eventi. nome è univoco. Non ammette i valori Null.|  

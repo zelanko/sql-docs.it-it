@@ -14,12 +14,12 @@ ms.assetid: 6b8da1f5-3d8e-4f88-b111-b915788b06f1
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 9a46c83c497c8eaeba3873bafef399f924506916
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 032c371fd37bb66392761fff24bd30efb2bd5b37
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48076261"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52532442"
 ---
 # <a name="create-an-application-role"></a>Creazione di un ruolo applicazione
   In questo argomento viene descritto come creare un ruolo applicazione in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)]. I ruoli applicazione limitano l'accesso dell'utente a un database solo tramite applicazioni specifiche. Poiché i ruoli applicazione non dispongono di utenti, l'elenco **Membri ruolo** non viene visualizzato quando si seleziona **Ruolo applicazione** .  
@@ -31,7 +31,7 @@ ms.locfileid: "48076261"
   
 -   **Prima di iniziare:**  
   
-     [Security](#Security)  
+     [Sicurezza](#Security)  
   
 -   **Per creare un ruolo applicazione utilizzando:**  
   
@@ -56,11 +56,11 @@ ms.locfileid: "48076261"
   
 3.  Espandere la cartella **Ruoli** .  
   
-4.  Fare clic con il pulsante destro del mouse sulla cartella **Ruoli applicazione** , quindi scegliere **Nuovo ruolo applicazione**.  
+4.  Fare clic con il pulsante destro del mouse sulla cartella **Ruoli applicazione**, quindi scegliere **Nuovo ruolo applicazione...**.  
   
-5.  Nella pagina **Generale** della finestra di dialogo **Ruolo applicazione - Nuovo**immettere il nome del nuovo ruolo applicazione nella casella **Nome ruolo** .  
+5.  Nella pagina **Generale** della finestra di dialogo **Ruolo applicazione - Nuovo**immettere il nome del nuovo ruolo applicazione nella casella **Nome ruolo**.  
   
-6.  Nella casella **Schema predefinito** specificare lo schema che diventerà proprietario degli oggetti creati da questo ruolo immettendo i nomi degli oggetti. In alternativa, fare clic sui puntini di sospensione **(...)** per aprire la finestra di dialogo **Individua schema** .  
+6.  Nella casella **Schema predefinito** specificare lo schema che diventerà proprietario degli oggetti creati da questo ruolo immettendo i nomi degli oggetti. In alternativa, fare clic sui puntini di sospensione **(...)** per aprire la finestra di dialogo **Individua schema**.  
   
 7.  Nella casella **Password** , immettere una password per il nuovo ruolo. Immettere nuovamente quella password nella casella **Conferma password** .  
   
@@ -69,13 +69,13 @@ ms.locfileid: "48076261"
 9. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ### <a name="additional-options"></a>Opzioni aggiuntive  
- Nella finestra di dialogo **Ruolo applicazione - Nuovo** sono inoltre disponibili opzioni in due pagine aggiuntive, cioè **Entità a protezione diretta** e **Proprietà estese**.  
+ Il **ruolo applicazione - nuovo** nella finestra di dialogo offre inoltre opzioni in due pagine aggiuntive: **Entità a protezione diretta** e **delle proprietà estese**.  
   
 -   Nella pagina **Entità a protezione diretta** sono elencate tutte le possibili entità a protezione diretta e le autorizzazioni su quelle entità a protezione diretta che possono essere concesse all'account di accesso.  
   
 -   La pagina **Proprietà estese** consente di aggiungere proprietà personalizzate a utenti di database.  
   
-##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
   
 #### <a name="to-create-an-application-role"></a>Per creare un ruolo applicazione  
   

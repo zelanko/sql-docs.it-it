@@ -5,8 +5,7 @@ ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_addpublication_TSQL
@@ -17,12 +16,12 @@ ms.assetid: c7167ed1-2b7e-4824-b82b-65f4667c4407
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a2d9a94dfa36e9f54421fc801abda59eb6914615
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 10d12ceed949a18c767e060cd35a738047ed6b74
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47664039"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53204981"
 ---
 # <a name="spaddpublication-transact-sql"></a>sp_addpublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -85,19 +84,19 @@ sp_addpublication [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@publication=**] **'***pubblicazione***'**  
+ [  **@publication=**] **'**_pubblicazione_**'**  
  Nome della pubblicazione da creare. *pubblicazione* viene **sysname**, non prevede alcun valore predefinito. Il nome deve essere univoco all'interno del database.  
   
  [  **@taskid=**] *taskid*  
  Supportata per compatibilità con le versioni precedenti di sola lettura. usare [sp_addpublication_snapshot &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md).  
   
- [  **@restricted=**] **'***limitato***'**  
+ [  **@restricted=**] **'**_limitato_**'**  
  Supportata per compatibilità con le versioni precedenti di sola lettura. usare *default_access*.  
   
- [  **@sync_method=**] *'come sync_method * * *'**  
+ [  **@sync_method=**] _' come sync_method_**'**  
  Modalità di sincronizzazione. *sync_method* viene **nvarchar(13)**, e può essere uno dei valori seguenti.  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |**native**|Genera l'output in modalità nativa del programma per la copia bulk per tutte le tabelle. *Non supportato per il server di pubblicazione Oracle*.|  
 |**character**|Genera l'output in modalità carattere del programma per la copia bulk per tutte le tabelle. *Per un server di pubblicazione Oracle* **carattere** *è valida solo per la replica snapshot*.|  
@@ -107,52 +106,52 @@ sp_addpublication [ @publication = ] 'publication'
 |**caratteri di snapshot del database**|Genera output del programma in modalità carattere per la copia bulk di tutte le tabelle da uno snapshot del database. Gli snapshot del database non sono disponibili in tutte le edizioni di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per un elenco delle funzionalità supportate dalle edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [Funzionalità supportate dalle edizioni di SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).|  
 |NULL (predefinito)|Per impostazione predefinita **nativi** per [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] i server di pubblicazione. Per non -[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] server di pubblicazione, il valore predefinito è **carattere** quando il valore di *repl_freq* viene **Snapshot** e di ottenere **concurrent_c** tutti gli altri casi.|  
   
- [  **@repl_freq=**] **'***repl_freq***'**  
+ [  **@repl_freq=**] **'**_repl_freq_**'**  
  È il tipo di frequenza di replica *repl_freq* viene **nvarchar(10)**, e può essere uno dei valori seguenti.  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |**Continua** (impostazione predefinita)|Il server di pubblicazione genera l'output per tutte le transazioni basate su log. Per non -[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gli editori, ciò richiede che *sync_method* essere impostata su **concurrent_c**.|  
 |**Snapshot**|Il server di pubblicazione genera solo gli eventi di sincronizzazione pianificati. Per non -[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gli editori, ciò richiede che *sync_method* essere impostata su **carattere**.|  
   
- [  **@description=**] **'***descrizione***'**  
+ [  **@description=**] **'**_descrizione_**'**  
  Descrizione facoltativa della pubblicazione. *Descrizione* viene **nvarchar(255**, con un valore predefinito è NULL.  
   
- [  **@status=**] **'***stato***'**  
+ [  **@status=**] **'**_stato_**'**  
  Specifica se i dati della pubblicazione sono disponibili. *lo stato* viene **nvarchar(8)**, e può essere uno dei valori seguenti.  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |**Attiva**|I dati della pubblicazione risultano immediatamente disponibili per i Sottoscrittori.|  
 |**inattivo** (impostazione predefinita)|I dati della pubblicazione non sono disponibili per i Sottoscrittori quando viene creata la pubblicazione (è possibile creare una sottoscrizione, che tuttavia non viene elaborata).|  
   
  *Non supportato per il server di pubblicazione Oracle*.  
   
- [  **@independent_agent=**] **'***independent_agent***'**  
+ [  **@independent_agent=**] **'**_independent_agent_**'**  
  Specifica se per la pubblicazione è disponibile un agente di distribuzione autonomo. *independent_agent* viene **nvarchar(5**, con un valore predefinito è FALSE. Se **true**, è disponibile un agente di distribuzione autonomo per la pubblicazione. Se **false**, la pubblicazione utilizza un agente di distribuzione condiviso, e ogni coppia database del server di pubblicazione/sottoscrittore del database ha un solo agente condiviso.  
   
- [  **@immediate_sync=**] **'***solo quando independent_agent***'**  
+ [  **@immediate_sync=**] **'**_solo quando independent_agent_**'**  
  Specifica se i file di sincronizzazione della pubblicazione vengono creati a ogni esecuzione dell'agente snapshot. *solo quando independent_agent* viene **nvarchar(5**, con un valore predefinito è FALSE. Se **true**, i file di sincronizzazione vengono creati o ricreati ogni volta che viene eseguito l'agente Snapshot. Se l'esecuzione dell'agente snapshot viene completata prima della creazione della sottoscrizione, i Sottoscrittori possono ricevere i file di sincronizzazione immediatamente. Le nuove sottoscrizioni ricevono i file di sottoscrizione più recenti generati dall'ultima esecuzione dell'agente snapshot. *independent_agent* deve essere **true** per *solo quando independent_agent* essere **true**. Se **false**, i file di sincronizzazione vengono creati solo se esistono nuove sottoscrizioni. È necessario chiamare [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md) per ogni sottoscrizione quando si aggiunge in modo incrementale un nuovo articolo a una pubblicazione esistente. I Sottoscrittori ricevono i file di sincronizzazione dopo la sottoscrizione solo se gli agenti snapshot sono stati avviati e completati.  
   
- [  **@enabled_for_internet=**] **'***enabled_for_internet***'**  
+ [  **@enabled_for_internet=**] **'**_enabled_for_internet_**'**  
  Specifica se la pubblicazione è abilitata per Internet e determina se è possibile utilizzare FTP per il trasferimento dei file di snapshot in un Sottoscrittore. *enabled_for_internet* viene **nvarchar(5**, con un valore predefinito è FALSE. Se **true**, i file di sincronizzazione per la pubblicazione vengono inseriti nella directory C:\Program Files\Microsoft SQL Server\MSSQL\MSSQL.x\repldata\ftp. La directory Ftp deve essere creata dall'utente.  
   
- [  **@allow_push=**] **'***allow_push***'**  
+ [  **@allow_push=**] **'**_allow_push_**'**  
  Specifica se è consentito creare sottoscrizioni push per la pubblicazione specificata. *allow_push* viene **nvarchar(5**, valore predefinito è TRUE, che consente le sottoscrizioni push nella pubblicazione.  
   
- [  **@allow_pull=**] **'***allow_pull***'**  
+ [  **@allow_pull=**] **'**_allow_pull_**'**  
  Specifica se è consentito creare sottoscrizioni pull per la pubblicazione specificata. *allow_pull* viene **nvarchar(5**, con un valore predefinito è FALSE. Se **false**, per la pubblicazione non sono consentite sottoscrizioni pull.  
   
- [  **@allow_anonymous=**] **'***allow_anonymous***'**  
+ [  **@allow_anonymous=**] **'**_allow_anonymous_**'**  
  Specifica se è consentito creare sottoscrizioni anonime per la pubblicazione specificata. *allow_anonymous* viene **nvarchar(5**, con un valore predefinito è FALSE. Se **true**, *solo quando independent_agent* deve anche essere impostata su **true**. Se **false**, per la pubblicazione non sono consentite sottoscrizioni anonime.  
   
- [  **@allow_sync_tran=**] **'***allow_sync_tran***'**  
+ [  **@allow_sync_tran=**] **'**_allow_sync_tran_**'**  
  Specifica se le sottoscrizioni ad aggiornamento immediato sono consentite nella pubblicazione. *allow_sync_tran* viene **nvarchar(5**, con un valore predefinito è FALSE. **true** viene *non è supportata per server di pubblicazione Oracle*.  
   
- [  **@autogen_sync_procs=**] **'***autogen_sync_procs***'**  
+ [  **@autogen_sync_procs=**] **'**_autogen_sync_procs_**'**  
  Specifica se la stored procedure di sincronizzazione per sottoscrizioni aggiornabili viene generata nel server di pubblicazione. *autogen_sync_procs* viene **nvarchar(5**, e può essere uno dei valori seguenti.  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |**true**|Questo valore viene impostato automaticamente quando sono abilitate le sottoscrizioni aggiornabili.|  
 |**false**|Questo valore viene impostato automaticamente quando non sono abilitate le sottoscrizioni aggiornabili oppure per server di pubblicazione Oracle.|  
@@ -164,51 +163,51 @@ sp_addpublication [ @publication = ] 'publication'
  [  **@retention=**] *conservazione*  
  Periodo di memorizzazione, espresso in ore, per le attività di sottoscrizione. *conservazione* viene **int**, con un valore predefinito è 336 ore. Se una sottoscrizione non viene attivata entro il periodo di memorizzazione, scade e viene rimossa. Il valore di questo parametro può essere maggiore del periodo di memorizzazione massimo del database di distribuzione utilizzato dal server di pubblicazione. Se **0**, noto delle sottoscrizioni della pubblicazione non scadono mai e rimosse dall'agente di pulizia di sottoscrizione scaduta.  
   
- [  **@allow_queued_tran=** ] **'***allow_queued_updating***'**  
+ [  **@allow_queued_tran=** ] **'**_allow_queued_updating_**'**  
  Abilita o disabilita l'accodamento delle modifiche nel Sottoscrittore fino a quando non è possibile applicarle nel server di pubblicazione. *allow_queued_updating* viene **nvarchar(5** con valore predefinito è FALSE. Se **false**, le modifiche del sottoscrittore non vengono inserite in coda. **true** viene *non è supportata per server di pubblicazione Oracle*.  
   
- [  **@snapshot_in_defaultfolder=** ] **'***snapshot_in_default_folder***'**  
+ [  **@snapshot_in_defaultfolder=** ] **'**_snapshot_in_default_folder_**'**  
  Specifica se i file di snapshot sono archiviati nella cartella predefinita. *snapshot_in_default_folder* viene **nvarchar(5** con valore predefinito è TRUE. Se **true**, i file di snapshot sono disponibili nella cartella predefinita. Se **false**, i file di snapshot sono stati archiviati nel percorso alternativo specificato da *alternate_snapshot_folder*. Le posizioni alternative possono essere un altro server, un'unità di rete oppure un supporto rimovibile, ad esempio un CD o un disco rimovibile. È inoltre possibile archiviare i file di snapshot in un sito FTP in modo che possano essere successivamente recuperati dal Sottoscrittore. Si noti che questo parametro può essere true e un percorso non è stato **@alt_snapshot_folder** parametro. Tale combinazione indica che i file di snapshot vengono archiviati sia nella posizione predefinita che in posizioni alternative.  
   
- [  **@alt_snapshot_folder=** ] **'***alternate_snapshot_folder***'**  
+ [  **@alt_snapshot_folder=** ] **'**_alternate_snapshot_folder_**'**  
  Specifica la posizione della cartella alternativa per lo snapshot. *alternate_snapshot_folder* viene **nvarchar(255** con valore predefinito è NULL.  
   
- [  **@pre_snapshot_script=** ] **'***pre_snapshot_script***'**  
+ [  **@pre_snapshot_script=** ] **'**_pre_snapshot_script_**'**  
  Specifica un puntatore a un **con estensione SQL** percorso dei file. *pre_snapshot_script* viene **nvarchar(255,** con valore predefinito è NULL. L'agente di distribuzione esegue lo script pre-snapshot prima dell'esecuzione di tutti gli script di oggetti replicati durante l'applicazione di uno snapshot in un Sottoscrittore. Lo script viene eseguito nel contesto di sicurezza utilizzato dall'agente di distribuzione per la connessione al database di sottoscrizione.  
   
- [  **@post_snapshot_script=** ] **'***post_snapshot_script***'**  
+ [  **@post_snapshot_script=** ] **'**_post_snapshot_script_**'**  
  Specifica un puntatore a un **con estensione SQL** percorso dei file. *post_snapshot_script* viene **nvarchar(255**, con un valore predefinito è NULL. L'agente di distribuzione esegue lo script post-snapshot dopo l'applicazione di tutti gli altri dati e script di oggetti replicati durante una sincronizzazione iniziale. Lo script viene eseguito nel contesto di sicurezza utilizzato dall'agente di distribuzione per la connessione al database di sottoscrizione.  
   
- [  **@compress_snapshot=** ] **'***compress_snapshot***'**  
+ [  **@compress_snapshot=** ] **'**_compress_snapshot_**'**  
  Specifica che lo snapshot che viene scritto il **@alt_snapshot_folder** posizione deve essere compresso nel [!INCLUDE[msCoName](../../includes/msconame-md.md)] formato CAB. *compress_snapshot* viene **nvarchar(5**, con un valore predefinito è FALSE. **false** specifica che non lo snapshot verrà compresso; **true** specifica che lo snapshot verrà compresso. I file di snapshot con una dimensione superiore a 2 gigabyte (GB) non possono essere compressi. I file di snapshot compressi vengono decompressi nella posizione in cui viene eseguito l'agente di distribuzione. Per le sottoscrizioni pull in genere vengono utilizzati snapshot compressi in modo che i file vengano decompressi nel Sottoscrittore. Non è possibile comprimere lo snapshot all'interno della cartella predefinita.  
   
- [  **@ftp_address =** ] **'***ftp_address***'**  
+ [  **@ftp_address =** ] **'**_ftp_address_**'**  
  Indirizzo di rete del servizio FTP per il database di distribuzione. *ftp_address* viene **sysname**, con un valore predefinito è NULL. Specifica la posizione in cui i file di snapshot della pubblicazione possono essere prelevati dall'agente di distribuzione o di merge di un Sottoscrittore. Poiché questa proprietà viene archiviata per ogni pubblicazione, ogni pubblicazione può essere associato un diverso *ftp_address*. La pubblicazione deve supportare la propagazione di snapshot tramite FTP.  
   
  [  **@ftp_port=** ] *ftp_port*  
  Numero di porta del servizio FTP per il database di distribuzione. *ftp_port* viene **int**, con un valore predefinito è 21. Specifica la posizione dei file di snapshot della pubblicazione, dove i file possono essere prelevati dall'agente di distribuzione o di merge di un Sottoscrittore. Poiché questa proprietà viene archiviata per ogni pubblicazione, ogni pubblicazione può avere un proprio *ftp_port*.  
   
- [  **@ftp_subdirectory =** ] **'***ftp_subdirectory***'**  
+ [  **@ftp_subdirectory =** ] **'**_ftp_subdirectory_**'**  
  Specifica la posizione in cui i file di snapshot possono essere prelevati dall'agente di distribuzione o di merge di un Sottoscrittore se la pubblicazione supporta la propagazione degli snapshot tramite FTP. *ftp_subdirectory* viene **nvarchar(255**, con un valore predefinito è NULL. Poiché questa proprietà viene archiviata per ogni pubblicazione, ogni pubblicazione può avere un proprio *ftp_subdirctory* oppure scegliere di non utilizzare una sottodirectory con un valore NULL.  
   
- [  **@ftp_login =** ] **'***ftp_login***'**  
+ [  **@ftp_login =** ] **'**_ftp_login_**'**  
  Nome utente utilizzato per la connessione al servizio FTP. *ftp_login* viene **sysname**, predefinito è anonimo.  
   
- [  **@ftp_password =** ] **'***ftp_password***'**  
+ [  **@ftp_password =** ] **'**_ftp_password_**'**  
  Password utente utilizzata per la connessione al servizio FTP. *ftp_password* viene **sysname**, con un valore predefinito è NULL.  
   
- [  **@allow_dts =** ] **'***allow_dts***'**  
+ [  **@allow_dts =** ] **'**_allow_dts_**'**  
  Specifica che la pubblicazione supporta le trasformazioni di dati. Quando si crea una sottoscrizione, è possibile specificare un pacchetto DTS. *allow_transformable_subscriptions* viene **nvarchar(5** con un valore predefinito è FALSE, che non consente trasformazioni DTS. Quando *allow_dts* è true, *sync_method* deve essere impostato su **carattere** oppure **concurrent_c**.  
   
  **true** viene *non è supportata per server di pubblicazione Oracle*.  
   
- [  **@allow_subscription_copy =** ] **'***allow_subscription_copy***'**  
+ [  **@allow_subscription_copy =** ] **'**_allow_subscription_copy_**'**  
  Abilita o disabilita la funzione di copia dei database di sottoscrizione che sottoscrivono la pubblicazione. *allow_subscription_copy* viene**nvarchar(5**, con un valore predefinito è FALSE.  
   
- [  **@conflict_policy =** ] **'***conflict_policy***'**  
+ [  **@conflict_policy =** ] **'**_conflict_policy_**'**  
  Specifica i criteri di risoluzione dei conflitti adottati quando viene utilizzata l'opzione per Sottoscrittori ad aggiornamento in coda. *conflict_policy* viene **nvarchar(100)** con valore predefinito è NULL, e può essere uno dei valori seguenti.  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |**wins pub**|Prevale il server di pubblicazione.|  
 |**sub reinit**|Reinizializzare la sottoscrizione.|  
@@ -217,16 +216,16 @@ sp_addpublication [ @publication = ] 'publication'
   
  *Non supportato per il server di pubblicazione Oracle*.  
   
- [  **@centralized_conflicts =** ] **'***centralized_conflicts***'**  
+ [  **@centralized_conflicts =** ] **'**_centralized_conflicts_**'**  
  Specifica se i record dei conflitti vengono archiviati nel server di pubblicazione. *centralized_conflicts* viene **nvarchar(5**, con un valore predefinito è TRUE. Se **true**, i record con conflitti vengono archiviati nel server di pubblicazione. Se **false**, i record con conflitti vengono archiviati sia il server di pubblicazione e nel Sottoscrittore che ha causato il conflitto. *Non supportato per il server di pubblicazione Oracle*.  
   
  [  **@conflict_retention =** ] *conflict_retention*  
  Specifica il periodo di memorizzazione dei conflitti, espresso in giorni. Si tratta del periodo di tempo durante il quale i metadati dei conflitti rimangono archiviati per la replica transazionale peer-to-peer e le sottoscrizioni ad aggiornamento in coda. *conflict_retention* viene **int**, con un valore predefinito è 14. *Non supportato per il server di pubblicazione Oracle*.  
   
- [  **@queue_type =** ] **'***queue_type***'**  
+ [  **@queue_type =** ] **'**_queue_type_**'**  
  Specifica il tipo di coda da utilizzare. *queue_type* viene **nvarchar(10)**, con un valore predefinito è NULL, i possibili valori sono i seguenti.  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |**sql**|Consente di utilizzare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per l'archiviazione delle transazioni.|  
 |NULL (predefinito)|Per impostazione predefinita **sql**, che consente di utilizzare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per archiviare le transazioni.|  
@@ -236,25 +235,25 @@ sp_addpublication [ @publication = ] 'publication'
   
  *Non supportato per il server di pubblicazione Oracle*.  
   
- [  **@add_to_active_directory =** ] **' * * * aggiungere**_**to_active_directory * * * '**  
+ [  **@add_to_active_directory =** ] **'**_aggiungere_*\_*_to_active_directory_ **'**  
  Questo parametro è deprecato ed è supportato solo per compatibilità con gli script di versioni precedenti. Non è più possibile aggiungere informazioni di pubblicazione in [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory.  
   
- [  **@logreader_job_name =** ] **'***logreader_agent_name***'**  
+ [  **@logreader_job_name =** ] **'**_logreader_agent_name_**'**  
  Nome di un processo esistente dell'agente. *logreader_agent_name* viene **sysname**, con un valore predefinito NULL. Questo parametro viene specificato solo quando l'agente di lettura log utilizzerà un processo esistente anziché uno nuovo.  
   
- [  **@qreader_job_name =** ] **'***queue_reader_agent_name***'**  
+ [  **@qreader_job_name =** ] **'**_queue_reader_agent_name_**'**  
  Nome di un processo esistente dell'agente. *queue_reader_agent_name* viene **sysname**, con un valore predefinito NULL. Questo parametro viene specificato solo quando l'agente di lettura coda utilizzerà un processo esistente anziché uno nuovo.  
   
- [  **@publisher =** ] **'***publisher***'**  
- Specifica un server di pubblicazione non [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *server di pubblicazione* viene **sysname**, con un valore predefinito è NULL.  
+ [  **@publisher =** ] **'**_editore_**'**  
+ Specifica un non - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] server di pubblicazione. *server di pubblicazione* viene **sysname**, con un valore predefinito è NULL.  
   
 > [!NOTE]  
 >  *server di pubblicazione* non deve essere utilizzato durante l'aggiunta di una pubblicazione per un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] server di pubblicazione.  
   
- [  **@allow_initialize_from_backup =** ] **'***allow_initialize_from_backup***'**  
+ [  **@allow_initialize_from_backup =** ] **'**_allow_initialize_from_backup_**'**  
  Specifica se i Sottoscrittori possono inizializzare una sottoscrizione di questa pubblicazione da un backup anziché da uno snapshot iniziale. *allow_initialize_from_backup* viene **nvarchar(5**, i possibili valori sono i seguenti:  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |**true**|Abilita l'inizializzazione da un backup.|  
 |**false**|Disabilita l'inizializzazione da un backup.|  
@@ -266,7 +265,7 @@ sp_addpublication [ @publication = ] 'publication'
 >  Per evitare la mancanza di dati del Sottoscrittore, quando si utilizza **sp_addpublication** con `@allow_initialize_from_backup = N'true'`, utilizzare sempre `@immediate_sync = N'true'`.  
   
  [  **@replicate_ddl =** ] *replicate_ddl*  
- Indica se per la pubblicazione è supportata la replica dello schema. *replicate_ddl* viene **int**, il valore predefinito è **1** per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] i server di pubblicazione e **0** per non -[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] i server di pubblicazione. **1** indica che vengono replicate istruzioni di data definition language (DDL) eseguite nel server di pubblicazione, e **0** indica che le istruzioni DDL non vengono replicate. *La replica dello schema non è supportata per server di pubblicazione Oracle.* Per altre informazioni, vedere [Apportare modifiche allo schema nei database di pubblicazione](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md).  
+ Indica se per la pubblicazione è supportata la replica dello schema. *replicate_ddl* viene **int**, il valore predefinito è **1** per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] i server di pubblicazione e **0** per non - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] i server di pubblicazione. **1** indica che vengono replicate istruzioni di data definition language (DDL) eseguite nel server di pubblicazione, e **0** indica che le istruzioni DDL non vengono replicate. *La replica dello schema non è supportata per server di pubblicazione Oracle.* Per altre informazioni, vedere [Apportare modifiche allo schema nei database di pubblicazione](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md).  
   
  Il *@replicate_ddl* parametro viene rispettato quando un'istruzione DDL aggiunge una colonna. Il *@replicate_ddl* parametro viene ignorato quando un'istruzione DDL modifica o elimina una colonna per i motivi seguenti.  
   
@@ -276,7 +275,7 @@ sp_addpublication [ @publication = ] 'publication'
   
 -   Quando un'istruzione DDL aggiunge una nuova colonna, sysarticlecolumns non include la nuova colonna. Le istruzioni DML non tenteranno di replicare i dati per la nuova colonna. Il parametro viene rispettato perché la replica o la non replica di DDL è accettabile.  
   
- [  **@enabled_for_p2p =** ] **'***enabled_for_p2p***'**  
+ [  **@enabled_for_p2p =** ] **'**_enabled_for_p2p_**'**  
  Consente di utilizzare la pubblicazione in una topologia di replica peer-to-peer. *enabled_for_p2p* viene **nvarchar(5**, con un valore predefinito è FALSE. **true** indica che la pubblicazione supporta la replica peer-to-peer. Quando si impostano *enabled_for_p2p* al **true**, si applicano le restrizioni seguenti:  
   
 -   *allow_anonymous* deve essere **false**.  
@@ -299,10 +298,10 @@ sp_addpublication [ @publication = ] 'publication'
   
  Per altre informazioni, vedere [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md).  
   
- [  **@publish_local_changes_only =** ] **'***publish_local_changes_only***'**  
+ [  **@publish_local_changes_only =** ] **'**_publish_local_changes_only_**'**  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
- [  **@enabled_for_het_sub=** ] **'***enabled_for_het_sub***'**  
+ [  **@enabled_for_het_sub=** ] **'**_enabled_for_het_sub_**'**  
  Abilita il supporto dei Sottoscrittori non [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nella pubblicazione. *enabled_for_het_sub* viene **nvarchar(5** con valore predefinito è false. Un valore pari **true** significa che la pubblicazione supporti non[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sottoscrittori. Quando *enabled_for_het_sub* viene **true**, si applicano le restrizioni seguenti:  
   
 -   *allow_initialize_from_backup* deve essere **false**.  
@@ -343,24 +342,25 @@ sp_addpublication [ @publication = ] 'publication'
   
  Per altre informazioni, vedere [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md).  
   
- [  **@p2p_conflictdetection=** ] **'***p2p_conflictdetection***'**  
+ [  **@p2p_conflictdetection=** ] **'**_p2p_conflictdetection_**'**  
  Consente il rilevamento dei conflitti da parte dell'agente di distribuzione se la pubblicazione è abilitata per la replica peer-to-peer. *p2p_conflictdetection* viene **nvarchar(5** con valore predefinito è true. Per altre informazioni, vedere [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md).  
   
  [  **@p2p_originator_id=** ] *p2p_originator_id*  
  Specifica un ID per un nodo in una topologia peer-to-peer. *p2p_originator_id* viene **int**, con un valore predefinito è NULL. Questo ID viene utilizzato per il rilevamento dei conflitti se *p2p_conflictdetection* è impostata su TRUE. Specificare un ID positivo diverso da zero che non sia mai stato utilizzato nella topologia. Per un elenco di ID che sono già stati utilizzati, eseguire [sp_help_peerconflictdetection](../../relational-databases/system-stored-procedures/sp-help-peerconflictdetection-transact-sql.md).  
   
- [  **@p2p_continue_onconflict=** ] **'***p2p_continue_onconflict***'**  
+ [  **@p2p_continue_onconflict=** ] **'**_p2p_continue_onconflict_**'**  
  Determina se l'agente di distribuzione continua a elaborare le modifiche dopo che è stato rilevato un conflitto. *p2p_continue_onconflict* viene **nvarchar(5** con valore predefinito è false.  
   
 > [!CAUTION]  
 >  È consigliabile utilizzare il valore predefinito FALSE. Quando questa opzione è impostata su TRUE, l'agente di distribuzione tenta di garantire la convergenza dei dati nella topologia applicando la riga in conflitto dal nodo con ID di origine maggiore. Questo metodo non garantisce la convergenza. Dopo il rilevamento di un conflitto, è necessario assicurarsi che la topologia sia coerente. Per ulteriori informazioni, vedere la sezione relativa alla gestione dei conflitti in [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md).  
   
- [  **@allow_partition_switch=** ] **'***allow_partition_switch***'**  
- Specifica se le istruzioni ALTER TABLE...SWITCH possono essere eseguite sul database pubblicato. *allow_partition_switch* viene **nvarchar(5** con valore predefinito è false. Per altre informazioni, vedere [Replicare tabelle e indici partizionati](../../relational-databases/replication/publish/replicate-partitioned-tables-and-indexes.md).  
   
- [  **@replicate_partition_switch=** ] **'***replicate_partition_switch***'**  
- Specifica se le istruzioni ALTER TABLE...SWITCH eseguite sul database pubblicato devono essere replicate ai Sottoscrittori. *replicate_partition_switch* viene **nvarchar(5** con valore predefinito è false. Questa opzione è valida solo se *allow_partition_switch* è impostata su TRUE.  
+ [  **@allow_partition_switch=** ] **'**_allow_partition_switch_**'**  
+ Specifica se ALTER TABLE... Istruzioni SWITCH possono essere eseguite sul database pubblicato. *allow_partition_switch* viene **nvarchar(5** con valore predefinito è false. Per altre informazioni, vedere [Replicare tabelle e indici partizionati](../../relational-databases/replication/publish/replicate-partitioned-tables-and-indexes.md).  
   
+ [  **@replicate_partition_switch=** ] **'**_replicate_partition_switch_**'**  
+ Specifica se ALTER TABLE... Istruzioni SWITCH eseguite sul database pubblicato devono essere replicate ai sottoscrittori. *replicate_partition_switch* viene **nvarchar(5** con valore predefinito è false. Questa opzione è valida solo se *allow_partition_switch* è impostata su TRUE.  
+
 ## <a name="return-code-values"></a>Valori restituiti  
  **0** (esito positivo) o **1** (errore)  
   

@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - vdtsql.chm:65539
@@ -13,12 +13,12 @@ ms.assetid: 9e4060ba-80c3-468f-bccb-e12e99f672c2
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a960d003d998cfdd5d87009e7ef34f434d4f1d43
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f0244530672e9db4a43f3dbe80f0c67cc86f8a67
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48076797"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52806943"
 ---
 # <a name="indexes-and-keys-dialog-box-visual-database-tools"></a>Finestra di dialogo Indici e chiavi (Visual Database Tools)
   Questa finestra di dialogo consente di creare o modificare indici, chiavi primarie e chiavi univoche. Per accedere a questa finestra di dialogo, aprire la definizione della tabella con l'indice o la chiave, fare clic con il pulsante destro del mouse sulla griglia della definizione della tabella e quindi scegliere **Indici/chiavi**.  
@@ -40,7 +40,7 @@ ms.locfileid: "48076797"
  Se viene espansa, visualizza le proprietà **Colonne**, **Univoco**e **Tipo**.  
   
  **Colonne**  
- Elenca i criteri di ordinamento selezionati per le colonne nella chiave o nell'indice e consente di accedere a una finestra di dialogo in cui è possibile definire i criteri di ordinamento. Per visualizzare la finestra di dialogo, fare clic su **Colonne** e quindi sui puntini di sospensione (…) a destra del campo della proprietà.  
+ Elenca i criteri di ordinamento selezionati per le colonne nella chiave o nell'indice e consente di accedere a una finestra di dialogo in cui è possibile definire i criteri di ordinamento. Per visualizzare la finestra di dialogo, fare clic su **Colonne** e quindi sui puntini di sospensione (...) a destra del campo della proprietà.  
   
  **Univoco**  
  Indica se i dati immessi nell'indice o nella chiave devono essere univoci. Questa proprietà non è disponibile per gli indici XML.  
@@ -51,11 +51,11 @@ ms.locfileid: "48076797"
  **Categoria Identità**  
  Se viene espansa, visualizza i campi delle proprietà **Nome** e **Descrizione**.  
   
- **Nome**  
+ **Name**  
  Visualizza il nome della chiave o dell'indice. Quando si crea un nuovo indice, gli viene assegnato un nome predefinito sulla base della tabella presente nella finestra attiva di Progettazione tabelle. Il nome può essere modificato in qualunque momento.  
   
  **Descrizione**  
- Consente di immettere una descrizione della chiave o dell'indice. Per inserire una descrizione più dettagliata, fare clic su **Descrizione** e quindi sui puntini di sospensione (**…**) a destra del campo della proprietà. Viene così visualizzata un'area più grande in cui scrivere il testo.  
+ Consente di immettere una descrizione della chiave o dell'indice. Per inserire una descrizione più dettagliata, fare clic su **Descrizione** e sui puntini di sospensione (**...**) a destra del campo della proprietà. Viene così visualizzata un'area più grande in cui scrivere il testo.  
   
  **Categoria Progettazione tabelle**  
  Se viene espansa, visualizza le informazioni relative a **Crea come CLUSTERED**.  

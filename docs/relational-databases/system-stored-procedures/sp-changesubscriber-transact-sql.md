@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_changesubscriber
@@ -17,12 +16,12 @@ ms.assetid: d453c451-e957-490f-b968-5e03aeddaf10
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: af971732866142104b3f674fbf20f6f774db9e39
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 466b2c0316cb5de9b38200fd643d0302c5b1ae93
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818526"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53203100"
 ---
 # <a name="spchangesubscriber-transact-sql"></a>sp_changesubscriber (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +61,7 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
  Nome del Sottoscrittore in cui si desidera modificare le opzioni. *Sottoscrittore* viene **sysname**, non prevede alcun valore predefinito.  
   
  [  **@type=**] *tipo*  
- Tipo di Sottoscrittore. *tipo di* viene **tinyint**, con un valore predefinito è NULL. **0** indica una [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sottoscrittore. **1** specifica un non -[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o un altro server di origine dati ODBC sottoscrittore.  
+ Tipo di Sottoscrittore. *tipo di* viene **tinyint**, con un valore predefinito è NULL. **0** indica una [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sottoscrittore. **1** specifica un non - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o un altro server di origine dati ODBC sottoscrittore.  
   
  [  **@login=**] **'***account di accesso***'**  
  ID dell'account di accesso per l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *login* è di tipo **sysname** e il valore predefinito è NULL.  
@@ -82,7 +81,7 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
  [  **@frequency_type=**] *frequency_type*  
  Frequenza di pianificazione dell'attività di distribuzione. *frequency_type* viene **int**, i possibili valori sono i seguenti.  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |**1**|Una volta|  
 |**2**|Su richiesta|  
@@ -99,7 +98,7 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
  [  **@frequency_relative_interval=**] *frequency_relative_interval*  
  Data dell'attività di distribuzione. Questo parametro viene utilizzato quando *frequency_type* è impostata su **32** (frequenza mensile relativa). *frequency_relative_interval* viene **int**, i possibili valori sono i seguenti.  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |**1**|Primo|  
 |**2**|Secondo|  
@@ -113,7 +112,7 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
  [  **@frequency_subday=**] *frequency_subday*  
  Frequenza di ripianificazione durante il periodo definito. *frequency_subday* viene **int**, i possibili valori sono i seguenti.  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |**1**|Una volta|  
 |**2**|Secondo|  
@@ -141,13 +140,13 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
  [  **@security_mode=**] *security_mode*  
  Modalità di sicurezza implementata. *security_mode* viene **int**, i possibili valori sono i seguenti.  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |**0**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Autenticazione|  
 |**1**|Autenticazione di Windows|  
   
  [ **@publisher**=] **'***publisher***'**  
- Specifica un server di pubblicazione non [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *server di pubblicazione* viene **sysname**, con un valore predefinito è NULL.  
+ Specifica un non - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] server di pubblicazione. *server di pubblicazione* viene **sysname**, con un valore predefinito è NULL.  
   
 > [!NOTE]  
 >  *server di pubblicazione* non deve essere utilizzata quando si modificano le proprietà degli articoli in una [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] server di pubblicazione.  

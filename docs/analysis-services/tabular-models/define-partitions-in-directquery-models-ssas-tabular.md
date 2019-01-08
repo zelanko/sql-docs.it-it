@@ -1,5 +1,5 @@
 ---
-title: Definire le partizioni nei modelli DirectQuery | Documenti Microsoft
+title: Definire le partizioni nei modelli DirectQuery di Analysis Services | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 599e2f97991bc6256132861f335ac7bd0b0aa592
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: f6de0417055adc506fc6d9940aa3fa349f59c658
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34044615"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072278"
 ---
 # <a name="define-partitions-in-directquery-models"></a>Definire le partizioni nei modelli DirectQuery
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-  In questa sezione viene illustrato come utilizzare le partizioni nei modelli DirectQuery. Per ulteriori informazioni generali sulle partizioni nei modelli tabulari, vedere [partizioni](../../analysis-services/tabular-models/partitions-ssas-tabular.md).  
+  In questa sezione viene illustrato come utilizzare le partizioni nei modelli DirectQuery. Per informazioni più generali sulle partizioni nei modelli tabulari, vedere [partizioni](../../analysis-services/tabular-models/partitions-ssas-tabular.md).  
   
 > [!NOTE]  
 >  Anche se una tabella può includere più partizioni, nella modalità DirectQuery è possibile impostarne una sola per l'utilizzo durante l'esecuzione di query. Il requisito della partizione singola si applica ai modelli DirectQuery a tutti i livelli di compatibilità.  
@@ -72,7 +72,7 @@ ms.locfileid: "34044615"
 |Proprietà della**stringa di connessione** |Proprietà**Opzione di elaborazione** |Note|  
 |------------------------------------|------------------------------------|-----------|  
 |DirectQuery|Non elaborare mai questa partizione|Se il modello utilizza solo DirectQuery, l'elaborazione non è mai necessaria.<br /><br /> Nei modelli ibridi è possibile configurare la partizione DirectQuery in modo che non venga mai elaborata. Ad esempio, se si lavora su un set di dati di grandi dimensioni e non si desidera che i risultati completi vengano aggiunti alla cache, è possibile specificare che la partizione DirectQuery includa l'unione dei risultati di tutte le altre partizioni nella tabella e quindi non elaborare mai l'unione. Le query dirette all'origine relazionale non saranno interessate, mentre le query sui dati memorizzati nella cache combineranno i dati delle altre partizioni.|  
-|DataView=Sample<br /><br /> Si applica ai modelli tabulari usano le visualizzazioni di dati di esempio|Consenti l'elaborazione della partizione|Se il modello usa i dati di esempio, è possibile elaborare la tabella per restituire un set di dati filtrati che fornisce indicazioni visive durante la progettazione del modello.|  
+|DataView=Sample<br /><br /> Si applica ai modelli tabulari tramite visualizzazioni di dati di esempio|Consenti l'elaborazione della partizione|Se il modello usa i dati di esempio, è possibile elaborare la tabella per restituire un set di dati filtrati che fornisce indicazioni visive durante la progettazione del modello.|  
 |DirectQueryUsage=InMemory con DirectQuery<br /><br /> Si applica ai modelli tabulari 1100 o 1103 in esecuzione in combinazioni di modalità in memoria e DirectQuery|Consenti l'elaborazione della partizione|Se il modello usa la modalità ibrida, è necessario usare la stessa partizione per le query nell'origine dati in memoria e DirectQuery.|  
   
 ## <a name="see-also"></a>Vedere anche  

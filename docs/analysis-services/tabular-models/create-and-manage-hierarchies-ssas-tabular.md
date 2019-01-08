@@ -1,5 +1,5 @@
 ---
-title: Creare e gestire gerarchie | Documenti Microsoft
+title: Creare e gestire gerarchie nei modelli tabulari di Analysis Services | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,18 +9,18 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: c9282c3b28ca5998cc21d2906f06d50f862e49a9
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 5e9e5fc942aa7b03cd4cb9a15d8b474a12f12a8d
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34044835"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072598"
 ---
 # <a name="create-and-manage-hierarchies"></a>Creare e gestire gerarchie 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
   Le gerarchie possono essere create e gestite in Progettazione modelli in Vista diagramma. Per visualizzare Progettazione modelli in Vista diagramma, in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], fare clic sul menu **Modello** , scegliere **Vista modelli**, quindi **Vista diagramma**.  
   
- In questo articolo include le attività seguenti:  
+ Questo articolo include le attività seguenti:  
   
 -   [Creare una gerarchia](#bkmk_create)  
   
@@ -41,7 +41,7 @@ ms.locfileid: "34044835"
   
 2.  Digitare un nome per la gerarchia.  
   
- È possibile trascinare colonne aggiuntive nel livello padre della gerarchia; tale operazione ne comporta la copia. Rilasciare il livello figlio per posizionarlo nel punto in cui si desidera venga visualizzato nella gerarchia.  
+ È possibile trascinare colonne aggiuntive nel livello padre della gerarchia, che consente di copiare le colonne. Rilasciare il livello figlio per posizionarlo nel punto in cui si desidera venga visualizzato nella gerarchia.  
   
 > [!NOTE]  
 >  Il comando Crea gerarchia sarà disabilitato nel menu di scelta rapida se si effettua una selezione multipla di una misura con una o più colonne oppure se si selezionano colonne da più tabelle.  

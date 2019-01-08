@@ -20,24 +20,24 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 862d07d3a27549f8bb0b45a807d1a04c7b13e364
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 8ecfff92b5865ebe9bf255f4bcc1b02150cffb31
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51659630"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53588384"
 ---
 # <a name="routinecolumns-transact-sql"></a>ROUTINE_COLUMNS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Restituisce una riga per ogni colonna restituita dalle funzioni con valori di tabella a cui può accedere l'utente corrente del database corrente.  
   
- Per recuperare informazioni da questa visualizzazione, specificare il nome completo di **INFORMATION_SCHEMA. * * * view_name*.  
+ Per recuperare informazioni da questa visualizzazione, specificare il nome completo del **INFORMATION_SCHEMA.** _view_name_.  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**TABLE_CATALOG**|**nvarchar (** 128 **)**|Nome del catalogo o del database della funzione con valori di tabella.|  
-|**TABLE_SCHEMA**|**nvarchar (** 128 **)**|Nome dello schema che contiene la funzione con valori di tabella.<br /><br /> **\*\* Importanti \* \***  non utilizzare viste INFORMATION_SCHEMA per determinare lo schema di un oggetto. L'unica modalità affidabile per cercare lo schema di un oggetto consiste nell'eseguire una query sulla vista del catalogo sys.objects.|  
+|**TABLE_SCHEMA**|**nvarchar (** 128 **)**|Nome dello schema che contiene la funzione con valori di tabella.<br /><br /> <strong>\*\* Importanti \* \*</strong>  non utilizzare viste INFORMATION_SCHEMA per determinare lo schema di un oggetto. L'unica modalità affidabile per cercare lo schema di un oggetto consiste nell'eseguire una query sulla vista del catalogo sys.objects.|  
 |**TABLE_NAME**|**nvarchar (** 128 **)**|Nome della funzione con valori di tabella.|  
 |**COLUMN_NAME**|**nvarchar (** 128 **)**|Nome colonna.|  
 |**ORDINAL_POSITION**|**int**|Numero di identificazione della colonna.|  
@@ -57,7 +57,7 @@ ms.locfileid: "51659630"
 |**COLLATION_SCHEMA**|**varchar (** 3 **)**|Viene restituito sempre NULL.|  
 |**COLLATION_NAME**|**nvarchar (** 128 **)**|Restituisce il nome univoco per l'ordinamento, se la colonna è di tipo carattere o **testo** tipo di dati. In caso contrario, viene restituito NULL.|  
 |**DOMAIN_CATALOG**|**nvarchar (** 128 **)**|Restituisce il nome del database in cui è stato creato il tipo di dati definito dall'utente se la colonna contiene un tipo di dati alias. In caso contrario, viene restituito NULL.|  
-|**DOMAIN_SCHEMA**|**nvarchar (** 128 **)**|Se il tipo di dati della colonna è un tipo definito dall'utente, restituisce il nome dello schema contenente il tipo di dati definito dall'utente. In caso contrario, viene restituito NULL.<br /><br /> **\*\* Importanti \* \***  non utilizzare viste INFORMATION_SCHEMA per determinare lo schema di un oggetto. L'unica modalità affidabile per cercare lo schema di un oggetto consiste nell'eseguire una query sulla vista del catalogo sys.objects.|  
+|**DOMAIN_SCHEMA**|**nvarchar (** 128 **)**|Se il tipo di dati della colonna è un tipo definito dall'utente, restituisce il nome dello schema contenente il tipo di dati definito dall'utente. In caso contrario, viene restituito NULL.<br /><br /> <strong>\*\* Importanti \* \*</strong>  non utilizzare viste INFORMATION_SCHEMA per determinare lo schema di un oggetto. L'unica modalità affidabile per cercare lo schema di un oggetto consiste nell'eseguire una query sulla vista del catalogo sys.objects.|  
 |**NOME_DOMINIO**|**nvarchar (** 128 **)**|Restituisce il nome del tipo di dati definito dall'utente se la colonna contiene un tipo di dati definito dall'utente. In caso contrario, viene restituito NULL.|  
   
 ## <a name="see-also"></a>Vedere anche  

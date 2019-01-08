@@ -1,5 +1,5 @@
 ---
-title: Gestire ruoli tramite SSMS | Microsoft Docs
+title: Gestire ruoli nei modelli tabulari di Analysis Services tramite SSMS | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 08cd1e2c1244304f0a6310485b4cac49d3174e33
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 22fd8242de50f73eee634d1bc6bc3fcf5e887f0b
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38045349"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072618"
 ---
 # <a name="manage-roles-by-using-ssms"></a>Gestire ruoli tramite SSMS 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "38045349"
   
 4.  In **Impostare le autorizzazioni del ruolo per il database**selezionare una delle opzioni delle autorizzazioni seguenti:  
   
-    |Autorizzazione|Description|  
+    |Autorizzazione|Descrizione|  
     |----------------|-----------------|  
     |**Controllo completo (amministratore)**|I membri possono apportare modifiche allo schema del modello e visualizzare tutti i dati.|  
     |**Elaborazione database**|I membri possono effettuare le operazioni relative alle opzioni Elabora ed Elabora tutto, ma non possono modificare lo schema del modello, né visualizzare dati.|  

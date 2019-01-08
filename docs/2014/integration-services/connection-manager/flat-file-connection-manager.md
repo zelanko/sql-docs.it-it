@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - connection managers [Integration Services], Flat File
@@ -18,12 +17,12 @@ ms.assetid: 7830f80d-af32-4e8f-a6fc-f03af6bc1946
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2a87cf5f7f9f6b81a989b67b2a68484280498aba
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 65cebbe74b1be5cc0d625a70c8c5b87e8f515150
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48147167"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52815293"
 ---
 # <a name="flat-file-connection-manager"></a>Flat File Connection Manager
   Una gestione connessione file flat consente a un pacchetto di accedere ai dati contenuti in un file flat. L'origine e la destinazione del file flat possono ad esempio utilizzare gestioni connessioni file flat per estrarre e caricare dati.  
@@ -38,7 +37,7 @@ ms.locfileid: "48147167"
 ## <a name="configuration-of-the-flat-file-connection-manager"></a>Configurazione della gestione connessione file flat  
  Quando si aggiunge una gestione connessione file flat a un pacchetto, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] crea una gestione connessione che in fase di esecuzione verrà risolta in una connessione file flat, imposta le proprietà della connessione file flat e aggiunge la gestione connessione file flat alla raccolta `Connections` del pacchetto.  
   
- Il `ConnectionManagerType` della gestione connessione viene impostata su `FLATFILE`.  
+ La proprietà `ConnectionManagerType` della gestione connessione viene impostata su `FLATFILE`.  
   
  Per impostazione predefinita, tramite la gestione connessione file flat viene sempre verificata la presenza di un delimitatore di riga in dati senza virgolette e viene iniziata una nuova riga quando viene individuato un relativo delimitatore. In questo modo, con la gestione connessione è possibile analizzare correttamente i file con righe prive di campi colonna.  
   
@@ -80,6 +79,6 @@ ms.locfileid: "48147167"
   
 -   [Editor gestione connessione file flat &#40;pagina Anteprima&#41;](../flat-file-connection-manager-editor-preview-page.md)  
   
- Per informazioni sulla configurazione di una gestione connessione a livello di codice, vedere <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> e [aggiunta di connessioni a livello di programmazione](../building-packages-programmatically/adding-connections-programmatically.md).  
+ Per informazioni sulla configurazione di una gestione connessione a livello di programmazione, vedere l'articolo relativo a <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> e [Aggiunta di connessioni a livello di programmazione](../building-packages-programmatically/adding-connections-programmatically.md).  
   
   

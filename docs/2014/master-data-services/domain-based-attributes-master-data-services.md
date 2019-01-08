@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - domain-based attributes [Master Data Services], about domain-based attributes
@@ -15,12 +14,12 @@ ms.assetid: df6f33ff-97f6-466c-af74-9780b2247473
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 026860df0d1acdc5c2c6a563c8e96cb504a2e4db
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 28abd39a51a54747a1c93af2e0c36d4ff4100bd8
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48083218"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52817313"
 ---
 # <a name="domain-based-attributes-master-data-services"></a>Attributi basati su dominio [Master Data Services]
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]un attributo basato su dominio è un attributo i cui valori sono popolati da membri di un'entità. È possibile pensare a un attributo basato su dominio come a un elenco vincolato, gli attributi basati su dominio non consentono l'immissione dei valori di attributo non validi da parte degli utenti. Per selezionare un valore di attributo, l'utente deve scegliere da un elenco.  
@@ -33,7 +32,7 @@ ms.locfileid: "48083218"
  ![Attributi basati su dominio in un'entità](../../2014/master-data-services/media/mds-conc-domain-based-attribute-conceptual.gif "Attributi basati su dominio in un'entità")  
   
 ## <a name="use-same-entity-for-multiple-domain-based-attributes"></a>Utilizzare la stessa entità per più attributi basati su dominio  
- È possibile utilizzare la stessa entità come un attributo basato su dominio di più entità. Ad esempio, è possibile creare un'entità denominata YesNoIndicator con i membri Yes, No e Maybe. È possibile creare un attributo basato su dominio denominato InStock e utilizzare l'entità YesNoIndicator come origine. Inoltre è possibile creare un altro attributo basato su dominio denominato Approved e utilizzare l'entità YesNoIndicator come origine. Ogni volta che si desidera che gli utenti scelgano da un elenco di membri dell'entità YesNoIndicator, è possibile utilizzare l'entità come attributo basato su dominio.  
+ È possibile utilizzare la stessa entità come un attributo basato su dominio di più entità. Ad esempio, è possibile creare un'entità denominata YesNoIndicator con i membri: Sì, No e Maybe. È possibile creare un attributo basato su dominio denominato InStock e utilizzare l'entità YesNoIndicator come origine. Inoltre è possibile creare un altro attributo basato su dominio denominato Approved e utilizzare l'entità YesNoIndicator come origine. Ogni volta che si desidera che gli utenti scelgano da un elenco di membri dell'entità YesNoIndicator, è possibile utilizzare l'entità come attributo basato su dominio.  
   
 ## <a name="domain-based-attributes-form-derived-hierarchies"></a>Gerarchie derivate del form degli attributi basati su dominio dedotto gerarchie  
  Le relazioni tra attributi basati su dominio costituiscono la base delle gerarchie derivate. Per altre informazioni, vedere [Derived Hierarchies &#40;Master Data Services&#41;](derived-hierarchies-master-data-services.md).  
@@ -49,7 +48,7 @@ ms.locfileid: "48083218"
   
 -   [Gerarchie derivate &#40;Master Data Services&#41;](derived-hierarchies-master-data-services.md)  
   
--   [Gli attributi &#40;Master Data Services&#41;](../../2014/master-data-services/attributes-master-data-services.md)  
+-   [Attributi &#40;Master Data Services&#41;](../../2014/master-data-services/attributes-master-data-services.md)  
   
 -   [Entità &#40;Master Data Services&#41;](../../2014/master-data-services/entities-master-data-services.md)  
   

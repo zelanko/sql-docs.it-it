@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - XPath queries [SQLXML], predicates
@@ -19,12 +17,12 @@ ms.assetid: dbef4cf4-a89b-4d7e-b72b-4062f7b29a80
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a491b824881f9c308eed30e797e492561c40ad73
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4ded9395af45d9445f9189f411c7a0911a26e653
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48144221"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52807453"
 ---
 # <a name="specifying-selection-predicates-in-the-location-path-sqlxml-40"></a>Definizione di predicati di selezione nel percorso (SQLXML 4.0)
   Un predicato filtra un set di nodi rispetto a un asse (simile a una clausola WHERE in un'istruzione SELECT). Il predicato viene specificato tra parentesi. Per filtrare ogni nodo nel set di nodi, l'espressione del predicato viene valutata con il nodo come nodo di contesto e con il numero di nodi nel set di nodi come dimensioni del contesto. Se l'espressione del predicato restituisce TRUE per il nodo, il nodo viene incluso nel set di nodi risultante.  
@@ -115,7 +113,7 @@ child::Customer[attribute::CustomerID]
 Customer[@CustomerID]  
 ```  
   
-## <a name="selection-predicate-example-6"></a>Predicato di selezione: esempio 6  
+## <a name="selection-predicate-example-6"></a>Predicato di selezione: Esempio 6  
  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML 4.0 include il supporto per query XPath che contengono un prodotto incrociato nel predicato, come illustrato nell'esempio seguente:  
   
 ```  

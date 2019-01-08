@@ -10,18 +10,18 @@ ms.assetid: 1ed37ded-5671-46a4-b609-eea886dfae20
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 986900a624ba90869ad821a0f3d6166140153aca
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9bef75196b2106fd72e3f1f4989e70b994508723
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48071971"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53351247"
 ---
 # <a name="change-a-sql-server-authentication-user-password-ole-db"></a>Modificare una password utente di autenticazione di SQL Server (OLE DB)
   In questo esempio viene illustrato come utilizzare OLE DB per modificare la password di un account utente con l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!IMPORTANT]  
->  Se possibile, usare l'autenticazione di Windows. Se non è disponibile, agli utenti verrà richiesto di immettere le credenziali in fase di esecuzione. Evitare di archiviare le credenziali in un file. Se è necessario rendere persistenti le credenziali, è consigliabile crittografarle usando l'[API di crittografia Win32](http://go.microsoft.com/fwlink/?LinkId=64532).  
+>  Se possibile, usare l'autenticazione di Windows. Se non è disponibile, agli utenti verrà richiesto di immettere le credenziali in fase di esecuzione. Evitare di archiviare le credenziali in un file. Se è necessario rendere persistenti le credenziali, è consigliabile crittografarle usando l'[API di crittografia Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
   
 ## <a name="example"></a>Esempio  
  Prima di eseguire la compilazione, aggiornare il codice C++ per specificare l'ID utente, la vecchia password e quella nuova.  

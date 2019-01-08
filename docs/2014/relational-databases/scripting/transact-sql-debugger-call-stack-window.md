@@ -7,20 +7,18 @@ ms.reviewer: ''
 ms.technology:
 - database-engine
 ms.topic: conceptual
-f1_keywords:
-- vs.debug.callstack
 helpviewer_keywords:
 - Call Stack Window [Transact-SQL]
 ms.assetid: ddb0b19c-87cd-4883-bcb8-ec09ffb30369
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c2f69398562a11c466d3772389c326b32cb6e6cf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cb1838890edb044ca3f1bbe5dfd5ebd3dad51c9d
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48220731"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53328691"
 ---
 # <a name="call-stack-window"></a>Finestra Stack di chiamate
   Nella finestra **Stack di chiamate** vengono visualizzati i moduli nello stack di chiamate e i tipi di dati e i valori di qualsiasi parametro passati ai moduli. [!INCLUDE[tsql](../../includes/tsql-md.md)] i moduli includono stored procedure, funzioni e trigger. Per visualizzare lo stack di chiamate, è necessario utilizzare la modalità di debug.  
@@ -48,7 +46,7 @@ ms.locfileid: "48220731"
  Tutte le espressioni incluse nelle finestre **Variabili locali**, **Espressione di controllo**e **Controllo immediato** vengono valutate in base al frame dello stack corrente. Nella finestra dell'editor di query viene visualizzato il codice per il frame corrente. Per impostazione predefinita, il frame dello stack corrente è il frame in cui il debugger [!INCLUDE[tsql](../../includes/tsql-md.md)] ha sospeso l'esecuzione. Quando si imposta il frame dello stack corrente su un altro frame, le espressioni incluse nelle finestre **Variabili locali**, **Espressione di controllo**e **Controllo immediato** vengono nuovamente valutate nel contesto del nuovo frame e il codice sorgente del nuovo frame viene visualizzato nella finestra dell'editor di query.  
   
 ## <a name="columns"></a>Colonne  
- **Nome**  
+ **Name**  
  Vengono visualizzate informazioni su un modulo nello stack di chiamate.  
   
  Per la riga inferiore nello stack di chiamate, in **Nome** vengono indicati la finestra di origine dell'editor di query e il numero di riga della prima chiamata nello stack. Per le altre righe, **Nome** usa il formato **Module(Instance.Database)(ParmList) LineNumber**.  
@@ -72,5 +70,3 @@ ms.locfileid: "48220731"
  [Debugger Transact-SQL](transact-sql-debugger.md)   
  [Informazioni del debugger Transact-SQL](transact-sql-debugger-information.md)   
  [Esecuzione istruzione per istruzione del codice Transact-SQL](step-through-transact-sql-code.md)  
-  
-  

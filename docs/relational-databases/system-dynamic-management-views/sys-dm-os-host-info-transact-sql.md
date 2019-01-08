@@ -20,19 +20,19 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 55291c5cc30b9fe16d7bd259bab03677f6df45db
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 32ef1fff3b5309da587aacc2fca14099e6bf2cac
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51672950"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53209550"
 ---
 # <a name="sysdmoshostinfo-transact-sql"></a>sys.dm_os_host_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
 Restituisce una riga che visualizza le informazioni sulla versione del sistema operativo.  
   
-|Nome colonna |Tipo di dati |Description |  
+|Nome colonna |Tipo di dati |Descrizione |  
 |-----------------|---------------|-----------------|  
 |**host_platform** |**nvarchar(256)** |Il tipo del sistema operativo: Windows o Linux |
 |**host_distribution** |**nvarchar(256)** |Descrizione del sistema operativo. |
@@ -49,7 +49,7 @@ Questa visualizzazione è simile a [sys.dm_os_windows_info](../../relational-dat
 ### <a name="permissions"></a>Permissions  
 Il `SELECT` autorizzazione `sys.dm_os_host_info` viene concesso al `public` ruolo per impostazione predefinita. Se è stato revocato, è necessario `VIEW SERVER STATE` autorizzazione nel server.   
  
->  [!CAUTION]
+> [!CAUTION]
 >  Partire dalla versione [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.3, [!INCLUDE[ssManStudioFull_md](../../includes/ssmanstudiofull-md.md)] richiede la versione 17 `SELECT` autorizzazione `sys.dm_os_host_info` per connettersi a [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]. Se `SELECT` autorizzazione viene revocata `public`, solo gli account di accesso con `VIEW SERVER STATE` autorizzazione può connettersi con la versione più recente di SSMS. (Altri strumenti, ad esempio `sqlcmd.exe` possono connettersi senza `SELECT` autorizzazione `sys.dm_os_host_info`.)
 
   
@@ -66,7 +66,7 @@ Ecco un esempio set di risultati su Windows:
  
  |host_platform |host_distribution |host_release |host_service_pack_level |host_sku |os_language_version |
  |----- |----- |----- |----- |----- |----- |
- |Windows   |Windows Server 2012 R2 Standard    |6.3    |   |7  |1033 |  
+ |WINDOWS   |Windows Server 2012 R2 Standard    |6.3    |   |7  |1033 |  
 
 Ecco un esempio di risultato impostato in Linux:
  

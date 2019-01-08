@@ -1,22 +1,23 @@
 ---
-title: Usare curl per caricare i dati in HDFS in SQL Server 2019 CTP 2.1 | Microsoft Docs
+title: Usare curl per caricare i dati in HDFS nel cluster di SQL Server 2019 dei big Data | Microsoft Docs
 description: ''
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 11/06/2018
+ms.date: 12/07/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: a5f580ab39ef7338f424975d9667745131ee748f
-ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
+ms.custom: seodec18
+ms.openlocfilehash: 890c323434c17bb66cd9a67aac872a5580cb2ddf
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51221627"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53201620"
 ---
-# <a name="use-curl-to-load-data-into-hdfs-on-sql-server-2019-ctp-21"></a>Usare curl per caricare i dati in HDFS in SQL Server 2019 CTP 2.1
+# <a name="use-curl-to-load-data-into-hdfs-on-sql-server-2019-big-data-clusters"></a>Usare curl per caricare i dati in HDFS nel cluster di SQL Server 2019 dei big Data
 
-Questo articolo illustra come usare **curl** per caricare dati in HDFS in SQL Server 2019 CTP 2.1.
+Questo articolo illustra come usare **curl** per caricare dati in HDFS nel cluster di big data 2019 Server SQL (anteprima).
 
 ## <a name="obtain-the-service-external-ip"></a>Ottenere l'IP esterno del servizio
 
@@ -35,7 +36,7 @@ A questo punto, è possibile costruire l'URL di accesso di WebHDFS come indicato
 
 `https://<service-security-lb service external IP address>:30433/gateway/default/webhdfs/v1/`
 
-Esempio:
+Ad esempio:
 
 `https://13.66.190.205:30443/gateway/default/webhdfs/v1/`
 

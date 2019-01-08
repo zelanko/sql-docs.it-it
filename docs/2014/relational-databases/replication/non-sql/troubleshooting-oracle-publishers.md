@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - Oracle publishing [SQL Server replication], troubleshooting
@@ -14,12 +13,12 @@ ms.assetid: be94f1c1-816b-4b1d-83f6-2fd6f5807ab7
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 680cb75aa3a302b8aa889f009a6fd080eb3cd1b5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c84bf2d98440ff9425cd26a4a71667abea2904e1
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48223512"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52786693"
 ---
 # <a name="troubleshooting-oracle-publishers"></a>Risoluzione dei problemi dei server di pubblicazione Oracle
   In questo argomento vengono elencati alcuni problemi che possono verificarsi durante la configurazione e l'uso di un server di pubblicazione Oracle.  

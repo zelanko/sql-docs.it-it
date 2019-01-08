@@ -21,17 +21,17 @@ ms.assetid: 056076c3-8adf-4f51-8a1b-ca39696ac390
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cbcd8616fc743ee749b3adb9b30f343939fa7f3d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 23495d6f2d18964bb35395666c3c7b867e508e20
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47819239"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53211220"
 ---
 # <a name="coresppurgedata-transact-sql"></a>core.sp_purge_data (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Rimuove i dati dal data warehouse di gestione in base ai criteri di memorizzazione. Questa procedura viene eseguita ogni giorno da mdw_purge_data[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] processo dell'agente sul data warehouse di gestione associato con l'istanza specificata. È possibile utilizzare questa procedura per eseguire una rimozione su richiesta dei dati dal data warehouse di gestione.  
+  Rimuove i dati dal data warehouse di gestione in base ai criteri di memorizzazione. Questa procedura viene eseguita ogni giorno dal processo mdw_purge_data di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent sul data warehouse di gestione associato all'istanza specificata. È possibile utilizzare questa procedura per eseguire una rimozione su richiesta dei dati dal data warehouse di gestione.  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -85,7 +85,7 @@ EXECUTE core.sp_purge_data;
 GO  
 ```  
   
-### <a name="b-specifying-retention-and-duration-values"></a>B. Specifica dei valori di memorizzazione e durata  
+### <a name="b-specifying-retention-and-duration-values"></a>b. Specifica dei valori di memorizzazione e durata  
  Nell'esempio seguente vengono rimossi dal data warehouse di gestione i dati più vecchi di 7 giorni. Inoltre, il @duration parametro viene specificato in modo che l'esecuzione dell'operazione non duri più di 5 minuti.  
   
 ```  

@@ -18,23 +18,23 @@ ms.assetid: c75d0d4b-4008-4e71-9a9d-cee2a566bd3b
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: 03971bcd487016fbc1fadc07203ebe2ab73555d2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 40bf5851663840dac27252aa5cdfdadb0e76da93
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48163171"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53205700"
 ---
 # <a name="transparent-data-encryption-tde"></a>Transparent Data Encryption (TDE)
   *Transparent Data Encryption* (TDE) consente di crittografare i file di dati di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] mediante un'operazione nota come crittografia dei dati "non operativi". Per proteggere il database è possibile adottare alcune accortezze, tra cui la progettazione di un sistema sicuro, la crittografia dei dati riservati e la compilazione di un firewall attorno ai server di database. Tuttavia, nel caso in cui i supporti fisici (ad esempio unità o nastri di backup) venissero rubati, un malintenzionato potrebbe ripristinare o collegare il database e accedere ai dati. Una soluzione per ovviare al problema consiste nel crittografare i dati sensibili nel database e proteggere con un certificato le chiavi usate per la crittografia. In questo modo si impedisce a chi è sprovvisto delle chiavi di usare i dati; tuttavia, questo tipo di protezione deve essere pianificato in anticipo.  
   
  TDE consente di eseguire la crittografia e la decrittografia I/O in tempo reale dei file di dati e di log. Per la crittografia viene usata una chiave di crittografia del database (DEK), archiviata nel record di avvio del database affinché sia disponibile durante le operazioni di recupero. La chiave di crittografia del database è una chiave simmetrica protetta tramite un certificato archiviato nel database master del server o una chiave asimmetrica protetta da un modulo EKM. TDE consente di proteggere i dati "non operativi", ovvero i file di dati e di log, e assicura la conformità a numerose leggi, normative e linee guida stabilite in vari settori. Gli sviluppatori software possono ora crittografare i dati usando gli algoritmi di crittografia AES e 3DES senza modificare applicazioni esistenti.  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  TDE non fornisce funzionalità di crittografia tramite canali di comunicazione. Per altre informazioni su come crittografare i dati su diversi canali di comunicazione, vedere [Abilitare connessioni crittografate al Motore di database &#40;Gestione configurazione SQL Server&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
->   
+> 
 >  **Argomenti correlati:**  
->   
+> 
 >  -   [Transparent Data Encryption con il database SQL di Azure](../../../database-engine/transparent-data-encryption-with-azure-sql-database.md)  
 > -   [Spostare un database protetto da TDE in un'altra istanza di SQL Server](move-a-tde-protected-database-to-another-sql-server.md)  
 > -   [Abilitare TDE usando EKM](enable-tde-on-sql-server-using-ekm.md)  
@@ -113,7 +113,7 @@ GO
 |[CREATE DATABASE ENCRYPTION KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-database-encryption-key-transact-sql)|Consente di creare una chiave usata per crittografare un database.|  
 |[ALTER DATABASE ENCRYPTION KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-encryption-key-transact-sql)|Consente di modificare la chiave usata per crittografare un database.|  
 |[DROP DATABASE ENCRYPTION KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-database-transact-sql)|Consente di rimuovere la chiave usata per crittografare un database.|  
-|[Opzioni di ALTER DATABASE SET &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options)|Viene descritta l'opzione `ALTER DATABASE`, utilizzata per abilitare Transparent Data Encryption.|  
+|[Opzioni ALTER DATABASE SET &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options)|Viene descritta l'opzione `ALTER DATABASE`, utilizzata per abilitare Transparent Data Encryption.|  
   
 ## <a name="catalog-views-and-dynamic-management-views"></a>Viste del catalogo e viste a gestione dinamica  
  Nella tabella seguente vengono illustrate le viste del catalogo e le viste a gestione dinamica di TDE.  

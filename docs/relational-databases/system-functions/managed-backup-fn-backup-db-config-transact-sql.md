@@ -21,12 +21,12 @@ ms.assetid: 7c755d8a-64dd-44b2-be5e-735d30758900
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d731c5fbb7a90e69b7e1b1502411f57e80219892
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ae0d84ba18a350adb47ca9a9aeeaf966a90af2a8
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47687229"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52409578"
 ---
 # <a name="managedbackupfnbackupdbconfig-transact-sql"></a>managed_backup.fn_backup_db_config (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "47687229"
 ## <a name="syntax"></a>Sintassi  
   
 ```sql  
-managed_backup.fn_backup_db_config (‘database_name’ | ‘’ | NULL)  
+managed_backup.fn_backup_db_config ('database_name' | '' | NULL)  
 ```  
   
 ##  <a name="Arguments"></a> Argomenti  
@@ -49,7 +49,7 @@ managed_backup.fn_backup_db_config (‘database_name’ | ‘’ | NULL)
   
 ## <a name="table-returned"></a>Tabella restituita  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |db_name|SYSNAME|Nome del database.|  
 |db_guid|UNIQUEIDENTIFIER|Identificatore che identifica in modo univoco il database.|  
@@ -69,7 +69,7 @@ managed_backup.fn_backup_db_config (‘database_name’ | ‘’ | NULL)
  Richiede l'appartenenza al **db_backupoperator** ruolo del database con **ALTER ANY CREDENTIAL** autorizzazioni. L'utente non deve essere negata **VIEW ANY DEFINITION** autorizzazioni.  
   
 ## <a name="examples"></a>Esempi  
- Nell'esempio seguente viene restituita la configurazione del [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] per 'TestDB'.  
+ L'esempio seguente restituisce la [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] configurazione per 'TestDB'  
   
  Per ogni frammento di codice, selezionare 'tsql' nel campo dell'attributo di linguaggio.  
   

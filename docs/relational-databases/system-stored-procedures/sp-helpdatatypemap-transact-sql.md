@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_helpdatatypemap
@@ -17,17 +16,17 @@ ms.assetid: 800c9c65-723e-4961-a63d-327987f129f0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e1eab8424e2ff5eb81e8d89a6ed897b7d19b5b72
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c1d4addec6f0b5a7faff69d513c655450202d099
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47837939"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53210850"
 ---
 # <a name="sphelpdatatypemap-transact-sql"></a>sp_helpdatatypemap (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Restituisce informazioni sui mapping dei tipi di dati definiti tra [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database (DBMS) i sistemi di gestione. Questa stored procedure viene eseguita in qualsiasi database del server di distribuzione.  
+  Restituisce informazioni sui mapping dei tipi di dati definiti tra [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e non- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database (DBMS) i sistemi di gestione. Questa stored procedure viene eseguita in qualsiasi database del server di distribuzione.  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -48,7 +47,7 @@ sp_helpdatatypemap [ @source_dbms = ] 'source_dbms'
  [ **@source_dbms**=] **'***source_dbms***'**  
  Nome del DBMS da cui viene eseguito il mapping dei tipi di dati. *source_dbms* viene **sysname**, e può essere uno dei valori seguenti.  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |**MSSQLSERVER**|L'origine è un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**ORACLE**|L'origine è un database Oracle.|  
@@ -62,7 +61,7 @@ sp_helpdatatypemap [ @source_dbms = ] 'source_dbms'
  [ **@destination_dbms** =] **'***destination_dbms***'**  
  Nome del sistema DBMS di destinazione. *destination_dbms* viene **sysname**, e può essere uno dei valori seguenti.  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |**MSSQLSERVER**|La destinazione è un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**ORACLE**|La destinazione è un database Oracle.|  
@@ -80,7 +79,7 @@ sp_helpdatatypemap [ @source_dbms = ] 'source_dbms'
   
 ## <a name="result-sets"></a>Set di risultati  
   
-|Nome colonna|Description|  
+|Nome colonna|Descrizione|  
 |-----------------|-----------------|  
 |**mapping_id**|Identifica il mapping dei tipi di dati.|  
 |**source_dbms**|Nome e numero di versione del sistema DBMS di origine.|  
@@ -93,7 +92,7 @@ sp_helpdatatypemap [ @source_dbms = ] 'source_dbms'
  **0** (esito positivo) o **1** (errore)  
   
 ## <a name="remarks"></a>Note  
- **sp_helpdatatypemap** definisce i mapping dei tipi di dati dal Server di pubblicazione non SQL e da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] agli editori di non -[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sottoscrittori.  
+ **sp_helpdatatypemap** definisce i mapping dei tipi di dati dal Server di pubblicazione non SQL e da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] agli editori di non - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sottoscrittori.  
   
  Se non è supportata la combinazione specificata di origine e destinazione DBMS **sp_helpdatatypemap** restituisce un set di risultati vuoto.  
   

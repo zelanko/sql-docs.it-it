@@ -16,12 +16,12 @@ ms.assetid: 3e7f5925-6edd-42e1-bf17-f7deb03993a7
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ec0157d30495166aba0a001997d843dafb5ba916
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9de758c6a54ca1993efc8873a02293331a129b33
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48180151"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52529700"
 ---
 # <a name="database-engine-error-severities"></a>Gravità degli errori del Motore di database
   Negli errori generati da [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], la gravità dell'errore indica il tipo di problema rilevato da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -29,7 +29,7 @@ ms.locfileid: "48180151"
 ## <a name="levels-of-severity"></a>Livelli di gravità  
  Nella tabella seguente sono elencati e descritti i livelli di gravità degli errori generati da [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
   
-|Livello di gravità|Description|  
+|Livello di gravità|Descrizione|  
 |--------------------|-----------------|  
 |0-9|Messaggi informativi che restituiscono dettagli sullo stato o segnalano errori non gravi. [!INCLUDE[ssDE](../../includes/ssde-md.md)] non genera errori di sistema con livelli di gravità compresi tra 0 e 9.|  
 |10|Messaggi informativi che restituiscono dettagli sullo stato o segnalano errori non gravi. Per motivi di compatibilità, [!INCLUDE[ssDE](../../includes/ssde-md.md)] converte il livello di gravità 10 nel livello di gravità 0 prima di restituire informazioni sull'errore all'applicazione chiamante.|  
@@ -56,17 +56,17 @@ ms.locfileid: "48180151"
   
  RAISERROR può essere utilizzato per generare messaggi di errore definiti dall'utente con livelli di gravità compresi tra 1 e 25. RAISERROR può fare riferimento a un messaggio di errore definito dall'utente archiviato nella vista del catalogo **sys.messages** oppure compilare un messaggio in modo dinamico. Quando si usa il messaggio di errore definito dall'utente nella vista del catalogo **sys.messages** durante la generazione di un errore, la gravità specificata da RAISERROR sostituisce quella specificata in **sys.messages**. Per altre informazioni, vedere [RAISERROR &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/raiserror-transact-sql).  
   
-## <a name="error-severity-and-trycatch"></a>Gravità dell'errore e costrutto TRY…CATCH  
- Un costrutto TRY…CATCH rileva tutti gli errori di esecuzione con gravità superiore a 10 che non terminano la connessione al database.  
+## <a name="error-severity-and-trycatch"></a>Gravità dell'errore e TRY...CATCH  
+ Un costrutto TRY...CATCH rileva tutti gli errori di esecuzione con gravità superiore a 10 che non terminano la connessione al database.  
   
- Gli errori con gravità compresa tra 0 e 10 sono messaggi informativi e non causano l'esecuzione del blocco CATCH di un costrutto TRY…CATCH.  
+ Gli errori con gravità compresa tra 0 e 10 sono messaggi informativi e non causano l'esecuzione del blocco CATCH di un costrutto TRY...CATCH.  
   
  Gli errori che terminano la connessione al database, in genere con gravità compresa tra 20 e 25, non vengono gestiti dal blocco CATCH in quanto l'esecuzione viene interrotta al termine della connessione.  
   
  Per altre informazioni, vedere [TRY...CATCH &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/try-catch-transact-sql).  
   
 ## <a name="retrieving-error-severity"></a>recupero di gravità errore  
- La funzione di sistema ERROR_SEVERITY consente di recuperare la gravità dell'errore che ha causato l'esecuzione del blocco CATCH di un costrutto TRY…CATCH. ERROR_SEVERITY restituisce NULL se chiamata al di fuori dell'ambito di un blocco CATCH. Per altre informazioni, vedere [ERROR_SEVERITY &#40;Transact-SQL&#41;](/sql/t-sql/functions/error-severity-transact-sql).  
+ La funzione di sistema ERROR_SEVERITY consente di recuperare la gravità dell'errore che ha causato l'esecuzione del blocco CATCH di un costrutto TRY...CATCH. ERROR_SEVERITY restituisce NULL se chiamata al di fuori dell'ambito di un blocco CATCH. Per altre informazioni, vedere [ERROR_SEVERITY &#40;Transact-SQL&#41;](/sql/t-sql/functions/error-severity-transact-sql).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Informazioni sugli errori del Motore di database](../native-client-ole-db-errors/errors.md)   

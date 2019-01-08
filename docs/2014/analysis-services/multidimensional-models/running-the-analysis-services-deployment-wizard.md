@@ -13,12 +13,12 @@ ms.assetid: 3a38d489-4625-4878-bd18-c6f903be33df
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 173588769aa1697e23f0d34ca13916684d2fee59
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4cc8ae36dbcc728062e2074d715673a39f95e1d3
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48112712"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535043"
 ---
 # <a name="running-the-analysis-services-deployment-wizard"></a>Esecuzione della Distribuzione guidata Analysis Services
   Quando si utilizza Distribuzione guidata [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] per distribuire un progetto di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , è possibile eseguire la procedura guidata nei modi seguenti:  
@@ -28,7 +28,7 @@ ms.locfileid: "48112712"
 -   **Dal prompt dei comandi** quando viene eseguita al prompt dei comandi di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] distribuzione guidata genera un script XML for Analysis (XMLA) distribuzione basato alle opzioni utilizzabili per eseguire la procedura guidata. Tramite la procedura guidata potrebbe venire richiesto l'input dell'utente e potrebbero venire modificati i file di input in base a tale input, potrebbe venire eseguita una distribuzione automatica invisibile all'utente oppure potrebbe venire creato uno script di distribuzione da utilizzare successivamente.  
   
 ## <a name="running-the-analysis-services-deployment-wizard-interactively"></a>Esecuzione della Distribuzione guidata Analysis Services in modo interattivo  
- Quando viene eseguita in modo interattivo, la Distribuzione guidata [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] legge i valori dei file di input e presenta le relative informazioni agli utenti. È possibile modificare i valori di input, ad esempio destinazione di distribuzione, impostazioni di configurazione, opzioni di distribuzione e password della stringa di connessione, oppure lasciarli inalterati. Se si modificano i valori di input, le modifiche vengono utilizzate dalla procedura guidata per la creazione dello script di distribuzione XMLA. Tramite la procedura guidata non vengono tuttavia apportate modifiche al file di input.  
+ Quando viene eseguita in modo interattivo, la Distribuzione guidata [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] legge i valori dei file di input e presenta le relative informazioni agli utenti. È possibile modificare questi valori, quali input come destinazione di distribuzione, le impostazioni di configurazione, le opzioni di distribuzione e password della stringa di connessione- o lasciarli inalterati. Se si modificano i valori di input, le modifiche vengono utilizzate dalla procedura guidata per la creazione dello script di distribuzione XMLA. Tramite la procedura guidata non vengono tuttavia apportate modifiche al file di input.  
   
 > [!NOTE]  
 >  Se si desidera utilizzare la Distribuzione guidata [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] per modificare i valori di input, eseguire la procedura guidata al prompt dei comandi e impostarla per l'esecuzione in modalità file di risposte.  
@@ -39,7 +39,7 @@ ms.locfileid: "48112712"
   
 -   Fare clic sul pulsante **Start**, scegliere **Tutti i programmi**, **Microsoft SQL Server**, **Analysis Services**e quindi **Distribuzione guidata**.  
   
-     -oppure-  
+     oppure  
   
 -   Nel **progetti** cartella della [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] del progetto, fare doppio clic sui  *\<nome progetto >* file con estensione asdatabase.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "48112712"
 2.  Digitare **Microsoft.AnalysisServices.Deployment.exe** seguito dalle opzioni corrispondenti alla modalità in cui si desidera eseguire la procedura guidata.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Informazioni sullo Script di distribuzione di Analysis Services](understanding-the-analysis-services-deployment-script.md)   
- [Distribuire soluzioni di modelli tramite la Distribuzione guidata](deploy-model-solutions-using-the-deployment-wizard.md)  
+ [Informazioni sullo script di distribuzione di Analysis Services](understanding-the-analysis-services-deployment-script.md)   
+ [Deploy Model Solutions Using the Deployment Wizard](deploy-model-solutions-using-the-deployment-wizard.md)  
   
   

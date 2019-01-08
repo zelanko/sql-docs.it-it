@@ -1,5 +1,5 @@
 ---
-title: Flag di modellazione (Data Mining) | Documenti Microsoft
+title: Flag di modellazione (Data Mining) | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 32a7241fcea41af44e3e336d02c857f51d133208
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: f644f882d1a252f678d868d3492b4aed4e11006f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34017418"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52531904"
 ---
 # <a name="modeling-flags-data-mining"></a>Flag di modellazione (data mining)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -32,9 +32,9 @@ ms.locfileid: "34017418"
  Indica che i valori per la colonna attributo non devono mai contenere valori null. Se durante il processo di training del modello [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] rileva un valore null per la colonna attributo, verrà generato un errore.  
   
  **MODEL_EXISTENCE_ONLY**  
- Indica che la colonna verrà considerata come se presentasse due stati: **Mancante** ed **Esistente**. Se il valore è **NULL**, viene considerata come Mancante. Il flag MODEL_EXISTENCE_ONLY viene applicato all'attributo stimabile ed è supportato dalla maggior parte degli algoritmi.  
+ Indica che la colonna verrà considerata come se presentasse due stati: **Mancano** e **esistenti**. Se il valore è **NULL**, viene considerata come Mancante. Il flag MODEL_EXISTENCE_ONLY viene applicato all'attributo stimabile ed è supportato dalla maggior parte degli algoritmi.  
   
- In effetti, l'impostazione del flag MODEL_EXISTENCE_ONLY su **True** consente di modificare la rappresentazione dei valori in modo da avere solo due stati: **Mancante** ed **Esistente**. Tutti gli stati non mancanti sono combinati in un solo valore **Esistente** .  
+ In effetti, l'impostazione del flag MODEL_EXISTENCE_ONLY **True** cambia la rappresentazione dei valori in modo che siano presenti solo due stati: **Mancano** e **esistenti**. Tutti gli stati non mancanti sono combinati in un solo valore **Esistente** .  
   
  Questo flag di modellazione viene tipicamente usato negli attributi in cui lo stato **NULL** ha un significato implicito e il valore esplicito dello stato **NOT NULL** può essere meno importante del fatto che la colonna contenga un valore. Ad esempio, una colonna [DateContractSigned] potrebbe essere **NULL** se non è mai stato firmato un contratto e **NOT NULL** se il contratto è stato firmato. Pertanto, se lo scopo del modello è quello di stimare se un contratto verrà firmato, è possibile usare il flag MODEL_EXISTENCE_ONLY per ignorare il valore esatto relativo alla data nei case **NOT NULL** e distinguere solo tra case in cui il contratto è **Mancante** o **Esistente**.  
   
@@ -57,7 +57,7 @@ WHERE STRUCTURE_NAME = '<structure name>'
   
  È possibile aggiungere o modificare i flag di modellazione utilizzati in un modello utilizzando Progettazione modelli di data mining e modificando le proprietà delle colonne associate. Tali modifiche richiedono la rielaborazione della struttura o del modello.  
   
- È possibile specificare flag di modellazione in una nuova struttura o in un nuovo modello di data mining tramite DMX o script AMO o XMLA. Non è tuttavia possibile modificare i flag di modellazione utilizzati in un modello e in una struttura di data mining esistenti tramite DMX. È necessario creare un nuovo modello di data mining usando la sintassi `ALTER MINING STRUCTURE….ADD MINING MODEL`.  
+ È possibile specificare flag di modellazione in una nuova struttura o in un nuovo modello di data mining tramite DMX o script AMO o XMLA. Non è tuttavia possibile modificare i flag di modellazione utilizzati in un modello e in una struttura di data mining esistenti tramite DMX. È necessario creare un nuovo modello di data mining usando la sintassi `ALTER MINING STRUCTURE....ADD MINING MODEL`.  
   
 ##  <a name="bkmk_UseRegressors"></a> Utilizzi del flag di modellazione REGRESSOR  
  Quando si imposta il flag di modellazione REGRESSOR in una colonna, si indica all'algoritmo che la colonna contiene potenziali regressori. I regressore effettivi utilizzati nel modello sono determinati dall'algoritmo. Un regressore potenziale può essere ignorato se non modella l'attributo stimabile.  
@@ -92,13 +92,13 @@ WHERE MODEL_NAME = '<model name>'
   
 |Attività|Argomento|  
 |----------|-----------|  
-|Modificare i flag di modellazione tramite Progettazione modelli di data mining|[Visualizzare o modificare modello di Data Mining flag & #40; & #41;](../../analysis-services/data-mining/view-or-change-modeling-flags-data-mining.md)|  
-|Specificare un hint all'algoritmo per segnalare i probabili regressori|[Specificare una colonna da utilizzare come regressore in un modello](../../analysis-services/data-mining/specify-a-column-to-use-as-regressor-in-a-model.md)|  
+|Modificare i flag di modellazione tramite Progettazione modelli di data mining|[Visualizzare o modificare flag di modellazione &#40;Data mining&#41;](../../analysis-services/data-mining/view-or-change-modeling-flags-data-mining.md)|  
+|Specificare un hint all'algoritmo per segnalare i probabili regressori|[Specificare una colonna da usare come regressore in un modello](../../analysis-services/data-mining/specify-a-column-to-use-as-regressor-in-a-model.md)|  
 |Vedere i flag di modellazione supportati da algoritmi specifici nella sezione Flag di modellazione dell'argomento di riferimento per ogni algoritmo|[Algoritmi di Data Mining &#40;Analysis Services - Data Mining&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)|  
 |Vengono fornite ulteriori informazioni sulle colonne della struttura di data mining e sulle proprietà che è possibile impostare su di esse|[Colonne della struttura di data mining](../../analysis-services/data-mining/mining-structure-columns.md)|  
 |Vengono fornite ulteriori informazioni sulle colonne del modello di data mining e sui flag di modellazione che è possibile applicare a livello del modello|[Colonne del modello di data mining](../../analysis-services/data-mining/mining-model-columns.md)|  
 |Vedere la sintassi per l'utilizzo dei flag di modellazione nelle istruzioni DMX|[Flag di modellazione &#40;DMX&#41;](../../dmx/modeling-flags-dmx.md)|  
-|Vengono illustrati i valori mancanti e la relativa modalità di utilizzo|[I valori mancanti & #40; Analysis Services - Data Mining & #41;](../../analysis-services/data-mining/missing-values-analysis-services-data-mining.md)|  
+|Vengono illustrati i valori mancanti e la relativa modalità di utilizzo|[Valori mancanti &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/missing-values-analysis-services-data-mining.md)|  
 |Vengono fornite informazioni sulla gestione di modelli e strutture e sull'impostazione delle proprietà di utilizzo|[Spostamento di oggetti di data mining](../../analysis-services/data-mining/moving-data-mining-objects.md)|  
   
   

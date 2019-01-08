@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - incremental load [Integration Services],applying changes
@@ -13,12 +12,12 @@ ms.assetid: 338a56db-cb14-4784-a692-468eabd30f41
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 837a2ec19ba5c3b0b647da6b6b5b746b208511ab
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 65b1555b54de017908078eed72d58444a6bb8ef4
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48060462"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52804664"
 ---
 # <a name="apply-the-changes-to-the-destination"></a>Applicazione delle modifiche alla destinazione
   Nel flusso di dati di un pacchetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] che esegue un caricamento incrementale dei dati delle modifiche la terza e ultima attività consistono nell'applicare le modifiche alla destinazione. Sarà necessario un componente per applicare gli inserimenti, uno per applicare gli aggiornamenti e uno per applicare le eliminazioni.  

@@ -5,8 +5,7 @@ ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - MSmerge_identity_range_allocations
@@ -19,19 +18,19 @@ ms.assetid: 6362e35e-0ab3-4638-855b-1ce013f5fd6d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b36d1b4d0065d1049268862aa0cf37af6ab6dd01
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 09544c1e8735c3a6ad4fd6abfca430e84fabd775
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47609889"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52809693"
 ---
 # <a name="msmergeidentityrangeallocations-transact-sql"></a>MSmerge_identity_range_allocations (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Il **MSmerge_identity_range_allocations** tabella viene utilizzata per tenere traccia della cronologia di identità assegnazioni di intervalli, sia i server di pubblicazione e sottoscrittori, per gli articoli pubblicati. Questa tabella è archiviata nel database di distribuzione.  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**publisher_id**|**smallint**|ID del server di pubblicazione.|  
 |**publisher_db**|**nvarchar(128)**|Nome del database di pubblicazione.|  

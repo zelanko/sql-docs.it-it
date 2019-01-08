@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - unconsumed data
@@ -19,12 +17,12 @@ ms.assetid: 8526998d-b47d-4a32-8dc2-7f50a8d11097
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d07153f80cc1b6dfdc8383e33a8668b63364ad8a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0398092e4565b6b02e6b83e8c892ff91e6611f66
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48119511"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52793593"
 ---
 # <a name="retrieving-unconsumed-data-using-the-sqloverflow-field-sqlxml-40"></a>Recupero di dati non utilizzati mediante sql:overflow-field (SQLXML 4.0)
   Quando i record vengono inseriti in un database da un documento XML tramite la funzione OPENXML [!INCLUDE[tsql](../../includes/tsql-md.md)], tutti i dati non utilizzati dal documento XML di origine possono essere archiviati in una colonna. Quando si recuperano dati da un database tramite schemi con annotazioni, è possibile specificare l'attributo `sql:overflow-field` per identificare la colonna nella tabella nella quale vengono archiviati i dati di overflow. Il `sql:overflow-field` attributo può essere specificato in  **\<elemento >**.  
@@ -62,7 +60,7 @@ INSERT INTO Customers2 VALUES (
 GO  
 ```  
   
- È inoltre necessario creare una directory virtuale per il database tempdb e un nome virtuale di modello del tipo `template` denominato "template".  
+ Inoltre, è necessario creare una directory virtuale per il database tempdb- e un nome virtuale del modello di `template` tipo denominato "template".  
   
  Nell'esempio seguente lo schema di mapping recupera i dati non utilizzati archiviati nella colonna AddressOverflow della tabella Customers2:  
   

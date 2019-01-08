@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - parameters [SQL Server], Visual Database Tools
@@ -14,17 +14,17 @@ ms.assetid: 2e4fdeb6-c596-43cb-ac2e-9a18ea2bac0d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c677215024dbb5a0a862fba3e9fd3232190dd453
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9167f4ec0f62c34ddf6bae5838b36dcf4bdb6967
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48213991"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52791243"
 ---
 # <a name="query-with-parameters-visual-database-tools"></a>Esecuzione di query mediante parametri (Visual Database Tools)
   In molti casi può essere utile creare una query da riutilizzare più volte nelle applicazioni inserendo di volta in volta dati diversi. In questa sezione vengono fornite informazioni sulla creazione di query con parametri per un uso generale.  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Query con parametri &#40;Visual Database Tools&#41;](visual-database-tools.md)  
  Vengono fornite informazioni sulle query generiche.  
   

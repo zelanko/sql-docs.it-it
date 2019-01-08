@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: performance
 ms.topic: conceptual
 ms.assetid: e8f1b16b-ea40-4e12-886c-967ebda4e6e4
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 8a4c52340cde2aefb73785ee52794cf138c38627
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9c0534bf3a12aa81a9fc84d0e2c4f82a189748a0
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48145611"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52811203"
 ---
 # <a name="monitor-sql-server-components"></a>Monitorare i componenti di SQL Server
   Il monitoraggio è importante perché [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornisce un servizio in un ambiente dinamico. i dati nell'applicazione cambiano, il tipo di accesso richiesto dagli utenti cambia, la modalità di connessione degli utenti cambia. Possono cambiare anche i tipi delle applicazioni che accedono a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , ma [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è in grado di gestire automaticamente le risorse a livello di sistema, quali la memoria e lo spazio su disco, per ridurre al minimo la necessità di ingenti interventi di ottimizzazione manuale a livello di sistema. Il monitoraggio consente agli amministratori di identificare le tendenze delle prestazioni per determinare i casi in cui è necessario apportare modifiche.  

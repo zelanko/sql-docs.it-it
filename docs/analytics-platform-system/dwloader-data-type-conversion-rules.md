@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 1553c02c7d7ff7c1095d4c7217bc628339168a77
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 46d092ee5d3b981c60d7bd5bde49f9994dab4b08
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51703979"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52519579"
 ---
 # <a name="data-type-conversion-rules-for-dwloader---parallel-data-warehouse"></a>Tipo di dati per dwloader - Parallel Data Warehouse, le regole di conversione
 In questo argomento descrive i formati di dati di input e conversioni di tipi di dati implicite che [caricatore della riga di comando dwloader](dwloader.md) supporta al momento del caricamento dei dati in PDW. Le conversioni implicite dei dati si verificano quando i dati di input non corrisponde al tipo di dati nella tabella di destinazione di SQL Server PDW. Usare queste informazioni quando si progetta il processo di caricamento per verificare che i dati sarà caricati correttamente in SQL Server PDW.  
@@ -123,7 +123,7 @@ Nella tabella seguente definisce il formato predefinito e le regole per il caric
   
 |Tipo di dati di input|Esempi di dati di input|Conversione al tipo di dati di tipo bit|  
 |-------------------|-----------------------|-------------------------------|  
-|Valore letterale stringa nel **integer** formato|'ffffffffff'<br /><br />Esempio: '1' o '321'|Un valore intero formattato come valore letterale stringa non può contenere un valore negativo. Ad esempio, il valore '-123' genera un errore.<br /><br />Un valore maggiore di 1 viene convertito in 1. Il valore "123", ad esempio, viene convertito in 1.|  
+|Valore letterale stringa nel **integer** formato|'ffffffffff'<br /><br />Esempio: '321' o '1'|Un valore intero formattato come valore letterale stringa non può contenere un valore negativo. Ad esempio, il valore '-123' genera un errore.<br /><br />Un valore maggiore di 1 viene convertito in 1. Il valore "123", ad esempio, viene convertito in 1.|  
 |Valore letterale stringa|'TRUE' o 'FALSE'<br /><br />Esempio: 'true'|Il valore 'TRUE' viene convertito in 1. il valore 'FALSE' viene convertita in 0.|  
 |Valore letterale integer|fffffffn<br /><br />Esempio: 1 o 321|Un valore maggiore di 1 o minore di 0 viene convertito in 1. Ad esempio, i valori -123 e 123 sono convertiti in 1.|  
 |Valore letterale decimale|fffnn.fffn<br /><br />Esempio: 1234.5678|Un valore maggiore di 1 o minore di 0 viene convertito in 1. Ad esempio, i valori 123,45 e -123.45 vengono convertiti in 1.|  
@@ -171,7 +171,7 @@ Nella tabella seguente definisce il formato predefinito e le regole per il caric
 |Tipo di dati di input|Esempi di dati di input|Conversione in tipi di dati carattere|  
 |---------------|-------------------|----------------------------------|  
 |Valore letterale stringa|Formato: "carattere stringa'<br /><br />Esempio: 'abc'| ND |  
-|Valore letterale stringa Unicode|Formato: Stringa N'character'<br /><br />Esempio: N'abc '| ND |  
+|Valore letterale stringa Unicode|Formato: Stringa N'character'<br /><br />Esempio: N'abc'| ND |  
 |Valore letterale integer|Formato: ffffffffffn<br /><br />Esempio: 321312313123| ND |  
 |Valore letterale decimale|Formato: ffffff.fffffff<br /><br />Esempio: 12344.34455| ND |  
 |Valore letterale Money|Formato: $ffffff.fffnn<br /><br />Esempio: $123456.99|Il simbolo di valuta facoltativo non viene inserito con il valore. Per inserire il simbolo di valuta, inserire il valore come valore letterale stringa. Ciò corrisponderà il formato del caricatore, che considera ogni valore letterale come valore letterale stringa.<br /><br />Le virgole non sono consentite.<br /><br />Se il numero di cifre dopo il separatore decimale è superiore a 2, il valore viene arrotondato per eccesso al valore più vicino. Ad esempio, il valore 123.946789 viene inserito come 123.95.<br /><br />Quando si usa la funzione CONVERT per inserire valori letterali di denaro, è consentito solo lo stile predefinito 0 (Nessun separatore delle migliaia e 2 cifre dopo il separatore decimale).|  

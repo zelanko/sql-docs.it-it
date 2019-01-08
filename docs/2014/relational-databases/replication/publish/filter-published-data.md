@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - filters [SQL Server replication]
@@ -21,12 +20,12 @@ ms.assetid: 8a914947-72dc-4119-b631-b39c8070c71b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ac56fd795f819fe308dee9980e12883e73b0172d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 840af91236f95d2065a926db93100e0a2bdc312f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48222628"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52810643"
 ---
 # <a name="filter-published-data"></a>Filtro dei dati pubblicati
   L'applicazione di filtri agli articoli di una tabella consente di creare partizioni di dati da pubblicare. Tramite l'applicazione di filtri ai dati pubblicati è possibile:  
@@ -73,7 +72,7 @@ ms.locfileid: "48222628"
     > [!NOTE]  
     >  Nelle pubblicazioni transazionali i filtri di riga comportano un notevole aumento dell'overhead in quanto la clausola di filtro per l'articolo viene valutata per ogni riga del log di una tabella pubblicata per stabilire se deve essere replicata. È consigliabile evitare l'uso dei filtri di riga nelle pubblicazioni transazionali se ogni nodo di replica può supportare il carico completo dei dati e se il set di dati complessivo è relativamente ridotto.  
   
--   Con la replica di tipo merge, utilizzare i filtri di riga con parametri anziché creare più pubblicazioni con filtri di riga statici. Per altre informazioni sui filtri di riga con parametri, vedere [Filtri di riga con parametri](../merge/parameterized-filters-parameterized-row-filters.md).  
+-   Con la replica di tipo merge, utilizzare i filtri di riga con parametri anziché creare più pubblicazioni con filtri di riga statici. Per altre informazioni, vedere [Parameterized Row Filters](../merge/parameterized-filters-parameterized-row-filters.md).  
   
  Per definire o modificare un filtro di riga statico, vedere [Define and Modify a Static Row Filter](define-and-modify-a-static-row-filter.md).  
   
@@ -130,7 +129,7 @@ ms.locfileid: "48222628"
   
 -   La replica transazionale consente di replicare una vista indicizzata come vista o come tabella. Se la vista viene replicata come tabella, non sarà possibile filtrare le colonne dalla tabella.  
   
- I filtri di riga non sono progettati per funzionare nei database. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] viene limitata intenzionalmente l'esecuzione di `sp_replcmds` (che vengono eseguiti i filtri) al proprietario del database (`dbo`). Il `dbo` non sono associati privilegi tra database. Grazie all'aggiunta di CDC (Change Data Capture) in [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)], tramite la logica `sp_replcmds` le tabelle di rilevamento delle modifiche vengono popolate con le informazioni che possono essere restituite all'utente e su cui quest'ultimo può eseguire una query. Per motivi di sicurezza [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] limitata l'esecuzione di questa logica in modo che un malintenzionato `dbo` non possa rubare il percorso di esecuzione. Ad esempio, un `dbo` malintenzionato potrebbe aggiungere trigger nelle tabelle CDC che quindi verrebbero eseguite nel contesto della chiamata a `sp_replcmds` da parte dell'utente, in questo caso l'agente di lettura log.  Se all'account con cui l'agente è in esecuzione sono associati privilegi superiori, il `dbo` malintenzionato potrebbe tentare l'escalation dei suoi privilegi.  
+ I filtri di riga non sono progettati per funzionare nei database. In [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] viene limitata intenzionalmente l'esecuzione di `sp_replcmds` (in cui vengono eseguiti i filtri) al proprietario del database (`dbo`). Al `dbo` non sono associati privilegi tra database. Grazie all'aggiunta di CDC (Change Data Capture) in [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)], tramite la logica `sp_replcmds` le tabelle di rilevamento delle modifiche vengono popolate con le informazioni che possono essere restituite all'utente e su cui quest'ultimo può eseguire una query. Per motivi di sicurezza [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] limitata l'esecuzione di questa logica in modo che un malintenzionato `dbo` non possa rubare il percorso di esecuzione. Ad esempio, un `dbo` malintenzionato potrebbe aggiungere trigger nelle tabelle CDC che quindi verrebbero eseguite nel contesto della chiamata a `sp_replcmds` da parte dell'utente, in questo caso l'agente di lettura log.  Se all'account con cui l'agente è in esecuzione sono associati privilegi superiori, il `dbo` malintenzionato potrebbe tentare l'escalation dei suoi privilegi.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Pubblicare dati e oggetti di database](publish-data-and-database-objects.md)  

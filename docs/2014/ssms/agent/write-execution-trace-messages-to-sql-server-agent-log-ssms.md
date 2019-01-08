@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - logs [SQL Server], SQL Server Agent
@@ -16,12 +16,12 @@ ms.assetid: 90e3731e-6fae-43db-833e-9accecdd1c03
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a58590fe431fa898c617f9d1fd552aa131678b89
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 57117e531714e93000fef6beefefffc2ef210c80
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48217271"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52823175"
 ---
 # <a name="write-execution-trace-messages-to-the-sql-server-agent-error-log-sql-server-management-studio"></a>Write Execution Trace Messages to the SQL Server Agent Error Log (SQL Server Management Studio)
   In questo argomento viene descritta la procedura di configurazione di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent per includere i messaggi di traccia esecuzione nel log degli errori in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
@@ -32,7 +32,7 @@ ms.locfileid: "48217271"
   
      [Limitazioni e restrizioni](#Restrictions)  
   
-     [Security](#Security)  
+     [Sicurezza](#Security)  
   
 -   [Per scrivere messaggi di traccia esecuzione il log degli errori di SQL Server Agent utilizzando SQL Server Management Studio](#SSMSProcedure)  
   
@@ -66,7 +66,7 @@ ms.locfileid: "48217271"
   
 2.  Fare clic con il pulsante destro del mouse su **SQL Server Agent** e scegliere **Proprietà**.  
   
-3.  Nella finestra di dialogo **Proprietà SQL Server Agent –***nome_server* in **Log degli errori** nella pagina **Generale** selezionare la casella di controllo **Includi messaggi di traccia esecuzione**.  
+3.  Nel **proprietà di SQL Server Agent-* * * nome_server* nella finestra di dialogo **log degli errori** sul **generali** pagina, selezionare il **includere traccia esecuzione i messaggi** casella di controllo.  
   
 4.  Fare clic su **OK**.  
   

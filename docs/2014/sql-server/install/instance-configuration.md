@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 2016-05-04
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: install
 ms.topic: conceptual
 f1_keywords:
 - instance configuration, Setup
@@ -16,12 +15,12 @@ ms.assetid: 5bf822fc-6dec-4806-a153-e200af28e9a5
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5008096ef5c10dbd3f14198194cec4e7795d9f4a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9177aa0abe0a5f2a3746486c5cf71163bcd1e1be
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48202311"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52791301"
 ---
 # <a name="instance-configuration"></a>Configurazione dell'istanza
   Utilizzare la pagina **Configurazione dell'istanza** dell'Installazione guidata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per specificare se creare un'istanza predefinita oppure un'istanza denominata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non è già installata, verrà creata un'istanza predefinita a meno che non si specifichi un'istanza denominata.  
@@ -38,7 +37,7 @@ ms.locfileid: "48202311"
  Per ulteriori informazioni, vedere [Maximum Capacity Specifications for SQL Server](../maximum-capacity-specifications-for-sql-server.md).  
   
 ## <a name="options"></a>Opzioni  
- Solo istanze del cluster di failover: specificare il nome di rete del cluster di failover di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Questo nome identifica l'istanza del cluster di failover nella rete.  
+ Solo istanze del cluster di failover: specificare il nome di rete del cluster di failover di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Questo nome identifica l'istanza del cluster di failover nella rete.  
   
  Istanza predefinita o denominata: nel determinare se installare un'istanza predefinita o denominata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], tenere presenti le informazioni seguenti:  
   
@@ -49,7 +48,7 @@ ms.locfileid: "48202311"
 -   In qualsiasi applicazione che prevede l'installazione di [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] , questo deve essere installato come istanza denominata. In questo modo è possibile ridurre al minimo i conflitti quando più applicazioni sono installate nello stesso computer.  
   
  **Istanza predefinita**  
- Selezionare questa opzione per installare un'istanza predefinita di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Un computer può ospitare una sola istanza predefinita. Tutte le altre istanze devono essere denominate. Se, tuttavia, è installata un'istanza predefinita di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], è possibile aggiungere un'istanza predefinita di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] nello stesso computer.  
+ Selezionare questa opzione per installare un'istanza predefinita di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Un computer può ospitare una sola istanza predefinita. Tutte le altre istanze devono essere denominate. Se, tuttavia, è installata un'istanza predefinita di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , è possibile aggiungere un'istanza predefinita di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] nello stesso computer.  
   
  **Istanza denominata**  
  Selezionare questa opzione per creare una nuova istanza denominata. Quando si assegna il nome a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], tenere presenti le considerazioni seguenti:  
@@ -62,7 +61,7 @@ ms.locfileid: "48202311"
   
 -   Se si specifica MSSQLServer per il nome di istanza, verrà creata un'istanza predefinita.  
   
--   Un'installazione di [!INCLUDE[ssGeminiLong](../../includes/ssgeminilong-md.md)] viene sempre installato come istanza denominata di 'PowerPivot'. Non è possibile specificare un nome di istanza diverso per questo ruolo caratteristica.  
+-   Un'installazione di [!INCLUDE[ssGeminiLong](../../includes/ssgeminilong-md.md)] viene sempre eseguita come un'istanza denominata di "PowerPivot". Non è possibile specificare un nome di istanza diverso per questo ruolo caratteristica.  
   
 -   I nomi delle istanze devono essere costituiti al massimo da 16 caratteri.  
   
@@ -75,9 +74,9 @@ ms.locfileid: "48202311"
 -   **Solo i caratteri vengono per la tabella codici corrente di Windows sono utilizzabili in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nomi di istanza. Se viene usato un carattere Unicode non supportato, si verificherà un errore di installazione.**  
   
  **Istanze e funzionalità rilevate**  
- È possibile visualizzare un elenco dei componenti e delle istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installati sul computer su cui viene eseguito il programma di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ È possibile visualizzare un elenco dei componenti e delle istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installati sul computer su cui viene eseguito il programma di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
- **ID istanza** : per impostazione predefinita, come ID istanza viene usato il nome dell'istanza. Tale nome viene utilizzato per identificare le directory di installazione e le chiavi del Registro di sistema per l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si tratta del caso delle istanze predefinite e delle istanze denominate. Per un'istanza predefinita, il nome dell'istanza e l'ID istanza sono MSSQLSERVER. Per usare un ID istanza non predefinito, specificarlo nel campo **ID istanza** .  
+ **ID istanza** : per impostazione predefinita, come ID istanza viene usato il nome dell'istanza. Tale nome viene utilizzato per identificare le directory di installazione e le chiavi del Registro di sistema per l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si tratta del caso delle istanze predefinite e delle istanze denominate. Per un'istanza predefinita, il nome di istanza e l'ID istanza sono MSSQLSERVER. Per usare un ID istanza non predefinito, specificarlo nel campo **ID istanza** .  
   
 > [!IMPORTANT]  
 >  Con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep, l'ID istanza visualizzato in questa pagina è quello specificato durante il passaggio relativo alla preparazione dell'immagine del processo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep. Non sarà possibile specificare un ID istanza diverso durante il passaggio relativo al completamento dell'immagine.  

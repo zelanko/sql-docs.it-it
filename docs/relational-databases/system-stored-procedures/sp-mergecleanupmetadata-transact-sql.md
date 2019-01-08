@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_mergecleanupmetadata_TSQL
@@ -17,12 +16,12 @@ ms.assetid: 892f8628-4cbe-4cc3-b959-ed45ffc24064
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 994f24e0b19dac70e6987a0c23d45d5446548689
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d3ae8edeff1792cf3a1c70d4e80dea638402e30d
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47670593"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53210960"
 ---
 # <a name="spmergecleanupmetadata-transact-sql"></a>sp_mergecleanupmetadata (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,10 +51,10 @@ sp_mergecleanupmetadata [ [ @publication = ] 'publication' ]
 ## <a name="remarks"></a>Note  
  **sp_mergecleanupmetadata** deve essere utilizzato solo nelle topologie di replica che includono server che eseguono versioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] precedenti a [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Service Pack 1. Per le topologie in cui è incluso solo [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Service Pack 1 o versioni successive, è consigliabile utilizzare la pulizia dei metadati basata sulla memorizzazione automatica. Quando si esegue questa stored procedure, è importante tenere presente che le dimensioni del file di log nel computer di esecuzione sono destinate ad aumentare, a volte in modo consistente.  
   
-> [!CAUTION]  
+> [!CAUTION]
 >  Dopo aver **sp_mergecleanupmetadata** viene eseguita, per impostazione predefinita, tutte le sottoscrizioni nei Sottoscrittori delle pubblicazioni che includono metadati archiviati nelle **MSmerge_genhistory**, **MSmerge_contents**  e **MSmerge_tombstone** sono contrassegnati per la reinizializzazione, eventuali modifiche in sospeso nel Sottoscrittore andranno perse e lo snapshot corrente è contrassegnato come obsoleto.  
-  
-> [!NOTE]  
+> 
+> [!NOTE]
 >  Se sono presenti più pubblicazioni in un database e una di esse viene utilizzato un periodo di memorizzazione infinito (**@retention**=**0**), in esecuzione  **sp_mergecleanupmetadata** non la pulizia di metadati per il database di rilevamento delle modifiche merge della replica. È pertanto opportuno utilizzare il periodo di memorizzazione infinito con cautela.  
   
  Quando si esegue questa stored procedure, è possibile scegliere se reinizializzare i sottoscrittori impostando il **@reinitialize_subscriber** parametro **TRUE** (predefinito) o **FALSE**. Se **sp_mergecleanupmetadata** viene eseguita con il **@reinitialize_subscriber** parametro impostato su **TRUE**, uno snapshot verrà riapplicato al sottoscrittore anche se la sottoscrizione è stata creato senza uno snapshot (ad esempio, se i dati dello snapshot e lo schema sono stati applicati manualmente o esistevano già nel Sottoscrittore) iniziale. Impostazione del parametro su **FALSE** deve essere usata con cautela, poiché se la pubblicazione non viene reinizializzata è necessario assicurarsi che i dati nel server di pubblicazione e sottoscrittore sono sincronizzati.  
@@ -66,7 +65,7 @@ sp_mergecleanupmetadata [ [ @publication = ] 'publication' ]
   
 1.  È consigliabile, ma non richiesto, arrestare tutti gli aggiornamenti nei database di pubblicazione e sottoscrizione. Se l'esecuzione degli aggiornamenti continua, gli aggiornamenti effettuati in un Sottoscrizione dall'ultimo processo di tipo merge andranno perduti quando la pubblicazione viene reinizializzata. Viene tuttavia conservata la convergenza dei dati.  
   
-2.  Eseguire un'operazione di merge tramite l'agente di merge. È consigliabile usare la **– Validate** opzione della riga di comando dell'agente in ogni sottoscrittore quando si esegue l'agente di Merge. Se si eseguono operazioni di merge in modalità continua, vedere *considerazioni relative alla modalità continua unisce* più avanti in questa sezione.  
+2.  Eseguire un'operazione di merge tramite l'agente di merge. È consigliabile usare la **-convalidare** opzione della riga di comando dell'agente in ogni sottoscrittore quando si esegue l'agente di Merge. Se si eseguono operazioni di merge in modalità continua, vedere *considerazioni relative alla modalità continua unisce* più avanti in questa sezione.  
   
 3.  Dopo aver completato tutte le unioni, eseguire **sp_mergecleanupmetadata**.  
   
@@ -82,7 +81,7 @@ sp_mergecleanupmetadata [ [ @publication = ] 'publication' ]
   
 1.  Arrestare **tutti** aggiornamenti al database di pubblicazione e sottoscrizione.  
   
-2.  Eseguire un'operazione di merge tramite l'agente di merge. È consigliabile usare la **– Validate** opzione della riga di comando dell'agente in ogni sottoscrittore quando si esegue l'agente di Merge. Se si eseguono operazioni di merge in modalità continua, vedere *considerazioni relative alla modalità continua unisce* più avanti in questa sezione.  
+2.  Eseguire un'operazione di merge tramite l'agente di merge. È consigliabile usare la **-convalidare** opzione della riga di comando dell'agente in ogni sottoscrittore quando si esegue l'agente di Merge. Se si eseguono operazioni di merge in modalità continua, vedere *considerazioni relative alla modalità continua unisce* più avanti in questa sezione.  
   
 3.  Dopo aver completato tutte le unioni, eseguire **sp_mergecleanupmetadata**.  
   
@@ -106,7 +105,7 @@ sp_mergecleanupmetadata [ [ @publication = ] 'publication' ]
   
  Dopo aver completato passaggio3 Running **sp_mergecleanupmetadata**, riprendere merge in modalità continua basate sul modo in cui è stata arrestata. Eseguire una delle operazioni seguenti:  
   
--   Aggiungere il **– Continuous** parametro nuovamente per l'agente di Merge.  
+-   Aggiungere il **-continua** parametro nuovamente per l'agente di Merge.  
   
 -   Riattivare la pubblicazione con **sp_changemergepublication.**  
   

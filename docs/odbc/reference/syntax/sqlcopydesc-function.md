@@ -20,12 +20,12 @@ ms.assetid: d5450895-3824-44c4-8aa4-d4f9752a9602
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e165ca48af3b634f1dcbe80c05c83f2c872d1b01
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e91febb4b5b94b5a7f9df62347b4db5edcecf975
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47642779"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53202440"
 ---
 # <a name="sqlcopydesc-function"></a>Funzione SQLCopyDesc
 **Conformità**  
@@ -39,8 +39,8 @@ ms.locfileid: "47642779"
 ```  
   
 SQLRETURN SQLCopyDesc(  
-     SQLHDESC     SourceDescHandle,  
-     SQLHDESC     TargetDescHandle);  
+     SQLHDESC     SourceDescHandle,  
+     SQLHDESC     TargetDescHandle);  
 ```  
   
 ## <a name="arguments"></a>Argomenti  
@@ -60,7 +60,7 @@ SQLRETURN SQLCopyDesc(
   
  In quanto **SQLCopyDesc** può essere implementata chiamando **SQLGetDescField** e **SQLSetDescField**, **SQLCopyDesc** possono restituire SQLSTATE restituiti da **SQLGetDescField** oppure **SQLSetDescField**.  
   
-|SQLSTATE|Errore|Description|  
+|SQLSTATE|Errore|Descrizione|  
 |--------------|-----------|-----------------|  
 |01000|Avviso generale|Messaggio informativo specifico del driver. (Funzione restituisce SQL_SUCCESS_WITH_INFO).|  
 |08S01|Errore del collegamento di comunicazione|Il collegamento di comunicazione tra il driver e l'origine dati a cui è stato connesso il driver non è stato possibile prima dell'elaborazione di funzione è stata completata.|  

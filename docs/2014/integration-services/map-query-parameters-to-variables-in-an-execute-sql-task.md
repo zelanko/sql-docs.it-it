@@ -18,12 +18,12 @@ ms.assetid: 6a164349-dfcf-4995-80bc-d4e7aee52a83
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ce9e002b3a01b3cb6e13de5176bd0826870796f6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b0f1add0f2d249922f00fc1b16d5da12bb903faf
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48070926"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52524993"
 ---
 # <a name="map-query-parameters-to-variables-in-an-execute-sql-task"></a>Mapping di parametri di query a variabili in un'attività Esegui SQL
   In questo argomento viene descritto come utilizzare un'istruzione SQL con parametri nell'attività Esegui SQL e come creare mapping tra variabili e parametri dell'istruzione SQL.  
@@ -82,10 +82,10 @@ ms.locfileid: "48070926"
   
     |Tipo di connessione|Nome parametro|  
     |---------------------|--------------------|  
-    |ADO|Param1, Param2, …|  
+    |ADO|Param1, Param2, ...|  
     |ADO.NET e SQLMOBILE|@\<nome parametro>|  
-    |ODBC|1, 2, 3, …|  
-    |EXCEL e OLE DB|0, 1, 2, 3, …|  
+    |ODBC|1, 2, 3, ...|  
+    |EXCEL e OLE DB|0, 1, 2, 3, ...|  
   
 10. Selezionare una variabile nell'elenco **Nome variabile** . Per altre informazioni, vedere [Aggiungere, eliminare o modificare l'ambito di una variabile definita dall'utente in un pacchetto](../../2014/integration-services/add-delete-change-scope-of-user-defined-variable-in-a-package.md).  
   
@@ -106,6 +106,6 @@ ms.locfileid: "48070926"
 ## <a name="see-also"></a>Vedere anche  
  [Attività Esegui SQL](control-flow/execute-sql-task.md)   
  [I parametri e codici restituiti nell'attività Esegui SQL](../../2014/integration-services/parameters-and-return-codes-in-the-execute-sql-task.md)   
- [Integration Services &#40;SSIS&#41; le variabili](integration-services-ssis-variables.md)  
+ [Variabili di Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md)  
   
   

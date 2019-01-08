@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - mapped annotation
@@ -19,15 +17,15 @@ ms.assetid: 7042741e-ce4d-4912-9c4a-d77194a028fc
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 16d6d22d2bd37d6f826878a5abd0bc235c3de83a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 14934b2b4c98b09a6596887dc2b4ced7ec04dd65
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48109101"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52807273"
 ---
 # <a name="sqlmapped-sqlxml-40"></a>sql:mapped (SQLXML 4.0)
-  Caricamento Bulk XML elabora il `sql:mapped` annotazione nello schema XSD come previsto, vale a dire, se lo schema di mapping specifica `sql:mapped="false"` per qualsiasi elemento o attributo, il caricamento Bulk XML non tenta di archiviare i dati associati nella colonna corrispondente.  
+  Caricamento Bulk XML elabora il `sql:mapped` annotazione nello schema XSD come che previsto è, se lo schema di mapping specifica `sql:mapped="false"` per qualsiasi elemento o attributo, il caricamento Bulk XML non tenta di archiviare i dati associati nella colonna corrispondente.  
   
  Il caricamento bulk XML ignora gli elementi e gli attributi di cui non è stato eseguito il mapping (perché non sono descritti nello schema oppure perché vengono annotati nello schema XSD con `sql:mapped="false"`). Tutti i dati di cui non è stato eseguito il mapping vengono inseriti nella colonna di overflow, se tale colonna viene specificata tramite `sql:overflow-field`.  
   

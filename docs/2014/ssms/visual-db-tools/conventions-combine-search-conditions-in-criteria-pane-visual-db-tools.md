@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - search conditions [SQL Server], combining
@@ -19,12 +19,12 @@ ms.assetid: d4859be5-ff5b-48b2-a101-ad40c6dbcc68
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 80c7cff0831ef49610c05b28fda94b82e51225e0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3a1022770526386640f0ad2aa114a2161ba16dc8
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48052591"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52792733"
 ---
 # <a name="conventions-for-combining-search-conditions-in-the-criteria-pane-visual-database-tools"></a>Convenzioni per la combinazione delle condizioni di ricerca nel riquadro Criteri (Visual Database Tools)
   È possibile creare query con qualsiasi numero di condizioni di ricerca, collegate con qualsiasi numero di operatori AND e OR. Poiché una query con una combinazione di clausole AND e OR può diventare complessa, è utile capire come viene interpretata durante la sua esecuzione e come viene rappresentata nel [riquadro Criteri](visual-database-tools.md) e nel [riquadro SQL](sql-pane-visual-database-tools.md).  

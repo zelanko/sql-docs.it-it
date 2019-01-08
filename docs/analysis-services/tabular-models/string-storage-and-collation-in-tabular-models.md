@@ -1,5 +1,5 @@
 ---
-title: Archivio di stringhe e regole di confronto nei modelli tabulari | Documenti Microsoft
+title: Archivio di stringhe e regole di confronto nei modelli tabulari di Analysis Services | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,18 +9,18 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 38a79073648bdab889913050118d7318ca3f536b
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 84bd7e70c5ff3c1ee41bdcc331fefdd2422937ed
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34044949"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53071808"
 ---
 # <a name="string-storage-and-collation-in-tabular-models"></a>Archivio di stringhe e regole di confronto nei modelli tabulari
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
   Le stringhe (valori di testo) vengono archiviate in un formato altamente compresso nei modelli tabulari. A causa di questa compressione, è possibile ottenere risultati imprevisti quando si recuperano stringhe intere o parziali. Inoltre, poiché le regole di confronto e le impostazioni locali delle stringhe vengono ereditate in modo gerarchico dall'oggetto padre più prossimo, se la lingua della stringa non viene definita in modo esplicito, le impostazioni locali e le regole di confronto dell'oggetto padre possono influire sulla modalità di archiviazione di ogni stringa e determinare se la stringa è univoca o unita a stringhe simili secondo quanto definito nelle regole di confronto padre.  
   
- In questo articolo viene descritto il meccanismo mediante il quale le stringhe vengono compressi e archiviate e vengono forniti esempi di come le regole di confronto e la lingua influiscono sui risultati delle formule di testo nei modelli tabulari.  
+ Questo articolo descrive il meccanismo mediante il quale le stringhe vengono compressi e archiviate e vengono forniti esempi di come le regole di confronto e la lingua influiscono sui risultati delle formule di testo nei modelli tabulari.  
   
 ## <a name="storage"></a>Archiviazione  
  Nei modelli tabulari tutti i dati sono altamente compressi affinché si adattino alla memoria. Di conseguenza, tutte le stringhe che possono essere considerate equivalenti dal punto di vista lessicale vengono archiviate una sola volta. La prima istanza della stringa viene utilizzata come rappresentazione canonica, dopodiché ogni stringa equivalente viene indicizzata allo stesso valore compresso della prima occorrenza.  
@@ -54,7 +54,7 @@ ms.locfileid: "34044949"
 |trEE|  
 |PlAnT|  
   
- Se si utilizza la colonna **Classification – English**nel modello, nella classificazione della pianta non verranno visualizzati i valori originali, con utilizzi diversi di maiuscole e minuscole, ma solo la prima istanza. Il motivo è che tutti i diversi utilizzi delle maiuscole e minuscole della parola **tree** vengono considerati equivalenti da queste regole di confronto e da queste impostazioni locali. Di conseguenza, è stata mantenuta una sola stringa e la prima istanza di tale stringa rilevata dal sistema è quella che è stata salvata.  
+ Se si utilizza la colonna **Classification - English**, nel modello di classificazione della pianta è verranno visualizzati non i valori originali, con utilizzi diversi di maiuscole e minuscole, ma solo la prima istanza. Il motivo è che tutti i diversi utilizzi delle maiuscole e minuscole della parola **tree** vengono considerati equivalenti da queste regole di confronto e da queste impostazioni locali. Di conseguenza, è stata mantenuta una sola stringa e la prima istanza di tale stringa rilevata dal sistema è quella che è stata salvata.  
   
 > [!WARNING]  
 >  È possibile decidere quale stringa sarà la prima a essere archiviata, in base a ciò che viene considerato corretto, ma tale operazione potrebbe risultare molto difficile. Non esiste un modo semplice per determinare in anticipo quale riga deve essere elaborata per prima dal motore, considerando che tutti i valori vengono considerati equivalenti. In alternativa, se è necessario impostare il valore standard, è necessario eseguire la pulizia di tutte le stringhe prima di caricare il modello.  

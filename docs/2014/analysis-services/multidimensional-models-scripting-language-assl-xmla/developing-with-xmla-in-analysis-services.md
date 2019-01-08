@@ -19,12 +19,12 @@ ms.assetid: 54445ee7-720c-4683-99a6-e75b3dcca904
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 52c03994288a54db9057fcac7c121b08b806d8db
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: bb3ed3080d27a5db2cadcc9ab2b47e9a66d95a62
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145566"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53374473"
 ---
 # <a name="developing-with-xmla-in-analysis-services"></a>Sviluppo con XMLA in Analysis Services
   XML for Analysis (XMLA) è protocollo XML basato su SOAP, progettato in modo specifico per accedere a tutti i dati di qualsiasi origine dati multidimensionale standard accessibile tramite una connessione HTTP. In [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] l'unico protocollo utilizzato durante la comunicazione con applicazioni client è XMLA. Fondamentalmente, tutte le librerie client supportate da Analysis Services formulano richieste e risposte in XMLA.  
@@ -33,9 +33,9 @@ ms.locfileid: "50145566"
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] è completamente conforme alla specifica del 1.1 di XMLA, estendendola inoltre all'abilitazione del supporto della definizione, della modifica e del controllo dei dati. Le estensioni di Analysis Services vengono denominate ASSL (Analysis Services Scripting Language). L'utilizzo combinato di XMLA e ASSL abilita un set di funzionalità più ampio rispetto a quello fornito dal solo protocollo XMLA. Per altre informazioni su ASSL, vedere [lo sviluppo con Analysis Services Scripting Language &#40;ASSL&#41;](../multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md).  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>In questa sezione  
   
-|Argomento|Description|  
+|Argomento|Descrizione|  
 |-----------|-----------------|  
 |[Gestione di connessioni e sessioni &#40;XMLA&#41;](managing-connections-and-sessions-xmla.md)|Viene descritto come connettersi a un'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e come gestire sessioni e informazioni sullo stato in XMLA.|  
 |[Gestione degli errori e avvisi &#40;XMLA&#41;](handling-errors-and-warnings-xmla.md)|Descrive il modo in cui [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] restituisce le informazioni di errore e di avviso per metodi e comandi in XMLA.|  
@@ -61,8 +61,8 @@ ms.locfileid: "50145566"
   
 ## <a name="namespace-and-schema"></a>Spazio dei nomi e schema  
   
-### <a name="namespace"></a>Namespace  
- Lo schema definito in questa specifica utilizza lo spazio dei nomi XML http://schemas.microsoft.com/AnalysisServices/2003/Engine e l'abbreviazione standard "DDL".  
+### <a name="namespace"></a>Spazio dei nomi  
+ Lo schema definito in questa specifica utilizza lo spazio dei nomi XML https://schemas.microsoft.com/AnalysisServices/2003/Engine e l'abbreviazione standard "DDL".  
   
 ### <a name="schema"></a>schema  
  La definizione di uno schema XML Schema Definition Language (XSD) per il linguaggio di definizione dell'oggetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] è basata sulla definizione degli elementi e della gerarchia dello schema descritti in questa sezione.  

@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent, alerts
@@ -14,12 +14,12 @@ ms.assetid: c86ca6eb-c59f-46e9-bc32-d474e7c3b170
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 191f65592c9bb7962624297daced2692a22a0f4f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6ac3e9ee443f0c10a39128fc1d6aab6813ec4f4d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48139551"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52795863"
 ---
 # <a name="define-the-response-to-an-alert-sql-server-management-studio"></a>Definizione della risposta a un avviso (SQL Server Management Studio)
   In questo argomento viene descritta la procedura per la definizione delle modalità di risposta di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] agli avvisi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -30,7 +30,7 @@ ms.locfileid: "48139551"
   
      [Limitazioni e restrizioni](#Restrictions)  
   
-     [Security](#Security)  
+     [Sicurezza](#Security)  
   
 -   **Per definire la risposta a un avviso tramite:**  
   
@@ -65,15 +65,15 @@ ms.locfileid: "48139551"
   
 4.  Fare clic con il pulsante destro del mouse sull'avviso per cui si desidera definire una risposta e selezionare **Proprietà**.  
   
-5.  Nella finestra di dialogo *Proprietà dell'avviso***nome_avviso** selezionare **Risposta** in **Seleziona una pagina**.  
+5.  Nella finestra di dialogo _Proprietà dell'avviso_**nome_avviso** selezionare **Risposta**in **Selezione pagina**.  
   
-6.  Selezionare la casella di controllo **Esegui processo** e, dall'elenco sottostante la casella di controllo **Esegui processo**, selezionare il processo da eseguire quando viene generato l'avviso. È possibile creare un nuovo processo facendo clic su **Nuovo processo**. Per visualizzare ulteriori informazioni sul processo, fare clic su **Visualizza processo**. Per altre informazioni sulle opzioni disponibili nelle finestre di dialogo **Nuovo processo** e **Proprietà processo***nome_processo*, vedere [Creare un processo](create-a-job.md) e [Visualizzare un processo](view-a-job.md).  
+6.  Selezionare la casella di controllo **Esegui processo** e, dall'elenco sottostante la casella di controllo **Esegui processo**, selezionare il processo da eseguire quando viene generato l'avviso. È possibile creare un nuovo processo facendo clic su **Nuovo processo**. Per visualizzare ulteriori informazioni sul processo, fare clic su **Visualizza processo**. Per altre informazioni sulle opzioni disponibili nelle finestre di dialogo **Nuovo processo** e **Proprietà processo**_nome_processo_ vedere [Creare un processo](create-a-job.md) e [Visualizzare un processo](view-a-job.md).  
   
-7.  Selezionare la casella di controllo **Invia notifica a operatori** se si desidera notificare agli operatori quando viene attivato l'avviso. In **Elenco operatori**selezionare uno o più dei metodi seguenti per inviare la notifica all'operatore o agli operatori: **Posta elettronica**, **Cercapersone**o **Net Send**. È possibile creare un nuovo operatore facendo clic su **Nuovo operatore**. Per visualizzare ulteriori informazioni su un operatore, fare clic su **Visualizza operatore**. Per ulteriori informazioni sulle opzioni disponibili nelle finestre di dialogo delle proprietà **Nuovo operatore** e **Visualizza operatore** , vedere [Create an Operator](create-an-operator.md) e [View Information About an Operator](view-information-about-an-operator.md).  
+7.  Selezionare la casella di controllo **Invia notifica a operatori** se si desidera notificare agli operatori quando viene attivato l'avviso. Nel **elenco operatori**, selezionare uno o più dei metodi seguenti per inviare la notifica all'operatore o agli operatori: **Messaggio di posta elettronica**, **cercapersone**, o **Net Send**. È possibile creare un nuovo operatore facendo clic su **Nuovo operatore**. Per visualizzare ulteriori informazioni su un operatore, fare clic su **Visualizza operatore**. Per ulteriori informazioni sulle opzioni disponibili nelle finestre di dialogo delle proprietà **Nuovo operatore** e **Visualizza operatore** , vedere [Create an Operator](create-an-operator.md) e [View Information About an Operator](view-information-about-an-operator.md).  
   
 8.  Al termine, fare clic su **OK**.  
   
-##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
   
 #### <a name="to-define-the-response-to-an-alert"></a>Per definire la risposta a un avviso  
   
@@ -85,13 +85,13 @@ ms.locfileid: "48139551"
   
     ```  
     -- adds an e-mail notification for Test Alert.  
-    -- assumes that Test Alert already exists and that François Ajenstat is a valid operator name   
+    -- assumes that Test Alert already exists and that Fran??ois Ajenstat is a valid operator name   
     USE msdb ;  
     GO  
   
     EXEC dbo.sp_add_notification  
      @alert_name = N'Test Alert',  
-     @operator_name = N'François Ajenstat',  
+     @operator_name = N'Fran??ois Ajenstat',  
      @notification_method = 1 ;  
     GO  
     ```  

@@ -10,12 +10,12 @@ ms.assetid: db1d668a-23b7-4757-a9c5-1bd848ba7f6d
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 65c45ab0696792268cc6268503054a894161114a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f6c2580e17c204b534ec4c8ebadec3a1e992a4d6
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48162751"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52529275"
 ---
 # <a name="delete-user-defined-functions"></a>Eliminare funzioni definite dall'utente
   È possibile eliminare funzioni definite dall'utente in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]  
@@ -26,7 +26,7 @@ ms.locfileid: "48162751"
   
      [Limitazioni e restrizioni](#Restrictions)  
   
-     [Security](#Security)  
+     [Sicurezza](#Security)  
   
 -   **Eliminare una funzione definita dall'utente tramite:**  
   
@@ -68,9 +68,9 @@ ms.locfileid: "48162751"
 5.  Nella finestra di dialogo **Elimina oggetto** fare clic su **OK**.  
   
     > [!IMPORTANT]  
-    >  Fare clic su **Mostra dipendenze** nella finestra di dialogo **Elimina oggetto** per aprire la finestra di dialogo *Dipendenze di***nome_funzione**. Verranno visualizzati tutti gli oggetti che dipendono dalla funzione e tutti gli oggetti da cui dipende la funzione.  
+    >  Fare clic su **Mostra dipendenze** nella finestra di dialogo **Elimina oggetto** per aprire la finestra di dialogo _Dipendenze_ di **nome_funzione**. Verranno visualizzati tutti gli oggetti che dipendono dalla funzione e tutti gli oggetti da cui dipende la funzione.  
   
-##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
   
 #### <a name="to-delete-a-user-defined-function"></a>Per eliminare una funzione definita dall'utente  
   
@@ -81,7 +81,7 @@ ms.locfileid: "48162751"
 3.  Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**.  
   
     ```  
-    -- creates function called “Sales.ufn_SalesByStore”  
+    -- creates function called "Sales.ufn_SalesByStore"  
     USE AdventureWorks2012;  
     GO  
     CREATE FUNCTION Sales.ufn_SalesByStore (@storeid int)  

@@ -20,12 +20,12 @@ ms.assetid: 76ee851a-dca9-40cc-8e9e-eb3f74e560ee
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5e06c511debbcac9741e178ebfb5c1a8eae0a330
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ba02c28f3243b623695e3e087490ef3f73c60385
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47620409"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53204340"
 ---
 # <a name="sqlcreatedatasource-function"></a>Funzione SQLCreateDataSource
 **Conformità**  
@@ -56,7 +56,7 @@ BOOL SQLCreateDataSource(
 ## <a name="diagnostics"></a>Diagnostica  
  Quando **SQLCreateDataSource** FALSO, restituisce un oggetto associato  *\*pfErrorCode* valore può essere ottenuto chiamando **SQLInstallerError**. La tabella seguente elenca i  *\*pfErrorCode* i valori che possono essere restituiti da **SQLInstallerError** e illustra ognuna nel contesto di questa funzione.  
   
-|*\*pfErrorCode*|Errore|Description|  
+|*\*pfErrorCode*|Errore|Descrizione|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_GENERAL_ERR|Errore di programma di installazione generale|Errore per cui si è verificato alcun errore di programma di installazione specifico.|  
 |ODBC_ERROR_INVALID_HWND|Handle della finestra valida|Il *hwnd* argomento era NULL o non valido.|  

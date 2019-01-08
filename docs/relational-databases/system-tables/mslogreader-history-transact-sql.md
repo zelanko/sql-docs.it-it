@@ -5,8 +5,7 @@ ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - MSlogreader_history_TSQL
@@ -19,19 +18,19 @@ ms.assetid: 2e399fa1-3591-4c1c-96b7-7964fe82c7c4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ebf9155848d8acd515eea5dad10318c87f54a912
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8229d107a84dad47ca0cf83703a8cfb5dd3b5501
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47645189"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52807853"
 ---
 # <a name="mslogreaderhistory-transact-sql"></a>MSlogreader_history (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Il **MSlogreader_history** tabella contiene righe di cronologia per gli agenti di lettura Log associati al server di distribuzione locale. Questa tabella è archiviata nel database di distribuzione.  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**agent_id**|**int**|ID dell'agente di lettura log.|  
 |**runstatus**|**int**|Stato di esecuzione:<br /><br /> 1 = In fase di avvio.<br /><br /> 2 = Esito positivo.<br /><br /> 3 = Operazione in corso.<br /><br /> 4 = Inattivo.<br /><br /> 5 = Nuovo tentativo.<br /><br /> 6 = Esito negativo.|  

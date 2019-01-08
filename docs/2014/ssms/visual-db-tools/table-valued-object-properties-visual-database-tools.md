@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - vdt.designers.properties.TVO
@@ -12,12 +12,12 @@ ms.assetid: eaf06cbf-8242-4483-894f-80ae02a4840e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 08686e3dd511d3336c94ab4b0aa96b43ce6d7007
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0c366cca32c8d441ff25f9688a841e2f0fac77a9
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48129361"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52775914"
 ---
 # <a name="table-valued-object-properties-visual-database-tools"></a>Proprietà di oggetti con valori di tabella (Visual Database Tools)
   Queste proprietà vengono visualizzate nella finestra Proprietà quando si seleziona un oggetto con valori di tabella in **Progettazione query e Progettazione viste**. Un oggetto con valori di tabella può essere una vista, un sinonimo, una tabella derivata o una funzione con valori di tabella. Se non specificato diversamente, tali proprietà sono di sola lettura nella finestra **Proprietà** .  
@@ -31,7 +31,7 @@ ms.locfileid: "48129361"
  **Categoria Identità**  
  Viene espansa per visualizzare le proprietà **Nome** e **Tipo TVO** .  
   
- **Nome**  
+ **Name**  
  Consente di visualizzare il nome dell'oggetto con valori di tabella selezionato.  
   
  **Tipo TVO**  

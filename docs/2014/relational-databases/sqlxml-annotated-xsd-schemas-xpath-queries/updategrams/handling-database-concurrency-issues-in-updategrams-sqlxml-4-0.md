@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - <before> block
@@ -22,12 +20,12 @@ ms.assetid: d4b908d1-b25b-4ad9-8478-9cd882e8c44e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d92e86b5e548d5a828a9d20c00c69dd600f1c632
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 639071b9526c70477fd081bd94d61380a79beb2d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48127501"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52797013"
 ---
 # <a name="handling-database-concurrency-issues-in-updategrams-sqlxml-40"></a>Gestione dei problemi di concorrenza di database negli updategram (SQLXML 4.0)
   Analogamente ad altri meccanismi di aggiornamento del database, gli updategram devono gestire aggiornamenti simultanei ai dati in un ambiente multiutente. Gli updategram utilizzano il controllo della concorrenza ottimistica, che esegue il confronto dei dati di campo come snapshot per garantire che i dati da aggiornare non siano già stati modificati da un'altra applicazione utente dal momento in cui sono stati letti dal database. Gli updategram includono questi valori di snapshot nel  **\<prima di >** blocco degli Updategram. Prima di aggiornare il database, l'updategram controlla i valori specificati nel  **\<prima di >** blocco rispetto ai valori presenti nel database per garantire che l'aggiornamento è valido.  

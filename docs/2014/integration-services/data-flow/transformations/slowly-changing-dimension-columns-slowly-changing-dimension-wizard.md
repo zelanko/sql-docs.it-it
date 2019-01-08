@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.loaddimwizard.scdsupport.f1
@@ -13,12 +12,12 @@ ms.assetid: 36de99d5-5368-48e0-b876-17e9c6862c6c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 28f130a0a0bd02cc865a552fd08bef42502ee12f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6f5b4fe2c52bfcf1c667f286756e330d42455a29
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48079680"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52805093"
 ---
 # <a name="slowly-changing-dimension-columns-slowly-changing-dimension-wizard"></a>Colonne dimensioni a modifica lenta (Configurazione guidata dimensioni a modifica lenta)
   Utilizzare la finestra di dialogo **Colonne dimensioni a modifica lenta** per selezionare un tipo di modifica per ogni colonna delle dimensioni a modifica lenta.  
@@ -36,6 +35,6 @@ ms.locfileid: "48079680"
  Consente di selezionare una colonna delle dimensioni e di rimuoverla dall'elenco di colonne mappate facendo clic su **Rimuovi**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Configurare gli output tramite Configurazione guidata dimensioni a modifica lenta](configure-outputs-using-the-slowly-changing-dimension-wizard.md)  
+ [Configurazione degli output tramite Configurazione guidata dimensioni a modifica lenta](configure-outputs-using-the-slowly-changing-dimension-wizard.md)  
   
   

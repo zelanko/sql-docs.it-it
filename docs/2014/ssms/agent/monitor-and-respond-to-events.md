@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - notifications [SQL Server], alert
@@ -21,17 +21,17 @@ ms.assetid: f7fbe155-5b68-4777-bc71-a47637471f32
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 739668b9223b770803ef1fdd4985ce112982c58b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bb16e6e7fc21d3b399d63d2e833eb846d62278ec
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48212341"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52822005"
 ---
 # <a name="monitor-and-respond-to-events"></a>Monitoraggio e risposta agli eventi
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent può monitorare e rispondere automaticamente agli *eventi*, ad esempio messaggi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], a condizioni specifiche delle prestazioni e agli eventi del servizio Strumentazione gestione Windows (WMI).  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Avvisi](alerts.md)  
  Sono incluse informazioni sulla denominazione di un avviso e sulla selezione di eventi o condizioni delle prestazioni a cui rispondono gli avvisi.  
   

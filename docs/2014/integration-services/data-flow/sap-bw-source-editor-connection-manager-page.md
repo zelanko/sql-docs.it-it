@@ -4,24 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 2a6dc531-85ca-43c5-a65f-3ad3f7d537c4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 37ef852cea67ee021cee7dd182dc4a11132abcea
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d491467d16b34207ab74f6ec4d892747e26165e4
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48201261"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52802043"
 ---
 # <a name="sap-bw-source-editor-connection-manager-page"></a>Editor origine SAP BW (pagina Gestione connessione)
   Usare la pagina **Gestione connessione** della finestra di dialogo **Editor origine SAP BW** per selezionare la gestione connessione SAP BW per l'origine SAP BW. In questa pagina vengono inoltre selezionati la modalità di esecuzione e i parametri per estrarre i dati dal sistema SAP Netweaver BW.  
   
- Per sapere di più sul componente di origine SAP BW di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW, vedere [Origine SAP BW](sap-bw-source.md).  
+ Per altre informazioni sul componente di origine SAP BW di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW, vedere [Origine SAP BW](sap-bw-source.md).  
   
 > [!IMPORTANT]  
 >  La documentazione per Microsoft Connector 1.1 for SAP BW presuppone la conoscenza dell'ambiente SAP Netweaver BW. Per ulteriori informazioni su SAP Netweaver BW o per informazioni su come configurare oggetti e processi di SAP Netweaver BW, vedere la documentazione SAP.  
@@ -56,7 +55,7 @@ ms.locfileid: "48201261"
  **Modalità di esecuzione**  
  Specificare il metodo per l'estrazione dei dati dall'origine.  
   
-|Opzione|Description|  
+|Opzione|Descrizione|  
 |------------|-----------------|  
 |**P - Attivazione catena processi**|Attivare una catena di processi. In questo caso, il pacchetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] avvia il processo di estrazione.|  
 |**W - Attesa notifica**|Attendere la notifica dal sistema SAP Netweaver BW per avviare l'estrazione dei dati. In questo caso, il sistema SAP Netweaver BW avvia il processo di estrazione.|  
@@ -123,7 +122,7 @@ ms.locfileid: "48201261"
  Immettere l'ID richiesta associato all'estrazione.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Editor origine SAP BW &#40;(pagina colonne)&#41;](sap-bw-source-editor-columns-page.md)   
+ [Editor origine SAP BW &#40;pagina Colonne&#41;](sap-bw-source-editor-columns-page.md)   
  [Editor origine SAP BW &#40;pagina Output degli errori&#41;](sap-bw-source-editor-error-output-page.md)   
  [Editor origine SAP BW &#40;pagina Avanzate&#41;](sap-bw-source-editor-advanced-page.md)   
  [Guida (F1) di Microsoft Connector 1.1 for SAP BW](../microsoft-connector-for-sap-bw-f1-help.md)  

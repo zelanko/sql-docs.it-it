@@ -17,12 +17,12 @@ ms.assetid: 8a1f33e8-2bd6-4fb8-bd46-c86f2a067f60
 author: heidisteen
 ms.author: heidist
 manager: craigg
-ms.openlocfilehash: 92460328b9d85ab5818679b12639618ffe2b0a14
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 100bac6834825af1e22658279d26be02c30f3f39
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48149901"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53349268"
 ---
 # <a name="install-analysis-services-in-multidimensional-and-data-mining-mode"></a>Installazione di Analysis Services in modalità Multidimensionale e Data Mining
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] offre funzionalità di elaborazione analitica in linea (OLAP) e di data mining per applicazioni di Business Intelligence. In questa versione, il supporto per i database OLAP e modelli di data mining è disponibile quando si installa [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] nelle *modalità multidimensionale*. La modalità multidimensionale è una delle tre modalità del server in cui viene eseguito [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Si tratta della modalità predefinita. Se si installa [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] utilizzando i valori predefiniti, si ottiene un'istanza che esegue database multidimensionali e modelli di data mining.  
@@ -67,12 +67,12 @@ ms.locfileid: "48149901"
   
  [Determinare la modalità server di un'istanza di Analysis Services](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   
- [Componenti aggiuntivi Data Mining di dati SQL Server](http://go.microsoft.com/fwlink/?LinkId=197091)  
+ [Componenti aggiuntivi Data Mining di dati SQL Server](https://go.microsoft.com/fwlink/?LinkId=197091)  
   
- Per impostazione predefinita, i database di esempio, il codice di esempio e i componenti aggiuntivi delle applicazioni client non vengono installati come parte dell'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per installare i database di esempio e il codice di esempio, vedere il sito Web [CodePlex](http://go.microsoft.com/fwlink/?LinkId=87843).  
+ Per impostazione predefinita, i database di esempio, il codice di esempio e i componenti aggiuntivi delle applicazioni client non vengono installati come parte dell'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per installare i database di esempio e il codice di esempio, vedere il sito Web [CodePlex](https://go.microsoft.com/fwlink/?LinkId=87843).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Funzionalità supportate dalle edizioni di SQL Server 2012](http://go.microsoft.com/fwlink/?linkid=232473)   
+ [Funzionalità supportate dalle edizioni di SQL Server 2012](https://go.microsoft.com/fwlink/?linkid=232473)   
  [Lingue e regole di confronto &#40;Analysis Services&#41;](../../../2014/analysis-services/languages-and-collations-analysis-services.md)   
  [Aggiornare Analysis Services](../../database-engine/install-windows/upgrade-analysis-services.md)  
   
