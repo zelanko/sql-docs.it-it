@@ -1,5 +1,5 @@
 ---
-title: Riferimento tecnico l'algoritmo Microsoft Neural Network | Documenti Microsoft
+title: Riferimento tecnico l'algoritmo Microsoft Neural Network | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 76e71ae9c0ceb236c49df8e7fc8ec67713ef3e76
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: a9895eb3e52c83c1ee3594b40fa7257fc53fd4d0
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018245"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52525490"
 ---
 # <a name="microsoft-neural-network-algorithm-technical-reference"></a>Microsoft Neural Network Algorithm Technical Reference
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  L'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Neural Network usa una rete *perceptron multistrato*, chiamata anche *rete Delta Rule con retropropagazione*, costituita da un massimo di tre livelli neurali o *perceptron*. Tali livelli rappresentano rispettivamente un livello di input, un livello nascosto facoltativo e un livello di output.  
+  L'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Neural Network usa una rete *perceptron multistrato* , chiamata anche *rete Delta Rule con retropropagazione*, costituita da un massimo di tre livelli neurali o *perceptron*. Tali livelli rappresentano rispettivamente un livello di input, un livello nascosto facoltativo e un livello di output.  
   
  Una descrizione dettagliata delle reti neurali perceptron multistrato esula dagli argomenti trattati nella presente documentazione. In questo argomento viene illustrata l'implementazione di base dell'algoritmo, inclusi il metodo utilizzato per normalizzare i valori di input e output e i metodi relativi alla caratteristica di selezione degli attributi utilizzati per ridurre la cardinalità degli attributi. Vengono inoltre descritti i parametri e altre impostazioni che è possibile utilizzare per personalizzare il comportamento dell'algoritmo e vengono forniti collegamenti a informazioni aggiuntive relative all'esecuzione di query sul modello.  
   
@@ -84,7 +84,7 @@ ms.locfileid: "34018245"
   
  **Valori discreti**  
   
- `μ = p` – probabilità precedente di uno stato  
+ `μ = p` -la probabilità precedente di uno stato  
   
  `StdDev  = sqrt(p(1-p))`  
   
@@ -174,7 +174,7 @@ ms.locfileid: "34018245"
 ### <a name="input-and-predictable-columns"></a>Colonne di input e stimabili  
  L'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Neural Network supporta le colonne di input e le colonne stimabili specifiche riportate nella tabella seguente.  
   
-|Colonna|Tipi di contenuto|  
+|colonna|Tipi di contenuto|  
 |------------|-------------------|  
 |Attributo di input|Continuous, Cyclical, Discrete, Discretized, Key, Table e Ordered|  
 |Attributo stimabile|Continuous, Cyclical, Discrete, Discretized e Ordered|  
@@ -184,7 +184,7 @@ ms.locfileid: "34018245"
   
 ## <a name="see-also"></a>Vedere anche  
  [Algoritmo Microsoft Neural Network](../../analysis-services/data-mining/microsoft-neural-network-algorithm.md)   
- [Contenuto del modello di data mining per i modelli di rete neurale & #40; Analysis Services - Data Mining & #41;](../../analysis-services/data-mining/mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
- [Esempi di Query del modello di rete neurale](../../analysis-services/data-mining/neural-network-model-query-examples.md)  
+ [Contenuto dei modelli di data mining per i modelli di rete neurale &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
+ [Esempi di query sul modello di rete neurale](../../analysis-services/data-mining/neural-network-model-query-examples.md)  
   
   

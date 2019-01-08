@@ -12,18 +12,18 @@ ms.assetid: 22f38901-ec35-4707-a911-784e6ad8dafb
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 07b52a71d3f12455bacdd2e9789aadb5ed5967db
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a2c1bd3fea167a784d86f7e323566f73c3a01f86
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47604679"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512953"
 ---
 # <a name="creating-test-cases-oracletosql"></a>Creazione di test case (OracleToSQL)
 Usare la procedura guidata di Test Case per creare un test. Questa procedura guidata consente di creare test case scegliendo testato e verificato gli oggetti e specificando i parametri di test.  
   
 ## <a name="starting-the-test-case-wizard"></a>Avvio della procedura guidata di Test Case  
-Per avviare Creazione guidata Test Case **nuovo Test Case...** dal **Tester** menu.  
+Per avviare Creazione guidata Test Case **nuovo Test Case...**  dal **Tester** menu.  
   
 All'avvio, la procedura guidata cerca schema SSMATESTER_ORACLE sul server Oracle di origine. È lo schema di estensione Tester usato per l'archiviazione di oggetti ausiliari. Se il Test Case mpossibile trovare SSMATESTER_ORACLE, visualizza una finestra di dialogo che si propone di creare lo schema. (Questa situazione si verifica in genere durante la prima esecuzione di SSMA Tester)  
   

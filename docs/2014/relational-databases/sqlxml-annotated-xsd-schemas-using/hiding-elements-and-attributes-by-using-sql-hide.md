@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - hiding elements
@@ -26,12 +24,12 @@ ms.assetid: 0978301b-f068-46b6-82b9-dc555161f52e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 11435f1e27eb5bd24f4f7bee6e32db7e530c14e8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 541f5ccff727552730e4648552ad5126fdfd4858
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48175891"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52793613"
 ---
 # <a name="hiding-elements-and-attributes-by-using-sqlhide"></a>Nascondere gli elementi e gli attributi utilizzando sql:hide
   Quando viene eseguita una query XPath su uno schema XSD, il documento XML risultante presenterà gli elementi e gli attributi specificati nello schema. È possibile specificare che alcuni elementi e attributi siano nascosti nello schema utilizzando l'annotazione `sql:hide`. Ciò si rivela utile quando i criteri di selezione della query richiedono determinati elementi o attributi dello schema, ma non si desidera che vengano restituiti nel documento XML generato.  

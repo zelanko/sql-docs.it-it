@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 64f6d23e30a589c4924925b834b310921d17ba57
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b59b0bdfb2852c20c2f13641682a1adff3547662
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818939"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52540779"
 ---
 # <a name="sysdmdbxtpgccyclestats-transact-sql"></a>sys.dm_db_xtp_gc_cycle_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -44,12 +44,12 @@ ms.locfileid: "47818939"
  Per altre informazioni, vedere [OLTP in memoria &#40;ottimizzazione in memoria&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md).  
   
   
-|Nome colonna|Tipo|Description|  
+|Nome colonna|Tipo|Descrizione|  
 |-----------------|----------|-----------------|  
 |cycle_id|**bigint**|Identificatore univoco del ciclo di Garbage Collection.|  
 |ticks_at_cycle_start|**bigint**|Tick all'avvio del ciclo.|  
 |ticks_at_cycle_end|**bigint**|Tick alla fine del ciclo.|  
-|base_generation|**bigint**|Il valore di generazione di base corrente nel database. Rappresenta il timestamp della transazione attiva meno recente utilizzato per identificare le transazioni per il Garbage Collection. L'ID della transazione attiva meno recente viene aggiornato in incrementi di 16. Ad esempio, se l'ID della transazione è 124, 125, 126 … 139, il valore sarà 124. Quando si aggiunge un'altra transazione, ad esempio 140, il valore sarà 140.|  
+|base_generation|**bigint**|Il valore di generazione di base corrente nel database. Rappresenta il timestamp della transazione attiva meno recente utilizzato per identificare le transazioni per il Garbage Collection. L'ID della transazione attiva meno recente viene aggiornato in incrementi di 16. Ad esempio, se l'ID di transazione 124, 125, 126... 139, il valore sarà 124. Quando si aggiunge un'altra transazione, ad esempio 140, il valore sarà 140.|  
 |xacts_copied_to_local|**bigint**|Numero di transazioni copiate dalla pipeline di transazione nella matrice di generazione del database.|  
 |xacts_in_gen_0- xacts_in_gen_15|**bigint**|Numero di transazioni in ogni generazione.|  
   

@@ -20,12 +20,12 @@ ms.assetid: 2736d376-fb9d-4b28-93ef-472b7a27623a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3e3048de737d923ba962a31d789fc390d1b038b7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e296632c0444ba634f87755266efc442038c073d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47846609"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535302"
 ---
 # <a name="sysdmftsparser-transact-sql"></a>sys.dm_fts_parser (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ sys.dm_fts_parser('query_string', lcid, stoplist_id, accent_sensitivity)
  *accent_sensitivity*  
  Valore booleano che controlla se la ricerca full-text supporta o meno la distinzione relativa ai segni diacritici. *accent_sensitivity* viene **bit**, con uno dei valori seguenti:  
   
-|valore|Distinzione caratteri accentati/non accentati|  
+|Value|Accentati|  
 |-----------|----------------------------|  
 |0|Non attiva<br /><br /> Parole del tipo "café" e "cafe" vengono considerate in modo identico.|  
 |1|Sensibile<br /><br /> Parole del tipo "café" e "cafe" vengono considerate in modo diverso.|  
@@ -66,10 +66,10 @@ sys.dm_fts_parser('query_string', lcid, stoplist_id, accent_sensitivity)
   
 ## <a name="table-returned"></a>Tabella restituita  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
-|parola chiave|**varbinary(128)**|Rappresentazione esadecimale di una parola chiave specificata restituita da un word breaker. Tale rappresentazione viene utilizzata per archiviare la parola chiave nell'indice full-text. Questo valore non è leggibile dall'utente, ma è utile per relative una parola chiave specificata per l'output restituito da altre viste a gestione dinamica che restituiscono il contenuto di un indice full-text, ad esempio [DM fts_index_keywords](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-transact-sql.md) e [ DM fts_index_keywords_by_document](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-document-transact-sql.md).<br /><br /> **Nota:** OxFF rappresenta il carattere speciale che indica la fine di un file o set di dati.|  
-|group_id|**int**|Contiene un valore integer utile per differenziare il gruppo logico dal quale è stato generato un termine specifico. '`Server AND DB OR FORMSOF(THESAURUS, DB)"`' produce ad esempio i seguenti valori di group_id in inglese:<br /><br /> 1: server<br />2: DB<br />3: DB|  
+|parola chiave|**varbinary(128)**|Rappresentazione esadecimale di una parola chiave specificata restituita da un word breaker. Tale rappresentazione viene utilizzata per archiviare la parola chiave nell'indice full-text. Questo valore non è leggibile dall'utente, ma è utile per relative una parola chiave specificata per l'output restituito da altre viste a gestione dinamica che restituiscono il contenuto di un indice full-text, ad esempio [DM fts_index_keywords](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-transact-sql.md) e [ DM fts_index_keywords_by_document](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-document-transact-sql.md).<br /><br /> **Nota:** OxFF rappresenta il carattere speciale che indica la fine di un file o di un set di dati.|  
+|group_id|**int**|Contiene un valore integer utile per differenziare il gruppo logico dal quale è stato generato un termine specifico. '`Server AND DB OR FORMSOF(THESAURUS, DB)"`' produce ad esempio i seguenti valori di group_id in inglese:<br /><br /> 1: Server<br />2: DB<br />3: DB|  
 |phrase_id|**int**|Contiene un valore integer utile per differenziare i casi in cui il word breaker invia forme alternative di parole composte, come full-text. In presenza di parole composte, ad esempio "multi-million", a volte il word breaker invia forme alternative. In alcuni casi tali forme alternative (frasi) devono essere differenziate.<br /><br /> '`multi-million`' produce ad esempio i seguenti valori di phrase_id in inglese:<br /><br /> 1 per `multi`<br />1 per `million`<br />2 per `multimillion`|  
 |occurrence|**int**|Indica l'ordine di ogni termine nel risultato dell'analisi. Per la frase "`SQL Server query processor`", ad esempio, in occurrence sarebbero presenti i seguenti valori di occorrenza per i termini, in inglese:<br /><br /> 1 per `SQL`<br />2 per `Server`<br />3 per `query`<br />4 per `processor`|  
 |special_term|**nvarchar(4000)**|Contiene informazioni sulle caratteristiche del termine inviato dal word breaker, tra cui:<br /><br /> Corrispondenza esatta<br /><br /> Parola non significativa<br /><br /> Fine di frase<br /><br /> Fine di paragrafo<br /><br /> Fine di capitolo|  
@@ -140,7 +140,7 @@ sys.dm_fts_parser('query_string', lcid, stoplist_id, accent_sensitivity)
 SELECT * FROM sys.dm_fts_parser (' "The Microsoft business analysis" ', 1033, 0, 0);  
 ```  
   
-### <a name="b-displaying-the-output-of-a-given-word-breaker-in-the-context-of-stoplist-filtering"></a>B. Visualizzazione dell'output di un word breaker specifico nel contesto di applicazione di filtri dell'elenco di parole non significative  
+### <a name="b-displaying-the-output-of-a-given-word-breaker-in-the-context-of-stoplist-filtering"></a>b. Visualizzazione dell'output di un word breaker specifico nel contesto di applicazione di filtri dell'elenco di parole non significative  
  Nell'esempio seguente viene restituito l'output relativo all'utilizzo del word breaker inglese, il cui LCID è 1033, e di un elenco di parole non significative, il cui ID è 77, sulla stringa di query seguente:  
   
  `"The Microsoft business analysis" OR "MS revenue"`  

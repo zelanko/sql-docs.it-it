@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c187ed1ede04f8ed140ddbb73d251af304745cf2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0b2a01f7c8ffa3616deb0c7f1ebcec1ea94e65dd
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47705711"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535186"
 ---
 # <a name="sysdmexecsessions-transact-sql"></a>sys.dm_exec_sessions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -35,13 +35,13 @@ ms.locfileid: "47705711"
   
  Eseguire il mapping a viste a gestione dinamica DM exec_connections e Sys. dm _ exec_requests il [Sys. sysprocesses](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md) tabella di sistema.  
   
-> **Nota:** chiamarla da [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] oppure [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], usare il nome **sys.dm_pdw_nodes_exec_sessions**.  
+> **NOTA:** Per chiamare questo elemento dal [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] oppure [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], usare il nome **sys.dm_pdw_nodes_exec_sessions**.  
   
 |Nome colonna|Tipo di dati|Descrizione e informazioni specifiche della versione|  
 |-----------------|---------------|-----------------|  
 |session_id|**smallint**|Identifica la sessione associata a ogni connessione principale attiva. Non ammette i valori Null.|  
 |login_time|**datetime**|Data e ora in cui è stata stabilita la sessione. Non ammette i valori Null.|  
-|host_name|**nvarchar(128)**|Nome della workstation client specifica di una sessione. Il valore è NULL per le sessioni interne. Ammette i valori Null.<br /><br /> **Nota sulla sicurezza:** l'applicazione client fornisce il nome della workstation e può indicare dati non accurati. Non considerare HOST_NAME una caratteristica di sicurezza.|  
+|host_name|**nvarchar(128)**|Nome della workstation client specifica di una sessione. Il valore è NULL per le sessioni interne. Ammette i valori Null.<br /><br /> **Nota sulla sicurezza:** L'applicazione client fornisce il nome della workstation e può indicare dati non accurati. Non considerare HOST_NAME una caratteristica di sicurezza.|  
 |program_name|**nvarchar(128)**|Nome del programma client che ha iniziato la sessione. Il valore è NULL per le sessioni interne. Ammette i valori Null.|  
 |host_process_id|**int**|ID di processo del programma client che ha iniziato la sessione. Il valore è NULL per le sessioni interne. Ammette i valori Null.|  
 |client_version|**int**|Versione del protocollo TDS dell'interfaccia utilizzata dal client per connettersi al server. Il valore è NULL per le sessioni interne. Ammette i valori Null.|  
@@ -50,7 +50,7 @@ ms.locfileid: "47705711"
 |login_name|**nvarchar(128)**|Nome dell'account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con cui la sessione è attualmente in esecuzione. Per il nome dell'account di accesso originale che ha creato la sessione, vedere original_login_name. Può essere un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticato nome account di accesso o un nome di utente di dominio autenticato di Windows. Non ammette i valori Null.|  
 |nt_domain|**nvarchar(128)**|**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Dominio di Windows per il client se la sessione utilizza l'autenticazione di Windows o una connessione trusted. Il valore è NULL per le sessioni interne e per gli utenti non di dominio. Ammette i valori Null.|  
 |nt_user_name|**nvarchar(128)**|**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Nome utente di Windows per il client se la sessione utilizza l'autenticazione di Windows o una connessione trusted. Il valore è NULL per le sessioni interne e per gli utenti non di dominio. Ammette i valori Null.|  
-|status|**nvarchar(30)**|Stato della sessione. I valori possibili sono:<br /><br /> **Esecuzione** -uno o più richieste attualmente in esecuzione<br /><br /> **Sospensione** -attualmente in esecuzione nessuna richiesta<br /><br /> **Inattive** – sessione è stata reimpostata a causa del pool di connessioni ed è ora in stato di preaccesso.<br /><br /> **Preconnect** -sessione è nella funzione di classificazione di Resource Governor.<br /><br /> Non ammette i valori Null.|  
+|status|**nvarchar(30)**|Stato della sessione. I valori possibili sono:<br /><br /> **Esecuzione** -uno o più richieste attualmente in esecuzione<br /><br /> **Sospensione** -attualmente in esecuzione nessuna richiesta<br /><br /> **Inattive** -sessione è stata reimpostata a causa del pool di connessioni ed è ora in stato di preaccesso.<br /><br /> **Preconnect** -sessione è nella funzione di classificazione di Resource Governor.<br /><br /> Non ammette i valori Null.|  
 |context_info|**varbinary(128)**|Valore di CONTEXT_INFO per la sessione. Le informazioni di contesto viene impostate dall'utente tramite il [SET CONTEXT_INFO](../../t-sql/statements/set-context-info-transact-sql.md) istruzione. Ammette i valori Null.|  
 |cpu_time|**int**|Tempo della CPU, espresso in millisecondi, utilizzato dalla sessione. Non ammette i valori Null.|  
 |memory_usage|**int**|Numero di pagine da 8 KB utilizzate dalla sessione. Non ammette i valori Null.|  
@@ -93,7 +93,7 @@ ms.locfileid: "47705711"
   
 ## <a name="permissions"></a>Permissions  
 Tutti possono visualizzare le proprie informazioni di sessione.  
-**[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]:** Richiede `VIEW SERVER STATE` autorizzazione [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] per visualizzare tutte le sessioni nel server.  
+**[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]:** È necessario `VIEW SERVER STATE` autorizzazione [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] per visualizzare tutte le sessioni nel server.  
 **[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]:** Richiede `VIEW DATABASE STATE` per visualizzare tutte le connessioni al database corrente. `VIEW DATABASE STATE` non è possibile concedere nel `master` database. 
   
   
@@ -133,7 +133,7 @@ FROM sys.dm_exec_sessions
 GROUP BY login_name;  
 ```  
   
-### <a name="b-finding-long-running-cursors"></a>B. Individuazione dei cursori con esecuzione prolungata  
+### <a name="b-finding-long-running-cursors"></a>b. Individuazione dei cursori con esecuzione prolungata  
  Nell'esempio seguente vengono individuati i cursori aperti per un periodo più lungo di quello specificato, l'utente che ha creato i cursori e la sessione in cui i cursori sono attivi.  
   
 ```sql  

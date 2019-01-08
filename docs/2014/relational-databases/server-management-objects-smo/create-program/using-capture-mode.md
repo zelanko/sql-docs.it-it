@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: ''
 ms.topic: reference
 helpviewer_keywords:
 - SQL Server Management Objects, capture mode
@@ -16,12 +14,12 @@ ms.assetid: ace29bf0-705a-434f-82e4-db99d01c5008
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5195430b502873c79d3962270ffddd19121a5e62
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9ab758f83bde2cb587d3cfab8764fd7eb8fe2577
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48129201"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52788853"
 ---
 # <a name="using-capture-mode"></a>Utilizzo della modalità di acquisizione
   I programmi SMO possono acquisire e registrare le istruzioni [!INCLUDE[tsql](../../../includes/tsql-md.md)] equivalenti eseguite dal programma al posto delle, o oltre alle, istruzioni eseguite dal programma. Per abilitare la modalità di acquisizione, utilizzare l'oggetto <xref:Microsoft.SqlServer.Management.Common.ServerConnection> oppure la proprietà <xref:Microsoft.SqlServer.Management.Smo.Server.ConnectionContext%2A> dell'oggetto <xref:Microsoft.SqlServer.Management.Smo.Server>.  

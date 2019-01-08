@@ -15,12 +15,12 @@ ms.assetid: b8ef549c-5458-458a-bf1a-fd743a1417fd
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e69e7f66b633a218ad5a2fb77cd44047c9810ca8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e3ecd203bfce80ffe4c64dcf0ca274f7e50f6ff1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48131607"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52544386"
 ---
 # <a name="unary-operators-in-parent-child-dimensions"></a>Operatori unari nelle dimensioni padre-figlio
   In una dimensione contenente una relazione padre-figlio in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] specificare una colonna dell'operatore unario (o di rollup personalizzato) che determina il rollup personalizzato per tutti i membri non calcolati dell'attributo padre. L'operatore unario viene applicato ai membri ogni volta che i valori dei membri padre vengono valutati. La proprietà **UnaryOperatorColumn** in un attributo padre (**Usage**=Parent) specifica la colonna di una tabella nella vista origine dati contenente gli operatori unari. I valori per gli operatori di rollup personalizzato archiviati in questa colonna vengono applicati a ogni membro dell'attributo.  
@@ -31,10 +31,10 @@ ms.locfileid: "48131607"
   
  L'impostazione predefinita della proprietà **UnaryOperatorColumn** in un attributo è (nessuna), ovvero gli operatori di rollup personalizzato sono disabilitati. Nella tabella seguente vengono elencati gli operatori unari e viene descritta la loro funzione quando vengono applicati a un livello.  
   
-|Operatore unario|Description|  
+|Operatore unario|Descrizione|  
 |--------------------|-----------------|  
 |+ (segno di addizione)|Il valore del membro viene aggiunto al valore aggregato dei membri di pari livello precedenti. Si tratta dell'operatore predefinito se per un attributo non viene definita alcuna colonna dell'operatore unario.|  
-|– (segno di sottrazione)|Il valore del membro viene sottratto dal valore aggregato dei membri di pari livello precedenti.|  
+|-(segno meno)|Il valore del membro viene sottratto dal valore aggregato dei membri di pari livello precedenti.|  
 |* (asterisco)|Il valore del membro viene moltiplicato per il valore aggregato dei membri di pari livello precedenti.|  
 |/ (barra)|Il valore del membro viene diviso per il valore aggregato dei membri di pari livello precedenti.|  
 |~ (tilde)|Il valore del membro viene ignorato.|  
@@ -46,8 +46,8 @@ ms.locfileid: "48131607"
  Nella scheda **Esplorazione** di Progettazione dimensioni è possibile visualizzare gli operatori unari accanto a ogni membro di una gerarchia. È inoltre possibile modificare gli operatori unari in caso di utilizzo di una dimensione abilitata per la scrittura. Se la dimensione non è abilitata per la scrittura, è necessario utilizzare uno strumento per modificare direttamente l'origine dei dati.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Dimension Attribute Properties Reference](dimension-attribute-properties-reference.md)   
- [Operatori di Rollup personalizzati nelle dimensioni padre-figlio](parent-child-dimension-attributes-custom-rollup-operators.md)   
+ [Riferimento alle proprietà degli attributi delle dimensioni](dimension-attribute-properties-reference.md)   
+ [Operatori di rollup personalizzati nelle dimensioni padre-figlio](parent-child-dimension-attributes-custom-rollup-operators.md)   
  [Avviare la Configurazione guidata funzionalità di Business Intelligence in Progettazione dimensioni](database-dimensions-bi-wizard-in-dimension-designer.md)  
   
   

@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: b6b3d44410e4d3cf889bc99e7057b6c420f37d7a
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 21f779f1e0b1764fd35d6399aa220e244574d576
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145906"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52545586"
 ---
 # <a name="microsoft-association-algorithm-technical-reference"></a>Riferimento tecnico per l'algoritmo Microsoft Association Rules
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -66,7 +66,7 @@ ms.locfileid: "50145906"
  È possibile modificare in qualsiasi momento i parametri per un modello di data mining usando Progettazione modelli di data mining in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. È inoltre possibile modificare i parametri a livello di codice usando il <xref:Microsoft.AnalysisServices.MiningModel.AlgorithmParameters%2A> raccolta in AMO oppure usando il [elemento MiningModels &#40;ASSL&#41; ](https://docs.microsoft.com/bi-reference/assl/collections/miningmodels-element-assl) XMLA. Nella tabella seguente viene descritto ogni parametro.  
   
 > [!NOTE]  
->  Non è possibile modificare i parametri in un modello esistente usando un'istruzione DMX. È necessario specificare i parametri nell'istruzione DMX CREATE MODEL o ALTER STRUCTURE… ADD MODEL quando si crea il modello.  
+>  Non è possibile modificare i parametri in un modello esistente utilizzando un'istruzione DMX. è necessario specificare i parametri in DMX CREATE MODEL o ALTER STRUCTURE... ADD MODEL quando si crea il modello.  
   
  *MAXIMUM_ITEMSET_COUNT*  
  Specifica il numero massimo di set di elementi da produrre. Se non si specifica alcun numero, viene utilizzato il valore predefinito.  
@@ -133,7 +133,7 @@ ms.locfileid: "50145906"
  Si applica alla colonna della struttura di data mining.  
   
  MODEL_EXISTENCE_ONLY  
- Indica che la colonna verrà considerata come se presentasse due stati possibili: **Missing** e **Existing**. Un valore Null è un valore mancante.  
+ Indica che la colonna verrà considerata come se presentasse due stati possibili: **Mancano** e **esistenti**. Un valore Null è un valore mancante.  
   
  Si applica alla colonna del modello di data mining.  
   

@@ -20,12 +20,12 @@ ms.assetid: 804b7db3-1f6a-4f73-a81d-bbe02520d7c6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0375d2254a742149215d5e3328510d598f0fea3a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5d7efc9df277f609bf53ffb49f2253a937f45a4b
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48134792"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52394464"
 ---
 # <a name="creating-a-data-mining-model"></a>Creazione di un modello di data mining
   Modellazione dei dati è il passaggio di data mining in cui si compilano i modelli e tendenze applicando *algoritmi* ai dati. Successivamente è possibile utilizzare tali modelli per l'analisi o per eseguire stime.  
@@ -72,7 +72,7 @@ ms.locfileid: "48134792"
  [Creazione guidata del cluster &#40;dati di componenti aggiuntivi Data Mining per Excel&#41;](cluster-wizard-data-mining-add-ins-for-excel.md).  
   
 ## <a name="detect-categories-analyze"></a>Rileva categorie (Analisi)  
- Il **rileva categorie** strumento consente di aggiungere un set di dati e applicare il clustering per trovare i raggruppamenti dei dati. È utile per trovare analogie e creare gruppi in modo da effettuare ulteriori analisi.  
+ Il **rileva categorie** strumento consente di aggiungere un set di dati e applicare il clustering per trovare i raggruppamenti dei dati. È utile per trovare analogie e creare gruppi per analizzare ulteriormente.  
   
  Il **rileva categorie** strumento utilizza l'algoritmo Microsoft Clustering.  
   
@@ -116,7 +116,7 @@ ms.locfileid: "48134792"
   
  [Calcolo stime &#40;strumenti di analisi tabelle per Excel&#41;](prediction-calculator-table-analysis-tools-for-excel.md)  
   
-## <a name="scenario-goal-seek-analyze"></a>Scenario: Ricerca obiettivo (Analisi)  
+## <a name="scenario-goal-seek-analyze"></a>Scenario: Ricerca obiettivo (analisi)  
  Nel **ricerca obiettivo** strumento, si specifica un valore di destinazione e lo strumento identifica i fattori sottostanti che è necessario modificare per soddisfare tale destinazione. Se, ad esempio, si desidera aumentare la soddisfazione chiamate del 20%, è possibile chiedere al modello di eseguire una stima dei fattori da modificare per raggiungere tale obiettivo.  
   
  Il **ricerca obiettivo** strumento utilizza l'algoritmo Microsoft Logistic Regression.  
@@ -125,7 +125,7 @@ ms.locfileid: "48134792"
   
  [Ricerca obiettivo &#40;strumenti di analisi tabelle per Excel&#41;](goal-seek-scenario-table-analysis-tools-for-excel.md)  
   
-## <a name="scenario-what-if-scenario-analyze"></a>Scenario: Analisi di simulazione (Analisi)  
+## <a name="scenario-what-if-scenario-analyze"></a>Scenario: Scenario di simulazione (analisi)  
  Il **analisi di simulazione** strumento integra il **ricerca obiettivo** dello strumento. Immettere nello strumento il valore che si desidera modificare per consentire al modello di stimare se tale modifica sarà sufficiente per il raggiungimento del risultato desiderato. È possibile ad esempio chiedere al modello di determinare se l'aggiunta di un operatore telefonico aumenterebbe la soddisfazione dei clienti di un punto.  
   
  Il **simulazione** strumento utilizza l'algoritmo Microsoft Logistic Regression.  

@@ -15,12 +15,12 @@ ms.assetid: beb39086-28ce-46af-b6d8-f7b4fb8d9069
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4f983b412b6ef4a91293e07b66a8a0cab6d15a71
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dcf15af9fb5e351dd4c965d0eb6ef520b62b65b2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48079441"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52531366"
 ---
 # <a name="execute-sql-task-editor-general-page"></a>Editor attività Esegui XML (pagina Generale)
   Usare la pagina **Generale** della finestra di dialogo **Editor attività Esegui SQL** per configurare l'attività Esegui SQL e specificare l'istruzione SQL eseguita dall'attività.  
@@ -28,7 +28,7 @@ ms.locfileid: "48079441"
  Per altre informazioni su questa attività, vedere [Attività Esegui SQL](control-flow/execute-sql-task.md), [Parametri e codici restituiti nell'attività Esegui SQL](../../2014/integration-services/parameters-and-return-codes-in-the-execute-sql-task.md), e [Set di risultati nell'attività Esegui SQL](../../2014/integration-services/result-sets-in-the-execute-sql-task.md). Per sapere di più sul linguaggio di query Transact-SQL, vedere [Guida di riferimento a Transact-SQL &#40;Motore di database&#41;](/sql/t-sql/language-reference).  
   
 ## <a name="static-options"></a>Opzioni statiche  
- **Nome**  
+ **Name**  
  Consente di specificare un nome univoco per l'attività Esegui SQL nel flusso di lavoro. Il nome specificato verrà visualizzato in Progettazione [!INCLUDE[ssIS](../includes/ssis-md.md)] .  
   
  **Descrizione**  
@@ -47,7 +47,7 @@ ms.locfileid: "48079441"
 >  Quando l'attività Esegui SQL usa una gestione connessione ADO o ODBC, la proprietà **CodePage** non è disponibile. Se la soluzione richiede l'utilizzo di una tabella codici, utilizzare una gestione connessione OLE DB o ADO.NET con l'attività Esegui SQL.  
   
  **TypeConversionMode**  
- Quando si imposta questa proprietà su `Allowed`, l'attività Esegui SQL tenterà di convertire il parametro di output e risultati per i dati di tipo della variabile i risultati della query sono assegnati. Si applica al tipo di set di risultati **Riga singola** .  
+ Se si imposta questa proprietà su `Allowed`, l'attività Esegui SQL tenterà di convertire il parametro di output e i risultati della query nel tipo di dati della variabile a cui sono assegnati i risultati. Si applica al tipo di set di risultati **Riga singola** .  
   
  **ResultSet**  
  Consente di specificare il tipo di risultati previsto per un'istruzione SQL in fase di esecuzione. È possibile scegliere tra **Riga singola**, **Set dei risultati completo**, **XML**o **Nessuno**.  
@@ -55,7 +55,7 @@ ms.locfileid: "48079441"
  **ConnectionType**  
  Consente di scegliere il tipo di gestione connessione da utilizzare per la connessione a un'origine dati. I tipi di connessione disponibili includono **OLE DB**, **ODBC**, **ADO**, **ADO.NET** e **SQLMOBILE**.  
   
- **Argomenti correlati:** [Gestione connessione OLE DB](connection-manager/ole-db-connection-manager.md), [Gestione connessione ODBC](connection-manager/odbc-connection-manager.md), [Gestione connessione ADO](connection-manager/ado-connection-manager.md), [Gestione connessione ADO.NET](connection-manager/ado-net-connection-manager.md), [Gestione connessione SQL Server Compact Edition](connection-manager/sql-server-compact-edition-connection-manager.md)  
+ **Argomenti correlati:** [Gestione connessione OLE DB](connection-manager/ole-db-connection-manager.md), [gestione connessione ODBC](connection-manager/odbc-connection-manager.md), [gestione connessione ADO](connection-manager/ado-connection-manager.md), [gestione connessione ADO.NET](connection-manager/ado-net-connection-manager.md), [SQL Server Gestione connessione Compact Edition](connection-manager/sql-server-compact-edition-connection-manager.md)  
   
  **Connessione**  
  Consente di scegliere una connessione da un elenco di gestioni connessione definite. Per creare una nuova connessione, selezionare \<**Nuova connessione**>.  
@@ -65,11 +65,11 @@ ms.locfileid: "48079441"
   
  A seconda del tipo di gestione connessione utilizzato dall'attività Esegui SQL, è necessario utilizzare indicatori di parametro specifici nelle istruzioni SQL con parametri.  
   
- **Argomenti correlati:** sezione Esecuzione di comandi SQL con parametri in [Attività Esegui SQL](control-flow/execute-sql-task.md)  
+ **Argomenti correlati:** Esecuzione di sezione di comandi SQL con parametri in [attività Esegui SQL](control-flow/execute-sql-task.md)  
   
  Per questa proprietà sono disponibili le opzioni elencate nella tabella seguente.  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |**Input diretto**|Consente di impostare l'origine su un'istruzione Transact-SQL. Selezionando questo valore, verrà visualizzata l'opzione dinamica **SQLStatement**.|  
 |**Connessione file**|Consente di selezionare un file contenente un'istruzione Transact-SQL. Impostando questa opzione, verrà visualizzata l'opzione dinamica **FileConnection**.|  
@@ -96,24 +96,24 @@ ms.locfileid: "48079441"
   
 ### <a name="sqlsourcetype--direct-input"></a>SQLSourceType = Input diretto  
  **SQLStatement**  
- Digitare l'istruzione SQL da eseguire nella casella di opzione oppure fare clic sul pulsante (…) per digitare l'istruzione SQL nella finestra di dialogo **Immetti query SQL** o fare clic su **Compila query** per comporre l'istruzione tramite la finestra di dialogo **Generatore di query** .  
+ Digitare l'istruzione SQL da eseguire nella casella di opzione oppure fare clic sul pulsante (...) per digitare l'istruzione SQL nella finestra di dialogo **Immetti query SQL** o fare clic su **Compila query** per comporre l'istruzione con la finestra di dialogo **Generatore di query**.  
   
- **Argomenti correlati:** [Generatore query](../../2014/integration-services/query-builder.md)  
+ **Argomenti correlati:** [Generatore di query](../../2014/integration-services/query-builder.md)  
   
 ### <a name="sqlsourcetype--file-connection"></a>SQLSourceType = Connessione file  
  **FileConnection**  
  Selezionare una gestione connessione file esistente o fare clic su \<**Nuova connessione...**> per creare una nuova gestione connessione.  
   
- **Argomenti correlati:** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
+ **Argomenti correlati:** [Gestione connessione file](connection-manager/file-connection-manager.md), [Editor gestione connessione File](../../2014/integration-services/file-connection-manager-editor.md)  
   
 ### <a name="sqlsourcetype--variable"></a>SQLSourceType = Variabile  
  **SourceVariable**  
  Selezionare una variabile esistente oppure fare clic su \<**Nuova variabile**> per creare una nuova variabile.  
   
- **Argomenti correlati:** [Variabili di Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md), [Aggiungi variabile](../../2014/integration-services/add-variable.md)  
+ **Argomenti correlati:** [Integration Services &#40;SSIS&#41; le variabili](integration-services-ssis-variables.md), [Aggiungi variabile](../../2014/integration-services/add-variable.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Guida di riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor attività Esegui SQL &#40;pagina Mapping parametri&#41;](../../2014/integration-services/execute-sql-task-editor-parameter-mapping-page.md)   
  [Editor attività Esegui SQL &#40;pagina Set dei risultati&#41;](../../2014/integration-services/execute-sql-task-editor-result-set-page.md)  
   

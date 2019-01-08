@@ -21,24 +21,24 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f1778d2615c64d9d1bf19b53fb694e2f7f050be6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f366e091cccad7dbc317093f090bf2547f95b1df
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47659949"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52411528"
 ---
 # <a name="sysdmexeccachedplans-transact-sql"></a>sys.dm_exec_cached_plans (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Restituisce una riga per ogni piano di query memorizzato nella cache da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per velocizzare l'esecuzione di query. È possibile utilizzare questa vista a gestione dinamica per trovare i piani di query memorizzati nella cache, il testo delle query memorizzato nella cache, la quantità di memoria utilizzata dai piani memorizzati nella cache e il numero di riutilizzi dei piani nella cache.  
   
- In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], le viste a gestione dinamica non possono esporre le informazioni che influenzerebbero l'indipendenza del database o le informazioni sugli altri database a cui l'utente dispone di accesso. Per evitare di esporre queste informazioni, ogni riga che contiene dati che non appartengono al tenant connesso viene esclusa tramite filtro. Inoltre, i valori nelle colonne **memory_object_address** e **pool_id** vengono filtrati; il valore della colonna è impostato su NULL.  
+ In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], le viste a gestione dinamica non possono esporre le informazioni che influenzerebbero l'indipendenza del database o le informazioni sugli altri database a cui l'utente dispone di accesso. Per evitare di esporre queste informazioni, ogni riga che contiene dati che non appartengono al tenant connesso viene filtrata. Inoltre, i valori nelle colonne **memory_object_address** e **pool_id** vengono filtrati; il valore della colonna è impostato su NULL.  
   
 > [!NOTE]  
 >  Per chiamare questo elemento dal [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] oppure [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], usare il nome **sys.dm_pdw_nodes_exec_cached_plans**.  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |bucketid|**int**|ID dell'hash bucket in cui la voce viene memorizzata nella cache. Il valore indica un intervallo compreso tra 0 e le dimensioni della tabella hash per il tipo di cache.<br /><br /> Per le cache di tipo Piani SQL e Piani per gli oggetti, le dimensioni massime della tabella hash sono 10007 nei sistemi a 32 bit e 40009 nei sistemi a 64 bit. Per la cache di tipo Alberi associati, le dimensioni massime della tabella hash sono 1009 nei sistemi a 32 bit e 4001 nei sistemi a 64 bit. Per la cache di tipo Stored procedure estese, le dimensioni massime della tabella cache sono 127 nei sistemi a 32 e a 64 bit.|  
 |refcounts|**int**|Numero di oggetti della cache che fanno riferimento a questo oggetto della cache. **RefCounts** deve essere almeno pari a 1 per una voce nella cache.|  
@@ -46,7 +46,7 @@ ms.locfileid: "47659949"
 |size_in_bytes|**int**|Numero di byte utilizzati dall'oggetto della cache.|  
 |memory_object_address|**varbinary(8)**|Indirizzo di memoria della voce memorizzata nella cache. Questo valore può essere utilizzato con [DM os_memory_objects](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md) per ottenere la suddivisione di memoria del piano memorizzato nella cache e con [sys.dm_os_memory_cache_entries](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-cache-entries-transact-sql.md)per ottenere il costo della memorizzazione nella cache la voce.|  
 |cacheobjtype|**nvarchar (34)**|Tipo di oggetto nella cache. I possibili valori sono i seguenti:<br /><br /> Compiled Plan<br /><br /> Compiled Plan Stub<br /><br /> Parse Tree<br /><br /> Extended Proc<br /><br /> CLR Compiled Func<br /><br /> CLR Compiled Proc|  
-|objtype|**nvarchar (16)**|Tipo di oggetto. Di seguito sono i valori possibili e le relative descrizioni.<br /><br /> Procedura: Stored procedure<br />Preparazione: Istruzione preparata<br />Ad hoc: query Ad hoc. Si intende [!INCLUDE[tsql](../../includes/tsql-md.md)] inviate come eventi di linguaggio tramite **osql** o **sqlcmd** anziché come chiamate di procedura remota.<br />ReplProc: Procedura filtro di replica<br />Trigger: Trigger<br />Visualizzazione: vista<br />Predefinito: predefinito<br />UsrTab: Nella tabella utente<br />SysTab: Tabella di sistema<br />Vedere: Vincolo CHECK<br />Regola: regola|  
+|objtype|**nvarchar (16)**|Tipo di oggetto. Di seguito sono i valori possibili e le relative descrizioni.<br /><br /> Procedura: Stored procedure<br />Preparazione: Istruzione preparata<br />Ad hoc: Query ad hoc. Si intende [!INCLUDE[tsql](../../includes/tsql-md.md)] inviate come eventi di linguaggio tramite **osql** o **sqlcmd** anziché come chiamate di procedura remota.<br />ReplProc: Procedura di filtro della replica<br />Trigger: Trigger<br />Visualizzazione: visualizzazione<br />Impostazione predefinita: Impostazione predefinita<br />UsrTab: Tabella utente<br />SysTab: Tabella di sistema<br />Controllo: Vincolo CHECK<br />Regola: Regola|  
 |plan_handle|**varbinary(64)**|Identificatore del piano in memoria. Si tratta di un identificatore temporaneo, che rimane costante solo se il piano rimane nella cache. È possibile utilizzare questo valore con le funzioni a gestione dinamica seguenti:<br /><br /> [sys.dm_exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)<br /><br /> [sys.dm_exec_query_plan](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)<br /><br /> [sys.dm_exec_plan_attributes](../../relational-databases/system-dynamic-management-views/sys-dm-exec-plan-attributes-transact-sql.md)|  
 |pool_id|**int**|ID del pool di risorse in base a cui viene rilevato l'utilizzo della memoria del piano.|  
 |pdw_node_id|**int**|**Si applica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> L'identificatore per il nodo in questa distribuzione.|  
@@ -72,7 +72,7 @@ ORDER BY usecounts DESC;
 GO  
 ```  
   
-### <a name="b-returning-query-plans-for-all-cached-triggers"></a>B. Restituzione dei piani di query per tutti i trigger memorizzati nella cache  
+### <a name="b-returning-query-plans-for-all-cached-triggers"></a>b. Restituzione dei piani di query per tutti i trigger memorizzati nella cache  
  Nell'esempio seguente vengono restituiti i piani di query di tutti i trigger memorizzati nella cache.  
   
 ```  

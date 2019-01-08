@@ -15,12 +15,12 @@ ms.assetid: 2446afc2-9d21-42d3-9847-7733d3074de9
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: a7b7dfcbd9d7cc7407ed33cc0ea00e93df839b93
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a9b51e0fc192c94b32b4d496523dbf3c9216efd6
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48187941"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52509903"
 ---
 # <a name="clr-integration-programming-model-restrictions"></a>Restrizioni relative al modello di programmazione dell'integrazione con CLR
   Quando si compila una stored procedure gestita o un altro oggetto di database gestito, in alcuni controlli di codice eseguiti dalle [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] esegue i controlli sull'assembly del codice gestito durante la registrazione prima di tutto nel database, usando il `CREATE ASSEMBLY` istruzione e anche in fase di esecuzione. Il controllo del codice gestito viene effettuato anche in fase di esecuzione in quanto è possibile che in un assembly siano presenti percorsi di codice mai raggiunti in questa fase.  Tale controllo offre quindi la flessibilità necessaria per registrare soprattutto assembly di terze parti, in modo da evitare che un assembly venga bloccato in presenza di codice considerato poco sicuro, progettato per essere eseguito in un ambiente client, ma mai nel CLR hosted. Il codice gestito deve soddisfare i requisiti dipendono dal fatto che l'assembly viene registrato come `SAFE`, `EXTERNAL_ACCESS`, o `UNSAFE`, `SAFE` il più rigoroso e sono elencate di seguito.  
@@ -86,7 +86,7 @@ ms.locfileid: "48187941"
  In fase di esecuzione l'assembly del codice viene esaminato per verificare la presenza delle condizioni riportate di seguito. Se ne viene riscontrata una, non verrà consentita l'esecuzione del codice gestito e sarà generata un'eccezione.  
   
 ### <a name="unsafe"></a>UNSAFE  
- Il caricamento di un assembly, in modo esplicito mediante la chiamata del metodo `System.Reflection.Assembly.Load()` da una matrice di byte o in modo implicito attraverso l'utilizzo dello spazio dei nomi `Reflection.Emit`, non è consentito.  
+ Il caricamento di un assembly da entrambe in modo esplicito chiamando il `System.Reflection.Assembly.Load()` metodo da una matrice di byte o in modo implicito tramite l'utilizzo di `Reflection.Emit` dello spazio dei nomi-non è consentito.  
   
 ### <a name="externalaccess"></a>EXTERNAL_ACCESS  
  Tutte le condizioni di `UNSAFE` vengono controllate.  

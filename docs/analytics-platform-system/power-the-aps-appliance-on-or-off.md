@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: a8be7ec364a257752576fa150434a67a92c28d9c
-ms.sourcegitcommit: 731c5aed039607a8df34c63e780d23a8fac937e1
+ms.openlocfilehash: 994b0f94448b7fb7901734b2ae737e26be23900f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37909511"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52527856"
 ---
 # <a name="power-the-appliance-on-or-off-for-analytics-platform-system"></a>Power l'appliance attiva o disattiva per il sistema di piattaforma Analitica
 In questo argomento viene descritto come all'alimentazione accensione o spegnimento Systemappliance la piattaforma Analitica che esegue Parallel Data Warehouse. Dopo un'interruzione dell'alimentazione irreversibili, usare questo argomento quando si sposta un'appliance di sistema di piattaforma Analitica o alla potenza su un dispositivo.  
@@ -39,15 +39,15 @@ Prima di spegnere l'appliance, è necessario terminare tutte le attività nell'a
 > [!WARNING]  
 > Tutti i passaggi devono essere eseguiti nell'ordine esatto e ogni passaggio è necessario completare prima di eseguita il passaggio successivo, se non diversamente specificato. Eseguire i passaggi nell'ordine errato o senza tempi di attesa per ogni passaggio completare può comportare errori quando il dispositivo è acceso in un secondo momento.  
   
-1.  Connettersi al nodo di controllo di PDW (***PDW_region *-CTL01** ) e accedere con l'account amministratore di dominio di Analitica Platform System appliance.  
+1.  Connettersi al nodo di controllo di PDW (**_PDW_region_-CTL01** ) e accedere con l'account amministratore di dominio di Analitica Platform System appliance.  
   
 2.  Eseguire `C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100\dwconfig.exe` per aprire la **Configuration Manager**.  
   
 3.  In Configuration Manager, sotto il **Parallel Data Warehouse topologia** dal menu fare clic sul **stato del servizio** scheda e fare clic su **arrestare area** arrestare i servizi PDW.   
   
-4.  Connettersi a ***appliance_domain *-HST01** e accedere con l'account di amministratore di dominio appliance.  
+4.  Connettersi al  **_appliance_domain_-HST01** e accedere con l'account di amministratore di dominio appliance.  
   
-5.  Usando il **gestione Cluster di Failover** connettersi a di ***appliance_domain *-WFOHST01** del cluster, se non è automaticamente connesso e quindi nel riquadro di spostamento, fare clic su **ruoli**. Nel **ruoli** riquadro:  
+5.  Usando il **gestione Cluster di Failover** connettersi il  **_appliance_domain_-WFOHST01** del cluster, se non è automaticamente connesso e quindi nel riquadro di spostamento, fare clic su **Ruoli**. Nel **ruoli** riquadro:  
   
     1.  Selezione multipla tutte le macchine virtuali. Fare doppio clic su essi e selezionare **Spegni**.  
   
@@ -55,9 +55,9 @@ Prima di spegnere l'appliance, è necessario terminare tutte le attività nell'a
   
 6.  Chiudi il **gestione Cluster di Failover** dell'applicazione.  
   
-7. Arrestare tutti i server tranne ***appliance_domain *-HST01**.  
+7. Arrestare tutti i server tranne  **_appliance_domain_-HST01**.  
   
-8. Arrestare il ***appliance_domain *-HST01** server.  
+8. Arrestare il  **_appliance_domain_-HST01** server.  
   
 9. Arrestare la distribuzione unità PDU (Power).  
   
@@ -70,25 +70,25 @@ Prima di spegnere l'appliance, è necessario terminare tutte le attività nell'a
   
 1.  Accendere l'unità di distribuzione dell'alimentazione (PDU) e attendere che le opzioni per l'avvio automatico.  
   
-2.  Accendere il ***appliance_domain *-HST01** server.  
+2.  Accendere il  **_appliance_domain_-HST01** server.  
   
-3.  Accedere a ***appliance_domain *-HST01** come amministratore di dominio appliance.  
+3.  Accedere al  **_appliance_domain_-HST01** come amministratore di dominio appliance.  
   
-4.  Avviare il **gestione di Hyper-V** program (**virtmgmt.msc**) e connettersi a ***appliance_domain *-HST01** se non è connesso per impostazione predefinita.  
+4.  Avviare il **gestione di Hyper-V** program (**virtmgmt.msc**) e connettersi al  **_appliance_domain_-HST01** se non è connesso per impostazione predefinita.  
   
-    1.  Se non è possibile connettersi in base al nome perché il ***PDW_region *-AD01** è non in esecuzione, provare a connettersi usando l'indirizzo IP.  
+    1.  Se non è possibile connettersi in base al nome perché il  **_PDW_region_-AD01** è non in esecuzione, provare a connettersi usando l'indirizzo IP.  
   
-    2.  Nel **macchine virtuali** riquadro, individuare ***PDW_region *-AD01** e verificare che sia in esecuzione. In caso contrario, avviare la macchina virtuale e attendere che venga avviata completamente.  
+    2.  Nel **macchine virtuali** riquadro, individuare  **_PDW_region_-AD01** e verificare che sia in esecuzione. In caso contrario, avviare la macchina virtuale e attendere che venga avviata completamente.  
   
 5.  Accendere il resto dei server nell'appliance.  
   
 6.  Mentre in **HST01** effettuato l'accesso come amministratore di dominio appliance, da **Hyper-V Manager**:  
   
-    1.  Connettersi a ***appliance_domain *-HST02**.  
+    1.  Connettersi al  **_appliance_domain_-HST02**.  
   
-    2.  Nel **macchine virtuali** riquadro, individuare ***PDW_region *-AD02** e verificare che sia in esecuzione.  In caso contrario, avviare la macchina virtuale e attendere che venga avviata completamente.  
+    2.  Nel **macchine virtuali** riquadro, individuare  **_PDW_region_-AD02** e verificare che sia in esecuzione.  In caso contrario, avviare la macchina virtuale e attendere che venga avviata completamente.  
   
-7.  Usando il **gestione Cluster di Failover** connettersi a di ***appliance_domain *-WFOHST01** del cluster, se non è automaticamente connesso, quindi nel **navigazione** riquadro, fare clic su **Ruoli**. Nel **ruoli** riquadro:  
+7.  Usando il **gestione Cluster di Failover** connettersi al  **_appliance_domain_-WFOHST01** del cluster, se non è automaticamente connesso, quindi nella  **Navigazione** riquadro, fare clic su **ruoli**. Nel **ruoli** riquadro:  
   
     1.  Selezione multipla tutte le macchine virtuali, fare doppio clic su essi e quindi fare clic su **avviare**.  
   
@@ -98,7 +98,7 @@ Prima di spegnere l'appliance, è necessario terminare tutte le attività nell'a
   
 8. Scollegarsi **HST01** se si desidera.  
   
-9. Connettersi a ***PDW_region *-CTL01** usando l'account di amministratore di dominio appliance.  
+9. Connettersi al  **_PDW_region_-CTL01** usando l'account di amministratore di dominio appliance.  
   
 10. Eseguire `C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100\dwconfig.exe` per avviare il **Configuration Manager**.  
   

@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ed73e9e97c34ad1bd1d3aa4e0d37a351cbac0703
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d98e87d18d76162e5bf9dcb4779a8bc7fec74385
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47798041"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617626"
 ---
 # <a name="wideworldimporters-database-catalog"></a>Catalogo del database WideWorldImporters
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -29,7 +29,7 @@ WideWorldImporters Usa gli schemi per scopi diversi, ad esempio l'archiviazione 
 
 Gli schemi includano i dati. Alcune tabelle è necessarie per tutti gli altri schemi e si trova nello schema dell'applicazione.
 
-|schema|Description|
+|schema|Descrizione|
 |-----------------------------|---------------------|
 |Applicazione|Gli utenti a livello di applicazione, contatti e i parametri. Contiene anche le tabelle di riferimento con i dati che viene usati in più schemi|
 |Purchasing|Elemento titolo acquista da fornitori e i dettagli relativi ai fornitori.|  
@@ -40,7 +40,7 @@ Gli schemi includano i dati. Alcune tabelle è necessarie per tutti gli altri sc
 
 Questi schemi vengono utilizzati per le applicazioni esterne che non sono consentite per accedere direttamente alle tabelle di dati. Contengono le viste e stored procedure utilizzate dalle applicazioni esterne.
 
-|schema|Description|
+|schema|Descrizione|
 |-----------------------------|---------------------|
 |Sito Web|Tutti gli accessi al database dal sito Web della società sono tramite questo schema.|
 |Report|Tutti gli accessi al database da report di Reporting Services sono tramite questo schema.|
@@ -52,7 +52,7 @@ Si noti che i report e Power BI gli schemi non vengono utilizzati nella versione
 
 Schemi con finalità speciali
 
-|schema|Description|
+|schema|Descrizione|
 |-----------------------------|---------------------|
 |Integrazione|Gli oggetti e le procedure necessari per l'integrazione di data warehouse (ad esempio la migrazione dei dati nel database WideWorldImportersDW).|
 |Sequenze|Contiene le sequenze usate da tutte le tabelle nell'applicazione.|
@@ -65,7 +65,7 @@ Tutte le tabelle nel database sono negli schemi di dati.
 
 Dettagli dei parametri e gli utenti (utenti e contatti), insieme a tabelle di riferimento comuni (comuni a più altri schemi).
 
-|Tabella|Description|
+|Tabella|Descrizione|
 |-----------------------------|---------------------|
 |SystemParameters|Contiene i parametri configurabili a livello di sistema.|
 |Utenti|Contiene i nomi utente, informazioni di contatto, per tutti coloro che usano l'applicazione e per le persone che si occupa di Wide World Importers in organizzazioni del cliente. Ciò include personale, i clienti, fornitori e gli eventuali altri contatti. Per gli utenti che dispongono dell'autorizzazione per utilizzare il sistema o un sito Web, le informazioni includono i dettagli di accesso.|
@@ -80,7 +80,7 @@ Dettagli dei parametri e gli utenti (utenti e contatti), insieme a tabelle di ri
 
 Dettagli di fornitori e acquisti in magazzino.
 
-|Tabella|Description|
+|Tabella|Descrizione|
 |-----------------------------|---------------------|
 |Suppliers|Tabella dell'entità principale dei fornitori (organizzazioni)|
 |SupplierCategories|Categorie dei fornitori (ad esempio, novità, toys, clothing, creazione di pacchetti e così via).|
@@ -93,7 +93,7 @@ Dettagli di fornitori e acquisti in magazzino.
 
 Dettagli di clienti, i venditori e delle vendite in magazzino.
 
-|Tabella|Description|
+|Tabella|Descrizione|
 |-----------------------------|---------------------|
 |Customers|Tabelle di entità principale per i clienti (aziende o utenti singoli)|
 |CustomerCategories|Categorie per i clienti (ad esempio archivi originalità supermercati, e così via.)|
@@ -109,7 +109,7 @@ Dettagli di clienti, i venditori e delle vendite in magazzino.
 
 Dettagli elementi azionari, le aziende e le transazioni.
 
-|Tabella|Description|
+|Tabella|Descrizione|
 |-----------------------------|---------------------|
 |StockItems|Tabella dell'entità principale per gli elementi di scorte|
 |StockItemHoldings|Colonne non temporali per gli elementi di scorte. Queste sono le colonne aggiornate di frequente.|
@@ -140,7 +140,7 @@ Lo schema del database è stata generata dal codice basato su una serie di tabel
 - Tutti gli schemi, tabelle, colonne, indici e vincoli check associata una descrizione della proprietà che può essere utilizzato per identificare lo scopo dell'oggetto o colonna estesa. Le tabelle ottimizzate per la memoria sono un'eccezione a questa perché attualmente non supporta le proprietà estese.
 - Tutte le chiavi esterne vengono indicizzate automaticamente a meno che non è un altro indice non cluster con lo stesso componente a sinistra.
 - Numerazione automatica nelle tabelle è basata su sequenze. Queste sequenze sono più facili da usare in ambienti simili rispetto alle colonne di identità e i server collegati. Le tabelle ottimizzate per la memoria usano colonne IDENTITY perché non supportano in SQL Server 2016.
-- Viene utilizzata una singola sequenza (ID transazione) per queste tabelle: CustomerTransactions SupplierTransactions e StockItemTransactions. Ciò dimostra come un set di tabelle può avere un'unica sequenza.
+- Una singola sequenza (TransactionID) viene usata per queste tabelle: CustomerTransactions SupplierTransactions e StockItemTransactions. Ciò dimostra come un set di tabelle può avere un'unica sequenza.
 - Alcune colonne contengono valori predefiniti appropriati.
 
 ### <a name="security-schemas"></a>Schemi di sicurezza
@@ -187,7 +187,7 @@ Simula un carico di lavoro che inserisce le vendite e acquisti. La stored proced
 |-----------------------------|---------------------|
 |Configuration_ApplyDataLoadSimulationProcedures|Crea nuovamente le procedure necessarie per i dati di simulazione di carico. È necessario per spostare i dati fino alla data corrente.|
 |Configuration_RemoveDataLoadSimulationProcedures|Questa operazione rimuove le procedure nuovamente dopo la simulazione di dati è stata completata.|
-|DeactiveTemporalTablesBeforeDataLoad|Rimuove la natura temporale di tutte le tabelle temporali e laddove, viene applicato un trigger in modo che è possibile apportare modifiche come se sono stati applicati a una data precedente rispetto a consentono le tabelle temporali con sys.|
+|DeactivateTemporalTablesBeforeDataLoad|Rimuove la natura temporale di tutte le tabelle temporali e laddove, viene applicato un trigger in modo che è possibile apportare modifiche come se sono stati applicati a una data precedente rispetto a consentono le tabelle temporali con sys.|
 |PopulateDataToCurrentDate|Utilizzato per visualizzare i dati fino alla data corrente. Deve essere eseguito prima di qualsiasi altra opzione di configurazione dopo il ripristino del database da un backup iniziale.|
 |ReactivateTemporalTablesAfterDataLoad|Ristabilisce le tabelle temporali, inclusi controllo della coerenza dei dati. (Rimuove i trigger associati).|
 

@@ -1,5 +1,5 @@
 ---
-title: Impostare le opzioni di rappresentazione (SSAS - multidimensionale) | Documenti Microsoft
+title: Impostare le opzioni di rappresentazione (SSAS - multidimensionale) | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 6c11064ecc87744999c31080e6a4d57a3849f5d2
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 279aff4acd671318b75988919d7625591f17812f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34026158"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52533807"
 ---
 # <a name="set-impersonation-options-ssas---multidimensional"></a>Impostare opzioni di rappresentazione (SSAS - Multidimensionale)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "34026158"
  Nella finestra di dialogo sono disponibili tutte le opzioni, ma solo alcune sono appropriate per ogni scenario. Utilizzare le informazioni seguenti per determinare l'opzione più adatta per il proprio scenario.  
   
  **Usa nome utente e password specifici**  
- Selezionare questa opzione per disporre il [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] oggetto utilizzi le credenziali di sicurezza di un account utente di Windows specificato nel formato seguente:  *\<nome di dominio >***\\***\<utente nome dell'account >*.  
+ Selezionare questa opzione per disporre il [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] oggetto utilizza le credenziali di sicurezza di un account utente di Windows specificato nel formato seguente: *\<Nome di dominio >***\\***\<nome dell'account utente >*.  
   
  Scegliere questa opzione per utilizzare un'identità utente di Windows dedicata e con privilegi minimi, creata specificamente a scopo di accesso ai dati. Se, ad esempio, si crea regolarmente un account di uso generale per il recupero dei dati utilizzati nei report, è possibile specificarlo qui.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "34026158"
  Per le istruzioni DMX OPENQUERY, i cubi locali e i modelli di data mining, verranno utilizzate invece le credenziali dell'utente corrente, anche se si sceglie l'opzione relativa all'account del servizio. Questa opzione non è supportata per le associazioni out-of-line.  
   
 > [!NOTE]  
->  Si possono verificare degli errori durante l'elaborazione di un modello di data mining da un cubo se all'account del servizio non sono associate autorizzazioni di amministratore nell'istanza di Analysis Services. Per altre informazioni, vedere [Mining Structure: Issue while Processing when DataSource is OLAP Cube (Problemi di elaborazione nella struttura di data mining quando DataSource è un cubo OLAP)](http://go.microsoft.com/fwlink/?LinkId=251610).  
+>  Si possono verificare degli errori durante l'elaborazione di un modello di data mining da un cubo se all'account del servizio non sono associate autorizzazioni di amministratore nell'istanza di Analysis Services. Per altre informazioni, vedere [struttura di Data Mining: Problema durante l'elaborazione quando DataSource è un cubo OLAP](http://go.microsoft.com/fwlink/?LinkId=251610).  
   
  **Usa credenziali dell'utente corrente**  
  Selezionare questa opzione per fare in modo che l'oggetto [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] utilizzi le credenziali di sicurezza dell'utente corrente per le associazioni out-of-line, le istruzioni DMX OPENQUERY, i cubi locali e i modelli di data mining.  
@@ -76,7 +76,7 @@ ms.locfileid: "34026158"
  **Predefinito** o **Eredita**  
  Nella finestra di dialogo si usa **Predefinito** per le opzioni di rappresentazione impostate a livello di database ed **Eredita** per le opzioni di rappresentazione impostate a livello di origine dati.  
   
- **Origini dati: opzione Eredita**  
+ **Origini dati: opzione eredita**  
   
  A livello di origine dati, con **Eredita** è possibile specificare che in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] è consigliabile usare l'opzione di rappresentazione dell'oggetto padre. In un modello multidimensionale, l'oggetto padre è il database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Se si sceglie l'opzione **Eredita** , è possibile gestire a livello centrale le impostazioni di rappresentazione per questa e altre origini dati che fanno parte dello stesso database. Affinché l'opzione sia significativa, scegliere un nome utente e una password specifici di Windows a livello di database. In caso contrario, la combinazione di **Eredita** nell'origine dati e di **Predefinito** nel database equivale all'uso dell'opzione relativa all'account del servizio.  
   
@@ -90,13 +90,13 @@ ms.locfileid: "34026158"
   
  Per altre informazioni sulle impostazioni predefinite a livello di database, vedere [Impostare le proprietà dei database multidimensionali &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/set-multidimensional-database-properties-analysis-services.md).  
   
- **Database: opzione Predefinito**  
+ **Database: opzione predefinito**  
 
  Per i database multidimensionali, l'opzione **Predefinito** comporta l'uso dell'account del servizio e dell'utente corrente per le operazioni di data mining.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Creare un'origine dati &#40;SSAS multidimensionale&#41;](../../analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional.md)   
- [Impostare proprietà origine dati & #40; SSAS multidimensionale & #41;](../../analysis-services/multidimensional-models/set-data-source-properties-ssas-multidimensional.md)   
+ [Impostare proprietà origine dati &#40;SSAS multidimensionale&#41;](../../analysis-services/multidimensional-models/set-data-source-properties-ssas-multidimensional.md)   
 
   
   

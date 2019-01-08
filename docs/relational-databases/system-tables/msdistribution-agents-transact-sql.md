@@ -5,8 +5,7 @@ ms.date: 10/28/2015
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - MSdistribution_agents_TSQL
@@ -19,19 +18,19 @@ ms.assetid: 0e8f0653-1351-41d1-95d2-40f6d5a050ca
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bc908623e3979943214132605a1ab92ceaad657b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 357d0cf774d3e95d700c840f88bb0165bdb9a12f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47846629"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52785753"
 ---
 # <a name="msdistributionagents-transact-sql"></a>MSdistribution_agents (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Il **MSdistribution_agents** tabella contiene una riga per ogni agente di distribuzione in esecuzione nel server di distribuzione locale. Questa tabella è archiviata nel database di distribuzione.  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|ID dell'agente di distribuzione.|  
 |**name**|**Nvarchar(100)**|Nome dell'agente di distribuzione.|  
@@ -51,7 +50,7 @@ ms.locfileid: "47846629"
 |**virtual_agent_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**anonymous_agent_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**creation_date**|**datetime**|Data e ora in cui è stato creato l'agente di distribuzione o di merge.|  
-|**queue_id**|**sysname**|Identificatore per l'individuazione della coda per le sottoscrizioni ad aggiornamento in coda. Per le sottoscrizioni non impostate per l'aggiornamento in coda il valore è NULL. Per le pubblicazioni basate sul servizio di accodamento messaggi [!INCLUDE[msCoName](../../includes/msconame-md.md)], corrisponde a un valore GUID che identifica in modo univoco la coda da utilizzare per la sottoscrizione. Per le pubblicazioni in coda basate su SQL Server, la colonna contiene il valore **SQL**.<br /><br /> Nota: L'utilizzo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Accodamento messaggi è stato deprecato e non è più supportata.|  
+|**queue_id**|**sysname**|Identificatore per l'individuazione della coda per le sottoscrizioni ad aggiornamento in coda. Per le sottoscrizioni non impostate per l'aggiornamento in coda il valore è NULL. Per le pubblicazioni basate sul servizio di accodamento messaggi [!INCLUDE[msCoName](../../includes/msconame-md.md)], corrisponde a un valore GUID che identifica in modo univoco la coda da utilizzare per la sottoscrizione. Per le pubblicazioni in coda basate su SQL Server, la colonna contiene il valore **SQL**.<br /><br /> Nota: L'utilizzo del servizio di accodamento messaggi [!INCLUDE[msCoName](../../includes/msconame-md.md)] è deprecato e non è più supportato.|  
 |**queue_status**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**offload_enabled**|**bit**|Indica se è possibile attivare l'agente in remoto.<br /><br /> **0** specifica che l'agente non può essere attivato in remoto.<br /><br /> **1** specifica che l'agente verrà attivato in remoto nel computer remoto specificato nella *offload_server* proprietà.|  
 |**offload_server**|**sysname**|Nome di rete del server da utilizzare per l'attivazione remota dell'agente.|  

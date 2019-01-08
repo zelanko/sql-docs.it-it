@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 2ea71a918ab9ceb1afba41e5af0148212f33044b
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 0e7ca6765ee44201badc54d15fb2a20aa9a863a5
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51607141"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52521188"
 ---
 # <a name="create-mining-model-dmx"></a>CREATE MINING MODEL (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -110,7 +110,7 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
   
  Per descrivere la modalità di utilizzo della colonna di stima, utilizzare una clausola di stima. Nella tabella seguente vengono descritte le due clausole disponibili.  
   
-|\<stima > clausola|Description|  
+|\<stima > clausola|Descrizione|  
 |---------------------------|-----------------|  
 |**PREDICT**|Questa colonna può essere stimata dal modello e può essere specificata nei case di input per stimare il valore di altre colonne stimabili.|  
 |**PREDICT_ONLY**|Questa colonna può essere stimata dal modello, ma i relativi valori non possono essere utilizzati nei case di input per stimare il valore di altre colonne stimabili.|  
@@ -119,7 +119,7 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
  È possibile utilizzare l'elenco dei parametri per regolare le prestazioni e le funzionalità di un modello di data mining. La sintassi dell'elenco dei parametri è la seguente:  
   
 ```  
-[<parameter> = <value>, <parameter> = <value>,…]  
+[<parameter> = <value>, <parameter> = <value>,...]  
 ```  
   
  Per un elenco dei parametri associati a ogni algoritmo, vedere [algoritmi di Data Mining &#40;Analysis Services - Data Mining&#41;](../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md).  

@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_changemergepublication_TSQL
@@ -17,12 +16,12 @@ ms.assetid: 81fe1994-7678-4852-980b-e02fedf1e796
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 89e1ca46f323bb565eea9080a0118fb19b39af08
-ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
+ms.openlocfilehash: 9eb6d52d72dec4efab7e744fd4eafd2d9a5eb612
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49072295"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52788483"
 ---
 # <a name="spchangemergepublication-transact-sql"></a>sp_changemergepublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +53,7 @@ sp_changemergepublication [ @publication= ] 'publication'
   
  Nella tabella seguente vengono descritte le proprietà della pubblicazione che è possibile modificare e le limitazioni previste per i valori di tali proprietà.  
   
-|Proprietà|valore|Description|  
+|Proprietà|Value|Descrizione|  
 |--------------|-----------|-----------------|  
 |**allow_anonymous**|**true**|Le sottoscrizioni anonime sono consentite.|  
 ||**false**|Le sottoscrizioni anonime non sono consentite.|  
@@ -106,7 +105,7 @@ sp_changemergepublication [ @publication= ] 'publication'
 ||**false**|Rimuove le informazioni sulla pubblicazione da Active Directory.|  
 |**replicate_ddl**|**1**|Le istruzioni DDL (Data Definition Language) eseguite nel server di pubblicazione vengono replicate.|  
 ||**0**|Non viene eseguita la replica delle istruzioni DDL.|  
-|**conservazione**||Si tratta di un' **int** che rappresenta il numero della *retention_period_unit* unità per cui si desidera salvare le modifiche per la pubblicazione specificata. Se la sottoscrizione non viene sincronizzata entro il periodo di memorizzazione specificato e se le modifiche che tale sottoscrizione avrebbe dovuto ricevere sono state rimosse tramite un'operazione di rimozione nel server di distribuzione, la sottoscrizione scade e pertanto dovrà essere reinizializzata. Il periodo di memorizzazione massimo consentito è il periodo compreso tra la data corrente e 31 dicembre 9999.<br /><br /> Nota: Il periodo di memorizzazione per le pubblicazioni di tipo merge ha un periodo di tolleranza di 24 ore su 24 per adattarsi ai sottoscrittori dei fusi orari diversi.|  
+|**conservazione**||Si tratta di un' **int** che rappresenta il numero della *retention_period_unit* unità per cui si desidera salvare le modifiche per la pubblicazione specificata. Se la sottoscrizione non viene sincronizzata entro il periodo di memorizzazione specificato e se le modifiche che tale sottoscrizione avrebbe dovuto ricevere sono state rimosse tramite un'operazione di rimozione nel server di distribuzione, la sottoscrizione scade e pertanto dovrà essere reinizializzata. Il periodo di memorizzazione massimo consentito è il periodo compreso tra la data corrente e 31 dicembre 9999.<br /><br /> Nota: Il periodo di memorizzazione per le pubblicazioni di tipo merge è caratterizzato da un periodo di tolleranza di 24 ore per consentire l'adeguamento dei Sottoscrittori appartenenti a fusi orari diversi.|  
 |**retention_period_unit**|**day**|Il periodo di memorizzazione è specificato in giorni.|  
 ||**week**|Il periodo di memorizzazione è specificato in settimane.|  
 ||**month**|Il periodo di memorizzazione è specificato in mesi.|  
@@ -119,7 +118,7 @@ sp_changemergepublication [ @publication= ] 'publication'
 ||**inattivo**|La pubblicazione è in uno stato inattivo.|  
 |**sync_mode**|**nativo** o<br /><br /> **bcp nativo**|L'output del programma di copia bulk in modalità nativa di tutte le tabelle viene utilizzato per lo snapshot iniziale.|  
 ||**character**<br /><br /> o **carattere bcp**|L'output del programma di copia bulk in modalità carattere di tutte le tabelle viene utilizzato per lo snapshot iniziale, che è obbligatorio per tutti i Sottoscrittori non [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|**use_partition_groups**<br /><br /> Nota: dopo avere utilizzato partition_groups, se si desidera tornare a utilizzare **setupbelongs**e impostare **use_partition_groups = false** nelle **changemergearticle**, questo potrebbe non essere rispecchiati correttamente dopo che viene eseguito uno snapshot. I trigger generati dallo snapshot sono conformi ai gruppi di partizioni.<br /><br /> La soluzione alternativa per questo scenario consiste nell'impostare lo stato su inattivo, modificare il **use_partition_groups**, quindi impostare lo stato su attivo.|**true**|La pubblicazione utilizza partizioni pre-calcolate.|  
+|**use_partition_groups**<br /><br /> Nota: Dopo avere utilizzato partition_groups, se si desidera tornare a utilizzare **setupbelongs**e impostare **use_partition_groups = false** nel **changemergearticle**, questo potrebbe non essere correttamente applicate dopo che viene eseguito uno snapshot. I trigger generati dallo snapshot sono conformi ai gruppi di partizioni.<br /><br /> La soluzione alternativa per questo scenario consiste nell'impostare lo stato su inattivo, modificare il **use_partition_groups**, quindi impostare lo stato su attivo.|**true**|La pubblicazione utilizza partizioni pre-calcolate.|  
 ||**false**|La pubblicazione non utilizza partizioni pre-calcolate.|  
 |**validate_subscriber_info**||Elenca le funzioni utilizzate per recuperare le informazioni relative al Sottoscrittore. Convalida quindi i criteri di applicazione dei filtri dinamici utilizzati per il Sottoscrittore per verificare che le informazioni vengano partizionate in modo coerente.|  
 |**web_synchronization_url**||Valore predefinito dell'URL Internet utilizzato per la sincronizzazione tramite il Web.|  

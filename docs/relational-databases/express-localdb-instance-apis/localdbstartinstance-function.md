@@ -16,12 +16,12 @@ ms.assetid: cb325f5d-10ee-4a56-ba28-db0074ab3926
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 61dc56c503e580d90b17b1b04c5e80ea6fb10d70
-ms.sourcegitcommit: ddb682c0061c2a040970ea88c051859330b8ac00
+ms.openlocfilehash: dc464988d46d5896b4a925253c8c42916897bcd2
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51571080"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52418784"
 ---
 # <a name="localdbstartinstance-function"></a>Funzione LocalDBStartInstance
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -110,10 +110,10 @@ HRESULT LocalDBStartInstance(
   
 |Buffer|Dimensioni del buffer|Spiegazione|Azione|  
 |------------|-----------------|---------------|------------|  
-|NULL|NULL|L'utente desidera avviare l'istanza e non necessita di un nome della pipe.|Viene avviata un'istanza. Non viene restituita alcuna pipe né le dimensioni del buffer richieste.|  
+|NULL|NULL|Utente desidera avviare l'istanza e non è necessaria una pipe nome.|Viene avviata un'istanza. Non viene restituita alcuna pipe né le dimensioni del buffer richieste.|  
 |NULL|Presente|L'utente richiede le dimensioni del buffer di output. Nella chiamata successiva probabilmente l'utente richiederà un avvio effettivo.|Vengono restituite le dimensioni del buffer richieste (nessun avvio né restituzione di pipe). Il risultato è S_OK.|  
 |Presente|NULL|Non consentito. Input non corretto.|Il risultato restituito è LOCALDB_ERROR_INVALID_PARAMETER.|  
-|Presente|Presente|L'utente desidera avviare l'istanza e necessita del nome della pipe per la connessione a quest'ultima dopo il relativo avvio.|Vengono controllate le dimensioni del buffer, viene avviata l'istanza e viene restituito il nome della pipe nel buffer. <br />Tramite l'argomento relativo alle dimensioni del buffer viene restituita la lunghezza della stringa "server=", senza includere valori Null di terminazione.|  
+|Presente|Presente|L'utente desidera avviare l'istanza e necessita del nome della pipe per la connessione a quest'ultima dopo il relativo avvio.|Vengono controllate le dimensioni del buffer, viene avviata l'istanza e viene restituito il nome della pipe nel buffer. <br />L'argomento di dimensione buffer restituisce la lunghezza di "server =" stringa, senza includere valori null di terminazione.|  
   
  Per un esempio di codice che utilizza l'API LocalDB, vedere [SQL Server Express LocalDB Reference](../../relational-databases/sql-server-express-localdb-reference.md).  
   

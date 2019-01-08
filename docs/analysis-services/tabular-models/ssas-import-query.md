@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 1716b3b6e5794d8dbb8d9ee0195ed642db6df054
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 37c313484b2ee7ff87668cbfdd0b87ed52cdaf98
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37981103"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52523967"
 ---
-# <a name="import-data-by-using-a-native-query"></a>Importare dati usando una query nativa
+# <a name="import-data-by-using-a-native-query"></a>Importare dati con una query nativa
 [!INCLUDE[ssas-appliesto-sql2017-later-aas](../../includes/ssas-appliesto-sql2017-later-aas.md)]
 Per i modelli tabulari 1400, la nuova esperienza recupera dati nei progetti di Visual Studio Analysis Services fornisce un'enorme flessibilità come eseguire il mashup dei dati durante l'importazione. Questo articolo descrive la creazione di una connessione a un'origine dati e quindi creando una query SQL nativa per specificare l'importazione dei dati.
 
@@ -38,7 +38,7 @@ Se non si ha già una connessione per l'origine dati, è necessario crearne uno.
 2. Nelle **Editor di Query**, fare clic su **Query** > **nuova Query** > **Query vuota**
 3. Nella barra della formula, digitare
     ```
-    = Value.NativeQuery(#"DATA SOURCE NAME", "SELECT * FROM …")
+    = Value.NativeQuery(#"DATA SOURCE NAME", "SELECT * FROM ...")
     ```
 4. Per creare una tabella, in **query**, fare doppio clic su query e quindi selezionare **creare una nuova tabella**. La nuova tabella avrà lo stesso nome della query.
 

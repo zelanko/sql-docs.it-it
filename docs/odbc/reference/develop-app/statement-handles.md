@@ -14,15 +14,15 @@ ms.assetid: 65d6d78b-a8c8-489a-9dad-f8d127a44882
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0be194c8e730f1ef797d0db30ff9942735f51617
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6f249bb13ece6382e96dfe953b1d3c1d96c7bf65
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47618899"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52523694"
 ---
 # <a name="statement-handles"></a>Handle di istruzione
-Oggetto *istruzione* è più facilmente considerato come un'istruzione SQL, ad esempio **seleziona \* dipendente da**. Tuttavia, un'istruzione è solo un'istruzione SQL, ovvero è costituito da tutte le informazioni associate a tale istruzione SQL, ad esempio qualsiasi set di risultati creati tramite l'istruzione e i parametri usati nell'esecuzione dell'istruzione. Un'istruzione non è neanche necessario disporre di un'istruzione SQL definito dall'applicazione. Ad esempio, quando una funzione di catalogo, ad esempio **SQLTables** viene eseguita in un'istruzione, viene eseguita un'istruzione SQL predefinita che restituisce un elenco di nomi di tabella.  
+Oggetto *istruzione* è più facilmente considerato come un'istruzione SQL, ad esempio **seleziona \* dipendente da**. Tuttavia, un'istruzione è solo un'istruzione SQL: è costituito da tutte le informazioni associate a tale istruzione SQL, ad esempio qualsiasi set di risultati creati tramite l'istruzione e i parametri usati nell'esecuzione dell'istruzione. Un'istruzione non è neanche necessario disporre di un'istruzione SQL definito dall'applicazione. Ad esempio, quando una funzione di catalogo, ad esempio **SQLTables** viene eseguita in un'istruzione, viene eseguita un'istruzione SQL predefinita che restituisce un elenco di nomi di tabella.  
   
  Ogni istruzione viene identificata da un handle di istruzione. Un'istruzione è associata a una singola connessione, e possono essere presenti più istruzioni in tale connessione. Alcuni driver limitare il numero di istruzioni attive che supportano; opzione il SQL_MAX_CONCURRENT_ACTIVITIES **SQLGetInfo** specifica quanti istruzioni attive supporta un driver in un'unica connessione. Viene definita come un'istruzione *active* se è presente in attesa di risultati, in cui risultati sono un set di risultati o conteggio delle righe interessate da un' **Inserisci**, **UPDATE**, o **Eliminare** istruzione o i dati viene inviato con più chiamate a **SQLPutData**.  
   

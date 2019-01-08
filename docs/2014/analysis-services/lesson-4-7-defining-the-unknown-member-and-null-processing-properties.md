@@ -11,12 +11,12 @@ ms.assetid: d9abb09c-9bfa-4e32-b530-8590e4383566
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3c0e257a3fe1b4aff1f1c9336f4cb11e8a12e613
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5982bd49a5b7847cb8c09a7e46ca077bbe0e2d2b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48088731"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52521625"
 ---
 # <a name="defining-the-unknown-member-and-null-processing-properties"></a>Definizione delle proprietà UnknownMember e NullProcessing
   Quando [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] elabora una dimensione, tutti i valori distinti delle colonne sottostanti delle tabelle o viste incluse nella vista origine dati popolano gli attributi della dimensione. Se [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] rileva un valore Null durante l'elaborazione, per impostazione predefinita quest'ultimo viene convertito in un valore zero per le colonne di tipo numerico o in una stringa vuota per le colonne di tipo stringa. È possibile modificare le impostazioni predefinite oppure convertire i valori Null nell'eventuale processo di estrazione, trasformazione e caricamento del data warehouse relazionale sottostante. È anche possibile configurare [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] in modo che converta il valore Null in un valore designato impostando tre proprietà, ovvero **UnknownMember** e **UnknownMemberName** per la dimensione e **NullProcessing** per l'attributo chiave della dimensione.  
@@ -90,7 +90,7 @@ ms.locfileid: "48088731"
   
 9. Nel **attributi** riquadro, modificare il nome di questo nuovo attributo in `Category`.  
   
-10. Nella finestra Proprietà fare clic nel campo della proprietà **NameColumn** , quindi fare clic sul pulsante Sfoglia (**…**) per aprire la finestra di dialogo **Colonna nome** .  
+10. Nella finestra Proprietà fare clic nel **NameColumn** proprietà campo e quindi fare clic su Sfoglia (**...** ) per aprire la **colonna nome** nella finestra di dialogo.  
   
 11. Selezionare **EnglishProductCategoryName** nell'elenco **Colonna di origine** , quindi fare clic su **OK**.  
   
@@ -98,7 +98,7 @@ ms.locfileid: "48088731"
   
 13. Nel **attributi** riquadro, modificare il nome di questo nuovo attributo in `Subcategory`.  
   
-14. Nella finestra Proprietà fare clic nel campo della proprietà **NameColumn** , quindi fare clic sul pulsante Sfoglia **(…)** per aprire la finestra di dialogo **Colonna nome** .  
+14. Nella finestra Proprietà fare clic nel **NameColumn** proprietà campo e quindi fare clic su Sfoglia **(...)**  per aprire la **colonna nome** nella finestra di dialogo.  
   
 15. Selezionare **EnglishProductSubcategoryName** nell'elenco **Colonna di origine** , quindi fare clic su **OK**.  
   

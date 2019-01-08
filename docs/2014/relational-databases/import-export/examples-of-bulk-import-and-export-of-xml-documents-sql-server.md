@@ -18,12 +18,12 @@ ms.assetid: dff99404-a002-48ee-910e-f37f013d946d
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 12201091caba40e145e6848fe25eef3b02b6b06a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9d573faebbbfcaf8a501a80aa093584af7fa0307
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48221041"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52515846"
 ---
 # <a name="examples-of-bulk-import-and-export-of-xml-documents-sql-server"></a>Esempi di importazione ed esportazione bulk di documenti XML (SQL Server)
     
@@ -46,7 +46,7 @@ ms.locfileid: "48221041"
   
 -   A. [Importazione BULK di dati XML come flusso di byte binario](#binary_byte_stream)  
   
--   B. [Importazione bulk di dati XML in una riga esistente](#existing_row)  
+-   b. [Importazione bulk di dati XML in una riga esistente](#existing_row)  
   
 -   C. [Importazione bulk di dati XML da un file contenente una definizione DTD](#file_contains_dtd)  
   
@@ -55,10 +55,10 @@ ms.locfileid: "48221041"
 -   E. [Esportazione bulk di dati XML](#bulk_export_xml_data)  
   
 ###  <a name="binary_byte_stream"></a> A. Importazione bulk di dati XML come flusso di byte binario  
- Quando si esegue un'importazione bulk di dati XML da un file contenente una dichiarazione di codifica che si desidera applicare, specificare l'opzione SINGLE_BLOB nella clausola OPENROWSET(BULK…). L'opzione SINGLE_BLOB garantisce che il parser XML di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Importa i dati in base allo schema di codifica specificato nella dichiarazione XML.  
+ Quando si esegue un'importazione bulk di dati XML da un file contenente una dichiarazione di codifica che si desidera applicare, specificare l'opzione SINGLE_BLOB nella clausola OPENROWSET(BULK...). L'opzione SINGLE_BLOB garantisce che il parser XML di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] importi i dati in base allo schema di codifica specificato nella dichiarazione XML.  
   
 #### <a name="sample-table"></a>Tabella di esempio  
- Per testare l'esempio A, è necessario creare una tabella di esempio `T`.  
+ Per testare l'esempio A, è necessario creare la tabella di esempio `T`.  
   
 ```  
 USE tempdb  
@@ -151,7 +151,7 @@ GO
   
  Per risolvere il problema, è possibile importare dati XML da un file di dati contenente una definizione DTD utilizzando la funzione `OPENROWSET(BULK...)` e specificando quindi l'opzione `CONVERT` nella clausola `SELECT` del comando. La sintassi di base per il comando è la seguente:  
   
- `INSERT ... SELECT CONVERT(…) FROM OPENROWSET(BULK...)`  
+ `INSERT ... SELECT CONVERT(...) FROM OPENROWSET(BULK...)`  
   
 #### <a name="sample-data-file"></a>File di dati di esempio  
  Prima di testare questo esempio di importazione bulk, creare un file (`C:\temp\Dtdfile.xml`) contenente l'istanza di esempio seguente:  
@@ -261,7 +261,7 @@ bcp bulktest..xTable out a-wn.out -N -T -S<server_name>\<instance_name>
  [INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/insert-transact-sql)   
  [Clausola SELECT &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-clause-transact-sql)   
  [Utilità bcp](../../tools/bcp-utility.md)   
- [Informazioni sull'importazione ed esportazione in blocco di dati &#40;SQL Server&#41;](bulk-import-and-export-of-data-sql-server.md)   
+ [Informazioni sull'importazione ed esportazione bulk di dati &#40;SQL Server&#41;](bulk-import-and-export-of-data-sql-server.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql)   
  [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql)  
   

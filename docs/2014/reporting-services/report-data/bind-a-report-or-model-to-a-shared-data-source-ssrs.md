@@ -14,12 +14,12 @@ ms.assetid: 23cc15f2-2883-48e2-bc6c-fa0ab61a2e21
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: a5f45b4f453780b1c3a0f87d6ec898650ffd8037
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ca6d2e98bc631a675aee3d4968103c9981775019
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48100351"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52521775"
 ---
 # <a name="bind-a-report-or-model-to-a-shared-data-source-ssrs"></a>Associare un report o un modello a un'origine dati condivisa (SSRS)
   In alcune situazioni, ad esempio quando si sposta un report o un modello da un server di test a uno di produzione, potrebbe essere necessario salvare il file nel computer locale e quindi caricarlo in un altro server di report. Quando si carica il report o il modello nel nuovo server, è necessario riassociarlo a un'origine dei dati condivisa archiviata nel nuovo server di report. Se il report o il modello non viene riassociato, non funzionerà correttamente quando vi si accede dal nuovo server di report.  
@@ -55,7 +55,7 @@ ms.locfileid: "48100351"
   
 5.  Nell'area **Tipo di connessione** verificare che **Origine dati condivisa** sia selezionata.  
   
-6.  Nell'area **Collegamento origine dati** fare clic sul pulsante con i puntini di sospensione.  
+6.  Nell'area **Collegamento origine dati** fare clic sul pulsante con i puntini di sospensione (...).  
   
 7.  Individuare l'origine dei dati da utilizzare.  
   
@@ -66,11 +66,11 @@ ms.locfileid: "48100351"
 10. Scegliere **Chiudi**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Caricare un File o un Report &#40;gestione Report&#41;](../reports/upload-a-file-or-report-report-manager.md)   
+ [Caricare un file o un report &#40;Gestione report&#41;](../reports/upload-a-file-or-report-report-manager.md)   
  [Caricare documenti in una raccolta di SharePoint &#40;Reporting Services in modalità SharePoint&#41;](../upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode.md)   
- [Creare e gestire origini dati condivise &#40;Reporting Services in SharePoint la modalità integrata&#41;](../create-manage-shared-data-sources-reporting-services-sharepoint-integrated-mode.md)   
- [Creare, eliminare o modificare un'origine dati condivisa &#40;gestione Report&#41;](../create-delete-or-modify-a-shared-data-source-report-manager.md)   
+ [Creare e gestire origini dati condivise &#40;Reporting Services in modalità integrata SharePoint&#41;](../create-manage-shared-data-sources-reporting-services-sharepoint-integrated-mode.md)   
+ [Creare, eliminare o modificare un'origine dei dati condivisa &#40;Gestione report&#41;](../create-delete-or-modify-a-shared-data-source-report-manager.md)   
  [Connessioni dati, origini dati e stringhe di connessione in Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
- [Origini dati supportate da Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md)  
+ [Origini dei dati supportate da Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md)  
   
   

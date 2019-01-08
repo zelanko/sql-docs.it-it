@@ -1,5 +1,5 @@
 ---
-title: Definizione ed esplorazione delle traduzioni | Documenti Microsoft
+title: Definizione ed esplorazione delle traduzioni | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: a63fd44d7ec62b9033f4371e7e2d38306757c647
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: b8d5e7cd1d1696624ebb6fe919cfa3b1ba6ee5c7
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018918"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535007"
 ---
-# <a name="lesson-9-2---defining-and-browsing-translations"></a>Lezione 9-2-definizione ed esplorazione delle traduzioni
+# <a name="lesson-9-2---defining-and-browsing-translations"></a>Lezione 9-2: definizione ed esplorazione delle traduzioni
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
 Una traduzione è una rappresentazione dei nomi degli oggetti di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] in una lingua specifica. Gli oggetti includono gruppi di misure, misure, dimensioni, attributi, gerarchie, indicatori KPI, azioni e membri calcolati. Le traduzioni offrono supporto server per applicazioni client in grado di supportare più lingue. Con un client di questo tipo, il client passa l'identificatore delle impostazioni locali (LCID) all'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], la quale utilizza tale LCID per determinare il set di traduzioni da utilizzare per generare metadati per oggetti di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Se un oggetto di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] non contiene una traduzione per la lingua in questione oppure per un oggetto specificato, per la restituzione dei metadati dell'oggetto al client verrà utilizzata la lingua predefinita. Se ad esempio un utente aziendale in Francia accede a un cubo da una workstation in cui vengono utilizzate le impostazioni locali francesi, le didascalie dei membri e i valori delle proprietà del membro verranno visualizzati in francese, se è disponibile una traduzione in tale lingua. Se tuttavia un utente aziendale in Germania accede allo stesso cubo da una workstation in cui vengono utilizzate le impostazioni locali tedesche, l'utente vedrà le didascalie dei membri e i valori delle proprietà del membro in tedesco. Per altre informazioni, vedere [Traduzioni delle dimensioni](../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimension-translations.md), [Traduzioni di cubi](../analysis-services/multidimensional-models-olap-logical-cube-objects/cube-translations.md), [Supporto delle traduzioni in Analysis Services](../analysis-services/translation-support-in-analysis-services.md).  
@@ -45,17 +45,17 @@ Nelle procedure descritte in questo argomento vengono definite traduzioni di met
   
 6.  Nella riga relativa all'oggetto **Caption** per l'attributo **Month Name** , digitare **Mes del Año** nella colonna della traduzione in **Spagnolo (Spagna)** e **Mois d'Année** nella colonna della traduzione in **Francese (Francia)** .  
   
-    Si noti che quando si immettono queste traduzioni, vengono visualizzati i puntini di sospensione (**...**). Facendo clic sui puntini di sospensione, è possibile specificare una colonna nella tabella sottostante che genera traduzioni per ogni membro della gerarchia dell'attributo.  
+    Si noti che quando si immettono queste traduzioni, i puntini di sospensione (**...** ) viene visualizzato. Facendo clic sui puntini di sospensione, è possibile specificare una colonna nella tabella sottostante che genera traduzioni per ogni membro della gerarchia dell'attributo.  
   
-7.  Selezionare i puntini di sospensione (**…**) per la traduzione in **Spagnolo (Spagna)** dell'attributo **Month Name** .  
+7.  Fare clic sui puntini di sospensione (**...** ) per il **spagnolo (Spagna)** traduzioni per il **Month Name** attributo.  
   
     Verrà visualizzata la finestra di dialogo **Traduzione dati attributo** .  
   
 8.  Selezionare **SpanishMonthName** nell'elenco **Colonne per la traduzione**, come illustrato nella figura seguente.  
   
-    ![Finestra di dialogo traduzione dati attributo](../analysis-services/media/l9-translations-4.gif "la finestra di dialogo traduzione dati attributo")  
+    ![Finestra di dialogo traduzione dati attributo](../analysis-services/media/l9-translations-4.gif "nella finestra di dialogo traduzione dati attributo")  
   
-9. Fare clic su **OK**e sui puntini di sospensione (**…**) per la traduzione in **Francese (Francia)** dell'attributo **Month Name** .  
+9. Fare clic su **OK**, quindi fare clic sui puntini di sospensione (**...** ) per il **francese (Francia)** traduzioni per il **Month Name** attributo.  
   
 10. Selezionare **FrenchMonthName** nell'elenco **Colonne per la traduzione**e fare clic su **OK**.  
   

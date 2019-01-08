@@ -16,17 +16,17 @@ ms.assetid: 6773d5df-03ef-4781-beb7-9f6825bac979
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 85bf679fe5ab9f9224a4d8b09aa8fa64643ce80b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 19bdabaab24d9276386095cb8ef97b0130a13c58
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48054318"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52530372"
 ---
 # <a name="back-up-and-restore-reporting-services-encryption-keys"></a>Eseguire il backup e il ripristino delle chiavi di crittografia di Reporting Services
   Un aspetto importante della configurazione del server di report riguarda la creazione di una copia di backup della chiave simmetrica utilizzata per crittografare le informazioni riservate. La copia di backup della chiave è obbligatoria per molte operazioni di routine e consente di riutilizzare un database del server di report esistente in una nuova installazione.  
   
- **[!INCLUDE[applies](../../includes/applies-md.md)]**  Modalità nativa di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] | Modalità SharePoint di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  
+ **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] | Modalità SharePoint di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]   
   
  È necessario ripristinare la copia di backup della chiave di crittografia se si verifica uno degli eventi seguenti:  
   
@@ -47,7 +47,7 @@ ms.locfileid: "48054318"
 ## <a name="backing-up-the-encryption-keys"></a>Backup delle chiavi di crittografia  
  Durante il backup della chiave simmetrica, la chiave viene scritta nel file specificato dall'utente e quindi viene codificata utilizzando la password fornita dall'utente. La chiave simmetrica non può mai essere archiviata non crittografata, pertanto è necessario fornire una password per codificarla al momento di salvarla su disco. Dopo aver creato il file, è necessario archiviarlo in un percorso protetto e **ricordare la password** per poterlo sbloccare. Per eseguire il backup della chiave simmetrica, è possibile utilizzare gli strumenti riportati di seguito.  
   
- **Modalità nativa:** Gestione configurazione Reporting Services o l'utilità **rskeymgmt** .  
+ **Modalità nativa:** Uno di Gestione configurazione Reporting Services o il **rskeymgmt** utilità.  
   
  **Modalità SharePoint:** pagine di Amministrazione centrale SharePoint o PowerShell.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "48054318"
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-####  <a name="bkmk_backup_rskeymgmt"></a> Eseguire il backup di chiavi di crittografia – rskeymgmt (modalità nativa)  
+####  <a name="bkmk_backup_rskeymgmt"></a> Eseguire il backup di chiavi di crittografia - rskeymgmt (modalità nativa)  
   
 1.  Eseguire l'utilità **rskeymgmt.exe** nel computer locale che ospita il server di report. È necessario utilizzare l'argomento di estrazione `-e` per copiare la chiave. Specificare un nome file e una password. Nell'esempio seguente vengono illustrati gli argomenti che è necessario specificare:  
   
@@ -99,9 +99,9 @@ ms.locfileid: "48054318"
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-####  <a name="bkmk_restore_rskeymgmt"></a> Ripristinare le chiavi di crittografia – rskeymgmt (modalità nativa)  
+####  <a name="bkmk_restore_rskeymgmt"></a> Ripristinare le chiavi di crittografia - rskeymgmt (modalità nativa)  
   
-1.  Eseguire l'utilità **rskeymgmt.exe** nel computer locale che ospita il server di report. Usare il `-a` argomento per ripristinare le chiavi. È necessario fornire un nome file completo e specificare una password. Nell'esempio seguente vengono illustrati gli argomenti che è necessario specificare:  
+1.  Eseguire l'utilità **rskeymgmt.exe** nel computer locale che ospita il server di report. Utilizzare l'argomento `-a` per ripristinare le chiavi. È necessario fornire un nome file completo e specificare una password. Nell'esempio seguente vengono illustrati gli argomenti che è necessario specificare:  
   
     ```  
     rskeymgmt -a -f d:\rsdbkey.snk -p<password>  

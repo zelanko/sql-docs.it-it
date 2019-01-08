@@ -17,12 +17,12 @@ ms.assetid: 761bef6a-37d4-4b19-944e-f2aadc75a242
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b617305a8766ff94a699a054ac394be406dc7873
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ee4a7a09471078753589463c058ba5ea2e39c4d2
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48057091"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52420005"
 ---
 # <a name="cluster-diagram-walkthrough-data-mining-add-ins"></a>Descrizione dettagliata del diagramma cluster (componenti aggiuntivi Data mining)
   Dopo aver creato un modello di clustering, è possibile importarlo in Visio utilizzando la **Cluster** il data shaping e quindi continuare a personalizzare e migliorare il layout. Il **forme di Data Mining per Visio** includono i seguenti controlli personalizzati per l'uso di diagrammi di data mining:  
@@ -73,9 +73,9 @@ ms.locfileid: "48057091"
   
 7.  Lasciare l'opzione **numero di righe nel grafico**, pari a 5.  
   
-     Questa opzione non consente di modificare il numero di cluster nel modello; limita semplicemente il numero di attributi che possono essere visualizzati come caratteristiche di ogni cluster.  
+     Questa opzione non modifica il numero di cluster nel modello. limita semplicemente il numero di attributi che possono essere visualizzati come caratteristiche di ogni cluster.  
   
-     Tuttavia, l'opzione viene utilizzata come filtro sui dati del grafico, pertanto non è possibile aumentare il numero di elementi più avanti.  
+     Tuttavia, l'opzione agisce come un filtro sui dati del grafico, in modo che non è possibile aumentare il numero di elementi in un secondo momento.  
   
 8.  Fare clic su **Avanzate**.  
   
@@ -85,7 +85,7 @@ ms.locfileid: "48057091"
   
      ![Fare clic su Avanzate per scegliere i colori delle forme](media/dm13-visio-clusteroptions-advanced.gif "fare clic su Avanzate per scegliere i colori delle forme")  
   
-     **Suggerimento:** alcuni colori possono essere modificati in un secondo momento usando i temi di Visio e i controlli di modifica della forma. Tuttavia, i temi di Visio sostituiranno anche alcune di queste selezioni dei colori, pertanto è consigliabile iniziare con colori predefiniti e gradualmente applicare le modifiche.  
+     **Suggerimento:** Alcuni colori possono essere modificati in un secondo momento usando i temi di Visio e i controlli di modifica della forma. Tuttavia, i temi di Visio sostituiranno anche alcune di queste selezioni dei colori, pertanto è consigliabile iniziare con colori predefiniti e gradualmente applicare le modifiche.  
   
 9. Fare clic su **fine** per creare il grafico.  
   

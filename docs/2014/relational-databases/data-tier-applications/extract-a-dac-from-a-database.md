@@ -21,19 +21,19 @@ ms.assetid: ae52a723-91c4-43fd-bcc7-f8de1d1f90e5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: acf3974a9406e974f6d294584cb732c12b0718e7
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 7fc0aab989eb46b64ef6b9919f999ba13c4ef74f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43815637"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52527189"
 ---
 # <a name="extract-a-dac-from-a-database"></a>Estrarre un'applicazione livello dati da un database
   Usare la **procedura guidata Estrai applicazione livello dati** o uno script di Windows PowerShell per estrarre un pacchetto di applicazione livello dati da un database di SQL Server esistente. Il processo di estrazione crea un file di pacchetto DAC che contiene le definizioni degli oggetti di database e i relativi elementi a livello di istanza. Ad esempio, un file di pacchetto di applicazione livello dati contiene tutte le tabelle di database, le stored procedure, le viste e gli utenti, nonché gli account di accesso che eseguono il mapping agli utenti del database.  
   
--   **Prima di iniziare:**  [Limitazioni e restrizioni](#LimitationsRestrictions), [Autorizzazioni](#Permissions)  
+-   **Prima di iniziare:**  [Limitazioni e restrizioni](#LimitationsRestrictions), [autorizzazioni](#Permissions)  
   
--   **Per estrarre una DAC, utilizzando:**[Creazione guidata applicazione livello dati estrarre The](#UsingDACExtractWizard), [PowerShell  ](#ExtractDACPowerShell)  
+-   **Per estrarre una DAC, utilizzando:**  [La procedura guidata dell'applicazione livello dati estratto](#UsingDACExtractWizard), [PowerShell](#ExtractDACPowerShell)  
   
 ## <a name="before-you-begin"></a>Prima di iniziare  
  È possibile estrarre un'applicazione livello dati dai database che risiedono in istanze di [!INCLUDE[ssSDS](../../includes/sssds-md.md)], o [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Service Pack 4, o versioni successive. Se il processo di estrazione viene eseguito rispetto a un database distribuito da un'applicazione livello dati, vengono estratte solo le definizioni degli oggetti nel database. Il processo non fa riferimento l'applicazione livello dati registrata nel `msdb` (**master** in [!INCLUDE[ssSDS](../../includes/sssds-md.md)]). Il processo di estrazione non consente di registrare la definizione DAC nell'istanza corrente del motore di database. Per ulteriori informazioni sulla registrazione di un'applicazione livello dati, vedere [Register a Database As a DAC](register-a-database-as-a-dac.md).  
@@ -51,7 +51,7 @@ ms.locfileid: "43815637"
   
 2.  Espandere il nodo di **Database** .  
   
-3.  Fare clic con il pulsante destro del mouse sul nodo del database da cui si deve estrarre l'applicazione livello dati, scegliere **Attività**e selezionare **Estrai applicazione livello dati**  
+3.  Fare clic con il pulsante destro del mouse sul nodo del database da cui si deve estrarre l'applicazione livello dati, scegliere **Attività** e quindi selezionare **Estrai applicazione livello dati**.  
   
 4.  Completare le finestre di dialogo della procedura guidata.  
   

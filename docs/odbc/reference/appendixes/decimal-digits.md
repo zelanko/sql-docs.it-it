@@ -16,12 +16,12 @@ ms.assetid: 07f3d1fc-b4ee-4693-b342-330b2231b6d0
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: abb7c01b2495ad58c14ca7e2aefede233213f963
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f7b9a69941364b32e6b43d79f2d092511fd61f22
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47694449"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52506079"
 ---
 # <a name="decimal-digits"></a>Cifre decimali
 Il *cifre decimali* di dati decimali e numerici tipi viene definito come il numero massimo di cifre a destra del separatore decimale, o la scala dei dati. Per le colonne di numeri approssimative a virgola mobile o parametri, la scala è definita, poiché il numero di cifre a destra del separatore decimale non è fisso. Per datetime o intervallo di dati che contiene un componente di secondi, le cifre decimali viene definito come il numero di cifre a destra del separatore decimale nel componente di secondi di dati.  
@@ -33,7 +33,7 @@ Il *cifre decimali* di dati decimali e numerici tipi viene definito come il nume
 |Tipo SQL|Cifre decimali|  
 |--------------|--------------------|  
 |Tutti i tipi carattere e binario [a]|n/d|  
-|SQL_DECIMAL<br />SQL_NUMERIC|Il numero definito di cifre a destra del separatore decimale. Ad esempio, la scala di una colonna definita come NUMERIC(10,3) è 3. Può trattarsi di un numero negativo per il supporto di archiviazione di numeri molto grandi senza utilizzare la notazione esponenziale. ad esempio, "12000" possono essere archiviati come "12" con una scala pari a -3.|  
+|SQL_DECIMAL<br />SQL_NUMERIC|Il numero definito di cifre a destra del separatore decimale. Ad esempio, la scala di una colonna definita come NUMERIC(10,3) è 3. Può trattarsi di un numero negativo per il supporto di archiviazione di numeri molto grandi senza utilizzare la notazione esponenziale. ad esempio, "12000" possono essere archiviate come "12" con una scala pari a -3.|  
 |Tutti i tipi numerici esatti diversi da SQL_DECIMAL e SQL_NUMERIC [a]|0|  
 |Tutti i tipi di dati approssimati [a]|n/d|  
 |SQL_TYPE_DATE e tutti i tipi di intervallo con alcun componente di secondi [a]|n/d|  
@@ -44,7 +44,7 @@ Il *cifre decimali* di dati decimali e numerici tipi viene definito come il nume
   
  I valori restituiti per le cifre decimali non corrispondono ai valori in qualsiasi campo del descrittore uno. I valori possono provenire dal SQL_DESC_SCALE o il campo SQL_DESC_PRECISION, a seconda del tipo di dati, come illustrato nella tabella seguente.  
   
-|Tipo SQL|Campo di descrizione corrispondente a<br /><br /> cifre decimali|  
+|Tipo SQL|Campo di descrizione corrispondente a<br /><br /> Cifre decimali|  
 |--------------|----------------------------------------------------------|  
 |Tutti i tipi carattere e binario|n/d|  
 |Tutti i tipi numerici esatti|SCALE|  

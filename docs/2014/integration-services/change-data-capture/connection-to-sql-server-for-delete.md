@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 030b10c2-6b88-4c2c-bf67-22994be25a60
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f347a4866a7b6566ae2f0759813ac99d7977f058
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0b7c3b34f60f69a788c67022151dd90ddc9235e8
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48143811"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52779953"
 ---
 # <a name="connection-to-sql-server-for-delete"></a>Connessione a SQL Server per l'eliminazione
   Quando si tenta di eliminare un'istanza di Oracle CDC con un account di accesso senza un ruolo del database che include autorizzazione di scrittura (ad esempio il ruolo **db_owner**) per il database MSXDBCDC, viene visualizzata la finestra di dialogo Connetti a SQL Server.  
@@ -33,18 +32,18 @@ ms.locfileid: "48143811"
   
 -   **Autenticazione di Windows**  
   
--   **Autenticazione di SQL Server**: se si seleziona questa opzione, è necessario digitare **Login** e **Password** per l'utente nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a cui si esegue la connessione.  
+-   **Autenticazione di SQL Server**: Se si seleziona questa opzione, è necessario digitare il **account di accesso** e **Password** per l'utente nel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ci si connette a.  
   
  **Opzioni**  
  Fare clic sulla freccia per visualizzare le opzioni disponibili da configurare. È possibile scegliere di non modificare il valore predefinito per queste opzioni. Sono disponibili le opzioni seguenti:  
   
--   **Timeout connessione**: digitare il tempo, in secondi, di attesa del programma per la connessione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da stabilire prima che venga generato un errore di timeout. Il valore predefinito è **15**.  
+-   **Timeout della connessione**: Digitare il tempo (in secondi) di attesa del programma per il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stabilire prima che venga generato un errore di timeout connessione. Il valore predefinito è **15**.  
   
--   **Timeout esecuzione**: digitare il tempo, in secondi, di attesa del programma per l'esecuzione del comando SQL da terminare prima che venga generato un errore di timeout. Il valore predefinito è **30**.  
+-   **Timeout esecuzione**: Digitare il tempo (in secondi) di attesa del programma per l'esecuzione del comando SQL da terminare prima che venga generato un errore di timeout. Il valore predefinito è **30**.  
   
--   **Crittografa connessione**: selezionare **Crittografa connessione** per assicurare che la connessione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da stabilire venga crittografata per garantire la privacy.  
+-   **Crittografa connessione**: Selezionare **Encrypt Connection** per assicurarsi che il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connessione da stabilire venga crittografata per garantire la privacy.  
   
--   **Advanced**: fare clic su **Advanced** e digitare eventuali proprietà di connessione aggiuntive nella finestra di dialogo Advanced Connection Properties, se necessario.  
+-   **Avanzate**: Fare clic su **Advanced** e digitare eventuali proprietà di connessione aggiuntive nella finestra di dialogo Advanced Connection Properties.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Autorizzazioni necessarie per la connessione a SQL per il servizio CDC](sql-server-connection-required-permissions-for-the-cdc-service.md)  

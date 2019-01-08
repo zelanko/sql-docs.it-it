@@ -13,15 +13,15 @@ ms.assetid: 7cc01544-e814-403b-bbfe-a2750bf921bd
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ecf079c86362aeae78b7c9ceaad640b0ad1519c4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: db77de95e83e596a8a301fa65885ee640c742a71
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47786959"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52543557"
 ---
 # <a name="types-of-cursors-ado"></a>Tipi di cursori (ADO)
-Come regola generale, l'applicazione deve usare il cursore più semplice che fornisce l'accesso ai dati necessari. Ogni caratteristica di cursore aggiuntive oltre le nozioni di base (forward-only, di sola lettura, statici, scorrevoli) ha un prezzo, ovvero nella memoria del client, il carico di rete o delle prestazioni. In molti casi, le opzioni di cursore predefinito generano un cursore più complesso rispetto a effettivamente necessaria per l'applicazione.  
+Come regola generale, l'applicazione deve usare il cursore più semplice che fornisce l'accesso ai dati necessari. Ogni caratteristica di cursore aggiuntive oltre le nozioni di base (forward-only, sola lettura, statici, scorrimento, non memorizzato nel buffer) prevede un prezzo - nella memoria del client, il carico di rete o delle prestazioni. In molti casi, le opzioni di cursore predefinito generano un cursore più complesso rispetto a effettivamente necessaria per l'applicazione.  
   
  La scelta del tipo di cursore dipende dal modo in cui l'applicazione usa il set di risultati e anche diverse considerazioni di progettazione, tra cui la dimensione del set di risultati, la percentuale dei dati che possono essere usati, sensibilità alle modifiche dei dati e le prestazioni dell'applicazione requisiti.  
   

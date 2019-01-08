@@ -11,12 +11,12 @@ ms.assetid: 7f1f2b28-c9f5-49ad-934b-02f2fa6b9328
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 4f0853eb502d810a693e4cc2872710a62c784268
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e84b6e148774fc9b48b6174fa8be87579290fec4
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159401"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52393416"
 ---
 # <a name="install-powerpivot-from-the-command-prompt"></a>Installazione di PowerPivot dal prompt dei comandi
   È possibile eseguire il programma di installazione dalla riga di comando per installare SQL Server PowerPivot per SharePoint. È necessario includere il parametro `/ROLE` nel comando ed escludere il parametro `/FEATURES`.  
@@ -37,7 +37,7 @@ ms.locfileid: "48159401"
   
  Con entrambi i ruoli è possibile installare i file di distribuzione, configurazione e applicazione che consentono l'esecuzione di PowerPivot per SharePoint in una farm di SharePoint. Se si specifica uno dei due ruoli, vengono verificati i requisiti hardware e software necessari per l'integrazione con SharePoint.  
   
- Con l'opzione Farm esistente si suppone l'esistenza di una farm di SharePoint. L'opzione Nuova farm prevede la creazione di una nuova farm; essa supporta l'aggiunta nella sintassi della riga di comando di un'istanza del Motore di database che può essere utilizzata come server di database della farm.  
+ Con l'opzione Farm esistente si suppone l'esistenza di una farm di SharePoint. L'opzione nuova farm si presuppone che si creerà una nuova farm; supporta l'aggiunta di un'istanza del motore di Database nella sintassi della riga di comando in modo che è possibile usare l'istanza del motore di Database come server di database della farm.  
   
  A differenza delle versioni precedenti, tutte le attività di configurazione del server vengono eseguite successivamente all'installazione. In caso di automazione delle procedure di installazione e configurazione, è possibile utilizzare PowerShell per configurare il server. Per altre informazioni, vedere [configurazione di PowerPivot tramite Windows PowerShell](../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-using-windows-powershell.md).  
   

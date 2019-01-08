@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - vs.Print
@@ -12,22 +12,22 @@ ms.assetid: 1811cb9e-3791-414d-b8c9-1d61657707f8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4692f5c0ceddea6f8a67ea9aacbcb1efe523db7e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8019f762d6d80ced2688f0e93f7ad0e0a29bd3f6
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48180601"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52768923"
 ---
 # <a name="print-dialog-box"></a>Finestra di dialogo Stampa
   Mediante le opzioni disponibili nella finestra di dialogo **Stampa** è possibile specificare la modalità di stampa di un documento.  
   
 ## <a name="printer"></a>Stampante  
- **Nome**  
+ **Name**  
  Specifica la stampante. Selezionare una stampante dall'elenco. La stampante selezionata diviene la stampante predefinita fino alla chiusura di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o alla selezione di un'altra stampante. Le informazioni visualizzate nei campi sotto l'elenco si applicano alla stampante selezionata.  
   
  **Stato**  
- Descrive la stato della stampante selezionata, ad esempio, occupata o pronta.  
+ Descrive la stato della stampante selezionata, che può essere ad esempio occupata o pronta.  
   
  **Tipo**  
  Identifica la stampante selezionata.  

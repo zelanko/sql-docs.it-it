@@ -17,12 +17,12 @@ ms.assetid: 054c4a87-60bf-4556-9a8c-8b2d77a534e6
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: f36432352d7b8351e7ae51840906c0d00ff67d78
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4959243f633702fb0f0afd9b2444ae65666ef680
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48076301"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52506963"
 ---
 # <a name="monitor-reporting-services-subscriptions"></a>Monitorare le sottoscrizioni di Reporting Services
   È possibile monitorare le sottoscrizioni di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dall'interfaccia utente, da Windows PowerShell o dai file di log. Le opzioni disponibili per il monitoraggio dipendono dalla modalità del server di report in esecuzione.  
@@ -46,7 +46,7 @@ ms.locfileid: "48076301"
   
  La tabella seguente descrive i valori possibili per la colonna **Stato** .  
   
-|Stato|Description|  
+|Stato|Descrizione|  
 |------------|-----------------|  
 |Nuova sottoscrizione|Viene visualizzato quando viene creata una nuova sottoscrizione.|  
 |Inactive|Viene visualizzato quando una sottoscrizione non può essere elaborata. Per altre informazioni, vedere "Gestione di sottoscrizioni inattive" più avanti in questo argomento.|  
@@ -62,7 +62,7 @@ ms.locfileid: "48076301"
 |Errore durante la scrittura del file \<nomefile>: \<messaggio>|Indica il mancato recapito al percorso di condivisione file. Questo messaggio viene generato dall'estensione per il recapito alla condivisione file.|  
 |\<messaggi di stato personalizzati>|Messaggi di stato relativi all'avvenuto o mancato recapito, generati dalle estensioni per il recapito. Se si utilizza un'estensione per il recapito di terze parti o personalizzata, potrebbero essere visualizzati altri messaggi.|  
   
- Gli amministratori del server di report possono inoltre monitorare le sottoscrizioni standard in corso di elaborazione. Non è possibile monitorare le sottoscrizioni guidate dai dati. Per altre informazioni, vedere [gestire un processo in esecuzione](manage-a-running-process.md).  
+ Gli amministratori del server di report possono inoltre monitorare le sottoscrizioni standard in corso di elaborazione. Non è possibile monitorare le sottoscrizioni guidate dai dati. Per altre informazioni, vedere [Gestire un processo in esecuzione](manage-a-running-process.md).  
   
  Se non è stato possibile recapitare una sottoscrizione (ad esempio, se il server di posta elettronica non è disponibile), l'estensione per il recapito tenta nuovamente di eseguire il recapito. Il numero massimo di tentativi viene specificato tramite un'impostazione di configurazione. L'impostazione predefinita prevede che non vengano eseguiti nuovi tentativi nel caso il primo non riesca. In alcuni casi, se un report viene elaborato senza dati (ad esempio, se l'origine dei dati è offline), nel corpo del messaggio sarà presente un'indicazione di questo problema.  
   
@@ -79,7 +79,7 @@ ms.locfileid: "48076301"
   
  Di seguito è riportato un esempio di un messaggio di errore nel file di log di traccia relativo alle sottoscrizioni:  
   
--   library!WindowsService_7!b60!05/20/2014-22:34:36:: i INFO: Initializing EnableExecutionLogging to 'True'  as specified in Server system properties.emailextension!WindowsService_7!b60!05/20/2014-22:34:41:: e ERROR: **Error sending email**. Exception: System.Net.Mail.SmtpException: The SMTP server requires a secure connection or the client was not authenticated. The server response was: 5.7.1 Client was not authenticated   at System.Net.Mail.MailCommand.CheckResponse(SmtpStatusCode statusCode, String response)  
+-   library!WindowsService_7!b60!05/20/2014-22:34:36:: i INFO: Initializing EnableExecutionLogging to 'True'  as specified in Server system properties.emailextension!WindowsService_7!b60!05/20/2014-22:34:41:: e ERROR: **Errore durante l'invio di posta elettronica**. Exception: System.Net.Mail.SmtpException: The SMTP server requires a secure connection or the client was not authenticated. The server response was: 5.7.1 Client was not authenticated   at System.Net.Mail.MailCommand.CheckResponse(SmtpStatusCode statusCode, String response)  
   
  Il file di log non indica se il report è stato aperto né se il recapito è effettivamente riuscito. Un'operazione di recapito è considerata riuscita quando non vengono generati errori da Elaborazione pianificazione e recapito e il server di report si è connesso al server di posta elettronica. Nel file di log non vengono registrati, ad esempio, gli errori di mancato recapito dei messaggi di posta elettronica nella cassetta postale degli utenti. Per altre informazioni sui file di log, vedere [File di log e origini di Reporting Services](../report-server/reporting-services-log-files-and-sources.md).  
   
@@ -88,9 +88,9 @@ ms.locfileid: "48076301"
   
 1.  Selezionare la raccolta documenti contenente il report.  
   
-2.  Aprire il menu di scelta rapida del report (**…**).  
+2.  Aprire il menu di scelta rapida del report (**...**).  
   
-3.  Selezionare l'opzione di menu esteso (**…**).  
+3.  Selezionare l'opzione di menu espanso (**...**).  
   
 4.  Selezionare **Gestisci sottoscrizioni**  
   
@@ -121,7 +121,7 @@ ms.locfileid: "48076301"
  Lo stato di inattività della sottoscrizione viene indicato nella sottoscrizione stessa quando questa viene eseguita dal server di report. Ad esempio, se una sottoscrizione è pianificata in modo da recapitare un report ogni venerdì alle 2.00 e l'estensione per il recapito che utilizza viene disinstallata lunedì alle 9.00, la sottoscrizione non indicherà lo stato di inattività fino alle 2.00 di venerdì.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Creare e gestire sottoscrizioni per server di Report in modalità nativa](../create-manage-subscriptions-native-mode-report-servers.md)   
+ [Creare e gestire sottoscrizioni per server di report in modalità nativa](../create-manage-subscriptions-native-mode-report-servers.md)   
  [Sottoscrizioni e recapito &#40;Reporting Services&#41;](subscriptions-and-delivery-reporting-services.md)  
   
   

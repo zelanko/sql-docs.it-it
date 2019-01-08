@@ -16,12 +16,12 @@ ms.assetid: 0ba2093e-9393-4eb6-af06-9da10988cfaf
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 09b48e20683256eddd7d2619e8f4cbe912c6f0a9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6fc3ab4ce541e194f9768cc710993db0119eaefd
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48207577"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52410188"
 ---
 # <a name="create-modify-and-delete-a-data-driven-subscription"></a>Come creare, modificare ed eliminare una sottoscrizione guidata dai dati
   Una sottoscrizione guidata dai dati è una sottoscrizione basata su query che recupera i valori dei dati utilizzati per l'elaborazione della sottoscrizione in fase di esecuzione. Quando la sottoscrizione viene attivata, viene elaborata una query per recuperare informazioni aggiornate su destinatari, opzioni di recapito di report, formati di rendering e impostazioni dei parametri. I risultati della query vengono combinati con la definizione della sottoscrizione per creare una sottoscrizione dinamica che utilizza i dati già gestiti dall'utente in un database dei dipendenti, un database dei clienti o altri database contenenti informazioni che possono essere utilizzate come dati del sottoscrittore.  
@@ -65,7 +65,7 @@ ms.locfileid: "48207577"
   
 2.  Fare clic sulla scheda **Sottoscrizioni** . In alternativa, fare clic sul collegamento **Sottoscrizioni personali** nella parte superiore di Gestione report.  
   
-3.  Selezionare la sottoscrizione che si desidera modificare. L'icona seguente indica una sottoscrizione guidata dai dati: ![Icona della sottoscrizione guidata dai dati](../media/hlp-16subscriptiondd.gif "Icona della sottoscrizione guidata dai dati")  
+3.  Selezionare la sottoscrizione che si desidera modificare. L'icona seguente indica una sottoscrizione guidata dai dati: ![Icona della sottoscrizione guidata dai dati](../media/hlp-16subscriptiondd.gif "icona della sottoscrizione guidata dai dati")  
   
 #### <a name="to-modify-an-existing-data-driven-subscription-sharepoint-mode"></a>Per modificare una sottoscrizione guidata dai dati esistente (modalità SharePoint)  
   
@@ -78,7 +78,7 @@ ms.locfileid: "48207577"
   
  Prima di creare una sottoscrizione guidata dai dati, verificare che siano soddisfatti i requisiti seguenti:  
   
--   **Requisiti per i report**. Per poter recuperare i dati in fase di esecuzione, è necessario che per il report vengano utilizzate credenziali archiviate oppure nessuna credenziale. Per connettersi a un'origine dei dati esterna, non è possibile sottoscrivere un report che utilizza credenziali rappresentate o delegate. Le credenziali dell'utente che crea la sottoscrizione o ne è proprietario non saranno disponibili durante l'elaborazione della sottoscrizione. Le credenziali archiviate possono essere un account di Windows o un account utente del database. Per altre informazioni, vedere [specificare le credenziali e informazioni di connessione per origini dati del Report](../report-data/specify-credential-and-connection-information-for-report-data-sources.md).  
+-   **Requisiti per i report**. Per poter recuperare i dati in fase di esecuzione, è necessario che per il report vengano utilizzate credenziali archiviate oppure nessuna credenziale. Per connettersi a un'origine dei dati esterna, non è possibile sottoscrivere un report che utilizza credenziali rappresentate o delegate. Le credenziali dell'utente che crea la sottoscrizione o ne è proprietario non saranno disponibili durante l'elaborazione della sottoscrizione. Le credenziali archiviate possono essere un account di Windows o un account utente del database. Per altre informazioni, vedere [Specificare le credenziali e le informazioni sulla connessione per le origini dati del report](../report-data/specify-credential-and-connection-information-for-report-data-sources.md).  
   
      Non è possibile sottoscrivere un report di Generatore report che utilizza come origine dei dati un modello contenente impostazioni di sicurezza degli elementi del modello. La restrizione riguarda solo i report che utilizzano la sicurezza degli elementi del modello.  
   
@@ -86,7 +86,7 @@ ms.locfileid: "48207577"
   
 -   **Requisiti per i dati**. È necessario disporre di un'origine dei dati esterna accessibile che contenga i dati del sottoscrittore.  
   
--   **Requisiti per gli utenti**. L'autore della sottoscrizione deve disporre dell'autorizzazione per la gestione dei report e di tutte le sottoscrizioni. Per altre informazioni sulle autorizzazioni per attività a livello di elemento, vedere [attività e autorizzazioni](../security/tasks-and-permissions.md). L'autore deve inoltre disporre delle credenziali necessarie per l'accesso all'origine dei dati esterna contenente i dati del sottoscrittore.  
+-   **Requisiti per gli utenti**. L'autore della sottoscrizione deve disporre dell'autorizzazione per la gestione dei report e di tutte le sottoscrizioni. Per altre informazioni sulle autorizzazioni per attività a livello di elemento, vedere [Attività e autorizzazioni](../security/tasks-and-permissions.md). L'autore deve inoltre disporre delle credenziali necessarie per l'accesso all'origine dei dati esterna contenente i dati del sottoscrittore.  
   
 ##  <a name="bkmk_define_query"></a> Definire una query che recupera le informazioni sulla sottoscrizione  
  In una sottoscrizione guidata dai dati è necessario specificare una query o un comando che recupera i dati del sottoscrittore. La query dovrebbe produrre una riga per ogni sottoscrittore. Se si utilizza l'estensione per il recapito tramite posta elettronica, la query dovrebbe restituire un alias di posta elettronica valido per ogni sottoscrittore. Il numero di recapiti effettuati si basa sul numero di righe restituite dalla query. Se il set di righe contiene 10.000 righe, significa che la sottoscrizione determina il recapito di 10.000 report.  
@@ -98,12 +98,12 @@ ms.locfileid: "48207577"
 ##  <a name="bkmk_run_subscription"></a> Eseguire una sottoscrizione  
  Configurare le condizioni per l'elaborazione della sottoscrizione. È possibile configurare una pianificazione oppure fare in modo che la sottoscrizione sia attivata in corrispondenza degli aggiornamenti a uno snapshot dell'esecuzione del report.  
   
- ![Nota](../media/rs-fyinote.png "nota") Sebbene non siano disponibili funzionalità nell'interfaccia utente che è possibile usare immediatamente per eseguire una sottoscrizione, è possibile usare un semplice script di Windows PowerShell per attivare una sottoscrizione per l'esecuzione. Per altre informazioni, vedere la "Script: eseguire (attivare) una singola sottoscrizione" sezione dei [usare PowerShell per modificare ed elenco Reporting Services Subscription Owners and Run a Subscription](manage-subscription-owners-and-run-subscription-powershell.md).  
+ ![Nota](../media/rs-fyinote.png "nota") Sebbene non siano disponibili funzionalità nell'interfaccia utente che è possibile usare immediatamente per eseguire una sottoscrizione, è possibile usare un semplice script di Windows PowerShell per attivare una sottoscrizione per l'esecuzione. Per altre informazioni, vedere la "Script: Eseguire (attivare) una singola sottoscrizione"sezione dei [usare PowerShell per modificare ed elenco Reporting Services Subscription Owners and Run a Subscription](manage-subscription-owners-and-run-subscription-powershell.md).  
   
  La pianificazione e le condizioni per l'esecuzione di sottoscrizioni basate sui dati sono uguali a quelle per l'elaborazione di sottoscrizioni standard.  
   
 ##  <a name="bkmk_manage_and_delete"></a> Gestire ed eliminare una sottoscrizione guidata dai dati  
- Una sottoscrizione guidata dai dati in corso non può essere arrestata o eliminata tramite la pagina Gestisci processi di Gestione report. Per questa ragione, è vantaggioso utilizzare una pianificazione condivisa per attivare una sottoscrizione guidata dai dati. In questo modo, se si desidera impedire temporaneamente l'elaborazione di una sottoscrizione, è possibile sospendere la pianificazione che ne determina l'attivazione. Per altre informazioni, vedere [creare e gestire sottoscrizioni per server di Report in modalità nativa](../create-manage-subscriptions-native-mode-report-servers.md).  
+ Una sottoscrizione guidata dai dati in corso non può essere arrestata o eliminata tramite la pagina Gestisci processi di Gestione report. Per questa ragione, è vantaggioso utilizzare una pianificazione condivisa per attivare una sottoscrizione guidata dai dati. In questo modo, se si desidera impedire temporaneamente l'elaborazione di una sottoscrizione, è possibile sospendere la pianificazione che ne determina l'attivazione. Per altre informazioni, vedere [Creare e gestire sottoscrizioni per server di report in modalità nativa](../create-manage-subscriptions-native-mode-report-servers.md).  
   
  Per eliminare una sottoscrizione guidata dai dati, selezionarla nella pagina Sottoscrizioni personali o nella pagina Sottoscrizioni di un report e quindi fare clic su **Elimina**.  
   
@@ -113,7 +113,7 @@ ms.locfileid: "48207577"
  [Creare, modificare ed eliminare sottoscrizioni Standard &#40;Reporting Services in modalità nativa&#41;](create-and-manage-subscriptions-for-native-mode-report-servers.md)   
  [Sottoscrizioni e recapito &#40;Reporting Services&#41;](subscriptions-and-delivery-reporting-services.md)   
  [Gestione report &#40;modalità nativa SSRS&#41;](../report-manager-ssrs-native-mode.md)   
- [Creare e gestire sottoscrizioni per server di Report in modalità nativa](../create-manage-subscriptions-native-mode-report-servers.md)   
+ [Creare e gestire sottoscrizioni per server di report in modalità nativa](../create-manage-subscriptions-native-mode-report-servers.md)   
  [Pagina Sottoscrizioni &#40;Gestione report&#41;](../subscriptions-page-report-manager.md)   
  [Pagina Sottoscrizioni personali &#40;Gestione report&#41;](../my-subscriptions-page-report-manager.md)  
   

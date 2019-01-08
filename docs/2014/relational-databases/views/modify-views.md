@@ -15,12 +15,12 @@ ms.assetid: 2d3c14dc-43e5-4324-b8fb-f2692d330b16
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f29dc88bf6298aebea60591034f0c7abc6765185
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b3d2581f2f086f8db5f9408502185c132a5866af
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48167011"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52513219"
 ---
 # <a name="modify-views"></a>Modifica di viste
   Dopo aver definito una vista, è possibile modificarne la definizione in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , senza eliminare e ricreare la vista, utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -31,7 +31,7 @@ ms.locfileid: "48167011"
   
      [Limitazioni e restrizioni](#Restrictions)  
   
-     [Security](#Security)  
+     [Sicurezza](#Security)  
   
 -   **Per modificare una vista tramite:**  
   
@@ -66,13 +66,13 @@ ms.locfileid: "48167011"
   
     1.  Selezionare o deselezionare le caselle di controllo di qualsiasi elemento che si desidera aggiungere o rimuovere.  
   
-    2.  Fare clic con il pulsante destro del mouse all'interno del riquadro del diagramma, selezionare **Aggiungi tabella**, quindi scegliere le ulteriori colonne da aggiungere alla vista nella finestra di dialogo **Aggiungi tabella** .  
+    2.  Fare clic con il pulsante destro del mouse all'interno del riquadro del diagramma, scegliere **Aggiungi tabella** e quindi selezionare le altre colonne da aggiungere alla vista nella finestra di dialogo **Aggiungi tabella**.  
   
     3.  Fare clic con il pulsante destro del mouse sulla barra del titolo della tabella da rimuovere e selezionare **Rimuovi**.  
   
 4.  Scegliere *Salva***nome vista* dal menu **File**.  
   
-##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
   
 #### <a name="to-modify-a-view"></a>Per modificare una vista  
   
