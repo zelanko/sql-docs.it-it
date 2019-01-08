@@ -11,12 +11,12 @@ ms.assetid: 6bf66fdd-6a03-4cea-b7e2-eb676ff276ff
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 74e98548349d073cf5f008c6015ce55ac3768acb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 40b08c40b8b327ad26bb2974627e81000846a1b4
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48067196"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53350655"
 ---
 # <a name="clear-the-analysis-services-caches"></a>Cancellare le cache di Analysis Services
   Analysis Services consente di memorizzare i dati nella cache per migliorare le prestazioni delle query. In questo argomento vengono forniti consigli per l'utilizzo del comando XMLA ClearCache con cui cancellare le cache create in risposta a una query MDX. Gli effetti dell'esecuzione di ClearCache variano a seconda che si utilizzi un modello tabulare o multidimensionale.  
@@ -33,7 +33,7 @@ ms.locfileid: "48067196"
   
  L'esecuzione di ClearCache cancellerà anche le cache in memoria nel motore di analisi in memoria xVelocity (VertiPaq). Il motore xVelocity gestisce un piccolo set di risultati memorizzati nella cache. L'esecuzione di ClearCache comporterà anche l'invalidazione di queste cache nel motore xVelocity.  
   
- Infine, l'esecuzione di ClearCache comporterà anche rimozione dei dati rimasti in memoria quando un modello tabulare viene riconfigurato per `DirectQuery` modalità. Questo è particolarmente importante se il modello contiene dati sensibili soggetti a controlli rigidi. In questo caso, l'esecuzione di ClearCache è un'azione precauzionale che è possibile intraprendere per assicurarsi che i dati sensibili siano presenti solo nelle posizioni previste. La cancellazione manuale della cache è necessaria se si utilizza [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] per distribuire il modello e modificare la modalità di query. Per contro, se si utilizza [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] per specificare `DirectQuery` sul modello e sulle partizioni, la cache verrà automaticamente cancellata quando si passa a tale modalità di query per il modello.  
+ Infine, l'esecuzione di ClearCache comporterà anche la rimozione dei dati rimasti in memoria quando un modello tabulare viene riconfigurato per la modalità `DirectQuery`. Questo è particolarmente importante se il modello contiene dati sensibili soggetti a controlli rigidi. In questo caso, l'esecuzione di ClearCache è un'azione precauzionale che è possibile intraprendere per assicurarsi che i dati sensibili siano presenti solo nelle posizioni previste. La cancellazione manuale della cache è necessaria se si utilizza [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] per distribuire il modello e modificare la modalità di query. Per contro, se si utilizza [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] per specificare `DirectQuery` sul modello e sulle partizioni, la cache verrà automaticamente cancellata quando si passa a tale modalità di query per il modello.  
   
  Rispetto ai consigli relativi alla cancellazione delle cache dei modelli multidimensionali durante i test delle prestazioni, non è specificamente consigliato di cancellare le cache dei modelli tabulari. Se non si gestisce la distribuzione di un modello tabulare che contiene dati sensibili, non c'è nessuna attività amministrativa specifica che richiede la cancellazione della cache.  
   
@@ -41,26 +41,26 @@ ms.locfileid: "48067196"
  Per cancellare la cache, utilizzare XMLA e [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. È possibile cancellare la cache a livello di database, cubo, dimensione o tabella oppure gruppo di misure. I passaggi seguenti per la cancellazione della cache a livello di database si applicano sia ai modelli multidimensionali che ai modelli tabulari.  
   
 > [!NOTE]  
->  La rigorosa esecuzione di test delle prestazioni potrebbe richiedere un approccio più completo alla cancellazione della cache. Per istruzioni su come scaricare le cache di Analysis Services e del file system, vedere la sezione sulla cancellazione delle cache nella [Guida operativa di SQL Server 2008 R2 Analysis Services](http://go.microsoft.com/fwlink/?linkID=http://go.microsoft.com/fwlink/?LinkID=225539).  
+>  La rigorosa esecuzione di test delle prestazioni potrebbe richiedere un approccio più completo alla cancellazione della cache. Per istruzioni su come scaricare le cache di Analysis Services e del file system, vedere la sezione sulla cancellazione delle cache nella [Guida operativa di SQL Server 2008 R2 Analysis Services](https://go.microsoft.com/fwlink/?linkID=https://go.microsoft.com/fwlink/?LinkID=225539).  
   
  Sia per i modelli multidimensionali che per i modelli tabulari, la cancellazione di alcune di queste cache può essere un processo in due passaggi, costituito dall'invalidazione della cache quando viene eseguito ClearCache, seguita dallo svuotamento della cache alla ricezione della query successiva. Una riduzione dell'utilizzo di memoria sarà evidente solo dopo che la cache è stata effettivamente svuotata.  
   
  La cancellazione della cache richiede che si fornisca un identificatore di oggetto all'istruzione `ClearCache` in una query XMLA. Nel primo passaggio di questo argomento viene illustrato come ottenere un identificatore di oggetto.  
   
-#### <a name="step-1-get-the-object-identifier"></a>Passaggio 1: ottenere l'identificatore di oggetto  
+#### <a name="step-1-get-the-object-identifier"></a>Passaggio 1: Ottenere l'identificatore di oggetto  
   
 1.  In [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]fare clic con il pulsante destro del mouse su un oggetto, selezionare **Proprietà**e copiare il valore dell'ID proprietà nel riquadro **Proprietà** . Questo approccio funziona per database, cubi, dimensioni o tabelle.  
   
 2.  Per ottenere l'ID del gruppo di misure, fare clic con il pulsante destro del mouse sul gruppo di misure e selezionare **Crea script per gruppo di misure**. Scegliere **Crea** o **Modifica**e inviare la query a una finestra. L'ID del gruppo di misure sarà visibile nella definizione dell'oggetto. Copiare l'ID della definizione dell'oggetto.  
   
-#### <a name="step-2-run-the-query"></a>Passaggio 2: eseguire la query  
+#### <a name="step-2-run-the-query"></a>Passaggio 2: Esecuzione della query  
   
 1.  In [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]fare clic con il pulsante destro del mouse su un database, scegliere **Nuova query**, quindi **XMLA**.  
   
-2.  Copiare l'esempio di codice seguente nella finestra di query XMLA. Modifica `DatabaseID` all'ID del database nella connessione corrente.  
+2.  Copiare l'esempio di codice seguente nella finestra di query XMLA. Sostituire `DatabaseID` con l'ID del database nella connessione corrente.  
   
     ```  
-    <ClearCache xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">  
+    <ClearCache xmlns="https://schemas.microsoft.com/analysisservices/2003/engine">  
       <Object>  
         <DatabaseID> Adventure Works DW Multidimensional</DatabaseID>  
       </Object>  
@@ -71,7 +71,7 @@ ms.locfileid: "48067196"
      In alternativa, è possibile specificare un percorso di un oggetto figlio, quale un gruppo di misure, per cancellare la cache solo per quell'oggetto.  
   
     ```  
-    <ClearCache xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">  
+    <ClearCache xmlns="https://schemas.microsoft.com/analysisservices/2003/engine">  
       <Object>  
         <DatabaseID>Adventure Works DW Multidimensional</DatabaseID>  
             <CubeID>Adventure Works</CubeID>  
@@ -89,7 +89,7 @@ ms.locfileid: "48067196"
     ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Lo script attività amministrative in Analysis Services](../script-administrative-tasks-in-analysis-services.md)   
+ [Creare script per le attività amministrative in Analysis Services](../script-administrative-tasks-in-analysis-services.md)   
  [Monitorare un'istanza di Analysis Services](monitor-an-analysis-services-instance.md)  
   
   

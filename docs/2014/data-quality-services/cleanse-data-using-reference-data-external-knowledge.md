@@ -10,12 +10,12 @@ ms.assetid: 158009e9-8069-4741-8085-c14a5518d3fc
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c556fb02eaad5a97a3f844991ba64440ac65f7b3
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 101d5ba77dce4ef384e1d9ade52e8e847828d685
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51029659"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52532414"
 ---
 # <a name="cleanse-data-using-reference-data-external-knowledge"></a>Pulire i dati mediante le informazioni dei dati di riferimento (esterni)
   In questo argomento viene descritto come pulire i dati utilizzando le informazioni dei provider di dati di riferimento. Mentre tutti i passaggi per l'esecuzione di un'attività di pulizia rimangono gli stessi per la pulizia dei dati mediante le informazioni dei provider di dati di riferimento, come descritto in [Pulire i dati mediante DQS &#40;informazioni interne&#41;](../../2014/data-quality-services/cleanse-data-using-dqs-internal-knowledge.md), in questo argomento vengono illustrate le informazioni specifiche per la pulizia dei dati mediante il servizio dati di riferimento in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS).  
@@ -35,14 +35,14 @@ ms.locfileid: "51029659"
     > [!NOTE]  
     >  Durante la pulizia dei dati mediante le informazioni del servizio dati di riferimento vengono applicati i valori soglia specificati al momento dell'esecuzione del mapping di un dominio a un servizio dati di riferimento e non i valori specificati nella scheda **Impostazioni generali** della sezione **Configurazione** . Per informazioni su come specificare valori soglia per la pulizia dei dati di riferimento, vedere il passaggio 9 nel [collegare un dominio o un dominio composito ai dati di riferimento](../../2014/data-quality-services/attach-a-domain-or-composite-domain-to-reference-data.md).  
   
--   I valori di dominio vengono suddivisi nelle categorie seguenti: **Suggeriti**, **Nuovi**, **Non validi**, **Con correzione**e **Corretti**.  
+-   I valori di dominio vengono suddivisi i seguenti: **Suggeriti**, **nuovi**, **valido**, **corretti**, e **corretto**.  
   
 -   I dati aggiuntivi vengono aggiunti all'origine e le informazioni sono disponibili insieme ai dati puliti per l'esportazione.  
   
 ## <a name="before-you-begin"></a>Prima di iniziare  
   
 ###  <a name="Prerequisites"></a> Prerequisiti  
- È necessario avere eseguito il mapping dei domini richiesti in una Knowledge Base DQS al servizio dati di riferimento appropriato. La Knowledge Base deve inoltre contenere informazioni sul tipo di dati da pulire. Se si desidera pulire dati di origine che contengono indirizzi US, ad esempio, è necessario eseguire il mapping dei domini a un provider del servizio dati di riferimento che fornisce dati di alta qualità per gli indirizzi US. Per altre informazioni, vedere [collegare un dominio o un dominio composito ai dati di riferimento](../../2014/data-quality-services/attach-a-domain-or-composite-domain-to-reference-data.md).  
+ È necessario avere eseguito il mapping dei domini richiesti in una Knowledge Base DQS al servizio dati di riferimento appropriato. La Knowledge Base deve inoltre contenere informazioni sul tipo di dati da pulire. Se si vogliono pulire dati di origine che contengono indirizzi US, ad esempio, è necessario eseguire il mapping dei domini a un provider del servizio dati di riferimento che fornisce dati di alta qualità per gli indirizzi US. Per altre informazioni, vedere [collegare un dominio o un dominio composito ai dati di riferimento](../../2014/data-quality-services/attach-a-domain-or-composite-domain-to-reference-data.md).  
   
 ###  <a name="Security"></a> Sicurezza  
   
@@ -54,7 +54,7 @@ ms.locfileid: "51029659"
   
 1.  Creare un progetto Data Quality e selezionare l'attività **Pulizia** . Vedere [Create a Data Quality Project](../../2014/data-quality-services/create-a-data-quality-project.md).  
   
-2.  Nella pagina **Mappa** eseguire il mapping dei 4 domini seguenti con le colonne appropriate nei dati di origine: **Riga indirizzo**, **Città**, **Stato**e **CAP**. Scegliere **Avanti**.  
+2.  Nel **mappa** pagina, eseguire il mapping di 4 domini seguenti con le colonne appropriate nei dati di origine: **Riga indirizzo**, **Città**, **stato**, e **Zip**. Scegliere **Avanti**.  
   
     > [!NOTE]  
     >  Poiché il mapping di tutti e 4 i domini è stato eseguito all'interno del dominio composito **Verifica indirizzo** , la pulizia dei dati verrà eseguita a livello di dominio composito e non a livello di singolo dominio.  
@@ -64,7 +64,7 @@ ms.locfileid: "51029659"
     > [!NOTE]  
     >  Nella pagina **Pulisci** vengono visualizzate le informazioni sui domini associati al servizio dati di riferimento nei due modi seguenti:  
     >   
-    >  -   Sotto il pulsante **Start** viene visualizzato un messaggio simile al seguente: "I domini \<Domain1>, \<Domain2>,... \<DomainN> vengono puliti utilizzando il provider di servizi di dati di riferimento". In questo esempio verrà visualizzato il messaggio seguente: "La verifica dell'indirizzo del dominio viene pulita usando il provider del servizio dati di riferimento".  
+    >  -   Viene visualizzato un messaggio sotto le **avviare** pulsante: "Domini \<Domain1 >, \<dominio 2 >,... \<DomainN> vengono puliti usando il provider di servizi di dati di riferimento". In questo esempio, verrà visualizzato il messaggio seguente: "Verifica dell'indirizzo di dominio viene pulita usando il provider del servizio dati di riferimento."  
     > -   L'icona ![Dominio collegato al servizio dati di riferimento ](../../2014/data-quality-services/media/dqs-rdsindicator.JPG "Dominio collegato al servizio dati di riferimento") viene visualizzata nell'area **Profiler** per i domini associati al provider del servizio dati di riferimento. Nell'esempio l'icona verrà visualizzata per il dominio composito **Verifica indirizzo** .  
   
 4.  Verificare i valori di dominio nella pagina **Gestisci e visualizza i risultati** . Il servizio dati di riferimento può visualizzare più suggerimenti, se disponibili, per un valore a seconda del numero massimo di suggerimenti specificato nella casella **Candidati suggeriti** durante l'esecuzione del mapping del dominio al servizio dati di riferimento. Per l'indirizzo US seguente vengono visualizzati, ad esempio, due suggerimenti:  

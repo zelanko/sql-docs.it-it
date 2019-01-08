@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.sequence.general.f1
@@ -13,12 +12,12 @@ ms.assetid: 0187f413-cdf0-48a2-b2e6-9b3578cd5811
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 54a6d265c6ad8f7c585a629c2adc997b808d636b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 846e7960e9aca4bfb5deea8f50eae3c8a2f58c70
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48063243"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52781605"
 ---
 # <a name="sequence-properties-general-page"></a>Proprietà sequenza (pagina Generale)
   Crea un oggetto sequenza e ne specifica le proprietà. Una sequenza è un oggetto associato a schema definito dall'utente che genera una sequenza di valori numerici in base alla specifica con la quale è stata creata la sequenza. La sequenza di valori numerici viene generata in ordine crescente o decrescente a un intervallo definito e può essere configurata per riprendere dall'inizio (ciclo) quando è esaurita. Le sequenze, a differenza delle colonne Identity, non sono associate a tabelle specifiche. Le applicazioni fanno riferimento a un oggetto sequenza per recuperare il relativo valore successivo. La relazione tra sequenze e tabelle è controllata dall'applicazione. Le applicazioni utente possono fare riferimento a un oggetto sequenza e coordinare i valori di più righe e tabelle.  
@@ -60,7 +59,7 @@ ms.locfileid: "48063243"
  Valore usato per incrementare (o decrementare, in caso di valore negativo) il valore dell'oggetto sequenza per ogni chiamata alla funzione **NEXT VALUE FOR** . Se l'incremento è un valore negativo, l'oggetto sequenza ha un ordine decrescente, in caso contrario avrà un ordine crescente. L'incremento non può essere 0.  
   
  **Valore minimo**  
- Specifica i limiti per l'oggetto sequenza. Il valore minimo predefinito per un nuovo oggetto sequenza è il valore minimo del tipo di dati dell'oggetto sequenza. Questo valore è zero per il `tinyint` tipo di dati e un numero negativo per tutti gli altri tipi di dati.  
+ Specifica i limiti per l'oggetto sequenza. Il valore minimo predefinito per un nuovo oggetto sequenza è il valore minimo del tipo di dati dell'oggetto sequenza. Tale valore è zero per il tipo di dati `tinyint` e un numero negativo per tutti gli altri tipi di dati.  
   
  **Valore massimo**  
  Specifica i limiti per l'oggetto sequenza. Il valore massimo predefinito per un nuovo oggetto sequenza è il valore massimo del tipo di dati dell'oggetto sequenza.  

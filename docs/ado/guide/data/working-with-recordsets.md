@@ -13,15 +13,15 @@ ms.assetid: bdf9a56a-de4a-44de-9111-2f11ab7b16ea
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 39d8a1bdbc3a56cc03710bc6982b708235c47c45
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2378d438c575ad54a89f09c4c9ddcb157c246ffd
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47762429"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52508748"
 ---
 # <a name="working-with-recordsets"></a>Utilizzo dei recordset
-Il **Recordset** oggetto offre funzionalità incorporate che consentono di ottimizzare l'ordine dei dati nel set di risultati, per cercare un record specifico in base ai criteri che viene fornito e anche per ottimizzare le operazioni di ricerca tramite indici. Se queste funzionalità sono disponibili per l'utilizzo dipende dal provider e in alcuni casi, ovvero, ad esempio la [indice](../../../ado/reference/ado-api/index-property.md) proprietà, ovvero la struttura dell'origine dati stessa.  
+Il **Recordset** oggetto offre funzionalità incorporate che consentono di ottimizzare l'ordine dei dati nel set di risultati, per cercare un record specifico in base ai criteri che viene fornito e anche per ottimizzare le operazioni di ricerca tramite indici. Se queste funzionalità sono disponibili per l'utilizzo dipende dal provider e in alcuni casi, ad esempio quella del [indice](../../../ado/reference/ado-api/index-property.md) proprietà - la struttura dell'origine dati stessa.  
   
 ## <a name="arranging-data"></a>Disposizione dei dati  
  Spesso, il modo più efficiente per ordinare i dati nel **Recordset** specificando una clausola ORDER BY nel comando SQL utilizzato per restituire i risultati a esso. Tuttavia, potrebbe essere necessario modificare l'ordine dei dati in un **Recordset** che è già stato creato. È possibile usare la **ordinamento** proprietà per stabilire l'ordine in cui le righe di una **Recordset** vengono attraversati. Inoltre, il **filtro** proprietà determina quali righe risultano accessibili quando si attraversano le righe.  
@@ -43,7 +43,7 @@ Il **Recordset** oggetto offre funzionalità incorporate che consentono di ottim
 ## <a name="finding-a-specific-record"></a>Ricerca di un Record specifico  
  In ADO il [trovare](../../../ado/reference/ado-api/find-method-ado.md) e [Seek](../../../ado/reference/ado-api/seek-method.md) metodi di individuazione di un record specifico in un **Recordset**. Il **trovare** metodo è supportato da una varietà di provider, ma è limitato a un criterio di ricerca singola. Il **Seek** metodo supporta la ricerca in più criteri, ma non è supportato da numerosi provider.  
   
- Gli indici sui campi possono migliorare notevolmente le prestazioni dei **trovare** (metodo) e **ordinamento** e **filtro** le proprietà del **Recordset** oggetto. È possibile creare un indice interno per un **campo** oggetto impostando la relativa proprietà dinamica [Optimize](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md) proprietà. Questa proprietà dinamica viene aggiunta al **le proprietà** insieme del **campo** dell'oggetto quando si imposta il [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) proprietà **adUseClient**. Tenere presente che questo indice è interno a ADO: non è possibile ottenere l'accesso ad esso o usarlo per altri scopi. Inoltre, questo indice è diverso dal [indice](../../../ado/reference/ado-api/index-property.md) proprietà delle **Recordset** oggetto.  
+ Gli indici sui campi possono migliorare notevolmente le prestazioni dei **trovare** (metodo) e **ordinamento** e **filtro** le proprietà del **Recordset** oggetto. È possibile creare un indice interno per un **campo** oggetto impostando la relativa proprietà dinamica [Optimize](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md) proprietà. Questa proprietà dinamica viene aggiunta al **le proprietà** insieme del **campo** dell'oggetto quando si imposta il [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) proprietà **adUseClient**. Tenere presente che questo indice è interno all'ADO non è possibile ottenere l'accesso ad esso o usarlo per altri scopi. Inoltre, questo indice è diverso dal [indice](../../../ado/reference/ado-api/index-property.md) proprietà delle **Recordset** oggetto.  
   
  Il **trovare** metodo consente di individuare rapidamente un valore all'interno di una colonna (campo) di un **Recordset**. È spesso possibile migliorare la velocità dei **trovare** metodo su una colonna con il **Optimize** proprietà per creare un indice su di esso.  
   
@@ -112,11 +112,11 @@ Il **Recordset** oggetto offre funzionalità incorporate che consentono di ottim
 ### <a name="filtering-with-a-constant"></a>Applicazione di filtri con una costante  
  Le costanti seguenti sono disponibili per il filtraggio **recordset**.  
   
-|Costante|Description|  
+|Costante|Descrizione|  
 |--------------|-----------------|  
 |**adFilterAffectedRecords**|I filtri per visualizzare solo i record interessati dall'ultima **eliminare**, **Risincronizza**, **UpdateBatch**, oppure **CancelBatch** chiamare.|  
 |**adFilterConflictingRecords**|Filtri per visualizzare i record che non hanno superato l'ultimo aggiornamento batch.|  
-|**adFilterFetchedRecords**|I filtri per visualizzare i record nella cache corrente, vale a dire, i risultati dell'ultima chiamata a recuperare i record dal database.|  
+|**adFilterFetchedRecords**|Filtri per visualizzare i record nella cache corrente, vale a dire, i risultati dell'ultima chiamata a recuperare i record dal database.|  
 |**adFilterNone**|Rimuove il filtro corrente e ripristina tutti i record per la visualizzazione.|  
 |**adFilterPendingRecords**|I filtri per visualizzare solo i record che sono stati modificati ma non sono ancora stati inviati al server. Applicabile solo per la modalità di aggiornamento batch.|  
   

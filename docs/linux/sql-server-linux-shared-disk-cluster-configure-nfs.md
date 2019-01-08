@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: 63ebce5a8e78829cbdad8dede0be7cb9285c7c37
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 672e6142ee7196115ba10309e6ac5ef7aa7d151f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47788459"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507029"
 ---
 # <a name="configure-failover-cluster-instance---nfs---sql-server-on-linux"></a>Configurare cluster di failover - NFS - SQL Server in Linux
 
@@ -101,7 +101,7 @@ Assicurarsi che vengano applicati i propri standard di sicurezza per l'accesso. 
    * Eliminare i file dalla directory di dati di SQL Server esistente. Non riceverà alcun acknowledgement se ha esito positivo.
 
     ```bash
-    rm – f /var/opt/mssql/data/*
+    rm - f /var/opt/mssql/data/*
     ```
 
    * Verificare che i file siano stati eliminati. 

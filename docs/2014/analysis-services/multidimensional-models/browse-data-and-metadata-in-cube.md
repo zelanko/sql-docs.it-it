@@ -11,19 +11,19 @@ ms.assetid: 5faf2a9d-df39-465f-9c81-a00d5cd63f5a
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e074a41f6d9f5053562dd7b6be453644cb5fa176
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4c062137987a8ee1499449425d8e02df0d203050
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48076631"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52519893"
 ---
 # <a name="browse-data-and-metadata-in-cube"></a>Esplorare dati e metadati in un cubo
   Usare la scheda **Esplorazione** di Progettazione cubi per visualizzare i dati di un cubo. Questa vista può essere utilizzata per esaminare la struttura di un cubo e per controllare dati, calcoli, formattazione e sicurezza di oggetti di database. È possibile esaminare rapidamente un cubo quando gli utenti finali lo visualizzano negli strumenti di report o in altre applicazioni client. Quando si visualizzano dati del cubo, è possibile visualizzare dimensioni diverse, eseguire il drill-down dei membri, nonché eseguire sezionamenti tramite dimensioni.  
   
  Prima di visualizzare un cubo, è necessario elaborarlo e riconnetterlo. Al termine dell'elaborazione, aprire la scheda **Esplorazione** di Progettazione cubi. Sulla barra degli strumenti fare clic sul pulsante Riconnetti per aggiornare la connessione.  
   
- La scheda **Esplorazione** dispone di tre riquadri: Metadati, Filtro e Dati. Utilizzare il riquadro Metadati per esaminare la struttura del cubo nel formato albero. Usare il riquadro Filtro nella parte superiore della scheda **Esplorazione** per definire un qualsiasi sottocubo si voglia visualizzare. Utilizzare il riquadro Dati per visualizzare i set di risultati ed eseguire il drill-down tramite le gerarchie di dimensione.  
+ Il **Browser** scheda include tre riquadri: il riquadro dei metadati, il riquadro filtro e il riquadro dei dati. Utilizzare il riquadro Metadati per esaminare la struttura del cubo nel formato albero. Usare il riquadro Filtro nella parte superiore della scheda **Esplorazione** per definire un qualsiasi sottocubo si voglia visualizzare. Utilizzare il riquadro Dati per visualizzare i set di risultati ed eseguire il drill-down tramite le gerarchie di dimensione.  
   
 ## <a name="setting-up-the-browser"></a>Configurazione di Esplorazione  
  Per preparare la visualizzazione di un cubo, è possibile specificare una prospettiva o una traduzione che si desidera utilizzare. Aggiungere misure e dimensioni al riquadro Dati e specificare tutti i filtri nel riquadro Filtro.  
@@ -62,7 +62,7 @@ ms.locfileid: "48076631"
   
  Dopo aver specificato la gerarchia, indicare l'operatore e l'espressione di filtro. Nella tabella seguente vengono descritti gli operatori e le espressioni di filtro.  
   
-|Operatore|Espressione filtro|Description|  
+|Operatore|Espressione filtro|Descrizione|  
 |--------------|-----------------------|-----------------|  
 |Uguale a|Uno o più membri|I valori devono essere uguali a un membro specificato.<br /><br /> Fornisce la selezione di più membri per le gerarchie di attributi, a eccezione delle gerarchie padre-figlio, e la selezione di un solo membro per le altre gerarchie.|  
 |Diverso da|Uno o più membri|I valori devono essere diversi da un membro specificato.<br /><br /> Fornisce la selezione di più membri per le gerarchie di attributi, a eccezione delle gerarchie padre-figlio, e la selezione di un solo membro per le altre gerarchie.|  

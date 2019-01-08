@@ -1,5 +1,5 @@
 ---
-title: Contenuto di query (Data Mining) | Documenti Microsoft
+title: Query (Data Mining) del contenuto | Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 4a308427ec839c316dbf0e3b215ea6d1506b1fa1
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 20d730ed2fd975d800b27882ecc218f7ce1868b3
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34015378"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52529058"
 ---
 # <a name="content-queries-data-mining"></a>Query sul contenuto (Data mining)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -144,7 +144,7 @@ SELECT TOP 10 NODE_DESCRIPTION, NODE_PROBABILITY, SUPPORT
 FROM <model>.CONTENT WHERE NODE_TYPE = 7  
 ```  
   
- La query seguente consente di compilare su queste informazioni. Tramite la query vengono restituite tre colonne: l'ID del nodo, la regola completa e il prodotto sul lato destro del set di elementi, ovvero il prodotto che, secondo la stima, è associato ad altri prodotti come parte di un set di elementi.  
+ La query seguente consente di compilare su queste informazioni. La query restituisce tre colonne: l'ID del nodo, la regola completa e il prodotto sul lato destro del set di elementi, vale a dire, il prodotto stimato è associato ad altri prodotti come parte di un set di elementi.  
   
 ```  
 SELECT FLATTENED NODE_UNIQUE_NAME, NODE_DESCRIPTION,  
@@ -166,7 +166,7 @@ ORDER BY NODE_SUPPORT DESC
   
  Per altri esempi, vedere [Esempi di query sul modello di associazione](../../analysis-services/data-mining/association-model-query-examples.md).  
   
-###  <a name="bkmk_DecTree"></a> Esempio 2: Query sul contenuto su un modello di alberi delle decisioni  
+###  <a name="bkmk_DecTree"></a> Esempio 2: Query sul contenuto su un modello Decision Trees  
  Un modello di albero delle decisioni può essere utilizzato per la stima, nonché per la classificazione.  In questo esempio si presuppone l'utilizzo del modello per la stima di un risultato, ma si desidera scoprire anche quali fattori o regole possono essere utilizzate per classificare il risultato.  
   
  In un modello di albero delle decisioni, i nodi sono utilizzati per rappresentare sia alberi sia nodi foglia. Nella didascalia per ogni nodo è contenuta la descrizione del percorso fino al risultato. Pertanto, per tracciare il percorso per qualsiasi particolare risultato, è necessario identificare il nodo in cui è contenuto e ottenere i dettagli per tale nodo.  
@@ -196,7 +196,7 @@ WHERE NODE_UNIQUE_NAME= '<node id>'
  Per ulteriori informazioni sull'utilizzo di set di righe gerarchici, vedere la specifica OLE DB su MSDN.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Informazioni sull'istruzione Select di DMX](../../dmx/understanding-the-dmx-select-statement.md)   
- [Query di Data Mining](../../analysis-services/data-mining/data-mining-queries.md)  
+ [Informazioni sull'istruzione DMX Select](../../dmx/understanding-the-dmx-select-statement.md)   
+ [Query di data mining](../../analysis-services/data-mining/data-mining-queries.md)  
   
   

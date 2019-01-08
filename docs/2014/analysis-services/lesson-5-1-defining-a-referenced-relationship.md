@@ -11,12 +11,12 @@ ms.assetid: 4a34ba52-e3b3-4e8a-8e55-73e0cd5a97bd
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 892b00f07f9a316ba856e8be97e4159fd3889bcc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4b006a2d5ef8c6de9b915f73fe68223329c6393d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48141891"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52519903"
 ---
 # <a name="defining-a-referenced-relationship"></a>Definizione di una relazione di tipo Riferimento
   Fino a questo punto dell'esercitazione, ogni dimensione del cubo definita è stata basata su una tabella direttamente collegata alla tabella dei fatti per un gruppo di misure tramite una relazione chiave primaria–chiave esterna. Nelle attività di questo argomento la dimensione **Geography** verrà collegata alla tabella dei fatti relativa alle vendite dei rivenditori tramite la dimensione **Reseller** , denominata *dimensione di riferimento*. Ciò consente agli utenti di dimensionare le vendite dei rivenditori in base all'area geografica. Per altre informazioni, vedere [Definire una relazione di tipo Riferimento e le relative proprietà](multidimensional-models/define-a-referenced-relationship-and-referenced-relationship-properties.md).  
@@ -47,7 +47,7 @@ ms.locfileid: "48141891"
   
      Si noti che la dimensione **Geography** del cubo non ha attualmente alcuna relazione né con il gruppo di misure **Internet Sales** né con il gruppo di misure **Reseller Sales** .  
   
-8.  Fare clic sul pulsante con i puntini di sospensione (**…**) nella cella **Nome completo** nel punto di intersezione tra la dimensione **Customer** e il gruppo di misure **Internet Sales** .  
+8.  Fare clic sul pulsante con puntini di sospensione (**...** ) nei **nome completo** cella all'intersezione tra il **cliente** dimensione e la **Internet Sales** gruppo di misure.  
   
      Nella finestra di dialogo **Definisci relazione** si noti che viene definita una relazione di tipo **Regolare** tra la tabella delle dimensioni **DimCustomer** e la tabella del gruppo di misure **FactInternetSales** in base alla colonna **CustomerKey** di ognuna di queste tabelle. Tutte le relazioni che sono state definite fino a questo momento nell'esercitazione sono di tipo Regolare.  
   
@@ -57,7 +57,7 @@ ms.locfileid: "48141891"
   
 9. Fare clic su **Annulla**.  
   
-10. Fare clic sul pulsante con i puntini di sospensione (**…**) nella cella senza nome nel punto di intersezione tra la dimensione **Geography** e il gruppo di misure **Reseller Sales** .  
+10. Fare clic sul pulsante con puntini di sospensione (**...** ) nella cella senza nome nel punto di intersezione tra il **geografia** dimensione e la **Reseller Sales** gruppo di misure.  
   
      Nella finestra di dialogo **Definisci relazione** si noti che non è attualmente definita alcuna relazione tra la dimensione Geography del cubo e il gruppo di misure Reseller Sales. Non è possibile definire una relazione di tipo Regolare poiché non vi è una relazione diretta tra la tabella delle dimensioni per la dimensione Geography e la tabella dei fatti per il gruppo di misure Reseller Sales.  
   
@@ -89,7 +89,7 @@ ms.locfileid: "48141891"
   
      L'attributo Geography Key nella dimensione Reseller verrà utilizzato soltanto per collegare la dimensione Geography alla tabella dei fatti Reseller Sales. Dal momento che non verrà utilizzato per la visualizzazione, non c'è motivo per definire questa gerarchia dell'attributo come visibile. Ordinare e ottimizzare la gerarchia dell'attributo può soltanto produrre effetti negativi sulle prestazioni di elaborazione. È necessario, tuttavia, che l'attributo sia abilitato per essere utilizzato come collegamento tra le due dimensioni.  
   
-4.  Passare a Progettazione cubi per il cubo [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial, fare clic sulla scheda **Utilizzo dimensioni** e quindi fare clic sul pulsante con i puntini di sospensione (**…**) nel punto di intersezione tra il gruppo di misure **Reseller Sales** e la dimensione **Geography** del cubo.  
+4.  Passare a Progettazione cubi per il [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] cubo Tutorial, fare clic sui **utilizzo dimensioni** scheda e quindi fare clic sul pulsante con puntini di sospensione (**...** ) all'intersezione tra il **Reseller Sales** gruppo di misure e il **Geography** dimensione del cubo.  
   
 5.  Nell'elenco **Selezionare il tipo di relazione** selezionare **Riferimento**.  
   

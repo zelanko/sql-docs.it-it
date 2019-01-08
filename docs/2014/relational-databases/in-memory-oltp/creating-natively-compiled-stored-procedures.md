@@ -10,15 +10,15 @@ ms.assetid: e6b34010-cf62-4f65-bbdf-117f291cde7b
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 72c72dc551aa31dc22def397fb38fe09793478ef
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 22530fafb9c41ec7bee87c43589f6eaba0fa3f70
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48084511"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52712462"
 ---
 # <a name="creating-natively-compiled-stored-procedures"></a>Creazione di stored procedure compilate in modo nativo
-  Le stored procedure compilate in modo nativo non implementano la programmabilità completa di [!INCLUDE[tsql](../../includes/tsql-md.md)] e la superficie di attacco delle query. Alcuni costrutti [!INCLUDE[tsql](../../includes/tsql-md.md)] non possono essere utilizzati all'interno delle stored procedure compilate in modo nativo. Per altre informazioni, vedere [costrutti supportati in Natively Compiled Stored Procedures](..\in-memory-oltp\supported-features-for-natively-compiled-t-sql-modules.md).  
+  Le stored procedure compilate in modo nativo non implementano la programmabilità completa di [!INCLUDE[tsql](../../includes/tsql-md.md)] e la superficie di attacco delle query. Alcuni costrutti [!INCLUDE[tsql](../../includes/tsql-md.md)] non possono essere utilizzati all'interno delle stored procedure compilate in modo nativo. Per altre informazioni, vedere [costrutti supportati in Natively Compiled Stored Procedures](../in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md).  
   
  Esistono, tuttavia, alcune funzionalità di [!INCLUDE[tsql](../../includes/tsql-md.md)] che sono supportate solo per le stored procedure compilate in modo nativo:  
   
@@ -51,15 +51,15 @@ end
 go  
 ```  
   
- Nell'esempio di codice `NATIVE_COMPILATION` indica che questo [!INCLUDE[tsql](../../includes/tsql-md.md)] stored procedure è una stored procedure compilata in modo nativo. Sono necessarie le opzioni seguenti:  
+ Nell'esempio di codice `NATIVE_COMPILATION` indica che questa stored procedure [!INCLUDE[tsql](../../includes/tsql-md.md)] è una stored procedure compilata in modo nativo. Sono necessarie le opzioni seguenti:  
   
-|Opzione|Description|  
+|Opzione|Descrizione|  
 |------------|-----------------|  
-|`SCHEMABINDING`|Le stored procedure compilate in modo nativo devono essere associate allo schema degli oggetti a cui fa riferimento. Ciò significa che i riferimenti alla tabella della procedura non possono essere eliminati. Le tabelle cui viene fatto riferimento nella procedura devono includere il nome dello schema e i caratteri jolly (\*) non sono consentiti nelle query. `SCHEMABINDING` è supportato solo per le stored procedure compilate in modo nativo in questa versione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  
+|`SCHEMABINDING`|Le stored procedure compilate in modo nativo devono essere associate allo schema degli oggetti a cui fa riferimento. Ciò significa che i riferimenti alla tabella della procedura non possono essere eliminati. Le tabelle cui viene fatto riferimento nella procedura devono includere il nome dello schema e i caratteri jolly (\*) non sono consentiti nelle query. `SCHEMABINDING` è supportato unicamente per le stored procedure compilate in modo nativo in questa versione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  
 |`EXECUTE AS`|Le stored procedure compilate in modo nativo non supportano `EXECUTE AS CALLER`, ovvero il contesto di esecuzione predefinito. Di conseguenza, è necessario specificare il contesto di esecuzione. Le opzioni `EXECUTE AS OWNER`, `EXECUTE AS` *utente*, e `EXECUTE AS SELF` sono supportati.|  
 |`BEGIN ATOMIC`|Il corpo di una stored procedure compilata in modo nativo deve essere costituito esattamente da un blocco atomico. I blocchi atomici garantiscono l'esecuzione atomica della stored procedure. Se la stored procedure viene richiamata all'esterno del contesto di una transazione attiva, verrà avviata una nuova transazione il cui commit avverrà alla fine del blocco atomico. I blocchi atomici nelle stored procedure compilate in modo nativo presentano due opzioni obbligatorie:<br /><br /> `TRANSACTION ISOLATION LEVEL` (Indici per tabelle con ottimizzazione per la memoria). Visualizzare [livelli di isolamento delle transazioni](../../database-engine/transaction-isolation-levels.md) per i livelli di isolamento supportati.<br /><br /> `LANGUAGE` (Indici per tabelle con ottimizzazione per la memoria). Il linguaggio della stored procedure deve essere impostato su uno dei linguaggi o alias disponibili.|  
   
- In relazione a `EXECUTE AS` e agli account di accesso di Windows, può verificarsi un errore a causa della rappresentazione eseguita tramite `EXECUTE AS`. Se un account utente utilizza l'autenticazione di Windows, è necessario che vi sia attendibilità totale tra l'account del servizio utilizzato per l'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e il dominio dell'account di accesso di Windows. Se non vi è attendibilità totale, viene restituito il messaggio di errore seguente quando si crea una stored procedure compilata in modo nativo. Messaggio 15404: impossibile ottenere informazioni relative al gruppo/utente "nome utente" di Windows NT, codice di errore 0x5.  
+ In relazione a `EXECUTE AS` e agli account di accesso di Windows, può verificarsi un errore a causa della rappresentazione eseguita tramite `EXECUTE AS`. Se un account utente utilizza l'autenticazione di Windows, è necessario che vi sia attendibilità totale tra l'account del servizio utilizzato per l'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e il dominio dell'account di accesso di Windows. Se non vi è attendibilità totale, viene restituito il messaggio di errore seguente quando si crea un compilate in modo nativo stored procedure: Messaggio 15404, non è stato possibile ottenere informazioni su Windows NT gruppo/utente 'username', codice di errore 0x5.  
   
  Per risolvere l'errore, utilizzare una delle soluzioni seguenti:  
   

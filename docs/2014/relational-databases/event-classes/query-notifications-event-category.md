@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,17 +14,17 @@ ms.assetid: 13c62636-ce8a-410f-9af9-c0a78959fb49
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b1a707d7fce73294b518988b128c0c5984cc5735
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c83ebac20a86cd490fbfdf2dbd099e103d404ced
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48066681"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52775553"
 ---
 # <a name="query-notifications-event-category"></a>Categoria di eventi di notifica delle query
   Nella categoria di eventi **Query Notifications** sono incluse classi di evento in cui sono disponibili informazioni che gli sviluppatori e gli amministratori possono usare per monitorare e risolvere i problemi relativi alle notifiche delle query.  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Classe di evento QN:Dynamics](qn-dynamics-event-class.md)  
  Vengono fornite informazioni sull'attività in background eseguita dal [!INCLUDE[ssDE](../../includes/ssde-md.md)] per supportare le notifiche delle query.  
   

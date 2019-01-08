@@ -25,12 +25,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 61d67e223ffe0a68c9f5bd92d1a4a3ef169edc9b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 611e202007fb9a5b9438e3432984c3722e264bd7
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47855899"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52522857"
 ---
 # <a name="using-the-sqlidentity-and-sqlguid-annotations"></a>Utilizzo delle annotazioni sql:identity e sql:guid
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "47855899"
  Il **: Identity** e **sql:guid** le annotazioni possono essere definite in un elemento di contenuto complesso.  
   
 ## <a name="sqlidentity-annotation"></a>Annotazione sql:identity  
- È possibile specificare il **: Identity** annotazione nello schema XSD su qualsiasi nodo che esegue il mapping a una colonna di database di tipo IDENTITY. Il valore specificato per questa annotazione definisce la modalità di aggiornamento della colonna di tipo IDENTITY (ovvero utilizzando il valore fornito nell'updategram per modificare la colonna o ignorando il valore. Nel secondo caso per la colonna viene utilizzato un valore generato da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ È possibile specificare il **: Identity** annotazione nello schema XSD su qualsiasi nodo che esegue il mapping a una colonna di database di tipo IDENTITY. Il valore specificato per questa annotazione definisce come viene aggiornata la colonna di tipo IDENTITY (utilizzando il valore fornito nell'updategram per modificare la colonna o ignorando il valore, nel qual caso una [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-valore generato viene utilizzato per la colonna).  
   
  Il **: Identity** annotazione può essere assegnata a due valori:  
   
@@ -64,6 +64,6 @@ ms.locfileid: "47855899"
  Specifica che il valore GUID generato da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve essere utilizzato per la colonna specifica nell'operazione di aggiornamento.  
   
  useValue  
- Specifica che per la colonna deve essere utilizzato il valore specificato nell'updategram. Si tratta del valore predefinito.  
+ Specifica che per la colonna deve essere utilizzato il valore specificato nell'updategram. Rappresenta il valore predefinito.  
   
   

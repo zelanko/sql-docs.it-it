@@ -20,16 +20,16 @@ ms.assetid: 68fe010d-9539-4e5b-a260-c8d32423b1db
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7ffba9afd0609bab57cdaa182b650f7bd5a0fb34
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ec0038e0ec6c87dba403bbe62441815dfa6d0251
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47606816"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53205180"
 ---
 # <a name="sqlparamdata-function"></a>Funzione SQLParamData
 **Conformità**  
- Versione introdotta: Conformità agli standard 1.0 di ODBC: ISO 92  
+ Versione introdotta: Conformità agli standard 1.0 ODBC: ISO 92  
   
  **Riepilogo**  
  **SQLParamData** viene usata in combinazione con **SQLPutData** per specificare i dati di parametro in fase di esecuzione di istruzione e con **SQLGetData** per recuperare i dati dei parametri di output inviati come flusso.  
@@ -56,7 +56,7 @@ SQLRETURN SQLParamData(
 ## <a name="diagnostics"></a>Diagnostica  
  Quando **SQLParamData** restituisce SQL_ERROR o SQL_SUCCESS_WITH_INFO, un valore SQLSTATE associato possono essere ottenuti chiamando **SQLGetDiagRec** con un *HandleType* di SQL _ HANDLE_STMT e un *gestiscono* dei *StatementHandle*. Nella tabella seguente sono elencati i valori SQLSTATE normalmente restituiti dal **SQLParamData** e illustra ognuna nel contesto di questa funzione; la notazione "(DM)" precede le descrizioni di SQLSTATE restituiti da Gestione Driver. Il codice restituito a ogni valore SQLSTATE è SQL_ERROR, se non specificato diversamente.  
   
-|SQLSTATE|Errore|Description|  
+|SQLSTATE|Errore|Descrizione|  
 |--------------|-----------|-----------------|  
 |01000|Avviso generale|Messaggio informativo specifico del driver. (Funzione restituisce SQL_SUCCESS_WITH_INFO).|  
 |07006|Violazione dell'attributo del tipo di dati|Il valore di dati identificato dal *ValueType* argomento nella **SQLBindParameter** per non è stato possibile convertire il parametro associato al tipo di dati identificato dal *ParameterType*nell'argomento **SQLBindParameter**.<br /><br /> Il valore di dati restituito per un parametro di associazione come SQL_PARAM_OUTPUT o SQL_PARAM_INPUT_OUTPUT non è stato possibile convertire il tipo di dati identificato dal *ValueType* nell'argomento **SQLBindParameter**.<br /><br /> (Se non è stato possibile convertire i valori dei dati per una o più righe, ma una o più righe sono state restituite correttamente, questa funzione restituisce SQL_SUCCESS_WITH_INFO).|  
@@ -82,11 +82,11 @@ SQLRETURN SQLParamData(
   
  Quando un'applicazione chiama **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**, oppure **SQLSetPos**, il driver restituisce SQL_NEED_ DATI se necessita di dati data-at-execution. Un'applicazione chiama quindi **SQLParamData** per determinare i dati da inviare. Se il driver richiede dati di parametro, il driver restituisce il  *\*ValuePtrPtr* output il valore che l'applicazione inserita nel buffer di set di righe del buffer. L'applicazione può usare questo valore per determinare a quali dati di parametro, il driver richiede. Se il driver richiede dati della colonna, il driver restituisce il  *\*ValuePtrPtr* memorizzare nel buffer l'indirizzo a cui la colonna era associata in origine, come indicato di seguito:  
   
- *Indirizzo associato* + *associazione Offset* + ((*il numero di riga* – 1) x *dimensione dell'elemento*)  
+ *Indirizzo associato* + *associazione Offset* + ((*il numero di riga* - 1) x *dimensione dell'elemento*)  
   
  le variabili in cui vengono definite come indicato nella tabella seguente.  
   
-|Variabile|Description|  
+|Variabile|Descrizione|  
 |--------------|-----------------|  
 |*Associare l'indirizzo*|L'indirizzo specificato con il *TargetValuePtr* nell'argomento **SQLBindCol**.|  
 |*Offset di associazione*|Il valore archiviato in corrispondenza dell'indirizzo specificato con l'attributo di istruzione SQL_ATTR_ROW_BIND_OFFSET_PTR.|  

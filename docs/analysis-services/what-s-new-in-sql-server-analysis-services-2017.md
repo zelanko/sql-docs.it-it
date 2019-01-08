@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 76e9bedbd7807b78288a901d0b2a7674232c7e91
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 188406e99f32b42079b66536db42810222eb2a24
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145986"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52516743"
 ---
 # <a name="whats-new-in-sql-server-2017-analysis-services"></a>Che cosa sono le novità di SQL Server 2017 Analysis Services
 [!INCLUDE[ssas-appliesto-sql2017](../includes/ssas-appliesto-sql2017.md)]
@@ -64,7 +64,7 @@ Questa versione introduce gli hint di codifica, una funzionalità avanzata conse
 
 * La codifica hash è preferita per le chiavi esterne e colonne group by (spesso valori di tabella delle dimensioni). Colonne di tipo stringa sono sempre hash con codificata.
 
-Le colonne numeriche possono usare uno di questi metodi di codifica. Quando Analysis Services inizia l'elaborazione di una tabella, se una tabella è vuota (con o senza partizioni) o viene eseguita un'operazione di elaborazione di tabella completa, i valori di esempi vengono forniti per ogni colonna numerica determinare se applicare valore o la codifica hash . Per impostazione predefinita, la codifica di valore viene scelto quando l'esempio di valori distinct nella colonna è sufficientemente grande; in caso contrario, la codifica hash in genere fornisce una migliore compressione. È possibile che Analysis Services modificare il metodo di codifica dopo che la colonna è parzialmente elaborata ulteriormente le informazioni sulla distribuzione dei dati in base e riavviare il processo di codifica. Tuttavia, si aumenta il tempo di elaborazione ed è inefficiente. Il white paper sulla regolazione delle prestazioni viene illustrata la nuova codifica in modo più dettagliato e viene descritto come rilevare usando SQL Server Profiler.
+Le colonne numeriche possono usare uno di questi metodi di codifica. Quando Analysis Services inizia l'elaborazione di una tabella, se una tabella è vuota (con o senza partizioni) o viene eseguita un'operazione di elaborazione di tabella completa, i valori di esempi vengono forniti per ogni colonna numerica determinare se applicare valore o la codifica hash . Per impostazione predefinita, la codifica di valore viene scelto quando l'esempio di valori distinct nella colonna è abbastanza grande: in caso contrario, la codifica hash in genere fornisce una migliore compressione. È possibile che Analysis Services modificare il metodo di codifica dopo che la colonna è parzialmente elaborata ulteriormente le informazioni sulla distribuzione dei dati in base e riavviare il processo di codifica. Tuttavia, si aumenta il tempo di elaborazione ed è inefficiente. Il white paper sulla regolazione delle prestazioni viene illustrata la nuova codifica in modo più dettagliato e viene descritto come rilevare usando SQL Server Profiler.
 
 Hint di codifica consente i creatori di modelli specificare una preferenza per il metodo di codifica specificato conoscenza pregressa di profiling dei dati e/o in risposta a nuova codifica gli eventi di traccia. Poiché l'aggregazione in colonne con codifica hash è più lento rispetto a quanto applicati alle colonne di valore codificato, codifica del valore potrebbe essere specificata come hint per tali colonne. Non è garantito che la preferenza viene applicata. È un hint anziché un'impostazione. Per specificare un hint di codifica, impostare la proprietà EncodingHint sulla colonna. I valori possibili sono "Default", "Value" e "Hash". Il frammento seguente di metadati basati su JSON nel file Model. bim Specifica valore di codifica per la colonna Sales Amount.
 

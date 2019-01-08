@@ -16,12 +16,12 @@ ms.assetid: 4d0abeb5-e939-46d3-9097-6e0358244300
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4b851f631535008d1655a35c4b4af5321c8c4534
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b26f246b85f708976fd792247996cfb2084af5e7
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159983"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512645"
 ---
 # <a name="apply-a-filter-to-a-mining-model"></a>Applicare un filtro a un modello di data mining
   Se la struttura di data mining contiene una tabella nidificata, è possibile applicare un filtro alla tabella del case, alla tabella nidificata o a entrambe.  
@@ -47,7 +47,7 @@ WHERE [Model] <> 'Water Bottle' )
   
 3.  Selezionare il modello, quindi fare clic con il pulsante destro del mouse per aprire il menu di scelta rapida.  
   
-     -oppure-  
+     oppure  
   
      Selezionare il modello. quindi scegliere **Imposta filtro modello** dal menu **Modello di data mining**.  
   
@@ -67,7 +67,7 @@ WHERE [Model] <> 'Water Bottle' )
   
 8.  Fare clic nella casella di testo **Valore** e digitare un valore.  
   
-     Ad esempio, selezionare `Income` come colonna, selezionare il valore maggiore rispetto a operator (>) e quindi digitare `30000`.  
+     Ad esempio, scegliere `Income` come colonna, selezionare l'operatore maggiore di (>), quindi digitare `30000`.  
   
 9. Fare clic sulla riga successiva nella griglia.  
   
@@ -79,7 +79,7 @@ WHERE [Model] <> 'Water Bottle' )
   
 11. Selezionare un operatore e digitare un valore come descritto nei passaggi 7 e 8.  
   
-     Ad esempio, selezionare `Income` nuovamente alla colonna, selezionare l'operatore minore di (<) e quindi digitare `40000`.  
+     Ad esempio, scegliere nuovamente `Income` come colonna, selezionare l'operatore minore di (<), quindi digitare `40000`.  
   
 12. Fare clic sulla riga successiva nella griglia.  
   
@@ -97,7 +97,7 @@ WHERE [Model] <> 'Water Bottle' )
   
      Queste sono le uniche condizioni disponibili per la tabella nidificata nella finestra di dialogo **Filtro modello** , perché la tabella del case è stata limitata solo ai case che contengono un determinato valore nella tabella nidificata. Il valore per la condizione nella tabella nidificata verrà impostato nel passaggio successivo.  
   
-4.  Fare clic sulla casella **Valore** e quindi sul pulsante ( **…** ) per creare un'espressione.  
+4.  Fare clic sui **valore** e quindi scegliere il **(...)**  per compilare un'espressione.  
   
      Il  **\<nome > filtro** verrà visualizzata la finestra di dialogo. Questa finestra di dialogo consente di impostare condizioni solo nella tabella corrente, che in questo caso è la tabella nidificata.  
   
@@ -127,8 +127,8 @@ EXISTS (SELECT * FROM [<nested table name>] WHERE [Model] <> 'Water Bottle' )
   
   
 ## <a name="see-also"></a>Vedere anche  
- [Filtri per i modelli di Data Mining &#40;Analysis Services - Data Mining&#41;](mining-models-analysis-services-data-mining.md)   
- [Procedure dettagliate e le attività del modello di data mining](mining-model-tasks-and-how-tos.md)   
+ [Filtri per i modelli di data mining &#40;Analysis Services - Data mining&#41;](mining-models-analysis-services-data-mining.md)   
+ [Attività e procedure relative al modello di data mining](mining-model-tasks-and-how-tos.md)   
  [Eliminare un filtro da un modello di data mining](delete-a-filter-from-a-mining-model.md)  
   
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 10/29/2018
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - Merge Agent, executables
@@ -16,12 +15,12 @@ ms.assetid: fe1e7f60-b0c8-45e9-a5e8-4fedfa73d7ea
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d3b7a3b52b30bdce214dd7d481403425dd07cd09
-ms.sourcegitcommit: 3e1efbe460723f9ca0a8f1d5a0e4a66f031875aa
+ms.openlocfilehash: 9d3b323be70911881b99f055503d12bb6b79988d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "50237107"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52762823"
 ---
 # <a name="replication-merge-agent"></a>Agente merge repliche
   Agente merge repliche è un eseguibile dell'utilità che consente di applicare lo snapshot iniziale incluso nelle tabelle di database ai Sottoscrittori. Consente inoltre di unire le modifiche ai dati incrementali apportate nel server di pubblicazione dopo la creazione dello snapshot iniziale e di riconciliare i conflitti in base alle regole configurate oppure utilizzando un sistema di risoluzione personalizzato.  
@@ -64,7 +63,7 @@ ms.locfileid: "50237107"
 [-InternetLogininternet_login]  
 [-InternetPasswordinternet_password]  
 [-InternetProxyLogininternet_proxy_login]  
-[–InternetProxyPasswordinternet_proxy_password]  
+[-InternetProxyPasswordinternet_proxy_password]  
 [-InternetProxyServerinternet_proxy_server]  
 [-InternetSecurityMode [0|1]]  
 [-InternetTimeoutinternet_timeout]  
@@ -164,14 +163,14 @@ ms.locfileid: "50237107"
  **-EncryptionLevel** [ **0** | **1** | **2** ]  
  Livello di crittografia SSL (Secure Sockets Layer) utilizzato dall'agente di merge quando vengono stabilite le connessioni.  
   
-|Valore di EncryptionLevel|Description|  
+|Valore di EncryptionLevel|Descrizione|  
 |---------------------------|-----------------|  
 |**0**|Specifica che SSL non viene utilizzato.|  
 |**1**|Specifica che SSL viene utilizzato, ma l'agente non verifica che il certificato server SSL sia firmato da un'autorità emittente attendibile.|  
 |**2**|Specifica che SSL viene utilizzato e che il certificato viene verificato.|  
 
  > [!NOTE]  
- >  Un certificato SSL valido è definito con un nome di dominio completo del Server SQL. Affinché l'agente possa connettersi correttamente quando si imposta - EncryptionLevel su 2, creare un alias nel Server SQL locale. Il parametro 'Nome Alias' deve essere il nome del server e il parametro "Server" deve essere impostato per il nome completo di SQL Server.
+ >  Un certificato SSL valido è definito con un nome di dominio completo del Server SQL. Affinché l'agente possa connettersi correttamente quando si imposta - EncryptionLevel su 2, creare un alias nel Server SQL locale. Il parametro 'Nome alias' deve corrispondere al nome del server e il parametro 'Server' deve essere impostato sul nome completo dell'istanza di SQL Server.
   
  Per altre informazioni, vedere [Panoramica della sicurezza &#40;replica&#41;](../security/security-overview-replication.md).  
   
@@ -181,7 +180,7 @@ ms.locfileid: "50237107"
   
  Specifica il tipo di scambio di dati durante la sincronizzazione. I possibili valori sono i seguenti:  
   
-|Valore di ExchangeType|Description|  
+|Valore di ExchangeType|Descrizione|  
 |------------------------|-----------------|  
 |**1**|L'agente deve caricare le modifiche ai dati dal Sottoscrittore al server di pubblicazione.|  
 |**2**|L'agente deve eseguire il download delle modifiche ai dati dal server di pubblicazione al Sottoscrittore.|  
@@ -200,7 +199,7 @@ ms.locfileid: "50237107"
  **-ForceConvergenceLevel** [**0**|**1**|**2** ( **Publisher**| **Subscriber**| **Both**)]  
  Specifica il livello di convergenza che l'agente di merge deve utilizzare. I possibili valori sono i seguenti:  
   
-|Valore di ForceConvergenceLevel|Description|  
+|Valore di ForceConvergenceLevel|Descrizione|  
 |---------------------------------|-----------------|  
 |**0** (predefinito)|Valore predefinito. Esegue un'operazione di merge standard senza convergenza aggiuntiva.|  
 |**1**|Forza la convergenza per tutte le generazioni.|  
@@ -221,7 +220,7 @@ ms.locfileid: "50237107"
  **-HistoryVerboseLevel** [**1**|**2**|**3**]  
  Specifica la quantità di cronologia registrata durante un'operazione di unione. Per ridurre al minimo l'effetto della registrazione della cronologia sulle prestazioni, selezionare **1**.  
   
-|Valore di HistoryVerboseLevel|Description|  
+|Valore di HistoryVerboseLevel|Descrizione|  
 |-------------------------------|-----------------|  
 |**0**|Registra il messaggio di stato dell'agente finale, i dettagli di sessione finali ed eventuali errori.|  
 |**1**|Registra i dettagli di sessione incrementali a ogni stato della sessione, inclusa la percentuale di completamento, oltre al messaggio di stato dell'agente finale, ai dettagli di sessione finali e a eventuali errori.|  
@@ -243,7 +242,7 @@ ms.locfileid: "50237107"
  **-InternetProxyLogin**  *internet_proxy_login*  
  Specifica il nome di accesso utilizzato per la connessione a un server proxy, definito in *internet_proxy_server*, che richiede l'autenticazione.  
   
- **-InternetProxyPassword**  *internet_proxy_password*  
+ **-InternetProxyPassword** *internet_proxy_password*  
  Specifica la password utilizzata per la connessione a un server proxy, definito in *internet_proxy_server*, che richiede l'autenticazione.  
   
  **-InternetProxyServer**  *internet_proxy_server*  
@@ -326,7 +325,7 @@ ms.locfileid: "50237107"
  **-SubscriberDBAddOption** [**0**| **1**| **2**| **3**]  
  Specifica se esiste un database Sottoscrittore.  
   
-|Valore di SubscriberDBAddOption|Description|  
+|Valore di SubscriberDBAddOption|Descrizione|  
 |---------------------------------|-----------------|  
 |**0**|Utilizza il database esistente (impostazione predefinita).|  
 |**1**|Crea un nuovo database Sottoscrittore vuoto.|  
@@ -372,7 +371,7 @@ ms.locfileid: "50237107"
  **-Validate** [**0**|**1**|**2**|**3**]  
  Specifica se la convalida deve essere effettuata al termine della sessione di merge, e, in tal caso, indica il tipo di convalida. Il valore consigliato è **3** .  
   
-|Valore di Validate|Description|  
+|Valore di Validate|Descrizione|  
 |--------------------|-----------------|  
 |**0** (predefinito)|Nessuna convalida.|  
 |**1**|Convalida solo tramite conteggio delle righe.|  

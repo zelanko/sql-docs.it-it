@@ -20,25 +20,25 @@ ms.assetid: 56efd563-2f72-4caf-94e3-8a182385c173
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: dbcd828ea886bd1c83b327cae9a49bca4668ef15
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fd497326f278dcc01b4fa81a0e64da6a93cbe8cd
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47617899"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518806"
 ---
 # <a name="syscolumnstoredictionaries-transact-sql"></a>sys.column_store_dictionaries (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Contiene una riga per ogni dizionario utilizzato negli indici columnstore con ottimizzazione per la memoria xVelocity. I dizionari vengono utilizzati per codificare alcuni tipi di dati, ma non tutti. Pertanto non tutte le colonne in un indice columnstore contengono dizionari. Un dizionario può essere presente come dizionario primario (per tutti i segmenti) e possibilmente per altri dizionari secondari utilizzati per un subset di segmenti della colonna.  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**hobt_id**|**bigint**|ID dell'heap o dell'indice ad albero B (HoBT) per la tabella a cui appartiene l'indice columnstore.|  
 |**column_id**|**int**|ID della colonna columnstore inizia con 1. La prima colonna con ID = 1, la seconda colonna con ID = 2, e così via.|  
 |**dictionary_id**|**int**|Possono essere presenti due tipi di dizionari, globali e locali, associati a un segmento di colonna. Un dictionary_id pari a 0 rappresenta il dizionario globale condiviso tra tutti i segmenti di colonna (uno per ogni gruppo di righe) per tale colonna.|  
 |**version**|**int**|Versione del formato del dizionario.|  
-|**type**|**int**|Tipo di dizionario:<br /><br /> 1: dizionario hash contenente **int** valori<br /><br /> 2: non utilizzato<br /><br /> 3: dizionario hash contenente valori stringa<br /><br /> 4: dizionario hash contenente **float** valori<br /><br /> Per altre informazioni sui dizionari, vedere [Guida agli indici Columnstore](~/relational-databases/indexes/columnstore-indexes-overview.md).|  
+|**type**|**int**|Tipo di dizionario:<br /><br /> 1 - hash dizionario contenente **int** valori<br /><br /> 2 - non utilizzato<br /><br /> 3 - dizionario di hash contenente valori stringa<br /><br /> 4 - hash dizionario contenente **float** valori<br /><br /> Per altre informazioni sui dizionari, vedere [Guida agli indici Columnstore](~/relational-databases/indexes/columnstore-indexes-overview.md).|  
 |**last_id**|**int**|L'ultimo ID dati nel dizionario.|  
 |**entry_count**|**bigint**|Numero di voci nel dizionario.|  
 |**on_disc_size**|**bigint**|Dimensioni del dizionario in byte.|  

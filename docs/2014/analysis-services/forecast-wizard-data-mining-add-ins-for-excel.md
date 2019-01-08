@@ -14,12 +14,12 @@ ms.assetid: c5b33f75-42d4-4598-89e7-94815c142ce6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 87659ab790e7583c23ac9c597603b531734c7b25
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1ba2f28e4f2e66fd642273d06409eb128d219d8b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48106461"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52543696"
 ---
 # <a name="forecast-wizard-data-mining-add-ins-for-excel"></a>Procedura guidata Previsione (componenti aggiuntivi Data mining per Excel)
   ![Procedura guidata associazione sulla barra multifunzione Data Mining](media/dmc-forecast.gif "procedura guidata nella barra multifunzione Data Mining di associazione")  
@@ -67,7 +67,7 @@ ms.locfileid: "48106461"
     -   **Usa modello temporaneo**. Se si seleziona questa opzione, il modello non verrà salvato nel server. I modelli temporanei vengono eliminati quando si chiude Excel.  
   
 ### <a name="requirements"></a>Requisiti  
- I dati devono includere almeno una colonna che può essere utilizzata come serie temporale. I valori in questa colonna devono essere univoci e continui, ossia non devono contenere gap. Prima di eseguire la procedura guidata, ordinare i dati in base alle colonna della serie temporale in ordine crescente.  
+ I dati devono includere almeno una colonna che può essere utilizzata come serie temporale. I valori in questa colonna devono essere univoci e continui, vale a dire, devono contenere gap. Prima di eseguire la procedura guidata, ordinare i dati in base alle colonna della serie temporale in ordine crescente.  
   
  Se i dati non includono una colonna della data o dell'ora, è possibile assegnare una serie numerica arbitraria o crearne una mediante la procedura guidata. Se si crea la colonna di ordinamento della serie, verificare che le altre colonne vengano ordinate nell'ordine desiderato prima di avviare la procedura guidata.  
   

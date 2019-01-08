@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: wmi
 ms.topic: reference
 helpviewer_keywords:
 - permissions [WMI]
@@ -21,12 +19,12 @@ ms.assetid: 34daa922-7074-41d0-9077-042bb18c222a
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: c2722d608b4f373de92c49f1d75b887c658417e3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9d9f3ab9f80c6f2c77153439cf554f0ae8598586
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48183239"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53351788"
 ---
 # <a name="working-with-the-wmi-provider-for-configuration-management"></a>Utilizzo del provider WMI per Gestione configurazione
   Prima di eseguire la programmazione con il provider WMI per Gestione computer, è necessario tenere presente quanto riportato di seguito:  
@@ -34,7 +32,7 @@ ms.locfileid: "48183239"
 ## <a name="binding"></a>Associazione  
  Il provider WMI per Gestione configurazione è un modello a oggetti COM che supporta l'associazione anticipata e tardiva. Con l'associazione tardiva è possibile utilizzare linguaggi di scripting, come VBScript, per modificare a livello di codice gli alias, le impostazioni di rete e i servizi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- Per altre informazioni sulla programmazione di implementazioni del Provider WMI usando linguaggi di scripting, vedere la [!INCLUDE[msCoName](../../includes/msconame-md.md)] MSDN [sito Web](http://go.microsoft.com/fwlink/?linkid=15426).  
+ Per altre informazioni sulla programmazione di implementazioni del Provider WMI usando linguaggi di scripting, vedere la [!INCLUDE[msCoName](../../includes/msconame-md.md)] MSDN [sito Web](https://go.microsoft.com/fwlink/?linkid=15426).  
   
 ## <a name="specifying-a-connection-string"></a>Definizione di una stringa di connessione  
  Le applicazioni indirizzano il provider WMI per Gestione configurazione a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connettendosi a uno spazio dei nomi WMI definito dal provider. Il servizio Windows WMI esegue il mapping di questo spazio dei nomi alla DLL del provider e lo carica in memoria. Tutte le istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengono rappresentate con un solo spazio dei nomi WMI. Lo spazio dei nomi predefinito è  
@@ -45,7 +43,7 @@ ms.locfileid: "48183239"
   
  dove `instance_name` corrisponde per impostazione predefinita a `MSSQLSERVER` in un'installazione predefinita di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- **Nota:** se ci si connette tramite Windows Firewall, è necessario per assicurarsi che i computer sono configurati in modo appropriato. Vedere l'articolo "Connecting Through Windows Firewall" nella documentazione di Strumentazione gestione Windows sul [!INCLUDE[msCoName](../../includes/msconame-md.md)] MSDN [sito Web](http://go.microsoft.com/fwlink/?linkid=15426).  
+ **Nota:** Se ci si connette tramite Windows Firewall è necessario assicurarsi che i computer sono configurati in modo appropriato. Vedere l'articolo "Connecting Through Windows Firewall" nella documentazione di Strumentazione gestione Windows sul [!INCLUDE[msCoName](../../includes/msconame-md.md)] MSDN [sito Web](https://go.microsoft.com/fwlink/?linkid=15426).  
   
 ## <a name="permissions-and-server-authentication"></a>Autorizzazioni e autenticazione del server  
  Per accedere al provider WMI per Gestione configurazione, è necessario che lo script di gestione WMI del client sia in esecuzione nel contesto di un amministratore nel computer di destinazione. È necessario essere membro del gruppo locale Administrators di Windows nel computer da gestire.  

@@ -1,7 +1,8 @@
 ---
-title: Gruppi di server in Azure Data Studio | Microsoft Docs
-description: Informazioni sui gruppi di server in Azure Data Studio.
-ms.custom: tools|sos
+title: Gruppi di server
+titleSuffix: Azure Data Studio
+description: Informazioni sui gruppi di server in Azure Data Studio
+ms.custom: seodec18
 ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -10,12 +11,12 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 233f4579860bef97a641460752544b8e1042e700
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: e12ab9cba41361ad3692e31d0a39de65770403ac
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49356562"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030365"
 ---
 # <a name="server-groups-in-includename-sosincludesname-sos-shortmd"></a>Gruppi di server in [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 

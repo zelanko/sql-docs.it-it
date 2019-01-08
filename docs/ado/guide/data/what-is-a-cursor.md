@@ -13,12 +13,12 @@ ms.assetid: 596eb4b6-c22f-4cde-b23f-172dd66c3161
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b58446a00300548b0b61defefb71d3207359787a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0d5704a43e1ede850a225c4ec2b4df9a3563606b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47770771"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52540107"
 ---
 # <a name="what-is-a-cursor"></a>Informazioni sui cursori
 Nei database relazionali le operazioni vengono eseguite su set di righe completi. Il set di righe restituito da un'istruzione SELECT include tutte le righe che soddisfano le condizioni specificate nella clausola WHERE dell'istruzione. Il set di righe completo restituito dall'istruzione è noto come set di risultati. Le applicazioni, specialmente quelle che sono interattivi e online, non sono sempre funziona in modo efficace con l'intero set di risultati come un'unità. In tali applicazioni deve essere pertanto disponibile un meccanismo per l'elaborazione di una riga singola o di un blocco di righe di dimensioni ridotte. I cursori sono un'estensione dei set di risultati che implementano appunto tale meccanismo.  
@@ -61,7 +61,7 @@ Nei database relazionali le operazioni vengono eseguite su set di righe completi
   
  I cursori di sola lettura consentono agli utenti di esplorare il set di risultati e i cursori possono implementare gli aggiornamenti di singole righe di lettura/scrittura. I cursori complessi possono essere definiti con i keyset che puntano alle righe della tabella di base. Anche se alcuni cursori sono di sola lettura in avanti, altri utenti possono spostarsi avanti e indietro e fornire un aggiornamento dinamico del set di risultati in base alle modifiche che stanno effettuando altre applicazioni al database.  
   
- Non tutte le applicazioni devono utilizzare cursori per l'accesso o l'aggiornamento dati. Alcune query non richiedono infatti l'aggiornamento diretto delle righe utilizzando un cursore. I cursori devono essere una delle tecniche ultimo si sceglie di recuperare i dati, quindi è consigliabile scegliere il cursore con impatto più basso possibile. Quando si crea un set di risultati, utilizzando una stored procedure, il set di risultati non è aggiornabile tramite cursore modificare o aggiornare i metodi.  
+ Non tutte le applicazioni devono utilizzare cursori per l'accesso o l'aggiornamento dati. Alcune query non richiedono infatti l'aggiornamento diretto delle righe utilizzando un cursore. I cursori devono essere una delle tecniche ultimo si sceglie di recuperare i dati, e quindi è consigliabile scegliere il cursore con impatto più basso possibile. Quando si crea un set di risultati, utilizzando una stored procedure, il set di risultati non è aggiornabile tramite cursore modificare o aggiornare i metodi.  
   
 ## <a name="concurrency"></a>Concorrenza  
  In alcune applicazioni multiutente è molto importante per i dati presentati all'utente finale per essere aggiornati come possibili. Un classico esempio di un sistema di questo tipo è un sistema di prenotazione delle compagnie aeree, in cui molti utenti potrebbero avere scelto lo stesso prenotazione posto sul volo specificato (e pertanto un singolo record). In casi come questo, la progettazione dell'applicazione deve gestire operazioni simultanee in un singolo record.  

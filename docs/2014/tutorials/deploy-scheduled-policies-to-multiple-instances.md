@@ -11,12 +11,12 @@ ms.assetid: f551b8e8-3668-4ed4-852f-bae826254f4f
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: e0e98af473babc84863c8e0a1610107843ca76d5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6f69addfdda05b00ff1f322b526bb656c2c9b317
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48128271"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518616"
 ---
 # <a name="deploy-scheduled-policies-to-multiple-instances"></a>Distribuzione di criteri pianificati in istanze multiple
   Tramite Server registrati è possibile distribuire criteri pianificati a server gestiti da una posizione centralizzata. È possibile distribuire i criteri pianificati da un gruppo di server locali o da un server di gestione centrale.  
@@ -36,7 +36,7 @@ ms.locfileid: "48128271"
   
 -   È necessario che nelle istanze in cui si desidera distribuire i criteri pianificati sia in esecuzione [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] o versione successiva. Ai fini dell'automazione è necessario che i criteri siano archiviati localmente, operazione non supportata nelle versioni di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] precedenti a [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)].  
   
--   Il server in cui si desidera distribuire i criteri pianificati devono essere registrati in server registrati in entrambi i **gruppi di Server locali** o il **server di gestione centrale** nodo. Per altre informazioni, vedere gli argomenti seguenti:  
+-   Il server in cui si desidera distribuire i criteri pianificati devono essere registrati in server registrati in entrambi i **gruppi di Server locali** o il **server di gestione centrale** nodo. Per altre informazioni, vedere i seguenti argomenti:  
   
     -   [Creare o modificare un gruppo di server &#40;SQL Server Management Studio&#41;](../ssms/register-servers/create-or-edit-a-server-group-sql-server-management-studio.md)  
   
@@ -94,7 +94,7 @@ ms.locfileid: "48128271"
  In questa esercitazione è stato illustrato come eseguire valutazioni su richiesta e pianificate dei criteri per procedure consigliate per una o più istanze di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
 ## <a name="next"></a>Avanti  
- L'esercitazione è completata. Per tornare all'inizio, vedere [esercitazione: valutazione di procedure consigliate per gestione basata su criteri](../../2014/tutorials/tutorial-evaluating-best-practices-by-using-policy-based-management.md).  
+ L'esercitazione è completata. Per tornare all'inizio, vedere [esercitazione: La valutazione di procedure consigliate tramite la gestione basata su criteri](../../2014/tutorials/tutorial-evaluating-best-practices-by-using-policy-based-management.md).  
   
  Per visualizzare un elenco dei [!INCLUDE[ssDE](../includes/ssde-md.md)] esercitazioni, fare clic su [esercitazioni del motore di Database](../relational-databases/database-engine-tutorials.md).  
   

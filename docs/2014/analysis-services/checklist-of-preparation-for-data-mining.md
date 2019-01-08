@@ -11,12 +11,12 @@ ms.assetid: 0e056c95-ba06-413e-8dc1-4d411a447c3b
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: fd702443b8f1addf43217499b639044d359647bf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9c74fcbc925091a563d10bc8feef44337af48f84
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48057571"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52519932"
 ---
 # <a name="checklist-of-preparation-for-data-mining"></a>Elenco di controllo per la preparazione di data mining
   Sebbene i componenti aggiuntivi Data mining forniscano un modo piuttosto semplice e divertente per creare e provare i modelli, quando è necessario ottenere risultati ripetibili e utilizzabili, è necessario concedere il tempo appropriato per la formulazione dei requisiti aziendali di base e per il recupero e la preparazione dei dati. In questa sezione viene fornito un elenco di controllo per pianificare la ricerca e vengono descritti i problemi comuni.  
@@ -40,18 +40,18 @@ ms.locfileid: "48057571"
   
 -   Di quanti dati si dispone? Sono disponibili dati sufficienti per la modellazione?  
   
-     Non devono essere presenti grandi quantità di dati, è consigliabile una quantità minore e bilanciata.  
+     Non deve essere una quantità enorme - più piccola e bilanciato può offrire risultati migliore.  
   
 -   I dati provengono da più origini o da un'unica origine?  
   
 -   I dati sono già stati elaborati e puliti? Sono disponibili più dati di input?  
   
--   Si è a conoscenza delle eventuali modifiche apportate ai dati prima della ricezione, ad esempio in che modo potrebbero essere stati troncati, riepilogati o convertiti?  
+-   È possibile sapere come lo è stato modificato prima della ricezione, - come dati potrebbero sono stati troncati, riepilogati o convertiti?  
   
 -   I dati di input presentano alcuni risultati di esempio da poter utilizzare per il training?  
   
  **Dichiaro di aver compreso il livello di integrità dei dati che è disponibile e il livello che necessario.**  
- Dati errati possono influire sulla qualità del modello o impedire completamente la compilazione del modello. È necessario disporre di una buona conoscenza della distribuzione e del significato dei dati e di come sono arrivati a questo stato. Sarà necessario comprendere se è possibile o appropriato semplificare i dati mediante l'assegnazione di etichette, il troncamento dei tipi di dati numerici o il riepilogo.  
+ Dati errati possono influire sulla qualità del modello o impedire completamente la compilazione del modello. È necessario disporre di una buona conoscenza della distribuzione e del significato dei dati e di come sono arrivati a questo stato. È necessario comprendere se è possibile o appropriato semplificare i dati assegnando etichette, troncando i tipi di dati numerici o creando un riepilogo.  
   
 -   Etichette di dati: sono chiare e corrette?  
   
@@ -72,7 +72,7 @@ ms.locfileid: "48057571"
 -   Se sono stati combinati set di dati, si è verificata la presenza di più colonne che rappresentano gli stessi dati?  
   
  **Si conosce la posizione in cui i dati di origine sono stati archiviati, la provenienza e la modalità di elaborazione. Il processo può essere facilmente ripetuto se necessario.**  
- Un unico set di dati è utile a scopo illustrativo, ma se si desidera spostare il modello in produzione, è opportuno stabilire in anticipo come applicare il processo di pulizia ai dati operativi. Inoltre, se si dispone di dati operativi è necessario sapere come potrebbero essere stati modificati prima della ricezione, ad esempio come sono stati arrotondati o riepilogati.  
+ Set di dati occasionale vanno bene per esperimenti, ma se si desidera spostare il modello nell'ambiente di produzione, è opportuno considerare in anticipo come applicare il processo di pulizia ai dati operativi. Inoltre, se si dispone di dati operativi, è necessario sapere come si potrebbero essere stato modificato prima della ricezione, è necessario sapere come lo era arrotondato o riepilogato.  
   
 -   Si desidera poter ripetere il test?  
   

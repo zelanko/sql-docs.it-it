@@ -14,12 +14,12 @@ ms.assetid: 573444e8-51bc-4f3d-9813-0037d2e13b8f
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: b269c4c3decfa2a4d7523666841e7cb04b441b3f
-ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
+ms.openlocfilehash: 0d3bf42ec031415d16ea45bc8241c85c6d937c35
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49461016"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52508872"
 ---
 # <a name="behavior-changes-to-full-text-search"></a>Differenze di comportamento nella ricerca full-text
   In questo argomento vengono descritte le modifiche del comportamento nella ricerca full-text. Queste modifiche influiscono sulle modalità di utilizzo o di interazione delle funzionalità in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] rispetto alle versioni precedenti di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
@@ -69,7 +69,7 @@ ms.locfileid: "49461016"
 |**Nome**|**Risultati con word breaker precedente e dello stemmer**|**Risultati con i nuovi word breaker e stemmer**|  
 |--------------|--------------------------------------------------------|---------------------------------------------------|  
 |jěˊÿqℭžl<br /><br /> *(in cui le condizioni non sono caratteri validi in lingua inglese)*|'jěˊÿqℭžl'|je yq zl|  
-|table's|table’s<br /><br /> table|table’s|  
+|table's|table's<br /><br /> table|table's|  
 |cat-|cat<br /><br /> cat-|cat|  
 |v-z *(dove v e z sono parole non significative)*|*(Nessun risultato)*|v-z|  
 |$100 000 USD|$100<br /><br /> 000<br /><br /> nn000<br /><br /> nn100$<br /><br /> usd|$100 000 USD<br /><br /> nn100000usd|  
@@ -79,7 +79,7 @@ ms.locfileid: "49461016"
 ## <a name="behavior-changes-in-full-text-search-in-sql-server-2008"></a>Modifiche del comportamento nella ricerca full-text in SQL Server 2008  
  In [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] e versioni successive, il motore Full-Text è integrato come servizio di database nel database relazionale come parte dell'infrastruttura del server query e l'archiviazione del motore. L'architettura della nuova ricerca full-text consente di raggiungere i seguenti obiettivi:  
   
--   Archiviazione e gestione integrate: ricerca Full-text è ora integrata direttamente con le funzionalità intrinseche di archiviazione e la gestione degli [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], e il servizio MSFTESQL non esiste più.  
+-   Archiviazione integrata e ricerca di gestione-Full-text è ora integrata direttamente con le funzionalità intrinseche di archiviazione e la gestione degli [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], e il servizio MSFTESQL non esiste più.  
   
     -   Gli indici full-text vengono archiviati nei filegroup del database, anziché nel file system. Le operazioni amministrative su un database, ad esempio la creazione di un backup, influiscono automaticamente sugli indici full-text.  
   
@@ -88,9 +88,9 @@ ms.locfileid: "49461016"
         > [!NOTE]  
         >  [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] [!INCLUDE[tsql](../includes/tsql-md.md)] Le istruzioni DDL che specificano cataloghi full-text funzionano correttamente.  
   
--   Elaborazione di query integrata: il nuovo Query Processor della ricerca full-text fa parte del motore di database ed è completamente integrato con Query Processor di SQL Server. Ciò significa che Query Optimizer riconosce i predicati di query full-text eseguendoli automaticamente nel modo più efficiente possibile.  
+-   L'elaborazione, il nuovo processore di query ricerca full-text integrata query fa parte del motore di Database ed è completamente integrato con il processore di Query di SQL Server. Ciò significa che Query Optimizer riconosce i predicati di query full-text eseguendoli automaticamente nel modo più efficiente possibile.  
   
--   Amministrazione e risoluzione dei problemi migliorate: la ricerca full-text integrata fornisce gli strumenti per analizzare le strutture di ricerca quali l'indice full-text, l'output di un word breaker specifico, la configurazione di parole non significative e così via.  
+-   Amministrazione migliorata e integrate nella risoluzione dei problemi di ricerca full-text fornisce strumenti che consentono di analizzare le strutture di ricerca, ad esempio l'indice full-text, l'output di un word breaker specifico, configurazione di parole non significative e così via.  
   
 -   I file di parole non significative sono stati sostituiti dagli elenchi di parole non significative. Un elenco di parole non significative è un oggetto di database tramite cui vengono facilitate le attività di gestibilità delle parole non significative e migliorata l'integrità tra istanze e ambienti del server diversi. Per altre informazioni, vedere [Configurare e gestire parole non significative ed elenchi di parole non significative per la ricerca full-text](../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md).  
   

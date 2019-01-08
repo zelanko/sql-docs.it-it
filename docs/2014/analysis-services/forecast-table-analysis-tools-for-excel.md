@@ -16,12 +16,12 @@ ms.assetid: 22bb0b5e-78f5-484e-883d-2b5985a12749
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b60e17ca95bff865d1a0786aa7da5ee398adcb7e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 623f3a4724de84dbb1e355ffbd64a6868ea0f12a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48170292"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518110"
 ---
 # <a name="forecast-table-analysis-tools-for-excel"></a>Previsione (Strumenti di analisi tabelle per Excel)
   ![Pulsante previsione in analisi di tabella degli strumenti della barra multifunzione](media/tat-forecast.gif "pulsante previsione sulla barra multifunzione strumenti di analisi tabelle")  
@@ -40,7 +40,7 @@ ms.locfileid: "48170292"
   
 2.  Fare clic su **previsione** nel **Analizza** scheda.  
   
-3.  Specificare le colonne per la previsione. Tramite lo strumento vengono selezionate automaticamente le colonne nei dati con tipo di dati stimabile, ovvero dati numerici continui. È possibile che alcune colonne con dati numerici continui non vengano selezionate dallo strumento, se contengono numerosi valori Null o zero, in quanto i dati mancanti potrebbero influire sui risultati. In questo caso, è possibile correggere i dati utilizzando il [modificare le etichette &#40;componenti aggiuntivi Data Mining di SQL Server&#41; ](relabel-sql-server-data-mining-add-ins.md) dello strumento.  
+3.  Specificare le colonne per la previsione. Lo strumento vengono selezionate automaticamente le colonne nei dati con tipo di dati stimabile, ovvero dati numerici continui. È possibile che alcune colonne con dati numerici continui non vengano selezionate dallo strumento, se contengono numerosi valori Null o zero, in quanto i dati mancanti potrebbero influire sui risultati. In questo caso, è possibile correggere i dati utilizzando il [modificare le etichette &#40;componenti aggiuntivi Data Mining di SQL Server&#41; ](relabel-sql-server-data-mining-add-ins.md) dello strumento.  
   
 4.  Specificare la colonna che contiene l'identificatore di data e ora o altri identificatori di serie. Se si seleziona l'opzione  **\<Nessun timestamp >** lo strumento creerà una serie in base alla sequenza di righe nei dati di origine.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "48170292"
 ### <a name="requirements"></a>Requisiti  
  Le colonne per cui eseguire la stima devono contenere dati numerici continui, ad esempio valori di valuta o altri numeri.  
   
- Se possibile, i dati devono inoltre includere una colonna contenente una serie di date o ore. È possibile utilizzare una serie numerica (1,2,3….) anziché dati relativi a data e ora. I valori della colonna della serie tuttavia devono essere univoci. Si verifica un errore se il **previsione** strumento vengono rilevati valori duplicati nella colonna della serie.  
+ Se possibile, i dati devono inoltre includere una colonna contenente una serie di date o ore. È possibile usare una serie numerica (1,2,3.) anziché i dati di data e ora. I valori della colonna della serie tuttavia devono essere univoci. Si verifica un errore se il **previsione** strumento vengono rilevati valori duplicati nella colonna della serie.  
   
  Non è possibile prevedere una data usando il **previsione** dello strumento. Benché non si verifichi necessariamente un errore, tale algoritmo non è stato sviluppato per utilizzare le date come valori stimabili.  
   

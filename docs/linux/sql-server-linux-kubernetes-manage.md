@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 1760256333abad2c6ae32d0aa2a94e1deaebd551
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: ad4f310ce6c0e200d5e658b3d5814131000d0004
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49356362"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518490"
 ---
 # <a name="manage-sql-server-always-on-availability-group-kubernetes"></a>Gestire SQL Server Always On Kubernetes gruppo di disponibilità
 
@@ -37,7 +37,7 @@ Per eseguire il failover o spostare una replica primaria in un altro nodo in un 
 
   Aggiornare il file per l'ambiente.
 
-  - Sostituire `<containerName>` con il nome della destinazione del gruppo di disponibilità previsto.
+  - Sostituire `<containerName>` con il nome del pod (ad esempio mssql2-0) della destinazione del gruppo di disponibilità previsto.
   - Se il gruppo di disponibilità non è nel `ag1` dello spazio dei nomi, sostituire `ag1` con lo spazio dei nomi.
 
   Questo file definisce un processo di failover denominato `manual-failover`.
@@ -63,7 +63,7 @@ Per eseguire il failover o spostare una replica primaria in un altro nodo in un 
   L'esempio seguente restituisce lo stato del processo denominato `manual-failover`.
 
   ```azurecli
-  kubectl describe jobs/manual-failover -–namespace ag1
+  kubectl describe jobs/manual-failover --namespace ag1
   ```
 
 1. Eliminare il processo di failover manuale. 
@@ -76,7 +76,7 @@ Per eseguire il failover o spostare una replica primaria in un altro nodo in un 
   Il comando seguente elimina il processo.
 
   ```azurecli
-  kubectl delete jobs manual-failover -–namespace ag1
+  kubectl delete jobs manual-failover --namespace ag1
   ```
 
 ## <a name="rotate-credentials"></a>Ruotare le credenziali
@@ -127,7 +127,7 @@ Completare i passaggi seguenti per ogni istanza di SQL Server che è la chiave m
 
   Kubernetes Aggiorna la chiave master e `sa` password per un'istanza di SQL Server in un gruppo di disponibilità.
 
-1. Verificare che il processo viene completato. Eseguire il comando seguente: per verificare che il processo viene completato, eseguire 
+1. Verificare che il processo viene completato. Eseguire il comando seguente: Per verificare che il processo viene completato, eseguire 
 
   ```azcli
   kubectl describe job rotate-creds --namespace ag1

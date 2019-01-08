@@ -11,12 +11,12 @@ ms.assetid: 2fdf670a-5237-48fe-813d-97657c5c77d2
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 625aa7736ba6cc9ac4b1b77a65c0be31688d1e37
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 730e9fa68477cbd96261a7036d7a95033db326a8
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48183191"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52544248"
 ---
 # <a name="formatting-pointers-on-a-gauge-report-builder-and-ssrs"></a>Formattazione degli indicatori di misura su un misuratore (Generatore report e SSRS)
   Un indicatore di misura del misuratore indica il valore corrente del misuratore. Per impostazione predefinita, quando si aggiunge un campo, i valori in esso contenuti vengono aggregati in un unico valore indicato dall'indicatore di misura sul misuratore. È possibile aggiungere più indicatori di misura al misuratore in modo da indicare più valori sulla stessa scala o aggiungere più scale e un indicatore di misura per ogni scala aggiunta. Dopo aver aggiunto un campo a un misuratore, è necessario impostare i valori massimo e minimo sulla scala corrispondente in modo da fornire un contesto per il valore dell'indicatore di misura. È inoltre possibile impostare i valori minimo e massimo su un intervallo per mostrare un'area critica sulla scala.  
@@ -43,7 +43,7 @@ ms.locfileid: "48183191"
   
   
 ##  <a name="SettingGradients"></a> Impostazione delle sfumature sull'estremità di una lancetta  
- È possibile specificare un'estremità della lancetta che può essere disegnato al di sopra o al di sotto dell'indicatore di misura solo su un misuratore radiale. Tutti gli stili dell'estremità della lancetta vengono disegnati con sfumature predefinite che non possono essere modificate. L'eccezione è il `RoundedDark` stile, in cui è possibile specificare un colore e stile della sfumatura.  
+ È possibile specificare un'estremità della lancetta che può essere disegnato al di sopra o al di sotto dell'indicatore di misura solo su un misuratore radiale. Tutti gli stili dell'estremità della lancetta vengono disegnati con sfumature predefinite che non possono essere modificate. L'unica eccezione è lo stile `RoundedDark` per il quale è possibile specificare un colore e uno stile di sfumatura.  
   
   
 ##  <a name="SettingSnappingInterval"></a> Impostazione di un intervallo di blocco  
@@ -58,7 +58,7 @@ ms.locfileid: "48183191"
   
 ## <a name="see-also"></a>Vedere anche  
  [Formattazione di scale su un misuratore &#40;Generatore report e SSRS&#41;](formatting-scales-on-a-gauge-report-builder-and-ssrs.md)   
- [Formattazione di intervalli su un misuratore &#40;Report e SSRS&#41;](formatting-ranges-on-a-gauge-report-builder-and-ssrs.md)   
+ [Formattazione di intervalli su un misuratore &#40;Generatore report e SSRS&#41;](formatting-ranges-on-a-gauge-report-builder-and-ssrs.md)   
  [Misuratori &#40;Generatore report e SSRS&#41;](gauges-report-builder-and-ssrs.md)  
   
   

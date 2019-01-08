@@ -17,12 +17,12 @@ ms.assetid: 2f3475d1-3999-4dd8-aba2-a6e1299c95f8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e38e17ac469ec0685f11d7dfde587f36073fb970
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f357576e9e7510ae581b41a50976a34981f35109
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47706909"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52517348"
 ---
 # <a name="result-generating-and-result-free-statements"></a>Istruzioni per la generazione di risultati e senza risultati
 Istruzioni SQL possono essere suddivisi nelle categorie seguenti cinque a regime di controllo libero:  
@@ -37,4 +37,4 @@ Istruzioni SQL possono essere suddivisi nelle categorie seguenti cinque a regime
   
 -   **Istruzioni amministrative** si tratta di istruzioni SQL utilizzate per scopi amministrativi in un database. Ad esempio, **concessione** e **REVOKE**.  
   
- Le istruzioni SQL nelle prime due categorie sono noti collettivamente come *istruzioni che generano risultati*. Istruzioni SQL in quest'ultime tre categorie sono noti collettivamente come *senza risultati istruzioni*. ODBC definisce la semantica di batch che includono istruzioni solo generazione di risultati. Questa semantica varia ampiamente ed è pertanto dati specifici dell'origine. Ad esempio, il driver SQL Server non supporta il trascinamento di un oggetto e quindi si fa riferimento a o ricreare lo stesso oggetto nello stesso batch. Pertanto, il termine *batch* quando usata in questo manuale si riferisce solo ai batch di generazione di risultati le istruzioni.
+ Le istruzioni SQL nelle prime due categorie sono noti collettivamente come *istruzioni che generano risultati*. Istruzioni SQL in quest'ultime tre categorie sono noti collettivamente come *senza risultati istruzioni*. ODBC definisce la semantica di batch che includono istruzioni solo generazione di risultati. Questa semantica varia notevolmente e pertanto è specifiche dell'origine dati. Ad esempio, il driver SQL Server non supporta il trascinamento di un oggetto e quindi si fa riferimento a o ricreare lo stesso oggetto nello stesso batch. Pertanto, il termine *batch* quando usata in questo manuale si riferisce solo ai batch di generazione di risultati le istruzioni.

@@ -16,21 +16,21 @@ ms.assetid: 21c162ca-2845-4dd8-a49d-e715aba8c461
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c8fc264df4708b5d6c58c8a87861597d299cdca2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b89f05822ee23f5ad62c627b8bc6d67ebe401a2e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47722989"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52527627"
 ---
 # <a name="persisting-data"></a>Persistenza dei dati
 Computer portatili (ad esempio, Usa computer portatili) ha generato l'esigenza di applicazioni eseguibili in uno stato connesso e disconnesso. ADO ha aggiunto il supporto per l'oggetto da fornire allo sviluppatore la possibilità di salvare un cursore sul lato client **Recordset** su disco e caricarla in un secondo momento.  
   
  Esistono diversi scenari in cui è possibile usare questo tipo di funzionalità, incluse le seguenti:  
   
--   **In viaggio:** quando si esegue l'applicazione in viaggio, è fondamentale per fornire la possibilità di apportare modifiche e aggiungere nuovi record che possono essere riconnesse al database in un secondo momento e il commit.  
+-   **In viaggio:** Quando si esegue l'applicazione in viaggio, è essenziale per fornire la possibilità di apportare modifiche e aggiungere nuovi record che possono essere riconnesse al database in un secondo momento e il commit.  
   
--   **Aggiornati di rado ricerche:** spesso in un'applicazione, le tabelle vengono utilizzate come le ricerche, ad esempio stato tabelle imposta sulle vendite. Che vengono aggiornati di rado e sono di sola lettura. Invece di rileggere i dati dal server ogni volta che l'applicazione viene avviata, l'applicazione può caricare semplicemente i dati da un locale persistente **Recordset**.  
+-   **Ricerche vengono aggiornate raramente:** In un'applicazione, le tabelle vengono spesso utilizzate come le ricerche, ad esempio stato tabelle imposta sulle vendite. Che vengono aggiornati di rado e sono di sola lettura. Invece di rileggere i dati dal server ogni volta che l'applicazione viene avviata, l'applicazione può caricare semplicemente i dati da un locale persistente **Recordset**.  
   
  In ADO, salvare e caricare **recordset**, utilizzare il **Recordset. Save** e **Recordset.Open(,,,adCmdFile)** metodi sull'oggetto ADO **Recordset**oggetto.  
   

@@ -14,12 +14,12 @@ ms.assetid: 7e02a137-6867-4f6a-a45a-2b02674f7e65
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9422afe49ecd31512b22995767ead61b7e9f4cce
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: 66f1f8f57dca3ad2edba3f4b63100b2de3ae5659
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018466"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53352512"
 ---
 # <a name="migrate-query-plans"></a>Migrare piani di query
   Nella maggior parte dei casi, l'aggiornamento di un database alla versione più recente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] comporta un miglioramento delle prestazioni di esecuzione delle query. Tuttavia, se sono presenti query critiche attentamente ottimizzate per le prestazioni, potrebbe essere necessario mantenere i piani per tali query prima di eseguire l'aggiornamento creando una guida di piano per ciascuna query. Se, dopo aver eseguito l'aggiornamento, Query Optimizer sceglie un piano meno efficiente per una o più query, è possibile abilitare le guide di piano e forzare il Query Optimizer a utilizzare i piani precedenti all'aggiornamento.  
@@ -41,7 +41,7 @@ ms.locfileid: "51018466"
 ## <a name="example"></a>Esempio  
  Nel seguente esempio viene illustrato come registrare un piano prima dell'aggiornamento per una query creando una guida di piano.  
   
-### <a name="step-1-collect-the-plan"></a>Passaggio 1: Raccolta del piano  
+### <a name="step-1-collect-the-plan"></a>Passaggio 1: Raccogliere il piano  
  Il piano di query registrato nella guida di piano deve essere in formato XML. È possibile creare piani di query in formato XML nei seguenti modi:  
   
 -   [SET SHOWPLAN_XML](/sql/t-sql/statements/set-showplan-xml-transact-sql)  
@@ -65,7 +65,7 @@ SELECT query_plan
 GO  
 ```  
   
-### <a name="step-2-create-the-plan-guide-to-force-the-plan"></a>Passaggio 2: Creazione della guida di piano per l'utilizzo forzato del piano  
+### <a name="step-2-create-the-plan-guide-to-force-the-plan"></a>Passaggio 2: Creare la Guida di piano per forzare il piano  
  Utilizzando nella guida di piano il piano di query in formato XML ottenuto con uno dei metodi descritti in precedenza, copiare e incollare il piano di query come valore letterale stringa nell'hint per la query USE PLAN specificato nella clausola OPTION di sp_create_plan_guide.  
   
  All'interno del piano XML, aggiungere una seconda virgoletta ai caratteri di escape (') visualizzati nel piano prima di creare la guida di piano. Ad esempio, per un piano che contiene `WHERE A.varchar = 'This is a string'` è necessario utilizzare i caratteri di escape modificando il codice in `WHERE A.varchar = ''This is a string''`.  
@@ -79,16 +79,16 @@ EXECUTE sp_create_plan_guide
 @type = N'SQL',  
 @module_or_batch = NULL,  
 @params = NULL,  
-@hints = N'OPTION(USE PLAN N''<ShowPlanXML xmlns=''''http://schemas.microsoft.com/sqlserver/2004/07/showplan''''   
+@hints = N'OPTION(USE PLAN N''<ShowPlanXML xmlns=''''https://schemas.microsoft.com/sqlserver/2004/07/showplan''''   
     Version=''''0.5'''' Build=''''9.00.1116''''>  
     <BatchSequence><Batch><Statements><StmtSimple>  
-    …  
+    ...  
     </StmtSimple></Statements></Batch>  
     </BatchSequence></ShowPlanXML>'')';  
 GO  
 ```  
   
-### <a name="step-3-verify-that-the-plan-guide-is-applied-to-the-query"></a>Passaggio 3: Verifica dell'applicazione della guida di piano alla query  
+### <a name="step-3-verify-that-the-plan-guide-is-applied-to-the-query"></a>Passaggio 3: Verificare che la Guida di piano viene applicata alla Query  
  Eseguire nuovamente la query ed esaminare il piano di query prodotto. Verificare che il piano corrisponda a quello di cui specificato nella guida.  
   
 ## <a name="see-also"></a>Vedere anche  

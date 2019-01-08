@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - search criteria [SQL Server], multiple conditions
@@ -16,12 +16,12 @@ ms.assetid: 06617729-0d0b-4da2-9890-b7e2f5cdbc7b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: eb6fd1c3e162b338d90c75ccb54bae5f94569ce6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3580f6365866ce752191e285b14f7d793be0cad0
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48175902"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52771763"
 ---
 # <a name="specify-multiple-search-conditions-for-multiple-columns-visual-database-tools"></a>Definizione di più condizioni di ricerca per più colonne (Visual Database Tools)
   È possibile ampliare o limitare l'ambito della query includendo diverse colonne di dati tra le condizioni di ricerca. Può, ad esempio, essere necessario:  

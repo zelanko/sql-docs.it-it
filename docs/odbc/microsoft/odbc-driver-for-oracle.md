@@ -15,12 +15,12 @@ ms.assetid: 937e0662-8b1d-44f7-b077-4015c6605b2c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 57f0713c6da777a7c338a3be888a43e72e287342
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4685d209d768bd3ff41c1c7367ef6cb6dcd45bcf
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47806729"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52515107"
 ---
 # <a name="odbc-driver-for-oracle"></a>Driver ODBC per Oracle
 > [!IMPORTANT]  
@@ -34,7 +34,7 @@ ms.locfileid: "47806729"
   
  ![Driver ODBC per Oracle app&#47;architettura del driver](../../odbc/microsoft/media/orcdrvsdkarch.gif "OrcDrvSDKArch")  
   
- Il Driver ODBC per Oracle è conforme con API conformità al livello 1 e SQL di base di livello la conformità. Supporta inoltre alcune funzioni nell'API conformità al livello 2 e la maggior parte della grammatica nei livelli di conformità di Core e SQL estesa. Il driver è compatibile con ODBC 2.5 e supporta sistemi a 32 bit. Oracle 7.3 x è supportata completamente; Include supporto limitato per Oracle8. Il Driver ODBC per Oracle non supporta uno qualsiasi dei nuovi tipi di dati Oracle8: tipi di dati Unicode, i BLOB, CLOB, e così via, e non supporta nuovo modello del Oracle a oggetti relazionali. Per altre informazioni sui tipi di dati supportati, vedere [Supported Data Types](../../odbc/microsoft/supported-data-types-odbc-driver-for-oracle.md) in questa Guida.  
+ Il Driver ODBC per Oracle è conforme con API conformità al livello 1 e SQL di base di livello la conformità. Supporta inoltre alcune funzioni nell'API conformità al livello 2 e la maggior parte della grammatica nei livelli di conformità di Core e SQL estesa. Il driver è compatibile con ODBC 2.5 e supporta sistemi a 32 bit. Oracle 7.3 x è supportata completamente; Include supporto limitato per Oracle8. Il Driver ODBC per Oracle non supporta uno qualsiasi dei nuovi tipi di dati Oracle8 - Unicode i tipi di dati, i BLOB, CLOB e così via, e non supporta nuovo modello del Oracle a oggetti relazionali. Per altre informazioni sui tipi di dati supportati, vedere [Supported Data Types](../../odbc/microsoft/supported-data-types-odbc-driver-for-oracle.md) in questa Guida.  
   
  Per accedere ai dati di Oracle, sono necessari i componenti seguenti:  
   

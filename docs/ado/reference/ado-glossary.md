@@ -13,12 +13,12 @@ ms.assetid: b0478836-4123-4357-969a-c5784fc28be5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e60c8f979b52293e2320a1a84cecd17c83caaad4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3b93ee4ab5b57414d8c8d640bc12a5ebbff882c6
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47681729"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52530369"
 ---
 # <a name="ado-glossary"></a>Glossario di ADO
 In questo argomento definisce termini rilevanti per ADO.  
@@ -37,7 +37,7 @@ In questo argomento definisce termini rilevanti per ADO.
  In una query, una funzione, ad esempio COUNT, AVG o STDEV che consente di calcolare un valore usando tutte le righe in una colonna di una tabella. Nella scrittura di espressioni e nella programmazione, è possibile utilizzare le funzioni di aggregazione SQL (inclusi i tre elencati in precedenza) e funzioni di aggregazione sui domini per determinare le statistiche diverse.  
   
  alias  
- Nome alternativo assegnato a una colonna o espressione in un'istruzione SQL SELECT, spesso più breve o più significativa. Ad esempio, BobSales è l'alias dell'istruzione SELECT seguente: "Seleziona wr Sales come BobSales da SalesDB". Un alias può essere utilizzato per assegnare dinamicamente le colonne per le associazioni del controllo sull'oggetto DataControl.  
+ Nome alternativo assegnato a una colonna o espressione in un'istruzione SQL SELECT, spesso più breve o più significativa. Ad esempio, BobSales è l'alias dell'istruzione SELECT seguente: "Selezionare wr Sales come BobSales da SalesDB". Un alias può essere utilizzato per assegnare dinamicamente le colonne per le associazioni del controllo sull'oggetto DataControl.  
   
  threading apartment  
  Un modello di threading COM in cui si verificano tutte le chiamate a un oggetto in un unico thread. Nel threading apartment COM Sincronizza ed effettua il marshalling di chiamate. Vedere anche *COMmddefcom*.  
@@ -96,7 +96,7 @@ In questo argomento definisce termini rilevanti per ADO.
  Binario standard che consente agli oggetti di interoperabilità in un ambiente di rete indipendentemente dalla lingua in cui sono state sviluppate o nei computer che si trovino. Tecnologie basate su COM, includono i controlli ActiveX, automazione e il collegamento e incorporamento (OLE). Consente a un oggetto per esporne la funzionalità agli altri componenti e alle applicazioni host. Definisce come l'oggetto espone sé sia come questa esposizione funziona tra processi e tra reti. COM definisce anche il ciclo di vita dell'oggetto.  
   
  Componente COM  
- File binario, ad esempio con estensione dll, ocx e alcuni file .exe, che supporta lo standard di COM per specificare gli oggetti. Questo file contiene codice per uno o più class factory, le classi COM, voci di registro, il codice di caricamento e così via.  
+ File binario, ad esempio con estensione dll, ocx e alcuni file .exe - che supporta lo standard di COM per specificare gli oggetti. Questo file contiene codice per uno o più class factory, le classi COM, voci di registro, il codice di caricamento e così via.  
   
  Operatore di confronto  
  Un operatore che confronta due espressioni e restituisce un valore booleano.  
@@ -187,7 +187,7 @@ In questo argomento definisce termini rilevanti per ADO.
  ISAPI (Internet Server Application Programming Interface)  
  Un set di funzioni per i server Internet, ad esempio un Server Windows NT® Server o Windows 2000 in esecuzione Microsoft® Internet Information Services (IIS).  
   
- Key  
+ Chiave  
  Una o più colonne in una tabella che identificano in modo univoco una riga. spesso usati per indicizzare una tabella.  
   
 ## <a name="m"></a>M  

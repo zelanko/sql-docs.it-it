@@ -1,5 +1,5 @@
 ---
-title: Modifica della dimensione Product | Documenti Microsoft
+title: Modifica della dimensione Product | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: b35f1712af9d501ff35a92cecb0eeea068d9aac0
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 6fd0617d5c3d79ae0cf2eb7021f730a8062bd969
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019568"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52525836"
 ---
-# <a name="lesson-3-3---modifying-the-product-dimension"></a>Lezione 3-3-modifica della dimensione Product
+# <a name="lesson-3-3---modifying-the-product-dimension"></a>Lezione 3-3: modifica della dimensione Product
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
 Nelle attività di questo argomento si utilizzerà un calcolo denominato per fornire nomi più descrittivi per le linee di prodotti, si definirà una gerarchia nella dimensione Product e si specificherà il nome membro (Totale) per la gerarchia. Si raggrupperanno inoltre gli attributi in cartelle di visualizzazione.  
@@ -58,7 +58,7 @@ Nelle attività di questo argomento si utilizzerà un calcolo denominato per for
   
 2.  Nel riquadro **Attributi** della scheda **Struttura dimensione** selezionare **Product Line**.  
   
-3.  Nella finestra Proprietà a destra dello schermo fare clic sul campo proprietà **NameColumn** nella parte inferiore della finestra, quindi fare clic sul pulsante con i puntini di sospensione (**…**) per aprire la finestra di dialogo **Colonna nome** . Per aprire la finestra Proprietà, potrebbe essere necessario fare clic sulla scheda **Proprietà** sul lato destro dello schermo.  
+3.  Nella finestra proprietà sul lato destro dello schermo, scegliere il **NameColumn** campo nella parte inferiore della finestra proprietà e quindi fare clic su Sfoglia (**...** ) per aprire la **colonna nome** nella finestra di dialogo. Per aprire la finestra Proprietà, potrebbe essere necessario fare clic sulla scheda **Proprietà** sul lato destro dello schermo.  
   
 4.  Selezionare **ProductLineName** nella parte inferiore dell'elenco **Colonna di origine** , quindi fare clic su **OK**.  
   
@@ -66,7 +66,7 @@ Nelle attività di questo argomento si utilizzerà un calcolo denominato per for
   
 5.  Nel riquadro **Attributi** della scheda **Struttura dimensione** selezionare **Product Key**.  
   
-6.  Nella finestra Proprietà fare clic nel campo proprietà **NameColumn** , quindi fare clic sui puntini di sospensione (**…**) per aprire la finestra di dialogo **Colonna nome** .  
+6.  Nella finestra Proprietà scegliere il **NameColumn** proprietà campo e quindi fare clic sui puntini (**...** ) per aprire la **colonna nome** nella finestra di dialogo.  
   
 7.  Selezionare **EnglishProductName** nell'elenco **Colonna di origine** , quindi fare clic su **OK**.  
   
@@ -110,7 +110,7 @@ Nelle attività di questo argomento si utilizzerà un calcolo denominato per for
   
     -   **Size Range**  
   
-    -   **Stile**  
+    -   **Stile di visualizzazione**  
   
     -   **Weight**  
   
@@ -163,7 +163,7 @@ Se i dati sottostanti le supportano, è consigliabile definire relazioni tra gli
   
     Nell'elenco **Tipo di relazione** lasciare il tipo di relazione impostato su **Flessibile** perché le relazioni tra i membri potrebbero cambiare nel corso del tempo. Ad esempio, un modello di prodotto può essere spostato in una linea di prodotti diversa.  
   
-4.  Scegliere **OK**.  
+4.  Fare clic su **OK**.  
   
 5.  Scegliere **Salva tutti** dal menu **File**.  
   
@@ -183,7 +183,7 @@ Se i dati sottostanti le supportano, è consigliabile definire relazioni tra gli
 [Modifica della dimensione Date](../analysis-services/lesson-3-4-modifying-the-date-dimension.md)  
   
 ## <a name="see-also"></a>Vedere anche  
-[Definire calcoli denominati in una vista origine dati & #40; Analysis Services & #41;](../analysis-services/multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)  
+[Definire calcoli denominati in una vista origine dati &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)  
 [Creare gerarchie definite dall'utente](../analysis-services/multidimensional-models/user-defined-hierarchies-create.md)  
 [Configurare il livello &#40;Totale&#41; per le gerarchie di attributi](../analysis-services/multidimensional-models/database-dimensions-configure-the-all-level-for-attribute-hierarchies.md)  
   

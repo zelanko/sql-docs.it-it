@@ -12,12 +12,12 @@ ms.assetid: 337cbd26-67b7-4c88-9deb-d0a69a3d7714
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 53836564e705a5089d6ffc60586a1c90ff5021ce
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 11e379973d6ef0c124427a2897ef7293811f9e3f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47658159"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52539057"
 ---
 # <a name="command-line-options-in-ssma-console-sybasetosql"></a>Opzioni della riga di comando nella console SSMA (SybaseToSQL)
 Microsoft offre un solido set di opzioni della riga di comando per eseguire e controllare le attività SSMA. Le sezioni che seguono in modo dettagliato lo stesso.  
@@ -37,20 +37,20 @@ Ai fini di questa sezione, il termine 'option' è detta anche 'switch'.
   
     `C:\> SSMAforSybaseConsole.EXE -s scriptfile`  
   
-    `C:\> SSMAforSybaseConsole.EXE -s “C:\Program Files\Microsoft SQL Server Migration Assistant for Sybase\Sample Console Scripts\AssessmentReportGenerationSample.xml” –v “C:\Program Files\Microsoft SQL Server Migration Assistant for Sybase\Sample Console Scripts\VariableValueFileSample.xml” –c “C:\Program Files\Microsoft SQL Server Migration Assistant for Sybase\Sample Console Scripts\ServersConnectionFileSample.xml”`  
+    `C:\> SSMAforSybaseConsole.EXE -s "C:\Program Files\Microsoft SQL Server Migration Assistant for Sybase\Sample Console Scripts\AssessmentReportGenerationSample.xml" -v "C:\Program Files\Microsoft SQL Server Migration Assistant for Sybase\Sample Console Scripts\VariableValueFileSample.xml" -c "C:\Program Files\Microsoft SQL Server Migration Assistant for Sybase\Sample Console Scripts\ServersConnectionFileSample.xml"`  
   
 -   Devono specificare i nomi di cartella o file contenenti spazi tra virgolette doppie.  
   
 -   L'output di voci di riga di comando e i messaggi di errore vengono archiviati in STDOUT o in un file specificato.  
   
-### <a name="script-file-option-sscript"></a>Opzione del File script: – s o script  
+### <a name="script-file-option--sscript"></a>Opzione del File script: -s o script  
 Un parametro obbligatorio, il percorso/nome del file script specifica lo script di sequenze di comandi deve essere eseguito da SSMA.  
   
 **Esempi di sintassi:**  
   
-`C:\>SSMAforSybaseConsole.EXE –s “C:\Program Files\Microsoft SQL Server Migration Assistant for Sybase\Sample Console Scripts\ConversionAndDataMigrationSample.xml”`  
+`C:\>SSMAforSybaseConsole.EXE -s "C:\Program Files\Microsoft SQL Server Migration Assistant for Sybase\Sample Console Scripts\ConversionAndDataMigrationSample.xml"`  
   
-### <a name="variable-value-file-option-vvariable"></a>Opzione File valore variabile: variabile o – v  
+### <a name="variable-value-file-option--vvariable"></a>Opzione File valore variabile: variabile o v-  
 Questo file è costituito da variabili utilizzate nel file di script. Si tratta di un'opzione facoltativa. Se le variabili non dichiarate nel file delle variabili e usate nel file di script, l'applicazione genera un errore e termina l'esecuzione della console.  
   
 **Esempi di sintassi:**  
@@ -59,11 +59,11 @@ Questo file è costituito da variabili utilizzate nel file di script. Si tratta 
   
     `C:\>SSMAforSybaseConsole.EXE -s`  
   
-    `“C:\Program Files\Microsoft SQL Server Migration Assistant for Sybase\Sample Console Scripts\ConversionAndDataMigrationSample.xml” –v c:\migration`  
+    `"C:\Program Files\Microsoft SQL Server Migration Assistant for Sybase\Sample Console Scripts\ConversionAndDataMigrationSample.xml" -v c:\migration`  
   
-    `projects\global_variablevaluefile.xml –v “c:\migrationprojects\instance_variablevaluefile.xml”`  
+    `projects\global_variablevaluefile.xml -v "c:\migrationprojects\instance_variablevaluefile.xml"`  
   
-### <a name="server-connection-file-option-cserverconnection"></a>Opzione di File di connessione server: c: / serverconnection  
+### <a name="server-connection-file-option--cserverconnection"></a>Opzione File di connessione server: -c/serverconnection  
 Questo file contiene informazioni di connessione server per ogni server. Ogni definizione del server è identificato da un ID Server univoco. Gli ID Server viene fatto riferimento nel file di script per connessione correlati ai comandi.  
   
 Definizione di server può essere una parte del file di connessione di server e/o file di script. Id del server nel file di script ha la precedenza sul file di connessione del server, nel caso in cui è presente una duplicazione dell'id del server.  
@@ -72,15 +72,15 @@ Definizione di server può essere una parte del file di connessione di server e/
   
 -   Gli ID del server vengono usati nel file di script e vengono definite in un file di connessione server separato, file di connessione server usa le variabili definite nel file di valore della variabile:  
   
-    `C:\>SSMAforSybaseConsole.EXE –s “C:\Program Files\Microsoft SQL Server Migration Assistant for Sybase\Sample Console Scripts\ConversionAndDataMigrationSample.xml”  –v`  
+    `C:\>SSMAforSybaseConsole.EXE -s "C:\Program Files\Microsoft SQL Server Migration Assistant for Sybase\Sample Console Scripts\ConversionAndDataMigrationSample.xml"  -v`  
   
-    `c:\SsmaProjects\myvaluefile1.xml –c`  
+    `c:\SsmaProjects\myvaluefile1.xml -c`  
   
     `c:\SsmaProjects\myserverconnectionsfile1.xml`  
   
 -   Definizione del server è incorporato nel file di script:  
   
-    `C:\>SSMAforSybaseConsole.EXE –s “C:\Program Files\Microsoft SQL Server Migration Assistant for Sybase\Sample Console Scripts\ConversionAndDataMigrationSample.xml”`  
+    `C:\>SSMAforSybaseConsole.EXE -s "C:\Program Files\Microsoft SQL Server Migration Assistant for Sybase\Sample Console Scripts\ConversionAndDataMigrationSample.xml"`  
   
 ### <a name="xml-output-option--xxmloutput-xmloutputfile"></a>Opzione di Output XML: - x / xmloutput [xmloutputfile]  
 Questo comando viene utilizzato per l'output i messaggi di output del comando in formato xml alla console o in un file xml.  
@@ -91,40 +91,40 @@ Sono disponibili due opzioni per xmloutput, una visualizzazione dei..,:
   
     **Esempio di sintassi:**  
   
-    `C:\>SSMAforSybaseConsole.EXE –s`  
+    `C:\>SSMAforSybaseConsole.EXE -s`  
   
-    `“C:\Program Files\Microsoft SQL Server Migration Assistant for Sybase\Sample Console Scripts\ConversionAndDataMigrationSample.xml”  –x d:\xmloutput\project1output.xml`  
+    `"C:\Program Files\Microsoft SQL Server Migration Assistant for Sybase\Sample Console Scripts\ConversionAndDataMigrationSample.xml"  -x d:\xmloutput\project1output.xml`  
   
 -   Se non viene specificato alcun percorso di file dopo il cambio di xmloutput il xmlout viene visualizzato nella console di se stesso.  
   
     **Esempio di sintassi:**  
   
-    `C:\Program Files\Microsoft SQL Server Migration Assistant for Sybase\Sample Console Scripts\ConversionAndDataMigrationSample.xml”  –xmloutput`  
+    `C:\Program Files\Microsoft SQL Server Migration Assistant for Sybase\Sample Console Scripts\ConversionAndDataMigrationSample.xml"  -xmloutput`  
   
-### <a name="log-file-option-llog"></a>Opzione del File di log: – l/log  
+### <a name="log-file-option--llog"></a>Opzione File di log: -l/log  
 Tutte le operazioni di SSMA nell'applicazione Console ottengano registrate in un file di log. Si tratta di un'opzione facoltativa. Se un file di log e il relativo percorso vengono specificati nella riga di comando, viene generato il log nel percorso specificato. In caso contrario, viene generato nella posizione predefinita.  
   
 **Esempio di sintassi:**  
   
 `C:\>SSMAforSybaseConsole.EXE`  
   
-`“C:\Program Files\Microsoft SQL Server Migration Assistant for Sybase\Sample Console Scripts\ConversionAndDataMigrationSample.xml”  –l c:\SsmaProjects\migration1.log`  
+`"C:\Program Files\Microsoft SQL Server Migration Assistant for Sybase\Sample Console Scripts\ConversionAndDataMigrationSample.xml"  -l c:\SsmaProjects\migration1.log`  
   
-### <a name="project-environment-folder-option-eprojectenvironment"></a>Opzione di cartella di progetto ambiente:. e – / projectenvironment  
+### <a name="project-environment-folder-option--eprojectenvironment"></a>Opzione di cartella di progetto ambiente: e-/ projectenvironment  
 Ciò indica la cartella Impostazioni ambiente di progetto SSMA corrente. Questa opzione è facoltativa.  
   
 **Esempio di sintassi:**  
   
-`C:\>SSMAforSybaseConsole.EXE –s`  
+`C:\>SSMAforSybaseConsole.EXE -s`  
   
-`“C:\Program Files\Microsoft SQL Server Migration Assistant for Sybase\Sample Console Scripts\ConversionAndDataMigrationSample.xml”  –e c:\SsmaProjects\CommonEnvironment`  
+`"C:\Program Files\Microsoft SQL Server Migration Assistant for Sybase\Sample Console Scripts\ConversionAndDataMigrationSample.xml"  -e c:\SsmaProjects\CommonEnvironment`  
   
-### <a name="secure-password-option-psecurepassword"></a>Opzione Password sicura: – p/securepassword  
+### <a name="secure-password-option--psecurepassword"></a>Opzione Password sicura: -p/securepassword  
 Questa opzione indica la password crittografata per le connessioni al server. Differisce da tutte le altre opzioni: l'opzione non viene eseguito qualsiasi script né consente in qualsiasi attività relative alla migrazione, ma consente di gestire la crittografia della password per le connessioni del server usato nel progetto di migrazione.  
   
 È possibile immettere qualsiasi altra opzione o la password come parametro della riga di comando. In caso contrario, viene generato un errore. Per altre informazioni, vedere la [la gestione delle password](managing-passwords-sybasetosql.md) sezione.  
   
-Le seguenti opzioni secondarie sono supportate per `–p/securepassword`:  
+Le seguenti opzioni secondarie sono supportate per `-p/securepassword`:  
   
 -   Per aggiungere password protette archiviazione per un ID del Server specificato o per tutti gli ID del Server definito nel file di connessione del server. -L'opzione di sovrascrittura, di seguito, gli aggiornamenti della password se esiste già:  
   
@@ -134,30 +134,30 @@ Le seguenti opzioni secondarie sono supportate per `–p/securepassword`:
   
 -   Per rimuovere la password crittografata dalla risorsa di archiviazione protetta dell'ID del Server specificato o per tutti gli ID del Server:  
   
-    `–p/securepassword –r/remove {<server_id> [, …n] | all}`  
+    `-p/securepassword -r/remove {<server_id> [, ...n] | all}`  
   
 -   Per visualizzare un elenco di ID Server per cui la password viene crittografata:  
   
-    `–p/securepassword –l/list`  
+    `-p/securepassword -l/list`  
   
 -   Per esportare le password archiviate in un archivio protetto a un file crittografato. Questo file è crittografato con la frase di pass specificato dall'utente.  
   
-    `–p/securepassword –e/export {<server-id> [, …n] | all} <encrypted-password -file>`  
+    `-p/securepassword -e/export {<server-id> [, ...n] | all} <encrypted-password -file>`  
   
 -   Crittografati-che è stato esportato in precedenza viene importato il file nell'archivio locale protetto utilizzando specificato dall'utente-passphrase. Una volta che il file viene decrittografato, questo viene archiviato in un nuovo file, che a sua volta, viene crittografato nel computer locale.  
   
-    `–p/securepassword –i/import {<server-id> [, …n] | all} <encrypted-password -file>`  
+    `-p/securepassword -i/import {<server-id> [, ...n] | all} <encrypted-password -file>`  
   
     È possibile specificare più ID Server usando i separatori virgola.  
   
-### <a name="help-option-help"></a>Opzione della Guida::? / della Guida  
+### <a name="help-option--help"></a>Opzione della Guida:-? /help  
 Visualizza il riepilogo di sintassi delle opzioni della Console SSMA:  
   
 `C:\>SSMAforSybaseConsole.EXE -?`  
   
 Per una visualizzazione tabulare di opzioni della riga di comando di Console SSMA, consultare [appendice - 1 &#40;SybaseToSQL&#41;](../../ssma/sybase/appendix-1-sybasetosql.md).  
   
-### <a name="securepassword-help-option-securepassword--help"></a>Opzione SecurePassword Help: – securepassword-? /Help  
+### <a name="securepassword-help-option--securepassword--help"></a>Opzione SecurePassword Help: - securepassword-? /Help  
 Visualizza il riepilogo di sintassi delle opzioni della Console SSMA:  
   
 `C:\>SSMAforSybaseConsole.EXE -securepassword -?`  

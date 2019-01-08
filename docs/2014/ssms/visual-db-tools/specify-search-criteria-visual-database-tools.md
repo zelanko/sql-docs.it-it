@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - Query Designer [SQL Server], Criteria pane
@@ -22,19 +22,19 @@ ms.assetid: 25fb4e31-6dbf-4cf6-8e47-0dd0998c836c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 579a93f6553abac8556b8d21cbce4f9e9c897370
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 52b569ba68e6693c5b720e118a4500e2e768b3dc
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48194461"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52773573"
 ---
 # <a name="specify-search-criteria-visual-database-tools"></a>Specifica di criteri di ricerca (Visual Database Tools)
   I criteri di ricerca consentono di limitare il numero di righe restituito da una query.  
   
  Per informazioni dettagliate sulla procedura per la creazione di criteri di ricerca, vedere gli argomenti indicati nella tabella seguente.  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Regole per l'immissione di valori di ricerca &#40;Visual Database Tools&#41;](visual-database-tools.md)  
  Viene descritto come immettere testo, numeri, date o valori logici.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "48194461"
  Viene descritto come creare sottoquery o query nidificate.  
   
 ## <a name="related-sections"></a>Sezioni correlate  
- [Eseguire operazioni di base con le query &#40;Visual Database Tools&#41;](perform-basic-operations-with-queries-visual-database-tools.md)  
+ [Esecuzione di operazioni di base con le query &#40;Visual Database Tools&#41;](perform-basic-operations-with-queries-visual-database-tools.md)  
  Vengono forniti collegamenti ad argomenti relativi alle procedure per l'esecuzione delle attività di query più comuni.  
   
  [Tipi di query &#40;Visual Database Tools&#41;](types-of-queries-visual-database-tools.md)  

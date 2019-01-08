@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: be0ec384-e03b-4483-96ca-02b289804d6a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b62f749bf308684a5d47386011339505b8a23bb0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f2dcccbdf117b52f32801020bb7a119ee429dbd7
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48222891"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52780063"
 ---
 # <a name="user-roles-for-change-data-capture-service-for-oracle-by-attunity"></a>Ruoli utente per il servizio CDC (Change Data Capture) per Oracle di Attunity
   In questa sezione sono descritti i ruoli utente per il servizio Change Data Capture per Oracle di Attunity. I ruoli descritti sono ruoli del database [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , ruoli di Windows o ruoli del database Oracle.  
@@ -53,7 +52,7 @@ ms.locfileid: "48222891"
   
 -   Funzione di amministratore del computer autorizzato come amministratore nel computer in cui è installato il servizio CDC per Oracle. Questa persona installa il servizio CDC per Oracle e utilizza la console di configurazione del servizio CDC per configurare un servizio CDC per Oracle in un computer locale.  
   
-### <a name="service-account-oracle-cdc-service"></a>Account del servizio: servizio Oracle CDC  
+### <a name="service-account-oracle-cdc-service"></a>Account servizio: servizio Oracle CDC  
  Si tratta dell'account del servizio di Windows del servizio CDC, un account di Windows utilizzato per l'esecuzione del servizio Oracle CDC (account del servizio).  
   
  L'unico privilegio obbligatorio necessario per l'account del servizio è la possibilità di utilizzare il client Oracle e il provider ODBC del client nativo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Questo account non necessita dell'accesso ai file a meno che non sia richiesto da provider specifici, ad esempio se la stringa di connessione del client Oracle fa riferimento alle istanze del database Oracle in un file **tnsnames.ora** , nel qual caso il file deve essere accessibile in lettura all'account del servizio.  
@@ -129,7 +128,7 @@ ms.locfileid: "48222891"
   
  L'amministratore del database Oracle può ottenere script Oracle SQL da eseguire in modo da poterli valutare prima dell'esecuzione. L'amministratore del database Oracle può inoltre eseguire direttamente script Oracle SQL da Oracle CDC Designer Console.  
   
- Se l'amministratore del database Oracle sceglie di utilizzare Oracle CDC Designer Console, le credenziali di amministratore non vengono mantenute a eccezione del contesto (finestra di dialogo) in cui sono utilizzate.  
+ Se l'amministratore del database Oracle sceglie di usare Oracle CDC Designer Console, le credenziali di amministratore non vengono mantenute a eccezione del contesto (finestra di dialogo) in cui vengono usate.  
   
  L'amministratore del database Oracle collabora con l'amministratore del servizio Oracle CDC alla configurazione delle istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Oracle CDC.  
   

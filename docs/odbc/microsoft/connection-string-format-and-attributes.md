@@ -14,12 +14,12 @@ ms.assetid: 0c360112-8720-4e54-a1a6-b9b18d943557
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a28c3f7128d05307afba95d288f6a20afd75aeea
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 98c8e18432bfd386555863a917824b18b2d11885
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47652469"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542785"
 ---
 # <a name="connection-string-format-and-attributes"></a>Formato e attributi della stringa di connessione
 > [!IMPORTANT]  
@@ -40,7 +40,7 @@ ms.locfileid: "47652469"
   
  Gli attributi per la stringa di connessione sono i seguenti:  
   
-|attribute|Description|Valore predefinito|  
+|attribute|Descrizione|Valore predefinito|  
 |---------------|-----------------|-------------------|  
 |DSN|Nome dell'origine dati elencati nella scheda driver del **Amministrazione origine dati ODBC** nella finestra di dialogo.|""|  
 |PWD|La password per il Server Oracle che si desidera accedere. Il driver supporta le limitazioni che Oracle posiziona su password.|""|  

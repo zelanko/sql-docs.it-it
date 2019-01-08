@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - queries [Visual Database Tools]
@@ -13,24 +13,24 @@ ms.assetid: 88dbdbfe-bc60-4e11-b338-dbe7f26566d5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7b1cb510420ed224191d8eea25b6d3acc9fb0a79
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cca8d20555a2221842a6962081a0880c1a820745
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48065446"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52812783"
 ---
 # <a name="perform-basic-operations-with-queries-visual-database-tools"></a>Esecuzione di operazioni di base con le query (Visual Database Tools)
   Le seguenti operazioni fondamentali sono applicabili a quasi tutte le query.  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Creazione di query &#40;Visual Database Tools&#41;](visual-database-tools.md)  
  Viene descritta la procedura per creare nuove query.  
   
  [Apertura di query &#40;Visual Database Tools&#41;](open-queries-visual-database-tools.md)  
  Viene descritta la procedura per aprire query esistenti.  
   
- [Eseguire query &#40;Visual Database Tools&#41;](run-queries-visual-database-tools.md)  
+ [Esecuzione di query &#40;Visual Database Tools&#41;](run-queries-visual-database-tools.md)  
  Viene descritta la procedura per eseguire le query.  
   
  [Arrestare una query &#40;Visual Database Tools&#41;](stop-a-query-visual-database-tools.md)  
@@ -87,7 +87,7 @@ ms.locfileid: "48065446"
  [Utilizzazione di Progettazione query e Progettazione viste con dati internazionali &#40;Visual Database Tools&#41;](use-the-query-and-view-designer-with-international-data-visual-database-tools.md)  
  Vengono illustrate le caratteristiche disponibili in Progettazione query e Progettazione viste per semplificare l'utilizzo di dati internazionali.  
   
-## <a name="reference"></a>Riferimento  
+## <a name="reference"></a>Riferimenti  
  [Strumenti di progettazione di query e viste &#40;Visual Database Tools&#41;](query-and-view-designer-tools-visual-database-tools.md)  
  Vengono illustrate le caratteristiche di Progettazione query e Progettazione viste.  
   

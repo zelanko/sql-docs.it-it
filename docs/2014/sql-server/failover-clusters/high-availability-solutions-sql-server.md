@@ -16,12 +16,12 @@ ms.assetid: b2eda634-0f8e-4703-801b-7ba895544ff5
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 9b48d22e463b8596065c1df68d1affc0de5ef92a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 15e75dd27ca447eaab326ff50cc67614d442e096
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48091525"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52543587"
 ---
 # <a name="high-availability-solutions-sql-server"></a>Soluzioni a disponibilità elevata (SQL Server)
   In questo argomento vengono presentate alcune soluzioni a disponibilità elevata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che consentono di migliorare la disponibilità di server o database. Una soluzione a disponibilità elevata maschera gli effetti di un malfunzionamento hardware o software e mantiene la disponibilità delle applicazioni in modo che il tempo di inattività percepito dagli utenti sia ridotto al minimo.  
@@ -34,7 +34,7 @@ ms.locfileid: "48091525"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono disponibili diverse opzioni per creare la disponibilità elevata per un server o un database. Le opzioni di disponibilità elevata sono riportate di seguito:  
   
  Istanze del cluster di failover AlwaysOn  
- Nell'offerta [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] AlwaysOn, le istanze del cluster di failover AlwaysOn usano la funzionalità clustering di failover di Windows Server (WSFC, Windows Server Failover Clustering) per fornire la disponibilità elevata in locale tramite la ridondanza a livello di istanza del server: l' *istanza del cluster di failover* . Un'istanza del cluster di failover è una sola istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installata nei nodi del clustering di failover di Windows Server (WSFC) e, possibilmente, in più subnet. In rete, un'istanza del cluster di failover appare come un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in esecuzione in un singolo computer, le cui funzionalità forniscono il failover da un nodo WSFC a un altro, quando il nodo corrente non è più disponibile.  
+ Come parte del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] AlwaysOn, che offre le istanze del Cluster di Failover AlwaysOn usano la funzionalità di Windows Server Failover Clustering (WSFC) per fornire disponibilità elevata locale tramite ridondanza nell'istanza del server a livello di un oggetto  *istanza del cluster di failover* (FCI). Un'istanza del cluster di failover è una sola istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installata nei nodi del clustering di failover di Windows Server (WSFC) e, possibilmente, in più subnet. In rete, un'istanza del cluster di failover appare come un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in esecuzione in un singolo computer, le cui funzionalità forniscono il failover da un nodo WSFC a un altro, quando il nodo corrente non è più disponibile.  
   
  Per altre informazioni, vedere [ istanze del Cluster di Failover AlwaysOn (SQL Server)](windows/always-on-failover-cluster-instances-sql-server.md).  
   
@@ -46,7 +46,7 @@ ms.locfileid: "48091525"
   
  Mirroring del database  
  > [!NOTE]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] È consigliabile utilizzare [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] in alternativa.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] È consigliabile usare [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] .  
   
  Il mirroring del database è una soluzione per aumentare la disponibilità del database supportando un failover quasi istantaneo. Il mirroring del database è utilizzabile per gestire un singolo database di standby, oppure un *database mirror*, per un database di produzione corrispondente detto *database principale*. Per altre informazioni, vedere [Mirroring del database &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md).  
   
@@ -64,8 +64,8 @@ ms.locfileid: "48091525"
     >  Se si esegue una versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che non supporta [!INCLUDE[ssHADR](../../includes/sshadr-md.md)], si consiglia di eseguire il log shipping. Per informazioni sulle edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che supportano [!INCLUDE[ssHADR](../../includes/sshadr-md.md)], vedere la sezione "Disponibilità elevata (AlwaysOn)" di [Funzionalità supportate dalle edizioni di SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [WSFC &#40;Windows Server Failover Clustering&#41; con SQL Server](windows/windows-server-failover-clustering-wsfc-with-sql-server.md)   
- [Mirroring del database: Interoperabilità e coesistenza &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-interoperability-and-coexistence-sql-server.md)   
+ [Windows Server Failover Clustering &#40;WSFC&#41; con SQL Server](windows/windows-server-failover-clustering-wsfc-with-sql-server.md)   
+ [Il mirroring del database: Interoperabilità e coesistenza &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-interoperability-and-coexistence-sql-server.md)   
  [Funzionalità del Motore di database deprecate in SQL Server 2014](../../database-engine/deprecated-database-engine-features-in-sql-server-2016.md)  
   
   

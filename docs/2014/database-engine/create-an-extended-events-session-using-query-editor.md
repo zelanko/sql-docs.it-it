@@ -14,15 +14,15 @@ ms.assetid: cba0e02b-b201-4863-bf1b-9164e68e5fa8
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6e0c243dcacf653167477137e26f0767985f6fa3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ef0dfbb1c0e62bbe5301f769ee0f3e4d585b06b6
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48150871"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52521260"
 ---
 # <a name="create-an-extended-events-session-using-query-editor"></a>Creare una sessione Eventi estesi tramite l'editor di query
-  È possibile creare una sessione Eventi estesi tramite l'editor di query o è possibile creare una sessione in Esplora oggetti. In Eventi estesi in Esplora oggetti sono disponibili due interfacce utente che è possibile utilizzare per creare, modificare e visualizzare dati della sessione eventi. Tramite una procedura guidata vengono illustrati il processo di creazione della sessione eventi e una nuova interfaccia utente della sessione che fornisce opzioni di configurazione più avanzate. È possibile creare sessioni di eventi estesi per la diagnosi della traccia di SQL Server, che consente di risolvere problemi come i seguenti:  
+  È possibile creare una sessione Eventi estesi tramite l'editor di query o è possibile creare una sessione in Esplora oggetti. In Esplora oggetti eventi estesi sono disponibili due interfacce di utente che è possibile usare per creare, modificare e visualizzare i dati della sessione eventi: una procedura guidata che descrive il processo di creazione della sessione di eventi e una nuova interfaccia utente della sessione che fornisce opzioni di configurazione più avanzate. È possibile creare sessioni di eventi estesi per la diagnosi della traccia di SQL Server, che consente di risolvere problemi come i seguenti:  
   
 -   Trovare le query con il costo più elevato  
   
@@ -36,7 +36,7 @@ ms.locfileid: "48150871"
   
  Per informazioni su come creare una sessione eventi estesi usando la Creazione guidata nuova sessione, vedere [Creare una sessione Eventi estesi usando la procedura guidata &#40;Esplora oggetti&#41;](../ssms/object/object-explorer.md). Per informazioni su come creare una sessione eventi estesi usando l'interfaccia utente Nuova sessione, vedere [Creare una sessione Eventi estesi usando la finestra di dialogo Nuova sessione](../../2014/database-engine/create-an-extended-events-session-using-the-new-session-dialog.md).  
   
-##  <a name="BeforeYouBegin"></a> Autorizzazioni  
+##  <a name="BeforeYouBegin"></a> Permissions  
  Per creare una sessione Eventi estesi, è necessario disporre dell'autorizzazione ALTER ANY EVENT SESSION.  
   
 ## <a name="creating-an-extended-events-session-using-query-editor"></a>Creazione di una sessione Eventi estesi tramite l'editor di query  
@@ -93,7 +93,7 @@ ms.locfileid: "48150871"
     ADD EVENT package_name.event_name  
     ```  
   
-     Esempio:  
+     Ad esempio:  
   
     ```  
     ADD EVENT sqlserver.file_read_completed,  
@@ -130,7 +130,7 @@ ms.locfileid: "48150871"
         AND column_type = 'data'  
         ```  
   
-         Esempio:  
+         Ad esempio:  
   
         ```  
         SELECT *   

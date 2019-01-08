@@ -17,17 +17,17 @@ ms.assetid: a8fcdd00-6cb3-4871-9489-6018b3d0d65f
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c5d489a533caf4fe53521d440991b545483be76e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4d425a6896a64f06bf1610ed8f6be87dd60af25d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47833969"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507421"
 ---
 # <a name="new-features"></a>Nuove funzionalità
 La nuova funzionalità seguente è stato introdotto in ODBC 3. *x*. Un database ODBC 3. *x* funziona con un'API ODBC 2*x* driver non sarà in grado di usare questa funzionalità. ODBC 3. *x* gestione Driver non eseguire il mapping di queste funzionalità quando si lavora con un'API ODBC 2*x* driver.  
   
--   Gestiscono le funzioni che accettano un descrittore come argomento: **SQLSetDescField**, **SQLGetDescField**, **SQLSetDescRec**, **SQLGetDescRec**, e **SQLCopyDesc**.  
+-   Le funzioni che accettano un descrittore di handle come argomento: **SQLSetDescField**, **SQLGetDescField**, **SQLSetDescRec**, **SQLGetDescRec**, e **SQLCopyDesc**.  
   
 -   Le funzioni **SQLSetEnvAttr** e **SQLGetEnvAttr**.  
   
@@ -81,7 +81,7 @@ La nuova funzionalità seguente è stato introdotto in ODBC 3. *x*. Un database 
   
 -   Parametri denominati.  
   
--   Qualsiasi valore di ODBC 3. *x*– specifici **SQLGetInfo** opzioni. (Se è ODBC 3. *x* funziona con un'API ODBC 2. *x* driver chiama i tipi di informazioni SQL_XXX_CURSOR_ATTRIBUTES1, che sono sostituiti alcuni ODBC 2. *x* tipi di informazioni, alcune informazioni potrebbero essere affidabile, ma alcuni potrebbero non essere affidabili. Per altre informazioni, vedere [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md).)  
+-   Qualsiasi valore di ODBC 3. *x*-specifici **SQLGetInfo** opzioni. (Se è ODBC 3. *x* funziona con un'API ODBC 2. *x* driver chiama i tipi di informazioni SQL_XXX_CURSOR_ATTRIBUTES1, che sono sostituiti alcuni ODBC 2. *x* tipi di informazioni, alcune informazioni potrebbero essere affidabile, ma alcuni potrebbero non essere affidabili. Per altre informazioni, vedere [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md).)  
   
 -   Associare gli offset.  
   
@@ -103,7 +103,7 @@ La nuova funzionalità seguente è stato introdotto in ODBC 3. *x*. Un database 
   
 -   Sfrutta **SQLDescribeCol** e **SQLColAttribute** sulla colonna 0.  
   
--   Utilizzo di qualsiasi ODBC 3. *x*– gli attributi di colonna specifica in una chiamata a **SQLColAttribute**.  
+-   Utilizzo di qualsiasi ODBC 3. *x*-attributi di colonna specifica in una chiamata a **SQLColAttribute**.  
   
 -   Utilizzo di più handle di ambiente.  
   

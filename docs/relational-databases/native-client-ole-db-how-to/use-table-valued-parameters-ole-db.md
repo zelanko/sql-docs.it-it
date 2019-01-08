@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 25650af3e66e568815a466c1e0bf9b98fe6b5d39
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0d17f7b1f4d2f0d7674e59eb53948475ccde31ab
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47702239"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53204860"
 ---
 # <a name="use-table-valued-parameters-ole-db"></a>Utilizzare parametri con valori di tabella (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "47702239"
  Per altre informazioni sui parametri con valori di tabella, vedere [parametri con valori di tabella &#40;SQL Server Native Client&#41;](../../relational-databases/native-client/features/table-valued-parameters-sql-server-native-client.md).  
   
 ## <a name="example"></a>Esempio  
- Il primo listato di codice ([!INCLUDE[tsql](../../includes/tsql-md.md)]) consente di creare il database utilizzato dall'esempio.  
+ Il primo ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) listato di codice crea il database utilizzato dall'esempio.  
   
  Inserire il secondo listato di codice in un file denominato stdafx.h.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "47702239"
   
  Compilare il quarto listato di codice (C++) con ole32.lib oleaut32.lib ed eseguirlo. In questa applicazione viene eseguita la connessione all'istanza predefinita di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nel computer in uso. In alcuni sistemi operativi Windows sarà necessario modificare (local) o (localhost) impostando il valore sul nome dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per connettersi a un'istanza denominata, modificare la stringa di connessione da L"(local)" in L"(local)\\\nome", dove nome rappresenta l'istanza denominata. Per impostazione predefinita, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express viene installato in un'istanza denominata. Verificare che nella variabile di ambiente INCLUDE sia presente la directory che contiene sqlncli.h.  
   
- Il quinto listato di codice ([!INCLUDE[tsql](../../includes/tsql-md.md)]) consente di creare il database utilizzato dall'esempio.  
+ Il quinto ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) listato di codice crea il database utilizzato dall'esempio.  
   
 ```  
 create database testdb  

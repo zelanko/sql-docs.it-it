@@ -6,22 +6,21 @@ manager: craigg
 ms.prod: sql-server-2014
 ms.custom: ''
 ms.topic: article
-ms.workload: On Demand
 ms.date: 04/26/2018
 ms.author: genemi
 ms.reviewer: sudeepk
-ms.openlocfilehash: 490ff7a8fb55e0ad9c0fd5b3606a9747e8f7b70f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 205e0a1ee6f93a11c471154534f460d9fa379d33
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37159592"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52768913"
 ---
-# Documentazione per SQL Server 2014 viene trasferita a Docs
+# <a name="documentation-for-sql-server-2014-is-moving-to-docs"></a>Documentazione per SQL Server 2014 viene trasferita a Docs
 
 Questo articolo descrive l'imminente passaggio articoli della documentazione di Microsoft SQL Server 2014. Questo articolo viene scritto alla fine del mese di aprile 2018 e si verificherà lo spostamento prima di luglio 2018.
 
-## Collegamenti alla documentazione di SQL Server 2014 su MSDN
+## <a name="links-to-sql-server-2014-documentation-on-msdn"></a>Collegamenti alla documentazione di SQL Server 2014 su MSDN
 
 I collegamenti seguenti sono la documentazione di SQL Server 2014 che Microsoft ha archiviato nel relativo *MSDN* sito Web. Prima di luglio 2018, Microsoft sposterà questi articoli della documentazione per le nuove *Docs* sito Web:
 
@@ -34,7 +33,7 @@ I collegamenti seguenti sono la documentazione di SQL Server 2014 che Microsoft 
 MSDN è per un initialism *Microsoft Developer Network*.
 
 
-## Redirectors
+## <a name="redirectors"></a>Redirectors
 
 Gli indirizzi HTTP MSDN obsoleti continueranno a funzionare per almeno un paio di anni dopo lo spostamento. Redirectors verrà intercettare le richieste MSDN e li inoltrano con il nuovo indirizzo corrispondente in Docs. Tuttavia, dopo lo spostamento gli elementi seguenti sarà true:
 
@@ -42,14 +41,14 @@ Gli indirizzi HTTP MSDN obsoleti continueranno a funzionare per almeno un paio d
 - Verrà avviato il crawler Bing e Google escludere e ignorare gli indirizzi MSDN precedenti.
 
 
-## Dopo lo spostamento
+## <a name="after-the-move"></a>Dopo lo spostamento
 
 Dopo lo spostamento *Docs*, l'indirizzo dell'articolo della documentazione principale di SQL Server 2014 sarà:
 
 - [https://docs.microsoft.com/sql/?view=sql-server-2014](https://docs.microsoft.com/sql/?view=sql-server-2014)
 
 
-## Collegamenti correlati
+## <a name="related-links"></a>Collegamenti correlati
 
 - [Articolo di documentazione radice per SQL Server 2016 e versioni successive](https://docs.microsoft.com/sql/?view=sql-server-2016)
 

@@ -11,12 +11,12 @@ ms.assetid: c4f4a5a8-a230-4222-bece-9d563501f65f
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: dc6f7db4783f1fc828c183c76563a6fed42ab2ee
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b500821dff03210d63007ef4831f93327b5e6bdb
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48209811"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52530506"
 ---
 # <a name="content-queries-data-mining"></a>Query sul contenuto (Data mining)
   Una query sul contenuto consente di estrarre informazioni sulle statistiche interne e sulla struttura del modello di data mining. Talvolta una query sul contenuto può fornire dettagli che non sono immediatamente disponibili nel visualizzatore. I risultati di una query sul contenuto possono essere utilizzati anche per estrarre a livello di codice informazioni per altri utilizzi.  
@@ -145,7 +145,7 @@ SELECT TOP 10 NODE_DESCRIPTION, NODE_PROBABILITY, SUPPORT
 FROM <model>.CONTENT WHERE NODE_TYPE = 7  
 ```  
   
- La query seguente consente di compilare su queste informazioni. Tramite la query vengono restituite tre colonne: l'ID del nodo, la regola completa e il prodotto sul lato destro del set di elementi, ovvero il prodotto che, secondo la stima, è associato ad altri prodotti come parte di un set di elementi.  
+ La query seguente consente di compilare su queste informazioni. La query restituisce tre colonne: l'ID del nodo, la regola completa e il prodotto sul lato destro del set di elementi, vale a dire, il prodotto stimato è associato ad altri prodotti come parte di un set di elementi.  
   
 ```  
 SELECT FLATTENED NODE_UNIQUE_NAME, NODE_DESCRIPTION,  
@@ -167,7 +167,7 @@ ORDER BY NODE_SUPPORT DESC
   
  Per altri esempi, vedere [Esempi di query sul modello di associazione](association-model-query-examples.md).  
   
-###  <a name="bkmk_DecTree"></a> Esempio 2: Query sul contenuto su un modello di alberi delle decisioni  
+###  <a name="bkmk_DecTree"></a> Esempio 2: Query sul contenuto su un modello Decision Trees  
  Un modello di albero delle decisioni può essere utilizzato per la stima, nonché per la classificazione.  In questo esempio si presuppone l'utilizzo del modello per la stima di un risultato, ma si desidera scoprire anche quali fattori o regole possono essere utilizzate per classificare il risultato.  
   
  In un modello di albero delle decisioni, i nodi sono utilizzati per rappresentare sia alberi sia nodi foglia. Nella didascalia per ogni nodo è contenuta la descrizione del percorso fino al risultato. Pertanto, per tracciare il percorso per qualsiasi particolare risultato, è necessario identificare il nodo in cui è contenuto e ottenere i dettagli per tale nodo.  

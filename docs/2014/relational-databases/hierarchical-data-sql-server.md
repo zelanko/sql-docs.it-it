@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - hierarchies [SQL Server], tables to support
@@ -18,12 +17,12 @@ ms.assetid: 19aefa9a-fbc2-4b22-92cf-67b8bb01671c
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: ab581202049b9dab362de4278950e0597cf5b3b0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 61d194edf727cb39a80fae852cee735c24ff560c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48154756"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52817563"
 ---
 # <a name="hierarchical-data-sql-server"></a>Dati gerarchici [SQL Server]
   L'elemento predefinito `hierarchyid` tipo di dati rende più semplice per archiviare e interrogare dati gerarchici. `hierarchyid` è ottimizzato per la rappresentazione di alberi, che sono il tipo più comune di dati gerarchici.  
@@ -43,7 +42,7 @@ ms.locfileid: "48154756"
  Usare [hierarchyid](/sql/t-sql/data-types/hierarchyid-data-type-method-reference) come tipo di dati per creare tabelle con una struttura gerarchica o per descrivere la struttura gerarchica dei dati archiviati in un altro percorso. Usare le [funzioni hierarchyid](/sql/t-sql/data-types/hierarchyid-data-type-method-reference) di [!INCLUDE[tsql](../includes/tsql-md.md)] per eseguire query e gestire i dati gerarchici.  
   
 ##  <a name="keyprops"></a> Proprietà chiave di hierarchyid  
- Valore di `hierarchyid` tipo di dati rappresenta una posizione in un albero gerarchico. I valori per `hierarchyid` hanno le proprietà descritte di seguito:  
+ Un valore del tipo di dati `hierarchyid` rappresenta una posizione in un albero gerarchico. I valori per `hierarchyid` hanno le proprietà descritte di seguito:  
   
 -   Estremamente compresso  
   
@@ -63,9 +62,9 @@ ms.locfileid: "48154756"
   
 -   Una colonna di tipo `hierarchyid` non rappresenta automaticamente un albero. È compito dell'applicazione generare e assegnare i valori `hierarchyid` in maniera tale che la relazione desiderata tra le righe sia riflessa nei valori. In alcune applicazioni potrebbe essere presente una colonna di tipo `hierarchyid` in cui viene indicato il percorso in una gerarchia definita in un'altra tabella.  
   
--   È compito dell'applicazione per gestire la concorrenza nella generazione e nell'assegnazione `hierarchyid` valori. Non c'è garanzia che i valori `hierarchyid` di una colonna siano univoci a meno che l'applicazione utilizzi un vincolo della chiave univoca o applichi univocità stessa tramite la logica.  
+-   La concorrenza nella generazione e nell'assegnazione dei valori `hierarchyid` deve essere gestita dall'applicazione. Non c'è garanzia che i valori `hierarchyid` di una colonna siano univoci a meno che l'applicazione utilizzi un vincolo della chiave univoca o applichi univocità stessa tramite la logica.  
   
--   Le relazioni gerarchiche rappresentate dai `hierarchyid` valori non sono applicati come una relazione di chiave esterna. È possibile e qualche volta appropriato avere una relazione gerarchica dove A ha un figlio B, A viene eliminato e lascia a B una relazione con un record inesistente. Se questo comportamento è inaccettabile, tramite l'applicazione deve essere eseguita una query per i discendenti prima di eliminare gli elementi padre.  
+-   Le relazioni gerarchiche rappresentate dai valori `hierarchyid` non sono applicate come una relazione della chiave esterna. È possibile e qualche volta appropriato avere una relazione gerarchica dove A ha un figlio B, A viene eliminato e lascia a B una relazione con un record inesistente. Se questo comportamento è inaccettabile, tramite l'applicazione deve essere eseguita una query per i discendenti prima di eliminare gli elementi padre.  
   
   
 ##  <a name="alternatives"></a> Quando utilizzare le alternative a hierarchyid  
@@ -99,13 +98,13 @@ GO
   
 -   Le query discendenti dirette sono leggermente più lente con `hierarchyid`.  
   
--   Lo spostamento di nodi non foglia è più lento con `hierarchyid`.  
+-   Lo spostamento di nodi non foglia è notevolmente più lento con `hierarchyid`.  
   
 -   L'inserimento di nodi non foglia e l'inserimento o lo spostamento di nodi foglia sono caratterizzati dalla stessa complessità con `hierarchyid`.  
   
  La relazione elemento padre/figlio potrebbe essere superiore quando esistono le condizioni seguenti:  
   
--   La dimensione della chiave è importante. Per lo stesso numero di nodi, una `hierarchyid` valore è uguale o maggiore di una famiglia di integer (`smallint`, `int`, `bigint`) valore. Questo è solo dei motivi per usare padre/figlio in casi rari, poiché `hierarchyid` ha colloca meglio nei / o e CPU complessità di espressioni di tabella comune, necessarie quando si usa una struttura padre/figlio.  
+-   La dimensione della chiave è importante. Per lo stesso numero di nodi, il valore `hierarchyid` è uguale a o maggiore di una famiglia di Integer (`smallint`, `int`, `bigint`). Questo è solo uno dei motivi per cui utilizzare la relazione padre/figlio in casi rari, poiché `hierarchyid` si colloca meglio nell'I/O e nella complessità della CPU che nelle espressioni della tabella comune richieste quando si utilizza la struttura padre/figlio.  
   
 -   Le query vengono eseguite raramente sulle sezioni della gerarchia. In altre parole, le query di solito vengono eseguite solo su un singolo punto della gerarchia. In questi casi la condivisione percorso non è importante. Ad esempio, la relazione elemento padre/figlio è superiore se la tabella dell'organizzazione viene utilizzata solo per l'elaborazione del libro paga per i singoli dipendenti.  
   
@@ -160,7 +159,7 @@ GO
   
      In un indice breadth-first tutti gli elementi figlio diretti di un nodo vengono posizionati insieme. Pertanto, gli indici breadth-first sono in grado di fornire risposte alle query sugli elementi figlio immediati, ad esempio "Trova tutti i dipendenti che riportano direttamente a questo responsabile".  
   
- La scelta tra depth-first, breadth-first o entrambi e la selezione di uno di questi come chiave di clustering (se disponibile) dipendono dall'importanza relativa dei tipi di query riportati in precedenza e dall'importanza relativa delle operazioni SELECT e DML. Per un esempio dettagliato delle strategie di indicizzazione, vedere [Esercitazione: Utilizzo del tipo di dati hierarchyid](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md).  
+ La scelta tra depth-first, breadth-first o entrambi e la selezione di uno di questi come chiave di clustering (se disponibile) dipendono dall'importanza relativa dei tipi di query riportati in precedenza e dall'importanza relativa delle operazioni SELECT e DML. Per un esempio dettagliato delle strategie di indicizzazione, vedere [esercitazione: Utilizzo del tipo di dati hierarchyid](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md).  
   
   
 ### <a name="creating-indexes"></a>Creazione di indici  
@@ -266,11 +265,11 @@ VALUES ('/', 'Earth', 'Planet');
 ##  <a name="tasks"></a> Attività correlate  
   
 ###  <a name="migrating"></a> Migrazione dalla relazione elemento padre/figlio a hierarchyid  
- La maggior parte degli alberi viene rappresentata utilizzando la relazione elemento padre/figlio. Il modo più semplice per eseguire la migrazione da una struttura padre/figlio a una tabella utilizzando `hierarchyid` consiste nell'utilizzare una colonna o una tabella temporanea per tenere traccia del numero di nodi a ogni livello della gerarchia. Per un esempio di migrazione di una tabella padre/figlio, vedere la lezione 1 di [Esercitazione: Utilizzo del tipo di dati hierarchyid](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md).  
+ La maggior parte degli alberi viene rappresentata utilizzando la relazione elemento padre/figlio. Il modo più semplice per eseguire la migrazione da una struttura elemento padre/figlio a una tabella tramite `hierarchyid` consiste nell'utilizzare una colonna o una tabella temporanea per tenere traccia del numero di nodi a ogni livello della gerarchia. Per un esempio di migrazione di una tabella padre/figlio, vedere la lezione 1 di [esercitazione: Utilizzo del tipo di dati hierarchyid](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md).  
   
   
 ###  <a name="BKMK_ManagingTrees"></a> Gestione di un albero tramite hierarchyid  
- Sebbene un `hierarchyid` colonna non indica necessariamente una struttura ad albero, un'applicazione può assicurarsi facilmente che non.  
+ Tramite un'applicazione si può facilmente assicurare che una colonna `hierarchyid` rappresenti un albero, anche se ciò non accade necessariamente.  
   
 -   Durante la generazione di nuovi valori, eseguire una delle operazioni seguenti:  
   

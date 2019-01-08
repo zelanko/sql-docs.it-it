@@ -1,5 +1,5 @@
 ---
-title: Applicare funzioni di stima a un modello | Documenti Microsoft
+title: Applicare funzioni di stima a un modello | Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 7cd44eb2e5d5449283d1e222b854d065a72e15ca
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 192f55c8194bfb9b85b3e0bfad51d8261e45ab0a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34014878"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52540665"
 ---
 # <a name="apply-prediction-functions-to-a-model"></a>Applicare le funzioni di stima a un modello
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -74,7 +74,7 @@ ms.locfileid: "34014878"
     > [!WARNING]  
     >  Il Generatore delle query di stima non convalida l'istruzione DMX finché non si fa clic su **Risultati**. Spesso, l'espressione che viene prodotta dal generatore di query non è una DMX valida. Le cause tipiche sono una colonna che non è correlata alla colonna stimabile o il tentativo di stimare una colonna in una tabella nidificata che richiede un'istruzione sub-SELECT. A questo punto, è possibile passare a vista DMX e continuare a modificare l'istruzione.  
   
-### <a name="example-create-a-query-on-a-clustering-model"></a>Esempio: creare una query in un modello di clustering  
+### <a name="example-create-a-query-on-a-clustering-model"></a>Esempio: Creare una query su un modello di clustering  
   
 1.  Se non è disponibile un modello di clustering per la generazione di questa query di esempio, creare il modello [TM_Clustering] facendo riferimento a [Esercitazione di base sul data mining](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c).  
   
@@ -120,9 +120,9 @@ ms.locfileid: "34014878"
     |----------------|--------------|-------------|-------------|  
     |0|Cluster 8|954|953.948638926372|  
   
- Se si desidera aggiungere altre clausole nell'istruzione, ad esempio una clausola WHERE, non è possibile aggiungerle tramite la griglia, ma è necessario passare prima alla vista DMX.  
+ Se si desidera aggiungere altre clausole nell'istruzione, ad esempio, se si desidera aggiungere una clausola WHERE-non è possibile aggiungere tramite la griglia. è necessario passare innanzitutto alla vista DMX.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Query di Data Mining](../../analysis-services/data-mining/data-mining-queries.md)  
+ [Query di data mining](../../analysis-services/data-mining/data-mining-queries.md)  
   
   

@@ -13,12 +13,12 @@ ms.assetid: f58a3e14-ab27-44d3-8c26-f5c9ee7583b0
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6441ffd954beb6514badf55ced35239c61da0859
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7abb4560696dba21512066a7ff0ba3153ae2319a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48218951"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52508007"
 ---
 # <a name="select-dimension-attributes-dimension-wizard"></a>Selezione attributi dimensione (Creazione guidata dimensione)
   La pagina **Selezione attributi dimensione** consente di selezionare e modificare gli attributi della dimensione da creare.  
@@ -49,13 +49,13 @@ ms.locfileid: "48218951"
  **Consenti esplorazione**  
  Selezionare per rendere disponibile l'attributo all'utente finale per l’esplorazione e l’applicazione di filtri. **Consenti esplorazione** deve essere selezionato per l'attributo chiave. Per gli attributi non chiave, **Consenti esplorazione** non è selezionato per impostazione predefinita. Gli attributi non chiave vengono pertanto visualizzati solo come proprietà del membro.  
   
- Nella maggior parte dei casi, l'attributo è reso disponibile o non disponibile per l'esplorazione impostando la `AttributeHierarchyEnabled` proprietà `True` o `False`, rispettivamente. Nei tre casi seguenti, la procedura guidata utilizza comunque impostazioni diverse.  
+ Nella maggior parte dei casi, l'attributo è reso disponibile o non disponibile per l'esplorazione impostando la proprietà `AttributeHierarchyEnabled` rispettivamente su `True` o su `False`. Nei tre casi seguenti, la procedura guidata utilizza comunque impostazioni diverse.  
   
 |Caso|Impostazioni|  
 |----------|--------------|  
-|Una dimensione contiene una gerarchia padre-figlio e **Consenti esplorazione** non è selezionato.|La procedura guidata lascia la `AttributeHierarchyEnabled` impostata su `True`e imposta la `AttributeHierarchyVisible` attributo `False` per l'attributo chiave.|  
+|Una dimensione contiene una gerarchia padre-figlio e **Consenti esplorazione** non è selezionato.|La procedura guidata lascia la proprietà `AttributeHierarchyEnabled` impostata su `True` e imposta l'attributo `AttributeHierarchyVisible` su `False` per l'attributo chiave.|  
 |Una tabella in una dimensione contiene una chiave esterna a una tabella che non è nella dimensione|La procedura guidata seleziona la chiave esterna come un attributo da includere, ma non selezionerà **Consenti esplorazione**. Se si mantengono queste impostazioni, la proprietà `AttributeHiearchyEnabled` dell’attributo sarà impostata su `True` e la proprietà `AttributeHieararchyVisible` sarà impostata su `False`.|  
-|Una dimensione contiene tabelle con schema snowflake raggiungibili tramite colonne chiavi esterne che ammettono valori Null.<br /><br /> —e—<br /><br /> Consenti esplorazione per l'attributo basato sulla chiave della tabella con schema snowflake non è selezionato|La procedura guidata creerà il nuovo attributo con il `AttributeHiearchyEnabled` impostata su `True`e il `AttributeHieararchyVisible` impostata su `False`.|  
+|Una dimensione contiene tabelle con schema snowflake raggiungibili tramite colonne chiavi esterne che ammettono valori Null.<br /><br /> - e -<br /><br /> Consenti esplorazione per l'attributo basato sulla chiave della tabella con schema snowflake non è selezionato|La procedura guidata creerà il nuovo attributo con la proprietà `AttributeHiearchyEnabled` impostata su `True` e la proprietà `AttributeHieararchyVisible` impostata su `False`.|  
   
  **Tipo di attributo**  
  (Facoltativo) Impostare il tipo per l'attributo. Il valore predefinito è **Regolare**. Il tipo di attributo fornisce l’istruzione alle applicazioni client riguardo le informazioni che l'attributo potrebbe contenere.  

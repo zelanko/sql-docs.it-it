@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 58dbe99a-288d-4f1c-9cd5-704d6836c945
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 399665103725cec573a790667c9253b25836b076
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8bed79906ff69305a135b1c7249cd4d3331ca3d7
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48095952"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53207587"
 ---
 # <a name="refreshing-data-mds-add-in-for-excel"></a>Aggiornamento dei dati (Componente aggiuntivo MDS per Excel)
   In [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]aggiornare i dati quando si vuole ottenere le ultime informazioni dal repository MDS senza aprire un nuovo foglio di lavoro. È possibile aggiornare tutte le celle o una selezione di celle. Questo può essere utile quando sono state inserite colonne con formule personalizzate o altri dati che non sono gestiti in MDS e che si desidera mantenere.  
@@ -36,7 +35,7 @@ ms.locfileid: "48095952"
   
 -   Se un valore dell'attributo è stato modificato nel repository MDS, il valore nel foglio di lavoro viene aggiornato con il valore presente nel repository MDS. Il colore della cella non viene modificato.  
   
-> [!WARNING]  
+> [!WARNING]
 >  -   Nel foglio di lavoro attivo, se esistono dati non gestiti nelle righe al di sotto dei dati gestiti da MDS, è possibile che i dati non gestiti vengano sovrascritti. Ciò si verifica quando si aggiorna il foglio e vengono aggiunte nuove righe dei dati gestiti da MDS, che si sovrappongono ai dati non gestiti.  
 > -   Quando si effettua l'aggiornamento, vengono eliminati i commenti sulle celle gestite da MDS.  
   
@@ -56,6 +55,6 @@ ms.locfileid: "48095952"
   
 -   [Il caricamento dei dati &#40;componente aggiuntivo MDS per Excel&#41;](overview-exporting-data-to-excel-mds-add-in-for-excel.md)  
   
--   [Il componente aggiuntivo Master Data Services per Microsoft Excel](master-data-services-add-in-for-microsoft-excel.md)  
+-   [Componente aggiuntivo Master Data Services per Microsoft Excel](master-data-services-add-in-for-microsoft-excel.md)  
   
   

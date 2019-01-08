@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLServer:Deprecated Features
@@ -15,19 +15,19 @@ ms.assetid: e95de9d6-c950-41cd-8aaa-be529c6de198
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 8296657608d2633cc57ed4b3e30a532b7a24e2b6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6437ede86133d12622376700cfac5070dabd8fd6
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48211851"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52763943"
 ---
 # <a name="sql-server-deprecated-features-object"></a>Oggetto SQL Server:Deprecated Features
   L'oggetto SQLServer:Caratteristiche deprecate in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornisce un contatore per monitorare le caratteristiche definite deprecate. In ognuno dei casi il contatore fornisce un conteggio dell'utilizzo indicante il numero di volte in cui è stata rilevata la funzionalità deprecata dall'ultimo avvio di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Nella tabella seguente vengono descritte le istanze del contatore Caratteristiche deprecate di SQL Server.  
   
-|Istanze del contatore SQL Server Deprecated Features|Description|  
+|Istanze del contatore SQL Server Deprecated Features|Descrizione|  
 |------------------------------------------------------|-----------------|  
 |'#' e '##' come nomi di tabelle e stored procedure temporanee|È stato rilevato un identificatore che non contiene alcun carattere diverso da #. Usare almeno un carattere aggiuntivo. Si verifica una volta per ogni compilazione.|  
 |Sintassi per la chiamata di funzioni '::'|È stata rilevata la sintassi per la chiamata di funzioni :: per una funzione con valori di tabella. Sostituire con `SELECT column_list FROM`  *\< nome_funzione >*`()`. Sostituire, ad esempio, `SELECT * FROM ::fn_virtualfilestats(2,1)`con `SELECT * FROM sys.fn_virtualfilestats(2,1)`. Si verifica una volta per ogni compilazione.|  
@@ -46,7 +46,7 @@ ms.locfileid: "48211851"
 |CREATE TRIGGER WITH APPEND|È stata rilevata un'istruzione CREATE TRIGGER con la clausola WITH APPEND. Ricreare l'intero trigger. Si verifica una volta per ogni utilizzo in un'istruzione DDL.|  
 |CREATE_DROP_DEFAULT|È stata rilevata la sintassi CREATE DEFAULT o DROP DEFAULT. Riscrivere il comando usando l'opzione DEFAULT di CREATE TABLE o ALTER TABLE. Si verifica una volta per ogni compilazione.|  
 |CREATE_DROP_RULE|È stata rilevata la sintassi CREATE RULE. Riscrivere il comando usando vincoli. Si verifica una volta per ogni compilazione.|  
-|Tipi di dati: text, ntext o image|È stato rilevato un tipo di dati `text`, `ntext` o `image`. Riscrivere le applicazioni di utilizzare il `varchar(max)` tipo di dati e rimosso `text`, `ntext`, e `image` sintassi dei tipi di dati. Si verifica una volta per ogni query.|  
+|Tipi di dati: text, ntext o image|È stato rilevato un tipo di dati `text`, `ntext` o `image`. Riscrivere le applicazioni in modo che utilizzino il tipo di dati `varchar(max)` e rimuovere la sintassi dei tipi di dati `text`, `ntext` e `image`. Si verifica una volta per ogni query.|  
 |Livello di compatibilità 80 del database|Numero totale di volte in cui il livello di compatibilità di un database è stato modificato in 80. Pianificare l'aggiornamento del database e dell'applicazione prima della versione successiva. Si verifica anche quando viene avviato un database con livello di compatibilità 80.|  
 |Livello di compatibilità 90 del database|Numero totale di volte in cui il livello di compatibilità di un database è stato modificato in 90. Pianificare l'aggiornamento del database e dell'applicazione per una versione successiva. Si verifica anche quando viene avviato un database con livello di compatibilità 90.|  
 |DATABASE_MIRRORING|Rilevamento di riferimenti alla funzionalità di mirroring del database. Pianificare l'aggiornamento dei gruppi di disponibilità AlwaysOn oppure, se si esegue un'edizione di SQL Server che non supporta questi gruppi, pianificare la migrazione al log shipping.|  
@@ -117,9 +117,9 @@ ms.locfileid: "48211851"
 |PERMISSIONS|Sono stati rilevati riferimenti alla funzione intrinseca PERMISSIONS. Eseguire una query su sys.fn_my_permissions. Si verifica una volta per ogni query.|  
 |ProcNums|È stata rilevata la sintassi deprecata ProcNums. Riscrivere le istruzioni per rimuovere i riferimenti. Si verifica una volta per ogni compilazione.|  
 |READTEXT|È stata rilevata la sintassi READTEXT. Riscrivere le applicazioni in modo che utilizzino il tipo di dati `varchar(max)` e rimuovere la sintassi del tipo di dati `text`. Si verifica una volta per ogni query.|  
-|RESTORE DATABASE o LOG WITH DBO_ONLY|È stata rilevata la sintassi RESTORE … WITH DBO_ONLY. In alternativa, usare RESTORE … RESTRICTED_USER.|  
-|RESTORE DATABASE o LOG WITH MEDIAPASSWORD|È stata rilevata la sintassi RESTORE … WITH MEDIAPASSWORD. La sintassi WITH MEDIAPASSWORD fornisce una sicurezza insufficiente e deve essere rimossa.|  
-|RESTORE DATABASE o LOG WITH PASSWORD|È stata rilevata la sintassi RESTORE … WITH PASSWORD. La sintassi WITH PASSWORD fornisce una sicurezza insufficiente e deve essere rimossa.|  
+|RESTORE DATABASE o LOG WITH DBO_ONLY|È stata rilevata la sintassi RESTORE ... WITH DBO_ONLY. In alternativa, usare RESTORE ... RESTRICTED_USER.|  
+|RESTORE DATABASE o LOG WITH MEDIAPASSWORD|È stata rilevata la sintassi RESTORE ... WITH MEDIAPASSWORD. La sintassi WITH MEDIAPASSWORD fornisce una sicurezza insufficiente e deve essere rimossa.|  
+|RESTORE DATABASE o LOG WITH PASSWORD|È stata rilevata la sintassi RESTORE ... WITH PASSWORD. La sintassi WITH PASSWORD fornisce una sicurezza insufficiente e deve essere rimossa.|  
 |Restituzione di risultati da un trigger|Questo evento si verifica una volta per ogni chiamata del trigger. Riscrivere il trigger in modo che non restituisca set di risultati.|  
 |ROWGUIDCOL|È stata rilevata la sintassi ROWGUIDCOL. Riscrivere le istruzioni in modo che utilizzino la sintassi $rowguid. Si verifica una volta per ogni compilazione.|  
 |SET ANSI_NULLS OFF|È stata rilevata la sintassi SET ANSI_NULLS OFF. Rimuovere questa sintassi deprecata. Si verifica una volta per ogni compilazione.|  
@@ -156,13 +156,13 @@ ms.locfileid: "48211851"
 |sp_configure 'ft notify bandwidth (min)'|È stata rilevata l'opzione ft notify bandwidth (min) di sp_configure. Non usare. Si verifica una volta per ogni query.|  
 |sp_configure 'locks'|È stata rilevata l'opzione locks di sp_configure. I blocchi non sono più configurabili. Non usare. Si verifica una volta per ogni query.|  
 |sp_configure 'open objects'|È stata rilevata l'opzione open objects di sp_configure. Il numero di oggetti aperti non è più configurabile. Non usare. Si verifica una volta per ogni query.|  
-|sp_configure 'priority boost'|È stata rilevata l'opzione priority boost di sp_configure. Non usare. Si verifica una volta per ogni query. In alternativa, usare l'opzione start /high … program.exe di Windows.|  
+|sp_configure 'priority boost'|È stata rilevata l'opzione priority boost di sp_configure. Non usare. Si verifica una volta per ogni query. In alternativa, usare l'opzione start /high ... program.exe di Windows.|  
 |sp_configure 'remote proc trans'|È stata rilevata l'opzione remote proc trans di sp_configure. Non usare. Si verifica una volta per ogni query.|  
 |sp_configure 'set working set size'|È stata rilevata l'opzione set working set size di sp_configure Le dimensioni del working set non sono più configurabili. Non usare. Si verifica una volta per ogni query.|  
 |sp_control_dbmasterkey_password|La stored procedure sp_control_dbmasterkey_password non controlla se una chiave master è esistente. Questo è consentito solo per la compatibilità con le versioni precedenti, ma viene visualizzato un avviso. Questo comportamento è deprecato. In una versione futura la chiave master deve esistere e la password usata nella stored procedure sp_control_dbmasterkey_password deve essere una delle password usate per crittografare la chiave master del database.|  
 |sp_create_removable|È stata rilevata la procedura sp_create_removable. In alternativa, usare CREATE DATABASE. Si verifica una volta per ogni query.|  
-|sp_db_vardecimal_storage_format|Uso di `vardecimal` il formato di archiviazione è stato rilevato. Usare la compressione dei dati.|  
-|sp_dbcmptlevel|È stata rilevata la procedura sp_dbcmptlevel. In alternativa, usare ALTER DATABASE … SET COMPATIBILITY_LEVEL. Si verifica una volta per ogni query.|  
+|sp_db_vardecimal_storage_format|È stato rilevato l'utilizzo del formato di archiviazione `vardecimal`. Usare la compressione dei dati.|  
+|sp_dbcmptlevel|È stata rilevata la procedura sp_dbcmptlevel. Utilizzare ALTER DATABASE ... SET COMPATIBILITY_LEVEL. Si verifica una volta per ogni query.|  
 |sp_dbfixedrolepermission|È stata rilevata la procedura sp_dbfixedrolepermission. Non usare. Si verifica una volta per ogni query.|  
 |sp_dboption|È stata rilevata la procedura sp_dboption. In alternativa, usare ALTER DATABASE e DATABASEPROPERTYEX. Si verifica una volta per ogni compilazione.|  
 |sp_dbremove|È stata rilevata la procedura sp_dbremove. In alternativa, usare DROP DATABASE. Si verifica una volta per ogni query.|  
@@ -179,7 +179,7 @@ ms.locfileid: "48211851"
 |sp_droprole|È stata rilevata la procedura sp_droprole. In alternativa, usare DROP ROLE. Si verifica una volta per ogni query.|  
 |sp_droptype|È stata rilevata la procedura sp_droptype. In alternativa, usare DROP TYPE.|  
 |sp_dropuser|È stata rilevata la procedura sp_dropuser. In alternativa, usare DROP USER. Si verifica una volta per ogni query.|  
-|sp_estimated_rowsize_reduction_for_vardecimal|Uso di `vardecimal` il formato di archiviazione è stato rilevato. Utilizzare la compressione dati e sp_estimate_data_compression_savings.|  
+|sp_estimated_rowsize_reduction_for_vardecimal|È stato rilevato l'utilizzo del formato di archiviazione `vardecimal`. Utilizzare la compressione dati e sp_estimate_data_compression_savings.|  
 |sp_fulltext_catalog|È stata rilevata la procedura sp_fulltext_catalog. In alternativa, usare CREATE/ALTER/DROP FULLTEXT CATALOG. Si verifica una volta per ogni compilazione.|  
 |sp_fulltext_column|È stata rilevata la procedura sp_fulltext_column. In alternativa, usare ALTER FULLTEXT INDEX. Si verifica una volta per ogni compilazione.|  
 |sp_fulltext_database|È stata rilevata la procedura sp_fulltext_database. In alternativa, usare ALTER DATABASE. Si verifica una volta per ogni compilazione.|  
@@ -249,13 +249,13 @@ ms.locfileid: "48211851"
 |sysusers|Sono stati rilevati riferimenti a sysusers. Utilizzare sys.database_principals. Si verifica una volta per ogni compilazione.|  
 |Hint di tabella senza WITH|È stata rilevata un'istruzione che usano hint di tabella ma non la parola chiave WITH. Modificare le istruzioni in modo che includano la parola WITH. Si verifica una volta per ogni compilazione.|  
 |Opzione di tabella text in row|Sono stati rilevati riferimenti all'opzione di tabella 'text in row'. Utilizzare sp_tableoption 'large value types out of row'. Si verifica una volta per ogni query.|  
-|TEXTPTR|Sono stati rilevati riferimenti alla funzione TEXTPTR. Riscrivere le applicazioni di utilizzare il `varchar(max)` tipo di dati e rimosso `text`, `ntext`, e `image` sintassi dei tipi di dati. Si verifica una volta per ogni query.|  
-|TEXTVALID|Sono stati rilevati riferimenti alla funzione TEXTVALID. Riscrivere le applicazioni di utilizzare il `varchar(max)` tipo di dati e rimosso `text`, `ntext`, e `image` sintassi dei tipi di dati. Si verifica una volta per ogni query.|  
-|TIMESTAMP|Numero totale di esecuzioni deprecate `timestamp` è stato rilevato il tipo di dati in un'istruzione DDL. Usare il `rowversion` invece del tipo di dati.|  
-|UPDATETEXT o WRITETEXT|È stata rilevata l'istruzione UPDATETEXT o WRITETEXT. Riscrivere le applicazioni di utilizzare il `varchar(max)` tipo di dati e rimosso `text`, `ntext`, e `image` sintassi dei tipi di dati. Si verifica una volta per ogni query.|  
+|TEXTPTR|Sono stati rilevati riferimenti alla funzione TEXTPTR. Riscrivere le applicazioni in modo che utilizzino il tipo di dati `varchar(max)` e rimuovere la sintassi dei tipi di dati `text`, `ntext` e `image`. Si verifica una volta per ogni query.|  
+|TEXTVALID|Sono stati rilevati riferimenti alla funzione TEXTVALID. Riscrivere le applicazioni in modo che utilizzino il tipo di dati `varchar(max)` e rimuovere la sintassi dei tipi di dati `text`, `ntext` e `image`. Si verifica una volta per ogni query.|  
+|timestamp|Numero totale di volte in cui è stato rilevato il tipo di dati deprecato `timestamp` in un'istruzione DDL. Usare il tipo di dati `rowversion`.|  
+|UPDATETEXT o WRITETEXT|È stata rilevata l'istruzione UPDATETEXT o WRITETEXT. Riscrivere le applicazioni in modo che utilizzino il tipo di dati `varchar(max)` e rimuovere la sintassi dei tipi di dati `text`, `ntext` e `image`. Si verifica una volta per ogni query.|  
 |USER_ID|Sono stati rilevati riferimenti alla funzione USER_ID. Usare la funzione DATABASE_PRINCIPAL_ID. Si verifica una volta per ogni compilazione.|  
 |Utilizzo di OLEDB per server collegati||  
-|Formato di archiviazione vardecimal|Uso di `vardecimal` il formato di archiviazione è stato rilevato. Usare la compressione dei dati.|  
+|Formato di archiviazione vardecimal|È stato rilevato l'utilizzo del formato di archiviazione `vardecimal`. Usare la compressione dei dati.|  
 |XMLDATA|È stata rilevata la sintassi FOR XML. Usare la generazione XSD per le modalità RAW e AUTO. Non sono disponibili sostituzioni per la modalità esplicita. Si verifica una volta per ogni compilazione.|  
 |XP_API|È stata rilevata un'istruzione di una stored procedure estesa. Non usare.|  
 |xp_grantlogin|È stata rilevata la procedura xp_grantlogin. In alternativa, usare CREATE LOGIN. Si verifica una volta per ogni compilazione.|  

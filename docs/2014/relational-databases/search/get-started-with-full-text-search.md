@@ -15,12 +15,12 @@ ms.assetid: 1fa628ba-0ee4-4d8f-b086-c4e52962ca4a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 722921015886e8aed687a8bf689dd7f7d8c592ca
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b6dc03709ea16fb718ff93ed60f75ad4d1515eaf
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48125041"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52541392"
 ---
 # <a name="get-started-with-full-text-search"></a>Introduzione alla ricerca full-text
   Per impostazione predefinita, nei database [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è abilitata la funzionalità full-text. Per utilizzare un indice full-text in una tabella, è tuttavia necessario impostare la funzionalità di indicizzazione full-text nelle colonne delle tabelle a cui si desidera accedere mediante il motore di ricerca full-text.  
@@ -51,7 +51,7 @@ ms.locfileid: "48125041"
   
 2.  Creazione di un indice full-text nella tabella o vista indicizzata.  
   
-     Un indice full-text è un tipo speciale di indice funzionale basato su token compilato e gestito dal motore di ricerca full-text. Per creare una ricerca full-text su una tabella o una vista, è necessario disporre di un indice univoco a colonna singola che non ammette valori Null. Questo indice univoco viene utilizzato dal motore di ricerca full-text per eseguire il mapping di ogni riga della tabella a una chiave univoca comprimibile. Un indice full-text può includere `char`, `varchar`, `nchar`, `nvarchar`, `text`, `ntext`, `image`, `xml`, `varbinary`, e `varbinary(max)` colonne. Per altre informazioni, vedere [Creazione e gestione di indici full-text](create-and-manage-full-text-indexes.md).  
+     Un indice full-text è un tipo speciale di indice funzionale basato su token compilato e gestito dal motore di ricerca full-text. Per creare una ricerca full-text su una tabella o una vista, è necessario disporre di un indice univoco a colonna singola che non ammette valori Null. Questo indice univoco viene utilizzato dal motore di ricerca full-text per eseguire il mapping di ogni riga della tabella a una chiave univoca comprimibile. Un indice full-text può includere colonne `char`, `varchar`, `nchar`, `nvarchar`, `text`, `ntext`, `image`, `xml`, `varbinary` e `varbinary(max)`. Per altre informazioni, vedere [Creare e gestire indici full-text](create-and-manage-full-text-indexes.md).  
   
  Prima di imparare a creare indici full-text, è importante valutare le differenze rispetto ai normali indici [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Nella tabella seguente vengono elencate tali differenze.  
   
@@ -101,14 +101,14 @@ ms.locfileid: "48125041"
 ### <a name="associating-a-stoplist-with-the-full-text-index"></a>Associazione di un elenco di parole non significative all'indice full-text  
  In [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] sono stati introdotti gli elenchi di parole non significative. Un *elenco di parole non significative* è un elenco di termini che non vengono considerati nelle query, viene associato a ogni indice full-text e le parole in esso contenute vengono applicate alle query full-text di quell'indice. Per impostazione predefinita, a un nuovo indice full-text viene associato l'elenco di parole non significative di sistema. È tuttavia possibile creare e utilizzare un elenco di parole non significative personalizzato. Per altre informazioni, vedere [Configurare e gestire parole non significative ed elenchi di parole non significative per la ricerca full-text](configure-and-manage-stopwords-and-stoplists-for-full-text-search.md).  
   
- Ad esempio, il seguente [CREATE FULLTEXT STOPLIST](/sql/t-sql/statements/create-fulltext-stoplist-transact-sql) [!INCLUDE[tsql](../../../includes/tsql-md.md)] istruzione crea un nuovo oggetto stoplist full-text denominato mystoplist3, copiando di parole non significative di sistema:  
+ Ad esempio, l'istruzione [CREATE FULLTEXT STOPLIST](/sql/t-sql/statements/create-fulltext-stoplist-transact-sql)[!INCLUDE[tsql](../../../includes/tsql-md.md)] seguente consente di creare un nuovo elenco di parole non significative full-text denominato myStoplist3, copiando dall'elenco di parole non significative di sistema:  
   
 ```  
 CREATE FULLTEXT STOPLIST myStoplist FROM SYSTEM STOPLIST;  
 GO  
 ```  
   
- Quanto segue [ALTER FULLTEXT STOPLIST](/sql/t-sql/statements/alter-fulltext-stoplist-transact-sql) [!INCLUDE[tsql](../../../includes/tsql-md.md)] istruzione viene modificato un elenco di parole non significative denominato myStoplist, aggiungendo la parola 'en', per lo spagnolo e poi per il francese:  
+ L'istruzione [ALTER FULLTEXT STOPLIST](/sql/t-sql/statements/alter-fulltext-stoplist-transact-sql)[!INCLUDE[tsql](../../../includes/tsql-md.md)] seguente consente di modificare un elenco di parole non significative denominato myStoplist, aggiungendo la parola "en" per lo spagnolo e poi per il francese:  
   
 ```  
 ALTER FULLTEXT STOPLIST MyStoplist ADD 'en' LANGUAGE 'Spanish';  
@@ -118,7 +118,7 @@ GO
   
   
 ### <a name="updating-a-full-text-index"></a>Aggiornamento di un indice full-text  
- Come i normali indici [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , gli indici full-text possono essere aggiornati automaticamente alla modifica dei dati delle tabelle associate. Questo è il comportamento predefinito. In alternativa, è possibile aggiornare gli indici full-text manualmente o a intervalli pianificati specificati. Poiché il popolamento di un indice full-text può richiedere tempi lunghi e l'utilizzo di molte risorse, l'aggiornamento dell'indice full-text viene in genere eseguito in background come processo asincrono in seguito alle modifiche apportate alla tabella di base. L'aggiornamento immediato di un indice full-text dopo ogni modifica apportata alla tabella di base può richiedere l'utilizzo di molte risorse. Pertanto, se la frequenza con cui si eseguono aggiornamenti, inserimenti ed eliminazioni è molto elevata, è possibile notare un calo delle prestazioni a livello di esecuzione delle query. In questo caso, considerare la pianificazione di aggiornamenti con rilevamento manuale delle modifiche per gestire gradualmente le numerose modifiche, anziché dividere le risorse con le query.  
+ Come i normali indici [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], gli indici full-text possono essere aggiornati automaticamente alla modifica dei dati delle tabelle associate. Questo è il comportamento predefinito. In alternativa, è possibile aggiornare gli indici full-text manualmente o a intervalli pianificati specificati. Poiché il popolamento di un indice full-text può richiedere tempi lunghi e l'utilizzo di molte risorse, l'aggiornamento dell'indice full-text viene in genere eseguito in background come processo asincrono in seguito alle modifiche apportate alla tabella di base. L'aggiornamento immediato di un indice full-text dopo ogni modifica apportata alla tabella di base può richiedere l'utilizzo di molte risorse. Pertanto, se la frequenza con cui si eseguono aggiornamenti, inserimenti ed eliminazioni è molto elevata, è possibile notare un calo delle prestazioni a livello di esecuzione delle query. In questo caso, considerare la pianificazione di aggiornamenti con rilevamento manuale delle modifiche per gestire gradualmente le numerose modifiche, anziché dividere le risorse con le query.  
   
  Per monitorare lo stato del popolamento, utilizzare la funzione FULLTEXTCATALOGPROPERTY o OBJECTPROPERTYEX. Per ottenere lo stato del popolamento del catalogo, eseguire l'istruzione seguente:  
   
@@ -161,7 +161,7 @@ SELECT FULLTEXTCATALOGPROPERTY('AdvWksDocFTCat', 'Populatestatus');
   
     ```  
   
-     L'elemento TYPE COLUMN definito in questo esempio specifica la colonna del tipo nella tabella che contiene il tipo di documento in ciascuna riga della colonna 'Document' (che è di tipo binario). Nella colonna del tipo è archiviata l'estensione file fornita dall'utente, ovvero "doc", "xls" e così via, del documento in una determinata riga. Il motore di ricerca full-text utilizza l'estensione file in una determinata riga per richiamare il filtro corretto da utilizzare per l'analisi dei dati di quella riga. Al termine dell'analisi dei dati binari della riga eseguita tramite il filtro, il word breaker specificato analizzerà il contenuto. In questo esempio viene utilizzato il word breaker per l'Inglese britannico. Si noti che il processo di filtro viene eseguito unicamente durante l'indicizzazione o quando un utente inserisce o aggiorna una colonna della tabella di base con il rilevamento delle modifiche automatico abilitato per l'indice full-text. Per altre informazioni, vedere [Configurazione e gestione di filtri per la ricerca](configure-and-manage-filters-for-search.md).  
+     L'elemento TYPE COLUMN definito in questo esempio specifica la colonna del tipo nella tabella che contiene il tipo di documento in ciascuna riga della colonna 'Document' (che è di tipo binario). La colonna di tipo archivia i file fornita dall'utente estensione-"doc", "xls" e così via del documento in una determinata riga. Il motore di ricerca full-text utilizza l'estensione file in una determinata riga per richiamare il filtro corretto da utilizzare per l'analisi dei dati di quella riga. Al termine dell'analisi dei dati binari della riga eseguita tramite il filtro, il word breaker specificato analizzerà il contenuto. In questo esempio viene utilizzato il word breaker per l'Inglese britannico. Si noti che il processo di filtro viene eseguito unicamente durante l'indicizzazione o quando un utente inserisce o aggiorna una colonna della tabella di base con il rilevamento delle modifiche automatico abilitato per l'indice full-text. Per altre informazioni, vedere [Configurazione e gestione di filtri per la ricerca](configure-and-manage-filters-for-search.md).  
   
   
 ##  <a name="tasks"></a> Attività comuni  
@@ -190,11 +190,11 @@ SELECT FULLTEXTCATALOGPROPERTY('AdvWksDocFTCat', 'Populatestatus');
   
 ### <a name="to-view-information-about-a-full-text-index"></a>Per visualizzare informazioni su un indice full-text  
   
-|Catalogo o vista a gestione dinamica|Description|  
+|Catalogo o vista a gestione dinamica|Descrizione|  
 |----------------------------------------|-----------------|  
 |[sys.fulltext_index_catalog_usages &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-index-catalog-usages-transact-sql)|Restituisce una riga per ogni catalogo full-text in riferimento all'indice full-text.|  
 |[sys.fulltext_index_columns &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-index-columns-transact-sql)|Contiene una riga per ogni colonna che fa parte di un indice full-text.|  
-|[sys.fulltext_index_fragments &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-index-fragments-transact-sql)|Un indice full-text utilizza tabelle interne denominate frammenti di indice full-text per archiviare i dati dell'indice invertito. Questa vista può essere utilizzata per eseguire una query sui metadati relativi a tali frammenti. Nella vista è contenuta una riga per ciascun frammento di indice full-text presente in ogni tabella che contiene un indice full-text.|  
+|[sys.fulltext_index_fragments &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-index-fragments-transact-sql)|Un indice full-text utilizza tabelle interne denominate frammenti di indice full-text per archiviare i dati dell'indice invertito. Questa vista può essere utilizzata per eseguire una query sui metadati relativi a tali frammenti. Nella vista è contenuta una riga per ogni frammento di indice full-text presente in ogni tabella contenente un indice full-text.|  
 |[sys.fulltext_indexes &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql)|Contiene una riga per indice full-text di un oggetto in formato di tabella.|  
 |[sys.dm_fts_index_keywords &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-transact-sql)|Restituisce informazioni sul contenuto di un indice full-text per la tabella specificata.|  
 |[sys.dm_fts_index_keywords_by_document &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-document-transact-sql)|Restituisce informazioni sul contenuto a livello di documento di un indice full-text per la tabella specificata. Una determinata parola chiave può essere inclusa in diversi documenti.|  

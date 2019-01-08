@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 54dc66e30356f3896d7ce509bf83e56a1973c5b2
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 55eb472ef14e980f77a47a2c6989031cebec91e9
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38984843"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52509546"
 ---
 # <a name="configure-power-pivot-service-accounts"></a>Configurare gli account del servizio PowerPivot
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -38,9 +38,9 @@ ms.locfileid: "38984843"
   
  [Requisiti e autorizzazioni relativi all'account](#requirements)  
   
- [Risoluzione dei problemi: concedere manualmente le autorizzazioni amministrative](#updatemanually)  
+ [Risoluzione dei problemi: Concedere manualmente autorizzazioni amministrative](#updatemanually)  
   
- [Risoluzione dei problemi: risolvere gli errori HTTP 503 dovuti alle password scadute per Amministrazione centrale o il servizio di applicazione Web di SharePoint](#expired)  
+ [Risoluzione dei problemi: Risolvere HTTP 503 errori dovuti alle password scadute per amministrazione centrale o SharePoint Foundation al servizio dell'applicazione Web](#expired)  
   
 ##  <a name="bkmk_passwordssas"></a> Aggiornare una password scaduta per un'istanza di SQL Server Analysis Services (PowerPivot)  
   
@@ -99,7 +99,7 @@ ms.locfileid: "38984843"
   
 #### <a name="analysis-services-service-account"></a>Account del servizio Analysis Services  
   
-|Requisito|Description|  
+|Requisito|Descrizione|  
 |-----------------|-----------------|  
 |Requisito di provisioning|Questo account deve essere specificato durante l'installazione di SQL Server nella pagina **Configurazione di Analysis Services** dell'installazione guidata o nel parametro di installazione **ASSVCACCOUNT** in un'installazione dalla riga di comando.<br /><br /> È possibile modificare il nome utente o la password tramite Amministrazione centrale, PowerShell o lo strumento di configurazione [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Non è consentito usare altri strumenti per modificare account e password.|  
 |Requisito dell'account utente di dominio|Questo account deve essere un account utente di dominio Windows. Gli account del computer predefiniti, ad esempio Servizio di rete o Servizio locale, non sono consentiti. Tramite il programma di installazione di SQL Server viene applicato il requisito dell'account utente di dominio bloccando l'installazione ogni volta che viene specificato un account computer.|  
@@ -108,14 +108,14 @@ ms.locfileid: "38984843"
   
 #### <a name="power-pivot-service-application-pool"></a>Pool di applicazioni del servizio PowerPivot  
   
-|Requisito|Description|  
+|Requisito|Descrizione|  
 |-----------------|-----------------|  
-|Requisito di provisioning|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] è una risorsa condivisa nella farm che diventa disponibile quando si crea un'applicazione del servizio. Il pool di applicazioni del servizio deve essere specificato quando viene creata l'applicazione di servizio. Può essere specificato in due modi, cioè tramite lo strumento di configurazione [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] o i comandi PowerShell.<br /><br /> È probabile che l'identità del pool di applicazioni sia stata configurata in modo da essere eseguita in un account univoco. In caso contrario, considerare di modificare ora la configurazione in modo che l'identità venga eseguita in un account diverso.|  
+|Requisito di provisioning|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] è una risorsa condivisa nella farm che diventa disponibile quando si crea un'applicazione del servizio. Il pool di applicazioni del servizio deve essere specificato quando viene creata l'applicazione di servizio. Può essere specificato in due modi, cioè tramite lo strumento di configurazione [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] o i comandi PowerShell.<br /><br /> È probabile che l'identità del pool di applicazioni sia stata configurata in modo da essere eseguita in un account univoco. Ma se non è stato fatto, è consigliabile modificarla ora per l'esecuzione con un account diverso.|  
 |Requisito dell'account utente di dominio|Questa identità del pool di applicazioni deve essere un account utente di dominio Windows. Gli account del computer predefiniti, ad esempio Servizio di rete o Servizio locale, non sono consentiti.|  
 |Requisiti relativi alle autorizzazioni|Per questo account non sono richieste autorizzazioni di amministratore di sistema locale nel computer. Questo account deve, tuttavia, disporre delle autorizzazioni dell'amministratore di sistema di Analysis Services nel [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] locale installato nello stesso computer. Queste autorizzazioni vengono concesse automaticamente dal programma di installazione di SQL Server o quando si imposta o modifica l'identità del pool di applicazioni in Amministrazione centrale.<br /><br /> Le autorizzazioni amministrative sono necessarie per inoltrare query al [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)]. Sono necessarie anche per il monitoraggio dell'integrità, per la chiusura di sessioni inattive e per l'attesa degli eventi di traccia.<br /><br /> L'account deve disporre di autorizzazioni di connessione, lettura e scrittura per il database dell'applicazione del servizio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Queste autorizzazioni vengono concesse automaticamente quando si crea l'applicazione e aggiornate automaticamente quando si modificano gli account o le password in Amministrazione centrale.<br /><br /> L'applicazione del servizio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] verifica che un utente SharePoint sia autorizzato a visualizzare i dati prima di recuperare il file, ma non rappresenta l'utente. Non esistono requisiti relativi alle autorizzazioni per la rappresentazione.|  
 |Requisiti relativi alla distribuzione con scalabilità orizzontale|Nessuna.|  
   
-##  <a name="updatemanually"></a> Risoluzione dei problemi: concedere manualmente le autorizzazioni amministrative  
+##  <a name="updatemanually"></a> Risoluzione dei problemi: Concedere manualmente le autorizzazioni amministrative  
  Le autorizzazioni amministrative non vengono aggiornate se l'utente che aggiorna le credenziali non è l'amministratore locale del computer. In questo caso, è possibile concedere manualmente le autorizzazioni amministrative. Il modo più semplice per eseguire questa operazione consiste nell'eseguire Processo timer configurazione [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] in Amministrazione centrale. In questo modo è possibile reimpostare le autorizzazioni per tutti i server [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] nella farm. Si noti che questo approccio funziona solo se il processo timer SharePoint è in esecuzione come amministratore della farm e come amministratore locale nel computer.  
   
 1.  In Monitoraggio scegliere **Rivedi definizioni processi**.  
@@ -150,7 +150,7 @@ ms.locfileid: "38984843"
   
 11. Digitare il nome dell'account usato per il pool di applicazioni del servizio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , quindi fare clic su **OK**.  
   
-##  <a name="expired"></a> Risoluzione dei problemi: risolvere gli errori HTTP 503 dovuti alle password scadute per Amministrazione centrale o il servizio di applicazione Web di SharePoint  
+##  <a name="expired"></a> Risoluzione dei problemi: Risolvere gli errori HTTP 503 dovuti alle password scadute per Amministrazione centrale o il servizio di applicazione Web di SharePoint  
  Se il servizio Amministrazione centrale o il servizio di applicazione Web di SharePoint Foundation smettono di funzionare a causa della reimpostazione di un account o della scadenza di una password, verrà generato un messaggio di errore HTTP 503 "Servizio non disponibile" quando si tenta di aprire Amministrazione centrale SharePoint o un sito di SharePoint. Per riportare online il server, eseguire le operazioni seguenti: Quando Amministrazione centrale è disponibile, è possibile aggiornare le informazioni scadute relative all'account.  
   
 1.  In Strumenti di amministrazione fare clic su **Gestione Internet Information Services**.  
@@ -159,7 +159,7 @@ ms.locfileid: "38984843"
   
     1.  Fare clic con il pulsante destro del mouse sul nome del pool di applicazioni e selezionare **Impostazioni avanzate**.  
   
-    2.  Selezionare **identità** e scegliere il ... pulsante per aprire la finestra di dialogo Identità del pool di applicazioni.  
+    2.  Selezionare **identità** e scegliere il... per aprire la finestra di dialogo identità Pool di applicazioni.  
   
     3.  Fare clic su **Imposta**.  
   
@@ -181,6 +181,6 @@ ms.locfileid: "38984843"
   
 ## <a name="see-also"></a>Vedere anche  
  [Avviare o arrestare un server Power Pivot per SharePoint](../../analysis-services/power-pivot-sharepoint/start-or-stop-a-power-pivot-for-sharepoint-server.md)   
- [Configurare Power Pivot (Power Pivot per SharePoint) Account di aggiornamento dati automatico](http://msdn.microsoft.com/81401eac-c619-4fad-ad3e-599e7a6f8493)  
+ [Configurare l'account di aggiornamento dati automatico PowerPivot (PowerPivot per SharePoint)](http://msdn.microsoft.com/81401eac-c619-4fad-ad3e-599e7a6f8493)  
   
   

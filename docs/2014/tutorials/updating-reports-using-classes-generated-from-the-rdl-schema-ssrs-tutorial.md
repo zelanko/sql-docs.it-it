@@ -15,12 +15,12 @@ ms.assetid: 8f81d48f-7ab9-4ef8-bce0-7d16d9a47fbd
 author: craigg-msft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 361f3094e1a40cbfc6075888b2be13f42d74c8bd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2f104892e3ee8a8c542c41bc07789a94ab8d0c4e
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48136051"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53349380"
 ---
 # <a name="updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial"></a>Aggiornamento dei report mediante le classi generate dallo schema RDL (esercitazione SSRS)
   Questa esercitazione illustra come usare lo strumento XML Schema Definition (Xsd.exe.) per generare le classi che consentono di serializzare e deserializzare i file di definizione del report (con estensione rdl e rdlc) con i [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] <xref:System.Xml.Serialization.XmlSerializer> classe.  
@@ -54,23 +54,23 @@ ms.locfileid: "48136051"
   
 -   Il database di esempio [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] installato in un'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
--   Un report installato nel server di report. In questa esercitazione viene utilizzato il report di esempio Company Sales 2012. Per altre informazioni sui report di esempio, vedere [SQL Server Reporting Services Product Samples](http://go.microsoft.com/fwlink/?LinkId=177889).  
+-   Un report installato nel server di report. In questa esercitazione viene utilizzato il report di esempio Company Sales 2012. Per altre informazioni sui report di esempio, vedere [SQL Server Reporting Services Product Samples](https://go.microsoft.com/fwlink/?LinkId=177889).  
   
 > [!NOTE]  
->  Gli esempi non vengono installati automaticamente durante l'installazione, ma possono essere installati in qualsiasi momento. Per informazioni sugli esempi, vedere [SQL Server Product Samples](http://go.microsoft.com/fwlink/?LinkId=182887).  
+>  Gli esempi non vengono installati automaticamente durante l'installazione, ma possono essere installati in qualsiasi momento. Per informazioni sugli esempi, vedere [SQL Server Product Samples](https://go.microsoft.com/fwlink/?LinkId=182887).  
   
  **Tempo stimato per completare l'esercitazione:** 30 minuti  
   
 ## <a name="tasks"></a>Attività  
- [Lezione 1: Creazione del progetto di Visual Studio per lo schema RDL](../../2014/tutorials/lesson-1-create-the-rdl-schema-visual-studio-project.md)  
+ [Lezione 1: Creare il progetto di Visual Studio Schema RDL](../../2014/tutorials/lesson-1-create-the-rdl-schema-visual-studio-project.md)  
   
- [Lezione 2: Generazione delle classi dallo schema RDL mediante lo strumento xsd](../../2014/tutorials/lesson-2-generate-classes-from-the-rdl-schema-using-the-xsd-tool.md)  
+ [Lezione 2: Generare classi dallo Schema RDL mediante lo strumento xsd](../../2014/tutorials/lesson-2-generate-classes-from-the-rdl-schema-using-the-xsd-tool.md)  
   
- [Lezione 3: Caricamento della definizione di un report dal Server report](../../2014/tutorials/lesson-3-load-a-report-definition-from-the-report-server.md)  
+ [Lezione 3: Caricare una definizione del Report dal Server di Report](../../2014/tutorials/lesson-3-load-a-report-definition-from-the-report-server.md)  
   
- [Lezione 4: Aggiornamento della definizione del report a livello di programmazione](../../2014/tutorials/lesson-4-update-the-report-definition-programmatically.md)  
+ [Lezione 4: Aggiornare la definizione del Report a livello di codice](../../2014/tutorials/lesson-4-update-the-report-definition-programmatically.md)  
   
- [Lezione 5: Pubblicazione della definizione del report nel Server report](../../2014/tutorials/lesson-5-publish-the-report-definition-to-the-report-server.md)  
+ [Lezione 5: Pubblicare la definizione del Report nel Server di Report](../../2014/tutorials/lesson-5-publish-the-report-definition-to-the-report-server.md)  
   
  [Lezione 6: Eseguire l'applicazione dello Schema RDL &#40;Visual Basic-C&#35;&#41;](../../2014/tutorials/lesson-6-run-the-rdl-schema-application-vb-csharp.md)  
   

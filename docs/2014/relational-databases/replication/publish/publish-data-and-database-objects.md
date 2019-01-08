@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - user-defined types [SQL Server replication]
@@ -42,30 +41,30 @@ ms.assetid: d986032c-3387-4de1-a435-3ec5e82185a2
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e50f1c65133a0e33c142962af8e768d1daa5bef8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8cdc2ee8c14e62106775438f932957c69c7c0daa
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48227111"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52777133"
 ---
 # <a name="publish-data-and-database-objects"></a>Pubblicazione di dati e oggetti di database
   Quando si crea una pubblicazione, è possibile scegliere le tabelle e gli altri oggetti di database che si desidera pubblicare. Tramite la replica è possibile pubblicare gli oggetti di database elencati di seguito.  
   
 |Oggetto di database|Replica snapshot e replica transazionale|Replica di tipo merge|  
 |---------------------|--------------------------------------------------------|-----------------------|  
-|Tabelle|X|X|  
-|Tabelle partizionate|X|X|  
-|Stored procedure - definizione ([!INCLUDE[tsql](../../../includes/tsql-md.md)] e CLR)|X|X|  
-|Stored procedure - esecuzione ([!INCLUDE[tsql](../../../includes/tsql-md.md)] e CLR)|X|no|  
-|Viste|X|X|  
-|Viste indicizzate|X|X|  
-|Viste indicizzate come tabelle|X|no|  
-|Tipi definiti dall'utente (CLR)|X|X|  
-|Funzioni definite dall'utente ([!INCLUDE[tsql](../../../includes/tsql-md.md)] e CLR).|X|X|  
-|Tipi di dati alias|X|X|  
-|Indici full-text|X|X|  
-|Oggetti dello schema (vincoli, indici, trigger DML dell'utente, proprietà estese e regole di confronto)|X|X|  
+|Tabelle|x|x|  
+|Tabelle partizionate|x|x|  
+|Stored procedure - definizione ([!INCLUDE[tsql](../../../includes/tsql-md.md)] e CLR)|x|x|  
+|Stored procedure - esecuzione ([!INCLUDE[tsql](../../../includes/tsql-md.md)] e CLR)|x|no|  
+|Visualizzazioni|x|x|  
+|Viste indicizzate|x|x|  
+|Viste indicizzate come tabelle|x|no|  
+|Tipi definiti dall'utente (CLR)|x|x|  
+|Funzioni definite dall'utente ([!INCLUDE[tsql](../../../includes/tsql-md.md)] e CLR).|x|x|  
+|Tipi di dati alias|x|x|  
+|Indici full-text|x|x|  
+|Oggetti dello schema (vincoli, indici, trigger DML dell'utente, proprietà estese e regole di confronto)|x|x|  
   
 ## <a name="creating-publications"></a>Creazione di pubblicazioni  
  Per creare una pubblicazione, si specificano le informazioni seguenti:  

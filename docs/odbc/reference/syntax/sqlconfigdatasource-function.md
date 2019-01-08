@@ -20,12 +20,12 @@ ms.assetid: f8d6e342-c010-434e-b1cd-f5371fb50a14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ef1336514d876d171cd9d31d8c20171e154f9a2a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1ef74d98102c424a71ac1728d664fddbeac2296c
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47646899"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53215600"
 ---
 # <a name="sqlconfigdatasource-function"></a>Funzione SQLConfigDataSource
 **Conformità**  
@@ -66,7 +66,7 @@ BOOL SQLConfigDataSource(
   
  ODBC_REMOVE_SYS_DSN: Rimuovere un'origine dati di sistema esistente.  
   
- ODBC_REMOVE_DEFAULT_DSN: Rimuovere una sezione specifica origine dati predefinito dalle informazioni di sistema. (Rimuove inoltre la sezione specifica di driver predefiniti dalla voce Odbcinst. ini nelle informazioni di sistema. Ciò *trattano* esegue la stessa funzione deprecata **SQLRemoveDefaultDataSource** (funzione).) Quando questa opzione viene specificata, tutti gli altri parametri nella chiamata a **SQLConfigDataSource** devono essere valori null; se non sono NULL, queste verranno ignorate.  
+ ODBC_REMOVE_DEFAULT_DSN: Rimuovere la sezione di specifica origine dati predefinita dalle informazioni di sistema. (Rimuove inoltre la sezione specifica di driver predefiniti dalla voce Odbcinst. ini nelle informazioni di sistema. Ciò *trattano* esegue la stessa funzione deprecata **SQLRemoveDefaultDataSource** (funzione).) Quando questa opzione viene specificata, tutti gli altri parametri nella chiamata a **SQLConfigDataSource** devono essere valori null; se non sono NULL, queste verranno ignorate.  
   
  *lpszDriver*  
  [Input] Descrizione del driver (in genere il nome del sistema DBMS associati) presentato agli utenti anziché il nome del driver fisico.  
@@ -80,7 +80,7 @@ BOOL SQLConfigDataSource(
 ## <a name="diagnostics"></a>Diagnostica  
  Quando **SQLConfigDataSource** FALSO, restituisce un oggetto associato  *\*pfErrorCode* valore può essere ottenuto chiamando **SQLInstallerError**. La tabella seguente elenca i  *\*pfErrorCode* i valori che possono essere restituiti da **SQLInstallerError** e illustra ognuna nel contesto di questa funzione.  
   
-|*\*pfErrorCode*|Errore|Description|  
+|*\*pfErrorCode*|Errore|Descrizione|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_GENERAL_ERR|Errore di programma di installazione generale|Errore per cui si è verificato alcun errore di programma di installazione specifico.|  
 |ODBC_ERROR_INVALID_HWND|Handle della finestra valida|Il *hwndParent* argomento era NULL o non valido.|  

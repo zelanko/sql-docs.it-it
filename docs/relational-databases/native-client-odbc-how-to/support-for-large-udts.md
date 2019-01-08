@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4cfe743a7ae0f86477dbbb1b0cee8099d98784b2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 11c0f2dd58d277f8736c3bab2038add94d1b3dd9
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47623399"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53205470"
 ---
 # <a name="support-for-large-udts"></a>Supporto per tipi definiti dall'utente di grandi dimensioni
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "47623399"
 ## <a name="example"></a>Esempio  
  Il primo listato di codice rappresenta il codice sorgente C#. Incollarlo in un file denominato LargeStringUDT.cs e compilarlo in una DLL. Copiare LargeStringUDT.dll nella directory radice dell'unità C.  
   
- Il secondo listato di codice ([!INCLUDE[tsql](../../includes/tsql-md.md)]) consente di creare l'assembly nel database master.  
+ Il secondo ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) listato di codice viene creato l'assembly nel database master.  
   
  Compilare il secondo listato di codice (C++) con odbc32.lib e user32.lib. Verificare che nella variabile di ambiente INCLUDE sia presente la directory che contiene sqlncli.h.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "47623399"
   
  In questo esempio viene eseguita la connessione all'istanza predefinita di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nel computer in uso. Per connettersi a un'istanza denominata, modificare la definizione dell'origine dati ODBC per specificare l'istanza in base al formato: server\istanzadenominata. Per impostazione predefinita, [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] viene installato in un'istanza denominata.  
   
- Il quarto listato di codice ([!INCLUDE[tsql](../../includes/tsql-md.md)]) consente di eliminare l'assembly dal database master.  
+ Il quarto ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) listato di codice elimina l'assembly dal database master.  
   
 ```  
 // LargeStringUDT.cs  

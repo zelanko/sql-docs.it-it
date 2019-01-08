@@ -15,12 +15,12 @@ ms.assetid: 0d5d2742-2614-43de-9ab9-864addb6299b
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 59067479ebd57b8a26cf3de6ef243e0eb7072bce
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7d4a8d29e27fae9b54a6060ec1be8f6c5a4163a8
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48200951"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507271"
 ---
 # <a name="connect-clients-to-a-database-mirroring-session-sql-server"></a>Connessione di client a una sessione di mirroring del database (SQL Server)
   Per connettersi a una sessione di mirroring del database un client può utilizzare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client o il provider di dati .NET Framework per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se configurati per un database [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , questi provider di accesso ai dati supportano entrambi completamente il mirroring del database. Per informazioni relative alle considerazioni di programmazione per l'utilizzo di un database con mirroring, vedere [Using Database Mirroring](../../relational-databases/native-client/features/using-database-mirroring.md). È inoltre necessario che l'istanza del server principale corrente sia disponibile e che l'account di accesso del client sia stato creato nell'istanza del server. Per altre informazioni, vedere [Risolvere i problemi relativi agli utenti isolati &#40;SQL Server&#41;](../../sql-server/failover-clusters/troubleshoot-orphaned-users-sql-server.md). Le connessioni client a una sessione di mirroring del database non richiedono l'istanza del server di controllo del mirroring, se ne esiste una.  
@@ -83,9 +83,9 @@ Network=dbnmpntw;
 >  Poiché il protocollo Named Pipes non utilizza l'algoritmo per la riesecuzione dei tentativi TCP/IP, in molti casi, per un tentativo di connessione con tale protocollo può verificarsi il timeout prima della connessione a un database con mirroring.  
   
 #### <a name="server-attribute"></a>Attributo Server  
- La stringa di connessione deve contenere un `Server` attributo che fornisce il nome partner iniziale, che identifica l'istanza del server principale corrente.  
+ La stringa di connessione deve includere un attributo `Server` indicante il nome partner iniziale, che dovrebbe identificare l'istanza del server principale corrente.  
   
- Il modo più semplice per identificare l'istanza del server è specificarne il nome, *<nome_server>*[**\\***<nome_istanza_SQL_Server>*]. Esempio:  
+ Il modo più semplice per identificare l'istanza del server è specificarne il nome, *<nome_server>*[**\\***<nome_istanza_SQL_Server>*]. Ad esempio:  
   
  `Server=Partner_A;`  
   
@@ -137,7 +137,7 @@ Server=123.34.45.56,4724;
 >  Quando viene specificato solo il nome del partner iniziale, non è necessaria alcuna operazione o scrittura di codice da parte degli sviluppatori dell'applicazione, fatta eccezione per quello relativo alla modalità di riconnessione.  
   
 > [!NOTE]  
->  Gli sviluppatori di applicazioni di codice gestito forniscono il nome partner di failover nel `ConnectionString` del `SqlConnection` oggetto. Per informazioni sull'utilizzo di questa stringa di connessione, vedere la sezione relativa al supporto del mirroring del database nel Provider di dati .NET Framework per SQL Server nella documentazione di ADO.NET, che fa parte dell'SDK di [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework.  
+>  Gli sviluppatori di applicazioni con codice gestito forniscono il nome del partner di failover nella proprietà `ConnectionString` dell'oggetto `SqlConnection`. Per informazioni sull'utilizzo di questa stringa di connessione, vedere la sezione relativa al supporto del mirroring del database nel Provider di dati .NET Framework per SQL Server nella documentazione di ADO.NET, che fa parte dell'SDK di [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework.  
   
 #### <a name="example-connection-string"></a>Stringa di connessione di esempio  
  Ad esempio, per connettersi esplicitamente al database **AdventureWorks** tramite TCP/IP in Partner_A o Partner_B, è necessario che un'applicazione client che usa il driver ODBC includa la stringa di connessione seguente:  

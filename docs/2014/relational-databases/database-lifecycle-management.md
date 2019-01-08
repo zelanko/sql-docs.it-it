@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: supportability
 ms.topic: conceptual
 helpviewer_keywords:
 - Data sync
@@ -30,19 +30,19 @@ ms.assetid: 91da13a4-0eea-4e88-b608-dada881ff5f2
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8f1deedcba567045f36bb203dea1d638ed1c9929
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 07710fbf649037843479de94057f2efcf2a8f558
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48147851"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53353126"
 ---
 # <a name="database-lifecycle-management"></a>Gestione del ciclo di vita del database
   DLM (Database lifecycle management, gestione del ciclo di vita del database) è un approccio basato su criteri per la gestione dei database e delle risorse dei dati. DLM non è un prodotto, bensì un approccio completo per la gestione dello schema, dei dati e dei metadati del database per un'applicazione di database. L'approccio attento e dinamico a DLM consente a un'organizzazione di gestire le risorse dei dati in base ai livelli appropriati di prestazioni, protezione, disponibilità e costi.  
   
  In DLM si inizia con la presentazione del progetto e delle relative finalità, si continua con lo sviluppo, la verifica, la compilazione, la distribuzione, la gestione, il monitoraggio del database e le attività di backup e si termina con l'archivio dei dati. In questo argomento viene fornita una panoramica delle fasi di DLM che iniziano con lo sviluppo del database e continuano con le azioni di compilazione, distribuzione e monitoraggio (figura 1). Sono inoltre incluse le attività di gestione e le operazioni di portabilità dei dati quali l'importazione/esportazione, il backup, la migrazione e la sincronizzazione.  
   
- Per leggere l'argomento completo, vedere la pagina [Database Lifecycle Management (DLM) (Gestione del ciclo di vita del database)](http://go.microsoft.com/fwlink/?LinkId=276949).  
+ Per leggere l'argomento completo, vedere la pagina [Database Lifecycle Management (DLM) (Gestione del ciclo di vita del database)](https://go.microsoft.com/fwlink/?LinkId=276949).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Home Page di Windows Azure](http://www.windowsazure.com/)   

@@ -1,5 +1,5 @@
 ---
-title: 'Attività 4 (facoltativo): la combinazione, corrispondenza e pubblicazione di un nuovo Set di dati | Microsoft Docs'
+title: 'Attività 4 (facoltativo): La combinazione, corrispondenza e pubblicazione di un nuovo Set di dati | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,15 +13,15 @@ ms.assetid: 13a13f03-b307-4555-8e33-6d98c459d994
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2bfa1c59fb47a859bb680970617a81add871908e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 05c8785427b905138e513ab7134d56def7cdcf4d
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48061751"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53353068"
 ---
-# <a name="task-4-optional-combining-matching-and-publishing-new-set-of-data"></a>Attività 4 (facoltativa): Combinazione, corrispondenza e pubblicazione di un nuovo set di dati
-  Con il tempo, sarà necessario aggiungere ulteriori dati al repository MDS. Prima di aggiungere i dati, può essere utile confrontare i nuovi dati con quelli già gestiti in MDS, per verificare che non si stiano aggiungendo dati duplicati o non accurati. Nel componente aggiuntivo Master Data Services per Excel è possibile combinare i dati di due fogli di lavoro e confrontarli per identificare e rimuovere i duplicati prima di pubblicare i dati in MDS. Per identificare le corrispondenze nei dati viene utilizzata la funzionalità di corrispondenza di DQS dalla relativa caratteristica del componente aggiuntivo MDS per Excel. In questa attività verranno combinati i dati di due fogli di lavoro in uno e, successivamente, verrà eseguita l'attività di individuazione delle corrispondenze per identificare e rimuovere i duplicati prima della pubblicazione in MDS. Visualizzare [corrispondenza Data Quality nel componente aggiuntivo MDS per Excel](http://msdn.microsoft.com/library/hh548681.aspx) e [combina dati](http://msdn.microsoft.com/library/hh548680.aspx) argomenti per altri dettagli.  
+# <a name="task-4-optional-combining-matching-and-publishing-new-set-of-data"></a>Attività 4 (facoltativo): Combinazione, corrispondenza e pubblicazione di un nuovo set di dati
+  Con il tempo, sarà necessario aggiungere ulteriori dati al repository MDS. Prima di aggiungere dati, può essere utile confrontare i nuovi dati ai dati già gestiti in MDS, per verificare che non si stiano aggiungendo dati duplicati o non accurati. Nel componente aggiuntivo Master Data Services per Excel è possibile combinare i dati di due fogli di lavoro e confrontarli per identificare e rimuovere i duplicati prima di pubblicare i dati in MDS. Per identificare le corrispondenze nei dati viene utilizzata la funzionalità di corrispondenza di DQS dalla relativa caratteristica del componente aggiuntivo MDS per Excel. In questa attività verranno combinati i dati di due fogli di lavoro in uno e, successivamente, verrà eseguita l'attività di individuazione delle corrispondenze per identificare e rimuovere i duplicati prima della pubblicazione in MDS. Visualizzare [corrispondenza Data Quality nel componente aggiuntivo MDS per Excel](https://msdn.microsoft.com/library/hh548681.aspx) e [combina dati](https://msdn.microsoft.com/library/hh548680.aspx) argomenti per altri dettagli.  
   
 1.  Avvia nuova istanza della **Excel**. Fare clic su **avviare**, scegliere **eseguire**, digitare **Excel**, fare clic su **OK**.  
   
@@ -33,7 +33,7 @@ ms.locfileid: "48061751"
   
 4.  Dovrebbero vedere le **Esplora dati Master** riquadro a destra. Se non viene visualizzato Esplora dati Master, fare clic su **Mostra Esplora** pulsante della barra multifunzione.  
   
-5.  Nel **Esplora dati Master** finestra, selezionare **Suppliers** nell'elenco a discesa per il **modello**. Verificare che il modello disponga di un'entità: **Supplier**.  
+5.  Nel **Esplora dati Master** finestra, selezionare **Suppliers** nell'elenco a discesa per il **modello**. Verificare che il modello disponga di un'entità: **Fornitore**.  
   
      ![Excel - finestra di Esplora dati Master](../../2014/tutorials/media/et-combinematchandpublishnewsod-02.jpg "Excel - finestra di Esplora dati Master")  
   
@@ -43,7 +43,7 @@ ms.locfileid: "48061751"
   
 8.  Aprire **Suppliers. xls** file (originale file di input che è incluso nei file dell'esercitazione) e copiare tutte le righe (tre) delle **CombineAndCleanse** foglio di lavoro **Foglio2**.  
   
-9. Tornare alla **Supplier** foglio nel **cartella 1 – Microsoft Excel** (non il **Cleansed and Matched Supplier List** Excel) che è connesso a **MDS**.  
+9. Tornare alla **Supplier** foglio nel **libro 1 - Microsoft Excel** (non il **Cleansed and Matched Supplier List** Excel) che è connesso a **MDS**.  
   
 10. Fare clic su **dati Master** nella barra dei menu.  
   
@@ -93,7 +93,7 @@ ms.locfileid: "48061751"
   
 25. Fare clic su **OK**.  
   
-26. Il processo di corrispondenza deve essere identificato un duplicato per il fornitore con **Code: S1**.  
+26. Tramite il processo di corrispondenza deve essere identificato un duplicato per il fornitore con **Code: S1**.  
   
      ![Excel - risultati corrispondenza](../../2014/tutorials/media/et-combinematchandpublishnewsod-08.jpg "Excel - risultati corrispondenza")  
   
@@ -111,9 +111,9 @@ ms.locfileid: "48061751"
   
 33. **Ordinamento** l'elenco in base **codice** e cercare i record con **S57** e **S66** come codici. È anche possibile usare la **filtro** pulsante sulla barra degli strumenti per cercare un record specifico nell'elenco.  
   
-34. A questo punto, chiudere **Cartella1 – Microsoft Excel** finestra senza salvare il file.  
+34. A questo punto, chiudere **Book1 - Microsoft Excel** finestra senza salvare il file.  
   
 ## <a name="next-step"></a>Passaggio successivo  
- [Attività 5: Creazione di un attributo basato su dominio di Excel](../../2014/tutorials/task-5-creating-a-domain-based-attribute-from-excel.md)  
+ [Attività 5: Creazione di un attributo basato su dominio da Excel](../../2014/tutorials/task-5-creating-a-domain-based-attribute-from-excel.md)  
   
   

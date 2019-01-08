@@ -1,5 +1,5 @@
 ---
-title: Scegliere la colonna da utilizzare per testare un modello di Data Mining | Documenti Microsoft
+title: Scegliere la colonna da usare per il test di un modello di Data Mining | Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 7bb77d40ee2635d210346e459dcfbd9aed619ed4
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: bcfe927f3b58787ab316a637d0c1d493f73c104a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34016618"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52511417"
 ---
 # <a name="choose-the-column-to-use-for-testing-a-mining-model"></a>Scegliere la colonna da utilizzare per il test di un modello di data mining
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -22,13 +22,13 @@ ms.locfileid: "34016618"
   
  Nell'elenco seguente vengono descritte alcune considerazioni aggiuntive relative alla scelta dell'attributo stimabile da utilizzare nel test:  
   
--   Alcuni tipi di modelli di data mining possono stimare più attributi, ad esempio reti neurali che possono esplorare le relazioni tra molti attributi.  
+-   Alcuni tipi di modelli di data mining possono stimare più attributi, ad esempio le reti neurali, che è possano esplorare le relazioni tra molti attributi.  
   
--   Altri tipi di modelli di data mining, ad esempio i modelli di clustering, non dispongono necessariamente di un attributo stimabile. Non è possibile testare i modelli di clustering a meno che non dispongano di un attributo stimabile.  
+-   Altri tipi di modelli, ad esempio i modelli di clustering: non data mining non necessariamente avere un attributo stimabile. Non è possibile testare i modelli di clustering a meno che non dispongano di un attributo stimabile.  
   
 -   Per creare un grafico a dispersione o misurare l'accuratezza di un modello di regressione è necessario scegliere un attributo stimabile continuo come risultato. In questo caso, non è possibile specificare un valore di destinazione. Se si crea qualsiasi grafico diverso da un grafico a dispersione, anche la colonna della struttura di data mining sottostante deve avere un tipo di contenuto **Discreto** o **Discretizzato**.  
   
--   Se si sceglie un attributo discreto come risultato stimabile, è anche possibile specificare un valore di destinazione oppure lasciare vuoto il campo **Valore stima** . Se si include un valore per **Valore stima**, il grafico misurerà unicamente l'efficacia del modello durante la stima del valore di destinazione. Se non si specifica un risultato di destinazione, il modello viene misurato per l'accuratezza alla stima di tutti i risultati.  
+-   Se si sceglie un attributo discreto come risultato stimabile, è anche possibile specificare un valore di destinazione oppure lasciare vuoto il campo **Valore stima** . Se si include un' **valore stima**, il grafico misurerà solo l'efficacia del modello alla stima del valore di destinazione. Se non si specifica un risultato di destinazione, il modello viene misurato per l'accuratezza alla stima di tutti i risultati.  
   
 -   Se si desidera includere più modelli e confrontarli in un singolo grafico di accuratezza, tutti i modelli devono utilizzare la stessa colonna stimabile.  
   

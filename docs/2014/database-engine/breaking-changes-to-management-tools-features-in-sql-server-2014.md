@@ -1,7 +1,7 @@
 ---
 title: Modifiche di rilievo alla gestione delle funzionalità degli strumenti in SQL Server 2014 | Microsoft Docs
 ms.custom: ''
-ms.date: 06/13/2017
+ms.date: 11/27/2018
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: ssms
@@ -10,12 +10,12 @@ ms.assetid: 3ff3fad8-b569-4516-bd58-5a3efeb537e2
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9f3e0df9dc3f9c81907d4c230a36586a5953baf9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 73e2c6ecb4ae2f829c02897ed5c6ab5d84f1ba4b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48079431"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52545301"
 ---
 # <a name="breaking-changes-to-management-tools-features-in-sql-server-2014"></a>Modifiche di rilievo nelle funzionalità degli strumenti di gestione in SQL Server 2014
   In questo argomento vengono descritte le modifiche di rilievo apportate alle funzionalità degli strumenti di gestione. Tali modifiche potrebbero interrompere il funzionamento di applicazioni, funzionalità o script basati su versioni precedenti di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. È possibile che questi problemi si verifichino quando viene effettuato un aggiornamento. Per altre informazioni, vedere [Use Upgrade Advisor to Prepare for Upgrades](../../2014/sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md).  
@@ -30,8 +30,13 @@ ms.locfileid: "48079431"
   
 ### <a name="smo-has-been-reversioned-in-includesssql11includessssql11-mdmd"></a>SMO è stato modificato in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
  È possibile che il codice sviluppato con SMO da [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] o versioni precedenti non venga compilato in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] senza modifiche minori. Per altre informazioni, vedere [Compatibilità con le versioni precedenti in SMO](../relational-databases/server-management-objects-smo/backward-compatibility-in-smo.md).  
-  
+
+## <a name="previous-versions"></a> Modifiche di rilievo in SQL Server 2005  
+
+[!INCLUDE[Archived documentation for very old versions of SQL Server](../includes/paragraph-content/previous-versions-archive-documentation-sql-server.md)]
+
 ## <a name="see-also"></a>Vedere anche  
  [Compatibilità con le versioni precedenti](../../2014/getting-started/backward-compatibility.md)  
+ [Informazioni sulle modifiche di rilievo alle funzionalità degli strumenti di gestione in SQL Server 2014](breaking-changes-to-database-engine-features-in-sql-server-2016.md?view=sql-server-2014)  
   
   

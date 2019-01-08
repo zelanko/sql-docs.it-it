@@ -11,12 +11,12 @@ ms.assetid: 4689d780-4bf6-4cf8-8fde-eb3f15dd668a
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6450b85b00906facfb291d8085d729474577bd32
-ms.sourcegitcommit: fafb9b5512695b8e3fc2891f9c5e3abd7571d550
+ms.openlocfilehash: 77d37fff5b22e15656ef2eb76f33ada44572ba4c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50753578"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52526115"
 ---
 # <a name="modifying-the-date-dimension"></a>Modifica della dimensione Date
   Nelle attività di questo argomento verrà creata una gerarchia definita dell'utente e verranno modificati i nomi dei membri visualizzati per gli attributi Date, Month, Calendar Quarter e Calendar Semester. Verranno inoltre definite chiavi composte per gli attributi, verrà controllato l'ordinamento dei membri di dimensione e verranno definite relazioni tra attributi.  
@@ -65,7 +65,7 @@ ms.locfileid: "50753578"
   
 3.  Se la finestra Proprietà non è aperta, aprirla e fare clic sul pulsante **Nascondi automaticamente** sulla barra del titolo in modo che rimanga aperta.  
   
-4.  Fare clic sul campo proprietà **NameColumn** nella parte inferiore della finestra e fare clic sui puntini di sospensione (**…**) per aprire la finestra di dialogo **Colonna nome** .  
+4.  Scegliere il **NameColumn** campo nella parte inferiore della finestra proprietà e quindi fare clic sui puntini (**...** ) per aprire la **colonna nome** nella finestra di dialogo.  
   
 5.  Selezionare `SimpleDate` nella parte inferiore della **Source column** elenco e quindi fare clic su **OK**.  
   

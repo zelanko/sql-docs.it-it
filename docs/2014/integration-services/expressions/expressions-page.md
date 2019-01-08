@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.expressionspage.f1
@@ -15,12 +14,12 @@ ms.assetid: c9016ec6-11c1-4ebd-b2a7-0fa6631fd9e4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: eb12bb684753a5d965054e361f8b0b23ebf7802d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 01cabd46c51ed09af8d5de3a173e218dedbd5ac1
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48150471"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52773243"
 ---
 # <a name="expressions-page"></a>Pagina Espressioni
   Usare la pagina **Espressioni** per modificare le espressioni di proprietà e accedere alle finestre di dialogo **Editor espressioni di proprietà** e **Property Expression Builder** (Generatore di espressioni di proprietà).  
@@ -37,7 +36,7 @@ ms.locfileid: "48150471"
  Fare clic sui puntini di sospensione per aprire la finestra di dialogo **Generatore di espressioni** . Per altre informazioni, vedere [Generatore di espressioni](expression-builder.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Integration Services &#40;SSIS&#41; le variabili](../integration-services-ssis-variables.md)   
+ [Variabili di Integration Services &#40;SSIS&#41;](../integration-services-ssis-variables.md)   
  [Variabili di sistema](../system-variables.md)   
  [Espressioni di Integration Services &#40;SSIS&#41;](integration-services-ssis-expressions.md)  
   

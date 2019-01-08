@@ -19,12 +19,12 @@ ms.assetid: 8f44e194-d556-4119-a759-4c9dec7ecead
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8990539dcee3be8eb8101050a9f9f11d880fcd7e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3f2c16e66c03eee8c5e1616fdaa0f0d1b154b85e
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48138671"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53350395"
 ---
 # <a name="profiling-odbc-driver-performance"></a>Profiling delle prestazioni del driver ODBC
   Il driver ODBC di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client può eseguire il profiling di due tipi di dati sulle prestazioni:  
@@ -74,7 +74,7 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
   
 ### <a name="application-profile-statistics"></a>Statistiche sul profilo dell'applicazione  
   
-|Campo SQLPERF|Description|  
+|Campo SQLPERF|Descrizione|  
 |-------------------|-----------------|  
 |TimerResolution|Risoluzione minima del tempo di clock del server in millisecondi. Viene generalmente riportato come 0 (zero) e deve essere considerato solo se il numero riportato è maggiore. Se la risoluzione minima del tempo di clock del server è maggiore dell'intervallo probabile per alcune delle statistiche basate sul timer, tali statistiche possono essere state alterate.|  
 |SQLidu|Numero di istruzioni INSERT, DELETE o UPDATE dopo SQL_PERF_START.|  
@@ -82,7 +82,7 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
 |SQLSelects|Numero di istruzioni SELECT elaborate dopo SQL_PERF_START.|  
 |SQLSelectRows|Numero di righe selezionate dopo SQL_PERF_START.|  
 |Transazioni|Numero di transazioni utente dopo SQL_PERF_START, inclusi i rollback. Quando un'applicazione ODBC è in esecuzione con SQL_AUTOCOMMIT_ON, ogni comando viene considerato una transazione.|  
-|SQLPrepares|Numerosi [funzione SQLPrepare](http://go.microsoft.com/fwlink/?LinkId=59360) chiamate dopo SQL_PERF_START.|  
+|SQLPrepares|Numerosi [funzione SQLPrepare](https://go.microsoft.com/fwlink/?LinkId=59360) chiamate dopo SQL_PERF_START.|  
 |ExecDirects|Numerosi **SQLExecDirect** chiamate dopo SQL_PERF_START.|  
 |SQLExecutes|Numerosi **SQLExecute** chiamate dopo SQL_PERF_START.|  
 |CursorOpens|Numero di volte in cui il driver ha aperto un cursore server dopo SQL_PERF_START.|  
@@ -112,7 +112,7 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
   
 ### <a name="time-statistics"></a>Statistiche temporali  
   
-|Campo SQLPERF|Description|  
+|Campo SQLPERF|Descrizione|  
 |-------------------|-----------------|  
 |msExecutionTime|Tempo cumulativo impiegato dal driver per l'elaborazione dopo SQL_PERF_START, incluso il tempo di attesa per le risposte dal server.|  
 |msNetworkServerTime|Tempo cumulativo di attesa del driver per le risposte dal server.|  

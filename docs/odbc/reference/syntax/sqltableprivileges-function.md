@@ -20,16 +20,16 @@ ms.assetid: 8cfdb64f-64c5-47e6-ad57-0533ac630afa
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 099582fa557d9e970db3b38c4fb95ae677bb5274
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fe1b3a3420ad882136b13b131938169dbdb224bd
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47678319"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53204081"
 ---
 # <a name="sqltableprivileges-function"></a>Funzione SQLTablePrivileges
 **Conformità**  
- Versione introdotta: Conformità agli standard 1.0 di ODBC: ODBC  
+ Versione introdotta: Conformità agli standard 1.0 ODBC: ODBC  
   
  **Riepilogo**  
  **SQLTablePrivileges** restituisce un elenco di tabelle e i privilegi associati a ogni tabella. Il driver restituisce le informazioni come set di risultati dell'istruzione specificata.  
@@ -82,7 +82,7 @@ SQLRETURN SQLTablePrivileges(
 ## <a name="diagnostics"></a>Diagnostica  
  Quando **SQLTablePrivileges** restituisce SQL_ERROR o SQL_SUCCESS_WITH_INFO, un valore SQLSTATE associato possono essere ottenuti chiamando **SQLGetDiagRec** con un *HandleType* SQL_HANDLE_STMT e un *gestiscono* dei *StatementHandle*. Nella tabella seguente sono elencati i valori SQLSTATE comunemente restituiti da **SQLTablePrivileges** e illustra ognuna nel contesto di questa funzione; la notazione "(DM)" precede le descrizioni di SQLSTATE restituiti da Gestione Driver . Il codice restituito a ogni valore SQLSTATE è SQL_ERROR, se non specificato diversamente.  
   
-|SQLSTATE|Errore|Description|  
+|SQLSTATE|Errore|Descrizione|  
 |--------------|-----------|-----------------|  
 |01000|Avviso generale|Messaggio informativo specifico del driver. (Funzione restituisce SQL_SUCCESS_WITH_INFO).|  
 |08S01|Errore del collegamento di comunicazione|Il collegamento di comunicazione tra il driver e l'origine dati a cui è stato connesso il driver non è stato possibile prima dell'elaborazione di funzione è stata completata.|  
@@ -130,7 +130,7 @@ SQLRETURN SQLTablePrivileges(
 |TABLE_NAME (ODBC 1.0)|3|Non NULL varchar|Nome della tabella.|  
 |GRANTOR (ODBC 1.0)|4|Varchar|Nome dell'utente che ha concesso il privilegio; NULL se non applicabile all'origine dati.<br /><br /> Per tutte le righe in cui il valore nella colonna all'utente autorizzato è il proprietario dell'oggetto, la colonna GRANTOR sarà sistema".|  
 |ALL'UTENTE AUTORIZZATO (ODBC 1.0)|5|Non NULL varchar|Nome dell'utente a cui è stato concesso il privilegio.|  
-|PRIVILEGIO (ODBC 1.0)|6|Non NULL varchar|Il privilegio di tabella. Potrebbe essere uno dei seguenti o un privilegio di specifici dell'origine dati.<br /><br /> Selezionare: L'utente autorizzato è consentito recuperare i dati per una o più colonne della tabella.<br /><br /> INSERT: L'utente autorizzato è consentito inserire nuove righe contenenti i dati per una o più colonne nella tabella.<br /><br /> AGGIORNAMENTO: L'utente autorizzato è consentito aggiornare i dati in una o più colonne della tabella.<br /><br /> DELETE: L'utente autorizzato è consentito eliminare le righe di dati dalla tabella.<br /><br /> RIFERIMENTI: L'utente autorizzato è consentito fare riferimento a uno o più colonne della tabella all'interno di un vincolo (ad esempio, un valore univoco, referenziale, vincolo check nella tabella o).<br /><br /> L'ambito dell'azione, l'utente autorizzato è consentito da un privilegio di tabella specificata è dipende dall'origine dati. Il privilegio UPDATE, ad esempio, potrebbe consentire all'utente autorizzato per aggiornare tutte le colonne di una tabella in un'origine dati e solo le colonne per cui l'utente grantor dispone del privilegio UPDATE in un'altra origine dati.|  
+|PRIVILEGIO (ODBC 1.0)|6|Non NULL varchar|Il privilegio di tabella. Potrebbe essere uno dei seguenti o un privilegio di specifiche dell'origine dati.<br /><br /> SELEZIONARE: L'utente autorizzato è consentito recuperare i dati per una o più colonne della tabella.<br /><br /> INSERIRE: L'utente autorizzato è consentito inserire nuove righe contenenti i dati per una o più colonne nella tabella.<br /><br /> AGGIORNAMENTO: L'utente autorizzato è consentito eseguire l'aggiornamento dei dati in uno o più colonne della tabella.<br /><br /> DELETE: L'utente autorizzato è consentito eliminare le righe di dati dalla tabella.<br /><br /> RIFERIMENTI: L'utente autorizzato è consentito per fare riferimento a una o più colonne della tabella all'interno di un vincolo (ad esempio, un valore univoco, referenziale, vincolo check nella tabella o).<br /><br /> L'ambito dell'azione, l'utente autorizzato è consentito da un privilegio di tabella specificata è dipendente dall'origine dati. Il privilegio UPDATE, ad esempio, potrebbe consentire all'utente autorizzato per aggiornare tutte le colonne di una tabella in un'origine dati e solo le colonne per cui l'utente grantor dispone del privilegio UPDATE in un'altra origine dati.|  
 |IS_GRANTABLE (ODBC 1.0)|7|Varchar|Indica se l'utente autorizzato è consentito di concedere il privilegio ad altri utenti. "Sì", "NO", oppure NULL se sconosciuto o non applicabile all'origine dati.<br /><br /> Non è un privilegio che è possibile concedere o che non è possibile concedere ma non entrambi. Il set di risultati restituito da **SQLColumnPrivileges** mai conterrà due righe per cui tutte le colonne ad eccezione della colonna IS_GRANTABLE contengono lo stesso valore.|  
   
 ## <a name="code-example"></a>Esempio di codice  

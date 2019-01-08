@@ -20,12 +20,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 96f6b91d68159bd1326b30ffc8b7e89e61cb8402
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: 620413448f7bd6c10af2d0e7333cd9eb793ef41a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49169141"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52521248"
 ---
 # <a name="sysquerystorewaitstats-transact-sql"></a>sys.query_store_wait_stats (Transact-SQL)
 
@@ -33,15 +33,15 @@ ms.locfileid: "49169141"
 
   Contiene informazioni sull'attesa per la query.  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**wait_stats_id**|**bigint**|Identificatore di riga che rappresenta le statistiche di attesa per plan_id, runtime_stats_interval_id, execution_type e wait_category. È univoco solo per gli ultimi intervalli di statistiche di runtime. Per l'intervallo attualmente attivo, potrebbe esserci più righe che rappresenta le statistiche di attesa per il piano fa plan_id, con il tipo di esecuzione rappresentato da execution_type e categoria di attesa rappresentato da wait_category. In genere, una riga rappresenta le statistiche di attesa che vengono scaricate su disco, mentre altri (s) rappresentano lo stato in memoria. Di conseguenza, per ottenere lo stato effettivo per ogni intervallo è necessario aggregare le metriche, il raggruppamento per plan_id, runtime_stats_interval_id, execution_type e wait_category. |  
 |**plan_id**|**bigint**|Chiave esterna. Crea un join al [Sys. query_store_plan &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md).|  
 |**runtime_stats_interval_id**|**bigint**|Chiave esterna. Crea un join al [sys.query_store_runtime_stats_interval &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md).|  
 |**wait_category**|**tinyint**|Tipi di attesa sono suddivisi in categorie usando la tabella seguente e quindi tempo di attesa è aggregato per queste categorie di attesa. Categorie di attesa diversi richiedono un'analisi di follow-up diversa per risolvere il problema, ma tipi dalla stessa categoria lead per esperienze simili sulla risoluzione dei problemi di attesa e specificando la query interessata anche per le attese è il pezzo mancante di cui per completare il maggior parte di queste ricerche correttamente.|
 |**wait_category_desc**|**nvarchar(128)**|Per la descrizione testuale del campo categoria attesa, esaminare la tabella seguente.|
-|**execution_type**|**tinyint**|Determina il tipo di esecuzione di query:<br /><br /> 0 – esecuzione normale (correttamente completata)<br /><br /> 3 – inizializzata sul lato client ha interrotto l'esecuzione<br /><br /> 4 - eccezione ha interrotto l'esecuzione|  
-|**execution_type_desc**|**nvarchar(128)**|Descrizione testuale del campo di tipo di esecuzione:<br /><br /> 0-normale<br /><br /> 3 – interrotta<br /><br /> 4 - eccezione|  
+|**execution_type**|**tinyint**|Determina il tipo di esecuzione di query:<br /><br /> 0 - esecuzione normale (correttamente completata)<br /><br /> 3 - client ha avviato ha interrotto l'esecuzione<br /><br /> 4 - eccezione ha interrotto l'esecuzione|  
+|**execution_type_desc**|**nvarchar(128)**|Descrizione testuale del campo di tipo di esecuzione:<br /><br /> 0 - normale<br /><br /> 3 - interrotta<br /><br /> 4 - eccezione|  
 |**total_query_wait_time_ms**|**bigint**|Totale `CPU wait` ora per il piano di query entro l'intervallo di aggregazione e categoria (segnalato in millisecondi) di attesa.|
 |**avg_query_wait_time_ms**|**float**|Media durata dell'attesa per il piano di query per ogni esecuzione all'interno della categoria di attesa e intervallo di aggregazione (segnalata in millisecondi).|
 |**last_query_wait_time_ms**|**bigint**|Ultimo durata dell'attesa per il piano di query entro l'intervallo di aggregazione e categoria (segnalato in millisecondi) di attesa.|

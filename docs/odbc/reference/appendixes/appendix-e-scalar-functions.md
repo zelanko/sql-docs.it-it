@@ -1,5 +1,5 @@
 ---
-title: 'Appendice e: funzioni scalari | Microsoft Docs'
+title: 'Appendice e: Funzioni scalari | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,14 +15,14 @@ ms.assetid: 59c7cd5e-32d6-43ab-bac3-7010322d105a
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 94e33460d3c50363e96e90fb457467b8e5cda315
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 71c80efdb2f4a87537d472ee4b6dc6bdc65af70f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47631859"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52540514"
 ---
-# <a name="appendix-e-scalar-functions"></a>Appendice E: Funzioni scalari
+# <a name="appendix-e-scalar-functions"></a>Appendice e: Funzioni scalari
 ODBC specifica i tipi seguenti di funzioni scalari, con informazioni dettagliate su ognuno di questi tipi funzione forniti nelle sezioni corrispondenti di questa appendice. Descrizioni delle funzioni includono sintassi associata.  
   
  In questa appendice contiene gli argomenti seguenti.  

@@ -22,12 +22,12 @@ ms.assetid: 947eebd2-3622-479e-8aa6-57c11836e4ec
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 52acf8b0d2ebe628deeac19f994f53d25861452c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 48fafd92104745ac438c212847e9b2976e84db6d
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48170301"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53352693"
 ---
 # <a name="backup-and-restore-of-analysis-services-databases"></a>Backup e ripristino di database di Analysis Services
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] è disponibile una funzionalità di backup e ripristino per poter eseguire il recupero temporizzato di un database e dei relativi oggetti. Tale funzionalità rappresenta anche una tecnica valida per l'esecuzione della migrazione dei database a server aggiornati, per lo spostamento di database tra server o per la distribuzione di un database in un server di produzione. Per il recupero dei dati, se non è già disponibile un piano di backup per i dati importanti, è consigliabile progettarlo e implementarlo appena possibile.  
@@ -36,7 +36,7 @@ ms.locfileid: "48170301"
   
  Per ottenere un backup completo in cui siano inclusi i dati di origine, è necessario eseguire il backup del database contenente i dati di dettaglio. In particolare, se si utilizza l'archiviazione di database ROLAP o DirectQuery, i dati di dettaglio vengono archiviati in un database relazionale di SQL Server esterno che è diverso dal database di Analysis Services. In alternativa, se tutti gli oggetti sono tabulari o multidimensionali, nel backup di Analysis Services saranno inclusi sia i metadati che i dati di origine.  
   
- Un vantaggio ovvio dell'automazione del backup consiste nel fatto che lo snapshot dei dati verrà sempre aggiornato in base alla frequenza corrispondente specificata. L'esecuzione dei backup è garantita dalle utilità di pianificazione automatizzate. È inoltre possibile automatizzare il ripristino di un database, ottenendo in tal modo una strategia valida per la replica dei dati, ma è necessario verificare che sia stato eseguito il backup del file della chiave di crittografia nell'istanza in cui si esegue la replica. La funzionalità di sincronizzazione è riservata alla replica dei database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , ma solo per i dati non aggiornati. È possibile implementare tutte le caratteristiche sopra indicate tramite l'interfaccia utente, mediante comandi XML/A o l'esecuzione a livello di programmazione nella libreria AMO. Per ulteriori informazioni sulle strategie di backup, vedere [Strategie di backup con SQL Server 2005 Analysis Services](http://go.microsoft.com/fwlink/?LinkId=81888).  
+ Un vantaggio ovvio dell'automazione del backup consiste nel fatto che lo snapshot dei dati verrà sempre aggiornato in base alla frequenza corrispondente specificata. L'esecuzione dei backup è garantita dalle utilità di pianificazione automatizzate. È inoltre possibile automatizzare il ripristino di un database, ottenendo in tal modo una strategia valida per la replica dei dati, ma è necessario verificare che sia stato eseguito il backup del file della chiave di crittografia nell'istanza in cui si esegue la replica. La funzionalità di sincronizzazione è riservata alla replica dei database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , ma solo per i dati non aggiornati. È possibile implementare tutte le caratteristiche sopra indicate tramite l'interfaccia utente, mediante comandi XML/A o l'esecuzione a livello di programmazione nella libreria AMO. Per ulteriori informazioni sulle strategie di backup, vedere [Strategie di backup con SQL Server 2005 Analysis Services](https://go.microsoft.com/fwlink/?LinkId=81888).  
   
  In questo argomento sono contenute le sezioni seguenti:  
   
@@ -125,7 +125,7 @@ ms.locfileid: "48170301"
  Per altre informazioni sul ripristino di un database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , vedere [Opzioni di ripristino](restore-options.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Il backup, ripristino e sincronizzazione dei database &#40;XMLA&#41;](../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)   
+ [Backup, ripristino e sincronizzazione di database &#40;XMLA&#41;](../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)   
  [PowerShell per Analysis Services](../analysis-services-powershell.md)  
   
   

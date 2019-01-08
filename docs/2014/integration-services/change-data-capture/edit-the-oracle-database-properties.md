@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - oraProp
@@ -13,19 +12,19 @@ ms.assetid: 58dc99f1-ee6b-4508-bb66-2bc589611ff7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 88cd66ceeacaec3a3e3d167c9ca073cbe1007b64
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cfc119c031f0eeb84317cd1bcd8250f8ab803b6b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48079501"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52770863"
 ---
 # <a name="edit-the-oracle-database-properties"></a>Modificare le proprietà del database Oracle
   Utilizzare la scheda Oracle nell'editor delle proprietà per modificare la descrizione fornita nella pagina Create CDC database della New Instance Wizard e le informazioni di connessione al database di log mining Oracle.  
   
  Di seguito vengono illustrate le informazioni nella scheda **Oracle** .  
   
- **Nome**  
+ **Name**  
  Nome dell'istanza di CDC immesso nella pagina Create CDC Database della New Instance Wizard. Questo campo è di sola lettura, pertanto non è possibile modificare queste informazioni.  
   
  **Descrizione**  
@@ -37,14 +36,14 @@ ms.locfileid: "48079501"
  **Oracle Log Mining Authentication**  
  Per immettere le credenziali di autenticazione per il database Oracle che contiene il log miner, selezionare una delle opzioni disponibili in **Authentication**:  
   
--   **Windows Authentication**: selezionare questa opzione per utilizzare le credenziali del dominio Windows correnti. È possibile utilizzare questa opzione solo se il database Oracle è configurato per l'utilizzo dell'autenticazione di Windows.  
+-   **L'autenticazione di Windows**: Selezionare questa opzione per utilizzare le credenziali di dominio Windows correnti. È possibile utilizzare questa opzione solo se il database Oracle è configurato per l'utilizzo dell'autenticazione di Windows.  
   
--   **Oracle Authentication**: se si seleziona questa opzione, è necessario digitare il **nome utente** e la **password** dell'utente nel database Oracle a cui si effettua la connessione.  
+-   **Oracle Authentication**: Se si seleziona questa opzione, è necessario digitare il **nome utente** e **Password** per l'utente nel database Oracle a cui ci si connette a.  
   
  È possibile visualizzare le proprietà del database Oracle nel visualizzatore. Quando si utilizza il visualizzatore le informazioni sono in sola lettura. Nel visualizzatore è inoltre incluso un elenco delle colonne acquisite nella tabella. Per informazioni su come accedere al visualizzatore, vedere [How to Manage a CDC Instance](manage-a-cdc-instance.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Come gestire un servizio CDC da CDC Designer Console](how-to-manage-a-cdc-service-from-the-cdc-designer-console.md)   
+ [Modalità di gestione di un servizio CDC da CDC Designer Console](how-to-manage-a-cdc-service-from-the-cdc-designer-console.md)   
  [Connettersi a un database di origine Oracle](connect-to-an-oracle-source-database.md)   
  [Connettersi a Oracle](connect-to-oracle.md)  
   

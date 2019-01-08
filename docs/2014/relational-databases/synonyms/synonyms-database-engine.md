@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: t-sql
 ms.topic: conceptual
 dev_langs:
 - TSQL
@@ -14,12 +14,12 @@ ms.assetid: 6210e1d5-075f-47e4-ac8d-f84bcf26fbc0
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 53f6d2d4c902389c900f4851d0ec1973a23f5a8e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2066eeb7d9b86228ed86aed290e69f2a0e981b95
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48188051"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52815133"
 ---
 # <a name="synonyms-database-engine"></a>Sinonimi (Motore di database)
   Un sinonimo è un oggetto di database che viene utilizzato per gli scopi seguenti:  
@@ -41,7 +41,7 @@ ms.locfileid: "48188051"
 |Procedura di filtro della replica|Stored procedure estesa|  
 |Funzione scalare SQL|Funzione con valori di tabella SQL|  
 |Funzione con valori di tabella inline SQL|Stored procedure SQL|  
-|Vista|Tabella<sup>1</sup> (definita dall'utente)|  
+|visualizzazione|Tabella<sup>1</sup> (definita dall'utente)|  
   
  <sup>1</sup> include tabelle temporanee globali e locali  
   
@@ -64,7 +64,7 @@ ms.locfileid: "48188051"
   
 |||  
 |-|-|  
-|CONTROL|Elimina|  
+|CONTROL|DELETE|  
 |EXECUTE|INSERT|  
 |SELECT|TAKE OWNERSHIP|  
 |UPDATE|VIEW DEFINITION|  
@@ -75,7 +75,7 @@ ms.locfileid: "48188051"
 |||  
 |-|-|  
 |SELECT|INSERT|  
-|UPDATE|Elimina|  
+|UPDATE|DELETE|  
 |EXECUTE|Sub-SELECT|  
   
  Quando si utilizzano i sinonimi nei contesti citati, l'istruzione viene eseguita sull'oggetto di base. Ad esempio, se un sinonimo fa riferimento a un oggetto di base che è una tabella e si inserisce una riga nel sinonimo, la riga verrà inserita nella tabella referenziata.  

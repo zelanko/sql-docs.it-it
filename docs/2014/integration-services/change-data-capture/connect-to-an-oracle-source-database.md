@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - oraDb
@@ -13,12 +12,12 @@ ms.assetid: 220cf555-0db2-443c-8f87-8e413f3ca731
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 565f88565a797c2f902b2df4f42deea631b34bb4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f22b5d71aa2d6d4ac63fe597e9da6b9dfb0a15c0
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48114221"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53202190"
 ---
 # <a name="connect-to-an-oracle-source-database"></a>Connettersi a un database di origine Oracle
   Utilizzare la pagina Oracle Source per fornire le informazioni necessarie per la connessione al database di origine Oracle. Tramite l'istanza di CDC verranno letti i log di rollforward del database Oracle a cui si è effettuata la connessione.  
@@ -35,13 +34,13 @@ ms.locfileid: "48114221"
  **Oracle Log Mining Authentication**  
  Per immettere le credenziali per l'utente del database Oracle autorizzato per il log mining, selezionare una delle opzioni seguenti:  
   
--   **Windows Authentication**: selezionare questa opzione per utilizzare le credenziali del dominio Windows correnti. È possibile utilizzare questa opzione solo se il database Oracle è configurato per l'utilizzo dell'autenticazione di Windows.  
+-   **L'autenticazione di Windows**: Selezionare questa opzione per utilizzare le credenziali di dominio Windows correnti. È possibile utilizzare questa opzione solo se il database Oracle è configurato per l'utilizzo dell'autenticazione di Windows.  
   
--   **Oracle Authentication**: se si seleziona questa opzione, è necessario digitare il **nome utente** e la **password** dell'utente nel database Oracle a cui si effettua la connessione.  
+-   **Oracle Authentication**: Se si seleziona questa opzione, è necessario digitare il **nome utente** e **Password** per l'utente nel database Oracle a cui ci si connette a.  
   
-> [!NOTE]  
+> [!NOTE]
 >  Per poter essere un utente del log mining un utente deve disporre dei privilegi seguenti per il database Oracle.  
->   
+> 
 >  -   SELECT on \<qualsiasi-tabella-acquisita>  
 > -   SELECT ANY TRANSACTION  
 > -   EXECUTE on DBMS LOGMNR  
@@ -55,7 +54,7 @@ ms.locfileid: "48114221"
 > -   SELECT on ALL OBJECTS  
 > -   SELECT on DBA OBJECTS  
 > -   SELECT on ALL TABLES  
->   
+> 
 >  Se non è possibile concedere alcuni di questi privilegi a un V$xxx, concederli a V_S$xxx.  
   
  **Test connessione**  
@@ -67,7 +66,7 @@ ms.locfileid: "48114221"
  Dopo avere completato l'immissione delle informazioni in questa pagina, scegliere **Avanti** in [Select Oracle Tables and Columns](select-oracle-tables-and-columns.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Come creare l'istanza di Database SQL Server Cambia](how-to-create-the-sql-server-change-database-instance.md)   
+ [Procedura di creazione dell'istanza del database delle modifiche di SQL Server](how-to-create-the-sql-server-change-database-instance.md)   
  [Modificare le proprietà dell'istanza](edit-instance-properties.md)  
   
   

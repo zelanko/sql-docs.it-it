@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Recordset destination
@@ -13,12 +12,12 @@ ms.assetid: a7b143dc-8008-404f-83b0-b45ffbca6029
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a4d3afbb967238cfef049b491f6ab871f830708b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 04c63477a53de07777806aa8efb1fda78ef44264
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48102461"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52791103"
 ---
 # <a name="use-a-recordset-destination"></a>Utilizzo di una destinazione recordset
   La destinazione recordset non salva i dati in un'origine dati esterna, ma in un recordset in memoria archiviato in una variabile del pacchetto [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] del tipo di dati `Object`. Dopo che la destinazione recordset ha salvato i dati, in genere si utilizza un contenitore Ciclo Foreach con l'enumeratore Foreach ADO per elaborare una riga del recordset alla volta. L'enumeratore Foreach ADO salva il valore di ogni colonna della riga corrente in una variabile del pacchetto distinta. Quindi, le attività configurate nel contenitore Ciclo Foreach leggono tali valori dalle variabili ed eseguono alcune azioni.  
@@ -38,7 +37,7 @@ ms.locfileid: "48102461"
   
 1.  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]creare o aprire un pacchetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
-2.  Creare una variabile che conterrà il recordset salvato in memoria dalla destinazione Recordset e impostare il tipo della variabile `Object`.  
+2.  Creare una variabile che conterrà il recordset salvato in memoria dalla destinazione recordset, quindi impostare il relativo tipo su `Object`.  
   
 3.  Creare variabili aggiuntive dei tipi appropriati per contenere i valori di ogni colonna del recordset che si desidera utilizzare.  
   
@@ -69,21 +68,21 @@ ms.locfileid: "48102461"
   
 3.  Nella finestra **Variabili** creare le variabili che conterranno il recordset e i valori delle colonne della riga corrente:  
   
-    1.  Creare una variabile denominata `BonusRecordset`e impostarne il tipo di `Object`.  
+    1.  Creare una variabile denominata `BonusRecordset` e impostare il relativo tipo su `Object`.  
   
-         Il `BonusRecordset` variabile contiene il recordset.  
+         La variabile `BonusRecordset` contiene il recordset.  
   
-    2.  Creare una variabile denominata `EmailAddress`e impostarne il tipo di `String`.  
+    2.  Creare una variabile denominata `EmailAddress` e impostare il relativo tipo su `String`.  
   
-         Il `EmailAddress` variabile contiene l'indirizzo di posta elettronica del venditore.  
+         La variabile `EmailAddress` contiene l'indirizzo di posta elettronica del venditore.  
   
-    3.  Creare una variabile denominata `FirstName`e impostarne il tipo di `String`.  
+    3.  Creare una variabile denominata `FirstName` e impostare il relativo tipo su `String`.  
   
-         Il `FirstName` variabile contiene nome del venditore.  
+         La variabile `FirstName` contiene il nome del venditore.  
   
-    4.  Creare una variabile denominata `Bonus`e impostarne il tipo di `Double`.  
+    4.  Creare una variabile denominata `Bonus` e impostare il relativo tipo su `Double`.  
   
-         Il `Bonus` variabile contiene l'importo del premio del venditore.  
+         La variabile `Bonus` contiene l'importo del premio del venditore.  
   
 #### <a name="to-configure-the-connection-managers"></a>Per configurare le gestioni connessioni  
   

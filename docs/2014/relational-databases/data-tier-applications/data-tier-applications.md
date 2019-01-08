@@ -15,15 +15,15 @@ ms.assetid: a04a2aba-d07a-4423-ab8a-0a31658f6317
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4b3fd46b767b41e442621d7554daee713bd98abd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b9731a25633b5bc127039ae81a31df8c69bb8ccb
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48214731"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52540124"
 ---
 # <a name="data-tier-applications"></a>Applicazioni livello dati
-  Un'applicazione livello dati è un'entità logica di gestione dei database che definisce tutti gli oggetti [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ad esempio le tabelle, le viste e gli oggetti istanza, tra cui gli account di accesso, associati a un database dell'utente. Un'applicazione livello dati è un'unità indipendente della distribuzione di database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che consente a sviluppatori di livello dati e ad amministratori di database di comprimere gli oggetti [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un elemento portabile chiamato pacchetto di applicazione livello dati, noto anche come DACPAC.  
+  Un'applicazione livello dati è un'entità logica di gestione dei database che definisce tutti gli oggetti [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ad esempio le tabelle, le viste e gli oggetti istanza, inclusi gli account di accesso, associati a un database dell'utente. Un'applicazione livello dati è un'unità indipendente della distribuzione di database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che consente a sviluppatori di livello dati e ad amministratori di database di comprimere gli oggetti [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un elemento portabile chiamato pacchetto di applicazione livello dati, noto anche come DACPAC.  
   
  Un BACPAC è un elemento correlato che incapsula lo schema del database e i dati archiviati nel database.  
   
@@ -85,20 +85,20 @@ ms.locfileid: "48214731"
 ## <a name="dac-operations"></a>Operazioni dell'applicazione livello dati  
  Un'applicazione livello dati supporta le seguenti operazioni:  
   
--   **EXTRACT**: l'utente può estrarre un database in un file DACPAC.  
+-   **EXTRACT**: l'utente può estrarre un database in un pacchetto di applicazione livello dati.  
   
--   **DEPLOY**: l'utente può distribuire un file DACPAC in un server host. Quando la distribuzione viene eseguita tramite uno strumento di gestione come SQL Server Management Studio o il Portale di gestione per SQL Azure, il database risultante nel server host viene registrato in modo implicito come applicazione livello dati.  
+-   **DEPLOY**: l'utente può distribuire un pacchetto di applicazione livello dati in un server host. Quando la distribuzione viene eseguita tramite uno strumento di gestione come SQL Server Management Studio o il Portale di gestione per SQL Azure, il database risultante nel server host viene registrato in modo implicito come applicazione livello dati.  
   
 -   **REGISTER**: l'utente può registrare un database come applicazione livello dati.  
   
 -   **UNREGISTER**: è possibile annullare la registrazione di un database registrato in precedenza come applicazione livello dati.  
   
--   **UPGRADE**: è possibile aggiornare un database usando un file DACPAC. L'aggiornamento è supportato anche su database non registrati in precedenza come applicazioni livello dati, ma come conseguenza dell'aggiornamento, il database verrà registrato in modo implicito.  
+-   **UPGRADE**: è possibile aggiornare un database usando un pacchetto di applicazione livello dati. L'aggiornamento è supportato anche su database non registrati in precedenza come applicazioni livello dati, ma come conseguenza dell'aggiornamento, il database verrà registrato in modo implicito.  
   
 ## <a name="backup-package-bacpac"></a>Pacchetto di backup (estensione .bacpac)  
  Un BACPAC è un elemento che incapsula lo schema del database e i dati archiviati nel database. Un BACPAC è un file di Windows con l'estensione .bacpac. Analogamente a DACPAC, BACPAC è un formato di file aperto. Il contenuto dello schema del BACPAC è identico a quello del pacchetto di applicazione livello dati. I dati sono archiviati nel formato JSON.  
   
- I pacchetti DACPAC e BACPAC sono simili, ma destinati a scenari diversi. Un pacchetto di applicazione livello dati esegue l'acquisizione e la distribuzione dello schema, compreso l'aggiornamento del database esistente. L'utilizzo primario di un pacchetto di applicazione livello dati consiste nella distribuzione di uno schema strettamente definito per gli ambienti di sviluppo, test e produzione e l'operazione contraria, ossia l'acquisizione dello schema di produzione e l'applicazione dello stesso agli ambienti di test e distribuzione.  
+ I pacchetti DACPAC e BACPAC sono simili, ma destinati a scenari diversi. Un pacchetto di applicazione livello dati esegue l'acquisizione e la distribuzione dello schema, compreso l'aggiornamento del database esistente. L'uso primario di un file DACPAC consiste nel distribuire uno schema strettamente definito per lo sviluppo, test e quindi gli ambienti di produzione e viceversa: acquisizione dello schema di produzione e l'applicazione torna a test e ambienti di sviluppo.  
   
  Un BACPAC invece esegue l'acquisizione dello schema e dei dati. Un BACPAC è l'equivalente logico di un backup di database e non può essere utilizzato per aggiornare i database esistenti. L'utilizzo primario di un BACPAC consiste nello spostamento di un database da un server a un altro, o da un server locale al cloud, e l'archiviazione di un database esistente in un formato aperto.  
   
@@ -108,10 +108,10 @@ ms.locfileid: "48214731"
   
 -   **IMPORT**: l'utente può importare lo schema e i dati in un nuovo database nel server host.  
   
- Entrambe queste funzionalità sono supportate dagli strumenti di gestione di database Server Management Studio, il Portale di gestione per SQL Azure e l'API DACFx.  
+ Entrambe queste funzionalità sono supportate dagli strumenti di gestione di database: Server Management Studio, il portale di gestione per SQL Azure e API DACFx.  
   
 ## <a name="permissions"></a>Permissions  
- È necessario essere un membro del `dbmanager` ruolo assegnato o `CREATE DATABASE` le autorizzazioni per creare un database, compresa la creazione di un database tramite la distribuzione di un pacchetto di applicazione livello dati. È necessario essere un membro del `dbmanager` ruolo, o sono stati assegnati `DROP DATABASE` le autorizzazioni per eliminare un database.  
+ L'utente deve essere membro del ruolo `dbmanager` o disporre delle autorizzazioni `CREATE DATABASE` per creare un database, compresa la creazione di un database tramite la distribuzione di un pacchetto di applicazione livello dati. L'utente deve essere membro del ruolo `dbmanager` o disporre delle autorizzazioni `DROP DATABASE` per eliminare un database.  
   
 ## <a name="data-tier-application-tasks"></a>Attività dell'applicazione livello dati  
   

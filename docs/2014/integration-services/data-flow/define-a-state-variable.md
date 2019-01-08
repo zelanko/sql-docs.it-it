@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 45d66152-883a-49a7-a877-2e8ab45f8f79
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3d80c4dc4d304dfb6b3043475026e0e5e34c2e57
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ca9e4b8dd9c00904b09645e4d0c45673fbb6020f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48072565"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52811633"
 ---
 # <a name="define-a-state-variable"></a>Definire una variabile di stato
   In questa procedura viene descritto come definire una variabile del pacchetto in cui è archiviato lo stato CDC.  
@@ -27,13 +26,13 @@ ms.locfileid: "48072565"
   
  Nella tabella seguente viene fornita una descrizione di alto livello dei componenti del valore della variabile di stato CDC.  
   
-|Componente|Description|  
+|Componente|Descrizione|  
 |---------------|-----------------|  
 |`<state-name>`|Si tratta del nome dello stato CDC corrente.|  
 |`CS`|Viene contrassegnato il punto di inizio dell'intervallo di elaborazione corrente (inizio corrente).|  
 |`<cs-lsn>`|Si tratta dell'ultimo numero di sequenza del file di log (LSN) elaborato nell'esecuzione CDC precedente.|  
 |`CE`|Viene contrassegnato il punto di fine dell'intervallo di elaborazione corrente (fine corrente). La presenza del componente CE nello stato CDC indica che un pacchetto CDC è attualmente in fase di elaborazione o che si è verificato un errore di esecuzione di un pacchetto CDC prima del completamento dell'elaborazione dell'intervallo di elaborazione CDC.|  
-|`<ce-lsn>`|Si tratta dell'ultimo LSN da elaborare nell'esecuzione CDC corrente. Viene sempre presupposto che l'ultimo numero di sequenza da elaborare sia il valore massimo (0xFFF…).|  
+|`<ce-lsn>`|Si tratta dell'ultimo LSN da elaborare nell'esecuzione CDC corrente. Viene sempre presupposto che l'ultimo numero di sequenza da elaborare sia il valore massimo (0xFFF...).|  
 |`IR`|Viene contrassegnato l'intervallo di elaborazione iniziale.|  
 |`<ir-start>`|Si tratta di un numero LSN di una modifica appena prima dell'avvio del caricamento iniziale.|  
 |`<ir-end>`|Si tratta di un numero LSN di una modifica appena dopo il completamento del caricamento iniziale.|  
@@ -46,14 +45,14 @@ ms.locfileid: "48072565"
   
  Nella tabella seguente vengono descritti i possibili valori dello stato CDC.  
   
-|State|Description|  
+|State|Descrizione|  
 |-----------|-----------------|  
 |(INITIAL)|Si tratta dello stato iniziale prima dell'esecuzione di qualsiasi pacchetto nel gruppo CDC corrente. È anche lo stato quando lo stato CDC è vuoto.|  
 |ILSTART (Initial Load Started)|Si tratta dello stato all'avvio del pacchetto di caricamento iniziale, dopo la chiamata dell'operazione `MarkInitialLoadStart` all'attività di controllo CDC.|  
-|ILEND (Initial Load Ended)|Questo è lo stato quando il pacchetto di caricamento iniziale termina correttamente, dopo il `MarkInitialLoadEnd` chiamata dell'operazione per l'attività di controllo CDC.|  
-|ILUPDATE (Initial Load Update)|Si tratta dello stato durante l'esecuzione del pacchetto di aggiornamento Trickle-Feed in seguito al caricamento iniziale, mentre l'elaborazione dell'intervallo di elaborazione iniziale è ancora in corso. Si verifica dopo il `GetProcessingRange` chiamata dell'operazione per l'attività di controllo CDC.<br /><br /> Se si utilizza la colonna __$reprocessing, viene impostato su 1 per indicare che a livello di destinazione è possibile che le righe siano già in corso di rielaborazione.|  
+|ILEND (Initial Load Ended)|Si tratta dello stato al corretto completamento del pacchetto di caricamento iniziale, dopo la chiamata dell'operazione `MarkInitialLoadEnd` all'attività di controllo CDC.|  
+|ILUPDATE (Initial Load Update)|Si tratta dello stato durante l'esecuzione del pacchetto di aggiornamento Trickle-Feed in seguito al caricamento iniziale, mentre l'elaborazione dell'intervallo di elaborazione iniziale è ancora in corso. Si verifica dopo la chiamata dell'operazione `GetProcessingRange` all'attività di controllo CDC.<br /><br /> Se si utilizza la colonna __$reprocessing, viene impostato su 1 per indicare che a livello di destinazione è possibile che le righe siano già in corso di rielaborazione.|  
 |TFEND (Trickle-Feed Update Ended)|Si tratta dello stato previsto per le esecuzioni CDC normali. Indica che l'esecuzione precedente è stata completata e che è possibile avviare una nuova esecuzione con un nuovo intervallo di elaborazione.|  
-|TFSTART|Questo è lo stato durante un'esecuzione non iniziale del pacchetto di feed di aggiornamento trickle, dopo il `GetProcessingRange` chiamata dell'operazione per l'attività di controllo CDC.<br /><br /> Ciò indica che un'esecuzione CDC normale è avviata, ma non è stata completata o è non ancora, terminata (`MarkProcessedRange`).|  
+|TFSTART|Si tratta dello stato durante un'esecuzione non iniziale del pacchetto di aggiornamento Trickle-Feed, dopo la chiamata dell'operazione `GetProcessingRange` all'attività di controllo CDC.<br /><br /> Viene indicato che un'esecuzione CDC normale è stata avviata in maniera pulita, ma non è stata, o non è ancora, terminata (`MarkProcessedRange`).|  
 |TFREDO (Reprocessing Trickle-Feed Updates)|Si tratta dello stato di `GetProcessingRange` che si verifica dopo TFSTART. Indica che l'esecuzione precedente non è stata completata correttamente.<br /><br /> Se si utilizza la colonna __$reprocessing, viene impostato su 1 per indicare che a livello di destinazione è possibile che le righe siano già in corso di rielaborazione.|  
 |ERROR|Il gruppo CDC si trova in uno stato ERROR.|  
   
@@ -87,6 +86,6 @@ ms.locfileid: "48072565"
   
 ## <a name="see-also"></a>Vedere anche  
  [Attività di controllo CDC](../control-flow/cdc-control-task.md)   
- [Editor dell'attività di controllo CDC](../cdc-control-task-editor.md)  
+ [Editor attività Controllo CDC](../cdc-control-task-editor.md)  
   
   

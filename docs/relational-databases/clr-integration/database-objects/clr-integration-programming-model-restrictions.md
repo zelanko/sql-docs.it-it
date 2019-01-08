@@ -15,12 +15,12 @@ ms.assetid: 2446afc2-9d21-42d3-9847-7733d3074de9
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 7c39bb3499302ef1b60744a4332c665506c7fd21
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 828608b5c00cdcf0ed625a302359bb5c271381b4
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47809039"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52538533"
 ---
 # <a name="clr-integration-programming-model-restrictions"></a>Restrizioni relative al modello di programmazione dell'integrazione con CLR
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -87,7 +87,7 @@ ms.locfileid: "47809039"
  In fase di esecuzione l'assembly del codice viene esaminato per verificare la presenza delle condizioni riportate di seguito. Se ne viene riscontrata una, non verrà consentita l'esecuzione del codice gestito e sarà generata un'eccezione.  
   
 ### <a name="unsafe"></a>UNSAFE  
- Caricamento di un assembly, in modo esplicito chiamando il **System.Reflection.Assembly.Load()** metodo da una matrice di byte o in modo implicito tramite l'utilizzo di **Reflection. Emit** dello spazio dei nomi, non è consentito.  
+ Il caricamento di un assembly da entrambe in modo esplicito chiamando il **System.Reflection.Assembly.Load()** metodo da una matrice di byte o in modo implicito tramite l'utilizzo di **Reflection. Emit** dello spazio dei nomi-non è consentito.  
   
 ### <a name="externalaccess"></a>EXTERNAL_ACCESS  
  Tutti i **UNSAFE** le condizioni vengono controllate.  

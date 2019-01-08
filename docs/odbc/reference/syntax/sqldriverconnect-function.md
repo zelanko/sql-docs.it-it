@@ -20,16 +20,16 @@ ms.assetid: e299be1d-5c74-4ede-b6a3-430eb189134f
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d254fce8d7765c6248c6e060f2a225f595f804f0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d80de6087997b6af0202dafae7576ba442514abf
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47597176"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53212390"
 ---
 # <a name="sqldriverconnect-function"></a>SQLDriverConnect Function
 **Conformità**  
- Versione introdotta: Conformità agli standard 1.0 di ODBC: ODBC  
+ Versione introdotta: Conformità agli standard 1.0 ODBC: ODBC  
   
  **Riepilogo**  
  **SQLDriverConnect** è un'alternativa al **SQLConnect**. Supporta le origini dati che richiedono più informazioni di connessione di tre argomenti nel **SQLConnect**, finestre di dialogo per richiedere all'utente per tutte le informazioni di connessione e le origini dati che non sono definite nel sistema informazioni.  
@@ -98,7 +98,7 @@ SQLRETURN SQLDriverConnect(
 ## <a name="diagnostics"></a>Diagnostica  
  Quando **SQLDriverConnect** restituisce SQL_ERROR o SQL_SUCCESS_WITH_INFO, un valore SQLSTATE associato può essere ottenuto chiamando **SQLGetDiagRec** con un *fHandleType*SQL_HANDLE_DBC e un' *hHandle* dei *ConnectionHandle*. Nella tabella seguente sono elencati i valori SQLSTATE comunemente restituiti da **SQLDriverConnect** e illustra ognuna nel contesto di questa funzione; la notazione "(DM)" precede le descrizioni di SQLSTATE restituiti da Gestione Driver. Il codice restituito a ogni valore SQLSTATE è SQL_ERROR, se non specificato diversamente.  
   
-|SQLSTATE|Errore|Description|  
+|SQLSTATE|Errore|Descrizione|  
 |--------------|-----------|-----------------|  
 |01000|Avviso generale|Messaggio informativo specifico del driver. (Funzione restituisce SQL_SUCCESS_WITH_INFO).|  
 |01004|Stringa troncati di dati a destra|Il buffer \* *OutConnectionString* non era sufficientemente grande per restituire l'intera stringa di connessione, in modo che la stringa di connessione è stata troncata. Viene restituita la lunghezza della stringa di connessione non troncato **StringLength2Ptr*. (Funzione restituisce SQL_SUCCESS_WITH_INFO).|  
@@ -196,9 +196,9 @@ SQLRETURN SQLDriverConnect(
   
 -   SQL_DRIVER_PROMPT: Se la stringa di connessione non contiene il **DRIVER**, **DSN**, o **FILEDSN** (parola chiave), gestione Driver consente di visualizzare la finestra di dialogo origini dei dati. Costruisce una stringa di connessione dal nome dell'origine dati restituiti dalla finestra di dialogo e delle altre parole chiave passati dall'applicazione. Se il nome dell'origine dati restituito dalla finestra di dialogo è vuoto, gestione Driver specifica la coppia valore-parola chiave DSN = Default. (Questa finestra di dialogo non verrà visualizzata un'origine dati con il nome "Default".)  
   
--   SQL_DRIVER_COMPLETE o SQL_DRIVER_COMPLETE_REQUIRED: se la stringa di connessione specificata dall'applicazione include il **DSN** (parola chiave), gestione Driver consente di copiare la stringa di connessione specificata dall'applicazione. In caso contrario, accetta le stesse azioni a quanto accade quando *DriverCompletion* è SQL_DRIVER_PROMPT.  
+-   SQL_DRIVER_COMPLETE o SQL_DRIVER_COMPLETE_REQUIRED: Se la stringa di connessione specificata dall'applicazione include il **DSN** (parola chiave), gestione Driver consente di copiare la stringa di connessione specificata dall'applicazione. In caso contrario, accetta le stesse azioni a quanto accade quando *DriverCompletion* è SQL_DRIVER_PROMPT.  
   
--   SQL_DRIVER_NOPROMPT: The Driver Manager copia la stringa di connessione specificata dall'applicazione.  
+-   SQL_DRIVER_NOPROMPT: Gestione Driver copia la stringa di connessione specificata dall'applicazione.  
   
  Se la stringa di connessione specificata dall'applicazione contiene il **DRIVER** (parola chiave), gestione Driver consente di copiare la stringa di connessione specificata dall'applicazione.  
   
@@ -259,7 +259,7 @@ SQLRETURN SQLDriverConnect(
   
 -   SQL_DRIVER_PROMPT: Il driver consente di visualizzare una finestra di dialogo, usando i valori dalle informazioni di sistema e stringa di connessione (se presenti) come valori iniziali. Quando l'utente chiude la finestra di dialogo, il driver si connette all'origine dati. Crea anche una stringa di connessione dal valore della **DSN** oppure **DRIVER** parola chiave in \* *InConnectionString* e le informazioni restituite dal finestra di dialogo. Inserisce la stringa di connessione nel **OutConnectionString* buffer.  
   
--   SQL_DRIVER_COMPLETE o SQL_DRIVER_COMPLETE_REQUIRED: se la stringa di connessione contiene informazioni sufficienti e le informazioni sono corrette, il driver si connette all'origine dati e le copie \* *InConnectionString*alla \* *OutConnectionString*. Se qualsiasi informazione è mancante o non corretto, il driver ha le stesse azioni a quanto accade quando *DriverCompletion* è SQL_DRIVER_PROMPT, a meno che tale *DriverCompletion* è SQL_DRIVER_COMPLETE_ Il driver richiesto, disabilita i controlli per eventuali informazioni non necessarie per connettersi all'origine dati.  
+-   SQL_DRIVER_COMPLETE o SQL_DRIVER_COMPLETE_REQUIRED: Se la stringa di connessione contiene informazioni sufficienti e le informazioni sono corrette, il driver si connette all'origine dati e le copie \* *InConnectionString* al \* *OutConnectionString* . Se qualsiasi informazione è mancante o non corretto, il driver ha le stesse azioni a quanto accade quando *DriverCompletion* è SQL_DRIVER_PROMPT, a meno che tale *DriverCompletion* è SQL_DRIVER_COMPLETE_ Il driver richiesto, disabilita i controlli per eventuali informazioni non necessarie per connettersi all'origine dati.  
   
 -   SQL_DRIVER_NOPROMPT: Se la stringa di connessione contiene informazioni sufficienti, il driver si connette all'origine dati e le copie \* *InConnectionString* al \* *OutConnectionString*. In caso contrario, il driver restituisce SQL_ERROR per **SQLDriverConnect**.  
   

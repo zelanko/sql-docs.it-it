@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - vdt.dlgbox.indexcolumns
@@ -12,12 +12,12 @@ ms.assetid: 855860ae-528f-48ab-80e3-f53e7cb8c33f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2cecd9aced6b4135c581910e5cbfb3a23d2aefd1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 21e9b4b0f05b2728ac42bbba96a6227872ceaeec
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48168621"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52818643"
 ---
 # <a name="index-columns-dialog-box-visual-database-tools"></a>Finestra di dialogo Colonne indice (Visual Database Tools)
   Utilizzare questa finestra di dialogo per selezionare le colonne di un indice e per impostarne gli ordinamenti. Un indice può utilizzare una o più colonne, ognuna delle quali può essere ordinata con un ordinamento crescente o decrescente. Per accedere a questa finestra di dialogo, nella finestra di dialogo **Indici/chiavi** fare clic sul pulsante con i puntini nella riga **Colonne** della sezione **Generale** .  

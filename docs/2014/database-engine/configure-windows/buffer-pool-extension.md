@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 ms.assetid: 909ab7d2-2b29-46f5-aea1-280a5f8fedb4
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 21e055290abaf9edd4fffaa6b2179af70915086e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a48a5cb8b5fb317c40a2106b4ee433e49188d783
+ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48063301"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52640652"
 ---
 # <a name="buffer-pool-extension"></a>Estensione pool di buffer
   Introdotta in [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], l'estensione del pool di buffer offre l'integrazione diretta di una estensione di RAM non volatile (ossia, un'unità SSD) al pool di buffer del [!INCLUDE[ssDE](../../includes/ssde-md.md)] per migliorare la velocità effettiva di I/O in maniera significativa. L'estensione del pool di buffer non è disponibile in tutte le edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per ulteriori informazioni, vedere [Features Supported by the Editions of SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
@@ -86,7 +85,7 @@ ms.locfileid: "48063301"
   
  Sono disponibili i seguenti XEvent.  
   
-|XEvent|Description|Parametri|  
+|XEvent|Descrizione|Parametri|  
 |------------|-----------------|----------------|  
 |sqlserver.buffer_pool_extension_pages_written|Viene attivato quando una pagina o un gruppo di pagine vengono eliminate dal pool di buffer e vengono scritte nel file di estensione del pool di buffer.|number_page<br /><br /> first_page_id<br /><br /> first_page_offset<br /><br /> initiator_numa_node_id|  
 |sqlserver.buffer_pool_extension_pages_read|Viene attivato quando una pagina viene letta dal file di estensione del pool di buffer nel pool di buffer.|number_page<br /><br /> first_page_id<br /><br /> first_page_offset<br /><br /> initiator_numa_node_id|  

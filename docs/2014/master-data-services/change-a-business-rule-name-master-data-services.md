@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - business rules [Master Data Services], changing name
@@ -13,12 +12,12 @@ ms.assetid: cffcae43-a208-443f-9f43-a0ec9e05f79c
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: afcbce61ba72ac9e09ccc40cf30e0b5a6cd40010
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e849e093872952494ff6f3d5a9f74f5521b23057
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48122591"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52774223"
 ---
 # <a name="change-a-business-rule-name-master-data-services"></a>Modificare il nome di una regola business (Master Data Services)
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]modificare il nome di una regola di business quando il nome assegnato non soddisfa le esigenze aziendali.  
@@ -57,6 +56,6 @@ ms.locfileid: "48122591"
 11. Nella finestra di dialogo di conferma fare clic su **OK**. Lo stato della regola viene modificato in **Attiva**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Le regole di business &#40;Master Data Services&#41;](../../2014/master-data-services/business-rules-master-data-services.md)  
+ [Regole business &#40;Master Data Services&#41;](../../2014/master-data-services/business-rules-master-data-services.md)  
   
   

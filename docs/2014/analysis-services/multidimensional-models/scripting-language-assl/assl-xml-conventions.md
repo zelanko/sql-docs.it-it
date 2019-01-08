@@ -26,19 +26,19 @@ ms.assetid: bce4edad-4420-41ce-9672-8c00c5c0dec6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4ab537a266924c352466d3b6d2b8364c3498b2b9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cd0a84928e1d5b531119a0a37dbb60d2b9eb3db9
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48112811"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52531417"
 ---
 # <a name="assl-xml-conventions"></a>Convenzioni XML di ASSL
   Nel linguaggio ASSL (Analysis Services Scripting Language) la gerarchia di oggetti viene rappresentata come un set di tipi di elementi, ciascuno dei quali definisce gli elementi figlio che può contenere.  
   
  Per rappresentare la gerarchia di oggetti, in ASSL vengono utilizzate le convenzioni XML seguenti:  
   
--   Tutti gli oggetti e le proprietà vengono rappresentati come elementi, ad eccezione degli attributi XML standard, ad esempio "xml:lang".  
+-   Tutti gli oggetti e proprietà sono rappresentate come elementi, ad eccezione degli attributi XML standard, ad esempio "XML: lang".  
   
 -   Sia i nomi degli elementi e i valori di enumerazione seguono la convenzione di denominazione di Microsoft .NET Framework della convenzione Pascal maiuscole e minuscole senza caratteri di sottolineatura.  
   
@@ -51,7 +51,7 @@ ms.locfileid: "48112811"
   
  `<Database>`  
   
- `…`  
+ `...`  
   
  `<Dimensions>`  
   
@@ -80,7 +80,7 @@ ms.locfileid: "48112811"
   
  `<Cubes>`  
   
- `<Cube xsi:type=”RegularCube”>`  
+ `<Cube xsi:type="RegularCube">`  
   
  `<Name>Sales</Name>`  
   
@@ -88,7 +88,7 @@ ms.locfileid: "48112811"
   
  `</Cube>`  
   
- `<Cube xsi:type=”VirtualCube”>`  
+ `<Cube xsi:type="VirtualCube">`  
   
  `<Name>SalesAndInventory</Name>`  
   
@@ -123,10 +123,10 @@ ms.locfileid: "48112811"
  In Analysis Services vengono utilizzati i seguenti tipi di dati XML Schema Definition Language (XSD) standard:  
   
  `Int`  
- Valore integer compreso nell'intervallo tra -231 e 231 - 1.  
+ Valore intero compreso nell'intervallo tra-231-1 231.  
   
  `Long`  
- Valore integer compreso nell'intervallo tra -263 e 263 - 1.  
+ Valore intero nell'intervallo di -263 e 263-1.  
   
  `String`  
  Valore stringa conforme alle regole globali seguenti:  

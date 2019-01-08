@@ -7,22 +7,18 @@ ms.reviewer: ''
 ms.technology:
 - database-engine
 ms.topic: conceptual
-f1_keywords:
-- vs.findreplace.quickfind
-- vs.find
-- vs.findreplace.quickreplace
 helpviewer_keywords:
 - Find and Replace dialog box
 ms.assetid: 09297893-d80b-4c88-86b4-52bfb639e521
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5a21201ee3a3e12e4f091b545b8bd812a20a0505
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e6c2e057c542e6b3c0d9ff475b697efb7bea51b6
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48152521"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53328821"
 ---
 # <a name="find-and-replace"></a>Trova e sostituisci
   Usare la finestra di dialogo **Trova e sostituisci** per trovare testo all'interno di un file e facoltativamente sostituirlo con altro testo. Possono essere visualizzate versioni della finestra **Trova e sostituisci** con opzioni leggermente diverse, a seconda di come è stata aperta la finestra di dialogo. Scegliere **Trova e sostituisci** dal menu **Modifica**e quindi fare clic su **Ricerca veloce** per aprire la finestra di dialogo con le opzioni di ricerca ma senza le opzioni di sostituzione. Scegliere **Trova e sostituisci** dal menu **Modifica**e quindi fare clic su **Sostituzione veloce** per aprire la finestra di dialogo con le opzioni di ricerca e sostituzione.  
@@ -127,5 +123,3 @@ ms.locfileid: "48152521"
   
 ## <a name="see-also"></a>Vedere anche  
  [Tasti di scelta rapida di SQL Server Management Studio](../../ssms/sql-server-management-studio-keyboard-shortcuts.md)  
-  
-  

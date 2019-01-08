@@ -20,16 +20,16 @@ ms.assetid: 6c6611d2-bc6a-4390-87c9-1c5dd9cfe07c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6d1e4c4462aa10a2d99e50e71d7b2e86fa4d8555
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 001238b4e5d47b22ca991efcd8b4ee28971d7af7
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47825939"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53213090"
 ---
 # <a name="sqlfetch-function"></a>Funzione SQLFetch
 **Conformità**  
- Versione introdotta: Conformità agli standard 1.0 di ODBC: ISO 92  
+ Versione introdotta: Conformità agli standard 1.0 ODBC: ISO 92  
   
  **Riepilogo**  
  **SQLFetch** recupera il successivo set di righe di dati dal set di risultati e restituisce i dati per tutte le colonne associate.  
@@ -39,7 +39,7 @@ ms.locfileid: "47825939"
 ```  
   
 SQLRETURN SQLFetch(  
-     SQLHSTMT     StatementHandle);  
+     SQLHSTMT     StatementHandle);  
 ```  
   
 ## <a name="arguments"></a>Argomenti  
@@ -54,7 +54,7 @@ SQLRETURN SQLFetch(
   
  Per tutti questi SQLSTATEs che può restituire SQL_SUCCESS_WITH_INFO o SQL_ERROR (eccetto SQLSTATEs 01xxx), viene restituito SQL_SUCCESS_WITH_INFO se si verifica un errore in uno o più, ma non tutte, le righe di un'operazione con più righe e viene restituito SQL_ERROR se si verifica un errore in un riga singola operazione.  
   
-|SQLSTATE|Errore|Description|  
+|SQLSTATE|Errore|Descrizione|  
 |--------------|-----------|-----------------|  
 |01000|Avviso generale|Messaggio informativo specifico del driver. (Funzione restituisce SQL_SUCCESS_WITH_INFO).|  
 |01004|Stringa troncati di dati a destra|Stringa o dati binari restituiti per una colonna ha comportato il troncamento del carattere non vuote o dati binari non NULL. Se si tratta di un valore stringa, era troncati a destra.|  
@@ -65,7 +65,7 @@ SQLRETURN SQLFetch(
 |08S01|Errore del collegamento di comunicazione|Il collegamento di comunicazione tra il driver e l'origine dati a cui è stato connesso il driver non è stato possibile prima dell'elaborazione di funzione è stata completata.|  
 |22001|Stringa troncati di dati a destra|Un segnalibro a lunghezza variabile restituito per una colonna sono stato troncato.|  
 |22002|Variabile indicatore necessaria ma non fornito|Dati NULL è stati recuperati in una colonna la cui proprietà *StrLen_or_IndPtr* effettui **SQLBindCol** (o SQL_DESC_INDICATOR_PTR impostato da **SQLSetDescField** o  **SQLSetDescRec**) era un puntatore null.|  
-|22003|Valore numerico non compreso nell'intervallo|Restituisce il valore numerico come numerico o stringa per uno o più colonne associate avrebbe causato la parte intera (in contrapposizione frazionari) del numero da troncare.<br /><br /> Per altre informazioni, vedere [conversione di dati da SQL a tipi di dati C](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md) nell'appendice d: i tipi di dati.|  
+|22003|Valore numerico non compreso nell'intervallo|Restituisce il valore numerico come numerico o stringa per uno o più colonne associate avrebbe causato la parte intera (in contrapposizione frazionari) del numero da troncare.<br /><br /> Per altre informazioni, vedere [conversione di dati da SQL a tipi di dati C](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md) nell'appendice d: Tipi di dati.|  
 |22007|Formato di datetime non valido|Una colonna di tipo carattere nel set di risultati è stata associata a una data, ora o timestamp C struttura e un valore nella colonna non è, rispettivamente, una data non valida, ora o timestamp.|  
 |22012|Divisione per zero|Un valore da un'espressione aritmetica è stato restituito, ciò ha provocato la divisione per zero.|  
 |22015|Overflow del campo Interval|Assegnazione da un numerico esatto o l'intervallo di tipo SQL a un tipo di intervallo C, ha causato una perdita di cifre significative nel campo iniziale.<br /><br /> Durante il recupero di dati a un tipo di intervallo C, si è verificato alcun rappresentazione del valore del tipo SQL nel tipo di intervallo C.|  
@@ -93,12 +93,12 @@ SQLRETURN SQLFetch(
   
  Se un'applicazione ODBC 3 *. x* applicazione funziona con un'API ODBC 2 *. x* esegue il mapping di driver, gestione Driver **SQLFetch** le chiamate a **SQLExtendedFetch** per un ODBC 2 *. x* driver che supporta **SQLExtendedFetch**. Se l'API ODBC 2 *. x* driver non supporta **SQLExtendedFetch**, esegue il mapping di gestione Driver **SQLFetch** le chiamate a **SQLFetch** in ODBC 2 *x* driver, che è possibile recuperare solo una singola riga.  
   
- Per altre informazioni, vedere [cursori rettangolari, cursori scorrevoli e compatibilità con le versioni precedenti](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md) nell'appendice g: Driver le linee guida per la compatibilità con le versioni precedenti.  
+ Per altre informazioni, vedere [cursori rettangolari, cursori scorrevoli e compatibilità con le versioni precedenti](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md) nell'appendice g: Driver linee guida per la compatibilità con le versioni precedenti.  
   
 ## <a name="positioning-the-cursor"></a>Posizionando il cursore  
  Quando viene creato il set di risultati, il cursore viene posizionato prima dell'inizio del set di risultati. **SQLFetch** recupera il successivo set di righe. È equivalente alla chiamata **SQLFetchScroll** con *FetchOrientation* impostato su SQL_FETCH_NEXT. Per altre informazioni sui cursori, vedere [cursori](../../../odbc/reference/develop-app/cursors.md) e [cursori a blocchi](../../../odbc/reference/develop-app/block-cursors.md).  
   
- L'attributo di istruzione SQL_ATTR_ROW_ARRAY_SIZE specifica il numero di righe nel set di righe. Se il set di righe recuperate dal **SQLFetch** fine del set di risultati, è sovrapposto **SQLFetch** restituisce un set di righe parziale. Vale a dire se S + R-1 è maggiore di L, dove S è la riga iniziale del set di righe recuperate, R è la dimensione del set di righe e L è l'ultima riga nel set di risultati, quindi solo il primo G-S + 1 righe del set di righe sono validi. Le righe rimanenti sono vuote e con stato SQL_ROW_NOROW.  
+ L'attributo di istruzione SQL_ATTR_ROW_ARRAY_SIZE specifica il numero di righe nel set di righe. Se il set di righe recuperate dal **SQLFetch** fine del set di risultati, è sovrapposto **SQLFetch** restituisce un set di righe parziale. Vale a dire se S + R - 1 è maggiore di L, dove S è la riga iniziale del set di righe recuperate, R è la dimensione del set di righe e L è l'ultima riga nel set di risultati, quindi solo il primo G - S + 1 righe del set di righe sono validi. Le righe rimanenti sono vuote e con stato SQL_ROW_NOROW.  
   
  Dopo aver **SQLFetch** viene restituito, la riga corrente è la prima riga del set di righe.  
   
@@ -107,8 +107,8 @@ SQLRETURN SQLFetch(
 |Condizione|Prima riga del nuovo set di righe|  
 |---------------|-----------------------------|  
 |Prima dell'inizio|1|  
-|*CurrRowsetStart* \< =  *LastResultRow – RowsetSize*[1]|*CurrRowsetStart* + *RowsetSize*[2]|  
-|*CurrRowsetStart* > *LastResultRow – RowsetSize*[1]|Dopo la fine|  
+|*CurrRowsetStart* \< =  *LastResultRow - RowsetSize*[1]|*CurrRowsetStart* + *RowsetSize*[2]|  
+|*CurrRowsetStart* > *LastResultRow - RowsetSize*[1]|Dopo la fine|  
 |Dopo la fine|Dopo la fine|  
   
  [1] se le dimensioni del set di righe viene modificata tra operazioni di recupero, questa è la dimensione del set di righe che è stata usata con l'operazione di recupero precedenti.  
@@ -177,7 +177,7 @@ SQLRETURN SQLFetch(
   
  I valori seguenti vengono restituiti nella matrice di stato di riga.  
   
-|Valore di matrice di stato riga|Description|  
+|Valore di matrice di stato riga|Descrizione|  
 |----------------------------|-----------------|  
 |SQL_ROW_SUCCESS|La riga è stata recuperata correttamente e non è stato modificato dopo l'ultimo recupero da questo set di risultati.|  
 |SQL_ROW_SUCCESS_WITH_INFO|La riga è stata recuperata correttamente e non è stato modificato dopo l'ultimo recupero da questo set di risultati. Tuttavia, è stato restituito un avviso sulla riga.|  

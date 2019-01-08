@@ -14,12 +14,12 @@ ms.assetid: 4639d368-9918-4bb1-9953-7a724ca78dea
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 55ec2d6fa40e5f2e6aa7fcfd1d5be40667a518d0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 628a94ec8e8c79ec88f8427fd2ea41f158ae6c38
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48194331"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52539786"
 ---
 # <a name="report-properties-dialog-box-references"></a>Finestra di dialogo Proprietà report, Riferimenti
   Selezionare **Riferimenti** nella finestra di dialogo **Proprietà report** per aggiungere o rimuovere riferimenti ad assembly personalizzati o altri assembly esterni e a istanze di classe personalizzate utilizzate da espressioni nella definizione del report.  
@@ -29,7 +29,7 @@ ms.locfileid: "48194331"
  Consente di visualizzare l'elenco degli assembly a cui il report fa riferimento. È necessario che l'assembly sia disponibile sia nel computer in cui è installato lo strumento utilizzato per progettare il report, sia nel server di report. Il nome del riferimento deve corrispondere il contenuto del  **\<CodeModule >** esattamente i tag nel file di Report Definition Language (RDL).  
   
  **Aggiungi**  
- Fare clic per aggiungere un assembly. Fare clic sul pulsante con i puntini di sospensione (...) per aprire la finestra di dialogo **Apri** e selezionare gli assembly necessari per completare l'elaborazione del report e la valutazione dell'espressione.  
+ Fare clic per aggiungere un assembly. Fare clic sul pulsante con puntini di sospensione (...) per aprire la **aprire** nella finestra di dialogo e selezionare gli assembly necessari per completare la valutazione dell'espressione e l'elaborazione report.  
   
  **Elimina**  
  Per rimuovere un riferimento all'assembly dall'elenco, selezionare il nome dell'assembly e fare clic sul pulsante **Rimuovi** .  
@@ -38,7 +38,7 @@ ms.locfileid: "48194331"
  Consente di visualizzare l'elenco delle istanze di classe utilizzate dal report. L'elenco delle classi viene utilizzato solo dai membri basati sull'istanza e non dai membri statici.  
   
  **Aggiungi**  
- Fare clic per aggiungere un riferimento alle classi. Fare clic sul pulsante con i puntini di sospensione (...) per aprire la finestra di dialogo **Apri** e selezionare le classi necessarie per completare l'elaborazione del report e la valutazione dell'espressione.  
+ Fare clic per aggiungere un riferimento alle classi. Fare clic sul pulsante con puntini di sospensione (...) per aprire la **aprire** nella finestra di dialogo e selezionare le classi necessarie per completare la valutazione dell'espressione e l'elaborazione report.  
   
  **Elimina**  
  Per eliminare l'istanza di classe, selezionarla e fare clic sul pulsante **Rimuovi** .  

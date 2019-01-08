@@ -4,24 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 2a073699-79a2-4ea1-a68e-fc17a80b74ba
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 70ad2bc83f1a77bc9649e3747c309ad6522b2007
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 327e02721efaeb480d2b816de6af8135e1d1a80f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48196361"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52771103"
 ---
 # <a name="cdc-control-task-custom-properties"></a>Proprietà personalizzate dell'attività di controllo CDC
   Nella tabella seguente vengono descritte le proprietà personalizzate dell'attività di controllo CDC. Tutte le proprietà sono di lettura/scrittura.  
   
-|Nome proprietà|Tipo di dati|Description|  
+|Nome proprietà|Tipo di dati|Descrizione|  
 |-------------------|---------------|-----------------|  
 |Connessione|ADO.NET Connection|Connessione ADO.NET al database CDC di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] per l'accesso alle tabelle delle modifiche e allo stato CDC, se è archiviato nello stesso database.<br /><br /> La connessione deve essere stabilita a un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] abilitato per CDC e in cui si trova la tabella delle modifiche selezionata.|  
 |TaskOperation|Integer (enumerazione)|Operazione selezionata per l'attività di controllo CDC. I valori possibili sono **Mark Initial Load Start**, **Mark Initial Load End**, **Mark CDC Start**, **Get Processing Range**, **Mark Processed Range**e **Reset CDC State**.<br /><br /> Se si seleziona **MarkCdcStart**, **MarkInitialLoadStart**o **MarkInitialLoadEnd** quando si usa CDC di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , ovvero non di Oracle, l'utente specificato nella gestione connessione deve essere  **db_owner** o **sysadmin**.<br /><br /> Per altre informazioni su queste operazioni, vedere [Editor attività Controllo CDC](../cdc-control-task-editor.md) e [Attività di controllo CDC](cdc-control-task.md).|  
@@ -35,6 +34,6 @@ ms.locfileid: "48196361"
   
 ## <a name="see-also"></a>Vedere anche  
  [Attività di controllo CDC](cdc-control-task.md)   
- [Editor dell'attività di controllo CDC](../cdc-control-task-editor.md)  
+ [Editor attività Controllo CDC](../cdc-control-task-editor.md)  
   
   

@@ -16,28 +16,28 @@ ms.assetid: 9469ba3a-5e4f-4a10-bbb8-a51a6c9660ea
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c6ccf5a83cd53b953a9b43c252e90a6e13f1e3f8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: db2065bd599b1aca1542318bfab0d0ce57e2a938
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47635869"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542606"
 ---
 # <a name="errorvalueenum"></a>ErrorValueEnum
 Specifica il tipo di errore di run-time di ADO.  
   
  Sono elencati tre formati del numero di errore:  
   
--   Decimale positiva, ovvero i due byte basso del numero completo in formato decimale. Questo numero viene visualizzato nella finestra di dialogo di messaggi predefinito errore di Visual Basic. Ad esempio, errore di Run-time '3707'.  
+-   Positivi decimale, il minimo due byte del numero completo in formato decimale. Questo numero viene visualizzato nella finestra di dialogo di messaggi predefinito errore di Visual Basic. Ad esempio, errore di Run-time '3707'.  
   
--   Decimale negativa, ovvero la conversione decimale del numero di errore completo.  
+-   Valore negativo, il separatore decimale conversione decimale del numero di errore completo.  
   
--   Esadecimale, ovvero la rappresentazione esadecimale del numero di errore completo. Il codice di funzionalità di Windows è la quarta cifra. Il codice della funzionalità per i numeri di errore ADO *oggetto*. Ad esempio: 0x800***oggetto***0E7B.  
+-   Esadecimale la rappresentazione esadecimale del numero di errore completo. Il codice di funzionalità di Windows è la quarta cifra. Il codice della funzionalità per i numeri di errore ADO *oggetto*. Ad esempio: 0x800***oggetto***0E7B.  
   
 > [!NOTE]
 >  Errori OLE DB possono essere passati all'applicazione ADO. In genere, che può essere identificate da un codice della funzionalità di Windows *4*. Ad esempio, 0x800***4***.  
   
-|Costante|valore|Description|  
+|Costante|Value|Descrizione|  
 |--------------|-----------|-----------------|  
 |**adErrBoundToCommand**|3707 -2146824581 0x800A0E7B|Non è possibile modificare il **ActiveConnection** proprietà di un **Recordset** oggetto avente un' **comando** oggetto come origine.|  
 |**adErrCannotComplete**|3732 -2146824556 0x800A0E94|Server non è possibile completare l'operazione.|  

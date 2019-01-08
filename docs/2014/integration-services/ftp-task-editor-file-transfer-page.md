@@ -15,12 +15,12 @@ ms.assetid: 37e52220-feb2-474c-ad88-fa1b1059acd4
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9fff9948011cd81df80e71237d8381079e52bbf6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f4de5cf0a8e932c30c0eea619b185aa37f0cf875
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48087481"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52533333"
 ---
 # <a name="ftp-task-editor-file-transfer-page"></a>Editor attività FTP (pagina Trasferimento file)
   Usare la pagina **Trasferimento file** della finestra di dialogo **Editor attività FTP** per configurare l'operazione FTP eseguita dall'attività.  
@@ -31,7 +31,7 @@ ms.locfileid: "48087481"
  **IsRemotePathVariable**  
  Consente di specificare se il percorso remoto è archiviato in una variabile. Per questa proprietà sono disponibili le opzioni elencate nella tabella seguente.  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |**True**|Il percorso di destinazione è archiviato in una variabile. Selezionando il valore viene visualizzata l'opzione dinamica **RemoteVariable**.|  
 |**False**|Il percorso di destinazione è specificato in una gestione connessione file. Selezionando il valore viene visualizzata l'opzione dinamica **RemotePath**.|  
@@ -42,7 +42,7 @@ ms.locfileid: "48087481"
  **IsLocalPathVariable**  
  Consente di specificare se il percorso locale è archiviato in una variabile. Per questa proprietà sono disponibili le opzioni elencate nella tabella seguente.  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |**True**|Il percorso di destinazione è archiviato in una variabile. Selezionando il valore viene visualizzata l'opzione dinamica **LocalVariable**.|  
 |**False**|Il percorso di destinazione è specificato in una gestione connessione file. Selezionando il valore viene visualizzata l'opzione dinamica **LocalPath**.|  
@@ -50,7 +50,7 @@ ms.locfileid: "48087481"
  **Operazione**  
  Consente di selezionare l'operazione FTP da eseguire. Per questa proprietà sono disponibili le opzioni elencate nella tabella seguente.  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |**Invia file**|Consente di inviare i file. Selezionando questo valore vengono visualizzate le opzioni dinamiche **LocalVariable**, **LocalPathRemoteVariable** e **RemotePath**.|  
 |**Ricevi file**|Consente di ricevere i file. Selezionando questo valore vengono visualizzate le opzioni dinamiche **LocalVariable**, **LocalPathRemoteVariable** e **RemotePath**.|  
@@ -70,7 +70,7 @@ ms.locfileid: "48087481"
  **RemoteVariable**  
  Consente di selezionare una variabile esistente definita dall'utente o di creare una variabile definita dall'utente facendo clic su \<**Nuova variabile**>.  
   
- **Argomenti correlati:** [Variabili di Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md), Aggiungi variabile  
+ **Argomenti correlati:** [Integration Services &#40;SSIS&#41; le variabili](integration-services-ssis-variables.md), aggiungere una variabile  
   
 ### <a name="isremotepathvariable--false"></a>IsRemotePathVariable = False  
  **RemotePath**  
@@ -84,16 +84,16 @@ ms.locfileid: "48087481"
  **LocalVariable**  
  Consente di selezionare una variabile esistente definita dall'utente o di creare una variabile facendo clic su \<**Nuova variabile**>.  
   
- **Argomenti correlati:** [Variabili di Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md), Aggiungi variabile  
+ **Argomenti correlati:** [Integration Services &#40;SSIS&#41; le variabili](integration-services-ssis-variables.md), aggiungere una variabile  
   
 ### <a name="islocalpathvariable--false"></a>IsLocalPathVariable = False  
  **LocalPath**  
- Consente di selezionare una gestione connessione file esistente o di creare una gestione connessione facendo clic su \<**Nuova connessione**>.  
+ Selezionare una gestione connessione file esistente oppure crearne una nuova facendo clic su \<**Nuova connessione**>.  
   
- **Argomenti correlati:** [Gestione connessione file flat](connection-manager/file-connection-manager.md), [Editor gestione connessione file flat](../../2014/integration-services/file-connection-manager-editor.md)  
+ **Argomenti correlati**: [Gestione connessione File flat](connection-manager/file-connection-manager.md), [Editor gestione connessione File](../../2014/integration-services/file-connection-manager-editor.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Guida di riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor attività FTP &#40;pagina Generale&#41;](general-page-of-integration-services-designers-options.md)   
  [Pagina Espressioni](expressions/expressions-page.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: Definizione e utilizzo di un'azione drill-through | Documenti Microsoft
+title: Definizione e uso di un'azione drill-through | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 45f35145b116f36280ff7d70ee820f4e333382aa
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 3b57c18d159c677fe10d99fbae1ea9e4bffbed9a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018048"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507937"
 ---
-# <a name="lesson-8-1---defining-and-using-a-drillthrough-action"></a>Lezione 8-1-definizione e utilizzo di un'azione drill-through
+# <a name="lesson-8-1---defining-and-using-a-drillthrough-action"></a>Lezione 8-1: definizione e uso di un'azione drill-through
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
 Il dimensionamento dei dati della tabella dei fatti tramite una dimensione dei fatti senza l'applicazione di un filtro appropriato sui dati restituiti dalla query può causare un rallentamento delle prestazioni. Per evitare questo problema, è possibile definire un'azione drill-through che limita il numero complessivo di righe restituite. In questo modo è possibile migliorare in modo significativo le prestazioni delle query.  
@@ -37,7 +37,7 @@ Nelle procedure descritte in questo argomento viene definita un'azione drill-thr
   
     Nel riquadro di visualizzazione verrà visualizzato un modello Azione vuoto.  
   
-    ![Modello azione vuoto nel riquadro di visualizzazione](../analysis-services/media/l8-action2.gif "modello azione vuoto nel riquadro di visualizzazione")  
+    ![Modello azione vuoto nel riquadro di visualizzazione](../analysis-services/media/l8-action2.gif "modello azione vuoto nel riquadro informazioni")  
   
 3.  Nella casella **Nome** cambiare il nome dell'azione in **Internet Sales Details Drillthrough Action**.  
   
@@ -55,7 +55,7 @@ Nelle procedure descritte in questo argomento viene definita un'azione drill-thr
   
 8.  Nella casella **Numero massimo di righe** digitare **10**.  
   
-9. Nella casella **Didascalia** digitare **Drillthrough to Order Details…**.  
+9. Nel **didascalia** , digitare **Drillthrough to Order Details...** .  
   
     Queste impostazioni limitano il numero di righe restituite e specificano la didascalia che viene visualizzata nel menu dell'applicazione client. La figura seguente illustra tali impostazioni all'interno della casella **Proprietà aggiuntive** .  
   

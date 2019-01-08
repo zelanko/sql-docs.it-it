@@ -14,45 +14,45 @@ ms.assetid: 57faf388-c7ca-4696-9845-34e0a10cc5f7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5300285872c0c03ce25410ba0bfd636c7ccf6bca
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d9cb9439dd76c636df46b8ac3d737d79415b5ea5
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48208525"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53352678"
 ---
 # <a name="sqlbrowseconnect"></a>SQLBrowseConnect
   **SQLBrowseConnect** utilizza le parole chiave che possono essere suddivise in tre livelli di informazioni di connessione. Per ogni parola chiave nella tabella seguente è indicato se viene restituito un elenco di valori validi e se la parola chiave è facoltativa.  
   
 ## <a name="level-1"></a>Livello 1  
   
-|Parola chiave|Elenco restituito?|Facoltativa?|Description|  
+|Parola chiave|Elenco restituito?|Facoltativa?|Descrizione|  
 |-------------|--------------------|---------------|-----------------|  
-|DSN|N/D|no|Nome dell'origine dati restituiti da **SQLDataSources**. Se viene utilizzata la parola chiave DRIVER, non è possibile utilizzare la parola chiave DSN.|  
-|DRIVER|N/D|no|Microsoft® [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nome del driver ODBC Native Client è {[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 11 Client nativo}. Se viene utilizzata la parola chiave DSN, non è possibile utilizzare la parola chiave DRIVER.|  
+|DSN|N/D|No|Nome dell'origine dati restituiti da **SQLDataSources**. Se viene utilizzata la parola chiave DRIVER, non è possibile utilizzare la parola chiave DSN.|  
+|DRIVER|N/D|No|Microsoft? [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Nome del driver ODBC Client nativo è {[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 11}. Se viene utilizzata la parola chiave DSN, non è possibile utilizzare la parola chiave DRIVER.|  
   
 ## <a name="level-2"></a>Livello 2  
   
-|Parola chiave|Elenco restituito?|Facoltativa?|Description|  
+|Parola chiave|Elenco restituito?|Facoltativa?|Descrizione|  
 |-------------|--------------------|---------------|-----------------|  
-|SERVER|Sì|no|Nome del server in rete nel quale risiede l'origine dati. È consentita la specifica del termine "(local)" per indicare il server. In questo caso, è possibile utilizzare una copia locale di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], anche quando si tratta di una versione non in rete.|  
-|UID|no|Sì|ID di accesso dell'utente.|  
-|PWD|no|Sì (dipende dall'utente)|Password specificata dall'utente.|  
-|APP|no|Sì|Nome della chiamata al metodo di applicazione **SQLBrowseConnect**.|  
-|WSID|no|Sì|ID della workstation. In genere, si tratta del nome di rete del computer sul quale viene eseguita l'applicazione.|  
+|SERVER|Yes|No|Nome del server in rete nel quale risiede l'origine dati. È consentita la specifica del termine "(local)" per indicare il server. In questo caso, è possibile utilizzare una copia locale di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], anche quando si tratta di una versione non in rete.|  
+|UID|No|Yes|ID di accesso dell'utente.|  
+|PWD|No|Sì (dipende dall'utente)|Password specificata dall'utente.|  
+|APP|No|Yes|Nome della chiamata al metodo di applicazione **SQLBrowseConnect**.|  
+|WSID|No|Yes|ID della workstation. In genere, si tratta del nome di rete del computer sul quale viene eseguita l'applicazione.|  
   
 ## <a name="level-3"></a>Livello 3  
   
-|Parola chiave|Elenco restituito?|Facoltativa?|Description|  
+|Parola chiave|Elenco restituito?|Facoltativa?|Descrizione|  
 |-------------|--------------------|---------------|-----------------|  
-|DATABASE|Sì|Sì|Nome del database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|LANGUAGE|Sì|Sì|Lingua nazionale utilizzata in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|DATABASE|Yes|Yes|Nome del database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|LANGUAGE|Yes|Yes|Lingua nazionale utilizzata in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
   
  **SQLBrowseConnect** ignora i valori delle parole chiave del DATABASE e della lingua memorizzate nelle definizioni delle origini dati ODBC. Se il database o la lingua specificata nella stringa di connessione passata a **SQLBrowseConnect** non è valido **SQLBrowseConnect** restituisce SQL_NEED_DATA e gli attributi di connessione di livello 3.  
   
  I seguenti attributi, vengono impostati tramite la chiamata [SQLSetConnectAttr](sqlsetconnectattr.md), determinare il set di risultati restituito da **SQLBrowseConnect**.  
   
-|attribute|Description|  
+|attribute|Descrizione|  
 |---------------|-----------------|  
 |SQL_COPT_SS_BROWSE_CONNECT|Se è impostato su SQL_MORE_INFO_YES, **SQLBrowseConnect** restituisce una stringa estesa delle proprietà del server.<br /><br /> Di seguito è riportato un esempio di stringa estesa restituita da **SQLBrowseConnect**: nomeserver\nomeistanza; Cluster: No. Versione: 8.00.131<br /><br /> In questa stringa i punti e virgola separano le diverse informazioni sul server. Le virgole separano le diverse istanze del server.|  
 |SQL_COPT_SS_BROWSE_SERVER|Se viene specificato un nome di server, **SQLBrowseConnect** restituirà informazioni per il server specificato. Se SQL_COPT_SS_BROWSE_SERVER è impostato su NULL, **SQLBrowseConnect** restituisce informazioni per tutti i server nel dominio.<br /><br /> A causa di problemi di rete **SQLBrowseConnect** potrebbe non ricevere una risposta tempestiva da tutti i server. L'elenco di server restituito può pertanto variare per ogni richiesta.|  
@@ -73,7 +73,7 @@ ms.locfileid: "48208525"
 |Informazioni su SQL_COPT_SS_BROWSE_CACHE_DATA.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Funzione SQLBrowseConnect](http://go.microsoft.com/fwlink/?LinkId=59329)   
+ [Funzione SQLBrowseConnect](https://go.microsoft.com/fwlink/?LinkId=59329)   
  [Dettagli di implementazione dell'API ODBC](odbc-api-implementation-details.md)  
   
   

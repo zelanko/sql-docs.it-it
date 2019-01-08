@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 dev_langs:
 - TSQL
@@ -17,12 +16,12 @@ ms.assetid: 9ca284c5-f3e0-4a67-a132-fff376ff0ffe
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 614bbbf4520ee0e1dd7cced276ca2a69ca948c48
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 375e7c8a1bb520f5a3004c5279682d5b3f145b13
+ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48198251"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52640102"
 ---
 # <a name="ft-notify-bandwidth-server-configuration-option"></a>Opzione di configurazione del server ft notify bandwidth
   L'opzione **ft notify bandwidth** consente di specificare la dimensione massima consentita per il pool di buffer di memoria di piccole dimensioni, ovvero dei buffer di memoria di 64 KB. Il valore del parametro *max* specifica il numero massimo di buffer che deve essere gestito in un pool di buffer di piccole dimensioni con lo strumento di gestione della memoria del servizio full-text. Se il `max` valore è zero, non esiste alcun limite al numero di buffer consentito in un pool di buffer di piccole dimensioni.  

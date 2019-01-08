@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 60af695b92b23db33b009c446431a1b8f325d68f
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 6580599ed5c4c810a8b77369f850e9def2e90756
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600391"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52527229"
 ---
 # <a name="toppercent-dmx"></a>TopPercent (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -93,10 +93,10 @@ NATURAL PREDICTION JOIN
   
 |Modello|$SUPPORT|$PROBABILITY|$ADJUSTEDPROBABILITY|  
 |-----------|--------------|------------------|--------------------------|  
-|Sport-100|4334|0.29…|0.25…|  
-|Water Bottle|2866|0.19…|0.17…|  
-|Patch kit|2113|0.14…|0.13…|  
-|Mountain Tire Tube|1992|0.133…|0.12…|  
+|Sport-100|4334|0,29...|valore di 0,25...|  
+|Water Bottle|2866|0.19...|0,17...|  
+|Patch kit|2113|0,14...|0.13...|  
+|Mountain Tire Tube|1992|0.133...|0,12...|  
   
  **Nota** in questo esempio viene fornito solo per illustrare l'utilizzo di TopPercent. A seconda della dimensione del set di dati, questa query potrebbe impiegare molto tempo per l'esecuzione.  
   

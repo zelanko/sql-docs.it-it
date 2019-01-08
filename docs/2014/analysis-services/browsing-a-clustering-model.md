@@ -16,12 +16,12 @@ ms.assetid: 7f3f0949-d791-403a-88e2-54cb1a803dae
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c994b43bda37981d7073d0ee16f32369677e244e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1a0fd00201f782bba8b06ddde8753a86aeb89046
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48060411"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535714"
 ---
 # <a name="browsing-a-clustering-model"></a>Esplorazione di un modello di clustering
   Quando si apre un modello di clustering utilizzando **esplorare**, il modello viene visualizzato in un visualizzatore interattivo, simile al Visualizzatore di clustering in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Il visualizzatore consente di esplorare i cluster creati e comprenderne le caratteristiche. È inoltre possibile confrontare e contrapporre singoli segmenti con altri segmenti o con la popolazione.  
@@ -145,7 +145,7 @@ ms.locfileid: "48060411"
   
 -   Fare clic sulla colonna del cluster sull'intestazione e seleziona **drill-through ai dati della struttura** per ottenere informazioni dettagliate sui membri del cluster che non sono state incluse nel modello.  
   
-     Ad esempio, se si sta eseguendo il profiling dei clienti, si potrebbero lasciare le informazioni di contatto nei dati sottostanti (la struttura di data mining) ma non includerle nel modello, perché non sono utili per l'analisi. Tuttavia, dopo che i clienti sono stati assegnati ai cluster, è possibile visualizzare i dati dettagliati tramite il drill-through.  
+     Ad esempio, se si siano analizzando i clienti, si potrebbe lasciare le informazioni di contatto nei dati sottostanti (la struttura di data mining) ma non includerlo nel modello, perché non è utile per l'analisi. Tuttavia, dopo che i clienti sono stati assegnati ai cluster, è possibile visualizzare i dati dettagliati tramite il drill-through.  
   
  [Torna all'inizio](#BKMK_Tabs)  
   
@@ -176,11 +176,11 @@ ms.locfileid: "48060411"
   
 5.  Fare clic su **copia in Excel**.  
   
-     Si noti che il grafico delle caratteristiche del nuovo cluster viene aggiunto al relativo foglio di lavoro. È possibile spostarlo nello stesso foglio di lavoro dell'altro profilo per semplificarne il confronto, che verrà effettuato nel passaggio successivo.  
+     Si noti che il grafico delle caratteristiche del nuovo cluster viene aggiunto al relativo foglio di lavoro. È possibile spostarlo nello stesso foglio di lavoro di altro profilo per renderne più semplice per confrontarli, che verrà effettuato nel passaggio successivo.  
   
  **Suggerimenti**  
   
--   Si noti che la caratteristica primaria del cliente nel cluster Oltre 65 è che non acquista il prodotto. Se si desidera saperne il motivo, è possibile esplorare i cluster e confrontare i gruppi o si potrebbe creare un modello correlato utilizzando un algoritmo che sia in grado di esplorare cause e risultati, ad esempio un modello di albero delle decisioni o un modello Naïve Bayes.  
+-   Si noti che la caratteristica primaria del cliente nel cluster oltre 65 è che non acquista il prodotto. Se si desidera saperne il motivo, è possibile esplorare i cluster e confrontare i gruppi o si potrebbe creare un modello correlato utilizzando un algoritmo che sia in grado di esplorare cause e risultati, ad esempio un modello di albero delle decisioni o un modello Naïve Bayes.  
   
 -   Se si desidera ottenere un elenco completo di attributi e probabilità per questo cluster (o tutti i cluster), è possibile creare una query. Per esempi di query sui modelli di clustering, vedere [Clustering Model Query Examples](data-mining/clustering-model-query-examples.md).  
   
@@ -205,7 +205,7 @@ ms.locfileid: "48060411"
   
      Si noti che, dietro le quinte, il **analisi discriminante tra Cluster** Visualizzatore inviate query complesse al server di data mining, per estrarre gli attributi più importanti nella distinzione tra i due gruppi, rendendo più semplice da confrontare due set di clienti.  
   
-2.  Fare clic su uno del **predilige...** colonne.  
+2.  Fare clic su uno del **predilige...**  colonne.  
   
      Nella barra a destra dell'elenco di valori e di attributi vengono visualizzati quali valori e funzionalità sono più importanti come caratteristica del cluster selezionato.  
   

@@ -13,12 +13,12 @@ ms.assetid: 1386aae0-1d73-4a50-9c69-ae12405d855c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7a4d0b4c7bcb7867eb58618c3860d2e50ddfeccc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 84060846dc19862e057e55e4096df7e97fa4d825
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48219241"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53352887"
 ---
 # <a name="configure-table-behavior-properties-for-power-view-reports-ssas-tabular"></a>Configurare le proprietà Comportamento tabella per i report Power View (SSAS tabulare)
   Se si usa un modello tabulare come modello di dati per [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], è possibile impostare le proprietà del comportamento delle tabelle che espongono righe di dettaglio a un livello più granulare. L'impostazione delle proprietà del comportamento delle tabelle comporta la modifica del comportamento di raggruppamento delle righe di dettaglio e offre una posizione predefinita migliore per le informazioni di identificazione quali nomi, ID foto o immagini del logo nei layout di sezioni, schede e grafici.  
@@ -41,7 +41,7 @@ ms.locfileid: "48219241"
 -   **Immagine predefinita** : specifica quale colonna fornisce un'immagine per rappresentare i dati della riga, ad esempio un ID foto in un record dipendente.  
   
 > [!NOTE]  
->  Fare riferimento alla sezione seguente relativa alle ottimizzazioni dei layout rispetto a un determinato formato di presentazione:  [Ottimizzazione per layout specifici](#bkmk_optimizeforlayout).  
+>  Vedere la sezione seguente relativa alle ottimizzazioni dei layout dal punto di vista di un determinato formato di presentazione:  [Ottimizzazione per layout specifici](#bkmk_optimizeforlayout).  
   
 ## <a name="opening-the-table-behavior-dialog-box"></a>Apertura della finestra di dialogo Comportamento tabella  
   
@@ -52,11 +52,11 @@ ms.locfileid: "48219241"
 3.  Nella finestra di dialogo **Comportamento tabella** impostare **Identificatore di riga**, quindi specificare le altre proprietà in questa finestra di dialogo.  
   
 ## <a name="setting-the-row-identifier-property"></a>Impostazione della proprietà Identificatore di riga  
- All'interno della tabella, l'identificatore di riga specifica una singola colonna che contiene solo valori univoci e nessun valore vuoto. La proprietà Identificatore di riga viene utilizzata per modificare il raggruppamento in modo che un gruppo non sia basato sulla composizione dei campi di una riga, ma piuttosto su una colonna fissa che viene sempre utilizzata per identificare in modo univoco una riga, indipendentemente dai campi utilizzati in un particolare layout di report.  
+ All'interno della tabella, l'identificatore di riga specifica una singola colonna che contiene solo valori univoci e nessun valore vuoto. La proprietà identificatore di riga viene utilizzata per modificare il raggruppamento in modo che un gruppo non è basato sulla composizione dei campi di una riga, ma piuttosto su una colonna fissa che viene sempre utilizzata per identificare in modo univoco una riga, indipendentemente dai campi utilizzati in un particolare layout di report.  
   
  L'impostazione di questa proprietà comporta la modifica del comportamento di raggruppamento predefinito dal raggruppamento dinamico basato sulle colonne presenti nell'area di disegno a un comportamento di raggruppamento fisso che riepiloga i dati in base all'identificatore di riga. La modifica del comportamento di raggruppamento predefinito è importante per layout di report come le matrici che altrimenti verrebbero raggruppati (o mostrerebbero i subtotali) per ogni colonna della riga.  
   
- In [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]l'impostazione di un identificatore di riga abilita le proprietà aggiuntive seguenti: proprietà **Mantieni righe univoche** , proprietà **Etichetta predefinita** e proprietà **Immagine predefinita** .  
+ In [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], l'impostazione di un identificatore di riga Abilita le proprietà aggiuntive seguenti: **Mantieni righe univoche** proprietà, **etichetta predefinita** proprietà, e **immagine predefinita** proprietà.  
   
  È anche possibile usare **Identificatore di riga** come proprietà autonoma per poter eseguire le operazioni seguenti:  
   
@@ -74,7 +74,7 @@ ms.locfileid: "48219241"
  Impostando la proprietà **Mantieni righe univoche** , è possibile specificare una o più colonne che devono sempre essere ripetute, anche in presenza di istanze duplicate, ogni volta che si aggiunge quella colonna all'area di disegno del report. I valori calcolati associati alla riga verranno allocati in base a ogni singola riga e non riportati in una sola riga. Quando si scelgono le colonne per la proprietà  **Mantieni righe univoche** , scegliere quelle che contengono valori univoci o quasi univoci.  
   
 > [!NOTE]  
->  Poiché le colonne selezionate dall'utente finale possono influire sul raggruppamento, che modifica il contesto del filtro per i calcoli delle espressioni, i progettisti di modelli devono creare misure che restituiscano i risultati corretti. Per altre informazioni, vedere [Domande frequenti su Power View](http://go.microsoft.com/fwlink/?LinkId=220674).  
+>  Poiché le colonne selezionate dall'utente finale possono influire sul raggruppamento, che modifica il contesto del filtro per i calcoli delle espressioni, i progettisti di modelli devono creare misure che restituiscano i risultati corretti. Per altre informazioni, vedere [Domande frequenti su Power View](https://go.microsoft.com/fwlink/?LinkId=220674).  
   
 ## <a name="setting-a-default-label"></a>Impostazione di un'etichetta predefinita  
  Questa proprietà consente di specificare un'etichetta che viene visualizzata nell'elenco di navigazione di un report di sezione. Se utilizzata con un'immagine predefinita, l'etichetta predefinita viene visualizzata sotto l'immagine. Senza un'immagine, l'etichetta predefinita viene visualizzata da sola. Quando si sceglie un'etichetta predefinita, scegliere la colonna che contiene la maggior parte delle informazioni sulla riga, ad esempio un nome.  
@@ -113,11 +113,11 @@ ms.locfileid: "48219241"
   
  Confrontare le immagini prima e dopo seguenti in cui viene illustrato l'effetto dell'impostazione di questa proprietà su un layout di matrice.  
   
- **Prima: raggruppamento predefinito basato sui campi nella matrice**  
+ **Prima: Raggruppamento predefinito basato sui campi nella matrice**  
   
  ![Layout di matrice raggruppato sull'identificatore di riga](../media/ssas-rptprop-matrixrowid.gif "layout di matrice raggruppato sull'identificatore di riga")  
   
- **Dopo: raggruppamento basato sull'identificatore di riga**  
+ **Dopo: Raggruppamento basato sull'identificatore di riga**  
   
  ![Layout di matrice raggruppato sull'identificatore di riga](../media/ssas-rptprop-matrixrowid.gif "layout di matrice raggruppato sull'identificatore di riga")  
   
@@ -126,11 +126,11 @@ ms.locfileid: "48219241"
   
  Confrontare le immagini prima e dopo seguenti in cui viene illustrato l'effetto dell'impostazione di questa proprietà su un layout di grafico. Si tratta dello stesso report, con campi e presentazione identici. L'unica differenza è data dall'immagine inferiore che mostra un report dopo l'impostazione di **Identificatore di riga** nella tabella Elementi.  
   
- **Prima: raggruppamento predefinito basato sui campi in un grafico**  
+ **Prima: Raggruppamento predefinito basato sui campi in un grafico**  
   
  ![Grafico basato su raggruppamento predefinito a livello di campo](../media/ssas-rptprop-chartfieldgroup.gif "grafico basato su raggruppamento predefinito a livello di campo")  
   
- **Dopo: raggruppamento basato sull'identificatore di riga (l'identificatore di riga diventa l'asse)**  
+ **Dopo: Raggruppamento basato sull'identificatore di riga (identificatore di riga diventa l'asse)**  
   
  ![Grafico basato su raggruppamento per ID di riga](../media/ssas-rptprop-chartrowid.gif "grafico basato su raggruppamento per ID di riga")  
   

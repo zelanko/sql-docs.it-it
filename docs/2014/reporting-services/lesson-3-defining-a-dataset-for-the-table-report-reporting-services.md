@@ -1,5 +1,5 @@
 ---
-title: 'Lesson 3: Defining a Dataset for the Table Report (Reporting Services) (Lezione 3: Definizione di un set di dati per il report tabella (Reporting Services)) | Microsoft Docs'
+title: 'Lezione 3: La definizione di un set di dati per il Report di tabella (Reporting Services) | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,14 @@ ms.assetid: ee93dfcb-8f52-4d63-b4f6-0d38e00fd350
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 3b300b51acf83f79b54b12341299ebe9a8d82c17
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 33a91c27f78e3bbf2dfec3aeb71f2f2230c9376d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48086541"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52528226"
 ---
-# <a name="lesson-3-defining-a-dataset-for-the-table-report-reporting-services"></a>Lezione 3: Definizione di un set di dati per il report tabella (Reporting Services)
+# <a name="lesson-3-defining-a-dataset-for-the-table-report-reporting-services"></a>Lezione 3: La definizione di un set di dati per il Report di tabella (Reporting Services)
   Dopo aver definito l'origine dati, è necessario definire un set di dati. In [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]i dati utilizzati nei report sono contenuti in un *set di dati*. Un set di dati contiene un puntatore a un'origine dati e la query utilizzata dal report, nonché le variabili e i campi calcolati.  
   
  Per progettare la query è possibile utilizzare la finestra Progettazione query in Progettazione report. Per questa esercitazione si creerà una query che recupera informazioni sugli ordini di vendita dal [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] **2008** database.  
@@ -60,7 +60,7 @@ ms.locfileid: "48086541"
   
 6.  (Facoltativo) Fare clic sul pulsante **Progettazione query** . La query verrà visualizzata nella finestra Progettazione query basata su testo. È possibile passare alla finestra Progettazione query con interfaccia grafica facendo clic su **Modifica come testo**. Visualizzare i risultati della query facendo clic su esecuzione **(!)**  pulsante sulla barra degli strumenti Progettazione query.  
   
-     Verranno visualizzati i dati in sei campi di quattro tabelle differenti di [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] database. Nella query vengono utilizzate funzionalità di Transact-SQL come gli alias. La tabella SalesOrderHeader viene ad esempio denominata soh.  
+     Verranno visualizzati i dati contenuti in sei campi di quattro tabelle differenti del database [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] . Nella query vengono utilizzate funzionalità di Transact-SQL come gli alias. La tabella SalesOrderHeader viene ad esempio denominata soh.  
   
      Fare clic su **OK** per chiudere la finestra Progettazione query.  
   
@@ -69,7 +69,7 @@ ms.locfileid: "48086541"
      I campi e il set di dati di **AdventureWorksDataset** vengono visualizzati nel riquadro Dati report.  
   
 ## <a name="next-task"></a>Attività successiva  
- In questo modo si è specificata una query che recupera i dati per il report. Il passaggio successivo consiste nella creazione del layout del report. Vedere [Lezione 4: Aggiunta di una tabella al report &#40;Reporting Services&#41;](lesson-4-adding-a-table-to-the-report-reporting-services.md).  
+ In questo modo si è specificata una query che recupera i dati per il report. Il passaggio successivo consiste nella creazione del layout del report. Vedere [lezione 4: Aggiunta di una tabella al Report &#40;Reporting Services&#41;](lesson-4-adding-a-table-to-the-report-reporting-services.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Eseguire query di strumenti di progettazione di Report della finestra di progettazione di SQL Server Data Tools &#40;SSRS&#41;](report-data/query-design-tools-ssrs.md)   

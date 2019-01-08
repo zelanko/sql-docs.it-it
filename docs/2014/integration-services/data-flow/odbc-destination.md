@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.designer.odbcdest.f1
@@ -13,12 +12,12 @@ ms.assetid: bffa63e0-c737-4b54-b4ea-495a400ffcf8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b28d456d299c0f408ec2c9f4a284156dadfe9491
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dd6980bd66e4aeca0672fd4c8c1bffb95e09b9ae
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48079141"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52770963"
 ---
 # <a name="odbc-destination"></a>Destinazione ODBC
   Tramite la destinazione ODBC viene eseguito il caricamento bulk di dati in tabelle di database supportate da ODBC. La destinazione ODBC utilizza una gestione connessione ODBC per la connessione all'origine dati.  
@@ -30,16 +29,16 @@ ms.locfileid: "48079141"
 ##  <a name="BKMK_odbcdestination_loadoptions"></a> Opzioni di caricamento  
  La destinazione ODBC può utilizzare uno tra due moduli di caricamento di accesso. Impostare la modalità in [Editor origine ODBC &#40;pagina Gestione connessione #41;](../odbc-source-editor-connection-manager-page.md). Le due modalità sono:  
   
--   **Batch**: in questa modalità il componente tenta di usare il metodo di inserimento più efficiente in base alle funzionalità del provider ODBC rilevate. Per la maggior parte degli attuali provider ODBC, ciò significa preparare un'istruzione INSERT con parametri e quindi usare un'associazione di parametri di matrice a livello di riga, in cui le dimensioni della matrice sono determinate dalla proprietà **BatchSize** . Se si seleziona **Batch** e il provider non supporta questo metodo, la destinazione ODBC passa automaticamente alla modalità **Riga per riga** .  
+-   **Batch**: In questa modalità la destinazione ODBC tenta di usare il metodo di inserimento più efficiente basato su funzionalità del provider ODBC rilevate. Per la maggior parte degli attuali provider ODBC, ciò significa preparare un'istruzione INSERT con parametri e quindi usare un'associazione di parametri di matrice a livello di riga, in cui le dimensioni della matrice sono determinate dalla proprietà **BatchSize** . Se si seleziona **Batch** e il provider non supporta questo metodo, la destinazione ODBC passa automaticamente alla modalità **Riga per riga** .  
   
--   **Riga per riga**: in questa modalità, tramite la destinazione ODBC viene preparata un'istruzione INSERT con parametri e viene usato **SQL Execute** per inserire le righe una per volta.  
+-   **Row-by-row**: In questa modalità, la destinazione ODBC viene preparata un'istruzione INSERT con parametri e viene usato **SQL Execute** per inserire le righe una alla volta.  
   
 ## <a name="error-handling"></a>Gestione degli errori  
  La destinazione ODBC include un output degli errori. L'output degli errori del componente include le colonne di output seguenti:  
   
--   **Error Code**: numero che corrisponde all'errore corrente. Per un elenco degli errori, vedere la documentazione per il database di origine. Per un elenco dei codici di errore SSIS, vedere la Guida di riferimento ai messaggi e ai codici di errore SSIS.  
+-   **Codice di errore**: Il numero che corrisponde all'errore corrente. Per un elenco degli errori, vedere la documentazione per il database di origine. Per un elenco dei codici di errore SSIS, vedere la Guida di riferimento ai messaggi e ai codici di errore SSIS.  
   
--   **Error Column**: colonna di origine che provoca l'errore (per gli errori di conversione).  
+-   **Errore colonna**: La colonna di origine che provoca l'errore (per gli errori di conversione).  
   
 -   Colonne dei dati di output standard.  
   
@@ -62,9 +61,9 @@ ms.locfileid: "48079141"
   
 -   [Editor destinazione ODBC &#40;pagina Gestione connessione&#41;](../odbc-destination-editor-connection-manager-page.md)  
   
--   [Editor destinazione ODBC &#40;pagina mapping&#41;](../odbc-destination-editor-mappings-page.md)  
+-   [ODBC Destination Editor &#40;pagina Mapping&#41;](../odbc-destination-editor-mappings-page.md)  
   
--   [Editor destinazione ODBC &#40;pagina dell'Output degli errori&#41;](../odbc-destination-editor-error-output-page.md)  
+-   [Editor destinazione ODBC &#40;pagina Output degli errori&#41;](../odbc-destination-editor-error-output-page.md)  
   
  La finestra di dialogo **Editor avanzato** contiene le proprietà che è possibile impostare a livello di codice.  
   
@@ -74,11 +73,11 @@ ms.locfileid: "48079141"
   
  Per altre informazioni sulle proprietà che è possibile impostare nella finestra di dialogo Editor avanzato, vedere [Proprietà personalizzate della destinazione ODBC](odbc-destination-custom-properties.md).  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>In questa sezione  
   
--   [Editor destinazione ODBC &#40;pagina dell'Output degli errori&#41;](../odbc-destination-editor-error-output-page.md)  
+-   [Editor destinazione ODBC &#40;pagina Output degli errori&#41;](../odbc-destination-editor-error-output-page.md)  
   
--   [Editor destinazione ODBC &#40;pagina mapping&#41;](../odbc-destination-editor-mappings-page.md)  
+-   [ODBC Destination Editor &#40;pagina Mapping&#41;](../odbc-destination-editor-mappings-page.md)  
   
 -   [Editor destinazione ODBC &#40;pagina Gestione connessione&#41;](../odbc-destination-editor-connection-manager-page.md)  
   

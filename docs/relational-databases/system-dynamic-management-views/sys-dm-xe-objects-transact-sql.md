@@ -20,12 +20,12 @@ ms.assetid: 5d944b99-b097-491b-8cbd-b0e42b459ec0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: df8b9dae2c8c427444da4a9e19a1754f792dcef4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3132b45713b3493aa2e82a48123e5f3693e6e8dc
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47601369"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52543818"
 ---
 # <a name="sysdmxeobjects-transact-sql"></a>sys.dm_xe_objects (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,14 +42,14 @@ ms.locfileid: "47601369"
   
 -   Tipi. Nei tipi vengono incapsulati la lunghezza e le caratteristiche della raccolta di byte, necessarie per interpretare i dati.  
 
- |Nome colonna|Tipo di dati|Description|  
+ |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |NAME|**nvarchar(60)**|Nome dell'oggetto . nome è univoco all'interno di un pacchetto per un tipo di oggetto specifico. Non ammette i valori Null.|  
 |object_type|**nvarchar(60)**|Tipo dell'oggetto. object_type è uno dei seguenti:<br /><br /> evento<br /><br /> action<br /><br /> target<br /><br /> pred_source<br /><br /> pred_compare<br /><br /> Tipo<br /><br /> Non ammette i valori Null.|  
 |package_guid|**uniqueidentifier**|GUID del pacchetto che espone questa azione. C'è una relazione molti-a-uno con sys.dm_xe_packages.package_id. Non ammette i valori Null.|  
 |description|**nvarchar(256)**|Descrizione dell'azione. descrizione viene impostata dall'autore del pacchetto. Non ammette i valori Null.|  
 |capabilities|**int**|Bitmap che descrive le funzionalità dell'oggetto. Ammette i valori Null.|  
-|capabilities_desc|**nvarchar(256)**|Elenca tutte le funzionalità dell'oggetto. Ammette i valori Null.<br /><br /> **Funzionalità che si applicano a tutti i tipi di oggetto**<br /><br /> —<br />                                **Privato**. Unico oggetto disponibile per uso interno e a cui non è possibile accedere tramite CREATE/ALTER EVENT SESSION DDL. In questa categoria rientrano le destinazioni e gli eventi di controllo oltre a un esiguo numero di oggetti utilizzati internamente.<br /><br /> ===============<br /><br /> **Caratteristiche di eventi**<br /><br /> —<br />                                **No_block**. L'evento si trova in un percorso di codice critico che non può essere bloccato per alcun motivo. Gli eventi con questa funzionalità non possono essere aggiunti ad alcuna sessione eventi che specifica NO_EVENT_LOSS.<br /><br /> ===============<br /><br /> **Funzionalità che si applicano a tutti i tipi di oggetto**<br /><br /> —<br />                                **Process_whole_buffers**. La destinazione utilizza un buffer di eventi alla volta, anziché evento per evento.<br /><br /> —<br />                        **Singleton**. In un processo può essere presente una sola istanza della destinazione. Sebbene più sessioni eventi possano fare riferimento alla stessa destinazione singleton, in realtà è presente una sola istanza e tale istanza visualizzerà ogni evento univoco solo una volta. Questo è importante se la destinazione viene aggiunta a più sessioni che raccolgono tutte lo stesso evento.<br /><br /> —<br />                                **Synchronous**. La destinazione viene eseguita sul thread che ha generato l'evento, prima che il controllo venga restituito alla riga di codice chiamante.|  
+|capabilities_desc|**nvarchar(256)**|Elenca tutte le funzionalità dell'oggetto. Ammette i valori Null.<br /><br /> **Funzionalità che si applicano a tutti i tipi di oggetto**<br /><br /> -<br />                                **Privato**. Unico oggetto disponibile per uso interno e a cui non è possibile accedere tramite CREATE/ALTER EVENT SESSION DDL. In questa categoria rientrano le destinazioni e gli eventi di controllo oltre a un esiguo numero di oggetti utilizzati internamente.<br /><br /> ===============<br /><br /> **Caratteristiche di eventi**<br /><br /> -<br />                                **No_block**. L'evento si trova in un percorso di codice critico che non può essere bloccato per alcun motivo. Gli eventi con questa funzionalità non possono essere aggiunti ad alcuna sessione eventi che specifica NO_EVENT_LOSS.<br /><br /> ===============<br /><br /> **Funzionalità che si applicano a tutti i tipi di oggetto**<br /><br /> -<br />                                **Process_whole_buffers**. La destinazione utilizza un buffer di eventi alla volta, anziché evento per evento.<br /><br /> -<br />                        **Singleton**. In un processo può essere presente una sola istanza della destinazione. Sebbene più sessioni eventi possano fare riferimento alla stessa destinazione singleton, in realtà è presente una sola istanza e tale istanza visualizzerà ogni evento univoco solo una volta. Questo è importante se la destinazione viene aggiunta a più sessioni che raccolgono tutte lo stesso evento.<br /><br /> -<br />                                **Synchronous**. La destinazione viene eseguita sul thread che ha generato l'evento, prima che il controllo venga restituito alla riga di codice chiamante.|  
 |type_name|**nvarchar(60)**|Nome per oggetti pred_source e pred_compare. Ammette i valori Null.|  
 |type_package_guid|**uniqueidentifier**|GUID per il pacchetto che espone il tipo sul quale questo oggetto opera. Ammette i valori Null.|  
 |type_size|**int**|Dimensione del tipo di dati espressa in byte. Solo per tipi di oggetti validi. Ammette i valori Null.|  

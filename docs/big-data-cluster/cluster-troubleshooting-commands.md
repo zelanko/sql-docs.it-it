@@ -1,18 +1,20 @@
 ---
-title: Usare kubectl per monitorare un cluster di big data di SQL Server | Microsoft Docs
+title: Usare kubectl per risolvere i problemi di monitoraggio /
+titleSuffix: SQL Server 2019 big data clusters
 description: Questo articolo forniscono i comandi di kubectl utile per il monitoraggio e risoluzione dei problemi relativi a un cluster di big data di SQL Server 2019 (anteprima).
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 10/15/2018
+ms.date: 12/06/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: a47726e86bd1f10cda4db55bec6eac995344da38
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.custom: seodec18
+ms.openlocfilehash: 0d034058f7cc187caa373f3bdae2569d091c3977
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49356595"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030565"
 ---
 # <a name="kubectl-commands-for-monitoring-and-troubleshooting-sql-server-big-data-clusters"></a>Comandi di Kubectl per il monitoraggio e risoluzione dei problemi dei cluster di SQL Server i big Data
 
@@ -189,9 +191,9 @@ az aks browse --resource-group <azure_resource_group> --name <aks_cluster_name>
 ```
 
 > [!Note]
-> Se viene visualizzato l'errore seguente: *non è possibile restare in ascolto sulla porta 8001: tutti i listener non è riuscito a creare con i seguenti errori: non è possibile creare listener: errore ascolto tcp4 127.0.0.1:8001: > associare: un solo utilizzo di ogni indirizzo del socket (protocollo di rete indirizzo/porta) di norma è consentita. Non è possibile creare listener: errore ascolto tcp6: indirizzo [[:: 1]]: 8001: mancante nella porta > risolvere l'errore: Impossibile rimanere in ascolto su una delle porte di richiesta: [{8001 9090}]*, assicurarsi che non è stato avviato il dashboard già da un'altra finestra.
+> Se viene visualizzato l'errore seguente: *Impossibile rimanere in ascolto sulla porta 8001 e: Tutti i listener non è stato possibile creare con i seguenti errori: Impossibile creare il listener: Errore di restare in ascolto tcp4 127.0.0.1:8001: > associare: In genere è consentito un solo utilizzo di ogni indirizzo del socket (indirizzo di rete/protocollo/porta). Impossibile creare il listener: Errore di restare in ascolto tcp6: indirizzo [[:: 1]]: 8001: mancante nella porta > risolvere l'errore: Impossibile rimanere in ascolto su una delle porte di richiesta: [{8001 9090}]*, assicurarsi che non è stato avviato il dashboard già da un'altra finestra.
 
-Quando si avvia il dashboard nel browser, è possibile ottenere gli avvisi di autorizzazione a causa di RBAC viene abilitata per impostazione predefinita nei cluster servizio contenitore di AZURE e l'account di servizio utilizzato dal dashboard non dispone delle autorizzazioni sufficienti per accedere a tutte le risorse (ad esempio,  *non è consentito il Pod: utente "system: serviceaccount:kube-system: kubernetes-dashboard" non è possibile elencare i POD nello spazio dei nomi "default"*). Eseguire il comando seguente per concedere le autorizzazioni necessarie per `kubernetes-dashboard`e quindi riavviare il dashboard:
+Quando si avvia il dashboard nel browser, è possibile ottenere gli avvisi di autorizzazione a causa di RBAC viene abilitata per impostazione predefinita nei cluster servizio contenitore di AZURE e l'account di servizio utilizzato dal dashboard non dispone delle autorizzazioni sufficienti per accedere a tutte le risorse (ad esempio,  *non è consentito il Pod: Utente "del sistema: serviceaccount:kube-system: kubernetes-dashboard" non è possibile elencare i POD nello spazio dei nomi "default"*). Eseguire il comando seguente per concedere le autorizzazioni necessarie per `kubernetes-dashboard`e quindi riavviare il dashboard:
 
 ```
 kubectl create clusterrolebinding kubernetes-dashboard -n kube-system --clusterrole=cluster-admin --serviceaccount=kube-system:kubernetes-dashboard

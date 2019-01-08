@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - monitoring performance [SQL Server], resource usage
@@ -25,12 +25,12 @@ ms.assetid: f2993a28-0b81-46f2-aec0-6877fe990387
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ef07f6885b99393b05b85b530464040490dd7bd4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8bd4676eed22cea99808d87016231dbd2ebaf4cc
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48135071"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52777063"
 ---
 # <a name="monitor-resource-usage-system-monitor"></a>Monitoraggio dell'utilizzo delle risorse (Monitor di sistema)
   Se si utilizza un sistema operativo server Microsoft Windows, è possibile misurare le prestazioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]mediante lo strumento grafico Monitoraggio di sistema. È possibile visualizzare oggetti e contatori delle prestazioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , nonché funzioni di altri oggetti ad esempio processori, memoria, cache, thread e processi. A ognuno di questi oggetti è associato un set di contatori che misurano l'utilizzo dei dispositivi, le lunghezze delle code, i ritardi e altri indicatori di velocità effettiva e congestione interna.  
@@ -85,7 +85,7 @@ ms.locfileid: "48135071"
 |Viene descritto come monitorare un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per verificare che l'utilizzo della memoria rientri negli intervalli standard.|[Monitoraggio dell'utilizzo della memoria](monitor-memory-usage.md)|  
 |Viene descritto come creare un avviso generato nel momento in cui viene raggiunto un valore soglia di un contatore di Monitoraggio di sistema.|[Creare un avviso del database di SQL Server](create-a-sql-server-database-alert.md)|  
 |Viene descritto come creare grafici, avvisi, log e report per monitorare un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|[Creare grafici, avvisi, log e report](create-charts-alerts-logs-and-reports.md)|  
-|Vengono elencati oggetti e contatori utilizzati da Monitoraggio di sistema per monitorare le attività nei computer che eseguono un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|[Usare oggetti di SQL Server](use-sql-server-objects.md)|  
+|Vengono elencati oggetti e contatori utilizzati da Monitoraggio di sistema per monitorare le attività nei computer che eseguono un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|[Utilizzare oggetti di SQL Server](use-sql-server-objects.md)|  
 |Vengono elencati oggetti e contatori utilizzati da Monitoraggio di sistema per monitorare le attività OLTP in memoria.|[XTP &#40;OLTP In memoria&#41; i contatori delle prestazioni](../../integration-services/performance/performance-counters.md)|  
   
   

@@ -18,12 +18,12 @@ ms.assetid: cd4df273-0c6a-4b3e-9572-8a7e313111e8
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4a328e2b7af2fb1e743c81e23a0f80e7530f3810
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 0bf91af4556694ea032dccd8d502e4480fc4c750
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50146006"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52540146"
 ---
 # <a name="mining-models-analysis-services---data-mining"></a>Modelli di data mining (Analysis Services - Data mining)
   Un *modello di data mining* viene creato applicando un algoritmo ai dati, ma è molto più di un algoritmo o di un contenitore di metadati: è un set di dati, statistiche e modelli che possono essere applicati a nuovi dati per generare stime ed eseguire inferenze sulle relazioni.  
@@ -49,11 +49,11 @@ ms.locfileid: "50146006"
   
  ![modello contiene i metadati, modelli e associazioni](../media/dmcon-modelarch2.gif "modello contiene i metadati, modelli e associazioni")  
   
- I metadati consentono di specificare il nome del modello e il server in cui è archiviato, nonché una definizione del modello contenente le colonne della struttura di data mining utilizzate per la compilazione del modello, le definizioni dei filtri applicati durante l'elaborazione del modello e l'algoritmo utilizzato per analizzare i dati. Tutte queste scelte, ovvero le colonne dei dati e i relativi tipi di dati, i filtri e gli algoritmi, influiscono in maniera rilevante sui risultati dell'analisi.  
+ I metadati consentono di specificare il nome del modello e il server in cui è archiviato, nonché una definizione del modello contenente le colonne della struttura di data mining utilizzate per la compilazione del modello, le definizioni dei filtri applicati durante l'elaborazione del modello e l'algoritmo utilizzato per analizzare i dati. Tutte le colonne queste scelte dei dati e i tipi di dati, filtri e algoritmo sono un fattore determinante per i risultati dell'analisi.  
   
  Ad esempio, è possibile utilizzare gli stessi dati per creare più modelli, utilizzando algoritmi quali quelli di clustering, dell'albero delle decisioni e Naive Bayes. Ogni tipo di modello consente di creare set diversi di modelli, set di elementi, regole o formule che è possibile utilizzare per l'esecuzione di stime. Poiché in genere ogni algoritmo analizza i dati in modo diverso, anche il *contenuto* del modello risultante è organizzato in strutture diverse. In un tipo di modello i dati e i modelli possono essere raggruppati in *cluster*, mentre in un altro tipo i dati possono essere organizzati in alberi e rami e in base alle regole che li dividono e li definiscono.  
   
- Il modello viene anche influenzato dai dati utilizzati per il training: persino i modelli sottoposti a training nella stessa struttura di data mining possono generare risultati diversi se i dati vengono filtrati in modi differenti o se si utilizzano valori di inizializzazione diversi durante l'analisi. Tuttavia, i dati effettivi non vengono archiviati nel modello, bensì vengono archiviate solo le statistiche riepilogative, con i dati effettivi presenti nella struttura di data mining. Se sono stati creati filtri dei dati durante il training del modello, le definizioni dei filtri vengono salvate anche con l'oggetto modello.  
+ Il modello viene anche influenzato dai dati utilizzati per il training: persino i modelli sottoposti a training nella stessa struttura di data mining possono generare risultati diversi se i dati vengono filtrati in modi differenti o se si utilizzano valori di inizializzazione diversi durante l'analisi. Tuttavia, i dati effettivi non vengono archiviati nel modello di sola vengono archiviate le statistiche di riepilogo, con i dati effettivi presenti nella struttura di data mining. Se sono stati creati filtri dei dati durante il training del modello, le definizioni dei filtri vengono salvate anche con l'oggetto modello.  
   
  Nel modello è contenuto un set di associazioni tramite cui viene fatto riferimento ai dati memorizzati nella cache della struttura di data mining. Se i dati sono stati memorizzati nella cache della struttura e non sono stati cancellati dopo l'elaborazione, queste associazioni consentono di eseguire il drill-through dai risultati ai case che supportano i risultati. Tuttavia, i dati effettivi vengono archiviati nella cache della struttura, non nel modello.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "50146006"
   
 -   Selezionare l'algoritmo più appropriato per l'attività analitica.  
   
--   Scegliere le colonne della struttura da utilizzare nel modello e specificare la relativa modalità di utilizzo, ovvero in quale colonna è contenuto il risultato che si desidera stimare, quali colonne sono solo per l'input e così via.  
+-   Scegliere le colonne della struttura da usare nel modello e specificare come devono essere colonne usato, che contiene il risultato da stimare, quali colonne sono per input solo e così via.  
   
 -   Facoltativamente, impostare i parametri per ottimizzare l'elaborazione attraverso l'algoritmo.  
   
@@ -80,7 +80,7 @@ ms.locfileid: "50146006"
   
 -   È possibile utilizzare un'istruzione DMX ALTER STRUCTURE ADD MODEL per aggiungere un nuovo modello di data mining a una struttura esistente. Utilizzare questo metodo per provare a utilizzare modelli diversi basati sullo stesso set di dati.  
   
- È possibile creare modelli di data mining anche a livello di codice, tramite AMO o XML/A o tramite altri client quali Client di data mining per Excel. Per altre informazioni, vedere gli argomenti seguenti:  
+ È possibile creare modelli di data mining anche a livello di codice, tramite AMO o XML/A o tramite altri client quali Client di data mining per Excel. Per altre informazioni, vedere i seguenti argomenti:  
   
  [Architettura del modello di data mining](#bkmk_mdlArch)  
   

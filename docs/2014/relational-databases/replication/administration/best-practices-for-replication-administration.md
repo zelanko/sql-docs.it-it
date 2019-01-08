@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - administering replication, best practices
@@ -14,15 +13,15 @@ ms.assetid: 850e8a87-b34c-4934-afb5-a1104f118ba8
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4b234ec214aeca9993f885cc3b191c89db857d33
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cd6f263e816d74f1fe3f09902c7e806709dd6993
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48079281"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52823308"
 ---
 # <a name="best-practices-for-replication-administration"></a>Procedure consigliate per l'amministrazione della replica
-  Dopo aver configurato la replica, è importante comprendere in che modo amministrare una topologia di replica. In questo argomento sono contenute procedure consigliate di base relative a diverse aree, con collegamenti ad altre informazioni per ogni area. Oltre ad attenersi a tali procedure, provare a familiarizzare con domande e problemi comuni leggendo l'argomento [Domande frequenti per gli amministratori di replica](frequently-asked-questions-for-replication-administrators.md).  
+  Dopo aver configurato la replica, è importante comprendere in che modo amministrare una topologia di replica. In questo argomento sono contenute procedure consigliate di base relative a diverse aree, con collegamenti ad altre informazioni per ogni area. Oltre a seguire le procedure consigliate descritte in questo argomento, è consigliabile leggere l'argomento in domande frequenti per familiarizzare con problemi e domande frequenti: [Domande frequenti per gli amministratori di replica](frequently-asked-questions-for-replication-administrators.md).  
   
  È preferibile suddividere le procedure consigliate in due aree:  
   
@@ -87,7 +86,7 @@ ms.locfileid: "48079281"
   
 -   Parametri degli agenti  
   
--   Maintenance  
+-   Manutenzione  
   
  Dopo aver configurato la replica, è consigliabile sviluppare dati di riferimento per le prestazioni in modo da poter stabilire il comportamento della replica in presenza del carico di lavoro tipico delle applicazioni e della topologia in uso. Utilizzare Monitoraggio replica e Monitor di sistema per stabilire i valori tipici per le cinque dimensioni seguenti delle prestazioni della replica:  
   

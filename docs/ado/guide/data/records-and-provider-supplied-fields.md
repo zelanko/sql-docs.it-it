@@ -14,12 +14,12 @@ ms.assetid: 77f95e0a-0cf2-411a-a792-593f77330fbd
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3eb100042c36d86d604d48e716023dc0c0c4b04c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6c64555e0035de8a06d3bb9227262f4202f73f9a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47679969"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52538044"
 ---
 # <a name="records-and-provider-supplied-fields"></a>Record e campi specificati dal provider
 Quando un [Record](../../../ado/reference/ado-api/record-object-ado.md) apertura dell'oggetto, l'origine può essere la riga corrente di un elemento aperto [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md), un URL assoluto o un URL relativo in combinazione con un elemento aperto [connessione](../../../ado/reference/ado-api/connection-object-ado.md) oggetto .  
@@ -41,7 +41,7 @@ Quando un [Record](../../../ado/reference/ado-api/record-object-ado.md) apertura
 ## <a name="special-fields-for-document-source-providers"></a>Provider di origine di campi specifici per documento  
  Una classe speciale di provider, detti *provider di origine del documento*, gestisce le cartelle e documenti. Quando un **Record** oggetto rappresenta un documento o un **Recordset** oggetto rappresenta una cartella dei documenti, il provider di origine del documento consente di popolare gli oggetti con un set univoco di campi che descrivono caratteristiche del documento invece dell'effettivo del documento stesso. In genere, un campo contiene un riferimento per la **Stream** che rappresenta il documento.  
   
- Questi campi rappresentano una risorsa **record** oppure **recordset** e sono elencate per il provider specifici che li supportano in [appendice a: provider](../../../ado/guide/appendixes/appendix-a-providers.md).  
+ Questi campi rappresentano una risorsa **record** oppure **recordset** e sono elencate per il provider specifici che li supportano in [appendice a: I provider](../../../ado/guide/appendixes/appendix-a-providers.md).  
   
  Indice di due costanti il **campi** raccolta di una risorsa **Record** oppure **Recordset** per recuperare due campi di usati comune. Il **campo** oggetto [valore](../../../ado/reference/ado-api/value-property-ado.md) proprietà restituisce il contenuto desiderato.  
   
@@ -56,7 +56,7 @@ Quando un [Record](../../../ado/reference/ado-api/record-object-ado.md) apertura
 ## <a name="resource-recordset-columns"></a>Risorsa colonne dei Recordset  
  Oggetto *recordset risorse* costituito dalle colonne seguenti.  
   
-|Nome colonna|Tipo|Description|  
+|Nome colonna|Tipo|Descrizione|  
 |-----------------|----------|-----------------|  
 |RESOURCE_PARSENAME|AdVarWChar|Di sola lettura. Indica l'URL della risorsa.|  
 |RESOURCE_PARENTNAME|AdVarWChar|Di sola lettura. Indica l'URL assoluto del record padre.|  
@@ -79,4 +79,4 @@ Quando un [Record](../../../ado/reference/ado-api/record-object-ado.md) apertura
   
 ## <a name="see-also"></a>Vedere anche  
  [Oggetto record (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
- [Appendice A: Provider](../../../ado/guide/appendixes/appendix-a-providers.md)
+ [Appendice a: provider](../../../ado/guide/appendixes/appendix-a-providers.md)

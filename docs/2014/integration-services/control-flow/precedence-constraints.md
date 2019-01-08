@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - tasks [Integration Services], precedence constraints
@@ -18,12 +17,12 @@ ms.assetid: c5ce5435-fd89-4156-a11f-68470a69aa9f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d233d2ee94a611c63e8466102c66bd01e77b0513
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d4376967ea1d21e1022a21b9df836e1be3d66858
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48063461"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53349660"
 ---
 # <a name="precedence-constraints"></a>Vincoli di precedenza
   I vincoli di precedenza collegano eseguibili, contenitori e attività di pacchetti in modo da formare un flusso di controllo e specificano le condizioni che determinano se tali eseguibili devono essere eseguiti. Un eseguibile può essere costituito da un gestore di evento o da un contenitore Ciclo For, Ciclo Foreach o Sequenza. Anche nei gestori di eventi vengono utilizzati vincoli di precedenza per collegare gli eseguibili in modo da formare un flusso di controllo.  
@@ -38,7 +37,7 @@ ms.locfileid: "48063461"
   
  ![Vincoli di precedenza in un pacchetto](../media/mw-dts-12.gif "Vincoli di precedenza in un pacchetto")  
   
- Poiché il pacchetto è al livello principale della gerarchia dei contenitori di [!INCLUDE[ssIS](../../../includes/ssis-md.md)], non è possibile collegare più pacchetti tramite vincoli di precedenza. È tuttavia possibile aggiungere un'attività Esegui pacchetto a un pacchetto e in tal modo collegare indirettamente un altro pacchetto al flusso di controllo.  
+ Poiché il pacchetto è al livello principale della gerarchia dei contenitori di [!INCLUDE[ssIS](../../../includes/ssis-md.md)] , non è possibile collegare più pacchetti tramite vincoli di precedenza. È tuttavia possibile aggiungere un'attività Esegui pacchetto a un pacchetto e in tal modo collegare indirettamente un altro pacchetto al flusso di controllo.  
   
  Per configurare i vincoli di precedenza, procedere nel modo seguente:  
   
@@ -51,7 +50,7 @@ ms.locfileid: "48063461"
 -   Specificare se il vincolo di precedenza deve essere valutato singolarmente o insieme ad altri vincoli applicati all'eseguibile soggetto al vincolo.  
   
 ## <a name="evaluation-operations"></a>Operazioni di valutazione  
- In [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] sono disponibili le operazioni di valutazione seguenti:  
+ [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] offre le operazioni di valutazione seguenti:  
   
 -   Un vincolo che utilizza solo il risultato dell'esecuzione dell'eseguibile con precedenza per determinare se l'eseguibile soggetto al vincolo deve essere eseguito o meno. Il risultato dell'esecuzione dell'eseguibile con precedenza indica se l'esecuzione ha avuto esito positivo, negativo o semplicemente se è stata completata. Si tratta dell'operazione predefinita.  
   
@@ -61,7 +60,7 @@ ms.locfileid: "48063461"
   
 -   Un'espressione o un vincolo che utilizza il risultato dell'esecuzione dell'eseguibile con precedenza o il risultato restituito dalla valutazione dell'espressione.  
   
- [!INCLUDE[ssIS](../../../includes/ssis-md.md)] Finestra di progettazione Usa i colori per identificare il tipo di vincolo di precedenza. Il vincolo Success è verde, il vincolo Failure è rosso e il vincolo Completion è blu. Per visualizzare in Progettazione [!INCLUDE[ssIS](../../../includes/ssis-md.md)] etichette di testo che indicano il tipo di vincolo, è necessario configurare le funzionalità di accessibilità di Progettazione [!INCLUDE[ssIS](../../../includes/ssis-md.md)].  
+ [!INCLUDE[ssIS](../../../includes/ssis-md.md)] In Progettazione SSIS vengono usati i colori per identificare il tipo di vincolo di precedenza. Il vincolo Success è verde, il vincolo Failure è rosso e il vincolo Completion è blu. Per visualizzare in Progettazione [!INCLUDE[ssIS](../../../includes/ssis-md.md)] etichette di testo che indicano il tipo di vincolo, è necessario configurare le funzionalità di accessibilità di Progettazione [!INCLUDE[ssIS](../../../includes/ssis-md.md)].  
   
  L'espressione deve essere un'espressione [!INCLUDE[ssIS](../../../includes/ssis-md.md)] valida e in essa possono essere incluse funzioni, operatori, nonché variabili personalizzate e di sistema. Per altre informazioni, vedere [Espressioni di Integration Services &#40;SSIS&#41;](../expressions/integration-services-ssis-expressions.md) e [Variabili di Integration Services &#40;SSIS&#41;](../integration-services-ssis-variables.md).  
   
@@ -75,17 +74,17 @@ ms.locfileid: "48063461"
 -   Il vincolo Failure richiede che l'eseguibile con precedenza non abbia completato correttamente l'esecuzione, affinché l'eseguibile soggetto al vincolo venga eseguito.  
   
 > [!NOTE]  
->  Solo i vincoli di precedenza che sono membri dello stesso `Precedence Constraint` raccolta può essere raggruppata in una condizione con AND logico. Non è ad esempio possibile combinare i vincoli di precedenza utilizzati in due contenitori Ciclo Foreach diversi.  
+>  È possibile raggruppare in una condizione con AND logico solo vincoli di precedenza appartenenti alla stessa raccolta `Precedence Constraint`. Non è ad esempio possibile combinare i vincoli di precedenza utilizzati in due contenitori Ciclo Foreach diversi.  
   
 ## <a name="configuration-of-the-precedence-constraint"></a>Configurazione del vincolo di precedenza  
  È possibile impostare le proprietà tramite Progettazione [!INCLUDE[ssIS](../../../includes/ssis-md.md)] o a livello di codice.  
   
- Per informazioni sulle proprietà che è possibile impostare in Progettazione [!INCLUDE[ssIS](../../../includes/ssis-md.md)], vedere [Editor vincoli di precedenza](../precedence-constraint-editor.md).  
+ Per informazioni sulle proprietà che è possibile impostare in Progettazione [!INCLUDE[ssIS](../../../includes/ssis-md.md)] , vedere [Editor vincoli di precedenza](../precedence-constraint-editor.md).  
   
  Per informazioni sull'impostazione di queste proprietà a livello di codice, vedere <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint>.  
   
 ## <a name="related-tasks"></a>Attività correlate  
- Per informazioni dettagliate sull'impostazione di queste proprietà in Progettazione [!INCLUDE[ssIS](../../../includes/ssis-md.md)], fare clic su uno degli argomenti seguenti:  
+ Per informazioni dettagliate sull'impostazione di queste proprietà in Progettazione [!INCLUDE[ssIS](../../../includes/ssis-md.md)] , fare clic su uno degli argomenti seguenti:  
   
 -   [Impostazione delle proprietà di un vincolo di precedenza](../set-the-properties-of-a-precedence-constraint.md)  
   
@@ -96,7 +95,7 @@ ms.locfileid: "48063461"
      In questo argomento sono fornite informazioni sulla modalità di impostazione del comportamento predefinito dei vincoli di precedenza e sulla modalità di connessione di file eseguibili tramite i vincoli di precedenza predefiniti.  
   
 ## <a name="related-content"></a>Contenuto correlato  
- Articolo tecnico relativo agli [esempi di espressioni SSIS](http://go.microsoft.com/fwlink/?LinkId=220761)nel sito Web social.technet.microsoft.com  
+ Articolo tecnico relativo agli [esempi di espressioni SSIS](https://go.microsoft.com/fwlink/?LinkId=220761)nel sito Web social.technet.microsoft.com  
   
 ## <a name="see-also"></a>Vedere anche  
  [Aggiunta di espressioni ai vincoli di precedenza](../add-expressions-to-precedence-constraints.md)   

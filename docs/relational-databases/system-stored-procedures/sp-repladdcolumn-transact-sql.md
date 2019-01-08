@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_repladdcolumn_TSQL
@@ -17,19 +16,19 @@ ms.assetid: d6220f9f-c738-4f9c-bcf8-419994e86c81
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d66d4e7f774903e9465f93ed6a75ffd22c017ac7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8d50f940b191ee057febb81a59b90d6c842cf821
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47674321"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53211940"
 ---
 # <a name="sprepladdcolumn-transact-sql"></a>sp_repladdcolumn (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Aggiunge una colonna a un articolo di tabella esistente che è stato pubblicato. È possibile aggiungere la nuova colonna in tutti i server di pubblicazione che pubblicano la tabella specificata oppure solo in una pubblicazione specifica della tabella. Questa stored procedure viene eseguita nel database di pubblicazione del server di pubblicazione.  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  Questa stored procedure è deprecata e viene supportata per motivi di compatibilità con le versioni precedenti. Deve essere utilizzata solo con [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] server di pubblicazione e [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] sottoscrittori di ripubblicazione. Questa stored procedure non deve essere utilizzata nelle colonne con tipi di dati introdotti in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] o versioni successive.  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  

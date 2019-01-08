@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 07a92747b2687acb6556b96eeef0737b236abaf5
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: c2306f89ba724d6ba799f6bda6ec03f7f6377a97
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38980713"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53210860"
 ---
 # <a name="configure-or-repair-power-pivot-for-sharepoint-2013"></a>Configurare o ripristinare Power Pivot per SharePoint 2013
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "38980713"
   
  ![PowerPivot per SharePoint 2013](../../analysis-services/power-pivot-sharepoint/media/ssas-powerpivot-configtool-4-sharepoint2013-mainpage-configure.gif "PowerPivot per SharePoint 2013")  
   
-||Description|  
+||Descrizione|  
 |-|-----------------|  
 |**(1)**|Finestra Elenco attività.|  
 |**(2)**|Singole azioni.|  
@@ -76,11 +76,11 @@ ms.locfileid: "38980713"
   
 3.  Espandere completamente la finestra. Nella parte inferiore della finestra dovrebbe essere disponibile una barra contenente i comandi **Convalida**, **Esegui**ed **Esci** .  
   
-4.  **Account predefinito** : nella scheda Parametri digitare un account utente di dominio per **Nome utente account predefinito**. L'account è utilizzato per eseguire il provisioning di servizi essenziali, incluso il pool di applicazioni del servizio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Non specificare un account predefinito quale Servizio di rete o Sistema locale. Le configurazioni tramite cui vengono specificati account predefiniti vengono bloccate dallo strumento.  
+4.  **Account predefinito:** Nella scheda parametri digitare un account utente di dominio per il **nome utente Account predefinito**. L'account è utilizzato per eseguire il provisioning di servizi essenziali, incluso il pool di applicazioni del servizio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Non specificare un account predefinito quale Servizio di rete o Sistema locale. Le configurazioni tramite cui vengono specificati account predefiniti vengono bloccate dallo strumento.  
   
      **Passphrase** : digitare una passphrase. Se la farm di SharePoint è nuova, la passphrase viene utilizzata ogni volta che si aggiungono nuovi server o nuove applicazioni alla farm di SharePoint. Se la farm esiste, immettere la passphrase che consente di aggiungere un'applicazione server alla farm.  
   
-5.  **Porta** : facoltativamente, digitare un numero di porta per la connessione all'applicazione Web Amministrazione centrale oppure utilizzare il numero generato casualmente che viene fornito. Viene verificato che il numero sia disponibile prima di fornirlo come opzione.  
+5.  **Porta:** facoltativamente, digitare un numero di porta per la connessione all'applicazione Web Amministrazione centrale oppure usare il numero generato casualmente che viene fornito. Viene verificato che il numero sia disponibile prima di fornirlo come opzione.  
   
 6.  Nella pagina principale digitare il nome di un server [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] eseguito in modalità SharePoint.  
   
@@ -107,7 +107,7 @@ ms.locfileid: "38980713"
   
  Nella tabella seguente vengono descritti i valori usati per configurare il server.  
   
-|Pagina|Valore di input|Origine|Description|  
+|Pagina|Valore di input|Origine|Descrizione|  
 |----------|-----------------|------------|-----------------|  
 |**Configurare o ripristinare [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per SharePoint**|Account predefinito|Utente corrente|L'account predefinito è un account utente di Windows di dominio utilizzato per effettuare il provisioning di servizi condivisi nella farm. Viene utilizzato per il provisioning degli elementi seguenti:|  
 ||||-<br />                    [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] predefinita|  
@@ -116,7 +116,7 @@ ms.locfileid: "38980713"
 ||||- Identità del pool di applicazioni Web|  
 ||||- Amministratore della raccolta siti|  
 ||||- Account di aggiornamento dati automatico di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .|  
-||||Per impostazione predefinita, viene usato l'account di dominio dell'utente corrente.<br /><br /> Nota: è consigliabile sostituire il valore predefinito, a meno che non si configuri un server per fini di valutazione e non di produzione.<br /><br /> È possibile modificare le identità del servizio dopo la configurazione o la riparazione usando Amministrazione centrale.<br /><br /> Facoltativamente, nello strumento di configurazione [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] specificare gli account dedicati per gli elementi seguenti:|  
+||||Per impostazione predefinita, viene usato l'account di dominio dell'utente corrente.<br /><br /> Nota: È consigliabile sostituire il valore predefinito, a meno che non si configuri un server per fini di valutazione e non di produzione.<br /><br /> È possibile modificare le identità del servizio dopo la configurazione o la riparazione usando Amministrazione centrale.<br /><br /> Facoltativamente, nello strumento di configurazione [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] specificare gli account dedicati per gli elementi seguenti:|  
 ||||-Applicazione Web, tramite la pagina **Creare applicazione Web predefinita** (supponendo che si stia creando un'applicazione Web per la farm).|  
 ||||-<br />                    [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , con la pagina **Creare account automatico per DataRefresh** in questo strumento.|  
 ||Server di database|Istanza denominata di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] locale, se disponibile|Se un'istanza del motore di database è installata come istanza denominata di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , il campo del server di database viene popolato dallo strumento con il nome di questa istanza. Se il motore di database non è installato, questo campo è vuoto.<br /><br /> **Server di database**  è un parametro obbligatorio. Può trattarsi di qualsiasi versione o edizione di SQL Server supportata per le farm SharePoint.|  
@@ -124,9 +124,9 @@ ms.locfileid: "38980713"
 ||Porta di Amministrazione centrale SharePoint|Predefinito, se necessario|Se la farm non è configurata, vengono fornite opzioni per creare la farm e un endpoint HTTP ad Amministrazione centrale. Viene selezionato un numero di porta generato casualmente che non è in uso.|  
 ||[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per Excel Services ([NomeServer]\ [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)])|Input dell'utente|Il server [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] è necessario in Excel Services per abilitare le caratteristiche principali di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Il nome del server digitato in questa pagina viene aggiunto anche all'elenco nella pagina **Configura server [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]**.|  
 |**Configurare la nuova farm**|Server di database<br /><br /> Account farm<br /><br /> Passphrase<br /><br /> Porta di Amministrazione centrale SharePoint|Predefinito, se necessario|Per le impostazioni, vengono usati come predefiniti i valori immessi nella pagina principale.|  
-|**Creare un'applicazione del servizio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]**|Nome applicazione di servizio|Default|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] è **Valore predefinito [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Service Application**. È possibile usare un valore diverso nello strumento.|  
-||Server di database|Default|Server di database che ospita il database dell'applicazione di servizio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Il nome del server predefinito corrisponde al server di database usato per la farm. Questo nome può essere sostituito con un valore diverso.|  
-||Nome database|Default|Nome del database da creare per il database dell'applicazione del servizio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Il nome del database predefinito è basato sul nome dell'applicazione del servizio, seguito da un GUID per assicurarne l'univocità. È possibile usare un valore diverso nello strumento.|  
+|**Creare un'applicazione del servizio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]**|Nome applicazione di servizio|Impostazione predefinita|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] è **Valore predefinito [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Service Application**. È possibile usare un valore diverso nello strumento.|  
+||Server di database|Impostazione predefinita|Server di database che ospita il database dell'applicazione di servizio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Il nome del server predefinito corrisponde al server di database usato per la farm. Questo nome può essere sostituito con un valore diverso.|  
+||Nome database|Impostazione predefinita|Nome del database da creare per il database dell'applicazione del servizio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Il nome del database predefinito è basato sul nome dell'applicazione del servizio, seguito da un GUID per assicurarne l'univocità. È possibile usare un valore diverso nello strumento.|  
 |**Creare applicazione Web predefinita**|Nome applicazione Web|Predefinito, se necessario|Se non esistono applicazioni Web, ne viene creata una. L'applicazione Web è configurata per l'autenticazione in modalità classica ed è in ascolto sulla porta 80. Le dimensioni di caricamento file massime vengono impostate su 2047, il massimo consentito in SharePoint. Tali dimensioni di caricamento sono necessarie per i file [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] di grandi dimensioni che verranno caricati nel server.|  
 ||URL|Predefinito, se necessario|Viene creato un URL in base al nome del server, usando le stesse convenzioni di denominazione per i nomi file di SharePoint.|  
 ||Pool di applicazioni|Predefinito, se necessario|Viene creato un pool di applicazioni predefinito in IIS.|  
@@ -140,7 +140,7 @@ ms.locfileid: "38980713"
 ||URL sito|Predefinito, se necessario|Viene creato l'URL del sito usando le stesse convenzioni di denominazione per gli URL di SharePoint.|  
 ||Titolo sito|Predefinito, se necessario|Come titolo predefinito viene aggiunto **Sito [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]**.|  
 |**Attivare la funzionalità [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] in una raccolta siti**|URL sito||URL della raccolta siti per cui si stanno attivando le funzionalità di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .|  
-||Abilitare la funzionalità avanzata per questo sito||Abilitare la funzionalità "PremiumSite" del sito di SharePoint.|  
+||Abilitare la funzionalità avanzata per questo sito||Abilitare la funzionalità "premiumsite" per siti SharePoint.|  
 |**Creare applicazione del servizio di archiviazione sicura**|Nome applicazione di servizio|Predefinito, se necessario|Digitare il nome per l'applicazione del servizio di archiviazione sicura.|  
 ||Server di database|Input dell'utente|Digitare il nome del server di database da usare per l'applicazione del servizio di archiviazione sicura.|  
 |**Creare proxy applicazione del servizio di archiviazione sicura**|Nome applicazione di servizio|Predefinito, se necessario|Digitare il nome dell'applicazione del servizio di archiviazione sicura immesso nella pagina precedente.|  
@@ -151,7 +151,7 @@ ms.locfileid: "38980713"
 ||Nome descrittivo per l'applicazione di destinazione|Predefinito, se necessario||  
 ||Nome utente e password account automatico|Predefinito, se necessario|Digitare le credenziali di un account utente di Windows utilizzato dall'applicazione di destinazione per eseguire l'aggiornamento dati automatico. Per altre informazioni, vedere [datarefresh configurare Excel Services usando l'account servizio automatico in SharePoint Server 2013](http://technet.microsoft.com/library/hh525344\(office.15\).aspx) (http://technet.microsoft.com/library/hh525344(office.15).aspx).|  
 ||URL sito|Predefinito, se necessario|Digitare l'URL sito della raccolta siti associata all'applicazione di destinazione. Per l'associazione con raccolte siti aggiuntive, usare Amministrazione centrale SharePoint.|  
-|**Crea applicazione di servizio per Excel Services**|Nome applicazione di servizio|Predefinito, se necessario|Digitare un nome per l'applicazione di servizio. Nel server di database della farm di SharePoint viene creato un database dell'applicazione di servizio con lo stesso nome.|  
+|**Crea applicazione di servizio per Excel Services**|Nome applicazione di servizio|Predefinito, se necessario|Digitare un nome per l'applicazione di servizio. Viene creato un database di applicazione di servizio con lo stesso nome nel server di database della farm SharePoint.|  
 |**Configurare i server [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]**|Nome applicazione di servizio|Predefinito, se necessario|Nome dell'applicazione di servizio digitato nella pagina precedente.|  
 ||[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Nome server||Elenco dei server [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] registrati.<br /><br /> Il nome del server digitato nella pagina principale viene aggiunto automaticamente in questa pagina.|  
 |**Registra componente aggiuntivo di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] come Analisi utilizzo di Excel Services**|Nome applicazione di servizio||Nome dell'applicazione di servizio digitato nella pagina precedente.|  
@@ -162,7 +162,7 @@ ms.locfileid: "38980713"
  Se viene creata una raccolta siti, il database del contenuto viene creato nel server di database usando le stesse convenzioni di denominazione per i nomi file di SharePoint. Non è possibile modificare il nome del database del contenuto.  
   
 ## <a name="verify-the-configuration"></a>Verificare la configurazione  
- Vedere la sezione "Verificare la configurazione di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]" in [Configurare Power Pivot e distribuire soluzioni &#40;SharePoint 2013&#41;](../../analysis-services/instances/install-windows/configure-power-pivot-and-deploy-solutions-sharepoint-2013.md).  
+ Vedere la "Verify [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] configurazione" sezione dei [configurare Power Pivot e distribuire soluzioni &#40;SharePoint 2013&#41;](../../analysis-services/instances/install-windows/configure-power-pivot-and-deploy-solutions-sharepoint-2013.md).  
   
 ##  <a name="bkmk_nextsteps"></a> Passaggi successivi  
  Dopo aver completato l'installazione del server, è necessario effettuare diverse attività di post-installazione:  
@@ -189,7 +189,7 @@ ms.locfileid: "38980713"
 ### <a name="install-data-providers-used-in-data-refresh-and-check-user-permissions"></a>Installare provider di dati usati per l'aggiornamento dati e verificare le autorizzazioni utente  
  L'aggiornamento dati lato server consente agli utenti di reimportare dati aggiornati nelle cartelle di lavoro in modalità automatica. Affinché l'aggiornamento dati riesca, il server in cui viene eseguito Analysis Services in modalità SharePoint deve disporre degli stessi provider di dati utilizzati per importare i dati inizialmente. Inoltre, per l'account utente con il quale viene eseguito l'aggiornamento dati vengono spesso richieste autorizzazioni di lettura sulle origini dati esterne. Verificare i requisiti per l'abilitazione e la configurazione dell'aggiornamento dati per assicurarsi un risultato positivo. Per altre informazioni, vedere [Aggiornamento di dati PowerPivot con SharePoint 2010](http://msdn.microsoft.com/01b54e6f-66e5-485c-acaa-3f9aa53119c9).  
   
-> [!NOTE]  
+> [!NOTE]
 >  Per [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per SharePoint 2013 i provider di dati vengono installati quando si esegue il programma di installazione **spPowerPivot.msi** e lo strumento di configurazione [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per SharePoint 2013. Per altre informazioni, vedere [Installare o disinstallare il componente aggiuntivo PowerPivot per SharePoint &#40;SharePoint 2013&#41;](../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md).  
   
 ### <a name="change-application-pool-and-service-identities-in-sharepoint"></a>Modificare il pool di applicazioni e le identità di servizio in SharePoint  
@@ -206,14 +206,14 @@ ms.locfileid: "38980713"
 -   [Avviare Power Pivot in Excel 2013 aggiuntivo](http://office.microsoft.com/excel-help/start-powerpivot-in-excel-2013-add-in-HA102837097.aspx?CTT=5&origin=HA102837110) (http://office.microsoft.com/excel-help/start-powerpivot-in-excel-2013-add-in-HA102837097.aspx?CTT=5&origin=HA102837110).  
   
 ### <a name="add-additional-analysis-services-servers-in-sharepoint-mode"></a>Aggiungere server Analysis Services in modalità SharePoint  
- Nel tempo, se si rendessero necessarie ulteriori funzionalità di elaborazione e archiviazione dati, sarà possibile aggiungere ulteriori server Analysis Services in modalità SharePoint alla farm. Per [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per SharePoint 2013, installare nuovi server [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in modalità SharePoint, quindi configurare Excel Services. Per altre informazioni, vedere la sezione "Oltre l'installazione in un server singolo" di [Installazione di Analisi Services in modalità Power Pivot](../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md).  
+ Nel tempo, se si rendessero necessarie ulteriori funzionalità di elaborazione e archiviazione dati, sarà possibile aggiungere ulteriori server Analysis Services in modalità SharePoint alla farm. Per [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per SharePoint 2013, installare nuovi server [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in modalità SharePoint, quindi configurare Excel Services. Per altre informazioni, vedere la sezione "oltre l'installazione a server singolo" di [Install Analysis Services in modalità Power Pivot](../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md).  
   
 ## <a name="additional-resources"></a>Risorse aggiuntive  
  ![Impostazioni di SharePoint](../../analysis-services/media/as-sharepoint2013-settings-gear.gif "impostazioni SharePoint") [Invia commenti e suggerimenti e informazioni di contatto tramite SQL Server Feedback](https://feedback.azure.com/forums/908035-sql-server).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Installare o disinstallare il componente aggiuntivo PowerPivot per SharePoint &#40;SharePoint 2013&#41;](../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)   
- [Strumenti di configurazione Power Pivot](../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-tools.md)   
+ [Power Pivot Configuration Tools](../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-tools.md)   
  [Amministrazione e configurazione del server PowerPivot in Amministrazione centrale](../../analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md)   
  [Aggiornare le cartelle di lavoro e l'aggiornamento dati pianificato &#40;SharePoint 2013&#41;](../../analysis-services/instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md)  
   

@@ -16,12 +16,12 @@ ms.assetid: db83ed2c-a8e3-460c-8682-64667e4d5d01
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9c3688bcd713eab1fed94efab0a5c88f41b7c529
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d719ebf47757a48b034d2a0cadd0ed68f51f0ee5
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47758839"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52538759"
 ---
 # <a name="record-object-ado"></a>Oggetto Record (ADO)
 Rappresenta una riga da una [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) o il provider di dati o un oggetto restituito da un provider di dati semistrutturati, ad esempio un file o directory.  
@@ -60,7 +60,7 @@ Rappresenta una riga da una [Recordset](../../../ado/reference/ado-api/recordset
   
 -   Indicare lo stato corrente del **Record** con il [stato](../../../ado/reference/ado-api/state-property-ado.md) proprietà.  
   
--   Indicare il tipo di **Record** — *semplice*, *raccolta*, o *documenti strutturati* , ovvero con il [RecordType](../../../ado/reference/ado-api/recordtype-property-ado.md)proprietà.  
+-   Indicare il tipo di **Record** - *semplice*, *raccolta*, o *documenti strutturati* : con la [ RecordType](../../../ado/reference/ado-api/recordtype-property-ado.md)proprietà.  
   
 -   Arrestare l'esecuzione di un'operazione asincrona con il [annullare](../../../ado/reference/ado-api/cancel-method-ado.md) (metodo).  
   
