@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_helpdistributor_TSQL
@@ -17,12 +16,12 @@ ms.assetid: 37b0983e-3b69-4f0f-977e-20efce0a0b97
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7a73e458f6ecdab249ea0aae1301dd2d5ee0e6c2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 63441a20a5ac4f6faed366c06fc55638073b09f4
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47790269"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591395"
 ---
 # <a name="sphelpdistributor-transact-sql"></a>sp_helpdistributor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,48 +50,48 @@ sp_helpdistributor [ [ @distributor= ] 'distributor' OUTPUT ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@distributor=**] **'***distributore***'** OUTPUT  
+ [  **@distributor=**] **'**_distributore_**'** OUTPUT  
  Nome del server di distribuzione. Server di distribuzione **sysname**, il valore predefinito è **%**, che è l'unico valore che restituisce un set di risultati.  
   
- [  **@distribdb=**] **'***distribdb***'** OUTPUT  
+ [  **@distribdb=**] **'**_distribdb_**'** OUTPUT  
  Nome del database di distribuzione. *distribdb* viene **sysname**, il valore predefinito è **%**, che è l'unico valore che restituisce un set di risultati.  
   
- [  **@directory=**] **'***directory***'** OUTPUT  
+ [  **@directory=**] **'**_directory_**'** OUTPUT  
  Directory di lavoro. *directory* viene **nvarchar(255**, il valore predefinito è **%**, che è l'unico valore che restituisce un set di risultati.  
   
- [  **@account=**] **'***account***' OUTPUT**  
+ [  **@account=**] **'**_account_**' OUTPUT**  
  Account utente di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. *account*viene **nvarchar(255**, il valore predefinito è **%**, che è l'unico valore che restituisce un set di risultati.  
   
- [  **@min_distretention=**] *min_distretention * * * OUTPUT**  
+ [  **@min_distretention=**] _min_distretention_**OUTPUT**  
  Periodo di memorizzazione minimo per la distribuzione espresso in ore. *min_distretention* viene **int**, il valore predefinito è **-1**.  
   
- [  **@max_distretention=**] *max_distretention * * * OUTPUT**  
+ [  **@max_distretention=**] _max_distretention_**OUTPUT**  
  Periodo di memorizzazione massimo per la distribuzione espresso in ore. *max_distretention* viene **int**, il valore predefinito è **-1**.  
   
- [  **@history_retention=**] *history_retention * * * OUTPUT**  
+ [  **@history_retention=**] _history_retention_**OUTPUT**  
  Periodo di memorizzazione della cronologia espresso in ore. *history_retention* viene **int**, il valore predefinito è **-1**.  
   
- [  **@history_cleanupagent=**] **'***history_cleanupagent***' OUTPUT**  
+ [  **@history_cleanupagent=**] **'**_history_cleanupagent_**' OUTPUT**  
  Nome dell'agente per la pulizia del contenuto della cronologia. *history_cleanupagent* viene **nvarchar(100)**, il valore predefinito è **%**, che è l'unico valore che restituisce un set di risultati.  
   
- [  **@distrib_cleanupagent =**] **'***distrib_cleanupagent***' OUTPUT**  
+ [  **@distrib_cleanupagent =**] **'**_distrib_cleanupagent_**' OUTPUT**  
  Nome dell'agente per l'eliminazione dei riferimenti di distribuzione *distrib_cleanupagent* viene **nvarchar(100)**, il valore predefinito è **%**, che è l'unico valore che restituisce un set di risultati.  
   
- [  **@publisher=**] **'***publisher***'**  
+ [  **@publisher=**] **'**_editore_**'**  
  Nome del server di pubblicazione. *server di pubblicazione* viene **sysname**, con un valore predefinito è NULL.  
   
- [  **@local=**] **'***locale***'**  
+ [  **@local=**] **'**_locale_**'**  
  Indica se [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve recuperare o meno i valori del server locale. *locale* viene **nvarchar(5**, con un valore predefinito è NULL.  
   
- [  **@rpcsrvname=**] **'***rpcsrvname***' OUTPUT**  
+ [  **@rpcsrvname=**] **'**_rpcsrvname_**' OUTPUT**  
  Nome del server che esegue chiamate di procedure remote. *rpcsrvname* viene **sysname**, il valore predefinito è **%**, che è l'unico valore che restituisce un set di risultati.  
   
- [ **@publisher_type**=] **'***publisher_type***' OUTPUT**  
+ [ **@publisher_type**=] **'**_publisher_type_**' OUTPUT**  
  Tipo del server di pubblicazione. *publisher_type* viene **sysname**, il valore predefinito è **%**, che è l'unico valore che restituisce un set di risultati.  
   
 ## <a name="result-sets"></a>Set di risultati  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**server di distribuzione**|**sysname**|Nome del server di distribuzione.|  
 |**database di distribuzione**|**sysname**|Nome del database di distribuzione.|  

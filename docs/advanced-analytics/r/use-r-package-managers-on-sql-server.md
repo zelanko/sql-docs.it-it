@@ -1,6 +1,6 @@
 ---
-title: Installare nuovi pacchetti R in SQL Server Machine Learning Services | Microsoft Docs
-description: Aggiungere nuovi pacchetti R per SQL Server 2016 R Services o SQL Server 2017 Machine Learning Services (In-Database)
+title: Usare i gestori di pacchetti R - servizi di SQL Server Machine Learning
+description: Usare i comandi R standard, ad esempio Packages per aggiungere nuovi pacchetti R per SQL Server 2016 R Services o SQL Server 2017 Machine Learning Services (In-Database).
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 05/29/2018
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 5eb14dde38f9ef7804c62adeaa3cdc1df0f5552b
-ms.sourcegitcommit: a251adad8474b477363df6a121431b837f22bf77
+ms.openlocfilehash: a7ef1d63394da8bf084fabb93382ee565208e137
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47864349"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53432884"
 ---
 # <a name="use-r-package-managers-to-install-r-packages-on-sql-server"></a>Utilizzare i gestori di pacchetti R per installare pacchetti R in SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -31,7 +31,7 @@ Questa procedura Usa RGui ma è possibile usare qualsiasi altro R della riga di 
 
 1. RGui.exe e scegliere **Esegui come amministratore**. Se non hai le autorizzazioni necessarie, contattare l'amministratore del database e fornire un elenco dei pacchetti che necessari.
 
-1. Dalla riga di comando, se si conosce il nome del pacchetto, è possibile digitare: `install.packages("the_package-name")` racchiusi tra virgolette doppie sono necessari per il nome del pacchetto.
+1. Dalla riga di comando, se si conosce il nome del pacchetto, è possibile digitare: `install.packages("the_package-name")` Le virgolette doppie sono necessari per il nome del pacchetto.
 
 1. Quando viene richiesto un sito mirror, selezionare tutti i siti che sono utile per il percorso.
 

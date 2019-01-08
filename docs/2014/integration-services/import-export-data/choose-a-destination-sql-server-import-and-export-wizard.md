@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.impexpwizard.chooseadestination.f1
@@ -13,19 +12,19 @@ ms.assetid: 1898be15-3e69-42d3-8ecb-3733c9f6c8e3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bc83fa7dc0d9692456cf99f5a77d3723a137963f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 40f234a7091d923dd08c943ca884d6075d953fb3
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48117007"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53360889"
 ---
 # <a name="choose-a-destination-sql-server-import-and-export-wizard"></a>Scelta destinazione (Importazione/Esportazione guidata SQL Server)
   Usare la **scegliere una destinazione** pagina per specificare la destinazione dei dati che si desidera copiare.  
   
  Per altre informazioni su questa procedura guidata, vedere [SQL Server importazione / esportazione guidata](import-and-export-data-with-the-sql-server-import-and-export-wizard.md). Per altre informazioni sulle opzioni per avviare la procedura guidata, nonché le autorizzazioni necessarie per eseguire correttamente la procedura guidata, vedere [esecuzione di SQL Server importazione / esportazione guidata](start-the-sql-server-import-and-export-wizard.md).  
   
- Lo scopo del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] importazione / esportazione guidata consiste nella copia dei dati da un'origine a una destinazione. La procedura guidata può inoltre creare automaticamente un database di destinazione e le tabelle di destinazione. Se tuttavia è necessario copiare più database o tabelle, o altri tipi di oggetti di database, è preferibile utilizzare Copia guidata database. Per altre informazioni, vedere [Use the Copy Database Wizard](../../relational-databases/databases/use-the-copy-database-wizard.md).  
+ Lo scopo dell'Importazione/Esportazione guidata [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consiste nel copiare i dati da un'origine a una destinazione. La procedura guidata può inoltre creare automaticamente un database di destinazione e le tabelle di destinazione. Se tuttavia è necessario copiare più database o tabelle, o altri tipi di oggetti di database, è preferibile utilizzare Copia guidata database. Per altre informazioni, vedere [Use the Copy Database Wizard](../../relational-databases/databases/use-the-copy-database-wizard.md).  
   
 ## <a name="static-options"></a>Opzioni statiche  
  **Destinazione**  
@@ -47,10 +46,10 @@ ms.locfileid: "48117007"
  Consente di specificare se il pacchetto deve utilizzare l'autenticazione di Microsoft Windows per l'accesso al database. Per una maggiore sicurezza è consigliabile utilizzare l'autenticazione di Windows.  
   
  **Usa autenticazione di SQL Server**  
- Specificare se il pacchetto deve utilizzare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticazione per accedere al database. Se si usa l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , è necessario specificare un nome utente e una password.  
+ Consente di specificare se per l'accesso al database del pacchetto deve essere utilizzata l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se si usa l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , è necessario specificare un nome utente e una password.  
   
  **Nome utente**  
- Specificare un nome utente per la connessione al database quando si usa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l'autenticazione.  
+ Consente di specificare un nome utente per la connessione al database quando si utilizza l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  **Password**  
  Consente di specificare una password per la connessione al database quando si usa l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -83,7 +82,7 @@ ms.locfileid: "48117007"
  **Formato**  
  Consente di indicare se utilizzare la formattazione non allineata a destra, a larghezza fissa o delimitata.  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |Delimitato|Le colonne sono separate da un delimitatore specificato nella pagina **Colonne** .|  
 |A larghezza fissa|Le colonne hanno una larghezza fissa.|  
@@ -110,7 +109,7 @@ ms.locfileid: "48117007"
  Consente di selezionare la versione di Excel utilizzata dalla cartella di lavoro di destinazione.  
   
 > [!NOTE]  
->  Quando si esportano dati da un [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] destinazione, la procedura guidata Usa la [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] componente destinazione Excel. Per informazioni su alcune considerazioni sull'utilizzo e problemi noti, vedere [destinazione Excel](../data-flow/excel-destination.md).  
+>  Quando si esportano dati in una destinazione [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] , nella procedura guidata viene utilizzato il componente Destinazione Excel di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Per informazioni su alcune considerazioni sull'utilizzo e problemi noti, vedere [destinazione Excel](../data-flow/excel-destination.md).  
   
 ### <a name="destination--microsoft-access"></a>Destinazione = Microsoft Access  
   
@@ -130,6 +129,6 @@ ms.locfileid: "48117007"
  Consente di specificare la password dell'utente per la connessione al database quando un file di informazioni sul gruppo di lavoro corrente è associato al database. Se tuttavia il database è protetto con un'unica password valida per tutti gli utenti, è necessario specificare tale valore nella finestra di dialogo **Proprietà di Data Link** a cui è possibile accedere facendo clic sul pulsante **Avanzate** .  
   
  **Advanced**  
- Consente di specificare le opzioni avanzate, ad esempio la password del database o un file di informazioni sul gruppo di lavoro diverso da quello predefinito, mediante la finestra di dialogo **Proprietà di Data Link**. Per ulteriori informazioni sulle proprietà del provider OLE DB, vedere la sezione relativa all'accesso ai dati di MSDN Library all'indirizzo [MSDN Library](http://go.microsoft.com/fwlink/?linkid=62553).  
+ Consente di specificare le opzioni avanzate, ad esempio la password del database o un file di informazioni sul gruppo di lavoro diverso da quello predefinito, mediante la finestra di dialogo **Proprietà di Data Link**. Per ulteriori informazioni sulle proprietà del provider OLE DB, vedere la sezione relativa all'accesso ai dati di MSDN Library all'indirizzo [MSDN Library](https://go.microsoft.com/fwlink/?linkid=62553).  
   
   

@@ -10,12 +10,12 @@ ms.assetid: 28ff17dc-172b-4ac4-853f-990b5dc02fd1
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: d55a1a8bef5e3d4a74aa2bb09c27e3f7c2a8dc82
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 459bdc20c9698a8b6271092c57ed0de936c4d7f2
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48066808"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591835"
 ---
 # <a name="manage-full-text-indexes"></a>Gestione di indici full-text.
      
@@ -33,11 +33,11 @@ ms.locfileid: "48066808"
   
 5.  Nel riquadro **Seleziona una pagina** è possibile selezionare le pagine seguenti:  
   
-    |Pagina|Description|  
+    |Pagina|Descrizione|  
     |----------|-----------------|  
-    |**Generale**|Sono contenute le proprietà di base dell'indice full-text, incluse diverse proprietà modificabili e alcune proprietà non modificabili quali il nome del database, il nome della tabella e il nome della colonna chiave full-text. Le proprietà modificabili sono le seguenti:<br /><br /> **Elenco di parole non significative indice full-text**<br /><br /> **Indicizzazione full-text abilitata**<br /><br /> **Rilevamento delle modifiche**<br /><br /> **Elenco delle proprietà di ricerca**<br /><br /> <br /><br /> Per altre informazioni, vedere [proprietà indice Full-Text &#40;pagina Generale&#41;](full-text-index-properties-general-page.md).|  
-    |**Colonne**|Consente di visualizzare le colonne della tabella disponibili per l'indicizzazione full-text. La colonna o le colonne selezionate contengono indici full-text. È possibile selezionare il numero desiderato di colonne disponibili da includere nell'indice full-text. Per altre informazioni, vedere [proprietà indice Full-Text &#40;(pagina colonne)&#41;](../../2014/database-engine/full-text-index-properties-columns-page.md).|  
-    |**Pianificazioni**|Utilizzare questa pagina per creare o gestire le pianificazioni per un processo di SQL Server Agent che consente di avviare un popolamento incrementale della tabella per i popolamenti dell'indice full-text. Per altre informazioni, vedere [Popolamento degli indici full-text](../relational-databases/indexes/indexes.md).<br /><br /> **\*\* Importanti \* \***  dopo aver chiuso il **proprietà indice Full-Text** nella finestra di dialogo qualsiasi pianificazione appena creata è associato a un processo di SQL Server Agent (avviare popolamento incrementale della tabella in *database_name*. *TABLE_NAME*).|  
+    |**Generale**|Sono contenute le proprietà di base dell'indice full-text, incluse diverse proprietà modificabili e alcune proprietà non modificabili quali il nome del database, il nome della tabella e il nome della colonna chiave full-text. Le proprietà modificabili sono le seguenti:<br /><br /> **Elenco di parole non significative indice full-text**<br /><br /> **Indicizzazione full-text abilitata**<br /><br /> **Rilevamento delle modifiche**<br /><br /> **Elenco delle proprietà di ricerca**<br /><br /> <br /><br /> Per altre informazioni, vedere [Proprietà indice full-text &#40;pagina Generale&#41;](full-text-index-properties-general-page.md).|  
+    |**Colonne**|Consente di visualizzare le colonne della tabella disponibili per l'indicizzazione full-text. La colonna o le colonne selezionate contengono indici full-text. È possibile selezionare il numero desiderato di colonne disponibili da includere nell'indice full-text. Per altre informazioni, vedere [Proprietà indice full-text &#40;pagina Colonne&#41;](../../2014/database-engine/full-text-index-properties-columns-page.md).|  
+    |**Pianificazioni**|Utilizzare questa pagina per creare o gestire le pianificazioni per un processo di SQL Server Agent che consente di avviare un popolamento incrementale della tabella per i popolamenti dell'indice full-text. Per altre informazioni sugli indici full-text, vedere [Popolamento degli indici full-text](../relational-databases/indexes/indexes.md).<br /><br /> <strong>\*\* Importanti \* \*</strong>  dopo aver chiuso il **proprietà indice Full-Text** nella finestra di dialogo qualsiasi pianificazione appena creata è associato a un processo di SQL Server Agent (avviare popolamento incrementale della tabella in *database_name*. *TABLE_NAME*).|  
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)] per salvare le modifiche e uscire dalla finestra di dialogo **Proprietà indice full-text**.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "48066808"
   
  Nella tabella seguente sono elencate le proprietà full-text relative a tabelle e colonne indicizzate e le funzioni [!INCLUDE[tsql](../includes/tsql-md.md)] correlate.  
   
-|Proprietà|Description|Funzione|  
+|Proprietà|Descrizione|Funzione|  
 |--------------|-----------------|--------------|  
 |`FullTextTypeColumn`|TYPE COLUMN nella tabella in cui sono contenute le informazioni sui tipi di documenti della colonna.|[COLUMNPROPERTY](/sql/t-sql/functions/columnproperty-transact-sql)|  
 |`IsFulltextIndexed`|Indica se una colonna è stata abilitata per l'indicizzazione full-text.|COLUMNPROPERTY|  

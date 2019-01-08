@@ -14,12 +14,12 @@ ms.assetid: e58ed56e-4c30-42e6-a9fc-a8c401620e02
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: dc3a6bd0929cf8f635247c532acead41a84b36a1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2423a011e75d346d196ebe5ebac2597ac30914a1
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48133921"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53374703"
 ---
 # <a name="some-synchronous-replicas-are-not-synchronized"></a>Alcune repliche sincrone non sono sincronizzate
     
@@ -29,14 +29,14 @@ ms.locfileid: "48133921"
 |-|-|  
 |**Nome criteri**|Stato di sincronizzazione dei dati delle repliche sincrone|  
 |**Problema**|Alcune repliche sincrone non sono sincronizzate.|  
-|**Category**|**Avviso**|  
+|**Categoria**|**Avviso**|  
 |**Facet**|gruppo di disponibilità|  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>Descrizione  
  Questi criteri consentono di eseguire il rollup dello stato di sincronizzazione dei dati di tutte le repliche di disponibilità e di verificare tutte le repliche di disponibilità che non sono nello stato di sincronizzazione previsto. I criteri sono in uno stato non integro se una replica asincrona è in uno stato NON IN SINCRONIZZAZIONE e una replica sincrona è in uno stato NON SINCRONIZZATO. Altrimenti, i criteri sono in uno stato integro.  
   
 > [!NOTE]  
->  Per questa versione di [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], le informazioni sulle possibili cause e le soluzioni sono disponibili nella pagina relativa ad [alcune repliche sincrone non sono sincronizzate](http://go.microsoft.com/fwlink/p/?LinkId=220853) su Wiki di TechNet.  
+>  Per questa versione di [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], le informazioni sulle possibili cause e le soluzioni sono disponibili nella pagina relativa ad [alcune repliche sincrone non sono sincronizzate](https://go.microsoft.com/fwlink/p/?LinkId=220853) su Wiki di TechNet.  
   
 ## <a name="possible-causes"></a>Possibili cause  
  In questo gruppo di disponibilità, almeno una replica sincrona non è attualmente sincronizzata. Lo stato di sincronizzazione della replica potrebbe essere SINCRONIZZAZIONE IN CORSO o NON IN SINCRONIZZAZIONE.  

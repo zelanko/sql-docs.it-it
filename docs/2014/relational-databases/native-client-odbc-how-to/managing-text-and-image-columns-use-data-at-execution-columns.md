@@ -12,12 +12,12 @@ ms.assetid: 4eae58d1-03d4-40ca-8aa1-9b3ea10a38cf
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c63ff8eada8123e3bb7dfab5f8761f66ba2d2ec7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: efaf7e38ef829d5250c10902151024e09df1723c
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48227131"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53374093"
 ---
 # <a name="use-data-at-execution-columns-odbc"></a>Utilizzare colonne data-at-execution (ODBC)
     
@@ -29,20 +29,20 @@ ms.locfileid: "48227131"
   
     -   Per il quarto parametro, inserire un identificatore della colonna definito dal programma.  
   
-2.  Se si chiama [SQLSetPos](http://go.microsoft.com/fwlink/?LinkId=58407), viene restituito SQL_NEED_DATA, che indica che le colonne data-at-execution sono pronte per l'elaborazione.  
+2.  Se si chiama [SQLSetPos](https://go.microsoft.com/fwlink/?LinkId=58407), viene restituito SQL_NEED_DATA, che indica che le colonne data-at-execution sono pronte per l'elaborazione.  
   
 3.  Per ogni colonna data-at-execution:  
   
-    -   Chiamare [SQLParamData](http://go.microsoft.com/fwlink/?LinkId=58405) per ottenere il puntatore di una matrice di colonna. Verrà restituito SQL_NEED_DATA se è presente un'altra colonna data-at-execution.  
+    -   Chiamare [SQLParamData](https://go.microsoft.com/fwlink/?LinkId=58405) per ottenere il puntatore di una matrice di colonna. Verrà restituito SQL_NEED_DATA se è presente un'altra colonna data-at-execution.  
   
     -   Chiamare [SQLPutData](../native-client-odbc-api/sqlputdata.md) una o più volte per inviare i dati della colonna, fino quando non viene inviata la lunghezza.  
   
-4.  Chiamare [SQLParamData](http://go.microsoft.com/fwlink/?LinkId=58405) per indicare che tutti i dati relativi alla colonna data-at-execution finale devono essere inviati. Non verrà restituito SQL_NEED_DATA.  
+4.  Chiamare [SQLParamData](https://go.microsoft.com/fwlink/?LinkId=58405) per indicare che tutti i dati relativi alla colonna data-at-execution finale devono essere inviati. Non verrà restituito SQL_NEED_DATA.  
   
 ## <a name="example"></a>Esempio  
  In questo esempio viene illustrato come leggere dati di tipo carattere variabili SQL_LONG mediante SQLGetData. Questo esempio non è supportato in IA64.  
   
- È necessaria un'origine dati ODBC denominata AdventureWorks, il cui database predefinito è il database di esempio AdventureWorks. È possibile scaricare il database di esempio AdventureWorks dalla home page del sito relativo a [progetti della community ed esempi per Microsoft SQL Server](http://go.microsoft.com/fwlink/?LinkID=85384). Questa origine dati deve essere basata sul driver ODBC fornito dal sistema operativo (il nome del driver è "SQL Server"). Se questo esempio viene compilato ed eseguito come applicazione a 32 bit in un sistema operativo a 64 bit, è necessario creare l'origine dati ODBC con Amministratore ODBC in %windir%\SysWOW64\odbcad32.exe.  
+ È necessaria un'origine dati ODBC denominata AdventureWorks, il cui database predefinito è il database di esempio AdventureWorks. È possibile scaricare il database di esempio AdventureWorks dalla home page del sito relativo a [progetti della community ed esempi per Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkID=85384). Questa origine dati deve essere basata sul driver ODBC fornito dal sistema operativo (il nome del driver è "SQL Server"). Se questo esempio viene compilato ed eseguito come applicazione a 32 bit in un sistema operativo a 64 bit, è necessario creare l'origine dati ODBC con Amministratore ODBC in %windir%\SysWOW64\odbcad32.exe.  
   
  In questo esempio viene eseguita la connessione all'istanza predefinita di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nel computer in uso. Per connettersi a un'istanza denominata, modificare la definizione dell'origine dati ODBC per specificare l'istanza in base al formato: server\istanzadenominata. Per impostazione predefinita, [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] viene installato in un'istanza denominata.  
   

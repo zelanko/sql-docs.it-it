@@ -23,12 +23,12 @@ ms.assetid: b86a88ba-4f7c-4e19-9fbd-2f8bcd3be14a
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: f69e594b1359e3d569c624243c15de2354468be1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9ce37ee013e8424079e9d2e526ccdbeacfb5544b
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48063751"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53367143"
 ---
 # <a name="statistics"></a>Statistiche
   In Query Optimizer vengono utilizzate le statistiche per creare piani di query che consentono di migliorare le prestazioni di esecuzione delle query. Per la maggior parte delle query, Query Optimizer genera già le statistiche necessarie per un piano di query di alta qualità. In alcuni casi, è necessario creare statistiche aggiuntive o modificare la progettazione delle query per ottenere risultati migliori. In questo argomento vengono illustrati i concetti relativi alle statistiche e vengono fornite linee guida per un utilizzo efficace delle statistiche di ottimizzazione delle query.  
@@ -40,7 +40,7 @@ ms.locfileid: "48063751"
  Ogni oggetto statistiche viene creato in un elenco di una o più colonne di tabella e include un istogramma in cui è visualizzata la distribuzione dei valori nella prima colonna. Negli oggetti statistiche su più colonne sono inoltre archiviate informazioni statistiche sulla correlazione dei valori tra le colonne. Queste statistiche sulla correlazione o *densità*derivano dal numero di righe distinte di valori di colonna. Per altre informazioni sugli oggetti statistiche, vedere [DBCC SHOW_STATISTICS &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-show-statistics-transact-sql).  
   
  Statistiche filtrate  
- Le statistiche filtrate possono migliorare le prestazioni di esecuzione delle query che effettuano la selezione da subset ben definiti di dati. Le statistiche filtrate utilizzano un predicato del filtro per selezionare il subset di dati incluso nelle statistiche. Statistiche filtrate progettate correttamente possono migliorare il piano di esecuzione delle query rispetto alle statistiche di tabella completa. Per altre informazioni sul predicato del filtro, vedere [CREATE STATISTICS &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-statistics-transact-sql). Per altre informazioni su quando creare statistiche filtrate, vedere la sezione [Quando creare le statistiche](#UpdateStatistics) in questo argomento. Per un case study, vedere l'intervento di blog sull' [uso di statistiche filtrate con le tabelle partizionate](http://go.microsoft.com/fwlink/?LinkId=178505)sul sito Web SQLCAT.  
+ Le statistiche filtrate possono migliorare le prestazioni di esecuzione delle query che effettuano la selezione da subset ben definiti di dati. Le statistiche filtrate utilizzano un predicato del filtro per selezionare il subset di dati incluso nelle statistiche. Statistiche filtrate progettate correttamente possono migliorare il piano di esecuzione delle query rispetto alle statistiche di tabella completa. Per altre informazioni sul predicato del filtro, vedere [CREATE STATISTICS &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-statistics-transact-sql). Per altre informazioni su quando creare statistiche filtrate, vedere la sezione [Quando creare le statistiche](#UpdateStatistics) in questo argomento. Per un case study, vedere l'intervento di blog sull' [uso di statistiche filtrate con le tabelle partizionate](https://go.microsoft.com/fwlink/?LinkId=178505)sul sito Web SQLCAT.  
   
  Opzioni relative alle statistiche  
  Sono disponibili tre opzioni che se impostate influiscono sui tempi e sulle modalità di creazione e aggiornamento delle statistiche. Queste opzioni vengono impostate solo a livello di database.  
@@ -154,7 +154,7 @@ GO
 ### <a name="query-selects-from-a-subset-of-data"></a>La query effettua la selezione da un subset di dati  
  La creazione di statistiche per indici e colonne singole in Query Optimizer implica la creazione di statistiche per i valori in tutte le righe. Quando le query effettuano la selezione da un subset di righe che dispone di una distribuzione dei dati univoca, le statistiche filtrate possono migliorare i piani di query. È possibile creare le statistiche filtrate utilizzando l'istruzione CREATE STATISTICS con la clausola WHERE per definire l'espressione del predicato del filtro.  
   
- Se ad esempio si utilizza [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)], ogni prodotto nella tabella Production.Product appartiene a una delle quattro categorie della tabella Production.ProductCategory, ovvero Bikes, Components, Clothing e Accessories. Ogni categoria dispone di una distribuzione dei dati diversa in relazione al peso. I pesi nella categoria Bikes sono compresi tra 13,77 e 30, quelli della categoria Components sono compresi tra 2,12 e 1.050 con alcuni valori NULL e quelli delle categorie Clothing e Accessories sono tutti NULL.  
+ Ad esempio, usando [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)], ogni prodotto nella tabella Production. Product appartiene a una delle quattro categorie della tabella Production. ProductCategory: Biciclette, componenti, Clothing e Accessories. Ogni categoria dispone di una distribuzione dei dati diversa in relazione al peso. I pesi nella categoria Bikes sono compresi tra 13,77 e 30, quelli della categoria Components sono compresi tra 2,12 e 1.050 con alcuni valori NULL e quelli delle categorie Clothing e Accessories sono tutti NULL.  
   
  Prendendo come esempio la categoria Bikes, le statistiche filtrate per tutti i pesi consentono di fornire a Query Optimizer statistiche più accurate e di migliorare la qualità del piano di query rispetto alle statistiche di tabella completa o alle statistiche inesistenti nella colonna relativa al peso (Weight). La colonna Weight della categoria Bikes rappresenta un candidato valido per le statistiche filtrate. Nel caso di un numero relativamente ridotto di ricerche correlate al peso, tale colonna non è tuttavia necessariamente un candidato valido per un indice filtrato. È possibile che i vantaggi derivanti dai miglioramenti alle prestazioni delle ricerche offerti da un indice filtrato siano inferiori rispetto agli svantaggi derivanti dai costi di manutenzione e archiviazione supplementari dovuti all'aggiunta di un indice filtrato al database.  
   
@@ -187,7 +187,7 @@ GO
   
 -   Creare le statistiche mancanti mediante l'istruzione CREATE STATISTICS.  
   
- Quando le statistiche su un database di sola lettura o uno snapshot di sola lettura sono mancanti o non aggiornate, il [!INCLUDE[ssDE](../../../includes/ssde-md.md)] crea e gestisce statistiche temporanee in `tempdb`. Quando il [!INCLUDE[ssDE](../../../includes/ssde-md.md)] crea statistiche temporanee, al nome delle statistiche viene aggiunto il suffisso _readonly_database_statistic per distinguere le statistiche temporanee da quelle permanenti. Il suffisso _readonly_database_statistic è riservato alle statistiche generate da [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. È possibile creare script per le statistiche temporanee e riprodurli in un database di lettura e scrittura. Quando viene creato uno script, [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] modifica il suffisso del nome delle statistiche da _readonly_database_statistic a _readonly_database_statistic_scripted.  
+ Quando le statistiche su uno snapshot o un database di sola lettura sono mancanti o non aggiornate, il [!INCLUDE[ssDE](../../../includes/ssde-md.md)] crea e gestisce statistiche temporanee in `tempdb`. Quando il [!INCLUDE[ssDE](../../../includes/ssde-md.md)] crea statistiche temporanee, al nome delle statistiche viene aggiunto il suffisso _readonly_database_statistic per distinguere le statistiche temporanee da quelle permanenti. Il suffisso _readonly_database_statistic è riservato alle statistiche generate da [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. È possibile creare script per le statistiche temporanee e riprodurli in un database di lettura e scrittura. Quando viene creato uno script, [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] modifica il suffisso del nome delle statistiche da _readonly_database_statistic a _readonly_database_statistic_scripted.  
   
  Solo in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] è possibile creare e aggiornare le statistiche temporanee. È tuttavia possibile eliminare le statistiche temporanee e monitorare le relative proprietà utilizzando gli stessi strumenti utilizzati per le statistiche permanenti:  
   

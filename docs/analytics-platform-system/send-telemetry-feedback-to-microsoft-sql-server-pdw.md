@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 589d49a68a4234d52ed3a8ddcced08b2dfec37ad
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 442505d470d1c7b7a82a02610d650d9f0b8c8d07
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701729"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591141"
 ---
 # <a name="send-telemetry-feedback-to-microsoft-for-analytics-platform-system"></a>Inviare commenti e suggerimenti dati di telemetria a Microsoft per il sistema di piattaforma Analitica
 Sistema di piattaforma Analitica dispone di una funzionalità di telemetria facoltativo che invia i dati della Console di amministrazione di Microsoft. 
@@ -26,14 +26,14 @@ Sistema di piattaforma Analitica dispone di una funzionalità di telemetria faco
 Per garantire la protezione della privacy massimo, i punti di accesso viene fornito senza abilitare la telemetria. Prima di abilitare questa funzionalità, vedere prima la [informativa sulla Privacy di Microsoft Analitica Platform System](https://go.microsoft.com/fwlink/?LinkId=400902). A tale scopo, eseguire lo script di PowerShell descritto di seguito.  
   
 ## <a name="enable"></a>Abilitare la telemetria  
-**L'inoltro di DNS:** inviano dati di telemetria a Microsoft richiede il sistema di piattaforma Analitica per la connessione a internet tramite un server d'inoltro DNS. Per abilitare questa funzionalità, è necessario abilitare DNS di inoltro in tutti gli host e macchine virtuali del carico di lavoro. Richiama il `Enable-RemoteMonitoring` comando con il `SetupDnsForwarder` opzione per configurare l'inoltro di DNS e abilitare la telemetria correttamente. Richiama il `Enable-RemoteMonitoring` comando senza il `SetupDnsForwarder` opzione quando è già configurato l'inoltro di DNS e si desidera abilitare il monitoraggio Heartbeat.  
+**Inoltro di DNS:** L'invio di dati di telemetria a Microsoft richiede il sistema di piattaforma Analitica per la connessione a internet tramite un server d'inoltro DNS. Per abilitare questa funzionalità, è necessario abilitare DNS di inoltro in tutti gli host e macchine virtuali del carico di lavoro. Richiama il `Enable-RemoteMonitoring` comando con il `SetupDnsForwarder` opzione per configurare l'inoltro di DNS e abilitare la telemetria correttamente. Richiama il `Enable-RemoteMonitoring` comando senza il `SetupDnsForwarder` opzione quando è già configurato l'inoltro di DNS e si desidera abilitare il monitoraggio Heartbeat.  
   
 > [!IMPORTANT]  
 > Abilitare l'inoltro DNS consente di aprire la connessione a internet per tutti gli host e macchine virtuali del carico di lavoro.  
   
 #### <a name="to-enable-feedback"></a>Per abilitare i commenti e suggerimenti  
   
-1.  Usando un account di amministratore di dominio appliance, connettersi al nodo di controllo (***appliance_domain *-CTL01**) e aprire un prompt dei comandi utilizzando le credenziali di amministratore di Windows.  
+1.  Usando un account di amministratore di dominio appliance, connettersi al nodo di controllo (<strong>*appliance_domain*-CTL01</strong>) e aprire un prompt dei comandi utilizzando le credenziali di amministratore di Windows.  
   
 2.  Passare alla directory seguente: `C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100`.  
   
@@ -83,7 +83,7 @@ Disabilitazione della telemetria interromperà tutte le operazioni che comunican
   
 #### <a name="to-disable-telemetry"></a>Per disabilitare la telemetria  
   
-1.  Usando un account di amministratore di dominio appliance, connettersi al nodo di controllo (***appliance_domain *-CTL01**) e aprire una finestra di PowerShell con privilegi di amministratore.  
+1.  Usando un account di amministratore di dominio appliance, connettersi al nodo di controllo (<strong>*appliance_domain*-CTL01</strong>) e aprire una finestra di PowerShell con privilegi di amministratore.  
   
 2.  Passare alla directory seguente: `C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100`.  
   

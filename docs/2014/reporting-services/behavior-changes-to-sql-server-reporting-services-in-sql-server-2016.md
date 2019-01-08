@@ -24,12 +24,12 @@ ms.assetid: 2a767f0f-84f2-4099-8784-1e37790f858e
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: a8533552a48acd695ca7216ba6881b33369d5b1c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 377ab4922feb0024cef55926f4baa96745c81002
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48116374"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53377343"
 ---
 # <a name="behavior-changes-to-sql-server-reporting-services--in-sql-server-2014"></a>Modifiche del comportamento di SQL Server Reporting Services in SQL Server 2014
   In questo argomento vengono descritte le modifiche nel funzionamento introdotte in [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Queste modifiche influiscono sulla modalità di utilizzo o di interazione delle funzionalità di [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] rispetto alle versioni precedenti di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
@@ -43,46 +43,46 @@ ms.locfileid: "48116374"
 -   [Modifiche del comportamento di SQL Server 2008 R2 Reporting Services](#bkmk_kj)  
   
 ##  <a name="bkmk_sql14"></a> [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] Modifiche al comportamento di Reporting Services  
- Esistono nessun [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] modifiche del comportamento [!INCLUDE[ssSQL14](../includes/sssql14-md.md)].  
+ Non sono state apportate modifiche al comportamento di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] in [!INCLUDE[ssSQL14](../includes/sssql14-md.md)].  
   
 ##  <a name="bkmk_rc0"></a> [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] Modifiche al comportamento di Reporting Services  
- In questa sezione vengono descritte le modifiche di comportamento apportate alla modalità SharePoint di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
+ In questa sezione vengono descritte le modifiche di comportamento apportate alla modalità SharePoint di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] .  
   
 ### <a name="view-items-permission-will-not-download-shared-datasets-sharepoint-mode"></a>Impossibile scaricare set di dati condivisi (modalità SharePoint) mediante l'autorizzazione Visualizzazione elementi  
- **Nuovo comportamento** . Gli utenti con l'autorizzazione di SharePoint "Visualizzazione elementi" non possono più scaricare il contenuto dei set di dati condivisi di Reporting Services. Questa modifica di comportamento è coerente con le autorizzazioni "Visualizzazione elementi" per report, origini dati e modelli. Gli utenti che dispongono di questa autorizzazione possono visualizzare ed eseguire report, origini dati e modelli, ma non possono scaricare il relativo contenuto.  
+ **Nuovo comportamento:** Gli utenti con l'autorizzazione di SharePoint "Visualizzazione elementi" non possono più scaricare il contenuto del set di dati condivisi di Reporting Services. Questa modifica del comportamento è ora coerenza con le autorizzazioni "Visualizzazione elementi" per i report, origini dati e modelli. Gli utenti con autorizzazione "Visualizzazione elementi" possono visualizzare ed eseguire report, origini dati e i modelli, ma non possono scaricare il contenuto.  
   
- **Comportamento precedente** . Gli utenti con l'autorizzazione di SharePoint "Visualizzazione elementi" non potevano scaricare il contenuto dei set di dati condivisi di Reporting Services.  
+ **Comportamento precedente:** Gli utenti che dispongono dell'autorizzazione di SharePoint "Visualizzazione elementi" è stato possibile scaricare il contenuto del set di dati condivisi di Reporting Services.  
   
- Per ulteriori informazioni sui livelli di autorizzazione di SharePoint, vedere [Autorizzazioni utente e livelli di autorizzazione](http://technet.microsoft.com/library/cc721640.aspx).  
+ Per ulteriori informazioni sui livelli di autorizzazione di SharePoint, vedere [Autorizzazioni utente e livelli di autorizzazione](https://technet.microsoft.com/library/cc721640.aspx).  
   
 ### <a name="report-server-trace-logs-are-in-a-new-location-for-sharepoint-mode-sharepoint-mode"></a>Nuovo percorso dei log di traccia del server di report per la modalità SharePoint (modalità SharePoint)  
- **Nuovo comportamento** . Per un server di report installato in modalità SharePoint, i relativi log di traccia si trovano in %Programmi%\Common Files\Microsoft Shared\Web Server Extensions\14\Web Services\ReportServer\LogFiles.  
+ **Nuovo comportamento:** per un server di report installato in modalità SharePoint, i relativi log di traccia si trovano in %Programfiles%\Common Files\Microsoft Shared\Web Server Extensions\14\Web Services\ReportServer\LogFiles.  
   
- **Comportamento precedente:** log di traccia di Server di Report sono stati trovati in un percorso analogo al seguente: %Programfilesdir%\Microsoft SQL Server\\< RS_instance > Services\LogFiles.  
+ **Comportamento precedente:** Log di traccia sono stati trovati in un percorso analogo al seguente: %Programfilesdir%\Microsoft SQL Server\\< RS_instance > Services\LogFiles.  
   
 ### <a name="getserverconfiginfo-soap-api-is-no-longer-supported-sharepoint-mode"></a>API SOAP GetServerConfigInfo non più supportata (modalità SharePoint)  
- **Nuovo comportamento**. Utilizzare il cmdlet di PowerShell "Get-SPRSServiceApplicationServers".  
+ **Nuovo comportamento**: Usare il cmdlet di PowerShell "Get-sprsserviceapplicationservers".  
   
- **Comportamento precedente:** i clienti potevano sviluppare codice client SOAP per comunicare direttamente con il [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] punto finale e chiamare getreportserverconfiginfo ().  
+ **Comportamento precedente:** i clienti possono sviluppare codice client SOAP per comunicare direttamente con l'endpoint di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] e chiamare GetReportServerConfigInfo().  
   
 ### <a name="report-server-configuration-and-management-tools"></a>Strumenti di gestione e configurazione del server di report  
   
 #### <a name="configuration-manager-is-not-used-for-sharepoint-mode"></a>Gestione configurazione non più utilizzato per la modalità SharePoint  
- **Nuovo comportamento:** il [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Configuration Manager non supporta più server di report in modalità SharePoint. Configurazione di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] modalità SharePoint può essere completata tramite Amministrazione centrale SharePoint e pertanto [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Configuration Manager non supporta più modalità SharePoint. Gestione configurazione viene utilizzato solo per i server di report in modalità nativa.  
+ **Nuovo comportamento:** Gestione configurazione [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] non supporta più server di report in modalità SharePoint. La configurazione della modalità SharePoint di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] può essere completata tramite Amministrazione centrale SharePoint e pertanto Gestione configurazione [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] non supporta più questa modalità. Gestione configurazione viene utilizzato solo per i server di report in modalità nativa.  
   
 #### <a name="you-cannot-change-the-server-from-one-mode-to-another"></a>Impossibile modificare il server da una modalità a un'altra  
- **Nuovo comportamento** . Non è possibile modificare le modalità server. Se si installa un server di report con il supporto della modalità nativa, non sarà possibile modificare o configurare nuovamente questo server affinché sia in modalità SharePoint. Se l'installazione viene eseguita in modalità SharePoint, è possibile impostare il server di report sulla modalità nativa.  
+ **Nuovo comportamento:** non è possibile modificare le modalità del server. Se si installa un server di report con il supporto della modalità nativa, non sarà possibile modificare o configurare nuovamente questo server affinché sia in modalità SharePoint. Se l'installazione viene eseguita in modalità SharePoint, è possibile impostare il server di report sulla modalità nativa.  
   
- **Comportamento precedente:** cliente installa un [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] server di report in modalità SharePoint. Per passare il server di report alla modalità nativa, poteva aprire Gestione configurazione [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] per eseguire questo passaggio creando una nuova connessione al database in modalità nativa o utilizzando una esistente. Il cliente poteva inoltre utilizzare [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Configuration Manager di passare dalla modalità SharePoint alla modalità nativa.  
+ **Comportamento precedente:** il cliente installa un server di report [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] in modalità SharePoint. Per passare il server di report alla modalità nativa, poteva aprire Gestione configurazione [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] per eseguire questo passaggio creando una nuova connessione al database in modalità nativa o utilizzando una esistente. Il cliente poteva inoltre utilizzare Gestione configurazione [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] per il passaggio dalla modalità SharePoint a quella nativa.  
   
 ##  <a name="bkmk_kj"></a> Modifiche del comportamento di SQL Server 2008 R2 Reporting Services  
- In questa sezione vengono descritte le modifiche di comportamento nel [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
+ In questa sezione vengono descritte le modifiche di comportamento introdotte in [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
   
 > [!NOTE]  
 >  Poiché SQL Server 2008 R2 è un aggiornamento secondario della versione di SQL Server 2008, è consigliabile rivedere anche il contenuto nella sezione relativa a SQL Server 2008.  
   
 ### <a name="secureconnectionlevel-property-in-the-reporting-services-wmi-provider-library"></a>Proprietà SecureConnectionLevel nella libreria del provider WMI per Reporting Services  
- Nella libreria del provider WMI per [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], il **SecureConnectionLevel** proprietà ammette i valori di `0`,`1`,`2`,`3`, con `0` che indica che Secure Socket Layer (SSL) non è necessario per uno qualsiasi dei metodi del servizio Web `3` che indica che SSL è obbligatorio per tutti i metodi del servizio Web, e `1` e `2` indicare subset di metodi del servizio Web che richiedono SSL. Nelle [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], questi valori sono associati solo due possibili significati:  
+ Nella libreria del provider WMI per [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], il **SecureConnectionLevel** proprietà ammette i valori di `0`,`1`,`2`,`3`, con `0` che indica che Secure Socket Layer (SSL) non è necessario per uno qualsiasi dei metodi del servizio Web `3` che indica che SSL è obbligatorio per tutti i metodi del servizio Web, e `1` e `2` indicare subset di metodi del servizio Web che richiedono SSL. In [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]a questi valori sono associati solo due possibili significati:  
   
 -   `0` indica che il protocollo SSL non è necessario per alcun metodo del servizio Web.  
   

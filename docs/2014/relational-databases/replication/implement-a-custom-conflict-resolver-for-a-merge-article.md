@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 dev_langs:
 - TSQL
@@ -17,12 +16,12 @@ ms.assetid: 76bd8524-ebc1-4d80-b5a2-4169944d6ac0
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 87a5abc4377007558787595a2d2368ca5e5c5bb6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c7e8d3f735a096eeaf60ecdb376d02d046112a25
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48149471"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53375363"
 ---
 # <a name="implement-a-custom-conflict-resolver-for-a-merge-article"></a>Implementazione di un sistema di risoluzione dei conflitti personalizzato per un articolo di tipo merge
   In questo argomento viene descritto come implementare il sistema di risoluzione dei conflitti personalizzato per un articolo di tipo merge in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[tsql](../../includes/tsql-md.md)] o un [sistema di risoluzione personalizzato basato su COM](merge/advanced-merge-replication-conflict-com-based-custom-resolvers.md).  
@@ -35,7 +34,7 @@ ms.locfileid: "48149471"
   
      [Sistema di risoluzione basato su COM](#COM)  
   
-##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
  È possibile scrivere un sistema di risoluzione dei conflitti personalizzato come stored procedure [!INCLUDE[tsql](../../includes/tsql-md.md)] in ogni server di pubblicazione. Durante la sincronizzazione questa stored procedure viene richiamata quando vengono rilevati conflitti in un articolo per il quale il sistema di risoluzione è stato registrato e l'agente di merge passa le informazioni sulla riga con conflitti ai parametri obbligatori della procedura. I sistemi di risoluzione dei conflitti personalizzati basati su stored procedure vengono sempre creati nel server di pubblicazione.  
   
 > [!NOTE]  
@@ -45,7 +44,7 @@ ms.locfileid: "48149471"
   
 1.  Nella pubblicazione o nel database **msdb** del server di pubblicazione creare una nuova stored procedure di sistema che implementi i parametri obbligatori seguenti:  
   
-    |Parametro|Tipo di dati|Description|  
+    |Parametro|Tipo di dati|Descrizione|  
     |---------------|---------------|-----------------|  
     |**@tableowner**|`sysname`|Nome del proprietario della tabella per la quale risolvere un conflitto. Si tratta del proprietario della tabella nel database di pubblicazione.|  
     |**@tablename**|`sysname`|Nome della tabella per la quale risolvere un conflitto.|  
@@ -71,7 +70,7 @@ ms.locfileid: "48149471"
 2.  Eseguire [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql), specificando **@publication**, **@article**, il valore **resolver_info** per **@property**e il nome della stored procedure che implementa la logica del sistema di risoluzione dei conflitti per **@value**.  
   
 ##  <a name="COM"></a> Utilizzo di un sistema di risoluzione personalizzato basato su COM  
- Lo spazio dei nomi <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport> implementa un'interfaccia che consente di scrivere logica di business complessa per gestire gli eventi e i risolvere conflitti che si verificano durante il processo di sincronizzazione della replica di tipo merge. Per altre informazioni, vedere [Implementazione di un gestore della logica di business per un articolo di merge](implement-a-business-logic-handler-for-a-merge-article.md). Per risolvere i conflitti, è inoltre possibile scrivere una logica di business personalizzata basata su codice nativo. Tale logica viene compilata come un componente COM in DLL, utilizzando prodotti quali [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C++. Un simile sistema di risoluzione dei conflitti personalizzato basato su COM deve implementare l'interfaccia **ICustomResolver** , specificamente progettata per la risoluzione dei conflitti.  
+ Lo spazio dei nomi <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport> implementa un'interfaccia che consente di scrivere logica di business complessa per gestire gli eventi e i risolvere conflitti che si verificano durante il processo di sincronizzazione della replica di tipo merge. Per altre informazioni, vedere [Implementazione di un gestore della logica di business per un articolo di merge](implement-a-business-logic-handler-for-a-merge-article.md). Per risolvere i conflitti, è inoltre possibile scrivere una logica di business personalizzata basata su codice nativo. Tale logica viene compilata come un componente COM in DLL, utilizzando prodotti quali [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C++. Un simile sistema di risoluzione dei conflitti personalizzato basato su COM deve implementare l'interfaccia **ICustomResolver**, specificamente progettata per la risoluzione dei conflitti.  
   
 #### <a name="to-create-and-register-a-com-based-custom-conflict-resolver"></a>Per creare e registrare un sistema di risoluzione dei conflitti personalizzato basato su COM  
   
@@ -119,7 +118,7 @@ ms.locfileid: "48149471"
   
 #### <a name="viewing-a-sample-custom-resolver"></a>Visualizzazione di un sistema di risoluzione personalizzato di esempio  
   
-1.  Un esempio è disponibile nei file di esempio di SQL Server 2000. Scaricare il file **sql2000samples.cab** dalla pagina relativa agli [esempi aggiornati per SQL Server 2000 Service Pack 3](http://www.microsoft.com/download/details.aspx?id=8560). Vengono scaricati 8 file per un totale di 6,9 MB.  
+1.  Un esempio è disponibile nei file di esempio di SQL Server 2000. Scaricare il file **sql2000samples.cab** dalla pagina relativa agli [esempi aggiornati per SQL Server 2000 Service Pack 3](https://www.microsoft.com/download/details.aspx?id=8560). Vengono scaricati 8 file per un totale di 6,9 MB.  
   
 2.  Estrarre i file dal file con estensione cab compresso scaricato.  
   

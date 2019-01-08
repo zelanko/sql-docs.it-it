@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_helpsubscription_TSQL
@@ -17,12 +16,12 @@ ms.assetid: ff96bcbf-e2b9-4da8-8515-d80d4ce86c16
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 41a23e9885a2d5bd49d074dc72699601eb08a6d9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 90705da83013de65423aa2984293f8f780194de0
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47850559"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53588935"
 ---
 # <a name="sphelpsubscription-transact-sql"></a>sp_helpsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,26 +43,26 @@ sp_helpsubscription [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@publication =** ] **'***pubblicazione***'**  
+ [  **@publication =** ] **'**_pubblicazione_**'**  
  Nome della pubblicazione associata. *pubblicazione* viene **sysname**, il valore predefinito è **%**, che restituisce tutte le informazioni sulla sottoscrizione per questo server.  
   
- [  **@article=** ] **'***articolo***'**  
+ [  **@article=** ] **'**_articolo_**'**  
  Nome dell'articolo. *articolo* viene **sysname**, il valore predefinito è **%**, che restituisce tutte le informazioni sulla sottoscrizione per le pubblicazioni selezionate e i sottoscrittori. Se **tutti**, viene restituita solo una voce per la sottoscrizione completa di una pubblicazione.  
   
- [  **@subscriber=** ] **'***sottoscrittore***'**  
+ [  **@subscriber=** ] **'**_sottoscrittore_**'**  
  Nome del Sottoscrittore di cui si desidera ottenere le informazioni sulla sottoscrizione. *Sottoscrittore* viene **sysname**, il valore predefinito è **%**, che restituisce tutte le informazioni sulla sottoscrizione per gli articoli e pubblicazioni selezionate.  
   
- [  **@destination_db=** ] **'***destination_db***'**  
+ [  **@destination_db=** ] **'**_destination_db_**'**  
  Nome del database di destinazione. *destination_db* viene **sysname**, il valore predefinito è **%**.  
   
- [  **@found=** ] **'***trovato***'** OUTPUT  
+ [  **@found=** ] **'**_trovato_**'** OUTPUT  
  Flag che indica le righe che restituiscono valori. *trovato*viene **int** e un parametro di OUTPUT con un valore predefinito è 23456.  
   
  **1** indica la pubblicazione è stata trovata.  
   
  **0** indica la pubblicazione non è stata trovata.  
   
- [ **@publisher**=] **'***publisher***'**  
+ [ **@publisher**=] **'**_editore_**'**  
  Nome del server di pubblicazione. *server di pubblicazione* viene **sysname**e il valore predefinito è il nome del server corrente.  
   
 > [!NOTE]  
@@ -71,7 +70,7 @@ sp_helpsubscription [ [ @publication = ] 'publication' ]
   
 ## <a name="result-sets"></a>Set di risultati  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**subscriber**|**sysname**|Nome del Sottoscrittore.|  
 |**pubblicazione**|**sysname**|Nome della pubblicazione.|  
@@ -91,9 +90,9 @@ sp_helpsubscription [ [ @publication = ] 'publication' ]
 |**dts_package_location**|**int**|Posizione del pacchetto DTS, se assegnato alla sottoscrizione. Se è un pacchetto, un valore pari **0** specifica la posizione del pacchetto nel **server di distribuzione**. Un valore pari **1** specifica il **sottoscrittore**.|  
 |**subscriber_security_mode**|**smallint**|Modalità di sicurezza del sottoscrittore, dove **1** indica l'autenticazione di Windows, e **0** significa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l'autenticazione.|  
 |**subscriber_login**|**sysname**|Nome dell'account di accesso nel Sottoscrittore.|  
-|**subscriber_password**||La password effettiva per il Sottoscrittore non viene mai restituita. Il risultato viene mascherato da una "**\*\*\*\*\*\***" stringa.|  
+|**subscriber_password**||La password effettiva per il Sottoscrittore non viene mai restituita. Il risultato viene mascherato da una "**&#42;&#42;&#42;&#42;&#42;&#42;**" stringa.|  
 |**job_login**|**sysname**|Nome dell'account di Windows utilizzato per l'esecuzione dell'agente di distribuzione.|  
-|**job_password**||La password effettiva per il processo non viene mai restituita. Il risultato viene mascherato da una "**\*\*\*\*\*\***" stringa.|  
+|**job_password**||La password effettiva per il processo non viene mai restituita. Il risultato viene mascherato da una "**&#42;&#42;&#42;&#42;&#42;&#42;**" stringa.|  
 |**distrib_agent_name**|**Nvarchar(100)**|Nome del processo dell'agente che sincronizza la sottoscrizione.|  
 |**subscriber_type**|**tinyint**|Tipo di Sottoscrittore. I possibili tipi sono i seguenti:<br /><br /> **0** = Sottoscrittore SQL Server<br /><br /> **1** = server dell'origine dati ODBC<br /><br /> **2** = database Microsoft JET (deprecato)<br /><br /> **3** = provider OLE DB|  
 |**subscriber_provider**|**sysname**|ProgID univoco con il quale viene registrato il provider OLE DB per l'origine dei dati non SQL Server.|  

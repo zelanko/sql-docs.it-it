@@ -1,6 +1,6 @@
 ---
-title: Creare una tabella calcolata | Documenti Microsoft
-ms.date: 05/07/2018
+title: Creare una tabella calcolata nei modelli tabulari di Analysis Services | Microsoft Docs
+ms.date: 12/19/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,27 +9,27 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: f920d7ef7ae8a8fb5016e4bb4833b3637b325f8a
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 199096efcdf9212e19e1055f1276079eddfb1a75
+ms.sourcegitcommit: c51f7f2f5d622a1e7c6a8e2270bd25faba0165e7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34041995"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53626260"
 ---
 # <a name="create-a-calculated-table"></a>Creare una tabella calcolata 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
   Una *tabella calcolata* è un oggetto calcolato, basato su una query o un'espressione DAX, derivato per intero o in parte da altre tabelle nello stesso modello.  
   
- Un problema di progettazione comune che possono risolvere le tabelle calcolate è esporre una dimensione con ruoli multipli in un contesto specifico in modo che sia possibile esporla come struttura di query nelle applicazioni client.  Si ricorderà che una dimensione con ruoli multipli è semplicemente una tabella esposta in più contesti. Un esempio classico è la tabella Data, esposta come DataOrdine, DataSpedizione o DataScadenza, in base alla relazione di chiave esterna. Creando una tabella calcolata per DataSpedizione in modo esplicito, è possibile ottenere una tabella autonoma disponibile per le query, utilizzabile in modo completo come qualsiasi altra tabella.  
+ Un problema di progettazione comune che possono risolvere le tabelle calcolate è esporre una dimensione con ruoli multipli in un contesto specifico in modo che sia possibile esporla come struttura di query nelle applicazioni client.  Si ricorderà che una dimensione con ruoli multipli è semplicemente una tabella esposta in più contesti. Un esempio classico è la tabella Data, esposta come DataOrdine, DataSpedizione o DataScadenza, in base alla relazione di chiave esterna. Creando una tabella calcolata per DataSpedizione in modo esplicito, è possibile ottenere una tabella autonoma disponibile per le query, utilizzabile in modo completo come qualsiasi altra tabella. Un altro uso include la configurazione di un set filtrato di righe, un subset o superset di colonne da altre tabelle esistenti. Questo consente di mantenere la tabella originale intatta e di creare allo stesso tempo varianti della tabella per supportare scenari specifici.  
   
- Un altro possibile uso per una colonna calcolata include la configurazione di un set di righe filtrato o di un subset o superset di colonne da altre tabelle esistenti. Questo consente di mantenere la tabella originale intatta e di creare allo stesso tempo varianti della tabella per supportare scenari specifici.  
-  
- Per un uso ottimale delle tabelle calcolate è necessario conoscere i principi di base delle espressioni DAX. Durante la definizione delle espressioni per una tabella, può essere utile sapere che una colonna calcolata contiene una singola partizione con un'origine DAXSource, in cui l'espressione è un'espressione DAX.  
-Esiste una sola CalculatedTableColumn per ogni colonna restituita dall'espressione, dove SourceColumn è il nome della colonna restituita (in modo analogo a DataColumn nelle tabelle non calcolate).  
+ Per un uso ottimale delle tabelle calcolate è necessario conoscere i principi di base delle espressioni DAX. Quando si lavora con le espressioni per la tabella, può essere utile sapere che una tabella calcolata contiene una singola partizione con un'origine DAXSource, in cui l'espressione è un'espressione DAX.  
+Esiste una sola CalculatedTableColumn per ogni colonna restituita dall'espressione, dove SourceColumn è il nome della colonna restituita (in modo analogo a DataColumn nelle tabelle non calcolate). 
+
+Almeno una tabella deve già esistere prima di poter creare una tabella calcolata. Se si sta creando una tabella calcolata come oggetto autonomo nella tabella calcolata, è possibile creare prima di tutto una tabella eseguendo un'importazione da un'origine dati di file (csv, xls, xml). Il file importato da può avere una singola colonna e un singolo valore. È quindi possibile nascondere tale tabella. 
   
 ## <a name="how-to-create-a-calculated-table"></a>Come creare una tabella calcolata  
   
-1.  Innanzitutto, verificare che il modello tabulare dispone di un livello di compatibilità di 1200 o superiore. È possibile controllare la proprietà **Livello di compatibilità** nel modello in SSDT.  
+1.  In primo luogo, verificare che il modello tabulare abbia un livello di compatibilità di 1200 o superiore. È possibile controllare la proprietà **Livello di compatibilità** nel modello in SSDT.  
   
 2.  Passare alla vista dati. Non è possibile creare una tabella calcolata nelle vista diagramma.  
   
@@ -39,7 +39,7 @@ Esiste una sola CalculatedTableColumn per ogni colonna restituita dall'espressio
   
 5.  Assegnare un nome alla tabella.  
   
-6.  Creare relazioni con altre tabelle nel modello. Vedere [creare una relazione tra due tabelle](../../analysis-services/tabular-models/create-a-relationship-between-two-tables-ssas-tabular.md) assistenza con questo passaggio.  
+6.  Creare relazioni con altre tabelle nel modello. Visualizzare [creare una relazione tra due tabelle](../../analysis-services/tabular-models/create-a-relationship-between-two-tables-ssas-tabular.md) se occorre assistenza per questo passaggio.  
   
 7.  Fare riferimento alla tabella nei calcoli o nelle espressioni nel modello o usare la funzionalità **Analizza in Excel** per l'esplorazione dei dati ad hoc.  
   

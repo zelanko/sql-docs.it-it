@@ -14,12 +14,12 @@ ms.assetid: 507b91e5-7f85-4c22-be97-4d7a676e6667
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7049cce942cb593df74255a1459e07a6fa894c51
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c94ac9865540016020bf1853bc318881defdaea7
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48090511"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53374063"
 ---
 # <a name="set-the-partition-slice-property-analysis-services"></a>Impostare la proprietà Slice delle partizioni (Analysis Services)
   Una sezione di dati è una funzionalità di ottimizzazione importante che semplifica l'indirizzamento delle query sui dati delle partizioni appropriate. Impostare in modo esplicito la proprietà Slice può migliorare le prestazioni delle query tramite l'override delle sezioni predefinite generate per le partizioni MOLAP e HOLAP. Inoltre, la proprietà Slice offre un ulteriore controllo di convalida durante l'elaborazione della partizione.  
@@ -37,14 +37,14 @@ ms.locfileid: "48090511"
   
  Una sezione di dati di una partizione deve riflettere quanto più accuratamente possibile i dati della partizione. Se ad esempio una partizione contiene solo i dati relativi al 2012, la sezione di dati corrispondente deve specificare il membro 2012 della dimensione temporale. Non è tuttavia possibile specificare sempre una sezione di dati che rifletta il contenuto esatto di una partizione. Se ad esempio una partizione contiene solo i dati relativi ai mesi di gennaio e febbraio ma i livelli della dimensione temporale sono Anno, Trimestre e Mese, nella Creazione guidata partizione non è possibile selezionare entrambi i membri Gennaio e Febbraio. In tali casi, selezionare il padre dei membri che riflettono il contenuto della partizione, che in questo esempio è Trimestre 1.  
   
- Per una illustrazione dei vantaggi delle sezioni di dati, vedere l'articolo relativo all' [impostazione di una sezione nella partizione del cubo SSAS](http://go.microsoft.com/fwlink/?LinkId=317783).  
+ Per una illustrazione dei vantaggi delle sezioni di dati, vedere l'articolo relativo all' [impostazione di una sezione nella partizione del cubo SSAS](https://go.microsoft.com/fwlink/?LinkId=317783).  
   
 > [!NOTE]  
 >  Si noti che le funzioni MDX dinamiche, ad esempio [Generate &#40;MDX&#41;](/sql/mdx/generate-mdx) o [Except &#40;MDX&#41;](/sql/mdx/except-mdx-function) non sono supportate nella proprietà Slice per le partizioni. È necessario definire la sezione usando tuple esplicite o riferimenti ai membri.  
 >   
 >  Ad esempio, invece di usare la [: &#40;intervallo&#41; &#40;MDX&#41; ](/sql/mdx/range-mdx) function per definire un intervallo, è necessario enumerare ogni membro in base agli anni specifici.  
 >   
->  Se occorre definire una sezione complessa, è consigliabile definire le tuple nella sezione mediante uno script XMLA Alter. Quindi, è possibile usare lo strumento da riga di comando ascmd o SSIS [Analysis Services Execute DDL Task](../../integration-services/control-flow/analysis-services-execute-ddl-task.md) attività per eseguire lo script e creare il set di membri specificato immediatamente prima dell'elaborazione della partizione.  
+>  Se occorre definire una sezione complessa, è consigliabile definire le tuple nella sezione mediante uno script XMLA Alter. È quindi possibile usare lo strumento da riga di comando ascmd o l'attività [Analysis Services Execute DDL Task](../../integration-services/control-flow/analysis-services-execute-ddl-task.md) di SSIS per eseguire lo script e creare il set di membri specificato immediatamente prima dell'elaborazione della partizione.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Creare e gestire una partizione locale &#40;Analysis Services&#41;](create-and-manage-a-local-partition-analysis-services.md)  

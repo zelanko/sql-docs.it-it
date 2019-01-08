@@ -16,12 +16,12 @@ ms.assetid: b2c6ca00-46f0-4f86-b067-07bae779c147
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5f31c521c7e6bd8229af2a46d0e7a6e1443d3911
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0a654932689785d96aaff049551faf19494c311a
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48101991"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589895"
 ---
 # <a name="set-source-control-options"></a>Impostare le opzioni di controllo del codice sorgente
   Per utilizzare le caratteristiche di controllo del codice sorgente incorporate in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], è necessario configurare le relative opzioni per i diversi ambienti di lavoro.  
@@ -50,7 +50,7 @@ ms.locfileid: "48101991"
      **Descrizione del ruolo**  
      Le opzioni di controllo del codice sorgente vengono selezionate automaticamente in base al ruolo selezionato.  
   
-    |Role|Description|  
+    |Role|Descrizione|  
     |----------|-----------------|  
     |**Visual SourceSafe**|Specifica che si desidera usare le impostazioni usate più di frequente da [!INCLUDE[msCoName](../includes/msconame-md.md)] agli utenti di Visual SourceSafe.|  
     |**Sviluppatore indipendente**|Specifica che l'utente opera in modo indipendente.|  
@@ -74,7 +74,7 @@ ms.locfileid: "48101991"
      **Impostazioni di ambiente controllo di origine**  
      Specifica il ruolo che si desidera utilizzare. In [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] sono definiti i ruoli seguenti.  
   
-    |Role|Description|  
+    |Role|Descrizione|  
     |----------|-----------------|  
     |**Visual SourceSafe**|Specifica che si desidera usare le impostazioni usate più di frequente da [!INCLUDE[msCoName](../includes/msconame-md.md)] agli utenti di Visual SourceSafe.|  
     |**Sviluppatore indipendente**|Specifica che l'utente opera in modo indipendente.|  
@@ -83,14 +83,14 @@ ms.locfileid: "48101991"
      Le opzioni di controllo del codice sorgente vengono selezionate automaticamente in base al ruolo selezionato.  
   
      **Mantieni gli elementi estratti durante l'archiviazione**  
-     Consente di specificare che si desidera lasciare estratti gli elementi durante l'archiviazione per aggiornare l'archivio del controllo del codice sorgente. Se si desidera modificare questa opzione per un controllo specifico, fare clic sul **opzioni** freccia nel **Archivia** la finestra di dialogo e quindi deselezionare il **mantenere * * * estratto** casella di controllo.  
+     Consente di specificare che si desidera lasciare estratti gli elementi durante l'archiviazione per aggiornare l'archivio del controllo del codice sorgente. Se si desidera modificare questa opzione per un controllo specifico, fare clic sul **opzioni** freccia nel **Archivia** nella finestra di dialogo e quindi deselezionare la **Mantieni estratte** casella di controllo.  
   
      **Elementi archiviati**  
      Visualizza un elenco di opzioni che specificano il funzionamento di [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] quando si tenta di modificare un elemento non estratto. Nella tabella seguente vengono descritte le opzioni disponibili.  
   
      **Il salvataggio**  
   
-    |Azione|Description|  
+    |Azione|Descrizione|  
     |------------|-----------------|  
     |**Richiedi estrazione**|Consente di visualizzare il **Estrai** nella finestra di dialogo.|  
     |**Estrai automaticamente**|Estrae gli elementi senza visualizzare la **Estrai** nella finestra di dialogo. Si tratta dell'opzione predefinita.|  
@@ -98,7 +98,7 @@ ms.locfileid: "48101991"
   
      **La modifica**  
   
-    |Azione|Description|  
+    |Azione|Descrizione|  
     |------------|-----------------|  
     |**Richiedi estrazione**|Consente di visualizzare il **Estrai** nella finestra di dialogo.|  
     |**Richiedi estrazioni in modo esclusivi**|Consente di visualizzare il **Estrai** nella finestra di dialogo.|  

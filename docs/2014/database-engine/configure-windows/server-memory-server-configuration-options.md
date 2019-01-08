@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - Virtual Memory Manager
@@ -22,12 +21,12 @@ ms.assetid: 29ce373e-18f8-46ff-aea6-15bbb10fb9c2
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: e7b7fb74610afb89c0c493b6f2b3480377df7f8a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d4447d7df594e9542982d6ba05de05f42b0628a7
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48199407"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376683"
 ---
 # <a name="server-memory-server-configuration-options"></a>Opzioni di configurazione del server Server Memory
   Usare le due opzioni per la memoria del server **min server memory** e **max server memory**per riconfigurare la quantità di memoria, in megabyte, gestita con Gestione memoria di SQL Server per un processo di SQL Server usato da un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -86,7 +85,7 @@ ms.locfileid: "48199407"
 ## <a name="lock-pages-in-memory"></a>Blocco di pagine in memoria  
  Questi criteri di Windows determinano gli account autorizzati a usare un processo per mantenere i dati nella memoria fisica, impedendo al sistema di eseguire il paging dei dati nella memoria virtuale su disco. Il blocco delle pagine in memoria può garantire il corretto funzionamento del server quando si verifica il paging della memoria su disco. SQL Server **Lock Pages in Memory** opzione è impostata su ON nelle istanze a 32 e 64 bit di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Standard edition ed edizioni superiori quando l'account con privilegi per eseguire sqlservr.exe dispone di Windows "Locked pagine in Diritto utente di memoria (LPIM). In versioni precedenti di SQL Server, l'impostazione dell'opzione Blocco pagine per un'istanza a 32 bit di SQL Server richiede che l'account con i privilegi per eseguire sqlservr.exe disponga del diritto utente LPIM e che l'opzione "awe_enabled"sia impostata su ON.  
   
- Per disabilitare l'opzione **Blocco di pagine in memoria** per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], rimuovere il diritto utente "Blocco di pagine in memoria" per l'account di avvio di SQL Server.  
+ Per disabilitare il **Lock Pages In Memory** opzione per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], rimuovere l'utente "Blocco di pagine in memoria" a destra per l'account di avvio di SQL Server.  
   
 ### <a name="to-disable-lock-pages-in-memory"></a>Per disabilitare l'opzione Blocco di pagine in memoria  
  **Per disabilitare il lock pages in memory-opzione:**  
@@ -135,9 +134,9 @@ ms.locfileid: "48199407"
 |-|-------------|-------------|  
 |Memoria convenzionale|In tutte le edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], fino al limite dello spazio degli indirizzi virtuali di processo:<br /><br /> 2 GB<br /><br /> 3 GB con **3 gb** avvio parametro *<br /><br /> 4 GB su WOW64\*\*|In tutte le edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], fino al limite dello spazio degli indirizzi virtuali di processo:<br /><br /> 8 TB in sistemi con architettura x64|  
   
- ***/3gb** è un parametro di avvio del sistema operativo. Per altre informazioni, consultare [MSDN Library](http://go.microsoft.com/fwlink/?LinkID=10257&clcid=0x409).  
+ ***/3gb** è un parametro di avvio del sistema operativo. Per altre informazioni, consultare [MSDN Library](https://go.microsoft.com/fwlink/?LinkID=10257&clcid=0x409).  
   
- * * WOW64 (Windows on Windows 64) è una modalità che 32 bit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene eseguito in un sistema operativo a 64 bit. Per altre informazioni, consultare [MSDN Library](http://go.microsoft.com/fwlink/?LinkID=10257&clcid=0x409).  
+ * * WOW64 (Windows on Windows 64) è una modalità che 32 bit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene eseguito in un sistema operativo a 64 bit. Per altre informazioni, consultare [MSDN Library](https://go.microsoft.com/fwlink/?LinkID=10257&clcid=0x409).  
   
 ## <a name="examples"></a>Esempi  
   

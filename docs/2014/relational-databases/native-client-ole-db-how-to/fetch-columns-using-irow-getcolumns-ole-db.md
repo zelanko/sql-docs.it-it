@@ -12,12 +12,12 @@ ms.assetid: a4f79906-da0e-42f2-b0e9-812c29f39e48
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7b01e23f282f4b39043f23e70a98dab633806090
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 225a624f22f80b00a848d73f38febad60936b90a
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48228957"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53372963"
 ---
 # <a name="fetch-columns-using-irowgetcolumns-ole-db"></a>Recuperare colonne tramite IRow::GetColumns (OLE DB)
   L'interfaccia `IRow` consente accesso diretto alle colonne di una singola riga nel set di risultati. Di conseguenza, tramite `IRow` è possibile recuperare in modo efficace colonne da un set di risultati con una singola riga.  
@@ -29,7 +29,7 @@ ms.locfileid: "48228957"
 -   Come accedere due volte a una colonna. La prima volta viene ottenuta la larghezza di colonna effettiva, mentre la seconda volta viene eseguito l'accesso ai dati effettivi. Nella struttura DBCOLUMNACCESS, se **pData** è NULL e **cbMaxLen** è uguale a 0, la chiamata a `IRow` - `>GetColumns()` restituisce solo la lunghezza di colonna effettivi. In questo caso, è possibile chiamare nuovamente `IRow->GetColumns()` nella stessa colonna per recuperare i dati effettivi.  
   
 > [!IMPORTANT]  
->  Se possibile, usare l'autenticazione di Windows. Se non è disponibile, agli utenti verrà richiesto di immettere le credenziali in fase di esecuzione. Evitare di archiviare le credenziali in un file. Se è necessario rendere persistenti le credenziali, è consigliabile crittografarle usando l'[API di crittografia Win32](http://go.microsoft.com/fwlink/?LinkId=64532).  
+>  Se possibile, usare l'autenticazione di Windows. Se non è disponibile, agli utenti verrà richiesto di immettere le credenziali in fase di esecuzione. Evitare di archiviare le credenziali in un file. Se è necessario rendere persistenti le credenziali, è consigliabile crittografarle usando l'[API di crittografia Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
   
 ### <a name="to-fetch-columns-using-irowgetcolumns"></a>Per recuperare colonne tramite IRow::GetColumns  
   
@@ -50,7 +50,7 @@ ms.locfileid: "48228957"
   
  Nella struttura DBCOLUMNACCESS, se pData è NULL e cbMaxLen è 0, tramite la chiamata a IRow->GetColumns viene restituita solo la larghezza di colonna effettiva. In questo caso, è possibile chiamare nuovamente IRow->GetColumns nella stessa colonna per recuperare i dati effettivi. Questo esempio non è supportato in IA64.  
   
- Per l'esempio è necessario il database di esempio AdventureWorks, che è possibile scaricare dalla home page del sito relativo a [progetti della community ed esempi per Microsoft SQL Server](http://go.microsoft.com/fwlink/?LinkID=85384).  
+ Per l'esempio è necessario il database di esempio AdventureWorks, che è possibile scaricare dalla home page del sito relativo a [progetti della community ed esempi per Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkID=85384).  
   
  Il primo listato di codice ([!INCLUDE[tsql](../../includes/tsql-md.md)]) consente di creare una tabella utilizzata dall'esempio.  
   

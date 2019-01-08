@@ -11,18 +11,18 @@ ms.assetid: 901c7995-8eb5-4d12-8bb0-de0a922b48f8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b93171cad6896b32086604b54bce30c3fe396fb5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 72e3d99672b17fcf6d7cafa3825d04f8989ecdea
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48144321"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53373063"
 ---
 # <a name="add-transact-sql-snippets"></a>Aggiunta di frammenti Transact-SQL
   È possibile aggiungere frammenti di codice Transact-SQL personalizzati al set di frammenti predefiniti incluso in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="creating-a-transact-sql-snippet-file"></a>Creazione di un file di frammento Transact-SQL  
- La prima parte della creazione di un frammento di codice [!INCLUDE[tsql](../../includes/tsql-md.md)] consiste nel creare un file XML con il testo del frammento di codice. Il file deve avere un'estensione di file snippet e soddisfare i requisiti dello [schema dei frammenti di codice](http://go.microsoft.com/fwlink/?LinkId=207504). Impostare la lingua del frammento su SQL.  
+ La prima parte della creazione di un frammento di codice [!INCLUDE[tsql](../../includes/tsql-md.md)] consiste nel creare un file XML con il testo del frammento di codice. Il file deve avere un'estensione di file snippet e soddisfare i requisiti dello [schema dei frammenti di codice](https://go.microsoft.com/fwlink/?LinkId=207504). Impostare la lingua del frammento su SQL.  
   
  È possibile utilizzare i frammenti predefiniti forniti con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] come esempi. Per trovare i frammenti predefiniti, aprire [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], selezionare il menu **Strumenti** e quindi fare clic su **Gestione frammenti di codice**. Selezionare **SQL** nella casella di riepilogo **Lingua** . Il percorso dei frammenti [!INCLUDE[tsql](../../includes/tsql-md.md)] verrà visualizzato nella casella **Percorso** .  
   
@@ -52,13 +52,13 @@ ms.locfileid: "48144321"
 4.  Passare alla cartella contenente il frammento, fare clic sul file con estensione snippet e quindi sul pulsante **Apri** .  
   
 ## <a name="examples"></a>Esempi  
- L'esempio seguente crea una `TRY-CATCH` snippet di inclusione e lo importa in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+ Nell'esempio seguente viene creato un frammento di inclusione `TRY-CATCH` che viene importato in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 1.  Incollare il codice seguente in Blocco note, quindi salvare il file con il nome TryCatch.snippet.  
   
     ```  
     <?xml version="1.0" encoding="utf-8" ?>  
-    <CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">  
+    <CodeSnippets  xmlns="https://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">  
     <_locDefinition xmlns="urn:locstudio">  
         <_locDefault _loc="locNone" />  
         <_locTag _loc="locData">Title</_locTag>  
@@ -112,6 +112,6 @@ ms.locfileid: "48144321"
 5.  Passare alla cartella contenente il file TryCatch.snippet, fare clic su tale file e quindi sul pulsante **Apri** . Nella cartella **Frammenti di codice** non dovrebbe essere presente un frammento TryCatch.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Inserire frammenti Transact-SQL racchiusi](insert-surround-with-transact-sql-snippets.md)  
+ [Inserimento di frammenti Transact-SQL racchiusi](insert-surround-with-transact-sql-snippets.md)  
   
   

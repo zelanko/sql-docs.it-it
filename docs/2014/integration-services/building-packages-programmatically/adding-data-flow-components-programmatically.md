@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- integration-services
+ms.technology: integration-services
 ms.topic: reference
 dev_langs:
 - VB
@@ -19,12 +17,12 @@ ms.assetid: c06065cf-43e5-4b6b-9824-7309d7f5e35e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fe429fb3c4aa56516cad543d42250545b8e24a65
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d6474cb4c4e98fc5eef9d5fa48f47431dc733d22
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48135231"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53358713"
 ---
 # <a name="adding-data-flow-components-programmatically"></a>Aggiunta di componenti del flusso di dati a livello di programmazione
   Il primo passaggio per la compilazione di un flusso di dati consiste nell'aggiunta di componenti. È quindi necessario configurarli e connetterli per stabilire il flusso di dati in fase di esecuzione. In questa sezione vengono descritti i passaggi per aggiungere un componente all'attività Flusso di dati, creare la relativa istanza della fase di progettazione e quindi configurarlo. Per informazioni su come connettere i componenti, vedere [Connessione di componenti flusso di dati a livello di programmazione](../building-packages-programmatically/connecting-data-flow-components-programmatically.md).  
@@ -282,9 +280,9 @@ End Module
 ```  
   
 ## <a name="external-resources"></a>Risorse esterne  
- Intervento nel blog sull'[aggiornamento di EzAPI per SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=243223) sul sito Web blogs.msdn.com.  
+ Intervento nel blog sull'[aggiornamento di EzAPI per SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=243223) sul sito Web blogs.msdn.com.  
   
-![Icona di Integration Services (piccola)](../media/dts-16.gif "icona di Integration Services (piccola)")**rimangono fino a Date con Integration Services** <br /> Per i download, gli articoli, gli esempi e i video Microsoft più recenti, oltre alle soluzioni selezionate dalla community, visitare la pagina [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sul sito MSDN:<br /><br /> [Visita la pagina di Integration Services su MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Per ricevere una notifica automatica su questi aggiornamenti, sottoscrivere i feed RSS disponibili nella pagina.  
+![Icona di Integration Services (piccola)](../media/dts-16.gif "icona di Integration Services (piccola)")**rimangono fino a Date con Integration Services**<br /> Per i download, gli articoli, gli esempi e i video Microsoft più recenti, oltre alle soluzioni selezionate dalla community, visitare la pagina [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sul sito MSDN:<br /><br /> [Visita la pagina di Integration Services su MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Per ricevere una notifica automatica su questi aggiornamenti, sottoscrivere i feed RSS disponibili nella pagina.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Connessione dei componenti del flusso di dati a livello di programmazione](../building-packages-programmatically/connecting-data-flow-components-programmatically.md)  

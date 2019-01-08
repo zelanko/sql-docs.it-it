@@ -13,15 +13,15 @@ ms.assetid: c1ef96f1-290d-4952-8369-2f49f27afee2
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e29e919d48c484788715512a9daaafef5bbde9b4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: de6a778f9cdbfb7ab916f40a5250ca4f9e20c811
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48194141"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53377493"
 ---
 # <a name="determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp"></a>Determinare se una tabella o una stored procedure deve essere trasferita a OLTP in memoria
-  L'agente di raccolta delle prestazioni delle transazioni in [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] consente di valutare se OLTP in memoria può ottimizzare le prestazioni dell'applicazione di database. Nel report dell'analisi delle prestazioni delle transazioni viene inoltre indicata la quantità di operazioni che è necessario eseguire per abilitare OLTP in memoria nell'applicazione. Una volta identificata la tabella basata su disco da trasferire in OLTP in memoria, è possibile usare [Ottimizzazione guidata per la memoria](memory-optimization-advisor.md)per semplificarne la migrazione. Analogamente, l' [Native Compilation Advisor](native-compilation-advisor.md) semplifica il trasferimento di una stored procedure a una stored procedure compilata in modo nativo.  
+  L'agente di raccolta prestazioni transazioni in [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] consente di valutare se OLTP In memoria migliorerà le prestazioni dell'applicazione di database. Nel report dell'analisi delle prestazioni delle transazioni viene inoltre indicata la quantità di operazioni che è necessario eseguire per abilitare OLTP in memoria nell'applicazione. Una volta identificata la tabella basata su disco da trasferire in OLTP in memoria, è possibile usare [Ottimizzazione guidata per la memoria](memory-optimization-advisor.md)per semplificarne la migrazione. Analogamente, l' [Native Compilation Advisor](native-compilation-advisor.md) semplifica il trasferimento di una stored procedure a una stored procedure compilata in modo nativo.  
   
  In questo argomento viene illustrato come effettuare le seguenti operazioni:  
   
@@ -31,7 +31,7 @@ ms.locfileid: "48194141"
   
 -   Generare report di analisi delle prestazioni delle transazioni per identificare le stored procedure e le tabelle critiche per le prestazioni.  
   
- Per informazioni sulle metodologie di migrazione, vedere la pagina relativa a [In-Memory OLTP - Common Workload Patterns and Migration Considerations](http://msdn.microsoft.com/library/dn673538.aspx)(OLTP in memoria: considerazioni sulla migrazione e sui modelli di carico di lavoro comuni).  
+ Per informazioni sulle metodologie di migrazione, vedere [In-Memory OLTP - Common Workload Patterns and Migration Considerations](https://msdn.microsoft.com/library/dn673538.aspx) (OLTP in memoria: considerazioni sulla migrazione e sui modelli di carico di lavoro comuni).  
   
  L'agente di raccolta delle prestazioni delle transazioni e i report di analisi delle prestazioni delle transazioni sono utili per eseguire le attività seguenti:  
   
@@ -44,7 +44,7 @@ ms.locfileid: "48194141"
     > [!IMPORTANT]  
     >  Le prestazioni di un sistema di database dipendono da molti fattori, non tutti osservabili e misurabili tramite l'agente di raccolta delle prestazioni delle transazioni. Pertanto, il report di analisi delle prestazioni delle transazioni non è in grado di garantire che i miglioramenti effettivi delle prestazioni corrisponderanno alle eventuali stime eseguite.  
   
- L'agente di raccolta prestazioni transazioni e la possibilità di generare un report di analisi delle prestazioni delle transazioni vengono installati quando si seleziona **gli strumenti di gestione: base** oppure **strumenti di gestione, ovvero avanzate** Quando si installa [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
+ L'agente di raccolta prestazioni transazioni e la possibilità di generare un report di analisi delle prestazioni delle transazioni vengono installati quando si seleziona **strumenti di gestione-Basic** oppure **strumenti di gestione-avanzati** Quando si installa [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   
 ## <a name="best-practices"></a>Procedure consigliate  
  Il flusso di lavoro consigliato è illustrato nel diagramma di flusso seguente. I nodi gialli rappresentano le procedure facoltative:  
@@ -123,7 +123,7 @@ ms.locfileid: "48194141"
   
  È possibile configurare un agente di raccolta dati su un SQL Server 2012 o versione successiva di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
- Per poter caricare dati in un database del data warehouse di gestione in un'istanza diversa da quella in cui verrà eseguita la profilatura delle transazioni, è necessario un proxy di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent configurato con le credenziali corrette per un agente di raccolta dati. Per abilitare un proxy di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent, è innanzitutto necessario definire le credenziali con un account di accesso abilitato per il dominio, che deve essere membro del gruppo `mdw_admin` per il database del data warehouse di gestione. Visualizzare [procedura: creare una credenziale (SQL Server Management Studio)](../security/authentication-access/create-a-credential.md) per informazioni su come creare una credenziale.  
+ Per poter caricare dati in un database del data warehouse di gestione in un'istanza diversa da quella in cui verrà eseguita la profilatura delle transazioni, è necessario un proxy di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent configurato con le credenziali corrette per un agente di raccolta dati. Per abilitare un proxy di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent, è innanzitutto necessario definire le credenziali con un account di accesso abilitato per il dominio, che deve essere membro del gruppo `mdw_admin` per il database del data warehouse di gestione. Vedere [come: Creare una credenziale (SQL Server Management Studio)](../security/authentication-access/create-a-credential.md) per informazioni su come creare una credenziale.  
   
  Per configurare la raccolta dati da caricare in un database del data warehouse di gestione in un'istanza diversa  
   
@@ -186,13 +186,13 @@ ms.locfileid: "48194141"
   
 -   Sezione relativa alle statistiche sulle contese  
   
-     In questa sezione è inclusa una tabella in cui viene mostrata la contesa nella tabella di database. Per altre informazioni sui database latch e blocchi, vedi [architettura di blocco](http://msdn.microsoft.com/library/aa224738\(v=sql.80\).aspx). Le colonne sono le seguenti:  
+     In questa sezione è inclusa una tabella in cui viene mostrata la contesa nella tabella di database. Per altre informazioni sui database latch e blocchi, vedi [architettura di blocco](https://msdn.microsoft.com/library/aa224738\(v=sql.80\).aspx). Le colonne sono le seguenti:  
   
     -   Percentuale di attese totali. Percentuale di attese di blocchi e di latch in questa tabella di database rispetto all'attività del database. Più alta è questa percentuale, molto più frequente è l'utilizzo della tabella confrontata con altre tabelle del database.  
   
-    -   Statistiche latch. In queste colonne viene registrato il numero di attese di latch per query che interessano questa tabella. Per informazioni sui latch, vedere [latch](http://msdn.microsoft.com/library/aa224727\(v=SQL.80\).aspx). Più elevato è questo numero, maggiore è la contesa di latch nella tabella.  
+    -   Statistiche latch. In queste colonne viene registrato il numero di attese di latch per query che interessano questa tabella. Per informazioni sui latch, vedere [latch](https://msdn.microsoft.com/library/aa224727\(v=SQL.80\).aspx). Più elevato è questo numero, maggiore è la contesa di latch nella tabella.  
   
-    -   Statistiche blocchi. In questo gruppo di colonne viene registrato il numero di acquisizioni e attese dei blocchi di pagina per query per la tabella. Per altre informazioni sui blocchi, vedere [informazioni sul blocco in SQL Server](http://msdn.microsoft.com/library/aa213039\(v=SQL.80\).aspx). Più attese vi sono, maggiore è la contesa di blocchi nella tabella.  
+    -   Statistiche blocchi. In questo gruppo di colonne viene registrato il numero di acquisizioni e attese dei blocchi di pagina per query per la tabella. Per altre informazioni sui blocchi, vedere [informazioni sul blocco in SQL Server](https://msdn.microsoft.com/library/aa213039\(v=SQL.80\).aspx). Più attese vi sono, maggiore è la contesa di blocchi nella tabella.  
   
 -   Sezione relativa alle difficoltà nella migrazione  
   

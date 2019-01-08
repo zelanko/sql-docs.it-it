@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_copymergesnapshot
@@ -17,17 +16,17 @@ ms.assetid: eaecd6e0-8486-4e5d-ace7-8ae75768c0a8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b4cc5310a96376957110e3baf11da606ba91c296
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c0c9fecbd4296f9b097b513f032214063cf7a5d9
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47822029"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589245"
 ---
 # <a name="spcopymergesnapshot-transact-sql"></a>sp_copymergesnapshot (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Copia la cartella snapshot della pubblicazione specificata nella cartella indicata nel **@destination_folde* * * r*. Questa stored procedure viene eseguita nel database di pubblicazione del server di pubblicazione.  
+  Copia la cartella snapshot della pubblicazione specificata nella cartella indicata nel **@destination_folde** _r_. Questa stored procedure viene eseguita nel database di pubblicazione del server di pubblicazione.  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -39,10 +38,10 @@ sp_copymergesnapshot [ @publication = ] 'publication', [ @destination_folder = ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@publication=**] **'***pubblicazione***'**  
+ [  **@publication=**] **'**_pubblicazione_**'**  
  Nome della pubblicazione di cui si desidera copiare la cartella snapshot. *pubblicazione* viene **sysname**, non prevede alcun valore predefinito.  
   
- [  **@destination_folder=**] **'***destination_folder***'**  
+ [  **@destination_folder=**] **'**_destination_folder_**'**  
  Nome della cartella in cui si desidera copiare il contenuto della cartella snapshot della pubblicazione. *destination_folder*viene **nvarchar(255**, non prevede alcun valore predefinito. Il *destination_folder* può essere un percorso alternativo, ad esempio in un altro server, in un'unità di rete o su supporti rimovibili (ad esempio CD-ROM o un disco rimovibile).  
   
 ## <a name="return-code-values"></a>Valori restituiti  

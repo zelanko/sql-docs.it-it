@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 8aa7d690-4649-4c0a-ac6f-9504637ee426
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 76017bf54455d702dbea060e4f966765ddb1e47b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9aaa786680ff15a8b2efcb00d104f73f64089a55
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48070016"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53360853"
 ---
 # <a name="step-1-copying-the-lesson-4-package"></a>Passaggio 1: Copia del pacchetto della lezione 4
   In questa attività si procederà alla creazione di una copia del pacchetto creato nella lezione 4, denominato Lesson 4.dtsx. In alternativa, è possibile aggiungere al progetto il pacchetto completo della lezione 4 incluso nell'esercitazione e, successivamente, copiarlo. Questa nuova copia verrà usata per tutto il seguito della lezione 5.  
@@ -49,11 +48,11 @@ ms.locfileid: "48070016"
   
 3.  Nella finestra di dialogo **Aggiungi copia del pacchetto esistente** , in **Posizione pacchetto**, selezionare **File system**.  
   
-4.  Fare clic sul pulsante sfoglia **(…)** , passare a **Lesson 4.dtsx** nel computer, quindi fare clic su **Apri**.  
+4.  Fare clic sul pulsante sfoglia **(...)**, passare a **Lesson 4.dtsx** nel computer, quindi fare clic su **Apri**.  
   
      Per scaricare tutti i pacchetti di lezioni di questa esercitazione, effettuare le operazioni seguenti.  
   
-    1.  Passare alla pagina degli [esempi del prodotto di Integration Services](http://go.microsoft.com/fwlink/?LinkId=275027)  
+    1.  Passare alla pagina degli [esempi del prodotto di Integration Services](https://go.microsoft.com/fwlink/?LinkId=275027)  
   
     2.  Fare clic sulla scheda **DOWNLOADS** .  
   

@@ -14,12 +14,12 @@ ms.assetid: 28261014-342c-442a-bd89-6d04b8d4e8b7
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: cfa47e9df9d3d795df365249273732918878a1b5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a9a7bdca770bccaac50da1ac6a7688eabd335e20
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48184481"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53353749"
 ---
 # <a name="availability-group-is-not-ready-for-automatic-failover"></a>Il gruppo di disponibilità non è pronto per il failover automatico
     
@@ -29,16 +29,16 @@ ms.locfileid: "48184481"
 |-|-|  
 |**Nome criteri**|Conformità del gruppo di disponibilità al failover automatico|  
 |**Problema**|Il gruppo di disponibilità non è pronto per il failover automatico.|  
-|**Category**|**Critico**|  
+|**Categoria**|**Critico**|  
 |**Facet**|gruppo di disponibilità|  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>Descrizione  
  Con questi criteri è possibile verificare che nel gruppo di disponibilità sia disponibile almeno una replica secondaria pronta per il failover. I criteri si trovano in uno stato non integro e viene generato un avviso quando il failover della replica primaria è automatico, ma nessuna delle repliche secondarie nel gruppo di disponibilità è pronta per il failover.  
   
  I criteri sono in uno stato integro quando almeno una replica secondaria è pronta per il failover automatico.  
   
 > [!NOTE]  
->  Per questa versione di [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], le informazioni sulle possibili cause e le soluzioni sono disponibili nella pagina relativa alla situazione in cui il [gruppo di disponibilità non è pronto per il failover automatico](http://go.microsoft.com/fwlink/p/?LinkId=220851) su Wiki di TechNet.  
+>  Per questa versione di [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], le informazioni sulle possibili cause e le soluzioni sono disponibili nella pagina relativa alla situazione in cui il [gruppo di disponibilità non è pronto per il failover automatico](https://go.microsoft.com/fwlink/p/?LinkId=220851) su Wiki di TechNet.  
   
 ## <a name="possible-causes"></a>Possibili cause  
  Il gruppo di disponibilità non è pronto per il failover automatico. La replica primaria viene configurata per il failover automatico; tuttavia, la replica secondaria non è pronta per il failover automatico. La replica secondaria configurata per il failover automatico potrebbe non essere disponibile o il relativo stato della sincronizzazione dei dati è attualmente NON SINCRONIZZATO.  

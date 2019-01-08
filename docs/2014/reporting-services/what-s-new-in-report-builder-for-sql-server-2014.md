@@ -11,12 +11,12 @@ ms.assetid: 8223c19b-4b0d-4b1d-a042-9a726c18e708
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 15e4e4a90232f4db1b83b3a09d45589e6fcdeb8d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 06a517f2444c032e52b72f86f115167a0151fea2
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48226881"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53371093"
 ---
 # <a name="what39s-new-in-report-builder-for-sql-server-2014"></a>Cosa&#39;s novità di Generatore Report per SQL Server 2014
   In [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] sono state introdotte numerose funzionalità di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
@@ -24,7 +24,7 @@ ms.locfileid: "48226881"
  Per informazioni sulle funzionalità disponibili in questa versione per altri [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] prodotti e tecnologie, vedere [What ' s New in SQL Server 2014](../sql-server/what-s-new-in-sql-server-2016.md).  
   
 > [!TIP]  
->  Per informazioni più recenti e le risorse relative alle nuove funzionalità in questa versione, vedere [informazioni aggiuntive sulle novità in SQL Server Reporting Services (SSRS)](http://go.microsoft.com/fwlink/?LinkId=207147).  
+>  Per informazioni più recenti e le risorse relative alle nuove funzionalità in questa versione, vedere [informazioni aggiuntive sulle novità in SQL Server Reporting Services (SSRS)](https://go.microsoft.com/fwlink/?LinkId=207147).  
   
 ##  <a name="ExcelRenderer"></a> Renderer di Excel per Microsoft Excel 2007-2010 e Microsoft Excel 2003  
  L'estensione per il rendering di Excel in [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], nuova in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], consente di eseguire il rendering di un report come documento di Excel compatibile con [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] 2007-2010 e con [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] 2003 grazie a Microsoft Office Compatibility Pack per i formati di file Word, Excel e PowerPoint. Il formato è Office Open XML mentre l'estensione di file è xlsx.  

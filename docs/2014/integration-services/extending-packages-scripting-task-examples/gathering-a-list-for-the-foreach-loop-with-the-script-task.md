@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 08/22/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- integration-services
+ms.technology: integration-services
 ms.topic: reference
 helpviewer_keywords:
 - Foreach Loop containers
@@ -17,12 +15,12 @@ ms.assetid: 694f0462-d0c5-4191-b64e-821b1bdef055
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a876962d68d081542c7c5032c1bf06a0e527fe4c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 674ec4fc122c845b57026897aabe8816a6a585ef
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48155051"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53364043"
 ---
 # <a name="gathering-a-list-for-the-foreach-loop-with-the-script-task"></a>Raccolta di un elenco per il ciclo ForEach con l'attività Script
   L'enumeratore Foreach da variabile enumera gli elementi in un elenco passato in una variabile ed esegue le stesse attività su ogni elemento. È possibile utilizzare codice personalizzato in un'attività Script per popolare un elenco a questo scopo. Per altre informazioni sull'enumeratore, vedere [Contenitore ciclo Foreach](../control-flow/foreach-loop-container.md).  
@@ -30,7 +28,7 @@ ms.locfileid: "48155051"
 > [!NOTE]  
 >  Se si desidera creare un'attività da riutilizzare più facilmente con più pacchetti, è possibile utilizzare il codice di questo esempio di attività Script come punto iniziale per un'attività personalizzata. Per altre informazioni, vedere [Sviluppo di un'attività personalizzata](../extending-packages-custom-objects/task/developing-a-custom-task.md).  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>Descrizione  
  Nell'esempio seguente vengono utilizzati i metodi dello spazio dei nomi `System.IO` per raccogliere un elenco di cartelle di lavoro di Excel sul computer, più o meno recenti di un numero di giorni specificati dall'utente in una variabile. Nelle directory dell'unità C viene eseguita una ricerca ricorsiva dei file con estensione xls e viene esaminata la data dell'ultima modifica di ogni file per determinare se il file fa parte dell'elenco. I file risultanti vengono aggiunti a un oggetto `ArrayList`. L'oggetto `ArrayList` viene quindi salvato in una variabile per uso successivo in un contenitore Ciclo Foreach. Il contenitore Ciclo Foreach è configurato per utilizzare l'enumeratore Foreach da variabile.  
   
 > [!NOTE]  
@@ -48,7 +46,7 @@ ms.locfileid: "48155051"
   
 4.  Nel codice importare gli spazi dei nomi `System.Collections` e `System.IO`.  
   
-### <a name="code"></a>codice  
+### <a name="code"></a>Codice  
   
 ```vb  
 Imports System  
@@ -247,7 +245,7 @@ MessageBoxButtons.OK, MessageBoxIcon.Information);
     }  
 ```  
   
-![Icona di Integration Services (piccola)](../media/dts-16.gif "icona di Integration Services (piccola)")**rimangono fino a Date con Integration Services** <br /> Per i download, gli articoli, gli esempi e i video Microsoft più recenti, oltre alle soluzioni selezionate dalla community, visitare la pagina [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sul sito MSDN:<br /><br /> [Visita la pagina di Integration Services su MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Per ricevere una notifica automatica su questi aggiornamenti, sottoscrivere i feed RSS disponibili nella pagina.  
+![Icona di Integration Services (piccola)](../media/dts-16.gif "icona di Integration Services (piccola)")**rimangono fino a Date con Integration Services**<br /> Per i download, gli articoli, gli esempi e i video Microsoft più recenti, oltre alle soluzioni selezionate dalla community, visitare la pagina [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sul sito MSDN:<br /><br /> [Visita la pagina di Integration Services su MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Per ricevere una notifica automatica su questi aggiornamenti, sottoscrivere i feed RSS disponibili nella pagina.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Contenitore Ciclo Foreach](../control-flow/foreach-loop-container.md)   

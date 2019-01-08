@@ -18,12 +18,12 @@ ms.assetid: 41ae67bd-ece9-49ea-8062-c8d658ab4154
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4d19c14bcda351be4f061964132f00227d3fdd40
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 43b7fb86b7529de3629d07d294f0fd663b93561d
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48206071"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53368673"
 ---
 # <a name="use-for-xml-results-in-application-code"></a>Utilizzare i risultati di query FOR XML nel codice di un'applicazione
   L'utilizzo delle clausole FOR XML nelle query SQL consente di recuperare e inoltre di eseguire il cast dei risultati delle query come dati XML. Se i risultati di una query FOR XML possono essere utilizzati nel codice XML dell'applicazione, è possibile eseguire le operazioni seguenti:  
@@ -35,9 +35,9 @@ ms.locfileid: "48206071"
  In questo argomento vengono forniti esempi di questi approcci.  
   
 ## <a name="retrieving-for-xml-data-with-ado-and-xml-data-islands"></a>Recupero dei dati di query FOR XML con ADO e isole di dati XML  
- L'oggetto ADO `Stream` oggetto o altri oggetti che supportano il modello COM `IStream` interfaccia, ad esempio le pagine ASP (Active Server) `Request` e `Response` oggetti, possono essere utilizzati per contenere i risultati quando si lavora con query FOR XML.  
+ Quando si utilizzano le query FOR XML, è possibile inserire i risultati nell'oggetto ADO `Stream` o in altri oggetti che supportano l'interfaccia COM `IStream`, ad esempio gli oggetti ASP (Active Server Pages) `Request` e `Response`.  
   
- Ad esempio, il codice ASP seguente mostra i risultati di una query su un `xml` colonna tipo di dati, dati demografici, nella tabella Sales. Store del database di esempio AdventureWorks. La query cerca specificatamente il valore dell'istanza della colonna relativo alla riga in cui CustomerID è uguale a 3.  
+ Ad esempio, il codice ASP seguente mostra i risultati di una query eseguita sulla colonna con tipo di dati `xml` Demographics della tabella Sales.Store del database di esempio AdventureWorks. La query cerca specificatamente il valore dell'istanza della colonna relativo alla riga in cui CustomerID è uguale a 3.  
   
 ```  
 <!-- BeginRecordAndStreamVBS -->  
@@ -157,19 +157,19 @@ ms.locfileid: "48206071"
   
 -   **AnnualRevenue:** 150000  
   
--   **BankName:** Primary International  
+-   **BankName:** International primario  
   
--   **BusinessType:** OS  
+-   **BusinessType:** SISTEMA OPERATIVO  
   
 -   **YearOpened:** 1974  
   
--   **Specialty:** Road  
+-   **Specializzazione:** Road  
   
 -   **SquareFeet:** 38000  
   
--   **Brands:** 3  
+-   **Marchi:** 3  
   
--   **Internet:** DSL  
+-   **Internet:** LINGUAGGIO SPECIFICO DI DOMINIO  
   
 -   **NumberEmployees:** 40  
   
@@ -179,7 +179,7 @@ ms.locfileid: "48206071"
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
   <Sales.Store>  
     <Demographics>  
-      <StoreSurvey xmlns="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/StoreSurvey">  
+      <StoreSurvey xmlns="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/StoreSurvey">  
         <AnnualSales>1500000</AnnualSales>  
         <AnnualRevenue>150000</AnnualRevenue>  
         <BankName>Primary International</BankName>  
@@ -201,13 +201,13 @@ ms.locfileid: "48206071"
   
  Nell'esempio, per la restituzione e il rendering dei risultati della query FOR XML vengono utilizzate le API gestite di Microsoft .NET Framework seguenti:  
   
-1.  `SqlConnection` Consente di aprire una connessione a SQL Server, in base al contenuto di una variabile di stringa di connessione specificata, strConn.  
+1.  `SqlConnection` consente di stabilire una connessione a SQL Server, basata sul contenuto di una variabile stringa di connessione specificata, strConn.  
   
 2.  `SqlDataAdapter` funge quindi da adattatore dati e consente di eseguire la query FOR XML utilizzando la connessione SQL e una stringa di query SQL specificata.  
   
-3.  Dopo aver eseguito la query, il `SqlDataAdapter.Fill` metodo viene quindi chiamato e passato a un'istanza di un `DataSet,` MyDataSet per riempire il set di dati con l'output della query FOR XML.  
+3.  Dopo avere eseguito la query, viene chiamato il metodo `SqlDataAdapter.Fill`, che viene quindi passato a un'istanza di un `DataSet,` MyDataSet, per riempire il set di dati con l'output della query FOR XML.  
   
-4.  Il `DataSet.GetXml` viene quindi chiamato il metodo per restituire i risultati della query sotto forma di stringa che può essere visualizzato nella pagina HTML generati dal server.  
+4.  Viene quindi chiamato il metodo `DataSet.GetXml` per restituire i risultati della query come una stringa visualizzabile nella pagina HTML generata dal server.  
   
     ```  
     <%@ Page Language="VB" %>  
@@ -284,7 +284,7 @@ Page Generated @ 3/11/2006 3:36:02 PM
   
 SqlConnection opened.  
   
-<Sales.Store><Demographics><StoreSurvey xmlns="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/StoreSurvey"><AnnualSales>1500000</AnnualSales><AnnualRevenue>150000</AnnualRevenue><BankName>Primary International</BankName><BusinessType>OS</BusinessType><YearOpened>1974</YearOpened><Specialty>Road</Specialty><SquareFeet>38000</SquareFeet><Brands>3</Brands><Internet>DSL</Internet><NumberEmployees>40</NumberEmployees></StoreSurvey></Demographics></Sales.Store>  
+<Sales.Store><Demographics><StoreSurvey xmlns="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/StoreSurvey"><AnnualSales>1500000</AnnualSales><AnnualRevenue>150000</AnnualRevenue><BankName>Primary International</BankName><BusinessType>OS</BusinessType><YearOpened>1974</YearOpened><Specialty>Road</Specialty><SquareFeet>38000</SquareFeet><Brands>3</Brands><Internet>DSL</Internet><NumberEmployees>40</NumberEmployees></StoreSurvey></Demographics></Sales.Store>  
   
 SqlConnection closed.  
 ```  

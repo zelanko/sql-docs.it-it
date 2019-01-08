@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - expressions [Integration Services], data types
@@ -14,12 +13,12 @@ ms.assetid: c296ad10-4080-4988-8c2c-2c250f7a1884
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9195d5fad08c8e6539419ba33eb64a840a4688d6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 80110c29ec1c576684c4ccd67bc0c3408e6250b3
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48194882"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53363344"
 ---
 # <a name="integration-services-data-types-in-expressions"></a>Tipi di dati nelle espressioni di Integration Services
   L'analizzatore di espressioni usa i tipi di dati di [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]. La prima volta che i dati entrano nel flusso di dati di un pacchetto di [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] il motore del flusso di dati converte i dati di tutte le colonne in un tipo di dati di [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] , mentre i dati delle colonne utilizzate da un'espressione hanno già un tipo di dati di [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] . Le espressioni utilizzate nelle trasformazioni Suddivisione condizionale e Colonna derivata possono fare riferimento alle colonne perché fanno parte di un flusso di dati che include dati di colonna.  
@@ -33,7 +32,7 @@ ms.locfileid: "48194882"
  Le espressioni possono includere anche stringhe, valori booleani e valori letterali numerici. Per altre informazioni sulla conversione di valori letterali numerici in tipi di dati numerici di [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)], vedere [Valori letterali &#40;SSIS&#41;](numeric-string-and-boolean-literals.md).  
   
 ## <a name="implicit-data-conversion"></a>Conversione dati implicita  
- La conversione implicita di un tipo di dati si verifica quando l'analizzatore di espressioni converte automaticamente i dati da un tipo a un altro. Ad esempio, se un `smallint` viene confrontato con un `int`, il `smallint` viene implicitamente convertito in `int` prima di eseguire il confronto.  
+ La conversione implicita di un tipo di dati si verifica quando l'analizzatore di espressioni converte automaticamente i dati da un tipo a un altro. Se ad esempio un valore `smallint` viene confrontato con un valore `int`, il valore `smallint` verrà implicitamente convertito in un valore `int` prima dell'esecuzione del confronto.  
   
  L'analizzatore di espressioni non è in grado di eseguire una conversione implicita dei dati se gli argomenti e gli operandi hanno tipi di dati incompatibili. Inoltre, l'analizzatore di espressioni non è in grado di convertire implicitamente alcun valore in un valore booleano. Gli argomenti e gli operandi devono essere invece convertiti esplicitamente utilizzando l'operatore cast. Per altre informazioni, vedere [Cast &#40;espressione SSIS&#41;](cast-ssis-expression.md).  
   
@@ -48,23 +47,23 @@ ms.locfileid: "48194882"
 > [!NOTE]  
 >  I valori booleani sono valori logici, non numeri. Benché possano essere visualizzati come numeri in alcuni ambienti, i valori booleani non vengono archiviati come numeri e i vari linguaggi di programmazione, così come i metodi di .NET Framework, li rappresentano come valori numerici in modi diversi.  
 >   
->  Le funzioni di conversione disponibili in Visual Basic, ad esempio, convertono `True` in -1, mentre il metodo `System.Convert.ToInt32` di .NET Framework converte `True` in +1. Il [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] linguaggio di espressioni converte `True` su -1.  
+>  Le funzioni di conversione disponibili in Visual Basic, ad esempio, convertono `True` in -1, mentre il metodo `System.Convert.ToInt32` di .NET Framework converte `True` in +1. Il linguaggio delle espressioni di [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] converte `True` in -1.  
 >   
 >  Per evitare errori o risultati imprevisti, è consigliabile non scrivere codice basato su particolari valori numerici per `True` e `False`. Quando possibile, è consigliabile limitare l'utilizzo delle variabili booleane ai valori logici per i quali sono progettate.  
   
- Per altre informazioni, vedere gli argomenti seguenti:  
+ Per altre informazioni, vedere i seguenti argomenti:  
   
--   [= = &#40;Uguale&#41; &#40;espressione di SSIS&#41;](equal-ssis-expression.md)  
+-   [== &#40;uguale&#41; &#40;espressione SSIS&#41;](equal-ssis-expression.md)  
   
 -   [\!= &#40;diverso da&#41; &#40;espressione SSIS&#41;](unequal-ssis-expression.md)  
   
--   [&#62;&#40;Maggiore di&#41; &#40;espressione di SSIS&#41;](greater-than-ssis-expression.md)  
+-   [&#62; &#40;maggiore di&#41; &#40;espressione SSIS&#41;](greater-than-ssis-expression.md)  
   
--   [&#60;&#40;Minore di&#41; &#40;espressione di SSIS&#41;](less-than-ssis-expression.md)  
+-   [&#60; &#40;minore di&#41; &#40;espressione SSIS&#41;](less-than-ssis-expression.md)  
   
--   [&#62;= &#40;Maggiore o uguale a&#41; &#40;espressione di SSIS&#41;](greater-than-or-equal-to-ssis-expression.md)  
+-   [&#62;= &#40;maggiore o uguale a&#41; &#40;espressione SSIS&#41;](greater-than-or-equal-to-ssis-expression.md)  
   
--   [&#60;= &#40;Minore o uguale a&#41; &#40;espressione di SSIS&#41;](less-than-or-equal-to-ssis-expression.md)  
+-   [&#60;= &#40;minore o uguale a&#41; &#40;espressione SSIS&#41;](less-than-or-equal-to-ssis-expression.md)  
   
  Una funzione che utilizza un singolo argomento restituisce un risultato con lo stesso tipo di dati dell'argomento, con le eccezioni seguenti:  
   
@@ -93,7 +92,7 @@ ms.locfileid: "48194882"
   
 -   Gli argomenti passati a funzioni matematiche devono restituire tipi di dati numeric. A seconda della funzione o dell'operazione può essere necessario un tipo di dati numeric specifico. La funzione HEX richiede ad esempio un intero con o senza segno.  
   
--   Gli argomenti passati alle funzioni per i valori stringa devono restituire il tipo di dati character DT_STR o DT_WSTR. Ad esempio, UPPER("flower"). Alcune funzioni per i valori stringa, ad esempio SUBSTRING, richiedono argomenti Integer aggiuntivi che indicano la posizione iniziale e la lunghezza della stringa.  
+-   Gli argomenti passati alle funzioni di stringa devono restituire un tipo di dati carattere: DT_STR o DT_WSTR. Ad esempio, UPPER("flower"). Alcune funzioni per i valori stringa, ad esempio SUBSTRING, richiedono argomenti Integer aggiuntivi che indicano la posizione iniziale e la lunghezza della stringa.  
   
 -   Gli argomenti passati alle funzioni di data e ora devono restituire una data valida. Ad esempio, DAY(GETDATE()). Funzioni quali DATEADD richiedono un argomento Integer aggiuntivo che indica il numero di giorni che la funzione deve aggiungere alla data specificata.  
   
@@ -102,12 +101,12 @@ ms.locfileid: "48194882"
  I risultati di molte operazioni e funzioni hanno un tipo di dati predeterminato, che può essere il tipo di dati dell'argomento o il tipo di dati a cui l'analizzatore di espressioni esegue il cast del risultato. Il risultato di un operatore OR logico (||), ad esempio, è sempre un valore booleano, mentre il risultato della funzione ABS è il tipo di dati numeric dell'argomento e il risultato di una moltiplicazione è il più piccolo tipo di dati numeric in grado di contenere il risultato senza causare una perdita di dati. Per altre informazioni sui tipi di dati dei risultati, vedere [Operatori &#40;espressione SSIS&#41;](operators-ssis-expression.md) e [Funzioni &#40;espressione SSIS&#41;](functions-ssis-expression.md).  
   
 ## <a name="related-tasks"></a>Attività correlate  
- [Usare un'espressione in un componente flusso di dati](../use-an-expression-in-a-data-flow-component.md)  
+ [Utilizzo di un'espressione in un componente flusso di dati](../use-an-expression-in-a-data-flow-component.md)  
   
 ## <a name="related-content"></a>Contenuto correlato  
   
--   Articolo tecnico relativo al [foglio d'aiuto per le espressioni SSIS](http://go.microsoft.com/fwlink/?LinkId=217683)sul sito Web pragmaticworks.com  
+-   Articolo tecnico relativo al [foglio d'aiuto per le espressioni SSIS](https://go.microsoft.com/fwlink/?LinkId=217683)sul sito Web pragmaticworks.com  
   
--   Articolo tecnico relativo agli [esempi di espressioni SSIS](http://go.microsoft.com/fwlink/?LinkId=220761)nel sito Web social.technet.microsoft.com  
+-   Articolo tecnico relativo agli [esempi di espressioni SSIS](https://go.microsoft.com/fwlink/?LinkId=220761)nel sito Web social.technet.microsoft.com  
   
   

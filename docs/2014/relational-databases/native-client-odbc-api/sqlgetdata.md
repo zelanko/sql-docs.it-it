@@ -14,12 +14,12 @@ ms.assetid: 204848be-8787-45b4-816f-a60ac9d56fcf
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 208687bdc243b596b4b47d1696fdcea472552af3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 048ee2d27445bf64839c5331627a12e012cd4123
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48115104"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376513"
 ---
 # <a name="sqlgetdata"></a>SQLGetData
   **SQLGetData** viene usato per recuperare i dati dei set di risultati senza associare valori della colonna. **SQLGetData** può essere successivamente chiamato sulla stessa colonna per recuperare grandi quantità di dati da una colonna con un **testo**, **ntext**, oppure **immagine** tipo di dati.  
@@ -95,7 +95,7 @@ while (SQLFetch(hStmt) == SQL_SUCCESS)
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Funzione SQLGetData](http://go.microsoft.com/fwlink/?LinkId=59350)   
+ [Funzione SQLGetData](https://go.microsoft.com/fwlink/?LinkId=59350)   
  [Dettagli di implementazione dell'API ODBC](odbc-api-implementation-details.md)  
   
   

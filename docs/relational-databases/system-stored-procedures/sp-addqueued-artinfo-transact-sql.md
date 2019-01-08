@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_addqueued_artinfo
@@ -17,12 +16,12 @@ ms.assetid: decdb6eb-3dcd-4053-a21d-fd367c3fbafb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a2e596ecc5e6470bbcc1a62684c1fd1a6533711d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c326a8e3a5fa2bd95f536d434ff9782952ba70d3
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47770159"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590896"
 ---
 # <a name="spaddqueuedartinfo-transact-sql"></a>sp_addqueued_artinfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,28 +50,28 @@ sp_addqueued_artinfo [ @artid= ] 'artid'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@artid=** ] **'***artid***'**  
+ [  **@artid=** ] **'**_artid_**'**  
  ID dell'articolo. *artid* viene **int**, non prevede alcun valore predefinito  
   
- [  **@article=**] **'***articolo***'**  
+ [  **@article=**] **'**_articolo_**'**  
  Nome dell'articolo per cui si desidera creare lo script. *articolo* viene **sysname**, non prevede alcun valore predefinito  
   
- [  **@publisher=**] **'***publisher***'**  
+ [  **@publisher=**] **'**_editore_**'**  
  Nome del server di pubblicazione. *server di pubblicazione* viene **sysname**, non prevede alcun valore predefinito.  
   
- [ **@publisher_db=**] **'***publisher_db***'**  
+ [  **@publisher_db=**] **'**_publisher_db_**'**  
  Nome del database del server di pubblicazione. *publisher_db* viene **sysname**, non prevede alcun valore predefinito.  
   
- [  **@publication=**] **'***pubblicazione***'**  
+ [  **@publication=**] **'**_pubblicazione_**'**  
  Nome della pubblicazione per cui si desidera creare lo script. *pubblicazione* viene **sysname**, non prevede alcun valore predefinito.  
   
- [  **@dest_table=** ] *'dest_table * * *'**  
+ [  **@dest_table=** ] _' dest_table_**'**  
  Nome della tabella di destinazione. *dest_table* viene **sysname**, non prevede alcun valore predefinito.  
   
- [ **@owner =** ] **'***proprietario***'**  
+ [ **@owner =** ] **'**_proprietario_**'**  
  Proprietario della sottoscrizione. *proprietario* viene **sysname**, non prevede alcun valore predefinito.  
   
- [  **@cft_table=** ] **'***cft_table***'**  
+ [  **@cft_table=** ] **'**_cft_table_**'**  
  Nome della tabella dei conflitti ad aggiornamento in coda per l'articolo. *cft_table*viene **sysname**, non prevede alcun valore predefinito.  
   
 ## <a name="return-code-values"></a>Valori restituiti  

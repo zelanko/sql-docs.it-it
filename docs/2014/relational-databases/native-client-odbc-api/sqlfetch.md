@@ -12,12 +12,12 @@ ms.assetid: 69f0ec68-5857-4aec-9fbf-4bf592d3ab39
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5523a9d982093b413e5939a47deec189f9d63cb3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3dc2de6d8dc1967986162f2a468d0edf7266730a
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48144801"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53375233"
 ---
 # <a name="sqlfetch"></a>SQLFetch
   SQLFetch supporta caratteristiche avanzate di data e ora.  
@@ -28,7 +28,7 @@ ms.locfileid: "48144801"
  `SQLFetch` supporta i tipi CLR definiti dall'utente di grandi dimensioni. Per altre informazioni, vedere [Large CLR User-Defined tipi &#40;ODBC&#41;](../native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [SQLFetch](http://go.microsoft.com/fwlink/?LinkId=80703)   
+ [SQLFetch](https://go.microsoft.com/fwlink/?LinkId=80703)   
  [Dettagli di implementazione dell'API ODBC](odbc-api-implementation-details.md)  
   
   

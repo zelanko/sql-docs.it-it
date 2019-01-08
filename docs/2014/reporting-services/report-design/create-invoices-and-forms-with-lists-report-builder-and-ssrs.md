@@ -11,12 +11,12 @@ ms.assetid: c33231a5-b3a8-42e4-95bc-d05bdf2222f5
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: c09c3d61cb371e314d511754498f65919d85b507
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7026a1fcdfa3a030761d11c2f8d763220fd436d8
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48161521"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53375223"
 ---
 # <a name="lists-report-builder-and-ssrs"></a>Elenchi (Generatore report e SSRS)
   Un'area dati elenco viene ripetuta con ogni gruppo o riga nel set di dati del report. È possibile utilizzare un elenco per creare form o report in formato libero, ad esempio fatture, o in combinazione ad altre aree dati, nonché definire elenchi contenenti il numero desiderato di elementi del report. Per offrire più gruppi di dati, gli elenchi possono essere nidificati l'uno nell'altro.  
@@ -24,9 +24,9 @@ ms.locfileid: "48161521"
 > [!NOTE]  
 >  È possibile pubblicare elenchi separatamente da un report come parti del report. [!INCLUDE[ssRBrptparts](../../includes/ssrbrptparts-md.md)]  
   
- Per una rapida introduzione agli elenchi, vedere [Esercitazione: Creazione di un report in formato libero &#40;Generatore report&#41;](../tutorial-creating-a-free-form-report-report-builder.md).  
+ Per iniziare rapidamente con gli elenchi, vedere [esercitazione: Creazione di un Report in formato libero &#40;Generatore Report&#41;](../tutorial-creating-a-free-form-report-report-builder.md).  
   
- Nei report di esempio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] è incluso un report in cui viene utilizzato un elenco. Per informazioni sugli elenchi, esplorare la definizione del report di esempio in Generatore report o Progettazione report oppure visualizzare in anteprima il report generato in Generatore report o Progettazione report. Per altre informazioni sul download dei report di esempio, vedere [(SSRS) Reporting Services Samples](http://go.microsoft.com/fwlink/?LinkID=198283).  
+ Nei report di esempio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] è incluso un report in cui viene utilizzato un elenco. Per informazioni sugli elenchi, esplorare la definizione del report di esempio in Generatore report o Progettazione report oppure visualizzare in anteprima il report generato in Generatore report o Progettazione report. Per altre informazioni sul download dei report di esempio, vedere [(SSRS) Reporting Services Samples](https://go.microsoft.com/fwlink/?LinkID=198283).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -47,7 +47,7 @@ ms.locfileid: "48161521"
 ##  <a name="DisplayingLayout"></a> Visualizzazione dei dati in un layout in formato libero  
  Per organizzare i dati del report in un layout in formato libero anziché in una griglia, è possibile aggiungere un elenco all'area di progettazione. Trascinare i campi dal riquadro dei dati del report alla cella. Per impostazione predefinita, la cella contiene un rettangolo utilizzato come contenitore. Spostare ogni campo nel contenitore fino a ottenere la progettazione desiderata. Utilizzare le guide di allineamento che appaiono quando le caselle di testo vengono trascinate nel contenitore del rettangolo per consentire l'allineamento verticale e orizzontale dei bordi. Rimuovere lo spazio vuoto indesiderato modificando la dimensione della cella. Per altre informazioni, vedere [Modificare l'altezza di riga o la larghezza di colonna &#40;Generatore report e SSRS&#41;](change-row-height-or-column-width-report-builder-and-ssrs.md).  
   
- Nella figura seguente viene riportato un elenco che include informazioni su un ordine, oltre ai campi Date, Order, Qty, Product, LineTotal e a un'immagine.  
+ La figura seguente mostra un elenco che consente di visualizzare informazioni su un ordine, oltre ai campi: Date, Order, Qty, Product, LineTotal e un'immagine.  
   
  ![Elenco in visualizzazione Progettazione con 4 campi e un'immagine](../media/rs-basiclistformdesign.gif "Elenco in visualizzazione Progettazione con 4 campi e un'immagine")  
   
@@ -74,7 +74,7 @@ ms.locfileid: "48161521"
 
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento a funzioni di aggregazione &#40;Report e SSRS&#41;](report-builder-functions-aggregate-functions-reference.md)   
+ [Riferimento a funzioni di aggregazione &#40;Generatore report e SSRS&#41;](report-builder-functions-aggregate-functions-reference.md)   
  [Esempi di espressioni &#40;Generatore report e SSRS&#41;](expression-examples-report-builder-and-ssrs.md)  
   
   

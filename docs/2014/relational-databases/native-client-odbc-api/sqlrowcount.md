@@ -14,12 +14,12 @@ ms.assetid: 967ed3d4-3d31-4485-ac92-027076ebc829
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9858619250b5f71e973e4af8eb92868f094e2193
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4ff2a744f68cf6152330179eb8dcab1f33911914
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48165031"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53354739"
 ---
 # <a name="sqlrowcount"></a>SQLRowCount
   Quando vengono associate matrici di valori di parametro per l'esecuzione di istruzione, `SQLRowCount` restituisce SQL_ERROR se qualsiasi riga di valori di parametro genera una condizione di errore nell'esecuzione dell'istruzione. Tramite l'argomento *RowCountPtr* della funzione non viene restituito alcun valore.  
@@ -31,7 +31,7 @@ ms.locfileid: "48165031"
  Quando un [!INCLUDE[tsql](../../includes/tsql-md.md)] viene eseguita un'istruzione INSERT, UPDATE, DELETE o MERGE con una clausola OUTPUT, SQLRowCount non restituirà il numero di righe interessate fino a quando non sono state utilizzate tutte le righe nel set di risultati generato dalla clausola OUTPUT. Per utilizzare queste righe, chiamare SQLFetch o SQLFetchScroll. SQLResultCols restituiranno -1 finché tutte le righe di risultati sono state utilizzate. Dopo aver SQLFetch o SQLFetchScroll restituisce SQL_NO_DATA, l'applicazione deve chiamare SQLRowCount per determinare il numero di righe interessate prima di chiamare SQLMoreResults per passare al risultato successivo.  
   
 ## <a name="see-also"></a>Vedere anche  
- [SQLRowCount-funzione](http://go.microsoft.com/fwlink/?LinkId=59367)   
+ [SQLRowCount-funzione](https://go.microsoft.com/fwlink/?LinkId=59367)   
  [Dettagli di implementazione dell'API ODBC](odbc-api-implementation-details.md)  
   
   

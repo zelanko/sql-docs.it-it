@@ -15,12 +15,12 @@ ms.assetid: 6602edb6-d160-43fb-83c8-9df5dddfeb9c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: db5b4fcded48a711fc1c8e8c8ffdebdd36562282
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 12581756e6ffa7d77ba7dc3339c3f38c96962d4e
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48150301"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53372908"
 ---
 # <a name="basic-data-mining-tutorial"></a>Esercitazione di base sul data mining
   Ecco il [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] esercitazione di base di Data Mining. [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] fornisce un ambiente integrato per la creazione di modelli di data mining e l'esecuzione di stime. In questa esercitazione, si verrà completato uno scenario per una campagna di mailing diretto in cui si usa machine learning per analizzare e identificare il comportamento di acquisto dei clienti. Verrà illustrato come utilizzare tre degli algoritmi di data mining più importanti: clustering, alberi delle decisioni e Naive Bayes. Si apprenderà anche come analizzare i risultati ottenuti utilizzando i visualizzatori modelli di data mining e creare stime e grafici di accuratezza utilizzando gli strumenti di data mining inclusi in [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. La società fittizia [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] verrà utilizzata per tutti gli esempi.  
@@ -43,7 +43,7 @@ ms.locfileid: "48150301"
   
  L'esercitazione è suddivisa nelle lezioni seguenti:  
   
- [Lezione 1: Preparazione di Analysis Services Database &#40;esercitazione di base di Data Mining&#41;](../../2014/tutorials/lesson-1-preparing-the-analysis-services-database-basic-data-mining-tutorial.md)  
+ [Lezione 1: L'analisi di preparazione dei servizi per Database di &#40;esercitazione di base di Data Mining&#41;](../../2014/tutorials/lesson-1-preparing-the-analysis-services-database-basic-data-mining-tutorial.md)  
  In questa lezione verranno illustrate le procedure per la creazione di un nuovo database [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], l'aggiunta di un'origine dei dati a una vista origine dati e la preparazione del nuovo database per l'utilizzo con il data mining.  
   
  [Lezione 2: Compilazione di una struttura di Mailing diretto &#40;esercitazione di base di Data Mining&#41;](../../2014/tutorials/lesson-2-building-a-targeted-mailing-structure-basic-data-mining-tutorial.md)  
@@ -74,16 +74,16 @@ ms.locfileid: "48150301"
   
 -   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] in modalità multidimensionale  
   
--   Database [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)].  
+-   Database [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] .  
   
- Per garantire una maggiore sicurezza, i database di esempio non vengono installati con [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Per installare i database ufficiali per [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], visitare il [Microsoft SQL Sample Databases](http://go.microsoft.com/fwlink/?LinkId=88417) pagina e selezionare [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
+ Per garantire una maggiore sicurezza, i database di esempio non vengono installati con [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Per installare i database ufficiali per [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], visitare il [Microsoft SQL Sample Databases](https://go.microsoft.com/fwlink/?LinkId=88417) pagina e selezionare [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
   
 > [!NOTE]  
 >  Quando si lavora in un'esercitazione, si potrebbe risultare più agevole spostarsi avanti e indietro tra i passaggi se si aggiunge il **argomento successivo** e **argomento precedente** pulsanti alla barra degli strumenti del Visualizzatore di documenti.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Soluzioni di Data Mining](../../2014/analysis-services/data-mining/data-mining-solutions.md)   
- [Procedure dettagliate e le attività del modello di data mining](../../2014/analysis-services/data-mining/mining-model-tasks-and-how-tos.md)   
- [Creazione e l'esecuzione di query modelli di Data Mining con DMX: esercitazioni &#40;Analysis Services - Data Mining&#41;](../../2014/tutorials/create-query-data-mining-models-dmx-tutorials.md)  
+ [Soluzioni di data mining](../../2014/analysis-services/data-mining/data-mining-solutions.md)   
+ [Attività e procedure relative al modello di data mining](../../2014/analysis-services/data-mining/mining-model-tasks-and-how-tos.md)   
+ [Creazione ed esecuzione di query su modelli di Data Mining con DMX: Esercitazioni su &#40;Analysis Services - Data Mining&#41;](../../2014/tutorials/create-query-data-mining-models-dmx-tutorials.md)  
   
   

@@ -13,12 +13,12 @@ ms.assetid: f248984a-0b59-4c2f-a56d-31f8dafe72b5
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 7fbfb6d659aa8bc96ebc13ad0a3b89df750c5f95
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8e1ebde4d8b1303e3a845bf4ce9fdc03d3ba6c6a
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48167471"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589555"
 ---
 # <a name="lesson-3-configuring-distribution"></a>Lezione 3: Configurazione della distribuzione
   In questa lezione verrà configurata la distribuzione nel server di pubblicazione e verranno impostate le autorizzazioni necessarie per i database di pubblicazione e di distribuzione. Se il server di distribuzione è già stato configurato, è necessario disabilitare la pubblicazione e la distribuzione prima di iniziare questa lezione. Non eseguire questa operazione se è necessario mantenere la topologia di replica esistente.  
@@ -36,11 +36,11 @@ ms.locfileid: "48167471"
   
      Verrà avviata la Configurazione guidata distribuzione.  
   
-3.  Nel **distributore** pagina, selezionare **'***\<nomeserver >***' fungerà da database di distribuzione; SQL Server verrà creato un database di distribuzione e di log**, quindi fare clic su **successivo**.  
+3.  Nel **distributore** pagina, selezionare **'**_\<ServerName >_**' fungerà da database di distribuzione; SQL Server verrà creato un database di distribuzione e di log**, quindi fare clic su **successivo**.  
   
 4.  Se [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non è in esecuzione, nella pagina [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**Agent** selezionare **Sì**e configurare l'avvio automatico del servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Scegliere **Avanti**.  
   
-5.  Nella casella di testo **Cartella snapshot** immettere **\\\\**\<*Nome_computer>***\repldata**, dove \<*Nome_computer>* è il nome del server di pubblicazione e quindi fare clic su **Avanti**.  
+5.  Nella casella di testo **Cartella snapshot** immettere **\\\\**\<_Nome_computer>_**\repldata**, dove \<*Nome_computer>* è il nome del server di pubblicazione e quindi fare clic su **Avanti**.  
   
 6.  Accettare i valori predefiniti nella pagine seguenti della procedura guidata.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "48167471"
   
 1.  In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]espandere la cartella **Sicurezza**, fare clic con il pulsante destro del mouse su **Account di accesso**e quindi scegliere **Nuovo account di accesso**.  
   
-2.  Nella pagina **Generale** fare clic su **Cerca**, immettere \<*Nome_computer>***\repl_snapshot** nella casella **Immettere il nome dell'oggetto da selezionare**, dove \<*Nome_computer>* è il nome del server di pubblicazione locale, fare clic su **Controlla nomi** e quindi su **OK**.  
+2.  Nella pagina **Generale** fare clic su **Cerca**, nella casella **Immettere il nome dell'oggetto da selezionare** immettere \<_Nome_computer>_**\repl_snapshot**, dove \<*Nome_computer>* è il nome del server di pubblicazione locale, fare clic su **Controlla nomi** e quindi su **OK**.  
   
 3.  Nell'elenco **Utenti con mapping all'account di accesso seguente** nella pagina **Mapping utenti** selezionare il database **e il database di** distribuzione [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] .  
   

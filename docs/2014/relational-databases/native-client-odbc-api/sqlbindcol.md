@@ -14,12 +14,12 @@ ms.assetid: fbd7ba20-d917-4ca9-b018-018ac6af9f98
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4dafadd6ba64fa08f0329cd73114b4f85a1e376a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ede93e1552451f7db8e286ac28284fed79ddef0c
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48141511"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53355534"
 ---
 # <a name="sqlbindcol"></a>SQLBindCol
   Come regola generale, considerare le implicazioni dell'utilizzo di **SQLBindCol** per provocare la conversione dei dati. Le conversioni per associazione sono processi client. Se ad esempio viene recuperato un valore a virgola mobile associato a una colonna di tipo character, nel driver viene eseguita in locale la conversione da float a character quando viene recuperata una riga. La funzione [!INCLUDE[tsql](../../includes/tsql-md.md)] CONVERT può essere utilizzata per riportare il costo della conversione dei dati nel server.  
@@ -30,7 +30,7 @@ ms.locfileid: "48141511"
   
  Il troncamento dei dati di Reporting è un processo impegnativo per la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC Native Client. È possibile evitare il troncamento assicurandosi che la larghezza di tutti i buffer di dati associati sia sufficiente per restituire i dati. Per i dati di tipo character, la larghezza deve includere lo spazio per un carattere di terminazione della stringa quando viene utilizzato il comportamento predefinito del driver per la terminazione della stringa. Ad esempio, associa una [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **char(5)** colonna in una matrice dei risultati di cinque caratteri troncamento per ogni valore recuperato. L'associazione della stessa colonna a una matrice di sei caratteri evita il troncamento fornendo un elemento character in cui archiviare il terminatore null. [SQLGetData](sqlgetdata.md) può essere utilizzato per recuperare dati long character e binari senza troncamento.  
   
- Se per i tipi di dati per valori di grandi dimensioni il buffer fornito dall'utente non è sufficientemente grande per contenere l'intero valore della colonna, viene restituito `SQL_SUCCESS_WITH_INFO` e viene generato il messaggio di avviso "Troncamento a destra della stringa di dati". L'argomento `StrLen_or_IndPtr` conterrà il numero di caratteri/byte archiviati nel buffer.  
+ Per i tipi di dati di valori di grandi dimensioni, se il buffer fornito dall'utente non è sufficientemente grande da contenere l'intero valore della colonna, `SQL_SUCCESS_WITH_INFO` viene restituito e i dati della stringa"; viene generato l'avviso "troncamento a destra. L'argomento `StrLen_or_IndPtr` conterrà il numero di caratteri/byte archiviati nel buffer.  
   
 ## <a name="sqlbindcol-support-for-enhanced-date-and-time-features"></a>Supporto di SQLBindCol per le caratteristiche avanzate di data e ora  
  I valori di colonna risultato dei tipi data/ora vengono convertiti come descritto in [le conversioni da SQL a C](../native-client-odbc-date-time/datetime-data-type-conversions-from-sql-to-c.md). Si noti che per recuperare le colonne time e datetimeoffset relative strutture corrispondenti (`SQL_SS_TIME2_STRUCT` e **valore SQL_SS_TIMESTAMPOFFSET_STRUCT**), *TargetType* deve essere specificata come `SQL_C_DEFAULT` o `SQL_C_BINARY`.  
@@ -41,7 +41,7 @@ ms.locfileid: "48141511"
  **SQLBindCol** supporta grandi CLR a tipi definiti dall'utente (UDT). Per altre informazioni, vedere [Large CLR User-Defined tipi &#40;ODBC&#41;](../native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Funzione SQLBindCol](http://go.microsoft.com/fwlink/?LinkId=59327)   
+ [Funzione SQLBindCol](https://go.microsoft.com/fwlink/?LinkId=59327)   
  [Dettagli di implementazione dell'API ODBC](odbc-api-implementation-details.md)  
   
   

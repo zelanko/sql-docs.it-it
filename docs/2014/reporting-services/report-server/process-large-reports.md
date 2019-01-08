@@ -17,12 +17,12 @@ ms.assetid: c5275a9f-c95b-46d7-bc62-633879a8a291
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: b22d42d48b3357cc004c89886ebaaaca42c35f96
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4dfc8e272479c9fb2a3a5082624bdda926547212
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48084661"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53372503"
 ---
 # <a name="process-large-reports"></a>Elaborare report di grandi dimensioni
   La corretta esecuzione di report di grandi dimensioni presenta alcuni aspetti complessi e richiede determinate configurazioni. Non è consigliabile eseguire report di grandi dimensioni su richiesta, a meno che siano configurati per supportare l'impaginazione.  
@@ -34,12 +34,12 @@ ms.locfileid: "48084661"
   
  Le dimensioni dei report contenenti dati volatili possono variare in modo significativo da un'esecuzione del report all'altra. In questi casi è opportuno monitorare l'origine dei dati per stabilire gli effetti della volatilità dei dati sul report e l'eventuale necessità di eseguire la procedura indicata in questo argomento.  
   
- Per altre informazioni e suggerimenti sulla diagnosi di errori di timeout e di memoria insufficiente, vedere l'articolo [How to diagnose issues when running reports in the report server](http://go.microsoft.com/fwlink/?LinkId=85634) (Come eseguire la diagnosi durante l'esecuzione di report nel server di report) sul sito Web blogs.msdn.com.  
+ Per altre informazioni e suggerimenti sulla diagnosi di errori di timeout e di memoria insufficiente, vedere l'articolo [Come eseguire la diagnosi durante l'esecuzione di report nel server di report](https://go.microsoft.com/fwlink/?LinkId=85634) sul sito Web blogs.msdn.com.  
   
 ## <a name="configuration-recommendations"></a>Indicazioni relative alla configurazione  
  Per l'esecuzione, il rendering e la visualizzazione dei report sono valide le indicazioni seguenti:  
   
--   Progettare il report in modo che supporti l'impaginazione. Il server di report invia infatti il report una pagina alla volta e se il report è suddiviso in più pagine sarà possibile regolare il flusso dei dati inviati al browser. Per altre informazioni, vedere [precaricare la Cache &#40;gestione Report&#41;](preload-the-cache-report-manager.md).  
+-   Progettare il report in modo che supporti l'impaginazione. Il server di report invia infatti il report una pagina alla volta e se il report è suddiviso in più pagine sarà possibile regolare il flusso dei dati inviati al browser. Per altre informazioni, vedere [Precaricare la cache &#40;Gestione report&#41;](preload-the-cache-report-manager.md).  
   
 -   Configurare il report in modo che venga eseguito come snapshot del report pianificato per evitare che venga eseguito su richiesta. Non impostare un valore di timeout per l'esecuzione del report. Eseguire il report nelle fasce orarie di minore attività.  
   
@@ -71,9 +71,9 @@ ms.locfileid: "48084661"
   
 ## <a name="see-also"></a>Vedere anche  
  [Sottoscrizioni e recapito &#40;Reporting Services&#41;](../subscriptions/subscriptions-and-delivery-reporting-services.md)   
- [Impostare le proprietà di elaborazione dei Report](set-report-processing-properties.md)   
+ [Impostare proprietà di elaborazione dei report](set-report-processing-properties.md)   
  [Specificare le credenziali e le informazioni sulla connessione per le origini dati del report](../report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
- [Gestione contenuto del Server di report &#40;modalità nativa SSRS&#41;](report-server-content-management-ssrs-native-mode.md)   
+ [Gestione contenuto del server di report &#40;modalità nativa SSRS&#41;](report-server-content-management-ssrs-native-mode.md)   
  [Precaricare la cache &#40;Gestione report&#41;](preload-the-cache-report-manager.md)  
   
   

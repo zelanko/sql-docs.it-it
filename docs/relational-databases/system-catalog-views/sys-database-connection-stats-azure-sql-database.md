@@ -22,28 +22,28 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 8b395998b8c0408b264ab2ffe7fe7f3390405cf6
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 801074dd7e82f5e1564564125486e0845e2303fb
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51676350"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589484"
 ---
 # <a name="sysdatabaseconnectionstats-azure-sql-database"></a>sys.database_connection_stats (Database di SQL Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
   Contiene le statistiche relative [!INCLUDE[ssSDS](../../includes/sssds-md.md)] database **connettività** eventi, che fornisce una panoramica delle connessioni al database riuscite e gli errori. Per altre informazioni sugli eventi di connettività, vedere tipi di eventi in [Sys. event_log &#40;Database SQL di Azure&#41;](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md).  
   
-|Statistiche|Tipo|Description|  
+|Statistiche|Tipo|Descrizione|  
 |---------------|----------|-----------------|  
 |**database_name**|**sysname**|Nome del database.|  
-|**start_time**|**datetime2**|Data e ora UTC dell'inizio dell'intervallo di aggregazione. L'ora è sempre un multiplo di 5 minuti. Esempio:<br /><br /> 28/09/2011 16:00:00<br />'2011-09-28 16:05:00'<br />'2011-09-28 16:10:00'|  
+|**start_time**|**datetime2**|Data e ora UTC dell'inizio dell'intervallo di aggregazione. L'ora è sempre un multiplo di 5 minuti. Ad esempio:<br /><br /> 28/09/2011 16:00:00<br />'2011-09-28 16:05:00'<br />'2011-09-28 16:10:00'|  
 |**end_time**|**datetime2**|Data e ora UTC della fine dell'intervallo di aggregazione. **End_time** è sempre esattamente 5 minuti dopo rispetto al relativo **start_time** nella stessa riga.|  
 |**success_count**|**int**|Numero di connessioni riuscite.|  
 |**total_failure_count**|**int**|Numero totale di connessioni non riuscite. Questa è la somma dei **connection_failure_count**, **terminated_connection_count**, e **throttled_connection_count**e non include gli eventi deadlock.|  
 |**connection_failure_count**|**int**|Numero di errori di accesso.|  
-|**terminated_connection_count**|**int**|***Applicabile solo per [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] v11.***<br /><br /> Numero di connessioni chiuse.|  
-|**throttled_connection_count**|**int**|***Applicabile solo per [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] v11.***<br /><br /> Numero di connessioni limitate.|  
+|**terminated_connection_count**|**int**|**_Applicabile solo per [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] v11._**<br /><br /> Numero di connessioni chiuse.|  
+|**throttled_connection_count**|**int**|**_Applicabile solo per [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] v11._**<br /><br /> Numero di connessioni limitate.|  
   
 ## <a name="remarks"></a>Note  
   
@@ -57,7 +57,7 @@ ms.locfileid: "51676350"
 |`Database1`|`2012-02-05 11:00:00`|`2012-02-05 11:05:00`|`0`|`7`|`7`|`0`|`0`|  
   
 ### <a name="interval-starttime-and-endtime"></a>start_time e end_time dell'intervallo  
- Un evento è incluso in un intervallo di aggregazione quando si verifica l'evento *sul* oppure *dopo * * * start_time** e *prima di * * * end_time** per tale intervallo. Ad esempio, un evento che si verifica esattamente il `2012-10-30 19:25:00.0000000` è incluso solo nel secondo intervallo indicato di seguito:  
+ Un evento è incluso in un intervallo di aggregazione quando si verifica l'evento *sul* oppure _dopo_**start_time** e _prima_  **end_time** per tale intervallo. Ad esempio, un evento che si verifica esattamente il `2012-10-30 19:25:00.0000000` è incluso solo nel secondo intervallo indicato di seguito:  
   
 ```  
   

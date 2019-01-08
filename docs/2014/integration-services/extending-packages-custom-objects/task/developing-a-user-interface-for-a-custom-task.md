@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- integration-services
+ms.technology: integration-services
 ms.topic: reference
 dev_langs:
 - VB
@@ -23,19 +21,19 @@ ms.assetid: 1e940cd1-c5f8-4527-b678-e89ba5dc398a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3665e22ca7e9fb4a04f3cfd46cb5f5af5025ab41
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4de6b302a9ce490eaf203c3882ca20436857c858
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48197571"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53372003"
 ---
 # <a name="developing-a-user-interface-for-a-custom-task"></a>Sviluppo di un'interfaccia utente per un'attività personalizzata
   Il modello a oggetti di [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] offre agli sviluppatori di attività la possibilità di creare facilmente un'interfaccia utente personalizzata per un'attività da integrare e visualizzare in [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]. L'interfaccia utente può fornire informazioni utili all'utente in Progettazione [!INCLUDE[ssIS](../../../includes/ssis-md.md)] oltre a indicazioni su come configurare correttamente le proprietà e le impostazioni dell'attività personalizzata.  
   
  Per sviluppare un'interfaccia utente personalizzata per un'attività, è necessario utilizzare due classi importanti, descritte nella tabella seguente.  
   
-|Classe|Description|  
+|Classe|Descrizione|  
 |-----------|-----------------|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute>|Attributo che identifica un'attività gestita e fornisce informazioni della fase di progettazione tramite le proprietà per controllare le modalità di visualizzazione e di interazione di Progettazione [!INCLUDE[ssIS](../../../includes/ssis-md.md)] con l'oggetto.|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsTaskUI>|Interfaccia utilizzata dall'attività per associare l'attività alla relativa interfaccia utente personalizzata.|  
@@ -51,12 +49,12 @@ ms.locfileid: "48197571"
   
  Nella tabella seguente sono descritte le proprietà dell'attributo <xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute>.  
   
-|Proprietà|Description|  
+|Proprietà|Descrizione|  
 |--------------|-----------------|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.Localization.DtsLocalizableAttribute.DisplayName%2A>|Visualizza il nome dell'attività nella casella degli strumenti del Flusso di controllo.|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.Localization.DtsLocalizableAttribute.Description%2A>|Descrizione dell'attività (ereditata da <xref:Microsoft.SqlServer.Dts.Runtime.Localization.DtsLocalizableAttribute>). Questa proprietà è visualizzata nelle descrizioni comandi.|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute.IconResource%2A>|Icona visualizzata in Progettazione [!INCLUDE[ssIS](../../../includes/ssis-md.md)].|  
-|<xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute.RequiredProductLevel%2A>|Se utilizzata, impostarla su uno dei valori dell'enumerazione <xref:Microsoft.SqlServer.Dts.Runtime.DTSProductLevel>. Ad esempio, `RequiredProductLevel = DTSProductLevel.None`.|  
+|<xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute.RequiredProductLevel%2A>|Se utilizzata, impostarla su uno dei valori dell'enumerazione <xref:Microsoft.SqlServer.Dts.Runtime.DTSProductLevel>. Ad esempio `RequiredProductLevel = DTSProductLevel.None`.|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute.TaskContact%2A>|Contiene informazioni di contatto per i casi in cui l'attività richiede supporto tecnico.|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute.TaskType%2A>|Assegna un tipo all'attività.|  
 |Attribute.TypeId|Se implementata in una classe derivata, ottiene un identificatore univoco per questo attributo. Per ulteriori informazioni, vedere la proprietà `Attribute.TypeID` nella libreria di classi di Microsoft .NET Framework.|  
@@ -199,7 +197,7 @@ Public Class HelloWorldTaskUI
 End Class  
 ```  
   
-![Icona di Integration Services (piccola)](../../media/dts-16.gif "icona di Integration Services (piccola)")**rimangono fino a Date con Integration Services** <br /> Per i download, gli articoli, gli esempi e i video Microsoft più recenti, oltre alle soluzioni selezionate dalla community, visitare la pagina [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] sul sito MSDN:<br /><br /> [Visita la pagina di Integration Services su MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Per ricevere una notifica automatica su questi aggiornamenti, sottoscrivere i feed RSS disponibili nella pagina.  
+![Icona di Integration Services (piccola)](../../media/dts-16.gif "icona di Integration Services (piccola)")**rimangono fino a Date con Integration Services**<br /> Per i download, gli articoli, gli esempi e i video Microsoft più recenti, oltre alle soluzioni selezionate dalla community, visitare la pagina [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] sul sito MSDN:<br /><br /> [Visita la pagina di Integration Services su MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Per ricevere una notifica automatica su questi aggiornamenti, sottoscrivere i feed RSS disponibili nella pagina.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Creazione di un'attività personalizzata](creating-a-custom-task.md)   

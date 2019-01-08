@@ -20,16 +20,16 @@ ms.assetid: 4e055946-12d4-4589-9891-41617a50f34e
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cca18bef15d57aa9d2cf97999939994a6c8c7934
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2606f7ec05df6422135220605087b81ac7ec4f50
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47662129"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53588975"
 ---
 # <a name="sqlsetcursorname-function"></a>Funzione SQLSetCursorName
 **Conformità**  
- Versione introdotta: Conformità agli standard 1.0 di ODBC: ISO 92  
+ Versione introdotta: Conformità agli standard 1.0 ODBC: ISO 92  
   
  **Riepilogo**  
  **SQLSetCursorName** associa un nome di cursore con un'istruzione attiva. Se un'applicazione non chiama **SQLSetCursorName**, il driver genera nomi dei cursori in base alle necessità per l'elaborazione di istruzione SQL.  
@@ -60,7 +60,7 @@ SQLRETURN SQLSetCursorName(
 ## <a name="diagnostics"></a>Diagnostica  
  Quando **SQLSetCursorName** restituisce SQL_ERROR o SQL_SUCCESS_WITH_INFO, un valore SQLSTATE associato possono essere ottenuti chiamando **SQLGetDiagRec** con un *HandleType* di SQL_HANDLE_STMT e un *gestiscono* dei *StatementHandle*. Nella tabella seguente sono elencati i valori SQLSTATE comunemente restituiti da **SQLSetCursorName** e illustra ognuna nel contesto di questa funzione; la notazione "(DM)" precede le descrizioni di SQLSTATE restituiti da Gestione Driver. Il codice restituito a ogni valore SQLSTATE è SQL_ERROR, se non specificato diversamente.  
   
-|SQLSTATE|Errore|Description|  
+|SQLSTATE|Errore|Descrizione|  
 |--------------|-----------|-----------------|  
 |01000|Avviso generale|Messaggio informativo specifico del driver. (Funzione restituisce SQL_SUCCESS_WITH_INFO).|  
 |01004|Stringa troncati di dati a destra|Il nome del cursore ha superato il limite massimo, pertanto è stato usato solo il numero massimo consentito di caratteri.|  
@@ -78,7 +78,7 @@ SQLRETURN SQLSetCursorName(
 |IM001|Driver non supporta questa funzione|Il driver (DM) associato il *StatementHandle* non supporta la funzione.|  
   
 ## <a name="comments"></a>Commenti  
- Nomi dei cursori vengono utilizzati solo per gli aggiornamenti posizionati ed eliminare le istruzioni (ad esempio, **aggiornare** *nome-tabella* ... **WHERE CURRENT OF** *-nome del cursore*). Per altre informazioni, vedere [istruzioni di eliminazione e aggiornamento posizionato](../../../odbc/reference/develop-app/positioned-update-and-delete-statements.md). Se l'applicazione non chiama **SQLSetCursorName** per definire un nome di cursore, durante l'esecuzione di un'istruzione di query il driver genera un nome che inizia con le lettere SQL_CUR e non superare i 18 caratteri.  
+ Nomi dei cursori vengono utilizzati solo per gli aggiornamenti posizionati ed eliminare le istruzioni (ad esempio, **aggiornare** _nome-tabella_ ... **WHERE CURRENT OF** _-nome del cursore_). Per altre informazioni, vedere [istruzioni di eliminazione e aggiornamento posizionato](../../../odbc/reference/develop-app/positioned-update-and-delete-statements.md). Se l'applicazione non chiama **SQLSetCursorName** per definire un nome di cursore, durante l'esecuzione di un'istruzione di query il driver genera un nome che inizia con le lettere SQL_CUR e non superare i 18 caratteri.  
   
  Tutti i nomi di cursore all'interno della connessione devono essere univoci. La lunghezza massima di un nome di cursore è definita dal driver. Per garantire la massima interoperabilità, è consigliabile che le applicazioni limitare i nomi di cursore a non più di 18 caratteri. In ODBC 3*x*, se un nome di cursore è un identificatore con virgolette, viene trattata in modo distinzione maiuscole/minuscole e può contenere caratteri che la sintassi SQL non autorizza o gestisce in modo speciale, ad esempio gli spazi vuoti o parole chiave riservate. Se un nome di cursore deve essere trattato in modo tra maiuscole e minuscole, deve essere passato come un identificatore tra virgolette.  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - comparing string data
@@ -17,12 +16,12 @@ ms.assetid: 93aeb5bd-e208-46b7-8979-dea2dcd37d4c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 950456557177ed0e794aae92df14536ee524e36b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 14a9cd4f9d37798aaabaf65ea2f2afe79c207e6e
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48100951"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53359543"
 ---
 # <a name="comparing-string-data"></a>confronto di dati stringa
   Il confronto tra stringhe costituisce una parte importante di molte delle trasformazioni eseguite da [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]e viene utilizzato anche nella valutazione di espressioni in variabili ed espressioni di proprietà. La trasformazione Ordinamento, ad esempio, confronta i valori in un set di dati per disporre i dati in ordine crescente o decrescente.  
@@ -34,7 +33,7 @@ ms.locfileid: "48100951"
   
 -   La trasformazione Suddivisione condizionale può utilizzare confronti tra stringhe nelle espressioni per determinare a quale output inviare le righe di dati. Per altre informazioni, vedere [Trasformazione Suddivisione condizionale](transformations/conditional-split-transformation.md).  
   
--   La trasformazione Colonna derivata può utilizzare confronti tra stringhe nelle espressioni per generare nuovi valori di colonna. Per altre informazioni, vedere [trasformazione Colonna derivata](transformations/derived-column-transformation.md).  
+-   La trasformazione Colonna derivata può utilizzare confronti tra stringhe nelle espressioni per generare nuovi valori di colonna. Per altre informazioni, vedere [Trasformazione Colonna derivata](transformations/derived-column-transformation.md).  
   
  Anche le variabili, i mapping di variabili e i vincoli di precedenza utilizzano espressioni, che possono includere confronti tra stringhe. Per altre informazioni sulle espressioni, vedere [Espressioni di Integration Services &#40;SSIS&#41;](../expressions/integration-services-ssis-expressions.md).  
   
@@ -64,11 +63,11 @@ ms.locfileid: "48100951"
  È inoltre possibile specificare impostazioni locali per le gestioni connessioni file flat e per più file flat.  
   
 ## <a name="setting-comparison-options"></a>Impostazione delle opzioni di confronto  
- Le impostazioni locali specificano le regole di base per il confronto dei dati stringa, ad esempio la posizione di ogni lettera nell'alfabeto. Tali regole possono tuttavia non essere sufficienti per i confronti eseguiti da alcune trasformazioni e [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] supporta un set di opzioni di confronto avanzate che consentono di eseguire confronti più specifici di quelli previsti dalle regole di confronto delle impostazioni locali. Tali opzioni di confronto vengono impostate a livello di colonna. È ad esempio disponibile un'opzione di confronto che consente di ignorare i caratteri senza spaziatura. Questa opzione consente di ignorare segni diacritici quale l'accento, di modo che caratteri come "a" e "á" vengano considerati identici ai fini del confronto.  
+ Le impostazioni locali specificano le regole di base per il confronto dei dati stringa, ad esempio la posizione di ogni lettera nell'alfabeto. Tali regole possono tuttavia non essere sufficienti per i confronti eseguiti da alcune trasformazioni e [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] supporta un set di opzioni di confronto avanzate che consentono di eseguire confronti più specifici di quelli previsti dalle regole di confronto delle impostazioni locali. Tali opzioni di confronto vengono impostate a livello di colonna. È ad esempio disponibile un'opzione di confronto che consente di ignorare i caratteri senza spaziatura. L'effetto di questa opzione è per ignorare i segni diacritici, ad esempio la distinzione tra caratteri accentati, che rende "a" e "å" identici per il confronto.  
   
  Nella tabella seguente vengono descritte le opzioni di confronto disponibili e uno stile di ordinamento.  
   
-|Opzione di confronto|Description|  
+|Opzione di confronto|Descrizione|  
 |-----------------------|-----------------|  
 |Ignora maiuscole/minuscole|Specifica se nel confronto viene fatta distinzione tra lettere maiuscole e minuscole. Se questa opzione è impostata, nel confronto tra stringhe verrà ignorata la combinazione di maiuscole e minuscole. Ad esempio, la stringa "ABC" verrà considerata identica alla stringa "abc".|  
 |Ignora Katakana/Hiragana|Specifica se nel confronto viene fatta distinzione tra i due tipi di caratteri Kana giapponesi, Hiragana e Katakana. Se questa opzione è impostata, nel confronto tra stringhe verrà ignorata la distinzione tra Katakana e Hiragana.|  

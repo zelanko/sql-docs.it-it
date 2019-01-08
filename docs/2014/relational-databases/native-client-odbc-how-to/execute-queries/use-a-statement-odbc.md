@@ -12,32 +12,32 @@ ms.assetid: f7573f8f-6f21-4e03-8dd5-a5f2ea4878cc
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 195b38804045c26053771d263d650cfaa2efecde
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 842e862dff7eca85a05df0222989c6ee6390ab89
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48227011"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53361143"
 ---
 # <a name="use-a-statement-odbc"></a>Utilizzare un'istruzione (ODBC)
     
 ### <a name="to-use-a-statement"></a>Per utilizzare un'istruzione  
   
-1.  Chiamare [SQLAllocHandle](http://go.microsoft.com/fwlink/?LinkId=58396) con *HandleType* impostato su SQL_HANDLE_STMT per allocare un handle di istruzione.  
+1.  Chiamare [SQLAllocHandle](https://go.microsoft.com/fwlink/?LinkId=58396) con *HandleType* impostato su SQL_HANDLE_STMT per allocare un handle di istruzione.  
   
 2.  È inoltre possibile chiamare [SQLSetStmtAttr](../../native-client-odbc-api/sqlsetstmtattr.md) per impostare le opzioni dell'istruzione o [SQLGetStmtAttr](../../native-client-odbc-api/sqlgetstmtattr.md) per ottenere gli attributi dell'istruzione.  
   
      Per utilizzare i cursori server, è necessario impostare gli attributi del cursore su valori diversi da quelli predefiniti.  
   
-3.  Facoltativamente, se l'istruzione viene eseguita più volte, è possibile preparare l'istruzione per l'esecuzione con la [funzione SQLPrepare](http://go.microsoft.com/fwlink/?LinkId=59360).  
+3.  Facoltativamente, se l'istruzione viene eseguita più volte, è possibile preparare l'istruzione per l'esecuzione con la [funzione SQLPrepare](https://go.microsoft.com/fwlink/?LinkId=59360).  
   
-4.  Se all'istruzione sono stati associati marcatori di parametro, è possibile associare i marcatori di parametro alle variabili di programma tramite [SQLBindParameter](../../native-client-odbc-api/sqlbindparameter.md). Se l'istruzione è stata preparata, è possibile chiamare [SQLNumParams](http://go.microsoft.com/fwlink/?LinkId=58404) e [SQLDescribeParam](../../native-client-odbc-api/sqldescribeparam.md) per trovare il numero e le caratteristiche dei parametri.  
+4.  Se all'istruzione sono stati associati marcatori di parametro, è possibile associare i marcatori di parametro alle variabili di programma tramite [SQLBindParameter](../../native-client-odbc-api/sqlbindparameter.md). Se l'istruzione è stata preparata, è possibile chiamare [SQLNumParams](https://go.microsoft.com/fwlink/?LinkId=58404) e [SQLDescribeParam](../../native-client-odbc-api/sqldescribeparam.md) per trovare il numero e le caratteristiche dei parametri.  
   
 5.  Eseguire un'istruzione direttamente mediante SQLExecDirect.  
   
      \- - oppure -  
   
-     Se l'istruzione è stata preparata, eseguirla più volte tramite [SQLExecute](http://go.microsoft.com/fwlink/?LinkId=58400).  
+     Se l'istruzione è stata preparata, eseguirla più volte tramite [SQLExecute](https://go.microsoft.com/fwlink/?LinkId=58400).  
   
      \- - oppure -  
   

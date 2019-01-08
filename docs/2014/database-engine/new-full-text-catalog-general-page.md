@@ -12,12 +12,12 @@ ms.assetid: 5ed6f7cd-d9af-4439-9f33-fc935b883d91
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: d9fe261aefff3013f9a97b1a3f8d2b4ce0b1453e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9a67eff74a4c95a851c65b2fb7db959d765bc192
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48052471"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53374533"
 ---
 # <a name="new-full-text-catalog-general-page"></a>Nuovo catalogo full-text (pagina Generale)
   Utilizzare questa finestra di dialogo per creare un nuovo catalogo full-text.  
@@ -38,7 +38,7 @@ ms.locfileid: "48052471"
  Selezionare questa opzione per impostare il catalogo come predefinito per i nuovi cataloghi full-text.  
   
  **Distinzione caratteri accentati/non accentati**  
- Indica se il catalogo non sensibili o distinzione relativa ai segni diacritici, ad esempio una tilde (**~**), mark latino (**'**), o umlaut (**¨**). Se si seleziona **Insensitive**, segni diacritici vengono ignorati negli indici full-text che sono associati a questo catalogo full-text. Per informazioni sui segni diacritici, vedere[segno diacritico](http://go.microsoft.com/fwlink/?LinkId=154091) nell'Enciclopedia Encarta di MSN.  
+ Indica se il catalogo non sensibili o distinzione relativa ai segni diacritici, ad esempio una tilde (**~**), mark latino (**'**), o umlaut (**¨**). Se si seleziona **Insensitive**, segni diacritici vengono ignorati negli indici full-text che sono associati a questo catalogo full-text. Per informazioni sui segni diacritici, vedere[segno diacritico](https://go.microsoft.com/fwlink/?LinkId=154091) nell'Enciclopedia Encarta di MSN.  
   
 ## <a name="see-also"></a>Vedere anche  
  [CREATE FULLTEXT CATALOG &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-fulltext-catalog-transact-sql)  

@@ -12,19 +12,19 @@ ms.assetid: 2fbdf621-a94d-4a55-a088-3d56d65016ac
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 52d44a8c5f00f8f5c17f62ba0149738dc13712ae
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 57ab374fb8ba0e5a75fc9a97300dace76452174b
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50146517"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53377003"
 ---
 # <a name="csdlbi-concepts"></a>Concetti di CSDLBI
   Il linguaggio CSDL (Conceptual Schema Definition Language) con annotazioni Business Intelligence (CSDLBI) è basato su Entity Data Framework, ovvero un'astrazione per la rappresentazione di dati in modo da rendere possibile l'accesso, l'esecuzione di query o l'esportazione di set di dati diversi a livello di programmazione. CSDLBI viene utilizzato per rappresentare i modelli di dati creati utilizzando [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] perché supporta le applicazioni e la creazione di rapporti guidata dai dati e avanzata.  
   
  In questa sezione viene illustrato come la rappresentazione CSDLBI esegue il mapping ai modelli di dati di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] (tabulari e multidimensionali), insieme a esempi per ogni tipo di modello.  
   
- Gli esempi utilizzati per illustrare questi provengono dal database di esempio AdventureWorks, disponibile su Codeplex. Per altre informazioni sugli esempi, vedere [esempi di Adventure Works per SQL Server](http://go.microsoft.com/fwlink/?linkID=220093).  
+ Gli esempi utilizzati per illustrare questi provengono dal database di esempio AdventureWorks, disponibile su Codeplex. Per altre informazioni sugli esempi, vedere [esempi di Adventure Works per SQL Server](https://go.microsoft.com/fwlink/?linkID=220093).  
   
 ## <a name="structure-of-a-tabular-model-in-csdlbi"></a>Struttura di un modello tabulare in CSDLBI  
  Un documento CSDLBI che descrive un modello di report e i relativi dati inizia con l'istruzione xsd, seguito dalla definizione di un modello.  
@@ -125,27 +125,27 @@ ms.locfileid: "50146517"
 ## <a name="additions-to-support-multidimensional-models"></a>Aggiunte per supportare modelli multidimensionali  
  La versione 1.0 delle annotazioni CSDLBI supporta solo i modelli tabulari. Nella versione 1.1, è stato aggiunto il supporto per i modelli multidimensionali (cubi OLAP) creati utilizzando gli strumenti di sviluppo tradizionali di Business Intelligence. Pertanto, è ora possibile generare una richiesta XML a un modello multidimensionale e ricevere una definizione CSDLBI del modello da utilizzare nella creazione di rapporti.  
   
- **Cubi:** un Server SQL [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database tabulare può contenere solo un modello. Ciascun database multidimensionale, invece, può contenere più cubi, ogni database associato a un cubo predefinito. Pertanto quando si invia una richiesta XML a un server multidimensionale, è necessario specificare il cubo; in caso contrario, sarà restituito l'XML per il cubo predefinito.  
+ **Cubi:** Un Server SQL [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database tabulare può contenere solo un modello. Ciascun database multidimensionale, invece, può contenere più cubi, ogni database associato a un cubo predefinito. Pertanto quando si invia una richiesta XML a un server multidimensionale, è necessario specificare il cubo; in caso contrario, sarà restituito l'XML per il cubo predefinito.  
   
  La rappresentazione di un cubo è molto simile a quella di un database modello tabulare. Il nome del cubo e il cubo corrispondono all'identificatore del database e al nome del database tabulare.  
   
- **Dimensioni:** una dimensione è rappresentata in CSDLBI come entità (tabella) con le colonne e le proprietà. Si noti che anche se non è presente in una prospettiva, una dimensione inclusa nel modello verrà rappresentata nell'output CSDL, contrassegnata come `Hidden`.  
+ **Dimensioni:** Una dimensione è rappresentata in CSDLBI come entità (tabella) con le colonne e le proprietà. Si noti che anche se non è presente in una prospettiva, una dimensione inclusa nel modello verrà rappresentata nell'output CSDL, contrassegnata come `Hidden`.  
   
- **Prospettive:** un client può richiedere a CSDL le singole prospettive. Per altre informazioni, vedere [set di righe DISCOVER_CSDL_METADATA](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-csdl-metadata-rowset).  
+ **Prospettive:** Un client può richiedere a CSDL le singole prospettive. Per altre informazioni, vedere [set di righe DISCOVER_CSDL_METADATA](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-csdl-metadata-rowset).  
   
- **Gerarchie:** gerarchie sono supportate e rappresentate in CSDLBI come set di livelli.  
+ **Gerarchie:** Le gerarchie sono supportate e rappresentate in CSDLBI come set di livelli.  
   
- **Membri:** il supporto per il membro predefinito è stato aggiunto e i valori predefiniti vengono aggiunti automaticamente all'output di CSDLBI.  
+ **Membri:** È stato aggiunto il supporto per il membro predefinito e i valori predefiniti vengono aggiunti automaticamente all'output di CSDLBI.  
   
- **I membri calcolati:** i modelli multidimensionali supportano i membri calcolati per l'elemento figlio **tutto** con un membro reale singolo.  
+ **Membri calcolati:** I modelli multidimensionali supportano i membri calcolati per l'elemento figlio del **tutti** con un membro reale singolo.  
   
- **Attributi di dimensione:** nell'output di CSDLBI, gli attributi della dimensione sono supportati e automaticamente contrassegnati come non aggregabile.  
+ **Attributi della dimensione:** Nell'output CSDLBI, gli attributi della dimensione sono supportati e automaticamente contrassegnati come non aggregabile.  
   
- **Gli indicatori KPI:** gli indicatori KPI sono supportati in CSDLBI versione 1.1, ma la rappresentazione è stata modificata. Prima, un indicatore KPI era la proprietà di una misura. Nella versione 1.1, l'elemento KPI può essere aggiunto a una misura  
+ **Indicatori KPI:** Gli indicatori KPI sono supportati in CSDLBI versione 1.1, ma la rappresentazione è stata modificata. Prima, un indicatore KPI era la proprietà di una misura. Nella versione 1.1, l'elemento KPI può essere aggiunto a una misura  
   
- **Nuove proprietà:** attributi aggiuntivi sono stati aggiunti per supportare i modelli DirectQuery.  
+ **Nuove proprietà:** Gli attributi aggiuntivi sono stati aggiunti per supportare i modelli DirectQuery.  
   
- **Limitazioni:** sicurezza della cella non è supportata.  
+ **Limitazioni:** Sicurezza della cella non è supportata.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Annotazioni CSDL per Business Intelligence &#40;CSDLBI&#41;](https://docs.microsoft.com/bi-reference/csdl/csdl-annotations-for-business-intelligence-csdlbi)  

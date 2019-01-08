@@ -1,30 +1,30 @@
 ---
-title: Lezione 4 dei risultati di potenziali stima mediante modelli R (SQL Server Machine Learning Services) | Microsoft Docs
+title: Lezione 4 Predict potenziali dei risultati mediante i modelli R - SQL Server Machine Learning
 description: Esercitazione che illustra come rendere operativi script R incorporato in SQL Server stored procedure con funzioni di T-SQL
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 10/30/2018
+ms.date: 11/16/2018
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 8485cd4e24e067cf6a4e6feef0c39c3c3051a166
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 2b22d971764be99c5542c7cd8615c11ebb3e6cba
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51032538"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53644781"
 ---
-# <a name="lesson-4-run-predictions-using-r-embedded-in-a-stored-procedure"></a>Lezione 4: Eseguire stime usando R incorporato in una stored procedure
+# <a name="lesson-4-run-predictions-using-r-embedded-in-a-stored-procedure"></a>Lezione 4: Eseguire le stime usando R incorporato in una stored procedure
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Questo articolo fa parte di un'esercitazione per sviluppatori SQL su come usare R in SQL Server.
 
 In questo passaggio descrive come utilizzare il modello rispetto a nuove osservazioni per stimare i possibili risultati. Il modello viene eseguito il wrapping in una stored procedure che può essere chiamata direttamente da altre applicazioni. La procedura dettagliata illustra diversi modi per eseguire l'assegnazione dei punteggi:
 
-- **Modalità di valutazione batch**: usare una query di selezione come input per la stored procedure. La stored procedure restituisce una tabella di osservazioni corrispondenti ai casi di input.
+- **Modalità di valutazione batch**: Usare una query di selezione come input per la stored procedure. La stored procedure restituisce una tabella di osservazioni corrispondenti ai casi di input.
 
-- **Modalità di valutazione singola**: passare come input un set di valori di parametro singoli.  La stored procedure restituisce una singola riga o un singolo valore.
+- **Modalità di assegnazione dei punteggi singoli**: Passare un set di valori dei singoli parametri come input.  La stored procedure restituisce una singola riga o un singolo valore.
 
 In primo luogo si prenderà in analisi il funzionamento generale della valutazione.
 
@@ -32,12 +32,12 @@ In primo luogo si prenderà in analisi il funzionamento generale della valutazio
 
 La stored procedure **RxPredict** viene illustrata la sintassi di base per il wrapping di una chiamata rxPredict RevoScaleR in una stored procedure.
 
-```SQL
-CREATE PROCEDURE [dbo].[RxPredict] @inquery nvarchar(max) 
+```sql
+CREATE PROCEDURE [dbo].[RxPredict] (@model varchar(250), @inquery nvarchar(max))
 AS 
 BEGIN 
-  
-DECLARE @lmodel2 varbinary(max) = (SELECT TOP 1 model FROM nyc_taxi_models);  
+
+DECLARE @lmodel2 varbinary(max) = (SELECT model FROM nyc_taxi_models WHERE name = @model);  
 EXEC sp_execute_external_script @language = N'R',
   @script = N' 
     mod <- unserialize(as.raw(model)); 
@@ -70,7 +70,7 @@ Uno scenario più comune consiste nel generare stime per più osservazioni in mo
 
 1.  Iniziare recuperando un set di dati di input per lavorare con più piccolo. Questa query crea un elenco "top 10" delle corse, con il numero di passeggeri e altre funzionalità necessarie per effettuare una stima.
   
-    ```SQL
+    ```sql
     SELECT TOP 10 a.passenger_count AS passenger_count, a.trip_time_in_secs AS trip_time_in_secs, a.trip_distance AS trip_distance, a.dropoff_datetime AS dropoff_datetime, dbo.fnCalculateDistance(pickup_latitude, pickup_longitude, dropoff_latitude,dropoff_longitude) AS direct_distance
     
     FROM (SELECT medallion, hack_license, pickup_datetime, passenger_count,trip_time_in_secs,trip_distance, dropoff_datetime, pickup_latitude, pickup_longitude, dropoff_latitude, dropoff_longitude FROM nyctaxi_sample)a
@@ -86,7 +86,7 @@ Uno scenario più comune consiste nel generare stime per più osservazioni in mo
 
     **Risultati di esempio**
     
-    ```
+    ```sql
     passenger_count   trip_time_in_secs    trip_distance  dropoff_datetime   direct_distance
     1  283 0.7 2013-03-27 14:54:50.000   0.5427964547
     1  289 0.7 2013-02-24 12:55:29.000   0.3797099614
@@ -95,12 +95,11 @@ Uno scenario più comune consiste nel generare stime per più osservazioni in mo
 
 2. Creare una stored procedure denominata **RxPredictBatchOutput** in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].
 
-    ```SQL
-    /****** Object:  StoredProcedure [dbo].[RxPredictBatchOutput]  ******/
-    CREATE PROCEDURE [dbo].[RxPredictBatchOutput] @inquery nvarchar(max)
+    ```sql
+    CREATE PROCEDURE [dbo].[RxPredictBatchOutput] (@model varchar(250), @inquery nvarchar(max))
     AS
     BEGIN
-    DECLARE @lmodel2 varbinary(max) = (SELECT TOP 1 model FROM nyc_taxi_models);
+    DECLARE @lmodel2 varbinary(max) = (SELECT model FROM nyc_taxi_models WHERE name = @model);
     EXEC sp_execute_external_script 
       @language = N'R',
       @script = N'
@@ -119,13 +118,13 @@ Uno scenario più comune consiste nel generare stime per più osservazioni in mo
 
 3.  Specificare il testo della query in una variabile e passarla come parametro alla stored procedure:
 
-    ```SQL
+    ```sql
     -- Define the input data
     DECLARE @query_string nvarchar(max)
     SET @query_string='SELECT TOP 10 a.passenger_count as passenger_count, a.trip_time_in_secs AS trip_time_in_secs, a.trip_distance AS trip_distance, a.dropoff_datetime AS dropoff_datetime, dbo.fnCalculateDistance(pickup_latitude, pickup_longitude, dropoff_latitude,dropoff_longitude) AS direct_distance FROM  (SELECT medallion, hack_license, pickup_datetime, passenger_count,trip_time_in_secs,trip_distance, dropoff_datetime, pickup_latitude, pickup_longitude, dropoff_latitude, dropoff_longitude FROM nyctaxi_sample  )a   LEFT OUTER JOIN (SELECT medallion, hack_license, pickup_datetime FROM nyctaxi_sample TABLESAMPLE (70 percent) REPEATABLE (98052))b ON a.medallion=b.medallion AND a.hack_license=b.hack_license AND a.pickup_datetime=b.pickup_datetime WHERE b.medallion is null'
-
+    
     -- Call the stored procedure for scoring and pass the input data
-    EXEC [dbo].[RxPredictBatchOutput] @inquery = @query_string;
+    EXEC [dbo].[RxPredictBatchOutput] @model = 'RxTrainLogit_model', @inquery = @query_string;
     ```
   
 La stored procedure restituisce una serie di valori che rappresentano la stima per ognuna delle corse primi 10. Tuttavia, le corse principali sono anche un singolo passeggero e con una distanza relativamente breve, per i quali il driver è improbabile che riceverà una Mancia.
@@ -145,12 +144,12 @@ Se si chiama la stored procedure da un'applicazione esterna, assicurarsi che i d
 
 1. Creare una stored procedure **RxPredictSingleRow**.
   
-    ```SQL
-    CREATE PROCEDURE [dbo].[RxPredictSingleRow] @passenger_count int = 0, @trip_distance float = 0, @trip_time_in_secs int = 0, @pickup_latitude float = 0, @pickup_longitude float = 0, @dropoff_latitude float = 0, @dropoff_longitude float = 0
+    ```sql
+    CREATE PROCEDURE [dbo].[RxPredictSingleRow] @model varchar(50), @passenger_count int = 0, @trip_distance float = 0, @trip_time_in_secs int = 0, @pickup_latitude float = 0, @pickup_longitude float = 0, @dropoff_latitude float = 0, @dropoff_longitude float = 0
     AS
     BEGIN
     DECLARE @inquery nvarchar(max) = N'SELECT * FROM [dbo].[fnEngineerFeatures](@passenger_count, @trip_distance, @trip_time_in_secs,  @pickup_latitude, @pickup_longitude, @dropoff_latitude, @dropoff_longitude)';
-    DECLARE @lmodel2 varbinary(max) = (SELECT TOP 1 model FROM nyc_taxi_models);
+    DECLARE @lmodel2 varbinary(max) = (SELECT model FROM nyc_taxi_models WHERE name = @model);
     EXEC sp_execute_external_script  
       @language = N'R',
       @script = N'  
@@ -170,20 +169,21 @@ Se si chiama la stored procedure da un'applicazione esterna, assicurarsi che i d
   
     Aprire una nuova **Query** finestra e chiamare la stored procedure, fornire valori per ognuno dei parametri. I parametri rappresentano le colonne di funzionalità utilizzate dal modello e sono necessari.
 
-    ```
-    EXEC [dbo].[RxPredictSingleRow] @passenger_count = 0,
+    ```sql
+    EXEC [dbo].[RxPredictSingleRow] @model = 'RxTrainLogit_model',
+    @passenger_count = 1,
     @trip_distance = 2.5,
     @trip_time_in_secs = 631,
     @pickup_latitude = 40.763958,
     @pickup_longitude = -73.973373,
     @dropoff_latitude =  40.782139,
-    @dropoff_longitude = 73.977303
+    @dropoff_longitude = -73.977303
     ```
 
     In alternativa, usare questo formato più breve è supportato per [parametri a una stored procedure](https://docs.microsoft.com/sql/relational-databases/stored-procedures/specify-parameters):
   
-    ```SQL
-    EXEC [dbo].[PredictRxMultipleInputs] 1, 2.5, 631, 40.763958,-73.973373, 40.782139,-73.977303
+    ```sql
+    EXEC [dbo].[RxPredictSingleRow] 'RxTrainLogit_model', 1, 2.5, 631, 40.763958,-73.973373, 40.782139,-73.977303
     ```
 
 3. I risultati indicano che la probabilità di ricevere una Mancia è bassa (zero) in queste corse primi 10, poiché tutti sono un singolo passeggero e su una distanza relativamente breve.

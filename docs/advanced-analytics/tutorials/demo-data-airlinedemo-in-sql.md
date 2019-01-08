@@ -1,5 +1,5 @@
 ---
-title: Arrivo dei voli delle compagnie aeree e ritardo demo di set di dati per le esercitazioni di SQL Server Python e R | Microsoft Docs
+title: Set di dati dimostrativo dei voli delle compagnie aeree per SQL Server Python e R - esercitazioni di SQL Server Machine Learning
 Description: Create a database containing the Airline dataset from R and Python. This dataset is used in exercises showing how to wrap R language or Python code in a SQL Server stored procedure.
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 2ba431ecbc4f7d63415fdf6b351c5135ed0cdd8d
-ms.sourcegitcommit: 70e47a008b713ea30182aa22b575b5484375b041
+ms.openlocfilehash: 10d2f013c103dee3de02335ca2acf82d4320b623
+ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49947451"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53596982"
 ---
 #  <a name="airline-flight-arrival-demo-data-for-sql-server-python-and-r-tutorials"></a>Dati di demo arrivo dei voli delle compagnie aeree per le esercitazioni di SQL Server Python e R
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

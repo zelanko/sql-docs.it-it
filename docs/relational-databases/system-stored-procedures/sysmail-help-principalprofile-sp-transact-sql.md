@@ -18,12 +18,12 @@ ms.assetid: 0cfd6464-09c7-4f03-9d25-58001c096a9e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 04746f7694e4f3bef2a946398f0bc9d1e1808a3a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d96a4c72996ab34b03706cc71f6b406344164685
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47739329"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591625"
 ---
 # <a name="sysmailhelpprincipalprofilesp-transact-sql"></a>sysmail_help_principalprofile_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,13 +45,13 @@ sysmail_help_principalprofile_sp [ {   [ @principal_id = ] principal_id | [ @pri
  [  **@principal_id=** ] *principal_id*  
  È l'ID dell'utente del database o del ruolo nel **msdb** database per l'associazione all'elenco. *principal_id* viene **int**, con un valore predefinito è NULL. Entrambi *principal_id* oppure *principal_name* può essere specificato.  
   
- [  **@principal_name=** ] **'***principal_name***'**  
+ [  **@principal_name=** ] **'**_principal_name_**'**  
  È il nome dell'utente del database o del ruolo nel **msdb** database per l'associazione all'elenco. *principal_name* viene **sysname**, con un valore predefinito è NULL. Entrambi *principal_id* oppure *principal_name* può essere specificato.  
   
  [ **@profile_id=** ] *profile_id*  
  ID del profilo per l'associazione da includere nell'elenco. *profile_id* viene **int**, con un valore predefinito è NULL. Entrambi *profile_id* oppure *profile_name* può essere specificato.  
   
- [  **@profile_name=** ] **'***profile_name***'**  
+ [  **@profile_name=** ] **'**_profile_name_**'**  
  Nome del profilo per l'associazione da includere nell'elenco. *profile_name* viene **sysname**, con un valore predefinito è NULL. Entrambi *profile_id* oppure *profile_name* può essere specificato.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
@@ -62,7 +62,7 @@ sysmail_help_principalprofile_sp [ {   [ @principal_id = ] principal_id | [ @pri
   
 ||||  
 |-|-|-|  
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |**principal_id**|**int**|ID dell'utente del database.|  
 |**principal_name**|**sysname**|Nome dell'utente del database.|  
 |**profile_id**|**int**|Numero ID del profilo di Posta elettronica database.|  
@@ -96,7 +96,7 @@ principal_id principal_name     profile_id  profile_name                   is_de
 5            danw               9           AdventureWorks Administrator   1  
 ```  
   
-### <a name="b-listing-information-for-all-associations"></a>B. Visualizzazione delle informazioni relative a tutte le associazioni  
+### <a name="b-listing-information-for-all-associations"></a>b. Visualizzazione delle informazioni relative a tutte le associazioni  
  Nell'esempio seguente viene illustrato come visualizzare le informazioni relative a tutte le associazioni nell'istanza.  
   
 ```  

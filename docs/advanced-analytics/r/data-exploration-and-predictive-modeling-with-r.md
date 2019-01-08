@@ -1,5 +1,5 @@
 ---
-title: Esplorazione dei dati e modellazione predittiva con R in SQL Server Machine Learning | Microsoft Docs
+title: Esplorazione dei dati e modellazione predittiva con R - servizi di SQL Server Machine Learning
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/15/2018
@@ -7,12 +7,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 60a899de027f2e9de591a70971dbee3f4300d87d
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: c6c0e07f48dee271fee61bc59b47f49683ff8832
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38984713"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53432344"
 ---
 # <a name="data-exploration-and-predictive-modeling-with-r-in-sql-server"></a>Esplorazione dei dati e modellazione predittiva con R in SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -30,7 +30,7 @@ Tuttavia, questo approccio presenta numerosi svantaggi, tale georgiano rallentat
 + Lo spostamento dei dati può essere lento, inefficiente o non sicuri
 + Lo stesso R presenta le limitazioni delle prestazioni e scalabilità
 
-Questi svantaggi diventano più evidenti quando si intende spostare e analizzare grandi quantità di dati o usare set di dati che non rientrano nella memoria disponibile sul computer.
+Questi svantaggi diventano più evidenti quando si desidera spostare e analizzare grandi quantità di dati oppure usare il set di dati che non rientrano nella memoria disponibile nel computer.
 
 Pacchetti nuova, scalabili e le funzioni R incluse con [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] consentono di risolvere molti di questi problemi. 
 
@@ -62,15 +62,15 @@ Oltre alle librerie R proprietari incluse con Microsoft Machine Learning, è pos
   
      Per altre informazioni su questi pacchetti e come usarli, vedere [What ' s RevoScaleR](https://msdn.microsoft.com/microsoft-r/scaler-user-guide-introduction) e [Introduzione a RevoPemaR](https://msdn.microsoft.com/microsoft-r/pemar-getting-started). 
 
-+ **MicrosoftML** contiene una raccolta di algoritmi di apprendimento altamente ottimizzata e trasformazioni dei dati dal team di analisi scientifica dei dati di Microsoft. Molti degli algoritmi utilizzati anche in Azure Machine Learning. Per altre informazioni, vedere [usando il pacchetto MicrosoftML](../../advanced-analytics/using-the-microsoftml-package.md).
++ **MicrosoftML** contiene una raccolta di algoritmi di apprendimento altamente ottimizzata e trasformazioni dei dati dal team di analisi scientifica dei dati di Microsoft. Molti degli algoritmi utilizzati anche in Azure Machine Learning. Per altre informazioni, vedere [MicrosoftML in SQL Server](ref-r-microsoftml.md).
 
 ### <a name="r-development-tools"></a>Strumenti di sviluppo di R
 
 Quando si sviluppa la soluzione di R, assicurarsi di scaricare Microsoft R Client. Questo download gratuito include le librerie necessari per supportare contesti di calcolo remoti e alorithms scalabile:
 
-+ **[!INCLUDE[rsql_rro-noversion](../../includes/rsql-rro-noversion-md.md)]:** una distribuzione del runtime di R e un set di pacchetti, ad esempio la libreria del kernel matematico di Intel, che migliorano le prestazioni delle operazioni standard di R.  
++ **[!INCLUDE[rsql_rro-noversion](../../includes/rsql-rro-noversion-md.md)]:** Distribuzione del runtime di R e un set di pacchetti, ad esempio la libreria del kernel matematico di Intel, che migliorano le prestazioni delle operazioni standard di R.  
   
-+ **RevoScaleR:** un pacchetto R che consente di effettuare il push dei calcoli in un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[rsql_rre-noversion](../../includes/rsql-rre-noversion-md.md)]. Include anche un set di funzioni R comuni riprogettate per offrire scalabilità e prestazioni migliori. È possibile identificare queste funzioni migliorate dal prefisso **rx** . Include anche provider di dati avanzati per diverse origini. Queste funzioni sono precedute dal prefisso **Rx**.
++ **RevoScaleR:** Un pacchetto R che consente di trasferire i calcoli a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[rsql_rre-noversion](../../includes/rsql-rre-noversion-md.md)] (Indici per tabelle con ottimizzazione per la memoria). Include anche un set di funzioni R comuni riprogettate per offrire scalabilità e prestazioni migliori. È possibile identificare queste funzioni migliorate dal prefisso **rx** . Include anche provider di dati avanzati per diverse origini. Queste funzioni sono precedute dal prefisso **Rx**.
 
 È possibile usare qualsiasi editor di codice basato su Windows che supporti R, ad esempio [!INCLUDE[rsql_rtvs](../../includes/rsql-rtvs-md.md)] o RStudio. Il download di [!INCLUDE[rsql_rro-noversion](../../includes/rsql-rro-noversion-md.md)] include anche strumenti comuni della riga di comando per R, ad esempio RGui.exe.
 
@@ -103,4 +103,4 @@ Il processo di distribuzione inizia in genere con pulizia dello script in uso al
 
 [Confronto tra funzioni R di base e ScaleR](https://msdn.microsoft.com/microsoft-r/scaler/compare-base-r-scaler-functions)
 
-[Funzioni ScaleR per l'uso con i dati di SQL Server](../../advanced-analytics/r/scaler-functions-for-working-with-sql-server-data.md)
+[Libreria RevoScaleR in SQL Server](ref-r-revoscaler.md)

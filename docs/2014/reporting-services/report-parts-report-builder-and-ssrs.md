@@ -13,12 +13,12 @@ ms.assetid: 957f664c-8a7a-4532-b5a6-5f859c5840bd
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 818d24b62366e463b4b5e9eca15ce9af70336176
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6114407d959a29944f01711b2446ce375f203b83
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48098991"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53366373"
 ---
 # <a name="report-parts-report-builder-and-ssrs"></a>Parti del report (Generatore report e SSRS)
   È possibile pubblicare come *parti di report*elementi quali tabelle, matrici, grafici e immagini. Le parti di report sono elementi pubblicati separatamente in un server di report e che possono essere riutilizzati in altri report. Le parti di report hanno un'estensione di file rsc.  
@@ -27,7 +27,7 @@ ms.locfileid: "48098991"
   
  La parte di report aggiunta al report in uso consente di gestire una relazione con l'istanza della parte di report sul sito o sul server tramite un ID univoco. Dopo aver aggiunto delle parti a un report da un sito o un server, è possibile modificarle indipendentemente dalla parte di report originale sul sito o sul server. È possibile accettare aggiornamenti che altri utenti hanno apportato alla parte di report sul sito o sul server e salvare di nuovo la parte di report modificata nel sito o nel server, aggiungendone una nuova o scrivendo sull'originale, se si dispone delle autorizzazioni sufficienti.  
   
- Per iniziare rapidamente con parti di report, vedere i video [3 di parti di Report in SQL Server 2008 R2 Report Builder](http://technet.microsoft.com/edge/Video/ff711300) e [come tale ricerca per categorie: creazione di parti di Report riutilizzabili con Generatore Report di SQL Server](http://technet.microsoft.com/sqlserver/ff634166.aspx).  
+ Per iniziare rapidamente con parti di report, vedere i video [3 di parti di Report in SQL Server 2008 R2 Report Builder](https://technet.microsoft.com/edge/Video/ff711300) e [procedura: Creazione di parti di Report riutilizzabili con Generatore Report SQL Server](https://technet.microsoft.com/sqlserver/ff634166.aspx).  
   
 ##  <a name="ComponentWorkflow"></a> Ciclo di vita di una parte di report  
  ![rs_ComponentCreation](media/rs-componentcreation.gif "rs_ComponentCreation")  
@@ -75,7 +75,7 @@ ms.locfileid: "48098991"
   
  Alcune parti del report possono contenere altri elementi del report. Ad esempio, una tabella può contenere un grafico e un rettangolo può contenere una matrice e un grafico. Quando si pubblica un elemento del report che contiene altri elementi del report, questi ultimi vengono salvati come un'unità. Gli altri elementi del report vengono salvati incorporati nella parte di report contenitore. Non è possibile aggiornarli separatamente e non è possibile salvare gli elementi nel contenitore come parti di report separate.  
   
- Per altre informazioni sulla pubblicazione di parti del report, vedere [pubblica e ripubblicare parti del Report &#40;Generatore Report e SSRS&#41;](report-parts-report-builder-and-ssrs.md).  
+ Per altre informazioni sulla pubblicazione delle parti di report, vedere [Pubblicare e ripubblicare parti del report &#40;Generatore report e SSRS&#41;](report-parts-report-builder-and-ssrs.md)elementi quali tabelle, matrici, grafici e immagini.  
   
 ### <a name="modifying-report-part-metadata"></a>Modifica dei metadati della parte di report  
  È possibile pubblicare parti di report con le impostazioni predefinite in un percorso predefinito o salvare ogni parte di report in un percorso diverso e modificare i metadati, ad esempio il titolo e la descrizione.  
@@ -94,7 +94,7 @@ ms.locfileid: "48098991"
 ### <a name="searching-for-report-parts"></a>Ricerca di parti di report  
  È possibile cercare le parti di report da aggiungere al report nella relativa raccolta. È possibile filtrare le parti di report in base al nome completo o parziale della parte, all'autore della parte, all'utente che ha apportato l'ultima modifica, alla data dell'ultima modifica, alla posizione in cui è archiviata o in base al tipo di parte di report. Ad esempio, è possibile cercare tutti i grafici creati nell'ultima settimana da parte di uno dei colleghi.  
   
- È possibile visualizzare i risultati della ricerca come anteprime o come elenco e ordinare i risultati della ricerca in base al nome, alle date di creazione e di modifica e all'autore. Per altre informazioni, vedere [ricerca di parti del Report e impostazione di una cartella predefinita &#40;Generatore Report e SSRS&#41;](report-design/browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs.md).  
+ È possibile visualizzare i risultati della ricerca come anteprime o come elenco e ordinare i risultati della ricerca in base al nome, alle date di creazione e di modifica e all'autore. Per altre informazioni, vedere [Ricerca di parti del report e impostazione di una cartella predefinita &#40;Generatore report e SSRS&#41;](report-design/browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs.md)elementi quali tabelle, matrici, grafici e immagini.  
   
 ### <a name="what-comes-with-a-report-part"></a>Elementi forniti con una parte di report  
  Quando una parte di report viene aggiunta al report in uso, vengono aggiunti anche tutti gli elementi necessari affinché funzioni. Ad esempio, un qualsiasi oggetto che consente la visualizzazione dei dati dipende da un set di dati, ovvero una query e una connessione a un'origine dati. È possibile che disponga anche di più parametri. Tutti gli elementi dai quali dipende sono le relative *dipendenze*e tutti questi elementi o i relativi puntatori sono inclusi nella parte di report quando quest'ultima viene aggiunta al report in uso. I set di dati e i parametri sono elencati nel riquadro dei dati del report del report.  
@@ -142,17 +142,17 @@ ms.locfileid: "48098991"
  Le parti di report funzionano in modo diverso in Progettazione report in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. In Progettazione report la pubblicazione è unidirezionale: è possibile pubblicare una parte di report, ma non è possibile riutilizzare una parte di report esistente. Per altre informazioni, vedere [Parti del report in Progettazione report &#40;SSRS&#41;](report-design/report-parts-in-report-designer-ssrs.md).  
   
 ##  <a name="HowTo"></a> Procedure  
- [Pubblicare e ripubblicare parti del Report &#40;Report e SSRS&#41;](report-parts-report-builder-and-ssrs.md)  
+ [Pubblicare e ripubblicare parti del report &#40;Generatore report e SSRS&#41;](report-parts-report-builder-and-ssrs.md)  
   
- [Ricerca di parti del Report e impostazione di una cartella predefinita &#40;Report e SSRS&#41;](report-design/browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs.md)  
+ [Ricerca di parti del report e impostazione di una cartella predefinita &#40;Generatore report e SSRS&#41;](report-design/browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs.md)  
   
  [Verificare o gli aggiornamenti Turn Off &#40;Report e SSRS&#41;](../../2014/reporting-services/check-for-updates-or-turn-updates-off-report-builder-and-ssrs.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Parti del report e set di dati in Generatore Report](report-data/report-parts-and-datasets-in-report-builder.md)   
+ [Parti del report e set di dati in Generatore report](report-data/report-parts-and-datasets-in-report-builder.md)   
  [Risolvere i problemi di parti del Report &#40;Report e SSRS&#41;](../../2014/reporting-services/troubleshoot-report-parts-report-builder-and-ssrs.md)   
  [Gestione di parti di Report](report-design/managing-report-parts.md)   
- [Report Builder 3 parti di Report in SQL Server 2008 R2 (video)](http://technet.microsoft.com/edge/Video/ff711300)   
- [Ricerca per categorie Delle parti di Report crea con Generatore Report di SQL Server (video)](http://technet.microsoft.com/sqlserver/ff634166.aspx)  
+ [Report Builder 3 parti di Report in SQL Server 2008 R2 (video)](https://technet.microsoft.com/edge/Video/ff711300)   
+ [Procedura: Creare parti di Report riutilizzabili con Generatore Report di SQL Server (video)](https://technet.microsoft.com/sqlserver/ff634166.aspx)  
   
   

@@ -17,12 +17,12 @@ ms.assetid: 76fb3eca-6b08-4610-8d79-64019dd56c44
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 3bf28d011f1b1387bfbf04358d4575232c768d6d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dccbdee0e7db72a9946e92229d06dce519ca94a1
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48200331"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53369873"
 ---
 # <a name="availability-group-listeners-client-connectivity-and-application-failover-sql-server"></a>Listener del gruppo di disponibilità, connettività client e failover dell'applicazione (SQL Server)
   In questo argomento sono contenute informazioni sulla funzionalità di failover delle applicazioni e sulla connettività client di [!INCLUDE[ssHADR](../includes/sshadr-md.md)].  
@@ -47,7 +47,7 @@ ms.locfileid: "48200331"
  Il listener del gruppo di disponibilità è definito dagli elementi seguenti:  
   
  Nome DNS univoco  
- È noto anche come nome di rete virtuale (VNN). Si applicano le regole di denominazione di Active Directory per i nomi host DNS. Per ulteriori informazioni, vedere l'articolo della Knowledge Base [Convenzioni di denominazione di Active Directory per computer, domini, siti e unità organizzative](http://support.microsoft.com/kb/909264) .  
+ È noto anche come nome di rete virtuale (VNN). Si applicano le regole di denominazione di Active Directory per i nomi host DNS. Per ulteriori informazioni, vedere l'articolo della Knowledge Base [Convenzioni di denominazione di Active Directory per computer, domini, siti e unità organizzative](https://support.microsoft.com/kb/909264) .  
   
  Uno o più indirizzi IP virtuali (VIP)  
  Indirizzi IP virtuali configurati per una o più subnet su cui è possibile eseguire il failover del gruppo di disponibilità.  
@@ -124,7 +124,7 @@ Server=tcp:AGListener,1433;Database=AdventureWorks;IntegratedSecurity=SSPI;Appli
   
  La finalità dell'applicazione può essere inviata da un driver client a un'istanza di livello inferiore di SQL Server.  In questo caso, la finalità dell'applicazione di sola lettura viene ignorato e la connessione procede normalmente.  
   
- È possibile ignorare il routing di sola lettura non impostando la proprietà di connessione della finalità dell'applicazione `ReadOnly` (se non viene specificata, il valore predefinito è `ReadWrite` durante l'accesso) oppure connettendosi direttamente all'istanza della replica primaria di SQL Server invece di usare nome del listener gruppo di disponibilità.  Il routing in sola lettura non può avvenire se la connessione viene eseguita direttamente a una replica in sola lettura.  
+ È possibile ignorare il routing in sola lettura non impostando la proprietà di connessione della finalità dell'applicazione su `ReadOnly` (se non viene specificata alcuna proprietà, il valore predefinito è `ReadWrite` durante l'accesso) oppure connettendosi direttamente all'istanza della replica primaria di SQL Server anziché utilizzare il nome del listener del gruppo di disponibilità.  Il routing in sola lettura non può avvenire se la connessione viene eseguita direttamente a una replica in sola lettura.  
   
 ####  <a name="RelatedTasksApps"></a> Attività correlate  
   
@@ -152,12 +152,12 @@ Server=tcp:AGListener,1433;Database=AdventureWorks;IntegratedSecurity=SSPI;Appli
  Se il gruppo di disponibilità viene riportato online durante un tentativo di connessione dell'applicazione client, ma prima del periodo di timeout della connessione, è possibile che il driver client si connetta correttamente durante uno di questi tentativi interni senza che si verifichi alcun errore.  
   
 ##  <a name="SupportAgMultiSubnetFailover"></a> Supporto del failover su più subnet del gruppo di disponibilità  
- Se si utilizzano librerie client che supportano l'opzione di connessione MultiSubnetFailover nella stringa di connessione, è possibile ottimizzare il failover del gruppo di disponibilità su un'altra subnet impostando MultiSubnetFailover su “True” o "Yes", a seconda della sintassi del provider utilizzato.  
+ Se si usano librerie client che supportano l'opzione di connessione MultiSubnetFailover nella stringa di connessione, è possibile ottimizzare il failover del gruppo di disponibilità su un'altra subnet impostando MultiSubnetFailover su "True" o "Yes", a seconda della sintassi del provider in uso.  
   
 > [!NOTE]  
 >  È consigliabile utilizzare questa impostazione per le connessioni con una o più subnet a listener di gruppi di disponibilità e a istanze del cluster di failover di SQL Server.  Abilitando questa opzione si aggiungono ulteriori ottimizzazioni, anche per scenari con una sola subnet.  
   
- Il `MultiSubnetFailover` connessione opzione funziona solo con il protocollo di rete TCP ed è supportata solo quando ci si connette a un listener del gruppo di disponibilità e per qualsiasi connessione nome rete virtuale a [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
+ L'opzione di connessione `MultiSubnetFailover` funziona unicamente con il protocollo di rete TCP ed è supportata solo in caso di connessione a un listener del gruppo di disponibilità e per qualsiasi nome di rete virtuale che si connette a [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
   
  Di seguito è riportato un esempio di una stringa di connessione per il provider ADO.NET (System.Data.SqlClient) che consente il failover su più subnet.  
   
@@ -165,7 +165,7 @@ Server=tcp:AGListener,1433;Database=AdventureWorks;IntegratedSecurity=SSPI;Appli
 Server=tcp:AGListener,1433;Database=AdventureWorks;IntegratedSecurity=SSPI; MultiSubnetFailover=True  
 ```  
   
- Il `MultiSubnetFailover` opzione di connessione deve essere impostato su `True` anche se il gruppo di disponibilità si estende su una singola subnet.  In questo modo è possibile preconfigurare nuovi client affinché supportino l'espansione futura su più subnet senza necessità di modificare la stringa di connessione client, oltre a ottimizzare le prestazioni dei failover su una sola subnet.  Mentre il `MultiSubnetFailover` opzione di connessione non è obbligatorio, ma il vantaggio di accelerare il failover su subnet.  Il driver client tenta infatti di aprire un socket TCP per ogni indirizzo IP in parallelo associato al gruppo di disponibilità.  Il driver client attende che il primo indirizzo IP risponda, quindi utilizza tale risposta per la connessione.  
+ L'opzione di connessione `MultiSubnetFailover` deve essere impostata su `True` anche se il gruppo di disponibilità si estende su una sola subnet.  In questo modo è possibile preconfigurare nuovi client affinché supportino l'espansione futura su più subnet senza necessità di modificare la stringa di connessione client, oltre a ottimizzare le prestazioni dei failover su una sola subnet.  Sebbene l'opzione di connessione `MultiSubnetFailover` non sia obbligatoria, accelera il failover su subnet.  Il driver client tenta infatti di aprire un socket TCP per ogni indirizzo IP in parallelo associato al gruppo di disponibilità.  Il driver client attende che il primo indirizzo IP risponda, quindi utilizza tale risposta per la connessione.  
   
 ##  <a name="SSLcertificates"></a> Listener del gruppo di disponibilità e certificati SSL  
  Quando ci si connette a un listener del gruppo di disponibilità, se le istanze di SQL Server utilizzano i certificati SSL insieme alla crittografia della sessione, il driver client che tenta la connessione deve supportare il Nome soggetto alternativo nel certificato SSL per forzare la crittografia.  Il supporto del driver SQL Server per il Nome soggetto alternativo del certificato è pianificato per ADO.NET (SqlClient), Microsoft JDBC e SQL Native Client (SNAC).  
@@ -206,11 +206,11 @@ setspn -A MSSQLSvc/AG1listener.Adventure-Works.com:1433 corp/svclogin2
   
 ##  <a name="RelatedContent"></a> Contenuto correlato  
   
--   [Microsoft SQL Server AlwaysOn Solutions Guide for High Availability and Disaster Recovery](http://go.microsoft.com/fwlink/?LinkId=227600)  
+-   [Microsoft SQL Server AlwaysOn Solutions Guide for High Availability and Disaster Recovery](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
--   [Introduzione al listener del gruppo di disponibilità](http://blogs.msdn.com/b/sqlalwayson/archive/2012/01/16/introduction-to-the-availability-group-listener.aspx) (blog del team di SQL Server AlwaysOn)  
+-   [Introduzione al listener del gruppo di disponibilità](https://blogs.msdn.com/b/sqlalwayson/archive/2012/01/16/introduction-to-the-availability-group-listener.aspx) (blog del team di SQL Server AlwaysOn)  
   
--   [SQL Server AlwaysOn Team Blog: Il Blog ufficiale di SQL Server AlwaysOn Team](http://blogs.msdn.com/b/sqlalwayson/)  
+-   [SQL Server AlwaysOn Team Blog: Il Team Blog ufficiale di SQL Server AlwaysOn](https://blogs.msdn.com/b/sqlalwayson/)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Panoramica di gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   

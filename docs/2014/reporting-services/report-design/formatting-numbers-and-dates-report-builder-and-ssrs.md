@@ -20,12 +20,12 @@ ms.assetid: 6de1a725-9f06-4708-be26-2d55e442e344
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: e911f31751ed0ef2d6fedb17c1b79affde79eef3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 400b7ca37d5eef130df855b3519079e2ccc8799e
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48166161"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376123"
 ---
 # <a name="formatting-numbers-and-dates-report-builder-and-ssrs"></a>Formattazione di numeri e date (Generatore report e SSRS)
   È possibile formattare numeri e date nelle aree dati selezionando un formato nella pagina **Numero** della finestra di dialogo **Proprietà** dell'area dati corrispondente.  
@@ -47,7 +47,7 @@ ms.locfileid: "48166161"
   
 -   Per impostazione predefinita, i numeri vengono formattati in modo da riflettere le impostazioni relative alla lingua sul computer client. Usare le stringhe di formattazione per specificare la modalità di visualizzazione dei numeri in modo che la formattazione sia coerente indipendentemente dalla località in cui si trova l'utente che visualizza il report.  
   
--   I formati disponibili nella pagina **Numero** rappresentano un subset delle stringhe di formato numerico standard di [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] . Per formattare un numero o una data usando un formato personalizzato non incluso nella finestra di dialogo, è possibile usare qualsiasi stringa di formato [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] per i numeri o le date. Per altre informazioni sulle stringhe di formato personalizzato, vedere l'argomento [Formattazione dei tipi di dati](http://go.microsoft.com/fwlink/?LinkId=112024) su MSDN.  
+-   I formati disponibili nella pagina **Numero** rappresentano un subset delle stringhe di formato numerico standard di [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] . Per formattare un numero o una data usando un formato personalizzato non incluso nella finestra di dialogo, è possibile usare qualsiasi stringa di formato [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] per i numeri o le date. Per altre informazioni sulle stringhe di formato personalizzato, vedere l'argomento [Formattazione dei tipi di dati](https://go.microsoft.com/fwlink/?LinkId=112024) su MSDN.  
   
 -   Se è stata specificata una stringa di formato personalizzato, tale stringa avrà una priorità più elevata rispetto alle impostazioni predefinite che sono specifiche delle impostazioni cultura. Si supponga, ad esempio, di impostare la stringa di formato personalizzato "#, ###" per visualizzare il numero 1234 come 1,234. Questa impostazione potrebbe essere interpretata dagli utenti americani in modo diverso rispetto agli utenti europei. Prima di specificare un formato personalizzato, considerare in che modo tale formato influirà sugli utenti con impostazioni cultura differenti che potrebbero visualizzare il report.  
   
@@ -58,10 +58,10 @@ ms.locfileid: "48166161"
 -   Se si seleziona **Valuta** in **Categoria** e si seleziona **Mostra valori in**, è possibile selezionare **Migliaia**, **Milioni**o **Miliardi** per visualizzare numeri usando formati finanziari. Se, ad esempio, il valore del campo è 1.789.905.394, si seleziona **Miliardi** e si specificano 2 cifre decimali, il valore visualizzato nel report è 1,78.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Formattazione di testo e segnaposto &#40;Report e SSRS&#41;](formatting-text-and-placeholders-report-builder-and-ssrs.md)   
+ [Formattazione di testo e segnaposto &#40;Generatore report e SSRS&#41;](formatting-text-and-placeholders-report-builder-and-ssrs.md)   
  [Formattazione di linee, colori e immagini &#40;Generatore report e SSRS&#41;](images-report-builder-and-ssrs.md)   
  [Formattazione di un grafico &#40;Generatore report e SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)   
  [Formattazione delle etichette degli assi come date o valute &#40;Generatore report e SSRSSSRS&#41;](format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)   
- [Formattazione di Scale su un misuratore &#40;Report e SSRS&#41;](formatting-scales-on-a-gauge-report-builder-and-ssrs.md)  
+ [Formattazione di scale su un misuratore &#40;Generatore report e SSRS&#41;](formatting-scales-on-a-gauge-report-builder-and-ssrs.md)  
   
   

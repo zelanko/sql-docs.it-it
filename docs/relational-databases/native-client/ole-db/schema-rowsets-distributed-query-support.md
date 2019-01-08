@@ -19,12 +19,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 47ef27112e91b98bcc907f429d728acda22146c5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b2da969eb707ad5b943773626940cbfde80c8a80
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47806147"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53588389"
 ---
 # <a name="schema-rowsets---distributed-query-support"></a>Set di righe dello schema - Supporto di query distribuite
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "47806147"
 
   Per supportare [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] query distribuite, il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client provider OLE DB **IDBSchemaRowset** interfaccia restituisce metadati sui server collegati.  
   
- Se la proprietà SSPROP_QUOTEDCATALOGNAMES di DBPROPSET_SQLSERVERSESSION è VARIANT_TRUE, è possibile utilizzare un identificatore tra virgolette per specificare il nome di catalogo (ad esempio "catalogo.personale"). Quando si limita l'output di set di righe dello schema dal catalogo, il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provider OLE DB Native Client riconosce un nome in due parti che contiene il nome di catalogo e server collegato. Per il set di righe dello schema riportato nella tabella seguente, la specifica di un nome di catalogo in due parti, quale *linked_server ***.*** catalog*, restringe l'output al catalogo applicabile del server collegato denominato.  
+ Se la proprietà SSPROP_QUOTEDCATALOGNAMES di DBPROPSET_SQLSERVERSESSION è VARIANT_TRUE, è possibile utilizzare un identificatore tra virgolette per specificare il nome di catalogo (ad esempio "catalogo.personale"). Quando si limita l'output di set di righe dello schema dal catalogo, il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provider OLE DB Native Client riconosce un nome in due parti che contiene il nome di catalogo e server collegato. Per i set di righe dello schema nella tabella seguente, specificando un nome di catalogo in due parti _linked_server_**.** _catalogo_ limita l'output al catalogo applicabile del server collegato denominato.  
   
 |Set di righe dello schema|Restrizione per catalogo|  
 |-------------------|-------------------------|  

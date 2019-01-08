@@ -20,12 +20,12 @@ ms.assetid: ea918888-0fc5-4cc1-b301-26b2a9fbb20d
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: f2aa4413bd9f226bd0bbdf5b676da0da866fde32
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cfbf93fc858f52cd35401bd80fe5ede7dee86a3d
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47705859"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591745"
 ---
 # <a name="sysspcdcchangejob-transact-sql"></a>sys.sp_cdc_change_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,20 +48,20 @@ sys.sp_cdc_change_job [ [ @job_type = ] 'job_type' ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@job_type=** ] **'***job_type***'**  
+ [  **@job_type=** ] **'**_job_type_**'**  
  Tipo di processo da modificare. *job_type* viene **nvarchar(20)** con valore predefinito è 'capture'. Gli input validi sono 'capture' e 'cleanup'.  
   
- [ **@maxtrans** ] **= * * * max_trans*  
+ [ **@maxtrans** ] **=** _max_trans_  
  Numero massimo di transazioni da elaborare in ogni ciclo di analisi. *max_trans* viene **int** con un valore predefinito è NULL, che indica nessuna modifica per questo parametro. Se specificato, il valore deve essere un numero intero positivo.  
   
  *max_trans* è valida solo per i processi di acquisizione.  
   
- [ **@maxscans** ] **= * * * max_scans*  
+ [ **@maxscans** ] **=** _max_scans_  
  Numero massimo di cicli di analisi da eseguire per estrarre tutte le righe dal log. *max_scans* viene **int** con un valore predefinito è NULL, che indica nessuna modifica per questo parametro.  
   
  *max_scan* è valida solo per i processi di acquisizione.  
   
- [ **@continuous** ] **= * * * continue*  
+ [ **@continuous** ] **=** _continua_  
  Viene indicato se il processo di acquisizione deve essere eseguito continuamente (1) o solo una volta (0). *Continuous* viene **bit** con un valore predefinito è NULL, che indica nessuna modifica per questo parametro.  
   
  Quando *continui* = 1, il [sp_cdc_scan](../../relational-databases/system-stored-procedures/sys-sp-cdc-scan-transact-sql.md) processo analizza il log ed elabora fino a (*max_trans* \* *max_scans*) transazioni. Attende quindi il numero di secondi specificato nel *polling_interval* prima di iniziare l'analisi del log successivo.  
@@ -74,17 +74,17 @@ sys.sp_cdc_change_job [ [ @job_type = ] 'job_type' ]
   
  *Continua* è valida solo per i processi di acquisizione.  
   
- [ **@pollinginterval** ] **= * * * polling_interval*  
+ [ **@pollinginterval** ] **=** _polling_interval_  
  Numero di secondi tra cicli di analisi del log. *polling_interval* viene **bigint** con un valore predefinito è NULL, che indica nessuna modifica per questo parametro.  
   
  *polling_interval* è valido solo per l'acquisizione processi quando *continua* è impostato su 1.  
   
- [ **@retention** ] **= * * * conservazione*  
+ [ **@retention** ] **=** _conservazione_  
  Numero di minuti in base al quale le righe delle modifiche devono essere conservate nelle tabelle delle modifiche. *conservazione* viene **bigint** con un valore predefinito è NULL, che indica nessuna modifica per questo parametro. Il valore massimo è 52494800 (100 anni). Se specificato, il valore deve essere un numero intero positivo.  
   
  *conservazione* è valida solo per i processi di pulizia.  
   
- [  **@threshold=** ] **'***Elimina soglia***'**  
+ [  **@threshold=** ] **'**_eliminare soglia_**'**  
  Numero massimo di voci che possono essere eliminate utilizzando un'unica istruzione nel processo di pulizia. *soglia di eliminazione* viene **bigint** con un valore predefinito è NULL, che indica nessuna modifica per questo parametro. *soglia di eliminazione* è valida solo per i processi di pulizia.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
@@ -118,7 +118,7 @@ EXECUTE sys.sp_cdc_change_job
 GO  
 ```  
   
-### <a name="b-changing-a-cleanup-job"></a>B. Modifica di un processo di pulizia  
+### <a name="b-changing-a-cleanup-job"></a>b. Modifica di un processo di pulizia  
  Nell'esempio seguente viene aggiornato un processo di pulizia nel database `AdventureWorks2012`. Tutti i parametri validi per questo tipo di processo, tranne **@threshold**, vengono specificati. Il valore di **@threshold** non viene modificato.  
   
 ```  

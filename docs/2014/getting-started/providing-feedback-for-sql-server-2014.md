@@ -22,12 +22,12 @@ ms.assetid: 28f3ebf0-ad71-4816-86a6-18a46f023cfe
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 32068cf03a971cd6b8010618d7b74d1a613ec856
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 10466721f50dd8b090b5d6b1a06b5bffd6e5289d
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48109895"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376743"
 ---
 # <a name="providing-feedback-for-sql-server-2014"></a>Invio di commenti e suggerimenti su SQL Server 2014
   [!INCLUDE[msCoName](../includes/msconame-md.md)] ringrazia gli utenti per il tempo dedicato e per il contributo che consente di migliorare i prodotti e la documentazione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. È possibile fornire suggerimenti e report sui bug relativi alle funzionalità del prodotto e all'interfaccia utente, inviare commenti e suggerimenti sulla documentazione e scegliere di inviare automaticamente segnalazioni di errori e dati sull'utilizzo a [!INCLUDE[msCoName](../includes/msconame-md.md)] per l'analisi. Ognuna di queste tre opzioni relative ai commenti e ai suggerimenti viene descritta di seguito.  
@@ -37,7 +37,7 @@ ms.locfileid: "48109895"
   
  È possibile trovare la pagina per i commenti e i suggerimenti su [!INCLUDE[msCoName](../includes/msconame-md.md)] nel sito [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Connect in numerosi modi.  
   
--   Accedere alla [pagina Web](http://go.microsoft.com/fwlink/?linkid=34178) per i commenti e i suggerimenti su [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] nel sito [!INCLUDE[msCoName](../includes/msconame-md.md)] Connect.  
+-   Accedere alla [pagina Web](https://go.microsoft.com/fwlink/?linkid=34178) per i commenti e i suggerimenti su [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] nel sito [!INCLUDE[msCoName](../includes/msconame-md.md)] Connect.  
   
 -   Nella barra degli strumenti della Guida di [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] fare clic sul pulsante **Commenti e suggerimenti** oppure scegliere il comando **Community/Commenti e suggerimenti**.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "48109895"
   
 -   Accedere alla Guida dall'utilità.  
   
--   Selezionare la casella di controllo **?** nella scheda **Barre degli strumenti** a cui è possibile accedere eseguendo il comando **Strumenti/Personalizza…** .  
+-   Selezionare il **aiutare** casella di controllo il **barre degli strumenti** scheda della finestra di **strumenti/Personalizza...**  comando.  
   
 ## <a name="automatic-error-and-usage-reporting"></a>Segnalazione automatica errori e utilizzo caratteristiche  
  È possibile abilitare funzionalità specifiche per la segnalazione automatica degli errori e per inviare informazioni sull'utilizzo del software e dei servizi [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Queste informazioni verranno utilizzate da [!INCLUDE[msCoName](../includes/msconame-md.md)] per migliorare [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Tutti i dati sono riservati.  

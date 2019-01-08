@@ -12,20 +12,20 @@ ms.assetid: e7c2a5b5-83f4-4c72-9aca-7b9fb4748b11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 08fc098068080730b157d6bfb5aaf0b2b8842226
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7f9e4790cfae631a9a977431f25282aae766f3e3
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48200547"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53371921"
 ---
 # <a name="sqlexecdirect"></a>SQLExecDirect
-  Se l'attributo di istruzione SQL_SOPT_SS_PARAM_FOCUS non uguale a 0, SQLExecDirect restituirà SQL_ERROR e genererà un record di diagnostica con SQLSTATE = HY024 e il messaggio "valore attributo non valido, SQL_SOPT_SS_PARAM_FOCUS (deve essere zero in fase di esecuzione)". Per altre informazioni su SQL_SOPT_SS_PARAM_FOCUS, vedere [SQLSetStmtAttr](sqlsetstmtattr.md).  
+  Se l'attributo di istruzione SQL_SOPT_SS_PARAM_FOCUS non uguale a 0, SQLExecDirect restituirà SQL_ERROR e genererà un record di diagnostica con SQLSTATE = HY024 e il messaggio "valore attributo non valido, SQL_SOPT_SS_PARAM_FOCUS (deve essere zero in fase di esecuzione)". Per ulteriori informazioni su SQL_SOPT_SS_PARAM_FOCUS, vedere [SQLSetStmtAttr](sqlsetstmtattr.md).  
   
  Per altre informazioni sui parametri con valori di tabella, vedere [parametri con valori di tabella &#40;ODBC&#41;](../native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [SQLExecDirect](http://go.microsoft.com/fwlink/?LinkId=80709)   
+ [SQLExecDirect](https://go.microsoft.com/fwlink/?LinkId=80709)   
  [Dettagli di implementazione dell'API ODBC](odbc-api-implementation-details.md)  
   
   

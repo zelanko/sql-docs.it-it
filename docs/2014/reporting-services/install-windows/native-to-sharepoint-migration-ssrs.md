@@ -11,12 +11,12 @@ ms.assetid: c5b15bec-6fde-4174-bcde-d043307244dd
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: e5a00f42527f081c2240e4f427bd9e690c67bf5a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d0b8526bf0a56f550659e613988b31c20f1ccde7
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48073451"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53372623"
 ---
 # <a name="native-to-sharepoint-migration-ssrs"></a>Migrazione dalla modalità nativa alla modalità SharePoint (SSRS)
   Non è possibile eseguire l'aggiornamento o la conversione da una modalità server all'altra di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Non è possibile, ad esempio, eseguire l'aggiornamento o la conversione da un server di report in modalità nativa a un server di report in modalità SharePoint. Non è possibile copiare i database del server di report tra modalità poiché in essi vengono utilizzati schemi del database diversi. È possibile eseguire la migrazione del contenuto da un server di report a un altro. Gli strumenti utilizzati dipendono dal tipo di modalità del server di report configurata per il server di origine e di destinazione.  
@@ -26,7 +26,7 @@ ms.locfileid: "48073451"
 ##  <a name="bkmk_native_to_sharepoint"></a> Strumento di migrazione di Reporting Services  
  Lo strumento supporta la migrazione del contenuto da una distribuzione in modalità nativa a una distribuzione in modalità SharePoint. Lo strumento non supporta la migrazione dalla modalità SharePoint alla modalità SharePoint o dalla modalità SharePoint alla modalità nativa.  
   
- Per altre informazioni, vedere la pagina relativa allo [strumento di migrazione di Reporting Services](http://www.microsoft.com/download/details.aspx?id=29560) (http://www.microsoft.com/download/details.aspx?id=29560).  
+ Per altre informazioni, vedere la pagina relativa allo [strumento di migrazione di Reporting Services](https://www.microsoft.com/download/details.aspx?id=29560) (https://www.microsoft.com/download/details.aspx?id=29560).  
   
 ## <a name="use-script-to-migrate-content"></a>Utilizzare lo script per eseguire la migrazione di contenuto  
  Se lo strumento di migrazione non soddisfa le proprie esigenze, è possibile eseguire manualmente la migrazione dei dati del server di report. Di seguito è riportato un riepilogo dei passaggi necessari per eseguire la migrazione degli elementi del report da una distribuzione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] a un'altra. L'approccio supporta la modalità nativa o la modalità SharePoint come server di origine o di destinazione.  
@@ -45,12 +45,12 @@ ms.locfileid: "48073451"
   
 |Object|Esecuzione dello script|Commenti|  
 |------------|---------------------|--------------|  
-|Report|Sì|Al termine della migrazione immettere nuovamente le password per le origini dati.|  
-|Origini dati|Sì|Al termine della migrazione collegare nuovamente i report alle origini dati.|  
-|Modelli|Sì||  
-|Set di dati|Sì||  
+|Report|Yes|Al termine della migrazione immettere nuovamente le password per le origini dati.|  
+|Origini dati|Yes|Al termine della migrazione collegare nuovamente i report alle origini dati.|  
+|Modelli|Yes||  
+|Set di dati|Yes||  
 |Parti del report||Al termine della migrazione verificare o aggiornare il percorso alle parti del report.|  
-|Pianificazioni|Sì|Vedere il metodo ListSchedules [Subscription and Delivery Methods](../report-server-web-service/methods/subscription-and-delivery-methods.md)|  
+|Pianificazioni|Yes|Vedere il metodo ListSchedules in [Subscription and Delivery Methods](../report-server-web-service/methods/subscription-and-delivery-methods.md).|  
 |Sottoscrizioni|sì|Vedere il metodo Listsubscriptions [Subscription and Delivery Methods](../report-server-web-service/methods/subscription-and-delivery-methods.md) e il metodo changesubscriptionowner in <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A>|  
 |Snapshot|||  
 ||||  

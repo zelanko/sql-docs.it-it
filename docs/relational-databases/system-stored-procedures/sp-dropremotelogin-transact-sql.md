@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9f097652-a286-40b2-be73-568d77ada698
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: a834dbb26bfc8c712531084e528f82bba50cd05e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fa52c7e66a690b54c33330e09fe4373962ea2f9b
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47800699"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589315"
 ---
 # <a name="spdropremotelogin-transact-sql"></a>sp_dropremotelogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,13 +44,13 @@ sp_dropremotelogin [ @remoteserver = ] 'remoteserver'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@remoteserver =** ] **'***remoteserver***'**  
+ [  **@remoteserver =** ] **'**_remoteserver_**'**  
  Nome del server remoto di cui è stato eseguito il mapping all'account di accesso remoto che si desidera rimuovere. *remoteserver* viene **sysname**, non prevede alcun valore predefinito. *remoteserver* deve esistere già.  
   
- [ **@loginame =** ] **'***login***'**  
+ [  **@loginame =** ] **'**_account di accesso_**'**  
  Nome facoltativo dell'account di accesso nel server locale associato al server remoto. *login* è di tipo **sysname** e il valore predefinito è NULL. *account di accesso* deve già esistere se specificato.  
   
- [  **@remotename =** ] **'***remote_name***'**  
+ [  **@remotename =** ] **'**_remote_name_**'**  
  Nome facoltativo dell'account di accesso remoto viene mappato a *account di accesso* durante l'accesso dal server remoto. *remote_name* viene **sysname**, con un valore predefinito è NULL.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
@@ -77,7 +77,7 @@ sp_dropremotelogin [ @remoteserver = ] 'remoteserver'
 EXEC sp_dropremotelogin 'ACCOUNTS';  
 ```  
   
-### <a name="b-dropping-a-login-mapping"></a>B. Eliminazione di un mapping tra account di accesso  
+### <a name="b-dropping-a-login-mapping"></a>b. Eliminazione di un mapping tra account di accesso  
  Nell'esempio seguente viene rimossa la voce per il mapping degli account di accesso remoti tra il server remoto `ACCOUNTS` e l'account di accesso locale `Albert`.  
   
 ```  

@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: dcc0a8d3-9d25-4208-8507-a5e65d2a9a15
-ms.openlocfilehash: bbeeff135edbc333b6ce8b3e20cf5235710f2dc1
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: b5ffda90f0d4b2b85ed29af65da5ea12592e4423
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51677680"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979917"
 ---
 # <a name="configure-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>Configurare il cluster di dischi condivisi di Red Hat Enterprise Linux per SQL Server
 
@@ -139,7 +139,7 @@ Il Server NFS eseguire le operazioni seguenti:
    sudo systemctl enable nfs-server && sudo systemctl start nfs-server
    ```
  
-1.  Modifica `/etc/exports` per esportare la directory in cui si vuole condividere. È necessario 1 riga per ogni condivisione desiderata. Esempio: 
+1.  Modifica `/etc/exports` per esportare la directory in cui si vuole condividere. È necessario 1 riga per ogni condivisione desiderata. Ad esempio: 
 
    ```bash
    /mnt/nfs  10.8.8.0/24(rw,sync,no_subtree_check,no_root_squash)
@@ -274,10 +274,10 @@ A questo punto, entrambe le istanze di SQL Server configurate per eseguire con i
    sudo firewall-cmd --reload
    ```
 
-   > Se si sta usando un altro firewall che non ha una configurazione a disponibilità elevata predefinita, è necessario aprire le porte seguenti per consentire a Pacemaker di comunicare con altri nodi del cluster
+   > Se si usa un altro firewall che non dispone di una configurazione a disponibilità elevata predefinita, le porte seguenti devono essere aperte per consentire a essere in grado di comunicare con altri nodi del cluster Pacemaker
    >
-   > * TCP: porte 2224, 3121, 21064
-   > * UDP: porta 5405
+   > * TCP: Porte 2224, 3121, 21064
+   > * UDP: Porta 5405
 
 1. Installare i pacchetti Pacemaker in ogni nodo.
 
@@ -285,7 +285,7 @@ A questo punto, entrambe le istanze di SQL Server configurate per eseguire con i
    sudo yum install pacemaker pcs fence-agents-all resource-agents
    ```
 
-   
+    
 
 2. Impostare la password per l'utente predefinito creato durante l'installazione dei pacchetti Pacemaker e Corosync. Usare la stessa password in entrambi i nodi. 
 
@@ -293,7 +293,7 @@ A questo punto, entrambe le istanze di SQL Server configurate per eseguire con i
    sudo passwd hacluster
    ```
 
-   
+    
 
 3. Abilitare e avviare il servizio `pcsd` e Pacemaker. In questo modo, i nodi potranno unirsi nuovamente in join con il cluster dopo il riavvio. Eseguire il comando seguente in entrambi i nodi.
 
@@ -314,8 +314,8 @@ A questo punto, entrambe le istanze di SQL Server configurate per eseguire con i
 1. In uno dei nodi, creare il cluster.
 
    ```bash
-   sudo pcs cluster auth <nodeName1 nodeName2 …> -u hacluster
-   sudo pcs cluster setup --name <clusterName> <nodeName1 nodeName2 …>
+   sudo pcs cluster auth <nodeName1 nodeName2 ...> -u hacluster
+   sudo pcs cluster setup --name <clusterName> <nodeName1 nodeName2 ...>
    sudo pcs cluster start --all
    ```
 
@@ -330,13 +330,13 @@ A questo punto, entrambe le istanze di SQL Server configurate per eseguire con i
 
 2. Configurare le risorse del cluster di SQL Server, File System e le risorse IP virtuali ed eseguire il push della configurazione del cluster. Sono necessarie le informazioni seguenti:
 
-   - **Nome risorsa SQL Server**: un nome per la risorsa cluster di SQL Server. 
-   - **Nome della risorsa IP mobile**: un nome per la risorsa indirizzo IP virtuale.
-   - **Indirizzo IP**: l'indirizzo IP che i client useranno per connettersi all'istanza del cluster di SQL Server. 
-   - **Nome di risorsa sistema file**: un nome per la risorsa File System.
-   - **dispositivo**: percorso condivisione NFS The
-   - **dispositivo**: il percorso locale che viene montata la condivisione
-   - **fsType**: tipo di condivisione File (ad esempio nfs)
+   - **Nome risorsa SQL Server**: Un nome per la risorsa cluster di SQL Server. 
+   - **Nome della risorsa IP mobile**: Un nome per la risorsa indirizzo IP virtuale.
+   - **Indirizzo IP**: L'indirizzo IP che i client useranno per connettersi all'istanza del cluster di SQL Server. 
+   - **Il nome di risorsa sistema**: Un nome per la risorsa File System.
+   - **dispositivo**: Percorso di condivisione NFS
+   - **dispositivo**: Il percorso locale che viene montata la condivisione
+   - **fsType**: Tipo di condivisione file (ad esempio nfs)
 
    Aggiornare i valori dallo script seguente per l'ambiente. Eseguire in un nodo per configurare e avviare il servizio cluster.  
 
@@ -370,7 +370,7 @@ A questo punto, entrambe le istanze di SQL Server configurate per eseguire con i
    sudo pcs status 
    ```
 
-   Il seguente mostra esempi i risultati ottenuti quando Pacemaker è stato avviato un'istanza cluster di SQL Server. 
+   Negli esempi seguenti vengono illustrati i risultati quando Pacemaker è avviata un'istanza cluster di SQL Server. 
 
    ```
    fs     (ocf::heartbeat:Filesystem):    Started sqlfcivm1

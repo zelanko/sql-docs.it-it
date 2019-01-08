@@ -1,5 +1,5 @@
 ---
-title: Analitica di Python nel database per sviluppatori SQL | Microsoft Docs
+title: Esercitazione per analitica di Python nel database per sviluppatori SQL - SQL Server Machine Learning
 description: Informazioni su come incorporare codice Python in stored procedure SQL Server e funzioni T-SQL.
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,14 +8,14 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 728ab56a844a6c7a14f5de7e39abc5d38146c85a
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: be4ac6b7f7c156ebeda843e8aa987ab45ef4057d
+ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51560379"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53596682"
 ---
-# <a name="tutorial-in-database-python-analytics-for-sql-developers"></a>Tutorial: Analitica di In-Database Python per gli sviluppatori SQL
+# <a name="tutorial-in-database-python-analytics-for-sql-developers"></a>Esercitazione: Analitica di Python nel Database per sviluppatori SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 In questa esercitazione per programmatori SQL indicazioni, informazioni sull'integrazione di Python tramite la creazione e distribuzione di una macchina basata su Python e imparando a usare soluzioni una [NYCTaxi_sample](demo-data-nyctaxi-in-sql.md) database in SQL Server. 

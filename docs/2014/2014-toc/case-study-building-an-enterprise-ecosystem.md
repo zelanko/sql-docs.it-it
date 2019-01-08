@@ -9,15 +9,15 @@ ms.assetid: 2b0b5ab7-4e08-431a-bd59-360177c4565c
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1de233ed0f659438c46cab69cec79119fc5291c3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d3b7652cf67fff68b1a9e6d87e02c2776317af19
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48113625"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53365236"
 ---
-# <a name="case-study-building-an-enterprise-ecosystem-with-microsoft-dynamics-erp-and-sql-server-2014-replication-for-scalability-and-performance"></a>Case Study: Building an Enterprise Ecosystem with Microsoft Dynamics ERP and SQL Server 2014 Replication for Scalability and Performance (Case study: creazione di un ecosistema aziendale con Microsoft Dynamics ERP e la replica di SQL Server 2014 per ottenere scalabilità e prestazioni)
-  **Riepilogo:** in questo documento illustra gli scenari seguenti:  
+# <a name="case-study-building-an-enterprise-ecosystem-with-microsoft-dynamics-erp-and-sql-server-2014-replication-for-scalability-and-performance"></a>Case Study: Creazione di un ecosistema aziendale con Microsoft Dynamics ERP e di SQL Server 2014 Replication for Scalability and Performance
+  **Riepilogo:** In questo documento illustra gli scenari seguenti:  
 Come usare la replica transazionale in SQL Server 2014 per distribuire le transazioni dai client Dynamics AX in più nodi. Poiché i dati vengono gestiti nei nodi in tempo reale, la replica transazionale fornisce la ridondanza dei dati, che aumenta la disponibilità dei dati, e include i dati disponibili per un'analisi delle prestazioni più efficiente.  
 Come comprendere le specifiche coinvolte, sfruttando al contempo la replica transazionale per creare ecosistemi aziendali altamente scalabili in Microsoft Dynamics ERP. Offrire prestazioni e scalabilità elevate senza personalizzare le funzionalità predefinite di AX.  
   
@@ -34,6 +34,6 @@ Come comprendere le specifiche coinvolte, sfruttando al contempo la replica tran
  **Si applica a:** SQL Server 2008, SQL Server 2012 e SQL Server 2014  
   
  Per esaminare il documento, scaricare il  
-        [Case Study: Creazione di un ecosistema aziendale con Microsoft Dynamics ERP e la replica di SQL Server 2014 per la scalabilità e prestazioni](http://download.microsoft.com/download/D/2/0/D20E1C5F-72EA-4505-9F26-FEF9550EFD44/A%20Case%20Study%20Using%20Replication%20to%20Build%20an%20Enterprise%20Ecosystem%20in%20Microsoft%20Dynamics%20ERP%20for%20Scalability%20and%20Performance.docx) documento di Word.  
+        [Case Study: Creazione di un ecosistema aziendale con Microsoft Dynamics ERP e la replica di SQL Server 2014 per la scalabilità e prestazioni](https://download.microsoft.com/download/D/2/0/D20E1C5F-72EA-4505-9F26-FEF9550EFD44/A%20Case%20Study%20Using%20Replication%20to%20Build%20an%20Enterprise%20Ecosystem%20in%20Microsoft%20Dynamics%20ERP%20for%20Scalability%20and%20Performance.docx) documento di Word.  
   
   

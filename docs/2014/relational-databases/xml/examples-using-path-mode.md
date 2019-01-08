@@ -1,5 +1,5 @@
 ---
-title: Esempi d'uso della modalità PATH | Microsoft Docs
+title: 'Esempi: Utilizzo della modalità PATH | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,14 +12,14 @@ ms.assetid: 3564e13b-9b97-49ef-8cf9-6a78677b09a3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ec8edb82afec3c8437970c6d3b238b3f68172c46
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1384c2cd84505df59bc458274d0b33071e926f18
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48054151"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53365733"
 ---
-# <a name="examples-using-path-mode"></a>Esempi di utilizzo della modalità PATH
+# <a name="examples-using-path-mode"></a>Esempi: Utilizzo della modalità PATH
   Negli esempi seguenti viene illustrato l'utilizzo della modalità PATH nella creazione di codice XML da una query SELECT. Molte di queste query vengono specificate sui documenti XML di istruzioni per la produzione di biciclette archiviate nella colonna Instructions della tabella ProductModel.  
   
 ## <a name="specifying-a-simple-path-mode-query"></a>Specifica di una query semplice in modalità PATH  
@@ -111,7 +111,7 @@ FOR XML PATH ('');
 GO  
 ```  
   
- Risultato:  
+ Questo è il risultato:  
   
  `<ProductModelID>122</ProductModelID>`  
   
@@ -135,7 +135,7 @@ FOR XML PATH ('ProductModelData');
 GO  
 ```  
   
- Risultato:  
+ Questo è il risultato:  
   
  `< ProductModelData id="122">`  
   
@@ -186,12 +186,12 @@ GO
   
  `</Root>`  
   
- Oltre all'ID del modello di prodotto e al nome, la query seguente consente di recuperare i percorsi delle relative istruzioni di produzione. Perché la colonna Instructions è di `xml` tipo, il `query()` metodo `xml` tipo di dati specificato per recuperare il percorso.  
+ Oltre all'ID del modello di prodotto e al nome, la query seguente consente di recuperare i percorsi delle relative istruzioni di produzione. Poiché la colonna Instructions è di tipo `xml`, per il recupero del percorso viene specificato il metodo `query()` del tipo di dati `xml`.  
   
 ```  
 SELECT ProductModelID AS "@id",  
        Name,  
-       Instructions.query('declare namespace MI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
+       Instructions.query('declare namespace MI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
                 /MI:root/MI:Location   
               ') AS ManuInstr  
 FROM Production.ProductModel  
@@ -210,7 +210,7 @@ GO
   
  `<ManuInstr>`  
   
- `<MI:Location xmlns:MI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions"`  
+ `<MI:Location xmlns:MI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions"`  
   
  `<MI:step>...</MI:step>...`  
   
@@ -232,7 +232,7 @@ GO
 WITH XMLNAMESPACES (  
    'uri1' AS ns1,    
    'uri2' AS ns2,  
-   'http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions' as MI)  
+   'https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions' as MI)  
 SELECT ProductModelID AS "ns1:ProductModelID",  
        Name           AS "ns1:Name",  
        Instructions.query('  
@@ -244,9 +244,9 @@ FOR XML PATH ('ns2:ProductInfo'), root('ns1:root');
 GO  
 ```  
   
- Il prefisso `MI` è inoltre definito in `WITH XMLNAMESPACES`. Di conseguenza, il `query()` metodo di `xml` tipo specificato non definisce il prefisso nel prologo della query. Risultato:  
+ Il prefisso `MI` è inoltre definito in `WITH XMLNAMESPACES`. Di conseguenza, il metodo `query()` del tipo `xml` specificato non definisce il prefisso nel prologo della query. Questo è il risultato:  
   
- `<ns1:root xmlns:MI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions" xmlns="uri2" xmlns:ns2="uri2" xmlns:ns1="uri1">`  
+ `<ns1:root xmlns:MI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions" xmlns="uri2" xmlns:ns2="uri2" xmlns:ns1="uri1">`  
   
  `<ns2:ProductInfo>`  
   
@@ -254,7 +254,7 @@ GO
   
  `<ns1:Name>HL Touring Frame</ns1:Name>`  
   
- `<MI:Location xmlns:MI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions"`  
+ `<MI:Location xmlns:MI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions"`  
   
  `LaborHours="2.5" LotSize="100" MachineHours="3" SetupHours="0.5" LocationID="10" xmlns="">`  
   
@@ -395,7 +395,7 @@ GO
   
  L'attributo `@xml:lang` aggiunto all'elemento <`English`> viene definito nello spazio dei nomi xml predefinito.  
   
- Risultato:  
+ Questo è il risultato:  
   
  `<Translation>`  
   
@@ -432,7 +432,7 @@ WHERE ProductModelID= 7 OR ProductModelID=9
 FOR XML PATH('ProductModelData'), root('root');  
 ```  
   
- Risultato:  
+ Questo è il risultato:  
   
  `<root xmlns="uri2" xmlns:ns1="uri1">`  
   

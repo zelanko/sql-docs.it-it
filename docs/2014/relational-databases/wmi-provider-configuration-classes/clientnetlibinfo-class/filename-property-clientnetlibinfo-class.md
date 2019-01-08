@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: wmi
 ms.topic: reference
 api_name:
 - FileName Property (ClientNetLibInfo Class)
@@ -20,12 +18,12 @@ ms.assetid: 5b478582-9389-4923-a914-0df2d8333b0e
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 25f83c8573dce74ae97d7246390e180b80204de9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 770090cbef3c3e7b00d53164a986ffc80bfbd7c7
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48136681"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53362103"
 ---
 # <a name="filename-property-clientnetlibinfo-class"></a>Proprietà FileName (classe ClientNetLibInfo)
   Ottiene il nome del file della libreria di rete del client.  
@@ -48,6 +46,6 @@ object
 ## <a name="remarks"></a>Note  
   
 ## <a name="see-also"></a>Vedere anche  
- [Configurazione di protocolli client](http://technet.microsoft.com/library/ms181035.aspx)  
+ [Configurazione di protocolli client](https://technet.microsoft.com/library/ms181035.aspx)  
   
   

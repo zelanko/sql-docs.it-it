@@ -23,12 +23,12 @@ ms.assetid: b838f970-d11a-4239-b164-8d11f4581d83
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 275503157f0bfbc004463f3bc567cfbef4a3fc41
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f2a600f727de4aa4e23de1ccbf2b668bba4ae0ff
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48117051"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53370143"
 ---
 # <a name="configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager"></a>Configurare un server di report per il recapito tramite posta elettronica (Gestione configurazione SSRS)
   In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] è disponibile un'estensione per il recapito tramite posta elettronica che consente di distribuire report tramite posta elettronica. A seconda di come viene definita la sottoscrizione tramite posta elettronica, un recapito può essere costituito da una notifica, un collegamento, un allegato o un report incorporato. L'estensione per il recapito tramite posta elettronica può essere utilizzata con la tecnologia del server di posta elettronica esistente. Il server di posta elettronica deve essere un server SMTP o un server di inoltro. Il server di report si connette a un server SMTP tramite librerie Collaboration Data Objects, o CDO, (cdosys.dll) fornite dal sistema operativo.  
@@ -43,7 +43,7 @@ ms.locfileid: "48117051"
   
 ##  <a name="bkmk_configuration_requirements"></a> Requisiti di configurazione  
   
--   La funzionalità di recapito tramite posta elettronica del server di report viene implementata in oggetti CDO (Collaboration Data Objects) e per essa è richiesto un server SMTP (Simple Mail Transfer Protocol) locale o remoto o un server d'inoltro SMTP. SMTP non è supportato in tutti i sistemi operativi Windows. Se si utilizza l'edizione basata su Itanium di Windows Server 2008, SMTP non è supportato. Per ulteriori informazioni sulle opzioni di configurazione disponibili tramite CDO, vedere la pagina relativa alla [coclasse Configuration](http://go.microsoft.com/fwlink/?LinkId=98237) nel sito Web MSDN.  
+-   La funzionalità di recapito tramite posta elettronica del server di report viene implementata in oggetti CDO (Collaboration Data Objects) e per essa è richiesto un server SMTP (Simple Mail Transfer Protocol) locale o remoto o un server d'inoltro SMTP. SMTP non è supportato in tutti i sistemi operativi Windows. Se si utilizza l'edizione basata su Itanium di Windows Server 2008, SMTP non è supportato. Per ulteriori informazioni sulle opzioni di configurazione disponibili tramite CDO, vedere la pagina relativa alla [coclasse Configuration](https://go.microsoft.com/fwlink/?LinkId=98237) nel sito Web MSDN.  
   
 -   L'account del servizio del server di report deve disporre dell'autorizzazione necessaria per inviare messaggi di posta elettronica nel server SMTP.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "48117051"
 
   
 ##  <a name="bkmk_example_config_file"></a> Configurazione di posta elettronica Server di Report di esempio  
- Nell'esempio seguente vengono illustrate le impostazioni nel file RSreportserver.config per un server SMTP remoto. Per informazioni su come le descrizioni delle impostazioni e i valori validi, vedere [RSReportServer Configuration File](../../reporting-services/report-server/rsreportserver-config-configuration-file.md) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] documentazione in linea o la documentazione di CDO.  
+ Nell'esempio seguente vengono illustrate le impostazioni nel file RSreportserver.config per un server SMTP remoto. Per ulteriori nella documentazione online diformazioni sulle descrizioni e sui valori validi dell'impostazione, vedere [RSReportServer Configuration File](../../reporting-services/report-server/rsreportserver-config-configuration-file.md) nella documentazione online di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Onlnella documentazione online die or the CDO product documentation.  
   
 ```  
 <RSEmailDPConfiguration>  
@@ -106,7 +106,7 @@ ms.locfileid: "48117051"
   
 
   
-##  <a name="bkmk_setting_TO_field"></a> Opzioni di configurazione per l'impostazione di a: campo di un messaggio  
+##  <a name="bkmk_setting_TO_field"></a> Opzioni di configurazione per l'impostazione delle per: in un messaggio  
  Le sottoscrizioni definite dall'utente create in base alle autorizzazioni concesse dall'attività **Gestione di sottoscrizioni individuali** contengono un nome utente preimpostato che si basa sull'account utente di dominio. Quando l'utente crea la sottoscrizione, l'indirizzo del nome del destinatario incluso nel campo **A:** viene immesso automaticamente in base all'account utente di dominio della persona che crea la sottoscrizione.  
   
  Se si utilizza un server SMTP o un server d'inoltro che utilizza account di posta elettronica diversi dall'account utente di dominio, il recapito del report non riuscirà quando il server SMTP tenterà di recapitare il report a tale utente.  
@@ -115,9 +115,9 @@ ms.locfileid: "48117051"
   
 1.  Aprire RSReportServer.config con un editor di testo.  
   
-2.  Impostare `SendEmailToUserAlias` a `False`.  
+2.  Impostare `SendEmailToUserAlias` su `False`.  
   
-3.  Impostare `DefaultHostName` al sistema DNS (Domain Name) nome o indirizzo IP del server SMTP o del server d'inoltro.  
+3.  Impostare `DefaultHostName` sul nome DNS (Domain Name System) o sull'indirizzo IP del server SMTP o del server d'inoltro.  
   
 4.  Salvare il file.  
   
@@ -126,11 +126,11 @@ ms.locfileid: "48117051"
 ##  <a name="bkmk_options_remote_SMTP"></a> Opzioni di configurazione per il servizio SMTP remoto  
  La connessione tra il server di report e un server SMTP o un server d'inoltro viene determinata tramite le impostazioni di configurazione seguenti:  
   
--   `SendUsing` Specifica un metodo per l'invio di messaggi. È possibile scegliere tra un servizio SMTP di rete o una directory di prelievo del servizio SMTP locale. Per utilizzare un servizio SMTP remoto, questo valore deve essere impostato su **2** nel file RSReportServer.config.  
+-   `SendUsing` specifica un metodo per l'invio di messaggi. È possibile scegliere tra un servizio SMTP di rete o una directory di prelievo del servizio SMTP locale. Per utilizzare un servizio SMTP remoto, questo valore deve essere impostato su **2** nel file RSReportServer.config.  
   
--   `SMTPServer` Specifica il server SMTP remoto o server d'inoltro. Questo valore è obbligatorio se si utilizza un server SMTP remoto o un server d'inoltro.  
+-   `SMTPServer` specifica il server SMTP remoto o il server d'inoltro. Questo valore è obbligatorio se si utilizza un server SMTP remoto o un server d'inoltro.  
   
--   `From` Imposta il valore visualizzato nei **da:** riga del messaggio di posta elettronica. Questo valore è obbligatorio se si utilizza un server SMTP remoto o un server d'inoltro.  
+-   `From` imposta il valore che viene visualizzato nella riga **Da:** di un messaggio di posta elettronica. Questo valore è obbligatorio se si utilizza un server SMTP remoto o un server d'inoltro.  
   
  Tra gli altri valori utilizzati per il servizio SMTP remoto sono inclusi quelli indicati di seguito. Si noti che non è necessario specificare tali valori, a meno che non si desideri ignorare i valori predefiniti.  
   
@@ -154,7 +154,7 @@ ms.locfileid: "48117051"
     > [!NOTE]  
     >  Assicurarsi che non si imposta `SMTPServer` se si usa un server SMTP locale.  
   
--   `From` Imposta il valore visualizzato nei **da:** riga del messaggio di posta elettronica. Questo valore è obbligatorio.  
+-   `From` imposta il valore che viene visualizzato nella riga **Da:** di un messaggio di posta elettronica. Questo valore è obbligatorio.  
   
  
   
@@ -178,19 +178,19 @@ ms.locfileid: "48117051"
   
 2.  Aprire il file RSReportServer.config in un editor di testo.  
   
-3.  Verificare che <`UrlRoot`> è impostato per l'indirizzo URL del server di report. Questo valore viene impostato quando si configura il server di report e quindi dovrebbe essere già inserito. In caso contrario, digitare l'indirizzo URL del server di report.  
+3.  Verificare che <`UrlRoot`> sia impostato sull'indirizzo URL del server di report. Questo valore viene impostato quando si configura il server di report e quindi dovrebbe essere già inserito. In caso contrario, digitare l'indirizzo URL del server di report.  
   
-4.  Nella sezione Delivery individuare la voce <`ReportServerEmail`>.  
+4.  Nella sezione relativa al recapito individuare <`ReportServerEmail`>.  
   
 5.  In <`SMTPServer`> digitare il nome del server SMTP. Questo valore può corrispondere a un indirizzo IP, un nome UNC di un computer dell'Intranet aziendale o un nome di dominio completo.  
   
 6.  Verificare che <`SendUsing`> sia impostato su 2. Se è impostato un valore diverso, il server di report non è configurato per l'utilizzo di un servizio SMTP remoto.  
   
-7.  In <`From`>, digitare il nome di un account che dispone dell'autorizzazione per l'invio di posta elettronica dal server SMTP.  
+7.  In <`From`> digitare il nome di un account con l'autorizzazione a inviare posta elettronica dal server SMTP.  
   
 8.  Salvare il file.  
   
-     Il server di report utilizzerà automaticamente le nuove impostazioni e non sarà necessario riavviare il servizio. È possibile specificare impostazioni SMTP aggiuntive per configurare ulteriormente la modalità di utilizzo del server SMTP per il recapito tramite posta elettronica del server di report. Per altre informazioni, vedere [configurare un Server di Report per il recapito tramite posta elettronica](../../../2014/sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md) e [RSReportServer Configuration File](../../reporting-services/report-server/rsreportserver-config-configuration-file.md) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] documentazione Online.  
+     Il server di report utilizzerà automaticamente le nuove impostazioni e non sarà necessario riavviare il servizio. È possibile specificare impostazioni SMTP aggiuntive per configurare ulteriormente la modalità di utilizzo del server SMTP per il recapito tramite posta elettronica del server di report. Per altre nella documentazione online diformazioni, vedere [Configurnella documentazione online dig a Report Server for E-Mail Delivery](../../../2014/sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md) e [RSReportServer Configuration File](../../reporting-services/report-server/rsreportserver-config-configuration-file.md) nella documentazione online di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Onlnella documentazione online die.  
   
 
   

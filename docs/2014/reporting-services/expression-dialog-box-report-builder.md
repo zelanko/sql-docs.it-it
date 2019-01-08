@@ -15,12 +15,12 @@ ms.assetid: e89c4d97-5d41-4b55-8695-79329edac15d
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6df6a544e02eeef685234fad0ca11d0bc898e617
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 44c99dd44a39aa2008f5e276cde79bb51b6d4d51
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48220901"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590615"
 ---
 # <a name="expression-dialog-box-report-builder"></a>Finestra di dialogo Espressione (Generatore report)
   Usare la **espressione** finestra di dialogo per scrivere [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] le proprietà degli elementi delle espressioni di report. Le espressioni possono essere utilizzate per impostare molte proprietà, ad esempio il colore, il tipo di carattere e i bordi. In fase di esecuzione, il componente Elaborazione report valuta le espressioni e sostituisce il valore della proprietà con il risultato.  
@@ -30,11 +30,11 @@ ms.locfileid: "48220901"
 ## <a name="expression-constructs"></a>Costrutti di espressione  
  Le espressioni iniziano con un segno di uguale (=) e possono includere costanti, valori letterali, operatori e riferimenti a campi predefiniti, raccolte predefinite, funzioni predefinite, funzioni della libreria run-time di [!INCLUDE[vbprvb](../includes/vbprvb-md.md)], classi Common Language Runtime di [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] e funzioni personalizzate. Nell'elenco seguente vengono descritti le categorie e i valori che è possibile aggiungere in un'espressione.  
   
- **Imposta espressione per:***\<PropertyName >*   
+ **Imposta espressione per:**  _\<PropertyName >_  
  Nome della proprietà per cui si definisce un'espressione. È anche possibile impostare questa proprietà, per nome, nel riquadro Proprietà.  
   
  **Costanti**  
- Consente di visualizzare un elenco di valori predefiniti validi per la proprietà corrente, nel caso di proprietà basate su costanti. Ad esempio, una proprietà basata su colore indica nomi di colore validi. Per una proprietà che è un tipo di dati booleano, i valori sono `True` e `False`.  
+ Consente di visualizzare un elenco di valori predefiniti validi per la proprietà corrente, nel caso di proprietà basate su costanti. Ad esempio, una proprietà basata su colore indica nomi di colore validi. Per una proprietà con un tipo di dati booleano, i valori sono `True` e `False`.  
   
  Non tutti gli elementi che supportano le espressioni possono essere impostati su una costante. Se una proprietà non può essere impostata su un valore costante, nel riquadro di descrizione verrà indicata questa informazione.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "48220901"
  **Parametri**  
  Consente di visualizzare un elenco di parametri del report.  
   
- **Campi (**  *\<set di dati selezionato >* **)**  
+ **Campi (**  _\<set di dati selezionato >_ **)**  
  Consente di visualizzare l'elenco di campi per il set di dati selezionato nella categoria Set di dati. Fare doppio clic su un campo per copiarlo nella casella **Espressione** .  
   
  **Set di dati**  
@@ -71,7 +71,7 @@ ms.locfileid: "48220901"
   
  Quando si digita il nome di una funzione seguito da una parentesi aperta, verrà visualizzata una descrizione comando con informazioni sui parametri e sui valori restituiti della funzione.  
   
- **Category**  
+ **Categoria**  
  Consente di visualizzare categorie di espressioni. La scelta di una categoria stabilisce un contesto per la creazione di un'espressione e comporta la modifica dell'elenco di valori validi nel riquadro Elemento. Ad esempio, per un'espressione per il valore di una casella di testo, espandere funzioni comuni e selezionare le funzioni di aggregazione da visualizzare `Avg`, `Count`e altre funzioni il **elemento** riquadro.  
   
  **Elemento**  
@@ -83,12 +83,12 @@ ms.locfileid: "48220901"
 ## <a name="see-also"></a>Vedere anche  
  [Espressioni &#40;Generatore report e SSRS&#41;](report-design/expressions-report-builder-and-ssrs.md)   
  [Formattazione degli elementi del report &#40;Generatore report e SSRS&#41;](report-design/formatting-report-items-report-builder-and-ssrs.md)   
- [Formattazione di numeri e date di &#40;Report e SSRS&#41;](report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)   
+ [Formattazione di numeri e date &#40;Generatore report e SSRS&#41;](report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)   
  [Riferimenti alla raccolta dei parametri &#40;Generatore report e SSRS&#41;](report-design/built-in-collections-parameters-collection-references-report-builder.md)   
  [Esempi di espressioni di raggruppamento &#40;Generatore report e SSRS&#41;](report-design/group-expression-examples-report-builder-and-ssrs.md)   
- [Esempi di equazioni di filtro &#40;Report e SSRS&#41;](report-design/filter-equation-examples-report-builder-and-ssrs.md)   
+ [Esempi di equazioni di filtro &#40;Generatore report e SSRS&#41;](report-design/filter-equation-examples-report-builder-and-ssrs.md)   
  [Riferimenti alla raccolta campi del set di dati &#40;Report e SSRS&#41;](report-design/built-in-collections-dataset-fields-collection-references-report-builder.md)   
- [Riferimento a funzioni di aggregazione &#40;Report e SSRS&#41;](report-design/report-builder-functions-aggregate-functions-reference.md)   
+ [Riferimento a funzioni di aggregazione &#40;Generatore report e SSRS&#41;](report-design/report-builder-functions-aggregate-functions-reference.md)   
  [Tipi di dati nelle espressioni &#40;Generatore report e SSRS&#41;](report-design/data-types-in-expressions-report-builder-and-ssrs.md)   
  [Selezionare la finestra di dialogo colore &#40;Report e SSRS&#41;](../../2014/reporting-services/select-color-dialog-box-report-builder-and-ssrs.md)  
   

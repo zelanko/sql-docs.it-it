@@ -14,12 +14,12 @@ ms.assetid: 13b982c3-ae03-4155-bc0d-e225050703ce
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cc2287678e7fd3e481c3eaf1d33af64e9ea7dad8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 60c4c4d364f9c07e9ca241dd357535f7f7acb42d
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48186081"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53373673"
 ---
 # <a name="sqlgettypeinfo"></a>SQLGetTypeInfo
   Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] report driver ODBC di Native Client imposta la colonna aggiuntiva USERTYPE nel risultato di `SQLGetTypeInfo`. USERTYPE riporta la definizione del tipo di dati DB-Library e risulta utile agli sviluppatori che trasferiscono applicazioni DB-Library esistenti a ODBC.  
@@ -31,7 +31,7 @@ ms.locfileid: "48186081"
  Per il **xml** tipo di dati, il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC Native Client riporta SQL_SS_LENGTH_UNLIMITED per COLUMN_SIZE indicare dimensioni illimitate.  
   
 ## <a name="sqlgettypeinfo-and-table-valued-parameters"></a>SQLGetTypeInfo e parametri con valori di tabella  
- Il tipo di tabella per i parametri con valori di tabella è sostanzialmente un metatipo, ovvero un tipo utilizzato per definire altri tipi. Pertanto, è privo di essere esposti mediante SQLGetTypeInfo. Le applicazioni devono usare SQLTables, anziché SQLGetTypeInfo, per recuperare i metadati per i tipi di tabella utilizzati con i parametri con valori di tabella.  
+ Il tipo di tabella per i parametri con valori di tabella è effettivamente un meta-tipo-che è, un tipo usato per definire altri tipi. Pertanto, è privo di essere esposti mediante SQLGetTypeInfo. Le applicazioni devono usare SQLTables, anziché SQLGetTypeInfo, per recuperare i metadati per i tipi di tabella utilizzati con i parametri con valori di tabella.  
   
  Per altre informazioni sul recupero di metadati per parametri con valori di tabella, vedere [gli attributi delle istruzioni che per i parametri Affect Table-Valued](../native-client-odbc-table-valued-parameters/statement-attributes-that-affect-table-valued-parameters.md).  
   
@@ -46,7 +46,7 @@ ms.locfileid: "48186081"
  `SQLGetTypeInfo` supporta i tipi CLR definiti dall'utente di grandi dimensioni. Per altre informazioni, vedere [Large CLR User-Defined tipi &#40;ODBC&#41;](../native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Funzione SQLGetTypeInfo](http://go.microsoft.com/fwlink/?LinkId=59356)   
+ [Funzione SQLGetTypeInfo](https://go.microsoft.com/fwlink/?LinkId=59356)   
  [Dettagli di implementazione dell'API ODBC](odbc-api-implementation-details.md)  
   
   

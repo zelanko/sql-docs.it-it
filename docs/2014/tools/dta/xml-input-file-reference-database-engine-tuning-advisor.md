@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 dev_langs:
 - XML
@@ -17,19 +16,19 @@ ms.assetid: 05e5e5f0-d6df-4336-b18e-e9bc2835a766
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4dfcae2c6d18b295919a3b843efe2edd95062d01
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b560b36eb98ec73723a4ce25cb3c647f4962b634
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48126191"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53368573"
 ---
 # <a name="xml-input-file-reference-database-engine-tuning-advisor"></a>Guida di riferimento ai file di input XML (Ottimizzazione guidata motore di database)
   [!INCLUDE[ssDE](../../includes/ssde-md.md)] Ottimizzazione guidata può usare un file di input XML per ottimizzare un database. In questo file XML sono specificati i database, le tabelle, i file o le tabelle del carico di lavoro e le opzioni di ottimizzazione da utilizzare per la sessione di ottimizzazione. È inoltre possibile utilizzare questo file per definire una configurazione specificata dall'utente per eseguire un'analisi di simulazione.  
   
  Un file di input XML di Ottimizzazione guidata [!INCLUDE[ssDE](../../includes/ssde-md.md)] contiene una gerarchia di elementi XML, ognuno dei quali include testo o altri elementi che specificano le impostazioni della sessione di ottimizzazione. È necessario che il file di input XML di Ottimizzazione guidata [!INCLUDE[ssDE](../../includes/ssde-md.md)] sia conforme agli standard di correttezza del formato XML. Per tutti i nomi degli elementi viene pertanto fatta distinzione tra maiuscole e minuscole. Gli elementi vengono specificati mediante l'uso della distinzione tra maiuscole e minuscole Pascal, in base alla quale il primo carattere e la prima lettera della parola successiva concatenata sono in maiuscolo.  
   
- Tutti i valori degli elementi devono essere conformi alle convenzioni di denominazione XML. Per altre informazioni su queste convenzioni, vedere [Contenuto testuale XML](http://go.microsoft.com/fwlink/?LinkId=7614) in MSDN Library.  
+ Tutti i valori degli elementi devono essere conformi alle convenzioni di denominazione XML. Per altre informazioni su queste convenzioni, vedere [Contenuto testuale XML](https://go.microsoft.com/fwlink/?LinkId=7614) in MSDN Library.  
   
  Si noti che questa Guida di riferimento non è completa. Per informazioni su tutti gli elementi che è possibile utilizzare per definire l'input XML, fare riferimento all'XML Schema DTASchema.xsd di Ottimizzazione guidata [!INCLUDE[ssDE](../../includes/ssde-md.md)] .  
   
@@ -45,25 +44,25 @@ ms.locfileid: "48126191"
   
 -   [Elemento DTAInput &#40;DTA&#41;](dtainput-element-dta.md)  
   
--   [Elemento server &#40;DTA&#41;](server-element-dta.md)  
+-   [Elemento Server &#40;DTA&#41;](server-element-dta.md)  
   
 -   [Elemento Workload &#40;DTA&#41;](workload-element-dta.md)  
   
 -   [Elemento TuningOptions &#40;DTA&#41;](tuningoptions-element-dta.md)  
   
--   [Elemento di configurazione &#40;DTA&#41;](configuration-element-dta.md)  
+-   [Elemento Configuration &#40;DTA&#41;](configuration-element-dta.md)  
   
 ## <a name="server-elements"></a>Elementi server  
   
--   [Nome di elemento per il Server &#40;DTA&#41;](name-element-for-server-dta.md)  
+-   [Elemento Name per Server &#40;DTA&#41;](name-element-for-server-dta.md)  
   
--   [Elemento database per Server &#40;DTA&#41;](database-element-for-server-dta.md)  
+-   [Elemento Database per Server &#40;DTA&#41;](database-element-for-server-dta.md)  
   
 ## <a name="workload-elements"></a>Elementi del carico di lavoro  
   
--   [File di elemento &#40;DTA&#41;](file-element-dta.md)  
+-   [Elemento File &#40;DTA&#41;](file-element-dta.md)  
   
--   [Elemento database per il carico di lavoro &#40;DTA&#41;](database-element-for-workload-dta.md)  
+-   [Elemento Database per Workload &#40;DTA&#41;](database-element-for-workload-dta.md)  
   
 -   [Elemento EventString &#40;DTA&#41;](eventstring-element-dta.md)  
   
@@ -89,37 +88,37 @@ ms.locfileid: "48126191"
   
 ## <a name="configuration-elements"></a>Elementi di configurazione  
   
--   [Elemento server per la configurazione &#40;DTA&#41;](server-element-for-configuration-dta.md)  
+-   [Elemento Server per Configuration &#40;DTA&#41;](server-element-for-configuration-dta.md)  
   
--   [Elemento database per la configurazione &#40;DTA&#41;](database-element-for-configuration-dta.md)  
+-   [Elemento Database per Configuration &#40;DTA&#41;](database-element-for-configuration-dta.md)  
   
 -   [Elemento Recommendation &#40;DTA&#41;](recommendation-element-dta.md)  
   
--   [Creare l'elemento &#40;DTA&#41;](create-element-dta.md)  
+-   [Elemento Create &#40;DTA&#41;](create-element-dta.md)  
   
--   [Indice elemento &#40;DTA&#41;](index-element-dta.md)  
+-   [Elemento Index &#40;DTA&#41;](index-element-dta.md)  
   
--   [Nome di elemento per l'indice &#40;DTA&#41;](name-element-for-index-dta.md)  
+-   [Elemento Name per Index &#40;DTA&#41;](name-element-for-index-dta.md)  
   
 -   [Elemento Column per Index &#40;DTA&#41;](column-element-for-index-dta.md)  
   
--   [Nome di elemento per la colonna &#40;DTA&#41;](name-element-for-column-dta.md)  
+-   [Elemento Name per Column &#40;DTA&#41;](name-element-for-column-dta.md)  
   
--   [Elemento filegroup per Index &#40;DTA&#41;](filegroup-element-for-index-dta.md)  
+-   [Elemento Filegroup per Index &#40;DTA&#41;](filegroup-element-for-index-dta.md)  
   
 ## <a name="database-elements"></a>Elementi di database  
   
--   [Nome di elemento per il Database &#40;DTA&#41;](name-element-for-database-dta.md)  
+-   [Elemento Name per Database &#40;DTA&#41;](name-element-for-database-dta.md)  
   
--   [Elemento schema per il Database &#40;DTA&#41;](schema-element-for-database-dta.md)  
+-   [Elemento Schema per Database &#40;DTA&#41;](schema-element-for-database-dta.md)  
   
--   [Nome di elemento per lo Schema &#40;DTA&#41;](name-element-for-schema-dta.md)  
+-   [Elemento Name per Schema &#40;DTA&#41;](name-element-for-schema-dta.md)  
   
--   [Elemento di tabella per lo Schema &#40;DTA&#41;](table-element-for-schema-dta.md)  
+-   [Elemento Table per Schema &#40;DTA&#41;](table-element-for-schema-dta.md)  
   
--   [Nome di elemento per la tabella &#40;DTA&#41;](name-element-for-table-dta.md)  
+-   [Elemento Name per Table &#40;DTA&#41;](name-element-for-table-dta.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Ottimizzazione guidata motore di database](../../relational-databases/performance/database-engine-tuning-advisor.md)  
+ [Database Engine Tuning Advisor](../../relational-databases/performance/database-engine-tuning-advisor.md)  
   
   

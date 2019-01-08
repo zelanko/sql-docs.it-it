@@ -15,12 +15,12 @@ ms.assetid: 0c1fca2e-f22b-4fe8-806f-c87806664f00
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 36aeb6f1b8b2b90dce737e3e815b3385429e84f8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8286c918c224b92e1f391931569030a7218252f1
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48175351"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53373523"
 ---
 # <a name="sql-server-audit-database-engine"></a>SQL Server Audit (Database Engine)
   Il*controllo* di un'istanza del [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] o di un database individuale comporta il rilevamento e la registrazione di eventi che si verificano nel [!INCLUDE[ssDE](../../../includes/ssde-md.md)]. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit consente di creare controlli del server che possono contenere specifiche del controllo del server per gli eventi a livello di server e specifiche del controllo del database per gli eventi a livello di database. Gli eventi controllati possono essere scritti nei registri eventi o nei file di controllo.  
@@ -61,7 +61,7 @@ ms.locfileid: "48175351"
 > [!IMPORTANT]  
 >  Qualsiasi utente autenticato può leggere e scrivere nel registro eventi applicazioni di Windows, per cui sono necessarie autorizzazioni inferiori rispetto al registro eventi di sicurezza di Windows e risulta pertanto meno sicuro di quest'ultimo.  
   
- Per scrivere nel registro eventi di sicurezza di Windows, è necessario che l'account di servizio di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] venga aggiunto ai criteri **Generazione controlli di sicurezza** . Per impostazione predefinita, gli account di sistema locale, Servizio Locale e Servizio di rete appartengono a tali criteri. Questa impostazione può essere configurata tramite lo snap-in dei criteri di sicurezza (secpol.msc) È inoltre necessario che i criteri di sicurezza **Controlla accesso agli oggetti** siano abilitati sia per **Esito positivo** che per **Esito negativo**. Questa impostazione può essere configurata tramite lo snap-in dei criteri di sicurezza (secpol.msc) Nelle [!INCLUDE[wiprlhext](../../../includes/wiprlhext-md.md)] o Windows Server 2008, è possibile impostare più granulare **applicazione generata** criterio dalla riga di comando usando il programma criteri di controllo (`AuditPol.exe)`. Per altre informazioni sulla procedura per abilitare la scrittura nel registro di protezione di Windows, vedere [Scrittura di eventi di controllo di SQL Server nel registro di sicurezza](write-sql-server-audit-events-to-the-security-log.md). Per ulteriori informazioni sul programma Auditpol.exe, vedere l'articolo 921469 della Microsoft Knowledge Base, [Utilizzo dei Criteri di gruppo per configurare impostazioni di controllo della sicurezza dettagliate](http://support.microsoft.com/kb/921469/). I registri eventi di Windows sono globali nel sistema operativo Windows. Per ulteriori informazioni sui registri eventi di Windows, vedere la pagina relativa ai [cenni preliminari sul Visualizzatore eventi](http://go.microsoft.com/fwlink/?LinkId=101455). Se sono necessarie autorizzazioni più specifiche sul controllo, utilizzare la destinazione del file binario.  
+ Per scrivere nel registro eventi di sicurezza di Windows, è necessario che l'account di servizio di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] venga aggiunto ai criteri **Generazione controlli di sicurezza** . Per impostazione predefinita, gli account di sistema locale, Servizio Locale e Servizio di rete appartengono a tali criteri. Questa impostazione può essere configurata tramite lo snap-in dei criteri di sicurezza (secpol.msc) È inoltre necessario che i criteri di sicurezza **Controlla accesso agli oggetti** siano abilitati sia per **Esito positivo** che per **Esito negativo**. Questa impostazione può essere configurata tramite lo snap-in dei criteri di sicurezza (secpol.msc) Nelle [!INCLUDE[wiprlhext](../../../includes/wiprlhext-md.md)] o Windows Server 2008, è possibile impostare più granulare **applicazione generata** criterio dalla riga di comando usando il programma criteri di controllo (`AuditPol.exe)`. Per altre informazioni sulla procedura per abilitare la scrittura nel registro di protezione di Windows, vedere [Scrittura di eventi di controllo di SQL Server nel registro di sicurezza](write-sql-server-audit-events-to-the-security-log.md). Per ulteriori informazioni sul programma Auditpol.exe, vedere l'articolo 921469 della Microsoft Knowledge Base, [Utilizzo dei Criteri di gruppo per configurare impostazioni di controllo della sicurezza dettagliate](https://support.microsoft.com/kb/921469/). I registri eventi di Windows sono globali nel sistema operativo Windows. Per ulteriori informazioni sui registri eventi di Windows, vedere la pagina relativa ai [cenni preliminari sul Visualizzatore eventi](https://go.microsoft.com/fwlink/?LinkId=101455). Se sono necessarie autorizzazioni più specifiche sul controllo, utilizzare la destinazione del file binario.  
   
  Quando si salvano informazioni di controllo in un file, per contribuire a impedirne l'alterazione, è possibile limitare l'accesso al percorso del file nei modi seguenti:  
   
@@ -107,7 +107,7 @@ ms.locfileid: "48175351"
 ## <a name="considerations"></a>Considerazioni  
  Se durante la fase iniziale del controllo si verifica un errore, il server non si avvierà. In questo caso, per avviare il server è possibile usare l'opzione **-f** della riga di comando.  
   
- Se in seguito a un errore a livello del controllo il server si arresta o non si avvia perché per il controllo è specificata l'impostazione ON_FAILURE=SHUTDOWN, l'evento MSG_AUDIT_FORCED_SHUTDOWN verrà scritto nel registro. Poiché l'arresto si verificherà quando questa impostazione viene incontrata la prima volta, l'evento verrà scritto solo una volta. Tale evento viene scritto dopo il messaggio di errore relativo al controllo che provoca l'arresto. Per ignorare l'arresto provocato dal controllo, un amministratore può avviare [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in modalità utente singolo usando il flag **–m** . Se l'avvio viene eseguito in modalità utente singolo, verrà effettuato il downgrade di qualsiasi controllo per la cui sessione è specificata l'esecuzione di ON_FAILURE=SHUTDOWN come ON_FAILURE=CONTINUE. Se [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] viene avviato tramite il flag **–m** , nel log degli errori verrà scritto il messaggio MSG_AUDIT_SHUTDOWN_BYPASSED.  
+ Se in seguito a un errore a livello del controllo il server si arresta o non si avvia perché per il controllo è specificata l'impostazione ON_FAILURE=SHUTDOWN, l'evento MSG_AUDIT_FORCED_SHUTDOWN verrà scritto nel registro. Poiché l'arresto si verificherà quando questa impostazione viene incontrata la prima volta, l'evento verrà scritto solo una volta. Tale evento viene scritto dopo il messaggio di errore relativo al controllo che provoca l'arresto. Per ignorare l'arresto provocato dal controllo, un amministratore può avviare [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in modalità utente singolo usando il flag **-m**. Se l'avvio viene eseguito in modalità utente singolo, verrà effettuato il downgrade di qualsiasi controllo per la cui sessione è specificata l'esecuzione di ON_FAILURE=SHUTDOWN come ON_FAILURE=CONTINUE. Se [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] viene avviato con il flag **-m**, nel log degli errori verrà scritto il messaggio MSG_AUDIT_SHUTDOWN_BYPASSED.  
   
  Per altre informazioni sulle opzioni di avvio del servizio, vedere [Opzioni di avvio del servizio del motore di database](../../../database-engine/configure-windows/database-engine-service-startup-options.md).  
   
@@ -145,7 +145,7 @@ ms.locfileid: "48175351"
 ### <a name="dynamic-views-and-functions"></a>Viste e funzioni dinamiche  
  Nella tabella seguente vengono elencate le viste e le funzioni dinamiche che è possibile utilizzare per il controllo di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
-|Viste e funzioni dinamiche|Description|  
+|Viste e funzioni dinamiche|Descrizione|  
 |---------------------------------|-----------------|  
 |[sys.dm_audit_actions](/sql/relational-databases/system-dynamic-management-views/sys-dm-audit-actions-transact-sql)|Restituisce una riga per ogni azione di controllo che può essere segnalata nel log di controllo e per ogni gruppo di azioni di controllo che possono essere configurate come parte di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit.|  
 |[sys.dm_server_audit_status](/sql/relational-databases/system-dynamic-management-views/sys-dm-server-audit-status-transact-sql)|Fornisce informazioni sullo stato corrente del controllo.|  
@@ -155,7 +155,7 @@ ms.locfileid: "48175351"
 ### <a name="catalog-views"></a>Viste del catalogo  
  Nella tabella seguente vengono elencate le viste del catalogo che è possibile utilizzare per il controllo di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
-|Viste del catalogo|Description|  
+|Viste del catalogo|Descrizione|  
 |-------------------|-----------------|  
 |[sys.database_ audit_specifications](/sql/relational-databases/system-catalog-views/sys-database-audit-specifications-transact-sql)|Contiene informazioni sulle specifiche del controllo del database in un controllo di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in un'istanza del server.|  
 |[sys.database_audit_specification_details](/sql/relational-databases/system-catalog-views/sys-database-audit-specification-details-transact-sql)|Contiene informazioni sulle specifiche del controllo del database in un controllo di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in un'istanza del server per tutti i database.|  
@@ -213,7 +213,7 @@ ms.locfileid: "48175351"
  [Trigger DDL](../../triggers/ddl-triggers.md)  
  Vengono illustrate le modalità di utilizzo di trigger DDL (Data Definition Language) per tenere traccia delle modifiche apportate ai database.  
   
- [Microsoft TechNet: SQL Server TechCenter: Sicurezza e protezione di SQL Server 2005](http://go.microsoft.com/fwlink/?LinkId=101152)  
+ [Microsoft TechNet: TechCenter di SQL Server: Protezione e sicurezza di SQL Server 2005](https://go.microsoft.com/fwlink/?LinkId=101152)  
  Fornisce informazioni aggiornate sulla sicurezza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 ## <a name="see-also"></a>Vedere anche  

@@ -1,5 +1,5 @@
 ---
-title: Come generare le previsioni e stime usando modelli di machine learning in SQL Server | Microsoft Docs
+title: Generare le previsioni e stime usando modelli di machine learning - SQL Server Machine Learning Services
 description: Usare rxPredict o sp_rxPredict per l'assegnazione dei punteggi in tempo reale o prevedere T-SQL per le stime di assegnazione dei punteggi nativa e le previsioni in R e Pythin in SQL Server Machine Learning.
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 8d1ff524a0f033c4e47d7fe7f4e366cb00f2f7b5
-ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
+ms.openlocfilehash: 576a8b161c87270b0dcc40494cf0121a7b644fc4
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46712473"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53432504"
 ---
 # <a name="how-to-generate-forecasts-and-predictions-using-machine-learning-models-in-sql-server"></a>Come generare le previsioni e stime usando modelli di machine learning in SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -36,7 +36,7 @@ Il modello deve essere creato utilizzando una funzione supportata, quindi serial
 
 L'importanza delle estensioni di C++ e CLR è prossimità al motore di database stesso. Il linguaggio nativo del motore di database è C++, ovvero estensioni scritte in C++ eseguito con un minor numero di dipendenze. Al contrario, le estensioni CLR dipendono da .NET Core. 
 
-Come è prevedibile, supporto della piattaforma è stato interessato da questi ambienti di runtime. Estensioni del motore di database nativo esecuzione ovunque nel database relazionale è supportato: Windows, Linux e Azure. Le estensioni CLR con il requisito di .NET Core attualmente è solo Windows.
+Come è prevedibile, supporto della piattaforma è stato interessato da questi ambienti di runtime. Estensioni del motore di database nativo esecuzione ovunque che è supportato nel database relazionale: Windows, Linux e Azure. Le estensioni CLR con il requisito di .NET Core attualmente è solo Windows.
 
 ## <a name="scoring-overview"></a>Panoramica di assegnazione dei punteggi
 
@@ -99,7 +99,7 @@ La serializzazione di un modello in un formato binario è utile, ma non è neces
 Se si usa la [server autonomi](r-server-standalone.md) o una [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server), sono disponibili altre opzioni oltre a stored procedure e funzioni T-SQL per la generazione di stime rapidamente. Il server autonomo e il Machine Learning Server supportano il concetto di una *servizio web* per la distribuzione di codice. È possibile aggregare una R o Python eseguito il training del modello come servizio web, chiamato in fase di esecuzione per valutare nuovi input di dati. Per altre informazioni, vedere gli articoli seguenti:
 
 + [Quali sono i servizi web in Machine Learning Server?](https://docs.microsoft.com/machine-learning-server/operationalize/concept-what-are-web-services)
-+ [Che cos'è messa in funzione?](https://docs.microsoft.com/machine-learning-server/operationalize/concept-operationalize-deploy-consume)
++ [Che cos'è messa in funzione?](https://docs.microsoft.com/machine-learning-server/what-is-operationalization)
 + [Distribuire un modello Python come un servizio web con Azure ml-model-management-sdk](https://docs.microsoft.com/machine-learning-server/operationalize/python/quickstart-deploy-python-web-service)
 + [Pubblicare un blocco di codice R o un modello in tempo reale come nuovo servizio web](https://docs.microsoft.com/machine-learning-server/r-reference/mrsdeploy/publishservice)
 + [pacchetto mrsdeploy per R](https://docs.microsoft.com/machine-learning-server/r-reference/mrsdeploy/mrsdeploy-package)

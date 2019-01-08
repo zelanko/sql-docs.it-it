@@ -33,12 +33,12 @@ ms.assetid: 72ca3387-620d-4473-8e23-7fe1f2b3d5bf
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: fdd7ff7f21bcf0dbd761e745fc1fcd42f7e2d3d8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 315635739984bd76d79ff3a36b32f09783aecae3
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48084611"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53371443"
 ---
 # <a name="cube-properties"></a>Proprietà dei cubi
   I cubi dispongono di proprietà che è possibile impostare per influire sul funzionamento a livello di cubo. Nella tabella seguente è disponibile un riepilogo di tali proprietà.  
@@ -48,7 +48,7 @@ ms.locfileid: "48084611"
   
  Per altre informazioni su come impostare le proprietà dei cubi, vedere [Progettazione cubi &#40;Analysis Services - dati multidimensionali&#41;](../cube-designer-analysis-services-multidimensional-data.md).  
   
-|Proprietà|Description|  
+|Proprietà|Descrizione|  
 |--------------|-----------------|  
 |`AggregationPrefix`|Specifica il prefisso comune utilizzato per i nomi di aggregazioni.|  
 |`Collation`|Specifica l'identificatore delle impostazioni locali (LCID) e il flag di confronto, separati da un carattere di sottolineatura, ad esempio Latin1_General_C1_AS.|  
@@ -70,7 +70,7 @@ ms.locfileid: "48084611"
 |`Visible`|Determina la visibilità del cubo.|  
   
 > [!NOTE]  
->  Per altre informazioni sull'impostazione di valori per la proprietà ErrorConfiguration quando si lavora con i valori null e altri problemi di integrità dei dati, vedere [la gestione di problemi di integrità dei dati di Analysis Services 2005](http://go.microsoft.com/fwlink/?LinkId=81891).  
+>  Per altre informazioni sull'impostazione di valori per la proprietà ErrorConfiguration quando si lavora con i valori null e altri problemi di integrità dei dati, vedere [la gestione di problemi di integrità dei dati di Analysis Services 2005](https://go.microsoft.com/fwlink/?LinkId=81891).  
   
 ## <a name="see-also"></a>Vedere anche  
  [La memorizzazione nella cache &#40;partizioni&#41;](partitions-proactive-caching.md)  

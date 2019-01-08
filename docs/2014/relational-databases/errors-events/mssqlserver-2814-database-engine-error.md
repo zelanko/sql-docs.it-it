@@ -12,12 +12,12 @@ ms.assetid: 22800748-9be9-4511-9428-6b8b40e5bef9
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b0f9689a90ab78abfd6c8e3eed888838cc9486b5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b896aa1221f3da636d6754e829f00f0b4b5c24fe
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48063897"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53357428"
 ---
 # <a name="mssqlserver2814"></a>MSSQLSERVER_2814
     
@@ -37,7 +37,7 @@ ms.locfileid: "48063897"
   
  I motivi della ricompilazione sono elencati nella tabella seguente.  
   
-|Codice motivo|Description|  
+|Codice motivo|Descrizione|  
 |-----------------|-----------------|  
 |1|Schema modificato|  
 |2|Statistiche modificate|  
@@ -71,7 +71,7 @@ ms.locfileid: "48063897"
   
      AND qs.plan_handle = *plan_handle*;  
   
-2.  In base alla descrizione del codice motivo, modificare l'istruzione, il batch o la procedura per evitare ricompilazioni. Una stored procedure può contenere, ad esempio, uno o più istruzioni SET. Queste istruzioni devono essere rimosse dalla procedura. Per esempi aggiuntivi sulle cause e sulle risoluzioni dei problemi di ricompilazione, vedere [Problematiche di compilazione batch, ricompilazione e memorizzazione dei piani nella cache in SQL Server 2005](http://go.microsoft.com/fwlink/?LinkId=69175).  
+2.  In base alla descrizione del codice motivo, modificare l'istruzione, il batch o la procedura per evitare ricompilazioni. Una stored procedure può contenere, ad esempio, uno o più istruzioni SET. Queste istruzioni devono essere rimosse dalla procedura. Per esempi aggiuntivi sulle cause e sulle risoluzioni dei problemi di ricompilazione, vedere [Problematiche di compilazione batch, ricompilazione e memorizzazione dei piani nella cache in SQL Server 2005](https://go.microsoft.com/fwlink/?LinkId=69175).  
   
 3.  Se il problema persiste, contattare il Servizio Supporto Tecnico Clienti Microsoft.  
   

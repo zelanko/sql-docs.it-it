@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Data Profiling Task Editor
@@ -13,12 +12,12 @@ ms.assetid: c1e5f5de-04f5-4d00-a9f0-55817186bdf9
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a28070a2229e016bbc03b90d559252bd8851ac78
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6768eba62eec59bc37ce360014d9c000aa01c724
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48215141"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53375203"
 ---
 # <a name="column-value-distribution-profile-request-options-data-profiling-task"></a>Opzioni di Richiesta profilo Distribuzione valori di colonna (Attività Profiling dati)
   Usare il riquadro **Proprietà richiesta** della pagina **Richieste profilo** per impostare le opzioni della **Richiesta profilo Distribuzione valori di colonna** selezionata nel riquadro delle richieste. Il profilo Distribuzione valori di colonna segnala tutti i valori distinct nella colonna selezionata e la percentuale di righe della tabella rappresentata da ogni valore. Può inoltre segnalare i valori che rappresentano più percentuali specificate di righe nella tabella. Il profilo consente infine di identificare eventuali problemi nei dati, ad esempio un numero non corretto di valori distinct in una colonna. Si analizza, ad esempio, una colonna contenente gli stati degli Stati Uniti e si individuano più di 50 valori distinct.  
@@ -71,7 +70,7 @@ ms.locfileid: "48215141"
 > [!NOTE]  
 >  Se si usa il carattere jolly **(\*)** per **ColumnName**, la proprietà **CompareOptions** è di sola lettura ed è impostata su **Default**.  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |**Default**|Ordina e confronta i dati in base alle regole di confronto della colonna nella tabella di origine.|  
 |**BinarySort**|Ordina e confronta i dati di in base ai modelli di bit definiti per ogni carattere. L'ordinamento binario supporta la distinzione tra maiuscole e minuscole e tra caratteri accentati e non accentati e rappresenta inoltre il tipo di ordinamento più rapido.|  
@@ -79,7 +78,7 @@ ms.locfileid: "48215141"
   
  Se si seleziona **DictionarySort**, è inoltre possibile selezionare qualsiasi combinazione delle opzioni elencate nella tabella seguente. Per impostazione predefinita, nessuna di queste opzioni aggiuntive è selezionata.  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |**IgnoreCase**|Specifica se nel confronto viene fatta distinzione tra lettere maiuscole e minuscole. Se questa opzione è impostata, nel confronto tra stringhe verrà ignorata la combinazione di maiuscole e minuscole. Ad esempio, la stringa "ABC" verrà considerata identica alla stringa "abc".|  
 |**IgnoreNonSpace**|Specifica se nel confronto viene fatta distinzione tra i caratteri con spaziatura e quelli con segni diacritici. Se questa opzione è impostata, nel confronto verranno ignorati i segni diacritici. Ad esempio, il carattere "å" verrà considerato uguale al carattere "a".|  
@@ -94,7 +93,7 @@ ms.locfileid: "48215141"
  **ValueDistributionOption**  
  Consente di specificare se calcolare la distribuzione per tutti i valori di colonna. Il valore predefinito di questa opzione è **FrequentValues**.  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |**AllValues**|La distribuzione viene calcolata per tutti i valori di colonna.|  
 |**FrequentValues**|La distribuzione viene calcolata solo per i valori la cui frequenza supera il valore minimo specificato in **FrequentValueThreshold**. Valori che non soddisfano **FrequentValueThreshold** sono esclusi dal report di output.|  

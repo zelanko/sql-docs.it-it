@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - connections [SQL Server], SPNs
@@ -17,12 +16,12 @@ ms.assetid: e38d5ce4-e538-4ab9-be67-7046e0d9504e
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 671c496b98688433cf09b78bdeab4839142fe13c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dcbe4835a333e6b1b1c0881ccd1833c4e5606639
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48219251"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53370413"
 ---
 # <a name="register-a-service-principal-name-for-kerberos-connections"></a>Registrazione di un nome dell'entità servizio per le connessioni Kerberos
   Per utilizzare l'autenticazione Kerberos con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è necessario che si verifichino entrambe le seguenti condizioni:  
@@ -41,7 +40,7 @@ SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;
 ```  
   
 > [!TIP]  
->  **[!INCLUDE[msCoName](../../includes/msconame-md.md)] Kerberos Configuration Manager per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** è uno strumento di diagnostica che semplifica la risoluzione dei problemi di connettività correlati a Kerberos con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per altre informazioni, vedere [Microsoft Kerberos Configuration Manager per SQL Server](http://www.microsoft.com/download/details.aspx?id=39046).  
+>  **[!INCLUDE[msCoName](../../includes/msconame-md.md)] Kerberos Configuration Manager per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** è uno strumento di diagnostica che semplifica la risoluzione dei problemi di connettività correlati a Kerberos con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per altre informazioni, vedere [Microsoft Kerberos Configuration Manager per SQL Server](https://www.microsoft.com/download/details.aspx?id=39046).  
   
 ##  <a name="Role"></a> Ruolo del nome SPN nell'autenticazione  
  Quando un'applicazione apre una connessione e utilizza l'autenticazione di Windows, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client passa il nome del computer di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , il nome dell'istanza ed eventualmente un nome SPN. Se passato dalla connessione, il nome SPN viene utilizzato senza alcuna modifica.  
@@ -58,14 +57,14 @@ SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;
  L'autenticazione di Windows è il metodo preferito per l'autenticazione in SQL Server da parte degli utenti. I client che utilizzano l'autenticazione di Windows vengono autenticati tramite NTLM o Kerberos. In un ambiente Active Directory l'autenticazione Kerberos viene sempre tentata per prima. L'autenticazione Kerberos non è disponibile per client [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] che utilizzano named pipe.  
   
 ##  <a name="Permissions"></a> Permissions  
- Quando il servizio [!INCLUDE[ssDE](../../includes/ssde-md.md)] viene avviato, tenta di registrare il nome dell'entità servizio (SPN). Se l'account che avvia SQL Server non dispone dell'autorizzazione necessaria per registrare un nome SPN in Servizi di dominio Active Directory, questa chiamata non riesce e viene registrato un messaggio di avviso nel registro eventi applicazioni nonché nel log degli errori di SQL Server. Per registrare il nome SPN, è necessario che il [!INCLUDE[ssDE](../../includes/ssde-md.md)] venga eseguito con un account predefinito, ad esempio Sistema locale (non consigliato) o NETWORK SERVICE, oppure con un account che dispone dell'autorizzazione necessaria per registrare un nome SPN, ad esempio un account di amministratore di dominio. Quando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene eseguito nel sistema operativo  [!INCLUDE[win7](../../includes/win7-md.md)] o  [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] , è possibile eseguire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizzando un account virtuale o un account dei servizi gestiti (MSA). Entrambi gli account virtuali e MSA possono registrare un SPN. Se [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non viene eseguito con nessuno di questi account, il nome SPN non viene registrato all'avvio e l'amministratore di dominio lo dovrà registrare manualmente.  
+ Quando il servizio [!INCLUDE[ssDE](../../includes/ssde-md.md)] viene avviato, tenta di registrare il nome dell'entità servizio (SPN). Se l'account che avvia SQL Server non ha l'autorizzazione necessaria per registrare un nome SPN in Servizi di dominio Active Directory, questa chiamata non riesce e viene registrato un messaggio di avviso nel registro eventi applicazioni nonché nel log degli errori di SQL Server. Per registrare il nome SPN, è necessario che il [!INCLUDE[ssDE](../../includes/ssde-md.md)] venga eseguito con un account predefinito, ad esempio Sistema locale (non consigliato) o NETWORK SERVICE, oppure con un account che dispone dell'autorizzazione necessaria per registrare un nome SPN, ad esempio un account di amministratore di dominio. Quando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene eseguito nel sistema operativo  [!INCLUDE[win7](../../includes/win7-md.md)] o  [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] , è possibile eseguire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizzando un account virtuale o un account dei servizi gestiti (MSA). Entrambi gli account virtuali e MSA possono registrare un SPN. Se [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non viene eseguito con nessuno di questi account, il nome SPN non viene registrato all'avvio e l'amministratore di dominio lo dovrà registrare manualmente.  
   
 > [!NOTE]  
 >  Quando il dominio di Windows è configurato per essere eseguito a un livello funzionale inferiore a quello di [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] Windows Server 2008 R2, l'Account dei servizi gestiti non disporrà delle autorizzazioni necessarie per registrare i nomi SPN per il servizio [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] . Se l'autenticazione Kerberos è richiesta, l'amministratore di dominio deve registrare manualmente i nomi SPN di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sull'Account dei servizi gestiti.  
   
- Per altre informazioni su come concedere l'autorizzazione di lettura o scrittura per un nome SPN a un account diverso da quello di amministratore di dominio, vedere l'articolo della Knowledge Base [Utilizzo dell'autenticazione Kerberos in SQL Server](http://support.microsoft.com/kb/319723).  
+ Per altre informazioni su come concedere l'autorizzazione di lettura o scrittura per un nome SPN a un account diverso da quello di amministratore di dominio, vedere l'articolo della Knowledge Base [Utilizzo dell'autenticazione Kerberos in SQL Server](https://support.microsoft.com/kb/319723).  
   
- Maggiori informazioni sono disponibili nell'articolo [How to Implement Kerberos Constrained Delegation with SQL Server 2008](http://technet.microsoft.com/library/ee191523.aspx)(Come implementare la delega vincolata Kerberos con SQL Server 2008)  
+ Maggiori informazioni sono disponibili nell'articolo [How to Implement Kerberos Constrained Delegation with SQL Server 2008](https://technet.microsoft.com/library/ee191523.aspx)(Come implementare la delega vincolata Kerberos con SQL Server 2008)  
   
 ##  <a name="Formats"></a> Formati dei nomi SPN  
  A partire da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], il formato dei nomi SPN è stato modificato per supportare l'autenticazione Kerberos con il protocollo TCP/IP, le named pipe e la memoria condivisa. Di seguito sono riportati i formati del nome SPN supportati per le istanze denominate e predefinite.  
@@ -111,7 +110,7 @@ SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;
  Se l'account di servizio non dispone delle autorizzazioni richieste per eseguire queste azioni, potrebbe essere necessario intervenire manualmente per registrare o annullare la registrazione del nome SPN.  
   
 ##  <a name="Manual"></a> Registrazione manuale del nome SPN  
- Per registrare manualmente il nome SPN, l'amministratore deve utilizzare lo strumento Setspn.exe disponibile negli strumenti di supporto Microsoft di [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)] . Per altre informazioni, vedere l'articolo della Knowledge Base [Strumenti di supporto di Windows Server 2003 Service Pack 1](http://support.microsoft.com/kb/892777) .  
+ Per registrare manualmente il nome SPN, l'amministratore deve utilizzare lo strumento Setspn.exe disponibile negli strumenti di supporto Microsoft di [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)] . Per altre informazioni, vedere l'articolo della Knowledge Base [Strumenti di supporto di Windows Server 2003 Service Pack 1](https://support.microsoft.com/kb/892777) .  
   
  Setspn.exe è un'utilità della riga di comando che consente di leggere, modificare ed eliminare la proprietà della directory del nome dell'entità servizio (SPN). Questo strumento consente inoltre di visualizzare i nomi SPN correnti, reimpostare i nomi SPN predefiniti dell'account e aggiungere o eliminare nomi SPN supplementari.  
   
@@ -159,8 +158,8 @@ WHERE session_id = @@SPID;
   
 |Scenario|Metodo di autenticazione|  
 |--------------|---------------------------|  
-|Viene eseguito il mapping del nome SPN all'account di dominio, all'account virtuale, all'account dei servizi gestiti (MSA) o all'account predefinito corretto. ad esempio sistema locale o NETWORK SERVICE.<br /><br /> Nota: Termine corretto si intende che l'account eseguito il mapping da nome SPN registrato è l'account di cui è in esecuzione il servizio SQL Server.|Le connessioni locali utilizzano l'autenticazione NTLM, mentre quelle remote utilizzano l'autenticazione Kerberos.|  
-|Il nome SPN è l'account di dominio, l'account virtuale, l'account dei servizi gestiti (MSA) o l'account predefinito corretto.<br /><br /> Nota: Termine corretto si intende che l'account eseguito il mapping da nome SPN registrato è l'account di cui è in esecuzione il servizio SQL Server.|Le connessioni locali utilizzano l'autenticazione NTLM, mentre quelle remote utilizzano l'autenticazione Kerberos.|  
+|Viene eseguito il mapping del nome SPN all'account di dominio, all'account virtuale, all'account dei servizi gestiti (MSA) o all'account predefinito corretto. ad esempio sistema locale o NETWORK SERVICE.<br /><br /> Nota: Con il termine corretto si intende che l'account per il quale è stato eseguito il mapping dal nome SPN registrato è quello utilizzato per eseguire il servizio SQL Server.|Le connessioni locali utilizzano l'autenticazione NTLM, mentre quelle remote utilizzano l'autenticazione Kerberos.|  
+|Il nome SPN è l'account di dominio, l'account virtuale, l'account dei servizi gestiti (MSA) o l'account predefinito corretto.<br /><br /> Nota: Con il termine corretto si intende che l'account per il quale è stato eseguito il mapping dal nome SPN registrato è quello utilizzato per eseguire il servizio SQL Server.|Le connessioni locali utilizzano l'autenticazione NTLM, mentre quelle remote utilizzano l'autenticazione Kerberos.|  
 |Viene eseguito il mapping del nome SPN a un account di dominio, a un account virtuale, a un account dei servizi gestiti (MSA) o a un account predefinito non corretto.|Errore di autenticazione|  
 |La ricerca del nome SPN ha esito negativo o non viene eseguito il mapping a un account di dominio, a un account virtuale, a un account dei servizi gestiti (MSA) o a un account predefinito non corretto, oppure non è un account di dominio, un account virtuale, un account dei servizi gestiti o un account predefinito corretto.|Le connessioni locali e remote utilizzano l'autenticazione NTLM.|  
   
@@ -176,6 +175,6 @@ WHERE session_id = @@SPID;
  [Nomi SPN &#40;Service Principal Name&#41; nelle connessioni client &#40;OLE DB&#41;](../../relational-databases/native-client/ole-db/service-principal-names-spns-in-client-connections-ole-db.md)   
  [Nomi SPN &#40;Service Principal Name&#41; nelle connessioni client &#40;ODBC&#41;](../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md)   
  [Funzionalità di SQL Server Native Client](../../relational-databases/native-client/features/sql-server-native-client-features.md)   
- [Gestire problemi di autenticazione Kerberos in un ambiente Reporting Services](http://technet.microsoft.com/library/ff679930.aspx)  
+ [Gestire problemi di autenticazione Kerberos in un ambiente Reporting Services](https://technet.microsoft.com/library/ff679930.aspx)  
   
   

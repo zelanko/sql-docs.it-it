@@ -1,24 +1,23 @@
 ---
-title: 'Lezione 2: Connessione da un altro computer | Microsoft Docs'
+title: 'Lezione 2: La connessione da un altro Computer | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 ms.assetid: fd4ddeb8-0cb6-441b-9704-03575c07020f
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: bb12113055da47358baf4c14403c4b95b433cf86
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6efa9ab6ec2733c67a00b4c16e08d6b4e435cf9b
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48183211"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53367194"
 ---
-# <a name="lesson-2-connecting-from-another-computer"></a>Lezione 2: Connessione da un altro computer
+# <a name="lesson-2-connecting-from-another-computer"></a>Lezione 2: connessione da un altro computer
   Per una maggiore sicurezza non è possibile accedere al [!INCLUDE[ssDE](../includes/ssde-md.md)] di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Developer Edition, Express Edition ed Evaluation Edition da un altro computer al momento dell'installazione iniziale. In questa lezione vengono descritte le procedure per abilitare i protocolli, configurare le porte e configurare Windows Firewall per la connessione da altri computer.  
   
  In questa lezione sono incluse le attività seguenti:  
@@ -55,14 +54,14 @@ ms.locfileid: "48183211"
     >  Dopo avere apportato modifiche ai protocolli di rete, è necessario riavviare il servizio [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Questa operazione viene completata nell'attività successiva.  
   
 ##  <a name="port"></a> Configurazione di una porta fissa  
- Per una maggiore sicurezza, in Windows Server 2008, [!INCLUDE[wiprlhlong](../includes/wiprlhlong-md.md)]e Windows 7 è abilitato Windows Firewall. Se si desidera connettersi a questa istanza da un altro computer, è necessario aprire una porta di comunicazione nel firewall. L'istanza predefinita di [!INCLUDE[ssDE](../includes/ssde-md.md)] resta in attesa sulla porta 1433 e non è pertanto necessario configurare una porta fissa. Le istanze denominate, inclusa [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] , restano tuttavia in attesa su porte dinamiche. Per aprire una porta nel firewall, è innanzitutto necessario configurare il [!INCLUDE[ssDE](../includes/ssde-md.md)] per l'attesa su una porta specifica nota come porta fissa o statica. In caso contrario, è possibile che il [!INCLUDE[ssDE](../includes/ssde-md.md)] resti in attesa su una porta diversa a ogni avvio. Per altre informazioni sui firewall e sulle impostazioni predefinite di Windows Firewall e per una descrizione delle porte TCP che interessano il motore di database, Analysis Services, Reporting Services e Integration Services, vedere [Configurare Windows Firewall per consentire l'accesso a SQL Server](../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md).  
+ Per una maggiore sicurezza, in Windows Server 2008, [!INCLUDE[wiprlhlong](../includes/wiprlhlong-md.md)] e Windows 7 è abilitato Windows Firewall. Se si desidera connettersi a questa istanza da un altro computer, è necessario aprire una porta di comunicazione nel firewall. L'istanza predefinita di [!INCLUDE[ssDE](../includes/ssde-md.md)] resta in attesa sulla porta 1433 e non è pertanto necessario configurare una porta fissa. Le istanze denominate, inclusa [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] , restano tuttavia in attesa su porte dinamiche. Per aprire una porta nel firewall, è innanzitutto necessario configurare il [!INCLUDE[ssDE](../includes/ssde-md.md)] per l'attesa su una porta specifica nota come porta fissa o statica. In caso contrario, è possibile che il [!INCLUDE[ssDE](../includes/ssde-md.md)] resti in attesa su una porta diversa a ogni avvio. Per altre informazioni sui firewall e sulle impostazioni predefinite di Windows Firewall e per una descrizione delle porte TCP che interessano il motore di database, Analysis Services, Reporting Services e Integration Services, vedere [Configurare Windows Firewall per consentire l'accesso a SQL Server](../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md).  
   
 > [!NOTE]  
->  Le assegnazioni dei numeri di porta vengono gestite da IANA (Internet Assigned Numbers Authority) e sono elencate in [http://www.iana.org](http://go.microsoft.com/fwlink/?LinkId=48844). I numeri di porta devono essere assegnati utilizzando numeri compresi tra 49152 e 65535.  
+>  Le assegnazioni dei numeri di porta vengono gestite da IANA (Internet Assigned Numbers Authority) e sono elencate in [http://www.iana.org](https://go.microsoft.com/fwlink/?LinkId=48844). I numeri di porta devono essere assegnati utilizzando numeri compresi tra 49152 e 65535.  
   
 #### <a name="configure-sql-server-to-listen-on-a-specific-port"></a>Configurare SQL Server per l'attesa su una porta specifica  
   
-1.  In Gestione configurazione [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] espandere **Configurazione di rete SQL Server**e quindi fare clic sull'istanza del server che si vuole configurare.  
+1.  In Gestione configurazione [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] espandere **Configurazione di rete SQL Server** e quindi fare clic sull'istanza del server che si vuole configurare.  
   
 2.  Nel riquadro destro fare doppio clic su **TCP/IP**.  
   
@@ -128,6 +127,6 @@ ms.locfileid: "48183211"
  Si conclude così questa breve esercitazione sulla connettività di base.  
   
 ## <a name="return-to-tutorials-portal"></a>Ritornare al portale delle esercitazioni  
- [Esercitazione: Introduzione al motore di database](tutorial-getting-started-with-the-database-engine.md)  
+ [Esercitazione: Guida introduttiva con il motore di Database](tutorial-getting-started-with-the-database-engine.md)  
   
   

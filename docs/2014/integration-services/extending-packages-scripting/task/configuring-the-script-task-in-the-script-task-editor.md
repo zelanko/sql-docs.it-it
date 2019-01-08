@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- integration-services
+ms.technology: integration-services
 ms.topic: reference
 dev_langs:
 - VB
@@ -18,12 +16,12 @@ ms.assetid: 232de0c9-b24d-4c38-861d-6c1f4a75bdf3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4bdb8d4cecc2058b35db2cfaa328bbf1978899f0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 57a82017982310634fc734634e7167a5a08ca8e8
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48070017"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376863"
 ---
 # <a name="configuring-the-script-task-in-the-script-task-editor"></a>Configurazione dell'attività Script nell'editor attività Script
   Prima di scrivere codice personalizzato nell'attività Script, configurarne le principali proprietà nelle tre pagine di **Editor attività Script**. È possibile configurare proprietà di attività aggiuntive che non sono specifiche dell'attività Script utilizzando la finestra Proprietà.  
@@ -53,7 +51,7 @@ ms.locfileid: "48070017"
 > [!NOTE]  
 >  Per i nomi delle variabili viene fatta distinzione tra maiuscole e minuscole.  
   
- Per selezionare le variabili, fare clic sui puntini di sospensione (**…**) accanto al campo della proprietà. Per altre informazioni, vedere [Pagina Seleziona variabili](../../control-flow/select-variables-page.md).  
+ Per selezionare le variabili, fare clic sui puntini di sospensione (**...**) accanto al campo della proprietà. Per altre informazioni, vedere [Pagina Seleziona variabili](../../control-flow/select-variables-page.md).  
   
 ### <a name="edit-script-button"></a>Pulsante Modifica script  
  Il pulsante **Modifica script** avvia l'ambiente di sviluppo di VSTA in cui scrivere lo script personalizzato. Per altre informazioni, vedere [Scrittura di codice e debug dell'attività Script](coding-and-debugging-the-script-task.md).  
@@ -61,7 +59,7 @@ ms.locfileid: "48070017"
 ## <a name="expressions-page-of-the-script-task-editor"></a>Pagina Espressioni dell'editor attività Script  
  Nella pagina **Espressioni** di **Editor attività Script** è possibile usare espressioni per fornire valori per le proprietà dell'attività Script descritte in precedenza e per molte altre proprietà di attività. Per altre informazioni, vedere [Espressioni di Integration Services &#40;SSIS&#41;](../../expressions/integration-services-ssis-expressions.md).  
   
-![Icona di Integration Services (piccola)](../../media/dts-16.gif "icona di Integration Services (piccola)")**rimangono fino a Date con Integration Services** <br /> Per il download più recenti, articoli, esempi e i video [!INCLUDE[msCoName](../../../includes/msconame-md.md)], nonché soluzioni selezionate dalla community, visitare il [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] pagina su MSDN:<br /><br /> [Visita la pagina di Integration Services su MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Per ricevere una notifica automatica su questi aggiornamenti, sottoscrivere i feed RSS disponibili nella pagina.  
+![Icona di Integration Services (piccola)](../../media/dts-16.gif "icona di Integration Services (piccola)")**rimangono fino a Date con Integration Services**<br /> Per i download, gli articoli, gli esempi e i video [!INCLUDE[msCoName](../../../includes/msconame-md.md)] più recenti, oltre alle soluzioni selezionate dalla community, visitare la pagina [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] su MSDN:<br /><br /> [Visita la pagina di Integration Services su MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Per ricevere una notifica automatica su questi aggiornamenti, sottoscrivere i feed RSS disponibili nella pagina.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Scrittura di codice e debug dell'attività Script](coding-and-debugging-the-script-task.md)  

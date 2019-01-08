@@ -17,12 +17,12 @@ ms.assetid: 7f838452-8669-4194-8e15-7afdc7f15251
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a1377552b3e50fe5c536ae0d7d854346ccb062d1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f7695f971504744d42056d0067217e102ef3d990
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48140351"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53368454"
 ---
 # <a name="linked-measure-groups"></a>Gruppi di misure collegati
   Un gruppo di misure collegato si basa su un altro gruppo di misure in un cubo diverso all'interno dello stesso database o in un database di Analysis Services diverso. È possibile usare un gruppo di misure collegato se si desidera riusare un set di misure e i valori di dati corrispondenti in più cubi.  
@@ -47,7 +47,7 @@ ms.locfileid: "48140351"
   
 -   Nei gruppi di misure collegati non è supportato il writeback.  
   
--   I gruppi di misure collegati non possono essere utilizzati in più relazioni molti-a-molti, soprattutto quando tali relazioni sono in cubi diversi. Questa operazione può generare aggregazioni ambigue. Per altre informazioni, vedere [Incorrect Amounts for Linked Measures in Cubes containing Many-to-Many Relationships](http://social.technet.microsoft.com/wiki/contents/articles/22911.incorrect-amounts-for-linked-measures-in-cubes-containing-many-to-many-relationships-ssas-troubleshooting.aspx)(Quantità errate per le misure collegate nei cubi che contengono relazioni molti-a-molti).  
+-   I gruppi di misure collegati non possono essere utilizzati in più relazioni molti-a-molti, soprattutto quando tali relazioni sono in cubi diversi. Questa operazione può generare aggregazioni ambigue. Per altre informazioni, vedere [Incorrect Amounts for Linked Measures in Cubes containing Many-to-Many Relationships](https://social.technet.microsoft.com/wiki/contents/articles/22911.incorrect-amounts-for-linked-measures-in-cubes-containing-many-to-many-relationships-ssas-troubleshooting.aspx)(Quantità errate per le misure collegate nei cubi che contengono relazioni molti-a-molti).  
   
  Le misure contenute in un gruppo di misure collegato possono essere organizzate direttamente solo lungo dimensioni collegate recuperate dallo stesso database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . È tuttavia possibile usare membri calcolati per correlare le informazioni di gruppi di misure collegati alle altre dimensioni non collegate del cubo, nonché usare una relazione indiretta, ad esempio un riferimento o una relazione molti-a-molti, per correlare dimensioni non collegate a un gruppo di misure collegato.  
   
@@ -69,9 +69,9 @@ ms.locfileid: "48140351"
 ## <a name="secure-a-linked-measure"></a>Proteggere una misura collegata  
  Dopo avere definito il collegamento, l'accesso alle misure in un gruppo di misure collegato viene gestito così come l'accesso agli altri gruppi di misure. Un oggetto collegato viene visualizzato insieme alle relative controparti non collegate in Progettazione ruoli. Per altre informazioni sulla gestione della sicurezza per un gruppo di misure, vedere [Concedere le autorizzazioni per un cubo o un modello &#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md).  
   
- Per definire o usare un gruppo di misure collegato, il Windows account del servizio per il [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] istanza deve appartenere a un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ruolo del database che ha `ReadDefinition` e `Read` diritti sull'origine di accesso [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dell'istanza per il gruppo di misure e cubo di origine o devono appartenere al [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ruolo di amministratore per l'origine [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] istanza.  
+ Per definire o usare un gruppo di misure collegato, è necessario che l'account di servizio di Windows per l'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] appartenga a un ruolo di database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] con diritti di accesso `ReadDefinition` e `Read` nell'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] di origine per il cubo e il gruppo di misure di origine oppure che appartenga al ruolo Administrators di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] per l'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] di origine.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Definire le dimensioni collegate](define-linked-dimensions.md)  
+ [Definizione delle dimensioni collegate](define-linked-dimensions.md)  
   
   

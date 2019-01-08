@@ -1,5 +1,5 @@
 ---
-title: Usare Python con revoscalepy per creare un modello in SQL Server | Microsoft Docs
+title: 'Usare Python con revoscalepy per creare un modello: SQL Server Machine Learning'
 description: Scrivere script Python usando revoscalepy funzioni per creare modelli di analisi scientifica dei dati che vengono eseguiti in modalità remota in SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: f554badcba282bad7fb386daf8c4c0f4106804b4
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: 18c5b801198946313e4f489902eb5f7c9ff0d7af
+ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50100162"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53596832"
 ---
 # <a name="use-python-with-revoscalepy-to-create-a-model-that-runs-remotely-on-sql-server"></a>Usare Python con revoscalepy per creare un modello che viene eseguito in modalità remota in SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -72,7 +72,7 @@ Il codice esegue i passaggi seguenti:
 Tutte le operazioni vengono eseguite utilizzando un'istanza di SQL Server come contesto di calcolo.
 
 > [!NOTE]
-> Per una dimostrazione di questo esempio in esecuzione dalla riga di comando, vedere questo video: [la Analitica avanzata di SQL Server 2017 con Python](https://www.youtube.com/watch?v=FcoY795jTcc)
+> Per una dimostrazione di questo esempio in esecuzione dalla riga di comando, vedere questo video: [SQL Server 2017 avanzate Analitica con Python](https://www.youtube.com/watch?v=FcoY795jTcc)
 
 ### <a name="sample-code"></a>Codice di esempio
 
@@ -130,7 +130,7 @@ Un'origine dati è diversa da un contesto di calcolo. Il *zdroj dat* definisce i
 
     Passare tali variabili per il [RxSqlServerData](https://docs.microsoft.com/r-server/python-reference/revoscalepy/rxsqlserverdata) costruttore per implementare le **oggetto origine dati** denominato `data_source`.
 
-+ Si crea una **oggetto contesto di calcolo** tramite il [RxInSqlServer](https://docs.microsoft.com/r-server/python-reference/revoscalepy/rxinsqlserverdata) costruttore. L'oggetto risultante **oggetto contesto di calcolo** denominata `sql_cc`.
++ Si crea una **oggetto contesto di calcolo** tramite il [RxInSqlServer](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rxinsqlserver) costruttore. L'oggetto risultante **oggetto contesto di calcolo** denominata `sql_cc`.
 
     Questo esempio Usa nuovamente la stessa stringa di connessione utilizzata nell'origine dati, in base al presupposto che i dati sono nella stessa istanza di SQL Server che verrà utilizzato come contesto di calcolo. 
     

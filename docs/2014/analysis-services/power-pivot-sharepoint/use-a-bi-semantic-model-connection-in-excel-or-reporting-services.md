@@ -11,12 +11,12 @@ ms.assetid: 486195ca-530f-49e8-b40d-0f817db159ee
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: fae71e74f2c8498b537f1d93d951de76f5625094
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1356eeaabf8de5d406e7fbc11d86cbb043f64be2
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48123541"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53366293"
 ---
 # <a name="use-a-bi-semantic-model-connection-in-excel-or-reporting-services"></a>Utilizzare una connessione BISM (BI Semantic Model) in Excel o Reporting Services
   In questo argomento viene illustrato come utilizzare le connessioni BISM create utilizzando le istruzioni in altri argomenti. Se non è stato ancora creato un modello BI Semantic Model, vedere [creare una connessione BI Semantic Model a una cartella di lavoro di PowerPivot](create-a-bi-semantic-model-connection-to-a-power-pivot-workbook.md) e [creare una connessione BI Semantic Model a un Database modello tabulare](create-a-bi-semantic-model-connection-to-a-tabular-model-database.md).  
@@ -46,9 +46,9 @@ ms.locfileid: "48123541"
   
 5.  Nell'ultima pagina è possibile fornire un nome descrittivo e una descrizione. Fare clic su **Fine**e quindi fare clic su **OK** nella finestra di dialogo Importa dati per importare i dati.  
   
- Affinché le connessioni vengano eseguite correttamente, è necessario che sul computer client siano installati Excel 2010 e MSOLAP.5.dll. È possibile ottenere il provider installando la versione di PowerPivot per Excel corrente per questa versione oppure è possibile scaricare solo il provider OLE DB per Analysis Services dal [pagina di download di Feature Pack](http://go.microsoft.com/fwlink/?linkid=214066).  
+ Affinché le connessioni vengano eseguite correttamente, è necessario che sul computer client siano installati Excel 2010 e MSOLAP.5.dll. È possibile ottenere il provider installando la versione di PowerPivot per Excel corrente per questa versione oppure è possibile scaricare solo il provider OLE DB per Analysis Services dal [pagina di download di Feature Pack](https://go.microsoft.com/fwlink/?linkid=214066).  
   
- Per verificare che MSOLAP.5.dll sia la versione corrente, controllare `HKEY_CLASSES_ROOT\MSOLAP` nel Registro di sistema. `CurVer` deve essere impostato su MSOLAP.5.  
+ Per verificare che MSOLAP.5.dll sia la versione corrente, verificare `HKEY_CLASSES_ROOT\MSOLAP` nel Registro di sistema. `CurVer` deve essere impostato su MSOLAP.5.  
   
  Inoltre, è necessario disporre delle autorizzazioni di lettura sul file BISM in SharePoint. In tali autorizzazioni sono inclusi i diritti di download. Excel consente di scaricare le informazioni sulla connessione BISM da SharePoint e di aprire una connessione diretta al database tramite `HTTP Get`. Le richieste di connessione non passano tramite SharePoint una volta archiviate in locale le informazioni sulla connessione BISM.  
   

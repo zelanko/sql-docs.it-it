@@ -1,41 +1,32 @@
 ---
-title: Utilizzo di tipi di dati R in SQL Server Machine Learning | Microsoft Docs
+title: Conversioni - servizi di SQL Server Machine Learning di tipi di dati R-to-SQL
+description: Esaminare il converstions tipo di dati implicite ed esplicite tra R e SQL Server in analisi scientifica dei dati e soluzioni di machine learning.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 12/10/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: bcabb40cffb00e4f3ed1f5b7bb1df72f20f3f121
-ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
+ms.openlocfilehash: 23318c4a0ad9fceff9b293b706ff61f62643ee6d
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43890067"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53644950"
 ---
-# <a name="r-libraries-and-r-data-types"></a>Tipi di dati R e librerie di R
+# <a name="data-type-mappings-betweenr-and-sql-server"></a>Tipo di dati SQL Server e i mapping betweenR
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Questo articolo descrive le librerie R che vengono incluse e i tipi di dati che sono supportati nei prodotti seguenti:
+Per le soluzioni R che eseguono la funzionalità di integrazione di R in servizi di SQL Server Machine Learning, esaminare l'elenco dei tipi di dati non supportati e conversioni di tipi di dati che potrebbero essere eseguite in modo implicito quando i dati vengono passati tra le librerie di R e SQL Server.
 
-+ SQL Server 2016 R Services (In-Database)
-+ SQL Server Machine Learning Services (In-Database)
+## <a name="base-r-version"></a>Versione di base R
 
-Questo articolo elenca anche i tipi di dati non supportati e tipo di dati di elenchi di conversioni che possono essere eseguite in modo implicito quando vengono passati i dati tra R e SQL Server.
+SQL Server 2016 R Services e SQL Server 2017 Machine Learning Services con R, sono allineati con le versioni specifiche di Microsoft R Open. Ad esempio, la versione più recente, SQL Server 2017 Machine Learning Services si basa su Microsoft R Open 3.3.3.
 
-## <a name="r-libraries"></a>Librerie di R
+Per visualizzare la versione di R associata a una particolare istanza di SQL Server, aprire **RGui**. Per l'istanza predefinita, il percorso sarà come segue: `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64\`
 
-Entrambi i prodotti, servizi di Machine Learning con R e R Services sono allineati con le versioni specifiche di Microsoft R Open. Ad esempio, la versione più recente, SQL Server 2017 Machine Learning Services si basa su Microsoft R Open 3.3.3.
-
-Per visualizzare la versione di R associata a una particolare istanza di SQL Server, aprire RGui.
-
-1. Per l'istanza predefinita, il percorso sarà come segue: `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64\`
-2. Viene visualizzato un messaggio che elenca la distribuzione di R e il numero di versione di Microsoft R Open.
-
-Per trovare la versione di R inclusi in una determinata versione di Microsoft R Server, vedere [R Server - Novità](https://msdn.microsoft.com/microsoft-r/rserver-whats-new#new-and-updated-packages).
-
-Si noti che il sistema di gestione pacchetti in SQL Server significa che più versioni di un pacchetto R possono essere installate nello stesso computer, con più utenti di condividere lo stesso pacchetto o usando versioni diverse dello stesso pacchetto. Per altre informazioni, vedere [gestione dei pacchetti R in SQL Server](../r/install-additional-r-packages-on-sql-server.md).
+Lo strumento carica R di base e altre librerie. Informazioni sulla versione del pacchetto viene forniti in una notifica per ogni pacchetto viene caricato all'avvio della sessione. 
 
 ## <a name="r-and-sql-data-types"></a>R e tipi di dati SQL
 
@@ -109,7 +100,7 @@ L'inclusione di colonne non necessarie può ridurre notevolmente le prestazioni 
 Se un determinato tipo di dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non è supportato da R, ma è necessario usare le colonne di dati nello script R, è consigliabile usare le funzioni [CAST e CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md) per assicurarsi che le conversioni dei tipi di dati vengano eseguite come previsto prima di usare i dati nello script R.  
 
 > [!WARNING]
-Se si usa **rxDataStep** per eliminare colonne non compatibili durante lo spostamento dei dati, tenere presente che gli argomenti _varsToKeep_ e _varsToDrop_ non sono supportati per il tipo di origine dati **RxSqlServerData**.
+> Se si usa **rxDataStep** per eliminare colonne non compatibili durante lo spostamento dei dati, tenere presente che gli argomenti _varsToKeep_ e _varsToDrop_ non sono supportati per il tipo di origine dati **RxSqlServerData**.
 
 
 ## <a name="examples"></a>Esempi
@@ -120,7 +111,7 @@ L'esempio seguente mostra il modo in cui vengono trasformati i dati quando si es
 
 La query Ottiene una serie di valori da un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tabella e utilizza la stored procedure [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) per restituire i valori mediante il runtime R.
 
-```SQL
+```sql
 CREATE TABLE MyTable (    
  c1 int,    
  c2 varchar(10),    
@@ -176,7 +167,7 @@ Si noti l'uso della funzione `str` in R per ottenere lo schema di dati di output
 -   **Colonna C4**. La colonna contiene valori generati dallo script R e non presenti nei dati originali.
 
 
-## <a name="example-2-dynamic-column-selection-using-r"></a>Esempio 2: Selezione dinamica di colonne tramite R
+## <a name="example-2-dynamic-column-selection-using-r"></a>Esempio 2: Selezione dinamica di colonne mediante R
 
 L'esempio seguente mostra come usare il codice R per verificare la presenza di tipi di colonna non validi. L'esempio ottiene lo schema di una tabella specificata usando le viste di sistema di SQL Server e rimuove qualsiasi colonna che ha un tipo non valido specificato.
 

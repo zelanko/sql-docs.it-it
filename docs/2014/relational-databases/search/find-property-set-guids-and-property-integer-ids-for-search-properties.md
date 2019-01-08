@@ -13,17 +13,17 @@ ms.assetid: 7db79165-8bcc-4be6-8d40-12d44deda79f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 387cb0f529858efc858004c9c0d2a382f52cf048
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: da65bc5c3879a20ff178e27747a9bf5b267ff2c9
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48222641"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53372183"
 ---
 # <a name="find-property-set-guids-and-property-integer-ids-for-search-properties"></a>Trovare GUID del set di proprietà e ID di tipo integer delle proprietà per le proprietà di ricerca
   In questo argomento viene illustrato come ottenere i valori richiesti prima di poter aggiungere una proprietà a un elenco delle proprietà di ricerca e abilitarlo per la ricerca full-text. In questi valori sono inclusi il GUID del set di proprietà e l'identificatore di tipo integer di una proprietà del documento.  
   
- Documentare le proprietà che vengono estratte tramite IFilters da dati binari, vale a dire i dati archiviati in un `varbinary`, `varbinary(max)` (tra cui `FILESTREAM`), o `image` colonna tipo di dati: possono essere rese disponibili per la ricerca full-text. Per consentire la ricerca in una proprietà estratta, è necessario aggiungere la proprietà manualmente a un elenco delle proprietà di ricerca. È inoltre necessario che l'elenco delle proprietà di ricerca sia associato a uno o più indici full-text. Per altre informazioni, vedere [Eseguire ricerche nelle proprietà dei documenti con elenchi delle proprietà di ricerca](search-document-properties-with-search-property-lists.md).  
+ Documentare le proprietà che vengono estratte tramite IFilters da dati binari, vale a dire, dai dati archiviati in un `varbinary`, `varbinary(max)` (tra cui `FILESTREAM`), o `image` colonna - tipo di dati possono essere rese disponibili per la ricerca full-text. Per consentire la ricerca in una proprietà estratta, è necessario aggiungere la proprietà manualmente a un elenco delle proprietà di ricerca. È inoltre necessario che l'elenco delle proprietà di ricerca sia associato a uno o più indici full-text. Per altre informazioni, vedere [Eseguire ricerche nelle proprietà dei documenti con elenchi delle proprietà di ricerca](search-document-properties-with-search-property-lists.md).  
   
  Per poter aggiungere una proprietà disponibile a un elenco di proprietà, è necessario trovare due informazioni sulla proprietà:  
   
@@ -38,14 +38,14 @@ ms.locfileid: "48222641"
 ##  <a name="wellknown"></a> Ricerca di informazioni sulle proprietà Microsoft note e ampiamente utilizzate  
  Microsoft definisce centinaia di proprietà del documento da utilizzare in molti contesti, ma solo un piccolo subset delle proprietà disponibili viene utilizzato da ogni formato di file. Tra le proprietà di Windows utilizzate di frequente è presente un piccolo set di proprietà generiche. Nella tabella seguente sono illustrati alcuni esempi di proprietà generiche note. Nella tabella sono indicati il nome noto, il nome canonico di Windows (in base alla descrizione della proprietà pubblicata da Microsoft), il GUID del set di proprietà, l'identificatore di tipo integer della proprietà e una breve descrizione.  
   
-|Nome noto|Nome canonico di Windows.|GUID set di proprietà|ID di tipo integer|Description|  
+|Nome noto|Nome canonico di Windows.|GUID set di proprietà|ID di tipo integer|Descrizione|  
 |----------------------|----------------------------|-----------------------|----------------|-----------------|  
 |Autori|`System.Author`|F29F85E0-4FF9-1068-AB91-08002B27B3D9|4|Autore o autori di un elemento specificato.|  
 |Tag|`System.Keywords`|F29F85E0-4FF9-1068-AB91-08002B27B3D9|5|Set di parole chiave (note anche come tag) assegnate all'elemento.|  
 |Tipo|`System.PerceivedType`|28636AA6-953D-11D2-B5D6-00C04FD918D0|9|Tipo di file percepito in base al relativo tipo canonico.|  
-|Title|`System.Title`|F29F85E0-4FF9-1068-AB91-08002B27B3D9|2|Titolo dell'elemento. Ad esempio, il titolo di un documento, l'oggetto di un messaggio, la didascalia di una foto o il nome di un brano musicale.|  
+|Titolo|`System.Title`|F29F85E0-4FF9-1068-AB91-08002B27B3D9|2|Titolo dell'elemento. Ad esempio, il titolo di un documento, l'oggetto di un messaggio, la didascalia di una foto o il nome di un brano musicale.|  
   
- Per favorire la coerenza fra formati di file, Microsoft ha identificato subset di proprietà del documento ad alta priorità e di utilizzo frequente per diverse categorie di documenti, quali comunicazioni, contatti, documenti, file musicali, immagini e video. Per altre informazioni sulle principali proprietà classificate per ogni categoria, vedere la pagina [System-Defined Properties for Custom File Formats](http://go.microsoft.com/fwlink/?LinkId=144336) (Proprietà definite dal sistema per formati di file personalizzati) nella documentazione di Windows Search.  
+ Per favorire la coerenza fra formati di file, Microsoft ha identificato subset di proprietà del documento ad alta priorità e di utilizzo frequente per diverse categorie di documenti, quali comunicazioni, contatti, documenti, file musicali, immagini e video. Per altre informazioni sulle principali proprietà classificate per ogni categoria, vedere la pagina [System-Defined Properties for Custom File Formats](https://go.microsoft.com/fwlink/?LinkId=144336) (Proprietà definite dal sistema per formati di file personalizzati) nella documentazione di Windows Search.  
   
  Un formato di file specifico potrebbe implementare proprietà di tre tipi:  
   
@@ -60,7 +60,7 @@ ms.locfileid: "48222641"
   
  Dal prompt dei comandi eseguire **filtdump.exe** e fornire un argomento singolo. Questo argomento corrisponde al nome di un singolo file che dispone di un tipo di file per il quale viene installato un filtro IFilter. Tramite l'utilità viene visualizzato un elenco di tutte le proprietà individuate da IFilter nel documento, con i relativi GUID del set di proprietà, gli ID di tipo integer e informazioni aggiuntive.  
   
- Per informazioni sull'installazione del software, vedere [Microsoft Windows SDK per Windows 7 e .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=212980). Dopo aver scaricato e installato SDK, cercare nelle seguenti cartelle l'utilità filtdump.exe.  
+ Per informazioni sull'installazione del software, vedere [Microsoft Windows SDK per Windows 7 e .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=212980). Dopo aver scaricato e installato SDK, cercare nelle seguenti cartelle l'utilità filtdump.exe.  
   
 -   Per la versione a 64 bit, vedere in `C:\Program Files\Microsoft SDKs\Windows\v7.1\Bin\x64`.  
   
@@ -75,15 +75,15 @@ ms.locfileid: "48222641"
 .  
 propertyDescription  
 name = System.Author  
-…  
+...  
 formatID = F29F85E0-4FF9-1068-AB91-08002B27B3D9  
 propID = 4  
-…  
+...  
 ```  
   
- Per la descrizione completa della proprietà, vedere [System.Author](http://go.microsoft.com/fwlink/?LinkId=144337) nella documentazione di Windows Search.  
+ Per la descrizione completa della proprietà, vedere [System.Author](https://go.microsoft.com/fwlink/?LinkId=144337) nella documentazione di Windows Search.  
   
- Per un elenco completo delle proprietà di Windows, vedere [Proprietà di Windows](http://go.microsoft.com/fwlink/?LinkId=215013)nella documentazione di Windows Search.  
+ Per un elenco completo delle proprietà di Windows, vedere [Proprietà di Windows](https://go.microsoft.com/fwlink/?LinkId=215013)nella documentazione di Windows Search.  
   
 ##  <a name="examples"></a> Aggiunta di una proprietà a un elenco delle proprietà di ricerca  
  Nell'esempio seguente viene illustrato come aggiungere una proprietà a un elenco delle proprietà di ricerca. L'esempio usa un'istruzione [ALTER SEARCH PROPERTY LIST](/sql/t-sql/statements/alter-search-property-list-transact-sql) per aggiungere la proprietà `System.Author` a un elenco delle proprietà di ricerca denominato `PropertyList1`e fornisce il nome descrittivo per la proprietà `Author`.  
@@ -103,6 +103,6 @@ GO
   
 ## <a name="see-also"></a>Vedere anche  
  [Eseguire ricerche nelle proprietà dei documenti con elenchi delle proprietà di ricerca](search-document-properties-with-search-property-lists.md)   
- [Configurare e gestire filtri per la ricerca](configure-and-manage-filters-for-search.md)  
+ [Configurazione e gestione di filtri per la ricerca](configure-and-manage-filters-for-search.md)  
   
   

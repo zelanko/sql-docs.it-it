@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - data correction
@@ -14,12 +13,12 @@ ms.assetid: d2ec1b1a-c745-4741-b57c-6fdb524a154c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4c597a99a0762efe2098696fe8d582d6a3c56f1b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3642f15f60811d9a918c410ee2429084e63d74c1
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48079051"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53363583"
 ---
 # <a name="dqs-cleansing-transformation"></a>Trasformazione DQS Cleansing
   La trasformazione DQS Cleansing utilizza Data Quality Services (DQS) per correggere i dati da un'origine dati connessa, applicando le regole approvate create per l'origine dati connessa o un'origine dati simile. Per ulteriori informazioni sulle regole di correzione dei dati, vedere [DQS Knowledge Bases and Domains](../../../data-quality-services/dqs-knowledge-bases-and-domains.md). Per ulteriori informazioni su DQS, vedere [Data Quality Services Concepts](../../../data-quality-services/data-quality-services-concepts.md).  
@@ -51,6 +50,6 @@ ms.locfileid: "48079051"
   
 -   [Gestire &#40;aprire, sbloccare, rinominare ed eliminare&#41; un progetto Data Quality](../../../data-quality-services/manage-open-unlock-rename-and-delete-a-data-quality-project.md)  
   
--   Articolo relativo alla [pulizia dei dati complessi utilizzando domini compositi](http://social.technet.microsoft.com/wiki/contents/articles/13324.using-dqs-cleansing-complex-data-using-composite-domains.aspx)su social.technet.microsoft.com.  
+-   Articolo relativo alla [pulizia dei dati complessi utilizzando domini compositi](https://social.technet.microsoft.com/wiki/contents/articles/13324.using-dqs-cleansing-complex-data-using-composite-domains.aspx)su social.technet.microsoft.com.  
   
   

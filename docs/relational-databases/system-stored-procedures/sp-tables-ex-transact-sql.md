@@ -18,12 +18,12 @@ ms.assetid: 33755c33-7e1e-4ef7-af14-a9cebb1e2ed4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 44ffbbfdac8e1976df99be35ecbed7dd94e3ee61
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f034b1247f9865b83077ed11f644d6fdbbc4cecd
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47745439"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589386"
 ---
 # <a name="sptablesex-transact-sql"></a>sp_tables_ex (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,22 +45,22 @@ sp_tables_ex [ @table_server = ] 'table_server'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@table_server=** ] **'***table_server***'**  
+ [  **@table_server=** ] **'**_table_server_**'**  
  Nome del server collegato di cui si desidera ottenere informazioni di tabella. *table_server* viene **sysname**, non prevede alcun valore predefinito.  
   
- [ **,** [  **@table_name=** ] **'***table_name***'**]  
+ [ **,** [  **@table_name=** ] **'**_table_name_**'**]  
  Nome della tabella di cui si desidera ottenere informazioni sul tipo di dati. *TABLE_NAME*viene **sysname**, con un valore predefinito è NULL.  
   
- [  **@table_schema=** ] **'***table_schema***'**]  
+ [  **@table_schema=** ] **'**_table_schema_**'**]  
  Schema della tabella. *TABLE_SCHEMA*viene **sysname**, con un valore predefinito è NULL.  
   
- [  **@table_catalog=** ] **'***table_catalog***'**  
+ [  **@table_catalog=** ] **'**_table_catalog_**'**  
  È il nome del database in cui l'oggetto specificato *table_name* risiede. *TABLE_CATALOG* viene **sysname**, con un valore predefinito è NULL.  
   
- [  **@table_type=** ] **'***table_type***'**  
+ [  **@table_type=** ] **'**_table_type_**'**  
  Tipo di tabella da restituire. *TABLE_TYPE* viene **sysname**, con un valore predefinito è NULL e può avere uno dei valori seguenti.  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |**ALIAS**|Nome di un alias.|  
 |**TEMPORANEA GLOBALE**|Nome di una tabella temporanea disponibile nell'intero sistema.|  
@@ -71,7 +71,7 @@ sp_tables_ex [ @table_server = ] 'table_server'
 |**TABLE**|Nome di una tabella utente.|  
 |**VIEW**|Nome di una vista.|  
   
- [  **@fUsePattern=** ] **'***fUsePattern***'**  
+ [  **@fUsePattern=** ] **'**_fUsePattern_**'**  
  Determina se i caratteri **_**, **%**, **[**, e **]** vengono interpretati come caratteri jolly. I valori validi sono 0 (utilizzo dei criteri di ricerca disattivato) e 1 (utilizzo dei criteri di ricerca attivato). *fUsePattern* viene **bit**, con un valore predefinito è 1.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
@@ -79,9 +79,9 @@ sp_tables_ex [ @table_server = ] 'table_server'
   
 ## <a name="result-sets"></a>Set di risultati  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
-|**TABLE_CAT**|**sysname**|Nome del qualificatore della tabella. Vari prodotti DBMS supportano nomi di tabelle in tre parti (*qualificatore ***.*** proprietario ***.*** nome*). In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] questa colonna rappresenta il nome del database. In altri prodotti rappresenta il nome del server dell'ambiente di database della tabella. Questo campo può essere NULL.|  
+|**TABLE_CAT**|**sysname**|Nome del qualificatore della tabella. Vari prodotti DBMS supportano nomi di tabelle in tre parti (_qualificatore_**.** _owner_**.** _nome_). In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] questa colonna rappresenta il nome del database. In altri prodotti rappresenta il nome del server dell'ambiente di database della tabella. Questo campo può essere NULL.|  
 |**TABLE_SCHEM**|**sysname**|Nome del proprietario della tabella. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] questa colonna rappresenta il nome dell'utente del database che ha creato la tabella. Questo campo restituisce sempre un valore.|  
 |**TABLE_NAME**|**sysname**|Nome della tabella. Questo campo restituisce sempre un valore.|  
 |**TABLE_TYPE**|**varchar(32)**|Tabella, tabella di sistema o vista.|  

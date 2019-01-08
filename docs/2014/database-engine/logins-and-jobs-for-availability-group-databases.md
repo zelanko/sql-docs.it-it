@@ -14,12 +14,12 @@ ms.assetid: d7da14d3-848c-44d4-8e49-d536a1158a61
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: af539339b2a0a2792fa5ac9838eb7ed297fa29f9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d8653161775a35e326a7ed85ed982f1cb75bee03
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48062231"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53361494"
 ---
 # <a name="management-of-logins-and-jobs-for-the-databases-of-an-availability-group-sql-server"></a>Gestione di account di accesso e processi per i database di un gruppo di disponibilità (SQL Server)
   È necessario gestire periodicamente lo stesso set di account di accesso utente e processi [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent in ogni database primario di un gruppo di disponibilità AlwaysOn e nei database secondari corrispondenti. Gli account di accesso e i processi devono essere riprodotti in ogni istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] in cui è ospitata una replica di disponibilità per il gruppo di disponibilità.  
@@ -30,7 +30,7 @@ ms.locfileid: "48062231"
   
      Le istanze del server che ospitano le repliche di disponibilità di un gruppo di disponibilità potrebbero essere configurate in modo diverso, con lettere di unità nastro diverse e così via. I processi per ogni replica di disponibilità devono supportare eventuali differenze di questo tipo.  
   
-     I processi di backup possono usare la funzione [sys.fn_hadr_is_preferred_backup_replica](/sql/relational-databases/system-functions/sys-fn-hadr-backup-is-preferred-replica-transact-sql) per identificare se la replica locale è quella preferita per i backup, in base alle preferenze di backup del gruppo di disponibilità. I processi di backup creati tramite la [Creazione guidata piano di manutenzione](../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md) a livello nativo usano questa funzione. Per altri processi di backup, è consigliabile utilizzare questa funzione come condizione nei processi di backup, pertanto vengono eseguiti solo nella replica preferita. Per altre informazioni, vedere [ repliche secondarie attive: Backup in repliche secondarie (gruppi di disponibilità AlwaysOn)](availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).  
+     I processi di backup possono usare la funzione [sys.fn_hadr_is_preferred_backup_replica](/sql/relational-databases/system-functions/sys-fn-hadr-backup-is-preferred-replica-transact-sql) per identificare se la replica locale è quella preferita per i backup, in base alle preferenze di backup del gruppo di disponibilità. I processi di backup creati tramite la [Creazione guidata piano di manutenzione](../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md) a livello nativo usano questa funzione. Per altri processi di backup, è consigliabile utilizzare questa funzione come condizione nei processi di backup, pertanto vengono eseguiti solo nella replica preferita. Per altre informazioni, vedere [ repliche secondarie attive: Backup su repliche secondarie (gruppi di disponibilità AlwaysOn)](availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).  
   
 -   **Account di accesso**  
   
@@ -39,7 +39,7 @@ ms.locfileid: "48062231"
      Se una o più applicazioni usano l'autenticazione [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] o un account Windows locale, vedere [Account di accesso di applicazioni in cui viene utilizzata l'autenticazione di SQL Server o un account di accesso di Windows locale](../../2014/database-engine/logins-and-jobs-for-availability-group-databases.md#SSauthentication), più avanti in questo argomento.  
   
     > [!NOTE]  
-    >  Un utente del database il cui account di accesso di SQL Server non è definito o è definito in modo errato in un'istanza del server non potrà accedere a tale istanza. Questo utente viene definito *utente orfano* del database nell'istanza del server. Se un utente è isolato in una determinata istanza del server, è possibile impostare account di accesso utente in qualsiasi momento. Per altre informazioni, vedere [Troubleshoot Orphaned Users &#40;SQL Server&#41;](../sql-server/failover-clusters/troubleshoot-orphaned-users-sql-server.md).  
+    >  Un utente del database il cui account di accesso di SQL Server non è definito o è definito in modo errato in un'istanza del server non potrà accedere a tale istanza. Questo utente viene definito *utente orfano* del database nell'istanza del server. Se un utente è isolato in una determinata istanza del server, è possibile impostare account di accesso utente in qualsiasi momento. Per altre informazioni, vedere [Risolvere i problemi relativi agli utenti isolati &#40;SQL Server&#41;](../sql-server/failover-clusters/troubleshoot-orphaned-users-sql-server.md).  
   
 -   **Metadati aggiuntivi**  
   
@@ -48,16 +48,16 @@ ms.locfileid: "48062231"
 ##  <a name="SSauthentication"></a> Account di accesso di applicazioni in cui viene utilizzata l'autenticazione di SQL Server o un account di accesso di Windows locale  
  Se in un'applicazione viene utilizzata l'autenticazione di SQL Server o un account di accesso di Windows locale, i SID non corrispondenti possono impedire la risoluzione in un'istanza remota di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]da parte dell'account di accesso dell'applicazione. In caso di SID non corrispondenti, l'account di accesso diventa un utente orfano nell'istanza del server remoto. Questo problema si può verificare quando tramite un'applicazione si effettua la connessione a un database di log shipping o con mirroring dopo un failover o a un database Sottoscrittore di replica inizializzato da un backup.  
   
- Per evitare questo problema, è consigliabile intraprendere misure preventive quando si configura un'applicazione di questo tipo per utilizzare un database ospitato da un'istanza remota di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. La prevenzione comporta il trasferimento degli account di accesso e delle password dall'istanza locale di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] all'istanza remota di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Per altre informazioni su come evitare questo problema, vedere l'articolo della Knowledge Base 918992 relativo alla[modalità di trasferimento degli account di accesso e delle password tra le istanze di SQL Server](http://support.microsoft.com/kb/918992/).  
+ Per evitare questo problema, è consigliabile intraprendere misure preventive quando si configura un'applicazione di questo tipo per utilizzare un database ospitato da un'istanza remota di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. La prevenzione comporta il trasferimento degli account di accesso e delle password dall'istanza locale di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] all'istanza remota di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Per altre informazioni su come evitare questo problema, vedere l'articolo della Knowledge Base 918992 relativo alla [modalità di trasferimento degli account di accesso e delle password tra le istanze di SQL Server](https://support.microsoft.com/kb/918992/).  
   
 > [!NOTE]  
 >  Questo problema influisce sugli account di Windows locali in computer diversi. Tuttavia, non si verifica in caso di account di dominio, dal momento che il SID è identico in ogni computer.  
   
- Per altre informazioni, vedere la pagina relativa agli [utenti orfani con log shipping e mirroring del database](http://blogs.msdn.com/b/sqlserverfaq/archive/2009/04/13/orphaned-users-with-database-mirroring-and-log-shipping.aspx) (blog del motore di database).  
+ Per altre informazioni, vedere la pagina relativa agli [utenti orfani con log shipping e mirroring del database](https://blogs.msdn.com/b/sqlserverfaq/archive/2009/04/13/orphaned-users-with-database-mirroring-and-log-shipping.aspx) (blog del motore di database).  
   
 ##  <a name="RelatedTasks"></a> Attività correlate  
   
--   [Creare un account di accesso](../relational-databases/security/authentication-access/create-a-login.md)  
+-   [Creazione di un account di accesso](../relational-databases/security/authentication-access/create-a-login.md)  
   
 -   [Creare un utente del database](../relational-databases/security/authentication-access/create-a-database-user.md).  
   

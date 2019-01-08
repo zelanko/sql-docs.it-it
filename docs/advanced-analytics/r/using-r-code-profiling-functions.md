@@ -1,50 +1,47 @@
 ---
-title: Uso di funzioni (SQL Server Machine Learning) la profilatura del codice R | Microsoft Docs
+title: Usare funzioni - servizi di SQL Server Machine Learning di analisi del codice R
+description: Migliorare le prestazioni e ottenere risultati più veloci in calcoli R in SQL Server usando funzioni di profiling R per restituire informazioni sulle chiamate di funzione interna.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 12/12/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 64f065df5f5769e37bb1d5a8dbc2fba2d5f936ee
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 7bd54130ecb17241f0a5cddf4d80e186d7a8a427
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51703969"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53645026"
 ---
-# <a name="using-r-code-profiling-functions"></a>Uso delle funzioni di profiling del codice R
+# <a name="use-r-code-profiling-functions-to-improve-performance"></a>Usare funzioni di profiling del codice R per migliorare le prestazioni
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Oltre a usare risorse e strumenti di SQL Server per monitorare l'esecuzione di script R, è possibile usare gli strumenti per le prestazioni forniti da altri pacchetti R per ottenere altre informazioni sulle chiamate di funzioni interne. Questo argomento contiene un elenco di alcune risorse di base per iniziare. Per indicazioni di esperti, è consigliabile il capitolo sul [prestazioni](https://adv-r.had.co.nz/Performance.html) nel libro "Advanced R", di Hadley Wickham.
+Oltre a usare risorse e strumenti di SQL Server per monitorare l'esecuzione di script R, è possibile usare gli strumenti per le prestazioni forniti da altri pacchetti R per ottenere altre informazioni sulle chiamate di funzioni interne. 
+
+> [!TIP]
+> Questo articolo fornisce risorse di base per iniziare a usare. Per indicazioni di esperti, è consigliabile la *Performance* sezione ["Advanced R" di Hadley Wickham](http://adv-r.had.co.nz).
 
 ## <a name="using-rprof"></a>Uso di RPROF
 
-*rprof* è una funzione inclusa nel pacchetto di base **utils**, caricato per impostazione predefinita. Un vantaggio di *rprof* è il fatto di eseguire il campionamento, riducendo il carico delle prestazioni sul monitoraggio.
+[*rprof* ](https://www.rdocumentation.org/packages/utils/versions/3.5.1/topics/Rprof) è una funzione inclusa nel pacchetto di base [ **utils**](https://www.rdocumentation.org/packages/utils/versions/3.5.1), che viene caricato per impostazione predefinita. 
 
-Per usare il profiling R nel codice, chiamare questa funzione e specificarne i parametri, incluso il percorso del file di log che verrà scritto. Per informazioni dettagliate, vedere la Guida di *rprof*.
+In generale, la funzione *rprof* opera scrivendo lo stack di chiamate in un file a intervalli specificati. È quindi possibile usare la [ *summaryRprof* ](https://www.rdocumentation.org/packages/utils/versions/3.5.1/topics/summaryRprof) funzione per elaborare il file di output. Un vantaggio di *rprof* è il fatto di eseguire il campionamento, riducendo il carico delle prestazioni sul monitoraggio.
 
-In generale, la funzione *rprof* opera scrivendo lo stack di chiamate in un file a intervalli specificati. È quindi possibile usare la funzione *summaryRprof* per elaborare il file di output. 
+Per usare il profiling R nel codice, chiamare questa funzione e specificarne i parametri, incluso il percorso del file di log che verrà scritto. È possibile attivare o disattivare il profiling nel codice. La sintassi seguente viene illustrato l'utilizzo di base: 
 
-È possibile attivare o disattivare il profiling nel codice. Per attivare il profiling, sospenderlo e quindi riavviarlo, è necessario usare una sequenza di chiamate a *rprof*:
+```R
+# Specify profiling output file.
+varOutputFile <- "C:/TEMP/run001.log")
+Rprof(varOutputFile)
 
-1. Specificare il file di output del profiling.
-
-    ```R
-    varOutputFile <- "C:/TEMP/run001.log")
-    Rprof(varOutputFile)
-    ```
-2. Disattivare il profiling
-    ```R
-    Rprof(NULL)
-    ```
+# Turn off profiling
+Rprof(NULL)
     
-3. Riavviare il profiling
-    ```R
-    Rprof(append=TRUE)
-    ```
-
+# Restart profiling
+Rprof(append=TRUE)
+```
 
 > [!NOTE]
 > Per poter usare questa funzione, è necessario che Windows Perl sia installato nel computer in cui viene eseguito il codice. Di conseguenza, è consigliabile profilare il codice durante lo sviluppo in un ambiente R e quindi distribuire il codice sottoposto a debug in SQL Server.  
@@ -52,9 +49,7 @@ In generale, la funzione *rprof* opera scrivendo lo stack di chiamate in un file
 
 ## <a name="r-system-functions"></a>Funzioni di sistema R
 
-Il linguaggio R include molte funzioni di pacchetto di base per la restituzione del contenuto delle variabili di sistema. 
-
-Come parte del codice R, ad esempio, è possibile usare `Sys.timezone` per ottenere il fuso orario corrente o `Sys.Time` per ottenere l'ora di sistema da R. 
+Il linguaggio R include molte funzioni di pacchetto di base per la restituzione del contenuto delle variabili di sistema. Come parte del codice R, ad esempio, è possibile usare `Sys.timezone` per ottenere il fuso orario corrente o `Sys.Time` per ottenere l'ora di sistema da R. 
 
 Per ottenere informazioni su singole funzioni di sistema R, digitare il nome della funzione come argomento per la funzione R `help()` da un prompt dei comandi di R.
 
@@ -64,13 +59,9 @@ help("Sys.time")
 
 ## <a name="debugging-and-profiling-in-r"></a>Debug e profiling in R
 
-La documentazione per Microsoft R Open, installata per impostazione predefinita, include un manuale sullo sviluppo di estensioni per il linguaggio R, che descrive il profiling e il debug in modo dettagliato.
+La documentazione per Microsoft R Open, che viene installato per impostazione predefinita, include un manuale sullo sviluppo di estensioni per il linguaggio R che illustra [debug e profilatura](https://cran.r-project.org/doc/manuals/r-release/R-exts.html#Debugging) in modo dettagliato. È possibile trovare la stessa documentazione nel computer in C:\Program Files\Microsoft SQL Server\MSSQL13. MSSQLSERVER\R_SERVICES\doc\manual.
 
-Questo capitolo è anche disponibile online: [https://cran.r-project.org/doc/manuals/r-release/R-exts.html#Debugging](https://cran.r-project.org/doc/manuals/r-release/R-exts.html#Debugging)
+## <a name="see-also"></a>Vedere anche
 
-### <a name="location-of-r-help-files"></a>Percorso dei file della Guida di R
-
-C:\Programmi\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\doc\manual
-
-
-
++ [pacchetto di utilità R](https://www.rdocumentation.org/packages/utils/versions/3.5.1)
++ ["Avanzate"R"di Hadley Wickham](http://adv-r.had.co.nz)

@@ -11,12 +11,12 @@ ms.assetid: 50140fdf-6fd1-41a1-9c14-8ecfb97ba2e1
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3f5e41f1dac0c9c0048b5751439209e17e289f4c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 354e1dce8bfb11f7eefc0f90df0868ebc01757e0
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48178131"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53365013"
 ---
 # <a name="use-data-feeds-powerpivot-for-sharepoint"></a>Utilizzare feed di dati (PowerPivot per SharePoint)
   I feed di dati rappresentano uno o più flussi di dati generati da un'origine dati online e trasmessi a un documento o a un'applicazione di destinazione. Se si utilizza PowerPivot per Excel, i feed di dati consentono di trasferire i dati aziendali esistenti da origini dati arbitrarie in nella finestra di PowerPivot nella cartella di lavoro di Excel 2010. Dopo aver importato un feed di dati in una cartella di lavoro, è possibile farvi riferimento successivamente in qualsiasi operazione pianificata di aggiornamento dati in un server SharePoint.  
@@ -63,7 +63,7 @@ ms.locfileid: "48178131"
 ##  <a name="rsreport"></a> Creare un feed di dati da un report di Reporting Services  
  Se si dispone di una distribuzione di SQL Server 2008 R2 Reporting Services, è possibile utilizzare la nuova estensione per il rendering Atom per generare un feed di dati da un report esistente. Per risultati ottimali, è necessario che nella workstation sia disponibile Excel 2010 con PowerPivot per Excel. L'applicazione client PowerPivot verrà avviata in risposta all'esportazione dei feed di dati, aggiungendo e facendo riferimento automaticamente alle tabelle e alle colonne come sono state trasmesse.  
   
- Per istruzioni su come esportare un feed di dati da un report, vedere [Generare i feed di dati da un report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-builder/generate-data-feeds-from-a-report-report-builder-and-ssrs.md) nel [file della Guida di Generatore report](http://go.microsoft.com/fwlink/?LinkId=154494).  
+ Per istruzioni su come esportare un feed di dati da un report, vedere [Generare i feed di dati da un report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-builder/generate-data-feeds-from-a-report-report-builder-and-ssrs.md) nel [file della Guida di Generatore report](https://go.microsoft.com/fwlink/?LinkId=154494).  
   
 > [!NOTE]  
 >  Per impostare una pianificazione di aggiornamento dati ricorrente che consenta di importare nuovamente i dati del report in una cartella di lavoro di PowerPivot pubblicata in una raccolta di SharePoint, è necessario configurare il server di report per l'integrazione con SharePoint. Per altre informazioni sull'uso congiunto di PowerPivot per SharePoint e Reporting Services, vedere [configurazione e amministrazione di un Server di Report &#40;Reporting Services SharePoint Mode&#41;](../../reporting-services/configure-administer-report-server-reporting-services-sharepoint-mode.md).  

@@ -17,21 +17,21 @@ ms.assetid: 06b7edee-8636-49d9-9b5c-2c710bf4fa2d
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: edaddc413c972672beee3033b861b04dce92a180
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ce534f3667aaa9c42b1fa12820d5bdbd20728b8b
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48125641"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53371403"
 ---
 # <a name="sql-server-native-client-odbc-reference"></a>Guida di riferimento a SQL Server Native Client (ODBC)
   ODBC (Open Database Connectivity) è un'API Microsoft Win32 utilizzata dalle applicazioni per l'accesso ai dati delle origini dati ODBC.  
   
  Nella guida di riferimento al driver ODBC di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client non sono documentate tutte le chiamate alle funzioni di ODBC. Vengono infatti prese in esame solo le funzioni che, se utilizzate con il driver ODBC di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, presentano comportamenti o parametri specifici del driver.  
   
- Il driver ODBC di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client è conforme alla specifica ODBC 3.51. Per un riferimento completo di ODBC 3.51, scaricare Microsoft Data Access Components SDK dal [Data Access and Storage Developer Center](http://go.microsoft.com/fwlink?linkid=4173), o visualizzare i [riferimento per programmatori ODBC](http://go.microsoft.com/fwlink/?LinkId=45250) online.  
+ Il driver ODBC di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client è conforme alla specifica ODBC 3.51. Per un riferimento completo di ODBC 3.51, scaricare Microsoft Data Access Components SDK dal [Data Access and Storage Developer Center](https://go.microsoft.com/fwlink?linkid=4173), o visualizzare i [riferimento per programmatori ODBC](https://go.microsoft.com/fwlink/?LinkId=45250) online.  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>In questa sezione  
   
 -   [Estensioni del driver SQL Server](../../../2014/database-engine/dev-guide/sql-server-driver-extensions.md)  
   

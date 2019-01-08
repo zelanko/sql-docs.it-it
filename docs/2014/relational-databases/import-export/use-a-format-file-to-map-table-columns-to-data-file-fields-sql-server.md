@@ -13,12 +13,12 @@ ms.assetid: e7ee4f7e-24c4-4eb7-84d2-41e57ccc1ef1
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a35a70da1dac3d6dd2ff5e37f696654960883810
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 26db59ba5dbfc6f7be8d827a86dabb1cdd845d03
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48229021"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53371533"
 ---
 # <a name="use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server"></a>Utilizzo di un file di formato per eseguire il mapping tra le colonne della tabella e i campi del file di dati (SQL Server)
   Un file di dati può includere campi disposti in un ordine diverso da quello delle colonne corrispondenti presenti nella tabella. In questo argomento vengono descritti file di formato sia non XML che XML, modificati per adattarli a un file di dati contenente campi disposti un ordine diverso da quello delle colonne della tabella. Il file di formato modificato esegue il mapping tra i campi dati e le colonne corrispondenti della tabella.  
@@ -100,7 +100,7 @@ GO
   
 ```  
 <?xml version="1.0"?>  
-<BCPFORMAT xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format"   
+<BCPFORMAT xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format"   
 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
  <RECORD>  
   <FIELD ID="1" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="100" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>  
@@ -122,7 +122,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 >  Per altre informazioni sulla sintassi dell'XML Schema e ulteriori esempi di file di formato XML, vedere [File in formato XML &#40;SQL Server&#41;](xml-format-files-sql-server.md).  
   
 ### <a name="example"></a>Esempio  
- Nell'esempio seguente viene utilizzato il provider di set di righe con lettura bulk `OPENROWSET` per l'importazione bulk dei dati dal file di dati `myTestOrder-c.txt` alla tabella di esempio `myTestOrder`  tramite il file di formato XML `myTestOrder.xml`. L'istruzione `INSERT… SELECT` specifica l'elenco di colonne nell'elenco di selezione.  
+ Nell'esempio seguente viene utilizzato il provider di set di righe con lettura bulk `OPENROWSET` per l'importazione bulk dei dati dal file di dati `myTestOrder-c.txt` alla tabella di esempio `myTestOrder`  tramite il file di formato XML `myTestOrder.xml`. L'istruzione `INSERT... SELECT` specifica l'elenco di colonne nell'elenco di selezione.  
   
  Nell'editor di query di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] eseguire il codice seguente:  
   

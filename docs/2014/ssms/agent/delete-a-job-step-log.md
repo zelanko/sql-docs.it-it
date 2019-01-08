@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - job steps [SQL Server Agent]
@@ -15,12 +15,12 @@ ms.assetid: ee20c6cd-0258-4550-bdb0-71e86a0fb330
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b0870de459be9999979797579bf577cd7daab816
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 945c403a44f2b0c2cf2d691a1bcfda6cc96d422b
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48070891"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53377553"
 ---
 # <a name="delete-a-job-step-log"></a>Delete a Job Step Log
   In questo argomento viene illustrato come eliminare un log dei passaggi di processo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -29,7 +29,7 @@ ms.locfileid: "48070891"
   
      [Limitazioni e restrizioni](#Restrictions)  
   
-     [Security](#Security)  
+     [Sicurezza](#Security)  
   
 -   **Per eliminare un log dei passaggi di processo di SQL Server Agent mediante:**  
   
@@ -59,7 +59,7 @@ ms.locfileid: "48070891"
   
 3.  Nella finestra di dialogo **Proprietà processo** eliminare il passaggio di processo selezionato.  
   
-##  <a name="TSQL"></a> Uso di Transact-SQL  
+##  <a name="TSQL"></a> Utilizzo di Transact-SQL  
   
 #### <a name="to-delete-a-sql-server-agent-job-step-log"></a>Per eliminare un log dei passaggi di processo di SQL Server Agent  
   
@@ -83,7 +83,7 @@ ms.locfileid: "48070891"
  Per altre informazioni, vedere [sp_delete_jobsteplog &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-delete-jobsteplog-transact-sql).  
   
 ##  <a name="SMO"></a> Utilizzo di SQL Server Management Objects  
- Utilizzare i metodi `DeleteJobStepLogs` della classe `Job` utilizzando un linguaggio di programmazione come Visual Basic, Visual C# o PowerShell. Per altre informazioni, vedere[SQL Server Management Objects (SMO)](http://msdn.microsoft.com/library/ms162169.aspx).  
+ Utilizzare i metodi `DeleteJobStepLogs` della classe `Job` utilizzando un linguaggio di programmazione come Visual Basic, Visual C# o PowerShell. Per altre informazioni, vedere[SQL Server Management Objects (SMO)](https://msdn.microsoft.com/library/ms162169.aspx).  
   
 ```  
 -- Uses PowerShell to delete all job step log files that have ID values larger than 5.  

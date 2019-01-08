@@ -11,12 +11,12 @@ ms.assetid: edf4843a-2a0a-486f-be25-14a3c1c6bc72
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 8813dba9c266c6a7930a636da27015c300426c79
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c91d12665ac8637f9de407896aed435a02af6940
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48220087"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53365170"
 ---
 # <a name="finding-and-viewing-reports-with-a-browser-report-builder-and-ssrs"></a>Ricerca e visualizzazione di report con un browser (Generatore report e SSRS)
   È possibile utilizzare qualsiasi browser supportato per visualizzare un report tramite una connessione diretta a un server di report. A ogni report è associato un indirizzo URL che rimanda a un server di report. È possibile immettere l'indirizzo Web di un report per aprirlo in una finestra del browser indipendentemente da un'applicazione Web. Il report viene aperto in formato HTML e include la barra degli strumenti del report, pertanto è possibile navigare tra le pagine o effettuare ricerche nei valori dei dati all'interno del report. È possibile impostare i parametri nell'URL per nascondere la barra degli strumenti o selezionare il formato di output del report.  
@@ -31,7 +31,7 @@ Cartelle visualizzate in un browser
 > [!NOTE]  
 >  Se si accede a un report tramite un dispositivo palmare, per aprire il report sarà necessario utilizzare un browser. Gestione report non è supportato nei dispositivi palmari.  
   
- Per ulteriori informazioni sui tipi di browser che è possibile utilizzare, vedere "Tipi di browser supportati da Reporting Services" nella [documentazione relativa a Reporting Services](http://go.microsoft.com/fwlink/?linkid=121312) inclusa nella documentazione online di SQL Server.  
+ Per ulteriori informazioni sui tipi di browser che è possibile utilizzare, vedere "Tipi di browser supportati da Reporting Services" nella [documentazione relativa a Reporting Services](https://go.microsoft.com/fwlink/?linkid=121312) inclusa nella documentazione online di SQL Server.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -54,9 +54,9 @@ Cartelle visualizzate in un browser
   
  `http://<Webservername>/reportserver?/<reportfolder>/employee+sales+summary&ReportYear=2004&ReportMonth=06&EmpID=24&rs:Command=Render&rs:Format=HTML4.0`  
   
- Il limite massimo per un URL in Internet Explorer è 2.083 caratteri. Per ulteriori informazioni, vedere [Lunghezza massima degli URL in Internet Explorer](http://support.microsoft.com/kb/208427).  
+ Il limite massimo per un URL in Internet Explorer è 2.083 caratteri. Per ulteriori informazioni, vedere [Lunghezza massima degli URL in Internet Explorer](https://support.microsoft.com/kb/208427).  
   
- Per ulteriori informazioni sull'accesso a un report tramite un URL, incluse le informazioni sulla sintassi dell'URL, vedere "Accesso con URL" nella [documentazione relativa a Reporting Services](http://go.microsoft.com/fwlink/?linkid=121312) all'interno della documentazione online di SQL Server.  
+ Per ulteriori informazioni sull'accesso a un report tramite un URL, incluse le informazioni sulla sintassi dell'URL, vedere "Accesso con URL" nella [documentazione relativa a Reporting Services](https://go.microsoft.com/fwlink/?linkid=121312) all'interno della documentazione online di SQL Server.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Ricerca e visualizzazione dei report in Gestione Report &#40;Report e SSRS&#41;](finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs.md)  

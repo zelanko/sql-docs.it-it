@@ -11,34 +11,34 @@ ms.assetid: 3925fd3d-2aa1-4768-96ad-cfc2c0ba9283
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: a65bd852ade2375a36a9a9b1e11a7009684a3621
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 671f574f81bdceb35c1ee235f8ae545b5ae60296
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48226681"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53372833"
 ---
 # <a name="sql-server-parallel-data-warehouse-connection-type-ssrs"></a>Tipo di connessione a SQL Server Parallel Data Warehouse (SSRS)
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssDWCurrentFull](../../../includes/ssdwcurrentfull-md.md)] è uno strumento di warehouse dati scalabile che offre prestazioni e scalabilità tramite l'elaborazione parallela massiva. [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] Usa [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] database per l'archiviazione di dati e l'elaborazione distribuita.  
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssDWCurrentFull](../../../includes/ssdwcurrentfull-md.md)] è uno strumento di data warehouse scalabile che offre prestazioni e scalabilità tramite un sistema di elaborazione parallela massiva. [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] vengono utilizzati database di [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] per l'elaborazione distribuita e l'archiviazione dei dati.  
   
- Lo strumento consente di partizionare tabelle di database di grandi dimensioni in più nodi fisici, dove ogni nodo esegue la propria istanza di [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Quando un report si connette a [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] per recuperare i dati del report, si connette al nodo di controllo che gestisce l'elaborazione delle query nell'appliance [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] . Una volta stabilita la connessione, non si noteranno differenze nell'utilizzo di un'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] all'interno e all'esterno di un ambiente [!INCLUDE[ssDW](../../../includes/ssdw-md.md)].  
+ Lo strumento consente di partizionare tabelle di database di grandi dimensioni in più nodi fisici, dove ogni nodo esegue la propria istanza di [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Quando un report si connette a [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] per recuperare i dati del report, si connette al nodo di controllo che gestisce l'elaborazione delle query nell'appliance [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] . Una volta stabilita la connessione, non si noteranno differenze nell'uso di un'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] all'interno e all'esterno di un ambiente [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] .  
   
- Per includere dati da [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] nel report, è necessario disporre di un set di dati che si basa su un'origine dati di report di tipo [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Parallel Data Warehouse. Questo tipo di origine dati predefinito si basa sul [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] estensione per i dati Parallel Data Warehouse. Questo tipo di origine dati può essere utilizzato per connettersi e recuperare dati da [!INCLUDE[ssDW](../../../includes/ssdw-md.md)].  
+ Per includere nel report dati da [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] , è necessario disporre di un set di dati basato su un'origine dati del report di tipo [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Parallel Data Warehouse. Questo tipo di origine dati predefinito è basato sull'estensione per i dati di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Parallel Data Warehouse. Questo tipo di origine dati può essere utilizzato per connettersi e recuperare dati da [!INCLUDE[ssDW](../../../includes/ssdw-md.md)].  
   
  Questa estensione per i dati supporta parametri multivalore, aggregazioni server e credenziali gestiti separatamente dalla stringa di connessione.  
   
- Per ulteriori informazioni, visitare il sito Web relativo a [SQL Server 2008 R2 Parallel Data Warehouse](http://go.microsoft.com/fwlink/?LinkId=150895).  
+ Per ulteriori informazioni, visitare il sito Web relativo a [SQL Server 2008 R2 Parallel Data Warehouse](https://go.microsoft.com/fwlink/?LinkId=150895).  
   
  Usare le informazioni presenti in questo argomento per compilare un'origine dati. Per istruzioni dettagliate, vedere [aggiungere e verificare una connessione dati o un'origine dati &#40;Generatore Report e SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md).  
   
 ##  <a name="Connection"></a> Stringa di connessione  
- Quando ci si connette a [!INCLUDE[ssDW](../../../includes/ssdw-md.md)], si esegue la connessione a un oggetto di database in uno strumento [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] . L'oggetto di database viene specificato in Progettazione query. Se non si specifica un database nella stringa di connessione, la connessione viene eseguita al database predefinito assegnato dall'amministratore. Contattare l'amministratore del database per ottenere le informazioni di connessione e le credenziali da utilizzare per connettersi all'origine dati. Nell'esempio di stringa di connessione seguente consente di specificare il database di esempio **CustomerSales**, nella [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] appliance:  
+ Quando ci si connette a [!INCLUDE[ssDW](../../../includes/ssdw-md.md)], si esegue la connessione a un oggetto di database in uno strumento [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] . L'oggetto di database viene specificato in Progettazione query. Se non si specifica un database nella stringa di connessione, la connessione viene eseguita al database predefinito assegnato dall'amministratore. Contattare l'amministratore del database per ottenere le informazioni di connessione e le credenziali da utilizzare per connettersi all'origine dati. Nella stringa di connessione di esempio seguente viene specificato il database di esempio **CustomerSales**nello strumento [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] :  
   
 ```  
 HOST=<IP address>; database= CustomerSales; port=<port>  
 ```  
   
- Inoltre, per fornire le credenziali quali nome utente e password, viene utilizzata la finestra di dialogo **Proprietà origini dati** . Le opzioni `User Id` e `Password` vengono aggiunte automaticamente alla stringa di connessione, pertanto non è necessario digitarle come parte della stringa di connessione. L'interfaccia utente fornisce anche le opzioni per specificare l'indirizzo IP del nodo di controllo nel [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] appliance e il numero di porta. Per impostazione predefinita, il numero di porta è 17000. La porta è configurabile da un amministratore e nella stringa di connessione potrebbe essere utilizzato un numero di porta diverso.  
+ Inoltre, per fornire le credenziali quali nome utente e password, viene utilizzata la finestra di dialogo **Proprietà origini dati** . Le opzioni `User Id` e `Password` vengono aggiunte automaticamente alla stringa di connessione, pertanto non è necessario digitarle come parte della stringa di connessione. Nell'interfaccia utente sono inoltre disponibili opzioni per specificare l'indirizzo IP del nodo di controllo nello strumento [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] e il numero di porta. Per impostazione predefinita, il numero di porta è 17000. La porta è configurabile da un amministratore e nella stringa di connessione potrebbe essere utilizzato un numero di porta diverso.  
   
  Per altre informazioni ed esempi di stringhe di connessione, vedere [Connessioni dati, origini dati e stringhe di connessione in Generatore report](../data-connections-data-sources-and-connection-strings-in-report-builder.md).  
   
@@ -51,7 +51,7 @@ HOST=<IP address>; database= CustomerSales; port=<port>
   
 -   Utilizzare un nome utente e una password archiviati. Per negoziare il doppio hop che si verifica quando il database contenente i dati del report è diverso dal server di report, selezionare le opzioni per utilizzare le credenziali come credenziali di Windows. È inoltre possibile scegliere di rappresentare l'utente autenticato dopo essersi connessi all'origine dati.  
   
--   Non sono necessarie credenziali. Per utilizzare questa opzione, è necessario aver configurato l'account di esecuzione automatica sul server di report. Per altre informazioni, vedere [Configurare l'account di esecuzione automatica &#40;Gestione configurazione SSRS&#41;](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md) nella [documentazione relativa a Reporting Services](http://go.microsoft.com/fwlink/?linkid=121312) nel sito msdn.microsoft.com.  
+-   Non sono necessarie credenziali. Per utilizzare questa opzione, è necessario aver configurato l'account di esecuzione automatica sul server di report. Per altre informazioni, vedere [Configurare l'account di esecuzione automatica &#40;Gestione configurazione SSRS&#41;](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md) nella [documentazione relativa a Reporting Services](https://go.microsoft.com/fwlink/?linkid=121312) nel sito msdn.microsoft.com.  
   
  Per altre informazioni, vedere [connessioni dati, origini dati e stringhe di connessione in Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md) oppure [specificare le credenziali in Generatore Report](../specify-credentials-in-report-builder.md).  
   
@@ -64,13 +64,13 @@ HOST=<IP address>; database= CustomerSales; port=<port>
   
 -   Compilare una query in modo interattivo. Utilizzare la finestra Progettazione query relazionale in cui è visualizzata una vista gerarchica di tabelle, viste, stored procedure e altri elementi del database organizzati in base allo schema di database. Selezionare colonne da tabelle o viste. Limitare il numero di righe di dati da recuperare specificando i criteri di filtro, raggruppamento e aggregazione. Personalizzare il filtro quando il report viene eseguito impostando l'opzione del parametro.  
   
--   Digitare o incollare una query. Utilizzare la finestra Progettazione query basata su testo per immettere [!INCLUDE[DWsql](../../../includes/dwsql-md.md)] testo direttamente, per incollare testo di query da un'altra origine, per immettere query complesse che non può essere compilata utilizzando la finestra Progettazione query relazionale o per immettere espressioni basate su query.  
+-   Digitare o incollare una query. Usare questa finestra per immettere direttamente testo [!INCLUDE[DWsql](../../../includes/dwsql-md.md)] , per incollare testo di query da un'altra origine, per immettere query complesse che non è possibile compilare usando la progettazione query relazionale o per immettere espressioni basate su query.  
   
 -   Consente di importare una query esistente da un file o un report. Utilizzare il pulsante **Importa** da una finestra Progettazione query per individuare un file con estensione sql o rdl e importare una query.  
   
  Per altre informazioni, vedere [Interfaccia utente di Progettazione query relazionale &#40;Generatore report&#41;](relational-query-designer-user-interface-report-builder.md) e [Interfaccia utente di Progettazione query basata su testo &#40;Generatore report&#41;](text-based-query-designer-user-interface-report-builder.md).  
   
- La finestra Progettazione query basata su testo supporta la modalità [Text](#QueryText), in cui è possibile digitare i comandi di [!INCLUDE[DWsql](../../../includes/dwsql-md.md)] per selezionare dati dall'origine dati.  
+ La finestra Progettazione query basata su testo supporta la modalità [Text](#QueryText) , in cui è possibile digitare i comandi di [!INCLUDE[DWsql](../../../includes/dwsql-md.md)] per selezionare dati dall'origine dati.  
   
 -   [Text](#QueryText)  
   
@@ -78,14 +78,14 @@ HOST=<IP address>; database= CustomerSales; port=<port>
   
  Una query che recupera dati del report da un database di grandi dimensioni, che include un data warehouse quale [!INCLUDE[ssDW](../../../includes/ssdw-md.md)], potrebbe generare un set di risultati con un numero di righe molto elevato, a meno che i dati vengano aggregati e riepilogati in modo da ridurre il numero di righe restituito dalla query. È possibile scrivere query che includono funzioni di aggregazione e raggruppamento tramite la finestra di Progettazione query con interfaccia grafica o basata su testo.  
   
- [!INCLUDE[DWsql](../../../includes/dwsql-md.md)] supporta la clausola, parola chiave e le aggregazioni fornite dalla finestra di progettazione di query per riepilogare i dati.  
+ [!INCLUDE[DWsql](../../../includes/dwsql-md.md)] sono supportate la clausola, la parola chiave e le funzioni di aggregazione fornite dalla finestra Progettazione query.  
   
- La finestra Progettazione query con interfaccia grafica usata da [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] fornisce il supporto predefinito per il raggruppamento e le aggregazioni per semplificare la scrittura di query che recuperano solo dati riepilogativi. Il [!INCLUDE[DWsql](../../../includes/dwsql-md.md)] sono funzionalità del linguaggio: il GROUP BY clausola, la parola chiave DISTINCT e funzioni di aggregazione quali SUM e COUNT. La finestra Progettazione query basata su testo offre il supporto completo per il [!INCLUDE[DWsql](../../../includes/dwsql-md.md)] linguaggio, inclusi il raggruppamento e aggregazioni.  
+ La finestra Progettazione query con interfaccia grafica usata da [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] fornisce il supporto predefinito per il raggruppamento e le aggregazioni per semplificare la scrittura di query che recuperano solo dati riepilogativi. Le funzionalità relative al linguaggio [!INCLUDE[DWsql](../../../includes/dwsql-md.md)] sono: la clausola GROUP BY, parola chiave DISTINCT e gli aggregati quali SUM e COUNT. La finestra Progettazione query basata su testo offre il supporto completo per il linguaggio [!INCLUDE[DWsql](../../../includes/dwsql-md.md)] , inclusi il raggruppamento e le aggregazioni.  
   
- Per altre informazioni su [!INCLUDE[tsql](../../../includes/tsql-md.md)], vedere la [Guida di riferimento a Transact-SQL &#40;Motore di database& #41;](/sql/t-sql/language-reference) nella [Documentazione online](http://go.microsoft.com/fwlink/?LinkId=141687) di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sul sito msdn.microsoft.com.  
+ Per altre informazioni su [!INCLUDE[tsql](../../../includes/tsql-md.md)], vedere la [Guida di riferimento a Transact-SQL &#40;Motore di database& #41;](/sql/t-sql/language-reference) nella [Documentazione online](https://go.microsoft.com/fwlink/?LinkId=141687) di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sul sito msdn.microsoft.com.  
   
 ###  <a name="QueryText"></a> Utilizzo di query di tipo Text  
- Nella finestra Progettazione query basata su testo, è possibile digitare i comandi [!INCLUDE[DWsql](../../../includes/dwsql-md.md)] per definire i dati in un set di dati. Le query che consente di recuperare dati da [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] sono uguali a quelle utilizzate per recuperare i dati da istanze di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] che non vengono eseguite all'interno di un [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] dell'applicazione. Ad esempio, il seguente [!INCLUDE[DWsql](../../../includes/dwsql-md.md)] query consente di selezionare i nomi di tutti i dipendenti con mansioni di Assistente marketing:  
+ Nella finestra Progettazione query basata su testo, è possibile digitare i comandi [!INCLUDE[DWsql](../../../includes/dwsql-md.md)] per definire i dati in un set di dati. Le query utilizzare per recuperare dati da [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] corrispondono a quelle utilizzate per recuperare dati da istanze di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] che non vengono eseguite all'interno di un'applicazione [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] . La query [!INCLUDE[DWsql](../../../includes/dwsql-md.md)] seguente, ad esempio, seleziona i nomi di tutti i dipendenti con mansioni di assistente marketing:  
   
 ```  
 SELECT  
@@ -121,14 +121,14 @@ SELECT FirstName, LastName FROM HumanResources.Employee E INNER JOIN
 WHERE EmployeeID = (@EmpID)  
 ```  
   
- Per impostazione predefinita, ogni parametro del report dispone di tipo di dati Text e un set di dati creato automaticamente per fornire un elenco a discesa di valori disponibili. Dopo aver creato i parametri di report, potrebbe essere necessario modificare i valori predefiniti. Per altre informazioni, vedere [Report Parameters &#40;Report Builder and Report Designer&#41;](../report-design/report-parameters-report-builder-and-report-designer.md).  
+ Per impostazione predefinita, ogni parametro del report dispone di tipo di dati Text e un set di dati creato automaticamente per fornire un elenco a discesa di valori disponibili. Dopo aver creato i parametri di report, potrebbe essere necessario modificare i valori predefiniti. Per ulteriori informazioni, vedere la pagina relativa al [Parametri report &#40;Generatore report e Progettazione report&#41;](../report-design/report-parameters-report-builder-and-report-designer.md).  
   
  ![Icona freccia usata con il collegamento Torna all'inizio](../../2014-toc/media/uparrow16x16.gif "Icona freccia usata con il collegamento Torna all'inizio") [Torna all'inizio](#BackToTop)  
   
 ##  <a name="Remarks"></a> Osservazioni  
   
 ###### <a name="platform-and-version-information"></a>Informazioni sulla piattaforma e sulla versione  
- Per altre informazioni sul supporto della piattaforma e della versione, vedere [Origini dati supportate da Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md) nella documentazione relativa a [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] inclusa nella [documentazione online](http://go.microsoft.com/fwlink/?linkid=121312) di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ Per altre informazioni sul supporto della piattaforma e della versione, vedere [Origini dati supportate da Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md) nella documentazione relativa a [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] inclusa nella [documentazione online](https://go.microsoft.com/fwlink/?linkid=121312) di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
  ![Icona freccia usata con il collegamento Torna all'inizio](../../2014-toc/media/uparrow16x16.gif "Icona freccia usata con il collegamento Torna all'inizio") [Torna all'inizio](#BackToTop)  
   
@@ -158,7 +158,7 @@ WHERE EmployeeID = (@EmpID)
  [Raccolta di campi del set di dati &#40;Generatore report e SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md)  
  Vengono fornite informazioni sulla raccolta di campi di set di dati generata dalla query.  
   
- [Origini dati supportate da Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md) nella documentazione relativa a [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] inclusa nella [documentazione online](http://go.microsoft.com/fwlink/?linkid=121312) di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ [Origini dati supportate da Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md) nella documentazione relativa a [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] inclusa nella [documentazione online](https://go.microsoft.com/fwlink/?linkid=121312) di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
  Vengono fornite informazioni dettagliate sul supporto delle piattaforme e delle versioni per ogni estensione per i dati.  
   
  ![Icona freccia usata con il collegamento Torna all'inizio](../../2014-toc/media/uparrow16x16.gif "Icona freccia usata con il collegamento Torna all'inizio") [Torna all'inizio](#BackToTop)  

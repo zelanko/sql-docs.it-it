@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: xevents
 ms.topic: conceptual
 helpviewer_keywords:
 - event tracing for windows target
@@ -15,19 +14,19 @@ ms.assetid: ca2bb295-b7f6-49c3-91ed-0ad4c39f89d5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 64ae07c8f8ac258730ea5de04dd0e1f304b79bce
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e855b9de09727a4437cad99a2534aee9d960298b
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48175161"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53355990"
 ---
 # <a name="event-tracing-for-windows-target"></a>destinazione di Event Tracing for Windows
   Prima di utilizzare Event Tracing for Windows (ETW) come destinazione, è consigliabile acquisire familiarità con tale funzionalità. L'analisi ETW è utilizzata in abbinamento a Eventi estesi o come un consumer di eventi estesi. I collegamenti esterni seguenti rappresentano un punto iniziale per ottenere informazioni di base su ETW:  
   
--   [Eventi di Windows](http://go.microsoft.com/fwlink/?LinkId=92380)  
+-   [Eventi di Windows](https://go.microsoft.com/fwlink/?LinkId=92380)  
   
--   [Migliorare il debug e la regolazione delle prestazioni con ETW](http://go.microsoft.com/fwlink/?LinkId=92381)  
+-   [Migliorare il debug e la regolazione delle prestazioni con ETW](https://go.microsoft.com/fwlink/?LinkId=92381)  
   
  Sebbene possa essere aggiunta a numerose sessioni, la destinazione ETW è una destinazione singleton. Se un evento viene generato in più sessioni, verrà propagato alla destinazione ETW solo una volta per ogni occorrenza. Il motore di Eventi estesi è limitato a un'unica istanza per processo.  
   
@@ -49,7 +48,7 @@ ms.locfileid: "48175161"
   
  Nella tabella seguente vengono descritte le opzioni disponibili per la configurazione della destinazione ETW.  
   
-|Opzione|Valori consentiti|Description|  
+|Opzione|Valori consentiti|Descrizione|  
 |------------|--------------------|-----------------|  
 |default_xe_session_name|Qualsiasi stringa contenente fino a 256 caratteri. Questo valore è facoltativo.|Nome della sessione di Eventi estesi. Per impostazione predefinita è XE_DEFAULT_ETW_SESSION.|  
 |default_etw_session_logfile_path|Qualsiasi stringa contenente fino a 256 caratteri. Questo valore è facoltativo.|Percorso del file di log per la sessione di Eventi estesi. Per impostazione predefinita è %TEMP%\ XEEtw.etl.|  
@@ -76,7 +75,7 @@ ms.locfileid: "48175161"
     > [!IMPORTANT]  
     >  Impossibile modificare il percorso del file dopo l'inizio della prima sessione.  
   
--   I file Managed Object Format (MOF) si trovano in *\<percorso di installazione>* \Microsoft SQL Server\Shared. Per altre informazioni, vedere [Managed Object Format (MOF)](http://go.microsoft.com/fwlink/?LinkId=92851) su MSDN.  
+-   I file Managed Object Format (MOF) si trovano in *\<percorso di installazione>* \Microsoft SQL Server\Shared. Per altre informazioni, vedere [Managed Object Format (MOF)](https://go.microsoft.com/fwlink/?LinkId=92851) su MSDN.  
   
 ## <a name="adding-the-target-to-a-session"></a>Aggiunta della destinazione a una sessione  
  Per aggiungere la destinazione ETW a una sessione di Eventi estesi, è necessario includere l'istruzione seguente quando si crea o modifica una sessione eventi:  

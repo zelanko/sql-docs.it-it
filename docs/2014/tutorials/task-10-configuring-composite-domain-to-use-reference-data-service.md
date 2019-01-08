@@ -13,15 +13,15 @@ ms.assetid: 752eefde-8b87-4f54-878e-9963ccbadc8e
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4e4a8ef8c3b9d60040d6d9b5fcbff145a600cd88
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8541ea7446fe80bf6bb0fd5f1bc3e80285912ffe
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48167681"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53370023"
 ---
 # <a name="task-10-configuring-composite-domain-to-use-reference-data-service"></a>Attività 10: Configurazione del dominio composito per utilizzare il servizio dati di riferimento
-  In questa attività si configura il **Address Validation** dominio composito per utilizzare il **Melissa Data – controllo indirizzo** servizio. In fase di esecuzione, durante l'attività di pulizia, tramite DQS i valori del dominio Address Validation vengono passati al servizio per la pulizia. Visualizzare [mappa dominio/dominio composito ai dati di riferimento](http://msdn.microsoft.com/library/hh213030.aspx) per altri dettagli.  
+  In questa attività si configura il **Address Validation** dominio composito per utilizzare il **Melissa Data - controllo indirizzo** servizio. In fase di esecuzione, durante l'attività di pulizia, tramite DQS i valori del dominio Address Validation vengono passati al servizio per la pulizia. Visualizzare [mappa dominio/dominio composito ai dati di riferimento](https://msdn.microsoft.com/library/hh213030.aspx) per altri dettagli.  
   
 1.  Nella pagina principale del **Client DQS**, fare clic su **Suppliers (Domain Management)** sotto **Knowledge Base recenti** per avviare il **Gestione dominio**pagina.  
   
@@ -33,7 +33,7 @@ ms.locfileid: "48167681"
   
 4.  Fare clic su **esplorare** pulsante sulla barra degli strumenti.  
   
-5.  Nel **catalogo di provider di dati di riferimento Online** finestra di dialogo **casella di controllo** accanto a **Melissa Data – controllo indirizzo**.  
+5.  Nel **catalogo di provider di dati di riferimento Online** finestra di dialogo **casella di controllo** accanto a **Melissa Data - controllo indirizzo**.  
   
      ![Selezione di Melissa Data - controllo indirizzo](../../2014/tutorials/media/et-configuringcdtouserds-02.jpg "selezionare Melissa Data - controllo indirizzo")  
   

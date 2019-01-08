@@ -18,12 +18,12 @@ ms.assetid: ceecea08-456f-4819-85d9-ecc9647d7187
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4b5124a091b59ec1669f5d77cbe989f780fee46c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7819e14ccfea387a83e88f7aff8c81541968e89a
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47738119"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589125"
 ---
 # <a name="spoageterrorinfo-transact-sql"></a>sp_OAGetErrorInfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,16 +47,16 @@ sp_OAGetErrorInfo [ objecttoken ]
  *vengono restituite le*  
  È il token di oggetto di un oggetto OLE creato in precedenza tramite **sp_OACreate** oppure valore NULL. Se *vengono restituite le* è specificato, vengono restituite informazioni sull'errore per l'oggetto. Se viene specificato NULL, vengono restituite le informazioni sull'errore relative all'intero batch.  
   
- *origine* **OUTPUT**  
+ _origine_ **OUTPUT**  
  Origine delle informazioni sull'errore. Se specificato, deve essere una variabile locale **char**, **nchar**, **varchar**, oppure **nvarchar** variabile. Se necessario, il valore restituito viene troncato in base alla dimensione della variabile locale.  
   
- *Descrizione* **OUTPUT**  
+ _Descrizione_ **OUTPUT**  
  Descrizione dell'errore. Se specificato, deve essere una variabile locale **char**, **nchar**, **varchar**, oppure **nvarchar** variabile. Se necessario, il valore restituito viene troncato in base alla dimensione della variabile locale.  
   
- *HelpFile* **OUTPUT**  
+ _HelpFile_ **OUTPUT**  
  File della Guida relativo all'oggetto OLE. Se specificato, deve essere una variabile locale **char**, **nchar**, **varchar**, oppure **nvarchar** variabile. Se necessario, il valore restituito viene troncato in base alla dimensione della variabile locale.  
   
- *HelpID* **OUTPUT**  
+ _HelpID_ **OUTPUT**  
  ID di contesto del file della Guida. Se specificato, deve essere una variabile locale **int** variabile.  
   
 > [!NOTE]  
@@ -70,7 +70,7 @@ sp_OAGetErrorInfo [ objecttoken ]
 ## <a name="result-sets"></a>Set di risultati  
  Se non viene specificato alcun parametro di output, le informazioni sull'errore vengono restituite al client come set di risultati.  
   
-|Nomi colonna|Tipo di dati|Description|  
+|Nomi colonna|Tipo di dati|Descrizione|  
 |------------------|---------------|-----------------|  
 |**Errore**|**Binary(4)**|Rappresentazione binaria del numero di errore.|  
 |**Origine**|**nvarchar(nn)**|Origine dell'errore.|  
@@ -91,7 +91,7 @@ sp_OAGetErrorInfo [ objecttoken ]
 |**L'esecuzione del server fallita (0x80080005)**|L'oggetto OLE specificato è registrato come server OLE locale (file exe), ma non è stato possibile trovare o avviare il file.|  
 |**Il modulo specificato non è stato trovato (0x8007007e)**|L'oggetto OLE specificato è registrato come server OLE in-process (file dll), ma non è stato possibile trovare o caricare il file.|  
 |**Tipo non corrispondente (0x80020005)**|Il tipo di dati di una variabile locale [!INCLUDE[tsql](../../includes/tsql-md.md)] utilizzata per l'archiviazione del valore restituito di una proprietà o un metodo non corrisponde al tipo di dati di [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] del valore restituito della proprietà o del metodo oppure è stato richiesto il valore restituito di una proprietà o un metodo ma non viene restituito alcun valore.|  
-|**Il tipo di dati o il valore del parametro 'context' di sp_OACreate non è valido (0x8004275B)**|Il valore del parametro di contesto deve essere 1, 4 o 5.|  
+|**Il tipo di dati o il valore del parametro 'context' di sp_OACreate non è valido (0x8004275B)**|Il valore del parametro di contesto deve essere uno dei seguenti: 1, 4 o 5.|  
   
  Per altre informazioni sull'elaborazione dei codici restituiti HRESULT, vedere [OLE Automation codici restituiti e informazioni sull'errore](../../relational-databases/stored-procedures/ole-automation-return-codes-and-error-information.md).  
   

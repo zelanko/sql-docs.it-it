@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- integration-services
+ms.technology: integration-services
 ms.topic: reference
 dev_langs:
 - VB
@@ -24,12 +22,12 @@ ms.assetid: c4b76a3d-94ca-4a8e-bb45-cb8bd0ea3ec1
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: cab26a21658c3573a3bdfab58a50500a7245397e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: be5dd85d67eb2f28ced98ef91973ca1a08f5dcbd
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48184406"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53365753"
 ---
 # <a name="working-with-variables-programmatically"></a>Utilizzo delle variabili a livello di programmazione
   Le variabili consentono di impostare valori in modo dinamico e di controllare i processi in pacchetti, contenitori, attività e gestori eventi. Possono inoltre essere utilizzate dai vincoli di precedenza per controllare la direzione del flusso di dati verso attività diverse. Le variabili possono essere utilizzate per effettuare le operazioni seguenti:  
@@ -164,7 +162,7 @@ End Module
   
  Le variabili di sistema disponibili variano a seconda del tipo di contenitore. Per un elenco delle variabili di sistema disponibili per pacchetti, contenitori, attività e gestori di eventi, vedere [Variabili di sistema](../system-variables.md).  
   
-## <a name="value"></a>valore  
+## <a name="value"></a>Value  
  Il valore di una variabile personalizzata può essere un valore letterale o un'espressione:  
   
 -   Se si desidera che la variabile contenga un valore letterale, impostare il valore della relativa proprietà <xref:Microsoft.SqlServer.Dts.Runtime.Variable.Value%2A>.  
@@ -230,10 +228,10 @@ End Module
 ## <a name="configuration-files"></a>File di configurazione  
  Se un file di configurazione include una variabile personalizzata, la variabile può essere aggiornata in fase di esecuzione. Questo significa che quando il pacchetto viene eseguito, il valore della variabile che si trovava originariamente nel pacchetto viene sostituito con un nuovo valore del file di configurazione. Questa tecnica di sostituzione risulta utile quando un pacchetto viene distribuito in più server che richiedono valori di variabili diversi. Ad esempio, una variabile può specificare il numero di volte in cui un contenitore **Ciclo Foreach** ripete il flusso di lavoro o elencare i destinatari a cui un gestore di eventi invia un messaggio di posta elettronica quando viene generato un errore oppure modificare il numero di errori che possono verificarsi prima che l'esecuzione del pacchetto abbia esito negativo. Queste variabili vengono fornite dinamicamente nei file di configurazione per ogni ambiente. Pertanto, nei file di configurazione sono consentite solo variabili di lettura/scrittura. Per altre informazioni, vedere [Creazione di configurazioni dei pacchetti](../create-package-configurations.md).  
   
-![Icona di Integration Services (piccola)](../media/dts-16.gif "icona di Integration Services (piccola)")**rimangono fino a Date con Integration Services** <br /> Per i download, gli articoli, gli esempi e i video Microsoft più recenti, oltre alle soluzioni selezionate dalla community, visitare la pagina [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sul sito MSDN:<br /><br /> [Visita la pagina di Integration Services su MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Per ricevere una notifica automatica su questi aggiornamenti, sottoscrivere i feed RSS disponibili nella pagina.  
+![Icona di Integration Services (piccola)](../media/dts-16.gif "icona di Integration Services (piccola)")**rimangono fino a Date con Integration Services**<br /> Per i download, gli articoli, gli esempi e i video Microsoft più recenti, oltre alle soluzioni selezionate dalla community, visitare la pagina [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sul sito MSDN:<br /><br /> [Visita la pagina di Integration Services su MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Per ricevere una notifica automatica su questi aggiornamenti, sottoscrivere i feed RSS disponibili nella pagina.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Integration Services &#40;SSIS&#41; le variabili](../integration-services-ssis-variables.md)   
- [Uso di variabili nei pacchetti](../use-variables-in-packages.md)  
+ [Variabili di Integration Services &#40;SSIS&#41;](../integration-services-ssis-variables.md)   
+ [Utilizzo di variabili nei pacchetti](../use-variables-in-packages.md)  
   
   

@@ -1,43 +1,55 @@
 ---
-title: Distribuire il modello R e usarlo in SQL (procedura dettagliata) | Microsoft Docs
+title: 'Distribuire un modello R per le stime in SQL Server: SQL Server Machine Learning'
+description: Esercitazione che illustra come distribuire un modello R in SQL Server per analitica nel database.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 11/26/2018
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 74a5d8b7ac8bd36a6ce76b895b2dde4a07f5ea96
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 7b14b70fc5ba8ac39535d9dd6dedbfa1bd309aa4
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39085353"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53645196"
 ---
-# <a name="deploy-the-r-model-and-use-it-in-sql"></a>Distribuire il modello R e usarlo in SQL
+# <a name="deploy-the-r-model-and-use-it-in-sql-server-walkthrough"></a>Distribuire il modello R e usarlo in SQL Server (procedura dettagliata)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-In questa lezione è usare modelli R in un ambiente di produzione, chiamando un modello con Training da una stored procedure. È quindi possibile richiamare la stored procedure da R o qualsiasi linguaggio di programmazione dell'applicazione che supporta [!INCLUDE[tsql](../../includes/tsql-md.md)] (ad esempio c#, Java, Python, e così via), usare il modello per creare stime sulle nuove osservazioni.
+In questa lezione, informazioni su come distribuire i modelli R in un ambiente di produzione chiamando un modello con Training da una stored procedure. È possibile richiamare la stored procedure da R o qualsiasi linguaggio di programmazione dell'applicazione che supporta [!INCLUDE[tsql](../../includes/tsql-md.md)] (ad esempio C#, Java, Python e così via) e usare il modello per creare stime sulle nuove osservazioni.
 
-Questo esempio illustra due modi più comuni per usare un modello nell'assegnazione dei punteggi:
+Questo articolo illustra due modi più comuni per usare un modello nell'assegnazione dei punteggi:
 
-- **Modalità di valutazione batch** viene usato quando è necessario creare più stime molto rapidamente, passando un database SQL di query o di tabella come input. Viene restituita una tabella dei risultati, cui è possibile inserire direttamente in una tabella o scrivere in un file.
-
-- **Modalità di assegnazione dei punteggi singoli** viene usato quando è necessario creare una stima alla volta. Si passa un set di valori singoli alla stored procedure. I valori corrispondono alle funzionalità nel modello, che utilizza il modello per creare una stima, o generano un altro risultato, ad esempio un valore di probabilità. È quindi possibile restituire tale valore per l'applicazione o utente.
+> [!div class="checklist"]
+> * **Modalità di valutazione batch** genera più stime
+> * **Modalità di assegnazione dei punteggi singoli** genera una stima alla volta
 
 ## <a name="batch-scoring"></a>Punteggio batch
 
-È stata creata una stored procedure per l'assegnazione dei punteggi batch quando è stato inizialmente eseguito lo script di PowerShell. Questa stored procedure *PredictTipBatchMode*, esegue le operazioni seguenti:
+Creare una stored procedure *PredictTipBatchMode*, che consente di generare più stime, passando una query SQL o una tabella come input. Viene restituita una tabella dei risultati, cui è possibile inserire direttamente in una tabella o scrivere in un file.
 
 - Ottiene un set di dati di input come query SQL
 - Chiama il modello di regressione logistica di cui è stato eseguito il training e che è stato salvato nella lezione precedente
 - Stima la probabilità che il driver Ottiene qualsiasi suggerimento diverso da zero
 
-1. Per esaminare lo script per la stored procedure, è opportuno *PredictTipBatchMode*. Illustra diversi aspetti della modalità con la quale un modello può diventare operativo usando [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)].
+1. In Management Studio, aprire una nuova finestra query ed eseguire lo script T-SQL seguente per creare la stored procedure PredictTipBatchMode archiviati.
   
-    ```tsql
-    CREATE PROCEDURE [dbo].[PredictTipBatchMode]
-    @input nvarchar(max)
+    ```sql
+    USE [NYCTaxi_Sample]
+    GO
+
+    SET ANSI_NULLS ON
+    GO
+    SET QUOTED_IDENTIFIER ON
+    GO
+
+    IF EXISTS (SELECT * FROM sys.objects WHERE type = 'P' AND name = 'PredictTipBatchMode')
+    DROP PROCEDURE v
+    GO
+
+    CREATE PROCEDURE [dbo].[PredictTipBatchMode] @input nvarchar(max)
     AS
     BEGIN
       DECLARE @lmodel2 varbinary(max) = (SELECT TOP 1 model  FROM nyc_taxi_models);
@@ -63,13 +75,13 @@ Questo esempio illustra due modi più comuni per usare un modello nell'assegnazi
 
     + I dati usati come input per l'assegnazione dei punteggi è definito come una query SQL e archiviata come una stringa nella variabile SQL  _\@input_. I dati recuperati dal database, questo viene archiviato in un frame di dati denominato *InputDataSet*, che è semplicemente il nome predefinito per i dati di input per il [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) procedure; è possibile definire un altro nome di variabile se necessario, usando il parametro   *_\@input_data_1_name_*.
 
-    + Per generare i punteggi, la stored procedure chiama la funzione `rxPredict` dalla libreria **RevoScaleR** .
+    + Per generare i punteggi, la stored procedure chiama la funzione rxPredict dal **RevoScaleR** libreria.
 
     + Il valore restituito *punteggio*, indica la probabilità dato il modello, tale driver Ottiene un suggerimento. Facoltativamente, è possibile applicare facilmente un tipo di filtro ai valori restituiti per suddividere i valori restituiti in gruppi "senza Mancia" e "suggerimento".  Una probabilità minore dello 0,5 significa, ad esempio, che è improbabile che un suggerimento.
   
-2.  Per chiamare la stored procedure in modalità batch, si definisce la query richiesto come input per la stored procedure. Ecco la query SQL. è possibile eseguirlo in SSMS per verificarne il funzionamento.
+2.  Per chiamare la stored procedure in modalità batch, si definisce la query richiesto come input per la stored procedure. Di seguito è riportata la query SQL, che è possibile eseguire in SSMS per verificarne il funzionamento.
 
-    ```SQL
+    ```sql
     SELECT TOP 10
       a.passenger_count AS passenger_count,
       a.trip_time_in_secs AS trip_time_in_secs,
@@ -101,19 +113,33 @@ Questo esempio illustra due modi più comuni per usare un modello nell'assegnazi
     sqlQuery (conn, q);
     ```
 
-    Se si verifica un errore ODBC, controllare la sintassi di query, e se si hanno il numero corretto di virgolette. 
+    Se si verifica un errore ODBC, verificare gli errori di sintassi e dalla presenza il numero corretto di virgolette. 
     
     Se viene visualizzato un errore di autorizzazione, assicurarsi che l'account di accesso ha la possibilità di eseguire la stored procedure.
 
 ## <a name="single-row-scoring"></a>Singola riga di assegnazione dei punteggi
 
+Modalità di assegnazione dei punteggi singoli genera una stima alla volta, passando un set di singoli valori per la stored procedure come input. I valori corrispondono alle funzionalità nel modello, che utilizza il modello per creare una stima, o generano un altro risultato, ad esempio un valore di probabilità. È quindi possibile restituire tale valore per l'applicazione o utente.
+
 Quando si chiama il modello di stima in base a una riga per riga, si passa un set di valori che rappresentano le funzionalità per ogni singolo caso. La stored procedure restituisce quindi una sola stima o probabilità. 
 
 La stored procedure *PredictTipSingleMode* illustra questo approccio. Accetta come input più parametri che rappresentano i valori delle funzionalità (ad esempio, passeggeri count e ottimizzazione dei viaggi distanza), assegna un punteggio a queste funzionalità usando il modello R archiviato e restituisce la probabilità di suggerimento.
 
-1. Se la stored procedure *PredictTipSingleMode* non è stato creato dallo script di PowerShell iniziale, è possibile eseguire l'istruzione Transact-SQL seguente per crearla adesso.
+1. Eseguire l'istruzione Transact-SQL seguente per creare la stored procedure.
 
-    ```tsql
+    ```sql
+    USE [NYCTaxi_Sample]
+    GO
+
+    SET ANSI_NULLS ON
+    GO
+    SET QUOTED_IDENTIFIER ON
+    GO
+
+    IF EXISTS (SELECT * FROM sys.objects WHERE type = 'P' AND name = 'PredictTipSingleMode')
+    DROP PROCEDURE v
+    GO
+
     CREATE PROCEDURE [dbo].[PredictTipSingleMode] @passenger_count int = 0,
     @trip_distance float = 0,
     @trip_time_in_secs int = 0,
@@ -167,7 +193,7 @@ La stored procedure *PredictTipSingleMode* illustra questo approccio. Accetta co
 
 2. In SQL Server Management Studio, è possibile usare la [!INCLUDE[tsql](../../includes/tsql-md.md)] **EXEC** procedure (o **EXECUTE**) per chiamare la stored procedure e passarlo gli input obbligatori. Ad esempio, provare a eseguire questa istruzione in Management Studio:
 
-    ```SQL
+    ```sql
     EXEC [dbo].[PredictTipSingleMode] 1, 2.5, 631, 40.763958,-73.973373, 40.782139,-73.977303
     ```
 
@@ -189,32 +215,18 @@ La stored procedure *PredictTipSingleMode* illustra questo approccio. Accetta co
     ```
 
     >[!TIP]
-    > R Tools per Visual Studio (RTVS) offre un'ottima integrazione con SQL Server e R. Vedere questo articolo per altri esempi di uso RODBC con una connessione di SQL Server: [funziona con SQL Server e R](https://docs.microsoft.com/visualstudio/rtvs/sql-server)
-
-## <a name="summary"></a>Riepilogo
-
-Ora che si è appreso come usare i [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dei dati e mantenere modelli R sottoposti a training per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], dovrebbe essere relativamente semplice per creare nuovi modelli basati su questo set di dati. Ad esempio, è possibile creare questi modelli aggiuntivi:
-
-- Un modello di regressione che stima l'importo della mancia
-
-- Un modello di classificazione multiclasse che stima se il suggerimento è grande, Media o piccola
-
-È inoltre consigliabile controllare alcuni di questi esempi e risorse aggiuntivi:
-
-+ [Scenari di analisi scientifica dei dati e modelli di soluzioni](data-science-scenarios-and-solution-templates.md)
-
-+ [Analisi avanzata nel database](sqldev-in-database-r-for-sql-developers.md)
-
-+ [Microsoft R - Diving into Data Analysis](https://msdn.microsoft.com/microsoft-r/data-analysis-in-microsoft-r)
-
-+ [Risorse aggiuntive](https://msdn.microsoft.com/microsoft-r/microsoft-r-more-resources)
-
-## <a name="previous-lesson"></a>Lezione precedente
-
-[Compilare un modello R e salvarlo in SQL Server](walkthrough-build-and-save-the-model.md)
+    > R Tools per Visual Studio (RTVS) offre un'ottima integrazione con SQL Server e R. Vedere questo articolo per altri esempi di uso RODBC con una connessione di SQL Server: [Uso di R e SQL Server](https://docs.microsoft.com/visualstudio/rtvs/sql-server)
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-[Esercitazioni di SQL Server R](sql-server-r-tutorials.md)
+Ora che si è appreso come usare i [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dei dati e mantenere modelli R sottoposti a training per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], dovrebbe essere relativamente semplice per creare nuovi modelli basati su questo set di dati. Ad esempio, è possibile creare questi modelli aggiuntivi:
 
-[Come creare una stored procedure con sqlrutils](../r/how-to-create-a-stored-procedure-using-sqlrutils.md)
++ Un modello di regressione che stima l'importo della mancia
++ Un modello di classificazione multiclasse che stima se il suggerimento è grande, Media o piccola
+
+È anche possibile esplorare questi esempi e risorse aggiuntivi:
+
++ [Scenari di analisi scientifica dei dati e modelli di soluzioni](data-science-scenarios-and-solution-templates.md)
++ [Analisi avanzata nel database](sqldev-in-database-r-for-sql-developers.md)
++ [Microsoft R - Diving into Data Analysis](https://msdn.microsoft.com/microsoft-r/data-analysis-in-microsoft-r)
++ [Risorse aggiuntive](https://msdn.microsoft.com/microsoft-r/microsoft-r-more-resources)

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: install
 ms.topic: conceptual
 helpviewer_keywords:
 - protocols [SQL Server]
@@ -22,12 +21,12 @@ ms.assetid: 8cd437f6-9af1-44ce-9cb0-4d10c83da9ce
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6ed7ab99c94a2b6618a97d4e167344b0ca2cb0f4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f4649f6a5abd9726a1b01e3ed30d6cabf88aef9e
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48056332"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53371823"
 ---
 # <a name="network-protocols-and-network-libraries"></a>Protocolli e librerie di rete
   Un server può consentire di restare in attesa su più protocolli di rete contemporaneamente o di monitorarli. È tuttavia necessario configurare ogni protocollo. Se un particolare protocollo non è configurato, il server non può restare in attesa su tale protocollo. Le configurazioni dei protocolli possono essere modificate dopo l'installazione utilizzando Gestione configurazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -35,16 +34,16 @@ ms.locfileid: "48056332"
 ## <a name="default-sql-server-network-configuration"></a>Configurazione di rete predefinita di SQL Server  
  Un'istanza predefinita di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene configurata per la porta TCP/IP 1433 e la named pipe \\\\\pipe\sql\query. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengono configurate per le porte dinamiche TCP, con un numero di porta assegnato dal sistema operativo.  
   
- Se non è possibile utilizzare indirizzi di porta dinamici (ad esempio, quando le connessioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] devono passare tramite un server firewall configurato per l'utilizzo di indirizzi di porte specifici). Selezionare un numero di porta non assegnato. Le assegnazioni dei numeri di porta vengono gestite da IANA (Internet Assigned Numbers Authority) e sono elencate in [http://www.iana.org](http://go.microsoft.com/fwlink/?LinkId=48844).  
+ Se non è possibile utilizzare indirizzi di porta dinamici (ad esempio, quando le connessioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] devono passare tramite un server firewall configurato per l'utilizzo di indirizzi di porte specifici). Selezionare un numero di porta non assegnato. Le assegnazioni dei numeri di porta vengono gestite da IANA (Internet Assigned Numbers Authority) e sono elencate in [http://www.iana.org](https://go.microsoft.com/fwlink/?LinkId=48844).  
   
  Per migliorare la sicurezza, la connettività di rete non viene abilitata completamente durante l'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Per abilitare, disabilitare e configurare i protocolli di rete al termine dell'installazione, utilizzare l'area Configurazione di rete [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di Gestione configurazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="server-message-block-protocol"></a>Protocollo Server Message Block  
  È necessario disabilitare tutti i protocolli non richiesti, incluso il protocollo SMB (Server Message Block), dei server della rete perimetrale. Per i server Web e i server DNS (Domain Name System) non è necessario SMB. È necessario disabilitare questo protocollo per proteggersi dal rischio di enumerazione degli utenti.  
   
-> [!WARNING]  
+> [!WARNING]
 >  Tramite la disabilitazione di SMB (Server Message Block) verrà bloccato il servizio cluster di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o Windows, impedendo l'accesso alla condivisione file remota. Non disabilitare SMB se si esegue o si pianifica di eseguire una delle operazioni seguenti:  
->   
+> 
 >  -   Utilizzare la modalità di quorum di tipo Maggioranza dei nodi del cluster e delle condivisioni file di Windows  
 > -   Specificare una condivisione file SMB come directory dei dati durante l'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
 > -   Creare un file di database in una condivisione file SMB  

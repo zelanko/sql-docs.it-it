@@ -13,12 +13,12 @@ ms.assetid: edb5f61a-a581-467a-a367-134b7f9b849f
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2c521e524e6e205989e2bff96928af4da9c24bb2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 93f00a9544512c3c5efb63667d715c57bcf62de9
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48091876"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53354016"
 ---
 # <a name="define-a-many-to-many-relationship-and-many-to-many-relationship-properties"></a>Definire una relazione molti-a-molti e le relative proprietà
   In questo argomento vengono illustrate le dimensioni molti-a-molti in Analysis Services, quando utilizzarle e come crearle.  
@@ -61,7 +61,7 @@ ms.locfileid: "48091876"
   
  Per illustrare i passaggi seguiti nella creazione di una relazione molti-a-molti, in questa procedura viene ricreata una delle relazioni molti-a-molti nel cubo di esempio Adventure Works. Se i dati di origine (ovvero, il data warehouse di esempio Adventure Works) sono installati in un'istanza del motore di database relazionale, è possibile attenersi alla procedura seguente.  
   
-#### <a name="step-1-verify-dsv-relationships"></a>Passaggio 1: verificare le relazioni della vista origine dati  
+#### <a name="step-1-verify-dsv-relationships"></a>Passaggio 1: Verificare le relazioni della vista origine dati  
   
 1.  In un progetto multidimensionale di SQL Server Data Tools creare un'origine dati nel data warehouse relazionale Adventure Works DW 2012 ospitato in un'istanza del motore di database di SQL Server.  
   
@@ -82,7 +82,7 @@ ms.locfileid: "48091876"
   
      ![DSV che Mostra tabelle correlate](../media/ssas-m2m-dsvpkeys.PNG "DSV che Mostra tabelle correlate")  
   
-#### <a name="step-2-create-dimensions-and-measure-groups"></a>Passaggio 2: creare dimensioni e gruppi di misure  
+#### <a name="step-2-create-dimensions-and-measure-groups"></a>Passaggio 2: Creare dimensioni e gruppi di misure  
   
 1.  In un progetto multidimensionale di SQL Server Data Tools, fare clic con il pulsante destro del mouse su **Dimensioni** e selezionare **Nuova dimensione**.  
   
@@ -122,7 +122,7 @@ ms.locfileid: "48091876"
   
 11. Assegnare un nome al cubo e fare clic su **Fine**.  
   
-#### <a name="step-3-define-many-to-many-relationship"></a>Passaggio 3: definire la relazione molti-a-molti  
+#### <a name="step-3-define-many-to-many-relationship"></a>Passaggio 3: Definire molti-a-molti relazione  
   
 1.  In Progettazione cubi fare clic sulla scheda Utilizzo dimensioni. Si noti che esiste già una relazione molti-a-molti tra **Dim Sales Reason** e **Fact Internet Sales**. L'icona seguente indica una relazione molti-a-molti.  
   
@@ -175,16 +175,16 @@ ms.locfileid: "48091876"
   
 3.  Dopo la modifica di un modello è sempre necessario eseguire la distribuzione e la riconnessione. In Excel è possibile utilizzare il pulsante Aggiorna della barra multifunzione Analizza - Tabella pivot.  
   
-4.  Evitare di utilizzare gruppi di misure collegati in più relazioni molti-a-molti, soprattutto quando tali relazioni sono in cubi diversi. Questa operazione può generare aggregazioni ambigue. Per altre informazioni, vedere [Incorrect Amounts for Linked Measures in Cubes containing Many-to-Many Relationships](http://social.technet.microsoft.com/wiki/contents/articles/22911.incorrect-amounts-for-linked-measures-in-cubes-containing-many-to-many-relationships-ssas-troubleshooting.aspx)(Quantità errate per le misure collegate nei cubi che contengono relazioni molti-a-molti).  
+4.  Evitare di utilizzare gruppi di misure collegati in più relazioni molti-a-molti, soprattutto quando tali relazioni sono in cubi diversi. Questa operazione può generare aggregazioni ambigue. Per altre informazioni, vedere [Incorrect Amounts for Linked Measures in Cubes containing Many-to-Many Relationships](https://social.technet.microsoft.com/wiki/contents/articles/22911.incorrect-amounts-for-linked-measures-in-cubes-containing-many-to-many-relationships-ssas-troubleshooting.aspx)(Quantità errate per le misure collegate nei cubi che contengono relazioni molti-a-molti).  
   
 ##  <a name="bkmk_Learn"></a> Learn more  
  Per informazioni aggiuntive su questi concetti, vedere i collegamenti seguenti.  
   
- [Come definire una dimensione molti-a-molti in Analysis Services](http://go.microsoft.com/fwlink/?LinkId=324759)  
+ [Come definire una dimensione molti-a-molti in Analysis Services](https://go.microsoft.com/fwlink/?LinkId=324759)  
   
- [La rivoluzione molti-a-molti 2.0](http://go.microsoft.com/fwlink/?LinkId=324760)  
+ [La rivoluzione molti-a-molti 2.0](https://go.microsoft.com/fwlink/?LinkId=324760)  
   
- [Esercitazione: esempio di dimensione molti-a-molti per SQL Server Analysis Services](http://go.microsoft.com/fwlink/?LinkId=324761)  
+ [Esercitazione: Esempio di dimensione molti-a-molti per SQL Server Analysis Services](https://go.microsoft.com/fwlink/?LinkId=324761)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Relazioni tra dimensioni](../multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   

@@ -23,19 +23,19 @@ helpviewer_keywords:
 - labels [SQL]
 - information types
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 0fb7b7719ce53fe4f20863cb3f44c9483bc6b472
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 1b189aa97616a265785a369c0ec7cccfc3b80d56
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51660350"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979467"
 ---
 # <a name="syssensitivityclassifications-transact-sql"></a>Sys.sensitivity_classifications (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
 Restituisce una riga per ogni elemento classificato nel database.
 
-|Nome colonna|Tipo di dati|Description|
+|Nome colonna|Tipo di dati|Descrizione|
 |-----------------|---------------|-----------------|  
 |**class**|**int**|Identifica la classe dell'elemento su cui è inclusa la classificazione|  
 |**class_desc**|**varchar(16)**|Una descrizione della classe dell'elemento su cui è inclusa la classificazione|  
@@ -77,6 +77,6 @@ left join sys.all_columns on sys.sensitivity_classifications.major_id = sys.all_
 
 [ADD SENSITIVITY CLASSIFICATION (Transact-SQL)](../../t-sql/statements/add-sensitivity-classification-transact-sql.md)
 
-[DROP SENSITIVITY CLASSIFICATION (Transact-SQL)](../../t-sql/statements/drop-sensitivity-classification-transact-sql.md)
+[CLASSIFICAZIONE di riservatezza DROP (Transact-SQL)](../../t-sql/statements/drop-sensitivity-classification-transact-sql.md)
 
 [Introduzione a SQL Information Protection](https://aka.ms/sqlip)

@@ -10,12 +10,12 @@ ms.assetid: 6e51b7bb-a733-4852-8c33-7f4dbdf931c2
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5677e7f5dc7a5191b2d39e6100cafee1f38e86ab
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d2b01eceff763d554644065fdb5137695bd82f69
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48185451"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53374573"
 ---
 # <a name="managed-instance-details-sql-server-utility"></a>Dettagli di istanze gestite (Utilità SQL Server)
   Le informazioni incluse nella vista Istanze gestite di Esplora utilità forniscono dati di utilizzo per singole istanze di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], cronologia di utilizzo della CPU, dettagli sull'utilizzo dello spazio di archiviazione a livello di file e la possibilità di visualizzare e aggiornare le soglie dei criteri. È possibile controllare le soglie dei criteri a livello di volumi di archiviazione e a livello di istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] per un computer e per file di database e file di log. È inoltre possibile visualizzare dettagli delle proprietà per singole istanze gestite di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
@@ -74,11 +74,11 @@ ms.locfileid: "48185451"
   
 -   Regole di confronto:  
   
--   Distinzione maiuscole/minuscole: (Vero o Falso)  
+-   Distinzione maiuscole / minuscole: (True o False)  
   
 -   Lingua:  
   
--   Ultima ora registrata - Questa colonna restituisce la data e l'ora locale del punto di controllo utilità utilizzando il tipo di dati datetime. Per altre informazioni, vedere l'argomento [datetime (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=164071) nella documentazione online di SQL Server. Quando si utilizza il modello a oggetti dell'utilità, si noti che SSMS utilizza il tipo di dati datetimeoffset. Per altre informazioni, vedere l'argomento [datetimeoffset (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=141713) nella documentazione online di SQL Server.  
+-   Ora ultimo report: Questa colonna viene visualizzato il punto di controllo utilità data e ora locali utilizzando il tipo di dati datetime. Per altre informazioni, vedere l'argomento [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) nella documentazione online di SQL Server. Quando si utilizza il modello a oggetti dell'utilità, si noti che SSMS utilizza il tipo di dati datetimeoffset. Per altre informazioni, vedere l'argomento [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) nella documentazione online di SQL Server.  
   
  Scheda Utilizzo CPU  
  La scheda Utilizzo CPU mostra grafici affiancati con dati cronologici relativi all'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e all'utilizzo della CPU del computer.  
@@ -96,7 +96,7 @@ ms.locfileid: "48185451"
 -   1 anno, visualizzato in intervalli di 1 mese.  
   
  Scheda Utilizzo spazio di archiviazione  
- La scheda Utilizzo spazio di archiviazione include una visualizzazione albero con dettagli relativi allo spazio di archiviazione. Si noti che i dati relativi all'ora mostrano la data e l'ora locale del punto di controllo utilità utilizzando il tipo di dati datetime. Per altre informazioni, vedere l'argomento [datetime (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=164071) nella documentazione online di SQL Server. Quando si utilizza il modello a oggetti dell'utilità, si noti che SSMS utilizza il tipo di dati datetimeoffset. Per altre informazioni, vedere l'argomento [datetimeoffset (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=141713) nella documentazione online di SQL Server.  
+ La scheda Utilizzo spazio di archiviazione include una visualizzazione albero con dettagli relativi allo spazio di archiviazione. Si noti che i dati relativi all'ora mostrano la data e l'ora locale del punto di controllo utilità utilizzando il tipo di dati datetime. Per altre informazioni, vedere l'argomento [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) nella documentazione online di SQL Server. Quando si utilizza il modello a oggetti dell'utilità, si noti che SSMS utilizza il tipo di dati datetimeoffset. Per altre informazioni, vedere l'argomento [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) nella documentazione online di SQL Server.  
   
  È possibile raggruppare la visualizzazione in base al database o al volume. Per usare la visualizzazione albero del database, selezionare il pulsante di opzione **Database** nella selezione **Raggruppa file per:** . Per visualizzare lo stato di utilizzo dello spazio di archiviazione per i singoli file di database, fare clic sul segno più accanto a un nome di database nella visualizzazione albero. I file di database elencati includono tutti i sistemi e i database utente che appartengono all'istanza gestita di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] selezionata nella visualizzazione Elenco.  
   
@@ -171,7 +171,7 @@ ms.locfileid: "48185451"
   
 -   Regole di confronto:  
   
--   Distinzione maiuscole/minuscole: (Vero o Falso)  
+-   Distinzione maiuscole / minuscole: (True o False)  
   
 -   Lingua:  
   

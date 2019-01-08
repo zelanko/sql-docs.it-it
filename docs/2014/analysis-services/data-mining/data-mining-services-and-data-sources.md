@@ -11,12 +11,12 @@ ms.assetid: b26fd6e3-7d87-4f66-ab47-5303b51b87da
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: dd05bf3c19171229d806fa4f0f817255a4727c6c
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: e5f21211b933bcf0327ba1dbf15703f354225550
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145896"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53367753"
 ---
 # <a name="data-mining-services-and-data-sources"></a>Servizi di data mining e origini dati
   Il data mining richiede una connessione a un'istanza di SQL Server Analysis Services. I dati di un cubo non sono necessari per il data mining, pertanto è consigliabile l'uso di origini relazionali. Tuttavia, il data mining usa i componenti forniti dal motore di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
@@ -47,7 +47,7 @@ ms.locfileid: "50145896"
 ### <a name="xmla-listener"></a>Listener XMLA  
  Il componente listener XMLA gestisce tutte le comunicazioni XMLA tra [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e i relativi client. È possibile utilizzare l'impostazione di configurazione [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] `Port` nel file msmdsrv.ini per specificare la porta su cui è in ascolto un'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Un valore 0 in questo file indica che [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] è in ascolto sulla porta predefinita. Se non specificato diversamente, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] userà le porte TCP predefinite seguenti:  
   
-|Port|Description|  
+|Port|Descrizione|  
 |----------|-----------------|  
 |2383|Istanza predefinita di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].|  
 |2382|Redirector per altre istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].|  
@@ -89,7 +89,7 @@ ms.locfileid: "50145896"
  È inoltre possibile impostare proprietà che consentono di ottimizzare il server e controllare la sicurezza per l'utilizzo client. Per altre informazioni, vedere [Proprietà di funzionalità](../server-properties/feature-properties.md).  
   
 > [!NOTE]  
->  Per altre informazioni sul supporto per algoritmi plug-in delle edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [funzionalità supportate dalle edizioni di SQL Server 2012](http://go.microsoft.com/fwlink/?linkid=232473) (http://go.microsoft.com/fwlink/?linkid=232473).  
+>  Per altre informazioni sul supporto per algoritmi plug-in delle edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [funzionalità supportate dalle edizioni di SQL Server 2012](https://go.microsoft.com/fwlink/?linkid=232473) (https://go.microsoft.com/fwlink/?linkid=232473).  
   
 ## <a name="programmatic-access-to-data-mining-objects"></a>Accesso a livello di codice agli oggetti di data mining  
  Per creare una connessione a un database di Analysis Services e utilizzare oggetti di data mining, è possibile utilizzare i modelli a oggetti seguenti:  

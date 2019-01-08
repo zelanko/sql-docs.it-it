@@ -20,26 +20,26 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a6331c75ff2e3df7980f774d33927e494021b30d
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: ea23e4639cb5dd6872092021f04ab35af28f27d5
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51659991"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589255"
 ---
 # <a name="tableprivileges-transact-sql"></a>TABLE_PRIVILEGES (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Restituisce una riga per ogni privilegio di tabella concesso a o dall'utente corrente nel database in uso.  
   
- Per recuperare informazioni da queste viste, specificare il nome completo di **INFORMATION_SCHEMA. * * * view_name*.  
+ Per recuperare informazioni da queste viste, specificare il nome completo del **INFORMATION_SCHEMA.** _view_name_.  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**UTENTE CHE CONCEDE**|**nvarchar (** 128 **)**|Utente che concede il privilegio.|  
 |**ALL'UTENTE AUTORIZZATO**|**nvarchar (** 128 **)**|Beneficiario del privilegio.|  
 |**TABLE_CATALOG**|**nvarchar (** 128 **)**|Qualificatore della tabella.|  
-|**TABLE_SCHEMA**|**nvarchar (** 128 **)**|Nome dello schema che contiene la tabella.<br /><br /> **\*\* Importanti \* \***  non utilizzare viste INFORMATION_SCHEMA per determinare lo schema di un oggetto. L'unica modalità affidabile per cercare lo schema di un oggetto consiste nell'eseguire una query sulla vista del catalogo sys.objects.|  
+|**TABLE_SCHEMA**|**nvarchar (** 128 **)**|Nome dello schema che contiene la tabella.<br /><br /> <strong>\*\* Importanti \* \*</strong>  non utilizzare viste INFORMATION_SCHEMA per determinare lo schema di un oggetto. L'unica modalità affidabile per cercare lo schema di un oggetto consiste nell'eseguire una query sulla vista del catalogo sys.objects.|  
 |**TABLE_NAME**|**sysname**|Nome della tabella.|  
 |**PRIVILEGE_TYPE**|**varchar (** 10 **)**|Tipo di privilegio.|  
 |**IS_GRANTABLE**|**varchar (** 3 **)**|Specifica se il beneficiario può concedere autorizzazioni ad altri utenti.|  

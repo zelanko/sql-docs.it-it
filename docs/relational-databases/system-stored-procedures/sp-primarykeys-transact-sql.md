@@ -18,12 +18,12 @@ ms.assetid: 0f76dd31-5b7b-4209-9e2e-b9ed5cac164d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d994e44e3db00921ca184ed063bcf1bdff487297
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 484890cfe30ace1c65ea45fe2d9e447a6396b52e
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47753599"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591455"
 ---
 # <a name="spprimarykeys-transact-sql"></a>sp_primarykeys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,16 +43,16 @@ sp_primarykeys [ @table_server = ] 'table_server'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@table_server =** ] **' * * * table_server'*  
+ [  **@table_server =** ] **'**_table_server'_  
  Nome del server collegato da cui si desidera ottenere informazioni sulla chiave primaria. *table_server* viene **sysname**, non prevede alcun valore predefinito.  
   
- [  **@table_name =** ] **'***table_name***'**  
+ [  **@table_name =** ] **'**_table_name_**'**  
  Nome della tabella per cui si desidera ottenere informazioni sulla chiave primaria. *TABLE_NAME*viene **sysname**, con un valore predefinito è NULL.  
   
- [  **@table_schema =** ] **'***table_schema***'**  
+ [  **@table_schema =** ] **'**_table_schema_**'**  
  Schema della tabella. *TABLE_SCHEMA* viene **sysname**, con un valore predefinito è NULL. In ambiente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] corrisponde al proprietario della tabella.  
   
- [  **@table_catalog =** ] **'***table_catalog***'**  
+ [  **@table_catalog =** ] **'**_table_catalog_**'**  
  È il nome del catalogo in cui l'oggetto specificato *table_name* risiede. In ambiente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] corrisponde al nome del database. *TABLE_CATALOG* viene **sysname**, con un valore predefinito è NULL.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
@@ -60,7 +60,7 @@ sp_primarykeys [ @table_server = ] 'table_server'
   
 ## <a name="result-sets"></a>Set di risultati  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**TABLE_CAT**|**sysname**|Catalogo della tabella.|  
 |**TABLE_SCHEM**|**sysname**|Schema della tabella.|  

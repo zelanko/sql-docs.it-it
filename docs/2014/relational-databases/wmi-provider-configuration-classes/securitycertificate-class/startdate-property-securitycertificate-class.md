@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: wmi
 ms.topic: reference
 api_name:
 - StartDate Property (SecurityCertificate Class)
@@ -20,12 +18,12 @@ ms.assetid: c8e70839-37e7-43fb-ba0f-3a6d51bbce35
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: bb59a756b6a6990268c3eb20db3530052f0278e6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 893e72d73062dc78ddbe33deb9b66941c30fb2a5
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48094641"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53363863"
 ---
 # <a name="startdate-property-securitycertificate-class"></a>Proprietà StartDate (classe SecurityCertificate)
   Ottiene la data di inizio di validità del certificato di sicurezza.  
@@ -48,6 +46,6 @@ object
 ## <a name="remarks"></a>Note  
   
 ## <a name="see-also"></a>Vedere anche  
- [Configurazione di protocolli di rete Server e le librerie di rete](http://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+ [Configurazione di protocolli di rete Server e le librerie di rete](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

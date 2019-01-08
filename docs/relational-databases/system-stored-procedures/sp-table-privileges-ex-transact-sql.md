@@ -18,12 +18,12 @@ ms.assetid: b58d4a07-5c40-4f17-b66e-6d6b17188dda
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d800eed984c6371ed689e9d8ec2748cb6b9886c1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0993299edffce3139b468bf3ca27d49f88e8638b
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47752754"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591335"
 ---
 # <a name="sptableprivilegesex-transact-sql"></a>sp_table_privileges_ex (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,19 +44,19 @@ sp_table_privileges_ex [ @table_server = ] 'table_server'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@table_server =** ] **'***table_server***'**  
+ [  **@table_server =** ] **'**_table_server_**'**  
  Nome del server collegato per cui si desidera restituire le informazioni. *table_server* viene **sysname**, non prevede alcun valore predefinito.  
   
- [  **@table_name =** ] **'***table_name***'**]  
+ [  **@table_name =** ] **'**_table_name_**'**]  
  Nome della tabella per cui si desidera ottenere informazioni sui privilegi assegnati. *TABLE_NAME* viene **sysname**, con un valore predefinito è NULL.  
   
- [  **@table_schema =** ] **'***table_schema***'**  
+ [  **@table_schema =** ] **'**_table_schema_**'**  
  Schema della tabella. In alcuni ambienti DBMS corrisponde al proprietario della tabella. *TABLE_SCHEMA* viene **sysname**, con un valore predefinito è NULL.  
   
- [  **@table_catalog =** ] **'***table_catalog***'**  
+ [  **@table_catalog =** ] **'**_table_catalog_**'**  
  È il nome del database in cui l'oggetto specificato *table_name* risiede. *TABLE_CATALOG* viene **sysname**, con un valore predefinito è NULL.  
   
- [  **@fUsePattern =**] **'***fUsePattern***'**  
+ [  **@fUsePattern =**] **'**_fUsePattern_**'**  
  Determina se i caratteri '_', '%', '[', e ']' vengono interpretati come caratteri jolly. I valori validi sono 0 (utilizzo dei criteri di ricerca disattivato) e 1 (utilizzo dei criteri di ricerca attivato). *fUsePattern* viene **bit**, con un valore predefinito è 1.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
@@ -64,9 +64,9 @@ sp_table_privileges_ex [ @table_server = ] 'table_server'
   
 ## <a name="result-sets"></a>Set di risultati  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
-|**TABLE_CAT**|**sysname**|Nome del qualificatore della tabella. Vari prodotti DBMS supportano nomi di tabelle in tre parti (*qualificatore ***.*** proprietario ***.*** nome*). In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] questa colonna rappresenta il nome del database. In altri prodotti rappresenta il nome del server dell'ambiente di database della tabella. Questo campo può essere NULL.|  
+|**TABLE_CAT**|**sysname**|Nome del qualificatore della tabella. Vari prodotti DBMS supportano nomi di tabelle in tre parti (_qualificatore_**.** _owner_**.** _nome_). In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] questa colonna rappresenta il nome del database. In altri prodotti rappresenta il nome del server dell'ambiente di database della tabella. Questo campo può essere NULL.|  
 |**TABLE_SCHEM**|**sysname**|Nome del proprietario della tabella. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] questa colonna rappresenta il nome dell'utente del database che ha creato la tabella. Questo campo restituisce sempre un valore.|  
 |**TABLE_NAME**|**sysname**|Nome della tabella. Questo campo restituisce sempre un valore.|  
 |**UTENTE CHE CONCEDE**|**sysname**|Nome utente del database che ha concesso autorizzazioni al **nome_tabella** per la tabella **all'utente autorizzato**. Nelle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], questa colonna è sempre lo stesso come il **TABLE_OWNER**. Questo campo restituisce sempre un valore. Inoltre, la colonna GRANTOR può rappresentare il proprietario del database (**TABLE_OWNER**) o un utente a cui il proprietario del database concesso autorizzazioni tramite la clausola WITH GRANT OPTION dell'istruzione GRANT.|  
@@ -81,7 +81,7 @@ sp_table_privileges_ex [ @table_server = ] 'table_server'
  È richiesta l'autorizzazione SELECT per lo schema.  
   
 ## <a name="examples"></a>Esempi  
- Nell'esempio seguente vengono restituite informazioni sui privilegi per le tabelle il cui nome inizia con `Product` incluse nel database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] disponibile nel server collegato `Seattle1`. In questo esempio si presuppone che il server collegato esegua [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Nell'esempio seguente vengono restituite informazioni sui privilegi per le tabelle il cui nome inizia con `Product` incluse nel database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] disponibile nel server collegato `Seattle1`. ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] si presuppone che il server collegato).  
   
 ```  
 EXEC sp_table_privileges_ex @table_server = 'Seattle1',   

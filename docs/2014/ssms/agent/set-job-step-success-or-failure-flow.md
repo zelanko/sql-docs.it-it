@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent jobs, action flow logic
@@ -15,19 +15,19 @@ ms.assetid: 23041ccf-8a07-41d3-85b9-c449a54b7e1e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8899b2e90fecc5c355b71e64c5df3c90c38c5315
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c592964e5da7503c39b97db1f332a9420a1b53f0
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48127401"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53366623"
 ---
 # <a name="set-job-step-success-or-failure-flow"></a>Impostare il flusso di interventi in caso di esito positivo o negativo del passaggio di processo
   Quando si creano processi di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , è possibile specificare le azioni che [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dovrà intraprendere in caso di errore durante l'esecuzione del processo. Determinare l'azione che [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dovrà eseguire in caso di esito positivo o negativo di ogni passaggio di processo. Attenersi quindi alla procedura riportata di seguito per configurare la logica del flusso di azioni del passaggio di processo utilizzando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
   
 -   **Prima di iniziare:**  
   
-     [Security](#Security)  
+     [Sicurezza](#Security)  
   
 -   **Per impostare il flusso di interventi in caso di esito positivo o negativo del passaggio di processo utilizzando:**  
   
@@ -40,7 +40,7 @@ ms.locfileid: "48127401"
 ## <a name="before-you-begin"></a>Prima di iniziare  
   
 ###  <a name="Security"></a> Sicurezza  
- Per informazioni dettagliate, vedere [Implement SQL Server Agent Security](implement-sql-server-agent-security.md).  
+ Per informazioni dettagliate, vedere [Implementazione della sicurezza di SQL Server Agent](implement-sql-server-agent-security.md).  
   
 ##  <a name="SSMS"></a> Utilizzo di SQL Server Management Studio  
   
@@ -70,7 +70,7 @@ ms.locfileid: "48127401"
   
 9. Se l'elenco **Esegui come utente** è disponibile selezionare l'account proxy account con le credenziali che verranno utilizzate dal processo.  
   
-##  <a name="TSQL"></a> Uso di Transact-SQL  
+##  <a name="TSQL"></a> Utilizzo di Transact-SQL  
   
 #### <a name="to-set-job-step-success-or-failure-flow"></a>Per impostare il flusso di interventi in caso di esito positivo o negativo del passaggio di processo  
   
@@ -97,6 +97,6 @@ ms.locfileid: "48127401"
 ##  <a name="SMO"></a> Utilizzo di SQL Server Management Objects  
  **Per impostare il flusso di interventi in caso di esito positivo o negativo del passaggio di processo**  
   
- Usare il `JobStep` classe utilizzando un linguaggio di programmazione desiderato, ad esempio Visual Basic, Visual c# o PowerShell. Per altre informazioni, vedere [SQL Server Management Objects (SMO)](http://msdn.microsoft.com/library/ms162169.aspx).  
+ Usare la classe `JobStep` tramite un linguaggio di programmazione scelto come Visual Basic, Visual C# o PowerShell. Per altre informazioni, vedere [SQL Server Management Objects (SMO)](https://msdn.microsoft.com/library/ms162169.aspx).  
   
   

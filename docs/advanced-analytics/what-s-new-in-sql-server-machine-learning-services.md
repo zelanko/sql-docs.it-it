@@ -1,20 +1,20 @@
 ---
-title: Cosa&#39;novità di SQL Server Machine Learning Services s | Microsoft Docs
+title: Cosa&#39;nuovo - s SQL Server Machine Learning Services
 description: Nuovo gli annunci di funzionalità per ogni versione di SQL Server 2016 R Services, R Server, servizi Machine Learning di SQL Server 2017.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 11/06/2018
+ms.date: 12/07/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: d00757a8676540be420edd972857ce6cf6ced6d1
-ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
+ms.openlocfilehash: f9e98d59318c9c7d43fd6f99195da972c4eca0c9
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51269655"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53432494"
 ---
 # <a name="whats-new-in-sql-server-machine-learning-services"></a>Novità in servizi di SQL Server Machine Learning 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -28,9 +28,10 @@ Questa versione aggiunge le funzionalità di richiesta per R e Python operazioni
 
 | Versione | Aggiornamento delle funzionalità |
 |---------|----------------|
-| CTP 2.0 | Supporto della piattaforma Linux per apprendimento R e Python, oltre la nuova estensione di Java. Per informazioni su come iniziare, vedere [installare SQL Server Machine Learning Services in Linux](../linux/sql-server-linux-setup-machine-learning.md). |
-| CTP 2.0 | Il [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) include due nuovi parametri che consentono di generare facilmente più modelli di dati partizionati. Altre informazioni in questa esercitazione [creare i modelli basati su partizioni in R](tutorials/r-tutorial-create-models-per-partition.md). |
-| CTP 2.0 | Supporto per il cluster di failover è ora supportato in Windows e Linux, presupponendo che il servizio Launchpad di SQL Server viene avviato in tutti i nodi. Per altre informazioni, vedere [installazione di cluster di failover di SQL Server](../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md). |
+| CTP 2.0 | Supporto della piattaforma Linux per R e Python di machine learning. Introduzione [installare SQL Server Machine Learning Services in Linux](../linux/sql-server-linux-setup-machine-learning.md). |
+|   | [Estensione del linguaggio Java](java/extension-java.md) sia Windows che Linux è stata introdotta in anteprima di SQL Server 2019. È possibile rendere Java compilata di codice disponibili per SQL Server assegnando autorizzazioni e impostazione del percorso. App client con accesso a SQL Server può usare i dati ed eseguire il codice chiamando [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql), la stessa procedura usata per l'integrazione di R e Python in SQL Server. | 
+|  | Il [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) introduce due nuovi parametri che consentono di generare facilmente più modelli di dati partizionati. Altre informazioni in questa esercitazione [creare i modelli basati su partizioni in R](tutorials/r-tutorial-create-models-per-partition.md). |
+|   | Supporto per il cluster di failover è ora supportato in Windows e Linux, presupponendo che il servizio Launchpad di SQL Server viene avviato in tutti i nodi. Per altre informazioni, vedere [installazione di cluster di failover di SQL Server](../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md). |
 ::: moniker-end
 
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
@@ -52,9 +53,9 @@ Le nuove funzionalità per R includono [ **Gestione pacchetti**](r/install-addit
 
 ### <a name="r-libraries"></a>Librerie di R
 
-| Pacchetto | Description |
+| Pacchetto | Descrizione |
 |---------|-------------|
-| [**MicrosoftML**](using-the-microsoftml-package.md) | In questa versione, MicrosoftML è incluso in un'installazione di R predefinita, eliminando la fase di aggiornamento richiesto nella precedente di SQL Server 2016 R Services. MicrosoftML offre d'avanguardia di machine learning algoritmi e trasformazioni dei dati che possono essere ridimensionate o eseguire in contesti di calcolo remoti. Gli algoritmi sono personalizzabili reti neurali profonde, alberi delle decisioni veloci e foreste delle decisioni, regressione lineare e la regressione logistica.  |
+| [**MicrosoftML**](r/ref-r-microsoftml.md) | In questa versione, MicrosoftML è incluso in un'installazione di R predefinita, eliminando la fase di aggiornamento richiesto nella precedente di SQL Server 2016 R Services. MicrosoftML offre d'avanguardia di machine learning algoritmi e trasformazioni dei dati che possono essere ridimensionate o eseguire in contesti di calcolo remoti. Gli algoritmi sono personalizzabili reti neurali profonde, alberi delle decisioni veloci e foreste delle decisioni, regressione lineare e la regressione logistica.  |
 
 ### <a name="python-integration-for-in-database-analytics"></a>Integrazione di Python per analitica nel database
 
@@ -68,10 +69,10 @@ Integrazione di T-SQL e Python è supportata tramite il [sp_execute_external_scr
 
 ### <a name="python-libraries"></a>Librerie Python
 
-| Pacchetto | Description |
+| Pacchetto | Descrizione |
 |---------|-------------|
-[**revoscalepy**](python/what-is-revoscalepy.md)| Python equivalente di RevoScaleR. È possibile creare modelli di Python per la regressione lineare e logistica, alberi delle decisioni, alberi con Boosting e foreste casuali, tutti eseguibili in parallelo e in grado di in esecuzione in contesti di calcolo remoti. Questo pacchetto supporta l'utilizzo di più origini dati e contesti di calcolo remoti. I data scientist o sviluppatore può eseguire codice Python in un Server SQL remoto, per esplorare i dati e compilare modelli senza spostare i dati. |
-|[**microsoftml**](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) |Python-equivalente del pacchetto MicrosoftML R. |
+[**revoscalepy**](python/ref-py-revoscalepy.md)| Python equivalente di RevoScaleR. È possibile creare modelli di Python per la regressione lineare e logistica, alberi delle decisioni, alberi con Boosting e foreste casuali, tutti eseguibili in parallelo e in grado di in esecuzione in contesti di calcolo remoti. Questo pacchetto supporta l'utilizzo di più origini dati e contesti di calcolo remoti. I data scientist o sviluppatore può eseguire codice Python in un Server SQL remoto, per esplorare i dati e compilare modelli senza spostare i dati. |
+|[**microsoftml**](python/ref-py-microsoftml.md) |Python-equivalente del pacchetto MicrosoftML R. |
 
 ### <a name="pre-trained-models"></a>Modelli con training preliminare
 
@@ -99,13 +100,13 @@ Per funzionalità annunci completa, vedere [What ' s New in SQL Server 2016](../
 
 SQL Server 2019 CTP 2.0 aggiunge il supporto Linux per R, Python e Java durante l'installazione di machine learning i pacchetti con un'istanza del motore di database. Per altre informazioni, vedere [installare SQL Server Machine Learning Services in Linux](../linux/sql-server-linux-setup-machine-learning.md).
 
-In Linux, SQL Server 2017 è privo di integrazione di R o Python, ma è possibile usare [assegnazione dei punteggi nativa](sql-native-scoring.md) in Linux perché tale funzionalità è disponibile tramite T-SQL [PREDICT](), che viene eseguita in Linux. Punteggio nativo consente a prestazioni elevate di assegnazione dei punteggi da un modello con training preliminare, senza chiamare o anche richiedere un runtime di R.
+In Linux, SQL Server 2017 è privo di integrazione di R o Python, ma è possibile usare [assegnazione dei punteggi nativa](sql-native-scoring.md) in Linux perché tale funzionalità è disponibile tramite T-SQL [PREDICT](../t-sql/queries/predict-transact-sql.md), che viene eseguita in Linux. Punteggio nativo consente a prestazioni elevate di assegnazione dei punteggi da un modello con training preliminare, senza chiamare o anche richiedere un runtime di R.
 
 <a name="azure-sql-database-roadmap"></a>
 
 ## <a name="machine-learning-services-in-azure-sql-database"></a>Servizi di Database SQL di Azure Machine Learning
 
-Servizi di Machine Learning (con R) nel Database SQL di Azure è disponibile in anteprima pubblica. Per altre informazioni, vedere [Guida introduttiva: usare Machine Learning Services (con R) nel Database SQL di Azure (anteprima)](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-r).
+Servizi di Machine Learning (con R) nel Database SQL di Azure è disponibile in anteprima pubblica. Per altre informazioni, vedere [Guida introduttiva: Usare Machine Learning Services (con R) nel Database SQL di Azure (anteprima)](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-r).
 
 ## <a name="next-steps"></a>Passaggi successivi
 

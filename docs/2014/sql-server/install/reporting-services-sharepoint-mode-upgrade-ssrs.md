@@ -14,12 +14,12 @@ ms.assetid: 5f73fb9d-86bb-4d9e-8a8e-37b59d735df3
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 1f448ccf20bfd9c8a06f1f1796c3d13087cadec7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fe7c3f16f608d0f6e890be74cd5ae48ec4d1a121
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48093162"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53371633"
 ---
 # <a name="reporting-services-sharepoint-mode-upgrade-ssrs"></a>Aggiornamento in modalità SharePoint di Reporting Services (SSRS)
   Utilizzare la pagina **Modalità SharePoint di Reporting Services** per confermare l'aggiornamento di tutte le funzionalità condivise. La modalità SharePoint di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] è una funzionalità [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] condivisa e verrà aggiornata con tutte le altre funzionalità [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] condivise. Nell'Installazione guidata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non è supportato l'aggiornamento di una sola funzionalità condivisa. Tutte le funzionalità [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] condivise vengono aggiornate contemporaneamente.  
@@ -27,10 +27,10 @@ ms.locfileid: "48093162"
 ## <a name="options"></a>Opzioni  
  Il pulsante **Avanti** è disponibile solo dopo aver selezionato la casella di controllo **Procedi con l'aggiornamento** . In caso contrario, non sarà possibile procedere.  
   
- Per altre informazioni, vedere [Upgrade and Migrate Reporting Services](http://go.microsoft.com/fwlink/?LinkID=245628) (http://go.microsoft.com/fwlink/?LinkID=245628).  
+ Per altre informazioni, vedere [Upgrade and Migrate Reporting Services](https://go.microsoft.com/fwlink/?LinkID=245628) (https://go.microsoft.com/fwlink/?LinkID=245628).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Visualizzare e leggere i file di log del programma di installazione di SQL Server](http://technet.microsoft.com/library/ms143702\(v=sql.110\).aspx)   
- [Installazione dal prompt dei comandi delle modalità SharePoint e nativa di Reporting Services](http://go.microsoft.com/fwlink/?LinkId=217620)  
+ [Visualizzare e leggere i file di log del programma di installazione di SQL Server](https://technet.microsoft.com/library/ms143702\(v=sql.110\).aspx)   
+ [Installazione dal prompt dei comandi delle modalità SharePoint e nativa di Reporting Services](https://go.microsoft.com/fwlink/?LinkId=217620)  
   
   

@@ -1,6 +1,6 @@
 ---
-title: Lezione 1 esplorare e visualizzare i dati usando R e T-SQL (SQL Server Machine Learning Services) | Microsoft Docs
-description: Esercitazione che illustra come incorporare R in SQL Server stored procedure e funzioni T-SQL
+title: 'Lezione 1 esplorare e visualizzare i dati usando R e T-SQL: SQL Server Machine Learning'
+description: Esercitazione che illustra come esplorare e visualizzare i dati di SQL Server usando funzioni R.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 10/29/2018
@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: f1ed29dec28ade852a58980eb236a251fd072afa
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 36a904eeb4c7cde7d3a5356aff2029698e91f059
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51032218"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53645500"
 ---
 # <a name="lesson-1-explore-and-visualize-the-data"></a>Lezione 1: Esplorare e visualizzare i dati
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -38,7 +38,7 @@ Nel set di dati pubblico originale, sono stati forniti gli identificatori di tax
 
 **Identificatori di taxi**
   
--   La colonna _medallion_ rappresenta l'ID univoco del taxi.
+-   Il _medallion_ colonna rappresenta il numero di id univoco del taxi.
   
 -   Il _hack\_licenza_ colonna contiene i taxi numero di patente (resi anonimizzato).
   
@@ -67,7 +67,7 @@ Per creare il tracciato, utilizzare [rxHistogram](https://docs.microsoft.com/mac
 
 2. Incollare lo script seguente per creare una stored procedure che viene tracciata l'istogramma. Questo esempio è denominato **RPlotRxHistogram*.
 
-    ```SQL
+    ```sql
     CREATE PROCEDURE [dbo].[RxPlotHistogram]
     AS
     BEGIN
@@ -108,7 +108,7 @@ La stored procedure restituisce l'immagine come un flusso di dati varbinary, che
   
 1.  In [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]eseguire l'istruzione seguente:
   
-    ```SQL
+    ```sql
     EXEC [dbo].[RxPlotHistogram]
     ```
   
@@ -119,7 +119,7 @@ La stored procedure restituisce l'immagine come un flusso di dati varbinary, che
   
 2.  Aprire un prompt dei comandi di PowerShell ed eseguire il comando seguente, fornendo il nome dell'istanza appropriata, nome del database, nome utente e le credenziali come argomenti. Per chi usa le identità di Windows, è possibile sostituire **- U** e **-P** con **-T**.
   
-     ```text
+     ```powershell
      bcp "exec RxPlotHistogram" queryout "plot.jpg" -S <SQL Server instance name> -d  NYCTaxi_Sample  -U <user name> -P <password> -T
      ```
 
@@ -134,7 +134,7 @@ La stored procedure restituisce l'immagine come un flusso di dati varbinary, che
   
     -   Digitare **Y** per salvare i parametri di output e riutilizzarli in seguito.
   
-    ```
+    ```powershell
     Enter the file storage type of field plot [varbinary(max)]: 
     Enter prefix-length of field plot [8]: 0
     Enter length of field plot [0]:
@@ -146,7 +146,7 @@ La stored procedure restituisce l'immagine come un flusso di dati varbinary, che
   
     **Risultati**
     
-    ```
+    ```powershell
     Starting copy...
     1 rows copied.
     Network packet size (bytes): 4096
@@ -170,7 +170,7 @@ Questa stored procedure viene utilizzata la **Hist** funzione per creare l'istog
 
 2. Incollare lo script seguente per creare una stored procedure che viene tracciata l'istogramma. Questo esempio è denominato **RPlotHist** .
   
-    ```SQL
+    ```sql
     CREATE PROCEDURE [dbo].[RPlotHist]  
     AS  
     BEGIN  
@@ -244,13 +244,13 @@ Questa stored procedure viene utilizzata la **Hist** funzione per creare l'istog
 
 Eseguire l'istruzione seguente per esportare i dati binari tracciato in formati di file JPEG e PDF.
 
-```SQL
+```sql
 EXEC RPlotHist
 ```
 
 **Risultati**
     
-```
+```sql
 STDOUT message(s) from external script:
 [1] Creating output plot files:[1] C:\temp\plots\rHistogram_Tipped_18887f6265d4.jpg[1] 
 

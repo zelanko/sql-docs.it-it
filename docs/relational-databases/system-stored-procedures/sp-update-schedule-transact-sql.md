@@ -18,12 +18,12 @@ ms.assetid: 97b3119b-e43e-447a-bbfb-0b5499e2fefe
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0fa647aabd7e2048c6f56e5518dde8a2edc12dde
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: eeff4b38e3736241e0dd56729e42c5e7207f310f
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47661229"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591805"
 ---
 # <a name="spupdateschedule-transact-sql"></a>sp_update_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ sp_update_schedule
  [  **@schedule_id =** ] *schedule_id*  
  Identificatore della pianificazione da modificare. *schedule_id* viene **int**, non prevede alcun valore predefinito. Entrambi *schedule_id* oppure *schedule_name* deve essere specificato.  
   
- [  **@name =** ] **'***schedule_name***'**  
+ [  **@name =** ] **'**_schedule_name_**'**  
  Nome della pianificazione da modificare. *schedule_name*viene **sysname**, non prevede alcun valore predefinito. Entrambi *schedule_id* oppure *schedule_name* deve essere specificato.  
   
  [ **@new_name**= ] *new_name*  
@@ -71,7 +71,7 @@ sp_update_schedule
  [ **@freq_type =** ] *freq_type*  
  Valore che indica la frequenza di esecuzione di un processo *freq_type*viene **int**, il valore predefinito è **0**, i possibili valori sono i seguenti.  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |**1**|Una volta|  
 |**4**|Ogni giorno|  
@@ -97,7 +97,7 @@ sp_update_schedule
  [ **@freq_subday_type =** ] *freq_subday_type*  
  Specifica le unità per *freq_subday_interval * *.* *freq_subday_type*viene **int**, il valore predefinito è **0**, i possibili valori sono i seguenti.  
   
-|valore|Descrizione (unità)|  
+|Value|Descrizione (unità)|  
 |-----------|--------------------------|  
 |**0x1**|All'ora specificata|  
 |**0x2**|Secondi|  
@@ -110,7 +110,7 @@ sp_update_schedule
  [  **@freq_relative_interval =** ] *freq_relative_interval*  
  Occorrenza di un processo di *freq_interval* ogni mese, se *freq_interval* viene **32** (frequenza mensile relativa). *freq_relative_interval*viene **int**, il valore predefinito è **0**, i possibili valori sono i seguenti.  
   
-|valore|Descrizione (unità)|  
+|Value|Descrizione (unità)|  
 |-----------|--------------------------|  
 |**1**|Primo|  
 |**2**|Secondo|  
@@ -135,7 +135,7 @@ sp_update_schedule
  [  **@active_end_time =** ] *active_end_time*  
  Il tempo compresa tra *active_start_date* e *active_end_date* per terminare l'esecuzione di un processo. *active_end_time*viene **int**, il valore predefinito è **235959**, a indicare 59: 11:59 P.M. nel formato a 24 ore e deve essere immesso nel formato HHMMSS.  
   
- [ **@owner_login_name**= ] **'***owner_login_name***'**]  
+ [ **@owner_login_name**=] **'**_owner_login_name_**'**]  
  Nome dell'entità server proprietaria della pianificazione. *owner_login_name* viene **sysname**, con un valore predefinito è NULL, che indica che la pianificazione è di proprietà dell'autore.  
   
  [  **@automatic_post =**] *automatic_post*  

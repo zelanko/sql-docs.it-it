@@ -11,15 +11,15 @@ ms.assetid: 2d847adf-4b3d-4949-a195-ef43de275077
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d9ddd8c6de8574f10b131427cc4ff6fc8de8d5cb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4e807fad8929ccb087b9ba55615b235a2950cdb1
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48146471"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376783"
 ---
 # <a name="data-flow-taps"></a>Scelte del flusso di dati
-  [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)] introduce una nuova funzionalità che consente di aggiungere una scelta dei dati in un percorso del flusso di dati di un pacchetto in fase di esecuzione e indirizzare l'output della scelta dei dati in un file esterno. Per utilizzare questa funzionalità, è necessario distribuire il progetto SSIS utilizzando il modello di distribuzione del progetto in un server SSIS. Al termine della distribuzione del pacchetto nel server, è necessario eseguire script T-SQL nel database SSISDB per aggiungere le scelte dei dati prima dell'esecuzione del pacchetto. Di seguito è riportato uno scenario di esempio:  
+  In [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)] è stata introdotta una nuova funzionalità con cui è possibile aggiungere una scelta dei dati in un percorso del flusso di dati di un pacchetto in fase di esecuzione e indirizzare l'output della scelta dei dati a un file esterno. Per utilizzare questa funzionalità, è necessario distribuire il progetto SSIS utilizzando il modello di distribuzione del progetto in un server SSIS. Al termine della distribuzione del pacchetto nel server, è necessario eseguire script T-SQL nel database SSISDB per aggiungere le scelte dei dati prima dell'esecuzione del pacchetto. Di seguito è riportato uno scenario di esempio:  
   
 1.  Creare un'istanza di esecuzione di un pacchetto usando la stored procedure [catalog.create_execution &#40;database SSISDB&#41;](/sql/integration-services/system-stored-procedures/catalog-create-execution-ssisdb-database).  
   
@@ -68,7 +68,7 @@ EXEC [SSISDB].[catalog].remove_data_tap @tap_id
 ```  
   
 ## <a name="listing-all-data-taps"></a>Elenco di tutte le scelte dei dati  
- È inoltre possibile elencare tutte le scelte dei dati tramite la vista catalog.execution_data_taps. Nell'esempio seguente vengono estratte le scelte dei dati per un'istanza di esecuzione specifica (ID: 54).  
+ È inoltre possibile elencare tutte le scelte dei dati tramite la vista catalog.execution_data_taps. L'esempio seguente estrae i data TAP per un'istanza di esecuzione specifica (ID: 54).  
   
 ```  
 select * from [SSISDB].[catalog].execution_data_taps where execution_id=@execid  
@@ -78,7 +78,7 @@ select * from [SSISDB].[catalog].execution_data_taps where execution_id=@execid
  L'abilitazione del livello di registrazione dettagliata e l'aggiunta di scelte dei dati determinano un aumento delle operazioni di I/O eseguite dalla soluzione di integrazione dei dati. Pertanto, è consigliabile aggiungere le scelte dei dati solo ai fini della risoluzione dei problemi.  
   
 ## <a name="video"></a>Video  
- In questo [video su TechNet](http://technet.microsoft.com/sqlserver/dn600163) viene illustrato come aggiungere o usare le scelte dei dati nel catalogo di SQL Server 2012 SSISDB che facilita il debug dei pacchetti a livello di codice e l'acquisizione dei risultati parziali in fase di esecuzione. Inoltre vengono illustrate la modalità per elencare/rimuovere queste scelte dei dati e le procedure consigliate per l'utilizzo delle scelte dei dati nei pacchetti SSIS.  
+ In questo [video su TechNet](https://technet.microsoft.com/sqlserver/dn600163) viene illustrato come aggiungere o usare le scelte dei dati nel catalogo di SQL Server 2012 SSISDB che facilita il debug dei pacchetti a livello di codice e l'acquisizione dei risultati parziali in fase di esecuzione. Inoltre vengono illustrate la modalità per elencare/rimuovere queste scelte dei dati e le procedure consigliate per l'utilizzo delle scelte dei dati nei pacchetti SSIS.  
   
 ## <a name="related-tasks"></a>Attività correlate  
  [Debug di un flusso di dati](troubleshooting/debugging-data-flow.md)  

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- integration-services
+ms.technology: integration-services
 ms.topic: reference
 dev_langs:
 - VB
@@ -18,12 +16,12 @@ ms.assetid: dd2b1eef-b04f-4946-87ab-7bc56bb525ce
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 720411a1f2c2e28288f073ceb53a0da019cef066
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b29b3063575419683aee3f1acbe1a65266d18c27
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48197971"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53374773"
 ---
 # <a name="sending-an-html-mail-message-with-the-script-task"></a>Invio di un messaggio di posta HTML con l'attività Script
   L'attività SendMail di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] supporta solo messaggi di posta in formato di testo normale. Tuttavia è possibile inviare facilmente messaggi di posta HTML tramite l'attività Script e le funzionalità di posta di .NET Framework.  
@@ -31,14 +29,14 @@ ms.locfileid: "48197971"
 > [!NOTE]  
 >  Se si desidera creare un'attività da riutilizzare più facilmente con più pacchetti, è possibile utilizzare il codice di questo esempio di attività Script come punto iniziale per un'attività personalizzata. Per altre informazioni, vedere [Sviluppo di un'attività personalizzata](../extending-packages-custom-objects/task/developing-a-custom-task.md).  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>Descrizione  
  Nell'esempio seguente viene utilizzato lo spazio dei nomi `System.Net.Mail` per configurare e inviare un messaggio di posta HTML. Lo script ottiene i campi A, Da, Oggetto e il corpo del messaggio di posta elettronica dalle variabili del pacchetto, li utilizza per creare un nuovo oggetto `MailMessag` e ne imposta la proprietà `IsBodyHtml` su `True`. Ottiene quindi il nome del server SMTP da un'altra variabile del pacchetto, inizializza un'istanza di `System.Net.Mail.SmtpClient` e chiama il metodo `Send` per inviare il messaggio HTML. Nell'esempio il messaggio viene incapsulato inviando la funzionalità in una subroutine che potrebbe essere riutilizzata in altri script.  
   
 #### <a name="to-configure-this-script-task-example-without-an-smtp-connection-manager"></a>Per configurare questa attività Script di esempio senza una gestione connessione SMTP  
   
 1.  Creare le variabili di stringa denominate `HtmlEmailTo`, `HtmlEmailFrom` e `HtmlEmailSubject` e assegnare i valori appropriati per un messaggio di prova valido.  
   
-2.  Creare una variabile di stringa denominata `HtmlEmailBody` e assegnarle una stringa di markup HTML. Esempio:  
+2.  Creare una variabile di stringa denominata `HtmlEmailBody` e assegnarle una stringa di markup HTML. Ad esempio:  
   
     ```  
     <html><body><h1>Testing</h1><p>This is a <b>test</b> message.</p></body></html>  
@@ -76,7 +74,7 @@ ms.locfileid: "48197971"
       smtpConnectionString.Split(New Char() {"="c, ";"c})(1)  
     ```  
   
-## <a name="code"></a>codice  
+## <a name="code"></a>Codice  
   
 ```vb  
 Public Sub Main()  
@@ -152,7 +150,7 @@ public void Main()
         }  
 ```  
   
-![Icona di Integration Services (piccola)](../media/dts-16.gif "icona di Integration Services (piccola)")**rimangono fino a Date con Integration Services** <br /> Per i download, gli articoli, gli esempi e i video Microsoft più recenti, oltre alle soluzioni selezionate dalla community, visitare la pagina [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sul sito MSDN:<br /><br /> [Visita la pagina di Integration Services su MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Per ricevere una notifica automatica su questi aggiornamenti, sottoscrivere i feed RSS disponibili nella pagina.  
+![Icona di Integration Services (piccola)](../media/dts-16.gif "icona di Integration Services (piccola)")**rimangono fino a Date con Integration Services**<br /> Per i download, gli articoli, gli esempi e i video Microsoft più recenti, oltre alle soluzioni selezionate dalla community, visitare la pagina [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sul sito MSDN:<br /><br /> [Visita la pagina di Integration Services su MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Per ricevere una notifica automatica su questi aggiornamenti, sottoscrivere i feed RSS disponibili nella pagina.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Attività Invia messaggi](../control-flow/send-mail-task.md)  

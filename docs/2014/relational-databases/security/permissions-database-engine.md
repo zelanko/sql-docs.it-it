@@ -18,12 +18,12 @@ ms.assetid: f28e3dea-24e6-4a81-877b-02ec4c7e36b9
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 21119211d750b8443d0f463e5b6dd3e407bd248b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 746d547b680817868de33759983dc908e9806bb6
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48141971"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53355009"
 ---
 # <a name="permissions-database-engine"></a>Autorizzazioni (Motore di database)
   Ogni entità a protezione diretta di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dispone di autorizzazioni associate che possono essere concesse a un'entità. Questo argomento contiene informazioni sui seguenti aspetti:  
@@ -92,25 +92,25 @@ ms.locfileid: "48141971"
      L'autorizzazione REFERENCES è necessaria su un oggetto per creare FUNCTION o VIEW con la clausola `WITH SCHEMABINDING` che faccia riferimento all'oggetto stesso.  
   
 ## <a name="chart-of-sql-server-permissions"></a>Grafico delle autorizzazioni di SQL Server  
- Per un'anteprima di grandi dimensioni di tutte le autorizzazioni del [!INCLUDE[ssDE](../../includes/ssde-md.md)] in formato pdf, vedere [http://go.microsoft.com/fwlink/?LinkId=229142](http://go.microsoft.com/fwlink/?LinkId=229142).  
+ Per un'anteprima di grandi dimensioni di tutte le autorizzazioni del [!INCLUDE[ssDE](../../includes/ssde-md.md)] in formato pdf, vedere [https://go.microsoft.com/fwlink/?LinkId=229142](https://go.microsoft.com/fwlink/?LinkId=229142).  
   
 ##  <a name="_securables"></a> Autorizzazioni applicabili a particolari entità a protezione diretta  
  Nella tabella seguente vengono elencati le classi principali di autorizzazione e i tipi di entità a protezione diretta a cui possono essere applicati.  
   
-|Autorizzazione|Applicabile a|  
+|Autorizzazione|Si applica a|  
 |----------------|----------------|  
 |SELECT|Sinonimi<br /><br /> Tabelle e colonne<br /><br /> Funzioni con valori di tabella, [!INCLUDE[tsql](../../includes/tsql-md.md)] e Common Language Runtime (CLR), e colonne<br /><br /> Viste e colonne|  
 |VIEW CHANGE TRACKING|Tabelle<br /><br /> Schemi|  
 |UPDATE|Sinonimi<br /><br /> Tabelle e colonne<br /><br /> Viste e colonne<br /><br /> Oggetti sequenza|  
-|REFERENCES|Funzioni scalari e di aggregazione ([!INCLUDE[tsql](../../includes/tsql-md.md)] e CLR)<br /><br /> Code di[!INCLUDE[ssSB](../../includes/sssb-md.md)] <br /><br /> Tabelle e colonne<br /><br /> Le funzioni con valori di tabella ([!INCLUDE[tsql](../../includes/tsql-md.md)] e CLR) e colonne<br /><br /> Tipi<br /><br /> Viste e colonne<br /><br /> Oggetti sequenza|  
+|REFERENCES|Funzioni scalari e di aggregazione ([!INCLUDE[tsql](../../includes/tsql-md.md)] e CLR)<br /><br /> Code di[!INCLUDE[ssSB](../../includes/sssb-md.md)] <br /><br /> Tabelle e colonne<br /><br /> Funzioni con valori di tabella ([!INCLUDE[tsql](../../includes/tsql-md.md)] e CLR) e colonne<br /><br /> Tipi<br /><br /> Viste e colonne<br /><br /> Oggetti sequenza|  
 |INSERT|Sinonimi<br /><br /> Tabelle e colonne<br /><br /> Viste e colonne|  
-|Elimina|Sinonimi<br /><br /> Tabelle e colonne<br /><br /> Viste e colonne|  
+|DELETE|Sinonimi<br /><br /> Tabelle e colonne<br /><br /> Viste e colonne|  
 |EXECUTE|Procedure ([!INCLUDE[tsql](../../includes/tsql-md.md)] e CLR)<br /><br /> Funzioni scalari e di aggregazione ([!INCLUDE[tsql](../../includes/tsql-md.md)] e CLR)<br /><br /> Sinonimi<br /><br /> Tipi CLR|  
 |RECEIVE|Code di[!INCLUDE[ssSB](../../includes/sssb-md.md)] |  
-|VIEW DEFINITION|Gruppi di disponibilità<br /><br /> Procedure ([!INCLUDE[tsql](../../includes/tsql-md.md)] e CLR)<br /><br /> Code di[!INCLUDE[ssSB](../../includes/sssb-md.md)] <br /><br /> Funzioni scalari e di aggregazione ([!INCLUDE[tsql](../../includes/tsql-md.md)] e CLR)<br /><br /> Account di accesso, utenti e ruoli<br /><br /> Sinonimi<br /><br /> Tabelle<br /><br /> Le funzioni con valori di tabella ([!INCLUDE[tsql](../../includes/tsql-md.md)] e CLR)<br /><br /> Viste<br /><br /> Oggetti sequenza|  
-|ALTER|Gruppi di disponibilità<br /><br /> Procedure ([!INCLUDE[tsql](../../includes/tsql-md.md)] e CLR)<br /><br /> Funzioni scalari e di aggregazione ([!INCLUDE[tsql](../../includes/tsql-md.md)] e CLR)<br /><br /> Oggetti sequenza<br /><br /> Account di accesso, utenti e ruoli<br /><br /> Code di[!INCLUDE[ssSB](../../includes/sssb-md.md)] <br /><br /> Tabelle<br /><br /> Le funzioni con valori di tabella ([!INCLUDE[tsql](../../includes/tsql-md.md)] e CLR)<br /><br /> Viste|  
-|TAKE OWNERSHIP|Gruppi di disponibilità<br /><br /> Ruoli<br /><br /> Procedure ([!INCLUDE[tsql](../../includes/tsql-md.md)] e CLR)<br /><br /> Funzioni scalari e di aggregazione ([!INCLUDE[tsql](../../includes/tsql-md.md)] e CLR)<br /><br /> Ruoli del server<br /><br /> Sinonimi<br /><br /> Tabelle<br /><br /> Le funzioni con valori di tabella ([!INCLUDE[tsql](../../includes/tsql-md.md)] e CLR)<br /><br /> Viste<br /><br /> Oggetti sequenza|  
-|CONTROL|Gruppi di disponibilità<br /><br /> Procedure ([!INCLUDE[tsql](../../includes/tsql-md.md)] e CLR)<br /><br /> Funzioni scalari e di aggregazione ([!INCLUDE[tsql](../../includes/tsql-md.md)] e CLR)<br /><br /> Account di accesso, utenti e ruoli<br /><br /> Code di[!INCLUDE[ssSB](../../includes/sssb-md.md)] <br /><br /> Sinonimi<br /><br /> Tabelle<br /><br /> Le funzioni con valori di tabella ([!INCLUDE[tsql](../../includes/tsql-md.md)] e CLR)<br /><br /> Viste<br /><br /> Oggetti sequenza|  
+|VIEW DEFINITION|Gruppi di disponibilità<br /><br /> Procedure ([!INCLUDE[tsql](../../includes/tsql-md.md)] e CLR)<br /><br /> Code di[!INCLUDE[ssSB](../../includes/sssb-md.md)] <br /><br /> Funzioni scalari e di aggregazione ([!INCLUDE[tsql](../../includes/tsql-md.md)] e CLR)<br /><br /> Account di accesso, utenti e ruoli<br /><br /> Sinonimi<br /><br /> Tabelle<br /><br /> Funzioni con valori di tabella ([!INCLUDE[tsql](../../includes/tsql-md.md)] e CLR)<br /><br /> Visualizzazioni<br /><br /> Oggetti sequenza|  
+|ALTER|Gruppi di disponibilità<br /><br /> Procedure ([!INCLUDE[tsql](../../includes/tsql-md.md)] e CLR)<br /><br /> Funzioni scalari e di aggregazione ([!INCLUDE[tsql](../../includes/tsql-md.md)] e CLR)<br /><br /> Oggetti sequenza<br /><br /> Account di accesso, utenti e ruoli<br /><br /> Code di[!INCLUDE[ssSB](../../includes/sssb-md.md)] <br /><br /> Tabelle<br /><br /> Funzioni con valori di tabella ([!INCLUDE[tsql](../../includes/tsql-md.md)] e CLR)<br /><br /> Visualizzazioni|  
+|TAKE OWNERSHIP|Gruppi di disponibilità<br /><br /> Ruoli<br /><br /> Procedure ([!INCLUDE[tsql](../../includes/tsql-md.md)] e CLR)<br /><br /> Funzioni scalari e di aggregazione ([!INCLUDE[tsql](../../includes/tsql-md.md)] e CLR)<br /><br /> Ruoli del server<br /><br /> Sinonimi<br /><br /> Tabelle<br /><br /> Funzioni con valori di tabella ([!INCLUDE[tsql](../../includes/tsql-md.md)] e CLR)<br /><br /> Visualizzazioni<br /><br /> Oggetti sequenza|  
+|CONTROL|Gruppi di disponibilità<br /><br /> Procedure ([!INCLUDE[tsql](../../includes/tsql-md.md)] e CLR)<br /><br /> Funzioni scalari e di aggregazione ([!INCLUDE[tsql](../../includes/tsql-md.md)] e CLR)<br /><br /> Account di accesso, utenti e ruoli<br /><br /> Code di[!INCLUDE[ssSB](../../includes/sssb-md.md)] <br /><br /> Sinonimi<br /><br /> Tabelle<br /><br /> Funzioni con valori di tabella ([!INCLUDE[tsql](../../includes/tsql-md.md)] e CLR)<br /><br /> Visualizzazioni<br /><br /> Oggetti sequenza|  
 |IMPERSONATE|Account di accesso e utenti|  
   
 > [!CAUTION]  
@@ -157,7 +157,7 @@ ms.locfileid: "48141971"
 |DATABASE|ALTER ANY DATABASE AUDIT|ALDA|SERVER|ALTER ANY SERVER AUDIT|  
 |DATABASE|ALTER ANY DATABASE DDL TRIGGER|ALTG|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY DATABASE EVENT NOTIFICATION|ALED|SERVER|ALTER ANY EVENT NOTIFICATION|  
-|DATABASE|ALTER ANY DATABASE EVENT SESSION|AADS<br /><br /> Nota: Si applica solo ai [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|SERVER|ALTER ANY EVENT SESSION|  
+|DATABASE|ALTER ANY DATABASE EVENT SESSION|AADS<br /><br /> Nota: Si applica solo a [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|SERVER|ALTER ANY EVENT SESSION|  
 |DATABASE|ALTER ANY DATASPACE|ALDS|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY FULLTEXT CATALOG|ALFT|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY MESSAGE TYPE|ALMT|SERVER|CONTROL SERVER|  
@@ -165,7 +165,7 @@ ms.locfileid: "48141971"
 |DATABASE|ALTER ANY ROLE|ALRL|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY ROUTE|ALRT|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY SCHEMA|ALSM|SERVER|CONTROL SERVER|  
-|DATABASE|ALTER ANY SECURITY POLICY|ALSP<br /><br /> Nota: Si applica solo ai [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|SERVER|CONTROL SERVER|  
+|DATABASE|ALTER ANY SECURITY POLICY|ALSP<br /><br /> Nota: Si applica solo a [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY SERVICE|ALSV|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY SYMMETRIC KEY|ALSK|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY USER|ALUS|SERVER|CONTROL SERVER|  
@@ -201,10 +201,10 @@ ms.locfileid: "48141971"
 |DATABASE|CREATE TYPE|CRTY|SERVER|CONTROL SERVER|  
 |DATABASE|CREATE VIEW|CRVW|SERVER|CONTROL SERVER|  
 |DATABASE|CREATE XML SCHEMA COLLECTION|CRXS|SERVER|CONTROL SERVER|  
-|DATABASE|Elimina|DL|SERVER|CONTROL SERVER|  
+|DATABASE|DELETE|DL|SERVER|CONTROL SERVER|  
 |DATABASE|EXECUTE|EX|SERVER|CONTROL SERVER|  
 |DATABASE|INSERT|IN|SERVER|CONTROL SERVER|  
-|DATABASE|KILL DATABASE CONNECTION|KIDC<br /><br /> Nota: Si applica solo ai [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Usare ALTER ANY CONNECTION in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|SERVER|ALTER ANY CONNECTION|  
+|DATABASE|KILL DATABASE CONNECTION|KIDC<br /><br /> Nota: Si applica solo a [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Usare ALTER ANY CONNECTION in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|SERVER|ALTER ANY CONNECTION|  
 |DATABASE|REFERENCES|RF|SERVER|CONTROL SERVER|  
 |DATABASE|SELECT|SL|SERVER|CONTROL SERVER|  
 |DATABASE|SHOWPLAN|SPLN|SERVER|ALTER TRACE|  
@@ -239,7 +239,7 @@ ms.locfileid: "48141971"
 |MESSAGE TYPE|VIEW DEFINITION|VW|DATABASE|VIEW DEFINITION|  
 |OBJECT|ALTER|AL|SCHEMA|ALTER|  
 |OBJECT|CONTROL|CL|SCHEMA|CONTROL|  
-|OBJECT|DELETE|DL|SCHEMA|Elimina|  
+|OBJECT|DELETE|DL|SCHEMA|DELETE|  
 |OBJECT|EXECUTE|EX|SCHEMA|EXECUTE|  
 |OBJECT|INSERT|IN|SCHEMA|INSERT|  
 |OBJECT|RECEIVE|RC|SCHEMA|CONTROL|  
@@ -269,7 +269,7 @@ ms.locfileid: "48141971"
 |SCHEMA|ALTER|AL|DATABASE|ALTER ANY SCHEMA|  
 |SCHEMA|CONTROL|CL|DATABASE|CONTROL|  
 |SCHEMA|CREATE SEQUENCE|CRSO|DATABASE|CONTROL|  
-|SCHEMA|Elimina|DL|DATABASE|Elimina|  
+|SCHEMA|DELETE|DL|DATABASE|DELETE|  
 |SCHEMA|EXECUTE|EX|DATABASE|EXECUTE|  
 |SCHEMA|INSERT|IN|DATABASE|INSERT|  
 |SCHEMA|REFERENCES|RF|DATABASE|REFERENCES|  
@@ -407,7 +407,7 @@ SELECT * FROM fn_builtin_permissions(default);
 GO  
 ```  
   
-### <a name="b-returning-the-permissions-on-a-particular-class-of-objects"></a>B. B. Restituzione delle autorizzazioni per una classe di oggetti specifica  
+### <a name="b-returning-the-permissions-on-a-particular-class-of-objects"></a>b. B. Restituzione delle autorizzazioni per una classe di oggetti specifica  
  Nell'esempio seguente viene usata la funzione `fn_builtin_permissions` per visualizzare tutte le autorizzazioni disponibili per una categoria di entità a protezione diretta. Nell'esempio vengono restituite le autorizzazioni per gli assembly.  
   
 ```  

@@ -1,6 +1,6 @@
 ---
-title: Installare SQL Server machine learning i componenti Python e R senza accesso a internet | Microsoft Docs
-description: Offline o disconnesso R di Machine Learning e Python il programma di installazione nell'istanza di SQL Server isolata.
+title: Lingua di installazione di R e Python componenti senza accesso a internet - SQL Server Machine Learning
+description: Offline o disconnesso R di Machine Learning e Python il programma di installazione nell'istanza di SQL Server isolata dietro un firewall di rete.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 10/01/2018
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 24369c69df30e2723ce0c2098f2050ed0e5d7b20
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 01f871b6f6a96c053daca13060cac1223415eb20
+ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48150547"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53596992"
 ---
 # <a name="install-sql-server-machine-learning-r-and-python-on-computers-with-no-internet-access"></a>Installare SQL Server machine learning R e Python in computer senza accesso a internet
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -55,7 +55,7 @@ Server Microsoft Python    |[SPS_9.2.0.24_1033.cab](https://go.microsoft.com/fwl
 
 ## <a name="sql-server-2016-offline-install"></a>Installazione offline di SQL Server 2016
 
-Analitica nel database di SQL Server 2016 è solo R, con solo due file CAB di file per i pacchetti di prodotto e la distribuzione di Microsoft di R open source, rispettivamente. Per iniziare, installare una di queste versioni: RTM, 1 SP, SP 2. Una volta che un'installazione di base è in uso, gli aggiornamenti cumulativi possono essere applicati come passaggio successivo.
+Analitica nel database di SQL Server 2016 è solo R, con solo due file CAB di file per i pacchetti di prodotto e la distribuzione di Microsoft di R open source, rispettivamente. Iniziare installando una di queste versioni: RTM, SERVICE PACK 1, SP 2. Una volta che un'installazione di base è in uso, gli aggiornamenti cumulativi possono essere applicati come passaggio successivo.
 
 In un computer con una connessione a internet, scaricare i file CAB usati dal programma di installazione per installare analitica nel database in SQL Server 2016. 
 
@@ -121,9 +121,22 @@ Quando si esegue il programma di installazione di SQL Server in un computer disc
 
 6. Eseguire il programma di installazione. Accettare le condizioni di licenza, quindi nella pagina Selezione funzionalità, esaminare le funzionalità per il quale vengono applicati aggiornamenti cumulativi. Verrà visualizzata ogni funzionalità installata per l'istanza corrente, incluse le funzionalità di machine learning.
 
-  ![](media/cumulative-update-feature-selection.png)
+  ![Selezionare le funzionalità dall'albero delle funzionalità](media/cumulative-update-feature-selection.png "elenco delle funzionalità")
 
 5. Continuare la procedura guidata, accettando le condizioni di licenza per le distribuzioni R e Python. Durante l'installazione, viene chiesto di scegliere il percorso della cartella che contiene i file CAB aggiornati.
+
+## <a name="set-environment-variables"></a>Impostare le variabili di ambiente
+
+Per l'integrazione solo con R funzionalità, è consigliabile impostare il **MKL_CBWR** variabile di ambiente [garantire coerenti con l'output](https://software.intel.com/articles/introduction-to-the-conditional-numerical-reproducibility-cnr) dai calcoli Intel Math Kernel Library (MKL).
+
+1. Nel Pannello di controllo, fare clic su **sistema e sicurezza** > **System** > **impostazioni di sistema avanzate**  >   **Le variabili di ambiente**.
+
+2. Creare una nuova variabile di sistema o dell'utente. 
+
+  + Nome della variabile set a `MKL_CBWR`
+  + Impostare il valore della variabile `AUTO`
+
+Questo passaggio richiede un riavvio del server. Se sta tentando di abilitare l'esecuzione dello script, è possibile rimandare il riavvio fino al completamento del tutto il lavoro di configurazione.
 
 ## <a name="post-install-configuration"></a>Configurazione successiva all'installazione
 

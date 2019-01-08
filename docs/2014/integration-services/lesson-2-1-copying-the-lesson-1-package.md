@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 7f1616c2-2b4e-4010-be50-27d7b897403a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0237707fb5342b490806e3d0b8a2f32b3929ab38
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 87b0564ddd3fada522b70858341da4ab08c5092e
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48118651"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376069"
 ---
 # <a name="step-1-copying-the-lesson-1-package"></a>Passaggio 1: Copia del pacchetto della lezione 1
   In questa attività si procederà alla creazione di una copia del pacchetto della lezione 1, denominato Lesson 1.dtsx. Se non è stata completata la lezione 1, è possibile aggiungere al progetto il pacchetto completo della lezione 1 incluso nell'esercitazione e quindi copiarlo. Questa nuova copia verrà usata per tutto il seguito della lezione 2.  
@@ -47,13 +46,13 @@ ms.locfileid: "48118651"
   
 2.  In Esplora soluzioni fare clic con il pulsante destro del mouse su **Pacchetti SSIS**e scegliere **Aggiungi pacchetto esistente**.  
   
-3.  Nella finestra di dialogo **Aggiungi copia del pacchetto esistente** in **Posizione pacchetto**selezionare **File system**.  
+3.  Nella finestra di dialogo **Aggiungi copia del pacchetto esistente** , in **Posizione pacchetto**, selezionare **File system**.  
   
-4.  Fare clic sul pulsante **(…)** , passare a **Lesson 1.dtsx** nel computer e quindi fare clic su **Apri**.  
+4.  Fare clic sul pulsante Sfoglia **(...)**, passare a **Lesson 1.dtsx** nel computer e quindi fare clic su **Apri**.  
   
      Per scaricare tutti i pacchetti di lezioni di questa esercitazione, effettuare le operazioni seguenti.  
   
-    1.  Passare alla pagina degli [esempi del prodotto di Integration Services](http://go.microsoft.com/fwlink/?LinkId=275027)  
+    1.  Passare alla pagina degli [esempi del prodotto di Integration Services](https://go.microsoft.com/fwlink/?LinkId=275027)  
   
     2.  Fare clic sulla scheda **DOWNLOADS** .  
   
@@ -62,6 +61,6 @@ ms.locfileid: "48118651"
 5.  Copiare e incollare il pacchetto della lezione 1, come illustrato nei passaggi 3-8 della procedura precedente.  
   
 ## <a name="next-task-in-lesson"></a>Attività successiva della lezione  
- [Passaggio 2: Aggiunta e configurazione del contenitore Ciclo Foreach](lesson-2-2-adding-and-configuring-the-foreach-loop-container.md)  
+ [Passaggio 2: Aggiunta e configurazione del contenitore ciclo Foreach](lesson-2-2-adding-and-configuring-the-foreach-loop-container.md)  
   
   

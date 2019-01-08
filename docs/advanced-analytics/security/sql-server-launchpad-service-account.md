@@ -1,5 +1,5 @@
 ---
-title: Configurazione dell'account del servizio Launchpad di SQL Server | Microsoft Docs
+title: Configurazione dell'account del servizio Launchpad di SQL Server - servizi di SQL Server Machine Learning
 description: Come modificare l'account del servizio Launchpad di SQL Server usata per l'esecuzione di script esterni in SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 8af27f3bc9fb3e5b602ef6ad5555d9bd8c6720ca
-ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
+ms.openlocfilehash: aa4d6c38423a805ef672761e3f202061ed842304
+ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49419116"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53596377"
 ---
 # <a name="sql-server-launchpad-service-configuration"></a>Configurazione del servizio Launchpad di SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -64,10 +64,12 @@ La tabella seguente elenca le impostazioni avanzate per [!INCLUDE[ssCurrent](../
 
 |**Nome impostazione**|**Tipo**|**Descrizione**|
 |----|----|----|
-|PROCESSO\_PULIZIA\_VIA\_ESCI|Valore intero |Si tratta di un'impostazione esclusivamente interna: non modificare questo valore. </br></br>Specifica se la cartella di lavoro temporanea creata per ogni sessione runtime esterni deve essere pulita dopo il completamento della sessione. L'impostazione è utile per il debug. </br></br>I valori supportati sono **0** (disabilitato) o **1** (abilitato). </br></br>Il valore predefinito è 1, i file di log significato sono rimossi all'uscita.|
-|TRACCIA\_LIVELLO|Valore intero |Consente di configurare il livello di dettaglio di traccia di MSSQLLAUNCHPAD a scopo di debug. Ciò influisce sui file di traccia nel percorso specificato dall'impostazione LOG_DIRECTORY. </br></br>I valori supportati sono: **1** (errore), **2** (prestazioni), **3** (avviso), **4** (informazioni). </br></br>Il valore predefinito è 1, vale a dire solo gli errori di output.|
+|PROCESSO\_PULIZIA\_VIA\_ESCI|Integer |Si tratta di un'impostazione esclusivamente interna: non modificare questo valore. </br></br>Specifica se la cartella di lavoro temporanea creata per ogni sessione runtime esterni deve essere pulita dopo il completamento della sessione. L'impostazione è utile per il debug. </br></br>I valori supportati sono **0** (disabilitato) o **1** (abilitato). </br></br>Il valore predefinito è 1, i file di log significato sono rimossi all'uscita.|
+|TRACCIA\_LIVELLO|Integer |Consente di configurare il livello di dettaglio di traccia di MSSQLLAUNCHPAD a scopo di debug. Ciò influisce sui file di traccia nel percorso specificato dall'impostazione LOG_DIRECTORY. </br></br>I valori supportati sono: **1** (errore), **2** (prestazioni), **3** (avviso), **4** (informazioni). </br></br>Il valore predefinito è 1, vale a dire solo gli errori di output.|
 
 Tutte le impostazioni assumono la forma di coppie chiave-valore e ogni impostazione si trova su una riga diversa. Per modificare il livello di traccia, ad esempio, si potrebbe aggiungere la riga `Default: TRACE_LEVEL=4`.
+
+<a name="bkmk_EnforcePolicy"></a>
 
 ## <a name="enforcing-password-policy"></a>Applica criteri password
 

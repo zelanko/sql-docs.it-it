@@ -11,12 +11,12 @@ ms.assetid: d6c2b1b3-91fc-4175-af25-509946dc7f24
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 606d597bd539da9e50b1c0452d9126e2f4671731
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 52aae6defa5817236c4298d7c8e4cb44361a8284
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48054371"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53371313"
 ---
 # <a name="data-sources-supported-ssas-tabular"></a>Data Sources Supported (SSAS Tabular)
   In questo argomento vengono descritti i tipi di origini dati che possono essere utilizzati con i modelli tabulari.  
@@ -53,9 +53,9 @@ ms.locfileid: "48054371"
   
  <sup>1</sup> è anche possibile usare il Provider OLE DB per ODBC.  
   
- <sup>2</sup> per ulteriori informazioni su SQL Azure, visitare il sito web [SQL Azure](http://go.microsoft.com/fwlink/?LinkID=157856).  
+ <sup>2</sup> per ulteriori informazioni su SQL Azure, visitare il sito web [SQL Azure](https://go.microsoft.com/fwlink/?LinkID=157856).  
   
- <sup>3</sup> per altre informazioni su SQL Server PDW, vedere il sito web [SQL Server 2008 R2 Parallel Data Warehouse](http://go.microsoft.com/fwlink/?LinkId=150895).  
+ <sup>3</sup> per altre informazioni su SQL Server PDW, vedere il sito web [SQL Server 2008 R2 Parallel Data Warehouse](https://go.microsoft.com/fwlink/?LinkId=150895).  
   
  <sup>4</sup> in alcuni casi, tramite il provider OLE DB MSDAORA può determinare errori di connessione, in particolare con le versioni più recenti di Oracle. Se vengono visualizzati degli errori, è consigliabile utilizzare uno dei provider elencati per Oracle.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "48054371"
 4.  I provider OLE DB offrono talvolta prestazioni migliori in termini di velocità per dati in larga scala. Quando si sceglie tra provider diversi per la stessa origine dati, provare innanzitutto il provider OLE DB.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Origini dati &#40;tabulare di SSAS&#41;](../data-sources-ssas-tabular.md)   
- [Importare i dati &#40;tabulare di SSAS&#41;](../import-data-ssas-tabular.md)  
+ [Origini dati &#40;SSAS tabulare&#41;](../data-sources-ssas-tabular.md)   
+ [Importare dati &#40;SSAS tabulare&#41;](../import-data-ssas-tabular.md)  
   
   

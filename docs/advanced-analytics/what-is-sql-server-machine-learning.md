@@ -1,6 +1,6 @@
 ---
-title: R e Python di Machine Learning Services in SQL Server | Microsoft Docs
-description: R in SQL Server e Python in SQL Server, l'integrazione con i dati relazionali per l'analisi scientifica dei dati e modellazione statistica, modelli di machine learning, analitica predittiva, visualizzazione dei dati e altro ancora.
+title: Linguaggio R e integrazione delle funzionalità Python - servizi di SQL Server Machine Learning
+description: Linguaggio R e le funzionalità di Python in SQL Server, l'integrazione con i dati relazionali per l'analisi scientifica dei dati e modellazione statistica, modelli di machine learning, analitica predittiva, visualizzazione dei dati e altro ancora.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/06/2018
@@ -8,36 +8,38 @@ ms.topic: overview
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 0768ae40b110bbb2b85890f0a8b4eff0339cedde
-ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
+ms.openlocfilehash: 59ec5bbacf23d0f86f88a17a68faaf27162ebdcb
+ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51269704"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53596792"
 ---
 # <a name="machine-learning-services-r-python-in-sql-server-2017"></a>Servizi di Machine Learning (R, Python) in SQL Server 2017
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Machine Learning Services di SQL Server 2017 è un componente aggiuntivo a un'istanza di motore di database, utilizzato per l'esecuzione di codice R e Python in SQL Server. Codice viene eseguito in un framework di estendibilità, isolata da processi del motore di base, ma completamente disponibile per i dati relazionali come stored procedure, come script T-SQL contenente le istruzioni di R o Python o R o Python codice contenente T-SQL. 
+Machine Learning Services di SQL Server 2017 è un componente aggiuntivo a un'istanza di motore di database, utilizzato per l'esecuzione di codice R e Python in SQL Server. La funzionalità include [pacchetti di Microsoft R e Python](#components) per prestazioni elevate analitica predittiva e machine learning. Codice viene eseguito in un framework di estendibilità, isolata da processi del motore di base, ma completamente disponibile per i dati relazionali come stored procedure, come script T-SQL contenente le istruzioni di R o Python o R o Python codice contenente T-SQL. 
 
 Se è stato usato in precedenza [SQL Server 2016 R Services](r/sql-server-r-services.md), servizi di Machine Learning in SQL Server 2017 è la prossima generazione di supporto di R, con le versioni aggiornate di base R, RevoScaleR, MicrosoftML, e altre librerie introdotti nel 2016. 
 
-Nel Database SQL di Azure [Machine Learning Services (con R)]((https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-r)) è attualmente in anteprima pubblica.
+Nel Database SQL di Azure [Machine Learning Services (con R)](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-r) è attualmente in anteprima pubblica.
 
 La proposta di valore della chiave di servizi di Machine Learning è la potenza dei pacchetti Python e R enterprise per offrire l'analitica avanzata a livello di scalabilità e la possibilità di trasferire i calcoli e l'elaborazione di dove risiedono i dati, eliminando la necessità di estrarre i dati tra la rete.
 
-## <a name="components"></a>Components
+<a name="components"></a>
+
+## <a name="components"></a>Componenti
 
 SQL Server 2017 supporta R e Python. Nella tabella seguente vengono descritti i componenti.
 
-| Componente | Description |
+| Componente | Descrizione |
 |-----------|-------------|
 | Servizio Launchpad di SQL Server | Un servizio che gestisce le comunicazioni tra i runtime di R e Python esterni e l'istanza del motore di database. |
-| Pacchetti R | [**RevoScaleR** ](r/revoscaler-overview.md) è la libreria primaria per funzioni R. scalabile in questa raccolta sono tra i più diffusi. Le trasformazioni dei dati e la manipolazione, riepilogo statistico, visualizzazione e molte forme di analisi e modellazione sono disponibili in queste librerie. Inoltre, le funzioni in queste librerie distribuisce automaticamente i carichi di lavoro tra memorie centrali disponibili per l'elaborazione parallela, con la possibilità di operare su blocchi di dati coordinati e gestiti dal motore di calcolo.  <br/>[**MicrosoftML (R)** ](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package) aggiunge algoritmi di machine learning per creare modelli personalizzati per l'analisi del sentiment, analisi delle immagini e analisi del testo. <br/>[**sqlRUtils** ](r/generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package.md) fornisce funzioni helper per l'inserimento di script R in una stored procedure T-SQL archiviate, la registrazione di una stored procedure con un database e l'esecuzione della stored procedure da un ambiente di sviluppo R.<br/>[**olapR** ](r/how-to-create-mdx-queries-using-olapr.md) è per la compilazione o l'esecuzione di una query MDX nello script R.|
+| Pacchetti R | [**RevoScaleR** ](r/ref-r-revoscaler.md) è la libreria primaria per funzioni R. scalabile in questa raccolta sono tra i più diffusi. Le trasformazioni dei dati e la manipolazione, riepilogo statistico, visualizzazione e molte forme di analisi e modellazione sono disponibili in queste librerie. Inoltre, le funzioni in queste librerie distribuisce automaticamente i carichi di lavoro tra memorie centrali disponibili per l'elaborazione parallela, con la possibilità di operare su blocchi di dati coordinati e gestiti dal motore di calcolo.  <br/>[**MicrosoftML (R)** ](r/ref-r-microsoftml.md) aggiunge algoritmi di machine learning per creare modelli personalizzati per l'analisi del sentiment, analisi delle immagini e analisi del testo. <br/>[**sqlRUtils** ](r/ref-r-sqlrutils.md) fornisce funzioni helper per l'inserimento di script R in una stored procedure T-SQL archiviate, la registrazione di una stored procedure con un database e l'esecuzione della stored procedure da un ambiente di sviluppo R.<br/>[**olapR** ](r/ref-r-olapr.md) è per la compilazione o l'esecuzione di una query MDX nello script R.|
 | Microsoft R Open (MRO) | [**MRO** ](https://mran.microsoft.com/open) è distribuzione open source di Microsoft di R. Sono inclusi il pacchetto e dell'interprete. Usare sempre la versione di MRO installato dal programma di installazione. |
 | Strumenti R | Prompt dei comandi e le finestre della console R sono gli strumenti standard in una distribuzione di R.  |
 | Esempi di R e gli script |  Pacchetti open source di R e RevoScaleR includono set di dati incorporato in modo che è possibile creare ed eseguire lo script usando i dati pre-installati. |
-| Pacchetti Python | [**revoscalepy** ](python/what-is-revoscalepy.md) è la libreria primaria per Python scalabile con funzioni di manipolazione dei dati, trasformazione, visualizzazione e analisi. <br/>[**microsoftml (Python)** ](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) aggiunge algoritmi di machine learning per creare modelli personalizzati per l'analisi del sentiment, analisi delle immagini e analisi del testo.  |
+| Pacchetti Python | [**revoscalepy** ](python/ref-py-revoscalepy.md) è la libreria primaria per Python scalabile con funzioni di manipolazione dei dati, trasformazione, visualizzazione e analisi. <br/>[**microsoftml (Python)** ](python/ref-py-microsoftml.md) aggiunge algoritmi di machine learning per creare modelli personalizzati per l'analisi del sentiment, analisi delle immagini e analisi del testo.  |
 | Strumenti Python | Lo strumento della riga di comando di Python predefinito è utile per test ad hoc e attività.  |
 | Anaconda | Anaconda è una distribuzione open source di Python e i pacchetti essenziali. |
 | Gli script ed esempi di Python | Come con R, Python include set di dati incorporato e gli script.  |
@@ -77,8 +79,8 @@ I data Scientist usano in genere R o Python nella workstation propri computer po
 
 Chiamare funzioni R o Python dall'interno di uno script T-SQL:
 
-+ [R: informazioni su analitica nel database con R](tutorials/sqldev-in-database-r-for-sql-developers.md)
-+ [R procedura dettagliata end-to-end con R](tutorials/walkthrough-data-science-end-to-end-walkthrough.md)
++ [R: Informazioni su analitica nel database con R](tutorials/sqldev-in-database-r-for-sql-developers.md)
++ [R: Procedura dettagliata end-to-end con R](tutorials/walkthrough-data-science-end-to-end-walkthrough.md)
 + [Python: Eseguire Python con T-SQL](tutorials/run-python-using-t-sql.md)
 + [Python: Informazioni su analitica nel database usando Python](tutorials/sqldev-in-database-python-for-sql-developers.md)
 
@@ -94,7 +96,7 @@ Quando il modello è pronto per la scalabilità su dati aziendali, il data scien
 
 Tradizionalmente, i data Scientist usano R hanno avuto problemi con le prestazioni e scalabilità, soprattutto quando si utilizzano set di dati di grandi dimensioni. Ciò avviene perché l'implementazione di common runtime è a thread singolo e può gestire solo i set di dati che rientrano nella memoria disponibile nel computer locale. Integrazione con servizi di SQL Server Machine Learning offre molte funzionalità per ottenere prestazioni migliori, più dati:
 
-+ **RevoScaleR**: R questo pacchetto contiene le implementazioni di alcune delle funzioni R più diffuse, riprogettate per garantire parallelismo e scalabilità. Il pacchetto include inoltre funzioni che incrementano scalabilità e prestazioni trasferendo i calcoli al computer SQL Server, dotato in genere più memoria e potenza di calcolo.
++ **RevoScaleR**: Questo pacchetto R contiene le implementazioni di alcune delle funzioni R più diffuse, riprogettate per garantire parallelismo e scalabilità. Il pacchetto include inoltre funzioni che incrementano scalabilità e prestazioni trasferendo i calcoli al computer SQL Server, dotato in genere più memoria e potenza di calcolo.
 
 + **revoscalepy**. Questa libreria Python implementa funzioni più diffuse in RevoScaleR, ad esempio contesti di calcolo remoti e molti algoritmi che supportano l'elaborazione distribuita.
 
@@ -137,7 +139,7 @@ Portabilità del codice R e Python personalizzato è stato risolto tramite la di
 
 I client gratuiti che includono i nostri interpreti R e Python sono [Microsoft R Client](https://docs.microsoft.com/machine-learning-server/r-client/what-is-microsoft-r-client) e il [librerie Python](https://docs.microsoft.com/machine-learning-server/install/python-libraries-interpreter).
 
-In Azure, pacchetti R e Python di Microsoft e gli interpreti sono anche disponibili in Azure Machine Learning e servizi di Azure come [HDInsight](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-on-azure-hdinsight), e [macchine virtuali di Azure](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-azure-vm-on-linux). Il [macchina virtuale Data Science](https://azure.microsoft.com/services/virtual-machines/data-science-virtual-machines/) include una workstation di sviluppo completi con gli strumenti da più fornitori, nonché le librerie e gli interpreti da Microsoft.
+In Azure, pacchetti R e Python di Microsoft e gli interpreti sono anche disponibili in Azure Machine Learning e servizi di Azure come [HDInsight](https://docs.microsoft.com/azure/hdinsight/r-server/r-server-overview), e [macchine virtuali di Azure](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-azure-vm-on-linux). Il [macchina virtuale Data Science](https://azure.microsoft.com/services/virtual-machines/data-science-virtual-machines/) include una workstation di sviluppo completi con gli strumenti da più fornitori, nonché le librerie e gli interpreti da Microsoft.
 
 ## <a name="see-also"></a>Vedere anche
 

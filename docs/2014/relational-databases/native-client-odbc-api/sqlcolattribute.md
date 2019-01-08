@@ -14,12 +14,12 @@ ms.assetid: a5387d9e-a243-4cfe-b786-7fad5842b1d6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8029a3a2fb059ebfc764c8e29d9f893d1434b2dd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 706d08eb3c140571460f4ebccb541ac24a71160a
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48204921"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53361273"
 ---
 # <a name="sqlcolattribute"></a>SQLColAttribute
   È possibile usare `SQLColAttribute` per recuperare un attributo di una colonna del set di risultati per le istruzioni ODBC preparate o eseguite. La chiamata `SQLColAttribute` su istruzioni preparate provoca un round trip al [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC Native Client riceve i dati di colonna del set di risultati come parte dell'esecuzione dell'istruzione, quindi la chiamata `SQLColAttribute` dopo il completamento della **SQLExecute** oppure **SQLExecDirect** viene non comporta un round trip del server.  
@@ -27,7 +27,7 @@ ms.locfileid: "48204921"
 > [!NOTE]  
 >  Gli attributi di identificazione di colonna ODBC non sono disponibili in tutti i set di risultati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-|Identificatore del campo|Description|  
+|Identificatore del campo|Descrizione|  
 |----------------------|-----------------|  
 |SQL_COLUMN_TABLE_NAME|Disponibile nei set di risultati recuperati da istruzioni che generano cursori server o in istruzioni SELECT eseguite contenenti una clausola FOR BROWSE.|  
 |SQL_DESC_BASE_COLUMN_NAME|Disponibile nei set di risultati recuperati da istruzioni che generano cursori server o in istruzioni SELECT eseguite contenenti una clausola FOR BROWSE.|  
@@ -76,7 +76,7 @@ ms.locfileid: "48204921"
   
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ha introdotto i campi di descrizione specifici del driver per fornire informazioni aggiuntive per indicare rispettivamente il nome della raccolta XML schema, il nome dello schema e il nome del catalogo. Tali proprietà non richiedono virgolette o un carattere di escape se contengono caratteri non alfanumerici. Nella tabella seguente sono inclusi i nuovi campi di descrizione:  
   
-|Nome colonna|Tipo|Description|  
+|Nome colonna|Tipo|Descrizione|  
 |-----------------|----------|-----------------|  
 |SQL_CA_SS_XML_SCHEMACOLLECTION_CATALOG_NAME|CharacterAttributePtr|Nome del catalogo in cui viene definito il nome di una raccolta di XML Schema. Se non è possibile trovare il nome del catalogo, questa variabile contiene una stringa vuota.<br /><br /> Queste informazioni vengono restituite dal campo del record SQL_DESC_SS_XML_SCHEMACOLLECTION_CATALOG_NAME del descrittore delle righe di implementazione, che è un campo di lettura/scrittura.|  
 |SQL_CA_SS_XML_SCHEMACOLLECTION_SCHEMA_NAME|CharacterAttributePtr|Nome dello schema in cui viene definito il nome di una raccolta di XML Schema. Se non è possibile trovare il nome dello schema, questa variabile contiene una stringa vuota.<br /><br /> Queste informazioni vengono restituite dal campo del record SQL_DESC_SS_XML_SCHEMACOLLECTION_SCHEMA_NAME del descrittore delle righe di implementazione, che è un campo di lettura/scrittura.|  
@@ -84,7 +84,7 @@ ms.locfileid: "48204921"
   
  In [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] sono stati inoltre introdotti nuovi campi di descrizione specifici del driver per fornire informazioni aggiuntive per una colonna con tipo definito dall'utente di un set di risultati o un parametro con tipo definito dall'utente di una stored procedure o di una query con parametri. Tali proprietà non richiedono virgolette o un carattere di escape se contengono caratteri non alfanumerici. Nella tabella seguente sono inclusi i nuovi campi di descrizione:  
   
-|Nome colonna|Tipo|Description|  
+|Nome colonna|Tipo|Descrizione|  
 |-----------------|----------|-----------------|  
 |SQL_CA_SS_UDT_CATALOG_NAME|CharacterAttributePtr|Nome del catalogo contenente il tipo definito dall'utente.|  
 |SQL_CA_SS_UDT_SCHEMA_NAME|CharacterAttributePtr|Nome dello schema contenente il tipo definito dall'utente.|  
@@ -107,7 +107,7 @@ ms.locfileid: "48204921"
  Per altre informazioni, vedere [supporto per colonne di tipo Sparse &#40;ODBC&#41;](../native-client/odbc/sparse-columns-support-odbc.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Funzione SQLColAttribute](http://go.microsoft.com/fwlink/?LinkId=59334)   
+ [Funzione SQLColAttribute](https://go.microsoft.com/fwlink/?LinkId=59334)   
  [Dettagli di implementazione di API ODBC](odbc-api-implementation-details.md)   
  [SQLSetStmtAttr](sqlsetstmtattr.md)  
   

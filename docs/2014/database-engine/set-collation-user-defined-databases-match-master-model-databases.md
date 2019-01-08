@@ -12,12 +12,12 @@ ms.assetid: c686446f-dae1-4b05-a3df-837b3422988d
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6aea5507c008d608b7fcc9e50c7defcdff90924d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dfb00b1cc1a9930f7a374403b40e2c0d793eb090
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48190401"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53371083"
 ---
 # <a name="set-the-collation-of-user-defined-databases-to-match-those-of-the-master-and-model-databases"></a>Impostazione delle regole di confronto dei database definiti dall'utente in modo che corrispondano a quelle dei database master e modello
   Questa regola consente di controllare se i database definiti dall'utente vengono configurati utilizzando le stesse regole di confronto di quelle per i database master e modello.  
@@ -48,9 +48,9 @@ ms.locfileid: "48190401"
   
  [sys.databases &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)  
   
- [Articolo 325335 della Microsoft Knowledge Base](http://go.microsoft.com/fwlink/?linkid=117751)  
+ [Articolo 325335 della Microsoft Knowledge Base](https://go.microsoft.com/fwlink/?linkid=117751)  
   
- [Procedura: installare SQL Server 2008 dal Prompt dei comandi](http://go.microsoft.com/fwlink/?LinkId=81585)  
+ [Come si fa: Installare SQL Server 2008 dal Prompt dei comandi](https://go.microsoft.com/fwlink/?LinkId=81585)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Monitorare e applicare le procedure consigliate tramite la gestione basata su criteri](../relational-databases/policy-based-management/monitor-and-enforce-best-practices-by-using-policy-based-management.md)  

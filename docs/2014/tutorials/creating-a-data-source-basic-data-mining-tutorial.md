@@ -11,18 +11,18 @@ ms.assetid: d7107c32-69ed-49a8-9b6e-32753eebf42c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 01f576ceb6b465dd8238972d29456300a01837df
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0e216aa5da4ef837da632ba83d4cf6e14edb40b1
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48128171"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376453"
 ---
 # <a name="creating-a-data-source-basic-data-mining-tutorial"></a>Creazione di un'origine dati (Esercitazione di base sul data mining)
   Oggetto *zdroj dat* è una connessione dati salvata e gestita del progetto e distribuita per il [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] database. L'origine dati contiene il nome del server e del database in cui si trovano i dati di origine in aggiunta ad altre proprietà di connessione necessarie.  
   
 > [!IMPORTANT]  
->  Il nome del database è [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]. Se questo database non già installato, vedere la [Microsoft SQL Sample Databases](http://go.microsoft.com/fwlink/?LinkId=88417) pagina.  
+>  Il nome del database è [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]. Se questo database non già installato, vedere la [Microsoft SQL Sample Databases](https://go.microsoft.com/fwlink/?LinkId=88417) pagina.  
   
 ### <a name="to-create-a-data-source"></a>Per creare un'origine dati  
   
@@ -64,6 +64,6 @@ ms.locfileid: "48128171"
 ## <a name="see-also"></a>Vedere anche  
  [Creare un'origine dati &#40;SSAS multidimensionale&#41;](../analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional.md)   
  [Definizione di un'origine dati](../analysis-services/lesson-1-2-defining-a-data-source.md)   
- [Impostare le opzioni di rappresentazione &#40;SSAS - multidimensionale&#41;](../analysis-services/multidimensional-models/set-impersonation-options-ssas-multidimensional.md)  
+ [Impostare opzioni di rappresentazione &#40;SSAS multidimensionale&#41;](../analysis-services/multidimensional-models/set-impersonation-options-ssas-multidimensional.md)  
   
   

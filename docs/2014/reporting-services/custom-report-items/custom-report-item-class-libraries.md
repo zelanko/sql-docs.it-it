@@ -15,15 +15,15 @@ ms.assetid: f18c5d8f-1d6b-4f0b-8657-c14896c2ce0d
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 20bf707508b8ae5cc8ad7a491d45d151eb806f1e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e65ae16a2297c0f54f16e31e770623c8edd80639
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48229831"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376803"
 ---
 # <a name="custom-report-item-class-libraries"></a>Librerie di classi dell'elemento del report personalizzato
-  Gli elementi del report personalizzati utilizzano le classi dello spazio dei nomi `Microsoft.ReportDesigner`. Le classi utilizzate per implementare un elemento del report personalizzato possono essere suddivise in due categorie principali: le classi univoche progettate per supportare l'infrastruttura dell'elemento del report personalizzato e le classi wrapper gestite che incapsulano la funzionalità degli elementi RDL (Report Definition Language) rilevanti. Per un esempio di codice sull'uso di queste classi, vedere [SQL Server Reporting Services Product Samples](http://go.microsoft.com/fwlink/?LinkId=177889) (Esempi del prodotto SQL Server Reporting Services).  
+  Gli elementi del report personalizzati utilizzano le classi dello spazio dei nomi `Microsoft.ReportDesigner`. Le classi utilizzate per implementare un elemento del report personalizzato possono essere suddivise in due categorie principali: le classi univoche progettate per supportare l'infrastruttura dell'elemento del report personalizzato e le classi wrapper gestite che incapsulano la funzionalità degli elementi RDL (Report Definition Language) rilevanti. Per un esempio di codice sull'uso di queste classi, vedere [SQL Server Reporting Services Product Samples](https://go.microsoft.com/fwlink/?LinkId=177889) (Esempi del prodotto SQL Server Reporting Services).  
   
 ## <a name="custom-report-item-infrastructure-classes"></a>Classi di infrastruttura dell'elemento del report personalizzato  
  Le classi riportate di seguito vengono utilizzate per implementare un elemento del report personalizzato.  
@@ -48,7 +48,7 @@ ms.locfileid: "48229831"
 |`AltReportItem`|Oggetto elemento del report alternativo, da utilizzare se il controllo di runtime di un elemento del report personalizzato non è supportato.|  
 |`Style`|Proprietà di stile per l'elemento del report personalizzato.|  
 |`Adornment`|Finestra dell'area di controllo utilizzata per la modifica interattiva del controllo.|  
-|`Site`|Il `ISite` del componente.|  
+|`Site`|`ISite` del componente.|  
 |`DesignerVerbCollection`|Matrice di verbi personalizzati per il menu di scelta rapida del controllo.|  
   
 #### <a name="public-methods"></a>Metodi pubblici  

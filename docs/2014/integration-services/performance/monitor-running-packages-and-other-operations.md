@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: cbbcd79f-ab9b-46ec-84cb-4821c1d16b99
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b985193eb9aa9b73d513f2d5ce8368f5d8fbb6ab
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: eb705b82ec9f03de8cc458e62eded9f1817850c0
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48060696"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53356778"
 ---
 # <a name="monitoring-for-package-executions-and-other-operations"></a>Monitoraggio per le esecuzioni di pacchetti e altre operazioni
   È possibile monitorare esecuzioni di pacchetti [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , convalide di progetto e altre operazioni di usando uno o più strumenti tra quelli indicati di seguito. Alcuni strumenti, tra cui le scelte dei dati, sono disponibili solo per i progetti distribuiti nel server [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
@@ -29,7 +28,7 @@ ms.locfileid: "48060696"
   
      Per altre informazioni, vedere [report per il server Integration Services](../reports-for-the-integration-services-server.md).  
   
--   Viste  
+-   Visualizzazioni  
   
      Per altre informazioni, vedere [viste &#40;Catalogo di Integration Services&#41;](/sql/integration-services/system-views/views-integration-services-catalog).  
   
@@ -40,11 +39,11 @@ ms.locfileid: "48060696"
 -   Scelte dei dati  
   
 ## <a name="operation-types"></a>Tipi di operazione  
- Vengono monitorati numerosi tipi diversi di operazioni nel `SSISDB` catalogo, via il [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server. A ogni operazione possono essere associati più messaggi. Ogni messaggio può essere classificato in uno dei molti tipi diversi. Ad esempio, un messaggio può essere informativo, di avviso o di errore. Per l'elenco completo dei tipi di messaggi, vedere la documentazione relativa alla vista Transact-SQL [catalog.operation_messages &#40;Database SSISDB&#41;](/sql/integration-services/system-views/catalog-operation-messages-ssisdb-database). Per l'elenco completo dei tipi di operazioni, vedere [catalog.operations &#40;Database SSISDB&#41;](/sql/integration-services/system-views/catalog-operations-ssisdb-database).  
+ Nel catalogo `SSISDB` vengono monitorati numerosi tipi diversi di operazioni nel server [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. A ogni operazione possono essere associati più messaggi. Ogni messaggio può essere classificato in uno dei molti tipi diversi. Ad esempio, un messaggio può essere informativo, di avviso o di errore. Per l'elenco completo dei tipi di messaggi, vedere la documentazione relativa alla vista Transact-SQL [catalog.operation_messages &#40;Database SSISDB&#41;](/sql/integration-services/system-views/catalog-operation-messages-ssisdb-database). Per l'elenco completo dei tipi di operazioni, vedere [catalog.operations &#40;Database SSISDB&#41;](/sql/integration-services/system-views/catalog-operations-ssisdb-database).  
   
  Nove diversi tipi di stato consentono di indicare lo stato di un'operazione. Per l'elenco completo dei tipi di stato, vedere la vista [catalog.operations &#40;Database SSISDB&#41;](/sql/integration-services/system-views/catalog-operations-ssisdb-database).  
   
 ## <a name="related-content"></a>Contenuto correlato  
- Intervento nel blog relativo alla [panoramica dell'API T-SQL SSIS](http://go.microsoft.com/fwlink/?LinkId=249051)su blogs.msdn.com.  
+ Intervento nel blog relativo alla [panoramica dell'API T-SQL SSIS](https://go.microsoft.com/fwlink/?LinkId=249051)su blogs.msdn.com.  
   
   

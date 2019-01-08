@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: wmi
 ms.topic: reference
 api_name:
 - SetNumericalValue Method (SqlServiceAdvancedProperty Class)
@@ -20,12 +18,12 @@ ms.assetid: 950ed1e8-0538-4db4-807c-a2c36f43cf6b
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: e576d103c84208ed66f803b562c1c5913082cdec
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 07c54d34b3fa7c874142395e5113b90799dcbe6f
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48226441"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53373763"
 ---
 # <a name="setnumericalvalue-method-sqlserviceadvancedproperty-class"></a>Metodo SetNumericalValue (classe SqlServiceAdvancedProperty)
   Imposta il valore numerico di una proprietà.  
@@ -47,7 +45,7 @@ NumValue
   
 #### <a name="parameters"></a>Parametri  
   
-|Parametro|Description|  
+|Parametro|Descrizione|  
 |---------------|-----------------|  
 |*NumValue*|Valore `uint32` che specifica il valore della proprietà avanzata.|  
   
@@ -58,6 +56,6 @@ NumValue
  Il tipo di valore della proprietà deve essere numerico per potere impostare la proprietà su un valore numerico.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Avvio e arresto di servizi](http://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
+ [Avvio e arresto di servizi](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

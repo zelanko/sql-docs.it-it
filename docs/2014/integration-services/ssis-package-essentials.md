@@ -13,15 +13,15 @@ ms.assetid: b0c86c35-e3d3-4724-9a96-4087e9d74bf3
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 91aa24a11c7d4587500ab7154f582bb47b8f8c4d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f767bf80d2271b88eca526be3a47a2033f56d5bf
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48193241"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53360863"
 ---
 # <a name="ssis-package-essentials"></a>Concetti di base sui pacchetti SSIS
-  Un pacchetto è l'oggetto che consente di implementare la funzionalità [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] per estrarre, trasformare e caricare i dati. Un pacchetto viene creato utilizzando la finestra di progettazione [!INCLUDE[ssIS](../includes/ssis-md.md)] in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] oppure eseguendo Importazione/Esportazione guidata [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] o Creazione guidata progetto connessioni in [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Per altre informazioni, [creare pacchetti in SQL Server Data Tools](create-packages-in-sql-server-data-tools.md) in Progettazione SSIS e [importazione guidata progetto](../../2014/integration-services/import-project-wizard.md).  
+  Un pacchetto è l'oggetto che consente di implementare la funzionalità [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] per estrarre, trasformare e caricare i dati. Un pacchetto viene creato utilizzando la finestra di progettazione [!INCLUDE[ssIS](../includes/ssis-md.md)] in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] oppure eseguendo Importazione/Esportazione guidata [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] o Creazione guidata progetto connessioni in [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Per altre informazioni, [creare pacchetti in SQL Server Data Tools](create-packages-in-sql-server-data-tools.md) in Progettazione SSIS e [importazione guidata progetto](../../2014/integration-services/import-project-wizard.md).  
   
  Un pacchetto di base include i seguenti elementi:  
   
@@ -35,7 +35,7 @@ ms.locfileid: "48193241"
   
  Per altre informazioni, vedere [Flusso di dati](data-flow/data-flow.md).  
   
- Per un esempio di come creare un pacchetto di base, vedere [lezione 1: creazione del progetto e il pacchetto di base](lesson-1-create-a-project-and-basic-package-with-ssis.md).  
+ Per un esempio di come creare un pacchetto di base, vedere [lezione 1: Creazione del progetto e il pacchetto di base](lesson-1-create-a-project-and-basic-package-with-ssis.md).  
   
 ## <a name="related-tasks"></a>Attività correlate  
   
@@ -43,16 +43,16 @@ ms.locfileid: "48193241"
   
 -   [Aggiungere o eliminare un'attività o un contenitore in un flusso di controllo](control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   
--   [Impostare le proprietà di un'attività o di un contenitore](../../2014/integration-services/set-the-properties-of-a-task-or-container.md)  
+-   [Impostazione delle proprietà di un'attività o di un contenitore](../../2014/integration-services/set-the-properties-of-a-task-or-container.md)  
   
--   [Aggiungere o eliminare un componente in un flusso di dati](data-flow/add-or-delete-a-component-in-a-data-flow.md)  
+-   [Aggiunta o eliminazione di un componente in un flusso di dati](data-flow/add-or-delete-a-component-in-a-data-flow.md)  
   
 ## <a name="related-content"></a>Contenuto correlato  
   
-1.  Video, [Creazione di un pacchetto di base (video di SQL Server)](http://go.microsoft.com/fwlink/?LinkId=131023), nel sito MSDN.Microsoft.com  
+1.  Video, [Creazione di un pacchetto di base (video di SQL Server)](https://go.microsoft.com/fwlink/?LinkId=131023), nel sito MSDN.Microsoft.com  
   
 ## <a name="see-also"></a>Vedere anche  
- [Integration Services &#40;SSIS&#41; i pacchetti](../../2014/integration-services/integration-services-ssis-packages.md)   
+ [Pacchetti di Integration Services &#40;SSIS&#41;](../../2014/integration-services/integration-services-ssis-packages.md)   
  [Vincoli di precedenza](control-flow/precedence-constraints.md)  
   
   

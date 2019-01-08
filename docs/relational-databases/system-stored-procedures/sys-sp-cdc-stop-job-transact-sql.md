@@ -20,12 +20,12 @@ ms.assetid: 421fc21c-c7a4-407c-8b31-359273b68c63
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 931b25de9acbf851f3a68475000833080d25ae93
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2e39a456e9d6c6479f6dab95270dcbd2d549c986
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47846525"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589155"
 ---
 # <a name="sysspcdcstopjob-transact-sql"></a>sys.sp_cdc_stop_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,14 +42,14 @@ sys.sp_cdc_stop_job [ [ @job_type = ] 'job_type' ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [[  **@job_type=** ] **' * * * job_type*']  
+ [[  **@job_type=** ] **'**_job_type_']  
  Tipo di processo da aggiungere. *job_type* viene **nvarchar(20)** con valore predefinito è **acquisire**. Gli input validi sono **Acquisisci** e **pulizia**.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  **0** (esito positivo) o **1** (errore)  
   
 ## <a name="result-sets"></a>Set di risultati  
- Nessuno  
+ None  
   
 ## <a name="remarks"></a>Note  
  sys.sp_cdc_stop_job può essere utilizzato da un amministratore per arrestare in modo esplicito il processo di acquisizione o di pulizia.  

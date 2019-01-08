@@ -1,5 +1,5 @@
 ---
-title: Aggiungere SQLRUserGroup come utente del database (SQL Server Machine Learning Services) | Microsoft Docs
+title: Aggiungere SQLRUserGroup come utente database - SQL Server Machine Learning Services
 description: Per le connessioni loopback tramite autenticazione implicita, aggiungere SQLRUserGroup come utente del database in modo che un account di lavoro possa accedere al server, per la conversione di identità all'utente chiama.
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 4685288eb383c486556efba1eb4861ca9d708c0f
-ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
+ms.openlocfilehash: abd0745126a4f2a23cf559500b93d2fa53fa2cf9
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49419086"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53432354"
 ---
 # <a name="add-sqlrusergroup-as-a-database-user"></a>Aggiungere SQLRUserGroup come utente del database
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: wmi
 ms.topic: reference
 api_name:
 - AdvancedProperties Property (SqlService Class)
@@ -20,12 +18,12 @@ ms.assetid: 63bcb7e2-1f78-4961-b4b9-1b635a89079b
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 83cee30cb86c28933e3a86a9e8a75e8dc3c4f71a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: abe9d977dfcde5523e875881b1a5b80be7b1b887
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48138417"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376773"
 ---
 # <a name="advancedproperties-property-sqlservice-class"></a>Proprietà AdvancedProperties (classe SqlService)
   Ottiene una matrice di riferimenti agli oggetti che contengono le proprietà avanzate per l'oggetto `SqlService`.  
@@ -48,6 +46,6 @@ object
 ## <a name="remarks"></a>Note  
   
 ## <a name="see-also"></a>Vedere anche  
- [Avvio e arresto di servizi](http://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
+ [Avvio e arresto di servizi](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

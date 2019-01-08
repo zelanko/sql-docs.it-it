@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.impexpwizard.chooseadatasource.f1
@@ -13,19 +12,19 @@ ms.assetid: ebf28a62-dfc1-4b39-9db5-df1919e5fccb
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ff54dc41b8a39107c191f8976d22005c80d5f65c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1cff58f58543ae5876840bb7640f9cc11abf793d
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48216341"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53370273"
 ---
 # <a name="choose-a-data-source-sql-server-import-and-export-wizard"></a>Scelta origine dati (Importazione/Esportazione guidata SQL Server)
   Usare la **scelta origine dati** pagina per specificare l'origine dei dati che si desidera copiare.  
   
  Per altre informazioni su questa procedura guidata, vedere [SQL Server importazione / esportazione guidata](import-and-export-data-with-the-sql-server-import-and-export-wizard.md). Per altre informazioni sulle opzioni per l'avvio della procedura guidata e sulle autorizzazioni necessarie per eseguire correttamente la procedura guidata, vedere [esecuzione di SQL Server importazione / esportazione guidata](start-the-sql-server-import-and-export-wizard.md).  
   
- Lo scopo del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] importazione / esportazione guidata consiste nella copia dei dati da un'origine a una destinazione. La procedura guidata può inoltre creare automaticamente un database di destinazione e le tabelle di destinazione. Se tuttavia è necessario copiare più database o tabelle, o altri tipi di oggetti di database, è preferibile utilizzare Copia guidata database. Per altre informazioni, vedere [Use the Copy Database Wizard](../../relational-databases/databases/use-the-copy-database-wizard.md).  
+ Lo scopo dell'Importazione/Esportazione guidata [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consiste nel copiare i dati da un'origine a una destinazione. La procedura guidata può inoltre creare automaticamente un database di destinazione e le tabelle di destinazione. Se tuttavia è necessario copiare più database o tabelle, o altri tipi di oggetti di database, è preferibile utilizzare Copia guidata database. Per altre informazioni, vedere [Use the Copy Database Wizard](../../relational-databases/databases/use-the-copy-database-wizard.md).  
   
 ## <a name="options"></a>Opzioni  
  **Data Source**  
@@ -44,10 +43,10 @@ ms.locfileid: "48216341"
  Consente di specificare se per l'accesso al database del pacchetto deve essere utilizzata l'autenticazione di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. Per una maggiore sicurezza è consigliabile utilizzare l'autenticazione di Windows.  
   
  **Usa autenticazione di SQL Server**  
- Specificare se il pacchetto deve utilizzare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticazione per accedere al database. Se si usa l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , è necessario specificare un nome utente e una password.  
+ Consente di specificare se per l'accesso al database del pacchetto deve essere utilizzata l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se si usa l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , è necessario specificare un nome utente e una password.  
   
  **Nome utente**  
- Specificare un nome utente per la connessione al database quando si usa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l'autenticazione.  
+ Consente di specificare un nome utente per la connessione al database quando si utilizza l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  **Password**  
  Consente di specificare una password per la connessione al database quando si usa l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -68,15 +67,15 @@ ms.locfileid: "48216341"
  Consente di digitare il nome del database di origine.  
   
  **Sicurezza integrata**  
- Specificare `True` per connettersi usando l'autenticazione integrata di Windows, che è consigliata, oppure `False` connettersi usando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l'autenticazione. Se si specifica `False`, è necessario immettere un ID utente e una password. Il valore predefinito è `False`.  
+ Consente di specificare `True` per stabilire la connessione tramite l'autenticazione integrata di Windows, che rappresenta la soluzione consigliata, oppure `False` per stabilire la connessione tramite l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se si specifica `False`, è necessario immettere un ID utente e una password. Il valore predefinito è `False`.  
   
  **ID utente**  
- Specificare un nome utente per la connessione al database quando si usa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l'autenticazione.  
+ Consente di specificare un nome utente per la connessione al database quando si utilizza l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  **Password**  
  Consente di specificare una password per la connessione al database quando si usa l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- Le altre opzioni che vengono elencate quando si seleziona questo provider non sono necessarie per stabilire correttamente la connessione al database di origine di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per una descrizione di queste opzioni aggiuntive, vedere la documentazione per il [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Provider di dati per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nel [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Software Development Kit.  
+ Le altre opzioni che vengono elencate quando si seleziona questo provider non sono necessarie per stabilire correttamente la connessione al database di origine di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per una descrizione di tali opzioni, vedere la documentazione per il provider di dati [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nel Software Development Kit di [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)].  
   
 ### <a name="data-source--microsoft-excel"></a>Origine dati = Microsoft Excel  
   
@@ -113,7 +112,7 @@ ms.locfileid: "48216341"
  Consente di specificare la password dell'utente per la connessione al database quando un file di informazioni sul gruppo di lavoro corrente è associato al database. Tuttavia, se il database è protetta con una sola password per tutti gli utenti, è necessario fornire questo valore nel **proprietà di Data Link** nella finestra di dialogo viene visualizzata facendo **avanzate**.  
   
  **Advanced**  
- È possibile specificare le opzioni avanzate, ad esempio la password del database o un file di informazioni di lavoro non predefinita, tramite il **proprietà di Data Link** nella finestra di dialogo. Per altre informazioni sulle proprietà del provider OLE DB, vedere la sezione di accesso ai dati del [MSDN library](http://go.microsoft.com/fwlink/?linkid=62553).  
+ È possibile specificare le opzioni avanzate, ad esempio la password del database o un file di informazioni di lavoro non predefinita, tramite il **proprietà di Data Link** nella finestra di dialogo. Per altre informazioni sulle proprietà del provider OLE DB, vedere la sezione di accesso ai dati del [MSDN library](https://go.microsoft.com/fwlink/?linkid=62553).  
   
 ### <a name="data-source--flat-file-source"></a>Origine dati = Origine file flat  
  Per informazioni sulle opzioni per un'origine dei dati flat file, vedere gli argomenti seguenti.  

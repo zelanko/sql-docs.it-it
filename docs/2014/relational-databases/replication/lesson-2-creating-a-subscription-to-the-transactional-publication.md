@@ -13,15 +13,15 @@ ms.assetid: 5995b7d2-7c06-46f5-b96c-2bee879bcda2
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: ace792a76e1bcdbcc7aa6b372d96de1f92c570f5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: de13dc6bcae1dbca26edec889a988b3085de9195
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48072251"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590855"
 ---
 # <a name="lesson-2-creating-a-subscription-to-the-transactional-publication"></a>Lezione 2: Creazione di una sottoscrizione per una pubblicazione transazionale
-  In questa lezione verranno descritte le procedure per creare una sottoscrizione in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Per eseguire questa lezione è necessario aver completato la lezione precedente, [Lezione 1: Pubblicazione dei dati tramite la replica transazionale](lesson-1-publishing-data-using-transactional-replication.md).  
+  In questa lezione verranno descritte le procedure per creare una sottoscrizione in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. In questa lezione richiede di aver completato la lezione precedente, [lezione 1: Pubblicazione dei dati tramite la replica transazionale](lesson-1-publishing-data-using-transactional-replication.md).  
   
 ### <a name="to-create-the-subscription"></a>Per creare la sottoscrizione  
   
@@ -41,7 +41,7 @@ ms.locfileid: "48072251"
   
 7.  Nella finestra di dialogo **Nuovo database** digitare **ProductReplica** nella casella **Nome database** , fare clic su **OK**e scegliere **Avanti**.  
   
-8.  Nella finestra di dialogo **Sicurezza agente di distribuzione** fare clic sul pulsante con i puntini di sospensione (**…**), immettere \<*Nome_computer>***\repl_distribution** nella casella **Account processo**, specificare la password per l'account, fare clic su **OK** e quindi su **Avanti**.  
+8.  Nel **sicurezza agente di distribuzione** finestra di dialogo fare clic sui puntini di sospensione (**...** ) pulsante, immettere \< _nome_macchina >_**\repl_distribution** nel **account processo** immettere la password per questo oggetto account, fare clic su **OK**, quindi fare clic su **successivo**.  
   
 9. Fare clic su **Fine** per accettare i valori predefiniti nelle pagine seguenti e completare la procedura guidata.  
   
@@ -49,11 +49,11 @@ ms.locfileid: "48072251"
   
 1.  Connettersi al Sottoscrittore in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], espandere **Database**, **ProductReplica**e **Sicurezza**, fare clic con il pulsante destro del mouse su **Utenti**e quindi scegliere **Nuovo utente**.  
   
-2.  Nella pagina **Generale**, nell'elenco della pagina **Tipo utente** selezionare **Utente di Windows**.  
+2.  Nella pagina **Generale** , nell'elenco della pagina **Tipo utente** selezionare **Utente di Windows**.  
   
-3.  Selezionare la casella **Nome utente** e fare clic sul pulsante con i puntini di sospensione (…), quindi nella casella **Inserire il nome oggetto da selezionare** digitare <Nome_computer>**\repl_distribution**, fare clic su **Controlla nomi** e fare clic su **OK**.  
+3.  Selezionare il **nome utente** casella e fare clic sui puntini di sospensione (...), nella **immettere il nome dell'oggetto da selezionare** casella digitare < nome_computer >**\repl_distribution**, fare clic su  **Controlla nomi**, quindi fare clic su **OK**.  
   
-4.  Nella pagina **Appartenenze**, in **Appartenenza a ruoli del database** selezionare **db_owner**, quindi scegliere **OK** per creare l'utente.  
+4.  Nella pagina **Appartenenze** , in **Appartenenza a ruoli del database** selezionare **db_owner**, quindi scegliere **OK** per creare l'utente.  
   
 ### <a name="to-view-the-synchronization-status-of-the-subscription"></a>Per visualizzare lo stato di sincronizzazione della sottoscrizione  
   
@@ -66,7 +66,7 @@ ms.locfileid: "48072251"
 3.  Se la sottoscrizione non è visualizzata in **AdvWorksProductTrans**, premere F5 per aggiornare l'elenco.  
   
 ## <a name="next-steps"></a>Passaggi successivi  
- In questo modo è stata creata una sottoscrizione per la pubblicazione transazionale. Poiché l'agente di distribuzione per questa sottoscrizione è in esecuzione continua, la sottoscrizione viene inizializzata al momento della creazione. Il passaggio successivo consiste nell'utilizzo di token di traccia per verificare che le modifiche sono state replicate nel Sottoscrittore e per determinare la latenza. Vedere [Lezione 3: Convalida della sottoscrizione e misurazione della latenza](lesson-3-validating-the-subscription-and-measuring-latency.md).  
+ In questo modo è stata creata una sottoscrizione per la pubblicazione transazionale. Poiché l'agente di distribuzione per questa sottoscrizione è in esecuzione continua, la sottoscrizione viene inizializzata al momento della creazione. Il passaggio successivo consiste nell'utilizzo di token di traccia per verificare che le modifiche sono state replicate nel Sottoscrittore e per determinare la latenza. Vedere [lezione 3: Convalida della sottoscrizione e misurazione della latenza](lesson-3-validating-the-subscription-and-measuring-latency.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Inizializzare una sottoscrizione con uno snapshot](initialize-a-subscription-with-a-snapshot.md)   

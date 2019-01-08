@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.executeprocesstask.f1
@@ -15,12 +14,12 @@ ms.assetid: aca5a0b5-34a9-45bc-a234-8e63ea51a1ee
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 02f00d9846176edabb2da486906b5d1946c94124
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6b50470b6b12226cc14a837331b45ed0e16e4cfd
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48205621"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53366833"
 ---
 # <a name="execute-process-task"></a>Attività Esegui processo
   L'attività Esegui processo consente di eseguire un'applicazione o un file batch nell'ambito del flusso di lavoro di un pacchetto di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Sebbene sia possibile usarla per aprire qualsiasi applicazione standard, ad esempio [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] o [!INCLUDE[ofprword](../../includes/ofprword-md.md)], l'attività Esegui processo viene in genere usata per eseguire applicazioni aziendali o file batch che usano un'origine dei dati. È ad esempio possibile utilizzare l'attività Esegui processo per espandere un file di testo compresso. Il pacchetto può quindi utilizzare il file di testo come origine dei dati per il proprio flusso di dati. Sempre a titolo di esempio, è anche possibile utilizzare tale attività per eseguire un'applicazione [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] personalizzata che genera un report giornaliero sulle vendite, che può essere allegato a un'attività Invia messaggi e inoltrato a una lista di distribuzione.  
@@ -30,7 +29,7 @@ ms.locfileid: "48205621"
 ## <a name="custom-log-entries-available-on-the-execute-process-task"></a>Voci di log personalizzate disponibili nell'attività Esegui processo  
  Nella tabella seguente sono elencate le voci di log personalizzate disponibili per l'attività Esegui processo. Per altre informazioni, vedere [Registrazione di Integration Services &#40;SSIS&#41;](../performance/integration-services-ssis-logging.md) e [Messaggi personalizzati per la registrazione](../custom-messages-for-logging.md).  
   
-|Voce di log|Description|  
+|Voce di log|Descrizione|  
 |---------------|-----------------|  
 |`ExecuteProcessExecutingProcess`|Fornisce informazioni sui processi che l'attività dovrà eseguire.<br /><br /> Vengono scritte due voci di log. Una contiene informazioni sul nome e sulla posizione del file eseguibile eseguito dall'attività, l'altra registra l'uscita dal file eseguibile.|  
 |`ExecuteProcessVariableRouting`|Fornisce informazioni sulle variabili indirizzate all'input e agli output del file eseguibile. Vengono scritte voci di log per stdin (l'input), stdout (l'output) e stderr (l'output degli errori).|  
@@ -42,11 +41,11 @@ ms.locfileid: "48205621"
   
 -   [Editor attività Esegui processo &#40;pagina Generale&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [Editor attività Esegui processo &#40;elaborare pagina&#41;](../execute-process-task-editor-process-page.md)  
+-   [Editor attività Esegui processo &#40;pagina Processo&#41;](../execute-process-task-editor-process-page.md)  
   
  Per altre informazioni sull'impostazione di queste proprietà in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] , fare clic sull'argomento seguente:  
   
--   [Impostare le proprietà di un'attività o di un contenitore](../set-the-properties-of-a-task-or-container.md)  
+-   [Impostazione delle proprietà di un'attività o di un contenitore](../set-the-properties-of-a-task-or-container.md)  
   
 ### <a name="property-settings"></a>Impostazioni delle proprietà  
  Quando l'attività Esegui processo esegue un'applicazione personalizzata, fornisce dati di input all'applicazione tramite uno o entrambi i metodi seguenti:  
@@ -61,22 +60,22 @@ ms.locfileid: "48205621"
   
  È possibile utilizzare un'espressione per impostare varie proprietà dell'attività Esegui processo.  
   
- Quando si usa la **StandardInputVariable** proprietà per configurare l'attività Esegui processo per un input, chiamare il `Console.ReadLine` metodo dall'applicazione per leggere l'input. Per altre informazioni, vedere l'argomento [Console.ReadLine Method](http://go.microsoft.com/fwlink/?LinkId=129201)nella libreria di classi di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] .  
+ Quando si usa la **StandardInputVariable** proprietà per configurare l'attività Esegui processo per un input, chiamare il `Console.ReadLine` metodo dall'applicazione per leggere l'input. Per altre informazioni, vedere l'argomento [Console.ReadLine Method](https://go.microsoft.com/fwlink/?LinkId=129201)nella libreria di classi di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] .  
   
  Quando si usa la proprietà **Arguments** per configurare l'attività Esegui processo in modo che fornisca dati di input, effettuare uno dei passaggi seguenti per ottenere gli argomenti:  
   
--   Se si utilizza Microsoft Visual Basic per scrivere l'applicazione, impostare il `My.Application.CommandLineArgs` proprietà. Nell'esempio seguente viene impostata la proprietà `My.Application.CommandLineArgs` per recuperare due argomenti:  
+-   Se si usa Microsoft Visual Basic per scrivere l'applicazione, impostare la proprietà `My.Application.CommandLineArgs`. Nell'esempio seguente viene impostata la proprietà `My.Application.CommandLineArgs` per recuperare due argomenti:  
   
     ```  
     Dim variable1 As String = My.Application.CommandLineArgs.Item(0)  
     Dim variable2 As String = My.Application.CommandLineArgs.Item(1)   
     ```  
   
-     Per altre informazioni, vedere l'argomento [Proprietà My.Application.CommandLineArgs](http://go.microsoft.com/fwlink/?LinkId=129200)nei riferimenti di [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .  
+     Per altre informazioni, vedere l'argomento [Proprietà My.Application.CommandLineArgs](https://go.microsoft.com/fwlink/?LinkId=129200)nei riferimenti di [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .  
   
 -   Se si utilizza Microsoft Visual C# per scrivere l'applicazione, utilizzare il metodo `Main`.  
   
-     Per altre informazioni, vedere l'argomento [Argomenti della riga di comando (Guida per programmatori C#)](http://go.microsoft.com/fwlink/?LinkId=129406)nella Guida per programmatori C#.  
+     Per altre informazioni, vedere l'argomento [Argomenti della riga di comando (Guida per programmatori C#)](https://go.microsoft.com/fwlink/?LinkId=129406)nella Guida per programmatori C#.  
   
  L'attività Esegui processo include inoltre le proprietà **StandardOutputVariable** e **StandardErrorVariable** che consentono di specificare le variabili che usano rispettivamente l'output standard e l'output degli errori dell'applicazione.  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - string literals
@@ -18,12 +17,12 @@ ms.assetid: a980cd52-54ef-4b9c-b00c-e6807cf8e01f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: cbbb6a94a8cf3182328c5aab73897feb345109a6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8555d2789c7466f65fd17d90282b164a068674c7
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48198837"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53363903"
 ---
 # <a name="literals-ssis"></a>Valori letterali (SSIS)
   Le espressioni possono includere valori letterali numerici, stringa e booleani. L'analizzatore di espressioni supporta un'ampia gamma di valori letterali numerici, quali costanti intere, decimali e a virgola mobile. Supporta inoltre i suffissi per valori di tipo long e float, che specificano come gestire tali valori, e la notazione scientifica nei valori letterali numerici.  
@@ -35,7 +34,7 @@ ms.locfileid: "48198837"
   
  I suffissi per i valori letterali numerici sono elencati nella tabella seguente.  
   
-|Suffisso|Description|  
+|Suffisso|Descrizione|  
 |------------|-----------------|  
 |L o l|Valore letterale numerico long.|  
 |U o u|Valore letterale numerico senza segno.|  
@@ -43,7 +42,7 @@ ms.locfileid: "48198837"
   
  Nella tabella seguente sono elencati gli elementi delle espressioni numeriche e le rispettive espressioni regolari.  
   
-|Elemento dell'espressione|Espressione regolare‏|Description|  
+|Elemento dell'espressione|Espressione regolare‏|Descrizione|  
 |------------------------|------------------------|-----------------|  
 |Cifra espressa come D.|[0-9]|Qualsiasi cifra.|  
 |Notazione scientifica espressa come E.|[Ee][+-]?{D}+|E maiuscola o minuscola, + o - facoltativo e una o più cifre come definito in D.|  
@@ -53,14 +52,14 @@ ms.locfileid: "48198837"
   
  Nella tabella seguente vengono descritti i valori letterali numerici validi nel linguaggio delle espressioni regolari.  
   
-|Espressione regolare‏|Description|  
+|Espressione regolare‏|Descrizione|  
 |------------------------|-----------------|  
-|{D}+{IS}|Valore letterale numerico integrale con almeno una cifra (D) e, facoltativamente, suffisso per valori di tipo long e/o per valori senza segno (IS).  Esempi: 457, 785u, 986L e 7945ul.|  
-|{D}+{E}{FS}|Valore letterale numerico non integrale con almeno una cifra (D), notazione scientifica e suffisso per valori di tipo long o float.  Esempi: 4E8l, 13e-2f e 5E+L.|  
-|{D}*"."{D}+{E}?{FS}|Valore letterale numerico non integrale con una cifra decimale, frazione decimale con almeno una cifra (D), esponente facoltativo (E) e identificatore di tipo float o long (FS). Questo valore letterale numerico ha tipo di dati DT_R4 o DT_R8.  Esempi: 6,45E3f, ,89E-2l e 1,05E+7F.|  
-|{D}+"."{D}*{E}?{FS}|Valore letterale numerico non integrale con almeno una cifra significativa (D), una cifra decimale, esponente (E) e un identificatore di tipo float o long (FS). Questo valore letterale numerico ha tipo di dati DT_R4 o DT_R8.  Esempi: 1,E-4f, 4,6E6L e 8,365E+2f.|  
+|{D}+{IS}|Valore letterale numerico integrale con almeno una cifra (D) e, facoltativamente, suffisso per valori di tipo long e/o per valori senza segno (IS).  Esempi: 457, 785u, 986l e 7945ul.|  
+|{D}+{E}{FS}|Valore letterale numerico non integrale con almeno una cifra (D), notazione scientifica e suffisso per valori di tipo long o float.  Esempi: 4E8l, 13e-2f e 5e+l.|  
+|{D}*"."{D}+{E}?{FS}|Valore letterale numerico non integrale con una cifra decimale, frazione decimale con almeno una cifra (D), esponente facoltativo (E) e identificatore di tipo float o long (FS). Questo valore letterale numerico ha tipo di dati DT_R4 o DT_R8.  Esempi: 6,45e3f, 89E - 2L e 1.05E + 7F.|  
+|{D}+"."{D}*{E}?{FS}|Valore letterale numerico non integrale con almeno una cifra significativa (D), una cifra decimale, esponente (E) e un identificatore di tipo float o long (FS). Questo valore letterale numerico ha tipo di dati DT_R4 o DT_R8.  Esempi: 1,e-4f, 4,6e6l e 8.365E + 2f.|  
 |{D}*.{D}+|Valore letterale numerico non integrale con precisione e scala. Include una cifra decimale e una frazione decimale con almeno una cifra (D). Questo valore letterale numerico ha tipo di dati DT_NUMERIC.  Esempi: ,9, 5,8 e 0,346.|  
-|{D}+.{D}*|Valore letterale numerico non integrale con precisione e scala. Include almeno una cifra significativa (D) e una cifra decimale. Questo valore letterale numerico ha tipo di dati DT_NUMERIC.  Esempi: 6,, 0,2 e 8,0.|  
+|{D}+.{D}*|Valore letterale numerico non integrale con precisione e scala. Include almeno una cifra significativa (D) e una cifra decimale. Questo valore letterale numerico ha tipo di dati DT_NUMERIC.  Esempi: 6., 0,2 e 8,0.|  
 |#{D}+|Identificatore di derivazione. È costituito dal simbolo di cancelletto (#) e da almeno una cifra (D). Esempi: #123.|  
 |0[xX]{H}+{uU}|Valore letterale stringa in formato esadecimale. Include uno zero, una x maiuscola o minuscola, almeno una H maiuscola e, facoltativamente, il suffisso per valori senza segno. Esempi: 0xFF0A e 0X000010000U.|  
   
@@ -98,7 +97,7 @@ ms.locfileid: "48198837"
   
  Le stringhe possono includere altri caratteri che richiedono una sequenza di escape. Le sequenze di escape per i valori letterali stringa sono elencate nella tabella seguente.  
   
-|Sequenza di escape|Description|  
+|Sequenza di escape|Descrizione|  
 |---------------------|-----------------|  
 |\a|Avviso|  
 |\b|Backspace|  
@@ -118,6 +117,6 @@ ms.locfileid: "48198837"
 >  Nelle espressioni i valori letterali booleani devono essere delimitati da spazi.  
   
 ## <a name="related-content"></a>Contenuto correlato  
- Articolo tecnico relativo al [foglio d'aiuto per le espressioni SSIS](http://go.microsoft.com/fwlink/?LinkId=217683)sul sito Web pragmaticworks.com  
+ Articolo tecnico relativo al [foglio d'aiuto per le espressioni SSIS](https://go.microsoft.com/fwlink/?LinkId=217683)sul sito Web pragmaticworks.com  
   
   

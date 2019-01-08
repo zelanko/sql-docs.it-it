@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 11/24/2015
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - cardinality estimator
@@ -15,15 +14,15 @@ ms.assetid: baa8a304-5713-4cfe-a699-345e819ce6df
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 393c4f88f9ab60f3a25ddaab5bb091fb298e1e02
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f7c3f609bd2b25fcb3e3553497ead2baad476f2f
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48200611"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53363793"
 ---
 # <a name="cardinality-estimation-sql-server"></a>Stima della cardinalità (SQL Server)
-  La logica di stima della cardinalità, denominata strumento di stima della cardinalità, è stata riprogettata in [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] per migliorare la qualità dei piani di query e pertanto migliorare le prestazioni delle query. Nel nuovo strumento di stima della cardinalità sono incorporati presupposti e algoritmi maggiormente adatti ai i carichi di lavoro di data warehouse e alle soluzioni OLTP più recenti. Lo strumento è basato sulla ricerca approfondita della stima della cardinalità sui carichi di lavoro più recenti e sulle conoscenze relative al miglioramento della stima della cardinalità di SQL Server acquisite nel corso degli ultimi 15 anni. I commenti e i suggerimenti dei clienti indicano che sebbene la maggior parte delle query registrerà un miglioramento o rimarrà invariata a seguito della modifica, una percentuale minima potrebbe registrare una regressione rispetto allo strumento di stima della cardinalità precedente.  
+  La logica di stima della cardinalità, denominata strumento di stima della cardinalità, è stata riprogettata in [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] per migliorare la qualità dei piani di query e, di conseguenza, per ottimizzare le prestazioni delle query. Nel nuovo strumento di stima della cardinalità sono incorporati presupposti e algoritmi maggiormente adatti ai i carichi di lavoro di data warehouse e alle soluzioni OLTP più recenti. Lo strumento è basato sulla ricerca approfondita della stima della cardinalità sui carichi di lavoro più recenti e sulle conoscenze relative al miglioramento della stima della cardinalità di SQL Server acquisite nel corso degli ultimi 15 anni. I commenti e i suggerimenti dei clienti indicano che sebbene la maggior parte delle query registrerà un miglioramento o rimarrà invariata a seguito della modifica, una percentuale minima potrebbe registrare una regressione rispetto allo strumento di stima della cardinalità precedente.  
   
 > [!NOTE]  
 >  Le stime della cardinalità sono una stima del numero di righe nel risultato della query. Query Optimizer usa queste stime per scegliere un piano per l'esecuzione della query. La qualità del piano di query influisce direttamente sul miglioramento delle prestazioni della query.  
@@ -37,11 +36,11 @@ ms.locfileid: "48200611"
   
 2.  Eseguire il carico di lavoro di prova con il nuovo strumento di stima della cardinalità e quindi risolvere gli eventuali nuovi problemi relativi alle prestazioni adottando le attuali procedure per la risoluzione dei problemi.  
   
-3.  Una volta che il carico di lavoro è in esecuzione con la nuova stima di cardinalità (livello di compatibilità 120 (SQL Server 2014)) e una query specifica registrano una regressione, è possibile eseguire la query con il flag di traccia 9481 per usare la versione della stima di cardinalità usata nella [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]e versioni precedenti. Per eseguire una query con un flag di traccia, vedere l'articolo della Knowledge Base relativo all' [abilitazione del comportamento di SQL Server Query Optimizer con effetto sul piano che può essere controllato da flag di traccia diversi al livello della query specifica](http://support.microsoft.com/kb/2801413).  
+3.  Quando il carico di lavoro è in esecuzione con il nuovo strumento di stima della cardinalità (con livello di compatibilità del database impostato su 120 in SQL Server 2014) e le prestazioni di una query specifica registrano una regressione, è possibile eseguire la query con il flag di traccia 9481 per usare la versione dello strumento di stima della cardinalità usato in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni precedenti. Per eseguire una query con un flag di traccia, vedere l'articolo della Knowledge Base relativo all' [abilitazione del comportamento di SQL Server Query Optimizer con effetto sul piano che può essere controllato da flag di traccia diversi al livello della query specifica](https://support.microsoft.com/kb/2801413).  
   
 4.  Se non è possibile modificare tutti i database in una sola volta per usare la nuova stima di cardinalità, è possibile usare lo strumento di stima della cardinalità precedente per tutti i database usando [livello di compatibilità ALTER DATABASE &#40;Transact-SQL&#41; ](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level) a impostare il livello di compatibilità del database su 110.  
   
-5.  Se il carico di lavoro è in esecuzione con il livello di compatibilità del database impostato su 110 e si vuole verificare o eseguire una query specifica con il nuovo strumento di stima della cardinalità, è possibile eseguire la query con il flag di traccia 2312 per usare la versione di tale strumento inclusa in SQL Server 2014.  Per eseguire una query con un flag di traccia, vedere l'articolo della Knowledge Base relativo all' [abilitazione del comportamento di SQL Server Query Optimizer con effetto sul piano che può essere controllato da flag di traccia diversi al livello della query specifica](http://support.microsoft.com/kb/2801413).  
+5.  Se il carico di lavoro è in esecuzione con il livello di compatibilità del database impostato su 110 e si vuole verificare o eseguire una query specifica con il nuovo strumento di stima della cardinalità, è possibile eseguire la query con il flag di traccia 2312 per usare la versione di tale strumento inclusa in SQL Server 2014.  Per eseguire una query con un flag di traccia, vedere l'articolo della Knowledge Base relativo all' [abilitazione del comportamento di SQL Server Query Optimizer con effetto sul piano che può essere controllato da flag di traccia diversi al livello della query specifica](https://support.microsoft.com/kb/2801413).  
   
 ## <a name="new-xevents"></a>Nuovi XEvent  
  Sono disponibili due nuovi XEvent query_optimizer_estimate_cardinality per supportare i nuovi piani di query.  

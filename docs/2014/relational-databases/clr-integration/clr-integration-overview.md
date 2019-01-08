@@ -18,12 +18,12 @@ ms.assetid: 5aa176da-3652-4afa-a742-4c40c77ce5c3
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 762c644690cb556ba316705f1e22e3673e811bf1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8ffa3e3508fef50491f20b47e13c12865cb5432d
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48077711"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53363403"
 ---
 # <a name="overview-of-clr-integration"></a>Panoramica dell'integrazione con CLR
   Common Language Runtime (CLR) rappresenta il fulcro di Microsoft .NET Framework e fornisce l'ambiente di esecuzione per tutto il codice .NET Framework. Il codice eseguito in CLR viene chiamato codice gestito. CLR fornisce varie funzioni e servizi necessari per l'esecuzione del programma, incluse le funzioni di compilazione JIT (Just-In-Time), di allocazione e gestione della memoria, di imposizione dell'indipendenza dai tipi, di gestione delle eccezioni, di gestione dei thread e di sicurezza.  Per ulteriori informazioni, vedere .NET Framework SDK.  
@@ -56,7 +56,7 @@ ms.locfileid: "48077711"
  Le stored procedure estese consentono di ottenere funzionalità altrimenti non disponibili con le stored procedure [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Diversamente dal codice gestito indipendente dai tipi, tuttavia, le stored procedure estese possono compromettere l'integrità del processo di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. La gestione della memoria, la pianificazione di thread e fiber e i servizi di sincronizzazione sono, inoltre, notevolmente più integrati tra il codice gestito di CLR e [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Grazie all'integrazione con CLR, è possibile scrivere le stored procedure necessarie per eseguire attività non consentite in [!INCLUDE[tsql](../../../includes/tsql-md.md)] in modo più sicuro rispetto alle stored procedure estese. Per altre informazioni sull'integrazione con CLR e stored procedure estese, vedere [sulle prestazioni dell'integrazione con CLR](clr-integration-architecture-performance.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Installazione di .NET Framework](http://technet.microsoft.com/library/ms166014\(v=SQL.105\).aspx)   
+ [Installazione di .NET Framework](https://technet.microsoft.com/library/ms166014\(v=SQL.105\).aspx)   
  [Architettura dell'integrazione con CLR](../../database-engine/dev-guide/architecture-of-clr-integration.md)   
  [Accesso ai dati da oggetti di Database CLR](data-access/data-access-from-clr-database-objects.md)   
  [Introduzione all'integrazione con CLR](database-objects/getting-started-with-clr-integration.md)  

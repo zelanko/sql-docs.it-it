@@ -1,5 +1,5 @@
 ---
-title: Esercitazione sulla creazione, training e valutazione dei modelli basati su partizioni in R (SQL Server Machine Learning Services) | Microsoft Docs
+title: Esercitazione sulla creazione, training e valutazione dei modelli basati sulla partizione nel R - servizi di SQL Server Machine Learning
 description: Informazioni su come modellare, eseguire il training e utilizzare dati partizionati che viene creati in modo dinamico quando si usa la funzionalità di modellazione delle minacce basato sulla partizione di machine learning di SQL Server.
 ms.custom: sqlseattle
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.author: heidist
 author: HeidiSteen
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: ddd6fd14d34b53eb14fd8b303b97dfd1b098154c
-ms.sourcegitcommit: 3cd6068f3baf434a4a8074ba67223899e77a690b
+ms.openlocfilehash: 4c60a50f5a0f1c1831a4831d1f93ddf7d81a11d9
+ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49462007"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53596462"
 ---
 # <a name="tutorial-create-partition-based-models-in-r-on-sql-server"></a>Esercitazione: Creare modelli basati su partizioni in R in SQL Server
 [!INCLUDE[appliesto-ssvnex-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]

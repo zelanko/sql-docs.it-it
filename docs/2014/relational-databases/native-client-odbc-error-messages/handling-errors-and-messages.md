@@ -19,15 +19,15 @@ ms.assetid: 74ea9630-e482-4a46-bb45-f5234f079b48
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8840eb9d3e47d2d5938fa23954cf820908428dc9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a4a4d87ccae235aee1a11e58aff60fe8e34d6205
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48137981"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376383"
 ---
 # <a name="handling-errors-and-messages"></a>Gestione di errori e messaggi
-  Quando un'applicazione chiama una funzione ODBC, il driver esegue la funzione e restituisce le informazioni di diagnostica in due modi: un codice restituito indica l'esito positivo o negativo complessivo di una funzione ODBC e i record di diagnostica forniscono informazioni dettagliate sulla funzione. I record di diagnostica includono un record di intestazione e record di stato. Anche se la funzione riesce, viene restituito almeno un record di diagnostica, ovvero il record di intestazione.  
+  Quando un'applicazione chiama una funzione ODBC, il driver esegue la funzione e restituisce le informazioni di diagnostica in due modi: Un codice restituito indica l'esito positivo o negativo complessivo di una funzione ODBC e i record di diagnostica forniscono informazioni dettagliate sulla funzione. I record di diagnostica includono un record di intestazione e record di stato. Anche se la funzione riesce, viene restituito almeno un record di diagnostica, ovvero il record di intestazione.  
   
  Le informazioni di diagnostica vengono utilizzate in fase di sviluppo per rilevare errori di programmazione, ad esempio handle ed errori di sintassi non validi nelle istruzioni SQL hard-coded. Vengono utilizzate anche in fase di esecuzione per rilevare avvisi ed errori di runtime, ad esempio troncamento di dati, violazioni di regole ed errori di sintassi nelle istruzioni SQL immesse dall'utente. La logica del programma si basa generalmente sui codici restituiti.  
   
@@ -39,9 +39,9 @@ ms.locfileid: "48137981"
   
  Originale [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] API native, DB-Library per C, consente a un'applicazione installare i callback degli errori e le funzioni di gestione dei messaggi che restituiscono errori o messaggi. Alcune istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)], ad esempio PRINT, RAISERROR, DBCC e SET, restituiscono i risultati alla funzione di gestione dei messaggi di DB-Library anziché a un set di risultati. L'API ODBC invece non presenta alcuna funzionalità di callback di questo tipo. Quando la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC Native Client rileva messaggi che provengono da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], imposta il codice restituito di ODBC su SQL_SUCCESS_WITH_INFO o SQL_ERROR e restituisce il messaggio con uno o più record di diagnostica. Pertanto, un'applicazione ODBC deve testare attentamente questi codici restituiti e chiamare **SQLGetDiagRec** per recuperare i dati del messaggio.  
   
- Per informazioni sulla traccia degli errori, vedere [Data Access Tracing](http://go.microsoft.com/fwlink/?LinkId=125805) (Traccia di accesso ai dati). Per informazioni sui miglioramenti alla tracciatura errore aggiunto in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], vedere [accesso a informazioni diagnostiche nel registro eventi di esteso](../native-client/features/accessing-diagnostic-information-in-the-extended-events-log.md).  
+ Per informazioni sulla traccia degli errori, vedere [Data Access Tracing](https://go.microsoft.com/fwlink/?LinkId=125805) (Traccia di accesso ai dati). Per informazioni sui miglioramenti alla tracciatura errore aggiunto in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], vedere [accesso a informazioni diagnostiche nel registro eventi di esteso](../native-client/features/accessing-diagnostic-information-in-the-extended-events-log.md).  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>In questa sezione  
   
 -   [Elaborazione di istruzioni che generano messaggi](processing-statements-that-generate-messages.md)  
   

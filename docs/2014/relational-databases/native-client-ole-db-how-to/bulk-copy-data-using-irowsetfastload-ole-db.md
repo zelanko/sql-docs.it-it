@@ -15,12 +15,12 @@ ms.assetid: 0b8908d1-fd6d-47a9-9e30-514cee8f60c8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8bffd3776e04fa10cf6454d3200dac623835ac0a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a19029a98daa5411f0e915b62f3c7556cafad97a
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48111769"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53369383"
 ---
 # <a name="bulk-copy-data-using-irowsetfastload-ole-db"></a>Eseguire una copia bulk di dati mediante IRowsetFastLoad (OLE DB)
   In questo esempio viene illustrato l'utilizzo di IRowsetFastLoad per la copia bulk di record in una tabella.  
@@ -29,10 +29,10 @@ ms.locfileid: "48111769"
   
  In un esempio completo viene illustrato l'utilizzo di `IRowsetFastLoad` per eseguire una copia bulk dei record in una tabella. In questo esempio vengono aggiunti 10 record alla tabella **IRFLTable**. È necessario creare la tabella **IRFLTable** nel database.  
   
- Per l'esempio è necessario il database di esempio AdventureWorks, che è possibile scaricare dalla home page del sito relativo a [progetti della community ed esempi per Microsoft SQL Server](http://go.microsoft.com/fwlink/?LinkID=85384).  
+ Per l'esempio è necessario il database di esempio AdventureWorks, che è possibile scaricare dalla home page del sito relativo a [progetti della community ed esempi per Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkID=85384).  
   
 > [!IMPORTANT]  
->  Se possibile, usare l'autenticazione di Windows. Se non è disponibile, agli utenti verrà richiesto di immettere le credenziali in fase di esecuzione. Evitare di archiviare le credenziali in un file. Se è necessario rendere persistenti le credenziali, è consigliabile crittografarle usando l'[API di crittografia Win32](http://go.microsoft.com/fwlink/?LinkId=64532).  
+>  Se possibile, usare l'autenticazione di Windows. Se non è disponibile, agli utenti verrà richiesto di immettere le credenziali in fase di esecuzione. Evitare di archiviare le credenziali in un file. Se è necessario rendere persistenti le credenziali, è consigliabile crittografarle usando l'[API di crittografia Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
   
 ### <a name="to-bulk-copy-data-into-a-sql-server-table"></a>Per eseguire la copia bulk dei dati in una tabella di SQL Server  
   

@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Management Studio [SQL Server], custom reports
@@ -12,18 +12,18 @@ ms.assetid: c7b84355-71ba-402d-85af-23826f18b7da
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7198118f9eadbf58bab83727ed45899f5fd2a0df
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 09f3cf66d28a70eecd82adde490d02b521fd80ed
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48167671"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53374403"
 ---
 # <a name="use-custom-reports-with-object-explorer-node-properties"></a>Utilizzo di report personalizzati con proprietà dei nodi di Esplora oggetti
   I report personalizzati possono essere eseguiti nel contesto di un nodo Esplora oggetti selezionato, a condizione che facciano riferimento ai parametri di report di tale nodo. Un report personalizzato può pertanto utilizzare il contesto corrente, ad esempio il database corrente, oppure un oggetto server o database.  
   
 ## <a name="report-samples"></a>Report di esempio  
- Sono disponibili per il download alcuni[report di esempio](http://go.microsoft.com/fwlink/?LinkId=81792), inclusi i report standard creati da [!INCLUDE[msCoName](../../includes/msconame-md.md)]. Questi esempi possono essere modificati con [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
+ Sono disponibili per il download alcuni[report di esempio](https://go.microsoft.com/fwlink/?LinkId=81792), inclusi i report standard creati da [!INCLUDE[msCoName](../../includes/msconame-md.md)]. Questi esempi possono essere modificati con [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
 ## <a name="object-explorer-node-report-parameters"></a>Parametri di report dei nodi Esplora oggetti  
   
@@ -58,7 +58,7 @@ ms.locfileid: "48167671"
   
  `<?xml version="1.0" encoding="utf-8"?>`  
   
- `<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">`  
+ `<Report xmlns="https://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition" xmlns:rd="https://schemas.microsoft.com/SQLServer/reporting/reportdesigner">`  
   
  `<ReportParameters>`  
   

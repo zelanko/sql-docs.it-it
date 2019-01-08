@@ -9,12 +9,12 @@ ms.date: 12/07/2018
 ms.topic: quickstart
 ms.prod: sql
 ms.custom: seodec18
-ms.openlocfilehash: c760bd4c149a63de0335c6d6651036bba56533a0
-ms.sourcegitcommit: edf7372cb674179f03a330de5e674824a8b4118f
+ms.openlocfilehash: f5ddd80eaf29db657c42eec5c84c8485e8b0d8b6
+ms.sourcegitcommit: 85fd3e1751de97a16399575397ab72ebd977c8e9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53246760"
+ms.lasthandoff: 12/17/2018
+ms.locfileid: "53531156"
 ---
 # <a name="quickstart-deploy-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>Guida introduttiva: Distribuire il cluster di big data di SQL Server in Azure Kubernetes Service (AKS)
 
@@ -56,7 +56,6 @@ Prima di continuare, tenere presenti le linee guida seguenti:
 - Nel [finestra di comando](https://docs.microsoft.com/visualstudio/ide/reference/command-window), sono incluse le virgolette nelle variabili di ambiente. Se si usano le virgolette per eseguire il wrapping di una password, le virgolette sono inclusi nella password.
 - In bash le virgolette non sono inclusi nella variabile. Gli esempi usino le virgolette doppie `"`.
 - È possibile impostare le variabili di ambiente della password con qualsiasi nome desiderato, ma assicurarsi che questi sono sufficientemente complessi e non usare la `!`, `&`, o `'` caratteri.
-- Per la versione di CTP 2.2, non modificare le porte predefinite.
 - Il `sa` account sia un amministratore di sistema nell'istanza Master di SQL Server che viene creato durante l'installazione. Dopo aver creato il contenitore SQL Server, la variabile di ambiente `MSSQL_SA_PASSWORD` specificata diventa individuabile eseguendo `echo $MSSQL_SA_PASSWORD` nel contenitore. Per motivi di sicurezza, modificare il `sa` password in base alle procedure consigliate documentate [qui](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker?view=sql-server-2017#change-the-sa-password).
 
 Inizializzare le variabili di ambiente seguenti.  Sono necessari per distribuire un cluster di big data:

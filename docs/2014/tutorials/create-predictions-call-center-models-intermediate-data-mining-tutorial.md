@@ -11,12 +11,12 @@ ms.assetid: 5be0cec7-f639-4eeb-835e-e3204ae619e9
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ebaafa4b25c4bd4847af24a36462e15d04d7774a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 792e3e8eb7e27f41aa03523d93dba02379213a17
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48148001"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53372973"
 ---
 # <a name="creating-predictions-for-the-call-center-models-intermediate-data-mining-tutorial"></a>Creazione di stime per i modelli Call Center (Esercitazione intermedia sul data mining)
   Dopo aver appreso i concetti di base sulle interazioni tra turni, numero di operatori, chiamate e livello del servizio, è possibile creare alcune query di stima che possono essere utilizzate per l'analisi e la pianificazione aziendali. Verranno innanzitutto create alcune stime del modello esplorativo per testare alcune ipotesi. Verranno quindi create stime bulk utilizzando il modello di regressione logistica.  
@@ -175,28 +175,28 @@ ms.locfileid: "48148001"
   
 |Turno, retribuzione e giorno|Qualità del servizio stimata con il tempo di risposta medio corrente|Qualità del servizio stimata con il 90% di riduzione del tempo di risposta|Qualità del servizio stimata con l'80% di riduzione del tempo di risposta|  
 |--------------------------|------------------------------------------------------------------|--------------------------------------------------------------------------|--------------------------------------------------------------------------|  
-|Giorno festivo AM|0.165|0.05|0.05|  
-|Giorno festivo PM1|0.05|0.05|0.05|  
-|Mezzanotte del giorno festivo|0.165|0.05|0.05|  
+|Giorno festivo AM|0.165|0,05|0,05|  
+|Giorno festivo PM1|0,05|0,05|0,05|  
+|Mezzanotte del giorno festivo|0.165|0,05|0,05|  
   
  È possibile creare molte altre query di stima su questo modello. È ad esempio possibile stimare il numero di operatori necessari per garantire un determinato livello di servizio o per rispondere a un determinato numero di chiamate in ingresso. Poiché è possibile includere più output in un modello di regressione logistica, è facile provare a utilizzare variabili indipendenti e risultati diversi senza dover creare molti modelli distinti.  
   
 ## <a name="remarks"></a>Note  
  I componenti aggiuntivi Data mining per Excel 2007 forniscono procedure guidate di regressione logistica che semplificano la risoluzione di problemi complessi, ad esempio il numero di operatori di livello 2 necessari per migliorare il livello del servizio e raggiungere un livello desiderato per un turno specifico. I componenti aggiuntivi per il data mining sono disponibili gratuitamente per il download e includono procedure guidate basate su algoritmi di regressione logistica o rete neurale. Per ulteriori informazioni, vedere i seguenti collegamenti:  
   
--   [SQL Server 2005 Data Mining componente aggiuntivo per Office 2007](http://www.microsoft.com/sql/technologies/dm/addins.mspx): ricerca obiettivo e cosa accade se analisi di Scenario  
+-   [SQL Server 2005 Data Mining componente aggiuntivo per Office 2007](https://www.microsoft.com/sql/technologies/dm/addins.mspx): ricerca obiettivo e analisi dello scenario di simulazione  
   
--   [SQL Server 2008 Data Mining componente aggiuntivo per Office 2007](http://go.microsoft.com/fwlink/?LinkID=117790): ricerca obiettivo, cosa accade se analisi di Scenario e calcolo delle stime  
+-   [SQL Server 2008 Data Mining componente aggiuntivo per Office 2007](https://go.microsoft.com/fwlink/?LinkID=117790): ricerca obiettivo, analisi dello scenario di simulazione e calcolo delle stime  
   
-## <a name="conclusion"></a>Conclusioni  
+## <a name="conclusion"></a>Conclusione  
  In questa esercitazione si è imparato a creare, personalizzare e interpretare modelli di data mining basati sugli algoritmi Microsoft Neural Network e Microsoft Logistic Regression. Si tratta di tipi di modello sofisticati che consentono una varietà quasi infinita di analisi e pertanto possono essere complessi e difficili da gestire.  
   
  Questi algoritmi consentono tuttavia di scorrere molte combinazioni di fattori e identificare automaticamente le correlazioni maggiori, fornendo il supporto statistico per ottenere informazioni che sarebbe molto difficile individuare tramite l'esplorazione manuale dei dati utilizzando Transact-SQL o PowerPivot.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Esempi di Query del modello di regressione logistica](../../2014/analysis-services/data-mining/logistic-regression-model-query-examples.md)   
+ [Esempi di query sul modello di regressione logistica](../../2014/analysis-services/data-mining/logistic-regression-model-query-examples.md)   
  [Algoritmo Microsoft Logistic Regression](../../2014/analysis-services/data-mining/microsoft-logistic-regression-algorithm.md)   
- [Algoritmo Microsoft Neural Network](../../2014/analysis-services/data-mining/microsoft-neural-network-algorithm.md)   
+ [Microsoft Neural Network Algorithm](../../2014/analysis-services/data-mining/microsoft-neural-network-algorithm.md)   
  [Esempi di query sul modello di rete neurale](../../2014/analysis-services/data-mining/neural-network-model-query-examples.md)  
   
   

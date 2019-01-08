@@ -11,12 +11,12 @@ ms.assetid: faddd29d-4cc1-4c2c-8e29-d3d9918fe22a
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 6f6611271a6f8bc637e1fa0032d868a1347b5ef5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 27b5e569ff69261be616f28b38bcdb9bde429363
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48082081"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53377916"
 ---
 # <a name="empty-and-null-data-points-in-charts-report-builder-and-ssrs"></a>Punti dati vuoti e Null nei grafici (Generatore report e SSRS)
   Quando si visualizzano campi con valori vuoti o Null nel grafico, è possibile che il grafico non presenti l'aspetto previsto. I valori vuoti vengono elaborati in modo diverso a seconda del tipo di grafico specificato:  
@@ -29,13 +29,13 @@ ms.locfileid: "48082081"
   
 -   Nei tipi di grafico con forme i valori Null vengono omessi.  
   
- Un esempio di grafico con punti dati vuoti è disponibile come report di esempio. Per altre informazioni sul download di questo e di altri report di esempio, vedere la pagina relativa ai [report di esempio per Generatore report e Progettazione report](http://go.microsoft.com/fwlink/?LinkId=198283) di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ Un esempio di grafico con punti dati vuoti è disponibile come report di esempio. Per altre informazioni sul download di questo e di altri report di esempio, vedere la pagina relativa ai [report di esempio per Generatore report e Progettazione report](https://go.microsoft.com/fwlink/?LinkId=198283) di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="removing-empty-or-null-values"></a>Rimozione di valori vuoti o Null  
- Per evitare che dati importanti risultino nascosti, rimuovere i valori vuoti dal set di dati. Per filtrare i valori Null, è possibile usare la clausola NOT IS NULL nella query. In alternativa, è possibile aggiungere un'espressione di filtro per specificare che si desidera visualizzare solo i valori diversi da zero. Per altre informazioni, vedere [aggiungere filtri per set di dati, aree dati e filtri di gruppo &#40;Generatore Report e SSRS&#41;](add-dataset-filters-data-region-filters-and-group-filters.md).  
+ Per evitare che dati importanti risultino nascosti, rimuovere i valori vuoti dal set di dati. Per filtrare i valori Null, è possibile usare la clausola NOT IS NULL nella query. In alternativa, è possibile aggiungere un'espressione di filtro per specificare che si desidera visualizzare solo i valori diversi da zero. Per altre informazioni, vedere [Aggiungere filtri per set di dati, aree dati e gruppi &#40;Generatore report e SSRS&#41;](add-dataset-filters-data-region-filters-and-group-filters.md).  
   
 ## <a name="fields-with-no-values-in-a-chart"></a>Campi senza valori in un grafico  
  Se un campo non contiene valori nel set di dati restituito, verrà visualizzato un grafico vuoto senza punti dati, ma con l'aggiunta del nome della serie (solitamente il nome del campo) come elemento della legenda.  
@@ -45,7 +45,7 @@ ms.locfileid: "48082081"
 ## <a name="see-also"></a>Vedere anche  
  [Grafici &#40;Generatore report e SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [Formattazione di un grafico &#40;Generatore report e SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)   
- [Aggiungere un grafico a un Report &#40;Report e SSRS&#41;](add-a-chart-to-a-report-report-builder-and-ssrs.md)   
- [Risolvere i problemi di grafici &#40;Report e SSRS&#41;](troubleshoot-charts-report-builder-and-ssrs.md)  
+ [Aggiungere un grafico a un report &#40;Generatore report e SSRS&#41;](add-a-chart-to-a-report-report-builder-and-ssrs.md)   
+ [Risoluzione dei problemi relativi ai grafici &#40;Generatore report e SSRS&#41;](troubleshoot-charts-report-builder-and-ssrs.md)  
   
   

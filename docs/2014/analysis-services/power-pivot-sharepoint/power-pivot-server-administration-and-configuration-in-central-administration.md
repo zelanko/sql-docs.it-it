@@ -11,12 +11,12 @@ ms.assetid: 2cdbfdc5-45a9-4000-a03d-318cc7ac8fe9
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0522e8e4df8d6e2cbb1a386b89f933c2f7075a53
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5ec3264095ebdb34730f8112389b50aa6839836f
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48168561"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53365354"
 ---
 # <a name="powerpivot-server-administration-and-configuration-in-central-administration"></a>Amministrazione e configurazione del server PowerPivot in Amministrazione centrale
   L'amministrazione e la configurazione del server PowerPivot vengono eseguite dagli amministratori dell'applicazione del servizio SharePoint, tramite Amministrazione centrale SharePoint.  
@@ -69,6 +69,6 @@ ms.locfileid: "48168561"
 ## <a name="see-also"></a>Vedere anche  
  [Installazione PowerPivot per SharePoint 2010](../../sql-server/install/powerpivot-for-sharepoint-2010-installation.md)   
  [Riferimento all'impostazione di configurazione &#40;PowerPivot per SharePoint&#41;](configuration-setting-reference-power-pivot-for-sharepoint.md)   
- [Ripristino di emergenza per PowerPivot per SharePoint](http://go.microsoft.com/fwlink/p/?LinkId=389570)  
+ [Ripristino di emergenza per PowerPivot per SharePoint](https://go.microsoft.com/fwlink/p/?LinkId=389570)  
   
   

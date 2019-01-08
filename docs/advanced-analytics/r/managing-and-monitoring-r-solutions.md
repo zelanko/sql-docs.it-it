@@ -1,5 +1,5 @@
 ---
-title: Gestire e integrare i carichi di lavoro di machine learning in SQL Server | Microsoft Docs
+title: Gestire e integrare machine learning i carichi di lavoro - SQL Server Machine Learning Services
 description: Un amministratore del Server di database SQL, esaminare le attività amministrative per la distribuzione di un sottosistema di R e Python in un'istanza del motore di database di apprendimento.
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: e24f9974c55d6d189f7d650902352393e3e62627
-ms.sourcegitcommit: c2322c1a1dca33b47601eb06c4b2331b603829f1
+ms.openlocfilehash: 63739faaa9cf254e754c9020502ee6b589435c1d
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50743206"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53431828"
 ---
 # <a name="manage-and-integrate-machine-learning-workloads-on-sql-server"></a>Gestire e integrare i carichi di lavoro di machine learning in SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

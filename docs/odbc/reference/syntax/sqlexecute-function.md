@@ -20,16 +20,16 @@ ms.assetid: 9286a01d-cde2-4b90-af94-9fd7f8da48bf
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: df0021bf5b3ac905ddf63ede8d4dfd65710662aa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ad8aec58fea182c080d55217db94ea2cda08184b
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47789909"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590435"
 ---
 # <a name="sqlexecute-function"></a>Funzione SQLExecute
 **Conformità**  
- Versione introdotta: Conformità agli standard 1.0 di ODBC: ISO 92  
+ Versione introdotta: Conformità agli standard 1.0 ODBC: ISO 92  
   
  **Riepilogo**  
  **SQLExecute** esegue un'istruzione preparata, usando i valori correnti delle variabili di marcatore di parametro in presenza di eventuali marcatori di parametro nell'istruzione.  
@@ -39,7 +39,7 @@ ms.locfileid: "47789909"
 ```  
   
 SQLRETURN SQLExecute(  
-     SQLHSTMT     StatementHandle);  
+     SQLHSTMT     StatementHandle);  
 ```  
   
 ## <a name="arguments"></a>Argomenti  
@@ -52,7 +52,7 @@ SQLRETURN SQLExecute(
 ## <a name="diagnostics"></a>Diagnostica  
  Quando **SQLExecute** restituisce SQL_ERROR o SQL_SUCCESS_WITH_INFO, un valore SQLSTATE associato può essere ottenuto chiamando **SQLGetDiagRec** con un *HandleType* di SQL_HANDLE_STMT e un *gestiscono* dei *StatementHandle*. Nella tabella seguente sono elencati i valori SQLSTATE comunemente restituiti da **SQLExecute** e illustra ognuna nel contesto di questa funzione; la notazione "(DM)" precede le descrizioni di SQLSTATE restituiti da Gestione Driver. Il codice restituito a ogni valore SQLSTATE è SQL_ERROR, se non specificato diversamente.  
   
-|SQLSTATE|Errore|Description|  
+|SQLSTATE|Errore|Descrizione|  
 |--------------|-----------|-----------------|  
 |01000|Avviso generale|Messaggio informativo specifico del driver. (Funzione restituisce SQL_SUCCESS_WITH_INFO).|  
 |01001|Conflitto dell'operazione del cursore|L'istruzione preparata associato con il *StatementHandle* indipendente posizionata un'istruzione update o delete e più righe oppure nessuna riga sono stati aggiornati o eliminati. (Per altre informazioni sugli aggiornamenti per più di una riga, vedere la descrizione del SQL_ATTR_SIMULATE_CURSOR *attributo* nelle **SQLSetStmtAttr**.)<br /><br /> (Funzione restituisce SQL_SUCCESS_WITH_INFO).|  
@@ -77,7 +77,7 @@ SQLRETURN SQLExecute(
 |22015|Overflow del campo Interval|*\*StatementText* contiene un parametro numerico o intervallo esatto che, quando convertito in un intervallo di tipo di dati SQL, ha causato una perdita di cifre significative.<br /><br /> *\*StatementText* contiene un parametro di intervallo con più di un campo che, quando convertito in un tipo di dati numerici in una colonna, non aveva alcuna rappresentazione nel tipo di dati numerici.<br /><br /> *\*StatementText* conteneva dati di parametro che è stati assegnati a un intervallo di tipo SQL e si è verificato alcuna rappresentazione del valore di tipo C in un intervallo di tipo SQL.<br /><br /> Assegnazione di un parametro di input/output o di output che è stato un numerico esatto o l'intervallo di tipo SQL a un tipo di intervallo C ha causato una perdita di cifre significative.<br /><br /> Quando un parametro di input/output o di output è stato assegnato a una struttura di intervallo C, si è verificato alcun rappresentazione dei dati nella struttura di dati di intervallo.|  
 |22018|Valore del carattere non valido per la specifica del cast|*\*StatementText* contenevano un tipo C che è un valore numerico esatto o approssimativo, un valore datetime o un tipo di dati di intervallo, il tipo SQL della colonna è un tipo di dati carattere; e il valore nella colonna non è un valore letterale valido del tipo C associato.<br /><br /> Quando è stato restituito un parametro di input/output o di output, il tipo SQL è un valore numerico esatto o approssimativo, un valore datetime o un tipo di dati di intervallo. il tipo C è stata SQL_C_CHAR; e il valore nella colonna non è un valore letterale valido del tipo SQL associato.|  
 |22019|Carattere di escape non valido|L'istruzione preparata associata *StatementHandle* contenuti un **, ad esempio** predicato con un **ESCAPE** nel **dove** clausola, e la lunghezza dei seguenti caratteri escape **ESCAPE** non è uguale a 1.|  
-|22025|Sequenza di escape non valido|L'istruzione preparata associata *StatementHandle* contenute "**quali** *valore di schema* **ESCAPE** *escape carattere*"nel **dove** clausola e il carattere che segue il carattere di escape nel valore del modello non corrisponde a uno di"%"o"_".|  
+|22025|Sequenza di escape non valido|L'istruzione preparata associata *StatementHandle* contenute "**quali** _valore di schema_ **ESCAPE** _escape carattere_"nel **dove** clausola e il carattere che segue il carattere di escape nel valore del modello non corrisponde a uno di"%"o"_".|  
 |23000|Violazione di vincolo di integrità|L'istruzione preparata associato con il *StatementHandle* contiene un parametro. Il valore del parametro non NULL per una colonna definita come NOT NULL nella colonna della tabella associati, un valore duplicato è stato fornito per una colonna vincolata a contenere solo valori univoci, o un altro vincolo di integrità è stato violato.|  
 |24000|Stato del cursore non valido|Un cursore è posizionato in corrispondenza di *StatementHandle* dal **SQLFetch** oppure **SQLFetchScroll**. Questo errore viene restituito da Gestione Driver, se **SQLFetch** oppure **SQLFetchScroll** non restituisce SQL_NO_DATA e viene restituito dal driver se **SQLFetch** oppure **SQLFetchScroll** è stato restituito SQL_NO_DATA.<br /><br /> Il cursore è stato aperto scegliere il *StatementHandle*.<br /><br /> L'istruzione preparata associata la *StatementHandle* contenuti un aggiornamento posizionato o statemen delete, t e il cursore era posizionato prima dell'inizio del set di risultati o dopo la fine del set di risultati.|  
 |40001|Errore di serializzazione.|Il rollback della transazione a causa di un deadlock delle risorse con un'altra transazione.|  
@@ -120,7 +120,7 @@ SQLRETURN SQLExecute(
  Se sono abilitati i segnalibri e viene eseguita una query che non supportano i segnalibri, il driver deve tentare di assegnare l'ambiente con uno che supporta segnalibri se si modifica un valore di attributo e restituendo un valore SQLSTATE 01S02 (valore dell'opzione modificato). Se l'attributo non può essere modificato, il driver deve restituire SQLSTATE HY024 (valore di attributo non valido).  
   
 > [!NOTE]  
->  Quando si usa il pool di connessioni, un'applicazione non deve eseguire istruzioni SQL che modificano il database o il contesto del database, ad esempio la **utilizzo** *database* istruzione in SQL Server, che viene modificato il catalogo utilizzato da un'origine dati.  
+>  Quando si usa il pool di connessioni, un'applicazione non deve eseguire istruzioni SQL che modificano il database o il contesto del database, ad esempio la **utilizzo** _database_ istruzione in SQL Server, che viene modificato il catalogo utilizzato da un'origine dati.  
   
 ## <a name="code-example"></a>Esempio di codice  
  Visualizzare [SQLBindParameter](../../../odbc/reference/syntax/sqlbindparameter-function.md), [SQLBulkOperations](../../../odbc/reference/syntax/sqlbulkoperations-function.md), [SQLPutData](../../../odbc/reference/syntax/sqlputdata-function.md), e [SQLSetPos](../../../odbc/reference/syntax/sqlsetpos-function.md).  

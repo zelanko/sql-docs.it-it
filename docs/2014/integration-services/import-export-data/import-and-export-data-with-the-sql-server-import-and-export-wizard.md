@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - exporting data
@@ -24,22 +23,22 @@ ms.assetid: c0e4d867-b2a9-4b2a-844b-2fe45be88f81
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bf8b2906e3e4915abeb76782743394e536bd62d3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6de4a59d9f042e410e1560c01e253f73811c2451
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48053203"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53374383"
 ---
 # <a name="sql-server-import-and-export-wizard"></a>Importazione/Esportazione guidata SQL Server
   Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] importazione / esportazione guidata offre il metodo più semplice per creare un [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] pacchetto che copia i dati da un'origine a una destinazione.  
   
 > [!NOTE]  
->  In un computer a 64 bit con [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] viene installata la versione a 64 bit dell'Importazione/Esportazione guidata [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (DTSWizard.exe). Tuttavia, alcune origini dati, ad esempio Access o Excel, dispongono solo di un provider a 32 bit. Per utilizzare queste origini dati, potrebbe essere necessario installare ed eseguire la versione a 32 bit della procedura guidata. Per installare la versione a 32 bit della procedura guidata, selezionare gli strumenti Client o [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] durante l'installazione.  
+>  In un computer a 64 bit con [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] viene installata la versione a 64 bit dell'Importazione/Esportazione guidata [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (DTSWizard.exe). Tuttavia, alcune origini dati, ad esempio Access o Excel, dispongono solo di un provider a 32 bit. Per utilizzare queste origini dati, potrebbe essere necessario installare ed eseguire la versione a 32 bit della procedura guidata. Per installare la versione a 32 bit della procedura guidata, selezionare gli strumenti client o [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] durante l'installazione.  
   
  È possibile avviare l'Importazione/Esportazione guidata [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dal menu Start, da [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], da [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] o dal prompt dei comandi. Per altre informazioni, vedere [esecuzione di SQL Server importazione / esportazione guidata](start-the-sql-server-import-and-export-wizard.md).  
   
- Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] importazione / esportazione guidata può copiare dati da e verso qualsiasi origine dati per cui un oggetto gestito [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] provider di dati o un provider OLE DB nativo è disponibile. L'elenco dei provider disponibili include le origini dati seguenti:  
+ L'Importazione/Esportazione guidata [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consente di copiare dati in e da qualsiasi origine dati per cui sia disponibile un provider di dati [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] gestito o un provider OLE DB nativo. L'elenco dei provider disponibili include le origini dati seguenti:  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
@@ -55,42 +54,42 @@ ms.locfileid: "48053203"
   
      È inoltre possibile decidere se salvare il pacchetto in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o nel file system. Se si decide di salvare il pacchetto, è inoltre necessario specificare un livello di protezione. Per altre informazioni sui livelli di protezione del pacchetto, vedere [controllo di accesso per dati sensibili nei pacchetti](../security/access-control-for-sensitive-data-in-packages.md).  
   
-     Dopo il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] importazione / esportazione guidata ha creato il pacchetto e copiato i dati, è possibile usare il [!INCLUDE[ssIS](../../includes/ssis-md.md)] progettazione per aprire e modificare il pacchetto salvato aggiungendo attività, trasformazioni e logica guidata dagli eventi.  
+     Dopo la creazione del pacchetto nell'Importazione/Esportazione guidata [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e la copia dei dati, è possibile utilizzare Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] per aprire e modificare il pacchetto salvato aggiungendo attività, trasformazioni e logica guidata dagli eventi.  
   
     > [!NOTE]  
-    >  In [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)], l'opzione per salvare il pacchetto creato dalla procedura guidata non è disponibile.  
+    >  In [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] l'opzione per salvare il pacchetto creato con la procedura guidata non è disponibile.  
   
--   Se si avvia il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] importazione / esportazione guidata da un [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] del progetto [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], il pacchetto non può essere eseguito come un passaggio della procedura guidata. Il pacchetto verrà invece aggiunto al progetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] da cui è stata avviata la procedura guidata. Sarà quindi possibile eseguire il pacchetto o estenderlo aggiungendo attività, trasformazioni e logica guidata dagli eventi utilizzando Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)].  
+-   Se si avvia Importazione/Esportazione guidata [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da un progetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], non sarà possibile eseguire il pacchetto durante un passaggio della procedura guidata. Il pacchetto verrà invece aggiunto al progetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] da cui è stata avviata la procedura guidata. Sarà quindi possibile eseguire il pacchetto o estenderlo aggiungendo attività, trasformazioni e logica guidata dagli eventi utilizzando Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)].  
   
  Per altre informazioni, vedere [esecuzione di SQL Server importazione / esportazione guidata](start-the-sql-server-import-and-export-wizard.md).  
   
 ## <a name="permissions-required-by-the-import-and-export-wizard"></a>Autorizzazioni richieste dall'Importazione/Esportazione guidata  
- Per completare il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] importazione / esportazione guidata correttamente, è necessario disporre almeno delle autorizzazioni seguenti:  
+ Per completare l'Importazione/Esportazione guidata [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], è necessario disporre almeno delle autorizzazioni seguenti:  
   
--   Autorizzazioni per la connessione alle condivisioni file o ai database di origine e di destinazione. In [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], questa richiede diritti di accesso al server e database.  
+-   Autorizzazioni per la connessione alle condivisioni file o ai database di origine e di destinazione. A tale scopo, in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sono necessari diritti di accesso al server e al database.  
   
--   Autorizzazioni per la lettura dei dati dal file o dal database di origine. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], questa operazione richiede le autorizzazioni SELECT per le tabelle di origine e le viste.  
+-   Autorizzazioni per la lettura dei dati dal file o dal database di origine. A tale scopo, in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono necessarie le autorizzazioni SELECT nelle viste e nelle tabelle di origine.  
   
--   Autorizzazioni per la scrittura dei dati nel file o nel database di destinazione. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], questa operazione richiede le autorizzazioni INSERT nelle tabelle di destinazione.  
+-   Autorizzazioni per la scrittura dei dati nel file o nel database di destinazione. A tale scopo, in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono necessarie le autorizzazioni INSERT nelle tabelle di destinazione.  
   
 -   Se si desidera creare un nuovo file, tabella o database di destinazione, autorizzazioni sufficienti per creare il nuovo file, tabella o database. A tale scopo, in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono necessarie le autorizzazioni CREATE DATABASE o CREATE TABLE.  
   
 -   Se si desidera salvare il pacchetto creato dalla procedura guidata, autorizzazioni sufficienti per scrivere nel database msdb o nel file System. In [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], questo richiede l'autorizzazione INSERT nel database msdb.  
   
 ## <a name="mapping-data-types-in-the-import-and-export-wizard"></a>Esecuzione del mapping di tipi di dati nell'Importazione/Esportazione guidata  
- Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] importazione / esportazione guidata offre funzionalità di trasformazione di base. Ad eccezione dell'impostazione del nome, del tipo di dati e delle proprietà del tipo di dati delle colonne incluse nei nuovi file e tabelle di destinazione, l'Importazione/Esportazione guidata [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non supporta trasformazioni a livello di colonna.  
+ Importazione/Esportazione guidata [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] offre solo le funzionalità di trasformazione di base. Ad eccezione dell'impostazione del nome, del tipo di dati e delle proprietà del tipo di dati delle colonne incluse nei nuovi file e tabelle di destinazione, l'Importazione/Esportazione guidata [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non supporta trasformazioni a livello di colonna.  
   
- Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] importazione / esportazione guidata utilizza il mapping del file che [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] per eseguire il mapping tipi di dati dalla versione di un database o un sistema a un altro. È ad esempio possibile eseguire il mapping da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a Oracle. I file di mapping in formato XML vengono installati per impostazione predefinita in C:\Programmi\Microsoft SQL Server\100\DTS\MappingFiles. Se sono necessari tipi di mapping diversi tra i tipi di dati, sarà possibile aggiornare i file di mapping per modificare come desiderato i mapping eseguiti dalla procedura guidata. Ad esempio, se si desidera che il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **nchar** tipo di dati per eseguire il mapping a DB2 **GRAPHIC** tipo di dati anziché DB2 **VARGRAPHIC** del tipo di dati durante il trasferimento dei dati da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a DB2, è possibile modificare il **nchar** mapping nel file di mapping SqlClientToIBMDB2.xml usare **GRAPHIC** anziché **VARGRAPHIC.**  
+ Importazione/Esportazione guidata [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizza i file di mapping disponibili in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] per eseguire il mapping dei tipi di dati da una versione o un sistema di database a un'altro. È ad esempio possibile eseguire il mapping da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a Oracle. I file di mapping in formato XML vengono installati per impostazione predefinita in C:\Programmi\Microsoft SQL Server\100\DTS\MappingFiles. Se sono necessari tipi di mapping diversi tra i tipi di dati, sarà possibile aggiornare i file di mapping per modificare come desiderato i mapping eseguiti dalla procedura guidata. Ad esempio, se si desidera che il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **nchar** tipo di dati per eseguire il mapping a DB2 **GRAPHIC** tipo di dati anziché DB2 **VARGRAPHIC** del tipo di dati durante il trasferimento dei dati da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a DB2, è possibile modificare il **nchar** mapping nel file di mapping SqlClientToIBMDB2.xml usare **GRAPHIC** anziché **VARGRAPHIC.**  
   
  In [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sono inclusi mapping tra le combinazioni di origini e destinazioni maggiormente utilizzate ed è possibile aggiungere nuovi file di mapping alla directory MappingFiles per supportare ulteriori origini e destinazioni. I nuovi file di mapping devono essere conformi allo schema XSD pubblicato ed eseguire il mapping tra una combinazione univoca di origine e destinazione.  
   
 > [!NOTE]  
->  Se si modifica un file di mapping esistente o aggiunta un nuovo file di mapping alla cartella, è necessario chiudere e riaprire il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] importazione / esportazione guidata o [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] per i file nuovi o modificati vengano riconosciuti.  
+>  Se si modifica un file di mapping esistente o si aggiunge un nuovo file di mapping alla cartella, affinché i file nuovi o modificati vengano riconosciuti, è necessario chiudere e riaprire l'Importazione/Esportazione guidata [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
 ## <a name="external-resources"></a>Risorse esterne  
   
--   Video [esportazione di dati di SQL Server in Excel (Video di SQL Server)](http://go.microsoft.com/fwlink/?LinkID=200975), su technet.microsoft.com  
+-   Video [esportazione di dati di SQL Server in Excel (Video di SQL Server)](https://go.microsoft.com/fwlink/?LinkID=200975), su technet.microsoft.com  
   
--   Esempio di CodePlex [esportazione da ODBC in un File Flat tramite una procedura guidata: pacchetti di lezioni](http://go.microsoft.com/fwlink/?LinkId=217657), su msftisprodsamples.codeplex.com  
+-   Esempio di CodePlex [esportazione da ODBC in un File Flat tramite una procedura guidata: Pacchetti di lezioni](https://go.microsoft.com/fwlink/?LinkId=217657), su msftisprodsamples.codeplex.com  
   
   

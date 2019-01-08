@@ -12,12 +12,12 @@ ms.assetid: 1b0a6421-fbd4-4bb4-87ca-657f4782c433
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 66f36164c6199d51d8a01916d84f1085d479235a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fda7911dc9e62741ba846e8a166bb0e3312f3425
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48051681"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53373173"
 ---
 # <a name="use-the-new-availability-group-dialog-box-sql-server-management-studio"></a>Utilizzare la finestra di dialogo Nuovo gruppo di disponibilità (SQL Server Management Studio)
   In questo argomento sono incluse informazioni sulla modalità di utilizzo della finestra di dialogo **Nuovo gruppo di disponibilità** di [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] per creare un gruppo di disponibilità AlwaysOn nelle istanze di [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] abilitate per [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. Tramite un *gruppo di disponibilità* vengono definiti un set di database utente di cui verrà eseguito il failover come unità singola e un set di partner di failover, noti come *repliche di disponibilità*, che supportano il failover.  
@@ -50,7 +50,7 @@ ms.locfileid: "48051681"
   
 -   Effettuare la sincronizzazione dei dati iniziale.  
   
- Per informazioni su queste attività di configurazione, vedere [Completamento: Operazioni da effettuare dopo l'utilizzo della finestra di dialogo Nuovo gruppo di disponibilità per creare un gruppo di disponibilità](#FollowUp), più avanti in questo argomento.  
+ Per informazioni su queste attività di configurazione, vedere [completamento: Dopo aver creato un gruppo di disponibilità](#FollowUp), più avanti in questo argomento.  
   
 ###  <a name="Security"></a> Sicurezza  
   
@@ -77,13 +77,13 @@ ms.locfileid: "48051681"
     > [!TIP]  
     >  Se è stata aggiunta una replica e non è possibile connettersi all'istanza del server host, è possibile rimuovere la replica e aggiungerne una nuova. Per altre informazioni, vedere [Rimuovere una replica secondaria da un gruppo di disponibilità &#40;SQL Server&#41;](remove-a-secondary-replica-from-an-availability-group-sql-server.md) e [Aggiungere una replica secondaria a un gruppo di disponibilità &#40;SQL Server&#41;](add-a-secondary-replica-to-an-availability-group-sql-server.md).  
   
-8.  Nel riquadro **Selezione pagina** della finestra di dialogo fare clic su **Preferenze di backup**. Quindi, nella pagina **Preferenze di backup** specificare il punto in cui devono essere salvati i backup in base al ruolo della replica e assegnare le priorità di backup a ciascuna istanza del server in cui sarà ospitata una replica di disponibilità per questo gruppo di disponibilità. Per altre informazioni, vedere [Proprietà dei gruppi di disponibilità: nuovo gruppo di disponibilità &#40;Pagina sulle preferenze di backup&#41;](availability-group-properties-new-availability-group-backup-preferences-page.md).  
+8.  Nel riquadro **Selezione pagina** della finestra di dialogo fare clic su **Preferenze di backup**. Quindi, nella pagina **Preferenze di backup** specificare il punto in cui devono essere salvati i backup in base al ruolo della replica e assegnare le priorità di backup a ciascuna istanza del server in cui sarà ospitata una replica di disponibilità per questo gruppo di disponibilità. Per altre informazioni, vedere [proprietà gruppo di disponibilità: Nuovo gruppo di disponibilità &#40;pagina delle preferenze di Backup&#41;](availability-group-properties-new-availability-group-backup-preferences-page.md).  
   
 9. Per creare il gruppo di disponibilità, fare clic su **OK**. In questo modo, tramite la finestra di dialogo viene verificato se i database specificati soddisfano i prerequisiti.  
   
      Per uscire dalla finestra di dialogo senza creare il gruppo di disponibilità, fare clic su **Annulla**.  
   
-##  <a name="FollowUp"></a> Completamento: Operazioni da effettuare dopo l'utilizzo della finestra di dialogo Nuovo gruppo di disponibilità per creare un gruppo di disponibilità  
+##  <a name="FollowUp"></a> Completamento: Dopo aver utilizzato la finestra di dialogo Nuovo gruppo di disponibilità per creare un gruppo di disponibilità  
   
 -   Sarà necessario connettersi, a sua volta, a ogni istanza del server in cui è ospitata una replica secondaria per il gruppo di disponibilità e completare i passaggi seguenti:  
   
@@ -156,7 +156,7 @@ ms.locfileid: "48051681"
   
 ##  <a name="RelatedContent"></a> Contenuto correlato  
   
--   [Microsoft SQL Server AlwaysOn Solutions Guide for High Availability and Disaster Recovery](http://go.microsoft.com/fwlink/?LinkId=227600)  
+-   [Microsoft SQL Server AlwaysOn Solutions Guide for High Availability and Disaster Recovery](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Panoramica di gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   

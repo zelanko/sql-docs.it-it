@@ -1,5 +1,5 @@
 ---
-title: 'Attività 7: Aggiunta della trasformazione DQS Cleansing al flusso di dati | Microsoft Docs'
+title: 'Attività 7: Aggiunta di trasformazione DQS Cleansing al flusso di dati | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,15 +13,15 @@ ms.assetid: 0b749c71-dfb6-493a-804f-600290d46eef
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 63af147462b9414bd85d0a301e908df4c774c7b1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: eaa36e392046abca935a1b67c4ee459a8b15939e
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48138197"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376873"
 ---
 # <a name="task-7-adding-dqs-cleansing-transform-to-the-data-flow"></a>Attività 7: Aggiunta della trasformazione DQS Cleansing al flusso di dati
-  In questa attività viene aggiunta una trasformazione DQS Cleansing al flusso di dati per pulire i dati di input del fornitore tramite DQS. Visualizzare **[trasformazione DQS Cleansing](http://msdn.microsoft.com/library/ee677619.aspx)** per altri dettagli sulla trasformazione.  
+  In questa attività viene aggiunta una trasformazione DQS Cleansing al flusso di dati per pulire i dati di input del fornitore tramite DQS. Visualizzare **[trasformazione DQS Cleansing](https://msdn.microsoft.com/library/ee677619.aspx)** per altri dettagli sulla trasformazione.  
   
 1.  Fare doppio clic su **DQS Cleansing** nel **flusso di dati** scheda, quindi scegliere **rinominare**. Tipo di **Pulisci dati fornitore**, quindi premere **invio**.  
   
@@ -64,6 +64,6 @@ ms.locfileid: "48138197"
 12. Fare clic su **OK** per chiudere la **Editor trasformazione DQS Cleansing** nella finestra di dialogo.  
   
 ## <a name="next-step"></a>Passaggio successivo  
- [Attività 8: Aggiunta della trasformazione Suddivisione condizionale aggiunta dell'output di pulizia della suddivisione](../../2014/tutorials/task-8-adding-conditional-split-transform-to-split-cleansing-output.md)  
+ [Attività 8: Aggiunta della trasformazione Suddivisione condizionale per l'Output di pulizia della suddivisione](../../2014/tutorials/task-8-adding-conditional-split-transform-to-split-cleansing-output.md)  
   
   

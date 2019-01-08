@@ -11,12 +11,12 @@ ms.assetid: 94fdf921-270c-4c12-87b3-46b1cc98fae5
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: f48846f1cb78a8ea8a21be5a7114bf11017f5ca5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: be3f95c1a0c395c412479d3a8836e9126fb0373f
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48147921"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53374653"
 ---
 # <a name="data-types-in-expressions-report-builder-and-ssrs"></a>Tipi di dati nelle espressioni (Generatore report e SSRS)
   I tipi di dati rappresentano tipologie di dati diversi che possono essere archiviati ed elaborati in modo efficiente. I tipi di dati standard includono testo, noto anche come stringhe, numeri con e senza posizioni decimali, date e ore e immagini. I valori in un report devono essere costituiti da un tipo di dati RDL (Report Definition Language). È possibile formattare un valore in base alle proprie preferenze quando si lo visualizza in un report. Un campo che rappresenta la valuta, ad esempio, viene archiviato nella definizione del report come numero a virgola mobile, ma può essere visualizzato in diversi formati a seconda della proprietà di formattazione scelta.  
@@ -31,12 +31,12 @@ ms.locfileid: "48147921"
   
 |Tipo RDL|Tipi CLR|  
 |--------------|---------------|  
-|String|Valore predefinito: String<br /><br /> Chart, GUID, Timespan|  
-|Boolean|Valore predefinito: Boolean|  
-|Integer|Valore predefinito: Int64<br /><br /> Int16, Int32, Uint16, Uint64, Byte, Sbyte|  
-|DateTime|Valore predefinito: DateTime<br /><br /> DateTimeOffset|  
-|Float|Valore predefinito: Double<br /><br /> Single, Decimal|  
-|Binario|Valore predefinito: Byte []|  
+|String|Impostazione predefinita: String<br /><br /> Chart, GUID, Timespan|  
+|Boolean|Impostazione predefinita: Boolean|  
+|Integer|Impostazione predefinita: Int64<br /><br /> Int16, Int32, Uint16, Uint64, Byte, Sbyte|  
+|DateTime|Impostazione predefinita: DateTime<br /><br /> DateTimeOffset|  
+|float|Impostazione predefinita: Double<br /><br /> Single, Decimal|  
+|Binario|Impostazione predefinita: Byte[]|  
 |Variant|Uno qualsiasi tra quelli riportati in precedenza eccetto Byte []|  
 |VariantArray|Matrice di Variant|  
 |Serializable|Variant oppure tipi contrassegnati con Serializable o che consentono di implementare ISerializable.|  
@@ -57,7 +57,7 @@ ms.locfileid: "48147921"
 -   Conversione da un tipo di dati a un altro tipo di dati di un valore recuperato dall'origine dati.  
   
 ## <a name="determining-the-data-type-of-report-data"></a>Determinazione del tipo di dati del report  
- Per determinare il tipo di dati di un elemento del report è possibile scrivere un'espressione. Ad esempio, per visualizzare il tipo di dati del campo `MyField`, aggiungere l'espressione `=Fields!MyField.Value.GetType().ToString()` a una cella della tabella. Il risultato indica il tipo di dati CLR utilizzato per rappresentare `MyField`, ad esempio `System.String` o `System.DateTime`.  
+ Per determinare il tipo di dati di un elemento del report è possibile scrivere un'espressione. Ad esempio, per visualizzare il tipo di dati del campo `MyField`, aggiungere l'espressione `=Fields!MyField.Value.GetType().ToString()`a una cella della tabella. Il risultato indica il tipo di dati CLR utilizzato per rappresentare `MyField`, ad esempio `System.String` o `System.DateTime`.  
   
 ## <a name="converting-dataset-fields-to-a-different-data-type"></a>Conversione dei campi del set di dati in un altro tipo di dati  
  È inoltre possibile convertire i campi del set di dati prima di utilizzarli in un report. Nell'elenco seguente vengono descritte le modalità di conversione di un campo del set di dati esistente:  
@@ -69,7 +69,7 @@ ms.locfileid: "48147921"
 -   Controllare se l'estensione per l'elaborazione dati in uso include metadati per il recupero dei dati preformattati. Una query MDX di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] include ad esempio una proprietà estesa FORMATTED_VALUE per i valori del cubo già formattati durante l'elaborazione del cubo. Per altre informazioni, vedere [Proprietà di campo estese per un database di Analysis Services &#40;SSRS&#41;](../report-data/extended-field-properties-for-an-analysis-services-database-ssrs.md).  
   
 ## <a name="understanding-parameter-data-types"></a>Informazioni sui tipi di dati dei parametri  
- I parametri del report devono essere di uno dei cinque tipi di dati seguenti: Boolean, DateTime, Integer, Float o Text (anche noto come String). Quando una query del set di dati include parametri di query, i parametri del report vengono creati automaticamente e collegati ai parametri di query. Il tipo di dati predefinito per un parametro di report è String. Per modificare tale tipo di dati, selezionare il valore corretto nell'elenco a discesa **Tipo di dati** nella pagina **Generale** della finestra di dialogo **Proprietà parametri report** .  
+ I parametri del report devono essere uno dei cinque tipi di dati: Valore booleano, DateTime, Integer, Float o Text (anche noto come String). Quando una query del set di dati include parametri di query, i parametri del report vengono creati automaticamente e collegati ai parametri di query. Il tipo di dati predefinito per un parametro di report è String. Per modificare tale tipo di dati, selezionare il valore corretto nell'elenco a discesa **Tipo di dati** nella pagina **Generale** della finestra di dialogo **Proprietà parametri report** .  
   
 > [!NOTE]  
 >  I parametri di report di tipo DateTime non supportano i millisecondi. Sebbene sia possibile creare un parametro basato su valori che includono millisecondi, non è possibile selezionare un valore da un elenco a discesa di valori disponibili contenente valori di tipo Date o Time che includono millisecondi.  
@@ -90,7 +90,7 @@ ms.locfileid: "48147921"
 |Solo la parte DateTime di un valore DateTimeOffset|`=Fields!MyDatetimeOffset.Value.DateTime`|  
 |Solo la parte Offset di un valore DateTimeOffset|`=Fields!MyDatetimeOffset.Value.Offset`|  
   
- È inoltre possibile utilizzare la funzione Format per controllare il formato di visualizzazione del valore. Per altre informazioni, vedere [Funzioni (Visual Basic)](http://go.microsoft.com/fwlink/?linkid=111483).  
+ È inoltre possibile utilizzare la funzione Format per controllare il formato di visualizzazione del valore. Per altre informazioni, vedere [Funzioni (Visual Basic)](https://go.microsoft.com/fwlink/?linkid=111483).  
   
 ## <a name="advanced-examples"></a>Esempi avanzati  
  Quando ci si connette a un'origine dati con un provider di dati che non fornisce il supporto di conversione per tutti i tipi di dati dell'origine dati, il tipo di dati predefinito per i tipi di origine dati non supportati corrisponde a String. Negli esempi seguenti sono fornite le soluzioni per i tipi di dati specifici restituiti come stringa.  
@@ -105,11 +105,11 @@ ms.locfileid: "48147921"
   
  `2008-07-01 06:05:07.9999999 +08:00`  
   
- In questo esempio viene mostrata la data (1 luglio 2008), seguita dall'ora espressa con una precisione di 7 cifre (06:05:07.9999999 AM), seguita da una differenza di fuso orario dall'ora UTC espressa in ore e minuti (più 8 ore e 0 minuti). Per l'esempio seguente, questo valore è stato inserito una `String` campo denominato `MyDateTime.Value`.  
+ In questo esempio viene mostrata la data (1 luglio 2008), seguita dall'ora espressa con una precisione di 7 cifre (06:05:07.9999999 AM), seguita da una differenza di fuso orario dall'ora UTC espressa in ore e minuti (più 8 ore e 0 minuti). Per l'esempio seguente, questo valore è stato inserito in un campo `String` denominato `MyDateTime.Value`.  
   
  Per convertire questi dati in uno o più valori CLR, è possibile adottare una delle strategie seguenti:  
   
--   In una casella di testo utilizzare un'espressione per estrarre parti della stringa. Esempio:  
+-   In una casella di testo utilizzare un'espressione per estrarre parti della stringa. Ad esempio:  
   
     -   Nell'espressione seguente solo la parte relativa all'ora della differenza di fuso orario dall'ora UTC viene prima estratta e poi convertita in minuti: `=CInt(Fields!MyDateTime.Value.Substring(Fields!MyDateTime.Value.Length-5,2)) * 60`  
   
@@ -117,9 +117,9 @@ ms.locfileid: "48147921"
   
     -   Nell'espressione seguente la stringa viene convertita in un valore di data e ora: `=DateTime.Parse(Fields!MyDateTime.Value)`  
   
-         Se la stringa `MyDateTime.Value` include una differenza UTC, la funzione `DateTime.Parse` regola in primo luogo l'ora in base alla differenza UTC: 7 AM, - [`+08:00`] con l'ora UTC 11 PM. della notte precedente). La funzione `DateTime.Parse` applica quindi la differenza UTC del server di report locale e, se necessario, regola nuovamente l'ora in base all'ora legale. Ad esempio, a Redmond, Washington, la differenza tra ora locale e ora legale è `[-07:00]`, ovvero 7 ore prima delle 23.00. Il risultato è il valore `DateTime` seguente: `2007-07-06 04:07:07 PM` (6 luglio 2007 alle 4.07 PM).  
+         Se la stringa `MyDateTime.Value` include una differenza UTC, la funzione `DateTime.Parse` regola in primo luogo l'ora in base alla differenza UTC: 7 AM, - [`+08:00`] con l'ora UTC 11 PM. della notte precedente). La funzione `DateTime.Parse` applica quindi la differenza UTC del server di report locale e, se necessario, regola nuovamente l'ora in base all'ora legale. Ad esempio, a Redmond, Washington, la differenza tra ora locale e ora legale è `[-07:00]`, ovvero 7 ore prima delle 23.00. Il risultato è il seguente `DateTime` valore: `2007-07-06 04:07:07 PM` (6 luglio 2007 in 4.07 PM).  
   
- Per altre informazioni sulla conversione di stringhe `DateTime` tipi di dati, vedere [analisi di stringhe di data e ora](http://go.microsoft.com/fwlink/?LinkId=89703), [formattazione di data e ora per impostazioni cultura specifiche](http://go.microsoft.com/fwlink/?LinkId=89704), e [scelta Tra DateTime, DateTimeOffset e TimeZoneInfo](http://go.microsoft.com/fwlink/?linkid=110652) su MSDN.  
+ Per altre informazioni sulla conversione di stringhe `DateTime` tipi di dati, vedere [analisi di stringhe di data e ora](https://go.microsoft.com/fwlink/?LinkId=89703), [formattazione di data e ora per impostazioni cultura specifiche](https://go.microsoft.com/fwlink/?LinkId=89704), e [scelta Tra DateTime, DateTimeOffset e TimeZoneInfo](https://go.microsoft.com/fwlink/?linkid=110652) su MSDN.  
   
 -   Aggiungere un nuovo campo calcolato al set di dati del report che utilizza un'espressione per estrarre parti della stringa. Per altre informazioni, vedere [Aggiunta, modifica e aggiornamento di campi nel riquadro dei dati del report &#40;Generatore report e SSRS&#41;](../report-data/add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md).  
   
@@ -139,9 +139,9 @@ ms.locfileid: "48147921"
   
      `2008-07-01 06:05:07             2008                   480`  
   
- Per altre informazioni sui tipi di database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [Tipi di dati &#40;Transact-SQL&#41;](/sql/t-sql/data-types/data-types-transact-sql) e [Funzioni e tipi di dati di data e ora &#40;Transact-SQL&#41;](/sql/t-sql/functions/date-and-time-data-types-and-functions-transact-sql) nella [documentazione online di SQL Server](http://go.microsoft.com/fwlink/?linkid=120955).  
+ Per altre informazioni sui tipi di database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [Tipi di dati &#40;Transact-SQL&#41;](/sql/t-sql/data-types/data-types-transact-sql) e [Funzioni e tipi di dati di data e ora &#40;Transact-SQL&#41;](/sql/t-sql/functions/date-and-time-data-types-and-functions-transact-sql) nella [documentazione online di SQL Server](https://go.microsoft.com/fwlink/?linkid=120955).  
   
- Per altre nellaformazioni sui tipi di dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , vedere [Tipi di dati nella Analysis Services](../../analysis-services/multidimensional-models/olap-physical/data-types-in-analysis-services.md) nella [SQL Server Books Onlnellae](http://go.microsoft.com/fwlink/?linkid=120955).  
+ Per altre nellaformazioni sui tipi di dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , vedere [Tipi di dati nella Analysis Services](../../analysis-services/multidimensional-models/olap-physical/data-types-in-analysis-services.md) nella [SQL Server Books Onlnellae](https://go.microsoft.com/fwlink/?linkid=120955).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Formattazione degli elementi del report &#40;Generatore report e SSRS&#41;](formatting-report-items-report-builder-and-ssrs.md)  

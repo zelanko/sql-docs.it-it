@@ -1,5 +1,5 @@
 ---
-title: Installare modelli con training preliminare di machine learning in SQL Server | Microsoft Docs
+title: Installare con training preliminare modelli di machine learning - SQL Server Machine Learning
 description: Aggiungere modelli con training preliminare per la definizione delle funzionalità a sentiment analysis e l'immagine di SQL Server 2017 Machine Learning Services (R o Python) o SQL Server 2016 R Services.
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: b2dfee04a7c0c9c39b7969551a85a49d441f30e5
-ms.sourcegitcommit: 84cc5ed00833279da3adbde9cb6133a4e788ed3f
+ms.openlocfilehash: 901ab45ea727ec03a439f07ac2b4a971c98060f2
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39216832"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53645440"
 ---
 # <a name="install-pre-trained-machine-learning-models-on-sql-server"></a>Installare con training preliminare modelli di machine learning in SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -24,7 +24,7 @@ Una volta installato, i modelli con training preliminare vengono considerati un 
 
 Per usare i modelli con training preliminare, chiamare le funzioni elencate nella tabella seguente.
 
-| Funzione R (MicrosoftML) | Funzione Python (microsoftml) | Utilizzo |
+| Funzione R (MicrosoftML) | Funzione Python (microsoftml) | Uso |
 |--------------------------|-------------------------------|-------|
 | [getSentiment](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/getsentiment) | [get_sentiment](https://docs.microsoft.com//machine-learning-server/python-reference/microsoftml/get-sentiment) | Genera il punteggio del sentiment positivo, negativo tramite input di testo. [Altre informazioni](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2017/11/01/sentiment-analysis-with-python-in-sql-server-machine-learning-services/).|
 | [featurizeImage](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/featurizeimage) | [featurize_image](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/featurize-image) | Estrae le informazioni di testo di input di file di immagine. [Altre informazioni](https://blogs.msdn.microsoft.com/mlserver/2017/04/12/image-featurization-with-a-pre-trained-deep-neural-network-model/). |
@@ -104,7 +104,7 @@ In primo luogo, verificare la presenza di nuovi file nei [mxlibs cartella](#file
 
 2. Incollare lo script R seguente al prompt dei comandi.
 
-    ```r
+    ```R
     # Create the data
     CustomerReviews <- data.frame(Review = c(
     "I really did not like the taste of it",
@@ -126,7 +126,7 @@ In primo luogo, verificare la presenza di nuovi file nei [mxlibs cartella](#file
 
 3. Premere INVIO per visualizzare i punteggi del sentiment. Output dovrebbe essere come segue:
 
-    ```
+    ```R
     > sentimentScores
                                             Review SentimentScore
     1           I really did not like the taste of it      0.4617899
@@ -168,7 +168,7 @@ In primo luogo, verificare la presenza di nuovi file nei [mxlibs cartella](#file
 
 3. Premere INVIO per stampare i punteggi. Output dovrebbe essere come segue:
 
-    ```
+    ```python
     >>> print(sentiment_scores)
                                                 review    scores         eval
     0            I really did not like the taste of it  0.461790         BLAH
@@ -190,7 +190,7 @@ I collegamenti seguenti includono procedure dettagliate ed esempio di codice ric
 
   Il modello con training preliminare per le immagini supporta la definizione delle funzionalità delle immagini fornite. Per usare il modello, si chiama il **featurizeImage** trasformare. L'immagine viene caricata, ridimensionata e trasformato dal modello con training. L'output di featurizer la rete neurale profonda viene quindi utilizzato per addestrare un modello lineare per la classificazione delle immagini. Per usare questo modello, tutte le immagini devono essere ridimensionate per soddisfare i requisiti del modello con training. Ad esempio, se si usa un modello AlexNet, l'immagine deve essere ridimensionato in 227 x 227 px.
 
-+ [Esempio di codice: analisi del Sentiment con testo Featurizer](https://github.com/Microsoft/microsoft-r/tree/master/microsoft-ml/Samples/101/BinaryClassification/SimpleSentimentAnalysis)
++ [Esempio di codice: Analisi del sentiment con testo Featurizer](https://github.com/Microsoft/microsoft-r/tree/master/microsoft-ml/Samples/101/BinaryClassification/SimpleSentimentAnalysis)
 
 <a name="bkmk_resources"></a> 
 

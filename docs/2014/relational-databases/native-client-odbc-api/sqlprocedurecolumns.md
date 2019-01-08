@@ -14,12 +14,12 @@ ms.assetid: 6671e180-0072-4de5-90f5-314306d2ba9c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ddbc2d437ab41238b1c9426659522fb4d0ab3ada
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 21c0a7248f2e8c5313678f503b239cdf44d16ea7
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48130091"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53366253"
 ---
 # <a name="sqlprocedurecolumns"></a>SQLProcedureColumns
   `SQLProcedureColumns` Restituisce una riga che riporta gli attributi del valore restituito di tutte le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stored procedure.  
@@ -30,7 +30,7 @@ ms.locfileid: "48130091"
   
  Nella tabella seguente sono elencate le colonne restituite dal set di risultati e come sono state estese per gestire il **udt** e **xml** i tipi di dati tramite il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC Native Client:  
   
-|Nome colonna|Description|  
+|Nome colonna|Descrizione|  
 |-----------------|-----------------|  
 |SS_UDT_CATALOG_NAME|Restituisce il nome del catalogo contenente il tipo definito dall'utente.|  
 |SS_UDT_SCHEMA_NAME|Restituisce il nome dello schema contenente il tipo definito dall'utente.|  
@@ -75,7 +75,7 @@ ms.locfileid: "48130091"
  `SQLProcedureColumns` supporta i tipi CLR definiti dall'utente di grandi dimensioni. Per altre informazioni, vedere [Large CLR User-Defined tipi &#40;ODBC&#41;](../native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Funzione SQLProcedureColumns](http://go.microsoft.com/fwlink/?LinkId=59363)   
+ [Funzione SQLProcedureColumns](https://go.microsoft.com/fwlink/?LinkId=59363)   
  [Dettagli di implementazione dell'API ODBC](odbc-api-implementation-details.md)  
   
   
