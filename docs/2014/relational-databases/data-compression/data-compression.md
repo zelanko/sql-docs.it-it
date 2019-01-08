@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - page compression [Database Engine]
@@ -22,15 +22,15 @@ ms.assetid: 5f33e686-e115-4687-bd39-a00c48646513
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b200fc8b534fad9e33f0b01d97d46d0bece4c988
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c52fa04c46ff41ce67094599a6a2f3f5074e8f03
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48204941"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53364183"
 ---
 # <a name="data-compression"></a>Compressione dei dati
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] supporta la compressione row e page per gli indici e le tabelle rowstore e supporta la compressione dell'archivio columnstore e columnstore per gli indici e le tabelle columnstore.  
+  In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] è supportata la compressione delle righe e delle pagine per gli indici e le tabelle rowstore e la compressione dell'archivio columnstore e columnstore per le tabelle e gli indici columnstore.  
   
  Per le tabelle e gli indici rowstore, utilizzare la funzionalità di compressione dei dati per ridurre le dimensioni del database. Oltre a risparmiare spazio, la compressione dei dati migliora le prestazioni dei carichi di lavoro di I/O a utilizzo elevato di memoria perché i dati vengono archiviati in un numero inferiore di pagine e le query devono leggere un numero inferiore di pagine dal disco. Sono tuttavia necessarie risorse della CPU aggiuntive nel server di database per comprimere e decomprimere i dati, mentre i dati vengono scambiati con l'applicazione. È possibile configurare la compressione di righe e pagine sugli oggetti di database seguenti:  
   
@@ -108,12 +108,12 @@ ms.locfileid: "48204941"
   
 ||  
 |-|  
-|**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] a [versione corrente](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
+|**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] a [versione corrente](https://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
   
 ### <a name="basics"></a>Nozioni fondamentali  
  Gli indici e le tabelle columnstore vengono sempre archiviati con la compressione columnstore. È possibile ridurre ulteriormente le dimensioni dei dati columnstore configurando una compressione aggiuntiva denominata compressione dell'archivio.  Per eseguire la compressione dell'archivio, in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene eseguito l'algoritmo di compressione Microsoft XPRESS sui dati. Aggiungere o rimuovere la compressione dell'archivio utilizzando i tipi di compressione dati seguenti:  
   
--   Usare `COLUMNSTORE_ARCHIVE` la compressione dei dati per comprimere i dati columnstore con la compressione dell'archivio.  
+-   Utilizzare la compressione dei dati `COLUMNSTORE_ARCHIVE` per comprimere i dati columnstore con la compressione dell'archivio.  
   
 -   Utilizzare la compressione dati **COLUMNSTORE** per decomprimere la compressione dell'archivio. I dati risultanti verranno compressi con la compressione columnstore.  
   
@@ -159,7 +159,7 @@ REBUILD PARTITION = ALL WITH (
 ) ;  
 ```  
   
-### <a name="performance"></a>restazioni  
+### <a name="performance"></a>Prestazioni  
  La compressione degli indici columnstore con la compressione dell'archivio comporta un calo delle prestazioni dell'indice rispetto agli indici columnstore compressi con un altro tipo di compressione.  Utilizzare la compressione dell'archivio solo quando è possibile concedere altro tempo e altre risorse della CPU per comprimere e recuperare i dati.  
   
  Il vantaggio che comportano prestazioni inferiori è un'archiviazione ridotta, utile per i dati a cui non si accede con frequenza. Se ad esempio si dispone di una partizione per ogni mese di dati e la maggior parte dell'attività è relativa ai mesi più recenti, è possibile archiviare i mesi precedenti per ridurre i requisiti di archiviazione.  
@@ -169,7 +169,7 @@ REBUILD PARTITION = ALL WITH (
   
 -   [Sys. Indexes &#40;Transact-SQL&#41; ](/sql/relational-databases/system-catalog-views/sys-indexes-transact-sql) - il `type` e `type_desc` colonne includono CLUSTERED COLUMNSTORE e NONCLUSTERED COLUMNSTORE.  
   
--   [Sys. Partitions &#40;Transact-SQL&#41; ](/sql/relational-databases/system-catalog-views/sys-partitions-transact-sql) : le `data_compression` e `data_compression_desc` colonne includono COLUMNSTORE e COLUMNSTORE_ARCHIVE.  
+-   [Sys. Partitions &#40;Transact-SQL&#41; ](/sql/relational-databases/system-catalog-views/sys-partitions-transact-sql) - il `data_compression` e `data_compression_desc` colonne includono COLUMNSTORE e COLUMNSTORE_ARCHIVE.  
   
  La procedura [sp_estimate_data_compression_savings &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql) non si applica agli indici columnstore.  
   

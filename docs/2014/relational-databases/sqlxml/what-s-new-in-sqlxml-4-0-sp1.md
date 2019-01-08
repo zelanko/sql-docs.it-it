@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - registry keys [SQLXML]
@@ -21,12 +19,12 @@ ms.assetid: 48f7720b-1705-402d-93ce-097ff1737877
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 52ac84652bf5f1141ab40b2bcf1b3091a3dcf7de
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8804132c280642ab4d79ee05417395c7ef9b5a76
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48204121"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53371233"
 ---
 # <a name="what39s-new-in-sqlxml-40-sp1"></a>Cosa&#39;s novità di SQLXML 4.0 SP1
   In [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQLXML 4.0 SP1 sono inclusi diversi aggiornamenti e miglioramenti. In questo argomento viene fornito un riepilogo degli aggiornamenti e vengono riportati i collegamenti a informazioni più dettagliate, se disponibili. In SQLXML 4.0 SP1 sono stati apportati ulteriori miglioramenti per supportare i nuovi tipi di dati introdotti in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]. Vengono inoltre presentati gli argomenti seguenti:  
@@ -50,7 +48,7 @@ ms.locfileid: "48204121"
 -   Problemi di migrazione  
   
 ## <a name="installing-sqlxml-40-sp1"></a>Installazione di SQLXML 4.0 SP1  
- Prima di [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], SQLXML 4.0 veniva rilasciato con SQL Server e apparteneva all'installazione predefinita di tutte le versioni di SQL Server, ad eccezione di SQL Server Express. A partire da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], la versione più recente di SQLXML (SQLXML 4.0 SP1) non è più inclusa in SQL Server. Per installare SQLXML 4.0 SP1, scaricarlo dal [Install Location for SQLXML 4.0 SP1](http://www.microsoft.com/download/details.aspx?id=30403).  
+ Prima di [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], SQLXML 4.0 veniva rilasciato con SQL Server e apparteneva all'installazione predefinita di tutte le versioni di SQL Server, ad eccezione di SQL Server Express. A partire da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], la versione più recente di SQLXML (SQLXML 4.0 SP1) non è più inclusa in SQL Server. Per installare SQLXML 4.0 SP1, scaricarlo dal [Install Location for SQLXML 4.0 SP1](https://www.microsoft.com/download/details.aspx?id=30403).  
   
  I file di SQLXML 4.0 SP1 vengono installati nel percorso seguente:  
   
@@ -68,7 +66,7 @@ ms.locfileid: "48204121"
  Il processo di installazione di SQLXML 4.0 non determina la rimozione dei file installati da versioni precedenti di SQLXML. È pertanto possibile che in un computer siano presenti le DLL relative a installazioni di diverse versioni di SQLXML. È possibile eseguire installazioni side-by-side. In SQLXML 4.0 sono inclusi sia i PROGID dipendenti sia quelli indipendenti dalla versione. Per tutte le applicazioni di produzione è consigliabile usare i PROGID dipendenti dalla versione.  
   
 ## <a name="sqlxml-40-sp1-and-msxml"></a>SQLXML 4.0 SP1 e MSXML  
- SQLXML 4.0 non prevede l'installazione di MSXML, ma l'utilizzo di MSXML 6.0, che viene installato insieme a [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] o versione successiva.  
+ SQLXML 4.0 non prevede l'installazione di MSXML, ma l'uso di MSXML 6.0, che viene installato insieme a [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] o versione successiva.  
   
 ## <a name="redistributing-sqlxml-40-sp1"></a>Ridistribuzione di SQLXML 4.0 SP1  
  Per distribuire SQLXML 4.0 SP1, usare il pacchetto del programma di installazione ridistribuibile. Un modo per installare più pacchetti in un'installazione che all'utente può sembrare singola consiste nell'usare la tecnologia del chainer e del programma di avvio automatico. Per altre informazioni, vedere Authoring a Custom Bootstrapper Package for Visual Studio 2005 e Aggiunta di prerequisiti personalizzati.  
@@ -96,7 +94,7 @@ ms.locfileid: "48204121"
 ## <a name="support-for-data-types-introduced-in-sql-server-2005-and-sql-server-2008"></a>Supporto per i tipi di dati introdotti in SQL Server 2005 e SQL Server 2008  
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] introdotto il `xml` tipo di dati e SQLXML 4.0 supporta il `xml` tipo di dati. Per altre informazioni, vedere [xml supporto dei tipi di dati in SQLXML 4.0](xml-data-type-support-in-sqlxml-4-0.md).  
   
- Per esempi relativi all'utilizzo del tipo di dati `xml` in SQLXML in caso di mapping di viste XML, di caricamento bulk XML o di esecuzione di updategram XML, fare riferimento agli esempi forniti negli argomenti seguenti.  
+ Per esempi relativi all'uso del tipo di dati `xml` in SQLXML in caso di mapping di viste XML, di caricamento bulk XML o di esecuzione di updategram XML, fare riferimento agli esempi forniti negli argomenti seguenti.  
   
 -   [Mapping predefinito degli attributi ed elementi XSD a tabelle e colonne](../sqlxml-annotated-xsd-schemas-using/default-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-4-0.md)  
   
@@ -146,7 +144,7 @@ ms.locfileid: "48204121"
   
      Questa chiave viene introdotta in modo che sia possibile scegliere di mantenere gli spazi vuoti nei dati. Se si aggiunge tale chiave del Registro di sistema e se ne imposta il valore su 0, gli spazi vuoti (LF, CR e TAB) nei dati XML vengono restituiti codificati nel caso di valori di attributi. Nel caso di valori di elementi, solo il carattere CR viene restituito codificato.  
   
-     Esempio:  
+     Ad esempio:  
   
     ```  
     CREATE TABLE T( Col1 int, Col2 nvarchar(100));  

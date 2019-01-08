@@ -1,19 +1,19 @@
 ---
-title: Installazione Standalone R Server o Machine Learning Server in SQL Server | Microsoft Docs
+title: Installazione Standalone R Server o Machine Learning Server - servizi di SQL Server Machine Learning
 description: Panoramica introduttiva alla versione autonoma di R Server e Machine Learning Server nel programma di installazione di SQL Server
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 10/01/2018
+ms.date: 12/18/2018
 ms.topic: overview
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 9cb0cecaef28d512cf36e694344e62b01df88ebf
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: f1cbc4a7c02597c6c8bece8c47976fabdb4959e7
+ms.sourcegitcommit: 0bb306da5374d726b1e681cd4b5459cb50d4a87a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51657500"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "53731978"
 ---
 # <a name="r-server-standalone-and-machine-learning-server-standalone-in-sql-server"></a>R Server (Standalone) e Machine Learning Server (Standalone) in SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -25,18 +25,18 @@ In SQL Server 2016, questa funzionalità è detta **R Server (Standalone)** ed �
 > [!Note]
 > Installato dal programma di installazione di SQL Server, è funzionalmente equivalente alle versioni non SQL personalizzata di un server autonomo [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server), che supportano gli stessi scenari utente, tra cui l'esecuzione remota, servizi web e l'operazionalizzazione e la raccolta completa di librerie di R e Python.
 
-## <a name="components"></a>Components
+## <a name="components"></a>Componenti
 
 SQL Server 2016 è solo R. SQL Server 2017 supporta R e Python. La tabella seguente descrive le funzionalità di ogni versione.
 
-| Componente | Description |
+| Componente | Descrizione |
 |-----------|-------------|
-| Pacchetti R | [**RevoScaleR** ](revoscaler-overview.md) è la libreria primaria per R scalabili con le funzioni per la manipolazione dei dati, trasformazione, visualizzazione e analisi.  <br/>[**MicrosoftML** ](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package) aggiunge algoritmi di machine learning per creare modelli personalizzati per l'analisi del sentiment, analisi delle immagini e analisi del testo. <br/>[**sqlRUtils** ](generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package.md) fornisce funzioni helper per l'inserimento di script R in una stored procedure T-SQL archiviate, la registrazione di una stored procedure con un database e l'esecuzione della stored procedure da un ambiente di sviluppo R.<br/>[**mrsdeploy** ](operationalization-with-mrsdeploy.md) offerte web distribuzione del servizio (in SQL Server 2017 solo). <br/>[**olapR** ](how-to-create-mdx-queries-using-olapr.md) di specificare le query MDX in R.|
+| Pacchetti R | [**RevoScaleR** ](ref-r-revoscaler.md) è la libreria primaria per R scalabili con le funzioni per la manipolazione dei dati, trasformazione, visualizzazione e analisi.  <br/>[**MicrosoftML** ](ref-r-microsoftml.md) aggiunge algoritmi di machine learning per creare modelli personalizzati per l'analisi del sentiment, analisi delle immagini e analisi del testo. <br/>[**sqlRUtils** ](ref-r-sqlrutils.md) fornisce funzioni helper per l'inserimento di script R in una stored procedure T-SQL archiviate, la registrazione di una stored procedure con un database e l'esecuzione della stored procedure da un ambiente di sviluppo R.<br/>[**mrsdeploy** ](operationalization-with-mrsdeploy.md) offerte web distribuzione del servizio (in SQL Server 2017 solo). <br/>[**olapR** ](ref-r-olapr.md) di specificare le query MDX in R.|
 | Microsoft R Open (MRO) | [**MRO** ](https://mran.microsoft.com/open) è distribuzione open source di Microsoft di R. Sono inclusi il pacchetto e dell'interprete. Usare sempre la versione di MRO in bundle nel programma di installazione. |
 | Strumenti R | Prompt dei comandi e le finestre della console R sono gli strumenti standard in una distribuzione di R. Trovare in \Programmi\Microsoft SQL Server\140\R_SERVER\bin\x64. |
 | Esempi di R e gli script |  Pacchetti open source di R e RevoScaleR includono set di dati incorporato in modo che è possibile creare ed eseguire lo script usando i dati pre-installati. La ricerca di essi in \Programmi\Microsoft SQL Server\140\R_SERVER\library\datasets e \library\RevoScaleR. |
-| Pacchetti Python | [**revoscalepy** ](../python/what-is-revoscalepy.md) è la libreria primaria per Python scalabile con funzioni di manipolazione dei dati, trasformazione, visualizzazione e analisi. <br/>[**microsoftml** ](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) aggiunge algoritmi di machine learning per creare modelli personalizzati per l'analisi del sentiment, analisi delle immagini e analisi del testo.  |
-| Strumenti Python | Lo strumento della riga di comando di Python predefinito è utile per test ad hoc e attività. Trovare lo strumento in \Programmi\Microsoft SQL Server\140\PYTHON_SERVER\python.exe. |
+| Pacchetti Python | [**revoscalepy** ](../python/ref-py-revoscalepy.md) è la libreria primaria per Python scalabile con funzioni di manipolazione dei dati, trasformazione, visualizzazione e analisi. <br/>[**microsoftml** ](../python/ref-py-microsoftml.md) aggiunge algoritmi di machine learning per creare modelli personalizzati per l'analisi del sentiment, analisi delle immagini e analisi del testo.  |
+| Strumenti Python | Lo strumento da riga di comando di Python predefinito è utile per test ad hoc e attività. Trovare lo strumento in \Programmi\Microsoft SQL Server\140\PYTHON_SERVER\python.exe. |
 | Anaconda | Anaconda è una distribuzione open source di Python e i pacchetti essenziali. |
 | Gli script ed esempi di Python | Come con R, Python include set di dati incorporato e gli script. Trovare i dati revoscalepy \Programmi\Microsoft SQL Server\140\PYTHON_SERVER\lib\site-packages\revoscalepy\data\sample-data. |
 | Modelli con training preliminare in R e Python | I modelli con training preliminare vengono creati per casi d'uso specifici e gestiti per il team di progettazione di analisi scientifica dei dati in Microsoft. È possibile usare i modelli con training preliminare come-consiste nell'assegnare un punteggio del sentiment negativo positivo in testo o funzionalità vengono rilevati in immagini usando nuovi input di dati fornito. I modelli con training preliminare sono supportati e utilizzabile in un server autonomo, ma non è possibile installarli tramite l'installazione di SQL Server. Per altre informazioni, vedere [Install pretrained modelli di machine learning in SQL Server](../install/sql-pretrained-models-install.md). |
@@ -71,15 +71,23 @@ In un server autonomo, è comune a lavorare in locale tramite una soluzione di s
 
 Scrivere script R o Python usando funzioni di RevoScaleR e revoscalepy di algoritmi di machine learning.
   
-  + [Esplorare R e in 25 funzioni RevoScaleR](https://docs.microsoft.com/machine-learning-server/r/tutorial-r-to-revoscaler): inizio con i comandi R di base e quindi lo stato di avanzamento per le funzioni analitiche distribuibili RevoScaleR che forniscono prestazioni elevate e scalabilità per le soluzioni R. Include versioni parallelizzabili di molti dei più diffusi pacchetti di modellazione R, tra cui clustering K-Means, alberi delle decisioni e foreste delle decisioni, nonché strumenti per la modifica dei dati.
+  + [Esplorare R e in 25 funzioni RevoScaleR](https://docs.microsoft.com/machine-learning-server/r/tutorial-r-to-revoscaler): Iniziare con i comandi R di base e quindi procedere con le funzioni analitiche distribuibili RevoScaleR che forniscono prestazioni elevate e scalabilità per le soluzioni R. Include versioni parallelizzabili di molti dei più diffusi pacchetti di modellazione R, tra cui clustering K-Means, alberi delle decisioni e foreste delle decisioni, nonché strumenti per la modifica dei dati.
 
-  + [Guida introduttiva: Un esempio di classificazione binaria con il pacchetto Python microsoftml](https://docs.microsoft.com/machine-learning-server/python/quickstart-binary-classification-with-microsoftml): creare un modello di classificazione binaria usando le funzioni di microsoftml e il set di dati noto esempio breast cancer.
+  + [Guida introduttiva: Un esempio di classificazione binaria con il pacchetto Python microsoftml](https://docs.microsoft.com/machine-learning-server/python/quickstart-binary-classification-with-microsoftml): Creare un modello di classificazione binaria usando le funzioni di microsoftml e il set di dati noto esempio breast cancer.
 
 Scegliere il linguaggio migliore per l'attività. R è ideale per i calcoli statistici difficili da implementare tramite SQL. Per le operazioni sui dati basata su set sfrutta la potenza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per ottenere prestazioni ottimali. Usare il motore di database in memoria per i calcoli molto veloci su colonne.
 
-### <a name="step-4-operationalize-your-solution"></a>Passaggio 4: Rendere operativa la soluzione
+### <a name="step-4-operationalize-your-solution"></a>Passaggio 4: Rendere operative le soluzioni
 
 Server autonomi è possono usare la [operazionalizzazione](https://docs.microsoft.com//machine-learning-server/what-is-operationalization) funzionalità del non-SQL-marchio [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server). È possibile configurare un server autonomo per l'operazionalizzazione, che offre questi vantaggi: distribuire e ospitare il codice come servizi web, Esegui la diagnostica, capacità del servizio web di test.
+
+### <a name="step-5-maintain-your-server"></a>Passaggio 5: Gestire il server
+
+SQL Server rilascia gli aggiornamenti cumulativi a intervalli regolari. Applicazione degli aggiornamenti cumulativi aggiunge miglioramenti funzionali e sicurezza per un'installazione esistente. 
+
+Sono disponibili le descrizioni delle funzionalità nuove o modificate nel [download di file CAB](../install/sql-ml-cab-downloads.md) articolo e nelle pagine web per [gli aggiornamenti cumulativi di SQL Server 2016](https://support.microsoft.com/help/3177312/sql-server-2016-build-versions) e [gli aggiornamenti cumulativi di SQL Server 2017 ](https://support.microsoft.com/help/4047329). 
+
+Per altre informazioni su come applicare gli aggiornamenti a un'istanza esistente, vedere [applicare gli aggiornamenti](../install/sql-machine-learning-standalone-windows-install.md#apply-cu) nelle istruzioni di installazione.
 
 ## <a name="see-also"></a>Vedere anche
 

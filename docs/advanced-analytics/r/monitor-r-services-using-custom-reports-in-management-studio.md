@@ -1,5 +1,5 @@
 ---
-title: Monitorare i servizi R con i report personalizzati in Management Studio | Documenti Microsoft
+title: Monitorare R Services tramite i report personalizzati in Management Studio - servizi di SQL Server Machine Learning
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/15/2018
@@ -7,25 +7,25 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 0e444612a5acd0726bdd6fb743e43813d6b0caf7
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 48c0912794f1aac0712a529f4cf8dde10735c9d8
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31201963"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53432604"
 ---
-# <a name="monitor-machine-learning-services-using-custom-reports-in-management-studio"></a>Monitoraggio Machine Learning Services utilizzando i report personalizzati in Management Studio
+# <a name="monitor-machine-learning-services-using-custom-reports-in-management-studio"></a>Monitorare Machine Learning Services con i report personalizzati in Management Studio
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Per rendere più facile da gestire istanza usato per machine learning, il team del prodotto ha fornito un numero di report personalizzato di esempio che è possibile aggiungere a SQL Server Management Studio. In questi rapporti, è possibile visualizzare i dettagli, ad esempio:
+Per renderlo più facile da gestire l'istanza usata per machine learning, il team del prodotto ha fornito un numero di report personalizzato di esempio che è possibile aggiungere a SQL Server Management Studio. In questi rapporti, è possibile visualizzare i dettagli, ad esempio:
 
-- Sessioni R Active o Python
+- Sessioni R attive o Python
 - Impostazioni di configurazione per l'istanza
 - Statistiche di esecuzione per i processi di machine learning
 - Eventi estesi per R Services
 - Pacchetti R o Python installati nell'istanza corrente
 
-In questo articolo viene illustrato come installare e utilizzare i report personalizzati forniti in modo specifico per leaerning macchina. 
+Questo articolo illustra come installare e usare i report personalizzati forniti in modo specifico per leaerning macchina. 
 
 Per un'introduzione generale a report in Management Studio, vedere [report personalizzati in Management Studio](../../ssms/object/custom-reports-in-management-studio.md).
 
@@ -44,7 +44,7 @@ Per usare questi report:
 
 1. Aprire il repository di GitHub che contiene [esempi del prodotto SQL Server](https://github.com/Microsoft/sql-server-samples)e scaricare i report di esempio. 
 
-    + [Report personalizzati di SQL Server Management Studio](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/machine-learning-services/ssms-custom-reports)
+    + [Report personalizzati SSMS](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/machine-learning-services/ssms-custom-reports)
 
     > [!NOTE]
     > I report possono essere utilizzati con SQL Server 2017 MCM Learning Services o SQL Server 2016 R Services.
@@ -74,42 +74,42 @@ Per usare questi report:
 
 ## <a name="report-list"></a>Elenco dei report
 
-Repository di esempi di prodotto in GitHub include attualmente i report seguenti:
+Il repository di esempi del prodotto in GitHub include attualmente i report seguenti:
 
 + **R Services - Sessioni attive**
 
-  Utilizzare questo report per visualizzare gli utenti che sono attualmente connessi per l'istanza di SQL Server e in esecuzione di machine learning i processi. 
+  Usare questo report per visualizzare gli utenti attualmente connessi per l'istanza di SQL Server e i processi di apprendimento automatico in esecuzione. 
   
 + **R Services - Configurazione**
 
-  Utilizzare questo report per visualizzare la configurazione del runtime di script esterni e i servizi correlati. Il report indica se è necessario un riavvio e verifica la disponibilità dei protocolli di rete necessari. 
+  Usare questo report per visualizzare la configurazione del runtime di script esterni e servizi correlati. Il report indica se è necessario un riavvio e verifica la disponibilità dei protocolli di rete necessari. 
   
-  Autenticazione implicita è necessaria per attività di machine learning in esecuzione in SQL Server come un contesto di calcolo. Per verificare che l'autenticazione implicita è configurato, il report viene verificata l'esistenza di un accesso al database per il gruppo SQLRUserGroup.
+  L'autenticazione implicita è necessario per attività di machine learning che vengono eseguiti in SQL Server come contesto di calcolo. Per verificare che l'autenticazione implicita è configurato, il report verifica se esiste un account di accesso per il gruppo SQLRUserGroup.
 
  + **R Services - Configurazione istanza** 
 
-   Questo report consentono di configurare l'apprendimento. È anche possibile eseguire questo report per correggere gli errori di configurazione, vedere il report precedente.
+   Questo report è previsto che consentono di configurare machine learning. È anche possibile eseguire questo report per correggere gli errori di configurazione disponibili in report precedente.
  
 + **R Services - Statistiche di esecuzione**
 
-  Utilizzare questo report per visualizzare le statistiche di esecuzione per i processi di machine learning. Ad esempio, è possibile ottenere il numero totale di script R che sono stati eseguiti, il numero di esecuzioni parallele e le funzioni RevoScaleR usate più di frequente. Fare clic su **Visualizza Script SQL** per ottenere il codice T-SQL completo dietro il report.
+  Usare questo report per visualizzare le statistiche di esecuzione per i processi di machine learning. Ad esempio, è possibile ottenere il numero totale di script R che sono stati eseguiti, il numero di esecuzioni parallele e le funzioni RevoScaleR usate più di frequente. Fare clic su **View SQL Script** per ottenere il codice T-SQL completo alla base di questo report.
 
   Attualmente il report controlla solo le statistiche per le funzioni di pacchetto RevoScaleR.
 
 + **R Services - Eventi estesi**
 
-  Utilizzare questo report per visualizzare un elenco degli eventi estesi sono disponibili per il monitoraggio delle attività correlate al runtime dello script esterno. Fare clic su **Visualizza Script SQL** per ottenere il codice T-SQL completo dietro il report.
+  Usare questo report per visualizzare un elenco degli eventi estesi sono disponibili per il monitoraggio delle attività correlate ai runtime dello script esterno. Fare clic su **View SQL Script** per ottenere il codice T-SQL completo alla base di questo report.
 
 + **R Services - Pacchetti**
 
-  Utilizzare questo report per visualizzare un elenco dei pacchetti R o Python installata nell'istanza di SQL Server.
+  Usare questo report per visualizzare un elenco dei pacchetti R o Python installata nell'istanza di SQL Server.
 
 + **R Services - Uso risorse**
 
-  Utilizzare questo report per visualizzare il consumo di risorse della CPU, memoria e i/o dall'esecuzione dello script esterno. È anche possibile visualizzare l'impostazione di memoria del pool di risorse esterno.
+  Usare questo report per visualizzare il consumo di risorse della CPU, memoria e i/o per l'esecuzione di script esterni. È anche possibile visualizzare l'impostazione di memoria del pool di risorse esterno.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Monitoraggio dei servizi](managing-and-monitoring-r-solutions.md)
+[Servizi di monitoraggio](managing-and-monitoring-r-solutions.md)
 
 [Eventi estesi per R Services](extended-events-for-sql-server-r-services.md)

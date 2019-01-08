@@ -14,12 +14,12 @@ ms.assetid: 6baee70f-848c-4e86-b20d-78875c0f82cb
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 20cc9df0fa7a52dfd92ea645eca289bd49860b97
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 21d788db62fe39b86eb801c028450c16cf845845
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48063321"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53355420"
 ---
 # <a name="availability-database-is-suspended"></a>Il database di disponibilità è sospeso
     
@@ -29,14 +29,14 @@ ms.locfileid: "48063321"
 |-|-|  
 |**Nome criteri**|Stato di sospensione del database di disponibilità|  
 |**Problema**|Database di disponibilità sospeso.|  
-|**Category**|**Avviso**|  
+|**Categoria**|**Avviso**|  
 |**Facet**|Database di disponibilità|  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>Descrizione  
  Questi criteri consentono di controllare lo stato di spostamento dei dati del database secondario, anche noto come "replica di database secondaria". I criteri sono in uno stato non integro se questo spostamento è sospeso. Altrimenti, sono in uno stato integro.  
   
 > [!NOTE]  
->  Per questa versione di [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], le informazioni sulle possibili cause e le soluzioni sono disponibili in [Il database di disponibilità è sospeso](http://go.microsoft.com/fwlink/p/?LinkId=220860) in TechNet Wiki.  
+>  Per questa versione di [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], le informazioni sulle possibili cause e le soluzioni sono disponibili in [Il database di disponibilità è sospeso](https://go.microsoft.com/fwlink/p/?LinkId=220860) in TechNet Wiki.  
   
 ## <a name="possible-causes"></a>Possibili cause  
  È probabile che la sincronizzazione dei dati in questo database di disponibilità sia stata sospesa per i motivi seguenti:  

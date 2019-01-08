@@ -1,7 +1,7 @@
 ---
 title: SQL Server Migration Assistant | Microsoft Docs
 ms.custom: ''
-ms.date: 09/30/2017
+ms.date: 01/04/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: ssma
@@ -10,12 +10,12 @@ ms.assetid: d0233525-a83b-4279-813e-c554042abd0e
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: a90d7bd53433bd0db027787cdcd83f53b8227804
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: a5cc32ab3579555bff85e4e18052bd0126372517
+ms.sourcegitcommit: d040bab6f826f0c37cd207a6c7cef04a8963c5d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51668401"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54031717"
 ---
 # <a name="sql-server-migration-assistant"></a>SQL Server Migration Assistant
 Microsoft SQL Server Migration Assistant (SSMA) è uno strumento progettato per automatizzare la migrazione del database a SQL Server da Microsoft Access, DB2, MySQL, Oracle e SAP ASE.  
@@ -42,9 +42,10 @@ Le versioni di destinazione seguenti sono supportate per SSMA.
 - SQL Server 2012
 - SQL Server 2014
 - SQL Server 2016
+- SQL Server 2017 in Windows e Linux
+- SQL Server, 2019 in Windows e Linux
 - Database SQL di Azure
-- SQL Server 2017 in Windows e Linux (anteprima)
-- * * Azure SQL Data Warehouse
+- Azure SQL Data Warehouse * *
 
 * * Questa destinazione è supportata solo da SSMA per Oracle.
  
@@ -60,7 +61,7 @@ Le versioni di destinazione seguenti sono supportate per SSMA.
   
 -   **Guida del prodotto** : per accedere al supporto del prodotto, avviare SSMA e selezionare il menu o premere il tasto F1.  
   
--   **Forum della community di SQL Server** : porre una domanda nella Community di SQL Server  
+-   **Forum della community di SQL Server** -porre una domanda nella Community di SQL Server  
   
     -   [Community di SQL Server](https://go.microsoft.com/fwlink/?LinkId=42455) -newsgroup e forum monitorati dalla community di SQL Server. Questo sito elenca inoltre le fonti di informazione della community, ad esempio blog e siti Web.  
   
@@ -70,7 +71,7 @@ Le versioni di destinazione seguenti sono supportate per SSMA.
   
 -   Supporto tecnico Premier - se si dispone di un contratto Premier, è possibile ottenere Premier supportano sul [portale Premier Online](https://premier.microsoft.com/).  
   
--   Servizi – per partner di consulenza assistito le migrazioni, passare il [portale per Partner](https://www.platformmodernization.org/Pages/default.aspx).  
+-   Servizi di consulenza - per partner assistito le migrazioni, passare il [portale per Partner](https://www.platformmodernization.org/Pages/default.aspx).  
   
 ## <a name="legal-notice-ssma"></a>Note legali su SSMA  
 La presente documentazione, incluse le applicazioni di esempio in essa contenute, viene fornita a scopo esclusivamente informativo e senza alcuna garanzia, espressa o implicita. Le informazioni contenute nella presente documentazione, compresi indirizzi URL e altri riferimenti a siti Web Internet, sono soggette a modifiche senza preavviso. L'utente utilizza la presente documentazione a proprio rischio.  
@@ -81,7 +82,7 @@ Se non diversamente specificato, ad aziende, organizzazioni, prodotti, nomi di d
   
 Microsoft può essere titolare di brevetti, domande di brevetto, marchi, copyright o altri diritti di proprietà intellettuale relativi all'oggetto della presente documentazione. Salvo quanto espressamente previsto in un contratto scritto di licenza Microsoft, la consegna della presente documentazione non implica la concessione di alcuna licenza su tali brevetti, marchi, copyright o altra proprietà intellettuale.  
   
-© 2017 Microsoft Corporation. Tutti i diritti sono riservati.  
+© Microsoft Corporation. 2019. Tutti i diritti sono riservati.  
   
 Microsoft, Windows, Windows NT, Windows Server, Active Directory, ActiveX, BackOffice, bCentral, BizTalk, DirectX, Excel, Hotmail, IntelliSense, J/Direct, Jscript, Microsoft Press, MSDN, MS-DOS, Outlook, PivotChart, PivotTable, PowerPoint, SharePoint, SQL Server, Visual Basic, Visual C#, Visual C++, Visual FoxPro, Visual InterDev, Visual J#, Visual J++, Visual SourceSafe, Visual Studio, Win32, Win32s, Windows Mobile, Windows Server System e WinFX sono marchi o marchi registrati di Microsoft Corporation negli Stati Uniti e/o in altri paesi/aree geografiche.  
   
@@ -90,7 +91,7 @@ SAP NetWeaver è un marchio registrato di SAP AG in Germania e in altri paesi/ar
 Altri nomi di prodotti e società citati nel presente documento sono marchi dei rispettivi proprietari.  
   
 ## <a name="documentation-policy-for-sql-server-support-and-upgrade"></a>Criteri relativi alla documentazione per il supporto e l'aggiornamento di SQL Server  
-Il contenuto visualizzato nella documentazione di SQL Server viene pubblicato solo dopo sufficienti test. La documentazione del prodotto, ossia la documentazione online di SQL Server, i file leggimi, i documenti sui problemi noti e gli articoli della Knowledge Base, contiene contenuti relativi alle caratteristiche e alle funzionalità di SQL Server sufficientemente solidi da poter essere usati da tutti i clienti. Tali criteri si applicano alla documentazione di SQL Server, inclusi i file leggimi relativi a versioni e Service Pack. I file leggimi sono considerati estensioni della documentazione online.  
+Il contenuto visualizzato nella documentazione di SQL Server viene pubblicato solo dopo sufficienti test. Documentazione del prodotto - documentazione Online di SQL Server, file Leggimi, documenti su problemi noti e articoli della Knowledge Base - contiene contenuti relativi alle funzionalità di SQL Server e le funzionalità che è sufficientemente solidi da poter essere usati da tutti i clienti. Tali criteri si applicano alla documentazione di SQL Server, inclusi i file leggimi relativi a versioni e Service Pack. I file leggimi sono considerati estensioni della documentazione online.  
   
 In alcuni casi, una determinata funzionalità non può essere usata direttamente dai clienti e, pertanto, non è stata documentata. A meno che una funzionalità non venga descritta anche nella documentazione di SQL Server pubblicata da Microsoft, il contenuto della documentazione o di siti Web di terze parti non è supportato dall'assistenza clienti Microsoft e non deve essere usato in applicazioni o database di produzione.  
   

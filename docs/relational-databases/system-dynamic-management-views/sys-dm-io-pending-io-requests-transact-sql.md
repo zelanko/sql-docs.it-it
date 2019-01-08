@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bd497cc466d7dfb11e471be2472b7d7b8bf534fd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 71fb4daabcdb0eef03e615f595df20d555673a24
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47764779"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980207"
 ---
 # <a name="sysdmiopendingiorequests-transact-sql"></a>sys.dm_io_pending_io_requests (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -36,17 +36,18 @@ ms.locfileid: "47764779"
 > [!NOTE]  
 >  Per chiamare questo elemento dal [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] oppure [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], usare il nome **sys.dm_pdw_nodes_io_pending_io_requests**.  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**io_completion_request_address**|**varbinary(8)**|Indirizzo di memoria della richiesta di I/O. Non ammette i valori Null.|  
-|**io_type**|**varchar(7)**|Tipo di richiesta di I/O in sospeso. Non ammette i valori Null.|  
+|**io_type**|**nvarchar(60)**|Tipo di richiesta di I/O in sospeso. Non ammette i valori Null.|  
+|**io_pending_ms_ticks**|**bigint**|Solo per uso interno. Non ammette i valori Null.| 
 |**io_pending**|**int**|Indica se la richiesta di I/O è in sospeso o è stata completata da Windows. Una richiesta di I/O può essere ancora in sospeso anche quando Windows ha completato la richiesta, ma [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non ha ancora eseguito uno scambio di contesto per l'elaborazione della richiesta di I/O e la relativa rimozione dall'elenco. Non ammette i valori Null.|  
 |**io_completion_routine_address**|**varbinary(8)**|Funzione interna da chiamare quando la richiesta di I/O viene completata. Ammette i valori Null.|  
 |**io_user_data_address**|**varbinary(8)**|Solo per uso interno. Ammette i valori Null.|  
 |**scheduler_address**|**varbinary(8)**|Utilità di pianificazione sulla quale è stata eseguita la richiesta di I/O. La richiesta di I/O verrà visualizzata nell'elenco delle richieste di I/O in sospeso dell'utilità di pianificazione. Per altre informazioni, vedere [DM os_schedulers &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql.md). Non ammette i valori Null.|  
 |**io_handle**|**varbinary(8)**|Handle di file utilizzato nella richiesta di I/O. Ammette i valori Null.|  
 |**io_offset**|**bigint**|Offset della richiesta di I/O. Non ammette i valori Null.|  
-|**io_pending_ms_ticks**|**int**|Solo per uso interno. Non ammette i valori Null.|  
+|**io_handle_path**|**nvarchar(256)**| Percorso del file che viene usato nella richiesta dei / o. Ammette i valori Null.|
 |**pdw_node_id**|**int**|**Si applica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> L'identificatore per il nodo in questa distribuzione.|  
   
 ## <a name="permissions"></a>Permissions  

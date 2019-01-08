@@ -17,12 +17,12 @@ ms.assetid: 549c40c4-d33d-46c2-9d6a-7bbb671ac67a
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: e52587b68562ec46ed21ff575ade32014d231b93
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ac6f62a09e04aa589121864a789423e428a25511
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48097301"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53362673"
 ---
 # <a name="using-a-notification-class-for-a-delivery-extension"></a>Utilizzo della classe Notification per un'estensione per il recapito
   La classe <xref:Microsoft.ReportingServices.Interfaces.Notification> si trova nello spazio dei nomi <xref:Microsoft.ReportingServices.Interfaces> e rappresenta le informazioni sulla sottoscrizione utilizzate dalle estensioni per il recapito per recapitare i report. La classe <xref:Microsoft.ReportingServices.Interfaces.Notification> fornisce numerose proprietà che possono essere utilizzate per eseguire il rendering dei report per il recapito, determinare lo stato della notifica e impostare i dati degli utenti.  
@@ -34,7 +34,7 @@ La notifica rappresenta l'oggetto centrale di qualsiasi tipo di recapito
   
  L'oggetto <xref:Microsoft.ReportingServices.Interfaces.Notification> viene passato al metodo <xref:Microsoft.ReportingServices.Interfaces.IDeliveryExtension.Deliver%2A> dell'estensione per il recapito. Il metodo <xref:Microsoft.ReportingServices.Interfaces.IDeliveryExtension.Deliver%2A> deve contenere codice specifico per l'elaborazione della notifica e il recapito del report.  
   
- Per un esempio su come usare la classe <xref:Microsoft.ReportingServices.Interfaces.Notification>, vedere [ Esempi del prodotto Reporting Services](http://go.microsoft.com/fwlink/?LinkId=177889).  
+ Per un esempio su come usare la classe <xref:Microsoft.ReportingServices.Interfaces.Notification>, vedere [ Esempi del prodotto Reporting Services](https://go.microsoft.com/fwlink/?LinkId=177889).  
   
 ## <a name="retry-functionality"></a>Funzionalità di ripetizione dei tentativi  
  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] consente di creare una coda di tentativi per le notifiche che non possono essere recapitate immediatamente. Dopo che il server di report richiama il metodo <xref:Microsoft.ReportingServices.Interfaces.IDeliveryExtension.Deliver%2A> di un'estensione per il recapito, l'estensione può richiedere che il server di report esegua un nuovo tentativo di recapito in un momento successivo. Se questo si verifica, il server di report inserisce la notifica in una coda interna ed esegue un nuovo tentativo di recapito dopo che è trascorso un determinato intervallo di tempo. Gli amministratori possono configurare il numero massimo di tentativi eseguiti dal server di report e l'intervallo tra i tentativi nella sezione dell'estensione per il recapito del file RSReportServer.config usando l'elemento XML **MaxNumberOfRetries** e l'elemento XML **PeriodBetweenRetries**. Le notifiche vengono rimosse dalla coda di tentativi se in un secondo momento il recapito ha esito positivo o se viene raggiunto il numero massimo di tentativi. Se non è possibile effettuare il recapito dopo il numero massimo di tentativi, la notifica viene eliminata.  

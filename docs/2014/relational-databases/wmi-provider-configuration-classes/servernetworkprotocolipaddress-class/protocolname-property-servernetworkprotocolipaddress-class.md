@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: wmi
 ms.topic: reference
 api_name:
 - ProtocolName Property (ServerNetworkProtocolIPAddress Class)
@@ -20,12 +18,12 @@ ms.assetid: 74a52449-e08d-40f9-9e79-7114137e43cf
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: e0ab8fa8cef3078648525dc01733b1f9928e71e8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6b750e435ab31fae25877cd6c53702aeeec2670d
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48106373"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53366400"
 ---
 # <a name="protocolname-property-servernetworkprotocolipaddress-class"></a>Proprietà ProtocolName (classe ServerNetworkProtocolIPAddress)
   Ottiene il nome del protocollo di rete del server che fa riferimento all'indirizzo IP.  
@@ -48,6 +46,6 @@ object
 ## <a name="remarks"></a>Note  
   
 ## <a name="see-also"></a>Vedere anche  
- [Configurazione di protocolli di rete Server e le librerie di rete](http://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+ [Configurazione di protocolli di rete Server e le librerie di rete](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

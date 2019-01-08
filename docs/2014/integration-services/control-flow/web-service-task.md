@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.webservicetask.f1
@@ -15,12 +14,12 @@ ms.assetid: 5c7206f1-7d6a-4923-8dff-3c4912da4157
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6a83900ff92611778bb5b71574a7e98ce5e6df18
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ee28bbfa3cea482f934b3491f51e0caf601f5465
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189187"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53363163"
 ---
 # <a name="web-service-task"></a>Attività Servizio Web
   L'attività Servizio Web esegue un metodo di servizio Web. È possibile utilizzare l'attività Servizio Web per gli scopi seguenti:  
@@ -54,7 +53,7 @@ ms.locfileid: "48189187"
 ## <a name="custom-logging-messages-available-on-the-web-service-task"></a>Messaggi di registrazione personalizzati disponibili nell'attività Servizio Web  
  Nella tabella seguente sono elencate le voci di log personalizzate che è possibile attivare per l'attività Servizio Web. Per altre informazioni, vedere [Registrazione di Integration Services &#40;SSIS&#41;](../performance/integration-services-ssis-logging.md) e [Messaggi personalizzati per la registrazione](../custom-messages-for-logging.md).  
   
-|Voce di log|Description|  
+|Voce di log|Descrizione|  
 |---------------|-----------------|  
 |`WSTaskBegin`|Indica che l'attività ha iniziato ad accedere a un servizio Web.|  
 |`WSTaskEnd`|Indica che l'attività ha completato un metodo per il servizio Web.|  
@@ -83,8 +82,8 @@ ms.locfileid: "48189187"
 -   <xref:Microsoft.SqlServer.Dts.Tasks.WebServiceTask.WebServiceTask>  
   
 ## <a name="related-content"></a>Contenuto correlato  
- Video sulla [Procedura: Chiamata a un servizio Web tramite l'attività Servizio Web (video di SQL Server)](http://go.microsoft.com/fwlink/?LinkId=259642) sul sito technet.microsoft.com.  
+ Video, [come: Chiamare un servizio Web usando l'attività servizio Web (Video di SQL Server)](https://go.microsoft.com/fwlink/?LinkId=259642), sul sito Web technet.microsoft.com.  
   
- Risposta curata relativa all' [uso dei servizi Web in SSIS tramite script](http://go.microsoft.com/fwlink/?LinkId=321996)su curatedviews.cloudapp.net.  
+ Risposta curata relativa all' [uso dei servizi Web in SSIS tramite script](https://go.microsoft.com/fwlink/?LinkId=321996)su curatedviews.cloudapp.net.  
   
   

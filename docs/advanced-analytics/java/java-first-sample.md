@@ -1,6 +1,6 @@
 ---
-title: Estensione del linguaggio Java in SQL Server 2019 | Microsoft Docs
-description: Eseguire codice Java usando l'estensione del linguaggio Java di SQL Server 2019.
+title: Esempio di Java e un'esercitazione per SQL Server 2019 - servizi di SQL Server Machine Learning
+description: Eseguire il codice di esempio Java in SQL Server 2019 per informazioni sui passaggi per usare l'estensione del linguaggio Java con dati di SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 09/24/2018
@@ -9,12 +9,12 @@ author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: bf6fec32e28342e355b3393bb531ad1833d8af6b
-ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
+ms.openlocfilehash: 32c0792882020612c40a0c41b1c54aaeb51da91c
+ms.sourcegitcommit: 15b780aa5abe3f42cd70b6edf7d5a645e990b618
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46715317"
+ms.lasthandoff: 01/07/2019
+ms.locfileid: "54069058"
 ---
 # <a name="sql-server-java-sample-walkthrough"></a>Procedura dettagliata di esempio Java di SQL Server
 

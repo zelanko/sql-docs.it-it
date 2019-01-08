@@ -1,5 +1,5 @@
 ---
-title: 'Esempio: specifica della direttiva HIDE | Microsoft Docs'
+title: 'Esempio: Specifica della direttiva HIDE | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,14 +12,14 @@ ms.assetid: 87504d87-1cbd-412a-9041-47884b6efcec
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0c5011cac861d941e46495a2b3d6669c5bf1fdc4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 26c71a7012cb69a50bf7d3d7223b35aedcfcc570
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48179641"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53357097"
 ---
-# <a name="example-specifying-the-hide-directive"></a>Esempio: specifica della direttiva HIDE
+# <a name="example-specifying-the-hide-directive"></a>Esempio: Specifica della direttiva HIDE
   Nell'esempio seguente viene illustrato l'utilizzo della direttiva **HIDE** . Questa direttiva si rivela utile quando si desidera la restituzione di un attributo in base al quale ordinare le righe nella tabella universale restituita dalla query, ma non si desidera che tale attributo venga visualizzato nel documento XML finale.  
   
  La query genera il codice XML seguente:  
@@ -55,10 +55,10 @@ SELECT  2 as Tag,
         ProductModelID,  
         Name,  
         CatalogDescription.value('  
-         declare namespace PD="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
+         declare namespace PD="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
        (/PD:ProductDescription/@ProductModelID)[1]', 'int'),  
         CatalogDescription.query('  
-         declare namespace pd="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
+         declare namespace pd="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
          /pd:ProductDescription/pd:Summary')  
 FROM    Production.ProductModel  
 WHERE   CatalogDescription is not null  
@@ -67,13 +67,13 @@ FOR XML EXPLICIT
 go  
 ```  
   
- Risultato:  
+ Questo è il risultato:  
   
 ```  
 <ProductModel ProdModelID="19" Name="Mountain-100">  
   <Summary>  
     <SummaryDescription>  
-      <pd:Summary xmlns:pd="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription" xmlns="">  
+      <pd:Summary xmlns:pd="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription" xmlns="">  
         <p1:p xmlns:p1="http://www.w3.org/1999/xhtml">Our top-of-the-line competition mountain bike. Performance-enhancing options include the innovative HL Frame, super-smooth front suspension, and traction for all terrain. </p1:p>  
       </pd:Summary>  
     </SummaryDescription>  

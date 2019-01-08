@@ -16,17 +16,17 @@ ms.assetid: d8205653-93dd-4599-8cdf-f9199074025f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6afb64b852ac6050a2705c1c4d7da7d2d9b52f1a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c40d22c19f8398ef9499cb23c80ab80dab16b5b4
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48059451"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53353218"
 ---
 # <a name="access-filestream-data-with-opensqlfilestream"></a>Accesso ai dati FILESTREAM con OpenSqlFilestream
-  L'API OpenSqlFilestream Ottiene un handle di file compatibile con Win32 per un oggetto binario FILESTREAM grandi dimensioni (BLOB) che viene archiviato nel file system. L'handle può essere passato a una qualsiasi delle API Win32 seguenti: [ReadFile](http://go.microsoft.com/fwlink/?LinkId=86422), [WriteFile](http://go.microsoft.com/fwlink/?LinkId=86423), [TransmitFile](http://go.microsoft.com/fwlink/?LinkId=86424), [SetFilePointer](http://go.microsoft.com/fwlink/?LinkId=86425), [SetEndOfFile](http://go.microsoft.com/fwlink/?LinkId=86426)o [FlushFileBuffers](http://go.microsoft.com/fwlink/?LinkId=86427). Se si passa questo handle a qualsiasi altra API Win32, viene restituito l'errore ERROR_ACCESS_DENIED. L'handle deve essere chiuso passandolo all'API [CloseHandle](http://go.microsoft.com/fwlink/?LinkId=86428) Win32 prima che venga eseguito il commit o il rollback della transazione. La mancata chiusura dell'handle provoca perdite di risorse sul lato server.  
+  L'API OpenSqlFilestream Ottiene un handle di file compatibile con Win32 per un oggetto binario FILESTREAM grandi dimensioni (BLOB) che viene archiviato nel file system. L'handle può essere passato a una delle API Win32 seguenti: [ReadFile](https://go.microsoft.com/fwlink/?LinkId=86422), [WriteFile](https://go.microsoft.com/fwlink/?LinkId=86423), [TransmitFile](https://go.microsoft.com/fwlink/?LinkId=86424), [SetFilePointer](https://go.microsoft.com/fwlink/?LinkId=86425), [SetEndOfFile](https://go.microsoft.com/fwlink/?LinkId=86426), o [ FlushFileBuffers](https://go.microsoft.com/fwlink/?LinkId=86427). Se si passa questo handle a qualsiasi altra API Win32, viene restituito l'errore ERROR_ACCESS_DENIED. L'handle deve essere chiuso passandolo all'API [CloseHandle](https://go.microsoft.com/fwlink/?LinkId=86428) Win32 prima che venga eseguito il commit o il rollback della transazione. La mancata chiusura dell'handle provoca perdite di risorse sul lato server.  
   
- Tutti gli accessi di contenitore di dati FILESTREAM devono essere eseguito un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] delle transazioni. [!INCLUDE[tsql](../../includes/tsql-md.md)] Anche le istruzioni possono essere eseguite nella stessa transazione. In questo modo viene mantenuta la coerenza tra i dati SQL e dati BLOB FILESTREAM.  
+ L'accesso al contenitore di tutti i dati FILESTREAM deve essere eseguito in una transazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . [!INCLUDE[tsql](../../includes/tsql-md.md)] Anche le istruzioni possono essere eseguite nella stessa transazione. In questo modo viene mantenuta la coerenza tra i dati SQL e dati BLOB FILESTREAM.  
   
  Per accedere al BLOB FILESTREAM usando Win32, è necessario abilitare l' [autorizzazione Windows](../security/choose-an-authentication-mode.md) .  
   
@@ -51,9 +51,9 @@ ULONGOpenOptions,LPBYTEFilestreamTransactionContext,SIZE_TFilestreamTransactionC
  [in] È il `nvarchar(max)` percorso restituito dal [PathName](/sql/relational-databases/system-functions/pathname-transact-sql) (funzione). La funzione PathName deve essere chiamata dal contesto di un account che dispone dell'autorizzazione SELECT o UPDATE di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per la tabella e la colonna FILESTREAM.  
   
  *DesiredAccess*  
- [in] Imposta la modalità utilizzata per accedere ai dati BLOB FILESTREAM. Questo valore viene passato alla [funzione DeviceIoControl](http://go.microsoft.com/fwlink/?LinkId=105527).  
+ [in] Imposta la modalità utilizzata per accedere ai dati BLOB FILESTREAM. Questo valore viene passato alla [funzione DeviceIoControl](https://go.microsoft.com/fwlink/?LinkId=105527).  
   
-|nome|valore|Significato|  
+|nome|Value|Significato|  
 |----------|-----------|-------------|  
 |SQL_FILESTREAM_READ|0|I dati possono essere letti dal file.|  
 |SQL_FILESTREAM_WRITE|1|I dati possono essere scritti nel file.|  
@@ -65,7 +65,7 @@ ULONGOpenOptions,LPBYTEFilestreamTransactionContext,SIZE_TFilestreamTransactionC
  *OpenOptions*  
  [in] Attributi e flag del file. Questo parametro può includere inoltre qualsiasi combinazione dei flag seguenti.  
   
-|Flag|valore|Significato|  
+|Flag|Value|Significato|  
 |----------|-----------|-------------|  
 |SQL_FILESTREAM_OPEN_NONE|0x00000000:|Il file è aperto o creato senza opzioni speciali.|  
 |SQL_FILESTREAM_OPEN_FLAG_ASYNC|0x00000001L|Il file è aperto o creato per gli I/O asincroni.|  
@@ -78,7 +78,7 @@ ULONGOpenOptions,LPBYTEFilestreamTransactionContext,SIZE_TFilestreamTransactionC
  [in] Valore restituito dalla funzione [GET_FILESTREAM_TRANSACTION_CONTEXT](/sql/t-sql/functions/get-filestream-transaction-context-transact-sql) .  
   
  *FilestreamTransactionContextLength*  
- [in] Numero di byte nei `varbinary(max)` dati restituiti dalla funzione GET_FILESTREAM_TRANSACTION_CONTEXT. La funzione restituisce una matrice di N byte. Il valore N è determinato dalla funzione e costituisce una proprietà della matrice di byte restituita.  
+ [in] Numero di byte nei dati `varbinary(max)` restituiti dalla funzione GET_FILESTREAM_TRANSACTION_CONTEXT. La funzione restituisce una matrice di N byte. Il valore N è determinato dalla funzione e costituisce una proprietà della matrice di byte restituita.  
   
  *AllocationSize*  
  [in] Specifica le dimensioni dell'allocazione iniziale del file di dati in byte. In modalità di lettura viene ignorato. Questo parametro può essere Null nel caso in cui venga utilizzato il comportamento del file system predefinito.  

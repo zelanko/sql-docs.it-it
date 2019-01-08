@@ -11,12 +11,12 @@ ms.assetid: b5cd35e0-3d8f-4784-9172-93d60c730321
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c52425d05f7e9acf8ea5468dff21f17aaf30ebe4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 1f753856fbec3fe521cf23e6506c3b43e5dec481
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48163681"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53358903"
 ---
 # <a name="create-and-customize-powerpivot-gallery"></a>Creare e personalizzare la raccolta PowerPivot
   La raccolta PowerPivot è un tipo particolare di raccolta documenti di SharePoint tramite cui vengono fornite un'anteprima dettagliata e la gestione dei documenti per cartelle di lavoro pubblicate di Excel e per report di Reporting Services contenenti dati PowerPivot.  
@@ -43,7 +43,7 @@ ms.locfileid: "48163681"
     >  Con la raccolta di Power Pivot è richiesto Microsoft Silverlight.  Il browser Microsoft Edge non supporta Silverlight.   
     > Per visualizzare il contenuto della raccolta in Microsoft Edge, fare clic sulla scheda **Raccolta** nella raccolta di Power Pivot e quindi impostare la visualizzazione della raccolta documenti su **Tutti i documenti**.    
     > Per cambiare la visualizzazione predefinita, fare clic sulla scheda **Raccolta** e quindi scegliere Modifica visualizzazione. Fare clic su "Imposta come visualizzazione predefinita" e quindi su OK per salvare la visualizzazione predefinita.  
-    >  Per altre informazioni sulle funzionalità supportate in Microsoft Edge, vedere il post di blog di Windows sulle [differenze tra Microsoft Edge e i browser precedenti e sul supporto di ActiveX, VBScript e altri componenti](http://blogs.windows.com/msedgedev/2015/05/06/a-break-from-the-past-part-2-saying-goodbye-to-activex-vbscript-attachevent/).  
+    >  Per altre informazioni su funzionalità supportate di Edge, vedere il blog di Windows, [un'interruzione passata, parte 2: Dire addio ActiveX, VBScript...](http://blogs.windows.com/msedgedev/2015/05/06/a-break-from-the-past-part-2-saying-goodbye-to-activex-vbscript-attachevent/)  
   
 -   Per creare una raccolta, è necessario essere proprietari del sito.  
   
@@ -65,13 +65,13 @@ ms.locfileid: "48163681"
 ##  <a name="createlib"></a> Creare la raccolta PowerPivot  
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] viene creata durante l'installazione di [!INCLUDE[ssGeminiLong](../../includes/ssgeminilong-md.md)] tramite l'opzione di installazione Nuovo server. Se è stato aggiunto [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] a una farm esistente o si desidera una raccolta aggiuntiva, è possibile crearne una nuova per l'applicazione o il sito.  
   
-1.  1.  **SharePoint 2010**: fare clic su **Azioni sito** nell'angolo superiore sinistro della home page del sito.  
+1.  1.  **SharePoint 2010**: Fare clic su **Azioni sito** nell'angolo superiore sinistro della home page del sito.  
   
     2.  Fare clic su **Altre opzioni**.  
   
     3.  In Raccolte fare clic su **Raccolta PowerPivot**.  
   
-    1.  **SharePoint 2013**: fare clic sull'icona delle impostazioni ![impostazioni SharePoint](../media/as-sharepoint2013-settings-gear.gif "impostazioni SharePoint"). Fare clic su **Contenuto sito**.  
+    1.  **SharePoint 2013**: Fare clic sull'icona delle impostazioni ![impostazioni SharePoint](../media/as-sharepoint2013-settings-gear.gif "impostazioni SharePoint"). Fare clic su **Contenuto sito**.  
   
     2.  Fare clic su **Aggiungi applicazione**.  
   
@@ -105,9 +105,9 @@ ms.locfileid: "48163681"
   
 2.  Nella barra multifunzione fare clic su **Raccolta**.  
   
-3.  **SharePoint 2010:** in Visualizzazioni personalizzate fare clic su **Modifica visualizzazione**.  
+3.  **SharePoint 2010:** In visualizzazioni personalizzate fare clic su **Modifica visualizzazione**.  
   
-     **SharePoint 2013:** in **Gestisci visualizzazioni**fare clic su **Modifica visualizzazione**.  
+     **SharePoint 2013:** Nelle **Gestisci visualizzazioni**, fare clic su **Modifica visualizzazione**.  
   
 4.  In Ordinamento specificare i criteri che verranno usati per determinare la modalità di visualizzazione delle cartelle di lavoro nell'elenco. Per impostazione predefinita, i documenti vengono elencati nell'ordine in cui sono stati aggiunti.  
   
@@ -122,9 +122,9 @@ ms.locfileid: "48163681"
   
  ![as_powerpivot_refresh_manage_reresh](../media/as-powerpivot-refresh-manage-reresh.gif "as_powerpivot_refresh_manage_reresh")  
   
- Gli autori o i proprietari delle cartelle di lavoro devono disporre dell'autorizzazione **Collaborazione** per pianificare l'aggiornamento dati in una cartella di lavoro. Gli utenti che dispongono di autorizzazioni di collaborazione possono aprire e modificare la pagina di configurazione dell'aggiornamento dati della cartella di lavoro per specificare le credenziali e le informazioni di pianificazione usate per aggiornare i dati.  
+ Gli autori o i proprietari delle cartelle di lavoro devono disporre dell'autorizzazione **Collaborazione** per pianificare l'aggiornamento dati in una cartella di lavoro. Gli utenti con autorizzazioni di collaborazione possono aprire e modificare pagina Configurazione dell'aggiornamento dati della cartella di lavoro per specificare le credenziali e le informazioni utilizzate per aggiornare i dati di pianificazione.  
   
- Pertanto, gli utenti che dispongono unicamente di livelli di autorizzazione di **visualizzazione** o **lettura** non possono accedere al pulsante Aggiorna. Il pulsante Aggiorna è visibile ma disabilitato. Per altre informazioni, vedere [Autorizzazioni utente e livelli di autorizzazione in SharePoint 2013](http://technet.microsoft.com/library/cc721640.aspx).  
+ Pertanto, gli utenti che dispongono unicamente di livelli di autorizzazione di **visualizzazione** o **lettura** non possono accedere al pulsante Aggiorna. Il pulsante Aggiorna è visibile ma disabilitato. Per altre informazioni, vedere [Autorizzazioni utente e livelli di autorizzazione in SharePoint 2013](https://technet.microsoft.com/library/cc721640.aspx).  
   
 ##  <a name="switch"></a> Passare alla vista teatro o alla vista raccolta  
  L'anteprima varia a seconda della configurazione della vista della raccolta. Nella vista Raccolta è possibile passare il puntatore del mouse sui singoli fogli di lavoro nella cartella di lavoro per rendere un foglio attivo nell'area di anteprima.  

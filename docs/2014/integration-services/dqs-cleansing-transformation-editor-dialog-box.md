@@ -14,12 +14,12 @@ ms.assetid: 07e79641-71ee-45d0-a9ba-ed6f9f68f333
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b262cea6362c1f6cb3c69c8b9e96e2bb09aa3e14
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0de01fcb7f694331eb9ab4df33429f9a32ee1308
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48062469"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53978417"
 ---
 # <a name="dqs-cleansing-transformation-editor-dialog-box"></a>Finestra di dialogo Editor trasformazione DQS Cleansing
   Usare la finestra di dialogo **Editor trasformazione DQS Cleansing** per correggere dati usando Data Quality Services (DQS). Per altre informazioni, vedere [Concetti di Data Quality Services](../../2014/data-quality-services/data-quality-services-concepts.md).  
@@ -55,7 +55,7 @@ ms.locfileid: "48062469"
  Selezionare una Knowledge Base DQS esistente per l'origine dati connessa. Per altre informazioni sulla Knowledge Base DQS, vedere [Knowledge Base e domini DQS](../../2014/data-quality-services/dqs-knowledge-bases-and-domains.md).  
   
  **Crittografia connessione**  
- Consente di specificare se crittografare la connessione, per crittografare il trasferimento dei dati tra il Server DQS e [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
+ specificare se crittografare la connessione, per crittografare il trasferimento dei dati tra il Server DQS e [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
   
  **Domini disponibili**  
  Consente di elencare i domini disponibili per la Knowledge Base selezionata. Esistono due tipi di domini, cioè singoli e composti. In questi ultimi sono contenuti due o più domini singoli.  
@@ -69,7 +69,7 @@ ms.locfileid: "48062469"
   
  Di seguito sono riportati i valori validi:  
   
--   **Interrompi componente**: indica che la trasformazione ha esito negativo e che i dati di input non vengono inseriti nel database Data Quality Services. Si tratta del valore predefinito.  
+-   **Interrompi componente**: indica che la trasformazione ha esito negativo e che i dati di input non vengono inseriti nel database Data Quality Services. Rappresenta il valore predefinito.  
   
 -   **Reindirizza riga**: indica che i dati di input non vengono inseriti nel database di Data Quality Services e che vengono reindirizzati all'output degli errori.  
   
@@ -130,6 +130,6 @@ ms.locfileid: "48062469"
 3.  Scegliere **Aggiungi**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Applicare le regole relative alla qualità dei dati all'origine dati](data-flow/transformations/apply-data-quality-rules-to-data-source.md)  
+ [Applicazione delle regole relative alla qualità dei dati all'origine dati](data-flow/transformations/apply-data-quality-rules-to-data-source.md)  
   
   

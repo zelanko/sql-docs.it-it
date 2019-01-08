@@ -11,12 +11,12 @@ ms.assetid: 2c4adf2f-e9c4-4fae-bd3c-97fe64436caf
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 09adbf8ca6fb16becd98b94c15f93052c003abb2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d218103d5a8de6b10ad5b1981f13ac4526f59aee
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48116348"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53358243"
 ---
 # <a name="sharepoint-list-connection-type-ssrs"></a>Tipo di connessione dell'elenco SharePoint (SSRS)
   Per includere dati da un elenco Microsoft SharePoint nel report, è necessario aggiungere o creare un set di dati basato su un'origine dati del report di tipo Elenco Microsoft SharePoint. Si tratta di un tipo di origine dati predefinito basato sull'estensione per i dati dell'Elenco SharePoint di Microsoft SQL Server Reporting Services. Utilizzare questo tipo di origine dati per connettersi e recuperare i dati dell'elenco dai siti [!INCLUDE[SPF2010](../../includes/spf2010-md.md)], [!INCLUDE[SPS2010](../../includes/sps2010-md.md)], [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 3.0 e [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007.  
@@ -41,19 +41,19 @@ ms.locfileid: "48116348"
   
 ||Credenziali supportate|Autenticazione di Windows in modalità classica|<sup>3</sup> autenticazione delle attestazioni|  
 |-|---------------------------|-----------------------------------------|----------------------------------------|  
-|Elenco SharePoint di una farm locale|Autenticazione di Windows (integrata) o token utente di SharePoint|Sì|Sì|  
-||Archiviate, su richiesta, nessuna (con le credenziali di Windows<sup>1</sup>)|Sì|no|  
-|Elenco SharePoint remoto|Autenticazione di Windows (integrata) o token utente di SharePoint|Sì|Non<sup>2</sup>|  
-||Archiviate, su richiesta, nessuna (con le credenziali di Windows<sup>1</sup>)|Sì|Non<sup>2</sup>|  
+|Elenco SharePoint di una farm locale|Autenticazione di Windows (integrata) o token utente di SharePoint|Yes|Yes|  
+||Archiviate, su richiesta, nessuna (con le credenziali di Windows<sup>1</sup>)|Yes|No|  
+|Elenco SharePoint remoto|Autenticazione di Windows (integrata) o token utente di SharePoint|Yes|Non<sup>2</sup>|  
+||Archiviate, su richiesta, nessuna (con le credenziali di Windows<sup>1</sup>)|Yes|Non<sup>2</sup>|  
   
  **tabella 2**  
   
 ||Credenziali supportate|Autenticazione di Windows in modalità classica|<sup>3</sup> autenticazione delle attestazioni|  
 |-|---------------------------|-----------------------------------------|----------------------------------------|  
-|Elenco SharePoint di una farm locale|Autenticazione di Windows (integrata) o token utente di SharePoint|Sì|Sì|  
-||Archiviate, su richiesta, nessuna (con le credenziali di Windows<sup>1</sup>)|no|no|  
-|Elenco SharePoint remoto|Autenticazione di Windows (integrata) o token utente di SharePoint|Sì|Non<sup>2</sup>|  
-||Archiviate, su richiesta, nessuna (con le credenziali di Windows<sup>1</sup>)|no|Non<sup>2</sup>|  
+|Elenco SharePoint di una farm locale|Autenticazione di Windows (integrata) o token utente di SharePoint|Yes|Yes|  
+||Archiviate, su richiesta, nessuna (con le credenziali di Windows<sup>1</sup>)|No|No|  
+|Elenco SharePoint remoto|Autenticazione di Windows (integrata) o token utente di SharePoint|Yes|Non<sup>2</sup>|  
+||Archiviate, su richiesta, nessuna (con le credenziali di Windows<sup>1</sup>)|No|Non<sup>2</sup>|  
   
  <sup>1</sup> credenziali archiviate e credenziali su richiesta con credenziali non Windows non è supportato.  
   
@@ -71,7 +71,7 @@ ms.locfileid: "48116348"
  **Credenziali non richieste (Non usare credenziali):**  
  Per usare questa opzione, è necessario configurare l'account di esecuzione automatica sul server di report. Per altre informazioni, vedere [Configurare l'account di esecuzione automatica &#40;Gestione configurazione SSRS&#41;](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
   
- Per informazioni sul supporto dell'autenticazione delle attestazioni nello stack di Microsoft Business Intelligence, vedere la pagina relativa all' [utilizzo dell'autenticazione delle attestazioni nello stack di Microsoft Business Intelligence](http://social.technet.microsoft.com/wiki/contents/articles/15274.using-claims-authentication-across-the-microsoft-bi-stack.aspx).  
+ Per informazioni sul supporto dell'autenticazione delle attestazioni nello stack di Microsoft Business Intelligence, vedere la pagina relativa all' [utilizzo dell'autenticazione delle attestazioni nello stack di Microsoft Business Intelligence](https://social.technet.microsoft.com/wiki/contents/articles/15274.using-claims-authentication-across-the-microsoft-bi-stack.aspx).  
   
  Per altre informazioni, vedere [connessioni dati, origini dati e stringhe di connessione in Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md), [specificare le credenziali in Generatore Report](../specify-credentials-in-report-builder.md), e [origini dati supportate da Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md).  
   
@@ -182,7 +182,7 @@ ms.locfileid: "48116348"
  [Raccolta di campi del set di dati &#40;Generatore report e SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md)  
  Vengono fornite informazioni sulla raccolta di campi di set di dati generata dalla query.  
   
- [Origini dati supportate da Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md) nella documentazione relativa a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] inclusa nella [documentazione online](http://go.microsoft.com/fwlink/?linkid=121312) di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ [Origini dati supportate da Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md) nella documentazione relativa a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] inclusa nella [documentazione online](https://go.microsoft.com/fwlink/?linkid=121312) di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
  Vengono fornite informazioni dettagliate sul supporto delle piattaforme e delle versioni per ogni estensione per i dati.  
   
   

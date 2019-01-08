@@ -19,12 +19,12 @@ ms.assetid: 6e262a1d-c89e-4033-8368-46cf25168ef5
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0c4c35b3cc6a1e7b925be09704fccd2d7ed5bc38
-ms.sourcegitcommit: 3cd6068f3baf434a4a8074ba67223899e77a690b
+ms.openlocfilehash: 0f29aff4341126665e184e12219aca014222cd82
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49461907"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53360793"
 ---
 # <a name="market-basket-dmx-tutorial"></a>Esercitazione su DMX per Market Basket
   In questa esercitazione vengono descritte le procedure per la creazione, il training e l'esplorazione dei modelli di data mining utilizzando il linguaggio di query DMX (Data Mining Extensions). Questi modelli di data mining verranno quindi utilizzati per la creazione di stime che indicano quali prodotti tendono a essere acquistati contemporaneamente.  
@@ -46,7 +46,7 @@ ms.locfileid: "49461907"
   
  Lo scopo di questa esercitazione consiste nel fornire le query DMX che verranno utilizzate nell'applicazione personalizzata.  
   
- **Per altre informazioni:** [soluzioni di Data Mining](../../2014/analysis-services/data-mining/data-mining-solutions.md)  
+ **Per ulteriori informazioni:** [Soluzioni di data mining](../../2014/analysis-services/data-mining/data-mining-solutions.md)  
   
 ## <a name="mining-structure-and-mining-models"></a>Struttura e modelli di data mining  
  Prima di iniziare a creare istruzioni DMX, è importante comprendere gli oggetti principali utilizzati da [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] per creare i modelli di data mining. Il *struttura di data mining* è una struttura di dati che definisce il dominio dei dati da cui vengono compilati i modelli di data mining. Una struttura di data mining può contenere più *modelli di data mining* che condividono lo stesso dominio. Un modello di data mining applica un algoritmo specifico ai dati rappresentati da una struttura di data mining.  
@@ -87,16 +87,16 @@ ms.locfileid: "49461907"
 ## <a name="what-you-will-learn"></a>Lezioni dell'esercitazione  
  L'esercitazione è suddivisa nelle lezioni seguenti:  
   
- [Lezione 1: Creazione della struttura di data mining Market Basket](../../2014/tutorials/lesson-1-creating-the-market-basket-mining-structure.md)  
+ [Lezione 1: Creazione della struttura di Data Mining Market Basket](../../2014/tutorials/lesson-1-creating-the-market-basket-mining-structure.md)  
  In questa lezione verranno illustrate le procedure per l'utilizzo dell'istruzione `CREATE` per creare strutture di data mining.  
   
- [Lezione 2: Aggiunta di modelli di data mining alla struttura di data mining Market Basket](../../2014/tutorials/lesson-2-adding-mining-models-to-the-market-basket-mining-structure.md)  
+ [Lezione 2: Aggiunta di modelli di Data Mining alla struttura di Data Mining Market Basket](../../2014/tutorials/lesson-2-adding-mining-models-to-the-market-basket-mining-structure.md)  
  In questa lezione verranno illustrate le procedure per l'utilizzo dell'istruzione `ALTER` per aggiungere modelli di data mining a una struttura di data mining.  
   
- [Lezione 3: Elaborazione della struttura di data mining Market Basket](../../2014/tutorials/lesson-3-processing-the-market-basket-mining-structure.md)  
+ [Lezione 3: L'elaborazione della struttura di Data Mining Market Basket](../../2014/tutorials/lesson-3-processing-the-market-basket-mining-structure.md)  
  In questa lezione verranno illustrate le procedure per l'utilizzo dell'istruzione `INSERT INTO` per elaborare le strutture di data mining e i modelli di data mining ad esse associati.  
   
- [Lezione 4: Esecuzione delle stime relative a Market Basket](../../2014/tutorials/lesson-4-executing-market-basket-predictions.md)  
+ [Lezione 4: L'esecuzione di stime di mercato sugli acquisti](../../2014/tutorials/lesson-4-executing-market-basket-predictions.md)  
  In questa lezione verranno illustrate le procedure per l'utilizzo dell'istruzione `PREDICTION JOIN` per creare stime basate su modelli di data mining.  
   
 ## <a name="requirements"></a>Requisiti  
@@ -108,7 +108,7 @@ ms.locfileid: "49461907"
   
 -   Il database [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]  
   
- Per una maggiore sicurezza, i database di esempio non vengono installati per impostazione predefinita. Per installare i database di esempio ufficiali per [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]passare alla [ http://www.CodePlex.com/MSFTDBProdSamples ](http://go.microsoft.com/fwlink/?LinkId=88417) o nella home page Microsoft SQL Server Samples and Community Projects nella sezione Microsoft SQL Server Product Samples. Fare clic su **database**, quindi fare clic sui **versioni** scheda e selezionare i database desiderati.  
+ Per una maggiore sicurezza, i database di esempio non vengono installati per impostazione predefinita. Per installare i database di esempio ufficiali per [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]passare alla [ http://www.CodePlex.com/MSFTDBProdSamples ](https://go.microsoft.com/fwlink/?LinkId=88417) o nella home page Microsoft SQL Server Samples and Community Projects nella sezione Microsoft SQL Server Product Samples. Fare clic su **database**, quindi fare clic sui **versioni** scheda e selezionare i database desiderati.  
   
 > [!NOTE]  
 >  Quando si esaminano le esercitazioni, è consigliabile aggiungere **argomento successivo** e **argomento precedente** pulsanti alla barra degli strumenti del Visualizzatore di documenti.  
@@ -116,6 +116,6 @@ ms.locfileid: "49461907"
 ## <a name="see-also"></a>Vedere anche  
  [Esercitazione su DMX per bike Buyer](../../2014/tutorials/bike-buyer-dmx-tutorial.md)   
  [Esercitazione di base sul data mining](../../2014/tutorials/basic-data-mining-tutorial.md)   
- [Lezione 3: Compilazione di uno scenario Market Basket &#40;Esercitazione intermedia sul data mining&#41;](../../2014/tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)  
+ [Lezione 3: Creazione di uno Scenario Market Basket &#40;esercitazione intermedia sul Data Mining&#41;](../../2014/tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)  
   
   

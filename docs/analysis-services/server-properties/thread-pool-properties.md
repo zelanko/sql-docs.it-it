@@ -1,5 +1,5 @@
 ---
-title: Proprietà dei Pool di thread | Microsoft Docs
+title: Le proprietà del Pool di Thread di Analysis Services | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: ea8ea712579b4d9c96d793a0c633c63508c376b1
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: ee8f8c4a222b2949f49c8be019b6e4f6724cfa04
+ms.sourcegitcommit: f46fd79fd32a894c8174a5cb246d9d34db75e5df
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40393429"
+ms.lasthandoff: 12/26/2018
+ms.locfileid: "53785962"
 ---
 # <a name="thread-pool-properties"></a>Proprietà dei pool di thread
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -23,24 +23,8 @@ ms.locfileid: "40393429"
   
  Ogni istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] mantiene il proprio set di pool di thread. Esistono differenze significative nel modo in cui i pool di thread vengono usati dalle istanze tabulari e da quelle multidimensionali. Ad esempio, solo le istanze multidimensionali usano il pool di thread **IOProcess** . Di conseguenza, il **PerNumaNode** proprietà, descritta in questo articolo, non è significativo per le istanze tabulari. Nella sezione [Guida di riferimento alle proprietà](#bkmk_propref) seguente, i requisiti di modalità sono indicati per ogni proprietà.
   
- In questo articolo sono contenute le sezioni seguenti:  
-  
--   [Gestione di thread in Analysis Services](#bkmk_threadarch)  
-  
--   [Guida di riferimento alle proprietà dei pool di thread](#bkmk_propref)  
-  
--   [Impostazione di GroupAffinity per la creazione di affinità tra thread e processori in un gruppo di processori](#bkmk_groupaffinity)  
-  
--   [Impostazione di PerNumaNode per la creazione di affinità tra thread di I/O e processori in un nodo NUMA](#bkmk_pernumanode)  
-  
--   [Determinazione delle impostazioni correnti dei pool di thread](#bkmk_currentsettings)  
-  
--   [Proprietà dipendenti o correlate](#bkmk_related)  
-  
--   [Informazioni su MSMDSRV.INI](#bkmk_msmdrsrvini)  
-  
 > [!NOTE]  
->  La distribuzione tabulare nei sistemi NUMA non rientra nell'ambito di questo argomento. Sebbene le soluzioni tabulari possano essere distribuite correttamente nei sistemi NUMA, le caratteristiche di prestazioni della tecnologia di database in memoria usata dai modelli tabulari possono mostrare vantaggi limitati nelle architetture con scalabilità verticale accentuata. Per altre informazioni, vedere [Case study di Analysis Services: uso di modelli tabulari in una soluzione commerciale su vasta scala](http://msdn.microsoft.com/library/dn751533.aspx) e [Ridimensionamento hardware di una soluzione tabulare](http://go.microsoft.com/fwlink/?LinkId=330359).  
+>  La distribuzione tabulare nei sistemi NUMA non rientra nell'ambito di questo argomento. Sebbene le soluzioni tabulari possano essere distribuite correttamente nei sistemi NUMA, le caratteristiche di prestazioni della tecnologia di database in memoria usata dai modelli tabulari possono mostrare vantaggi limitati nelle architetture con scalabilità verticale accentuata. Per altre informazioni, vedere [Case Study di Analysis Services: Uso di modelli tabulari in soluzioni commerciali su larga scala](http://msdn.microsoft.com/library/dn751533.aspx) e [ridimensionamento Hardware di una soluzione tabulare](http://go.microsoft.com/fwlink/?LinkId=330359).  
   
 ##  <a name="bkmk_threadarch"></a> Gestione di thread in Analysis Services  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] viene usato il multithreading per sfruttare le risorse di CPU disponibili mediante l'aumento del numero di attività eseguite in parallelo. Il motore di archiviazione è multithread. Esempi di processi multithread che vengono eseguiti nel motore di archiviazione includono l'elaborazione di oggetti in parallelo o la gestione di query discrete che siano state inviate al motore di archiviazione, nonché la restituzione di valori di dati richiesti da una query. Il motore delle formule, a causa della natura seriale dei calcoli che valuta, è a thread singolo. Ogni query viene eseguita principalmente su un solo thread, richiedendo e spesso restando in attesa dei dati restituiti dal motore di archiviazione. I thread di query hanno tempi di esecuzione più lunghi e vengono rilasciati solo al termine dell'esecuzione dell'intera query.  
@@ -62,7 +46,7 @@ ms.locfileid: "40393429"
     > [!NOTE]  
     >  Per eseguire una query è possibile usare un thread di entrambi i pool di analisi. Le query che vengono eseguite rapidamente, ad esempio le richieste rapide di individuazione o annullamento, vengono talvolta eseguite immediatamente piuttosto che essere messe in coda nel pool di thread di query. 
   
--   **ThreadPool \ Query** è il pool di thread che esegue tutte le richieste che non sono gestite dal pool di thread di analisi. I thread inclusi in questo pool di thread eseguiranno tutti i tipi di operazioni, ad esempio i comandi di individuazione, MDX, DAX, DMX e DDL. Un
+-   **ThreadPool \ Query** è il pool di thread che esegue tutte le richieste che non sono gestite dal pool di thread di analisi. I thread inclusi in questo pool di thread eseguiranno tutti i tipi di operazioni, ad esempio i comandi di individuazione, MDX, DAX, DMX e DDL. A
   
 -   **ThreadPool \ IOProcess** viene usato per i processi di I/O associati alle query del motore di archiviazione nel motore multidimensionale. Le operazioni eseguite da questi thread non dovrebbero avere dipendenze da altri thread. Tramite questi thread viene in genere eseguita l'analisi di un singolo segmento di una partizione e i dati del segmento vengono filtrati e aggregati. I thread**IOProcess** risentono in particolare delle configurazioni hardware NUMA. Di conseguenza, per questo pool di thread è disponibile la proprietà di configurazione **PerNumaNode** che può essere usata per ottimizzare le prestazioni, se necessario. 
   
@@ -82,7 +66,7 @@ ms.locfileid: "40393429"
   
  Le proprietà sono elencate in ordine alfabetico.  
   
-|nome|Tipo|Description|Default|Informazioni aggiuntive|  
+|nome|Tipo|Descrizione|Impostazione predefinita|Informazioni aggiuntive|  
 |----------|----------|-----------------|-------------|--------------|  
 |**IOProcess** \ **Concurrency**|double|Valore a virgola mobile a precisione doppia con cui si determina l'algoritmo usato per impostare una destinazione nel numero di thread che possono essere inseriti in una coda contemporaneamente.|2.0|Proprietà avanzata che deve essere modificata solo sotto la supervisione del servizio di supporto tecnico [!INCLUDE[msCoName](../../includes/msconame-md.md)] .<br /><br /> La proprietà Concurrency viene usata per inizializzare i pool di thread che vengono implementati usando le porte di completamento I/O di Windows. Per altre informazioni, vedere [Porte di completamento I/O](http://msdn.microsoft.com/library/windows/desktop/aa365198\(v=vs.85\).aspx) .<br /><br /> Questa proprietà si applica solo ai modelli multidimensionali.|  
 |**IOProcess** \ **GroupAffinity**|string|Matrice di valori esadecimali corrispondenti ai gruppi di processori nel sistema, usata per impostare l'affinità dei thread nel pool di thread IOProcess sui processori logici in ogni gruppo di processori.|none|È possibile usare questa proprietà per creare affinità personalizzate. La proprietà è vuota per impostazione predefinita.<br /><br /> Per altre informazioni, vedere [Impostare GroupAffinity per creare affinità fra thread e processori in un gruppo di processori](#bkmk_groupaffinity) .<br /><br /> Questa proprietà si applica solo ai modelli multidimensionali.|  
@@ -103,7 +87,7 @@ ms.locfileid: "40393429"
 |**Parsing**  \ **Short** \ **StackSizeKB**|INT|Intero con segno a 32 bit che può essere usato per modificare l'allocazione di memoria durante l'esecuzione dei thread.|64 * numero di processori logici|Proprietà avanzata che deve essere modificata solo sotto la supervisione del servizio di supporto tecnico [!INCLUDE[msCoName](../../includes/msconame-md.md)] .|  
 |**Process** \ **Concurrency**|double|Valore a virgola mobile a precisione doppia con cui si determina l'algoritmo usato per impostare una destinazione nel numero di thread che possono essere inseriti in una coda contemporaneamente.|2.0|Proprietà avanzata che deve essere modificata solo sotto la supervisione del servizio di supporto tecnico [!INCLUDE[msCoName](../../includes/msconame-md.md)] .<br /><br /> La proprietà Concurrency viene usata per inizializzare i pool di thread che vengono implementati usando le porte di completamento I/O di Windows. Per altre informazioni, vedere [Porte di completamento I/O](http://msdn.microsoft.com/library/windows/desktop/aa365198\(v=vs.85\).aspx) .|  
 |**Process** \ **GroupAffinity**|string|Matrice di valori esadecimali corrispondenti ai gruppi di processori nel sistema, usata per impostare l'affinità dei thread di elaborazione sui processori logici in ogni gruppo di processori.|none|È possibile usare questa proprietà per creare affinità personalizzate. La proprietà è vuota per impostazione predefinita.<br /><br /> Per altre informazioni, vedere [Impostare GroupAffinity per creare affinità fra thread e processori in un gruppo di processori](#bkmk_groupaffinity) .|  
-|**Process** \ **MaxThreads**|INT|Intero con segno a 32 bit che definisce il numero massimo di thread da includere nel pool di thread.|0|0 indica che è il server a determinare le impostazioni predefinite. Per impostazione predefinita, tramite il server questo valore viene impostato sul valore più elevato tra un valore assoluto pari a 64 e il numero di processori logici. Ad esempio, in un sistema con 64 core con Hyper-Threading abilitato (che determina 128 processori logici), il numero massimo di thread per il pool di thread è 128.<br /><br /> Se si imposta su un valore negativo, il valore in questione viene moltiplicato dal server per il numero di processori logici. Ad esempio, se è impostato su -10 in un server con 32 processori logici, il massimo è 320 thread.<br /><br /> Il valore massimo è soggetto ai processori disponibili per tutte le maschere di affinità personalizzate definite in precedenza. Ad esempio, se è già stata impostata l'affinità del pool di thread in modo da usare 8 dei 32 processori e ora si imposta MaxThreads su -10, il limite superiore per il pool di thread sarà 10 volte 8 o 80 thread.<br /><br /> I valori effettivi usati per questa proprietà dei pool di thread vengono scritti nel file di log msmdsrv al momento dell'avvio del servizio.<br /><br /> Ulteriori informazioni sull'ottimizzazione delle impostazioni del pool di thread sono disponibili nella pagina relativa alla [Guida operativa di Analysis Services](http://msdn.microsoft.com/library/hh226085.aspx).|  
+|**Process** \ **MaxThreads**|INT|Intero con segno a 32 bit che definisce il numero massimo di thread da includere nel pool di thread.|0|0 indica che le impostazioni predefinite vengono determinate dal server. Per impostazione predefinita, tramite il server questo valore viene impostato sul valore più elevato tra un valore assoluto pari a 64 e il numero di processori logici. Ad esempio, in un sistema con 64 core con Hyper-Threading abilitato (che determina 128 processori logici), il numero massimo di thread per il pool di thread è 128.<br /><br /> Se si imposta su un valore negativo, il valore in questione viene moltiplicato dal server per il numero di processori logici. Ad esempio, se è impostato su -10 in un server con 32 processori logici, il massimo è 320 thread.<br /><br /> Il valore massimo è soggetto ai processori disponibili per tutte le maschere di affinità personalizzate definite in precedenza. Ad esempio, se è già stata impostata l'affinità del pool di thread in modo da usare 8 dei 32 processori e ora si imposta MaxThreads su -10, il limite superiore per il pool di thread sarà 10 volte 8 o 80 thread.<br /><br /> I valori effettivi usati per questa proprietà dei pool di thread vengono scritti nel file di log msmdsrv al momento dell'avvio del servizio.<br /><br /> Ulteriori informazioni sull'ottimizzazione delle impostazioni del pool di thread sono disponibili nella pagina relativa alla [Guida operativa di Analysis Services](http://msdn.microsoft.com/library/hh226085.aspx).|  
 |**Process** \ **MinThreads**|INT|Intero con segno a 32 bit che definisce il numero minimo di thread da preallocare per il pool di thread.|0|0 indica che le impostazioni predefinite vengono determinate dal server. Per impostazione predefinita, il valore minimo è 1.<br /><br /> Se si imposta su un valore negativo, il valore in questione viene moltiplicato dal server per il numero di processori logici.<br /><br /> I valori effettivi usati per questa proprietà dei pool di thread vengono scritti nel file di log msmdsrv al momento dell'avvio del servizio.<br /><br /> Ulteriori informazioni sull'ottimizzazione delle impostazioni del pool di thread sono disponibili nella pagina relativa alla [Guida operativa di Analysis Services](http://msdn.microsoft.com/library/hh226085.aspx).|  
 |**Process** \ **PriorityRatio**|INT|Intero con segno a 32 bit che può essere usato per assicurarsi che i thread con priorità più bassa vengano talvolta eseguiti anche quando una coda con priorità più alta non è vuota.|2|Proprietà avanzata che deve essere modificata solo sotto la supervisione del servizio di supporto tecnico [!INCLUDE[msCoName](../../includes/msconame-md.md)] .|  
 |**Process** \ **StackSizeKB**|INT|Intero con segno a 32 bit che può essere usato per modificare l'allocazione di memoria durante l'esecuzione dei thread.|0|Proprietà avanzata che deve essere modificata solo sotto la supervisione del servizio di supporto tecnico [!INCLUDE[msCoName](../../includes/msconame-md.md)] .|  
@@ -175,7 +159,7 @@ ms.locfileid: "40393429"
  Per le istanze multidimensionali di Analysis Services, è possibile impostare **PerNumaNode** nel pool di thread **IOProcess** per ottimizzare ulteriormente la pianificazione e l'esecuzione dei thread. Mentre **GroupAffinity** identifica semplicemente il set di processori logici da usare per un pool di thread specificato, **PerNumaNode** consente di specificare se devono essere creati più pool di thread; è quindi possibile impostare l'affinità tra tali pool di thread e determinati subset dei processori logici consentiti.  
   
 > [!NOTE]  
->  In Windows Server 2012 usare Gestione attività per visualizzare il numero di nodi NUMA nel computer. Nella scheda Prestazioni di Gestione attività selezionare **CPU** , quindi fare clic con il pulsante destro del mouse sull'area del grafico per visualizzare i nodi NUMA. In alternativa, [scaricare l'](http://technet.microsoft.com/sysinternals/cc835722.aspx) utilità Coreinfo da Windows Sysinternals ed eseguire `coreinfo –n` per restituire i nodi NUMA e i processori logici in ogni nodo.  
+>  In Windows Server 2012 usare Gestione attività per visualizzare il numero di nodi NUMA nel computer. Nella scheda Prestazioni di Gestione attività selezionare **CPU** , quindi fare clic con il pulsante destro del mouse sull'area del grafico per visualizzare i nodi NUMA. In alternativa, [scaricare l'](http://technet.microsoft.com/sysinternals/cc835722.aspx) utilità Coreinfo da Windows Sysinternals ed eseguire `coreinfo -n` per restituire i nodi NUMA e i processori logici in ogni nodo.  
   
  I valori validi per **PerNumaNode** sono -1, 0, 1, 2, come descritto nella sezione [Guida di riferimento alle proprietà dei pool di thread](#bkmk_propref) in questo argomento.  
   
@@ -247,17 +231,17 @@ ms.locfileid: "40393429"
   
  `"10/28/2013 9:20:52 AM) Message: The Query thread pool now has 1 minimum threads, 16 maximum threads, and a concurrency of 16.  Its thread pool affinity mask is 0x00000000000000ff. (Source: \\?\C:\Program Files\Microsoft SQL Server\MSAS11.MSSQLSERVER\OLAP\Log\msmdsrv.log, Type: 1, Category: 289, Event ID: 0x4121000A)"`  
   
- Tenere presente che l'algoritmo per impostare **MinThread** e **MaxThread** incorpora la configurazione di sistema, in particolare il numero di processori. Il post di blog seguente offre informazioni sulle modalità di calcolo dei valori: [Impostazioni di configurazione di Analysis Services 2012 (blog di Wordpress)](http://go.microsoft.com/fwlink/?LinkId=330387). Si noti che queste impostazioni e questi comportamenti sono soggetti a modifica nelle versioni future.  
+ Tenere presente che l'algoritmo per impostare **MinThread** e **MaxThread** incorpora la configurazione di sistema, in particolare il numero di processori. Il seguente post di blog offre informazioni sulle modalità di calcolo dei valori: [Impostazioni di analisi configurazione Services 2012 (Blog di Wordpress)](http://go.microsoft.com/fwlink/?LinkId=330387). Si noti che queste impostazioni e questi comportamenti sono soggetti a modifica nelle versioni future.  
   
  Nell'elenco seguente vengono illustrati esempi di altre impostazioni di maschere di affinità, per diverse combinazioni di processori:  
   
--   Affinità per processori 3-2-1-0 in sistemi con 8 core genera una maschera di bit: 00001111 e un valore esadecimale: 0xF  
+-   L'affinità per i processori 3-2-1-0 in un sistema con 8 core produce la maschera di bit: 00001111 e il valore esadecimale: 0xF  
   
--   Affinità per processori 7-6-5-4 in sistemi con 8 core genera una maschera di bit: 11110000 e un valore esadecimale: 0xF0  
+-   L'affinità per i processori 7-6-5-4 in un sistema con 8 core produce la maschera di bit: 11110000 e il valore esadecimale: 0xF0  
   
--   Affinità per processori 5-4-3-2 in sistemi con 8 core genera una maschera di bit: 00111100 e un valore esadecimale: 0x3C  
+-   L'affinità per i processori 5-4-3-2 in un sistema con 8 core produce la maschera di bit: 00111100 e il valore esadecimale: 0x3C  
   
--   Affinità per processori 7-6-1-0 in sistemi con 8 core genera una maschera di bit: 11000011 e un valore esadecimale: 0xC3  
+-   L'affinità per i processori 7-6-1-0 in un sistema con 8 core produce la maschera di bit: 11000011 e il valore esadecimale: 0xC3  
   
  Tenere presente che nei sistemi con più gruppi di processori viene generata una maschera di affinità separata per ogni gruppo, in un elenco delimitato da virgole.  
   
@@ -273,11 +257,11 @@ ms.locfileid: "40393429"
   
 ## <a name="see-also"></a>Vedere anche  
  [Informazioni su processi e thread](/windows/desktop/ProcThread/about-processes-and-threads)   
- [Più processori](/windows/desktop/ProcThread/multiple-processors)   
+ [Processori multipli](/windows/desktop/ProcThread/multiple-processors)   
  [Gruppi di processori](/windows/desktop/ProcThread/processor-groups)   
- [Modifiche al Pool di Thread di Analysis Services in SQL Server 2012](http://blogs.msdn.com/b/psssql/archive/2012/01/31/analysis-services-thread-pool-changes-in-sql-server-2012.aspx)   
- [Impostazioni di analisi configurazione Services 2012 (Blog di Wordpress)](http://go.microsoft.com/fwlink/?LinkId=330387)   
+ [Modifiche al pool di thread di Analysis Services in SQL Server 2012](http://blogs.msdn.com/b/psssql/archive/2012/01/31/analysis-services-thread-pool-changes-in-sql-server-2012.aspx)   
+ [Impostazioni di configurazione di Analysis Services 2012 (blog di Wordpress)](http://go.microsoft.com/fwlink/?LinkId=330387)   
  [Sistemi di supporto che dispongono di più di 64 processori](http://msdn.microsoft.com/library/windows/hardware/gg463349.aspx)   
- [Guida operativa di SQL Server Analysis Services](http://go.microsoft.com/fwlink/?LinkID=225539)  
+ [Guida alle operazioni di SQL Server Analysis Services](http://go.microsoft.com/fwlink/?LinkID=225539)  
   
   

@@ -13,19 +13,19 @@ ms.assetid: 0c34311d-05d6-4bd2-b452-545fa95f8e7f
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 8a04fb5ec226f346e9fe5fa2259361c1a29230ea
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f63a76234d4d3e394b838cb99b99e4607ea765de
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48182791"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53363283"
 ---
 # <a name="report-parts-in-report-designer-ssrs"></a>Parti del report in Progettazione report (SSRS)
   In Progettazione report, dopo aver creato tabelle, grafici e altri elementi del report in un progetto, è possibile pubblicarli come *parti di report* in un server di report o in un sito di SharePoint integrato con un server di report in modo da permetterne il riutilizzo in altri report.  
   
- In termini generali il funzionamento delle parti di report in Progettazione report e in Generatore report è identico. Per informazioni sulle funzionalità di base, vedere [parti del Report &#40;Generatore Report e SSRS&#41; ](../report-parts-report-builder-and-ssrs.md) nel [documentazione di Generatore Report](http://go.microsoft.com/fwlink/?LinkId=154494) sul sito msdn.microsoft.com.  
+ In termini generali il funzionamento delle parti di report in Progettazione report e in Generatore report è identico. Per informazioni sulle funzionalità di base, vedere [parti del Report &#40;Generatore Report e SSRS&#41; ](../report-parts-report-builder-and-ssrs.md) nel [documentazione di Generatore Report](https://go.microsoft.com/fwlink/?LinkId=154494) sul sito msdn.microsoft.com.  
   
- Esistono differenze fondamentali nel modo in cui le parti di report funzionano in Progettazione report, quale ad esempio il flusso di lavoro. Generatore report consente di eseguire la creazione in collaborazione, vale a dire la creazione e la pubblicazione da parte di un utente di una parte di report che potrà essere riutilizzata, modificata e ripubblicata da un altro utente. In Progettazione report la pubblicazione è unidirezionale, cioè un utente può pubblicare una parte di report da Progettazione report e un altro può riutilizzarla. Tuttavia, il primo utente non può riutilizzare una parte di report esistente in un report disponibile in Progettazione report. In questo argomento, dopo una veloce panoramica delle parti di report, vengono illustrate queste differenze.  
+ Esistono differenze fondamentali nel modo in cui le parti di report funzionano in Progettazione report, quale ad esempio il flusso di lavoro. Generatore report consente la modifica di gruppo: Creo una parte di report e pubblicarlo. che potrà essere riutilizzata, modificata e ripubblicata da un altro utente. In Progettazione Report la pubblicazione è unidirezionale: È possibile pubblicare una parte del report da Progettazione Report e sarà possibile riutilizzarlo. Tuttavia, il primo utente non può riutilizzare una parte di report esistente in un report disponibile in Progettazione report. In questo argomento, dopo una veloce panoramica delle parti di report, vengono illustrate queste differenze.  
   
 ##  <a name="ComponentWorkflow"></a> Ciclo di vita della pubblicazione di una parte del report  
  ![rs_ComponentCreation](../media/rs-componentcreation.gif "rs_ComponentCreation")  
@@ -67,7 +67,7 @@ ms.locfileid: "48182791"
   
 -   Elenchi  
   
- Se si pubblica una parte di report in cui vengono visualizzati dati, quali una tabella, una matrice o un grafico, è possibile basarla su un set di dati condiviso; in caso contrario, quando si pubblica la parte di report, il set di dati dal quale dipende viene salvato come set di dati incorporato. I set di dati incorporati possono essere basati su origini dati incorporate, ma le credenziali non vengono archiviate nelle origini dati incorporate. Pertanto, se la parte di report dipende da un set di dati incorporato che utilizza un'origine dati incorporata, chiunque la riutilizzi dovrà fornire le credenziali per l'origine dati incorporata. Per evitare questo problema, basare i set di dati incorporati e condivisi su origini dati condivise con credenziali archiviate. Per altre informazioni, vedere [parti del Report e set di dati in Generatore Report](../report-data/report-parts-and-datasets-in-report-builder.md) nel [documentazione di Generatore Report](http://go.microsoft.com/fwlink/?LinkId=154494) sul sito msdn.microsoft.com.  
+ Se si pubblica una parte di report in cui vengono visualizzati dati, quali una tabella, una matrice o un grafico, è possibile basarla su un set di dati condiviso; in caso contrario, quando si pubblica la parte di report, il set di dati dal quale dipende viene salvato come set di dati incorporato. I set di dati incorporati possono essere basati su origini dati incorporate, ma le credenziali non vengono archiviate nelle origini dati incorporate. Pertanto, se la parte di report dipende da un set di dati incorporato che utilizza un'origine dati incorporata, chiunque la riutilizzi dovrà fornire le credenziali per l'origine dati incorporata. Per evitare questo problema, basare i set di dati incorporati e condivisi su origini dati condivise con credenziali archiviate. Per altre informazioni, vedere [parti del Report e set di dati in Generatore Report](../report-data/report-parts-and-datasets-in-report-builder.md) nel [documentazione di Generatore Report](https://go.microsoft.com/fwlink/?LinkId=154494) sul sito msdn.microsoft.com.  
   
  La pubblicazione di una parte di report in Progettazione report viene eseguita in due passaggi:  
   

@@ -15,12 +15,12 @@ ms.assetid: 968c316d-db83-4c24-8ea6-9f18736842f7
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f3851ebeb72cc76ce6466d4456772ec13de48a38
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 67633bcfad7c18679dae93de6e5541f3000a1ccc
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48065321"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53363553"
 ---
 # <a name="get-help-sql-server-powershell"></a>Get Help SQL Server PowerShell
   Vi sono diverse fonti di informazione per l'utilizzo dei cmdlet e del provider di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] per Windows PowerShell. Tra queste è inclusa la Guida disponibile nell'ambiente di Windows PowerShell.  
@@ -33,7 +33,7 @@ ms.locfileid: "48065321"
 ### <a name="help-in-the-windows-powershell-environment"></a>Guida all'ambiente di Windows PowerShell  
  Usare il cmdlet **Get-Help** per ottenere informazioni sull'ambiente di Windows PowerShell. **Get-Help** fornisce informazioni di base sul linguaggio di Windows PowerShell e sui vari cmdlet e provider disponibili in Windows PowerShell.  
   
- Per altre informazioni su come usare **Get-Help**, vedere [Visualizzazione della Guida: Get-Help](http://go.microsoft.com/fwlink/?LinkId=102136).  
+ Per altre informazioni sui modi in cui è possibile usare **Get-Help**, vedere [Get-Help: Ottenere informazioni della Guida](https://go.microsoft.com/fwlink/?LinkId=102136).  
   
 ### <a name="sql-server-powershell-provider-help"></a>Guida del provider PowerShell per SQL Server  
  Il provider PowerShell di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] implementa diverse cartelle su un'unità virtuale SQLSERVER, come ad esempio le cartelle SQLSERVER:\SQL e SQLSERVER:\DAC. Ogni cartella è associata a uno dei modelli a oggetti per la gestione di SQL Server. È possibile elencare i metodi e le proprietà associati a ogni nodo in un percorso di SQL Server, ma non è possibile ottenerne la guida nell'ambiente PowerShell. Per una tabella delle cartelle con i collegamenti al riferimento di programmazione associato, vedere [Provider PowerShell per SQL Server](../powershell/sql-server-powershell-provider.md).  
@@ -62,16 +62,16 @@ ms.locfileid: "48065321"
 Get-Help Invoke-Sqlcmd  
   
 ## Get the full help.  
-Get-Help Invoke-Sqlcmd –Full  
+Get-Help Invoke-Sqlcmd -Full  
   
 ## Get the parameter descriptions.  
 Get-Help Invoke-Sqlcmd -Parameter *  
   
 ## Get the code examples.  
-Get-Help Invoke-Sqlcmd –Examples  
+Get-Help Invoke-Sqlcmd -Examples  
   
 ## Get the syntax diagram.  
-Get-Help Invoke-Sqlcmd –Syntax  
+Get-Help Invoke-Sqlcmd -Syntax  
 ```  
   
 ## <a name="get-a-list-of-providers"></a>Ottenere un elenco di provider  
@@ -79,9 +79,9 @@ Get-Help Invoke-Sqlcmd –Syntax
   
 1.  Eseguire Get-Help specificando la categoria del provider.  
   
- Per altre informazioni su come ottenere informazioni sul provider in Windows PowerShell, vedere [Unità e provider](http://go.microsoft.com/fwlink/?LinkId=102137).  
+ Per altre informazioni su come ottenere informazioni sul provider in Windows PowerShell, vedere [Unità e provider](https://go.microsoft.com/fwlink/?LinkId=102137).  
   
-### <a name="example-get-a-list-of-providers"></a>Esempio: ottenere un elenco di provider  
+### <a name="example-get-a-list-of-providers"></a>Esempio: Ottenere un elenco di provider  
  Questo codice restituisce un elenco dei provider attualmente abilitati nella sessione di Windows PowerShell:  
   
 ```  
@@ -105,9 +105,9 @@ Get-Help SQLServer
   
 1.  Usare il comando CD in un nodo nel percorso di SQL Server o creare un set di variabili nel percorso.  
   
-2.  Eseguire il cmdlet **Get-Member** con il parametro –Type impostato su Methods o Properties  
+2.  Eseguire la **Get-Member** cmdlet con il parametro - Type impostato su Methods o Properties  
   
-### <a name="examples-listing-methods-and-properties"></a>Esempi: elencare metodi e proprietà  
+### <a name="examples-listing-methods-and-properties"></a>Esempi: Elenco di metodi e proprietà  
  In questo esempio vengono elencati i metodi supportati per il nodo Database:  
   
 ```  

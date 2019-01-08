@@ -11,12 +11,12 @@ ms.assetid: 934b199c-9918-4e6b-83f4-5862b94fc904
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 0d570104b705c55c926d3cf8e4c15af4111be29b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a68fb27df3c1a00ca5b4cf615963d7d9ce4bf2d3
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48094451"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53357166"
 ---
 # <a name="reporting-services-concepts-ssrs"></a>Reporting Services Concepts (SSRS)
   In questo argomento viene fornito un breve riepilogo dei concetti di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] .  
@@ -39,7 +39,7 @@ ms.locfileid: "48094451"
  Un server di report è un computer con un'istanza [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] installata. Un server di report archivia internamente elementi quali report, elementi e risorse correlati al report, pianificazioni e sottoscrizioni. È possibile configurare un server di report come un server singolo autonomo o come una farm con scalabilità orizzontale o può essere integrato con SharePoint Server. Si interagisce con gli elementi del server di report tramite il servizio Web [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , il provider WMI, l'accesso con URL o a livello di codice tramite script. La modalità di interazione con un server di report dipende dalla topologia di distribuzione e dalla configurazione.  
   
  **Un server di report in modalità nativa**  
- Un server di report configurato in modalità nativa è un computer su cui è installato [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] ed è configurato come un server autonomo. Si interagisce con il server di report, report e elementi correlati ai report tramite un browser con Gestione report o comandi dell'accesso con URL, SQL Server Management Studio o a livello di codice tramite script. Per altre informazioni, vedere [Server di report di Reporting Services &#40;modalità nativa&#41;](report-server/reporting-services-report-server-native-mode.md).  
+ Un server di report configurato in modalità nativa è un computer su cui è installato [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] ed è configurato come un server autonomo. Si interagisce con il server di report, report e elementi correlati ai report tramite un browser con Gestione report o comandi dell'accesso con URL, SQL Server Management Studio o a livello di codice tramite script. Per altre informazioni, vedere [Reporting Services Report Server &#40;Native Mode&#41;](report-server/reporting-services-report-server-native-mode.md).  
   
  **Un server di report in modalità SharePoint**  
  Esistono due diverse configurazioni per un server di report integrato con SharePoint. In [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)], [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] viene installato con un SharePoint Server come un servizio SharePoint Shared. Nelle versioni precedenti, il server di report si integra con SharePoint Server mediante l'installazione del componente aggiuntivo [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] per SharePoint. In entrambi casi, si interagisce con il server di report, i report e gli elementi correlati al report tramite pagine di applicazione sul sito di SharePoint. Si usano la raccolta documenti di SharePoint e le altre librerie create per archiviare i tipi di contenuto correlati ai report. Per altre informazioni, vedere [Server di report di Reporting Services &#40;modalità SharePoint&#41;](../../2014/reporting-services/reporting-services-report-server-sharepoint-mode.md).  
@@ -58,7 +58,7 @@ ms.locfileid: "48094451"
  Su un sito di SharePoint, usare la pagina degli amministratori di sito di SharePoint per gestire le autorizzazioni di accesso su report e contenuto del sito correlato al report.  
   
  **Pianificazioni**  
- Su un server di report nativo è possibile pianificare i report, i set di dati condivisi e le sottoscrizioni in modo da recuperare dati e recapitare report e query del set di dati a orari prestabiliti o durante i periodi di minore attività. Una pianificazione può essere eseguita una sola volta oppure in modo ricorrente a intervalli specificati in ore, giorni, settimane o mesi. Per altre informazioni, vedere [pianificazioni](subscriptions/schedules.md).  
+ Su un server di report nativo è possibile pianificare i report, i set di dati condivisi e le sottoscrizioni in modo da recuperare dati e recapitare report e query del set di dati a orari prestabiliti o durante i periodi di minore attività. Una pianificazione può essere eseguita una sola volta oppure in modo ricorrente a intervalli specificati in ore, giorni, settimane o mesi. Per altre informazioni, vedere [Schedules](subscriptions/schedules.md).  
   
  **Sottoscrizioni e recapito**  
  Una sottoscrizione è una richiesta di recapito di un report in un momento specifico o in risposta a un evento in un formato di file di applicazione specificato nella sottoscrizione stessa. Le sottoscrizioni rappresentano un'alternativa all'esecuzione di un report su richiesta. Se si usano report su richiesta, sarà necessario selezionare manualmente il report ogni volta che si desidera visualizzarlo. In alternativa, le sottoscrizioni possono essere usate per la pianificazione e l'automazione del recapito di un report. È possibile recapitare report a una cartella Posta in arrivo o a una condivisione file. Per altre informazioni, vedere [Sottoscrizioni e recapito &#40;Reporting Services&#41;](subscriptions/subscriptions-and-delivery-reporting-services.md).  
@@ -67,7 +67,7 @@ ms.locfileid: "48094451"
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] fornisce un'architettura estensibile che è possibile usare per personalizzare soluzioni del report. Il server di report supporta estensioni di autenticazione personalizzate, estensioni per l'elaborazione dati, estensioni dell'elaborazione di report, estensioni per il rendering ed estensioni per il recapito e estensioni disponibili per gli utenti sono configurabili nel file di configurazione RSReportServer.config. Ad esempio, è possibile limitare i formati di esportazione che il visualizzatore di report può usare. Le estensioni personalizzate di elaborazione dei report e di recapito sono facoltative. Sono tuttavia necessarie se si desidera supportare la distribuzione dei report o i controlli personalizzati. Per altre informazioni, vedere [Estensioni &#40;SSRS&#41;](extensions-ssrs.md).  
   
  **Accesso al report**  
- L'accesso su richiesta consente agli utenti di selezionare i report da uno strumento per la visualizzazione dei report. A seconda della configurazione di server di report, è possibile utilizzare Gestione Report, un [!INCLUDE[msCoName](../includes/msconame-md.md)] 2.0 Web part di SharePoint, una raccolta di SharePoint quando [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] viene installato in modalità integrata SharePoint, un controllo ReportViewer incorporato o un browser tramite URL accesso. Per altre informazioni sull'accesso ai report su richiesta, vedere [Ricerca, visualizzazione e gestione dei report &#40;Generatore report e SSRS&#41;](report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md).  
+ L'accesso su richiesta consente agli utenti di selezionare i report da uno strumento per la visualizzazione dei report. A seconda della configurazione del server di report è possibile usare Gestione report, una Web part di [!INCLUDE[msCoName](../includes/msconame-md.md)] SharePoint 2.0, una raccolta di SharePoint quando [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] è installato in modalità integrata SharePoint, un controllo ReportViewer incorporato o un browser tramite URL. Per altre informazioni sull'accesso ai report su richiesta, vedere [Ricerca, visualizzazione e gestione dei report &#40;Generatore report e SSRS&#41;](report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md).  
   
  Le sottoscrizioni rappresentano un'alternativa all'esecuzione di un report su richiesta. Per altre informazioni, vedere [Sottoscrizioni e recapito &#40;Reporting Services&#41;](subscriptions/subscriptions-and-delivery-reporting-services.md).  
   
@@ -77,7 +77,7 @@ ms.locfileid: "48094451"
  **I report e definizioni dei report**  
  **RDL.** Una definizione di report viene scritta in un file XML in conformità a una grammatica XML denominata linguaggio RDL (Report Definition Language). In [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]creare una definizione di report in uno strumento come Generatore report o Progettazione report. Vengono forniti gli elementi che definiscono le connessioni alle origini dati, le query usate per il recupero dei dati, le espressioni, i parametri, le immagini, le caselle di testo, le tabelle e qualsiasi altro layout relativo alla fase di progettazione. Per altre informazioni, vedere [Report Definition Language &#40;SSRS&#41;](reports/report-definition-language-ssrs.md).  
   
- **RDLX.** Una definizione del report in RDLX è un file RDL con estensioni interne mediante le quali viene abilitata la visualizzazione di [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] . Per altre informazioni, vedere la pagina relativa alla [panoramica di Power View](http://blogs.msdn.com/b/microsoft_business_intelligence1/archive/2012/02/07/power-view-overview.aspx).  
+ **RDLX.** Una definizione del report in RDLX è un file RDL con estensioni interne mediante le quali viene abilitata la visualizzazione di [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] . Per altre informazioni, vedere la pagina relativa alla [panoramica di Power View](https://blogs.msdn.com/b/microsoft_business_intelligence1/archive/2012/02/07/power-view-overview.aspx).  
   
  **RDLC.** In Progettazione report di Visual Studio vengono creati file di definizione dei report del client (con estensione rdlc) in formato XML da usare con il controllo ReportViewer.  
   
@@ -220,7 +220,7 @@ Diagramma relativo all'elaborazione dei report
   
 ## <a name="see-also"></a>Vedere anche  
  [Caratteristiche e attività di Reporting Services &#40;SSRS&#41;](reporting-services-features-and-tasks-ssrs.md)   
- [Riferimento tecnico &#40;SSRS&#41;](../../2014/reporting-services/technical-reference-ssrs.md)   
+ [Guida di riferimento tecnico &#40;SSRS&#41;](../../2014/reporting-services/technical-reference-ssrs.md)   
  [Reporting Services &#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md)  
   
   

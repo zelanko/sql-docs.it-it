@@ -11,19 +11,19 @@ ms.assetid: d28a5ca8-ea9f-443f-af4f-b7e77987f8f0
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0c6e49e9c5c5306ba5d1986c7fd8e09ea463c8b9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 18a88e4c6029705e5587dffce1803208186dfcd0
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48129021"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53361313"
 ---
 # <a name="sql-server-2014-upgrade-advisor"></a>SQL Server 2014 Upgrade Advisor
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Preparazione aggiornamento analizza la configurazione di installato [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] componenti, quindi genera un report dei problemi che è necessario risolvere per garantire una corretta esecuzione dell'aggiornamento.  
+  Preparazione aggiornamento a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] analizza la configurazione dei componenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installati, quindi genera un report dei problemi che è necessario risolvere per garantire la corretta esecuzione dell'aggiornamento.  
   
- Ottenere il file di installazione di Preparazione aggiornamento (sqlua.msi) nella cartella redist del supporto di installazione o come parte del [download di SQL 2014 Feature Pack](http://www.microsoft.com/download/details.aspx?id=42295).  
+ Ottenere il file di installazione di Preparazione aggiornamento (sqlua.msi) nella cartella redist del supporto di installazione o come parte del [download di SQL 2014 Feature Pack](https://www.microsoft.com/download/details.aspx?id=42295).  
   
-|Argomento|Description|  
+|Argomento|Descrizione|  
 |-----------|-----------------|  
 |[Installazione di Preparazione aggiornamento](../../../2014/sql-server/install/installing-upgrade-advisor.md)|Vengono descritte le varie modalità di installazione di Preparazione aggiornamento.|  
 |[Uso di Preparazione aggiornamento](../../../2014/sql-server/install/working-with-upgrade-advisor.md)|Vengono forniti cenni preliminari sulle funzionalità di Preparazione aggiornamento, informazioni sull'installazione e sull'uso e indicazioni su come usare i report.|  

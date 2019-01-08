@@ -19,24 +19,23 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 42d5912b67a4039ccd16421413a20763aa8015c5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9b52f71577bed8a0433c8d516cdc9cbd877066e4
+ms.sourcegitcommit: f46fd79fd32a894c8174a5cb246d9d34db75e5df
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47644224"
+ms.lasthandoff: 12/26/2018
+ms.locfileid: "53785932"
 ---
 # <a name="spprepare-transact-sql"></a>sp_prepare (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
-  Prepara una con parametri [!INCLUDE[tsql](../../includes/tsql-md.md)] istruzione e restituisce un'istruzione *gestire* per l'esecuzione. è possibile richiamare sp_prepare specificando ID = 11 in un pacchetto del flusso TDS.  
+Prepara una con parametri [!INCLUDE[tsql](../../includes/tsql-md.md)] istruzione e restituisce un'istruzione *gestire* per l'esecuzione.  `sp_prepare` viene richiamata specificando ID = 11 in un pacchetto del flusso TDS.  
   
  ![Icona di collegamento a un articolo](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
 ```  
-  
 sp_prepare handle OUTPUT, params, stmt, options  
 ```  
   
@@ -53,25 +52,62 @@ sp_prepare handle OUTPUT, params, stmt, options
  *options*  
  Parametro facoltativo tramite cui viene restituita una descrizione delle colonne dei set di risultati del cursore. *opzioni* richiede il valore di input int seguenti:  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |0x0001|RETURN_METADATA|  
   
 ## <a name="examples"></a>Esempi  
- Nell'esempio seguente viene preparata ed eseguita un'istruzione semplice.  
+A. Nell'esempio seguente viene preparata ed eseguita un'istruzione semplice.  
   
-```  
-Declare @P1 int;  
-Exec sp_prepare @P1 output,   
+```sql  
+DECLARE @P1 int;  
+EXEC sp_prepare @P1 output,   
     N'@P1 nvarchar(128), @P2 nvarchar(100)',  
     N'SELECT database_id, name FROM sys.databases WHERE name=@P1 AND state_desc = @P2';  
-Exec sp_execute @P1, N'tempdb', N'ONLINE';  
+EXEC sp_execute @P1, N'tempdb', N'ONLINE';  
 EXEC sp_unprepare @P1;  
-```  
+```
 
+b. Nell'esempio seguente viene preparata un'istruzione in AdventureWorks2016 database ed esegue in un secondo momento usando l'handle.
+
+```sql
+-- Prepare query
+DECLARE @P1 int;  
+EXEC sp_prepare @P1 output,   
+    N'@Param int',  
+    N'SELECT *
+FROM Sales.SalesOrderDetail AS sod
+INNER JOIN Production.Product AS p ON sod.ProductID = p.ProductID
+WHERE SalesOrderID = @Param
+ORDER BY Style DESC;';  
+
+-- Return handle for calling application
+SELECT @P1;
+GO
+```
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)]
+
+```
+-----------
+1
+
+(1 row affected)
+```
+
+Quindi l'applicazione esegue la query utilizzando due volte il valore dell'handle 1, prima di eliminare il piano preparato.
+
+```sql
+EXEC sp_execute 1, 49879;  
+GO
+
+EXEC sp_execute 1, 48766;
+GO
+
+EXEC sp_unprepare 1; 
+GO
+```
   
 ## <a name="see-also"></a>Vedere anche  
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
-  
   
 

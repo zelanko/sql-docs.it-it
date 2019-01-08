@@ -17,12 +17,12 @@ ms.assetid: ac84339b-9384-4710-bebc-01607864a344
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b8125f5b8693eccfc619dd2ee3aed6f203e17dad
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b61f863aa3d32ae60ff1cbcac562e74250899088
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48183171"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53356570"
 ---
 # <a name="xml-serialization-from-clr-database-objects"></a>Serializzazione XML da oggetti di database CLR
   La serializzazione XML è necessaria in due scenari:  
@@ -37,7 +37,7 @@ ms.locfileid: "48183171"
   
 2.  Utilizzando l'istruzione `CREATE ASSEMBLY`, registrare in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l'assembly generato.  
   
- Per informazioni sugli errori che si potrebbero ricevere quando si esegue la serializzazione XML, vedere l'articolo di supporto tecnico Microsoft seguente: ["Cannot load dynamically generated serialization assembly"](http://support.microsoft.com/kb/913668).  
+ Per informazioni sugli errori che potrebbero essere visualizzati quando si esegue la serializzazione XML, vedere l'articolo di supporto tecnico Microsoft seguente: ["Cannot load dynamically generated serialization assembly"](https://support.microsoft.com/kb/913668).  
   
  Per informazioni su tipi di dati che non sono supportati da XMLSerializer, vedere Supporto dell'associazione a XML Schema nella documentazione di .NET Framework.  
   

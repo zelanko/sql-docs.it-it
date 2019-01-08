@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Aggregate transformation [Integration Services]
@@ -24,12 +23,12 @@ ms.assetid: c4bbefa6-172b-4547-99a1-a0b38e3e2b05
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4a97e86b66efee24757f7f09f04e7016a93417c7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5fb7bfa7d068d8ea83fab4c98e6e8f733af7985a
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049511"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53361473"
 ---
 # <a name="data-flow-performance-features"></a>Funzionalità delle prestazioni del flusso di dati
   In questo argomento sono inclusi alcuni suggerimenti sulla progettazione di pacchetti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] per evitare problemi di prestazioni comuni. Sono inoltre fornite informazioni sugli strumenti e sulle funzionalità che è possibile usare per risolvere i problemi relativi alle prestazioni dei pacchetti.  
@@ -73,15 +72,15 @@ ms.locfileid: "48049511"
  Evitare di aumentare le dimensioni del buffer fino al punto in cui inizia a verificarsi il paging su disco. Il paging su disco influisce negativamente sulle prestazioni più di quanto non faccia la mancata ottimizzazione delle dimensioni del buffer. Per determinare il verificarsi o meno del paging, monitorare il contatore delle prestazioni "Buffer con spooling" nello snap-in Prestazioni di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console (MMC).  
   
 ### <a name="configure-the-package-for-parallel-execution"></a>Configurare il pacchetto per l'esecuzione parallela  
- L'esecuzione parallela migliora le prestazioni nei computer dotati di più processori fisici o logici. Per supportare l'esecuzione parallela di attività diverse nel pacchetto [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] usa due proprietà: `MaxConcurrentExecutables` e `EngineThreads`.  
+ L'esecuzione parallela migliora le prestazioni nei computer dotati di più processori fisici o logici. Per supportare l'esecuzione parallela di attività diverse nel pacchetto, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] utilizza due proprietà: `MaxConcurrentExecutables` e `EngineThreads`.  
   
 #### <a name="the-maxconcurrentexcecutables-property"></a>Proprietà MaxConcurrentExcecutables  
- Il `MaxConcurrentExecutables` proprietà è una proprietà del pacchetto stesso. Questa proprietà definisce il numero massimo di attività che è possibile eseguire simultaneamente. Il valore predefinito è -1, a indicare il numero di processori fisici o logici più 2.  
+ La proprietà `MaxConcurrentExecutables` è una proprietà del pacchetto stesso. Questa proprietà definisce il numero massimo di attività che è possibile eseguire simultaneamente. Il valore predefinito è -1, a indicare il numero di processori fisici o logici più 2.  
   
- Per comprendere il funzionamento di questa proprietà, considerare un pacchetto di esempio contenente tre attività Flusso di dati. Se si imposta `MaxConcurrentExecutables` su 3, tutte le tre attività flusso di dati eseguibili simultaneamente. Si supponga, tuttavia, che ogni attività Flusso di dati contenga 10 alberi di esecuzione dall'origine alla destinazione. L'impostazione di `MaxConcurrentExecutables` su 3 non garantisce l'esecuzione in parallelo degli alberi di esecuzione in ogni attività Flusso di dati.  
+ Per comprendere il funzionamento di questa proprietà, considerare un pacchetto di esempio contenente tre attività Flusso di dati. Se si imposta `MaxConcurrentExecutables` su 3, le tre attività Flusso di dati potranno essere eseguite tutte simultaneamente. Si supponga, tuttavia, che ogni attività Flusso di dati contenga 10 alberi di esecuzione dall'origine alla destinazione. L'impostazione di `MaxConcurrentExecutables` su 3 non garantisce l'esecuzione in parallelo degli alberi di esecuzione in ogni attività Flusso di dati.  
   
 #### <a name="the-enginethreads-property"></a>Proprietà EngineThreads  
- La proprietà `EngineThreads` è una proprietà di tutte le attività Flusso di dati. Questa proprietà definisce il numero di thread che il motore del flusso di dati può creare ed eseguire in parallelo. Il `EngineThreads` proprietà si applica equamente a entrambi i thread di origine che consente di creare il motore flusso di dati per le origini e i thread di lavoro creati dal motore per trasformazioni e destinazioni. L'impostazione di `EngineThreads` su 10, pertanto, indica che il motore può creare fino a dieci thread di origine e fino a dieci thread di lavoro.  
+ La proprietà `EngineThreads` è una proprietà di tutte le attività Flusso di dati. Questa proprietà definisce il numero di thread che il motore del flusso di dati può creare ed eseguire in parallelo. La proprietà `EngineThreads` si applica ugualmente sia ai thread di origine creati dal motore del flusso di dati per le origini sia ai thread di lavoro creati dal motore per trasformazioni e destinazioni. L'impostazione di `EngineThreads` su 10, pertanto, indica che il motore può creare fino a dieci thread di origine e fino a dieci thread di lavoro.  
   
  Per comprendere il funzionamento di questa proprietà, considerare il pacchetto di esempio contenente tre attività Flusso di dati. Ogni attività Flusso di dati contiene dieci alberi di esecuzione dall'origine alla destinazione. Se si imposta EngineThreads su 10 in ogni attività Flusso di dati, è virtualmente possibile eseguire tutti i 30 alberi di esecuzione simultaneamente.  
   
@@ -100,14 +99,14 @@ ms.locfileid: "48049511"
  Per creare una query, è possibile digitarla o usare Generatore query.  
   
 > [!NOTE]  
->  Quando si esegue un pacchetto in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], nella scheda Stato di Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] vengono visualizzati alcuni avvisi. Tali avvisi includono l'identificazione di qualsiasi colonna di dati resa disponibile per il flusso di dati da un'origine, ma che non viene usata successivamente dai componenti del flusso di dati a valle. È possibile usare il `RunInOptimizedMode` proprietà da rimuovere queste colonne automaticamente.  
+>  Quando si esegue un pacchetto in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], nella scheda Stato di Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] vengono visualizzati alcuni avvisi. Tali avvisi includono l'identificazione di qualsiasi colonna di dati resa disponibile per il flusso di dati da un'origine, ma che non viene usata successivamente dai componenti del flusso di dati a valle. È possibile usare la proprietà `RunInOptimizedMode` per rimuovere queste colonne automaticamente.  
   
 #### <a name="avoid-unnecessary-sorting"></a>Eliminazione di operazioni di ordinamento superflue  
  L'ordinamento è di per sé un'operazione lenta. Evitando operazioni di ordinamento non necessarie è pertanto possibile migliorare le prestazioni del flusso di dati di un pacchetto.  
   
  Talvolta i dati di origine sono già ordinati prima di essere usati da un componente a valle. Questo preordinamento può verificarsi quando la query SELECT usa una clausola ORDER BY o quando i dati vengono inseriti nell'origine come già ordinati. Per tali dati di origine preordinati, è possibile fornire un hint indicante che i dati sono ordinati e pertanto evitare l'uso di una trasformazione Ordinamento per rispondere ai requisiti di ordinamento di determinate trasformazioni a valle. Le trasformazioni Unione e Merge Join, ad esempio, richiedono input ordinati. Per fornire un hint indicante che i dati sono ordinati, è necessario eseguire le attività seguenti:  
   
--   Impostare il `IsSorted` proprietà sull'output di un componente flusso di dati a monte su `True`.  
+-   Impostare la proprietà `IsSorted` nell'output di un componente del flusso di dati a monte su `True`.  
   
 -   Specificare le colonne chiave di ordinamento in cui i dati sono ordinati.  
   
@@ -131,20 +130,20 @@ ms.locfileid: "48049511"
  Se in un flusso di dati è necessario creare più aggregazioni, valutare l'opportunità di creare più aggregazioni che usano una singola trasformazione Aggregazione anziché creare più trasformazioni. Questo approccio consente prestazioni migliori quando un'aggregazione è un subset di un'altra aggregazione, in quanto la trasformazione può ottimizzare l'archiviazione interna ed eseguire l'analisi dei dati in ingresso una sola volta. Nel caso, ad esempio, di un'aggregazione che usa la clausola GROUP BY e l'aggregazione AVG, è possibile migliorare le prestazioni combinando clausola e aggregazione in una sola trasformazione. L'esecuzione di più aggregazioni all'interno di una trasformazione Aggregazione, tuttavia, comporta la serializzazione delle operazioni di aggregazione e può pertanto influire sulle prestazioni quando è necessario calcolare più aggregazioni indipendentemente.  
   
 #### <a name="fuzzy-lookup-and-fuzzy-grouping-transformations"></a>Trasformazioni Ricerca fuzzy e Raggruppamento fuzzy  
- Per informazioni sull'ottimizzazione della prestazione di tali trasformazioni, vedere il white paper relativo a [Ricerca fuzzy e Raggruppamento fuzzy in SQL Server Integration Services 2005](http://go.microsoft.com/fwlink/?LinkId=96604).  
+ Per informazioni sull'ottimizzazione della prestazione di tali trasformazioni, vedere il white paper relativo a [Ricerca fuzzy e Raggruppamento fuzzy in SQL Server Integration Services 2005](https://go.microsoft.com/fwlink/?LinkId=96604).  
   
 #### <a name="lookup-transformation"></a>Trasformazione Ricerca  
  È possibile ridurre al minimo le dimensioni dei dati di riferimento nella memoria immettendo un'istruzione SELECT per la ricerca delle sole colonne necessarie. Questa opzione garantisce prestazioni migliori rispetto alla selezione di un'intera tabella o vista, che restituisce invece una quantità elevata di dati non necessari.  
   
 #### <a name="merge-join-transformation"></a>Merge join - trasformazione  
- Non è più necessario configurare il valore della `MaxBuffersPerInput` proprietà perché Microsoft ha apportato modifiche che riducono il rischio che la trasformazione Merge Join utilizzino memoria eccessiva. Questo problema si verificava in genere quando tramite i diversi input della trasformazione Merge Join venivano prodotti dati con frequenze irregolari.  
+ Non è più necessario configurare il valore della proprietà `MaxBuffersPerInput`, in quanto Microsoft ha apportato modifiche che riducono il rischio di uso di una quantità eccessiva di memoria da parte della trasformazione Merge join. Questo problema si verificava in genere quando tramite i diversi input della trasformazione Merge Join venivano prodotti dati con frequenze irregolari.  
   
 #### <a name="slowly-changing-dimension-transformation"></a>Dimensione a modifica lenta - trasformazione  
  La Configurazione guidata dimensioni a modifica lenta e la trasformazione Dimensione a modifica lenta sono strumenti di uso generale in grado di rispondere alle esigenze della maggior parte degli utenti. Il flusso di dati generato dalla procedura guidata, tuttavia, non è ottimizzato per le prestazioni.  
   
  I componenti più lenti nella trasformazione Dimensione a modifica lenta sono in genere le trasformazioni Comando OLE DB che eseguono istruzioni UPDATE su una singola riga per volta. Il modo più efficace per migliorare le prestazioni della trasformazione Dimensione a modifica lenta consiste pertanto nel sostituire le trasformazioni Comando OLE DB. È possibile sostituire tali trasformazioni con componenti di destinazione che salvano tutte le righe da aggiornare in una tabella di staging. È quindi possibile aggiungere un'attività Esegui SQL per l'esecuzione di un singola istruzione UPDATE di Transact-SQL basata su set su tutte le righe contemporaneamente.  
   
- Gli utenti avanzati possono progettare un flusso di dati personalizzato per l'elaborazione delle dimensioni a modifica lenta ottimizzata per dimensioni estese. Per una descrizione e un esempio di questo approccio, vedere la sezione relativa allo scenario con dimensione univoca nel white paper [Project REAL: Business Intelligence ETL Design Practices](http://go.microsoft.com/fwlink/?LinkId=96602).  
+ Gli utenti avanzati possono progettare un flusso di dati personalizzato per l'elaborazione delle dimensioni a modifica lenta ottimizzata per dimensioni estese. Per una descrizione e un esempio di questo approccio, vedere la sezione "univoco allo scenario con dimensione" nel white paper, [Project REAL: Business Intelligence ETL Design Practices](https://go.microsoft.com/fwlink/?LinkId=96602).  
   
 ### <a name="destinations"></a>Destinazioni  
  Per ottenere prestazioni migliori con le destinazioni, valutare l'opportunità di usare una destinazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e di testarne le prestazioni.  
@@ -167,38 +166,38 @@ ms.locfileid: "48049511"
 ## <a name="related-content"></a>Contenuto correlato  
  **Articoli e post di Blog**  
   
--   Articolo tecnico [SQL Server 2005 Integration Services: una strategia per ottimizzare le prestazioni](http://go.microsoft.com/fwlink/?LinkId=98899), su technet.microsoft.com  
+-   Articolo tecnico relativo [SQL Server 2005 Integration Services: Una strategia per le prestazioni](https://go.microsoft.com/fwlink/?LinkId=98899), su technet.microsoft.com  
   
--   Articolo tecnico relativo alle [tecniche di ottimizzazione delle prestazione in Integration Services](http://go.microsoft.com/fwlink/?LinkId=98900), disponibile su technet.microsoft.com  
+-   Articolo tecnico relativo [Integration Services: Le tecniche di ottimizzazione delle prestazioni](https://go.microsoft.com/fwlink/?LinkId=98900), su technet.microsoft.com  
   
 -   Articolo tecnico sull' [aumento della velocità effettiva delle pipeline suddividendo le trasformazioni sincrone in più attività](http://sqlcat.com/technicalnotes/archive/2010/08/18/increasing-throughput-of-pipelines-by-splitting-synchronous-transformations-into-multiple-tasks.aspx)su sqlcat.com  
   
--   Articolo tecnico relativo alla [guida alle prestazioni del caricamento dati](http://go.microsoft.com/fwlink/?LinkId=220816)sul sito msdn.microsoft.com  
+-   Articolo tecnico relativo alla [guida alle prestazioni del caricamento dati](https://go.microsoft.com/fwlink/?LinkId=220816)sul sito msdn.microsoft.com  
   
--   Articolo tecnico relativo al [caricamento di 1 TB in 30 minuti con SSIS](http://go.microsoft.com/fwlink/?LinkId=220817), disponibile su msdn.microsoft.com  
+-   Articolo tecnico relativo al [caricamento di 1 TB in 30 minuti con SSIS](https://go.microsoft.com/fwlink/?LinkId=220817), disponibile su msdn.microsoft.com  
   
--   Articolo tecnico relativo alle [10 principali procedure consigliate per SQL Server Integration Services](http://go.microsoft.com/fwlink/?LinkId=220818), disponibile su sqlcat.com  
+-   Articolo tecnico relativo alle [10 principali procedure consigliate per SQL Server Integration Services](https://go.microsoft.com/fwlink/?LinkId=220818), disponibile su sqlcat.com  
   
--   Articolo tecnico ed esempio relativo al [server di distribuzione di dati bilanciati di SSIS](http://go.microsoft.com/fwlink/?LinkId=220822), disponibile su sqlcat.com  
+-   Articolo tecnico ed esempio relativo al [server di distribuzione di dati bilanciati di SSIS](https://go.microsoft.com/fwlink/?LinkId=220822), disponibile su sqlcat.com  
   
--   Post del blog relativo alla [risoluzione dei problemi di prestazioni dei pacchetti SSIS](http://go.microsoft.com/fwlink/?LinkId=238156)su blogs.msdn.com  
+-   Post del blog relativo alla [risoluzione dei problemi di prestazioni dei pacchetti SSIS](https://go.microsoft.com/fwlink/?LinkId=238156)su blogs.msdn.com  
   
  **Video**  
   
--   Serie di video sulla [progettazione e il perfezionamento delle prestazioni dei pacchetti SSIS nell'organizzazione (Serie di video su SQL)](http://go.microsoft.com/fwlink/?LinkId=400878)  
+-   Serie di video sulla [progettazione e il perfezionamento delle prestazioni dei pacchetti SSIS nell'organizzazione (Serie di video su SQL)](https://go.microsoft.com/fwlink/?LinkId=400878)  
   
--   Video sull' [ottimizzazione del flusso di dati del pacchetto SSIS nell'organizzazione (video di SQL Server)](http://technet.microsoft.com/sqlserver/ff686901.aspx), su technet.microsoft.com  
+-   Video sull' [ottimizzazione del flusso di dati del pacchetto SSIS nell'organizzazione (video di SQL Server)](https://technet.microsoft.com/sqlserver/ff686901.aspx), su technet.microsoft.com  
   
--   Video sulle [informazioni sui buffer del flusso di dati SSIS (video di SQL Server)](http://technet.microsoft.com/sqlserver/ff686905.aspx), su technet.microsoft.com  
+-   Video sulle [informazioni sui buffer del flusso di dati SSIS (video di SQL Server)](https://technet.microsoft.com/sqlserver/ff686905.aspx), su technet.microsoft.com  
   
--   Video, [Modelli di progettazione per prestazioni del servizio di integrazione di Microsoft SQL Server](http://go.microsoft.com/fwlink/?LinkID=233698&clcid=0x409)su channel9.msdn.com.  
+-   Video, [Modelli di progettazione per prestazioni del servizio di integrazione di Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkID=233698&clcid=0x409)su channel9.msdn.com.  
   
--   Presentazione relativa all' [utilizzo dei miglioramenti al motore del flusso di dati di SQL Server 2008 SSIS da parte di Microsoft IT](http://go.microsoft.com/fwlink/?LinkId=217660), su sqlcat.com.  
+-   Presentazione relativa all' [utilizzo dei miglioramenti al motore del flusso di dati di SQL Server 2008 SSIS da parte di Microsoft IT](https://go.microsoft.com/fwlink/?LinkId=217660), su sqlcat.com.  
   
--   Video relativo al [server di distribuzione di dati bilanciati](http://go.microsoft.com/fwlink/?LinkID=226278&clcid=0x409)sul sito technet.microsoft.com.  
+-   Video relativo al [server di distribuzione di dati bilanciati](https://go.microsoft.com/fwlink/?LinkID=226278&clcid=0x409)sul sito technet.microsoft.com.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Risoluzione dei problemi degli strumenti per lo sviluppo di pacchetti](../troubleshooting/troubleshooting-tools-for-package-development.md)   
- [Strumenti per la risoluzione dei problemi relativi all'esecuzione dei pacchetti](../troubleshooting/troubleshooting-tools-for-package-execution.md)  
+ [Risoluzione dei problemi relativi agli strumenti per lo sviluppo dei pacchetti](../troubleshooting/troubleshooting-tools-for-package-development.md)   
+ [Risoluzione dei problemi relativi agli strumenti per l'esecuzione del pacchetto](../troubleshooting/troubleshooting-tools-for-package-execution.md)  
   
   

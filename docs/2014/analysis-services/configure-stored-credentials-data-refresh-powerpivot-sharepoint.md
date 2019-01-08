@@ -11,12 +11,12 @@ ms.assetid: 987eff0f-bcfe-4bbd-81e0-9aca993a2a75
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4c12e62d3a74ca1112ac7983fa6480b49171c308
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 73ee3f7f86203f4fa0ac2e4da86fecee0e2b4cf5
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48149421"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53365084"
 ---
 # <a name="configure-stored-credentials-for-powerpivot-data-refresh-powerpivot-for-sharepoint"></a>Configurare le credenziali archiviate per l'aggiornamento dati PowerPivot (PowerPivot per SharePoint)
   I processi di aggiornamento dati PowerPivot possono essere eseguiti in qualsiasi account utente di Windows purché venga creata un'applicazione di destinazione nel servizio di archiviazione sicura per archiviare le credenziali che si desidera utilizzare. Analogamente, se si desidera fornire un account di accesso al database diverso da quello utilizzato per importare originariamente i dati in PowerPivot per Excel, è possibile eseguire il mapping di queste credenziali a un'applicazione di destinazione del servizio di archiviazione sicura, quindi specificare quell'applicazione di destinazione in una pianificazione dell'aggiornamento dati.  
@@ -35,7 +35,7 @@ ms.locfileid: "48149421"
   
  [Configurare un account predefinito per l'accesso alle origini dati esterne o di terze parti](#config3rd)  
   
- Se hai problemi di configurazione o tramite l'aggiornamento dei dati, vedere la [risoluzione dei problemi di aggiornamento dati PowerPivot](http://go.microsoft.com/fwlink/?LinkID=223279) pagina su wiki di TechNet per le soluzioni possibili.  
+ Se hai problemi di configurazione o tramite l'aggiornamento dei dati, vedere la [risoluzione dei problemi di aggiornamento dati PowerPivot](https://go.microsoft.com/fwlink/?LinkID=223279) pagina su wiki di TechNet per le soluzioni possibili.  
   
 ##  <a name="configAny"></a> Configurare un account di Windows per l'aggiornamento dei dati  
  Quando un utente di SharePoint definisce una pianificazione dell'aggiornamento dati, deve specificare l'identità utente con la quale verrà eseguito l'aggiornamento dati. Le possibilità includono la selezione dell'account di aggiornamento dati automatico PowerPivot, l'immissione dell'account utente di dominio di Windows o l'immissione di un altro account utente di Windows valido per l'aggiornamento dati. I passaggi riportati in questa sezione riguardano l'ultima opzione: immissione di un altro account utente di Windows.  
@@ -117,16 +117,16 @@ ms.locfileid: "48149421"
   
 5.  Selezionare **collaborazione**, quindi fare clic su **OK**.  
   
-###  <a name="bkmk_dbread"></a> Passaggio 3: Concedere autorizzazioni di lettura per accedere alle origini dati esterne utilizzate nell'aggiornamento dati  
+###  <a name="bkmk_dbread"></a> Passaggio 3: Concessione di autorizzazioni di lettura per accedere alle origini dati esterne utilizzate nell'aggiornamento dati  
  Durante l'importazione di dati in una cartella di lavoro di PowerPivot, le connessioni a dati esterni spesso si basano su connessioni trusted o connessioni rappresentate in cui viene utilizzata l'identità dell'utente corrente per connettersi all'origine dati. Questi tipi di connessioni funzionano solo quando l'utente corrente dispone dell'autorizzazione di lettura per i dati che importa.  
   
  In uno scenario di aggiornamento dati, la stessa stringa di connessione utilizzata per importare i dati viene ora riutilizzata per aggiornare i dati. Se nella stringa di connessione si presuppone l'utente corrente, ad esempio è incluso Integrated_Security=SSPI, il servizio di sistema PowerPivot passerà l'identità utente specificata nell'applicazione di destinazione come utente corrente. Questa connessione potrà essere stabilita solo se l'account dispone delle autorizzazioni di lettura per l'origine dati esterna.  
   
  Per questo motivo, è necessario concedere all'account le autorizzazioni di sola lettura per tutte le origini dati esterne utilizzate durante l'aggiornamento dati.  
   
- Un amministratore delle origini dati utilizzate nell'organizzazione può creare un account di accesso e assegnare le autorizzazioni necessarie. In caso contrario, è necessario contattare i proprietari dei dati e fornire le informazioni sull'account. Assicurarsi di specificare l'account utente di dominio di Windows di cui è possibile eseguire il mapping all'applicazione di destinazione. Si tratta dell'account specificato in "Passaggio 1: Creare un'applicazione di destinazione" in questo argomento.  
+ Un amministratore delle origini dati utilizzate nell'organizzazione può creare un account di accesso e assegnare le autorizzazioni necessarie. In caso contrario, è necessario contattare i proprietari dei dati e fornire le informazioni sull'account. Assicurarsi di specificare l'account utente di dominio di Windows di cui è possibile eseguire il mapping all'applicazione di destinazione. Si tratta dell'account specificato nel "passaggio 1: Creare un'applicazione di destinazione"in questo argomento.  
   
-###  <a name="bkmk_verify"></a> Passaggio 4: Verificare la disponibilità di account in data pagine di configurazione dell'aggiornamento  
+###  <a name="bkmk_verify"></a> Passaggio 4: Verificare la disponibilità dell'account nelle pagine di configurazione di aggiornamento dati  
   
 1.  Aprire una pagina di configurazione dell'aggiornamento dati per una cartella di lavoro pubblicata che contiene dati PowerPivot. Per istruzioni su come aprire la pagina, vedere [pianificare un aggiornamento dei dati &#40;PowerPivot per SharePoint&#41;](schedule-a-data-refresh-powerpivot-for-sharepoint.md).  
   
@@ -138,7 +138,7 @@ ms.locfileid: "48149421"
   
  Se si verifica un errore, è possibile fare clic su **configura pianificazione** nei dati di aggiornare la pagina della cronologia per provare credenziali diverse. Potrebbe inoltre essere necessario analizzare le informazioni di connessione dell'origine dati nella cartella di lavoro originale per visualizzare la stringa di connessione utilizzata durante l'aggiornamento dati. Nella stringa di connessione vengono fornite informazioni sul percorso del server e sul database che è possibile utilizzare per risolvere il problema.  
   
- Per altre informazioni sulla risoluzione dei problemi, vedere [risoluzione dei problemi di aggiornamento dati PowerPivot](http://go.microsoft.com/fwlink/p/?LinkID=223279) su Wiki di TechNet.  
+ Per altre informazioni sulla risoluzione dei problemi, vedere [risoluzione dei problemi di aggiornamento dati PowerPivot](https://go.microsoft.com/fwlink/p/?LinkID=223279) su Wiki di TechNet.  
   
 ##  <a name="config3rd"></a> Configurare un account predefinito per l'accesso alle origini dati esterne o di terze parti  
  I server di database vengono spesso forniti con propri metodi di autenticazione. Se si dispone di una cartella di lavoro di PowerPivot che richiede credenziali di database per accedere a un'origine dati esterna durante un aggiornamento dati, è possibile creare un ID dell'applicazione di destinazione per le credenziali, quindi specificare l'applicazione di destinazione nella sezione Origini dati della pagina di aggiornamento dati pianificato.  

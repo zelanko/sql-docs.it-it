@@ -17,12 +17,12 @@ ms.assetid: 6624b1ab-7ec8-44ce-8292-397edf644394
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 03636c3eaf9d416d32f0143503625a7c71b8a254
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ab52d307d914e1f3f4b1e808b59999dcae96cccb
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48219611"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979797"
 ---
 # <a name="create-a-server-audit-and-server-audit-specification"></a>Creazione di un controllo del server e di una specifica del controllo del server
   In questo argomento viene illustrato come creare un controllo del server e la specifica di un controllo del server in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Il*controllo* di un'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] o di un database di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] comporta il rilevamento e la registrazione di eventi che si verificano nel sistema. L'oggetto *SQL Server Audit* raccoglie un'unica istanza di azioni a livello di server o di database e gruppi di azioni da monitorare. Il controllo si trova a livello dell'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Per ogni istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] è possibile disporre di più controlli. L'oggetto *specifica controllo server* appartiene a un controllo. È possibile creare una specifica del controllo del server per ogni controllo, poiché entrambi vengono creati nell'ambito dell'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Per altre informazioni, vedere [SQL Server Audit &#40;Motore di database&#41;](sql-server-audit-database-engine.md).  
@@ -33,7 +33,7 @@ ms.locfileid: "48219611"
   
      [Limitazioni e restrizioni](#Restrictions)  
   
-     [Security](#Security)  
+     [Sicurezza](#Security)  
   
 -   **Per creare un controllo del server e una specifica del controllo del server utilizzando:**  
   
@@ -65,7 +65,7 @@ ms.locfileid: "48219611"
   
 1.  In Esplora oggetti espandere la cartella **Sicurezza** .  
   
-2.  Fare clic con il pulsante destro del mouse sulla cartella **Controlli** , quindi scegliere **Nuovo controllo...**.  
+2.  Fare clic con il pulsante destro del mouse sulla cartella **Controlli** e scegliere **Nuovo controllo...**.  
   
      Nella pagina **Generale** della finestra di dialogo **Crea controllo** sono disponibili le opzioni indicate di seguito.  
   
@@ -80,7 +80,7 @@ ms.locfileid: "48219611"
      [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Le operazioni di SQL Server continuano. I record di controllo non vengono mantenuti. Il controllo consente di continuare il tentativo di registrazione di eventi e verrà ripreso se viene risolta la condizione di errore. Selezionando l'opzione **Continua** si potrà consentire un'attività non certificata che potrebbe violare i criteri di sicurezza. Selezionare questa opzione quando il funzionamento del [!INCLUDE[ssDE](../../../includes/ssde-md.md)] è più importante della gestione di un controllo completo. Si tratta della selezione predefinita.  
   
      **Arresta server**  
-     Viene forzata la chiusura del server quando risulta impossibile scrivere dati nella destinazione di controllo da parte dell'istanza del server preposta a tale compito. L'account di accesso esegue questa deve avere il `SHUTDOWN` l'autorizzazione. In caso contrario, questa funzione non verrà eseguita e verrà generato un messaggio di errore. Non viene generato alcun evento controllato. Selezionare questa opzione quando un errore a livello di controllo potrebbe compromettere la sicurezza o l'integrità del sistema.  
+     Viene forzata la chiusura del server quando risulta impossibile scrivere dati nella destinazione di controllo da parte dell'istanza del server preposta a tale compito. L'account di accesso che esegue questa operazione deve disporre dell'autorizzazione `SHUTDOWN`. In caso contrario, questa funzione non verrà eseguita e verrà generato un messaggio di errore. Non viene generato alcun evento controllato. Selezionare questa opzione quando un errore a livello di controllo potrebbe compromettere la sicurezza o l'integrità del sistema.  
   
      **Errore operazione**  
      Nei casi in cui non è possibile scrivere nel log di controllo tramite [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit, questa opzione può impedire le azioni del database qualora provocassero eventi controllati. Non viene generato alcun evento controllato. Le azioni che non provocano eventi controllati possono continuare. Il controllo consente di continuare il tentativo di registrazione di eventi e verrà ripreso se viene risolta la condizione di errore. Selezionare questa opzione quando la gestione di un controllo completo è più importante dell'accesso completo al [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
@@ -95,7 +95,7 @@ ms.locfileid: "48219611"
      Indica il percorso della cartella in cui vengono scritti i dati del controllo quando in **Destinazione controllo** è specificato un file.  
   
      **Puntini di sospensione (...)**  
-     Apre la finestra di dialogo *Trova cartella -***nome_server* per specificare un percorso file o creare una cartella in cui viene scritto il file di controllo.  
+     Consente di aprire la **individua cartella-* * * nome_server* finestra di dialogo per specificare un percorso di file o creare una cartella in cui viene scritto il file di controllo.  
   
      **Limite massimo di file di controllo:**  
      **Numero massimo file di rollover**  
@@ -128,7 +128,7 @@ ms.locfileid: "48219611"
   
      Nella finestra di dialogo **Crea specifica controllo server** sono disponibili le opzioni indicate di seguito.  
   
-     **Nome**  
+     **Name**  
      Nome della specifica del controllo del server. Tale nome viene generato automaticamente quando si crea una nuova specifica del controllo del server, ma è modificabile.  
   
      **Controllo**  
@@ -154,7 +154,7 @@ ms.locfileid: "48219611"
   
 3.  Al termine dell'operazione scegliere **OK**.  
   
-##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
   
 #### <a name="to-create-a-server-audit"></a>Per creare un controllo del server  
   
@@ -165,7 +165,7 @@ ms.locfileid: "48219611"
 3.  Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**.  
   
     ```  
-    -- Creates a server audit called "HIPPA_Audit" with a binary file as the target and no options.  
+    -- Creates a server audit called "HIPAA_Audit" with a binary file as the target and no options.  
     CREATE SERVER AUDIT HIPAA_Audit  
         TO FILE ( FILEPATH ='\\SQLPROD_1\Audit\' );  
     ```  
@@ -179,11 +179,11 @@ ms.locfileid: "48219611"
 3.  Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**.  
   
     ```  
-    /*Creates a server audit specification called "HIPPA_Audit_Specification" that audits failed logins for the SQL Server audit "HIPPA_Audit" created above.  
+    /*Creates a server audit specification called "HIPAA_Audit_Specification" that audits failed logins for the SQL Server audit "HIPAA_Audit" created above.  
     */  
   
-    CREATE SERVER AUDIT SPECIFICATION HIPPA_Audit_Specification  
-    FOR SERVER AUDIT HIPPA_Audit  
+    CREATE SERVER AUDIT SPECIFICATION HIPAA_Audit_Specification  
+    FOR SERVER AUDIT HIPAA_Audit  
         ADD (FAILED_LOGIN_GROUP);  
     GO  
     -- Enables the audit.   

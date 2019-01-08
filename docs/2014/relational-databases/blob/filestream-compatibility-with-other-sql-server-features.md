@@ -13,12 +13,12 @@ ms.assetid: d2c145dc-d49a-4f5b-91e6-89a2b0adb4f3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 287392869ef22492f0f3b5ac850ec4ecd58515ec
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 623b0139d70cec0574aaf9b68e37a1ad6f4f9eaf
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48084631"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53355218"
 ---
 # <a name="filestream-compatibility-with-other-sql-server-features"></a>Compatibilità FILESTREAM con altre funzionalità di SQL Server
   Poiché i dati FILESTREAM sono nel file system, in questo argomento vengono fornite alcune considerazioni, linee guida e limitazioni per l'utilizzo di FILESTREAM con le funzionalità di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]indicate di seguito.  
@@ -69,7 +69,7 @@ ms.locfileid: "48084631"
  Una colonna `varbinary(max)` che ha l'attributo FILESTREAM abilitato sul server di pubblicazione può essere replicata in un sottoscrittore con o senza l'attributo FILESTREAM. Per specificare la modalità di replica della colonna, usare la finestra di dialogo **Proprietà articolo - \<Articolo>** oppure il parametro @schema_option di [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql) o [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql). I dati replicati in una colonna `varbinary(max)` che non dispone dell'attributo FILESTREAM non devono superare il limite di 2 GB per quel tipo di dati; in caso contrario, viene generato un errore di runtime. Si consiglia di replicare l'attributo FILESTREAM, a meno che non si replichino dati in [!INCLUDE[ssVersion2005](../../includes/ssversion2000-md.md)] sottoscrittori non è supportata, indipendentemente dall'opzione di schema specificato.  
   
 > [!NOTE]  
->  La replica di valori di dati di dimensioni elevate da [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] a Sottoscrittori [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] è limitata a dati con dimensioni massime pari a 256 MB. Per ulteriori informazioni, vedere la pagina Web [Specifiche di capacità massima](http://go.microsoft.com/fwlink/?LinkId=103810).  
+>  La replica di valori di dati di dimensioni elevate da [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] a Sottoscrittori [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] è limitata a dati con dimensioni massime pari a 256 MB. Per ulteriori informazioni, vedere la pagina Web [Specifiche di capacità massima](https://go.microsoft.com/fwlink/?LinkId=103810).  
   
 ### <a name="considerations-for-transactional-replication"></a>Considerazioni sulla replica transazionale  
  Se si utilizzano colonne FILESTREAM in tabelle pubblicate per replica transazionale, considerare quanto riportato di seguito.  
@@ -78,18 +78,18 @@ ms.locfileid: "48084631"
   
 -   L'opzione max text repl size consente di specificare la quantità massima di dati che è possibile inserire in una colonna pubblicata per la replica. Questa opzione può essere utilizzata per controllare le dimensioni dei dati FILESTREAM replicati.  
   
--   Se si specifica l'opzione dello schema per replicare l'attributo FILESTREAM, ma si esclude il `uniqueidentifier` colonna richiesta da FILESTREAM o si specifica di non replicare il vincolo UNIQUE per la colonna, la replica non viene replicato FILESTREAM attributo. La colonna viene replicata solo come `varbinary(max)`.  
+-   Se si specifica l'opzione dello schema per replicare l'attributo FILESTREAM, ma si esclude la colonna `uniqueidentifier` richiesta da FILESTREAM o si specifica di non replicare il vincolo UNIQUE per la colonna, la replica dell'attributo FILESTREAM non viene effettuata. La colonna viene replicata solo come `varbinary(max)`.  
   
 ### <a name="considerations-for-merge-replication"></a>Considerazioni per la replica di tipo merge  
  Se si utilizzano colonne FILESTREAM in tabelle pubblicate per replica di tipo merge, considerare quanto riportato di seguito.  
   
--   Le repliche di tipo merge e FILESTREAM richiedono una colonna del tipo di dati `uniqueidentifier` per identificare ogni riga in una tabella. La replica di tipo merge consente di aggiungere automaticamente una colonna se la tabella non ne contiene neanche una. La replica di tipo merge richiede l'impostazione della proprietà ROWGUIDCOL per la colonna e che vi sia un'impostazione predefinita di NEWID () o NEWSEQUENTIALID (). Oltre a questi requisiti, è necessario che per FILESTREAM vi sia un vincolo UNIQUE definito per la colonna. In base a questi requisiti si verificano le seguenti conseguenze:  
+-   Le repliche di tipo merge e FILESTREAM richiedono una colonna di tipo di dati `uniqueidentifier` per identificare ogni riga in una tabella. La replica di tipo merge consente di aggiungere automaticamente una colonna se la tabella non ne contiene neanche una. La replica di tipo merge richiede l'impostazione della proprietà ROWGUIDCOL per la colonna e che vi sia un'impostazione predefinita di NEWID () o NEWSEQUENTIALID (). Oltre a questi requisiti, è necessario che per FILESTREAM vi sia un vincolo UNIQUE definito per la colonna. In base a questi requisiti si verificano le seguenti conseguenze:  
   
     -   Se si aggiunge una colonna FILESTREAM a una tabella che è già pubblicata per la replica di tipo merge, verificare che la colonna `uniqueidentifier` abbia un vincolo UNIQUE. In caso contrario, aggiungere un vincolo denominato alla tabella nel database di pubblicazione. Per impostazione predefinita questa modifica dello schema verrà pubblicata tramite la replica e applicata a ogni database di sottoscrizione.  
   
          Se si aggiunge manualmente un vincolo UNIQUE come descritto e si desidera rimuovere una replica di tipo merge, è necessario prima rimuovere il vincolo UNIQUE; in caso contrario, la rimozione della replica non verrà effettuata.  
   
-    -   Per impostazione predefinita, la replica di tipo merge consente di utilizzare NEWSEQUENTIALID () perché può fornire migliori prestazioni rispetto a NEWID (). Se si aggiunge un `uniqueidentifier` colonna a una tabella che sarà pubblicata per la replica di tipo merge, specificare NEWSEQUENTIALID () come impostazione predefinita.  
+    -   Per impostazione predefinita, la replica di tipo merge consente di utilizzare NEWSEQUENTIALID () perché può fornire migliori prestazioni rispetto a NEWID (). Se si aggiunge una colonna `uniqueidentifier` a una tabella che sarà pubblicata per la replica di tipo merge, specificare NEWSEQUENTIALID () come impostazione predefinita.  
   
 -   La replica di tipo merge include un'ottimizzazione per la replica di tipi di oggetto di grandi dimensioni. Questa ottimizzazione è controllata dal parametro @stream_blob_columns di [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql). Se si imposta l'opzione dello schema per replicare l'attributo FILESTREAM, il valore del parametro @stream_blob_columns è impostato su `true`. L'override di questa ottimizzazione può essere eseguito utilizzando [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql). Questa stored procedure consente di impostare @stream_blob_columns su `false`. Se si aggiunge una colonna FILESTREAM a una tabella che è già pubblicata per la replica di tipo merge, si consiglia di impostare l'opzione su `true` utilizzando sp_changemergearticle.  
   

@@ -13,12 +13,12 @@ ms.assetid: 0300e777-d56b-4d10-9c33-c9ebd2489ee5
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: cabca146b31035b6c1023cfc6c8bdda3e6a71958
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: 7f631209a655b11062ffd17fa9f83f3e355011cf
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018866"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53356689"
 ---
 # <a name="install-sql-server-2014"></a>Installare SQL Server 2014
 ## <a name="-download-sql-server-2014-express-httpwwwhanselmancomblogdownloadsqlserverexpressaspx"></a>[ Download di SQL Server 2014 Express ](http://www.hanselman.com/blog/DownloadSQLServerExpress.aspx)
@@ -27,14 +27,14 @@ ms.locfileid: "51018866"
  In questo argomento è contenuta una panoramica delle diverse opzioni disponibili per l'installazione di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Per altre informazioni sui vari [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] componenti che possono essere installati e il processo di installazione, vedere [installazione per SQL Server 2014](installation-for-sql-server.md).  
 > **Nota:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è disponibile nelle edizioni a 32 e 64 bit. Le edizioni a 64 bit e a 32 bit di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengono installate tramite l'Installazione guidata o il prompt dei comandi. Per altre informazioni sulle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] componenti, vedere [edizioni e componenti di SQL Server 2014](../../sql-server/editions-and-components-of-sql-server-2016.md) e [funzionalità supportate dalle edizioni di SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
- Per impostazione predefinita, i database di esempio e il codice di esempio non vengono installati come parte dell'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Per installare i database di esempio e il codice di esempio per le edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] diverse da Express, vedere il [sito Web CodePlex](http://go.microsoft.com/fwlink/?LinkId=87843). Per informazioni sul supporto per il codice e i database di esempio di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)], vedere [Panoramica di database ed esempi](http://go.microsoft.com/fwlink/?LinkId=110391).  
+ Per impostazione predefinita, i database di esempio e il codice di esempio non vengono installati come parte dell'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Per installare i database di esempio e il codice di esempio per le edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] diverse da Express, vedere il [sito Web CodePlex](https://go.microsoft.com/fwlink/?LinkId=87843). Per informazioni sul supporto per il codice e i database di esempio di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)], vedere [Panoramica di database ed esempi](https://go.microsoft.com/fwlink/?LinkId=110391).  
   
  Prima di installare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], esaminare i requisiti di installazione, i controlli di configurazione di sistema e considerazioni sulla sicurezza. Per altre informazioni, vedere [Planning a SQL Server Installation](../../sql-server/install/planning-a-sql-server-installation.md). Per informazioni sui vari scenari di installazione per [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], vedere gli argomenti nella sezione successiva.  
   
   
 ## <a name="install-includesscurrentincludessscurrent-mdmd-components"></a>Installare [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] componenti  
   
-|Argomento|Description|  
+|Argomento|Descrizione|  
 |-----------|-----------------|  
 |[Informazioni sul Motore di database di SQL Server](../sql-server-database-engine-overview.md)|Viene descritto come installare e configurare il [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].|  
 |[Installare la replica di SQL Server](install-sql-server-replication.md)|Viene descritto come installare e configurare la replica di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
@@ -44,7 +44,7 @@ ms.locfileid: "51018866"
   
 ## <a name="how-to-install-includesscurrentincludessscurrent-mdmd"></a>Come installare [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   
-|Title|Description|  
+|Titolo|Descrizione|  
 |-----------|-----------------|  
 |[Procedure per l'installazione](../../sql-server/install/installation-how-to-topics.md)|Vengono forniti i collegamenti agli argomenti sulle procedure per installare [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite l'Installazione guidata, il prompt dei comandi, i file di configurazione e SysPrep.|  
 |[Installare SQL Server 2014 in Server Core](install-sql-server-on-server-core.md)|Vedere questo argomento per installare [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] in Windows Server Core.|  
@@ -53,7 +53,7 @@ ms.locfileid: "51018866"
   
 ## <a name="configuration"></a>Configurazione  
   
-|Argomento|Description|  
+|Argomento|Descrizione|  
 |-----------|-----------------|  
 |[Configurare Windows Firewall per consentire l'accesso a SQL Server](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)|In questo argomento viene fornita una panoramica della configurazione dei firewall e viene illustrato come configurare Windows Firewall.|  
 |[Configurare un computer multihomed per l'accesso a SQL Server](../../sql-server/install/configure-a-multi-homed-computer-for-sql-server-access.md)|In questo argomento viene descritto come configurare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e Windows Firewall con sicurezza avanzata per fornire le connessioni di rete a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un ambiente multihomed.|  

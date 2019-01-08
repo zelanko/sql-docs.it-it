@@ -11,12 +11,12 @@ ms.assetid: 201a3fda-f162-45d7-bf39-74dcb92fd0e6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: bff9e3f913ee432988bd7a666673e8f27bc4d04e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0ffd00cde83f99f1147a85b06e93e3816fb6e376
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48069641"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53354510"
 ---
 # <a name="configure-disk-space-usage-powerpivot-for-sharepoint"></a>Configurare l'utilizzo di spazio su disco (PowerPivot per SharePoint)
   Una distribuzione di PowerPivot per SharePoint consente di utilizzare lo spazio su disco del computer host per memorizzare nella cache database PowerPivot per ricaricamenti più veloci. Ogni database PowerPivot caricato in memoria viene innanzitutto memorizzato nella cache su disco in modo che possa essere ricaricato rapidamente in un secondo momento per soddisfare nuove richieste. Per impostazione predefinita, in PowerPivot per SharePoint viene utilizzato tutto lo spazio su disco disponibile per memorizzare nella cache i database, ma è possibile modificare questo comportamento impostando proprietà che limitano la quantità di spazio su disco utilizzata.  
@@ -51,11 +51,11 @@ ms.locfileid: "48069641"
   
  A livello di sistema, è possibile creare avvisi di posta elettronica tramite cui si notifica all'utente quando lo spazio su disco non è sufficiente. In Microsoft System Center è disponibile una funzionalità di avvisi di posta elettronica. Per impostare gli avvisi, è possibile utilizzare anche Gestione risorse file server, l'Utilità di pianificazione o uno script di PowerShell. Nei collegamenti seguenti vengono fornite informazioni utili per la configurazione di notifiche di spazio su disco insufficiente:  
   
--   [Quali sono le novità in Gestione risorse File Server](http://technet.microsoft.com/library/hh831746.aspx) (http://technet.microsoft.com/library/hh831746.aspx).  
+-   [Quali sono le novità in Gestione risorse File Server](https://technet.microsoft.com/library/hh831746.aspx) (https://technet.microsoft.com/library/hh831746.aspx).  
   
--   [Guida dettagliata alla gestione risorse file Server per Windows Server 2008 R2](http://go.microsoft.com/fwlink/?LinkID=204875) (http://go.microsoft.com/fwlink/?LinkID=204875).  
+-   [Guida dettagliata alla gestione risorse file Server per Windows Server 2008 R2](https://go.microsoft.com/fwlink/?LinkID=204875) (https://go.microsoft.com/fwlink/?LinkID=204875).  
   
--   [L'impostazione di avvisi di spazio su disco insufficiente in Windows Server 2008](http://go.microsoft.com/fwlink/?LinkID=204870) ( http://go.microsoft.com/fwlink/?LinkID=204870).  
+-   [L'impostazione di avvisi di spazio su disco insufficiente in Windows Server 2008](https://go.microsoft.com/fwlink/?LinkID=204870) ( https://go.microsoft.com/fwlink/?LinkID=204870).  
   
 ## <a name="how-to-limit-the-amount-of-disk-space-used-for-storing-cached-files"></a>Come limitare la quantità di spazio su disco utilizzata per l'archiviazione di file memorizzati nella cache  
   
@@ -67,7 +67,7 @@ ms.locfileid: "48069641"
   
 3.  In Utilizzo disco impostare un valore (in gigabyte) per **Totale spazio su disco utilizzato** per impostare un limite massimo per la quantità di spazio usato per la memorizzazione nella cache. Il valore predefinito è 0, che consente ad Analysis Services di utilizzare tutto lo spazio su disco disponibile.  
   
-4.  Nell'impostazione **Elimina database memorizzati nella cache nelle ultime 'n' ore** di Utilizzo disco specificare gli ultimi criteri usati per svuotare la cache quando lo spazio su disco è al limite massimo.  
+4.  In utilizzo disco nel **Elimina dalla cache database nelle ultime ' n'ore** impostazione, specificare ultimi criteri utilizzati per svuotare la cache quando lo spazio su disco è al limite massimo.  
   
      Il valore predefinito è 4 ore, pertanto tutti i database inattivi per almeno 4 ore vengono eliminati dal file system. I database che sono inattivi ma ancora in memoria vengono scaricati e quindi eliminati dal file system.  
   

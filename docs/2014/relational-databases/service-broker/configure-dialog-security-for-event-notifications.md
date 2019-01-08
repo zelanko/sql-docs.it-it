@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords:
 - event notifications [SQL Server], security
@@ -12,12 +12,12 @@ ms.assetid: 12afbc84-2d2a-4452-935e-e1c70e8c53c1
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 754cec388eb6eb6ce30ae600b23a9397cc84f205
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1c62812b138afef0244bbad5f3d17bafb4064537
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48191401"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53359523"
 ---
 # <a name="configure-dialog-security-for-event-notifications"></a>Configurazione della sicurezza del dialogo per le notifiche degli eventi
   [!INCLUDE[ssSB](../../includes/sssb-md.md)] per le notifiche degli eventi che prevedono l'invio di messaggi a Service Broker su un server remoto. È necessario configurare manualmente la sicurezza del dialogo in base al modello di sicurezza avanzata del dialogo di [!INCLUDE[ssSB](../../includes/sssb-md.md)] . Il modello di sicurezza avanzata attiva la crittografia e la decrittografia di messaggi inviati da e a server remoti. Sebbene le notifiche degli eventi vengano inviate in una sola direzione, gli altri messaggi, ad esempio gli errori, vengono anche restituiti nella direzione opposta.  
@@ -28,11 +28,11 @@ ms.locfileid: "48191401"
 > [!IMPORTANT]  
 >  È necessario creare tutti i certificati con date di inizio e di scadenza valide.  
   
- **Passaggio 1: impostare un numero di porta TCP e un nome del servizio di destinazione.**  
+ **Passaggio 1: Impostare una porta TCP numero e la destinazione del servizio nome.**  
   
  Impostare la porta TCP in cui il server di origine e il server di destinazione riceveranno i messaggi. È inoltre necessario determinare il nome del servizio di destinazione.  
   
- **Passaggio 2: configurare la crittografia e la condivisione dei certificati per l'autenticazione a livello di database.**  
+ **Passaggio 2: Configurare la crittografia e condivisione dei certificati per l'autenticazione a livello di database.**  
   
  Completare le azioni seguenti nel server di origine e in quello di destinazione.  
   
@@ -45,27 +45,27 @@ ms.locfileid: "48191401"
 |[Eseguire il backup del certificato](/sql/t-sql/statements/backup-certificate-transact-sql) in un file accessibile al server di destinazione.|Eseguire il backup del certificato in un file accessibile al server di origine.|  
 |[Creare un utente](/sql/t-sql/statements/create-user-transact-sql), specificando l'utente del database di destinazione e WITHOUT LOGIN. Questo utente sarà proprietario del certificato del database di destinazione da creare dal file di backup. Non è necessario eseguire il mapping dell'utente a un account di accesso, poiché l'unico scopo di questo utente è essere proprietario del certificato del database di destinazione creato al passaggio 3 seguente.|Creare un utente, specificando l'utente del database di origine e WITHOUT LOGIN. Questo utente sarà proprietario del certificato del database di origine da creare dal file di backup. Non è necessario eseguire il mapping dell'utente a un account di accesso, poiché l'unico scopo di questo utente è essere proprietario del certificato del database di origine creato al passaggio 3 seguente.|  
   
- **Passaggio 3: condividere i certificati e concedere le autorizzazioni per l'autenticazione a livello di database.**  
+ **Passaggio 3: Condividere i certificati e concedere le autorizzazioni per l'autenticazione a livello di database.**  
   
  Completare le azioni seguenti nel server di origine e in quello di destinazione.  
   
 |Server di origine|Server di destinazione|  
 |-------------------|-------------------|  
 |[Creare un certificato](/sql/t-sql/statements/create-certificate-transact-sql) dal file di backup del certificato di destinazione, specificando l'utente del database di destinazione come proprietario.|Creare un certificato dal file di backup del certificato di origine, specificando l'utente del database di origine come proprietario.|  
-|[Concedere l'autorizzazione](/sql/t-sql/statements/grant-transact-sql) per la creazione della notifica degli eventi all'utente del database di origine. Per altre informazioni su questa autorizzazione, vedere [CREATE EVENT NOTIFICATION &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-event-notification-transact-sql)se non ne è presente una per il database di origine.|Concedere l'autorizzazione REFERENCES all'utente del database di destinazione sul contratto [!INCLUDE[ssSB](../../includes/sssb-md.md)] per le notifiche degli eventi esistente: `http://schemas.microsoft.com/SQL/Notifications/PostEventNotification`.|  
+|[Concedere l'autorizzazione](/sql/t-sql/statements/grant-transact-sql) per la creazione della notifica degli eventi all'utente del database di origine. Per altre informazioni su questa autorizzazione, vedere [CREATE EVENT NOTIFICATION &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-event-notification-transact-sql)se non ne è presente una per il database di origine.|Concedere l'autorizzazione REFERENCES all'utente del database di destinazione sul contratto [!INCLUDE[ssSB](../../includes/sssb-md.md)] per le notifiche degli eventi esistente: `https://schemas.microsoft.com/SQL/Notifications/PostEventNotification`.|  
 |[Creare un'associazione al servizio remoto](/sql/t-sql/statements/create-remote-service-binding-transact-sql) al servizio di destinazione e specificare le credenziali dell'utente del database di destinazione. L'associazione al servizio remoto garantisce che la chiave pubblica nel certificato di proprietà dell'utente del database di origine autentichi i messaggi inviati al server di destinazione.|[Concedere](/sql/t-sql/statements/grant-transact-sql) le autorizzazioni CREATE QUEUE, CREATE SERVICE e CREATE SCHEMA all'utente del database di destinazione.|  
 ||Connettersi al database come utente del database di destinazione, se non è ancora stata eseguita questa operazione.|  
 ||[Creare una coda](/sql/t-sql/statements/create-queue-transact-sql) in cui ricevere i messaggi di notifica degli eventi e [creare un servizio](/sql/t-sql/statements/create-service-transact-sql) per il recapito dei messaggi.|  
 ||[Concedere l'autorizzazione SEND](/sql/t-sql/statements/grant-transact-sql) per il servizio di destinazione all'utente del database di origine.|  
 |Fornire l'identificatore di Service Broker del database di origine al server di destinazione. È possibile ottenere questo identificatore eseguendo una query sulla colonna **service_broker_guid** della vista del catalogo [sys.databases](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql) Per una notifica degli eventi a livello di server, usare l'identificatore di Service Broker di **msdb**.|Fornire l'identificatore di Service Broker del database di destinazione al server di origine.|  
   
- **Passaggio 4: creare route e impostare l'autenticazione a livello di server.**  
+ **Passaggio 4: Creare route e impostare l'autenticazione a livello di server.**  
   
  Completare le azioni seguenti nel server di origine e in quello di destinazione.  
   
 |Server di origine|Server di destinazione|  
 |-------------------|-------------------|  
-|[Creare una route](/sql/t-sql/statements/create-route-transact-sql) al servizio di destinazione e specificare l'identificatore di Service Broker del database di destinazione e il numero di porta TCP precedentemente concordato.|Creare una route al servizio di origine e specificare l'identificatore di Service Broker del database di origine e il numero di porta TCP precedentemente definito. Per specificare il servizio di origine, utilizzare il servizio fornito seguente: `http://schemas.microsoft.com/SQL/Notifications/EventNotificationService`.|  
+|[Creare una route](/sql/t-sql/statements/create-route-transact-sql) al servizio di destinazione e specificare l'identificatore di Service Broker del database di destinazione e il numero di porta TCP precedentemente concordato.|Creare una route al servizio di origine e specificare l'identificatore di Service Broker del database di origine e il numero di porta TCP precedentemente definito. Per specificare il servizio di origine, utilizzare il servizio fornito seguente: `https://schemas.microsoft.com/SQL/Notifications/EventNotificationService`.|  
 |Passare al database **master** per configurare l'autenticazione a livello di server.|Passare al database **master** per configurare l'autenticazione a livello di server.|  
 |**Creare una chiave master** se non ne è presente una per il database [master](/sql/t-sql/statements/create-master-key-transact-sql).|Creare una chiave master se non ne è presente una per il database **master** .|  
 |[Creare un certificato](/sql/t-sql/statements/create-certificate-transact-sql) per l'autenticazione del database.|Creare un certificato per l'autenticazione del database.|  
@@ -75,7 +75,7 @@ ms.locfileid: "48191401"
 |[Concedere l'autorizzazione CONNECT](/sql/t-sql/statements/grant-transact-sql) per l'endpoint all'account di accesso dell'autenticatore di destinazione.|Concedere l'autorizzazione CONNECT per l'endpoint all'account di accesso dell'autenticatore di origine.|  
 |[Creare un utente](/sql/t-sql/statements/create-user-transact-sql)e specificare l'account di accesso dell'autenticatore di destinazione.|Creare un utente e specificare l'account di accesso dell'autenticatore di origine.|  
   
- **Passaggio 5: condividere i certificati per l'autenticazione a livello di server e creare la notifica degli eventi.**  
+ **Passaggio 5: Condividere i certificati per l'autenticazione a livello di server e creare la notifica degli eventi.**  
   
  Completare le azioni seguenti nel server di origine e in quello di destinazione.  
   

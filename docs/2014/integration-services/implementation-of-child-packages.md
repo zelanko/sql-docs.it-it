@@ -13,12 +13,12 @@ ms.assetid: ab0c09d7-ce2e-487d-a1ed-a4b5adb6cc01
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f415816f935e03b6b533fded2fb00760a101526d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ec58691ab78fdf7c57871805bb095ca48f221da7
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48100179"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53373403"
 ---
 # <a name="implementation-of-child-packages"></a>Implementazione di pacchetti figlio
   Quando si implementa il bilanciamento del carico tramite [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], i pacchetti figlio vengono installati su altri server per sfruttare il tempo di CPU o di server disponibile. Per creare ed eseguire i pacchetti figlio è necessario attenersi alla procedura seguente:  
@@ -56,7 +56,7 @@ ms.locfileid: "48100179"
   
 -   Eseguire ogni singolo processo di SQL Server Agent sul relativo computer remoto, tramite [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], per verificare che il pacchetto venga eseguito.  
   
- Per informazioni su come risolvere i problemi legati all'esecuzione di pacchetti dai processi di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent, vedere l'articolo relativo a [un pacchetto SSIS che non viene eseguito quando si chiama il pacchetto SSIS da un passaggio di processo di SQL Server Agent](http://support.microsoft.com/kb/918760) nella [!INCLUDE[msCoName](../includes/msconame-md.md)] Knowledge Base.  
+ Per informazioni su come risolvere i problemi legati all'esecuzione di pacchetti dai processi di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent, vedere l'articolo relativo a [un pacchetto SSIS che non viene eseguito quando si chiama il pacchetto SSIS da un passaggio di processo di SQL Server Agent](https://support.microsoft.com/kb/918760) nella [!INCLUDE[msCoName](../includes/msconame-md.md)] Knowledge Base.  
   
  SQL Server Agent verifica l'accesso al sottosistema per un proxy e garantisce l'accesso al proxy a ogni esecuzione del relativo passaggio del processo.  
   
@@ -68,8 +68,8 @@ ms.locfileid: "48100179"
   
 ## <a name="related-content"></a>Contenuto correlato  
   
--   Intervento nel blog concernente [SSIS: l'accesso a variabili in un pacchetto padre](http://go.microsoft.com/fwlink/?LinkId=257729), sul sito Web consultingblogs.emc.com.  
+-   Intervento nel blog concernente [SSIS: Accesso alle variabili in un pacchetto padre](https://go.microsoft.com/fwlink/?LinkId=257729), sul sito Web consultingblogs.emc.com.  
   
--   Intervento nel blog concernente [SSIS: è necessario eseguire pacchetti figlio in-process o out-of-process?](http://go.microsoft.com/fwlink/?LinkId=220819), sul sito Web consultingblogs.emc.com.  
+-   Intervento nel blog concernente [SSIS: Esecuzione dei pacchetti figlio in-process o out-of-process? ](https://go.microsoft.com/fwlink/?LinkId=220819), sul sito Web consultingblogs.emc.com.  
   
   

@@ -14,19 +14,19 @@ ms.assetid: 51d130a1-2b48-439e-9447-783e1fc3f4fb
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 348ee13872db0ae6e9900290404d8db88122b123
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4271188149c8bafaaf256fa5056dd25ffc39aa38
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48194531"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53354603"
 ---
 # <a name="about-the-sql-server-license-terms"></a>Informazioni sulle condizioni di licenza di SQL Server
   Le condizioni di licenza software [!INCLUDE[msCoName](../includes/msconame-md.md)] vengono copiate nel computer locale durante l'installazione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Quando più istanze della stessa edizione e lingua di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] vengono installate nello stesso computer, a tutte le istanze della stessa edizione e lingua verrà applicata una sola copia delle condizioni di licenza. I file vengono scritti a: % ProgramFiles %\\[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]\120\License Terms\ o % % ProgramFiles(x86) \ [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]Termini \120\License\\.  
   
  Quando più istanze della stessa edizione e lingua di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] vengono installate nello stesso computer, a tutte le istanze della stessa edizione e lingua verrà applicata una sola copia delle condizioni di licenza.  
   
- Il nome di file condizioni di licenza indicate l'edizione [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] così come il [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] edizione in lingua installata. Il nome di file condizioni di licenza è nel formato: SQLServer2014_License_Edition_\<tipo > _\<LCID >. RTF. Esempio:  
+ Nel nome di file delle condizioni di licenza sono indicate l'edizione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e l'edizione localizzata installata di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Il nome del file delle condizioni di licenza è in formato: SQLServer2014_License_Edition_\<tipo > _\<LCID >. RTF. Ad esempio:  
   
 -   SQLServer2014_License_DEV_1033.rtf per [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] Developer, edizione in lingua inglese.  
   
@@ -34,11 +34,11 @@ ms.locfileid: "48194531"
   
  TYPE indica l'edizione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Di seguito vengono indicati i segmenti dei nomi di file utilizzati per identificare le edizioni di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]:  
   
--   ENT – Enterprise Edition: licenze Server/CAL (Client Access License)  
+-   ENT - Enterprise Edition: Licenza server/CAL (Client Access License)  
   
--   ENTCORE – Enterprise Edition: licenze basate su core  
+-   ENTCORE - Enterprise Edition: Core-based Licensing  
   
--   BI – Business Intelligence  
+-   BI - Business Intelligence  
   
 -   DEV - Developer  
   
@@ -48,7 +48,7 @@ ms.locfileid: "48194531"
   
 -   EXPR - Express  
   
- LCID è un numero, che si riferisce all'ID delle impostazioni locali della lingua di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  Di seguito vengono indicati i segmenti dei nomi di file utilizzati per identificare le lingue corrispondenti di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]:  
+ LCID è un numero, che si riferisce all'ID delle impostazioni locali della lingua di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  Di seguito vengono indicati i segmenti dei nomi di file usati per identificare le lingue corrispondenti di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]:  
   
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Lingua|Abbreviazione per la lingua di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]|LCID|  
 |----------------------------------------|---------------------------------------------------------|----------|  
@@ -65,7 +65,7 @@ ms.locfileid: "48194531"
 |Russo|RUS|1049|  
   
 ## <a name="includessnoversionincludesssnoversion-mdmd-licensing-options"></a>Opzioni di gestione delle licenze per [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  
- Per altre informazioni sulle [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sui prezzi e le opzioni di licenza, vedere la [Microsoft SQL Server](http://www.microsoft.com/sqlserver/sql-server-2014.aspx) (http://www.microsoft.com/sqlserver/sql-server-2014.aspx) sito Web.  
+ Per altre informazioni sulle [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sui prezzi e le opzioni di licenza, vedere la [Microsoft SQL Server](https://www.microsoft.com/sqlserver/sql-server-2014.aspx) (https://www.microsoft.com/sqlserver/sql-server-2014.aspx) sito Web.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Considerazioni sulle licenze per SQL Server](../../2014/sql-server/install/licensing-considerations-for-sql-server.md)   

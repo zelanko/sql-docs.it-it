@@ -11,12 +11,12 @@ ms.assetid: cf2e2c84-0a69-4cdd-90a1-fb4021936513
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: fd3a478fd3412e035e71ac33790e26595af309c1
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: b9bbe95b51982ca6835764e89b27481e0a0f4a92
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50146076"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53363723"
 ---
 # <a name="configure-http-access-to-analysis-services-on-internet-information-services-iis-80"></a>Configurare l'accesso HTTP ad Analysis Services in Internet Information Services (IIS) 8.0
   In questo articolo viene illustrato come configurare un endpoint HTTP per l'accesso a un'istanza di Analysis Services. È possibile abilitare l'accesso HTTP configurando MSMDPUMP.dll, un'estensione ISAPI che viene eseguita in IIS (Internet Information Services) e che consente di eseguire attività di data pump da applicazioni client a un server Analysis Services e viceversa. Questo approccio fornisce un'alternativa per la connessione ad Analysis Services se per le soluzioni Business Intelligence in uso sono richieste le funzionalità seguenti:  
@@ -29,13 +29,13 @@ ms.locfileid: "50146076"
   
 -   Nelle applicazioni client non è possibile utilizzare le librerie client di Analysis Services (ad esempio, un'applicazione Java in esecuzione in un server UNIX). Se non è possibile utilizzare le librerie client di Analysis Services per l'accesso ai dati, è possibile utilizzare SOAP e XML/A in una connessione HTTP diretta a un'istanza di Analysis Services.  
   
--   Sono richiesti metodi di autenticazione diversi dalla sicurezza integrata di Windows. In particolare, è possibile utilizzare le connessioni anonime e l'autenticazione di base quando si configura Analysis Services per l'accesso HTTP. Le autenticazioni Digest, basate su form e ASP.NET non sono supportate. Un requisito di autenticazione di base è uno dei motivi principali per l'abilitazione dell'accesso HTTP. Per altre informazioni, vedere [Microsoft BI Authentication and Identity Delegation](http://go.microsoft.com/fwlink/?LinkId=286576)(Autenticazione a Microsoft BI e delega d'identità).  
+-   Sono richiesti metodi di autenticazione diversi dalla sicurezza integrata di Windows. In particolare, è possibile utilizzare le connessioni anonime e l'autenticazione di base quando si configura Analysis Services per l'accesso HTTP. Le autenticazioni Digest, basate su form e ASP.NET non sono supportate. Un requisito di autenticazione di base è uno dei motivi principali per l'abilitazione dell'accesso HTTP. Per altre informazioni, vedere [Microsoft BI Authentication and Identity Delegation](https://go.microsoft.com/fwlink/?LinkId=286576) (Autenticazione a Microsoft BI e delega d'identità).  
   
  È possibile configurare l'accesso HTTP per qualsiasi versione o edizione supportata di Analysis Services con l'esecuzione in modalità tabulare o multidimensionale. I cubi locali sono un'eccezione. È possibile connettersi a un cubo locale tramite un endpoint HTTP.  
   
  L'impostazione dell'accesso HTTP è un'attività di post-installazione. Analysis Services deve essere installato prima di configurarlo per l'accesso HTTP. Come amministratore di Analysis Services, sarà necessario concedere autorizzazioni agli account di Windows prima che sia possibile eseguire l'accesso HTTP. Inoltre, è buona norma convalidare prima di tutto l'installazione, verificando che sia pienamente operativa prima di proseguire la configurazione del server. Dopo aver configurato l'accesso HTTP, è possibile usare sia l'endpoint HTTP sia il nome di rete regolare del server su TCP/IP. La configurazione dell'accesso HTTP non invalida altri approcci per l'accesso ai dati.  
   
- Proseguendo nella configurazione di MSMDPUMP, tenere presente che ci sono due connessioni da considerare: da client a IIS e da IIS a SSAS. Le istruzioni in questo articolo riguardano la connessione da IIS a SSAS. L'applicazione client potrebbe richiedere una configurazione aggiuntiva per la connessione a IIS. Le decisioni riguardanti l'uso di SSL o la configurazione delle associazioni non sono comprese nell'ambito di questo articolo. Per altre informazioni su IIS, vedere [Web Server (IIS)](http://technet.microsoft.com/library/hh831725.aspx) .  
+ Proseguendo nella configurazione di MSMDPUMP, tenere presente che ci sono due connessioni da considerare: da client a IIS e da IIS a SSAS. Le istruzioni in questo articolo riguardano la connessione da IIS a SSAS. L'applicazione client potrebbe richiedere una configurazione aggiuntiva per la connessione a IIS. Le decisioni riguardanti l'uso di SSL o la configurazione delle associazioni non sono comprese nell'ambito di questo articolo. Per altre informazioni su IIS, vedere [Web Server (IIS)](https://technet.microsoft.com/library/hh831725.aspx).  
   
  In questo argomento sono contenute le sezioni seguenti:  
   
@@ -97,7 +97,7 @@ ms.locfileid: "50146076"
   
  Una connessione remota tra IIS e Analysis Services richiede l'installazione del provider OLE DB per Analysis Services (MSOLAP) nel server Windows che esegue IIS.  
   
-1.  Aprire la pagina di download per il [Feature Pack di SQL Server 2014](http://www.microsoft.com/download/details.aspx?id=42295)  
+1.  Aprire la pagina di download per il [Feature Pack di SQL Server 2014](https://www.microsoft.com/download/details.aspx?id=42295)  
   
 2.  Fare clic sul pulsante rosso Scarica.  
   
@@ -108,12 +108,12 @@ ms.locfileid: "50146076"
 > [!NOTE]  
 >  Ricordarsi di sbloccare le porte in Windows Firewall per consentire le connessioni client a un server Analysis Services remoto. Per altre informazioni, vedere [Configure the Windows Firewall to Allow Analysis Services Access](configure-the-windows-firewall-to-allow-analysis-services-access.md).  
   
-##  <a name="bkmk_copy"></a> Passaggio 1: Copiare i file MSMDPUMP in una cartella nel server Web  
+##  <a name="bkmk_copy"></a> Passaggio 1: Copiare i file MSMDPUMP in una cartella sul server Web  
  A ogni endpoint HTTP creato deve essere associato un proprio set di file MSMDPUMP. In questo passaggio si esegue la copia del file eseguibile MSMDPUMP, del file di configurazione e della cartella delle risorse dalle cartelle di programma di Analysis Services in una cartella della directory virtuale IIS che verrà creata nel file system del computer in cui è in esecuzione IIS.  
   
  È necessario formattare l'unità per il file system NTFS. Il percorso della cartella creata non deve contenere spazi.  
   
-1.  Copiare i file seguenti, disponibili in \<unità >: \Programmi\Microsoft SQL Server\\< istanza\>\OLAP\bin\isapi: MSMDPUMP. DLL, MSMDPUMP. INI e una cartella Resources.  
+1.  Copiare i file seguenti, disponibili in \<unità >: \Programmi\Microsoft SQL Server\\< istanza\>\OLAP\bin\isapi: MSMDPUMP.DLL, MSMDPUMP.INI e una cartella Resources.  
   
      ![Esplora file con i file da copiare](../media/ssas-httpaccess-msmdpumpfilecopy.PNG "Esplora File con i file da copiare")  
   
@@ -182,9 +182,9 @@ ms.locfileid: "50146076"
   
  L'**autenticazione anonima** viene spesso usata durante il test iniziale, perché la relativa semplicità di configurazione consente di convalidare rapidamente la connettività HTTP ad Analysis Services. In soli pochi passaggi è possibile assegnare un account utente univoco come identità, concedere all'account le autorizzazioni in Analysis Services, utilizzare l'account per verificare l'accesso ai dati in un'applicazione client e infine disabilitare l'autenticazione anonima al completamento del test.  
   
- È anche possibile usare l'autenticazione anonima in un ambiente di produzione se gli utenti non hanno account utente di Windows, ma si attengono alle procedure consigliate bloccando le autorizzazioni nel sistema host, come illustrato nell'articolo: [Enable Anonymous Authentication (IIS 7)](http://technet.microsoft.com/library/cc731244\(v=ws.10\).aspx)(Abilitare l'autenticazione anonima (IIS 7)). Assicurarsi che l'autenticazione sia impostata nella directory virtuale e non nel sito Web padre, per ridurre ulteriormente il livello di accesso dell'account.  
+ È anche possibile usare l'autenticazione anonima in un ambiente di produzione se gli utenti non hanno account utente di Windows, ma si attengono alle procedure consigliate bloccando le autorizzazioni nel sistema host, come illustrato nell'articolo [Abilitare l'autenticazione anonima (IIS 7)](https://technet.microsoft.com/library/cc731244\(v=ws.10\).aspx). Assicurarsi che l'autenticazione sia impostata nella directory virtuale e non nel sito Web padre, per ridurre ulteriormente il livello di accesso dell'account.  
   
- Quando è abilitata l'autenticazione anonima, la connessione come utente anonimo è consentita per qualsiasi connessione utente all'endpoint HTTP. Non sarà possibile controllare le singole connessioni utente né usare l'identità utente per selezionare i dati da un modello. Come è possibile vedere, l'utilizzo dell'autenticazione anonima ha impatto su vari aspetti, dalla progettazione dei modelli, all'aggiornamento dei dati e all'accesso a questi ultimi. Tuttavia, se gli utenti non dispongono di un account di accesso di Windows con cui iniziare, è possibile che l'unica opzione disponibile sia l'account anonimo.  
+ Quando è abilitata l'autenticazione anonima, la connessione come utente anonimo è consentita per qualsiasi connessione utente all'endpoint HTTP. Sarà in grado di controllare le connessioni di singolo utente, né utilizzare l'identità dell'utente per selezionare i dati da un modello. Come è possibile vedere, l'utilizzo dell'autenticazione anonima ha impatto su vari aspetti, dalla progettazione dei modelli, all'aggiornamento dei dati e all'accesso a questi ultimi. Tuttavia, se gli utenti non dispongono di un account di accesso di Windows con cui iniziare, è possibile che l'unica opzione disponibile sia l'account anonimo.  
   
 #### <a name="set-the-authentication-type-and-add-a-script-map"></a>Impostare il tipo di autenticazione e aggiungere un mapping di script  
   
@@ -201,16 +201,16 @@ ms.locfileid: "50146076"
 4.  In alternativa, abilitare **Autenticazione di base** se le applicazioni client e server in uso si trovano in domini diversi. Per poter utilizzare questa modalità, l'utente dovrà immettere un nome utente e una password. Il nome utente e la password vengono trasmessi a IIS mediante connessione HTTP. Tramite IIS si tenterà di rappresentare l'utente che utilizza le credenziali specificate durante la connessione a MSMDPUMP, ma le credenziali in questione non verranno delegate ad Analysis Services. Sarà invece necessario passare un nome utente e una password validi in una connessione, come descritto nel Passaggio 6 del presente documento.  
   
     > [!IMPORTANT]  
-    >  Si noti che chiunque compili un sistema in cui viene trasmessa la password deve disporre di modalità per la sicurezza del canale di comunicazione. In IIS è disponibile un set di strumenti che consente di proteggere il canale. Per altre informazioni, vedere [Enable Anonymous Authentication (IIS 7)](http://go.microsoft.com/fwlink/?LinkId=207562)(Abilitare l'Autenticazione anonima (IIS 7).  
+    >  Si noti che chiunque compili un sistema in cui viene trasmessa la password deve disporre di modalità per la sicurezza del canale di comunicazione. In IIS è disponibile un set di strumenti che consente di proteggere il canale. Per altre informazioni, vedere [Enable Anonymous Authentication (IIS 7)](https://go.microsoft.com/fwlink/?LinkId=207562) (Abilitare l'Autenticazione anonima (IIS 7).  
   
 5.  Disabilitare **Autenticazione anonima** se si usa l'autenticazione di Windows o di base. Quando abilitata, l'autenticazione anonima viene sempre utilizzata per prima in IIS, persino se si abilitano altri metodi di autenticazione.  
   
-     Con l'autenticazione anonima, il data pump (msmdpump.dll) viene eseguito come account utente stabilito per l'utente anonimo. Non esiste alcuna distinzione tra l'utente connesso a IIS e quello connesso ad Analysis Services. Per impostazione predefinita, in IIS viene utilizzato l'account IUSR, ma è possibile impostarlo su un account utente di dominio con autorizzazioni di rete. Sarà necessaria questa funzionalità se IIS e Analysis Services si trovano in computer diversi.  
+     Con l'autenticazione anonima, il data pump (msmdpump.dll) viene eseguito come account utente stabilito per l'utente anonimo. Non esiste alcuna distinzione tra l'utente connesso a IIS e quello connesso ad Analysis Services. Per impostazione predefinita, in IIS viene utilizzato l'account IUSR, ma è possibile impostarlo su un account utente di dominio con autorizzazioni di rete. Questa funzionalità è necessario se IIS e Analysis Services si trovano in computer diversi.  
   
      Per istruzioni su come configurare le credenziali per l'autenticazione anonima, vedere [Anonymous Authentication](http://www.iis.net/configreference/system.webserver/security/authentication/anonymousauthentication)(Autenticazione anonima).  
   
     > [!IMPORTANT]  
-    >  L'autenticazione anonima risulta disponibile con maggiore probabilità in un ambiente estremamente controllato, in cui l'accesso viene concesso o negato in base agli elenchi di controllo di accesso nel file system. Per le procedure consigliate, vedere [Enable Anonymous Authentication (IIS 7)](http://technet.microsoft.com/library/cc731244\(v=ws.10\).aspx)(Abilitare l'Autenticazione anonima (IIS 7).  
+    >  L'autenticazione anonima risulta disponibile con maggiore probabilità in un ambiente estremamente controllato, in cui l'accesso viene concesso o negato in base agli elenchi di controllo di accesso nel file system. Per le procedure consigliate, vedere [Enable Anonymous Authentication (IIS 7)](https://technet.microsoft.com/library/cc731244\(v=ws.10\).aspx) (Abilitare l'Autenticazione anonima (IIS 7).  
   
 6.  Fare clic sulla directory virtuale **OLAP** per aprire la pagina principale. Fare doppio clic su **Mapping gestori**.  
   
@@ -259,7 +259,7 @@ ms.locfileid: "50146076"
   
  Per altre informazioni, vedere [Autorizzazione dell'accesso a oggetti e operazioni &#40;Analysis Services&#41;](../multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)(Autenticazione a Microsoft BI e delega d'identità).  
   
-##  <a name="bkmk_test"></a> Passaggio 6: Verificare la configurazione  
+##  <a name="bkmk_test"></a> Passaggio 6: Testare la configurazione  
  La sintassi della stringa di connessione per MSMDPUMP è l'URL del MSMDPUMP.dll.  
   
  Se l'applicazione web è in ascolto su una porta fissa, aggiungere il numero di porta per il nome del server o l'indirizzo IP (ad esempio, http://my-web-srv01:8080/OLAP/msmdpump.dll o http://123.456.789.012:8080/OLAP/msmdpump.dll.  
@@ -302,7 +302,7 @@ ms.locfileid: "50146076"
  [Post del forum (accesso http tramite msmdpump e autenticazione di base)](http://social.msdn.microsoft.com/Forums/en/sqlanalysisservices/thread/79d2f225-df35-46da-aa22-d06e98f7d658)   
  [Configure the Windows Firewall to Allow Analysis Services Access](configure-the-windows-firewall-to-allow-analysis-services-access.md)   
  [Autorizzazione dell'accesso a oggetti e operazioni &#40;Analysis Services&#41;](../multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)   
- [Metodi di autenticazione IIS](http://go.microsoft.com/fwlink/?LinkdID=208461)   
- [Enable Anonymous Authentication (IIS 7)](http://go.microsoft.com/fwlink/?LinkId=207562)  
+ [Metodi di autenticazione IIS](https://go.microsoft.com/fwlink/?LinkdID=208461)   
+ [Enable Anonymous Authentication (IIS 7)](https://go.microsoft.com/fwlink/?LinkId=207562)  
   
   

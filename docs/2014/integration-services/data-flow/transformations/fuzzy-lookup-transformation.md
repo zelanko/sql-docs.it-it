@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.fuzzylookuptrans.f1
@@ -31,18 +30,18 @@ ms.assetid: 019db426-3de2-4ca9-8667-79fd9a47a068
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 53385dd40fa0b180fcc6994832faf5feffcdd8f0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a09abfe2d5370e9564dd3d081346c022cb2ca0d7
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48106397"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53361963"
 ---
-# <a name="fuzzy-lookup-transformation"></a>Trasformazione Ricerca fuzzy
+# <a name="fuzzy-lookup-transformation"></a>Ricerca fuzzy - trasformazione
   La trasformazione Ricerca fuzzy esegue attività di pulitura dei dati, ad esempio standardizzazione, correzione e inserimento di valori mancanti.  
   
 > [!NOTE]  
->  Per informazioni dettagliate sulla trasformazione Ricerca fuzzy, inclusi i limiti di memoria e le prestazioni, vedere il white paper [Fuzzy Lookup and Fuzzy Grouping in SQL Server Integration Services 2005](http://go.microsoft.com/fwlink/?LinkId=96604)(Ricerca fuzzy e Raggruppamento fuzzy in SQL Server Integration Services 2005).  
+>  Per informazioni dettagliate sulla trasformazione Ricerca fuzzy, inclusi i limiti di memoria e le prestazioni, vedere il white paper [Fuzzy Lookup and Fuzzy Grouping in SQL Server Integration Services 2005](https://go.microsoft.com/fwlink/?LinkId=96604)(Ricerca fuzzy e Raggruppamento fuzzy in SQL Server Integration Services 2005).  
   
  La differenza tra la trasformazione Ricerca fuzzy e la trasformazione Ricerca è l'utilizzo della corrispondenza fuzzy. La trasformazione Ricerca individua i record corrispondenti nella tabella di riferimento tramite un equijoin Restituisce record con almeno un record corrispondente e record senza alcuna corrispondenza. La trasformazione Ricerca fuzzy invece restituisce anche corrispondenze fuzzy.  
   
@@ -90,7 +89,7 @@ ms.locfileid: "48106397"
   
  Nella tabella seguente vengono descritte le opzioni per l'indice delle corrispondenze.  
   
-|Opzione|Description|  
+|Opzione|Descrizione|  
 |------------|-----------------|  
 |**GenerateAndMaintainNewIndex**|Crea un nuovo indice, lo salva e ne esegue la manutenzione. Nella tabella di riferimento la trasformazione installa trigger per la sincronizzazione tra la tabella di riferimento e la tabella dell'indice.|  
 |**GenerateAndPersistNewIndex**|Crea un nuovo indice e lo salva, ma non ne esegue la manutenzione.|  
@@ -120,16 +119,16 @@ ms.locfileid: "48106397"
 ## <a name="temporary-tables-and-indexes"></a>Tabelle e indici temporanei  
  In fase di esecuzione la trasformazione Ricerca fuzzy crea oggetti temporanei, ad esempio tabelle e indici, nel database di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] a cui la trasformazione si connette. Le dimensioni delle tabelle e degli indici temporanei sono proporzionali al numero di righe e token della tabella di riferimento e al numero di token creati dalla trasformazione Ricerca fuzzy. Questi oggetti temporanei pertanto possono utilizzare potenzialmente una quantità di spazio su disco considerevole. La trasformazione esegue inoltre query sulle tabelle temporanee. È pertanto consigliabile connettere la trasformazione Ricerca fuzzy a un'istanza di un database di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] non di produzione, soprattutto se lo spazio su disco disponibile nel server di produzione è ridotto.  
   
- Le prestazioni della trasformazione possono risultare migliori se le tabelle e gli indici utilizzati si trovano sullo stesso computer locale. Se la tabella di riferimento utilizzata dalla trasformazione Ricerca fuzzy si trova nel server di produzione, è consigliabile copiarla in un server non di produzione e configurare la trasformazione per l'accesso alla copia della tabella. In tal modo le risorse del server di produzione non vengono utilizzate dalle query di ricerca. La trasformazione Ricerca fuzzy, inoltre, mantiene l'indice delle corrispondenze, ovvero se MatchIndexOptionsis è impostata su **GenerateAndMaintainNewIndex**, la tabella di riferimento può risultare bloccata per l'intera durata dell'operazione di pulizia dei dati per impedirne l'accesso da parte di altri utenti e applicazioni.  
+ Le prestazioni della trasformazione possono risultare migliori se le tabelle e gli indici utilizzati si trovano sullo stesso computer locale. Se la tabella di riferimento utilizzata dalla trasformazione Ricerca fuzzy si trova nel server di produzione, è consigliabile copiarla in un server non di produzione e configurare la trasformazione per l'accesso alla copia della tabella. In tal modo le risorse del server di produzione non vengono utilizzate dalle query di ricerca. La trasformazione Ricerca fuzzy, inoltre, esegue la manutenzione dell'indice delle corrispondenze. In caso di impostazione di MatchIndexOptions su **GenerateAndMaintainNewIndex**, quindi, la trasformazione potrebbe bloccare la tabella di riferimento per la durata dell'operazione di pulizia dei dati e impedirne l'accesso da parte di altri utenti e applicazioni.  
   
 ## <a name="configuring-the-fuzzy-lookup-transformation"></a>Configurazione della trasformazione Ricerca fuzzy  
  È possibile impostare le proprietà tramite Progettazione [!INCLUDE[ssIS](../../../includes/ssis-md.md)] o a livello di codice.  
   
  Per ulteriori informazioni sulle proprietà che è possibile impostare nella finestra di dialogo **Editor trasformazione Ricerca fuzzy** , fare clic su uno degli argomenti seguenti:  
   
--   [Editor trasformazione Ricerca fuzzy &#40;scheda tabella di riferimento&#41;](../../fuzzy-lookup-transformation-editor-reference-table-tab.md)  
+-   [Editor trasformazione Ricerca fuzzy &#40;scheda Tabella di riferimento&#41;](../../fuzzy-lookup-transformation-editor-reference-table-tab.md)  
   
--   [Editor trasformazione Ricerca fuzzy &#40;scheda colonne&#41;](../../fuzzy-lookup-transformation-editor-columns-tab.md)  
+-   [Editor trasformazione Ricerca fuzzy &#40;scheda Colonne&#41;](../../fuzzy-lookup-transformation-editor-columns-tab.md)  
   
 -   [Editor trasformazione Ricerca fuzzy &#40;scheda Avanzate&#41;](../../fuzzy-lookup-transformation-editor-advanced-tab.md)  
   
@@ -143,7 +142,7 @@ ms.locfileid: "48106397"
  Per informazioni su come impostare le proprietà di un componente del flusso di dati, vedere [Impostare le proprietà di un componente del flusso di dati](../set-the-properties-of-a-data-flow-component.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Trasformazione ricerca](lookup-transformation.md)   
+ [Trasformazione Ricerca](lookup-transformation.md)   
  [Trasformazione Raggruppamento fuzzy](fuzzy-grouping-transformation.md)   
  [Trasformazioni di Integration Services](integration-services-transformations.md)  
   

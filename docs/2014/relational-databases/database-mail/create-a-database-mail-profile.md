@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Database Mail [SQL Server], public profiles
@@ -15,12 +14,12 @@ ms.assetid: 58ae749d-6ada-4f9c-bf00-de7c7a992a2d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 667dbd4e0b323f50721af716a30709ba9ea6d5c8
-ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
+ms.openlocfilehash: 55eab0bbfacdde17ff69dd36a0641561695bc14d
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49071815"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979137"
 ---
 # <a name="create-a-database-mail-profile"></a>Creare un profilo di Posta elettronica database
   Per creare profili pubblici e privati di Posta elettronica database, è possibile utilizzare **Configurazione guidata posta elettronica database** o [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
@@ -53,7 +52,7 @@ ms.locfileid: "49071815"
   
 -   Nella pagina **Gestione profili e account** selezionare l'opzione **Crea un nuovo profilo** e fare clic su **Avanti**.  
   
--   Nella pagina **Nuovo profilo** , specificare il nome e la descrizione del profilo e aggiungere gli account da includere nel profilo, quindi fare clic su **Avanti**.  
+-   Nel **nuovo profilo** specificare il nome, descrizione del profilo e aggiungere gli account da includere nel profilo, quindi fare clic su **successivo**.  
   
 -   Per completare la creazione del nuovo profilo, rivedere le azioni da eseguire nella pagina **Completamento procedura guidata** quindi fare clic su **Fine** .  
   
@@ -191,7 +190,7 @@ EXECUTE msdb.dbo.sysmail_add_principalprofile_sp
   
      *@is_default* = '*Stato del profilo predefinito* '  
   
-     in cui *@profile_name* è il nome del profilo, e *@principal_name* per indicare che si tratta di un profilo pubblico e *@is_default* determina se questo profilo è il valore predefinito per il ruolo o utente del database.  
+     dove *@profile_name* corrisponde al nome del profilo e *@principal_name* indica che si tratta di un profilo pubblico e *@is_default* determina se il profilo dell'utente o del ruolo del database è quello predefinito o meno.  
   
  Nell'esempio seguente vengono creati un account e un profilo privato di Posta elettronica database, quindi viene aggiunto l'account al profilo e viene concesso l'accesso pubblico al profilo.  
   

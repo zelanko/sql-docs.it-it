@@ -16,21 +16,21 @@ ms.assetid: ca4aa11f-1048-411f-9c6c-3d0a8e319f2f
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: bc4cab3fac4a49535b2178332b6e355ed95647b7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6d5d9ff66bb078be30fcd6e7d4b43b5e94069be0
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48064901"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591615"
 ---
-# <a name="outer-join-operators--and--are-not-supported-in-90-or-later-compatibility-modes"></a>Gli operatori di outer join *= e =* non sono supportati in modalità di compatibilità 90 o successiva
-  Preparazione aggiornamento è stato rilevato l'utilizzo di operatori outer join * = e =\*. Tali operatori non sono supportati nella modalità di compatibilità 90 o successiva Quando si esegue l'aggiornamento, la modalità di compatibilità dei database utente non cambia. Le istruzioni in cui sono utilizzati questi operatori non riusciranno.  
+# <a name="outer-join-operators--and--are-not-supported-in-90-or-later-compatibility-modes"></a>Gli operatori di outer join \*= e =\* non sono supportati in modalità di compatibilità 90 o successiva
+  Preparazione aggiornamento è stato rilevato l'utilizzo di operatori outer join \*= e =\*. Tali operatori non sono supportati nella modalità di compatibilità 90 o successiva Quando si esegue l'aggiornamento, la modalità di compatibilità dei database utente non cambia. Le istruzioni in cui sono utilizzati questi operatori non riusciranno.  
   
 ## <a name="component"></a>Componente  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
 ## <a name="corrective-action"></a>Azione correttiva  
- Prima di impostare la modalità di compatibilità del database su 90 o successiva, modificare le istruzioni che utilizzano gli operatori outer join * = e =\* usare parole chiave OUTER JOIN equivalenti. Nell'esempio seguente vengono illustrate una query che utilizza l'operatore `*=` e una query equivalente che utilizza le parole chiave `LEFT OUTER JOIN`.  
+ Prima di impostare la modalità di compatibilità del database su 90 o successiva, modificare le istruzioni che utilizzano gli operatori outer join \*= e =\* usare parole chiave OUTER JOIN equivalenti. Nell'esempio seguente vengono illustrate una query che utilizza l'operatore `\*=` e una query equivalente che utilizza le parole chiave `LEFT OUTER JOIN`.  
   
 ```  
 -- This query uses an old-style outer join operator.  

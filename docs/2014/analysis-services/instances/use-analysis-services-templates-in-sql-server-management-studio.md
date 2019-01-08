@@ -11,12 +11,12 @@ ms.assetid: 54ad1954-22e2-4628-b334-8fad8e9433b8
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c5b33d4c3e7f5ea10efc89fc5b7234bf2faaf0c7
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: b2f65e31a6a1c42d4d2bfd79f6daf0139edcd49f
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50146751"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53358423"
 ---
 # <a name="use-analysis-services-templates-in-sql-server-management-studio"></a>Usare i modelli di Analysis Services in SQL Server Management Studio
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] fornisce un set di modelli che aiutano a creare rapidamente script XMLA, query MDX o DMX oppure indicatori KPI in un cubo o in un modello tabulare, a generare script per operazioni di backup e ripristino, nonché a eseguire numerose altre attività. I modelli si trovano in **Esplora modelli** in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
@@ -57,7 +57,7 @@ ms.locfileid: "50146751"
      Passare alla scheda **Messaggi** per visualizzare il numero di record restituiti, errori, istruzioni di query ed eventuali altri messaggi associati all'esecuzione della query. Se, ad esempio, si esegue un'istruzione DAX su un modello che è in esecuzione in modalità DirectQuery, è possibile visualizzare l'istruzione Transact-SQL generata dal motore di analisi in memoria xVelocity (VertiPaq).  
   
 ##  <a name="BKMK_Building_Queries"></a> Compilare ed eseguire una query MDX su un modello tabulare utilizzando un modello  
- In questo esempio viene illustrato come creare una query MDX in SQL Server Management Studio utilizzando un database modello tabulare come origine dati. Per ripetere questo esempio nel computer, è possibile [scaricare il progetto di esempio di modello tabulare AdventureWorks](http://go.microsoft.com/fwlink/?LinkId=231183).  
+ In questo esempio viene illustrato come creare una query MDX in SQL Server Management Studio utilizzando un database modello tabulare come origine dati. Per ripetere questo esempio nel computer, è possibile [scaricare il progetto di esempio di modello tabulare AdventureWorks](https://go.microsoft.com/fwlink/?LinkId=231183).  
   
 > [!WARNING]  
 >  Non è possibile utilizzare query MDX su modelli tabulari distribuiti in modalità DirectQuery. È tuttavia possibile inviare query equivalenti utilizzando query di tabella DAX con il comando EVALUATE. Per altre informazioni, vedere [parametri per le query DAX](https://msdn.microsoft.com/library/gg492200(v=sql.120).aspx).  
@@ -166,7 +166,7 @@ SELECT * FROM $system.DISCOVER_SCHEMA_ROWSETS
 ##  <a name="bkmk_Ref"></a> Guida di riferimento ai modelli di Analysis Services  
  I modelli seguenti vengono forniti per l'utilizzo con i database di Analysis Services e gli oggetti all'interno del database, inclusi modelli e strutture di data mining, cubi e modelli tabulari:  
   
-|Category|Modello di elementi|Description|  
+|Category|Modello di elementi|Descrizione|  
 |--------------|-------------------|-----------------|  
 |DMX\Model Content|Content Query|Viene illustrato come utilizzare l'istruzione DMX SELECT FROM  *\<modello >*. CONTENUTO istruzione per recuperare il contenuto del set di righe dello schema per un modello di data mining specificato.|  
 ||Continuous Column Values|Viene illustrato come utilizzare DMX SELECT DISTINCT FROM  *\<modello >* dell'istruzione DMX `RangeMin` e `RangeMax` funzioni per recuperare un set di valori in un intervallo specifico da colonne continue in un modello di data mining specificato.|  
@@ -214,7 +214,7 @@ SELECT * FROM $system.DISCOVER_SCHEMA_ROWSETS
 ||Process Partition|Illustra l'utilizzo del comando XMLA `Batch` insieme all'elemento `Parallel` e al comando `Process` per l'elaborazione completa di una partizione tramite un'operazione batch parallela.|  
 ||Ripristina|Illustra l'utilizzo del comando XMLA `Restore` per ripristinare un database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] da un file di backup.|  
 ||Sincronizza|Illustra l'utilizzo del comando XMLA `Synchronize` per la sincronizzazione di un altro database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] con il database corrente di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] con l'opzione SkipMembership per il tag SynchronizeSecurity.|  
-|XMLA\Schema Rowsets|Discover Schema Rowsets|Illustra l'utilizzo del metodo XMLA `Discover` per recuperare il contenuto del set di righe dello schema DISCOVER_SCHEMA_ROWSETS.|  
+|XMLA\Schema Rowsets|Individuazione dei set di righe dello schema|Illustra l'utilizzo del metodo XMLA `Discover` per recuperare il contenuto del set di righe dello schema DISCOVER_SCHEMA_ROWSETS.|  
 |XMLA\Server Status|Connessioni|Illustra l'utilizzo del metodo XMLA `Discover` per recuperare il contenuto del set di righe dello schema DISCOVER_CONNECTIONS.|  
 ||processi|Illustra l'utilizzo del metodo XMLA `Discover` per recuperare il contenuto del set di righe dello schema DISCOVER_JOBS.|  
 ||Percorsi|Illustra l'utilizzo del metodo XMLA `Discover` per recuperare il contenuto del set di righe dello schema DISCOVER_LOCATIONS, specificando il percorso dei file di backup.|  

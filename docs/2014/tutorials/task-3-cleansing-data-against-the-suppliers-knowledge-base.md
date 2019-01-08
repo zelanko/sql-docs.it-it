@@ -13,15 +13,15 @@ ms.assetid: 647c924a-9b91-4294-8d96-e81416e4e90e
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8dfcf89c2130426e0c1cfb3c86f88f5f9d74cead
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5aca49b5260fc68f899a012aadaac7609fdb7062
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48106111"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53360333"
 ---
 # <a name="task-3-cleansing-data-against-the-suppliers-knowledge-base"></a>Attività 3: Pulizia dei dati fornitore rispetto alla Knowledge Base Suppliers
-  In questa attività viene eseguito il processo di pulizia computerizzato. In DQS vengono utilizzati algoritmi e livelli di probabilità avanzati basati sui valori soglia specificati per analizzare i dati rispetto alla Knowledge Base selezionata e procedere quindi alla relativa pulizia. Visualizzare [pulizia dei dati mediante DQS (interna) Knowledge](http://msdn.microsoft.com/library/hh213061.aspx) per altri dettagli.  
+  In questa attività viene eseguito il processo di pulizia computerizzato. In DQS vengono utilizzati algoritmi e livelli di probabilità avanzati basati sui valori soglia specificati per analizzare i dati rispetto alla Knowledge Base selezionata e procedere quindi alla relativa pulizia. Visualizzare [pulizia dei dati mediante DQS (interna) Knowledge](https://msdn.microsoft.com/library/hh213061.aspx) per altri dettagli.  
   
 1.  Fare clic su **avviare** per avviare il processo di pulizia computerizzato.  
   

@@ -10,12 +10,12 @@ ms.assetid: 854c0b2f-02d2-46a4-a8cc-6b7a5d191cf8
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b8cd37ca4058fb79eddfa296896c3da230b98789
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: a90a30a0ae7fe09d49b1d42b577b13370c48c0de
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018797"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53360933"
 ---
 # <a name="install-sql-server-powershell"></a>Installare SQL Server PowerShell
   Il programma di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene arrestato se viene rilevato che sono state selezionate funzionalità di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che includono componenti di PowerShell, ma che Windows PowerShell 2.0 non è installato. È necessario installare PowerShell tramite Windows Management Framework, quindi rieseguire l'installazione.  
@@ -35,7 +35,7 @@ ms.locfileid: "51018797"
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] supporta l'avvio delle sessioni di Windows PowerShell dall'albero di Esplora oggetti. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent supporta i passaggi del processo di Windows PowerShell.  
   
- Se Windows PowerShell 2.0 non è stato installato oppure è stato disinstallato, è necessario installarlo seguendo le istruzioni nella [Windows Management Framework](http://go.microsoft.com/fwlink/?LinkId=186214) pagina.  
+ Se Windows PowerShell 2.0 non è stato installato oppure è stato disinstallato, è necessario installarlo seguendo le istruzioni nella [Windows Management Framework](https://go.microsoft.com/fwlink/?LinkId=186214) pagina.  
   
  Se Windows PowerShell viene disinstallato al termine dell'installazione, non sarà possibile utilizzare le funzionalità di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per Windows PowerShell. Windows PowerShell può essere disinstallato dagli utenti di Windows. La disinstallazione di Windows PowerShell potrebbe inoltre essere necessaria per eseguire alcuni aggiornamenti del sistema operativo Windows. Per utilizzare le funzionalità di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell è necessario reinstallare PowerShell 2.0 tramite Windows Management Framework.  
   

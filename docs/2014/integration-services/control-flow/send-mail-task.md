@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.sendmailtask.f1
@@ -19,12 +18,12 @@ ms.assetid: fe0b7cbc-fe8e-4fe2-95b4-2953efff5869
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 799fe96b22881af08f1c94b10b44bd0038fa78a9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6f1bcb08da6b28555502bb39658fb2f1fcbacb3b
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48064821"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53354287"
 ---
 # <a name="send-mail-task"></a>Invia messaggi - attività
   L'attività Invia messaggi consente di inviare un messaggio di posta elettronica. Tramite l'attività Invia messaggi un pacchetto può inviare messaggi quando le attività nel flusso di lavoro del pacchetto vengono completate o non riescono oppure in risposta a un evento generato dal pacchetto in fase di esecuzione. È ad esempio possibile utilizzare questa attività per notificare all'amministratore di un database l'esito positivo o negativo dell'attività Backup database.  
@@ -59,7 +58,7 @@ ms.locfileid: "48064821"
 ## <a name="custom-logging-messages-available-on-the-send-mail-task"></a>Messaggi di registrazione personalizzati disponibili nell'attività Invia messaggi  
  Nella tabella seguente sono elencate le voci di log personalizzate disponibili per l'attività Invia messaggi. Per altre informazioni, vedere [Registrazione di Integration Services &#40;SSIS&#41;](../performance/integration-services-ssis-logging.md) e [Messaggi personalizzati per la registrazione](../custom-messages-for-logging.md).  
   
-|Voce di log|Description|  
+|Voce di log|Descrizione|  
 |---------------|-----------------|  
 |`SendMailTaskBegin`|Indica che l'attività ha iniziato a inviare un messaggio di posta elettronica.|  
 |`SendMailTaskEnd`|Indica che l'attività ha terminato l'invio di un messaggio di posta elettronica.|  
@@ -72,7 +71,7 @@ ms.locfileid: "48064821"
   
 -   [Editor attività Invia messaggi &#40;pagina Generale&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [Editor attività Invia messaggi &#40;pagina di posta elettronica&#41;](../send-mail-task-editor-mail-page.md)  
+-   [Editor attività Invia messaggi &#40;pagina Messaggio&#41;](../send-mail-task-editor-mail-page.md)  
   
 -   [Pagina Espressioni](../expressions/expressions-page.md)  
   
@@ -85,7 +84,7 @@ ms.locfileid: "48064821"
   
 ## <a name="related-content"></a>Contenuto correlato  
   
--   Articolo tecnico relativo all' [invio della posta elettronica con notifica di recapito in C#](http://go.microsoft.com/fwlink/?LinkId=237625)su shareourideas.com  
+-   Articolo tecnico relativo all' [invio della posta elettronica con notifica di recapito in C#](https://go.microsoft.com/fwlink/?LinkId=237625)su shareourideas.com  
   
 ## <a name="see-also"></a>Vedere anche  
  [Attività di Integration Services](integration-services-tasks.md)   

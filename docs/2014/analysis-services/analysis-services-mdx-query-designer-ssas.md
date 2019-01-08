@@ -13,12 +13,12 @@ ms.assetid: a2fb0b79-802a-4dac-bd9a-32dfe2e8c4d4
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 89818073559b3a6b6faab919691a62899b442e3e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b0f76c8df695dcb4e49c707409243b6f1aa1d28e
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48113422"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53357280"
 ---
 # <a name="analysis-services-mdx-query-designer-ssas"></a>Progettazione query MDX di Analysis Services (SSAS)
   Progettazione query MDX (Multidimensional Expression) di Analysis Services offre un'interfaccia utente grafica per semplificare la creazione di query MDX per un'origine dati [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Nella finestra Progettazione query con interfaccia grafica MDX sono disponibili due modalità: progettazione e query. In ogni modalità è disponibile un riquadro dei metadati da cui è possibile trascinare membri dei cubi selezionati per compilare una query MDX per il recupero dei dati che si desidera utilizzare.  
@@ -60,22 +60,22 @@ ms.locfileid: "48113422"
  L'importazione di una query con estensione mdx da un file non è supportata.  
   
 > [!NOTE]  
->  Per altre informazioni su MDX e per informazioni generali sulla finestra Progettazione query MDX, vedere "Editor di query MDX (Analysis Services - Dati multidimensionali)" nella [documentazione online di SQL Server](http://go.microsoft.com/fwlink/?linkid=98335).  
+>  Per altre informazioni su MDX e per informazioni generali sulla finestra Progettazione query MDX, vedere "Editor di query MDX (Analysis Services - Dati multidimensionali)" nella [documentazione online di SQL Server](https://go.microsoft.com/fwlink/?linkid=98335).  
   
 ### <a name="graphical-mdx-query-designer-toolbar-in-design-mode"></a>Barra degli strumenti di Progettazione query MDX in modalità progettazione  
  I pulsanti della barra degli strumenti di Progettazione query consentono di progettare query MDX utilizzando l'interfaccia grafica. Nella tabella seguente vengono elencati i pulsanti con le relative funzioni.  
   
-|Pulsante|Description|  
+|Button|Descrizione|  
 |------------|-----------------|  
 |**Modifica come testo**|Non abilitato per questo tipo di origine dati.|  
 |**Importa**|Consente di importare una query esistente da un file di definizione di report (con estensione rdl) nel file system.|  
 |![Passa alla visualizzazione query MDX](media/rsqdicon-commandtypemdx.gif "Passa alla visualizzazione query MDX")|Consente di passare al tipo di comando MDX.|  
 |![Aggiorna i dati dei risultati](media/rsqdicon-refresh.gif "Aggiorna i dati dei risultati")|Consente di aggiornare i metadati dall'origine dati.|  
-|![Aggiungi membro calcolato](media/rsqdicon-addcalculatedmember.gif "Aggiungi membro calcolato")|Consente di visualizzare la finestra di dialogo **Generatore membri calcolati** ,|  
+|![Add calculated member](media/rsqdicon-addcalculatedmember.gif "Add calculated member")|Consente di visualizzare la finestra di dialogo **Generatore membri calcolati** ,|  
 |![Visualizza/nascondi celle vuote](media/rsqdicon-showemptycells.gif "Visualizza/nascondi celle vuote")|Consente di visualizzare o nascondere le celle vuote nel riquadro Dati. Questa operazione equivale a utilizzare la clausola NON EMPTY in MDX.|  
 |![Esecuzione automatica della query](media/rsqdicon-autoexecute.gif "Esecuzione automatica della query")|Consente di eseguire automaticamente la query e di visualizzarne i risultati ogni volta che viene apportata una modifica. I risultati verranno visualizzati nel riquadro Dati.|  
 |![Pulsante Mostra aggregazioni](media/rsqdicon-showaggregations.gif "Pulsante Mostra aggregazioni")|Consente di visualizzare le aggregazioni nel riquadro Dati.|  
-|![Eliminare](media/rsqdicon-delete.gif "Delete")|Consente di eliminare dalla query la colonna selezionata nel riquadro Dati.|  
+|![Elimina](media/rsqdicon-delete.gif "Elimina")|Consente di eliminare dalla query la colonna selezionata nel riquadro Dati.|  
 |![Icona della finestra di dialogo Parametri query](media/iconqueryparameter.gif "Icona della finestra di dialogo Parametri query")|Consente di visualizzare la finestra di dialogo **Parametri query** . Quando si specificano valori per un parametro di query, viene creato automaticamente un parametro con lo stesso nome.|  
 |![Pulsante Prepara query](media/rsqdicon-preparequery.gif "Pulsante Prepara query")|Consente di preparare la query.|  
 |![Esecuzione della query](media/rsqdicon-run.gif "Esecuzione della query")|Consente di eseguire la query di e visualizzare i risultati nel riquadro Dati.|  
@@ -109,7 +109,7 @@ ms.locfileid: "48113422"
   
 -   **Modifica come testo**  
   
--   **Aggiungi membro calcolato** (![Aggiungi membro calcolato](media/rsqdicon-addcalculatedmember.gif "Aggiungi membro calcolato"))  
+-   **Aggiungi membro calcolato** (![Add calculated member](media/rsqdicon-addcalculatedmember.gif "Add calculated member"))  
   
 -   **Mostra celle vuote** (![Visualizza/nascondi celle vuote](media/rsqdicon-showemptycells.gif "Visualizza/nascondi celle vuote"))  
   

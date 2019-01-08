@@ -11,31 +11,31 @@ ms.assetid: 74edd1fd-ab00-46f7-9e29-7ba3f1a446c5
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 26ab900e8a043399191e8c26314d47e48dd3e1a8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d238284bb53e4ce6acc5d482ae66c0b21a760da6
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48137381"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53373793"
 ---
-# <a name="lesson-1-create-windows-azure-storage-objects"></a>Lezione 1: Creare gli oggetti della risorsa di archiviazione di Windows Azure
+# <a name="lesson-1-create-windows-azure-storage-objects"></a>Lezione 1: Creare gli oggetti di archiviazione di Azure di Windows
   Prima di creare i backup di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] nell'archiviazione del cloud, è necessario creare prima un account di archiviazione e, successivamente, un contenitore BLOB. Nella lezione 1 vengono illustrati i passaggi per l'accesso al portale di gestione di Windows Azure e per la creazione di un account di archiviazione e di un contenitore BLOB.  
   
 ## <a name="create-a-storage-account"></a>Creare un account di archiviazione  
  Per creare un account di archiviazione dal portale di gestione di Windows Azure, attenersi ai passaggi seguenti:  
   
-1.  Accedere al portale di gestione di Windows Azure utilizzando l'account. Se non hai un account di Windows Azure, [visita versione di valutazione gratuita di Windows Azure 3 mesi](http://go.microsoft.com/fwlink/?LinkId=271927).  
+1.  Accedere al portale di gestione di Windows Azure utilizzando l'account. Se non hai un account di Windows Azure, [visita versione di valutazione gratuita di Windows Azure 3 mesi](https://go.microsoft.com/fwlink/?LinkId=271927).  
   
      ![Schermata di accesso ad Azure di Windows](../../2014/tutorials/media/windowazurelogin-backuptocloud.gif "schermata di accesso ad Azure di Windows")  
   
-2.  Utilizzare le istruzioni passo passo dettagliate [qui](http://go.microsoft.com/fwlink/?LinkId=271926), per creare un account di archiviazione.  
+2.  Utilizzare le istruzioni passo passo dettagliate [qui](https://go.microsoft.com/fwlink/?LinkId=271926), per creare un account di archiviazione.  
   
 3.  Passare all'account di archiviazione creato nel passaggio precedente. Da basso al centro della pagina web, fare clic su **GESTISCI CHIAVI**. Verranno visualizzate le informazioni sull'account. Copiare il nome dell'account di archiviazione e le chiavi di accesso. Queste informazioni sono necessarie per creare le credenziali archiviate di SQL. In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] queste informazioni vengono utilizzate per accedere all'account di archiviazione e per creare i backup.  
   
      ![Cattura di schermata della finestra di Windows Azure Storage Account Keys](../../2014/tutorials/media/manageaccesskeys-backuptocloud.gif "cattura di schermata della finestra di Windows Azure Storage Account Keys")  
   
     > [!NOTE]  
-    >  Inoltre, è possibile creare un account di archiviazione a livello di programmazione tramite le API REST. Per altre informazioni, vedere [crea Account di archiviazione](http://go.microsoft.com/fwlink/?LinkId=271928).  
+    >  Inoltre, è possibile creare un account di archiviazione a livello di programmazione tramite le API REST. Per altre informazioni, vedere [crea Account di archiviazione](https://go.microsoft.com/fwlink/?LinkId=271928).  
   
 ### <a name="create-a-blob-container"></a>Creare un contenitore BLOB  
  Un contenitore fornisce un raggruppamento di un set di BLOB. Tutti i BLOB devono essere inclusi in un contenitore. Un account può contenere un numero illimitato di contenitori, tuttavia ne deve contenere almeno uno. In un contenitore è possibile archiviare un numero illimitato di BLOB.  
@@ -55,7 +55,7 @@ ms.locfileid: "48137381"
     > [!NOTE]  
     >  L'autenticazione per l'account di archiviazione è obbligatorio per il backup e ripristino di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] anche se si sceglie di creare un contenitore pubblico.  
     >   
-    >  Inoltre, è possibile creare un contenitore a livello di programmazione tramite le API REST. Per altre informazioni, vedere [Create Container](http://go.microsoft.com/fwlink/?LinkId=271946).  
+    >  Inoltre, è possibile creare un contenitore a livello di programmazione tramite le API REST. Per altre informazioni, vedere [Create Container](https://go.microsoft.com/fwlink/?LinkId=271946).  
   
 ### <a name="next-lesson"></a>Lezione successiva  
  [Lezione 2: Creare una credenziale di SQL Server](../../2014/tutorials/lesson-2-create-a-sql-server-credential.md).  

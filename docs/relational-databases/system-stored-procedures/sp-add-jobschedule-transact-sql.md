@@ -18,12 +18,12 @@ ms.assetid: ffce19d9-d1d6-45b4-89fd-ad0f60822ba0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6e52684ee8c73c976e42c29ca54079ac716527a1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4411cb68c86bbea92429a983449e77985d3d236d
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47834489"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591585"
 ---
 # <a name="spaddjobschedule-transact-sql"></a>sp_add_jobschedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,13 +55,13 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
  [ **@job_id=** ] *job_id*  
  Numero di identificazione del processo a cui viene aggiunta la pianificazione. *job_id* viene **uniqueidentifier**, non prevede alcun valore predefinito.  
   
- [ **@job_name=** ] **'***job_name***'**  
+ [  **@job_name=** ] **'**_job_name_**'**  
  Nome del processo a cui viene aggiunta la pianificazione. *nome_processo* viene **nvarchar (128)**, non prevede alcun valore predefinito.  
   
 > [!NOTE]  
 >  Entrambi *job_id* oppure *job_name* devono essere specificati, ma non è possibile specificarli entrambi.  
   
- [ **@name=** ] **'***name***'**  
+ [  **@name=** ] **'**_nome_**'**  
  Nome della pianificazione. *nome* viene **nvarchar (128)**, non prevede alcun valore predefinito.  
   
  [ **@enabled=** ] *enabled_flag*  
@@ -70,7 +70,7 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
  [ **@freq_type=** ] *frequency_type*  
  Valore che indica la frequenza di esecuzione del processo. *frequency_type* viene **int**, il valore predefinito è **0**, e può essere uno dei valori seguenti:  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |**1**|Una volta|  
 |**4**|Ogni giorno|  
@@ -83,7 +83,7 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
  [  **@freq_interval=** ] *frequency_interval*  
  Giorno di esecuzione del processo. *frequency_interval* viene **int**, con un valore predefinito è 0 e dipende dal valore di *frequency_type* come indicato nella tabella seguente:  
   
-|valore|Effetto|  
+|Value|Effetto|  
 |-----------|------------|  
 |**1** (una volta)|*frequency_interval* risulta inutilizzato.|  
 |**4** (giornaliera)|Ogni *frequency_interval* giorni.|  
@@ -96,7 +96,7 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
  [ **@freq_subday_type=** ] *frequency_subday_type*  
  Specifica l'unità di misura *frequency_subday_interval*. *frequency_subday_type* viene **int**e non prevede alcun valore predefinito e può essere uno dei valori seguenti:  
   
-|valore|Descrizione (unità)|  
+|Value|Descrizione (unità)|  
 |-----------|--------------------------|  
 |**0x1**|All'ora specificata|  
 |**0x4**|Minutes|  
@@ -110,7 +110,7 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
   
  *frequency_relative_interval* viene **int**e non prevede alcun valore predefinito e può essere uno dei valori seguenti:  
   
-|valore|Descrizione (unità)|  
+|Value|Descrizione (unità)|  
 |-----------|--------------------------|  
 |**1**|Primo|  
 |**2**|Secondo|  
@@ -134,13 +134,13 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
  [  **@active_start_time=** ] *active_start_time*  
  Data compresa tra *active_start_date* e *active_end_date* per avviare l'esecuzione del processo. *active_start_time* viene **int**, non prevede alcun valore predefinito. L'ora è in formato HHMMSS a 24 ore.  
   
- [ **@active_end_time=***active_end_time*  
+ [  **@active_end_time=**_active_end_time_  
  Data compresa tra *active_start_date* e *active_end_date* per l'esecuzione del processo finale. *active_end_time* viene **int**, non prevede alcun valore predefinito. L'ora è in formato HHMMSS a 24 ore.  
   
- [  **@schedule_id=***schedule_id***OUTPUT**  
+ [  **@schedule_id=**_schedule_id_**OUTPUT**  
  Numero di identificazione assegnato alla pianificazione dopo che è stata creata correttamente. *schedule_id* è una variabile di output di tipo **int**, non prevede alcun valore predefinito.  
   
- [ **@schedule_uid**= ] *schedule_uid***OUTPUT**  
+ [ **@schedule_uid**=] _valore schedule_uid_**OUTPUT**  
  Identificatore univoco della pianificazione. *valore schedule_uid* è una variabile di tipo **uniqueidentifier**.  
   
 ## <a name="return-code-values"></a>Valori restituiti  

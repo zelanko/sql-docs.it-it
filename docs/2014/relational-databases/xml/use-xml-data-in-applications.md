@@ -25,26 +25,26 @@ ms.assetid: 5dabf7e0-c6df-451d-a070-4661f84607fd
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0c1e77011b43887518b6a452d9bbe1091e651008
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e9d40c7624cff181d9955dae461e4d0e534dbb02
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48098241"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53355491"
 ---
 # <a name="use-xml-data-in-applications"></a>Utilizzo di dati XML nelle applicazioni
-  In questo argomento vengono descritte le opzioni disponibili per l'utilizzo di `xml` tipo di dati nell'applicazione. Vengono fornite informazioni sugli aspetti seguenti:  
+  In questo argomento vengono descritte le opzioni disponibili per l'utilizzo del tipo di dati `xml` nelle applicazioni. Vengono fornite informazioni sugli aspetti seguenti:  
   
 -   Gestione di dati XML da una colonna di tipo `xml` utilizzando ADO e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client  
   
--   Gestione di dati XML da un `xml` colonna del tipo tramite ADO.NET  
+-   Gestione di dati XML da una colonna di tipo `xml` utilizzando ADO.NET  
   
 -   Gestione del tipo `xml` nei parametri utilizzando ADO.NET  
   
 ## <a name="handling-xml-from-an-xml-type-column-by-using-ado-and-sql-server-native-client"></a>Gestione di XML da una colonna di tipo xml utilizzando ADO e SQL Server Native Client  
  Per usare i componenti MDAC e accedere alle funzionalità e ai tipi introdotti in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], è necessario impostare la proprietà di inizializzazione DataTypeCompatibility nella stringa di connessione di ADO.  
   
- Ad esempio, l'esempio di Visual Basic Scripting Edition (VBScript) seguente mostra i risultati di una query su un `xml` colonna tipo di dati `Demographics`, nel `Sales.Store` tabella del `AdventureWorks2012` database di esempio. Questa particolare query cerca il valore di istanza della colonna per la riga dove `CustomerID` è uguale a `3`.  
+ Nel seguente esempio di codice Visual Basic Scripting Edition (VBScript) vengono illustrati i risultati di una query su una colonna di dati di tipo `xml`, `Demographics`, contenuta nella tabella `Sales.Store` del database di esempio `AdventureWorks2012`. Questa particolare query cerca il valore di istanza della colonna per la riga dove `CustomerID` è uguale a `3`.  
   
 ```  
 Const DS = "MyServer"  
@@ -88,7 +88,7 @@ Set objRs = Nothing
 Set objConn = Nothing  
 ```  
   
- Questo esempio illustra come impostare la proprietà di compatibilità del tipo di dati. Per impostazione predefinita, questa proprietà è impostata su 0 quando si utilizza [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client. Se si imposta il valore su 80, il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider Native Client renderà `xml` e le colonne di tipo definito dall'utente vengono visualizzate come [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] i tipi di dati. Vale a dire: rispettivamente DBTYPE_WSTR e DBTYPE_BYTES.  
+ Questo esempio illustra come impostare la proprietà di compatibilità del tipo di dati. Per impostazione predefinita, questa proprietà è impostata su 0 quando si utilizza [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client. Se sir imposta il valore su 80, il provider [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client fa in modo che le colonne di tipo `xml` e di tipo definito dall'utente appaiano come tipi di dati [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]. Vale a dire: rispettivamente DBTYPE_WSTR e DBTYPE_BYTES.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client deve essere installato anche nel computer client e la stringa di connessione deve specificare che venga usato come provider di dati tramite "`Provider=SQLNCLI11;...`".  
   
@@ -115,7 +115,7 @@ Set objConn = Nothing
 ```  
 Row 1  
   
-<StoreSurvey xmlns="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/StoreSurvey">  
+<StoreSurvey xmlns="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/StoreSurvey">  
   <AnnualSales>1500000</AnnualSales>  
   <AnnualRevenue>150000</AnnualRevenue>  
   <BankName>Primary International</BankName>  
@@ -130,7 +130,7 @@ Row 1
   
 Row 2  
   
-<StoreSurvey xmlns="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/StoreSurvey">  
+<StoreSurvey xmlns="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/StoreSurvey">  
   <AnnualSales>300000</AnnualSales>  
   <AnnualRevenue>30000</AnnualRevenue>  
   <BankName>United Security</BankName>  
@@ -145,12 +145,12 @@ Row 2
 ```  
   
 ## <a name="handling-xml-from-an-xml-type-column-by-using-adonet"></a>Gestione di dati XML da una colonna di tipo xml utilizzando ADO.NET  
- Per la gestione di XML da un `xml` colonna tipo di dati tramite ADO.NET e la [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] è possibile usare il comportamento standard del `SqlCommand` classe. Ad esempio, un' `xml` dati colonna di tipo e i relativi valori possono essere recuperati nello stesso modo di qualsiasi colonna SQL viene recuperato utilizzando un `SqlDataReader`. Tuttavia, se si desidera utilizzare il contenuto di un `xml` colonna tipo di dati come XML, è prima di tutto sarà necessario assegnarne il contenuto per un `XmlReader` tipo.  
+ Per la gestione di XML da un `xml` colonna tipo di dati tramite ADO.NET e la [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] è possibile usare il comportamento standard del `SqlCommand` classe. Ad esempio, una colonna con tipo di dati `xml` e i suoi valori possono essere recuperati in modo analogo a qualsiasi colonna SQL utilizzando un `SqlDataReader`. Tuttavia, se si desidera utilizzare il contenuto di una colonna con tipo di dati `xml` come XML, sarà anzitutto necessario assegnarne il contenuto a un tipo `XmlReader`.  
   
  Per altre informazioni e codici di esempio, vedere "XML Column Values in a Data Reader" (Valori delle colonne XML in un lettore di dati) nella documentazione di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] SDK.  
   
 ## <a name="handling-an-xml-type-column-in-parameters-by-using-adonet"></a>Gestione di una colonna di tipo xml in parametri utilizzando ADO.NET  
- Per gestire un tipo di dati xml passato come parametro in ADO.NET e [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], è possibile specificare il valore come un'istanza del tipo di dati `SqlXml`. Non è presente alcuna gestione speciale, poiché `xml` colonne di tipo di dati [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] possono accettare i valori dei parametri nello stesso modo di altre colonne e tipi di dati, ad esempio `string` o `integer`.  
+ Per gestire un tipo di dati xml passato come parametro in ADO.NET e [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], è possibile specificare il valore come un'istanza del tipo di dati `SqlXml`. Non è necessaria una gestione particolare in quanto le colonne di tipo di dati `xml` in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] possono accettare valori di parametro in modo analogo ad altre colonne e tipi di dati, ad esempio `string` o `integer`.  
   
  Per altre informazioni e codici di esempio, vedere "XML Values as Command Parameters" (Valori XML come parametri di comando) nella documentazione di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] SDK.  
   

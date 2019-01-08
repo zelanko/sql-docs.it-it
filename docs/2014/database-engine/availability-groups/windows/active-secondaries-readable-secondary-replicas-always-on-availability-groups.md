@@ -17,14 +17,14 @@ ms.assetid: 78f3f81a-066a-4fff-b023-7725ff874fdf
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b35f34499100e8331f968d6f9297280451885290
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2ac104808f5d4e0b2b612c8f3ebbd17f34fc6493
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48169611"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53358583"
 ---
-# <a name="active-secondaries-readable-secondary-replicas-always-on-availability-groups"></a>Repliche secondarie attive: Repliche secondarie leggibili (gruppi di disponibilità Always On)
+# <a name="active-secondaries-readable-secondary-replicas-always-on-availability-groups"></a>Repliche secondarie attive: Repliche secondarie leggibili (gruppi di disponibilità) Always On
   Le funzionalità secondarie attive di [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] includono il supporto per l'accesso in sola lettura a una o più repliche secondarie (*repliche secondarie leggibili*). Una replica secondaria leggibile consente l'accesso in sola lettura a tutti i relativi database secondari. Tuttavia, i database secondari leggibili non sono impostati per la sola lettura. Sono dinamici. Un database secondario viene modificato in base ai cambiamenti apportati al database primario corrispondente. Per una replica secondaria tipica, i dati presenti nel database secondario, comprese le tabelle durevoli con ottimizzazione per la memoria, sono quasi in tempo reale. Inoltre, gli indici full-text sono sincronizzati con i database secondari. In molte circostanze, la latenza dei dati tra un database primario e il database secondario corrispondente è in genere solo di pochi secondi.  
   
  Le impostazioni di sicurezza nei database primari vengono rese persistenti nei database secondari. Sono inclusi utenti, ruoli del database e delle applicazioni insieme alle rispettive autorizzazioni, nonché Transparent Data Encryption (TDE), se abilitato nel database primario.  
@@ -238,7 +238,7 @@ GO
     SELECT * FROM t_hk WITH (UPDLOCK)  
     ```  
   
--   Per le transazioni tra contenitori, le transazioni con il livello di isolamento "snapshot" della sessione che accedono alle tabelle ottimizzate per la memoria non sono supportate. Ad esempio,  
+-   Per le transazioni tra contenitori, le transazioni con livello di isolamento della sessione "snapshot" che le tabelle ottimizzate per la memoria non è supportato l'accesso. Ad esempio,  
   
     ```tsql  
     SET TRANSACTION ISOLATION LEVEL SNAPSHOT  
@@ -271,10 +271,10 @@ GO
   
     |Replica secondaria leggibile?|L'isolamento dello snapshot o l'isolamento dello snapshot Read Committed è abilitato?|Database primario|Database secondario|  
     |---------------------------------|-----------------------------------------------|----------------------|------------------------|  
-    |no|no|Nessuna versione di riga né overhead di 14 byte|Nessuna versione di riga né overhead di 14 byte|  
-    |no|Sì|Versioni di riga e overhead di 14 byte|Nessuna versione di riga, ma overhead di 14 byte|  
-    |Sì|no|Nessuna versione di riga, ma overhead di 14 byte|Versioni di riga e overhead di 14 byte|  
-    |Sì|Sì|Versioni di riga e overhead di 14 byte|Versioni di riga e overhead di 14 byte|  
+    |No|No|Nessuna versione di riga né overhead di 14 byte|Nessuna versione di riga né overhead di 14 byte|  
+    |No|Yes|Versioni di riga e overhead di 14 byte|Nessuna versione di riga, ma overhead di 14 byte|  
+    |Yes|No|Nessuna versione di riga, ma overhead di 14 byte|Versioni di riga e overhead di 14 byte|  
+    |Yes|Yes|Versioni di riga e overhead di 14 byte|Versioni di riga e overhead di 14 byte|  
   
 ##  <a name="bkmk_RelatedTasks"></a> Attività correlate  
   
@@ -292,7 +292,7 @@ GO
   
 ##  <a name="RelatedContent"></a> Contenuto correlato  
   
--   [SQL Server AlwaysOn Team Blog: Il Blog ufficiale di SQL Server AlwaysOn Team](http://blogs.msdn.com/b/sqlalwayson/)  
+-   [SQL Server AlwaysOn Team Blog: Il Team Blog ufficiale di SQL Server AlwaysOn](https://blogs.msdn.com/b/sqlalwayson/)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Panoramica di gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   

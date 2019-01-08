@@ -10,17 +10,17 @@ ms.assetid: 06075248-705e-4563-9371-b64cd609793c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4aaefdcd2739b2036703cdb7235fe56865ff1fed
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4ceedcedae64bf2ec8f8ede0ccbb99350b979fd7
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48064631"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53369953"
 ---
 # <a name="understanding-transactions-on-memory-optimized-tables"></a>Informazioni sulle transazioni in tabelle con ottimizzazione per la memoria
   Le transazioni accedono a tabelle ottimizzate per la memoria tramite una forma di controllo della concorrenza ottimistica con più versioni. Ciò significa che sono presenti versioni diverse dei dati. Ogni transazione viene eseguita nella propria versione del database coerente a livello di transazione, indipendentemente da altre transazioni in esecuzione simultanea. Le transazioni vengono inoltre eseguite nel presupposto ottimistico che non saranno presenti conflitti con altre transazioni simultanee, evitando in tal modo la necessità di utilizzare blocchi, ma richiedendo il rilevamento automatico di conflitti e l'interruzione di una delle transazioni in conflitto. I conflitti possono verificarsi solo per le transazioni di scrittura-scrittura e per le transazioni di lettura e scrittura. Se si verifica un conflitto di scrittura-scrittura, una transazione di scrittura viene terminata.  
   
- Esistono analogie tra il controllo della concorrenza per le tabelle ottimizzate per la memoria e il controllo della concorrenza per le tabelle basate su disco per i livelli di isolamento delle transazioni READ_COMMITTED_SNAPSHOT e SNAPSHOT. (Per ulteriori informazioni sulle tabelle basate su disco, vedere [livelli di isolamento basato sul controllo delle versioni delle righe nel motore di Database](http://msdn.microsoft.com/library/ms177404\(v=sql.100\).aspx).)  
+ Esistono analogie tra il controllo della concorrenza per le tabelle ottimizzate per la memoria e il controllo della concorrenza per le tabelle basate su disco per i livelli di isolamento delle transazioni READ_COMMITTED_SNAPSHOT e SNAPSHOT. (Per ulteriori informazioni sulle tabelle basate su disco, vedere [livelli di isolamento basato sul controllo delle versioni delle righe nel motore di Database](https://msdn.microsoft.com/library/ms177404\(v=sql.100\).aspx).)  
   
 ## <a name="topics-in-this-section"></a>Contenuto della sezione  
  In questa sezione sulle transazioni in tabelle ottimizzate per la memoria sono inclusi gli argomenti seguenti:  

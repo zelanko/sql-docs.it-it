@@ -18,12 +18,12 @@ ms.assetid: 9a6133ea-36e9-45bf-b572-1c0df3d6c194
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 0463360db65621a90f270c2eedb87972c6bd986b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a0fa6b877b0c4f9dd2754301c9b2e47964b1ad9e
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48088548"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979457"
 ---
 # <a name="clr-table-valued-functions"></a>Funzioni CLR con valori di tabella
   Una funzione con valori di tabella è una funzione definita dall'utente che restituisce una tabella.  
@@ -49,12 +49,12 @@ ms.locfileid: "48088548"
   
 ```vb  
 Imports System.Runtime.InteropServices  
-…  
+...  
 Public Shared Sub FillRow ( <Out()> ByRef value As SqlInt32)  
 ```  
   
 ### <a name="defining-a-table-valued-function-in-transact-sql"></a>Definizione di una funzione con valori di tabella in Transact-SQL  
- La sintassi per la definizione di una funzione con valori di tabella CLR è simile a quella di una funzione con valori di tabella [!INCLUDE[tsql](../../includes/tsql-md.md)], con l'aggiunta della clausola `EXTERNAL NAME`. Esempio:  
+ La sintassi per la definizione di una funzione con valori di tabella CLR è simile a quella di una funzione con valori di tabella [!INCLUDE[tsql](../../includes/tsql-md.md)], con l'aggiunta della clausola `EXTERNAL NAME`. Ad esempio:  
   
 ```  
 CREATE FUNCTION GetEmpFirstLastNames()  
@@ -174,8 +174,8 @@ WHERE T.Category = N'Logon/Logoff';
 go  
 ```  
   
-## <a name="sample-returning-the-results-of-a-sql-server-query"></a>Esempio: Restituzione dei risultati di una query di SQL Server  
- Nell'esempio seguente viene illustrata una funzione con valori di tabella che esegue una query su un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. In questo esempio viene utilizzato il database AdventureWorks Light di [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]. Visualizzare [ http://www.codeplex.com/sqlserversamples ](http://go.microsoft.com/fwlink/?LinkId=87843) per altre informazioni sul download di AdventureWorks.  
+## <a name="sample-returning-the-results-of-a-sql-server-query"></a>Esempio: Restituzione dei risultati di una Query di SQL Server  
+ Nell'esempio seguente viene illustrata una funzione con valori di tabella che esegue una query su un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. In questo esempio viene utilizzato il database AdventureWorks Light di [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]. Visualizzare [ http://www.codeplex.com/sqlserversamples ](https://go.microsoft.com/fwlink/?LinkId=87843) per altre informazioni sul download di AdventureWorks.  
   
  Assegnare al file di codice sorgente il nome FindInvalidEmails.cs o FindInvalidEmails.vb.  
   

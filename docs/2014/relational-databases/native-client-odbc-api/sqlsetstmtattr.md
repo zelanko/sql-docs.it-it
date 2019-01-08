@@ -14,12 +14,12 @@ ms.assetid: 799c80fd-c561-4912-8562-9229076dfd19
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: edd96f9927a5fe698dd47489beffc738b5456708
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 31493eb8c685fbb31fa21691794740eb2b61219c
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48208519"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53361286"
 ---
 # <a name="sqlsetstmtattr"></a>SQLSetStmtAttr
   Il driver ODBC di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client non supporta il modello di cursore misto (keyset/dinamico). I tentativi di impostare la dimensione del keyset utilizzando SQL_ATTR_KEYSET_SIZE non riescono se il set di valori non è uguale a 0.  
@@ -48,7 +48,7 @@ ms.locfileid: "48208519"
 ### <a name="sqlsoptsscursoroptions"></a>SQL_SOPT_SS_CURSOR_OPTIONS  
  L'attributo SQL_SOPT_SS_CURSOR specifica se il driver utilizzerà opzioni delle prestazioni specifiche del driver sui cursori. [SQLGetData](sqlgetdata.md) non è consentita quando si impostano queste opzioni. L'impostazione predefinita è SQL_CO_OFF. Il *ValuePtr* valore è di tipo SQLLEN.  
   
-|*ValuePtr* valore|Description|  
+|*ValuePtr* valore|Descrizione|  
 |----------------------|-----------------|  
 |SQL_CO_OFF|Valore predefinito. Disabilita i cursori fast forward only, sola lettura e il recupero automatico, abilita **SQLGetData** sui cursori forward-only, di sola lettura. Quando SQL_SOPT_SS_CURSOR_OPTIONS è impostato su SQL_CO_OFF, il tipo di cursore non cambia. Ciò significa che il cursore fast forward-only resterà tale. Per modificare il tipo di cursore, l'applicazione deve impostare ora un tipo di cursore diverso utilizzando `SQLSetStmtAttr`/SQL_ATTR_CURSOR_TYPE.|  
 |SQL_CO_FFO|Abilita i cursori fast forward only, sola lettura, consente di disattivare **SQLGetData** sui cursori forward-only, di sola lettura.|  
@@ -62,9 +62,9 @@ ms.locfileid: "48208519"
 ### <a name="sqlsoptssdeferprepare"></a>SQL_SOPT_SS_DEFER_PREPARE  
  L'attributo SQL_SOPT_SS_DEFER_PREPARE determina se l'istruzione viene preparata immediatamente o posticipata fino alla **SQLExecute**, [SQLDescribeCol](sqldescribecol.md) o [SQLDescribeParam](sqldescribeparam.md) viene eseguita. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 e versioni precedenti questa proprietà viene ignorata (nessuna preparazione posticipata). Il *ValuePtr* valore è di tipo SQLLEN.  
   
-|*ValuePtr* valore|Description|  
+|*ValuePtr* valore|Descrizione|  
 |----------------------|-----------------|  
-|SQL_DP_ON|Valore predefinito. Dopo avere chiamato [funzione SQLPrepare](http://go.microsoft.com/fwlink/?LinkId=59360), la preparazione dell'istruzione viene posticipata fino alla **SQLExecute** viene chiamato o operazione della metaproprietà (**SQLDescribeCol** oppure **SQLDescribeParam**) viene eseguito.|  
+|SQL_DP_ON|Valore predefinito. Dopo avere chiamato [funzione SQLPrepare](https://go.microsoft.com/fwlink/?LinkId=59360), la preparazione dell'istruzione viene posticipata fino alla **SQLExecute** viene chiamato o operazione della metaproprietà (**SQLDescribeCol** oppure **SQLDescribeParam**) viene eseguito.|  
 |SQL_DP_OFF|L'istruzione viene preparata, non appena **SQLPrepare** viene eseguita.|  
   
 ### <a name="sqlsoptssregionalize"></a>SQL_SOPT_SS_REGIONALIZE  
@@ -72,7 +72,7 @@ ms.locfileid: "48208519"
   
  Il *ValuePtr* valore è di tipo SQLLEN.  
   
-|*ValuePtr* valore|Description|  
+|*ValuePtr* valore|Descrizione|  
 |----------------------|-----------------|  
 |SQL_RE_OFF|Valore predefinito. Il driver non converte i dati di tipo data, ora e valuta in stringhe di caratteri mediante l'impostazione locale del client.|  
 |SQL_RE_ON|Il driver utilizza l'impostazione locale del client durante la conversione dei dati di tipo data, ora e valuta in stringhe di caratteri.|  
@@ -87,7 +87,7 @@ ms.locfileid: "48208519"
 ### <a name="sqlsoptsstextptrlogging"></a>SQL_SOPT_SS_TEXTPTR_LOGGING  
  L'attributo SQL_SOPT_SS_TEXTPTR_LOGGING attiva o disattiva la registrazione delle operazioni su colonne contenenti **testo** oppure **immagine** dei dati. Il *ValuePtr* valore è di tipo SQLLEN.  
   
-|*ValuePtr* valore|Description|  
+|*ValuePtr* valore|Descrizione|  
 |----------------------|-----------------|  
 |SQL_TL_OFF|Disabilita la registrazione delle operazioni eseguite nei **testo** e **immagine** dei dati.|  
 |SQL_TL_ON|Valore predefinito. Abilita la registrazione delle operazioni eseguite nei **testo** e **immagine** dei dati.|  
@@ -95,7 +95,7 @@ ms.locfileid: "48208519"
 ### <a name="sqlsoptsshiddencolumns"></a>SQL_SOPT_SS_HIDDEN_COLUMNS  
  L'attributo SQL_SOPT_SS_HIDDEN_COLUMNS espone nel set di risultati le colonne nascoste in un'istruzione SELECT FOR BROWSE di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per impostazione predefinita, il driver non espone queste colonne. Il *ValuePtr* valore è di tipo SQLLEN.  
   
-|*ValuePtr* valore|Description|  
+|*ValuePtr* valore|Descrizione|  
 |----------------------|-----------------|  
 |SQL_HC_OFF|Valore predefinito. Le colonne FOR BROWSE sono nascoste dal set di risultati.|  
 |SQL_HC_ON|Espone colonne FOR BROWSE.|  
@@ -110,7 +110,7 @@ ms.locfileid: "48208519"
   
  `service=<service-name>[;(local database=<database>|broker instance=<broker instance>)]`  
   
- Esempio:  
+ Ad esempio:  
   
  `service=mySSBService;local database=mydb`  
   
@@ -122,14 +122,14 @@ ms.locfileid: "48208519"
   
  Il tipo per SQL_SOPT_SS_PARAM_FOCUS è SQLULEN.  
   
- L'impostazione predefinita è 0 e indica che queste chiamate riguardano i parametri che corrispondono a marcatori di parametro nell'istruzione SQL. Se l'impostazione corrisponde al numero di un parametro con valori di tabella, queste chiamate riguardano le colonne del parametro con valori di tabella. Se l'impostazione corrisponde a un valore diverso dal numero un parametro con valori di tabella, queste chiamate restituiscono l'errore IM020: "Lo stato attivo del parametro non fa riferimento a un parametro con valori di tabella".  
+ L'impostazione predefinita è 0 e indica che queste chiamate riguardano i parametri che corrispondono a marcatori di parametro nell'istruzione SQL. Se l'impostazione corrisponde al numero di un parametro con valori di tabella, queste chiamate riguardano le colonne del parametro con valori di tabella. Se impostato su un valore che non è il numero di parametro di un parametro con valori di tabella, queste chiamate restituiscono l'errore IM020: "Stato attivo del parametro non fa riferimento a un parametro con valori di tabella".  
   
 ### <a name="sqlsoptssnamescope"></a>SQL_SOPT_SS_NAME_SCOPE  
  L'attributo SQL_SOPT_SS_NAME_SCOPE specifica l'ambito del nome per le chiamate di funzione di catalogo successive. Il set di risultati restituito da SQLColumns dipende dall'impostazione di SQL_SOPT_SS_NAME_SCOPE.  
   
  Il tipo per SQL_SOPT_SS_NAME_SCOPE è SQLULEN.  
   
-|*ValuePtr* valore|Description|  
+|*ValuePtr* valore|Descrizione|  
 |----------------------|-----------------|  
 |SQL_SS_NAME_SCOPE_TABLE|Valore predefinito.<br /><br /> In caso di utilizzo di parametri con valori di tabella, indica che è necessario che vengano restituiti i metadati per le tabelle effettive.<br /><br /> Quando si utilizzano colonne di tipo sparse, SQLColumns restituirà solo le colonne che non sono membri di tipo sparse `column_set`.|  
 |SQL_SS_NAME_SCOPE_TABLE_TYPE|Indica che l'applicazione richiede metadati per un tipo di tabella, anziché una tabella effettiva. Le funzioni di catalogo devono restituire metadati per i tipi di tabella. L'applicazione passa quindi TYPE_NAME del parametro con valori di tabella, come le *TableName* parametro.|  
@@ -146,7 +146,7 @@ ms.locfileid: "48208519"
  Se un funzione di catalogo diversa SQLTables, SQLColumns o SQLPrimaryKeys viene chiamato quando SQL_SOPT_SS_NAME_SCOPE dispone di un valore diverso da SQL_SS_NAME_SCOPE_TABLE, viene restituito SQL_ERROR. Viene generato un record di diagnostica con SQLSTATE HY010 e il messaggio "Errore nella sequenza della funzione (SQL_SOPT_SS_NAME_SCOPE non è impostato su SQL_SS_NAME_SCOPE_TABLE)".  
   
 ## <a name="see-also"></a>Vedere anche  
- [Funzione SQLGetStmtAttr](http://go.microsoft.com/fwlink/?LinkId=59355)   
+ [Funzione SQLGetStmtAttr](https://go.microsoft.com/fwlink/?LinkId=59355)   
  [Dettagli di implementazione dell'API ODBC](odbc-api-implementation-details.md)  
   
   

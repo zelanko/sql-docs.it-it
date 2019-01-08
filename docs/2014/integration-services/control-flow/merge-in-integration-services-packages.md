@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - MERGE statement [SQL Server]
@@ -13,12 +12,12 @@ ms.assetid: 7e44a5c2-e6d6-4fe2-a079-4f95ccdb147b
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7ee44b0524dffb85892f016581f9c6a7f480a5e2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cffe029abd6774262e7aad12ad7aade07717bc80
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48075831"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53359283"
 ---
 # <a name="merge-in-integration-services-packages"></a>MERGE in Integration Services Packages
   Nella versione corrente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]l'istruzione SQL in un'attività Esegui SQL può contenere un'istruzione MERGE. che consente di eseguire più operazioni INSERT, UPDATE e DELETE in una singola istruzione.  
@@ -36,7 +35,7 @@ ms.locfileid: "48075831"
   
  Nelle altre sezioni di questo argomento vengono descritti alcuni utilizzi aggiuntivi dell'istruzione MERGE.  
   
- Per un componente di destinazione di esempio che supporta l'utilizzo dell'istruzione MERGE, vedere l'esempio nella community CodePlex relativo alla [destinazione MERGE](http://go.microsoft.com/fwlink/?LinkId=141215).  
+ Per un componente di destinazione di esempio che supporta l'utilizzo dell'istruzione MERGE, vedere l'esempio nella community CodePlex relativo alla [destinazione MERGE](https://go.microsoft.com/fwlink/?LinkId=141215).  
   
 ## <a name="using-merge"></a>Utilizzo di MERGE  
  In genere, si utilizza l'istruzione MERGE quando si desidera applicare modifiche quali inserimenti, aggiornamenti ed eliminazioni da una tabella a un'altra. Prima di [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], per eseguire questo processo erano necessarie una trasformazione Ricerca e più trasformazioni Comando OLE DB. Con la trasformazione Ricerca veniva eseguita una ricerca riga per riga per determinare se ogni riga era nuova o era stata modificata. Con la trasformazione Comando OLE DB venivano quindi eseguite tutte le necessarie operazioni INSERT, UPDATE e DELETE. A partire da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]una singola istruzione MERGE può sostituire sia la trasformazione Ricerca sia le trasformazioni Comando OLE DB corrispondenti.  
@@ -53,12 +52,12 @@ ms.locfileid: "48075831"
  Nella tabella FactBuyingHabits del data warehouse viene rilevata l'ultima data in cui un cliente ha acquistato un determinato prodotto. La tabella è costituita dalle colonne ProductID, CustomerID e PurchaseDate. Ogni settimana, il database transazionale genera una tabella PurchaseRecords che include gli acquisti eseguiti durante tale settimana. L'obiettivo è quello di utilizzare una singola istruzione MERGE per unire le informazioni della tabella PurchaseRecords nella tabella FactBuyingHabits. Per le coppie prodotto-cliente che non esistono, l'istruzione MERGE inserisce nuove righe. Per le coppie prodotto-cliente che esistono, l'istruzione MERGE aggiorna la data di acquisto più recente.  
   
 ###### <a name="track-price-history"></a>Rilevare la cronologia dei prezzi  
- La tabella DimBook rappresenta l'elenco di libri nell'inventario di un libraio e identifica la cronologia dei prezzi di ogni libro. La tabella contiene le colonne ISBN, ProductID, Price, Shelf e IsCurrent. Include inoltre un'unica riga per ogni prezzo assegnato al libro. Una di queste righe contiene il prezzo corrente. Per indicare quale riga contiene il prezzo corrente, il valore della colonna IsCurrent per tale riga è impostato su 1.  
+ La tabella DimBook rappresenta l'elenco di libri nell'inventario di un libraio e identifica la cronologia dei prezzi di ogni libro. Questa tabella contiene queste colonne: ISBN, ProductID, Price, Shelf e IsCurrent. Include inoltre un'unica riga per ogni prezzo assegnato al libro. Una di queste righe contiene il prezzo corrente. Per indicare quale riga contiene il prezzo corrente, il valore della colonna IsCurrent per tale riga è impostato su 1.  
   
  Ogni settimana, il database genera una tabella WeeklyChanges che contiene le modifiche di prezzo e i nuovi libri aggiunti durante la settimana. Utilizzando una singola istruzione MERGE, è possibile applicare le modifiche della tabella WeeklyChanges alla tabella DimBook. L'istruzione MERGE inserisce nuove righe per i libri appena aggiunti e imposta la colonna IsCurrent su 0 per le righe di libri esistenti il cui prezzo è stato modificato. Inserisce inoltre nuove righe per i libri il cui prezzo è stato modificato e, per queste nuove righe, imposta il valore della colonna IsCurrent su 1.  
   
 ### <a name="merge-a-table-with-new-data-against-the-old-table"></a>Unire una tabella contenente nuovi dati con la tabella precedente  
- Il database modella le proprietà di un oggetto utilizzando uno "schema aperto", ovvero una tabella contiene coppie nome-valore per ogni proprietà. La tabella Properties contiene tre colonne: EntityID, PropertyID e Value. È necessario sincronizzare una versione più recente della tabella, denominata NewProperties, con la tabella Properties. A tale scopo, è possibile utilizzare una singola istruzione MERGE per effettuare le operazioni seguenti:  
+ Il database modella le proprietà di un oggetto usando uno "schema aperto", ovvero una tabella contiene coppie nome-valore per ogni proprietà. La tabella Properties contiene tre colonne: EntityID, PropertyID e Value. È necessario sincronizzare una versione più recente della tabella, denominata NewProperties, con la tabella Properties. A tale scopo, è possibile utilizzare una singola istruzione MERGE per effettuare le operazioni seguenti:  
   
 -   Eliminare proprietà dalla tabella Properties se non si trovano nella tabella NewProperties.  
   

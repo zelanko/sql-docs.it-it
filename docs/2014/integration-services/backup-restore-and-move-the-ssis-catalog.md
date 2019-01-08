@@ -11,17 +11,17 @@ ms.assetid: bf806aef-8556-48ab-aed5-e95de9a2204e
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 64d690c11a76d40e851a23374c568727e3f47a40
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2c2873a6864e3ac5d55f180bfc2555d8cb471620
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48172781"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53354487"
 ---
 # <a name="backup-restore-and-move-the-ssis-catalog"></a>Backup, ripristino e spostamento del catalogo SSISDB
-  [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)] include il database SSISDB. È possibile eseguire una query sulle viste nel database SSISDB per verificare oggetti, impostazioni e dati operativi archiviati nel catalogo **SSISDB** . In questo argomento vengono fornite istruzioni per l'esecuzione del backup e del ripristino del database.  
+  [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)] è incluso il database SSISDB. È possibile eseguire una query sulle viste nel database SSISDB per verificare oggetti, impostazioni e dati operativi archiviati nel catalogo **SSISDB** . In questo argomento vengono fornite istruzioni per l'esecuzione del backup e del ripristino del database.  
   
- Nel catalogo **SSISDB** sono archiviati i pacchetti distribuiti nel server [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Per ulteriori informazioni sul catalogo, vedere [Catalogo SSIS](catalog/ssis-catalog.md).  
+ Nel catalogo **SSISDB** sono archiviati i pacchetti distribuiti nel server [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Per ulteriori informazioni sul catalogo, vedere [Catalogo SSIS](catalog/ssis-catalog.md).  
   
 ##  <a name="backup"></a> Per eseguire il backup del database SSIS  
   
@@ -39,7 +39,7 @@ ms.locfileid: "48172781"
   
     ```  
   
-3.  Eseguire il backup del database SSISDB tramite la finestra di dialogo **Backup database** in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Per ulteriori informazioni, vedere [Procedura: Esecuzione del backup di un database (SQL Server Management Studio)](http://go.microsoft.com/fwlink/?LinkId=231812).  
+3.  Eseguire il backup del database SSISDB tramite la finestra di dialogo **Backup database** in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Per altre informazioni, vedere [come: Eseguire il backup di un Database (SQL Server Management Studio)](https://go.microsoft.com/fwlink/?LinkId=231812).  
   
 4.  Generare lo script CREATE LOGIN per ##MS_SSISServerCleanupJobLogin##, effettuando le operazioni riportate di seguito. Per altre informazioni, vedere [CREATE LOGIN &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-login-transact-sql).  
   
@@ -63,7 +63,7 @@ ms.locfileid: "48172781"
   
 ### <a name="to-restore-the-ssis-database"></a>Per ripristinare il database SSIS  
   
-1.  Se si ripristina il database SSISDB a un'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] in cui il catalogo SSISDB non è mai stato creato, abilitare Common Language Runtime (CLR) eseguendo la stored procedure sp_configure. Per altre informazioni, vedere [sp_configure &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) e [Opzione clr enabled](http://go.microsoft.com/fwlink/?LinkId=231855).  
+1.  Se si ripristina il database SSISDB a un'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] in cui il catalogo SSISDB non è mai stato creato, abilitare Common Language Runtime (CLR) eseguendo la stored procedure sp_configure. Per altre informazioni, vedere [sp_configure &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) e [Opzione clr enabled](https://go.microsoft.com/fwlink/?LinkId=231855).  
   
     ```  
     use master   
@@ -80,7 +80,7 @@ ms.locfileid: "48172781"
   
     ```  
   
-     Per le stored procedure CLR di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] è necessario concedere le autorizzazioni UNSAFE all'account di accesso, poiché per questo account è richiesto un accesso aggiuntivo alle risorse limitate, ad esempio l'API Microsoft Win32. Per altre informazioni sull'autorizzazione codice UNSAFE, vedere [Creazione di un assembly](../relational-databases/clr-integration/assemblies/creating-an-assembly.md).  
+     [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] Per le stored procedure CLR è necessario concedere le autorizzazioni UNSAFE all'account di accesso, poiché per questo account è richiesto un accesso aggiuntivo alle risorse limitate, ad esempio l'API Microsoft Win32. Per altre informazioni sull'autorizzazione codice UNSAFE, vedere [Creazione di un assembly](../relational-databases/clr-integration/assemblies/creating-an-assembly.md).  
   
     ```  
     Create Login MS_SQLEnableSystemAssemblyLoadingUser  
@@ -112,7 +112,7 @@ ms.locfileid: "48172781"
   
     -   **Metodo 1**  
   
-         Utilizzare questo metodo se si è già eseguito un backup della chiave master del database e si dispone della password utilizzata per crittografare la chiave master.  
+         Usare questo metodo se si è già eseguito un backup della chiave master del database e si dispone della password usata per crittografare la chiave master.  
   
         ```  
                Restore master key from file = 'c:\temp\RCTestInstKey'  

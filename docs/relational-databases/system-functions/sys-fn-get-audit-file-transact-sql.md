@@ -22,12 +22,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b80ec93ef671f2f9a564c81ae2ebb10c19c43dfd
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: 5b4eb865c8c0498e72943c128ff0106638005166
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018336"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980047"
 ---
 # <a name="sysfngetauditfile-transact-sql"></a>sys.fn_get_audit_file (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ fn_get_audit_file ( file_pattern,
  
  - **SQL Server**:
     
-    Questo argomento deve includere sia un percorso (lettera di unità o condivisione di rete) che un nome di file, che può includere un carattere jolly. Un asterisco (*) è utilizzabile per raccogliere più file da un set di file di controllo. Esempio:  
+    Questo argomento deve includere sia un percorso (lettera di unità o condivisione di rete) che un nome di file, che può includere un carattere jolly. Un asterisco (*) è utilizzabile per raccogliere più file da un set di file di controllo. Ad esempio:  
   
     -   **\<percorso >\\ \***  : è possibile raccogliere tutti i file si trova nel percorso di controllo.  
   
@@ -60,7 +60,7 @@ fn_get_audit_file ( file_pattern,
   
  - **Database SQL di Azure**:
  
-    Questo argomento viene usato per specificare l'URL blob (tra cui l'endpoint di archiviazione e il contenitore). Mentre non supporta un carattere jolly asterisco, è possibile usare un prefisso del nome del file parziale (blob) (anziché il nome del blob completo) per raccogliere più file (BLOB) che iniziano con questo prefisso. Esempio:
+    Questo argomento viene usato per specificare l'URL blob (tra cui l'endpoint di archiviazione e il contenitore). Mentre non supporta un carattere jolly asterisco, è possibile usare un prefisso del nome del file parziale (blob) (anziché il nome del blob completo) per raccogliere più file (BLOB) che iniziano con questo prefisso. Ad esempio:
  
       - **\<Storage_endpoint\>/\<contenitore\>/\<ServerName\>/\<DatabaseName\> /**  -consente di raccogliere tutti i file di controllo (BLOB) per il database specifico.    
       
@@ -84,7 +84,7 @@ fn_get_audit_file ( file_pattern,
 ## <a name="tables-returned"></a>Tabelle restituite  
  Nella tabella seguente viene descritto il contenuto del file di controllo che può essere restituito da questa funzione.  
   
-|Nome colonna|Tipo|Description|  
+|Nome colonna|Tipo|Descrizione|  
 |-----------------|----------|-----------------|  
 |event_time|**datetime2**|Data e ora di attivazione dell'azione controllabile. Non ammette i valori Null.|  
 |sequence_number|**int**|Viene tenuta traccia della sequenza dei record all'interno di un singolo record di controllo con dimensioni troppo elevate per il buffer di scrittura dei controlli. Non ammette i valori Null.|  
@@ -117,22 +117,22 @@ fn_get_audit_file ( file_pattern,
 |user_defined_event_id|**smallint**|**Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Id evento definito dall'utente passati come argomento al **sp_audit_write**. **NULL** per gli eventi di sistema (impostazione predefinita) e diverso da zero per evento definito dall'utente. Per altre informazioni, vedere [sp_audit_write &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-audit-write-transact-sql.md).|  
 |user_defined_information|**nvarchar(4000)**|**Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Consente di registrare qualsiasi informazione aggiuntiva che l'utente desidera registrare in |log di controllo usando il **sp_audit_write** stored procedure.|  
 |audit_schema_version |**int** | |  
-|sequence_group_id |**varbinary** | **Si applica a**: solo SQL Server (a partire da 2016) |  
-|transaction_id |**bigint** | **Si applica a**: solo SQL Server (a partire da 2016) |  
-|client_ip |**nvarchar(128)** | **Si applica a**: database SQL di Azure + SQL Server (a partire 2017) |  
-|application_name |**nvarchar(128)** | **Si applica a**: database SQL di Azure + SQL Server (a partire 2017) |  
-|duration_milliseconds |**bigint** | **Si applica a**: solo i database SQL di Azure |  
-|response_rows |**bigint** | **Si applica a**: solo i database SQL di Azure |  
-|affected_rows |**bigint** | **Si applica a**: solo i database SQL di Azure |  
-|connection_id |GUID | **Si applica a**: solo i database SQL di Azure |
-|data_sensitivity_information |nvarchar(4000) | **Si applica a**: solo i database SQL di Azure |
+|sequence_group_id |**varbinary** | **Si applica a**: Solo SQL Server (a partire da 2016) |  
+|transaction_id |**bigint** | **Si applica a**: Solo SQL Server (a partire da 2016) |  
+|client_ip |**nvarchar(128)** | **Si applica a**: Azure SQL DB + SQL Server (a partire 2017) |  
+|application_name |**nvarchar(128)** | **Si applica a**: Azure SQL DB + SQL Server (a partire 2017) |  
+|duration_milliseconds |**bigint** | **Si applica a**: Solo i database SQL di Azure |  
+|response_rows |**bigint** | **Si applica a**: Solo i database SQL di Azure |  
+|affected_rows |**bigint** | **Si applica a**: Solo i database SQL di Azure |  
+|connection_id |GUID | **Si applica a**: Solo i database SQL di Azure |
+|data_sensitivity_information |nvarchar(4000) | **Si applica a**: Solo i database SQL di Azure |
   
 ## <a name="remarks"></a>Note  
  Se il *file_pattern* argomento passato a **fn_get_audit_file** fa riferimento a un percorso o un file che non esiste, o se il file non è un file di controllo, il **MSG_INVALID_AUDIT_FILE**viene restituito il messaggio di errore.  
   
 ## <a name="permissions"></a>Permissions  
- - **SQL Server**: richiede la **CONTROL SERVER** l'autorizzazione.  
- - **Database SQL di Azure**: richiede la **CONTROL DATABASE** l'autorizzazione.     
+ - **SQL Server**: È richiesta l'autorizzazione **CONTROL SERVER** .  
+ - **Azure SQL database**: Richiede la **CONTROL DATABASE** l'autorizzazione.     
     - Gli amministratori del server possono accedere ai log di controllo di tutti i database nel server.
     - Gli amministratori del server non possono accedere solo i log di controllo dal database corrente.
     - I blob che non soddisfano i criteri precedenti verranno ignorati (verrà visualizzato un elenco di BLOB ignorati nel messaggio di output di query), e la funzione restituirà i registri solo dai BLOB per cui è consentito l'accesso.  
@@ -141,10 +141,10 @@ fn_get_audit_file ( file_pattern,
 
 - **SQL Server**
 
-  In questo esempio viene eseguita la lettura da un file denominato `\\serverName\Audit\HIPPA_AUDIT.sqlaudit`.  
+  In questo esempio viene eseguita la lettura da un file denominato `\\serverName\Audit\HIPAA_AUDIT.sqlaudit`.  
   
   ```  
-  SELECT * FROM sys.fn_get_audit_file ('\\serverName\Audit\HIPPA_AUDIT.sqlaudit',default,default);  
+  SELECT * FROM sys.fn_get_audit_file ('\\serverName\Audit\HIPAA_AUDIT.sqlaudit',default,default);  
   GO  
   ```  
 
