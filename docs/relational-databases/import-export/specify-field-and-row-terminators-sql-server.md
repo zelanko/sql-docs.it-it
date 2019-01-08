@@ -18,18 +18,18 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bc197fdb8571df79e1ea39cf49086a1cea68b4f0
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: c9a7592e4ba1d3087aafaff1eef22b467eb55dd7
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52543799"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53215477"
 ---
 # <a name="specify-field-and-row-terminators-sql-server"></a>Impostazione dei caratteri di terminazione del campo e della riga (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   Per i campi dati di tipo carattere è facoltativamente possibile contrassegnare la fine di ogni campo di un file di dati con un *carattere di terminazione del campo* a e la fine di ogni riga con un *carattere di terminazione della riga*. I caratteri di terminazione costituiscono un mezzo per indicare ai programmi che leggono il file di dati dove termina un campo o una riga e dove inizia un altro campo o un'altra riga.  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  Per il formato nativo o nativo Unicode, utilizzare i prefissi di lunghezza anziché i caratteri di terminazione del campo. Possono verificarsi conflitti tra i dati in formato nativo e i caratteri di terminazione, perché un file di dati in formato nativo viene archiviato nel formato di dati binario interno di [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="characters-supported-as-terminators"></a>Caratteri di terminazione supportati  
@@ -181,7 +181,7 @@ GO
 bcp AdventureWorks..myDepartment in C:\myDepartment-c-t.txt -c -t , -r \n -T  
 ```  
   
-#### <a name="b-using-bulk-insert-to-interactively-specify-terminators"></a>B. Utilizzo dell'istruzione BULK INSERT per l'impostazione interattiva dei caratteri di terminazione  
+#### <a name="b-using-bulk-insert-to-interactively-specify-terminators"></a>b. Utilizzo dell'istruzione BULK INSERT per l'impostazione interattiva dei caratteri di terminazione  
  Nell'esempio seguente viene eseguita l'importazione bulk del file di dati `Department-c-t.txt` utilizzando un'istruzione `BULK INSERT` con i qualificatori illustrati nella tabella seguente:  
   
 |Opzione|attribute|  
