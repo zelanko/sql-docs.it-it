@@ -1,5 +1,5 @@
 ---
-title: 'Lezione 4: Definizione avanzate proprietà di dimensione e attributo | Documenti Microsoft'
+title: 'Lezione 4: La definizione di Advanced attributo e proprietà dimensione | Microsoft Docs'
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 8a3f2d9a45233eba795e8f252723850bd9710f43
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: e99a6db1198422f137e281ea52da6b135172fcd7
+ms.sourcegitcommit: 7419a8c957c212e60422a5d87a253683031dc467
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34015848"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52951583"
 ---
-# <a name="lesson-4-defining-advanced-attribute-and-dimension-properties"></a>Lezione 4: Definizione di attributo avanzato e proprietà dimensione
+# <a name="lesson-4-defining-advanced-attribute-and-dimension-properties"></a>Lezione 4: La definizione di attributo avanzato e proprietà dimensione
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
 In questa lezione verranno illustrate le procedure per l'utilizzo di alcune proprietà avanzate degli attributi, delle gerarchie degli attribuiti e delle proprietà delle dimensioni.  
@@ -35,13 +35,13 @@ In questa attività vengono illustrate le procedure per definire i nomi dei live
 [Raggruppamento automatico dei membri degli attributi](../analysis-services/lesson-4-3-automatically-grouping-attribute-members.md)  
 In questa attività vengono illustrate le procedure per creare automaticamente gruppi di membri dell'attributo in base alla distribuzione dei membri all'interno della gerarchia dell'attributo. Per altre informazioni, vedere [Raggruppare membri di attributo &#40;discretizzazione&#41;](../analysis-services/multidimensional-models/attribute-properties-group-attribute-members.md).  
   
-[Come nascondere e disabilitare le gerarchie di attributi](../analysis-services/lesson-4-4-hiding-and-disabling-attribute-hierarchies.md)  
+[Come nascondere e disabilitare le gerarchie degli attributi](../analysis-services/lesson-4-4-hiding-and-disabling-attribute-hierarchies.md)  
 In questa attività vengono illustrate le procedure per disabilitare o nascondere le gerarchie degli attributi.  
   
 [Ordinamento dei membri dell'attributo in base a un attributo secondario](../analysis-services/lesson-4-5-sorting-attribute-members-based-on-a-secondary-attribute.md)  
 In questa attività vengono illustrate le procedure per ordinare i membri della dimensione in base a un attributo secondario in modo da ottenere il tipo di ordinamento desiderato.  
   
-[Impostazione delle relazioni tra gli attributi in una gerarchia definita dall'utente](../analysis-services/4-6-specifying-attribute-relationships-in-user-defined-hierarchy.md)  
+[Impostazione delle relazioni tra gli attributi in una gerarchia definita dall'utente](../analysis-services/lesson-4-6-specifying-attribute-relationships-in-user-defined-hierarchy.md)  
 In questa attività vengono illustrate le procedure per definire le proprietà del membro per gli attributi e per specificarne le relazioni di aggregazione. Per altre informazioni, vedere [Definire relazioni tra attributi](../analysis-services/multidimensional-models/attribute-relationships-define.md) e [Proprietà delle gerarchie definite dall'utente](../analysis-services/multidimensional-models-olap-logical-dimension-objects/user-hierarchies-properties.md).  
   
 [Definizione delle proprietà UnknownMember e NullProcessing](../analysis-services/lesson-4-7-defining-the-unknown-member-and-null-processing-properties.md)  
@@ -52,7 +52,7 @@ In questa attività vengono configurate le proprietà UnknownMember e UnknownMem
   
 ## <a name="see-also"></a>Vedere anche  
 [Scenario di Analysis Services Tutorial](../analysis-services/analysis-services-tutorial-scenario.md)  
-[Modellazione multidimensionale & #40; Esercitazione di AdventureWorks & #41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
+[Modellazione multidimensionale &#40;esercitazione di AdventureWorks&#41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
 [Dimensioni nei modelli multidimensionali](../analysis-services/multidimensional-models/dimensions-in-multidimensional-models.md)  
   
   

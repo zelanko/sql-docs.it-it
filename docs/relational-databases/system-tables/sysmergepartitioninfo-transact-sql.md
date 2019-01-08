@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sysmergepartitioninfo_TSQL
@@ -19,19 +18,19 @@ ms.assetid: 7429ad2c-dd33-4f7d-89cc-700e083af518
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 056527bea994d8ba47b50108d0e83d6c52166a11
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cea1f26a93627d2a3719ad362d2bd62ee1e3ba1e
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47716019"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52802773"
 ---
 # <a name="sysmergepartitioninfo-transact-sql"></a>sysmergepartitioninfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Fornisce informazioni sulle partizioni per ogni articolo. Contiene una riga per ogni articolo di merge definito nel database locale. Questa tabella è archiviata nei database di pubblicazione e di sottoscrizione.  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**artid**|**uniqueidentifier**|Identificatore univoco per l'articolo specificato.|  
 |**pubid**|**uniqueidentifier**|Numero di identificazione univoco per la pubblicazione specificata. Viene generato quando si aggiunge la pubblicazione.|  

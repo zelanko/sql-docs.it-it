@@ -1,5 +1,5 @@
 ---
-title: Le colonne calcolate | Microsoft Docs
+title: Nei modelli tabulari di Analysis Services colonne calcolate | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: e27c545e960c8c57178f099bfa99a7187795d959
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 087c30045fdee1e769471cb12188cf31b524c618
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38982523"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072398"
 ---
 # <a name="calculated-columns"></a>Colonne calcolate
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-  Colonne calcolate, nei modelli tabulari, consentono di aggiungere nuovi dati al modello. Invece di incollare o importare i valori nella colonna, viene creata una formula DAX che consente di definire i valori a livello di riga della colonna. La colonna calcolata può quindi essere utilizzata in un report, in una tabella pivot o in un grafico pivot come qualsiasi altra colonna.  
+  Colonne calcolate, nei modelli tabulari, consentono di aggiungere nuovi dati al modello. Anziché incollare o importare i valori nella colonna, si crea una formula DAX che definisce i valori a livello di riga della colonna. La colonna calcolata può quindi essere utilizzata in un report, in una tabella pivot o in un grafico pivot come qualsiasi altra colonna.  
  
   
   
@@ -68,7 +68,7 @@ ms.locfileid: "38982523"
   
 ##  <a name="bkmk_rel_tasks"></a> Related tasks  
   
-|Argomento|Description|  
+|Argomento|Descrizione|  
 |-----------|-----------------|  
 |[Creare una colonna calcolata](../../analysis-services/tabular-models/ssas-calculated-columns-create-a-calculated-column.md)|Nelle attività di questo argomento viene descritto come aggiungere una nuova colonna calcolata a una tabella.|  
   

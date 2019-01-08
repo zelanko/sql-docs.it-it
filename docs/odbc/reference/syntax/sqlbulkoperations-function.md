@@ -20,12 +20,12 @@ ms.assetid: 7029d0da-b0f2-44e6-9114-50bd96f47196
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d59e4d93b082312b6ae33fc3c2e2ca1e4177c771
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 06a1997b482c45ea4b529c1230ef1cb2c61dc873
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47815177"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53212711"
 ---
 # <a name="sqlbulkoperations-function"></a>Funzione SQLBulkOperations
 **Conformità**  
@@ -62,7 +62,7 @@ SQLRETURN SQLBulkOperations(
   
  Per tutti questi SQLSTATEs che può restituire SQL_SUCCESS_WITH_INFO o SQL_ERROR (eccetto SQLSTATEs 01xxx), viene restituito SQL_SUCCESS_WITH_INFO se si verifica un errore in uno o più, ma non tutte, le righe di un'operazione con più righe e viene restituito SQL_ERROR se si verifica un errore in un riga singola operazione.  
   
-|SQLSTATE|Errore|Description|  
+|SQLSTATE|Errore|Descrizione|  
 |--------------|-----------|-----------------|  
 |01000|Avviso generale|Messaggio informativo specifico del driver. (Funzione restituisce SQL_SUCCESS_WITH_INFO).|  
 |01004|Troncamento a destra dei dati stringa|Il *operazione* argomento era SQL_FETCH_BY_BOOKMARK e stringa o dati binari restituiti per una o più colonne con un tipo di dati SQL_C_CHAR o SQL_C_BINARY ha comportato il troncamento del carattere non vuote o dati binari non NULL.|  
@@ -102,7 +102,7 @@ SQLRETURN SQLBulkOperations(
 ## <a name="comments"></a>Commenti  
   
 > [!CAUTION]  
->  Per informazioni sull'istruzione che dichiara **SQLBulkOperations** possono essere chiamati in e cosa è necessario per la compatibilità con l'API ODBC 2. *x* applicazioni federate, vedere la [cursori rettangolari, cursori scorrevoli e compatibilità con le versioni precedenti](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md) sezione nell'appendice g: Driver le linee guida per la compatibilità con le versioni precedenti.  
+>  Per informazioni sull'istruzione che dichiara **SQLBulkOperations** possono essere chiamati in e cosa è necessario per la compatibilità con l'API ODBC 2. *x* applicazioni federate, vedere la [cursori rettangolari, cursori scorrevoli e compatibilità con le versioni precedenti](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md) sezione nell'appendice g: Driver linee guida per la compatibilità con le versioni precedenti.  
   
  Un'applicazione utilizza **SQLBulkOperations** per eseguire le operazioni seguenti nella tabella di base o nella vista che corrisponde alla query corrente:  
   
@@ -243,7 +243,7 @@ SQLRETURN SQLBulkOperations(
   
      Le colonne data-at-execution sono colonne in un set di righe per cui i dati verranno inviati con **SQLPutData** quando una riga viene aggiornata o inserita con **SQLBulkOperations**. Sono associate con **SQLBindCol**. Il valore restituito da **SQLParamData** è l'indirizzo della riga di **TargetValuePtr* buffer in fase di elaborazione.  
   
-4.  L'applicazione chiama **SQLPutData** uno o più volte per inviare i dati per la colonna. È necessario più di una chiamata se tutti i valori dei dati non possono essere restituito nel  *\*TargetValuePtr* specificato nel buffer **SQLPutData**; più chiamate al metodo **SQLPutData** per la stessa colonna sono consentiti solo quando si inviano dati di tipo carattere C a una colonna con un tipo di carattere, binary o dati specifici dell'origine dati o per l'invio di dati C binari a una colonna con un carattere, binario, o tipo di dati specifici dell'origine dati.  
+4.  L'applicazione chiama **SQLPutData** uno o più volte per inviare i dati per la colonna. È necessario più di una chiamata se tutti i valori dei dati non possono essere restituito nel  *\*TargetValuePtr* specificato nel buffer **SQLPutData**; più chiamate al metodo **SQLPutData** per la stessa colonna sono consentiti solo quando si inviano dati di tipo carattere C a una colonna con un tipo di carattere, binary o dati specifici dell'origine dati o per l'invio di dati C binari a una colonna con un carattere, binario, o del tipo di dati specifici dell'origine dati.  
   
 5.  L'applicazione chiama **SQLParamData** nuovamente per segnalare che tutti i dati sono stati inviati per la colonna.  
   

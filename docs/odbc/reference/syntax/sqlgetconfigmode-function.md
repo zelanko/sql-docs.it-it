@@ -20,12 +20,12 @@ ms.assetid: b96ab3b8-08d5-4fea-9ffe-e03043efbf2d
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1148ab38f7d389c3fe78a09a646a9cbdec0bb723
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 54c8dbed5599952778ca7651acbdb55a21b8f876
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47755789"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206580"
 ---
 # <a name="sqlgetconfigmode-function"></a>Funzione SQLGetConfigMode
 **Conformità**  
@@ -39,7 +39,7 @@ ms.locfileid: "47755789"
 ```  
   
 BOOL SQLGetConfigMode(  
-     UWORD *   pwConfigMode);  
+     UWORD *   pwConfigMode);  
 ```  
   
 ## <a name="arguments"></a>Argomenti  
@@ -58,7 +58,7 @@ BOOL SQLGetConfigMode(
 ## <a name="diagnostics"></a>Diagnostica  
  Quando **SQLGetConfigMode** FALSO, restituisce un oggetto associato  *\*pfErrorCode* valore può essere ottenuto chiamando **SQLInstallerError**. La tabella seguente elenca i  *\*pfErrorCode* i valori che possono essere restituiti da **SQLInstallerError** e illustra ognuna nel contesto di questa funzione.  
   
-|*\*pfErrorCode*|Errore|Description|  
+|*\*pfErrorCode*|Errore|Descrizione|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_OUT_OF_MEM|Memoria insufficiente|Il programma di installazione non è stato possibile eseguire la funzione a causa della mancanza di memoria.|  
   

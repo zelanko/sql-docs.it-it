@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 dev_langs:
 - XML
@@ -15,12 +14,12 @@ ms.assetid: caa3547a-2cd5-47ad-ace2-a36752835cfe
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 87d446b5c65ff5e1660ea6bf6cb216b875416cd3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 73f5cdd35404617be9563c33574b09f825a2c7ad
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48080031"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52801883"
 ---
 # <a name="testserver-element-dta"></a>Elemento TestServer (DTA)
   Indica il server di prova da utilizzare durante l'ottimizzazione di un server di produzione.  
@@ -37,11 +36,11 @@ ms.locfileid: "48080031"
   
 ## <a name="element-characteristics"></a>Caratteristiche elemento  
   
-|Caratteristica|Description|  
+|Caratteristica|Descrizione|  
 |--------------------|-----------------|  
 |**Tipo di dati e lunghezza**|**string**, lunghezza illimitata.|  
 |**Valore predefinito**|Nessuna.|  
-|**Occorrenza**|Facoltativo. Può usare una sola volta per ogni `TuningOptions` elemento.|  
+|**Occorrenza**|Facoltativo. È possibile utilizzarlo una volta per ogni elemento `TuningOptions`.|  
   
 ## <a name="element-relationships"></a>Relazioni elemento  
   
@@ -54,6 +53,6 @@ ms.locfileid: "48080031"
  Per un esempio di utilizzo di questo elemento, vedere [Riduzione del carico di ottimizzazione del server di produzione](../../relational-databases/performance/reduce-the-production-server-tuning-load.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Guida di riferimento ai file di input XML &#40;Ottimizzazione guidata motore di database&#41;](xml-input-file-reference-database-engine-tuning-advisor.md)  
+ [Guida di riferimento ai file di input XML&#40; (Ottimizzazione guidata motore di database)&#41;](xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   

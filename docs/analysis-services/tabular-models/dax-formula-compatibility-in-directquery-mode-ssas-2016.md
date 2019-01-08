@@ -1,5 +1,5 @@
 ---
-title: Compatibilità delle formule DAX in modalità DirectQuery | Microsoft Docs
+title: Compatibilità delle formule DAX in modalità DirectQuery di Analysis Services | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 4bcebbcf8702c2605d36df844f5db7c7b5699a22
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 8e3a9a9f8043a3251e928b7b13e706b407097894
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38985383"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072718"
 ---
 # <a name="dax-formula-compatibility-in-directquery-mode"></a>Compatibilità delle formule DAX in modalità DirectQuery 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -26,7 +26,7 @@ Per i modelli 1200 e versioni successive in modalità DirectQuery, molte limitaz
 
 ## <a name="dax-functions-in-directquery-mode"></a>Funzioni DAX in modalità DirectQuery
 
-In breve, tutte le funzioni DAX sono supportate per i modelli DirectQuery. Tuttavia, non tutte le funzioni sono supportate per tutti i tipi di formula e non tutte le funzioni sono state ottimizzate per i modelli DirectQuery. A livello base, è possibile dividere le funzioni DAX in due categorie: ottimizzate e non ottimizzate. Di seguito vengono descritte le funzioni ottimizzate.
+In breve, tutte le funzioni DAX sono supportate per i modelli DirectQuery. Tuttavia, non tutte le funzioni sono supportate per tutti i tipi di formula e non tutte le funzioni sono state ottimizzate per i modelli DirectQuery. A livello di base, è possibile dividere le funzioni DAX in due categorie: Ottimizzati e Non ottimizzata. Di seguito vengono descritte le funzioni ottimizzate.
 
 
 ### <a name="optimized-for-directquery"></a>Funzioni ottimizzate per DirectQuery
@@ -78,16 +78,16 @@ I confronti seguenti restituiscono sempre un errore quando vengono usati in un c
 In generale, il linguaggio DAX tollera meglio le mancate corrispondenze tra tipi di dati nei modelli in memoria e tenta fino a due volte un cast implicito dei valori, come descritto in questa sezione. Tuttavia, le formule inviate a un archivio dati relazionale in modalità DirectQuery vengono valutate in modo più rigoroso, in base alle regole del motore relazionale ed è più probabile che abbiano esito negativo.  
   
 **Confronti tra stringhe e numeri**  
-ESEMPIO: `“2” < 3`  
+ESEMPIO: `"2" < 3`  
   
 La formula confronta una stringa di testo a un numero. L'espressione è **true** sia in modalità DirectQuery sia nei modelli in memoria.  
   
 In un modello in memoria, il risultato è **true** perché viene eseguito il cast implicito dei numeri come stringhe a un tipo di dati numerico per confronti con altri numeri. SQL prevede inoltre il cast implicito di numeri di testo come numeri per il confronto con tipi di dati numerici.  
   
-Questo rappresenta un cambiamento nel comportamento rispetto alla prima versione di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]che avrebbe restituito **false**perché il testo "2" sarebbe stato considerato maggiore di qualsiasi numero.  
+Si noti che questo rappresenta un cambiamento nel comportamento rispetto alla prima versione di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)], che restituirebbe **false**, in quanto il testo "2" sarebbe stato considerato maggiore di qualsiasi numero.  
   
 **Confronto tra valori di testo e valori booleani**  
-ESEMPIO: `“VERDADERO” = TRUE`  
+ESEMPIO: `"VERDADERO" = TRUE`  
   
 Questa espressione confronta una stringa di testo a un valore booleano. In generale, per i modelli DirectQuery o in memoria, il confronto tra un valore stringa e un valore booleano genera un errore. Le uniche eccezioni alla regola si hanno quando la stringa contiene la parola **true** o **false**; se la stringa contiene valori true o false, viene convertita in valore booleano e il confronto restituisce il risultato logico.  
   
@@ -107,7 +107,7 @@ Il linguaggio DAX non prevede alcuna funzione cast di questo tipo, tuttavia i ca
 -   I valori booleani vengono sempre trattati come valori logici nei confronti e quando vengono usati con EXACT, AND, OR, &amp;&amp;o ||.  
   
 **Cast di una stringa a un valore booleano**  
-Nei modelli in memoria e DirectQuery è possibile eseguire il cast a valori booleani solo di queste stringhe: **""** (stringa vuota), **"true"**, **"false"**, dove il cast di una stringa vuota viene eseguito a un valore false.  
+In memoria e i modelli DirectQuery, i cast sono consentiti per i valori booleani solo di queste stringhe: **""** (stringa vuota), **"true"**, **"false"**; in una stringa vuota cast a un valore false.  
   
 Il cast a un tipo di dati booleano di qualsiasi altra stringa genera un errore.  
   
@@ -120,7 +120,7 @@ I modelli che utilizzano l'archivio dati in memoria supportano una gamma più li
 In caso di cast da stringhe a valori non booleani, la modalità DirectQuery si comporta come SQL Server. Per altre informazioni, vedere [CAST e CONVERT (Transact-SQL)](http://msdn.microsoft.com/a87d0850-c670-4720-9ad5-6f5a22343ea8).  
   
 **Cast da numeri a stringa non consentito**  
-ESEMPIO: `CONCATENATE(102,”,345”)`  
+ESEMPIO: `CONCATENATE(102,",345")`  
   
 Il cast da numeri a stringhe non è consentito in SQL Server.  
   
@@ -129,7 +129,7 @@ Questa formula restituisce un errore nei modelli tabulari e nella modalità Dire
 **Cast a due tentativi non supportato in DirectQuery**  
 I modelli in memoria spesso tentano un secondo cast se il primo ha esito negativo. Questo non si verifica mai nella modalità DirectQuery.  
   
-ESEMPIO: `TODAY() + “13:14:15”`  
+ESEMPIO: `TODAY() + "13:14:15"`  
   
 In questa espressione il primo parametro presenta il tipo **datetime** e il secondo il tipo **string**. Tuttavia, quando gli operandi vengono combinati i cast vengono gestiti in modo diverso. Il linguaggio DAX esegue un cast implicito da **string** a **double**. Nei modelli in memoria il motore delle formule tenta di eseguire il cast direttamente a **double**e, se ha esito negativo, tenta di eseguire il cast della stringa a **datetime**.  
   
@@ -154,7 +154,7 @@ In Transact-SQL le operazioni che generano un overflow numerico restituiscono un
 Tuttavia, la stessa formula, se utilizzata in un modello in memoria, restituisce un numero intero a otto byte perché il motore delle formule non esegue i controlli per gli overflow numerici.  
   
 **Le funzioni LOG con spazi vuoti restituiscono risultati diversi**  
-SQL Server gestisce i valori Null e gli spazi vuoti in modo diverso rispetto al motore xVelocity. Di conseguenza, la formula seguente genera un errore nella modalità DirectQuery, ma restituisce un infinito (–inf) nella modalità in memoria.  
+SQL Server gestisce i valori Null e gli spazi vuoti in modo diverso rispetto al motore xVelocity. Di conseguenza, la formula seguente restituisce un errore nella modalità DirectQuery, ma infinito restituito (-inf) in modalità in memoria.  
   
 `EXAMPLE: LOG(blank())`  
   
@@ -251,7 +251,7 @@ Nella modalità DirectQuery, se il risultato di un'operazione aritmetica present
   
 -   Valore minimo: -922337203685477.5808  
   
--   Valore massimo: 922337203685477.5807  
+-   Massima: 922337203685477.5807  
   
 **Combinazione di tipi di dati REAL e currency**  
 ESEMPIO: `Currency sample 1`  
@@ -284,7 +284,7 @@ In generale, qualsiasi funzione di modifica delle stringhe che utilizza come arg
 Inoltre, in SQL Server alcune funzioni di testo supportano argomenti aggiuntivi non disponibili in Excel. Se la formula richiede l'argomento mancante, è possibile ottenere risultati o errori diversi nel modello in memoria.  
   
 **È possibile che le operazioni che restituiscono un carattere utilizzando LEFT, RIGHT e così via restituiscano il carattere corretto, anche se con maiuscole/minuscole diverse, oppure nessun risultato.**  
-ESEMPIO: `LEFT([“text”], 2)`  
+ESEMPIO: `LEFT(["text"], 2)`  
   
 Nella modalità DirectQuery le maiuscole/minuscole del carattere restituito corrispondono sempre esattamente a quelle della lettera archiviata nel database. Tuttavia, il motore xVelocity utilizza un algoritmo diverso per la compressione e l'indicizzazione di valori per migliorare le prestazioni.  
   
@@ -293,7 +293,7 @@ Per impostazione predefinita, vengono utilizzate le regole di confronto Latin1_G
 Questo comportamento si applica anche ad altre funzioni di testo, incluse RIGHT, MID e così via.  
   
 **La lunghezza della stringa influisce sui risultati**  
-ESEMPIO: `SEARCH(“within string”, “sample target  text”, 1, 1)`  
+ESEMPIO: `SEARCH("within string", "sample target  text", 1, 1)`  
   
 Se si cerca una stringa utilizzando la funzione SEARCH e la stringa di destinazione è più lunga della stringa che la contiene, viene generato un errore.  
   
@@ -306,21 +306,21 @@ Se la lunghezza della stringa di sostituzione è maggiore della lunghezza della 
 Nei modelli in memoria la formula segue il comportamento di Excel che prevede il concatenamento della stringa di origine e della stringa di sostituzione, con restituzione del risultato CACalifornia.  
   
 **Funzione TRIM implicita al centro delle stringhe**  
-ESEMPIO: `TRIM(“ A sample sentence with leading white space”)`  
+ESEMPIO: `TRIM(" A sample sentence with leading white space")`  
   
 La modalità DirectQuery prevede la conversione della funzione DAX TRIM nell'istruzione SQL `LTRIM(RTRIM(<column>))`. Di conseguenza, vengono rimossi gli spazi vuoti iniziale e finale.  
   
 Al contrario, in un modello in memoria la stessa formula prevede la rimozione degli spazi all'interno della stringa, in base al comportamento di Excel.  
   
 **Funzione RTRIM implicita con utilizzo della funzione LEN**  
-ESEMPIO: `LEN(‘string_column’)`  
+ESEMPIO: `LEN('string_column')`  
   
 Analogamente a SQL Server, la modalità DirectQuery rimuove automaticamente lo spazio vuoto dalla fine delle colonne stringa, ovvero esegue una funzione RTRIM implicita. Di conseguenza, le formule che utilizzano la funzione LEN possono restituire valori diversi se la stringa contiene spazi finali.  
   
 **In memoria supporta parametri aggiuntivi per SUBSTITUTE**  
-ESEMPIO: `SUBSTITUTE([Title],”Doctor”,”Dr.”)`  
+ESEMPIO: `SUBSTITUTE([Title],"Doctor","Dr.")`  
   
-ESEMPIO: `SUBSTITUTE([Title],”Doctor”,”Dr.”, 2)`  
+ESEMPIO: `SUBSTITUTE([Title],"Doctor","Dr.", 2)`  
   
 Nella modalità DirectQuery è possibile utilizzare solo la versione di questa funzione che dispone di tre (3) parametri: un riferimento a una colonna, il testo precedente e quello nuovo. Se si utilizza la seconda formula, viene generato un errore.  
   

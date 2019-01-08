@@ -4,21 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
-- vs.customize.toolbars
 - sql12.swb.vs.customizetool.f1
 ms.assetid: 51ce6254-5682-43ff-8beb-4116a75c652e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1b4435288069cbd465995d555de8653b39226b68
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f16133abfa0d16e4b5614bdfefa5cf7c163516e1
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48115092"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53328481"
 ---
 # <a name="customize-toolbars-page"></a>Personalizza (pagina Barre degli strumenti)
   La scheda **Barre degli strumenti** consente di creare, rinominare, eliminare e reimpostare le barre degli strumenti. Per accedere a questa scheda scegliere **Personalizza** dal menu **Strumenti** e fare clic su **Barre degli strumenti**.  
@@ -53,5 +52,3 @@ ms.locfileid: "48115092"
   
  **Tastiera**  
  Consente di visualizzare la pagina **Tastiera** della finestra di dialogo **Opzioni** , in cui è possibile modificare e definire le combinazioni di tasti di scelta rapida per i comandi.  
-  
-  
