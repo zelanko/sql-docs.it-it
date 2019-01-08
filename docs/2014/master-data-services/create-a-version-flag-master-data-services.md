@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - creating version flags [Master Data Services]
@@ -15,12 +14,12 @@ ms.assetid: 3067e1e3-05b7-4f11-9206-c612ef4e7e42
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 27fab7369730187323e937653181f742c38c8380
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 60fdd3e60cd7f9015950a16d02a3f4a9ff2f7fcf
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48172631"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52755163"
 ---
 # <a name="create-a-version-flag-master-data-services"></a>Creare un flag di versione (Master Data Services)
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]creare un flag di versione da assegnare a una versione. Il flag può indicare la versione che utenti o sistemi di sottoscrizione devono usare.  
@@ -52,10 +51,10 @@ ms.locfileid: "48172631"
   
 ## <a name="next-steps"></a>Passaggi successivi  
   
--   [Assegnare un Flag a una versione &#40;Master Data Services&#41;](../../2014/master-data-services/assign-a-flag-to-a-version-master-data-services.md)  
+-   [Assegnare un flag a una versione &#40;Master Data Services&#41;](../../2014/master-data-services/assign-a-flag-to-a-version-master-data-services.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Le versioni &#40;Master Data Services&#41;](../../2014/master-data-services/versions-master-data-services.md)   
- [Modificare il nome di un Flag di versione &#40;Master Data Services&#41;](../../2014/master-data-services/change-a-version-flag-name-master-data-services.md)  
+ [Versioni &#40;Master Data Services&#41;](../../2014/master-data-services/versions-master-data-services.md)   
+ [Modificare il nome di un flag di versione &#40;Master Data Services&#41;](../../2014/master-data-services/change-a-version-flag-name-master-data-services.md)  
   
   

@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 0de38435c74f68e2558f0b6893324bc431dc32ed
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: ec6d880c6b32a092f6d4da8b85dfd6693280da7d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145396"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535229"
 ---
 # <a name="enable-drillthrough-for-a-mining-model"></a>Abilitare il drill-through per un modello di data mining
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "50145396"
   
 -   Le autorizzazioni drill-through sul modello consentono di eseguire il drill-through dal modello, anche se non si dispone di autorizzazioni sulla struttura.  
   
--   Le autorizzazioni di drill-through per la struttura consentono di includere colonne della struttura nelle query di drill-through dal modello tramite la funzione [StructureColumn &#40;DMX&#41;](../../dmx/structurecolumn-dmx.md). È anche possibile eseguire query sui test case e sui case di training nella struttura usando la sintassi SELECT… DA \<struttura >. Sintassi di casi.  
+-   Le autorizzazioni di drill-through per la struttura consentono di includere colonne della struttura nelle query di drill-through dal modello usando la funzione [StructureColumn &#40;DMX&#41;](../../dmx/structurecolumn-dmx.md). È anche possibile eseguire query tra training e test case nella struttura utilizzando l'istruzione SELECT... DA \<struttura >. Sintassi di casi.  
   
  **Memorizzazione nella cache di case di training** Il drill-through avviene mediante il recupero di informazioni sui case di training nella struttura di data mining. Queste informazioni vengono memorizzate nella cache quando la struttura viene elaborata. Pertanto, se si sceglie di cancellare tutti i dati memorizzati nella cache impostando la proprietà <xref:Microsoft.AnalysisServices.MiningStructureCacheMode> su **ClearAfterProcessing**, il drill-through non funzionerà.  
   

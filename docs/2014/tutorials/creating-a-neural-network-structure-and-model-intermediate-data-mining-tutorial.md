@@ -17,12 +17,12 @@ ms.assetid: 3f16215c-531e-4ecf-a11f-ee7c6a764463
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: fa474cfd298b5d482f8b1804159f085fca5f8c6a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 144f2f754dc93be29f6be8fc786afa354a96c911
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48195561"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52395804"
 ---
 # <a name="creating-a-neural-network-structure-and-model-intermediate-data-mining-tutorial"></a>Creazione di una struttura e di un modello di rete neurale (Esercitazione intermedia sul data mining)
   Per creare un modello di data mining, è innanzitutto necessario utilizzare la Creazione guidata modello di data mining per creare una nuova struttura di data mining basata sulla nuova vista origine dati. In questa attività verrà utilizzata la procedura guidata per creare una struttura di data mining e, contemporaneamente, il modello di data mining associato basato sull'algoritmo [!INCLUDE[msCoName](../includes/msconame-md.md)] Neural Network.  
@@ -78,7 +78,7 @@ ms.locfileid: "48195561"
     |Calls|Input|  
     |DateKey|Non utilizzare|  
     |DayOfWeek|Input|  
-    |FactCallCenterID|Key|  
+    |FactCallCenterID|Chiave|  
     |IssuesRaised|Input|  
     |LevelOneOperators|Input/Stima|  
     |LevelTwoOperators|Input|  
@@ -88,7 +88,7 @@ ms.locfileid: "48195561"
     |TotalOperators|Non utilizzare|  
     |WageType|Input|  
   
-     Notare che sono state selezionate più colonne stimabili. Uno degli aspetti positivi dell'algoritmo Neural Network è la capacità di analizzare tutte le possibili combinazioni di attributi di input e output. Non è consigliabile effettuare questa operazione per un set di dati di grandi dimensioni, poiché potrebbe aumentare il tempo di elaborazione in modo esponenziale.  
+     Notare che sono state selezionate più colonne stimabili. Uno degli aspetti positivi dell'algoritmo Neural Network è la capacità di analizzare tutte le possibili combinazioni di attributi di input e output. È preferibile non eseguire questa operazione per grandi set di dati, come può aumentare in modo esponenziale il tempo di elaborazione...  
   
 12. Nel **contenuto e tipo di dati specificare colonne** pagina, verificare che la griglia contenga le colonne, i tipi di contenuto e i tipi di dati come illustrato nella tabella seguente e quindi fare clic su **successivo**.  
   
@@ -98,7 +98,7 @@ ms.locfileid: "48195561"
     |AverageTimePerIssue|Continuo|Long|  
     |Calls|Continuo|Long|  
     |DayOfWeek|Discrete|Testo|  
-    |FactCallCenterID|Key|Long|  
+    |FactCallCenterID|Chiave|Long|  
     |IssuesRaised|Continuo|Long|  
     |LevelOneOperators|Continuo|Long|  
     |LevelTwoOperators|Continuo|Long|  
@@ -122,9 +122,9 @@ ms.locfileid: "48195561"
   
  ![distribuzione dei valori del livello servizio](../../2014/tutorials/media/skt-service-grade-valuesc.gif "distribuzione dei valori del livello servizio")  
   
- Di conseguenza, quando si elabora il modello, gli output possono essere raggruppati in modo diverso dal previsto. Ad esempio, se si usa il clustering per identificare i gruppi di procedure di valori, l'algoritmo divide i valori di ServiceGrade in intervalli come questa: 0,0748051948 - 0,09716216215. Benché questo raggruppamento sia matematicamente preciso, gli intervalli potrebbero non essere altrettanto significativi per gli utenti aziendali.  
+ Di conseguenza, quando si elabora il modello, gli output possono essere raggruppati in modo diverso dal previsto. Ad esempio, se si usa il clustering per identificare i gruppi di procedure di valori, l'algoritmo divide i valori di ServiceGrade in intervalli come questo: 0,0748051948 - 0,09716216215. Benché questo raggruppamento sia matematicamente preciso, gli intervalli potrebbero non essere altrettanto significativi per gli utenti aziendali.  
   
- In questo passaggio, per rendere il risultato più intuitivo si raggrupperanno i valori numerici in modo diverso, creando di copie della colonna di dati numerici.  
+ In questo passaggio per rendere più intuitiva, il risultato si raggrupperanno i valori numerici in modo diverso, la creazione di copie della colonna di dati numerici.  
   
 ### <a name="how-discretization-works"></a>Funzionamento della discretizzazione  
  Analysis Services offre un'ampia gamma di metodi per suddividere in contenitori o elaborare dati numerici. Nella tabella seguente vengono illustrate le differenze tra i risultati quando l'attributo di output ServiceGrade viene elaborato in tre modi diversi, ovvero:  
@@ -263,12 +263,12 @@ ms.locfileid: "48195561"
   
      Il **proprietà** finestra deve contenere le informazioni seguenti:  
   
-    |Proprietà|valore|  
+    |Proprietà|Value|  
     |--------------|-----------|  
     |**Descrizione**|Alias di colonna temporanea|  
     |**ID**|ServiceGrade Binned|  
     |**Flag di modellazione**||  
-    |**Nome**|Service Grade|  
+    |**Name**|Service Grade|  
     |**ID SourceColumn**|Service Grade 1|  
     |**Usage**|Stima|  
   
@@ -283,7 +283,7 @@ ms.locfileid: "48195561"
     |AverageTimePerIssue|Stima|Stima|  
     |Calls|Input|Input|  
     |DayOfWeek|Input|Input|  
-    |FactCallCenterID|Key|Key|  
+    |FactCallCenterID|Chiave|Chiave|  
     |IssuesRaised|Input|Input|  
     |LevelOneOperators|Input|Input|  
     |LevelTwoOperators|Input|Input|  
@@ -321,6 +321,6 @@ ms.locfileid: "48195561"
  [Esplorazione del modello Call Center &#40;esercitazione intermedia sul Data Mining&#41;](../../2014/tutorials/exploring-the-call-center-model-intermediate-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Strutture di data mining &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)  
+ [Strutture di data mining &#40;Analysis Services - Data mining&#41;](../../2014/analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)  
   
   

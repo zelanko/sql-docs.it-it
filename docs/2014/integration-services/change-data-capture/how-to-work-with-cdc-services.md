@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: db5c718a-6e7f-48ec-82a3-9d5b131716e5
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0e32d55d31da43badc95caef30be81a4b85e77d0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2cab5b109a8f9181235fa1b61d18a2f7a5976c80
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48143531"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52796043"
 ---
 # <a name="how-to-work-with-cdc-services"></a>Procedura di utilizzo dei servizi CDC
   In questa procedura viene descritto come utilizzare CDC Service Configuration Console per preparare un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da utilizzare con i servizi Oracle CDC e creare un nuovo servizio CDC.  
@@ -56,6 +55,6 @@ ms.locfileid: "48143531"
          Per informazioni su come immettere le credenziali per un account di accesso che ha l'autorizzazione di scrittura per il database MSXDBCDC, ad esempio il ruolo del database **db_owner** , vedere [Creare e modificare un servizio Oracle CDC](create-and-edit-an-oracle-cdc-service.md) e [Connessione a SQL Server](connection-to-sql-server.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Usare i servizi CDC](work-with-cdc-services.md)  
+ [Utilizzare i servizi CDC](work-with-cdc-services.md)  
   
   

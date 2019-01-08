@@ -1,5 +1,5 @@
 ---
-title: Programmazione di Data Mining | Documenti Microsoft
+title: Programmazione di Data Mining di Analysis Services | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 1be416528bc923e757afb9a8f3e556790941bf11
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 27a964581782d5868e4089a1063dbbce0c689525
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019958"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072758"
 ---
 # <a name="data-mining-programming"></a>Programmazione di data mining
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "34019958"
   
      È possibile utilizzare DMX per incapsulare istruzioni di comando, query di stima e query sui metadati e per restituire i risultati in un formato tabulare, presupponendo che sia stata creata una connessione a un server [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [OLE DB per Data Mining](../analysis-services/data-mining-programming-ole-db.md)  
  Vengono descritte le aggiunte alla specifica per il supporto di data mining e dati multidimensionali, ovvero nuovi set di righe e colonne dello schema e linguaggio DMX (Data Mining Extensions) per la creazione e la gestione di strutture di data mining.  
   
@@ -57,14 +57,14 @@ ms.locfileid: "34019958"
  [Sviluppo con ADOMD.NET](../analysis-services/multidimensional-models/adomd-net/developing-with-adomd-net.md)  
  Viene fornita un'introduzione agli oggetti di programmazione client e server ADOMD.NET.  
   
- [Lo sviluppo con Analysis Management Objects & #40; AMO & #41;](../analysis-services/multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md)  
+ [Sviluppo con Analysis Management Objects &#40;AMO&#41;](../analysis-services/multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md)  
  Viene fornita un'introduzione alla libreria di programmazione AMO.  
   
- [Lo sviluppo con Analysis Services Scripting Language & #40; ASSL & #41;](../analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)  
+ [Sviluppo con Analysis Services Scripting Language &#40;ASSL&#41;](../analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)  
  Viene fornita un'introduzione a XML for Analysis (XMLA) e alle relative estensioni.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Documentazione per gli sviluppatori di Analysis Services](../analysis-services/analysis-services-developer-documentation.md)   
- [Data Mining Extensions & #40; DMX & #41; Riferimento](../dmx/data-mining-extensions-dmx-reference.md)  
+ [Guida di riferimento a DMX &#40;Data Mining Extensions&#41;](../dmx/data-mining-extensions-dmx-reference.md)  
   
   

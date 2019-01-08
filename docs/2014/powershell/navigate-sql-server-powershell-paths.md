@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: scripting
 ms.topic: conceptual
 ms.assetid: d68aca48-d161-45ed-9f4f-14122ed30218
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9e13b3cde8681c4f717f0fa12d7426eea58d0caf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8a5d9f7119730a904dd760f43d001f1a7734f47c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48135891"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52752084"
 ---
 # <a name="navigate-sql-server-powershell-paths"></a>Spostarsi all'interno dei percorsi di SQL Server PowerShell
   Il provider [!INCLUDE[ssDE](../includes/ssde-md.md)] PowerShell espone il set di oggetti in un'istanza di SQL Server in una struttura analoga a un percorso di file. È possibile utilizzare cmdlet di Windows PowerShell per spostarsi all'interno del percorso del provider e creare unità personalizzate per rendere più breve il percorso da digitare.  
@@ -26,7 +25,7 @@ ms.locfileid: "48135891"
   
  Il provider [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] implementa un subset di cmdlet del provider, illustrato nella tabella seguente.  
   
-|cmdlet|Alias canonico|Alias cmd|Alias di shell di UNIX|Description|  
+|cmdlet|Alias canonico|Alias cmd|Alias di shell di UNIX|Descrizione|  
 |------------|---------------------|---------------|----------------------|-----------------|  
 |**Get-Location**|**gl**|**pwd**|**pwd**|Consente di ottenere il nodo corrente.|  
 |`Set-Location`|**sl**|**cd, chdir**|**cd, chdir**|Consente di modificare il nodo corrente.|  
@@ -115,9 +114,9 @@ Get-ChildItem -force
 ## <a name="create-a-custom-drive"></a>Creare un'unità personalizzata  
  **Creare e utilizzare un'unità personalizzata**  
   
-1.  Utilizzare `New-PSDrive` per definire un'unità personalizzata. Usare il `Root` parametro per specificare il percorso rappresentato dal nome di unità personalizzato.  
+1.  Utilizzare `New-PSDrive` per definire un'unità personalizzata. Utilizzare il parametro `Root` per specificare il percorso rappresentato dal nome di unità personalizzato.  
   
-2.  Fare riferimento al nome di unità personalizzata nei cmdlet di navigazione, ad esempio `Set-Location`.  
+2.  Fare riferimento al nome di unità personalizzata nei cmdlet di navigazione come `Set-Location`.  
   
 ### <a name="custom-drive-example-powershell"></a>Esempio di unità personalizzata (PowerShell)  
  Questo esempio crea un'unità virtuale denominata AWDB con mapping al nodo di una copia distribuita del database di esempio di AdventureWorks2012. L'unità virtuale è utilizzata quindi per passare a una tabella nel database.  

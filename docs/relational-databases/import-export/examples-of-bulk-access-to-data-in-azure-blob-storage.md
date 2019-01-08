@@ -17,12 +17,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7bbc70dbfec864052c4c877794561c8692cdfcfb
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 190a9a07ad293253ee9a2005a6b5981db129465f
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51560408"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53214100"
 ---
 # <a name="examples-of-bulk-access-to-data-in-azure-blob-storage"></a>Esempi di accesso bulk ai dati nell'archiviazione BLOB di Azure
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -31,16 +31,16 @@ Le istruzioni `BULK INSERT` e `OPENROWSET` consentono di accedere direttamente a
 
 Per l'accesso bulk all'archiviazione BLOB di Azure da SQL Server è necessario almeno [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.
 
->  [!IMPORTANT]
+> [!IMPORTANT]
 >  Tutti i percorsi del contenitore e dei file nel BLOB sono `CASE SENSITIVE`. Se l'impostazione non è corretta, è possibile che venga restituito un errore di tipo "Impossibile eseguire il caricamento bulk. Il file "file.csv" non esiste oppure non si dispone dell'autorizzazione per accedervi.
-"
+> "
 
 
 ## <a name="create-the-credential"></a>Creare le credenziali   
    
 Per tutti gli esempi seguenti sono necessarie credenziali con ambito database che fanno riferimento a una firma di accesso condiviso.   
 
->  [!IMPORTANT]
+> [!IMPORTANT]
 >  L'origine dati esterna deve essere creata con credenziali con ambito database che usano l'identità `SHARED ACCESS SIGNATURE`. Per creare una firma di accesso condiviso per l'account di archiviazione, vedere la proprietà **Firma di accesso condiviso** nella pagine delle proprietà dell'account di archiviazione, nel portale di Azure. Per altre informazioni sulle firme di accesso condiviso, vedere [Uso delle firme di accesso condiviso](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1). Per altre informazioni sulle credenziali, vedere [CREATE DATABASE SCOPED CREDENTIAL](../../t-sql/statements/create-database-scoped-credential-transact-sql.md).  
  
 Creare credenziali con ambito database usando `IDENTITY` che deve essere `SHARED ACCESS SIGNATURE`. Usare il segreto dal portale di Azure. Ad esempio  

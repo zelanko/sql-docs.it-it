@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - SQLXML, xml data type support
@@ -15,12 +13,12 @@ ms.assetid: 9a6f5ad8-4a8f-4de7-ac17-81d5ccf78459
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: edf15eb12a2ca994ab178f58e9bcdfd1ccf20075
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1a0fa49a1dac16ed366c66c72f7d800ccc4aed8e
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48157351"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52750621"
 ---
 # <a name="xml-data-type-support-in-sqlxml-40"></a>Supporto del tipo di dati xml in SQLXML 4.0
   A partire [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta XML tipizzati con dati di `xml` tipo di dati. In questo argomento viene descritto il modo in cui SQLXML 4.0 riconosce istanze del tipo di dati `xml` e ne implementa il supporto.  

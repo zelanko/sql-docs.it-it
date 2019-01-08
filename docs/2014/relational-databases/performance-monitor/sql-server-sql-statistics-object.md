@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLServer:SQL Statistics
@@ -13,12 +13,12 @@ ms.assetid: da7dbb4b-f632-45a0-b1ab-c35cc2695c86
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: f6991ed3113f577a767229010e1b9a3af09e86e3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 783c20de7f1ea23f41dcbc4fb645644bdaf5ad7d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48187251"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52803183"
 ---
 # <a name="sql-server-sql-statistics-object"></a>Oggetto SQL Statistics di SQL Server
   L'oggetto **SQLServer:SQL Statistics** di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornisce contatori per il monitoraggio della compilazione e del tipo di richieste inviate a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Il monitoraggio del numero di compilazioni e ricompilazioni di query e del numero di batch ricevuti da un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consente di determinare la velocità di elaborazione delle query utente in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e l'efficienza di Query Optmizer.  
@@ -33,7 +33,7 @@ ms.locfileid: "48187251"
   
  Nella tabella seguente sono elencati i contatori dell'oggetto [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **di** .  
   
-|Contatori dell'oggetto SQL Statistics|Description|  
+|Contatori dell'oggetto SQL Statistics|Descrizione|  
 |----------------------------------------|-----------------|  
 |**Tentativi parametrizzazioni automatiche/sec**|Numero di tentativi di parametrizzazione automatica al secondo. Il totale deve corrispondere alla somma delle parametrizzazioni automatiche non riuscite, sicure e non sicure. Una parametrizzazione automatica si verifica quando in un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene eseguito un tentativo di parametrizzazione di una richiesta [!INCLUDE[tsql](../../../includes/tsql-md.md)] tramite la sostituzione di alcuni valori letterali con parametri in modo da consentire il riutilizzo del piano di esecuzione memorizzato nella cache risultante in più richieste con struttura simile. Si noti che nelle versioni più recenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]le parametrizzazioni automatiche sono note anche come parametrizzazioni semplici. Sono escluse le parametrizzazioni forzate.|  
 |**Richieste batch/sec**|Numero di batch di comandi [!INCLUDE[tsql](../../../includes/tsql-md.md)] ricevuti al secondo. Il valore dipende da tutti i vincoli (I/O, numero di utenti, dimensioni della cache, complessità delle richieste e così via). Un valore elevato indica una velocità effettiva ottimale.|  

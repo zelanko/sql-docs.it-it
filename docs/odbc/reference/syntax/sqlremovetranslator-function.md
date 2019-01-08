@@ -20,12 +20,12 @@ ms.assetid: c6feda49-0359-4224-8de9-77125cf2397b
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9d02e60d22f2e3489c7cd7943f7f0ed2fa26fd89
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bf81d013ccf449288791b1875752d5b6067770a1
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47848879"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53207600"
 ---
 # <a name="sqlremovetranslator-function"></a>Funzione SQLRemoveTranslator
 **Conformità**  
@@ -56,7 +56,7 @@ BOOL SQLRemoveTranslator(
 ## <a name="diagnostics"></a>Diagnostica  
  Quando **SQLRemoveTranslator** FALSO, restituisce un oggetto associato  *\*pfErrorCode* valore può essere ottenuto chiamando **SQLInstallerError**. La tabella seguente elenca i  *\*pfErrorCode* i valori che possono essere restituiti da **SQLInstallerError** e illustra ognuna nel contesto di questa funzione.  
   
-|*\*pfErrorCode*|Errore|Description|  
+|*\*pfErrorCode*|Errore|Descrizione|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_GENERAL_ERR|Errore di programma di installazione generale|Errore per cui si è verificato alcun errore di programma di installazione specifico.|  
 |ODBC_ERROR_COMPONENT_NOT_FOUND|Componente non trovato nel Registro di sistema|Il programma di installazione non è stato possibile rimuovere le informazioni di Microsoft translator perché non esiste nel Registro di sistema o non è stato trovato nel Registro di sistema.|  

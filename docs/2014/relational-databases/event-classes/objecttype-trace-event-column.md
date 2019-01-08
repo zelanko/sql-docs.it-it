@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -18,19 +17,19 @@ ms.assetid: 42f85c50-34c9-49ca-955f-af9595e2707f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 11726b01926ef5a7dff7157c901c7cbd73607564
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 31ba88f3bc49d78dc8c68ac77ba6bda90e63aad0
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48214757"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52803753"
 ---
 # <a name="objecttype-trace-event-column"></a>Colonna ObjectType per gli eventi di traccia
   La colonna ObjectType viene utilizzata in un'ampia gamma di eventi di traccia. In questo argomento vengono descritti i possibili valori di tale colonna e le definizioni associate.  
   
 ## <a name="object-type-column-values"></a>Valori della colonna ObjectType  
   
-|valore|Definizione|  
+|Value|Definizione|  
 |-----------|----------------|  
 |8259|Vincolo CHECK|  
 |8260|Predefinito (vincolo o autonomo)|  

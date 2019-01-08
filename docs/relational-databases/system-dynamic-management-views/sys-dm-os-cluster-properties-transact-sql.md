@@ -20,12 +20,12 @@ ms.assetid: 6d82e770-fba7-49e0-9a0c-3b34b393e4a7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7a8aa88e4a7eaea25a7c7114599d9b9cac601ab1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ff0854e1252b4adc38c2c3d5f2022762fb3bd0f8
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47613849"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52544118"
 ---
 # <a name="sysdmosclusterproperties-transact-sql"></a>sys.dm_os_cluster_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "47613849"
  Queste proprietà vengono utilizzate per impostare i valori che influiscono sul rilevamento degli errori, sui tempi di risposta agli errori e sulla registrazione per il monitoraggio dello stato integrità dell'istanza del cluster di failover di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 
-|Nome colonna|Proprietà|Description|  
+|Nome colonna|Proprietà|Descrizione|  
 |-----------------|--------------|-----------------|  
 |VerboseLogging|BIGINT|Livello di registrazione per il cluster di failover di SQL Server. La registrazione dettagliata può essere attivata per fornire dettagli aggiuntivi nei log degli errori per la risoluzione dei problemi. I valori validi sono:<br /><br /> 0: la registrazione è disabilitata (impostazione predefinita)<br /><br /> 1: solo errori<br /><br /> 2: errori e avvisi<br /><br /> Per altre informazioni, vedere [ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-configuration-transact-sql.md).|  
 |SqlDumperDumpFlags|BIGINT|I flag di dump di SQLDumper determinano il tipo dei file di dump generati da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. L'impostazione predefinita è 0.|  

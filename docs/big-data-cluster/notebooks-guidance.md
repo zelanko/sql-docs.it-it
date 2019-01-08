@@ -1,37 +1,41 @@
 ---
-title: Come usare i notebook in fase di anteprima di SQL Server 2019 | Microsoft Docs
-description: ''
+title: Esegui i notebook in Azure Data Studio
+titleSuffix: SQL Server 2019 big data clusters
+description: Questo articolo illustra come eseguire i notebook di Jupyter in Azure Data Studio conneected a un cluster di big data di SQL Server 2019.
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 11/06/2018
+ms.date: 12/06/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 9f9db16431cd6c3befbb32383725ec008f5a9081
-ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
+ms.custom: seodec18
+ms.openlocfilehash: af1393b38b297e451903d5a39942a3e878c88ee6
+ms.sourcegitcommit: edf7372cb674179f03a330de5e674824a8b4118f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51221637"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53246610"
 ---
 # <a name="how-to-use-notebooks-in-sql-server-2019-preview"></a>Come usare i notebook in fase di anteprima di SQL Server 2019
 
-Questo articolo descrive come avviare i notebook di Jupyter nel cluster e iniziare a creare i tuoi notebook. Viene inoltre illustrato come inviare processi rispetto al cluster.
+Questo articolo descrive come avviare i notebook di Jupyter in un cluster di big data e su come iniziare a creare i tuoi notebook. Viene inoltre illustrato come inviare processi rispetto al cluster.
 
 ## <a name="prerequisites"></a>Prerequisiti
 
 Per usare i notebook, è necessario installare i prerequisiti seguenti:
 
 - [Un cluster di big data di SQL Server 2019](deployment-guidance.md)
-- [Azure Data Studio](../azure-data-studio/what-is.md)
-- [L'estensione di SQL Server 2019 (anteprima)](../azure-data-studio/sql-server-2019-extension.md).
+- [Strumenti di big data di SQL Server 2019](deploy-big-data-tools.md):
+   - **Azure Data Studio**
+   - **Estensione di SQL Server 2019**
+   - **Kubectl**
 
 [!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
 
 ## <a name="connect-to-the-hadoop-gateway-knox-end-point"></a>Connettersi al punto di fine Hadoop Gateway Knox
 
-È possibile connettersi a endpoint diversi del cluster. È possibile connettersi al tipo di connessione di Microsoft SQL Server o per il punto finale di Gateway HDFS/Spark.
-In Azure Data Studio (anteprima), premere F1 e fare clic su **nuova connessione** ed è possibile connettersi al punto di fine Gateway HDFS/Spark.
+È possibile connettersi a endpoint diversi del cluster. È possibile connettersi al tipo di connessione di Microsoft SQL Server o per il punto finale di gateway HDFS/Spark.
+In Azure Data Studio (anteprima), premere F1 e fare clic su **nuova connessione** ed è possibile connettersi al punto finale di gateway di HDFS/Spark.
 
 ![immagine1](media/notebooks-guidance/image1.png)
 
@@ -74,13 +78,13 @@ L'installazione di Notebook supporta kernel PySpark e Spark, Magic Spark, che co
 
 Quando si seleziona uno di questi kernel, verrà installato tale kernel nell'ambiente virtuale e iniziare a scrivere codice nel linguaggio supportato.
 
-|Kernel|Description
+|Kernel|Descrizione
 |:-----|:-----
 |Kernel PySpark|Per la scrittura di codice Python con Spark compute dal cluster.
 |Kernel Spark|Per la scrittura di codice Scala con Spark compute dal cluster.
 |Kernel Python|Per la scrittura di codice Python per lo sviluppo locale.
 
-Il `Attach to` fornisce il contesto per il Kernel da collegare. Quando si è connessi alla fine Gateway HDFS/Spark (Knox) scegliere l'impostazione predefinita `Attach to` tale punto di fine del cluster.
+Il `Attach to` fornisce il contesto per il Kernel da collegare. Quando si è connessi alla fine HDFS/Spark gateway (Knox) scegliere l'impostazione predefinita `Attach to` tale punto di fine del cluster.
 
 ![image8](media/notebooks-guidance/image8.png)
 
@@ -113,7 +117,7 @@ Ecco le opzioni per tutte le celle:
 
 ![Image14](media/notebooks-guidance/image14.png)-
 
-A questo punto, scegliere il Kernel Spark nell'elenco a discesa per i kernel e nella cella digita/Incolla in:
+A questo punto, scegliere il Kernel Spark nell'elenco a discesa per i kernel e nella cella digita/Incolla-
 
 ![Image15](media/notebooks-guidance/image15.png)
 
