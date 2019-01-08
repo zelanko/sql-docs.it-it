@@ -17,12 +17,12 @@ ms.assetid: bccdc243-4366-4ce5-8e63-3dd6c463fa52
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: f14a643842bb3cb8029cbd4ac1c0e53c9b0ab334
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 34b6f109ab102f39908639f6182c25ca4cbb60e0
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48081690"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53363893"
 ---
 # <a name="choosing-between-url-access-and-soap"></a>Scelta tra accesso con URL e SOAP
   L'integrazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] nelle applicazioni personalizzate può risultare complessa. La complessità non è tuttavia dovuta al modello di programmazione o alle API, ma alle numerose modalità di integrazione disponibili. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] è stato progettato interamente come piattaforma di sviluppo e, in quanto tale, offre flessibilità di programmazione. Alla flessibilità è associata l'esigenza di prendere decisioni importanti relativamente all'integrazione delle funzionalità di navigazione e gestione dei report di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] nelle applicazioni aziendali esistenti.  
@@ -30,7 +30,7 @@ ms.locfileid: "48081690"
  ![Scenari di programmazione di Reporting Services](../../../2014/reporting-services/media/bk-ext-04.gif "Reporting Services, gli scenari di programmazione")  
 La programmazione in Reporting Services supporta un'ampia gamma di scenari.  
   
- È possibile integrare [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] nelle applicazioni personalizzate in due modi, ovvero tramite l'accesso con URL e l'API SOAP di Reporting Services. La modalità da utilizzare dipende da diversi fattori. In alcuni casi, l'integrazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] nelle applicazioni aziendali personalizzate richiede l'utilizzo sia dell'accesso con URL che di SOAP. È necessario porsi le domande seguenti:  
+ Esistono due modi per integrare [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] nelle applicazioni personalizzate: Accesso con URL e l'API SOAP di Reporting Services. La modalità da utilizzare dipende da diversi fattori. In alcuni casi, l'integrazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] nelle applicazioni aziendali personalizzate richiede l'utilizzo sia dell'accesso con URL che di SOAP. È necessario porsi le domande seguenti:  
   
 -   Quali tipi di funzionalità di creazione di report aziendali sono necessari? È necessario disporre di un modo semplice per avviare e navigare tra i report oppure sono necessarie caratteristiche di gestione del server di report più avanzate per la soluzione aziendale personalizzata?  
   
@@ -51,7 +51,7 @@ La programmazione in Reporting Services supporta un'ampia gamma di scenari.
   
  Nella maggior parte dei casi, l'accesso con URL e le chiamate SOAP sono entrambi necessari per soddisfare le esigenze in materia di creazione di report. SOAP viene utilizzato durante la connessione iniziale al database del server di report e la visualizzazione dell'elenco di report disponibili in un'interfaccia utente, mentre l'accesso con URL viene utilizzato per l'effettivo accesso e la navigazione dei singoli report.  
   
- Per un esempio di uso dell'accesso con URL in combinazione con il servizio Web per offrire funzionalità di creazione di report integrate, vedere [SQL Server Reporting Services Product Samples](http://go.microsoft.com/fwlink/?LinkId=177889) (Esempi del prodotto SQL Server Reporting Services).  
+ Per un esempio di uso dell'accesso con URL in combinazione con il servizio Web per offrire funzionalità di creazione di report integrate, vedere [SQL Server Reporting Services Product Samples](https://go.microsoft.com/fwlink/?LinkId=177889) (Esempi del prodotto SQL Server Reporting Services).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Integrazione di Reporting Services nelle applicazioni](../../../2014/reporting-services/application-integration/integrating-reporting-services-into-applications.md)   

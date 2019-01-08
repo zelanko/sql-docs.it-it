@@ -5,8 +5,7 @@ ms.date: 10/28/2015
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_changearticle
@@ -17,12 +16,12 @@ ms.assetid: 24c33ca5-f03a-4417-a267-131ca5ba6bb5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 064465e133e5b122ef532fa09a7601a81f5606ea
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 582eb67d72941e24c135d3cd1690ab23aaca5acc
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47705989"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53208160"
 ---
 # <a name="spchangearticle-transact-sql"></a>sp_changearticle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +58,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
   
  Nella tabella seguente vengono descritte le proprietà degli articoli e i valori corrispondenti.  
   
-|Proprietà|Valori|Description|  
+|Proprietà|Valori|Descrizione|  
 |--------------|------------|-----------------|  
 |**creation_script**||Percorso e nome di uno script di schema dell'articolo utilizzato per la creazione delle tabelle di destinazione. Il valore predefinito è NULL.|  
 |**del_cmd**||Istruzione DELETE da eseguire. In alternativa, viene creata dal log.|  
@@ -68,7 +67,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
 |**dest_table**||Nuova tabella di destinazione.|  
 |**destination_owner**||Nome del proprietario dell'oggetto di destinazione.|  
 |**filter**||Nuova stored procedure da utilizzare per filtrare la tabella in modo orizzontale. Il valore predefinito è NULL. Non può essere modificato per le pubblicazioni nella replica peer-to-peer.|  
-|**fire_triggers_on_snapshot**|**true**|I trigger utente replicati vengono eseguiti quando si applica lo snapshot iniziale.<br /><br /> Nota: per i trigger devono essere replicate, il valore di maschera di bit del *schema_option* deve includere il valore **0x100**.|  
+|**fire_triggers_on_snapshot**|**true**|I trigger utente replicati vengono eseguiti quando si applica lo snapshot iniziale.<br /><br /> Nota: Per i trigger devono essere replicate, il valore di maschera di bit del *schema_option* deve includere il valore **0x100**.|  
 ||**false**|I trigger utente replicati non vengono eseguiti quando si applica lo snapshot iniziale.|  
 |**identity_range**||Controlla le dimensioni degli intervalli di valori Identity assegnati nel Sottoscrittore. Non supportato per la replica peer-to-peer.|  
 |**ins_cmd**||Istruzione INSERT da eseguire. In alternativa, viene creata dal log.|  
@@ -166,7 +165,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
  Per ulteriori informazioni sulle proprietà che richiedono la reinizializzazione di tutte le sottoscrizioni esistenti in caso di modifica, vedere la sezione Osservazioni.  
   
  [ **@publisher**=] **'***publisher***'**  
- Specifica un server di pubblicazione non [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *server di pubblicazione* viene **sysname**, con un valore predefinito è NULL.  
+ Specifica un non - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] server di pubblicazione. *server di pubblicazione* viene **sysname**, con un valore predefinito è NULL.  
   
 > [!NOTE]  
 >  *server di pubblicazione* non deve essere utilizzata quando si modificano le proprietà degli articoli in una [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] server di pubblicazione.  
@@ -236,8 +235,8 @@ sp_changearticle [ [@publication= ] 'publication' ]
 |**Func schema solo**|**0x01**, **0x20**, **0x2000**, **0x400000**, **0x800000**, **0x2000000**, **0x8000000**, **0x10000000**, **0x20000000**, **0x40000000**, e **0x80000000**|**0x01**, **0x20**, **0x2000**, **0x400000**, **0x800000**, **0x2000000**, **0x8000000**, **0x10000000**, **0x20000000**, **0x40000000**, e **0x80000000**|  
 |**solo schema della vista indicizzata**|**0x01**, **0x010**, **0x020**, **0x040**, **0x0100**, **0x2000**, **0x40000**, **0x100000**, **0x200000**, **0x400000**, **0x800000**,  **0x2000000**, **0x8000000**, **0x40000000**, e **0x80000000**|**0x01**, **0x010**, **0x020**, **0x040**, **0x0100**, **0x2000**, **0x40000**, **0x100000**, **0x200000**, **0x400000**, **0x800000**,  **0x2000000**, **0x8000000**, **0x40000000**, e **0x80000000**|  
   
-> [!NOTE]  
->  Per le pubblicazioni ad aggiornamento in coda, il *schema_option* pari a **0x80** deve essere abilitato. Supportato *schema_option* i valori non[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pubblicazioni sono: **0x01**, **0x02**, **0x10**,  **0x40**, **0x80**, **0x1000** e **0x4000**.  
+> [!NOTE]
+>  Per le pubblicazioni ad aggiornamento in coda, il *schema_option* pari a **0x80** deve essere abilitato. Supportato *schema_option* i valori per non - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pubblicazioni sono: **0x01**, **0x02**, **0x10**, **0x40**, **0x80**, **0x1000** e  **0x4000**.  
   
 ## <a name="example"></a>Esempio  
  [!code-sql[HowTo#sp_changetranarticle](../../relational-databases/replication/codesnippet/tsql/sp-changearticle-transac_1.sql)]  

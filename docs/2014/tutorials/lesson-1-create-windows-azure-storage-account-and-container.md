@@ -11,14 +11,14 @@ ms.assetid: efdbd930-cde5-41b0-90ad-58a6cc68dddc
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 43489355aabc9c03407dd6b5779996ceef8967b5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: edeefac46805ba74b011d7c86202c7d5dbcdec14
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48143645"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53367153"
 ---
-# <a name="lesson-1-create-windows-azure-storage-account-and-container"></a>Lezione 1: creare un contenitore e un account di Archiviazione di Windows Azure
+# <a name="lesson-1-create-windows-azure-storage-account-and-container"></a>Lezione 1: creare un account e un contenitore di Archiviazione di Microsoft Azure
   Prima di poter avviare l'archiviazione di file di dati di SQL Server nel servizio di archiviazione Windows Azure, è innanzitutto necessario creare un account del servizio di archiviazione Windows Azure con un contenitore BLOB e una firma di accesso condivisa. Nella lezione 1 vengono illustrati i passaggi per l'accesso al portale di gestione di Windows Azure e per la creazione di un account di archiviazione, di un contenitore BLOB e di una firma di accesso condivisa.  
   
  Per impostazione predefinita, solo il proprietario dell'account di archiviazione può accedere ai BLOB, alle tabelle e alle code dell'account in uso. Per accedere alle risorse utilizzando questa nuova funzionalità di SQL Server senza condividere la chiave di accesso dell'account di archiviazione, è necessario eseguire le seguenti operazioni:  
@@ -29,7 +29,7 @@ ms.locfileid: "48143645"
   
 -   Utilizzare i criteri di accesso archiviati per gestire le firme di accesso condivise di un contenitore o dei relativi BLOB. I criteri di accesso archiviati costituiscono una misura di controllo aggiuntiva sulle firme di accesso condivise e forniscono strumenti semplici per revocarli.  
   
- Per altre informazioni, vedere [gestire l'accesso alle risorse di archiviazione Windows Azure](http://msdn.microsoft.com/library/windowsazure/ee393343.aspx).  
+ Per altre informazioni, vedere [gestire l'accesso alle risorse di archiviazione Windows Azure](https://msdn.microsoft.com/library/windowsazure/ee393343.aspx).  
   
 ## <a name="create-storage-account"></a>Creare un account di archiviazione  
  Per creare un account di archiviazione nel portale di gestione di Windows Azure, effettuare i passaggi riportati di seguito:  
@@ -58,7 +58,7 @@ ms.locfileid: "48143645"
      ![SQL 14 CTP2](../../2014/tutorials/media/ss-was-tutlesson-1-4.gif "SQL 14 CTP2")  
   
 > [!NOTE]  
->  Per creare un contenitore a livello di programmazione è possibile utilizzare anche le API REST. Per altre informazioni, vedere [Create Container](http://msdn.microsoft.com/library/windowsazure/dd179468.aspx) nonché [riferimento all'API di Windows Azure Storage Services REST](http://msdn.microsoft.com/library/windowsazure/dd179355.aspx).  
+>  Per creare un contenitore a livello di programmazione è possibile utilizzare anche le API REST. Per altre informazioni, vedere [Create Container](https://msdn.microsoft.com/library/windowsazure/dd179468.aspx) nonché [riferimento all'API di Windows Azure Storage Services REST](https://msdn.microsoft.com/library/windowsazure/dd179355.aspx).  
   
  **Lezione successiva:**  
   

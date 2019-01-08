@@ -14,12 +14,12 @@ ms.assetid: d50eb3cc-a822-486f-b80b-65bb50547ecd
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bb493378240f8c536b0af1c1b0ff5cf3bc93c042
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: d9b891d4c8196dbac8fd7e557abc17f15bafbe0f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558538"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52545216"
 ---
 # <a name="customization-file-connect-section"></a>Sezione sulla connessione del file di personalizzazione
 Il comportamento predefinito del gestore consiste nel rifiutare tutte le connessioni. Il **connettere** sezione specifica le eccezioni a tale comportamento. Ad esempio, se tutti i **connettere** sezioni sono assenti o vuota, quindi per impostazione predefinita è stato possibile stabilire alcuna connessione.  
@@ -54,12 +54,12 @@ connectionString
   
 ## <a name="remarks"></a>Note  
   
-|Parte|Description|  
+|Parte|Descrizione|  
 |----------|-----------------|  
 |**Connect**|Una valore letterale stringa che indica che si è una voce della stringa di connessione.|  
 |***connectionString***|Stringa che sostituisce la stringa di connessione client intero.|  
 |**Accesso**|Una valore letterale stringa che indica che si è una voce di accesso.|  
-|***accessRight***|Uno dei seguenti diritti di accesso:<br /><br /> -   **NoAccess** : utente non è possibile accedere all'origine dati.<br />-   **ReadOnly** , ovvero l'utente può leggere l'origine dati.<br />-   **Lettura/scrittura** , ovvero utente può leggere o scrivere nell'origine dati.|  
+|***accessRight***|Uno dei seguenti diritti di accesso:<br /><br /> -   **NoAccess** -utente non è possibile accedere all'origine dati.<br />-   **ReadOnly** -l'utente può leggere l'origine dati.<br />-   **Lettura/scrittura** -utente può leggere o scrivere nell'origine dati.|  
   
  Se si desidera consentire le connessioni (in disabilitando il comportamento del gestore predefinito), impostare la voce di accesso **connessione predefinita** sezione `Access=ReadWrite`ed eliminare o qualsiasi altro commento **connettersi** *identificatore* sezione.  
   

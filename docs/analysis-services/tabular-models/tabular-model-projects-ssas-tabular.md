@@ -1,5 +1,5 @@
 ---
-title: Progetti di modello tabulare | Documenti Microsoft
+title: I progetti di modello tabulare di Analysis Services | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 8866b53bd944a40c7af6b1dda8a3dff84afbdd58
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 26d7bf92a3720b802818fd5d5bacc8d5a9d7b819
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34039375"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072048"
 ---
 # <a name="tabular-model-projects"></a>Progetti di modello tabulare 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -22,10 +22,10 @@ ms.locfileid: "34039375"
   
 ## <a name="related-tasks"></a>Attività correlate  
   
-|Argomento|Description|  
+|Argomento|Descrizione|  
 |-----------|-----------------|  
-|[Creare un nuovo progetto di modello tabulare &#40;Analysis Services&#41;](../../analysis-services/tabular-models/create-a-new-tabular-model-project-analysis-services.md)|In questo articolo viene descritto come creare un progetto di modello tabulare vuoto.|  
-|[Importare da Analysis Services](../../analysis-services/tabular-models/import-from-analysis-services-ssas-tabular.md)|In questo articolo viene descritto come creare un nuovo progetto di modello tabulare basato su un modello esistente in Analysis Services. I metadati del modello esistente vengono estratti e utilizzati per creare il nuovo modello.|  
-|[Importare da Power Pivot](../../analysis-services/tabular-models/import-from-power-pivot-ssas-tabular.md)|In questo articolo viene descritto come creare un nuovo progetto di modello tabulare estraendo i metadati e dati da un [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per il file di Excel (xlsx).|  
+|[Creare un nuovo progetto di modello tabulare &#40;Analysis Services&#41;](../../analysis-services/tabular-models/create-a-new-tabular-model-project-analysis-services.md)|Questo articolo descrive come creare un progetto di modello tabulare vuoto.|  
+|[Importare da Analysis Services](../../analysis-services/tabular-models/import-from-analysis-services-ssas-tabular.md)|Questo articolo descrive come creare un nuovo progetto di modello tabulare basato su un modello esistente in Analysis Services. I metadati del modello esistente vengono estratti e utilizzati per creare il nuovo modello.|  
+|[Importare da Power Pivot](../../analysis-services/tabular-models/import-from-power-pivot-ssas-tabular.md)|Questo articolo descrive come creare un nuovo progetto di modello tabulare estraendo i metadati e dati da un [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per file di Excel (xlsx).|  
   
   

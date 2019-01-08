@@ -1,7 +1,8 @@
 ---
-title: Azure Data Studio, domande frequenti | Microsoft Docs
-description: Domande frequenti (FAQ per Azure Data Studio).
-ms.custom: tools|sos
+title: DOMANDE FREQUENTI
+titleSuffix: Azure Data Studio
+description: Domande frequenti (FAQ) su Azure Data Studio.
+ms.custom: seodec18
 ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -10,12 +11,12 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b34723e800d3dc21928dcdbb5dc9871ecbbcdb5f
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: 129e7de66e896e1f452c5d68fc4891d9cc5eafa3
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49356352"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030332"
 ---
 # <a name="includeazure-data-studioincludesname-sosmd-faq"></a>Domande frequenti su [!INCLUDE[Azure Data Studio](../includes/name-sos.md)]
 
@@ -40,7 +41,7 @@ Azure Data Studio si basa su Visual Studio Code e offre un leggero, spostarvi lo
 
 Usare i tuoi strumenti Preferiti della riga di comando (ad esempio, Bash, PowerShell, sqlcmd, bcp, psql SSH) nella finestra del terminale integrato direttamente nell'interfaccia utente di Studio dei dati di Azure. Genera ed esegui script di CREATE e INSERT per gli oggetti di database al fine di creare copie del database di sviluppo o a scopo di test. Migliora la produttività con frammenti di codice intelligenti e con grafiche ricche ed intuitive per creare nuovi oggetti di database (ad esempio tabelle, viste, stored procedure, utenti, account di accesso, ruoli e così via) o per aggiornare gli oggetti di database esistenti. Utilizza le dashboard personalizzabili al fine di monitorare e risolvere rapidamente eventuali colli di bottiglia nei database locali, in Azure o in qualsiasi cloud.
 
-Azure Data Studio offre un'esperienza coerente per il backup e ripristino dei database. Grazie al supporto pianificato per i gruppi di disponibilità di SQL Server Always-on, si possono facilmente configurare, monitorare e risolvere i problemi di gruppi di disponibilità per i database di SQL Server cruciali e rapidamente il failover a un database secondario durante un'emergenza. Azure Data Studio è stato progettato per aumentare la produttività del ciclo di vita DevOps dei database di scelta nei sistemi operativi di propria scelta. Di conseguenza, si riducono i rischi, si risolvono i problemi più velocemente e si distribuisce continuamente valore che supera le aspettative dei clienti.
+Azure Data Studio offre un'esperienza coerente per il backup e ripristino dei database. Grazie al supporto pianificato per i gruppi di disponibilità di SQL Server Always-on, si possono facilmente configurare, monitorare e risolvere i problemi di gruppi di disponibilità per i database di SQL Server cruciali e rapidamente il failover a un database secondario durante un'emergenza. Azure Data Studio è stato progettato per aumentare la produttività del ciclo di vita DevOps dei database di scelta nei sistemi operativi di propria scelta. Di conseguenza, ha sempre il controllo e si può ridurre i rischi, risolvere i problemi più rapidamente e offrire continuamente valore che supera le aspettative dei clienti.
 
 ## <a name="is-azure-data-studio-open-source"></a>È Open Source di Azure Data Studio?
 
@@ -48,7 +49,7 @@ Il codice sorgente per il provider di dati e Data Studio di Azure è disponibile
 
 ## <a name="do-we-plan-to-open-source-ssms"></a>Se si prevede di aprire origine SQL Server Management Studio.
 
-No. Tuttavia, la nuova generazione di CLI e di interfacce utente per gli strumenti con supporto multi-OS sono open source. Ad esempio, l'estensione mssql per Visual Studio Code, mssql scripter e msql-CLI sono tutti open source su GitHub. Il codice sorgente per Studo dati di Azure è disponibile in GitHub.  
+No. Tuttavia, la nuova generazione di CLI e di interfacce utente per gli strumenti con supporto multi-OS sono open source. Ad esempio, l'estensione mssql per Visual Studio Code, mssql scripter e msql-CLI sono tutti open source su GitHub. Il codice sorgente per Azure Data Studio è disponibile in GitHub.  
 
 ## <a name="now-that-there-is-azure-data-studio-does-microsoft-plan-to-deprecate-ssms-and-ssdt"></a>Ora che è disponibile Azure Data Studio, Microsoft intende deprecare SSMS e SSDT? 
 
@@ -82,49 +83,49 @@ No. Gli investimenti per i principali strumenti Windows (SQL Server Management S
 
 |Funzionalità|Azure Data Studio|SSMS|
 |:---|:---|:---|
-|Sign-In Azure|Sì|Sì|
-|Dashboard|Sì| |
-|Estensioni|Sì| |
-|Terminale integrato|Sì||
-|Esplora oggetti|Sì|Sì|
-|Scripting per gli oggetti|Sì|Sì|
-|Sistema di progetto|Sì||
-|Selezionare dalla tabella|Sì|Sì|
-|Controllo del codice sorgente|Sì||
-|Riquadro attività|Sì||
-|Utilizzo dei temi|Sì||
-|Modalità scura|Sì||
+|Sign-In Azure|Yes|Yes|
+|Dashboard|Yes| |
+|Estensioni|Yes| |
+|Terminale integrato|Yes||
+|Esplora oggetti|Yes|Yes|
+|Scripting per gli oggetti|Yes|Yes|
+|Sistema di progetto|Yes||
+|Selezionare dalla tabella|Yes|Yes|
+|Controllo del codice sorgente|Yes||
+|Riquadro attività|Yes||
+|Utilizzo dei temi|Yes||
+|Modalità scura|Yes||
 |Esplora risorse di Azure|Anteprima||
-|Procedura guidata Genera script||Sì
-|Importazione/esportazione con estensione DACPAC||Sì|
-|Proprietà degli oggetti||Sì|
-|Progettazione tabelle||Sì|
+|Procedura guidata Genera script||Yes
+|Importazione/esportazione con estensione DACPAC||Yes|
+|Proprietà degli oggetti||Yes|
+|Progettazione tabelle||Yes|
 
 ### <a name="query-editor"></a>Editor query
 
 |Funzionalità|Azure Data Studio|SSMS|
 |:---|:---|:---|
-|Visualizzatore grafico|Sì||
-|Esportare i risultati in CSV, JSON, con estensione XLSX|Sì||
-|IntelliSense|Sì|Sì|
-|Frammenti di codice|Sì|Sì|
-|Visualizza il piano|Anteprima|Sì|
-|Statistiche client||Sì|
-|Statistiche sulle Query dinamiche||Sì|
-|Opzioni query||Sì|
-|Risultati in un file||Sì|
-|Risultati in formato testo||Sì|
-|Visualizzatore spaziale||Sì|
-|SQLCMD||Sì|
-|Debugger Transact-SQL||Sì|
+|Visualizzatore grafico|Yes||
+|Esportare i risultati in CSV, JSON, con estensione XLSX|Yes||
+|IntelliSense|Yes|Yes|
+|Frammenti di codice|Yes|Yes|
+|Visualizza il piano|Anteprima|Yes|
+|Statistiche client||Yes|
+|Statistiche sulle Query dinamiche||Yes|
+|Opzioni query||Yes|
+|Risultati in un file||Yes|
+|Risultati in formato testo||Yes|
+|Visualizzatore spaziale||Yes|
+|SQLCMD||Yes|
+|Debugger Transact-SQL||Yes|
 
 ### <a name="operating-system-support"></a>Supporto nei sistemi operativi
 
 |Funzionalità|Azure Data Studio|SSMS|
 |:---|:---|:---|
-|Windows|Sì|Sì|
-|macOS|Sì||
-|Linux|Sì||
+|WINDOWS|Yes|Yes|
+|macOS|Yes||
+|Linux|Yes||
 
 ### <a name="data-engineering"></a>Il data Engineering
 
@@ -132,35 +133,35 @@ No. Gli investimenti per i principali strumenti Windows (SQL Server Management S
 |:---|:---|:---|
 |Procedura guidata di dati esterni|Anteprima||
 |Integrazione di HDFS|Anteprima||
-|Notebook|Anteprima||
+|Blocchi appunti|Anteprima||
 
 ### <a name="database-administration"></a>Amministrazione del database
 
 |Funzionalità|Azure Data Studio|SSMS|
 |:---|:---|:---|
-|Backup / ripristino|Sì|Sì|
-|Importa File flat|Anteprima|Sì|
-|SQL Agent|Anteprima|Sì|
-|SQL Profiler|Anteprima|Sì|
-|Always On||Sì|
-|Crittografia sempre attiva||Sì|
-|Copia dati guidata||Sì|
-|I dati dello strumento ottimizzazione guidata||Sì|
-|Diagrammi di database||Sì|
-|Visualizzatore Log di errore||Sì|
-|Piani di manutenzione||Sì|
-|Query multiserver||Sì|
-|Gestione basata su criteri||Sì|
-|PolyBase||Sì|
-|Archivio query||Sì|
-|Server registrati||Sì|
-|Replica||Sì|
-|Gestione della sicurezza||Sì|
-|Service Broker||Sì|
-|SQL Mail||Sì|
-|Esplora modelli||Sì|
-|Valutazione della vulnerabilità||Sì|
-|Gestione di XEvent||Sì|
+|Backup / ripristino|Yes|Yes|
+|Importa File flat|Anteprima|Yes|
+|SQL Agent|Anteprima|Yes|
+|SQL Profiler|Anteprima|Yes|
+|Always On||Yes|
+|Crittografia sempre attiva||Yes|
+|Copia dati guidata||Yes|
+|I dati dello strumento ottimizzazione guidata||Yes|
+|Diagrammi di database||Yes|
+|Visualizzatore Log di errore||Yes|
+|Piani di manutenzione||Yes|
+|Query multiserver||Yes|
+|Gestione basata su criteri||Yes|
+|PolyBase||Yes|
+|Archivio query||Yes|
+|Server registrati||Yes|
+|Replica||Yes|
+|Gestione della sicurezza||Yes|
+|Service Broker||Yes|
+|SQL Mail||Yes|
+|Esplora modelli||Yes|
+|Valutazione della vulnerabilità||Yes|
+|Gestione di XEvent||Yes|
 
 
 ## <a name="azure-data-studio-is-missing-a-feature-that-is-in-ssmsssdt-will-you-add-it"></a>Azure Data Studio manca una funzionalità che si trova in SSMS o SSDT. Verrà aggiunta?

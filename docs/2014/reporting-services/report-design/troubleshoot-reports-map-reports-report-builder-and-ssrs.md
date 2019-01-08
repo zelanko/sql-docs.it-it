@@ -1,5 +1,5 @@
 ---
-title: 'Risolvere i problemi relativi ai report: i report mappa (Generatore report e SSRS) | Microsoft Docs'
+title: 'Risoluzione dei problemi dei report: Eseguire il mapping di report (Generatore Report e SSRS) | Microsoft Docs'
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,14 @@ ms.assetid: a690aec2-056b-40bc-8cab-c694bd2d6d62
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: c4ac3f5504aef33661afd7c94cec2b63b0b64f0e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1c9a3adeb3e63c24aa7a78f5a44f1cd2692ce2b7
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48197412"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53375343"
 ---
-# <a name="troubleshoot-reports-map-reports-report-builder-and-ssrs"></a>Risoluzione dei problemi relativi alle parti del report: report mappa (Generatore report e SSRS)
+# <a name="troubleshoot-reports-map-reports-report-builder-and-ssrs"></a>Risoluzione dei problemi dei report: Report mappa (Generatore report e SSRS)
   È possibile che si verifichino problemi con le mappe di un report quando si aggiunge una mappa o un livello mappa al report, quando si personalizza una mappa o un livello mappa esistente nel report, quando si visualizza in anteprima una mappa di un report o quando si pubblica un report con una mappa. Utilizzare le informazioni presenti in questo argomento per risolvere questi problemi.  
   
 > [!NOTE]  
@@ -173,7 +173,7 @@ ms.locfileid: "48197412"
 -   Per altre informazioni, vedere [Variare la visualizzazione di poligoni, linee e punti in base a regole e dati analitici &#40;Generatore report e SSRS&#41;](vary-polygon-line-and-point-display-by-rules-and-analytical-data.md).  
   
 ### <a name="what-is-the-value-nan-on-the-color-scale"></a>Informazioni sul valore NaN della scala dei colori.  
- `NaN` è l'acronimo non è un numero. Si presuppone che i valori delle scale dei colori siano numerici. Verificare le impostazioni di distribuzione e il valore del testo della legenda per le regole associate alla scala dei colori. Se sono stati creati intervalli di distribuzione personalizzati, verificare di aver specificato il limite inferiore per il primo intervallo e il limite superiore per l'ultimo intervallo.  
+ `NaN` è l'acronimo di Not a Number (diverso da un numero). Si presuppone che i valori delle scale dei colori siano numerici. Verificare le impostazioni di distribuzione e il valore del testo della legenda per le regole associate alla scala dei colori. Se sono stati creati intervalli di distribuzione personalizzati, verificare di aver specificato il limite inferiore per il primo intervallo e il limite superiore per l'ultimo intervallo.  
   
 ### <a name="my-color-scale-does-not-appear-when-i-run-the-report"></a>Quando si esegue il report, la scala dei colori non viene visualizzata.  
  La scala dei colori visualizza informazioni all'utente quando un livello mappa specifica le regole colore per poligoni, linee o punti per tutto il livello o per gli elementi incorporati della mappa. Se nessun elemento della mappa specifica una regola colore o se le regole colore forniscono un'indicazione tramite una legenda anziché la mappa colori, quest'ultima non viene mostrata nel report visualizzabile.  
@@ -194,7 +194,7 @@ ms.locfileid: "48197412"
   
 -   La proiezione della mappa deve essere **Mercator**.  
   
--   Per l'anteprima locale, è necessario disporre dell'accesso a Internet. Per un report che è in esecuzione dal server di report, quest'ultimo deve essere configurato per supportare lo sfondo a sezioni. Per altre informazioni, vedere "Pianificazione per il supporto mappe" nella [documentazione relativa a Reporting Services](http://go.microsoft.com/fwlink/?linkid=121312) inclusa nella documentazione online di SQL Server.  
+-   Per l'anteprima locale, è necessario disporre dell'accesso a Internet. Per un report che è in esecuzione dal server di report, quest'ultimo deve essere configurato per supportare lo sfondo a sezioni. Per altre informazioni, vedere "Pianificazione per il supporto mappe" nella [documentazione relativa a Reporting Services](https://go.microsoft.com/fwlink/?linkid=121312) inclusa nella documentazione online di SQL Server.  
   
  Per altre informazioni sull'aggiunta di un livello sezione, vedere [Aggiungere, modificare o eliminare una mappa o un livello mappa &#40;Generatore report e SSRS&#41;](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md).  
   

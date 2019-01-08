@@ -15,12 +15,12 @@ ms.assetid: 1d3f0ea6-87af-4836-807f-955e7df2b5df
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b9e99ab1646d5a3aff79bad0af7e0b9ab418668e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8f4a32d9ab637de5b52466cfcb628a57ff6c044b
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47792399"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53208331"
 ---
 # <a name="pattern-value-arguments"></a>Argomenti del valore dei criteri
 Alcuni argomenti nel catalogo di funzioni, ad esempio la *TableName* nell'argomento **SQLTables**, accettare i criteri di ricerca. Questi argomenti accettano criteri di ricerca se l'attributo di istruzione SQL_ATTR_METADATA_ID è impostato su SQL_FALSE; argomenti di tipo identificatore che non accettano un criterio di ricerca se questo attributo è impostato su SQL_TRUE sono.  
@@ -35,7 +35,7 @@ Alcuni argomenti nel catalogo di funzioni, ad esempio la *TableName* nell'argome
   
  Il carattere di escape viene recuperato con l'opzione SQL_SEARCH_PATTERN_ESCAPE **SQLGetInfo**. In un argomento che accetta i criteri di ricerca per includere tale carattere come valore letterale deve precedere qualsiasi carattere di sottolineatura, un segno di percentuale o un carattere di escape. Nella tabella seguente sono riportati alcuni esempi.  
   
-|Criterio di ricerca|Description|  
+|Criterio di ricerca|Descrizione|  
 |--------------------|-----------------|  
 |%A %|Tutti gli identificatori che contengono la lettera A|  
 |ABC|Tutti gli identificatori di quattro caratteri iniziano con ABC|  
@@ -44,7 +44,7 @@ Alcuni argomenti nel catalogo di funzioni, ad esempio la *TableName* nell'argome
   
  Particolare attenzione per eseguire l'escape di caratteri di ricerca del modello negli argomenti di accettano i criteri di ricerca. Ciò è particolarmente vero per il carattere di sottolineatura, che viene usato comunemente negli identificatori. Un errore comune nelle applicazioni consiste nel recuperare un valore di una funzione di catalogo e passa tale valore a un argomento di modello di ricerca in un'altra funzione di catalogo. Ad esempio, si supponga che un'applicazione recupera il nome della tabella MY_TABLE dal risultato impostato per **SQLTables** e la passa a **SQLColumns** per recuperare un elenco di colonne in MY_TABLE. Anziché ottenere le colonne per MY_TABLE, l'applicazione recupererà le colonne per tutte le tabelle che corrispondono al criterio di ricerca MY_TABLE, ad esempio MY_TABLE MY1TABLE, MY2TABLE e così via.  
   
-> [!NOTE]  
+> [!NOTE]
 >  ODBC 2. *x* driver non supportano i criteri di ricerca nel *CatalogName* argomento nel **SQLTables**. ODBC 3*x* driver accettano criteri di ricerca in questo argomento se l'attributo di ambiente sql_attr ODBC_VERSION è impostato su SQL_OV_ODBC3; non accetta i criteri di ricerca in questo argomento se è impostato su SQL_OV_ODBC2.  
   
- Passando un puntatore null a un argomento di modello di ricerca non vincola la ricerca per tale argomento. vale a dire, un puntatore null e la percentuale di pattern di ricerca (caratteri) sono equivalenti. Tuttavia, di lunghezza zero ricerca pattern, ovvero, ovvero un puntatore valido a una stringa di lunghezza zero, ovvero corrisponde solo alla stringa vuota ("").
+ Passando un puntatore null a un argomento di modello di ricerca non vincola la ricerca per tale argomento. vale a dire, un puntatore null e la percentuale di pattern di ricerca (caratteri) sono equivalenti. Tuttavia, un criterio di ricerca di lunghezza zero, vale a dire, un puntatore valido a una stringa di lunghezza zero - corrisponde solo una stringa vuota ("").

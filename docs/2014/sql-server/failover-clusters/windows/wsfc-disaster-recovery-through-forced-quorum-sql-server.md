@@ -14,17 +14,17 @@ ms.assetid: 6cefdc18-899e-410c-9ae4-d6080f724046
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c93f9327adf0801898c45a541d935a4d3b34758c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3c170fa1b302ccd0a1edec156b3b30429fc2daf8
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48161882"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53365374"
 ---
 # <a name="wsfc-disaster-recovery-through-forced-quorum-sql-server"></a>Ripristino di emergenza WSFC tramite quorum forzato (SQL Server)
   Un errore del quorum è causato generalmente da una situazione di emergenza a livello di sistema, da un errore di comunicazione persistente o da una configurazione errata che interessa diversi nodi del cluster WSFC.  Per il recupero da un errore del quorum è necessario intervenire manualmente.  
   
--   **Before you start:**  [Prerequisites](#Prerequisites), [Security](#Security)  
+-   **Prima di iniziare:**  [Prerequisiti](#Prerequisites), [sicurezza](#Security)  
   
 -   **Ripristino di emergenza WSFC tramite la procedura relativa al quorum forzato** [Ripristino di emergenza WSFC tramite la procedura relativa al quorum forzato](#Main)  
   
@@ -40,7 +40,7 @@ ms.locfileid: "48161882"
 > [!WARNING]  
 >  L'utente deve conoscere a fondo i concetti e le interazioni di Windows Server Failover Clustering, dei modelli del quorum WSFC, di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]e della configurazione di distribuzione specifica dell'ambiente.  
 >   
->  Per altre informazioni, vedere:  [WSFC (Windows Server Failover Clustering) con SQL Server](http://msdn.microsoft.com/library/hh270278\(v=SQL.110\).aspx), [Modalità quorum WSFC e configurazione del voto (SQL Server)](http://msdn.microsoft.com/library/hh270280\(v=SQL.110\).aspx)  
+>  Per altre informazioni, vedere:  [Windows Server Failover Clustering (WSFC) con SQL Server](https://msdn.microsoft.com/library/hh270278\(v=SQL.110\).aspx), [modalità Quorum WSFC e configurazione del voto (SQL Server)](https://msdn.microsoft.com/library/hh270280\(v=SQL.110\).aspx)  
   
 ###  <a name="Security"></a> Sicurezza  
  L'utente deve disporre di un account di dominio che sia membro del gruppo Administrators locale su ogni nodo del cluster WSFC.  
@@ -65,7 +65,7 @@ ms.locfileid: "48161882"
   
      Su questo nodo riportare manualmente il cluster online utilizzando la procedura relativa al quorum forzato.  Per ridurre al minimo la possibile perdita di dati, selezionare un nodo che nell'ultima operazione ospitava una replica primaria del gruppo di disponibilità.  
   
-     Per ulteriori informazioni, vedere la pagina relativa alla  [forzatura dell'avvio di un cluster WSFC senza quorum](http://msdn.microsoft.com/library/hh270275\(v=SQL.110\).aspx)  
+     Per altre informazioni, vedere:  [Forzare l'avvio di un cluster WSFC senza un quorum](https://msdn.microsoft.com/library/hh270275\(v=SQL.110\).aspx)  
   
     > [!NOTE]  
     >  L'impostazione del quorum forzato comporta il blocco dei controlli del quorum a livello di cluster, finché il cluster WSFC logico non otterrà una maggioranza di voti e passerà automaticamente alla modalità operativa di un quorum normale.  
@@ -117,9 +117,9 @@ ms.locfileid: "48161882"
   
 ##  <a name="RelatedContent"></a> Contenuto correlato  
   
--   [Visualizzare eventi e log per un cluster di failover](http://technet.microsoft.com/library/cc772342\(WS.10\).aspx)  
+-   [Visualizzare eventi e log per un cluster di failover](https://technet.microsoft.com/library/cc772342\(WS.10\).aspx)  
   
--   [Pagina relativa al cluster di failover Get-ClusterLog](http://technet.microsoft.com/library/ee461045.aspx)  
+-   [Pagina relativa al cluster di failover Get-ClusterLog](https://technet.microsoft.com/library/ee461045.aspx)  
   
 ## <a name="see-also"></a>Vedere anche  
  [WSFC &#40;Windows Server Failover Clustering&#41; con SQL Server](windows-server-failover-clustering-wsfc-with-sql-server.md)  

@@ -1,24 +1,23 @@
 ---
-title: 'Lezione 1: Connessione al motore di database | Microsoft Docs'
+title: 'Lezione 1: La connessione al motore di Database | Microsoft Docs'
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 ms.assetid: e8db82f0-50ed-4531-9209-940006ed34cb
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 145adf31e3b59e846eb17369a897e4012f0177ed
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 32b78c210647ab5b3722f01f334e9cb2e8bbfc13
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48132393"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53375303"
 ---
-# <a name="lesson-1-connecting-to-the-database-engine"></a>Lezione 1: Connessione al Motore di database
+# <a name="lesson-1-connecting-to-the-database-engine"></a>Lezione 1: Connessione al motore di database
   Gli strumenti che vengono installati con [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]dipendono dall'edizione in uso e dalle opzioni di installazione selezionate. In questa lezione vengono illustrati gli strumenti principali e vengono descritte le procedure per la connessione e l'esecuzione di una funzione di base, ovvero la concessione di autorizzazione ad altri utenti.  
   
   
@@ -28,7 +27,7 @@ ms.locfileid: "48132393"
   
 ### <a name="basic-tools"></a>Strumenti di base  
   
--   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] è lo strumento principale per l'amministrazione di [!INCLUDE[ssDE](../includes/ssde-md.md)] e la scrittura di codice [!INCLUDE[tsql](../includes/tsql-md.md)]. È ospitato nella shell di [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] . Non è incluso [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] ma è disponibile come download separato [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkId=144346).  
+-   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] è lo strumento principale per l'amministrazione di [!INCLUDE[ssDE](../includes/ssde-md.md)] e la scrittura di codice [!INCLUDE[tsql](../includes/tsql-md.md)]. È ospitato nella shell di [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] . Non è incluso [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] ma è disponibile come download separato [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkId=144346).  
   
 -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Gestione configurazione viene installato sia con [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] che con gli strumenti client. Consente di abilitare protocolli server, configurare le opzioni relative ai protocolli quali le porte TCP, configurare i servizi server per l'avvio automatico e configurare i computer client per la connessione con le modalità preferite. Questo strumento consente di configurare gli elementi di connettività più avanzati ma non le funzionalità.  
   
@@ -102,6 +101,6 @@ ms.locfileid: "48132393"
 >  Si tratta delle informazioni di base necessarie per iniziare. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] offre un ambiente di sicurezza avanzato e la sicurezza rappresenta un aspetto certamente importante nell'uso dei database.  
   
 ## <a name="next-lesson"></a>Lezione successiva  
- [Lezione 2: Connessione da un altro computer](lesson-2-connecting-from-another-computer.md)  
+ [Lezione 2: La connessione da un altro Computer](lesson-2-connecting-from-another-computer.md)  
   
   

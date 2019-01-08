@@ -13,12 +13,12 @@ ms.assetid: e1ffb6d7-fbc5-4695-b538-cc2302d1a17d
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0e6f8fbd3ffbfcee4db212a22d4aef223450e41c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 17723cfd2c1c694f21130e985b6bd65736f90236
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48174461"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53373934"
 ---
 # <a name="task-2-testing-and-publishing-the-matching-policy"></a>Attività 2: Test e pubblicazione dei criteri di corrispondenza
   In questa attività viene testato e pubblicato le **Rimuovi fornitori duplicati** criteri di corrispondenza.  
@@ -27,9 +27,9 @@ ms.locfileid: "48174461"
   
 2.  Controllare tutti i record corrispondenti e il punteggio di corrispondenza nella casella di riepilogo. Un record con un **verde** icona associato è un duplicato del record pivot che la precede. Di seguito sono riportati un paio di esempi:  
   
-    1.  Il record con **ID Record: 1000005** è una corrispondenza del record con **Id Record: 1000004** con **punteggio: 100%** perché entrambi i record sono gli stessi valori di **SupplierID (prerequisito)**, **Supplier Name**, e **ContactEmailAddress columns**. In DQS la selezione di un record come record pivot per un cluster viene eseguita in modo casuale.  
+    1.  Il record con **ID record: 1000005** è una corrispondenza del record con **Id Record: 1000004** con **punteggio: 100%** perché entrambi i record hanno gli stessi valori per **SupplierID (prerequisito)**, **Supplier Name**, e **ContactEmailAddress columns**. In DQS la selezione di un record come record pivot per un cluster viene eseguita in modo casuale.  
   
-    2.  Il record **1000023** è una corrispondenza del record **1000022** con il punteggio di corrispondenza: 93% perché i due record hanno gli stessi valori per **SupplierID (prerequisito)** e **Nome fornitore** colonne, ma valori diversi per il **ContactEmailAddress** colonna.  
+    2.  Il record **1000023** è una corrispondenza del record **1000022** con il punteggio di corrispondenza: 93% perché i due record hanno gli stessi valori per **SupplierID (prerequisito)** e **Supplier Name** colonne, ma valori diversi per il **ContactEmailAddress** colonna.  
   
     3.  Scorrere fino alla fine dell'elenco per visualizzare i due record con ID: **1000051** e **1000052**. Record **1000052** viene considerata una corrispondenza con punteggio di corrispondenza **91%** perché i due record hanno gli stessi valori per il **SupplierID** e  **ContactEmailAddress** colonne, ma valori diversi per il **Supplier Name** colonna.  
   
@@ -41,7 +41,7 @@ ms.locfileid: "48174461"
   
 4.  Fare clic su **chiudere** per chiudere la **Dettagli punteggio corrispondente** nella finestra di dialogo.  
   
-5.  Fare clic su **risultati corrispondenza** scheda nella parte inferiore della pagina. In questa scheda vengono visualizzati dettagli quali il numero di record corrispondenti, il numero di record non corrispondenti, il numero di cluster con record corrispondenti e le dimensioni medie, minime e massime del cluster. Visualizzare [creare criteri di corrispondenza](http://msdn.microsoft.com/library/hh270290.aspx) per altri dettagli. Non è possibile esportare i risultati di questa attività. Si sta definendo solo un criterio di corrispondenza utilizzando i dati di esempio per testare le regole e i criteri nei dati di esempio.  
+5.  Fare clic su **risultati corrispondenza** scheda nella parte inferiore della pagina. In questa scheda vengono visualizzati dettagli quali il numero di record corrispondenti, il numero di record non corrispondenti, il numero di cluster con record corrispondenti e le dimensioni medie, minime e massime del cluster. Visualizzare [creare criteri di corrispondenza](https://msdn.microsoft.com/library/hh270290.aspx) per altri dettagli. Non è possibile esportare i risultati di questa attività. Si sta definendo solo un criterio di corrispondenza utilizzando i dati di esempio per testare le regole e i criteri nei dati di esempio.  
   
      ![Scheda risultati corrispondenza](../../2014/tutorials/media/et-testingandpublishingthematchingpolicy-03.jpg "scheda dei risultati di corrispondenza")  
   

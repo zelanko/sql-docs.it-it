@@ -21,12 +21,12 @@ ms.assetid: 7aa84474-16e5-49bd-a703-c8d1408ef107
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6d94d3127a5957b1684133019cf4991cba7adbff
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7e8e2af3150b6c0e8663c28a1342b68be57e043d
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47769434"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52409800"
 ---
 # <a name="managedbackupfnavailablebackups-transact-sql"></a>managed_backup.fn_available_backups (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -50,10 +50,10 @@ managed_backup.fn_available_backups ([@database_name = ] 'database name')
 Se un database viene eliminato e quindi ricreato, vengono restituiti i set di backup per tutti i database. L'output viene ordinato in base a database_guid, che identifica in modo univoco ogni database.   
 Se sono presenti gap in LSN significa che è presente un'interruzione nella catena di log; la tabella conterrà una riga speciale per ogni segmento LSN mancante.  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |Backup_path|NVARCHAR(260) COLLATE Latin1_General_CI_AS_KS_WS|URL del file di backup.|  
-|backup_type|NVARCHAR(6)|'DB' per il backup del database; 'LOG' per il backup del log.|  
+|backup_type|NVARCHAR(6)|'DB' per il database di backup 'LOG' per il backup del log|  
 |expiration_date|DATETIME|Data in cui si prevede l'eliminazione di questo file. Viene impostata in base alla capacità di recuperare il database fino a un punto nel tempo nel periodo di memorizzazione specificato.|  
 |database_guid|UNIQUEIDENTIFIER|Valore GUID per il database specificato.  Il GUID identifica in modo univoco un database.|  
 |first_lsn|NUMERIC(25, 0)|Numero di sequenza del file di log del primo record, ovvero del record di log meno recente nel set di backup. Può essere NULL.|  
@@ -75,7 +75,7 @@ Se sono presenti gap in LSN significa che è presente un'interruzione nella cate
  È necessario **seleziona** le autorizzazioni per questa funzione.  
   
 ## <a name="examples"></a>Esempi  
- Nell'esempio seguente vengono elencati tutti i backup disponibili eseguiti tramite il [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] per il database 'MyDB'.  
+ L'esempio seguente elenca tutti i backup disponibili tramite [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] per il database 'MyDB'  
   
 ```  
 SELECT *   

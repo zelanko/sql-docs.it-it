@@ -16,12 +16,12 @@ ms.assetid: a6841cc2-ca13-4b1c-9343-9e4d54312c3a
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7e834cb85458b7fd0e265e5077500ebc4dec5f45
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: df68b9ee1e778d0523b63d69bd010022b6f6f219
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48095411"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589865"
 ---
 # <a name="installing-upgrade-advisor-from-the-command-prompt"></a>Installazione di Preparazione aggiornamento dal prompt dei comandi
   È possibile installare Preparazione aggiornamento utilizzando l'Installazione guidata o dal prompt dei comandi. Il prompt dei comandi consente di eseguire installazioni automatiche e automatizzate.  
@@ -33,10 +33,10 @@ ms.locfileid: "48095411"
   
  Nella tabella seguente vengono illustrate le opzioni più comuni.  
   
-|Argomento|Description|  
+|Argomento|Descrizione|  
 |--------------|-----------------|  
 |/q [n&#124;b&#124;r&#124;f]|Imposta il livello dell'interfaccia utente:<br /><br /> n = nessuna interfaccia utente<br /><br /> b = interfaccia utente di base (solo stato di avanzamento, nessun prompt)<br /><br /> r = interfaccia utente ridotta (finestra di dialogo alla fine dell'installazione)<br /><br /> f = interfaccia utente completa|  
-|/L|Specifica le opzioni del file di log. Per registrare tutti i messaggi *log_file_name*, usare **-L\*v * * * log_file_name*. Per registrare solo i messaggi di errore, utilizzare `-Le` *log_file_name*.|  
+|/L|Specifica le opzioni del file di log. Per registrare tutti i messaggi *log_file_name*, usare **-L\*v**_log_file_name_. Per registrare solo i messaggi di errore, utilizzare `-Le` *log_file_name*.|  
 |ADDLOCAL = ALL&AMP;#124; RIMUOVERE = ALL&AMP;#124;REINSTALL = ALL|Specifica se installare (ADDLOCAL), rimuovere (REMOVE) o reinstallare (REINSTALL) Preparazione aggiornamento.|  
 |UAINSTALLDIR=path|Installa Preparazione aggiornamento nel percorso specificato da path.|  
   

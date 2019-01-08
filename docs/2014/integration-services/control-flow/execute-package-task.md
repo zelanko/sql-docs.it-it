@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.executepackagetask.f1
@@ -17,12 +16,12 @@ ms.assetid: 042d4ec0-0668-401c-bb3a-a25fe2602eac
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: af7dc60469f088f2023365f638666056bdf6e412
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5927cbe753cf0035c37f9a826c6bf89e9c963ae8
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48129137"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53365773"
 ---
 # <a name="execute-package-task"></a>Attività Esegui pacchetto
   L'attività Esegui pacchetto permette di estendere le funzionalità aziendali di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] consentendo ai pacchetti di eseguire altri pacchetti nell'ambito di un flusso di lavoro.  
@@ -57,7 +56,7 @@ ms.locfileid: "48129137"
   
  Talvolta può essere tuttavia necessario che l'esito dei pacchetti padre e figlio venga determinato come per una singola unità oppure si desidera evitare l'overhead di un processo aggiuntivo. Se ad esempio un processo figlio non riesce e nel processo padre la fase successiva dell'elaborazione dipende dal completamento del processo figlio, è preferibile eseguire il pacchetto figlio nello stesso processo del pacchetto padre.  
   
- Per impostazione predefinita, la proprietà ExecuteOutOfProcess dell'attività Esegui pacchetto è impostata su `False`, e il pacchetto figlio viene eseguito nello stesso processo del pacchetto padre. Se si imposta questa proprietà su `True`, il pacchetto figlio viene eseguito in un processo separato. In questo modo è possibile che l'avvio del pacchetto figlio sia rallentato. Inoltre, se si imposta la proprietà su `True`, è possibile eseguire il debug del pacchetto in un'installazione di soli strumenti. È necessario installare [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Per altre informazioni, vedere [Installazione di Integration Services](../install-windows/install-integration-services.md).  
+ Per impostazione predefinita, la proprietà ExecuteOutOfProcess dell'attività Esegui pacchetto è impostata su `False`, e il pacchetto figlio viene eseguito nello stesso processo del pacchetto padre. Se si imposta questa proprietà su `True`, il pacchetto figlio viene eseguito in un processo separato. In questo modo è possibile che l'avvio del pacchetto figlio sia rallentato. Inoltre, se si imposta la proprietà su `True`, non è possibile eseguire il debug del pacchetto in un'installazione di soli strumenti. È necessario installare [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Per altre informazioni, vedere [Installazione di Integration Services](../install-windows/install-integration-services.md).  
   
 ## <a name="extending-transactions"></a>Estensione delle transazioni  
  Poiché la transazione utilizzata dal pacchetto padre può essere estesa al pacchetto figlio, è possibile eseguire in un'unica operazione il commit o il rollback di tutte le operazioni eseguite dai due pacchetti. È ad esempio possibile eseguire il commit o il rollback degli inserimenti nel database eseguiti dal pacchetto padre a seconda dell'esito degli inserimenti nel database eseguiti dal pacchetto figlio e viceversa. Per altre informazioni, vedere [Transazioni ereditate](../inherited-transactions.md).  
@@ -98,7 +97,7 @@ ms.locfileid: "48129137"
  Per altre informazioni, vedere [Utilizzare i valori di variabili e parametri in un pacchetto figlio](../use-the-values-of-variables-and-parameters-in-a-child-package.md).  
   
 ### <a name="accessing-parent-package-variables"></a>Accesso alle variabili del pacchetto padre  
- Utilizzando l'attività Script è possibile consentire ai pacchetti figlio di accedere alle variabili del pacchetto padre. Quando si immette il nome della variabile del pacchetto padre nella pagina **Script** di **Editor attività Script**, non includere **Utente:** nel nome della variabile. In caso contrario, tramite il pacchetto figlio non viene individuata la variabile quando si esegue il pacchetto padre. Per altre informazioni sull'utilizzo dell'attività Script per accedere alle variabili del pacchetto padre, vedere questo post di blog [SSIS: l'accesso a variabili in un pacchetto padre](http://go.microsoft.com/fwlink/?LinkId=257729), sul sito Web consultingblogs.emc.com.  
+ Utilizzando l'attività Script è possibile consentire ai pacchetti figlio di accedere alle variabili del pacchetto padre. Quando si immette il nome della variabile del pacchetto padre nella pagina **Script** di **Editor attività Script**, non includere **User:** nel nome della variabile. In caso contrario, il pacchetto figlio non individua la variabile quando si esegue il pacchetto padre. Per altre informazioni sull'utilizzo dell'attività Script per accedere alle variabili del pacchetto padre, vedere questo post di blog, [SSIS: Accesso alle variabili in un pacchetto padre](https://go.microsoft.com/fwlink/?LinkId=257729), sul sito Web consultingblogs.emc.com.  
   
 ## <a name="configuring-the-execute-package-task"></a>Configurazione dell'attività Esegui pacchetto  
  È possibile impostare le proprietà tramite Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] o a livello di codice.  
@@ -111,14 +110,14 @@ ms.locfileid: "48129137"
   
  Per altre informazioni sull'impostazione di queste proprietà in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] , fare clic sull'argomento seguente:  
   
--   [Impostare le proprietà di un'attività o di un contenitore](../set-the-properties-of-a-task-or-container.md)  
+-   [Impostazione delle proprietà di un'attività o di un contenitore](../set-the-properties-of-a-task-or-container.md)  
   
 ## <a name="related-tasks"></a>Attività correlate  
   
 ## <a name="related-content"></a>Contenuto correlato  
   
--   Intervento nel blog concernente [SSIS: è necessario eseguire pacchetti figlio in-process o out-of-process?](http://go.microsoft.com/fwlink/?LinkId=220819), sul sito Web consultingblogs.emc.com.  
+-   Intervento nel blog concernente [SSIS: Esecuzione dei pacchetti figlio in-process o out-of-process? ](https://go.microsoft.com/fwlink/?LinkId=220819), sul sito Web consultingblogs.emc.com.  
   
--   Intervento nel blog concernente [SSIS: l'accesso a variabili in un pacchetto padre](http://go.microsoft.com/fwlink/?LinkId=257729), sul sito Web consultingblogs.emc.com.  
+-   Intervento nel blog concernente [SSIS: Accesso alle variabili in un pacchetto padre](https://go.microsoft.com/fwlink/?LinkId=257729), sul sito Web consultingblogs.emc.com.  
   
   

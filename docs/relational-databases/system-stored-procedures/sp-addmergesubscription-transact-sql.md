@@ -5,8 +5,7 @@ ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_addmergesubscription_TSQL
@@ -17,12 +16,12 @@ ms.assetid: a191d817-0132-49ff-93ca-76f13e609b38
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5b319f6065c31a33f30469a73286491c1d641dc3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e1fc809277151ee85608c9ca286185011cf52552
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47601119"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52822575"
 ---
 # <a name="spaddmergesubscription-transact-sql"></a>sp_addmergesubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -81,7 +80,7 @@ sp_addmergesubscription [ @publication= ] 'publication'
  [  **@subscriber_type=**] **'***subscriber_type***'**  
  Tipo di Sottoscrittore. *subscriber_type*viene **nvarchar(15)**, e può essere uno dei valori seguenti.  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |**locale** (impostazione predefinita)|Sottoscrittore noto solo al server di pubblicazione.|  
 |**Globale**|Sottoscrittore noto a tutti i server.|  
@@ -100,7 +99,7 @@ sp_addmergesubscription [ @publication= ] 'publication'
  [  **@frequency_type=**] *frequency_type*  
  Valore che indica la frequenza con cui viene eseguito l'agente di merge. *frequency_type* viene **int**, e può essere uno dei valori seguenti.  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |**1**|Una volta|  
 |**4**|Ogni giorno|  
@@ -113,7 +112,7 @@ sp_addmergesubscription [ @publication= ] 'publication'
  [  **@frequency_interval=**] *frequency_interval*  
  Giorno o giorni in cui viene eseguito l'agente di merge. *frequency_interval* viene **int**, e può essere uno dei valori seguenti.  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |**1**|Domenica|  
 |**2**|Lunedì|  
@@ -130,7 +129,7 @@ sp_addmergesubscription [ @publication= ] 'publication'
  [  **@frequency_relative_interval=**] *frequency_relative_interval*  
  Occorrenza di merge pianificata dell'intervallo di frequenza per ogni mese. *frequency_relative_interval* viene **int**, i possibili valori sono i seguenti.  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |**1**|Primo|  
 |**2**|Secondo|  
@@ -145,7 +144,7 @@ sp_addmergesubscription [ @publication= ] 'publication'
  [  **@frequency_subday=**] *frequency_subday*  
  È l'unità per *frequency_subday_interval*. *frequency_subday* viene **int**, e può essere uno dei valori seguenti.  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |**1**|Una volta|  
 |**2**|Secondo|  

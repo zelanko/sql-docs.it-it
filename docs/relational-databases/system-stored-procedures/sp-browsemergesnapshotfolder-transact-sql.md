@@ -5,8 +5,7 @@ ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_browsemergesnapshotfolder
@@ -17,12 +16,12 @@ ms.assetid: e248642f-5fea-4ed7-be1a-36ff75abcfde
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2ed37e8a26a36cb528aaeda0b22f18e5dcb84baa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 378d7dc0a02d356cf505bb37007d7aa6b4033df8
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47851959"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52818783"
 ---
 # <a name="spbrowsemergesnapshotfolder-transact-sql"></a>sp_browsemergesnapshotfolder (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +46,7 @@ sp_browsemergesnapshotfolder [@publication= ] 'publication'
   
 ## <a name="result-sets"></a>Set di risultati  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**snapshot_folder**|**nvarchar(2000)**|Percorso completo della directory snapshot.|  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 helpviewer_keywords:
 - statements [SQL Server], command prompt
@@ -24,12 +23,12 @@ ms.assetid: cf530d9e-0609-4528-8975-ab8e08e40b9a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bbf8009d078058e825360190b268c3cbb124bcdf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 33b7d8f60bfef89aef49733cf193f8aad2678ee7
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48123703"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52808873"
 ---
 # <a name="osql-utility"></a>Utilità osql
   L'utilità **osql** consente di immettere istruzioni [!INCLUDE[tsql](../includes/tsql-md.md)] , procedure di sistema e file script. Questa utilità comunica con il server tramite ODBC.  
@@ -46,7 +45,7 @@ ms.locfileid: "48123703"
 [-L] |  
 [  
   {  
-     {-Ulogin_id [-Ppassword]} | –E }  
+     {-Ulogin_id [-Ppassword]} | -E }  
      [-Sserver_name[\instance_name]] [-Hwksta_name] [-ddb_name]  
      [-ltime_out] [-ttime_out] [-hheaders]  
      [-scol_separator] [-wcolumn_width] [-apacket_size]  
@@ -137,7 +136,7 @@ C:\>osql
  Specifica il carattere di terminazione del comando. Per impostazione predefinita, i comandi vengono terminati e inviati a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tramite l'immissione di GO su una riga a sé stante. Se si reimposta il carattere di terminazione del comando, non utilizzare parole riservate di [!INCLUDE[tsql](../includes/tsql-md.md)] o caratteri con un significato speciale per il sistema operativo, indipendentemente dal fatto che siano preceduti da una barra rovesciata.  
   
  **-q "** *query* **"**  
- Esegue una query all'avvio di **osql** senza uscire da **osql** al termine della query. Si noti che l'istruzione della query non dovrebbe includere l'istruzione GO. Se si esegue una query da un file batch, è possibile utilizzare variabili in formato %variabile o variabili di ambiente in formato %variabile%. Esempio:  
+ Esegue una query all'avvio di **osql** senza uscire da **osql** al termine della query. Si noti che l'istruzione della query non dovrebbe includere l'istruzione GO. Se si esegue una query da un file batch, è possibile utilizzare variabili in formato %variabile o variabili di ambiente in formato %variabile%. Ad esempio:  
   
 ```  
 SET table=sys.objects  
@@ -207,7 +206,7 @@ osql -E -q "select name, object_id from %table%"
 ## <a name="osql-commands"></a>Comandi OSQL  
  Oltre alle istruzioni [!INCLUDE[tsql](../includes/tsql-md.md)] all'interno di **osql**, sono disponibili anche i comandi seguenti.  
   
-|Comando|Description|  
+|Comando|Descrizione|  
 |-------------|-----------------|  
 |GO|Esegue tutte le istruzioni immesse dopo l'ultimo comando GO.|  
 |RESET|Cancella tutte le istruzioni immesse.|  
@@ -269,13 +268,13 @@ osql -E -i titles.qry -o titles.res
 EXIT ( < query > )  
 ```  
   
- Esempio:  
+ Ad esempio:  
   
 ```  
 EXIT(SELECT @@ROWCOUNT)  
 ```  
   
- È inoltre possibile includere il parametro EXIT in un file batch. Esempio:  
+ È inoltre possibile includere il parametro EXIT in un file batch. Ad esempio:  
   
 ```  
 osql -E -Q "EXIT(SELECT COUNT(*) FROM '%1')"  
@@ -303,7 +302,7 @@ osql -E -Q "EXIT(SELECT COUNT(*) FROM '%1')"
 -   RAISERROR con stato 127.  
   
 > [!NOTE]  
->  Se in uno script **osql** si usa RAISERROR e viene generato un errore con stato 127, l'utilità **osql** viene chiusa e al client viene restituito l'ID di messaggio. Esempio:  
+>  Se in uno script **osql** si usa RAISERROR e viene generato un errore con stato 127, l'utilità **osql** viene chiusa e al client viene restituito l'ID di messaggio. Ad esempio:  
   
 ```  
 RAISERROR(50001, 10, 127)  
@@ -337,7 +336,7 @@ GO
   
 ## <a name="see-also"></a>Vedere anche  
  [Commento &#40;MDX&#41;](/sql/mdx/comment-mdx)   
- [-- &#40;Comment&#41; &#40;MDX&#41;](/sql/mdx/comment-mdx)   
+ [-- &#40;commento&#41; &#40;MDX&#41;](/sql/mdx/comment-mdx)   
  [CAST e CONVERT &#40;Transact-SQL&#41;](/sql/t-sql/functions/cast-and-convert-transact-sql)   
  [RAISERROR &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/raiserror-transact-sql)  
   

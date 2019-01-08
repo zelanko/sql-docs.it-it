@@ -1,5 +1,5 @@
 ---
-title: 'Esempio: recupero di informazioni sui dipendenti | Microsoft Docs'
+title: 'Esempio: Recupero di informazioni sui dipendenti | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,21 +12,21 @@ ms.assetid: 63cd6569-2600-485b-92b4-1f6ba09db219
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8b8a63758c6f2a3ebb9d04b02208266017f59ace
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5262c3697964cf82969669012afd8fb29a0b8e8e
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48064941"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52812223"
 ---
-# <a name="example-retrieving-employee-information"></a>Esempio: Recupero di informazioni sui dipendenti
+# <a name="example-retrieving-employee-information"></a>Esempio: Durante il recupero delle informazioni sui dipendenti
   In questo esempio vengono recuperati ID e nome di ogni dipendente. Nel database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] è possibile ottenere il valore employeeID dalla colonna BusinessEntityID della tabella Employee. I nomi dei dipendenti possono essere ottenuti dalla tabella Person. La colonna BusinessEntityID può essere utilizzata per unire in join le tabelle.  
   
  Si supponga di voler utilizzare la trasformazione FOR XML EXPLICIT per generare codice XML come illustrato di seguito:  
   
 ```  
 <Employee EmpID="1" >  
-  <Name FName="Ken" LName="Sánchez" />  
+  <Name FName="Ken" LName="S??nchez" />  
 </Employee>  
 ...  
 ```  
@@ -87,7 +87,7 @@ FOR XML EXPLICIT;
   
  `<Employee EmpID="1">`  
   
- `<Name FName="Ken" LName="Sánchez" />`  
+ `<Name FName="Ken" LName="S??nchez" />`  
   
  `</Employee>`  
   
@@ -109,7 +109,7 @@ FOR XML EXPLICIT;
   
  `1   NULL    1                NULL         NULL`  
   
- `2   1       1                Ken          Sánchez`  
+ `2   1       1                Ken          S??nchez`  
   
  `1   NULL    2                NULL         NULL`  
   

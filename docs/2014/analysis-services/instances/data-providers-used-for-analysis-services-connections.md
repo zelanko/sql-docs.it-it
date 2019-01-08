@@ -11,12 +11,12 @@ ms.assetid: 128f6dde-409d-4c12-9820-3305bab57b75
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4543c518d1fbc845793e994682df7df1bccc26dc
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 739723a42580c404d0529a6d84d907cf665f8270
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145223"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53368513"
 ---
 # <a name="data-providers-used-for-analysis-services-connections"></a>Provider di dati usati per le connessioni ad Analysis Services
   Analysis Services fornisce tre provider di dati per l'accesso al server e ai dati. Tutte le applicazioni che si connettono ad Analysis Services effettuano l'accesso mediante una di tali provider. Due provider, ADOMD.NET e Analysis Services Management Objects (AMO), sono provider di dati gestiti, mentre il provider OLE DB di Analysis Services (MSOLAP DLL) è un provider di dati nativo.  
@@ -44,7 +44,7 @@ ms.locfileid: "50145223"
   
  Il numero della build principale della versione iniziale di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] is 12.0.2000.9.  
   
- Per ulteriori dettagli su come ottenere le informazioni sulla versione e sulla build, vedere [Identificazione della versione e dell'edizione di SQL Server e relativi componenti](http://support.microsoft.com/kb/321185).  
+ Per ulteriori dettagli su come ottenere le informazioni sulla versione e sulla build, vedere [Identificazione della versione e dell'edizione di SQL Server e relativi componenti](https://support.microsoft.com/kb/321185).  
   
 ##  <a name="bkmk_LibUpdate"></a> Come determinare la versione dei provider di dati di Analysis Services  
  I provider di dati vengono installati con Analysis Services e con le applicazioni client che si connettono normalmente ai database di Analysis Services, ad esempio Excel.  
@@ -74,7 +74,7 @@ ms.locfileid: "50145223"
   
 #### <a name="find-the-data-providers-on-the-download-site"></a>Individuare i provider di dati nel sito di download  
   
-1.  Passare all' [Area download Microsoft](http://go.microsoft.com/fwlink/p/?LinkID=296473).  
+1.  Passare all' [Area download Microsoft](https://go.microsoft.com/fwlink/p/?LinkID=296473).  
   
 2.  Espandere **Istruzioni di installazione**.  
   

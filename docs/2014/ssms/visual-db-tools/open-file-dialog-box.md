@@ -4,21 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - vs.openfile
-- vs.openproject
 ms.assetid: 3e01b9f5-2b0a-4fb3-9da8-984d27d17b8a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f197c90dc20c3c3cff031e58af2e1cac19bcb706
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 57e89016641469cbb3215429ff0f2b9053f758c9
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48070857"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53328601"
 ---
 # <a name="open-file-dialog-box"></a>Finestra di dialogo Apri file
   Usare la finestra di dialogo **Apri file** per aprire un file esistente sul disco. o per aprire un file già aperto utilizzando opzioni di codifica della lingua diverse.  
@@ -68,7 +67,7 @@ ms.locfileid: "48070857"
  **Nuova cartella**  
  Visualizza la finestra di dialogo **Nuova cartella** . Questa opzione consente di creare una nuova cartella figlio sotto la cartella selezionata nell'elenco a discesa **Cerca in** .  
   
-## <a name="views"></a>Viste  
+## <a name="views"></a>Visualizzazioni  
  Include opzioni per la riorganizzazione e la visualizzazione del contenuto dell'elemento selezionato nell'elenco a discesa **Viste** .  
   
  **Anteprima**  
@@ -97,5 +96,3 @@ ms.locfileid: "48070857"
   
  **Connetti unità di rete**  
  Apre la finestra di dialogo **Connetti unità di rete** .  
-  
-  

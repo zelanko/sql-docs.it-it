@@ -1,5 +1,5 @@
 ---
-title: 'Lezione 2: Creazione di una sottoscrizione per una pubblicazione di tipo merge | Microsoft Docs'
+title: 'Lezione 2: Creazione di una sottoscrizione per la pubblicazione di tipo Merge | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,15 +13,15 @@ ms.assetid: 06722baa-9065-443e-b1d5-99036cf89074
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 7f1ab51a53e91a069e4d2a137d4908fa820df0f0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8634606ba3eaba8a38aefb66043c0d00e33660a2
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48186611"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590995"
 ---
 # <a name="lesson-2-creating-a-subscription-to-the-merge-publication"></a>Lezione 2: Creazione di una sottoscrizione per una pubblicazione di tipo merge
-  In questa lezione verranno descritte le procedure per creare una sottoscrizione in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Verranno quindi impostate le autorizzazioni per il database di sottoscrizione e verrà generato manualmente lo snapshot dei dati filtrati per la nuova sottoscrizione. Per eseguire questa lezione è necessario aver completato la lezione precedente [Lezione 1: Pubblicazione dei dati tramite la replica di tipo merge](lesson-1-publishing-data-using-merge-replication.md).  
+  In questa lezione verranno descritte le procedure per creare una sottoscrizione in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Verranno quindi impostate le autorizzazioni per il database di sottoscrizione e verrà generato manualmente lo snapshot dei dati filtrati per la nuova sottoscrizione. In questa lezione richiede di aver completato la lezione precedente, [lezione 1: Pubblicazione dei dati tramite replica di tipo Merge](lesson-1-publishing-data-using-merge-replication.md).  
   
 ### <a name="to-create-the-subscription"></a>Per creare la sottoscrizione  
   
@@ -41,7 +41,7 @@ ms.locfileid: "48186611"
   
 7.  Nella finestra di dialogo **Nuovo database** immettere **SalesOrdersReplica** nella casella **Nome database** , selezionare **OK**e fare clic su **Avanti**.  
   
-8.  Nella pagina Sicurezza agente di merge fare clic sul pulsante con i puntini di sospensione (**…**), immettere \<*Nome_computer>***\repl_merge** nella casella **Account processo**, specificare la password per l'account, fare clic su **OK**, su **Avanti** e di nuovo su **Avanti**.  
+8.  Nella pagina sicurezza agente di Merge, fare clic sui puntini di sospensione (**...** ) pulsante, immettere \< _nome_macchina >_**\repl_merge** nel **account processo** casella, specificare la password per questo account, fare clic su **OK**, fare clic su **successiva**, quindi fare clic su **Next** nuovamente.  
   
 9. Nella pagina Inizializzazione sottoscrizioni selezionare **Alla prima sincronizzazione** dall'elenco **Quando** , fare clic su **Avanti**e di nuovo su **Avanti** .  
   
@@ -53,7 +53,7 @@ ms.locfileid: "48186611"
   
 1.  Connettersi al Sottoscrittore in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], espandere **Database**, **SalesOrdersReplica**e **Sicurezza**, fare clic con il pulsante destro del mouse su **Utenti**e scegliere **Nuovo utente**.  
   
-2.  Nella pagina **Generale** immettere \<*Nome_computer>***\repl_merge** nella casella **Nome utente**, fare clic sul pulsante con i puntini di sospensione (**…**), fare clic su **Sfoglia**, selezionare \<*Nome_computer>***\repl_merge**, fare clic su **OK**, su **Controlla nomi** e su **OK**.  
+2.  Nel **generali** pagina, immettere \< _nome_computer >_**\repl_merge** nel **nome utente** fare clic sul pulsante con i puntini di sospensione ( **...** ) e fare clic **esplorare**, selezionare \< _nome_macchina >_**\repl_merge**, fare clic su **OK**, fare clic su **Controlla nomi**, quindi fare clic su **OK**.  
   
 3.  In **Appartenenza a ruoli del database**selezionare **db_owner**e fare clic su **OK** per creare l'utente.  
   
@@ -72,7 +72,7 @@ ms.locfileid: "48186611"
 5.  Selezionare la partizione appena aggiunta, selezionare **Genera gli snapshot selezionati adesso**e fare clic su **OK**.  
   
 ## <a name="next-steps"></a>Passaggi successivi  
- In questo modo è stata creata una sottoscrizione per la pubblicazione di tipo merge ed è stato generato lo snapshot dei dati filtrati per la nuova partizione dati della sottoscrizione in modo che sia disponibile all'inizializzazione della sottoscrizione. Il passaggio successivo consiste nella concessione dei diritti all'agente di merge nel database di sottoscrizione e nell'esecuzione dell'agente di merge per l'avvio della sincronizzazione e l'inizializzazione della sottoscrizione. Vedere [Lezione 3: Sincronizzazione della sottoscrizione con la pubblicazione di tipo merge](lesson-3-synchronizing-the-subscription-to-the-merge-publication.md).  
+ In questo modo è stata creata una sottoscrizione per la pubblicazione di tipo merge ed è stato generato lo snapshot dei dati filtrati per la nuova partizione dati della sottoscrizione in modo che sia disponibile all'inizializzazione della sottoscrizione. Il passaggio successivo consiste nella concessione dei diritti all'agente di merge nel database di sottoscrizione e nell'esecuzione dell'agente di merge per l'avvio della sincronizzazione e l'inizializzazione della sottoscrizione. Vedere [lezione 3: La sincronizzazione della sottoscrizione per la pubblicazione di tipo Merge](lesson-3-synchronizing-the-subscription-to-the-merge-publication.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Subscribe to Publications](subscribe-to-publications.md)   

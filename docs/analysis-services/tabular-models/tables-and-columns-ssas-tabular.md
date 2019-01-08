@@ -1,5 +1,5 @@
 ---
-title: Tabelle e colonne | Documenti Microsoft
+title: Tabelle e colonne del modello tabulare di Analysis Services | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 10133b2843c01f16134c028140394247c2669236
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: f7a9844032ad24de1c81144ca742bfb185aecc36
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34043425"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072158"
 ---
 # <a name="tables-and-columns"></a>Tabelle e colonne 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "34043425"
   
 -   Una combinazione di dati relazionali e tabulari (HTML) copiati e incollati nella tabella.  
   
- Quando si importano dati, ogni tabella o vista, foglio o file di dati viene aggiunto come tabella in Progettazione modelli. Di solito, vengono aggiunti dati di varie origini in schede separate, tuttavia è possibile unire dati in un'unica tabella usando le opzioni **Incolla** e **Accoda il contenuto degli Appunti**. Per ulteriori informazioni, vedere [copiare e incollare dati](../../analysis-services/tabular-models/ssas-import-data-copy-and-paste-data.md).  
+ Quando si importano dati, ogni tabella o vista, foglio o file di dati viene aggiunto come tabella in Progettazione modelli. Di solito, vengono aggiunti dati di varie origini in schede separate, tuttavia è possibile unire dati in un'unica tabella usando le opzioni **Incolla** e **Accoda il contenuto degli Appunti**. Per altre informazioni, vedere [copiare e incollare dati](../../analysis-services/tabular-models/ssas-import-data-copy-and-paste-data.md).  
   
  Dopo aver aggiunto i dati necessari, è possibile creare ulteriori relazioni tra le tabelle, ricercare o fare riferimento a valori correlati in altre tabelle oppure creare valori derivati aggiungendo nuove colonne calcolate.  
   
@@ -57,7 +57,7 @@ ms.locfileid: "34043425"
   
 ##  <a name="bkmk_related_tasks"></a> Attività correlate  
   
-|Argomento|Description|  
+|Argomento|Descrizione|  
 |-----------|-----------------|  
 |[Aggiungere colonne a una tabella](../../analysis-services/tabular-models/add-columns-to-a-table-ssas-tabular.md)|Viene descritto come aggiungere una colonna di origine a una definizione della tabella.|  
 |[Eliminare una colonna](../../analysis-services/tabular-models/delete-a-column-ssas-tabular.md)|Viene descritto come eliminare una colonna di tabella di un modello utilizzando Progettazione modelli o la finestra di dialogo Proprietà tabella.|  
@@ -67,7 +67,7 @@ ms.locfileid: "34043425"
 |[Eliminare una tabella](../../analysis-services/tabular-models/delete-a-table-ssas-tabular.md)|Viene descritto come eliminare le tabelle non più necessarie nel database dell'area di lavoro modello.|  
 |[Rinominare una tabella o una colonna](../../analysis-services/tabular-models/rename-a-table-or-column-ssas-tabular.md)|Viene descritto come rinominare una tabella o una colonna per renderla più identificabile nel modello.|  
 |[Impostare il tipo di dati di una colonna](../../analysis-services/tabular-models/set-the-data-type-of-a-column-ssas-tabular.md)|Viene descritto come modificare il tipo di dati di una colonna. Il tipo di dati consente di definire la modalità di archiviazione e presentazione dei dati della colonna.|  
-|[Nascondere o bloccare colonne](../../analysis-services/tabular-models/hide-or-freeze-columns-ssas-tabular.md)|Viene descritto come nascondere le colonne che non si desidera visualizzare e come mantenere visibile un'area di un modello mentre si scorre fino un'altra area del modello bloccando colonne specifiche in un'area.|  
+|[Nascondere o bloccare colonne](../../analysis-services/tabular-models/hide-or-freeze-columns-ssas-tabular.md)|Viene descritto come nascondere le colonne che non si desidera visualizzare e come mantenere visibile un'area di un modello durante lo scorrimento a un'altra area del modello bloccando colonne specifiche (blocco) in un'area.|  
 |[Colonne calcolate](../../analysis-services/tabular-models/ssas-calculated-columns.md)|Negli argomenti di questa sezione viene descritto come utilizzare le colonne calcolate per aggiungere dati aggregati al modello.|  
 |[Filtrare e ordinare dati](http://msdn.microsoft.com/library/55ebd7a6-2458-4398-911f-fcfeb2413f1b)|Negli argomenti di questa sezione viene descritto come filtrare oppure ordinare i dati utilizzando i controlli disponibili in Progettazione modelli.|  
   

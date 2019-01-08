@@ -15,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 836e9724f05caa82eb0be01e6ab49cfa1519136e
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: cd144d8e32433971368649eb9c80b402c15019e7
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51671020"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53216030"
 ---
 # <a name="bulk-copy-by-using-a-format-file-odbc"></a>Eseguire una copia bulk utilizzando un file di formato (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "51671020"
   
     -   Nome di un file di dati per la ricezione di eventuali messaggi di errore della copia bulk (specificare NULL se non si desidera che venga creato un file dei messaggi).  
   
-    -   Direzione della copia: DB_IN dal file alla tabella o alla vista.  
+    -   La direzione della copia: DB_IN dal file alla tabella o della vista.  
   
 5.  Chiamare [bcp_readfmt](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-readfmt.md) per leggere il file di formato che descriva il file di dati da utilizzare per l'operazione di copia bulk.  
   
@@ -57,7 +57,7 @@ ms.locfileid: "51671020"
   
  In questo esempio viene eseguita la connessione all'istanza predefinita di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nel computer in uso. Per connettersi a un'istanza denominata, modificare la definizione dell'origine dati ODBC per specificare l'istanza in base al formato: server\istanzadenominata. Per impostazione predefinita, [!INCLUDE[ssExpress](../../../includes/ssexpress-md.md)] viene installato in un'istanza denominata.  
   
- Eseguire il primo listato di codice ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) per creare la tabella che verrà utilizzata dall'esempio.  
+ Eseguire il primo ( [!INCLUDE[tsql](../../../includes/tsql-md.md)]) listato per creare la tabella che verrà usato l'esempio di codice.  
   
  Copiare il secondo listato di codice e incollarlo in un file denominato Bcpfmt.fmt. Ogni colonna nella tabella è separata da un carattere di tabulazione.  
   
@@ -65,7 +65,7 @@ ms.locfileid: "51671020"
   
  Compilare il quarto listato di codice (C++) con odbc32.lib e odbcbcp.lib. Se è stata eseguita la compilazione con MSBuild.exe, copiare Bcpfmt.fmt e Bcpodbc.bcp dalla directory del progetto in quella contenente il file con estensione exe e quindi richiamare tale file.  
   
- Eseguire il quinto listato di codice ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) per eliminare la tabella utilizzata dall'esempio.  
+ Eseguire il quinto ( [!INCLUDE[tsql](../../../includes/tsql-md.md)]) listato per eliminare la tabella utilizzata dall'esempio di codice.  
   
 ```  
 use AdventureWorks  

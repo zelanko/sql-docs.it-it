@@ -20,12 +20,12 @@ ms.assetid: e321d460-e997-4527-aee6-207cf5a498e9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d2df20e27949b82a9f2e827984f0c2fb77a3814b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d85f9fcf788dc5ccbba4b2675cbd7caa34dd242c
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47731989"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53209057"
 ---
 # <a name="sqlgetstmtattr-function"></a>Funzione SQLGetStmtAttr
 **Conformità**  
@@ -83,7 +83,7 @@ SQLRETURN SQLGetStmtAttr(
 ## <a name="diagnostics"></a>Diagnostica  
  Quando **SQLGetStmtAttr** restituisce SQL_ERROR o SQL_SUCCESS_WITH_INFO, un valore SQLSTATE associato possono essere ottenuti chiamando **SQLGetDiagRec** con un *HandleType* di SQL _HANDLE_STMT e un *gestiscono* dei *StatementHandle*. Nella tabella seguente sono elencati i valori SQLSTATE comunemente restituiti da **SQLGetStmtAttr** e illustra ognuna nel contesto di questa funzione; la notazione "(DM)" precede le descrizioni di SQLSTATE restituiti da Gestione Driver. Il codice restituito a ogni valore SQLSTATE è SQL_ERROR, se non specificato diversamente.  
   
-|SQLSTATE|Errore|Description|  
+|SQLSTATE|Errore|Descrizione|  
 |--------------|-----------|-----------------|  
 |01000|Avviso generale|Messaggio informativo specifico del driver. (Funzione restituisce SQL_SUCCESS_WITH_INFO).|  
 |01004|Stringa troncati di dati a destra|I dati restituiti nella  *\*ValuePtr* sono stati troncati per essere *BufferLength* meno la lunghezza di un carattere di terminazione null. Viene restituita la lunghezza del valore della stringa non troncato **StringLengthPtr*. (Funzione restituisce SQL_SUCCESS_WITH_INFO).|  

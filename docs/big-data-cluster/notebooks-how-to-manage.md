@@ -1,18 +1,20 @@
 ---
-title: Come gestire i notebook in Azure Data Studio | Microsoft Docs
-description: ''
+title: Gestire i notebook in Azure Data Studio
+titleSuffix: SQL Server 2019 big data clusters
+description: Informazioni su come gestire i notebook in Azure Data Studio. Ciò include l'apertura di notebook, essi un notevole risparmio e modificando la connessione di cluster di big data.
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 10/02/2018
+ms.date: 12/06/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: ca756c81dcf54f42cb46be4b0f412ce9630814af
-ms.sourcegitcommit: 4832ae7557a142f361fbf0a4e2d85945dbf8fff6
+ms.custom: seodec18
+ms.openlocfilehash: 998692f56f75e890ef0b4f8e40e256f2ebbd54de
+ms.sourcegitcommit: edf7372cb674179f03a330de5e674824a8b4118f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48796743"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53246590"
 ---
 # <a name="how-to-manage-notebooks-in-azure-data-studio"></a>Come gestire i notebook in Azure Data Studio
 
@@ -22,8 +24,11 @@ Questo articolo illustra come aprire e salvare i file di notebook in Azure Data 
 
 Questo articolo presuppone che si disponga già di un notebook che si desidera usare in Azure Data Studio. Se si desidera creare un notebook, vedere [come usare i notebook in fase di anteprima di SQL Server 2019](notebooks-guidance.md). Per usare i notebook in Azure Data Studio, è necessario soddisfare i prerequisiti seguenti:
 
-- [Installare gli strumenti dei big data più recenti per l'anteprima di SQL Server 2019](deploy-big-data-tools.md).
 - [Distribuire un cluster di big data](quickstart-big-data-cluster-deploy.md).
+- [Strumenti di big data di SQL Server 2019](deploy-big-data-tools.md):
+   - **Azure Data Studio**
+   - **Estensione di SQL Server 2019**
+   - **Kubectl**
 
 ## <a name="open-a-notebook"></a>Apre un notebook
 
@@ -43,7 +48,7 @@ Fare clic su **aprire Notebook** nel dashboard per aprire la finestra di dialogo
 
 ### <a name="command-palette"></a>Riquadro comandi
 
-Usare i comandi **File: Apri** nel riquadro comandi digitando Cmd + MAIUSC + P (nel Mac) e Ctrl + MAIUSC + P (in Windows).
+Usare comandi **File: Apri** nel riquadro comandi digitando Cmd + MAIUSC + P (nel Mac) e Ctrl + MAIUSC + P (in Windows).
 
 ![Aprire la finestra di dialogo Apri File immettendo File:Open nel riquadro comandi](./media/notebooks-how-to-manage/open-file-3.png)
 
@@ -57,7 +62,7 @@ Usare i comandi **File: Apri** nel riquadro comandi digitando Cmd + MAIUSC + P (
 > I metodi seguenti attualmente non salvano le modifiche ai blocchi appunti:
 >
 > - **Salva file**, **Salva File con nome...**  e **File Salva tutto** comandi dal menu File.
-> - **File: Salvataggio** comandi immessi nel riquadro comandi.
+> - **File: Salvare** comandi immessi nel riquadro comandi.
 
 ## <a name="change-the-big-data-cluster"></a>Modificare i cluster di big data
 

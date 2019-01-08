@@ -1,5 +1,5 @@
 ---
-title: Impostare il tipo di dati di una colonna | Documenti Microsoft
+title: Tipo di dati colonna in un modello tabulare di Analysis Services | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 18aa18d9c9ee7fbc0291d9961e144263053710dd
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 595f2cf0c95cf09241dd2189c380deb3ce7b5760
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34045805"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53071958"
 ---
 # <a name="set-the-data-type-of-a-column"></a>Impostare il tipo di dati di una colonna 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "34045805"
   
  Nei modelli Business Intelligence Semantic Model sono disponibili i tipi di dati seguenti:  
   
--   **Text**  
+-   **per**  
   
 -   **Numero decimale**  
   
@@ -73,7 +73,7 @@ ms.locfileid: "34045805"
   
  Se il tipo di dati è supportato, ma tramite Progettazione modelli vengono individuati valori non supportati all'interno del nuovo tipo di dati, verrà visualizzato un altro errore e sarà necessario correggere i valori dei dati prima di procedere.  
   
- Per informazioni dettagliate sui tipi di dati utilizzati in modelli business intelligence semantic Model, il modo in cui convertire in modo implicito e come i diversi tipi di dati vengono utilizzati nelle formule, vedere [tipi di dati supportati](../../analysis-services/tabular-models/data-types-supported-ssas-tabular.md).  
+ Per informazioni dettagliate sui tipi di dati utilizzati nei modelli business intelligence Semantic Model, come vengono convertiti in modo implicito e come i diversi tipi di dati viene utilizzati nelle formule, vedere [tipi di dati supportati](../../analysis-services/tabular-models/data-types-supported-ssas-tabular.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Tipi di dati supportati](../../analysis-services/tabular-models/data-types-supported-ssas-tabular.md)  

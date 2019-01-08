@@ -1,5 +1,5 @@
 ---
-title: Creare e gestire indicatori KPI | Documenti Microsoft
+title: Creare e gestire indicatori KPI nei modelli tabulari di Analysis Services | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 8740cfbcf8448a0344d68e182a7cbf379c458a68
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 1ae17e727367b702967ec879ed8469973ab3b812
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34042115"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072088"
 ---
-# <a name="create-and-manage-kpis"></a>Creare e gestire indicatori KPI. 
+# <a name="create-and-manage-kpis"></a>Creare e gestire indicatori KPI 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-  In questo articolo viene descritto come creare, modificare o eliminare un indicatore KPI (Key Performance Indicator) in un modello tabulare. Per creare un indicatore KPI, selezionare una misura tramite cui venga restituito il valore di base dell'indicatore KPI. Successivamente, utilizzare la finestra di dialogo Indicatore di prestazioni chiave per selezionare una seconda misura o un valore assoluto tramite cui venga restituito un valore di destinazione. È quindi possibile definire le soglie dello stato tramite cui si misurano le prestazioni tra le misure di base e di destinazione.  
+  Questo articolo descrive come creare, modificare o eliminare un indicatore KPI (Key Performance Indicator) in un modello tabulare. Per creare un indicatore KPI, si seleziona una misura che restituisca un valore di Base dell'indicatore KPI. Successivamente, utilizzare la finestra di dialogo Indicatore di prestazioni chiave per selezionare una seconda misura o un valore assoluto tramite cui venga restituito un valore di destinazione. È quindi possibile definire le soglie dello stato tramite cui si misurano le prestazioni tra le misure di base e di destinazione.  
   
 ## <a name="tasks"></a>Attività  
   
@@ -42,7 +42,7 @@ ms.locfileid: "34042115"
 5.  Fare clic su **Descrizioni**, quindi digitare le descrizioni per l'indicatore KPI, il valore, lo stato e la destinazione.  
   
 > [!TIP]  
->  È possibile utilizzare la funzionalità Analizza in Excel per testare l'indicatore KPI. Per ulteriori informazioni, vedere [analizza in Excel](../../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md).  
+>  È possibile utilizzare la funzionalità Analizza in Excel per testare l'indicatore KPI. Per altre informazioni, vedere [analizza in Excel](../../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md).  
   
 ###  <a name="bkmk_edit_KPI"></a> Per modificare un indicatore KPI  
   
@@ -56,7 +56,7 @@ ms.locfileid: "34042115"
   
 -   Nella griglia delle misure fare clic con il pulsante destro del mouse sulla misura che viene usata come misura di base (valore) dell'indicatore KPI, quindi scegliere **Elimina KPI**.  
   
-## <a name="alt-shortcuts"></a>Tasti di scelta  
+## <a name="alt-shortcuts"></a>Tasti di scelta rapida ALT  
   
 |Sezione interfaccia utente|Comando tramite tasto|  
 |----------------|-----------------|  

@@ -14,15 +14,15 @@ ms.assetid: 85afd00f-e8d7-4ef7-9174-2ff84d82f960
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: c578e5e56d575f3d324d8585f73a9891b2ad00ca
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3204e8f3f47dc77f38e9690bf34c0e6b69c79fdc
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48091681"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53353155"
 ---
 # <a name="performance-snapshots-caching-reporting-services"></a>Prestazioni, snapshot, memorizzazione nella cache (Reporting Services)
-  Le prestazioni del server di report sono influenzate da una combinazione di fattori che includono hardware, numero di utenti simultanei che accedono ai report, quantità di dati in un report e formato di output. Per comprendere i fattori relativi alle prestazioni specifici dell'installazione e quali rimedi produrranno i risultati desiderati, sarà necessario ottenere dati di base ed eseguire test. Per ulteriori informazioni su strumenti e linee guida, vedere le pubblicazioni seguenti su MSDN relative all' [ottimizzazione delle prestazioni di Reporting Services](http://blogs.msdn.com/b/sqlcat/archive/2013/10/30/reporting-services-performance-and-optimization.aspx) e all' [utilizzo di Visual Studio 2005 per eseguire test di carico in un server di report di SQL Server 2005 Reporting Services](http://go.microsoft.com/fwlink/?LinkID=77519).  
+  Le prestazioni del server di report sono influenzate da una combinazione di fattori che includono hardware, numero di utenti simultanei che accedono ai report, quantità di dati in un report e formato di output. Per comprendere i fattori relativi alle prestazioni specifici dell'installazione e quali rimedi produrranno i risultati desiderati, sarà necessario ottenere dati di base ed eseguire test. Per altre informazioni su strumenti e linee guida, vedere le pubblicazioni seguenti su MSDN: [Ottimizzazione delle prestazioni di Reporting Services](https://blogs.msdn.com/b/sqlcat/archive/2013/10/30/reporting-services-performance-and-optimization.aspx) e [tramite Visual Studio 2005 per eseguire test di carico in un SQL Server 2005 Reporting Services Report Server](https://go.microsoft.com/fwlink/?LinkID=77519).  
   
  I principi generali da considerare includono gli aspetti seguenti:  
   
@@ -38,32 +38,32 @@ ms.locfileid: "48091681"
   
 -   Per individuare la quantità di tempo necessario per elaborare un report e altre misure relative all'utilizzo, esaminare il log di esecuzione del server di report. Per altre informazioni, vedere [Log di esecuzione Server di Report e vista ExecutionLog3](report-server-executionlog-and-the-executionlog3-view.md).  
   
--   Per altre informazioni su come mitigare i problemi di prestazioni ottimizzando le impostazioni di configurazione Gestione di memoria, vedere [configurare la memoria disponibile per applicazioni del Server di Report](../report-server/configure-available-memory-for-report-server-applications.md).  
+-   Per altre informazioni su come limitare i problemi di prestazioni ottimizzando le impostazioni di configurazione di Gestione memoria, vedere [Configurare la memoria disponibile per applicazioni del server di report](../report-server/configure-available-memory-for-report-server-applications.md).  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Monitoraggio delle prestazioni del server di report](monitoring-report-server-performance.md)  
  Descrive gli oggetti relativi alle prestazioni che è possibile utilizzare per tenere traccia del carico di elaborazione nel server.  
   
- [Impostare le proprietà di elaborazione dei report](set-report-processing-properties.md)  
+ [Impostare proprietà di elaborazione dei report](set-report-processing-properties.md)  
  Descrive come configurare un report per l'esecuzione su richiesta, dalla cache o in base a una pianificazione come snapshot del report.  
   
  [Configurare la memoria disponibile per applicazioni del server di report](../report-server/configure-available-memory-for-report-server-applications.md)  
  Viene descritto come è possibile ignorare il comportamento predefinito per la gestione della memoria.  
   
- [La memorizzazione dei report &#40;SSRS&#41;](caching-reports-ssrs.md)  
+ [Memorizzazione dei report nella cache &#40;SSRS&#41;](caching-reports-ssrs.md)  
  Descrive il comportamento di memorizzazione del report nella cache in un server di report.  
   
- [Cache set di dati condivisi &#40;SSRS&#41;](cache-shared-datasets-ssrs.md)  
+ [Memorizzare nella cache set di dati condivisi &#40;SSRS&#41;](cache-shared-datasets-ssrs.md)  
  Descrive il comportamento di memorizzazione del set di dati condiviso nella cache in un server di report.  
   
  [Elaborare report di grandi dimensioni](process-large-reports.md)  
  Offre indicazioni su come configurare e distribuire un report di grandi dimensioni.  
   
- [Impostazione dei valori di timeout per l'elaborazione di Report e set di dati condiviso &#40;SSRS&#41;](setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md)  
+ [Impostazione dei valori di timeout per l'elaborazione di report e di set di dati condivisi &#40;SSRS&#41;](setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md)  
  Illustra come impostare i timeout relativi all'esecuzione del report e di query.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Gestire un processo in esecuzione](../subscriptions/manage-a-running-process.md)   
+ [Manage a Running Process](../subscriptions/manage-a-running-process.md)   
  [Verifica dell'esecuzione di un report](verifying-a-report-run.md)  
   
   

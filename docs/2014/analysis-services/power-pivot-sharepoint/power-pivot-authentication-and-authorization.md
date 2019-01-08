@@ -11,12 +11,12 @@ ms.assetid: 48230cc0-4037-4f99-8360-dadf4bc169bd
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: bc2118315b40ab89d19d562b364a0a0250f7f3c2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4f28da387576eee3d9619e4fc817485beb5c8662
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48165751"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53377861"
 ---
 # <a name="powerpivot-authentication-and-authorization"></a>Autenticazione e autorizzazione di PowerPivot
   Una distribuzione PowerPivot per SharePoint eseguita in una farm di SharePoint 2010 utilizza il sottosistema di autenticazione e il modello di autorizzazione forniti dai server SharePoint. L'infrastruttura di sicurezza di SharePoint si estende al contenuto e alle operazioni di PowerPivot poiché tutto il contenuto correlato a PowerPivot viene archiviato nei database del contenuto di SharePoint e tutte le operazioni correlate a PowerPivot vengono effettuate dai servizi condivisi PowerPivot nella farm. L'autenticazione degli utenti che richiedono una cartella di lavoro contenente dati PowerPivot avviene tramite un'identità utente di SharePoint basata sull'identità utente di Windows. Le autorizzazioni di visualizzazione nella cartella di lavoro consentono di determinare se la richiesta viene concessa o negata.  
@@ -25,7 +25,7 @@ ms.locfileid: "48165751"
   
  Fare clic sui collegamenti seguenti per leggere sezioni specifiche di questo argomento:  
   
- [Autenticazione di Windows utilizzando modalità classica Accedi](power-pivot-authentication-and-authorization.md#bkmk_auth)  
+ [Autenticazione di Windows utilizzando l'accesso in modalità classica](power-pivot-authentication-and-authorization.md#bkmk_auth)  
   
  [Operazioni di PowerPivot che richiede l'autorizzazione utente](#UserConnections)  
   
@@ -88,7 +88,7 @@ ms.locfileid: "48165751"
 |Amministratore di farm o di servizio|Installazione, abilitazione e configurazione di servizi e applicazioni.<br /><br /> Utilizzo del dashboard di gestione PowerPivot e visualizzazione dei report amministrativi.|  
 |Controllo completo|Attivazione dell'integrazione delle caratteristiche di PowerPivot a livello di raccolta siti.<br /><br /> Creazione di una libreria di raccolta PowerPivot.<br /><br /> Creazione di una libreria di feed di dati.|  
 |Collaborazione|Aggiunta, modifica e download di cartelle di lavoro di PowerPivot.<br /><br /> Configurazione dell'aggiornamento dati.<br /><br /> Creazione di cartelle di lavoro e report basati sulle cartelle di lavoro di PowerPivot in un sito di SharePoint.<br /><br /> Creazione di documenti di servizio dati in una libreria di feed di dati|  
-|lettura|Accesso alle cartelle di lavoro di PowerPivot come un'origine dati esterna, dove l'URL della cartella di lavoro viene immesso in modo esplicito in una finestra di dialogo di connessione, ad esempio nella Connessione guidata dati di Excel.|  
+|lettura|Accedere a cartelle di lavoro di PowerPivot come un'origine dati esterna, dove l'URL della cartella di lavoro viene immesso in modo esplicito in una finestra di dialogo di connessione (ad esempio, nella connessione guidata dati di Excel).|  
 |Solo visualizzazione|Visualizzazione delle cartelle di lavoro di PowerPivot.<br /><br /> Visualizzazione della cronologia dell'aggiornamento dati.<br /><br /> Connessione di una cartella di lavoro locale a una cartella di lavoro di PowerPivot su un sito di SharePoint, per la ridefinizione degli scopi dei relativi dati in altri modi.<br /><br /> Download di uno snapshot della cartella di lavoro. Lo snapshot è una copia statica dei dati, senza filtri dei dati, filtri, formule o connessioni dati. Il contenuto dello snapshot è simile alla copia di valori cella dalla finestra del browser.|  
   
 ##  <a name="excel"></a> Considerazioni sulla sicurezza di Excel Services per le cartelle di lavoro di PowerPivot  
@@ -101,7 +101,7 @@ ms.locfileid: "48165751"
 > [!NOTE]  
 >  La maggior parte delle impostazioni correlate alla sicurezza si applicano ai percorsi attendibili. Se si desidera mantenere valori predefiniti o utilizzare valori diversi per siti differenti, è possibile creare un percorso attendibile aggiuntivo per siti che contengono dati PowerPivot, quindi configurare le impostazioni seguenti solo per quel sito. Per altre informazioni, vedere [Creare un percorso attendibile per i siti PowerPivot in Amministrazione centrale](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md).  
   
-|Area|Impostazione|Description|  
+|Area|Impostazione|Descrizione|  
 |----------|-------------|-----------------|  
 |Applicazione Web|Provider di autenticazione di Windows|PowerPivot converte un token delle richieste ottenute da Excel Services in un'identità utente di Windows. Qualsiasi applicazione Web che utilizza Excel Services come risorsa deve essere configurata per l'utilizzo del provider di autenticazione di Windows.|  
 |Percorso attendibile|Tipo percorso|È necessario impostare questo valore su **Microsoft SharePoint Foundation**. I server PowerPivot recuperano una copia del file con estensione xlsx e la caricano su un server Analysis Services nella farm. Il server può recuperare solo file con estensione xlsx da una raccolta contenuto.|  
@@ -115,6 +115,6 @@ ms.locfileid: "48165751"
  [Configurare gli account del servizio PowerPivot](configure-power-pivot-service-accounts.md)   
  [Configurare PowerPivot Account di aggiornamento dati automatico &#40;PowerPivot per SharePoint&#41;](../configure-unattended-data-refresh-account-powerpivot-sharepoint.md)   
  [Creare un percorso attendibile per siti PowerPivot in Amministrazione centrale](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)   
- [Architettura di sicurezza di PowerPivot](http://go.microsoft.com/fwlink/?linkID=220970)  
+ [Architettura di sicurezza di PowerPivot](https://go.microsoft.com/fwlink/?linkID=220970)  
   
   

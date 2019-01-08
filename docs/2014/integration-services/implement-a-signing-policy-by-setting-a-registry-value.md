@@ -13,12 +13,12 @@ ms.assetid: 64f6966f-2292-401f-acb1-2ccb5aee484a
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2968561d90f1bc45f50f040d7d303b969cc3c3b4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f8daa6582f18d9c5279e7539dd9c3740d90e36d2
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48103021"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53353205"
 ---
 # <a name="implement-a-signing-policy-by-setting-a-registry-value"></a>Implementazione di criteri per le firme impostando un valore del Registro di sistema
   È possibile utilizzare un valore facoltativo del Registro di sistema per gestire i criteri dell'organizzazione per il caricamento dei pacchetti firmati o non firmati. Se si utilizza questo valore del Registro di sistema, è necessario crearlo in ogni computer in cui verranno eseguiti i pacchetti di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] e in cui si desidera applicare i criteri. Dopo l'impostazione del valore del Registro di sistema, [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] controllerà o verificherà le firme prima di caricare i pacchetti.  
@@ -35,7 +35,7 @@ ms.locfileid: "48103021"
   
  Nella tabella seguente sono elencati i valori validi dei dati DWORD e i criteri associati.  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |0|Nessuna restrizione amministrativa.|  
 |1|Blocco delle firme non valide.<br /><br /> Con questa impostazione non vengono bloccati i pacchetti non firmati.|  
@@ -43,7 +43,7 @@ ms.locfileid: "48103021"
 |3|Blocco delle firme non valide e non attendibili e dei pacchetti non firmati<br /><br /> Con questa impostazione vengono bloccate anche le firme a generazione automatica.|  
   
 > [!NOTE]  
->  L'impostazione consigliata per `BlockedSignatureStates` è 3. Questa impostazione garantisce la massima protezione da pacchetti non firmati o firme non valide o non attendibili, ma potrebbe non essere appropriata per tutte le circostanze. Per altre informazioni su come firmare elementi digitali, vedere l'argomento "[Introduzione alla firma di codice](http://go.microsoft.com/fwlink/?LinkId=51414)" in MSDN Library.  
+>  L'impostazione consigliata per `BlockedSignatureStates` è 3. Questa impostazione garantisce la massima protezione da pacchetti non firmati o firme non valide o non attendibili, ma potrebbe non essere appropriata per tutte le circostanze. Per altre informazioni su come firmare elementi digitali, vedere l'argomento "[Introduzione alla firma di codice](https://go.microsoft.com/fwlink/?LinkId=51414)" in MSDN Library.  
   
 ### <a name="to-implement-a-signing-policy-for-packages"></a>Per implementare criteri per le firme per i pacchetti  
   
@@ -55,7 +55,7 @@ ms.locfileid: "48103021"
   
 4.  Fare clic con il pulsante destro del mouse su **MSDTS**, scegliere **Nuovo**e quindi **Valore DWORD**.  
   
-5.  Aggiornare il nome del nuovo valore da `BlockedSignatureStates`.  
+5.  Aggiornare il nome del nuovo valore impostandolo su `BlockedSignatureStates`.  
   
 6.  Fare doppio clic su `BlockedSignatureStates` e fare clic su **Modify**.  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords:
 - contained database, threats
@@ -13,18 +12,18 @@ ms.assetid: 026ca5fc-95da-46b6-b882-fa20f765b51d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 649d92089f8e46a9618e7416ee959d153385f1c7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 89a988a5d664e460a3148cf910c0be31ba07a5dd
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48193671"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52816333"
 ---
 # <a name="security-best-practices-with-contained-databases"></a>Procedure consigliate per la sicurezza in database indipendenti
-  I database indipendenti sono soggetti ad alcune minacce univoche che devono essere comprese e contrastate dagli amministratori di [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] . La maggior parte delle minacce correlata per il `USER WITH PASSWORD` processo di autenticazione, che sposta il limite di autenticazione dal [!INCLUDE[ssDE](../../includes/ssde-md.md)] livello a livello di database.  
+  I database indipendenti sono soggetti ad alcune minacce univoche che devono essere comprese e contrastate dagli amministratori di [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] . La maggior parte delle minacce è correlata al processo di autenticazione `USER WITH PASSWORD` che sposta il limite di autenticazione dal livello [!INCLUDE[ssDE](../../includes/ssde-md.md)] al livello di database.  
   
 ## <a name="threats-related-to-users"></a>Minacce correlate agli utenti  
- Gli utenti in un database indipendente che hanno le `ALTER ANY USER` autorizzazione, ad esempio i membri del **db_owner** e **db_securityadmin** ruoli predefiniti del database, possono concedere l'accesso al database senza il autorizzazione dell'utente se il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] amministratore. Quando si concede agli utenti l'accesso a un database indipendente, si aumenta la potenziale superficie di attacco all'intera istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Gli amministratori devono comprendere questa delega del controllo di accesso e concedano agli utenti di database indipendente con cautela le `ALTER ANY USER` l'autorizzazione. Tutti i proprietari di database hanno il `ALTER ANY USER` l'autorizzazione. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gli amministratori devono sottoporre a un controllo periodico gli utenti di un database indipendente.  
+ Gli utenti in un database indipendente che hanno le `ALTER ANY USER` autorizzazione, ad esempio i membri del **db_owner** e **db_securityadmin** ruoli predefiniti del database, possono concedere l'accesso al database senza il autorizzazione dell'utente se il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] amministratore. Quando si concede agli utenti l'accesso a un database indipendente, si aumenta la potenziale superficie di attacco all'intera istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . È necessario che gli amministratori comprendano le implicazioni di questa delega del controllo di accesso e concedano con cautela l'autorizzazione `ALTER ANY USER` agli utenti del database indipendente. Tutti i proprietari del database dispongono dell'autorizzazione `ALTER ANY USER`. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gli amministratori devono sottoporre a un controllo periodico gli utenti di un database indipendente.  
   
 ### <a name="accessing-other-databases-using-the-guest-account"></a>Accesso ad altri database con l'account Guest  
  Proprietari e utenti di database che dispongono dell'autorizzazione `ALTER ANY USER` possono creare utenti del database indipendente. Dopo la connessione a un database indipendente in un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], un utente di questo database può accedere ad altri database del [!INCLUDE[ssDE](../../includes/ssde-md.md)], se in questi database è abilitato l'account **Guest** .  
@@ -46,7 +45,7 @@ CREATE USER Carlo WITH PASSWORD = '<same password>', SID = <SID from DB1>;
 GO  
 ```  
   
- Per eseguire una query tra database, è necessario impostare il `TRUSTWORTHY` opzione sul database chiamante. Se, ad esempio, l'utente (Carlo) definito in precedenza si trova in DB1, per eseguire `SELECT * FROM db2.dbo.Table1;` l'impostazione `TRUSTWORTHY` deve essere attiva per il database DB1. Eseguire il codice seguente per impostare il `TRUSTWORHTY` impostazione.  
+ Per eseguire una query tra database, è necessario impostare l'opzione `TRUSTWORTHY` sul database chiamante. Se, ad esempio, l'utente (Carlo) definito in precedenza si trova in DB1, per eseguire `SELECT * FROM db2.dbo.Table1;` l'impostazione `TRUSTWORTHY` deve essere attiva per il database DB1. Eseguire il codice seguente per attivare l'impostazione `TRUSTWORHTY`.  
   
 ```  
 ALTER DATABASE DB1 SET TRUSTWORTHY ON;  

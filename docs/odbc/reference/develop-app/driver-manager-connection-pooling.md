@@ -16,12 +16,12 @@ ms.assetid: ee95ffdb-5aa1-49a3-beb2-7695b27c3df9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c247ab2681f2ff1b0891c15e0348a088f08e42c1
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: efcd4c4b3dabc82b30d5b0e903dd8937ad3a7ce3
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51677580"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590935"
 ---
 # <a name="driver-manager-connection-pooling"></a>Pool di connessioni di Gestione driver
 Pool di connessioni consente a un'applicazione usare una connessione da un pool di connessioni che non è necessario stabilire nuovamente per ogni uso. Una volta una connessione sia stata creata e inserita in un pool, un'applicazione può riutilizzare la connessione senza eseguire il processo di connessione completa.  
@@ -30,12 +30,13 @@ Pool di connessioni consente a un'applicazione usare una connessione da un pool 
   
  Oltre a miglioramenti delle prestazioni, il pool di connessioni architettura consente a un ambiente e le connessioni associate a essere utilizzata da più componenti in un unico processo. Ciò significa che i componenti autonomi nello stesso processo possono interagire tra loro senza tener conto uno da altro. Una connessione in un pool di connessioni può essere utilizzata ripetutamente per più componenti.  
   
-> [!NOTE]  
+> [!NOTE]
 >  Pool di connessioni può essere utilizzato da un'applicazione ODBC che esibisce ODBC 2. *x* comportamento, a condizione che l'applicazione può chiamare *SQLSetEnvAttr*. Quando si usa il pool di connessioni, l'applicazione non deve eseguire le istruzioni SQL che modificano il database o il contesto del database, ad esempio la modifica di \< *database * * nome*>, che viene modificato il catalogo utilizzato da un origine dati.  
-  
+
+
  Un driver ODBC deve essere completamente thread-safe e connessioni devono non presentano affinità di thread per supportare il pool di connessioni. Ciò significa che il driver è in grado di gestire una chiamata in qualsiasi thread in qualsiasi momento ed è in grado di connettersi su un singolo thread, usare la connessione in un altro thread e disconnettere in un thread terzo.  
   
- Il pool di connessioni viene gestito da Gestione Driver. Le connessioni vengono recuperate dal pool quando l'applicazione chiama **SQLConnect** oppure **SQLDriverConnect** e restituiti al pool quando l'applicazione chiama **SQLDisconnect**. Le dimensioni del pool aumentano in modo dinamico, le allocazioni di risorse richiesto in base. Si riduce in base al timeout di inattività: se una connessione rimane inattiva per un periodo di tempo (non è stato usato in una connessione), viene rimossa dal pool. Le dimensioni del pool sono limitata solo da vincoli di memoria e i limiti sul server.  
+ Il pool di connessioni viene gestito da Gestione Driver. Le connessioni vengono recuperate dal pool quando l'applicazione chiama **SQLConnect** oppure **SQLDriverConnect** e restituiti al pool quando l'applicazione chiama **SQLDisconnect**. Le dimensioni del pool aumentano in modo dinamico, le allocazioni di risorse richiesto in base. Si riduce in base al timeout di inattività: Se una connessione rimane inattiva per un periodo di tempo (non è stato usato in una connessione), viene rimossa dal pool. Le dimensioni del pool sono limitata solo da vincoli di memoria e i limiti sul server.  
   
  Gestione Driver determina se una connessione specifica in un pool deve essere utilizzata secondo gli argomenti passati **SQLConnect** oppure **SQLDriverConnect**e in base agli attributi di connessione impostare dopo la connessione è stata allocata.  
   

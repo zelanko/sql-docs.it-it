@@ -7,8 +7,6 @@ ms.reviewer: ''
 ms.technology:
 - database-engine
 ms.topic: conceptual
-f1_keywords:
-- VS.TextEditor
 helpviewer_keywords:
 - Query Editor [SQL Server Management Studio]
 - Code Editor [SQL Server Management Studio], about Query Editor
@@ -28,12 +26,12 @@ ms.assetid: 062051e4-4b77-4969-98ae-d2547c24ce3e
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: df942352f756c1911693ce339498489f88e31a7f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e2f2e0f35f1d910e31bd8f3f93201660fca51c0b
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48132972"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53328891"
 ---
 # <a name="query-and-text-editors-sql-server-management-studio"></a>Editor di query e di testo (SQL Server Management Studio)
   È possibile utilizzare uno degli editor di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] per modificare e testare interattivamente uno script [!INCLUDE[tsql](../../includes/tsql-md.md)], MDX, DMX o XML/A oppure per modificare un file XML o un file di testo normale. Ogni editor è supportato da un servizio specifico del linguaggio che assegna un colore alle parole chiave e controlla il codice per rilevare eventuali errori di sintassi e utilizzo. L'editor di query del [!INCLUDE[ssDE](../../includes/ssde-md.md)] include un debugger [!INCLUDE[tsql](../../includes/tsql-md.md)] che è possibile utilizzare per correggere i problemi nel codice [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
@@ -118,12 +116,12 @@ ms.locfileid: "48132972"
 |Vengono descritti i vari modi in cui è possibile avviare gli editor in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].|[Apertura di un editor &#40;SQL Server Management Studio&#41;](open-an-editor-sql-server-management-studio.md)|  
 |Viene descritto come gestire le modalità di visualizzazione, ad esempio utilizzando il ritorno a capo automatico, la divisione di una finestra o le schede.|[Gestione dell'editor e della modalità di visualizzazione](manage-the-editor-and-view-mode.md)|  
 |Viene descritto come impostare le opzioni di formattazione, ad esempio testo nascosto o rientri.|[Gestione della formattazione del codice](manage-code-formatting.md)|  
-|Viene descritto come spostarsi nel testo in una finestra dell'editor mediante caratteristiche come la ricerca incrementale o la funzione "vai a".|[Spostarsi nel codice e nel testo](navigate-code-and-text.md)|  
+|Viene descritto come spostarsi nel testo in una finestra dell'editor mediante caratteristiche come la ricerca incrementale o la funzione "vai a".|[Spostamento nel codice e nel testo](navigate-code-and-text.md)|  
 |Viene descritto come impostare le opzioni di codifica a colori per varie classi di sintassi, semplificando la lettura di istruzioni complesse.|[Codifica con colori negli editor di query](color-coding-in-query-editors.md)|  
 |Viene descritto come utilizzare la struttura del codice per nascondere parti di script complessi nei momenti in cui non vengono utilizzate.|[Struttura del codice](code-outlining.md)|  
 |Viene descritto come trascinare il testo da un percorso in uno script e rilasciarlo in un nuovo percorso.|[Trascinamento della selezione](drag-and-drop-text.md)|  
 |Viene descritto come effettuare operazioni di ricerca e sostituzione globale, ad esempio in caso di modifica dei nomi di colonna.|[Ricerca e sostituzione](search-and-replace.md)|  
-|Viene descritto come impostare segnalibri per trovare più facilmente parti importanti di codice.|[Gestire i segnalibri](../native-client-ole-db-rowsets/bookmarks.md)|  
+|Viene descritto come impostare segnalibri per trovare più facilmente parti importanti di codice.|[Gestione di segnalibri](../native-client-ole-db-rowsets/bookmarks.md)|  
 |Viene descritto come visualizzare script o risultati in una finestra o in una griglia.|[Stampa di codice e risultati](print-code-and-results.md)|  
 |Vengono descritte le modalità di visualizzazione e di utilizzo delle caratteristiche di sqlcmd nell'editor di query del [!INCLUDE[ssDE](../../includes/ssde-md.md)] .|[Modifica di script SQLCMD con l'editor di query](edit-sqlcmd-scripts-with-query-editor.md)|  
 |Viene descritto come utilizzare le caratteristiche IntelliSense come il completamento automatico di nomi oggetto durante la digitazione o la verifica del corretto posizionamento dei punti di interruzione.|[IntelliSense &#40;SQL Server Management Studio&#41;](intellisense-sql-server-management-studio.md)|  
@@ -133,5 +131,3 @@ ms.locfileid: "48132972"
   
 ## <a name="see-also"></a>Vedere anche  
  [Tasti di scelta rapida di SQL Server Management Studio](../../ssms/sql-server-management-studio-keyboard-shortcuts.md)  
-  
-  

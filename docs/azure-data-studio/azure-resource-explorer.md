@@ -1,6 +1,8 @@
 ---
-title: Esplora le risorse di SQL di Azure con Esplora risorse di Azure | Microsoft Docs
-description: Informazioni su come esplorare e gestire Server SQL di Azure, database SQL di Azure e istanza gestita SQL Azure tramite Azure Resource Explorer.
+title: Esplora le risorse di SQL di Azure con Azure Resource Explorer
+titleSuffix: Azure Data Studio
+description: Informazioni su come esplorare e gestire Server SQL di Azure, Database SQL di Azure e istanza gestita SQL Azure tramite Azure Resource Explorer.
+ms.custom: seodec18
 author: yanancai
 ms.author: yanacai
 manager: craigg
@@ -8,14 +10,14 @@ ms.date: 09/24/2018
 ms.topic: quickstart
 ms.prod: sql
 ms.technology: azure-data-studio
-ms.openlocfilehash: 5b969ded699c11414c1822c0cb455ee84dfa212f
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: d202a305468f78cf1890533292570ebb56edff12
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49356062"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030115"
 ---
-# <a name="explore-azure-sql-resources-with-azure-resource-explorer"></a>Esplora le risorse di SQL di Azure con Azure Resource Explorer
+# <a name="explore-and-manage-azure-sql-resources-with-azure-resource-explorer"></a>Esplorare e gestire le risorse di SQL di Azure con Azure Resource Explorer
 
 In questo documento descrive come è possibile esplorare e gestire Server SQL di Azure, database SQL di Azure e le risorse di istanza gestita SQL di Azure tramite Azure Resource Explorer in [!INCLUDE [Azure Data Studio](../includes/name-sos-short.md)].
 
@@ -23,7 +25,7 @@ In questo documento descrive come è possibile esplorare e gestire Server SQL di
 >Esplora risorse di Azure saranno supportato in fase di anteprima di SQL Server 2019 nel mese di ottobre. Successivamente, è possibile installare l'estensione di anteprima attraverso [Gestione estensioni](extensions.md) o tramite **File** > **Installa pacchetto dal pacchetto VSIX**.
 
 
-## <a name="connect-to-azure"></a>Connettersi ad Azure
+## <a name="connect-to-azure"></a>Connect to Azure
 
 Dopo aver installato il plug-in anteprima SQL, verrà visualizzata un'icona Azure nella barra dei menu a sinistra. Fare clic sull'icona per aprire Esplora risorse di Azure. Se non viene visualizzata l'icona di Azure, fare clic con il pulsante destro della barra dei menu a sinistra e selezionare **Azure Resource Explorer**.
 

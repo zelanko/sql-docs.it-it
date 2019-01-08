@@ -18,12 +18,12 @@ ms.assetid: 08c506e8-4ba0-4a19-a066-6e6a5c420539
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 03233cc3a35818352c3a8875f62610b5a0814522
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2dfc75b2af19165931dc50e76f04bc7362b59ea8
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48050477"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53362813"
 ---
 # <a name="deploy-a-database-by-using-a-dac"></a>Distribuire un database tramite un'applicazione livello dati
   Usare la procedura guidata **Distribuisci database in SQL Azure** per distribuire un database tra un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] e un server [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] o tra due server [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
@@ -66,7 +66,7 @@ ms.locfileid: "48050477"
   
 3.  Espandere il nodo di **Database** .  
   
-4.  Fare clic con il pulsante destro del mouse sul database che si desidera distribuire, selezionare **Attività**, quindi scegliere **Distribuisci database in SQL Azure**  
+4.  Fare clic con il pulsante destro del mouse sul database che si vuole distribuire, selezionare **Attività** e quindi scegliere **Distribuisci database in SQL Azure**.  
   
 5.  Completare le finestre di dialogo della procedura guidata:  
   
@@ -87,22 +87,22 @@ ms.locfileid: "48050477"
   
 -   **Avanti** : consente di passare alla pagina **Impostazioni di distribuzione** .  
   
--   **Annulla** : annulla l'operazione e chiude la procedura guidata.  
+-   **Annulla**: annulla l'operazione e chiude la procedura guidata.  
   
 ##  <a name="Deployment_settings"></a> Pagina Impostazioni di distribuzione  
  Usare questa pagina per specificare il server di destinazione e fornire i dettagli sul nuovo database.  
   
  **Host locale:**  
   
--   **Connessione server** : specificare i dettagli della connessione al server, quindi fare clic su **Connetti** per verificare la connessione.  
+-   **Connessione server**: specificare i dettagli della connessione al server e quindi fare clic su **Connetti** per verificare la connessione.  
   
--   **Nome nuovo database** : specificare un nome per il nuovo database.  
+-   **Nome nuovo database**: specificare un nome per il nuovo database.  
   
  **[!INCLUDE[ssSDS](../../includes/sssds-md.md)] :**  
   
--   **[!INCLUDE[ssSDS](../../includes/sssds-md.md)]**  – Select the  of [!INCLUDE[ssSDS](../../includes/sssds-md.md)] dal menu a discesa.  
+-   **Edizione di [!INCLUDE[ssSDS](../../includes/sssds-md.md)]**: selezionare l'edizione di [!INCLUDE[ssSDS](../../includes/sssds-md.md)] nel menu a discesa.  
   
--   **Dimensioni massime database** : selezionare le dimensioni massime del database dal menu a discesa.  
+-   **Dimensioni massime database**: selezionare le dimensioni massime del database dal menu a discesa.  
   
  **Altre impostazioni:**  
   
@@ -122,19 +122,19 @@ ms.locfileid: "48050477"
 ## <a name="using-a-net-framework-application"></a>Utilizzo di un'applicazione .NET Framework  
  **Per distribuire un database usando i metodi DacStoreExport() e Import() in un'applicazione .NET Framework.**  
   
- Per visualizzare un esempio di codice, scaricare l'applicazione di esempio dell'applicazione livello dati da [Codeplex](http://go.microsoft.com/fwlink/?LinkId=219575).  
+ Per visualizzare un esempio di codice, scaricare l'applicazione di esempio dell'applicazione livello dati da [Codeplex](https://go.microsoft.com/fwlink/?LinkId=219575).  
   
 1.  Creare un oggetto server SMO e impostarlo sull'istanza o sul server contenente il database che si desidera distribuire.  
   
-2.  Aprire un `ServerConnection` oggetti e connettersi alla stessa istanza.  
+2.  Aprire un oggetto `ServerConnection` e collegarlo alla stessa istanza.  
   
-3.  Usare la `Export` metodo del `Microsoft.SqlServer.Management.Dac.DacStore` tipo per esportare il database in un file BACPAC. Specificare il nome del database da esportare e il percorso della cartella in cui posizionare il file BACPAC.  
+3.  Utilizzare il metodo `Export` del tipo `Microsoft.SqlServer.Management.Dac.DacStore` per esportare il database in un file BACPAC. Specificare il nome del database da esportare e il percorso della cartella in cui posizionare il file BACPAC.  
   
 4.  Creare un oggetto server SMO e impostarlo sull'istanza o sul server di destinazione.  
   
-5.  Aprire un `ServerConnection` oggetti e connettersi alla stessa istanza.  
+5.  Aprire un oggetto `ServerConnection` e collegarlo alla stessa istanza.  
   
-6.  Usare la `Import` metodo del `Microsoft.SqlServer.Management.Dac.DacStore` tipo per importare il file BACPAC. Specificare il file BACPAC creato dall'esportazione.  
+6.  Utilizzare il metodo `Import` del tipo `Microsoft.SqlServer.Management.Dac.DacStore` per importare il file BACPAC. Specificare il file BACPAC creato dall'esportazione.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Applicazioni livello dati](data-tier-applications.md)   

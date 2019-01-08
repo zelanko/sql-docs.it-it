@@ -20,16 +20,16 @@ ms.assetid: bf169ed5-4d55-412c-b184-12065a726e89
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c26111571eb505640acee035cba37d617b43c481
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3a680f5579b241f6b279f5ecc994d32c8fad784f
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47849939"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53205360"
 ---
 # <a name="sqlmoreresults-function"></a>Funzione SQLMoreResults
 **Conformità**  
- Versione introdotta: Conformità agli standard 1.0 di ODBC: ODBC  
+ Versione introdotta: Conformità agli standard 1.0 ODBC: ODBC  
   
  **Riepilogo**  
  **SQLMoreResults** determina se sono disponibili in un'istruzione che contiene i risultati di ulteriori **selezionate**, **UPDATE**, **Inserisci**, o  **Elimina** istruzioni e, in caso affermativo, inizializza l'elaborazione per la restituzione dei risultati.  
@@ -39,7 +39,7 @@ ms.locfileid: "47849939"
 ```  
   
 SQLRETURN SQLMoreResults(  
-     SQLHSTMT     StatementHandle);  
+     SQLHSTMT     StatementHandle);  
 ```  
   
 ## <a name="arguments"></a>Argomenti  
@@ -52,7 +52,7 @@ SQLRETURN SQLMoreResults(
 ## <a name="diagnostics"></a>Diagnostica  
  Quando **SQLMoreResults** restituisce SQL_ERROR o SQL_SUCCESS_WITH_INFO, un valore SQLSTATE associato possono essere ottenuti chiamando **SQLGetDiagRec** con un *HandleType* di SQL _HANDLE_STMT e un *gestiscono* dei *StatementHandle*. Nella tabella seguente sono elencati i valori SQLSTATE comunemente restituiti da **SQLMoreResults** e illustra ognuna nel contesto di questa funzione; la notazione "(DM)" precede le descrizioni di SQLSTATE restituiti da Gestione Driver. Il codice restituito a ogni valore SQLSTATE è SQL_ERROR, se non specificato diversamente.  
   
-|SQLSTATE|Errore|Description|  
+|SQLSTATE|Errore|Descrizione|  
 |--------------|-----------|-----------------|  
 |01000|Avviso generale|Messaggio informativo specifico del driver. (Funzione restituisce SQL_SUCCESS_WITH_INFO).|  
 |01S02|Valore dell'opzione è stato modificato|Il valore di un attributo di istruzione modificato come il batch è stato elaborato. (Funzione restituisce SQL_SUCCESS_WITH_INFO).|  
@@ -73,7 +73,7 @@ SQLRETURN SQLMoreResults(
 ## <a name="comments"></a>Commenti  
  **Selezionare** istruzioni restituiscono set di risultati. **UPDATE**, **inserire**, e **eliminare** istruzioni restituiscono un conteggio delle righe interessate. Se uno qualsiasi di queste istruzioni vengono eseguite in batch, inviato con le matrici di parametri (numerati in ordine di parametro, nell'ordine in cui appaiono nel batch crescente) o nelle procedure possono restituire più set di risultati o conteggio delle righe. Per informazioni su batch di istruzioni e le matrici di parametri, vedere [batch di istruzioni SQL](../../../odbc/reference/develop-app/batches-of-sql-statements.md) e [matrici di valori di parametro](../../../odbc/reference/develop-app/arrays-of-parameter-values.md).  
   
- Dopo l'esecuzione del batch, l'applicazione viene posizionata sul primo set di risultati. L'applicazione può chiamare **SQLBindCol**, **SQLBulkOperations**, **SQLFetch**, **SQLGetData**, **SQLFetchScroll** , **SQLSetPos**e tutte le funzioni dei metadati, nel set di risultati prima o successiva, esattamente come verrebbe restituito se si sono verificati solo un singolo set di risultati. Al termine con il primo set di risultati, l'applicazione chiama **SQLMoreResults** per passare al set di risultati successivo. Se è disponibile, un altro set di risultati o conteggio **SQLMoreResults** restituisce SQL_SUCCESS e ne inizializza il set di risultati o conteggio per un'ulteriore elaborazione. Se tutte le istruzioni di conteggio: generazione di riga vengono visualizzati tra causare: generazione di set di istruzioni, può essere rientri failover chiamando **SQLMoreResults**. Dopo la chiamata **SQLMoreResults** per **UPDATE**, **Inserisci**, oppure **Elimina** (istruzioni), un'applicazione può chiamare **SQLRowCount**.  
+ Dopo l'esecuzione del batch, l'applicazione viene posizionata sul primo set di risultati. L'applicazione può chiamare **SQLBindCol**, **SQLBulkOperations**, **SQLFetch**, **SQLGetData**, **SQLFetchScroll** , **SQLSetPos**e tutte le funzioni dei metadati, nel set di risultati prima o successiva, esattamente come verrebbe restituito se si sono verificati solo un singolo set di risultati. Al termine con il primo set di risultati, l'applicazione chiama **SQLMoreResults** per passare al set di risultati successivo. Se è disponibile, un altro set di risultati o conteggio **SQLMoreResults** restituisce SQL_SUCCESS e ne inizializza il set di risultati o conteggio per un'ulteriore elaborazione. Se tutte le istruzioni di generazione di conteggio delle righe viene visualizzato tra causare che generano set di istruzioni, può essere rientri failover chiamando **SQLMoreResults**. Dopo la chiamata **SQLMoreResults** per **UPDATE**, **Inserisci**, oppure **Elimina** (istruzioni), un'applicazione può chiamare **SQLRowCount**.  
   
  Se si è verificato un correnti set di risultati con le righe non recuperate **SQLMoreResults** ignora tale set di risultati e rende il successivo set di risultati o conteggio disponibili. Se tutti i risultati sono stati elaborati, **SQLMoreResults** restituisce SQL_NO_DATA. Per alcuni driver, i parametri di output e valori restituiti non sono disponibili fino a quando non sono stati elaborati tutti i set di risultati e i conteggi delle righe. Per tale driver, i parametri di output e restituire valori diventi disponibili quando **SQLMoreResults** restituisce SQL_NO_DATA.  
   
@@ -89,14 +89,14 @@ SQLRETURN SQLMoreResults(
   
  Se una ricerca aggiornarla, inserisce o Elimina l'istruzione in un batch di istruzioni non influenza tutte le righe nell'origine dati, **SQLMoreResults** restituisce SQL_SUCCESS. Questo comportamento è diverso da quello di un aggiornamento con ricerca, inserire o eliminare l'istruzione che viene eseguita tramite **SQLExecDirect**, **SQLExecute**, o **SQLParamData**, ovvero Se non influenza tutte le righe nell'origine dati non restituisce SQL_NO_DATA. Se un'applicazione chiama **SQLRowCount** per recuperare il conteggio delle righe dopo una chiamata a **SQLMoreResults** tutte le righe, non interessa **SQLRowCount** restituisce SQL_NO_DATA.  
   
- Per altre informazioni sulla sequenziazione valida delle funzioni di elaborazione dei risultati, vedere [tabelle della transizione di stato appendice b: ODBC](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md).  
+ Per altre informazioni sulla sequenziazione valida delle funzioni di elaborazione dei risultati, vedere [appendice b: Tabelle della transizione di stato ODBC](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md).  
   
  Per altre informazioni sui parametri di output inviati come flusso e SQL_PARAM_DATA_AVAILABLE, vedere [recupero di parametri di Output tramite SQLGetData](../../../odbc/reference/develop-app/retrieving-output-parameters-using-sqlgetdata.md).  
   
 ## <a name="availability-of-row-counts"></a>Disponibilità dei conteggi delle righe  
- Quando un batch contiene più istruzioni: generazione di conteggio righe consecutive, è possibile che questi conteggi delle righe vengono raggruppate nel conteggio di una sola riga. Ad esempio, se un batch contiene cinque istruzioni insert, determinate origini dati sono in grado di restituire cinque i conteggi delle righe singole. Determinati jiné zdroje dat restituiscono solo un conteggio che rappresenta la somma dei conteggi delle righe singole cinque.  
+ Quando un batch contiene più istruzioni di generazione di conteggio righe consecutive, è possibile che questi conteggi delle righe vengono raggruppate nel conteggio di una sola riga. Ad esempio, se un batch contiene cinque istruzioni insert, determinate origini dati sono in grado di restituire cinque i conteggi delle righe singole. Determinati jiné zdroje dat restituiscono solo un conteggio che rappresenta la somma dei conteggi delle righe singole cinque.  
   
- Quando un batch contiene una combinazione di istruzioni: generazione di conteggio delle righe e set-generazione di risultati, i conteggi delle righe possono o potrebbe non essere disponibili a tutti. Il comportamento del driver per quanto riguarda la disponibilità dei conteggi delle righe viene enumerato nel tipo di informazioni di SQL_BATCH_ROW_COUNT disponibile tramite una chiamata a **SQLGetInfo**. Ad esempio, si supponga che il batch contiene un **selezionate**, seguito da due **Inserisci**s e un altro **selezionare**. Quindi, sono possibili i casi seguenti:  
+ Quando un batch contiene una combinazione di istruzioni di generazione di conteggio delle righe e di generazione di set di risultati, i conteggi delle righe possono o potrebbe non essere disponibili a tutti. Il comportamento del driver per quanto riguarda la disponibilità dei conteggi delle righe viene enumerato nel tipo di informazioni di SQL_BATCH_ROW_COUNT disponibile tramite una chiamata a **SQLGetInfo**. Ad esempio, si supponga che il batch contiene un **selezionate**, seguito da due **Inserisci**s e un altro **selezionare**. Quindi, sono possibili i casi seguenti:  
   
 -   Il conteggio delle righe corrispondenti ai due **Inserisci** istruzioni non sono affatto disponibili. La prima chiamata a **SQLMoreResults** verrà è posizionato sul set di risultati del secondo **seleziona** istruzione.  
   

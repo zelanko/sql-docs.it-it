@@ -11,14 +11,14 @@ ms.assetid: 315c32dc-aeb1-4629-b30e-87b44e8f84d1
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9bf639f5b624c222ca115b443ec327b45b836b82
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1aecb94fd7367b12ed2c1aaca06ffe26f586e604
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47784009"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206890"
 ---
-# <a name="step-3-populate-the-fields-list-box"></a>Passaggio 3: Popolare la casella di riepilogo Fields
+# <a name="step-3-populate-the-fields-list-box"></a>Passaggio 3: Popolare la casella di riepilogo di campi
 Per popolare la casella di riepilogo di campi, inserire il codice seguente nel gestore dell'evento Click del `lstMain`:  
   
 ```  
@@ -60,4 +60,4 @@ End Sub
 ## <a name="see-also"></a>Vedere anche  
  [Scenario di Internet Publishing](../../../ado/guide/data/internet-publishing-scenario.md)   
  [Passaggio 2: Inizializzare la casella di riepilogo principale](../../../ado/guide/data/step-2-initialize-the-main-list-box.md)   
- [Passaggio 4: Popolare la casella di riepilogo Details](../../../ado/guide/data/step-4-populate-the-details-text-box.md)
+ [Passaggio 4: Popolare la casella di testo dei dettagli](../../../ado/guide/data/step-4-populate-the-details-text-box.md)

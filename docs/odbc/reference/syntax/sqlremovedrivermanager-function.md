@@ -20,16 +20,16 @@ ms.assetid: 3a41511f-6603-4b81-a815-7883874023c4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: aa90a3ec804717ff23c249b8a54e23665933f1a8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4949d84f75483bd4379366621e4a8921d9b4de39
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47794269"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206660"
 ---
 # <a name="sqlremovedrivermanager-function"></a>Funzione SQLRemoveDriverManager
 **Conformità**  
- Versione introdotti: ODBC 3.0: deprecato in Windows XP Service Pack 2, Windows Server 2003 Service Pack 1 e versioni successive.  
+ Versione introdotta: ODBC 3.0: Deprecato in Windows XP Service Pack 2, Windows Server 2003 Service Pack 1 e versioni successive.  
   
  **Riepilogo**  
  **SQLRemoveDriverManager** modifica o rimuove le informazioni sui componenti principali di ODBC dalla voce Odbcinst. ini nelle informazioni di sistema.  
@@ -39,7 +39,7 @@ ms.locfileid: "47794269"
 ```  
   
 BOOL SQLRemoveDriverManager(  
-     LPDWORD     pdwUsageCount);  
+     LPDWORD     pdwUsageCount);  
 ```  
   
 ## <a name="arguments"></a>Argomenti  
@@ -52,7 +52,7 @@ BOOL SQLRemoveDriverManager(
 ## <a name="diagnostics"></a>Diagnostica  
  Quando **SQLRemoveDriverManager** FALSO, restituisce un oggetto associato  *\*pfErrorCode* valore può essere ottenuto chiamando **SQLInstallerError**. La tabella seguente elenca i  *\*pfErrorCode* i valori che possono essere restituiti da **SQLInstallerError** e illustra ognuna nel contesto di questa funzione.  
   
-|*\*pfErrorCode*|Errore|Description|  
+|*\*pfErrorCode*|Errore|Descrizione|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_GENERAL_ERR|Errore di programma di installazione generale|Errore per cui si è verificato alcun errore di programma di installazione specifico.|  
 |ODBC_ERROR_COMPONENT_NOT_FOUND|Componente non trovato nel Registro di sistema|Il programma di installazione non è stato possibile rimuovere le informazioni sul Driver Manager perché non esiste nel Registro di sistema o non è stato trovato nel Registro di sistema.|  

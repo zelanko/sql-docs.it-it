@@ -1,5 +1,5 @@
 ---
-title: Definizione di una relazione di riferimento | Documenti Microsoft
+title: Definizione di una relazione di riferimento | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: e7d27a648f91448cd6c53f34149851b255aa6aa2
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 032756aefd5b84e030435152cc759a0b86c2fa18
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018688"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507621"
 ---
-# <a name="lesson-5-1---defining-a-referenced-relationship"></a>Lezione 5-1-definizione di una relazione di riferimento
+# <a name="lesson-5-1---defining-a-referenced-relationship"></a>Lezione 5-1: definizione di una relazione di riferimento
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
 Fino a questo punto dell'esercitazione, ogni dimensione del cubo definita è stata basata su una tabella direttamente collegata alla tabella dei fatti per un gruppo di misure tramite una relazione chiave primaria–chiave esterna. Nelle attività di questo argomento la dimensione **Geography** verrà collegata alla tabella dei fatti relativa alle vendite dei rivenditori tramite la dimensione **Reseller** , denominata *dimensione di riferimento*. Ciò consente agli utenti di dimensionare le vendite dei rivenditori in base all'area geografica. Per altre informazioni, vedere [Definire una relazione di tipo Riferimento e le relative proprietà](../analysis-services/multidimensional-models/define-a-referenced-relationship-and-referenced-relationship-properties.md).  
@@ -31,7 +31,7 @@ Fino a questo punto dell'esercitazione, ogni dimensione del cubo definita è sta
   
     Si noti che la misura **Reseller Sales-Sales Amount** non viene dimensionata correttamente dai membri dell'attributo **Country-Region** della gerarchia **Regions** . Il valore per **Reseller Sales-Sales Amount** viene ripetuto per ogni membro dell'attributo **Country-Region** .  
   
-    ![Dimensionate misura Reseller Sales-Sales Amount](../analysis-services/media/l5-referencedrelationship-1.gif "misura dimensionata Reseller Sales-Sales Amount")  
+    ![Dimensionata misura Reseller Sales-Sales Amount](../analysis-services/media/l5-referencedrelationship-1.gif "misura dimensionata Reseller Sales-Sales Amount")  
   
 4.  Aprire Progettazione vista origine dati per la vista origine dati **Adventure Works DW 2012** .  
   
@@ -47,17 +47,17 @@ Fino a questo punto dell'esercitazione, ogni dimensione del cubo definita è sta
   
     Si noti che la dimensione **Geography** del cubo non ha attualmente alcuna relazione né con il gruppo di misure **Internet Sales** né con il gruppo di misure **Reseller Sales** .  
   
-8.  Fare clic sul pulsante con i puntini di sospensione (**…**) nella cella **Nome completo** nel punto di intersezione tra la dimensione **Customer** e il gruppo di misure **Internet Sales** .  
+8.  Fare clic sul pulsante con puntini di sospensione (**...** ) nei **nome completo** cella all'intersezione tra il **cliente** dimensione e la **Internet Sales** gruppo di misure.  
   
     Nella finestra di dialogo **Definisci relazione** si noti che viene definita una relazione di tipo **Regolare** tra la tabella delle dimensioni **DimCustomer** e la tabella del gruppo di misure **FactInternetSales** in base alla colonna **CustomerKey** di ognuna di queste tabelle. Tutte le relazioni che sono state definite fino a questo momento nell'esercitazione sono di tipo Regolare.  
   
     Nella figura seguente viene illustrata la finestra di dialogo **Define Relationship** con una relazione di tipo Regolare tra la tabella delle dimensioni **DimCustomer** e la tabella del gruppo di misure **FactInternetSales** .  
   
-    ![Finestra di dialogo Definisci relazione](../analysis-services/media/l5-referencedrelationship-4.gif "la finestra di dialogo Definisci relazione")  
+    ![Finestra di dialogo Definisci relazione](../analysis-services/media/l5-referencedrelationship-4.gif "nella finestra di dialogo Definisci relazione")  
   
 9. Fare clic su **Annulla**.  
   
-10. Fare clic sul pulsante con i puntini di sospensione (**…**) nella cella senza nome nel punto di intersezione tra la dimensione **Geography** e il gruppo di misure **Reseller Sales** .  
+10. Fare clic sul pulsante con puntini di sospensione (**...** ) nella cella senza nome nel punto di intersezione tra il **geografia** dimensione e la **Reseller Sales** gruppo di misure.  
   
     Nella finestra di dialogo **Definisci relazione** si noti che non è attualmente definita alcuna relazione tra la dimensione Geography del cubo e il gruppo di misure Reseller Sales. Non è possibile definire una relazione di tipo Regolare poiché non vi è una relazione diretta tra la tabella delle dimensioni per la dimensione Geography e la tabella dei fatti per il gruppo di misure Reseller Sales.  
   
@@ -89,7 +89,7 @@ Il problema verrà risolto nell'attività successiva, definendo un attributo bas
   
     L'attributo Geography Key nella dimensione Reseller verrà utilizzato soltanto per collegare la dimensione Geography alla tabella dei fatti Reseller Sales. Dal momento che non verrà utilizzato per la visualizzazione, non c'è motivo per definire questa gerarchia dell'attributo come visibile. Ordinare e ottimizzare la gerarchia dell'attributo può soltanto produrre effetti negativi sulle prestazioni di elaborazione. È necessario, tuttavia, che l'attributo sia abilitato per essere utilizzato come collegamento tra le due dimensioni.  
   
-4.  Passare a Progettazione cubi per il cubo [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial, fare clic sulla scheda **Utilizzo dimensioni** e quindi fare clic sul pulsante con i puntini di sospensione (**…**) nel punto di intersezione tra il gruppo di misure **Reseller Sales** e la dimensione **Geography** del cubo.  
+4.  Passare a Progettazione cubi per il [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] cubo Tutorial, fare clic sui **utilizzo dimensioni** scheda e quindi fare clic sul pulsante con puntini di sospensione (**...** ) all'intersezione tra il **Reseller Sales** gruppo di misure e il **Geography** dimensione del cubo.  
   
 5.  Nell'elenco **Selezionare il tipo di relazione** selezionare **Riferimento**.  
   
@@ -99,7 +99,7 @@ Il problema verrà risolto nell'attività successiva, definendo un attributo bas
   
     Si noti che la casella di controllo **Materializza** è selezionata. Si tratta dell'impostazione predefinita per le dimensioni MOLAP. La materializzazione del collegamento dell'attributo della dimensione determina la materializzazione o l'archiviazione del valore del collegamento tra la tabella dei fatti e la dimensione di riferimento per ogni riga nella struttura MOLAP della dimensione durante l'elaborazione. Ciò influisce in modo poco significativo sulle prestazioni di elaborazione e sui requisiti di archiviazione ma determina un miglioramento delle prestazioni di esecuzione delle query.  
   
-8.  Scegliere **OK**.  
+8.  Fare clic su **OK**.  
   
     Si noti che la dimensione **Geography** del cubo è ora collegata al gruppo di misure **Reseller Sales** . L'icona indica che la relazione è una relazione della dimensione di riferimento.  
   
@@ -119,10 +119,10 @@ Il problema verrà risolto nell'attività successiva, definendo un attributo bas
   
     Si noti che la misura **Reseller Sales-Sales Amount** è ora dimensionata correttamente dall'attributo **Country-Region** della gerarchia definita dall'utente **Geographies** , come illustrato nella figura seguente.  
   
-    ![Finestra di dialogo Definisci relazione](../analysis-services/media/l5-referencedrelationship-5.gif "la finestra di dialogo Definisci relazione")  
+    ![Finestra di dialogo Definisci relazione](../analysis-services/media/l5-referencedrelationship-5.gif "nella finestra di dialogo Definisci relazione")  
   
 ## <a name="next-task-in-lesson"></a>Attività successiva della lezione  
-[Definizione di una relazione di tipo fatti](../analysis-services/lesson-5-2-defining-a-fact-relationship.md)  
+[Definizione di una relazione di tipo Fatti](../analysis-services/lesson-5-2-defining-a-fact-relationship.md)  
   
 ## <a name="see-also"></a>Vedere anche  
 [Relazioni tra attributi](../analysis-services/multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md)  

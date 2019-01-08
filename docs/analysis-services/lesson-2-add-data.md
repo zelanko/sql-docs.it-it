@@ -9,24 +9,24 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 4a7c3756e6c8c35472b760d9fa3100b4f40ecfdc
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 22ee688f6ef1036c63cd3bf878ccf2fce869115f
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38034680"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52401636"
 ---
 # <a name="lesson-2-add-data"></a>Lezione 2: Aggiungere dati
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
 
 In questa lezione si userà l'importazione guidata tabella in SSDT per connettersi al database SQL AdventureWorksDW di esempio, selezionare i dati, visualizzare in anteprima e filtrare i dati e quindi importare i dati nell'area di lavoro modello.  
   
-Utilizzando l'Importazione guidata tabella è possibile importare dati da diverse origini relazionali, quali Access, SQL, Oracle, Sybase, Informix, DB2, Teradata e così via. I passaggi per l'importazione dei dati da ognuna di queste origini relazionali sono molto simili a quanto descritto di seguito. I dati possono essere selezionati anche utilizzando una stored procedure. Per altre informazioni sull'importazione di dati e i diversi tipi di origini dati che è possibile importare, vedere [Zdroje dat](../analysis-services/tabular-models/data-sources-ssas-tabular.md).  
+Mediante l'Importazione guidata tabella è possibile importare dati da un'ampia gamma di origini relazionali: Access, SQL, Oracle, Sybase, Informix, DB2, Teradata e altre ancora. I passaggi per l'importazione dei dati da ognuna di queste origini relazionali sono molto simili a quanto descritto di seguito. I dati possono essere selezionati anche utilizzando una stored procedure. Per altre informazioni sull'importazione di dati e i diversi tipi di origini dati che è possibile importare, vedere [Zdroje dat](../analysis-services/tabular-models/data-sources-ssas-tabular.md).  
   
 Tempo stimato per il completamento della lezione: **20 minuti**  
   
 ## <a name="prerequisites"></a>Prerequisiti  
-Questo argomento fa parte di un'esercitazione relativa alla modellazione tabulare che deve essere completata nell'ordine specificato. Prima di eseguire le attività in questa lezione, è necessario aver completato la lezione precedente: [Lezione 1: Creare un nuovo modello di progetto tabulare](../analysis-services/lesson-1-create-a-new-tabular-model-project.md).  
+Questo argomento fa parte di un'esercitazione relativa alla modellazione tabulare che deve essere completata nell'ordine specificato. Prima di eseguire le attività in questa lezione, è necessario avere completato la lezione precedente: [Lezione 1: Creare un nuovo progetto di modello tabulare](../analysis-services/lesson-1-create-a-new-tabular-model-project.md).  
   
 ## <a name="create-a-connection"></a>Creare una connessione  
   
@@ -38,7 +38,7 @@ Questo argomento fa parte di un'esercitazione relativa alla modellazione tabular
     
     ![come-tabulare-della lezione 2-Esplora modelli tabulari comporta](../analysis-services/media/as-tabular-lesson2-tme.png) 
 
-    Nota: Se si crea il modello a livello di compatibilità 1400, noterete la nuova esperienza recupera dati anziché l'importazione guidata tabella. Le finestre di dialogo verrà visualizzato un po' diverse dalla procedura, ma sarà comunque in grado di seguire la procedura. 
+    Nota: Se si crea il modello a livello di compatibilità 1400, scoprirai la nuova esperienza recupera dati anziché l'importazione guidata tabella. Le finestre di dialogo verrà visualizzato un po' diverse dalla procedura, ma sarà comunque in grado di seguire la procedura. 
   
 2.  Nell'Importazione guidata tabella, sotto **database relazionali**, fare clic su **Microsoft SQL Server** > **Avanti**.  
   
@@ -57,7 +57,7 @@ Questo argomento fa parte di un'esercitazione relativa alla modellazione tabular
   
 7.  Nella pagina **Scelta della modalità di importazione dei dati** verificare che l'opzione **Seleziona da un elenco di tabelle e viste per scegliere i dati da importare** sia selezionata. Poiché si vuole selezionare da un elenco di tabelle e viste, fare clic su **Avanti** per visualizzare un elenco di tutte le tabelle di origine nel database di origine.  
   
-8.  Nella pagina **Selezione tabelle e viste** selezionare le caselle di controllo corrispondenti alle tabelle seguenti: **DimCustomer**, **DimDate**, **DimGeography**, **DimProduct**, **DimProductCategory**, **DimProductSubcategory**e **FactInternetSales**.  
+8.  Nel **selezione tabelle e viste** pagina, selezionare la casella di controllo per le tabelle seguenti: **DimCustomer**, **DimDate**, **DimGeography**, **DimProduct**, **DimProductCategory**,  **DimProductSubcategory**, e **FactInternetSales**.  
   
     **NON** fare clic su **Fine**.  
   
@@ -76,7 +76,7 @@ La tabella dimcustomer importata dal database di esempio si sta importando conti
   
 3.  Verificare che tutte le altre colonne siano selezionate e fare clic su **OK**.  
   
-    Si noti che viene visualizzata la dicitura **Filtri applicati** nella colonna **Dettagli filtro** nella riga **DimCustomer** . Se si fa clic su tale collegamento, viene visualizzata una descrizione testuale dei filtri appena applicati.  
+    Si noti che le parole **filtri applicati** sono ora visualizzate nel **dettagli filtro** colonna il **DimCustomer** riga; se si fa clic su tale collegamento, viene visualizzata una descrizione di testo il filtri che appena applicati.  
     
     ![come-tabulare-della lezione 2:-filtri applicati](../analysis-services/media/as-tabular-lesson2-applied-filters.png)
     
@@ -164,7 +164,7 @@ Dopo aver visualizzato in anteprima e filtrati i dati non necessari, è possibil
 -   Click **Salva tutto** > **File**.  
   
 ## <a name="whats-next"></a>Quali sono le operazioni successive?
-Passare alla lezione successiva: [lezione 3: contrassegna come tabella data](../analysis-services/lesson-3-mark-as-date-table.md).
+Passare alla lezione successiva: [Lezione 3: Contrassegna come tabella data](../analysis-services/lesson-3-mark-as-date-table.md).
 
   
   

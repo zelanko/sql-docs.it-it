@@ -11,37 +11,37 @@ ms.assetid: eb5c6f4a-3ed5-430b-a712-d5ed4b6b9b2b
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 04cc82d92c1b2fecb79bbe044408c90295ac1226
-ms.sourcegitcommit: b75fc8cfb9a8657f883df43a1f9ba1b70f1ac9fb
+ms.openlocfilehash: 4382ecd50979efb6877d8eb19e8aff7dc340d847
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48851916"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53355661"
 ---
 # <a name="extended-protection-for-authentication-with-reporting-services"></a>Protezione estesa per l'autenticazione con Reporting Services
   La protezione estesa consiste in un set di miglioramenti apportati alle versioni recenti del sistema operativo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. La protezione estesa migliora la protezione di credenziali e autenticazione da parte delle applicazioni. La funzionalità non fornisce direttamente la protezione contro attacchi specifici quale l'inoltro delle credenziali, ma rende disponibile un'infrastruttura per le applicazioni, ad esempio [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] , per l'imposizione della protezione estesa per l'autenticazione.  
   
- I principali miglioramenti introdotti riguardanti l'autenticazione che fanno parte della protezione estesa sono l'associazione di canale e l'associazione al servizio. Nell'associazione di canale è utilizzato un token CBT (Channel Binding Token) per verificare che il canale stabilito tra due endpoint non sia compromesso. Nell'associazione al servizio sono utilizzati nomi SPN (Service Principal Name) per convalidare la destinazione desiderata dei token di autenticazione. Per informazioni complementari sulla protezione estesa, vedere [Integrated Windows Authentication with Extended Protection (autenticazione integrata di Windows con protezione estesa)](http://go.microsoft.com/fwlink/?LinkId=179922).  
+ I principali miglioramenti introdotti riguardanti l'autenticazione che fanno parte della protezione estesa sono l'associazione di canale e l'associazione al servizio. Nell'associazione di canale è utilizzato un token CBT (Channel Binding Token) per verificare che il canale stabilito tra due endpoint non sia compromesso. Nell'associazione al servizio sono utilizzati nomi SPN (Service Principal Name) per convalidare la destinazione desiderata dei token di autenticazione. Per informazioni complementari sulla protezione estesa, vedere [Integrated Windows Authentication with Extended Protection (autenticazione integrata di Windows con protezione estesa)](https://go.microsoft.com/fwlink/?LinkId=179922).  
   
  [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] supporta e applica la protezione estesa abilitata nel sistema operativo e configurata in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. Per impostazione predefinita, [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] accetta le richieste che specificano l'autenticazione Negotiate o NTLM ed è pertanto in grado di usufruire del supporto della protezione estesa offerto dal sistema operativo e dalle funzionalità di protezione estesa di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] .  
   
 > [!IMPORTANT]  
->  Per impostazione predefinita, Windows non abilita la protezione estesa. Per informazioni su come abilitare la protezione estesa in Windows, vedere [Protezione estesa per l'autenticazione](http://go.microsoft.com/fwlink/?LinkID=178431). Per garantire che l'autenticazione abbia esito positivo, è necessario che il sistema operativo e lo stack di autenticazione del client supportino entrambi la protezione estesa. Per i sistemi operativi meno recenti potrebbe essere necessario installare più aggiornamenti per ottenere un computer in grado di utilizzare appieno la protezione estesa. Per informazioni sugli ultimi sviluppi della protezione estesa, vedere la pagina relativa alle [informazioni aggiornate sulla protezione estesa](http://go.microsoft.com/fwlink/?LinkId=183362).  
+>  Per impostazione predefinita, Windows non abilita la protezione estesa. Per informazioni su come abilitare la protezione estesa in Windows, vedere [Protezione estesa per l'autenticazione](https://go.microsoft.com/fwlink/?LinkID=178431). Per garantire che l'autenticazione abbia esito positivo, è necessario che il sistema operativo e lo stack di autenticazione del client supportino entrambi la protezione estesa. Per i sistemi operativi meno recenti potrebbe essere necessario installare più aggiornamenti per ottenere un computer in grado di utilizzare appieno la protezione estesa. Per informazioni sugli ultimi sviluppi della protezione estesa, vedere la pagina relativa alle [informazioni aggiornate sulla protezione estesa](https://go.microsoft.com/fwlink/?LinkId=183362).  
   
 ## <a name="reporting-services-extended-protection-overview"></a>Cenni preliminari sulla protezione estesa di Reporting Services  
  [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] supporta e impone la protezione estesa abilitata nel sistema operativo. Se il sistema operativo non supporta la protezione estesa o la funzionalità non è stata abilitata nel sistema operativo, l'autenticazione eseguita dalla funzionalità di protezione estesa di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] avrà esito negativo. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] La protezione estesa richiede inoltre un certificato SSL. Per altre informazioni, vedere [Configurare connessioni SSL in un server di report in modalità nativa](configure-ssl-connections-on-a-native-mode-report-server.md)  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  Per impostazione predefinita [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] non abilita la protezione estesa. La funzionalità può essere attivata modificando il file di configurazione `rsreportserver.config` o utilizzando le API di WMI che consentono di aggiornare il file di configurazione. [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] non fornisce un'interfaccia utente per visualizzare o modificare esteso le impostazioni di protezione. Per altre informazioni, vedere la sezione relativa alle [impostazioni di configurazione](#ConfigurationSettings) in questo argomento.  
   
  I problemi comuni che si verificano a causa della modifica delle impostazioni relative alla protezione estesa o alla configurazione non corretta delle impostazioni non vengono esposti con messaggi o finestre di dialogo di errore. I problemi correlati alla configurazione e alla compatibilità della protezione estesa causano problemi di autenticazione ed errori nei log di traccia di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] .  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  È possibile che alcune tecnologie di accesso ai dati non supportino la protezione estesa. Per connettersi alle origini dati di SQL Server e al database del catalogo [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] viene utilizzata una tecnologia di accesso ai dati. Un errore della tecnologia di accesso ai dati per supportare la protezione estesa influisce su [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] nei seguenti modi:  
->   
+> 
 >  -   Per l'istanza di SQL Server che esegue il database del catalogo di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] non è possibile abilitare la protezione estesa. In caso contrario, il server di report non sarà in grado di connettersi al database del catalogo e restituirà errori di autenticazione.  
 > -   Per le istanze di SQL Server usate come origini dati di report [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] non è possibile abilitare la protezione estesa. In caso contrario, i tentativi di connessione effettuati dal server di report alle origini dati dei report non riusciranno e verranno restituiti errori di autenticazione.  
->   
+> 
 >  La documentazione per una tecnologia di accesso ai dati deve disporre di informazioni sul supporto per la protezione estesa.  
   
 ### <a name="upgrade"></a>Aggiornamento  
@@ -54,7 +54,7 @@ ms.locfileid: "48851916"
   
 -   Il valore predefinito per l'impostazione `RSWindowsExtendedProtectionScenario` è `Proxy`.  
   
--   Preparazione aggiornamento a [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] non verifica se il sistema operativo o l'installazione corrente di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] dispone del supporto della protezione estesa abilitato.  
+-   [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Upgrade Advisor non verifica se il sistema operativo o l'installazione corrente di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] dispone del supporto di protezione estesa abilitato.  
   
 ### <a name="what-reporting-services-extended-protection-does-not-cover"></a>Elementi non coperti dalla protezione estesa di Reporting Services  
  Le aree e gli scenari funzionali seguenti non sono supportati dalla funzionalità di protezione estesa di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] :  
@@ -98,7 +98,7 @@ ms.locfileid: "48851916"
   
 |Scenario|Diagramma dello scenario|Modalità di protezione|  
 |--------------|----------------------|-------------------|  
-|Accesso indiretto e diretto dal client al servizio server di report senza SSL su uno dei client alle connessioni server di report o il client al proxy.|1) Applicazione client<br /><br /> 2) Server di report<br /><br /> 3) Proxy<br /><br /> 4) Applicazione client|L'associazione al servizio da client a server di report può essere imposta.<br /><br /> Il nome del proxy deve essere noto al server di report e a tale scopo l'amministratore del server di report deve creare una prenotazione di URL per il proxy con un'intestazione host oppure configurare il nome del proxy nella voce `BackConnectionHostNames` del Registro di sistema di Windows.<br /><br /> Impostare `RSWindowsExtendedProtectionLevel` su `Allow` o `Require`.<br /><br /> Impostare `RSWindowsExtendedProtectionScenario` su `Any`.|  
+|Accesso indiretto e diretto da client a servizio del server di report senza SSL su una delle connessioni da client a proxy o da client a server di report.|1) Applicazione client<br /><br /> 2) Server di report<br /><br /> 3) Proxy<br /><br /> 4) Applicazione client|L'associazione al servizio da client a server di report può essere imposta.<br /><br /> Il nome del proxy deve essere noto al server di report e a tale scopo l'amministratore del server di report deve creare una prenotazione di URL per il proxy con un'intestazione host oppure configurare il nome del proxy nella voce `BackConnectionHostNames` del Registro di sistema di Windows.<br /><br /> Impostare `RSWindowsExtendedProtectionLevel` su `Allow` o `Require`.<br /><br /> Impostare `RSWindowsExtendedProtectionScenario` su `Any`.|  
 |Accesso indiretto e diretto da client a server di report in cui il client stabilisce una connessione SSL al proxy o al server di report.|![RS_ExtendedProtection_CombinationSSL](../media/rs-extendedprotection-combinationssl.gif "RS_ExtendedProtection_CombinationSSL")<br /><br /> 1) Applicazione client<br /><br /> 2) Server di report<br /><br /> 3) Proxy<br /><br /> 4) Applicazione client|L'associazione di canale può essere utilizzata<br /><br /> Il nome del proxy deve essere noto al server di report e a tale scopo l'amministratore del server di report deve creare una prenotazione di URL per il proxy con un'intestazione host oppure configurare il nome del proxy nella voce `BackConnectionHostNames` del Registro di sistema di Windows.<br /><br /> Impostare `RSWindowsExtendedProtectionLevel` su `Allow` o `Require`.<br /><br /> Impostare `RSWindowsExtendedProtectionScenario` su `Proxy`.|  
   
 ## <a name="configuring-reporting-rervices-extended-protection"></a>Configurazione della protezione estesa di Reporting Services  
@@ -111,10 +111,10 @@ ms.locfileid: "48851916"
 ###  <a name="ConfigurationSettings"></a> Impostazioni di configurazione per la protezione estesa di Reporting Services  
  Nella tabella seguente vengono fornite le informazioni sulle impostazioni di configurazione incluse nel file `rsreportserver.config` per la protezione estesa.  
   
-|Impostazione|Description|  
+|Impostazione|Descrizione|  
 |-------------|-----------------|  
 |`RSWindowsExtendedProtectionLevel`|Specifica il grado di imposizione della protezione estesa. I valori validi sono `Off`, `Allow` e `Require`.<br /><br /> Il valore predefinito è `Off`.<br /><br /> Il valore `Off` specifica che non viene eseguita alcuna verifica dell'associazione di canale o dell'associazione al servizio.<br /><br /> Il valore `Allow` indica il supporto della protezione estesa senza tuttavia richiederlo. Il valore Allow specifica quanto segue:<br /><br /> La protezione estesa verrà imposta per le applicazioni client in esecuzione nei sistemi operativi che supportano la protezione estesa. La modalità di imposizione della protezione è determinata dall'impostazione `RsWindowsExtendedProtectionScenario`.<br /><br /> L'autenticazione sarà consentita per le applicazioni client in esecuzione nei sistemi operativi che non supportano la protezione estesa.<br /><br /> Il valore `Require` specifica quanto segue:<br /><br /> La protezione estesa verrà imposta per le applicazioni client in esecuzione nei sistemi operativi che supportano la protezione estesa.<br /><br /> L'autenticazione verrà **non** sarà consentita per le applicazioni che eseguono sistemi operativi che non supportano la protezione estesa.|  
-|`RsWindowsExtendedProtectionScenario`|Specifica le forme di protezione estesa da convalidare, cioè l'associazione di canale, l'associazione al servizio o entrambe. I valori validi sono `Any`, `Proxy` e `Direct`.<br /><br /> Il valore predefinito è `Proxy`.<br /><br /> Il valore `Any` specifica quanto segue:<br /><br /> - L'autenticazione NTLM, Kerberos e Negotiate di Windows e l'associazione di canale non sono necessari.<br /><br /> - L'associazione al servizio viene imposta.<br /><br /> Il valore `Proxy` specifica quanto segue:<br /><br /> - Autenticazione NTLM, Kerberos e Negotiate di Windows quando è presente un token di associazione di canale.<br /><br /> - L'associazione al servizio viene imposta.<br /><br /> Il valore `Direct` specifica quanto segue:<br /><br /> - Autenticazione NTLM, Kerberos e Negotiate quando è presente un token CBT. È inoltre presente una connessione SSL al servizio corrente e il token CBT per la connessione SSL corrisponde al token CBT del token NTLM, Kerberos o Negotiate.<br /><br /> - L'associazione al servizio non viene imposta.<br /><br /> <br /><br /> Nota: Questa impostazione viene ignorata se `RsWindowsExtendedProtectionLevel` è impostata su `OFF`.|  
+|`RsWindowsExtendedProtectionScenario`|Specifica i formati di protezione estesa che vengono convalidati: associazione di canale, associazione a servizio o entrambe. I valori validi sono `Any`, `Proxy` e `Direct`.<br /><br /> Il valore predefinito è `Proxy`.<br /><br /> Il valore `Any` specifica quanto segue:<br /><br /> - L'autenticazione NTLM, Kerberos e Negotiate di Windows e l'associazione di canale non sono necessari.<br /><br /> - L'associazione al servizio viene imposta.<br /><br /> Il valore `Proxy` specifica quanto segue:<br /><br /> - Autenticazione NTLM, Kerberos e Negotiate di Windows quando è presente un token di associazione di canale.<br /><br /> - L'associazione al servizio viene imposta.<br /><br /> Il valore `Direct` specifica quanto segue:<br /><br /> - Autenticazione NTLM, Kerberos e Negotiate quando è presente un token CBT. È inoltre presente una connessione SSL al servizio corrente e il token CBT per la connessione SSL corrisponde al token CBT del token NTLM, Kerberos o Negotiate.<br /><br /> - L'associazione al servizio non viene imposta.<br /><br /> <br /><br /> Nota: Questa impostazione viene ignorata se `RsWindowsExtendedProtectionLevel` è impostata su `OFF`.|  
   
  Voci di esempio nel file di configurazione `rsreportserver.config`:  
   
@@ -143,7 +143,7 @@ ms.locfileid: "48851916"
 ### <a name="hosts-collection-sources"></a>Origini della raccolta Host.  
  Nella tabella seguente vengono elencate le origini potenziali per la raccolta Host.  
   
-|Tipo di origine|Description|  
+|Tipo di origine|Descrizione|  
 |--------------------|-----------------|  
 |ComputerNameDnsDomain|Nome di dominio DNS assegnato al computer locale. Se il computer locale è un nodo di un cluster, verrà utilizzato il nome di dominio DNS del server virtuale del cluster.|  
 |ComputerNameDnsFullyQualified|Nome DNS completo che identifica in modo univoco il computer locale. Questo nome è una combinazione del nome host DNS e del nome di dominio DNS nel formato *NomeHost*.*NomeDominio*. Se il computer locale è un nodo di un cluster, verrà utilizzato il nome DNS completo del server virtuale del cluster.|  
@@ -164,9 +164,9 @@ ms.locfileid: "48851916"
   
 ## <a name="see-also"></a>Vedere anche  
  [Connessione al motore di database mediante la protezione estesa](../../database-engine/configure-windows/connect-to-the-database-engine-using-extended-protection.md)   
- [Extended Protection for Authentication Overview](http://go.microsoft.com/fwlink/?LinkID=177943)   
- [Integrated Windows Authentication with Extended Protection (autenticazione integrata di Windows con protezione estesa)](http://go.microsoft.com/fwlink/?LinkId=179922)   
- [Microsoft Security Advisory: Protezione estesa per l'autenticazione](http://go.microsoft.com/fwlink/?LinkId=179923)   
+ [Extended Protection for Authentication Overview](https://go.microsoft.com/fwlink/?LinkID=177943)   
+ [Integrated Windows Authentication with Extended Protection (autenticazione integrata di Windows con protezione estesa)](https://go.microsoft.com/fwlink/?LinkId=179922)   
+ [Microsoft Security Advisory: Protezione estesa per l'autenticazione](https://go.microsoft.com/fwlink/?LinkId=179923)   
  [Report Server Service Trace Log](../report-server/report-server-service-trace-log.md)   
  [File di configurazione RSReportServer](../report-server/rsreportserver-config-configuration-file.md)   
  [Metodo SetExtendedProtectionSettings &#40;MSReportServer_ConfigurationSetting WMI&#41;](../wmi-provider-library-reference/configurationsetting-method-setextendedprotectionsettings.md)  

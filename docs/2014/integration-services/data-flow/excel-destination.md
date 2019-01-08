@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.exceldest.f1
@@ -16,12 +15,12 @@ ms.assetid: 37c07446-1264-4814-b4f5-9c66d333bb24
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 43bd1337b811472cca53d4f89d51d668d3799a1a
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: 62d9e4fa02be43f28db09228b8c9a70cccc54396
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48905245"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53375603"
 ---
 # <a name="excel-destination"></a>Destinazione Excel
   La destinazione Excel consente di caricare dati in fogli di lavoro o intervalli di una cartella di lavoro di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel.  
@@ -41,13 +40,13 @@ ms.locfileid: "48905245"
 ## <a name="usage-considerations"></a>Considerazioni sull'utilizzo  
  La gestione connessione Excel usa il provider OLE DB [!INCLUDE[msCoName](../../includes/msconame-md.md)] per Jet 4.0 e il relativo driver ISAM (Indexed Sequential Access Method, metodo di accesso sequenziale indicizzato) di Excel di supporto per stabilire la connessione con le origini dati Excel, quindi leggere e scrivere informazioni.  
   
- Il comportamento di questo provider e del relativo driver è documentato in molti articoli della [!INCLUDE[msCoName](../../includes/msconame-md.md)] Knowledge Base e, sebbene tali articoli non siano specifici di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] o del suo predecessore, Data Transformation Services, consentono di ottenere informazioni circa i comportamenti che possono produrre risultati imprevisti. Per informazioni generali sull'utilizzo e sul comportamento del driver per Excel, vedere [HOWTO: Utilizzare ADO con dati di Excel da Visual Basic o VBA](http://support.microsoft.com/kb/257819).  
+ Il comportamento di questo provider e del relativo driver è documentato in molti articoli della [!INCLUDE[msCoName](../../includes/msconame-md.md)] Knowledge Base e, sebbene tali articoli non siano specifici di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] o del suo predecessore, Data Transformation Services, consentono di ottenere informazioni circa i comportamenti che possono produrre risultati imprevisti. Per informazioni generali sull'uso e sul comportamento del driver per Excel, vedere [HOWTO: Utilizzo di ADO con dati di Excel da Visual Basic o VBA](https://support.microsoft.com/kb/257819).  
   
  I seguenti comportamenti del provider Jet incluso nel driver per Excel possono produrre risultati imprevisti durante il salvataggio di dati in una destinazione Excel.  
   
 -   **Salvataggio di dati di testo**. Quando salva dati di testo in una destinazione Excel, il driver per Excel antepone una virgoletta singola (') al testo in ogni cella, per garantire che i valori salvati verranno interpretati come testo. Se si usano o si sviluppano altre applicazioni che leggono o elaborano i dati salvati, può essere necessario includere istruzioni specifiche per la gestione della virgoletta singola (') che precede ogni valore di testo.  
   
-     Per informazioni su come evitare di includere la virgoletta singola, vedere il post di blog seguente relativo all' [aggiunta della virgoletta singola a tutte le stringhe quando i dati sono trasformati in Excel tramite il componente per flusso di dati di destinazione di Excel in un pacchetto SSIS](http://go.microsoft.com/fwlink/?LinkId=400876), su msdn.com.  
+     Per informazioni su come evitare di includere la virgoletta singola, vedere il post di blog seguente relativo all' [aggiunta della virgoletta singola a tutte le stringhe quando i dati sono trasformati in Excel tramite il componente per flusso di dati di destinazione di Excel in un pacchetto SSIS](https://go.microsoft.com/fwlink/?LinkId=400876), su msdn.com.  
   
 -   **Salvataggio di dati memo (ntext)**. Per poter salvare correttamente stringhe di oltre 255 caratteri in una colonna Excel, il driver deve riconoscere il tipo di dati della colonna di destinazione come **memo** invece di **string**. Se la tabella di destinazione contiene già righe di dati, le prime righe campionate dal driver devono contenere almeno un'istanza di un valore composto da più di 255 caratteri nella colonna con tipo di dati memo. Se la tabella di destinazione viene creata durante la progettazione del pacchetto o in fase di esecuzione, quindi l'istruzione CREATE TABLE deve usare LONGTEXT (o uno dei sinonimi) come tipo di dati della colonna di tipo memo.  
   
@@ -106,11 +105,11 @@ ms.locfileid: "48905245"
   
 ## <a name="related-content"></a>Contenuto correlato  
   
--   Intervento nel blog su [Excel in Integration Services, parte 1 di 3 relativa a connessioni e componenti](http://go.microsoft.com/fwlink/?LinkId=217674), su dougbert.com  
+-   Intervento nel blog concernente [Excel in Integration Services, parte 1 di 3: Connessioni e componenti](https://go.microsoft.com/fwlink/?LinkId=217674), su dougbert.com  
   
--   Intervento nel blog su [Excel in Integration Services, parte 2 di 3 relativa a tabelle e tipi di dati](http://go.microsoft.com/fwlink/?LinkId=217675), su dougbert.com.  
+-   Intervento nel blog concernente [Excel in Integration Services, parte 2 di 3: Le tabelle e tipi di dati](https://go.microsoft.com/fwlink/?LinkId=217675), su dougbert.com.  
   
--   Intervento nel blog concernente [Excel in Integration Services, parte 3 di 3 relativa a problemi e alternative](http://go.microsoft.com/fwlink/?LinkId=217676)sul sito dougbert.com.  
+-   Intervento nel blog concernente [Excel in Integration Services, parte 3 di 3: Problemi e alternative](https://go.microsoft.com/fwlink/?LinkId=217676), su dougbert.com.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Origine Excel](excel-source.md)   

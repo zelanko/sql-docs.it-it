@@ -1,5 +1,6 @@
 ---
-title: Introduzione a SQL Server su SUSE Linux Enterprise Server | Microsoft Docs
+title: Introduzione a SQL Server su SUSE Linux Enterprise Server
+titleSuffix: SQL Server
 description: Questa Guida introduttiva illustra come installare SQL Server 2017 o SQL Server 2019 su SUSE Linux Enterprise Server e quindi creare ed eseguire query di un database con sqlcmd.
 author: rothja
 ms.author: jroth
@@ -7,15 +8,15 @@ manager: craigg
 ms.date: 07/16/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
+ms.custom: sql-linux, seodec18
 ms.technology: linux
 ms.assetid: 31ddfb80-f75c-4f51-8540-de6213cb68b8
-ms.openlocfilehash: e1ba97ce7b3499671f3c3bc840560e9dc7ab98c4
-ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
+ms.openlocfilehash: d73a1a3b75bbdce6604677464b6947c789bedbac
+ms.sourcegitcommit: de8ef246a74c935c5098713f14e9dd06c4733713
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51269624"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53160559"
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-suse-linux-enterprise-server"></a>Guida introduttiva: Installare SQL Server e creare un database su SUSE Linux Enterprise Server
 
@@ -89,7 +90,7 @@ Per configurare SQL Server in SLES, eseguire i comandi seguenti in un terminale 
    ```
 
    > [!TIP]
-   > Le seguenti edizioni di SQL Server 2017 sono concessa in licenza gratuitamente: Evaluation, Developer ed Express.
+   > Le seguenti edizioni di SQL Server 2017 gratuitamente vengono concesso in licenza: Evaluation, Developer ed Express.
 
    > [!NOTE]
    > Assicurarsi di specificare una password complessa per l'account SA (caratteri di lunghezza 8 minimo, incluse le lettere maiuscole e lettere minuscole, cifre in base 10 e/o i simboli non alfanumerici).

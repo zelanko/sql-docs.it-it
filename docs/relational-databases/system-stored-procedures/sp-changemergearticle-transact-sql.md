@@ -5,8 +5,7 @@ ms.date: 11/09/2015
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_changemergearticle_TSQL
@@ -17,12 +16,12 @@ ms.assetid: 0dc3da5c-4af6-45be-b5f0-074da182def2
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3b9a298cb35b21559e6f89c42c61ca606674b504
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 04a142b477749c9de20c4bac0d7cb17be243a359
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47752269"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52823145"
 ---
 # <a name="spchangemergearticle-transact-sql"></a>sp_changemergearticle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +57,7 @@ sp_changemergearticle [ @publication = ] 'publication'
   
  Nella tabella seguente vengono descritte le proprietà degli articoli e i valori corrispondenti.  
   
-|Proprietà|Valori|Description|  
+|Proprietà|Valori|Descrizione|  
 |--------------|------------|-----------------|  
 |**allow_interactive_resolver**|**true**|Abilita l'utilizzo di un sistema di risoluzione interattivo per l'articolo.|  
 ||**false**|Disabilita l'utilizzo di un sistema di risoluzione interattivo per l'articolo.|  
@@ -67,7 +66,7 @@ sp_changemergearticle [ @publication = ] 'publication'
 ||**0x10**|Le autorizzazioni a livello di tabella vengono controllate nel server di pubblicazione prima dell'applicazione nel server di pubblicazione delle istruzioni INSERT eseguite nel Sottoscrittore.|  
 ||**0x20**|Le autorizzazioni a livello di tabella vengono controllate nel server di pubblicazione prima dell'applicazione nel server di pubblicazione delle istruzioni UPDATE eseguite nel Sottoscrittore.|  
 ||**0x40**|Le autorizzazioni a livello di tabella vengono controllate nel server di pubblicazione prima dell'applicazione nel server di pubblicazione delle istruzioni DELETE eseguite nel Sottoscrittore.|  
-|**column_tracking**|**true**|Attiva il rilevamento a livello di colonna. Proprietà valida solo per gli articoli di tabelle.<br /><br /> Nota: Il rilevamento a livello di colonna non può essere utilizzato durante la pubblicazione di tabelle con più di 246 colonne.|  
+|**column_tracking**|**true**|Attiva il rilevamento a livello di colonna. Proprietà valida solo per gli articoli di tabelle.<br /><br /> Nota: Il rilevamento a livello di colonna non può essere utilizzato durante la pubblicazione di tabelle contenenti più di 246 colonne.|  
 ||**false**|Disattiva il rilevamento a livello di colonna e mantiene il rilevamento dei conflitti a livello di riga. Proprietà valida solo per gli articoli di tabelle.|  
 |**compensate_for_errors**|**true**|Vengono eseguite azioni di compensazione quando si verificano errori durante la sincronizzazione. Per altre informazioni, vedere [sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md).|  
 ||**false**|Non vengono eseguite azioni di compensazione, situazione corrispondente al funzionamento predefinito. Per altre informazioni, vedere [sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md).<br /><br /> **\*\* Importanti \* \***  anche se i dati nelle righe interessate potrebbero sembrare non convergenti, non appena si risolvere gli eventuali errori, è possibile applicare modifiche e si otterrà la convergenza dei dati. Se la tabella di origine per un articolo è già pubblicata in un'altra pubblicazione, il valore della *compensate_for_errors* deve coincidere per entrambi gli articoli.|  

@@ -1,5 +1,5 @@
 ---
-title: Modificare i mapping dei filtri di riga, colonna o tabella | Documenti Microsoft
+title: Modificare i mapping di filtri di riga, colonna o tabella di modelli tabulari di Analysis Services | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,23 +9,23 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 6eab5a756fb52afeb69c5f4c7646d768b9ec263f
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: a421f9c43b827f24b15073a4d9a41904f8812f4b
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34039735"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53071758"
 ---
 # <a name="change-table-column-or-row-filter-mappings"></a>Modificare i mapping di filtri tabella, colonna o riga 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-  In questo articolo viene descritto come modificare i mapping dei filtri di riga, colonna o tabella utilizzando il **Modifica proprietà tabella** nella finestra di dialogo [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
+  Questo articolo descrive come modificare i mapping di filtri di riga, colonna o tabella usando il **Modifica proprietà tabella** nella finestra di dialogo [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
   
  Le opzioni disponibili nella finestra di dialogo **Modifica proprietà tabella** sono diverse, a seconda che i dati siano stati originariamente importati selezionando tabelle da un elenco o usando una query SQL. Se i dati sono stati originariamente importati selezionandoli da un elenco, nella finestra di dialogo **Modifica proprietà tabella** viene visualizzata la modalità Anteprima tabella. Questa modalità consente di visualizzare solo un subset limitato alle prime cinquanta righe della tabella di origine. Se i dati sono stati originariamente importati usando un'istruzione SQL, nella finestra di dialogo **Modifica proprietà tabella** viene visualizzata solo un'istruzione SQL. Utilizzando un'istruzione di query SQL è possibile recuperare un subset di righe progettando un filtro o modificando manualmente l'istruzione SQL.  
   
  Se per l'origine si imposta una tabella con colonne diverse rispetto alla tabella corrente, viene visualizzato un messaggio indicante che le colonne sono diverse. Sarà necessario quindi selezionare le colonne che si desidera inserire nella tabella corrente e fare clic su **Salva**. Selezionando la casella di controllo a sinistra della tabella è possibile sostituire l'intera tabella.  
   
 > [!NOTE]  
->  Se nella tabella è presente più di una partizione, non è possibile utilizzare la finestra di dialogo Modifica proprietà tabella per modificare i mapping del filtro di riga. Per modificare i mapping del filtro di riga per le tabelle con più partizioni, utilizzare Gestione partizioni. Per ulteriori informazioni, vedere [partizioni](../../analysis-services/tabular-models/partitions-ssas-tabular.md).  
+>  Se nella tabella è presente più di una partizione, non è possibile utilizzare la finestra di dialogo Modifica proprietà tabella per modificare i mapping del filtro di riga. Per modificare i mapping del filtro di riga per le tabelle con più partizioni, utilizzare Gestione partizioni. Per altre informazioni, vedere [partizioni](../../analysis-services/tabular-models/partitions-ssas-tabular.md).  
   
 #### <a name="to-change-table-column-or-row-filter-mappings"></a>Per modificare i mapping dei filtri tabella, colonna o riga  
   

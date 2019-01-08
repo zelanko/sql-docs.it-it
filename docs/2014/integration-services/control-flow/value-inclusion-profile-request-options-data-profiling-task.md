@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Data Profiling Task Editor
@@ -13,12 +12,12 @@ ms.assetid: ca94da82-a4c9-4e87-9cba-c2d85bd31f01
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a149bb829e542ab98aedc1e3f0d646e347bc979a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f06a9aecd070fe3272d665372bf374d24ed4e60f
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48114971"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53350809"
 ---
 # <a name="value-inclusion-profile-request-options-data-profiling-task"></a>Opzioni di Richiesta profilo Inclusione valore (Attività Profiling dati)
   Usare il riquadro **Proprietà richiesta** della pagina **Richieste profilo** per impostare le opzioni per **Richiesta profilo Inclusione valore** selezionata nel riquadro delle richieste. Il profilo Inclusione valore calcola la sovrapposizione dei valori tra due colonne o set di colonne. Di conseguenza, il profilo può inoltre determinare se una colonna o un set di colonne è adatto per fungere da chiave esterna tra le tabelle selezionate. Questo profilo consente inoltre di identificare eventuali problemi nei dati, ad esempio valori non validi. È possibile utilizzare un profilo Inclusione valore, ad esempio, per analizzare la colonna ProductId di una tabella Sales. Il profilo individua che la colonna contiene valori non inclusi nella colonna ProductID della tabella Products.  
@@ -103,7 +102,7 @@ ms.locfileid: "48114971"
 > [!NOTE]  
 >  Quando si usa il carattere jolly **(\*)** per **ColumnName**, **CompareOptions** è di sola lettura ed è impostato su **Default**.  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |**Default**|Ordina e confronta i dati in base alle regole di confronto della colonna nella tabella di origine.|  
 |**BinarySort**|Ordina e confronta i dati di in base ai modelli di bit definiti per ogni carattere. L'ordinamento binario supporta la distinzione tra maiuscole e minuscole e tra caratteri accentati e non accentati e rappresenta inoltre il tipo di ordinamento più rapido.|  
@@ -111,7 +110,7 @@ ms.locfileid: "48114971"
   
  Se si seleziona **DictionarySort**, è inoltre possibile selezionare qualsiasi combinazione delle opzioni elencate nella tabella seguente. Per impostazione predefinita, nessuna di queste opzioni aggiuntive è selezionata.  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |**IgnoreCase**|Specifica se nel confronto viene fatta distinzione tra lettere maiuscole e minuscole. Se questa opzione è impostata, nel confronto tra stringhe verrà ignorata la combinazione di maiuscole e minuscole. Ad esempio, la stringa "ABC" verrà considerata identica alla stringa "abc".|  
 |**IgnoreNonSpace**|Specifica se nel confronto viene fatta distinzione tra i caratteri con spaziatura e quelli con segni diacritici. Se questa opzione è impostata, nel confronto verranno ignorati i segni diacritici. Ad esempio, il carattere "å" verrà considerato uguale al carattere "a".|  
@@ -126,7 +125,7 @@ ms.locfileid: "48114971"
  **InclusionThresholdSetting**  
  Selezionare l'impostazione di soglia per ridefinire l'output del profilo. Il valore predefinito di questa proprietà è **Specified**. Per ulteriori informazioni, vedere la sezione "Informazioni sulle impostazioni di soglia" riportata in precedenza in questo argomento.  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |**None**|Non specifica alcuna soglia. Il livello di attendibilità della chiave viene segnalato indipendentemente dal valore.|  
 |**Specified**|Consente di usare la soglia specificata in **InclusionStrengthThreshold**. Il livello di attendibilità dell'inclusione viene segnalato solo se è maggiore della soglia.|  
@@ -140,7 +139,7 @@ ms.locfileid: "48114971"
  **SupersetColumnsKeyThresholdSetting**  
  Consente di specificare la soglia del superset. Il valore predefinito di questa proprietà è **Specified**. Per ulteriori informazioni, vedere la sezione "Informazioni sulle impostazioni di soglia" riportata in precedenza in questo argomento.  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |**None**|Non specifica alcuna soglia. Il livello di attendibilità dell'inclusione viene segnalato indipendentemente dall'attendibilità della chiave nella colonna del superset.|  
 |**Specified**|Consente di usare la soglia specificata in **SupersetColumnsKeyThreshold**. Il livello di attendibilità dell'inclusione viene segnalato solo se l'attendibilità della chiave nella colonna del superset è maggiore della soglia.|  

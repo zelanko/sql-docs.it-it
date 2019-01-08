@@ -17,12 +17,12 @@ ms.assetid: cf688163-4ac0-475b-b6dd-6f2f05b553c6
 author: craigg-msft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fb182247c06b4600a7c029e96dfb4066ee7c2a04
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 44a9bd204b352ee0ab891dceb65922cc877704c7
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48167631"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53366683"
 ---
 # <a name="accessing-the-report-server-web-service-using-visual-basic-or-visual-c-ssrs-tutorial"></a>Accesso al servizio Web ReportServer con Visual Basic o Visual C# (esercitazione SSRS)
   L'esercitazione seguente viene illustrato come accedere al servizio Web ReportServer da un'applicazione creata con [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] oppure [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[csprcs](../includes/csprcs-md.md)].  
@@ -47,19 +47,19 @@ ms.locfileid: "48167631"
   
 -   Autorizzazioni sufficienti per l'accesso al servizio Web ReportServer di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] nel computer in cui è installato il server di report.  
   
--   Un report installato nel server di report. In questa esercitazione viene utilizzato il report di esempio Company Sales. Per altre informazioni sui report di esempio, vedere [SQL Server Reporting Services Product Samples](http://go.microsoft.com/fwlink/?LinkId=177889).  
+-   Un report installato nel server di report. In questa esercitazione viene utilizzato il report di esempio Company Sales. Per altre informazioni sui report di esempio, vedere [SQL Server Reporting Services Product Samples](https://go.microsoft.com/fwlink/?LinkId=177889).  
   
 > [!NOTE]  
->  Gli esempi non vengono installati automaticamente durante l'installazione, ma possono essere installati in qualsiasi momento. Per informazioni sugli esempi, vedere [SQL Server Product Samples](http://go.microsoft.com/fwlink/?LinkId=182887).  
+>  Gli esempi non vengono installati automaticamente durante l'installazione, ma possono essere installati in qualsiasi momento. Per informazioni sugli esempi, vedere [SQL Server Product Samples](https://go.microsoft.com/fwlink/?LinkId=182887).  
   
  **Tempo stimato per completare l'esercitazione:** 60 minuti  
   
 ## <a name="tasks"></a>Attività  
- [Lezione 1: Creazione del progetto client per il servizio Web](../../2014/tutorials/lesson-1-creating-the-web-service-client-project.md)  
+ [Lezione 1: Creazione del progetto di Client del servizio Web](../../2014/tutorials/lesson-1-creating-the-web-service-client-project.md)  
   
- [Lezione 2: Aggiunta di un riferimento Web](../../2014/tutorials/lesson-2-adding-a-web-reference.md)  
+ [Lezione 2: Aggiunge un riferimento Web](../../2014/tutorials/lesson-2-adding-a-web-reference.md)  
   
- [Lezione 3: Accesso al servizio Web](../../2014/tutorials/lesson-3-accessing-the-web-service.md)  
+ [Lezione 3: L'accesso al servizio Web](../../2014/tutorials/lesson-3-accessing-the-web-service.md)  
   
  [Lezione 4: Esecuzione dell'applicazione &#40;VB, VC&#35;&#41;](../../2014/tutorials/lesson-4-running-the-application-vb-vcsharp.md)  
   

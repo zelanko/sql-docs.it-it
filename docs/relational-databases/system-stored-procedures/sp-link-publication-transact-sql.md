@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_link_publication_TSQL
@@ -17,22 +16,22 @@ ms.assetid: 1945ed24-f9f1-4af6-94ca-16d8e864706e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bd0e41f54792978dd2adf8186d88dd4f07c1fa9c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c713b4efcfd37c245f340769a4725b0792d7528b
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47683089"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53210054"
 ---
 # <a name="splinkpublication-transact-sql"></a>sp_link_publication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Imposta le informazioni di configurazione e sicurezza utilizzate dai trigger di sincronizzazione dei server di sottoscrizione ad aggiornamento immediato durante la connessione al server di pubblicazione. Questa stored procedure viene eseguita nel database di sottoscrizione del Sottoscrittore.  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  Quando si configura un server di pubblicazione con un server di distribuzione remoto, i valori specificati per tutti i parametri, inclusi *job_login* e *job_password*, vengono inviati al server di distribuzione come testo normale. È consigliabile crittografare la connessione tra il server di pubblicazione e il server di distribuzione remoto prima di eseguire questa stored procedure. Per altre informazioni, vedere [Abilitare le connessioni crittografate al motore di database &#40;Gestione configurazione SQL Server&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
-  
-> [!IMPORTANT]  
+> 
+> [!IMPORTANT]
 >  In determinate condizioni, questa stored procedure può non riuscire se il sottoscrittore sta eseguendo [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 1 o versione successivo e il server di pubblicazione è in esecuzione una versione precedente. In caso di esito negativo della stored procedure in questo scenario, aggiornare il server di pubblicazione a [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 1 o versioni successive.  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -63,10 +62,10 @@ sp_link_publication [ @publisher = ] 'publisher'
  [ **@security_mode**=] *security_mode*  
  Modalità di sicurezza utilizzata dal Sottoscrittore per la connessione a un server di pubblicazione remoto per l'aggiornamento immediato. *security_mode* viene **int**, i possibili valori sono i seguenti. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
-|**0**|Viene utilizzato [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l'autenticazione con l'account di accesso specificato in questa stored procedure come *login* e *password*.<br /><br /> Nota: nelle versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], questa opzione è stata usata per specificare una chiamata dinamica di procedura remota (RPC).|  
-|**1**|Utilizza il contesto di sicurezza (autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o autenticazione di Windows) dell'utente che esegue la modifica nel Sottoscrittore.<br /><br /> Nota: Questo account deve esistere anche nel server di pubblicazione disponga di privilegi sufficienti. Se si utilizza l'autenticazione di Windows è necessario che sia supportata la delega degli account di sicurezza.|  
+|**0**|Viene utilizzato [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l'autenticazione con l'account di accesso specificato in questa stored procedure come *login* e *password*.<br /><br /> Nota: Nelle versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], questa opzione viene utilizzata per specificare una chiamata di procedura remota (RPC) dinamica.|  
+|**1**|Utilizza il contesto di sicurezza (autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o autenticazione di Windows) dell'utente che esegue la modifica nel Sottoscrittore.<br /><br /> Nota: È inoltre necessario che tale account esista nel server di pubblicazione e disponga di privilegi sufficienti. Se si utilizza l'autenticazione di Windows è necessario che sia supportata la delega degli account di sicurezza.|  
 |**2**|Usa un accesso server collegato esistente definito dall'utente creato usando **sp_link_publication**.|  
   
  [ **@login**=] **'***account di accesso***'**  

@@ -1,5 +1,5 @@
 ---
-title: Lezione 1 esplorare e visualizzare i dati usando Python e T-SQL (SQL Server Machine Learning Services) | Microsoft Docs
+title: 'Lezione 1 esplorare e visualizzare i dati usando Python e T-SQL: SQL Server Machine Learning'
 description: Esercitazione che illustra come incorporare Python in SQL Server funzioni e stored procedure T-SQL
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: cf14409cdb321d2f52196e0793ea092ab9ba2430
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: e92b2e1a5d4d5e1ad6990ffafa1a1cfcfbb9d806
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51030981"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53645340"
 ---
 # <a name="explore-and-visualize-the-data"></a>Esplorare e visualizzare i dati
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -77,7 +77,7 @@ La stored procedure restituisce un Python serializzato `figure` oggetto come flu
     - Lo script di Python è abbastanza semplice: **matplotlib** `figure` oggetti vengono utilizzati per eseguire il tracciato istogramma e a dispersione e questi oggetti vengono quindi serializzati utilizzando la `pickle` libreria.
     - L'oggetto graphics Python viene serializzato in un **pandas** frame di dati per l'output.
   
-    ```SQL
+    ```sql
     DROP PROCEDURE IF EXISTS PyPlotMatplotlib;
     GO
 
@@ -135,13 +135,13 @@ La stored procedure restituisce un Python serializzato `figure` oggetto come flu
 
 2. A questo punto è possibile eseguire la stored procedure senza argomenti per generare un grafico dai dati hardcoded come query di input.
 
-    ```
+    ```sql
     EXEC [dbo].[PyPlotMatplotlib]
     ```
 
 3. I risultati dovrebbero essere simile al seguente:
   
-    ```
+    ```sql
     plot
     0xFFD8FFE000104A4649...
     0xFFD8FFE000104A4649...

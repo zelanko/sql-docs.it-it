@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Integration Services packages, about packages
@@ -21,12 +20,12 @@ ms.assetid: 9266bc64-7e1a-4e78-913b-a8deaa9843bf
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c610f28e0b36e6dcf0ad34345c78868d09a4f1eb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ee169caab78d3b83d647a1a9cd20a2e88507fde2
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48058881"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53377623"
 ---
 # <a name="integration-services-ssis-packages"></a>Pacchetti di Integration Services (SSIS)
   Un pacchetto è una raccolta organizzata di connessioni, elementi di flusso di controllo, elementi di flusso di dati, gestori eventi, variabili, parametri e configurazioni che possono essere assemblati usando gli strumenti di progettazione grafica disponibili in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], oppure compilati a livello di codice.  Salvare il pacchetto completo in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], nell'archivio pacchetti di [!INCLUDE[ssIS](../includes/ssis-md.md)] o nel file system oppure distribuire il progetto ssISnoversion nel server [!INCLUDE[ssIS](../includes/ssis-md.md)] . Il pacchetto è l'unità di lavoro che viene recuperata, eseguita e salvata.  
@@ -46,14 +45,14 @@ ms.locfileid: "48058881"
   
  Un flusso di dati è costituito da origini e destinazioni che estraggono e caricano dati, da trasformazioni che modificano ed estendono dati e da percorsi che collegano origini, trasformazioni e destinazioni. È possibile aggiungere un flusso di dati a un pacchetto solo se il flusso di controllo del pacchetto include un'attività Flusso di dati. L'attività Flusso di dati è un eseguibile, nell'ambito del pacchetto [!INCLUDE[ssIS](../includes/ssis-md.md)] , che crea, ordina ed esegue il flusso di dati. Per ogni attività Flusso di dati contenuta in un pacchetto, viene aperta un'istanza distinta del motore flusso di dati. Per altre informazioni, vedere [Attività Flusso di dati](control-flow/data-flow-task.md) e [Flusso di dati](data-flow/data-flow.md).  
   
- Un pacchetto include in genere almeno una gestione connessione. Una gestione connessione è un collegamento tra un pacchetto e un'origine dati che definisce la stringa di connessione per l'accesso ai dati utilizzata da attività, trasformazioni e gestori dell'evento nel pacchetto. In [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] sono disponibili tipi di connessione per origini dati quali file di testo e XML, database relazionali e progetti e database di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Per altre informazioni, vedere [Connessioni in Integration Services &#40;SSIS&#41;](connection-manager/integration-services-ssis-connections.md).  
+ Un pacchetto include in genere almeno una gestione connessione. Una gestione connessione è un collegamento tra un pacchetto e un'origine dati che definisce la stringa di connessione per l'accesso ai dati utilizzata da attività, trasformazioni e gestori dell'evento nel pacchetto. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] sono disponibili tipi di connessione per origini dati quali file di testo e XML, database relazionali e progetti e database di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Per altre informazioni, vedere [Connessioni in Integration Services &#40;SSIS&#41;](connection-manager/integration-services-ssis-connections.md).  
   
 ## <a name="package-templates"></a>Modelli di pacchetto  
  Molti pacchetti vengono utilizzati come modello per la compilazione di pacchetti con le stesse funzionalità di base. È possibile compilare il pacchetto di base e quindi copiarlo oppure impostare tale pacchetto come modello. Un pacchetto che scarica e copia file e quindi ne estrae i dati, ad esempio, può includere le attività FTP e File system in un ciclo Foreach che enumera i file presenti in una cartella. Può inoltre includere gestioni connessioni file flat per l'accesso ai dati e origini file flat per l'estrazione dei dati. Poiché la destinazione dei dati può variare, viene aggiunta a ogni nuovo pacchetto dopo la copia dal pacchetto di base. È anche possibile creare pacchetti e quindi usarli come modelli per i nuovi pacchetti da aggiungere a un progetto di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Per altre informazioni, vedere [Creare pacchetti in SQL Server Data Tools](create-packages-in-sql-server-data-tools.md).  
   
- Quando viene innanzitutto creato un pacchetto, a livello di codice o tramite Progettazione SSIS, viene aggiunto un GUID al relativo `ID` e un nome alla relativa `Name` proprietà. Se si crea un nuovo pacchetto copiando un pacchetto esistente oppure utilizzando un pacchetto modello, verranno copiati anche il nome e il GUID di tale pacchetto. Quando si utilizza la registrazione questo può costituire un problema, perché il GUID e il nome del pacchetto vengono scritti nei log per identificare il pacchetto a cui appartengono le informazioni registrate. È pertanto necessario modificare il nome e il GUID dei nuovi pacchetti per distinguerli tra loro e da quello da cui sono stati copiati, nei dati dei file di log.  
+ Alla creazione di un nuovo pacchetto, a livello di codice o tramite Progettazione SSIS, viene aggiunto un GUID alla proprietà `ID` e un nome alla proprietà `Name` del pacchetto. Se si crea un nuovo pacchetto copiando un pacchetto esistente oppure utilizzando un pacchetto modello, verranno copiati anche il nome e il GUID di tale pacchetto. Quando si utilizza la registrazione questo può costituire un problema, perché il GUID e il nome del pacchetto vengono scritti nei log per identificare il pacchetto a cui appartengono le informazioni registrate. È pertanto necessario modificare il nome e il GUID dei nuovi pacchetti per distinguerli tra loro e da quello da cui sono stati copiati, nei dati dei file di log.  
   
- Per modificare il GUID del pacchetto, è necessario rigenerare il GUID nel `ID` proprietà nella finestra proprietà in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Per modificare il nome del pacchetto, è possibile aggiornare il valore della `Name` proprietà nella finestra Proprietà. In alternativa è possibile usare il prompt dei comandi **dtutil** oppure modificare il nome e il GUID a livello di codice. Per altre informazioni, vedere [Impostazione delle proprietà di un pacchetto](set-package-properties.md) e [Utilità dtutil](dtutil-utility.md).  
+ Per modificare il GUID di un pacchetto è necessario rigenerare il GUID nella proprietà `ID`, disponibile nella finestra Proprietà in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Per cambiare il nome di un pacchetto è necessario modificare il valore della proprietà `Name` nella finestra Proprietà. In alternativa è possibile usare il prompt dei comandi **dtutil** oppure modificare il nome e il GUID a livello di codice. Per altre informazioni, vedere [Impostazione delle proprietà di un pacchetto](set-package-properties.md) e [Utilità dtutil](dtutil-utility.md).  
   
 ## <a name="objects-that-extend-package-functionality"></a>Oggetti che estendono le funzionalità dei pacchetti  
  I pacchetti possono includere oggetti quali gestori eventi, configurazioni, funzionalità di registrazione e variabili, che aggiungono funzionalità avanzate o estendono quelle esistenti.  
@@ -72,7 +71,7 @@ ms.locfileid: "48058881"
 ### <a name="variables"></a>Variabili  
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] supporta variabili di sistema e variabili definite dall'utente. Le variabili di sistema contengono informazioni utili sugli oggetti del pacchetto in fase di esecuzione, mentre le variabili definite dall'utente consentono la gestione di scenari personalizzati. Entrambi i tipi di variabili possono essere utilizzati in espressioni, script e configurazioni.  
   
- Le variabili a livello di pacchetto includono le variabili di sistema predefinite e le variabili definite dall'utente con ambito pacchetto. Per altre informazioni, vedere [Integration Services &#40;SSIS&#41; Variables](integration-services-ssis-variables.md).  
+ Le variabili a livello di pacchetto includono le variabili di sistema predefinite e le variabili definite dall'utente con ambito pacchetto. Per altre informazioni, vedere [Variabili di Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md).  
   
 ### <a name="parameters"></a>Parametri  
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] I parametri consentono di assegnare valori alle proprietà incluse nei pacchetti durante la fase di esecuzione. È possibile creare *parametri di progetto* al livello del progetto e *parametri di pacchetto* al livello del pacchetto. I parametri del progetto vengono utilizzati per fornire input esterno ricevuto dal progetto a uno o più pacchetti nel progetto. I parametri del pacchetto consentono di modificare l'esecuzione del pacchetto senza doverlo modificare e ridistribuire. Per altre informazioni, vedere [Parametri di Integration Services &#40;SSIS&#41;](integration-services-ssis-package-and-project-parameters.md).  
@@ -81,7 +80,7 @@ ms.locfileid: "48058881"
  L'oggetto pacchetto può essere configurato in modo da supportare funzionalità quali il riavvio del pacchetto da un determinato checkpoint, la firma del pacchetto con un certificato digitale, l'impostazione del livello di protezione del pacchetto e la protezione dell'integrità dei dati tramite transazioni.  
   
 ### <a name="restarting-packages"></a>Riavvio dei pacchetti  
- Il pacchetto include proprietà checkpoint che possono essere utilizzate per riavviarlo quando una o più attività hanno esito negativo. Se ad esempio un pacchetto contiene due attività Flusso di dati che aggiornano due diverse tabelle e la seconda attività non riesce, sarà possibile riavviare il pacchetto senza ripetere la prima attività Flusso di dati. Per i pacchetti a esecuzione prolungata questo consente un notevole risparmio di tempo, perché tramite il riavvio è possibile riprendere l'esecuzione del pacchetto a partire dall'attività non riuscita, anziché rieseguirlo per intero. Per ulteriori informazioni, vedere [Riavvio dei pacchetti tramite checkpoint](packages/restart-packages-by-using-checkpoints.md).  
+ Il pacchetto include proprietà checkpoint che possono essere utilizzate per riavviarlo quando una o più attività hanno esito negativo. Se ad esempio un pacchetto contiene due attività Flusso di dati che aggiornano due diverse tabelle e la seconda attività non riesce, sarà possibile riavviare il pacchetto senza ripetere la prima attività Flusso di dati. Per i pacchetti a esecuzione prolungata questo consente un notevole risparmio di tempo, perché tramite il riavvio è possibile riprendere l'esecuzione del pacchetto a partire dall'attività non riuscita, anziché rieseguirlo per intero. Per ulteriori informazioni, vedere [Restart Packages by Using Checkpoints](packages/restart-packages-by-using-checkpoints.md).  
   
 ### <a name="securing-packages"></a>Sicurezza dei pacchetti  
  I pacchetti possono essere firmati digitalmente e crittografati utilizzando una password o una chiave utente. La firma digitale consente di autenticare l'origine del pacchetto. Tuttavia, è necessario configurare anche [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] per verificare la firma digitale quando viene caricato il pacchetto. Per altre informazioni, vedere [Identificazione dell'origine dei pacchetti con firme digitali](security/identify-the-source-of-packages-with-digital-signatures.md) e [Controllo dell'accesso per dati sensibili nei pacchetti](security/access-control-for-sensitive-data-in-packages.md).  
@@ -92,10 +91,10 @@ ms.locfileid: "48058881"
 ## <a name="custom-log-entries-available-on-the-package"></a>Voci di log personalizzate disponibili nei pacchetti  
  Nella tabella seguente sono elencate le voci di log personalizzate disponibili per i pacchetti. Per altre informazioni, vedere [Registrazione di Integration Services &#40;SSIS&#41;](performance/integration-services-ssis-logging.md) e [Messaggi personalizzati per la registrazione](../../2014/integration-services/custom-messages-for-logging.md).  
   
-|Voce di log|Description|  
+|Voce di log|Descrizione|  
 |---------------|-----------------|  
-|`PackageStart`|Indica che l'esecuzione del pacchetto è iniziata.<br /><br /> Nota: questa voce di log viene scritta automaticamente nel log. e non può essere esclusa.|  
-|`PackageEnd`|Indica che l'esecuzione del pacchetto è stata completata.<br /><br /> Nota: questa voce di log viene scritta automaticamente nel log. e non può essere esclusa.|  
+|`PackageStart`|Indica che l'esecuzione del pacchetto è iniziata.<br /><br /> Nota: Questa voce di log viene scritta automaticamente nel log e non può essere esclusa.|  
+|`PackageEnd`|Indica che l'esecuzione del pacchetto è stata completata.<br /><br /> Nota: Questa voce di log viene scritta automaticamente nel log e non può essere esclusa.|  
 |`Diagnostic`|Offre informazioni sulla configurazione del sistema che influisce sull'esecuzione dei pacchetti, ad esempio il numero di file eseguibili che è possibile eseguire simultaneamente.|  
   
 ## <a name="configuration-of-packages"></a>Configurazione dei pacchetti  
@@ -116,8 +115,8 @@ ms.locfileid: "48058881"
   
 ## <a name="related-content"></a>Contenuto correlato  
   
--   [Implementazione di SQL Server Integration Services con Microsoft Dynamics Mobile](http://msdn.microsoft.com/library/cc563950)  
+-   [Implementazione di SQL Server Integration Services con Microsoft Dynamics Mobile](https://msdn.microsoft.com/library/cc563950)  
   
--   [Procedura: configurare il pacchetto SQL Server Integration Services per Microsoft Dynamics AX](http://msdn.microsoft.com/library/bb986852)  
+-   [Come si fa: Configurare il pacchetto SQL Server Integration Services per Microsoft Dynamics AX](https://msdn.microsoft.com/library/bb986852)  
   
   

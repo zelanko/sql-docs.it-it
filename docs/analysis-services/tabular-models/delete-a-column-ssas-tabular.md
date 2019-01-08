@@ -1,5 +1,5 @@
 ---
-title: Eliminare una colonna | Documenti Microsoft
+title: Eliminare una colonna in un modello tabulare di Analysis Services | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,21 +9,21 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 4e850740754fea16aa82c60b3abda9f86bafeaff
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 6f61aea9e4751094dafd37fe3b9ca8ed8d6ef0fe
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34039337"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072078"
 ---
 # <a name="delete-a-column"></a>Eliminare una colonna 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-  In questo articolo viene descritto come eliminare una colonna da una tabella del modello tabulare.  
+  Questo articolo descrive come eliminare una colonna da una tabella del modello tabulare.  
   
 ## <a name="delete-a-model-table-column"></a>Eliminare una colonna dalla tabella del modello  
   
 > [!NOTE]  
->  L'eliminazione di una colonna da una tabella del modello non elimina la colonna da una definizione della query della partizione. Se la colonna che si desidera eliminare fa parte di una partizione, è necessario eliminare manualmente la colonna dalla definizione della query della partizione. Se non si elimina la colonna dalla definizione della query della partizione, durante le operazioni di elaborazione verranno eseguite query sulla colonna e restituiti dati che tuttavia non saranno popolati nella tabella del modello. Per ulteriori informazioni, vedere [partizioni](../../analysis-services/tabular-models/partitions-ssas-tabular.md).  
+>  L'eliminazione di una colonna da una tabella del modello non elimina la colonna da una definizione della query della partizione. Se la colonna che si desidera eliminare fa parte di una partizione, è necessario eliminare manualmente la colonna dalla definizione della query della partizione. Se non si elimina la colonna dalla definizione della query della partizione, durante le operazioni di elaborazione verranno eseguite query sulla colonna e restituiti dati che tuttavia non saranno popolati nella tabella del modello. Per altre informazioni, vedere [partizioni](../../analysis-services/tabular-models/partitions-ssas-tabular.md).  
   
 #### <a name="to-delete-a-model-table-column"></a>Per eliminare una colonna dalla tabella del modello  
   

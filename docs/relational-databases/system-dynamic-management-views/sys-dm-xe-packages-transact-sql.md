@@ -20,12 +20,12 @@ ms.assetid: 2e5ecbe9-3ea8-45e6-a161-e31671a03e1d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cab25279fe7842d21b3657d34edef8234ae058cf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 895eeeea22b305236d263827156c6717b458a96a
+ms.sourcegitcommit: f46fd79fd32a894c8174a5cb246d9d34db75e5df
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47738861"
+ms.lasthandoff: 12/26/2018
+ms.locfileid: "53785922"
 ---
 # <a name="sysdmxepackages-transact-sql"></a>sys.dm_xe_packages (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -33,14 +33,14 @@ ms.locfileid: "47738861"
   Elenca tutti i pacchetti registrati con il motore degli eventi estesi.  
   
  
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
-|NAME|**nvarchar(60)**|Nome del pacchetto. La descrizione viene esposta dal pacchetto stesso. Non ammette i valori Null.|  
+|NAME|**nvarchar(256)**|Nome del pacchetto. La descrizione viene esposta dal pacchetto stesso. Non ammette i valori Null.|  
 |guid|**uniqueidentifier**|GUID che identifica il pacchetto. Non ammette i valori Null.|  
-|description|**nvarchar(256)**|Descrizione del pacchetto. descriptionis impostata dall'autore del pacchetto e non ammette valori null.|  
+|description|**nvarchar(3072)**|Descrizione del pacchetto. descriptionis impostata dall'autore del pacchetto e non ammette valori null.|  
 |capabilities|**int**|Bitmap che descrive le funzionalità di questo pacchetto. Ammette i valori Null.|  
 |capabilities_desc|**nvarchar(256)**|Elenco di tutte le funzionalità possibili per questo pacchetto. Ammette i valori Null.|  
-|module_guid|**uniqueidentifier**|GUID del modulo che espone questo pacchetto. Non ammette i valori Null.|  
+|module_guid|**nvarchar(60)**|GUID del modulo che espone questo pacchetto. Non ammette i valori Null.|  
 |module_address|**varbinary(8)**|Indirizzo di base in cui viene caricato il modulo contenente il pacchetto. Un solo modulo può esporre molti pacchetti. Non ammette i valori Null.|  
   
 ## <a name="permissions"></a>Permissions  

@@ -12,12 +12,12 @@ ms.assetid: c417631d-be1f-42e0-8844-9f92c77e11f7
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5fe75f73a8e332682ee9511f338813946f5e2a31
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f37f2ce9ec367d136eb853ce3bffe81f22b2dc4e
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48055921"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53355034"
 ---
 # <a name="mssqlserver18456"></a>MSSQLSERVER_18456
     
@@ -33,7 +33,7 @@ ms.locfileid: "48055921"
 |Testo del messaggio|Accesso non riuscito per l'utente '%.*ls'.%.\*ls|  
   
 ## <a name="explanation"></a>Spiegazione  
- Quando un tentativo di connessione viene rifiutato a causa di un errore di autenticazione dovuto a una password o un nome utente errati, viene restituito al client un messaggio simile al seguente: "Accesso non riuscito per l'utente "<user_name>". (Microsoft SQL Server, Errore: 18456)."  
+ Quando un tentativo di connessione viene rifiutato a causa di un errore di autenticazione dovuto a una password o un nome utente errati, al client viene restituito un messaggio simile al seguente:  "Accesso non riuscito per l'utente '<nome_utente>' (Microsoft SQL Server, Errore: 10061) 18456)".  
   
  Al client vengono restituite informazioni aggiuntive tra cui le seguenti:  
   
@@ -43,13 +43,13 @@ ms.locfileid: "48055921"
   
  "Nome server: <nome_computer>"  
   
- "Numero errore: 18456"  
+ "Numero errore: 18456" 18456"  
   
- "Gravità: 14"  
+ "Gravità: 14" 14"  
   
  "Stato: 1"  
   
- "Numero riga: 65536"  
+ "Numero riga: 65536" 65536"  
   
  Può essere inoltre restituito il messaggio seguente:  
   
@@ -60,7 +60,7 @@ ms.locfileid: "48055921"
 ## <a name="additional-error-information"></a>Informazioni aggiuntive sull'errore  
  Per aumentare il livello di sicurezza, il messaggio di errore restituito al client nasconde deliberatamente la natura dell'errore di autenticazione. Tuttavia, nel log degli errori di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per ogni errore viene indicato lo stato corrispondente tramite cui viene eseguito il mapping alla condizione di errore di autenticazione. Confrontare lo stato di errore restituito con l'elenco seguente per determinare il motivo dell'errore di accesso.  
   
-|State|Description|  
+|State|Descrizione|  
 |-----------|-----------------|  
 |1|Non sono disponibili informazioni sull'errore. Questo stato in genere indica che non si dispone dell'autorizzazione a ricevere i dettagli dell'errore. Per ulteriori informazioni, contattare l'amministratore di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |2|L'ID utente non è valido.|  
@@ -88,13 +88,13 @@ ms.locfileid: "48055921"
 ## <a name="examples"></a>Esempi  
  In questo esempio, lo stato dell'errore di autenticazione è 8 e indica che la password non è corretta.  
   
-|Data|Origine|Message|  
+|date|Origine|Message|  
 |----------|------------|-------------|  
-|2007-12-05 20:12:56.34|Accesso|Errore: 18456, gravità: 14, stato: 8.|  
+|2007-12-05 20:12:56.34|Accesso|Errore: 18456, Gravità: 14, Stato: 8.|  
 |2007-12-05 20:12:56.34|Accesso|Accesso non riuscito per l'utente '<nome_utente>'. [CLIENT: \<indirizzo ip >]|  
   
 > [!NOTE]  
->  Se durante l'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] si usa la modalità Autenticazione di Windows e successivamente si passa alla modalità Autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e di Windows, l'account di accesso **sa** verrà inizialmente disabilitato. Ciò determina l'errore di stato 7: "Accesso non riuscito per l'utente "sa"." Per abilitare l'account di accesso **sa**, vedere [Modifica della modalità di autenticazione del server](../../database-engine/configure-windows/change-server-authentication-mode.md).  
+>  Se durante l'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] si usa la modalità Autenticazione di Windows e successivamente si passa alla modalità Autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e di Windows, l'account di accesso **sa** verrà inizialmente disabilitato. Ciò determina l'errore di stato 7: "Accesso non riuscito per l'utente 'sa'". Per abilitare l'account di accesso **sa**, vedere [Modifica della modalità di autenticazione del server](../../database-engine/configure-windows/change-server-authentication-mode.md).  
   
 ## <a name="user-action"></a>Azione dell'utente  
  Se si sta tentando di effettuare la connessione mediante l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], verificare che [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sia configurato in modalità Autenticazione mista.  
@@ -109,6 +109,6 @@ ms.locfileid: "48055921"
   
  Se il [!INCLUDE[ssDE](../../includes/ssde-md.md)] supporta i database indipendenti, verificare che l'account di accesso non sia stato eliminato dopo la migrazione a un utente del database indipendente.  
   
- Quando ci si connette in locale a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], le connessioni da servizi in esecuzione con **NT AUTHORITY\NETWORK SERVICE** devono essere autenticate usando computer con nomi di dominio completi. Per altre informazioni, vedere [How To: Use the Network Service Account to Access Resources in ASP.NET](http://msdn.microsoft.com/library/ff647402.aspx) (Procedura: Usare l'account Servizio di rete per accedere alle risorse in ASP.NET)  
+ Quando ci si connette in locale a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], le connessioni da servizi in esecuzione con **NT AUTHORITY\NETWORK SERVICE** devono essere autenticate usando computer con nomi di dominio completi. Per altre informazioni, vedere [How To: Usare l'Account del servizio di rete per accedere alle risorse in ASP.NET](https://msdn.microsoft.com/library/ff647402.aspx)  
   
   

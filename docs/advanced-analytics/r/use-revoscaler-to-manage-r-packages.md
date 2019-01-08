@@ -1,5 +1,5 @@
 ---
-title: Come usare funzioni RevoScaleR per trovare o installare R pacchetti in SQL Server | Microsoft Docs
+title: Come usare funzioni RevoScaleR per trovare o installare pacchetti R - servizi di SQL Server Machine Learning
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 05/31/2018
@@ -7,12 +7,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: e9009e26a891c031194697de78cac97db6844d58
-ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
+ms.openlocfilehash: 64f930a72dbb7f8c6aff8338f22dd3e9b7cc7bbe
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45563977"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53645360"
 ---
 # <a name="how-to-use-revoscaler-functions-to-find-or-install-r-packages-on-sql-server"></a>Come usare funzioni RevoScaleR per trovare o installare pacchetti R in SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -25,7 +25,7 @@ Machine Learning Services di SQL Server 2017 include già una versione più rece
 
 La tabella seguente descrive le funzioni utilizzate per la gestione e installazione di pacchetti R.
 
-| Funzione | Description |
+| Funzione | Descrizione |
 |----------|-------------|
 | [rxSqlLibPaths](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqllibpaths) | Determinare il percorso della libreria di istanza nel Server SQL remoto. |
 | [rxFindPackage](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxfindpackage) | Ottiene il percorso di uno o più pacchetti nel Server SQL remoto. |
@@ -97,7 +97,7 @@ connString <- paste("Driver=SQL Server;Server=", instance_name, ";Database=", da
 sqlcc <- RxInSqlServer(connectionString = connString, wait = sqlWait, consoleOutput = sqlConsoleOutput, numTasks = 4);
 ```
 
-A seconda di dove si trova il server e il modello di sicurezza, è necessario fornire un dominio e una subnet specifica nella stringa di connessione oppure usare un account di accesso SQL. Esempio:
+A seconda di dove si trova il server e il modello di sicurezza, è necessario fornire un dominio e una subnet specifica nella stringa di connessione oppure usare un account di accesso SQL. Ad esempio:
 
 ```R
 connStr <- "Driver=SQL Server;Server=myserver.financeweb.contoso.com;Database=Finance;Uid=RUser1;Pwd=RUserPassword"
@@ -181,7 +181,7 @@ Sincronizzazione del pacchetto funziona su una base dei singoli database e per o
 
 Eseguire questo comando da Management Studio o un altro strumento che supporta T-SQL, per ottenere un elenco dei pacchetti installati nell'istanza corrente, usando `rxInstalledPackages` in una stored procedure.
 
-```SQL
+```sql
 EXEC sp_execute_external_script 
   @language=N'R', 
   @script=N'
@@ -192,7 +192,7 @@ EXEC sp_execute_external_script
 
 Il `rxSqlLibPaths` funzione può essere utilizzata per determinare la libreria active usata da SQL Server Machine Learning Services. Questo script può restituire solo il percorso di libreria per il server corrente. 
 
-```SQL
+```sql
 declare @instance_name nvarchar(100) = @@SERVERNAME, @database_name nvarchar(128) = db_name();
 exec sp_execute_external_script 
   @language = N'R',

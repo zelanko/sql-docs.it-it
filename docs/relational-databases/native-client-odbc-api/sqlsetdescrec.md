@@ -14,12 +14,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e7f13ba1492c3edaeaf179e9bcda0e4df3923f80
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: d6ee8de284043d3acf3c0d58eed51e6710ffe51f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51669290"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52536838"
 ---
 # <a name="sqlsetdescrec"></a>SQLSetDescRec
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "51669290"
   
  Nella tabella seguente viene descritto il mapping tra parametri e campi di descrizione.  
   
-|Parametro|Attributo correlato per i tipi di parametro non con valori di tabella, incluse le relative colonne|Attributo correlato per i parametri con valori di tabella|  
+|Parametro|Attributo correlato per i tipi di parametro non-con valori di tabella, incluse le colonne dei parametri con valori di tabella|Attributo correlato per i parametri con valori di tabella|  
 |---------------|--------------------------------------------------------------------------------------------------------|----------------------------------------------------|  
 |*Tipo*|SQL_DESC_TYPE|SQL_SS_TABLE|  
 |*Sottotipo*|Ignorato|Per i record di tipo SQL_DATETIME o SQL_INTERVAL, impostare su SQL_DESC_DATETIME_INTERVAL_CODE.|  

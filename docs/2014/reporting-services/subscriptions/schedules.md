@@ -18,15 +18,15 @@ ms.assetid: ecccd16b-eba9-4e95-b55d-f15c621e003f
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 405bb71bc5ceaee65afa70d055c88a75a2326ca9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b59f544894677c75f923c2dd6185c229495e42ea
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48107467"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53372783"
 ---
 # <a name="schedules"></a>Pianificazioni
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] fornisce le pianificazioni condivise e pianificazioni specifiche dei report che consentono di controllare l'elaborazione e distribuzione di report. La differenza tra i due tipi di pianificazione consiste nella modalità con cui vengono definite, archiviate e gestite. La costruzione interna dei due tipi di pianificazione è identica. Tutte le pianificazioni specificano un tipo di occorrenza: mensile, settimanale o giornaliera. All'interno del tipo di occorrenza, è possibile impostare gli intervalli relativi alla frequenza con cui un evento deve verificarsi. Il tipo di criterio di occorrenza e il modo in cui tali criteri vengono specificati sono identici sia che venga creata una pianificazione condivisa o una pianificazione in base al report.  
+  In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sono disponibili pianificazioni condivise e pianificazioni in base al report che consentono di controllare l'elaborazione e la distribuzione di report. La differenza tra i due tipi di pianificazione consiste nella modalità con cui vengono definite, archiviate e gestite. La costruzione interna dei due tipi di pianificazione è identica. Tutte le pianificazioni specificano un tipo di occorrenza: mensile, settimanale o giornaliera. All'interno del tipo di occorrenza, è possibile impostare gli intervalli relativi alla frequenza con cui un evento deve verificarsi. Il tipo di criterio di occorrenza e il modo in cui tali criteri vengono specificati sono identici sia che venga creata una pianificazione condivisa o una pianificazione in base al report.  
   
  Contenuto dell'argomento:  
   
@@ -64,10 +64,10 @@ ms.locfileid: "48107467"
   
  Quando si crea una pianificazione, le informazioni della pianificazione vengono salvate dal report nel database del server di report oppure, per la modalità SharePoint, nel database dell'applicazione di servizio. Il server di report crea inoltre un processo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent che verrà utilizzato per avviare la pianificazione. L'elaborazione della pianificazione è basata sull'ora locale del server di report contenente la pianificazione. Il formato dell'ora dipende dal sistema operativo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.  
   
- Per informazioni dettagliate su come creare e gestire le pianificazioni, vedere [creare, modificare ed eliminare pianificazioni](create-modify-and-delete-schedules.md).  
+ Per informazioni dettagliate sulla creazione e gestione delle pianificazioni, vedere [Create, Modify, and Delete Schedules](create-modify-and-delete-schedules.md).  
   
 > [!NOTE]  
->  Le operazioni sulle pianificazioni sono disponibili solo in alcune edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per un elenco delle funzionalità supportate dalle edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [Funzionalità supportate dalle edizioni di SQL Server 2012](http://go.microsoft.com/fwlink/?linkid=232473) (http://go.microsoft.com/fwlink/?linkid=232473).  
+>  Le operazioni sulle pianificazioni sono disponibili solo in alcune edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per un elenco delle funzionalità supportate dalle edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [Funzionalità supportate dalle edizioni di SQL Server 2012](https://go.microsoft.com/fwlink/?linkid=232473) (https://go.microsoft.com/fwlink/?linkid=232473).  
   
 ##  <a name="bkmk_compare"></a> Pianificazioni condivise e pianificazioni in base al report  
  Dai due tipi di pianificazioni viene generato lo stesso output:  
@@ -101,7 +101,7 @@ ms.locfileid: "48107467"
 |Creare, modificare o eliminare pianificazioni in base al report in una sottoscrizione definita dall'utente|Gestione di sottoscrizioni individuali|Browser, Generatore report, Report personali, Gestione contenuto|Visitatori, Membri|  
 |Creare, modificare o eliminare pianificazioni in base al report per tutte le altre operazioni pianificate|Gestione della cronologia dei report, Gestione di tutte le sottoscrizioni e Gestione di report|Gestione contenuto|Proprietari|  
   
- Per altre informazioni sulla sicurezza in modalità nativa [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], vedere [dei ruoli predefiniti](../security/role-definitions-predefined-roles.md), [concessione di autorizzazioni in un Server di Report in modalità nativa](../security/granting-permissions-on-a-native-mode-report-server.md) e [attività e autorizzazioni](../security/tasks-and-permissions.md). Per la modalità SharePoint, vedere [Confrontare ruoli e attività di Reporting Services con autorizzazioni e gruppi di SharePoint](../reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)  
+ Per altre informazioni sulla sicurezza in modalità nativa [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], vedere [Ruoli predefiniti](../security/role-definitions-predefined-roles.md), [Concessione di autorizzazioni in un server di report in modalità nativa](../security/granting-permissions-on-a-native-mode-report-server.md) e [Attività e autorizzazioni](../security/tasks-and-permissions.md). Per la modalità SharePoint, vedere [Confrontare ruoli e attività di Reporting Services con autorizzazioni e gruppi di SharePoint](../reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)  
   
 ##  <a name="bkmk_how_scheduling_works"></a> Funzionamento di Elaborazione pianificazione e recapito  
  Elaborazione pianificazione e recapito offre le funzionalità seguenti:  
@@ -126,7 +126,7 @@ ms.locfileid: "48107467"
   
      Prima dell'elaborazione degli eventi, Elaborazione pianificazione e recapito esegue un passaggio di autenticazione per verificare che il proprietario della sottoscrizione disponga delle autorizzazioni per visualizzare il report.  
   
- Reporting Services gestisce una coda degli eventi per tutte le operazioni pianificate ed esegue il polling della coda a intervalli regolari per verificare la disponibilità di nuovi eventi. Per impostazione predefinita, l'analisi della coda viene eseguita a intervalli di 10 secondi. È possibile modificare l'intervallo, modificando la `PollingInterval`, `IsNotificationService`, e `IsEventService` le impostazioni di configurazione nel file RSReportServer. config. In modalità SharePoint viene utilizzato anche RSreporserver.config per queste impostazioni e i valori vengono applicati a tutte le applicazioni di servizio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Per altre informazioni, vedere [RSReportServer Configuration File](../report-server/rsreportserver-config-configuration-file.md).  
+ Reporting Services gestisce una coda degli eventi per tutte le operazioni pianificate ed esegue il polling della coda a intervalli regolari per verificare la disponibilità di nuovi eventi. Per impostazione predefinita, l'analisi della coda viene eseguita a intervalli di 10 secondi. Per cambiare l'intervallo, è possibile modificare le impostazioni di configurazione `PollingInterval`, `IsNotificationService` e `IsEventService` nel file RSReportServer.config. In modalità SharePoint viene utilizzato anche RSreporserver.config per queste impostazioni e i valori vengono applicati a tutte le applicazioni di servizio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Per altre informazioni, vedere [RSReportServer Configuration File](../report-server/rsreportserver-config-configuration-file.md).  
   
 ##  <a name="bkmk_serverdependencies"></a> Dipendenze del server  
  Per il funzionamento di Elaborazione pianificazione e recapito è necessario che vengano avviati il servizio del server di report e SQL Server Agent. La funzionalità elaborazione pianificazione e recapito deve essere abilitata mediante la `ScheduleEventsAndReportDeliveryEnabled` proprietà del **Surface Area Configuration for Reporting Services** facet nella gestione basata su criteri. Affinché vengano eseguite le operazioni pianificate, è necessario che SQL Server Agent e il servizio del server di report siano in esecuzione.  
@@ -144,11 +144,11 @@ ms.locfileid: "48107467"
  Se si arresta il servizio del server di report, SQL Server Agent continuerà ad aggiungere richieste di elaborazione di report alla coda. Le informazioni sullo stato di SQL Server Agent indicano che il processo è stato completato, ma poiché il servizio del server di report è arrestato, non viene effettivamente eseguita alcuna operazione di elaborazione di report. Le richieste continueranno ad accumularsi nella coda finché il servizio non verrà riavviato. Dopo il riavvio del servizio del server di report tutte le richieste di elaborazione di report presenti nella coda verranno elaborate nell'ordine in cui sono state inserite.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Creare, modificare ed eliminare snapshot nella cronologia del Report](../report-server/create-modify-and-delete-snapshots-in-report-history.md)   
+ [Creare, modificare ed eliminare snapshot nella cronologia dei report](../report-server/create-modify-and-delete-snapshots-in-report-history.md)   
  [Sottoscrizioni e recapito &#40;Reporting Services&#41;](subscriptions-and-delivery-reporting-services.md)   
- [Sottoscrizioni guidate dai dati](data-driven-subscriptions.md)   
+ [Data-Driven Subscriptions](data-driven-subscriptions.md)   
  [Memorizzazione dei report nella cache &#40;SSRS&#41;](../report-server/caching-reports-ssrs.md)   
- [Gestione contenuto del Server di report &#40;modalità nativa SSRS&#41;](../report-server/report-server-content-management-ssrs-native-mode.md)   
- [Cache set di dati condivisi &#40;SSRS&#41;](../report-server/cache-shared-datasets-ssrs.md)  
+ [Gestione contenuto del server di report &#40;modalità nativa SSRS&#41;](../report-server/report-server-content-management-ssrs-native-mode.md)   
+ [Memorizzare nella cache set di dati condivisi &#40;SSRS&#41;](../report-server/cache-shared-datasets-ssrs.md)  
   
   

@@ -15,12 +15,12 @@ ms.assetid: ''
 author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 80d4ff4e6eae3d3e2d997bb4f851326a9caace73
-ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
+ms.openlocfilehash: 6e990d8b3320eafccc3da574476fa66cdf52d8d5
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49643999"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52544113"
 ---
 # <a name="identify-the-right-azure-sql-database-sku-for-your-on-premises-database"></a>Identificare lo SKU del Database SQL di Azure corretto per il database in locale
 
@@ -54,11 +54,11 @@ Non devi eseguire questa attività per ogni database singolarmente. I contatori 
     ![File di PowerShell riportato nella cartella DMA](../dma/media/dma-sku-recommend-data-collection-file.png)
 
 2. Eseguire lo script di PowerShell con gli argomenti seguenti:
-    - **ComputerName**: il nome del computer che ospita i database.
-    - **OutputFilePath**: il percorso del file di output per salvare i contatori raccolti.
-    - **CollectionTimeInSeconds**: la quantità di tempo durante il quale si vuole raccogliere i dati dei contatori delle prestazioni.
+    - **ComputerName**: Il nome del computer che ospita i database.
+    - **OutputFilePath**: Il percorso del file di output per salvare i contatori raccolti.
+    - **CollectionTimeInSeconds**: La quantità di tempo durante il quale si vuole raccogliere i dati dei contatori delle prestazioni.
       Acquisire i contatori delle prestazioni per almeno 40 minuti ottenere una raccomandazione significativo. Maggiore è la durata dell'acquisizione, più accurato l'indicazione sarà.
-    - **DbConnectionString**: stringa di connessione che punta al database master ospitato nel computer da cui si sta raccogliendo i dati dei contatori delle prestazioni.
+    - **DbConnectionString**: La stringa di connessione che punta al database master ospitato nel computer da cui si sta raccogliendo i dati dei contatori delle prestazioni.
      
     Di seguito è una chiamata di esempio:
 
@@ -78,30 +78,30 @@ Utilizzare il file di output dei contatori delle prestazioni nel passaggio prece
 
 Eseguire il dmacmd.exe con gli argomenti seguenti:
 
-- **/ Action = SkuRecommendation**: immettere in questo argomento per eseguire valutazioni dello SKU.
-- **/ SkuRecommendationInputDataFilePath**: il percorso del file dei contatori raccolti nella sezione precedente.
-- **/ SkuRecommendationTsvOutputResultsFilePath**: il percorso in cui scrivere i risultati di output in formato TSV.
-- **/ SkuRecommendationJsonOutputResultsFilePath**: il percorso in cui scrivere i risultati di output in formato JSON.
-- **/ SkuRecommendationHtmlResultsFilePath**: percorso in cui scrivere i risultati di output in formato HTML.
+- **/ Action = SkuRecommendation**: Specificare questo argomento per eseguire valutazioni dello SKU.
+- **/ SkuRecommendationInputDataFilePath**: Il percorso del file dei contatori raccolti nella sezione precedente.
+- **/ SkuRecommendationTsvOutputResultsFilePath**: Il percorso in cui scrivere i risultati di output in formato TSV.
+- **/ SkuRecommendationJsonOutputResultsFilePath**: Il percorso in cui scrivere i risultati di output in formato JSON.
+- **/ SkuRecommendationHtmlResultsFilePath**: Percorso in cui scrivere i risultati di output in formato HTML.
 
 Inoltre, è necessario scegliere uno degli argomenti seguenti:
 - Impedire l'aggiornamento di prezzo
-    - **/ SkuRecommendationPreventPriceRefresh**: impedisce l'aggiornamento di prezzo. Utilizzare se è in esecuzione in modalità offline.
+    - **/ SkuRecommendationPreventPriceRefresh**: Impedisce l'aggiornamento di prezzo. Utilizzare se è in esecuzione in modalità offline.
 - Ottieni i prezzi più recenti 
-    - **/ SkuRecommendationCurrencyCode**: la valuta in cui visualizzare i prezzi (ad esempio, "USD").
-    - **/ SkuRecommendationOfferName**: l'offerta assegnare un nome (ad esempio, "MS-AZR - 0003P"). Per altre informazioni, vedere la [dettagli dell'offerta Microsoft Azure](https://azure.microsoft.com/support/legal/offer-details/) pagina.
-    - **/ SkuRecommendationRegionName**: area di assegnare un nome (ad esempio, "Stati Uniti occidentali").
-    - **/ SkuRecommendationSubscriptionId**: l'ID sottoscrizione.
-    - **/ AzureAuthenticationTenantId**: il tenant di autenticazione.
-    - **/ AzureAuthenticationClientId**: l'ID client dell'app AAD usato per l'autenticazione.
+    - **/ SkuRecommendationCurrencyCode**: La valuta in cui visualizzare i prezzi (ad esempio "USD").
+    - **/ SkuRecommendationOfferName**: L'offerta assegnare un nome (ad esempio "MS-AZR - 0003P"). Per altre informazioni, vedere la [dettagli dell'offerta Microsoft Azure](https://azure.microsoft.com/support/legal/offer-details/) pagina.
+    - **/ SkuRecommendationRegionName**: L'area assegnare un nome (ad esempio "Stati Uniti occidentali").
+    - **/ SkuRecommendationSubscriptionId**: ID della sottoscrizione.
+    - **/ AzureAuthenticationTenantId**: Il tenant di autenticazione.
+    - **/ AzureAuthenticationClientId**: L'ID client dell'app AAD usato per l'autenticazione.
     - Una delle opzioni di autenticazione seguenti:
         - Interattiva
-            - **AzureAuthenticationInteractiveAuthentication**: impostato su true per una finestra popup dell'autenticazione.
+            - **AzureAuthenticationInteractiveAuthentication**: Impostato su true per una finestra popup dell'autenticazione.
         - Basata su
-            - **AzureAuthenticationCertificateStoreLocation**: impostare il percorso dell'archivio certificati (ad esempio, "CurrentUser").
-            - **AzureAuthenticationCertificateThumbprint**: impostare su identificazione personale del certificato.
+            - **AzureAuthenticationCertificateStoreLocation**: Impostare il percorso dell'archivio certificati (ad esempio "CurrentUser").
+            - **AzureAuthenticationCertificateThumbprint**: Impostare l'identificazione personale del certificato.
         - Basato su token
-            - **AzureAuthenticationToken**: impostato sul token di certificato.
+            - **AzureAuthenticationToken**: Impostare per il token di certificato.
 
 Ecco alcune chiamate di esempio:
 
@@ -135,8 +135,8 @@ Il file di output TSV conterrà le colonne visualizzate nel grafico seguente:
 
 Segue una descrizione di ogni colonna.
 
-- **DatabaseName** : il nome del database.
-- **MetricName** : Specifica se è stata eseguita una metrica.
+- **DatabaseName** -il nome del database.
+- **MetricName** : se è stata eseguita una metrica.
 - **MetricType** -livello di Database SQL di Azure consigliata.
 - **MetricValue** -consigliato di Database SQL di Azure lo SKU.
 - **SQLMiEquivalentCores** -se si sceglie a chi rivolgersi per istanza gestita di Azure SQL Database, è possibile usare questo valore per il numero di core.
@@ -152,11 +152,11 @@ Il file HTML contiene queste informazioni in formato grafico. È possibile utili
 Con pochi clic, è possibile usare le raccomandazioni nel passaggio precedente per il provisioning dei database di destinazione in Azure a cui è possibile eseguire la migrazione dei database. È anche possibile apportare modifiche ai consigli aggiornando il file HTML, come indicato di seguito.
 
 1. Aprire il file HTML e immettere le informazioni seguenti:
-    - **ID sottoscrizione** : l'ID sottoscrizione della sottoscrizione di Azure a cui si desidera eseguire il provisioning dei database.
-    - **Area** : l'area in cui eseguire il provisioning di database. Assicurarsi che la propria sottoscrizione supporti il selezionare region.
-    - **Gruppo di risorse** : il gruppo di risorse a cui si desidera distribuire i database. Immettere un gruppo di risorse esistente.
-    - **Nome del server** : server di Database SQL di Azure a cui si desidera che i database distribuiti. Se si immette un nome di server che non esiste, verrà creato.
-    - **Admin Username\Password** : il nome utente amministratore server e la password.
+    - **ID sottoscrizione** -l'ID sottoscrizione della sottoscrizione di Azure a cui si desidera eseguire il provisioning dei database.
+    - **Area** -l'area in cui eseguire il provisioning di database. Assicurarsi che la propria sottoscrizione supporti il selezionare region.
+    - **Gruppo di risorse** -il gruppo di risorse a cui si desidera distribuire i database. Immettere un gruppo di risorse esistente.
+    - **Nome del server** -server di Database SQL di Azure a cui si desidera che i database distribuiti. Se si immette un nome di server che non esiste, verrà creato.
+    - **Admin Username\Password** -il nome utente amministratore server e la password.
 
 2. Esaminare le raccomandazioni per ogni database e modificare il piano tariffario, livello e le dimensioni di dati max in base alle esigenze di calcolo. Assicurarsi di deselezionare tutti i database desiderati non attualmente effettuare il provisioning.
 

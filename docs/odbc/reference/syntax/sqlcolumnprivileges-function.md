@@ -20,16 +20,16 @@ ms.assetid: ef233d9a-6ed5-4986-9d42-5e0b1a79fb6e
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 169088bbd99de070bfff81ffd83f01fc0e4d44a7
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: 83253faf14d1ccabaa39aabb52d7d1265e13e728
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120168"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53207690"
 ---
 # <a name="sqlcolumnprivileges-function"></a>SQLColumnPrivileges Function
 **Conformità**  
- Versione introdotta: Conformità agli standard 1.0 di ODBC: ODBC  
+ Versione introdotta: Conformità agli standard 1.0 ODBC: ODBC  
   
  **Riepilogo**  
  **SQLColumnPrivileges** restituisce un elenco di colonne e i privilegi associati per la tabella specificata. Il driver restituisce le informazioni come set di risultati specificato *StatementHandle*.  
@@ -92,7 +92,7 @@ SQLRETURN SQLColumnPrivileges(
 ## <a name="diagnostics"></a>Diagnostica  
  Quando **SQLColumnPrivileges** restituisce SQL_ERROR o SQL_SUCCESS_WITH_INFO, un valore SQLSTATE associato possono essere ottenuti chiamando **SQLGetDiagRec** con un *HandleType* SQL_HANDLE_STMT e un *gestiscono* dei *StatementHandle*. Nella tabella seguente sono elencati i valori SQLSTATE comunemente restituiti da **SQLColumnPrivileges** e illustra ognuna nel contesto di questa funzione; la notazione "(DM)" precede le descrizioni di SQLSTATE restituiti dal Driver Gestore. Il codice restituito a ogni valore SQLSTATE è SQL_ERROR, se non specificato diversamente.  
   
-|SQLSTATE|Errore|Description|  
+|SQLSTATE|Errore|Descrizione|  
 |--------------|-----------|-----------------|  
 |01000|Avviso generale|Messaggio informativo specifico del driver. (Funzione restituisce SQL_SUCCESS_WITH_INFO).|  
 |08S01|Errore del collegamento di comunicazione|Il collegamento di comunicazione tra il driver e l'origine dati a cui è stato connesso il driver non è stato possibile prima dell'elaborazione di funzione è stata completata.|  
@@ -143,7 +143,7 @@ SQLRETURN SQLColumnPrivileges(
 |COLUMN_NAME (ODBC 1.0)|4|Non NULL varchar|Nome colonna. Il driver restituisce una stringa vuota per una colonna che non dispone di un nome.|  
 |GRANTOR (ODBC 1.0)|5|Varchar|Nome dell'utente che ha concesso il privilegio; NULL se non applicabile all'origine dati.<br /><br /> Per tutte le righe in cui il valore nella colonna all'utente autorizzato è il proprietario dell'oggetto, la colonna GRANTOR sarà sistema".|  
 |ALL'UTENTE AUTORIZZATO (ODBC 1.0)|6|Non NULL varchar|Nome dell'utente a cui è stato concesso il privilegio.|  
-|PRIVILEGIO (ODBC 1.0)|7|Non NULL varchar|Identifica il privilegio di colonna. Può essere uno dei valori seguenti (o ad altri utenti supportati dai dati di origine dopo l'evento definito dall'implementazione):<br /><br /> Selezionare: L'utente autorizzato è consentito recuperare i dati per la colonna.<br /><br /> INSERT: L'utente autorizzato è consentito per fornire dati per la colonna nelle nuove righe inserite nella tabella associata.<br /><br /> AGGIORNAMENTO: L'utente autorizzato è consentito aggiornare i dati della colonna.<br /><br /> RIFERIMENTI: L'utente autorizzato è consentito fare riferimento alla colonna all'interno di un vincolo (ad esempio, un valore univoco, referenziale, vincolo check nella tabella o).|  
+|PRIVILEGIO (ODBC 1.0)|7|Non NULL varchar|Identifica il privilegio di colonna. Può essere uno dei valori seguenti (o ad altri utenti supportati dai dati di origine dopo l'evento definito dall'implementazione):<br /><br /> SELEZIONARE: L'utente autorizzato è consentito recuperare i dati per la colonna.<br /><br /> INSERIRE: L'utente autorizzato è consentito per fornire dati per la colonna nelle nuove righe inserite nella tabella associata.<br /><br /> AGGIORNAMENTO: L'utente autorizzato è consentito eseguire l'aggiornamento dati della colonna.<br /><br /> RIFERIMENTI: L'utente autorizzato è consentito fare riferimento alla colonna all'interno di un vincolo (ad esempio, un valore univoco, referenziale, vincolo check nella tabella o).|  
 |IS_GRANTABLE (ODBC 1.0)|8|Varchar|Indica se l'utente autorizzato è consentito di concedere il privilegio ad altri utenti. "Sì", "NO", o "NULL" se sconosciuto o non applicabile all'origine dati.<br /><br /> Un privilegio è presente che è possibile concedere o che non è possibile concedere, ma non entrambi. Il set di risultati restituito da **SQLColumnPrivileges** mai conterrà due righe per cui tutte le colonne ad eccezione della colonna IS_GRANTABLE contengono lo stesso valore.|  
   
 ## <a name="code-example"></a>Esempio di codice  

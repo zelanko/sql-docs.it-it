@@ -1,18 +1,20 @@
 ---
-title: Wrangling dei dati usando i tasti di scelta rapida codice PROSE | Microsoft Docs
-description: ''
+title: Generare il codice per attività di gestione dei dati
+titleSuffix: Azure Data Studio
+description: Questo articolo descrive come usare l'acceleratore di codice PROSE in Azure Data Studio per generare automaticamente codice per attività di gestione dei dati comuni.
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 10/01/2018
+ms.date: 12/06/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 3a247cd33a4fdf2df35359db953e8d14444ace88
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.custom: seodec18
+ms.openlocfilehash: a42820199c2a481e490b510e3fd00f9dc765cb27
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48796428"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030522"
 ---
 # <a name="data-wrangling-using-prose-code-accelerator"></a>Wrangling dei dati usando i tasti di scelta rapida codice PROSE
 
@@ -41,7 +43,7 @@ La lettura dei file in un frame di dati comporta spesso, osservando il contenuto
 
 Tasti di scelta rapida codice PROSE risolve questo problema, analizzare la struttura del file di dati e la generazione automatica di codice per caricare il file. Nella maggior parte dei casi, il codice generato analizza i dati in modo corretto. In alcuni casi, potrebbe essere necessario modificare il codice per soddisfare le proprie esigenze.
 
-Si consideri l'esempio descritto di seguito.
+Si consideri l'esempio seguente:
 
  ```python
 import prose.codeaccelerator as cx

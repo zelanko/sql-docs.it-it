@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 10/02/2015
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - template databases [SQL Server]
@@ -15,12 +14,12 @@ ms.assetid: 4e4f739b-fd27-4dce-8be6-3d808040d8d7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1d6c205ece4af38512525e3b89abd69298484516
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c2886fffebdf06ea16ebe8b6992387be3c22e0bf
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48089688"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52812183"
 ---
 # <a name="model-database"></a>Database model
   Il database **model** viene usato come modello per tutti i database creati in un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Poiché il database **tempdb** viene creato ogni volta che [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene avviato, il database **model** deve essere sempre presente in un sistema [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . L'intero contenuto del database **model** , incluse le opzioni del database, viene copiato nel nuovo database. Alcune impostazioni del database **model** vengono inoltre usate per la creazione di un nuovo database **tempdb** all'avvio, pertanto in un sistema **il database** model [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve essere sempre presente.  
@@ -28,7 +27,7 @@ ms.locfileid: "48089688"
  I database utente appena creati utilizzano lo stesso [modello di recupero](../backup-restore/recovery-models-sql-server.md) del database model. La stringa predefinita è configurabile dall'utente. Per informazioni sull'attuale modello di recupero, vedere [Visualizzazione o modifica del modello di recupero di un database &#40;SQL Server&#41;](../backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server.md).  
   
 > [!IMPORTANT]  
->  Se si modifica il database **modello** con le informazioni sul modello specifiche dell'utente, è consigliabile eseguire il backup del **modello**. Per altre informazioni, vedere [Backup e ripristino di Database di sistema &#40;SQL Server&#41;](../backup-restore/back-up-and-restore-of-system-databases-sql-server.md).  
+>  Se si modifica il database **modello** con le informazioni sul modello specifiche dell'utente, è consigliabile eseguire il backup del **modello**. Per altre informazioni, vedere [Backup e ripristino di database di sistema &#40;SQL Server&#41;](../backup-restore/back-up-and-restore-of-system-databases-sql-server.md).  
   
 ## <a name="model-usage"></a>Utilizzo del database model  
  Quando viene eseguita un'istruzione CREATE DATABASE, la prima parte del database viene creata copiando i contenuti del database **model** . La parte restante del nuovo database viene riempita con pagine vuote.  
@@ -36,7 +35,7 @@ ms.locfileid: "48089688"
  Se si modifica il database **model** , le modifiche vengono ereditate da tutti i database creati successivamente. È ad esempio possibile impostare autorizzazioni o opzioni di database oppure aggiungere oggetti, ad esempio tabelle, funzioni o stored procedure. Le proprietà dei file del database **model** rappresentano un'eccezione e vengono ignorate, eccetto le dimensioni iniziali del file di dati.  
   
 ## <a name="physical-properties-of-model"></a>Proprietà fisiche del database model  
- Nella tabella seguente sono illustrati i valori di configurazione iniziali dei file di dati e di log del database **model** . Le dimensioni di questi file possono variare leggermente per edizioni diverse di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Nella tabella seguente sono illustrati i valori di configurazione iniziali dei file di dati e di log del database **model** . Le dimensioni di tali file potrebbero essere leggermente diverse per le diverse versioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 |File|Nome logico|Nome fisico|Aumento di dimensioni del file|  
 |----------|------------------|-------------------|-----------------|  
@@ -50,34 +49,34 @@ ms.locfileid: "48089688"
   
 |Opzione di database|Valore predefinito|Modificabile|  
 |---------------------|-------------------|---------------------|  
-|ALLOW_SNAPSHOT_ISOLATION|OFF|Sì|  
-|ANSI_NULL_DEFAULT|OFF|Sì|  
-|ANSI_NULLS|OFF|Sì|  
-|ANSI_PADDING|OFF|Sì|  
-|ANSI_WARNINGS|OFF|Sì|  
-|ARITHABORT|OFF|Sì|  
-|AUTO_CLOSE|OFF|Sì|  
-|AUTO_CREATE_STATISTICS|ON|Sì|  
-|AUTO_SHRINK|OFF|Sì|  
-|AUTO_UPDATE_STATISTICS|ON|Sì|  
-|AUTO_UPDATE_STATISTICS_ASYNC|OFF|Sì|  
-|CHANGE_TRACKING|OFF|no|  
-|CONCAT_NULL_YIELDS_NULL|OFF|Sì|  
-|CURSOR_CLOSE_ON_COMMIT|OFF|Sì|  
-|CURSOR_DEFAULT|GLOBAL|Sì|  
-|Opzioni relative alla disponibilità del database|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|no<br /><br /> Sì<br /><br /> Sì|  
-|DATE_CORRELATION_OPTIMIZATION|OFF|Sì|  
-|DB_CHAINING|OFF|no|  
-|ENCRYPTION|OFF|no|  
-|NUMERIC_ROUNDABORT|OFF|Sì|  
-|PAGE_VERIFY|CHECKSUM|Sì|  
-|PARAMETERIZATION|SIMPLE|Sì|  
-|QUOTED_IDENTIFIER|OFF|Sì|  
-|READ_COMMITTED_SNAPSHOT|OFF|Sì|  
-|RECOVERY|Dipende [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] edizione<sup>1</sup>|Sì|  
-|RECURSIVE_TRIGGERS|OFF|Sì|  
-|Opzioni relative a Service Broker|DISABLE_BROKER|no|  
-|TRUSTWORTHY|OFF|no|  
+|ALLOW_SNAPSHOT_ISOLATION|OFF|Yes|  
+|ANSI_NULL_DEFAULT|OFF|Yes|  
+|ANSI_NULLS|OFF|Yes|  
+|ANSI_PADDING|OFF|Yes|  
+|ANSI_WARNINGS|OFF|Yes|  
+|ARITHABORT|OFF|Yes|  
+|AUTO_CLOSE|OFF|Yes|  
+|AUTO_CREATE_STATISTICS|ON|Yes|  
+|AUTO_SHRINK|OFF|Yes|  
+|AUTO_UPDATE_STATISTICS|ON|Yes|  
+|AUTO_UPDATE_STATISTICS_ASYNC|OFF|Yes|  
+|CHANGE_TRACKING|OFF|No|  
+|CONCAT_NULL_YIELDS_NULL|OFF|Yes|  
+|CURSOR_CLOSE_ON_COMMIT|OFF|Yes|  
+|CURSOR_DEFAULT|GLOBAL|Yes|  
+|Opzioni relative alla disponibilità del database|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|No<br /><br /> Yes<br /><br /> Yes|  
+|DATE_CORRELATION_OPTIMIZATION|OFF|Yes|  
+|DB_CHAINING|OFF|No|  
+|ENCRYPTION|OFF|No|  
+|NUMERIC_ROUNDABORT|OFF|Yes|  
+|PAGE_VERIFY|CHECKSUM|Yes|  
+|PARAMETERIZATION|SIMPLE|Yes|  
+|QUOTED_IDENTIFIER|OFF|Yes|  
+|READ_COMMITTED_SNAPSHOT|OFF|Yes|  
+|RECOVERY|Dipende [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] edizione<sup>1</sup>|Yes|  
+|RECURSIVE_TRIGGERS|OFF|Yes|  
+|Opzioni relative a Service Broker|DISABLE_BROKER|No|  
+|TRUSTWORTHY|OFF|No|  
   
  <sup>1</sup> per verificare il modello di recupero corrente del database, vedere [visualizzare o modificare il modello di recupero di un Database &#40;SQL Server&#41; ](../backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server.md) oppure [Sys. Databases &#40;Transact-SQL&#41; ](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql).  
   

@@ -17,23 +17,23 @@ ms.assetid: 0ec5ac6e-b3cf-49cd-96f6-6b4b7dc29982
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 181e3e3606d658843716dccf99bcc2b96affcd63
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d45faf1a4ec47c09a8ac58f731cc4dbfce3eff2a
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48162451"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53354357"
 ---
 # <a name="script-with-the-rsexe-utility-and-the-web-service"></a>Eseguire lo script con l'utilità rs.exe e il servizio Web
   Gli sviluppatori e gli amministratori del server di report possono eseguire operazioni su un server di report con l'utilità **rs** (RS.exe). Tramite questa utilità, è possibile amministrare a livello di programmazione un server di report usando gli script scritti con [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)].  
   
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] - Gli script possono essere usati per eseguire qualsiasi operazione del servizio Web ReportServer. Gli script possono essere utilizzati per copiare la sicurezza su più report in un server, per aggiungere ed eliminare elementi, per copiare elementi del server di report da un server a un altro e per altre operazioni. Per altre informazioni sull'ambiente di scripting, vedere [eseguire un File di Script di Reporting Services](run-a-reporting-services-script-file.md). I file script hanno un formato specifico e vengono scritti in [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET. Per altre informazioni, vedere [formattare un File di Script di Reporting Services](format-a-reporting-services-script-file.md).  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] - Gli script possono essere usati per eseguire qualsiasi operazione del servizio Web ReportServer. Gli script possono essere utilizzati per copiare la sicurezza su più report in un server, per aggiungere ed eliminare elementi, per copiare elementi del server di report da un server a un altro e per altre operazioni. Per altre informazioni sull'ambiente di scripting, vedere [Eseguire un file script di Reporting Services](run-a-reporting-services-script-file.md). I file script hanno un formato specifico e vengono scritti in [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET. Per altre informazioni, vedere [Formattare un file script di Reporting Services](format-a-reporting-services-script-file.md).  
   
  Per esempi di script, vedere quanto riportato di seguito:  
   
  [Esempio di Reporting Services rs.exe Script per la migrazione del contenuto tra server di Report](sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md).  
   
- [Esempi del prodotto SQL Server Reporting Services](http://go.microsoft.com/fwlink/?LinkId=177889).  
+ [Esempi del prodotto SQL Server Reporting Services](https://go.microsoft.com/fwlink/?LinkId=177889).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Utilizzare script per l'esecuzione di attività di distribuzione e di amministrazione](script-deployment-and-administrative-tasks.md)   

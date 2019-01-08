@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.xmlsource.f1
@@ -17,12 +16,12 @@ ms.assetid: 68c27ea5-e93d-4e26-bfb2-d967ca0a5282
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f3a2e2ff2fd28004d924f2b06a19b6bab3c52914
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7e8d49827c9f533c75933a316ff3b655d3f13025
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48155371"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53353907"
 ---
 # <a name="xml-source"></a>Origine XML
   L'origine XML legge un file di dati XML e popola con tali dati le colonne nell'output dell'origine.  
@@ -66,7 +65,7 @@ ms.locfileid: "48155371"
 ## <a name="configuration-of-the-xml-source"></a>Configurazione dell'origine XML  
  L'origine XML supporta tre diverse modalità di accesso ai dati. è possibile specificare il percorso del file di dati XML, la variabile che contiene il percorso del file oppure la variabile che contiene i dati XML.  
   
- L'origine XML include il `XMLData` e `XMLSchemaDefinition` proprietà personalizzate che possono essere aggiornate tramite espressioni di proprietà quando viene caricato il pacchetto. Per altre informazioni, vedere [Espressioni di Integration Services &#40;SSIS&#41;](../expressions/integration-services-ssis-expressions.md), [Utilizzo delle espressioni di proprietà nei pacchetti](../expressions/use-property-expressions-in-packages.md) e [Proprietà personalizzate dell'origine XML](xml-source-custom-properties.md).  
+ L'origine XML include le proprietà personalizzate `XMLData` e `XMLSchemaDefinition`, che possono essere aggiornate da espressioni di proprietà al caricamento del pacchetto. Per altre informazioni, vedere [Espressioni di Integration Services &#40;SSIS&#41;](../expressions/integration-services-ssis-expressions.md), [Utilizzo delle espressioni di proprietà nei pacchetti](../expressions/use-property-expressions-in-packages.md) e [Proprietà personalizzate dell'origine XML](xml-source-custom-properties.md).  
   
  L'origine XML supporta più output regolari e più output degli errori.  
   
@@ -96,6 +95,6 @@ ms.locfileid: "48155371"
  [Estrarre i dati tramite l'origine XML](xml-source.md)  
   
 ## <a name="related-content"></a>Contenuto correlato  
- Risposta curata relativa alla [creazione di una destinazione XML per un pacchetto SSIS](http://go.microsoft.com/fwlink/?LinkId=321993)su curatedviews.cloudapp.net.  
+ Risposta curata relativa alla [creazione di una destinazione XML per un pacchetto SSIS](https://go.microsoft.com/fwlink/?LinkId=321993) su curatedviews.cloudapp.net.  
   
   

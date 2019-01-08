@@ -1,22 +1,21 @@
 ---
-title: 'Passaggio 2: Creazione di un file danneggiato | Microsoft Docs'
+title: 'Passaggio 2: Creazione di un File danneggiato | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: cd0b18dc-66c3-4d88-86ef-8e40cb660fae
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f4134a1bc773a27c71eda472cb502e26cd22b152
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 96690ca99a03c8e6d5cd8c6fefb9760ed3f6e71e
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48226601"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53366813"
 ---
 # <a name="step-2-creating-a-corrupted-file"></a>Passaggio 2: Creazione di un file danneggiato
   Per illustrare la configurazione e la gestione degli errori di trasformazione, è necessario creare un file flat di esempio che nel corso dell'elaborazione generi l'errore di un componente.  
@@ -29,7 +28,7 @@ ms.locfileid: "48226601"
   
      I dati di esempio sono inclusi nei pacchetti di lezioni di SSIS. Per scaricare i dati di esempio e i pacchetti di lezioni, effettuare le operazioni seguenti.  
   
-    1.  Passare alla pagina relativa agli [esempi di prodotti di Integration Services](http://go.microsoft.com/fwlink/?LinkID=267527).  
+    1.  Passare alla pagina relativa agli [esempi di prodotti di Integration Services](https://go.microsoft.com/fwlink/?LinkID=267527).  
   
     2.  Fare clic sulla scheda **DOWNLOADS** .  
   
@@ -62,6 +61,6 @@ ms.locfileid: "48226601"
     >  Il numero 27 è l'ID del componente. Questo valore viene assegnato quando si compila il flusso di dati e può essere diverso da quello nel pacchetto.  
   
 ## <a name="next-steps"></a>Passaggi successivi  
- [Passaggio 3: Aggiunta del reindirizzamento del flusso degli errori](lesson-4-3-adding-error-flow-redirection.md)  
+ [Passaggio 3: Aggiunta del reindirizzamento del flusso di errore](lesson-4-3-adding-error-flow-redirection.md)  
   
   

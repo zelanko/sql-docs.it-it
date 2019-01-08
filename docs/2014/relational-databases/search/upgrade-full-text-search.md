@@ -16,12 +16,12 @@ ms.assetid: 2fee4691-f2b5-472f-8ccc-fa625b654520
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a9a9a8db6c84bfde40ec7c71012d4cc528d57efd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ceeb9a6d964dadd35c725a7ae4cd9e6db7c8d090
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48163541"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53363643"
 ---
 # <a name="upgrade-full-text-search"></a>Aggiornamento della ricerca full-text
   L'aggiornamento della ricerca full-text a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] viene effettuato in fase di installazione e durante il collegamento, il ripristino o la copia dei file di database e dei cataloghi full-text di una versione precedente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante la Copia guidata database.  
@@ -126,7 +126,7 @@ ms.locfileid: "48163541"
 ## <a name="backup-and-imported-full-text-catalogs"></a>Backup e cataloghi full-text importati  
  Per i cataloghi full-text ricompilati o reimpostati durante l'aggiornamento e per i nuovi cataloghi full-text, il catalogo full-text è un concetto logico e non risiede in un filegroup. Per eseguire il backup di un catalogo full-text in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], è pertanto necessario identificare ogni filegroup contenente un indice full-text del catalogo ed eseguirne il backup uno alla volta. Per altre informazioni, vedere [Backup e ripristino di indici e cataloghi full-text](back-up-and-restore-full-text-catalogs-and-indexes.md).  
   
- I cataloghi full-text importati da [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]rappresentano ancora file di database nel proprio filegroup. Il processo di backup di [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] continua a essere applicato per i cataloghi full-text ad eccezione del fatto che il servizio MSFTESQL non esiste in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Per informazioni sul processo in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] , vedere [Backup e ripristino di cataloghi full-text](http://go.microsoft.com/fwlink/?LinkId=209154) nella documentazione online di SQL Server 2005.  
+ I cataloghi full-text importati da [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]rappresentano ancora file di database nel proprio filegroup. Il processo di backup di [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] continua a essere applicato per i cataloghi full-text ad eccezione del fatto che il servizio MSFTESQL non esiste in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Per informazioni sul processo in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] , vedere [Backup e ripristino di cataloghi full-text](https://go.microsoft.com/fwlink/?LinkId=209154) nella documentazione online di SQL Server 2005.  
   
 ##  <a name="Upgrade_Db"></a> Migrazione degli indici Full-Text durante l'aggiornamento di un Database a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
  I file di database e i cataloghi full-text di una versione precedente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] possono essere aggiornati a un'istanza del server di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] esistente mediante il collegamento, il ripristino o la Copia guidata database. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Gli indici full-text, se presenti, vengono importati, reimpostati o ricompilati. La proprietà del server **upgrade_option** consente di controllare l'opzione di aggiornamento full-text usata dall'istanza del server durante questi aggiornamenti del database.  
@@ -135,9 +135,9 @@ ms.locfileid: "48163541"
   
  **Per modificare il comportamento dell'aggiornamento full-text in un'istanza del server**  
   
--   [!INCLUDE[tsql](../../includes/tsql-md.md)]: usare  **l'azione \_Opzione** di aggiornamento di full-text di [sp\_fulltext\_service](/sql/relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql)  
+-   [!INCLUDE[tsql](../../includes/tsql-md.md)]: Usare la **aggiornare\_opzione** azione del [sp\_full-text\_servizio](/sql/relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql)  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **:** Usare l'opzione di **aggiornamento full-text** della finestra di dialogo **Proprietà server** . Per altre informazioni, vedere [Gestione e monitoraggio della ricerca full-text per un'istanza del server](manage-and-monitor-full-text-search-for-a-server-instance.md).  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **:** Usare la **opzione di aggiornamento Full-Text** delle **le proprietà del Server** nella finestra di dialogo. Per altre informazioni, vedere [Gestione e monitoraggio della ricerca full-text per un'istanza del server](manage-and-monitor-full-text-search-for-a-server-instance.md).  
   
 ##  <a name="Considerations_for_Restore"></a> Considerazioni per il ripristino di un catalogo full-text di [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
  Un metodo di aggiornamento dei dati full-text da un database di [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] consiste nel ripristinare il backup completo di un database in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -148,7 +148,7 @@ ms.locfileid: "48163541"
   
 -   Se il catalogo full-text è offline, il backup non verrà eseguito correttamente.  
   
- Per altre informazioni sul backup e il ripristino dei cataloghi full-text di [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] , vedere [Backup e ripristino di cataloghi full-text](http://go.microsoft.com/fwlink/?LinkId=121052) e [Backup e ripristino di file e cataloghi full-text](http://go.microsoft.com/fwlink/?LinkId=121053)nella documentazione online di [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] .  
+ Per altre informazioni sul backup e il ripristino dei cataloghi full-text di [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] , vedere [Backup e ripristino di cataloghi full-text](https://go.microsoft.com/fwlink/?LinkId=121052) e [Backup e ripristino di file e cataloghi full-text](https://go.microsoft.com/fwlink/?LinkId=121053)nella documentazione online di [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] .  
   
  Quando viene ripristinato il database in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], viene creato un nuovo file di database per il catalogo full-text. Il nome predefinito di questo file è ftrow_*nome-catalogo*.ndf. Se ad esempio *nome-catalogo* è `cat1`, il nome predefinito del database di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] sarà `ftrow_cat1.ndf`. Se però il nome predefinito è già utilizzato nella directory di destinazione, il nome del nuovo file di database sarà `ftrow_`*nome-catalogo*`{`*GUID*`}.ndf`, dove *GUID* è l'identificatore univoco globale del nuovo file.  
   

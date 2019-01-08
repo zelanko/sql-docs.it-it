@@ -20,12 +20,12 @@ ms.assetid: ebdbac93-3d68-438f-8416-ef1f08e04269
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c4606c9f525517d51312fc9a105076691dcda682
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ab81694fb0234a896a7e9fd09d338e8db43360eb
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47683027"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53207510"
 ---
 # <a name="sqlgetdiagrec-function"></a>Funzione SQLGetDiagRec
 **Conformità**  
@@ -94,13 +94,13 @@ SQLRETURN SQLGetDiagRec(
 ## <a name="diagnostics"></a>Diagnostica  
  **SQLGetDiagRec** non invia i record di diagnostica per se stesso. Usa i seguenti valori restituiti per segnalare il risultato della propria esecuzione:  
   
--   SQL_SUCCESS: La funzione restituito correttamente le informazioni di diagnostica.  
+-   SQL_SUCCESS: La funzione viene restituito correttamente le informazioni di diagnostica.  
   
--   SQL_SUCCESS_WITH_INFO: il \* *MessageText* buffer è troppo piccolo per contenere il messaggio di diagnostica richiesto. Nessun record di diagnostica sono stati generati. Per determinare che si è verificato un troncamento, l'applicazione deve confrontare *BufferLength* al numero effettivo di byte disponibili, che viene scritto in **StringLengthPtr*.  
+-   SQL_SUCCESS_WITH_INFO: Il \* *MessageText* buffer è troppo piccolo per contenere il messaggio di diagnostica richiesto. Nessun record di diagnostica sono stati generati. Per determinare che si è verificato un troncamento, l'applicazione deve confrontare *BufferLength* al numero effettivo di byte disponibili, che viene scritto in **StringLengthPtr*.  
   
 -   SQL_INVALID_HANDLE: L'handle indicato dal *HandleType* e *gestire* non era un handle valido.  
   
--   SQL_ERROR: Una delle seguenti cause:  
+-   SQL_ERROR: Si è verificata una delle operazioni seguenti:  
   
     -   *RecNumber* è negativo o 0.  
   
@@ -108,7 +108,7 @@ SQLRETURN SQLGetDiagRec(
   
     -   Quando si utilizza la notifica asincrona, l'operazione asincrona sull'handle non è completa.  
   
--   : SQL_NO_DATA *RecNumber* era maggiore del numero di record di diagnostica esistenti per l'handle specificato in *gestire.* La funzione restituisce SQL_NO_DATA anche per qualsiasi positivo *RecNumber* se non sono presenti record di diagnostica per *gestire*.  
+-   SQL_NO_DATA: *RecNumber* era maggiore del numero di record di diagnostica esistenti per l'handle specificato in *gestire.* La funzione restituisce SQL_NO_DATA anche per qualsiasi positivo *RecNumber* se non sono presenti record di diagnostica per *gestire*.  
   
 ## <a name="comments"></a>Commenti  
  Un'applicazione chiama in genere **SQLGetDiagRec** quando una precedente chiamata a una funzione ODBC ha restituito SQL_ERROR o SQL_SUCCESS_WITH_INFO. Tuttavia, poiché una funzione ODBC possa registrare i record di diagnostica di zero o più ogni volta che viene chiamato, un'applicazione può chiamare **SQLGetDiagRec** dopo una chiamata di funzione ODBC. Un'applicazione può chiamare **SQLGetDiagRec** più volte per restituire alcuni o tutti i record nella struttura di dati di diagnostica. ODBC non impone alcun limite al numero di record di diagnostica che possono essere archiviati in qualsiasi momento.  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - components [Integration Services], properties
@@ -13,12 +12,12 @@ ms.assetid: 73000ef6-52a2-4dec-8320-0e79acf0c2c5
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f850c2420b4dbc28b4559e3d03ab36dbaafd08c3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9ac3714dbbd96150aa9d670e370e8a475f6a57e1
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48127471"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52817953"
 ---
 # <a name="set-the-properties-of-a-data-flow-component"></a>Impostazione delle proprietà di un componente del flusso di dati
   Per impostare le proprietà dei componenti flusso di dati, tra cui origini, destinazioni e trasformazioni, utilizzare una delle funzionalità seguenti:  
@@ -27,7 +26,7 @@ ms.locfileid: "48127471"
   
 -   Nella finestra **Proprietà** sono elencate sia le proprietà personalizzate a livello di componente per ogni elemento, sia le proprietà comuni a tutti gli elementi del flusso di dati.  
   
--   La finestra di dialogo **Editor avanzato** consente l'accesso alle proprietà personalizzate di ciascun componente. La finestra di dialogo **Editor avanzato** consente anche di accedere alle proprietà comuni a tutti i componenti flusso di dati, ovvero le proprietà degli input, degli output, degli output degli errori, delle colonne e delle colonne esterne.  
+-   La finestra di dialogo **Editor avanzato** consente l'accesso alle proprietà personalizzate di ciascun componente. La finestra di dialogo **Editor avanzato** consente anche di accedere alle proprietà comuni a tutti i componenti flusso di dati, ossia le proprietà degli input, degli output, degli output degli errori, delle colonne e delle colonne esterne.  
   
 ### <a name="to-set-the-properties-of-a-data-flow-component-by-using-a-component-editor"></a>Per impostare le proprietà di un componente flusso di dati utilizzando l'editor del componente  
   

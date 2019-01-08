@@ -4,22 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
-f1_keywords:
-- vs.openwith
 helpviewer_keywords:
 - Open With dialog box
 ms.assetid: 9531588c-e7ec-4049-9f9c-ee000c49c5de
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f7ea982dcc8a3f1d0cc16857e657003c63c60f94
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 92d0b5adcdb6b5c482b2a0abcf4ca00f83674df9
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48065802"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53328361"
 ---
 # <a name="open-with-new-file"></a>Apri con (Nuovo file)
   È possibile aprire un documento in uno o più editor scegliendo **Apri** dal menu **File** e quindi facendo clic su **File**. Nella finestra di dialogo **Apri file** selezionare il file, fare clic sulla freccia accanto al pulsante **Apri** e quindi fare clic su **Apri con**. Nella finestra di dialogo **Apri con** selezionare il programma preferito nell'elenco **Selezionare un programma dall'elenco** e quindi fare clic su **Apri**.  
@@ -45,5 +43,3 @@ ms.locfileid: "48065802"
   
 ## <a name="see-also"></a>Vedere anche  
  [Associare estensioni di file a un editor di codice](../../relational-databases/scripting/associate-file-extensions-to-a-code-editor.md)  
-  
-  

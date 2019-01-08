@@ -20,12 +20,12 @@ ms.assetid: ff375ce1-eb50-4693-b1e6-70181a6dbf9f
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 59199461d6a0d827cad043f0b6bdbe35d425815f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fa1b2afec38116bef3ae90d75607d21c9a92cd80
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47855919"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53204560"
 ---
 # <a name="sqlendtran-function"></a>SQLEndTran Function
 **Conformità**  
@@ -65,7 +65,7 @@ SQLRETURN SQLEndTran(
 ## <a name="diagnostics"></a>Diagnostica  
  Quando **SQLEndTran** restituisce SQL_ERROR o SQL_SUCCESS_WITH_INFO, un valore SQLSTATE associato possono essere ottenuti chiamando **SQLGetDiagRec** con l'appropriato *HandleType*e *gestire*. Nella tabella seguente sono elencati i valori SQLSTATE comunemente restituiti da **SQLEndTran** e illustra ognuna nel contesto di questa funzione; la notazione "(DM)" precede le descrizioni di SQLSTATE restituiti da Gestione Driver. Il codice restituito a ogni valore SQLSTATE è SQL_ERROR, se non specificato diversamente.  
   
-|SQLSTATE|Errore|Description|  
+|SQLSTATE|Errore|Descrizione|  
 |--------------|-----------|-----------------|  
 |01000|Avviso generale|Messaggio informativo specifico del driver. (Funzione restituisce SQL_SUCCESS_WITH_INFO).|  
 |08003|Connessione non aperta|(DM) di *HandleType* era SQL_HANDLE_DBC e il *gestire* non era in uno stato connesso.|  
@@ -132,13 +132,13 @@ SQLRETURN SQLEndTran(
   
 -   Il driver non ha restituito uno dei due messaggi seguenti, che consentono di verificare che la transazione non è stata completata:  
   
-    -   25S03: viene eseguito il rollback delle transazioni  
+    -   25S03: Viene eseguito il rollback delle transazioni  
   
-    -   40001: errore di serializzazione.  
+    -   40001: Errore di serializzazione.  
   
     -   40002: vincolo di integrità  
   
-    -   : HYC00 Funzionalità facoltativa non implementata  
+    -   HYC00: Funzionalità opzionale non implementata  
   
  Se **SQLEndTran** è stato chiamato in un ambiente handle e una delle relative connessioni soddisfatte le condizioni precedenti, tutte le connessioni la connessione per lo stesso driver verranno inserite in stato sospeso.  
   

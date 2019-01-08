@@ -11,17 +11,17 @@ ms.assetid: c200a97b-67f2-499f-8374-3ed1ebe3f33c
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 15ffda591bf3a27ff5599428abb63b652b61d8bc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fc01da68aeaa393631aca6146a41e6eb88ecb14e
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48073471"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376633"
 ---
 # <a name="create-a-document-map-report-builder-and-ssrs"></a>Creare una mappa documento (Generatore report e SSRS)
   Una mappa documento offre un set di collegamenti a elementi di report in un report visualizzabile. Quando si visualizza un report che include una mappa documento, accanto al report viene visualizzato un riquadro distinto. Gli utenti possono fare clic sui collegamenti della mappa documento per passare alla pagina del report in cui viene visualizzato l'elemento specifico. Le sezioni del report e i gruppi sono disposti in una gerarchia di collegamenti. Se si fa clic sugli elementi nella mappa documento, il report viene aggiornato e viene visualizzata l'area del report corrispondente all'elemento nella mappa documento.  
   
- Per aggiungere collegamenti alla mappa documento, impostare il `DocumentMapLabel` proprietà dell'elemento del report sul testo creato o su un'espressione che restituisce il testo da visualizzare nella mappa documento. A quest'ultima è possibile inoltre aggiungere i valori univoci per una tabella o un gruppo di matrici. Per un gruppo basato su un colore, ad esempio, ogni colore univoco rappresenta un collegamento alla pagina del report in cui viene visualizzata l'istanza del gruppo per il colore specifico.  
+ Per aggiungere collegamenti alla mappa documento, impostare la proprietà `DocumentMapLabel` dell'elemento del report sul testo creato o su un'espressione che restituisca il testo da visualizzare nella mappa documento. A quest'ultima è possibile inoltre aggiungere i valori univoci per una tabella o un gruppo di matrici. Per un gruppo basato su un colore, ad esempio, ogni colore univoco rappresenta un collegamento alla pagina del report in cui viene visualizzata l'istanza del gruppo per il colore specifico.  
   
  È inoltre possibile creare un URL di un report in cui viene ignorata la visualizzazione della mappa documento, in modo che sia possibile eseguire il report senza visualizzare la mappa documento e successivamente fare clic sul pulsante **Mostra/Nascondi mappa documento** sulla barra degli strumenti del visualizzatore di report per attivare e disattivare la visualizzazione.  
   
@@ -29,7 +29,7 @@ ms.locfileid: "48073471"
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ##  <a name="DocMapRenderExtensions"></a> Mappe documento ed estensioni per il rendering  
- La mappa documento è destinata all'utilizzo nell'estensione per il rendering HTML, ad esempio in Anteprima e nel Visualizzatore report. Altre estensioni per il rendering usano modalità diverse per organizzare una mappa documento:  
+ La mappa documento è destinata all'uso nell'estensione per il rendering HTML, ad esempio in Anteprima e nel Visualizzatore report. Altre estensioni per il rendering usano modalità diverse per organizzare una mappa documento:  
   
 -   Con l'estensione per il rendering PDF, una mappa documento viene visualizzata come riquadro Segnalibri.  
   
@@ -113,9 +113,9 @@ ms.locfileid: "48073471"
 4.  Incollare l'URL in Gestione report, quindi premere INVIO. Verrà avviata l'esecuzione del report e la mappa documento verrà nascosta.  
   
 > [!NOTE]  
->  Per altre informazioni sul download di report di esempio, vedere la pagina relativa ai [report di esempio per Generatore report e Progettazione report](http://go.microsoft.com/fwlink/?LinkId=198283) di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+>  Per altre informazioni sul download di report di esempio, vedere la pagina relativa ai [report di esempio per Generatore report e Progettazione report](https://go.microsoft.com/fwlink/?LinkId=198283) di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
 >   
->  Per altre informazioni, vedere "Accesso con URL" nella [documentazione relativa a Reporting Services](http://go.microsoft.com/fwlink/?linkid=121312) inclusa nella documentazione online di SQL Server.  
+>  Per altre informazioni, vedere "Accesso con URL" nella [documentazione relativa a Reporting Services](https://go.microsoft.com/fwlink/?linkid=121312) inclusa nella documentazione online di SQL Server.  
   
  
   

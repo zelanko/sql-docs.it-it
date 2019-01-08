@@ -20,23 +20,23 @@ ms.assetid: dbf9eb5a-bd99-42f7-b275-556d0def045d
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 44aee43742fdc451012a9516249c0558b3ce0d35
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 31b22b1dce53bb82f85ae946290024408d2facd3
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48129181"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376068"
 ---
 # <a name="requirements-for-clr-user-defined-aggregates"></a>Requisiti per le aggregazioni CLR definite dall'utente
   Un tipo in un assembly CLR (Common Language Runtime) può essere registrato come funzione di aggregazione definita dall'utente, purché implementi il contratto di aggregazione necessario. Tale contratto è costituito dall'attributo `SqlUserDefinedAggregate` e dai metodi del contratto di aggregazione. Il contratto di aggregazione include il meccanismo per salvare lo stato intermedio dell'aggregazione e il meccanismo per accumulare nuovi valori, costituito da quattro metodi: `Init`, `Accumulate`, `Merge` e `Terminate`. Quando si sono soddisfatti questi requisiti, sarà in grado di sfruttare appieno le aggregazioni definite dall'utente nel [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Nelle sezioni seguenti di questo argomento sono disponibili altre informazioni dettagliate su come creare e utilizzare aggregazioni definite dall'utente. Per un esempio, vedere [funzioni di aggregazione Invoking CLR User-Defined](clr-user-defined-aggregate-invoking-functions.md).  
   
 ## <a name="sqluserdefinedaggregate"></a>SqlUserDefinedAggregate  
- Per altre informazioni, vedere [SqlUserDefinedAggregateAttribute](http://go.microsoft.com/fwlink/?LinkId=124626).  
+ Per altre informazioni, vedere [SqlUserDefinedAggregateAttribute](https://go.microsoft.com/fwlink/?LinkId=124626).  
   
 ## <a name="aggregation-methods"></a>Metodi di aggregazione  
  La classe registrata come aggregazione definita dall'utente deve supportare i metodi di istanza seguenti. Tali metodi vengono utilizzati da Query Processor per calcolare l'aggregazione:  
   
-|Metodo|Sintassi|Description|  
+|Metodo|Sintassi|Descrizione|  
 |------------|------------|-----------------|  
 |`Init`|public void Init ();|Query Processor utilizza questo metodo per inizializzare il calcolo dell'aggregazione. Questo metodo viene richiamato una volta per ogni gruppo aggregato da Query Processor. Query Processor può scegliere di riutilizzare la stessa istanza della classe di aggregazione per il calcolo delle aggregazioni di più gruppi. Il metodo `Init` deve eseguire tutta la pulizia necessaria rispetto agli utilizzi precedenti dell'istanza e abilitare l'istanza per riavviare un nuovo calcolo di aggregazione.|  
 |`Accumulate`|public void Accumulate (valore del tipo di input [, valore di tipo di input,...]);|Uno o più parametri che rappresentano i parametri della funzione. *INPUT_TYPE* deve essere gestita [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo di dati equivalente all'oggetto nativo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo di dati specificato da *input_sqltype* nel `CREATE AGGREGATE` istruzione. Per altre informazioni, vedere [Mapping dei dati dei parametri CLR](../clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md).<br /><br /> Per i tipi definiti dall'utente (UDT, User-Defined Type), il tipo di input coincide con il tipo definito dall'utente. Query Processor utilizza questo metodo per accumulare i valori di aggregazione. Il metodo viene richiamato una volta per ogni valore nel gruppo aggregato. Query Processor chiama sempre questo metodo solo dopo avere chiamato il metodo `Init` nell'istanza specificata della classe di aggregazione. L'implementazione di questo metodo deve aggiornare lo stato dell'istanza per riflettere l'accumulazione del valore dell'argomento passato.|  

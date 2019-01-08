@@ -14,12 +14,12 @@ ms.assetid: ffbf34c6-8268-434f-829a-82009a6cda59
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4def24dac95db8cf86d0a23bd1e0f7a951d4e9e0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 95d367efc0bf3fb3e3a74bd0ba9d48b9d8f25be2
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48054991"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53369843"
 ---
 # <a name="sqldescribecol"></a>SQLDescribeCol
   Per le istruzioni eseguite, il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC Native Client non è necessario eseguire una query sul server per descrivere le colonne in un set di risultati. In questo caso, `SQLDescribeCol` genera un round trip del server. Ad esempio [SQLColAttribute](sqlnumresultcols.md), la chiamata `SQLDescribeCol` via preparate, ma le istruzioni non eseguite genera un round trip del server.  
@@ -50,7 +50,7 @@ ms.locfileid: "48054991"
  `SQLDescribeCol` supporta i tipi CLR definiti dall'utente di grandi dimensioni. Per altre informazioni, vedere [Large CLR User-Defined tipi &#40;ODBC&#41;](../native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Funzione SQLDescribeCol](http://go.microsoft.com/fwlink/?LinkID=59338)   
+ [Funzione SQLDescribeCol](https://go.microsoft.com/fwlink/?LinkID=59338)   
  [Dettagli di implementazione dell'API ODBC](odbc-api-implementation-details.md)  
   
   

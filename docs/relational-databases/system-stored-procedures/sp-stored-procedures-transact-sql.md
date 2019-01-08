@@ -18,12 +18,12 @@ ms.assetid: fe52dd83-000a-4665-83fb-7a0024193dec
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8a195a39d30becaef2404a4ae50953a4ffb12159
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a0ca437ccef3a986d4db7bf72d6017e0e2f515d3
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47636899"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53588464"
 ---
 # <a name="spstoredprocedures-transact-sql"></a>sp_stored_procedures (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,10 +43,10 @@ sp_stored_procedures [ [ @sp_name = ] 'name' ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@sp_name =** ] **'***nome***'**  
+ [  **@sp_name =** ] **'**_nome_**'**  
  Nome della procedura utilizzata per restituire informazioni sul catalogo. *nome* viene **nvarchar(390)**, con un valore predefinito è NULL. La ricerca con caratteri jolly è supportata.  
   
- [  **@sp_owner =** ] **'***schema***'**  
+ [  **@sp_owner =** ] **'**_schema_**'**  
  Nome dello schema a cui appartiene la procedura. *lo schema* viene **nvarchar (384)**, con un valore predefinito è NULL. La ricerca con caratteri jolly è supportata. Se *proprietario* non viene specificato, si applicano le regole di visibilità predefinite procedure del sistema DBMS sottostante.  
   
  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], se lo schema corrente contiene una procedura con il nome specificato, viene restituita tale procedura. Se è specificata una stored procedure non qualificata, [!INCLUDE[ssDE](../../includes/ssde-md.md)] cerca la procedura nell'ordine seguente:  
@@ -57,10 +57,10 @@ sp_stored_procedures [ [ @sp_name = ] 'name' ]
   
 -   Schema **dbo** nel database corrente.  
   
- [  **@qualifier =** ] **'***qualificatore***'**  
- Nome del qualificatore della procedura. *qualificatore* viene **sysname**, con un valore predefinito è NULL. Vari prodotti DBMS supportano i nomi di tre parti per le tabelle nel formato (*qualificatore ***.*** lo schema ***.*** nome*. Nelle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], *qualificatore* rappresenta il nome del database. In alcuni prodotti rappresenta il nome del server dell'ambiente di database della tabella.  
+ [  **@qualifier =** ] **'**_qualificatore_**'**  
+ Nome del qualificatore della procedura. *qualificatore* viene **sysname**, con un valore predefinito è NULL. Vari prodotti DBMS supportano i nomi di tre parti per le tabelle nel formato (_qualificatore_**.** _schema_**.** _nome_. Nelle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], *qualificatore* rappresenta il nome del database. In alcuni prodotti rappresenta il nome del server dell'ambiente di database della tabella.  
   
- [  **@fUsePattern =** ] **'***fUsePattern***'**  
+ [  **@fUsePattern =** ] **'**_fUsePattern_**'**  
  Determina se i caratteri di sottolineatura (_), percentuale (%) o parentesi quadre ([ ]) vengono interpretati come caratteri jolly. *fUsePattern* viene **bit**, con un valore predefinito è 1.  
   
  **0** = criteri di corrispondenza è disattivata.  
@@ -72,7 +72,7 @@ sp_stored_procedures [ [ @sp_name = ] 'name' ]
   
 ## <a name="result-sets"></a>Set di risultati  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**PROCEDURE_QUALIFIER**|**sysname**|Nome di qualificatore della procedura. Questa colonna può essere NULL.|  
 |**PROCEDURE_OWNER**|**sysname**|Nome del proprietario della procedura. In questa colonna viene sempre restituito un valore.|  
@@ -104,7 +104,7 @@ GO
 EXEC sp_stored_procedures;  
 ```  
   
-### <a name="b-returning-a-single-stored-procedure"></a>B. Restituzione di una singola stored procedure  
+### <a name="b-returning-a-single-stored-procedure"></a>b. Restituzione di una singola stored procedure  
  Nell'esempio seguente viene restituito un set di risultati per la stored procedure `uspLogError`.  
   
 ```  

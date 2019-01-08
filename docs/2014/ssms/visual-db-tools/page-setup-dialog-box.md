@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - vs.PageSetup
@@ -12,12 +12,12 @@ ms.assetid: 03deb946-34c6-48b1-b639-5e888f47bddb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6f28df5a3091ad54b8500bd29b9873277c33b690
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cf05de13f0aada12da055f2e9c1e5a3a0db1d1df
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48220950"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52780473"
 ---
 # <a name="page-setup-dialog-box"></a>Finestra di dialogo Imposta pagina
   È possibile personalizzare la progettazione della pagina selezionando le opzioni presenti nella finestra di dialogo **Imposta pagina** . Le opzioni disponibili dipendono dalle lingue installate e abilitate per le operazioni di modifica.  

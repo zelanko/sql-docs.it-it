@@ -24,12 +24,12 @@ ms.assetid: d7cd0ec9-334a-4564-bda9-83487b6865cb
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 3ac773ea8c68be65a0b60aaff3d542df0b6dc6e7
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 4c95d86b64c28bbf78b111f21de7afd58b44616f
+ms.sourcegitcommit: 1f10e9df1c523571a8ccaf3e3cb36a26ea59a232
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51662881"
+ms.lasthandoff: 11/17/2018
+ms.locfileid: "51858666"
 ---
 # <a name="flwor-statement-and-iteration-xquery"></a>Istruzione e iterazione FLWOR (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -50,11 +50,11 @@ ms.locfileid: "51662881"
   
 -   Una clausola `order by` facoltativa.  
   
--   Un'espressione `return`. L'espressione nella clausola `return` costruisce il risultato dell'istruzione FLWOR.  
+-   Espressione `return`. L'espressione nella clausola `return` costruisce il risultato dell'istruzione FLWOR.  
   
  Ad esempio, tramite la query riportata di seguito viene eseguita l'iterazione sugli elementi <`Step`> del primo centro di produzione e viene restituito il valore stringa dei nodi <`Step`>:  
   
-```  
+```sql
 declare @x xml  
 set @x='<ManuInstructions ProductModelID="1" ProductModelName="SomeBike" >  
 <Location LocationID="L1" >  
@@ -74,7 +74,7 @@ SELECT @x.query('
 ')  
 ```  
   
- Risultato:  
+ Questo è il risultato:  
   
 ```  
 Manu step 1 at Loc 1 Manu step 2 at Loc 1 Manu step 3 at Loc 1  
@@ -82,7 +82,7 @@ Manu step 1 at Loc 1 Manu step 2 at Loc 1 Manu step 3 at Loc 1
   
  La query seguente è analoga alla precedente, tranne per il fatto che viene eseguita sulla colonna XML tipizzata Instructions della tabella ProductModel. Tramite la query viene eseguita l'iterazione su tutte le fasi di produzione, corrispondenti agli elementi <`step`>, nel primo centro di lavorazione per un prodotto specifico.  
   
-```  
+```sql
 SELECT Instructions.query('  
    declare namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
 for $Step in //AWMI:root/AWMI:Location[1]/AWMI:step  
@@ -115,7 +115,7 @@ the aluminum sheet. ....
   
  Negli esempi seguenti vengono illustrate sequenze di input aggiuntive consentite:  
   
-```  
+```sql
 declare @x xml  
 set @x=''  
 SELECT @x.query('  
@@ -146,7 +146,7 @@ SELECT @x.query('
   
  Nel database di esempio AdventureWorks, le istruzioni di produzione archiviato nel **istruzioni** della colonna della **Production. ProductModel** tabella hanno il formato seguente:  
   
-```  
+```xml
 <Location LocationID="10" LaborHours="1.2"   
             SetupHours=".2" MachineHours=".1">  
   <step>describes 1st manu step</step>  
@@ -158,11 +158,11 @@ SELECT @x.query('
   
  Tramite la query seguente viene creata la nuova struttura XML, in cui gli elementi <`Location`> e gli attributi del centro di lavorazione vengono restituiti come elementi figlio:  
   
-```  
+```xml
 <Location>  
    <LocationID>10</LocationID>  
    <LaborHours>1.2</LaborHours>  
-   <SetupHours>.2</SteupHours>  
+   <SetupHours>.2</SetupHours>  
    <MachineHours>.1</MachineHours>  
 </Location>  
 ...  
@@ -170,7 +170,7 @@ SELECT @x.query('
   
  Query:  
   
-```  
+```sql
 SELECT Instructions.query('  
      declare namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
         for $WC in /AWMI:root/AWMI:Location  
@@ -196,7 +196,7 @@ where ProductModelID=7
   
  Risultato parziale:  
   
-```  
+```xml
 <Location>  
   <LocationID>10</LocationID>  
   <LaborHours>2.5</LaborHours>  
@@ -214,7 +214,7 @@ where ProductModelID=7
   
  Nel database [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)], le istruzioni di produzione contengono informazioni sugli strumenti richiesti e sulla posizione in cui vengono utilizzati. Nella query seguente viene utilizzata la clausola `let` per elencare gli strumenti richiesti per la compilazione di un modello di produzione e i percorsi in cui è necessario ogni strumento.  
   
-```  
+```sql
 SELECT Instructions.query('  
      declare namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
         for $T in //AWMI:tool  
@@ -227,11 +227,11 @@ where ProductModelID=7
 ```  
   
 ## <a name="using-the-where-clause"></a>Utilizzo della clausola where  
- È possibile utilizzare la clausola `where` per filtrare i risultati di un'iterazione. Questa operazione viene illustrata nell'esempio seguente.  
+ È possibile usare il `where` clausola per filtrare i risultati di un'iterazione. Questa operazione viene illustrata nell'esempio seguente.  
   
  Il processo di produzione di una bicicletta passa attraverso una serie di centri di lavorazione, ognuno dei quali definisce una sequenza di fasi di produzione. La query seguente recupera solo i centri di lavorazione che producono un modello di bicicletta e prevedono un numero di fasi di produzione inferiore a tre, ovvero includono meno di tre elementi <`step`>.  
   
-```  
+```sql
 SELECT Instructions.query('  
      declare namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
 for $WC in /AWMI:root/AWMI:Location  
@@ -251,7 +251,7 @@ where ProductModelID=7
   
 -   L'espressione `return` costruisce la struttura XML desiderata a partire dai risultati dell'iterazione.  
   
- Risultato:  
+ Questo è il risultato:  
   
 ```  
 <Location LocationID="30"/>   
@@ -270,7 +270,7 @@ where ProductModelID=7
 ## <a name="multiple-variable-binding-in-flwor"></a>Associazione di più variabili in FLWOR  
  È possibile disporre di una singola espressione FLWOR che associa più variabili alle sequenze di input. Nell'esempio seguente, la query viene specificata su una variabile XML non tipizzata. Tramite l'espressione FLOWR viene restituito il primo elemento figlio <`Step`> in ogni elemento <`Location`>.  
   
-```  
+```sql
 declare @x xml  
 set @x='<ManuInstructions ProductModelID="1" ProductModelName="SomeBike" >  
 <Location LocationID="L1" >  
@@ -302,7 +302,7 @@ SELECT @x.query('
   
 -   `$Loc` viene specificata nell'espressione associata alla variabile `$FirstStep`.  
   
- Risultato:  
+ Questo è il risultato:  
   
 ```  
 Manu step 1 at Loc 1   
@@ -311,7 +311,7 @@ Manu step 1 at Loc 2
   
  La query seguente è simile, ad eccezione del fatto che viene specificata sulla colonna Instructions, tipizzata **xml** colonna, delle **ProductModel** tabella. [Costruzione di strutture XML (XQuery)](../xquery/xml-construction-xquery.md) viene usato per generare il codice XML desiderato.  
   
-```  
+```sql
 SELECT Instructions.query('  
      declare default element namespace "https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
 for $WC in /root/Location,  
@@ -335,7 +335,7 @@ WHERE ProductModelID=7
   
  Risultato parziale:  
   
-```  
+```xml
 <Step xmlns=  
     "https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions"     
   LocationID="10">  
@@ -360,7 +360,7 @@ WHERE ProductModelID=7
   
  La query seguente recupera tutti i numeri di telefono di un cliente specifico dalla colonna AdditionalContactInfo. I risultati vengono ordinati in base al numero di telefono.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SELECT AdditionalContactInfo.query('  
@@ -380,9 +380,9 @@ WHERE BusinessEntityID=291;
 order by data($a/act:number[1]) descending  
 ```  
   
- Risultato:  
+ Questo è il risultato:  
   
-```  
+```xml
 <act:telephoneNumber xmlns:act="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes">  
   <act:number>333-333-3334</act:number>  
 </act:telephoneNumber>  
@@ -393,7 +393,7 @@ order by data($a/act:number[1]) descending
   
  Anziché dichiarare gli spazi dei nomi nel prologo della query, è possibile dichiararli tramite WITH XMLNAMESPACES.  
   
-```  
+```sql
 WITH XMLNAMESPACES (  
    'https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes' AS act,  
    'https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactInfo'  AS aci)  
@@ -409,7 +409,7 @@ WHERE BusinessEntityID=291;
   
  È inoltre possibile eseguire l'ordinamento in base al valore di attributo. Ad esempio, la query seguente consente di recuperare i nuovi elementi <`Location`> creati con gli attributi LocationID e LaborHours ordinati in base all'attributo LaborHours in ordine decrescente. Di conseguenza, vengono restituiti per primi i centri di lavorazione con il numero massimo di ore di manodopera.  
   
-```  
+```sql
 SELECT Instructions.query('  
      declare namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
 for $WC in /AWMI:root/AWMI:Location   
@@ -424,7 +424,7 @@ FROM Production.ProductModel
 WHERE ProductModelID=7;  
 ```  
   
- Risultato:  
+ Questo è il risultato:  
   
 ```  
 <Location LocationID="60" LaborHours="4"/>  
@@ -437,7 +437,7 @@ WHERE ProductModelID=7;
   
  Nella query seguente, i risultati vengono ordinati in base al nome dell'elemento. La query recupera le specifiche di un determinato prodotto dal catalogo prodotti. Le specifiche sono elementi figlio dell'elemento <`Specifications`>.  
   
-```  
+```sql
 SELECT CatalogDescription.query('  
      declare namespace  
  pd="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
@@ -455,9 +455,9 @@ where ProductModelID=19;
   
 -   L'espressione `order by (local-name($a))` ordina la sequenza in base alla parte locale del nome dell'elemento.  
   
- Risultato:  
+ Questo è il risultato:  
   
-```  
+```xml
 <Color>Available in most colors</Color>  
 <Material>Almuminum Alloy</Material>  
 <ProductLine>Mountain bike</ProductLine>  
@@ -467,7 +467,7 @@ where ProductModelID=19;
   
  I nodi in cui l'espressione di ordinamento restituisce una sequenza vuota vengono inseriti all'inizio della sequenza, come illustrato nell'esempio seguente:  
   
-```  
+```sql
 declare @x xml  
 set @x='<root>  
   <Person Name="A" />  
@@ -482,9 +482,9 @@ select @x.query('
 ')  
 ```  
   
- Risultato:  
+ Questo è il risultato:  
   
-```  
+```xml
 <Person />  
 <Person Name="A" />  
 <Person Name="B" />  
@@ -492,7 +492,7 @@ select @x.query('
   
  È possibile specificare più criteri di ordinamento, come illustrato nell'esempio seguente in cui la query consente di ordinare gli elementi <`Employee`> innanzitutto in base ai valori dell'attributo Title e quindi in base ai valori dell'attributo Administrator.  
   
-```  
+```sql
 declare @x xml  
 set @x='<root>  
   <Employee ID="10" Title="Teacher"        Gender="M" />  
@@ -511,9 +511,9 @@ order by $e/@Title ascending, $e/@Gender descending
 ')  
 ```  
   
- Risultato:  
+ Questo è il risultato:  
   
-```  
+```xml
 <Employee ID="8" Title="Administrator" Gender="M" />  
 <Employee ID="4" Title="Administrator" Gender="F" />  
 <Employee ID="125" Title="Administrator" Gender="F" />  
