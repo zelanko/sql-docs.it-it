@@ -14,12 +14,12 @@ ms.assetid: 85962ad6-d840-4bc6-905e-c667c3276944
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 50dd31c343150362f1124d9476c526216c675fda
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f9ca50a030fef65c9de02bc93dcd970df2686b0a
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48196991"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52420392"
 ---
 # <a name="connect-to-a-data-mining-server"></a>Connessione al server di data mining
   ![Pulsante connessioni](media/misc-connection.gif "pulsante connessioni")  
@@ -68,7 +68,7 @@ ms.locfileid: "48196991"
   
  **Ho perso la connessione. si perde anche il lavoro?**  
   
- Se si interrompe la connessione al server, i risultati e i dati non andranno persi perché sono archiviati in Excel. Tuttavia, se sono stati creati alcuni modelli temporanei, tali modelli verranno eliminati dal server dopo un breve periodo di tempo. Pertanto se si perde temporaneamente la connessione, è possibile che i modelli non vengano eliminati.  
+ Se si interrompe la connessione al server, i risultati e i dati non andranno persi perché sono archiviati in Excel. Tuttavia, se sono stati creati alcuni modelli temporanei, tali modelli verranno eliminati dal server dopo un breve periodo di tempo. Pertanto, se si perde temporaneamente la connessione, corrisponde a uno dei modelli non vengano eliminati.  
   
  I dati o i risultati generati non andranno persi, in quanto tutti i report e le tabelle sono archiviati in Excel.  
   
@@ -108,7 +108,7 @@ ms.locfileid: "48196991"
   
 2.  Visualizzare il log attività della connessione e individuare il modello controllando, ad esempio, le colonne e gli output stimabili.  
   
-     Utenti avanzati: se si ha familiarità con DMX o XMLA, è possibile copiare le istruzioni in un file per un utilizzo futuro.  
+     Utenti avanzati: Se si ha familiarità con DMX o XMLA, è possibile copiare le istruzioni in un file per un uso successivo.  
   
 3.  Dopo aver individuato il nome del modello temporaneo e struttura, aprire **Gestisci modelli** e selezionare il modello.  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - attributes [Master Data Services], creating number attributes
@@ -14,12 +13,12 @@ ms.assetid: c0dbb6d8-ba78-485a-a40d-6d5cb7e75d0a
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: a3aee9b1bbe939c3790d2849c829a706425aa1b4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: adc2a5156c84545c90a9ae904749f96a729c251a
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48072631"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52794983"
 ---
 # <a name="create-a-numeric-attribute-master-data-services"></a>Creare un attributo numerico (Master Data Services)
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]creare un attributo numerico quando si vuole che gli utenti immettano un numero come valore di attributo.  
@@ -75,9 +74,9 @@ ms.locfileid: "48072631"
 15. Nella pagina **Gestione entità** , fare clic su **Salva entità**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Gli attributi &#40;Master Data Services&#41;](attributes-master-data-services.md)   
+ [Attributi &#40;Master Data Services&#41;](attributes-master-data-services.md)   
  [Modificare un nome di attributo &#40;Master Data Services&#41;](change-an-attribute-name-and-data-type-master-data-services.md)   
  [Creare un attributo basato su dominio &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-domain-based-attribute-master-data-services.md)   
- [Creare un attributo di File &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-file-attribute-master-data-services.md)  
+ [Creare un attributo di file &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-file-attribute-master-data-services.md)  
   
   

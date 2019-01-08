@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - resource bottlenecks [SQL Server]
@@ -22,12 +21,12 @@ ms.assetid: db079e65-ee80-4105-aec9-f8230d0d6635
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 57f1485ea7c427dd24a6231c8a7fb940135d7ceb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: be8b05a3dc706d23f0e1328f4e8bdd38ed368ede
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48108211"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52797103"
 ---
 # <a name="identify-bottlenecks"></a>Individuare i colli di bottiglia
   In seguito all'accesso simultaneo alle risorse condivise si possono verificare colli di bottiglia. I colli di bottiglia in genere sono inevitabili e presenti in qualsiasi sistema software. È tuttavia necessario identificare e ottimizzare le situazioni di eccesso di domanda, in quanto una domanda eccessiva delle risorse condivise comporta un rallentamento dei tempi di risposta.  
@@ -45,7 +44,7 @@ ms.locfileid: "48108211"
 ## <a name="analyzing-bottlenecks"></a>Analisi dei colli di bottiglia  
  La durata eccessiva di alcuni eventi segnala la presenza di colli di bottiglia che è possibile ottimizzare.  
   
- Esempio:  
+ Ad esempio:  
   
 -   È possibile che un altro componente impedisca che il processo di caricamento raggiunga il componente in uso, con un conseguente incremento dei tempi necessari per completare il caricamento.  
   

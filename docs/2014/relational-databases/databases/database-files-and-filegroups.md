@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - databases [SQL Server], files
@@ -33,12 +32,12 @@ ms.assetid: 9ca11918-480d-4838-9198-cec221ef6ad0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 780bfc2f1a9c1654f913995a84460f85e19d386a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3d75dee637a5579ca3f189e14333fbf9356623d0
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48205470"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52790113"
 ---
 # <a name="database-files-and-filegroups"></a>Filegroup e file di database
   Ogni database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contiene almeno due file del sistema operativo: un file di dati e un file di log. I file di dati contengono dati e oggetti come tabelle, indici, stored procedure e viste. I file di log contengono le informazioni necessarie per il recupero di tutte le transazioni del database. I file di dati possono essere raggruppati in filegroup ai fini dell'allocazione e dell'amministrazione.  
@@ -46,9 +45,9 @@ ms.locfileid: "48205470"
 ## <a name="database-files"></a>File di database  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] i database contengono tre tipi di file, come illustrato nella tabella seguente.  
   
-|File|Description|  
+|File|Descrizione|  
 |----------|-----------------|  
-|Primaria|Il file di dati primario contiene le informazioni di avvio del database e punta agli altri file del database. I dati e gli oggetti degli utenti possono essere archiviati in questo file o nei file di dati secondari. In ogni database è disponibile un unico file di dati primario. L'estensione consigliata per i file di dati primari è mdf.|  
+|Primario|Il file di dati primario contiene le informazioni di avvio del database e punta agli altri file del database. I dati e gli oggetti degli utenti possono essere archiviati in questo file o nei file di dati secondari. In ogni database è disponibile un unico file di dati primario. L'estensione consigliata per i file di dati primari è mdf.|  
 |Secondari|I file di dati secondari sono facoltativi e definiti dall'utente e vengono utilizzati per archiviare i dati dell'utente. Possono essere utilizzati per suddividere i dati su più dischi, memorizzandoli in unità disco distinte. Se un database supera le dimensioni massime consentite per un singolo file di Windows, è inoltre possibile utilizzare i file di dati secondari per consentire l'aumento di dimensioni del database.<br /><br /> L'estensione consigliata per i file di dati secondari è ndf.|  
 |Log delle transazioni|I file di log delle transazioni contengono le informazioni necessarie per il recupero del database. È necessario che sia disponibile almeno un file di log per ogni database. L'estensione consigliata per i file di log è ldf.|  
   
@@ -63,9 +62,9 @@ ms.locfileid: "48205470"
   
  Tutti i file di dati vengono archiviati nei filegroup elencati nella tabella seguente.  
   
-|Filegroup|Description|  
+|Filegroup|Descrizione|  
 |---------------|-----------------|  
-|Primaria|Il filegroup che contiene il file primario. Tutte le tabelle di sistema vengono allocate al filegroup primario.|  
+|Primario|Il filegroup che contiene il file primario. Tutte le tabelle di sistema vengono allocate al filegroup primario.|  
 |Definita dall'utente|Qualsiasi filegroup creato specificamente dall'utente in fase di creazione o di successiva modifica del database.|  
   
 ### <a name="default-filegroup"></a>Filegroup predefinito  

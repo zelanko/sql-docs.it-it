@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - replication [SQL Server], agents and profiles
@@ -16,12 +15,12 @@ ms.assetid: 9c290a88-4e9f-4a7e-aab5-4442137a9918
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c68295673fb34c0257a9772540282b8e814df03b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b6f66d1bab70619db1631117268e5d62c24c943f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48169788"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52772203"
 ---
 # <a name="work-with-replication-agent-profiles"></a>Utilizzo dei profili agenti di replica
   In questo argomento viene descritto come utilizzare i profili degli agenti di replica in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]o RMO (Replication Management Objects). Il comportamento di ogni agente di replica è controllato da un set di parametri che è possibile impostare tramite i profili agenti. Ogni agente dispone di un profilo predefinito e alcuni anche di profili predefiniti aggiuntivi. In un momento specifico, per un agente è attivo un solo profilo.  
@@ -62,7 +61,7 @@ ms.locfileid: "48169788"
   
     -   Eliminare un profilo  
   
--   **Completamento:** [dopo avere modificato i parametri degli agenti](#FollowUp)  
+-   **Completamento:**  [Dopo aver modificato i parametri dell'agente](#FollowUp)  
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
   
@@ -92,7 +91,7 @@ ms.locfileid: "48169788"
   
 1.  Se nella finestra di dialogo **Profili agenti** vengono visualizzati i profili di più agenti, selezionare un agente.  
   
-2.  Fare clic sul pulsante delle proprietà (**…**) accanto a un profilo.  
+2.  Fare clic sul pulsante delle proprietà (**...**) accanto a un profilo.  
   
 3.  Visualizzare i parametri e i valori nella finestra di dialogo **Proprietà profilo \<NomeProfilo>**.  
   
@@ -133,7 +132,7 @@ ms.locfileid: "48169788"
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
   
 ###  <a name="Create_tsql"></a> Per creare un nuovo profilo agente  
   
@@ -245,7 +244,7 @@ ms.locfileid: "48169788"
   
     -   (Facoltativo) <xref:Microsoft.SqlServer.Replication.AgentProfile.Description%2A> : descrizione del profilo.  
   
-    -   (Facoltativo) <xref:Microsoft.SqlServer.Replication.AgentProfile.Default%2A> -impostare questa proprietà su `true` se tutti i processi del nuovo agente per l'oggetto <xref:Microsoft.SqlServer.Replication.AgentType> utilizzeranno questo profilo per impostazione predefinita.  
+    -   (Facoltativo) <xref:Microsoft.SqlServer.Replication.AgentProfile.Default%2A>: impostare questa proprietà su `true` se tutti i processi del nuovo agente per <xref:Microsoft.SqlServer.Replication.AgentType> utilizzeranno questo profilo per impostazione predefinita.  
   
 4.  Chiamare il metodo <xref:Microsoft.SqlServer.Replication.AgentProfile.Create%2A> per creare il profilo nel server.  
   
@@ -259,9 +258,9 @@ ms.locfileid: "48169788"
   
 2.  Creare un'istanza della classe <xref:Microsoft.SqlServer.Replication.ReplicationServer> . Passare l'oggetto <xref:Microsoft.SqlServer.Management.Common.ServerConnection> creato nel passaggio 1.  
   
-3.  Chiamare il metodo <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> . Se il metodo restituisce `false`, verificare che il server di distribuzione esista.  
+3.  Chiamare il metodo <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A>. Se il metodo restituisce `false`, verificare che il server di distribuzione esista.  
   
-4.  Chiamare il metodo <xref:Microsoft.SqlServer.Replication.ReplicationServer.EnumAgentProfiles%2A> . Passare un valore di <xref:Microsoft.SqlServer.Replication.AgentType> per limitare i profili restituiti a un tipo specifico di agente di replica.  
+4.  Chiamare il metodo <xref:Microsoft.SqlServer.Replication.ReplicationServer.EnumAgentProfiles%2A>. Passare un valore di <xref:Microsoft.SqlServer.Replication.AgentType> per limitare i profili restituiti a un tipo specifico di agente di replica.  
   
 5.  Ottenere l'oggetto <xref:Microsoft.SqlServer.Replication.AgentProfile> desiderato dall'oggetto <xref:System.Collections.ArrayList>restituito, dove la proprietà <xref:Microsoft.SqlServer.Replication.AgentProfile.Name%2A> dell'oggetto corrisponde al nome del profilo.  
   
@@ -279,13 +278,13 @@ ms.locfileid: "48169788"
   
 2.  Creare un'istanza della classe <xref:Microsoft.SqlServer.Replication.AgentProfile> . Impostare il nome del profilo per la proprietà <xref:Microsoft.SqlServer.Replication.AgentProfile.Name%2A> e l'oggetto <xref:Microsoft.SqlServer.Management.Common.ServerConnection> creato nel passaggio 1 per la proprietà <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>.  
   
-3.  Chiamare il metodo <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> . Se questo metodo restituisce `false`, il nome specificato non è corretto o il profilo non esiste nel server.  
+3.  Chiamare il metodo <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A>. Se il metodo restituisce `false`, il nome specificato non è corretto o il profilo non esiste nel server.  
   
 4.  Verificare che la proprietà <xref:Microsoft.SqlServer.Replication.AgentProfile.Type%2A> sia impostata su <xref:Microsoft.SqlServer.Replication.AgentProfileTypeOption.User>, in modo da indicare un profilo del cliente. Non è necessario rimuovere un profilo con valore <xref:Microsoft.SqlServer.Replication.AgentProfileTypeOption.System> per <xref:Microsoft.SqlServer.Replication.AgentProfile.Type%2A>.  
   
 5.  Chiamare il metodo <xref:Microsoft.SqlServer.Replication.AgentProfile.Remove%2A> per rimuovere dal server il profilo definito dall'utente rappresentato da questo oggetto.  
   
-##  <a name="FollowUp"></a> Completamento: dopo avere modificato i parametri degli agenti  
+##  <a name="FollowUp"></a> Completamento: Dopo aver modificato i parametri dell'agente  
  Le modifiche apportate al parametro dell'agente verranno applicate al successivo avvio dell'agente. Se l'agente viene eseguito in modo continuo, è necessario arrestarlo e riavviarlo.  
   
 ## <a name="see-also"></a>Vedere anche  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Integration Services, what's new
@@ -14,12 +13,12 @@ ms.assetid: da6999c7-e5e3-4a59-a284-1da635995af1
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7427402df49625c04ab7d1c38dd6bcfe3298e0ed
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 804e528aed70a6612f35391bd4ad96ebfd03df3a
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48048541"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52792013"
 ---
 # <a name="what39s-new-integration-services"></a>Cosa&#39;s nuovo (Integration Services)
   [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] è invariato dalla versione precedente.  
@@ -29,9 +28,9 @@ ms.locfileid: "48048541"
  Per altre informazioni sulle modifiche relative al [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Business Intelligence, vedere [What ' s New in Analysis Services e Business Intelligence](../analysis-services/what-s-new-in-analysis-services.md).  
   
 ##  <a name="ValidateXML"></a> Output di convalida XML avanzato in Attività XML  
- Convalidare i documenti XML e ottenere output avanzato degli errori abilitando la `ValidationDetails` proprietà dell'attività XML. Prima di `ValidationDetails` proprietà è disponibile, convalida di XML da parte dell'attività XML restituiva solo un risultato true o false, senza informazioni sugli errori o le relative posizioni sulle. A questo punto, quando si imposta `ValidationDetails` su true, l'output file contiene informazioni dettagliate su ogni errore, inclusi il numero di riga e la posizione. È possibile usare questa informazione per comprendere, individuare e risolvere gli errori nei documenti XML. Per ulteriori informazioni, vedere [Validate XML with the XML Task](control-flow/xml-task.md).  
+ È possibile convalidare documenti XML e ottenere output avanzato degli errori abilitando la proprietà `ValidationDetails` dell'Attività XML. Prima che fosse disponibile la proprietà `ValidationDetails`, la convalida XML da parte dell'Attività XML restituiva solo un risultato di tipo True o False, senza informazioni sugli errori o sulle rispettive posizioni. Attualmente, quando si imposta `ValidationDetails` su True, il file di output contiene informazioni dettagliate su ogni errore, inclusi il numero di riga e la posizione. È possibile usare questa informazione per comprendere, individuare e risolvere gli errori nei documenti XML. Per ulteriori informazioni, vedere [Validate XML with the XML Task](control-flow/xml-task.md).  
   
- [!INCLUDE[ssIS](../includes/ssis-md.md)] introdotto il `ValidationDetails` proprietà [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] Service Pack 2. Questa nuova proprietà non è stata annunciata o documentata in quel momento. Il `ValidationDetails` proprietà è anche disponibile in [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] e in SQL Server 2016.  
+ [!INCLUDE[ssIS](../includes/ssis-md.md)] ha introdotto la proprietà `ValidationDetails` in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] Service Pack 2. Questa nuova proprietà non è stata annunciata o documentata in quel momento. La proprietà `ValidationDetails` è disponibile anche in [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] e in SQL Server 2016.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Funzionalità supportate dalle edizioni di SQL Server 2014](../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)  

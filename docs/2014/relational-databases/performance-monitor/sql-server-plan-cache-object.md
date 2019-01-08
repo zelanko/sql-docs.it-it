@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - Plan Cache object
@@ -13,19 +13,19 @@ ms.assetid: 225e2b02-8d2f-4f29-9eba-f5847c36ea99
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: e24c072897a46d8a5b3add713f94a84e12a642b7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ff1acb1fb3af2708b14b31eeb82aa0989685630c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48190791"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52781983"
 ---
 # <a name="sql-server-plan-cache-object"></a>Oggetto Plan Cache di SQL Server
   L'oggetto **Plan Cache** include contatori che consentono di monitorare il modo in cui [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa la memoria per archiviare oggetti quali stored procedure, istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] ad hoc e preparate e trigger. È possibile monitorare contemporaneamente più istanze dell'oggetto **Plan Cache** , che rappresentano diversi tipi di piani da monitorare.  
   
  Nella tabella seguente sono descritti i contatori **SQLServer:Plan Cache**.  
   
-|Contatori di Plan Cache di SQL Server|Description|  
+|Contatori di Plan Cache di SQL Server|Descrizione|  
 |------------------------------------|-----------------|  
 |**Percentuale riscontri cache**|Rapporto tra riscontri e ricerche nella cache.|  
 |**Numero oggetti nella cache**|Numero di oggetti disponibili nella cache.|  
@@ -34,7 +34,7 @@ ms.locfileid: "48190791"
   
  Per ogni contatore nell'oggetto sono disponibili le istanze seguenti:  
   
-|Istanza di Plan Cache|Description|  
+|Istanza di Plan Cache|Descrizione|  
 |-------------------------|-----------------|  
 |**_Total**|Informazioni relative a tutti i tipi di istanze della cache.|  
 |**Piani SQL**|Piani di query prodotti da una query [!INCLUDE[tsql](../../includes/tsql-md.md)] ad hoc, incluse le query con parametri automatici, oppure da istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] preparate tramite **sp_prepare** o **sp_cursorprepare**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] memorizza nella cache i piani delle istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] ad hoc per poterli riusare nel caso venga rieseguita la stessa istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] . Anche le query con parametri dell'utente, sebbene non siano state preparate esplicitamente, vengono monitorate come piani SQL preparati.|  

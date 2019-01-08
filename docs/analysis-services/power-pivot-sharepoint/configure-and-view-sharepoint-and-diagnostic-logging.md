@@ -1,5 +1,5 @@
 ---
-title: Configurare e visualizzare SharePoint e la registrazione diagnostica | Documenti Microsoft
+title: Configurare e visualizzare SharePoint e la registrazione diagnostica | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 9d36c65115f1ad786340ec8a4058bd20c52cb6a1
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: e2df09cb9bf167c0af28c240ff69f8666cce01a6
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34027218"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52410418"
 ---
-# <a name="configure-and-view-sharepoint-and-diagnostic-logging"></a>Configurare e visualizzare SharePoint e la registrazione diagnostica
+# <a name="configure-and-view-sharepoint-and-diagnostic-logging"></a>Configurare e visualizzare la registrazione diagnostica e SharePoint
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] vengono registrati in file di log di SharePoint. Usare le informazioni in questo argomento per configurare i livelli di registrazione e visualizzare le informazioni sui file di log. È possibile controllare quali eventi server [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] vengono registrati nel file. È inoltre possibile controllare la gravità di messaggi registrati. Per altre informazioni, vedere [Configurare la raccolta dati di utilizzo per PowerPivot per SharePoint](../../analysis-services/power-pivot-sharepoint/configure-usage-data-collection-for-power-pivot-for-sharepoint.md).  
   
@@ -64,7 +64,7 @@ ms.locfileid: "34027218"
   
 8.  Selezionare **Dettagliato** per registrare tutti gli eventi nel registro di traccia.  
   
-9. Scegliere **OK**.  
+9. Fare clic su **OK**.  
   
 ##  <a name="bkmk_how2viewlogfiles"></a> Come visualizzare i file di log di SharePoint  
  I file di log sono file di testo. È possibile aprirli in qualsiasi editor di testo. È inoltre possibile usare visualizzatori di log di terze parti.  
@@ -76,7 +76,7 @@ ms.locfileid: "34027218"
   
 -   Per errori che forniscono un ID di correlazione, copiare l'ID e usarlo come termine di ricerca nel file di log.  
   
--   Cercare lo stato di errore "Elevato" o "Eccezione". Cercare "Servizio[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] ".  
+-   Cercare lo stato di errore "Elevato" o "Eccezione". Cercare "[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] Service".  
   
 -   Se si sa quando si è verificato l'errore, usare le informazioni sulla data e l'ora per restringere l'ambito delle voci che è necessario scorrere.  
   
@@ -118,11 +118,11 @@ ms.locfileid: "34027218"
   
 |Process|Area|Category|Level|Message|Dettagli|  
 |-------------|----------|--------------|-----------|-------------|-------------|  
-|w3wp.exe|Servizio[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] |Utilizzo|Dettagliato|Non sono disponibili statistiche sulle richieste, nulla da registrare.|A intervalli predefiniti, il servizio riporta le statistiche sulle risposte alle query come evento di utilizzo nel sistema di raccolta dei dati di utilizzo. Questo messaggio indica che non ci sono statistiche sulle query da riportare.|  
-|w3wp.exe|[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] Servizio|Front-end Web|Dettagliato|Iniziare a individuare un server di applicazioni per l'origine dati =\<*percorso*>|Quando riceve una richiesta di connessione, il servizio [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] identifica un [!INCLUDE[ssGeminiSrv_md](../../includes/ssgeminisrv-md.md)] disponibile per gestire la richiesta. Se è presente un solo server nella farm, il server locale accetta la richiesta in tutti i casi.|  
+|w3wp.exe|Servizio[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] |Uso|Dettagliato|Non sono disponibili statistiche sulle richieste, nulla da registrare.|A intervalli predefiniti, il servizio riporta le statistiche sulle risposte alle query come evento di utilizzo nel sistema di raccolta dei dati di utilizzo. Questo messaggio indica che non ci sono statistiche sulle query da riportare.|  
+|w3wp.exe|[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] Servizio|Front-end Web|Dettagliato|Avvio individuazione server applicazioni per l'origine dati =\<*percorso*>|Quando riceve una richiesta di connessione, il servizio [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] identifica un [!INCLUDE[ssGeminiSrv_md](../../includes/ssgeminisrv-md.md)] disponibile per gestire la richiesta. Se è presente un solo server nella farm, il server locale accetta la richiesta in tutti i casi.|  
 |w3wp.exe|[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] Servizio|Front-end Web|Dettagliato|Individuazione del server applicazioni riuscita.|La richiesta è stata allocata a un'applicazione di servizio [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] .|  
 |w3wp.exe|[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] Servizio|Front-end Web|Dettagliato|Reindirizzamento della richiesta per il \< *origine dati PowerPivot*> per il [!INCLUDE[ssGeminiSrv_md](../../includes/ssgeminisrv-md.md)].|La richiesta è stata inoltrata a [!INCLUDE[ssGeminiSrv_md](../../includes/ssgeminisrv-md.md)].|  
-|w3wp.exe|Servizio[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] |Elaborazione delle richieste|Dettagliato|Reindirizzamento della richiesta per nomeutente\<*utente di SharePoint*> al database|Una connessione rappresentata all'origine dati [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] è stata creata per conto dell'utente SharePoint.|  
+|w3wp.exe|Servizio[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] |Elaborazione delle richieste|Dettagliato|Reindirizzamento della richiesta per nomeutente\<*utente SharePoint*> al database|Una connessione rappresentata all'origine dati [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] è stata creata per conto dell'utente SharePoint.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Raccolta dati di utilizzo di PowerPivot](../../analysis-services/power-pivot-sharepoint/power-pivot-usage-data-collection.md)   

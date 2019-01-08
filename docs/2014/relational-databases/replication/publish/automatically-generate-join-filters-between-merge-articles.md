@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - automatic join filter generation
@@ -14,12 +13,12 @@ ms.assetid: 7ef419f4-c17f-42a5-9068-174a3ec08941
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 938e00f53cb63b4261eb80d91d7b853b8e1ae824
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 66c32615b3fd9f417eab27f156b2645c2c89593b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48103691"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52770133"
 ---
 # <a name="automatically-generate-a-set-of-join-filters-between-merge-articles-sql-server-management-studio"></a>Generazione automatica di un set di filtri di join tra gli articoli di merge (SQL Server Management Studio)
   Generare automaticamente un set di filtri di join nella pagina **Filtro righe tabella** della Creazione guidata nuova pubblicazione o nella pagina **Filtra righe** della finestra di dialogo **Proprietà pubblicazione - \<Pubblicazione>**. Per altre informazioni sull'uso della creazione guidata e l'accesso alla finestra di dialogo, vedere [Creare una pubblicazione](create-a-publication.md) e [Visualizzare e modificare le proprietà della pubblicazione](view-and-modify-publication-properties.md).  
@@ -58,7 +57,7 @@ ms.locfileid: "48103691"
   
     3.  Specificare le opzioni di filtro.  
   
-         Selezionare l'opzione corrispondente alla modalità di condivisione dei dati tra i Sottoscrittori, ovvero **Una riga di questa tabella verrà inviata a più sottoscrizioni** o **Una riga di questa tabella verrà inviata a una sola sottoscrizione**. Selezionando **Una riga di questa tabella verrà inviata a una sola sottoscrizione**è possibile ottimizzare le prestazioni della replica di tipo merge archiviando ed elaborando una minore quantità di metadati. È tuttavia necessario garantire che i dati vengano partizionati in modo da non consentire la replica di una riga in più Sottoscrittori. Per altre informazioni, vedere la sezione relativa all'impostazione delle opzioni delle partizioni nell'argomento [Filtri di riga con parametri](../merge/parameterized-filters-parameterized-row-filters.md).  
+         Selezionare l'opzione corrispondente alla modalità desiderata di condivisione dei dati tra i Sottoscrittori: **Una riga di questa tabella verrà inviata a più sottoscrizioni** oppure **una riga di questa tabella verrà inviata a una sola sottoscrizione**. Selezionando **Una riga di questa tabella verrà inviata a una sola sottoscrizione**è possibile ottimizzare le prestazioni della replica di tipo merge archiviando ed elaborando una minore quantità di metadati. È tuttavia necessario garantire che i dati vengano partizionati in modo da non consentire la replica di una riga in più Sottoscrittori. Per altre informazioni, vedere la sezione relativa all'impostazione delle opzioni delle partizioni nell'argomento [Parameterized Row Filters](../merge/parameterized-filters-parameterized-row-filters.md).  
   
 3.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   

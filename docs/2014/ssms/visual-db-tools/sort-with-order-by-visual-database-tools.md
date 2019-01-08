@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - ORDER BY clause [Visual Database Tools]
@@ -12,12 +12,12 @@ ms.assetid: 459f5640-8058-4c24-97e7-7bbd6168bc39
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 14f9efc4b93aedd4bacb757912e82a954c2fff72
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 30a2fca3dd0f2fcc6f22f2330c37fb8e333d9994
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48078481"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52771933"
 ---
 # <a name="sort-with-order-by-visual-database-tools"></a>Ordinamento tramite la clausola ORDER BY (Visual Database Tools)
   Utilizzando la clausola ORDER BY è possibile ordinare i risultati delle query in base a una o più colonne delle righe restituite. Per definire una clausola ORDER BY, scegliere le opzioni desiderate nel riquadro Criteri.  
@@ -36,7 +36,7 @@ ms.locfileid: "48078481"
  Quando si utilizza il riquadro Criteri, la clausola UNION della query cambia in base alle azioni più recenti.  
   
 > [!NOTE]  
->  Per ordinare i risultati in base a più colonne, usare la colonna **Ordinamento** per specificare l'ordine in cui deve essere effettuata la ricerca nelle diverse colonne. Per altre informazioni, vedere **Procedura: Ordinare più colonne nelle query**.  
+>  Per ordinare i risultati in base a più colonne, usare la colonna **Ordinamento** per specificare l'ordine in cui deve essere effettuata la ricerca nelle diverse colonne. Per altre informazioni, vedere **come: Ordinare più colonne nelle query**.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Ordina e raggruppa i risultati della Query &#40;Visual Database Tools&#41;](sort-and-group-query-results-visual-database-tools.md)   

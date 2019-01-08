@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: performance
 ms.topic: conceptual
 f1_keywords:
 - sql12.dta.general.f1
@@ -13,12 +12,12 @@ ms.assetid: 50dd0a0b-a407-4aeb-bc8b-b02a793aa30a
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 8325e326ebcbf23a57e2362aa792b3076ec23922
-ms.sourcegitcommit: ef15fa253d98c62538bf9b6fe191af7f8ef8f6c8
+ms.openlocfilehash: b021cb21df1b3c27e7f43c3ef92650eda4c2cf86
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "49991174"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52797483"
 ---
 # <a name="database-engine-tuning-advisor"></a>Database Engine Tuning Advisor
   Ottimizzazione guidata motore di database (DTA) di [!INCLUDE[msCoName](../../includes/msconame-md.md)] analizza i database e fornisce consigli da utilizzare per ottimizzare le prestazioni di query. È possibile utilizzare Ottimizzazione guidata motore di database per selezionare e creare un set ottimale di indici, viste indicizzate e partizioni di tabella senza che sia necessario conoscere in modo approfondito la struttura del database o le caratteristiche interne di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Con DTA, è possibile eseguire le attività seguenti.  

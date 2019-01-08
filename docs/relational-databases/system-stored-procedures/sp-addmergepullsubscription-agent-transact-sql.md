@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_addmergepullsubscription_agent
@@ -17,12 +16,12 @@ ms.assetid: a2f4b086-078d-49b5-8971-8a1e3f6a6feb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: abd4893368069217003ca9fa5a6f4dca9e4229de
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: ba75dc83e8fb4ce5a9ad31876b2b2592b22b7197
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51681369"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52791783"
 ---
 # <a name="spaddmergepullsubscriptionagent-transact-sql"></a>sp_addmergepullsubscription_agent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -169,7 +168,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
  [  **@frequency_type =** ] *frequency_type*  
  Frequenza per l'esecuzione pianificata dell'agente di merge. *frequency_type* viene **int**, e può essere uno dei valori seguenti.  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |**1**|Una volta|  
 |**2**|Su richiesta|  
@@ -187,7 +186,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
  [  **@frequency_interval =** ] *frequency_interval*  
  Giorno o giorni in cui viene eseguito l'agente di merge. *frequency_interval* viene **int**, i possibili valori sono i seguenti.  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |**1**|Domenica|  
 |**2**|Lunedì|  
@@ -204,7 +203,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
  [  **@frequency_relative_interval =** ] *frequency_relative_interval*  
  Data dell'agente di merge. Questo parametro viene utilizzato quando *frequency_type* è impostata su **32** (frequenza mensile relativa). *frequency_relative_interval* viene **int**, i possibili valori sono i seguenti.  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |**1**|Primo|  
 |**2**|Secondo|  
@@ -219,7 +218,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
  [  **@frequency_subday =** ] *frequency_subday*  
  Frequenza di ripianificazione durante il periodo definito. *frequency_subday* viene **int**, i possibili valori sono i seguenti.  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |**1**|Una volta|  
 |**2**|Secondo|  
@@ -314,7 +313,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
  [  **@internet_security_mode =** ] *internet_security_mode*  
  Metodo di autenticazione utilizzato dall'agente di merge per la connessione al server Web durante la sincronizzazione Web tramite HTTPS. *internet_security_mode* viene **int** i possibili valori sono i seguenti.  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |**0**|Viene utilizzata l'autenticazione di base.|  
 |**1** (impostazione predefinita)|Viene utilizzata l'autenticazione integrata di Windows.|  

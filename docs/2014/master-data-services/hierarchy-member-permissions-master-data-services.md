@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - members [Master Data Services], permissions
@@ -14,12 +13,12 @@ ms.assetid: b3880eed-1bf6-4f65-ab23-b08c194cc858
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 4310f16b19fa85012844cc6e0fb71b2dce3ce6f4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a7e762a450a28f1d07e58a0baa6f7f3ff3948681
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48112006"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52797042"
 ---
 # <a name="hierarchy-member-permissions-master-data-services"></a>Autorizzazioni membri gerarchie (Master Data Services)
   Le autorizzazioni membri gerarchia sono facoltative e devono essere utilizzate solo quando si desidera che un utente abbia accesso limitato a membri specifici. Se non si assegnano autorizzazioni nella scheda **Membri gerarchia** , le autorizzazioni dell'utente sono basate esclusivamente su quelle assegnate nella scheda **Modelli** .  
@@ -35,9 +34,9 @@ ms.locfileid: "48112006"
   
  Le autorizzazioni membri gerarchia si applicano alla versione del modello cui sono assegnate e a eventuali copie future della versione. Non si applicano a versioni precedenti a quella a cui sono assegnate.  
   
-|Autorizzazione|Description|  
+|Autorizzazione|Descrizione|  
 |----------------|-----------------|  
-|**Sola lettura**|I membri vengono visualizzati, ma l'utente non può modificarli. L'utente non può inoltre spostare i membri in qualsiasi gerarchia o raccolta esplicita cui essi appartengono.<br /><br /> Nota: Se si assegnano **Read-only** l'autorizzazione per **radice**, i membri in **radice** sono di sola lettura; nelle gerarchie esplicite e raccolte, l'utente può spostare membri **radice** e aggiungere nuovi membri a **radice**.|  
+|**Sola lettura**|I membri vengono visualizzati, ma l'utente non può modificarli. L'utente non può inoltre spostare i membri in qualsiasi gerarchia o raccolta esplicita cui essi appartengono.<br /><br /> Nota: Se si assegnano **Read-only** l'autorizzazione per **radice**, i membri in **radice** sono di sola lettura; nelle gerarchie esplicite e raccolte, tuttavia, l'utente può spostarsi ai membri di **Radice** e aggiungere nuovi membri a **radice**.|  
 |**Update**|I membri vengono visualizzati e l'utente può modificarli. L'utente può inoltre spostare i membri in qualsiasi gerarchia o raccolta esplicita cui essi appartengono.|  
 |**Nega**|I membri non vengono visualizzati.|  
   
@@ -58,7 +57,7 @@ ms.locfileid: "48112006"
   
 ## <a name="see-also"></a>Vedere anche  
  [Assegnare autorizzazioni membri gerarchia &#40;Master Data Services&#41;](../../2014/master-data-services/assign-hierarchy-member-permissions-master-data-services.md)   
- [Come vengono determinate le autorizzazioni &#40;Master Data Services&#41;](../../2014/master-data-services/how-permissions-are-determined-master-data-services.md)   
+ [Modalità di determinazione delle autorizzazioni &#40;Master Data Services&#41;](../../2014/master-data-services/how-permissions-are-determined-master-data-services.md)   
  [Membri &#40;Master Data Services&#41;](../../2014/master-data-services/members-master-data-services.md)   
  [Gerarchie &#40;Master Data Services&#41;](../../2014/master-data-services/hierarchies-master-data-services.md)   
  [Applicare immediatamente autorizzazioni membri &#40;Master Data Services&#41;](immediately-apply-member-permissions-master-data-services.md)  

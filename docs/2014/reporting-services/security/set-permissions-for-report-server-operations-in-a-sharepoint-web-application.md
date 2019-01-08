@@ -18,12 +18,12 @@ ms.assetid: 9ea71f1a-ee9e-4337-95ff-d7cef79946e7
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: d9b9e174df4eef55a474e27613ac3101c3bfcaa1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3370356deb8585dcff41e8509d4d119dd1597650
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48170993"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52418398"
 ---
 # <a name="set-permissions-for-report-server-operations-in-a-sharepoint-web-application"></a>Impostare le autorizzazioni per le operazioni del server di report in un'applicazione Web di SharePoint
   Per un server di report eseguito in modalità integrata SharePoint, le impostazioni di sicurezza definite nel sito di SharePoint determinano le modalità di visualizzazione e gestione di report, modelli di report e origini dei dati condivise. Se si usano le assegnazioni di autorizzazioni, i livelli di autorizzazione e i gruppi di SharePoint predefiniti, sarà possibile usare i report e gli altri documenti tramite le impostazioni di sicurezza correnti.  
@@ -52,7 +52,7 @@ ms.locfileid: "48170993"
   
  Se si usano i livelli di autorizzazione predefiniti, non è necessario alcun intervento perché le autorizzazioni indicate in precedenza sono già incluse nei ruoli Controllo completo, Progettazione, Collaborazione, Lettura e Accesso limitato. Tuttavia, queste autorizzazioni devono essere aggiunte manualmente se si usano livelli di autorizzazione personalizzati o si modificano le autorizzazioni assegnate a un particolare utente o gruppo.  
   
- L'autorizzazione "Visualizzazione informazioni utenti" consente al server di report di restituire informazioni sull'autore dell'elemento e sull'utente che ha eseguito l'ultima modifica dell'elemento. Senza questa autorizzazione, il server di report restituirà gli errori seguenti. Nel caso delle operazioni di visualizzazione, l'errore è il seguente: "Server report: errore di SharePoint. ---> System.UnauthorizedAccessException: Accesso negato." Per le operazioni di pubblicazione, l'errore è: "Le autorizzazioni concesse all'utente '<utente\>\<di dominio>\\' non sono sufficienti per eseguire questa operazione".  
+ L'autorizzazione "Visualizzazione informazioni utenti" consente al server di report di restituire informazioni sull'autore dell'elemento e sull'utente che ha eseguito l'ultima modifica dell'elemento. Senza questa autorizzazione, il server di report restituirà gli errori seguenti. Per le operazioni di ricerca, l'errore è: "Il Server di report ha rilevato un errore di SharePoint. ---> System. UnauthorizedAccessException: Accesso negato". Per le operazioni di pubblicazione, l'errore è: "Le autorizzazioni concesse all'utente '\<dominio >\\< utente\>' non sono sufficienti per eseguire questa operazione."  
   
 ##  <a name="permissionReports"></a> Autorizzazioni per la visualizzazione e la gestione dei report  
  Le autorizzazioni relative alle definizioni dei report sono specificate tramite le autorizzazioni Elenco per la raccolta che contiene il report ma, se si desidera limitare l'accesso, è possibile impostare autorizzazioni per i singoli report. Nella tabella seguente è riportato un elenco di attività, indicando per ognuna le autorizzazioni che la supportano.  
@@ -133,9 +133,9 @@ ms.locfileid: "48170993"
 >  Non sono disponibili autorizzazioni per la modifica dei modelli di report. Sebbene sia possibile generare o eliminare modelli di report, non è possibile modificarli da un sito di SharePoint. Per modificare modelli di report è necessario Progettazione modelli, uno strumento client di creazione indipendente dalle autorizzazioni impostate in SharePoint.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Concessione di autorizzazioni per elementi del Server di Report in un sito di SharePoint](granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
+ [Concessione di autorizzazioni per elementi del server di report in un sito di SharePoint](granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
  [Confrontare ruoli e attività di Reporting Services con autorizzazioni e gruppi di SharePoint](../reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)   
- [Concessione di autorizzazioni per elementi del Server di Report in un sito di SharePoint](granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
- [Usare la sicurezza predefinita di Windows SharePoint Services per gli elementi del server di report](use-built-in-security-in-windows-sharepoint-services-for-report-server-items.md)  
+ [Concessione di autorizzazioni per elementi del server di report in un sito di SharePoint](granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
+ [Utilizzare la sicurezza predefinita di Windows SharePoint Services per gli elementi del server di report](use-built-in-security-in-windows-sharepoint-services-for-report-server-items.md)  
   
   

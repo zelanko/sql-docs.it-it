@@ -10,12 +10,12 @@ ms.assetid: 94099d01-ab19-4d58-a172-340c86b4a0f3
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 2a68b60a954e6cd89698d4e906f8272f08d6b11e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7289b3d5b287c1619a08921eba5cc30ff741e3b1
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47673159"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52399904"
 ---
 # <a name="connect-to-mysql-mysqltosql"></a>Connettersi a MySQL (MySQLToSQL)
 Usare la **connettersi a MySQL** finestra di dialogo per la connessione al database MySQL che si desidera eseguire la migrazione.  
@@ -60,11 +60,11 @@ Fornisce un'opzione per configurare la connessione a MySQL tramite Secure Socket
   
 Facendo clic sul pulsante "Configura", viene visualizzata una finestra di dialogo. Utilizzare la crittografia durante la connessione al MySQL Database, percorso file tre certificato seguenti presente nella finestra di dialogo deve essere definito [Privacy avanzata posta certificati (PEM)]:  
   
--   **Autorità di certificazione SSL:** specifica il percorso di un file con un elenco di attendibilità SSL CA.  
+-   **Autorità di certificazione SSL:** Specifica il percorso di un file con un elenco di attendibilità SSL CA.  
   
--   **Certificato SSL:** specifica il nome del file del certificato SSL da utilizzare per stabilire una connessione sicura.  
+-   **Certificato SSL:** Specifica il nome del file del certificato SSL da utilizzare per stabilire una connessione sicura.  
   
--   **CHIAVE SSL:** specifica il nome del file di chiave SSL da utilizzare per stabilire una connessione sicura.  
+-   **CHIAVE SSL:** Specifica il nome del file di chiave SSL da utilizzare per stabilire una connessione sicura.  
   
 > [!NOTE]  
 > -   Il **OK** pulsante viene abilitato quando sono state fornite le informazioni necessarie. Se sono presenti i percorsi dei file non validi, il pulsante "OK" rimarrà disabilitato.  

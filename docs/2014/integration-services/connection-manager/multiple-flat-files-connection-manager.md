@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Multiple Flat Files connection manager
@@ -18,19 +17,19 @@ ms.assetid: 31fc3f7a-d323-44f5-a907-1fa3de66631a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e9c9bd0573a3a6fa8211324066e86446b85ec0f6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 575bf85a81557e7a0a974dd1fc2210e58f34bde0
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48185661"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52790533"
 ---
 # <a name="multiple-flat-files-connection-manager"></a>gestione connessione per più file flat
   Una gestione connessione per più file flat consente a un pacchetto di accedere a dati contenuti in più file flat. Ad esempio, un'origine file flat può utilizzare una gestione connessione per più file quando l'attività Flusso di dati si trova in un contenitore Ciclo, ad esempio il contenitore Ciclo For. In ogni ciclo del contenitore, l'origine file flat carica dati dal nome file successivo fornito dalla gestione connessione per più file.  
   
  Quando si aggiunge una gestione connessione per più file flat a un pacchetto, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] crea una gestione connessione che in fase di esecuzione verrà risolta in una connessione per più file flat, imposta le proprietà della gestione connessione, quindi la aggiunge all'insieme `Connections` del pacchetto.  
   
- Il `ConnectionManagerType` della gestione connessione viene impostata su `MULTIFLATFILE`.  
+ La proprietà `ConnectionManagerType` della gestione connessione viene impostata su `MULTIFLATFILE`.  
   
  Per configurare la gestione connessione per più file flat, procedere nel modo seguente:  
   
@@ -63,19 +62,19 @@ ms.locfileid: "48185661"
   
  Per ulteriori informazioni sulle proprietà che è possibile impostare in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] , fare clic su uno degli argomenti seguenti:  
   
--   [Editor gestione connessione file Flat più &#40;pagina Generale&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [Editor gestione connessione per più file flat &#40;pagina Generale&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [Editor gestione connessione file Flat più &#40;(pagina colonne)&#41;](../multiple-flat-files-connection-manager-editor-columns-page.md)  
+-   [Editor gestione connessione per più file flat &#40;pagina Colonne&#41;](../multiple-flat-files-connection-manager-editor-columns-page.md)  
   
--   [Editor gestione connessione file Flat più &#40;pagina avanzate&#41;](../multiple-flat-files-connection-manager-editor-advanced-page.md)  
+-   [Editor gestione connessione per più file flat &#40;pagina Avanzate&#41;](../multiple-flat-files-connection-manager-editor-advanced-page.md)  
   
--   [Editor gestione connessione file Flat più &#40;pagina di anteprima&#41;](../multiple-flat-files-connection-manager-editor-preview-page.md)  
+-   [Editor gestione connessione per più file flat &#40;pagina Anteprima&#41;](../multiple-flat-files-connection-manager-editor-preview-page.md)  
   
- Per informazioni sulla configurazione di una gestione connessione a livello di codice, vedere <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> e [aggiunta di connessioni a livello di programmazione](../building-packages-programmatically/adding-connections-programmatically.md).  
+ Per informazioni sulla configurazione di una gestione connessione a livello di programmazione, vedere l'articolo relativo a <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> e [Aggiunta di connessioni a livello di programmazione](../building-packages-programmatically/adding-connections-programmatically.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Origine File flat](../data-flow/flat-file-source.md)   
- [Destinazione File flat](../data-flow/flat-file-destination.md)   
- [Integration Services &#40;SSIS&#41; le connessioni](integration-services-ssis-connections.md)  
+ [Origine file flat](../data-flow/flat-file-source.md)   
+ [Destinazione file flat](../data-flow/flat-file-destination.md)   
+ [Connessioni in Integration Services &#40;SSIS&#41;](integration-services-ssis-connections.md)  
   
   

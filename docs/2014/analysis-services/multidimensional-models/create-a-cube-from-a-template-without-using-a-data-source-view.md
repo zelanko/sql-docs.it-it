@@ -11,12 +11,12 @@ ms.assetid: 5c8c09b1-140c-48db-9b9f-d18a051d7dbd
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 19006a02476591ef4f5e01d4a58f0f2e2894b0b9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0125550f8ec4a3fa290ea29df3d33cc3bebe3c7e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48104891"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52504983"
 ---
 # <a name="create-a-cube-from-a-template-without-using-a-data-source-view"></a>Creare un cubo da un modello senza utilizzare una vista origine dati
   Selezionare **Build the cube without using a data source** (Crea il cubo senza usare un'origine dati) nella prima pagina di Creazione guidata cubo per creare un cubo senza usare una vista origine dati. Successivamente è possibile usare Generazione guidata schema per generare lo schema relazionale per la vista origine dati in base alla struttura del cubo e possibilmente ad altri oggetti di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Per altre informazioni sulla generazione di uno schema, vedere [Generazione guidata schema &#40;Analysis Services&#41;](schema-generation-wizard-analysis-services.md).  
@@ -40,12 +40,12 @@ ms.locfileid: "48104891"
   
  Sia nella griglia **Selezionare le misure dal modello** sia nella griglia **Aggiungi nuove misure** vengono visualizzati i valori delle colonne descritte nella tabella seguente. È possibile fare clic su un valore in entrambi gli elenchi per modificarlo.  
   
-|colonna|Description|  
+|colonna|Descrizione|  
 |------------|-----------------|  
-|**Nome misura**|Un valore in questa colonna consente di definire il nome di una misura nel cubo. Fare clic su un valore in questa colonna per digitare un nome. Fare clic su **Aggiungi nuova misura** in questa colonna per creare una nuova misura. Questa colonna consente di impostare il `Name` proprietà nell'oggetto misura.|  
-|**Gruppo di misure**|Nome del gruppo di misure contenente la misura. Fare clic su questo valore per scegliere o digitare un nome. Se si eliminano tutte le misure che appartengono a un particolare gruppo, viene rimosso anche quest'ultimo. Questa colonna consente di impostare il `Name` proprietà per l'oggetto gruppo di misure.|  
-|**Tipo di dati**|Tipo di dati per la misura. Fare clic su questo valore per modificare il tipo di dati. Il valore predefinito quando si crea una misura è `Single`. Questa colonna consente di impostare il `DataType` proprietà nell'oggetto misura.|  
-|**Aggregazione**|Aggregazione standard per la misura. Fare clic su questa cella per specificare una delle aggregazioni standard per la misura (o **Nessuna**). Il valore predefinito quando si crea una misura è `Sum`. Questa colonna consente di impostare il `AggregationFunction` proprietà nell'oggetto misura.|  
+|**Nome misura**|Un valore in questa colonna consente di definire il nome di una misura nel cubo. Fare clic su un valore in questa colonna per digitare un nome. Fare clic su **Aggiungi nuova misura** in questa colonna per creare una nuova misura. Questa colonna consente di impostare la proprietà `Name` nell'oggetto misura.|  
+|**Gruppo di misure**|Nome del gruppo di misure contenente la misura. Fare clic su questo valore per scegliere o digitare un nome. Se si eliminano tutte le misure che appartengono a un particolare gruppo, viene rimosso anche quest'ultimo. Questa colonna consente di impostare la proprietà `Name` per l'oggetto gruppo di misure.|  
+|**Tipo di dati**|Tipo di dati per la misura. Fare clic su questo valore per modificare il tipo di dati. Il valore predefinito quando si crea una misura è `Single`. Questa colonna consente di impostare la proprietà `DataType` nell'oggetto misura.|  
+|**Aggregazione**|Aggregazione standard per la misura. Fare clic su questa cella per specificare una delle aggregazioni standard per la misura (o **Nessuna**). Il valore predefinito quando si crea una misura è `Sum`. Questa colonna consente di impostare la proprietà `AggregationFunction` nell'oggetto misura.|  
   
 ## <a name="defining-new-dimensions"></a>Definizione di nuove dimensioni  
  Usare la pagina **Definizione nuove dimensioni** della procedura guidata per specificare le dimensioni nel nuovo cubo.  
@@ -56,7 +56,7 @@ ms.locfileid: "48104891"
   
  Sia nella griglia **Selezionare le dimensioni dal modello** sia nella griglia **Aggiungi nuove dimensioni** vengono visualizzati i valori delle colonne descritte nella tabella seguente. È possibile fare clic su un valore in entrambi gli elenchi per modificarlo.  
   
-|colonna|Description|  
+|colonna|Descrizione|  
 |------------|-----------------|  
 |**Tipo**|Viene visualizzato il tipo di dimensione per una dimensione del modello. Fare clic su questa cella per modificare il tipo di dimensione per una dimensione. Questa colonna consente di impostare la proprietà **Tipo** per l'oggetto dimensione.|  
 |`Name`|Viene visualizzato il nome della dimensione. Fare clic su questa cella per digitare un nome diverso. Questo valore imposta la `Name` proprietà per l'oggetto dimensione.|  
@@ -64,7 +64,7 @@ ms.locfileid: "48104891"
 |**Attributi**|Vengono visualizzati gli attributi che devono essere creati per la dimensione. Ogni nome di attributo nell'elenco è preceduto dal nome della dimensione. Questo elenco è di sola lettura. È possibile modificare gli attributi tramite Progettazione dimensioni dopo il completamento della procedura guidata.|  
   
 ## <a name="defining-time-periods"></a>Definizione dei periodi di tempo  
- Usare la pagina **Definizione periodi di tempo** della procedura guidata per specificare l'intervallo di date da includere nella dimensione. È possibile scegliere, ad esempio, un intervallo che inizia dal primo gennaio del primo anno a cui si riferiscono i dati e che si estende fino agli anni successivi alla transazione più recente. Le transazioni che non rientrano nell'intervallo non vengono visualizzati o vengono visualizzati come membri sconosciuti nella dimensione, a seconda di `UnknownMemberVisible` impostazione della proprietà per la dimensione. Il `UnknownMemberName` proprietà specifica la didascalia per il membro sconosciuto. È inoltre possibile modificare il primo giorno della settimana utilizzato nei dati. Il giorno predefinito è domenica.  
+ Usare la pagina **Definizione periodi di tempo** della procedura guidata per specificare l'intervallo di date da includere nella dimensione. È possibile scegliere, ad esempio, un intervallo che inizia dal primo gennaio del primo anno a cui si riferiscono i dati e che si estende fino agli anni successivi alla transazione più recente. Le transazioni che non rientrano in questo intervallo non verranno visualizzate oppure verranno visualizzate come membri sconosciuti nella dimensione in base all'impostazione della proprietà `UnknownMemberVisible` della dimensione. La proprietà `UnknownMemberName` consente di specificare la didascalia per il membro sconosciuto. È inoltre possibile modificare il primo giorno della settimana utilizzato nei dati. Il giorno predefinito è domenica.  
   
 > [!NOTE]  
 >  La pagina **Definizione periodi di tempo** viene visualizzata solo se si include una dimensione temporale nel cubo nella pagina **Definizione nuove dimensioni** della procedura guidata.  
@@ -80,10 +80,10 @@ ms.locfileid: "48104891"
 ## <a name="specifying-additional-calendars"></a>Specifica di calendari aggiuntivi  
  Nella pagina **Impostazione calendari aggiuntivi** della procedura guidata selezionare i calendari su cui basare le gerarchie nella dimensione. È possibile scegliere i calendari indicati di seguito.  
   
-|Calendario|Description|  
+|Calendario|Descrizione|  
 |--------------|-----------------|  
 |Calendario fiscale|Calendario fiscale di dodici mesi. Se si seleziona questo calendario, specificare il giorno e il mese di inizio dell'anno fiscale in uso nell'organizzazione.|  
-|Calendario report (o marketing)|Calendario di report di dodici mesi in cui sono inclusi due mesi di quattro settimane e un mese di cinque settimane in un modello periodico di tre mesi (trimestre). Se si seleziona questo calendario, specificare il giorno e il mese di inizio e il modello trimestrale di 4-4-5, 4-5-4 o 5-4-4 settimane, dove ogni cifra rappresenta il numero di settimane in un mese.|  
+|Calendario report (o marketing)|Calendario di report di dodici mesi in cui sono inclusi due mesi di quattro settimane e un mese di cinque settimane in un modello periodico di tre mesi (trimestre). Se si seleziona questo calendario, specificare il giorno e mese e il modello di tre mesi di 4-4 e 5, 4-5-4 o 5-4-4 settimane, dove ogni cifra rappresenta il numero di settimane al mese.|  
 |Calendario produzione|Calendario in cui vengono utilizzati 13 periodi di quattro settimane, divisi in tre trimestri di quattro periodi e un trimestre di cinque periodi. Se si seleziona questo calendario, specificare la settimana di inizio, compresa tra 1 e 4, il mese per l'anno di produzione, nonché il trimestre con periodi aggiuntivi.|  
 |Calendario ISO 8601|Calendario standard ISO (International Organization for Standardization) per il formato della data e dell'ora (8601). Calendario costituito da un numero intero di settimane di sette giorni. Per evitare di dividere una settimana, il calendario inizia un nuovo anno pochi giorni prima o dopo il primo gennaio.|  
   

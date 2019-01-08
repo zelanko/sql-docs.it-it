@@ -5,8 +5,7 @@ ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_replmonitorchangepublicationthreshold_TSQL
@@ -17,12 +16,12 @@ ms.assetid: 2c3615d8-4a1a-4162-b096-97aefe6ddc16
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0bb8c060963f92ec14d140cf3b8649216fd89bf8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8d557fccc94c6502bb664f8345d1d7a6bd982124
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47850579"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52789333"
 ---
 # <a name="spreplmonitorchangepublicationthreshold-transact-sql"></a>sp_replmonitorchangepublicationthreshold (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +58,7 @@ sp_replmonitorchangepublicationthreshold [ @publisher = ] 'publisher'
  [ **@publication_type** =] *publication_type*  
  Tipo di pubblicazione. *publication_type* viene **int**, i possibili valori sono i seguenti.  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |**0**|Pubblicazione transazionale.|  
 |**1**|Pubblicazione snapshot.|  
@@ -69,7 +68,7 @@ sp_replmonitorchangepublicationthreshold [ @publisher = ] 'publisher'
  [ **@metric_id** =] *metric_id*  
  ID della metrica della soglia per la pubblicazione che si desidera modificare. *metric_id* viene **int**, con un valore predefinito NULL e i possibili valori sono i seguenti.  
   
-|valore|Nome misurazione|  
+|Value|Nome misurazione|  
 |-----------|-----------------|  
 |**1**|**expiration** : esegue il monitoraggio delle scadenze imminenti delle sottoscrizioni di pubblicazioni transazionali.|  
 |**2**|**latency** : esegue il monitoraggio delle prestazioni delle sottoscrizioni di pubblicazioni transazionali.|  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - inline data validation [SQL Server replication]
@@ -20,12 +19,12 @@ ms.assetid: f7500a2b-61cb-41b5-816d-27609a6c58e7
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ae1484fd98b7cf10f06eb86406b03b9c2991a210
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 84ffe2ad4be91f8a05e4bbbd84b2ad5a67cb09a4
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48098101"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52792493"
 ---
 # <a name="validate-replicated-data"></a>Convalida dei dati replicati
   La replica transazionale e la replica di tipo merge consentono di verificare che i dati presenti nel Sottoscrittore corrispondano ai dati nel server di pubblicazione. La convalida può essere eseguita per sottoscrizioni specifiche o per tutte le sottoscrizioni di una pubblicazione. Specificare uno dei tipi seguenti di convalida dei dati, che verrà eseguita dall'agente di distribuzione o dall'agente di merge alla successiva sincronizzazione:  
@@ -45,7 +44,7 @@ ms.locfileid: "48098101"
   
  Per gestire gli errori di convalida, considerare quanto segue:  
   
--   Configurare l'avviso di replica **Replica: la convalida dei dati nel Sottoscrittore non è riuscita.** , in modo che l'utente venga avvisato dell'errore. Per altre informazioni, vedere [configurare gli avvisi di replica predefiniti &#40;& 41(administration/configure-predefined-replication-alerts-sql-server-management-studio.md) & SQL Server Management Studio.  
+-   Configurare l'avviso di replica **replica: Sottoscrittore non supera la convalida dei dati** in modo da ricevere una notifica dell'errore. Per altre informazioni, vedere [configurare gli avvisi di replica predefiniti &#40;& 41(administration/configure-predefined-replication-alerts-sql-server-management-studio.md) & SQL Server Management Studio.  
   
 -   L'errore di convalida rappresenta un problema per l'applicazione utilizzata? Se sì, aggiornare manualmente i dati in modo che siano sincronizzati oppure reinizializzare la sottoscrizione:  
   

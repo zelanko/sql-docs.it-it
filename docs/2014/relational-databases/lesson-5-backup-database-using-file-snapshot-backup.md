@@ -11,14 +11,14 @@ ms.assetid: d9134ade-7b03-4c5c-8ed3-3bc369a61691
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 78674b36b395aa50677e17fa4344690c988f5715
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9a75375ae8636cd3c8861030131ce08c63832460
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48215131"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52404282"
 ---
-# <a name="lesson-6-migrate-a-database-from-a-source-machine-on-premises-to-a-destination-machine-in-windows-azure"></a>Lezione 6: eseguire la migrazione da un computer di origine locale a un computer di destinazione in Windows Azure
+# <a name="lesson-6-migrate-a-database-from-a-source-machine-on-premises-to-a-destination-machine-in-windows-azure"></a>Lezione 6: Eseguire la migrazione di un database da un computer di origine locale a un computer di destinazione in Microsoft Azure
   In questa lezione si presuppone che si disponga già di un'altra istanza di SQL Server che potrebbe trovarsi in un altro computer locale o in una macchina virtuale in Windows Azure. Per informazioni su come creare una macchina virtuale SQL Server in Windows Azure, vedere la pagina relativa al [provisioning di una macchina virtuale SQL Server in Windows Azure](http://www.windowsazure.com/manage/windows/common-tasks/install-sql-server/). Dopo aver eseguito il provisioning di una macchina virtuale SQL Server in Windows Azure, verificare che sia possibile connettersi a un'istanza di SQL Server in questa macchina virtuale tramite SQL Server Management Studio presente in un altro computer.  
   
  Per questa lezione si presuppone che l'utente abbia già completato i passaggi seguenti:  
@@ -51,7 +51,7 @@ ms.locfileid: "48215131"
   
         2.  Sulla barra degli strumenti Standard fare clic su **Nuova query**.  
   
-        3.  Copiare e incollare l'esempio seguente nella finestra Query e modificare se necessario. L'istruzione seguente crea una credenziale di SQL Server per archiviare il certificato di accesso condiviso dei contenitori di archiviazione.  
+        3.  Copiare e incollare l'esempio seguente nella finestra Query e modificare se necessario. L'istruzione seguente crea una credenziale di SQL Server per archiviare il certificato di accesso condiviso del contenitore di archiviazione.  
   
             ```tsql  
   
@@ -147,6 +147,6 @@ ms.locfileid: "48215131"
   
  **Lezione successiva:**  
   
- [Lezione 7: spostare i file di dati in Archiviazione di Windows Azure](../relational-databases/lesson-6-generate-activity-and-backup-log-using-file-snapshot-backup.md)  
+ [Lezione 7: Spostare i file di dati in archiviazione di Microsoft Azure](../relational-databases/lesson-6-generate-activity-and-backup-log-using-file-snapshot-backup.md)  
   
   
