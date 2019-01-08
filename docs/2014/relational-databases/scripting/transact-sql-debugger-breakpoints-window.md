@@ -7,20 +7,18 @@ ms.reviewer: ''
 ms.technology:
 - database-engine
 ms.topic: conceptual
-f1_keywords:
-- vs.debug.breakpoints
 helpviewer_keywords:
 - Breakpoints Window [Transact-SQL]
 ms.assetid: bad88d10-fdd5-4d3d-b5ea-a4f063847485
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2a8cb745670ebfe1c9a8a08eb4674e0a3755cc50
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0f0d333cde04e41f7f640a93cd68108af334d71d
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48170721"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53328491"
 ---
 # <a name="breakpoints-window"></a>Finestra Punti di interruzione
   Nella finestra **Punti di interruzione** sono elencati tutti i punti di interruzione impostati nell'editor di query del [!INCLUDE[ssDE](../../includes/ssde-md.md)] corrente. Per gestire i punti di interruzione, usare la barra degli strumenti nella finestra **Punti di interruzione** . I punti di interruzione sono posizioni nel codice in cui viene sospesa l'esecuzione in modalità di debug per consentire la visualizzazione dei dati di debug.  
@@ -33,7 +31,7 @@ ms.locfileid: "48170721"
 ## <a name="breakpoints-window-columns"></a>Colonne della finestra Punti di interruzione  
  Per impostazione predefinita, la finestra **Punti di interruzione** include le colonne seguenti.  
   
- **Nome**  
+ **Name**  
  Consente di visualizzare il nome del punto di interruzione. I nomi dei punti di interruzione vengono forniti dal debugger. Questo nome include il nome della finestra dell'editor di query del Motore di database che contiene il punto di interruzione e il numero di riga nell'editor di query in cui è impostato il punto di interruzione.  
   
  **Condizione**  
@@ -88,5 +86,3 @@ ms.locfileid: "48170721"
   
 ## <a name="see-also"></a>Vedere anche  
  [Debugger Transact-SQL](transact-sql-debugger.md)  
-  
-  

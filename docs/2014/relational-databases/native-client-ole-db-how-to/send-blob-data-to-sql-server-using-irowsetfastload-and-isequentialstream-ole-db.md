@@ -10,12 +10,12 @@ ms.assetid: cb022814-a86b-425d-9b24-eaac20ab664e
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 048dbd899f8c330e053ce9e97ee78d38b7f4e336
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b18f9c9979121856fc04941438b9e7ce7d461fc8
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48177181"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53349289"
 ---
 # <a name="send-blob-data-to-sql-server-using-irowsetfastload-and-isequentialstream-ole-db"></a>Inviare dati BLOB a SQL Server utilizzando IROWSETFASTLOAD e ISEQUENTIALSTREAM (OLE DB)
   In questo esempio viene illustrato come trasmettere dati BLOB di lunghezza variabile per riga mediante IRowsetFastLoad.  
@@ -24,7 +24,7 @@ ms.locfileid: "48177181"
   
  Quando si rimuovono i simboli di commento da #define USE_ISEQSTREAM nel codice sorgente, nell'esempio viene utilizzato ISequentialStream. L'implementazione del flusso è definita nell'esempio e consente di inviare dati BLOB di qualsiasi dimensione semplicemente modificando MAX_BLOB. Non è necessario che i dati del flusso rientrino nella memoria o siano disponibili in un blocco. Questo provider viene chiamato tramite IRowsetFastLoad::InsertRow. Passare un puntatore mediante IRowsetFastLoad::InsertRow all'implementazione del flusso nel buffer di dati (offset rgBinding.obValue) insieme alla quantità di dati disponibile per la lettura dal flusso. Alcuni provider potrebbero non dover conoscere la lunghezza dei dati al momento dell'associazione. In questo caso, è possibile omettere la lunghezza dall'associazione.  
   
- Nell'esempio non viene utilizzata l'interfaccia del flusso del provider per scrivere i dati nel provider. Nell'esempio viene invece passato un puntatore all'oggetto flusso che il provider utilizzerà per leggere i dati. I provider (SQLOLEDB e SQLNCLI) di Microsoft in genere leggeranno i dati in blocchi di 1024 byte dall'oggetto finché non verranno elaborati tutti i dati. SQLOLEDB e SQLNCLI non dispongono di implementazioni complete per consentire al consumer di scrivere i dati nell'oggetto flusso del provider. Tramite l'oggetto flusso del provider è possibile inviare solo dati di lunghezza zero.  
+ L'esempio non utilizza l'interfaccia del provider del flusso per scrivere i dati al provider. Nell'esempio viene invece passato un puntatore all'oggetto flusso che il provider utilizzerà per leggere i dati. I provider (SQLOLEDB e SQLNCLI) di Microsoft in genere leggeranno i dati in blocchi di 1024 byte dall'oggetto finché non verranno elaborati tutti i dati. SQLOLEDB e SQLNCLI non dispongono di implementazioni complete per consentire al consumer di scrivere i dati nell'oggetto flusso del provider. Tramite l'oggetto flusso del provider è possibile inviare solo dati di lunghezza zero.  
   
  È possibile utilizzare l'oggetto ISequentialStream implementato dal consumer con dati del set di righe (IRowsetChange::InsertRow, IRowsetChange::SetData) e con parametri associando un parametro come DBTYPE_IUNKNOWN.  
   
@@ -33,7 +33,7 @@ ms.locfileid: "48177181"
  Per altre informazioni, vedere [BLOB e gli oggetti OLE](../native-client-ole-db-blobs/blobs-and-ole-objects.md).  
   
 > [!IMPORTANT]  
->  Se possibile, usare l'autenticazione di Windows. Se non è disponibile, agli utenti verrà richiesto di immettere le credenziali in fase di esecuzione. Evitare di archiviare le credenziali in un file. Se è necessario rendere persistenti le credenziali, è consigliabile crittografarle usando l'[API di crittografia Win32](http://go.microsoft.com/fwlink/?LinkId=64532).  
+>  Se possibile, usare l'autenticazione di Windows. Se non è disponibile, agli utenti verrà richiesto di immettere le credenziali in fase di esecuzione. Evitare di archiviare le credenziali in un file. Se è necessario rendere persistenti le credenziali, è consigliabile crittografarle usando l'[API di crittografia Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
   
 ## <a name="example"></a>Esempio  
  Eseguire il primo listato di codice ([!INCLUDE[tsql](../../includes/tsql-md.md)]) per creare la tabella utilizzata dall'applicazione.  

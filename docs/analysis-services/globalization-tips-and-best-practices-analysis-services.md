@@ -1,5 +1,5 @@
 ---
-title: Suggerimenti per la globalizzazione e procedure consigliate (Analysis Services) | Documenti Microsoft
+title: Globalizzazione suggerimenti e procedure consigliate (Analysis Services) | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 12b771c40e6c17f1da41f1636b785b7dfc719941
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 57031c75e9433981b45419348ab2d5c0745edbfd
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019388"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53202630"
 ---
 # <a name="globalization-tips-and-best-practices-analysis-services"></a>Suggerimenti e procedure consigliate per la globalizzazione (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "34019388"
   
      In Cina e a Singapore, il supporto tecnico Microsoft tende a usare il cinese semplificato con il pinyin come criterio di ordinamento preferito. Le regole di confronto consigliate sono Chinese_PRC (per SQL Server 2000), Chinese_PRC_90 (per SQL Server 2005) o Chinese_Simplified_Pinyin_100 (per SQL Server 2008 e versioni successive).  
   
-     Per Taiwan è più frequente vedere il cinese tradizionale con l'ordinamento consigliato basato sul numero di tratti: Chinese_Taiwan_Stroke (per SQL Server 2000), Chinese_Taiwan_Stroke_90 (per SQL Server 2005) o Chinese_Traditional_Stroke_Count_100 (per SQL Server 2008 e versioni successive).  
+     A Taiwan, è più comune usare il cinese tradizionale e il criterio di ordinamento consigliato è basato sul numero dei tratti: Chinese_Taiwan_Stroke (per SQL Server 2000), Chinese_Taiwan_Stroke_90 (per SQL Server 2005) o Chinese_Traditional_Stroke_Count_100 (per SQL Server 2008 e versioni successive).  
   
      Anche altre aree, ad esempio Hong Kong e Macao, usano il cinese tradizionale. Per le regole di confronto, a Hong Kong non è insolito usare Chinese_Hong_Kong_Stroke_90 (in SQL Server 2005). A Macao viene usato abbastanza spesso Chinese_Traditional_Stroke_Count_100 (in SQL Server 2008 e versioni successive).  
   
@@ -66,7 +66,7 @@ ms.locfileid: "34019388"
   
 |Alfabeto|Distinzione maiuscole/minuscole|  
 |---------------------|----------------------|  
-|**Alfabeto latino di base**|Gli identificatori di oggetto espressi in caratteri latini (una qualsiasi delle 26 lettere minuscole o minuscole in inglese) vengono trattati come valori senza distinzione tra maiuscole e minuscole, indipendentemente dalle regole di confronto. Ad esempio, gli ID oggetto seguenti sono considerati identici: 54321**abcdef**, 54321**ABCDEF**, 54321**AbCdEf**. Internamente, Analysis Services considera i caratteri nella stringa come se fossero tutti in maiuscolo e quindi esegue un semplice confronto tra byte indipendente dalla lingua.<br /><br /> Si noti che sono interessati solo i 26 caratteri. Nel caso di una lingua dell'Europa occidentale, che usa però caratteri scandinavi, il carattere aggiuntivo non sarà in maiuscolo.|  
+|**Alfabeto latino di base**|Gli identificatori di oggetto espressi in caratteri latini (una qualsiasi delle 26 lettere minuscole o minuscole in inglese) vengono trattati come valori senza distinzione tra maiuscole e minuscole, indipendentemente dalle regole di confronto. Ad esempio, gli ID oggetto seguenti verranno considerati identici: 54321**abcdef**, 54321**ABCDEF**, 54321**AbCdEf**. Internamente, Analysis Services considera i caratteri nella stringa come se fossero tutti in maiuscolo e quindi esegue un semplice confronto tra byte indipendente dalla lingua.<br /><br /> Si noti che sono interessati solo i 26 caratteri. Nel caso di una lingua dell'Europa occidentale, che usa però caratteri scandinavi, il carattere aggiuntivo non sarà in maiuscolo.|  
 |**Cirillico, greco, copto, armeno**|Gli identificatori di oggetto in un alfabeto non latino composto da due set di caratteri maiuscoli/minuscoli distinti, ad esempio il cirillico, fanno sempre distinzione tra maiuscole e minuscole. Ad esempio, Измерение e измерение sono considerati due valori distinti, anche se l'unica differenza è rappresentata dal carattere minuscolo/maiuscolo della prima lettera.|  
   
  **Implicazioni della distinzione tra maiuscole/minuscole per gli identificatori di oggetto**  
@@ -122,7 +122,7 @@ ms.locfileid: "34019388"
   
 3.  **Usare i formati di data ISO per informazioni di data e ora universali**  
   
-     Un [esperto di Analysis Services](http://geekswithblogs.net/darrengosbell/Default.aspx) consiglia: "Io uso sempre il formato di data ISO aaaa-mm-gg per tutte le stringhe di data che passo nelle query in SQL o MDX perché non è ambiguo e funziona indipendentemente dalle impostazioni internazionali del server o del client. Potrei essere d'accordo sul fatto che il server debba basarsi sulle proprie impostazioni internazionali durante l'analisi di un formato di data ambiguo, ma credo anche che se si ha un'opzione non aperta all'interpretazione il formato ISO rappresenta comunque la scelta migliore".  
+     Uno [esperto di Analysis Services](http://geekswithblogs.net/darrengosbell/Default.aspx) consiglia: "Io uso sempre il formato di data ISO aaaa-mm-gg per tutte le stringhe di data che passo nelle query in SQL o MDX perché non è ambiguo e funziona indipendentemente dalle impostazioni internazionali del server o del client. Potrei essere d'accordo sul fatto che il server debba basarsi sulle proprie impostazioni internazionali durante l'analisi di un formato di data ambiguo, ma credo anche che se si ha un'opzione non aperta all'interpretazione il formato ISO rappresenta comunque la scelta migliore".  
   
 4.  **Usare la funzione Format per applicare un formato specifico, indipendentemente dalle impostazioni locali della lingua**  
   

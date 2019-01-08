@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - recovery [SQL Server replication], merge replication
@@ -16,12 +15,12 @@ ms.assetid: b8ae31c6-d76f-4dd7-8f46-17d023ca3eca
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 01e0d1d3214d9502d3c4a8db91cd16617dd9472a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f4d1bdc1f39e7e8e40b75b02bcb258f23ee411a7
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48220891"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52757485"
 ---
 # <a name="strategies-for-backing-up-and-restoring-merge-replication"></a>Strategie di backup e ripristino della replica di tipo merge
   Per la replica di tipo merge, eseguire periodicamente il backup dei database seguenti:  
@@ -55,14 +54,14 @@ ms.locfileid: "48220891"
   
 -   Se la pubblicazione non è filtrata, sarà possibile aggiornare il database di pubblicazione eseguendo la sincronizzazione con il Sottoscrittore più aggiornato.  
   
--   Se la pubblicazione è filtrata, l'aggiornamento del database di pubblicazione potrebbe non essere possibile. Considerare una tabella partizionata in modo che ogni sottoscrizione riceva i dati relativi ai clienti solo per una singola area: Nord, Est, Sud e Ovest. Se per ogni partizione di dati è disponibile almeno un Sottoscrittore, la sincronizzazione con un Sottoscrittore per ogni partizione dovrebbe consentire di aggiornare il database di pubblicazione. Tuttavia, se ad esempio i dati nella partizione Ovest non sono stati replicati in alcun Sottoscrittore, questi dati nel server di pubblicazione non potranno essere aggiornati.  
+-   Se la pubblicazione è filtrata, l'aggiornamento del database di pubblicazione potrebbe non essere possibile. Si consideri una tabella partizionata in modo che ogni sottoscrizione riceve i dati dei clienti solo per una singola area: Nord, est, Sud e Ovest. Se per ogni partizione di dati è disponibile almeno un Sottoscrittore, la sincronizzazione con un Sottoscrittore per ogni partizione dovrebbe consentire di aggiornare il database di pubblicazione. Tuttavia, se ad esempio i dati nella partizione Ovest non sono stati replicati in alcun Sottoscrittore, questi dati nel server di pubblicazione non potranno essere aggiornati.  
   
 > [!IMPORTANT]  
 >  Il ripristino delle tabelle pubblicate in seguito alla sincronizzazione di un database di pubblicazione con un database di sottoscrizione può avvenire in un momento più recente rispetto ad altre tabelle non pubblicate di cui è stato ripristinato il backup.  
   
  Se si esegue la sincronizzazione con un Sottoscrittore in cui è in esecuzione una versione di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] precedente a [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], la sottoscrizione non potrà essere anonima, ma dovrà trattarsi di una sottoscrizione client o server. Tali sottoscrizioni nelle versioni precedenti sono definite sottoscrizione locale e sottoscrizione globale.  
   
- Per sincronizzare una sottoscrizione, vedere [Sincronizzazione di una sottoscrizione push](../synchronize-a-push-subscription.md) e [Sincronizzazione di una sottoscrizione pull](../synchronize-a-pull-subscription.md).  
+ Per sincronizzare una sottoscrizione, vedere [Synchronize a Push Subscription](../synchronize-a-push-subscription.md) e [Synchronize a Pull Subscription](../synchronize-a-pull-subscription.md).  
   
 ### <a name="reinitializing-all-subscriptions"></a>Reinizializzazione di tutte le sottoscrizioni  
  La reinizializzazione di tutte le sottoscrizioni garantisce che tutti i Sottoscrittori siano in uno stato consistente con il database di pubblicazione ripristinato. È necessario utilizzare questo approccio se si desidera ripristinare lo stato precedente di un'intera topologia, rappresentato dal backup di un determinato database di pubblicazione. È ad esempio possibile reinizializzare tutte le sottoscrizioni se si ripristina lo stato precedente di un database di pubblicazione al fine di correggere un'operazione batch eseguita in modo errato.  

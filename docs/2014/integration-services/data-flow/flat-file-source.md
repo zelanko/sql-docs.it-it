@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.flatfilesource.f1
@@ -18,14 +17,14 @@ ms.assetid: 4a64f7f3-f25d-4db0-93b3-a29496030e58
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a8a06ae3b308c90b2dc789c97f5f262530826229
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0a0b353cfb1aef011d6fc63a3bea252685b38a42
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48125411"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52771333"
 ---
-# <a name="flat-file-source"></a>Origine file flat
+# <a name="flat-file-source"></a>origine file flat
   L'origine file flat legge dati da un file di testo. Tale file può essere in formato delimitato, a larghezza fissa o misto.  
   
 -   Nel formato delimitato per definire le righe e le colonne vengono utilizzati delimitatori di riga e colonna.  
@@ -56,11 +55,11 @@ ms.locfileid: "48125411"
   
  Per altre informazioni sulle proprietà che è possibile impostare nella finestra di dialogo **Editor origine file flat**, fare clic su uno degli argomenti seguenti:  
   
--   [Editor origine File flat &#40;pagina Gestione connessione&#41;](../flat-file-source-editor-connection-manager-page.md)  
+-   [Editor origine file flat &#40;pagina Gestione connessione&#41;](../flat-file-source-editor-connection-manager-page.md)  
   
--   [Editor origine File flat &#40;(pagina colonne)&#41;](../flat-file-source-editor-columns-page.md)  
+-   [Editor origine file flat &#40;pagina Colonne&#41;](../flat-file-source-editor-columns-page.md)  
   
--   [Editor origine File flat &#40;pagina dell'Output degli errori&#41;](../flat-file-source-editor-error-output-page.md)  
+-   [Editor origine file flat &#40;pagina Output degli errori&#41;](../flat-file-source-editor-error-output-page.md)  
   
  Nella finestra di dialogo **Editor avanzato** sono disponibili le proprietà che è possibile impostare a livello di codice. Per ulteriori informazioni sulle proprietà che è possibile impostare nella finestra di dialogo **Editor avanzato** o a livello di codice, fare clic su uno degli argomenti seguenti:  
   
@@ -72,7 +71,7 @@ ms.locfileid: "48125411"
  Per informazioni su come impostare le proprietà di un componente del flusso di dati, vedere [Impostare le proprietà di un componente del flusso di dati](set-the-properties-of-a-data-flow-component.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Destinazione File flat](flat-file-destination.md)   
+ [Destinazione file flat](flat-file-destination.md)   
  [Flusso di dati](data-flow.md)  
   
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - change data [SQL Server]
@@ -16,12 +15,12 @@ ms.assetid: 5346b852-1af8-4080-b278-12efb9b735eb
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 881a32bbb21eeeef0e09eaedb98897f90a1c0d27
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: eaafa011f1b99ea90afce2902c877d0a25b9e6e3
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48215671"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52811113"
 ---
 # <a name="work-with-change-data-sql-server"></a>Utilizzare i dati delle modifiche (SQL Server)
   I dati delle modifiche vengono resi disponibili ai consumer della funzionalità Change Data Capture tramite funzioni con valori di tabella. Per tutte le query di queste funzioni sono necessari due parametri che definiscono l'intervallo di numeri di sequenza del file di log (LSN) idonei durante lo sviluppo del set di risultati restituito. Entrambi i valori LSN che rappresentano il limite inferiore e quello superiore dell'intervallo sono inclusi nell'intervallo stesso.  
@@ -37,7 +36,7 @@ ms.locfileid: "48215671"
   
  `An insufficient number of arguments were supplied for the procedure or function cdc.fn_cdc_get_all_changes_ ...`  
   
- L'errore corrispondente restituito per un `net changes` query è il seguente:  
+ L'errore corrispondente restituito per una query `net changes` è il seguente:  
   
  `Msg 313, Level 16, State 3, Line 1`  
   
@@ -73,7 +72,7 @@ ms.locfileid: "48215671"
     > [!NOTE]  
     >  Questa opzione è supportata solo se la tabella di origine contiene una chiave primaria definita o se il parametro @index_name è stato usato per identificare un indice univoco.  
   
-     La funzione **netchanges** restituisce una modifica per ogni riga della tabella di origine modificata. Se durante l'intervallo specificato viene registrata più di una modifica relativa alla riga, i valori della colonna rifletteranno i contenuti finali della riga. Per identificare correttamente l'operazione necessaria all'aggiornamento dell'ambiente di destinazione, è necessario che nella funzione con valori di tabella vengano considerate sia l'operazione iniziale sulla riga durante l'intervallo sia l'operazione finale sulla riga stessa. Quando viene specificata l'opzione del filtro di riga 'all', le operazioni restituite da una query `net changes` vengono inserite, eliminate o aggiornate (valori nuovi). Questa opzione restituisce sempre un valore Null per la maschera di aggiornamento perché al calcolo di una maschera di aggregazione è associato un costo. Se è necessaria una maschera di aggregazione che rifletta tutte le modifiche apportate a una riga, utilizzare l'opzione 'all with mask'. Se l'elaborazione a valle non richiede la distinzione tra operazioni di inserimento e di aggiornamento, utilizzare l'opzione 'all with merge'. In questo caso, il valore dell'operazione accetterà solo due valori, 1 per l'eliminazione e 5 per un'operazione che potrebbe essere un inserimento o un aggiornamento. Questa opzione elimina le operazioni di elaborazione aggiuntive necessarie per determinare se l'operazione derivata deve essere un inserimento o un aggiornamento e può migliorare le prestazioni della query quando questa differenziazione non è necessaria.  
+     La funzione **netchanges** restituisce una modifica per ogni riga della tabella di origine modificata. Se durante l'intervallo specificato viene registrata più di una modifica relativa alla riga, i valori della colonna rifletteranno i contenuti finali della riga. Per identificare correttamente l'operazione necessaria all'aggiornamento dell'ambiente di destinazione, è necessario che nella funzione con valori di tabella vengano considerate sia l'operazione iniziale sulla riga durante l'intervallo sia l'operazione finale sulla riga stessa. Quando viene specificata l'opzione del filtro di riga 'all', le operazioni restituite da una query `net changes` vengono inserite, eliminate o aggiornate (valori nuovi). Questa opzione restituisce sempre un valore Null per la maschera di aggiornamento perché al calcolo di una maschera di aggregazione è associato un costo. Se è necessaria una maschera di aggregazione che rifletta tutte le modifiche apportate a una riga, utilizzare l'opzione 'all with mask'. Se l'elaborazione a valle non richiede la distinzione tra operazioni di inserimento e di aggiornamento, utilizzare l'opzione 'all with merge'. In questo caso, il valore dell'operazione accetterà solo due valori: 1 per l'eliminazione e 5 per un'operazione che potrebbe essere un'operazione di inserimento o aggiornamento. Questa opzione elimina le operazioni di elaborazione aggiuntive necessarie per determinare se l'operazione derivata deve essere un inserimento o un aggiornamento e può migliorare le prestazioni della query quando questa differenziazione non è necessaria.  
   
  La maschera di aggiornamento restituita da una funzione della query è una rappresentazione compatta che identifica tutte le colonne modificate in una riga di dati delle modifiche. Generalmente, queste informazioni sono necessarie solo per un subset delle colonne acquisite di dimensioni ridotte. Le funzioni sono disponibili per consentire l'estrazione delle informazioni dalla maschera in una forma utilizzabile dalle applicazioni in modo più diretto. La funzione [sys.fn_cdc_get_column_ordinal](/sql/relational-databases/system-functions/sys-fn-cdc-get-column-ordinal-transact-sql) restituisce la posizione ordinale di una colonna denominata per una determinata istanza di acquisizione, mentre la funzione [sys.fn_cdc_is_bit_set](/sql/relational-databases/system-functions/sys-fn-cdc-is-bit-set-transact-sql) restituisce la parità del bit nella maschera fornita in base al numero ordinale passato nella chiamata alla funzione. Se utilizzate insieme, queste due funzioni consentono l'estrazione e la restituzione efficienti delle informazioni dalla maschera di aggiornamento con la richiesta dei dati delle modifiche. Vedere il modello Enumerate Net Changes Using All With Mask per una dimostrazione di come utilizzare queste funzioni.  
   
@@ -113,7 +112,7 @@ ms.locfileid: "48215671"
   
  Il nome della funzione di wrapping della query per tutte le modifiche è fn_all_changes_ seguito dal nome dell'istanza di acquisizione. Il prefisso utilizzato per il wrapper delle modifiche delta è fn_net_changes_. Entrambe le funzioni accettano tre argomenti, proprio come le funzioni con valori di tabella di Change Data Capture associate. Tuttavia, l'intervallo di query per i wrapper è limitato da due valori datetime e non da due valori LSN. Il parametro @row_filter_option è identico per entrambi i set di funzioni.  
   
- Le funzioni wrapper generate supportano la convenzione seguente per l'esame sistematico della cronologia di Change Data Capture: si prevede che il parametro @end_time dell'intervallo precedente venga usato come parametro @start_time dell'intervallo successivo. La funzione wrapper esegue il mapping dei valori datetime ai valori LSN e si assicura che nessun dato venga perso o ripetuto se viene seguita questa convenzione.  
+ Le funzioni wrapper generate supportano la convenzione seguente per sistematico della cronologia di change data capture: È previsto che il @end_time parametri dell'intervallo precedente utilizzabile come il @start_time parametro dell'intervallo successivo. La funzione wrapper esegue il mapping dei valori datetime ai valori LSN e si assicura che nessun dato venga perso o ripetuto se viene seguita questa convenzione.  
   
  È possibile generare i wrapper affinché supportino un limite superiore chiuso o un limite superiore aperto nella finestra di query specificata. Il chiamante può quindi specificare se le voci con un'ora di commit corrispondente al limite superiore dell'intervallo di estrazione debbano essere incluse nell'intervallo. Per impostazione predefinita, il limite superiore è incluso.  
   

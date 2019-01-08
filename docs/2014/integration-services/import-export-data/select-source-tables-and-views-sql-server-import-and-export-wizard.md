@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.impexpwizard.selectsourcetablesandviews.f1
@@ -13,12 +12,12 @@ ms.assetid: f60e1a19-2ea6-403c-89ab-3e60ac533ea0
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2f99b94c133ba2a8bfd8bbe6d7b78bd455061409
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 074fb9aff14a2d173658c0a8ed8e31740e957a37
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48050133"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52760313"
 ---
 # <a name="select-source-tables-and-views-sql-server-import-and-export-wizard"></a>Selezione tabelle e viste di origine (Importazione/Esportazione guidata SQL Server)
   Usare la **selezionare le tabelle di origine e le viste** pagina per specificare le tabelle e viste da copiare dall'origine dati nella destinazione.  
@@ -40,7 +39,7 @@ ms.locfileid: "48050133"
  Consente di selezionare una tabella di destinazione dall'elenco per ogni tabella di origine.  
   
 > [!NOTE]  
->  Se viene sospesa a questo punto della procedura guidata per creare una tabella di destinazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tramite [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] o un altro strumento, la nuova tabella non è immediatamente visibile nell'elenco delle tabelle di destinazione disponibili. Per aggiornare l'elenco delle tabelle di destinazione, un passo indietro di due pagine per il **scegliere una destinazione** pagina, selezionare di nuovo il database di destinazione e quindi avanzare fino alle **selezionare le tabelle di origine e le viste**.  
+>  Se la procedura guidata viene sospesa a questo punto per creare una tabella di destinazione in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizzando [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] o un altro strumento, la nuova tabella non verrà immediatamente visualizzata nell'elenco delle tabelle di destinazione disponibili. Per aggiornare l'elenco delle tabelle di destinazione, un passo indietro di due pagine per il **scegliere una destinazione** pagina, selezionare di nuovo il database di destinazione e quindi avanzare fino alle **selezionare le tabelle di origine e le viste**.  
   
 ### <a name="other-options"></a>Altre opzioni  
  **Modifica mapping**  

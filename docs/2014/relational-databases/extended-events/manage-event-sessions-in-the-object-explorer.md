@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: xevents
 ms.topic: conceptual
 ms.assetid: 16849e38-d3fb-414d-8dcb-797b5ffce6ee
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ef82f1aafddd60eeaeae3abd7ec65b51e209670f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d44ab9256367ceb9883b55bb9b01ad67e14ded32
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48050207"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52801293"
 ---
 # <a name="manage-event-sessions-in-the-object-explorer"></a>Gestire sessioni di eventi in Esplora oggetti
   In questo argomento vengono illustrate le azioni eseguibili in **Esplora oggetti** che influiscono su Eventi estesi:  
@@ -83,7 +82,7 @@ STATE = STOP
 ## <a name="import-an-extended-events-session-template"></a>Importare un modello di sessione Eventi estesi  
  Usando **Esplora oggetti**è possibile importare un modello per una sessione Eventi estesi. È possibile, ad esempio, effettuare questa operazione per creare una sessione da un modello esportato da un'altra istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- Per importare una sessione eventi estesi, è necessario disporre del `ALTER ANY EVENT SESSION` autorizzazioni.  
+ Per importare una sessione Eventi estesi, è necessario disporre delle autorizzazioni `ALTER ANY EVENT SESSION`.  
   
  Prima di importare un file modello, verificare che il file provenga da una fonte attendibile. È necessario salvare i file modello in un percorso che utilizza il file system NTFS e in cui l'accesso è limitato agli utenti autorizzati a visualizzare le informazioni.  
   
@@ -97,7 +96,7 @@ STATE = STOP
   
 4.  Espandere la casella di riepilogo a discesa **Modello** .  
   
-5.  Fare clic su **Apri \<file da…>** e individuare la sessione (file XML) da importare.  
+5.  Fare clic su **Apri \<file da...>** e cercare la sessione (file XML) da importare.  
   
  La sessione verrà visualizzata nel nodo **Sessioni** . Per impostazione predefinita,la sessione non viene avviata.  
   

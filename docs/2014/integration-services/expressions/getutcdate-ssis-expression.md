@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - dates [Integration Services], GETUTCDATE
@@ -16,12 +15,12 @@ ms.assetid: 2282339c-c24f-493e-8e66-181ea8af5ad0
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d266d5c329776279f21dfbfdaa51a823f460a407
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9dfddc692246050d97893141715b105fc017b46f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48087101"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52779103"
 ---
 # <a name="getutcdate-ssis-expression"></a>GETUTCDATE (espressione SSIS)
   Viene restituita la data corrente del sistema in base all'ora UTC (Universal Time Coordinated o ora di Greenwich) utilizzando un formato DT_DBTIMESTAMP. La funzione GETUTCDATE non accetta argomenti.  
@@ -59,7 +58,7 @@ DATEADD("Month",3,GETUTCDATE())
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [GETDATE &#40;espressione di SSIS&#41;](getdate-ssis-expression.md)   
- [Le funzioni &#40;espressione di SSIS&#41;](functions-ssis-expression.md)  
+ [GETDATE &#40;espressione SSIS&#41;](getdate-ssis-expression.md)   
+ [Funzioni &#40;espressione SSIS&#41;](functions-ssis-expression.md)  
   
   
