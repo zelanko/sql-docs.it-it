@@ -24,19 +24,19 @@ ms.assetid: 87bca678-4e79-40e1-bb8b-bd5ed8f34853
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: c405884f8ff87cb0b37991dc5639bf69068a6ffd
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 6ac4fde8a0058d05125346167e07c3d99e687a8e
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52503094"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53203970"
 ---
 # <a name="alter-assembly-transact-sql"></a>ALTER ASSEMBLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   Modifica un assembly mediante la modifica delle proprietà di catalogo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di un assembly. ALTER ASSEMBLY esegue un aggiornamento dell'assembly in base alla copia più recente dei moduli [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] che includono la relativa implementazione e aggiunge o rimuove i file a esso associati. Gli assembly vengono creati tramite l'istruzione [CREATE ASSEMBLY](../../t-sql/statements/create-assembly-transact-sql.md).  
 
->  [!WARNING]
+> [!WARNING]
 >  CLR usa la Sicurezza dall'accesso di codice (CAS, Code Access Security) in .NET Framework, non più supportata come limite di sicurezza. Un assembly CLR creato con `PERMISSION_SET = SAFE` potrebbe essere in grado di accedere alle risorse di sistema esterne, chiamare codice non gestito e acquisire privilegi sysadmin. A partire da [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)], viene introdotta un'opzione `sp_configure` denominata `clr strict security` per migliorare la sicurezza degli assembly CLR. `clr strict security` è abilitata per impostazione predefinita e considera gli assembly CLR `SAFE` e `UNSAFE` come se fossero contrassegnati `EXTERNAL_ACCESS`. È possibile disabilitare l'opzione `clr strict security` per la compatibilità con le versioni precedenti, ma questa operazione è sconsigliata. Microsoft consiglia che tutti gli assembly siano firmati con un certificato o una chiave asimmetrica con un account di accesso corrispondente che disponga dell'autorizzazione `UNSAFE ASSEMBLY` nel database master. Per altre informazioni, vedere [CLR strict security](../../database-engine/configure-windows/clr-strict-security.md).  
 
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -85,11 +85,11 @@ ALTER ASSEMBLY assembly_name
  È necessario usare istruzioni ALTER ASSEMBLY separate per ogni assembly dipendente che inoltre richiede un aggiornamento.  
   
  PERMISSION_SET = { SAFE | EXTERNAL_ACCESS | UNSAFE }   
->  [!IMPORTANT]  
+> [!IMPORTANT]
 >  L'opzione `PERMISSION_SET` è influenzata dall'opzione `clr strict security` descritta nell'avviso di apertura. Quando l'opzione `clr strict security` è abilitata, tutti gli assembly vengono considerati come `UNSAFE`.  
- Specifica la proprietà del set di autorizzazioni per l'accesso al codice di [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] per l'assembly. Per altre informazioni su questa proprietà, vedere [CREATE ASSEMBLY &#40;Transact-SQL&#41;](../../t-sql/statements/create-assembly-transact-sql.md).  
-  
-> [!NOTE]  
+>  Specifica la proprietà del set di autorizzazioni per l'accesso al codice di [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] per l'assembly. Per altre informazioni su questa proprietà, vedere [CREATE ASSEMBLY &#40;Transact-SQL&#41;](../../t-sql/statements/create-assembly-transact-sql.md).  
+> 
+> [!NOTE]
 >  Le opzioni EXTERNAL_ACCESS e UNSAFE non sono disponibili in un database indipendente.  
   
  VISIBILITY = { ON | OFF }  
@@ -126,7 +126,7 @@ ALTER ASSEMBLY assembly_name
 > [!NOTE]  
 >  Questa opzione non è disponibile in un database indipendente o nel database SQL di Azure.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  ALTER ASSEMBLY non interferisce con le sessioni in esecuzione che eseguono codice nell'assembly in fase di modifica. Le sessioni correnti completano l'esecuzione tramite l'utilizzo dei bit non modificati dell'assembly.  
   
  Se si specifica la clausola FROM, ALTER ASSEMBLY aggiorna l'assembly in base alle copie più recenti dei moduli specificati. Poiché nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] potrebbero essere presenti funzioni CLR, stored procedure, trigger, tipi di dati e funzioni di aggregazione definite dall'utente già definiti in base all'assembly, l'istruzione ALTER ASSEMBLY riassocia questi elementi all'implementazione più recente dell'assembly. Per eseguire questa riassociazione, è necessario che i metodi che eseguono il mapping alle funzioni CLR, alle stored procedure e ai trigger esistano nell'assembly modificati con le stesse firme. Le classi che implementano i tipi CLR definiti dall'utente e le funzioni di aggregazione definite dall'utente devono continuare a soddisfare i requisiti richiesti per i tipi e le funzioni di aggregazione definiti dall'utente.  
@@ -168,7 +168,7 @@ ALTER ASSEMBLY assembly_name
   
  Se l'istruzione ALTER ASSEMBLY viene eseguita senza la clausola di dati UNCHECKED, vengono eseguite le verifiche per controllare che la nuova versione dell'assembly non abbia un impatto negativo sui dati delle tabelle. Le prestazioni potrebbero dipendere dalla quantità di dati che devono essere sottoposti a verifica.  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Permissions  
  È necessaria l'autorizzazione ALTER per l'assembly. È inoltre necessario disporre dei requisiti seguenti:  
   
 -   Per modificare un assembly il cui set di autorizzazioni esistente è EXTERNAL_ACCESS, è necessaria l'autorizzazione **EXTERNAL ACCESS ASSEMBLY** nel server.  
@@ -209,7 +209,7 @@ Sono necessarie le autorizzazioni seguenti per modificare un assembly CLR con `C
 > [!IMPORTANT]
 > Il database SQL di Azure non supporta riferimenti a un file.
 
-### <a name="b-adding-a-file-to-associate-with-an-assembly"></a>B. Aggiunta di un file da associare a un assembly  
+### <a name="b-adding-a-file-to-associate-with-an-assembly"></a>b. Aggiunta di un file da associare a un assembly  
  Nell'esempio seguente viene caricato il file del codice sorgente `Class1.cs` da associare all'assembly `MyClass`. In questo esempio si presuppone che l'assembly `MyClass` sia già stato creato nel database.  
   
 ```  

@@ -16,12 +16,12 @@ ms.assetid: 04f9863c-ba0b-47c5-af91-f2d41b078a23
 author: MikeRayMSFT
 ms.author: mikeray
 manager: erikre
-ms.openlocfilehash: e831a5adc9142a339ee633592ccb98c8ff9f1462
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: d07d683b217b4f4eff6c9cfd1c6275ab4a9e5ca1
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51642358"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53214888"
 ---
 # <a name="upgrade-integration-services"></a>Aggiornare Integration Services
   Se nel computer è installato [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] o una versione successiva, è possibile eseguire l'aggiornamento a [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)].  
@@ -36,16 +36,16 @@ ms.locfileid: "51642358"
 ## <a name="before-upgrading-integration-services"></a>Operazioni preliminari per l'aggiornamento di Integration Services  
  Prima di procedere all'aggiornamento a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], è consigliabile eseguire Preparazione aggiornamento. Preparazione aggiornamento segnala i problemi che potrebbero verificarsi se si esegue la migrazione dei pacchetti esistenti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] al nuovo formato dei pacchetti utilizzato da [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] .  
   
-> [!NOTE]  
+> [!NOTE]
 >  Il supporto per la migrazione o l'esecuzione di pacchetti di Data Transformation Services (DTS) non è più disponibile in SQL Server 2012. Le seguenti funzionalità DTS non sono più utilizzate.  
->   
+> 
 >  -   DTS Runtime  
 > -   API DTS  
 > -   Migrazione guidata pacchetti per la migrazione dei pacchetti DTS alla versione successiva di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]  
 > -   Supporto per la gestione di pacchetti DTS in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
 > -   Attività Esegui pacchetto DTS 2000  
 > -   Analisi di pacchetti DTS in Preparazione aggiornamento.  
->   
+> 
 >  Per informazioni sulle altre funzionalità sospese, vedere [Funzionalità di Integration Services non più supportate in SQL Server 2016](https://msdn.microsoft.com/library/5ee40ceb-37b9-47a9-b90d-ce1de74b10f7).  
   
 ## <a name="upgrading-integration-services"></a>aggiornamento di Integration Services  

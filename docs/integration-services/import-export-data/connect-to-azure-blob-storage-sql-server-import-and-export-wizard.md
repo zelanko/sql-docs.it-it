@@ -11,20 +11,20 @@ ms.assetid: e2e482b8-5f90-48c5-93fb-b412ed52659f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ed6e4ef356d56029f94789dd462e0578161d6668
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8ad5132b4fe6750c2e2dd66786b5a4dceb4577e5
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47693411"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53211770"
 ---
 # <a name="connect-to-azure-blob-storage-sql-server-import-and-export-wizard"></a>Connettersi all'archiviazione BLOB di Azure (Importazione/Esportazione guidata SQL Server)
 Questo argomento illustra come connettersi a un'origine dati **Archiviazione BLOB di Azure** dalla pagina **Scelta origine dati** o **Scelta destinazione** dell'Importazione/Esportazione guidata SQL Server.
 
->   [!NOTE]
+> [!NOTE]
 > Per usare l'origine o la destinazione BLOB di Azure, è necessario installare il Feature Pack di Azure per SQL Server Integration Services.
 > - Per scaricare il Feature Pack, vedere [Microsoft SQL Server 2016 Integration Services Feature Pack per Azure](https://www.microsoft.com/download/details.aspx?id=49492).
->
+> 
 > - Per altre informazioni, vedere [Azure Feature Pack for Integration Services &#40;SSIS&#41;](../../integration-services/azure-feature-pack-for-integration-services-ssis.md).
 
 Lo screenshot seguente mostra le opzioni da configurare per una connessione all'archiviazione BLOB di Azure.

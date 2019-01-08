@@ -8,19 +8,19 @@ ms.topic: conceptual
 ms.assetid: 958ef51f-2699-4cb2-a92e-3b4322e36a30
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 412cb586d306da13791a956a01a1a217d5fc0d7b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 54ca89e75da4bf5ce5d0666ec479b870deda2848
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47758656"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53202140"
 ---
 # <a name="modify-a-reporting-services-configuration-file-rsreportserverconfig"></a>Modify a Reporting Services Configuration File (RSreportserver.config)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] le impostazioni dell'applicazione vengono archiviate in un set di file di configurazione. Durante l'installazione vengono creati i file di configurazione per ogni istanza del server di report installata. All'interno di ogni file, i valori vengono impostati in questa fase o nel momento in cui si utilizzano strumenti e applicazioni per configurare un server per l'esecuzione di operazioni. In alcuni casi, è necessario modificare direttamente un file per aggiungere o configurare impostazioni avanzate. Le impostazioni di configurazione sono specificate come elementi o attributi XML. Se si conoscono il linguaggio XML e i file di configurazione, è possibile utilizzare un editor di testo o di codice per modificare le impostazioni definibili dall'utente.  
   
  Alcune impostazioni di configurazione possono essere impostate solo tramite uno strumento specifico. Impostazioni che contengono valori crittografati devono essere modificate ad esempio tramite lo strumento di configurazione di Reporting Services, il programma di installazione o l'utilità della riga di comando **rsconfig** . Per eseguire questi strumenti, è necessario essere membro del gruppo Administrators locale.  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  Prestare attenzione in caso di modifiche al file di configurazione. Se si modifica un'impostazione riservata per l'uso interno, l'installazione potrebbe essere disabilitata. Non è in genere consigliabile modificare le impostazioni di configurazione, a meno che non sia necessario risolvere un problema specifico. Per altre informazioni sulle impostazioni sicure da modificare, vedere [File di configurazione RsReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md) o [File di configurazione RSReportDesigner](../../reporting-services/report-server/rsreportdesigner-configuration-file.md). Per altre informazioni sui file di configurazione, vedere la documentazione del prodotto [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] .  
   
  Contenuto dell'argomento:  
@@ -102,7 +102,7 @@ ms.locfileid: "47758656"
 ## <a name="see-also"></a>Vedere anche  
  [File di configurazione RsReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
  [File di configurazione ReportingServicesService](../../reporting-services/report-server/reportingservicesservice-configuration-file.md)   
- [RSReportDesigner - file di configurazione](../../reporting-services/report-server/rsreportdesigner-configuration-file.md)   
+ [File di configurazione RSReportDesigner](../../reporting-services/report-server/rsreportdesigner-configuration-file.md)   
  [Distribuzione di un'estensione per l'elaborazione dati](../../reporting-services/extensions/data-processing/deploying-a-data-processing-extension.md)   
  [Distribuzione di un'estensione per il recapito](../../reporting-services/extensions/delivery-extension/deploying-a-delivery-extension.md)   
  [Distribuzione di un'estensione per il rendering](../../reporting-services/extensions/rendering-extension/deploying-a-rendering-extension.md)   

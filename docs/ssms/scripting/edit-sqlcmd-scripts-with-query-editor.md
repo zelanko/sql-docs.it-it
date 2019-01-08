@@ -18,12 +18,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4d1afb4913b758397d4d072859c3fb80879f2e46
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 0999d5011df80bae97c767ac910b2a5fd810127c
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51643050"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53211810"
 ---
 # <a name="edit-sqlcmd-scripts-with-query-editor"></a>Modifica di script SQLCMD con l'editor di query
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -112,7 +112,7 @@ ms.locfileid: "51643050"
   
 -   L'editor di query del [!INCLUDE[ssDE](../../includes/ssde-md.md)] supporta variabili di ambiente e variabili definite come parte di uno script SQLCMD, ma non supporta variabili **osql** o SQLCMD predefinite. L'elaborazione di SQLCMD da parte di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] distingue tra maiuscole e minuscole nelle variabili. Ad esempio, PRINT '$ (COMPUTERNAME)' produce il risultato corretto, ma PRINT '$ (ComputerName)' restituisce un errore.  
   
-> [!CAUTION]  
+> [!CAUTION]
 >  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] usa [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]SqlClient per l'esecuzione in modalità regolare e SQLCMD. Quando viene eseguito dalla riga di comando, SQLCMD utilizza il provider OLE DB. Poiché le opzioni predefinite che è possibile applicare sono diverse, l'esecuzione della stessa query in modalità SQLCMD di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] e nell'utilità SQLCMD potrebbe generare risultati diversi.  
   
 ## <a name="supported-sqlcmd-syntax"></a>Sintassi SQLCMD supportata  

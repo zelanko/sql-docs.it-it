@@ -25,12 +25,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 7e89c598b31da3bd8aef755dec49a18bb820afd5
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 60e05754e43056e3f71d4abccb1d8af91c650684
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51698827"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53212120"
 ---
 # <a name="operators"></a>Operatori
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ A ogni operatore deve essere assegnato un nome. I nomi degli operatori devono es
 ### <a name="contact-information"></a>Informazioni sul contatto  
 Le informazioni sul contatto di un operatore definiscono la modalità di trasmissione delle notifiche all'operatore. Gli operatori possono ricevere notifiche tramite posta elettronica o cercapersone oppure tramite il comando **Net Send** :  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 > Le opzioni Cercapersone e **net send** verranno rimosse da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent in una versione futura di [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evitare pertanto di utilizzarle in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui sono state implementate.  
   
 -   **Notifica tramite posta elettronica**  
