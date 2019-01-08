@@ -16,17 +16,17 @@ ms.assetid: 6e34d886-005a-40dc-bd5c-6adcbf81e5cd
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 80fb27aa51d6e0a44f8f006711708e24cd04bef3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: db3b72b7bdaf60febdeb41eb6f6e1e86c5064f63
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47632319"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507164"
 ---
 # <a name="fieldattributeenum"></a>FieldAttributeEnum
 Specifica uno o più attributi di un [campo](../../../ado/reference/ado-api/field-object.md) oggetto.  
   
-|Costante|valore|Description|  
+|Costante|Value|Descrizione|  
 |--------------|-----------|-----------------|  
 |**adFldCacheDeferred**|0x1000|Indica che il provider vengono memorizzati nella cache i valori dei campi e che le letture successive vengono eseguite dalla cache.|  
 |**adFldFixed**|0x10|Indica che il campo contiene dati a lunghezza fissa.|  
@@ -38,7 +38,7 @@ Specifica uno o più attributi di un [campo](../../../ado/reference/ado-api/fiel
 |**adFldIsRowURL**|0x10000|Indica che il campo contiene l'URL che denomina la risorsa dall'archivio dati rappresentato dal record.|  
 |**adFldLong**|0x80|Indica che il campo è un campo binario long. Indica inoltre che è possibile usare la [AppendChunk](../../../ado/reference/ado-api/appendchunk-method-ado.md) e [GetChunk](../../../ado/reference/ado-api/getchunk-method-ado.md) metodi.|  
 |**adFldMayBeNull**|0x40|Indica che è possibile leggere i valori null nel campo.|  
-|**adFldMayDefer**|0x2|Indica che il campo viene rinviato, vale a dire, i valori dei campi non vengono recuperati dall'origine dati con il record completo, ma solo quando si accede in modo esplicito.|  
+|**adFldMayDefer**|0x2|Indica che il campo è che posticipata è, i valori dei campi non vengono recuperati dall'origine dati con il record completo, ma solo quando si accede in modo esplicito.|  
 |**adFldNegativeScale**|0x4000|Indica che il campo rappresenta un valore numerico da una colonna che supporta valori di scala negativo. La scala è specificata per il [NumericScale](../../../ado/reference/ado-api/numericscale-property-ado.md) proprietà.|  
 |**adFldRowID**|0x100|Indica che il campo contiene un identificatore di riga persistente che non può essere scritte e non ha alcun valore significativo, ad eccezione per identificare la riga (ad esempio un numero di record, un identificatore univoco e così via).|  
 |**adFldRowVersion**|0x200|Indica che il campo contiene un tipo di indicatore di data e ora usato per tenere traccia degli aggiornamenti.|  

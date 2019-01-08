@@ -19,23 +19,23 @@ ms.assetid: 0690b463-15a1-48fa-9d0b-9cc9e5bf7fc6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2a8c46bbcfea4c94d3dc5b4cd0f5783858f3f0fb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b1d0fc510c7c45dab8fbc79cc8e74001ff1855b6
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47715619"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52528220"
 ---
 # <a name="compatibility-matrix"></a>Matrice di compatibilità
 Nella tabella seguente viene descritta la compatibilità dei tipi di applicazioni e driver definiti precedentemente in questa sezione.  
   
-|Tipo di applicazione<br /><br /> e versione|ODBC 32-bit<br /><br /> 2.*x* driver|ODBC 3. *x*<br /><br /> Driver|Driver ODBC 3.8|ISO e conforme a Open gruppo di driver|  
+|Tipo di applicazione<br /><br /> e versione|ODBC 32-bit<br /><br /> 2.*x* driver|ODBC 3. *x*<br /><br /> Driver|Driver ODBC 3.8|ISO e aprire compatibile con gruppo di driver|  
 |--------------------------------------|-----------------------------------|---------------------------|---------------------|-----------------------------------------|  
 |applicazione a 16 bit, qualsiasi versione|Compatibilità|Compatibilità|Compatibilità|Compatibilità|  
 |2 pure. *x* applicazione|Compatibilità|Compatibilità|Compatibilità|Non compatibile con [3]|  
 |2 pure. *x* ricompilate dell'applicazione|Compatibilità|Compatibile con [1]|Compatibile con [1]|Non compatibile con [3]|  
 |2 pure. *x* Unicode application|Compatibilità|Compatibile con [1]|Compatibile con [1]|Non compatibile con [3]|  
-|Applicazione di gruppo aperta pure e conforme a ISO|Non è compatibile|Compatibile con [2]|Compatibile con [2]|Compatibile con [2]|  
+|Applicazione di gruppo aprire puro e conforme allo standard ISO|Non è compatibile|Compatibile con [2]|Compatibile con [2]|Compatibile con [2]|  
 |Applicazione 3.0 pure|Non è compatibile|Compatibilità|Compatibilità|Non compatibile con [4]|  
 |Applicazione 3.5 pure|Non è compatibile|Compatibilità|Compatibilità|Non compatibile con [4]|  
 |Applicazione puramente 3,8 (o versioni successive)|Non compatibile con [5]|Non compatibile con [5]|Compatibilità|Non compatibile con [4]|  

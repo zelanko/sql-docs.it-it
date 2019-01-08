@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -17,19 +16,19 @@ ms.assetid: 61881d22-381d-407e-8c43-a07ba94389f6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3b1503f7e8a423430c7f5da7c522e34d631cf889
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 91c87062d00e46d931afba0599cf4b19ed316ebc
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48182431"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52786303"
 ---
 # <a name="sessions-event-category"></a>Categoria di eventi Sessioni
   La categoria di eventi **Sessioni** include la classe di evento **ExistingConnection** .  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>In questa sezione  
   
-|Argomento|Description|  
+|Argomento|Descrizione|  
 |-----------|-----------------|  
 |[Classe di evento ExistingConnection](existingconnection-event-class.md)|Indica le proprietà delle connessioni utente esistenti dopo l'avvio della traccia.|  
   

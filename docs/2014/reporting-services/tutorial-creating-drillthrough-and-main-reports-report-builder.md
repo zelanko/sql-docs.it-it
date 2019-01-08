@@ -1,5 +1,5 @@
 ---
-title: 'Esercitazione: Creazione di report drill-through e report principali (Generatore report) | Microsoft Docs'
+title: 'Esercitazione: Creazione di drill-through e report principali (Generatore Report) | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,19 +11,19 @@ ms.assetid: 7168c8d3-cef5-4c4a-a0bf-fff1ac5b8b71
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 3428c80e86f510b29ffb875bef604293cb1558a1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e12227fa9390b733ad28ec02a5b31c13a4204c26
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48093821"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512548"
 ---
 # <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>Esercitazione: Creazione di report drill-through e report principali (Generatore report)
   In questa esercitazione verrà illustrato come creare due tipi di report: un report drill-through e un report principale. I dati di vendita di esempio utilizzati in questi report vengono recuperati da un cubo di Analysis Services. Nell'illustrazione seguente vengono mostrati i report creati.  
   
  ![rs_DrillthroughCubeTutorial](../../2014/tutorials/media/rs-drillthroughcubetutorial.gif "rs_DrillthroughCubeTutorial")  
   
- L'illustrazione seguente mostra come viene visualizzato nel titolo del report drill-through il valore del campo Games and Toys nei report principali. I dati nel report drill-through riguardano la categoria di prodotto Games and Toys.  
+ La figura seguente mostra come il valore del campo Games and Toys nel report principale viene visualizzato nel titolo del report drill-through. I dati nel report drill-through riguardano la categoria di prodotto Games and Toys.  
   
  ![rs_DrillthroughCubeTutorialParmExpr](../../2014/tutorials/media/rs-drillthroughcubetutorialparmexpr.gif "rs_DrillthroughCubeTutorialParmExpr")  
   
@@ -130,7 +130,7 @@ ms.locfileid: "48093821"
 10. Fare clic su **Tipo credenziali**.  
   
     > [!NOTE]  
-    >  A seconda di come vengono configurate le autorizzazioni sull'origine dati, potrebbe essere necessario modificare le opzioni di autenticazione predefinite. Per altre informazioni, vedere [Security &#40;Report Builder&#41;](report-builder/security-report-builder.md).  
+    >  A seconda di come vengono configurate le autorizzazioni sull'origine dati, potrebbe essere necessario modificare le opzioni di autenticazione predefinite. Per altre informazioni, vedere [Sicurezza &#40;Generatore report&#41;](report-builder/security-report-builder.md).  
   
 11. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -149,7 +149,7 @@ ms.locfileid: "48093821"
   
 #### <a name="to-create-query-filters"></a>Per creare filtri query  
   
-1.  Nella pagina **Progetta query** fare clic sul pulsante **(…)** nel riquadro dei metadati.  
+1.  Nella pagina **Progetta query** fare clic sul pulsante **(...)** nel riquadro dei metadati.  
   
 2.  Nella finestra di dialogo **Seleziona cubo** fare clic su Vendite, quindi fare clic su **OK**.  
   
@@ -168,7 +168,7 @@ ms.locfileid: "48093821"
   
 5.  Nell'elenco dell'espressione filtro, espandere **Tutti i canali**, fare clic su **Online**, fare clic su **Rivenditore**, quindi fare clic su **OK**.  
   
-     Ora la query include un filtro per includere solo questi canali: Online e Rivenditore.  
+     La query ora comprende un filtro per includere solo questi canali: Online e Rivenditore.  
   
 6.  Espandere la dimensione Territorio di vendita, quindi trascinare Gruppo territorio di vendita nella colonna **Gerarchia** , sotto **Nome canale**.  
   
@@ -443,7 +443,7 @@ ms.locfileid: "48093821"
   
 #### <a name="to-create-query-filters"></a>Per creare filtri query  
   
-1.  Nella sezione relativa al cubo del riquadro Metadati della pagina **Progetta query** fare clic sul pulsante con i puntini di sospensione **(…)**.  
+1.  Nella sezione relativa al cubo del riquadro Metadati della pagina **Progetta query** fare clic sul pulsante con i puntini di sospensione **(...)**.  
   
 2.  Nella finestra di dialogo **Seleziona cubo** fare clic su Vendite, quindi fare clic su **OK**.  
   
@@ -462,7 +462,7 @@ ms.locfileid: "48093821"
   
 5.  Nell'elenco dell'espressione filtro, espandere **Tutti i canali**, fare clic su **Online** e **Rivenditore**, quindi fare clic su **OK**.  
   
-     Ora la query include un filtro per includere solo questi canali: Online e Rivenditore.  
+     La query ora comprende un filtro per includere solo questi canali: Online e Rivenditore.  
   
 6.  Espandere la dimensione Territorio di vendita, quindi trascinare Gruppo territorio di vendita nella colonna **Gerarchia** , sotto **Nome canale**.  
   
@@ -562,7 +562,7 @@ ms.locfileid: "48093821"
   
 1.  Nella pagina **Scegliere il layout** , sotto **Opzioni**, verificare che la casella **Mostra subtotali e totali complessivi** sia selezionata.  
   
-     Nel riquadro di anteprima della creazione guidata viene visualizzata una matrice con quattro righe.  Quando si esegue il report, ogni riga sarà visualizzata nella modalità seguente: La prima riga è il gruppo di colonne, la seconda riga contiene le intestazioni di colonna, la terza riga contiene i dati della categoria di prodotto (`[Sum(Net_ QTY)]` e `[Sum(Net_Sales)]`e la quarta riga contiene i totali.  
+     Nel riquadro di anteprima della creazione guidata viene visualizzata una matrice con quattro righe.  Quando si esegue il report, ogni riga viene visualizzata nel seguente modo: La prima riga è il gruppo di colonne, la seconda riga contiene le intestazioni di colonna, la terza riga contiene i dati della categoria di prodotto (`[Sum(Net_ QTY)]` e `[Sum(Net_Sales)]`) e la quarta riga contiene i totali.  
   
 2.  Scegliere **Avanti**.  
   
@@ -685,7 +685,7 @@ ms.locfileid: "48093821"
   
 1.  Nell'area di progettazione fare clic su **Fare clic per aggiungere il titolo**.  
   
-2.  Digitare **2009 Product Category Sales: Categoria Online e Rivenditore**.  
+2.  Tipo **2009 Product Category Sales: Online e rivenditore categoria:**.  
   
 3.  Selezionare il testo digitato.  
   

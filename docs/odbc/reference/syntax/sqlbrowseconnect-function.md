@@ -20,16 +20,16 @@ ms.assetid: b7f1be66-e6c7-4790-88ec-62b7662103c0
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d86f2aa373b120d2ecf1ea47b021b327fc57dc21
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fe1b9c7d3d93604e2f19de754ff25517ef23cb07
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47651969"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53211711"
 ---
 # <a name="sqlbrowseconnect-function"></a>Funzione SQLBrowseConnect
 **Conformità**  
- Versione introdotta: Conformità agli standard 1.0 di ODBC: ODBC  
+ Versione introdotta: Conformità agli standard 1.0 ODBC: ODBC  
   
  **Riepilogo**  
  **SQLBrowseConnect** supporta un metodo iterativo di individuazione e l'enumerazione di attributi e valori di attributo necessari per connettersi a un'origine dati. Ogni chiamata a **SQLBrowseConnect** restituisce livelli successivi di attributi e valori di attributo. Quando sono stati enumerati tutti i livelli, una connessione all'origine dati è stata completata e viene restituita una stringa di connessione completa da **SQLBrowseConnect**. Un codice restituito di SQL_SUCCESS_WITH_INFO o SQL_SUCCESS indica che sono state specificate tutte le informazioni di connessione e l'applicazione è ora connesso all'origine dati.  
@@ -74,7 +74,7 @@ SQLRETURN SQLBrowseConnect(
 ## <a name="diagnostics"></a>Diagnostica  
  Quando **SQLBrowseConnect** restituisce SQL_ERROR, SQL_SUCCESS_WITH_INFO o SQL_NEED_DATA, un valore SQLSTATE associato possono essere ottenuti chiamando **SQLGetDiagRec** con un *HandleType* SQL_HANDLE_STMT e una *Handle di ConnectionHandle*. Nella tabella seguente sono elencati i valori SQLSTATE comunemente restituiti da **SQLBrowseConnect** e illustra ognuna nel contesto di questa funzione; la notazione "(DM)" precede le descrizioni di SQLSTATE restituiti da Gestione Driver. Il codice restituito a ogni valore SQLSTATE è SQL_ERROR, se non specificato diversamente.  
   
-|SQLSTATE|Errore|Description|  
+|SQLSTATE|Errore|Descrizione|  
 |--------------|-----------|-----------------|  
 |01000|Avviso generale|Messaggio informativo specifico del driver. (Funzione restituisce SQL_SUCCESS_WITH_INFO).|  
 |01004|Stringa troncati di dati a destra|Il buffer \* *OutConnectionString* non sia abbastanza grande per restituire la stringa di connessione del risultato intero Sfoglia, pertanto la stringa è stata troncata. Il buffer **StringLength2Ptr* contiene la lunghezza della stringa di connessione di risultato non troncato Sfoglia. (Funzione restituisce SQL_NEED_DATA).|  

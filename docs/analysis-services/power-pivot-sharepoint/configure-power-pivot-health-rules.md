@@ -1,5 +1,5 @@
 ---
-title: Configurare le regole di integrità di Power Pivot | Documenti Microsoft
+title: Configurare le regole di integrità di Power Pivot | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: befe9b69e50ee6b57caef8275dce81139b977d42
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: aae3b89c52f5d1d8524681a3a4fd2eda9ab73907
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34027158"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52398064"
 ---
 # <a name="configure-power-pivot-health-rules"></a>Configurare le regole di integrità di Power Pivot
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -28,10 +28,10 @@ ms.locfileid: "34027158"
 |-|  
 |**[!INCLUDE[applies](../../includes/applies-md.md)]** SharePoint 2013 &#124; SharePoint 2010|  
   
- **Nota:** le impostazioni delle regole di integrità vengono configurate separatamente per l'istanza di SQL Server Analysis Services e l'applicazione del servizio [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]. Utilizzare le istruzioni riportate in questo argomento per configurare le regole di integrità per ogni servizio. Per una distribuzione di SharePoint 2013, in [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] viene utilizzata solo l'applicazione di servizio. Pertanto con [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] vengono installati differenti set di regole di integrità per versioni diverse di SharePoint. Vedere la colonna della versione nell'argomento [Guida di riferimento alle regole dell'integrità &#40;PowerPivot per SharePoint&#41;](../../analysis-services/power-pivot-sharepoint/health-rules-reference-power-pivot-for-sharepoint.md) oppure è possibile eseguire il comando seguente di Windows PowerShell per visualizzare le regole installate.  
+ **Nota:** Impostazioni delle regole di integrità vengono configurate separatamente per l'istanza di SQL Server Analysis Services e il [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] applicazione del servizio. Utilizzare le istruzioni riportate in questo argomento per configurare le regole di integrità per ogni servizio. Per una distribuzione di SharePoint 2013, in [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] viene utilizzata solo l'applicazione di servizio. Pertanto con [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] vengono installati differenti set di regole di integrità per versioni diverse di SharePoint. Vedere la colonna "version" nell'argomento [riferimento delle regole di integrità &#40;Power Pivot per SharePoint&#41;](../../analysis-services/power-pivot-sharepoint/health-rules-reference-power-pivot-for-sharepoint.md), oppure è possibile eseguire il comando di Windows PowerShell seguente per visualizzare le regole installate.  
   
 ```  
-Get-SPHealthAnalysisRule | select name, enabled, summary | where {$_.summary -like “*power*”}  | format-table -property * -autosize | out-default  
+Get-SPHealthAnalysisRule | select name, enabled, summary | where {$_.summary -like "*power*"}  | format-table -property * -autosize | out-default  
 ```  
   
  **Contenuto dell'argomento:**  
@@ -64,7 +64,7 @@ Get-SPHealthAnalysisRule | select name, enabled, summary | where {$_.summary -li
   
 2.  Nella parte superiore della pagina selezionare il server nella farm di SharePoint con un'istanza di Analysis Services (nell'illustrazione seguente il nome del server è AW-SRV033). Nell'elenco dei servizi verrà visualizzato**SQL Server Analysis Services** .  
   
-     ![Schermata di gestire pagina servizi nel Server](../../analysis-services/power-pivot-sharepoint/media/ssas-centraladmin-servicesonserver.gif "schermata di gestire pagina servizi nel Server")  
+     ![Screenshot di Gestisci pagina servizi nel Server](../../analysis-services/power-pivot-sharepoint/media/ssas-centraladmin-servicesonserver.gif "Screenshot di Gestisci pagina servizi nel Server")  
   
 3.  Scegliere **SQL Server Analysis Services**.  
   
@@ -73,27 +73,27 @@ Get-SPHealthAnalysisRule | select name, enabled, summary | where {$_.summary -li
      Allocazione di risorse di CPU insufficiente (l'impostazione predefinita è 80%)  
      Questa regola di analisi dell'integrità viene attivata se le risorse CPU utilizzate dal processo del server Analysis Services (msmdsrv.exe) rimangono su un valore uguale o superiore all'80% nell'arco di 4 ore (come specificato dall'impostazione Intervallo raccolta dati).  
   
-     Questa impostazione di configurazione corrisponde alla definizione della regola seguente nella pagina **Controlla problemi e soluzioni** : **[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]: Analysis Services non ha risorse di CPU sufficienti per eseguire le operazioni richieste.**  
+     Questa impostazione di configurazione corrisponde alla definizione della regola seguente nella **Controlla problemi e soluzioni** pagina:  **[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]: Analysis Services non dispone di risorse di CPU sufficienti per eseguire le operazioni richieste.**  
   
      Risorse di CPU insufficienti nel sistema (l'impostazione predefinita è 90%)  
      Questa regola di analisi dell'integrità viene attivata se le risorse di CPU per il server rimangono su un valore uguale o superiore al 90% nell'arco di 4 ore (come specificato dall'impostazione Intervallo raccolta dati). L'utilizzo della CPU complessivo è misurato come parte dell'algoritmo di bilanciamento del carico basato sull'integrità che monitora l'utilizzo della CPU come misura dell'integrità del server.  
   
-     Questa impostazione di configurazione corrisponde alla definizione della regola seguente nella pagina **Controlla problemi e soluzioni** : **[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]: utilizzo complessivo della CPU troppo elevato.**  
+     Questa impostazione di configurazione corrisponde alla definizione della regola seguente nella **Controlla problemi e soluzioni** pagina:  **[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]: Utilizzo della CPU complessivo è troppo alto.**  
   
      Soglia di memoria insufficiente (l'impostazione predefinita è 5%)  
      Un'istanza di SQL Server Analysis Services in un server applicazioni SharePoint deve disporre sempre di una piccola quantità di memoria di riserva inutilizzata. Poiché il server è associato alla memoria per la maggior parte delle operazioni, funziona meglio se non viene eseguito fino al limite massimo. Il 5% di memoria inutilizzata viene calcolato come percentuale della memoria allocata ad Analysis Services. Se, ad esempio, si dispone di 200 GB di memoria totale e per Analysis Services ne viene allocato l'80% (o 160 GB), il 5% di memoria inutilizzata corrisponde al 5% di 160 GB (o 8 GB).  
   
-     Questa impostazione di configurazione corrisponde alla definizione della regola seguente nella pagina **Controlla problemi e soluzioni** : **[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]: Analysis Services non ha memoria sufficiente per eseguire le operazioni richieste.**  
+     Questa impostazione di configurazione corrisponde alla definizione della regola seguente nella **Controlla problemi e soluzioni** pagina:  **[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]: Analysis Services non ha memoria sufficiente per eseguire le operazioni richieste.**  
   
      Numero massimo di connessioni (l'impostazione predefinita è 100)  
      Questa regola di analisi dell'integrità viene attivata se il numero di connessioni all'istanza di Analysis Services rimane su un valore uguale o superiore a 100 nell'arco di 4 ore (come specificato dall'impostazione Intervallo raccolta dati). Questo valore predefinito è arbitrario (non è basato sulle specifiche hardware del server o sull'attività utente), pertanto è possibile aumentare o diminuire il valore a seconda della capacità del server e dell'attività utente nell'ambiente.  
   
-     Questa impostazione di configurazione corrisponde alla definizione della regola seguente nella pagina **Controlla problemi e soluzioni** : **[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]: l'elevato numero di connessioni indica che è necessario distribuire un maggior numero di server per gestire il carico corrente.**  
+     Questa impostazione di configurazione corrisponde alla definizione della regola seguente nella **Controlla problemi e soluzioni** pagina:  **[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]: L'elevato numero di connessioni indica che devono essere distribuiti più server per gestire il carico corrente.**  
   
      Spazio su disco insufficiente (l'impostazione predefinita è 5%)  
      Lo spazio su disco è usato per memorizzare nella cache i dati di [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] ogni volta che viene richiesto un database. Questa regola consente di sapere quando lo spazio su disco è insufficiente. Per impostazione predefinita, questa regola di integrità viene attivata quando lo spazio su disco è minore del 5% sull'unità disco in cui si trova la cartella di backup. Per altre informazioni sull'uso del disco, vedere [Configurare l'uso di spazio su disco &#40;PowerPivot per SharePoint&#41;](../../analysis-services/power-pivot-sharepoint/configure-disk-space-usage-power-pivot-for-sharepoint.md).  
   
-     Questa impostazione di configurazione corrisponde alla definizione della regola seguente nella pagina **Controlla problemi e soluzioni** : **[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]: spazio su disco insufficiente sull'unità in cui sono memorizzati nella cache i dati [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] .**  
+     Questa impostazione di configurazione corrisponde alla definizione della regola seguente nella **Controlla problemi e soluzioni** pagina:  **[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]: Spazio su disco insufficiente sull'unità in cui [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] viene memorizzato nella cache dei dati.**  
   
      Intervallo di raccolta dati (in ore)  
      È possibile specificare il periodo di raccolta dei dati utilizzato per calcolare i numeri utilizzati per l'attivazione delle regole di analisi dell'integrità. Benché il sistema sia monitorato costantemente, le soglie utilizzate per attivare gli avvisi delle regole di analisi dell'integrità vengono calcolate utilizzando dati generati in un intervallo predefinito. L'intervallo predefinito è di 4 ore. Il server recupera dati di sistema e di utilizzo raccolti nelle 4 ore precedenti per valutare il numero di connessioni utente, l'utilizzo dello spazio su disco e i tassi di utilizzo della CPU e della memoria.  
@@ -104,18 +104,18 @@ Get-SPHealthAnalysisRule | select name, enabled, summary | where {$_.summary -li
   
 2.  Nella pagina Applicazioni di servizio fare clic su **Applicazione di servizio [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] predefinita**.  
   
-     ![Pagina di schermata della gestione delle applicazioni](../../analysis-services/power-pivot-sharepoint/media/ssas-centraladmin-app.gif "pagina schermata di gestione delle applicazioni")  
+     ![Pagina screenshot di gestione delle applicazioni](../../analysis-services/power-pivot-sharepoint/media/ssas-centraladmin-app.gif "pagina Screenshot di gestione delle applicazioni")  
   
 3.  Viene visualizzato il dashboard di gestione [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] . Nell'elenco **Azioni** fare clic su **Configura impostazioni dell'applicazione di servizio** per aprire la pagina delle impostazioni dell'applicazione del servizio.  
   
-     ![Schermata di dashboard, lo stato attivo sull'elenco azioni](../../analysis-services/power-pivot-sharepoint/media/ssas-centraladmin-actionslist.gif "schermata del dashboard, lo stato attivo sull'elenco azioni")  
+     ![Screenshot del dashboard, concentrarsi sull'elenco azioni](../../analysis-services/power-pivot-sharepoint/media/ssas-centraladmin-actionslist.gif "Screenshot del dashboard, concentrarsi sull'elenco azioni")  
   
 4.  Nelle impostazioni delle regole di integrità modificare le impostazioni seguenti:  
   
      Rapporto tra carico e connessione (l'impostazione predefinita è 20%)  
      Questa regola di integrità viene attivata se il numero di eventi di caricamento è elevato rispetto al numero di eventi di connessione, segnalando che lo scaricamento dei database potrebbe essere eseguito troppo rapidamente da parte del server o che le impostazioni di riduzione della cache sono troppo rigide.  
   
-     Questa impostazione di configurazione corrisponde alla definizione della regola seguente nella pagina **Controlla problemi e soluzioni** : **[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]: rapporto eventi di caricamento/connessioni troppo elevato.**  
+     Questa impostazione di configurazione corrisponde alla definizione della regola seguente nella **Controlla problemi e soluzioni** pagina:  **[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]: Il rapporto tra eventi di caricamento e connessioni è troppo alto.**  
   
      Intervallo di raccolta dati (l'impostazione predefinita è 4 ore)  
      È possibile specificare il periodo di raccolta dei dati utilizzato per calcolare i numeri utilizzati per l'attivazione delle regole di analisi dell'integrità. Benché il sistema sia monitorato costantemente, le soglie utilizzate per attivare gli avvisi delle regole di analisi dell'integrità vengono calcolate utilizzando dati generati in un intervallo predefinito. L'intervallo predefinito è di 4 ore. Il server recupera dati di sistema e di utilizzo raccolti nelle 4 ore precedenti per valutare il rapporto tra carico e connessione.  
@@ -125,7 +125,7 @@ Get-SPHealthAnalysisRule | select name, enabled, summary | where {$_.summary -li
   
      Per altre informazioni sulla raccolta dei dati di utilizzo, vedere [Configurare la raccolta dati di utilizzo per PowerPivot per SharePoint](../../analysis-services/power-pivot-sharepoint/configure-usage-data-collection-for-power-pivot-for-sharepoint.md).  
   
-     Questa impostazione di configurazione corrisponde alla definizione della regola seguente nella pagina **Controlla problemi e soluzioni**: **[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]: dati di utilizzo non aggiornati con la frequenza prevista.**  
+     Questa impostazione di configurazione corrisponde alla definizione della regola seguente nella **Controlla problemi e soluzioni** pagina:  **[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]: I dati di utilizzo non aggiornati con la frequenza prevista.**  
   
 ## <a name="see-also"></a>Vedere anche  
  [Configurare l'uso di spazio su disco &#40;PowerPivot per SharePoint&#41;](../../analysis-services/power-pivot-sharepoint/configure-disk-space-usage-power-pivot-for-sharepoint.md)   

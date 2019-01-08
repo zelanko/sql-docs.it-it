@@ -13,12 +13,12 @@ ms.assetid: 6c3d2b96-6646-42ef-b219-fea2e0cd3459
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c2652dd6ababc37a3883eef0cf385914a880ebdd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c7776ed3550d5bfa8caec4c017c46946e31845af
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48157631"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52519094"
 ---
 # <a name="what39s-included-in-the-data-mining-add-ins-for-office"></a>Cosa&#39;incluso nei dati di componenti aggiuntivi Data Mining per Office
   Se durante l'installazione dei componenti aggiuntivi Data mining per Office 2013 si selezionano tutte le opzioni di installazione, verranno aggiunti i modelli e le barre degli strumenti seguenti:  
@@ -31,7 +31,7 @@ ms.locfileid: "48157631"
   
 -   [Client di Data Mining per Excel &#40;componenti aggiuntivi Data Mining di dati SQL Server&#41;](data-mining-client-for-excel-sql-server-data-mining-add-ins.md)  
   
-     Questo componente aggiuntivo fornisce gli strumenti per tutte le attività di data mining eventualmente necessarie, ad esempio la pulizia e il campionamento dei dati, l'esecuzione della compilazione dei modelli, il testing dell'accuratezza del modello e della convalida incrociata. È inoltre possibile gestire e documentare i modelli e compilare query DMX dai modelli.  
+     Questo componente aggiuntivo fornisce strumenti per quasi tutte le attività di data mining che potrebbe essere necessario - pulizia e il campionamento dei dati, all'esecuzione dei modelli predefiniti, il test di accuratezza del modello e convalida incrociata. È inoltre possibile gestire e documentare i modelli e compilare query DMX dai modelli.  
   
      I data miner più esperti apprezzeranno la possibilità di accedere a tutti gli strumenti disponibili in SQL Server Data Mining, inclusi l'importazione e l'esportazione di modelli, query di stima e query sul contenuto.  
   

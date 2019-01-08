@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: 0952390e21d174d4d10e99f53904de4d11be6230
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 595add5d077136c4093776fae8e3a2f7ab04bb26
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47637471"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52396174"
 ---
 # <a name="configure-multiple-subnet-always-on-availability-groups-and-failover-cluster-instances"></a>Configurare più subnet gruppi di disponibilità AlwaysOn e le istanze cluster di failover
 
@@ -24,7 +24,7 @@ Quando un'istanza del cluster sempre nel gruppo di disponibilità (AG) o il fail
 
 ## <a name="vlan-based-solution"></a>Soluzione basata su VLAN
  
-**Prerequisiti**: basata su VLAN per una soluzione, ogni server che fanno parte di un gruppo di disponibilità o FCI necessita di due schede di rete (NIC) per la disponibilità appropriata (una scheda NIC porta doppia sarebbe un singolo punto di guasto in un server fisico), in modo che gli indirizzi IP può essere assegnato in una subnet native, nonché uno nella VLAN. Si tratta di oltre a eventuali altre esigenze di rete, ad esempio iSCSI, che deve inoltre la propria rete.
+**Prerequisiti**: Per una soluzione basata su VLAN, ogni server che fanno parte di un gruppo di disponibilità o FCI necessita di due schede di rete (NIC) per la disponibilità appropriata (una scheda NIC porta doppia sarebbe un singolo punto di guasto in un server fisico), in modo che può essere assegnato gli indirizzi IP nella propria subnet native, nonché uno nella VLAN. Si tratta di oltre a eventuali altre esigenze di rete, ad esempio iSCSI, che deve inoltre la propria rete.
 
 La creazione di indirizzi IP per il gruppo di disponibilità o FCI avviene nella VLAN. Nell'esempio seguente, la VLAN dispone di una subnet di 192.168.3. *x*, pertanto l'indirizzo IP creato per il gruppo di disponibilità o FCI è 192.168.3.104. Aggiungere alcuna azione deve essere configurata, poiché è presente un singolo indirizzo IP assegnato al gruppo di disponibilità o FCI.
 

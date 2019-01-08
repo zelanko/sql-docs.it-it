@@ -1,5 +1,5 @@
 ---
-title: 'Analysis Services tutorial-lezione 11: creare ruoli | Microsoft Docs'
+title: 'Analysis Services tutorial-lezione 11: Creare ruoli | Microsoft Docs'
 ms.date: 08/27/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,37 +9,37 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfiles"
-ms.openlocfilehash: 90742e38b3948a0fc64df4908d6a0daadf0793e9
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: ee28eb36fcd9e14210bc2a1411460100156f4a2f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43076972"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52544347"
 ---
 # <a name="create-roles"></a>Creazione di ruoli
 
 [!INCLUDE[ssas-appliesto-sql2017-later-aas](../../includes/ssas-appliesto-sql2017-later-aas.md)]
 
-In questa lezione verranno creati ruoli. I ruoli forniscono protezione dati e oggetti del database modello, limitando l'accesso solo agli utenti che sono membri del ruolo. Ogni ruolo è definito con una singola autorizzazione, di lettura, lettura ed elaborazione, elaborazione o amministratore oppure nessuna autorizzazione. I ruoli possono essere definiti durante la creazione di modelli tramite Gestione ruoli. Dopo aver distribuito un modello, è possibile gestire ruoli tramite SQL Server Management Studio (SSMS). Per altre informazioni, vedere [ruoli](../tabular-models/roles-ssas-tabular.md).
+In questa lezione verranno creati ruoli. I ruoli forniscono protezione dati e oggetti del database modello, limitando l'accesso solo agli utenti che sono membri del ruolo. Ogni ruolo è definito con una singola autorizzazione: Nessuna, lettura, lettura ed elaborare, processo o amministratore. I ruoli possono essere definiti durante la creazione di modelli tramite Gestione ruoli. Dopo aver distribuito un modello, è possibile gestire ruoli tramite SQL Server Management Studio (SSMS). Per altre informazioni, vedere [Modello](../tabular-models/roles-ssas-tabular.md).
   
 > [!NOTE]  
 > La creazione di ruoli non è necessaria per completare questa esercitazione. Per impostazione predefinita, l'account che è stato effettuato con privilegi di amministratore per il modello. Per altri utenti nell'organizzazione esplorare utilizzando uno strumento client, tuttavia, è necessario creare almeno un ruolo con autorizzazioni lettura e aggiungere tali utenti come membri.  
   
 Vengono creati tre ruoli:  
   
--   **Responsabile vendite** : questo ruolo può includere gli utenti dell'organizzazione per il quale si desidera disporre dell'autorizzazione lettura per tutti i dati e oggetti modello.  
+-   **Responsabile vendite** -questo ruolo può includere gli utenti dell'organizzazione per il quale si desidera disporre dell'autorizzazione lettura per tutti i dati e oggetti modello.  
   
--   **Sales Analyst US** : questo ruolo può includere gli utenti dell'organizzazione per il quale si desidera solo essere in grado di esplorare i dati relativi alle vendite negli Stati Uniti. Per questo ruolo, utilizzare una formula DAX per definire un *filtro di riga*, che consente ai membri di esplorare i dati solo per gli Stati Uniti.  
+-   **Sales Analyst US** -questo ruolo può includere gli utenti dell'organizzazione per il quale si desidera solo essere in grado di esplorare i dati relativi alle vendite negli Stati Uniti. Per questo ruolo, utilizzare una formula DAX per definire un *filtro di riga*, che consente ai membri di esplorare i dati solo per gli Stati Uniti.  
   
--   **Amministratore** : questo ruolo può includere gli utenti per cui si desidera avere autorizzazioni di amministratore, che garantisce accesso illimitato e autorizzazioni per eseguire attività amministrative sul database modello.  
+-   **Amministratore** -questo ruolo può includere gli utenti per cui si desidera avere autorizzazioni di amministratore, che garantisce accesso illimitato e autorizzazioni per eseguire attività amministrative sul database modello.  
   
-Poiché gli account di gruppo e utente di Windows nell'organizzazione sono univoci, è possibile aggiungere account dell'organizzazione specifica ai membri. Tuttavia, per questa esercitazione, è anche possibile lasciare i membri vuoti. Testare l'effetto di ogni ruolo in un secondo momento nella lezione 12: analizzare in Excel.  
+Poiché gli account di gruppo e utente di Windows nell'organizzazione sono univoci, è possibile aggiungere account dell'organizzazione specifica ai membri. Tuttavia, per questa esercitazione, è anche possibile lasciare i membri vuoti. Testare l'effetto di ogni ruolo in un secondo momento nella lezione 12: Analizza in Excel.  
   
 Tempo stimato per il completamento della lezione: **15 minuti**  
   
 ## <a name="prerequisites"></a>Prerequisiti  
 
-Questo articolo fa parte di un'esercitazione di modellazione tabulare, che deve essere completata nell'ordine. Prima di eseguire le attività in questa lezione, è necessario avere completato la lezione precedente: [lezione 10: creare partizioni](../tutorial-tabular-1400/as-lesson-10-create-partitions.md).  
+Questo articolo fa parte di un'esercitazione di modellazione tabulare, che deve essere completata nell'ordine. Prima di eseguire le attività in questa lezione, è necessario avere completato la lezione precedente: [Lezione 10: Creare partizioni](../tutorial-tabular-1400/as-lesson-10-create-partitions.md).  
   
 ## <a name="create-roles"></a>Creazione di ruoli  
   
@@ -55,7 +55,7 @@ Questo articolo fa parte di un'esercitazione di modellazione tabulare, che deve 
 
     ![as-lesson11-new-role](../tutorial-tabular-1400/media/as-lesson11-new-role.png) 
   
-5.  Facoltativo: Fare clic il **membri** scheda e quindi fare clic su **Add**. Nella finestra di dialogo **Selezione utenti o gruppi** immettere i gruppi o gli utenti di Windows dell'organizzazione che si desidera includere nel ruolo.  
+5.  Facoltativo: Scegliere il **membri** scheda e quindi fare clic su **Add**. Nella finestra di dialogo **Selezione utenti o gruppi** immettere i gruppi o gli utenti di Windows dell'organizzazione che si desidera includere nel ruolo.  
   
 #### <a name="to-create-a-sales-analyst-us-user-role"></a>Per creare un ruolo utente Sales Analyst US  
   
@@ -74,7 +74,7 @@ Questo articolo fa parte di un'esercitazione di modellazione tabulare, che deve 
     Una formula di filtro di riga deve essere risolta in un valore booleano (TRUE/FALSE). Con questa formula, si specifica che solo le righe con il valore di Country Region Code "US" sono visibili all'utente.  
     ![as-lesson11-role-filter](../tutorial-tabular-1400/media/as-lesson11-role-filter.png) 
   
-6.  Facoltativo: Fare clic il **membri** scheda e quindi fare clic su **Add**. Nella finestra di dialogo **Selezione utenti o gruppi** immettere i gruppi o gli utenti di Windows dell'organizzazione che si desidera includere nel ruolo.  
+6.  Facoltativo: Scegliere il **membri** scheda e quindi fare clic su **Add**. Nella finestra di dialogo **Selezione utenti o gruppi** immettere i gruppi o gli utenti di Windows dell'organizzazione che si desidera includere nel ruolo.  
   
 #### <a name="to-create-an-administrator-user-role"></a>Per creare un ruolo utente amministratore  
   
@@ -84,12 +84,12 @@ Questo articolo fa parte di un'esercitazione di modellazione tabulare, che deve 
   
 3.  Assegnare a questo ruolo **amministratore** l'autorizzazione.  
   
-4.  Facoltativo: Fare clic il **membri** scheda e quindi fare clic su **Add**. Nella finestra di dialogo **Selezione utenti o gruppi** immettere i gruppi o gli utenti di Windows dell'organizzazione che si desidera includere nel ruolo. 
+4.  Facoltativo: Scegliere il **membri** scheda e quindi fare clic su **Add**. Nella finestra di dialogo **Selezione utenti o gruppi** immettere i gruppi o gli utenti di Windows dell'organizzazione che si desidera includere nel ruolo. 
   
   
 ## <a name="whats-next"></a>Quali sono le operazioni successive?
 
-[Lezione 12: Analizzare in Excel](../tutorial-tabular-1400/as-lesson-12-analyze-in-excel.md).
+[Lezione 12: Analizza in Excel](../tutorial-tabular-1400/as-lesson-12-analyze-in-excel.md).
 
   
   

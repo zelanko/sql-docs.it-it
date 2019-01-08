@@ -15,12 +15,12 @@ ms.assetid: ac358399-10f8-4238-be32-a914a2e49048
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: dbd89984e64ac3ca37c3ac9ec31e19191606dc9d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 960a435500f243598f9db078644950d38d7869f2
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48217571"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53351948"
 ---
 # <a name="mining-model-content-for-decision-tree-models-analysis-services---data-mining"></a>Mining Model Content for Decision Tree Models (Analysis Services - Data Mining)
   In questo argomento viene descritto il contenuto dei modelli di data mining specifico dei modelli che utilizzano l'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees. Per una spiegazione del modello di data mining applicabile a tutti i tipi di modello, vedere [Mining Model Content &#40;Analysis Services - Data Mining&#41;](mining-model-content-analysis-services-data-mining.md). È importante ricordare che l'algoritmo Microsoft Decision Trees è un algoritmo ibrido che consente di creare modelli con funzioni molto diverse: un albero delle decisioni può rappresentare associazioni, regole o persino regressione lineare. La struttura dell'albero è sostanzialmente la stessa, ma la modalità di interpretazione delle informazioni dipenderà dallo scopo per il quale è stato creato il modello.  
@@ -73,7 +73,7 @@ ms.locfileid: "48217571"
  NODE_TYPE  
  Nei modelli di albero delle decisioni, vengono creati i tipi di nodi seguenti:  
   
-|Tipo di nodo|Description|  
+|Tipo di nodo|Descrizione|  
 |---------------|-----------------|  
 |1 (Model)|Nodo radice per il modello.|  
 |2 (Albero)|Nodo padre per alberi di classificazione del modello. Denominato **"Tutti"**.|  
@@ -199,7 +199,7 @@ ms.locfileid: "48217571"
  L'attributo rappresentato dal frammento XML può essere semplice o complesso. Un attributo semplice contiene il nome della colonna del modello e il valore dell'attributo. Se la colonna del modello contiene una tabella nidificata, l'attributo di tale tabella è rappresentato come una concatenazione del nome della tabella, del valore della chiave e dell'attributo.  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] supporta la versione 2.0 dello standard PMML, con le estensioni per supportare l'utilizzo della tabella nidificata. Se i dati contengono tabelle nidificate e viene generata una versione PMML del modello, tutti gli elementi del modello che includono i predicati sono contrassegnati come un'estensione.  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] supporta la versione 2.0 dello standard PMML, con le estensioni per supportare l'uso della tabella annidata. Se i dati contengono tabelle nidificate e viene generata una versione PMML del modello, tutti gli elementi del modello che includono i predicati sono contrassegnati come un'estensione.  
   
 ###  <a name="bkmk_NodeDist_Discrete"></a> Distribuzione del nodo per attributi discreti  
  In un modello di albero delle decisioni la tabella NODE_DISTRIBUTION contiene statistiche utili. Tuttavia, il tipo di statistiche varia a seconda che nell'albero venga stimato un attributo discreto o continuo. In questa sezione viene descritto il significato delle statistiche di distribuzione del nodo per attributi discreti.  
@@ -246,7 +246,7 @@ ms.locfileid: "48217571"
   
  Tra i tipi presenti nell'enumerazione <xref:Microsoft.AnalysisServices.AdomdClient.MiningValueType> , quelli riportati di seguito vengono usati negli alberi di classificazione.  
   
-|Tipo valore|Description|  
+|Tipo valore|Descrizione|  
 |----------------|-----------------|  
 |1 (Mancante)|Indica un conteggio, una probabilità o un'altra statistica correlata ai valori mancanti.|  
 |4 (discreto)|Indica un conteggio, una probabilità o un'altra statistica correlata a un valore discreto o discretizzato.|  
@@ -262,7 +262,7 @@ ms.locfileid: "48217571"
   
  Per tutti gli altri nodi dell'albero, ad eccezione dei nodi foglia, il punteggio di ogni nodo rappresenta il miglior punteggio di divisione per il nodo corrente, meno il punteggio di divisione per il nodo padre. In genere, il punteggio di divisione per un nodo padre sarà sempre migliore del punteggio di divisione in tutti i relativi nodi figlio. Ciò è dovuto al fatto che un modello di albero delle decisioni generalmente esegue la suddivisione prima sugli attributi più importanti.  
   
- Sono disponibili numerosi modi per calcolare un punteggio per una divisione, a seconda del parametro dell'algoritmo scelto. La spiegazione delle modalità di calcolo dei punteggi per ognuno dei metodi di punteggio esula dall'ambito di questo argomento. Per ulteriori informazioni, vedere[Learning Bayesian Networks:](http://go.microsoft.com/fwlink/?LinkId=45963)nel sito Web [!INCLUDE[msCoName](../../includes/msconame-md.md)] Research.  
+ Sono disponibili numerosi modi per calcolare un punteggio per una divisione, a seconda del parametro dell'algoritmo scelto. La spiegazione delle modalità di calcolo dei punteggi per ognuno dei metodi di punteggio esula dall'ambito di questo argomento. Per altre informazioni, vedere "[Learning Bayesian Networks: La combinazione di conoscenza e dati statistici](https://go.microsoft.com/fwlink/?LinkId=45963)"via di [!INCLUDE[msCoName](../../includes/msconame-md.md)] sito Web della ricerca.  
   
 > [!NOTE]  
 >  Se si crea un modello di albero delle decisioni che include attributi stimabili continui e discreti, verranno visualizzati punteggi completamente diversi nei nodi (Tutti) che rappresentano ogni tipo di albero. Ogni modello deve essere considerato in modo indipendente e i metodi utilizzati per il calcolo del punteggio di regressione sono completamente diversi da quelli utilizzati per il calcolo del punteggio di classificazione. Non è possibile confrontare i valori del punteggio del nodo.  
@@ -283,9 +283,9 @@ ms.locfileid: "48217571"
  Per altre informazioni sui nodi di regressione, vedere [Contenuto dei modelli di data mining per i modelli di regressione lineare &#40;Analysis Services - Data mining&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Contenuto dei modelli di data mining &#40;Analysis Services - Data Mining&#41;](mining-model-content-analysis-services-data-mining.md)   
- [Visualizzatori modello di Data Mining](data-mining-model-viewers.md)   
- [Query di Data Mining](data-mining-queries.md)   
+ [Contenuto dei modelli di data mining &#40;Analysis Services - Data mining&#41;](mining-model-content-analysis-services-data-mining.md)   
+ [Visualizzatori modello di data mining](data-mining-model-viewers.md)   
+ [Query di data mining](data-mining-queries.md)   
  [Algoritmo Microsoft Decision Trees](microsoft-decision-trees-algorithm.md)  
   
   

@@ -14,17 +14,17 @@ ms.assetid: 16c9376b-5fbb-4495-a429-06a2493849c9
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 9388ade07b8593ec06289141df0f013351f3f7f1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: abe169a69cd8c247ba74a24b8e80c3202fa2d5f5
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48217941"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52511306"
 ---
 # <a name="full-text-search-upgrade-options"></a>Opzioni di aggiornamento della ricerca full-text
   Utilizzare la pagina Opzioni di aggiornamento della ricerca full-text dell'Installazione guidata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per selezionare l'opzione di aggiornamento della ricerca full-text da utilizzare per l'aggiornamento dei database.  
   
- In [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ogni indice full-text risiede in un catalogo full-text che appartiene a un filegroup, dispone di un percorso fisico e viene considerato un file di database. Ora, un catalogo full-text è un concetto logico, ossia un oggetto virtuale, che fa riferimento a un gruppo di indici full-text. Pertanto, un nuovo catalogo full-text non viene considerato un file di database con un percorso fisico. Tuttavia, durante l'aggiornamento di un catalogo full-text contenente file di dati viene creato un nuovo filegroup nello stesso disco mantenendo in questo modo il vecchio comportamento I/O su disco dopo l'aggiornamento. Tutti gli indici full-text di quel catalogo vengono posizionati nel nuovo filegroup se esiste il percorso radice. Se il vecchio percorso del catalogo full-text non è valido, l'indice full-text rimane nello stesso filegroup della tabella di base o nel filegroup primario nel caso di una tabella partizionata.  
+ In [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ogni indice full-text risiede in un catalogo full-text che appartiene a un filegroup, dispone di un percorso fisico e viene considerato un file di database. A questo punto, un catalogo full-text è un concetto-a virtuale oggetto logico, che fa riferimento a un gruppo di indici full-text. Pertanto, un nuovo catalogo full-text non viene considerato un file di database con un percorso fisico. Tuttavia, durante l'aggiornamento di un catalogo full-text contenente file di dati viene creato un nuovo filegroup nello stesso disco mantenendo in questo modo il vecchio comportamento I/O su disco dopo l'aggiornamento. Tutti gli indici full-text di quel catalogo vengono posizionati nel nuovo filegroup se esiste il percorso radice. Se il vecchio percorso del catalogo full-text non è valido, l'indice full-text rimane nello stesso filegroup della tabella di base o nel filegroup primario nel caso di una tabella partizionata.  
   
 ## <a name="options"></a>Opzioni  
  Quando si esegue l'aggiornamento a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], scegliere una delle opzioni di aggiornamento full-text seguenti.  

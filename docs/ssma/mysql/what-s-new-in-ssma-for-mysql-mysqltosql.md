@@ -10,12 +10,12 @@ ms.assetid: 1451a0b0-6713-4d0c-954f-ea3d8fce1d31
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: d5b17e7b054552c96c6fb3ff861c22b4e87e394f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b927d9116424f1b471dc675189548e3c6a459569
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47674829"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52531762"
 ---
 # <a name="whats-new-in-ssma-for-mysql-mysqltosql"></a>Novità di SSMA per MySQL (MySQLToSql)
 Questo articolo elenca SSMA per MySQL modifiche in ogni versione. 
@@ -189,7 +189,7 @@ La versione di luglio 2010 di SSMA per MySQL contiene le funzionalità seguenti:
   
 4.  **Miglioramenti per la conversione dell'oggetto:**  
   
-    -   Conversione di oggetti della Metabase di MySQL, procedure, funzioni, viste, trigger e le istruzioni.  
+    -   Conversione di oggetti della MySQL Metabase - procedure, funzioni, viste, trigger e le istruzioni.  
     -   Supporto limitato per i tipi di dati spaziali in tabelle.  
     -   Opzione per convertire le funzioni di MySQL in Stored procedure di SQL Server  
     -   Opzione per applicare il mapping di modalità SQL e set di caratteri durante la conversione degli oggetti  
@@ -210,4 +210,4 @@ La versione di gennaio 2010 di SSMA per MySQL è la versione iniziale. Contiene 
   
 -   Aggiunta del supporto per la migrazione sia on-premises SQL Server e SQL di Azure.  
   
--   **Funzionalità Snapshot:** migrazione di schemi e dati di tabelle/indici o vincoli di MySQL.
+-   **Funzionalità Snapshot:** Migrazione dello schema e dati di tabelle/indici o vincoli di MySQL.

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: ''
 ms.topic: reference
 helpviewer_keywords:
 - extended stored procedures [SQL Server], programming
@@ -18,12 +16,12 @@ ms.assetid: 158a6765-0542-4e84-b5ab-f173d946ef5e
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 94be87d9dc0725961200af983e79bc608a2056f8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f4146e19c6306cbe83659390605f570561fcc08f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48100611"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52798213"
 ---
 # <a name="database-engine-extended-stored-procedure-programming"></a>Programmazione di stored procedure estese del Motore di database
     
@@ -34,7 +32,7 @@ ms.locfileid: "48100611"
   
  Le stored procedure estese consentono di creare routine esterne personalizzate in un linguaggio di programmazione quale C. Le stored procedure estese appaiono come stored procedure normali e vengono eseguite in modo analogo. È possibile passare parametri alle stored procedure estese che possono restituire risultati e informazioni sullo stato.  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Programmazione di stored procedure estese](extended-stored-procedures-programming/database-engine-extended-stored-procedures-programming.md)  
  Viene illustrato come creare, gestire e utilizzare stored procedure estese.  
   

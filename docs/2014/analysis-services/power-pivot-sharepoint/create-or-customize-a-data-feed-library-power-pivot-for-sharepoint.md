@@ -14,12 +14,12 @@ ms.assetid: 699fbeb9-42ab-436b-beba-214db51ea3dd
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 17ea214c6e9dacb8517c42e7cb62141b92ef1ccc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3586379cbd22dee4e288a032a9dd850355b2b674
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48126691"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52543548"
 ---
 # <a name="create-or-customize-a-data-feed-library-powerpivot-for-sharepoint"></a>Creare o personalizzare una libreria di feed di dati (PowerPivot per SharePoint)
   Una *libreria feed di dati* è una raccolta di SharePoint speciale che consente di registrare e condividere documenti di servizio dati Atom (atomsvc). Questi documenti forniscono feed di dati XML alle cartelle di lavoro [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] o ad altre applicazioni client che supportano il formato di feed di dati Atom. Una libreria di feed di dati è diversa dalle altre raccolte di SharePoint poiché consente di:  
@@ -52,7 +52,7 @@ ms.locfileid: "48126691"
   
 1.  Scegliere **Azioni sito** nell'angolo superiore sinistro della pagina.  
   
-2.  Fare clic su **Altre opzioni**...  
+2.  Fare clic su **altre opzioni**...  
   
 3.  In Librerie scegliere **Libreria feed di dati**.  
   
@@ -71,7 +71,7 @@ ms.locfileid: "48126691"
   
  I passaggi seguenti devono essere ripetuti per ogni libreria in cui si desidera creare o modificare i documenti di registrazione del feed di dati.  
   
-#### <a name="step-1-enable-content-type-management"></a>Passaggio 1: Abilitazione della gestione del tipo di contenuto  
+#### <a name="step-1-enable-content-type-management"></a>Passaggio 1: Abilitare la gestione dei tipi di contenuto  
   
 1.  Aprire la raccolta documenti per cui si desidera abilitare più tipi di contenuto.  
   
@@ -87,7 +87,7 @@ ms.locfileid: "48126691"
   
 7.  Fare clic su **OK**.  
   
-#### <a name="step-2-add-the-data-service-document-content-type"></a>Passaggio 2: Aggiunta del tipo di contenuto del documento di servizio dati  
+#### <a name="step-2-add-the-data-service-document-content-type"></a>Passaggio 2: Aggiungere il tipo di contenuto documento di servizio dati  
   
 1.  Nella sezione Tipi di contenuto fare clic su **Aggiungi da tipi di contenuto del sito esistenti**. Se questa pagina non viene visualizzata, tornare al sito, fare clic su **Raccolta** in Strumenti raccolta, quindi scegliere **Impostazioni raccolta**.  
   
@@ -99,7 +99,7 @@ ms.locfileid: "48126691"
   
 5.  Fare clic su **OK**.  
   
-#### <a name="step-3-verify-data-service-document-configuration"></a>Passaggio 3: Verifica della configurazione del documento di servizio dati  
+#### <a name="step-3-verify-data-service-document-configuration"></a>Passaggio 3: Verifica della configurazione di documento di servizio dati  
   
 1.  Aprire la home page del sito.  
   

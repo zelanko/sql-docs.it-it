@@ -11,12 +11,12 @@ ms.assetid: d5619e9f-ec5b-4376-9b34-1f74de6fade7
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: f3acf241fbc5737daff76c408159b17b27affe9e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f49c20c8efe233bb49194364943f7ebb95ed6497
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48220661"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52415279"
 ---
 # <a name="enable-and-disable-rdl-sandboxing"></a>Abilitare e disabilitare la funzionalità RDL Sandboxing
   La caratteristica RDL (Report Definition Language) Sandboxing consente di rilevare e limitare l'utilizzo di tipi specifici di risorse in base a singoli tenant in un ambiente in cui più tenant utilizzano una sola Web farm di server di report. Un esempio di questo tipo è rappresentato dai servizi di hosting in cui è possibile gestire una sola Web farm di server di report utilizzati da più tenant e probabilmente da società diverse. L'amministratore del server di report può abilitare questa caratteristica per ottenere gli obiettivi seguenti:  
@@ -31,14 +31,14 @@ ms.locfileid: "48220661"
   
 -   Codice personalizzato nell'elemento **\<Code>** di una definizione di report.  
   
--   Modalità di compatibilità con le versioni precedenti di RDL per gli elementi di report personalizzati di [!INCLUDE[ssRSversion2005](../includes/ssrsversion2005-md.md)].  
+-   Modalità di compatibilità con le versioni precedenti di RDL per gli elementi di report personalizzati di [!INCLUDE[ssRSversion2005](../includes/ssrsversion2005-md.md)] .  
   
 -   Parametri denominati nelle espressioni.  
   
- Questo argomento viene descritto ogni elemento di <`RDLSandboxing`> elemento nel file RSReportServer. config. Per altre informazioni su come modificare questo file, vedere [Modificare un file di configurazione di Reporting Services &#40;RSreportserver.config&#41;](report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md). Attività dei record del log di traccia del server correlata alla caratteristica RDL Sandboxing. Per altre informazioni sui log di traccia, vedere [Report Server Service Trace Log](report-server/report-server-service-trace-log.md).  
+ In questo argomento viene descritto ogni elemento dell'elemento <`RDLSandboxing`> nel file RSReportServer.Config. Per altre informazioni su come modificare questo file, vedere [Modificare un file di configurazione di Reporting Services &#40;RSreportserver.config&#41;](report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md). Attività dei record del log di traccia del server correlata alla caratteristica RDL Sandboxing. Per altre informazioni sui log di traccia, vedere [Log di traccia del servizio del server di report](report-server/report-server-service-trace-log.md).  
   
 ## <a name="example-configuration"></a>Configurazione di esempio  
- L'esempio seguente illustra le impostazioni e i valori di esempio per la <`RDLSandboxing`> elemento nel file RSReportServer. config.  
+ Nell'esempio seguente vengono illustrate le impostazioni e i valori di esempio per l'elemento <`RDLSandboxing`> nel file RSReportServer.Config.  
   
 ```  
 <RDLSandboxing>  
@@ -47,8 +47,8 @@ ms.locfileid: "48220661"
    <MaxStringResultLength>3000</MaxStringResultLength>  
    <MaxArrayResultLength>250</MaxArrayResultLength>  
    <Types>  
-      <Allow Namespace=”System.Drawing” AllowNew=”True”>Bitmap</Allow>  
-      <Allow Namespace=”TypeConverters.Custom” AllowNew=”True”>*</Allow>  
+      <Allow Namespace="System.Drawing" AllowNew="True">Bitmap</Allow>  
+      <Allow Namespace="TypeConverters.Custom" AllowNew="True">*</Allow>  
    </Types>  
    <Members>  
       <Deny>Format</Deny>  
@@ -60,19 +60,19 @@ ms.locfileid: "48220661"
 ## <a name="configuration-settings"></a>Impostazioni di configurazione  
  Nella tabella seguente sono contenute le informazioni sulle impostazioni di configurazione. Le impostazioni sono elencate nell'ordine in cui vengono visualizzate nel file di configurazione.  
   
-|Impostazione|Description|  
+|Impostazione|Descrizione|  
 |-------------|-----------------|  
-|**MaxExpressionLength**|Numero massimo di caratteri consentiti nelle espressioni RDL.<br /><br /> Valore predefinito: 1000|  
-|**MaxResourceSize**|Numero massimo di KB consentiti per una risorsa esterna.<br /><br /> Valore predefinito: 100|  
-|**MaxStringResultLength**|Numero massimo di caratteri consentiti in un valore restituito per un'espressione RDL.<br /><br /> Valore predefinito: 1000|  
-|**MaxArrayResultLength**|Numero massimo di elementi consentiti in un valore restituito della matrice per un'espressione RDL.<br /><br /> Valore predefinito: 100|  
+|**MaxExpressionLength**|Numero massimo di caratteri consentiti nelle espressioni RDL.<br /><br /> Impostazione predefinita: 1000|  
+|**MaxResourceSize**|Numero massimo di KB consentiti per una risorsa esterna.<br /><br /> Impostazione predefinita: 100|  
+|**MaxStringResultLength**|Numero massimo di caratteri consentiti in un valore restituito per un'espressione RDL.<br /><br /> Impostazione predefinita: 1000|  
+|**MaxArrayResultLength**|Numero massimo di elementi consentiti in un valore restituito della matrice per un'espressione RDL.<br /><br /> Impostazione predefinita: 100|  
 |**Tipi**|Elenco di membri da consentire nelle espressioni RDL.|  
 |**Allow**|Tipo o set di tipi da consentire nelle espressioni RDL.|  
 |**Namespace**|Attributo per **Allow** che è lo spazio dei nomi contenente uno o più tipi applicabili a Value. Questa proprietà supporta la distinzione tra maiuscole e minuscole.|  
-|`AllowNew`|Attributo booleano per **Allow** che controlla se le nuove istanze del tipo possono essere create in espressioni RDL o in un elemento RDL **\<Class>**.<br /><br /> Nota: Quando si `RDLSandboxing` è abilitata, non è possibile creare nuove matrici nelle espressioni RDL, indipendentemente dall'impostazione di `AllowNew`.|  
+|`AllowNew`|Attributo booleano per **Allow** che controlla se le nuove istanze del tipo possono essere create in espressioni RDL o in un elemento RDL **\<Class>**.<br /><br /> Nota: Quando `RDLSandboxing` è abilitata, non è possibile creare nuove matrici nelle espressioni RDL, indipendentemente dall'impostazione di `AllowNew`.|  
 |**Valore**|Valore per **Allow** che è il nome del tipo da consentire nelle espressioni RDL. Il valore **\*** indica che sono consentiti tutti i tipi nello spazio dei nomi. Questa proprietà supporta la distinzione tra maiuscole e minuscole.|  
 |**Membri**|Per l'elenco dei tipi inclusi nell'elemento **\<Types>**, l'elenco dei nomi membro non consentiti nelle espressioni RDL.|  
-|**Nega**|Nome di un membro non consentito nelle espressioni RDL. Questa proprietà supporta la distinzione tra maiuscole e minuscole.<br /><br /> Nota: quando per un membro è specificato **Deny** , non è consentito alcun membro con questo nome per nessun tipo.|  
+|**Nega**|Nome di un membro non consentito nelle espressioni RDL. Questa proprietà supporta la distinzione tra maiuscole e minuscole.<br /><br /> Nota: Quando per un membro è specificato **Deny** non è consentito nessun membro con questo nome per nessun tipo.|  
   
 ## <a name="working-with-expressions-when-rdl-sandboxing-is-enabled"></a>Utilizzo delle espressioni con RDL Sandboxing abilitato  
  È possibile modificare la caratteristica RDL Sandboxing per facilitare la gestione delle risorse utilizzate da un'espressione nelle modalità seguenti:  
@@ -119,7 +119,7 @@ ms.locfileid: "48220661"
   
 -   Aggiungere la nuova classe all'elenco consentiti.  
   
- Per aggiungere [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] funzioni .NET Framework all'elenco consentiti, aggiungere i tipi corrispondenti dallo spazio dei nomi Microsoft. VisualBasic all'elenco consentiti.  
+ Per aggiungere funzioni .NET Framework di [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] all'elenco degli elementi consentiti, aggiungere i tipi corrispondenti dallo spazio dei nomi Microsoft.VisualBasic all'elenco.  
   
  Per aggiungere le parole chiave tipo di [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] .NET Framework all'elenco consentiti, aggiungere il tipo CLR corrispondente all'elenco consentiti. Ad esempio, per usare la [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] parola chiave .NET Framework `Integer`, aggiungere il seguente frammento XML per il  **\<RDLSandboxing >** elemento:  
   
@@ -127,7 +127,7 @@ ms.locfileid: "48220661"
 <Allow Namespace="System">Int32</Allow>  
 ```  
   
- Per aggiungere un tipo che ammette valori Null o un tipo generico .NET Framework di [!INCLUDE[vbprvb](../includes/vbprvb-md.md)], è necessario eseguire le operazioni seguenti:  
+ Per aggiungere un tipo che ammette valori Null o un tipo generico .NET Framework di [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] , è necessario eseguire le operazioni seguenti:  
   
 -   Creare un tipo proxy per il tipo generico o che ammette valori Null di [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] .NET Framework.  
   
@@ -142,7 +142,7 @@ ms.locfileid: "48220661"
   
 -   Quando si aggiungono membri ai tipi nell'elenco consentiti.  
   
--   Quando si aggiorna il [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] nel server di report.  
+-   Quando si aggiorna [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] nel server di report.  
   
 -   Quando si aggiorna il server di report a una versione successiva di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
   

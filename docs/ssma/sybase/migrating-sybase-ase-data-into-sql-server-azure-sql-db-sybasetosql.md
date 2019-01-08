@@ -13,12 +13,12 @@ ms.assetid: 54a39f5e-9250-4387-a3ae-eae47c799811
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: faecf1d3a7ab820ef01a25ea67b2313ab03e056a
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: c358b0b4285a6512b2c0ac5db101bd7eed0f2ba5
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51657401"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52409908"
 ---
 # <a name="migrating-sybase-ase-data-into-sql-server---azure-sql-db--sybasetosql"></a>Migrazione dei dati di Sybase ASE in SQL Server - Azure SQL database (SybaseToSQL)
 Dopo che sono stati caricati correttamente gli oggetti di database di Sybase Adaptive Server Enterprise (ASE) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o il database SQL di Azure, è possibile migrare i dati dall'ambiente del servizio app [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o database SQL di Azure.  
@@ -92,10 +92,10 @@ Per visualizzare i messaggi di migrazione, verificare che sia visibile il riquad
   
     -   Per l'esecuzione **migrazione dei dati lato Server**, selezionare il **modulo di migrazione dei dati lato Server** opzione il **impostazioni di progetto** nella finestra di dialogo.  
   
-4.  Fare doppio clic su **schemi** nel Visualizzatore metadati Sybase e quindi fare clic su **Migrate Data**. È anche possibile eseguire la migrazione dei dati per oggetti singoli o categorie di oggetti: pulsante destro del mouse relativa cartella padre o l'oggetto e selezionare il **Migrate Data** opzione.  
+4.  Fare doppio clic su **schemi** nel Visualizzatore metadati Sybase e quindi fare clic su **Migrate Data**. È anche possibile eseguire la migrazione dei dati per oggetti singoli o categorie di oggetti: L'oggetto o relativa cartella padre e scegliere il **Migrate Data** opzione.  
   
     > [!NOTE]  
-    > Se SSMA per Sybase Extension Pack non è installato nell'istanza di SQL Server e se **modulo di migrazione dei dati lato Server** è selezionata, durante la migrazione dei dati al database di destinazione, viene rilevato il seguente errore: ' SSMA Componenti di migrazione dati non sono stati trovati in SQL Server, la migrazione dei dati lato server non sarà possibile. Verificare se il pacchetto di estensione sia installato correttamente '. Fare clic su **annullare** per terminare la migrazione dei dati.  
+    > Se SSMA per Sybase Extension Pack non è installato nell'istanza di SQL Server e se **modulo di migrazione dei dati lato Server** è selezionata, durante la migrazione dei dati al database di destinazione, viene rilevato l'errore seguente: ' Impossibile trovare componenti di migrazione dei dati di SSMA in SQL Server, la migrazione dei dati lato server non sarà possibile. Verificare se il pacchetto di estensione sia installato correttamente '. Fare clic su **annullare** per terminare la migrazione dei dati.  
   
 5.  Nel **connettersi a Sybase ASE** della finestra di dialogo immettere le credenziali di connessione e quindi fare clic su **Connect**. Per altre informazioni sulla connessione a Sybase ASE, vedere [connettersi a Sybase &#40;SybaseToSQL&#41;](../../ssma/sybase/connect-to-sybase-sybasetosql.md)  
   

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: ''
 ms.topic: reference
 topic_type:
 - apiref
@@ -19,12 +17,12 @@ ms.assetid: 7bfabe4d-9f4c-4bc9-b998-93bd2b50ee8a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4860d9bf406a87f03c439b69adaf53a66d372233
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ceef262411bf420330cf9e650d61a916719cb0e2
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48145731"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52799433"
 ---
 # <a name="smo-namespaces"></a>Spazi dei nomi SMO
   SMO ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects) dispone di vari spazi dei nomi. I diversi spazi dei nomi rappresentano aree diverse della funzionalità di SMO.  

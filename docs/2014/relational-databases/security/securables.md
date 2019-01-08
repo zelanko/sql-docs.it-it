@@ -18,17 +18,17 @@ ms.assetid: bfa748f0-70b0-453c-870a-04b7b205b9ff
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: fa9af5a2542581cad1b3a5f4be956cce9651d4f8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7c4a82cfa4d8a82db1e01c49899c3c49c2e01ee9
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48170181"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52532468"
 ---
 # <a name="securables"></a>Entità a protezione diretta
   Le entità a protezione diretta sono le risorse il cui accesso è controllato dal sistema di autorizzazioni del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] . Ad esempio, una tabella è un'entità a protezione diretta. Alcune entità a protezione diretta possono essere contenute da altre, creando gerarchie nidificate denominate ambiti, che possono a loro volta essere protetti. Gli ambiti a protezione diretta sono **server**, **database**e **schema**.  
   
-## <a name="securable-scope-server"></a>Ambito a protezione diretta: server  
+## <a name="securable-scope-server"></a>Ambito a protezione diretta: Server  
  L'ambito a protezione diretta **server** contiene le entità a protezione diretta seguenti:  
   
 -   gruppo di disponibilità  
@@ -41,7 +41,7 @@ ms.locfileid: "48170181"
   
 -   Database  
   
-## <a name="securable-scope-database"></a>Ambito a protezione diretta: database  
+## <a name="securable-scope-database"></a>Ambito a protezione diretta: Database  
  L'ambito a protezione diretta **database** contiene le entità a protezione diretta seguenti:  
   
 -   Ruolo applicazione  
@@ -83,7 +83,7 @@ ms.locfileid: "48170181"
   
 -   Raccolta di XML Schema  
   
--   Oggetto. La classe oggetto include i membri seguenti:  
+-   Oggetto - La classe oggetto include i membri seguenti:  
   
     -   Aggregate  
   
@@ -97,7 +97,7 @@ ms.locfileid: "48170181"
   
     -   Tabella  
   
-    -   Vista  
+    -   visualizzazione  
   
 ## <a name="controlling-access-to-a-securable"></a>Controllo di accesso a un'entità a protezione diretta  
  L'entità che riceve autorizzazione per un'entità a protezione diretta viene chiamata entità. Le entità più comuni sono gli account di accesso e gli utenti di database. L'accesso alle entità a protezione diretta viene controllato concedendo o negando autorizzazioni o aggiungendo accessi e utenti a ruoli che dispongono di accesso. Per informazioni sul controllo delle autorizzazioni, vedere [GRANT &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-transact-sql), [REVOKE &#40;Transact-SQL&#41;](/sql/t-sql/statements/revoke-transact-sql), [DENY &#40;Transact-SQL&#41;](/sql/t-sql/statements/deny-transact-sql), [sp_addrolemember &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addrolemember-transact-sql) e [sp_droprolemember &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-droprolemember-transact-sql).  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.configdistwizard.distdbproperties.f1
@@ -15,18 +14,18 @@ ms.assetid: 0f404ab9-1237-4936-8df5-888baab6a245
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0412108c9b08e8b3345f4930b4076e10c96ec2ce
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 89b8381de605ab3736afc6ac8e3a7da0d53bf9e6
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48207711"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52796883"
 ---
 # <a name="distribution-database-properties"></a>Proprietà database di distribuzione
   La finestra di dialogo **Proprietà database di distribuzione** consente di visualizzare varie proprietà e di impostare il periodo di memorizzazione della transazione e della cronologia per il database.  
   
 ## <a name="options"></a>Opzioni  
- **Nome**  
+ **Name**  
  Il nome del database di distribuzione, il cui valore predefinito è "distribution" (sola lettura).  
   
  **Percorsi dei file**  
@@ -39,7 +38,7 @@ ms.locfileid: "48207711"
  Quantità di tempo di memorizzazione dei metadati della cronologia ai fini di tutti i tipi di replica.  
   
  **Sicurezza agente di lettura coda**  
- L'agente di lettura coda viene utilizzato dalla replica transazionale con sottoscrizioni ad aggiornamento in coda. L'agente di lettura coda viene creato automaticamente se si seleziona **Creazione di una pubblicazione transazionale con aggiornamento delle sottoscrizioni** nella pagina **Tipo di pubblicazione** della Creazione guidata nuova pubblicazione. Fare clic su **Impostazioni di sicurezza** per modificare l'account nell'ambito del quale l'agente viene eseguito e si connette al server di distribuzione.  
+ L'agente di lettura coda viene utilizzato dalla replica transazionale con sottoscrizioni ad aggiornamento in coda. L'agente di lettura coda viene creato automaticamente se si seleziona **Creazione di una pubblicazione transazionale con aggiornamento delle sottoscrizioni** nella pagina **Tipo di pubblicazione** della Creazione guidata nuova pubblicazione. Fare clic su **Impostazioni di sicurezza...** per modificare l'account nell'ambito del quale l'agente viene eseguito e si connette al server di distribuzione.  
   
  In questa pagina è inoltre possibile creare un agente di lettura coda selezionando **Crea agente di lettura coda** . L'opzione è disabilitata se l'agente è già stato creato.  
   

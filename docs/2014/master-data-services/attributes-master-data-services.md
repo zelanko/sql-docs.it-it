@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - free-form attributes [Master Data Services]
@@ -18,12 +17,12 @@ ms.assetid: 95ecb75f-c559-41c3-933c-40ae60a4c2fd
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: b23f989190b4b164385e790b01cfad7d0f759b90
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6fbd4e3191f1cf115f157f7ff56c55f7b9ed96bc
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48129621"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52748063"
 ---
 # <a name="attributes-master-data-services"></a>Attributi (Master Data Services)
   Gli attributi sono oggetti contenuti in entità [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . I valori dell'attributo descrivono i membri dell'entità. Un attributo può essere utilizzato per descrivere un membro foglia, un membro consolidato o una raccolta.  
@@ -59,7 +58,7 @@ ms.locfileid: "48129621"
 -   È possibile che un valore non esegua un *round trip* se è interessato un numero a virgola mobile. Si dice che un valore esegue un roundtrip se un'operazione converte un numero a virgola mobile originale in un altro formato, un'operazione inversa trasforma di nuovo il formato convertito in un numero a virgola mobile e il numero a virgola mobile finale è uguale al numero a virgola mobile originale. Il round trip potrebbe non riuscire perché una o più cifre meno significative vengono perse o modificate in una conversione.  
   
 ## <a name="attribute-examples"></a>Esempi di attributo  
- Nell'esempio seguente l'entità dispone degli attributi Name, Code, Subcategory, StandardCost, ListPrice e FilePhoto. Tali attributi descrivono i membri. Ogni membro viene rappresentato da una singola riga di valori di attributo.  
+ Nell'esempio seguente, l'entità ha gli attributi: Name, Code, Subcategory, StandardCost, ListPrice e FilePhoto. Tali attributi descrivono i membri. Ogni membro viene rappresentato da una singola riga di valori di attributo.  
   
  ![Tabella dell'entità prodotto bicicletta](../../2014/master-data-services/media/mds-conc-entity-table-w-data.gif "Tabella dell'entità prodotto bicicletta")  
   
@@ -82,7 +81,7 @@ ms.locfileid: "48129621"
 |Creare un nuovo attributo di testo in formato libero.|[Creare un attributo di testo &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-text-attribute-master-data-services.md)|  
 |Creare un nuovo attributo numerico in formato libero.|[Creare un attributo numerico &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-numeric-attribute-master-data-services.md)|  
 |Creare un nuovo attributo di collegamento in formato libero.|[Creare un attributo di collegamento &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-link-attribute-master-data-services.md)|  
-|Creare un nuovo attributo di file.|[Creare un attributo di File &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-file-attribute-master-data-services.md)|  
+|Creare un nuovo attributo di file.|[Creare un attributo di file &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-file-attribute-master-data-services.md)|  
 |Creare un nuovo attributo basato su dominio.|[Creare un attributo basato su dominio &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-domain-based-attribute-master-data-services.md)|  
 |Modificare il nome di un attributo esistente.|[Modificare un nome di attributo &#40;Master Data Services&#41;](change-an-attribute-name-and-data-type-master-data-services.md)|  
 |Aggiungere attributi ad un gruppo rilevamento modifiche|[Aggiungere attributi ad un gruppo rilevamento modifiche &#40;Master Data Services&#41;](../../2014/master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md)|  
@@ -95,7 +94,7 @@ ms.locfileid: "48129621"
   
 -   [Gruppi di attributi &#40;Master Data Services&#41;](attribute-groups-master-data-services.md)  
   
--   [I membri &#40;Master Data Services&#41;](../../2014/master-data-services/members-master-data-services.md)  
+-   [Membri &#40;Master Data Services&#41;](../../2014/master-data-services/members-master-data-services.md)  
   
 -   [Autorizzazioni per elementi foglia &#40;Master Data Services&#41;](../../2014/master-data-services/leaf-permissions-master-data-services.md)  
   

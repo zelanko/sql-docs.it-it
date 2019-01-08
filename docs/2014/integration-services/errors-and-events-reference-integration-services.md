@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Integration Services packages, events
@@ -16,12 +15,12 @@ ms.assetid: cf4f0f14-8087-42d7-9b67-e4929228abd6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 91edbee0aea90cb4248acc92606d01385abe0ff2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 736e5d7e614a1df300dd5d283994c54702114dea
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48140618"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52791213"
 ---
 # <a name="errors-and-events-reference-integration-services"></a>Guida di riferimento a errori ed eventi (Integration Services)
   In questa sezione della documentazione vengono fornite informazioni su diversi errori ed eventi correlati a [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Sono inoltre incluse le informazioni sulle cause e la risoluzione dei messaggi di errore.  
@@ -33,12 +32,12 @@ ms.locfileid: "48140618"
   
 ## <a name="error-messages"></a>messaggi di errore  
   
-|Nome simbolico dell'errore|Description|  
+|Nome simbolico dell'errore|Descrizione|  
 |----------------------------|-----------------|  
 |DTS_E_CACHELOADEDFROMFILE|Indica che non è possibile eseguire il pacchetto perché una trasformazione cache sta tentando di scrivere dati nella cache in memoria. Tuttavia, un file di cache è già stato caricato nella cache in memoria tramite una gestione connessione della cache.|  
 |DTS_E_CANNOTACQUIRECONNECTIONFROMCONNECTIONMANAGER|Indica che il pacchetto non può essere eseguito perché non è stato possibile stabilire una connessione specificata.|  
 |DTS_E_CANNOTCONVERTBETWEENUNICODEANDNONUNICODESTRINGCOLUMN|Indica che un componente flusso di dati sta tentando di passare dati stringa Unicode a un altro componente per cui sono previsti dati non Unicode nella colonna corrispondente, o viceversa.|  
-|DTS_E_CANNOTCONVERTBETWEENUNICODEANDNONUNICODESTRINGCOLUMNS|Indica che un componente del flusso di dati sta tentando di passare dati stringa Unicode a un altro componente per cui sono previsti dati non Unicode nella colonna corrispondente, o viceversa.|  
+|DTS_E_CANNOTCONVERTBETWEENUNICODEANDNONUNICODESTRINGCOLUMNS|Indica che un componente flusso di dati sta tentando di passare dati stringa Unicode a un altro componente per cui sono previsti dati non Unicode nella colonna corrispondente, o viceversa.|  
 |DTS_E_CANTINSERTCOLUMNTYPE|Indica che non è possibile aggiungere la colonna alla tabella di database perché la conversione tra il tipo di dati della colonna di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] e il tipo di dati della colonna del database non è supportata.|  
 |DTS_E_CONNECTIONNOTFOUND|Indica che il pacchetto non può essere eseguito perché non è possibile trovare la gestione connessione specificata.|  
 |DTS_E_CONNECTIONREQUIREDFORMETADATA|Indica che per recuperare metadati nuovi o aggiornati per un'origine o una destinazione, è necessaria una connessione tra Progettazione [!INCLUDE[ssIS](../includes/ssis-md.md)] e un'origine dati, ma questa connessione non può essere eseguita correttamente.|  
@@ -52,7 +51,7 @@ ms.locfileid: "48140618"
 ## <a name="events-sqlispackage"></a>Eventi (SQLISPackage)  
  Per altre informazioni, vedere [Eventi registrati da un pacchetto di Integration Services](performance/events-logged-by-an-integration-services-package.md).  
   
-|Evento|Description|  
+|Evento|Descrizione|  
 |-----------|-----------------|  
 |SQLISPackage_12288|Indica che un pacchetto è stato avviato.|  
 |SQLISPackage_12289|Indica che l'esecuzione di un pacchetto è stata completata correttamente.|  
@@ -66,7 +65,7 @@ ms.locfileid: "48140618"
 ## <a name="events-sqlisservice"></a>Eventi (SQLISService)  
  Per altre informazioni, vedere [Eventi registrati dal servizio Integration Services](service/events-logged-by-the-integration-services-service.md).  
   
-|Evento|Description|  
+|Evento|Descrizione|  
 |-----------|-----------------|  
 |SQLISService_256|Indica che il servizio sta per essere avviato.|  
 |SQLISService_257|Indica che il servizio è stato avviato.|  

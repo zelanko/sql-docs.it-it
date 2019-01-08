@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 16808ae1ceccd64a109a78c33d861ab45076b98d
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: ad3963cd7b0b2b40e6b3a08cab68ad809378bff1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50146416"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52526788"
 ---
 # <a name="understanding-tabular-object-model-at-levels-1050-through-1103"></a>Informazioni sul modello a oggetti tabulare dal livello 1050 al livello 1103
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -56,7 +56,7 @@ ms.locfileid: "50146416"
   
  Visualizzare [rappresentazione della gerarchia &#40;tabulare&#41; ](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/representation/tables-hierarchy-representation.md) per una spiegazione dettagliata su come creare e modificare la rappresentazione della gerarchia.  
   
-### <a name="key-performance-indicator-kpi--representation"></a>Rappresentazione dell'indicatore di prestazioni chiave (KPI)  
+### <a name="key-performance-indicator--kpi--representation"></a>Prestazioni chiave KPI--rappresentazione dell'indicatore  
  Un indicatore KPI viene utilizzato per misurare le prestazioni di un valore, definito mediante una misura di base, rispetto a un valore di destinazione. In termini di oggetti AMO, una rappresentazione KPI dispone di una relazione di mapping uno-a-molti. Un indicatore KPI è rappresentato dall'utilizzo degli oggetti AMO: `xref:Microsoft.AnalysisServices.MdxScript.Commands%2A` e `xref:Microsoft.AnalysisServices.MdxScript.CalculationProperties%2A` sono gli oggetti principali richiesti.  È importante notare che questo non significa che tutti gli oggetti contenuti negli oggetti AMO citati in precedenza possano essere utilizzati nella modellazione.  
   
 > [!NOTE]  

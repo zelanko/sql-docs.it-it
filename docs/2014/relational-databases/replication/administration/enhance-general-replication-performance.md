@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - publications [SQL Server replication], design and performance
@@ -22,12 +21,12 @@ ms.assetid: 895b1ad7-ffb9-4a5c-bda6-e1dfbd56d9bf
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5ffc277e43bf48975da92e5463b4e157e266b55b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 465e43422616d5d0202bf31959fab5f56c4f35d8
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48138192"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52806253"
 ---
 # <a name="enhance-general-replication-performance"></a>Miglioramento delle prestazioni generali della replica
   È possibile migliorare le prestazioni generali di tutti i tipi di replica nell'applicazione e nella rete attenendosi alle istruzioni riportate in questo argomento.  
@@ -81,7 +80,7 @@ ms.locfileid: "48138192"
   
 -   Limitare l'utilizzo dei tipi di dati LOB (Large Object).  
   
-     Tali dati richiedono uno spazio di archiviazione e un'elaborazione maggiori rispetto ad altri tipi di dati di colonna. Non includere queste colonne negli articoli a meno che non sia necessario per l'applicazione in uso. I tipi di dati `text`, `ntext`, e `image` sono deprecati. Se è necessario includere dati LOB, è consigliabile usare i tipi di dati `varchar(max)`, `nvarchar(max)`, `varbinary(max)`, rispettivamente.  
+     Tali dati richiedono uno spazio di archiviazione e un'elaborazione maggiori rispetto ad altri tipi di dati di colonna. Non includere queste colonne negli articoli a meno che non sia necessario per l'applicazione in uso. I tipi di dati `text`, `ntext` e `image` sono deprecati. Se è necessario includere dati LOB, è consigliabile utilizzare rispettivamente i tipi di dati `varchar(max)`, `nvarchar(max)` e `varbinary(max)`.  
   
      Per la replica transazionale, provare a utilizzare il profilo dell'agente di distribuzione denominato **Profilo di distribuzione per flussi OLEDB**. Per altre informazioni, vedere [Replication Agent Profiles](../agents/replication-agent-profiles.md).  
   
@@ -97,7 +96,7 @@ ms.locfileid: "48138192"
   
      Le modifiche possono essere partizionate pubblicando subset di dati in ogni Sottoscrittore oppure facendo in modo che un'applicazione indirizzi le modifiche relative a una specifica riga a uno determinato nodo:  
   
-    -   La replica di tipo merge supporta la pubblicazione dei subset di dati utilizzando filtri con parametri con una singola pubblicazione. Per altre informazioni sui filtri di riga con parametri, vedere [Filtri di riga con parametri](../merge/parameterized-filters-parameterized-row-filters.md).  
+    -   La replica di tipo merge supporta la pubblicazione dei subset di dati utilizzando filtri con parametri con una singola pubblicazione. Per altre informazioni, vedere [Parameterized Row Filters](../merge/parameterized-filters-parameterized-row-filters.md).  
   
     -   La replica transazionale supporta la pubblicazione dei subset di dati utilizzando filtri statici con più pubblicazioni. Per altre informazioni, vedere [Filtrare i dati pubblicati](../publish/filter-published-data.md).  
   
@@ -153,11 +152,11 @@ ms.locfileid: "48138192"
   
 -   Ridurre i livelli di dettaglio degli agenti di replica eccetto durante le operazioni iniziali di verifica, monitoraggio o debug.  
   
-     Ridurre i parametri **–HistoryVerboseLevel** e **–OutputVerboseLevel** degli agenti di distribuzione o di merge. per ridurre il numero di nuove righe inserite ai fini del rilevamento della cronologia e dell'output degli agenti. I messaggi precedenti sulla cronologia con lo stesso stato vengono invece aggiornati in base alle nuove informazioni relative alla cronologia. Aumentare i livelli di dettaglio ai fini della verifica, del monitoraggio e del debug in modo da ottenere il maggior numero possibile di informazioni sull'attività degli agenti.  
+     Ridurre i parametri **-HistoryVerboseLevel** e **-OutputVerboseLevel** degli agenti di distribuzione o di merge. per ridurre il numero di nuove righe inserite ai fini del rilevamento della cronologia e dell'output degli agenti. I messaggi precedenti sulla cronologia con lo stesso stato vengono invece aggiornati in base alle nuove informazioni relative alla cronologia. Aumentare i livelli di dettaglio ai fini della verifica, del monitoraggio e del debug in modo da ottenere il maggior numero possibile di informazioni sull'attività degli agenti.  
   
--   Usare il parametro **–MaxBCPThreads** dell'agente snapshot, dell'agente di merge e dell'agente di distribuzione in modo che il numero di thread specificati non superi il numero di processori installati nel computer. Questo parametro specifica il numero di operazioni di copia bulk che è possibile eseguire in parallelo quando lo snapshot viene creato e applicato.  
+-   Usare il parametro **-MaxBCPThreads** dell'agente snapshot, dell'agente di merge e dell'agente di distribuzione in modo che il numero di thread specificati non superi il numero di processori installati nel computer. Questo parametro specifica il numero di operazioni di copia bulk che è possibile eseguire in parallelo quando lo snapshot viene creato e applicato.  
   
--   Usare il parametro **–UseInprocLoader** dell'agente di distribuzione e dell'agente di merge, tenendo presente che non è possibile usarlo se le tabelle pubblicate includono colonne XML. Grazie alla specifica di tale parametro, l'agente utilizzerà il comando BULK INSERT al momento dell'applicazione dello snapshot.  
+-   Usare il parametro **-UseInprocLoader** dell'agente di distribuzione e dell'agente di merge, tenendo presente che non è possibile usarlo se le tabelle pubblicate includono colonne XML. Grazie alla specifica di tale parametro, l'agente utilizzerà il comando BULK INSERT al momento dell'applicazione dello snapshot.  
   
  I parametri degli agenti possono essere specificati nei profili agente e dalla riga di comando. Per altre informazioni, vedere:  
   

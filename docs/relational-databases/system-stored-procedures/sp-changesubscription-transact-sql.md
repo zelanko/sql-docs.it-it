@@ -5,8 +5,7 @@ ms.date: 10/28/2015
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - changesubscription
@@ -19,12 +18,12 @@ ms.assetid: f9d91fe3-47cf-4915-b6bf-14c9c3d8a029
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 91c3b60aedb42c6d249920cb42da021c474faf5d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a293be4b745f30f4ee4a9bff6226e4e2ef80676f
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47640709"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53209840"
 ---
 # <a name="spchangesubscription-transact-sql"></a>sp_changesubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,25 +49,25 @@ sp_changesubscription [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ **@publication**=] **'***pubblicazione***'**  
+ [ **@publication**=] **'**_pubblicazione_**'**  
  Nome della pubblicazione da modificare. *pubblicazione*viene **sysname**, non prevede alcun valore predefinito  
   
- [ **@article** =] **'***articolo***'**  
+ [ **@article** =] **'**_articolo_**'**  
  Nome dell'articolo da modificare. *articolo* viene **sysname**, non prevede alcun valore predefinito.  
   
- [ **@subscriber** =] **'***sottoscrittore***'**  
+ [ **@subscriber** =] **'**_sottoscrittore_**'**  
  Nome del Sottoscrittore. *Sottoscrittore* viene **sysname**, non prevede alcun valore predefinito.  
   
- [ **@destination_db** =] **'***destination_db***'**  
+ [ **@destination_db** =] **'**_destination_db_**'**  
  Nome del database di sottoscrizione. *destination_db* viene **sysname**, non prevede alcun valore predefinito.  
   
- [  **@property=**] **'***proprietà***'**  
+ [  **@property=**] **'**_proprietà_**'**  
  Proprietà da modificare per la sottoscrizione specificata. *proprietà* viene **nvarchar(30)**, e può essere uno dei valori nella tabella.  
   
- [  **@value=**] **'***valore***'**  
+ [  **@value=**] **'**_valore_**'**  
  Nuovo valore per l'oggetto specificato *proprietà*. *valore* viene **nvarchar (4000)**, e può essere uno dei valori nella tabella.  
   
-|Proprietà|valore|Description|  
+|Proprietà|Value|Descrizione|  
 |--------------|-----------|-----------------|  
 |**distrib_job_login**||Account di accesso per l'account di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows utilizzato per l'esecuzione dell'agente.|  
 |**distrib_job_password**||Password dell'account di Windows utilizzato per l'esecuzione dell'agente.|  
@@ -86,8 +85,8 @@ sp_changesubscription [ @publication = ] 'publication'
 ||**3**|Provider OLE DB|  
 |**memory_optimized**|**bit**|Indica che la sottoscrizione supporta le tabelle ottimizzate per la memoria. *memory_optimized* viene **bit**, dove 1 è uguale a true (la sottoscrizione supporta le tabelle ottimizzate per la memoria).|  
   
- [  **@publisher =** ] **'***publisher***'**  
- Specifica un server di pubblicazione non [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *server di pubblicazione* viene **sysname**, con un valore predefinito è NULL.  
+ [  **@publisher =** ] **'**_editore_**'**  
+ Specifica un non - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] server di pubblicazione. *server di pubblicazione* viene **sysname**, con un valore predefinito è NULL.  
   
 > [!NOTE]  
 >  *server di pubblicazione* non deve essere specificato per un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] server di pubblicazione.  

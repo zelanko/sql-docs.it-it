@@ -18,12 +18,12 @@ ms.assetid: d00913b0-cd6d-4de0-a1e7-4ce86fcc078d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 22df70966fe1bac4f9a825a97c7998d6900af02a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ccf355df8a26136a72b48c4b81a1953d84d90186
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48168101"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52529637"
 ---
 # <a name="create-an-analysis-services-project-ssdt"></a>Creare un progetto di Analysis Services (SSDT)
   È possibile definire un progetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] usando il modello di progetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] o l'Importazione guidata database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] per leggere il contenuto di un database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Se in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]non è attualmente caricata alcuna soluzione, creando un nuovo progetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] viene automaticamente creata una nuova soluzione. In caso contrario, il nuovo progetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] sarà aggiunto alla soluzione esistente. Le procedure consigliate per lo sviluppo di soluzioni prevedono la creazione di progetti separati per tipi diversi di dati dell'applicazione, utilizzando una sola soluzione se i progetti sono correlati. Ad esempio, potrebbe essere disponibile una sola soluzione contenente progetti separati per i pacchetti di Integration Services, i database di Analysis Services e i report di Reporting Services utilizzati dalla stessa applicazione aziendale.  
@@ -59,7 +59,7 @@ ms.locfileid: "48168101"
   
 5.  Per aggiungere il nuovo progetto alla soluzione esistente, nell'elenco a discesa **Soluzione** selezionare **Aggiungi a soluzione**.  
   
-     -oppure-  
+     oppure  
   
      Per creare una nuova soluzione, nell'elenco a discesa **Soluzione** selezionare **Crea nuova soluzione**. Per creare una nuova cartella per la nuova soluzione, selezionare **Crea directory per soluzione**. In **Nome soluzione**digitare il nome della nuova soluzione.  
   
@@ -114,7 +114,7 @@ ms.locfileid: "48168101"
 ##  <a name="bkmk_ProjectFolders"></a> Cartelle del progetto di Analysis Services  
  Un progetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] contiene le cartelle seguenti, usate per organizzare gli elementi inclusi nel progetto.  
   
-|Cartella|Description|  
+|Cartella|Descrizione|  
 |------------|-----------------|  
 |Origini dati|Contiene le origini dati di un progetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Questi oggetti vengono creati tramite la Creazione guidata origine dati e modificati in Progettazione origine dati.|  
 |Viste origine dati|Contiene le viste origine dati di un progetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Questi oggetti vengono creati tramite la Creazione guidata vista origine dati e modificati in Progettazione vista origine dati.|  
@@ -133,7 +133,7 @@ ms.locfileid: "48168101"
   
  La cartella di un progetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] può contenere i tipi di file elencati nella tabella seguente.  
   
-|Tipo di file|Description|  
+|Tipo di file|Descrizione|  
 |---------------|-----------------|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] File di destinazione del progetto (estensione dwproj)|Contiene i metadati relativi a elementi, configurazioni e riferimenti ad assembly definiti e inclusi nel progetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Impostazioni utente del progetto (estensione dwproj.user)|Contiene le informazioni di configurazione del progetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] per un utente specifico.|  
@@ -151,7 +151,7 @@ ms.locfileid: "48168101"
   
  I modelli di elemento, elencati nella tabella seguente, sono disponibili nella categoria Elementi progetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , visualizzata nella finestra di dialogo **Aggiungi nuovo elemento** .  
   
-|Category|Modello di elementi|Description|  
+|Category|Modello di elementi|Descrizione|  
 |--------------|-------------------|-----------------|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Elementi del progetto|Cube|Avvia la Creazione guidata cubo per l'aggiunta di un nuovo cubo al progetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
 ||origine dati|Avvia la Creazione guidata origine dati per l'aggiunta di una nuova origine dati al progetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
@@ -161,7 +161,7 @@ ms.locfileid: "48168101"
 ||Struttura di data mining|Avvia la Creazione guidata modello di data mining per l'aggiunta di una nuova struttura di data mining e del modello di data mining associato al progetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Configurare proprietà di progetto di Analysis Services &#40;SSDT&#41;](configure-analysis-services-project-properties-ssdt.md)   
+ [Configurare proprietà di progetti di Analysis Services &#40;SSDT&#41;](configure-analysis-services-project-properties-ssdt.md)   
  [Compilare progetti di Analysis Services &#40;SSDT&#41;](build-analysis-services-projects-ssdt.md)   
  [Distribuire progetti di Analysis Services &#40;SSDT&#41;](deploy-analysis-services-projects-ssdt.md)  
   

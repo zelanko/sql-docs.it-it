@@ -13,19 +13,19 @@ ms.assetid: af24c303-4a41-449b-9c86-d6558a97e839
 author: Shamikg
 ms.author: Shamikg
 manager: murato
-ms.openlocfilehash: 18eef13d999826bb54f9900feed52f41ce614ea9
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: d35db315cebcc6292ca11b1e31f81015238fbcb9
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51675690"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617481"
 ---
 # <a name="user-interface-reference-accesstosql"></a>Riferimento all'interfaccia utente (AccessToSQL)
 In questa sezione include argomenti della Guida per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) per l'accesso.  
   
 ## <a name="in-this-section"></a>Contenuto della sezione  
   
-|Argomento|Description|  
+|Argomento|Descrizione|  
 |---------|---------------|  
 |[Selezione avanzata di oggetti &#40;AccessToSQL&#41;](../../ssma/access/advanced-object-selection-accesstosql.md)|Usare la **avanzate Seleziona oggetto** finestra di dialogo per trovare gli oggetti di database usando i criteri di filtro, quindi selezionare o deselezionare gli oggetti.|  
 |[Report di valutazione &#40;AccessToSQL&#41;](../../ssma/access/assessment-report-accesstosql.md)|Usare la **Report di valutazione** finestra di dialogo per analizzare la conversione di oggetti di database di Access e per stimare il tempo richiesto la migrazione.|  
@@ -48,7 +48,7 @@ In questa sezione include argomenti della Guida per [!INCLUDE[ssNoVersion](../..
 |[Impostazioni progetto (migrazione)](https://msdn.microsoft.com/4caebc9c-8680-4b99-a8fa-89c43161c95d)|Utilizzare la pagina di migrazione del **impostazioni del progetto** finestra di dialogo per specificare la dimensione del batch di migrazione, il blocco di tabella, verifica dei vincoli, trigger di inserimento generazione, identità e il valore null, la gestione e come gestire date fuori il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] intervallo.|  
 |[Impostazioni progetto (mapping dei tipi)](https://msdn.microsoft.com/b87b9683-abed-4677-8c50-18bdba704655)|Utilizzare la pagina del mapping dei tipi dei **impostazioni del progetto** finestra di dialogo per specificare il mapping dei tipi predefiniti per tutti i database e oggetti di database nel progetto SSMA.|  
 |[Impostazioni progetto (SQL Azure)](https://msdn.microsoft.com/bbb8a204-d0e4-4f0b-9709-271feb1f136e)|Utilizzare la pagina di SQL Azure del **impostazioni del progetto** finestra di dialogo per specificare il suffisso del database e anche l'intervallo di timeout di heartbeat.|  
-|[Salvare i metadati &#40;AcessToSQL&#41;](../../ssma/access/save-metadata-acesstosql.md)|Il **salvare i metadati** nella finestra di dialogo visualizzata quando si salva un progetto in cui mancanza i metadati.|  
+|[Salvare i metadati &#40;AccessToSQL&#41;](../../ssma/access/save-metadata-accesstosql.md)|Il **salvare i metadati** nella finestra di dialogo visualizzata quando si salva un progetto in cui mancanza i metadati.|  
   
 ## <a name="see-also"></a>Vedere anche  
 [Introduzione a SQL Server Migration Assistant per Access &#40;AccessToSQL&#41;](../../ssma/access/getting-started-with-sql-server-migration-assistant-for-access-accesstosql.md)  

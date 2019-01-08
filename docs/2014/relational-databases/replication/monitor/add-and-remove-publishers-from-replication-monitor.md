@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - Replication Monitor, adding and removing Publishers
@@ -13,12 +12,12 @@ ms.assetid: fa36c4b4-bfa5-494e-92e3-07a02d7332c3
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 217069061ea8169c3580e53de1d77462a85e29cd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 484aafea03bb1b053239e9948ac498403b5ac25d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48136011"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52788441"
 ---
 # <a name="add-and-remove-publishers-from-replication-monitor"></a>Aggiunta e rimozione di server di pubblicazione da Monitoraggio replica
   Se il server dal quale viene avviato Monitoraggio replica è un server di pubblicazione, quest'ultimo verrà automaticamente aggiunto al monitoraggio. È possibile aggiungere ulteriori server di pubblicazione tramite la finestra di dialogo **Aggiungi server di pubblicazione** . Dopo l'aggiunta di un server di pubblicazione, questo viene visualizzato in un gruppo di server nel riquadro sinistro di Monitoraggio replica. Il gruppo **Server di pubblicazione personali** è incluso per impostazione predefinita. Tuttavia è possibile creare nuovi gruppi per gestire una o più topologie di replica. Per informazioni sull'avvio di Monitoraggio replica, vedere [Avviare Monitoraggio replica](start-the-replication-monitor.md).  

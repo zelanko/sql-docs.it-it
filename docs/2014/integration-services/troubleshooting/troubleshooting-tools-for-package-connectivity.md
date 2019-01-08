@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Integration Services packages, troubleshooting
@@ -18,12 +17,12 @@ ms.assetid: 08a019f5-8ba7-4527-97c1-e9846d4022ff
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4e8059fcb984b4b2d6450cefaa20e5e01e06fb0b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7cba8e2547f2e8d13a399038a887a6c1b97351bf
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48051201"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52792881"
 ---
 # <a name="troubleshooting-tools-package-connectivity"></a>Risoluzione dei problemi relativi alla connettività dei pacchetti degli strumenti
   In [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sono disponibili gli strumenti e le caratteristiche per la risoluzione dei problemi relativi alla connettività tra pacchetti e alle origini dati da cui i pacchetti estraggono e caricano i dati.  
@@ -70,7 +69,7 @@ ms.locfileid: "48051201"
     ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Risoluzione dei problemi degli strumenti per lo sviluppo di pacchetti](troubleshooting-tools-for-package-development.md)   
- [Strumenti per la risoluzione dei problemi relativi all'esecuzione dei pacchetti](troubleshooting-tools-for-package-execution.md)  
+ [Risoluzione dei problemi relativi agli strumenti per lo sviluppo dei pacchetti](troubleshooting-tools-for-package-development.md)   
+ [Risoluzione dei problemi relativi agli strumenti per l'esecuzione del pacchetto](troubleshooting-tools-for-package-execution.md)  
   
   

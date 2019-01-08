@@ -10,12 +10,12 @@ ms.assetid: e365e9ca-c34b-44ae-840c-10e599fa614f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f990d8fef80320a887c0d333619aae2f1d895aa4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: aced288e62fefe46777993fd46130b8dd65e8d1b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48050033"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52510016"
 ---
 # <a name="guidelines-for-transaction-isolation-levels-with-memory-optimized-tables"></a>Linee guida per i livelli di isolamento delle transazioni con tabelle con ottimizzazione per la memoria
   In molti scenari è necessario specificare il livello di isolamento. L'isolamento delle transazioni per le tabelle ottimizzate per la memoria è diverso dalle tabelle basate su disco.  
@@ -56,7 +56,7 @@ ms.locfileid: "48050033"
   
  La garanzia offerta dal livello di isolamento SNAPSHOT (il livello più basso di isolamento supportato per le tabelle ottimizzate per la memoria) include le garanzie di READ COMMITTED. Ogni istruzione della transazione legge la stessa versione coerente del database. Non solo tutte le righe vengono lette dalla transazione di cui è stato eseguito il commit nel database, ma anche tutte le operazioni di lettura rilevano il set di modifiche apportate dallo stesso set di transazioni.  
   
- **Linee guida**: se solo la garanzia di isolamento READ COMMITTED è necessaria, utilizzare l'isolamento SNAPSHOT con le stored procedure compilate in modo nativo e per l'accesso a tabelle ottimizzate per la memoria tramite interpretato [!INCLUDE[tsql](../includes/tsql-md.md)].  
+ **Linee guida**: Se solo la garanzia di isolamento READ COMMITTED è necessaria, utilizzare l'isolamento SNAPSHOT con le stored procedure compilate in modo nativo e per l'accesso a tabelle ottimizzate per la memoria tramite interpretato [!INCLUDE[tsql](../includes/tsql-md.md)].  
   
  Per le transazioni in modalità autocommit, viene eseguito il mapping implicito del livello di isolamento READ COMMITTED a SNAPSHOT per le tabelle ottimizzate per la memoria. Pertanto, se il valore della sessione TRANSACTION ISOLATION LEVEL è impostato su READ COMMITTED, non è necessario specificare il livello di isolamento tramite un hint di tabella durante l'accesso alle tabelle ottimizzate per la memoria.  
   
@@ -80,7 +80,7 @@ BEGIN TRAN
 SELECT * FROM dbo.Customers c with (SNAPSHOT)   
 LEFT JOIN dbo.[Order History] oh   
     ON c.customer_id=oh.customer_id  
-…  
+...  
 COMMIT  
 ```  
   
@@ -91,13 +91,13 @@ COMMIT
   
      In alcune applicazioni è possibile che venga presupposto che i lettori attendano sempre i writer per eseguire il commit, in particolare in presenza di un'eventuale sincronizzazione tra le due transazioni nel livello applicazione.  
   
-     **Linee guida:** applicazioni non possono basarsi sul comportamento di blocco. Se un'applicazione richiede la sincronizzazione tra transazioni simultanee, tale logica può essere implementata nel livello applicazione o del livello di database, tramite [sp_getapplock &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-getapplock-transact-sql).  
+     **Linee guida:** Le applicazioni non possono basarsi sul comportamento di blocco. Se un'applicazione richiede la sincronizzazione tra transazioni simultanee, tale logica può essere implementata nel livello applicazione o del livello di database, tramite [sp_getapplock &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-getapplock-transact-sql).  
   
 -   Nelle transazioni che utilizzano l'isolamento READ COMMITTED ogni istruzione rileva la versione più recente delle righe nel database. Pertanto, le istruzioni successive rilevano le modifiche apportate nello stato del database.  
   
      Il polling di una tabella utilizzando un loop WHILE fino a trovare una nuova riga è un esempio di modello applicativo che utilizza questo presupposto. A ogni iterazione del ciclo la query rileverà gli aggiornamenti più recenti nel database.  
   
-     **Linee guida:** se un'applicazione deve eseguire il polling di una tabella con ottimizzazione per la memoria per ottenere le righe più recenti scritte nella tabella, spostare il ciclo di polling all'esterno dell'ambito della transazione.  
+     **Linee guida:** Se un'applicazione deve eseguire il polling di una tabella con ottimizzazione per la memoria per ottenere le righe più recenti scritte nella tabella, spostare il ciclo di polling all'esterno dell'ambito della transazione.  
   
      Di seguito è riportato un modello di un'applicazione di esempio che utilizza questo presupposto. Eseguire il polling di una tabella utilizzando un ciclo WHILE fino a trovare una nuova riga. In ogni iterazione del ciclo la query accederà agli aggiornamenti più recenti nel database.  
   

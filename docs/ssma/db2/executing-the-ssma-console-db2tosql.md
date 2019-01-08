@@ -10,12 +10,12 @@ ms.assetid: ce63f633-067d-4f04-b8e9-e1abd7ec740b
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 31333a7fd1c97f6915010c874de2f55dca3cd59c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6750e17b694086cf716e32629fcf3b3f3b48f486
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47659639"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52395194"
 ---
 # <a name="executing-the-ssma-console-db2tosql"></a>Esecuzione della Console SSMA (DB2ToSQL)
 Microsoft offre un solido set di script di comandi del file per eseguire e controllare le attività SSMA. Le sezioni che seguono in modo dettagliato lo stesso. L'applicazione console utilizza alcuni comandi di file di script standard come enumerate in questa sezione.  
@@ -291,7 +291,7 @@ o Gestione configurazione
 ```  
   
 ## <a name="migration-script-file-commands"></a>Comandi di File di Script di migrazione  
-I comandi di migrazione convertire lo schema di database di destinazione per lo schema di origine e la migrazione dei dati al server di destinazione. L'output di console predefinito impostazione per i comandi di migrazione è il report di output 'Full' con nessun report di errore dettagliato: riepilogo solo dal nodo radice dell'albero di origine oggetto.  
+I comandi di migrazione convertire lo schema di database di destinazione per lo schema di origine e la migrazione dei dati al server di destinazione. L'output di console predefinito impostazione per i comandi di migrazione è il report di output 'Full' con nessun report di errore dettagliato: Riepilogo solo dal nodo radice dell'albero di origine oggetto.  
   
 **Command**  
   
@@ -361,7 +361,7 @@ o Gestione configurazione
 ```  
 **Command**  
   
-eseguire la migrazione dei dati: esegue la migrazione dei dati di origine alla destinazione.  
+eseguire la migrazione di dati: Esegue la migrazione dei dati di origine alla destinazione.  
   
 **Script**  
   
@@ -475,7 +475,7 @@ Mapping dello schema del database di origine allo schema di destinazione.
 ## <a name="manageability-script-file-commands"></a>Comandi di File di Script di gestibilità  
 I comandi di facilità di gestione consentono di sincronizzare gli oggetti di database di destinazione con il database di origine.  
   
-L'output di console predefinito impostazione per i comandi di migrazione è il report di output 'Full' con nessun report di errore dettagliato: riepilogo solo dal nodo radice dell'albero di origine oggetto.  
+L'output di console predefinito impostazione per i comandi di migrazione è il report di output 'Full' con nessun report di errore dettagliato: Riepilogo solo dal nodo radice dell'albero di origine oggetto.  
   
 **Command**  
   
@@ -605,7 +605,7 @@ o Gestione configurazione
 ```  
   
 ## <a name="script-generation-script-file-commands"></a>Comandi File Script di generazione script  
-I comandi di generazione dello Script eseguono due attività: consentono di salvare la console di output in un file di script. e registrare l'output di T-SQL per la console o un file basato sul parametro specificato.  
+I comandi di generazione dello Script seguire due attività: Consentono di salvare la console di output in un file di script. e registrare l'output di T-SQL per la console o un file basato sul parametro specificato.  
   
 **Command**  
   

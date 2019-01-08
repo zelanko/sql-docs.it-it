@@ -14,12 +14,12 @@ ms.assetid: de709fd3-9eb2-44e1-a2f0-786e2b9602a6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 82df10e6b8effeb040b362dcf466eb173dfce4f9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 64215cff750e39dc78ad1a695bbe553d900f4120
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47629679"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52541868"
 ---
 # <a name="odbc-dynamic-cursors"></a>Cursori dinamici ODBC
 Un cursore dinamico è da considerarsi semplicemente: dinamico. È possibile rilevare eventuali modifiche apportate all'ordine, di appartenenza e i valori del set di risultati dopo l'apertura del cursore. Si supponga, ad esempio, un cursore dinamico recupera due righe e un'altra applicazione, quindi aggiorna una di queste righe ed elimina l'altro. Se il cursore dinamico tenta quindi di recupero di tali righe, non troverà la riga eliminata ma restituirà i nuovi valori per la riga aggiornata.  
@@ -41,6 +41,6 @@ SELECT * FROM Customers WHERE (Name > ?) AND (CustID > ?)
    ORDER BY Name, CustID  
 ```  
   
- Questa istruzione crea un secondo set di risultati, il primo set di righe di cui è il successivo set di righe nel set di risultati originale, ovvero in questo caso, il set di righe nella tabella Customers. Il cursore restituisce questo set di righe per l'applicazione.  
+ Questa istruzione crea un secondo set di risultati, il primo set di righe che di cui è il successivo set di righe nel set di risultati originale: in questo caso, il set di righe nella tabella Customers. Il cursore restituisce questo set di righe per l'applicazione.  
   
  È interessante notare che un cursore dinamico implementato in questo modo crea effettivamente molti set di risultati, che consente di rilevare le modifiche apportate al set di risultati originale. L'applicazione mai apprende dell'esistenza di questi set di risultati ausiliario; è sufficiente, viene visualizzato come se il cursore si trova in grado di rilevare le modifiche apportate al set di risultati originale.

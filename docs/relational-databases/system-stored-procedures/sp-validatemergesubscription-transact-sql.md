@@ -5,8 +5,7 @@ ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_validatemergesubscription
@@ -17,12 +16,12 @@ ms.assetid: d73ad03c-e5b3-4606-a0ee-7d75e12762a6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5c142ab2f8de6db1bfdd288734a47f6a4e9e6946
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d8cf4e8ee65a752bb9b8a9a5b2301453316548cf
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47746559"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52802473"
 ---
 # <a name="spvalidatemergesubscription-transact-sql"></a>sp_validatemergesubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +53,7 @@ sp_validatemergesubscription [@publication=] 'publication'
  [  **@level=** ] *livello*  
  Tipo di convalida da eseguire. *livello* viene **tinyint**, non prevede alcun valore predefinito. I possibili valori del livello sono i seguenti.  
   
-|Valore del livello|Description|  
+|Valore del livello|Descrizione|  
 |-----------------|-----------------|  
 |**1**|Convalida solo tramite conteggio delle righe.|  
 |**2**|Convalida mediante conteggio delle righe e checksum.|  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.oledbdest.f1
@@ -21,12 +20,12 @@ ms.assetid: 873a2fa0-2a02-41fc-a80a-ec9767f36a8a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 39f15609f326699c77688cfef599eed9c01adab6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0aedda782c65cbe8d28f066b7e5e97d3e7fc87cd
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48058131"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52790773"
 ---
 # <a name="ole-db-destination"></a>Destinazione OLE DB
   La destinazione OLE DB consente di caricare dati in un'ampia gamma di database conformi con OLE DB, tramite una tabella o vista di database oppure un comando SQL. L'origine OLE DB, ad esempio, può caricare dati nelle tabelle dei database di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Access e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -46,7 +45,7 @@ ms.locfileid: "48058131"
 > [!NOTE]  
 >  La destinazione OLE DB non supporta parametri. Per eseguire un'istruzione INSERT con parametri, è possibile utilizzare la trasformazione Comando OLE DB. Per altre informazioni, vedere [Trasformazione Comando OLE DB](transformations/ole-db-command-transformation.md).  
   
- Quando nella destinazione OLE DB vengono caricati dati che utilizzano un Double-Byte Character Set (DBCS), è possibile che tali dati vengano danneggiati se nella modalità di accesso non viene utilizzata l'opzione di caricamento rapido e la gestione connessione OLE DB utilizza il provider [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SQLOLEDB). Per assicurare l'integrità dei dati DBCS è necessario configurare Gestione connessione OLE DB in modo da usare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client o una delle modalità di accesso con caricamento rapido: **Tabella o vista - Caricamento rapido** o **Variabile nome vista o nome tabella - Caricamento rapido**. Entrambe le opzioni sono disponibili nella finestra di dialogo **Editor destinazione OLE DB** . Durante la programmazione di [!INCLUDE[ssIS](../../includes/ssis-md.md)] modello a oggetti, è necessario impostare la proprietà AccessMode su `OpenRowset Using FastLoad`, o `OpenRowset Using FastLoad From Variable`.  
+ Quando nella destinazione OLE DB vengono caricati dati che utilizzano un Double-Byte Character Set (DBCS), è possibile che tali dati vengano danneggiati se nella modalità di accesso non viene utilizzata l'opzione di caricamento rapido e la gestione connessione OLE DB utilizza il provider [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SQLOLEDB). Per garantire l'integrità dei dati DBCS è necessario configurare la gestione connessione OLE DB da utilizzare il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client o usare una delle modalità di accesso con caricamento rapido: **Tabella o vista - caricamento rapido** oppure **vista o nome variabile nome tabella - caricamento rapido**. Entrambe le opzioni sono disponibili nella finestra di dialogo **Editor destinazione OLE DB** . Durante la programmazione di [!INCLUDE[ssIS](../../includes/ssis-md.md)] modello a oggetti, è necessario impostare la proprietà AccessMode su `OpenRowset Using FastLoad`, o `OpenRowset Using FastLoad From Variable`.  
   
 > [!NOTE]  
 >  Se si usa la finestra di dialogo **Editor destinazione OLE DB[!INCLUDE[ssIS](../../includes/ssis-md.md)] in Progettazione**  per creare la tabella di destinazione in cui la destinazione OLE DB inserisce i dati, sarà necessario selezionare la nuova tabella manualmente. È necessario eseguire la selezione manuale quando un provider OLE DB, ad esempio il provider Microsoft OLE DB per DB2, aggiunge automaticamente gli identificatori di schema al nome della tabella.  
@@ -84,11 +83,11 @@ ms.locfileid: "48058131"
   
  Oltre alle opzioni di caricamento rapido elencate nella finestra di dialogo **Editor destinazione OLE DB** , è possibile configurare la destinazione OLE DB in modo da usare le opzioni per il caricamento bulk seguenti digitandole nella proprietà FastLoadOptions della finestra di dialogo **Editor avanzato** .  
   
-|Opzione per il caricamento rapido|Description|  
+|Opzione per il caricamento rapido|Descrizione|  
 |----------------------|-----------------|  
 |KILOBYTES_PER_BATCH|Specifica le dimensioni in kilobyte del batch da inserire. L'opzione ha il formato `KILOBYTES_PER_BATCH`  =  \<valore intero positivo**>**.|  
 |FIRE_TRIGGERS|Specifica se attivare o meno i trigger sulla tabella inserita. La sintassi dell'opzione è **FIRE_TRIGGERS**. La presenza dell'opzione indica che i trigger vengono attivati.|  
-|ORDER|Specifica la modalità con ordinare i dati in input. La sintassi dell'opzione è ORDER \<nome colonna> ASC&#124;DESC. È possibile elencare qualsiasi numero di colonne e l'indicazione del tipo di ordinamento è facoltativa. Se il tipo di ordinamento viene omesso, l'operazione di inserimento verrà eseguita presupponendo che i dati non siano ordinati.<br /><br /> Nota: è possibile migliorare le prestazioni usando l'opzione ORDER per ordinare i dati di input in base all'indice cluster nella tabella.|  
+|ORDER|Specifica la modalità con ordinare i dati in input. La sintassi dell'opzione è ORDER \<nome colonna> ASC&#124;DESC. È possibile elencare qualsiasi numero di colonne e l'indicazione del tipo di ordinamento è facoltativa. Se il tipo di ordinamento viene omesso, l'operazione di inserimento verrà eseguita presupponendo che i dati non siano ordinati.<br /><br /> Nota: È possibile migliorare le prestazioni utilizzando l'opzione ORDER per ordinare i dati di input in base all'indice cluster della tabella.|  
   
  Anche se nelle parole chiave non viene rilevata la distinzione tra maiuscole e minuscole, le parole chiave [!INCLUDE[tsql](../../includes/tsql-md.md)] vengono in genere digitate in maiuscolo.  
   
@@ -104,9 +103,9 @@ ms.locfileid: "48058131"
   
 -   [Editor destinazione OLE DB &#40;pagina Gestione connessione&#41;](../ole-db-destination-editor-connection-manager-page.md)  
   
--   [Editor destinazione OLE DB &#40;pagina mapping&#41;](../ole-db-destination-editor-mappings-page.md)  
+-   [Editor destinazione OLE DB &#40;pagina Mapping&#41;](../ole-db-destination-editor-mappings-page.md)  
   
--   [Editor destinazione OLE DB &#40;pagina dell'Output degli errori&#41;](../ole-db-destination-editor-error-output-page.md)  
+-   [Editor destinazione OLE DB &#40;pagina Output degli errori&#41;](../ole-db-destination-editor-error-output-page.md)  
   
  Nella finestra di dialogo **Editor avanzato** sono disponibili le proprietà che è possibile impostare a livello di codice. Per ulteriori informazioni sulle proprietà che è possibile impostare nella finestra di dialogo **Editor avanzato** o a livello di codice, fare clic su uno degli argomenti seguenti:  
   
@@ -116,14 +115,14 @@ ms.locfileid: "48058131"
   
  Per ulteriori informazioni sulle procedure per l'impostazione delle proprietà, fare clic su uno degli argomenti seguenti:  
   
--   [Caricare dati tramite la destinazione OLE DB](ole-db-destination.md)  
+-   [Caricamento dei dati tramite la destinazione OLE DB](ole-db-destination.md)  
   
--   [Impostare le proprietà di un componente del flusso di dati](set-the-properties-of-a-data-flow-component.md)  
+-   [Impostazione delle proprietà di un componente del flusso di dati](set-the-properties-of-a-data-flow-component.md)  
   
 ## <a name="related-content"></a>Contenuto correlato  
  [Origine OLE DB](ole-db-source.md)  
   
- [Integration Services &#40;SSIS&#41; le variabili](../integration-services-ssis-variables.md)  
+ [Variabili di Integration Services &#40;SSIS&#41;](../integration-services-ssis-variables.md)  
   
  [Flusso di dati](data-flow.md)  
   

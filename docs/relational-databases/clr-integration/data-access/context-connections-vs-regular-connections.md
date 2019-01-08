@@ -13,18 +13,18 @@ ms.assetid: a1dead02-be88-4b16-8cb2-db1284856764
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 63fd25aa796be6f0fce27bfbfa5b7da36d35e2d8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f4810a7a7d117c498ce74dbe978716900b25d19f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47619599"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52516777"
 ---
 # <a name="context-connections-vs-regular-connections"></a>Connessioni di contesto e connessioni normali
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Se si esegue una connessione a un server remoto, utilizzare sempre connessioni normali anziché connessioni di contesto. Se è necessario connettersi allo stesso server in cui è in esecuzione la stored procedure o la funzione, utilizzare la connessione di contesto nella maggior parte dei casi. Questa connessione offre vantaggi quali l'esecuzione nello stesso spazio della transazione e la non necessità di eseguire una nuova autenticazione.  
   
- L'utilizzo della connessione di contesto, inoltre, consente in genere prestazioni migliori e un minore utilizzo delle risorse. Poiché la connessione di contesto è una connessione solo in-process, può contattare il server "direttamente" ignorando il protocollo di rete e i livelli di trasporto per inviare istruzioni Transact-SQL e ricevere risultati. Viene ignorato anche il processo di autenticazione. La figura seguente illustra i componenti principali dei **SqlClient** gestiti provider, nonché come i diversi componenti interagiscono tra loro quando si usa una connessione normale e quando si utilizza la connessione di contesto.  
+ L'utilizzo della connessione di contesto, inoltre, consente in genere prestazioni migliori e un minore utilizzo delle risorse. La connessione di contesto è una connessione processo solo in, può contattare il server "direttamente" ignorando i livelli di trasporto e protocollo di rete per inviare istruzioni Transact-SQL e ricevere risultati. Viene ignorato anche il processo di autenticazione. La figura seguente illustra i componenti principali dei **SqlClient** gestiti provider, nonché come i diversi componenti interagiscono tra loro quando si usa una connessione normale e quando si utilizza la connessione di contesto.  
   
  ![Percorsi del codice di un contesto e una connessione normale. ](../../../relational-databases/clr-integration/data-access/media/clrintdataaccess.gif "i percorsi di un contesto e una connessione normale del codice.")  
   

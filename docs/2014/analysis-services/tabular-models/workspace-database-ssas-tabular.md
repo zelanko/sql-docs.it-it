@@ -11,12 +11,12 @@ ms.assetid: 662daf08-a514-44a7-8675-44644aa454a2
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 65d4a23044084f18662c3aca1cc68bfd157ea3dc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d70cf1724eb67dbf8f1a75989df5f4021b5512d6
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48134991"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52416702"
 ---
 # <a name="workspace-database-ssas-tabular"></a>Database dell'area di lavoro (SSAS tabulare)
   Il database dell'area di lavoro modello tabulare, usato durante la creazione del modello, viene creato quando si crea un nuovo progetto di modello tabulare in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Tale database risiede in memoria in un'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in esecuzione in modalità tabulare, in genere nello stesso computer di [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
@@ -62,7 +62,7 @@ ms.locfileid: "48134991"
 > [!NOTE]  
 >  Le proprietà **Server dell'area di lavoro**, **Memorizzazione area di lavoro** e **Backup dei dati** dispongono di impostazioni predefinite applicate quando si crea un nuovo progetto di modello. È possibile modificare le impostazioni predefinite per nuovi progetti di modello nella pagina **Modellazione dati** nelle impostazioni di **Analysis Server** in Strumenti\finestra di dialogo Opzioni. Queste proprietà, come altre, possono essere impostate anche per ogni progetto di modello nella finestra **Proprietà** . Le modifiche apportate alle impostazioni predefinite non verranno applicate ai progetti di modello già creati. Per altre informazioni, vedere [Configurare la modellazione dei dati e le proprietà di distribuzione predefinite &#40;SSAS tabulare&#41;](configure-default-data-modeling-and-deployment-properties-ssas-tabular.md).  
   
-|Proprietà|Impostazione predefinita|Description|  
+|Proprietà|Impostazione predefinita|Descrizione|  
 |--------------|---------------------|-----------------|  
 |**Database dell'area di lavoro**|Nome del progetto, seguito da un carattere di sottolineatura, dal nome utente, da un carattere di sottolineatura e infine da un GUID.|Nome del database dell'area di lavoro utilizzato per l'archiviazione e la modifica del progetto di modello. Al termine della creazione di un progetto di modello tabulare, questo database verrà visualizzato nell'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] specificata nella proprietà **Server dell'area di lavoro**. Questa proprietà non può essere impostata nella finestra Proprietà.|  
 |**Memorizzazione area di lavoro**|Scarica dalla memoria|Viene specificato come viene mantenuto un database dell'area di lavoro dopo la chiusura di un progetto di modello. In un database dell'area di lavoro sono inclusi i metadati del modello e i dati importati. In alcuni casi, le dimensioni del database dell'area di lavoro possono essere elevate e utilizzare quindi una grande quantità di memoria. Per impostazione predefinita, quando si chiude un progetto di modello in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], il database dell'area di lavoro viene scaricato dalla memoria. Quando si modifica questa impostazione, è importante considerare le risorse di memoria disponibili, nonché pianificare la frequenza con la quale utilizzare il progetto di modello. Per questa impostazione della proprietà sono disponibili le opzioni seguenti:<br /><br /> **Mantieni in memoria** : viene specificato di mantenere il database dell'area di lavoro in memoria dopo la chiusura di un progetto di modello. Per questa opzione verrà utilizzata più memoria; tuttavia, in caso di apertura di un progetto di modello in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], vengono utilizzate meno risorse e i carichi nel database dell'area di lavoro verranno eseguiti più velocemente.<br /><br /> **Scarica dalla memoria** : viene specificato di mantenere il database dell'area di lavoro su disco, ma non più in memoria dopo la chiusura di un progetto di modello. Per questa opzione verrà usa meno memoria. Tuttavia, in caso di apertura di un progetto di modello in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], il database dell'area di lavoro deve essere collegato di nuovo. Vengono usate risorse aggiuntive e il caricamento del progetto di modello sarà più lento rispetto a quando il database dell'area di lavoro è mantenuto in memoria. Utilizzare questa opzione quando le risorse in memoria sono limitate o quando in uso in un database dell'area di lavoro remoto.<br /><br /> **Elimina area di lavoro** : viene specificato di eliminare il database dell'area di lavoro dalla memoria e di non mantenerlo su disco dopo la chiusura del progetto di modello. Per questa opzione verranno usati meno memoria e meno spazio di archiviazione. Tuttavia, in caso di apertura di un progetto di modello in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], vengono use risorse aggiuntive e il caricamento del progetto di modello sarà più lento rispetto a quando il database dell'area di lavoro è mantenuto in memoria o su disco. Utilizzare questa opzione quando i progetti di modello vengono utilizzati solo occasionalmente.<br /><br /> <br /><br /> L'impostazione predefinita per questa proprietà può essere modificata nella pagina **Modellazione dati** nelle impostazioni di **Analysis Server** in Strumenti\finestra di dialogo Opzioni.|  
@@ -76,12 +76,12 @@ ms.locfileid: "48134991"
   
 ##  <a name="bkmk_related_tasks"></a> Attività correlate  
   
-|Argomento|Description|  
+|Argomento|Descrizione|  
 |-----------|-----------------|  
-|[Proprietà del modello &#40;tabulare di SSAS&#41;](model-properties-ssas-tabular.md)|Vengono forniti passaggi di configurazione e descrizioni per le proprietà del database dell'area di lavoro di un modello.|  
+|[Proprietà modello &#40;SSAS tabulare&#41;](model-properties-ssas-tabular.md)|Fornisce le descrizioni e i passaggi di configurazione per area di lavoro del modello le proprietà del database.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Configurare le proprietà di distribuzione e la modellazione dei dati predefinite &#40;tabulare di SSAS&#41;](configure-default-data-modeling-and-deployment-properties-ssas-tabular.md)   
- [Proprietà del progetto &#40;tabulare di SSAS&#41;](properties-ssas-tabular.md)  
+ [Configurare la modellazione dei dati e le proprietà di distribuzione predefinite &#40;SSAS tabulare&#41;](configure-default-data-modeling-and-deployment-properties-ssas-tabular.md)   
+ [Proprietà del progetto &#40;SSAS tabulare&#41;](properties-ssas-tabular.md)  
   
   

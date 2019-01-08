@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - search criteria [SQL Server], excluding rows
@@ -21,12 +21,12 @@ ms.assetid: ba4e1202-31a2-444d-8365-c68a530ef223
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: be914343621513cfaecbd7cac2fc6e67fca5c2d5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3785a777571ef7659b1ae21a693e6754659a80e5
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48106161"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52771961"
 ---
 # <a name="include-or-exclude-rows-visual-database-tools"></a>Includere o escludere righe (Visual Database Tools)
   Per limitare il numero di righe restituite da una query di selezione, è necessario creare condizioni di ricerca o criteri di filtro. In SQL le condizioni di ricerca vengono indicate nella clausola WHERE dell'istruzione o, se si sta creando una query di aggregazione, nella clausola HAVING.  

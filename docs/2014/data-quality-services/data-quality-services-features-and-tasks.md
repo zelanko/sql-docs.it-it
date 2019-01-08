@@ -10,15 +10,15 @@ ms.assetid: 84928476-3a98-4bac-bb47-6346142752d0
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: de1f3e5e63784585ce82805bc392ec0d5f6b7e15
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 4886ebb992c00d587ac03e5424255bd6d86cd63e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51032528"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52531642"
 ---
 # <a name="data-quality-services-features-and-tasks"></a>Funzionalità e attività di Data Quality Services
-  In questo argomento sono incluse le informazioni che consentono a qualsiasi tipologia di utente, amministratore dati, amministratore di Data Quality Services o amministratore di SQL Server, di preparare ed eseguire un progetto Data Quality.  
+  Questo argomento contiene le informazioni che sono necessarie a chiunque (amministratore dei dati, amministratore di Data Quality Services o amministratore di SQL Server) per preparare ed eseguire un progetto Data Quality.  
   
  ![Icona cartella File di piccole dimensioni](../../2014/integration-services/media/filefolder-small.gif "Icona cartella File di piccole dimensioni") **Progettazione e implementazione di una soluzione Data Quality**  
  [Applicazione Data Quality Client](../../2014/data-quality-services/data-quality-client-application.md)  
