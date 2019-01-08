@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 0b79db4806f22c7d25af4f292fedddb46b40d1e7
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 2d1e07fca7c18bdecba265a9e69994a9f728e9ba
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51696940"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52398619"
 ---
 # <a name="configure-windows-server-update-services-wsus-in-analytics-platform-system"></a>Configurare Windows Server Update Services (WSUS) nel sistema di piattaforma Analitica
 Queste istruzioni illustrano i passaggi per utilizzare la procedura guidata configurazione di Windows Server Update Services (WSUS) per configurare WSUS per il sistema di piattaforma Analitica. È necessario configurare WSUS prima di poter applicare aggiornamenti software per l'appliance. Windows Server Update Services è già installato nella macchina virtuale VMM dell'appliance.  

@@ -11,12 +11,12 @@ ms.assetid: c428d717-05de-436c-b9dc-e8c1925a60ca
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6def0344726c2b4427d12b548e60d3b68135369d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d3fd3692049ef1a5fb85ef188a73d453762d4daf
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48099711"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52420193"
 ---
 # <a name="tables-and-columns-ssas-tabular"></a>Tabelle e colonne (SSAS tabulare)
   Dopo aver aggiunto tabelle e dati in un modello tramite l'Importazione guidata tabella, è possibile iniziare a utilizzare le tabella aggiungendo nuove colonne di dati, creando relazioni tra tabelle, definendo calcoli che consentono di estendere i dati, nonché filtrando e ordinando i dati nelle tabelle per una visualizzazione più semplice.  
@@ -58,18 +58,18 @@ ms.locfileid: "48099711"
   
 ##  <a name="bkmk_related_tasks"></a> Attività correlate  
   
-|Argomento|Description|  
+|Argomento|Descrizione|  
 |-----------|-----------------|  
-|[Aggiungere colonne a una tabella &#40;tabulare di SSAS&#41;](add-columns-to-a-table-ssas-tabular.md)|Viene descritto come aggiungere una colonna di origine a una definizione della tabella.|  
-|[Eliminare una colonna &#40;tabulare di SSAS&#41;](delete-a-column-ssas-tabular.md)|Viene descritto come eliminare una colonna di tabella di un modello utilizzando Progettazione modelli o la finestra di dialogo Proprietà tabella.|  
-|[Modificare i mapping di filtri di riga, colonna o tabella &#40;modello tabulare di SSAS&#41;](change-table-column-or-row-filter-mappings-ssas-tabular.md)|Viene descritto come modificare i mapping di filtri tabella, colonna o riga tramite l'anteprima della tabella o l'editor di query SQL nella finestra di dialogo Modifica proprietà tabella.|  
-|[Specificare contrassegna come tabella data per l'uso con Intelligence ora &#40;modello tabulare di SSAS&#41;](specify-mark-as-date-table-for-use-with-time-intelligence-ssas-tabular.md)|Viene descritto come utilizzare la finestra di dialogo Contrassegna come tabella data per specificare una tabella relativa alla data e una colonna dell'identificatore univoco. La specifica di una tabella relativa alla data e l'identificatore univoco è necessaria quando si utilizzano le funzioni di Business Intelligence per la gerarchia temporale nelle formule DAX.|  
-|[Aggiungere una tabella &#40;tabulare di SSAS&#41;](add-a-table-ssas-tabular.md)|Viene descritto come aggiungere una tabella da un'origine dati tramite una connessione all'origine dati esistente.|  
-|[Eliminare una tabella &#40;tabulare di SSAS&#41;](delete-a-table-ssas-tabular.md)|Viene descritto come eliminare le tabelle non più necessarie nel database dell'area di lavoro modello.|  
-|[Rinominare una tabella o una colonna &#40;tabulare di SSAS&#41;](rename-a-table-or-column-ssas-tabular.md)|Viene descritto come rinominare una tabella o una colonna per renderla più identificabile nel modello.|  
-|[Impostare il tipo di dati di una colonna &#40;tabulare di SSAS&#41;](set-the-data-type-of-a-column-ssas-tabular.md)|Viene descritto come modificare il tipo di dati di una colonna. Il tipo di dati consente di definire la modalità di archiviazione e presentazione dei dati della colonna.|  
-|[Nascondere o bloccare le colonne &#40;tabulare di SSAS&#41;](hide-or-freeze-columns-ssas-tabular.md)|Viene descritto come nascondere le colonne che non si desidera visualizzare e come mantenere visibile un'area di un modello mentre si scorre fino un'altra area del modello bloccando colonne specifiche in un'area.|  
-|[Le colonne calcolate &#40;tabulare di SSAS&#41;](ssas-calculated-columns.md)|Negli argomenti di questa sezione viene descritto come utilizzare le colonne calcolate per aggiungere dati aggregati al modello.|  
-|[Filtrare e ordinare i dati &#40;tabulare di SSAS&#41;](../filter-and-sort-data-ssas-tabular.md)|Negli argomenti di questa sezione viene descritto come filtrare oppure ordinare i dati utilizzando i controlli disponibili in Progettazione modelli.|  
+|[Aggiungere colonne a una tabella &#40;SSAS tabulare&#41;](add-columns-to-a-table-ssas-tabular.md)|Viene descritto come aggiungere una colonna di origine a una definizione della tabella.|  
+|[Eliminare una colonna &#40;SSAS tabulare&#41;](delete-a-column-ssas-tabular.md)|Viene descritto come eliminare una colonna di tabella di un modello utilizzando Progettazione modelli o la finestra di dialogo Proprietà tabella.|  
+|[Modificare i mapping di filtri tabella, colonna o riga &#40;SSAS tabulare&#41;](change-table-column-or-row-filter-mappings-ssas-tabular.md)|Viene descritto come modificare i mapping di filtri tabella, colonna o riga tramite l'anteprima della tabella o l'editor di query SQL nella finestra di dialogo Modifica proprietà tabella.|  
+|[Specificare Contrassegna come tabella data per l'utilizzo con funzionalità di Business Intelligence per le gerarchie temporali &#40;SSAS tabulare&#41;](specify-mark-as-date-table-for-use-with-time-intelligence-ssas-tabular.md)|Viene descritto come utilizzare la finestra di dialogo Contrassegna come tabella data per specificare una tabella relativa alla data e una colonna dell'identificatore univoco. La specifica di una tabella relativa alla data e l'identificatore univoco è necessaria quando si utilizzano le funzioni di Business Intelligence per la gerarchia temporale nelle formule DAX.|  
+|[Aggiungere una tabella &#40;SSAS tabulare&#41;](add-a-table-ssas-tabular.md)|Viene descritto come aggiungere una tabella da un'origine dati tramite una connessione all'origine dati esistente.|  
+|[Eliminare una tabella &#40;SSAS tabulare&#41;](delete-a-table-ssas-tabular.md)|Viene descritto come eliminare le tabelle non più necessarie nel database dell'area di lavoro modello.|  
+|[Rinominare una tabella o una colonna &#40;SSAS tabulare&#41;](rename-a-table-or-column-ssas-tabular.md)|Viene descritto come rinominare una tabella o una colonna per renderla più identificabile nel modello.|  
+|[Impostare il tipo di dati di una colonna &#40;SSAS tabulare&#41;](set-the-data-type-of-a-column-ssas-tabular.md)|Viene descritto come modificare il tipo di dati di una colonna. Il tipo di dati consente di definire la modalità di archiviazione e presentazione dei dati della colonna.|  
+|[Nascondere o bloccare colonne &#40;SSAS tabulare&#41;](hide-or-freeze-columns-ssas-tabular.md)|Viene descritto come nascondere le colonne che non si desidera visualizzare e come mantenere visibile un'area di un modello durante lo scorrimento a un'altra area del modello bloccando colonne specifiche (blocco) in un'area.|  
+|[Colonne calcolate &#40;SSAS tabulare&#41;](ssas-calculated-columns.md)|Negli argomenti di questa sezione viene descritto come utilizzare le colonne calcolate per aggiungere dati aggregati al modello.|  
+|[Filtrare e ordinare dati &#40;SSAS tabulare&#41;](../filter-and-sort-data-ssas-tabular.md)|Negli argomenti di questa sezione viene descritto come filtrare oppure ordinare i dati utilizzando i controlli disponibili in Progettazione modelli.|  
   
   

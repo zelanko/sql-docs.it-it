@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- integration-services
+ms.technology: integration-services
 ms.topic: reference
 dev_langs:
 - VB
@@ -23,12 +21,12 @@ ms.assetid: b53b110a-dcf4-4464-ae98-81e892ab74c3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 61513c44cf8e2dcc6449162fc042d828e762ffdb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d0a7316f78bcc26bfd8b939ab555519780af25df
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48062107"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53375663"
 ---
 # <a name="selecting-input-columns-programmatically"></a>Selezione delle colonne di input a livello di programmazione
   Dopo avere connesso i componenti a livello di programmazione, selezionare le colonne dei componenti upstream che verranno trasformate o passate ai componenti downstream. Se non si selezionano colonne di input per il componente, quest'ultimo non riceve righe dall'attività Flusso di dati.  
@@ -212,7 +210,7 @@ Module Module1
 End Module  
 ```  
   
-![Icona di Integration Services (piccola)](../media/dts-16.gif "icona di Integration Services (piccola)")**rimangono fino a Date con Integration Services** <br /> Per i download, gli articoli, gli esempi e i video Microsoft più recenti, oltre alle soluzioni selezionate dalla community, visitare la pagina [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sul sito MSDN:<br /><br /> [Visita la pagina di Integration Services su MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Per ricevere una notifica automatica su questi aggiornamenti, sottoscrivere i feed RSS disponibili nella pagina.  
+![Icona di Integration Services (piccola)](../media/dts-16.gif "icona di Integration Services (piccola)")**rimangono fino a Date con Integration Services**<br /> Per i download, gli articoli, gli esempi e i video Microsoft più recenti, oltre alle soluzioni selezionate dalla community, visitare la pagina [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sul sito MSDN:<br /><br /> [Visita la pagina di Integration Services su MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Per ricevere una notifica automatica su questi aggiornamenti, sottoscrivere i feed RSS disponibili nella pagina.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Salvataggio di un pacchetto a livello di programmazione](../building-packages-programmatically/saving-a-package-programmatically.md)  

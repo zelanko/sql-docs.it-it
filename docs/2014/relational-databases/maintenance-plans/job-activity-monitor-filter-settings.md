@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.jobactivitymon.filter.f1
@@ -13,12 +12,12 @@ ms.assetid: 89cb0055-5262-447f-8464-7203d4caba78
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 285d4863cfb3b3ccd812d7e0b4894d4446257562
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: b6c7b5cff8b288e688f2744c615d62bd8417acf5
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49168822"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52801253"
 ---
 # <a name="job-activity-monitor-filter-settings"></a>Monitoraggio attività processi (Impostazioni filtro)
   Utilizzare questa pagina per ridurre il numero di righe visualizzate in Monitoraggio attività processi. Immettere i criteri in una o più caselle disponibili per visualizzare solo le righe che soddisfano i valori specificati. Alcune caselle, ad esempio **Stato** o **Tipo blocco** , consentono di immettere un numero finito di valori possibili, disponibili in un elenco a discesa. In altre caselle, ad esempio **Applicazione** , è invece possibile immettere qualsiasi tipo e numero di valori sotto forma di elenco delimitato da virgole. Le icone sulla barra degli strumenti possono essere utilizzate per ordinare le caselle disponibili alfabeticamente o in base alla categoria. Fare clic sui criteri per visualizzarne una breve descrizione.  
@@ -28,7 +27,7 @@ ms.locfileid: "49168822"
 ## <a name="all-jobs"></a>Tutti i processi  
  Questo gruppo di criteri di filtro è disponibile per il filtraggio di Monitoraggio attività processi.  
   
- **Nome**  
+ **Name**  
  Consente di filtrare i processi in base al nome.  
   
  **Prossima esecuzione**  
@@ -46,7 +45,7 @@ ms.locfileid: "49168822"
  **Abilitata**  
  Consente di visualizzare solo i processi abilitati o non abilitati.  
   
- **Category**  
+ **Categoria**  
  Consente di filtrare in base alla categoria del processo.  
   
  **Pianificato**  

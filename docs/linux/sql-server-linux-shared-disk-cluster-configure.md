@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
-ms.openlocfilehash: 322160591d1e4ce741459e3a338bca30b0ea1603
-ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
+ms.openlocfilehash: 87bffa2c93442aabc2dd6f193373e024466ecea6
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49085467"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52397103"
 ---
 # <a name="configure-failover-cluster-instance---sql-server-on-linux-rhel"></a>Configurare l'istanza del cluster di failover: SQL Server su Linux (RHEL)
 
@@ -131,10 +131,10 @@ In ogni nodo del cluster, configurare il file hosts. Il file hosts deve includer
    sudo firewall-cmd --reload
    ```
 
-   > Se si sta usando un altro firewall che non ha una configurazione a disponibilità elevata predefinita, è necessario aprire le porte seguenti per consentire a Pacemaker di comunicare con altri nodi del cluster
+   > Se si usa un altro firewall che non dispone di una configurazione a disponibilità elevata predefinita, le porte seguenti devono essere aperte per consentire a essere in grado di comunicare con altri nodi del cluster Pacemaker
    >
-   > * TCP: porte 2224, 3121, 21064
-   > * UDP: porta 5405
+   > * TCP: Porte 2224, 3121, 21064
+   > * UDP: Porta 5405
 
 1. Installare i pacchetti Pacemaker in ogni nodo.
 

@@ -19,12 +19,12 @@ ms.assetid: 9d1efde6-8fa4-42ac-80e5-37456ffebd0b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 145bfe599fa0117b689a002d47807eca217ba7bc
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 39fc70d04635008cf00a9c8e02ef0bae97af1cbf
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51669090"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52540302"
 ---
 # <a name="spfilestreamforcegarbagecollection-transact-sql"></a>sp_filestream_force_garbage_collection (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ sp_filestream_force_garbage_collection
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- **@dbname** = *database_name***'**  
+ **@dbname** = _database_name_**'**  
  Indica il nome del database in cui eseguire il Garbage Collector.  
   
 > [!NOTE]  
@@ -56,13 +56,13 @@ sp_filestream_force_garbage_collection
   
 |||  
 |-|-|  
-|valore|Description|  
+|Value|Descrizione|  
 |0|Operazione riuscita|  
 |1|Operazione non riuscita|  
   
 ## <a name="result-sets"></a>Set di risultati  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |*file_name*|Indica il nome del contenitore FILESTREAM|  
 |*num_collected_items*|Indica il numero di elementi FILESTREAM (file/directory) che sono stati sottoposti a Garbage Collection (eliminati) in questo contenitore.|  
@@ -97,7 +97,7 @@ GO
 EXEC sp_filestream_force_garbage_collection @dbname = N'FSDB';  
 ```  
   
-### <a name="b-specifying-a-container"></a>B. Specifica di un contenitore  
+### <a name="b-specifying-a-container"></a>b. Specifica di un contenitore  
   
 ```sql  
 USE FSDB;  

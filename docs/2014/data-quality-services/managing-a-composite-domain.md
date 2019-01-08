@@ -10,12 +10,12 @@ ms.assetid: 47821eff-800b-4053-8d36-e42bbc267f54
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: beb1b18d03b557aad4709ee024be888c712c2c12
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: f40a2df471dc1e0593d25f96c1b04837822725d7
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51031858"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52544539"
 ---
 # <a name="managing-a-composite-domain"></a>Gestione di un dominio composito
   In questo argomento viene descritto l'utilizzo dei domini composti in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Talvolta un singolo dominio non è sufficiente per rappresentare i dati in un campo ed è possibile rappresentare i dati solo raggruppando i singoli domini. A tale scopo, è possibile creare un dominio composito. Un dominio composito è costituito da due o più singoli domini di cui viene eseguito il mapping a un campo dati costituito da più termini correlati che non vengono analizzati, ma inclusi in un singolo valore composito. Ogni termine nel valore sarà rappresentato da un singolo dominio diverso. Dopo avere incluso i singoli domini in domini compositi e quindi eseguito il mapping del dominio composito al campo dati, è possibile compilare le informazioni nella Knowledge Base sui dati del campo compilando le informazioni nei singoli domini. Un dominio composito, analogamente a un singolo dominio, è una rappresentazione semantica dei dati in un singolo campo dati.  
@@ -24,7 +24,7 @@ ms.locfileid: "51031858"
   
  I domini compositi hanno funzionalità diverse rispetto ai singoli domini. Non è possibile modificare i valori nel dominio composito. È necessario eseguire tale operazione in un singolo dominio. Con i domini compositi è possibile utilizzare le regole tra domini per testare i valori nei singoli domini del dominio composito. È inoltre possibile visualizzare le combinazioni di valori presenti nei domini compositi.  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  L'utilizzo di un dominio composito consente di effettuare le operazioni seguenti:  
   
 |||  

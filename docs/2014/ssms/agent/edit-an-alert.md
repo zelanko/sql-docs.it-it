@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent, alerts
@@ -14,12 +14,12 @@ ms.assetid: f518e528-cc8f-446a-b37d-98505b86e430
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0bd265d8214e3ad97fd899a93cfbcc933e169d7a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f035f9173477a3954a949f9ed27bc6f4f66be741
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48179051"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52795743"
 ---
 # <a name="edit-an-alert"></a>Edit an Alert
   In questo argomento viene descritto come modificare un avviso di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -28,7 +28,7 @@ ms.locfileid: "48179051"
   
 -   **Prima di iniziare:**  
   
-     [Security](#Security)  
+     [Sicurezza](#Security)  
   
 -   **Per modificare un avviso utilizzando:**  
   
@@ -59,7 +59,7 @@ ms.locfileid: "48179051"
   
 6.  Al termine, fare clic su **OK**.  
   
-##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
   
 #### <a name="to-edit-an-alert"></a>Per modificare un avviso  
   

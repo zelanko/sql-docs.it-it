@@ -4,18 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: tools-other
 ms.topic: conceptual
 ms.assetid: da999781-f0ff-47eb-ba7a-09c0ed8f61ad
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a60b3f18d6249f0fcce10b25521aa9652699c3a6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b81d4e1aeb2192e6a32a34bed74b9cd55a1cb9a9
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48181331"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52792833"
 ---
 # <a name="review-the-replay-results"></a>Controllo dei risultati della riproduzione
   Al termine di una riesecuzione distribuita in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributed Replay, l'attività di riesecuzione per ciascun client può essere acquisita e salvata in file di traccia dei risultati in ogni client. Per acquisire questa attività, è necessario usare il parametro **-o** quando si esegue lo strumento di amministrazione con l'opzione **replay**. Per altre informazioni sull'opzione replay, vedere [Opzione replay &#40;Distributed Replay Administration Tool&#41;](replay-option-distributed-replay-administration-tool.md).  
@@ -42,7 +42,7 @@ ms.locfileid: "48181331"
 |Errori e avvisi|Replay Internal Error|Una volta per ogni errore interno|Durante la condizione di errore interno|  
 ||Replay Provider Error|Una volta per ogni errore del provider|Durante la condizione di errore del provider|  
   
- Si noti quanto segue:  
+ Tenere presente quanto segue:  
   
 -   Per ogni evento riprodotto correttamente nel server di destinazione, è disponibile una classe di evento di output corrispondente.  
   
@@ -51,12 +51,12 @@ ms.locfileid: "48181331"
 ## <a name="event-class-column-mapping"></a>Mapping di colonne della classe di evento  
  Nella figura seguente sono elencate le colonne della traccia dei risultati disponibili per ogni tipo di classe di evento acquisita durante la riproduzione.  
   
- ![Mapping di colonne di classe di evento](../../database-engine/media/eventclassmappings.gif "mapping di colonne di classe di evento")  
+ ![Event class column mapping](../../database-engine/media/eventclassmappings.gif "Event class column mapping")  
   
 ## <a name="column-descriptions-for-result-trace"></a>Descrizioni delle colonne per la traccia dei risultati  
  Nella tabella seguente vengono descritte le colonne dei dati di traccia dei risultati.  
   
-|Nome colonna di dati|Tipo di dati|Description|ID colonna|  
+|Nome colonna di dati|Tipo di dati|Descrizione|ID colonna|  
 |----------------------|---------------|-----------------|---------------|  
 |EventClass|`nvarchar`|Nome della classe di evento.|1|  
 |EventSequence|`bigint`|Per gli errori del provider e gli errori interni e gli avvisi, sequenza di eventi di acquisizione corrispondente all'errore o all'avviso.<br /><br /> Per tutte le altre classi di evento, sequenza dell'evento nei dati di traccia originali.|2|  
@@ -78,8 +78,8 @@ ms.locfileid: "48181331"
   
 ## <a name="see-also"></a>Vedere anche  
  [SQL Server Distributed Replay](sql-server-distributed-replay.md)   
- [Requisiti relativi a riesecuzione distribuita](distributed-replay-requirements.md)   
+ [Requisiti relativi a Riesecuzione distribuita](distributed-replay-requirements.md)   
  [Opzioni della riga di comando dello strumento di amministrazione &#40;Distributed Replay Utility&#41;](administration-tool-command-line-options-distributed-replay-utility.md)   
- [Configurare Riesecuzione distribuita](configure-distributed-replay.md)  
+ [Configurare Distributed Replay](configure-distributed-replay.md)  
   
   

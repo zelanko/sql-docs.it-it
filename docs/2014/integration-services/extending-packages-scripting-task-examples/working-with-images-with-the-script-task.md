@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- integration-services
+ms.technology: integration-services
 ms.topic: reference
 dev_langs:
 - VB
@@ -25,24 +23,24 @@ ms.assetid: 74aeb7ab-51b2-4b9f-84ee-0b46a7908ab9
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4529ded6049327261ac92a76cc9861b7cec7dd61
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e1fc2e587f38f13730f8455b04d0542079158da9
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48204581"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53354630"
 ---
 # <a name="working-with-images-with-the-script-task"></a>Utilizzo di immagini con l'attività Script
   Un database di prodotti o utenti include di frequente immagini oltre a testo e dati numerici. Lo spazio dei nomi `System.Drawing` in Microsoft .NET Framework fornisce le classi per la modifica delle immagini.  
   
- [Esempio 1: convertire immagini in formato JPEG](#example1)  
+ [Esempio 1: Convertire immagini in formato JPEG](#example1)  
   
- [Esempio 2: creare e salvare le immagini di anteprima](#example2)  
+ [Esempio 2: Creare e salvare le immagini di anteprima](#example2)  
   
 > [!NOTE]  
 >  Se si desidera creare un'attività da riutilizzare più facilmente con più pacchetti, è possibile utilizzare il codice di questo esempio di attività Script come punto iniziale per un'attività personalizzata. Per altre informazioni, vedere [Sviluppo di un'attività personalizzata](../extending-packages-custom-objects/task/developing-a-custom-task.md).  
   
-##  <a name="example1"></a> Descrizione dell'esempio 1: convertire immagini in formato JPEG  
+##  <a name="example1"></a> Descrizione dell'esempio 1: Convertire immagini in formato JPEG  
  Nell'esempio seguente viene aperto un file di immagine specificato da una variabile e lo salva come file JPEG compresso tramite un codificatore. Il codice per recuperare le informazioni sul codificatore viene incapsulato in una funzione privata.  
   
 #### <a name="to-configure-this-script-task-example-for-use-with-a-single-image-file"></a>Per configurare questa attività Script di esempio per l'utilizzo con un solo file di immagine  
@@ -151,7 +149,7 @@ End Function
   
 ```  
   
-##  <a name="example2"></a> Descrizione dell'esempio 2: creare e salvare le immagini di anteprima  
+##  <a name="example2"></a> Descrizione dell'esempio 2: Creare e salvare le immagini di anteprima  
  Nell'esempio seguente viene aperto un file di immagine specificato da una variabile, viene creata un'anteprima dell'immagine pur mantenendo una proporzione costante e viene salvata l'anteprima con un nome file modificato. Il codice che calcola l'altezza e larghezza dell'anteprima mantenendo una proporzione costante viene incapsulato in una subroutine privata.  
   
 #### <a name="to-configure-this-script-task-example-for-use-with-a-single-image-file"></a>Per configurare questa attività Script di esempio per l'utilizzo con un solo file di immagine  
@@ -291,6 +289,6 @@ bool ThumbnailCallback()
   
 ```  
   
-![Icona di Integration Services (piccola)](../media/dts-16.gif "icona di Integration Services (piccola)")**rimangono fino a Date con Integration Services** <br /> Per i download, gli articoli, gli esempi e i video Microsoft più recenti, oltre alle soluzioni selezionate dalla community, visitare la pagina [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sul sito MSDN:<br /><br /> [Visita la pagina di Integration Services su MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Per ricevere una notifica automatica su questi aggiornamenti, sottoscrivere i feed RSS disponibili nella pagina.  
+![Icona di Integration Services (piccola)](../media/dts-16.gif "icona di Integration Services (piccola)")**rimangono fino a Date con Integration Services**<br /> Per i download, gli articoli, gli esempi e i video Microsoft più recenti, oltre alle soluzioni selezionate dalla community, visitare la pagina [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sul sito MSDN:<br /><br /> [Visita la pagina di Integration Services su MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Per ricevere una notifica automatica su questi aggiornamenti, sottoscrivere i feed RSS disponibili nella pagina.  
   
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - subscriptions [SQL Server replication], non-SQL Server Subscribers
@@ -15,12 +14,12 @@ ms.assetid: 5020ee68-b988-4d57-8066-67d183e61237
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6ff6cda85a64841e5b97c89e1ccf936b857fd1f2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: be2568e0a99ff21280388bd309a1e49bdec7e072
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48077691"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52774913"
 ---
 # <a name="create-a-subscription-for-a-non-sql-server-subscriber"></a>Creazione di una sottoscrizione per un Sottoscrittore non SQL Server
   In questo argomento viene descritto come creare una sottoscrizione per un Sottoscrittore non SQL Server in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. La replica transazionale e la replica snapshot supportano la pubblicazione di dati su Sottoscrittori non[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Per informazioni sulle piattaforme di Sottoscrittori supportate, vedere [Non-SQL Server Subscribers](non-sql/non-sql-server-subscribers.md).  
@@ -97,7 +96,7 @@ ms.locfileid: "48077691"
   
     -   Per IBM DB2, il database viene specificato nella proprietà **Catalogo iniziale** della stringa di connessione DB2, che può essere inserita nel campo **Opzioni di connessione aggiuntive** descritto più avanti in questo processo.  
   
-8.  Nella pagina **Sicurezza agente di distribuzione** , fare clic sul pulsante delle proprietà (**...**) accanto al Sottoscrittore per accedere alla finestra di dialogo **Sicurezza agente di distribuzione** .  
+8.  Nella pagina **Sicurezza agente di distribuzione**, fare clic sul pulsante delle proprietà (**...**) accanto al Sottoscrittore per accedere alla finestra di dialogo **Sicurezza agente di distribuzione**.  
   
 9. Nella finestra di dialogo **Sicurezza agente di distribuzione** :  
   
@@ -142,7 +141,7 @@ ms.locfileid: "48077691"
   
  Al termine della generazione dello snapshot da parte dell'agente, viene visualizzato un messaggio come ""[100%] Generato uno snapshot di 17 articoli."  
   
-##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
  È possibile creare sottoscrizioni push a Sottoscrittori[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a livello di programmazione tramite le stored procedure di replica.  
   
 > [!IMPORTANT]  
@@ -154,12 +153,12 @@ ms.locfileid: "48077691"
   
 2.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_helppublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helppublication-transact-sql) per verificare che la pubblicazione supporti Sottoscrittori non [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-    -   Se il valore di `enabled_for_het_sub` è 1, non -[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono supportati i sottoscrittori.  
+    -   Se il valore di `enabled_for_het_sub` è 1, i Sottoscrittori non [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono supportati.  
   
     -   Se il valore di `enabled_for_het_sub` è 0, eseguire [sp_changepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql)specificando `enabled_for_het_sub` per **@property** e `true` per  **@value**.  
   
         > [!NOTE]  
-        >  Prima di cambiare `enabled_for_het_sub` a `true`, è necessario eliminare eventuali sottoscrizioni esistenti per la pubblicazione. Non è possibile impostare `enabled_for_het_sub` su `true` se la pubblicazione supporta anche sottoscrizioni aggiornabili. La modifica dell'impostazione `enabled_for_het_sub` influirà su altre proprietà della pubblicazione. Per altre informazioni, vedere [Non-SQL Server Subscribers](non-sql/non-sql-server-subscribers.md).  
+        >  Prima di impostare `enabled_for_het_sub` su `true`, è necessario eliminare eventuali sottoscrizioni esistenti nella pubblicazione. Non è possibile impostare `enabled_for_het_sub` su `true` se la pubblicazione supporta anche sottoscrizioni aggiornabili. La modifica dell'impostazione `enabled_for_het_sub` influirà su altre proprietà della pubblicazione. Per altre informazioni, vedere [Non-SQL Server Subscribers](non-sql/non-sql-server-subscribers.md).  
   
 3.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_addsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql). Specificare **@publication**, **@subscriber**, il valore **(destinazione predefinita)** per **@destination_db**, il valore **push** per **@subscription_type**e il valore 3 per **@subscriber_type** (per indicare un provider OLE DB).  
   

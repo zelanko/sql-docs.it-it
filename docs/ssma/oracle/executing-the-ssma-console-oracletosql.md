@@ -14,12 +14,12 @@ ms.assetid: 7228ccba-c69f-4b4c-8664-01a2750183c5
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 84194cf92cfd4c6270697aa1c3fd4f475df956ac
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 210f25b55c2cc2536d4c6f00f215b27eac5f7be0
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47714089"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52409228"
 ---
 # <a name="executing-the-ssma-console-oracletosql"></a>Esecuzione della console SSMA (OracleToSQL)
 Microsoft offre un solido set di script di comandi del file per eseguire e controllare le attività SSMA. L'applicazione console utilizza alcuni comandi di file di script standard come enumerate in questa sezione.  
@@ -63,7 +63,7 @@ Attributo 'project-type' è **sql Server°2008** per impostazione predefinita.
   
 **Command**  
   
-Apri progetto: consente di aprire un progetto esistente.  
+Open-progetto: Apre un progetto esistente.  
   
 **Script**  
   
@@ -160,7 +160,7 @@ Richiede uno o più nodi di metabase come parametro della riga di comando.
   
   metabase="<source/target>"/>  
 ```  
-o  
+o Gestione configurazione  
   
 ```xml  
 <force-load>  
@@ -273,7 +273,7 @@ generare report di valutazione
   
 />  
 ```  
-o  
+o Gestione configurazione  
   
 ```xml  
 <generate-assessment-report  
@@ -294,7 +294,7 @@ o
 ## <a name="migration-script-file-commands"></a>Comandi di File di Script di migrazione  
 I comandi di migrazione convertire lo schema di database di destinazione per lo schema di origine e la migrazione dei dati al server di destinazione.  
   
-L'output di console predefinito impostazione per i comandi di migrazione è il report di output 'Full' con nessun report di errore dettagliato: riepilogo solo dal nodo radice dell'albero di origine oggetto.  
+L'output di console predefinito impostazione per i comandi di migrazione è il report di output 'Full' con nessun report di errore dettagliato: Riepilogo solo dal nodo radice dell'albero di origine oggetto.  
   
 **Command**  
   
@@ -347,7 +347,7 @@ convert-schema
   
 />  
 ```  
-o  
+o Gestione configurazione  
   
 ```xml  
 <convert-schema  
@@ -415,7 +415,7 @@ Esegue la migrazione dei dati di origine alla destinazione.
   
 </migrate-data>  
 ```  
-o  
+o Gestione configurazione  
   
 ```xml  
 <migrate-data  
@@ -459,7 +459,7 @@ Esegue la migrazione dei dati di origine alla destinazione.
 ```  
   
 ## <a name="manageability-script-file-commands"></a>Comandi di File di Script di gestibilità  
-I comandi di facilità di gestione consentono di sincronizzare gli oggetti di database di destinazione con il database di origine. L'output di console predefinito impostazione per i comandi di migrazione è il report di output 'Full' con nessun report di errore dettagliato: riepilogo solo dal nodo radice dell'albero di origine oggetto.  
+I comandi di facilità di gestione consentono di sincronizzare gli oggetti di database di destinazione con il database di origine. L'output di console predefinito impostazione per i comandi di migrazione è il report di output 'Full' con nessun report di errore dettagliato: Riepilogo solo dal nodo radice dell'albero di origine oggetto.  
   
 **Command**  
   
@@ -504,7 +504,7 @@ synchronize-target
   
 />  
 ```  
-o  
+o Gestione configurazione  
   
 ```xml  
 <synchronize-target  
@@ -513,7 +513,7 @@ o
   
    object-type="<object-category>"/>  
 ```  
-o  
+o Gestione configurazione  
   
 ```xml  
 <synchronize-target>  
@@ -569,7 +569,7 @@ Richiede uno o più nodi di metabase come parametro della riga di comando.
   
 />  
 ```  
-o  
+o Gestione configurazione  
   
 ```xml  
 <refresh-from-database  
@@ -578,7 +578,7 @@ o
   
    object-type="<object-category>"/>  
 ```  
-o  
+o Gestione configurazione  
   
 ```xml  
 <refresh-from-database>  
@@ -589,7 +589,7 @@ o
 ```  
   
 ## <a name="script-generation-script-file-commands"></a>Comandi File Script di generazione script  
-I comandi di generazione dello Script eseguono due attività: consentono di salvare la console di output in un file di script. e registrare l'output di T-SQL per la console o un file basato sul parametro specificato.  
+I comandi di generazione dello Script seguire due attività: Consentono di salvare la console di output in un file di script. e registrare l'output di T-SQL per la console o un file basato sul parametro specificato.  
   
 **Command**  
   
@@ -628,7 +628,7 @@ Richiede uno o più nodi di metabase come parametro della riga di comando.
   
 />  
 ```  
-o  
+o Gestione configurazione  
   
 ```xml  
 <save-as-script  
@@ -704,7 +704,7 @@ Richiede uno o più nodi di metabase come parametro della riga di comando.
   
 </convert-sql-statement>  
 ```  
-o  
+o Gestione configurazione  
   
 ```  
 <convert-sql-statement  
@@ -727,7 +727,7 @@ o
   
    sql-files="<folder-name>\*.sql" />  
 ```  
-o  
+o Gestione configurazione  
   
 ```  
 <convert-sql-statement  

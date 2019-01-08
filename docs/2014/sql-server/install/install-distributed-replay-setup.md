@@ -11,12 +11,12 @@ ms.assetid: 64479cdc-661a-4e32-a381-8f8b5a238337
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0f9d81920e9e14dc745813795bcf98eb1d9ebdf9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3f83e13aa6ed85293bf20b006ad6c5c8e9a9a62f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48051404"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52545385"
 ---
 # <a name="install-distributed-replay-setup"></a>Installare i componenti Riesecuzione distribuita (programma di installazione)
   Installare le funzionalità di Riesecuzione distribuita di [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con l'Installazione guidata di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . Quando si pianifica il percorso di installazione delle funzionalità, considerare gli aspetti seguenti:  
@@ -87,7 +87,7 @@ ms.locfileid: "48051404"
   
     -   Per installare il servizio client, selezionare **Client Riesecuzione distribuita**.  
   
-     **Importante**: quando si configura il controller di Riesecuzione distribuita, è possibile specificare uno o più account utente da utilizzare per eseguire i servizi client Riesecuzione distribuita. Di seguito viene fornito l'elenco degli account supportati:  
+     **Importante**: quando si configura Distributed Replay Controller, è possibile specificare uno o più account utente da usare per eseguire i servizi client Riesecuzione distribuita. Di seguito viene fornito l'elenco degli account supportati:  
   
     -   Account utente di dominio  
   
@@ -134,8 +134,8 @@ ms.locfileid: "48051404"
 ## <a name="see-also"></a>Vedere anche  
  [Funzionalità supportate dalle edizioni di SQL Server 2014](../../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)   
  [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)   
- [Requisiti relativi a riesecuzione distribuita](../../tools/sql-server-profiler/replay-requirements.md)   
- [Opzioni della riga di comando dello strumento di amministrazione &#40;Utilità Riesecuzione distribuita&#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
- [Configurare Riesecuzione distribuita](../../tools/distributed-replay/configure-distributed-replay.md)  
+ [Requisiti relativi a Riesecuzione distribuita](../../tools/sql-server-profiler/replay-requirements.md)   
+ [Opzioni della riga di comando dello strumento di amministrazione &#40;Distributed Replay Utility&#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
+ [Configurare Distributed Replay](../../tools/distributed-replay/configure-distributed-replay.md)  
   
   

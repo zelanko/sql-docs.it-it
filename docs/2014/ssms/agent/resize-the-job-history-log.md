@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - jobs [SQL Server Agent], history
@@ -17,19 +17,19 @@ ms.assetid: ddee1ce8-9d1b-4017-9894-bf7256aed95d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6a451791925ac70baadce6fa04a50352834aed85
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f1a8c9ab517d1f6a122144604d6b147e6f5eeaf6
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48098802"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52762993"
 ---
 # <a name="resize-the-job-history-log"></a>Modificare le dimensioni del log di cronologia processi
   In questo argomento viene illustrato come impostare le dimensioni massime per i log di cronologia dei processi di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 -   **Prima di iniziare:**  
   
-     [Security](#Security)  
+     [Sicurezza](#Security)  
   
 -   **Per impostare le dimensioni massime dei log della cronologia dei processi utilizzando:**  
   
@@ -38,7 +38,7 @@ ms.locfileid: "48098802"
 ##  <a name="BeforeYouBegin"></a> Prima di iniziare  
   
 ###  <a name="Security"></a> Sicurezza  
- Per informazioni dettagliate, vedere [Implement SQL Server Agent Security](implement-sql-server-agent-security.md).  
+ Per informazioni dettagliate, vedere [Implementazione della sicurezza di SQL Server Agent](implement-sql-server-agent-security.md).  
   
 ##  <a name="SSMS"></a> Utilizzo di SQL Server Management Studio  
   

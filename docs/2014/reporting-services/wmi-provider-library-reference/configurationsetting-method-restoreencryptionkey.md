@@ -19,12 +19,12 @@ ms.assetid: 37e949f5-15af-4858-848a-f482ee94fcd9
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: baf827dbedeb8a822a729e27d08fca4fa6b7f95a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: acdd99c590f05fbe21777416dcd56234a6a797d0
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48172091"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52417442"
 ---
 # <a name="restoreencryptionkey-method-wmi-msreportserverconfigurationsetting"></a>Metodo RestoreEncryptionKey (MSReportServer_ConfigurationSetting WMI)
   Riapplica la chiave di crittografia specificata al database del server di report.  
@@ -62,9 +62,9 @@ public void RestoreEncryptionKey(out Byte[] KeyFile, out Int32 Length,
  Restituisce un *HRESULT* che indica l'esito positivo o negativo della chiamata al metodo. Un valore pari a 0 indica l'esito positivo della chiamata al metodo. Un valore diverso da zero indica che si è verificato un errore.  
   
 ## <a name="remarks"></a>Note  
- Se nel database del server di report esiste già una voce per il server di report , viene eliminata. La nuova voce viene quindi creata utilizzando la chiave di crittografia specificata e la chiave pubblica del server di report.  
+ Se nel database del server di report esiste già una voce per il server di report , viene eliminata. La nuova voce viene quindi creata usando la chiave di crittografia specificata e la chiave pubblica del server di report.  
   
- Il metodo è più efficace se viene chiamato dopo il [DeleteEncryptionKey](configurationsetting-method-deleteencryptionkey.md) (metodo), che svuota l'elenco delle chiavi di crittografia.  
+ Il metodo è più efficace se viene chiamato dopo il metodo [DeleteEncryptionKey](configurationsetting-method-deleteencryptionkey.md) , che svuota l'elenco delle chiavi di crittografia.  
   
 ## <a name="requirements"></a>Requisiti  
  **Spazio dei nomi:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - max-depth annotation
@@ -23,12 +21,12 @@ ms.assetid: 0ffdd57d-dc30-44d9-a8a0-f21cadedb327
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a815a5d5213d4069df6ceda490ee9f4b7e92b279
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 569bbbdec39a37ef7427a195529f26efc9d9b2a3
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189151"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52800833"
 ---
 # <a name="specifying-depth-in-recursive-relationships-by-using-sqlmax-depth"></a>Specifica del livello di nidificazione nelle relazioni ricorsive mediante sql:max-depth
   Quando nei database relazionali una tabella viene coinvolta in una relazione con sé stessa, si parla di relazione ricorsiva. In una relazione supervisore-supervisionato (supervisor-supervisee), ad esempio, una tabella in cui sono archiviati i record dei dipendenti è coinvolta in una relazione con sé stessa. In questo caso, la stessa tabella dei dipendenti ricopre il ruolo di supervisore da un lato della relazione e di supervisionato dall'altro lato.  
@@ -148,7 +146,7 @@ Emp (EmployeeID, FirstName, LastName, ReportsTo)
   
 5.  Creare e utilizzare lo script di test SQLXML 4.0 (Sqlxml4test.vbs) per eseguire il modello. Per altre informazioni, vedere [utilizzo di ADO per eseguire query di SQLXML 4.0](../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
- Risultato:  
+ Questo è il risultato:  
   
 ```  
 <?xml version="1.0" encoding="utf-8" ?>   
@@ -231,7 +229,7 @@ Emp (EmployeeID, FirstName, LastName, ReportsTo)
 ## <a name="sqlmax-depth-annotation"></a>Annotazione sql:max-depth  
  In un schema costituito da relazioni ricorsive il livello di nidificazione della ricorsione deve essere specificata in modo esplicito. Questa operazione è necessaria per produrre correttamente la query FOR XML EXPLICIT corrispondente che restituisce i risultati richiesti.  
   
- Utilizzare l'annotazione `sql:max-depth` nello schema per specificare il livello di nidificazione della ricorsione in una relazione ricorsiva descritta nello schema. Il valore dell'annotazione `sql:max-depth` è un numero intero positivo (da 1 a 50) che indica il numero di ricorsioni: 1 arresta la ricorsione in corrispondenza dell'elemento per il quale è stata specificata l'annotazione `sql:max-depth`, 2 arresta la ricorsione al livello successivo rispetto all'elemento per il quale è stato specificato `sql:max-depth` e così via.  
+ Utilizzare l'annotazione `sql:max-depth` nello schema per specificare il livello di nidificazione della ricorsione in una relazione ricorsiva descritta nello schema. Il valore della `sql:max-depth` annotazione è un numero intero positivo (da 1 a 50) che indica il numero di ricorsioni:  Un valore pari a 1 arresta la ricorsione in corrispondenza dell'elemento per cui il `sql:max-depth` annotazione è specificata; un valore pari a 2 Arresta la ricorsione al livello successivo dall'elemento in corrispondenza del quale `sql:max-depth` è specificato; e così via.  
   
 > [!NOTE]  
 >  Nell'implementazione sottostante una query XPath specificata rispetto a un schema di mapping viene convertita in una query SELECT... FOR XML EXPLICIT. Questa query richiede che venga specificato un livello di nidificazione limitato della ricorsione. Più alto è il valore specificato per `sql:max-depth`, più grande sarà la query FOR XML EXPLICIT che verrà generata, con un probabile rallentamento del tempo di recupero.  

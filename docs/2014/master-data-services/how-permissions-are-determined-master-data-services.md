@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - permissions [Master Data Services], determining permissions
@@ -13,12 +12,12 @@ ms.assetid: 1dc0b43a-d023-4e7d-b027-8b1459fd058c
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: f640fb20e950dc576c57e0faad71dcad0cd55a09
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7b138dd1cf07ccfccefb9e1556c743f3c0a45abd
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48217825"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52747413"
 ---
 # <a name="how-permissions-are-determined-master-data-services"></a>Modalità di determinazione delle autorizzazioni (Master Data Services)
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]il modo più semplice per configurare la sicurezza consiste nell'assegnare autorizzazioni per oggetti modello a un gruppo di cui l'utente è membro.  
@@ -36,7 +35,7 @@ ms.locfileid: "48217825"
   
  ![mds_conc_security_no_overlap](../../2014/master-data-services/media/mds-conc-security-no-overlap.gif "mds_conc_security_no_overlap")  
   
-### <a name="step-1-effective-attribute-permissions-are-determined"></a>Passaggio 1: vengono determinate le autorizzazioni per attributi valide.  
+### <a name="step-1-effective-attribute-permissions-are-determined"></a>Passaggio 1: Autorizzazioni per attributi valide dipendono.  
  Nell'elenco seguente viene descritto il modo in cui vengono determinate le autorizzazioni per attributi valide:  
   
 -   Le autorizzazioni assegnate agli oggetti modello determinano gli attributi a cui un utente può accedere.  
@@ -51,7 +50,7 @@ ms.locfileid: "48217825"
   
  ![mds_conc_inheritance_model](../../2014/master-data-services/media/mds-conc-inheritance-model.gif "mds_conc_inheritance_model")  
   
-### <a name="step-2-if-hierarchy-member-permissions-are-assigned-effective-member-permissions-are-determined"></a>Passaggio 2: Se vengono assegnate le autorizzazioni per i membri gerarchia, vengono determinate le autorizzazioni per i membri valide.  
+### <a name="step-2-if-hierarchy-member-permissions-are-assigned-effective-member-permissions-are-determined"></a>Passaggio 2: Se vengono assegnate le autorizzazioni membri gerarchia, vengono determinate autorizzazioni per membri valide.  
  Nell'elenco seguente viene descritto il modo in cui vengono determinate le autorizzazioni per i membri gerarchia valide:  
   
 -   Le autorizzazioni assegnate ai nodi gerarchia determinano i membri a cui un utente può accedere.  
@@ -66,7 +65,7 @@ ms.locfileid: "48217825"
   
  ![mds_conc_inheritance_hierarchy](../../2014/master-data-services/media/mds-conc-inheritance-hierarchy.gif "mds_conc_inheritance_hierarchy")  
   
-### <a name="step-3-the-intersection-of-attribute-and-member-permissions-is-determined"></a>Passaggio 3: viene determinata l'intersezione delle autorizzazioni per membri e attributi.  
+### <a name="step-3-the-intersection-of-attribute-and-member-permissions-is-determined"></a>Passaggio 3: Viene determinata l'intersezione delle autorizzazioni di membri e attributi.  
  Se le autorizzazioni per attributi valide sono diverse dalle autorizzazioni per membri valide, le autorizzazioni devono essere determinate per ogni singolo valore di attributo. Per altre informazioni, vedere [Autorizzazioni per modelli e membri sovrapposte &#40;Master Data Services&#41;](../../2014/master-data-services/overlapping-model-and-member-permissions-master-data-services.md).  
   
 ## <a name="permissions-assigned-to-multiple-groups"></a>Autorizzazioni assegnate a più gruppi  
@@ -77,7 +76,7 @@ ms.locfileid: "48217825"
  In questo caso, la sovrapposizione delle autorizzazioni utente e gruppo deve essere risolta prima del confronto tra autorizzazioni per membri gerarchia e oggetti modello. Per altre informazioni, vedere [Autorizzazioni utenti e gruppi sovrapposte &#40;Master Data Services&#41;](../../2014/master-data-services/overlapping-user-and-group-permissions-master-data-services.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Utente autorizzazioni e gruppi sovrapposte &#40;Master Data Services&#41;](../../2014/master-data-services/overlapping-user-and-group-permissions-master-data-services.md)   
+ [Autorizzazioni utenti e gruppi sovrapposte &#40;Master Data Services&#41;](../../2014/master-data-services/overlapping-user-and-group-permissions-master-data-services.md)   
  [Autorizzazioni per modelli e membri sovrapposte &#40;Master Data Services&#41;](../../2014/master-data-services/overlapping-model-and-member-permissions-master-data-services.md)  
   
   

@@ -10,12 +10,12 @@ ms.assetid: d514c622-2c0d-4f41-80d2-66add4d113b1
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: a07d5366bd3b5d75ecdd9145d3ecf7932dde1fac
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 12b945d4f9e320cba6a143893b306a9fc11da675
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47676240"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52544211"
 ---
 # <a name="legal-notice-mysqltosql"></a>Note legali (MySQLToSql)
 La presente documentazione, incluse le applicazioni di esempio in essa contenute, viene fornita a scopo esclusivamente informativo e senza alcuna garanzia, espressa o implicita. Le informazioni contenute nella presente documentazione, compresi indirizzi URL e altri riferimenti a siti Web Internet, sono soggette a modifiche senza preavviso. L'utente utilizza la presente documentazione a proprio rischio.  
@@ -35,7 +35,7 @@ SAP NetWeaver è un marchio registrato di SAP AG in Germania e in altri paesi/ar
 Altri nomi di prodotti e società citati nel presente documento sono marchi dei rispettivi proprietari.  
   
 ## <a name="documentation-policy-for-sql-server-support-and-upgrade"></a>Criteri relativi alla documentazione per il supporto e l'aggiornamento di SQL Server  
-Il contenuto visualizzato nella documentazione di SQL Server viene pubblicato solo dopo sufficienti test. La documentazione del prodotto, ossia la documentazione online di SQL Server, i file leggimi, i documenti sui problemi noti e gli articoli della Knowledge Base, contiene contenuti relativi alle caratteristiche e alle funzionalità di SQL Server sufficientemente solidi da poter essere usati da tutti i clienti. Tali criteri si applicano alla documentazione di SQL Server, inclusi i file leggimi relativi a versioni e Service Pack. I file leggimi sono considerati estensioni della documentazione online.  
+Il contenuto visualizzato nella documentazione di SQL Server viene pubblicato solo dopo sufficienti test. Documentazione del prodotto - documentazione Online di SQL Server, file Leggimi, documenti su problemi noti e articoli della Knowledge Base - contiene contenuti relativi alle funzionalità di SQL Server e le funzionalità che è sufficientemente solidi da poter essere usati da tutti i clienti. Tali criteri si applicano alla documentazione di SQL Server, inclusi i file leggimi relativi a versioni e Service Pack. I file leggimi sono considerati estensioni della documentazione online.  
   
 In alcuni casi, una determinata funzionalità non può essere usata direttamente dai clienti e, pertanto, non è stata documentata. A meno che una funzionalità non venga descritta anche nella documentazione di SQL Server pubblicata da Microsoft, il contenuto della documentazione o di siti Web di terze parti non è supportato dall'assistenza clienti Microsoft e non deve essere usato in applicazioni o database di produzione.  
   

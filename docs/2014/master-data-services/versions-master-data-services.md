@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - version flags [Master Data Services], about version flags
@@ -16,12 +15,12 @@ ms.assetid: 752ec96d-53d7-4160-8ed2-92e0324645f3
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 5003667b952e927454e5674538d0b40fab577aa9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 67f99012be602f80279826de0446df006ff4e69f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48190915"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52778393"
 ---
 # <a name="versions-master-data-services"></a>Versioni (Master Data Services)
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]è possibile creare più versioni dei dati master all'interno di un modello. È possibile bloccare le versioni mentre si convalidano i dati ed è possibile eseguire il commit dopo la convalida dei dati. Le versioni di cui si è eseguito il commit costituiscono un record controllabile di modifiche. Ogni versione creata contiene tutti i membri, i valori di attributo, i membri della gerarchia, le relazioni della gerarchia e le raccolte per il modello.  
@@ -70,13 +69,13 @@ ms.locfileid: "48190915"
   
 |Descrizione dell'attività|Argomento|  
 |----------------------|-----------|  
-|Modificare il nome di una versione esistente.|[Modificare un nome di versione &#40;Master Data Services&#41;](../../2014/master-data-services/change-a-version-name-master-data-services.md)|  
+|Modificare il nome di una versione esistente.|[Modificare il nome di una versione &#40;Master Data Services&#41;](../../2014/master-data-services/change-a-version-name-master-data-services.md)|  
 |Bloccare una versione così solo gli amministratori possono modificare i dati.|[Bloccare una versione &#40;Master Data Services&#41;](../../2014/master-data-services/lock-a-version-master-data-services.md)|  
 |Sbloccare una versione così solo gli amministratori possono modificare i dati.|[Sbloccare una versione &#40;Master Data Services&#41;](../../2014/master-data-services/unlock-a-version-master-data-services.md)|  
-|Eseguire il commit di una versione dopo la convalida di tutti i dati.|[Commit di una versione &#40;Master Data Services&#41;](../../2014/master-data-services/commit-a-version-master-data-services.md)|  
-|Creare un nuovo flag per contrassegnare una versione.|[Creare un Flag di versione &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-version-flag-master-data-services.md)|  
-|Modificare il nome di un flag di versione esistente.|[Modificare il nome di un Flag di versione &#40;Master Data Services&#41;](../../2014/master-data-services/change-a-version-flag-name-master-data-services.md)|  
-|Assegnare un flag esistente a una versione.|[Assegnare un Flag a una versione &#40;Master Data Services&#41;](../../2014/master-data-services/assign-a-flag-to-a-version-master-data-services.md)|  
+|Eseguire il commit di una versione dopo la convalida di tutti i dati.|[Eseguire il commit di una versione &#40;Master Data Services&#41;](../../2014/master-data-services/commit-a-version-master-data-services.md)|  
+|Creare un nuovo flag per contrassegnare una versione.|[Creare un flag di versione &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-version-flag-master-data-services.md)|  
+|Modificare il nome di un flag di versione esistente.|[Modificare il nome di un flag di versione &#40;Master Data Services&#41;](../../2014/master-data-services/change-a-version-flag-name-master-data-services.md)|  
+|Assegnare un flag esistente a una versione.|[Assegnare un flag a una versione &#40;Master Data Services&#41;](../../2014/master-data-services/assign-a-flag-to-a-version-master-data-services.md)|  
 |Creare una nuova copia di una versione esistente|[Copiare una versione &#40;Master Data Services&#41;](../../2014/master-data-services/copy-a-version-master-data-services.md)|  
 |Eliminare una versione esistente.|[Eliminare una versione &#40;Master Data Services&#41;](../../2014/master-data-services/delete-a-version-master-data-services.md)|  
   
@@ -86,6 +85,6 @@ ms.locfileid: "48190915"
   
 -   [Notifiche &#40;Master Data Services&#41;](../../2014/master-data-services/notifications-master-data-services.md)  
   
--   [Le regole di business &#40;Master Data Services&#41;](../../2014/master-data-services/business-rules-master-data-services.md)  
+-   [Regole di business &#40;Master Data Services&#41;](../../2014/master-data-services/business-rules-master-data-services.md)  
   
   

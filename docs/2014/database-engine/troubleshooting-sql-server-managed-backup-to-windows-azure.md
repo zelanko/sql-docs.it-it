@@ -10,12 +10,12 @@ ms.assetid: a34d35b0-48eb-4ed1-9f19-ea14754650da
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a4feb316cf43524fa84734d85bf62631833e26d0
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: fd68f6f8bcb83bfbc980be0809e12141403e4012
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120068"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52522530"
 ---
 # <a name="troubleshooting-sql-server-managed--backup-to-windows-azure"></a>Risoluzione dei problemi relativi al backup gestito di SQL Server in Windows Azure
   In questo argomento vengono descritti gli strumenti e le attività utilizzabili per la risoluzione dei problemi relativi agli errori che si possono verificare durante le operazioni di [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)].  
@@ -23,7 +23,7 @@ ms.locfileid: "49120068"
 ## <a name="overview"></a>Panoramica  
  In [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] sono inclusi controlli predefiniti e risoluzione dei problemi, pertanto in molti casi gli errori interni vengono risolti dal processo di [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] stesso.  
   
- Un esempio potrebbe essere l'eliminazione di un file di backup con conseguente interruzione della catena di log che interessa la recuperabilità. [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] identifica l'interruzione nella catena di log e pianifica subito l'esecuzione di un backup. Tuttavia si consiglia di monitorare lo stato e di risolvere tutti gli errori per cui è richiesto l'intervento manuale.  
+ Esempio di uno di questi casi è un'eliminazione di un file di backup conseguente interruzione del log concatenare che interessa la recuperabilità - [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] identificherà l'interruzione nella catena di log e pianifica un backup da intraprendere immediatamente. Tuttavia si consiglia di monitorare lo stato e di risolvere tutti gli errori per cui è richiesto l'intervento manuale.  
   
  Tramite [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] vengono registrati eventi e errori tramite stored procedure di sistema, viste di sistema ed eventi estesi. Tramite le stored procedure e le viste di sistema vengono fornite le informazioni di configurazione di [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)], lo stato dei backup pianificati, nonché gli errori acquisiti dagli eventi estesi. In [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] vengono utilizzati gli eventi estesi per acquisire gli errori da utilizzare per la risoluzione dei problemi. Oltre alla registrazione di eventi, tramite i criteri di amministrazione intelligente di SQL Server viene specificato lo stato di integrità utilizzato da un processo di notifica tramite posta elettronica per fornire la notifica o errori e problemi. Per altre informazioni, vedere [monitoraggio di SQL Server Managed Backup to Windows Azure](../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md).  
   
@@ -42,29 +42,29 @@ ms.locfileid: "49120068"
 ### <a name="common-causes-of-errors"></a>Cause comuni degli errori  
  Di seguito è riportato l'elenco delle cause comuni che provocano gli errori:  
   
-1.  **Modifiche alle credenziali SQL:** se il nome delle credenziali utilizzato da [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] viene modificato o se viene eliminato, [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] non sarà in grado di eseguire i backup. La modifica deve essere applicata alle impostazioni di configurazione di [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)].  
+1.  **Modifiche alle credenziali SQL:** Se il nome delle credenziali utilizzato da [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] viene modificato o se viene eliminato, [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] non sarà in grado di eseguire i backup. La modifica deve essere applicata alle impostazioni di configurazione di [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)].  
   
-2.  **Modifiche ai valori di chiave di accesso archiviazione:** se i valori di chiave di archiviazione sono stati modificati per l'account di Windows Azure, ma le credenziali SQL non viene aggiornata con i nuovi valori, [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] avrà esito negativo durante l'autenticazione alla risorsa di archiviazione e non riesce a eseguire il backup database configurati per usare questo account.  
+2.  **Modifiche ai valori chiave di accesso archiviazione:** Se vengono modificati i valori di chiave di archiviazione per l'account di Windows Azure, ma le credenziali SQL non viene aggiornata con i nuovi valori, [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] avrà esito negativo durante l'autenticazione alla risorsa di archiviazione e non riesce a eseguire backup di database configurato per usare questo account.  
   
-3.  **Modifiche all'Account di archiviazione Windows Azure:** l'eliminazione o la ridenominazione dell'account di archiviazione senza le modifiche corrispondenti alle credenziali SQL causerà [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] esito negativo e non verranno eseguiti alcun backup. Se si elimina un account di archiviazione, verificare che i database vengano riconfigurati con informazioni sull'account di archiviazione valide. Se un account di archiviazione viene ridenominato oppure i valori della chiave vengono modificati, verificare che queste modifiche vengano riflesse nelle credenziali SQL utilizzate da [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)].  
+3.  **Modifiche apportate all'Account di archiviazione di Azure di Windows:** L'eliminazione o ridenominazione dell'account di archiviazione senza le modifiche corrispondenti alle credenziali SQL causerà [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] esito negativo e non verranno eseguiti alcun backup. Se si elimina un account di archiviazione, verificare che i database vengano riconfigurati con informazioni sull'account di archiviazione valide. Se un account di archiviazione viene ridenominato oppure i valori della chiave vengono modificati, verificare che queste modifiche vengano riflesse nelle credenziali SQL utilizzate da [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)].  
   
-4.  **Modifiche alle proprietà del Database:** le modifiche ai modelli di recupero o la modifica del nome può causare mancata esecuzione dei backup.  
+4.  **Modifiche alle proprietà del Database:** Le modifiche ai modelli di recupero o la modifica del nome può causare mancata esecuzione dei backup.  
   
-5.  **Modifiche al modello di recupero:** se il modello di recupero del database viene modificato su simple completa o con registrazione minima delle operazioni bulk, i backup verranno arrestati e i database verranno ignorati da [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]. Per altre informazioni, vedere [SQL Server Managed Backup to Windows Azure: interoperabilità e coesistenza](../../2014/database-engine/sql-server-managed-backup-to-windows-azure-interoperability-and-coexistence.md)  
+5.  **Modifiche al modello di recupero:** Se il modello di recupero del database viene modificato su simple completa o con registrazione minima delle operazioni bulk, i backup verranno arrestati e i database verranno ignorati da [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]. Per altre informazioni, vedere [SQL Server Managed Backup to Windows Azure: Interoperabilità e coesistenza](../../2014/database-engine/sql-server-managed-backup-to-windows-azure-interoperability-and-coexistence.md)  
   
 ### <a name="most-common-error-messages-and-solutions"></a>Messaggi di errori più comuni e soluzioni  
   
 1.  **Errori durante l'abilitazione o la configurazione [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]:**  
   
-     Errore relativo all'impossibilità di accesso all'URL di archiviazione Specificare una credenziale SQL valida..." : È possibile riscontrare questo e altri errori simili che fa riferimento alle credenziali SQL.  In questi casi, verificare il nome delle credenziali SQL fornite, nonché le informazioni archiviate nelle credenziali SQL: il nome di account di archiviazione e la chiave di accesso di archiviazione e assicurarsi che siano correnti e valide.  
+     Errore: " Non è riuscito ad accedere all'URL di archiviazione... Specificare una credenziale SQL valida...": È possibile riscontrare questo e altri errori simili che fa riferimento alle credenziali SQL.  In questi casi, verificare il nome delle credenziali SQL fornite, nonché le informazioni archiviate nelle credenziali SQL - nome account di archiviazione e la chiave di accesso di archiviazione e assicurarsi che siano correnti e valide.  
   
-     Errore: "... non è possibile configurare il database... perché si tratta di un database di sistema": verrà visualizzato questo errore se si prova ad abilitare [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] per un database di sistema.  [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] non supporta i backup per i database di sistema.  Per configurare il backup di un database di sistema, utilizzare altre tecnologie di backup di SQL Server, ad esempio i piani di manutenzione.  
+     Errore: "... non è possibile configurare il database... perché si tratta di un database di sistema": Verrà visualizzato questo errore se si prova ad abilitare [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] per un database di sistema.  [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] non supporta i backup per i database di sistema.  Per configurare il backup di un database di sistema, utilizzare altre tecnologie di backup di SQL Server, ad esempio i piani di manutenzione.  
   
-     Errore: "... Specificare un periodo di conservazione..." : È possibile riscontrare errori riguardanti il periodo di memorizzazione se uno non è stato specificato un periodo di conservazione per il database o istanza durante la configurazione di questi valori per la prima volta. È inoltre possibile visualizzare un errore se si immette un valore diverso da un numero compreso tra 1 e 30. Il valore consentito per il periodo di memorizzazione è un numero compreso tra 1 e 30.  
+     Errore: "... Specificare un periodo di conservazione...": Se uno non è stato specificato un periodo di conservazione per il database o istanza durante la configurazione di questi valori per la prima volta, è possibile riscontrare errori riguardanti il periodo di conservazione. È inoltre possibile visualizzare un errore se si immette un valore diverso da un numero compreso tra 1 e 30. Il valore consentito per il periodo di memorizzazione è un numero compreso tra 1 e 30.  
   
 2.  **Errori di notifica di posta elettronica:**  
   
-     Errore: "posta elettronica Database non è abilitata..." Questo errore si verrà visualizzato se si abilitano le notifiche di posta elettronica, ma posta elettronica Database non è configurato nell'istanza. È necessario configurare Posta elettronica database nell'istanza per poter ricevere la notifica dello stato di integrità di [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]. Per informazioni su come abilitare posta elettronica database, vedere [Configura posta elettronica Database](../relational-databases/database-mail/configure-database-mail.md). È inoltre necessario abilitare SQL Server Agent per l'utilizzo di Posta elettronica database per le notifiche. Per altre informazioni, vedere [prima di iniziare](../relational-databases/database-mail/configure-sql-server-agent-mail-to-use-database-mail.md#BeforeYouBegin).  
+     Errore: "Posta elettronica database non è abilitata...", verrà visualizzato questo errore se si abilitano le notifiche di posta elettronica, ma posta elettronica Database non è configurato nell'istanza. È necessario configurare Posta elettronica database nell'istanza per poter ricevere la notifica dello stato di integrità di [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]. Per informazioni su come abilitare posta elettronica database, vedere [Configura posta elettronica Database](../relational-databases/database-mail/configure-database-mail.md). È inoltre necessario abilitare SQL Server Agent per l'utilizzo di Posta elettronica database per le notifiche. Per altre informazioni, vedere [prima di iniziare](../relational-databases/database-mail/configure-sql-server-agent-mail-to-use-database-mail.md#BeforeYouBegin).  
   
      Di seguito è riportato un elenco di numeri di errore che potrebbero essere visualizzati, associati alle notifiche tramite posta elettronica:  
   
@@ -72,13 +72,13 @@ ms.locfileid: "49120068"
   
     -   Numero errore: 45210  
   
-    -   ErrorNumber: 45211  
+    -   Numero errore: 45211  
   
 3.  **Errori di connettività:**  
   
-    -   **Errori relativi alla connettività SQL:** questi errori si verificano quando sono presenti problemi di connessione all'istanza di SQL Server. Negli eventi estesi questi tipi di errori vengono esposti tramite il canale di amministrazione. Di seguito sono riportati i due eventi estesi per cui è possibile visualizzare gli errori relativi a questo tipo di problemi di connettività:  
+    -   **Errori relativi alla connettività SQL:** Questi errori si verificano quando sono presenti problemi di connessione all'istanza di SQL Server. Negli eventi estesi questi tipi di errori vengono esposti tramite il canale di amministrazione. Di seguito sono riportati i due eventi estesi per cui è possibile visualizzare gli errori relativi a questo tipo di problemi di connettività:  
   
-         FileRetentionAdminXEvent con event_type = SqlError. Per i dettagli su questo errore, esaminare error_code, error_message e stack_trace dell'evento in questione. error_code è il numero di errore di SqlException.  
+         FileRetentionAdminXEvent con event_type = SqlError. Per i dettagli su questo errore, esaminare error_code, error_message e stack_trace dell'evento in questione. Error_code è il numero di errore di SqlException.  
   
          SmartBackupAdminXevent con i messaggi/prefissi di messaggio seguenti:  
   
@@ -101,7 +101,7 @@ ms.locfileid: "49120068"
 ### <a name="troubleshooting-system-issues"></a>Risoluzione dei problemi relativi al sistema  
  Di seguito vengono illustrati alcuni scenari quando si verifica un problema con il sistema (SQL Server, SQL Server Agent) e i relativi effetti su [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]:  
   
--   **Sqlservr.exe non risponde o si blocca quando [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] è in esecuzione:** smette di funzionare se SQL Server, SQL Agent verrà chiuso normalmente, [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] anche si interrompe e gli eventi vengono registrati nel file di SQL Agent.  
+-   **Sqlservr.exe non risponde o si blocca quando [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] è in esecuzione:** Se SQL Server smette di funzionare, SQL Agent verrà chiuso normalmente, [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] anche si interrompe e gli eventi vengono registrati nel file di SQL Agent.  
   
      Se SQL Server non risponde, gli eventi vengono registrati nel canale di amministrazione.  Un esempio del registro eventi:  
   

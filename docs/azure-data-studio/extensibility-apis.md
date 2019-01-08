@@ -1,7 +1,8 @@
 ---
-title: API di estendibilità per Studio dei dati di Azure | Microsoft Docs
-description: API di estendibilità per Studio dei dati di Azure
-ms.custom: tools|sos
+title: API di estendibilità
+titleSuffix: Azure Data Studio
+description: Informazioni sulle API di estensibilità per Data Studio di Azure
+ms.custom: seodec18
 ms.date: 09/24/2018
 ms.reviewer: alayu; sstein
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7dae5546b4725a31576d411bd604a4a3d3e27c4e
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: 7a13a171024aecbe39bc7c83f77f109914bc4250
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49356112"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53029755"
 ---
 # <a name="azure-data-studio-extensibility-apis"></a>API di estendibilità Data Studio Azure
 
@@ -41,19 +42,19 @@ ms.locfileid: "49356112"
 ```
 > let connection = sqlops.connection.getCurrentConnection();
 connection: {
-    providerName: ‘MSSQL’,
-    connectionId: ‘d97bb63a-466e-4ef0-ab6f-00cd44721dcc’,
+    providerName: 'MSSQL',
+    connectionId: 'd97bb63a-466e-4ef0-ab6f-00cd44721dcc',
     options: {
-        server: ‘mairvine-sql-server’,
-        user: ‘sa’,
-        authenticationType: ‘sqlLogin’,
-        …
+        server: 'mairvine-sql-server',
+        user: 'sa',
+        authenticationType: 'sqlLogin',
+        ...
     },
-    …
+    ...
 }
 > let credentials = sqlops.connection.getCredentials(connection.connectionId);
 credentials: {
-    password: ‘abc123’
+    password: 'abc123'
 }
 
 ```

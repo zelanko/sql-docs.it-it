@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.dataflowtask.f1
@@ -19,12 +18,12 @@ ms.assetid: c27555c4-208c-43c8-b511-a4de2a8a3344
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 48a40f38706ad9562f5dde3f4ec5472e678250c9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2afaa918e25c9473513dfdac82cde3223e83df38
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48069581"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53366863"
 ---
 # <a name="data-flow-task"></a>Attività Flusso di dati
   L'attività Flusso di dati incapsula il motore flusso di dati che consente di spostare i dati dalle origini alle destinazioni e offre la possibilità di trasformare, pulire e modificare i dati durante lo spostamento. L'aggiunta di un'attività Flusso di dati al flusso di controllo di un pacchetto consente al pacchetto di estrarre, trasformare e caricare dati.  
@@ -47,16 +46,16 @@ ms.locfileid: "48069581"
 ## <a name="log-entries"></a>Voci di log  
  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] include un set di eventi del log disponibili per tutte le attività. [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] fornisce anche voci di log personalizzate a molte attività. Per altre informazioni, vedere [Registrazione di Integration Services &#40;SSIS&#41;](../performance/integration-services-ssis-logging.md) e [Messaggi personalizzati per la registrazione](../custom-messages-for-logging.md). L'attività Flusso di dati include le voci di log personalizzate seguenti:  
   
-|Voce di log|Description|  
+|Voce di log|Descrizione|  
 |---------------|-----------------|  
 |`BufferSizeTuning`|Indica che l'attività Flusso di dati ha modificato le dimensioni del buffer. In questa voce di log vengono indicati i motivi della modifica delle dimensioni del buffer e le nuove dimensioni temporanee del buffer.|  
-|`OnPipelinePostEndOfRowset`|Indica che un componente è stato inviato il segnale di fine del set di righe, che viene impostato dall'ultima chiamata di `ProcessInput` (metodo). Viene scritta una voce per ogni componente del flusso di dati che elabora dati di input. Tale voce include il nome del componente.|  
-|`OnPipelinePostPrimeOutput`|Indica che il componente ha completato l'ultima chiamata al `PrimeOutput` (metodo). A seconda del flusso di dati, è possibile che vengano scritte più voci di log. Se il componente è un'origine, questa voce di log indica che tale componente ha terminato l'elaborazione delle righe.|  
-|`OnPipelinePreEndOfRowset`|Indica che un componente sta per ricevere il segnale di fine del set di righe, che viene impostato dall'ultima chiamata di `ProcessInput` (metodo). Viene scritta una voce per ogni componente del flusso di dati che elabora dati di input. Tale voce include il nome del componente.|  
+|`OnPipelinePostEndOfRowset`|Indica che a un componente è stato inviato il segnale di fine del set di righe, che viene impostato dall'ultima chiamata al metodo `ProcessInput`. Viene scritta una voce per ogni componente del flusso di dati che elabora dati di input. Tale voce include il nome del componente.|  
+|`OnPipelinePostPrimeOutput`|Indica che il componente ha completato l'ultima chiamata al metodo `PrimeOutput`. A seconda del flusso di dati, è possibile che vengano scritte più voci di log. Se il componente è un'origine, questa voce di log indica che tale componente ha terminato l'elaborazione delle righe.|  
+|`OnPipelinePreEndOfRowset`|Indica che un componente sta per ricevere il segnale di fine del set di righe, che viene impostato dall'ultima chiamata al metodo `ProcessInput`. Viene scritta una voce per ogni componente del flusso di dati che elabora dati di input. Tale voce include il nome del componente.|  
 |`OnPipelinePrePrimeOutput`|Indica che un componente sta per ricevere una chiamata dal metodo `PrimeOutput`. A seconda del flusso di dati, è possibile che vengano scritte più voci di log.|  
 |`OnPipelineRowsSent`|Specifica il numero delle righe inviate all'input di un componente da una chiamata al metodo `ProcessInput`. La voce di log include il nome del componente.|  
 |`PipelineBufferLeak`|Fornisce informazioni su tutti i componenti che hanno mantenuto attivi i buffer dopo la chiusura di Gestione buffer. Se vi è ancora un buffer attivo, le risorse dei buffer non sono state rilasciate e potrebbero verificarsi perdite di memoria. Nella voce di log vengono indicati il nome del componente e l'ID del buffer.|  
-|`PipelineComponentTime`|Indica la quantità di tempo (in millisecondi) utilizzata dal componente per ciascuno dei cinque passaggi principali dell'elaborazione, ovvero Validate, PreExecute, PostExecute, ProcessInput e ProcessOutput.|  
+|`PipelineComponentTime`|Indica la quantità di tempo (in millisecondi) impiegata dal componente per ognuno dei cinque passaggi principali dell'elaborazione, ovvero Validate, PreExecute, PostExecute, ProcessInput e ProcessOutput.|  
 |`PipelineExecutionPlan`|Specifica il piano di esecuzione del flusso di dati. Il piano di esecuzione offre informazioni sulle modalità di invio dei buffer ai componenti. Insieme alla voce di log PipelineExecutionTrees, queste informazioni illustrano ciò che avviene nell'attività Flusso di dati.|  
 |`PipelineExecutionTrees`|Specifica gli alberi di esecuzione del layout nel flusso di dati. L'utilità di pianificazione del motore flusso di dati utilizza tali alberi per compilare il piano di esecuzione del flusso di dati.|  
 |`PipelineInitialization`|Fornisce le informazioni di inizializzazione relative all'attività, che includono le directory da utilizzare per l'archiviazione temporanea dei dati BLOB, le dimensioni predefinite del buffer e il numero di righe in un buffer. A seconda della configurazione dell'attività Flusso di dati, è possibile che vengano scritte più voci di log.|  
@@ -87,13 +86,13 @@ ms.locfileid: "48069581"
   
  Per molti eventi vengono scritte più voci nel log e i messaggi relativi a numerose voci di log contengono dati complessi. Per semplificare la comprensione e la comunicazione del contenuto dei messaggi complessi, è possibile analizzare il testo dei messaggi. In base alla posizione dei log, è possibile utilizzare istruzioni Transact-SQL o un componente script per separare il testo complesso in colonne o altri formati che si ritengono più utili.  
   
- Nella tabella seguente viene ad esempio illustrato il messaggio "Sono state passate righe come input per un componente del flusso di dati. :  : 1185 : Output origine OLE DB : 1180 : Ordinamento : 1181 : Input ordinamento : 76", scomposto in colonne. Il messaggio è stato scritto dall'evento `OnPipelineRowsSent` quando le righe sono state inviate dall'origine OLE DB alla trasformazione Ordinamento.  
+ Nella tabella seguente viene ad esempio illustrato il messaggio "Sono state passate righe come input per un componente del flusso di dati. :  : 1185: Output origine OLE DB: 1180: Ordinamento: 1181: Input ordinamento: 76", scomposto in colonne. Il messaggio è stato scritto dall'evento `OnPipelineRowsSent` quando le righe sono state inviate dall'origine OLE DB alla trasformazione Ordinamento.  
   
-|colonna|Description|valore|  
+|colonna|Descrizione|Value|  
 |------------|-----------------|-----------|  
-|**PathID**|Il valore dal `ID` proprietà del percorso tra l'origine OLE DB e la trasformazione ordinamento.|1185|  
-|**PathName**|Il valore dal `Name` proprietà del percorso.|Output origine OLE DB|  
-|**ComponentID**|Il valore della `ID` proprietà della trasformazione ordinamento.|1180|  
+|**PathID**|Valore della proprietà `ID` del percorso tra l'origine OLE DB e la trasformazione Ordinamento.|1185|  
+|**PathName**|Valore della proprietà `Name` del percorso.|Output origine OLE DB|  
+|**ComponentID**|Valore della proprietà `ID` della trasformazione Ordinamento.|1180|  
 |**ComponentName**|Valore della proprietà `Name` della trasformazione Ordinamento.|Ordina|  
 |**InputID**|Valore della proprietà `ID` dell'input della trasformazione Ordinamento.|1181|  
 |**InputName**|Valore della proprietà `Name` dell'input della trasformazione Ordinamento.|Input ordinamento|  
@@ -104,7 +103,7 @@ ms.locfileid: "48069581"
   
  Per altre informazioni sull'impostazione di queste proprietà nella finestra **Proprietà** , fare clic sull'argomento seguente:  
   
--   [Impostare le proprietà di un'attività o di un contenitore](../set-the-properties-of-a-task-or-container.md)  
+-   [Impostazione delle proprietà di un'attività o di un contenitore](../set-the-properties-of-a-task-or-container.md)  
   
 ## <a name="programmatic-configuration-of-the-data-flow-task"></a>Configurazione a livello di codice dell'attività Flusso di dati  
  Per ulteriori informazioni sull'aggiunta di un'attività Flusso di dati a un pacchetto a livello di codice e sulle impostazioni delle proprietà del flusso di dati, fare clic sull'argomento seguente:  
@@ -112,9 +111,9 @@ ms.locfileid: "48069581"
 -   [Aggiunta dell'attività Flusso di dati a livello di programmazione](../building-packages-programmatically/adding-the-data-flow-task-programmatically.md)  
   
 ## <a name="related-tasks"></a>Attività correlate  
- [Impostare le proprietà di un'attività o di un contenitore](../set-the-properties-of-a-task-or-container.md)  
+ [Impostazione delle proprietà di un'attività o di un contenitore](../set-the-properties-of-a-task-or-container.md)  
   
 ## <a name="related-content"></a>Contenuto correlato  
- Video relativo al [server di distribuzione di dati bilanciati](http://go.microsoft.com/fwlink/?LinkID=226278&clcid=0x409)sul sito technet.microsoft.com.  
+ Video relativo al [server di distribuzione di dati bilanciati](https://go.microsoft.com/fwlink/?LinkID=226278&clcid=0x409)sul sito technet.microsoft.com.  
   
   

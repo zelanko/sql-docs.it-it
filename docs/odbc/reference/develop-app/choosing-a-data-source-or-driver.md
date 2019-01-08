@@ -16,15 +16,15 @@ ms.assetid: 10aaf570-01ab-4478-8339-bdde2a5e3dd1
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e47248ac5719b2303c71f2e7b93161112ca7f870
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c238b89f6fefbb158c50531d28d2c234c64f64bf
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47758039"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507633"
 ---
 # <a name="choosing-a-data-source-or-driver"></a>Scelta di un'origine dati o driver
-L'origine dati o il driver utilizzato da un'applicazione a volte è hardcoded nell'applicazione. Ad esempio, un'applicazione personalizzata scritta da un reparto MIS per trasferire dati da un'origine dati a un altro che contengono nomi di queste origini dati, ovvero semplicemente l'applicazione non funziona con tutte le altre origini dati. Un altro esempio è un'applicazione verticale, ad esempio un oggetto utilizzato per l'inserimento dell'ordine. Tale applicazione sempre Usa la stessa origine dati, che ha uno schema predefinito noto con l'applicazione.  
+L'origine dati o il driver utilizzato da un'applicazione a volte è hardcoded nell'applicazione. Ad esempio, un'applicazione personalizzata scritta da un reparto MIS per trasferire dati da un'origine dati a un altro che contengono nomi di tali dati di origini: l'applicazione semplicemente non funziona con tutte le altre origini dati. Un altro esempio è un'applicazione verticale, ad esempio un oggetto utilizzato per l'inserimento dell'ordine. Tale applicazione sempre Usa la stessa origine dati, che ha uno schema predefinito noto con l'applicazione.  
   
  Altre applicazioni selezionare l'origine dati o il driver in fase di esecuzione. In genere, queste sono applicazioni generiche che eseguire query ad hoc, ad esempio un foglio di calcolo che usa ODBC per importare i dati. Tali applicazioni in genere elencare le origini dati disponibili o i driver e consentono agli utenti di scegliere i clienti che desiderano utilizzare. Indica se un'applicazione generica sono elencate le origini dati, i driver o entrambi spesso varia a seconda che l'applicazione usi driver basati su DBMS o basate su file.  
   

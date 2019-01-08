@@ -16,12 +16,12 @@ ms.assetid: 47148383-c2c7-4f08-a9e4-7016bf2d1d13
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 0dda9622ec6b5faa753310861557961ca54b4971
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 06b97ac4bf58b933f55c4b53bfeacfbc9a736f28
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48063161"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52516225"
 ---
 # <a name="create-clustered-indexes"></a>Creare indici cluster
   È possibile creare indici cluster nelle tabelle di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. A parte poche eccezioni, ogni tabella deve disporre di un indice cluster. Oltre a migliorare le prestazioni di esecuzione delle query, un indice può essere ricompilato o riorganizzato su richiesta per controllare la frammentazione della tabella. È inoltre possibile creare un indice cluster in una vista. Gli indici cluster sono descritti nell'argomento [Descrizione di indici cluster e non cluster](clustered-and-nonclustered-indexes-described.md).  
@@ -34,7 +34,7 @@ ms.locfileid: "48063161"
   
      [Limitazioni e restrizioni](#Restrictions)  
   
-     [Security](#Security)  
+     [Sicurezza](#Security)  
   
 -   **Per creare un indice cluster in una tabella tramite:**  
   
@@ -80,7 +80,7 @@ ms.locfileid: "48063161"
   
 1.  In Esplora oggetti espandere la tabella in cui si desidera creare un indice cluster.  
   
-2.  Fare clic con il pulsante destro del mouse sulla cartella **Indici** , scegliere **Nuovo indice**e selezionare **Indice cluster**.  
+2.  Fare clic con il pulsante destro del mouse sulla cartella **Indici**, scegliere **Nuovo indice** e selezionare **Indice cluster**.  
   
 3.  Nella pagina **Generale** della finestra di dialogo **Nuovo indice** immettere il nome del nuovo indice nella casella **Nome indice** .  
   
@@ -114,7 +114,7 @@ ms.locfileid: "48063161"
   
 10. Scegliere **Salva***nome_tabella* dal menu **File**.  
   
-##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
   
 #### <a name="to-create-a-clustered-index"></a>Per creare un indice cluster  
   

@@ -16,15 +16,15 @@ ms.assetid: 58bea3e9-d552-447f-b3ad-ce1dab213b72
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a54054387a57d59470bae6d982b5ce700362f483
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7e02d42d6d63608ccb70dc984e05ae11578d3160
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47635389"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52528857"
 ---
 # <a name="data-buffer-type"></a>Tipo di buffer di dati
-Il tipo di dati C di un buffer specificato dall'applicazione. Con una singola variabile, ciò si verifica quando l'applicazione alloca la variabile. Con generici per la memoria, vale a dire memoria a cui punta un puntatore di tipo void, ciò si verifica quando l'applicazione viene eseguito il cast della memoria per un particolare tipo. Il driver individua questo tipo in due modi:  
+Il tipo di dati C di un buffer specificato dall'applicazione. Con una singola variabile, ciò si verifica quando l'applicazione alloca la variabile. Con generici per la memoria - vale a dire memoria a cui punta un puntatore di tipo void - ciò avviene quando l'applicazione viene eseguito il cast della memoria per un particolare tipo. Il driver individua questo tipo in due modi:  
   
 -   **Argomento di tipo buffer di dati.** Buffer utilizzato per trasferire i valori dei parametri e dati del set di risultati, ad esempio il buffer associato a *TargetValuePtr* nelle **SQLBindCol**, in genere presente un argomento di tipo associato, ad esempio il  *TargetType* nell'argomento **SQLBindCol**. In questo argomento, l'applicazione passa l'identificatore di tipo C che corrisponde al tipo di buffer. Ad esempio, nella chiamata seguente a **SQLBindCol**, il valore SQL_C_TYPE_DATE indica al driver che la *data* buffer è un valore SQL_DATE_STRUCT:  
   

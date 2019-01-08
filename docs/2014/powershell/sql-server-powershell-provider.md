@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: scripting
 ms.topic: conceptual
 helpviewer_keywords:
 - PowerShell [SQL Server], provider
@@ -18,12 +17,12 @@ ms.assetid: b97acc43-fcd2-4ae5-b218-e183bab916f9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 482353df1cde22d11cb44d53611353ceb347e102
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3e8fc0f770d8763ccb330b3c7588a97604d876e8
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48153551"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52752381"
 ---
 # <a name="sql-server-powershell-provider"></a>Provider PowerShell per SQL Server
   Il provider [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] per Windows PowerShell espone la gerarchia degli oggetti di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] in percorsi simili ai percorsi del file system. È possibile usare i percorsi per trovare un oggetto e, successivamente, usare i metodi dei modelli SMO ( [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Objects) per eseguire azioni sugli oggetti.  
@@ -71,7 +70,7 @@ SQLSERVER:\SQL\localhost\DEFAULT\Databases\AdventureWorks2012\Tables\Purchasing.
 |Viene descritto come utilizzare i cmdlet di Windows PowerShell per spostarsi tra i nodi all'interno di un percorso e, a ogni nodo, ottenere un elenco degli oggetti in corrispondenza di quel nodo.|[Spostarsi all'interno dei percorsi di SQL Server PowerShell](navigate-sql-server-powershell-paths.md)|  
 |Viene descritto come utilizzare i metodi e le proprietà SMO per eseguire report e attività sull'oggetto rappresentato da un nodo in un percorso. Viene inoltre descritto come ottenere un elenco dei metodi e delle proprietà SMO per quel nodo.|[Utilizzo di percorsi di SQL Server PowerShell](work-with-sql-server-powershell-paths.md)|  
 |Viene descritto come convertire un Uniform Resource Name SMO (URN) in un percorso del provider SQL Server.|[Conversione di URN in percorsi di provider di SQL Server](../database-engine/convert-urns-to-sql-server-provider-paths.md)|  
-|Viene descritto come stabilire connessioni con autenticazione di SQL Server tramite il provider di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Per impostazione predefinita, il provider utilizza connessioni di autenticazione di Windows stabilite mediante le credenziali dell'account di Windows che esegue il processo di Windows PowerShell.|[Gestire l'autenticazione nel motore di database PowerShell](manage-authentication-in-database-engine-powershell.md)|  
+|Viene descritto come stabilire connessioni con autenticazione di SQL Server tramite il provider di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Per impostazione predefinita, il provider utilizza connessioni di autenticazione di Windows stabilite mediante le credenziali dell'account di Windows che esegue il processo di Windows PowerShell.|[Gestire l'autenticazione in motore di database PowerShell](manage-authentication-in-database-engine-powershell.md)|  
   
 ## <a name="see-also"></a>Vedere anche  
  [SQL Server PowerShell](sql-server-powershell.md)  

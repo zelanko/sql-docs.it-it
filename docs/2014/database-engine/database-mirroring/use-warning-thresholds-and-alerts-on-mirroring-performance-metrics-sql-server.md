@@ -17,12 +17,12 @@ ms.assetid: 8cdd1515-0bd7-4f8c-a7fc-a33b575e20f6
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 46f8591a7fe3e8a69ceb3df60011248db38da722
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 41044c16343ba93055815851000a1a642578e39a
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48132701"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53354728"
 ---
 # <a name="use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server"></a>Utilizzare valori di soglia avvisi e avvisi sulle metriche delle prestazioni di mirroring (SQL Server)
   In questo argomento sono incluse informazioni sugli eventi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per cui è possibile configurare e gestire valori soglia degli avvisi per il mirroring del database. È possibile usare Monitoraggio mirroring del database o le stored procedure **sp_dbmmonitorchangealert**, **sp_dbmmonitorhelpalert**e **sp_dbmmonitordropalert** . Nell'argomento sono inoltre incluse informazioni relative alle configurazione degli avvisi per gli eventi di mirroring del database.  
@@ -45,7 +45,7 @@ ms.locfileid: "48132701"
 |Misurazione delle prestazioni|Valore soglia avvisi|Etichetta di Monitoraggio mirroring del database|  
 |------------------------|-----------------------|--------------------------------------|  
 |Log non inviato|Specifica la quantità di log non inviati, espressa in kilobyte (KB), che può accumularsi prima che venga generato un avviso nell'istanza del server principale. Questo avviso consente di quantificare il rischio potenziale di perdita dei dati in termini di KB ed è particolarmente rilevante per la modalità a prestazioni elevate. L'avviso risulta tuttavia utile anche per la modalità a sicurezza elevata quando il mirroring viene sospeso in seguito alla disconnessione dei partner.|**Avvisa se il log non inviato supera la soglia**|  
-|Log non ripristinato|Specifica la quantità di log non ripristinati, espressa in kilobyte (KB), che può accumularsi prima che venga generato un avviso nell'istanza del server mirror. Questo avviso consente di misurare il tempo di failover. Il*tempo di failover* corrisponde essenzialmente al tempo necessario al server mirror precedente per eseguire il rollforward di tutti i log rimanenti nella propria coda di rollforward, più un breve tempo aggiuntivo.<br /><br /> Nota: per un failover automatico, il tempo necessario al sistema per rilevare l'errore è indipendente dal tempo di failover.<br /><br /> Per altre informazioni, vedere [Stimare l'interruzione del servizio durante il cambio di ruolo &#40;mirroring del database&#41;](estimate-the-interruption-of-service-during-role-switching-database-mirroring.md).|**Avvisa se il log non ripristinato supera la soglia**|  
+|Log non ripristinato|Specifica la quantità di log non ripristinati, espressa in kilobyte (KB), che può accumularsi prima che venga generato un avviso nell'istanza del server mirror. Questo avviso consente di misurare il tempo di failover. Il*tempo di failover* corrisponde essenzialmente al tempo necessario al server mirror precedente per eseguire il rollforward di tutti i log rimanenti nella propria coda di rollforward, più un breve tempo aggiuntivo.<br /><br /> Nota: Per un failover automatico, il tempo necessario al sistema per rilevare l'errore è indipendente dal tempo di failover.<br /><br /> Per altre informazioni, vedere [Stimare l'interruzione del servizio durante il cambio di ruolo &#40;mirroring del database&#41;](estimate-the-interruption-of-service-during-role-switching-database-mirroring.md).|**Avvisa se il log non ripristinato supera la soglia**|  
 |Transazione non inviata meno recente|Specifica la quantità di transazioni, espressa in minuti, che può accumularsi nella coda di invio prima che venga generato un avviso nell'istanza del server principale. Questo avviso consente di quantificare il rischio potenziale di perdita dei dati in termini di tempo ed è particolarmente rilevante per la modalità a prestazioni elevate. L'avviso risulta tuttavia utile anche per la modalità a sicurezza elevata quando il mirroring viene sospeso in seguito alla disconnessione dei partner.|**Avvisa se il tempo di memorizzazione della transazione non inviata meno recente è superiore alla soglia**|  
 |Overhead commit mirror|Specifica il ritardo medio per transazione, espresso in millisecondi, che è consentito prima che venga generato un avviso nell'istanza del server principale. Questo ritardo rappresenta la quantità di overhead generato mentre l'istanza del server principale è in attesa che l'istanza del server mirror scriva il record di log della transazione nella coda di rollforward. Questo valore è rilevante solo nella modalità a sicurezza elevata.|**Avvisa se l'overhead di commit del mirror supera la soglia**|  
   
@@ -66,7 +66,7 @@ ms.locfileid: "48132701"
   
      Il set seguente di stored procedure di sistema consente a un amministratore di impostare e gestire le soglie di avviso su database con mirroring di un partner alla volta.  
   
-    |Routine|Description|  
+    |Routine|Descrizione|  
     |---------------|-----------------|  
     |[sp_dbmmonitorchangealert &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dbmmonitorchangealert-transact-sql)|Aggiunge o modifica la soglia di avviso per una misurazione delle prestazioni di mirroring specificata.|  
     |[sp_dbmmonitorhelpalert &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dbmmonitorhelpalert-transact-sql)|Restituisce informazioni sulle soglie di avviso su una o tutte le misurazioni delle prestazioni di monitoraggio del mirroring del database.|  
@@ -105,7 +105,7 @@ ms.locfileid: "48132701"
   
  Quando si definiscono avvisi su eventi di mirroring del database, è consigliabile definire valori soglia avvisi su entrambe le istanze dei server partner. Nel server principale o nel server mirror vengono generati singoli eventi, ma ognuno dei partner può eseguire in qualsiasi momento uno o l'altro dei due ruoli. Per assicurarsi che un avviso continui a funzionare dopo un failover, l'avviso deve essere definito su entrambi i partner.  
   
- Per ulteriori informazioni, vedere il white paper relativo agli avvisi sugli eventi di mirroring del database nel [sito Web SQL Server](http://go.microsoft.com/fwlink/?linkid=62373). In questo white paper sono contenute informazioni su come configurare avvisi utilizzando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, eventi WMI di mirroring del database e script di esempio.  
+ Per ulteriori informazioni, vedere il white paper relativo agli avvisi sugli eventi di mirroring del database nel [sito Web SQL Server](https://go.microsoft.com/fwlink/?linkid=62373). In questo white paper sono contenute informazioni su come configurare avvisi utilizzando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, eventi WMI di mirroring del database e script di esempio.  
   
 > [!IMPORTANT]  
 >  Per tutte le sessioni di mirroring, è consigliabile configurare il database per l'invio di un avviso per qualsiasi evento di modifica di stato. A meno che non sia prevista una modifica dello stato in seguito a una modifica manuale della configurazione, si è verificato un evento che potrebbe compromettere i dati. Per proteggere i dati, identificare e correggere la causa della modifica imprevista dello stato.  

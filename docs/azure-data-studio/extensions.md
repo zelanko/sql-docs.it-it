@@ -1,7 +1,8 @@
 ---
-title: Estendere le funzionalità di Studio di Azure Data | Microsoft Docs
-description: Aggiungi estensioni a Data Studio di Azure
-ms.custom: tools|sos
+title: Aggiungere le estensioni
+titleSuffix: Azure Data Studio
+description: Aggiungere le estensioni dal Marketplace delle estensioni a Data Studio di Azure
+ms.custom: seodec18
 ms.date: 09/24/2018
 ms.reviewer: alayu; sstein
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f00275187781b3981974c0456a7870a52604220c
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: a79732ba0a10121f4c4323e7f19bac009c64964d
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49356232"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030465"
 ---
 # <a name="extend-the-functionality-of-includename-sosincludesname-sos-shortmd"></a>Estendere le funzionalità di [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 

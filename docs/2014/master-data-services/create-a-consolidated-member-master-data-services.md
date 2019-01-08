@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - creating consolidated members [Master Data Services]
@@ -15,12 +14,12 @@ ms.assetid: 431ab2d2-5517-4372-9980-142b05427c08
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 352e545c834b0b4e94b19bcfcd014a4e363b0b75
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8bef17d900fe9a823439a88b8e94eb78810e6627
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48058641"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52766943"
 ---
 # <a name="create-a-consolidated-member-master-data-services"></a>Create a Consolidated Member (Master Data Services)
   In [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]creare un membro consolidato quando si desidera un nodo padre per una gerarchia esplicita. I membri consolidati possono avere attributi specifici, che vengono usati per il raggruppamento. Come illustrato nell'esempio seguente, i membri consolidati possono essere usati per i gruppi di account che includono account sottostanti.  

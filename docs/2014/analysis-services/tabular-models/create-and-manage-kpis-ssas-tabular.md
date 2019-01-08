@@ -13,15 +13,15 @@ ms.assetid: c96026c2-4394-4c3c-986b-4c95a4421900
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: dd373f8080878a69200706a7d53d2dd92f9ad160
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dde3d1c12dd4f5b037d24030ae9ec96ae9f97dd0
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48134113"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52405146"
 ---
 # <a name="create-and-manage-kpis-ssas-tabular"></a>Creare e gestire indicatori KPI (SSAS tabulare)
-  In questo argomento viene descritto come creare, modificare o eliminare un indicatore di prestazioni chiave (KPI) in un modello tabulare. Per creare un indicatore KPI, selezionare una misura tramite cui venga restituito il valore di base dell'indicatore KPI. Successivamente, utilizzare la finestra di dialogo Indicatore di prestazioni chiave per selezionare una seconda misura o un valore assoluto tramite cui venga restituito un valore di destinazione. È quindi possibile definire le soglie dello stato tramite cui si misurano le prestazioni tra le misure di base e di destinazione.  
+  In questo argomento viene descritto come creare, modificare o eliminare un indicatore di prestazioni chiave (KPI) in un modello tabulare. Per creare un indicatore KPI, si seleziona una misura che restituisca un valore di Base dell'indicatore KPI. Successivamente, utilizzare la finestra di dialogo Indicatore di prestazioni chiave per selezionare una seconda misura o un valore assoluto tramite cui venga restituito un valore di destinazione. È quindi possibile definire le soglie dello stato tramite cui si misurano le prestazioni tra le misure di base e di destinazione.  
   
  In questo argomento sono incluse le attività seguenti:  
   
@@ -55,7 +55,7 @@ ms.locfileid: "48134113"
 5.  Fare clic su **Descrizioni**, quindi digitare le descrizioni per l'indicatore KPI, il valore, lo stato e la destinazione.  
   
 > [!TIP]  
->  È possibile utilizzare la funzionalità Analizza in Excel per testare l'indicatore KPI. Per altre informazioni, vedere [Analizzare in Excel &#40;SSAS tabulare&#41;](analyze-in-excel-ssas-tabular.md).  
+>  È possibile utilizzare la funzionalità Analizza in Excel per testare l'indicatore KPI. Per altre informazioni, vedere la sezione [Analizzare in Excel &#40;SSAS tabulare&#41;](analyze-in-excel-ssas-tabular.md).  
   
 ###  <a name="bkmk_edit_KPI"></a> Per modificare un indicatore KPI  
   
@@ -84,8 +84,8 @@ ms.locfileid: "48134113"
 |Tendenza|ALT+T|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Gli indicatori KPI &#40;tabulare di SSAS&#41;](kpis-ssas-tabular.md)   
- [Le misure &#40;tabulare di SSAS&#41;](measures-ssas-tabular.md)   
- [Creare e gestire misure &#40;tabulare di SSAS&#41;](create-and-manage-measures-ssas-tabular.md)  
+ [Indicatori KPI &#40;SSAS tabulare&#41;](kpis-ssas-tabular.md)   
+ [Misure &#40;SSAS tabulare&#41;](measures-ssas-tabular.md)   
+ [Creare e gestire misure &#40;SSAS tabulare&#41;](create-and-manage-measures-ssas-tabular.md)  
   
   

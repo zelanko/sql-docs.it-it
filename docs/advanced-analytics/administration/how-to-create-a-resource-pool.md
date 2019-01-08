@@ -1,5 +1,6 @@
 ---
-title: Come creare un pool di risorse per SQL Server Machine Learning | Microsoft Docs
+title: Come creare un pool di risorse per R e Python - servizi di SQL Server Machine Learning
+description: Definire un pool di risorse di SQL Server per i processi R o Python in un'istanza del motore di database di SQL Server 2016 o SQL Server 2017.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/15/2018
@@ -7,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 12b21a37e66351cb84b6de246f3b398a1d20bfd3
-ms.sourcegitcommit: 485e4e05d88813d2a8bb8e7296dbd721d125f940
+ms.openlocfilehash: c0fcc673e61f2ee188b169a2d46f1da6a4ffd2df
+ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49100567"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53596862"
 ---
 # <a name="how-to-create-a-resource-pool-for-machine-learning-in-sql-server"></a>Come creare un pool di risorse per machine learning in SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -26,8 +27,6 @@ Il processo include più passaggi:
 3.  Creare un nuovo pool di risorse per processi esterni.
 4.  Creare una funzione di classificazione per identificare le richieste di script esterni.
 5.  Verificare che il nuovo pool di risorse esterno esegue l'acquisizione dei processi R o Python dal client specificati o gli account.
-
-**Si applica a:**  [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)] e [!INCLUDE[sscurrent-md](../../includes/sscurrent-md.md)] [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]
 
 ##  <a name="bkmk_ReviewStatus"></a> Esaminare lo stato dei pool di risorse esistenti
   

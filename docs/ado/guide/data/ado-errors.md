@@ -13,12 +13,12 @@ ms.assetid: 9bb84114-a1df-4122-a1b8-ad98dcd85cc3
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4fadb19aac4700738f4c6ec43449b3de7d4a4a18
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c5b2d3f43067750d2fc70a86c6a23bc74dd3bbc4
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47776369"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52509115"
 ---
 # <a name="ado-run-time-errors"></a>Errori di Run-Time di ADO
 Errori ADO vengono segnalati al programma come errori di run-time. È possibile utilizzare il meccanismo di intercettazione degli errori del linguaggio di programmazione per intercettare e gestirli. Ad esempio, in Visual Basic, usare il **in caso di errore** istruzione. In Visual C++, dipende dal metodo utilizzato per accedere alle librerie ADO. Con #import, usare una **try-catch** blocco. In caso contrario, i programmatori C++ necessari recuperare in modo esplicito un oggetto errore chiamando **GetErrorInfo**. Routine sub Visual Basic seguente viene illustrato come intercettare un errore ADO:
@@ -87,7 +87,7 @@ Error reported by: ADODB.Connection
 Help File: E:\WINNT\HELP\ADO260.CHM Topic ID: 1003705
 ```
 
- Il messaggio di errore include ogni singola informazione fornita da Visual Basic **Err** dell'oggetto, ad eccezione delle **Err** valore, che non si applica qui. Il numero di errore indica si è verificato un errore. La descrizione è utile nei casi in cui non si desidera gestire personalmente l'errore. È possibile semplicemente passarlo insieme all'utente. Anche se in genere si desidera utilizzare messaggi personalizzati per l'applicazione, non è possibile prevedere ogni errore. la descrizione fornisce alcune informazioni sul mancato per quanto riguarda la causa dell'errore. Nell'esempio di codice, l'errore è stato segnalato per il **connessione** oggetto. Viene visualizzato qui ID a livello di codice o del tipo dell'oggetto, ovvero non un nome di variabile.
+ Il messaggio di errore include ogni singola informazione fornita da Visual Basic **Err** dell'oggetto, ad eccezione delle **Err** valore, che non si applica qui. Il numero di errore indica si è verificato un errore. La descrizione è utile nei casi in cui non si desidera gestire personalmente l'errore. È possibile semplicemente passarlo insieme all'utente. Anche se in genere si desidera utilizzare messaggi personalizzati per l'applicazione, non è possibile prevedere ogni errore. la descrizione fornisce alcune informazioni sul mancato per quanto riguarda la causa dell'errore. Nell'esempio di codice, l'errore è stato segnalato per il **connessione** oggetto. Viene visualizzato qui - ID a livello di codice o del tipo dell'oggetto non un nome di variabile.
 
 > [!NOTE]
 >  Visual Basic **Err** oggetto contiene solo informazioni relative all'errore più recente. ADO **errori** insieme delle **connessione** oggetto contiene uno **errore** oggetto per ogni errore generato dall'operazione più recente di ADO. Usare il **errori** raccolta anziché le **Err** oggetto per gestire gli errori più. Per altre informazioni sul **errori** raccolta, vedere [errori del Provider](../../../ado/guide/data/provider-errors.md). Tuttavia, se non è non valida **connessione** oggetto, il **Err** oggetto è l'unica fonte per informazioni sugli errori ADO.

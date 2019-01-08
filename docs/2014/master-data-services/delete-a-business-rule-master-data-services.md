@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - deleting business rules [Master Data Services]
@@ -14,12 +13,12 @@ ms.assetid: b97aa4f9-569f-451d-ad62-65b81f980299
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: de5fc5202b7a2b463fb80e51fcc37623c7d65528
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 652b301a91adc3c6c417e23ff2f192712c5f4a04
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48161901"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52784413"
 ---
 # <a name="delete-a-business-rule-master-data-services"></a>Eliminare una regola business (Master Data Services)
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]eliminare una regola di business quando non è più necessaria.  
@@ -59,8 +58,8 @@ ms.locfileid: "48161901"
 11. Nella finestra di dialogo di conferma fare clic su **OK**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Escludere una regola Business &#40;Master Data Services&#41;](exclude-a-business-rule-master-data-services.md)   
+ [Escludere una regola business &#40;Master Data Services&#41;](exclude-a-business-rule-master-data-services.md)   
  [Creare e pubblicare una regola di business &#40;Master Data Services&#41;](../../2014/master-data-services/create-and-publish-a-business-rule-master-data-services.md)   
- [Le regole di business &#40;Master Data Services&#41;](../../2014/master-data-services/business-rules-master-data-services.md)  
+ [Regole di business &#40;Master Data Services&#41;](../../2014/master-data-services/business-rules-master-data-services.md)  
   
   

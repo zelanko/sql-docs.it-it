@@ -5,8 +5,7 @@ ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - MSreplication_queue
@@ -19,19 +18,19 @@ ms.assetid: 664bf817-8021-4417-96d6-2bb1e4baabff
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8542043643247d5620f57146debd72c02142041e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c2370bfc06f9fd939f5778ad52e6cb09aeae2806
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47742429"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52819055"
 ---
 # <a name="msreplicationqueue-transact-sql"></a>MSreplication_queue (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Il **MSreplication_queue** tabella viene utilizzata dal processo di replica per archiviare i comandi in coda eseguiti da tutte le sottoscrizioni ad aggiornamento in coda che utilizzano basato su SQL in coda. Questa tabella è archiviata nel database di sottoscrizione.  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**publisher**|**sysname**|Nome del server di pubblicazione.|  
 |**publisher_db**|**sysname**|Nome del database di pubblicazione.|  

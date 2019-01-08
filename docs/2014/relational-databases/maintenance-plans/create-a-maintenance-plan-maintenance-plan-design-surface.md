@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 helpviewer_keywords:
 - Maintenance Plan Design Surface
@@ -13,12 +12,12 @@ ms.assetid: 2ef803ee-a9f8-454a-ad63-fedcbe6838d1
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d5906e66db0ab0cee320aed86a90e82b85a8fa73
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 151a7e847d50a84c34eb07f55e5bd4d8e20dcc4d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48142879"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52775793"
 ---
 # <a name="create-a-maintenance-plan-maintenance-plan-design-surface"></a>Creare un piano di manutenzione (area di progettazione del piano di manutenzione)
   In questo argomento viene descritto come creare un piano di manutenzione multiserver o di un singolo server utilizzando l'area di progettazione del piano di manutenzione in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Mentre la **Creazione guidata piano di manutenzione** è ideale per la creazione di piani di manutenzione di base, la creazione di un piano tramite l'area di progettazione consente di utilizzare un flusso di lavoro avanzato.  
@@ -29,7 +28,7 @@ ms.locfileid: "48142879"
   
      [Limitazioni e restrizioni](#Restrictions)  
   
-     [Security](#Security)  
+     [Sicurezza](#Security)  
   
 -   [Creazione di un piano di manutenzione tramite l'area di progettazione del piano di manutenzione](#SSMSProcedure)  
   
@@ -84,7 +83,7 @@ ms.locfileid: "48142879"
      **Server**  
      Visualizza la finestra di dialogo **Server** usata per selezionare i server in cui verranno eseguite le attività del sottopiano. Questa opzione è abilitata solo nei server master in ambienti multiserver. Per altre informazioni, vedere [Creazione di un ambiente multiserver](../../ssms/agent/create-a-multiserver-environment.md) e [Piano di manutenzione & #40;Server& #41;](maintenance-plan-servers.md).  
   
-     **Nome**  
+     **Name**  
      Consente di visualizzare il nome del piano di manutenzione. Il nome dei nuovi piani di manutenzione viene indicato in una finestra di dialogo visualizzata prima dell'apertura della finestra di progettazione dei piani di manutenzione. Per rinominare un piano di manutenzione, fare clic con il pulsante destro del mouse sul piano in Esplora oggetti e quindi scegliere **Rinomina**.  
   
      **Descrizione**  
@@ -99,7 +98,7 @@ ms.locfileid: "48142879"
   
      Nella finestra di dialogo **Proprietà sottopiano** sono disponibili le opzioni seguenti.  
   
-     **Nome**  
+     **Name**  
      Nome del sottopiano.  
   
      **Descrizione**  
@@ -161,10 +160,10 @@ ms.locfileid: "48142879"
          Consente di definire il funzionamento di un vincolo tra due attività.  
   
          Elenco**Operazione valutazione**    
-         Consente di specificare l'operazione di valutazione utilizzata dal vincolo di precedenza. Le operazioni sono **Vincolo**, **Espressione**, **Espressione e vincolo**e **Espressione o vincolo**.  
+         Consente di specificare l'operazione di valutazione utilizzata dal vincolo di precedenza. Le operazioni sono: **Vincolo**, **espressione**, **espressione e vincolo**, e **espressione o vincolo**.  
   
          Elenco**Valore**   
-         Consente di specificare il valore di vincolo, ovvero **Operazione completata**, **Errore**oppure **Completamento**. Il valore predefinito è**Esito positivo** .  
+         Specificare il valore del vincolo: **Operazione riuscita**, **errore**, o **completamento**. Il valore predefinito è**Esito positivo** .  
   
         > [!NOTE]  
         >  La riga del vincolo di precedenza è verde in caso di **Esito positivo**, rossa in caso di **Esito negativo**e blu in caso di **Completamento**.  
@@ -200,7 +199,7 @@ ms.locfileid: "48142879"
   
     3.  Nella casella **Nome connessione** nella finestra di dialogo **Proprietà connessione** immettere il nome della connessione che si desidera creare.  
   
-    4.  Nella finestra di dialogo **Selezionare o immettere il nome di un server**in **Specificare le informazioni seguenti per connettersi ai dati di SQL Server** immettere il nome del server SQL che si intende usare o fare clic sui puntini di sospensione **(…)** e selezionare un server nella finestra di dialogo **SQL Server** . Se si seleziona un server nella finestra di dialogo **SQL Server** , fare clic su **OK**.  
+    4.  Nella finestra di dialogo **Selezionare o immettere il nome di un server** in **Specificare le informazioni seguenti per connettersi ai dati di SQL Server** immettere il nome del server SQL che si intende usare o fare clic sui puntini di sospensione **(...)** e selezionare un server nella finestra di dialogo **SQL Server**. Se si seleziona un server nella finestra di dialogo **SQL Server** , fare clic su **OK**.  
   
     5.  In **Immettere le informazioni per l'accesso al server**selezionare **Usa sicurezza integrata di Windows NT** o **Usa nome utente e password specifici**. Se si sceglie di utilizzare un nome utente e una password specifici, immettere tali informazioni rispettivamente nelle caselle **Nome utente** e **Password** .  
   
@@ -216,7 +215,7 @@ ms.locfileid: "48142879"
   
         1.  Se si seleziona **Genera report in un file di testo**, selezionare **Crea nuovo file** o **Accoda a file**.  
   
-        2.  A seconda della selezione effettuata nel passaggio precedente, immettere il nome e il percorso completo del nuovo file o del file da accodare nella casella **Cartella** o **Nome file** . In alternativa, fare clic sui puntini di sospensione **(…)** e selezionare il percorso della cartella o il nome del file dalla finestra di dialogo **Individua cartella –***nome_server* o **Individua file di database –***nome_server*.  
+        2.  A seconda della selezione effettuata nel passaggio precedente, immettere il nome e il percorso completo del nuovo file o del file da accodare nella casella **Cartella** o **Nome file** . In alternativa, fare clic sui puntini di sospensione **(...)**  e selezionare il percorso per il nome file o cartella dal **individua cartella-* * * nome_server* o **Individua file di Database-* * * nome_server* finestre di dialogo.  
   
         3.  Se si seleziona **Invia report a destinatario di posta elettronica**, nell'elenco **Operatore agente** selezionare il destinatario del report da inviare tramite posta elettronica.  
   
@@ -231,7 +230,7 @@ ms.locfileid: "48142879"
   
 12. Per visualizzare i risultati nel visualizzatore file di log, in **Esplora oggetti**fare clic con il pulsante destro del mouse sulla cartella **Piani di manutenzione** o sul piano di manutenzione specifico e selezionare **Visualizza cronologia**.  
   
-     Nella finestra di dialogo **Visualizzatore file di log –***nome_server* sono disponibili le opzioni seguenti.  
+     Le opzioni seguenti sono disponibili sul **Visualizzatore File di Log-* * * nome_server* nella finestra di dialogo.  
   
      **Carica log**  
      Consente di aprire una finestra di dialogo in cui è possibile specificare un file di log da caricare.  

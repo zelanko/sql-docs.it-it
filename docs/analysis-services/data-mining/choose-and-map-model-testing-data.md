@@ -1,5 +1,5 @@
 ---
-title: Scegliere ed eseguire il mapping dei dati di test del modello | Documenti Microsoft
+title: Scegliere ed eseguire il mapping dei dati di test del modello | Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 3c731f1a439a817abd133e14815b85a8f6d0077b
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 2e1b4751d21b9aea4f80561909910d81abbc3756
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34015308"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52545325"
 ---
 # <a name="choose-and-map-model-testing-data"></a>Scegliere ed eseguire il mapping dei dati di test del modello
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -70,7 +70,7 @@ ms.locfileid: "34015308"
   
 3.  Nell'area **Seleziona set di dati da utilizzare per il grafico di accuratezza** della scheda **Selezione input**selezionare l'opzione **Specifica un set di dati diverso**.  
   
-4.  Fare clic sul pulsante **(…)** per aprire una finestra di dialogo e compilare la definizione del set di dati esterno.  
+4.  Fare clic sul pulsante **(...)**  per aprire una finestra di dialogo e compilare la definizione del set di dati esterno.  
   
 5.  Nella finestra di dialogo **Seleziona struttura di data mining** selezionare la struttura di data mining contenente i modelli che si desidera utilizzare e quindi fare clic su **OK**.  
   
@@ -94,7 +94,7 @@ ms.locfileid: "34015308"
   
 4.  In **Seleziona set di dati da utilizzare per il grafico di accuratezza**selezionare l'opzione **Specifica un set di dati diverso**.  
   
-5.  Fare clic sul pulsante sfoglia **(…)** per aprire una finestra di dialogo e compilare la definizione dell'origine dati esterna.  
+5.  Fare clic sul pulsante **(...)**  per aprire una finestra di dialogo e compilare la definizione dell'origine dati esterna.  
   
 6.  Nella finestra di dialogo **Specifica mapping colonne** fare clic su **Seleziona tabella del case**.  
   
@@ -115,6 +115,6 @@ ms.locfileid: "34015308"
      I nuovi mapping delle colonna verranno visualizzati nella finestra di dialogo **Specifica mapping colonne** . È possibile rimuovere un mapping selezionando la linea tra le colonne e premendo CANC. È possibile creare una nuova connessione selezionando una colonna nella tabella **Struttura di data mining** , quindi trascinandola nella colonna corrispondente della tabella **Seleziona tabelle di input** .  
   
 ## <a name="see-also"></a>Vedere anche  
- [Test e convalida le attività e procedure relative alla & #40; Data Mining & #41;](../../analysis-services/data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)  
+ [Attività e procedure di test e convalida &#40;data mining&#41;](../../analysis-services/data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)  
   
   

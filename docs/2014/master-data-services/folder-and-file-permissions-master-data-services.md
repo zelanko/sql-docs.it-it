@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - security [Master Data Services], file and folder
@@ -16,12 +15,12 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 robots: noindex,nofollow
-ms.openlocfilehash: 06cec1895333e305739476d6c2eca731544fcd3f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 594ceb3c21dec321afb7b08a2a54e90571ec8f5f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48204131"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52802853"
 ---
 # <a name="folder-and-file-permissions-master-data-services"></a>Autorizzazioni per file e cartelle [Master Data Services]
   Quando si installa [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], cartelle e file vengono installati nel file system nel percorso di installazione specificato per le funzionalità condivise di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Se si usa il percorso di installazione predefinito per [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] funzionalità condivise, il percorso di installazione per [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] viene *unità*: \Programmi\Microsoft SQL Server\120\Master Data Services. Sebbene sia possibile modificare il percorso di installazione delle funzionalità condivise, è necessario considerare le autorizzazioni ereditate dalla cartella padre e quelle impostate in modo esplicito per [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)].  
@@ -34,7 +33,7 @@ ms.locfileid: "48204131"
   
 ###### <a name="program-files-default-permissions"></a>Autorizzazioni predefinite di Programmi  
   
-|Nome di gruppo o di account|Autorizzazioni|  
+|Nome di gruppo o di account|Permissions|  
 |---------------------------|-----------------|  
 |CREATOR OWNER|Autorizzazioni speciali|  
 |SYSTEM|Autorizzazioni speciali|  

@@ -1,7 +1,7 @@
 ---
 title: Filegroup con ottimizzazione per la memoria | Microsoft Docs
 ms.custom: ''
-ms.date: 06/14/2017
+ms.date: 11/19/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: in-memory-oltp
@@ -10,56 +10,64 @@ ms.assetid: 14106cc9-816b-493a-bcb9-fe66a1cd4630
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: cd1a637bdf40202e5c8a973be8f4ae68f415cde8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 64402f73fdf43c0ebcbeff338ed72d56d55227be
+ms.sourcegitcommit: f62f70298651d6223fa5d215b6a7a0d2ffecbd0d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48076562"
+ms.lasthandoff: 11/19/2018
+ms.locfileid: "51947565"
 ---
 # <a name="the-memory-optimized-filegroup"></a>Filegroup con ottimizzazione per la memoria
   Per creare tabelle ottimizzate per la memoria, è necessario creare prima un filegroup ottimizzato per la memoria. Nel filegroup ottimizzato per la memoria è presente uno o più contenitori. Ogni contenitore include file di dati o file differenziali o entrambi.  
   
- Anche se le righe di dati delle tabelle SCHEMA_ONLY non sono persistenti e i metadati per le tabelle ottimizzate per la memoria e le stored procedure compilate a livello nativo vengono archiviati nei cataloghi tradizionali, il motore [!INCLUDE[hek_2](../../includes/hek-2-md.md)] richiede comunque un filegroup ottimizzato per la memoria per le tabelle ottimizzate per la memoria SCHEMA_ONLY per fornire un'esperienza uniforme per i database con tabelle ottimizzate per la memoria.  
+ Anche se le righe di dati delle tabelle `SCHEMA_ONLY` non sono persistenti e i metadati per le tabelle ottimizzate per la memoria e le stored procedure compilate a livello nativo vengono archiviati nei cataloghi tradizionali, il motore [!INCLUDE[hek_2](../../includes/hek-2-md.md)] richiede comunque un filegroup ottimizzato per la memoria per le tabelle ottimizzate per la memoria `SCHEMA_ONLY` per fornire un'esperienza uniforme per i database con tabelle ottimizzate per la memoria.  
   
  Il filegroup ottimizzato per la memoria è basato sul filegroup filestream, con le differenze seguenti:  
   
 -   È possibile creare un solo filegroup ottimizzato per la memoria per database. È necessario contrassegnare in modo esplicito il filegroup come contenente memory_optimized_data. È possibile creare il filegroup durante la creazione del database o è possibile aggiungerlo successivamente:  
   
-    ```  
+    ```sql  
     ALTER DATABASE imoltp ADD FILEGROUP imoltp_mod CONTAINS MEMORY_OPTIMIZED_DATA  
     ```  
   
--   È necessario aggiungere uno o più contenitori al filegroup MEMORY_OPTIMIZED_DATA. Esempio:  
+-   È necessario aggiungere uno o più contenitori al filegroup MEMORY_OPTIMIZED_DATA. Ad esempio:  
   
-    ```  
+    ```sql  
     ALTER DATABASE imoltp ADD FILE (name='imoltp_mod1', filename='c:\data\imoltp_mod1') TO FILEGROUP imoltp_mod  
     ```  
   
 -   Non è necessario abilitare il filestream ([Abilitare e configurare FILESTREAM](../blob/enable-and-configure-filestream.md)) per creare un filegroup ottimizzato per la memoria. Il mapping al filestream viene eseguito dal motore [!INCLUDE[hek_2](../../includes/hek-2-md.md)] .  
   
--   È possibile aggiungere nuovi contenitori a un filegroup ottimizzato per la memoria. Potrebbe essere necessario un nuovo contenitore per espandere l'archiviazione necessaria per la tabella ottimizzata per la memoria durevole nonché per distribuire i dati IO tra più contenitori.  
+-   È possibile aggiungere nuovi contenitori a un filegroup ottimizzato per la memoria. Potrebbe essere necessario un nuovo contenitore per espandere l'archiviazione necessaria per la tabella con ottimizzazione per la memoria durevole nonché per distribuire i/o tra più contenitori.  
   
 -   Lo spostamento di dati a un filegroup ottimizzato per la memoria è ottimizzato in una configurazione del gruppo di disponibilità AlwaysOn. Diversamente dai file filestream inviati alle repliche secondarie, i file del checkpoint (dati e differenziali) nel filegroup ottimizzato per la memoria non vengono inviati alle repliche secondarie. I file di dati e differenziali vengono costruiti utilizzando il log delle transazioni sulla replica secondaria.  
   
- Di seguito sono riportate le limitazioni del filegroup ottimizzato per la memoria.  
+Di seguito sono riportate le limitazioni del filegroup ottimizzato per la memoria.  
   
 -   Dopo aver creato un filegroup ottimizzato per la memoria è possibile rimuoverlo solo eliminando il database. In un ambiente di produzione, è improbabile che si renda necessario rimuovere il filegroup ottimizzato per la memoria.  
   
 -   Non è possibile eliminare un contenitore non vuoto o spostare le coppie di file di dati e differenziali in un altro contenitore del filegroup ottimizzato per la memoria.  
   
--   Non è possibile specificare MAXSIZE per il contenitore.  
-  
 ## <a name="configuring-a-memory-optimized-filegroup"></a>Configurazione di un filegroup con ottimizzazione per la memoria  
- È consigliabile creare più contenitori nel filegroup ottimizzato per la memoria e distribuirli in unità differenti per ottenere più larghezza di banda per trasmettere i dati in memoria.  
+Creare più contenitori nel filegroup ottimizzato per la memoria e distribuirli in unità differenti per ottenere più larghezza di banda per trasmettere i dati in memoria.  
   
- Nel configurare l'archiviazione, è necessario fornire uno spazio libero su disco quattro volte superiore alla dimensione delle tabelle ottimizzate per la memoria durevoli. È inoltre necessario assicurarsi che il sottosistema IO supporti le operazioni di IOPS necessarie per il carico di lavoro. Se le coppie di file di dati e differenziali vengono popolati in un'operazione di IOPS specifica, tale IOPS è necessaria 3 volte per le operazioni di merge e archiviazione. È possibile aggiungere capacità di archiviazione e IOPS aggiungendo uno o più contenitori al filegroup ottimizzato per la memoria.  
+Nel configurare l'archiviazione, è necessario fornire uno spazio libero su disco quattro volte superiore alla dimensione delle tabelle ottimizzate per la memoria durevoli. Verificare che il sottosistema dei / o supporti le operazioni di IOPS necessarie per il carico di lavoro. Se le coppie di file di dati e differenziali vengono popolati in un'operazione di IOPS specifica, tale IOPS è necessaria tre volte per le operazioni di merge e archiviazione. È possibile aggiungere capacità di archiviazione e IOPS aggiungendo uno o più contenitori al filegroup ottimizzato per la memoria.  
   
- In uno scenario con più contenitori e più unità, i file di dati e differenziali vengono allocati in contenitori con un meccanismo round robin. Il primo file di dati viene allocato dal primo contenitore e il file differenziale viene allocato dal contenitore successivo e questo modello di allocazione si ripete. Questo schema di allocazione distribuisce i file di dati e differenziali uniformemente nei contenitori se si dispone di un numero dispari di unità, ciascuna con il mapping a un solo contenitore. Tuttavia, se si dispone di un numero pari di unità, ciascuna con il mapping a un contenitore, è possibile che si verifichi un'archiviazione sbilanciata con i file di dati per cui è stato eseguito il mapping alle unità dispari e i file differenziali per cui è stato eseguito il mapping alle unità pari. Per ottenere un flusso bilanciato di IO per il recupero, inserire coppie di file di dati e differenziali negli stessi spindle/archiviazione come descritto nell'esempio seguente.  
+In uno scenario con più contenitori e più unità, i file di dati e differenziali vengono allocati in contenitori con un meccanismo round robin. Il primo file di dati viene allocato dal primo contenitore e il file differenziale viene allocato dal contenitore successivo e questo modello di allocazione si ripete. Questo schema di allocazione distribuisce i file di dati e differenziali uniformemente nei contenitori se si dispone di un numero dispari di unità, ciascuna con il mapping a un solo contenitore. Tuttavia, se si dispone di un numero pari di unità, ciascuna con il mapping a un contenitore, è possibile che si verifichi un'archiviazione sbilanciata con i file di dati per cui è stato eseguito il mapping alle unità dispari e i file differenziali per cui è stato eseguito il mapping alle unità pari. Per ottenere un flusso bilanciato dei / o sul ripristino, è consigliabile inserire coppie di file di dati e differenziali su stessi spindle/archiviazione come descritto nell'esempio seguente.  
+
+> [!CAUTION]
+> Se per il filegroup con ottimizzazione per la memoria è impostato un valore `MAXSIZE` e i file del checkpoint superano le dimensioni massime del contenitore, il database verrà contrassegnato come sospetto.   
+> In questo caso, non provare a impostare il database come OFFLINE o ONLINE, perché il database rimarrebbe nello stato RECOVERY_PENDING.
   
- **Esempio:** prendere in considerazione un filegroup ottimizzato per la memoria con due contenitori: il contenitore 1 nell'unità X e il contenitore 2 nell'unità Y. Poiché l'allocazione dei file di dati e differenziali viene eseguita in modalità round robin, il contenitore 1 avrà solo file di dati e contenitore 2 avrà solo file differenziali, determinando una persistenza sbilanciata per archiviazione, nonché operazioni di input/output al secondo, come file di dati sono significativamente maggiori i file differenziali. Per distribuire i file di dati e differenziali in modo uniforme tra le unità X e Y, creare quattro contenitori anziché due ed eseguire il mapping i primi due contenitori all'unità X e dei due contenitori successivi all'unità Y. Con allocazione round robin, i dati prima e primo file differenziale verranno allocati dal contenitore 1 e dal contenitore 2 rispettivamente cui viene eseguito il mapping all'unità X. Analogamente, il file di dati e differenziali successivo verrà allocato dal contenitore 3 e dal contenitore 4 per cui viene eseguito il mapping all'unità Y. Ciò consente di distribuire i file di dati e differenziali in due unità in modo uniforme.  
+### <a name="example"></a>Esempio 
+Si consideri un filegroup ottimizzato per la memoria con due contenitori: il contenitore 1 nell'unità X e il contenitore 2 nell'unità Y.  
+Dal momento che l'allocazione dei file di dati e differenziali viene eseguita in modo round robin, il contenitore 1 includerà solo file di dati e il contenitore 2 avrà solo file differenziali, generando una persistenza sbilanciata per l'archiviazione e le operazioni di input/output al secondo, in quanto i file di dati sono molto più grandi dei file differenziali.    
+Per distribuire i file di dati e differenziali in modo uniforme tra le unità X e Y, creare quattro contenitori anziché due e associare i primi due contenitori all'unità X e dei due contenitori successivi all'unità Y.  
+Con allocazione round robin, l'innanzitutto i dati e il primo file differenziale verranno allocati dal contenitore 1 e dal contenitore 2 rispettivamente, che viene eseguito il mapping all'unità X.   
+Analogamente, il file di dati e differenziali successivo verrà allocato dal contenitore 3 e dal contenitore 4 per cui viene eseguito il mapping all'unità Y. Ciò consente di distribuire i file di dati e differenziali in due unità in modo uniforme.  
+ 
   
 ## <a name="see-also"></a>Vedere anche  
- [Creazione e gestione dell'archiviazione per gli oggetti con ottimizzazione per la memoria](creating-and-managing-storage-for-memory-optimized-objects.md)  
-  
+[Creazione e gestione dell'archiviazione per gli oggetti con ottimizzazione per la memoria](creating-and-managing-storage-for-memory-optimized-objects.md)     
+[Filegroup e file di database](../../relational-databases/databases/database-files-and-filegroups.md)    
   

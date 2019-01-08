@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - jobs [SQL Server Agent], creating
@@ -13,12 +13,12 @@ ms.assetid: b35af2b6-6594-40d1-9861-4d5dd906048c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 15117eadf004cff9359a20b512cffcb4576a6ed8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ed3c7cf100d0105d393bb8c22bbc0d38d2e9de26
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48066001"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52808883"
 ---
 # <a name="create-a-job"></a>Creazione di un processo
   In questo argomento viene descritto come creare un processo di SQL Server Agent in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)] o SQL Server Management Objects (SMO).  
@@ -29,7 +29,7 @@ ms.locfileid: "48066001"
   
      [Limitazioni e restrizioni](#Restrictions)  
   
-     [Security](#Security)  
+     [Sicurezza](#Security)  
   
 -   **Per creare un processo tramite:**  
   
@@ -59,7 +59,7 @@ ms.locfileid: "48066001"
     >  Se si assegna la proprietà di un processo a un utente che non è membro del ruolo predefinito del server **sysadmin** e il processo sta eseguendo operazioni per le quali sono necessari account proxy, ad esempio l'esecuzione del pacchetto [!INCLUDE[ssIS](../../includes/ssis-md.md)] , verificare che l'utente possa accedere all'account proxy. In caso contrario, verrà generato un errore.  
   
 ####  <a name="Permissions"></a> Permissions  
- Per informazioni dettagliate, vedere [Implement SQL Server Agent Security](implement-sql-server-agent-security.md).  
+ Per informazioni dettagliate, vedere [Implementazione della sicurezza di SQL Server Agent](implement-sql-server-agent-security.md).  
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
   
@@ -69,23 +69,23 @@ ms.locfileid: "48066001"
   
 2.  Fare clic sul segno più per espandere **SQL Server Agent**.  
   
-3.  Fare clic con il pulsante destro del mouse sulla cartella **Processi** , quindi scegliere **Nuovo processo**.  
+3.  Fare clic con il pulsante destro del mouse sulla cartella **Processi** e quindi selezionare **Nuovo processo**.  
   
 4.  Nella pagina **Generale** della finestra di dialogo **Nuove processo** modificare le proprietà generali del processo. Per altre informazioni sulle opzioni disponibili in questa pagina, vedere [delle proprietà del processo e nuovo processo di &#40;pagina Generale&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)  
   
 5.  Nella pagina **Passaggi** , organizzare i passaggi del processo. Per altre informazioni sulle opzioni disponibili in questa pagina, vedere [delle proprietà del processo: nuovo processo di &#40;pagina passaggi&#41;](job-properties-new-job-steps-page.md)  
   
-6.  Nella pagina **Pianificazioni** , organizzare le pianificazioni per il processo. Per altre informazioni sulle opzioni disponibili in questa pagina, vedere [delle proprietà del processo: nuovo processo di &#40;pagina pianificazioni&#41;](job-properties-new-job-schedules-page.md)  
+6.  Nella pagina **Pianificazioni** , organizzare le pianificazioni per il processo. Per altre informazioni sulle opzioni disponibili in questa pagina, vedere [proprietà processo: Nuovo processo di &#40;pagina pianificazioni&#41;](job-properties-new-job-schedules-page.md)  
   
-7.  Nella pagina **Avvisi** , organizzare gli avvisi per il processo. Per altre informazioni sulle opzioni disponibili in questa pagina, vedere [delle proprietà del processo: nuovo processo di &#40;pagina degli avvisi&#41;](job-properties-new-job-alerts-page.md)  
+7.  Nella pagina **Avvisi** , organizzare gli avvisi per il processo. Per altre informazioni sulle opzioni disponibili in questa pagina, vedere [proprietà processo: Nuovo processo di &#40;pagina degli avvisi&#41;](job-properties-new-job-alerts-page.md)  
   
-8.  Nella pagina **Notifiche** impostare le azioni che [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent deve eseguire al completamento del processo. Per altre informazioni sulle opzioni disponibili in questa pagina, vedere [delle proprietà del processo: nuovo processo di &#40;notifiche&#41;](job-properties-new-job-notifications-page.md).  
+8.  Nella pagina **Notifiche** impostare le azioni che [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent deve eseguire al completamento del processo. Per altre informazioni sulle opzioni disponibili in questa pagina, vedere [proprietà processo: Nuovo processo di &#40;pagina delle notifiche&#41;](job-properties-new-job-notifications-page.md).  
   
-9. Nella pagina **Destinazioni** , gestire i server di destinazione per il processo. Per altre informazioni sulle opzioni disponibili in questa pagina, vedere [delle proprietà del processo: nuovo processo di &#40;pagina server di destinazione&#41;](job-properties-new-job-targets-page.md).  
+9. Nella pagina **Destinazioni** , gestire i server di destinazione per il processo. Per altre informazioni sulle opzioni disponibili in questa pagina, vedere [proprietà processo: Nuovo processo di &#40;è destinato a pagina&#41;](job-properties-new-job-targets-page.md).  
   
 10. Al termine, fare clic su **OK**.  
   
-##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
   
 #### <a name="to-create-a-sql-server-agent-job"></a>Per creare un processo di SQL Server Agent  
   
@@ -139,6 +139,6 @@ ms.locfileid: "48066001"
 ##  <a name="SMOProcedure"></a> Utilizzo di SQL Server Management Objects  
  **Per creare un processo di SQL Server Agent**  
   
- Chiamare il metodo `Create` della classe `Job` usando un linguaggio di programmazione come Visual Basic, Visual C# o PowerShell. Per un esempio di codice, vedere [Pianificazione delle attività amministrative automatiche in SQL Server Agent](sql-server-agent.md).  
+ Chiamare il metodo `Create` della classe `Job` usando un linguaggio di programmazione come Visual Basic, Visual C# o PowerShell. Per un codice di esempio, vedere [Pianificazione delle attività amministrative automatiche in SQL Server Agent](sql-server-agent.md).  
   
 ##  <a name="SSMSProc2"></a>  

@@ -11,12 +11,12 @@ ms.assetid: 5654cb30-cad2-470c-97b3-59cb331033e5
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e612fefcebd0537d13a4377484bbaddc04d086a0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fa33b840a985cb3053ad8868c3b6153dc53822ad
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48064521"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52515826"
 ---
 # <a name="analysis-of-data-flow"></a>Analisi del flusso di dati
   È possibile usare la [execution_data_statistics](../relational-databases/statistics/statistics.md) `SSISDB` vista per analizzare il flusso di dati dei pacchetti di database. In questa vista viene visualizzata una riga ogni volta che un componente del flusso di dati invia dati a un componente a valle. Le informazioni possono essere utilizzate per acquisire una comprensione più approfondita delle righe inviate a ciascun componente.  
@@ -39,9 +39,9 @@ order by source_component_name, destination_component_name
   
 -   **total_rows** : somma di tutte le righe inviate dal componente  
   
--   **wall_clock_time_ms** : tempo totale di esecuzione trascorso, in millisecondi, per ogni componente  
+-   **wall_clock_time_ms**: tempo totale di esecuzione trascorso, in millisecondi, per ogni componente  
   
--   **num_rows_per_millisecond** : numero di righe per millisecondi inviate da ogni componente  
+-   **num_rows_per_millisecond**: numero di righe per millisecondi inviate da ogni componente  
   
  Il `HAVING` clausola viene utilizzata per impedire un errore di divisione per zero nei calcoli.  
   

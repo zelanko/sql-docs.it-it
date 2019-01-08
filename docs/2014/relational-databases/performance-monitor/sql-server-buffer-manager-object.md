@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - Buffer Manager object
@@ -13,12 +13,12 @@ ms.assetid: 9775ebde-111d-476c-9188-b77805f90e98
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 9a5ef0580e2c13f191a233f5eb42029e4749f949
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ed9c8ff90798205f9db02ae4b4b47eb4310d4b06
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48115931"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52777523"
 ---
 # <a name="sql-server-buffer-manager-object"></a>Oggetto di Gestione buffer di SQL Server
   L'oggetto di **Gestione buffer** fornisce contatori che consentono di monitorare l'utilizzo degli elementi seguenti in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  
@@ -40,7 +40,7 @@ ms.locfileid: "48115931"
 ## <a name="buffer-manager-performance-objects"></a>Oggetti prestazioni di Gestione buffer  
  Nella tabella seguente vengono descritti gli oggetti prestazioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Gestione buffer** .  
   
-|Contatori di Gestione buffer di SQL Server|Description|  
+|Contatori di Gestione buffer di SQL Server|Descrizione|  
 |----------------------------------------|-----------------|  
 |**Percentuale riscontri cache buffer**|Indica la percentuale di pagine trovate nella cache del buffer senza dover ricorrere a una lettura dal disco. La percentuale è data dal rapporto tra il totale dei riscontri nella cache e il totale di ricerche nella cache eseguite considerate alcune migliaia dei più recenti accessi alla pagina. La variazione della percentuale su lunghi periodi di tempo è limitata. Poiché la lettura dalla cache richiede una quantità di risorse molto minore rispetto alla lettura dal disco, è auspicabile che il valore della percentuale sia elevato. È generalmente possibile aumentare la percentuale di riscontri nella cache del buffer aumentando la quantità di memoria disponibile per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o utilizzando la funzionalità estensione del pool di buffer.|  
 |**Pagine checkpoint/sec**|Indica il numero di pagine al secondo scaricate nel disco tramite checkpoint o altre operazioni che richiedono lo scaricamento di tutte le pagine dirty.|  

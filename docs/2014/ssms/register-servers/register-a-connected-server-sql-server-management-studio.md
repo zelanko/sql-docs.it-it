@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.registerserver.f1
@@ -15,12 +15,12 @@ ms.assetid: 77deb5f5-0f80-484f-8b8b-29afa67ec18f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 69590fd24ddad600074cc5feedc06badabb2399b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 80dbd927f0a1b008e48fda7fcbd4a7e75b7fbaf8
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48225621"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52795883"
 ---
 # <a name="register-a-connected-server-sql-server-management-studio"></a>Registrazione di un server connesso (SQL Server Management Studio)
   In questo argomento viene descritto come registrare i server in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Tramite la registrazione del server è possibile salvare le informazioni di connessione per i server ai quali si accede di frequente. È possibile registrare un server prima della connessione o durate la connessione da Esplora oggetti.  

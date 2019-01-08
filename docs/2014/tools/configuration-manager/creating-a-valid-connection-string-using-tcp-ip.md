@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- configmgr-client
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - connection strings [Database Engine]
@@ -17,12 +16,12 @@ ms.assetid: ee5dbc2c-1fc6-42bd-bdf5-efa792557934
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7e46748234c0cf9a8cb810bb8ff2613b8b45794d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6449b073adb406d15f41cfe02d477a05ad8b0b31
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48211821"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52764253"
 ---
 # <a name="creating-a-valid-connection-string-using-tcp-ip"></a>Creazione di una stringa di connessione valida con TCP/IP
   Per creare una stringa di connessione valida tramite TCP/IP, è necessario:  
@@ -38,7 +37,7 @@ ms.locfileid: "48211821"
  Al momento della connessione, tramite il componente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client vengono letti i valori relativi a server, protocollo e porta dal Registro di sistema per il nome alias specificato e viene creata una stringa di connessione nel formato `tcp:<servername>[\<instancename>],<port>` o `tcp:<IPAddress>[\<instancename>],<port>`.  
   
 > [!NOTE]  
->  Per impostazione predefinita, [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows Firewall chiude la porta 1433. Considerato che [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] comunica sulla porta 1433, è necessario aprire nuovamente tale porta se [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è configurato per restare in attesa di connessioni client in ingresso che usano TCP/IP. Per informazioni sulla configurazione di un firewall, vedere "Procedura: Configurazione di un firewall per l’accesso a SQL Server" nella documentazione online di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oppure vedere la documentazione relativa al firewall.  
+>  Per impostazione predefinita, [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows Firewall chiude la porta 1433. Considerato che [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] comunica sulla porta 1433, è necessario aprire nuovamente tale porta se [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è configurato per restare in attesa di connessioni client in ingresso che usano TCP/IP. Per informazioni sulla configurazione di un firewall, vedere "Procedura: Configurare un firewall per l'accesso a SQL Server" nella documentazione online di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oppure vedere la documentazione relativa al firewall.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client supportano completamente sia IPv4 (protocollo IP versione 4) sia IPv6 (protocollo IP versione 6). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Gestione configurazione accetta sia il formato IPv4 sia il formato IPv6 per gli indirizzi IP. Per informazioni su IPv6, vedere "Connessioni con IPv6" nella documentazione online di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
@@ -167,10 +166,10 @@ Server             .\<instancename>
 ```  
   
 > [!NOTE]  
->  Per informazioni su come specificare il protocollo di rete come parametro **sqlcmd** , vedere "Procedura: Connessione al Motore di database tramite sqlcmd.exe" nella documentazione online di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+>  Per informazioni su come specificare il protocollo di rete come un **sqlcmd** parametro, vedere "procedura: Connettersi al motore di database tramite sqlcmd.exe" nella documentazione online di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="see-also"></a>Vedere anche  
- [Creazione di una stringa di connessione valida mediante il protocollo Shared Memory](../../../2014/tools/configuration-manager/creating-a-valid-connection-string-using-shared-memory-protocol.md)   
+ [Creazione di una stringa di connessione valida mediante il protocollo di memoria condivisa](../../../2014/tools/configuration-manager/creating-a-valid-connection-string-using-shared-memory-protocol.md)   
  [Creazione di una stringa di connessione valida tramite named pipe](../../../2014/tools/configuration-manager/creating-a-valid-connection-string-using-named-pipes.md)   
  [Scelta di un protocollo di rete](../../../2014/tools/configuration-manager/choosing-a-network-protocol.md)  
   

@@ -11,24 +11,24 @@ ms.assetid: c32cc336-b7d8-4122-9d62-4936344d2315
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 26eb4f82b97d745f6269d57a76c479d677d6cc2c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1ef1be7d87012b6ae1d1b69e3f2c92dccca86ac0
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48177531"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52417292"
 ---
 # <a name="lesson-4-mark-as-date-table"></a>Lezione 4: Contrassegna come tabella data
-  Nella Lezione 2: Aggiungere dati è stata importata una tabella delle dimensioni denominata DimDate. Nella Lezione 3: Rinominare colonne è stato quindi modificato il nome della tabella DimDate in Data. Mentre nel modello questa tabella è ora denominata Date, può anche essere nota come *tabella data*, in quanto sono contenuti dati relativi a data e ora.  
+  Nella lezione 2: Aggiungere dati, è importato una tabella delle dimensioni denominata DimDate. Poi rinominata la tabella DimDate, nella lezione 3: Rinominare colonne Data. Mentre nel modello questa tabella è ora denominata Date, può anche essere nota come *tabella data*, in quanto sono contenuti dati relativi a data e ora.  
   
  Ogni volta che si usano le funzioni di Business Intelligence per le gerarchie temporali nei calcoli, come accadrà più avanti per creare le misure, è necessario specificare le proprietà della tabella relativa alla data, tra cui una *tabella data* e un identificatore univoco *colonna data* in tale tabella. È quindi possibile creare relazioni valide tra altre tabelle e la tabella data, che sono necessarie per eseguire calcoli utilizzando le funzioni di Business Intelligence per le gerarchie temporali DAX.  
   
- In questa lezione si contrassegnerà la tabella data importata e rinominata come *tabella data* e la colonna data (nella tabella data) come *colonna data* (identificatore univoco). Gli utilizzi del nome Data possono creare confusione, ma solo inizialmente.  
+ In questa lezione si contrassegnerà la tabella data importata e rinominata come *tabella data* e la colonna data (nella tabella data) come *colonna data* (identificatore univoco). Gli utilizzi del nome che data possa creare confusione, ma si riceverà a breve l'idea.  
   
  Tempo stimato per il completamento della lezione: **3 minuti**  
   
 ## <a name="prerequisites"></a>Prerequisiti  
- Questo argomento fa parte di un'esercitazione relativa alla modellazione tabulare che deve essere completata nell'ordine specificato. Prima di eseguire le attività in questa lezione è necessario aver completato la lezione precedente: [Lezione 3: Rinominare colonne](rename-columns.md).  
+ Questo argomento fa parte di un'esercitazione relativa alla modellazione tabulare che deve essere completata nell'ordine specificato. Prima di eseguire le attività in questa lezione, è necessario avere completato la lezione precedente: [Lezione 3: Rinominare le colonne](rename-columns.md).  
   
 ### <a name="to-set-mark-as-date-table"></a>Per impostare Contrassegna come tabella data  
   

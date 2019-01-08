@@ -23,15 +23,15 @@ ms.assetid: 782798d3-9552-4514-9f58-e87be4b264e4
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 2fba39e592835f3c5e6dbffc6c8b6d384c5c837a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8d99b7e43a2218c79538fc2e7245733dec44e39f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48057311"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542493"
 ---
 # <a name="create-a-database-user"></a>Creazione di un utente di database
-  In questo argomento viene descritto come creare un utente del database mappato a un account di accesso [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] usando [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)]. L'utente del database è l'identità dell'account di accesso quando è connesso a un database. Può utilizzare lo stesso nome dell'account, ma non si tratta di una condizione obbligatoria. In questo argomento si presuppone che esista già un account di accesso in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Per informazioni su come creare un account di accesso, vedere [creare un account di accesso](create-a-login.md).  
+  In questo argomento viene descritto come creare un utente di database con mapping a un account di accesso in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)]. L'utente del database è l'identità dell'account di accesso quando è connesso a un database. Può utilizzare lo stesso nome dell'account, ma non si tratta di una condizione obbligatoria. In questo argomento si presuppone che esista già un account di accesso in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Per informazioni su come creare un account di accesso, vedere [creare un account di accesso](create-a-login.md).  
   
  **Contenuto dell'argomento**  
   
@@ -39,7 +39,7 @@ ms.locfileid: "48057311"
   
      [Background](#Restrictions)  
   
-     [Security](#Security)  
+     [Sicurezza](#Security)  
   
 -   **Per creare un utente del database, utilizzando:**  
   
@@ -70,24 +70,24 @@ ms.locfileid: "48057311"
   
 2.  Espandere il database in cui si desidera creare il nuovo utente del database.  
   
-3.  Fare clic con il pulsante destro del mouse sulla cartella **Sicurezza** , scegliere **Nuovo**e selezionare **Utente...**.  
+3.  Fare clic con il pulsante destro del mouse sulla cartella **Sicurezza**, scegliere **Nuovo** e quindi **Utente...**.  
   
-4.  Nella finestra di dialogo **Utente database - Nuovo** , nella pagina **Generale** selezionare uno dei seguenti tipi di utente nell'elenco **Tipo di utente** : **Utente SQL con account di accesso**, **Utente SQL senza account di accesso**, **Utente con mapping eseguito a un certificato**, **Utente con mapping eseguito a una chiave asimmetrica**o **Utente di Windows**.  
+4.  Nella finestra di dialogo **Utente database - Nuovo** nella pagina **Generale** selezionare uno dei tipi di utente seguenti nell'elenco **Tipo utente**: **Utente SQL con account di accesso**, **utente SQL senza account di accesso**, **utente mappato a un certificato**, **utente con mapping eseguito a una chiave asimmetrica**, o **utente di Windows** .  
   
-5.  Immettere un nome per il nuovo utente nella casella **Nuovo utente** . Se è stato scelto **Utente di Windows** nell'elenco **Tipo di utente** , è possibile fare clic sui puntini di sospensione **(...)** per aprire la finestra di dialogo **Seleziona utente o gruppo** .  
+5.  Immettere un nome per il nuovo utente nella casella **Nuovo utente** . Se si è scelto **Utente di Windows** nell'elenco **Tipo utente**, è anche possibile fare clic sui puntini di sospensione **(...)** per aprire la finestra di dialogo **Seleziona utente o gruppo**.  
   
-6.  Nella casella **Nome account di accesso** immettere l'account di accesso per l'utente. In alternativa, fare clic sui puntini di sospensione **(...)** per aprire la finestra di dialogo **Seleziona account di accesso** . È disponibile**Nome account di accesso** se si seleziona **Utente SQL con account di accesso** o **Utente di Windows** dall'elenco **Tipo di utente** .  
+6.  Nella casella **Nome account di accesso** immettere l'account di accesso per l'utente. In alternativa, fare clic sui puntini di sospensione **(...)** per aprire la finestra di dialogo **Seleziona account di accesso**. È disponibile**Nome account di accesso** se si seleziona **Utente SQL con account di accesso** o **Utente di Windows** dall'elenco **Tipo di utente** .  
   
-7.  Nella casella **Schema predefinito** è specificato lo schema che diventerà proprietario degli oggetti creati da questo utente. In alternativa, fare clic sui puntini di sospensione **(...)** per aprire la finestra di dialogo **Seleziona schema** . È disponibile**Schema predefinito** se si seleziona **Utente SQL con account di accesso**, **Utente SQL senza account di accesso**o **Utente di Windows** nell'elenco **Tipo di utente** .  
+7.  Nella casella **Schema predefinito** è specificato lo schema che diventerà proprietario degli oggetti creati da questo utente. In alternativa, fare clic sui puntini di sospensione **(...)** per aprire la finestra di dialogo **Seleziona schema**. È disponibile**Schema predefinito** se si seleziona **Utente SQL con account di accesso**, **Utente SQL senza account di accesso**o **Utente di Windows** nell'elenco **Tipo di utente** .  
   
-8.  Nella casella **Nome certificato** , immettere il certificato da utilizzare per l'utente del database. In alternativa, fare clic sui puntini di sospensione **(...)** per aprire la finestra di dialogo **Seleziona certificato** . È disponibile**Nome certificato** se si seleziona **Utente con mapping eseguito a un certificato** dall'elenco **Tipo di utente** .  
+8.  Nella casella **Nome certificato** , immettere il certificato da utilizzare per l'utente del database. In alternativa, fare clic sui puntini di sospensione **(...)** per aprire la finestra di dialogo **Seleziona certificato**. È disponibile**Nome certificato** se si seleziona **Utente con mapping eseguito a un certificato** dall'elenco **Tipo di utente** .  
   
-9. Nella casella **Nome chiave asimmetrica**  , immettere la chiave da usare per l'utente del database. In alternativa, fare clic sui puntini di sospensione **(...)** per aprire la finestra di dialogo **Seleziona chiave asimmetrica** . È disponibile**Nome chiave asimmetrica** se si seleziona **Utente con mapping eseguito a una chiave asimmetrica** dall'elenco **Tipo di utente** .  
+9. Nella casella **Nome chiave asimmetrica**  , immettere la chiave da usare per l'utente del database. In alternativa, fare clic sui puntini di sospensione **(...)** per aprire la finestra di dialogo **Seleziona chiave asimmetrica**. È disponibile**Nome chiave asimmetrica** se si seleziona **Utente con mapping eseguito a una chiave asimmetrica** dall'elenco **Tipo di utente** .  
   
 10. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ### <a name="additional-options"></a>Opzioni aggiuntive  
- La finestra di dialogo **Utente di Database - Nuovo** offre inoltre opzioni in altre quattro pagine: **Schemi di proprietà**, **Appartenenza**, **Entità a protezione diretta**e **Proprietà estese**.  
+ Il **nuovo utente del Database** nella finestra di dialogo offre inoltre opzioni in altre quattro pagine: **Schemi di proprietà**, **appartenenza**, **entità a protezione diretta**, e **le proprietà estese**.  
   
 -   Nella pagina **Schemi di proprietà** sono elencati tutti i possibili schemi che possono essere di proprietà del nuovo utente del database. Per aggiungere schemi o rimuoverli da un utente del database, in **Schemi di proprietà di questo utente**selezionare o deselezionare le caselle di controllo accanto agli schemi.  
   
@@ -107,12 +107,12 @@ ms.locfileid: "48057311"
      Consente di visualizzare o specificare le proprietà estese relative all'oggetto. Ogni proprietà estesa è composta da una coppia nome/valore di metadati associati all'oggetto.  
   
      **Puntini di sospensione (...)**  
-     Fare clic sui puntini di sospensione **(…)** dopo **Valore** per visualizzare la finestra di dialogo **Valore per proprietà estesa** . Digitare o visualizzare il valore della proprietà estesa in questa finestra di dimensioni maggiori. Per ulteriori informazioni, vedere [Finestra di dialogo Valore per proprietà estesa](../../databases/value-for-extended-property-dialog-box.md).  
+     Fare clic sui puntini di sospensione **(…)** dopo **Valore** per visualizzare la finestra di dialogo **Valore per Proprietà estesa**. Digitare o visualizzare il valore della proprietà estesa in questa finestra di dimensioni maggiori. Per ulteriori informazioni, vedere [Finestra di dialogo Valore per proprietà estesa](../../databases/value-for-extended-property-dialog-box.md).  
   
      **Elimina**  
      Consente di eliminare la proprietà estesa selezionata.  
   
-##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
   
 #### <a name="to-create-a-database-user"></a>Per creare un utente del database  
   

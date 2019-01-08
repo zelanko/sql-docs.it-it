@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - pull subscriptions [SQL Server replication], creating
@@ -17,12 +16,12 @@ ms.assetid: 41d1886d-59c9-41fc-9bd6-a59b40e0af6e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 18b53eaf464d0d11949e7dccbc5154debca733f0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f8868957d7c479de3a51a599deed42c34d6676eb
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48206141"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52753493"
 ---
 # <a name="create-a-pull-subscription"></a>Creazione di una sottoscrizione pull
   In questo argomento viene descritto come creare una sottoscrizione pull in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]o RMO (Replication Management Objects).  
@@ -119,9 +118,9 @@ ms.locfileid: "48206141"
   
 2.  Nel Sottoscrittore eseguire [sp_addmergepullsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql). Specificare i parametri **@publisher**, **@publisher_db**, **@publication**e i parametri seguenti:  
   
-    -   **@subscriber_type** : specificare **local** per una sottoscrizione client e **global** per una sottoscrizione server.  
+    -   **@subscriber_type**: specificare **local** per una sottoscrizione client e **global** per una sottoscrizione server.  
   
-    -   **@subscription_priority** : specificare la priorità della sottoscrizione (l'intervallo di valori consentito è compreso tra**0,00** e **99,99**). Questo parametro è obbligatorio solo per una sottoscrizione server.  
+    -   **@subscription_priority**: specificare la priorità della sottoscrizione (l'intervallo di valori consentito è compreso tra**0,00** e **99,99**). Questo parametro è obbligatorio solo per una sottoscrizione server.  
   
          Per altre informazioni, vedere [Rilevamento e risoluzione avanzati dei conflitti nella replica di tipo merge](merge/advanced-merge-replication-conflict-detection-and-resolution.md).  
   
@@ -164,9 +163,9 @@ ms.locfileid: "48206141"
   
 2.  Creare un'istanza della classe <xref:Microsoft.SqlServer.Replication.TransPublication> utilizzando la connessione al server di pubblicazione creata nel passaggio 1. Specificare <xref:Microsoft.SqlServer.Replication.Publication.Name%2A>, <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> e <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>.  
   
-3.  Chiamare il metodo <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> . Se questo metodo restituisce `false`, sia le proprietà specificate nel passaggio 2 non sono corrette oppure la pubblicazione non esiste nel server.  
+3.  Chiamare il metodo <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A>. Se il metodo restituisce `false`, le proprietà specificate nel passaggio 2 non sono corrette oppure la pubblicazione non esiste nel server.  
   
-4.  Eseguire un'operazione con AND logico bit per bit (`&` in Visual c# e `And` in Visual Basic) tra il <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> proprietà e <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPull>. Se il risultato è <xref:Microsoft.SqlServer.Replication.PublicationAttributes.None>, impostare <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> sul risultato di un'operazione con OR logico bit per bit (`|` in Visual C# e `Or` in Visual Basic) tra <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> e <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPull>. Chiamare quindi <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> per abilitare le sottoscrizioni pull.  
+4.  Eseguire un'operazione con AND logico bit per bit (`&` in Visual C# e `And` in Visual Basic) tra la proprietà <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> e <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPull>. Se il risultato è <xref:Microsoft.SqlServer.Replication.PublicationAttributes.None>, impostare <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> sul risultato di un'operazione con OR logico bit per bit (`|` in Visual C# e `Or` in Visual Basic) tra <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> e <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPull>. Chiamare quindi <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> per abilitare le sottoscrizioni pull.  
   
 5.  Se il database di sottoscrizione non esiste, crearlo utilizzando la classe <xref:Microsoft.SqlServer.Management.Smo.Database> . Per altre informazioni, vedere [Creazione, modifica e rimozione di database](../server-management-objects-smo/tasks/creating-altering-and-removing-databases.md).  
   
@@ -184,7 +183,7 @@ ms.locfileid: "48206141"
   
     -   Nome della pubblicazione per <xref:Microsoft.SqlServer.Replication.PullSubscription.PublicationName%2A>.  
   
-    -   Il <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> e <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> oppure <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.SecurePassword%2A> campi di <xref:Microsoft.SqlServer.Replication.PullSubscription.SynchronizationAgentProcessSecurity%2A> per fornire le credenziali per il [!INCLUDE[msCoName](../../includes/msconame-md.md)] account Windows con cui viene eseguito l'agente di distribuzione nel Sottoscrittore. Questo account viene utilizzato per attivare connessioni locali al Sottoscrittore e stabilire connessioni remote con l'autenticazione di Windows.  
+    -   I campi <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> e <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> o<xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.SecurePassword%2A> di <xref:Microsoft.SqlServer.Replication.PullSubscription.SynchronizationAgentProcessSecurity%2A> per fornire le credenziali per l'account di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows con il quale verrà eseguito l'agente di distribuzione nel Sottoscrittore. Questo account viene utilizzato per attivare connessioni locali al Sottoscrittore e stabilire connessioni remote con l'autenticazione di Windows.  
   
         > [!NOTE]  
         >  Non è obbligatorio impostare <xref:Microsoft.SqlServer.Replication.PullSubscription.SynchronizationAgentProcessSecurity%2A> quando la sottoscrizione viene creata da un membro del ruolo predefinito del server `sysadmin`, tuttavia si tratta di un'impostazione consigliata. In questo caso l'agente rappresenterà l'account di SQL Server Agent. Per altre informazioni, vedere [Modello di sicurezza dell'agente di replica](security/replication-agent-security-model.md).  
@@ -192,7 +191,7 @@ ms.locfileid: "48206141"
     -   (Facoltativo) Impostare il valore `true` per <xref:Microsoft.SqlServer.Replication.PullSubscription.CreateSyncAgentByDefault%2A> per creare un processo dell'agente, utilizzato per sincronizzare la sottoscrizione. Se si specifica `false` (impostazione predefinita), la sottoscrizione può essere sincronizzata solo a livello di programmazione ed è necessario specificare proprietà aggiuntive di <xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent> per l'accesso all'oggetto dalla proprietà <xref:Microsoft.SqlServer.Replication.TransPullSubscription.SynchronizationAgent%2A>. Per altre informazioni, vedere [Synchronize a Pull Subscription](synchronize-a-pull-subscription.md).  
   
         > [!NOTE]  
-        >  SQL Server Agent non è disponibile in tutte le edizioni di [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per un elenco delle funzionalità supportate dalle edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [Features Supported by the Editions of SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md). Quando si specifica un valore di `true` per sottoscrittori SQL Server Express, non viene creato il processo dell'agente. Tuttavia, i metadati importanti correlati alla sottoscrizione vengono archiviati nel Sottoscrittore.  
+        >  SQL Server Agent non è disponibile in tutte le edizioni di [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per un elenco delle funzionalità supportate dalle edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [Features Supported by the Editions of SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md). Se si specifica il valore `true` per Sottoscrittori SQL Server Express, il processo dell'agente non viene creato. Tuttavia, i metadati importanti correlati alla sottoscrizione vengono archiviati nel Sottoscrittore.  
   
     -   (Facoltativo) Impostare i campi <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> e <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> o <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SecureSqlStandardPassword%2A> di <xref:Microsoft.SqlServer.Replication.PullSubscription.DistributorSecurity%2A> quando si utilizza l'autenticazione di SQL Server per la connessione al database di distribuzione.  
   
@@ -206,9 +205,9 @@ ms.locfileid: "48206141"
   
 2.  Creare un'istanza della classe <xref:Microsoft.SqlServer.Replication.MergePublication> utilizzando la connessione al server di pubblicazione creata nel passaggio 1. Specificare <xref:Microsoft.SqlServer.Replication.Publication.Name%2A>, <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A>e <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>.  
   
-3.  Chiamare il metodo <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> . Se questo metodo restituisce `false`, sia le proprietà specificate nel passaggio 2 non sono corrette oppure la pubblicazione non esiste nel server.  
+3.  Chiamare il metodo <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A>. Se il metodo restituisce `false`, le proprietà specificate nel passaggio 2 non sono corrette oppure la pubblicazione non esiste nel server.  
   
-4.  Eseguire un'operazione con AND logico bit per bit (`&` in Visual c# e `And` in Visual Basic) tra il <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> proprietà e <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPull>. Se il risultato è <xref:Microsoft.SqlServer.Replication.PublicationAttributes.None>, impostare <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> sul risultato di un'operazione con OR logico bit per bit (`|` in Visual C# e `Or` in Visual Basic) tra <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> e <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPull>. Chiamare quindi <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> per abilitare le sottoscrizioni pull.  
+4.  Eseguire un'operazione con AND logico bit per bit (`&` in Visual C# e `And` in Visual Basic) tra la proprietà <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> e <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPull>. Se il risultato è <xref:Microsoft.SqlServer.Replication.PublicationAttributes.None>, impostare <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> sul risultato di un'operazione con OR logico bit per bit (`|` in Visual C# e `Or` in Visual Basic) tra <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> e <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPull>. Chiamare quindi <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> per abilitare le sottoscrizioni pull.  
   
 5.  Se il database di sottoscrizione non esiste, crearlo utilizzando la classe <xref:Microsoft.SqlServer.Management.Smo.Database> . Per altre informazioni, vedere [Creazione, modifica e rimozione di database](../server-management-objects-smo/tasks/creating-altering-and-removing-databases.md).  
   

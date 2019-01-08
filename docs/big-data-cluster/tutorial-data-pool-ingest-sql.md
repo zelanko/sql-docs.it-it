@@ -1,18 +1,20 @@
 ---
-title: Come inserire dati in un pool di dati di SQL Server con Transact-SQL | Microsoft Docs
+title: Inserire dati in un pool di dati di SQL Server
+titleSuffix: SQL Server 2019 big data clusters
 description: Questa esercitazione illustra come inserire dati nel pool di dati di un cluster di big data di SQL Server 2019 (anteprima) con la procedura sp_data_pool_table_insert_data archiviati.
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 11/06/2018
+ms.date: 12/07/2018
 ms.topic: tutorial
 ms.prod: sql
-ms.openlocfilehash: 1f585a354175ff893869cef7f2f47b12fe244634
-ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
+ms.custom: seodec18
+ms.openlocfilehash: 142a2db6bc841947a83ada4dc24c59de4e58df8f
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51221697"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53432444"
 ---
 # <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-transact-sql"></a>Esercitazione: Inserire dati in un pool di dati di SQL Server con Transact-SQL
 
@@ -30,17 +32,17 @@ In questa esercitazione, apprenderà come:
 
 ## <a id="prereqs"></a> Prerequisiti
 
-* [Distribuire un cluster di big data su Kubernetes](deployment-guidance.md).
-* [Installare Data Studio di Azure e l'estensione di SQL Server 2019](deploy-big-data-tools.md).
-* [Caricare dati di esempio al cluster](#sampledata).
-
-[!INCLUDE [Load sample data](../includes/big-data-cluster-load-sample-data.md)]
+- [Strumenti dei big Data](deploy-big-data-tools.md)
+   - **Kubectl**
+   - **Azure Data Studio**
+   - **Estensione di SQL Server 2019**
+- [Caricare i dati di esempio in cluster i big Data](tutorial-load-sample-data.md)
 
 ## <a name="create-an-external-table-in-the-data-pool"></a>Creare una tabella esterna nel pool di dati
 
 La procedura seguente crea una tabella esterna nel pool di dati denominato **web_clickstream_clicks_data_pool**. Questa tabella è quindi utilizzabile come un percorso per l'inserimento di dati nel cluster di big data.
 
-1. In Azure Data Studio, connettersi all'istanza master di SQL Server del cluster di big data. Per altre informazioni, vedere [connettersi all'istanza master di SQL Server](deploy-big-data-tools.md#master).
+1. In Azure Data Studio, connettersi all'istanza master di SQL Server del cluster di big data. Per altre informazioni, vedere [connettersi all'istanza master di SQL Server](connect-to-big-data-cluster.md#master).
 
 1. Fare doppio clic sulla connessione nel **server** finestra per visualizzare il dashboard di server per l'istanza master di SQL Server. Selezionare **nuova Query**.
 
@@ -66,7 +68,7 @@ La procedura seguente crea una tabella esterna nel pool di dati denominato **web
       );
    ```
   
-1. Nella versione CTP 2.1, la creazione di pool di dati è asincrona, ma non è possibile determinare quando viene completato ancora. Attendere due minuti per assicurarsi che il pool di dati viene creato prima di continuare.
+1. In CTP 2.2, la creazione di pool di dati è asincrona, ma non è possibile determinare quando viene completato ancora. Attendere due minuti per assicurarsi che il pool di dati viene creato prima di continuare.
 
 ## <a name="load-data"></a>Caricamento dei dati
 

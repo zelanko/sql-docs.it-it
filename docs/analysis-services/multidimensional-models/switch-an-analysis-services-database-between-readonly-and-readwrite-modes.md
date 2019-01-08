@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: c6ede109d13c21686400c0f9ce99c22f1118eda9
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: e1ae8fc032a1f728372e9b4e764281ea8df8ddaa
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50147916"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52525883"
 ---
 # <a name="switch-an-analysis-services-database-between-readonly-and-readwrite-modes"></a>Passare un database di Analysis Services tra le modalità ReadOnly e ReadWrite
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -34,13 +34,13 @@ ms.locfileid: "50147916"
   
      Prendere nota del percorso. Un percorso di archiviazione del database vuoto indica che la cartella del database si trova nella cartella di dati del server.  
   
-2.  Fare clic con il pulsante destro del mouse sul database, quindi scegliere **Scollega**  
+2.  Il database e scegliere **Scollega...**  
   
 3.  Assegnare una password al database da scollegare, quindi fare clic su **OK** per eseguire il comando.  
   
-4.  In Esplora oggetti fare clic con il pulsante destro del mouse sulla cartella **Database** e scegliere **Collega**  
+4.  In Esplora oggetti fare doppio clic il **database** cartella e selezionare **Connetti...**  
   
-5.  Nella casella di testo **cartella** digitare il percorso originale della cartella del database. In alternativa, è possibile usare il pulsante Sfoglia (**...**) per individuare la cartella del database.  
+5.  Nella casella di testo **cartella** digitare il percorso originale della cartella del database. In alternativa, è possibile usare il pulsante Sfoglia (**...** ) per individuare la cartella di database.  
   
 6.  Selezionare la modalità di lettura/scrittura per il database.  
   
@@ -93,7 +93,7 @@ private void SwitchReadWrite(Server server, string dbName, ReadWriteMode dbReadW
   
      Prendere nota del percorso. Un percorso di archiviazione del database vuoto indica che la cartella del database si trova nella cartella di dati del server.  
   
-2.  Fare clic con il pulsante destro del mouse sul database, quindi scegliere **Scollega**  
+2.  Il database e scegliere **Scollega...**  
   
 3.  Aprire una nuova scheda XMLA in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   

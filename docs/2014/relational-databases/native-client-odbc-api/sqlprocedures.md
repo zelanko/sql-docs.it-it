@@ -14,12 +14,12 @@ ms.assetid: ec41f017-f5e0-40ef-913a-65d206068631
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: feb5cd9df428ec09441ae1ebe0ff1cb051660754
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b0001f1d6e45e855b884028a595a2b61263c2e58
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48203991"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53365993"
 ---
 # <a name="sqlprocedures"></a>SQLProcedures
   Tutte le stored procedure di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituiscono un valore. **SQLProcedures** riporta SQL_PT_FUNCTION per il set di risultati PROCEDURE_TYPE colonna.  
@@ -31,7 +31,7 @@ ms.locfileid: "48203991"
  **SQLProcedures** restituisce informazioni sulle procedure i cui nomi corrispondono *ProcName* e può essere eseguito dall'utente corrente o per cui l'utente corrente dispone dell'autorizzazione VIEW DEFINITION.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Funzione SQLProcedures](http://go.microsoft.com/fwlink/?LinkId=59364)   
+ [Funzione SQLProcedures](https://go.microsoft.com/fwlink/?LinkId=59364)   
  [Dettagli di implementazione dell'API ODBC](odbc-api-implementation-details.md)  
   
   

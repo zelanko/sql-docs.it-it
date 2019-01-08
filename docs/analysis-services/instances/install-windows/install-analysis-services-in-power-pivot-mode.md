@@ -1,5 +1,5 @@
 ---
-title: Installare Analysis Services in modalità Power Pivot | Documenti Microsoft
+title: Installare Analysis Services in modalità Power Pivot | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 59d3f4dadc2de71f8fa4438ec48a2783164a485a
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: e3e973c30ea178a544b9da3501d88f43cf9b1ddb
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019308"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52527746"
 ---
 # <a name="install-analysis-services-in-power-pivot-mode"></a>Installazione di Analisi Services in modalità Power Pivot
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -23,11 +23,11 @@ ms.locfileid: "34019308"
 ##  <a name="bkmk_background"></a> Background  
  [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] per SharePoint è una raccolta di servizi di livello intermedio e di back-end che fornisce accesso ai dati [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] in una farm di SharePoint 2016 o SharePoint 2013.  
   
--   **Servizi back-end:** se si utilizza [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] per Excel per creare cartelle di lavoro contenenti dati analitici, è necessario disporre di [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] per SharePoint per accedere a questi dati in un ambiente server. Il programma di installazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] può essere eseguito su un computer in cui è installato SharePoint Server oppure su un computer diverso in cui non è disponibile il software SharePoint. [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] non è presente alcuna dipendenza da SharePoint.  
+-   **Servizi back-end:** Se si usa [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] per Excel per creare cartelle di lavoro contenenti dati analitici, è necessario disporre [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] per SharePoint per accedere ai dati in un ambiente server. Il programma di installazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] può essere eseguito su un computer in cui è installato SharePoint Server oppure su un computer diverso in cui non è disponibile il software SharePoint. [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] non è presente alcuna dipendenza da SharePoint.  
   
      **Nota:** in questo argomento vengono descritti l'installazione del server [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] e i servizi back-end.  
   
--   **Livello intermedio** : sono stati apportati miglioramenti agli usi di [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] di SharePoint, tra cui la raccolta [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] , la pianificazione dell'aggiornamento dati, il dashboard di gestione e i provider di dati. Per ulteriori informazioni sull'installazione e sulla configurazione del livello intermedio, vedere gli argomenti seguenti:  
+-   **Livello intermedio:** Miglioramenti per la [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] esperienze disponibili in SharePoint, tra cui [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] Gallery, pianificazione dell'aggiornamento dati, dashboard di gestione e i provider di dati. Per ulteriori informazioni sull'installazione e sulla configurazione del livello intermedio, vedere gli argomenti seguenti:  
   
     -   [Installare o disinstallare il componente aggiuntivo PowerPivot per SharePoint (SharePoint 2016)](../../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2016.md)  
   
@@ -47,14 +47,14 @@ ms.locfileid: "34019308"
   
 4.  È necessario disporre del nome di istanza di [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] . Nel computer su cui si sta installando Analysis Services in modalità [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]non deve essere presente un'istanza denominata di [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] esistente.  
   
-     **Nota:** il nome dell'istanza deve essere POWERPIVOT.  
+     **Nota:** Il nome dell'istanza deve essere POWERPIVOT.  
   
 5.  Esaminare [Requisiti hardware e software per il server Analysis Services in modalità SharePoint](http://msdn.microsoft.com/library/fb86ca0a-518c-4c61-ae78-7680c57fae1f).  
   
 6.  Esaminare le note sulla versione alla pagina [SQL Server 2016 Release Notes](../../../sql-server/sql-server-2016-release-notes.md).  
   
 ###  <a name="bkmk_sqleditions"></a> Requisiti relativi all'edizione di SQL Server  
- Non tutte le funzionalità di Business Intelligence sono disponibili in ogni edizione di [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Per informazioni dettagliate, vedere [Analysis Services funzionalità supportate dalle edizioni di SQL Server 2016](../../../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md) e [edizioni e componenti di SQL Server 2016](../../../sql-server/editions-and-components-of-sql-server-2016.md).  
+ Non tutte le funzionalità di Business Intelligence sono disponibili in ogni edizione di [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Per informazioni dettagliate, vedere [funzionalità Analysis Services supportate dalle edizioni di SQL Server 2016](../../../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md) e [edizioni e componenti di SQL Server 2016](../../../sql-server/editions-and-components-of-sql-server-2016.md).  
   
 ##  <a name="InstallSQL"></a> Passaggio 1: Installare Power Pivot per SharePoint  
  In questo passaggio è possibile eseguire il programma di installazione di SQL Server per installare un server [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] in modalità [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] . In un passaggio successivo è possibile configurare l'utilizzo da parte di Excel Services di questo server per i modelli di dati della cartella di lavoro.  
@@ -81,13 +81,13 @@ ms.locfileid: "34019308"
   
 10. Nella pagina **Impostazione ruolo** selezionare **Installazione funzionalità SQL Server**.  
   
-     Fare clic su **Avanti**.  
+     Selezionare **Avanti**.  
   
-11. Nella pagina Selezione funzionalità scegliere **Analysis Services**. Questa opzione consente di installare una delle tre modalità [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] . Selezionare la modalità in un passaggio successivo. Fare clic su **Avanti**.  
+11. Nella pagina Selezione funzionalità scegliere **Analysis Services**. Questa opzione consente di installare una delle tre modalità [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] . Selezionare la modalità in un passaggio successivo. Selezionare **Avanti**.  
   
 12. Nella pagina **Configurazione dell'istanza** selezionare **Istanza denominata** e digitare **POWERPIVOT** per il nome dell'istanza, quindi fare clic su **Avanti**.  
   
-     ![Installazione di SQL - configurazione dell'istanza pagina di destinazione](../../../analysis-services/instances/install-windows/media/sql2016-pp-instance-config-landing-page.png "l'installazione di SQL - configurazione dell'istanza pagina di destinazione")  
+     ![Installazione di SQL - configurazione dell'istanza di pagina di destinazione](../../../analysis-services/instances/install-windows/media/sql2016-pp-instance-config-landing-page.png "installazione di SQL - configurazione dell'istanza di pagina di destinazione")  
   
 13. Nella pagina **Configurazione server** configurare tutti i servizi per **Tipo di avvio**automatico. Specificare l'account di dominio e la password desiderati per **SQL Server Analysis Services**, **(1)** nel diagramma seguente.  
   
@@ -97,17 +97,17 @@ ms.locfileid: "34019308"
   
     -   Non eseguire mai il provisioning degli account di servizio con il proprio account utente di dominio. Con questa operazione si concedono al server le stesse autorizzazioni di cui l'utente dispone per le risorse disponibili nella rete. Se un utente malintenzionato compromette il server, l'utente in questione viene connesso con le proprie credenziali di dominio, pertanto, potrà scaricare o utilizzare gli stessi dati e le stesse applicazioni.  
   
-     Fare clic su **Avanti**.  
+     Selezionare **Avanti**.  
   
-     ![Installazione di SQL - pagina Configurazione Server](../../../analysis-services/instances/install-windows/media/sql2016-pp-server-config-landing-page.png "l'installazione di SQL - pagina Configurazione Server")  
+     ![Installazione di SQL - pagina di destinazione Server Configuration](../../../analysis-services/instances/install-windows/media/sql2016-pp-server-config-landing-page.png "SQL installazione - pagina di configurazione del Server")  
   
 14. Se si sta installando il [!INCLUDE[ssDE](../../../includes/ssde-md.md)], viene visualizzata la pagina **Configurazione del motore di database** . In Configurazione del [!INCLUDE[ssDE](../../../includes/ssde-md.md)] selezionare **Aggiungi utente corrente** per concedere le autorizzazioni di amministratore dell'account utente per l'istanza del motore di database.  
   
-     Fare clic su **Avanti**.  
+     Selezionare **Avanti**.  
   
 15. Nella pagina **Configurazione di Analysis Services** selezionare **Modalità PowerPivot** in **Modalità Server**.  
   
-     ![Installazione di SQL - pagina di destinazione di configurazione di Analysis Services](../../../analysis-services/instances/install-windows/media/sql2016-pp-as-config-landing-page.png "l'installazione di SQL - pagina di destinazione di configurazione di Analysis Services")  
+     ![Installazione di SQL - configurazione di Analysis Services Landing Page](../../../analysis-services/instances/install-windows/media/sql2016-pp-as-config-landing-page.png "SQL installazione - pagina di destinazione di configurazione di Analysis Services")  
   
 16. Nella pagina **Configurazione di Analysis Services** selezionare **Aggiungi utente corrente** per concedere le autorizzazioni amministrative dell'account utente. Saranno necessarie autorizzazioni amministrative per configurare il server dopo che è stata completata l'installazione.  
   
@@ -116,7 +116,7 @@ ms.locfileid: "34019308"
     -   > [!NOTE]  
         >  A tutte le applicazioni del servizio per cui è richiesto l'accesso all'istanza del server Analysis Services devono essere associate autorizzazioni amministrative di Analysis Services. Ad esempio, aggiungere gli account di servizio per Excel Services, Power View e Performance Point Services. Inoltre, aggiungere l'account della farm di SharePoint che viene utilizzato come identità dell'applicazione Web in cui è ospitata Amministrazione centrale.  
   
-     Fare clic su **Avanti**.  
+     Selezionare **Avanti**.  
   
 17. Nella pagina **Segnalazione errori** fare clic su **Avanti**.  
   
@@ -156,7 +156,7 @@ ms.locfileid: "34019308"
   
 3.  Nel riquadro sinistro selezionare **Sicurezza**. Aggiungere l'account del computer su cui è installato Office Online Server.  
   
-     ![Le impostazioni di sicurezza di un Server SSAS](../../../analysis-services/instances/install-windows/media/as-ssms-security.gif "le impostazioni di sicurezza di un Server SSAS")  
+     ![Impostazioni di sicurezza di un Server SSAS](../../../analysis-services/instances/install-windows/media/as-ssms-security.gif "impostazioni di sicurezza di un Server SSAS")  
   
 #### <a name="register-analysis-services-server-with-office-online-server"></a>Registrare il server Analysis Services all'Office Server Online  
  Sarà necessario eseguire questi passaggi sull'Office Online Server.  
@@ -184,7 +184,7 @@ ms.locfileid: "34019308"
   
 3.  Nel riquadro sinistro selezionare **Sicurezza**. Aggiungere l'account di accesso del dominio configurato per l'applicazione Excel Services nel passaggio 1.  
   
-     ![Le impostazioni di sicurezza di un Server SSAS](../../../analysis-services/instances/install-windows/media/as-ssms-security.gif "le impostazioni di sicurezza di un Server SSAS")  
+     ![Impostazioni di sicurezza di un Server SSAS](../../../analysis-services/instances/install-windows/media/as-ssms-security.gif "impostazioni di sicurezza di un Server SSAS")  
   
 #### <a name="configure-excel-services-for-analysis-services-integration"></a>Configurare Excel Services per l'integrazione di Analysis Services  
   
@@ -261,8 +261,8 @@ ms.locfileid: "34019308"
 ##  <a name="bkmk_upgrade_workbook"></a> Aggiornare le cartelle di lavoro e l'aggiornamento dati pianificato  
  I passaggi necessari per aggiornare le cartelle di lavoro create in versioni precedenti di [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] dipendono dalla versione di [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] tramite cui è stata creata la cartella di lavoro. Per altre informazioni, vedere [Aggiornare le cartelle di lavoro e l'aggiornamento dati pianificato &#40;SharePoint 2013&#41;](../../../analysis-services/instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md).  
   
-##  <a name="bkmk_multiple_servers"></a> Oltre l'installazione a server singolo - Power Pivot per Microsoft SharePoint  
- **Front-end Web (WFE)** o **livello intermedio:** per usare un server [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] in modalità SharePoint in una farm di SharePoint di grandi dimensioni e per installare le funzionalità aggiuntive di [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] nella farm, eseguire il pacchetto di installazione **spPowerPivot16.msi (SharePoint 2016), o spPowerPivot.msi (SharePoint 2013)** su ogni server SharePoint. Tramite spPowerPivot16.msi, o spPowerPivot.msi, vengono installati i provider di dati necessari e lo strumento di configurazione di [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] per SharePoint 2016 o 2013.  
+##  <a name="bkmk_multiple_servers"></a> Oltre l'installazione a Server singolo - Power Pivot per Microsoft SharePoint  
+ **Web front-end (WFE)** oppure **livello intermedio:**: Usare un [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] server in modalità SharePoint in una farm di SharePoint di grandi dimensioni e per installare ulteriori [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] funzionalità nella farm, eseguire il pacchetto di installazione **spPowerPivot16.msi (SharePoint 2016), o sppowerpivot. msi (SharePoint 2013),** in ogni server SharePoint. Tramite spPowerPivot16.msi, o spPowerPivot.msi, vengono installati i provider di dati necessari e lo strumento di configurazione di [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] per SharePoint 2016 o 2013.  
   
  Per ulteriori informazioni sull'installazione e sulla configurazione del livello intermedio, vedere gli argomenti seguenti:  
   
@@ -274,17 +274,17 @@ ms.locfileid: "34019308"
   
 -   [Configurare PowerPivot e distribuire soluzioni &#40;SharePoint 2013&#41;](../../../analysis-services/instances/install-windows/configure-power-pivot-and-deploy-solutions-sharepoint-2013.md)  
   
- **Ridondanza e carico del server:** l'installazione di un secondo server o di più server [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] in modalità [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] fornirà una ridondanza della funzionalità del server [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] . Tramite i server aggiuntivi, inoltre, verrà esteso il carico tra i server. Per ulteriori informazioni, vedere quanto segue:  
+ **Ridondanza e carico del server:** Installando un secondo o più [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] i server [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] modalità fornirà una ridondanza del [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] funzionalità del server. Tramite i server aggiuntivi, inoltre, verrà esteso il carico tra i server. Per ulteriori informazioni, vedere quanto segue:  
   
 -   [Configurare Analysis Services per elaborare i modelli di dati in Excel Services (SharePoint 2013)](http://technet.microsoft.com/library/jj614437(v=office.15)).  
   
 -   [Gestire impostazioni modello di dati di Excel Services (SharePoint 2013)](http://technet.microsoft.com/library/jj219780(v=office.15)).  
   
- ![Le impostazioni di SharePoint](../../../analysis-services/media/as-sharepoint2013-settings-gear.gif "impostazioni SharePoint") [Invia commenti e suggerimenti e informazioni di contatto tramite SQL Server Feedback](https://feedback.azure.com/forums/908035-sql-server).  
+ ![Impostazioni di SharePoint](../../../analysis-services/media/as-sharepoint2013-settings-gear.gif "impostazioni SharePoint") [Invia commenti e suggerimenti e informazioni di contatto tramite SQL Server Feedback](https://feedback.azure.com/forums/908035-sql-server).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Eseguire la migrazione di PowerPivot a SharePoint 2013](../../../analysis-services/instances/install-windows/migrate-power-pivot-to-sharepoint-2013.md)   
- [Installare o disinstallare il componente aggiuntivo Power Pivot per SharePoint &#40;SharePoint 2013&#41;](../../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)   
- [Eseguire l'aggiornamento delle cartelle di lavoro e l'aggiornamento dati pianificato & #40; SharePoint 2013 & #41;](../../../analysis-services/instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md)  
+ [Installare o disinstallare il componente aggiuntivo PowerPivot per SharePoint &#40;SharePoint 2013&#41;](../../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)   
+ [Aggiornare le cartelle di lavoro e l'aggiornamento dati pianificato &#40;SharePoint 2013&#41;](../../../analysis-services/instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md)  
   
   

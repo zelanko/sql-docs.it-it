@@ -15,18 +15,18 @@ ms.assetid: cf2c396e-b0c6-41f9-8c45-ddc8406f7e85
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: d044b8f245d3c3ce2c092b7b5f2b094122f75f1e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 344d5706af4e7e963c0dbdd643efc3d0fb6b1b10
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48101201"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53205710"
 ---
 # <a name="clickthrough-reports-ssrs"></a>Report click-through (SSRS)
-  Un report click-through è un report in cui vengono fornite informazioni dettagliate sui dati contenuti nel report principale. Il report click-through viene visualizzato quando l'utente fa clic sui dati interattivi visualizzati nel report principale. Questi report vengono generati automaticamente dal server di report. È, come la finestra di progettazione del modello, determinare ciò che viene visualizzato nei report click-through impostando il `DefaultDetailAttribute` e `DefaultAggregateAttribute` proprietà assegnate a un'entità nel modello di report.  
+  Un report click-through è un report in cui vengono fornite informazioni dettagliate sui dati contenuti nel report principale. Il report click-through viene visualizzato quando l'utente fa clic sui dati interattivi visualizzati nel report principale. Questi report vengono generati automaticamente dal server di report. Durante la progettazione di modelli, il contenuto dei report click-through viene determinato impostando le proprietà `DefaultDetailAttribute` e `DefaultAggregateAttribute` assegnate a un'entità nel modello di report.  
   
-> [!NOTE]  
->  Report click-through non sono disponibili in tutte le edizioni di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Per un elenco delle funzionalità supportate dalle edizioni di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], vedere [Features Supported by the Editions of SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md). In caso di dubbi sull'edizione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usata nell'organizzazione, contattare l'amministratore del database.  
+> [!NOTE]
+>  I report click-through non sono disponibili in tutte le edizioni di [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Per un elenco delle funzionalità supportate dalle edizioni di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], vedere [Features Supported by the Editions of SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md). In caso di dubbi sull'edizione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usata nell'organizzazione, contattare l'amministratore del database.  
   
 ## <a name="using-default-templates"></a>Utilizzo di modelli predefiniti  
  Per impostazione predefinita, nel server di report vengono generati due tipi di modello click-through per ogni entità: un modello a istanza singola e un modello a più istanze. L'elemento su cui si fa clic determina il modello che verrà utilizzato. Se la persona che legge il report fa clic su un attributo scalare, verrà utilizzato il modello a istanza singola. Se la persona che legge il report fa clic su un attributo di aggregazione, verrà utilizzato il modello a più istanze.  

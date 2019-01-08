@@ -12,12 +12,12 @@ ms.assetid: 059431e2-a65c-4587-ba4a-9929a1611e96
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 078ccc5951bc0bf607bcc14d3bddcd11a9a12264
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bd19cb92f2d2f333954adeb97229feb718c4b592
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48142641"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52399554"
 ---
 # <a name="conversions-from-sql-to-c"></a>Conversioni dai tipi di dati SQL ai tipi di dati C
   Nella tabella seguente sono elencati i problemi da prendere in considerazione durante le conversioni dai tipi date/time di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ai tipi C.  
@@ -62,7 +62,7 @@ ms.locfileid: "48142641"
 |21|Se il buffer è grande abbastanza da contenere un valore SQL_SS_TIMESTAMPOFFSET_STRUCT, il valore viene restituito come tale. In caso contrario, viene generato un record di diagnostica con l'identificativo di errore SQLSTATE 22003 e il messaggio "Valore numerico non compreso nell'intervallo".|  
 |22|Il valore viene convertito al tipo timezone del client prima che il tipo date venga estratto. Ciò garantisce coerenza con le altre conversioni con tipi di dati timestampoffset. Se si verifica un errore durante questa conversione, viene generato un record di diagnostica con l'identificativo SQLSTATE 22008 e il messaggio "Overflow del campo Datetime". Ciò potrebbe avere come conseguenza un valore date diverso da quello ottenuto dal semplice troncamento.|  
   
- Nella tabella riportata in questo argomento sono descritte le conversioni tra il tipo restituito al client e il tipo presente nell'associazione. Per i parametri di output, se il tipo di server specificato in SQLBindParameter non corrisponde al tipo effettivo nel server, verrà eseguita una conversione implicita dal server e il tipo restituito al client corrisponderà al tipo specificato tramite la funzione SQLBindParameter. La conseguenza di ciò possono essere risultati di conversione imprevisti se le regole di conversione del server sono diverse da quelle elencate nella tabella precedente. Quando è ad esempio necessario specificare un valore date predefinito, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizza 1900-1-1, anziché il valore date corrente.  
+ Nella tabella riportata in questo argomento sono descritte le conversioni tra il tipo restituito al client e il tipo presente nell'associazione. Per i parametri di output, se il tipo di server specificato in SQLBindParameter non corrisponde al tipo effettivo nel server, verrà eseguita una conversione implicita dal server e il tipo restituito al client corrisponderà al tipo specificato tramite la funzione SQLBindParameter. Questo può causare risultati di conversione imprevisti quando le regole di conversione del server sono diverse da quelli elencati nella tabella precedente. Quando è ad esempio necessario specificare un valore date predefinito, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizza 1900-1-1, anziché il valore date corrente.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Data e miglioramenti per la fase &#40;ODBC&#41;](date-and-time-improvements-odbc.md)  

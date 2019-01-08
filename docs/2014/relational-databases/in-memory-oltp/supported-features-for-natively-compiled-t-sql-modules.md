@@ -10,12 +10,12 @@ ms.assetid: 05515013-28b5-4ccf-9a54-ae861448945b
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 48fd9be77e8b72ee25211bbf52a70f7989785f52
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2d63ed7db1cb1f2f201100a8d75c764cca194d4b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48091241"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514237"
 ---
 # <a name="supported-constructs-in-natively-compiled-stored-procedures"></a>Costrutti supportati in stored procedure compilate in modo nativo
   In questo argomento contiene un elenco delle funzionalità supportate per le stored procedure compilate in modo nativo ([CREATE PROCEDURE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-procedure-transact-sql)):  
@@ -34,7 +34,7 @@ ms.locfileid: "48091241"
   
 -   [Limitazioni relative all'ordinamento](#los)  
   
- Per informazioni sui tipi di dati in modo nativo è supportato nelle stored procedure compilate, vedere [Supported Data Types](supported-data-types-for-in-memory-oltp.md).  
+ Per informazioni sui tipi di dati supportati nelle stored procedure compilate in modo nativo, vedere [Supported Data Types](supported-data-types-for-in-memory-oltp.md).  
   
  Per informazioni complete sui costrutti non supportati e per informazioni su come sopperire ad alcune funzionalità non supportate nelle stored procedure compilate in modo nativo, vedere [Migration Issues for Natively Compiled Stored Procedures](migration-issues-for-natively-compiled-stored-procedures.md). Per altre informazioni su funzionalità non supportate, vedere [Costrutti Transact-SQL non supportati da OLTP in memoria](transact-sql-constructs-not-supported-by-in-memory-oltp.md).  
   
@@ -85,15 +85,15 @@ ms.locfileid: "48091241"
   
 -   Funzioni di data: CURRENT_TIMESTAMP, DATEADD, DATEDIFF, DATEFROMPARTS, DATEPART, DATETIME2FROMPARTS, DATETIMEFROMPARTS, DAY, EOMONTH, GETDATE, GETUTCDATE, MONTH, SMALLDATETIMEFROMPARTS, SYSDATETIME, SYSUTCDATETIME e YEAR.  
   
--   Funzioni di tipo stringa: LEN, LTRIM, RTRIM e SUBSTRING  
+-   Funzioni per i valori stringa: LEN, LTRIM, RTRIM e SUBSTRING  
   
 -   Funzione di identità: SCOPE_IDENTITY  
   
--   Funzioni NULL: ISNULL  
+-   Funzione NULL: ISNULL  
   
 -   Funzioni di identificazione univoca: NEWID e NEWSEQUENTIALID  
   
--   Funzioni di errore: ERROR_LINE, ERROR_MESSAGE, ERROR_NUMBER, ERROR_PROCEDURE, ERROR_SEVERITY e ERROR_STATE  
+-   Funzioni di errore: ERROR_LINE, ERROR_MESSAGE, ERROR_NUMBER, ERROR_PROCEDURE, ERROR_SEVERITY ed ERROR_STATE  
   
 -   Conversioni: CAST e CONVERT. Le conversioni tra stringhe di caratteri Unicode e non Unicode (n(var)char e (var)char) non sono supportate.  
   
@@ -130,26 +130,26 @@ ms.locfileid: "48091241"
   
 -   Assegnazione di variabile nell'elenco SELECT.  
   
--   WHERE… AND  
+-   POSIZIONE IN CUI... AND  
   
  <sup>1</sup> ORDER BY e TOP sono supportati nelle stored procedure compilate in modo nativo, con alcune restrizioni:  
   
--   Non è disponibile alcun supporto per `DISTINCT` nella `SELECT` o `ORDER BY` clausola.  
+-   `DISTINCT` non è supportata nella clausola `SELECT` o `ORDER BY`.  
   
 -   `WITH TIES` o `PERCENT` non è supportata nella clausola `TOP`.  
   
--   `TOP` combinata con `ORDER BY` non supporta più di 8.192 quando si usa una costante nel `TOP` clausola. Questo limite può risultare più basso nel caso in cui la query contenga funzioni di aggregazione o dei join. Ad esempio, con un join (due tabelle) il limite scende a 4.096 righe. Con due join (tre tabelle) il limite è 2.730 righe.  
+-   `TOP` in combinazione con `ORDER BY` non supporta un valore superiore a 8.192 quando si utilizza una costante nella clausola `TOP`. Questo limite può risultare più basso nel caso in cui la query contenga funzioni di aggregazione o dei join. Ad esempio, con un join (due tabelle) il limite scende a 4.096 righe. Con due join (tre tabelle) il limite è 2.730 righe.  
   
      È possibile che si ottengano risultati maggiori di 8.192 archiviando il numero di righe in una variabile:  
   
     ```tsql  
     DECLARE @v INT = 9000  
-    SELECT TOP (@v) … FROM … ORDER BY …  
+    SELECT TOP (@v) ... FROM ... ORDER BY ...  
     ```  
   
  Tuttavia, una costante nella clausola `TOP` assicura prestazioni migliori rispetto a una variabile.  
   
- Queste restrizioni non si applicano a interpretate [!INCLUDE[tsql](../../includes/tsql-md.md)] accesso nelle tabelle ottimizzate per la memoria.  
+ Queste limitazioni non si applicano all'accesso [!INCLUDE[tsql](../../includes/tsql-md.md)] interpretato nelle tabelle ottimizzate per la memoria.  
   
 ##  <a name="auditing"></a> Controllo  
  Il controllo a livello di routine è supportato nelle stored procedure compilate in modo nativo. Il controllo a livello di istruzione non è supportato.  
@@ -172,7 +172,7 @@ ms.locfileid: "48091241"
 ##  <a name="los"></a> Limitazioni relative all'ordinamento  
  È possibile ordinare più di 8.000 righe in una query che usa [TOP &#40;Transact-SQL&#41;](/sql/t-sql/queries/top-transact-sql) e una clausola [ORDER BY Clause &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-order-by-clause-transact-sql). Tuttavia, senza la [ clausola ORDER BY &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-order-by-clause-transact-sql), [TOP &#40;Transact-SQL&#41;](/sql/t-sql/queries/top-transact-sql) può ordinare fino a 8.000 righe, meno se sono presenti join.  
   
- Se la query usa sia l'operatore [TOP &#40;Transact-SQL&#41;](/sql/t-sql/queries/top-transact-sql) che una [clausola ORDER BY &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-order-by-clause-transact-sql), è possibile specificare fino a 8192 righe per l'operatore TOP. Se si specificano più di 8192 righe, viene visualizzato il messaggio di errore: **Messaggio 41398, livello 16, stato 1, procedura *\<nomeProcedura>*, riga *\<<numeroRiga>*. L'operatore TOP può restituire un massimo di 8192 righe. Il numero richiesto è *\<numero>*.**  
+ Se la query usa sia l'operatore [TOP &#40;Transact-SQL&#41;](/sql/t-sql/queries/top-transact-sql) che una [clausola ORDER BY &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-order-by-clause-transact-sql), è possibile specificare fino a 8192 righe per l'operatore TOP. Se si specificano più di 8192 righe viene visualizzato il messaggio di errore: **Messaggio 41398, livello 16, stato 1, procedura  *\<NomeProcedura >*, riga  *\<lineNumber >* l'operatore TOP può restituire un massimo di 8192 righe.  *\<numero >* è stato richiesto.**  
   
  Se non si dispone di una clausola TOP, è possibile ordinare qualsiasi numero di righe con ORDER BY.  
   
@@ -220,7 +220,7 @@ WITH EXECUTE AS OWNER, SCHEMABINDING, NATIVE_COMPILATION
 GO  
 ```  
   
- **Limitazioni per le righe restituite.** In due casi è possibile che il numero di righe che possono essere restituite dall'operatore TOP venga ridotto:  
+ **Limitazioni per le righe restituite:** In due casi è possibile che il numero di righe che possono essere restituite dall'operatore TOP venga ridotto:  
   
 -   Utilizzando JOIN nella query.  L'influenza di JOIN sulla limitazione dipende dal piano di query.  
   

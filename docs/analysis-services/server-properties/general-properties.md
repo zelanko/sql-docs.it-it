@@ -1,5 +1,5 @@
 ---
-title: Proprietà generali | Microsoft Docs
+title: Proprietà generali di Analysis Services | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,19 +9,19 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 935d2559705aba64ecb1f19cb25bebf174d995cb
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: 883df6b2562e7fa3b80fac6a0063bd6483d1119d
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48906211"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072388"
 ---
 # <a name="general-properties"></a>Proprietà generali
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
 
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] supporta le proprietà del server elencate nelle tabelle seguenti. In questo argomento vengono documentate le proprietà del server disponibili nel file msmdsrv.ini che non sono incluse in una sezione specifica, ad esempio Sicurezza, Rete o Pool di thread. Per altre informazioni sulle proprietà aggiuntive del server e sulla relativa impostazione, vedere [Proprietà server in Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md).  
   
- **Si applica a:** modalità server multidimensionale e tabulare, se non specificato diversamente.  
+ **Si applica a:** Modalità server multidimensionale e tabulare, se non diversamente specificato  
   
 ## <a name="non-specific-category"></a>Categoria Non-Specific  
  **AdminTimeout**  
@@ -64,13 +64,13 @@ ms.locfileid: "48906211"
  Proprietà di stringa che consente l'identificazione del nome della directory in cui sono archiviati i dati.  
   
  **DeploymentMode**  
- Consente di determinare il contesto operativo di un'istanza del server Analysis Services. Questa proprietà viene definita 'modalità server' in finestre di dialogo, messaggi e documentazione. Questa proprietà viene configurata tramite il programma di installazione di SQL Server in base alla modalità server selezionata durante l'installazione di Analysis Services e deve essere considerata solo per uso interno, usando sempre il valore specificato dal programma di installazione.  
+ Consente di determinare il contesto operativo di un'istanza del server Analysis Services. Questa proprietà è definita 'modalità server' in finestre di dialogo, messaggi e documentazione. Questa proprietà viene configurata tramite il programma di installazione di SQL Server in base alla modalità server selezionata durante l'installazione di Analysis Services e deve essere considerata solo per uso interno, usando sempre il valore specificato dal programma di installazione.  
   
  Tra i valori validi per questa proprietà sono inclusi i seguenti:  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
-|0|Si tratta del valore predefinito. Specifica la modalità multidimensionale, usata per i database multidimensionali che usano l'archiviazione MOLAP, HOLAP e ROLAP, nonché i modelli di data mining.|  
+|0|Rappresenta il valore predefinito. Specifica la modalità multidimensionale, usata per i database multidimensionali che usano l'archiviazione MOLAP, HOLAP e ROLAP, nonché i modelli di data mining.|  
 |1|Specifica le istanze di Analysis Services installate nell'ambito di una distribuzione di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per SharePoint. Non modificare la proprietà della modalità di distribuzione dell'istanza di Analysis Services che fa parte di un'installazione di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per SharePoint. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] I dati di non verranno più eseguiti nel server se si cambia modalità.|  
 |2|Specifica la modalità tabulare usata per l'hosting dei database del modello tabulare che usano l'archiviazione in memoria o DirectQuery.|  
   

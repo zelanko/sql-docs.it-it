@@ -14,12 +14,12 @@ ms.assetid: 5ab1c661-9bfa-434a-b315-faac34ed12b1
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: d5eadf38bcdb7573cf19941535182e2cc8f87f29
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4fc706cd372f4bee0c9449b15de6d070240141bd
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48111501"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52414788"
 ---
 # <a name="create-modify-and-delete-standard-subscriptions-reporting-services-in-native-mode"></a>Creare, modificare ed eliminare sottoscrizioni standard (Reporting Services in modalità nativa)
   Il termine sottoscrizione standard si riferisce alla sottoscrizione creata dai singoli utenti che desiderano che un report venga recapitato tramite posta elettronica o a una cartella condivisa. Una sottoscrizione standard viene sempre definita tramite il report su cui si basa.  
@@ -27,7 +27,7 @@ ms.locfileid: "48111501"
  L'utente che crea una sottoscrizione diventa automaticamente il proprietario di tale sottoscrizione e può pertanto modificarla o eliminarla.  
   
 > [!NOTE]  
->  A partire [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] è possibile trasferire la proprietà di una sottoscrizione a livello di codice. Non è disponibile alcuna interfaccia utente da utilizzare per trasferire la proprietà delle sottoscrizioni. Per altre informazioni, vedere <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A>  
+>  A partire da [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], è possibile trasferire la proprietà di una sottoscrizione a livello di programmazione. Non è disponibile alcuna interfaccia utente da utilizzare per trasferire la proprietà delle sottoscrizioni. Per altre informazioni, vedere <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A>  
   
  A seconda delle impostazioni del file di configurazione **RSReportServer.config** , potrebbe essere possibile aggiungere altri utenti a una sottoscrizione. Un responsabile potrebbe ad esempio aggiungere gli indirizzi di posta elettronica dei propri subalterni in modo che possano ricevere una copia del report. Questa funzionalità è supportata se il campo A: è visibile durante la definizione delle singole sottoscrizioni. Per altre informazioni, vedere [configurare un Server di Report per il recapito tramite posta elettronica &#40;Gestione configurazione SSRS&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md).  
   
@@ -58,7 +58,7 @@ ms.locfileid: "48111501"
   
 -   Per utilizzare il recapito tramite condivisione file, è necessario aver già definito la cartella di destinazione. Per altre informazioni, vedere [configurare un Server di Report per il recapito tramite posta elettronica &#40;Gestione configurazione SSRS&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md).  
   
- Per sottoscrivere un report, è necessario che l'origine dati del report sia configurata per l'utilizzo di credenziali archiviate o di nessuna credenziale. Per altre informazioni, vedere [credenziali di Store in un'origine dati di Reporting Services](../report-data/store-credentials-in-a-reporting-services-data-source.md). Se non le utilizza, il pulsante **Nuova sottoscrizione** non è disponibile.  
+ Per sottoscrivere un report, è necessario che l'origine dati del report sia configurata per l'utilizzo di credenziali archiviate o di nessuna credenziale. Per altre informazioni, vedere [Archiviare le credenziali in un'origine dati di Reporting Services](../report-data/store-credentials-in-a-reporting-services-data-source.md). Se non le utilizza, il pulsante **Nuova sottoscrizione** non è disponibile.  
   
  In questo argomento non viene illustrato come creare una sottoscrizione guidata dai dati. Per istruzioni sulla creazione di una sottoscrizione guidata dai dati, vedere [Creare una sottoscrizione guidata dai dati &#40;esercitazione su SSRS&#41;](../create-a-data-driven-subscription-ssrs-tutorial.md) o la Guida online per la pagina Creazione di una sottoscrizione guidata dai dati in Gestione report.  
   
@@ -173,9 +173,9 @@ ms.locfileid: "48111501"
   
 ## <a name="see-also"></a>Vedere anche  
  [Attività e autorizzazioni](../security/tasks-and-permissions.md)   
- [Creare e gestire sottoscrizioni per server di Report in modalità SharePoint](create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)   
- [Creare e gestire sottoscrizioni per server di Report in modalità nativa](../create-manage-subscriptions-native-mode-report-servers.md)   
- [Sottoscrizioni guidate dai dati](data-driven-subscriptions.md)   
+ [Create and Manage Subscriptions for SharePoint Mode Report Servers](create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)   
+ [Creare e gestire sottoscrizioni per server di report in modalità nativa](../create-manage-subscriptions-native-mode-report-servers.md)   
+ [Data-Driven Subscriptions](data-driven-subscriptions.md)   
  [Sottoscrizioni e recapito &#40;Reporting Services&#41;](subscriptions-and-delivery-reporting-services.md)   
  [Gestione report &#40;modalità nativa SSRS&#41;](../report-manager-ssrs-native-mode.md)   
  [Usare Sottoscrizioni personali](use-my-subscriptions-native-mode-report-server.md)  

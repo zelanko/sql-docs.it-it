@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 1a114fbb79ff3c6df57991f0db695f357d743adc
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 2f6568e39b364b0e7d486e0d9e0318709141be63
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38983466"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52402646"
 ---
 # <a name="power-pivot-authentication-and-authorization"></a>Autenticazione e autorizzazione di Power Pivot
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -87,7 +87,7 @@ ms.locfileid: "38983466"
 |Amministratore di farm o di servizio|Installazione, abilitazione e configurazione di servizi e applicazioni.<br /><br /> Uso del dashboard di gestione [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] e visualizzazione dei report amministrativi.|  
 |Controllo completo|Attivazione dell'integrazione delle caratteristiche di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] a livello di raccolta siti.<br /><br /> Creazione di un libreria della Raccolta [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .<br /><br /> Creazione di una libreria di feed di dati.|  
 |Collaborazione|Aggiunta, modifica,eliminazione e download di cartelle di lavoro di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .<br /><br /> Configurazione dell'aggiornamento dati.<br /><br /> Creazione di nuove cartelle di lavoro e report basati sulle cartelle di lavoro di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] in un sito di SharePoint.<br /><br /> Creazione di documenti di servizio dati in una libreria di feed di dati|  
-|lettura|Accesso alle cartelle di lavoro di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] come un'origine dati esterna, dove l'URL della cartella di lavoro viene immesso in modo esplicito in una finestra di dialogo di connessione, ad esempio nella Connessione guidata dati di Excel.|  
+|lettura|Accesso [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] cartelle di lavoro come un'origine dati esterna, dove l'URL della cartella di lavoro viene immesso in modo esplicito in una finestra di dialogo di connessione (ad esempio, nella connessione guidata dati di Excel).|  
 |Solo visualizzazione|Visualizzazione delle cartelle di lavoro di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .<br /><br /> Visualizzazione della cronologia dell'aggiornamento dati.<br /><br /> Connessione di una cartella di lavoro locale a una cartella di lavoro di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] su un sito di SharePoint, per la ridefinizione degli scopi dei relativi dati in altri modi.<br /><br /> Download di uno snapshot della cartella di lavoro. Lo snapshot è una copia statica dei dati, senza filtri dei dati, filtri, formule o connessioni dati. Il contenuto dello snapshot è simile alla copia di valori cella dalla finestra del browser.|  
   
 ##  <a name="excel"></a> Considerazioni sulla sicurezza di Excel Services per le cartelle di lavoro di Power Pivot  
@@ -100,7 +100,7 @@ ms.locfileid: "38983466"
 > [!NOTE]  
 >  La maggior parte delle impostazioni correlate alla sicurezza si applicano ai percorsi attendibili. Se si desidera mantenere valori predefiniti o usare valori diversi per siti differenti, è possibile creare un percorso attendibile aggiuntivo per siti che contengono dati [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , quindi configurare le impostazioni seguenti solo per quel sito. Per altre informazioni, vedere [Creare un percorso attendibile per i siti PowerPivot in Amministrazione centrale](../../analysis-services/power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md).  
   
-|Area|Impostazione|Description|  
+|Area|Impostazione|Descrizione|  
 |----------|-------------|-----------------|  
 |Applicazione Web|Provider di autenticazione di Windows|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] converte un token delle attestazioni ottenute da Excel Services in un'identità utente di Windows. Qualsiasi applicazione Web che utilizza Excel Services come risorsa deve essere configurata per l'utilizzo del provider di autenticazione di Windows.|  
 |Percorso attendibile|Tipo percorso|È necessario impostare questo valore su **Microsoft SharePoint Foundation**. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] recuperano una copia del file con estensione xlsx e la caricano su un server Analysis Services nella farm. Il server può recuperare solo file con estensione xlsx da una raccolta contenuto.|  
@@ -112,7 +112,7 @@ ms.locfileid: "38983466"
   
 ## <a name="see-also"></a>Vedere anche  
  [Configurare gli account del servizio PowerPivot](../../analysis-services/power-pivot-sharepoint/configure-power-pivot-service-accounts.md)   
- [Configurare Power Pivot (Power Pivot per SharePoint) Account di aggiornamento dati automatico](http://msdn.microsoft.com/81401eac-c619-4fad-ad3e-599e7a6f8493)   
+ [Configurare l'account di aggiornamento dati automatico Power Pivot (Power Pivot per SharePoint)](http://msdn.microsoft.com/81401eac-c619-4fad-ad3e-599e7a6f8493)   
  [Creare un percorso attendibile per i siti PowerPivot in Amministrazione centrale](../../analysis-services/power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)   
  [Architettura di sicurezza di Power Pivot](http://go.microsoft.com/fwlink/?linkID=220970)  
   

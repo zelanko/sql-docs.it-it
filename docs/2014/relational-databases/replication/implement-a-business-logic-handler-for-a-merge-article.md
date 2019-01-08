@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 dev_langs:
 - TSQL
@@ -19,12 +18,12 @@ ms.assetid: ed477595-6d46-4fa2-b0d3-a5358903ec05
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: da828154eff0b5cfc8a5cfc8ef5deba02e24579a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 659bba7156ccc1c3a60bef38a51fd983554e4ead
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48224661"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52816893"
 ---
 # <a name="implement-a-business-logic-handler-for-a-merge-article"></a>Implementazione di un gestore della logica di business per un articolo di merge
   In questo argomento viene descritto come implementare un gestore della logica di business per un articolo di tipo merge in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite la programmazione della replica o RMO (Replication Management Objects).  
@@ -59,7 +58,7 @@ ms.locfileid: "48224661"
   
 2.  Aggiungere i riferimenti al progetto per gli spazi dei nomi seguenti.  
   
-    |Riferimento all'assembly|Percorso|  
+    |Riferimento all'assembly|Località|  
     |------------------------|--------------|  
     |<xref:Microsoft.SqlServer.Replication.BusinessLogicSupport>|[!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]COM (installazione predefinita)|  
     |<xref:System.Data>|GAC (componente di .NET Framework)|  
@@ -132,7 +131,7 @@ ms.locfileid: "48224661"
   
 2.  Aggiungere i riferimenti al progetto per gli spazi dei nomi seguenti.  
   
-    |Riferimento all'assembly|Percorso|  
+    |Riferimento all'assembly|Località|  
     |------------------------|--------------|  
     |<xref:Microsoft.SqlServer.Replication.BusinessLogicSupport>|[!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]COM (installazione predefinita)|  
     |<xref:System.Data>|GAC (componente di .NET Framework)|  
@@ -183,7 +182,7 @@ ms.locfileid: "48224661"
   
     -   <xref:Microsoft.SqlServer.Replication.BusinessLogicHandler.FriendlyName%2A> : nome descrittivo utilizzato per l'accesso al gestore della logica di business.  
   
-    -   <xref:Microsoft.SqlServer.Replication.BusinessLogicHandler.IsDotNetAssembly%2A> -valore `true`.  
+    -   <xref:Microsoft.SqlServer.Replication.BusinessLogicHandler.IsDotNetAssembly%2A>: valore `true`.  
   
 #### <a name="to-deploy-a-business-logic-handler"></a>Per distribuire un gestore della logica di business  
   
@@ -215,7 +214,7 @@ ms.locfileid: "48224661"
   
 4.  Impostare la connessione del passaggio 1 per la proprietà <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> .  
   
-5.  Chiamare il metodo <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> per recuperare le proprietà dell'oggetto. Se questo metodo restituisce `false`, le proprietà dell'articolo nel passaggio 3 sono state definite in modo non corretto o l'articolo non esiste. Per altre informazioni, vedere [View and Modify Article Properties](publish/view-and-modify-article-properties.md).  
+5.  Chiamare il metodo <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> per recuperare le proprietà dell'oggetto. Se questo metodo restituisce `false`, le proprietà dell'articolo sono state definite in modo non corretto nel passaggio 3 oppure l'articolo non esiste. Per altre informazioni, vedere [View and Modify Article Properties](publish/view-and-modify-article-properties.md).  
   
 6.  Impostare il nome descrittivo del gestore della logica di business per <xref:Microsoft.SqlServer.Replication.MergeArticle.ArticleResolver%2A>. Si tratta del valore della proprietà <xref:Microsoft.SqlServer.Replication.BusinessLogicHandler.FriendlyName%2A> specificato durante la registrazione del gestore della logica di business.  
   

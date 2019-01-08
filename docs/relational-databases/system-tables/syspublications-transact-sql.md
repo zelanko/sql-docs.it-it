@@ -5,8 +5,7 @@ ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - syspublications
@@ -19,19 +18,19 @@ ms.assetid: a86eb4f5-1f7b-493e-af55-3d15cf878228
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2369b472fc4e7e7506aab72d46c3ecfe7cead8c0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ed5e46a5bfb9b4c4081eb2df7d4f93b7dd12b29f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47754839"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52822935"
 ---
 # <a name="syspublications-transact-sql"></a>syspublications (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Contiene una riga per ogni pubblicazione definita nel database. Questa tabella è archiviata nel database di pubblicazione.  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**description**|**nvarchar(255)**|Voce descrittiva per la pubblicazione.|  
 |**name**|**sysname**|Nome univoco associato alla pubblicazione.|  
@@ -66,7 +65,7 @@ ms.locfileid: "47754839"
 |**centralized_conflicts**|**bit**|Specifica se i record dei conflitti vengono archiviati nel server di pubblicazione:<br /><br /> **0** = i record dei conflitti vengono archiviati sia il server di pubblicazione e nel Sottoscrittore che ha causato il conflitto.<br /><br /> **1** = i record dei conflitti vengono archiviati nel server di pubblicazione.|  
 |**conflict_retention**|**int**|Specifica il periodo di memorizzazione dei conflitti, espresso in giorni.|  
 |**conflict_policy**|**int**|Specifica i criteri di risoluzione dei conflitti adottati quando viene utilizzata l'opzione per Sottoscrittori ad aggiornamento in coda. I possibili valori sono i seguenti:<br /><br /> **1** = prevale il server di pubblicazione.<br /><br /> **2** = prevale il sottoscrittore.<br /><br /> **3** = sottoscrizione viene reinizializzata.|  
-|**queue_type**|**int**|Specifica il tipo di coda da utilizzare. I possibili valori sono i seguenti:<br /><br /> **1** = msmq, ovvero Usa [!INCLUDE[msCoName](../../includes/msconame-md.md)] Accodamento per archiviare le transazioni.<br /><br /> **2** = sql, che usa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per archiviare le transazioni.<br /><br /> Nota: L'utilizzo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Accodamento messaggi è stato deprecato e non è più disponibile.|  
+|**queue_type**|**int**|Specifica il tipo di coda da utilizzare. I possibili valori sono i seguenti:<br /><br /> **1** = msmq, ovvero Usa [!INCLUDE[msCoName](../../includes/msconame-md.md)] Accodamento per archiviare le transazioni.<br /><br /> **2** = sql, che usa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per archiviare le transazioni.<br /><br /> Nota: L'utilizzo del servizio di accodamento messaggi [!INCLUDE[msCoName](../../includes/msconame-md.md)] è stato dichiarato deprecato e non è più disponibile.|  
 |**ad_guidname**|**sysname**|Specifica se la pubblicazione è pubblicata in [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory. Un valido identificatore univoco globale (GUID) specifica che la pubblicazione è pubblicata in Active Directory e il GUID è l'oggetto di pubblicazione di Active Directory corrispondente **objectGUID**. Se è NULL, la pubblicazione non è pubblicata in Active Directory.|  
 |**backward_comp_level**|**int**|Livello di compatibilità del database. I possibili valori sono i seguenti:<br /><br /> **90** = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].<br /><br /> **100** = [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].<br /><br /> **110** = [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].<br /><br /> **120** = [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].|  
 |**allow_initialize_from_backup**|**bit**|Indica se i Sottoscrittori possono inizializzare una sottoscrizione della pubblicazione da un backup anziché da uno snapshot iniziale. **1** significa che le sottoscrizioni possono essere inizializzate da un backup, e **0** indica che essi non è possibile. Per altre informazioni, vedere [Inizializzazione di una sottoscrizione transazionale senza uno snapshot](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md).|  

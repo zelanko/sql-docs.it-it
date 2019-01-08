@@ -18,12 +18,12 @@ ms.assetid: c12ef6df-58c6-4391-bbbf-683ea874bd81
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7224a4e301565dc1bc6f6968da3477792b8cfc22
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: aaf644b6a8795e9c68e0053eaed0023c4b9299b6
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47781490"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53588405"
 ---
 # <a name="spcolumnsex-transact-sql"></a>sp_columns_ex (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,22 +45,22 @@ sp_columns_ex [ @table_server = ] 'table_server'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@table_server =** ] **'***table_server***'**  
+ [  **@table_server =** ] **'**_table_server_**'**  
  Nome del server collegato per cui si desidera restituire le informazioni sulle colonne. *table_server* viene **sysname**, non prevede alcun valore predefinito.  
   
- [  **@table_name =** ] **'***table_name***'**  
+ [  **@table_name =** ] **'**_table_name_**'**  
  Nome della tabella per cui si desidera restituire le informazioni sulle colonne. *TABLE_NAME* viene **sysname**, con un valore predefinito è NULL.  
   
- [  **@table_schema =** ] **'***table_schema***'**  
+ [  **@table_schema =** ] **'**_table_schema_**'**  
  Nome dello schema per cui si desidera restituire le informazioni sulle colonne. *TABLE_SCHEMA* viene **sysname**, con un valore predefinito è NULL.  
   
- [  **@table_catalog =** ] **'***table_catalog***'**  
+ [  **@table_catalog =** ] **'**_table_catalog_**'**  
  Nome del catalogo per cui si desidera restituire le informazioni sulle colonne. *TABLE_CATALOG* viene **sysname**, con un valore predefinito è NULL.  
   
- [  **@column_name =** ] **'***colonna***'**  
+ [  **@column_name =** ] **'**_colonna_**'**  
  Nome della colonna del database per cui si desidera ottenere informazioni. *colonna* viene **sysname**, con un valore predefinito è NULL.  
   
- [  **@ODBCVer =** ] **'***ODBCVer***'**  
+ [  **@ODBCVer =** ] **'**_ODBCVer_**'**  
  Versione di ODBC utilizzata. *ODBCVer* viene **int**, con un valore predefinito è 2. che indica ODBC versione 2. I valori validi sono 2 e 3. Per informazioni sulle differenze di comportamento tra le versioni 2 e 3, vedere la specifica relativa a SQLColumns di ODBC.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
@@ -68,9 +68,9 @@ sp_columns_ex [ @table_server = ] 'table_server'
   
 ## <a name="result-sets"></a>Set di risultati  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
-|**TABLE_CAT**|**sysname**|Nome del qualificatore della tabella o della vista. Vari prodotti DBMS supportano nomi di tabelle in tre parti (*qualificatore ***.*** proprietario ***.*** nome*). In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], questa colonna rappresenta il nome del database. In altri prodotti rappresenta il nome del server dell'ambiente di database della tabella. Questo campo può essere NULL.|  
+|**TABLE_CAT**|**sysname**|Nome del qualificatore della tabella o della vista. Vari prodotti DBMS supportano nomi di tabelle in tre parti (_qualificatore_**.** _owner_**.** _nome_). In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], questa colonna rappresenta il nome del database. In altri prodotti rappresenta il nome del server dell'ambiente di database della tabella. Questo campo può essere NULL.|  
 |**TABLE_SCHEM**|**sysname**|Nome del proprietario della tabella o della vista. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] questa colonna rappresenta il nome dell'utente del database che ha creato la tabella. Questo campo restituisce sempre un valore.|  
 |**TABLE_NAME**|**sysname**|Nome della tabella o della vista. Questo campo restituisce sempre un valore.|  
 |**COLUMN_NAME**|**sysname**|Nome della colonna, per ogni colonna della **TABLE_NAME** restituito. Questo campo restituisce sempre un valore.|  

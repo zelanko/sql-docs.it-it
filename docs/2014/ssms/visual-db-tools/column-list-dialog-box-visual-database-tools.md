@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - vdt.dlgbox.columnlist
@@ -12,22 +12,22 @@ ms.assetid: 9ebd08b6-fa93-4581-bb6c-96b51d2c895c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2018bbfba6d7282c6e9ab27d9d2923bf69e59048
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7a6853d721a1504c3b44e733a2f2fbc6f37608be
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48053121"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52815773"
 ---
 # <a name="column-list-dialog-box-visual-database-tools"></a>Finestra di dialogo Elenco colonne (Visual Database Tools)
   Quando si scrive una query, può essere utile visualizzare un elenco delle colonne disponibili negli oggetti valutati a livello di tabella selezionati.  
   
- Per accedere a questa finestra di dialogo, dal menu **Progettazione query** nel riquadro diagramma fare clic con il pulsante destro del mouse sull'intestazione di un oggetto valutato a livello di tabella e quindi scegliere **Proprietà**. Nella finestra **Proprietà** fare clic sul campo **Elenco colonne** . e quindi sui puntini di sospensione **(…)** a destra del campo.  
+ Per accedere a questa finestra di dialogo, dal menu **Progettazione query** nel riquadro diagramma fare clic con il pulsante destro del mouse sull'intestazione di un oggetto valutato a livello di tabella e quindi scegliere **Proprietà**. Nella finestra **Proprietà** fare clic sul campo **Elenco colonne** . Quindi fare clic sui puntini di sospensione **(...)** a destra del campo.  
   
  In questa finestra di dialogo vengono visualizzati un elenco delle colonne dell'oggetto valutato a livello di tabella selezionato e le proprietà di base, ad esempio i tipi di dati e se nelle colonne sono consentiti i valori Null.  
   
 ## <a name="options"></a>Opzioni  
- **Nome**  
+ **Name**  
  Visualizza il nome delle colonne dell'oggetto valutato a livello di tabella selezionato.  
   
  **Tipo di dati**  

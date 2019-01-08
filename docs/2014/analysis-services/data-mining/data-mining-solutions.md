@@ -14,12 +14,12 @@ ms.assetid: 84f6548d-ebb0-4e10-9b29-66253fa0a04a
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8d37ee863bbc14bbaa3c73a2c5781e080e81ee63
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 50e6eeb4c2f2a8ba5b1ce6430111586e6e3b8207
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48161771"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52516547"
 ---
 # <a name="data-mining-solutions"></a>Soluzioni di data mining
   Una soluzione di data mining è una soluzione di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] che contiene uno o più progetti di data mining.  
@@ -35,7 +35,7 @@ ms.locfileid: "48161771"
  [Procedure dettagliate sulla soluzione](#bkmk_Walkthru)  
   
 ##  <a name="bkmk_RelMD"></a> Data mining relazionali. e multidimensionali  
- Una soluzione di data mining può essere basata su dati multidimensionali, ovvero un cubo esistente, o su dati puramente relazionali, ad esempio tabelle e viste in un data warehouse, o su file di testo, cartelle di lavoro di Excel o altre origini dati esterne.  
+ Può essere una soluzione di data mining basati su dati multidimensionali: vale a dire, un cubo esistente- o di Excel su dati puramente relazionali, ad esempio tabelle e viste in un data warehouse, o su file di testo, cartelle di lavoro o altre origini dati esterne.  
   
 -   È possibile creare oggetti di data mining all'interno di una soluzione di database multidimensionale esistente.  
   
@@ -63,7 +63,7 @@ ms.locfileid: "48161771"
  [Creare una struttura di data mining OLAP](create-an-olap-mining-structure.md)  
  Creare una struttura di data mining basata sui dati di un cubo OLAP. È possibile salvare i modelli creati dai dati OLAP come dimensione di data mining oppure salvare il set di dati e i modelli come nuovo cubo.  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Progetti di data mining](data-mining-projects.md)  
   
  [Elaborazione di oggetti di data mining](processing-data-mining-objects.md)  
@@ -79,13 +79,13 @@ ms.locfileid: "48161771"
   
 |Attività|Argomento|  
 |-----------|------------|  
-|Eseguire test sui modelli creati, convalidare la qualità dei dati di training e creare grafici che rappresentano l'accuratezza dei modelli di data mining.|[Test e convalida &#40;Data Mining&#41;](testing-and-validation-data-mining.md)|  
+|Eseguire test sui modelli creati, convalidare la qualità dei dati di training e creare grafici che rappresentano l'accuratezza dei modelli di data mining.|[Test e convalida &#40;Data mining&#41;](testing-and-validation-data-mining.md)|  
 |Eseguire il training del modello popolando la struttura e i modelli correlati con i dati. Aggiornare ed estendere i modelli con nuovi dati.|[Elaborazione di oggetti di data mining](processing-data-mining-objects.md)|  
 |Personalizzare un modello di data mining applicando filtri ai dati di training, scegliendo un algoritmo diverso o impostando parametri avanzati dell'algoritmo.|[Personalizzare struttura e modelli di data mining](customize-mining-models-and-structure.md)|  
-|Personalizzare un modello di data mining applicando filtri ai dati utilizzati per il training del modello.|[Aggiungere modelli di Data Mining a una struttura &#40;Analysis Services - Data Mining&#41;](add-mining-models-to-a-structure-analysis-services-data-mining.md)|  
+|Personalizzare un modello di data mining applicando filtri ai dati utilizzati per il training del modello.|[Aggiungere modelli di data mining a una struttura &#40;Analysis Services - Data mining&#41;](add-mining-models-to-a-structure-analysis-services-data-mining.md)|  
 |Aggiornare e gestire soluzioni di data mining.|Collegamento|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Esercitazioni sul Data Mining &#40;Analysis Services&#41;](../data-mining-tutorials-analysis-services.md)  
+ [Esercitazioni sul data mining &#40;Analysis Services&#41;](../data-mining-tutorials-analysis-services.md)  
   
   

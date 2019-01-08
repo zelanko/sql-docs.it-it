@@ -4,18 +4,18 @@ description: Questo articolo contiene le note sulla versione e le funzionalità 
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 11/06/2018
+ms.date: 12/11/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 monikerRange: '>= sql-server-linux-ver15  || >= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: b22e52d68c1d2b10005e69e2e70c41e73c173dca
-ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
+ms.openlocfilehash: 21e28b73019ac02c5269f1c7e1a76529f8181315
+ms.sourcegitcommit: c9d33ce831723ece69f282896955539d49aee7f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51269834"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53306198"
 ---
 # <a name="release-notes-for-sql-server-2019-preview-on-linux"></a>Note sulla versione di anteprima di SQL Server 2019 in Linux
 
@@ -48,6 +48,7 @@ La tabella seguente elenca la cronologia delle versioni per l'anteprima di SQL S
 
 | Versione               | Versione       | Data di rilascio |
 |-----------------------|---------------|--------------|
+| [CTP 2.2](#CTP22)     | 15.0.1200.24  | 2018-12-11   |
 | [CTP 2.1](#CTP21)     | 15.0.1100.94  | 2018-11-06   |
 | [CTP 2.0](#CTP20)     | 15.0.1000.34  | 2018-09-24   |
 
@@ -62,6 +63,26 @@ Se si aggiornano i pacchetti esistenti di SQL Server, eseguiti il comando di agg
 - [Installare SQL Server Integration Services](sql-server-linux-setup-ssis.md)
 - [Installare l'anteprima 2019 di SQL Server R Services di Machine Learning e supporto di Python in Linux](sql-server-linux-setup-machine-learning.md)
 - [Abilitare SQL Server Agent](sql-server-linux-setup-sql-agent.md)
+
+## <a id="CTP22"></a> CTP 2.2 (dicembre 2018)
+
+Le sezioni seguenti forniscono i percorsi dei pacchetti e problemi noti per la versione CTP 2.2 versione. Per altre informazioni sulle nuove funzionalità per Linux 2019 di SQL Server, vedere la [nuove funzionalità di SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md).
+
+### <a name="package-details"></a>Dettagli del pacchetto
+
+Per le installazioni manuali o offline del pacchetto, è possibile scaricare i pacchetti Debian e RPM con le informazioni nella tabella seguente:
+
+| Pacchetto | Versione del pacchetto | Download |
+|-----|-----|-----|
+| Pacchetto di Red Hat RPM | 15.0.1200.24-2 | [Pacchetto RPM motore](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-15.0.1200.24-2.x86_64.rpm)</br>[Pacchetto RPM disponibilità elevata](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-ha-15.0.1200.24-2.x86_64.rpm)</br>[Pacchetto RPM ricerca full-text](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-fts-15.0.1200.24-2.x86_64.rpm)</br>[Pacchetto RPM extensibility](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-extensibility-15.0.1200.24-2.x86_64.rpm)</br>[Pacchetto RPM estendibilità Java](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-extensibility-java-15.0.1200.24-2.x86_64.rpm)|
+| Pacchetto RPM SLES | 15.0.1200.24-2 | [pacchetto RPM motore MSSQL-server](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-15.0.1200.24-2.x86_64.rpm)</br>[Pacchetto RPM disponibilità elevata](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-ha-15.0.1200.24-2.x86_64.rpm)</br>[Pacchetto RPM ricerca full-text](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-fts-15.0.1200.24-2.x86_64.rpm)</br>[Pacchetto RPM extensibility](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-extensibility-15.0.1200.24-2.x86_64.rpm)</br>[Pacchetto RPM estendibilità Java](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-extensibility-java-15.0.1200.24-2.x86_64.rpm)|
+| Pacchetto Debian Ubuntu 16.04 | 15.0.1200.24-2 | [Pacchetto Debian motore](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server/mssql-server_15.0.1200.24-2_amd64.deb)</br>[Pacchetto Debian a disponibilità elevata](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-ha/mssql-server-ha_15.0.1200.24-2_amd64.deb)</br>[Pacchetto Debian ricerca full-text](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-fts/mssql-server-fts_15.0.1200.24-2_amd64.deb)</br>[Pacchetto Debian extensibility](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-extensibility/mssql-server-extensibility_15.0.1200.24-2_amd64.deb)</br>[Pacchetto Debian estendibilità Java](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-extensibility-java/mssql-server-extensibility-java_15.0.1200.24-2_amd64.deb)|
+
+### <a name="known-issues"></a>Problemi noti
+
+#### <a id="msdtc"></a> Microsoft Distributed Transaction Coordinator
+
+Attualmente, MSDTC richiede le transazioni per essere non autenticato. Ad esempio, se si usa un server collegato da SQL Server in Windows per SQL Server in Linux o Usa un'applicazione client di Windows per avviare una transazione distribuita con SQL Server in Linux, MSDTC in Windows server/client sarà necessario utilizzare l'opzione "No Autenticazione obbligatoria".
 
 ## <a id="CTP21"></a> CTP 2.1 (novembre 2018)
 
@@ -79,7 +100,7 @@ Per le installazioni manuali o offline del pacchetto, è possibile scaricare i p
 
 ### <a name="known-issues"></a>Problemi noti
 
-#### <a id="msdtc"></a> Microsoft Distributed Transaction Coordinator
+#### <a name="microsoft-distributed-transaction-coordinator"></a>Microsoft Distributed Transaction Coordinator
 
 Attualmente, MSDTC richiede le transazioni per essere non autenticato. Ad esempio, se si usa un server collegato da SQL Server in Windows per SQL Server in Linux o Usa un'applicazione client di Windows per avviare una transazione distribuita con SQL Server in Linux, MSDTC in Windows server/client sarà necessario utilizzare l'opzione "No Autenticazione obbligatoria".
 
@@ -99,7 +120,7 @@ Per le installazioni manuali o offline del pacchetto, è possibile scaricare i p
 
 ### <a name="known-issues"></a>Problemi noti
 
-#### <a id="msdtc"></a> Microsoft Distributed Transaction Coordinator
+#### <a name="microsoft-distributed-transaction-coordinator"></a>Microsoft Distributed Transaction Coordinator
 
 Attualmente, MSDTC richiede le transazioni per essere non autenticato. Ad esempio, se si usa un server collegato da SQL Server in Windows per SQL Server in Linux o Usa un'applicazione client di Windows per avviare una transazione distribuita con SQL Server in Linux, MSDTC in Windows server/client sarà necessario utilizzare l'opzione "No Autenticazione obbligatoria".
 

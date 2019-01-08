@@ -14,12 +14,12 @@ ms.assetid: c1e77e91-2a69-40d9-b8b3-97cffc710586
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: c71098b580891ddb0c1975e429ede783856cf223
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ab0560e0df37c80a82017e5f076af969931a79e2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48182911"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52519027"
 ---
 # <a name="create-a-credential"></a>Create a Credential
   In questo argomento viene descritto come creare credenziali in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
@@ -34,7 +34,7 @@ ms.locfileid: "48182911"
   
      [Limitazioni e restrizioni](#Restrictions)  
   
-     [Security](#Security)  
+     [Sicurezza](#Security)  
   
 -   **Per creare le credenziali utilizzando:**  
   
@@ -61,13 +61,13 @@ ms.locfileid: "48182911"
   
 1.  In Esplora oggetti espandere la cartella **Sicurezza** .  
   
-2.  Fare clic con il pulsante destro del mouse sulla cartella **Credenziali** e scegliere **Nuove credenziali**.  
+2.  Fare clic con il pulsante destro del mouse sulla cartella **Credenziali** e scegliere **Nuove credenziali...**.  
   
 3.  Nella casella **Nome credenziali** della finestra di dialogo **Nuove credenziali** digitare un nome per le credenziali.  
   
 4.  Nella casella **Identità** digitare il nome dell'account usato per le connessioni in uscita (quando si esce dal contesto di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]). In genere, sarà un account utente di Windows, ma l'identità può essere un account di altro tipo.  
   
-     In alternativa, fare clic sui puntini di sospensione **(…)** per aprire la finestra di dialogo **Seleziona utente o gruppo** .  
+     In alternativa, fare clic sui puntini di sospensione **(...)** per aprire la finestra di dialogo **Seleziona utente o gruppo**.  
   
 5.  Nelle caselle **Password** e **Conferma password** digitare la password dell'account specificato nella casella **Identità** . Se **Identità** corrisponde a un account utente di Windows, è la password di Windows. Se la password non è necessaria è possibile lasciare vuoto il campo **Password** .  
   
@@ -75,7 +75,7 @@ ms.locfileid: "48182911"
   
 7.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
   
 ###  <a name="Credential"></a> Per creare una credenziale  
   

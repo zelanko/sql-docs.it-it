@@ -14,12 +14,12 @@ ms.assetid: 4fd003e7-808e-4b0e-b28a-47d9f2616f06
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1aa901fe3230a76af3127af41630b075414d77a6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 895e65f9538b588299520e9e22192935535b7931
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48096876"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53374253"
 ---
 # <a name="data-synchronization-state-of-availability-database-is-not-healthy"></a>Lo stato della sincronizzazione dei dati del database di disponibilità non è integro
     
@@ -29,14 +29,14 @@ ms.locfileid: "48096876"
 |-|-|  
 |**Nome criteri**|Stato di sincronizzazione dei dati del database di disponibilità|  
 |**Problema**|Lo stato di sincronizzazione dei dati del database di disponibilità non è integro.|  
-|**Category**|**Avviso**|  
+|**Categoria**|**Avviso**|  
 |**Facet**|Database di disponibilità|  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>Descrizione  
  Questi criteri consentono di eseguire il rollup dello stato di sincronizzazione dei dati di tutti i database di disponibilità, anche noti come "repliche di disponibilità", nella replica di disponibilità. I criteri sono in uno stato non integro se una qualsiasi replica del database non è nello stato di sincronizzazione dei dati previsto. Altrimenti, sono in uno stato integro.  
   
 > [!NOTE]  
->  Per questa versione di [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], le informazioni sulle possibili cause e le soluzioni sono disponibili nella pagina relativa allo [stato di sincronizzazione non integro dei dati di alcuni database di disponibilità](http://go.microsoft.com/fwlink/p/?LinkId=220858) su TechNet Wiki.  
+>  Per questa versione di [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], le informazioni sulle possibili cause e le soluzioni sono disponibili nella pagina relativa allo [stato di sincronizzazione non integro dei dati di alcuni database di disponibilità](https://go.microsoft.com/fwlink/p/?LinkId=220858) su TechNet Wiki.  
   
 ## <a name="possible-causes"></a>Possibili cause  
  Lo stato di sincronizzazione dei dati di questo database di disponibilità non è integro. In una replica di disponibilità con commit asincrono, ogni database di disponibilità deve trovarsi nello stato SINCRONIZZAZIONE IN CORSO. In una replica con commit sincrono, ogni database di disponibilità deve trovarsi nello stato SINCRONIZZATO.  

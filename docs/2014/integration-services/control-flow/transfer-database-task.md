@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.transferdatabasetask.f1
@@ -15,12 +14,12 @@ ms.assetid: b9a2e460-cdbc-458f-8df8-06b8b2de3d67
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8b07bc36ebf3ca16bac2a2134d1054d850c19886
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: da6fd76284caf53ff6a3d46d1bbfd0f514615c2e
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48203361"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52805553"
 ---
 # <a name="transfer-database-task"></a>Attività Trasferisci database
   L'attività Trasferisci database trasferisce un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tra due istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A differenza di altre attività che trasferiscono oggetti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] solo eseguendone una copia, l'attività Trasferisci database può copiare o spostare un database. Tramite questa attività è inoltre possibile copiare un database all'interno dello stesso server.  
@@ -39,7 +38,7 @@ ms.locfileid: "48203361"
 ## <a name="execution-value"></a>Valore di esecuzione  
  Il valore di esecuzione, definito nella proprietà `ExecutionValue` dell'attività, restituisce il valore 1, in quanto a differenza di altre attività di trasferimento, l'attività Trasferisci database può trasferire un solo database.  
   
- Tramite l'assegnazione di una variabile definita dall'utente per il `ExecValueVariable` proprietà dell'attività Trasferisci Database, le informazioni sul trasferimento di messaggio di errore possono essere rese disponibili ad altri oggetti nel pacchetto. Per altre informazioni, vedere [Variabili di Integration Services &#40;SSIS&#41;](../integration-services-ssis-variables.md) e [Utilizzo di variabili nei pacchetti](../use-variables-in-packages.md).  
+ Tramite l'assegnazione di una variabile definita dall'utente alla proprietà `ExecValueVariable` dell'attività, le informazioni sul trasferimento dei messaggi di errore possono essere rese disponibili ad altri oggetti del pacchetto. Per altre informazioni, vedere [Variabili di Integration Services &#40;SSIS&#41;](../integration-services-ssis-variables.md) e [Utilizzo di variabili nei pacchetti](../use-variables-in-packages.md).  
   
 ## <a name="log-entries"></a>Voci di log  
  L'attività Trasferisci database include le voci di log personalizzate seguenti:  
@@ -50,7 +49,7 @@ ms.locfileid: "48203361"
   
 -   SourceDB    Indica il nome del database trasferito.  
   
- Inoltre, una voce di log per il `OnInformation` viene scritto l'evento quando il database di destinazione viene sovrascritto.  
+ Viene scritta inoltre una voce di log per l'evento `OnInformation` quando il database di destinazione viene sovrascritto.  
   
 ## <a name="security-and-permissions"></a>Sicurezza e autorizzazioni  
  Per poter trasferire un database in modalità offline, l'utente che esegue il pacchetto deve essere membro del ruolo del server _sysadmin.  
@@ -66,21 +65,21 @@ ms.locfileid: "48203361"
   
  Quando si copia un database, le dimensioni del database non possono essere inferiori alle dimensioni del database **model** sul server di destinazione. È possibile incrementare le dimensioni del database da copiare oppure ridurre le dimensioni di **model**.  
   
- In fase di esecuzione, l'attività Trasferisci database si connette ai server di origine e di destinazione utilizzando una o più gestioni connessioni SMO. Quando si crea la copia di un database nello stesso server, è richiesta una sola gestione connessione SMO. Le gestioni connessioni SMO vengono configurate separatamente dall'attività Trasferisci database, che tuttavia vi fa riferimento. Le gestioni connessioni SMO specificano il server e la modalità di autenticazione da utilizzare durante l'accesso dell'attività al server. Per altre informazioni, vedere [Gestione connessione SMO](../connection-manager/smo-connection-manager.md).  
+ In fase di esecuzione, l'attività Trasferisci database si connette ai server di origine e di destinazione utilizzando una o più gestioni connessioni SMO. Quando si crea la copia di un database nello stesso server, è richiesta una sola gestione connessione SMO. Le gestioni connessioni SMO vengono configurate separatamente dall'attività Trasferisci database, che tuttavia vi fa riferimento. Le gestioni connessioni SMO specificano il server e la modalità di autenticazione da utilizzare durante l'accesso dell'attività al server. Per altre informazioni, vedere [Gestione connessione file](../connection-manager/smo-connection-manager.md).  
   
  È possibile impostare le proprietà tramite Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] o a livello di codice.  
   
  Per ulteriori informazioni sulle proprietà che è possibile impostare in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] , fare clic su uno degli argomenti seguenti:  
   
--   [Editor attività Trasferisci Database &#40;pagina Generale&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [Editor attività Trasferisci database &#40;pagina Generale&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [Editor attività Trasferisci Database &#40;pagina di database&#41;](../transfer-database-task-editor-databases-page.md)  
+-   [Editor attività Trasferisci database &#40;pagina Database&#41;](../transfer-database-task-editor-databases-page.md)  
   
 -   [Pagina Espressioni](../expressions/expressions-page.md)  
   
  Per altre informazioni sull'impostazione di queste proprietà in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] , fare clic sull'argomento seguente:  
   
--   [Impostare le proprietà di un'attività o di un contenitore](../set-the-properties-of-a-task-or-container.md)  
+-   [Impostazione delle proprietà di un'attività o di un contenitore](../set-the-properties-of-a-task-or-container.md)  
   
 ## <a name="programmatic-configuration-of-the-transfer-database-task"></a>Configurazione a livello di codice dell'attività Trasferisci database  
  Per ulteriori informazioni sull'impostazione di queste proprietà a livello di codice, fare clic sull'argomento seguente:  

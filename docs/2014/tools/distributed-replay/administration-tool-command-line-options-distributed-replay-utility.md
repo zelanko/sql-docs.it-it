@@ -4,18 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: tools-other
 ms.topic: conceptual
 ms.assetid: c01b0ed3-67e4-4561-92d2-a8fbb086aca8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1e961628f9cae062861b61bf46569331cd42da61
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f53c456832e89aa96c0f7c9a1decd9fabbe96360
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48087013"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52815963"
 ---
 # <a name="administration-tool-command-line-options-distributed-replay-utility"></a>Opzioni della riga di comando dello strumento di amministrazione (Distributed Replay Utility)
   Il [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] strumento di amministrazione riesecuzione distribuita `DReplay.exe`, è uno strumento da riga di comando che è possibile usare per comunicare con distributed replay controller. Usare lo strumento di amministrazione per avviare, monitorare e annullare operazioni nel controller.  
@@ -59,13 +59,13 @@ Usage:
   
  Per informazioni dettagliate sulla sintassi, inclusi gli argomenti dei comandi e gli esempi, vedere gli argomenti seguenti:  
   
--   [Opzione Preprocess &#40;Distributed Replay Administration Tool&#41;](preprocess-option-distributed-replay-administration-tool.md)  
+-   [Opzione preprocess &#40;strumento di amministrazione Distributed Replay&#41;](preprocess-option-distributed-replay-administration-tool.md)  
   
--   [Opzione Replay &#40;Distributed Replay Administration Tool&#41;](replay-option-distributed-replay-administration-tool.md)  
+-   [Opzione replay &#40;strumento di amministrazione Distributed Replay&#41;](replay-option-distributed-replay-administration-tool.md)  
   
--   [Opzione Status &#40;Distributed Replay Administration Tool&#41;](status-option-distributed-replay-administration-tool.md)  
+-   [Opzione status &#40;strumento di amministrazione Distributed Replay&#41;](status-option-distributed-replay-administration-tool.md)  
   
--   [Opzione Cancel &#40;Distributed Replay Administration Tool&#41;](cancel-option-distributed-replay-administration-tool.md)  
+-   [Opzione cancel &#40;strumento di amministrazione Distributed Replay&#41;](cancel-option-distributed-replay-administration-tool.md)  
   
  Le chiamate RPC vengono riprodotte come RPC e non come eventi di linguaggio.  
   

@@ -13,16 +13,16 @@ ms.assetid: e8da2ffb-d6ef-4ca7-824f-57afd29585d8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9f3d0058e798fe9bdbcbfcbc1ed3adea8e405a98
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3d36224329fa29a54f7163cb4e1ce6228f460875
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47776389"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52414998"
 ---
 # <a name="sqlrateconnection-function"></a>Funzione SQLRateConnection
 **Conformità**  
- Versione introdotta: Conformità 3,81 standard ODBC: ODBC  
+ Versione introdotta: Conformità agli standard 3,81 ODBC: ODBC  
   
  **Riepilogo**  
  **SQLRateConnection** determina se un driver può riutilizzare una connessione esistente nel pool di connessioni.  

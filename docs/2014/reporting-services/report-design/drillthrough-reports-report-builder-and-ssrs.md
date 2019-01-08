@@ -11,12 +11,12 @@ ms.assetid: 938a6450-67c1-4eef-80b4-8fdaefeed584
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 8199d7fc40da29c9fc0657ddcc242252eeace9c5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a042f9f28b9be59f3f72773ae745308fe160853d
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48057502"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53369433"
 ---
 # <a name="drillthrough-reports-report-builder-and-ssrs"></a>Report drill-through (Generatore report e SSRS)
   Un report drill-through è un report aperto da un utente facendo clic su un collegamento in un altro report. Nei report drill-through sono solitamente disponibili dettagli relativi a un elemento contenuto in un report di riepilogo originale. In questa illustrazione, ad esempio, il report di riepilogo delle vendite include gli ordini di vendita e i totali. Quando un utente fa clic su un numero di ordine nell'elenco di riepilogo, viene aperto un altro report contenente i dettagli relativi a tale ordine.  
@@ -28,7 +28,7 @@ ms.locfileid: "48057502"
 > [!NOTE]  
 >  Quando si utilizza Generatore report, per visualizzare il report drill-through che viene aperto quando si fa clic sul collegamento drill-through nel report principale, è necessario essere connessi a un server di report.  
   
- Per iniziare rapidamente a usare report drill-through, vedere [Esercitazione: Creazione di report drill-through e report principali &#40;Generatore report&#41;](../tutorial-creating-drillthrough-and-main-reports-report-builder.md). Il report drill-through è disponibile anche in due soluzioni di Business Intelligence, una relativa a [scenari di report e sottoscrizioni in Business Intelligence](http://technet.microsoft.com/bi/ff769487.aspx) e una relativa a [soluzioni pertinenti le vendite nei dashboard aziendali](http://technet.microsoft.com/bi/ff643005.aspx).  
+ Per iniziare a usare rapidamente i report drill-through, vedere [esercitazione: Creazione di report principali e drill-through &#40;Generatore Report&#41;](../tutorial-creating-drillthrough-and-main-reports-report-builder.md). Report drill-through è disponibile anche in due soluzioni di business intelligence, [BI Reporting: Scenari di report e sottoscrizioni](https://technet.microsoft.com/bi/ff769487.aspx) e [nei dashboard aziendali: Soluzione di vendita](https://technet.microsoft.com/bi/ff643005.aspx)  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -52,6 +52,6 @@ ms.locfileid: "48057502"
  Per visualizzare un report di riepilogo con i collegamenti drill-through dopo la pubblicazione, è necessario verificare che i report drill-through si trovino nello stesso server di report del report di riepilogo. In tutti i casi, all'utente devono essere concesse le autorizzazioni necessarie per visualizzare il report drill-through.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Drill-through, drill-down, sottoreport e aree dati nidificate &#40;Report e SSRS&#41;](drillthrough-drilldown-subreports-and-nested-data-regions.md)  
+ [Drill-through, drill-down, sottoreport e aree dati annidate &#40;Generatore report e SSRS&#41;](drillthrough-drilldown-subreports-and-nested-data-regions.md)  
   
   

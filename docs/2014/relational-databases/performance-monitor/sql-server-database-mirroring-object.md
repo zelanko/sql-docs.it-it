@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLServer:Database Mirroring
@@ -15,17 +15,17 @@ ms.assetid: a27b51ee-7637-4525-9424-bcc16947dc13
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 8a24e7ad7a6acb6f9c639a89d8cdc30b8301db49
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7834d2f5d0fc8a8e849f796eab93259682ea377c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48084361"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52753034"
 ---
 # <a name="sql-server-database-mirroring-object"></a>Oggetto Database Mirroring di SQL Server
   L'oggetto prestazioni **SQLServer:Database Mirroring** include contatori delle prestazioni con informazioni sul mirroring del database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Nella tabella seguente sono elencati i contatori inclusi nell'oggetto.  
   
-|nome|Description|  
+|nome|Descrizione|  
 |----------|-----------------|  
 |**Byte ricevuti/sec**|Numero di byte ricevuti al secondo.|  
 |**Byte inviati/sec**|Numero di byte inviati al secondo.|  

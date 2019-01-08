@@ -11,12 +11,12 @@ ms.assetid: d8d875bc-7823-46b7-a939-867cefd4de12
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6e3eff042078ad7dde6352c3826103bc680da432
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cf954178516cef633dbe34c1b8b01579c8f3e4ea
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48068933"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53374863"
 ---
 # <a name="schedule-data-refresh-and-data-sources-that-do-not-support-windows-authentication-powerpivot-for-sharepoint"></a>Pianificazione dell'aggiornamento dati e origini dati che non supportano l'autenticazione di Windows (PowerPivot per SharePoint)
   Questo argomento descrive un flusso di lavoro della pianificazione di un aggiornamento dati di PowerPivot per SharePoint in cui è possibile usare origini dati che **NON** supportano l'autenticazione di Windows, ad esempio origini dati Oracle o IDM DB2. Le illustrazioni e i passaggi presenti in questo argomento fanno riferimento alle origini dati Oracle ma lo stesso flusso di lavoro è valido anche per altre origini dati.  
@@ -33,7 +33,7 @@ ms.locfileid: "48068933"
   
 -   **(2) OracleAuthentication:** ID dell'applicazione di destinazione di archiviazione sicura impostato con le credenziali Oracle.  
   
--   **(3)** L'applicazione del servizio PowerPivot viene configurata in modo da usare l'applicazione di destinazione "PowerPivotDataRefresh" per l'**Account di aggiornamento dati automatico**.  
+-   **(3)**  Applicazione del servizio PowerPivot viene configurata per usare l'applicazione di destinazione "PowerPivotDataRefresh" per il **Account di aggiornamento dati automatico**.  
   
 -   **(4)** Cartella di lavoro PowerePivot con dati Oracle. Le impostazioni di aggiornamento della cartella di lavoro specificano la connessione all'origine dati in modo da usare l'applicazione di destinazione **(2)** per le credenziali.  
   
@@ -63,7 +63,7 @@ ms.locfileid: "48068933"
   
     -   **Tipo di applicazione di destinazione:** Gruppo.  
   
-    -   **URL della pagina dell'applicazione di destinazione:** Nessuno.  
+    -   **URL pagina di destinazione dell'applicazione:** Nessuna.  
   
 5.  Scegliere **Avanti**.  
   
@@ -97,7 +97,7 @@ ms.locfileid: "48068933"
   
     -   **Tipo di applicazione di destinazione:** Gruppo.  
   
-    -   **URL della pagina dell'applicazione di destinazione:** Nessuno.  
+    -   **URL pagina di destinazione dell'applicazione:** Nessuna.  
   
 5.  Scegliere **Avanti**.  
   
@@ -115,13 +115,13 @@ ms.locfileid: "48068933"
   
 11. Digitare l'ID utente Oracle e la Password Oracle e quindi fare clic su **OK**.  
   
- Per altre informazioni, vedere sezione "Per creare un'applicazione di destinazione per l'autenticazione di SQL Server" nella [Usa Secure Store con l'autenticazione di SQL Server (SharePoint Server 2013)](http://technet.microsoft.com/library/gg298949.aspx) (http://technet.microsoft.com/library/gg298949.aspx).  
+ Per altre informazioni, vedere sezione "Per creare un'applicazione di destinazione per l'autenticazione di SQL Server" nella [Usa Secure Store con l'autenticazione di SQL Server (SharePoint Server 2013)](https://technet.microsoft.com/library/gg298949.aspx) (https://technet.microsoft.com/library/gg298949.aspx).  
   
 ## <a name="to-configure-the-powerpivot-service-application"></a>Per configurare l'applicazione di servizio PowerPivot  
   
 1.  In Amministrazione centrale SharePoint fare clic su Gestisci applicazioni di servizio.  
   
-2.  Fare clic sul nome dell'Applicazione di servizio PowerPivot, ad esempio “Applicazione di servizio PowerPivot predefinita”.  
+2.  Fare clic sul nome dell'applicazione di servizio PowerPivot, ad esempio "Default applicazione del servizio PowerPivot".  
   
 3.  Fare clic su **Configura impostazioni dell'applicazione di servizio** nella sezione Azioni.  
   
@@ -166,8 +166,8 @@ ms.locfileid: "48068933"
   
 ## <a name="more-information"></a>Ulteriori informazioni  
   
--   [Configurare il servizio di archiviazione sicura in SharePoint 2013](http://technet.microsoft.com/library/ee806866.aspx).  
+-   [Configurare il servizio di archiviazione sicura in SharePoint 2013](https://technet.microsoft.com/library/ee806866.aspx).  
   
--   Vedere la sezione "Aggiornamento dati pianificato" in [Aggiornamento dati PowerPivot con SharePoint 2013 e SQL Server 2012 SP1 (Analysis Services)](http://msdn.microsoft.com/library/jj879294.aspx#bkmk_windows_auth_interactive_data_refresh).  
+-   Vedere la sezione "Aggiornamento dati pianificato" di [aggiornamento dati PowerPivot con SharePoint 2013 e SQL Server 2012 SP1 (Analysis Services)](https://msdn.microsoft.com/library/jj879294.aspx#bkmk_windows_auth_interactive_data_refresh).  
   
   

@@ -10,17 +10,17 @@ ms.assetid: 5af6b91c-724f-45ac-aff1-7555014914f4
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f6d040f8d7e784650cfbf0cf8b4540c599ed9599
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1e65c3e277eb9a3e5e3703525b9c1ac06b423c96
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48059401"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52502696"
 ---
 # <a name="using-clustered-columnstore-indexes"></a>Utilizzo di indici columnstore cluster
   Attività per l'utilizzo di indici columnstore cluster in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
- Per una panoramica degli indici columnstore, vedere [descrizione degli indici Columnstore](../relational-databases/indexes/columnstore-indexes-described.md).  
+ Per una panoramica di indici columnstore, vedere [Columnstore Indexes Described](../relational-databases/indexes/columnstore-indexes-described.md).  
   
  Per informazioni sugli indici columnstore cluster, vedere [Using Clustered Columnstore Indexes](../relational-databases/indexes/indexes.md).  
   
@@ -60,7 +60,7 @@ GO
  Usare la [DROP INDEX &#40;Transact-SQL&#41; ](/sql/t-sql/statements/drop-index-transact-sql) istruzione per eliminare un indice columnstore cluster. Questa operazione consente di eliminare l'indice e convertire la tabella columnstore nell'heap di un rowstore.  
   
 ##  <a name="load"></a> Caricare i dati in un indice Columnstore cluster  
- È possibile aggiungere dati a un indice columnstore cluster esistente utilizzando uno dei metodi di caricamento standard.  Ad esempio, lo strumento di caricamento bulk BCP, Integration Services e INSERT... SELECT possono caricare i dati in un indice columnstore cluster.  
+ È possibile aggiungere dati a un indice columnstore cluster esistente utilizzando uno dei metodi di caricamento standard.  Ad esempio, il caricamento bulk bcp degli strumenti, servizi di integrazione e INSERT... SELECT possono caricare i dati in un indice columnstore cluster.  
   
  Gli indici columnstore cluster utilizzano il deltastore per impedire la frammentazione dei segmenti di colonna nel columnstore.  
   
@@ -68,7 +68,7 @@ GO
  Per i dati partizionati, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] assegna prima ogni riga a una partizione, quindi esegue operazioni columnstore sui dati nella partizione. Ogni partizione ha i propri rowgroup e almeno un deltastore.  
   
 ### <a name="deltastore-loading-scenarios"></a>Scenari di caricamento deltastore  
- Le righe vengono accumulate nel deltastore finché non viene raggiunto il numero di righe massimo consentito per un rowgroup. Quando il deltastore contiene il numero massimo di righe per rowgroup, il rowgroup viene contrassegnato come "CLOSED" in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Un processo in background, denominato "tuple-mover", individua il rowgroup CLOSED e passa al columnstore, in cui il rowgroup viene compresso in segmenti di colonna, i quali vengono archiviati nel columnstore.  
+ Le righe vengono accumulate nel deltastore finché non viene raggiunto il numero di righe massimo consentito per un rowgroup. Quando il deltastore contiene il numero massimo di righe per rowgroup, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] contrassegna il rowgroup come "CLOSED". Un processo in background, denominato "tuple-mover", individua il rowgroup CLOSED e passa al columnstore, in cui il rowgroup viene compresso in segmenti di colonna e i segmenti di colonna vengono archiviati nel columnstore.  
   
  Per ogni indice columnstore cluster possono essere presenti più deltastore.  
   
@@ -83,7 +83,7 @@ GO
 |Righe per il caricamento bulk|Righe aggiunte al columnstore|Righe aggiunte al deltastore|  
 |-----------------------|-----------------------------------|----------------------------------|  
 |102.000|0|102.000|  
-|145.000|145.000<br /><br /> Dimensioni rowgroup: 145.000.|0|  
+|145.000|145.000<br /><br /> Dimensioni rowgroup: 145.000|0|  
 |1.048.577|1,048,576<br /><br /> Dimensioni rowgroup: 1.048.576.|1|  
 |2.252.152|2.252.152<br /><br /> Dimensioni rowgroup: 1.048.576, 1.048.576, 155.000.|0|  
   
@@ -115,7 +115,7 @@ SELECT * FROM sys.column_store_row_groups
 -   Se la riga è nel deltastore, viene aggiornata nel deltastore in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
 ##  <a name="rebuild"></a> Ricompilare un indice Columnstore cluster  
- Uso [CREATE CLUSTERED COLUMNSTORE INDEX &#40;Transact-SQL&#41; ](/sql/t-sql/statements/create-columnstore-index-transact-sql) oppure [ALTER INDEX &#40;Transact-SQL&#41; ](/sql/t-sql/statements/alter-index-transact-sql) per eseguire una ricompilazione completa di un indice columnstore cluster esistente. Inoltre, è possibile usare ALTER INDEX... REBUILD per ricompilare una partizione specifica.  
+ Uso [CREATE CLUSTERED COLUMNSTORE INDEX &#40;Transact-SQL&#41; ](/sql/t-sql/statements/create-columnstore-index-transact-sql) oppure [ALTER INDEX &#40;Transact-SQL&#41; ](/sql/t-sql/statements/alter-index-transact-sql) per eseguire una ricompilazione completa di un indice columnstore cluster esistente. È anche possibile usare ALTER INDEX ... REBUILD per ricompilare una partizione specifica.  
   
 ### <a name="rebuild-process"></a>Processo di ricompilazione  
  Per ricompilare un indice columnstore cluster, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]:  

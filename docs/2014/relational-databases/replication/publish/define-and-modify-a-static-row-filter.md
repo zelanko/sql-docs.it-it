@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/30/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - modifying filters, static row
@@ -15,12 +14,12 @@ ms.assetid: a6ebb026-026f-4c39-b6a9-b9998c3babab
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 73c0e6d0ab47960aae61955cc4c432f2a883ae42
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a0af353d79fcb84d1ca4b8921048c3c5f502c29f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48184931"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52771553"
 ---
 # <a name="define-and-modify-a-static-row-filter"></a>Definizione e modifica di un filtro di riga statico
   In questo argomento viene descritto come definire e modificare un filtro di riga statico in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
@@ -103,7 +102,7 @@ ms.locfileid: "48184931"
   
 1.  Nella pagina **Filtro righe tabelle** della Creazione guidata nuova pubblicazione o nella pagina **Filtra righe** della finestra di dialogo **Proprietà pubblicazione - \<Pubblicazione>** selezionare un filtro nel riquadro **Tabelle filtrate** e quindi fare clic su **Elimina**.  
   
-##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
  Quando si creano articoli di tabella, è possibile definire una clausola WHERE per escludere le righe di un articolo. È inoltre possibile modificare un filtro di riga dopo che è stato definito. È possibile creare e modificare a livello di programmazione i filtri di riga statici tramite le stored procedure di replica.  
   
 #### <a name="to-define-a-static-row-filter-for-a-snapshot-or-transactional-publication"></a>Per definire un filtro di riga statico per una pubblicazione snapshot o transazionale  

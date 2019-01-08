@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.dtexecui.general.f1
@@ -24,12 +23,12 @@ ms.assetid: 3d71df39-126b-4c8e-bd77-128bbd5b0887
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8745874d47d173160848ea385d0479ccbbfb7173
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: 9e01e1c77d67bd19fa01ec1cf07e4e53807651b1
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49169329"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52797955"
 ---
 # <a name="execute-package-utility-dtexecui-ui-reference"></a>Riferimento all'interfaccia utente dell'utilità di esecuzione pacchetti (DtExecUI)
   Utilizzare l' **Utilità di esecuzione pacchetti** per eseguire i pacchetti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Tramite l'utilità è possibile eseguire i pacchetti archiviati in una delle tre posizioni seguenti: database di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , archivio pacchetti [!INCLUDE[ssIS](../../includes/ssis-md.md)] e file system. Questa interfaccia utente, che può essere aperto da [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oppure digitando `dtexecui` un prompt dei comandi, è un'alternativa all'esecuzione di pacchetti tramite il **DTExec** strumento del prompt dei comandi.  
@@ -67,7 +66,7 @@ ms.locfileid: "49169329"
   
 |||  
 |-|-|  
-|valore|Description|  
+|Value|Descrizione|  
 |**SQL Server**|Selezionare questa opzione se il pacchetto si trova in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Specificare un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e immettere il nome utente e la password per l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Ogni nome utente e password aggiunge le opzioni **/USER** *nomeutente* e **/PASSWORD** *password* options to the comme prompt.|  
 |**File system**|Selezionare questa opzione se il pacchetto si trova nel file system.|  
 |**Archivio pacchetti SSIS**|Selezionare questa opzione se il pacchetto si trova nell'Archivio pacchetti [!INCLUDE[ssIS](../../includes/ssis-md.md)] .|  
@@ -99,11 +98,11 @@ ms.locfileid: "49169329"
 >  Se possibile, usare l'autenticazione di Windows.  
   
  **Pacchetto**  
- Digitare il nome del pacchetto o fare clic sul pulsante con i puntini di sospensione **(…)** per individuare il pacchetto mediante la finestra di dialogo **Seleziona pacchetto SSIS** .  
+ Digitare il nome del pacchetto o fare clic sul pulsante con i puntini di sospensione **(...)** per individuare il pacchetto mediante la finestra di dialogo **Seleziona pacchetto SSIS**.  
   
 #### <a name="package-source--file-system"></a>Origine pacchetto = File system  
  **Pacchetto**  
- Digitare il nome del pacchetto o fare clic sul pulsante con i puntini di sospensione **(…)** per individuare il pacchetto mediante la finestra di dialogo Apri. Per impostazione predefinita, nella finestra di dialogo vengono elencati solo i file con estensione dtsx.  
+ Digitare il nome del pacchetto o fare clic sul pulsante con i puntini di sospensione **(...)** per individuare il pacchetto mediante la finestra di dialogo Apri. Per impostazione predefinita, nella finestra di dialogo vengono elencati solo i file con estensione dtsx.  
   
 #### <a name="package-source--ssis-package-store"></a>Origine pacchetto = Archivio pacchetti SSIS  
  **Server**  
@@ -119,7 +118,7 @@ ms.locfileid: "49169329"
  Questa opzione non è disponibile se si esegue un pacchetto incluso nell' **Archivio pacchetti SSIS**.  
   
  **Pacchetto**  
- Digitare il nome del pacchetto o fare clic sul pulsante con i puntini di sospensione **(…)** per individuare il pacchetto mediante la finestra di dialogo **Seleziona pacchetto SSIS** .  
+ Digitare il nome del pacchetto o fare clic sul pulsante con i puntini di sospensione **(...)** per individuare il pacchetto mediante la finestra di dialogo **Seleziona pacchetto SSIS**.  
   
 ## <a name="configurations-page"></a>Pagina Configurazioni  
  Utilizzare la pagina **Configurazioni** della finestra di dialogo **Utilità di esecuzione pacchetti** per selezionare i file di configurazione da caricare in fase di esecuzione e di specificare l'ordine in cui devono essere caricati.  
@@ -207,7 +206,7 @@ ms.locfileid: "49169329"
  Elenca i file del checkpoint utilizzati dal pacchetto, se si abilitano i checkpoint del pacchetto.  
   
  **Sfoglia**  
- Fare clic sul pulsante Sfoglia **(…)** per individuare il file del checkpoint tramite la finestra di dialogo **Apri** , se si abilitano i checkpoint del pacchetto. Se è già stato specificato un file del checkpoint, questo viene sostituito dal file selezionato.  
+ Fare clic sul pulsante Sfoglia **(...)** per individuare il file del checkpoint tramite la finestra di dialogo **Apri**, se si abilitano i checkpoint del pacchetto. Se è già stato specificato un file del checkpoint, questo viene sostituito dal file selezionato.  
   
  **Ignora opzioni di riavvio**  
  Indica se ignorare le opzioni di riavvio, se si abilitano i checkpoint del pacchetto.  
@@ -228,7 +227,7 @@ ms.locfileid: "49169329"
  **Eventi console**  
  Consente di specificare gli eventi e i tipi di messaggi da segnalare.  
   
- **Nessuno**  
+ **None**  
  Selezionare questa opzione per non generare report.  
   
  **errori**  
@@ -252,7 +251,7 @@ ms.locfileid: "49169329"
  **Registrazione console**  
  Consente di specificare le informazioni che si desidera scrivere nel registro al verificarsi dell'evento selezionato.  
   
- **Nome**  
+ **Name**  
  Selezionare questa opzione per segnalare il nome dell'utente che ha creato il pacchetto.  
   
  **Computer**  

@@ -12,15 +12,15 @@ ms.assetid: 31176be8-d40e-4f93-8d44-a46e804a3e2d
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 74c43a204fbf9b4d65ebe9a03cfdf4194eceb49c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 58e5160065847d5729548702b5f1d65eb31bf694
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48089881"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53377683"
 ---
 # <a name="call-stored-procedures-odbc"></a>Chiamare stored procedure (ODBC)
-  Quando un'istruzione SQL chiama una stored procedure utilizzando la clausola di escape ODBC CALL, tramite driver di Microsoft® SQL Server™ la stored procedure viene inviata a SQL Server utilizzando il meccanismo di chiamata RPC (Remote Procedure Call). Le richieste RPC ignorano la maggior parte dell'analisi delle istruzioni e dell'elaborazione dei parametri in SQL Server e sono più veloci rispetto a un'istruzione Transact-SQL EXECUTE.  
+  Quando un'istruzione SQL chiama una stored procedure utilizzando la clausola escape ODBC CALL, Microsoft? SQL Server??? driver viene inviata a SQL Server mediante il meccanismo di stored procedure remote (RPC call). Le richieste RPC ignorano la maggior parte dell'analisi delle istruzioni e dell'elaborazione dei parametri in SQL Server e sono più veloci rispetto a un'istruzione Transact-SQL EXECUTE.  
   
  Per un'applicazione di esempio che illustri questa caratteristica, vedere [processo di codici restituiti e parametri di Output &#40;ODBC&#41;](running-stored-procedures-process-return-codes-and-output-parameters.md).  
   
@@ -34,7 +34,7 @@ ms.locfileid: "48089881"
   
 2.  Chiamare [SQLBindParameter](../native-client-odbc-api/sqlbindparameter.md) per ogni input, input/output, parametro di output e per la procedura di valore restituito (se disponibile).  
   
-3.  Eseguire l'istruzione con [SQLExecDirect](http://go.microsoft.com/fwlink/?LinkId=58399).  
+3.  Eseguire l'istruzione con [SQLExecDirect](https://go.microsoft.com/fwlink/?LinkId=58399).  
   
 > [!NOTE]  
 >  Se un'applicazione invia una procedura utilizzando la sintassi Transact-SQL EXECUTE, invece della sequenza di escape ODBC CALL, il driver ODBC di SQL Server passa la chiamata di procedura a SQL Server come istruzione SQL anziché come chiamata RPC. Se viene utilizzata l'istruzione Transact-SQL EXECUTE, inoltre, i parametri di output non vengono restituiti.  

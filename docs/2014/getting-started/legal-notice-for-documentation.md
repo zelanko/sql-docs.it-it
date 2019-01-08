@@ -16,19 +16,19 @@ ms.assetid: 6854121d-429d-4d1b-9d64-342583e08378
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 09c8f5a510ca569f4dd24464abf176b2db772115
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b5a25f4f151bb7aa1a9deef24486bd533d5755b2
+ms.sourcegitcommit: 60739bcb48ccce17bca4e11a85df443e93ca23e3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48228501"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52439393"
 ---
 # <a name="legal-notice-for-documentation"></a>Nota legale sulla documentazione
   Il documento viene fornito "com'è". Le informazioni e le opinioni espresse nel presente documento, inclusi gli URL e altri riferimenti a siti Web, possono essere soggette a modifiche senza preavviso. L'utente accetta di usarle a proprio rischio.  
   
  Alcuni esempi usati in questo documento vengono forniti a scopo puramente illustrativo e sono fittizi. Nessuna associazione reale o connessione è intenzionale o può essere desunta.  
   
- Il presente documento non implica la concessione di alcun diritto di proprietà intellettuale relativo ai prodotti Microsoft. È possibile copiare e utilizzare questo documento per fini di riferimento interno.  
+ Il presente documento non implica la concessione di alcun diritto di proprietà intellettuale relativo ai prodotti Microsoft. È possibile copiare e usare questo documento come riferimento interno.  
   
  © 2013 Microsoft. Tutti i diritti sono riservati.  
   

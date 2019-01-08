@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - concatenation [Integration Services]
@@ -15,12 +14,12 @@ ms.assetid: 0fed6334-7a4f-42dc-a611-191fcaa0e443
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 809586f89288a930a672e2f6daa45fafe7901ec6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 00886e865600da44f5b1e92adf175f975d446996
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48146241"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52811813"
 ---
 # <a name="-concatenate-ssis-expression"></a>+ (concatenazione) (espressione SSIS)
   Vengono concatenate due espressioni in modo da formare un'unica espressione.  
@@ -49,7 +48,7 @@ character_expression1 + character_expression2
   
  È necessario che le due espressioni abbiano lo stesso tipo di dati oppure che un'espressione possa essere convertita in modo implicito nel tipo di dati dell'altra. Se ad esempio si concatenano la stringa "Order date is " e la colonna **OrderDate** , i valori in **OrderDate** verranno convertiti in modo implicito in un tipo di dati string. Per concatenare due valori numerici, è necessario eseguire il cast esplicito di entrambi a un tipo di dati string.  
   
- In un'operazione di concatenazione è possibile utilizzare un solo tipo di dati BLOB: DT_TEXT, DT_NTEXT o DT_IMAGE.  
+ Risultato della concatenazione è possibile usare un solo tipo di dati BLOB: DT_TEXT, DT_NTEXT o DT_IMAGE.  
   
  Se uno degli elementi è Null, il risultato sarà Null.  
   
@@ -70,6 +69,6 @@ FirstName + ' ' + LastName
   
 ## <a name="see-also"></a>Vedere anche  
  [Precedenza e associatività degli operatori](operator-precedence-and-associativity.md)   
- [Gli operatori &#40;espressione di SSIS&#41;](operators-ssis-expression.md)  
+ [Operatori &#40;espressione SSIS&#41;](operators-ssis-expression.md)  
   
   

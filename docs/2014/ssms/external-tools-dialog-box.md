@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - adding external tools
@@ -14,12 +14,12 @@ ms.assetid: ba797203-24d0-4922-9b97-8ab483f1db14
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cc4371de7ec5cda5ecf40aa86755ba936b6d04cf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dc8f54bc4f6e7aaffa5d912fc9bc8f03fad71d03
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48221471"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52786263"
 ---
 # <a name="external-tools-dialog-box"></a>Finestra di dialogo Strumenti esterni
   Nella finestra di dialogo **Strumenti esterni** è possibile aggiungere strumenti esterni, ad esempio SQLCMD o Blocco note, al menu **Strumenti**. L'aggiunta di strumenti esterni consente di avviare facilmente altre applicazioni dall'ambiente di [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] . Durante l'avvio dello strumento, è possibile specificare argomenti e una directory di lavoro. L'output di alcuni strumenti può inoltre essere visualizzato nella finestra **Output** . La finestra di dialogo **Strumenti esterni** è accessibile dal menu **Strumenti** .  
@@ -67,7 +67,7 @@ ms.locfileid: "48221471"
 ## <a name="example"></a>Esempio  
  Immettendo i seguenti valori nella finestra di dialogo **Strumenti esterni** verrà creata una voce di menu con etichetta "DAC" che, quando selezionata, consentirà di aprire un prompt dei comandi e di eseguire l'utilità **sqlcmd** usando la connessione amministrativa dedicata.  
   
-|messaggio|valore|  
+|messaggio|Value|  
 |---------|-----------|  
 |**Title**|DAC|  
 |**Command**|[!INCLUDE[ssInstallPath](../includes/ssinstallpath-md.md)]Tools\Binn\SQLCMD.exe|  

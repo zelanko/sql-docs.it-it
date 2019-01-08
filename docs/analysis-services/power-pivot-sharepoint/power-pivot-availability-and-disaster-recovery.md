@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 9ed5a7d272f5f21b720df33ef71c0c562f8d699a
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 96b8703f18f7867ed57101f33e2ec1c4d31b35c7
+ms.sourcegitcommit: 38076f423663bdbb42f325e3d0624264e05beda1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38979583"
+ms.lasthandoff: 12/06/2018
+ms.locfileid: "52984022"
 ---
 # <a name="power-pivot-availability-and-disaster-recovery"></a>Ripristino di emergenza e disponibilità elevata di Power Pivot
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -79,7 +79,7 @@ ms.locfileid: "38979583"
   
 ||Commenti|  
 |-|--------------|  
-|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] e [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] in una farm per la disponibilità.|Supportato ma non consigliato. Si consiglia di usare Always On in modalità di commit sincrono.|  
+|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] e [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] in una farm per la disponibilità.|Supportato ma non consigliato. Si consiglia di usare Always On in modalità commit sincrono.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] in modalità di commit sincrono|Supportato e consigliato.|  
 |[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] mirroring asincrono o log shipping a un'altra farm per il ripristino di emergenza.|Supportato.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] con commit asincrono per il ripristino di emergenza|Supportato|  
@@ -91,15 +91,13 @@ ms.locfileid: "38979583"
  Per ulteriori informazioni su come pianificare uno scenario di cold standby con [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)], vedere [Ripristino di emergenza per PowerPivot](http://social.technet.microsoft.com/wiki/contents/articles/22137.sharepoint-powerpivot-disaster-recovery.aspx).  
   
 ## <a name="verification"></a>Verifica  
- Per istruzioni e script che consentono di verificare una distribuzione di [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] prima e dopo un ciclo di ripristino di emergenza, vedere [Elenco di controllo: usare PowerShell per verificare PowerPivot per SharePoint](../../analysis-services/instances/install-windows/checklist-use-powershell-to-verify-power-pivot-for-sharepoint.md).  
+ Per istruzioni e script che consentono di verificare un [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] distribuzione prima e dopo un ciclo di ripristino di emergenza, vedere [elenco di controllo: Usare PowerShell per verificare PowerPivot per SharePoint](../../analysis-services/instances/install-windows/checklist-use-powershell-to-verify-power-pivot-for-sharepoint.md).  
   
 ##  <a name="bkmk_more_resources"></a> Collegamenti a ulteriori informazioni  
   
 -   [Opzioni supportate di disponibilità elevata e ripristino di emergenza per i database di SharePoint (SharePoint 2013)](http://technet.microsoft.com/library/jj841106.aspx)  
   
 -   [Pianificare il ripristino di emergenza (SharePoint Server 2010)](http://technet.microsoft.com/library/ff628971\(v=office.14\).aspx)  
-  
--   [White paper sul recupero e il backup del cloud di SQL Server](http://www.microsoft.com/server-cloud/solutions/cloud-backup-recovery.aspx?WT.srch=1&WT.mc_ID=SEM_BING_USEvergreenSearch_Unassigned&CR_CC=Unassigned#fbid=RjU2Nbzu2dT)  
   
 -   [Strumento di backup di Microsoft® SQL Server in Microsoft Windows® Azure®](http://www.microsoft.com/download/details.aspx?id=40740)  
   

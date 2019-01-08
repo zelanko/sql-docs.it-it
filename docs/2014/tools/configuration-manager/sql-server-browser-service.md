@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- configmgr-client
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - services [SQL Server], security
@@ -16,14 +15,14 @@ ms.assetid: 3cc00d3a-487c-4cd9-a155-655f02485fa0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4f20880fada5c6e6c12c3df42e051baf5afb3eab
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4e06fe371602956b6b43714038f41d8486cf2ae0
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48204811"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52763773"
 ---
-# <a name="sql-server-browser-service"></a>Servizio SQL Server Browser
+# <a name="sql-server-browser-service"></a>SQL Server Browser Service
   Il programma [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Browser viene eseguito come servizio Windows. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser rimane in attesa delle richieste in entrata di risorse di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e fornisce informazioni sulle istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installate nel computer. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser consente di eseguire le azioni seguenti:  
   
 -   Esplorazione di un elenco di server disponibili  
@@ -126,7 +125,7 @@ ms.locfileid: "48204811"
  Le istanze nascoste sono istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che supportano solo connessioni della memoria condivisa. Per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], impostare il flag `HideInstance` per indicare che [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser non deve rispondere inviando alcuna informazione su questa istanza del server.  
   
 ### <a name="using-a-firewall"></a>Utilizzo di un firewall  
- Per comunicare con il servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser in un server protetto da un firewall, aprire la porta UDP 1434 oltre alla porta TCP usata da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , ad esempio la porta 1433. Per informazioni sull'utilizzo di un firewall, vedere "Procedura: Configurazione di un firewall per l'accesso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] " nella documentazione online di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+ Per comunicare con il servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser in un server protetto da un firewall, aprire la porta UDP 1434 oltre alla porta TCP usata da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , ad esempio la porta 1433. Per informazioni sull'utilizzo di un firewall, vedere "Procedura: Configurare un firewall per l'accesso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]" nella documentazione online di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="see-also"></a>Vedere anche  
  [Protocolli e librerie di rete](../../../2014/sql-server/install/network-protocols-and-network-libraries.md)  

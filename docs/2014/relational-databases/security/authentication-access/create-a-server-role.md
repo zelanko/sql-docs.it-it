@@ -16,12 +16,12 @@ ms.assetid: 74f19992-8082-4ed7-92a1-04fe676ee82d
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: d80795317ae9a1d486df2894ab68ee22dfdfc7c2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 05314fe18f555d4d2d3cca161a3b770ec85b4256
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48170731"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52532127"
 ---
 # <a name="create-a-server-role"></a>Creazione di un ruolo del server
   In questo argomento viene descritto come creare un nuovo ruolo server in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
@@ -32,7 +32,7 @@ ms.locfileid: "48170731"
   
      [Limitazioni e restrizioni](#Restrictions)  
   
-     [Security](#Security)  
+     [Sicurezza](#Security)  
   
 -   **Per creare un nuovo ruolo del server utilizzando:**  
   
@@ -67,15 +67,15 @@ ms.locfileid: "48170731"
   
 2.  Espandere la cartella **Sicurezza** .  
   
-3.  Fare clic con il pulsante destro del mouse sulla cartella **Ruoli server** e scegliere **Nuovo ruolo server**.  
+3.  Fare clic con il pulsante destro del mouse sulla cartella **Ruoli server** e selezionare **Nuovo ruolo server**.  
   
-4.  Nella finestra di dialogo *Nuovo ruolo server-***nome_ruolo_server* della pagina **Generale** immettere un nome per il nuovo ruolo del server nella casella **Nome ruolo del server**.  
+4.  Nel **nuovo ruolo del Server-* * * nome_ruolo_server* finestra di dialogo il **generali** pagina, immettere un nome per il nuovo ruolo del server nel **nome ruolo Server** casella.  
   
-5.  Nella casella **Proprietario** immettere il nome dell'entità del server proprietaria del nuovo ruolo. In alternativa, fare clic sui puntini di sospensione **(...)** per aprire la finestra di dialogo **Seleziona account di accesso o ruolo server** .  
+5.  Nella casella **Proprietario** immettere il nome dell'entità del server proprietaria del nuovo ruolo. In alternativa, fare clic sui puntini di sospensione **(...)** per aprire la finestra di dialogo **Seleziona account di accesso o ruolo server**.  
   
 6.  In **Entità a protezione diretta**selezionare una o più entità a protezione diretta a livello di server. Quando è selezionata un'entità a protezione diretta, al ruolo del server è possibile concedere o negare autorizzazioni per tale entità.  
   
-7.  Nella casella **Autorizzazioni: Esplicite** selezionare la casella di controllo per concedere, concedere con concessione o negare autorizzazioni al ruolo del server per le entità a protezione diretta selezionate. Se un'autorizzazione non può essere concessa o negata a tutte le entità a protezione diretta selezionate, l'autorizzazione viene rappresentata come selezione parziale.  
+7.  Nel **autorizzazioni: Esplicita** , selezionare la casella di controllo per concedere, concedere con concessione o negare autorizzazioni al ruolo del server per l'entità a protezione diretta selezionate. Se un'autorizzazione non può essere concessa o negata a tutte le entità a protezione diretta selezionate, l'autorizzazione viene rappresentata come selezione parziale.  
   
 8.  Nella pagina **Membri** utilizzare il pulsante **Aggiungi** per aggiungere account di accesso che rappresentano singoli utenti o gruppi al nuovo ruolo del server.  
   
@@ -83,7 +83,7 @@ ms.locfileid: "48170731"
   
 10. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
   
 #### <a name="to-create-a-new-server-role"></a>Per creare un nuovo ruolo del server  
   
