@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 10/20/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - default affinity mask option
@@ -21,19 +20,19 @@ ms.assetid: 5823ba29-a75d-4b3e-ba7b-421c07ab3ac1
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 5bd866520fbace51ee9ef06a547bb528f46b9435
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a041171d9639429196b09b7a1f9254a30907ab2e
+ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48156141"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52640562"
 ---
 # <a name="affinity-mask-server-configuration-option"></a>Opzione di configurazione del server affinity mask
     
 > [!NOTE]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Usare invece [ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-server-configuration-transact-sql).  
   
- Per eseguire il multitasking, [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows spostano talvolta thread di processo tra processori diversi. Sebbene in questo modo venga garantita una maggiore efficienza del sistema operativo, tuttavia questa attività può comportare una riduzione delle prestazioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nel caso di carichi di lavoro elevati, poiché la cache di ogni processore viene ricaricata più volte con dati. In questi casi, l'assegnazione dei processori a thread specifici consente di aumentare le prestazioni poiché vengono eliminate le operazioni di ricaricamento dei processori e viene ridotta la migrazione dei thread tra i processori, limitando lo scambio di contesto. Questo tipo di associazione tra un thread e un processore è definita affinità processori.  
+ Per eseguire il multitasking, [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows sposta talvolta thread tra processori diversi. Sebbene in questo modo venga garantita una maggiore efficienza del sistema operativo, questa attività può comportare una riduzione delle prestazioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nel caso di carichi di lavoro elevati, poiché la cache di ogni processore viene ricaricata più volte con dati. In tali casi, l'assegnazione dei processori a thread specifici consente di aumentare le prestazioni, in quanto le operazioni di ricaricamento dei processori vengono eliminate e si riduce la migrazione dei thread tra i processori, limitando lo scambio di contesto. Questo tipo di associazione tra un thread e un processore è definito "affinità processori".  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta l'affinità processori tramite due opzioni Affinity mask: Affinity mask (nota anche come **CPU Affinity mask**) e Affinity I/O mask. Per altre informazioni sull'opzione Affinity I/O mask, vedere [Opzione di configurazione del server Affinity Input-Output](affinity-input-output-mask-server-configuration-option.md). Il supporto di CPU e Affinity I/O per server con 33 fino a 64 processori richiede rispettivamente l'uso aggiuntivo dell' [opzione di configurazione del server affinity64 mask](affinity64-mask-server-configuration-option.md) e dell' [opzione di configurazione del server affinity64 Input-Output mask](affinity64-input-output-mask-server-configuration-option.md).  
   
@@ -42,7 +41,7 @@ ms.locfileid: "48156141"
   
  L'opzione affinity mask, disponibile nelle versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], controlla in modo dinamico l'affinità di CPU.  
   
- In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]è possibile configurare l'opzione affinity mask senza che sia necessario riavviare l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Quando si utilizza sp_configure è necessario eseguire RECONFIGURE oppure RECONFIGURE WITH OVERRIDE dopo aver impostato un'opzione di configurazione. Se si utilizza [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)], la modifica dell'opzione affinity mask non richiede il riavvio.  
+ In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è possibile configurare l'opzione affinity mask senza che sia necessario riavviare l'istanza [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Quando si utilizza sp_configure è necessario eseguire RECONFIGURE oppure RECONFIGURE WITH OVERRIDE dopo aver impostato un'opzione di configurazione. Se si utilizza [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)], la modifica dell'opzione affinity mask non richiede il riavvio.  
   
  Le modifiche alle maschere di affinità vengono eseguite in modo dinamico, consentendo l'avvio e l'arresto a richiesta delle utilità di pianificazione della CPU che associano i thread dei processi all'interno di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Questa situazione si può verificare quando le condizioni nel server vengono modificate. Ad esempio, se nel server viene aggiunta una nuova istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , potrebbe essere necessario modificare l'opzione affinity mask per ridistribuire il carico dei processori.  
   

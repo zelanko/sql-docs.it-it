@@ -14,12 +14,12 @@ ms.assetid: 3a5daefd-08a8-4565-b54f-28ad01a47d32
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 476c5cec902ce7403ae761fcf2353be444eeb448
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 66393f8b48c9075c3200b1c56b8447410e143c57
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48091021"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52506817"
 ---
 # <a name="restore-a-sql-server-database-to-a-point-in-time-full-recovery-model"></a>Ripristino di un database di SQL Server fino a un punto specifico all'interno di un backup (modello di recupero con registrazione completa)
   In questo argomento viene descritto il ripristino temporizzato di un database [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante l'utilizzo di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Le informazioni contenute in questo argomento sono rilevanti solo per i database [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in cui viene utilizzato il modello di recupero con registrazione completa o con registrazione minima delle operazioni bulk.  
@@ -31,7 +31,7 @@ ms.locfileid: "48091021"
   
      [Indicazioni](#Recommendations)  
   
-     [Security](#Security)  
+     [Sicurezza](#Security)  
   
 -   **Per ripristinare un database di SQL Server in un punto nel tempo mediante:**  
   
@@ -78,7 +78,7 @@ ms.locfileid: "48091021"
   
          Dopo avere aggiunto i dispositivi desiderati nella casella di riepilogo **Dispositivi di backup** , fare clic su **OK** per tornare alla pagina **Generale** .  
   
-         Nella casella di riepilogo **Origine: Dispositivo: Database** selezionare il nome del database da ripristinare.  
+         Nel **origine: Dispositivo: Database** elenco a discesa, selezionare il nome del database da ripristinare.  
   
          **Nota** Questo elenco è disponibile solo se si seleziona **Dispositivo** . Saranno disponibili solo i database che dispongono di backup sul dispositivo selezionato.  
   
@@ -123,7 +123,7 @@ ms.locfileid: "48091021"
   
 14. Selezionare **Chiedi conferma prima del ripristino di ogni backup** se si desidera ricevere una richiesta di conferma prima di ciascuna operazione di ripristino. L'operazione non è normalmente necessaria, a meno che le dimensioni del database siano elevate e si desideri monitorare lo stato dell'operazione di ripristino.  
   
-##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
  **Before you begin**  
   
  Un momento specifico viene sempre ripristinato da un backup del log. In ogni istruzione RESTORE LOG della sequenza di ripristino, è necessario specificare l'ora o la transazione di destinazione in una clausola STOPAT identica. Come prerequisito per un ripristino temporizzato, è necessario innanzitutto ripristinare un backup completo del database il cui endpoint sia precedente rispetto al momento di ripristino di destinazione. Il backup completo del database può essere precedente rispetto al backup completo del database più recente purché vengano ripristinati tutti i backup del log successivi, fino al backup del log contenente la data e ora specifica di destinazione compreso.  

@@ -13,12 +13,12 @@ ms.assetid: e40a5788-7ede-4b0f-93ab-46ca33d0cace
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 69c39bb516c198005246d7d3dde5c588fd68cef1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b3bf372682217f177d7f5a4c8b0982f1a75c4e11
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48087891"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52502886"
 ---
 # <a name="ragged-hierarchies"></a>Gerarchie incomplete
   Una gerarchia incompleta è una gerarchia definita dall'utente contenente un numero di livelli ineguale. Sono esempi comuni un organigramma in cui un responsabile di alto livello ha sia responsabili di reparto sia non responsabili come subalterni oppure le gerarchie geografiche composte da Paese-Regione-Città, in cui alcune città non presentano un elemento padre Stato o Provincia, ad esempio Washington D.C., Città del Vaticano o Nuova Delhi.  
@@ -40,11 +40,11 @@ ms.locfileid: "48087891"
 ##  <a name="bkmk_approach"></a> Approcci per la modifica della navigazione drill-down in una gerarchia incompleta  
  La presenza di una gerarchia incompleta diventa un problema quando dalla navigazione drill-down non vengono restituiti i valori previsti o viene percepita come difficile da utilizzare. Per risolvere i problemi di navigazione causati da gerarchie incomplete, possono essere considerate le seguenti opzioni:  
   
--   Utilizzare una gerarchia regolare ma impostare la proprietà `HideMemberIf` in ciascun livello, per specificare se un livello mancante viene visualizzato all'utente. Quando si impostano `HideMemberIf`, è necessario impostare anche `MDXCompatibility` nella stringa di connessione per eseguire l'override dei comportamenti di navigazione predefiniti. Le istruzioni per l'impostazione di queste proprietà sono fornite in questo argomento.  
+-   Utilizzare una gerarchia regolare ma impostare la proprietà `HideMemberIf` in ciascun livello, per specificare se un livello mancante viene visualizzato all'utente. Se si imposta la proprietà `HideMemberIf`, è necessario impostare anche la proprietà `MDXCompatibility` nella stringa di connessione, per sostituire i comportamenti di navigazione predefiniti. Le istruzioni per l'impostazione di queste proprietà sono fornite in questo argomento.  
   
 -   Creare una gerarchia padre-figlio che gestisca esplicitamente i membri dei livelli. Per un'illustrazione della tecnica, vedere il post di blog [Ragged Hierarchy in SSAS](http://dwbi1.wordpress.com/2011/03/30/ragged-hierarchy-in-ssas/)(Gerarchia incompleta in SSAS). Per altre informazioni nella documentazione Online, vedere [gerarchia padre-figlio](parent-child-dimension.md). L'aspetto negativo relativo alla creazione di una gerarchia padre-figlio è che si può disporre solo di una per ogni dimensione e che in genere si verifica una riduzione delle prestazioni durante il calcolo delle aggregazioni per i membri intermedi.  
   
- Se la dimensione contiene più di una gerarchia incompleta, è consigliabile usare il primo approccio, impostando `HideMemberIf`. Gli sviluppatori BI con esperienza pratica nella gestione di gerarchie incomplete vanno oltre, promuovendo modifiche aggiuntive nelle tabelle dati fisiche, mediante la creazione di tabelle separate per ciascun livello. Per i dettagli su questa tecnica, vedere il post di blog [Martin Mason's the SSAS Financial Cube–Part 1a–Ragged Hierarchies](http://martinmason.wordpress.com/2012/03/03/the-ssas-financial-cubepart-1aragged-hierarchies-cont/) (Cubo finanziario SSAS di Martin Mason - Parte prima - Gerarchie incomplete).  
+ Se la dimensione contiene più di una gerarchia incompleta, è necessario utilizzare il primo approccio, impostando la proprietà `HideMemberIf`. Gli sviluppatori BI con esperienza pratica nella gestione di gerarchie incomplete vanno oltre, promuovendo modifiche aggiuntive nelle tabelle dati fisiche, mediante la creazione di tabelle separate per ciascun livello. Visualizzare [Martin Mason di gerarchie incomplete 1a parte di cubo finanziario SSAS (blog)](http://martinmason.wordpress.com/2012/03/03/the-ssas-financial-cubepart-1aragged-hierarchies-cont/) per informazioni dettagliate su questa tecnica.  
   
 ##  <a name="bkmk_Hide"></a> Impostazione della proprietà HideMemberIf per nascondere i membri in una gerarchia regolare  
  Nella tabella di una dimensione incompleta, i membri mancanti da un punto di vista logico possono essere rappresentati in diversi modi. Le celle della tabella possono contenere valori Null o stringhe vuote oppure possono contenere lo stesso valore del membro padre come segnaposto. La rappresentazione dei segnaposti è determinata dallo stato del segnaposto dei membri figlio, come determinato dalla proprietà `HideMemberIf` e dalla proprietà della stringa di connessione `MDX Compatibility` per l'applicazione client.  
@@ -55,18 +55,18 @@ ms.locfileid: "48087891"
   
 2.  Fare clic con il pulsante destro del mouse su un membro all'interno della gerarchia e scegliere **Proprietà**. Impostare la proprietà `HideMemberIf` su uno dei valori descritti in basso.  
   
-    |Impostazione di HideMemberIf|Description|  
+    |Impostazione di HideMemberIf|Descrizione|  
     |--------------------------|-----------------|  
-    |`Never`|I membri del livello non vengono mai nascosti. Si tratta del valore predefinito.|  
+    |`Never`|I membri del livello non vengono mai nascosti. Rappresenta il valore predefinito.|  
     |**OnlyChildWithNoName**|Un membro del livello viene nascosto quando è l'unico elemento figlio del relativo padre e il nome è un valore Null o una stringa vuota.|  
     |**OnlyChildWithParentName**|Un membro del livello viene nascosto quando è l'unico elemento figlio del relativo padre e il nome corrisponde a quello del padre.|  
     |**NoName**|Un membro del livello viene nascosto quando il nome è vuoto.|  
     |**ParentName**|Un membro del livello viene nascosto quando il nome è identico a quello del padre.|  
   
 ##  <a name="bkmk_Mdx"></a> Impostare la compatibilità MDX per determinare la rappresentazione dei segnaposto nelle applicazioni client  
- Dopo aver impostato `HideMemberIf` in un livello della gerarchia, è necessario impostare anche il `MDX Compatibility` proprietà nella stringa di connessione inviata dall'applicazione client. L'impostazione di `MDX Compatibility` determina se viene utilizzata la proprietà `HideMemberIf`.  
+ Dopo aver impostato la proprietà `HideMemberIf` in un livello della gerarchia, è necessario impostare anche la proprietà `MDX Compatibility` nella stringa di connessione inviata dall'applicazione client. L'impostazione di `MDX Compatibility` determina se viene utilizzata la proprietà `HideMemberIf`.  
   
-|Impostazione di MDX Compatibility|Description|Utilizzo|  
+|Impostazione di MDX Compatibility|Descrizione|Uso|  
 |-------------------------------|-----------------|-----------|  
 |**1**|Viene visualizzato un valore di segnaposto.|Questo è il valore predefinito utilizzato da Excel, SSDT e SSMS. Indica al server di restituire i valori di segnaposto quando la navigazione drill-down svuota i livelli in una gerarchia incompleta. Se si fa clic sul valore di segnaposto, è possibile continuare la navigazione verso il basso per ottenere i nodi figlio (foglia).<br /><br /> Excel contiene la stringa di connessione utilizzata per connettersi ad Analysis Services e imposta sempre la proprietà `MDX Compatibility` su 1 per ciascuna nuova connessione. Questo comportamento preserva la compatibilità con le versioni precedenti.|  
 |**2**|Viene nascosto un valore di segnaposto (un valore Null o un duplicato del livello padre) ma vengono visualizzati altri livelli e nodi che hanno valori pertinenti.|`MDX Compatibility`=2 viene in genere visualizzato come impostazione preferita in termini di gerarchie incomplete Un report [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e alcune applicazioni client di terze parti possono mantenere questa impostazione.|  

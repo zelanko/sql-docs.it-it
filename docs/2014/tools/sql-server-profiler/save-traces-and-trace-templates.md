@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: profiler
 ms.topic: conceptual
 helpviewer_keywords:
 - saving traces
@@ -20,12 +19,12 @@ ms.assetid: 957e6bf8-e7a3-4a59-a1cd-0a41538a8158
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 80781d3b32ef33fa844c5df96f837aaa14ba06c4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d4baca63080a3f67c1f9e54a8a0aa955a27029df
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159601"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52796983"
 ---
 # <a name="save-traces-and-trace-templates"></a>Salvare tracce e modelli di traccia
   È importante distinguere il salvataggio di file di traccia dal salvataggio di modelli di traccia. Il salvataggio di un file di traccia comporta il salvataggio dei dati di evento acquisiti in una posizione specificata. Il salvataggio di un modello di traccia comporta invece il salvataggio della definizione di una traccia, ad esempio le colonne di dati, le classi di evento o i filtri specificati.  
@@ -68,6 +67,6 @@ ms.locfileid: "48159601"
  [Derivare un modello da una traccia in esecuzione &#40;SQL Server Profiler&#41;](derive-a-template-from-a-running-trace-sql-server-profiler.md)   
  [Derivare un modello da un file di traccia o da una tabella di traccia &#40;SQL Server Profiler&#41;](derive-a-template-from-a-trace-file-or-trace-table-sql-server-profiler.md)   
  [Esportare un modello di traccia &#40;SQL Server Profiler&#41;](export-a-trace-template-sql-server-profiler.md)   
- [Esportare un modello di traccia &#40;SQL Server Profiler&#41;](import-a-trace-template-sql-server-profiler.md)  
+ [Importare un modello di traccia &#40;SQL Server Profiler&#41;](import-a-trace-template-sql-server-profiler.md)  
   
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: backup-restore
 ms.topic: conceptual
 helpviewer_keywords:
 - upgrading databases
@@ -28,12 +27,12 @@ ms.assetid: d0de0639-bc54-464e-98b1-6af22a27eb86
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f3d3850e98bce1031d285388b6f5fbe75737e37b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5eae331b064d83510d657f6f09a819955e6259a0
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48107337"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52778443"
 ---
 # <a name="database-detach-and-attach-sql-server"></a>Collegamento e scollegamento di un database (SQL Server)
   È possibile scollegare i file di dati e di log delle transazioni di un database e, successivamente, ricollegarli alla stessa istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]o a un'istanza diversa. Scollegare e collegare un database risulta utile se si desidera assegnare il database a un'istanza diversa di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nello stesso computer oppure spostarlo.  
@@ -93,7 +92,7 @@ ms.locfileid: "48107337"
 > [!NOTE]  
 >  Se il file di dati primario in corso di collegamento è di sola lettura, nel [!INCLUDE[ssDE](../../includes/ssde-md.md)] si considera il database di sola lettura.  
   
- Quando un database crittografato prima di tutto è collegato a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], il proprietario del database è necessario aprire la chiave master del database eseguendo l'istruzione seguente: OPEN MASTER KEY DECRYPTION BY PASSWORD = **' *`password`*'**. È consigliabile abilitare la decrittografia automatica della chiave master eseguendo l'istruzione ALTER MASTER KEY ADD ENCRYPTION BY SERVICE MASTER KEY. Per altre informazioni, vedere [CREATE MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-master-key-transact-sql) e [ALTER MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-master-key-transact-sql).  
+ Quando un database crittografato prima di tutto è collegato a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], il proprietario del database è necessario aprire la chiave master del database eseguendo l'istruzione seguente: DECRITTOGRAFIA OPEN MASTER KEY TRAMITE PASSWORD = **»*`password`*'**. È consigliabile abilitare la decrittografia automatica della chiave master eseguendo l'istruzione seguente: ALTER MASTER KEY ADD ENCRYPTION BY CHIAVE MASTER DEL SERVIZIO. Per altre informazioni, vedere [CREATE MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-master-key-transact-sql) e [ALTER MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-master-key-transact-sql).  
   
  I requisiti necessari per il collegamento dei file di log dipendono in parte dallo stato di lettura/scrittura o di sola lettura del database, come illustrato di seguito:  
   

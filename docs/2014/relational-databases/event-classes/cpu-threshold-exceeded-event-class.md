@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: eb106f7d-baa3-4a2b-96b2-f9fe0844057d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bd85605f6f99563cd042e438e4ffd517a636d133
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cc8252d0049953f0958ea331015aae51fd737709
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48176471"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52770453"
 ---
 # <a name="cpu-threshold-exceeded-event-class"></a>Classe di evento CPU Threshold Exceeded
   Questa classe di evento indica il rilevamento di una query che supera il valore soglia della CPU specificato per REQUEST_MAX_CPU_TIME_SEC.  
@@ -30,15 +29,15 @@ ms.locfileid: "48176471"
   
 ## <a name="cpu-threshold-exceeded-data-columns"></a>Colonne di dati di CPU Threshold Exceeded  
   
-|Nome colonna di dati|Tipo di dati|Description|ID colonna|Filtrabile|  
+|Nome colonna di dati|Tipo di dati|Descrizione|ID colonna|Filtrabile|  
 |----------------------|---------------|-----------------|---------------|----------------|  
-|CPU|`int`|Utilizzo della CPU in millisecondi.|18|Sì|  
-|EventClass|`int`|214|27|no|  
-|EventSubClass|`int`|Violazione del limite della CPU.|21|Sì|  
-|GroupID|`int`|ID del gruppo in cui si verifica la violazione.|66|Sì|  
-|OwnerID|`int`|SPID del processo che provoca la violazione.|58|Sì|  
-|SPID|`int`|ID del processo del server che genera l'evento.<br /><br /> Nota: può essere differente dallo SPID effettivo dell'utente se il thread di sistema convalida l'utilizzo della CPU come attività in background.|12|Sì|  
-|StartTime|`datetime`|Ora di generazione dell'evento.|14|Sì|  
+|CPU|`int`|Utilizzo della CPU in millisecondi.|18|Yes|  
+|EventClass|`int`|214|27|No|  
+|EventSubClass|`int`|Violazione del limite della CPU.|21|Yes|  
+|GroupID|`int`|ID del gruppo in cui si verifica la violazione.|66|Yes|  
+|OwnerID|`int`|SPID del processo che provoca la violazione.|58|Yes|  
+|SPID|`int`|ID del processo del server che genera l'evento.<br /><br /> Nota: Può essere differente dallo SPID effettivo dell'utente se il thread di sistema convalida l'utilizzo della CPU come attività di background.|12|Yes|  
+|StartTime|`datetime`|Ora di generazione dell'evento.|14|Yes|  
   
 ## <a name="see-also"></a>Vedere anche  
  [sp_trace_setevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)  

@@ -1,5 +1,5 @@
 ---
-title: Aggiungere o eliminare una gerarchia definita dall'utente | Documenti Microsoft
+title: Aggiungere o eliminare una gerarchia definita dall'utente | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,18 +9,18 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: d7ae6e851f9da6f85966e8eb9b208d82c4641000
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 36763d7c466ccc1b3f41fda5d361a85322e0b308
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34026483"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52534306"
 ---
-# <a name="user-defined-hierarchies---add-or-delete-a-user-defined-hierarchy"></a>Gerarchie definite dall'utente, aggiungere o eliminare una gerarchia definita dall'utente
+# <a name="user-defined-hierarchies---add-or-delete-a-user-defined-hierarchy"></a>Gerarchie definite dall'utente - Aggiungere o eliminare una gerarchia definita dall'utente
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   È possibile aggiungere o rimuovere una gerarchia definita dall'utente in una dimensione nella scheda **Struttura dimensione** di Progettazione dimensioni in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
- Quando si aggiunge una gerarchia definita dall'utente, questa non risulta disponibile per gli utenti finché non ne viene creata un'istanza in un'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e non viene elaborata la dimensione. Per altre informazioni, vedere [database modello multidimensionale ](../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md) e [l'elaborazione di un modello multidimensionale &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md).  
+ Quando si aggiunge una gerarchia definita dall'utente, questa non risulta disponibile per gli utenti finché non ne viene creata un'istanza in un'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e non viene elaborata la dimensione. Per altre informazioni, vedere [database modelli multidimensionali ](../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md) e [elaborazione di un modello multidimensionale &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md).  
   
 ### <a name="to-add-a-user-defined-hierarchy-to-a-dimension"></a>Per aggiungere una gerarchia definita dall'utente a una dimensione  
   
@@ -47,11 +47,11 @@ ms.locfileid: "34026483"
   
 -   Nella scheda **Struttura dimensione** fare clic sulla gerarchia definita dall'utente che si vuole rimuovere nel riquadro **Gerarchie** . Fare clic su **Elimina**sulla barra degli strumenti.  
   
-     - o -  
+     - - oppure -  
   
 -   Fare clic con il pulsante destro del mouse sulla gerarchia definita dall'utente che si vuole rimuovere nel riquadro **Gerarchie** e quindi scegliere **Elimina**.  
   
-     - o -  
+     - - oppure -  
   
 -   Trascinare la gerarchia definita dall'utente al di fuori dell'area di progettazione.  
   

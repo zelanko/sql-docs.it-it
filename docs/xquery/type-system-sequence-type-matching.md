@@ -16,17 +16,17 @@ ms.assetid: 8c56fb69-ca04-4aba-b55a-64ae216c492d
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: e4532e52bb2efe190d962bfcfc50e65c441b5575
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 3df2ef3f14cb8ca4fd7e7bcf5799b6966c16dc10
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51668650"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52511451"
 ---
 # <a name="type-system---sequence-type-matching"></a>Sistema di tipi - Corrispondenza per il tipo di sequenza
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Il valore di un'espressione XQuery è sempre rappresentato da una sequenza di zero o più elementi, che possono essere valori atomici o nodi. Il tipo di sequenza fa riferimento alla capacità di stabilire una corrispondenza tra il tipo di sequenza restituito da un'espressione di query e un tipo specifico. Esempio:  
+  Il valore di un'espressione XQuery è sempre rappresentato da una sequenza di zero o più elementi, che possono essere valori atomici o nodi. Il tipo di sequenza fa riferimento alla capacità di stabilire una corrispondenza tra il tipo di sequenza restituito da un'espressione di query e un tipo specifico. Ad esempio:  
   
 -   Se il valore dell'espressione è atomico, è possibile stabilire se è di tipo integer, decimal o string.  
   
@@ -39,7 +39,7 @@ ms.locfileid: "51668650"
 ## <a name="comparing-the-atomic-value-type-returned-by-an-expression"></a>Confronto del tipo del valore atomico restituito da un'espressione  
  Se un'espressione restituisce una sequenza di valori atomici, potrebbe essere necessario trovare il tipo del valore nella sequenza. Negli esempi seguenti viene illustrato l'utilizzo della sintassi del tipo di sequenza per valutare il tipo di valore atomico restituito da un'espressione.  
   
-### <a name="example-determining-whether-a-sequence-is-empty"></a>Esempio: determinazione di una sequenza vuota  
+### <a name="example-determining-whether-a-sequence-is-empty"></a>Esempio: Determinare se una sequenza è vuota  
  Il **della Empty ()** tipo di sequenza utilizzabile in un'espressione sequencetype per determinare se la sequenza restituita dall'espressione specificata è una sequenza vuota.  
   
  Nell'esempio seguente, l'XML Schema consente che l'elemento <`root`> supporti i valori Null:  
@@ -71,7 +71,7 @@ SELECT @var.query('data(/root[1]) instance of  empty() ')
 GO  
 ```  
   
-### <a name="example-determining-the-type-of-an-attribute-value"></a>Esempio: determinazione del tipo di valore di un attributo  
+### <a name="example-determining-the-type-of-an-attribute-value"></a>Esempio: Determinazione del tipo di un valore di attributo  
  A volte è possibile valutare il tipo di sequenza restituito da un'espressione prima dell'elaborazione. Ad esempio, si consideri uno XML Schema nel quale un nodo è definito come un tipo unione. Nell'esempio seguente, l'XML Schema della raccolta definisce l'attributo `a` come un tipo unione il cui valore può essere di tipo decimal o string.  
   
 ```  
@@ -112,7 +112,7 @@ SELECT @var.query('data((/root/@a)[1]) instance of xs:string')
 GO  
 ```  
   
-### <a name="example-cardinality-in-sequence-expressions"></a>Esempio: cardinalità nelle espressioni di sequenza  
+### <a name="example-cardinality-in-sequence-expressions"></a>Esempio: Cardinalità nelle espressioni di sequenza  
  Nell'esempio seguente viene illustrato l'effetto della cardinalità in un'espressione di sequenza. L'XML Schema seguente definisce un elemento <`root`> che è di tipo byte e supporta i valori Null.  
   
 ```  
@@ -160,7 +160,7 @@ GO
   
  Se entrambe le condizioni sono vere, l'espressione `instance of` restituisce True.  
   
-### <a name="example-querying-against-an-xml-type-column"></a>Esempio: esecuzione di una query su una colonna di tipo xml  
+### <a name="example-querying-against-an-xml-type-column"></a>Esempio: L'esecuzione di query su una colonna di tipo xml  
  Nell'esempio seguente, una query viene eseguita su una colonna Instructions della **xml** digitare il [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] database. Si tratta di una colonna XML tipizzata, perché è associata a uno schema. Tramite XML Schema viene definito l'attributo `LocationID` di tipo integer. Pertanto, nell'espressione di sequenza, il `instance of xs:integer?` restituisce True.  
   
 ```  
@@ -174,19 +174,19 @@ WHERE ProductModelID = 7
 ## <a name="comparing-the-node-type-returned-by-an-expression"></a>Confronto del tipo di nodo restituito da un'espressione  
  Se un'espressione restituisce una sequenza di nodi, è possibile che sia necessario individuare il tipo di nodo nella sequenza. Nell'esempio seguente viene illustrata la sintassi del tipo che è possibile utilizzare per valutare il tipo di nodo restituito da un'espressione. È possibile utilizzare i tipi di sequenza seguenti:  
   
--   **Item ()** – corrisponde a qualsiasi elemento nella sequenza.  
+-   **Item ()** -corrisponde a qualsiasi elemento nella sequenza.  
   
--   **Node ()** – determina se la sequenza è un nodo.  
+-   **Node ()** -determina se la sequenza è un nodo.  
   
--   **//Processing-Instruction ()** – determina se l'espressione restituisce un'istruzione di elaborazione.  
+-   **//Processing-Instruction ()** -determina se l'espressione restituisce un'istruzione di elaborazione.  
   
--   **comment** – determina se l'espressione restituisce un commento.  
+-   **comment** -determina se l'espressione restituisce un commento.  
   
--   **document-node()** – determina se l'espressione restituisce un nodo di documento.  
+-   **document-node()** -determina se l'espressione restituisce un nodo di documento.  
   
  Nell'esempio seguente vengono illustrati questi tipi di sequenza.  
   
-### <a name="example-using-sequence-types"></a>Esempio: utilizzo di tipi di sequenza  
+### <a name="example-using-sequence-types"></a>Esempio: Utilizzo di tipi di sequenza  
  In questo esempio vengono eseguite numerose query su una variabile XML non tipizzata. Le query illustrano l'utilizzo dei tipi di sequenza.  
   
 ```  

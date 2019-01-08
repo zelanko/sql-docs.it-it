@@ -20,16 +20,16 @@ ms.assetid: 80190ee7-ae3b-45e5-92a9-693eb558f322
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 99d7f84f2153f57cc9bc392c22d79739deaf6b1e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e769949c8c57bbec56055c58c9002494fc6d37be
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47599619"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53211990"
 ---
 # <a name="sqlsetpos-function"></a>Funzione SQLSetPos
 **Conformità**  
- Versione introdotta: Conformità agli standard 1.0 di ODBC: ODBC  
+ Versione introdotta: Conformità agli standard 1.0 ODBC: ODBC  
   
  **Riepilogo**  
  **SQLSetPos** imposta la posizione del cursore in un set di righe e consente a un'applicazione per aggiornare i dati nel set di righe o aggiornare o eliminare dati nel set di risultati.  
@@ -59,7 +59,7 @@ SQLRETURN SQLSetPos(
   
  SQL_POSITION SQL_REFRESH SQL_UPDATE SQL_DELETE  
   
-> [!NOTE]  
+> [!NOTE]
 >  Il valore SQL_ADD per il *operazione* argomento è stato deprecato per ODBC 3*x*. ODBC 3. *x* i driver necessari per supportare SQL_ADD per garantire la compatibilità con le versioni precedenti. Questa funzionalità è stata sostituita da una chiamata a **SQLBulkOperations** con un *operazione* di SQL_ADD. Quando un'applicazione ODBC 3. *x* applicazione funziona con un'API ODBC 2. *x* driver, Driver Manager esegue il mapping di una chiamata a **SQLBulkOperations** con un *operazione* di SQL_ADD a **SQLSetPos** con un  *Operazione* di SQL_ADD.  
   
  Per altre informazioni, vedere "Commenti".  
@@ -80,7 +80,7 @@ SQLRETURN SQLSetPos(
   
  Per tutti questi SQLSTATEs che può restituire SQL_SUCCESS_WITH_INFO o SQL_ERROR (eccetto SQLSTATEs 01xxx), viene restituito SQL_SUCCESS_WITH_INFO se si verifica un errore in uno o più, ma non tutte, le righe di un'operazione con più righe e viene restituito SQL_ERROR se si verifica un errore in un riga singola operazione.  
   
-|SQLSTATE|Errore|Description|  
+|SQLSTATE|Errore|Descrizione|  
 |--------------|-----------|-----------------|  
 |01000|Avviso generale|Messaggio informativo specifico del driver. (Funzione restituisce SQL_SUCCESS_WITH_INFO).|  
 |01001|Conflitto dell'operazione del cursore|Il *operazione* argomento era SQL_DELETE o SQL_UPDATE e più righe oppure nessuna riga sono stati eliminati o aggiornati. (Per altre informazioni sugli aggiornamenti per più di una riga, vedere la descrizione del SQL_ATTR_SIMULATE_CURSOR *attributo* nelle **SQLSetStmtAttr**.) (Funzione restituisce SQL_SUCCESS_WITH_INFO).<br /><br /> Il *operazione* argomento era SQL_DELETE o SQL_UPDATE e l'operazione non riuscita a causa della concorrenza ottimistica. (Funzione restituisce SQL_SUCCESS_WITH_INFO).|  
@@ -122,7 +122,7 @@ SQLRETURN SQLSetPos(
   
 ## <a name="comments"></a>Commenti  
   
-> [!CAUTION]  
+> [!CAUTION]
 >  Per informazioni sull'istruzione dichiara che **SQLSetPos** possono essere chiamati in e che cosa deve fare per garantire la compatibilità con l'API ODBC 2 *. x* applicazioni, vedere [cursori rettangolari, cursori scorrevoli, e Compatibilità con le versioni precedenti](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md).  
   
 ## <a name="rownumber-argument"></a>Argomento RowNumber  
@@ -245,7 +245,7 @@ SQLRETURN SQLSetPos(
     > [!NOTE]  
     >  Le colonne data-at-execution sono colonne in un set di righe per cui i dati verranno inviati con **SQLPutData** quando viene aggiornata una riga con **SQLSetPos**. Sono associate con **SQLBindCol**. Il valore restituito da **SQLParamData** è l'indirizzo della riga di **TargetValuePtr* buffer in fase di elaborazione.  
   
-4.  Le chiamate **SQLPutData** uno o più volte per inviare i dati per la colonna. È necessario più di una chiamata se tutti i valori di dati non possono essere restituiti nel  *\*TargetValuePtr* specificato nel buffer **SQLPutData**; più chiamate al metodo **SQLPutData** per la stessa colonna sono consentiti solo quando si inviano dati di tipo carattere C a una colonna con un tipo di carattere, binary o dati specifici dell'origine dati o per l'invio di dati C binari a una colonna con un carattere, binario, o tipo di dati specifici dell'origine dati.  
+4.  Le chiamate **SQLPutData** uno o più volte per inviare i dati per la colonna. È necessario più di una chiamata se tutti i valori di dati non possono essere restituiti nel  *\*TargetValuePtr* specificato nel buffer **SQLPutData**; più chiamate al metodo **SQLPutData** per la stessa colonna sono consentiti solo quando si inviano dati di tipo carattere C a una colonna con un tipo di carattere, binary o dati specifici dell'origine dati o per l'invio di dati C binari a una colonna con un carattere, binario, o del tipo di dati specifici dell'origine dati.  
   
 5.  Le chiamate **SQLParamData** nuovamente per segnalare che tutti i dati sono stati inviati per la colonna.  
   

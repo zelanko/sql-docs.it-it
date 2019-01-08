@@ -8,8 +8,6 @@ ms.technology:
 - database-engine
 ms.topic: conceptual
 f1_keywords:
-- vsregularexpressionhelp
-- vs.regularexpressionhelp
 - vs.regularexpressionbuilder
 helpviewer_keywords:
 - regular expressions [SQL Server Management Studio]
@@ -19,19 +17,19 @@ ms.assetid: a057690c-d118-4159-8e4d-2ed5ccfe79d3
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a2014aa68bee9e78477fb4ee9993053e13a33abe
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a9a265979af780b1df3eedf18c14fd822a2983b1
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48077631"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53328315"
 ---
 # <a name="search-text-with-regular-expressions"></a>Testo di ricerca con espressioni regolari
   Le espressioni regolari costituiscono un metodo di notazione conciso e flessibile per la ricerca e la sostituzione di testo che soddisfa determinati criteri. È possibile utilizzare un set specifico di espressioni regolari nel campo **Trova** della finestra di dialogo [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **di** .  
   
 #### <a name="to-find-using-regular-expressions"></a>Per eseguire la ricerca utilizzando espressioni regolari  
   
-1.  Per consentire l'uso di espressioni regolari nel campo **Trova** durante le operazioni **Ricerca veloce**, **Cerca nei file**, **Sostituzione veloce**o **Sostituisci nei file** , in **Opzioni di ricerca** selezionare **Usa**e scegliere **Espressioni regolari**.  
+1.  Per consentire l'uso delle espressioni regolari nel **Find what** campo durante **ricerca veloce**, **FindinFiles**, **Sostituzione veloce**, o  **Sostituisci nei file** operazioni, selezionare il **uso** opzione sotto **opzioni di ricerca** e scegliere **espressioni regolari**.  
   
 2.  Accanto al campo **Trova** viene reso disponibile il pulsante triangolare per **l'elenco dei riferimenti**. Fare clic su questo pulsante per visualizzare un elenco delle espressioni regolari più comuni. Ogni elemento selezionato in Generatore di espressioni viene inserito nella stringa **Trova** .  
   
@@ -40,7 +38,7 @@ ms.locfileid: "48077631"
   
  Nella seguente tabella vengono descritte le espressioni regolari disponibili nell'**elenco dei riferimenti**.  
   
-|Espressione|Sintassi|Description|  
+|Espressione|Sintassi|Descrizione|  
 |----------------|------------|-----------------|  
 |Qualsiasi carattere|.|Consente di ricercare un carattere qualsiasi, ad eccezione del carattere di interruzione riga.|  
 |Zero o più|*|Consente di ricercare zero o più occorrenze dell'espressione precedente, con il maggior numero di caratteri corrispondenti possibile.|  
@@ -58,15 +56,15 @@ ms.locfileid: "48077631"
 |Identificatore C/C++|:i|Corrisponde all'espressione ([a-zA-Z_$][a-zA-Z0-9_$]*).|  
 |Stringa tra virgolette|:q|Cerca l'espressione (("[^"]*")&#124;('[^']\*')).|  
 |Spazio o tabulazione|:b|Consente di ricercare il carattere spazio o tabulazione.|  
-|Valore intero|:z|Corrisponde all'espressione ([0-9]+).|  
+|Integer|:z|Corrisponde all'espressione ([0-9]+).|  
   
  Nell'**elenco dei riferimenti** non è possibile visualizzare tutte le espressioni regolari valide per le operazioni di **ricerca e sostituzione**. In una stringa **Trova** è possibile inserire anche le seguenti espressioni regolari:  
   
-|Espressione|Sintassi|Description|  
+|Espressione|Sintassi|Descrizione|  
 |----------------|------------|-----------------|  
 |Minimo tra zero o più occorrenze|@|Consente di ricercare zero o più occorrenze dell'espressione precedente, con il minor numero di caratteri corrispondenti possibile.|  
 |Minimo tra una o più occorrenze|#|Consente di ricercare una o più occorrenze dell'espressione precedente, con il minor numero di caratteri corrispondenti possibile.|  
-|n ripetizioni|^n|Consente di ricercare n occorrenze dell'espressione precedente. Ad esempio, [0-9]^4 consente di ricercare qualsiasi sequenza di 4 cifre.|  
+|n ripetizioni|^n|Consente di ricercare n occorrenze dell'espressione precedente. Ad esempio, [0-9] ^ 4 consente di ricercare qualsiasi sequenza a quattro cifre.|  
 |Raggruppamento|()|Consente di raggruppare una sottoespressione.|  
 |ennesimo testo con tag|\n|In un'espressione **Trova o Sostituisci** indica il testo corrispondente all'ennesima espressione con tag, dove n è un numero da 1 a 9.<br /><br /> In un'espressione di **sostituzione** \0 inserisce l'intero testo corrispondente.|  
 |Campo giustificato a destra|\\(w,n)|In un'espressione di **sostituzione** giustifica a destra l'ennesima espressione con tag in un campo di dimensioni di almeno *w* caratteri.|  
@@ -86,7 +84,7 @@ ms.locfileid: "48077631"
   
  Nella tabella seguente viene descritta la sintassi per stabilire una corrispondenza attraverso le proprietà dei caratteri Unicode standard. Le abbreviazioni di due lettere corrispondono a quelle indicate nel database delle proprietà dei caratteri Unicode e possono essere specificate come parte di un set di caratteri. Ad esempio, l'espressione [:Nd:Nl:No] corrisponde a qualsiasi tipo di cifra.  
   
-|Espressione|Sintassi|Description|  
+|Espressione|Sintassi|Descrizione|  
 |----------------|------------|-----------------|  
 |Lettera maiuscola|:Lu|Consente di ricercare una qualsiasi lettera maiuscola. Ad esempio, :Luli corrisponde a "Gli" ma non a "gli".|  
 |Lettera minuscola|:Ll|Consente di ricercare una qualsiasi lettera minuscola. Ad esempio, :Llli corrisponde a "gli" ma non a "Gli".|  
@@ -121,7 +119,7 @@ ms.locfileid: "48077631"
   
  Oltre alle proprietà dei caratteri Unicode standard, è possibile specificare come parte di un set di caratteri le proprietà aggiuntive elencate di seguito.  
   
-|Espressione|Sintassi|Description|  
+|Espressione|Sintassi|Descrizione|  
 |----------------|------------|-----------------|  
 |Alpha|:Al|Consente di ricercare qualsiasi carattere. Ad esempio, :Alli consente di trovare parole come "Gli", "giglio" e "foglio".|  
 |Numeric|:Nu|Consente di ricercare un numero o una cifra.|  
@@ -136,5 +134,3 @@ ms.locfileid: "48077631"
 ## <a name="see-also"></a>Vedere anche  
  [Ricerca e sostituzione](search-and-replace.md)   
  [Testo di ricerca con caratteri jolly](search-text-with-wildcards.md)  
-  
-  

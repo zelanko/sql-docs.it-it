@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - change tracking groups [Master Data Services]
@@ -15,12 +14,12 @@ ms.assetid: e153eb5f-70ca-4c6f-89d8-1f937ed3917d
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 469a17c909e6b59289dc165c0327e040b2a8503f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6d215fe6a1b0c41868816e09e64927b8f736f8c9
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48158651"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52772545"
 ---
 # <a name="add-attributes-to-a-change-tracking-group-master-data-services"></a>Aggiungere attributi ad un gruppo rilevamento modifiche (Master Data Services)
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]aggiungere attributi a un gruppo rilevamento modifiche quando si vuole tenere traccia delle modifiche apportate ai valori dell'attributo.  

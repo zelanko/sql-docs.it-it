@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - conflict resolution [SQL Server replication], queued updating subscriptions
@@ -15,12 +14,12 @@ ms.assetid: 9977dd75-b0de-4376-9c13-86d80567d8aa
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a4a2f9a8927b5cf6a1a93f66f075a2600c3f98e5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 76f5e18a6555f4facf068dbd68429a770ebd9676
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48052951"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52797443"
 ---
 # <a name="view-data-conflicts-for-transactional-publications-sql-server-management-studio"></a>Visualizzazione di conflitti di dati per le pubblicazioni transazionali (SQL Server Management Studio)
   Il Visualizzatore conflitti di replica [!INCLUDE[msCoName](../../includes/msconame-md.md)] consente di visualizzare i conflitti per la replica transazionale peer-to-peer e per la replica transazionale con sottoscrizioni ad aggiornamento in coda. Per informazioni sul rilevamento e la risoluzione dei conflitti, vedere [Rilevamento dei conflitti nella replica peer-to-peer](transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md) e [Impostare le opzioni di risoluzione dei conflitti per l'aggiornamento in coda &#40;SQL Server Management Studio&#41;](publish/set-queued-updating-conflict-resolution-options-sql-server-management-studio.md).  
@@ -57,7 +56,7 @@ ms.locfileid: "48052951"
   
     -   Selezionare una o più righe nella griglia superiore e quindi fare clic su **Rimuovi**per rimuovere la riga dalla tabella di metadati dei conflitti.  
   
-    -   Fare clic sul pulsante delle proprietà (**…**) per visualizzare ulteriori informazioni su una colonna coinvolta in un conflitto.  
+    -   Fare clic sul pulsante delle proprietà (**...**) per visualizzare altre informazioni su una colonna coinvolta in un conflitto.  
   
     -   Selezionare **Registra informazioni dettagliate sul conflitto** per registrare i dati del conflitto in un file. Per specificare un percorso per il file, scegliere **Opzioni** dal menu **Visualizza**. Immettere un valore o fare clic sul pulsante Sfoglia (**...**) e quindi passare al file appropriato. Fare clic su **OK** per chiudere la finestra di dialogo **Opzioni** .  
   

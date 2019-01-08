@@ -16,12 +16,12 @@ ms.assetid: 34b80790-e010-4b90-8eaa-03189f5d8986
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 30ced2aec9d7b91f5c3df55a7d6bf1f7e8a69d1c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5adf32800f4c2bc2b4a0874ca7efc22f04ffd110
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47822559"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52539137"
 ---
 # <a name="the-odbc-solution"></a>Soluzione ODBC
 La domanda, quindi, è come ODBC standardizzare l'accesso al database? Esistono due requisiti di architettura:  
@@ -38,7 +38,7 @@ La domanda, quindi, è come ODBC standardizzare l'accesso al database? Esistono 
   
 -   **ODBC è un'interfaccia a livello di chiamata.** Per risolvere il problema di come applicazioni di accedere più DBMS usando lo stesso codice sorgente, ODBC definisce un'interfaccia della riga di comando standard. Contiene tutte le funzioni nelle specifiche dell'interfaccia della riga da Open Group e ISO/IEC e fornisce funzioni aggiuntive comunemente richieste dalle applicazioni.  
   
-     Un'altra libreria o driver, è necessario per ogni sistema DBMS che supporti ODBC. Il driver implementa le funzioni dell'API ODBC. Per usare un driver diverso, l'applicazione non dovrà essere ricompilato o ricollegare. Al contrario, l'applicazione semplicemente carica il nuovo driver e chiama le funzioni in essa. Per accedere simultaneamente più DBMS, l'applicazione carica più driver. Modo in cui sono supportati i driver è specifiche del sistema operativo. Ad esempio, nel sistema operativo Microsoft® Windows®, i driver sono librerie a collegamento dinamico (DLL).  
+     Un'altra libreria o driver, è necessario per ogni sistema DBMS che supporti ODBC. Il driver implementa le funzioni dell'API ODBC. Per usare un driver diverso, l'applicazione non dovrà essere ricompilato o ricollegare. Al contrario, l'applicazione semplicemente carica il nuovo driver e chiama le funzioni in essa. Per accedere simultaneamente più DBMS, l'applicazione carica più driver. Modo in cui sono supportati i driver è specifico del sistema operativo. Ad esempio, nel sistema operativo Microsoft® Windows®, i driver sono librerie a collegamento dinamico (DLL).  
   
 -   **ODBC definisce una grammatica SQL standard.** Oltre a un'interfaccia a livello di chiamata standard, ODBC definisce una grammatica SQL standard. L'espressione è basato sulla specifica Open gruppo SQL CAE. Differenze tra le grammatiche di due sono minori e principalmente a causa di differenze tra la grammatica SQL richiesto da incorporati della riga di comando (ODBC) e SQL (Open Group). Esistono anche alcune estensioni per la grammatica per esporre le funzionalità di linguaggio comunemente disponibili non coperti dalla grammatica di Open Group.  
   
@@ -46,13 +46,13 @@ La domanda, quindi, è come ODBC standardizzare l'accesso al database? Esistono 
   
 -   **ODBC fornisce un Driver Manager per gestire l'accesso simultaneo da più DBMS.** Sebbene l'utilizzo di driver risolve il problema di accedere contemporaneamente più DBMS, il codice per eseguire questa operazione può essere complesso. Le applicazioni che sono progettate per funzionare con tutti i driver non possono essere collegate staticamente per tutti i driver. Ma è necessario caricare i driver in fase di esecuzione e chiamare le funzioni in essi contenuti tramite una tabella di puntatori a funzione. La situazione diventa più complessa se l'applicazione usa più driver contemporaneamente.  
   
-     Anziché richiedere ogni applicazione a tale scopo, ODBC offre una gestione Driver. Gestione Driver implementa tutte le funzioni ODBC, principalmente come pass-through delle chiamate alle funzioni ODBC driver in e in modo statico è collegato all'applicazione o caricato dall'applicazione in fase di esecuzione. Di conseguenza, l'applicazione chiama funzioni ODBC dal nome in Gestione Driver, anziché il puntatore in tutti i driver.  
+     Anziché richiedere ogni applicazione a tale scopo, ODBC offre una gestione Driver. Gestione Driver implementa tutte le funzioni ODBC - principalmente come pass-through delle chiamate alle funzioni ODBC driver - in ed è staticamente collegata all'applicazione o caricata dall'applicazione in fase di esecuzione. Di conseguenza, l'applicazione chiama funzioni ODBC dal nome in Gestione Driver, anziché il puntatore in tutti i driver.  
   
      Quando un'applicazione necessita di un driver specifico, verrà richiesta prima di tutto un handle di connessione con il quale identificare i driver e quindi le richieste che Gestione Driver caricare il driver. Gestione Driver viene caricato il driver e archivia l'indirizzo di ogni funzione nel driver. Per chiamare una funzione ODBC nel driver, l'applicazione chiama tale funzione in Gestione Driver e passa l'handle di connessione per il driver. Gestione Driver quindi chiama la funzione usando l'indirizzo che archiviato in precedenza.  
   
 -   **ODBC espone un numero significativo di funzionalità DBMS, ma non hanno bisogno di driver per supportare tutti gli elementi.** Se ODBC esposte solo le funzionalità comuni a tutti i DBMS, sarebbe poco utili; Dopo tutto, pertanto molti diversi DBMS oggi esistono infatti che dispongono di diverse funzionalità. Se ODBC esposte tutte le funzionalità sono disponibile in qualsiasi sistema DBMS, sarebbe impossibile ritestare per implementare i driver.  
   
-     Invece ODBC espone un numero significativo di funzionalità, più sono supportati dalla maggior parte dei DBMS, ma richiede che i driver per implementare solo un subset di tali funzionalità. I driver di implementano le funzionalità rimanenti solo se sono supportate dal sistema DBMS sottostante o se si sceglie di emularli. Di conseguenza, è possibile creare applicazioni di sfruttare le funzionalità del sistema DBMS per una singola come viene esposta dal driver per DBMS, usare solo le funzionalità usate dai sistemi DBMS tutti, o per verificare il supporto di una particolare funzionalità e reagire di conseguenza.  
+     Al contrario, ODBC espone un numero significativo di funzionalità - altre superiore a quello supportato dalla maggior parte dei DBMS - ma richiede che i driver per implementare solo un subset di tali funzionalità. I driver di implementano le funzionalità rimanenti solo se sono supportate dal sistema DBMS sottostante o se si sceglie di emularli. Di conseguenza, è possibile creare applicazioni di sfruttare le funzionalità del sistema DBMS per una singola come viene esposta dal driver per DBMS, usare solo le funzionalità usate dai sistemi DBMS tutti, o per verificare il supporto di una particolare funzionalità e reagire di conseguenza.  
   
      In modo che un'applicazione può determinare quali funzionalità di un driver e il supporto di DBMS, sono disponibili due funzioni ODBC (**SQLGetInfo** e **SQLGetFunctions**) che restituiscono informazioni generali sui driver e DBMS funzionalità e un elenco di funzioni il driver supporta. Anche ODBC definisce già API e SQL grammatica livelli di conformità, che specificano gli intervalli ampi di funzionalità supportato dal driver. Per altre informazioni, vedere [livelli di conformità](../../odbc/reference/develop-app/conformance-levels.md).  
   

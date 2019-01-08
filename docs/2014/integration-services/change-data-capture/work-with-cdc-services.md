@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - cdcServ
@@ -13,12 +12,12 @@ ms.assetid: 4fc8edad-e16e-432f-a8ca-75f9a27444f3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c500fc1313fb4f5d6cbf6cd6f8c19a8662069e0e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a44d0a2833add4680636966cea805c19af32f267
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48105421"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52756933"
 ---
 # <a name="work-with-cdc-services"></a>Utilizzare i servizi CDC
   È possibile utilizzare CDC Service Configuration Console per creare un nuovo servizio CDC e preparare un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per CDC.  
@@ -41,7 +40,7 @@ ms.locfileid: "48105421"
  Verrà aperta la finestra di dialogo New Oracle CDC Service.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Come usare i servizi CDC](work-with-cdc-services.md)   
+ [Procedura di utilizzo dei servizi CDC](work-with-cdc-services.md)   
  [Creare e modificare un servizio Oracle CDC](create-and-edit-an-oracle-cdc-service.md)  
   
   

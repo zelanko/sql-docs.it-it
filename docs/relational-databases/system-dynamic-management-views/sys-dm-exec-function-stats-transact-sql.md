@@ -19,29 +19,29 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d3c4b57cd20addca8091bfef2bf3ecaf6e157817
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6c0064e35be2ab514e93b9119f7994849cf50cc4
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47844669"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52409738"
 ---
 # <a name="sysdmexecfunctionstats-transact-sql"></a>sys.dm_exec_function_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
   Restituisce dati aggregati statistiche sulle prestazioni per le funzioni memorizzato nella cache. La vista restituisce una riga per ogni piano memorizzato nella cache (funzione) e la durata della riga fino a quando la funzione rimane nella cache. Quando una funzione viene rimosso dalla cache, la riga corrispondente viene Elimina dalla vista. A quel punto, viene generato un evento di traccia SQL di perfomance Statistics simile a **DM exec_query_stats**. Restituisce informazioni sulle funzioni scalari, incluse le funzioni in memoria e funzioni scalari CLR. Non restituisce invece informazioni sulle funzioni con valori di tabella.  
   
- In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], le viste a gestione dinamica non possono esporre le informazioni che influenzerebbero l'indipendenza del database o le informazioni sugli altri database a cui l'utente dispone di accesso. Per evitare di esporre queste informazioni, ogni riga che contiene dati che non appartengono al tenant connesso viene esclusa tramite filtro.  
+ In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], le viste a gestione dinamica non possono esporre le informazioni che influenzerebbero l'indipendenza del database o le informazioni sugli altri database a cui l'utente dispone di accesso. Per evitare di esporre queste informazioni, ogni riga che contiene dati che non appartengono al tenant connesso viene filtrata.  
   
 > [!NOTE]
 > Una query iniziale di **DM exec_function_stats** potrebbe produrre risultati non accurati se è presente un carico di lavoro attualmente in esecuzione nel server. La riesecuzione della query può garantire risultati più accurati.  
   
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**database_id**|**int**|ID del database in cui risiede la funzione.|  
 |**object_id**|**int**|Numero di identificazione della funzione.|  
-|**type**|**char(2)**|Tipo di oggetto: FN = funzioni a valori scalari|  
+|**type**|**char(2)**|Tipo dell'oggetto:   FN = funzioni a valori scalari|  
 |**type_desc**|**nvarchar(60)**|Descrizione del tipo di oggetto: SQL_SCALAR_FUNCTION|  
 |**sql_handle**|**varbinary(64)**|Può essere utilizzato per correlare le query nelle **DM exec_query_stats** che sono stati eseguiti dall'interno di questa funzione.|  
 |**plan_handle**|**varbinary(64)**|Identificatore del piano in memoria. Si tratta di un identificatore temporaneo, che rimane costante solo se il piano rimane nella cache. Questo valore può essere utilizzato con il **DM exec_cached_plans** vista a gestione dinamica.<br /><br /> Sarà sempre 0x000 quando una tabella di query una memoria ottimizzate per la funzione compilata in modo nativo.|  

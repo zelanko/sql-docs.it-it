@@ -14,17 +14,17 @@ ms.assetid: d9efe145-3306-4d61-bd77-e2af43e19c34
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 433d67076130747fe0baa3ba1b01592bbb9f5dc3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 880546e50479de28c8b3aa98bb0439e54bd594b9
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48131551"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52524553"
 ---
 # <a name="database-engine-features-and-tasks"></a>Caratteristiche e attività del motore di database
-  Cercare informazioni che chiunque (designer, sviluppatore, analista o amministratore) può richiedere per compilare i database [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+  Trovare le informazioni che chiunque-finestra di progettazione, sviluppatore, analista o amministratore-è necessario compilare [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] i database.  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Istanze del motore di database &#40;SQL Server&#41;](configure-windows/database-engine-instances-sql-server.md)  
   
  [Caratteristiche del database](../relational-databases/database-features.md)  

@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: f711dc12ed5014dbc397e5a72f97f55350da7d38
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 4535ce33d0615cd98bf910da9b765a0e972131d7
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38002223"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52525658"
 ---
-# <a name="deployment-script-files---solution-deployment-config-settings"></a>File di Script di distribuzione - impostazioni di configurazione di distribuzione di soluzioni
+# <a name="deployment-script-files---solution-deployment-config-settings"></a>File di script di distribuzione - Impostazioni di configurazione della distribuzione della soluzione
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
 
   Il [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] distribuzione guidata di legge i ruoli e delle partizioni le opzioni di distribuzione è usare nello script di distribuzione dal \< *nome del progetto*>. configsettings file. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] crea questo file quando si compila il progetto [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] Usa le impostazioni di configurazione del progetto corrente per creare il \< *nome progetto*>. configsettings file.  
@@ -46,11 +46,11 @@ ms.locfileid: "38002223"
   
 -   Eseguire Distribuzione guidata di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in modo interattivo e specificare le impostazioni di configurazione per gli oggetti da distribuire nella pagina **Impostazione proprietà di configurazione** .  
   
-     -oppure-  
+     oppure  
   
 -   Eseguire Distribuzione guidata di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] attraverso il prompt dei comandi e impostarla in modo che venga eseguita in modalità file di risposte. Per altre informazioni sulla modalità file di risposte, vedere [Esecuzione della Distribuzione guidata Analysis Services](../../analysis-services/multidimensional-models/running-the-analysis-services-deployment-wizard.md).  
   
-     -oppure-  
+     oppure  
   
 -   Modificare il \< *nome progetto*> file. configsettings utilizzando un editor di testo.  
   

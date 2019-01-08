@@ -11,12 +11,12 @@ ms.assetid: 541c8b1f-c6c2-423d-a97d-65c379967e0c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 825bc3d35a0080933c73853a05bf1a6dd9ed3df8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f9a2172bdefebdbfd327d8d253e32cd63c254d8e
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48069713"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52419873"
 ---
 # <a name="powerpivot-management-dashboard-and-usage-data"></a>Dati di utilizzo e dashboard di gestione PowerPivot
   Il dashboard di gestione PowerPivot è una raccolta di report e web part predefiniti in Amministrazione centrale SharePoint che consente di amministrare una distribuzione di PowerPivot per SharePoint di SQL Server. Nel dashboard di gestione sono disponibili informazioni relative all'integrità del server, all'attività della cartella di lavoro e all'aggiornamento dati. I dati utilizzati nel dashboard provengono dalla raccolta dati di utilizzo di SharePoint.  
@@ -39,7 +39,7 @@ ms.locfileid: "48069713"
 ##  <a name="items"></a> Panoramica delle sezioni del dashboard  
  Nel dashboard di gestione PowerPivot sono contenuti web part e report incorporati che consentono di eseguire il drill-down in categorie di informazioni specifiche. Nell'elenco seguente sono descritte le singole parti del dashboard:  
   
-|Dashboard|Description|  
+|Dashboard|Descrizione|  
 |---------------|-----------------|  
 |Infrastruttura: integrità del server|Vengono mostrate le tendenze nel tempo relative all'utilizzo della CPU, al consumo di memoria e ai tempi di risposta delle query in modo che sia possibile valutare se le risorse di sistema vengono impegnate al massimo o rimangono sottoutilizzate.|  
 |Azioni|Sono contenuti i collegamenti ad altre pagine in Amministrazione centrale inclusi l'applicazione di servizio corrente, un elenco di applicazioni di servizio e la registrazione utilizzo.|  
@@ -82,7 +82,7 @@ ms.locfileid: "48069713"
   
 -   [Configurare la raccolta di dati di utilizzo per &#40;PowerPivot per SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md)  
   
- Al fine di acquisire dati sul sistema del server PowerPivot, verificare che siano abilitate la messaggistica degli eventi, la cronologia dell'aggiornamento dati e altre cronologie relative all'utilizzo per ogni applicazione di servizio PowerPivot. I dati di utilizzo e del server raccolti durante il normale funzionamento del server costituiscono i dati di origine che finiscono nel modello di dati interno. **Nota:** se si disabilita la cronologia degli eventi o dell'utilizzo, i report composti risulteranno incompleti o errati.  
+ Al fine di acquisire dati sul sistema del server PowerPivot, verificare che siano abilitate la messaggistica degli eventi, la cronologia dell'aggiornamento dati e altre cronologie relative all'utilizzo per ogni applicazione di servizio PowerPivot. I dati di utilizzo e del server raccolti durante il normale funzionamento del server costituiscono i dati di origine che finiscono nel modello di dati interno. **Nota:** Se si disabilita la cronologia degli eventi o dell'utilizzo, i report composti risulteranno incompleti o errati.  
   
 ##  <a name="edit"></a> Modificare il Dashboard PowerPivot  
  Gli utenti esperti nello sviluppo e nella personalizzazione di dashboard potranno modificare il dashboard in modo da includere nuove web part. È possibile modificare anche le proprietà delle web part incluse nel dashboard.  
@@ -93,7 +93,7 @@ ms.locfileid: "48069713"
  Per iniziare a utilizzare la creazione di report personalizzati, il dashboard di gestione PowerPivot fornisce un file Office Data Connection (ODC) per la connessione alla cartella di lavoro di origine. Ad esempio, è possibile utilizzare il file con estensione odc in Excel per la creazione di report aggiuntivi.  
   
 > [!NOTE]  
->  Modificare il file per evitare l'errore seguente in caso di tentativo di utilizzo del file con estensione odc in Excel: "Impossibile inizializzare l'origine dati". Nel file con estensione odc generato automaticamente è incluso un parametro che non è supportato dal provider OLE DB MSOLAP. Nelle istruzioni seguenti viene fornita la soluzione alternativa per la rimozione dei parametri.  
+>  Modificare il file per evitare l'errore seguente quando si tenta di usare il file con estensione odc in Excel: "Inizializzazione dell'origine dati non riuscita". Nel file con estensione odc generato automaticamente è incluso un parametro che non è supportato dal provider OLE DB MSOLAP. Nelle istruzioni seguenti viene fornita la soluzione alternativa per la rimozione dei parametri.  
   
  È necessario essere l'amministratore di una farm o di un servizio per compilare report basati sulla cartella di lavoro di PowerPivot in Amministrazione centrale.  
   
@@ -125,7 +125,7 @@ ms.locfileid: "48069713"
   
     7.  Digitare un nome per la connessione, quindi fare clic su **Avanti**.  
   
-    8.  In Specifica di una query MDX fare clic su **Progettazione** per aprire la finestra Progettazione query MDX al fine di assemblare i dati che si desidera utilizzare. **Se si visualizza il messaggio di errore** "Il formato del nome della proprietà Modalità di modifica non è corretto", verificare la modifica del file ODC.  
+    8.  In specificare una Query MDX fare clic su **Design** per aprire la finestra Progettazione query MDX per assemblare i dati che si desidera utilizzare **se viene visualizzato il messaggio di errore** "il nome della proprietà modalità di modifica non è formattato correttamente.", verificare si modifica il. File con estensione ODC.  
   
     9. Scegliere **OK** , quindi **Fine**.  
   

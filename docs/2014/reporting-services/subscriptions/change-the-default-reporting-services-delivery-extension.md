@@ -13,19 +13,19 @@ ms.assetid: 5f6fee72-01bf-4f6c-85d2-7863c46c136b
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 054d67de8b05d7f3b913ade660902c764cab9b08
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 40f80f6a86e8a73241ee681719c684bf2ba39e02
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48206831"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52394725"
 ---
 # <a name="change-the-default-reporting-services-delivery-extension"></a>Modificare l'estensione per il recapito predefinita di Reporting Services
   È possibile modificare le impostazioni di configurazione di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] per modificare l'estensione per il recapito predefinita visualizzata nell'elenco **Recapito** di una pagina di definizione della sottoscrizione. Ad esempio, è possibile modificare la configurazione in modo che, quando viene creata una nuova sottoscrizione, il recapito della condivisione file venga selezionato per impostazione predefinita al posto del recapito tramite posta elettronica. È inoltre possibile modificare l'ordine con cui sono elencate le estensioni per il recapito nell'interfaccia utente.  
   
  **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] | Modalità SharePoint di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]   
   
- [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] è incluso il recapito tramite posta elettronica e condivisione di File di Windows sono estensioni. Nel server di report potrebbero essere disponibili ulteriori estensioni per il recapito, se sono state distribuite estensioni personalizzate o di terze parti per supportare funzionalità di recapito particolari. Un'estensione per il recapito è disponibile se è distribuita in un server di report.  
+ [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] include le estensioni per il recapito tramite posta elettronica e condivisione file di Windows. Nel server di report potrebbero essere disponibili ulteriori estensioni per il recapito, se sono state distribuite estensioni personalizzate o di terze parti per supportare funzionalità di recapito particolari. Un'estensione per il recapito è disponibile se è distribuita in un server di report.  
   
 ## <a name="default-native-mode-report-server-configuration"></a>Configurazione dei server di report con modalità nativa predefinita  
  L'ordine con cui un'estensione per il recapito viene visualizzata nell'elenco **Recapito** di Gestione report dipende dall'ordine delle voci dell'estensione presenti nel file **RSReportServer.config** . Ad esempio, nell'immagine seguente Posta elettronica è visualizzato per primo ed è selezionato per impostazione predefinita.  
@@ -86,26 +86,26 @@ ms.locfileid: "48206831"
   
      Il seguente evento viene scritto nel registro eventi di Windows durante la lettura della configurazione.  
   
-     **Event ID:** 109  
+     **ID evento:** 109  
   
-     **Origine:** servizio del server di report di Windows (nome istanza)  
+     **Origine:** Servizio del server di report di Windows (nome istanza)  
   
      Il file RSReportServer.config è stato modificato  
   
 ## <a name="sharepoint-mode-report-servers"></a>Server di report in modalità SharePoint  
- [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Modalità SharePoint archivia le informazioni delle estensioni nei database dell'applicazione di servizio SharePoint e non nel file Rsrreportserver. In modalità SharePoint, la configurazione delle estensioni per il recapito viene modificata con PowerShell.  
+ [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] La modalità SharePoint archivia le informazioni delle estensioni nei database dell'applicazione del servizio SharePoint e non nel file RsrReportServer.config. In modalità SharePoint, la configurazione delle estensioni per il recapito viene modificata con PowerShell.  
   
 #### <a name="configure-the-default-delivery-extension"></a>Configurare l'estensione per il recapito predefinita  
   
 1.  Aprire la **shell di gestione di SharePoint**.  
   
-2.  È possibile ignorare questo passaggio se si conosce già il nome del [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] applicazione del servizio. Usare il comando PowerShell seguente all'elenco di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] applicazioni nella farm di SharePoint del servizio.  
+2.  È possibile ignorare questo passaggio se si conosce già il nome dell'applicazione del servizio di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] . Usare le seguenti funzioni PowerShell per elencare le applicazioni del servizio di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] nella farm di SharePoint.  
   
     ```  
     get-sprsserviceapplication | format-list *  
     ```  
   
-3.  Eseguire il comando PowerShell seguente per verificare l'estensione per il recapito predefinita corrente per il [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] "ssrsapp" applicazione di servizio.  
+3.  Eseguire la funzione PowerShell seguente per verificare l'estensione per il recapito predefinita corrente per l'applicazione di servizio "ssrsapp" di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
   
     ```  
     $app=get-sprsserviceapplication | where {$_.name -like "ssrsapp*"};Get-SPRSExtension -identity $app | where{$_.ServerDirectivesXML -like "<DefaultDelivery*"} | format-list *  

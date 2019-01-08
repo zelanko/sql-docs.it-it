@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - job category
@@ -13,12 +13,12 @@ ms.assetid: 629c3e06-f933-483b-8621-280dbb7a7bd1
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3373d6bb3adf749cc6c5f4aca3face1954ee6295
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 53e0424f15818903e913fc41e4a5a4a3fdade41d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48206231"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52786403"
 ---
 # <a name="organize-jobs"></a>organizzare processi
   Le categorie consentono di organizzare i processi per semplificare le operazioni di raggruppamento e filtro. È ad esempio possibile organizzare tutti i processi di backup dei database raggruppandoli nella categoria Manutenzione database. È inoltre possibile creare categorie di processi personalizzate.  
@@ -34,7 +34,7 @@ ms.locfileid: "48206231"
 |Descrive come creare una categoria di processi.|[Creare una categoria di processi](create-a-job-category.md)|  
 |Descrive come eliminare una categoria di processi.|[Eliminare una categoria di processi](delete-a-job-category.md)|  
 |Descrive come assegnare un processo a una categoria di processi.|[Assegnare un processo a una categoria di processi](assign-a-job-to-a-job-category.md)|  
-|Descrive come modificare l'appartenenza a una categoria di processi.|[Modificare l'appartenenza a una categoria di processi](change-the-membership-of-a-job-category.md)|  
+|Descrive come modificare l'appartenenza a una categoria di processi.|[Change the Membership of a Job Category](change-the-membership-of-a-job-category.md)|  
 |Descrive come visualizzare un elenco di informazioni sulla categoria.|[Elencare le informazioni sulle categorie di processi](list-job-category-information.md)|  
   
   

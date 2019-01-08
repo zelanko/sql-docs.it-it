@@ -1,5 +1,5 @@
 ---
-title: Definizione di un tipo di dati di origine vista (Analysis Services) | Documenti Microsoft
+title: Definizione di un tipo di dati di origine vista (Analysis Services) | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 6966a0763146c9fd787be39d5be011704c048f66
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 545204349cf895dd0592f1a2dcba66de4cb054ca
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34025848"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52523097"
 ---
 # <a name="defining-a-data-source-view-analysis-services"></a>Definizione di una vista origine dati (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  Una vista origine dati include il modello logico dello schema usato dagli oggetti di database multidimensionali di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , ovvero cubi, dimensioni e strutture di data mining. Una vista origine dati è la definizione di metadati, in formato XML, degli elementi dello schema utilizzati dal modello UDM (Unified Dimensional Model) e dalle strutture di data mining. Una vista origine dati ha le caratteristiche seguenti:  
+  Una vista origine dati contiene il modello logico dello schema usato dal [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database multidimensionale gli oggetti, ovvero cubi, dimensioni e strutture di data mining. Una vista origine dati è la definizione di metadati, in formato XML, degli elementi dello schema utilizzati dal modello UDM (Unified Dimensional Model) e dalle strutture di data mining. Una vista origine dati ha le caratteristiche seguenti:  
   
 -   Include i metadati che rappresentano oggetti selezionati da una o più origini dati sottostanti oppure i metadati che verranno utilizzati per generare un archivio dati relazionale sottostante, se per la generazione dello schema viene seguito l'approccio dall'alto verso il basso.  
   
@@ -95,7 +95,7 @@ ms.locfileid: "34025848"
   
 4.  **Filtrare gli oggetti disponibili**  
   
-     Se l'elenco Oggetti disponibili include un numero molto elevato di oggetti, è possibile ridurlo applicando un semplice filtro che consente di specificare una stringa come criteri di selezione. Ad esempio, se si digita **dbo** e si fa clic sul pulsante **Filtro** , nell'elenco **Oggetti disponibili** verranno visualizzati soltanto gli elementi che iniziano con "dbo". Il filtro può essere una stringa parziale, ad esempio se si immette "sal" vengono restituiti gli elementi "sales" e "salary", ma non può includere più stringhe o operatori.  
+     Se l'elenco Oggetti disponibili include un numero molto elevato di oggetti, è possibile ridurlo applicando un semplice filtro che consente di specificare una stringa come criteri di selezione. Ad esempio, se si digita **dbo** e si fa clic sul pulsante **Filtro** , nell'elenco **Oggetti disponibili** verranno visualizzati soltanto gli elementi che iniziano con "dbo". Il filtro può essere una stringa parziale (ad esempio, "sal" restituisce sales e salary) ma non può includere più stringhe o operatori.  
   
 5.  Per le origini dati relazionali che non dispongono di relazioni tra tabelle definite, viene visualizzata una pagina **Corrispondenza nomi** che consente di selezionare il metodo di corrispondenza nomi appropriato. Per altre informazioni, vedere la sezione [Impostare i criteri di corrispondenza nomi per le relazioni](#bkmk_NameMatch) di questo argomento.  
   
@@ -114,7 +114,7 @@ ms.locfileid: "34025848"
   
  In base alla risposta specificata, la Creazione guidata vista origine dati consente di definire la corrispondenza tra i nomi di colonna e di creare relazioni tra le diverse tabelle nella vista origine dati. È possibile specificare uno dei criteri elencati nella tabella seguente.  
   
-|Criteri di corrispondenza nomi|Description|  
+|Criteri di corrispondenza nomi|Descrizione|  
 |----------------------------|-----------------|  
 |**Stesso nome della chiave primaria**|Il nome della colonna chiave esterna nella tabella di origine è uguale a quello della colonna chiave primaria nella tabella di destinazione. Ad esempio, il nome della colonna chiave esterna `Order.CustomerID` è uguale a quello della colonna chiave primaria `Customer.CustomerID`.|  
 |**Stesso nome della tabella di destinazione**|Il nome della colonna chiave esterna nella tabella di origine è uguale a quello della tabella di destinazione. Ad esempio, il nome della colonna chiave esterna `Order.Customer` è uguale a quello della colonna chiave primaria `Customer.CustomerID`.|  
@@ -130,9 +130,9 @@ ms.locfileid: "34025848"
  [Definire chiavi primarie logiche in una vista origine dati &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/define-logical-primary-keys-in-a-data-source-view-analysis-services.md)   
  [Definire calcoli denominati in una vista origine dati &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)   
  [Definire query denominate in una vista origine dati &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/define-named-queries-in-a-data-source-view-analysis-services.md)   
- [Sostituire una tabella o una Query denominata in una vista origine dati &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/replace-a-table-or-a-named-query-in-a-data-source-view-analysis-services.md)   
- [Utilizzare diagrammi in Progettazione vista origine dati & #40; Analysis Services & #41;](../../analysis-services/multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)   
- [Esplorare i dati in una vista origine dati &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/explore-data-in-a-data-source-view-analysis-services.md)   
+ [Sostituire una tabella o una query denominata in una vista origine dati &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/replace-a-table-or-a-named-query-in-a-data-source-view-analysis-services.md)   
+ [Utilizzare diagrammi in Progettazione vista origine dati &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)   
+ [Esplorare dati in una vista origine dati &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/explore-data-in-a-data-source-view-analysis-services.md)   
  [Eliminare una vista origine dati &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/delete-a-data-source-view-analysis-services.md)   
  [Aggiornare lo schema in una vista origine dati &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/refresh-the-schema-in-a-data-source-view-analysis-services.md)  
   

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- configmgr-client
+ms.technology: configuration
 ms.topic: conceptual
 ms.assetid: e9b35cb5-d8ae-42ea-b59e-deedc99c4823
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8d72dbd993c3944131e80ad4ba6215cee3d3cf2e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 686eb039660efb6e3596b9dac88fc0d24deacaee
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48147479"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52771833"
 ---
 # <a name="unknown-service-log-on-tab"></a>Servizio sconosciuto (scheda Accesso)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non è in grado di identificare il servizio.  

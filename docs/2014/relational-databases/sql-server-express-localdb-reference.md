@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: ''
 ms.topic: reference
 ms.assetid: 25b71829-bdb1-46f4-ac36-80ddced52f3d
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: e97e88da92dc001a4c55618894b08ceea51096c3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 06774a1a450570973541d4e77db8b7c259ca0243
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48225721"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52799613"
 ---
 # <a name="sql-server-express-localdb-reference"></a>Riferimento al database locale di SQL Server Express
   In questa sezione sono contenute informazioni sul database locale di SQL Server Express:  

@@ -13,12 +13,12 @@ ms.assetid: 084c7020-f729-4f91-90e0-143f85fa68d1
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 638a79e5785c74a11cb2e424739c3d80959a4d40
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 233b6824ef527a9ed4e7e02164a08e31e41f3699
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47843079"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52409503"
 ---
 # <a name="connecting-to-mysql-mysqltosql"></a>Connessione a MySQL (MySQLToSQL)
 Per eseguire la migrazione di database MySQL a SQL Server o SQL Azure, è necessario connettersi al database MySQL che si desidera eseguire la migrazione. Quando ci si connette, SSMA Ottiene i metadati relativi a tutti gli schemi di MySQL e quindi visualizzato nel riquadro di esplorazione di metadati di MySQL. SSMA archivia le informazioni sui server di database, ma non archivia le password.  
@@ -62,20 +62,20 @@ Quando ci si connette a un database, SSMA legge i metadati del database e quindi
   
     3.  Nel **Password** casella, immettere la password per il nome utente specificato.  
   
-5.  **SSL:** se si desidera connettersi in modo sicuro a MySQL, avvalersi di Secure Socket Layer (SSL) selezionando il **SSL** casella di controllo.  
+5.  **SSL:** Se si desidera connettersi in modo sicuro a MySQL, assicurarsi di usare di Secure Socket Layer (SSL), controllare la **SSL** casella di controllo.  
   
-6.  **Configura:** offre un'opzione per configurare la connessione a MySQL tramite Secure Socket Layer (SSL).  
+6.  **Configurare:** Fornisce un'opzione per configurare la connessione a MySQL tramite Secure Socket Layer (SSL).  
   
     > [!NOTE]  
     > Per abilitare **Configure**, SSL deve essere impostata su **True**.  
   
     Facendo clic sul pulsante "Configura", viene visualizzata una finestra di dialogo. Utilizzare la crittografia durante la connessione al MySQL Database, percorso file tre certificato seguenti presente nella finestra di dialogo deve essere definito [Privacy avanzata posta certificati (PEM)]:  
   
-    -   **Autorità di certificazione SSL:** specifica il percorso di un file con un elenco di attendibilità SSL CA.  
+    -   **Autorità di certificazione SSL:** Specifica il percorso di un file con un elenco di attendibilità SSL CA.  
   
-    -   **Certificato SSL:** specifica il nome del file del certificato SSL da utilizzare per stabilire una connessione sicura.  
+    -   **Certificato SSL:** Specifica il nome del file del certificato SSL da utilizzare per stabilire una connessione sicura.  
   
-    -   **CHIAVE SSL:** specifica il nome del file di chiave SSL da utilizzare per stabilire una connessione sicura.  
+    -   **CHIAVE SSL:** Specifica il nome del file di chiave SSL da utilizzare per stabilire una connessione sicura.  
   
     > [!NOTE]  
     > -   Il **OK** pulsante viene abilitato quando sono state fornite le informazioni necessarie. Se sono presenti i percorsi dei file non validi, il pulsante "OK" rimarrà disabilitato.  

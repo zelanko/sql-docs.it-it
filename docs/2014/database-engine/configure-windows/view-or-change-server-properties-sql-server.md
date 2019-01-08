@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - viewing server properties
@@ -16,12 +15,12 @@ ms.assetid: 55f3ac04-5626-4ad2-96bd-a1f1b079659d
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 9028735d7c33220dc4a9728f5cb3171207e8eee5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 83fc6db21fd2892ebbc42b329515a94b371cb1ce
+ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48157861"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52641542"
 ---
 # <a name="view-or-change-server-properties-sql-server"></a>Visualizzare o modificare le proprietà del server (SQL Server)
   In questo argomento viene illustrato come visualizzare o modificare le proprietà di un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]o Gestione configurazione SQL Server.  
@@ -32,7 +31,7 @@ ms.locfileid: "48157861"
   
      [Limitazioni e restrizioni](#Restrictions)  
   
-     [Security](#Security)  
+     [Sicurezza](#Security)  
   
 -   **Per visualizzare o modificare le proprietà del server tramite:**  
   
@@ -42,7 +41,7 @@ ms.locfileid: "48157861"
   
      [Gestione configurazione SQL Server](#PowerShellProcedure)  
   
--   **Completamento:**  [Dopo la modifica delle proprietà del server](#FollowUp)  
+-   **Completamento:**  [Dopo aver modificato le proprietà del server](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> Prima di iniziare  
   
@@ -70,7 +69,7 @@ ms.locfileid: "48157861"
   
 2.  Nella finestra di dialogo **Proprietà server** fare clic su una pagina per visualizzare o modificare le relative informazioni del server. Alcune proprietà sono di sola lettura.  
   
-##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
   
 #### <a name="to-view-server-properties-by-using-the-serverproperty-built-in-function"></a>Per visualizzare le proprietà del server tramite la funzione predefinita SERVERPROPERTY  
   
@@ -155,7 +154,7 @@ GO
   
 4.  Nella finestra di dialogo **SQL Server (\<***nomeistanza***>) Proprietà** modificare le proprietà del server nella scheda **Servizio** o **Avanzate** e fare clic su **OK**.  
   
-##  <a name="FollowUp"></a> Completamento: Dopo la modifica delle proprietà del server  
+##  <a name="FollowUp"></a> Completamento: Dopo aver modificato le proprietà del server  
  Per alcune proprietà, potrebbe essere necessario riavviare il server per rendere effettiva la modifica.  
   
 ## <a name="see-also"></a>Vedere anche  

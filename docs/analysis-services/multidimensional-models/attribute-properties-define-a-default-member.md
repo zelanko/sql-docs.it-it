@@ -1,5 +1,5 @@
 ---
-title: Definire un membro predefinito | Documenti Microsoft
+title: Definire un membro predefinito | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: e112d0cfdd1e4558dcad1888531774357ce0102a
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 10b5776a4d4be5f31522740c28a6142a7e213576
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34020918"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52516727"
 ---
-# <a name="attribute-properties---define-a-default-member"></a>Attributo di proprietà: definire un membro predefinito
+# <a name="attribute-properties---define-a-default-member"></a>Proprietà degli attributi - Definire un membro predefinito
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Il membro predefinito di una gerarchia dell'attributo viene utilizzato per valutare le espressioni quando una gerarchia dell'attributo non è inclusa in una query. Il membro predefinito viene ignorato ogni volta che una query include una gerarchia dell'attributo o dell'utente contenente l'attributo che dà origine alla gerarchia dell'attributo, poiché viene utilizzato il membro specificato nella query.  
   
@@ -34,11 +34,11 @@ ms.locfileid: "34020918"
   
  L'impostazione della proprietà **DefaultMember** di un attributo viene applicata a tutte le gerarchie in cui è presente l'attributo. Non è possibile utilizzare impostazioni diverse per gerarchie diverse in una dimensione. Se, ad esempio, il membro [1998] è il membro predefinito di un attributo [Year], questa impostazione verrà applicata a tutte le gerarchie della dimensione. L'impostazione della proprietà **DefaultMember** in questo caso non può essere [1998] in una gerarchia e [1997] in un'altra.  
   
- Se si definisce un membro predefinito per un livello particolare di una gerarchia che non viene aggregato in modo naturale, sarà necessario definire membri predefiniti in tutti i livelli al di sopra di tale livello nella gerarchia. Ad esempio, nella gerarchia All-Countries–Climate non è possibile definire un membro predefinito per Climate se non si definisce un membro predefinito per Countries. Se non si rispetta questo requisito, si verificheranno errori durante l'esecuzione delle query.  
+ Se si definisce un membro predefinito per un livello particolare di una gerarchia che non viene aggregato in modo naturale, sarà necessario definire membri predefiniti in tutti i livelli al di sopra di tale livello nella gerarchia. Nella gerarchia All-paesi-climatici, ad esempio, è possibile definire un membro predefinito per Climate se non si definisce un membro predefinito per Countries. Se non si rispetta questo requisito, si verificheranno errori durante l'esecuzione delle query.  
   
- Quando i livelli di una gerarchia vengono aggregati in modo naturale, è possibile definire un membro predefinito per qualsiasi attributo della gerarchia senza tenere conto di altri attributi di tale gerarchia. Ad esempio, nella gerarchia Country–Province–City è possibile definire un membro predefinito per City quale [City].[Montreal] senza definire un membro predefinito per State o Country.  
+ Quando i livelli di una gerarchia vengono aggregati in modo naturale, è possibile definire un membro predefinito per qualsiasi attributo della gerarchia senza tenere conto di altri attributi di tale gerarchia. Ad esempio, nella gerarchia di stato-provincia-città, è possibile definire un membro predefinito per City quale [City]. [Montreal] senza definire il membro predefinito per State o Country.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Configurare il & #40; Tutti i & #41; Livello per le gerarchie di attributi](../../analysis-services/multidimensional-models/database-dimensions-configure-the-all-level-for-attribute-hierarchies.md)  
+ [Configurare il livello &#40;Totale&#41; per le gerarchie di attributi](../../analysis-services/multidimensional-models/database-dimensions-configure-the-all-level-for-attribute-hierarchies.md)  
   
   

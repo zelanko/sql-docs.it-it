@@ -4,18 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 ms.assetid: 176e73b6-08aa-48ec-b349-e84b431e65cc
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d29b9d0237de9ccdea82a9109435db5893a10b1b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4ea87ec20b6ea16074d24d28be4ded5c1be24548
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48062100"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52768623"
 ---
 # <a name="modify-the-target-servers-associated-with-a-sql-server-agent-master-job"></a>Modificare i server di destinazione associati a un processo master di SQL Server Agent
   In questo argomento verrà descritto come modificare i server di destinazione associati a un processo master di SQL Server Agent in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -26,7 +26,7 @@ ms.locfileid: "48062100"
   
      [Limitazioni e restrizioni](#Restrictions)  
   
-     [Security](#Security)  
+     [Sicurezza](#Security)  
   
 -   **Per modificare i server di destinazione associati a un processo master di SQL Server Agent tramite:**  
   
@@ -37,12 +37,12 @@ ms.locfileid: "48062100"
 ##  <a name="BeforeYouBegin"></a> Prima di iniziare  
   
 ###  <a name="Restrictions"></a> Limitazioni e restrizioni  
- Un processo master di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent non può essere destinato sia a server locali che a server remoti.  
+ Un processo master di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent non può essere destinato sia a server locali sia a server remoti.  
   
 ###  <a name="Security"></a> Sicurezza  
   
 ####  <a name="Permissions"></a> Permissions  
- È possibile modificare solo i processi di cui si è proprietari, a meno che non si appartenga al ruolo predefinito del server **sysadmin** . Per informazioni dettagliate, vedere [Implement SQL Server Agent Security](implement-sql-server-agent-security.md).  
+ È possibile modificare solo i processi di cui si è proprietari, a meno che non si appartenga al ruolo predefinito del server **sysadmin** . Per informazioni dettagliate, vedere [Implementazione della sicurezza di SQL Server Agent](implement-sql-server-agent-security.md).  
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
   
@@ -56,11 +56,11 @@ ms.locfileid: "48062100"
   
 4.  Fare clic con il pulsante destro del mouse sul processo in cui si vuole modificare il server di destinazione e scegliere **Proprietà**.  
   
-5.  Nella finestra di dialogo **Proprietà processo –***nome_processo* selezionare **Server di destinazione** in **Seleziona una pagina**. Per altre informazioni sulle opzioni disponibili in questa pagina, vedere [delle proprietà del processo: nuovo processo di &#40;pagina server di destinazione&#41;](job-properties-new-job-targets-page.md).  
+5.  Nella finestra di dialogo **Proprietà processo -***nome_processo* selezionare **Server di destinazione** in **Selezione pagina**. Per altre informazioni sulle opzioni disponibili in questa pagina, vedere [proprietà processo: Nuovo processo di &#40;è destinato a pagina&#41;](job-properties-new-job-targets-page.md).  
   
 6.  Al termine, fare clic su **OK**.  
   
-##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
   
 #### <a name="to-delete-a-target-server-currently-associated-with-a-sql-server-agent-master-job"></a>Per eliminare un server di destinazione attualmente associato a un processo master di SQL Server Agent  
   

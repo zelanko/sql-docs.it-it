@@ -22,21 +22,21 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0f77ccdfc7c236d1f009ff872712991a4c104fc3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f3fac82c2fd669bb1a7dd3f45b5a614738fdf189
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47779689"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52529891"
 ---
 # <a name="sysfulltextlanguages-transact-sql"></a>sys.fulltext_languages (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  In questa vista del catalogo è contenuta una riga per ogni lingua i cui word breaker sono registrati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. In ogni riga è visualizzato l'identificatore LCID e il nome della lingua. Quando si registrano i word breaker per una lingua, le altre risorse linguistiche, ovvero stemmer, parole non significative e file del thesaurus, risultano disponibili per le operazioni di indicizzazione/query full-text. Il valore di **name** oppure **lcid** può essere specificato nella query full-text e dell'indice full-text [!INCLUDE[tsql](../../includes/tsql-md.md)] istruzioni.  
+  In questa vista del catalogo è contenuta una riga per ogni lingua i cui word breaker sono registrati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. In ogni riga è visualizzato l'identificatore LCID e il nome della lingua. Quando i word breaker sono registrati per un linguaggio relativo altre risorse linguistiche-stemmer, parole non significative (parole non significative) e diventano i file del thesaurus disponibili per operazioni di indicizzazione/query full-text. Il valore di **name** oppure **lcid** può essere specificato nella query full-text e dell'indice full-text [!INCLUDE[tsql](../../includes/tsql-md.md)] istruzioni.  
    
-|colonna|Tipo di dati|Description|  
+|colonna|Tipo di dati|Descrizione|  
 |------------|---------------|-----------------|  
-|**LCID**|**int**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Identificatore delle impostazioni locali (LCID) di Windows per la lingua.|  
+|**lcid**|**int**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Identificatore delle impostazioni locali (LCID) di Windows per la lingua.|  
 |**name**|**sysname**|È il valore dell'alias in [Sys. syslanguages](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) corrispondente al valore di **lcid** o la rappresentazione di stringa dell'identificatore LCID numerico.|  
   
 ## <a name="values-returned-for-default-languages"></a>Valori restituiti per le lingue predefinite  
@@ -61,7 +61,7 @@ ms.locfileid: "47779689"
 |Tedesco|1031|  
 |**Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Greco|1032|  
 |Gujarati|1095|  
-|Hebrew|1037|  
+|Ebraico|1037|  
 |Hindi|1081|  
 |Islandese|1039|  
 |Indonesiano|1057|  

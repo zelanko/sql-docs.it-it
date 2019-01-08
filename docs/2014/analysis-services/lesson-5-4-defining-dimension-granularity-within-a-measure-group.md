@@ -11,12 +11,12 @@ ms.assetid: 4f079485-9eb4-405c-9a20-81258298b810
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8936d7c79538f4cb609f9208c6bd458369093076
-ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
+ms.openlocfilehash: e1d7b619cb711938f07ae7902dc1b9544adc5890
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49460926"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512288"
 ---
 # <a name="defining-dimension-granularity-within-a-measure-group"></a>Definizione della granularità della dimensione in un gruppo di misure
   È possibile dimensionare le tabelle dei fatti a diversi livelli di dettaglio o granularità a seconda degli scopi. È ad esempio possibile registrare per ogni giorno i dati relativi alle vendite per rivenditore o le vendite effettuate tramite Internet, mentre le informazioni sulle quote di vendita esistono solo per il mese o il trimestre. In questi casi è possibile che la dimensione temporale abbia un livello di dettaglio diverso per ognuna di queste diverse tabelle dei fatti. Sebbene sia possibile definire una nuova dimensione del database come dimensione temporale con tale diverso livello di dettaglio, in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]è disponibile un modo più semplice.  
@@ -141,7 +141,7 @@ ms.locfileid: "49460926"
   
 10. Fare clic su **OK**.  
   
-11. Fare clic sulla cella nel punto di intersezione tra la dimensione **Sales Territory** e il gruppo di misure **Sales Quotas 1** e quindi fare clic sul pulsante Sfoglia (**…**). Verrà visualizzata la finestra di dialogo **Definisci relazione** .  
+11. Fare clic nella cella all'intersezione tra il **territorio vendita** dimensione e il **Sales Quotas 1** gruppo di misure e quindi fare clic sul pulsante Sfoglia (**...** ). Verrà visualizzata la finestra di dialogo **Definisci relazione** .  
   
 12. Nell'elenco **Selezionare il tipo di relazione** selezionare **Riferimento**.  
   

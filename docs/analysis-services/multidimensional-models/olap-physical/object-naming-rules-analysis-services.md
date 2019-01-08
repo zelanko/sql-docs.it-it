@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 8777a346fe95f8399d14651fb00517fe0f599496
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 7267097b1a06cb44c801ed20cbfd206c330328ff
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50147957"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52509470"
 ---
 # <a name="object-naming-rules-analysis-services"></a>Regole di denominazione degli oggetti (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -78,10 +78,10 @@ ms.locfileid: "50147957"
   
 |Livello di compatibilità del database e modalità del server|Caratteri riservati consentiti?|  
 |--------------------------------------------------|----------------------------------|  
-|MOLAP (tutte le versioni)|no|  
-|Tabulare - 1050|no|  
-|Tabulare - 1100|no|  
-|Tabulare - 1130 e superiore|Sì|  
+|MOLAP (tutte le versioni)|No|  
+|Tabulare - 1050|No|  
+|Tabulare - 1100|No|  
+|Tabulare - 1130 e superiore|Yes|  
   
  I database possono avere un oggetto ModelType predefinito. L'impostazione predefinita è equivalente a multidimensionale e pertanto non supporta l'utilizzo dei caratteri riservati nei nomi delle colonne.  
   

@@ -20,16 +20,16 @@ ms.assetid: 6b5b7514-e9cb-4cfd-8b7a-ab51dfab9efa
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a0815a5d0597fabb6b4f5e942d2bbb92b7ae57e9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bac7f88dcbd9895cfd0d07a5993ab9e38a4608d0
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47727538"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53214732"
 ---
 # <a name="sqldrivers-function"></a>Funzione SQLDrivers
 **Conformità**  
- Versione introdotta: Conformità 2.0 standard ODBC: ODBC  
+ Versione introdotta: Conformità agli standard 2.0 ODBC: ODBC  
   
  **Riepilogo**  
  **SQLDrivers** Elenca le descrizioni di driver e parole chiave di attributo del driver. Questa funzione è implementata solo da Gestione Driver.  
@@ -84,9 +84,9 @@ SQLRETURN SQLDrivers(
 ## <a name="diagnostics"></a>Diagnostica  
  Quando **SQLDrivers** restituisce SQL_ERROR o SQL_SUCCESS_WITH_INFO, un valore SQLSTATE associato può essere ottenuto chiamando **SQLGetDiagRec** con un *HandleType* di SQL_HANDLE_ENV e un *gestiscono* dei *EnvironmentHandle*. Nella tabella seguente sono elencati i valori SQLSTATE normalmente restituiti dal **SQLDrivers** e illustra ognuna nel contesto di questa funzione; la notazione "(DM)" precede le descrizioni di SQLSTATE restituiti da Gestione Driver. Il codice restituito a ogni valore SQLSTATE è SQL_ERROR, se non specificato diversamente.  
   
-|SQLSTATE|Errore|Description|  
+|SQLSTATE|Errore|Descrizione|  
 |--------------|-----------|-----------------|  
-|01000|Avviso generale|(DM) messaggio informativo specifici del Driver Manager. (Funzione restituisce SQL_SUCCESS_WITH_INFO).|  
+|01000|Avviso generale|(DM) messaggio informativo di gestione Driver specifico. (Funzione restituisce SQL_SUCCESS_WITH_INFO).|  
 |01004|Stringa troncati di dati a destra|(DM) il buffer \* *DriverDescription* non era sufficientemente grande per restituire la descrizione completa del driver. Pertanto, la descrizione sono stata troncata. Viene restituita la lunghezza della descrizione del driver completo nella \* *DescriptionLengthPtr*. (Funzione restituisce SQL_SUCCESS_WITH_INFO).<br /><br /> (DM) il buffer \* *DriverAttributes* non era sufficientemente grande per restituire l'elenco completo delle coppie di valore di attributo. Pertanto, l'elenco è stato troncato. Viene restituita la lunghezza dell'elenco di coppie valore dell'attributo non troncato **AttributesLengthPtr*. (Funzione restituisce SQL_SUCCESS_WITH_INFO).|  
 |HY000|Errore generale|Si è verificato un errore per cui si è verificato alcun errore SQLSTATE specifico e per cui è stato definito alcun SQLSTATE specifici dell'implementazione. Il messaggio di errore restituito da **SQLGetDiagRec** nel  *\*MessageText* buffer viene descritto l'errore e la relativa causa.|  
 |HY001|Errore di allocazione della memoria|(DM) The Driver Manager: Impossibile allocare la memoria che è necessario per supportare l'esecuzione o il completamento della funzione.|  

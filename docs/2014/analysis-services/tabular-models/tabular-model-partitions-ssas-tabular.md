@@ -13,12 +13,12 @@ ms.assetid: 041c269f-a229-4a41-8794-6ba4b014ef83
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7551cd654fbecf48e4d5bb101531ff412365ee02
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a8cfe346c56b767b2986ea929271a1ee0e601953
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48089231"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52417575"
 ---
 # <a name="tabular-model-partitions-ssas-tabular"></a>Partizioni di modelli tabulari (SSAS tabulare)
   Le partizioni consentono di dividere una tabella in parti logiche. Ogni partizione può quindi essere elaborata (aggiornata) indipendentemente dalle altre. Le partizioni definite per un modello durante la relativa creazione vengono duplicate in un modello distribuito. Una volta distribuite, è possibile gestire tali partizioni e crearne di nuove tramite la finestra di dialogo **Partizioni** in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o tramite uno script. In questo argomento vengono descritte le partizioni in un database modello tabulare distribuito. Per altre informazioni sulla creazione e sulla gestione di partizioni durante la creazione di un modello, vedere [Partizioni &#40;SSAS tabulare&#41;](partitions-ssas-tabular.md).  
@@ -36,7 +36,7 @@ ms.locfileid: "48089231"
 ##  <a name="bkmk_benefits"></a> Vantaggi  
  Un modello di progetto efficace consente di utilizzare le partizioni per eliminare elaborazioni e successivi carichi del processore non necessari nei server Analysis Services assicurando, nel contempo, che i dati vengano elaborati e aggiornati con una frequenza tale da riflettere i dati più recenti dalle origini dati.  
   
- Ad esempio, in un modello tabulare può essere disponibile una tabella Sales in cui sono inclusi i dati di vendita per l'anno fiscale 2011 e tutti gli anni fiscali precedenti. Nella tabella Sales del modello sono disponibili le tre partizioni seguenti:  
+ Ad esempio, in un modello tabulare può essere disponibile una tabella Sales in cui sono inclusi i dati di vendita per l'anno fiscale 2011 e tutti gli anni fiscali precedenti. Nella tabella Sales del modello contiene le tre partizioni seguenti:  
   
 |Partition|Periodo dei dati|  
 |---------------|---------------|  
@@ -48,9 +48,9 @@ ms.locfileid: "48089231"
   
  Non è necessario elaborare i dati della partizione Sales2010-2001 ogni notte; tuttavia, poiché i dati di vendita per i dieci anni fiscali precedenti possono ancora cambiare occasionalmente a causa di restituzioni o modifiche di prodotti, devono comunque essere elaborati regolarmente, ad esempio, in questo caso, ogni mese. I dati della partizione SalesOld non cambiano mai, pertanto vengono elaborati solo annualmente.  
   
- All'inizio dell'anno fiscale 2012, viene aggiunta una nuova partizione Sales2012 alla tabella Sales del modello. La partizione Sales2011 può essere quindi unita alla partizione Sales2010-2001 e rinominata Sales2011-2002. I dati dell'anno fiscale 2001 vengono eliminati dalla nuova partizione Sales2011-2002 e spostati nella partizione SalesOld. Tutte le partizioni vengono quindi elaborate per riflettere le modifiche.  
+ Quando si immette l'anno fiscale 2012, viene aggiunto una nuova partizione Sales2012 alla tabella Sales della modalità. La partizione Sales2011 può essere quindi unita alla partizione Sales2010-2001 e rinominata Sales2011-2002. I dati dell'anno fiscale 2001 vengono eliminati dalla nuova partizione Sales2011-2002 e spostati nella partizione SalesOld. Tutte le partizioni vengono quindi elaborate per riflettere le modifiche.  
   
- La modalità di implementazione di una strategia della partizione per i modelli tabulari dell'organizzazione dipenderà soprattutto dalle specifiche esigenze di elaborazione dei dati del modello e dalle risorse disponibili.  
+ Modalità di implementazione di una strategia di partizione per i modelli tabulari dell'organizzazione in gran parte dipenderanno le necessità di elaborazione dei dati di modello specifico e le risorse disponibili.  
   
 ##  <a name="bkmk_permissions"></a> Permissions  
  Per creare, gestire ed elaborare partizioni in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], è necessario disporre delle autorizzazioni appropriate di Analysis Services definite in un ruolo di sicurezza. In ogni ruolo di sicurezza è disponibile una delle autorizzazioni seguenti:  
@@ -66,7 +66,7 @@ ms.locfileid: "48089231"
 ##  <a name="bkmk_process_partitions"></a> Elaborare le partizioni  
  Le partizioni possono essere elaborate (aggiornate) indipendentemente dalle altre partizioni usando la finestra di dialogo **Partizioni** in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] o tramite uno script. L'elaborazione prevede le opzioni seguenti:  
   
-|Mode|Description|  
+|Modalità|Descrizione|  
 |----------|-----------------|  
 |Elaborazione predefinita|Rileva lo stato di elaborazione di un oggetto partizione ed esegue l'elaborazione necessaria per recapitare oggetti partizione non elaborati o elaborati parzialmente in uno stato di elaborazione completa. Vengono caricati i dati per le tabelle vuote e le partizioni; vengono compilate o ricompilate le gerarchie, le colonne calcolate e le relazioni.|  
 |Elaborazione completa|Elabora un oggetto partizione e tutti gli oggetti in esso contenuti. Quando viene eseguita l'elaborazione completa per un oggetto che è stato già elaborato, in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] vengono eliminati tutti i dati dell'oggetto, quindi quest'ultimo viene elaborato. Questo tipo di elaborazione è necessario quando è stata apportata una modifica strutturale a un oggetto.|  
@@ -76,9 +76,9 @@ ms.locfileid: "48089231"
   
 ##  <a name="bkmk_related_tasks"></a> Attività correlate  
   
-|Attività|Description|  
+|Attività|Descrizione|  
 |----------|-----------------|  
-|[Creare e gestire partizioni di modelli tabulari &#40;tabulare di SSAS&#41;](create-and-manage-tabular-model-partitions-ssas-tabular.md)|Viene descritto come creare e gestire partizioni in un modello tabulare distribuito tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].|  
-|[Elaborare partizioni di modelli tabulari &#40;tabulare di SSAS&#41;](process-tabular-model-partitions-ssas-tabular.md)|Viene descritto come elaborare le partizioni in un modello tabulare distribuito tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].|  
+|[Creare e gestire partizioni di modelli tabulari &#40;SSAS tabulare&#41;](create-and-manage-tabular-model-partitions-ssas-tabular.md)|Viene descritto come creare e gestire partizioni in un modello tabulare distribuito tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].|  
+|[Elaborare partizioni di modelli tabulari &#40;SSAS tabulare&#41;](process-tabular-model-partitions-ssas-tabular.md)|Viene descritto come elaborare le partizioni in un modello tabulare distribuito tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].|  
   
   

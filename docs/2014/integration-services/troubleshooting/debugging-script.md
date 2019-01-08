@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Script task [Integration Services], debugging
@@ -15,12 +14,12 @@ ms.assetid: fddf57d8-8607-4f88-85a0-1b683087b491
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 622a34cf8b4ac3c3029d68e5ed6639fdc92654ee
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 454e4878590a11da1789d2bedba049af5f587874
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48155381"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52799016"
 ---
 # <a name="debugging-script"></a>Debug degli script
   Gli script utilizzati nell'attività e nel componente Script vengono scritti in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA).  
@@ -38,6 +37,6 @@ ms.locfileid: "48155381"
 -   [Eseguire il debug di uno script impostando punti di interruzione in un'attività e in un componente Script](../extending-packages-scripting/debug-a-script-by-setting-breakpoints-in-a-script-task-and-script-component.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Strumenti per la risoluzione dei problemi relativi allo sviluppo dei pacchetti](troubleshooting-tools-for-package-development.md)  
+ [Risoluzione dei problemi relativi agli strumenti per lo sviluppo dei pacchetti](troubleshooting-tools-for-package-development.md)  
   
   

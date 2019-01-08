@@ -1,22 +1,21 @@
 ---
-title: 'Passaggio 2: Abilitazione e impostazione delle configurazioni dei pacchetti | Microsoft Docs'
+title: 'Passaggio 2: Abilitazione e impostazione delle configurazioni di pacchetto | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 005218ab-8dd5-48e9-a185-6bc60cd43a7a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 33516b6f47a3c4f33d001c225c5a1a60a9802f7f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d2895a40dbff1215f5f6b2b2d873069f41b1d315
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48100802"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52747963"
 ---
 # <a name="step-2-enabling-and-configuring-package-configurations"></a>Passaggio 2: Abilitazione e impostazione delle configurazioni dei pacchetti
   In questa attività si convertirà il progetto nel modello di distribuzione del pacchetto e si abiliteranno le configurazioni di pacchetto utilizzando la Configurazione guidata pacchetto. Questa procedura guidata consente di generare un file di configurazione XML contenente le impostazioni di configurazione per la proprietà `Directory` del contenitore Ciclo Foreach. Il valore della proprietà Directory è specificato da una variabile a livello di pacchetto che è possibile aggiornare in fase di esecuzione. Verrà inoltre popolata una cartella di dati di esempio da utilizzare durante il test.  
@@ -40,11 +39,11 @@ ms.locfileid: "48100802"
   
 7.  Tornare alla scheda **Flusso di controllo** e fare doppio clic sul contenitore **Foreach File in Folder** .  
   
-8.  Nella pagina **Raccolta** di **Editor ciclo Foreach**fare clic su **Espressioni**e quindi sul pulsante con i puntini di sospensione **(…)**.  
+8.  Nella pagina **Raccolta** di **Editor ciclo Foreach** fare clic su **Espressioni** e quindi sul pulsante con i puntini di sospensione **(...)**.  
   
 9. Nel **Editor espressioni di proprietà**, fare clic nella **proprietà** elencare e selezionare `Directory`.  
   
-10. Nella casella **Espressione** fare clic sul pulsante con i puntini di sospensione **(…)**.  
+10. Nella casella **Espressione** fare clic sul pulsante con i puntini di sospensione **(...)**.  
   
 11. In **Generatore di espressioni**espandere la cartella Variabili e trascinare la variabile **User::varFolderName** nella casella **Espressione** .  
   
@@ -106,6 +105,6 @@ ms.locfileid: "48100802"
 3.  Nel `New Sample Data` cartella, incollare i file copiati.  
   
 ## <a name="next-task-in-lesson"></a>Attività successiva della lezione  
- [Passaggio 3: Modifica del valore di configurazione della proprietà Directory](lesson-5-3-modifying-the-directory-property-configuration-value.md)  
+ [Passaggio 3: Modifica del valore di configurazione proprietà Directory](lesson-5-3-modifying-the-directory-property-configuration-value.md)  
   
   

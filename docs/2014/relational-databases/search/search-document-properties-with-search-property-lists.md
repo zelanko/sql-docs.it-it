@@ -18,15 +18,15 @@ ms.assetid: ffae5914-b1b2-4267-b927-37e8382e0a9e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 90f0d34d522f27fd29c0c1103076632c3cb4bbee
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 77cb1127b7dbb7b2a49e3bafcd0b3eccc45b92ed
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48086841"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52800378"
 ---
 # <a name="search-document-properties-with-search-property-lists"></a>Eseguire ricerche nelle proprietà dei documenti con elenchi delle proprietà di ricerca
-  In passato non era possibile distinguere il contenuto delle proprietà del documento dal contenuto del corpo del documento. Ciò limitava le query full-text a ricerche generiche in documenti interi. Attualmente, invece, è possibile configurare un indice full-text per supportare la ricerca con ambito proprietà di particolari proprietà, ad esempio Author e Title, per tipi di documenti supportati in una colonna di dati binari `varbinary`, `varbinary(max)` (incluso `FILESTREAM`) o `image`. Questa modalità di ricerca è nota come *ricerca basata su proprietà*.  
+  In passato non era possibile distinguere il contenuto delle proprietà del documento dal contenuto del corpo del documento. Ciò limitava le query full-text a ricerche generiche in documenti interi. Attualmente, invece, è possibile configurare un indice full-text per supportare la ricerca con ambito proprietà di particolari proprietà, ad esempio Author e Title, per tipi di documenti supportati in una colonna di dati binari `varbinary`, `varbinary(max)` (incluso `FILESTREAM`) o `image`. Questa modalità di ricerca è nota come *ricerca basata su proprietà*.  
   
  La possibilità di usare la ricerca basata su proprietà in un tipo specifico di documento è determinata dal [filtro](configure-and-manage-filters-for-search.md) (IFilter) associato. Per alcuni tipi di documento, il filtro IFilter associato estrae alcune o tutte le proprietà definite per quel tipo di documento, nonché il contenuto del corpo del documento. È possibile configurare un indice full-text per supportare la ricerca basata su proprietà solo in proprietà estratte da un filtro IFilter durante l'indicizzazione full-text. I filtri IFilter in grado di estrarre alcune proprietà del documento comprendono i filtri IFilter per tipi di documento di Microsoft Office, ad esempio docx, xlsx e pptx. D'altra parte, il filtro IFilter XML non genera proprietà.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "48086841"
   
  ![Indice full-text che usa un elenco di proprietà di ricerca](../../database-engine/media/ifts-spl-and-fti.gif "Indice full-text che usa un elenco di proprietà di ricerca")  
   
- I termini di ricerca nella proprietà Title, ovvero "Favorite," "Biking" e "Trails", sono associati all'ID di proprietà interno 1 assegnato a Title per questo indice. I termini di ricerca nella proprietà Keywords, ovvero "biking" e "mountain", sono associati all'ID di proprietà interno 2 assegnato a Tags per questo indice. Per i termini di ricerca nella proprietà Author, ovvero "Jane" e "Doe", e per i termini di ricerca nel corpo del documento, l'ID di proprietà interno è pari a 0. Si noti che il termine "biking" è presente nella proprietà Title, nella proprietà Keywords (Tags) e nel corpo del documento. Nei risultati di una ricerca basata su proprietà per "biking" nella proprietà Title o Keywords (Tags) verrà restituito questo documento. Anche una query full-text generica per "biking" restituirebbe questo documento, come se l'indice non fosse configurato per la ricerca basata su proprietà. Questo documento non verrà restituito da una ricerca basata su proprietà per "biking" nella proprietà Author.  
+ I termini di ricerca nella proprietà Title, ovvero "Favorite," "Biking" e "Trails", sono associati all'ID di proprietà interno 1 assegnato a Title per questo indice. I termini di ricerca nella proprietà Keywords, ovvero "biking" e "mountain", sono associati all'ID di proprietà interno 2 assegnato a Tags per questo indice. Per i termini di ricerca nella proprietà Author, ovvero "Jane" e "Doe", e per i termini di ricerca nel corpo del documento, l'ID di proprietà interno è 0. Si noti che il termine "biking" è presente nella proprietà Title, nella proprietà Keywords (Tags) e nel corpo del documento. Nei risultati di una ricerca basata su proprietà per "biking" nella proprietà Title o Keywords (Tags) verrà restituito questo documento. Anche una query full-text generica per "biking" restituirebbe questo documento, come se l'indice non fosse configurato per la ricerca basata su proprietà. Questo documento non verrà restituito da una ricerca basata su proprietà per "biking" nella proprietà Author.  
   
  In una query full-text con ambito proprietà vengono utilizzati gli ID di proprietà interni registrati per l'elenco di proprietà di ricerca corrente dell'indice full-text.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "48086841"
 ##  <a name="impact"></a> Impatto dell'abilitazione della ricerca basata su proprietà  
  La configurazione di un indice full-text per supportare la ricerca basata su una o più proprietà aumenta le dimensioni dell'indice, a seconda del numero di proprietà specificate nell'elenco di proprietà di ricerca e del contenuto di ogni proprietà.  
   
- Test di corpi tipici di Microsoft Word<sup>®</sup>, Excel<sup>®</sup>e PowerPoint<sup>®</sup> documenti, è stata configurata una proprietà di ricerca tipica dell'indice a indice full-text. L'indicizzazione di queste proprietà ha comportato l'aumento delle dimensioni dell'indice full-text di circa il 5%. Si prevede che tale aumento approssimativo delle dimensioni caratterizzerà la maggior parte dei corpi di documento. In ultima analisi l'aumento delle dimensioni dipenderà, tuttavia, dalla quantità di dati della proprietà nel corpo di un determinato documento rispetto alla quantità di dati complessivi.  
+ Test di corpi tipici di Microsoft Word<sup>?? </sup>, Excel<sup>?? </sup>e PowerPoint<sup>??</sup> documenti, è stato configurato un proprietà di ricerca tipica dell'indice a indice full-text. L'indicizzazione di queste proprietà ha comportato l'aumento delle dimensioni dell'indice full-text di circa il 5%. Si prevede che tale aumento approssimativo delle dimensioni caratterizzerà la maggior parte dei corpi di documento. In ultima analisi l'aumento delle dimensioni dipenderà, tuttavia, dalla quantità di dati della proprietà nel corpo di un determinato documento rispetto alla quantità di dati complessivi.  
   
   
   
@@ -115,7 +115,7 @@ ms.locfileid: "48086841"
   
      Il nome di proprietà può essere uno dei seguenti:  
   
-    -   Il nome canonico Windows della proprietà, ad esempio `System.Author` o `System.Contact.HomeAddress`.  
+    -   Nome canonico di Windows della proprietà, ad esempio `System.Author` o `System.Contact.HomeAddress`.  
   
     -   Nome descrittivo facile da ricordare per gli utenti. Alcune proprietà sono associate a un nome descrittivo noto, ad esempio "Autore" o "Indirizzo abitazione", ma è possibile specificare qualsiasi nome appropriato per gli utenti.  
   

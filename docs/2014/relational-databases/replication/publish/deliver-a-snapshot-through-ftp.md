@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - snapshots [SQL Server replication], FTP snapshots
@@ -15,12 +14,12 @@ ms.assetid: 99872c4f-40ce-4405-8fd4-44052d3bd827
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9f5ae5a48b7ace7d0c8e9fffe1e5993bfd232da8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2e3422e1fc41069bcb1f5f88c841212b5415cacd
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48192581"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52777563"
 ---
 # <a name="deliver-a-snapshot-through-ftp"></a>Recapito di snapshot tramite FTP
   In questo argomento viene descritto come recapitare uno snapshot utilizzando l'FTP in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
@@ -33,7 +32,7 @@ ms.locfileid: "48192581"
   
      [Prerequisiti](#Prerequisites)  
   
-     [Security](#Security)  
+     [Sicurezza](#Security)  
   
 -   **Per recapitare uno snapshot tramite FTP, utilizzando:**  
   
@@ -85,7 +84,7 @@ ms.locfileid: "48192581"
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
  È possibile impostare l'opzione per rendere i file snapshot disponibili in un server FTP e modificare le impostazioni FTP a livello di programmazione utilizzando stored procedure di replica. La stored procedure utilizzata varia a seconda del tipo di pubblicazione. Il recapito di snapshot tramite FTP viene utilizzato solo con le sottoscrizioni pull.  
   
 #### <a name="to-enable-ftp-snapshot-delivery-for-a-snapshot-or-transactional-publication"></a>Per abilitare il recapito di snapshot tramite FTP per una pubblicazione snapshot o transazionale  
@@ -140,11 +139,11 @@ ms.locfileid: "48192581"
   
 1.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql). Specificare uno dei valori seguenti per **@property** e un nuovo valore di questa impostazione per **@value**:  
   
-    -   `ftp_address` -l'indirizzo del server FTP utilizzato per il recapito dello snapshot.  
+    -   `ftp_address`: indirizzo del server FTP utilizzato per il recapito dello snapshot.  
   
-    -   `ftp_port` -la porta usata dal server FTP.  
+    -   `ftp_port`: porta utilizzata dal server FTP.  
   
-    -   `ftp_subdirectory` -la sottodirectory della directory FTP predefinita utilizzata per lo snapshot tramite FTP.  
+    -   `ftp_subdirectory`: sottodirectory della directory FTP predefinita utilizzata per lo snapshot tramite FTP.  
   
     -   `ftp_login`: account di accesso utilizzato per la connessione al server FTP.  
   
@@ -158,11 +157,11 @@ ms.locfileid: "48192581"
   
 1.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_changemergepublication](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql). Specificare uno dei valori seguenti per **@property** e un nuovo valore di questa impostazione per **@value**:  
   
-    -   `ftp_address` -l'indirizzo del server FTP utilizzato per il recapito dello snapshot.  
+    -   `ftp_address`: indirizzo del server FTP utilizzato per il recapito dello snapshot.  
   
-    -   `ftp_port` -la porta usata dal server FTP.  
+    -   `ftp_port`: porta utilizzata dal server FTP.  
   
-    -   `ftp_subdirectory` -la sottodirectory della directory FTP predefinita utilizzata per lo snapshot tramite FTP.  
+    -   `ftp_subdirectory`: sottodirectory della directory FTP predefinita utilizzata per lo snapshot tramite FTP.  
   
     -   `ftp_login`: account di accesso utilizzato per la connessione al server FTP.  
   

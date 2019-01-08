@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6757868bf492a08caec1b8062776d6634331f868
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4a568fdfcf2e6dc6abd59d060f2e374339e13341
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47666729"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52534717"
 ---
 # <a name="new-date-and-time-features-with-previous-sql-server-versions-ole-db"></a>Nuove funzionalità di data e ora con le versioni precedenti di SQL Server (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "47666729"
   In questo argomento viene descritto il comportamento previsto quando un'applicazione client che utilizza caratteristiche avanzate di data e ora comunica con una versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anteriore [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]e quando un client compilato con una versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client precedente a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] invia comandi a un server che supporta le avanzate funzionalità di data e ora.  
   
 ## <a name="down-level-client-behavior"></a>Comportamento dei client legacy  
- Applicazioni client che usano una versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client precedente a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] visualizzare i tipi di data/ora di nuovo come **nvarchar** colonne. Il contenuto delle colonne è costituito da rappresentazioni letterali. Per altre informazioni, vedere la sezione "Dati nei formati: stringhe e valori letterali" di [supporto dei tipi di dati per data OLE DB e miglioramenti per la fase](../../relational-databases/native-client-ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md). Le dimensioni di colonna corrispondono alla lunghezza massima in valori letterali per la precisione specificata per la colonna.  
+ Applicazioni client che usano una versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client precedente a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] visualizzare i tipi di data/ora di nuovo come **nvarchar** colonne. Il contenuto delle colonne è costituito da rappresentazioni letterali. Per altre informazioni, vedere la "i formati di dati: Sezione stringhe e valori letterali"di [supporto dei tipi di dati per data OLE DB e miglioramenti per la fase](../../relational-databases/native-client-ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md). Le dimensioni di colonna corrispondono alla lunghezza massima in valori letterali per la precisione specificata per la colonna.  
   
  Le API di catalogo restituiranno metadati consistenti con il codice del tipo di dati legacy restituito al client (ad esempio, **nvarchar**) e la rappresentazione legacy associata (ad esempio, il formato letterale appropriato). Il nome del tipo di dati restituito, tuttavia, coinciderà con il nome effettivo del tipo di dati di [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  
   
@@ -38,8 +38,8 @@ ms.locfileid: "47666729"
 |DBTYPE_DBTIMESTAMP|||Campi dell'ora impostati su zero.|IRowsetChange avrà esito negativo a causa di un troncamento della stringa se il campo dell'ora è diverso da zero.|  
 |DBTYPE_DBTIME||Time(0)|OK|OK|  
 |DBTYPE_DBTIMESTAMP|||Campi della data impostati sulla data corrente.|Se i secondi frazionari sono diverse da zero, IRowsetChange avrà esito negativo a causa di un troncamento della stringa.<br /><br /> La data viene ignorata.|  
-|DBTYPE_DBTIME||Time(7)|Esito negativo: valore letterale di ora non valido.|OK|  
-|DBTYPE_DBTIMESTAMP|||Esito negativo: valore letterale di ora non valido.|OK|  
+|DBTYPE_DBTIME||Time(7)|Si verifica un errore: valore letterale di ora non valida.|OK|  
+|DBTYPE_DBTIMESTAMP|||Si verifica un errore: valore letterale di ora non valida.|OK|  
 |DBTYPE_DBTIMESTAMP||Datetime2 (3)|OK|OK|  
 |DBTYPE_DBTIMESTAMP||datetime2(7)|OK|OK|  
 |DBTYPE_DBDATE|Smalldatetime|date|OK|OK|  
@@ -136,8 +136,8 @@ ms.locfileid: "47666729"
 |TYPE_NAME|Data|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
 |DATA_TYPE|DBTYPE_WSTR|DBTYPE_WSTR|DBTYPE_DBTIMESTAMP|DBTYPE_DBTIMESTAMP|DBTYPE_WSTR|DBTYPE_WSTR|  
 |COLUMN_SIZE|10|16|16|23|27|34|  
-|LITERAL_PREFIX|‘|‘|‘|‘|‘|‘|  
-|LITERAL_SUFFIX|‘|‘|‘|‘|‘|‘|  
+|LITERAL_PREFIX|'|'|'|'|'|'|  
+|LITERAL_SUFFIX|'|'|'|'|'|'|  
 |CREATE_PARAMS|NULL|NULL|NULL|NULL|NULL|NULL|  
 |IS_NULLABLE|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|  
 |CASE_SENSITIVE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|  

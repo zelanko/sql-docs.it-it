@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - staging process [Master Data Services], about staging process
@@ -15,15 +14,15 @@ ms.assetid: 181d1e22-379c-45d1-b03c-e1e22ff14164
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 1c9113e8e3ae1f65d42b1e55a81cee4dcfc2152b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a3f9d1589c9e7434b16ce3f500b44eb1d9374cd8
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48217811"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52756813"
 ---
 # <a name="data-import-master-data-services"></a>Importazione dati (Master Data Services)
-  Dopo aver creato un modello per i dati in [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], è possibile iniziare ad aggiungere dati e apportare modifiche ai dati nel [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] database.   È possibile usare stored procedure, tabelle di staging e Gestione dati master di [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)].  
+  Dopo aver creato un modello per i dati in [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], è possibile iniziare ad aggiungere dati e ad apportare modifiche ai dati nel database [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .   È possibile usare stored procedure, tabelle di staging e Gestione dati master di [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)].  
   
  È anche possibile usare la [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]per aggiungere dati al repository MDS ([!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] database). Per altre informazioni, vedere [pubblicazione di dati &#40;il componente aggiuntivo MDS per Excel&#41;](microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md).  
   
@@ -70,11 +69,11 @@ ms.locfileid: "48217811"
 ## <a name="staging-tables-and-stored-procedures"></a>Tabelle e stored procedure di gestione temporanea  
  Il database [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] include i tipi di tabelle di staging seguenti che è possibile popolare con i dati personali.  
   
--   [Tabella di Staging dei membri foglia &#40;Master Data Services&#41;](../../2014/master-data-services/leaf-member-staging-table-master-data-services.md)  
+-   [Tabella di gestione temporanea dei membri foglia &#40;Master Data Services&#41;](../../2014/master-data-services/leaf-member-staging-table-master-data-services.md)  
   
--   [Tabella di Staging dei membri consolidati &#40;Master Data Services&#41;](../../2014/master-data-services/consolidated-member-staging-table-master-data-services.md)  
+-   [Tabella di gestione temporanea di membri consolidati &#40;Master Data Services&#41;](../../2014/master-data-services/consolidated-member-staging-table-master-data-services.md)  
   
--   [Tabella di Staging delle relazioni &#40;Master Data Services&#41;](../../2014/master-data-services/relationship-staging-table-master-data-services.md)  
+-   [Tabella di gestione temporanea delle relazioni &#40;Master Data Services&#41;](../../2014/master-data-services/relationship-staging-table-master-data-services.md)  
   
  Per ogni entità del modello esiste una tabella di staging. Il nome della tabella indica l'entità corrispondente e il tipo di entità, ad esempio membro foglia. La figura seguente mostra le tabelle di staging per le entità currency, customer e product.  
   
@@ -105,6 +104,6 @@ ms.locfileid: "48217811"
   
 -   [Convalida &#40;Master Data Services&#41;](../../2014/master-data-services/validation-master-data-services.md)  
   
--   [Le regole di business &#40;Master Data Services&#41;](../../2014/master-data-services/business-rules-master-data-services.md)  
+-   [Regole di business &#40;Master Data Services&#41;](../../2014/master-data-services/business-rules-master-data-services.md)  
   
   

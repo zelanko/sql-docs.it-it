@@ -16,12 +16,12 @@ ms.assetid: 70ef5b1c-0459-41a1-b796-031f61a29a8a
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6d25153a3c84340ad6feea43aa969ef52d358fe4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7be2574e700e15373d57bf4132ee2c3dd955112b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47717719"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52543465"
 ---
 # <a name="the-significance-of-cursor-location"></a>Significato della posizione del cursore
 Ogni cursore utilizza risorse temporanee per conservare i relativi dati. Queste risorse possono essere memoria, un file di paging su disco, i file del disco temporaneo o un archivio temporaneo nel database. Il cursore viene chiamato un *lato client* cursore quando queste risorse si trovano nel computer client. Il cursore viene chiamato un *sul lato server* cursore quando queste risorse si trovano nel server.  
@@ -36,6 +36,6 @@ Ogni cursore utilizza risorse temporanee per conservare i relativi dati. Queste 
 ## <a name="server-side-cursors"></a>Cursori sul lato server  
  In ADO chiamare per un cursore sul lato server usando il **adUseServer CursorLocationEnum.** Con un cursore lato server, il server gestisce il set di risultati utilizzando le risorse fornite dal computer del server. Il cursore sul lato server restituisce solo i dati richiesti tramite la rete. Questo tipo di cursore in alcuni casi possa fornire prestazioni migliori rispetto a cursore lato client, specialmente in situazioni in cui un numero eccessivo traffico di rete è un problema.  
   
- Tuttavia, è importante sottolineare che un cursore lato server è, almeno temporaneamente, ovvero utilizzano risorse del server per tutti i client attivi. È necessario pianificare di conseguenza per assicurarsi che l'hardware del server sia in grado di gestire tutti i cursori sul lato server richiesti dai client attivi. Inoltre, un cursore lato server può essere lento in quanto fornisce solo l'accesso a riga singola, ovvero non è disponibile nessun cursore di batch.  
+ Tuttavia, è importante sottolineare che un cursore lato server, almeno temporaneamente - utilizza risorse del server per tutti i client attivi. È necessario pianificare di conseguenza per assicurarsi che l'hardware del server sia in grado di gestire tutti i cursori sul lato server richiesti dai client attivi. Inoltre, un cursore lato server può essere lento in quanto fornisce l'accesso alle righe solo singole: non è disponibile nessun cursore di batch.  
   
  I cursori sul lato server sono utili durante l'inserimento, aggiornamento o l'eliminazione di record. Con cursori sul lato server, si possono avere più istruzioni attive nella stessa connessione.

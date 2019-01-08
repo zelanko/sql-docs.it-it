@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - data flow [Integration Services], transformations
@@ -15,19 +14,19 @@ ms.assetid: e1340b6f-ef75-4b14-af6f-823586eff0ed
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b98f377a24604abb1657a8e3a8c2b57024d84c38
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f1243f3cc6e7c8d7cd3ea2078e96e0f3844a8596
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48229331"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52767533"
 ---
 # <a name="transform-data-with-transformations"></a>Trasformazione di dati con le trasformazioni
   [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] sono disponibili tre tipi di componenti flusso di dati: origini, trasformazioni e destinazioni.  
   
  Nella figura seguente viene illustrato un semplice flusso di dati con un'origine, due trasformazioni e una destinazione.  
   
- ![Flusso di dati](../../media/mw-dts-08.gif "flusso di dati")  
+ ![Data flow](../../media/mw-dts-08.gif "Data flow")  
   
  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] Le trasformazioni offrono le funzionalità seguenti:  
   
@@ -49,15 +48,15 @@ ms.locfileid: "48229331"
   
 ### <a name="to-add-a-transformation-to-a-data-flow"></a>Per aggiungere una trasformazione a un flusso di dati  
   
--   [Aggiungere o eliminare un componente in un flusso di dati](../add-or-delete-a-component-in-a-data-flow.md)  
+-   [Aggiunta o eliminazione di un componente in un flusso di dati](../add-or-delete-a-component-in-a-data-flow.md)  
   
 ### <a name="to-connect-a-transformation-to-a-data-flow"></a>Per connettere una trasformazione a un flusso di dati  
   
--   [Connettere componenti in un flusso di dati](../connect-components-in-a-data-flow.md)  
+-   [Connessione di componenti in un flusso di dati](../connect-components-in-a-data-flow.md)  
   
 ### <a name="to-set-the-properties-of-a-transformation"></a>Per impostare le proprietà di una trasformazione  
   
--   [Impostare le proprietà di un componente del flusso di dati](../set-the-properties-of-a-data-flow-component.md)  
+-   [Impostazione delle proprietà di un componente del flusso di dati](../set-the-properties-of-a-data-flow-component.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Attività Flusso di dati](../../control-flow/data-flow-task.md)   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Database Mail [SQL Server], accounts
@@ -14,21 +13,21 @@ ms.assetid: c07abbc6-fc6a-470b-8fa3-532f2e06b16a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0d066f107460e9671d4f5840271d8c4a466eb968
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a286c7d4c0ff42389830713a6c42c89a7273f1d1
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48081387"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52798363"
 ---
 # <a name="create-a-database-mail-account"></a>Creare un account di Posta elettronica database.
   Per creare un account di Posta elettronica database, utilizzare la **Configurazione guidata Posta elettronica database** o [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
 -   **Prima di iniziare:**  [Prerequisiti](#Prerequisites)  
   
--   **Per creare un account di Posta elettronica database usando:**  [Configurazione guidata Posta elettronica database](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
+-   **Per creare Account di posta elettronica Database, utilizzando:**  [Configurazione guidata posta elettronica del database](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
   
--   **Completamento:**  [Passaggi successivi per configurare Posta elettronica database](#FollowUp)  
+-   **Completamento:**  [Passaggi successivi per configurare la posta elettronica Database](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> Prima di iniziare  
   
@@ -55,7 +54,7 @@ ms.locfileid: "48081387"
   
 -   Per completare la creazione del nuovo account, rivedere le azioni da eseguire nella pagina **Completamento procedura guidata** quindi fare clic su **Fine** .  
   
-##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
  **Per creare un account di Posta elettronica database utilizzando Transact-SQL**  
   
  Eseguire la stored procedure **msdb.dbo.sysmail_add_account_sp** per creare l'account, specificando le seguenti informazioni:  
@@ -85,7 +84,7 @@ EXECUTE msdb.dbo.sysmail_add_account_sp
     @mailserver_name = 'smtp.Adventure-Works.com' ;  
 ```  
   
-##  <a name="FollowUp"></a> Completamento: Passaggi successivi per la configurazione di Posta elettronica database  
+##  <a name="FollowUp"></a> Completamento: Passaggi successivi alla configurazione di posta elettronica Database  
   
 -   [Creare un profilo di Posta elettronica database](create-a-database-mail-profile.md)  
   

@@ -4,18 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: tools-other
 ms.topic: conceptual
 ms.assetid: c14fd3d2-5770-47c2-a851-cc13ddbc9bf5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: dfc80ecaecdc51235928a5ff0e66704449f493d4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7af5d166ec3bc059bc2628512564d92fd4cc6cad
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48177321"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52792783"
 ---
 # <a name="prepare-the-input-trace-data"></a>Preparazione dei dati di traccia di input
   Prima di avviare una riesecuzione distribuita con la funzionalità Riesecuzione distribuita di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], è necessario preparare i dati di traccia di input avviando la fase di pre-elaborazione dallo strumento di amministrazione Riesecuzione distribuita. Nella fase di pre-elaborazione Distributed Replay Controller elabora i dati di traccia e genera un file intermedio:  
@@ -29,7 +29,7 @@ ms.locfileid: "48177321"
   
 ### <a name="to-prepare-the-input-trace-data"></a>Per preparare i dati di traccia di input  
   
-1.  **Modificare le impostazioni di configurazione della pre-elaborazione (facoltativo)**: se si vogliono modificare le impostazioni di configurazione della pre-elaborazione, ad esempio se filtrare o meno le sessioni di sistema o configurare il tempo di inattività massimo, è necessario modificare l'elemento `<PreprocessModifiers>` del file XML di configurazione della pre-elaborazione `DReplay.exe.preprocess.config`. Se si modifica il file di configurazione della pre-elaborazione, è consigliabile modificarne una copia anziché l'originale. Per modificare le impostazioni, effettuare le operazioni seguenti:  
+1.  **(Facoltativo) Modificare le impostazioni di configurazione di pre-elaborazione**: Se si desidera modificare le impostazioni di configurazione della pre-elaborazione, ad esempio se filtrare le sessioni di sistema o per configurare il tempo di inattività massimo, è necessario modificare il `<PreprocessModifiers>` elemento del file di configurazione della pre-elaborazione di XML, `DReplay.exe.preprocess.config`. Se si modifica il file di configurazione della pre-elaborazione, è consigliabile modificarne una copia anziché l'originale. Per modificare le impostazioni, effettuare le operazioni seguenti:  
   
     1.  Creare una copia del file di configurazione della pre-elaborazione predefinito `DReplay.exe.preprocess.config`e rinominare il nuovo file. Il file di configurazione della pre-elaborazione predefinito si trova nella cartella di installazione dello strumento di amministrazione.  
   
@@ -39,9 +39,9 @@ ms.locfileid: "48177321"
   
      Per altre informazioni sul file di configurazione della pre-elaborazione, vedere [Configurare Riesecuzione distribuita](configure-distributed-replay.md).  
   
-2.  **Avviare la fase di pre-elaborazione**: per preparare i dati di traccia di input, è necessario eseguire lo strumento di amministrazione con l'opzione **preprocess**. Per altre informazioni, vedere [Opzione preprocess &#40;strumento di amministrazione Riesecuzione distribuita&#41;](preprocess-option-distributed-replay-administration-tool.md).  
+2.  **Avviare la fase di pre-elaborazione**: Per preparare i dati di traccia di input, è necessario eseguire lo strumento di amministrazione con il **preprocess** opzione. Per altre informazioni, vedere [Opzione preprocess &#40;strumento di amministrazione Riesecuzione distribuita&#41;](preprocess-option-distributed-replay-administration-tool.md).  
   
-    1.  Aprire l'utilità del prompt dei comandi di Windows (`CMD.exe`) e passare al percorso di installazione dello strumento di amministrazione riesecuzione distribuita (`DReplay.exe`).  
+    1.  Aprire l'utilità del prompt dei comandi di Windows (`CMD.exe`) e passare al percorso di installazione dello strumento di amministrazione di Distributed Replay (`DReplay.exe`).  
   
     2.  (Facoltativo) Usare il parametro *controller* , **-m**, per specificare il controller, se il servizio controller viene eseguito in un computer diverso dallo strumento di amministrazione.  
   
@@ -59,8 +59,8 @@ ms.locfileid: "48177321"
   
 ## <a name="see-also"></a>Vedere anche  
  [SQL Server Distributed Replay](sql-server-distributed-replay.md)   
- [Requisiti relativi a riesecuzione distribuita](distributed-replay-requirements.md)   
+ [Requisiti relativi a Riesecuzione distribuita](distributed-replay-requirements.md)   
  [Opzioni della riga di comando dello strumento di amministrazione &#40;Distributed Replay Utility&#41;](administration-tool-command-line-options-distributed-replay-utility.md)   
- [Configurare Riesecuzione distribuita](configure-distributed-replay.md)  
+ [Configurare Distributed Replay](configure-distributed-replay.md)  
   
   

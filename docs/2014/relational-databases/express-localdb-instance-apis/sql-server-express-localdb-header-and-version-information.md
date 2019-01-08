@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: ''
 ms.topic: reference
 api_location:
 - sqluserinstance.dll
@@ -14,12 +12,12 @@ ms.assetid: 506b5161-b902-4894-b87b-9192d7b1664a
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 1e00084b0a50dbb9ca542f22aba3e9001070ca01
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6e390430115daf394c5e94267dad30a87851375d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48122271"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52795353"
 ---
 # <a name="sql-server-express-localdb-header-and-version-information"></a>Informazioni sulla versione e intestazione del database locale di SQL Server Express
   Non esiste alcun file di intestazione separato per l'API dell'istanza del database locale di SQL Server Express. Le firme e i codici di errore della funzione del database locale sono definiti nel file di intestazione (sqlncli.h) di SQL Server Native Client. Per utilizzare l'API dell'istanza del database locale, è necessario includere il file di intestazione sqlncli.h nel progetto.  
@@ -84,15 +82,15 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL12E.LOCALDB\ MSS
 // The #define has to take place BEFORE the API header file (sqlncli.h) is included  
 #define LOCALDB_DEFINE_PROXY_FUNCTIONS  
 #include <sqlncli.h>  
-…  
+...  
 HRESULT hr = S_OK;  
   
 // Create LocalDB instance by calling the create API proxy function included by macro  
 if (FAILED(hr = LocalDBCreateInstance( L"12.0", L"name", 0)))  
 {  
-…  
+...  
 }  
-…  
+...  
   
 ```  
   

@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: bdc6ec79432d97d8ed53cade4a7db4c0b8bbec82
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 4cfbb4d3cfb62405546ef5ff955a52811ded41b5
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38031903"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53202250"
 ---
 # <a name="globalization-scenarios-for-analysis-services"></a>Scenari di globalizzazione per Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
@@ -57,14 +57,14 @@ ms.locfileid: "38031903"
 |**Funzionalità**|**Tabella**|**Multidimensionale**|  
 |[Lingue e regole di confronto &#40;Analysis Services&#41;](../analysis-services/languages-and-collations-analysis-services.md)|Ereditata dal sistema operativo.|Ereditata, ma con possibilità di sostituire la lingua e le regole di confronto per gli oggetti principali nella gerarchia del modello.|  
 |Ambito del supporto di traduzione|Didascalie e descrizioni.|È possibile creare traduzioni per nomi di oggetti, didascalie, identificatori e descrizioni, anche in qualsiasi alfabeto e lingua Unicode. Ciò vale anche quando gli strumenti e l'ambiente sono in un'altra lingua. Ad esempio, in un ambiente di sviluppo che usa la lingua inglese e le regole di confronto in caratteri latini in tutto lo stack, è possibile includere nel modello un oggetto che usa caratteri cirillici nel nome.|  
-|Implementazione del supporto di traduzione|È possibile usare [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] per generare file di traduzione da completare e quindi importare nuovamente nel modello.<br /><br /> Per informazioni dettagliate, vedere [Traduzioni in modelli tabulari &#40;Analysis Services&#41;](../analysis-services/tabular-models/translations-in-tabular-models-analysis-services.md).|È possibile usare [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] per definire le traduzioni per la didascalia, la descrizione e i tipi di account per cubi, misure, dimensioni e attributi.<br /><br /> Per altre informazioni, vedere [Translations in Multidimensional Models &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/translations-in-multidimensional-models-analysis-services.md) [Traduzioni nei modelli multidimensionali &#40;Analysis Services&#41;]. Una lezione su come usare questa funzionalità è disponibile nella [Lezione 9: Definizione di prospettive e traduzioni](../analysis-services/lesson-9-defining-perspectives-and-translations.md) dell'esercitazione su [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].|  
+|Implementazione del supporto di traduzione|È possibile usare [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] per generare file di traduzione da completare e quindi importare nuovamente nel modello.<br /><br /> Per informazioni dettagliate, vedere [Traduzioni in modelli tabulari &#40;Analysis Services&#41;](../analysis-services/tabular-models/translations-in-tabular-models-analysis-services.md).|È possibile usare [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] per definire le traduzioni per la didascalia, la descrizione e i tipi di account per cubi, misure, dimensioni e attributi.<br /><br /> Per altre informazioni, vedere [Translations in Multidimensional Models &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/translations-in-multidimensional-models-analysis-services.md) [Traduzioni nei modelli multidimensionali &#40;Analysis Services&#41;]. Una lezione su come usare questa funzionalità disponibili [lezione 9: Definizione di prospettive e traduzioni](../analysis-services/lesson-9-defining-perspectives-and-translations.md) del [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] esercitazione.|  
 |Conversione di valuta|Non disponibile.|La conversione di valuta viene eseguita tramite script MDX specializzati che convertono le misure contenenti dati di valuta. È possibile usare la Configurazione guidata funzionalità di Business Intelligence in [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)] per generare uno script MDX che utilizzi una combinazione di dati e metadati di dimensioni, attributi e gruppi di misure per la conversione di misure contenenti dati di valuta. Vedere [Conversioni di valuta &#40;Analysis Services&#41;](../analysis-services/currency-conversions-analysis-services.md).|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Supporto delle traduzioni in Analysis Services](../analysis-services/translation-support-in-analysis-services.md)   
  [Internazionalizzazione per le applicazioni di Windows](http://msdn.microsoft.com/library/windows/desktop/dd318661%28v=vs.85%29.aspx)   
- [Developer Center sulla globalizzazione](http://msdn.microsoft.com/goglobal/bb871628.aspx)   
- [App di scrittura Windows Store con progettazione adattiva basata sulle impostazioni locali](https://blogs.windows.com/buildingapps/2014/03/06/writing-windows-store-apps-with-locale-based-adaptive-design/)   
- [Sviluppo di App Windows universali con c# e XAML](http://www.microsoftvirtualacademy.com/training-courses/developing-universal-windows-apps-with-c-and-xaml)  
+ [Developer Center sulla globalizzazione delle applicazioni](http://msdn.microsoft.com/goglobal/bb871628.aspx)   
+ [Scrittura di app di Windows Store con progettazione adattiva basata sulle impostazioni locali](https://blogs.windows.com/buildingapps/2014/03/06/writing-windows-store-apps-with-locale-based-adaptive-design/)   
+ [Sviluppo di app di Windows universali con C# e XAML](http://www.microsoftvirtualacademy.com/training-courses/developing-universal-windows-apps-with-c-and-xaml)  
   
   

@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - solutions [SQL Server Management Studio]
@@ -16,12 +16,12 @@ ms.assetid: d06a8a05-7201-4055-8cf3-21bcb4e82c25
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 77ae4b0fbcad05a9faba84a1eb7a47b4f34ce21d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1ef3c378b963168e3c4724033e390803812c5a27
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48200071"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52761703"
 ---
 # <a name="solutions-sql-server-management-studio"></a>Soluzioni (SQL Server Management Studio)
   Una soluzione [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] è una raccolta di uno o più progetti correlati. I progetti sono contenitori che gli sviluppatori utilizzano per organizzare file correlati, ad esempio set di script di amministrazione di uso comune.  
@@ -43,7 +43,7 @@ ms.locfileid: "48200071"
   
 |Descrizione dell'attività|Argomento|  
 |----------------------|-----------|  
-|Viene descritto come creare una nuova soluzione utilizzabile per contenere uno o più progetti.|[Creare una nuova soluzione](create-a-new-solution.md)|  
+|Viene descritto come creare una nuova soluzione utilizzabile per contenere uno o più progetti.|[Creazione di una nuova soluzione](create-a-new-solution.md)|  
 |Viene descritto come aprire una soluzione esistente in Esplora soluzioni.|[Apertura di una soluzione esistente](open-an-existing-solution.md)|  
 |Viene illustrato come chiudere una soluzione.|[Chiusura di una soluzione](close-a-solution.md)|  
 |Viene descritto come eliminare una soluzione.|[Eliminazione di una soluzione](delete-a-solution.md)|  

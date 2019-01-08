@@ -12,12 +12,12 @@ ms.assetid: de56f206-1f7e-4c03-bf22-da9c7f9f4433
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7c97466b6c216c83b133c666fa8c4134ca35005b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9671447a2fba1cd57b021266f29de7af741f0de6
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48115102"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52520507"
 ---
 # <a name="bcpsetbulkmode"></a>bcp_setbulkmode
   bcp_setbulkmode consente di specificare il formato della colonna in un'operazione di copia bulk, l'impostazione di tutti gli attributi di colonna in una singola chiamata di funzione.  
@@ -77,12 +77,12 @@ cbRow
   
  Nella tabella seguente sono elencate le costanti per il parametro *property*.  
   
-|Proprietà|Description|  
+|Proprietà|Descrizione|  
 |--------------|-----------------|  
-|BCP_OUT_CHARACTER_MODE|Specifica la modalità di output carattere.<br /><br /> Corrisponde all'opzione-c in BCP. EXE e con bcp_setcolfmt `BCP_FMT_TYPE` impostata su `SQLCHARACTER`.|  
-|BCP_OUT_WIDE_CHARACTER_MODE|Specifica la modalità di output Unicode.<br /><br /> Corrisponde all'opzione-w in BCP. File EXE e con bcp_setcolfmt `BCP_FMT_TYPE` impostata su `SQLNCHAR`.|  
-|BCP_OUT_NATIVE_TEXT_MODE|Specifica tipi nativi per i tipi non carattere e Unicode per i tipi carattere.<br /><br /> Corrisponde all'opzione-N in BCP. File EXE e con bcp_setcolfmt `BCP_FMT_TYPE` impostata su `SQLNCHAR` se il tipo di colonna è una stringa (impostazione predefinita se non è una stringa).|  
-|BCP_OUT_NATIVE_MODE|Specifica tipi di database nativi.<br /><br /> Corrisponde all'opzione-n in BCP. File EXE e bcp_setcolfmt con `BCP_FMT_TYPE` proprietà impostata sul valore predefinito.|  
+|BCP_OUT_CHARACTER_MODE|Specifica la modalità di output carattere.<br /><br /> Corrisponde all'opzione - c in BCP. EXE e con bcp_setcolfmt `BCP_FMT_TYPE` impostata su `SQLCHARACTER`.|  
+|BCP_OUT_WIDE_CHARACTER_MODE|Specifica la modalità di output Unicode.<br /><br /> Corrisponde all'opzione -w in BCP. File EXE e con bcp_setcolfmt `BCP_FMT_TYPE` impostata su `SQLNCHAR`.|  
+|BCP_OUT_NATIVE_TEXT_MODE|Specifica tipi nativi per i tipi non carattere e Unicode per i tipi carattere.<br /><br /> Corrisponde all'opzione -N in BCP. File EXE e con bcp_setcolfmt `BCP_FMT_TYPE` impostata su `SQLNCHAR` se il tipo di colonna è una stringa (impostazione predefinita se non è una stringa).|  
+|BCP_OUT_NATIVE_MODE|Specifica tipi di database nativi.<br /><br /> Corrisponde all'opzione - n in BCP. File EXE e bcp_setcolfmt con `BCP_FMT_TYPE` proprietà impostata sul valore predefinito.|  
   
  Non è consigliabile usare bcp_setbulkmode con una sequenza di chiamate di funzione che include bcp_setcolfmt bcp_control e bcp_readfmt. Ad esempio, è necessario chiamare non bcp_control(BCPTEXTFILE) e bcp_setbulkmode.  
   
@@ -95,30 +95,30 @@ cbRow
  Sequenza di chiamata  
   
 ```  
-bcp_init(“table”, DB_IN);  
+bcp_init("table", DB_IN);  
 bcp_setbulkmode();  
 ```  
   
 ```  
-bcp_init(“table”, DB_OUT);  
+bcp_init("table", DB_OUT);  
 bcp_setbulkmode();  
 bcp_readfmt();  
 ```  
   
 ```  
 bcp_init(NULL, DB_OUT);  
-bcp_control(BCPHINTS, “select …”);  
+bcp_control(BCPHINTS, "select ...");  
 bcp_setbulkmode();  
 ```  
   
 ```  
-bcp_init(“table”, DB_OUT);  
+bcp_init("table", DB_OUT);  
 bcp_setbulkmode();  
 bcp_setcolfmt();  
 ```  
   
 ```  
-bcp_init(“table”, DB_OUT);  
+bcp_init("table", DB_OUT);  
 bcp_control(BCPDELAYREADFMT, true);  
 bcp_readfmt();  
 bcp_setcolfmt();  
@@ -128,18 +128,18 @@ bcp_setcolfmt();
 bcp_init(NULL, DB_OUT);  
 bcp_control(BCPDELAYREADFMT, true);  
 bcp_setbulkmode();  
-bcp_control(BCPHINTS, “select …”);  
+bcp_control(BCPHINTS, "select ...");  
 bcp_readfmt();  
 ```  
   
 ```  
-bcp_init(“table”, DB_OUT);  
+bcp_init("table", DB_OUT);  
 bcp_control(BCPDELAYREADFMT, true);  
 bcp_columns();  
 ```  
   
 ```  
-bcp_init(“table”, DB_OUT);  
+bcp_init("table", DB_OUT);  
 bcp_control(BCPDELAYREADFMT, true);  
 bcp_setcolfmt();  
 ```  

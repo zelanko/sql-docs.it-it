@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - adding components
@@ -14,12 +13,12 @@ ms.assetid: d99124f9-0994-4f40-a48e-fdca6a4383e7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c1a94a9d0dfddde667d2e52d3f612cda41e00a1c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 38dd3903bdd5f6db52d949a6e3472845b89b5157
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48150286"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52761913"
 ---
 # <a name="add-or-delete-a-component-in-a-data-flow"></a>Aggiunta o eliminazione di un componente in un flusso di dati
   I componenti dei flussi di dati sono le origini, le destinazioni e le trasformazioni incluse in un flusso di dati. È possibile aggiungere componenti a un flusso di dati solo se il flusso di controllo del pacchetto include un'attività Flusso di dati.  
@@ -53,8 +52,8 @@ ms.locfileid: "48150286"
 6.  Per salvare il pacchetto aggiornato, scegliere **Salva elementi selezionati** dal menu **File** .  
   
 ## <a name="see-also"></a>Vedere anche  
- [Connettere componenti in un flusso di dati](data-flow.md)   
- [Configurare un Output degli errori in un componente del flusso di dati](../configure-an-error-output-in-a-data-flow-component.md)   
+ [Connessione di componenti in un flusso di dati](data-flow.md)   
+ [Configurazione di un output degli errori in un componente flusso di dati](../configure-an-error-output-in-a-data-flow-component.md)   
  [Flusso di dati](data-flow.md)  
   
   

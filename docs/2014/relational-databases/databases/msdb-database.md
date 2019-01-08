@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 11/10/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent, msdb database
@@ -16,12 +15,12 @@ ms.assetid: 5032cb2d-65a0-40dd-b569-4dcecdd58ceb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3e0862083d323131523d0e9eee03b7e4d2f52e04
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cee4c5d802447488930ffd04d698edcd2015e86b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48058801"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52811893"
 ---
 # <a name="msdb-database"></a>Database msdb
   Il database **msdb** viene usato dall'agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per la pianificazione di avvisi e processi e da altre funzionalità, ad esempio [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[ssSB](../../includes/sssb-md.md)] e Posta elettronica database.  
@@ -48,34 +47,34 @@ ms.locfileid: "48058801"
   
 |Opzione di database|Valore predefinito|Modificabile|  
 |---------------------|-------------------|---------------------|  
-|ALLOW_SNAPSHOT_ISOLATION|ON|no|  
-|ANSI_NULL_DEFAULT|OFF|Sì|  
-|ANSI_NULLS|OFF|Sì|  
-|ANSI_PADDING|OFF|Sì|  
-|ANSI_WARNINGS|OFF|Sì|  
-|ARITHABORT|OFF|Sì|  
-|AUTO_CLOSE|OFF|Sì|  
-|AUTO_CREATE_STATISTICS|ON|Sì|  
-|AUTO_SHRINK|OFF|Sì|  
-|AUTO_UPDATE_STATISTICS|ON|Sì|  
-|AUTO_UPDATE_STATISTICS_ASYNC|OFF|Sì|  
-|CHANGE_TRACKING|OFF|no|  
-|CONCAT_NULL_YIELDS_NULL|OFF|Sì|  
-|CURSOR_CLOSE_ON_COMMIT|OFF|Sì|  
-|CURSOR_DEFAULT|GLOBAL|Sì|  
-|Opzioni relative alla disponibilità del database|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|no<br /><br /> Sì<br /><br /> Sì|  
-|DATE_CORRELATION_OPTIMIZATION|OFF|Sì|  
-|DB_CHAINING|ON|Sì|  
-|ENCRYPTION|OFF|no|  
-|NUMERIC_ROUNDABORT|OFF|Sì|  
-|PAGE_VERIFY|CHECKSUM|Sì|  
-|PARAMETERIZATION|SIMPLE|Sì|  
-|QUOTED_IDENTIFIER|OFF|Sì|  
-|READ_COMMITTED_SNAPSHOT|OFF|no|  
-|RECOVERY|SIMPLE|Sì|  
-|RECURSIVE_TRIGGERS|OFF|Sì|  
-|Opzioni relative a Service Broker|ENABLE_BROKER|Sì|  
-|TRUSTWORTHY|ON|Sì|  
+|ALLOW_SNAPSHOT_ISOLATION|ON|No|  
+|ANSI_NULL_DEFAULT|OFF|Yes|  
+|ANSI_NULLS|OFF|Yes|  
+|ANSI_PADDING|OFF|Yes|  
+|ANSI_WARNINGS|OFF|Yes|  
+|ARITHABORT|OFF|Yes|  
+|AUTO_CLOSE|OFF|Yes|  
+|AUTO_CREATE_STATISTICS|ON|Yes|  
+|AUTO_SHRINK|OFF|Yes|  
+|AUTO_UPDATE_STATISTICS|ON|Yes|  
+|AUTO_UPDATE_STATISTICS_ASYNC|OFF|Yes|  
+|CHANGE_TRACKING|OFF|No|  
+|CONCAT_NULL_YIELDS_NULL|OFF|Yes|  
+|CURSOR_CLOSE_ON_COMMIT|OFF|Yes|  
+|CURSOR_DEFAULT|GLOBAL|Yes|  
+|Opzioni relative alla disponibilità del database|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|No<br /><br /> Yes<br /><br /> Yes|  
+|DATE_CORRELATION_OPTIMIZATION|OFF|Yes|  
+|DB_CHAINING|ON|Yes|  
+|ENCRYPTION|OFF|No|  
+|NUMERIC_ROUNDABORT|OFF|Yes|  
+|PAGE_VERIFY|CHECKSUM|Yes|  
+|PARAMETERIZATION|SIMPLE|Yes|  
+|QUOTED_IDENTIFIER|OFF|Yes|  
+|READ_COMMITTED_SNAPSHOT|OFF|No|  
+|RECOVERY|SIMPLE|Yes|  
+|RECURSIVE_TRIGGERS|OFF|Yes|  
+|Opzioni relative a Service Broker|ENABLE_BROKER|Yes|  
+|TRUSTWORTHY|ON|Yes|  
   
  Per una descrizione di queste opzioni di database, vedere [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql).  
   

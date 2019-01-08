@@ -16,12 +16,12 @@ ms.assetid: 25e1fcc5-45d7-4c53-8c79-5493dfaa1c74
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 80b89f52469b2d05bf7f428e4f4b67788b73969b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 529d83451c897359152520aecbece856ef7e6ded
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48146171"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52538197"
 ---
 # <a name="create-filtered-indexes"></a>Creare indici filtrati
   In questo argomento si descrive come creare un indice filtrato in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Un indice filtrato è un indice non cluster ottimizzato, particolarmente indicato per coprire query per le quali i dati vengono selezionati da un subset ben definito. Un indice di questo tipo utilizza un predicato del filtro per indicizzare una parte di righe nella tabella. Se confrontato con indici di tabella completa, un indice filtrato progettato correttamente consente di migliorare le prestazioni delle query e di ridurre i costi di gestione e di archiviazione dell'indice stesso.  
@@ -48,7 +48,7 @@ ms.locfileid: "48146171"
   
      [Limitazioni e restrizioni](#Restrictions)  
   
-     [Security](#Security)  
+     [Sicurezza](#Security)  
   
 -   **Per creare un indice filtrato tramite:**  
   
@@ -105,7 +105,7 @@ ms.locfileid: "48146171"
   
 3.  Fare clic sul segno più per espandere la tabella in cui si desidera creare un indice filtrato.  
   
-4.  Fare clic con il pulsante destro del mouse sulla cartella **Indici** , scegliere **Nuovo indice**e selezionare **Indice non cluster...**.  
+4.  Fare clic con il pulsante destro del mouse sulla cartella **Indici**, scegliere **Nuovo indice**e selezionare **Indice non cluster**.  
   
 5.  Nella pagina **Generale** della finestra di dialogo **Nuovo indice** immettere il nome del nuovo indice nella casella **Nome indice** .  
   
@@ -115,11 +115,11 @@ ms.locfileid: "48146171"
   
 8.  Fare clic su **OK**.  
   
-9. In **Espressione filtro** della pagina **Filtro**immettere l'espressione SQL che verrà utilizzata per creare l'indice filtrato.  
+9. Nella pagina **Filtro** immettere l'espressione SQL che verrà usata per creare l'indice filtrato in **Espressione filtro**.  
   
 10. Fare clic su **OK**.  
   
-##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
   
 #### <a name="to-create-a-filtered-index"></a>Per creare un indice filtrato  
   

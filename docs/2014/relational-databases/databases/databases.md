@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - data warehouse [SQL Server]
@@ -15,12 +14,12 @@ ms.assetid: 316eea58-81b8-4bf3-a1fc-801946740e94
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 81efd94cf4b625a5f0584b3769d236c14b4ca3e9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 366a09bce079023f59f38682b51a7a5858671fcc
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48214841"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52816293"
 ---
 # <a name="databases"></a>Database
   Un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è costituito da una raccolta di tabelle in cui è archiviato un set specifico di dati strutturati. Una tabella contiene una raccolta di righe, definite anche record o tuple, e colonne, definite anche attributi. Ogni colonna nella tabella è progettata per contenere un tipo di informazioni specifico, ad esempio date, nomi, importi in valuta e numeri.  
@@ -37,7 +36,7 @@ ms.locfileid: "48214841"
 ## <a name="working-with-databases"></a>Utilizzo dei database  
  La maggior parte degli utenti che operano con i database utilizza lo strumento [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] . Lo strumento [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] dispone di un'interfaccia utente grafica per la creazione di database e degli oggetti nei database. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] usa anche un editor di query per interagire con i database scrivendo istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)]. È possibile installare [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] dal disco dell'installazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o scaricandolo da MSDN.  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>In questa sezione  
   
 |||  
 |-|-|  

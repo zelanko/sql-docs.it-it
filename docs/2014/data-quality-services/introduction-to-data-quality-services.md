@@ -12,12 +12,12 @@ ms.assetid: 5350214c-7333-41d0-ae83-1b7d8454ebec
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 585639067bd75c12be1b580ecd210171dff848a8
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 6dcc318a7bcd4bdbf8a8f4466e0a15bed155761c
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51030987"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52392251"
 ---
 # <a name="introduction-to-data-quality-services"></a>Introduzione a Data Quality Services
   La soluzione per la qualità dei dati fornita da [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) consente a un amministratore dei dati o un professionista IT di mantenere la qualità dei dati gestiti e assicurarne l'appropriatezza per l'utilizzo aziendale. DQS è una soluzione basata sulle informazioni che offre modalità assistite da computer e interattive per gestire l'integrità e la qualità delle origini dati. DQS consente di individuare, compilare e gestire informazioni sui dati. È quindi possibile utilizzare tali informazioni per eseguire la pulizia, la corrispondenza e il profiling dei dati. È inoltre possibile utilizzare i servizi basati su cloud di provider di dati di riferimento in un progetto Data Quality DQS.  
@@ -44,7 +44,7 @@ ms.locfileid: "51030987"
   
 -   **Monitoraggio:** la registrazione e la determinazione dello stato delle attività relative alla qualità dei dati. Il monitoraggio consente di verificare che la soluzione per la qualità dei dati funzioni come previsto. Per altre informazioni, vedere [DQS Administration](../../2014/data-quality-services/dqs-administration.md).  
   
--   **Knowledge Base:** Data Quality Services è una soluzione basata sulle informazioni in cui i dati vengono analizzati in base alla conoscenza creata con DQS. Consente di creare processi per la qualità dei dati in grado di migliorare costantemente le informazioni sui dati e, di conseguenza, la qualità dei dati stessi.  
+-   **Knowledge Base:** Data Quality Services è una soluzione basata sulle informazioni che analizza i dati in base alla conoscenza creata con DQS. Consente di creare processi per la qualità dei dati in grado di migliorare costantemente le informazioni sui dati e, di conseguenza, la qualità dei dati stessi.  
   
  Il processo DQS viene illustrato nella figura seguente:  
   

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: ''
 ms.topic: reference
 helpviewer_keywords:
 - developer's guide [SQL Server Database Engine]
@@ -15,17 +13,17 @@ ms.assetid: 7638f46c-9e66-48e6-9a9b-425e0b788311
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9d913ffa95ec8be20bc6857de9a46bf4cedf9320
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ba11f16b14520ac5340724597a6e5b9aa3dedbcb
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48121811"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52799553"
 ---
 # <a name="developer39s-guide-database-engine"></a>Per gli sviluppatori&#39;Guida (motore di Database)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] fornisce un vasto set di strumenti per lo sviluppo, l'amministrazione e il controllo di applicazioni di database.  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Concetti relativi alla programmazione dell'integrazione con CLR &#40;Common Language Runtime&#41;](clr-integration/common-language-runtime-clr-integration-programming-concepts.md)  
  Viene illustrata l'integrazione del componente Common Language Runtime (CLR) di .NET Framework per [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. È possibile creare stored procedure, trigger, tipi definiti dall'utente (UDT), funzioni definite dall'utente, funzioni di aggregazione definite dall'utente e funzioni di flusso con valori di tabella utilizzando qualsiasi linguaggio di .NET Framework, inclusi [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual Basic .NET e [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual C#.  
   

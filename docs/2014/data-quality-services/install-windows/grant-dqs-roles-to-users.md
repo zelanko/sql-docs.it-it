@@ -10,12 +10,12 @@ ms.assetid: afb445b5-bdbe-4bfe-844f-344766cdc2b2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 39acf5a2fd5ccd92e0d897a7a701f8525aadcff8
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 2c85c5589ba0e7d2def29f4038b77ac4061d70fa
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51032808"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52541300"
 ---
 # <a name="grant-dqs-roles-to-users"></a>Concedere ruoli DQS agli utenti
   In questo argomento si descrive come creare account di accesso SQL in un'entità di Windows e come assegnare i ruoli [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS) nel database DQS_MAIN.  
@@ -38,7 +38,7 @@ ms.locfileid: "51032808"
   
 5.  Al termine della convalida dell'utente, nel riquadro sinistro fare clic su **Mapping utenti** .  
   
-6.  Nel riquadro destro selezionare la casella di controllo sotto la colonna **Mappa** per il database **DQS_MAIN** , quindi selezionare la casella di controllo **dqs_administrator**, **dqs_kb_editor**o **dqs_kb_operator** nel riquadro **Appartenenza a ruoli del database per: DQS_MAIN** , a seconda del livello di accesso necessario all'utente. Per informazioni su questi tre ruoli DQS, vedere [DQS Security](../dqs-security.md).  
+6.  Nel riquadro di destra, selezionare la casella di controllo sotto le **mappa** colonna per il **DQS_MAIN** del database e quindi selezionare il **dqs_administrator**, **dqs_kb_editor** , o **dqs_kb_operator** casella di controllo di **Database l'appartenenza al ruolo per: Database DQS_MAIN** riquadro, a seconda del livello di accesso necessario per l'utente. Per informazioni su questi tre ruoli DQS, vedere [DQS Sicurezza](../dqs-security.md).  
   
 7.  Nella finestra di dialogo **Account di accesso - Nuovo** fare clic su **OK** per applicare le modifiche.  
   

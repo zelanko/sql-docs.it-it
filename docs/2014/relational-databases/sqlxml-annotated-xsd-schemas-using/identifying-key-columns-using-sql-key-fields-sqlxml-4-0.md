@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - nesting XML results
@@ -23,12 +21,12 @@ ms.assetid: 1a5ad868-8602-45c4-913d-6fbb837eebb0
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5a28b15796ad82f5cd02e00f15176aa6c5ee87a3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1d1db0287c0876c80d5353657c525f4e0597c5f0
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48175361"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52795643"
 ---
 # <a name="identifying-key-columns-using-sqlkey-fields-sqlxml-40"></a>Identificazione delle colonne chiave mediante sql:key-fields (SQLXML 4.0)
   Quando si specifica una query XPath su uno schema XSD, nella maggior parte dei casi sono necessarie informazioni chiave per ottenere la nidificazione appropriata nel risultato. La specifica dell'annotazione `sql:key-fields` rappresenta un modo per assicurarsi che venga generata la gerarchia appropriata.  
@@ -126,7 +124,7 @@ ms.locfileid: "48175361"
 </ROOT>  
 ```  
   
-### <a name="b-specifying-sqlkey-fields-to-produce-proper-nesting-in-the-result"></a>B. Specifica di sql:key-fields per produrre una nidificazione appropriata nel risultato  
+### <a name="b-specifying-sqlkey-fields-to-produce-proper-nesting-in-the-result"></a>b. Specifica di sql:key-fields per produrre una nidificazione appropriata nel risultato  
  Nello schema seguente, non è specificata alcuna gerarchia mediante  **\<SQL: Relationship >**. Lo schema richiede ancora la specifica dell'annotazione `sql:key-fields` per identificare in modo univoco i dipendenti nella tabella HumanResources.Employee.  
   
 ```  
@@ -174,7 +172,7 @@ ms.locfileid: "48175361"
   
      Per altre informazioni, vedere [utilizzo di ADO per eseguire query SQLXML](../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
- Risultato:  
+ Questo è il risultato:  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  

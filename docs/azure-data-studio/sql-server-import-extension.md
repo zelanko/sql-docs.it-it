@@ -1,7 +1,8 @@
 ---
-title: Estensione di importazione di dati di Azure Studio SQL Server | Microsoft Docs
-description: Estensione di SQL Server Import (anteprima) per Azure Data Studio
-ms.custom: tools|sos
+title: Estensione di importazione SQL Server
+titleSuffix: Azure Data Studio
+description: Installare e usare l'estensione di SQL Server Import (anteprima) di Studio dei dati di Azure
+ms.custom: seodec18
 ms.date: 09/24/2018
 ms.reviewer: alayu; sstein
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.openlocfilehash: 0e113e2755a5d50fa7b8c5a06486227b3671347e
-ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
+ms.openlocfilehash: 8248404353674f8139a26cfc75f37363557136b9
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49460618"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030745"
 ---
 # <a name="sql-server-import-extension-preview"></a>Estensione di SQL Server Import (anteprima)
 

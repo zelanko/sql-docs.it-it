@@ -14,17 +14,17 @@ ms.assetid: 293df9d5-e1a2-406d-9107-07bf7cdc6f96
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fa058add661ba5dc4054a431e0324f97e1efb422
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7cf56b6614587c333f473136f1cafc72128846a2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47753097"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514379"
 ---
 # <a name="datacontrol-object-error-codes"></a>Codici di errore di oggetto DataControl
 La tabella seguente elenca i [Servizi Desktop remoto. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) i codici di errore dell'oggetto. La conversione decimale positiva dei due byte basso, vengono visualizzati la conversione decimale negativa del codice di errore completo e i valori esadecimali.
 
-|SERVIZI DESKTOP REMOTO. Codici di errore DataControl|Number|Description|
+|SERVIZI DESKTOP REMOTO. Codici di errore DataControl|Number|Descrizione|
 |---------------------------------|------------|-----------------|
 |**IDS_AsyncPending**|4107 -2146824175 0x800A1011|Impossibile eseguire l'operazione mentre è in sospeso un'operazione asincrona.|
 |**IDS_BadInlineTablegram**|4105 -2146824183 0x800A1009|Viene inline non valida.|
@@ -33,7 +33,7 @@ La tabella seguente elenca i [Servizi Desktop remoto. DataControl](../../../ado/
 |**IDS_CantFindDataspace**|4102 -2146824186 0x800A1006|Proprietà DataSpace non valido.|
 |**IDS_CantInvokeMethod**|4101 -2146824187 0x800A1005|Metodo non può essere richiamato sull'oggetto business.|
 |**IDS_CrossDomainWarning**|4112 -2146824170 0x800A1016|Questa pagina accede ai dati in un altro dominio. Si desidera consentire questa operazione? Per evitare questo messaggio in Internet Explorer, è possibile aggiungere un sito Web protetto alla zona siti attendibili nel **sicurezza** scheda della finestra di **Opzioni Internet** nella finestra di dialogo.|
-|**IDS_InvalidADCClientVersion**|4106 -2146824176 0x800A1010|Versione del Client Servizi Desktop remoto non è valido, ovvero Client è più recente rispetto a server.|
+|**IDS_InvalidADCClientVersion**|4106 -2146824176 0x800A1010|Versione del Client Servizi Desktop remoto non è valido - Client è più recente rispetto a server.|
 |**IDS_INVALIDARG**|5376 -2147019520 0x80071500|Uno o più argomenti non sono validi.|
 |**IDS_InvalidBindings**|4097 -2146824191 0x800A1001|Errore nella proprietà di binding.|
 |**IDS_InvalidParam**|4110 -2146824172 0x800A1014|Uno o più argomenti non sono validi.|

@@ -1,5 +1,5 @@
 ---
-title: Creare o personalizzare una libreria di Feed di dati (PowerPivot per SharePoint) | Documenti Microsoft
+title: Creare o personalizzare una libreria di Feed di dati (Power Pivot per SharePoint) | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 71c051d64a40f38a6514301ca3353e7627c67aaf
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 7586527bcd2f79b6a9a54725fcbd376bd2720096
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34021251"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52519101"
 ---
 # <a name="create-or-customize-a-data-feed-library-power-pivot-for-sharepoint"></a>Creare o personalizzare una libreria di feed di dati (Power Pivot per SharePoint)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "34021251"
   
 1.  Scegliere **Azioni sito** nell'angolo superiore sinistro della pagina.  
   
-2.  Fare clic su **Altre opzioni**...  
+2.  Fare clic su **altre opzioni**...  
   
 3.  In Librerie scegliere **Libreria feed di dati**.  
   
@@ -67,7 +67,7 @@ ms.locfileid: "34021251"
   
  I passaggi seguenti devono essere ripetuti per ogni libreria in cui si desidera creare o modificare i documenti di registrazione del feed di dati.  
   
-#### <a name="step-1-enable-content-type-management"></a>Passaggio 1: Abilitazione della gestione del tipo di contenuto  
+#### <a name="step-1-enable-content-type-management"></a>Passaggio 1: Abilitare la gestione dei tipi di contenuto  
   
 1.  Aprire la raccolta documenti per cui si desidera abilitare più tipi di contenuto.  
   
@@ -81,9 +81,9 @@ ms.locfileid: "34021251"
   
 6.  In Tipi di contenuto nella sezione "Consenti la gestione di più tipi di contenuto:" scegliere **Sì**.  
   
-7.  Scegliere **OK**.  
+7.  Fare clic su **OK**.  
   
-#### <a name="step-2-add-the-data-service-document-content-type"></a>Passaggio 2: Aggiunta del tipo di contenuto del documento di servizio dati  
+#### <a name="step-2-add-the-data-service-document-content-type"></a>Passaggio 2: Aggiungere il tipo di contenuto documento di servizio dati  
   
 1.  Nella sezione Tipi di contenuto fare clic su **Aggiungi da tipi di contenuto del sito esistenti**. Se questa pagina non viene visualizzata, tornare al sito, fare clic su **Raccolta** in Strumenti raccolta, quindi scegliere **Impostazioni raccolta**.  
   
@@ -93,9 +93,9 @@ ms.locfileid: "34021251"
   
 4.  In Tipi di contenuto del sito disponibili scegliere **Documento di servizio dati**, quindi fare clic su **Aggiungi** per spostare il tipo di contenuto selezionato nell'elenco Tipi di contenuto da aggiungere.  
   
-5.  Scegliere **OK**.  
+5.  Fare clic su **OK**.  
   
-#### <a name="step-3-verify-data-service-document-configuration"></a>Passaggio 3: Verifica della configurazione del documento di servizio dati  
+#### <a name="step-3-verify-data-service-document-configuration"></a>Passaggio 3: Verifica della configurazione di documento di servizio dati  
   
 1.  Aprire la home page del sito.  
   
@@ -107,7 +107,7 @@ ms.locfileid: "34021251"
   
 ## <a name="see-also"></a>Vedere anche  
  [Usare feed di dati &#40;Power Pivot per SharePoint&#41;](../../analysis-services/power-pivot-sharepoint/use-data-feeds-power-pivot-for-sharepoint.md)   
- [Eliminare una libreria di Feed dei dati di Power Pivot](../../analysis-services/power-pivot-sharepoint/delete-a-power-pivot-data-feed-library.md)   
+ [Eliminare una libreria di feed di dati PowerPivot](../../analysis-services/power-pivot-sharepoint/delete-a-power-pivot-data-feed-library.md)   
  [Amministrazione e configurazione del server PowerPivot in Amministrazione centrale](../../analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md)   
  [Feed di dati Power Pivot](../../analysis-services/power-pivot-sharepoint/power-pivot-data-feeds.md)  
   

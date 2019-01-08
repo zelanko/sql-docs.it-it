@@ -14,12 +14,12 @@ ms.assetid: 7e01cb24-2338-4f92-ad46-8d97248e1a4d
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 709629c6ef42b8ffeb65959ab9491bbe3c178ab3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ea2245c3f57b5ad3b14847f15791575afde1043c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47613839"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52537147"
 ---
 # <a name="field-ado---wfc-syntax"></a>Field (sintassi ADO/WFC)
 ## <a name="package-commswfcdata"></a>creare un pacchetto com.ms. wfc.  
@@ -69,9 +69,9 @@ public AdoProperties getProperties()
   
  ADO/WFC implementa il **valore** proprietà con il **getValue** metodo, che restituisce un oggetto VARIANT; e il **setValue** metodo, che utilizza una variante come argomento. Varianti sono altamente efficienti in determinate lingue, ad esempio Microsoft Visual Basic.  
   
- Oltre al **valore** ADO/WFC di proprietà, fornisce *della funzione di accesso* metodi che utilizzano tipi di dati Java per ottenere e impostare il contenuto del **campo** oggetti. La maggior parte di questi metodi presentano nomi nel formato **ottenere * * * DataType* o **impostare * * * DataType*.  
+ Oltre al **valore** ADO/WFC di proprietà, fornisce *della funzione di accesso* metodi che utilizzano tipi di dati Java per ottenere e impostare il contenuto del **campo** oggetti. La maggior parte di questi metodi ha il formato dei nomi **ottenere**_DataType_ oppure **impostare**_DataType_.  
   
- Esistono due importanti eccezioni: tra il **getObject** metodi restituisce un oggetto convertito in una classe specificata. È presente alcun **importante** proprietà; viene invece un' **isNull** proprietà che restituisce un valore booleano che indica se il campo è null.  
+ Esistono due importanti eccezioni: Uno dei **getObject** metodi restituisce un oggetto convertito in una classe specificata. È presente alcun **importante** proprietà; viene invece un' **isNull** proprietà che restituisce un valore booleano che indica se il campo è null.  
   
 ```  
 public native boolean getBoolean();  

@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - viewing job activity
@@ -15,12 +15,12 @@ ms.assetid: 5c284e5e-7775-435d-ac49-f3f12a27ddc7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d3e7e671ad307223135b02d237aa2d210057a255
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3fc6099fa9f523b351489ce4301596aeb90c1509
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48053651"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52782573"
 ---
 # <a name="view-job-activity"></a>Visualizza attività processi
   In questo argomento viene illustrato come visualizzare lo stato di runtime dei processi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -31,7 +31,7 @@ ms.locfileid: "48053651"
   
 -   **Prima di iniziare:**  
   
-     [Security](#Security)  
+     [Sicurezza](#Security)  
   
 -   **Per visualizzare l'attività del processo utilizzando:**  
   
@@ -42,7 +42,7 @@ ms.locfileid: "48053651"
 ## <a name="before-you-begin"></a>Prima di iniziare  
   
 ###  <a name="Security"></a> Sicurezza  
- Per informazioni dettagliate, vedere [Implement SQL Server Agent Security](implement-sql-server-agent-security.md).  
+ Per informazioni dettagliate, vedere [Implementazione della sicurezza di SQL Server Agent](implement-sql-server-agent-security.md).  
   
 ##  <a name="SSMS"></a> Utilizzo di SQL Server Management Studio  
   
@@ -60,7 +60,7 @@ ms.locfileid: "48053651"
   
 6.  Per aggiornare Monitoraggio attività processo fare clic su **Aggiorna**. Per visualizzare un numero inferiore di righe, fare clic su **Filtro** e specificare i parametri del filtro.  
   
-##  <a name="TSQL"></a> Uso di Transact-SQL  
+##  <a name="TSQL"></a> Utilizzo di Transact-SQL  
   
 #### <a name="to-view-job-activity"></a>Per visualizzare l'attività del processo  
   

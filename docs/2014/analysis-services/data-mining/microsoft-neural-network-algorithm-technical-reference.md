@@ -29,12 +29,12 @@ ms.assetid: b8fac409-e3c0-4216-b032-364f8ea51095
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 118c20c16890edb50bdc19686da40c77b362c29d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 51551dd92ee0cca193abd88041e4ad7cc183718a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48217651"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52521124"
 ---
 # <a name="microsoft-neural-network-algorithm-technical-reference"></a>Microsoft Neural Network Algorithm Technical Reference
   L'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Neural Network usa una rete *perceptron multistrato* , chiamata anche *rete Delta Rule con retropropagazione*, costituita da un massimo di tre livelli neurali o *perceptron*. Tali livelli rappresentano rispettivamente un livello di input, un livello nascosto facoltativo e un livello di output.  
@@ -203,7 +203,7 @@ ms.locfileid: "48217651"
   
 ## <a name="see-also"></a>Vedere anche  
  [Algoritmo Microsoft Neural Network](microsoft-neural-network-algorithm.md)   
- [Contenuto dei modelli di rete neurale modelli di data mining &#40;Analysis Services - Data Mining&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
+ [Contenuto dei modelli di data mining per i modelli di rete neurale &#40;Analysis Services - Data mining&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
  [Esempi di query sul modello di rete neurale](neural-network-model-query-examples.md)  
   
   

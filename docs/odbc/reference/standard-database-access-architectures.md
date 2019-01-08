@@ -11,15 +11,15 @@ ms.assetid: a9d41800-9068-4b76-895a-32b2853692dd
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9ff5ee3c22a01b0b1963f1ca6021e72502aa377b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5a0a8457dfde0090ac0d88d12079e88995b39efb
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47724119"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507453"
 ---
 # <a name="standard-database-access-architectures"></a>Architetture standard di accesso ai database
-Osservando i componenti di accesso di database descritti nella sezione precedente, si scopre che due di essi, ovvero i protocolli di flusso di dati e le interfacce di programmazione, ovvero sono buoni candidati per la standardizzazione. Gli altri due componenti, protocolli di rete e meccanismo IPC, non solo si trovano a un livello troppo basso, ma sono entrambi altamente dipendente nella rete e sistema operativo. È disponibile anche un terzo approccio, ovvero gateway, che offre possibilità per la standardizzazione.  
+Osservando i componenti di accesso di database descritti nella sezione precedente, si scopre che due di essi - programmazione interfacce e protocolli di flusso di dati: sono buoni candidati per la standardizzazione. Gli altri due componenti, il meccanismo IPC e protocolli di rete, non solo si trovano a un livello troppo basso, ma sono entrambi altamente dipendente nella rete e sistema operativo. È inoltre disponibile un terzo approccio - gateway - che offre opportunità di standardizzazione.  
   
  In questa sezione vengono trattati gli argomenti seguenti.  
   

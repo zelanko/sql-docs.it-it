@@ -12,12 +12,12 @@ ms.assetid: 1a4a6564-9820-4a14-9305-2c0e9ea37454
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 25559152ebb3b748cee44a3a04dec2c23b7432b8
-ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
+ms.openlocfilehash: 87f260bc69a582726c2e995ed1934d10a1481db9
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49072035"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52772343"
 ---
 # <a name="ddl-triggers"></a>Trigger DDL
   I trigger DDL vengono eseguiti in risposta a vari eventi DDL (Data Definition Language), Questi eventi corrispondono principalmente a istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] che iniziano con le parole chiave CREATE, ALTER, DROP, GRANT, DENY, REVOKE o UPDATE STATISTICS. Alcune stored procedure di sistema che eseguono operazioni di tipo DDL possono inoltre attivare trigger DDL.  
@@ -35,7 +35,7 @@ ms.locfileid: "49072035"
   
 ## <a name="types-of-ddl-triggers"></a>Tipi di trigger DDL  
  Trigger DDL di Transact-SQL  
- Un tipo speciale di [!INCLUDE[tsql](../../includes/tsql-md.md)] stored procedure che esegue una o più [!INCLUDE[tsql](../../includes/tsql-md.md)] istruzioni in risposta a un evento con ambito server o con ambito database. Ad esempio, è possibile che un trigger DDL si attivi se viene eseguita un'istruzione come ALTER SERVER CONFIGURATION o se una tabella viene eliminata tramite DROP TABLE.  
+ Un tipo speciale di stored procedure [!INCLUDE[tsql](../../includes/tsql-md.md)] che esegue una o più istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] in risposta a un evento con ambito server o con ambito database. Ad esempio, è possibile che un trigger DDL si attivi se viene eseguita un'istruzione come ALTER SERVER CONFIGURATION o se una tabella viene eliminata tramite DROP TABLE.  
   
  Trigger CLR DDL  
  Anziché eseguire una stored procedure [!INCLUDE[tsql](../../includes/tsql-md.md)] , un trigger CLR consente di eseguire uno o più metodi scritti in codice gestito che sono membri di un assembly creato in .NET Framework e caricato in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

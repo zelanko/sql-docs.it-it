@@ -16,12 +16,12 @@ ms.assetid: b9f758df-030c-4aec-8ade-1bf904aa2c61
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2de2791ff4dcb52c50a57dbc91322756c10a7c13
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e8ccc6581e48a44e636fad07891bd8ec51596fbf
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48110671"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52797643"
 ---
 # <a name="changes-to-the-storage-format-for-types-xsdatetime-xsdate-and-xstime"></a>Modifiche al formato di archiviazione per i tipi xs:dateTime, xs:date e xs:time
   La regola XMLDATETIME identifica se i database contengono o meno dati XML tipizzati che non saranno più validi dopo l'aggiornamento a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -29,7 +29,7 @@ ms.locfileid: "48110671"
 ## <a name="component"></a>Componente  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>Descrizione  
  Il formato di archiviazione in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] per i tipi xs: DateTime, xs: date e xs: Time è stato modificato per supportare valori con o senza informazioni sul fuso orario e consentire il mantenimento del fuso orario.  
   
  Se una raccolta XML Schema fa riferimento a uno di tali tipi, gli indici XML di tutte le colonne associate alla raccolta verranno disabilitati dopo l'aggiornamento a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Sarà possibile sottoporli a query utilizzando SELECT e/o XQUERIES, ma l'indice XML non verrà utilizzato. Se viene rilevato un valore di anno negativo, verrà generato un errore di runtime.  
@@ -43,14 +43,14 @@ ms.locfileid: "48110671"
   
  Con la query seguente vengono ricercate le raccolte di XML Schema che fanno riferimento ai tipi interessati e per tutte le colonne XML tipizzate. In questo modo è possibile stabilire se sono presenti o meno istanze con valori di anni negativi.  
   
-```  
+```sql
 CREATE PROCEDURE DateTimeInvestigation(@withdata bit)  
 -- @withdata = 0: only get the affected meta data information  
 -- @withdata = 1: get the affected meta data and instance information  
 AS  
 BEGIN  
 -- First get XML containing all schema collections containing affected element and attributes  
--- components (model groups????)   
+-- components (model groups?)   
 -- and columns that are affected by the schema collections.   
 CREATE table #_dt_collector(x xml);   
 ;with dttypes as  

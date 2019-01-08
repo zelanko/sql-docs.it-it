@@ -16,12 +16,12 @@ ms.assetid: 641961ac-53a5-4997-9d42-cf4ecce1f892
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: c5697fea6bea90407686f909e6c5cbafa2e2877b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 66ee754963d6020b39f046ff6a5d73ea46450437
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48120791"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52407589"
 ---
 # <a name="report-server-content-management-ssrs-native-mode"></a>Gestione contenuto del server di report (modalità nativa SSRS)
   In [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], il concetto di gestione dei contenuti fa riferimento alla gestione degli elementi del server di report. È possibile gestire tutti gli elementi singolarmente tramite impostazioni di sicurezza e proprietà. Ogni elemento può essere spostato in una posizione diversa nello spazio dei nomi delle cartelle del server di report. Per gestire gli elementi in modo efficiente, è necessario conoscere quali attività vengono eseguite da un utente con ruolo Gestione contenuto.  
@@ -45,7 +45,7 @@ ms.locfileid: "48120791"
   
 -   Bilanciare le richieste di elaborazione di report inviate al server tramite la pianificazione dell'elaborazione dei report stessi e l'indicazione di quali possono essere eseguiti su richiesta e quali vengono caricati dalla cache.  
   
--   Fornire le autorizzazioni per eseguire le attività di gestione usando ruoli predefiniti, ovvero **Amministratore sistema** e **Gestione contenuto**. Per gestire in modo efficiente contenuto di un server di report, è necessario che un utente sia assegnato a entrambi ruoli.  
+-   Fornire le autorizzazioni per eseguire attività di gestione usando ruoli predefiniti: **Amministratore di sistema** e **Content Manager**. Per gestire in modo efficiente contenuto di un server di report, è necessario che un utente sia assegnato a entrambi ruoli.  
   
  Gli strumenti per la gestione dei contenuti del server di report includono [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] o Gestione report. [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] consente di impostare valori predefiniti e di abilitare funzionalità. Gestione report consente di concedere agli utenti l'accesso a elementi e operazioni del server di report, visualizzare e utilizzare report e altri tipi di contenuto, nonché visualizzare e utilizzare tutti gli elementi condivisi e le funzionalità di distribuzione del report. Per altre informazioni, vedere [Strumenti di Reporting Services](../tools/reporting-services-tools.md).  
   
@@ -65,7 +65,7 @@ ms.locfileid: "48120791"
 |![Icona di origine dati condivisa](../media/hlp-16datasource.png "Icona di origine dati condivisa")|Origine dati condivisa|  
 ||Set di dati condiviso|  
   
- Non tutti gli elementi possono essere spostati. Non è possibile spostare elementi associati a un report, ad esempio le sottoscrizioni o la cronologia del report. Tali elementi si spostano insieme ai report a essi associati. Analogamente, non è possibile spostare elementi disponibili all'esterno della gerarchia di cartelle, ad esempio le pianificazioni condivise. Non è possibile spostare gli elementi se non si dispone delle autorizzazioni appropriate. L'autorizzazione per lo spostamento di un elemento viene concessa a un utente selezionando le attività seguenti nell'assegnazione di ruolo dell'utente per l'elemento specifico: "Gestione di report", "Gestione modelli", "Gestione di cartelle" e "Gestione di origini dei dati".  
+ Non tutti gli elementi possono essere spostati. Non è possibile spostare elementi associati a un report, ad esempio le sottoscrizioni o la cronologia del report. Tali elementi si spostano insieme ai report a essi associati. Analogamente, non è possibile spostare elementi disponibili all'esterno della gerarchia di cartelle, ad esempio le pianificazioni condivise. Non è possibile spostare gli elementi se non si dispone delle autorizzazioni appropriate. L'autorizzazione per spostare un elemento verrà comunicata quando vengono selezionate le seguenti operazioni nell'assegnazione di ruolo per l'elemento in questione: "Gestione report," "Gestisci modelli", "Gestione di cartelle" e "Gestione di origini dati".  
   
 ##  <a name="bkmk_Folders"></a> Cartelle  
  Per fare riferimento agli elementi archiviati e gestiti da un server di report viene utilizzata una gerarchia di cartelle.  Per impostazione predefinita, la struttura di cartelle è costituita da un nodo radice denominato Home e da cartelle riservate che supportano la funzionalità facoltativa Report personali. Le cartelle aggiuntive vengono definite dall'utente. Le cartelle del server di report sono utili se si desidera concedere lo stesso livello di accesso a più elementi. Le autorizzazioni impostate per la cartella possono essere ereditate dagli elementi di tale cartella e in cartelle aggiuntive incluse in essa. È ad esempio possibile creare un set di cartelle sotto la cartella Home, assegnare autorizzazioni del team a ogni cartella, quindi consentire a membri del team di personalizzare le cartelle incluse nella cartella del team in base alle necessità.  

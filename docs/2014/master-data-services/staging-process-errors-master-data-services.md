@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - staging process [Master Data Services], error messages
@@ -13,17 +12,17 @@ ms.assetid: 0d9be0dd-638f-4dd4-92b2-253fda655455
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 0125d230652e124d8dbe6fc02fd35a842f6ae386
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d8b32a8e9b6b61c2d108d3a9b8e63242854d0a63
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48142491"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52822355"
 ---
 # <a name="staging-process-errors-master-data-services"></a>Errori del processo di gestione temporanea (Master Data Services)
   Al termine del processo di staging, per tutti i record elaborati è presente un valore nella colonna ErrorCode delle tabelle di staging. Questi valori sono elencati nella seguente tabella.  
   
-|codice|Errore|Si verifica quando/Dettagli|Si applica alla tabella|  
+|Codice|Errore|Si verifica quando/Dettagli|Si applica alla tabella|  
 |----------|-----------|--------------------------|----------------------|  
 |210001|Lo stesso codice membro è presente più volte nella tabella di staging.|Nel batch di gestione temporanea lo stesso codice membro è presente più volte. Il membro non è stato né creato né aggiornato.|Foglia<br /><br /> Consolidata<br /><br /> Relazione|  
 |210003|I valori degli attributi fanno riferimento a un membro inesistente o inattivo.|Quando si gestiscono temporaneamente gli attributi basati su dominio, è necessario utilizzare il codice, piuttosto che il nome. Si applica a **ImportType0**, **1**e **2**.|Foglia<br /><br /> Consolidata|  
@@ -34,7 +33,7 @@ ms.locfileid: "48142491"
 |210041|"ROOT" non è un codice membro valido.|Il valore **MemberCode** contiene la parola "ROOT".|Foglia<br /><br /> Consolidata<br /><br /> Relazione|  
 |210042|"MDMUNUSED" non è un codice membro valido.|Il valore **MemberCode** contiene la parola "MDMUNUSED".|Foglia<br /><br /> Consolidata<br /><br /> Relazione|  
 |210052|MemberCode non può essere disattivato perché è utilizzato come valore di attributo basato su dominio.|Quando **ImportType** = **3** o **4**, la gestione temporanea ha esito negativo se il membro viene usato come valore di attributo per altri membri. Usare **ImportType5** o **6** per impostare il valore su NULL o modificare i valori prima di eseguire il processo di gestione temporanea.|Foglia<br /><br /> Consolidata|  
-|300002|Il codice membro non è valido.|Relazioni: il codice membro padre o figlio non esiste.<br /><br /> Foglia o Consolidata: **ImportType** = **3** o **4** e il codice membro non esiste.|Foglia<br /><br /> Consolidata<br /><br /> Relazione|  
+|300002|Il codice membro non è valido.|Relazioni: Codice del membro padre o figlio non esiste.<br /><br /> Foglia o consolidato: **ImportType** = **3** oppure **4** e il codice membro non esiste.|Foglia<br /><br /> Consolidata<br /><br /> Relazione|  
 |300004|Il codice membro esiste già.|**ImportType** = **1** ed è stato usato un codice membro che già esiste nell'entità.|Foglia<br /><br /> Consolidata|  
 |210011|Se **RelationshipType** è **1**, **ParentCode** non può essere un membro foglia.|Assicurarsi che il valore **ParentCode** sia un codice membro consolidato.|Relazione|  
 |210015|Lo stesso codice membro è presente più volte nella tabella di staging per una gerarchia e un batch.|Per una gerarchia esplicita, si è specificata la posizione dello stesso membro più volte nello stesso batch.|Relazione|  

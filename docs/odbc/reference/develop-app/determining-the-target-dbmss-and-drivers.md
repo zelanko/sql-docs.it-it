@@ -14,17 +14,17 @@ ms.assetid: 23bee0f6-e12a-4598-b34e-df11a8086829
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5fe868eb16b48afd83fdd5af7dcd146157338947
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 92da788205213394edc75257d8266752a2a9d8df
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47788469"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535777"
 ---
 # <a name="determining-the-target-dbmss-and-drivers"></a>Determinazione dei DBMS e dei driver di destinazione
 La domanda successiva da prendere in considerazione è, quali sono il DBMS di destinazione per l'applicazione e quali driver sono disponibili che supportano tali DBMS? Poiché applicazioni generiche tendono a essere estremamente interoperativi, la questione del DBMS di destinazione è più applicabile alle applicazioni personalizzate e verticale. Tuttavia, la domanda dei driver di destinazione si applica a tutte le applicazioni, poiché i driver variano notevolmente in velocità, qualità, il supporto delle funzionalità e disponibilità. Inoltre, se i driver devono essere ridistribuito con l'applicazione, i costi e la disponibilità di piani di contratti multilicenza dovranno essere considerati.  
   
- Per molte applicazioni personalizzate, la destinazione DBMS sono evidenti: si sono esistenti DBMS che l'applicazione è progettata per accedere. Deve essere considerato anche DBMS in cui è pianificata migrazione futura. Tuttavia, la domanda importante per queste applicazioni è che i driver da usare con essi. Per altre applicazioni personalizzate, ovvero quelle che non sono progettati per accedere a un DBMS esistente, ovvero il DBMS di destinazione può essere scelto in base a supporto delle funzionalità, il supporto di utenti simultanei, la disponibilità di driver e convenienza.  
+ Per molte applicazioni personalizzate, la destinazione DBMS sono evidenti: Essi sono esistenti DBMS che l'applicazione è progettata per accedere. Deve essere considerato anche DBMS in cui è pianificata migrazione futura. Tuttavia, la domanda importante per queste applicazioni è che i driver da usare con essi. Per altre applicazioni personalizzate: quelli che non sono progettati per accedere a un DBMS esistente - il DBMS di destinazione può essere scelto in base a supporto delle funzionalità, il supporto di utenti simultanei, la disponibilità di driver e convenienza.  
   
  Per le applicazioni verticali, la destinazione di che DBMS in genere vengono scelti in base il supporto delle funzionalità, la disponibilità di driver e sul mercato. Ad esempio, un'applicazione di verticale progettata per le piccole imprese deve avere come destinazione DBMS che sono accessibili da tali aziende; un'applicazione verticale progettata come componente aggiuntivo di DBMS esistente deve avere come destinazione ampiamente usato DBMS.  
   

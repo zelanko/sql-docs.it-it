@@ -14,12 +14,12 @@ ms.assetid: 36e0cdbe-7f50-40f5-af0d-700f5d8dc75a
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0f7db54ca3cd3b7574896bac11bce87446b6d4b4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4c221030b54aef21ffa0a2df891561976aacff76
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47773389"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52505711"
 ---
 # <a name="passing-parameters-to-a-named-command"></a>Passaggio di parametri a un comando con nome
 Così come il risultato del comando viene passato come un *out* variabile di comando denominato, parametri per un comando con parametri è stato passato come *in* variabili per il comando specificato.  
@@ -91,7 +91,7 @@ objConn.GetOrdersOf 12345, objRs
 objConn.GetOrdersOf "12345", objRs  
 ```  
   
- ovvero è valido, ma verrà restituito un risultato vuoto impostato perché tale record non esiste nel database.  
+ -è valido, ma verrà restituito un risultato vuoto impostato perché tale record non esiste nel database.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Oggetto Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - monitoring performance [SQL Server replication], Replication Monitor
@@ -14,12 +13,12 @@ ms.assetid: 81f596d2-27a5-489d-bf8d-0f4361decd02
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c18872dee35e55da6af067f9459e15f99f9402bd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ae9c89b3fa3d9392e27cce9199f7c1b1b8f31dee
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48165441"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52771423"
 ---
 # <a name="monitoring-replication"></a>Monitoraggio della replica
   Monitoraggio replica di[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] è uno strumento grafico che consente di monitorare lo stato generale di una topologia di replica. Tale strumento offre informazioni dettagliate sullo stato e sulle prestazioni di pubblicazioni e sottoscrizioni, consentendo all'utente di rispondere a domande comuni quali:  
@@ -38,7 +37,7 @@ ms.locfileid: "48165441"
   
  Per monitorare la replica, è necessario che un utente sia un membro del ruolo predefinito del server **sysadmin** nel server di distribuzione o un membro del ruolo predefinito del database **replmonitor** nel database di distribuzione. Un amministratore di sistema può aggiungere qualsiasi utente al ruolo **replmonitor** , consentendo a tale utente di visualizzare l'attività di replica in Monitoraggio replica, ma non di amministrare la replica.  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  Negli argomenti seguenti sono incluse informazioni sulle funzionalità di Monitoraggio replica.  
   
  [Panoramica dell'interfaccia di Monitoraggio replica](overview-of-the-replication-monitor-interface.md)  
@@ -65,7 +64,7 @@ ms.locfileid: "48165441"
  [Monitorare gli agenti di replica](../agents/replication-agents.md)  
  Descrive come reperire informazioni su ogni agente di replica.  
   
- [Impostare valori di soglia e avvisi in Monitoraggio replica](set-thresholds-and-warnings-in-replication-monitor.md)  
+ [Set Thresholds and Warnings in Replication Monitor](set-thresholds-and-warnings-in-replication-monitor.md)  
  Descrive gli avvisi e le soglie che è possibile impostare in Monitoraggio replica. È consigliabile abilitare gli avvisi per la topologia, in modo da poter essere informati tempestivamente sullo stato e sulle prestazioni.  
   
  [Memorizzazione nella cache, aggiornamento e prestazioni di Monitoraggio replica](caching-refresh-and-replication-monitor-performance.md)  

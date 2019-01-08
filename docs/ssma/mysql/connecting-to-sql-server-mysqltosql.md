@@ -13,12 +13,12 @@ ms.assetid: 08233267-693e-46e6-9ca3-3a3dfd3d2be7
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 2827824224488cbaad99df0784159a5231a7eade
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 64dd3fae9776c09f81571a721aa53753e34fbb17
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47773939"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52412288"
 ---
 # <a name="connecting-to-sql-server-mysqltosql"></a>Connessione a SQL Server (MySQLToSQL)
 Per eseguire la migrazione di database MySQL a SQL Server, è necessario connettersi all'istanza di destinazione di SQL Server. Quando ci si connette, SSMA Ottiene i metadati relativi a tutti i database nell'istanza di SQL Server e visualizza i metadati del database in Esplora i metadati di SQL Server. SSMA archivia le informazioni dell'istanza di SQL Server si è connessi a, ma non archiviano le password.  
@@ -81,12 +81,12 @@ Quando si definiscono le proprietà di connessione, è inoltre possibile specifi
 ||||||||  
 |-|-|-|-|-|-|-|  
 |**VERSIONE SERVER di destinazione e tipo di progetto**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005<br /> (Versione: 9.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008<br /> (Versione: 10.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012<br />(Version:11.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014<br />(Version:12.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016<br />(Version:13.x)|SQL Azure|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005|Sì|Sì|Sì|Sì|Sì||  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008||Sì|Sì|Sì|Sì||  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012|||Sì|Sì|Sì||  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014||||Sì|Sì||  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2016|||||Sì||  
-|SQL Azure||||||Sì|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005|Yes|Yes|Yes|Yes|Yes||  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008||Yes|Yes|Yes|Yes||  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012|||Yes|Yes|Yes||  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014||||Yes|Yes||  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2016|||||Yes||  
+|SQL Azure||||||Yes|  
   
 > [!IMPORTANT]  
 > Conversione degli oggetti di database viene eseguita in base al tipo di progetto, ma non in base alla versione del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connesso a. In caso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] progetto 2005, la conversione viene eseguita come descritto [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anche se si è connessi a una versione successiva del 2005 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SQL Server 2008 o SQL Server 2012 o SQL Server 2014/SQL Server 2016).  

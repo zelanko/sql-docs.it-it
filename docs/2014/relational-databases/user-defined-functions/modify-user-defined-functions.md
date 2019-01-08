@@ -10,12 +10,12 @@ ms.assetid: 891c37b3-cb72-411f-9937-ee87e6d95f34
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: ee69a982dd16d165be9a808cb923b342157b4cf0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a114e51ad6f2841cbd6368208bac6771e3b97ed0
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48163551"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52392745"
 ---
 # <a name="modify-user-defined-functions"></a>Modificare funzioni definite dall'utente
   È possibile modificare le funzioni definite dall'utente in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. La modifica delle funzioni definite dall'utente come descritto di seguito non comporta la modifica delle autorizzazioni delle funzioni, né influisce su funzioni dipendenti, stored procedure o trigger.  
@@ -26,7 +26,7 @@ ms.locfileid: "48163551"
   
      [Limitazioni e restrizioni](#Restrictions)  
   
-     [Security](#Security)  
+     [Sicurezza](#Security)  
   
 -   **Per modificare una funzione definita dall'utente tramite:**  
   
@@ -72,7 +72,7 @@ ms.locfileid: "48163551"
   
 6.  Nel menu **File** fare clic su **Salva***nome_funzione*.  
   
-##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
   
 #### <a name="to-modify-a-user-defined-function"></a>Per modificare una funzione definita dall'utente  
   

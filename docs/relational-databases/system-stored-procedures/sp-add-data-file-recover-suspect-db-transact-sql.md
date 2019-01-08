@@ -18,12 +18,12 @@ ms.assetid: b25262aa-a228-48b7-8739-6581c760b171
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e6c7d43646f63d54cca08c736e41077883e30053
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: adc6a2c927c885e42afaf177a2e5a2703bf207c0
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47720586"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52520306"
 ---
 # <a name="spadddatafilerecoversuspectdb-transact-sql"></a>sp_add_data_file_recover_suspect_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,27 +46,27 @@ sp_add_data_file_recover_suspect_db [ @dbName= ] 'database'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@dbName=** ] **' * * * database* **'**  
+ [  **@dbName=** ] **'**_database_ **'**  
  Nome del database. *database* viene **sysname**, non prevede alcun valore predefinito.  
   
- [  **@filegroup=** ] **' * * * filegroup_name* **'**  
+ [  **@filegroup=** ] **'**_filegroup_name_ **'**  
  Filegroup a cui aggiungere il file. *filegroup_name* viene **nvarchar(260)**, valore predefinito è NULL, che indica che il file primario.  
   
- [  **@name=** ] **' * * * logical_file_name* **'**  
+ [  **@name=** ] **'**_logical_file_name_ **'**  
  Nome utilizzato in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per fare riferimento al file. Deve essere un nome univoco nel server. *logical_file_name* viene **nvarchar(260)**, non prevede alcun valore predefinito.  
   
- [ **@filename=** ] **'***os_file_name* **'**  
+ [  **@filename=** ] **'**_os_file_name_ **'**  
  Percorso e nome di file utilizzato dal sistema operativo per il file. Il file deve trovarsi in un'istanza di [!INCLUDE[ssDE](../../includes/ssde-md.md)]. *os_file_name* viene **nvarchar(260)**, non prevede alcun valore predefinito.  
   
- [  **@size=** ] **' * * * dimensioni* **'**  
+ [  **@size=** ] **'**_dimensioni_ **'**  
  Dimensioni iniziali del file. *le dimensioni* viene **nvarchar(20)**, con un valore predefinito è NULL. Specificare un numero intero, ovvero non includere decimali. È possibile utilizzare i suffissi MB e KB per specificare megabyte o kilobyte. Il valore predefinito è MB. Il valore minimo è 512 KB. Se *dimensioni* non viene specificato, il valore predefinito è 1 MB.  
   
- [ **@maxsize=** ] **'***max_size* **'**  
+ [  **@maxsize=** ] **'**_max_size_ **'**  
  Valore massimo fino a cui possono aumentare le dimensioni del file. *max_size* viene **nvarchar(20)**, con un valore predefinito è NULL. Specificare un numero intero, ovvero non includere decimali. È possibile utilizzare i suffissi MB e KB per specificare megabyte o kilobyte. Il valore predefinito è MB.  
   
  Se *max_size* non viene specificato, il file aumenterà finché il disco è pieno. Prima che si verifichi questa situazione, l'amministratore riceve un avviso dal registro applicazioni di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.  
   
- [  **@filegrowth=** ] **' * * * growth_increment* **'**  
+ [  **@filegrowth=** ] **'**_growth_increment_ **'**  
  Quantità di spazio aggiunta al file ogni volta che è necessario spazio aggiuntivo. *growth_increment* viene **nvarchar(20)**, con un valore predefinito è NULL. Il valore 0 indica che le dimensioni non verranno aumentate. Specificare un numero intero, ovvero non includere decimali. È possibile specificare il valore in megabyte (MB) o in kilobyte (KB) oppure in forma di percentuale (%). Se si utilizza il suffisso %, l'incremento corrisponde alla percentuale specificata delle dimensioni del file quando si verifica l'incremento. Se si specifica un valore senza il suffisso MB, KB o %, il suffisso predefinito è MB.  
   
  Se *growth_increment* è NULL, il valore predefinito è 10% e il valore minimo è 64 KB. Le dimensioni specificate vengono arrotondate al blocco di 64 KB più prossimo.  

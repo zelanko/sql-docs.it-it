@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 42c107f371b2cc1d8159c5eb94f3a51e864cf61d
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 49cf92537bf0289765dca7b3a04c76fe0bf50fd8
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145306"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52418702"
 ---
 # <a name="mdx-cell-properties---using-cell-properties"></a>Proprietà delle celle MDX - uso delle proprietà di cella
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -42,9 +42,9 @@ SELECT [<axis_specification>
 ## <a name="supported-intrinsic-cell-properties"></a>Proprietà intrinseche delle celle supportate  
  Nella tabella seguente sono elencate le proprietà intrinseche delle celle supportate che vengono utilizzate nel valore `<property>` .  
   
-|Proprietà|Description|  
+|Proprietà|Descrizione|  
 |--------------|-----------------|  
-|**ACTION_TYPE**|Maschera di bit che indica i tipi di azioni esistenti sulla cella. Di seguito vengono indicati i possibili valori della proprietà.<br /><br /> **MDACTION_TYPE_URL**<br /><br /> **MDACTION_TYPE_HTML**<br /><br /> **MDACTION_TYPE_STATEMENT**<br /><br /> **MDACTION_TYPE_DATASET**<br /><br /> **MDACTION_TYPE_ROWSET**<br /><br /> **MDACTION_TYPE_COMMANDLINE**<br /><br /> **MDACTION_TYPE_PROPRIETARY**<br /><br /> **MDACTION_TYPE_REPORT**<br /><br /> **MDACTION_TYPE_DRILLTHROUGH**<br /><br /> <br /><br /> Nota: le operazioni di drill-through non sono incluse per le query che contengono un set nella clausola WHERE.|  
+|**ACTION_TYPE**|Maschera di bit che indica i tipi di azioni esistenti sulla cella. Di seguito vengono indicati i possibili valori della proprietà.<br /><br /> **MDACTION_TYPE_URL**<br /><br /> **MDACTION_TYPE_HTML**<br /><br /> **MDACTION_TYPE_STATEMENT**<br /><br /> **MDACTION_TYPE_DATASET**<br /><br /> **MDACTION_TYPE_ROWSET**<br /><br /> **MDACTION_TYPE_COMMANDLINE**<br /><br /> **MDACTION_TYPE_PROPRIETARY**<br /><br /> **MDACTION_TYPE_REPORT**<br /><br /> **MDACTION_TYPE_DRILLTHROUGH**<br /><br /> <br /><br /> Nota: Le operazioni di drill-through non sono incluse per le query che contengono un set nella clausola WHERE.|  
 |**BACK_COLOR**|Il colore di sfondo per la visualizzazione della proprietà **VALUE** o **FORMATTED_VALUE**. Per altre informazioni, vedere [Contenuto di FORE_COLOR e BACK_COLOR &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-cell-properties-fore-color-and-back-color-contents.md).|  
 |**CELL_ORDINAL**|Numero ordinale della cella nel set di dati.|  
 |**FONT_FLAGS**|Maschera di bit che indica in dettaglio gli effetti sul carattere. Il valore è il risultato di un'operazione con OR bit per bit su una o più delle costanti seguenti:<br /><br /> **MDFF_BOLD** = 1<br /><br /> **MDFF_ITALIC** = 2<br /><br /> **MDFF_UNDERLINE** = 4<br /><br /> **MDFF_STRIKEOUT** = 8<br /><br /> <br /><br /> Il valore 5 rappresenta ad esempio l'applicazione combinata degli effetti grassetto (**MDFF_BOLD**) e sottolineato (**MDFF_UNDERLINE**) al carattere.|  
@@ -62,7 +62,7 @@ SELECT [<axis_specification>
 ||**CELL_UPDATE_ENABLED_WITH_UPDATE** (0x00000002)   La cella può essere aggiornata tramite un'istruzione di aggiornamento. Se si aggiorna una cella foglia non abilitata per la scrittura, l'aggiornamento potrebbe non riuscire.|  
 ||**CELL_UPDATE_NOT_ENABLED_FORMULA** (0x10000001)   La cella non può essere aggiornata perché le sue coordinate includono un membro calcolato, ovvero la cella era stata recuperata con un set nella clausola WHERE. È possibile aggiornare una cella anche se il suo valore è influenzato da una formula o da una cella calcolata, ovvero si trova in un punto qualsiasi del percorso di aggregazione. In questo scenario, il valore finale della cella potrebbe non essere il valore aggiornato, perché il risultato è influenzato dal calcolo.|  
 ||**CELL_UPDATE_NOT_ENABLED_NONSUM_MEASURE** (0x10000002)   La cella non può essere aggiornata perché non è possibile aggiornare misure non Sum (min, max, Distinct Count, semiadditive e di conteggio).|  
-||**CELL_UPDATE_NOT_ENABLED_NACELL_VIRTUALCUBE** (0x10000003)   La cella non può essere aggiornata perché non esiste, poiché si trova all'intersezione tra una misura e un membro della dimensione non correlato al gruppo di misure della misura.|  
+||**CELL_UPDATE_NOT_ENABLED_NACELL_VIRTUALCUBE** (0x10000003) la cella non può essere aggiornata perché non esiste, poiché si trova in corrispondenza dell'intersezione di una misura e un membro della dimensione non correlato al gruppo di misure della misura.|  
 ||**CELL_UPDATE_NOT_ENABLED_SECURE** (0x10000005)    La cella non può essere aggiornata perché è protetta.|  
 ||**CELL_UPDATE_NOT_ENABLED_CALCLEVEL** (0x10000006)   Riservato per uso futuro.|  
 ||**CELL_UPDATE_NOT_ENABLED_CANNOTUPDATE** (0x10000007)   La cella non può essere aggiornata per motivi interni.|  

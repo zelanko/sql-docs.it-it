@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: 957333697112105799d29aebecc3b3fcb049eb99
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 600a40f0ff04d401cfddbdee0f214254b1d3f7a4
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47764969"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52412508"
 ---
 # <a name="configure-sql-server-integration-services-on-linux-with-ssis-conf"></a>Configurare SQL Server Integration Services in Linux con ssis-conf
 
@@ -25,7 +25,7 @@ Eseguire il `ssis-conf` script di configurazione quando si installa SQL Server I
 
 È anche possibile usare il `ssis-conf` utilità per configurare le proprietà seguenti:
 
-| Comando | Description |
+| Comando | Descrizione |
 |-------------|---------------------------------------------------------------------|
 | set-edition | Impostare l'edizione di SQL Server                                       |
 | dati di telemetria   | Abilitare o disabilitare il servizio di telemetria di SQL Server Integration Services |

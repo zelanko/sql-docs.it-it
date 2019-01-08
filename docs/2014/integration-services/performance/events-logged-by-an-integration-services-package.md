@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - package [Integration Services], events
@@ -14,12 +13,12 @@ ms.assetid: 55a0951a-46f3-4f0f-9972-74cec9cc26b7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8ecc2c837001d5a05339ebe9b7eb3bdc9e6a7055
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 38a9660c94f4fc340ab00e1fb0dc83efa0482e0c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48188031"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52814303"
 ---
 # <a name="events-logged-by-an-integration-services-package"></a>Eventi registrati da un pacchetto di Integration Services
   Un pacchetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] registra diversi messaggi di eventi nel registro eventi applicazioni di Windows. nel registro eventi applicazioni di Windows.  

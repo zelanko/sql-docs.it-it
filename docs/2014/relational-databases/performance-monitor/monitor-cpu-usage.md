@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - monitoring performance [SQL Server], CPU usage
@@ -22,12 +22,12 @@ ms.assetid: 2a02a3b6-07b2-4ad0-8a24-670414d19812
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: cbbef4106ca9a913820cf30387a504747a5f8960
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e46610823432efde0cc757e3dff317227b7548ac
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48073141"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52747703"
 ---
 # <a name="monitor-cpu-usage"></a>Monitorare l'utilizzo della CPU
   È opportuno monitorare periodicamente un'istanza di Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per verificare che i valori di utilizzo della CPU rientrino nei normali intervalli. Se la frequenza di utilizzo della CPU è costantemente elevata può essere necessario eseguire un aggiornamento della CPU o aggiungere più processori. Una valore costantemente elevato di utilizzo della CPU può inoltre indicare la presenza di un'applicazione non progettata o ottimizzata correttamente. L'ottimizzazione dell'applicazione potrebbe ridurre l'utilizzo della CPU.  
@@ -47,7 +47,7 @@ ms.locfileid: "48073141"
   
      Indica la percentuale di tempo richiesta dal processore per l'esecuzione dei processi utente, ad esempio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
--   **Sistema: Lunghezza coda processore**  
+-   **System: Lunghezza coda processore**  
   
      Indica il numero di thread in attesa di elaborazione. Se i thread di un processo richiedono un numero di cicli del processore maggiore di quello disponibile, si verifica un collo di bottiglia a livello del processore. Se una quantità notevole di processi tenta di utilizzare il tempo del processore, può essere necessario installare un processore più veloce o, nel caso di sistemi multiprocessore, aggiungere un processore.  
   

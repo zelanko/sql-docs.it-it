@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 9d3001d9-8d0f-4e4a-8e04-4f666bf0df69
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: ce5905026d2a64df3180828e5ee2983f88a5aa06
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f86645a542e4c215a3675d7a0cbf9cfbd45cc2e9
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48056081"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52783943"
 ---
 # <a name="change-the-attribute-type-mds-add-in-for-excel"></a>Modificare il tipo di attributo (componente aggiuntivo MDS per Excel)
   Nel [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]gli amministratori possono modificare il tipo di attributo quando il tipo di dati o il numero di caratteri consentiti non è corretto.  
@@ -52,7 +51,7 @@ ms.locfileid: "48056081"
   
 -   Modificare il tipo di dati dell'attributo.  
   
--   Generare una copia dell'attributo con suffisso "_old" che non contiene alcun valore. Questa operazione viene definita un' **deprecato** attributo.  
+-   Generare una copia dell'attributo con il suffisso old"che non contiene alcun valore. Questa operazione viene definita un' **deprecato** attributo.  
   
  Tutte le dipendenze esistenti dall'attributo originale faranno tuttavia riferimento all'attributo deprecato e non a quello modificato.  
   
@@ -74,7 +73,7 @@ ms.locfileid: "48056081"
 >  Modificare i tipi di dati per gli attributi MDS con dati esistenti ed entità correlate è un'operazione complessa, soprattutto se è presente una regola business o una vista sottoscrizioni dichiarata che dipende dall'entità. La procedura consigliata consiste nell'iniziare con un tipo di dati sufficientemente flessibile per contenere i valori necessari. Ad esempio, le stringhe potrebbero essere brevi inizialmente, ma con il tempo potrebbe essere necessario allungarle, quindi è consigliabile considerare il peggiore dei casi. Una lunghezza aggiuntiva della stringa di testo può essere gravosa, ad esempio le caselle di testo di grandi dimensioni della GUI sono difficili da adattare alla schermata, quindi è opportuno evitare stringhe troppo lunghe.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Gli attributi &#40;Master Data Services&#41;](../attributes-master-data-services.md)   
+ [Attributi &#40;Master Data Services&#41;](../attributes-master-data-services.md)   
  [Compilazione di un modello &#40;componente aggiuntivo MDS per Excel&#41;](building-a-model-mds-add-in-for-excel.md)  
   
   

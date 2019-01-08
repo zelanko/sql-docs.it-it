@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - control flow [Integration Services], elements
@@ -15,12 +14,12 @@ ms.assetid: 0cc042a9-1a7f-49ed-9f47-091653d5ef6e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 300dbf1bc32d6113349eab5fbc1fad4511a92d4c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5a1772cb8f0e7ca4141d8befebb74cc4c0ceb588
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48092821"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52796833"
 ---
 # <a name="control-flow"></a>Flusso di controllo
   Un pacchetto è costituito da un flusso di controllo e, facoltativamente, da uno o più flussi di dati. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] offre tre diversi tipi di elementi del flusso di controllo: contenitori, che definiscono le strutture nei pacchetti, attività, che forniscono le funzionalità, e vincoli di precedenza, che connettono eseguibili, contenitori e attività in un flusso di controllo ordinato.  
@@ -66,7 +65,7 @@ ms.locfileid: "48092821"
   
 -   [Aggiungere o eliminare un'attività o un contenitore in un flusso di controllo](add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   
--   [Impostare le proprietà di un'attività o di un contenitore](../set-the-properties-of-a-task-or-container.md)  
+-   [Impostazione delle proprietà di un'attività o di un contenitore](../set-the-properties-of-a-task-or-container.md)  
   
 -   [Raggruppare o separare componenti](../group-or-ungroup-components.md)  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - memory [SQL Server], queries
@@ -16,12 +15,12 @@ ms.assetid: ecd3fb79-b4a6-432f-9ef5-530e0d42d5a6
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 4d215a40cce00c3cb5d1ea8293506961520fa1f7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 185ad6db579052c127c73c1770283e877174ab31
+ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48072441"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52640073"
 ---
 # <a name="configure-the-min-memory-per-query-server-configuration-option"></a>Configurare l'opzione di configurazione del server min memory per query
   In questo argomento viene descritto come configurare il `min memory per query` opzione di configurazione del server in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Il `min memory per query` opzione specifica la quantità minima di memoria, in kilobyte, che verrà allocata per l'esecuzione di una query. Ad esempio, se `min memory per query` è impostata su 2.048 KB, la query è garantita per ottenere almeno tale quantità di memoria totale. Il valore predefinito è 1024 KB. Il valore minimo è 512 KB mentre quello massimo è 2.147.483.647 KB (2 GB).  
@@ -34,7 +33,7 @@ ms.locfileid: "48072441"
   
      [Indicazioni](#Recommendations)  
   
-     [Security](#Security)  
+     [Sicurezza](#Security)  
   
 -   **Per configurare l'opzione min memory per query utilizzando:**  
   
@@ -42,7 +41,7 @@ ms.locfileid: "48072441"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **Completamento:**  [Dopo la configurazione dell'opzione min memory per query](#FollowUp)  
+-   **Completamento:**  [Dopo aver configurato l'opzione min memory per query](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> Prima di iniziare  
   
@@ -58,7 +57,7 @@ ms.locfileid: "48072441"
   
 ###  <a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorizzazioni  
  Le autorizzazioni di esecuzione per **sp_configure** senza alcun parametro o solo con il primo parametro vengono assegnate per impostazione predefinita a tutti gli utenti. Per eseguire **sp_configure** con entrambi i parametri per la modifica di un'opzione di configurazione o per l'esecuzione dell'istruzione RECONFIGURE, a un utente deve essere concessa l'autorizzazione a livello di server ALTER SETTINGS. L'autorizzazione ALTER SETTINGS è assegnata implicitamente ai ruoli predefiniti del server **sysadmin** e **serveradmin** .  
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
@@ -71,7 +70,7 @@ ms.locfileid: "48072441"
   
 3.  Nella casella **Memoria minima per le query** immettere la quantità minima di memoria, in kilobyte, che verrà allocata per l'esecuzione di una query.  
   
-##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
   
 #### <a name="to-configure-the-min-memory-per-query-option"></a>Per configurare l'opzione min memory per query  
   
@@ -95,7 +94,7 @@ GO
   
 ```  
   
-##  <a name="FollowUp"></a> Completamento: Dopo la configurazione dell'opzione min memory per query  
+##  <a name="FollowUp"></a> Completamento: Dopo aver configurato l'opzione min memory per query  
  L'impostazione diventa effettiva immediatamente senza dover riavviare il server.  
   
 ## <a name="see-also"></a>Vedere anche  

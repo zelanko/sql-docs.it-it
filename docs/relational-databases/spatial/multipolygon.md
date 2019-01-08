@@ -14,12 +14,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: dc6314ac1c24aa545e3f5c44749b755bf7e7174b
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: a40bf0e7f3758ca048f78f59177b7fc80a5e94ca
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018956"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979287"
 ---
 # <a name="multipolygon"></a>MultiPolygon
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -43,21 +43,21 @@ ms.locfileid: "51018956"
   
 -   Tutte le istanze che comprendono l'istanza **MultiPolygon** sono istanze **Polygon** accettate. Per altre informazioni sulle istanze **Polygon** accettate, vedere [Polygon](../../relational-databases/spatial/polygon.md).  
   
- Negli esempi seguenti vengono illustrate alcune istanze **MultiPolygon** accettate.  
+Negli esempi seguenti vengono illustrate alcune istanze **MultiPolygon** accettate.  
   
-```  
+```sql  
 DECLARE @g1 geometry = 'MULTIPOLYGON EMPTY';  
 DECLARE @g2 geometry = 'MULTIPOLYGON(((1 1, 1 -1, -1 -1, -1 1, 1 1)),((1 1, 3 1, 3 3, 1 3, 1 1)))';  
 DECLARE @g3 geometry = 'MULTIPOLYGON(((2 2, 2 -2, -2 -2, -2 2, 2 2)),((1 1, 3 1, 3 3, 1 3, 1 1)))';  
 ```  
   
- Nell'esempio seguente viene illustrata un'istanza MultiPolygon che genererà un'eccezione `System.FormatException`.  
+Nell'esempio seguente viene illustrata un'istanza MultiPolygon che genererà un'eccezione `System.FormatException`.  
   
-```  
+```sql  
 DECLARE @g geometry = 'MULTIPOLYGON(((1 1, 1 -1, -1 -1, -1 1, 1 1)),((1 1, 3 1, 3 3)))';  
 ```  
   
- La seconda istanza in MultiPolygon è un'istanza di LineString e non un'istanza Polygon accettata.  
+La seconda istanza in MultiPolygon è un'istanza di LineString e non un'istanza Polygon accettata.  
   
 ### <a name="valid-instances"></a>Istanze valide  
  Un'istanza **MultiPolygon** è valida se è un'istanza **MultiPolygon** vuota o se soddisfa i criteri indicati di seguito.  
@@ -66,29 +66,31 @@ DECLARE @g geometry = 'MULTIPOLYGON(((1 1, 1 -1, -1 -1, -1 1, 1 1)),((1 1, 3 1, 
   
 2.  Nessuna delle istanze **Polygon** che compongono l'istanza **MultiPolygon** si sovrappone.  
   
- Nell'esempio seguente sono indicate due istanze **MultiPolygon** valide e un'istanza **MultiPolygon** non valida.  
+Nell'esempio seguente sono indicate due istanze **MultiPolygon** valide e un'istanza **MultiPolygon** non valida.  
   
-```  
+```sql  
 DECLARE @g1 geometry = 'MULTIPOLYGON EMPTY';  
 DECLARE @g2 geometry = 'MULTIPOLYGON(((1 1, 1 -1, -1 -1, -1 1, 1 1)),((1 1, 3 1, 3 3, 1 3, 1 1)))';  
 DECLARE @g3 geometry = 'MULTIPOLYGON(((2 2, 2 -2, -2 -2, -2 2, 2 2)),((1 1, 3 1, 3 3, 1 3, 1 1)))';  
 SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid();  
 ```  
   
- `@g2` è valida perché le due istanze **Polygon** si toccano solo in corrispondenza di un punto tangente. `@g3` non è valida perché gli interni delle due istanze **Polygon** si sovrappongono.  
+`@g2` è valida perché le due istanze **Polygon** si toccano solo in corrispondenza di un punto tangente. `@g3` non è valida perché gli interni delle due istanze **Polygon** si sovrappongono.  
   
 ## <a name="examples"></a>Esempi  
- L'esempio seguente illustra la creazione di un'istanza `geometry``MultiPolygon` e viene restituito il Well-Known Text (WKT) del secondo componente.  
+### <a name="example-a"></a>Esempio A.
+L'esempio seguente illustra la creazione di un'istanza `geometry``MultiPolygon` e viene restituito il Well-Known Text (WKT) del secondo componente.  
   
-```  
+```sql  
 DECLARE @g geometry;  
 SET @g = geometry::Parse('MULTIPOLYGON(((0 0, 0 3, 3 3, 3 0, 0 0), (1 1, 1 2, 2 1, 1 1)), ((9 9, 9 10, 10 9, 9 9)))');  
 SELECT @g.STGeometryN(2).STAsText();  
 ```  
   
- In questo esempio viene creata un'istanza `MultiPolygon` vuota.  
+## <a name="example-b"></a>Esempio B.
+In questo esempio viene creata un'istanza `MultiPolygon` vuota.  
   
-```  
+```sql  
 DECLARE @g geometry;  
 SET @g = geometry::Parse('MULTIPOLYGON EMPTY');  
 ```  

@@ -13,12 +13,12 @@ ms.assetid: bbc4d7f7-3bc7-40d6-a822-af195fe7f8c0
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 19991410178a97b64d427feb56ce622e06c76570
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a6d398c2c9d8439025c7ff5ec7a8e4295b24d337
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48071591"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52506130"
 ---
 # <a name="remove-database-mirroring-sql-server"></a>Rimuovere il mirroring del database (SQL Server)
   In questo argomento verrà descritto come rimuovere il mirroring del database da un database in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  Il proprietario del database può arrestare manualmente una sessione di mirroring del database in qualsiasi momento, rimuovendo il mirroring dal database.  
@@ -46,7 +46,7 @@ ms.locfileid: "48071591"
   
 5.  Per rimuovere il mirroring, scegliere **Rimuovi mirroring**. Verrà richiesta una conferma. Se si fa clic su **Sì**, la sessione verrà arrestata e il mirroring verrà rimosso dal database.  
   
-##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
  Per rimuovere il mirroring del database, utilizzare **Proprietà database**. Utilizzare la pagina **Mirroring** della finestra di dialogo **Proprietà database** .  
   
 #### <a name="to-remove-database-mirroring"></a>Per rimuovere il mirroring del database  
@@ -69,7 +69,7 @@ ms.locfileid: "48071591"
     ALTER DATABASE AdventureWorks2012 SET PARTNER OFF;  
     ```  
   
-##  <a name="FollowUp"></a> Completamento: Dopo la rimozione del mirroring del database  
+##  <a name="FollowUp"></a> Completamento: Rimozione del mirroring del database  
   
 > [!NOTE]  
 >  Per informazioni sull'impatto della rimozione del mirroring del database, vedere [Rimozione del mirroring del database &#40;SQL Server&#41;](database-mirroring-sql-server.md).  
@@ -99,7 +99,7 @@ ms.locfileid: "48071591"
   
 -   [Stabilire una sessione di mirroring del database tramite autenticazione di Windows &#40;Transact-SQL&#41;](database-mirroring-establish-session-windows-authentication.md)  
   
--   [Esempio: Impostazione del mirroring del database tramite certificati &#40;Transact-SQL&#41;](example-setting-up-database-mirroring-using-certificates-transact-sql.md)  
+-   [Esempio: Configurare tramite certificati di mirroring del Database &#40;Transact-SQL&#41;](example-setting-up-database-mirroring-using-certificates-transact-sql.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Mirroring del database &#40;SQL Server&#41;](database-mirroring-sql-server.md)   

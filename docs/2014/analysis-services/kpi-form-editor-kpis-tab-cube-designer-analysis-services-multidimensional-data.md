@@ -13,12 +13,12 @@ ms.assetid: 45c6453a-bbe2-4ca5-836e-c7ef11cfcb65
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 49df3dcaf89d98d42da0a89ea7de0b8114093913
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 233e8f36f103d1a5adac6937d47e1040dfe6395d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48166381"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52523470"
 ---
 # <a name="kpi-form-editor-kpis-tab-cube-designer-analysis-services---multidimensional-data"></a>Editor form KPI (scheda KPI, Progettazione cubi) (Analysis Services - Dati multidimensionali)
   Usare il riquadro **Editor form KPI** della scheda **KPI** in Progettazione cubi per creare o modificare l'indicatore di prestazioni chiave (KPI) selezionato.  
@@ -27,7 +27,7 @@ ms.locfileid: "48166381"
 >  Questo riquadro viene visualizzato solo in visualizzazione Form.  
   
 ## <a name="options"></a>Opzioni  
- **Nome**  
+ **Name**  
  Consente di digitare il nome dell'indicatore KPI.  
   
  **Gruppo di misure associato**  
@@ -61,10 +61,10 @@ ms.locfileid: "48166381"
   
  Trascinare gli elementi selezionati dal riquadro **Strumenti di calcolo** alla casella di questa opzione per includere la sintassi MDX per l'elemento selezionato.  
   
- È consigliabile fare in modo che questa espressione restituisca un numero decimale compreso tra -1 e 1. Un numero minore rappresenta una situazione negativa, mentre numero maggiore rappresenta una situazione positiva.  
+ È consigliabile che questa espressione restituisca un numero decimale compreso tra -1 e 1. Un numero minore rappresenta una situazione negativa, mentre numero maggiore rappresenta una situazione positiva.  
   
 > [!NOTE]  
->  I valori inferiori a –1 e superiori a 1 sono possibili ma possono essere interpretati erroneamente da applicazioni client di terze parti.  
+>  I valori di sotto di -1 e superiori a 1 sono possibili ma non possono essere interpretati erroneamente da applicazioni client di terze parti.  
   
  **Tendenza**  
  Espandere questa casella per visualizzare le opzioni **Icona tendenza** ed **Espressione tendenza** .  
@@ -80,10 +80,10 @@ ms.locfileid: "48166381"
   
  Trascinare gli elementi selezionati dal riquadro **Strumenti di calcolo** alla casella di questa opzione per includere la sintassi MDX per l'elemento selezionato.  
   
- L'espressione di tendenza può essere basata su qualsiasi criterio temporale adatto al contesto aziendale. È consigliabile fare in modo che questa espressione restituisca un numero decimale compreso tra -1 e 1. Un numero minore rappresenta una tendenza negativa nel tempo, mentre un numero maggiore rappresenta una tendenza positiva nel tempo.  
+ L'espressione di tendenza può essere basata su qualsiasi criterio temporale adatto al contesto aziendale. È consigliabile che questa espressione restituisca un numero decimale compreso tra -1 e 1. Un numero minore rappresenta una tendenza negativa nel tempo, mentre un numero maggiore rappresenta una tendenza positiva nel tempo.  
   
 > [!NOTE]  
->  I valori inferiori a –1 e superiori a 1 sono possibili ma possono essere interpretati erroneamente da applicazioni client di terze parti.  
+>  I valori di sotto di -1 e superiori a 1 sono possibili ma non possono essere interpretati erroneamente da applicazioni client di terze parti.  
   
  **Proprietà aggiuntive**  
  Espandere questa casella per visualizzare le opzioni **Cartella di visualizzazione**, **KPI padre**, **Membro temporale corrente**, **Peso**e **Descrizione** .  

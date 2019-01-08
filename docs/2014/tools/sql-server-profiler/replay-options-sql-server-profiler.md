@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: profiler
 ms.topic: conceptual
 helpviewer_keywords:
 - traces [SQL Server], replaying
@@ -16,12 +15,12 @@ ms.assetid: 58761a25-a84f-4a90-9c61-97700bc5ad9c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9d4c2bbf0d59cce86debc955d8cf4cefade5ddb0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e91a501a899a6ba2b18790ac2da6e7c45b270b07
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48150121"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52809974"
 ---
 # <a name="replay-options-sql-server-profiler"></a>Opzioni di riproduzione (SQL Server Profiler)
   Prima di riprodurre una traccia acquisita con [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], è necessario specificare le opzioni di riproduzione nella finestra di dialogo **Configurazione riproduzione** . Per visualizzare questa finestra di dialogo, aprire il file o la tabella di traccia per la riproduzione in [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]e scegliere **Avvia** dal menu **Riproduci**. Per informazioni sulle autorizzazioni necessarie per riprodurre una traccia, vedere [Autorizzazioni necessarie per l'esecuzione di SQL Server Profiler](sql-server-profiler.md).  
@@ -81,6 +80,6 @@ ms.locfileid: "48150121"
 ## <a name="see-also"></a>Vedere anche  
  [Riprodurre le tracce](replay-traces.md)   
  [Requisiti per la riproduzione](replay-requirements.md)   
- [Considerazioni per la riproduzione di tracce &#40;SQL Server Profiler&#41;](considerations-for-replaying-traces-sql-server-profiler.md)  
+ [Considerazioni relative alla riproduzione di tracce &#40;SQL Server Profiler&#41;](considerations-for-replaying-traces-sql-server-profiler.md)  
   
   

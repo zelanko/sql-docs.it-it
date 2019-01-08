@@ -9,22 +9,22 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 3ce1bc8aa83b376aecdf5bd80a180a4777044bce
-ms.sourcegitcommit: e8e013b4d4fbd3b25f85fd6318d3ca8ddf73f31e
+ms.openlocfilehash: d43432a53eb2321c3707f4034e244752a5c368ba
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42791932"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52416403"
 ---
 # <a name="lesson-10-create-partitions"></a>Lezione 10: Creare partizioni
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
 
-In questa lezione si creerà le partizioni per dividere la tabella FactInternetSales in parti logiche più piccole che possono essere elaborate (aggiornate) indipendentemente dalle altre. Per impostazione predefinita, ogni tabella inclusa nel modello dispone di una partizione, che comprende tutte le colonne e le righe della tabella. Per la tabella FactInternetSales, si desidera dividere i dati per anno. una partizione per ognuno dei cinque anni della tabella. Ogni partizione può quindi essere elaborata in modo indipendente. Per altre informazioni, vedere [Tabella](../analysis-services/tabular-models/partitions-ssas-tabular.md).  
+In questa lezione si creerà le partizioni per dividere la tabella FactInternetSales in parti logiche più piccole che possono essere elaborate (aggiornate) indipendentemente dalle altre. Per impostazione predefinita, ogni tabella a che inclusa nel modello dispone di una partizione che include tutte le colonne e le righe della tabella. Per la tabella FactInternetSales, si desidera dividere i dati per anno. una partizione per ognuno dei cinque anni della tabella. Ogni partizione può quindi essere elaborata in modo indipendente. Per altre informazioni, vedere [Tabella](../analysis-services/tabular-models/partitions-ssas-tabular.md).  
   
 Tempo stimato per il completamento della lezione: **15 minuti**  
   
 ## <a name="prerequisites"></a>Prerequisiti  
-Questo argomento fa parte di un'esercitazione relativa alla modellazione tabulare che deve essere completata nell'ordine specificato. Prima di eseguire le attività in questa lezione, è necessario avere completato la lezione precedente: [lezione 9: creare gerarchie](../analysis-services/lesson-9-create-hierarchies.md).  
+Questo argomento fa parte di un'esercitazione relativa alla modellazione tabulare che deve essere completata nell'ordine specificato. Prima di eseguire le attività in questa lezione, è necessario avere completato la lezione precedente: [Lezione 9: Creare gerarchie](../analysis-services/lesson-9-create-hierarchies.md).  
   
 ## <a name="create-partitions"></a>Creare partizioni  
   
@@ -144,4 +144,4 @@ Si noti che in Gestione partizioni, il **ultima elaborazione** colonna per ogni 
     ![come-tabulare-lesson10-processo-completato](../analysis-services/media/as-tabular-lesson10-process-complete.png)
   
  ## <a name="whats-next"></a>Quali sono le operazioni successive?
-Passare alla lezione successiva: [lezione 11: creare ruoli](../analysis-services/lesson-11-create-roles.md). 
+Passare alla lezione successiva: [Lezione 11: Creare ruoli](../analysis-services/lesson-11-create-roles.md). 

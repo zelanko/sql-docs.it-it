@@ -13,12 +13,12 @@ ms.assetid: ac1a6a79-bda3-4122-a717-8b1e2f77da02
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e55050d8ed845f4255c6eebbdada9930f4d140c7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 867d476c0132bedf39f709497e035b8264f2b022
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48074521"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52390606"
 ---
 # <a name="import-from-powerpivot-ssas-tabular"></a>Importare da PowerPivot (SSAS tabulare)
   In questo argomento viene descritto come creare un nuovo progetto di modello tabulare importando i metadati e i dati da una cartella di lavoro di PowerPivot tramite il modello di progetto Importa da PowerPivot disponibile in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
@@ -29,11 +29,11 @@ ms.locfileid: "48074521"
 > [!NOTE]  
 >  I modelli tabulari non supportano le tabelle collegate. Quando si esegue un'importazione da una cartella di lavoro di PowerPivot contenente una tabella collegata, i dati di tale tabella vengono considerati come dati copiati o incollati e vengono archiviati nel file Model.bim. Quando si visualizzano le proprietà per una tabella copiata o incollata, la proprietà **Origine dati** e la finestra di dialogo **Proprietà tabella** nel menu **Tabella** sono disabilitate.  
 >   
->  Esiste un limite di 10.000 righe che è possibile aggiungere ai dati incorporati nel modello. Se si importa un modello da PowerPivot e viene visualizzato l'errore "Dati troncati. Le tabelle incollate non possono contenere più di 10000 righe" è consigliabile esaminare il modello PowerPivot spostando i dati incorporati in un'altra origine dati, ad esempio una tabella in SQL Server, quindi ripetere l'importazione.  
+>  Esiste un limite di 10.000 righe che è possibile aggiungere ai dati incorporati nel modello. Se si importa un modello da PowerPivot e viene visualizzato l'errore "dati troncati. Tabelle incollate non possono contenere più di 10000 righe"è necessario esaminare il modello PowerPivot spostando i dati incorporati in un'altra origine dati, ad esempio una tabella in SQL Server e quindi ripetere l'importazione.  
   
  Vi sono considerazioni speciali a seconda se il database dell'area di lavoro si trovi o meno in un'istanza di Analysis Services sullo stesso computer (locale) di [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] o in un'istanza di Analysis Services remota.  
   
- Se il database dell'area di lavoro è in un'istanza locale di Analysis Services, è possibile importare sia i metadati sia i dati dalla cartella di lavoro di PowerPivot. I metadati vengono copiati dalla cartella di lavoro e utilizzati per creare il progetto di modello tabulare. I dati vengono quindi copiati dalla cartella di lavoro e archiviati nel database dell'area di lavoro del progetto (a eccezione dei dati copiati o incollati, archiviati nel file Model.bim).  
+ Se il database dell'area di lavoro è in un'istanza locale di Analysis Services, è possibile importare sia i metadati sia i dati dalla cartella di lavoro di PowerPivot. I metadati vengono copiati dalla cartella di lavoro e utilizzati per creare il progetto di modello tabulare. I dati vengono quindi copiati dalla cartella di lavoro e archiviati nel database dell'area di lavoro del progetto (tranne i dati copiati o incollati, che viene archiviati nel file Model. bim).  
   
  Se il database dell'area di lavoro si trova in un'istanza remota di Analysis Services, non è possibile importare dati da una cartella di lavoro di PowerPivot per Excel. È comunque possibile importare i metadati della cartella di lavoro; tuttavia, questa operazione causerà l'esecuzione di uno script nell'istanza remota di Analysis Services. È consigliabile importare solo i metadati da una cartella di lavoro di PowerPivot attendibile. I dati devono essere importati nuovamente da origini definite nelle connessioni all'origine dati. I dati della tabella collegata copiati o incollati nella cartella di lavoro di PowerPivot devono essere copiati e incollati nel progetto di modello tabulare.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "48074521"
 4.  Nella finestra di dialogo **Apri** selezionare il file di [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)] in cui sono contenuti i metadati e i dati del modello da importare, quindi fare clic su **Apri**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Database dell'area di lavoro &#40;tabulare di SSAS&#41;](workspace-database-ssas-tabular.md)   
- [Copiare e incollare i dati &#40;tabulare di SSAS&#41;](../copy-and-paste-data-ssas-tabular.md)  
+ [Database dell'area di lavoro &#40;SSAS tabulare&#41;](workspace-database-ssas-tabular.md)   
+ [Copiare e incollare dati &#40;SSAS tabulare&#41;](../copy-and-paste-data-ssas-tabular.md)  
   
   

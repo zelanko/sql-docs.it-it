@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_addmergefilter
@@ -17,12 +16,12 @@ ms.assetid: 4c118cb1-2008-44e2-a797-34b7dc34d6b1
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 72d29fca659426075f4c7ee07f82ac6507fc0709
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 31ada2bfb184e24011ee91dde82fc9abfb319320
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47595210"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52777913"
 ---
 # <a name="spaddmergefilter-transact-sql"></a>sp_addmergefilter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,16 +46,16 @@ sp_addmergefilter [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@publication=** ] **'***pubblicazione***'**  
+ [  **@publication=** ] **'**_pubblicazione_**'**  
  Nome della pubblicazione nella quale viene aggiunto il filtro di merge. *pubblicazione* viene **sysname**, non prevede alcun valore predefinito.  
   
- [  **@article=** ] **'***articolo***'**  
+ [  **@article=** ] **'**_articolo_**'**  
  Nome dell'articolo nel quale viene aggiunto il filtro di merge. *articolo* viene **sysname**, non prevede alcun valore predefinito.  
   
- [  **@filtername=** ] **'***filtername***'**  
+ [  **@filtername=** ] **'**_filtername_**'**  
  Nome del filtro. *FilterName* è un parametro obbligatorio. *FilterName*viene **sysname**, non prevede alcun valore predefinito.  
   
- [  **@join_articlename=** ] **'***join_articlename***'**  
+ [  **@join_articlename=** ] **'**_join_articlename_**'**  
  Articolo padre al quale l'articolo figlio specificato da *articolo*, deve essere unito tramite la clausola join specificata da *join_filterclause*per determinare le righe dell'articolo figlio che soddisfano il criterio di filtro di filtro di merge. *join_articlename* viene **sysname**, non prevede alcun valore predefinito. L'articolo deve essere incluso nella pubblicazione specificata da *publication*.  
   
  [  **@join_filterclause=** ] *join_filterclause*  
@@ -85,7 +84,7 @@ sp_addmergefilter [ @publication = ] 'publication'
  [  **@filter_type=** ] *filter_type*  
  Specifica il tipo di filtro da aggiungere. *filter_type* viene **tinyint**, e può essere uno dei valori seguenti.  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |**1**|Solo filtro di join. Necessario per supportare [!INCLUDE[ssEW](../../includes/ssew-md.md)] sottoscrittori.|  
 |**2**|Solo relazione tra record logici.|  

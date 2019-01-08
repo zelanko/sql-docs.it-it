@@ -1,5 +1,5 @@
 ---
-title: Che definisce il membro sconosciuto e le proprietà di elaborazione dei valori Null | Documenti Microsoft
+title: La definizione di the Unknown Member and Null Processing proprietà | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: e39ac2042304b927d8270da57a88c4452ef79337
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 08e05c68bf69bcb7ca54d2f0920ee041aae3ca99
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019578"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52525917"
 ---
-# <a name="lesson-4-7---defining-the-unknown-member-and-null-processing-properties"></a>Lezione 4-7-che definisce il membro sconosciuto e le proprietà di elaborazione dei valori Null
+# <a name="lesson-4-7---defining-the-unknown-member-and-null-processing-properties"></a>Lezione 4-7: definizione the Unknown Member and Null Processing proprietà
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
 Quando [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] elabora una dimensione, tutti i valori distinti delle colonne sottostanti delle tabelle o viste incluse nella vista origine dati popolano gli attributi della dimensione. Se [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] rileva un valore Null durante l'elaborazione, per impostazione predefinita quest'ultimo viene convertito in un valore zero per le colonne di tipo numerico o in una stringa vuota per le colonne di tipo stringa. È possibile modificare le impostazioni predefinite oppure convertire i valori Null nell'eventuale processo di estrazione, trasformazione e caricamento del data warehouse relazionale sottostante. È anche possibile configurare [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] in modo che converta il valore Null in un valore designato impostando tre proprietà, ovvero **UnknownMember** e **UnknownMemberName** per la dimensione e **NullProcessing** per l'attributo chiave della dimensione.  
@@ -60,7 +60,7 @@ Nelle attività di questo argomento si aggiungeranno gli attributi della categor
   
     Il livello contiene i componenti di assembly che vengono usati nella compilazione di altri componenti, a partire dal prodotto **Adjustable Race** , come illustrato nella figura seguente.  
   
-    ![Componenti di assembly utilizzati per compilare altri componenti](../analysis-services/media/l4-productdimensionerrorconfig-2.gif "componenti di Assembly utilizzati per compilare altri componenti")  
+    ![Componenti di assembly usati per compilare altri componenti](../analysis-services/media/l4-productdimensionerrorconfig-2.gif "Assembly components consente di compilare gli altri componenti")  
   
 ## <a name="defining-attributes-from-snowflaked-tables-and-a-product-category-user-defined-hierarchy"></a>Definizione di attributi provenienti da tabelle con schema snowflake e di una gerarchia definita dall'utente Product Category  
   
@@ -76,7 +76,7 @@ Nelle attività di questo argomento si aggiungeranno gli attributi della categor
   
     La tabella **DimProductCategory (dbo)** viene aggiunta all'elenco **Oggetti inclusi** .  
   
-4.  Scegliere **OK**.  
+4.  Fare clic su **OK**.  
   
 5.  Scegliere **Layout automatico** dal menu [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]Formato **di**e quindi fare clic su **Diagramma**.  
   
@@ -90,7 +90,7 @@ Nelle attività di questo argomento si aggiungeranno gli attributi della categor
   
 9. Nel riquadro **Attributi** modificare il nome di questo nuovo attributo in **Category**.  
   
-10. Nella finestra Proprietà fare clic nel campo della proprietà **NameColumn** , quindi fare clic sul pulsante Sfoglia (**…**) per aprire la finestra di dialogo **Colonna nome** .  
+10. Nella finestra Proprietà fare clic nel **NameColumn** proprietà campo e quindi fare clic su Sfoglia (**...** ) per aprire la **colonna nome** nella finestra di dialogo.  
   
 11. Selezionare **EnglishProductCategoryName** nell'elenco **Colonna di origine** , quindi fare clic su **OK**.  
   
@@ -98,11 +98,11 @@ Nelle attività di questo argomento si aggiungeranno gli attributi della categor
   
 13. Nel riquadro **Attributi** modificare il nome di questo nuovo attributo in **Subcategory**.  
   
-14. Nella finestra Proprietà fare clic nel campo della proprietà **NameColumn** , quindi fare clic sul pulsante Sfoglia **(…)** per aprire la finestra di dialogo **Colonna nome** .  
+14. Nella finestra Proprietà fare clic nel **NameColumn** proprietà campo e quindi fare clic su Sfoglia **(...)**  per aprire la **colonna nome** nella finestra di dialogo.  
   
 15. Selezionare **EnglishProductSubcategoryName** nell'elenco **Colonna di origine** , quindi fare clic su **OK**.  
   
-16. Creare una nuova gerarchia definita dall'utente denominata **Product Categories** con i seguenti livelli, nell'ordine dall'alto verso il basso: **Category**, **Subcategory**e **Product Name**.  
+16. Creare una nuova gerarchia definita dall'utente denominata **Product Categories** con i livelli seguenti, nell'ordine dall'alto verso il basso: **Categoria**, **Subcategory**, e **Product Name**.  
   
 17. Specificare **All Products** come valore per la proprietà **AllMemberName** della gerarchia definita dall'utente Product Categories.  
   

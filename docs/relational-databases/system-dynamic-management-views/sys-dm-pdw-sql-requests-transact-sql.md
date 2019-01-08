@@ -13,19 +13,19 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: cf7c48e09fc0ade7db65e2d67984be07914df90d
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 71fee8fa84355217ca7cf3099272c4cf2aa8a487
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51664070"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52397594"
 ---
 # <a name="sysdmpdwsqlrequests-transact-sql"></a>sys.dm_pdw_sql_requests (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   Contiene informazioni su tutte le distribuzioni di query di SQL Server come parte di un passaggio SQL nella query.  
   
-|Nome colonna|Tipo di dati|Description|Intervallo|  
+|Nome colonna|Tipo di dati|Descrizione|Intervallo|  
 |-----------------|---------------|-----------------|-----------|  
 |request_id|**nvarchar(32)**|Identificatore univoco della query a cui appartiene questa distribuzione di query SQL.<br /><br /> request_id step_index e distribution_id formano la chiave per questa visualizzazione.|Vedere in request_id [DM pdw_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md).|  
 |step_index|**int**|Indice del passaggio della query di di che questo tipo di distribuzione fa parte.<br /><br /> request_id step_index e distribution_id formano la chiave per questa visualizzazione.|Vedere in step_index [DM pdw_request_steps &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-request-steps-transact-sql.md).|  

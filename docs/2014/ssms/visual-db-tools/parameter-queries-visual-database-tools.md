@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - parameter queries [SQL Server]
@@ -12,12 +12,12 @@ ms.assetid: 4897c41a-324a-47b8-a30b-cbc9e9e19a8b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 53d38505a07fe30ef22145f4ec8197092e7bc6d0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5a3ea199f6e2e86f5dc2e51199386f31b93e9377
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48098641"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52815743"
 ---
 # <a name="parameter-queries-visual-database-tools"></a>Query con parametri (Visual Database Tools)
   In alcuni casi potrebbe essere necessario creare una query da utilizzare più volte, specificando però ogni volta un valore diverso. Se, ad esempio, si eseguono di frequente delle query per individuare tutti i `title_ids` di un determinato autore, è possibile utilizzare la stessa query per tutte le richieste specificando però ogni volta un ID o un nome di autore diverso.  
@@ -31,7 +31,7 @@ WHERE (au_id = ?)
 ```  
   
 ## <a name="where-you-can-use-parameters"></a>Possibili utilizzi dei parametri  
- I parametri possono essere utilizzati come segnaposto per valori letterali (testo o valori numerici). Nella maggior parte dei casi i parametri vengono utilizzati come segnaposto all'interno di condizioni di ricerca per singole righe o per gruppi, ovvero nelle clausole WHERE o HAVING di un'istruzione SQL.  
+ È possibile usare i parametri come segnaposto per valori letterali (per valori di testo o numerici). Nella maggior parte dei casi i parametri vengono utilizzati come segnaposto all'interno di condizioni di ricerca per singole righe o per gruppi, ovvero nelle clausole WHERE o HAVING di un'istruzione SQL.  
   
  I parametri possono essere utilizzati nelle espressioni come segnaposto. Si supponga ad esempio di voler calcolare prezzi scontati specificando un valore di sconto diverso a ogni esecuzione della query. A tale scopo, è possibile utilizzare la seguente espressione:  
   

@@ -11,12 +11,12 @@ ms.assetid: 0d2eb34d-78c8-41ff-b92d-49b62c16b2ac
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 873b4cce7a2bd72c74bb7aff3147351b0062eb07
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7d7ab0a864d99e3cade96b7715adf7d307ca355c
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48124921"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52394174"
 ---
 # <a name="lesson-1-create-a-new-tabular-model-project"></a>Lezione 1: Creare un nuovo modello di progetto tabulare
   In questa lezione verrà creato un nuovo progetto di modello tabulare in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Una volta creato il nuovo progetto, è possibile iniziare ad aggiungere dati tramite l'Importazione guidata tabella. Oltre alla creazione di un nuovo progetto, questa lezione include anche una breve introduzione all'ambiente di creazione di modelli tabulari in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)].  
@@ -43,7 +43,7 @@ ms.locfileid: "48124921"
 4.  Fare clic su **OK**.  
   
 ## <a name="understanding-the-sql-server-data-tools-tabular-model-authoring-environment"></a>Informazioni sull'ambiente di creazione di modelli tabulari per SQL Server Data Tools  
- Dopo avere creato un nuovo progetto di modello tabulare, verrà analizzato l'ambiente di creazione di modelli tabulari in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] (Visual Studio 2010 o versioni successive).  
+ Ora che è stato creato un nuovo progetto di modello tabulare, verrà analizzato l'ambiente di creazione di modelli tabulari [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] (Visual Studio 2010 o versione successiva).  
   
  Dopo essere stato creato, il progetto verrà visualizzato in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]. In Progettazione modelli verrà visualizzato un modello vuoto e il file **Model.bim** verrà selezionato nella finestra **Esplora soluzioni** . Quando si aggiungono dati, nella finestra di progettazione vengono visualizzate tabelle e colonne. Se non viene visualizzata la finestra di progettazione (la finestra vuota con la scheda Model. bim), in **Esplora soluzioni**, in `AW Internet Sales Tabular Model`, fare doppio clic il **Model. bim** file.  
   
@@ -51,11 +51,11 @@ ms.locfileid: "48124921"
   
  Nella **Esplora soluzioni**, fare doppio clic il `AW Internet Sales Tabular Model` del progetto e quindi fare clic su **proprietà**. Verrà visualizzata la finestra di dialogo **Pagine delle proprietà di AW Internet Sales Tabular Model** (Pagine delle proprietà di AW Internet Sales Tabular Model). Si tratta delle proprietà avanzate del progetto. Più avanti, prima di distribuire il modello, verranno impostate alcune di queste proprietà.  
   
- Verranno ora analizzate le proprietà del modello. In **Esplora soluzioni**fare clic su **Model.bim**. Nella finestra **Proprietà** verranno visualizzate le proprietà del modello, la più importante delle quali è la proprietà **Modalità DirectQuery** . Questa proprietà specifica se il modello verrà distribuito o meno nella modalità In-Memory (disattivata) o nella modalità DirectQuery (attivata). Per questa esercitazione il modello verrà creato e distribuito nella modalità In-Memory.  
+ A questo punto, esaminiamo le proprietà del modello. In **Esplora soluzioni**fare clic su **Model.bim**. Nella finestra **Proprietà** verranno visualizzate le proprietà del modello, la più importante delle quali è la proprietà **Modalità DirectQuery** . Questa proprietà specifica se il modello verrà distribuito o meno nella modalità In-Memory (disattivata) o nella modalità DirectQuery (attivata). Per questa esercitazione il modello verrà creato e distribuito nella modalità In-Memory.  
   
  Quando si crea un nuovo modello, determinate proprietà del modello vengono impostate automaticamente in base alle impostazioni di Modellazione dati che è possibile specificare nella finestra di dialogo Strumenti\Opzioni. Le proprietà Backup dei dati, Memorizzazione area di lavoro e Server dell'area di lavoro consentono di specificare la modalità e la posizione per il backup, la conservazione in memoria e la compilazione del database dell'area di lavoro, ovvero il database di creazione di modelli. Queste impostazioni possono essere modificate successivamente, ma per il momento è possibile lasciarle invariate.  
   
- Con l'installazione di [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] vengono aggiunte nuove voci di menu all'ambiente di Visual Studio. Analizzare le nuove voci di menu specifiche della creazione di modelli tabulari. Fare clic sul menu **Modello** . Da questa posizione è possibile avviare l'Importazione guidata tabella, visualizzare e modificare le connessioni esistenti, aggiornare i dati dell'area di lavoro, esplorare il modello in [!INCLUDE[msCoName](../includes/msconame-md.md)] Excel utilizzando la funzionalità Analizza in Excel, creare prospettive e ruoli, selezionare la vista del modello e impostare opzioni di calcolo.  
+ Con l'installazione di [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]vengono aggiunte nuove voci di menu all'ambiente di Visual Studio. Esaminiamo le nuove voci di menu che sono specifiche per la creazione di modelli tabulari. Fare clic sul menu **Modello** . Da questa posizione è possibile avviare l'Importazione guidata tabella, visualizzare e modificare le connessioni esistenti, aggiornare i dati dell'area di lavoro, esplorare il modello in [!INCLUDE[msCoName](../includes/msconame-md.md)] Excel utilizzando la funzionalità Analizza in Excel, creare prospettive e ruoli, selezionare la vista del modello e impostare opzioni di calcolo.  
   
  Fare clic sul menu **Tabella**. Da questa posizione è possibile creare e gestire relazioni tra tabelle, creare, gestire e specificare impostazioni della tabella data, creare partizioni e modificare proprietà della tabella.  
   

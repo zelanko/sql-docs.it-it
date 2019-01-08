@@ -11,20 +11,20 @@ ms.assetid: 92eb21a8-5fc4-4999-ad37-1332ce26431d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: caea636c7c319bfb4db2cc54e062bb00de9bb3b2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c0817db540c9db8f17fbc71da68f43cc68645190
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48089648"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52391714"
 ---
 # <a name="lesson-11-create-partitions"></a>Lezione 11: Creare partizioni
-  In questa lezione verranno create partizioni per dividere la tabella Internet Sales in parti logiche più piccole, che possono essere elaborate (aggiornate) indipendentemente dalle altre partizioni. Per impostazione predefinita, ogni tabella inclusa nel modello dispone di una partizione, che comprende tutte le colonne e le righe della tabella. Per la tabella Internet Sales, si desidera dividere i dati in base all'anno, creando una partizione per ognuno dei cinque anni della tabella.  Ogni partizione può quindi essere elaborata in modo indipendente. Per altre informazioni, vedere [Partizioni &#40;SSAS tabulare&#41;](tabular-models/partitions-ssas-tabular.md).  
+  In questa lezione verranno create partizioni per dividere la tabella Internet Sales in parti logiche più piccole, che possono essere elaborate (aggiornate) indipendentemente dalle altre partizioni. Per impostazione predefinita, ogni tabella a che inclusa nel modello dispone di una partizione che include tutte le colonne e le righe della tabella. Per la tabella Internet Sales, si desidera dividere i dati per anno. una partizione per ognuno dei cinque anni della tabella.  Ogni partizione può quindi essere elaborata in modo indipendente. Per altre informazioni, vedere [Partizioni &#40;SSAS tabulare&#41;](tabular-models/partitions-ssas-tabular.md).  
   
  Tempo stimato per il completamento della lezione: **15 minuti**  
   
 ## <a name="prerequisites"></a>Prerequisiti  
- Questo argomento fa parte di un'esercitazione relativa alla modellazione tabulare che deve essere completata nell'ordine specificato. Prima di eseguire le attività in questa lezione è necessario aver completato la lezione precedente: [Lezione 10: Creare gerarchie](lesson-9-create-hierarchies.md).  
+ Questo argomento fa parte di un'esercitazione relativa alla modellazione tabulare che deve essere completata nell'ordine specificato. Prima di eseguire le attività in questa lezione, è necessario avere completato la lezione precedente: [Lezione 10: Creare gerarchie](lesson-9-create-hierarchies.md).  
   
 ## <a name="create-partitions"></a>Creare partizioni  
   
@@ -80,7 +80,7 @@ ms.locfileid: "48089648"
   
 6.  Fare clic su **Convalida**.  
   
-     Si noti che viene visualizzato un avviso che indica che alcune colonne non sono presenti nell'origine. Infatti, in [lezione 3: rinominare colonne](rename-columns.md), si rinominate le colonne nella tabella Internet Sales nel modello può essere diverso alle stesse colonne nell'origine.  
+     Si noti che viene visualizzato un avviso che indica che alcune colonne non sono presenti nell'origine. Infatti, in [lezione 3: Rinominare le colonne](rename-columns.md), si rinominate le colonne nella tabella Internet Sales nel modello può essere diverso alle stesse colonne nell'origine.  
   
 #### <a name="to-create-a-partition-for-the-2006-year-in-the-internet-sales-table"></a>Per creare una partizione per l'anno 2006 nella tabella Internet Sales  
   
@@ -154,6 +154,6 @@ ms.locfileid: "48089648"
      Il **processo di Data** quindi nella finestra di dialogo viene visualizzata e consente di visualizzare i dettagli dei processi per ogni partizione. Si noti che per ogni partizione viene trasferito un numero diverso di righe. Questo avviene in quanto ogni partizione include solo le righe per l'anno specificato nella clausola WHERE dell'istruzione SQL. Non vi sono dati per l'anno 2010.  
   
 ## <a name="next-steps"></a>Passaggi successivi  
- Per continuare questa esercitazione, passare alla lezione successiva: [Lezione 12: Creare ruoli](lesson-11-create-roles.md).  
+ Per continuare questa esercitazione, passare alla lezione successiva: Lezione: [Lezione 12: Creare ruoli](lesson-11-create-roles.md).  
   
   

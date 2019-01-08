@@ -11,14 +11,14 @@ ms.assetid: cb4273e2-c907-4a86-a621-3bf110088228
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c5bb2a49043857cfe9278862efd9e540e4597808
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 060de551afa266dae4d5384fe765e16b997bcccd
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47706840"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206650"
 ---
-# <a name="step-4-populate-the-details-text-box"></a>Passaggio 4: Popolare la casella di riepilogo Details
+# <a name="step-4-populate-the-details-text-box"></a>Passaggio 4: Popolare la casella di testo dei dettagli
 Per popolare la casella di testo di informazioni dettagliate, creare una nuova subroutine denominata **recFields** e inserire il codice seguente:  
   
 ```  
@@ -49,4 +49,4 @@ End Sub
   
 ## <a name="see-also"></a>Vedere anche  
  [Scenario di Internet Publishing](../../../ado/guide/data/internet-publishing-scenario.md)   
- [Passaggio 3: Popolare la casella di riepilogo Fields](../../../ado/guide/data/step-3-populate-the-fields-list-box.md)
+ [Passaggio 3: Popolare la casella di riepilogo di campi](../../../ado/guide/data/step-3-populate-the-fields-list-box.md)

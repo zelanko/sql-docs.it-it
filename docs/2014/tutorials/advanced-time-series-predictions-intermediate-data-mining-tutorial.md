@@ -11,12 +11,12 @@ ms.assetid: b614ebdb-07ca-44af-a0ff-893364bd4b71
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f575a51d34bfaa6b8a4ca1a6200cf60f9d89a870
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6a45d0bf0878b472e4979c00a5a38e8b01974a22
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48122741"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52544332"
 ---
 # <a name="advanced-time-series-predictions-intermediate-data-mining-tutorial"></a>Stime avanzate basate su serie temporali (Esercitazione intermedia sul data mining)
   Dall'esplorazione del modello di previsione è emerso che, benché le vendite nella maggior parte delle aree geografiche seguano uno schema analogo, alcune aree e alcuni modelli, ad esempio il modello M200 nell'area del Pacifico, mostrano tendenze molto diverse. Questo risultato non è sorprendente, in quanto è noto che differenze tra le diverse aree sono comuni e possono essere causate da numerosi fattori, tra cui promozioni marketing, produzione di report imprecisi o eventi geopolitici.  
@@ -44,7 +44,7 @@ ms.locfileid: "48122741"
 ##  <a name="bkmk_newExtendData"></a> Creazione di nuovi dati di vendita estesi  
  Per aggiornare i dati di vendita, sarà necessario ottenere le cifre di vendita più recenti. Sono di particolare interesse solo i dati dalla regione del Pacifico, dove è stata avviata una promozione di vendite regionali per richiamare l'attenzione sui nuovi punti vendita e generare consapevolezza dei prodotti.  
   
- Per questo scenario si presuppone che i dati siano stati importati da una cartella di lavoro di Excel che contiene solo tre mesi di nuovi dati per un paio di aree. Si creerà una tabella per i dati utilizzando uno script Transact-SQL, quindi si definirà una vista origine dati per utilizzare per la stima.  
+ Per questo scenario, si partirà dal presupposto che i dati importati da una cartella di lavoro di Excel che contiene solo tre mesi di nuovi dati per un paio di aree. È possibile creare una tabella per i dati usando uno script Transact-SQL e quindi definire una vista origine dati da utilizzare per la stima.  
   
 #### <a name="create-the-table-with-new-sales-data"></a>Creare la tabella con i nuovi dati di vendita  
   
@@ -102,7 +102,7 @@ ms.locfileid: "48122741"
   
      **Zdroj dat**: [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)]  
   
-     **Selezione tabelle e viste**: selezionare la tabella appena creata, NewSalesData.  
+     **Selezione tabelle e viste**: Selezionare la tabella appena creato, NewSalesData.  
   
 3.  Scegliere **Fine**.  
   
@@ -122,9 +122,9 @@ ms.locfileid: "48122741"
   
 2.  Nella pagina di benvenuto della procedura guidata fare clic su **Avanti**.  
   
-3.  Nel **selezionare un'origine dati** pagina, selezionare [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)], quindi fare clic su **successivo**.  
+3.  Nella pagina **Selezionare un'origine dati** selezionare [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)], quindi scegliere **Avanti**.  
   
-4.  Nella pagina **Selezione tabelle e viste**scegliere semplicemente **Avanti**senza aggiungere alcuna tabella.  
+4.  Nella pagina **selezione tabelle e viste**, non aggiungere qualsiasi tabelle, fai clic **successivo**.  
   
 5.  Nella pagina **Completamento procedura guidata**, digitare il nome `AllRegions`, quindi fare clic su **fine**.  
   
@@ -153,7 +153,7 @@ ms.locfileid: "48122741"
   
      **Zdroj dat**: [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)]  
   
-     **Selezione tabelle e viste**: non selezionare alcuna tabella  
+     **Selezione tabelle e viste**: Non selezionare alcuna tabella  
   
      **Nome**: `T1000 Pacific Region`  
   
@@ -165,7 +165,7 @@ ms.locfileid: "48122741"
   
      **Nome**: `T1000 Pacific Region`  
   
-     **Descrizione**: **filtro`vTimeSeries`per area e modello**  
+     **Descrizione**: **Filtro`vTimeSeries`per area e modello**  
   
 5.  Nel riquadro Testo digitare la query seguente, quindi scegliere OK:  
   
@@ -187,7 +187,7 @@ ms.locfileid: "48122741"
   
 ## <a name="see-also"></a>Vedere anche  
  [Algoritmo Microsoft Time Series](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm.md)   
- [Riferimento tecnico per algoritmo Microsoft Time Series](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)   
+ [Riferimento tecnico per l'algoritmo Microsoft Time Series](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)   
  [Viste origine dati in modelli multidimensionali](../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)  
   
   

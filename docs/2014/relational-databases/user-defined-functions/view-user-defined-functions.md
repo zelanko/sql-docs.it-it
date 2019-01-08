@@ -18,12 +18,12 @@ ms.assetid: a45dfab5-6384-4311-b935-2e23a70c5c10
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: ab407cac265c148b946380c58d48e2c98f231a81
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 73f3fcdb485d4fdfbb06392414086d25f405a77f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48223171"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52505448"
 ---
 # <a name="view-user-defined-functions"></a>Visualizzare le funzioni definite dall'utente
   È possibile acquisire informazioni sulla definizione o le proprietà di una funzione definita dall'utente in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Potrebbe essere necessario visualizzare la definizione della funzione per determinare come vengono derivati i dati dalle tabelle di origine o per visualizzare i dati definiti dalla funzione.  
@@ -35,7 +35,7 @@ ms.locfileid: "48223171"
   
 -   **Prima di iniziare:**  
   
-     [Security](#Security)  
+     [Sicurezza](#Security)  
   
 -   **Per acquisire informazioni su una funzione tramite:**  
   
@@ -68,7 +68,7 @@ ms.locfileid: "48223171"
   
 4.  Fare clic con il pulsante destro del mouse sulla funzione di cui si vogliono visualizzare le proprietà e scegliere **Proprietà**.  
   
-     Le proprietà seguenti vengono visualizzate nella finestra di dialogo **Proprietà funzione -** *nome_funzione* .  
+     Le proprietà seguenti vengono visualizzate nella finestra di dialogo **Proprietà funzione -** *nome_funzione*.  
   
      **Database**  
      Nome del database che contiene la funzione.  
@@ -85,7 +85,7 @@ ms.locfileid: "48223171"
      **Esegui come**  
      Contesto di esecuzione per la funzione.  
   
-     **Nome**  
+     **Name**  
      Nome della funzione corrente.  
   
      **Schema**  
@@ -109,7 +109,7 @@ ms.locfileid: "48223171"
      **Associata a schema**  
      Indica se la funzione è associata allo schema. I valori sono True e False. Per informazioni sulle funzioni associate a schema, vedere la sezione relativa a SCHEMABINDING in [CREATE FUNCTION &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-function-transact-sql).  
   
-##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
   
 #### <a name="to-get-the-definition-and-properties-of-a-function"></a>Per acquisire la definizione e le proprietà di una funzione  
   

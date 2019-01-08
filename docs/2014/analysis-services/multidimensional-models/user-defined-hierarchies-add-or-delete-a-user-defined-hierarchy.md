@@ -17,12 +17,12 @@ ms.assetid: 953818b4-9543-4c01-bb20-1d45ec6dfb91
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 79c6f928f8f3931960dcfa7ee72b8b3f237cf1e8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 08531e4b0ecfcda02fa1dd1e2c3125b557e41cb7
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48183981"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514507"
 ---
 # <a name="add-or-delete-a-user-defined-hierarchy"></a>Aggiungere o eliminare una gerarchia definita dall'utente
   È possibile aggiungere o rimuovere una gerarchia definita dall'utente in una dimensione nella scheda **Struttura dimensione** di Progettazione dimensioni in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
@@ -54,11 +54,11 @@ ms.locfileid: "48183981"
   
 -   Nella scheda **Struttura dimensione** fare clic sulla gerarchia definita dall'utente che si vuole rimuovere nel riquadro **Gerarchie** . Fare clic su **Elimina**sulla barra degli strumenti.  
   
-     - o -  
+     - - oppure -  
   
 -   Fare clic con il pulsante destro del mouse sulla gerarchia definita dall'utente che si vuole rimuovere nel riquadro **Gerarchie** e quindi scegliere **Elimina**.  
   
-     - o -  
+     - - oppure -  
   
 -   Trascinare la gerarchia definita dall'utente al di fuori dell'area di progettazione.  
   

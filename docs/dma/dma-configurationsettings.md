@@ -15,12 +15,12 @@ ms.assetid: ''
 author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 9801afda1a876f486e7b7042d3dad082c70c99fa
-ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
+ms.openlocfilehash: ceca358e47a2cabbe01e64498d61603717a0d370
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49643819"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52419252"
 ---
 # <a name="configure-settings-for-data-migration-assistant"></a>Configurare le impostazioni per Data Migration Assistant
 
@@ -40,7 +40,7 @@ Assicurarsi di salvare una copia del file di configurazione originale prima di a
 
 ## <a name="number-of-databases-to-assess-in-parallel"></a>Numero di database per valutare in parallelo
 
-Data Migration Assistant valuta più database in parallelo. Durante la valutazione Data Migration Assistant estrae dell'applicazione livello dati (dacpac) per comprendere lo schema del database. Questa operazione può causare il timeout se valutati in parallelo in più database nello stesso server. 
+Data Migration Assistant valuta più database in parallelo. Durante la valutazione Data Migration Assistant estrae dell'applicazione livello dati (dacpac) per comprendere lo schema del database. Questa operazione può causare il timeout se valutati in parallelo in più database nello stesso server. 
 
 A partire da v2.0 Data Migration Assistant, è possibile controllare questo impostando parallelDatabases il valore di configurazione. Valore predefinito è 8.
 
@@ -70,7 +70,7 @@ A partire dalla versione 2.0 Data Migration Assistant, se si verifica questo pro
 
 <workflowSettings>
 
-<migration parallelDatabases=”8″ />
+<migration parallelDatabases="8″ />
 
 </workflowSettings>
 
@@ -87,22 +87,22 @@ Durante la valutazione, Data Migration Assistant estrae dell'applicazione livell
 
 - commandTimeout
 
-   Questo parametro imposta la proprietà IDbCommand.CommandTimeout *secondi*. (Predefinito = 60)
+   Questo parametro imposta la proprietà IDbCommand.CommandTimeout *secondi*. (Predefinito = 60)
 
 - databaseLockTimeout
 
-   Questo parametro è equivalente a [blocco impostato\_TIMEOUT timeout\_periodo](../t-sql/statements/set-lock-timeout-transact-sql.md) nelle *millisecondi*. (Predefinito = 5000)
+   Questo parametro è equivalente a [blocco impostato\_TIMEOUT timeout\_periodo](../t-sql/statements/set-lock-timeout-transact-sql.md) nelle *millisecondi*. (Predefinito = 5000)
 
 - maxDataReaderDegreeOfParallelism
 
-  Questo parametro imposta il numero di connessioni di pool di connessione SQL da usare. (Predefinito = 8)
+  Questo parametro imposta il numero di connessioni di pool di connessione SQL da usare. (Predefinito = 8)
 
 ```
 <advisorGroup>
 
 <advisorSettings>
 
-<dacFx  commandTimeout="60" databaseLockTimeout="5000"
+<dacFx  commandTimeout="60" databaseLockTimeout="5000"
 maxDataReaderDegreeOfParallelism="8"/>
 
 </advisorSettings>
@@ -121,7 +121,7 @@ A partire da v2.0 Data Migration Assistant, è possibile controllare questa sogl
 
 <advisorSettings>
 
-<stretchDBAdvisor  recommendedNumberOfRows="100000" />
+<stretchDBAdvisor  recommendedNumberOfRows="100000" />
 
 </advisorSettings>
 
@@ -136,7 +136,7 @@ A partire da v2.0 Data Migration Assistant, è possibile controllare questa sogl
 ```
 <appSettings>
 
-<add key="ConnectionTimeout" value="15" />
+<add key="ConnectionTimeout" value="15" />
 
 </appSettings>
 ```

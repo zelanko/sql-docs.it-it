@@ -15,12 +15,12 @@ ms.assetid: 368f4273-a016-4748-bcb6-505a3e745af3
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4b41c5404ebd27b03ee044a69c987b0f484f62b9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 603b1d22370a32808460aa3e725e5f26e0f62dc0
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049481"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52404186"
 ---
 # <a name="create-a-new-olap-mining-structure"></a>Creare una nuova struttura di data mining OLAP
   È possibile usare la Creazione guidata modello di data mining in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] per creare una struttura di data mining che usa dati da un modello multidimensionale. I modelli di data mining basati su cubi OLAP possono utilizzare la colonna e i valori di tabelle dei fatti, dimensioni e gruppi di misure come attributi per l'analisi.  
@@ -43,13 +43,13 @@ ms.locfileid: "48049481"
   
      Se ad esempio si tenta di identificare i raggruppamenti del cliente, è possibile scegliere la dimensione Customer, se si tenta di analizzare gli acquisti nelle transazioni, è possibile scegliere la dimensione Dettagli ordine vendita Internet. Non si è limitati all'utilizzo dei soli dati di questa dimensione, tuttavia dovrebbe contenere attributi importanti per l'utilizzo nell'analisi.  
   
-     Fare clic su **Avanti**.  
+     Scegliere **Avanti**.  
   
 6.  Nella pagina **Selezione chiave del case** , in **Attributi**, selezionare l'attributo che costituirà la chiave della struttura di data mining, quindi fare clic su **Avanti**.  
   
      In genere, l'attributo utilizzato come chiave per la struttura di data mining è anche una chiave per la dimensione e risulterà pre-selezionata.  
   
-7.  Nella pagina **Selezione colonne livello case** , in **Attributi e misure correlati**, selezionare gli attributi e le misure che contengono i valori da aggiungere alla struttura di data mining come dati del case. Fare clic su **Avanti**.  
+7.  Nella pagina **Selezione colonne livello case** , in **Attributi e misure correlati**, selezionare gli attributi e le misure che contengono i valori da aggiungere alla struttura di data mining come dati del case. Scegliere **Avanti**.  
   
 8.  Nella pagina **Impostazione utilizzo colonne modello di data mining** , in **Struttura modello di data mining**, impostare la colonna stimabile, quindi scegliere le colonne da usare come input.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "48049481"
   
      Si noti che colonne definite come chiavi non possono essere utilizzate per l'input o la stima.  
   
-     Fare clic su **Avanti**.  
+     Scegliere **Avanti**.  
   
 9. Nella pagina **Impostazione utilizzo colonne modello di data mining** è anche possibile aggiungere e rimuovere le tabelle annidate dalla struttura di data mining, usando **Aggiungi tabelle annidate** e **Tabelle annidate**.  
   
@@ -71,9 +71,9 @@ ms.locfileid: "48049481"
   
      Se si aggiungono dati nidificati, è necessario specificare due colonne aggiuntive:  
   
-    -   Chiave della tabella annidata: deve essere preselezionata nella pagina **Selezione chiave tabella annidata**.  
+    -   La chiave della tabella nidificata: Questo deve essere preselezionato nella pagina **Selezione chiave tabella annidata**.  
   
-    -   Attributi o attributi da usare per l'analisi: nella pagina **Selezione colonne tabella annidata**è contenuto un elenco delle misure e degli attributi nella selezione della tabella annidata.  
+    -   Gli attributi da utilizzare per l'analisi: La pagina **selezione colonne tabella nidificata**, fornisce un elenco delle misure e attributi nella selezione della tabella nidificata.  
   
         -   Per ogni attributo incluso nel modello, selezionare la casella nella colonna sinistra.  
   
@@ -81,7 +81,7 @@ ms.locfileid: "48049481"
   
         -   Se si desidera includere la colonna come uno degli attributi stimabili per il modello, selezionare **Stima**.  
   
-        -   Qualsiasi elemento incluso nella struttura, ma non si specifica come input o attributo stimabile viene aggiunto alla struttura con il flag `Ignore`; ciò significa che i dati vengono elaborati quando si compila il modello, ma non viene usato nell'analisi ed è disponibile solo per il ripristino di emergenza illthrough. Questo aspetto può essere utile se si desidera includere dettagli come i nomi dei clienti, ma non si desidera utilizzarli nell'analisi.  
+        -   Qualsiasi elemento incluso nella struttura, ma non specificato come un input o attributo stimabile viene aggiunto alla struttura con il flag `Ignore`. Ciò significa che i dati vengono elaborati quando si compila il modello, ma non vengono utilizzati nell'analisi e sono disponibili solo per il drill-through. Ciò può essere utile se si desidera includere dettagli quali i nomi dei clienti, ma non si desidera utilizzarli nell'analisi.  
   
      Fare clic su **Fine** per chiudere la parte della procedura guidata correlata alle tabelle annidate. È possibile ripetere il processo per aggiungere più colonne nidificate.  
   
@@ -90,27 +90,27 @@ ms.locfileid: "48049481"
     > [!NOTE]  
     >  I modelli di data mining OLAP non supportano l'uso della caratteristica **Rileva** per rilevare automaticamente se una colonna contiene dati continui o discreti.  
   
-     Fare clic su **Avanti**.  
+     Scegliere **Avanti**.  
   
 11. Nella pagina **Sezionamento cubo di origine** è possibile filtrare i dati usati per creare la struttura di data mining.  
   
      Sezionando il cubo si limitano i dati utilizzati per la compilazione del modello. È ad esempio possibile compilare modelli separati per ogni area sezionando in base alla gerarchia Geography e  
   
-    -   **Dimensione**: scegliere una dimensione correlata dall'elenco a discesa.  
+    -   **Dimensione**: Scegliere una dimensione correlata dall'elenco a discesa.  
   
-    -   **Gerarchia**: selezionare il livello della gerarchia di dimensione al quale si desidera applicare il filtro. Ad esempio, se si seziona in base alla dimensione [Geography], è necessario scegliere un livello di gerarchia come [Region Country Name].  
+    -   **Gerarchia**:  Selezionare il livello della gerarchia della dimensione in corrispondenza del quale si desidera applicare il filtro. Ad esempio, se si seziona in base alla dimensione [Geography], è necessario scegliere un livello di gerarchia come [Region Country Name].  
   
-    -   **Operatore**: scegliere un operatore dall'elenco.  
+    -   **Operatore**: Scegliere un operatore dall'elenco.  
   
-    -   **Espressione filtro**: digitare un valore o un'espressione da usare come condizione di filtro oppure usare l'elenco a discesa per selezionare un valore dall'elenco dei membri al livello specificato della gerarchia.  
+    -   **Espressione filtro**: Digitare un valore o un'espressione da utilizzare come condizione di filtro oppure usare l'elenco a discesa per selezionare un valore dall'elenco dei membri al livello specificato della gerarchia.  
   
          Ad esempio, se si è selezionato [Geography] come dimensione e [Region Country Name] come livello della gerarchia, l'elenco a discesa contiene tutti i paesi validi che è possibile usare come condizione di filtro. È possibile effettuare più selezioni. Di conseguenza, i dati nella struttura di data mining saranno limitati ai dati del cubo da queste aree geografiche.  
   
-    -   **Parametri**: ignorare questa casella di controllo. Questa finestra di dialogo supporta più scenari di applicazione filtri del cubo e questa opzione non è attinente alla compilazione di una struttura di data mining.  
+    -   **Parametri**: Ignorare questa casella di controllo. Questa finestra di dialogo supporta più scenari di applicazione filtri del cubo e questa opzione non è attinente alla compilazione di una struttura di data mining.  
   
-     Fare clic su **Avanti**.  
+     Scegliere **Avanti**.  
   
-12. Nella pagina **Divisione dei dati in set di training e in set di testing** specificare la percentuale di dati della struttura di data mining da riservare al test oppure specificare il numero massimo di test case. Fare clic su **Avanti**.  
+12. Nella pagina **Divisione dei dati in set di training e in set di testing** specificare la percentuale di dati della struttura di data mining da riservare al test oppure specificare il numero massimo di test case. Scegliere **Avanti**.  
   
      Se si specificano entrambi valori, i limiti vengono combinati per utilizzare quello più basso.  
   
@@ -126,9 +126,9 @@ ms.locfileid: "48049481"
   
     -   Algoritmo Microsoft Association Rules  
   
-     **Crea dimensione del modello di data mining**: selezionare questa casella di controllo e specificare un tipo per la dimensione del modello di data mining. Quando si utilizza questa opzione, viene creata una nuova dimensione all'interno del cubo originale utilizzato per compilare la struttura di data mining. È possibile utilizzare questa dimensione per eseguire il drill-down ed effettuare ulteriori analisi. Poiché si trova all'interno del cubo, viene automaticamente eseguito il mapping della dimensione alla dimensione dei dati del case.  
+     **Crea dimensione del modello di data mining**: Selezionare questa casella di controllo e specificare un nome di tipo per la dimensione del modello di data mining. Quando si utilizza questa opzione, viene creata una nuova dimensione all'interno del cubo originale utilizzato per compilare la struttura di data mining. È possibile utilizzare questa dimensione per eseguire il drill-down ed effettuare ulteriori analisi. Poiché si trova all'interno del cubo, viene automaticamente eseguito il mapping della dimensione alla dimensione dei dati del case.  
   
-     **Crea il cubo utilizzando la dimensione del modello di data mining**: selezionare questa casella di controllo e specificare un nome per il nuovo cubo. Quando si utilizza questa opzione, viene creato un nuovo cubo contenente sia le dimensioni esistenti utilizzate nella compilazione della struttura sia la nuova dimensione di data mining contenente i risultati del modello.  
+     **Crea il cubo utilizzando la dimensione del modello di data mining**: Selezionare questa casella di controllo e specificare un nome per il nuovo cubo. Quando si utilizza questa opzione, viene creato un nuovo cubo contenente sia le dimensioni esistenti utilizzate nella compilazione della struttura sia la nuova dimensione di data mining contenente i risultati del modello.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Attività e procedure relative alla struttura di data mining](mining-structure-tasks-and-how-tos.md)  

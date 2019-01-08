@@ -20,19 +20,19 @@ ms.assetid: 76e7fef2-d1a4-4272-a2bb-5f5dcd84aedc
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: bff4582f8bf46d094db2a1689ad8c9fd6de92185
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fff57d41e522ae2e002809982bfeb084c28bbbba
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47782899"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52531665"
 ---
 # <a name="syscolumnstorerowgroups-transact-sql"></a>sys.column_store_row_groups (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
 
   Fornisce informazioni sull'indice columnstore cluster in base a ogni segmento che aiutano l'amministratore a prendere decisioni in termini di gestione del sistema. **column_store_row_groups** dispone di una colonna per il numero totale di righe archiviate fisicamente (incluse quelle contrassegnate come eliminate) e una colonna per il numero di righe contrassegnate come eliminate. Uso **column_store_row_groups** per determinare quale riga gruppi hanno un'elevata percentuale di righe eliminate e deve essere ricompilati.  
    
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|ID della tabella in cui è definito l'indice.|  
 |**index_id**|**int**|ID dell'indice per la tabella che contiene questo indice columnstore.|  
@@ -40,7 +40,7 @@ ms.locfileid: "47782899"
 |**row_group_id**|**int**|Numero del gruppo di righe associato a questo gruppo di righe. Univoco all'interno della partizione.<br /><br /> -1 = della parte finale di una tabella in memoria.|  
 |**delta_store_hobt_id**|**bigint**|Hobt_id per gruppo di righe aperto nell'archivio differenziale.<br /><br /> NULL se il gruppo di righe non è presente nell'archivio differenziale.<br /><br /> NULL per la parte finale di una tabella in memoria.|  
 |**state**|**tinyint**|Numero ID associato a state_description.<br /><br /> 0 = INVISIBLE<br /><br /> 1 = OPEN<br /><br /> 2 = CLOSED<br /><br /> 3 = COMPRESSED <br /><br /> 4 = PER LA RIMOZIONE DEFINITIVA|  
-|**a state_description**|**nvarchar(60)**|Descrizione dello stato persistente del gruppo di righe:<br /><br /> INVISIBLE: segmento compresso nascosto in corso di compilazione da dati in un archivio delta. Nelle azioni di lettura verrà utilizzato l'archivio delta fino al completamento del segmento compresso invisibile. Successivamente, il nuovo segmento diventa visibile e l'archivio delta di origine viene rimosso.<br /><br /> OPEN: un gruppo di righe di lettura/scrittura che accetta nuovi record. Un gruppo di righe aperto presenta ancora il formato rowstore e non è stato compresso nel formato columnstore.<br /><br /> CLOSED: un gruppo di righe riempito, ma non ancora compresso dal processo tuple-mover.<br /><br /> COMPRESSED: un gruppo di righe riempito e compresso.|  
+|**a state_description**|**nvarchar(60)**|Descrizione dello stato persistente del gruppo di righe:<br /><br /> INVISIBILI - segmento compresso nascosto in corso di compilazione da dati in un archivio differenziale. Nelle azioni di lettura verrà utilizzato l'archivio delta fino al completamento del segmento compresso invisibile. Successivamente, il nuovo segmento diventa visibile e l'archivio delta di origine viene rimosso.<br /><br /> Aprire - un gruppo di righe di lettura/scrittura che accetta nuovi record. Un gruppo di righe aperto presenta ancora il formato rowstore e non è stato compresso nel formato columnstore.<br /><br /> CHIUSO - un gruppo di righe che è stato compilato, ma non ancora compresso dal processo tuple-mover.<br /><br /> COMPRESSI - un gruppo di righe riempito e compresso.|  
 |**total_rows**|**bigint**|Righe totali archiviate fisicamente nel gruppo di righe. È possibile che alcune siano state eliminate, ma risultano comunque archiviate. Il numero massimo di righe in un gruppo di righe è 1.048.576 (esadecimale FFFFF).|  
 |**deleted_rows**|**bigint**|Righe totali nel gruppo di righe contrassegnate come eliminate. Sempre 0 per i gruppi di righe DELTA.|  
 |**size_in_bytes**|**bigint**|Dimensioni in byte di tutti i dati nel gruppo di righe, esclusi i metadati o i dizionari condivisi, per i gruppi di righe DELTA e COLUMNSTORE.|  

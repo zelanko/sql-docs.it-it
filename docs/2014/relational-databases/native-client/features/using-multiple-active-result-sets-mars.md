@@ -18,12 +18,12 @@ ms.assetid: ecfd9c6b-7d29-41d8-af2e-89d7fb9a1d83
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a91e643af7241888e9e723ccc2876f366466789a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c5cbf5efeb5b5381636b57d50b86a5affa4a2595
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48078181"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52401004"
 ---
 # <a name="using-multiple-active-result-sets-mars"></a>Utilizzo di MARS (Multiple Active Result Set)
   In [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] è stato introdotto il supporto di MARS (Multiple Active Result Set) nelle applicazioni che accedono al [!INCLUDE[ssDE](../../../includes/ssde-md.md)]. Nelle versioni precedenti di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] le applicazioni di database non erano in grado di gestire più istruzioni attive in una connessione. Quando si utilizza il set di risultati predefinito di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], l'applicazione deve elaborare o annullare tutti i set di risultati da un batch prima che possa eseguire qualsiasi altro batch o connessione. [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] ha introdotto un nuovo attributo di connessione che consente alle applicazioni di avere più di una richiesta in sospeso per connessione e in particolare, per avere più di un set di risultati predefinito attivo per connessione.  
@@ -187,8 +187,8 @@ SQLAllocHandle(SQL_HANDLE_STMT, hdbc, &hstmt2);
   
 // The 2nd execute would have failed with connection busy error if  
 // MARS were not enabled.  
-SQLExecDirect(hstmt1, L”SELECT * FROM Authors”, SQL_NTS);  
-SQLExecDirect(hstmt2, L”SELECT * FROM Titles”, SQL_NTS);  
+SQLExecDirect(hstmt1, L"SELECT * FROM Authors", SQL_NTS);  
+SQLExecDirect(hstmt2, L"SELECT * FROM Titles", SQL_NTS);  
   
 // Result set processing can interleave.  
 SQLFetch(hstmt1);  

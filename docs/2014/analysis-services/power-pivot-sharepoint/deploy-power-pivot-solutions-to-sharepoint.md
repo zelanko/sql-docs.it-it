@@ -11,12 +11,12 @@ ms.assetid: f202a2b7-34e0-43aa-90d5-c9a085a37c32
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d40854ecff0b138fa854103650dda9691be94a41
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: af3b98aab31aeaa3a01b1026eca8b3098ce97bef
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48145101"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52515967"
 ---
 # <a name="deploy-powerpivot-solutions-to-sharepoint"></a>Distribuire soluzioni PowerPivot in SharePoint
   Utilizzare le seguenti istruzioni per distribuire manualmente due pacchetti di soluzioni che consentono di aggiungere funzionalità di PowerPivot a un ambiente SharePoint Server 2010. La distribuzione delle soluzioni è un passaggio obbligatorio per la configurazione di PowerPivot per SharePoint in un server SharePoint 2010. Per visualizzare l'elenco completo dei passaggi necessari, vedere [amministrazione Server PowerPivot e la configurazione in Amministrazione centrale](power-pivot-server-administration-and-configuration-in-central-administration.md).  
@@ -27,9 +27,9 @@ ms.locfileid: "48145101"
   
  In questo argomento sono incluse le sezioni seguenti:  
   
- [Prerequisito: verificare che l'applicazione Web utilizzi l'autenticazione in modalità classica](#bkmk_classic)  
+ [Prerequisito: Verificare che l'applicazione Web utilizzi l'autenticazione in modalità classica](#bkmk_classic)  
   
- [Passaggio 1: distribuire la soluzione farm](#bkmk_farm)  
+ [Passaggio 1: Distribuire la soluzione Farm](#bkmk_farm)  
   
  [Passaggio 2: Distribuire la soluzione applicazione Web PowerPivot in Amministrazione centrale](#deployCA)  
   
@@ -39,7 +39,7 @@ ms.locfileid: "48145101"
   
  [Informazioni sulle soluzioni PowerPivot](#intro)  
   
-##  <a name="bkmk_classic"></a> Prerequisito: verificare che l'applicazione Web utilizzi l'autenticazione in modalità classica  
+##  <a name="bkmk_classic"></a> Prerequisito: Verificare che l'applicazione Web utilizzi l'autenticazione in modalità classica  
  PowerPivot per SharePoint è supportato solo per le applicazioni Web che utilizzano l'autenticazione in modalità classica di Windows. Per controllare se l'applicazione usa la modalità di distribuzione classica, eseguire il cmdlet di PowerShell seguente dal **Shell di gestione SharePoint 2010**, sostituendo `http://<top-level site name>` con il nome del sito di SharePoint:  
   
 ```  
@@ -48,7 +48,7 @@ Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthent
   
  Il valore restituito dovrebbe essere **false**. Se si tratta **true**, è possibile accedere ai dati di PowerPivot con questa applicazione web.  
   
-##  <a name="bkmk_farm"></a> Passaggio 1: distribuire la soluzione farm  
+##  <a name="bkmk_farm"></a> Passaggio 1: Distribuire la soluzione Farm  
  In questa sezione viene illustrato come distribuire le soluzioni utilizzando PowerShell, ma è anche possibile utilizzare lo strumento di configurazione PowerPivot per completare questa attività. Per altre informazioni, vedere [Configura o Ripristina PowerPivot per SharePoint 2010 &#40;strumento di configurazione PowerPivot&#41;](../configure-repair-powerpivot-sharepoint-2010.md).  
   
  È necessario eseguire questa attività una sola volta dopo l'installazione di PowerPivot per SharePoint.  
@@ -58,7 +58,7 @@ Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthent
 2.  Eseguire il seguente cmdlet per aggiungere la soluzione farm.  
   
     ```  
-    Add-SPSolution –LiteralPath “C:\Program Files\Microsoft SQL Server\110\Tools\PowerPivotTools\ConfigurationTool\Resources\PowerPivotFarm.wsp”  
+    Add-SPSolution -LiteralPath "C:\Program Files\Microsoft SQL Server\110\Tools\PowerPivotTools\ConfigurationTool\Resources\PowerPivotFarm.wsp"  
     ```  
   
      Il cmdlet restituisce il nome e l'ID della soluzione e Deployed=False. Nel passaggio successivo la soluzione verrà distribuita.  
@@ -66,7 +66,7 @@ Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthent
 3.  Eseguire il successivo cmdlet per distribuire la soluzione farm:  
   
     ```  
-    Install-SPSolution –Identity PowerPivotFarm.wsp –GACDeployment -Force  
+    Install-SPSolution -Identity PowerPivotFarm.wsp -GACDeployment -Force  
     ```  
   
 ##  <a name="deployCA"></a> Passaggio 2: Distribuire la soluzione applicazione Web PowerPivot in Amministrazione centrale  
@@ -83,7 +83,7 @@ Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthent
 3.  Eseguire il seguente cmdlet per aggiungere la soluzione farm.  
   
     ```  
-    Add-SPSolution –LiteralPath “C:\Program Files\Microsoft SQL Server\110\Tools\PowerPivotTools\ConfigurationTool\Resources\PowerPivotWebApp.wsp”  
+    Add-SPSolution -LiteralPath "C:\Program Files\Microsoft SQL Server\110\Tools\PowerPivotTools\ConfigurationTool\Resources\PowerPivotWebApp.wsp"  
     ```  
   
      Il cmdlet restituisce il nome e l'ID della soluzione e Deployed=False. Nel passaggio successivo la soluzione verrà distribuita.  
@@ -143,7 +143,7 @@ Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthent
   
  La soluzione applicazione Web viene inizialmente distribuita ad Amministrazione centrale, seguita dalle distribuzioni successive della soluzione a qualsiasi applicazione Web aggiuntiva che supporterà le richieste di dati PowerPivot. Per distribuire la soluzione applicazione Web in Amministrazione centrale, è necessario utilizzare lo strumento di configurazione PowerPivot o il cmdlet PowerShell. Per tutte le altre applicazioni Web, è possibile distribuire la soluzione applicazione Web manualmente utilizzando Amministrazione centrale o PowerShell.  
   
-|Soluzione|Description|  
+|Soluzione|Descrizione|  
 |--------------|-----------------|  
 |Powerpivotfarm.wsp|Consente di aggiungere il file Microsoft.AnalysisServices.SharePoint.Integration.dll all'assembly globale.<br /><br /> Consente di aggiungere il file Microsoft.AnalysisServices.ChannelTransport.dll all'assembly globale.<br /><br /> Consente di installare funzionalità e file di risorse nonché di registrare i tipi di contenuto.<br /><br /> Aggiunge modelli di raccolta per Raccolta PowerPivot e le raccolte di feed di dati.<br /><br /> Aggiunge pagine dell'applicazione per la configurazione dell'applicazione di servizio, il dashboard di gestione di PowerPivot, l'aggiornamento dati e la raccolta PowerPivot.|  
 |powerpivotwebapp.wsp|Aggiunge i file di risorse Microsoft.AnalysisServices.SharePoint.Integration.dll alla cartella delle estensioni per il server Web nel server Web front-end.<br /><br /> Aggiunge il servizio Web PowerPivot al server Web-front end.<br /><br /> Aggiunge la generazione di immagini di anteprima per Raccolta PowerPivot.|  

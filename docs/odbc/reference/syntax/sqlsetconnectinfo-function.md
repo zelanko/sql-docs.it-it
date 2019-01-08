@@ -13,16 +13,16 @@ ms.assetid: 0782a1c3-c5d1-499b-a8ba-134162db9990
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1014e545e237c80f71660a1e6bd24dce56ca78b1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 88af314c1cca5ef2d7cdbdb2b5e555b81d02be01
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47650469"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52404836"
 ---
 # <a name="sqlsetconnectinfo-function"></a>Funzione SQLSetConnectInfo
 **Conformità**  
- Versione introdotta: Conformità 3,81 standard ODBC: ODBC  
+ Versione introdotta: Conformità agli standard 3,81 ODBC: ODBC  
   
  **Riepilogo**  
  **SQLSetConnectInfo** utilizzato per impostare l'origine dati, l'ID utente e password in token le informazioni di connessione per un'applicazione [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md) chiamare.  

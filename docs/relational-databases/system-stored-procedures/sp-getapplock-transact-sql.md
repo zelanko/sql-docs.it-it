@@ -20,12 +20,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 32303301fb01e381fee0e28cfedb2cd299658c88
-ms.sourcegitcommit: b75fc8cfb9a8657f883df43a1f9ba1b70f1ac9fb
+ms.openlocfilehash: c79a3e34ea6ca1bbebfa35a77020b81618514133
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48851886"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617581"
 ---
 # <a name="spgetapplock-transact-sql"></a>sp_getapplock (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ sp_getapplock [ @Resource = ] 'resource_name' ,
 >  Dopo l'acquisizione di un blocco a livello di applicazione, è possibile recuperare solo i primi 32 caratteri in testo normale. La parte rimanente viene sottoposta a hashing.  
   
  [ @LockMode=] '*lock_mode*'  
- Modalità di blocco da acquisire per una particolare risorsa. *lock_mode* è di tipo **nvarchar(32)** e non dispone di valore predefinito. Il valore può essere uno dei seguenti: **Shared**, **Update**, **IntentShared**, **IntentExclusive**, o **esclusivo** .  
+ Modalità di blocco da acquisire per una particolare risorsa. *lock_mode* è di tipo **nvarchar(32)** e non dispone di valore predefinito. Il valore può essere uno dei seguenti, ovvero **Shared**, **Update**, **IntentShared**, **IntentExclusive**, o **esclusivo**.  
   
  [ @LockOwner=] '*lock_owner*'  
  Proprietario del blocco, ovvero il valore di *lock_owner* al momento della richiesta del blocco. *lock_owner* è **nvarchar(32)**. Il valore può essere **Transaction** (impostazione predefinita) o **Session**. Quando la *lock_owner* valore è **transazione**, predefinito o specificato in modo esplicito, sp_getapplock deve essere eseguito in una transazione.  
@@ -70,7 +70,7 @@ sp_getapplock [ @Resource = ] 'resource_name' ,
 ## <a name="return-code-values"></a>Valori restituiti  
  \>= 0 (esito positivo), or < 0 (esito negativo)  
   
-|valore|Risultato|  
+|Value|Risultato|  
 |-----------|------------|  
 |0|Il blocco è stato concesso in modo sincrono.|  
 |1|Il blocco è stato concesso dopo il rilascio di altri blocchi incompatibili.|  
@@ -92,7 +92,7 @@ sp_getapplock [ @Resource = ] 'resource_name' ,
   
  Solo un membro dell'entità di database specificata nel parametro @DbPrincipal può acquisire blocchi a livello di applicazione che specificano tale entità. I membri dei ruoli dbo e db_owner vengono considerati in modo implicito membri di tutti i ruoli.  
   
- È possibile rilasciare un blocco in modo esplicito tramite sp_releaseapplock. Se un'applicazione richiama sp_getapplock più volte per la stessa risorsa di blocco, per rilasciare il blocco è necessario richiamare sp_releaseapplock lo stesso numero di volte.  
+ È possibile rilasciare un blocco in modo esplicito tramite sp_releaseapplock. Se un'applicazione richiama sp_getapplock più volte per la stessa risorsa di blocco, per rilasciare il blocco è necessario richiamare sp_releaseapplock lo stesso numero di volte.  Quando un blocco viene aperto con la `Transaction` proprietario di blocco, di blocco viene rilasciato quando è stato eseguito il commit o il rollback della transazione.
   
  Se sp_getapplock viene chiamata più volte per una stessa risorsa di blocco ma la modalità di blocco specificata in una delle richieste è diversa da quella già esistente, verrà eseguita un'unione delle due modalità di blocco. Nella maggior parte dei casi la modalità di blocco viene promossa in base alla modalità che risulta più restrittiva tra quella esistente e quella nuova. Tale modalità viene quindi mantenuta fino al rilascio definitivo del blocco, anche se vengono eseguite chiamate di rilascio del blocco prima di tale momento. Nella sequenza di chiamate seguente, ad esempio, la risorsa viene mantenuta in modalità `Exclusive` anziché in modalità `Shared`.  
   

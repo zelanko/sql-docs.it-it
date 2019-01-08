@@ -1,7 +1,8 @@
 ---
-title: Accedere rapidamente alle informazioni dettagliate e attività comuni in Azure Data Studio | Microsoft Docs
-description: Informazioni sulla visualizzazione dei widget dettagliati in Data Studio di Azure.
-ms.custom: tools|sos
+title: Accedere rapidamente alle informazioni dettagliate e attività comuni
+titleSuffix: Azure Data Studio
+description: Informazioni sulla visualizzazione dei widget nel dashboard del database in Azure Data Studio.
+ms.custom: seodec18
 ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -10,12 +11,12 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.openlocfilehash: b163d110353d07811f0feb991772c90053651659
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: faaa59e8607f707bb43f31638880f771ae7ae6ab
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49356194"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030485"
 ---
 # <a name="dashboards-in-includename-sosincludesname-sos-shortmd"></a>Dashboard in [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
@@ -42,7 +43,7 @@ Dopo aver seguito questa esercitazione, continuare a leggere per altre informazi
 Il riquadro a comparsa dettagli Insight fornisce informazioni più dettagliate per un widget insight correlati. 
 - Un widget Insight esegue il rendering di una visualizzazione riepilogativa a immediata con conteggio, riga, grafico e così via. 
 - Il riquadro a comparsa dettagli Insight fornisce dettagli "drill in", elenco approfondite dei dati per ciascun elemento elencato nel widget Insight di alto livello. 
-  - Il contenuto del riquadro a comparsa dettagli è definito con una query SQL separata alla query del widget principale. 
+  - Il contenuto del riquadro a comparsa dettagli è definito con una query SQL separata alla query del widget principale.
 
 Non è necessario impostare per una query dei dettagli di informazioni dettagliate, ma il layout è standard.
 - Nella metà superiore della visualizzazione è sempre una visualizzazione "riepilogo" 2-colonna. Le colonne da usare sono definite dalle proprietà "label" e "value" della configurazione di JSON
@@ -88,11 +89,11 @@ Configurazione di esempio Insight dettagli riquadro a comparsa
 |dettagli|oggetto JSON|||proprietà obbligatorie per definire le definizioni di dettaglio insight all'interno della struttura||
 |queryFile|string|||il percorso del file query sql detail informazioni dettagliate e il nome relativo al percorso del file package. JSON||
 |Etichetta|oggetto JSON|||proprietà obbligatorie per definire ogni voce nella visualizzazione elenco riepilogo|in futuro il nome di questa proprietà per modificare, ad esempio 'summaryList'|
-|Icona|string|||indicare il nome di icona per lettore per ogni elemento della visualizzazione elenco di riepilogo.|verrà documentato elenco (da definire) di icone supportate|
+|Icona|string|||indicare il nome dell'icona per il rendering per ogni elemento della visualizzazione elenco di riepilogo.|verrà documentato elenco (da definire) di icone supportate|
 |column|string|||indicare il nome della prima colonna nella visualizzazione elenco di riepilogo dal set di risultati query|in futuro verrà modificato il nome di questa proprietà per nome più intuitiva|
-|Valore|string|||indicare il nome della seconda colonna nella visualizzazione elenco di riepilogo dal set di risultati di query. Il valore di questa colonna viene utilizzato per controllare le condizioni e impostare colori per punto di ogni elenco di riepilogo Visualizza elementi colore|in futuro verrà modificato il nome di questa proprietà su un valore più intuitiva|
+|Valore|string|||indicare il nome della seconda colonna nella visualizzazione elenco di riepilogo dal set di risultati di query. Il valore di questa colonna viene utilizzato per controllare le condizioni e impostare colori per ogni punto di colore elementi di visualizzazione elenco di riepilogo|in futuro verrà modificato il nome di questa proprietà su un valore più intuitiva|
 |condizione|oggetto JSON|||definisce il controllo della condizione di valore della colonna e determinare di colore per ogni elemento della visualizzazione elenco di riepilogo||
-|if|string|sempre, equals, notEquals, greaterThan, lessThan, greaterThanOrEqauls, lessThanOrEquals||operatore di controllo di condizione|in futuro verrà modificato il nome della proprietà da-operatore|
+|if|string|sempre, equals, notEquals, greaterThan, lessThan, greaterThanOrEquals, lessThanOrEquals||operatore di controllo di condizione|in futuro verrà modificato il nome della proprietà da-operatore|
 |equals|string|||valore del controllo di condizione|in futuro verrà modificato il nome della proprietà 'value'|
 
 ## <a name="insight-actions"></a>Azioni di Insight
@@ -104,7 +105,7 @@ Usando [!INCLUDE[name-sos](../includes/name-sos-short.md)]della configurazione d
 
 ## <a name="sample-insight-action-definition"></a>Definizione di azione Insight di esempio
 
-```"actions"{}``` Definisce un'azione di informazioni dettagliate. Azione può essere definita in un ambito specifico, ad esempio ```"server"```, ```"database"``` e così via e [!INCLUDE[name-sos](../includes/name-sos-short.md)] passa le informazioni sul contesto di connessione corrente all'azione. 
+```"actions"{}``` Definisce un'azione di informazioni dettagliate. Azione può essere definita in un ambito specifico, ad esempio ```"server"```, ```"database"``` e così via e [!INCLUDE[name-sos](../includes/name-sos-short.md)] passa le informazioni sul contesto di connessione corrente all'azione.
 
 Ad esempio, quando l'azione di ripristino viene avviata per database WideWorldImporters ```"database": "${Database}"``` indica di definizione per il passaggio ```Database``` valore della colonna nel risultato della query per l'azione di ripristino. Azione di ripristino avvia quindi per il database. ```"types"``` è una matrice json e più azioni possono essere elencate nella matrice. In sostanza diventa un menu di scelta rapida nella finestra di dialogo Dettagli Insight che l'utente può scegliere ed eseguire l'azione. 
 

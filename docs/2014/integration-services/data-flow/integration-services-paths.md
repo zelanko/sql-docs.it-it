@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - paths [Integration Services], about paths
@@ -17,12 +16,12 @@ ms.assetid: 6c4629a9-2ede-4011-9101-3b342249640e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2a541567ac5b6f6b76116dcd98a9a53cddd10238
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: aea7a95787d38ea81e584ea822dd7b521e44c7c2
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48064661"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52790653"
 ---
 # <a name="integration-services-paths"></a>Percorsi in Integration Services
   Un percorso collega due componenti in un flusso di dati connettendo l'output di un componente all'input dell'altro. Un percorso ha un'origine e una destinazione. Se un percorso connette, ad esempio, un'origine OLE DB e una trasformazione Ordinamento, l'origine OLE DB costituirà l'origine del percorso e la trasformazione Ordinamento ne costituirà la destinazione. L'origine è il componente da cui inizia il percorso, mentre la destinazione è il componente in cui termina.  

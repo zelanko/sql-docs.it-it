@@ -13,12 +13,12 @@ ms.assetid: 6f0a4287-7fd4-4f18-b7e4-a5191a9d4a3c
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 74862c1db4ad3c34afc759ba94f36ba5fb896e7e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a922d01d0085830cde30bbc16fcd6f79e106ff03
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48227701"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52394242"
 ---
 # <a name="task-1-prerequisite-removing-supplier-data-in-mds"></a>Attività 1 (prerequisito): Rimozione dei dati fornitore in MDS
   In questa attività vengono rimossi i dati fornitore archiviati in MDS. È stato caricato i dati manualmente usando **componente aggiuntivo MDS per Excel** nella lezione precedente. Tramite il pacchetto SSIS creato durante questa lezione i dati vengono caricati automaticamente in MDS. Pertanto, prima di testare il pacchetto SSIS, è necessario rimuovere i dati fornitore da MDS, la gerarchia derivata, le entità Supplier e State e creare l'entità Supplier senza alcun dato.  
@@ -86,6 +86,6 @@ ms.locfileid: "48227701"
 22. Fare clic su **Esplora**. Si noti che il **Supplier** entità con tutti gli attributi viene creata con **senza valori**.  
   
 ## <a name="next-step"></a>Passaggio successivo  
- [Attività 2 &#40;facoltativo&#41;: creazione di viste sottoscrizioni MDS tramite Gestione dati Master](../../2014/tutorials/task-2-optional-creating-a-mds-subscription-view-using-master-data-manager.md)  
+ [Attività 2 &#40;facoltativo&#41;: Creazione di viste sottoscrizioni MDS tramite Gestione dati Master](../../2014/tutorials/task-2-optional-creating-a-mds-subscription-view-using-master-data-manager.md)  
   
   

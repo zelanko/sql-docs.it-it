@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.common.value.f1
@@ -16,12 +15,12 @@ ms.assetid: cf0ba215-cf83-48e0-bd98-a8ddc8810eab
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 923c6e9b1a5fec47433cbfcaddef236c9761c6a0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7ac8dd7682ecfe8df3b317bba578bca8358b9b11
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48057451"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52783562"
 ---
 # <a name="value-for-extended-property-dialog-box"></a>Valore per proprietà estesa - finestra di dialogo
   Usare la finestra di dialogo **Valore per** *\<nome proprietà>* per immettere o visualizzare un valore. È possibile accedere a questa finestra di dialogo da diverse posizioni.  

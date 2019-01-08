@@ -14,12 +14,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 55feda84f7c64b4d33229ac6fe58b6b2d782b7a9
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 728e404c5f64b137b8260da82846d97c8647a430
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51671146"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53215447"
 ---
 # <a name="managing-text-and-image-columns---use-data-at-execution-parameters"></a>Gestione di colonne di tipo text e image - Usare parametri data-at-execution
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -51,11 +51,11 @@ ms.locfileid: "51671146"
   
  In questo esempio viene eseguita la connessione all'istanza predefinita di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nel computer in uso. Per connettersi a un'istanza denominata, modificare la definizione dell'origine dati ODBC per specificare l'istanza in base al formato: server\istanzadenominata. Per impostazione predefinita, [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] viene installato in un'istanza denominata.  
   
- Eseguire il primo listato di codice ([!INCLUDE[tsql](../../includes/tsql-md.md)]) per creare la tabella utilizzata dall'esempio.  
+ Eseguire il primo ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) per creare la tabella utilizzata dall'esempio listato di codice.  
   
  Compilare il secondo listato di codice (C++) con odbc32.lib. Eseguire quindi il programma.  
   
- Eseguire il terzo listato di codice ([!INCLUDE[tsql](../../includes/tsql-md.md)]) per eliminare la tabella utilizzata dall'esempio.  
+ Eseguire il terzo ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) listato per eliminare la tabella utilizzata dall'esempio di codice.  
   
 ```  
 use AdventureWorks  

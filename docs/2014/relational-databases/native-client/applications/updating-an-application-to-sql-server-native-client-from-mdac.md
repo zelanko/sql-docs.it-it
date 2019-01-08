@@ -16,12 +16,12 @@ ms.assetid: 2860efdd-c59a-4deb-8a0e-5124a8f4e6dd
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4630510a625a6c358370318902cb28eb80b9f09e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d2c8afa1fbbb51947bef28ae45cabd445aaf0bf2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48058271"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52541918"
 ---
 # <a name="updating-an-application-to-sql-server-native-client-from-mdac"></a>Aggiornamento di un'applicazione da MDAC a SQL Server Native Client
   Esistono alcune differenze tra [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client e Microsoft Data Access Components (MDAC). A partire da Windows Vista, i componenti di accesso ai dati vengono chiamati Windows Data Access Components o Windows DAC (applicazione livello dati). Sebbene entrambe le tecnologie consentano l'accesso nativo ai dati dei database di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client è stato appositamente progettato per esporre le nuove caratteristiche di [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] pur mantenendo la compatibilità con le versioni precedenti.  

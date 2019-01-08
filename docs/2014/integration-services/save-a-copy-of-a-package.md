@@ -17,12 +17,12 @@ ms.assetid: 21482a20-e420-4452-b7eb-8f9fa1929f31
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e77ba9379ebf482d8ed2f587ea175706458bd275
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a24e5e554af43cd95a65c6d392106217af9ab2cd
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48193411"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52532180"
 ---
 # <a name="save-a-copy-of-a-package"></a>Salvataggio di una copia di un pacchetto
   Questa procedura descrive come salvare una copia di un pacchetto nel file system, nell'archivio pacchetti o nel database **msdb** in [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Quando si specifica il percorso di salvataggio della copia del pacchetto, è inoltre possibile modificarne il nome.  
@@ -46,7 +46,7 @@ ms.locfileid: "48193411"
   
 5.  Se si esegue il salvataggio in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], specificare il tipo di autenticazione e, se si utilizza l'autenticazione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , specificare un nome utente e una password.  
   
-6.  Per specificare il percorso del pacchetto, digitarlo oppure fare clic sul pulsante Sfoglia **(…)** per specificare la posizione del pacchetto. Il nome predefinito del pacchetto è Pacchetto. In alternativa, modificare il nome del pacchetto in base alle proprie esigenze.  
+6.  Per specificare il percorso del pacchetto, digitarlo oppure fare clic sul pulsante Sfoglia **(...)** per specificare il percorso del pacchetto. Il nome predefinito del pacchetto è Pacchetto. In alternativa, modificare il nome del pacchetto in base alle proprie esigenze.  
   
      Se per l'opzione **Percorso pacchetto** si seleziona **SQL Server** , il percorso del pacchetto sarà composto dalle cartelle logiche di **msdb** più il nome del pacchetto. Ad esempio, se il pacchetto DownloadMonthlyData è associato alla cartella Finance della cartella MSDB (il nome predefinito della cartella logica radice di **msdb**), il percorso del pacchetto denominato DownloadMonthlyData sarà MSDB/Finance/DownloadMonthlyData.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "48193411"
   
 7.  Controllare il livello di protezione del pacchetto.  
   
-8.  Facoltativamente, per modificare il livello di protezione fare clic sul pulsante Sfoglia **(…)** accanto alla casella **Livello di protezione** .  
+8.  Facoltativamente, per modificare il livello di protezione fare clic sul pulsante Sfoglia **(...)** accanto alla casella **Livello di protezione**.  
   
     -   Nella finestra di dialogo **Livello di protezione pacchetto** selezionare un livello di protezione diverso.  
   
@@ -65,7 +65,7 @@ ms.locfileid: "48193411"
 9. Fare clic su **OK**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Integration Services &#40;SSIS&#41; i pacchetti](../../2014/integration-services/integration-services-ssis-packages.md)   
+ [Pacchetti di Integration Services &#40;SSIS&#41;](../../2014/integration-services/integration-services-ssis-packages.md)   
  [Configurazione dell'integrazione dei servizi del servizio &#40;servizio SSIS&#41;](service/integration-services-service-ssis-service.md)  
   
   

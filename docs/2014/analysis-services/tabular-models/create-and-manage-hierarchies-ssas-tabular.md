@@ -11,12 +11,12 @@ ms.assetid: 8dd30cd0-a831-4d25-b577-648d7f3c7fa6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2544b53b1fabc94a8ab0801141349d5da7f891c4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bda916232a3d1b0c46a4278def28ec3759e346d3
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48149631"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52404886"
 ---
 # <a name="create-and-manage-hierarchies-ssas-tabular"></a>Creare e gestire gerarchie (SSAS tabulare)
   Le gerarchie possono essere create e gestite in Progettazione modelli in Vista diagramma. Per visualizzare Progettazione modelli in Vista diagramma, in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], fare clic sul menu **Modello** , scegliere **Vista modelli**, quindi **Vista diagramma**.  
@@ -42,7 +42,7 @@ ms.locfileid: "48149631"
   
 2.  Digitare un nome per la gerarchia.  
   
- È possibile trascinare colonne aggiuntive nel livello padre della gerarchia; tale operazione ne comporta la copia. Rilasciare il livello figlio per posizionarlo nel punto in cui si desidera venga visualizzato nella gerarchia.  
+ È possibile trascinare colonne aggiuntive nel livello padre della gerarchia, che consente di copiare le colonne. Rilasciare il livello figlio per posizionarlo nel punto in cui si desidera venga visualizzato nella gerarchia.  
   
 > [!NOTE]  
 >  Il comando Crea gerarchia sarà disabilitato nel menu di scelta rapida se si effettua una selezione multipla di una misura con una o più colonne oppure se si selezionano colonne da più tabelle.  
@@ -96,7 +96,7 @@ ms.locfileid: "48149631"
   
 ## <a name="see-also"></a>Vedere anche  
  [Progettazione di modelli tabulari &#40;tabulare di SSAS&#41;](../tabular-model-designer-ssas-tabular.md)   
- [Gerarchie di &#40;tabulare di SSAS&#41;](hierarchies-ssas-tabular.md)   
- [Le misure &#40;tabulare di SSAS&#41;](measures-ssas-tabular.md)  
+ [Gerarchie &#40;SSAS tabulare&#41;](hierarchies-ssas-tabular.md)   
+ [Misure &#40;SSAS tabulare&#41;](measures-ssas-tabular.md)  
   
   

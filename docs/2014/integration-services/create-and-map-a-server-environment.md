@@ -16,15 +16,15 @@ ms.assetid: b1cbb697-713f-48e4-b234-b23724d87451
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d77393b3289c00ad88925711287b2ef789bc093d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1116cc2e1040326237a31039fa2b52618c3f559e
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48090328"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52408228"
 ---
 # <a name="create-and-map-a-server-environment"></a>Creare ed eseguire il mapping di un ambiente server
-  Si crea un ambiente server per specificare i valori di runtime per i pacchetti contenuti in un progetto che è stato distribuito nel server [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . È quindi possibile eseguire il mapping delle variabili di ambiente ai parametri, per un pacchetto specifico, per i pacchetti del punto di ingresso o per tutti i pacchetti di un progetto specificato. Un pacchetto del punto di ingresso è in genere un pacchetto padre che esegue un pacchetto figlio.  
+  Creare un ambiente server per specificare i valori di runtime per i pacchetti contenuti in un progetto distribuito nel server [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. È quindi possibile eseguire il mapping delle variabili di ambiente ai parametri, per un pacchetto specifico, per i pacchetti del punto di ingresso o per tutti i pacchetti di un progetto specificato. Un pacchetto del punto di ingresso è in genere un pacchetto padre che esegue un pacchetto figlio.  
   
 > [!IMPORTANT]  
 >  Per un'esecuzione specifica, un pacchetto può essere eseguito solo con i valori contenuti in un ambiente server singolo.  
@@ -68,7 +68,7 @@ ms.locfileid: "48090328"
 7.  Per creare lo script dell'ambiente, fare clic su **Script**. Per impostazione predefinita, lo script viene visualizzato in una nuova finestra dell'editor di query.  
   
     > [!TIP]  
-    >  È necessario fare clic su **Script** dopo aver apportato una o più modifiche alle proprietà dell'ambiente, ad esempio se si aggiunge una variabile, e prima di fare clic su **OK** nella finestra di dialogo **Proprietà ambiente** . In caso contrario, non viene creato alcuno script.  
+    >  È necessario fare clic su **Script** dopo aver apportato una o più modifiche alle proprietà dell'ambiente, ad esempio se si aggiunge una variabile, e prima di fare clic su **OK** nella finestra di dialogo **Proprietà ambiente**. In caso contrario, non viene creato alcuno script.  
   
 8.  Fare clic su **OK** per salvare le modifiche apportate alle proprietà di ambiente.  
   

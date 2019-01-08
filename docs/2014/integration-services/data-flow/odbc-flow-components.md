@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: cf751f1e-2348-4a77-904c-bd92c0d7d0ae
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 559864d5d3931a1ef57c51089ce671bcb53215d3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5466587560477d331e475cf8d32488757975b730
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48187511"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52764303"
 ---
 # <a name="odbc-flow-components"></a>Componenti di flusso ODBC
   In questo argomento vengono descritti i concetti necessari per la creazione di un flusso di dati ODBC tramite [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]  
@@ -126,7 +125,7 @@ I tipi di dati C estensibili non sono supportati, come descritto nelle specifich
 |SQL_INTERVAL_YEAR<br /><br />SQL_INTERVAL_MONTH<br /><br />SQL_INTERVAL_DAY<br /><br />SQL_INTERVAL_HOUR<br /><br />SQL_INTERVAL_MINUTE<br /><br />SQL_INTERVAL_SECOND<br /><br />SQL_INTERVAL_YEAR_TO_MONTH<br /><br />SQL_INTERVAL_DAY_TO_HOUR<br /><br />SQL_INTERVAL_DAY_TO_MINUTE<br /><br />SQL_INTERVAL_DAY_TO_SECOND<br /><br />SQL_INTERVAL_HOUR_TO_MINUTE<br /><br />SQL_INTERVAL_HOUR_TO_SECOND<br /><br />SQL_INTERVAL_MINUTE_TO_SECOND|DT_WSTR|  
 |Tipi di dati specifici del provider|DT_BYTES<br /><br />DT_IMAGE|DT_BYTES viene utilizzato se la lunghezza di colonna è minore o uguale a 8000.<br /><br />DT_IMAGE viene utilizzato se la lunghezza di colonna è uguale a zero o maggiore di 8000.|  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>In questa sezione  
   
 -   [Origine ODBC](odbc-source.md)  
   

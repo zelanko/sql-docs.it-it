@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: supportability
 ms.topic: conceptual
 helpviewer_keywords:
 - data collector [SQL Server], management data warehouse
@@ -14,12 +14,12 @@ ms.assetid: 9874a8b2-7ccd-494a-944c-ad33b30b5499
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 26f75c135fdc0dcbcc5534a019ff6658d7c9e88e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 26af58e208527d155b5ddf3506be4509627c1f7e
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48089311"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52778453"
 ---
 # <a name="management-data-warehouse"></a>data warehouse di gestione
   Il data warehouse di gestione è un database relazionale che contiene i dati raccolti da un server che costituisce una destinazione di raccolta dati. Questi dati vengono utilizzati per generare report per i set di raccolta dati di sistema e possono essere utilizzati anche per creare report personalizzati.  
@@ -39,7 +39,7 @@ ms.locfileid: "48089311"
   
  Nella tabella seguente vengono descritte le tabelle di database dello schema core. Grazie a queste tabelle di database l'agente di raccolta dati è in grado di registrare la provenienza dei dati, da chi sono stati inseriti e quando sono stati caricati sul data warehouse.  
   
-|Nome tabella|Description|  
+|Nome tabella|Descrizione|  
 |----------------|-----------------|  
 |core.performance_counter_report_group_items|Archivia informazioni sul modo in cui i report del data warehouse di gestione devono raggruppare e aggregare i contatori delle prestazioni.|  
 |core.snapshots_internal|Identifica ogni nuovo snapshot. Una nuova riga viene inserita in questa tabella ogni volta che un pacchetto di caricamento inizia a caricare un nuovo batch di dati.|  

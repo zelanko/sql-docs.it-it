@@ -11,19 +11,19 @@ ms.assetid: a972c56e-b2af-4fe6-abbd-817406e2c93a
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e73c0d114744241d18dc7946e852e05b3a2c6e5e
-ms.sourcegitcommit: 7e828cd92749899f4e1e45ef858ceb9a88ba4b6a
+ms.openlocfilehash: b6fdc0b8267f1e995812d573ae80f0f24ee11843
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51629554"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52404117"
 ---
 # <a name="import-the-sqlps-module"></a>Importare il modulo SQLPS
   Il metodo consigliato per gestire [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] da PowerShell consiste nell'importare il modulo `sqlps` in un ambiente Windows PowerShell 2.0. Il modulo carica e registra gli snap-in e gli assembly di gestibilità di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
-1.  **Prima di iniziare:** [Sicurezza](#Security)  
+1.  **Prima di iniziare:**  [Sicurezza](#Security)  
   
-2.  **Per caricare il modulo:**  [Caricare il Modulo sqlps](#LoadSqlps)  
+2.  **Per caricare il modulo:**  [Caricare il modulo sqlps](#LoadSqlps)  
   
 ## <a name="before-you-begin"></a>Prima di iniziare  
  Dopo avere importato il modulo `sqlps` in Windows PowerShell, è quindi possibile:  
@@ -57,7 +57,7 @@ ms.locfileid: "51629554"
 ```  
 ## Import the SQL Server Module.  
   
-Import-Module “sqlps” -DisableNameChecking  
+Import-Module "sqlps" -DisableNameChecking  
   
 ```  
   

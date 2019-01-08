@@ -19,21 +19,21 @@ ms.assetid: e59632f4-3292-419f-9217-ca375749f1a5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cde19779c178b8064e6b20a3ae39bbfb7f5b96f6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 25af20743a98ad674e24cf4ae028185b024697e5
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47847159"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52395887"
 ---
 # <a name="sysdmfilestreamfileiohandles-transact-sql"></a>sys.dm_filestream_file_io_handles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Vengono visualizzati gli handle di file conosciuti dal proprietario dello spazio dei nomi (NSO, Namespace Owner). Gli handle di FileStream che un client ottenuto tramite **OpenSqlFilestream** vengono visualizzati in questa vista.  
   
-|colonna|Tipo|Description|  
+|colonna|Tipo|Descrizione|  
 |------------|----------|-----------------|  
-|**handle_context_address**|**varbinary(8)**|Viene mostrato l'indirizzo della struttura NSO interna associata all'handle del client. Ammette i valori Null.|  
+|**handle_context_address**|**varbinary(8)**|Mostra l'indirizzo della struttura NSO interna associata all'handle del client. Ammette i valori Null.|  
 |**creation_request_id**|**int**|Viene mostrato un campo della richiesta di I/O REQ_PRE_CREATE utilizzata per creare questo handle. Non ammette i valori Null.|  
 |**creation_irp_id**|**int**|Viene mostrato un campo della richiesta di I/O REQ_PRE_CREATE utilizzata per creare questo handle. Non ammette i valori Null|  
 |**handle_id**|**int**|Viene mostrato l'ID univoco di questo handle assegnato dal driver. Non ammette i valori Null.|  

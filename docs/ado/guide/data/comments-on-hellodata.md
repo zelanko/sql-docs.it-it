@@ -13,12 +13,12 @@ ms.assetid: a2831d77-7040-4b73-bbae-fe0bf78107ed
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e3086eff0e4a774e7f63e7ff876a9675668d5912
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 632703a1f7817986a6bc192006ef079af20cfb08
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47707879"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52527447"
 ---
 # <a name="comments-on-hellodata"></a>Commenti su HelloData
 L'applicazione di HelloData illustrata in dettaglio le operazioni di base di una tipica applicazione ADO: introduzione, l'analisi, la modifica e aggiornamento dei dati. Quando si avvia l'applicazione, fare clic sul primo pulsante, **recupera dati**. Verrà eseguita la **GetData** subroutine.  
@@ -74,4 +74,4 @@ L'applicazione di HelloData illustrata in dettaglio le operazioni di base di una
  Per informazioni dettagliate su come aggiornare i dati, tra cui operazioni da eseguire quando i dati sulle modifiche server durante la **Recordset** viene disconnesso, vedere [aggiornamento e salvataggio permanente dei dati](../../../ado/guide/data/updating-and-persisting-data.md).  
   
 ## <a name="formunload"></a>Form_Unload  
- Il **Form_Unload** subroutine è importante per diversi motivi. In primo luogo, poiché si tratta di un'applicazione di esempio, Form_Unload pulisce le modifiche apportate al database prima di uscire dall'applicazione. In secondo luogo, il codice viene illustrato come un comando può essere eseguito direttamente da un oggetto aperto **Connection** oggetto tramite il **Execute** (metodo). Infine viene illustrato un esempio di esecuzione di una query non – restituiscono righe (una query di aggiornamento) rispetto all'origine dati.
+ Il **Form_Unload** subroutine è importante per diversi motivi. In primo luogo, poiché si tratta di un'applicazione di esempio, Form_Unload pulisce le modifiche apportate al database prima di uscire dall'applicazione. In secondo luogo, il codice viene illustrato come un comando può essere eseguito direttamente da un oggetto aperto **Connection** oggetto tramite il **Execute** (metodo). Infine viene illustrato un esempio di esecuzione di una query non restituiscono righe (una query di aggiornamento) rispetto all'origine dati.

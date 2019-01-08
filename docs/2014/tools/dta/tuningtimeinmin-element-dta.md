@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 dev_langs:
 - XML
@@ -15,12 +14,12 @@ ms.assetid: 4973d9ac-20fd-4ac3-bc9f-5d60e39fdb7d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4c81d0dd5ad56db2216143ed847f148467fc2e91
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c30c6a4f746ae9aa81b8c1a71c0e380bdd26df03
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48140331"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52815873"
 ---
 # <a name="tuningtimeinmin-element-dta"></a>Elemento TuningTimeInMin (DTA)
   Specifica la lunghezza massima di una sessione di ottimizzazione espressa in minuti.  
@@ -37,11 +36,11 @@ ms.locfileid: "48140331"
   
 ## <a name="element-characteristics"></a>Caratteristiche elemento  
   
-|Caratteristica|Description|  
+|Caratteristica|Descrizione|  
 |--------------------|-----------------|  
 |**Tipo di dati e lunghezza**|`unsignedInt`, lunghezza illimitata.|  
 |**Valore predefinito**|480 minuti (8 ore).|  
-|**Occorrenza**|Obbligatorio a meno che non è stato specificato un valore per il `NumberOfEvents` elemento.|  
+|**Occorrenza**|Obbligatorio a meno che non sia stato specificato un valore per l'elemento `NumberOfEvents`.|  
   
 ## <a name="element-relationships"></a>Relazioni elemento  
   
@@ -52,10 +51,10 @@ ms.locfileid: "48140331"
   
 ## <a name="example"></a>Esempio  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>Descrizione  
  Nell'esempio di codice seguente viene illustrato come impostare 12 ore come tempo di ottimizzazione massimo:  
   
-## <a name="code"></a>codice  
+## <a name="code"></a>Codice  
   
 ```  
 <DTAInput>  
@@ -68,6 +67,6 @@ ms.locfileid: "48140331"
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Guida di riferimento ai file di input XML &#40;Ottimizzazione guidata motore di database&#41;](xml-input-file-reference-database-engine-tuning-advisor.md)  
+ [Guida di riferimento ai file di input XML&#40; (Ottimizzazione guidata motore di database)&#41;](xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   

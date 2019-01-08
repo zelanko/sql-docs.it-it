@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent jobs, target servers
@@ -13,12 +13,12 @@ ms.assetid: 511ff311-21f5-4f2f-839f-b4deee26ec98
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5ffae4f02e598157215e1062863ffce05794983f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e1d08c7f660d4deee887f95a06a7848f6d40b2d4
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48135371"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52780513"
 ---
 # <a name="specify-a-target-server39s-location-sql-server-management-studio"></a>Specificare la posizione di un server di destinazione (SQL Server Management Studio)
   In questo argomento viene illustrato come specificare il percorso di un server di destinazione in una configurazione di amministrazione multiserver in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -29,7 +29,7 @@ ms.locfileid: "48135371"
   
      [Limitazioni e restrizioni](#Restrictions)  
   
-     [Security](#Security)  
+     [Sicurezza](#Security)  
   
 -   **Per specificare la posizione di un server di destinazione utilizzando:**  
   
@@ -59,7 +59,7 @@ ms.locfileid: "48135371"
   
 4.  Nella casella **Percorso** immettere un percorso per il server e quindi fare clic su **OK**.  
   
-##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
   
 #### <a name="to-specify-a-target-servers-location"></a>Per specificare la posizione di un server di destinazione  
   

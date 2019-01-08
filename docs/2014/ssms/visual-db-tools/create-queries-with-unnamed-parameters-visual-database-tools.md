@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - unnamed parameters
@@ -13,12 +13,12 @@ ms.assetid: 5f4b664b-3d3d-4d07-a0e7-791d78743504
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3da2a547ac409ea04a7a0a07603fd1adb3a345d4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f9eebede28d257083b55ffd4b14943b7ebc1a95b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48075881"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52768853"
 ---
 # <a name="create-queries-with-unnamed-parameters-visual-database-tools"></a>Creazione di query con parametri senza nome (Visual Database Tools)
   Per creare una query con un parametro senza nome, è possibile inserire un punto interrogativo (?) come segnaposto per un valore letterale. In Progettazione query e Progettazione viste gli verrà assegnato automaticamente un nome temporaneo. Nella query è possibile specificare qualsiasi numero di parametri senza nome.  
@@ -34,6 +34,6 @@ ms.locfileid: "48075881"
      Per impostazione predefinita viene aggiunto l'operatore "=". In ogni caso, è possibile modificare la cella inserendo ">", "<" o qualsiasi altro operatore di confronto SQL.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Esecuzione di query con parametri &#40;Visual Database Tools&#41;](query-with-parameters-visual-database-tools.md)  
+ [Esecuzione di query mediante parametri &#40;Visual Database Tools&#41;](query-with-parameters-visual-database-tools.md)  
   
   

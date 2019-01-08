@@ -15,12 +15,12 @@ ms.assetid: cb4e4f71-f2d5-475a-9284-ea324c93c7de
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 5b8624bd3d3628c5c7499dd32bfa26afe048225c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5973d419bb87c4b53313afa3051865b4e746ef96
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48061971"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53211850"
 ---
 # <a name="sharepoint-library-delivery-in-reporting-services"></a>Recapito tramite la raccolta di SharePoint in Reporting Services
   In un server di report configurato per l'integrazione con SharePoint è disponibile un'estensione per il recapito che è possibile utili per inviare un report a una raccolta di SharePoint.  
@@ -71,11 +71,11 @@ ms.locfileid: "48061971"
  Nome ed estensione file  
  Specificare il nome e l'estensione file del report che si desidera visualizzare nella raccolta di destinazione. Se non si specifica un'estensione file, ne verrà creata una dal server di report in base al formato di output. Questo valore è obbligatorio. Il nome file non deve contenere i caratteri seguenti: : \ / * ? " \< > | # { } %  
   
- Title  
- Specifica facoltativa `Title` proprietà per il report nella raccolta di destinazione. Si tratta di una proprietà standard di tutti gli elementi archiviati in una raccolta. Gli utenti possono specificare se visualizzare o nascondere tale proprietà quando si visualizzano i contenuti della raccolta in un sito di SharePoint.  
+ Titolo  
+ Specifica una proprietà `Title` facoltativa per il report nella raccolta di destinazione. Si tratta di una proprietà standard di tutti gli elementi archiviati in una raccolta. Gli utenti possono specificare se visualizzare o nascondere tale proprietà quando si visualizzano i contenuti della raccolta in un sito di SharePoint.  
   
  Percorso  
- Specifica l'URL completo della raccolta di SharePoint, inclusi il sito e l'applicazione Web di SharePoint. Ad esempio: http://mySharePointWeb/MySite/MyDocLib; in cui "http://mySharePointWeb" indica l'applicazione Web, "MySite" è il sito di SharePoint e "MyDocLib" è la raccolta di SharePoint in cui verrà recapitato il report.  
+ Specifica l'URL completo della raccolta di SharePoint, inclusi il sito e l'applicazione Web di SharePoint. Ad esempio: <http://mySharePointWeb/MySite/MyDocLib>; in cui "<http://mySharePointWeb>" indica l'applicazione Web, "MySite" è il sito di SharePoint e "MyDocLib" è la raccolta di SharePoint in cui verrà recapitato il report.  
   
  Non è possibile specificare una pagina, un sito o un elenco. Il contenitore di destinazione deve essere una raccolta nello stesso sito o farm.  
   
@@ -86,7 +86,7 @@ ms.locfileid: "48061971"
  Se si utilizza la funzionalità di copia automatica per copiare automaticamente l'ultima versione di un file in più percorsi, il file verrà copiato se l'opzione **Sovrascrivi** è abilitata. Se è stata usata **Autoincrement** oppure **None**, il recapito avrà esito negativo e il `rsDeliveryError` errore si verifica.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Creare e gestire sottoscrizioni per server di Report in modalità SharePoint](create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)   
+ [Create and Manage Subscriptions for SharePoint Mode Report Servers](create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)   
  [Sottoscrizioni e recapito &#40;Reporting Services&#41;](subscriptions-and-delivery-reporting-services.md)   
  [Specificare le credenziali e le informazioni sulla connessione per le origini dati del report](../report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
   

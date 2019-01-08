@@ -18,12 +18,12 @@ ms.assetid: 32c17b4f-e090-45f9-b3aa-ffa7084e928e
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 77be91eddebedcdad79f18dfd499cc26778560db
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: df563ae17a04d37d7d3ea667e79cf9de2c7d9a51
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48198833"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52407884"
 ---
 # <a name="customize-mining-models-and-structure"></a>Personalizzare struttura e modelli di data mining
   Dopo avere selezionato un algoritmo adatto alle esigenze aziendali, è possibile personalizzare il modello di data mining nei modi seguenti per migliorarne potenzialmente i risultati.  
@@ -57,12 +57,12 @@ ms.locfileid: "48198833"
   
 -   Rimuovere le colonne che dispongono di molti valori univoci o quelle che contengono in realtà dati di riferimento non utili per l'analisi, ad esempio indirizzi o secondi nomi.  
   
- Non è necessario rimuovere fisicamente le colonne dalla struttura di data mining, ma è sufficiente contrassegnarle come **Ignora**. La colonna viene rimossa dal modello di data mining, ma continuerà a essere utilizzata da altri modelli di data mining della struttura o come riferimento in una query drill-through.  
+ Non è necessario rimuovere fisicamente le colonne dalla struttura di data mining; è semplicemente possibile contrassegnare la colonna come **Ignore**. La colonna viene rimossa dal modello di data mining, ma continuerà a essere utilizzata da altri modelli di data mining della struttura o come riferimento in una query drill-through.  
   
 ### <a name="creating-aliases-for-model-columns"></a>Creazione di alias per le colonne del modello  
  Quando [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] crea il modello di data mining, usa gli stessi nomi di colonna presenti nella struttura di data mining. È possibile aggiungere un alias a qualsiasi colonne del modello di data mining. Questo può facilitare la comprensione del contenuto o dell'utilizzo della colonna oppure rendere il nome più corto per semplificare la creazione delle query. Gli alias sono anche utili quando si desidera creare una copia di una colonna e assegnarle un nome descrittivo.  
   
- Creare un alias modificare la `Name` proprietà della colonna del modello di data mining. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] continua a usare il nome originale come ID di colonna e il nuovo valore digitato come `Name` diventa l'alias di colonna e viene visualizzato nella griglia tra parentesi accanto all'utilizzo della colonna.  
+ Per creare un alias modificare la proprietà `Name` della colonna del modello di data mining. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] continua a usare il nome originale come ID di colonna e il nuovo valore digitato come `Name` diventa l'alias di colonna e viene visualizzato nella griglia tra parentesi accanto all'utilizzo della colonna.  
   
  ![colonne del modello gli alias nel data mining](../media/modelcolumnalias-income.gif "colonne del modello gli alias nel data mining")  
   
@@ -95,25 +95,25 @@ ms.locfileid: "48198833"
   
  L'argomento per ogni tipo di algoritmo include inoltre le funzioni di stima che possono essere utilizzate con i modelli basati sull'algoritmo specifico.  
   
-|Nome proprietà|Applicabile a|  
+|Nome proprietà|Si applica a|  
 |-------------------|----------------|  
 |AUTO_DETECT_PERIODICITY|[Riferimento tecnico per l'algoritmo Microsoft Time Series](microsoft-time-series-algorithm-technical-reference.md)|  
 |CLUSTER_COUNT|[Riferimento tecnico per l'algoritmo Microsoft Clustering](microsoft-clustering-algorithm-technical-reference.md)<br /><br /> [Riferimento tecnico per l'algoritmo Microsoft Sequence Clustering](microsoft-sequence-clustering-algorithm-technical-reference.md)|  
 |CLUSTER_SEED|[Riferimento tecnico per l'algoritmo Microsoft Clustering](microsoft-clustering-algorithm-technical-reference.md)|  
 |CLUSTERING_METHOD|[Riferimento tecnico per l'algoritmo Microsoft Clustering](microsoft-clustering-algorithm-technical-reference.md)|  
 |COMPLEXITY_PENALTY|[Riferimento tecnico per l'algoritmo Microsoft Decision Trees](microsoft-decision-trees-algorithm-technical-reference.md)<br /><br /> [Riferimento tecnico per l'algoritmo Microsoft Time Series](microsoft-time-series-algorithm-technical-reference.md)|  
-|FORCE_REGRESSOR|[Riferimento tecnico per l'algoritmo Microsoft Decision Trees](microsoft-decision-trees-algorithm-technical-reference.md)<br /><br /> [Riferimento tecnico per l'algoritmo Microsoft Linear Regression](microsoft-linear-regression-algorithm-technical-reference.md)<br /><br /> [Flag di modellazione &#40;Data Mining&#41;](modeling-flags-data-mining.md)|  
+|FORCE_REGRESSOR|[Riferimento tecnico per l'algoritmo Microsoft Decision Trees](microsoft-decision-trees-algorithm-technical-reference.md)<br /><br /> [Riferimento tecnico per l'algoritmo Microsoft Linear Regression](microsoft-linear-regression-algorithm-technical-reference.md)<br /><br /> [Flag di modellazione &#40;data mining&#41;](modeling-flags-data-mining.md)|  
 |FORECAST_METHOD|[Riferimento tecnico per l'algoritmo Microsoft Time Series](microsoft-time-series-algorithm-technical-reference.md)|  
 |HIDDEN_NODE_RATIO|[Riferimento tecnico per l'algoritmo Microsoft Neural Network](microsoft-neural-network-algorithm-technical-reference.md)|  
 |HISTORIC_MODEL_COUNT|[Riferimento tecnico per l'algoritmo Microsoft Time Series](microsoft-time-series-algorithm-technical-reference.md)|  
 |HISTORICAL_MODEL_GAP|[Riferimento tecnico per l'algoritmo Microsoft Time Series](microsoft-time-series-algorithm-technical-reference.md)|  
-|HOLDOUT_PERCENTAGE|[Riferimento tecnico per l'algoritmo Microsoft Logistic Regression](microsoft-logistic-regression-algorithm-technical-reference.md)<br /><br /> [Riferimento tecnico per l'algoritmo Microsoft Neural Network](microsoft-neural-network-algorithm-technical-reference.md)<br /><br /> Nota: questo parametro è diverso dal valore della percentuale di controllo che si applica a una struttura di data mining.|  
-|HOLDOUT_SEED|[Riferimento tecnico per l'algoritmo Microsoft Logistic Regression](microsoft-logistic-regression-algorithm-technical-reference.md)<br /><br /> [Riferimento tecnico per l'algoritmo Microsoft Neural Network](microsoft-neural-network-algorithm-technical-reference.md)<br /><br /> Nota: questo parametro è diverso dal valore di inizializzazione di controllo che si applica a una struttura di data mining.|  
+|HOLDOUT_PERCENTAGE|[Riferimento tecnico per l'algoritmo Microsoft Logistic Regression](microsoft-logistic-regression-algorithm-technical-reference.md)<br /><br /> [Riferimento tecnico per l'algoritmo Microsoft Neural Network](microsoft-neural-network-algorithm-technical-reference.md)<br /><br /> Nota: Questo parametro è diverso dal valore della percentuale di controllo che si applica a una struttura di data mining.|  
+|HOLDOUT_SEED|[Riferimento tecnico per l'algoritmo Microsoft Logistic Regression](microsoft-logistic-regression-algorithm-technical-reference.md)<br /><br /> [Riferimento tecnico per l'algoritmo Microsoft Neural Network](microsoft-neural-network-algorithm-technical-reference.md)<br /><br /> Nota: Questo parametro è diverso dal valore di inizializzazione di controllo che si applica a una struttura di data mining.|  
 |INSTABILITY_SENSITIVITY|[Riferimento tecnico per l'algoritmo Microsoft Time Series](microsoft-time-series-algorithm-technical-reference.md)|  
 |MAXIMUM_INPUT_ATTRIBUTES|[Riferimento tecnico per l'algoritmo Microsoft Clustering](microsoft-clustering-algorithm-technical-reference.md)<br /><br /> [Riferimento tecnico per l'algoritmo Microsoft Decision Trees](microsoft-decision-trees-algorithm-technical-reference.md)<br /><br /> [Riferimento tecnico per l'algoritmo Microsoft Linear Regression](microsoft-linear-regression-algorithm-technical-reference.md)<br /><br /> [Riferimento tecnico per l'algoritmo Microsoft Naive Bayes](microsoft-naive-bayes-algorithm-technical-reference.md)<br /><br /> [Riferimento tecnico per l'algoritmo Microsoft Neural Network](microsoft-neural-network-algorithm-technical-reference.md)<br /><br /> [Riferimento tecnico per l'algoritmo Microsoft Logistic Regression](microsoft-logistic-regression-algorithm-technical-reference.md)|  
 |MAXIMUM_ITEMSET_COUNT|[Riferimento tecnico per l'algoritmo Microsoft Association Rules](microsoft-association-algorithm-technical-reference.md)|  
 |MAXIMUM_ITEMSET_SIZE|[Riferimento tecnico per l'algoritmo Microsoft Association Rules](microsoft-association-algorithm-technical-reference.md)|  
-|MAXIMUM_OUTPUT_ATTRIBUTES|[Riferimento tecnico per l'algoritmo Microsoft Decision Trees](microsoft-decision-trees-algorithm-technical-reference.md)<br /><br /> [Riferimento tecnico per l'algoritmo Microsoft Linear Regression](microsoft-linear-regression-algorithm-technical-reference.md)<br /><br /> [Riferimento tecnico per l'algoritmo Microsoft Logistic Regression](microsoft-logistic-regression-algorithm-technical-reference.md)<br /><br /> [Riferimento tecnico per l'algoritmo Microsoft Naive Bayes](microsoft-naive-bayes-algorithm-technical-reference.md)<br /><br /> [Riferimento tecnico per l'algoritmo Microsoft Neural Network](microsoft-neural-network-algorithm-technical-reference.md)|  
+|MAXIMUM_OUTPUT_ATTRIBUTES|[Riferimento tecnico per l'algoritmo Microsoft Decision Trees](microsoft-decision-trees-algorithm-technical-reference.md)<br /><br /> [Riferimento tecnico per l'algoritmo Microsoft Linear Regression](microsoft-linear-regression-algorithm-technical-reference.md)<br /><br /> [Riferimento tecnico per l'algoritmo Microsoft Logistic Regression](microsoft-logistic-regression-algorithm-technical-reference.md)<br /><br /> [Riferimento tecnico per l'algoritmo Microsoft Naive Bayes](microsoft-naive-bayes-algorithm-technical-reference.md)<br /><br /> [Microsoft Neural Network Algorithm Technical Reference](microsoft-neural-network-algorithm-technical-reference.md)|  
 |MAXIMUM_SEQUENCE_STATES|[Riferimento tecnico per l'algoritmo Microsoft Sequence Clustering](microsoft-sequence-clustering-algorithm-technical-reference.md)|  
 |MAXIMUM_SERIES_VALUE|[Riferimento tecnico per l'algoritmo Microsoft Time Series](microsoft-time-series-algorithm-technical-reference.md)|  
 |MAXIMUM_STATES|[Riferimento tecnico per l'algoritmo Microsoft Clustering](microsoft-clustering-algorithm-technical-reference.md)<br /><br /> [Riferimento tecnico per l'algoritmo Microsoft Neural Network](microsoft-neural-network-algorithm-technical-reference.md)<br /><br /> [Riferimento tecnico per l'algoritmo Microsoft Sequence Clustering](microsoft-sequence-clustering-algorithm-technical-reference.md)|  
@@ -129,12 +129,12 @@ ms.locfileid: "48198833"
 |PERIODICITY_HINT|[Riferimento tecnico per l'algoritmo Microsoft Time Series](microsoft-time-series-algorithm-technical-reference.md)|  
 |PREDICTION_SMOOTHING|[Riferimento tecnico per l'algoritmo Microsoft Time Series](microsoft-time-series-algorithm-technical-reference.md)|  
 |SAMPLE_SIZE|[Riferimento tecnico per l'algoritmo Microsoft Clustering](microsoft-clustering-algorithm-technical-reference.md)<br /><br /> [Riferimento tecnico per l'algoritmo Microsoft Logistic Regression](microsoft-logistic-regression-algorithm-technical-reference.md)<br /><br /> [Riferimento tecnico per l'algoritmo Microsoft Neural Network](microsoft-neural-network-algorithm-technical-reference.md)|  
-|SCORE_METHOD|[Riferimento tecnico per l'algoritmo Microsoft Decision Trees](microsoft-decision-trees-algorithm-technical-reference.md)|  
+|SCORE_METHOD|[Guida di riferimento tecnico per l'algoritmo Microsoft Decision Trees](microsoft-decision-trees-algorithm-technical-reference.md)|  
 |SPLIT_METHOD|[Riferimento tecnico per l'algoritmo Microsoft Decision Trees](microsoft-decision-trees-algorithm-technical-reference.md)|  
 |STOPPING_TOLERANCE|[Riferimento tecnico per l'algoritmo Microsoft Clustering](microsoft-clustering-algorithm-technical-reference.md)|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Algoritmi di Data Mining &#40;Analysis Services - Data Mining&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
- [Architettura fisica &#40;Analysis Services - Data Mining&#41;](physical-architecture-analysis-services-data-mining.md)  
+ [Algoritmi di data mining &#40;Analysis Services - Data mining&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
+ [Architettura fisica &#40;Analysis Services - Data mining&#41;](physical-architecture-analysis-services-data-mining.md)  
   
   

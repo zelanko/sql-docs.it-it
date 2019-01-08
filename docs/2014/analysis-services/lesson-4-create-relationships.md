@@ -11,20 +11,20 @@ ms.assetid: abac1a00-f827-4c3e-a473-6db5c8a3a66f
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 935957ce0934e6b57bd7abd27bcf74fd14ee8cd5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 05ebc2ffa952c0b5c927d890aad70bbf55f3c5af
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48113241"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52409058"
 ---
-# <a name="lesson-5-create-relationships"></a>Lezione 5: Creare relazioni
+# <a name="lesson-5-create-relationships"></a>Lezione 5: Crea relazioni
   In questa lezione verranno verificate le relazioni create automaticamente al momento dell'importazione dei dati e verranno aggiunte nuove relazioni tra tabelle diverse. Una relazione è una connessione tra due tabelle che stabilisce in che modo devono essere correlati i dati nelle due tabelle. Tra la tabella Product e la tabella Product Subcategory vi è ad esempio una relazione basata sul fatto che ogni prodotto appartiene a una sottocategoria. Per altre informazioni, vedere [Relazioni &#40;SSAS tabulare&#41;](tabular-models/relationships-ssas-tabular.md).  
   
  Tempo stimato per il completamento della lezione: **10 minuti**  
   
 ## <a name="prerequisites"></a>Prerequisiti  
- Questo argomento fa parte di un'esercitazione relativa alla modellazione tabulare che deve essere completata nell'ordine specificato. Prima di eseguire le attività in questa lezione è necessario aver completato la lezione precedente: [Lezione 3: Rinominare colonne](rename-columns.md).  
+ Questo argomento fa parte di un'esercitazione relativa alla modellazione tabulare che deve essere completata nell'ordine specificato. Prima di eseguire le attività in questa lezione, è necessario avere completato la lezione precedente: [Lezione 3: Rinominare le colonne](rename-columns.md).  
   
 ## <a name="review-existing-relationships-and-add-new-relationships"></a>Esaminare le relazioni esistenti e aggiungere nuove relazioni  
  Quando sono stati importati i dati utilizzando l'Importazione guidata tabella, sono state importate sette tabelle del database AdventureWorksDW. In genere, se si importano dati da un'origine relazionale, le relazioni esistenti vengono importate automaticamente insieme ai dati. Prima di procedere con la creazione del modello, è tuttavia necessario verificare che le relazioni tra tabelle siano state create correttamente. Per questa esercitazione, verranno inoltre aggiunte tre nuove relazioni.  
@@ -39,7 +39,7 @@ ms.locfileid: "48113241"
   
 2.  Fare clic sulla linea continua tra la tabella **Customer** e la tabella **Geography** . La linea continua tra queste due tabelle indica che questa relazione è attiva, ovvero viene utilizzata per impostazione predefinita nel calcolo delle formule DAX.  
   
-     Si noti che la colonna **Geography Id** nella tabella **Customer** e la colonna **Geography Id** nella tabella **Geography** appaiono ora entrambe all'interno di una casella. Ciò indica che si tratta delle colonne utilizzate nella relazione. Le proprietà della relazione sono ora visualizzate nella finestra **Proprietà** .  
+     Si noti che la colonna **Geography Id** nella tabella **Customer** e la colonna **Geography Id** nella tabella **Geography** appaiono ora entrambe all'interno di una casella. Ciò indica che si tratta delle colonne utilizzate nella relazione. Le proprietà della relazione sono ora visualizzate nella **proprietà** finestra.  
   
     > [!TIP]  
     >  Oltre a usare Progettazione modelli nella vista diagramma, è anche possibile usare la finestra di dialogo **Gestisci relazioni** per specificare le relazioni tra tutte le tabelle in formato di tabella. Fare clic sul menu **Tabella** e quindi su **Gestisci relazioni**. Nella finestra di dialogo **Gestisci relazioni** sono visualizzate le relazioni create automaticamente quando sono stati importati i dati.  
@@ -48,13 +48,13 @@ ms.locfileid: "48113241"
   
     |Attiva|Tabella|Tabella di ricerca correlata|  
     |------------|-----------|--------------------------|  
-    |Sì|**Cliente [Geography Id]**|**Geography [Geography Id]**|  
-    |Sì|**Prodotto [Product Subcategory Id]**|**Sottocategoria di prodotto [Product Subcategory Id]**|  
-    |Sì|**Sottocategoria di prodotto [Id categoria prodotto]**|**Categoria di prodotto [Id categoria prodotto]**|  
-    |Sì|**Vendite Internet [Customer Id]**|**Cliente [Customer Id]**|  
-    |Sì|**Vendite Internet [Id prodotto]**|**Prodotto [Id prodotto]**|  
+    |Yes|**Cliente [Geography Id]**|**Geography [Geography Id]**|  
+    |Yes|**Prodotto [Product Subcategory Id]**|**Sottocategoria di prodotto [Product Subcategory Id]**|  
+    |Yes|**Sottocategoria di prodotto [Id categoria prodotto]**|**Categoria di prodotto [Id categoria prodotto]**|  
+    |Yes|**Vendite Internet [Customer Id]**|**Cliente [Customer Id]**|  
+    |Yes|**Vendite Internet [Id prodotto]**|**Prodotto [Id prodotto]**|  
   
- Se qualsiasi relazione indicata nella tabella precedente non è presente, verificare che il modello includa le tabelle seguenti: Customer, Date, Geography, Product, Product Category, Product Subcategory e Internet Sales. Se tabelle della stessa connessione all'origine dati vengono importate in momenti distinti, non verranno create relazioni tra tali tabelle, che dovranno essere create manualmente.  
+ Se sono presenti le relazioni nella tabella precedente mancante, verificare che il modello includa le tabelle seguenti: Customer, Date, Geography, Product, Product Category, Product Subcategory e Internet Sales. Se tabelle della stessa connessione all'origine dati vengono importate in momenti distinti, non verranno create relazioni tra tali tabelle, che dovranno essere create manualmente.  
   
  In alcuni casi, potrebbe essere necessario creare relazioni aggiuntive tra tabelle nel modello per supportare una logica di business specifica. Per questa esercitazione, è necessario creare tre relazioni aggiuntive tra la tabella Internet Sales e la tabella Date.  
   

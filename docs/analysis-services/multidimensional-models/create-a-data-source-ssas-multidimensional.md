@@ -1,5 +1,5 @@
 ---
-title: Creare un'origine dati (SSAS multidimensionale) | Documenti Microsoft
+title: Creare un'origine dati (SSAS multidimensionale) | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: c461f38e7e2d0cf43cf206fee0c474f6fd74d35a
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 2d22e4b3b9c53aa02a7666c929fcba25d2c17ced
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34027048"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52410318"
 ---
 # <a name="create-a-data-source-ssas-multidimensional"></a>Crea un' origine dati (SSAS multidimensionale)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -68,7 +68,7 @@ ms.locfileid: "34027048"
   
 3.  Nella pagina **Selezione metodo di definizione connessione** fare clic su **Crea un'origine dati basata su una connessione nuova o esistente** e quindi fare clic su **Nuova** per aprire **Gestione connessione**.  
   
-     Le nuove connessioni vengono create tramite Gestione connessione. In Gestione connessione è possibile selezionare un provider, quindi specificare le proprietà della stringa di connessione utilizzata per la connessione del provider ai dati sottostanti. Le informazioni esattamente necessarie dipendono dal provider selezionato, ma in genere includono un'istanza del server o del servizio, i dati per l'accesso a tale istanza, il nome di un database o un file e altre impostazioni specifiche del provider. Nella parte restante di questa procedura, si presuppone una connessione a un database di SQL Server.  
+     Le nuove connessioni vengono create tramite Gestione connessione. In Gestione connessione è possibile selezionare un provider, quindi specificare le proprietà della stringa di connessione utilizzata per la connessione del provider ai dati sottostanti. Le informazioni esattamente necessarie dipendono dal provider selezionato, ma in genere includono un'istanza del server o del servizio, i dati per l'accesso a tale istanza, il nome di un database o un file e altre impostazioni specifiche del provider. Nella parte restante di questa procedura, si presuppone una connessione al database SQL Server.  
   
 4.  Selezionare [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework o il provider OLE DB nativo da utilizzare per la connessione.  
   
@@ -78,7 +78,7 @@ ms.locfileid: "34027048"
   
 5.  Immettere le informazioni richieste dal provider selezionato per la connessione all'origine dei dati sottostante. In caso di selezione del provider **OLE DB nativo\SQL Server Native Client** , immettere le informazioni seguenti:  
   
-    1.  **Nome server** è il nome di rete dell'istanza del motore di database. Può essere specificato come l'indirizzo IP, il nome NETBIOS del computer, o un nome di dominio completo. Se il server è installato come istanza denominata, è necessario includere il nome dell'istanza (ad esempio, \<computername >\\< NomeIstanza\>).  
+    1.  **Nome server** è il nome di rete dell'istanza del motore di database. Può essere specificato come l'indirizzo IP, il nome NETBIOS del computer, o un nome di dominio completo. Se il server viene installato come istanza denominata, è necessario includere il nome dell'istanza (ad esempio, \<nomecomputer >\\< NomeIstanza\>).  
   
     2.  **Accesso al server** specifica la modalità di autenticazione della connessione. **Usa autenticazione di Windows** consente di usare l'autenticazione di Windows. **Usa autenticazione di SQL Server** consente di specificare un accesso utente per i database SQL di Windows Azure o per un'istanza di SQL Server che supporta l'autenticazione in modalità mista.  
   
@@ -111,7 +111,7 @@ ms.locfileid: "34027048"
   
 8.  Scegliere **Avanti**.  In **Completamento procedura guidata**immettere il nome di un'origine dati o usare il nome predefinito. Il nome predefinito corrisponde a quello del database specificato nella connessione. Nel riquadro **Anteprima** verrà visualizzata la stringa di connessione per la nuova origine dati.  
   
-9. Fare clic su **Fine**.  La nuova origine dati verrà visualizzata nella cartella **Origini dati** in Esplora soluzioni.  
+9. Scegliere **Fine**.  La nuova origine dati verrà visualizzata nella cartella **Origini dati** in Esplora soluzioni.  
   
 ##  <a name="bkmk_connection"></a> Creare un'origine dati utilizzando una connessione esistente  
  In un progetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] l'origine dati può essere basata su un'origine dei dati esistente nella soluzione oppure su un progetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Nella Creazione guidata origine dati sono disponibili diverse opzioni per la creazione dell'oggetto di origine dati, incluso l'utilizzo di una connessione esistente nello stesso progetto.  
@@ -165,6 +165,6 @@ ms.locfileid: "34027048"
   
 ## <a name="see-also"></a>Vedere anche  
  [Origini dati supportate &#40;SSAS - multidimensionale&#41;](../../analysis-services/multidimensional-models/supported-data-sources-ssas-multidimensional.md)   
- [Viste origine dati nei modelli multidimensionali](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)  
+ [Viste origine dati in modelli multidimensionali](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)  
   
   

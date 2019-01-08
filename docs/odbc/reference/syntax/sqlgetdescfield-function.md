@@ -20,12 +20,12 @@ ms.assetid: f09ff660-1e4a-4370-be85-90d4da0487d3
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c89da6f3b5b531b311d81c9d89aacb8c52320d01
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f6762eb4ea9b350a76fc794fa7074af2a107b511
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47840679"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53204089"
 ---
 # <a name="sqlgetdescfield-function"></a>Funzione SQLGetDescField
 **Conformità**  
@@ -90,7 +90,7 @@ SQLRETURN SQLGetDescField(
 ## <a name="diagnostics"></a>Diagnostica  
  Quando **SQLGetDescField** restituisce SQL_ERROR o SQL_SUCCESS_WITH_INFO, un valore SQLSTATE associato possono essere ottenuti chiamando **SQLGetDiagRec** con un *HandleType* di SQL_HANDLE_STMT e un *gestiscono* dei *StatementHandle*. Nella tabella seguente sono elencati i valori SQLSTATE comunemente restituiti da **SQLGetDescField** e illustra ognuna nel contesto di questa funzione; la notazione "(DM)" precede le descrizioni di SQLSTATE restituiti da Gestione Driver. Il codice restituito a ogni valore SQLSTATE è SQL_ERROR, se non specificato diversamente.  
   
-|SQLSTATE|Errore|Description|  
+|SQLSTATE|Errore|Descrizione|  
 |--------------|-----------|-----------------|  
 |01000|Avviso generale|Messaggio informativo specifico del driver. (Funzione restituisce SQL_SUCCESS_WITH_INFO).|  
 |01004|Stringa troncati di dati a destra|Il buffer \* *ValuePtr* non era sufficientemente grande per restituire il campo di descrizione intero, in modo che il campo è stato troncato. Viene restituita la lunghezza del campo del descrittore non troncato **StringLengthPtr*. (Funzione restituisce SQL_SUCCESS_WITH_INFO).|  

@@ -11,12 +11,12 @@ ms.assetid: a0524602-5239-45a7-8c44-2477302a3637
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 142cdef210c541fb1394b84c8297823f36358ea0
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: 6c0bf5769d20d806944a3b312ce0e65bc71c42aa
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48906061"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52407098"
 ---
 # <a name="kpis-ssas-tabular"></a>Indicatori KPI (SSAS tabulare)
   In un modello tabulare un indicatore di prestazioni chiave (*KPI*) viene usato per misurare le prestazioni di un valore, definito da una misura di *base*, rispetto a un valore di *destinazione*, definito anch'esso da una misura o da un valore assoluto. In questo argomento vengono fornite ai creatori di modelli tabulari informazioni di base sugli indicatori KPI in un modello tabulare.  
@@ -48,7 +48,7 @@ ms.locfileid: "48906061"
 ##  <a name="bkmk_example"></a> Esempio  
  Il responsabile vendite di Adventure Works desidera creare una tabella pivot da utilizzare per visualizzare rapidamente se i dipendenti addetti alle vendite soddisfano o meno le rispettive quote di vendite per un determinato periodo (anno). Nella tabella pivot dovranno essere visualizzati, per ogni dipendente, l'importo in dollari delle vendite effettive, l'importo in dollari della quota di vendite e un semplice grafico con l'indicazione dello stato, ovvero se la quota di vendite di ognuno è inferiore, uguale o superiore a quella definita. Desidera inoltre poter sezionare i dati per anno.  
   
- A tale scopo, il responsabile vendite supporta lo sviluppatore di soluzioni di Business Intelligence dell'organizzazione aggiungendo un indicatore KPI delle vendite al modello tabulare di AdventureWorks. Il responsabile vendite utilizzerà quindi [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] per connettersi al modello tabulare di Adventure Works come origine dati e creerà una tabella pivot con i campi (misure e KPI) e i filtri dei dati per analizzare se la forza vendita soddisfa o meno le rispettive quote.  
+ A tale scopo, il responsabile vendite supporta la Guida dello sviluppatore di soluzioni BI dell'organizzazione per aggiungere un indicatore KPI delle vendite al modello tabulare di AdventureWorks. Il responsabile vendite utilizzerà quindi [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] per connettersi al modello tabulare di Adventure Works come origine dati e creerà una tabella pivot con i campi (misure e KPI) e i filtri dei dati per analizzare se la forza vendita soddisfa o meno le rispettive quote.  
   
  Nel modello viene creata una misura nella colonna SalesAmount della tabella FactResellerSales che indica l'importo in dollari delle vendite effettive per ogni dipendente addetto alle vendite. Tale misura definirà il valore di base dell'indicatore KPI.  
   
@@ -71,7 +71,7 @@ Target SalesAmountQuota:=Sum(FactSalesQuota[SalesAmountQuota])
   
  Dopo aver creato le misure da utilizzare come valore di base e valore di destinazione dell'indicatore KPI, la misura Sales verrà estesa a un nuovo KPI vendite. Nel KPI vendite la misura di destinazione SalesAmountQuota viene definita come valore di destinazione. La soglia di stato viene definita come intervallo sotto forma di percentuale, la cui destinazione è pari al 100%, a indicare che le vendite effettive definite dalla misura Sales hanno soddisfatto l'importo della quota definito nella misura di destinazione SalesAmountQuota. Le percentuali minima e massima sono definite sulla barra di stato e viene selezionato un tipo di grafico.  
   
- A questo punto il responsabile vendite può creare una tabella pivot aggiungendo il valore di base, il valore di destinazione e lo stato dell'indicatore KPI al campo Valori. La colonna Employees viene aggiunta al campo RowLabel e la colonna CalendarYear viene aggiunta come filtro dei dati.  
+ Il responsabile vendite può ora creare una tabella pivot aggiunta di valore di Base, valore di destinazione e lo stato dell'indicatore KPI al campo valori. La colonna Employees viene aggiunta al campo RowLabel e la colonna CalendarYear viene aggiunta come filtro dei dati.  
   
  Il responsabile vendite può quindi sezionare per anno l'importo delle vendite effettive, l'importo della quota di vendite e lo stato per ogni dipendente addetto alle vendite. Può inoltre analizzare le tendenze di vendita negli anni per determinare se è necessario o meno modificare la quota di vendite per un dipendente.  
   
@@ -82,7 +82,7 @@ Target SalesAmountQuota:=Sum(FactSalesQuota[SalesAmountQuota])
   
 ##  <a name="bkmk_related_tasks"></a> Attività correlate  
   
-|Argomento|Description|  
+|Argomento|Descrizione|  
 |-----------|-----------------|  
 |[Creare e gestire indicatori KPI &#40;SSAS tabulare&#41;](kpis-ssas-tabular.md)|Viene descritto come creare un indicatore KPI con una misura di base, una misura di destinazione e soglie di stato.|  
   

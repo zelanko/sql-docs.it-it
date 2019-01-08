@@ -15,12 +15,12 @@ ms.assetid: 037e2f78-f204-40f4-b4ab-d9cdf562012b
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 46b6f5d7e6af3726558f5cee72f00ff06e13ab89
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 15a3efd678d7b1f055daebc31d71d4044ad19eef
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47812058"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52503901"
 ---
 # <a name="setting-odbc-connection-pooling-options"></a>Impostazione di opzioni del pool di connessioni ODBC
 Pool di connessioni consente a un'applicazione usare una connessione da un pool di connessioni che non è necessario ristabilirle per ogni utilizzo. È possibile usare la **pool di connessioni** scheda della finestra di **Amministrazione origine dati ODBC** finestra di dialogo per abilitare e disabilitare il monitoraggio delle prestazioni. Fare doppio clic su un nome di driver per impostare il periodo di timeout di connessione.  
@@ -36,7 +36,7 @@ Pool di connessioni consente a un'applicazione usare una connessione da un pool 
 |-------------|----------------|  
 |Contatore di connessione disco rigido ODBC al secondo|Il numero di connessioni effettive al secondo che vengono apportate al server. La prima volta che l'ambiente esegue un carico pesante, questo contatore verrà incrementati molto rapidamente. Dopo alcuni secondi, eliminerà su zero. Questa è la situazione normale quando funziona nel pool di connessioni. Quando sono state stabilite le connessioni al server, verranno utilizzati e inseriti nel pool per il riutilizzo.|  
 |ODBC rigido disconnettere contatore al secondo|Il numero di disco rigido disconnessioni al secondo inviata al server. Si tratta di connessioni effettive al server che vengono rilasciate dal pool di connessioni. Questo valore verrà aumentati da zero quando si arresta tutti i client nel sistema e le connessioni iniziano a raggiungere il timeout.|  
-|Contatore di connessione temporanea ODBC al secondo|Il numero di connessioni soddisfatti da parte del pool al secondo, in altre parole, le connessioni da tale pool che sono stata presentate agli utenti. Questo contatore indica se il pool viene eseguito. A seconda del carico sul server, non è insolito per questa opzione per visualizzare le connessioni software 40, 60 al secondo.|  
+|Contatore di connessione temporanea ODBC al secondo|Il numero di connessioni soddisfatti dal pool per ogni secondo, in altre parole, le connessioni da quella del pool che sono stato presentato agli utenti. Questo contatore indica se il pool viene eseguito. A seconda del carico sul server, non è insolito per questa opzione per visualizzare le connessioni software 40 a 60 al secondo.|  
 |Contatore di disconnessione temporanea ODBC al secondo|Il numero di disconnessioni al secondo emesso dalle applicazioni. Quando l'applicazione rilascia o si disconnette, la connessione viene inserita nuovamente nel pool.|  
 |Contatore connessione attiva corrente di ODBC|Il numero di connessioni nel pool che sono attualmente in uso.|  
 |Contatore di ODBC corrente di connessioni disponibili|Il numero corrente di connessioni gratuite disponibile nel pool. Si tratta di connessioni in tempo reale che sono disponibili per l'uso.|  

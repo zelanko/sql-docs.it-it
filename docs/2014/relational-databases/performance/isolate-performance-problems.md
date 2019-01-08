@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - isolating performance problems [SQL Server]
@@ -19,12 +18,12 @@ ms.assetid: 2eb425cb-9166-4027-ae08-c8fc2d236f44
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 86350dae3a41ffd994110491ab558367866f9bc3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e700f5178a3520fe83f4d896662a8741aa166b9a
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48115011"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52810703"
 ---
 # <a name="isolate-performance-problems"></a>Isolare i problemi relativi alle prestazioni
   Per isolare i problemi relativi alle prestazioni del database, è in genere preferibile utilizzare più strumenti di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o di Microsoft Windows in combinazione, anziché uno per volta. La caratteristica grafica Piano di esecuzione, detta anche Showplan, consente, ad esempio, di individuare in modo semplice deadlock in una singola query. È tuttavia possibile rilevare in modo più semplice altri problemi relativi alle prestazioni utilizzando le caratteristiche di monitoraggio di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e Windows in combinazione.  
@@ -54,6 +53,6 @@ ms.locfileid: "48115011"
   
  [Individuare i colli di bottiglia](identify-bottlenecks.md)  
   
- [Monitorare l'uso della memoria](../performance-monitor/monitor-memory-usage.md)  
+ [Monitoraggio dell'utilizzo della memoria](../performance-monitor/monitor-memory-usage.md)  
   
   

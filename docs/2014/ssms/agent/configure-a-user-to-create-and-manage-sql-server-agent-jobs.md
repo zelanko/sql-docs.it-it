@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent jobs, user configuration
@@ -15,29 +15,29 @@ ms.assetid: 67897e3e-b7d0-43dd-a2e2-2840ec4dd1ef
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f46d4f84686a805412020bfb55b46d2d1790221d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a62f6c2e1ef86a6fcd5e532b2ef413d8142698e6
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48121981"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52796143"
 ---
 # <a name="configure-a-user-to-create-and-manage-sql-server-agent-jobs"></a>Configurare un utente per la creazione e la gestione di processi di SQL Server Agent
   In questo argomento viene illustrato come configurare un utente per la creazione o l'esecuzione di processi di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
   
 -   **Prima di iniziare:**  [Sicurezza](#Security)  
   
--   **Per configurare un utente per la creazione e la gestione di processi di SQL Server Agent tramite**  [SQL Server Management Studio](#SSMS)  
+-   **Per configurare un utente per creare e gestire processi di SQL Server Agent, utilizzando:**  [SQL Server Management Studio](#SSMS)  
   
 ##  <a name="BeforeYouBegin"></a> Prima di iniziare  
   
 ###  <a name="Security"></a> Sicurezza  
- Per configurare un utente per la creazione o l'esecuzione di processi di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, è anzitutto necessario aggiungere un account di accesso esistente di SQL Server o un ruolo msdb a uno dei ruoli predefiniti del database seguenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent nel database msdb: SQLAgentUserRole, SQLAgentReaderRole o SQLAgentOperatorRole.  
+ Per configurare un utente per la creazione o l'esecuzione [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] processi di Agent, è innanzitutto necessario aggiungere un ruolo msdb o account di accesso di SQL Server esistente a uno dei seguenti [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] agente ruoli predefiniti del database nel database msdb: SQLAgentUserRole, SQLAgentReaderRole o SQLAgentOperatorRole.  
   
  Per impostazione predefinita, i membri di questi ruoli del database possono creare passaggi di processo personalizzati ed eseguirli con il proprio account. Per eseguire processi che includono altri tipi di passaggi, ad esempio pacchetti [!INCLUDE[ssIS](../../includes/ssis-md.md)] , questi utenti non amministrativi dovranno avere accesso a un account proxy. Tutti i membri del ruolo predefinito del server sysadmin dispongono dell'autorizzazione per la creazione, la modifica e l'eliminazione degli account proxy. Per altre informazioni sulle autorizzazioni associate con questi ruoli di database predefiniti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, vedere [Ruoli di database predefiniti di SQL Server Agent](sql-server-agent-fixed-database-roles.md).  
   
 ####  <a name="Permissions"></a> Permissions  
- Per informazioni dettagliate, vedere [Implement SQL Server Agent Security](implement-sql-server-agent-security.md).  
+ Per informazioni dettagliate, vedere [Implementazione della sicurezza di SQL Server Agent](implement-sql-server-agent-security.md).  
   
 ##  <a name="SSMS"></a> Utilizzo di SQL Server Management Studio  
  **Per aggiungere un account di accesso SQL o un ruolo msdb a un ruolo predefinito del database di SQL Server Agent**  

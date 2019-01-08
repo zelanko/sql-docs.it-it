@@ -20,12 +20,12 @@ ms.assetid: 6e7fe420-8cf4-4e72-8dad-212affaff317
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 12fe4ceda2a6ee219763b2d07b23e73508e84363
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f0a075b96e7a29cef4a10f034147732bf03f64b2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47778369"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52538879"
 ---
 # <a name="sqlallochandle-function"></a>Funzione SQLAllocHandle
 **Conformità**  
@@ -79,14 +79,14 @@ SQLRETURN SQLAllocHandle(
   
  Se Gestione Driver non è possibile allocare memoria per  *\*OutputHandlePtr* quando **SQLAllocHandle** con un *HandleType* SQL_HANDLE_ENV viene chiamato, o l'applicazione fornisce un puntatore null per *OutputHandlePtr*, **SQLAllocHandle** restituisce SQL_ERROR. Gestione Driver imposta **OutputHandlePtr* a SQL_NULL_HENV (a meno che l'applicazione è specificato un puntatore null, che restituisce SQL_ERROR). Non c'è alcun handle al quale associare informazioni diagnostiche aggiuntive.  
   
- Gestione Driver non chiama la funzione di allocazione di handle di ambiente a livello di driver finché l'applicazione chiama **SQLConnect**, **SQLBrowseConnect**, o **SQLDriverConnect**. Se si verifica un errore a livello di driver **SQLAllocHandle** (funzione), quindi il livello di gestione Driver – **SQLConnect**, **SQLBrowseConnect**, o  **SQLDriverConnect** funzione restituisce SQL_ERROR. La struttura di dati di diagnostica contiene SQLSTATE IM004 (patente **SQLAllocHandle** non riuscita). Viene restituito l'errore su un handle di connessione.  
+ Gestione Driver non chiama la funzione di allocazione di handle di ambiente a livello di driver finché l'applicazione chiama **SQLConnect**, **SQLBrowseConnect**, o **SQLDriverConnect**. Se si verifica un errore a livello di driver **SQLAllocHandle** (funzione), quindi il livello di gestione Driver **SQLConnect**, **SQLBrowseConnect**, o  **SQLDriverConnect** funzione restituisce SQL_ERROR. La struttura di dati di diagnostica contiene SQLSTATE IM004 (patente **SQLAllocHandle** non riuscita). Viene restituito l'errore su un handle di connessione.  
   
  Per altre informazioni sul flusso di chiamate di funzione tra il gestore di Driver e un driver, vedere [funzione SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md).  
   
 ## <a name="diagnostics"></a>Diagnostica  
  Quando **SQLAllocHandle** restituisce SQL_ERROR o SQL_SUCCESS_WITH_INFO, un valore SQLSTATE associato possono essere ottenuti chiamando **SQLGetDiagRec** con l'appropriato *HandleType* e *gestire* impostato sul valore di *InputHandle*. SQL_SUCCESS_WITH_INFO (ma non da SQL_ERROR) possono essere restituite per il *OutputHandle* argomento. Nella tabella seguente sono elencati i valori SQLSTATE normalmente restituiti dal **SQLAllocHandle** e illustra ognuna nel contesto di questa funzione; la notazione "(DM)" precede le descrizioni di SQLSTATE restituiti da Gestione Driver. Il codice restituito a ogni valore SQLSTATE è SQL_ERROR, se non specificato diversamente.  
   
-|SQLSTATE|Errore|Description|  
+|SQLSTATE|Errore|Descrizione|  
 |--------------|-----------|-----------------|  
 |01000|Avviso generale|Messaggio informativo specifico del driver. (Funzione restituisce SQL_SUCCESS_WITH_INFO).|  
 |08003|Connessione non aperta|(DM) il *HandleType* argomento era SQL_HANDLE_STMT o SQL_HANDLE_DESC, ma la connessione specificata per il *InputHandle* argomento non è aperta. Il processo di connessione deve essere completato (e la connessione deve essere aperta) per il driver ad allocare un'istruzione o un descrittore di handle.|  

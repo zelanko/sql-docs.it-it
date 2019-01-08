@@ -11,12 +11,12 @@ ms.assetid: 41947b4c-8ecf-4e4f-b30e-66e1d6692b74
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 5f6d37f88044d9888c82b5770ea1bca366423459
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ea7896e5f7c394539793ca65496824691275963d
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48123252"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52393754"
 ---
 # <a name="managing-report-parts"></a>Gestione di parti di report
   A partire [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], parti del report possono essere pubblicate nei server di report e riutilizzate in altri report e da altri utenti se hanno le autorizzazioni appropriate.  
@@ -52,15 +52,15 @@ ms.locfileid: "48123252"
   
  (*) indica un elemento introdotto in questa versione.  
   
-|Proprietà|Description|Parte del report<br /><br /> Criteri di ricerca nella raccolta|  
+|Proprietà|Descrizione|Parte del report<br /><br /> Criteri di ricerca nella raccolta|  
 |--------------|-----------------|---------------------------------------------|  
-|nome|Uno dei criteri in base al quale un utente può eseguire la ricerca nella raccolta di parti del report.|Sì|  
-|Description|Può essere necessario organizzare i nomi delle parti del report in modo da semplificare la ricerca nella raccolta. Ad esempio, è possibile cercare la descrizione che inizia con "Vendite>>" per trovare tutte le parti di report in cui sono presenti dati e presentazioni relativi alle vendite.|Sì|  
-|CreatedBy|ID dell'utente che ha aggiunto la parte del report al database del server di report. Il formato esatto dipende dal metodo di autenticazione. Alcuni metodi di autenticazione, ad esempio, consentono di visualizzare il nome di dominio\utente completo nei campi CreatedBy e ModifiedBy.|Sì|  
-|CreationDate|Data in cui è stata originariamente creata la parte del report.<br /><br /> Uno dei criteri in base al quale un utente può eseguire la ricerca nella raccolta di parti del report.|Sì|  
-|ModifiedBy|ModifiedBy è l'ID dell'ultimo utente che ha modificato la parte del report.|Sì|  
-|ModifiedDate|Data dell'ultima modifica della parte del report nel server.<br /><br /> Questo campo viene utilizzato come parte della logica per determinare quando vengono apportati aggiornamenti a una parte del report sul lato server. Per ulteriori informazioni, vedere la descrizione di ComponentID più avanti in questa tabella.|Sì|  
-|SubType (*)|SubType è una stringa che indica il tipo di parte del report da cercare, ad esempio "Tablix" o "Grafico".|Sì|  
+|nome|Uno dei criteri in base al quale un utente può eseguire la ricerca nella raccolta di parti del report.|Yes|  
+|Descrizione|Può essere necessario organizzare i nomi delle parti del report in modo da semplificare la ricerca nella raccolta. Ad esempio, è possibile cercare la descrizione che inizia con "Vendite>>" per trovare tutte le parti di report in cui sono presenti dati e presentazioni relativi alle vendite.|Yes|  
+|CreatedBy|ID dell'utente che ha aggiunto la parte del report al database del server di report. Il formato esatto dipende dal metodo di autenticazione. Alcuni metodi di autenticazione, ad esempio, consentono di visualizzare il nome di dominio\utente completo nei campi CreatedBy e ModifiedBy.|Yes|  
+|CreationDate|Data in cui è stata originariamente creata la parte del report.<br /><br /> Uno dei criteri in base al quale un utente può eseguire la ricerca nella raccolta di parti del report.|Yes|  
+|ModifiedBy|ModifiedBy è l'ID dell'ultimo utente che ha modificato la parte del report.|Yes|  
+|ModifiedDate|Data dell'ultima modifica della parte del report nel server.<br /><br /> Questo campo viene utilizzato come parte della logica per determinare quando vengono apportati aggiornamenti a una parte del report sul lato server. Per ulteriori informazioni, vedere la descrizione di ComponentID più avanti in questa tabella.|Yes|  
+|SubType (*)|SubType è una stringa che indica il tipo di parte del report da cercare, ad esempio "Tablix" o "Grafico".|Yes|  
 |ComponentID (*)|ComponentID è un identificatore univoco della parte del report. Si tratta di uno dei nuovi campi aggiunti al catalogo ed è visibile sia sul lato server sia nelle applicazioni di creazione di report, ad esempio Generatore report.<br /><br /> Questo campo viene utilizzato dalle applicazioni client durante la verifica degli aggiornamenti di una parte del report nel server. L'applicazione client esegue la ricerca nel server degli elementi ComponentID presenti nel report corrente sul lato client. Quando viene rilevata una corrispondenza, il valore del campo ModifiedDate viene confrontato con il valore del campo SyncDate dell'elemento del report sul lato client.|N0|  
   
 ## <a name="controlling-access-to-report-parts"></a>Controllo dell'accesso alle parti del report  
@@ -89,13 +89,13 @@ ms.locfileid: "48123252"
     > [!IMPORTANT]  
     >  In ognuno di questi passaggi, verificare che le parti del report riutilizzate nei report provengano da percorsi e utenti attendibili.  
   
--   Le parti di report utilizzano gli stessi criteri di autorizzazione del tipo di elemento risorsa esistente. Dal punto di vista dell'ereditarietà della sicurezza, all'interno di una cartella non esiste alcuna differenza tra gli elementi risorsa tradizionali e le parti di report. La parte del report eredita gli stessi criteri di autorizzazione delle immagini presenti nella stessa cartella. Quando occorre fare distinzione, è possibile configurare la sicurezza a livello di elemento per le parti del report desiderate. In alternativa, le parti del report devono essere posizionate in cartelle separate con le autorizzazioni desiderate configurate.  
+-   Le parti di report usano gli stessi criteri di autorizzazione del tipo di elemento risorsa esistente. Dal punto di vista dell'ereditarietà della sicurezza, all'interno di una cartella non esiste alcuna differenza tra gli elementi risorsa tradizionali e le parti di report. La parte del report eredita gli stessi criteri di autorizzazione delle immagini presenti nella stessa cartella. Quando occorre fare distinzione, è possibile configurare la sicurezza a livello di elemento per le parti del report desiderate. In alternativa, le parti del report devono essere posizionate in cartelle separate con le autorizzazioni desiderate configurate.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Parti del report e set di dati in Generatore Report](../report-data/report-parts-and-datasets-in-report-builder.md)   
+ [Parti del report e set di dati in Generatore report](../report-data/report-parts-and-datasets-in-report-builder.md)   
  [Pagina delle proprietà generale, parti del Report &#40;gestione Report&#41;](../general-properties-page-report-parts-report-manager.md)   
  [Spostamento degli elementi &#40;gestione Report&#41;](../move-items-page-report-manager.md)   
- [Gestione contenuto del Server di report &#40;modalità nativa SSRS&#41;](../report-server/report-server-content-management-ssrs-native-mode.md)   
+ [Gestione contenuto del server di report &#40;modalità nativa SSRS&#41;](../report-server/report-server-content-management-ssrs-native-mode.md)   
  [Risolvere i problemi di parti del Report &#40;Report e SSRS&#41;](../report-parts-report-builder-and-ssrs.md)   
  [Parti del report in Progettazione report &#40;SSRS&#41;](report-parts-in-report-designer-ssrs.md)  
   

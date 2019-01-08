@@ -33,12 +33,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: be8577fca914627434314fa4b7352d6610ff72c2
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: e717254256468a04ed4502a63c14dc742a1101a0
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52522907"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206990"
 ---
 # <a name="insert-transact-sql"></a>INSERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -296,7 +296,7 @@ Clausola OUTPUT
   
  Indica il numero approssimativo di righe di dati nel flusso di dati binario. Per altre informazioni, vedere [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md).  
   
->  [!NOTE]
+> [!NOTE]
 >  Se non viene specificato un elenco di colonne, viene generato un errore di sintassi.  
 
 ## <a name="remarks"></a>Remarks  
@@ -439,7 +439,7 @@ INSERT INTO Production.UnitMeasure
 VALUES (N'FT', N'Feet', '20080414');  
 ```  
   
-#### <a name="b-inserting-multiple-rows-of-data"></a>B. Inserimento di più righe di dati  
+#### <a name="b-inserting-multiple-rows-of-data"></a>b. Inserimento di più righe di dati  
  Nell'esempio seguente viene usato il [costruttore di valori di tabella](../../t-sql/queries/table-value-constructor-transact-sql.md) per inserire tre righe nella tabella `Production.UnitMeasure` del database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] in una singola istruzione INSERT. Poiché i valori per tutte le colonne vengono specificati ed elencati nello stesso ordine delle colonne nella tabella, non è necessario specificare i nomi delle colonne nell'elenco delle colonne.  
   
 ```sql

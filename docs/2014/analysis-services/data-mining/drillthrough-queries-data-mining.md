@@ -15,12 +15,12 @@ ms.assetid: 246c784b-1b0c-4f0b-96f7-3af265e67051
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a84857925cd4f9db7088ec922a3cceccb0d64895
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 89900ccb182c58041af7b428af336ddab217d245
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50147617"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52538880"
 ---
 # <a name="drillthrough-queries-data-mining"></a>Query drill-through (Data mining)
   Una *query drill-through* consente di recuperare i dettagli dei case o dei dati della struttura sottostanti mediante l'invio di una query al modello di data mining. Il drill-through è utile se si desidera confrontare i case utilizzati per il training del modello con quelli utilizzati per il test del modello oppure se si desidera visualizzare ulteriori dettagli dei dati dei case.  
@@ -29,7 +29,7 @@ ms.locfileid: "50147617"
   
 -   Drill-through nei **case del modello**  
   
-     Il drill-through nei case del modello viene utilizzato quando si desidera passare da uno schema specifico del modello, ad esempio un cluster o un ramo di un albero delle decisioni, e visualizzare dettagli sui singoli case.  
+     Drill-through nei case del modello viene usato quando si vuole passare da un modello specifico di modello, quali come un cluster o un ramo dell'albero delle decisioni e visualizzare i dettagli sui singoli case.  
   
 -   Drill-through nei **case della struttura**  
   

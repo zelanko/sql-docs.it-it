@@ -13,12 +13,12 @@ ms.assetid: aa3d052f-58a9-4417-8e7a-5e6feb562af0
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 67399a724001cbd1f04a24f0558f2618aafd155a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e183c1e25aa81b05c897674fc5c9f4a2dd8d0c5b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48069431"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52529360"
 ---
 # <a name="create-a-lift-chart-profit-chart-or-classification-matrix"></a>Creare un grafico di accuratezza, un grafico dei profitti o una matrice di classificazione
   È possibile creare un grafico di accuratezza per un modello di data mining di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in cinque passaggi fondamentali:  
@@ -70,7 +70,7 @@ ms.locfileid: "48069431"
   
     -   Selezionare l'opzione **Usa test case della struttura di data mining**per usare il set completo di test case definiti come parte del set di dati di controllo delle strutture di data mining.  
   
-    -   Selezionare l'opzione **Specifica un set di dati diverso**se si vuole usare dati esterni.  Il set di dati deve essere disponibile come vista origine dati.   Fare clic sul pulsante sfoglia (**...**) per scegliere le tabelle di dati da usare per il grafico di accuratezza. Per altre informazioni, vedere [Scegliere ed eseguire il mapping dei dati di test del modello](choose-and-map-model-testing-data.md).  
+    -   Selezionare l'opzione **Specifica un set di dati diverso**se si vuole usare dati esterni.  Il set di dati deve essere disponibile come vista origine dati.   Fare clic su Sfoglia (**...** ) pulsante per scegliere le tabelle di dati da utilizzare per il grafico di accuratezza. Per altre informazioni, vedere [Scegliere ed eseguire il mapping dei dati di test del modello](choose-and-map-model-testing-data.md).  
   
          Se si utilizza un set di dati esterno, è possibile scegliere di filtrare il set di dati di input. Per altre informazioni, vedere [Applicare filtri ai dati di test del modello](apply-filters-to-model-testing-data.md).  
   
@@ -112,7 +112,7 @@ ms.locfileid: "48069431"
      Importo dei ricavi associati a ogni vendita effettuata.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Grafico di accuratezza &#40;Analysis Services - Data Mining&#41;](lift-chart-analysis-services-data-mining.md)   
- [Matrice di classificazione &#40;Analysis Services - Data Mining&#41;](classification-matrix-analysis-services-data-mining.md)  
+ [Grafico di accuratezza &#40;Analysis Services - Data mining&#41;](lift-chart-analysis-services-data-mining.md)   
+ [Matrice di classificazione &#40;Analysis Services - Data mining&#41;](classification-matrix-analysis-services-data-mining.md)  
   
   

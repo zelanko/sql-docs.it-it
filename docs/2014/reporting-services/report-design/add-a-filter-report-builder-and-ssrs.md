@@ -11,12 +11,12 @@ ms.assetid: 10ae54e7-0e8a-4dff-995d-05516c51d076
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 1df28dfd9e260f09da8eabcc6613e82e8a720e72
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d258a21fe4e6e0be3f0cf33230d6e8c5928780b1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48086891"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52516564"
 ---
 # <a name="add-a-filter-report-builder-and-ssrs"></a>Aggiungere un filtro (Generatore report e SSRS)
   Aggiungere un filtro a un set di dati, un'area dati o un gruppo per includere o escludere valori specifici nei calcoli o nella visualizzazione. In fase di esecuzione, i filtri vengono applicati prima al set di dati, poi all'area dati e infine al gruppo procedendo dall'alto verso il basso per le gerarchie di gruppi. In una tabella, una matrice o un elenco i filtri per gruppi di righe, gruppi di colonne e gruppi adiacenti vengono applicati in modo indipendente. Anche in un grafico i filtri per gruppi di categorie e gruppi di serie vengono applicati in modo indipendente.  
@@ -34,7 +34,7 @@ ms.locfileid: "48086891"
   
 1.  Aprire un report in visualizzazione **Progettazione** .  
   
-2.  Selezionare l'area dati nell'area di progettazione e quindi fare clic con il pulsante destro del mouse su *\<area dati>***Proprietà**. Per un misuratore, selezionare **Proprietà pannello del misuratore**. Viene visualizzata la finestra di dialogo *\<area dati>***Proprietà**.  
+2.  Selezionare l'area dati nell'area di progettazione e quindi fare clic con il pulsante destro del mouse su _\<area dati>_**Proprietà**. Per un misuratore, selezionare **Proprietà pannello del misuratore**. Viene visualizzata la finestra di dialogo _\<area dati>_**Proprietà**.  
   
     > [!NOTE]  
     >  In un'area dati Tablix fare clic con il pulsante destro del mouse sulla cella d'angolo oppure sull'handle di una riga o colonna e quindi scegliere **Proprietà Tablix**.  
@@ -130,8 +130,8 @@ ms.locfileid: "48086891"
 ## <a name="see-also"></a>Vedere anche  
  [Aggiungere filtri per set di dati, aree dati e gruppi &#40;Generatore report e SSRS&#41;](add-dataset-filters-data-region-filters-and-group-filters.md)   
  [Esempi di espressioni &#40;Generatore report e SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
- [I misuratori &#40;Report e SSRS&#41;](gauges-report-builder-and-ssrs.md)   
+ [Misuratori &#40;Generatore report e SSRS&#41;](gauges-report-builder-and-ssrs.md)   
  [Elenchi &#40;Generatore report e SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md)   
- [Grafici &#40;Report e SSRS&#41;](charts-report-builder-and-ssrs.md)  
+ [Grafici &#40;Generatore report e SSRS&#41;](charts-report-builder-and-ssrs.md)  
   
   

@@ -19,26 +19,26 @@ ms.assetid: 5059f858-086a-40d4-811e-81fedaa18b06
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 2ac74fa854d76431fd90232b79abd2dc4e32db3b
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 872b14f2b9ced766086d98af74e5ea9d1129d6df
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51673520"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52501931"
 ---
 # <a name="expression-context-and-query-evaluation-xquery"></a>Contesto delle espressioni e valutazione delle query (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Il contesto di un'espressione è rappresentato dalle informazioni che ne consentono l'analisi e la valutazione. Di seguito sono illustrate le due fasi della valutazione di XQuery:  
   
--   **Contesto statico** – si tratta della fase di compilazione di query. A seconda delle informazioni disponibili, durante l'analisi statica della query a volte vengono generati errori.  
+-   **Contesto statico** -questa è la fase di compilazione di query. A seconda delle informazioni disponibili, durante l'analisi statica della query a volte vengono generati errori.  
   
--   **Contesto dinamico** : questa è la fase di esecuzione di query. Anche se in una query non si verificano errori statici, ad esempio durante la compilazione, è possibile che vengano generati errori durante l'esecuzione della query.  
+-   **Contesto dinamico** -questa è la fase di esecuzione di query. Anche se in una query non si verificano errori statici, ad esempio durante la compilazione, è possibile che vengano generati errori durante l'esecuzione della query.  
   
 ## <a name="static-context"></a>Contesto statico  
  L'inizializzazione del contesto statico prevede la raccolta di tutte le informazioni necessarie per l'analisi statica dell'espressione. Nella fase di inizializzazione vengono eseguite le operazioni seguenti:  
   
--   Il **spazi vuoti limite** criterio è impostato su striscia. Di conseguenza, gli spazi vuoti limite non viene mantenuto per la **qualsiasi elemento** e **attributo** costruttori nella query. Esempio:  
+-   Il **spazi vuoti limite** criterio è impostato su striscia. Di conseguenza, gli spazi vuoti limite non viene mantenuto per la **qualsiasi elemento** e **attributo** costruttori nella query. Ad esempio:  
   
     ```  
     declare @x xml  

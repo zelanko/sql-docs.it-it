@@ -11,18 +11,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: badc7e979715aa3aa8c3d23425315f6dc3d40d7b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c667b76764dc4ea6c6409d0ea5a55d16ae68c656
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47721119"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52419761"
 ---
 # <a name="sql-server-native-client-support-for-high-availability-disaster-recovery"></a>Supporto di SQL Server Native Client per il ripristino di emergenza a disponibilità elevata
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
-  In questo argomento viene illustrato il supporto in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client (aggiunto in [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]) per [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. Per altre informazioni su [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], vedere [Listener del gruppo di disponibilità, connettività client e failover dell’applicazione &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md), [Creazione e configurazione di gruppi di disponibilità &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md), [Clustering di failover e gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](~/database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md) e [Repliche secondarie attive: Repliche secondarie leggibili &#40;Gruppi di disponibilità AlwaysOn&#41;](~/database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
+  In questo argomento viene illustrato il supporto in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client (aggiunto in [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]) per [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. Per altre informazioni sulle [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], vedere [listener del gruppo di disponibilità, connettività Client e Failover dell'applicazione &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md), [la creazione e configurazione di gruppi di disponibilità &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md), [Clustering di Failover e gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](~/database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md), e [repliche secondarie attive: Repliche secondarie leggibili &#40;gruppi di disponibilità AlwaysOn&#41;](~/database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
   
  È possibile specificare il listener di un determinato gruppo di disponibilità nella stringa di connessione. Se un'applicazione [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client è connessa a un database in un gruppo di disponibilità, la connessione originale viene interrotta e deve esserne aperta una nuova per l'applicazione affinché quest'ultima possa continuare a funzionare dopo il failover.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "47721119"
   
 -   La connessione a un'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] configurata con più di 64 indirizzi IP determinerà un errore di connessione.  
   
--   Il comportamento di un'applicazione in cui viene usata la proprietà di connessione **MultiSubnetFailover** non è influenzato dal tipo di autenticazione, cioè dall'autenticazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], dall'autenticazione Kerberos, o dall’autenticazione di Windows.  
+-   Comportamento di un'applicazione che usa il **MultiSubnetFailover** proprietà di connessione non è interessata in base al tipo di autenticazione: cioè Autenticazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], Autenticazione Kerberos o Autenticazione di Windows.  
   
 -   È possibile aumentare il valore di **loginTimeout** per adattarlo alla durata del failover e ridurre il numero di nuovi tentativi di connessione dell'applicazione.  
   
@@ -94,7 +94,7 @@ ms.locfileid: "47721119"
   
  Un'applicazione ODBC di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client può utilizzare, per la connessione, una delle tre funzioni seguenti:  
   
-|Funzione|Description|  
+|Funzione|Descrizione|  
 |--------------|-----------------|  
 |[SQLBrowseConnect](../../../relational-databases/native-client-odbc-api/sqlbrowseconnect.md)|L'elenco di server restituiti da **SQLBrowseConnect** non includerà i nomi di rete virtuale. Verrà visualizzato solo un elenco di server senza indicazione del fatto che il server sia un server autonomo oppure un server primario o secondario in un cluster WSFC (Windows Server Failover Clustering) che contiene due o più istanze di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] abilitate per [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. Se si esegue la connessione a un server e viene restituito un errore, è possibile che sia stata stabilita la connessione a un server e che l'impostazione **ApplicationIntent** non sia compatibile con la configurazione del server.<br /><br /> Poiché **SQLBrowseConnect** non riconosce i server in un cluster WSFC (Windows Server Failover Clustering) che contiene due o più istanze di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] abilitate per [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], la parola chiave della stringa di connessione **MultiSubnetFailover** viene ignorata da **SQLBrowseConnect**.|  
 |[SQLConnect](../../../relational-databases/native-client-odbc-api/sqlconnect.md)|**SQLConnect** supporta sia **ApplicationIntent** che **MultiSubnetFailover** tramite un nome origine dati (DSN, Data Source Name) o una proprietà di connessione.|  
