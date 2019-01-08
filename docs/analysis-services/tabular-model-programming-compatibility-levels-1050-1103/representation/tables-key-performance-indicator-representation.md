@@ -1,5 +1,5 @@
 ---
-title: Chiave di rappresentazione dell'indicatore di prestazioni (tabulare) | Documenti Microsoft
+title: Rappresentazione dell'indicatore di prestazioni (tabulare) della chiave | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,19 +9,19 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 3a536272f6e41e3aaf1abe6404139b67e0e558f0
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 690c82c020f509e7dec816ca64a11dc2828ad4cd
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34039668"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52513977"
 ---
-# <a name="tables---key-performance-indicator-representation"></a>Tabelle - rappresentazione dell'indicatore di prestazioni chiave
+# <a name="tables---key-performance-indicator-representation"></a>Tabelle - Rappresentazione degli indicatori di prestazioni chiave
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   Un indicatore KPI viene utilizzato per misurare le prestazioni di un valore, definito mediante una misura di base, rispetto a un valore di destinazione.  
   
 ## <a name="key-performance-indicator-representation"></a>Rappresentazione dell'indicatore di prestazioni chiave  
- Nei modelli a oggetti tabulari, un indicatore di prestazioni chiave (KPI) è una misura con informazioni aggiuntive per la visualizzazione grafica da parte dell'applicazione client. Un indicatore KPI dispone in genere di informazioni su un obiettivo da raggiungere e sullo stato della misura confrontato con l'obiettivo nonché di informazioni per lo strumento client sulla visualizzazione grafica dello stato.  
+ Nell'oggetto tabulare Modella un indicatore di prestazioni chiave - kpi: è una misura con informazioni aggiuntive relative all'applicazione client di visualizzarli graficamente. Un indicatore KPI dispone in genere di informazioni su un obiettivo da raggiungere e sullo stato della misura confrontato con l'obiettivo nonché di informazioni per lo strumento client sulla visualizzazione grafica dello stato.  
   
 ### <a name="key-performance-indicator-in-amo"></a>Indicatore di prestazioni chiave in AMO  
  Se si utilizza AMO per gestire un indicatore di prestazioni chiave (KPI) in un modello tabulare, non vi è corrispondenza di oggetti uno-a-uno per un indicatore KPI in AMO, l'oggetto <xref:Microsoft.AnalysisServices.Kpi> AMO non viene utilizzato per questo scopo; in AMO, per i modelli tabulari, un indicatore KPI è rappresentato il da una serie di oggetti creata in uno degli elementi nella raccolta <xref:Microsoft.AnalysisServices.MdxScript.Commands%2A> e nell'oggetto <xref:Microsoft.AnalysisServices.MdxScript.CalculationProperties%2A>.  
@@ -221,6 +221,6 @@ private void addStaticKPI(object sender, EventArgs e)
 ```  
   
 ## <a name="amo2tabular-sample"></a>Esempio AMO2Tabular  
- Sull'utilizzo di AMO per creare e modificare l'indicatore di prestazioni chiave per comprendere le rappresentazioni vedere il codice sorgente di esempio AMO to Tabular; in particolare controllare nel seguente file di origine: AddKPIs.cs. L'esempio è disponibile in Codeplex. Nota importante sul codice: il codice viene fornito solo come supporto ai concetti logici illustrati in questo argomento e non deve essere utilizzato in un ambiente di produzione né deve essere utilizzato per altro scopo se non quello formativo.  
+ Per comprendere la modalità di utilizzo di AMO per la creazione e la gestione delle rappresentazioni dell'indicatore di prestazioni chiave, vedere il codice sorgente dell'esempio AMO to Tabular. In particolare effettuare un controllo nel seguente file di origine: AddKPIs.cs. L'esempio è disponibile in Codeplex. Nota importante sul codice: il codice viene fornito solo come supporto ai concetti logici illustrati in questo argomento e non deve essere utilizzato in un ambiente di produzione né deve essere utilizzato per altro scopo se non quello formativo.  
   
   

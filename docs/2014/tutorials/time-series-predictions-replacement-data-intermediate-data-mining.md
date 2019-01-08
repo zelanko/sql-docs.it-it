@@ -11,18 +11,18 @@ ms.assetid: a23a6e1d-1d49-41ea-8314-925dc8e4df5e
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 815b50c8d687c1df76b9dc5de4b1fbe34f15f233
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2b7c23bec5925dbc33d2db7a547daf02f42a6cd7
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48120283"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52419042"
 ---
 # <a name="time-series-predictions-using-replacement-data-intermediate-data-mining-tutorial"></a>Stime basate su serie temporali utilizzando dati di sostituzione (Esercitazione intermedia sul data mining)
   In questa attività verrà compilato un nuovo modello basato sui dati di vendita mondiali. Verrà quindi creata una query di stima che applica il modello delle vendite mondiali a una delle singole aree.  
   
 ## <a name="building-a-general-model"></a>Compilazione di un modello generale  
- L'analisi dei risultati del modello di data mining originale ha rivelato differenze rilevanti tra aree e linee di prodotti. Ad esempio, le vendite in America del nord sono state elevate per il modello M200, mentre le vendite del modello T1000 non sono andate altrettanto bene. Tuttavia, l'analisi è complicata dal fatto che alcune serie non contenevano molti dati o che i dati sono stati avviati in una data e un'ora diverse. Alcuni dati erano inoltre mancanti.  
+ L'analisi dei risultati del modello di data mining originale ha rivelato differenze rilevanti tra aree e linee di prodotti. Ad esempio, le vendite in America del nord sono state elevate per il modello M200, mentre le vendite del modello T1000 non sono andate altrettanto bene. Tuttavia, l'analisi è complicata dal fatto che alcune serie non contenevano molti dati o dati in un altro punto nel tempo. Alcuni dati erano inoltre mancanti.  
   
  ![Serie di stima delle quantità M200 e T1000](../../2014/tutorials/media/6series-defaultforecasting.gif "serie stima delle quantità M200 e T1000")  
   
@@ -55,7 +55,7 @@ ms.locfileid: "48120283"
   
          Chiave temporale: ReportingDate  
   
-         Chiave: area  
+         Chiave: Region  
   
     -   Scegliere le colonne seguenti per `Input` e `Predict`:  
   
@@ -162,7 +162,7 @@ AND
  [Confronto delle stime per i modelli di previsione &#40;esercitazione intermedia sul Data Mining&#41;](../../2014/tutorials/comparing-predictions-for-forecasting-models-intermediate-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Time Series Model Query Examples](../../2014/analysis-services/data-mining/time-series-model-query-examples.md)   
+ [Esempi di query sul modello di serie temporale](../../2014/analysis-services/data-mining/time-series-model-query-examples.md)   
  [PredictTimeSeries &#40;DMX&#41;](/sql/dmx/predicttimeseries-dmx)  
   
   

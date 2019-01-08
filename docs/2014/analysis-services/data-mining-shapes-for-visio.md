@@ -16,27 +16,27 @@ ms.assetid: 11a821d9-1c0a-442e-b735-92208ce479dc
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3dab107fb57ab2e6d0abaa97bd76a1ce8082b726
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 92630f90d7b18ad668dcffc02feeb65990cf3c84
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48055231"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512627"
 ---
 # <a name="data-mining-shapes-for-visio"></a>Forme di data mining per Visio
   Le forme di data mining per Visio forniscono il modelli personalizzati per la visualizzazione dei modelli di data mining. Tramite questi modelli, è possibile connettersi a un modello creato in precedenza e creare presentazioni interattive per illustrare i risultati del processo di data mining.  
   
- I modelli offrono numerosi vantaggi rispetto ai grafici e alle acquisizioni di schermate statiche, in quanto interagiscono con i modelli di data mining sottostanti, archiviati in un'istanza di Analysis Services e consentono di personalizzare il modo in cui gli schemi vengono visualizzati nel modello di data mining. È possibile comprimere ed espandere un modello di albero, applicare filtri ai nodi dati o in base agli attributi e visualizzare le statistiche del modello come probabilità e coefficienti.  
+ I modelli offrono numerosi vantaggi rispetto ai grafici statici e le acquisizioni di schermata - interagiscono con i modelli di data mining dei dati sottostante, che vengono archiviati in un'istanza di Analysis Services, e consentono di personalizzare il modo in cui gli schemi nel modello di data mining vengono visualizzati. È possibile comprimere ed espandere un modello di albero, applicare filtri ai nodi dati o in base agli attributi e visualizzare le statistiche del modello come probabilità e coefficienti.  
   
  ![DM](media/dm-stencil.gif "DM")  
   
  Nei modelli di Visio sono incluse le procedure guidate seguenti:  
   
--   **Diagramma della rete di dipendenze:** utilizzare questa procedura guidata per creare grafici per le reti neurali e alberi delle decisioni.  
+-   **Diagramma della rete di dipendenze:** Utilizzare questa procedura guidata per creare grafici per le reti neurali e alberi delle decisioni.  
   
--   **Diagramma di albero delle decisioni:** utilizzare questa procedura guidata per creare diagrammi che mostrano i punti decisionali e le formule associati ai modelli di albero delle decisioni. Questo diagramma può inoltre essere utilizzato con i modelli di regressione.  
+-   **Diagramma di albero delle decisioni:** Utilizzare questa procedura guidata per creare i diagrammi che mostrano i punti decisionali e le formule associate ai modelli di albero delle decisioni. Questo diagramma può inoltre essere utilizzato con i modelli di regressione.  
   
--   **Diagramma dei cluster:** usare questa procedura guidata per creare grafici colorati per i modelli di segmentazione. È possibile spostarsi tra varie viste, ad esempio discriminante attributi, profili dei cluster e dipendenze, e personalizzare l'aspetto dei cluster.  
+-   **Diagramma dei cluster:** Utilizzare questa procedura guidata per creare grafici colorati per i modelli di segmentazione. È possibile spostarsi tra varie viste, ad esempio discriminante attributi, profili dei cluster e dipendenze, e personalizzare l'aspetto dei cluster.  
   
 ## <a name="installation"></a>Installazione  
  Quando si installa i modelli di Data Mining per Visio, per impostazione predefinita i file seguenti vengono installati in \<unità > \Programmi\Microsoft SQL Server 2012 DM Add-Ins (o \<unità > \ o file di programma (x86) \Microsoft SQL Server 2012 DM Add-Ins):  
@@ -45,7 +45,7 @@ ms.locfileid: "48055231"
   
 -   **Microsoft Data Mining Shape Studio.vss** questo file di stencil sono contenute le forme associate al modello.  
   
-## <a name="how-to-use-the-templates"></a>Utilizzo dei modelli  
+## <a name="how-to-use-the-templates"></a>Come usare i modelli  
  Per aprire i modelli, è possibile fare doppio clic sul file di forma o è possibile aprire Visio e quindi aprire il modello di forma.  
   
 1.  Rilasciare una delle forme di data mining di Visio dallo stencil in una nuova pagina.  

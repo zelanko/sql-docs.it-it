@@ -22,19 +22,19 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: f00a7e8db9e5b91e5b722598c991c7a8dbc2e67c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fbf31fb20ebab569e681cda717cb62ff5f973447
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47596119"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52396790"
 ---
 # <a name="sysdmdbresourcestats-azure-sql-database"></a>sys.dm_db_resource_stats (Database SQL di Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
-  Restituisce il consumo di CPU, i/o e memoria per un [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] database. È presente una riga per ogni 15 secondi, anche se non esiste alcuna attività nel database. I dati cronologici vengono mantenuti per un'ora.  
+  Restituisce il consumo di CPU, I/O e memoria per un database [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. È presente una riga per ogni 15 secondi, anche se non esiste alcuna attività nel database. I dati cronologici vengono mantenuti per un'ora.  
   
-|Colonne|Tipo di dati|Description|  
+|Colonne|Tipo di dati|Descrizione|  
 |-------------|---------------|-----------------|  
 |end_time|**datetime**|Ora UTC che indica la fine dell'intervallo di reporting corrente.|  
 |avg_cpu_percent|**numero decimale (5,2)**|Percentuale dell'utilizzo medio del calcolo del limite del livello del servizio.|  

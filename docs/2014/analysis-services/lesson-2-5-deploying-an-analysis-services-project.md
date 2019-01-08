@@ -11,12 +11,12 @@ ms.assetid: 5d98bab3-3577-4143-b737-5196444a36ac
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 611b4cf87158be48cae3bc37ef7311de64c77ddf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d7f04f586511140b9e21c8eca80ec19b43fa90eb
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48126221"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52510380"
 ---
 # <a name="deploying-an-analysis-services-project"></a>Distribuzione di un progetto di Analysis Services
   Per visualizzare i dati del cubo e delle dimensioni relativi agli oggetti del cubo [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial del progetto [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial, è necessario distribuire il progetto in un'istanza specificata di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], quindi elaborare il cubo e le relative dimensioni. La *distribuzione* di un progetto di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] determina la creazione degli oggetti definiti in un'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. L'*elaborazione* degli oggetti in un'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] determina la copia dei dati delle origini dati sottostanti negli oggetti cubo. Per altre informazioni, vedere [Distribuire progetti di Analysis Services &#40;SSDT&#41;](multidimensional-models/deploy-analysis-services-projects-ssdt.md) e [Configurare proprietà di progetti di Analysis Services &#40;SSDT&#41;](multidimensional-models/configure-analysis-services-project-properties-ssdt.md).  
@@ -45,11 +45,11 @@ ms.locfileid: "48126221"
     > [!NOTE]  
     >  Se si verificano errori durante la distribuzione, utilizzare SQL Server Management Studio per controllare le autorizzazioni per il database. L'account specificato per la connessione all'origine dati deve disporre di un accesso sull'istanza di SQL Server. Fare doppio clic sull'account di accesso per visualizzare le proprietà Mapping utenti. L'account deve avere le autorizzazioni db_datareader per il database **AdventureWorksDW2012** .  
   
-     [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] consente di compilare e quindi di distribuire il progetto [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial nell'istanza specificata di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] usando uno script di distribuzione. Lo stato di avanzamento della distribuzione viene visualizzato in due finestre: la finestra **Output** e la finestra **Stato distribuzione - Analysis Services Tutorial** .  
+     [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] consente di compilare e quindi di distribuire il progetto [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial nell'istanza specificata di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] usando uno script di distribuzione. Viene visualizzato lo stato di avanzamento della distribuzione in due finestre: la **Output** finestra e il **stato distribuzione - Analysis Services Tutorial** finestra.  
   
-     Se necessario, aprire la finestra Output scegliendo **Output** dal menu **Visualizza** . Nella finestra **Output** viene visualizzato lo stato di avanzamento generale della distribuzione. La finestra **Stato distribuzione - Analysis Services Tutorial** offre informazioni dettagliate sui singoli passaggi della distribuzione. Per altre informazioni, vedere [Compilare progetti di Analysis Services &#40;SSDT&#41;](multidimensional-models/build-analysis-services-projects-ssdt.md) e [Distribuire progetti di Analysis Services &#40;SSDT&#41;](multidimensional-models/deploy-analysis-services-projects-ssdt.md).  
+     Se necessario, aprire la finestra Output scegliendo **Output** dal menu **Visualizza** . Nella finestra **Output** viene visualizzato lo stato di avanzamento generale della distribuzione. Il **avanzamento della distribuzione - Analysis Services Tutorial** finestra Visualizza i dettagli sui singoli passaggi durante la distribuzione. Per altre informazioni, vedere [Compilare progetti di Analysis Services &#40;SSDT&#41;](multidimensional-models/build-analysis-services-projects-ssdt.md) e [Distribuire progetti di Analysis Services &#40;SSDT&#41;](multidimensional-models/deploy-analysis-services-projects-ssdt.md).  
   
-5.  Esaminare il contenuto delle finestre **Output** e **Stato distribuzione - Analysis Services Tutorial** per verificare che il cubo sia stato compilato, distribuito ed elaborato senza errori.  
+5.  Esaminare il contenuto del **Output** finestra e il **stato distribuzione - Analysis Services Tutorial** per verificare che il cubo è stato compilato, distribuito ed elaborato senza errori.  
   
 6.  Per nascondere la finestra **Stato distribuzione - Analysis Services Tutorial** , fare clic sull'icona **Nascondi automaticamente** (a forma di puntina da disegno) sulla barra degli strumenti della finestra.  
   
@@ -62,6 +62,6 @@ ms.locfileid: "48126221"
   
 ## <a name="see-also"></a>Vedere anche  
  [Distribuire progetti di Analysis Services &#40;SSDT&#41;](multidimensional-models/deploy-analysis-services-projects-ssdt.md)   
- [Configurare proprietà di progetto di Analysis Services &#40;SSDT&#41;](multidimensional-models/configure-analysis-services-project-properties-ssdt.md)  
+ [Configurare proprietà di progetti di Analysis Services &#40;SSDT&#41;](multidimensional-models/configure-analysis-services-project-properties-ssdt.md)  
   
   

@@ -18,12 +18,12 @@ ms.assetid: 497cae10-3913-422a-9753-dcbb0a639b1b
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 28832f7e96ddbb149db5561654d55ef0003551cd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7dbfff2a8db4405e19eb448e7bd7db5c8ac236f8
+ms.sourcegitcommit: 98324d9803edfa52508b6d5d3554614d0350a0b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47657849"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52321797"
 ---
 # <a name="parameters-collection-ado"></a>Raccolta Parameters (ADO)
 Contiene tutti i [parametri](../../../ado/reference/ado-api/parameter-object.md) gli oggetti di un [comando](../../../ado/reference/ado-api/command-object-ado.md) oggetto.  
@@ -45,7 +45,7 @@ Contiene tutti i [parametri](../../../ado/reference/ado-api/parameter-object.md)
   
 2.  Quando si chiama una stored procedure con parametri e l'aggiunta in modo esplicito un parametro per il **parametri** raccolta con **Append**, deve essere aggiunto il parametro di valore restituito/output per il **Parametri** raccolta. Il valore restituito deve essere aggiunto prima di tutto per il **parametri** raccolta. Uso **Append** per aggiungere gli altri parametri nel **parametri** insieme nell'ordine di definizione. Ad esempio, la stored procedure SPWithParam include due parametri. Il primo parametro, *InParam*, è un parametro di input definiti come adVarChar (20) e il secondo parametro *OutParam*, è un parametro di output definito come adVarChar (20). È possibile recuperare il parametro di valore restituito/output con il codice seguente.  
   
-    ```  
+    ```vb
     ' Open Connection Conn  
     set ccmd = CreateObject("ADODB.Command")  
     ccmd.Activeconnection= Conn  
@@ -55,7 +55,7 @@ Contiene tutti i [parametri](../../../ado/reference/ado-api/parameter-object.md)
   
     ccmd.parameters.Append ccmd.CreateParameter(, adInteger, adParamReturnValue, , NULL)   ' return value  
     ccmd.parameters.Append ccmd.CreateParameter("InParam", adVarChar, adParamInput, 20, "hello world")   ' input parameter  
-    ccmd.parameters.Append ccmd.CreateParameter("OutParam", adVarChar, adParamOuput, 20, NULL)   ' output parameter  
+    ccmd.parameters.Append ccmd.CreateParameter("OutParam", adVarChar, adParamOutput, 20, NULL)   ' output parameter  
   
     ccmd.execute()  
   
@@ -66,7 +66,7 @@ Contiene tutti i [parametri](../../../ado/reference/ado-api/parameter-object.md)
   
 3.  Quando si chiama una stored procedure con parametri e configurazione dei parametri chiamando il **elemento** metodo sulle **parametri** raccolta, il parametro di valore restituito/output della stored procedure può possibile recuperarne il **parametri** raccolta. Ad esempio, la stored procedure SPWithParam include due parametri. Il primo parametro, *InParam*, è un parametro di input definiti come adVarChar (20) e il secondo parametro *OutParam*, è un parametro di output definito come adVarChar (20). È possibile recuperare il parametro di valore restituito/output con il codice seguente.  
   
-    ```  
+    ```vb
     ' Open Connection Conn  
     set ccmd = CreateObject("ADODB.Command")  
     ccmd.Activeconnection= Conn  

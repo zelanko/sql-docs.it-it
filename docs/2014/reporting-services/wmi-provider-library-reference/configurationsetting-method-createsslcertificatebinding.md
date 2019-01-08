@@ -13,12 +13,12 @@ ms.assetid: 407d50e4-0a55-43cb-8ddf-2d82714071b1
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: da18ee258d12a667280c601526f0433c1a5b0600
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 93914da7f225fca03a5a078d1dd1d5b2c7890546
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48070491"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514373"
 ---
 # <a name="createsslcertificatebinding-method-wmi-msreportserverconfigurationsetting"></a>Metodo CreateSSLCertificateBinding (MSReportServer_ConfigurationSetting WMI)
   Crea un'associazione certificato SSL.  
@@ -74,7 +74,7 @@ public void CreateSSLCertificateBinding(string application,
   
 2.  Il valore IPAddress specificato non corrisponde al valore IPAddress di questo computer.  
   
-3.  Il valore IPAddress specificato è un IPAddress DHCP (che cambia periodicamente). Utilizzare invece l'indirizzo IP con caratteri jolly (0.0.0.0).  
+3.  Il valore IPAddress specificato è un IPAddress DHCP (che cambia periodicamente). Usare invece l'indirizzo IP con caratteri jolly (0.0.0.0).  
   
 4.  Il valore IPAddress specificato non corrisponde all'indirizzo IP di una prenotazione URL E non esiste né un carattere jolly né la prenotazione URL del nome host.  
   

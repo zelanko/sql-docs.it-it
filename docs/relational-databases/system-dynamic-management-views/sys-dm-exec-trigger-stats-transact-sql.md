@@ -21,19 +21,19 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cf9299896fb03ea8eb947b5fb5ab9f1967e7d7c0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cfd6485955cbdee7bece7ae8ab18c5138a5529f3
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47649203"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52403536"
 ---
 # <a name="sysdmexectriggerstats-transact-sql"></a>sys.dm_exec_trigger_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Restituisce dati statistici aggregati sulle prestazioni dei trigger memorizzati nella cache. La vista contiene una riga per ogni trigger e la durata della riga è uguale al periodo in cui il trigger rimane memorizzato nella cache. Quando un trigger viene rimosso dalla cache, le righe corrispondenti vengono eliminate dalla vista. A quel punto, viene generato un evento di traccia SQL di perfomance Statistics simile a **DM exec_query_stats**.  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**database_id**|**int**|ID del database in cui è contenuto il trigger.|  
 |**object_id**|**int**|Numero di identificazione del trigger.|  
@@ -64,13 +64,13 @@ ms.locfileid: "47649203"
 |**last_elapsed_time**|**bigint**|Tempo trascorso, in microsecondi, per l'ultima esecuzione completata del trigger.|  
 |**min_elapsed_time**|**bigint**|Il tempo minimo trascorso, espresso in microsecondi, per qualsiasi esecuzione completata del trigger.|  
 |**max_elapsed_time**|**bigint**|Il tempo massimo trascorso, espresso in microsecondi, per qualsiasi esecuzione completata del trigger.| 
-|**total_spills**|**bigint**|Il numero totale di pagine dopo l'ultima compilazione siano stati distribuiti tramite l'esecuzione del trigger.<br /><br /> **Si applica a**: a partire da [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
-|**last_spills**|**bigint**|Il numero di pagine ha distribuito l'ultima che esecuzione del trigger.<br /><br /> **Si applica a**: a partire da [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
-|**min_spills**|**bigint**|Il numero minimo di pagine che è mai stati inseriti vuoti questo trigger durante una singola esecuzione.<br /><br /> **Si applica a**: a partire da [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
-|**max_spills**|**bigint**|Il numero massimo di pagine che è mai stati inseriti vuoti questo trigger durante una singola esecuzione.<br /><br /> **Si applica a**: a partire da [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
+|**total_spills**|**bigint**|Il numero totale di pagine dopo l'ultima compilazione siano stati distribuiti tramite l'esecuzione del trigger.<br /><br /> **Si applica a**: A partire da [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
+|**last_spills**|**bigint**|Il numero di pagine ha distribuito l'ultima che esecuzione del trigger.<br /><br /> **Si applica a**: A partire da [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
+|**min_spills**|**bigint**|Il numero minimo di pagine che è mai stati inseriti vuoti questo trigger durante una singola esecuzione.<br /><br /> **Si applica a**: A partire da [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
+|**max_spills**|**bigint**|Il numero massimo di pagine che è mai stati inseriti vuoti questo trigger durante una singola esecuzione.<br /><br /> **Si applica a**: A partire da [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
   
 ## <a name="remarks"></a>Note  
- In [!INCLUDE[ssSDS](../../includes/sssds-md.md)], le viste a gestione dinamica non possono esporre le informazioni che influenzerebbero l'indipendenza del database o le informazioni sugli altri database a cui l'utente dispone di accesso. Per evitare di esporre queste informazioni, ogni riga che contiene dati che non appartengono al tenant connesso viene esclusa tramite filtro.  
+ In [!INCLUDE[ssSDS](../../includes/sssds-md.md)], le viste a gestione dinamica non possono esporre le informazioni che influenzerebbero l'indipendenza del database o le informazioni sugli altri database a cui l'utente dispone di accesso. Per evitare di esporre queste informazioni, ogni riga che contiene dati che non appartengono al tenant connesso viene filtrata.  
 
 Le statistiche nella vista vengono aggiornate quando viene completata una query.  
   

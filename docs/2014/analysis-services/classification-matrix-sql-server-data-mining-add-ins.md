@@ -16,12 +16,12 @@ ms.assetid: d6f620f4-39af-4714-9628-28ce3c361fca
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7a4892ab57fc39f2888431b61e7b924496d9749f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5f2f1f055974edc3625ed66a8d803358b8345494
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48161845"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52522167"
 ---
 # <a name="classification-matrix-sql-server-data-mining-add-ins"></a>Matrice di classificazione (componenti aggiuntivi Data mining di SQL Server)
   ![Pulsante matrice di classificazione, barra multifunzione Data Mining](media/dmc-cmatrix.gif "pulsante matrice di classificazione, barra multifunzione Data Mining")  
@@ -31,7 +31,7 @@ ms.locfileid: "48161845"
  In questi componenti aggiuntivi, usare il **matrice di classificazione** guidato per selezionare un modello, specificare i dati di test e quindi generare una matrice di risultati.  
   
 ## <a name="how-to-read-a-classification-matrix"></a>Modalità di lettura di una matrice di classificazione  
- Si supponga che l'obiettivo sia quello di progettare un programma di fedeltà del cliente e di assegnare i clienti a categorie appropriate, in modo da fornire loro il livello adeguato di incentivi. Sono stati implementati tre livelli per il programma di ricompensa, vale a dire bronzo, argento e oro, assegnati ai clienti in una fase di valutazione. È stato inoltre progettato un modello tramite cui vengono analizzati i clienti e stimate le categorie corrette. A questo punto si utilizzerà la matrice di classificazione nei dati di prova per determinare l'efficacia del modello relativamente alla stima dell'offerta corretta per tutti i clienti.  
+ Si supponga che l'obiettivo consiste nel progettare un programma di fedeltà dei clienti e quindi assegnare i clienti a categorie appropriate, in modo da fornire loro il livello adeguato di incentivi. L'implementazione di tre livelli per il programma di ricompensa: bronzo, argento e oro - e assegnati ai clienti in una fase di valutazione. È stato inoltre progettato un modello tramite cui vengono analizzati i clienti e stimate le categorie corrette. A questo punto si utilizzerà la matrice di classificazione nei dati di prova per determinare l'efficacia del modello relativamente alla stima dell'offerta corretta per tutti i clienti.  
   
  Tramite la tabella della matrice di classificazione viene indicato il numero di clienti che verranno assegnati a ogni categoria in base al modello e il risultato ottenuto verrà confrontato con il numero di clienti effettivamente iscritti a ogni livello di ricompensa.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "48161845"
 |Bronzo|**% 94.45**|% 15.18|% 1,70|  
 |Oro|% 2.72|**% 84.82**|0,00%|  
 |Argento|% 1.84|0,00%|**% 93.80**|  
-|*Correggere*|*% 95.45*|*% 84.82*|*% 98.30*|  
+|*Corretti*|*% 95.45*|*% 84.82*|*% 98.30*|  
 |*Classificato in modo errato*|*% 4.55*|*% 15.18*|*% 1,70*|  
   
 -   In ogni colonna vengono visualizzati i valori effettivi del set di dati di testing.  
@@ -61,7 +61,7 @@ ms.locfileid: "48161845"
   
 3.  Selezionare la colonna di cui si desidera valutare l'accuratezza. È possibile selezionare solo una colonna quando si crea una matrice, ma la colonna può disporre di più valori.  
   
-     Suggerimento: può essere difficile interpretare una matrice di classificazione se nella colonna stimabile vi sono numerose colonne da confrontare.  
+     Suggerimento: Può essere difficile interpretare una matrice di classificazione se nella colonna stimabile contiene molte colonne da confrontare.  
   
      Nel **Seleziona colonne da stimare** pagina, è possibile inoltre specificare se si desidera visualizzare il numero di valori errati e corretti o visualizzare una percentuale.  
   
@@ -81,7 +81,7 @@ ms.locfileid: "48161845"
   
 -   Per il modello di misura è necessario stimare un valore che sia discreto o che sia già stato discretizzato.  
   
--   Se non è possibile utilizzare l'opzione per salvare un set di testing insieme alla struttura o al modello, è necessario ottenere un set di dati di input che disponga essenzialmente dello stesso numero di colonne, con tipi di dati corrispondenti, come quelli utilizzati nel modello.  
+-   Se si non utilizza l'opzione per salvare un set di testing insieme alla struttura o modello, è necessario ottenere un set di dati di input che è essenzialmente lo stesso numero di colonne, con i corrispondenti tipi di dati, come quelli usati nel modello.  
   
 -   Sia il modello di data mining che i nuovi dati utilizzati per il testing devono contenere almeno una colonna stimabile e le colonne devono includere lo stesso tipo di dati.  
   
