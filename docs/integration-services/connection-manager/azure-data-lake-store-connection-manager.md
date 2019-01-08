@@ -14,12 +14,12 @@ ms.assetid: f4c44553-0f08-4731-ac47-7534990b8c8d
 author: Lingxi-Li
 ms.author: lingxl
 manager: craigg
-ms.openlocfilehash: 3e9caa6e272e4b1e2479f0abf10547e52721049c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5db5df2a209cf9f291c37f960cdd9b2947966061
+ms.sourcegitcommit: 85fd3e1751de97a16399575397ab72ebd977c8e9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47719269"
+ms.lasthandoff: 12/17/2018
+ms.locfileid: "53531106"
 ---
 # <a name="azure-data-lake-store-connection-manager"></a>Gestione connessioni di Azure Data Lake Store
 Un pacchetto di SQL Server Integration Services (SSIS) è in grado di usare Gestione connessione di Azure Data Lake Store per connettersi a un account di Azure Data Lake Storage Gen1 con uno dei due tipi di autenticazione seguenti:
@@ -28,7 +28,7 @@ Un pacchetto di SQL Server Integration Services (SSIS) è in grado di usare Gest
 
 Gestione connessione di Azure Data Lake Store è un componente del [Feature Pack di SQL Server Integration Services (SSIS) per Azure](../../integration-services/azure-feature-pack-for-integration-services-ssis.md).
 
->   [!NOTE]
+> [!NOTE]
 > Per assicurarsi che la Gestione connessioni di Azure Data Lake Store e che i componenti che la usano, cioè l'origine e la destinazione di Data Lake Storage Gen1, possano connettersi ai servizi, scaricare la versione del Feature Pack di Azure più recente da [qui](https://www.microsoft.com/download/details.aspx?id=49492). 
  
 ## <a name="configure-the-azure-data-lake-store-connection-manager"></a>Configurare la Gestione connessioni di Azure Data Lake Store
@@ -44,13 +44,13 @@ Gestione connessione di Azure Data Lake Store è un componente del [Feature Pack
     
         2. Fare clic su **Test connessione** per testare la connessione. Se l'utente o l'amministratore tenant non ha precedentemente autorizzato il consenso a SSIS per accedere ai dati di Data Lake Storage Gen1, selezionare **Accetto** quando richiesto. Per altre informazioni su questa esperienza di consenso, vedere [Integrazione di applicazioni con Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-integrating-applications#updating-an-application).
     
-        >   [!NOTE] 
+        > [!NOTE] 
         > Quando si seleziona l'autenticazione dell'**identità del servizio di Azure AD** l'autenticazione a più fattori e l'autenticazione dell'account Microsoft non sono supportate.
     
     2. Se si seleziona l'autenticazione dell'**identità del servizio di Azure AD**, eseguire le operazioni seguenti:
         1. Creare un'applicazione Azure Active Directory (AAD) e l'entità servizio per accedere ai dati di Data Lake Storage Gen1.
     
-        2. Assegnare le autorizzazioni appropriate per consentire all'applicazione AAD di accedere alle risorse di Data Lake Storage Gen1. Per altre informazioni su questa opzione di autenticazione, vedere [Use portal to create Active Directory application and service principal that can access resources](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-create-service-principal-portal) (Usare il portale per creare applicazioni ed entità servizio di Active Directory che possano accedere alle risorse).
+        2. Assegnare le autorizzazioni appropriate per consentire all'applicazione AAD di accedere alle risorse di Data Lake Storage Gen1. Per altre informazioni su questa opzione di autenticazione, vedere [Use portal to create Active Directory application and service principal that can access resources](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-create-service-principal-portal)(Usare il portale per creare applicazioni ed entità servizio di Active Directory che possano accedere alle risorse).
     
         3. Specificare i valori per **ID client**, **Chiave privata** e **Nome del tenant**.
     

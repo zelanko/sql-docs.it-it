@@ -13,12 +13,12 @@ ms.assetid: 301ea227-0455-40ba-9009-d38f8676b325
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f186e6236930b6bfdc4d5a9a461695e328212879
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 223d1f8cab99a75d78bfa75b25a2092e4ba83865
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47761955"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591575"
 ---
 # <a name="login-for-updatable-subscriptions"></a>Account di accesso per sottoscrizioni aggiornabili
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "47761955"
   
  Le connessioni vengono usate dai trigger che si attivano presso il Sottoscrittore e propagano le modifiche al server di pubblicazione. Questo account è necessario anche se si seleziona **Accoda le modifiche ed esegui il commit appena possibile** nella pagina **Sottoscrizioni aggiornabili**. Per impostazione predefinita, la Creazione guidata nuova sottoscrizione configura gli aggiornamenti in coda con la possibilità di passare, se necessario, ad aggiornamenti immediati.  
   
-> **IMPORTANTE** È consigliabile concedere all'account specificato per la connessione solo le autorizzazioni necessarie per l'inserimento, l'aggiornamento e l'eliminazione dei dati delle viste create dalla replica nel database di pubblicazione, non altre autorizzazioni. Concedere autorizzazioni per le viste nel database di pubblicazione con nome formattato come **syncobj_***\<NumeroEsadecimale>* all'account configurato in ogni Sottoscrittore.  
+> **IMPORTANTE** È consigliabile concedere all'account specificato per la connessione solo le autorizzazioni necessarie per l'inserimento, l'aggiornamento e l'eliminazione dei dati delle viste create dalla replica nel database di pubblicazione, non altre autorizzazioni. Concedere autorizzazioni per le viste del database di pubblicazione con nomi nel formato **syncobj_**_\<NumeroEsadecimale>_ all'account configurato in ogni Sottoscrittore.  
   
  Sono disponibili tre opzioni per il tipo di connessione:  
   

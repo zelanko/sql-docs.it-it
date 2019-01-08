@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 851e163a-ad2a-491e-bc1e-4df92327092f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2638e15f21d21563d639b2597ad30b6597f9ecd1
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 912f0473db120c9874e231334d1d393e18518c71
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52509522"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53202490"
 ---
 # <a name="configure-a-url--ssrs-configuration-manager"></a>Configurare un URL (Gestione configurazione SSRS)
   Per usare [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] o il servizio Web ReportServer, è necessario configurare almeno un URL per ogni applicazione. La configurazione degli URL è obbligatoria se [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] è stato installato in modalità "solo file", ovvero se è stata selezionata l'opzione **Installa senza configurare il server** nella pagina Opzioni di installazione Server report dell'Installazione guidata. Se [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] è stato installato con la configurazione predefinita, gli URL sono già configurati per ogni applicazione.  
@@ -92,17 +92,17 @@ ms.locfileid: "52509522"
   
 10. Eseguire il test dell'URL facendo clic sul collegamento nella sezione **URL** della pagina. Per poter eseguire il test dell'URL, è necessario creare e configurare il database del server di report. Per istruzioni, vedere [Creare un database del server di report in modalità nativa &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md).  
 
-> [!NOTE]  
+> [!NOTE]
 >  Se si dispone di associazioni SSL esistenti e di prenotazioni di URL e si desidera modificare l'associazione SSL, ad esempio per utilizzare un'intestazione host o un certificato diverso, è consigliabile completare in ordine i passaggi seguenti:  
->   
+> 
 >  1.  Innanzitutto rimuovere tutte le prenotazioni di URL.  
 > 2.  Successivamente rimuovere tutte le associazioni SSL.  
 > 3.  Infine ricreare gli URL e le associazioni SSL.  
->   
+> 
 >  I passaggi precedenti possono essere completati utilizzando Gestione configurazione [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
->   
+> 
 >  Microsoft Windows supporta un'associazione per ogni combinazione di indirizzo IP e porta. Se un server di report viene configurato in modo che venga utilizzato un valore di intestazione host specifico e il certificato relativo alla combinazione tra porta e indirizzo IP viene emesso con un valore di intestazione host diverso, nel browser verrà visualizzato un avviso in cui viene indicato che il certificato non corrisponde all'URL in uso.  
->   
+> 
 >  Per risolvere questo problema, eliminare tutte le associazioni, quindi crearne di nuove con impostazioni univoche o configurare le registrazioni di URL di Reporting Services con caratteri jolly.
   
 ### <a name="to-create-a-url-reservation-for-the-includessrswebportalincludesssrswebportalmd"></a>Per creare una prenotazione URL per [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]  

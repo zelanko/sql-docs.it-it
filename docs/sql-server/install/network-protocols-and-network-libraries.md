@@ -21,12 +21,12 @@ ms.assetid: 8cd437f6-9af1-44ce-9cb0-4d10c83da9ce
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 708b8c242098251211e3f0dc17df003669b68991
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 1c6683da3464e094db8e85eca71baa45e3c2d031
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51696639"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53201872"
 ---
 # <a name="network-protocols-and-network-libraries"></a>Protocolli e librerie di rete
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -43,9 +43,9 @@ ms.locfileid: "51696639"
 ## <a name="server-message-block-protocol"></a>Protocollo Server Message Block  
  È necessario disabilitare tutti i protocolli non richiesti, incluso il protocollo SMB (Server Message Block), dei server della rete perimetrale. Per i server Web e i server DNS (Domain Name System) non è necessario SMB. È necessario disabilitare questo protocollo per proteggersi dal rischio di enumerazione degli utenti.  
   
-> [!WARNING]  
+> [!WARNING]
 >  Tramite la disabilitazione di SMB (Server Message Block) verrà bloccato il servizio cluster di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o Windows, impedendo l'accesso alla condivisione file remota. Non disabilitare SMB se si esegue o si pianifica di eseguire una delle operazioni seguenti:  
->   
+> 
 >  -   Utilizzare la modalità di quorum di tipo Maggioranza dei nodi del cluster e delle condivisioni file di Windows  
 > -   Specificare una condivisione file SMB come directory dei dati durante l'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
 > -   Creare un file di database in una condivisione file SMB  

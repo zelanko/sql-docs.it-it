@@ -16,12 +16,12 @@ ms.assetid: a64d4b6b-9016-4f1e-a310-b1df181dd0c6
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 7217be66fa41328d2483bc42fa66f2f71fcc1beb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5cbc26b45f5845cf563bb1cc8855ecf6b600b999
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47789039"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53588705"
 ---
 # <a name="specify-a-server-network-address-database-mirroring"></a>Specificare un indirizzo di rete del server (Mirroring del database)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "47789039"
 ##  <a name="Syntax"></a> Sintassi per un indirizzo di rete del server  
  La sintassi per un indirizzo di rete del server presenta la struttura seguente:  
   
- TCP**://***\<indirizzo-sistema>***:***\<porta>*  
+ TCP<strong>://</strong>*\<indirizzo_sistema>*<strong>:</strong>*\<porta>*  
   
  dove  
   
@@ -41,15 +41,15 @@ ms.locfileid: "47789039"
   
     -   Se i sistemi si trovano nello stesso dominio, è possibile utilizzare il nome del computer, ad esempio `SYSTEM46`.  
   
-    -   Per utilizzare un indirizzo IP, è necessario che esso sia univoco nell'ambiente. È consigliabile utilizzare un indirizzo IP solo se è statico. L'indirizzo IP può essere IP versione 4 (IPv4) o IP versione 6 (IPv6). Un indirizzo IPv6 deve essere racchiuso tra parentesi quadre, ad esempio: **[***<indirizzo_IPv6>***]**.  
+    -   Per utilizzare un indirizzo IP, è necessario che esso sia univoco nell'ambiente. È consigliabile utilizzare un indirizzo IP solo se è statico. L'indirizzo IP può essere IP versione 4 (IPv4) o IP versione 6 (IPv6). Un indirizzo IPv6 deve essere racchiuso tra parentesi quadre, ad esempio **[**_<indirizzo_IPv6>_**]**.  
   
          Per individuare l'indirizzo IP di un sistema, al prompt dei comandi di Windows immettere il comando **ipconfig** .  
   
     -   Il funzionamento del nome di dominio completo è garantito. Il nome di dominio completo è costituito da una stringa di indirizzo definita a livello locale con forme diverse a seconda della sua posizione. Spesso ma non sempre, un nome di dominio completo è un nome composto che include un nome computer e una serie di segmenti di dominio separati da virgole, ad esempio:  
   
-         *nome_computer* **.** *segmento_dominio*[...**.***segmento_dominio*]  
+         _nome_computer_ **.** _segmento_dominio_[...**.**_segmento_dominio_]  
   
-         dove *nome_computer* è il nome di rete del computer che esegue l'istanza del server e *segmento_dominio*[...**.***segmento_dominio*] è la parte rimanente delle informazioni sul dominio del server, ad esempio: `localinfo.corp.Adventure-Works.com`.  
+         dove *nome_computer*è il nome di rete del computer che esegue l'istanza del server e *segmento_dominio*[...**.**_segmento_dominio_] è la parte rimanente delle informazioni sul dominio del server, ad esempio: `localinfo.corp.Adventure-Works.com`.  
   
          Il contenuto e il numero dei segmenti di dominio sono determinati all'interno della società o dell'organizzazione. Se non si conosce il nome di dominio completo del server, consultare l'amministratore di sistema.  
   
@@ -81,7 +81,7 @@ ms.locfileid: "47789039"
 ALTER DATABASE AdventureWorks SET PARTNER ='tcp://SYSTEM46:7022';  
 ```  
   
-#### <a name="b-using-a-fully-qualified-domain-name"></a>B. Utilizzo di un nome di dominio completo  
+#### <a name="b-using-a-fully-qualified-domain-name"></a>b. Utilizzo di un nome di dominio completo  
  L'indirizzo di rete del server seguente specifica un nome di dominio completo, `DBSERVER8.manufacturing.Adventure-Works.com`, e la porta `7024`.  
   
 ```  
@@ -109,7 +109,7 @@ ALTER DATABASE AdventureWorks SET PARTNER ='tcp://[2001:4898:23:1002:20f:1fff:fe
   
  Per ottenere il nome di dominio completo, concatenare i valori di *<host_name>* e *<Primary_Dns_Suffix>* come riportato di seguito:  
   
- *<host_name>* **.** *<Primary_Dns_Suffix>*  
+ _<host_name>_ **.** _<Primary_Dns_Suffix>_  
   
  Ad esempio, la configurazione IP  
   

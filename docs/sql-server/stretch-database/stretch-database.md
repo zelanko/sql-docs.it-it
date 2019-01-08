@@ -8,15 +8,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Stretch Database
 ms.assetid: ce6db775-21a5-40bc-95a1-f560376d4ee2
-author: MikeRayMSFT
-ms.author: mikeray
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4386963a4ca821b86e03129a958d38373aa3ecbe
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 614508086f0efd44833f8a3a5c6814e8b9608b30
+ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52503787"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53596922"
 ---
 # <a name="stretch-database"></a>Stretch Database
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "52503787"
  Consente di accedere direttamente ai dati di SQL Server a prescindere che si trovino in locale o che siano stati estesi al cloud.  Impostare i criteri che determinano le posizioni di archiviazione dei dati e SQL Server gestisce il trasferimento dei dati in background. L'intera tabella è sempre online e disponibile per le query. Stretch Database non richiede modifiche alle query o alle applicazioni esistenti: il percorso dei dati è completamente disponibile per l'applicazione.  
   
  **Semplifica la manutenzione dei dati locali**  
- Consente di ridurre la manutenzione e l'archiviazione locale dei dati. I backup dei dati in locale vengono eseguiti più velocemente e terminano all'interno della finestra di manutenzione. Esegue in automatico il backup della parte dei dati nel cloud. Le esigenze di archiviazione locale vengono notevolmente ridotte. L'archiviazione di Azure può consentire un risparmio dell'80% rispetto all'aggiunta di unità SSD locali.  
+ Consente di ridurre la manutenzione e l’archiviazione locale dei dati. I backup dei dati in locale vengono eseguiti più velocemente e terminano all'interno della finestra di manutenzione. Esegue in automatico il backup della parte dei dati nel cloud. Le esigenze di archiviazione locale vengono notevolmente ridotte. L’archiviazione di Azure può consentire un risparmio dell’80% rispetto all’aggiunta di unità SSD locali.  
   
  **Protegge i dati anche durante la migrazione**  
  Consente di estendere in massima tranquillità e in modo sicure le applicazioni più importanti nel cloud. La funzionalità Always Encrypted di SQL Server offre la crittografia dei dati in transito. La sicurezza a livello di riga e altre funzionalità avanzate per la sicurezza di SQL Server funzionano anche con Stretch Database per proteggere i dati.  

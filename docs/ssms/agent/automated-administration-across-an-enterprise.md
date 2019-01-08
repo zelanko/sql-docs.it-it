@@ -22,12 +22,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: fbd32c13badb86db8dae7156b14ca3f93f97d76c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f6949ff07fccb7de14a597b754e7f2beeaa9bfe8
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47710649"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206290"
 ---
 # <a name="automated-administration-across-an-enterprise"></a>Amministrazione automatizzata in un'organizzazione
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -68,7 +68,7 @@ Contiene informazioni sulla creazione e la gestione di server master e di destin
 Contiene informazioni sull'impatto dell'utilizzo degli account di Windows non amministrativi o dell'account di sistema locale sul servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent negli ambienti multiserver.  
   
 [Impostazione delle opzioni di crittografia nei server di destinazione](../../ssms/agent/set-encryption-options-on-target-servers.md)  
-Sono incluse informazioni sull'impostazione della sottochiave MsxEncryptChannelOptions del Registro di sistema di[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent nei server di destinazione.  
+Sono incluse informazioni sull'impostazione della sottochiave MsxEncryptChannelOptions del Registro di sistema di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent nei server di destinazione.  
   
 [Gestire i processi in un'azienda](../../ssms/agent/manage-jobs-across-an-enterprise.md)  
 Contiene informazioni su verifica dello stato dei processi, modifica dei server di destinazione per i processi, sincronizzazione dei clock dei server e polling dei server master per determinare lo stato attuale dei processi.  

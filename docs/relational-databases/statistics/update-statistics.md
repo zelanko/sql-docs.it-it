@@ -10,16 +10,16 @@ helpviewer_keywords:
 - updating statistics
 - statistics [SQL Server], updating
 ms.assetid: 4b97c0b4-03ff-4cfb-9c3f-3b33290b7a2c
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1e3017d2f90f1b9ef7988b110e6767864924217c
-ms.sourcegitcommit: f1cf91e679d1121d7f1ef66717b173c22430cb42
+ms.openlocfilehash: 0fafe9e457a29a8247478ed9c638c3bddedeee0f
+ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52586284"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53380862"
 ---
 # <a name="update-statistics"></a>Aggiorna statistiche
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "52586284"
   
 -   **Prima di iniziare:**  
   
-     [Security](#Security)  
+     [Sicurezza](#Security)  
   
 -   **Aggiornare un oggetto statistiche tramite:**  
   
@@ -62,7 +62,7 @@ ms.locfileid: "52586284"
   
 6.  Nella finestra di dialogo **Proprietà statistiche -**_nome\_statistiche_ selezionare la casella di controllo **Aggiorna statistiche per le colonne selezionate** e quindi fare clic su **OK**.  
   
-##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
   
 ### <a name="to-update-a-specific-statistics-object"></a>Per aggiornare un oggetto statistiche specifico  
   

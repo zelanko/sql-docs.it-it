@@ -14,12 +14,12 @@ ms.assetid: c7810135-4d63-4161-93ab-0e75e9d10ab5
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: a145b7ae7194720c8366f0c647a511e086fe4a2d
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: ad890736cf0536c5f4f776d2bd4949e195dd26d6
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52412638"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53205420"
 ---
 # <a name="polybase-scale-out-groups"></a>Gruppi con scalabilità orizzontale di PolyBase
 
@@ -46,7 +46,7 @@ Quando si eseguono query su istanze esterne di SQL Server, Oracle o Teradata, le
 Ad esempio, si supponga di avere una tabella esterna di SQL Server con 12 partizioni mensili e un gruppo con scalabilità orizzontale PolyBase da 3 nodi. Ogni nodo userà 4 lettori di PolyBase per l'elaborazione di ciascuna delle 12 partizioni, come illustrato nella figura seguente. 
 
 > [!NOTE]
- Questa funzionalità è diversa dalle letture con scalabilità orizzontale su Hadoop. 
+>  Questa funzionalità è diversa dalle letture con scalabilità orizzontale su Hadoop. 
 
 ![Gruppi con scalabilità orizzontale di PolyBase](../../relational-databases/polybase/media/polybase-scale-out-groups2.png "Gruppi con scalabilità orizzontale di PolyBase")
   

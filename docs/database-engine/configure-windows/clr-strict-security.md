@@ -20,12 +20,12 @@ ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b4816aade2a0b1ce76b56fcda6be9e7afff05114
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7024f4214388f77edc2f97e402db8da71e9c857c
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47787415"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53205260"
 ---
 # <a name="clr-strict-security"></a>CLR strict security   
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ Controlla l'interpretazione delle autorizzazioni `SAFE`, `EXTERNAL ACCESS` e `UN
 |0 |Disabilitata: mantenuta per compatibilità con le versioni precedenti. Il valore `Disabled` non è consigliato. | 
 |1 |Abiltata: indica a [!INCLUDE[ssde-md](../../includes/ssde-md.md)] di ignorare le informazioni `PERMISSION_SET` sugli assembly e di interpretarli sempre come `UNSAFE`.  `Enabled` è il valore predefinito di [!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)]. | 
 
->  [!WARNING]
+> [!WARNING]
 >  CLR usa la Sicurezza dall'accesso di codice (CAS, Code Access Security) in .NET Framework, non più supportata come limite di sicurezza. Un assembly CLR creato con `PERMISSION_SET = SAFE` potrebbe essere in grado di accedere alle risorse di sistema esterne, chiamare codice non gestito e acquisire privilegi sysadmin. A partire da [!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)], viene introdotta un'opzione `sp_configure` denominata `clr strict security` per migliorare la sicurezza degli assembly CLR. `clr strict security` è abilitata per impostazione predefinita e considera gli assembly CLR `SAFE` e `UNSAFE` come se fossero contrassegnati `EXTERNAL_ACCESS`. È possibile disabilitare l'opzione `clr strict security` per la compatibilità con le versioni precedenti, ma questa operazione è sconsigliata. Microsoft consiglia che tutti gli assembly siano firmati con un certificato o una chiave asimmetrica con un account di accesso corrispondente che disponga dell'autorizzazione `UNSAFE ASSEMBLY` nel database master. Gli amministratori [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] possono anche aggiungere assembly a un elenco di assembly, considerato attendibile dal motore di database. Per altre, vedere [sys.sp_add_trusted_assembly](../../relational-databases/system-stored-procedures/sys-sp-add-trusted-assembly-transact-sql.md).
 
 ## <a name="remarks"></a>Remarks   
@@ -46,7 +46,7 @@ Quando abilitata, l'opzione `PERMISSION_SET` nelle istruzioni `CREATE ASSEMBLY` 
 
 `CLR strict security` è di tipo `advanced option`.  
 
->  [!IMPORTANT]  
+> [!IMPORTANT]
 >  Dopo l'abilitazione di strict security, tutti gli assembly non firmati non verranno caricati. È necessario modificare oppure eliminare e ricreare ogni assembly in modo che sia firmato con un certificato o una chiave asimmetrica con un account di accesso corrispondente con l'autorizzazione `UNSAFE ASSEMBLY` nel server.
 
 ## <a name="permissions"></a>Permissions 

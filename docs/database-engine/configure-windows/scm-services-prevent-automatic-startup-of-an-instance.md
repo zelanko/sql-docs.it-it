@@ -18,12 +18,12 @@ ms.assetid: 782663cf-f3d7-4cc6-b621-21e4550f0322
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 02afdd859faf63e7317b49971591ab4ef49037be
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d8e85590f094595b73cd2279ee61ae698b42d2e9
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47706299"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590277"
 ---
 # <a name="scm-services---prevent-automatic-startup-of-an-instance"></a>Impedire l'avvio automatico di un'istanza di SQL Server (Gestione configurazione SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,9 +47,9 @@ ms.locfileid: "47706299"
   
 3.  Nel riquadro dei dettagli fare clic con il pulsante destro del mouse su **MSSQLServer**quindi scegliere **Proprietà**.  
   
-4.  Nella finestra di dialogo **SQL Server \<***nomeistanza***> Proprietà** nella scheda **Servizio** della casella **Generale** impostare il valore di **Modalità di avvio** su **Manuale**.  
+4.  Nella finestra di dialogo **SQL Server \<**_nomeistanza_**> Proprietà** nella scheda **Servizio** della casella **Generale** impostare il valore di **Modalità di avvio** su **Manuale**.  
   
-5.  Fare clic su **OK** per chiudere la finestra di dialogo**SQL Server \<***nomeistanza***> Proprietà** e chiudere Gestione configurazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+5.  Fare clic su **OK** per chiudere la finestra di dialogo**SQL Server \<**_nomeistanza_**> Proprietà** e quindi chiudere Gestione configurazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="see-also"></a>Vedere anche  
  [Avviare, arrestare, sospendere, riprendere, riavviare il motore di database, SQL Server Agent o SQL Server Browser](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)  

@@ -21,12 +21,12 @@ ms.assetid: e1e55519-97ec-4404-81ef-881da3b42006
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ed6454a6bce8f9f0942e5427910c2942bfa838e6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 316becea16562fda0e1ba05623f09018367254af
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47788499"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589295"
 ---
 # <a name="enable-encrypted-connections-to-the-database-engine"></a>Abilitazione di connessioni crittografate al Motore di database
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -77,9 +77,9 @@ ms.locfileid: "47788499"
   
 ##  <a name="ConfigureServerConnections"></a> Per configurare il server in modo che forzi le connessioni crittografate  
   
-1.  In **Gestione configurazione SQL Server** espandere **Configurazione di rete SQL Server**, fare clic con il pulsante destro del mouse su **Protocolli per** *\<istanza server>* e quindi scegliere **Proprietà**.  
+1.  In **Gestione configurazione SQL Server** espandere **Configurazione di rete SQL Server**, fare clic con il pulsante destro del mouse su **Protocolli per** _\<istanza server>_ e quindi scegliere **Proprietà**.  
   
-2.  Nella scheda **Certificato** della finestra di dialogo **Proprietà** - **Protocolli per***\<nome istanza>* selezionare il certificato desiderato nell'elenco a discesa per la casella **Certificato** e quindi fare clic su **OK**.  
+2.  Nella scheda **Certificato** della finestra di dialogo **Proprietà** - **Protocolli per**_\<nome istanza>_ selezionare il certificato desiderato nell'elenco a discesa per la casella **Certificato** e quindi fare clic su **OK**.  
   
 3.  Nella casella **ForceEncryption** della scheda **Flag** selezionare **Sì**e quindi fare clic su **OK** per chiudere la finestra di dialogo.  
   

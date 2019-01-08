@@ -7,20 +7,18 @@ ms.prod_service: sql-tools
 ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
-f1_keywords:
-- vs.openwith
 helpviewer_keywords:
 - Open With dialog box
 ms.assetid: 9531588c-e7ec-4049-9f9c-ee000c49c5de
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f489e1a1501299b0f78c037c810ef54db7117edf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d1ae2df6aab71a5dc914260f19b13327e1e84a2a
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47675589"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53328161"
 ---
 # <a name="open-with-new-file"></a>Apri con (Nuovo file)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -47,4 +45,3 @@ Per specificare un editor predefinito ed eventuali opzioni di codifica della lin
   
 ## <a name="see-also"></a>Vedere anche  
 [Associazione di estensioni di file a un editor di codice](../../relational-databases/scripting/associate-file-extensions-to-a-code-editor.md)  
-  

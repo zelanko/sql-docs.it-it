@@ -15,12 +15,12 @@ ms.assetid: 3ca24b23-fdc3-408e-8208-a2ace48fc8e3
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1909c9a4cea07216534d20a09f20d49307518601
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4b23378b5340ea5aca32951cd1b35b3e08f78f05
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47689779"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53209390"
 ---
 # <a name="synchronize-a-pull-subscription"></a>Sincronizzazione di una sottoscrizione pull
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -184,7 +184,7 @@ SET Publication=AdvWorksSalesOrdersMerge
 ##  <a name="RMOProcedure"></a> Utilizzo di RMO (Replication Management Objects)  
  È possibile sincronizzare le sottoscrizioni pull a livello di programmazione tramite gli oggetti RMO (Replication Management Objects) e l'accesso tramite codice gestito alle funzionalità dell'agente di replica. Le classi utilizzate per la sincronizzazione di una sottoscrizione pull dipendono dal tipo di pubblicazione a cui appartiene la sottoscrizione.  
   
-> [!NOTE]  
+> [!NOTE]
 >  Se si desidera avviare una sincronizzazione eseguita in modo autonomo senza effetti sull'applicazione, avviare l'agente in modo asincrono. Se invece si desidera monitorare i risultati della sincronizzazione e ricevere callback dall'agente durante il processo di sincronizzazione (ad esempio per la visualizzazione di una barra di stato) è necessario avviare l'agente in modo sincrono. Per i sottoscrittori di [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssExpressEd2005](../../includes/ssexpressed2005-md.md)] , l'agente deve essere avviato in modo sincrono.  
   
 #### <a name="to-synchronize-a-pull-subscription-to-a-snapshot-or-transactional-publication"></a>Per sincronizzare una sottoscrizione pull di una pubblicazione snapshot o transazionale  

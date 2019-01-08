@@ -15,12 +15,12 @@ ms.assetid: da58ed50-3a13-4172-9065-960559d8f383
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 079de1eb424dbad6bcdae8cfc55049d800bdea0b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2a4a04ec504cfbed4fb187c7dcde7f61fb083664
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47771444"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53214593"
 ---
 # <a name="ekm-provider-enabled-server-configuration-option"></a>Opzione di configurazione del server EKM provider enabled
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ sp_configure 'EKM provider enabled', 1
 sp_configure 'EKM provider enabled', 0  
 ```  
   
-> [!NOTE]  
+> [!NOTE]
 >  Questa opzione è abilitata solo in alcune edizioni di [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per un elenco delle funzionalità supportate dalle edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [Funzionalità supportate dalle edizioni di SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
 ## <a name="see-also"></a>Vedere anche  

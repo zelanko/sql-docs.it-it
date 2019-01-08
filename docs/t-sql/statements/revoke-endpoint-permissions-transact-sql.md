@@ -17,12 +17,12 @@ ms.assetid: 826f513e-9ad0-46b9-87ad-7525713638c8
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: cad53aef8b06cca5dc37bca1b5a95d82d6c89d74
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ae9f994111a6c15c3bdf0a5c8d4f972e62605a9c
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47839909"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591795"
 ---
 # <a name="revoke-endpoint-permissions-transact-sql"></a>REVOKE - autorizzazioni per endpoint (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
  *permission*  
  Specifica un'autorizzazione che può essere concessa per un endpoint. Per un elenco delle autorizzazioni, vedere la sezione Osservazioni di seguito in questo argomento.  
   
- ON ENDPOINT **::***endpoint_name*  
+ ON ENDPOINT **::**_endpoint_name_  
  Specifica l'endpoint per cui viene concessa l'autorizzazione. Il qualificatore di ambito (**::**) è obbligatorio.  
   
  { FROM | TO } \<server_principal> Specifica l'account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da cui viene revocata l'autorizzazione.  
@@ -113,7 +113,7 @@ REVOKE VIEW DEFINITION ON ENDPOINT::Mirror7 FROM ZArifin;
 GO  
 ```  
   
-### <a name="b-revoking-take-ownership-permission-with-the-cascade-option"></a>B. Revoca dell'autorizzazione TAKE OWNERSHIP con l'opzione CASCADE  
+### <a name="b-revoking-take-ownership-permission-with-the-cascade-option"></a>b. Revoca dell'autorizzazione TAKE OWNERSHIP con l'opzione CASCADE  
  Nell'esempio seguente viene revocata l'autorizzazione `TAKE OWNERSHIP` per l'endpoint `Shipping83` all'utente `PKomosinski` di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e a tutte le entità a cui l'utente `PKomosinski` ha concesso l'autorizzazione `TAKE OWNERSHIP` per `Shipping83`.  
   
 ```  

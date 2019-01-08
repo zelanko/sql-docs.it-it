@@ -13,16 +13,16 @@ ms.assetid: 18201ca0-bf4a-484f-b3a2-95d1046a6a9b
 author: markingmyname
 ms.author: maghan
 ms.date: 03/07/2017
-ms.openlocfilehash: 63cee227f67a6e4c07974a296e3c512318d83fe2
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: 8383383c09861763936bc0fc9c9ee6e6cdbb365d
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813204"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53201510"
 ---
 # <a name="set-deployment-properties-reporting-services"></a>Impostare le proprietà di distribuzione (Reporting Services)
 
-  In[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]è necessario specificare il server di report e facoltativamente le cartelle per i report e le origini dati condivise in modo da poter pubblicare gli elementi di un progetto del server di report in un server di report. Le proprietà e i valori necessari in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] per compilare, visualizzare in anteprima e distribuire i report vengono archiviati nelle configurazioni di progetto del progetto server di report. È possibile creare più set denominati per queste proprietà del progetto, in modo da poter passare da un set di proprietà all'altro in base alle esigenze. Ogni set di proprietà è una configurazione. È possibile ad esempio disporre di una configurazione per la pubblicazione di report in un server di prova e di una configurazione diversa per la pubblicazione di report in un server di produzione.  
+  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] è necessario specificare il server di report e facoltativamente le cartelle per i report e le origini dati condivise in modo da poter pubblicare gli elementi di un progetto server di report in un server di report. Le proprietà e i valori necessari in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] per compilare, visualizzare in anteprima e distribuire i report vengono archiviati nelle configurazioni di progetto del progetto server di report. È possibile creare più set denominati per queste proprietà del progetto, in modo da poter passare da un set di proprietà all'altro in base alle esigenze. Ogni set di proprietà è una configurazione. È possibile ad esempio disporre di una configurazione per la pubblicazione di report in un server di prova e di una configurazione diversa per la pubblicazione di report in un server di produzione.  
   
  Utilizzare Gestione configurazione per creare e gestire set di proprietà del progetto nelle configurazioni di progetto. Gestione configurazione è una caratteristica supportata da [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], su cui si basa [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] .  
   

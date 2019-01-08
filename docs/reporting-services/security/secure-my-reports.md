@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: 3b23a382-13b8-4196-9a93-7fe62d03a63c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 86ff5bb9df79c23ba0bfb04954790ba0c475a3d9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7d80ec6d5087735602b05326e874263c083657a6
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47775819"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53211470"
 ---
 # <a name="secure-my-reports"></a>Proteggere i report personali
   La caratteristica Report personali è un'area di lavoro gestita dall'utente nella quale è possibile eseguire varie operazioni sui report. Per garantire che la cartella Report personali possa essere utilizzata in base alle caratteristiche per cui è stata progettata, le autorizzazioni necessarie per questa cartella sono meno restrittive rispetto a quelle di altre cartelle disponibili a livello generale. Per gli utenti con autorizzazioni di sola visualizzazione ed esecuzione di report in altre cartelle, potrebbe essere necessario un set di autorizzazioni più ampio che consenta di gestire le cartelle Report personali e il contenuto di cui sono proprietari. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sono disponibili un'assegnazione e una definizione di ruoli specifici per questo scopo.  
   
-> [!NOTE]  
+> [!NOTE]
 >  La funzionalità Report personali è disponibile solo in Gestione report, ma non è disponibile in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
 ## <a name="role-assignment-for-my-reports"></a>Assegnazione di ruolo per la funzionalità Report personali  

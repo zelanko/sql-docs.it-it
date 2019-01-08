@@ -16,12 +16,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 42db9954a071865124d443be32203fc284dfe699
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 079a54bdbf107ec9f83e1078fedba1be84374c5b
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47838959"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589135"
 ---
 # <a name="specify-parameters"></a>Specificare i parametri
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -169,7 +169,7 @@ GO
  Eseguire `usp_GetList` per restituire un elenco dei prodotti di [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] (biciclette) con un prezzo inferiore a 700 dollari. I parametri OUTPUT **\@cost** e **\@compareprices** vengono usati con elementi del linguaggio per il controllo di flusso per restituire un messaggio nella finestra **Messaggi**.  
   
 > [!NOTE]  
->  La variabile OUTPUT deve essere definita durante la creazione della procedura e durante l'utilizzo della variabile. Il nome di parametro e quello della variabile non devono corrispondere. Il tipo di dati e la posizione del parametro devono tuttavia corrispondere, a meno che non si usi **\@listprice=** *variabile*.  
+>  La variabile OUTPUT deve essere definita durante la creazione della procedura e durante l'utilizzo della variabile. Il nome di parametro e quello della variabile non devono corrispondere. Il tipo di dati e la posizione del parametro devono tuttavia corrispondere, a meno che non si usi **\@listprice=** _variabile_.  
   
 ```  
 DECLARE @ComparePrice money, @Cost money ;  

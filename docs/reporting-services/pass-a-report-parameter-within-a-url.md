@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: f93a94cc-27b5-435a-aa85-69e6ec6459ad
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b0848b6c5d34470964bc363b827e82c466f78326
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: a78727d3b0ab3ee1909f9e86032ab392642b5603
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52390484"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53211210"
 ---
 # <a name="pass-a-report-parameter-within-a-url"></a>Passare un parametro del report in un URL
   È possibile passare parametri del report a un report includendoli in un URL del report. Questi parametri URL non hanno il prefisso in quanto vengono passati direttamente al motore di elaborazione dei report.  
@@ -28,12 +28,12 @@ ms.locfileid: "52390484"
   
  Tutti i parametri di query possono disporre di parametri di report corrispondenti. Passare un parametro di query a un report passando il parametro di report corrispondente. Per altre informazioni, vedere [Compilare una query in Progettazione query relazionale &#40;Generatore report e SSRS&#41;](../reporting-services/report-data/build-a-query-in-the-relational-query-designer-report-builder-and-ssrs.md).  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  Nei parametri dei report viene fatta distinzione tra maiuscole e minuscole.  
-  
-> [!NOTE]  
+> 
+> [!NOTE]
 >  Ai parametri del report viene applicata la distinzione tra maiuscole e minuscole e in essi vengono utilizzati i caratteri speciali seguenti:  
->   
+> 
 >  -   Qualsiasi spazio nella stringa dell'URL viene sostituito con i caratteri "% 20", in base agli standard di codifica degli URL.  
 > -   Lo spazio nella parte di parametro dell'URL viene sostituito con un carattere più (+).  
 > -   Il punto e virgola in una parte qualsiasi della stringa viene sostituito con i caratteri "%3A".  
