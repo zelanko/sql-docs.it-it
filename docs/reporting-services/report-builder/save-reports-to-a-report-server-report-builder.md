@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 48dfef01-ed8c-4f23-90c3-de67c90a97dd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 13b71430d1d07eb8c33492bfe18c7c2b2395b951
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 90a9a377391e04a97adf3d542c8493b31649141e
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50027816"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590815"
 ---
 # <a name="save-reports-to-a-report-server-report-builder"></a>Salvare i report in un server di report (Generatore report)
   In Generatore report è possibile salvare una definizione del report in un server di report, operazione anche nota come pubblicazione di un report. Quando viene salvato in un server di report, il report può essere visualizzato anche da altri utenti. Ogni volta che si esegue il report pubblicato, verranno recuperati i dati più recenti. Per salvare una copia statica di un report visualizzabile, esportare il report in un formato di file diverso e salvarlo o utilizzare la caratteristica di cronologia dei report per salvare versioni di report visualizzabili.  
@@ -23,7 +23,7 @@ ms.locfileid: "50027816"
   
 ### <a name="to-save-a-report-to-a-report-server"></a>Per salvare un report in un server di report  
   
-1.  Dal pulsante Generatore report fare clic su **Salva**. Verrà visualizzata la finestra di dialogo **Salva con nome***\<Elemento del report*.  
+1.  Dal pulsante Generatore report fare clic su **Salva**. Viene visualizzata la finestra di dialogo **Salva con nome**_\<Elemento del report>_.  
   
     > [!NOTE]  
     >  Se si sta salvando di nuovo un report, questo viene automaticamente risalvato nel relativo percorso precedente. Utilizzare l'opzione Salva con nome per modificare il percorso.  
@@ -38,7 +38,7 @@ ms.locfileid: "50027816"
   
 ### <a name="to-save-a-report-as-a-different-name"></a>Per salvare un report con un altro nome  
   
-1.  Dal pulsante Generatore report fare clic su **Salva con nome**. Verrà visualizzata la finestra di dialogo **Salva con nome***\<Elemento del report*.  
+1.  Dal pulsante Generatore report fare clic su **Salva con nome**. Viene visualizzata la finestra di dialogo **Salva con nome**_\<Elemento del report>_.  
   
 2.  Passare al percorso del server di report o alla condivisione file in cui si desidera salvare il report.  
   
