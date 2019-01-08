@@ -12,12 +12,12 @@ ms.assetid: 0b7bd2a1-544c-42ba-8e7b-4822f34d7b64
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 550f4dbc3e733c3dee9fb200d85789931722e4f9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5eaa6c702c02a3258ac66ec55081965d25a12a55
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48215001"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52541825"
 ---
 # <a name="create-views"></a>Creare viste
   È possibile creare viste in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Una vista può essere utilizzata per gli scopi seguenti:  
@@ -34,7 +34,7 @@ ms.locfileid: "48215001"
   
      [Limitazioni e restrizioni](#Restrictions)  
   
-     [Security](#Security)  
+     [Sicurezza](#Security)  
   
 -   **Per creare una vista tramite:**  
   
@@ -60,9 +60,9 @@ ms.locfileid: "48215001"
   
 1.  In **Esplora oggetti**espandere il database in cui si desidera creare la nuova vista.  
   
-2.  Fare clic con il pulsante destro del mouse sulla cartella **Viste** , quindi selezionare **Nuova vista**.  
+2.  Fare clic con il pulsante destro del mouse sulla cartella **Viste** e quindi selezionare **Nuova vista**.  
   
-3.  Nella finestra di dialogo **Aggiungi tabella** selezionare gli elementi che si desidera includere nella nuova vista da una delle schede seguenti: Tabelle, Viste, Funzioni e Sinonimi.  
+3.  Nel **Aggiungi tabella** finestra di dialogo, selezionare uno o più elementi che si desidera includere nella nuova vista da una delle schede seguenti: Le tabelle, viste, funzioni e sinonimi.  
   
 4.  Fare clic su **Aggiungi**, quindi su **Chiudi**.  
   
@@ -76,7 +76,7 @@ ms.locfileid: "48215001"
   
      Per altre informazioni su Progettazione query e Progettazione viste, vedere [Strumenti di progettazione di query e viste &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/visual-database-tools.md).  
   
-##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
   
 #### <a name="to-create-a-view"></a>Per creare una vista  
   

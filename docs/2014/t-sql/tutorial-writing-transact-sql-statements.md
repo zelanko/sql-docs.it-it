@@ -1,10 +1,10 @@
 ---
-title: 'Esercitazione: Scrittura di istruzioni Transact-SQL | Microsoft Docs'
+title: 'Esercitazione: La scrittura di istruzioni Transact-SQL | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: t-sql
 ms.topic: conceptual
 helpviewer_keywords:
 - Transact-SQL statements, tutorials
@@ -14,12 +14,12 @@ ms.assetid: 2addc9be-67d0-423d-a457-192fe9d7d058
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 9add0b2c75b00a5cf10a1da28c8dd9e30560f716
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 67e09713fdec72313bde6ba81e1cc169467fda0c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48061469"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52807583"
 ---
 # <a name="tutorial-writing-transact-sql-statements"></a>Esercitazione: Scrittura di istruzioni Transact-SQL
   L'esercitazione per la scrittura di istruzioni [!INCLUDE[tsql](../includes/tsql-md.md)] è destinata agli utenti che non hanno familiarità con la scrittura delle istruzioni SQL e consentirà ai nuovi utenti di esaminare alcune istruzioni di base per creare tabelle e inserire i dati. Ai fini di questa esercitazione viene utilizzato [!INCLUDE[tsql](../includes/tsql-md.md)], l'implementazione [!INCLUDE[msCoName](../includes/msconame-md.md)] dello standard SQL. Questa esercitazione costituisce una breve introduzione al linguaggio [!INCLUDE[tsql](../includes/tsql-md.md)] e non rappresenta un'alternativa a un corso su [!INCLUDE[tsql](../includes/tsql-md.md)] . Le istruzioni incluse in questa esercitazione sono intenzionalmente semplici e non sono progettate per illustrare la complessità di un tipico database di produzione.  
@@ -35,13 +35,13 @@ ms.locfileid: "48061469"
   
  L'esercitazione è suddivisa in tre lezioni:  
   
- [Lezione 1: Creazione di oggetti di database](lesson-1-creating-database-objects.md)  
+ [Lezione 1: Creazione di oggetti di Database](lesson-1-creating-database-objects.md)  
  In questa lezione si procederà alla creazione di un database, alla creazione di una tabella, all'inserimento in quest'ultima dei dati che verranno quindi aggiornati e letti.  
   
- [Lezione 2: Configurazione delle autorizzazioni per gli oggetti di database](lesson-2-configuring-permissions-on-database-objects.md)  
+ [Lezione 2: Configurazione delle autorizzazioni per oggetti di Database](lesson-2-configuring-permissions-on-database-objects.md)  
  In questa lezione si procederà alla creazione di un account di accesso e un utente. Verranno inoltre create una vista e una stored procedure e si concederanno all'utente le autorizzazioni necessarie per l'esecuzione della stored procedure.  
   
- [Lezione 3: Eliminazione di oggetti di database](lesson-3-1-deleting-database-objects.md)  
+ [Lezione 3: L'eliminazione degli oggetti di Database](lesson-3-1-deleting-database-objects.md)  
  In questa lezione si procederà alla rimozione dell'accesso ai dati, all'eliminazione di questi da una tabella che verrà a sua volta eliminata e quindi all'eliminazione del database.  
   
 ## <a name="requirements"></a>Requisiti  

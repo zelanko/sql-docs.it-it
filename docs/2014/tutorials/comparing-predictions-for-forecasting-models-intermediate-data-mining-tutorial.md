@@ -11,12 +11,12 @@ ms.assetid: ead8a1fe-60d8-4017-8fb8-6fe32168e46d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 35883a1cb34a7d3ff6bd4e37f15ef0125aea7951
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: eb208d3b19e7ca2d49198a2f57edaf48214bb78f
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48206481"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52395374"
 ---
 # <a name="comparing-predictions-for-forecasting-models-intermediate-data-mining-tutorial"></a>Confronto delle stime per i modelli di previsione (Esercitazione intermedia sul data mining)
   Nei passaggi precedenti di questa esercitazione sono stati creati più modelli Time Series:  
@@ -36,7 +36,7 @@ ms.locfileid: "48206481"
  [REPLACE_MODEL_CASES](#bkmk_REPLACE)  
   
 ##  <a name="bkmk_EXTEND"></a> Confronto tra i risultati originali con risultati dopo l'aggiunta di dati  
- Si osserveranno i dati solo per la linea del prodotto M200 nell'area del Pacifico, per vedere in che modo l'aggiornamento del modello con i nuovi dati influisce sui risultati. Si tenga presente che le serie dei dati originali terminano a giugno 2004 e sono stati ottenuti nuovi dati per i mesi di luglio, agosto e settembre.  
+ Esaminiamo i dati per semplicemente la linea di prodotto M200 nell'area del Pacifico, per vedere come l'aggiornamento del modello con nuovi dati influisce sui risultati. Si tenga presente che le serie dei dati originali terminano a giugno 2004 e sono stati ottenuti nuovi dati per i mesi di luglio, agosto e settembre.  
   
 -   Nella prima colonna sono riportati i nuovi dati aggiunti.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "48206481"
  In generale l'algoritmo pondera le modifiche nei nuovi dati in modo più attendibile rispetto ai dati dall'inizio dei dati del modello. In questo caso, tuttavia, le nuove cifre di vendita rappresentano un aumento solo del 20-30% rispetto al periodo precedente, pertanto l'impatto sulle vendite stimate risulta minimo, dopo di che le proiezioni di vendita diminuiscono di nuovo, maggiormente in linea con la tendenza nei mesi prima dei nuovi dati.  
   
 ##  <a name="bkmk_REPLACE"></a> Confronto tra i risultati di stima incrociata e originali  
- Si tenga presente che il modello di data mining originale ha rivelato notevoli differenze tra le aree e tra le linee di prodotti. Ad esempio, le vendite per il modello M200 sono state particolarmente elevate, mentre quelle per il modello T1000 sono state piuttosto basse in tutte le aree. Alcune serie, inoltre, non disponevano di molti dati. Le serie erano incomplete, ovvero non disponevano dello stesso punto iniziale.  
+ Si tenga presente che il modello di data mining originale ha rivelato notevoli differenze tra le aree e tra le linee di prodotti. Ad esempio, le vendite per il modello M200 sono state particolarmente elevate, mentre quelle per il modello T1000 sono state piuttosto basse in tutte le aree. Inoltre, alcune serie contenevano pochi dati. Le serie erano incomplete, vale a dire che non hanno lo stesso punto iniziale.  
   
  ![Serie di stima delle quantità M200 e T1000](../../2014/tutorials/media/6series-defaultforecasting.gif "serie stima delle quantità M200 e T1000")  
   
@@ -70,7 +70,7 @@ ms.locfileid: "48206481"
   
  Da questo grafico è possibile osservare che il modello di data mining aggregato mantiene complessivamente l'intervallo e le tendenze dei valori riducendo però al minimo le fluttuazioni nella singola serie di dati.  
   
-## <a name="conclusion"></a>Conclusioni  
+## <a name="conclusion"></a>Conclusione  
  È stato descritto come creare e personalizzare un modello Time Series che può essere utilizzato per la stima.  
   
  Si è appreso come aggiornare i modelli Time Series senza doverli rielaborare, aggiungendo nuovi dati e creando stime con il parametro EXTEND_MODEL_CASES.  

@@ -16,12 +16,12 @@ ms.assetid: ef18ec11-b536-47d9-abd1-794099f43486
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 28ac9304ac49a210cfeafc564332828da0680dc9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2ba210106a7a4045c3dae43db3590e69a7c2c5ea
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48178821"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52515795"
 ---
 # <a name="import-and-export-packages-ssis-service"></a>Importare ed esportare pacchetti (servizio SSIS)
     
@@ -38,9 +38,9 @@ ms.locfileid: "48178821"
   
 -   Cartelle dell'archivio pacchetti SSIS. Le due cartelle predefinite sono File system e MSDB.  
   
--   Il database msdb di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+-   Il database msdb di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] offre la possibilità di importare ed esportare pacchetti e questa operazione per modificare il formato di archiviazione e la posizione dei pacchetti. Tramite le caratteristiche di importazione ed esportazione è possibile aggiungere pacchetti al file system, all'archivio pacchetti o al database msdb e copiarli quindi con un formato di archiviazione diverso. I pacchetti salvati in msdb, ad esempio, possono essere copiati nel file system e viceversa.  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] consente di importare ed esportare pacchetti. Durante queste operazioni il formato e la posizione dei pacchetti vengono modificati. Tramite le caratteristiche di importazione ed esportazione è possibile aggiungere pacchetti al file system, all'archivio pacchetti o al database msdb e copiarli quindi con un formato di archiviazione diverso. I pacchetti salvati in msdb, ad esempio, possono essere copiati nel file system e viceversa.  
   
  È inoltre possibile copiare un pacchetto in un formato diverso tramite l'utilità del prompt dei comandi **dtutil** (dtutil.exe). Per altre informazioni, vedere [dtutil Utility](dtutil-utility.md).  
   
@@ -81,27 +81,27 @@ ms.locfileid: "48178821"
   
 6.  Fare clic con il pulsante destro del mouse sulla cartella e scegliere **Importa pacchetto**, quindi effettuare una delle operazioni seguenti:  
   
-    -   Per importare il pacchetto da un'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], selezionare l'opzione **SQL Server**, specificare il server e selezionare la modalità di autenticazione. Se si seleziona l'autenticazione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], specificare un nome utente e una password.  
+    -   Per importare il pacchetto da un'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], selezionare l'opzione **SQL Server**, specificare il server e selezionare la modalità di autenticazione. Se si seleziona l'autenticazione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , specificare un nome utente e una password.  
   
-         Fare clic sul pulsante Sfoglia **(…)**, selezionare il pacchetto da importare e quindi fare clic su **OK**.  
+         Fare clic sul pulsante Sfoglia **(...)**, selezionare il pacchetto da importare e quindi fare clic su **OK**.  
   
     -   Per importare il pacchetto dal file system, selezionare l'opzione **File system** .  
   
-         Fare clic sul pulsante Sfoglia **(…)**, selezionare il pacchetto da importare e quindi fare clic su **Apri**.  
+         Fare clic sul pulsante Sfoglia **(...)**, selezionare il pacchetto da importare e quindi fare clic su **Apri**.  
   
-    -   Per importare il pacchetto dall'archivio pacchetti [!INCLUDE[ssIS](../includes/ssis-md.md)], selezionare l'opzione **Archivio pacchetti SSIS** e specificare il server.  
+    -   Per importare il pacchetto dall'archivio pacchetti [!INCLUDE[ssIS](../includes/ssis-md.md)] , selezionare l'opzione **Archivio pacchetti SSIS** e specificare il server.  
   
-         Fare clic sul pulsante Sfoglia **(…)**, selezionare il pacchetto da importare e quindi fare clic su **OK**.  
+         Fare clic sul pulsante Sfoglia **(...)**, selezionare il pacchetto da importare e quindi fare clic su **OK**.  
   
 7.  Facoltativamente, aggiornare il nome del pacchetto.  
   
-8.  Per aggiornare il livello di protezione del pacchetto, fare clic sul pulsante Sfoglia **(…)** e specificare un livello di protezione diverso usando la finestra di dialogo **Livello di protezione pacchetto** . Se l'opzione **Crittografa tutti i dati sensibili con una password** o **Crittografa tutti i dati con una password** è selezionata, digitare e confermare una password.  
+8.  Per aggiornare il livello di protezione del pacchetto, fare clic sul pulsante Sfoglia **(...)** e specificare un livello di protezione diverso usando la finestra di dialogo **Livello di protezione pacchetto**. Se l'opzione **Crittografa tutti i dati sensibili con una password** o **Crittografa tutti i dati con una password** è selezionata, digitare e confermare una password.  
   
 9. Fare clic su **OK** per completare l'importazione.  
   
 #### <a name="to-export-a-package-by-using-sql-server-management-studio"></a>Per esportare un pacchetto utilizzando SQL Server Management Studio  
   
-1.  Fare clic sul pulsante **Start**, scegliere **Microsoft** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e quindi fare clic su **SQL Server Management Studio**.  
+1.  Fare clic sul pulsante **Start**, scegliere **Microsoft** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]e quindi fare clic su **SQL Server Management Studio**.  
   
 2.  Nella finestra di dialogo **Connetti al server** impostare le opzioni seguenti:  
   
@@ -117,19 +117,19 @@ ms.locfileid: "48178821"
   
 6.  Fare clic sul pacchetto con il pulsante destro del mouse, scegliere **Esporta**e quindi eseguire una delle operazioni seguenti:  
   
-    -   Per esportare il pacchetto in un'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], selezionare l'opzione **SQL Server**, specificare il server e selezionare la modalità di autenticazione. Se si seleziona l'autenticazione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], specificare un nome utente e una password.  
+    -   Per esportare il pacchetto in un'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], selezionare l'opzione **SQL Server**, specificare il server e selezionare la modalità di autenticazione. Se si seleziona l'autenticazione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , specificare un nome utente e una password.  
   
-         Fare clic sul pulsante Sfoglia **(…)** ed espandere la cartella **Pacchetti SSIS** per individuare la cartella in cui salvare il pacchetto. Facoltativamente, aggiornare il nome predefinito del pacchetto e quindi scegliere **OK**.  
+         Fare clic sul pulsante Sfoglia **(...)** ed espandere la cartella **Pacchetti SSIS** per individuare la cartella in cui salvare il pacchetto. Facoltativamente, aggiornare il nome predefinito del pacchetto e quindi scegliere **OK**.  
   
     -   Per esportare il pacchetto nel file system, selezionare l'opzione **File system** .  
   
-         Fare clic sul pulsante Sfoglia **(…)** per individuare la cartella in cui esportare il pacchetto, digitare il nome del file del pacchetto e quindi scegliere **Salva**.  
+         Fare clic sul pulsante Sfoglia **(...)** per individuare la cartella in cui esportare il pacchetto, digitare il nome del file del pacchetto e quindi scegliere **Salva**.  
   
-    -   Per eseguire l'esportazione nell'archivio pacchetti [!INCLUDE[ssIS](../includes/ssis-md.md)], selezionare l'opzione **Archivio pacchetti SSIS** e specificare il server.  
+    -   Per eseguire l'esportazione nell'archivio pacchetti [!INCLUDE[ssIS](../includes/ssis-md.md)] , selezionare l'opzione **Archivio pacchetti SSIS** e specificare il server.  
   
-         Fare clic sul pulsante Sfoglia **(…)**, espandere la cartella **Pacchetti SSIS** e selezionare la cartella in cui salvare il pacchetto. Facoltativamente, immettere un nuovo nome per il pacchetto nella casella di testo **Nome pacchetto** . [!INCLUDE[clickOK](../includes/clickok-md.md)]  
+         Fare clic sul pulsante Sfoglia **(...)**, espandere la cartella **Pacchetti SSIS** e selezionare la cartella in cui si vuole salvare il pacchetto. Facoltativamente, immettere un nuovo nome per il pacchetto nella casella di testo **Nome pacchetto** . [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-7.  Per aggiornare il livello di protezione del pacchetto, fare clic sul pulsante Sfoglia **(…)** e specificare un livello di protezione diverso usando la finestra di dialogo **Livello di protezione pacchetto**. Se l'opzione **Crittografa tutti i dati sensibili con una password** o **Crittografa tutti i dati con una password** è selezionata, digitare e confermare una password.  
+7.  Per aggiornare il livello di protezione del pacchetto, fare clic sul pulsante Sfoglia **(...)** e specificare un livello di protezione diverso usando la finestra di dialogo **Livello di protezione pacchetto**. Se l'opzione **Crittografa tutti i dati sensibili con una password** o **Crittografa tutti i dati con una password** è selezionata, digitare e confermare una password.  
   
 8.  Scegliere **OK** per completare l'esportazione.  
   

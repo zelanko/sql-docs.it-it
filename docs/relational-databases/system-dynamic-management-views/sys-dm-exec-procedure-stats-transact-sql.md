@@ -21,19 +21,19 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9826f15be35c001f1b951f3b2a3750fa9aba925b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e472d6f8b7b18bb7e73613a8c60a27461bb49b43
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47663393"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52418685"
 ---
 # <a name="sysdmexecprocedurestats-transact-sql"></a>sys.dm_exec_procedure_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Restituisce dati statistici aggregati sulle prestazioni delle stored procedure memorizzate nella cache. La vista restituisce una riga per ogni piano di stored procedure memorizzato nella cache e la durata della riga è uguale al periodo in cui la stored procedure rimane memorizzata nella cache. Quando una stored procedure viene rimossa dalla cache, la riga corrispondente viene elimina dalla vista. A quel punto, viene generato un evento di traccia SQL di perfomance Statistics simile a **DM exec_query_stats**.  
   
- In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], le viste a gestione dinamica non possono esporre le informazioni che influenzerebbero l'indipendenza del database o le informazioni sugli altri database a cui l'utente dispone di accesso. Per evitare di esporre queste informazioni, ogni riga che contiene dati che non appartengono al tenant connesso viene esclusa tramite filtro.  
+ In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], le viste a gestione dinamica non possono esporre le informazioni che influenzerebbero l'indipendenza del database o le informazioni sugli altri database a cui l'utente dispone di accesso. Per evitare di esporre queste informazioni, ogni riga che contiene dati che non appartengono al tenant connesso viene filtrata.  
   
 > [!NOTE]
 > Una query iniziale di **DM exec_procedure_stats** potrebbe produrre risultati non accurati se è presente un carico di lavoro attualmente in esecuzione nel server. La riesecuzione della query può garantire risultati più accurati.  
@@ -41,7 +41,7 @@ ms.locfileid: "47663393"
 > [!NOTE]
 > Per chiamare questo elemento dal [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] oppure [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], usare il nome **sys.dm_pdw_nodes_exec_procedure_stats**.  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**database_id**|**int**|ID del database in cui è contenuta la stored procedure.|  
 |**object_id**|**int**|Numero di identificazione dell'oggetto della stored procedure.|  
@@ -72,10 +72,10 @@ ms.locfileid: "47663393"
 |**last_elapsed_time**|**bigint**|Il tempo trascorso, stored procedure di in microsecondi, per l'esecuzione di questo completati più di recente.|  
 |**min_elapsed_time**|**bigint**|Il tempo trascorso minimo, nella microsecondi, per qualsiasi esecuzione completa di questa stored procedure.|  
 |**max_elapsed_time**|**bigint**|Il tempo massimo trascorso, nella microsecondi, per qualsiasi esecuzione completa di questa stored procedure.|  
-|**total_spills**|**bigint**|Il numero totale di pagine stati inseriti vuoti dall'esecuzione di questa stored procedure dopo l'ultima compilazione.<br /><br /> **Si applica a**: a partire da [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
-|**last_spills**|**bigint**|Il numero di pagine di stati inseriti vuoti l'ultima volta che è stata eseguita la stored procedure.<br /><br /> **Si applica a**: a partire da [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
-|**min_spills**|**bigint**|Il numero minimo di pagine che questa stored procedure ha mai risultante da un'unica esecuzione.<br /><br /> **Si applica a**: a partire da [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
-|**max_spills**|**bigint**|Il numero massimo di pagine che questa stored procedure ha mai risultante da un'unica esecuzione.<br /><br /> **Si applica a**: a partire da [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
+|**total_spills**|**bigint**|Il numero totale di pagine stati inseriti vuoti dall'esecuzione di questa stored procedure dopo l'ultima compilazione.<br /><br /> **Si applica a**: A partire da [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
+|**last_spills**|**bigint**|Il numero di pagine di stati inseriti vuoti l'ultima volta che è stata eseguita la stored procedure.<br /><br /> **Si applica a**: A partire da [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
+|**min_spills**|**bigint**|Il numero minimo di pagine che questa stored procedure ha mai risultante da un'unica esecuzione.<br /><br /> **Si applica a**: A partire da [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
+|**max_spills**|**bigint**|Il numero massimo di pagine che questa stored procedure ha mai risultante da un'unica esecuzione.<br /><br /> **Si applica a**: A partire da [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
 |**pdw_node_id**|**int**|L'identificatore per il nodo in questa distribuzione.<br /><br />**Si applica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]|  
   
  <sup>1</sup> per le stored procedure compilate in modo nativo quando la raccolta delle statistiche è abilitata, tempo del processo viene raccolto in millisecondi. Se la query viene eseguita in meno di un millisecondo, il valore sarà 0.  

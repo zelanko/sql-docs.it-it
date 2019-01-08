@@ -14,12 +14,12 @@ ms.assetid: 3e59a37a-28ee-4c91-8968-7fe3b966739d
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8f3c06bbb9a8390b6ec41aa3e2233feeb10b8ce5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6a92b3a9491b8424fb9015fc4d30875fedb38758
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48187761"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53353003"
 ---
 # <a name="sqlgetdescfield"></a>SQLGetDescField
   Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC Native Client espone campi di descrizione specifici del driver per il descrittore riga di implementazione (IRD) solo. Nell'IRD [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] i campi di descrizione vengono fatto riferimento tramite attributi di colonna specifici del driver. Per informazioni su un elenco completo dei campi di descrizione specifici del driver disponibili, vedere [SQLColAttribute](sqlcolattribute.md).  
@@ -152,7 +152,7 @@ if (SQLMoreResults(g_hStmt) == SQL_SUCCESS)
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Funzione SQLGetDescField](http://go.microsoft.com/fwlink/?LinkId=59351)   
+ [Funzione SQLGetDescField](https://go.microsoft.com/fwlink/?LinkId=59351)   
  [Dettagli di implementazione dell'API ODBC](odbc-api-implementation-details.md)  
   
   

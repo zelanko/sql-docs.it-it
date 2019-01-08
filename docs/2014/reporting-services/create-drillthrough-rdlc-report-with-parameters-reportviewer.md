@@ -11,20 +11,20 @@ ms.assetid: 628c8775-c62d-45ac-b349-23db86fa4e6c
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 3618f3bef198a4ad92f8fd92f48911ee0c935c13
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f04a797540abdde31411978ca05b776ee7693bd5
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48106881"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53352076"
 ---
 # <a name="create-a-drillthrough-rdlc-report-with-parameters-using-reportviewer-ssrs-tutorial"></a>Creare un report drill-through (RDLC) con parametri utilizzando ReportViewer (esercitazione su SSRS)
-  Un report [drill-through](http://technet.microsoft.com/library/ff519554.aspx) è un report aperto da un utente facendo clic su un collegamento in un altro report. Nei report drill-through sono solitamente disponibili dettagli relativi a un elemento contenuto in un report di riepilogo originale. In questa esercitazione verranno illustrate le seguenti lezioni sulla creazione di un report drill-through con parametri e una query, in [report in modalità locale](local-vs-connected-mode-report-viewer-reporting-services-sharepoint-mode.md).  
+  Un report [drill-through](https://technet.microsoft.com/library/ff519554.aspx) è un report aperto da un utente facendo clic su un collegamento in un altro report. Nei report drill-through sono solitamente disponibili dettagli relativi a un elemento contenuto in un report di riepilogo originale. In questa esercitazione verranno illustrati le seguenti lezioni sulla creazione di un report drill-through con parametri e una query, in [report in modalità locale](local-vs-connected-mode-report-viewer-reporting-services-sharepoint-mode.md).  
   
 ## <a name="requirements"></a>Requisiti  
- Per utilizzare questa procedura dettagliata, è necessario poter accedere al database di esempio **AdventureWorks2008** . La query utilizzata in questa procedura dettagliata verrà utilizzata anche per il database **AdventureWorks2012** . Per altre informazioni su come ottenere il database di esempio **AdventureWorks2008** , vedere [Procedura dettagliata: installazione del database AdventureWorks](http://msdn.microsoft.com/library/aa992075\(v=vs.100\).aspx) per Microsoft Visual Studio 2010.  
+ Per utilizzare questa procedura dettagliata, è necessario poter accedere al database di esempio **AdventureWorks2008** . La query utilizzata in questa procedura dettagliata verrà utilizzata anche per il database **AdventureWorks2012** . Per altre informazioni su come ottenere il **AdventureWorks2008** database di esempio, vedere [procedura dettagliata: Installazione del Database AdventureWorks](https://msdn.microsoft.com/library/aa992075\(v=vs.100\).aspx) per Microsoft Visual Studio 2010.  
   
- In questa procedura dettagliata si presuppone che l'utente abbia familiarità con le query Transaction-SQL e gli oggetti [DataSet](http://msdn.microsoft.com/library/system.data.dataset\(v=vs.100\).aspx) e [DataTable](http://msdn.microsoft.com/library/system.data.datatable\(v=vs.100\).aspx) di ADO.NET.  
+ Questa procedura dettagliata presuppone che l'utente abbia familiarità con le query Transaction-SQL e gli oggetti [DataSet](https://msdn.microsoft.com/library/system.data.dataset\(v=vs.100\).aspx) e [DataTable](https://msdn.microsoft.com/library/system.data.datatable\(v=vs.100\).aspx) di ADO.NET.  
   
  Utilizzare Visual Studio 2010 o Visual Studio 2012 e il modello di sito Web ASP.NET per creare una pagina Web ASP.NET con un controllo ReportViewer. Il controllo è configurato per visualizzare un report che viene creato. Per questa procedura dettagliata viene creata l'applicazione in Microsoft Visual C#.  
   
@@ -36,7 +36,7 @@ ms.locfileid: "48106881"
  [Lezione 5: Progettare il Report figlio tramite la creazione guidata Report](../reporting-services/lesson-5-design-the-child-report-using-the-report-wizard.md)   
  [Lezione 6: Aggiungere un controllo ReportViewer all'applicazione](../reporting-services/lesson-6-add-a-reportviewer-control-to-the-application.md)   
  [Lezione 7: Aggiungere l'azione drill-through nel Report padre](../reporting-services/lesson-7-add-drillthrough-action-on-parent-report.md)   
- [Lezione 8: Creare un filtro di dati](../reporting-services/lesson-8-create-a-data-filter.md)   
+ [Lezione 8: Creare un filtro dei dati](../reporting-services/lesson-8-create-a-data-filter.md)   
  [Lezione 9: Compilare ed eseguire l'applicazione](../reporting-services/lesson-9-build-and-run-the-application.md)  
   
 ## <a name="see-also"></a>Vedere anche  

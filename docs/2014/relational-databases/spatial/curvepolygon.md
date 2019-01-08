@@ -9,18 +9,18 @@ ms.assetid: e000a1d8-a049-4542-bfeb-943fd6ab3969
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7783517c21317c8d0a162b869f7d57329d89b15c
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: 435786ca85904cc2164ae2a3983163265465d9d1
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018926"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53350568"
 ---
 # <a name="curvepolygon"></a>CurvePolygon
   Un'istanza `CurvePolygon` è una superficie topologicamente chiusa definita da un anello di delimitazione esterno e nessuno o più anelli interni  
   
 > [!IMPORTANT]  
->  Per una descrizione dettagliata ed esempi delle funzionalità spaziali introdotte in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], tra cui la `CurvePolygon` sottotipo, scaricare il white paper [nuove funzionalità spaziali in SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=226407).  
+>  Per una descrizione dettagliata ed esempi delle funzionalità spaziali introdotte in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], tra cui la `CurvePolygon` sottotipo, scaricare il white paper [nuove funzionalità spaziali in SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=226407).  
   
  I criteri seguenti vengono definiti attributi di un `CurvePolygon` istanza:  
   
@@ -130,7 +130,7 @@ DECLARE @g geometry;
 SET @g = geometry::Parse('CURVEPOLYGON EMPTY');  
 ```  
   
-### <a name="b-declaring-and-instantiating-a-geometry-instance-with-a-curvepolygon-in-the-same-statement"></a>B. Dichiarazione e creazione di un'istanza Geometry utilizzando un'istanza CurvePolygon nella stessa istruzione  
+### <a name="b-declaring-and-instantiating-a-geometry-instance-with-a-curvepolygon-in-the-same-statement"></a>b. Dichiarazione e creazione di un'istanza Geometry utilizzando un'istanza CurvePolygon nella stessa istruzione  
  In questo frammento di codice viene illustrato come dichiarare e inizializzare un'istanza geometry con un'istanza `CurvePolygon` nella stessa istruzione:  
   
 ```tsql  

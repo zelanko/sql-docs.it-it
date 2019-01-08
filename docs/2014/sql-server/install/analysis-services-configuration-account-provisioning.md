@@ -14,12 +14,12 @@ ms.assetid: 169b1af2-6fe2-467f-8ca4-919f24c620ce
 author: heidisteen
 ms.author: heidist
 manager: craigg
-ms.openlocfilehash: e18073ff783ae8925424551dd62f570e9b2eea6c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 095709115c15e770b8ad54678d4a359ab4b04ac8
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48105821"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53351826"
 ---
 # <a name="analysis-services-configuration---account-provisioning"></a>Configurazione di Analysis Services - Provisioning account
   Utilizzare questa pagina per impostare la modalità server e per concedere le autorizzazioni amministrative a utenti o servizi che richiedono l'accesso illimitato ad [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Durante l'installazione non viene aggiunto automaticamente il gruppo locale BUILTIN\Administrators di Windows al ruolo di amministratore del server [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dell'istanza che viene installata. Se si desidera aggiungere il gruppo Administrators locale al ruolo di amministratore del server, è necessario specificare in modo esplicito tale gruppo.  
@@ -32,7 +32,7 @@ ms.locfileid: "48105821"
  **Specifica amministratori**: è necessario specificare almeno un amministratore del server per l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Gli utenti o i gruppi specificati diventeranno membri del ruolo di amministratore del server dell'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] che viene installata e devono essere account utente di dominio Windows nello stesso dominio del computer in cui viene installato il software.  
   
 > [!NOTE]  
->  Controllo account utente è una caratteristica di sicurezza di Windows che richiede a un amministratore di approvare in modo specifico azioni o applicazioni amministrative prima di poterle eseguire. Poiché Controllo account utente è attivato per impostazione predefinita, verrà richiesto di consentire operazioni specifiche che necessitano di privilegi elevati. È possibile configurare Controllo account utente per modificare il comportamento predefinito oppure è possibile personalizzarlo per programmi specifici. Per altre informazioni sul controllo dell'account utente e sulla relativa configurazione, vedere [User Account Control Step by Step Guide](http://go.microsoft.com/fwlink/?linkid=196350) (Guida dettagliata sul controllo dell'account utente in Windows) e [User Account Control (Wikipedia)](http://go.microsoft.com/fwlink/?linkid=196351).  
+>  Controllo account utente è una caratteristica di sicurezza di Windows che richiede a un amministratore di approvare in modo specifico azioni o applicazioni amministrative prima di poterle eseguire. Poiché Controllo account utente è attivato per impostazione predefinita, verrà richiesto di consentire operazioni specifiche che necessitano di privilegi elevati. È possibile configurare Controllo account utente per modificare il comportamento predefinito oppure è possibile personalizzarlo per programmi specifici. Per altre informazioni sul controllo dell'account utente e sulla relativa configurazione, vedere [User Account Control Step by Step Guide](https://go.microsoft.com/fwlink/?linkid=196350) (Guida dettagliata sul controllo dell'account utente in Windows) e [User Account Control (Wikipedia)](https://go.microsoft.com/fwlink/?linkid=196351).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Configurare gli account del servizio &#40;Analysis Services&#41;](../../../2014/analysis-services/instances/configure-service-accounts-analysis-services.md)   

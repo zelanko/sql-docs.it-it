@@ -7,20 +7,18 @@ ms.reviewer: ''
 ms.technology:
 - database-engine
 ms.topic: conceptual
-f1_keywords:
-- vs.debug.breakpt.condition
 helpviewer_keywords:
 - Transact-SQL debugger, breakpoint conditions
 ms.assetid: b43d8a2b-99a3-4fb7-8848-99c042ea7ef7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c20dc45263b28225943e867ddafa8428593d92d3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b70305d832c06388bc5977cdbcc560c3c8be8860
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48050572"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53327631"
 ---
 # <a name="specify-a-breakpoint-condition"></a>Impostare una condizione del punto di interruzione
   Una condizione per il punto di interruzione è un'espressione [!INCLUDE[tsql](../../includes/tsql-md.md)] valutata dal debugger quando viene raggiunto il punto di interruzione. Se la condizione viene soddisfatta e viene raggiunto un numero di passaggi specificato, il debugger interrompe o esegue l'azione specificata per il punto di interruzione.  
@@ -47,6 +45,4 @@ ms.locfileid: "48050572"
   
 ## <a name="see-also"></a>Vedere anche  
  [Specifica di un numero di passaggi](specify-a-hit-count.md)   
- [Specificare un'azione del punto di interruzione](specify-a-breakpoint-action.md)  
-  
-  
+ [Impostazione di un'azione del punto di interruzione](specify-a-breakpoint-action.md)  

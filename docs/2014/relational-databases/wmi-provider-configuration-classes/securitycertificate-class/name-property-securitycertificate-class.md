@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: wmi
 ms.topic: reference
 api_name:
 - Name Property (SecurityCertificate Class)
@@ -20,12 +18,12 @@ ms.assetid: 797f338f-4d2d-4171-acad-6cc997a7a6c8
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 201011749363965fedcf27c4f30a41bf24da7132
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 09886571f98fcb36218c0dcb7a40e06b6b34b34e
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48148181"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53350045"
 ---
 # <a name="name-property-securitycertificate-class"></a>Proprietà Name (classe SecurityCertificate)
   Ottiene il nome del certificato di sicurezza.  
@@ -48,6 +46,6 @@ object
 ## <a name="remarks"></a>Note  
   
 ## <a name="see-also"></a>Vedere anche  
- [Configurazione di protocolli di rete Server e le librerie di rete](http://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+ [Configurazione di protocolli di rete Server e le librerie di rete](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

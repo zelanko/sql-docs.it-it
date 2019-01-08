@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - replication [SQL Server], schema changes
@@ -18,12 +17,12 @@ ms.assetid: 926c88d7-a844-402f-bcb9-db49e5013b69
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: cd2ea10d145e52150d3a34a8f1b668152922ddb0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 65436da64ca7c718de053dab520edad71dac6228
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48203031"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52815433"
 ---
 # <a name="make-schema-changes-on-publication-databases"></a>Modifiche allo schema nei database di pubblicazione
   La replica supporta una vasta gamma di modifiche dello schema negli oggetti pubblicati. Quando si apporta una delle modifiche di schema seguenti nell'oggetto pubblicato appropriato in un server di pubblicazione [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , la modifica viene propagata per impostazione predefinita a tutti i Sottoscrittori [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] :  
@@ -58,7 +57,7 @@ ms.locfileid: "48203031"
   
 -   Le modifiche dello schema sono soggette a tutte le restrizioni imposte da [!INCLUDE[tsql](../../../includes/tsql-md.md)]. ALTER TABLE, ad esempio, non consente di eseguire l'istruzione ALTER per le colonne chiave primaria.  
   
--   Il mapping dei tipi di dati viene eseguito solo per lo snapshot iniziale. Il mapping delle modifiche dello schema alle versioni precedenti dei tipi di dati non viene eseguito. Ad esempio, se l'istruzione `ALTER TABLE ADD datetime2 column` viene utilizzata [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], il tipo di dati non viene convertito in `nvarchar` per [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] sottoscrittori. In alcuni casi, le modifiche dello schema vengono bloccate nel server di pubblicazione.  
+-   Il mapping dei tipi di dati viene eseguito solo per lo snapshot iniziale. Il mapping delle modifiche dello schema alle versioni precedenti dei tipi di dati non viene eseguito. Se ad esempio viene utilizzata l'istruzione `ALTER TABLE ADD datetime2 column` in [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], il tipo di dati non viene convertito in `nvarchar` per i Sottoscrittori di [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]. In alcuni casi, le modifiche dello schema vengono bloccate nel server di pubblicazione.  
   
 -   Se si imposta una pubblicazione in modo da consentire la propagazione delle modifiche dello schema, queste ultime vengono propagate indipendentemente da come è impostata la relativa opzione dello schema per un articolo nella pubblicazione. Se, ad esempio, si sceglie di non replicare i vincoli di chiave esterna per un articolo di tabella, ma in seguito si esegue un comando ALTER TABLE che aggiunge una chiave esterna alla tabella nel server di pubblicazione, la chiave esterna viene aggiunta alla tabella nel Sottoscrittore. Per evitare questo problema, disabilitare la propagazione delle modifiche dello schema prima di eseguire il comando ALTER TABLE.  
   
@@ -106,7 +105,7 @@ ms.locfileid: "48203031"
   
 -   La colonna da eliminare non può essere utilizzata nelle clausole di filtro degli articoli contenuti nelle pubblicazioni del database.  
   
--   Quando si elimina una colonna da un articolo pubblicato, considerare eventuali vincoli, indici o proprietà della colonna che potrebbero avere conseguenze sul database. Esempio:  
+-   Quando si elimina una colonna da un articolo pubblicato, considerare eventuali vincoli, indici o proprietà della colonna che potrebbero avere conseguenze sul database. Ad esempio:  
   
     -   Non è possibile eliminare le colonne utilizzate in una chiave primaria dagli articoli nelle pubblicazioni transazionali, in quanto vengono utilizzate dalla replica.  
   

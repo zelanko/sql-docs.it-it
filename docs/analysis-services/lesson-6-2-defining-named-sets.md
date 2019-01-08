@@ -1,5 +1,5 @@
 ---
-title: Definizione dei set denominati | Documenti Microsoft
+title: Definizione dei set denominati | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 705c263d425985d23c823eee9cdd550b5a44db1f
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 19bdb9c165b5bfa6c8021fe596d9591e68d517ce
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018228"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507657"
 ---
-# <a name="lesson-6-2---defining-named-sets"></a>Lezione 6-2 - definizione di set denominati
+# <a name="lesson-6-2---defining-named-sets"></a>Lezione 6-2: definizione di set denominati
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
 Un set denominato è un'espressione MDX (Multidimensional Expressions) che restituisce un set di membri della dimensione. È possibile definire set denominati e salvarli come parte della definizione del cubo, nonché creare set denominati in applicazioni client. I set denominati possono essere creati combinando dati del cubo, operatori aritmetici, numeri e funzioni. I set denominati possono essere utilizzati dagli utenti nelle query MDX in applicazioni client, nonché per definire set nei sottocubi. Un sottocubo è una raccolta di set di crossjoin che limita lo spazio del cubo nel sottospazio definito per istruzioni successive. La definizione di uno spazio del cubo limitato costituisce un concetto fondamentale dello scripting MDX.  
@@ -68,7 +68,7 @@ Nelle procedure descritte in questo argomento si definiranno due set denominati:
     Exists([Reseller].[Reseller Name].[Reseller Name].Members)  
     ```  
   
-    Ora che è stato definito il primo set per l'espressione set Exists è possibile aggiungere il secondo set, ovvero il set di membri della dimensione Reseller contenente il maggior numero di dipendenti.  
+    Ora che è stato definito il primo set per il metodo Exists espressione set, è possibile aggiungere il secondo set, il set di membri della dimensione Reseller contenente il maggior numero di dipendenti.  
   
 7.  Nella scheda **Metadati** del riquadro **Strumenti di calcolo** , espandere **Number of Employees** nella dimensione Reseller, espandere **Members**e quindi espandere **All Resellers**.  
   
@@ -78,7 +78,7 @@ Nelle procedure descritte in questo argomento si definiranno due set denominati:
   
 9. Nella finestra Proprietà modificare la proprietà **DiscretizationMethod** in **Automatic**, quindi modificare la proprietà **DiscretizationBucketCount** in **5**. Per altre informazioni, vedere [Raggruppare membri di attributo &#40;discretizzazione&#41;](../analysis-services/multidimensional-models/attribute-properties-group-attribute-members.md).  
   
-10. Nel menu **Compila** di [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], scegliere **Distribuisci Analysis Services Tutorial**.  
+10. Scegliere **Distribuisci Analysis Services Tutorial** dal menu [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]Compila **di**.  
   
 11. Dopo aver completato la distribuzione, passare a Progettazione cubi per il cubo di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial e fare clic su **Riconnetti** nella barra degli strumenti della scheda **Calcoli** .  
   
@@ -94,7 +94,7 @@ Nelle procedure descritte in questo argomento si definiranno due set denominati:
   
     Nella figura seguente viene illustrato il riquadro **Espressione** per il set denominato **[Large Resellers]** .  
   
-    ![Nel riquadro espressioni di calcolo per [Large Resellers]](../analysis-services/media/l6-named-set-02.gif "riquadro espressioni di calcolo per [Large Resellers]")  
+    ![Riquadro espressioni di calcolo per [Large Resellers]](../analysis-services/media/l6-named-set-02.gif "riquadro espressioni di calcolo per [Large Resellers]")  
   
 14. Nella barra degli strumenti della scheda **Calcoli** fare clic su **Visualizzazione Script**e quindi controllare i due set denominati appena aggiunti allo script di calcolo.  
   
@@ -124,16 +124,16 @@ Nelle procedure descritte in questo argomento si definiranno due set denominati:
   
     Si noti che nel cubo restano solo il membro **Bike** dell'attributo **Category** e i membri delle sottocategorie **Bike** , poiché il set denominato **Core Products** viene usato per definire un sottocubo. Questo sottocubo limita i membri dell'attributo **Category** nella dimensione **Product** all'interno del sottocubo ai membri del set denominato **Core Product** , come illustrato nella figura seguente.  
   
-    ![Set di membri del prodotto principale denominato](../analysis-services/media/l6-named-set-04.gif "set denominato di membri del prodotto principale")  
+    ![Set denominato di membri del prodotto principale](../analysis-services/media/l6-named-set-04.gif "set denominato di membri del prodotto principale")  
   
 7.  Nel riquadro **Metadati** espandere **Reseller**, quindi aggiungere **Large Resellers** all'area filtro.  
   
     Si noti che la misura Reseller Sales Amount nel riquadro Dati visualizza solo gli importi di vendita per rivenditori di bici di grandi dimensioni. Si noti inoltre che ora il riquadro Filtro visualizza i due set denominati utilizzati per definire questo sottocubo specifico, come illustrato nella figura seguente.  
   
-    ![Riquadro filtro contenente due denominato imposta](../analysis-services/media/l6-named-set-05.gif "riquadro filtro contenente due denominato imposta")  
+    ![Riquadro filtro contenente due denominato imposta](../analysis-services/media/l6-named-set-05.gif "imposta riquadro filtro contenente due denominato")  
   
 ## <a name="next-lesson"></a>Lezione successiva  
-[Lezione 7: Definizione di indicatori di prestazioni chiave & #40; Gli indicatori KPI & #41;](../analysis-services/lesson-7-defining-key-performance-indicators-kpis.md)  
+[Lezione 7: Definizione degli indicatori di prestazioni chiave &#40;indicatori KPI&#41;](../analysis-services/lesson-7-defining-key-performance-indicators-kpis.md)  
   
 ## <a name="see-also"></a>Vedere anche  
 [Calcoli](../analysis-services/multidimensional-models-olap-logical-cube-objects/calculations.md)  

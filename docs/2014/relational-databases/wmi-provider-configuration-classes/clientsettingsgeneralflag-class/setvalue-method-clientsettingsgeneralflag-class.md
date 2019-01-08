@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: wmi
 ms.topic: reference
 api_name:
 - SetValue Method (ClientSettingsGeneralFlag Class)
@@ -20,12 +18,12 @@ ms.assetid: 34443689-a0e0-4668-a811-17532c6fd271
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 708d87e93556e05cde2f122ecf07c7982f1b4360
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7e96139ac789e4ded8453e2c26d1cd436fed6d7b
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48080931"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53352434"
 ---
 # <a name="setvalue-method-clientsettingsgeneralflag-class"></a>Metodo SetValue (classe ClientSettingsGeneralFlag)
   Imposta tutti i valori del flag a cui si fa riferimento.  
@@ -47,7 +45,7 @@ Value
   
 #### <a name="parameters"></a>Parametri  
   
-|Parametro|Description|  
+|Parametro|Descrizione|  
 |---------------|-----------------|  
 |*Valore*|Valore booleano che specifica il valore del flag.|  
   
@@ -57,6 +55,6 @@ Value
 ## <a name="remarks"></a>Note  
   
 ## <a name="see-also"></a>Vedere anche  
- [Configurazione di protocolli client](http://technet.microsoft.com/library/ms181035.aspx)  
+ [Configurazione di protocolli client](https://technet.microsoft.com/library/ms181035.aspx)  
   
   

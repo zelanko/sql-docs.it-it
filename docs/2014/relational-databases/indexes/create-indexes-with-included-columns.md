@@ -20,12 +20,12 @@ ms.assetid: d198648d-fea5-416d-9f30-f9d4aebbf4ec
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c2168e339fb6485035a2a1249dbf109a1560889a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1a593812709e62a02645cdd0ce1ee2fa53461b4d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48168812"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52540840"
 ---
 # <a name="create-indexes-with-included-columns"></a>Creare indici con colonne incluse
   In questo argomento si illustra come aggiungere colonne incluse (o non chiave) per estendere la funzionalità di indici non cluster in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Con l'inclusione di colonne non chiave è possibile creare indici non cluster in grado di coprire più query. Ciò è possibile perché le colonne non chiave presentano i vantaggi seguenti:  
@@ -47,7 +47,7 @@ ms.locfileid: "48168812"
   
      [Limitazioni e restrizioni](#Restrictions)  
   
-     [Security](#Security)  
+     [Sicurezza](#Security)  
   
 -   **Per creare un indice con colonne non chiave utilizzando:**  
   
@@ -67,7 +67,7 @@ ms.locfileid: "48168812"
   
 -   Le colonne non chiave possono essere definite solo negli indici non cluster.  
   
--   Tutti i tipi di dati eccetto `text`, `ntext`, e `image` possono essere utilizzati come colonne non chiave.  
+-   È possibile utilizzare come colonne non chiave tutti i tipi di dati eccetto `text`, `ntext` e `image`.  
   
 -   Le colonne calcolate deterministiche, precise o imprecise, possono essere colonne non chiave. Per altre informazioni, vedere [Indici per le colonne calcolate](indexes-on-computed-columns.md).  
   
@@ -79,7 +79,7 @@ ms.locfileid: "48168812"
   
     -   Modifica del supporto di valori NULL della colonna da NOT NULL a NULL.  
   
-    -   Aumento della lunghezza di `varchar`, `nvarchar`, o `varbinary` colonne.  
+    -   Aumento della lunghezza di colonne `varchar`, `nvarchar` o `varbinary`.  
   
 ###  <a name="Security"></a> Sicurezza  
   
@@ -96,7 +96,7 @@ ms.locfileid: "48168812"
   
 3.  Fare clic sul segno più per espandere la tabella in cui si desidera creare un indice con colonne non chiave.  
   
-4.  Fare clic con il pulsante destro del mouse sulla cartella **Indici** , scegliere **Nuovo indice**e selezionare **Indice non cluster**.  
+4.  Fare clic con il pulsante destro del mouse sulla cartella **Indici**, scegliere **Nuovo indice**e selezionare **Indice non cluster**.  
   
 5.  Nella pagina **Generale** della finestra di dialogo **Nuovo indice** immettere il nome del nuovo indice nella casella **Nome indice** .  
   
@@ -114,7 +114,7 @@ ms.locfileid: "48168812"
   
 12. Nella finestra di dialogo **Nuovo indice** fare clic su **OK**.  
   
-##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
   
 #### <a name="to-create-an-index-with-nonkey-columns"></a>Per creare un indice con colonne non chiave  
   

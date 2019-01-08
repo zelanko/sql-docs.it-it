@@ -11,15 +11,15 @@ ms.assetid: f934c51d-01fe-4e67-971d-cd87d7d7ee51
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 62a5d85272aae56b7f54b780b863642b5ddac6d0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 133f5db597dfd56464678c52273e576e3493f172
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48102111"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53210870"
 ---
 # <a name="powerpivot-configuration-tools"></a>PowerPivot Configuration Tools
-  Configurare, ripristinare o rimuovere un [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] con gli strumenti di configurazione PowerPivot.  
+  Configurare, ripristinare o rimuovere [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] con gli strumenti di configurazione PowerPivot.  
   
  L'Installazione guidata [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] consente di installare lo strumento di configurazione [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per SharePoint 2010 e lo strumento di configurazione [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per SharePoint 2013. In questo argomento viene descritto l'utilizzo generale dei due strumenti e le relative differenze.  
   
@@ -41,12 +41,12 @@ ms.locfileid: "48102111"
   
 -   È necessario essere un amministratore del server nell'istanza di Analysis Services (solo SharePoint 2010).  
   
--   È necessario essere membro del ruolo db_owner nel database di configurazione della farm.  
+-   È necessario essere db_owner nel database di configurazione della farm.  
   
 -   Non esistono requisiti della porta TCP/IP per l'utilizzo degli strumenti di configurazione, pertanto non dovrebbe essere necessario configurare il firewall per poterli utilizzare. Nello strumento di configurazione è previsto che le applicazioni Web e i servizi condivisi siano disponibili come parte della piattaforma SharePoint. Potrebbe essere necessario configurare il firewall per il server [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Per altre informazioni, vedere [Configure the Windows Firewall to Allow Analysis Services Access](../instances/configure-the-windows-firewall-to-allow-analysis-services-access.md).  
   
 ##  <a name="bkmk_twoversions"></a> Due versioni dello strumento di configurazione  
- Il [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] installazione guidata installa lo strumento di configurazione PowerPivot per SharePoint 2010 e uno strumento di configurazione PowerPivot per SharePoint 2013.  
+ Con l'installazione guidata [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] vengono installati lo strumento di configurazione PowerPivot per SharePoint 2010 e quello per SharePoint 2013.  
   
  Gli strumenti possono essere utilizzati solo con un'istanza di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] o [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] di [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]. Non utilizzarli con installazioni di [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] .  
   
@@ -82,9 +82,9 @@ ms.locfileid: "48102111"
   
 -   [Informazioni di riferimento di PowerShell per PowerPivot per SharePoint](/sql/analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint)  
   
-> [!NOTE]  
+> [!NOTE]
 >  Reporting Services non viene configurato tramite lo strumento. Se si aggiunge Reporting Services all'ambiente di SharePoint, è necessario installarlo e configurarlo separatamente. Per ulteriori informazioni, vedere quanto segue:  
->   
+> 
 >  -   [Installare Reporting Services SharePoint Mode for SharePoint 2013](../../sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2013.md).  
 > -   [Installare la modalità SharePoint di Reporting Services per SharePoint 2010](../../sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md).  
   
@@ -102,7 +102,7 @@ ms.locfileid: "48102111"
   
      ![Due strumenti di configurazione PowerPivot](../media/as-powerpivot-configtools-bothicons.gif "Due strumenti di configurazione PowerPivot")  
   
-     **Nota** : gli strumenti sono disponibili solo se [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] è installato nel server locale.  
+     **Nota:** Gli strumenti sono disponibili solo se [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] è installato nel server locale.  
   
 2.  All'avvio, gli strumenti di configurazione controllano lo stato dell'installazione e rendono disponibili le attività valide per l'installazione.  
   
@@ -123,9 +123,9 @@ ms.locfileid: "48102111"
  Quando si fa clic su Esegui, lo strumento elabora tutte le azioni in modalità batch. Benché ogni azione sia visualizzata come elemento separato nell'elenco attività, tutte le azioni sono incluse insieme nel processo dell'attività. Vengono elaborate solo le azioni che superano un controllo di convalida. Potrebbe essere necessario aggiungere o modificare alcuni dei valori di input per superare il controllo di convalida.  
   
 ## <a name="related-content"></a>Contenuto correlato  
- [Aggiornare PowerPivot per SharePoint](../../database-engine/install-windows/upgrade-power-pivot-for-sharepoint.md) descrive il flusso di lavoro che aggiorna un'installazione esistente che è già in una farm.  
+ [Upgrade PowerPivot for SharePoint](../../database-engine/install-windows/upgrade-power-pivot-for-sharepoint.md) Viene descritto il flusso di lavoro che aggiorna un'installazione esistente già presente in una farm.  
   
- [Disinstallare PowerPivot per SharePoint](../../sql-server/install/uninstall-power-pivot-for-sharepoint.md) descrive il flusso di lavoro che rimuove PowerPivot per i servizi, soluzioni e pagine dell'applicazione da una farm di SharePoint.  
+ [Uninstall PowerPivot for SharePoint](../../sql-server/install/uninstall-power-pivot-for-sharepoint.md) Viene descritto il flusso di lavoro che rimuove servizi, soluzioni e pagine di applicazioni di PowerPivot per SharePoint da una farm.  
   
  [Configurazione di PowerPivot tramite Windows PowerShell](power-pivot-configuration-using-windows-powershell.md)  
   

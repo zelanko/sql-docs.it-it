@@ -14,12 +14,12 @@ ms.assetid: 556c7dfe-7bc8-4cab-a36f-2b753a05d3f1
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1368cc570439259b7353f074ba1ecfe2744f006d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c109b96192112a914b06748654c5a7e1510569e0
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48060811"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52541833"
 ---
 # <a name="code-outlining"></a>Struttura del codice
   La modalità struttura negli editor di query di [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] consente di nascondere in modo selettivo il codice quando si modificano query. In questo modo è possibile visualizzare più facilmente il codice utilizzato, soprattutto in file di query di dimensioni elevate.  
@@ -41,7 +41,7 @@ ms.locfileid: "48060811"
   
  ![Codice XML con il nodo interno nascosto](../../database-engine/media/editoutlinexmlinnercol.gif "Codice XML con il nodo interno nascosto")  
   
- Quando si sposta il puntatore sulla casella in cui sono presenti i tre punti (…), il codice contenuto nell'area compressa viene visualizzato in una descrizione di comando, come illustrato nella figura seguente.  
+ Quando si sposta il puntatore sulla casella in cui sono presenti i tre punti (...), il codice contenuto nell'area compressa viene visualizzato in una descrizione di comando, come illustrato nella figura seguente.  
   
  ![Codice XML con una descrizione comando che mostra il codice nascosto](../../database-engine/media/editoutlinexmlmouse.gif "Codice XML con una descrizione comando che mostra il codice nascosto")  
   

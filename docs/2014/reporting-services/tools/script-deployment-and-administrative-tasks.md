@@ -23,12 +23,12 @@ ms.assetid: d0416c9e-e3f9-456d-9870-2cfd2c49039b
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 6bf10f8ef0b748582aeef2e790207dcb287d3bdc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 01d506f8db09b8bc30b5587d6d98ecec793adab9
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48167283"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52398874"
 ---
 # <a name="script-deployment-and-administrative-tasks"></a>Utilizzare script per l'esecuzione di attività di distribuzione e di amministrazione
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] supporta l'uso di script per automatizzare installazioni di routine, distribuzioni e attività amministrative. La distribuzione di un server di report è un processo costituito da più passaggi. Per configurare una distribuzione è necessario utilizzare diversi strumenti e processi, in quanto non è disponibile un unico programma o approccio che consenta di automatizzare tutte le attività.  
@@ -70,7 +70,7 @@ ms.locfileid: "48167283"
   
 -   Lo strumento host di scripting del server di report (rs.exe) consente di eseguire codice [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] scritto per ricreare contenuti esistenti o spostarli da un server di report a un altro. Per usare questo approccio, scrivere lo script in [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)], salvarlo come file con estensione rss e quindi usare l'utilità rs.exe per eseguire lo script nel server di report di destinazione. Lo script creato può chiamare l'interfaccia SOAP per il servizio Web ReportServer. Gli script di distribuzione vengono creati utilizzando questo approccio poiché consente di ricreare i contenuti e lo spazio dei nomi della cartella del server di report, nonché la sicurezza basata sui ruoli.  
   
--   Nella versione [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] sono stati introdotti i cmdlet di PowerShell per la modalità integrata SharePoint. È possibile utilizzare PowerShell per configurare e amministrare l'integrazione con SharePoint.  Per altre informazioni, vedere [cmdlet di PowerShell per Reporting Services SharePoint Mode](../powershell-cmdlets-for-reporting-services-sharepoint-mode.md).  
+-   Nella versione [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] sono stati introdotti i cmdlet di PowerShell per la modalità integrata SharePoint. È possibile utilizzare PowerShell per configurare e amministrare l'integrazione con SharePoint.  Per altre informazioni, vedere [PowerShell cmdlets for Reporting Services SharePoint Mode](../powershell-cmdlets-for-reporting-services-sharepoint-mode.md)(Cmdlet di PowerShell per la modalità SharePoint di Reporting Services).  
   
 ## <a name="use-scripts-to-migrate-report-server-content-and-folders"></a>Utilizzare gli script per eseguire la migrazione del contenuto e delle cartelle del server di report  
  È possibile creare script per duplicare un ambiente del server di report in un'altra istanza del server di report. Gli script di distribuzione vengono in genere scritti in [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] e successivamente elaborati utilizzando l'utilità host di scripting del server di report.  
@@ -94,10 +94,10 @@ ms.locfileid: "48167283"
 > [!NOTE]  
 >  Gli script vengono eseguiti con le credenziali di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows dell'utente che esegue lo script, a meno che non si decida di impostare le credenziali esplicitamente.  
   
- Per altre informazioni sulla formattazione ed esecuzione di un file di script, vedere [lo Script con il rs.exe Utilità e il servizio Web](script-with-the-rs-exe-utility-and-the-web-service.md).  
+ Per altre informazioni sulla formattazione ed esecuzione di un file di script, vedere [Eseguire lo script con l'utilità rs.exe e il servizio Web](script-with-the-rs-exe-utility-and-the-web-service.md).  
   
 ## <a name="using-scripts-to-set-server-properties"></a>Utilizzo degli script per impostare le proprietà del server  
- È possibile scrivere script che consentono di impostare le proprietà di sistema nel server di report. Nello script [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET riportato di seguito viene illustrato un sistema per impostare le proprietà: Questo esempio viene disabilitato il controllo RSClientPrint ActiveX, ma è possibile sostituire `EnableClientPrinting` e `False` con qualsiasi nome di proprietà valido e il valore. Per visualizzare un elenco completo delle proprietà del server, vedere [proprietà di sistema di Server di Report](../report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md).  
+ È possibile scrivere script che consentono di impostare le proprietà di sistema nel server di report. Nello script [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET riportato di seguito viene illustrato un sistema per impostare le proprietà: Nell'esempio il controllo ActiveX RSClientPrint viene disabilitato, tuttavia è possibile sostituire `EnableClientPrinting` e `False` con qualsiasi nome e valore di proprietà valido. Per visualizzare un elenco completo di proprietà del server, vedere [Proprietà di sistema del server di report](../report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md).  
   
  Per utilizzare lo script, salvarlo in un file con estensione rss e quindi utilizzare l'utilità della riga di comando rs.exe per eseguire il file nel server di report. Lo script non è compilato, pertanto non è necessario disporre di un'installazione di [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]. Nell'esempio si presuppone che l'utente disponga delle autorizzazioni per il computer locale che ospita il server di report. Se non è stato eseguito l'accesso con un account che dispone delle autorizzazioni, sarà necessario specificare le informazioni sull'account tramite ulteriori argomenti della riga di comando. Per altre informazioni, vedere [Utilità RS.exe &#40;SSRS&#41;](rs-exe-utility-ssrs.md).  
   
@@ -109,7 +109,7 @@ Public Sub Main()
         Dim props(0) As [Property]  
         Dim setProp As New [Property]  
         setProp.Name = "EnableClientPrinting"  
-        setProp.Value = “False”   
+        setProp.Value = "False"   
         props(0) = setProp  
         Try  
             rs.SetSystemProperties(props)  
@@ -122,13 +122,13 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Metodo GenerateDatabaseCreationScript &#40;WMI MSReportServer_ConfigurationSetting&#41;](../wmi-provider-library-reference/configurationsetting-method-generatedatabasecreationscript.md)   
- [Metodo GenerateDatabaseRightsScript &#40;WMI MSReportServer_ConfigurationSetting&#41;](../wmi-provider-library-reference/configurationsetting-method-generatedatabaserightsscript.md)   
- [Metodo GenerateDatabaseUpgradeScript &#40;WMI MSReportServer_ConfigurationSetting&#41;](../wmi-provider-library-reference/configurationsetting-method-generatedatabaseupgradescript.md)   
+ [Metodo GenerateDatabaseCreationScript &#40;MSReportServer_ConfigurationSetting WMI&#41;](../wmi-provider-library-reference/configurationsetting-method-generatedatabasecreationscript.md)   
+ [Metodo GenerateDatabaseRightsScript &#40;MSReportServer_ConfigurationSetting WMI&#41;](../wmi-provider-library-reference/configurationsetting-method-generatedatabaserightsscript.md)   
+ [Metodo GenerateDatabaseUpgradeScript &#40;MSReportServer_ConfigurationSetting WMI&#41;](../wmi-provider-library-reference/configurationsetting-method-generatedatabaseupgradescript.md)   
  [Installare SQL Server 2014 dal Prompt dei comandi](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)   
- [Installare Server di Report di Reporting Services in modalità nativa](../install-windows/install-reporting-services-native-mode-report-server.md)   
+ [Installare un server di report in modalità nativa di Reporting Services](../install-windows/install-reporting-services-native-mode-report-server.md)   
  [Server di report di Reporting Services &#40;modalità nativa&#41;](../report-server/reporting-services-report-server-native-mode.md)   
- [Utilità della riga di comando di Server di report &#40;SSRS&#41;](report-server-command-prompt-utilities-ssrs.md)   
+ [Utilità della riga di comando del server di report &#40;SSRS&#41;](report-server-command-prompt-utilities-ssrs.md)   
  [Pianificazione per Reporting Services e supporto Browser per Power View &#40;Reporting Services 2014&#41;](../browser-support-for-reporting-services-and-power-view.md)   
  [Strumenti di Reporting Services](reporting-services-tools.md)  
   

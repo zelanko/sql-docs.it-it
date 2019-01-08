@@ -25,12 +25,12 @@ ms.assetid: 55da6b94-3a4b-4bae-850f-4bf7f6e918ca
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1a328dba20de6eca7381cf6e1c76e9b9cc88bc4f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a66125c6e241c75d473fa170d3de5ef9755b28e5
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48173021"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52511110"
 ---
 # <a name="about-log-shipping-sql-server"></a>Informazioni sul log shipping (SQL Server)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consente di inviare automaticamente i backup del log delle transazioni da un *database primario* in un'istanza del *server primario* a uno o più *database secondari* in istanze separate del *server secondario* . I backup del log delle transazioni vengono applicati singolarmente a ogni database secondario. Un terzo server facoltativo, noto come *server di monitoraggio*, registra la cronologia e lo stato delle operazioni di backup e di ripristino e genera avvisi nel caso in cui tali operazioni non vengano eseguite come previsto.  

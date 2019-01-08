@@ -13,15 +13,15 @@ ms.assetid: e0a68ab0-bece-4d25-b464-47f1719302e6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c28b74a271fc2da7c99aeb1ab7b990b11e90fd3f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6bcd9aa80170719a32ff3bf75f0ac36dc83cf021
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48118717"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52399776"
 ---
 # <a name="create-a-singleton-prediction-query-from-a-template"></a>Creare una query di stima singleton da un modello
-  Una query singleton è utile quando si dispone di un modello che si desidera utilizzare per la stima, ma non si desidera eseguire il mapping a un set di dati di input esterno oppure eseguire stime bulk. Con una query singleton, è possibile fornire uno o più valori al modello e ottenere all'istante il valore stimato.  
+  Una query singleton è utile quando si dispone di un modello che si desidera utilizzare per la stima, ma non vuole eseguirne il mapping a un set di dati di input esterno oppure eseguire stime bulk. Con una query singleton, è possibile fornire uno o più valori al modello e ottenere all'istante il valore stimato.  
   
  Ad esempio, la query DMX seguente rappresenta una query singleton sul modello di mailing diretto, TM_Decision_Tree.  
   
@@ -89,11 +89,11 @@ AS [t]
   
 10. Nel riquadro del testo della query cercare la sottolineatura rossa sotto la virgola e i puntini di sospensione che indicano un errore di sintassi. Eliminare i puntini di sospensione e aggiungere le condizioni di query aggiuntive desiderate. Se non si aggiungono altre condizioni, eliminare la virgola.  
   
-     Per il codice di esempio mostrato all'inizio di questo argomento, la condizione di query aggiuntive è stata impostata su `'45' as [Age]`.  
+     Per il codice di esempio mostrato all'inizio di questo argomento, la condizione di query aggiuntiva è stata impostata su `'45' as [Age]`.  
   
 11. Fare clic su **Esegui**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Creazione di stime &#40;esercitazione di base di Data Mining&#41;](../../tutorials/creating-predictions-basic-data-mining-tutorial.md)  
+ [Creazione di stime &#40;Esercitazione di base sul data mining&#41;](../../tutorials/creating-predictions-basic-data-mining-tutorial.md)  
   
   

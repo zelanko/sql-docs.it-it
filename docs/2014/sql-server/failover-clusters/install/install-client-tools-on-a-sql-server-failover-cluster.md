@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: install
 ms.topic: conceptual
 ms.assetid: 3c82d510-9798-46be-bebb-cac9bef56936
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9012e7469fc91c5274f374d0b99e2411dd57af3d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 69ca337b8b4ed4ab0e801cbb510ad533b4558448
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48150351"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52800483"
 ---
 # <a name="install-client-tools-on-a-sql-server-failover-cluster"></a>Installare strumenti client in un cluster di failover di SQL Server
   Gli strumenti client, ad esempio [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] , sono funzionalità condivise comuni a tutte le istanze dello stesso computer. Sono compatibili con le versioni precedenti e consentono l'installazione affiancata delle versioni di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supportate. In un nodo può esistere solo una versione dello strumento client alla volta.  
@@ -44,11 +43,11 @@ ms.locfileid: "48150351"
   
 #### <a name="installing-includessnoversionincludesssnoversion-mdmd-client-tools-at-the-command-prompt"></a>Installazione degli strumenti client di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dal prompt dei comandi  
   
-1.  Per installare gli strumenti client di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e la documentazione online di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , eseguire il comando seguente: Setup.exe/q/Action=Install /Features=Tools  
+1.  Per installare [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] gli strumenti client e [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] documentazione Online, eseguire il comando seguente: Setup.exe/q/Action=Install /Features = Tools  
   
-2.  Per installare solo gli strumenti di gestione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] di base, eseguire il comando seguente: Setup.exe/q/Action=Install Features=SSMS Verrà installato il supporto di [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] per [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)], [!INCLUDE[ssExpress](../../../includes/ssexpress-md.md)], l'utilità sqlcmd e il provider Powershell di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
+2.  Per installare solo il basic [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] gli strumenti di gestione eseguire il comando seguente: Setup.exe/q/Action=Install Features = SSMS. Verrà installato il supporto di [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] per [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)], [!INCLUDE[ssExpress](../../../includes/ssexpress-md.md)], l'utilità sqlcmd e il provider Powershell di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
-3.  Per installare tutti gli strumenti di gestione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , eseguire il comando seguente: Setup.exe/q/Action=Install /Features=ADV_SSMS. Per altre informazioni sui valori dei parametri per le funzionalità, vedere [installare SQL Server 2014 dal Prompt dei comandi](../../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md).  
+3.  Per installare l'intero [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] strumenti di gestione, eseguire il comando seguente: Setup.exe/q/Action=Install /Features = ADV_SSMS. Per altre informazioni sui valori dei parametri per le funzionalità, vedere [installare SQL Server 2014 dal Prompt dei comandi](../../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md).  
   
 ### <a name="uninstalling-includessnoversionincludesssnoversion-mdmd-client-tools"></a>Disinstallazione degli strumenti client di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
  Questi strumenti vengono visualizzati in Installazione applicazioni nel Pannello di controllo come **[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]** e possono essere rimossi dalla stessa posizione. Se si utilizza l'opzione per la rimozione dei nodi per disinstallare un'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dal cluster di failover, non verranno contemporaneamente disinstallati i componenti client.  

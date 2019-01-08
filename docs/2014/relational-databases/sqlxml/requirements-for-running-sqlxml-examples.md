@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - examples [SQLXML]
@@ -17,12 +15,12 @@ ms.assetid: acfee2eb-cf35-4377-9fde-82ad1d938011
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1df013d744af3c088439930afd12b2810aac1f50
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 33902bb9579d7b35c8b35bd6925c121607015067
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48053061"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52804503"
 ---
 # <a name="requirements-for-running-sqlxml-examples"></a>Requisiti per l'esecuzione di esempi di SQLXML
   Il [programmazione SQLXML 4.0](sqlxml-4-0-programming-concepts.md) sezione sono inclusi numerosi esempi. In questo argomento sono elencati i requisiti per la creazione di esempi reali da tali esempi.  

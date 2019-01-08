@@ -20,24 +20,24 @@ ms.assetid: 59cde899-7957-4b5e-8677-f34d3b859bfd
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 44504acd59b19b8e23b97149ed94ed0f79016d16
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 30d91302161b236cee5634196bea33f61411f046
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47722389"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206150"
 ---
 # <a name="sqlgetconnectoption-function"></a>Funzione SQLGetConnectOption
 **Conformità**  
- Versione introdotta: Conformità agli standard 1.0 di ODBC: deprecato  
+ Versione introdotta: Conformità agli standard 1.0 ODBC: Deprecato  
   
  **Riepilogo**  
  In ODBC 3 *. x*, l'API ODBC 2 *. x* funzione **SQLGetConnectOption** è stato sostituito da **SQLGetConnectAttr**. Per altre informazioni, vedere [SQLGetConnectAttr](../../../odbc/reference/syntax/sqlgetconnectattr-function.md).  
   
-> [!NOTE]  
->  Per altre informazioni su ciò che Gestione Driver esegue il mapping a questa funzione quando un ODBC 2 *. x* applicazione funziona con un'applicazione ODBC 3 *. x* driver, vedere [Mapping di funzioni deprecate](../../../odbc/reference/appendixes/mapping-deprecated-functions.md)nell'appendice g: Driver le linee guida per la compatibilità con le versioni precedenti.  
-  
-> [!NOTE]  
+> [!NOTE]
+>  Per altre informazioni su ciò che Gestione Driver esegue il mapping a questa funzione quando un ODBC 2 *. x* applicazione funziona con un'applicazione ODBC 3 *. x* driver, vedere [Mapping di funzioni deprecate](../../../odbc/reference/appendixes/mapping-deprecated-functions.md)nell'appendice g: Driver linee guida per la compatibilità con le versioni precedenti.  
+> 
+> [!NOTE]
 >  L'attributo SQL_ASYNC_DBC_FUNCTION_ENABLE introdotte in ODBC 3.8 non è supportato dal **SQLGetConnectOption**. Le applicazioni che usano l'operazione asincrona su un handle di connessione devono utilizzare **SQLGetConnectAttr**.  
   
 ## <a name="see-also"></a>Vedere anche  

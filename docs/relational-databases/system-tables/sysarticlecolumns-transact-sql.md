@@ -5,8 +5,7 @@ ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sysarticlecolumns
@@ -19,19 +18,19 @@ ms.assetid: 55918592-e05d-43b6-843b-7e4d82fa6275
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 35046a8831d38d433e60127b983a16043e657668
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4d31293e6e6b562e8ccfbb624a9ea9e226205ef2
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47635029"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52779793"
 ---
 # <a name="sysarticlecolumns-transact-sql"></a>sysarticlecolumns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Il **sysarticlecolumns** tabella contiene una riga per ogni colonna della tabella è pubblicata in una pubblicazione snapshot o transazionale che esegue il mapping di ogni colonna per l'articolo. Questa tabella è archiviata nel database di pubblicazione.  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**artid**|**int**|Identifica un articolo.|  
 |**colid**|**smallint**|Identifica una colonna di un articolo.|  

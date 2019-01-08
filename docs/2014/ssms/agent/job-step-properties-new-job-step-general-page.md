@@ -1,10 +1,10 @@
 ---
-title: 'Proprietà passaggio processo: Passaggio di processo nuova (pagina generale) | Microsoft Docs'
+title: 'Proprietà passaggio processo: Nuovo passaggio di processo (pagina generale) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - sql12.ag.job.stepgeneral.f1
@@ -12,14 +12,14 @@ ms.assetid: 8d1885ba-4386-4528-8f2b-68c16852720c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d20df5bbaaa7c9ba273b5796dc6a6b9e32bc287f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8a957e2032f3be0e48d5bcfa4ed4508775e04477
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48196073"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52807124"
 ---
-# <a name="job-step-properties-new-job-step-general-page"></a>Proprietà passaggio processo - Nuovo passaggio di processo (pagina Generale)
+# <a name="job-step-properties-new-job-step-general-page"></a>Proprietà passaggio processo: Nuovo passaggio di processo (pagina generale)
   Usare questa pagina per visualizzare e modificare le proprietà di un passaggio di processo di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o per definirne uno nuovo.  
   
  Per passare a questa pagina, in Esplora oggetti di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] espandere [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, fare clic con il pulsante destro del mouse su **Processi**, scegliere **Nuovo processo**, selezionare la pagina **Passaggi** e scegliere **Nuovo**. È anche possibile passare a questa pagina facendo clic con il pulsante destro del mouse su un processo in Esplora oggetti, scegliendo **Proprietà**, selezionando la pagina **Passaggi** e scegliendo **Nuovo**, **Inserisci**o **Modifica**.  

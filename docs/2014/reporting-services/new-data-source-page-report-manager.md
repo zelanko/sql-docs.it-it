@@ -11,12 +11,12 @@ ms.assetid: 35563d4c-a3d5-4f95-bf46-605da9dfcbb8
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 74a48d913a5222ee566843eff85d71aaec194bd9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d4bc08bcf6e56a5f839ebe17a8907bb7ce603d78
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48073734"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53349962"
 ---
 # <a name="new-data-source-page-report-manager"></a>Pagina Nuova origine dati (Gestione report)
   Utilizzare la pagina Nuova origine dati per creare un'origine dei dati condivisa. Un'origine dei dati condivisa definisce una connessione a un'origine dei dati esterna. Le origini dati condivise consentono di creare e gestire le impostazioni per la connessione all'origine dati separatamente rispetto ai report, ai modelli e alle sottoscrizioni guidate dai dati che utilizzano tale origine dati.  
@@ -31,7 +31,7 @@ ms.locfileid: "48073734"
 2.  Sulla barra degli strumenti, fare clic su **Nuova origine dati**. Per creare un'origine dati condivisa, è necessario disporre delle autorizzazioni Gestione contenuto.  
   
 ## <a name="options"></a>Opzioni  
- **Nome**  
+ **Name**  
  Digitare un nome per l'origine dati condivisa, utilizzato per identificare l'elemento nella gerarchia di cartelle del server di report.  
   
  **Descrizione**  
@@ -44,14 +44,14 @@ ms.locfileid: "48073734"
  Selezionare questa opzione per abilitare o disabilitare l'origine dei dati condivisa. È possibile disabilitare l'origine dati condivisa per impedire l'elaborazione di tutti i report e i modelli che fanno riferimento a tale elemento.  
   
  **Tipo di origine dati**  
- Consente di specificare l'estensione per l'elaborazione dati utilizzata per elaborare i dati dall'origine dati. Server di report include estensioni per l'elaborazione dati per [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], Oracle, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], SAP, XML, ODBC e OLE DB. È possibile che siano disponibili ulteriori estensioni per l'elaborazione dati di terze parti.  
+ Consente di specificare l'estensione per l'elaborazione dati utilizzata per elaborare i dati dall'origine dati. Il server di report include le estensioni per l'elaborazione dati per [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], Oracle, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], SAP, XML, ODBC e OLE DB. È possibile che siano disponibili ulteriori estensioni per l'elaborazione dati di terze parti.  
   
- Per altre informazioni sul supporto delle origini dati remote e non SQL, vedere [funzionalità supportate dalle edizioni di SQL Server 2012](http://go.microsoft.com/fwlink/?linkid=232473) (HYPERLINK "http://go.microsoft.com/fwlink/?linkid=232473" http://go.microsoft.com/fwlink/?linkid=232473) e [origini dati supportate da Reporting Servizi di &#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md).  
+ Per altre informazioni sul supporto delle origini dati remote e non SQL, vedere [funzionalità supportate dalle edizioni di SQL Server 2012](https://go.microsoft.com/fwlink/?linkid=232473) (HYPERLINK "<https://go.microsoft.com/fwlink/?linkid=232473>" <https://go.microsoft.com/fwlink/?linkid=232473>) e [origini dati supportate da Reporting Servizi di &#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md).  
   
  **Stringa di connessione**  
  Specificare la stringa di connessione utilizzata dal server di report per la connessione all'origine dati. Il tipo di connessione determina la sintassi da utilizzare. Ad esempio, una stringa di connessione per l'estensione per l'elaborazione dei dati XML è rappresentata da un URL per un documento XML. In una stringa di connessione tipica vengono in genere specificati il server di database e un file di dati.  
   
- Nell'esempio seguente viene illustrata una stringa di connessione utilizzata per connettersi al [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBnormal](../includes/sssampledbnormal-md.md)] database:  
+ Nell'esempio seguente viene illustrata una stringa di connessione utilizzata per la connessione al database [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBnormal](../includes/sssampledbnormal-md.md)] :  
   
 ```  
 data source=<a SQL Server instance>;initial catalog=AdventureWorks2012  
@@ -68,14 +68,14 @@ data source=<a SQL Server instance>;initial catalog=AdventureWorks2012
  **Credenziali fornite dall'utente che esegue il report (Connetti tramite)**  
  Tutti gli utenti devono digitare un nome utente e una password per accedere all'origine dei dati. È possibile specificare il testo per il messaggio di richiesta delle credenziali utente. La stringa di testo predefinita è "Immettere nome utente e password per accedere all'origine dati".  
   
- Selezionare **Usa come credenziali di Windows per la connessione all'origine dei dati** se l'utente fornisce credenziali di autenticazione di Windows. Non selezionare questa casella di controllo se si usa l'autenticazione del database (ad esempio, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] autenticazione).  
+ Selezionare **Usa come credenziali di Windows per la connessione all'origine dei dati** se l'utente fornisce credenziali di autenticazione di Windows. Non selezionare questa casella di controllo se si utilizza l'autenticazione del database, ad esempio l'autenticazione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
  **Credenziali archiviate in modo sicuro nel server di report (Connetti tramite)**  
  Consente di archiviare nome utente e password in forma crittografata nel database del server di report. Selezionare questa opzione per l'esecuzione di report in modo automatico, ad esempio report avviati tramite pianificazioni o eventi anziché da un'azione dell'utente. Se si utilizza la sicurezza predefinita, il nome utente deve essere un account di dominio di Windows. Specificare l'account nel formato seguente: \<dominio >\\< nome utente\>. L'account specificato deve disporre di autorizzazioni di accesso locale nel computer che ospita l'origine dati utilizzata dal report.  
   
- Selezionare **Usa come credenziali di Windows per la connessione all'origine dei dati** se vengono utilizzate credenziali di autenticazione di Windows. Non selezionare questa casella di controllo se si usa l'autenticazione del database (ad esempio, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] autenticazione).  
+ Selezionare **Usa come credenziali di Windows per la connessione all'origine dei dati** se vengono utilizzate credenziali di autenticazione di Windows. Non selezionare questa casella di controllo se si utilizza l'autenticazione del database, ad esempio l'autenticazione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
- Se si utilizza l'autenticazione del database, selezionare **Rappresenta l'utente autenticato dopo che è stata stabilita una connessione all'origine dati** per consentire la delega delle credenziali del database, ma solo se un server di database supporta la rappresentazione. Per [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] database, questa opzione imposta la funzione SETUSER.  
+ Se si utilizza l'autenticazione del database, selezionare **Rappresenta l'utente autenticato dopo che è stata stabilita una connessione all'origine dati** per consentire la delega delle credenziali del database, ma solo se un server di database supporta la rappresentazione. Nei database di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] questa opzione consente di impostare la funzione SETUSER.  
   
  **Sicurezza integrata di Windows (Connetti tramite)**  
  Consente di utilizzare le credenziali di Windows dell'utente corrente per accedere all'origine dati. Selezionare questa opzione se le credenziali utilizzate per l'accesso a un'origine dei dati sono le stesse utilizzate per l'accesso al dominio di rete. È consigliabile utilizzare questa opzione quando per il dominio è abilitata l'autenticazione Kerberos oppure quando l'origine dei dati si trova nello stesso computer del server di report. Se l'autenticazione Kerberos non è abilitata, le credenziali di Windows possono essere passate a un solo altro computer. Se sono necessarie ulteriori connessioni al computer, i dati previsti non verranno visualizzati e verrà invece visualizzato un errore.  
@@ -93,10 +93,10 @@ data source=<a SQL Server instance>;initial catalog=AdventureWorks2012
  Fare clic per salvare le modifiche.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Creare, eliminare o modificare un'origine dati condivisa &#40;gestione Report&#41;](../../2014/reporting-services/create-delete-or-modify-a-shared-data-source-report-manager.md)   
+ [Creare, eliminare o modificare un'origine dei dati condivisa &#40;Gestione report&#41;](../../2014/reporting-services/create-delete-or-modify-a-shared-data-source-report-manager.md)   
  [Connessioni dati, origini dati e stringhe di connessione in Reporting Services](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
  [Gestione report &#40;modalità nativa SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [Contenuto della pagina &#40;gestione Report&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
+ [Pagina Contenuto &#40;Gestione report&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
  [Creare, modificare ed eliminare origini dati condivise &#40;SSRS&#41;](report-data/create-modify-and-delete-shared-data-sources-ssrs.md)   
  [Guida F1 di gestione report](../../2014/reporting-services/report-manager-f1-help.md)   
  [Specificare le credenziali e le informazioni sulla connessione per le origini dati del report](report-data/specify-credential-and-connection-information-for-report-data-sources.md)  

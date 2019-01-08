@@ -1,5 +1,6 @@
 ---
-title: Introduzione a SQL Server su Red Hat Enterprise Linux | Microsoft Docs
+title: Introduzione a SQL Server su Red Hat Enterprise Linux
+titleSuffix: SQL Server
 description: Questa Guida introduttiva illustra come installare SQL Server 2017 o SQL Server 2019 in Red Hat Enterprise Linux e quindi creare ed eseguire query di un database con sqlcmd.
 author: rothja
 ms.author: jroth
@@ -8,14 +9,14 @@ ms.date: 07/16/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.custom: sql-linux
+ms.custom: sql-linux, seodec18
 ms.assetid: 92503f59-96dc-4f6a-b1b0-d135c43e935e
-ms.openlocfilehash: 8d5b044adbdc0e5a846013aff1922b3cb1cb5dc8
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 794d241773addc5584869eaa2e05cfa316908ce1
+ms.sourcegitcommit: de8ef246a74c935c5098713f14e9dd06c4733713
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51669450"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53160479"
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-red-hat"></a>Guida introduttiva: Installare SQL Server e creare un database in Red Hat
 
@@ -80,7 +81,7 @@ Per configurare SQL Server in RHEL, eseguire i comandi seguenti in un terminale 
    ```
 
    > [!TIP]
-   > Le seguenti edizioni di SQL Server 2017 sono concessa in licenza gratuitamente: Evaluation, Developer ed Express.
+   > Le seguenti edizioni di SQL Server 2017 gratuitamente vengono concesso in licenza: Evaluation, Developer ed Express.
 
    > [!NOTE]
    > Assicurarsi di specificare una password complessa per l'account SA (caratteri di lunghezza 8 minimo, incluse le lettere maiuscole e lettere minuscole, cifre in base 10 e/o i simboli non alfanumerici).

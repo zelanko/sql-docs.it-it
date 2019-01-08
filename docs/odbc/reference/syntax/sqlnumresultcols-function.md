@@ -20,16 +20,16 @@ ms.assetid: d863179f-12a9-4b55-ac6b-7d84202d3da3
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7eb460efdd7915eb1f376ec3b640896b6fdd186e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 87f2e46c5b774983ecac2f4bbaf377b3e7260bef
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47825311"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53208900"
 ---
 # <a name="sqlnumresultcols-function"></a>Funzione SQLNumResultCols
 **Conformità**  
- Versione introdotta: Conformità agli standard 1.0 di ODBC: ISO 92  
+ Versione introdotta: Conformità agli standard 1.0 ODBC: ISO 92  
   
  **Riepilogo**  
  **SQLNumResultCols** restituisce il numero di colonne in un set di risultati.  
@@ -56,7 +56,7 @@ SQLRETURN SQLNumResultCols(
 ## <a name="diagnostics"></a>Diagnostica  
  Quando **SQLNumResultCols** restituisce SQL_ERROR o SQL_SUCCESS_WITH_INFO, un valore SQLSTATE associato possono essere ottenuti chiamando **SQLGetDiagRec** con un *HandleType* di SQL_HANDLE_STMT e un *gestiscono* dei *StatementHandle*. Nella tabella seguente sono elencati i valori SQLSTATE comunemente restituiti da **SQLNumResultCols** e illustra ognuna nel contesto di questa funzione; la notazione "(DM)" precede le descrizioni di SQLSTATE restituiti da Gestione Driver. Il codice restituito a ogni valore SQLSTATE è SQL_ERROR, se non specificato diversamente.  
   
-|SQLSTATE|Errore|Description|  
+|SQLSTATE|Errore|Descrizione|  
 |--------------|-----------|-----------------|  
 |01000|Avviso generale|Messaggio informativo specifico del driver. (Funzione restituisce SQL_SUCCESS_WITH_INFO).|  
 |08S01|Errore del collegamento di comunicazione|Il collegamento di comunicazione tra il driver e l'origine dati a cui è stato connesso il driver non è stato possibile prima dell'elaborazione di funzione è stata completata.|  

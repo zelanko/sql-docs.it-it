@@ -15,12 +15,12 @@ ms.assetid: 902314fe-5f9c-4d0d-a0b7-27e67c9c70ec
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 87180b692a613289fa8bbd22f6d605b0aa25cf6c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a173b15546db7e2ceda571e617191fe4f0e84a4e
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48096391"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53211840"
 ---
 # <a name="specify-parameters"></a>Specificare i parametri
   Se si specificano parametri di procedura, i programmi chiamanti sono in grado di passare i valori nel corpo della procedura. Tali valori possono essere utilizzati per diversi scopi durante l'esecuzione della procedura. Inoltre, i parametri di procedura possono restituire valori al programma chiamante se il parametro è contrassegnato come parametro OUTPUT.  
@@ -62,10 +62,10 @@ GO
   
  La denominazione dei parametri e l'assegnazione dei valori appropriati in modo esplicito a ogni parametro in una chiamata alla procedura consentono ai parametri di essere forniti in qualsiasi ordine. Se ad esempio per la procedura **my_proc** sono previsti tre parametri denominati **\@first**, **\@second** e **\@third**, i valori passati alla procedura possono essere assegnati ai nomi dei parametri, ad esempio: `EXECUTE my_proc @second = 2, @first = 1, @third = 3;`  
   
-> [!NOTE]  
+> [!NOTE]
 >  Se un valore del parametro viene specificato nel formato **/@parameter =***valore*, tutti i parametri successivi devono essere specificati in questo modo. Se i valori dei parametri non vengono passati nel formato **\@parameter =***valore*, devono essere specificati nello stesso ordine, da sinistra a destra, dei parametri elencati nell'istruzione CREATE PROCEDURE.  
-  
-> [!WARNING]  
+> 
+> [!WARNING]
 >  Qualsiasi parametro passato nel formato **\@parameter =***valore* contenente un errore di ortografia causerà la generazione di un errore in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e impedirà l'esecuzione della procedura.  
   
 ## <a name="specifying-parameter-data-types"></a>Specifica dei tipi di dati per i parametri  

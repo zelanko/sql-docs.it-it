@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 920729184dff2b770eb4cc702a437c6771e3ac91
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cf1f5b633b432d24ea143d857dcd7fbdf72968fd
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47754739"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53204540"
 ---
 # <a name="sysdmsqlreferencingentities-transact-sql"></a>sys.dm_sql_referencing_entities (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "47754739"
   
 -   Trigger DDL a livello di server  
   
-**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] attraverso [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -75,7 +75,7 @@ sys.dm_sql_referencing_entities (
   
 ## <a name="table-returned"></a>Tabella restituita  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |referencing_schema_name|**sysname**|Schema a cui appartiene l'entità di riferimento. Ammette i valori Null.<br /><br /> NULL per trigger DDL a livello di database e a livello di server.|  
 |referencing_entity_name|**sysname**|Nome dell'entità di riferimento. Non ammette i valori Null.|  
@@ -102,22 +102,22 @@ sys.dm_sql_referencing_entities (
   
 |Tipo di entità|Entità di riferimento|Entità con riferimenti|  
 |-----------------|------------------------|-----------------------|  
-|Tabella|Sì*|Sì|  
-|Vista|Sì|Sì|  
-|Stored procedure [!INCLUDE[tsql](../../includes/tsql-md.md)]**|Sì|Sì|  
-|stored procedure CLR|no|Sì|  
-|Funzione [!INCLUDE[tsql](../../includes/tsql-md.md)] definita dall'utente|Sì|Sì|  
-|Funzione CLR definita dall'utente|no|Sì|  
-|Trigger CLR (DML e DDL)|no|no|  
-|Trigger DML [!INCLUDE[tsql](../../includes/tsql-md.md)]|Sì|no|  
-|Trigger DDL [!INCLUDE[tsql](../../includes/tsql-md.md)] a livello di database|Sì|no|  
-|Trigger DDL [!INCLUDE[tsql](../../includes/tsql-md.md)] a livello di server|Sì|no|  
-|Stored procedure estese|no|Sì|  
-|Coda|no|Sì|  
-|Sinonimo|no|Sì|  
-|Tipo (alias e tipo di CLR definito dall'utente)|no|Sì|  
-|Raccolta di XML Schema|no|Sì|  
-|Funzione di partizione|no|Sì|  
+|Tabella|Sì*|Yes|  
+|visualizzazione|Yes|Yes|  
+|Stored procedure [!INCLUDE[tsql](../../includes/tsql-md.md)]**|Yes|Yes|  
+|stored procedure CLR|No|Yes|  
+|Funzione [!INCLUDE[tsql](../../includes/tsql-md.md)] definita dall'utente|Yes|Yes|  
+|Funzione CLR definita dall'utente|No|Yes|  
+|Trigger CLR (DML e DDL)|No|No|  
+|Trigger DML [!INCLUDE[tsql](../../includes/tsql-md.md)]|Yes|No|  
+|Trigger DDL [!INCLUDE[tsql](../../includes/tsql-md.md)] a livello di database|Yes|No|  
+|Trigger DDL [!INCLUDE[tsql](../../includes/tsql-md.md)] a livello di server|Yes|No|  
+|Stored procedure estese|No|Yes|  
+|Coda|No|Yes|  
+|Sinonimo|No|Yes|  
+|Tipo (alias e tipo di CLR definito dall'utente)|No|Yes|  
+|Raccolta di XML Schema|No|Yes|  
+|Funzione di partizione|No|Yes|  
   
  \* Una tabella viene registrata come un'entità di riferimento solo quando si fa riferimento a un [!INCLUDE[tsql](../../includes/tsql-md.md)] modulo, tipo definito dall'utente o raccolta di XML schema nella definizione di una colonna calcolata, un vincolo CHECK o un vincolo predefinito.  
   
@@ -125,7 +125,7 @@ sys.dm_sql_referencing_entities (
   
 ## <a name="permissions"></a>Permissions  
   
-### <a name="includesskatmaiincludessskatmai-mdmd--includesssql11includessssql11-mdmd"></a>[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] – [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]  
+### <a name="includesskatmaiincludessskatmai-mdmd---includesssql11includessssql11-mdmd"></a>[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] - [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]  
   
 -   È richiesta l'autorizzazione CONTROL per l'oggetto a cui viene fatto riferimento. Quando l'entità a cui si fa riferimento è una funzione di partizione, è necessaria l'autorizzazione CONTROL per il database.  
   
@@ -154,7 +154,7 @@ FROM sys.dm_sql_referencing_entities ('Production.Product', 'OBJECT');
 GO  
 ```  
   
-### <a name="b-returning-the-entities-that-refer-to-a-given-type"></a>B. Restituzione delle entità che fanno riferimento a un tipo specificato  
+### <a name="b-returning-the-entities-that-refer-to-a-given-type"></a>b. Restituzione delle entità che fanno riferimento a un tipo specificato  
  Nell'esempio seguente vengono restituite le entità che fanno riferimento al tipo alias `dbo.Flag`. Il set di risultati mostra che questo tipo è usato da due stored procedure. Il `dbo.Flag` tipo viene usato anche nella definizione di diverse colonne di `HumanResources.Employee` tabella; tuttavia, poiché il tipo non è presente nella definizione di una colonna calcolata, un vincolo CHECK o un vincolo predefinito nella tabella, viene restituita alcuna riga per il `HumanResources.Employee`nella tabella.  
   
 ```sql  

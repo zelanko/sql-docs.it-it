@@ -20,16 +20,16 @@ ms.assetid: b8efc247-27ab-4a00-92b6-1400785783fe
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d2e5596948a9e764ca0005d6cc41e62d65421866
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ab39d1fca288196dcf42da70083dad323c406ba0
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47692300"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53208638"
 ---
 # <a name="sqlnativesql-function"></a>Funzione SQLNativeSql
 **Conformità**  
- Versione introdotta: Conformità agli standard 1.0 di ODBC: ODBC  
+ Versione introdotta: Conformità agli standard 1.0 ODBC: ODBC  
   
  **Riepilogo**  
  **SQLNativeSql** restituisce la stringa SQL come modificata dal driver. **SQLNativeSql** non esegue l'istruzione SQL.  
@@ -74,7 +74,7 @@ SQLRETURN SQLNativeSql(
 ## <a name="diagnostics"></a>Diagnostica  
  Quando **SQLNativeSql** restituisce SQL_ERROR o SQL_SUCCESS_WITH_INFO, un valore SQLSTATE associato può essere ottenuto chiamando **SQLGetDiagRec** con un *HandleType* SQL_HANDLE_DBC e un *gestiscono* dei *ConnectionHandle*. Nella tabella seguente sono elencati i valori SQLSTATE comunemente restituiti da **SQLNativeSql** e illustra ognuna nel contesto di questa funzione; la notazione "(DM)" precede le descrizioni di SQLSTATE restituiti da Gestione Driver. Il codice restituito a ogni valore SQLSTATE è SQL_ERROR, se non specificato diversamente.  
   
-|SQLSTATE|Errore|Description|  
+|SQLSTATE|Errore|Descrizione|  
 |--------------|-----------|-----------------|  
 |01000|Avviso generale|Messaggio informativo specifico del driver. (Funzione restituisce SQL_SUCCESS_WITH_INFO).|  
 |01004|Stringa troncati di dati a destra|Il buffer \* *OutStatementText* non era sufficientemente grande per restituire l'intera stringa SQL, in modo che la stringa SQL è stata troncata. Viene restituita la lunghezza della stringa SQL non troncata **TextLength2Ptr*. (Funzione restituisce SQL_SUCCESS_WITH_INFO).|  

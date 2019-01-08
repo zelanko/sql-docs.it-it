@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server destination
@@ -17,12 +16,12 @@ ms.assetid: 8f982f85-a82e-4e2d-9cd8-cd2f85402d8e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 67e78121e3e55cb921da9e48618b67bc997dba28
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 24f0adb1564882697bf862407cda8dfaee44cd23
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48201281"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52791023"
 ---
 # <a name="bulk-load-data-by-using-the-sql-server-destination"></a>Caricamento bulk dei dati tramite la destinazione SQL Server
   È possibile aggiungere e configurare una destinazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] solo se il pacchetto include già almeno un'attività Flusso di dati e un'origine dati.  
@@ -55,7 +54,7 @@ ms.locfileid: "48201281"
     > [!NOTE]  
     >  La destinazione esegue automaticamente il mapping delle colonne con lo stesso nome.  
   
-9. Fare clic su **Avanzate** e impostare le opzioni relative al caricamento bulk: **Mantieni valori Identity**, **Mantieni valori Null**, **Blocco di tabella**, **Verifica vincoli**e **Attiva trigger**.  
+9. Fare clic su **avanzate** e impostare le opzioni di caricamento bulk: **Mantieni valori identity**, **Mantieni valori null**, **Table lock**, **vincoli Check**, e **attivano i trigger**.  
   
      Facoltativamente, specificare la prima e l'ultima riga di input da inserire, il numero massimo di errori che possono verificarsi prima che l'operazione di inserimento venga arrestata e le colonne in base alle quali viene ordinato l'inserimento.  
   
@@ -67,7 +66,7 @@ ms.locfileid: "48201281"
 11. Per salvare il pacchetto aggiornato, scegliere **Salva elementi selezionati** dal menu **File** .  
   
 ## <a name="see-also"></a>Vedere anche  
- [Destinazione SQL Server](sql-server-destination.md)   
+ [SQL Server Destination](sql-server-destination.md)   
  [Trasformazioni di Integration Services](transformations/integration-services-transformations.md)   
  [Percorsi in Integration Services](integration-services-paths.md)   
  [Attività Flusso di dati](../control-flow/data-flow-task.md)  

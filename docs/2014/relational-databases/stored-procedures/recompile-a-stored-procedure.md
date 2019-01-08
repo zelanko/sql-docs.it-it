@@ -15,12 +15,12 @@ ms.assetid: b90deb27-0099-4fe7-ba60-726af78f7c18
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0e65b458f81e6a09b31d7be2bdffa40547e3c215
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3ee4e94ff48db339bbe5c012f821368306bfb253
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48098211"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52406557"
 ---
 # <a name="recompile-a-stored-procedure"></a>Ricompilare una stored procedure
   In questo argomento viene descritto come ricompilare una stored procedure in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[tsql](../../includes/tsql-md.md)]. Esistono tre modi per eseguire questa operazione: `WITH RECOMPILE` option nella definizione della stored procedure o quando viene chiamata la procedura, il `RECOMPILE` hint per la query nelle singole istruzioni o utilizzando il `sp_recompile` stored procedure di sistema. Questo argomento illustra l'uso dell'opzione WITH RECOMPILE quando si crea una definizione di stored procedure e si esegue una stored procedure esistente. Descrive anche l'uso della stored procedure di sistema sp_recompile per ricompilare una stored procedure esistente.  
@@ -31,7 +31,7 @@ ms.locfileid: "48098211"
   
      [Indicazioni](#Recommendations)  
   
-     [Security](#Security)  
+     [Sicurezza](#Security)  
   
 -   **Per ricompilare una stored procedure tramite:**  
   
@@ -65,7 +65,7 @@ ms.locfileid: "48098211"
  `sp_recompile` Stored Procedure di sistema  
  È richiesta l'autorizzazione ALTER per la stored procedure specificata.  
   
-##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
   
 #### <a name="to-recompile-a-stored-procedure-by-using-the-with-recompile-option"></a>Per ricompilare una stored procedure utilizzando l'opzione WITH RECOMPILE  
   

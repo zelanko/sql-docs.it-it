@@ -1,5 +1,5 @@
 ---
-title: Prospettive nei modelli multidimensionali | Documenti Microsoft
+title: Prospettive in Analysis Services i modelli multidimensionali | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 5427142f682d4fb76011c0514539267d05c3097b
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: ae14c0e76564ebcaffecb7591d14c283fffd2906
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34023678"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072588"
 ---
 # <a name="perspectives-in-multidimensional-models"></a>Prospettive nei modelli multidimensionali
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

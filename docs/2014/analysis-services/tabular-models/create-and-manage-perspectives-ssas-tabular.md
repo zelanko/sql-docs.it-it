@@ -13,12 +13,12 @@ ms.assetid: 2a411c2b-2820-4086-ad7f-ce6a941fefc7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b6a8fb56ea065fea1a4077dcc1aae9ebc49d14da
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 25f8de0649f82abbcc6ceb4ac6a92844de04b4b7
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48121691"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52502277"
 ---
 # <a name="create-and-manage-perspectives-ssas-tabular"></a>Creare e gestire prospettive (SSAS tabulare)
   Le prospettive consentono di definire subset visualizzabili di un modello in grado di offrire punti di vista mirati, specifici di un'attività aziendale o di un'applicazione del modello. Nelle attività di questo argomento vengono descritte le modalità di creazione e gestione delle prospettive tramite la finestra di dialogo **Prospettive** in Progettazione modelli.  
@@ -46,22 +46,22 @@ ms.locfileid: "48121691"
   
 ###  <a name="bkmk_edit"></a> Per modificare una prospettiva  
   
--   Per modificare una prospettiva, selezionare e deselezionare i campi nella colonna della prospettiva. In questo modo verranno aggiunti e rimossi oggetti campo dalla prospettiva.  
+-   Per modificare una prospettiva, selezionare e deselezionare i campi nella colonna della prospettiva, che aggiunge e rimuove gli oggetti campo dalla prospettiva.  
   
 ###  <a name="bkmk_rename"></a> Per rinominare una prospettiva  
   
--   Quando si passa il mouse sull'intestazione di colonna (nome della prospettiva) di una prospettiva, viene visualizzato il pulsante **Rinomina** . Per rinominare la prospettiva, fare clic su **Rinomina**, quindi immettere un nuovo nome o modificare quello esistente.  
+-   Quando passa il mouse sull'intestazione di colonna della prospettiva (il nome della prospettiva), il **Rinomina** viene visualizzato il pulsante. Per rinominare la prospettiva, fare clic su **Rinomina**, quindi immettere un nuovo nome o modificare quello esistente.  
   
 ###  <a name="bkmk_delete"></a> Per eliminare una prospettiva  
   
--   Quando si passa il mouse sull'intestazione di colonna (nome della prospettiva) di una prospettiva, viene visualizzato il pulsante **Elimina** . Per eliminare la prospettiva, fare clic sul pulsante **Elimina** , quindi scegliere **Sì** nella finestra di conferma.  
+-   Quando passa il mouse sull'intestazione di colonna della prospettiva (il nome della prospettiva), il **eliminare** viene visualizzato il pulsante. Per eliminare la prospettiva, fare clic sul pulsante **Elimina** , quindi scegliere **Sì** nella finestra di conferma.  
   
 ###  <a name="bkmk_copy"></a> Per copiare una prospettiva  
   
--   Quando si passa il mouse sull'intestazione di colonna di una prospettiva, viene visualizzato il pulsante **Copia** . Per creare una copia di tale prospettiva, fare clic sul pulsante **Copia** . Una copia della prospettiva selezionata viene aggiunta come nuova prospettiva a destra delle prospettive esistenti. Il nome della nuova prospettiva viene ereditato dalla prospettiva copiata e alla fine del nome viene accodata un'annotazione *- Copy* . Ad esempio, se viene creata una copia della prospettiva *Vendite* , la nuova prospettiva viene denominata *Vendite - Copia*.  
+-   Quando passa il mouse sull'intestazione di colonna della prospettiva, la **copia** viene visualizzato il pulsante. Per creare una copia di tale prospettiva, fare clic sul pulsante **Copia** . Una copia della prospettiva selezionata viene aggiunta come nuova prospettiva a destra delle prospettive esistenti. Il nome della nuova prospettiva viene ereditato dalla prospettiva copiata e alla fine del nome viene accodata un'annotazione *- Copy* . Se, ad esempio, una copia del *vendite* prospettiva viene creata, la nuova prospettiva viene denominata *vendite - copia*.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Le prospettive &#40;tabulare di SSAS&#41;](perspectives-ssas-tabular.md)   
- [Gerarchie di &#40;tabulare di SSAS&#41;](hierarchies-ssas-tabular.md)  
+ [Prospettive &#40;SSAS tabulare&#41;](perspectives-ssas-tabular.md)   
+ [Gerarchie &#40;SSAS tabulare&#41;](hierarchies-ssas-tabular.md)  
   
   

@@ -11,19 +11,19 @@ ms.assetid: dee8ee42-156b-43b6-b202-02dfb9404284
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: dc6adc856477cbfb9b870c921676f1bd3470450c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b2b8979b945e6f7149f14ba11d8703221adab3a5
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48095371"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53350018"
 ---
 # <a name="view-and-explore-native-mode-reports-using-sharepoint-web-parts-ssrs"></a>View and Explore Native Mode Reports Using SharePoint Web Parts (SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] include diverse web part che funzionano con versioni specifiche di un server di report e in determinate modalità di distribuzione.  
   
 -   **Modalità nativa:** se si desidera accedere al contenuto di un server di report in un sito di SharePoint da un server di report eseguito in modalità nativa, utilizzare le web part Esplora report e Visualizzatore report di SharePoint 2.0 incluse in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. In questo argomento sono disponibili le istruzioni per l'installazione e l'utilizzo delle web part della versione 2.0.  
   
--   **Modalità SharePoint:** se si desidera accedere a un server di report eseguito nella modalità SharePoint, usare le web part installate dal componente aggiuntivo [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] per prodotti SharePoint. Per altre informazioni sui componenti aggiuntivi, vedere [Posizione in cui trovare il componente aggiuntivo Reporting Services per prodotti SharePoint](../install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md).  
+-   **Modalità SharePoint:** se si desidera accedere a un server di report eseguito in modalità SharePoint, utilizzare le web part installate dal componente aggiuntivo [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] per prodotti SharePoint. Per altre informazioni sui componenti aggiuntivi, vedere [Posizione in cui trovare il componente aggiuntivo Reporting Services per prodotti SharePoint](../install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md).  
   
 -   > [!NOTE]  
     >  La web part Visualizzatore report per la modalità nativa (SPViewer.dwp) è diversa da quella (ReportViewer.dwp) installata dal componente aggiuntivo [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] per prodotti SharePoint. Nelle web part sono inclusi schemi e implementazioni diversi, tuttavia possono essere installate entrambe nella stessa farm SharePoint. È possibile distinguere le web part visivamente grazie alle caratteristiche seguenti: nella web part Visualizzatore report, installata tramite il componente aggiuntivo, è disponibile un menu **Azioni** sulla barra degli strumenti.  
@@ -97,7 +97,7 @@ ms.locfileid: "48095371"
   
     > rswebparts.cab    00000000-0000-0000-0000-000000000000     True  
   
-     Per altre informazioni sull'uso di PowerShell, vedere [Install-SPWebPartPack (http://technet.microsoft.com/library/ff607840.aspx)](http://technet.microsoft.com/library/ff607840.aspx).  
+     Per altre informazioni sull'uso di PowerShell, vedere [Install-SPWebPartPack (https://technet.microsoft.com/library/ff607840.aspx)](https://technet.microsoft.com/library/ff607840.aspx).  
   
 #### <a name="install-web-parts-using-stsadmexe"></a>Installare web part tramite STSADM.exe  
   
@@ -167,7 +167,7 @@ ms.locfileid: "48095371"
   
 ## <a name="see-also"></a>Vedere anche  
  [Gestione report &#40;modalità nativa SSRS&#41;](../report-manager-ssrs-native-mode.md)   
- [Reporting Services Report Server &#40;modalità SharePoint&#41;](../reporting-services-report-server-sharepoint-mode.md)   
- [Server di report di Reporting Services &#40;modalità nativa&#41;](../report-server/reporting-services-report-server-native-mode.md)  
+ [Server di report di Reporting Services &#40;modalità SharePoint&#41;](../reporting-services-report-server-sharepoint-mode.md)   
+ [Reporting Services Report Server &#40;Native Mode&#41;](../report-server/reporting-services-report-server-native-mode.md)  
   
   

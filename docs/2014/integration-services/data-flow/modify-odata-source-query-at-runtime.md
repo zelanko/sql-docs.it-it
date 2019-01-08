@@ -4,31 +4,30 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: bcbba7f4-6e5d-46e6-a73a-3f17d3ff376a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ea891738a0a22353e67ff72b87d642bd04749270
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0700d2893028efea5486221906636d6c749b66bd
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48093901"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52804849"
 ---
 # <a name="modify-odata-source-query-at-runtime"></a>Modificare la query di origine OData in fase di esecuzione
   È possibile modificare la query di origine OData in fase di esecuzione aggiungendo un'espressione alla proprietà **[Origine OData].[Query]** dell'attività Flusso di dati.  
   
- Si noti che le colonne devono essere le stesse di quelle utilizzate in fase di progettazione; in caso contrario, verrà visualizzato un errore al momento dell'esecuzione del pacchetto. Assicurarsi di specificare le stesse colonne (nello stesso ordine) quando si utilizza l'opzione query $select. Un'alternativa più sicura all'utilizzo dell'opzione $select consiste nel deselezionare le colonne non desiderate direttamente dall'interfaccia utente del componente di origine.  
+ Si noti che le colonne devono essere le stesse di quelle utilizzate in fase di progettazione; in caso contrario, verrà visualizzato un errore al momento dell'esecuzione del pacchetto. Assicurarsi di specificare le stesse colonne (nello stesso ordine) quando si utilizza l'opzione query $select. Un'alternativa più sicura all'uso dell'opzione $select consiste nel deselezionare le colonne non desiderate direttamente dall'interfaccia utente del componente di origine.  
   
  Sono disponibili alcune modalità differenti per impostare dinamicamente il valore di query in fase di esecuzione. Di seguito sono riportati alcuni dei metodi più comuni.  
   
 ## <a name="exposing-the-query-as-a-parameter"></a>Esposizione della query come parametro  
  Nella procedura seguente sono riportati i passaggi per esporre la query utilizzata da un componente di origine OData come parametro nel pacchetto.  
   
-1.  Fare clic con il pulsante destro del mouse sull' **attività Flusso di dati** e scegliere l’opzione **Imposta parametri**. opzione.  
+1.  Fare clic con il pulsante destro del mouse sull'**attività Flusso di dati** e selezionare l'opzione **Imposta parametri**.  
   
 2.  Nella finestra di dialogo **Imposta parametri** selezionare **[\<< nome del componente di origine OData].[Query]** per **Proprietà**.  
   
@@ -53,11 +52,11 @@ ms.locfileid: "48093901"
   
 2.  Nella finestra **Proprietà** selezionare la proprietà **Espressioni** .  
   
-3.  Fare clic sul pulsante con i puntini di sospensione (...) per visualizzare **Editor espressioni di proprietà**.  
+3.  Fare clic su di... pulsante (puntini di sospensione) per visualizzare il **Editor espressioni di proprietà**.  
   
 4.  Selezionare la proprietà **[Origine OData].[Query]** .  
   
-5.  Fare clic sul pulsante con i puntini di sospensione (...) per **Espressione**.  
+5.  Fare clic su di... pulsante (puntini di sospensione) **espressione**.  
   
 6.  Immettere l' **espressione**.  
   

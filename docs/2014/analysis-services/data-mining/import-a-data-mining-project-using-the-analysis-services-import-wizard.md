@@ -11,12 +11,12 @@ ms.assetid: 62bc9fc5-c6ff-4517-b598-d92df76743a2
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9ed50f8107b1ee12109eedc904ef07c6a5342df7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c34694012a69285ee92fa90c58f293654c961890
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48133551"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52524193"
 ---
 # <a name="import-a-data-mining-project-using-the-analysis-services-import-wizard"></a>Importare un progetto di data mining utilizzando l'Importazione guidata di Analysis Services
   In questo argomento viene descritto come creare un nuovo progetto di data mining importando i metadati da un progetto di data mining esistente in un altro server, usando il modello **Importa da server (multidimensionale e data mining)** in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
@@ -24,7 +24,7 @@ ms.locfileid: "48133551"
 ## <a name="import-data-sources-mining-structures-and-mining-models-from-an-existing-data-mining-project"></a>Importare origini dati, strutture e modelli di data mining da un progetto di data mining esistente  
  Quando si usa il modello **Importa da server (multidimensionale e data mining)**, in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] viene creato un nuovo progetto di data mining, quindi vengono copiati i metadati dal progetto di data mining specificato. Il nuovo progetto contiene le stesse origini dati, viste origine dati, strutture e modelli di data mining del database di ssASnoversion da cui è stata effettuata l'importazione. Tuttavia, non è possibile utilizzare il progetto finché non sono state aggiornate alcune proprietà e non sono stati elaborati gli oggetti come descritto:  
   
--   I dati stessi non vengono copiati dal server di origine nel nuovo progetto di data mining, vengono importate solo le definizioni delle origini dati e le viste origine dati. Pertanto, al completamento del processo di importazione e dopo la creazione degli oggetti, è necessario popolare gli oggetti con i dati eseguendo il training delle strutture di data mining e dei modelli dipendenti. Per eseguire il training dei modelli e delle strutture, è possibile utilizzare il comando **Elabora tutto** di Progettazione modelli di data mining.  
+-   I dati stessi non vengono copiati dal server di origine al data mining nuovo progetto solo che le definizioni delle origini dati e viste origine dati vengono importate. Pertanto, al completamento del processo di importazione e dopo la creazione degli oggetti, è necessario popolare gli oggetti con i dati eseguendo il training delle strutture di data mining e dei modelli dipendenti. Per eseguire il training dei modelli e delle strutture, è possibile utilizzare il comando **Elabora tutto** di Progettazione modelli di data mining.  
   
 -   Se si importa un progetto creato in una versione precedente di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], l'origine dati potrebbe utilizzare provider che non sono installati nel server nel quale si importa il progetto. Se si riscontrano errori durante l'elaborazione delle strutture di data mining importate, fare clic con il pulsante destro del mouse su ogni origine dati e selezionare **Apri finestra di progettazione** per modificare la stringa di connessione e rivedere le proprietà del provider.  
   
@@ -60,6 +60,6 @@ ms.locfileid: "48133551"
      Il nuovo progetto viene aperto automaticamente tramite [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
 ## <a name="see-also"></a>Vedere anche  
- [Proprietà del progetto &#40;tabulare di SSAS&#41;](../tabular-models/properties-ssas-tabular.md)  
+ [Proprietà del progetto &#40;SSAS tabulare&#41;](../tabular-models/properties-ssas-tabular.md)  
   
   

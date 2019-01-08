@@ -20,12 +20,12 @@ ms.assetid: bb2e8273-7b61-4113-bfc8-f7ccc607c811
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 396c1b8c2e7ef3b407253fd0fbde04de34065ea5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dbd405189d17051c4f1a6f07c943f77d6a6289c4
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47769749"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53207800"
 ---
 # <a name="sqlremovedsnfromini-function"></a>Funzione SQLRemoveDSNFromIni
 **Conformità**  
@@ -39,7 +39,7 @@ ms.locfileid: "47769749"
 ```  
   
 BOOL SQLRemoveDSNFromIni(  
-     LPCSTR   lpszDSN);  
+     LPCSTR   lpszDSN);  
 ```  
   
 ## <a name="arguments"></a>Argomenti  
@@ -52,7 +52,7 @@ BOOL SQLRemoveDSNFromIni(
 ## <a name="diagnostics"></a>Diagnostica  
  Quando **SQLRemoveDSNFromIni** FALSO, restituisce un oggetto associato  *\*pfErrorCode* valore può essere ottenuto chiamando **SQLInstallerError**. La tabella seguente elenca i  *\*pfErrorCode* i valori che possono essere restituiti da **SQLInstallerError** e illustra ognuna nel contesto di questa funzione.  
   
-|*\*pfErrorCode*|Errore|Description|  
+|*\*pfErrorCode*|Errore|Descrizione|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_GENERAL_ERR|Errore di programma di installazione generale|Errore per cui si è verificato alcun errore di programma di installazione specifico.|  
 |ODBC_ERROR_INVALID_DSN|DSN valido|Il *lpszDSN* argomento non è valido.|  

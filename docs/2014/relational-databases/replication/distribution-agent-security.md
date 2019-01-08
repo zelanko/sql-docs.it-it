@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.security.DA.f1
@@ -15,19 +14,19 @@ ms.assetid: de40cc21-2e58-4464-9be7-b5b90c925e9b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 25de27327b79c0bff1a08ba36c93d68f236a868a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7a28ee9f405e589e7956be4391f22d9ea2a46388
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48089461"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52815523"
 ---
 # <a name="distribution-agent-security"></a>Sicurezza agente di distribuzione
   La finestra di dialogo **Sicurezza agente di distribuzione** consente di specificare l'account di Windows utilizzato per l'esecuzione dell'agente di distribuzione. L'agente di distribuzione viene eseguito nel server di distribuzione per le sottoscrizioni push e nel Sottoscrittore per le sottoscrizioni pull. L'account di Windows [!INCLUDE[msCoName](../../includes/msconame-md.md)] è detto anche *account di processo*, poiché si tratta dell'account con cui viene eseguito il processo dell'agente. Le opzioni aggiuntive disponibili in questa finestra di dialogo dipendono dalla modalità con cui si accede a tale finestra di dialogo:  
   
 -   Se si accede alla finestra di dialogo dalla Creazione guidata nuova sottoscrizione, è possibile specificare il contesto in cui l'agente di distribuzione stabilisce le connessioni al Sottoscrittore (per le sottoscrizioni push) o al server di distribuzione (per le sottoscrizioni pull). La connessione può essere stabilita tramite la rappresentazione dell'account di Windows o nel contesto di un account di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] specificato dall'utente.  
   
--   Se si accede alla finestra di dialogo dalla finestra di dialogo **Proprietà sottoscrizione** , è possibile specificare il contesto in cui l'agente di distribuzione stabilisce le connessioni facendo clic sul pulsante delle proprietà (**...**) nella riga **Connessione al Sottoscrittore** o **Connessione server di distribuzione** della finestra. Per altre informazioni sull'accesso alla finestra di dialogo **Proprietà sottoscrizione**, vedere [Visualizzare e modificare le proprietà delle sottoscrizioni push](view-and-modify-push-subscription-properties.md) e [Visualizzare e modificare le proprietà delle sottoscrizioni pull](view-and-modify-pull-subscription-properties.md).  
+-   Se si accede alla finestra di dialogo dalla finestra di dialogo **Proprietà sottoscrizione** , è possibile specificare il contesto in cui l'agente di distribuzione stabilisce le connessioni facendo clic sul pulsante delle proprietà (**...**) nella riga **Connessione al Sottoscrittore** o **Connessione server di distribuzione** della finestra. Per altre informazioni sull'accesso al **le proprietà delle sottoscrizioni** finestra di dialogo, vedere [visualizzare e modificare le proprietà della sottoscrizione Push](view-and-modify-push-subscription-properties.md) e su come: [Visualizzare e modificare le proprietà di sottoscrizione Pull](view-and-modify-pull-subscription-properties.md).  
   
  Tutti gli account devono essere validi e per ogni account deve essere stata specificata la password corretta. Gli account e le password vengono convalidati solo dopo l'avvio dell'esecuzione di un agente.  
   

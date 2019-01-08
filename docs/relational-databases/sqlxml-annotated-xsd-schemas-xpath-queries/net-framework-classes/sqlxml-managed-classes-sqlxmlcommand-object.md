@@ -32,12 +32,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 89ab6ca4f8b95f4f78b1f6c8b9e33fbd1a3fa138
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e3ae51af994665ac4234dc44e84fb5c2c405aa1e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47816279"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52502556"
 ---
 # <a name="sqlxml-managed-classes---sqlxmlcommand-object"></a>Classi gestite SQLXML - Oggetto SqlXmlCommand
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "47816279"
 public SqlXmlCommand(string cnString)  
 ```  
   
- Dove `cnString` è la stringa di connessione ADO o OLEDB che identifica le informazioni su server, database e account di accesso, ad esempio `Provider=SQLOLEDB; Server=(local); database=AdventureWorks; Integrated Security=SSPI"`.  
+ In cui `cnString` è la stringa di connessione ADO o OLEDB che identifica il server, database e le informazioni di accesso, ad esempio, `Provider=SQLOLEDB; Server=(local); database=AdventureWorks; Integrated Security=SSPI"`.  
   
  Nella stringa di connessione `Provider` deve essere SQLOLEDB e `Data Provider` non deve essere incluso nella stringa del provider.  
   
@@ -109,7 +109,7 @@ public SqlXmlCommand(string cnString)
  CommandType  
  Identifica il tipo di comando. Questa proprietà viene utilizzata per specificare il tipo di comando che si desidera eseguire. I valori nella tabella seguente determinano il tipo del comando. Per un esempio funzionante, vedere [l'accesso a funzionalità SQLXML nell'ambiente .NET](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/accessing-sqlxml-functionality-in-the-net-environment.md).  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |SqlXmlCommandType.Sql|Esegue un comando SQL, ad esempio `SELECT * FROM Employees FOR XML AUTO`.|  
 |SqlXmlCommandType.XPath|Esegue un comando XPath, ad esempio `Employees[@EmployeeID=1]`.|  

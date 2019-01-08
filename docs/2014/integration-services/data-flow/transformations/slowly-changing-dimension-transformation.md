@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.slowlychangingdimtrans.f1
@@ -18,12 +17,12 @@ ms.assetid: f8849151-c171-4725-bd25-f2c33a40f4fe
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c417f01f7256863902f4e446bcb04c0732be832c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2fae586ee68a75127d5085b57f5f200498967d1d
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48056191"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53352131"
 ---
 # <a name="slowly-changing-dimension-transformation"></a>Dimensione a modifica lenta - trasformazione
   La trasformazione Dimensione a modifica lenta consente di coordinare l'aggiornamento e l'inserimento dei record nelle tabelle delle dimensioni dei data warehouse. È ad esempio possibile usare questa trasformazione per configurare gli output che inseriscono e aggiornano i record nella tabella DimProduct del database [!INCLUDE[ssSampleDBDWobject](../../../includes/sssampledbdwobject-md.md)] con i dati della tabella Production.Products del database OLTP AdventureWorks.  
@@ -47,7 +46,7 @@ ms.locfileid: "48056191"
   
 -   Le modifiche di tipo Attributo modificabile sovrascrivono i record esistenti. Questo tipo di modifica è equivalente a una modifica di tipo 1. La trasformazione Dimensione a modifica lenta invia queste righe a un output denominato **Output aggiornamenti attributi modificabili**.  
   
--   Le modifiche di tipo Attributo cronologico creano nuovi record anziché aggiornare quelli esistenti. L'unica modifica consentita in un record esistente è l'aggiornamento di una colonna che indica se il record è aggiornato o scaduto. Questo tipo di modifica è equivalente a una modifica di tipo 2. La trasformazione Dimensione a modifica lenta invia queste righe a due output: **Output inserimenti attributo cronologico** e **Nuovo output**.  
+-   Le modifiche di tipo Attributo cronologico creano nuovi record anziché aggiornare quelli esistenti. L'unica modifica consentita in un record esistente è l'aggiornamento di una colonna che indica se il record è aggiornato o scaduto. Questo tipo di modifica è equivalente a una modifica di tipo 2. La trasformazione dimensione a modifica lenta invia queste righe a due output: **Output inserimenti attributo cronologico** e **nuovo Output**.  
   
 -   Le modifiche di tipo Attributo fisso indicano che il valore della colonna non deve essere modificato. La trasformazione Dimensione a modifica lenta rileva le modifiche e può inviare le righe modificate a un output denominato **Output attributo fisso**.  
   
@@ -65,11 +64,11 @@ ms.locfileid: "48056191"
   
  Nella tabella seguente vengono descritti gli output della trasformazione e i requisiti dei flussi di dati successivi. I requisiti descrivono il flusso di dati creato dalla Configurazione guidata dimensioni a modifica lenta.  
   
-|Output|Description|Requisiti del flusso di dati|  
+|Output|Descrizione|Requisiti del flusso di dati|  
 |------------|-----------------|----------------------------|  
 |**Output aggiornamenti attributi modificabili**|Il record nella tabella di ricerca è stato aggiornato. Questo output viene utilizzato per le righe con attributi modificabili.|Una trasformazione Comando OLE DB aggiorna il record utilizzando un'istruzione UPDATE.|  
 |**Output attributo fisso**|Per i valori nelle righe che non devono essere modificate non esiste alcuna corrispondenza con i valori nella tabella di ricerca. Questo output viene utilizzato per le righe con attributi fissi.|Non viene creato alcun flusso di dati predefinito. Se la trasformazione è configurata in modo da continuare anche in caso di rilevamento di modifiche alle colonne con attributi fissi, sarà necessario creare un flusso di dati che acquisisca tali righe.|  
-|**Output inserimenti attributo cronologico**|La tabella di ricerca contiene almeno una riga corrispondente. La riga contrassegna come "corrente" ora viene contrassegnata come "scaduta". Questo output viene utilizzato per le righe con attributi cronologici.|Le trasformazioni Colonna derivata creano colonne per gli indicatori di riga scaduta e di riga corrente. Una trasformazione del comando OLE DB aggiorna il record che ora deve essere contrassegnato come "scaduto". La riga con i valori della colonna nuovi è indirizzata a Nuovo Output, dove viene inserita e contrassegna come "corrente".|  
+|**Output inserimenti attributo cronologico**|La tabella di ricerca contiene almeno una riga corrispondente. La riga contrassegna come "corrente" viene ora contrassegnata come "scaduta". Questo output viene utilizzato per le righe con attributi cronologici.|Le trasformazioni Colonna derivata creano colonne per gli indicatori di riga scaduta e di riga corrente. Una trasformazione del comando OLE DB aggiorna il record che ora deve essere contrassegnato come "scaduto". La riga con i valori della colonna nuovi è indirizzata a Nuovo Output, dove viene inserita e contrassegna come "corrente".|  
 |**Output aggiornamenti membro derivato**|Vengono inserite righe per membri di dimensione derivati. Questo output viene utilizzato per le righe dei membri derivati.|Una trasformazione Comando OLE DB aggiorna il record utilizzando un'istruzione SQL UPDATE.|  
 |**Nuovo output**|La tabella di ricerca non contiene righe corrispondenti. La riga viene aggiunta alla tabella delle dimensioni. Questo output viene utilizzato per le nuove righe e per le modifiche alle righe con attributi cronologici.|Una trasformazione Colonna derivata imposta l'indicatore di riga corrente e una destinazione OLE DB inserisce la riga.|  
 |**Output non modificato**|I valori nella tabella di ricerca corrispondono a quelli della riga. Questo output viene utilizzato per le righe non modificate.|Non viene creato alcun flusso di dati perché la trasformazione Dimensione a modifica lenta non esegue alcuna operazione. Se si desidera acquisire queste righe, sarà necessario creare un flusso di dati per questo output.|  
@@ -94,7 +93,7 @@ ms.locfileid: "48056191"
   
 -   [Proprietà personalizzate delle trasformazioni](transformation-custom-properties.md)  
   
- Per altre informazioni su come impostare le proprietà, vedere [Impostazione delle proprietà di un componente flusso di dati](../set-the-properties-of-a-data-flow-component.md).  
+ Per altre informazioni su come impostare le proprietà, vedere [Impostazione delle proprietà di un componente del flusso di dati](../set-the-properties-of-a-data-flow-component.md).  
   
 ## <a name="configuring-the-slowly-changing-dimension-transformation-outputs"></a>Configurazione degli output della trasformazione Dimensione a modifica lenta  
  Il coordinamento dell'aggiornamento e dell'inserimento dei record nelle tabelle delle dimensioni può risultare complesso, soprattutto se vengono utilizzate sia modifiche di tipo 1 che di tipo 2. [!INCLUDE[ssIS](../../../includes/ssis-md.md)] La finestra di progettazione offre due modi per configurare il supporto delle dimensioni a modifica lenta:  
@@ -104,10 +103,10 @@ ms.locfileid: "48056191"
 -   Utilizzare Caricamento guidato dimensione, che semplifica la configurazione della trasformazione Dimensione a modifica lenta e compila il flusso di dati per gli output della trasformazione. Per modificare la configurazione delle dimensioni a modifica lenta, eseguire nuovamente il Caricamento guidato dimensione. Per altre informazioni, vedere [Configurazione degli output tramite Configurazione guidata dimensioni a modifica lenta](configure-outputs-using-the-slowly-changing-dimension-wizard.md).  
   
 ## <a name="related-tasks"></a>Attività correlate  
- [Impostare le proprietà di un componente del flusso di dati](../set-the-properties-of-a-data-flow-component.md)  
+ [Impostazione delle proprietà di un componente del flusso di dati](../set-the-properties-of-a-data-flow-component.md)  
   
 ## <a name="related-content"></a>Contenuto correlato  
   
--   Intervento nel blog sull' [ottimizzazione della configurazione guidata dimensioni a modifica lenta](http://go.microsoft.com/fwlink/?LinkId=199481)sul sito Web blogs.msdn.com.  
+-   Intervento nel blog sull' [ottimizzazione della configurazione guidata dimensioni a modifica lenta](https://go.microsoft.com/fwlink/?LinkId=199481)sul sito Web blogs.msdn.com.  
   
   

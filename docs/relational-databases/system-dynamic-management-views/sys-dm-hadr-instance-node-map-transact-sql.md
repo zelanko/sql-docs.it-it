@@ -21,12 +21,12 @@ ms.assetid: ccfaf62c-9f87-43cf-a5e7-8942e91dd041
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 74f44195e0c365b46794fdd03ff296a1fa4040dc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e857682f5bb03256b129521840f8969e797e1a5f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47640479"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535743"
 ---
 # <a name="sysdmhadrinstancenodemap-transact-sql"></a>sys.dm_hadr_instance_node_map (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -37,10 +37,10 @@ ms.locfileid: "47640479"
   
 -   Quando più istanze di SQL Server sono ospitate nello stesso nodo WSFC, tramite la DLL della risorsa viene utilizzata questa DMV per determinare l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a cui connettersi.  
    
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**ag_resource_id**|**nvarchar(256)**|ID univoco del gruppo di disponibilità come una risorsa nel cluster WSFC.|  
-|**instance_name**|**nvarchar(256)**|Nome —*server*/*istanza*— di un'istanza del server che ospita una replica del gruppo di disponibilità.|  
+|**instance_name**|**nvarchar(256)**|Nome -*server*/*istanza*-di un'istanza del server che ospita una replica del gruppo di disponibilità.|  
 |**node_name**|**nvarchar(256)**|Nome del nodo del cluster WSCF.|  
   
 ## <a name="permissions"></a>Permissions  

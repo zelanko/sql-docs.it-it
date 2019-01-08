@@ -11,14 +11,14 @@ ms.assetid: 580f76e6-9802-4abc-9043-db6de592c733
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: e239526f0a5e77ad57122e8e9ddbaa163f040827
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3af76a0ec664a10d5457dc3d106de3727740ce19
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48162921"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52523662"
 ---
-# <a name="lesson-4-perform-a-restore-from-a-full-database-backup"></a>Lezione 4: Eseguire un ripristino da un backup completo del database
+# <a name="lesson-4-perform-a-restore-from-a-full-database-backup"></a>Lezione 4: Eseguire un ripristino da un Backup completo del Database
   In questa lezione viene illustrato l'utilizzo di un'istruzione tsql per eseguire un ripristino da un backup completo del database creato nella lezione precedente.  
   
 ## <a name="perform-a-restore-of-a-database-backup"></a>Eseguire un ripristino di un backup del database  
@@ -26,7 +26,7 @@ ms.locfileid: "48162921"
   
 1.  Connettersi a [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
-2.  Nel **Esplora oggetti**, connettersi all'istanza di [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
+2.  In **Esplora oggetti**connettersi all'istanza di [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
   
 3.  Sulla barra del menu Standard fare clic su **Nuova query**.  
   
@@ -36,7 +36,7 @@ ms.locfileid: "48162921"
     RESTORE DATABASE AdventureWorks2012   
     FROM URL = 'https://mystorageaccount.blob.core.windows.net/privatecontainertest/AdventureWorks2012.bak'   
     WITH CREDENTIAL = 'mycredential';  
-    , STATS = 5 – use this to see monitor the progress  
+    , STATS = 5 - use this to see monitor the progress  
     GO  
   
     ```  
@@ -44,6 +44,6 @@ ms.locfileid: "48162921"
 5.  Verificare l'istruzione T-SQL e fare clic su **Esegui**.  
   
 ### <a name="return-to-tutorials-portal"></a>Ritornare al portale delle esercitazioni  
- [Esercitazione: Backup di SQL Server e il ripristino in Windows Azure Blob Storage Service](../relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md).  
+ [Esercitazione: SQL Server Backup and Restore in Windows Azure Blob Storage Service](../relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md).  
   
   

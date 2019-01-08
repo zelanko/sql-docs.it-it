@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - absolute location path
@@ -18,12 +16,12 @@ ms.assetid: a23a2b75-bc69-49f0-99db-05e14dc15bc0
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 699f40750ef8f444de6b7115d34cfc33f834468a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c814d1b486a7ba7736cf19119a66ab0845d33c6b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48107381"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52807233"
 ---
 # <a name="specifying-a-location-path-sqlxml-40"></a>Definizione di un percorso (SQLXML 4.0)
   Le query XPath vengono specificate sotto forma di espressione. Sono disponibili diversi tipi di espressioni. Un percorso è un'espressione che seleziona un set di nodi relativo al nodo di contesto. Il risultato della valutazione di un percorso è un set di nodi.  
@@ -61,7 +59,7 @@ ms.locfileid: "48107381"
   
      La sintassi per un passo è costituita dal nome dell'asse e dal test di nodo separati da due caratteri due punti (::), seguiti da zero o più espressioni, ciascuna tra parentesi quadre. Ad esempio, l'espressione XPath (percorso) **child:: Customer [@CustomerID= 'ALFKI']** Seleziona tutti i  **\<cliente >** gli elementi figlio del nodo di contesto. Quindi il test nel predicato viene applicato al set di nodi, che restituisce solo le  **\<cliente >** nodi elemento con attributo valore 'ALFKI' per la relativa **CustomerID** attributo.  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Specifica di un asse &#40;SQLXML 4.0&#41;](specifying-an-axis-sqlxml-4-0.md)  
  Vengono forniti esempi di definizione di un asse.  
   

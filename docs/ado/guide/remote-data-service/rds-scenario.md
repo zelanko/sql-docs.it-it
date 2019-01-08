@@ -14,18 +14,18 @@ ms.assetid: a7dcad87-aaf0-4b02-9660-472f8469761c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0e936b6b68a67c1616a00d38f6d84776d44ef327
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 45e0f3be43ce8e2780268b7dfde83253b71da946
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51559435"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52539702"
 ---
 # <a name="rds-scenario"></a>Scenario RDS
 > [!IMPORTANT]
 >  A partire da Windows 8 e Windows Server 2012, i componenti server di servizi desktop remoto non sono più incluse nel sistema operativo Windows (vedere Windows 8 e [indicazioni sulla compatibilità di Windows Server 2012](https://www.microsoft.com/download/details.aspx?id=27416) per altri dettagli). I componenti client di servizi desktop remoto verranno rimosso in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che usano servizi desktop remoto devono eseguire la migrazione a [di WCF Data Services](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
- L'applicazione Address Book è uno scenario che illustra come usare Remote Data Service (RDS) per compilare un'applicazione Web semplice e basata sui dati, ovvero una rubrica online aziendali. Questo scenario è utile per Microsoft Visual Basic, Scripting Edition (VBScript) e ai programmatori di COM che desiderano imparare a usare i controlli ActiveX in grado di riconoscere i dati con Servizi Desktop remoto per il software più esperto gli sviluppatori che desiderano creare applicazioni Web incentrate sui dati.  
+ L'applicazione Address Book è uno scenario che illustra come usare Remote Data Service (RDS) per compilare un'applicazione Web semplice e basata sui dati - una rubrica online aziendali. Questo scenario è utile per Microsoft Visual Basic, Scripting Edition (VBScript) e ai programmatori di COM che desiderano imparare a usare i controlli ActiveX in grado di riconoscere i dati con Servizi Desktop remoto per il software più esperto gli sviluppatori che desiderano creare applicazioni Web incentrate sui dati.  
   
  Questo scenario presuppone che si sappia usare layout tag HTML, le tecniche di associazione di dati di utilizzo DHTML e programma di base con i controlli ActiveX.  
   

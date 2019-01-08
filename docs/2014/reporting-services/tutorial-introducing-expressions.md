@@ -11,12 +11,12 @@ ms.assetid: 2d05ef4c-5f91-48b2-8795-f0a201a0b3cc
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 73bcce5c157ad412fabb677302eeddbd40a8b54e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 096a0678ccb86c232d4eaca792aa143379710fea
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48075851"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52399335"
 ---
 # <a name="tutorial-introducing-expressions"></a>Esercitazione: Introduzione alle espressioni
   Le espressioni consentono di creare report potenti e flessibili. In questa esercitazione verrà illustrato come creare e implementare espressioni in cui vengono utilizzati operatori e funzioni comuni. Si userà il **espressione** finestra di dialogo per scrivere espressioni che concatenano valori di nomi, ricercare valori in un set di dati separato, visualizzare immagini differenti in base a valori dei campi e così via.  
@@ -66,7 +66,7 @@ ms.locfileid: "48075851"
 >  Nella query di questa esercitazione sono contenuti i valori dei dati in modo che non sia necessaria un'origine dati esterna. Tale condizione rende tuttavia la query piuttosto lunga. In una query di un ambiente aziendale non sarebbe incluso alcun dato. Questo esempio è solo a scopo illustrativo.  
   
 > [!NOTE]  
->  In questa esercitazione, i passaggi per la procedura guidata sono consolidati in un'unica procedura. Per istruzioni dettagliate su come selezionare un server di report, come scegliere un'origine dati e come creare un set di dati, vedere la prima esercitazione di questa serie: [Esercitazione: Creazione di un report tabella semplice &#40;Generatore report&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+>  In questa esercitazione, i passaggi per la procedura guidata sono consolidati in un'unica procedura. Per istruzioni dettagliate su come selezionare un server di report, scegliere un'origine dati e creare un set di dati, vedere la prima esercitazione di questa serie: [Esercitazione: Creazione di un Report tabella semplice &#40;Generatore Report&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
 #### <a name="to-create-a-new-table-report"></a>Per creare un nuovo report tabella  
   
@@ -124,7 +124,7 @@ ms.locfileid: "48075851"
   
      Nella query vengono specificati nomi di colonne tra cui data di nascita, nome, cognome, stato o provincia, identificatore di paese/regione, sesso e acquisti da inizio anno.  
   
-10. Sulla barra degli strumenti di Progettazione query fare clic su **Esegui** (**!**). Nel set di risultati vengono visualizzate 20 righe di dati e sono incluse le colonne seguenti: FirstName, LastName, StateProvince, CountryRegionID, Gender, YTDPurchase e LastPurchase.  
+10. Nella barra degli strumenti Progettazione query fare clic su **Esegui** (**!**). Il set di risultati vengono visualizzate 20 righe di dati e include le colonne seguenti: FirstName, LastName, StateProvince, CountryRegionID, Gender, YTDPurchase e LastPurchase.  
   
 11. Scegliere **Avanti**.  
   
@@ -343,7 +343,7 @@ ms.locfileid: "48075851"
   
 #### <a name="to-look-up-values-in-the-countryregion-dataset"></a>Per cercare valori nel set di dati CountryRegion  
   
-1.  Fare clic sul titolo della colonna **Country Region ID** ed eliminare il testo ID.  
+1.  Scegliere il **Country Region ID** titolo di colonna ed eliminare il testo: ID.  
   
 2.  Fare clic con il pulsante destro del mouse sulla cella di dati per la colonna **Country Region** e scegliere **Espressione**.  
   
@@ -372,7 +372,7 @@ ms.locfileid: "48075851"
 11. Fare clic su **Esegui** per visualizzare l'anteprima del report.  
   
 ##  <a name="Count"></a> 6. Contare i giorni dall'ultimo acquisto  
- Aggiungere una colonna e usare la funzione **Now** o la variabile globale incorporata `ExecutionTime` per calcolare il numero di giorni dall'ultimo acquisto da parte di una persona.  
+ Aggiungere una colonna e quindi usare il **ora** funzione o `ExecutionTime` variabile globale incorporata per la quale calcolare il numero di giorni dalla data odierna parte di una persona ultimi acquisti.  
   
 #### <a name="to-add-the-days-ago-column"></a>Per aggiungere la colonna Days Ago  
   
@@ -418,9 +418,9 @@ ms.locfileid: "48075851"
 17. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ##  <a name="Indicator"></a> 7. Utilizzare un indicatore per mostrare il confronto vendite  
- Aggiungere una nuova colonna e utilizzare un indicatore per mostrare se gli acquisti da inizio anno da parte di una persona sono al di sopra o al di sotto della relativa media. La funzione **Round** consente di rimuovere i decimali dai valori.  
+ Aggiungere una nuova colonna e utilizzare un indicatore per mostrare se gli acquisti da inizio anno (da inizio anno) di una persona sono di sopra o sotto la media che acquisti da inizio anno. La funzione **Round** consente di rimuovere i decimali dai valori.  
   
- Per la configurazione dell'indicatore e dei relativi stati sono necessari numerosi passaggi. Se si vuole eseguire tale operazione, nella procedura "Per configurare l'indicatore", è possibile saltare alcuni passaggi e copiare e incollare le espressioni complete da questa esercitazione nella finestra di dialogo **Espressione**.  
+ Per la configurazione dell'indicatore e dei relativi stati sono necessari numerosi passaggi. Se si desidera, nella procedura "per configurare l'indicatore", è possibile proseguire con il passaggio e copiare e incollare le espressioni complete da questa esercitazione nella **espressione** nella finestra di dialogo.  
   
 #### <a name="to-add-the--or---avg-sales-column"></a>Per aggiungere la colonna + or - AVG Sales  
   
@@ -522,7 +522,7 @@ ms.locfileid: "48075851"
   
 38. Fare clic su **Esegui** per visualizzare l'anteprima del report.  
   
-##  <a name="GreenBar"></a> 8. Creare un report a barre colorate  
+##  <a name="GreenBar"></a> 8. La creazione di che una barra di colore verde"" del Report  
  Utilizzare un parametro per specificare il colore da applicare alle righe alternate nel report, rendendolo a barre.  
   
 #### <a name="to-add-a-parameter"></a>Per aggiungere un parametro  
@@ -543,7 +543,7 @@ ms.locfileid: "48075851"
   
 7.  Scegliere **Aggiungi**.  
   
-8.  Nella casella **Etichetta** digitare: **Yellow**  
+8.  Nel **etichetta** , digitare: **Giallo**  
   
 9. Nella casella **Valore** digitare **Yellow**  
   
@@ -601,7 +601,7 @@ ms.locfileid: "48075851"
   
 15. Se il cursore non si trova già subito dopo `Count(`, posizionarlo in tale punto.  
   
-16. Eliminare la parentesi aperta e digitare **,"Expressions")**  
+16. Eliminare la parentesi aperta e digitare **, "Expressions")**  
   
     > [!NOTE]  
     >  Expressions è il nome del set di dati in cui contare le righe di dati.  
@@ -708,7 +708,7 @@ ms.locfileid: "48075851"
  [Espressioni &#40;Generatore report e SSRS&#41;](report-design/expressions-report-builder-and-ssrs.md)   
  [Esempi di espressioni &#40;Generatore report e SSRS&#41;](report-design/expression-examples-report-builder-and-ssrs.md)   
  [Indicatori &#40;Report e SSRS&#41;](report-design/indicators-report-builder-and-ssrs.md)   
- [Le immagini, caselle di testo, rettangoli e linee &#40;Report e SSRS&#41;](report-design/rectangles-and-lines-report-builder-and-ssrs.md)   
+ [Immagini, caselle di testo, rettangoli e linee &#40;Generatore report e SSRS&#41;](report-design/rectangles-and-lines-report-builder-and-ssrs.md)   
  [Tabelle &#40;Generatore report e SSRS&#41;](report-design/tables-report-builder-and-ssrs.md)   
  [Aggiungere dati a un Report &#40;Report e SSRS&#41;](report-data/report-datasets-ssrs.md)  
   

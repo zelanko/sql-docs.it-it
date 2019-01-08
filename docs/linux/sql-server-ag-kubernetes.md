@@ -1,5 +1,6 @@
 ---
-title: Gruppi di disponibilità per i contenitori di SQL Server
+title: Gruppi di disponibilità per i contenitori che eseguono Linux
+titleSuffix: SQL Server
 description: Questo articolo introduce i gruppi di disponibilità nei contenitori di SQL Server
 author: MikeRayMSFT
 ms.author: mikeray
@@ -7,15 +8,15 @@ manager: craigg
 ms.date: 08/09/2018
 ms.topic: article
 ms.prod: sql
-ms.custom: sql-linux
+ms.custom: sql-linux, seodec18
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: c74b39f4b7816221e2258bde2b1fef2b9e74d9d3
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: d4c460b272650874fd3b8b4d390879abf5a8fcc3
+ms.sourcegitcommit: de8ef246a74c935c5098713f14e9dd06c4733713
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51658575"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53160579"
 ---
 # <a name="always-on-availability-groups-for-sql-server-containers"></a>Gruppi di disponibilità per i contenitori di SQL Server
 

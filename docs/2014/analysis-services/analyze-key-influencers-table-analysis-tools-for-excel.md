@@ -15,12 +15,12 @@ ms.assetid: 54d7b4ce-7b79-407a-985c-aa655ad19280
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 49dc66cfeb9b6d30abd98563b995bcbead0de5d5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 672b68a1fda1013fc3ed46f9da1175ec038a8ffe
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48128777"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52415558"
 ---
 # <a name="analyze-key-influencers-table-analysis-tools-for-excel"></a>Analizza fattori di influenza chiave (Strumenti di analisi tabelle per Excel)
   ![Pulsante analizza fattori di influenza chiave sulla barra multifunzione](media/tat-aki.gif "pulsante analizza fattori di influenza chiave sulla barra multifunzione")  

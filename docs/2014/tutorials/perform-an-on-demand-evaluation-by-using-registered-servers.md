@@ -11,12 +11,12 @@ ms.assetid: c14034ef-6e0b-4df5-8072-bfb8d90b3172
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 127e0dbeef729c21c7155d7d3d7edf6f21a444c1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 85d4c4d79dbddd59c3208c28b3fea50c0aa857b7
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48182421"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514060"
 ---
 # <a name="perform-an-on-demand-evaluation-by-using-registered-servers"></a>Esecuzione di una valutazione su richiesta utilizzando Server registrati
   È possibile eseguire una valutazione su richiesta dei criteri per procedure consigliate in una o più istanze di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tramite Server registrati. È possibile utilizzare gruppi di server locali o un server di gestione centrale.  
@@ -25,7 +25,7 @@ ms.locfileid: "48182421"
 >  È possibile eseguire una valutazione su richiesta dei criteri per procedure consigliate in membri del gruppo di server che eseguono [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] o una versione più recente di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Tuttavia, è possibile ricevere un errore di eccezione se i criteri fanno riferimento a proprietà non supportate in [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] o [!INCLUDE[ssVersion2000](../includes/ssversion2000-md.md)].  
   
 ## <a name="prerequisites"></a>Prerequisiti  
- Per eseguire questa attività è necessario aver configurato una o più registrazioni di server in Server registrati. Per altre informazioni, vedere gli argomenti seguenti:  
+ Per eseguire questa attività è necessario aver configurato una o più registrazioni di server in Server registrati. Per altre informazioni, vedere i seguenti argomenti:  
   
 -   [Creare o modificare un gruppo di server &#40;SQL Server Management Studio&#41;](../ssms/register-servers/create-or-edit-a-server-group-sql-server-management-studio.md)  
   
@@ -76,7 +76,7 @@ ms.locfileid: "48182421"
 8.  Per visualizzare i risultati dettagliati per un criterio, fare clic sul criterio nel **risultati** tabella. Il **dettagli destinazione** tabella sono riportati i dettagli per ogni istanza.  
   
 ## <a name="next-lesson"></a>Lezione successiva  
- [Lezione 2: Valutazione di criteri per procedure consigliate in base a una pianificazione prestabilita](../../2014/tutorials/lesson-2-evaluate-best-practices-policies-on-a-scheduled-basis.md)  
+ [Lezione 2: Valutare i criteri per procedure consigliate migliori in base a una pianificazione](../../2014/tutorials/lesson-2-evaluate-best-practices-policies-on-a-scheduled-basis.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Monitorare e applicare le procedure consigliate tramite la gestione basata su criteri](../relational-databases/policy-based-management/monitor-and-enforce-best-practices-by-using-policy-based-management.md)   

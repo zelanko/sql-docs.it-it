@@ -4,18 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: tools-other
 ms.topic: conceptual
 ms.assetid: 7e2e586d-947d-4fe2-86c5-f06200ebf139
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 79e21716c4d484aa9dfba994bf1b970fedfe4235
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0c040bde90a54b9327023d1e1889efdd2930d81b
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48181401"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53350819"
 ---
 # <a name="distributed-replay-security"></a>Sicurezza di Distributed Replay
   Prima di installare e usare le funzionalità di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Riesecuzione distribuita, è necessario leggere le importanti informazioni sulla sicurezza riportate in questo argomento. In questo argomento vengono descritti i passaggi per la configurazione della sicurezza post-installazione che è necessario eseguire prima di poter utilizzare Distributed Replay. Questo argomento illustra anche considerazioni importanti sulla protezione dei dati e importanti passaggi relativi alla rimozione.  
@@ -29,7 +29,7 @@ ms.locfileid: "48181401"
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Account del servizio client di Riesecuzione distribuita|Può essere un account utente di dominio o locale. Se si utilizza un account utente locale, il controller, il client e l'istanza di SQL Server di destinazione devono essere tutti eseguiti nello stesso computer.<br /><br /> **\*\* Nota sulla sicurezza \*\*** È consigliabile evitare che l'account sia un membro del gruppo Administrators locale in Windows.|  
 |Account utente interattivo utilizzato per eseguire lo strumento Distributed Replay Administration Tool|Può essere un account utente locale o di dominio. Per utilizzare un account utente locale, lo strumento di amministrazione e il controller devono essere eseguiti nello stesso computer.|  
   
- **Importante**: quando si configura il controller di Riesecuzione distribuita, è possibile specificare uno o più account utente da usare per eseguire i servizi client Riesecuzione distribuita. Di seguito viene fornito l'elenco degli account supportati:  
+ **Importante**: quando si configura Distributed Replay Controller, è possibile specificare uno o più account utente da usare per eseguire i servizi client Riesecuzione distribuita. Di seguito viene fornito l'elenco degli account supportati:  
   
 -   Account utente di dominio  
   
@@ -70,7 +70,7 @@ ms.locfileid: "48181401"
   
  Per configurare le autorizzazioni DCOM del controller, effettuare le seguenti operazioni:  
   
-1.  **Aprire dcomcnfg.exe, lo snap-in Servizi componenti**: si tratta dello strumento usato per configurare le autorizzazioni DCOM.  
+1.  **Snap-in Servizi componenti Open dcomcnfg.exe,**: Questo è lo strumento che consente di configurare le autorizzazioni DCOM.  
   
     1.  Nel computer controller fare clic sul menu **Start**.  
   
@@ -78,9 +78,9 @@ ms.locfileid: "48181401"
   
     3.  Premere INVIO.  
   
-2.  **Configurare le autorizzazioni DCOM a livello di computer**: concedere le autorizzazioni DCOM a livello di computer corrispondenti per ogni account elencato nella tabella seguente. Per altre informazioni sull'impostazione di autorizzazioni a livello di computer, vedere [Elenco di controllo: Gestire le applicazioni DCOM](http://go.microsoft.com/fwlink/?LinkId=185842).  
+2.  **Configurare le autorizzazioni DCOM a livello di computer**: Concedere le autorizzazioni DCOM a livello di computer corrispondenti per ogni account indicato nella tabella seguente. Per altre informazioni su come impostare le autorizzazioni a livello di computer, vedere [elenco di controllo: Gestire le applicazioni DCOM](https://go.microsoft.com/fwlink/?LinkId=185842).  
   
-3.  **Configurare le autorizzazioni DCOM specifiche dell'applicazione**: concedere le autorizzazioni DCOM corrispondenti specifiche dell'applicazione per ogni account elencato nella tabella seguente. Il nome dell'applicazione DCOM per il servizio controller è **DReplayController**. Per altre informazioni sull'impostazione di autorizzazioni specifiche dell'applicazione, vedere [Elenco di controllo: Gestire le applicazioni DCOM](http://go.microsoft.com/fwlink/?LinkId=185842).  
+3.  **Configurare le autorizzazioni DCOM specifiche dell'applicazione**: Concedere le corrispondenti autorizzazioni DCOM specifiche dell'applicazione per ogni account indicato nella tabella seguente. Il nome dell'applicazione DCOM per il servizio controller è **DReplayController**. Per altre informazioni su come impostare le autorizzazioni specifiche dell'applicazione, vedere [elenco di controllo: Gestire le applicazioni DCOM](https://go.microsoft.com/fwlink/?LinkId=185842).  
   
  Nella tabella seguente sono descritte le autorizzazioni DCOM richieste per l'account utente interattivo dello strumento di amministrazione e per gli account del servizio client:  
   

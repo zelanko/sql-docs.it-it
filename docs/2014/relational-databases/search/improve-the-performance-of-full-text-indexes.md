@@ -17,12 +17,12 @@ ms.assetid: ef39ef1f-f0b7-4582-8e9c-31d4bd0ad35d
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9131bda927e123d3b718d9a769ef59efff157903
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0a93abdc2c20b2aabc9da09ce875817ab92789b8
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48111566"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53350860"
 ---
 # <a name="improve-the-performance-of-full-text-indexes"></a>Miglioramento delle prestazioni di indici full-text
   Le prestazioni di esecuzione dell'indicizzazione e delle query full-text possono dipendere da risorse hardware quali memoria e velocità del disco e della CPU, nonché dall'architettura del computer.  
@@ -64,14 +64,14 @@ ms.locfileid: "48111566"
   
 -   Aggiornare le statistiche della tabella di base utilizzando l'istruzione [UPDATE STATISTICS](/sql/t-sql/statements/update-statistics-transact-sql) . Un'operazione ancora più importante consiste nell'aggiornamento delle statistiche nell'indice cluster o nella chiave full-text per un popolamento completo. In questo modo, tramite un popolamento a più intervalli è possibile generare partizioni ottimali nella tabella.  
   
--   Compilare un indice secondario in un `timestamp` colonna se si desidera migliorare le prestazioni del popolamento incrementale.  
+-   Compilare un indice secondario in una colonna `timestamp` per migliorare le prestazioni di esecuzione del popolamento incrementale.  
   
 -   Prima di eseguire un popolamento completo in un computer di grandi dimensioni con più CPU, è consigliabile limitare temporaneamente la dimensione del pool di buffer impostando il valore `max server memory` in modo tale da lasciare una quantità di memoria sufficiente per il processo fdhost.exe e il sistema operativo. Per ulteriori informazioni, vedere "Stima dei requisiti di memoria del processo host del daemon di filtri (fdhost.exe)" più avanti in questo argomento.  
   
   
   
 ##  <a name="full"></a> Risoluzione dei problemi di prestazioni di popolamenti completi  
- Per diagnosticare problemi di prestazioni, analizzare i log della ricerca per indicizzazione full-text. Per informazioni sui log di ricerca per indicizzazione, vedere [popolamento degli indici Full-Text](../indexes/indexes.md).  
+ Per diagnosticare problemi di prestazioni, analizzare i log della ricerca per indicizzazione full-text. Per informazioni sui log di ricerca per indicizzazione, vedere [Popolamento degli indici full-text](../indexes/indexes.md).  
   
  Nel caso in cui le prestazioni dei popolamenti completi non raggiungano livelli soddisfacenti, è consigliabile eseguire la procedura di risoluzione dei problemi illustrata di seguito nell'ordine in cui è riportata.  
   
@@ -79,7 +79,7 @@ ms.locfileid: "48111566"
  Durante un popolamento full-text, è possibile che la memoria disponibile per fdhost.exe o sqlservr.exe diventi insufficiente o si esaurisca. Se il log delle ricerche per indicizzazione full-text indica il riavvio frequente del processo fdhost.exe o la restituzione frequente del codice di errore 8007008, uno di questi processi non dispone di memoria sufficiente. Se fdhost.exe produce dump, in particolare in computer di grandi dimensioni con più CPU, è possibile che la memoria si esaurisca.  
   
 > [!NOTE]  
->  Per ottenere informazioni sui buffer di memoria utilizzata da una ricerca per indicizzazione full-text, vedere [DM fts_memory_buffers &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-memory-buffers-transact-sql).  
+>  Per informazioni sui buffer di memoria usati da una ricerca per indicizzazione full-text, vedere [sys.dm_fts_memory_buffers &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-memory-buffers-transact-sql).  
   
  I motivi possibili sono i seguenti:  
   
@@ -126,12 +126,12 @@ ms.locfileid: "48111566"
 > [!IMPORTANT]  
 >  Per informazioni essenziali sulle formule, vedere <sup>1</sup>, <sup>2</sup>, e <sup>3</sup>riportato di seguito.  
   
-|Piattaforma|Stima dei requisiti di memoria fdhost.exe in MB —*F*<sup>1</sup>|Formula per il calcolo di max server memory, ovvero*M*<sup>2</sup>|  
+|Piattaforma|Stima dei requisiti di memoria fdhost.exe in MB*F*<sup>1</sup>|Formula per il calcolo della memoria massima del server -*M*<sup>2</sup>|  
 |--------------|---------------------------------------------------------------------|---------------------------------------------------------------|  
-|x86|*F* **=** *Number of crawl ranges* **\*** 50|*M* **= minimo (** *T* **,** 2000 **) –*`F`*–** 500|  
-|x64|*F* **=** *numero di intervalli di ricerca per indicizzazione* **\*** 10 **\*** 8|*M* **=** *T* **–** *F* **–** 500|  
+|x86|*F* **=** *Number of crawl ranges* **\*** 50|*M* **= minimo (** *T* **,** 2000 **)-*`F`* -**  500|  
+|x64|*F* **=** *numero di intervalli di ricerca per indicizzazione* **\*** 10 **\*** 8|*M* **=** *T* **-** *F* **-** 500|  
   
- <sup>1</sup> se è in corso più popolamenti completi, calcolare i requisiti di memoria fdhost.exe della ognuno separatamente, ad esempio *F1*, *F2*e così via. Calcolare quindi *M* come *T***–** sigma **(***F*i**)**.  
+ <sup>1</sup> se è in corso più popolamenti completi, calcolare i requisiti di memoria fdhost.exe della ognuno separatamente, ad esempio *F1*, *F2*e così via. Quindi calcolare *M* come *T * * *-** sigma **(* **F*ho**) * *.  
   
  <sup>2</sup> 500 MB è una stima della memoria necessaria per altri processi nel sistema. Se nel sistema sono in corso processi aggiuntivi, aumentare questo valore di conseguenza.  
   
@@ -143,11 +143,11 @@ ms.locfileid: "48111566"
   
  `F = 8*10*8=640`  
   
- Il calcolo successivo Ottiene il valore ottimale per `max server memory`—*M*. *L*a memoria fisica totale disponibile su questo sistema in MB—*T*—è `8192`.  
+ Il calcolo successivo Ottiene il valore ottimale per `max server memory` - *M*. *T*memoria fisica disponibile nel sistema in MB - totale*T*-è `8192`.  
   
  `M = 8192-640-500=7052`  
   
- **Esempio: Impostazione della memoria massima del server**  
+ **Esempio: Impostare la memoria massima del server**  
   
  Questo esempio Usa la [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) e [RICONFIGURARE](/sql/t-sql/language-elements/reconfigure-transact-sql) [!INCLUDE[tsql](../../../includes/tsql-md.md)] istruzioni per impostare `max server memory` sul valore calcolato per *M* nell'esempio precedente , `7052`:  
   
@@ -171,7 +171,7 @@ GO
   
 -   Lunga attesa di pagine  
   
-     Per verificare la disponibilità elevato tempo di attesa delle pagine, eseguire il codice seguente [!INCLUDE[tsql](../../../includes/tsql-md.md)] istruzione:  
+     Per determinare il tempo di attesa delle pagine, eseguire l'istruzione [!INCLUDE[tsql](../../../includes/tsql-md.md)] seguente:  
   
     ```  
     Execute SELECT TOP 10 * FROM sys.dm_os_wait_stats ORDER BY wait_time_ms DESC;  
@@ -179,7 +179,7 @@ GO
   
      Nella tabella seguente vengono descritti i tipi di attesa relativi a questo contesto.  
   
-    |Tipo di attesa|Description|Possibile soluzione|  
+    |Tipo di attesa|Descrizione|Possibile soluzione|  
     |---------------|-----------------|-------------------------|  
     |PAGEIO_LATCH_SH (_EX o _UP)|Può indicare un collo di bottiglia a livello di IO, caso in cui anche la lunghezza media della coda del disco sarebbe elevata.|Lo spostamento dell'indice full-text in un filegroup diverso in un disco diverso potrebbe contribuire a ridurre il collo di bottiglia a livello di IO.|  
     |PAGELATCH_EX (o _UP)|Può indicare contese tra i thread che tentano di scrivere nello stesso file di database.|L'aggiunta di file al filegroup in cui risiede l'indice full-text potrebbe contribuire ad attenuare queste contese.|  
@@ -203,7 +203,7 @@ GO
   
  Ai fini della sicurezza, i filtri vengono caricati dai processi dell'host del daemon di filtri. In un'istanza del server viene utilizzato un processo a thread multipli per tutti i filtri a thread multipli e un processo a thread singolo per tutti i filtri a thread singolo. Quando un documento che utilizza un filtro multithread contiene un documento incorporato che utilizza un filtro a thread singolo, il motore di ricerca full-text avvia un processo a thread singolo per il documento incorporato. Nel caso di un documento di Word che contiene un documento PDF, il motore di ricerca full-text usa il processo multithread per esaminare il contenuto in formato Word e avvia un processo a thread singolo per esaminare il contenuto in formato PDF. Un filtro a thread singolo potrebbe tuttavia non funzionare in modo corretto in questo ambiente e potrebbe destabilizzare il processo di filtraggio. In alcune situazioni in cui i documenti incorporati rappresentano una prassi comune, la destabilizzazione potrebbe provocare errori irreversibili nel processo di filtraggio. In questo caso, il motore di ricerca full-text reindirizza tutti i documenti che hanno provocato l'errore, ad esempio un documento di Word in cui è incorporato contenuto in formato PDF, al processo di filtraggio a thread singolo. Se il reindirizzamento viene eseguito di frequente, le prestazioni del processo di indicizzazione full-text risultano ridotte.  
   
- Per risolvere questo problema, è necessario contrassegnare il filtro per il documento contenitore, in questo caso il documento di Word, come filtro a thread singolo. È possibile modificare il valore del Registro di sistema per il filtro per contrassegnare un filtro specifico come filtro a thread singolo. Per contrassegnare un filtro come filtro a thread singolo, è necessario impostare il **ThreadingModel** valore del Registro di sistema per il filtro su `Apartment Threaded`. Per informazioni sugli apartment a thread singolo, vedere il white paper [Understanding and Using COM Threading Models](http://go.microsoft.com/fwlink/?LinkId=209159).  
+ Per risolvere questo problema, è necessario contrassegnare il filtro per il documento contenitore, in questo caso il documento di Word, come filtro a thread singolo. È possibile modificare il valore del Registro di sistema per il filtro per contrassegnare un filtro specifico come filtro a thread singolo. Per contrassegnare un filtro come filtro a thread singolo, è necessario impostare il **ThreadingModel** valore del Registro di sistema per il filtro su `Apartment Threaded`. Per informazioni sugli apartment a thread singolo, vedere il white paper [Understanding and Using COM Threading Models](https://go.microsoft.com/fwlink/?LinkId=209159).  
   
   
   

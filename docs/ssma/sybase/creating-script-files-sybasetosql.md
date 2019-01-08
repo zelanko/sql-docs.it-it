@@ -15,23 +15,23 @@ ms.assetid: e6baf106-abbd-4200-b3de-33b4b4f1b294
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: dfb1ecaff0836989893940303e8c8bbaf16078af
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a26b9caa7b6ba54238ef5436cafb472e2d53010a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47605851"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52515025"
 ---
 # <a name="creating-script-files-sybasetosql"></a>Creazione di file di script (SybaseToSQL)
 Il primo passaggio prima di avviare l'applicazione console SSMA consiste nel creare il file di script e, se è necessario creare il file di valore della variabile e il file di connessione del server.  
   
 Il file di script può essere suddivisi in tre sezioni, una visualizzazione dei..,:  
   
-1.  **configurazione:** consente all'utente di impostare i parametri di configurazione per l'applicazione console.  
+1.  **config:** Consente all'utente di impostare i parametri di configurazione per l'applicazione console.  
   
-2.  **Server:** consente all'utente di impostare le definizioni del server di origine/destinazione. Può essere anche in un file di connessione server separato.  
+2.  **Server:** Consente all'utente di impostare le definizioni del server di origine/destinazione. Può essere anche in un file di connessione server separato.  
   
-3.  **i comandi script:** consente all'utente di eseguire i comandi del flusso di lavoro SSMA.  
+3.  **comandi script:** Consente all'utente di eseguire i comandi del flusso di lavoro SSMA.  
   
 Ogni sezione viene descritto in dettaglio di seguito:  
   
@@ -42,13 +42,13 @@ Se viene specificato uno degli elementi nel nodo di configurazione, sono configu
   
 Le opzioni configurabili dall'utente includono:  
   
-1.  **Provider di finestra di output:** se sopprimere-messages attributo è impostato su 'true', la specifica del comando messaggi non visualizzati nella console. Di seguito è riportata la descrizione degli attributi:  
+1.  **Provider di finestra di output:** Se-Elimina messaggi attributo è impostato su 'true', la specifica del comando messaggi non visualizzati nella console. Di seguito è riportata la descrizione degli attributi:  
   
-    -   destinazione: Specifica se l'output deve ottenere stampato in un file o stdout. Questo è false per impostazione predefinita.  
+    -   Destinazione: Specifica se l'output deve ottenere stampato in un file o stdout. Questo è false per impostazione predefinita.  
   
-    -   nome del file: il percorso del file (facoltativo).  
+    -   nome del file: Il percorso del file (facoltativo).  
   
-    -   eliminare-messages: evita la visualizzazione dei messaggi della console. Ciò è 'false' per impostazione predefinita.  
+    -   eliminare-messages: Elimina i messaggi nella console. Ciò è 'false' per impostazione predefinita.  
   
     **Esempio:**  
   
@@ -67,10 +67,10 @@ Le opzioni configurabili dall'utente includono:
   
     </output-providers>  
     ```  
-    *o*  
+    *o Gestione configurazione*  
   
     ```xml  
-    <…All commands…>  
+    <...All commands...>  
   
       <output-window  
   
@@ -82,10 +82,10 @@ Le opzioni configurabili dall'utente includono:
   
        />  
   
-    </…All commands…>  
+    </...All commands...>  
     ```  
   
-2.  **Provider di connessione dati della migrazione:** specifica che il server di origine/destinazione è da considerare per la migrazione dei dati.  Origine-usare-last-used indica che viene utilizzato l'ultimo server di origine usati per la migrazione dei dati. Allo stesso modo destinazione Usa-ultimo usato indica che viene utilizzato l'ultimo server di destinazione usata per la migrazione dei dati. L'utente può anche specificare il server (origine o destinazione) con il server di origine degli attributi o server di destinazione.  
+2.  **Provider di connessione dati della migrazione:** Specifica che il server di origine/destinazione è da considerare per la migrazione dei dati.  Origine-usare-last-used indica che viene utilizzato l'ultimo server di origine usati per la migrazione dei dati. Allo stesso modo destinazione Usa-ultimo usato indica che viene utilizzato l'ultimo server di destinazione usata per la migrazione dei dati. L'utente può anche specificare il server (origine o destinazione) con il server di origine degli attributi o server di destinazione.  
   
     Solo uno o l'altro attributo specificato può essere utilizzato, ad esempio:  
   
@@ -104,7 +104,7 @@ Le opzioni configurabili dall'utente includono:
   
     </output-providers>  
     ```  
-    *o*  
+    *o Gestione configurazione*  
   
     ```xml  
     <migrate-data>  
@@ -116,7 +116,7 @@ Le opzioni configurabili dall'utente includono:
     </migrate-data>  
     ```  
   
-3.  **Popup di Input utente:** in questo modo la gestione degli errori, quando gli oggetti vengono caricati dal database. L'utente fornisce le modalità di input e in caso di errore, la console prosegue come se l'utente specifica.  
+3.  **Popup di Input utente:** In questo modo la gestione degli errori, quando gli oggetti vengono caricati dal database. L'utente fornisce le modalità di input e in caso di errore, la console prosegue come se l'utente specifica.  
   
     Le modalità comprendono:  
   
@@ -137,7 +137,7 @@ Le opzioni configurabili dall'utente includono:
   
     </output-providers>  
     ```  
-    *o*  
+    *o Gestione configurazione*  
   
     ```xml  
     <!-- Connect to target database -->  
@@ -149,13 +149,13 @@ Le opzioni configurabili dall'utente includono:
     </connect-target-database>  
     ```  
   
-4.  **Ristabilire la connessione del Provider:** ciò consente all'utente di impostare la riconnessione ignori le impostazioni degli errori di connessione. Può essere impostato per i server di origine e di destinazione.  
+4.  **Ristabilire la connessione del Provider:** Ciò consente all'utente di impostare la riconnessione ignori le impostazioni degli errori di connessione. Può essere impostato per i server di origine e di destinazione.  
   
     Le modalità di riconnessione sono:  
   
-    -   ristabilire la connessione-last-utilizzato-server: se la connessione non è attiva, tenta di riconnettersi all'ultimo server utilizzato al massimo 5 volte.  
+    -   ristabilire la connessione-last-utilizzato-server: Se la connessione non è attiva, tenta di riconnettersi all'ultimo server utilizzato al massimo 5 volte.  
   
-    -   generare un errore: se la connessione non è attiva, viene generato un errore.  
+    -   generare un-errore: Se la connessione non è attiva, viene generato un errore.  
   
     La modalità predefinita è **generare un errore**.  
   
@@ -170,7 +170,7 @@ Le opzioni configurabili dall'utente includono:
   
     </output-providers>  
     ```  
-    *o*  
+    *o Gestione configurazione*  
   
     ```xml  
     <!--synchronization-->  
@@ -181,7 +181,7 @@ Le opzioni configurabili dall'utente includono:
   
     </synchronize-target>  
     ```  
-    *o*  
+    *o Gestione configurazione*  
   
     ```xml  
     <!--data migration-->  
@@ -197,15 +197,15 @@ Le opzioni configurabili dall'utente includono:
     </migrate-data>  
     ```  
   
-5.  **Provider di sovrascrittura di convertitore:** ciò consente all'utente di gestire gli oggetti che sono già presenti nella destinazione della metabase. Le possibili azioni includono:  
+5.  **Convertitore di sovrascrittura del Provider:** Ciò consente all'utente di gestire gli oggetti che sono già presenti nella destinazione della metabase. Le possibili azioni includono:  
   
-    -   Errore: la console viene visualizzato un errore e arresta l'esecuzione.  
+    -   Errore: La console viene visualizzato un errore e arresta l'esecuzione.  
   
-    -   sovrascrittura: sovrascrive i valori di oggetto esistente. Questa azione viene eseguita per impostazione predefinita.  
+    -   sovrascrittura: Sovrascrive i valori di oggetto esistente. Questa azione viene eseguita per impostazione predefinita.  
   
-    -   ignorare: la console ignora gli oggetti che esistono già nel database  
+    -   Skip: La console ignora gli oggetti che esistono già nel database  
   
-    -   utente chiedere: richiede l'input dell'utente ('Sì' / 'no')  
+    -   chiedere-utente: Richiede l'input dell'utente ('Sì' / 'no')  
   
     **Esempio:**  
   
@@ -216,7 +216,7 @@ Le opzioni configurabili dall'utente includono:
   
     </output-providers>  
     ```  
-    *o*  
+    *o Gestione configurazione*  
   
     ```xml  
     <convert-schema object-name="<object-name>">  
@@ -226,7 +226,7 @@ Le opzioni configurabili dall'utente includono:
     </convert-schema>  
     ```  
   
-6.  **Provider di prerequisiti non riuscito:** ciò consente all'utente di gestire tutti i prerequisiti necessari per l'elaborazione di un comando. Per impostazione predefinita, la modalità strict è 'false'. Se è impostata su 'true', eccezione generato per la mancata soddisfino i prerequisiti.  
+6.  **Provider di prerequisiti con errori:** Ciò consente all'utente di gestire tutti i prerequisiti necessari per l'elaborazione di un comando. Per impostazione predefinita, la modalità strict è 'false'. Se è impostata su 'true', eccezione generato per la mancata soddisfino i prerequisiti.  
   
     **Esempio:**  
   
@@ -238,11 +238,11 @@ Le opzioni configurabili dall'utente includono:
     </output-providers>  
     ```  
   
-7.  **Operazione di arresto:** durante l'operazione a metà, se l'utente desidera arrestare l'operazione, quindi **'Ctrl + C'** tasti di scelta rapida può essere utilizzato. SSMA per Sybase Console attenderà il completamento dell'operazione e termina l'esecuzione della console.  
+7.  **Arrestare l'operazione:** Durante l'operazione a metà, se l'utente desidera arrestare l'operazione, quindi **'Ctrl + C'** tasti di scelta rapida può essere utilizzato. SSMA per Sybase Console attenderà il completamento dell'operazione e termina l'esecuzione della console.  
   
     Se l'utente desidera arrestare l'esecuzione immediatamente, quindi **'Ctrl + C'** tasti di scelta rapida è possibile premere nuovamente per la chiusura improvvisa di applicazione Console SSMA  
   
-8.  **Provider di stato di avanzamento:** segnala lo stato di avanzamento di ogni comando della console. Questo è disabilitato per impostazione predefinita. Gli attributi di report di stato includono quanto segue:  
+8.  **Provider di stato di avanzamento:** Indica lo stato di avanzamento di ogni comando della console. Questo è disabilitato per impostazione predefinita. Gli attributi di report di stato includono quanto segue:  
   
     -   off  
   
@@ -269,10 +269,10 @@ Le opzioni configurabili dall'utente includono:
   
     </output-providers>  
     ```  
-    *o*  
+    *o Gestione configurazione*  
   
     ```xml  
-    <…All commands…>  
+    <...All commands...>  
   
       <progress-reporting  
   
@@ -282,22 +282,22 @@ Le opzioni configurabili dall'utente includono:
   
         report-progress="every-1%/every-2%/every-5%/every-10%/every-20%/off (optional)/>  
   
-    </…All commands…>  
+    </...All commands...>  
     ```  
   
-9. **Livello di dettaglio del logger:** set log a livello di dettaglio. Questo corrisponde all'opzione di tutte le categorie nell'interfaccia utente. Per impostazione predefinita, il livello di dettaglio del log è "error".  
+9. **Livello di dettaglio del logger:** Set di log a livello di dettaglio. Questo corrisponde all'opzione di tutte le categorie nell'interfaccia utente. Per impostazione predefinita, il livello di dettaglio del log è "error".  
   
     Le opzioni a livello di logger includono:  
   
-    -   Errore irreversibile: vengono registrati solo-errore irreversibile.  
+    -   Errore irreversibile: Vengono registrati solo i messaggi di errore irreversibile.  
   
-    -   Errore: vengono registrati solo i messaggi di errore ed errore irreversibile.  
+    -   Errore: Vengono registrati solo i messaggi di errore ed errore irreversibile.  
   
-    -   Avviso: tutti i livelli ad eccezione dei messaggi di debug e le informazioni vengono registrati.  
+    -   Avviso: Tutti i livelli ad eccezione dei messaggi di debug e le informazioni vengono registrati.  
   
-    -   Info: tutti i livelli ad eccezione del fatto che vengono registrati i messaggi di debug.  
+    -   Info: Tutti i livelli ad eccezione del fatto che vengono registrati i messaggi di debug.  
   
-    -   eseguire il debug: tutti i livelli di messaggi registrati.  
+    -   Eseguire il debug: Tutti i livelli di messaggi registrati.  
   
     > [!NOTE]  
     > Obbligatori vengono registrati a qualsiasi livello.  
@@ -311,17 +311,17 @@ Le opzioni configurabili dall'utente includono:
   
     </output-providers>  
     ```  
-    *o*  
+    *o Gestione configurazione*  
   
     ```xml  
-    <…All commands…>  
+    <...All commands...>  
   
       <log-verbosity level="fatal-error/error/warning/info/debug"/>  
   
-    </…All commands…>  
+    </...All commands...>  
     ```  
   
-10. **Password crittografata di sostituzione:** se 'true', la password come testo non crittografato specificato nella sezione Definizione server dei file di connessione del server o nel file di script, gli override la password crittografata archiviata in archivio protetto se esiste. Se non viene specificata alcuna password in testo non crittografato, l'utente viene richiesto di immettere la password.  
+10. **Eseguire l'override Password crittografate:** Se 'true', la password come testo non crittografato specificato nella sezione Definizione server dei file di connessione del server o nel file di script, gli override la password crittografata archiviata nell'archivio protetto, se presente. Se non viene specificata alcuna password in testo non crittografato, l'utente viene richiesto di immettere la password.  
   
     Qui si verificano due casi:  
   
@@ -341,7 +341,7 @@ Le opzioni configurabili dall'utente includono:
   
 L'opzione non configurabile è:  
   
--   **Numero massimo di tentativi di riconnessione:** quando una connessione stabilita verifica il timeout o interruzioni a causa di errori di rete, il server è necessario la riconnessione. I tentativi di riconnessione sono consentiti al massimo **5** tentativi dopo questa operazione, la console esegue automaticamente la riconnessione. La funzionalità di riconnessione automatica riduce l'impegno nell'eseguire nuovamente lo script.  
+-   **Numero massimo di tentativi di riconnessione:** Quando una connessione stabilita scade o viene interrotta a causa di errori di rete, il server è necessario la riconnessione. I tentativi di riconnessione sono consentiti al massimo **5** tentativi dopo questa operazione, la console esegue automaticamente la riconnessione. La funzionalità di riconnessione automatica riduce l'impegno nell'eseguire nuovamente lo script.  
   
 ## <a name="server-connection-parameters"></a>Parametri di connessione server  
 Parametri di connessione server possono essere definiti nel file di script o nel file di connessione del server. Consultare il [creazione di file di connessione del Server &#40;SybaseToSQL&#41; ](../../ssma/sybase/creating-the-server-connection-files-sybasetosql.md) sezione per altri dettagli  
@@ -349,7 +349,7 @@ Parametri di connessione server possono essere definiti nel file di script o nel
 ## <a name="script-commands"></a>Comandi script  
 Il file script contiene una sequenza di comandi del flusso di lavoro migrazione in formato XML. L'applicazione console SSMA elabora la migrazione nell'ordine i comandi visualizzati nel file di script.  
   
-Ad esempio, una migrazione tipica dei dati di una tabella specifica in un database di Sybase segue la gerarchia dei: Database -&gt;Schema -&gt;tabella.  
+Ad esempio, una migrazione tipica dei dati di una tabella specifica in un database di Sybase segue la gerarchia di: Database -&gt;Schema -&gt;tabella.  
   
 Quando tutti i comandi nel file di script vengono eseguiti correttamente, l'applicazione console SSMA viene chiusa e restituisce il controllo all'utente. Il contenuto di un file script è più o meno statico con informazioni sulle variabili contenute in un [file con valori di variabile](creating-variable-value-files-sybasetosql.md) o, in una sezione separata all'interno del file di script per i valori delle variabili.  
   

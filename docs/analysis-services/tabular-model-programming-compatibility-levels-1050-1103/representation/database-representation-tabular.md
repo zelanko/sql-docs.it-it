@@ -1,5 +1,5 @@
 ---
-title: Database (tabulare) | Documenti Microsoft
+title: Database (tabulare) | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: b6a55afa2c152fe5a97c474f0a23af1fda12ff57
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 807e1f2c864f4e6574188e3f3d717e9bdf571c93
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34040077"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52525668"
 ---
 # <a name="database-representationtabular"></a>Rappresentazione del database(tabulare)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -36,10 +36,10 @@ ms.locfileid: "34040077"
   
 ```csharp  
 using ADOMD = Microsoft.AnalysisServices.AdomdClient;  
-…  
+...  
    ADOMD.AdomdConnection currrentCnx = new ADOMD.AdomdConnection("Data Source=<<server\instance>>;Catalog=<<database>>");  
    currrentCnx.Open();  
-…  
+...  
   
 ```  
   
@@ -53,7 +53,7 @@ currentCnx.ChangeDatabase("myOtherDatabase");
 ## <a name="database-in-amo"></a>Database in AMO  
  Quando si utilizza AMO per gestire un oggetto di database, iniziare con un oggetto <xref:Microsoft.AnalysisServices.Server>. Quindi cercare il database nella raccolta di database oppure creare un nuovo database aggiungendone uno alla raccolta.  
   
- Nel frammento di codice seguente vengono illustrati i passaggi per connettersi a un server e creare un database vuoto, dopo avere verificato che il database non esista già:  
+ Il frammento di codice seguente illustra i passaggi per connettersi a un server e creare un database vuoto, dopo aver verificato il database non esiste:  
   
 ```  
   
@@ -86,6 +86,6 @@ catch (Exception createDBxc)
   
 ```  
   
- Per comprendere come utilizzare AMO per creare e modificare le rappresentazioni di database, vedere il codice sorgente nell'esempio di Tabular AMO 2012; in particolare controllare nel seguente file di origine: Database.cs. L'esempio è disponibile in Codeplex. Il codice di esempio viene fornito solo come supporto ai concetti logici illustrati in questo argomento e non deve essere utilizzato in un ambiente di produzione.  
+ Per informazioni pratiche su come usare AMO per creare e modificare le rappresentazioni di database, vedere il codice sorgente nell'esempio Tabular AMO 2012, verificando in particolare il file di origine seguente: Database.cs. L'esempio è disponibile in Codeplex. Il codice di esempio viene fornito solo come supporto ai concetti logici illustrati in questo argomento e non deve essere utilizzato in un ambiente di produzione.  
   
   

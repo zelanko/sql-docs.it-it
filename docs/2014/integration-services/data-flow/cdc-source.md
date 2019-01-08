@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.designer.cdcsource.f1
@@ -13,12 +12,12 @@ ms.assetid: 99775608-e177-44ed-bb44-aaccb0f4f327
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4bf104479ab03525ed648d73911931263206d07b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: af2f56c92947cd8e210b8532cb6899c52486707e
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48063091"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53349816"
 ---
 # <a name="cdc-source"></a>Origine CDC
   Tramite l'origine CDC viene letto un intervallo di dati delle modifiche da tabelle delle modifiche di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ; queste vengono poi recapitate a valle ad altri componenti SSIS.  
@@ -46,11 +45,11 @@ ms.locfileid: "48063091"
 ## <a name="error-handling"></a>Gestione degli errori  
  L'origine CDC include un output degli errori. L'output degli errori del componente include le colonne di output seguenti:  
   
--   **Error Code**: il valore è sempre -1.  
+-   **Codice di errore**: Il valore è sempre -1.  
   
--   **Error Column**(Colonna errore): colonna di origine che provoca l'errore (per gli errori di conversione).  
+-   **Errore colonna**: La colonna di origine che provoca l'errore (per gli errori di conversione).  
   
--   **Error Row Columns**: dati del record che provocano l'errore.  
+-   **Error Row Columns**: I dati del record che ha provocato l'errore.  
   
  A seconda dell'impostazione del comportamento in seguito all'errore, l'origine CDC supporta la restituzione degli errori (conversione dei dati, troncamento) che si verificano durante il processo di estrazione nell'output degli errori. Per altre informazioni, vedere [CDC Source Editor &#40;Error Output Page&#41;](../cdc-source-editor-error-output-page.md).  
   
@@ -100,9 +99,9 @@ use <cdc-enabled-database-name>
   
 -   [Editor origine CDC &#40;pagina Gestione connessione&#41;](../cdc-source-editor-connection-manager-page.md)  
   
--   [Editor origine CDC &#40;(pagina colonne)&#41;](../cdc-source-editor-columns-page.md)  
+-   [Editor origine CDC &#40;pagina Colonne&#41;](../cdc-source-editor-columns-page.md)  
   
--   [Editor origine CDC &#40;pagina dell'Output degli errori&#41;](../cdc-source-editor-error-output-page.md)  
+-   [Editor origine CDC &#40;pagina Output degli errori&#41;](../cdc-source-editor-error-output-page.md)  
   
  La finestra di dialogo **Editor avanzato** contiene le proprietà che è possibile impostare a livello di codice.  
   
@@ -112,13 +111,13 @@ use <cdc-enabled-database-name>
   
  Per altre informazioni sulle proprietà che è possibile impostare nella finestra di dialogo **Editor avanzato** , vedere [Proprietà personalizzate dell'origine CDC](cdc-source-custom-properties.md).  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>In questa sezione  
   
 -   [Editor origine CDC &#40;pagina Gestione connessione&#41;](../cdc-source-editor-connection-manager-page.md)  
   
--   [Editor origine CDC &#40;(pagina colonne)&#41;](../cdc-source-editor-columns-page.md)  
+-   [Editor origine CDC &#40;pagina Colonne&#41;](../cdc-source-editor-columns-page.md)  
   
--   [Editor origine CDC &#40;pagina dell'Output degli errori&#41;](../cdc-source-editor-error-output-page.md)  
+-   [Editor origine CDC &#40;pagina Output degli errori&#41;](../cdc-source-editor-error-output-page.md)  
   
 -   [Proprietà personalizzate dell'origine CDC](cdc-source-custom-properties.md)  
   
@@ -126,6 +125,6 @@ use <cdc-enabled-database-name>
   
 ## <a name="related-content"></a>Contenuto correlato  
   
--   Intervento nel blog sulle [modalità di elaborazione per l'origine CDC](http://go.microsoft.com/fwlink/?LinkId=242541) sul sito Web mattmasson.com.  
+-   Intervento nel blog sulle [modalità di elaborazione per l'origine CDC](https://go.microsoft.com/fwlink/?LinkId=242541) sul sito Web mattmasson.com.  
   
   

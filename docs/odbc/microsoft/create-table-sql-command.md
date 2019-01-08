@@ -13,12 +13,12 @@ ms.assetid: be2143ba-fc16-42c9-84f7-8985cd924860
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e1451ddc8ec43b1960ed6073fb836b05e8384bb2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 62d13bdc9d1a0fc030dc33bf982f6561b454c4ea
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47683010"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53213500"
 ---
 # <a name="create-table---sql-command"></a>CREATE TABLE (comando SQL)
 Crea una tabella con i campi specificati.  
@@ -111,12 +111,12 @@ CREATE TABLE mytable (char1 C(10), char2 C(10) NOCPTRANS,;
 ```  
   
  CHIAVE primaria *eExpression2* TAG *TagName2*  
- Specifica un indice primario per creare. *eExpression2* specifica qualsiasi campo o una combinazione dei campi nella tabella. TAG *TagName2 s*specifica il nome del tag di indice primario che viene creato. I nomi di tag di indice possono contenere fino a 10 caratteri.  
+ Specifica un indice primario per creare. *eExpression2* specifica qualsiasi campo o una combinazione dei campi nella tabella. TAG *TagName2* specifica il nome del tag di indice primario che viene creato. I nomi di tag di indice possono contenere fino a 10 caratteri.  
   
  Poiché una tabella può avere un solo indice primario, è possibile includere questa clausola se è già stato creato un indice primario per un campo. Se si include più di una clausola di chiave primaria nell'istruzione CREATE TABLE, Visual FoxPro genera un errore.  
   
  UNIVOCO *eExpression3*TAG *TagName3*  
- Crea un indice di candidati. *eExpression3* specifica qualsiasi campo o una combinazione dei campi nella tabella. Tuttavia, se è stato creato un indice primario con una delle opzioni chiave primaria, è possibile includere il campo specificato per l'indice primario. TAG *TagName3 s*specifica un nome di tag per il tag di indice candidato creato. I nomi di tag di indice possono contenere fino a 10 caratteri.  
+ Crea un indice di candidati. *eExpression3* specifica qualsiasi campo o una combinazione dei campi nella tabella. Tuttavia, se è stato creato un indice primario con una delle opzioni chiave primaria, è possibile includere il campo specificato per l'indice primario. TAG *TagName3* specifica un nome di tag per il tag di indice candidato che viene creato. I nomi di tag di indice possono contenere fino a 10 caratteri.  
   
  Una tabella può avere più indici candidato.  
   

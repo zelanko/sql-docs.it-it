@@ -1,5 +1,5 @@
 ---
-title: Creare una copia di un modello di Data Mining | Documenti Microsoft
+title: Creare una copia di un modello di Data Mining | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 23770ec59e31a51b7aca7badf5b827baa6181155
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 7c5479a43a07a6398ff45635828a2a9c88b7cb11
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34014588"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52502157"
 ---
 # <a name="make-a-copy-of-a-mining-model"></a>Eseguire una copia di un modello di data mining
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "34014588"
   
 3.  Selezionare il modello, quindi fare clic con il pulsante destro del mouse per aprire il menu di scelta rapida.  
   
-     -oppure-  
+     oppure  
   
      Selezionare il modello. Scegliere **Nuovo modello di data mining** dal menu **Modello di data mining**.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "34014588"
   
 1.  Selezionare il modello di data mining.  
   
-2.  Nella finestra **Proprietà** fare clic nella casella di testo relativa alla proprietà **Filtro** , quindi sul pulsante di compilazione **(…)** .  
+2.  Nel **delle proprietà** finestra, fare clic sulla casella di testo per il **filtro** proprietà, quindi scegliere la compilazione **(...)**  pulsante.  
   
 3.  Cambiare le condizioni di filtro.  
   
@@ -53,8 +53,8 @@ ms.locfileid: "34014588"
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
- [Filtri per i modelli di Data Mining & #40; Analysis Services - Data Mining & #41;](../../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)   
- [Procedure dettagliate e attività di modello di data mining](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)   
- [Eliminare un filtro da un modello di Data Mining](../../analysis-services/data-mining/delete-a-filter-from-a-mining-model.md)  
+ [Filtri per i modelli di data mining &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)   
+ [Attività e procedure relative al modello di data mining](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)   
+ [Eliminare un filtro da un modello di data mining](../../analysis-services/data-mining/delete-a-filter-from-a-mining-model.md)  
   
   

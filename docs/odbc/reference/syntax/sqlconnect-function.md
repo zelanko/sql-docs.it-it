@@ -20,16 +20,16 @@ ms.assetid: 59075e46-a0ca-47bf-972a-367b08bb518d
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a04daf57a348f20c8a5febe8d56f8ed9358b9053
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 530a5acf9cc7c0de375906279aff2bc6a05ec8a0
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47631989"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53213697"
 ---
 # <a name="sqlconnect-function"></a>Funzione SQLConnect
 **Conformità**  
- Versione introdotta: Conformità agli standard 1.0 di ODBC: ISO 92  
+ Versione introdotta: Conformità agli standard 1.0 ODBC: ISO 92  
   
  **Riepilogo**  
  **SQLConnect** stabilisce le connessioni a un driver e un'origine dati. L'handle di connessione fa riferimento ad archiviazione di tutte le informazioni sulla connessione all'origine dati, inclusi stato, lo stato della transazione e le informazioni sull'errore.  
@@ -76,7 +76,7 @@ SQLRETURN SQLConnect(
 ## <a name="diagnostics"></a>Diagnostica  
  Quando **SQLConnect** restituisce SQL_ERROR o SQL_SUCCESS_WITH_INFO, un valore SQLSTATE associato possono essere ottenuti chiamando **SQLGetDiagRec** con un *HandleType* di SQL _ HANDLE_DBC e un *gestiscono* dei *ConnectionHandle*. Nella tabella seguente sono elencati i valori SQLSTATE normalmente restituiti dal **SQLConnect** e illustra ognuna nel contesto di questa funzione; la notazione "(DM)" precede le descrizioni di SQLSTATE restituiti da Gestione Driver. Il codice restituito a ogni valore SQLSTATE è SQL_ERROR, se non specificato diversamente.  
   
-|SQLSTATE|Errore|Description|  
+|SQLSTATE|Errore|Descrizione|  
 |--------------|-----------|-----------------|  
 |01000|Avviso generale|Messaggio informativo specifico del driver. (Funzione restituisce SQL_SUCCESS_WITH_INFO).|  
 |01S02|Valore di opzione modificato|Il driver non supportava il valore specificato per il *ValuePtr* argomento nella **SQLSetConnectAttr** e sostituito un valore simile. (Funzione restituisce SQL_SUCCESS_WITH_INFO).|  

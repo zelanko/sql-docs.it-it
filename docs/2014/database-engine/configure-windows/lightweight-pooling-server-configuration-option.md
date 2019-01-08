@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - default lightweight pooling
@@ -21,12 +20,12 @@ ms.assetid: 2dc11b61-d065-4126-8e00-acf40390f9fb
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 319d7057d9d25f952abd90a83d742daa8fdb3996
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 552a86ba168ab121210b42cc0e462f8fdcbea84b
+ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48079931"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52639369"
 ---
 # <a name="lightweight-pooling-server-configuration-option"></a>Opzione di configurazione del server lightweight pooling
   L'opzione **lightweight pooling** consente di ridurre l'overhead del sistema associato a un'eccessiva attività di scambio del contesto che talvolta si riscontra negli ambienti SMP (multiprocessori simmetrici, Symmetric Multiprocessor). Quando si verifica un'eccessiva attività di cambio del contesto, l'opzione lightweight pooling può assicurare una migliore velocità effettiva eseguendo direttamente il cambio del contesto e quindi riducendo le transizioni utente/kernel ring.  

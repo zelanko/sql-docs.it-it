@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0e1ada8f652b88e0cb3570f1fada7f4f50d28e35
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7494577b9af11f8000fd2676dd56ee3b8c960756
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47756239"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53213460"
 ---
 # <a name="sysdmsqlreferencedentities-transact-sql"></a>sys.dm_sql_referenced_entities (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -45,11 +45,11 @@ ms.locfileid: "47756239"
   
 -   Tipi definiti dall'utente [alias e CLR definito dall'utente]  
   
--   raccolte di XML Schema  
+-   Raccolte di XML Schema  
   
 -   Funzioni di partizione  
   
-**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] attraverso [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -78,7 +78,7 @@ sys.dm_sql_referenced_entities (
   
 ## <a name="table-returned"></a>Tabella restituita  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |referencing_minor_id|**int**|ID di colonna quando l'entità di riferimento è una colonna, in caso contrario, 0. Non ammette i valori Null.|  
 |referenced_server_name|**sysname**|Nome del server dell'entità a cui viene fatto riferimento.<br /><br /> Questa colonna viene popolata per le dipendenze tra server eseguite specificando un nome valido composto da quattro parti. Per informazioni sui nomi composti da più parti, vedere [convenzioni della sintassi Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).<br /><br /> Valore NULL per le dipendenze non associate a schemi per cui è stato fatto riferimento all'entità senza specificare un nome in quattro parti.<br /><br /> Valore NULL per le entità associate a schemi perché devono essere nello stesso database e pertanto possono essere definite solo utilizzando due parti (*unicamente*) nome.|  
@@ -97,7 +97,7 @@ sys.dm_sql_referenced_entities (
 |is_select_all|**bit**|**Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 1= Oggetto utilizzato in una clausola SELECT * (solo a livello di oggetto).|  
 |is_all_columns_found|**bit**|**Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 1 = È possibile trovare tutte le dipendenze delle colonne per l'oggetto.<br /><br /> 0 = Impossibile trovare le dipendenze delle colonne per l'oggetto.|
 |is_insert_all|**bit**|**Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 1 = l'oggetto viene utilizzato in un'istruzione INSERT senza un elenco di colonne (solo oggetto livello).|  
-|is_incomplete|**bit**|**Si applica a**: da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 1 = l'oggetto o la colonna contiene un errore di associazione e incompleta.|
+|is_incomplete|**bit**|**Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 1 = l'oggetto o la colonna contiene un errore di associazione e incompleta.|
   
 ## <a name="exceptions"></a>Eccezioni  
  In una delle seguenti condizioni, restituisce un set di risultati vuoto:  
@@ -121,22 +121,22 @@ sys.dm_sql_referenced_entities (
   
 |Tipo di entità|Entità di riferimento|Entità con riferimenti|  
 |-----------------|------------------------|-----------------------|  
-|Tabella|Sì*|Sì|  
-|Vista|Sì|Sì|  
-|Stored procedure [!INCLUDE[tsql](../../includes/tsql-md.md)]**|Sì|Sì|  
-|stored procedure CLR|no|Sì|  
-|Funzione [!INCLUDE[tsql](../../includes/tsql-md.md)] definita dall'utente|Sì|Sì|  
-|Funzione CLR definita dall'utente|no|Sì|  
-|Trigger CLR (DML e DDL)|no|no|  
-|Trigger DML [!INCLUDE[tsql](../../includes/tsql-md.md)]|Sì|no|  
-|Trigger DDL [!INCLUDE[tsql](../../includes/tsql-md.md)] a livello di database|Sì|no|  
-|Trigger DDL [!INCLUDE[tsql](../../includes/tsql-md.md)] a livello di server|Sì|no|  
-|Stored procedure estese|no|Sì|  
-|Coda|no|Sì|  
-|Sinonimo|no|Sì|  
-|Tipo (alias e tipo di CLR definito dall'utente)|no|Sì|  
-|Raccolta di XML Schema|no|Sì|  
-|Funzione di partizione|no|Sì|  
+|Tabella|Sì*|Yes|  
+|visualizzazione|Yes|Yes|  
+|Stored procedure [!INCLUDE[tsql](../../includes/tsql-md.md)]**|Yes|Yes|  
+|stored procedure CLR|No|Yes|  
+|Funzione [!INCLUDE[tsql](../../includes/tsql-md.md)] definita dall'utente|Yes|Yes|  
+|Funzione CLR definita dall'utente|No|Yes|  
+|Trigger CLR (DML e DDL)|No|No|  
+|Trigger DML [!INCLUDE[tsql](../../includes/tsql-md.md)]|Yes|No|  
+|Trigger DDL [!INCLUDE[tsql](../../includes/tsql-md.md)] a livello di database|Yes|No|  
+|Trigger DDL [!INCLUDE[tsql](../../includes/tsql-md.md)] a livello di server|Yes|No|  
+|Stored procedure estese|No|Yes|  
+|Coda|No|Yes|  
+|Sinonimo|No|Yes|  
+|Tipo (alias e tipo di CLR definito dall'utente)|No|Yes|  
+|Raccolta di XML Schema|No|Yes|  
+|Funzione di partizione|No|Yes|  
   
  \* Una tabella viene registrata come un'entità di riferimento solo quando si fa riferimento a un [!INCLUDE[tsql](../../includes/tsql-md.md)] modulo, tipo definito dall'utente o raccolta di XML schema nella definizione di una colonna calcolata, un vincolo CHECK o un vincolo predefinito.  
   
@@ -159,7 +159,7 @@ FROM sys.dm_sql_referenced_entities ('ddlDatabaseTriggerLog', 'DATABASE_DDL_TRIG
 GO  
 ```  
   
-### <a name="b-returning-entities-that-are-referenced-by-an-object"></a>B. Restituzione di entità cui fa riferimento un oggetto  
+### <a name="b-returning-entities-that-are-referenced-by-an-object"></a>b. Restituzione di entità cui fa riferimento un oggetto  
  Nell'esempio seguente vengono restituite le entità cui fa riferimento la funzione `dbo.ufnGetContactInformation` definita dall'utente.  
   
 ```sql  
@@ -266,7 +266,7 @@ GO
  ```
  
 ### <a name="f-returning-object-or-column-usage"></a>F. Restituzione dell'utilizzo di oggetti e colonne  
- Nell'esempio seguente vengono restituiti gli oggetti e le dipendenze delle colonne della stored procedure `HumanResources.uspUpdateEmployeePersonalInfo`. Questa procedura consente di aggiornare le colonne `NationalIDNumber`, `BirthDate,``MaritalStatus`, e `Gender` della `Employee` tabella basata su un oggetto specificato `BusinessEntityID` valore. Un'altra stored procedure, `upsLogError`, viene definita in un blocco TRY…CATCH per acquisire tutti gli errori di esecuzione. Le colonne `is_selected`, `is_updated` e `is_select_all` restituiscono informazioni sul modo in cui tali oggetti e colonne vengono utilizzati all'interno dell'oggetto di riferimento. La tabella e le colonne modificate vengono indicate con il valore 1 nella colonna is_updated. Viene selezionata solo la colonna `BusinessEntityID` e la stored procedure `uspLogError` non viene né selezionata né modificata.  
+ Nell'esempio seguente vengono restituiti gli oggetti e le dipendenze delle colonne della stored procedure `HumanResources.uspUpdateEmployeePersonalInfo`. Questa procedura consente di aggiornare le colonne `NationalIDNumber`, `BirthDate,``MaritalStatus`, e `Gender` della `Employee` tabella basata su un oggetto specificato `BusinessEntityID` valore. Un'altra stored procedure, `upsLogError` è definito in un blocco TRY... Blocco CATCH per acquisire gli errori di esecuzione. Le colonne `is_selected`, `is_updated` e `is_select_all` restituiscono informazioni sul modo in cui tali oggetti e colonne vengono utilizzati all'interno dell'oggetto di riferimento. La tabella e le colonne modificate vengono indicate con il valore 1 nella colonna is_updated. Viene selezionata solo la colonna `BusinessEntityID` e la stored procedure `uspLogError` non viene né selezionata né modificata.  
   
 **Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   

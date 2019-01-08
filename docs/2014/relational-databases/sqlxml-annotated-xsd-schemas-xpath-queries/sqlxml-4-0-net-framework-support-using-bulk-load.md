@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - SQLXML, XML Bulk Load
@@ -17,12 +15,12 @@ ms.assetid: b85df83b-ba56-43bf-bcdf-b2a6fca43276
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b832f6d92b847ee823a350559dbc54fd35a13ec2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 50b5630b3ee200f0eda402b62acc14ba458ebb84
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48175881"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52807363"
 ---
 # <a name="using-sqlxml-bulk-load-in-the-net-environment"></a>Utilizzo del caricamento bulk di SQLXML nell'ambiente .NET
   In questo argomento viene illustrato l'utilizzo delle funzionalità di caricamento bulk XML nell'ambiente .NET. Per informazioni dettagliate sul caricamento Bulk XML, vedere [esecuzione di caricamento Bulk di dati di XML &#40;SQLXML 4.0&#41;](bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md).  
@@ -30,7 +28,7 @@ ms.locfileid: "48175881"
  Per utilizzare l'oggetto COM del caricamento bulk di SQLXML da un ambiente gestito, è necessario aggiungere un riferimento a un progetto a questo oggetto. In questo modo, viene generata un'interfaccia con wrapper gestito intorno all'oggetto COM del caricamento bulk.  
   
 > [!NOTE]  
->  Il caricamento bulk XML gestito non può essere eseguito con flussi gestiti e richiede un wrapper intorno ai flussi nativi. Il componente di caricamento bulk di SQLXML non viene eseguito in un ambiente a thread multipli (attributo '[MTAThread]'). Se si prova a eseguire il componente di caricamento Bulk in un ambiente a thread multipli, otterrai un'eccezione InvalidCastException con le informazioni aggiuntive seguenti: "Errore QueryInterface per l'interfaccia Isqlxmlbulkload". La soluzione alternativa consiste nel rendere l'oggetto che contiene il caricamento Bulk oggetti a thread singolo accessibili (ad esempio, tramite il **[STAThread]** attributo come illustrato nell'esempio).  
+>  Il caricamento bulk XML gestito non può essere eseguito con flussi gestiti e richiede un wrapper intorno ai flussi nativi. Il componente di caricamento bulk di SQLXML non viene eseguito in un ambiente a thread multipli (attributo '[MTAThread]'). Se si prova a eseguire il componente di caricamento Bulk in un ambiente a thread multipli, generata un'eccezione InvalidCastException con le informazioni aggiuntive seguenti: "Errore QueryInterface per l'interfaccia Isqlxmlbulkload". La soluzione alternativa consiste nel rendere l'oggetto che contiene il caricamento Bulk oggetti a thread singolo accessibili (ad esempio, tramite il **[STAThread]** attributo come illustrato nell'esempio).  
   
  In questo argomento viene fornita un'applicazione C# di esempio reale per eseguire il caricamento bulk dei dati nel database. Per creare un esempio reale, eseguire la procedura seguente:  
   
@@ -141,7 +139,7 @@ ms.locfileid: "48175881"
 9. Per caricare i dati XML nella tabella creata, compilare ed eseguire il progetto.  
   
     > [!NOTE]  
-    >  Il riferimento al componente di caricamento bulk (xblkld4.dll) può essere aggiunto anche utilizzando lo strumento tlbimp.exe, disponibile come parte di .NET Framework. Questo strumento crea un wrapper gestito per la DLL nativa (xblkld4.dll) che può quindi essere utilizzato in qualsiasi progetto .NET. Esempio:  
+    >  Il riferimento al componente di caricamento bulk (xblkld4.dll) può essere aggiunto anche utilizzando lo strumento tlbimp.exe, disponibile come parte di .NET Framework. Questo strumento crea un wrapper gestito per la DLL nativa (xblkld4.dll) che può quindi essere utilizzato in qualsiasi progetto .NET. Ad esempio:  
   
     ```  
     c:\>tlbimp xblkld4.dll  

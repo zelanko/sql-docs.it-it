@@ -16,12 +16,12 @@ ms.assetid: faffe208-7a64-4ec6-825f-ecbaa79caff7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f5c441081c5e185494c693c44b5f7665529c9b90
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1259cc627ef53d8f5a201e42772a9dba390824cc
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48210441"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52537180"
 ---
 # <a name="browsing-an-association-rules-model"></a>Esplorazione di un modello Association Rules
   Quando si apre un modello di associazione utilizzando **esplorare**, il modello viene visualizzato in un visualizzatore interattivo, simile al visualizzatore Microsoft Association Rules in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  Il visualizzatore consente di visualizzare immediatamente gli elementi correlati l'uno con l'altro e le regole che è possibile utilizzare per la stima o creare indicazioni.  
@@ -91,17 +91,17 @@ ms.locfileid: "48210441"
   
  *Probabilità* rappresenta la frazione di case nel set di dati che contengono la combinazione di elementi prevista. È simile al concetto statistico di probabilità *confidenza*e offre un'indicazione del modo in cui probabilmente il risultato di una regola deve verificarsi. È possibile modificare il valore di **probabilità minima** in questo riquadro per filtrare le regole visualizzate.  
   
- Il valore per **probabilità minima** inizialmente visualizzato è il valore di soglia che è stato usato dall'algoritmo quando si compila il modello. Una volta completato il modello, non è possibile ridurre questo valore, ma è possibile aumentarlo per mostrare solo gli elementi con maggiore probabilità.  
+ Il valore per **probabilità minima** inizialmente visualizzato è il valore di soglia che è stato usato dall'algoritmo quando si compila il modello. Una volta completato il modello, è possibile ridurre questo valore, ma è possibile aumentarlo per mostrare solo gli elementi di probabilità superiore.  
   
  *Importanza* è progettato per misurare l'utilità di una regola. Una regola che è molto comune potrebbe essere così universale che presenta un valore delle informazioni ridotto. Maggiore è la priorità, più attendibile è la regola per la stima del risultato. Nel [market Basket Analysis &#40;strumenti di analisi tabelle per Excel&#41; ](shopping-basket-analysis-table-analysistools-for-excel.md) strumento di proprietà può essere combinata con il prezzo degli articoli per determinare i pacchetti che sono potenzialmente più importanti in termini di vendite.  
   
 ##### <a name="explore-the-rules-list"></a>Esplorare l'elenco delle regole  
   
-1.  Provare a fare clic sulle intestazioni di colonna, ovvero **probabilità**, **importanza**, e **regola** , per vedere come cambiano i dati.  
+1.  Provare a fare clic sulla colonna intestazioni - **probabilità**, **importanza**, e **regola** : per vedere come cambiano i dati.  
   
 2.  Usare la **regola di filtro** opzione per digitare i valori e concentrarsi sulle regole di destinazione.  
   
-     Ad esempio, se si desidera visualizzare tutte le regole che stimano quali clienti probabilmente acquisteranno altri prodotti insieme ai guanti, digitare "guanti" nella casella di testo e aggiornare il riquadro.  
+     Ad esempio, se si desidera visualizzare tutte le regole che stimano quali clienti probabilmente acquisteranno insieme ai guanti, digitare "guanti" nella casella di testo e aggiornare il riquadro.  
   
      L'opzione **Filtra set di elementi** consente inoltre di visualizzare un elenco dei filtri utilizzati in precedenza.  
   
@@ -111,7 +111,7 @@ ms.locfileid: "48210441"
   
 5.  Impostare il valore per il **numero massimo di righe** opzione e 100 e quindi fare clic su **copia in Excel**.  
   
-     Si noti che la modifica di questo valore non ha alcun effetto sulla quantità di dati nel modello; controlla semplicemente il numero di righe nell'elenco visualizzato. Questa opzione può essere utile quando si utilizzano modelli di dimensioni molto grandi.  
+     Si noti che se si modifica questo valore non hanno alcun effetto sulla quantità di dati del modello. Controlla semplicemente il numero di righe nell'elenco visualizzato. Questa opzione può essere utile quando si utilizzano modelli di dimensioni molto grandi.  
   
  [Torna all'inizio](#BKMK_ViewerTabs)  
   
@@ -124,13 +124,13 @@ ms.locfileid: "48210441"
   
 1.  Fare clic sui **trovare** pulsante e utilizzare il **Trova nodo** finestra di dialogo in cui digitare un elemento di interesse.  
   
-     Ad esempio, digitare "guanti", quindi ingrandire il grafico nella finestra in modo che sia possibile visualizzare facilmente i risultati.  
+     Ad esempio, digitare "guanti", quindi ingrandire il grafico nella finestra in modo che è possibile visualizzare facilmente i risultati.  
   
      Il nodo che contiene l'elemento viene evidenziato, mentre le frecce che puntano al nodo rappresentano una regola che collega gli elementi.  
   
-     La direzione della freccia indica la direzione della regola. Ad esempio, se una persona che acquista guanti è anche probabile che acquisti un gilè, la freccia partirà dal nodo "glove" e terminerà nel nodo "vest".  
+     La direzione della freccia indica la direzione della regola. Ad esempio, se persona che acquista guanti è anche probabile che acquisti un gilè, la freccia verrà avviata dal nodo "glove" e terminare nel nodo "vest".  
   
-     Per ottenere statistiche aggiuntive su questa regola, è possibile scegliere il **regole** scheda e cercare una regola con la descrizione, "Glove - Existing" -> "Vest – Existing.")  
+     Per ottenere statistiche aggiuntive su questa regola, è possibile scegliere il **regole** scheda e cercare una regola con la descrizione, "Glove - esistente" -> "Vest - esistente.")  
   
 2.  Fare clic e trascinare il dispositivo di scorrimento a sinistra del visualizzatore.  
   
@@ -149,9 +149,9 @@ ms.locfileid: "48210441"
   
  Se si desidera impostare parametri avanzati o alter probabilità minima e il supporto, usare il [associare guidata &#40;Client di Data Mining per Excel&#41; ](associate-wizard-data-mining-client-for-excel.md) procedura guidata, o creare il proprio modello utilizzando la [aggiunta modello a Struttura &#40;aggiuntivi di Data Mining per Excel&#41; ](add-model-to-structure-data-mining-add-ins-for-excel.md) opzione di modellazione.  
   
--   **Set di elementi:** quando si crea il modello, è anche possibile controllare il numero di set di elementi generati tramite l'assegnazione di un valore al parametro MINIMUM_PROBABILITY. Questo parametro è disponibile nella finestra di dialogo parametri algoritmo.  
+-   **Set di elementi:** Durante la creazione del modello è inoltre possibile stabilire il numero di set di elementi generati tramite l'assegnazione di un valore specifico al parametro MINIMUM_PROBABILITY. Questo parametro è disponibile nella finestra di dialogo parametri algoritmo.  
   
--   **Le regole:** il [!INCLUDE[msCoName](../includes/msconame-md.md)] algoritmo Microsoft Association Rules utilizza i valori di probabilità per limitare il numero di regole generate. È possibile controllare il numero di regole impostando i parametri `MINIMUM_PROBABILITY` o `MINIMUM _IMPORTANCE`.  
+-   **Regole:** L'algoritmo [!INCLUDE[msCoName](../includes/msconame-md.md)] Association Rules utilizza i valori di probabilità per limitare il numero di regole generate. È possibile controllare il numero di regole impostando i parametri `MINIMUM_PROBABILITY` o `MINIMUM _IMPORTANCE`.  
   
  Per altre informazioni sulla configurazione dei parametri avanzati, vedere [algoritmi di Data Mining &#40;componenti aggiuntivi Data Mining di SQL Server&#41;](data-mining-algorithms-sql-server-data-mining-add-ins.md).  
   

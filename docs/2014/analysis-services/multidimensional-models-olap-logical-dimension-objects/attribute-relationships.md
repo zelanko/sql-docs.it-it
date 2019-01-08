@@ -26,12 +26,12 @@ ms.assetid: 2491422a-4cf5-4b23-b6ab-289222b22ce8
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 45ade4f79f2433d6f5841605cbbb8112e6a9b63f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4401eea7e5c5b42c1706095e4c14aee348298bc5
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48081597"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512777"
 ---
 # <a name="attribute-relationships"></a>Relazioni tra attributi
   Nelle [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], gli attributi all'interno di una dimensione sono sempre correlati direttamente o indirettamente all'attributo chiave. Quando si definisce una dimensione in base a uno schema star, in cui tutti gli attributi della dimensione sono derivati dalla stessa tabella relazionale, viene automaticamente definita una relazione tra l'attributo chiave e ogni attributo non chiave della dimensione. Quando si definisce una dimensione in base a uno schema snowflake, in cui gli attributi della dimensione sono derivati da più tabelle correlate, viene automaticamente definita una relazione tra attributi come indicato di seguito:  
@@ -80,7 +80,7 @@ ms.locfileid: "48081597"
   
 -   Attributo City come relazione tra attributi dell'attributo Customer.  
   
- Per l'esplorazione dei dati nel cubo, è anche possibile creare una gerarchia definita dall'utente che non rappresenta una gerarchia naturale nei dati (che viene chiamato un *ad hoc* oppure *reporting* gerarchia). È ad esempio possibile creare una gerarchia basata su `{Age, Gender}`. Gli utenti non vedranno alcuna differenza nel comportamento delle due gerarchie, sebbene la gerarchia naturale tragga vantaggio dall'aggregazione e dall'indicizzazione di strutture, nascoste all'utente, responsabili delle relazioni naturali nei dati di origine.  
+ Per l'esplorazione dei dati nel cubo, è anche possibile creare una gerarchia definita dall'utente che non rappresenta una gerarchia naturale nei dati (che viene chiamato un *ad hoc* oppure *reporting* gerarchia). È ad esempio possibile creare una gerarchia basata su `{Age, Gender}`. Gli utenti non viene visualizzata alcuna differenza nel comportano dei due gerarchie, anche se la gerarchia naturale tragga vantaggio dall'aggregazione e indicizzazione di strutture, nascoste all'utente - dall'account per le relazioni naturali nei dati di origine.  
   
  La proprietà `SourceAttribute` di un livello determina l'attributo utilizzato per descrivere il livello. La proprietà `KeyColumns` dell'attributo specifica la colonna della vista origine dati che definisce i membri. La proprietà `NameColumn` dell'attributo può specificare una colonna dei nomi differente per i membri.  
   
@@ -95,8 +95,8 @@ ms.locfileid: "48081597"
  È possibile utilizzare query MDX per recuperare dati dalle relazioni tra attributi in forma di proprietà del membro, tramite la parola chiave `PROPERTIES` dell'istruzione `SELECT` MDX. Per altre informazioni su come usare MDX per recuperare le proprietà dei membri, vedere [usando le proprietà del membro &#40;MDX&#41;](../multidimensional-models/mdx/mdx-member-properties.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Gli attributi e gerarchie di attributi](attributes-and-attribute-hierarchies.md)   
- [Dimension Attribute Properties Reference](../multidimensional-models/dimension-attribute-properties-reference.md)   
+ [Attributi e gerarchie di attributi](attributes-and-attribute-hierarchies.md)   
+ [Riferimento alle proprietà degli attributo delle dimensioni](../multidimensional-models/dimension-attribute-properties-reference.md)   
  [Gerarchie definite dall'utente](user-hierarchies.md)   
  [Proprietà delle gerarchie definite dall'utente](user-hierarchies-properties.md)  
   

@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 5088f627aee3b9e570b4b4c43e46a42853165193
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 3247bf2ca459f013131b21a25278bcc6e5d10b9a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50148434"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52544552"
 ---
 # <a name="move-an-analysis-services-database"></a>Spostare un database di Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "50148434"
   
 1.  Individuare il database da spostare nel riquadro sinistro o destro di SSMS.  
   
-2.  Fare clic con il pulsante destro del mouse sul database, quindi scegliere **Scollega**.  
+2.  Fare clic sul database e scegliere **Scollega...**  
   
 3.  Assegnare una password al database da scollegare, quindi fare clic su **OK** per eseguire il comando.  
   
@@ -47,9 +47,9 @@ ms.locfileid: "50148434"
   
 5.  Individuare la cartella **Database** nel riquadro sinistro o destro di SSMS.  
   
-6.  Fare clic con il pulsante destro del mouse sulla cartella **Database** , quindi scegliere **Collega**.  
+6.  Fare clic sui **database** cartella e selezionare **Connetti...**  
   
-7.  Nella casella di testo **cartella** digitare il nuovo percorso della cartella del database. In alternativa, è possibile usare il pulsante Sfoglia (**...**) per individuare la cartella del database.  
+7.  Nella casella di testo **cartella** digitare il nuovo percorso della cartella del database. In alternativa, è possibile usare il pulsante Sfoglia (**...** ) per individuare la cartella di database.  
   
 8.  Selezionare la modalità di **lettura/scrittura** per il database.  
   

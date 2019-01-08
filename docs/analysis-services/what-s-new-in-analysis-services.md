@@ -1,5 +1,5 @@
 ---
-title: Cosa&#39;s New in Analysis Services | Microsoft Docs
+title: Che cosa sono le novità di SQL Server 2016 Analysis Services | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 70fb50abdd9411e5f34b704d53e66302270fdfd7
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 873fd4bc1e010b2f7e2795368f8f209dfee23ea0
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145996"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53210190"
 ---
 # <a name="what39s-new-in-analysis-services"></a>Cosa&#39;s New in Analysis Services
 [!INCLUDE[ssas-appliesto-sql2016](../includes/ssas-appliesto-sql2016.md)]
@@ -32,7 +32,7 @@ SQL Server 2016 Service SP1 Analysis Services offre livelli più elevati di pres
 
 In particolare, le funzionalità di SQL Server 2016 SP1 Analysis Services offrono miglioramenti in queste aree chiave:
 
--   **Compatibilità NUMA** : per un migliore supporto dell'architettura NUMA, il motore in memoria (VertiPaq) incluso in Analysis Services gestisce ora una coda di processi separata su ogni nodo NUMA. In questo modo, i processi di analisi dei segmenti vengono eseguiti sullo stesso nodo in cui è allocata la memoria per i dati dei segmenti. Si noti che la compatibilità NUMA è abilitata per impostazione predefinita solo nei sistemi con almeno quattro nodi NUMA. Nei sistemi a due nodi, i costi di accesso alla memoria allocata in remoto non coprono in genere le spese di gestione delle specifiche NUMA.
+-   **Compatibilità NUMA** : per un migliore supporto dell'architettura NUMA, il motore in memoria (VertiPaq) incluso in Analysis Services gestisce ora una coda di processi separata su ogni nodo NUMA. In questo modo, i processi di analisi dei segmenti vengono eseguiti sullo stesso nodo in cui è allocata la memoria per i dati dei segmenti. Si noti che la compatibilità NUMA è abilitata per impostazione predefinita solo nei sistemi con almeno quattro nodi NUMA. Nei sistemi a due nodi, i costi di accesso remoto allocati di memoria a livello generale non coprono l'overhead di gestione delle specifiche NUMA.
 -   **Allocazione della memoria** : Analysis Services è stato accelerato con Intel Threading Building Blocks, un allocatore scalabile che fornisce pool di memoria separati per ogni core. Con l'aumento del numero di core, il sistema può essere scalato in modo quasi lineare.
 -   **Frammentazione dell'heap** : l'allocatore scalabile basato su Intel TBB consente anche di attenuare i problemi di prestazioni dovuti alla frammentazione dell'heap che sono stati riscontrati per l'heap di Windows.
 
@@ -49,10 +49,6 @@ Per poter sfruttare tutti i miglioramenti in questa versione, assicurarsi di ins
 - [Scaricare SQL Server Management Studio (SSMS)](http://msdn.microsoft.com/library/mt238290.aspx)   
 
 Se è disponibile un'applicazione personalizzata dipendente da AMO, potrebbe essere necessario installare una versione aggiornata della libreria AMO. Per istruzioni, vedere [Installare il provider di dati di Analysis Services &#40;AMO, ADOMD.NET, MSOLAP&#41;](../analysis-services/instances/install-windows/install-analysis-services-data-providers-amo-adomd-net-msolap.md).    
-
- #### <a name="technet-virtual-labs-sql-server-2016-analysis-services"></a>Lab virtuali TechNet: SQL Server 2016 Analysis Services
-Per chi preferisce apprendere attraverso la pratica, è disponibile un [lab virtuale sulle novità di SQL Server 2016 Analysis Services](http://vlabs.holsystems.com/vlabs/technet?eng=VLabs&auth=none&src=vlabs&altadd=true&labid=23110&lod=true).
-In questo laboratorio verrà illustrato come creare e monitorare gli eventi estesi (xEvent), aggiornare un progetto in formato tabulare al livello di compatibilità 1200, usare le configurazioni di Visual Studio, implementare nuove funzionalità di calcolo, implementare nuove funzionalità per le relazioni tra tabelle, configurare le cartelle di visualizzazione, gestire le traduzioni dei modelli, lavorare con il nuovo linguaggio TMSL (Tabular Model Scripting Language), usare PowerShell e provare le nuove funzionalità della modalità DirectQuery.
 
 ## <a name="modeling"></a>Modellazione    
 ### <a name="improved-modeling-performance-for-tabular-1200-models"></a>Miglioramento delle prestazioni di modellazione per i modelli tabulari 1200    
@@ -92,7 +88,7 @@ Una *tabella calcolata* è una costruzione solo modello basata su una query o un
 
 ## <a name="scripting"></a>Generazione di script
  ### <a name="powershell-for-tabular-models"></a>PowerShell per i modelli tabulari    
- Questa versione include miglioramenti di PowerShell per i modelli tabulari con livello di compatibilità 1200. È possibile usare tutti i cmdlet applicabili, nonché cmdlet specifici per la modalità tabulare: [ProcessASDatabase Invoke](../analysis-services/powershell/invoke-processasdatabase.md) e [Invoke-ProcessTable](../analysis-services/powershell/invoke-processtable-cmdlet.md).    
+ Questa versione include miglioramenti di PowerShell per i modelli tabulari con livello di compatibilità 1200. È possibile usare tutti i cmdlet applicabili, nonché cmdlet specifici per la modalità tabulare: [Invoke-ProcessASDatabase](../analysis-services/powershell/invoke-processasdatabase.md) e [cmdlet Invoke-ProcessTable](../analysis-services/powershell/invoke-processtable-cmdlet.md).    
  ### <a name="ssms-scripting-database-operations"></a>Operazioni di scripting del database di SSMS    
  Nella [versione più recente di SQL Server Management Studio (SSMS)](http://msdn.microsoft.com/library/mt238290.aspx)è ora abilitato uno script per i comandi di database, tra cui quelli di creazione, modifica, eliminazione, backup, ripristino, collegamento e scollegamento. L'output è il linguaggio di scripting del modello tabulare (Tabular Model Scripting Language, TMSL) in JSON. Per altre informazioni, vedere [Tabular Model Scripting Language &#40;TMSL&#41; Reference (Riferimento al linguaggio di scripting per modelli tabulari &#40;TMSL&#41;)](https://docs.microsoft.com/bi-reference/tmsl/tabular-model-scripting-language-tmsl-reference).    
  ### <a name="analysis-services-execute-ddl-task"></a>Attività Esegui DDL Analysis Services    
@@ -101,7 +97,7 @@ Una *tabella calcolata* è una costruzione solo modello basata su una query o un
  Il cmdlet di PowerShell per SSAS **Invoke-ASCmd** ora accetta i comandi TMSL (Tabular Model Scripting Language). Altri cmdlet di PowerShell per SSAS potrebbero essere aggiornati in una versione futura per l'uso dei nuovi metadati tabulari e le eccezioni verranno segnalate nelle note di rilascio.    
 Per informazioni dettagliate, vedere [Analysis Services PowerShell Reference](../analysis-services/powershell/analysis-services-powershell-reference.md) .    
  ### <a name="tabular-model-scripting-language-tmsl-supported-in-ssms"></a>Supporto per TMSL (Tabular Model Scripting Language) in SSMS    
-  Usando la [versione più recente di SSMS](http://msdn.microsoft.com/library/mt238290.aspx), è ora possibile creare script per automatizzare la maggior parte delle attività amministrative per i modelli tabulari 1200. Attualmente, è possibile generare script per le attività CREATE, ALTER e DELETE a livello di database e Process a qualsiasi livello.    
+  Usando la [versione più recente di SSMS](http://msdn.microsoft.com/library/mt238290.aspx), è ora possibile creare script per automatizzare la maggior parte delle attività amministrative per i modelli tabulari 1200. Attualmente, è possibile creare le attività seguenti script: Processo in qualsiasi livello, oltre a CREATE, ALTER, eliminare a livello di database.    
     
  A livello funzionale, il linguaggio TMSL equivale all'estensione ASSL XMLA che fornisce le definizioni degli oggetti multidimensionali, ad eccezione del fatto che TMSL usa descrittori nativi come **model**, **table**e **relationship** per descrivere i metadati tabulari. Per informazioni dettagliate sullo schema, vedere [Tabular Model Scripting Language &#40;TMSL&#41; Reference (Riferimento al linguaggio di scripting per modelli tabulari &#40;TMSL&#41;)](https://docs.microsoft.com/bi-reference/tmsl/tabular-model-scripting-language-tmsl-reference).    
     
@@ -134,7 +130,7 @@ refresh|Elabora l'oggetto. L'equivalente ASSL è PROCESS.
 
 ## <a name="dax"></a>DAX
 ### <a name="improved-dax-formula-editing"></a>Modifica migliorata della formula DAX
-Gli aggiornamenti apportati alla barra della formula consentono di scrivere formule più facilmente differenziando le funzioni, i campi e le misure con la colorazione della sintassi. I suggerimenti intelligenti relativi a campi e funzioni segnalano le parti errate dell'espressione DAX con le *sottolineature*. Ora è anche possibile usare più righe (ALT+INVIO) e il rientro (TAB). La barra della formula ora permette di scrivere commenti nelle misure, è sufficiente digitare i caratteri "//" e tutto ciò che segue nella stessa riga viene considerato come un commento.
+Gli aggiornamenti apportati alla barra della formula consentono di scrivere formule più facilmente differenziando le funzioni, i campi e le misure con la colorazione della sintassi. I suggerimenti intelligenti relativi a campi e funzioni segnalano le parti errate dell'espressione DAX con le *sottolineature*. Ora è anche possibile usare più righe (ALT+INVIO) e il rientro (TAB). La barra della formula ora consente inoltre di scrivere commenti come parte di misure, è sufficiente digitare "/ /" e tutto ciò che segue questi caratteri sulla stessa riga verranno considerati un commento.
 
 ### <a name="dax-variables"></a>Variabili DAX    
 Questa versione ora include il supporto per le variabili in DAX. Ora le variabili possono archiviare il risultato di un'espressione come variabile denominata, che può essere passata come argomento ad altre espressioni di misura. Dopo aver calcolato i valori risultanti per un'espressione variabile, non tali valori non cambiano, anche se viene fatto riferimento alla variabile in un'altra espressione. Per altre informazioni, vedere la [funzione VAR](http://msdn.microsoft.com/library/mt243785.aspx).    
@@ -177,10 +173,10 @@ Un modello vuoto contiene almeno il codice JSON seguente:
     }    
     ```    
     
-> [!WARNING]    
+> [!WARNING]
 > Evitare di modificare direttamente il codice JSON, perché ciò può danneggiare il modello.    
- ### <a name="new-elements-in-ms-csdlbi-20-schema"></a>Nuovi elementi nello schema MS-CSDLBI 2.0    
- Gli elementi seguenti sono stati aggiunti al tipo complesso **TProperty** definito nello schema [MS-CSDLBI] 2.0:    
+>  ### <a name="new-elements-in-ms-csdlbi-20-schema"></a>Nuovi elementi nello schema MS-CSDLBI 2.0    
+>  Gli elementi seguenti sono stati aggiunti al tipo complesso **TProperty** definito nello schema [MS-CSDLBI] 2.0:    
     
 |Elemento|Definizione|    
 |-------------|----------------|    
@@ -189,7 +185,7 @@ Un modello vuoto contiene almeno il codice JSON seguente:
     
 ## <a name="directquery"></a>DirectQuery    
 ### <a name="new-directquery-implementation"></a>Nuova implementazione di DirectQuery    
-In questa versione sono stati apportati miglioramenti significativi a DirectQuery per i modelli tabulari 1200. Di seguito è riportato un riepilogo:    
+In questa versione sono stati apportati miglioramenti significativi a DirectQuery per i modelli tabulari 1200. Ecco un riepilogo:    
 -   DirectQuery ora genera query più semplici che offrono prestazioni migliori.    
 -   Maggiore controllo sulla definizione di set di dati di esempio usati per la progettazione e il testing dei modelli.    
 -   La sicurezza a livello di riga è ora supportata per i modelli tabulari 1200 in modalità DirectQuery. In precedenza la presenza della sicurezza a livello di riga impediva di eseguire un modello tabulare in modalità DirectQuery.    

@@ -18,12 +18,12 @@ ms.assetid: 41ade0ca-5f11-469d-bd4d-c8302ccd93b3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a1fa8689862184f0554eff0aefd3d39896f2abdf
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: e3277e64e4c4e04e270298d3532ebc0c2b1f93c5
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51662520"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53210520"
 ---
 # <a name="spcursor-transact-sql"></a>sp_cursor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "51662520"
   
 ||  
 |-|  
-|**Si applica a**: SQL Server ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] attraverso [versione corrente](https://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
+|**Si applica a**: SQL Server ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] attraverso [versione corrente](https://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -51,15 +51,15 @@ sp_cursor  cursor, optype, rownum, table
  *optype*  
  Parametro obbligatorio che definisce l'operazione che verrà effettuata dal cursore. *optype* richiede uno dei seguenti **int** valori di input.  
   
-|valore|nome|Description|  
+|Value|nome|Descrizione|  
 |-----------|----------|-----------------|  
 |0X0001|UPDATE|Consente di aggiornare una o più righe nel buffer di recupero.  Le righe specificate *rownum* nuovamente accessibili e aggiornato.|  
-|0x0002|Elimina|Consente di eliminare una o più righe nel buffer di recupero. Le righe specificate *rownum* vengono nuovamente accesso ed eliminazione.|  
+|0x0002|DELETE|Consente di eliminare una o più righe nel buffer di recupero. Le righe specificate *rownum* vengono nuovamente accesso ed eliminazione.|  
 |0X0004|INSERT|Inserisce dati senza compilare SQL **Inserisci** istruzione.|  
 |0X0008|REFRESH|Consente di inserire nuovamente dati nel buffer dalle tabelle sottostanti e può essere usato per aggiornare la riga nel caso in cui un aggiornamento o un'eliminazione non riesca a causa del controllo della concorrenza ottimistica oppure dopo un'operazione UPDATE.|  
 |0X10|LOCK|Fa sì che un SQL Server U-acquisizione del blocco nella pagina contenente la riga specificata. Tale blocco è compatibile con i blocchi S ma non con i blocchi X o con altri blocchi U. Può essere usato per implementare la funzione di blocco a breve termine.|  
 |0X20|SETPOSITION|Viene usato solo quando il programma sta per rilasciare un successive di SQL Server posizionata l'istruzione DELETE o UPDATE.|  
-|0X40|ABSOLUTE|Può essere usato solo insieme ad UPDATE o DELETE.  ABSOLUTE viene usato solo con i cursori KEYSET, viene ignorato per i cursori DYNAMIC e i cursori STATIC non possono essere aggiornati.<br /><br /> Nota: Se ABSOLUTE viene specificato in una riga nel keyset che non sono stati recuperati, l'operazione non riesca il controllo della concorrenza e il risultato restituito non può essere garantito.|  
+|0X40|ABSOLUTE|Può essere usato solo insieme ad UPDATE o DELETE.  ABSOLUTE viene usato solo con i cursori KEYSET, viene ignorato per i cursori DYNAMIC e i cursori STATIC non possono essere aggiornati.<br /><br /> Nota: Se ABSOLUTE viene specificato in una riga nel keyset che non è stata recuperata, è possibile che l'operazione non riesca a eseguire il controllo della concorrenza. Il risultato restituito non può pertanto essere garantito.|  
   
  *rownum*  
  Specifica le righe del buffer di recupero che verranno usate, aggiornate o eliminate mediante il cursore.  
@@ -137,7 +137,7 @@ sp_cursor  cursor, optype, rownum, table
   
  Quando viene usato un solo parametro, si potrebbe inviare un'istruzione UPDATE usando la sintassi seguente:  
   
- `[ [ UPDATE <table name> ] SET ] {<column name> = expression} [,…n]`  
+ `[ [ UPDATE <table name> ] SET ] {<column name> = expression} [,...n]`  
   
 > [!NOTE]  
 >  Se UPDATE \<nome tabella > è specificato, qualsiasi valore specificato per il *tabella* parametro verrà ignorato.  
@@ -169,7 +169,7 @@ sp_cursor  cursor, optype, rownum, table
   
  `expression [,...n]`  
   
- ad eccezione dei casi in cui è stato specificato VALUES. In questo caso, l'ultima espressione deve essere seguita da una parentesi finale ")". In questo caso, il  *\<nome tabella >* in costruita istruzione è il valore specificato o impostato sul valore predefinito per il *tabella* parametro.  
+ ad eccezione dei casi in cui è stato specificato VALUES. In questo caso, l'ultima espressione deve essere seguita da una parentesi finale ")". In questo caso, il  *\<nome tabella >* nell'aggiornamento costruita istruzione è il valore specificato o impostato sul valore predefinito per il *tabella* parametro.  
   
 > [!NOTE]  
 >  È possibile inviare un parametro come parametro denominato, ad esempio "`@VALUES`". In questo caso è possibile non usare altri parametri denominati.  

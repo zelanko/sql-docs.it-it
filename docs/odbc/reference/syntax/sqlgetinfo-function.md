@@ -20,16 +20,16 @@ ms.assetid: 49dceccc-d816-4ada-808c-4c6138dccb64
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2b56a96ce4796f8d4409b6b347b58870039e15d2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f0878b7c0d6e7cea6f1dcdc90fa7e78a2680546b
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47666249"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53204890"
 ---
 # <a name="sqlgetinfo-function"></a>Funzione SQLGetInfo
 **Conformità**  
- Versione introdotta: Conformità agli standard 1.0 di ODBC: ISO 92  
+ Versione introdotta: Conformità agli standard 1.0 ODBC: ISO 92  
   
  **Riepilogo**  
  **SQLGetInfo** restituisce informazioni generali sull'origine dati e i driver associato con una connessione.  
@@ -76,7 +76,7 @@ SQLRETURN SQLGetInfo(
 ## <a name="diagnostics"></a>Diagnostica  
  Quando **SQLGetInfo** restituisce SQL_ERROR o SQL_SUCCESS_WITH_INFO, un valore SQLSTATE associato può essere ottenuto chiamando **SQLGetDiagRec** con un *HandleType* di SQL_HANDLE_DBC e un *gestiscono* dei *ConnectionHandle*. Nella tabella seguente sono elencati i valori SQLSTATE normalmente restituiti dal **SQLGetInfo** e illustra ognuna nel contesto di questa funzione; la notazione "(DM)" precede le descrizioni di SQLSTATE restituiti da Gestione Driver. Il codice restituito a ogni valore SQLSTATE è SQL_ERROR, se non specificato diversamente.  
   
-|SQLSTATE|Errore|Description|  
+|SQLSTATE|Errore|Descrizione|  
 |--------------|-----------|-----------------|  
 |01000|Avviso generale|Messaggio informativo specifico del driver. (Funzione restituisce SQL_SUCCESS_WITH_INFO).|  
 |01004|Stringa troncati di dati a destra|Il buffer \* *InfoValuePtr* non era sufficientemente grande per restituire tutte le informazioni richieste. Di conseguenza, le informazioni sono state troncate. Viene restituita la lunghezza delle informazioni richieste nella sua forma non troncato **StringLengthPtr*. (Funzione restituisce SQL_SUCCESS_WITH_INFO).|  
@@ -95,7 +95,7 @@ SQLRETURN SQLGetInfo(
 |IM001|Driver non supporta questa funzione|(DM) il driver corrispondente per il *ConnectionHandle* non supporta la funzione.|  
   
 ## <a name="comments"></a>Commenti  
- Vengono visualizzati i tipi di informazioni attualmente definiti in "Informazioni tipi" più avanti in questa sezione; si prevede che più verrà definito per sfruttare i vantaggi di origini dati diverse. Una gamma di tipi di informazioni è riservata da ODBC. gli sviluppatori di driver necessario riservare i valori per il proprio uso specifici del driver da Open Group. **SQLGetInfo** non esegue alcuna conversione Unicode oppure *thunk* (vedere [appendice a: codici di errore ODBC](../../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md) del *riferimento per programmatori ODBC*) per definiti dal driver *tipi*. Per altre informazioni, vedere [tipi di dati specifici del Driver, tipi di descrittori, tipi di informazioni, tipi di diagnostica e gli attributi](../../../odbc/reference/develop-app/driver-specific-data-types-descriptor-information-diagnostic.md). Il formato delle informazioni restituite nelle \* *InfoValuePtr* dipende il *InfoType* richiesto. **SQLGetInfo** restituirà informazioni in uno dei cinque diversi formati:  
+ Vengono visualizzati i tipi di informazioni attualmente definiti in "Informazioni tipi" più avanti in questa sezione; si prevede che più verrà definito per sfruttare i vantaggi di origini dati diverse. Una gamma di tipi di informazioni è riservata da ODBC. gli sviluppatori di driver necessario riservare i valori per il proprio uso specifici del driver da Open Group. **SQLGetInfo** non esegue alcuna conversione Unicode oppure *thunk* (vedere [appendice a: Codici di errore ODBC](../../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md) del *riferimento per programmatori ODBC*) per definiti dal driver *tipi*. Per altre informazioni, vedere [tipi di dati specifici del Driver, tipi di descrittori, tipi di informazioni, tipi di diagnostica e gli attributi](../../../odbc/reference/develop-app/driver-specific-data-types-descriptor-information-diagnostic.md). Il formato delle informazioni restituite nelle \* *InfoValuePtr* dipende il *InfoType* richiesto. **SQLGetInfo** restituirà informazioni in uno dei cinque diversi formati:  
   
 -   Una stringa di caratteri con terminazione null  
   
@@ -244,7 +244,7 @@ SQLRETURN SQLGetInfo(
 |SQL_MAX_CURSOR_NAME_LEN|SQL_MAX_USER_NAME_LEN|  
   
 ## <a name="scalar-function-information"></a>Informazioni sulle funzioni scalari  
- I valori seguenti del *InfoType* argomento restituiscono informazioni sulle funzioni scalari supportate dall'origine dati e il driver. Per altre informazioni sulle funzioni scalari, vedere [appendice e: le funzioni scalari](../../../odbc/reference/appendixes/appendix-e-scalar-functions.md).  
+ I valori seguenti del *InfoType* argomento restituiscono informazioni sulle funzioni scalari supportate dall'origine dati e il driver. Per altre informazioni sulle funzioni scalari, vedere [appendice e: Funzioni scalari](../../../odbc/reference/appendixes/appendix-e-scalar-functions.md).  
   
 |||  
 |-|-|  
@@ -338,7 +338,7 @@ SQLRETURN SQLGetInfo(
  SQL_CATALOG_USAGE  
   
 ## <a name="information-types-deprecated-in-odbc-3x"></a>Tipi di informazioni deprecati in ODBC 3.x  
- I valori seguenti del *InfoType* argomento sono state deprecate in ODBC 3*x*. ODBC 3 *. x* i driver devono continuare a supportare questi tipi di informazioni per garantire la compatibilità con l'API ODBC 2*x* applicazioni. (Per altre informazioni su questi tipi, vedere [supporto di SQLGetInfo](../../../odbc/reference/appendixes/sqlgetinfo-support.md) nell'appendice g: Driver le linee guida per la compatibilità con le versioni precedenti.)  
+ I valori seguenti del *InfoType* argomento sono state deprecate in ODBC 3*x*. ODBC 3 *. x* i driver devono continuare a supportare questi tipi di informazioni per garantire la compatibilità con l'API ODBC 2*x* applicazioni. (Per altre informazioni su questi tipi, vedere [supporto di SQLGetInfo](../../../odbc/reference/appendixes/sqlgetinfo-support.md) nell'appendice g: Driver linee guida per la compatibilità con le versioni precedenti.)  
   
 |||  
 |-|-|  
@@ -364,10 +364,10 @@ SQLRETURN SQLGetInfo(
   
  SQL_AF_ALLSQL_AF_AVGSQL_AF_COUNTSQL_AF_DISTINCTSQL_AF_MAXSQL_AF_MINSQL_AF_SUM  
   
- Un driver di livello conforme allo standard SQL-92 voce restituirà sempre tutte queste opzioni supportate.  
+ Un driver conforme a livello di SQL-92 voce restituirà sempre tutte queste opzioni supportate.  
   
  SQL_ALTER_DOMAIN (ODBC 3.0)  
- Maschera di bit SQLUINTEGER l'enumerazione le clausole nel **ALTER dominio** istruzione, come definito in SQL-92, supportati dall'origine dati. Un driver conforme a livello completo di SQL-92 restituirà sempre tutte le maschere di bit. Il valore restituito pari a "0" indica che il **ALTER dominio** istruzione non è supportata.  
+ Maschera di bit SQLUINTEGER l'enumerazione le clausole nel **ALTER dominio** istruzione, come definito in SQL-92, supportati dall'origine dati. Un driver conforme con livello SQL-92 completo restituirà sempre tutte le maschere di bit. Il valore restituito pari a "0" indica che il **ALTER dominio** istruzione non è supportata.  
   
  Il livello di conformità SQL-92 o FIPS in corrispondenza del quale deve essere supportata questa funzionalità è racchiusa tra parentesi accanto a ogni maschera di bit.  
   
@@ -510,7 +510,7 @@ SQLRETURN SQLGetInfo(
  SQL_CATALOG_TERM ODBC (1.0)  
  Una stringa di caratteri con il nome del fornitore di origine dati per un catalogo. ad esempio, "database" o "directory". Questa stringa può essere in caso di superiore, inferiore o misto.  
   
- Se i cataloghi non sono supportati dall'origine dati, viene restituita una stringa vuota. Per determinare se sono supportati i cataloghi, un'applicazione chiama **SQLGetInfo** con il tipo di informazioni SQL_CATALOG_NAME. Un driver di livello conforme allo standard SQL-92 completo restituirà sempre "catalogo".  
+ Se i cataloghi non sono supportati dall'origine dati, viene restituita una stringa vuota. Per determinare se sono supportati i cataloghi, un'applicazione chiama **SQLGetInfo** con il tipo di informazioni SQL_CATALOG_NAME. Un driver di livello conforme allo standard SQL-92 completo restituirà sempre "catalog".  
   
  Ciò *InfoType* è stata rinominata per ODBC 3.0 da ODBC 2.0 *InfoType* SQL_QUALIFIER_TERM.  
   
@@ -519,15 +519,15 @@ SQLRETURN SQLGetInfo(
   
  Per determinare dove è possibile utilizzare i cataloghi vengono usati le maschere di bit seguenti:  
   
- SQL_CU_DML_STATEMENTS = i cataloghi sono supportati in tutte le istruzioni Data Manipulation Language: **selezionate**, **inserire**, **UPDATE**, **DELETE**e, se supportato **selezionate per l'aggiornamento** e aggiornamento posizionato ed eliminare le istruzioni.  
+ SQL_CU_DML_STATEMENTS = i cataloghi sono supportati in tutte le istruzioni Data Manipulation Language: **Selezionare**, **inserire**, **aggiornare**, **eliminare**e, se supportato **selezionare per aggiornare** e l'eliminazione e aggiornamento posizionato istruzioni.  
   
  SQL_CU_PROCEDURE_INVOCATION = i cataloghi sono supportati nell'istruzione ODBC procedure chiamata.  
   
- SQL_CU_TABLE_DEFINITION = i cataloghi sono supportati in tutte le istruzioni di definizione di tabella: **CREATE TABLE**, **CREATE VIEW**, **ALTER TABLE**, **DROP TABLE** , e **DROP VIEW**.  
+ SQL_CU_TABLE_DEFINITION = i cataloghi sono supportati in tutte le istruzioni di definizione di tabella: **Crea tabella**, **Crea vista**, **ALTER TABLE**, **DROP TABLE**, e **DROP VIEW**.  
   
- SQL_CU_INDEX_DEFINITION = i cataloghi sono supportati in tutte le istruzioni di definizione di indice: **CREATE INDEX** e **DROP INDEX**.  
+ SQL_CU_INDEX_DEFINITION = i cataloghi sono supportati in tutte le istruzioni di definizione di indice: **Crea indice** e **DROP INDEX**.  
   
- SQL_CU_PRIVILEGE_DEFINITION = i cataloghi sono supportati in tutte le istruzioni di definizione dei privilegi: **concessione** e **REVOKE**.  
+ SQL_CU_PRIVILEGE_DEFINITION = i cataloghi sono supportati in tutte le istruzioni di definizione dei privilegi: **CONCESSIONE** e **revocare**.  
   
  Se i cataloghi non sono supportati dall'origine dati, viene restituito un valore pari a 0. Per determinare se sono supportati i cataloghi, un'applicazione chiama **SQLGetInfo** con il tipo di informazioni SQL_CATALOG_NAME. Un driver di livello conforme allo standard SQL-92 completo restituirà sempre una maschera di bit con tutti questi set di bit.  
   
@@ -539,7 +539,7 @@ SQLRETURN SQLGetInfo(
  SQL_COLUMN_ALIAS (ODBC 2.0)  
  Una stringa di caratteri: "Y" se l'origine dati supporta gli alias di colonna; in caso contrario, "N".  
   
- Un alias di colonna è un nome alternativo che può essere specificato per una colonna nell'elenco di selezione utilizzando la clausola AS. Un driver di livello conforme allo standard SQL-92 voce restituirà sempre "Y".  
+ Un alias di colonna è un nome alternativo che può essere specificato per una colonna nell'elenco di selezione utilizzando la clausola AS. Un driver conforme a livello di SQL-92 voce restituirà sempre "Y".  
   
  SQL_CONCAT_NULL_BEHAVIOR ODBC (1.0)  
  Un valore SQLUSMALLINT che indica il modo in cui l'origine dati gestisce la concatenazione Null con valori di colonne di tipo carattere i dati con colonne di tipo di dati di caratteri con valori non NULL:  
@@ -548,7 +548,7 @@ SQLRETURN SQLGetInfo(
   
  SQL_CB_NON_NULL = risultato è la concatenazione delle colonne con valori non NULL.  
   
- Un driver di livello conforme allo standard SQL-92 voce restituirà sempre SQL_CB_NULL.  
+ Un driver conforme a livello di SQL-92 voce restituirà sempre SQL_CB_NULL.  
   
  SQL_CONVERT_BIGINTSQL_CONVERT_BINARYSQL_CONVERT_BIT SQL_CONVERT_CHAR SQL_CONVERT_GUIDSQL_CONVERT_DATESQL_CONVERT_DECIMALSQL_CONVERT_DOUBLESQL_CONVERT_FLOATSQL_CONVERT_INTEGERSQL_CONVERT_INTERVAL_YEAR_MONTHSQL_CONVERT_INTERVAL_ DAY_TIMESQL_CONVERT_LONGVARBINARYSQL_CONVERT_LONGVARCHARSQL_CONVERT_NUMERICSQL_CONVERT_REALSQL_CONVERT_SMALLINTSQL_CONVERT_TIMESQL_CONVERT_TIMESTAMPSQL_CONVERT_TINYINTSQL_CONVERT_VARBINARYSQL_CONVERT_VARCHAR (ODBC 1.0)  
  Maschera di bit SQLUINTEGER. La maschera di bit indica conversioni supportate dall'origine dati con il **CONVERTIRE** funzioni scalari per i dati del tipo denominato nel *InfoType*. Se la maschera di bit uguale a zero, l'origine dati non supporta tutte le conversioni dai dati di tipo denominato, inclusa la conversione al tipo di dati stesso.  
@@ -575,7 +575,7 @@ SQLRETURN SQLGetInfo(
   
  SQL_CN_ANY = correlazione i nomi sono supportati e possono essere qualsiasi nome definito dall'utente valido.  
   
- Un driver di livello conforme allo standard SQL-92 voce restituirà sempre SQL_CN_ANY.  
+ Un driver conforme a livello di SQL-92 voce restituirà sempre SQL_CN_ANY.  
   
  SQL_CREATE_ASSERTION (ODBC 3.0)  
  Maschera di bit SQLUINTEGER l'enumerazione le clausole nel **ASSERZIONE creare** istruzione, come definito in SQL-92, supportati dall'origine dati.  
@@ -632,7 +632,7 @@ SQLRETURN SQLGetInfo(
   
  SQL_CS_CREATE_SCHEMASQL_CS_AUTHORIZATIONSQL_CS_DEFAULT_CHARACTER_SET  
   
- Un driver conforme allo standard a livello intermedio di SQL-92 restituirà sempre le opzioni SQL_CS_CREATE_SCHEMA e SQL_CS_AUTHORIZATION supportato. Questi deve essere supportati anche a livello di SQL-92 voce, ma non necessariamente come istruzioni SQL. Un driver di livello conforme allo standard SQL-92 completo restituirà sempre tutte queste opzioni supportate.  
+ Un driver conforme a livello intermedio di SQL-92 restituirà sempre le opzioni SQL_CS_CREATE_SCHEMA e SQL_CS_AUTHORIZATION supportato. Questi deve essere supportati anche a livello di SQL-92 voce, ma non necessariamente come istruzioni SQL. Un driver di livello conforme allo standard SQL-92 completo restituirà sempre tutte queste opzioni supportate.  
   
  SQL_CREATE_TABLE (ODBC 3.0)  
  Maschera di bit SQLUINTEGER l'enumerazione le clausole nel **CREATE TABLE** istruzione, come definito in SQL-92, supportati dall'origine dati.  
@@ -677,14 +677,14 @@ SQLRETURN SQLGetInfo(
   
  Il valore restituito pari a "0" indica che il **CREATE VIEW** istruzione non è supportata.  
   
- Un driver di livello conforme allo standard SQL-92 voce restituirà sempre le opzioni SQL_CV_CREATE_VIEW e SQL_CV_CHECK_OPTION supportato.  
+ Un driver conforme a livello di SQL-92 voce restituirà sempre le opzioni SQL_CV_CREATE_VIEW e SQL_CV_CHECK_OPTION supportato.  
   
  Un driver di livello conforme allo standard SQL-92 completo restituirà sempre tutte queste opzioni supportate.  
   
  SQL_CURSOR_COMMIT_BEHAVIOR ODBC (1.0)  
  Un valore SQLUSMALLINT che indica come un **COMMIT** operazione influisce su cursori e le istruzioni preparate nell'origine dati (il comportamento dell'origine dati quando si esegue il commit di una transazione).  
   
- Il valore di questo attributo riflette lo stato corrente dell'impostazione successivo: SQL_COPT_SS_PRESERVE_CURSORS.  
+ Il valore di questo attributo riflette lo stato corrente dell'impostazione seguente: SQL_COPT_SS_PRESERVE_CURSORS.  
   
  SQL_CB_DELETE = cursori Chiudi ed eliminare le istruzioni preparate. Per usare il cursore anche in questo caso, l'applicazione deve reprepare e rieseguito l'istruzione.  
   
@@ -710,7 +710,7 @@ SQLRETURN SQLGetInfo(
   
  SQL_SENSITIVE = cursori sono sensibili alle modifiche apportate da altri cursori all'interno della stessa transazione.  
   
- Un driver di livello conforme allo standard SQL-92 voce restituirà sempre l'opzione SQL_UNSPECIFIED supportato.  
+ Un driver conforme a livello di SQL-92 voce restituirà sempre l'opzione SQL_UNSPECIFIED supportato.  
   
  Un driver di livello conforme allo standard SQL-92 completo restituirà sempre l'opzione SQL_INSENSITIVE supportato.  
   
@@ -725,13 +725,13 @@ SQLRETURN SQLGetInfo(
  SQL_DATABASE_NAME ODBC (1.0)  
  Una stringa di caratteri con il nome del database corrente in uso, se l'origine dati definisce un oggetto denominato chiamato "database".  
   
-> [!NOTE]  
+> [!NOTE]
 >  In ODBC 3 *. x*, il valore restituito per questo *InfoType* possono essere restituiti chiamando **SQLGetConnectAttr** con un *attributo* argomento di SQL_ATTR_CURRENT_CATALOG.  
   
  SQL_DATETIME_LITERALS (ODBC 3.0)  
  Maschera di bit SQLUINTEGER l'enumerazione di valori letterali datetime di SQL-92 supportati dall'origine dati. Si noti che questi sono i valori letterali di data/ora elencati nella specifica di SQL-92 sono separati dalle clausole di escape letterale di data/ora definite da ODBC. Per altre informazioni sulle clausole di escape letterali di ODBC datetime, vedere [Date, Time e Timestamp valori letterali](../../../odbc/reference/develop-app/date-time-and-timestamp-literals.md).  
   
- Un driver di livello conforme allo standard FIPS transitorio restituirà sempre il valore "1" nella maschera di bit per bit nell'elenco seguente. Un valore pari a "0" indica che non sono supportati valori letterali datetime di SQL-92.  
+ Un driver di livello conformi a FIPS transitorio restituirà sempre il valore "1" nella maschera di bit per bit nell'elenco seguente. Un valore pari a "0" indica che non sono supportati valori letterali datetime di SQL-92.  
   
  Le maschere di bit seguenti vengono usate per determinare quali valori letterali sono supportati:  
   
@@ -865,7 +865,7 @@ SQLRETURN SQLGetInfo(
   
  SQL_DD_DROP_DOMAINSQL_DD_CASCADESQL_DD_RESTRICT  
   
- Un driver conforme allo standard a livello intermedio di SQL-92 restituirà sempre tutte queste opzioni supportate.  
+ Un driver conforme a livello intermedio di SQL-92 restituirà sempre tutte queste opzioni supportate.  
   
  SQL_DROP_SCHEMA (ODBC 3.0)  
  Maschera di bit SQLUINTEGER l'enumerazione le clausole nel **DROP SCHEMA** istruzione, come definito in SQL-92, supportati dall'origine dati.  
@@ -874,7 +874,7 @@ SQLRETURN SQLGetInfo(
   
  SQL_DS_DROP_SCHEMASQL_DS_CASCADESQL_DS_RESTRICT  
   
- Un driver conforme allo standard a livello intermedio di SQL-92 restituirà sempre tutte queste opzioni supportate.  
+ Un driver conforme a livello intermedio di SQL-92 restituirà sempre tutte queste opzioni supportate.  
   
  SQL_DROP_TABLE (ODBC 3.0)  
  Maschera di bit SQLUINTEGER l'enumerazione le clausole nel **DROP TABLE** istruzione, come definito in SQL-92, supportati dall'origine dati.  
@@ -883,7 +883,7 @@ SQLRETURN SQLGetInfo(
   
  SQL_DT_DROP_TABLESQL_DT_CASCADESQL_DT_RESTRICT  
   
- Un driver di livello conforme allo standard FIPS transitorio restituirà sempre tutte queste opzioni supportate.  
+ Un driver di livello conformi a FIPS transitorio restituirà sempre tutte queste opzioni supportate.  
   
  SQL_DROP_TRANSLATION (ODBC 3.0)  
  Maschera di bit SQLUINTEGER l'enumerazione le clausole nel **eliminare la traduzione** istruzione, come definito in SQL-92, supportati dall'origine dati.  
@@ -901,7 +901,7 @@ SQLRETURN SQLGetInfo(
   
  SQL_DV_DROP_VIEWSQL_DV_CASCADESQL_DV_RESTRICT  
   
- Un driver di livello conforme allo standard FIPS transitorio restituirà sempre tutte queste opzioni supportate.  
+ Un driver di livello conformi a FIPS transitorio restituirà sempre tutte queste opzioni supportate.  
   
  SQL_DYNAMIC_CURSOR_ATTRIBUTES1(ODBC 3.0)  
  Maschera di bit SQLUINTEGER che descrive gli attributi di un cursore dinamico che sono supportati dal driver. Questa maschera di bit contiene il subset prima degli attributi. per il sottoinsieme secondo, vedere SQL_DYNAMIC_CURSOR_ATTRIBUTES2.  
@@ -930,11 +930,11 @@ SQLRETURN SQLGetInfo(
   
  SQL_CA1_POS_REFRESH = un' *operazione* argomento di SQL_REFRESH è supportata in una chiamata a **SQLSetPos** quando il cursore si trova un cursore dinamico.  
   
- SQL_CA1_POSITIONED_UPDATE = An UPDATE in cui corrente di SQL istruzione è supportata quando il cursore si trova un cursore dinamico. (Un driver di livello conforme allo standard SQL-92 voce restituirà sempre questa opzione come supportato.)  
+ SQL_CA1_POSITIONED_UPDATE = An UPDATE in cui corrente di SQL istruzione è supportata quando il cursore si trova un cursore dinamico. (Un driver conforme a livello di SQL-92 voce restituirà sempre questa opzione come supportato.)  
   
- SQL_CA1_POSITIONED_DELETE = un'eliminazione in cui corrente di SQL istruzione è supportata quando il cursore si trova un cursore dinamico. (Un driver di livello conforme allo standard SQL-92 voce restituirà sempre questa opzione come supportato.)  
+ SQL_CA1_POSITIONED_DELETE = un'eliminazione in cui corrente di SQL istruzione è supportata quando il cursore si trova un cursore dinamico. (Un driver conforme a livello di SQL-92 voce restituirà sempre questa opzione come supportato.)  
   
- SQL_CA1_SELECT_FOR_UPDATE = un'istruzione SELECT per istruzione UPDATE SQL è supportato quando il cursore si trova un cursore dinamico. (Un driver di livello conforme allo standard SQL-92 voce restituirà sempre questa opzione come supportato.)  
+ SQL_CA1_SELECT_FOR_UPDATE = un'istruzione SELECT per istruzione UPDATE SQL è supportato quando il cursore si trova un cursore dinamico. (Un driver conforme a livello di SQL-92 voce restituirà sempre questa opzione come supportato.)  
   
  SQL_CA1_BULK_ADD = un' *operazione* argomento di SQL_ADD è supportata in una chiamata a **SQLBulkOperations** quando il cursore si trova un cursore dinamico.  
   
@@ -944,7 +944,7 @@ SQLRETURN SQLGetInfo(
   
  SQL_CA1_BULK_FETCH_BY_BOOKMARK = un' *operazione* argomento di SQL_FETCH_BY_BOOKMARK è supportata in una chiamata a **SQLBulkOperations** quando il cursore si trova un cursore dinamico.  
   
- Un driver di livello conforme allo standard SQL-92 intermedio in genere restituirà le opzioni SQL_CA1_NEXT SQL_CA1_ABSOLUTE e SQL_CA1_RELATIVE supportato, perché supporta i cursori scorrevoli tramite l'istruzione SQL FETCH incorporata. Poiché questo non determinare direttamente il supporto SQL sottostante, tuttavia, i cursori scorrevoli potrebbero non essere supportati, anche per un driver conforme allo standard a livello intermedio di SQL-92.  
+ Un driver conforme a livello intermedio di SQL-92 in genere restituisce le opzioni SQL_CA1_NEXT SQL_CA1_ABSOLUTE e SQL_CA1_RELATIVE supportato, perché supporta i cursori scorrevoli tramite l'istruzione SQL FETCH incorporata. Poiché questo non determinare direttamente il supporto SQL sottostante, tuttavia, i cursori scorrevoli potrebbero non essere supportati, anche per un driver conforme a livello intermedio di SQL-92.  
   
  SQL_DYNAMIC_CURSOR_ATTRIBUTES2(ODBC 3.0)  
  Maschera di bit SQLUINTEGER che descrive gli attributi di un cursore dinamico che sono supportati dal driver. Questa maschera di bit contiene il subset secondo degli attributi. per il subset prima, vedere SQL_DYNAMIC_CURSOR_ATTRIBUTES1.  
@@ -1053,7 +1053,7 @@ SQLRETURN SQLGetInfo(
   
  SQL_GB_NO_RELATION = le colonne di **GROUP BY** clausola e l'elenco di selezione non sono correlate. Il significato delle colonne nongrouped, non aggregate nell'elenco di selezione è dipende dall'origine dati. Ad esempio, **SELECT DEPT, retribuzione da dipendente GROUP BY DEPT, età**. (ODBC 2.0)  
   
- Un driver di livello conforme allo standard SQL-92 voce restituirà sempre l'opzione SQL_GB_GROUP_BY_EQUALS_SELECT supportato. Un driver di livello conforme allo standard SQL-92 completo restituirà sempre l'opzione SQL_GB_COLLATE supportato. Se nessuna delle opzioni è supportata, il **GROUP BY** clausola non è supportata dall'origine dati.  
+ Un driver conforme a livello di SQL-92 voce restituirà sempre l'opzione SQL_GB_GROUP_BY_EQUALS_SELECT supportato. Un driver di livello conforme allo standard SQL-92 completo restituirà sempre l'opzione SQL_GB_COLLATE supportato. Se nessuna delle opzioni è supportata, il **GROUP BY** clausola non è supportata dall'origine dati.  
   
  SQL_IDENTIFIER_CASE ODBC (1.0)  
  Un SQLUSMALLINT valore come indicato di seguito:  
@@ -1150,7 +1150,7 @@ SQLRETURN SQLGetInfo(
   
  SQL_IS_SELECT_INTO  
   
- Un driver di livello conforme allo standard SQL-92 voce restituirà sempre tutte queste opzioni supportate.  
+ Un driver conforme a livello di SQL-92 voce restituirà sempre tutte queste opzioni supportate.  
   
  SQL_INTEGRITY ODBC (1.0)  
  Una stringa di caratteri: "Y" se l'origine dati supporta la funzionalità di miglioramento dell'integrità; "N" Se non esiste.  
@@ -1166,7 +1166,7 @@ SQLRETURN SQLGetInfo(
   
  Per una descrizione di questi maschere di bit, vedere SQL_DYNAMIC_CURSOR_ATTRIBUTES1 (e sostituire "gestito da keyset cursor" per "cursore dinamico" nelle descrizioni).  
   
- Un driver di livello conforme allo standard SQL-92 intermedio in genere restituirà le opzioni SQL_CA1_NEXT SQL_CA1_ABSOLUTE e SQL_CA1_RELATIVE supportato, perché il driver supporta i cursori scorrevoli tramite l'istruzione SQL FETCH incorporata. Poiché questo non determinare direttamente il supporto SQL sottostante, tuttavia, i cursori scorrevoli potrebbero non essere supportati, anche per un driver conforme allo standard a livello intermedio di SQL-92.  
+ Un driver conforme a livello intermedio di SQL-92 in genere restituisce le opzioni SQL_CA1_NEXT SQL_CA1_ABSOLUTE e SQL_CA1_RELATIVE supportato, perché il driver supporta i cursori scorrevoli tramite l'istruzione SQL FETCH incorporata. Poiché questo non determinare direttamente il supporto SQL sottostante, tuttavia, i cursori scorrevoli potrebbero non essere supportati, anche per un driver conforme a livello intermedio di SQL-92.  
   
  SQL_KEYSET_CURSOR_ATTRIBUTES2(ODBC 3.0)  
  Maschera di bit SQLUINTEGER che descrive gli attributi di un cursore keyset sono supportati dal driver. Questa maschera di bit contiene il subset secondo degli attributi. per il subset prima, vedere SQL_KEYSET_CURSOR_ATTRIBUTES1.  
@@ -1178,9 +1178,9 @@ SQLRETURN SQLGetInfo(
  Per una descrizione di questi maschere di bit, vedere SQL_DYNAMIC_CURSOR_ATTRIBUTES1 (e sostituire "gestito da keyset cursor" per "cursore dinamico" nelle descrizioni).  
   
  SQL_KEYWORDS (ODBC 2.0)  
- Una stringa di caratteri che contiene un elenco delimitato da virgole di tutte le parole chiave specifici dell'origine dati. Questo elenco non contiene parole chiave specifiche di ODBC o parole chiave usate da parte dell'origine dati e ODBC. Questo elenco rappresenta tutte le parole chiave riservate; applicazioni interoperative non utilizzare queste parole nei nomi degli oggetti.  
+ Una stringa di caratteri che contiene un elenco delimitato da virgole di tutte le parole chiave specifiche dell'origine dati. Questo elenco non contiene parole chiave specifiche di ODBC o parole chiave usate da parte dell'origine dati e ODBC. Questo elenco rappresenta tutte le parole chiave riservate; applicazioni interoperative non utilizzare queste parole nei nomi degli oggetti.  
   
- Per un elenco di parole chiave ODBC, vedere [parole chiave riservate](../../../odbc/reference/appendixes/reserved-keywords.md) nelle [appendice c: SQL grammatica](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md). Il **#define** valore SQL_ODBC_KEYWORDS contiene un elenco delimitato da virgole di parole chiave ODBC.  
+ Per un elenco di parole chiave ODBC, vedere [parole chiave riservate](../../../odbc/reference/appendixes/reserved-keywords.md) in [appendice c: Grammatica SQL](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md). Il **#define** valore SQL_ODBC_KEYWORDS contiene un elenco delimitato da virgole di parole chiave ODBC.  
   
  Appendice C: Grammatica SQL  
   
@@ -1196,7 +1196,7 @@ SQLRETURN SQLGetInfo(
  SQL_MAX_CATALOG_NAME_LEN ODBC (1.0)  
  Un valore SQLUSMALLINT che specifica la lunghezza massima di un nome di catalogo nell'origine dati. Se è prevista una lunghezza massima o la lunghezza è sconosciuta, questo valore è impostato su zero.  
   
- Un driver di livello conforme allo standard FIPS completo restituirà ad almeno 128.  
+ Un driver di livello conformi a FIPS completo restituirà ad almeno 128.  
   
  Ciò *InfoType* è stata rinominata per ODBC 3.0 da ODBC 2.0 *InfoType* SQL_MAX_QUALIFIER_NAME_LEN.  
   
@@ -1206,12 +1206,12 @@ SQLRETURN SQLGetInfo(
  SQL_MAX_COLUMN_NAME_LEN ODBC (1.0)  
  Un valore SQLUSMALLINT che specifica la lunghezza massima di un nome di colonna nell'origine dati. Se è prevista una lunghezza massima o la lunghezza è sconosciuta, questo valore è impostato su zero.  
   
- Un driver di livello conforme allo standard FIPS voce restituirà almeno 18. Un driver conforme allo standard a livello intermedio di FIPS restituirà ad almeno 128.  
+ Un driver di livello conformi a FIPS voce restituirà almeno 18. Un driver conforme a livello intermedio di FIPS restituirà ad almeno 128.  
   
  SQL_MAX_COLUMNS_IN_GROUP_BY (ODBC 2.0)  
  Un valore SQLUSMALLINT che specifica il numero massimo di colonne consentite in una **GROUP BY** clausola. Se non esiste un limite specificato o il limite è sconosciuto, questo valore è impostato su zero.  
   
- Un driver di livello conforme allo standard FIPS voce restituirà almeno 6. Un driver conforme allo standard a livello intermedio di FIPS restituirà almeno 15.  
+ Un driver di livello conformi a FIPS voce restituirà almeno 6. Un driver conforme a livello intermedio di FIPS restituirà almeno 15.  
   
  SQL_MAX_COLUMNS_IN_INDEX (ODBC 2.0)  
  Un valore SQLUSMALLINT che specifica il numero massimo di colonne consentite in un indice. Se non esiste un limite specificato o il limite è sconosciuto, questo valore è impostato su zero.  
@@ -1219,17 +1219,17 @@ SQLRETURN SQLGetInfo(
  SQL_MAX_COLUMNS_IN_ORDER_BY (ODBC 2.0)  
  Un valore SQLUSMALLINT che specifica il numero massimo di colonne consentite in un **ORDER BY** clausola. Se non esiste un limite specificato o il limite è sconosciuto, questo valore è impostato su zero.  
   
- Un driver di livello conforme allo standard FIPS voce restituirà almeno 6. Un driver conforme allo standard a livello intermedio di FIPS restituirà almeno 15.  
+ Un driver di livello conformi a FIPS voce restituirà almeno 6. Un driver conforme a livello intermedio di FIPS restituirà almeno 15.  
   
  SQL_MAX_COLUMNS_IN_SELECT (ODBC 2.0)  
  Un valore SQLUSMALLINT che specifica il numero massimo di colonne consentite in un elenco di selezione. Se non esiste un limite specificato o il limite è sconosciuto, questo valore è impostato su zero.  
   
- Un driver di livello conforme allo standard FIPS voce restituirà almeno pari a 100. Un driver conforme allo standard a livello intermedio di FIPS restituirà almeno 250.  
+ Un driver di livello conformi a FIPS voce restituirà almeno pari a 100. Un driver conforme a livello intermedio di FIPS restituirà almeno 250.  
   
  SQL_MAX_COLUMNS_IN_TABLE (ODBC 2.0)  
  Un valore SQLUSMALLINT che specifica il numero massimo di colonne consentite in una tabella. Se non esiste un limite specificato o il limite è sconosciuto, questo valore è impostato su zero.  
   
- Un driver di livello conforme allo standard FIPS voce restituirà almeno pari a 100. Un driver conforme allo standard a livello intermedio di FIPS restituirà almeno 250.  
+ Un driver di livello conformi a FIPS voce restituirà almeno pari a 100. Un driver conforme a livello intermedio di FIPS restituirà almeno 250.  
   
  SQL_MAX_CONCURRENT_ACTIVITIES ODBC (1.0)  
  Un valore SQLUSMALLINT che specifica il numero massimo di istruzioni attive in grado di supportare il driver per una connessione. Un'istruzione è definita come attivo se ha i risultati in sospeso, con il termine "risultati" significato le righe da un **seleziona** operazione o righe interessate da un' **inserire**, **UPDATE**, o **Eliminare** operazione (ad esempio, un conteggio delle righe) o se si trova in uno stato NEED_DATA. Questo valore può rispecchiare un limite imposto dal driver o l'origine dati. Se non esiste un limite specificato o il limite è sconosciuto, questo valore è impostato su zero.  
@@ -1239,7 +1239,7 @@ SQLRETURN SQLGetInfo(
  SQL_MAX_CURSOR_NAME_LEN ODBC (1.0)  
  Un valore SQLUSMALLINT che specifica la lunghezza massima di un nome di cursore nell'origine dati. Se è prevista una lunghezza massima o la lunghezza è sconosciuta, questo valore è impostato su zero.  
   
- Un driver di livello conforme allo standard FIPS voce restituirà almeno 18. Un driver conforme allo standard a livello intermedio di FIPS restituirà ad almeno 128.  
+ Un driver di livello conformi a FIPS voce restituirà almeno 18. Un driver conforme a livello intermedio di FIPS restituirà ad almeno 128.  
   
  SQL_MAX_DRIVER_CONNECTIONS ODBC (1.0)  
  Un valore SQLUSMALLINT che specifica il numero massimo di connessioni attive in grado di supportare il driver per un ambiente. Questo valore può rispecchiare un limite imposto dal driver o l'origine dati. Se non esiste un limite specificato o il limite è sconosciuto, questo valore è impostato su zero.  
@@ -1249,7 +1249,7 @@ SQLRETURN SQLGetInfo(
  SQL_MAX_IDENTIFIER_LEN (ODBC 3.0)  
  Un SQLUSMALLINT che indica la dimensione massima in caratteri che l'origine dati supporta per i nomi definiti dall'utente.  
   
- Un driver di livello conforme allo standard FIPS voce restituirà almeno 18. Un driver conforme allo standard a livello intermedio di FIPS restituirà ad almeno 128.  
+ Un driver di livello conformi a FIPS voce restituirà almeno 18. Un driver conforme a livello intermedio di FIPS restituirà ad almeno 128.  
   
  SQL_MAX_INDEX_SIZE (ODBC 2.0)  
  Un valore SQLUINTEGER che specifica il numero massimo di byte consentiti nei campi di un indice combinati. Se non esiste un limite specificato o il limite è sconosciuto, questo valore è impostato su zero.  
@@ -1260,15 +1260,15 @@ SQLRETURN SQLGetInfo(
  SQL_MAX_ROW_SIZE (ODBC 2.0)  
  Un valore SQLUINTEGER che specifica la lunghezza massima di una singola riga in una tabella. Se non esiste un limite specificato o il limite è sconosciuto, questo valore è impostato su zero.  
   
- Un driver di livello conforme allo standard FIPS voce restituirà almeno 2.000. Un driver conforme allo standard a livello intermedio di FIPS restituirà almeno 8.000.  
+ Un driver di livello conformi a FIPS voce restituirà almeno 2.000. Un driver conforme a livello intermedio di FIPS restituirà almeno 8.000.  
   
  SQL_MAX_ROW_SIZE_INCLUDES_LONG (ODBC 3.0)  
- Una stringa di caratteri: "Y" se le dimensioni massime delle righe restituite per il tipo di informazioni SQL_MAX_ROW_SIZE include la lunghezza di tutte le colonne SQL_LONGVARBINARY e SQL_LONGVARCHAR nella riga. "N" in caso contrario.  
+ Una stringa di caratteri: "Y" se le dimensioni massime delle righe restituite per il tipo di informazioni SQL_MAX_ROW_SIZE include la lunghezza delle colonne di tutti i SQL_LONGVARBINARY e SQL_LONGVARCHAR nella riga. "N" in caso contrario.  
   
  SQL_MAX_SCHEMA_NAME_LEN ODBC (1.0)  
  Un valore SQLUSMALLINT che specifica la lunghezza massima di un nome di schema dell'origine dati. Se è prevista una lunghezza massima o la lunghezza è sconosciuta, questo valore è impostato su zero.  
   
- Un driver di livello conforme allo standard FIPS voce restituirà almeno 18. Un driver conforme allo standard a livello intermedio di FIPS restituirà ad almeno 128.  
+ Un driver di livello conformi a FIPS voce restituirà almeno 18. Un driver conforme a livello intermedio di FIPS restituirà ad almeno 128.  
   
  Ciò *InfoType* è stata rinominata per ODBC 3.0 da ODBC 2.0 *InfoType* SQL_MAX_OWNER_NAME_LEN.  
   
@@ -1278,12 +1278,12 @@ SQLRETURN SQLGetInfo(
  SQL_MAX_TABLE_NAME_LEN ODBC (1.0)  
  Un valore SQLUSMALLINT che specifica la lunghezza massima di un nome di tabella nell'origine dati. Se è prevista una lunghezza massima o la lunghezza è sconosciuta, questo valore è impostato su zero.  
   
- Un driver di livello conforme allo standard FIPS voce restituirà almeno 18. Un driver conforme allo standard a livello intermedio di FIPS restituirà ad almeno 128.  
+ Un driver di livello conformi a FIPS voce restituirà almeno 18. Un driver conforme a livello intermedio di FIPS restituirà ad almeno 128.  
   
  SQL_MAX_TABLES_IN_SELECT (ODBC 2.0)  
  Un valore SQLUSMALLINT che specifica il numero massimo di tabelle consentito nel **FROM** clausola di un **seleziona** istruzione. Se non esiste un limite specificato o il limite è sconosciuto, questo valore è impostato su zero.  
   
- Un driver di livello conforme allo standard FIPS voce restituirà almeno 15. Un driver conforme allo standard a livello intermedio di FIPS restituirà almeno 50.  
+ Un driver di livello conformi a FIPS voce restituirà almeno 15. Un driver conforme a livello intermedio di FIPS restituirà almeno 50.  
   
  SQL_MAX_USER_NAME_LEN (ODBC 2.0)  
  Un valore SQLUSMALLINT che specifica la lunghezza massima di un nome utente nell'origine dati. Se è prevista una lunghezza massima o la lunghezza è sconosciuta, questo valore è impostato su zero.  
@@ -1299,7 +1299,7 @@ SQLRETURN SQLGetInfo(
  Le informazioni restituite per questo tipo di informazioni non sono applicabile nel caso di transazioni distribuite.  
   
  SQL_NEED_LONG_DATA_LEN (ODBC 2.0)  
- Una stringa di caratteri: "Y" se l'origine dati deve la lunghezza di un valore di dati long (tipo di dati è SQL_LONGVARBINARY, SQL_LONGVARCHAR o un tipo di dati specifici dell'origine dati di tipo long) prima di tale valore viene inviato all'origine dati, "N" Se non esiste. Per altre informazioni, vedere [funzione SQLBindParameter](../../../odbc/reference/syntax/sqlbindparameter-function.md) e [funzione SQLSetPos](../../../odbc/reference/syntax/sqlsetpos-function.md).  
+ Una stringa di caratteri: In caso contrario, "Y" se l'origine dati deve la lunghezza di un valore di dati long (tipo di dati è SQL_LONGVARBINARY, SQL_LONGVARCHAR o un tipo di dati specifici dell'origine dati di tipo long) prima di tale valore viene inviato all'origine dati, "N". Per altre informazioni, vedere [funzione SQLBindParameter](../../../odbc/reference/syntax/sqlbindparameter-function.md) e [funzione SQLSetPos](../../../odbc/reference/syntax/sqlsetpos-function.md).  
   
  SQL_NON_NULLABLE_COLUMNS ODBC (1.0)  
  Un valore SQLUSMALLINT che specifica se l'origine dati supporta NOT NULL nelle colonne:  
@@ -1308,7 +1308,7 @@ SQLRETURN SQLGetInfo(
   
  SQL_NNC_NON_NULL = colonne non possono essere nullable. (L'origine dati supporta la **non è NULL** vincolo di colonna in **CREATE TABLE** istruzioni.)  
   
- Un driver di livello conforme allo standard SQL-92 voce restituirà SQL_NNC_NON_NULL.  
+ Un driver conforme a livello di SQL-92 voce restituirà SQL_NNC_NON_NULL.  
   
  SQL_NULL_COLLATION (ODBC 2.0)  
  Un valore SQLUSMALLINT che specifica in cui i valori null vengono ordinati in un set di risultati:  
@@ -1404,38 +1404,38 @@ SQLRETURN SQLGetInfo(
   
  SQL_IC_LOWER = tra virgolette gli identificatori di SQL non sono tra maiuscole e minuscole e vengono archiviati in lettere minuscole nel catalogo di sistema.  
   
- SQL_IC_SENSITIVE = tra virgolette gli identificatori di SQL sono tra maiuscole e minuscole e vengono archiviati in minuscolo e maiuscolo nel catalogo di sistema. (In un database SQL-92: conforme, gli identificatori tra virgolette sono sempre distinzione maiuscole/minuscole).  
+ SQL_IC_SENSITIVE = tra virgolette gli identificatori di SQL sono tra maiuscole e minuscole e vengono archiviati in minuscolo e maiuscolo nel catalogo di sistema. (In un database compatibile con SQL-92, gli identificatori tra virgolette sono sempre distinzione maiuscole/minuscole).  
   
  SQL_IC_MIXED = tra virgolette gli identificatori di SQL non sono tra maiuscole e minuscole e vengono archiviati in minuscolo e maiuscolo nel catalogo di sistema.  
   
- Un driver di livello conforme allo standard SQL-92 voce restituirà sempre SQL_IC_SENSITIVE.  
+ Un driver conforme a livello di SQL-92 voce restituirà sempre SQL_IC_SENSITIVE.  
   
  SQL_ROW_UPDATES ODBC (1.0)  
- Una stringa di caratteri: "Y" se un cursore keyset o misto mantiene le versioni delle righe o valori per tutte le righe recupero e pertanto possono rilevare gli aggiornamenti che sono stato apportati a una riga da qualsiasi utente, poiché l'ultima operazione di recupero. (Si applica solo agli aggiornamenti, non per eliminazioni o inserimenti). Il driver può restituire il flag SQL_ROW_UPDATED allo stato della riga di matrice quando **SQLFetchScroll** viene chiamato. In caso contrario, "N".  
+ Una stringa di caratteri: "Y" se un cursore keyset o misto gestisce le versioni delle righe o valori per tutte le righe recuperate e pertanto può rilevare gli aggiornamenti che sono stato apportati a una riga da qualsiasi utente, poiché l'ultima operazione di recupero. (Si applica solo agli aggiornamenti, non per eliminazioni o inserimenti). Il driver può restituire il flag SQL_ROW_UPDATED allo stato della riga di matrice quando **SQLFetchScroll** viene chiamato. In caso contrario, "N".  
   
  SQL_SCHEMA_TERM ODBC (1.0)  
  Una stringa di caratteri con il nome del fornitore di origine dati per uno schema. ad esempio, "proprietario", "ID autorizzazione" o "Schema".  
   
  La stringa di caratteri può essere restituita in caso di superiore, inferiore o misto.  
   
- Un driver di livello conforme allo standard SQL-92 voce restituirà sempre "schema".  
+ Un driver conforme a livello di SQL-92 voce restituirà sempre "schema".  
   
  Ciò *InfoType* è stata rinominata per ODBC 3.0 da ODBC 2.0 *InfoType* SQL_OWNER_TERM.  
   
  SQL_SCHEMA_USAGE (ODBC 2.0)  
  Maschera di bit SQLUINTEGER l'enumerazione le istruzioni in cui gli schemi possono essere utilizzati:  
   
- SQL_SU_DML_STATEMENTS = gli schemi sono supportati in tutte le istruzioni Data Manipulation Language: **selezionate**, **Inserisci**, **UPDATE**, **DELETE**e, se supportato **selezionate per l'aggiornamento** e aggiornamento posizionato ed eliminare le istruzioni.  
+ SQL_SU_DML_STATEMENTS = gli schemi sono supportati in tutte le istruzioni Data Manipulation Language: **Selezionare**, **inserire**, **aggiornare**, **eliminare**e, se supportato **selezionare per aggiornare** e l'eliminazione e aggiornamento posizionato istruzioni.  
   
  SQL_SU_PROCEDURE_INVOCATION = gli schemi sono supportati nell'istruzione ODBC procedure chiamata.  
   
- SQL_SU_TABLE_DEFINITION = gli schemi sono supportati in tutte le istruzioni di definizione di tabella: **CREATE TABLE**, **CREATE VIEW**, **ALTER TABLE**, **DROP TABLE** , e **DROP VIEW**.  
+ SQL_SU_TABLE_DEFINITION = gli schemi sono supportati in tutte le istruzioni di definizione di tabella: **Crea tabella**, **Crea vista**, **ALTER TABLE**, **DROP TABLE**, e **DROP VIEW**.  
   
- SQL_SU_INDEX_DEFINITION = gli schemi sono supportati in tutte le istruzioni di definizione di indice: **CREATE INDEX** e **DROP INDEX**.  
+ SQL_SU_INDEX_DEFINITION = gli schemi sono supportati in tutte le istruzioni di definizione di indice: **Crea indice** e **DROP INDEX**.  
   
- SQL_SU_PRIVILEGE_DEFINITION = gli schemi sono supportati in tutte le istruzioni di definizione dei privilegi: **concessione** e **REVOKE**.  
+ SQL_SU_PRIVILEGE_DEFINITION = gli schemi sono supportati in tutte le istruzioni di definizione dei privilegi: **CONCESSIONE** e **revocare**.  
   
- Un driver di livello conforme allo standard SQL-92 voce restituirà sempre le opzioni SQL_SU_DML_STATEMENTS SQL_SU_TABLE_DEFINITION e SQL_SU_PRIVILEGE_DEFINITION, come supportato.  
+ Un driver conforme a livello di SQL-92 voce restituirà sempre le opzioni SQL_SU_DML_STATEMENTS SQL_SU_TABLE_DEFINITION e SQL_SU_PRIVILEGE_DEFINITION, come supportato.  
   
  Ciò *InfoType* è stata rinominata per ODBC 3.0 da ODBC 2.0 *InfoType* SQL_OWNER_USAGE.  
   
@@ -1496,7 +1496,7 @@ SQLRETURN SQLGetInfo(
   
  SQL_SFKD_CASCADESQL_SFKD_NO_ACTIONSQL_SFKD_SET_DEFAULTSQL_SFKD_SET_NULL  
   
- Un driver di livello conforme allo standard FIPS transitorio restituirà sempre tutte queste opzioni supportate.  
+ Un driver di livello conformi a FIPS transitorio restituirà sempre tutte queste opzioni supportate.  
   
  SQL_SQL92_FOREIGN_KEY_UPDATE_RULE(ODBC 3.0)  
  Maschera di bit SQLUINTEGER l'enumerazione di regole supportate per una chiave esterna in un' **UPDATE** istruzione, come definito in SQL-92.  
@@ -1589,7 +1589,7 @@ SQLRETURN SQLGetInfo(
   
  Per una descrizione di questi maschere di bit, vedere SQL_DYNAMIC_CURSOR_ATTRIBUTES1 (e sostituire "cursore statico" per "cursore dinamico" nelle descrizioni).  
   
- Un driver di livello conforme allo standard SQL-92 intermedio in genere restituirà le opzioni SQL_CA1_NEXT SQL_CA1_ABSOLUTE e SQL_CA1_RELATIVE supportato, perché il driver supporta i cursori scorrevoli tramite l'istruzione SQL FETCH incorporata. Poiché questo non determinare direttamente il supporto SQL sottostante, tuttavia, i cursori scorrevoli potrebbero non essere supportati, anche per un driver conforme allo standard a livello intermedio di SQL-92.  
+ Un driver conforme a livello intermedio di SQL-92 in genere restituisce le opzioni SQL_CA1_NEXT SQL_CA1_ABSOLUTE e SQL_CA1_RELATIVE supportato, perché il driver supporta i cursori scorrevoli tramite l'istruzione SQL FETCH incorporata. Poiché questo non determinare direttamente il supporto SQL sottostante, tuttavia, i cursori scorrevoli potrebbero non essere supportati, anche per un driver conforme a livello intermedio di SQL-92.  
   
  SQL_STATIC_CURSOR_ATTRIBUTES2(ODBC 3.0)  
  Maschera di bit SQLUINTEGER che descrive gli attributi di un cursore statico che sono supportati dal driver. Questa maschera di bit contiene il subset secondo degli attributi. per il subset prima, vedere SQL_STATIC_CURSOR_ATTRIBUTES1.  
@@ -1620,7 +1620,7 @@ SQLRETURN SQLGetInfo(
   
  La maschera di bit SQL_SQ_CORRELATED_SUBQUERIES indica che tutti i predicati che supportano le sottoquery supportano sottoquery correlate.  
   
- Un driver di livello conforme allo standard SQL-92 voce restituirà sempre una maschera di bit in cui tutti questi bit vengono impostati.  
+ Un driver conforme a livello di SQL-92 voce restituirà sempre una maschera di bit in cui tutti questi bit vengono impostati.  
   
  SQL_SYSTEM_FUNCTIONS ODBC (1.0)  
  Maschera di bit SQLUINTEGER l'enumerazione di funzioni di sistema scalari supportate dal driver e origine dati associata.  
@@ -1634,7 +1634,7 @@ SQLRETURN SQLGetInfo(
   
  Questa stringa di caratteri possibile in caso di superiore, inferiore o misto.  
   
- Un driver di livello conforme allo standard SQL-92 voce verrà sempre restituito "table".  
+ Un driver conforme a livello di SQL-92 voce verrà sempre restituito "table".  
   
  SQL_TIMEDATE_ADD_INTERVALS (ODBC 2.0)  
  Maschera di bit SQLUINTEGER l'enumerazione supportati dal driver e origine dati associata per la funzione scalare timestampadd non gli intervalli di timestamp.  
@@ -1643,7 +1643,7 @@ SQLRETURN SQLGetInfo(
   
  SQL_FN_TSI_FRAC_SECONDSQL_FN_TSI_SECONDSQL_FN_TSI_MINUTESQL_FN_TSI_HOURSQL_FN_TSI_DAYSQL_FN_TSI_WEEKSQL_FN_TSI_MONTHSQL_FN_TSI_QUARTERSQL_FN_TSI_YEAR  
   
- Un driver di livello conforme allo standard FIPS transitorio restituirà sempre una maschera di bit in cui tutti questi bit vengono impostati.  
+ Un driver di livello conformi a FIPS transitorio restituirà sempre una maschera di bit in cui tutti questi bit vengono impostati.  
   
  SQL_TIMEDATE_DIFF_INTERVALS (ODBC 2.0)  
  Maschera di bit SQLUINTEGER l'enumerazione supportati dal driver e origine dati associata per la funzione scalare timestampdiff non gli intervalli di timestamp.  
@@ -1652,7 +1652,7 @@ SQLRETURN SQLGetInfo(
   
  SQL_FN_TSI_FRAC_SECONDSQL_FN_TSI_SECONDSQL_FN_TSI_MINUTESQL_FN_TSI_HOURSQL_FN_TSI_DAYSQL_FN_TSI_WEEKSQL_FN_TSI_MONTHSQL_FN_TSI_QUARTERSQL_FN_TSI_YEAR  
   
- Un driver di livello conforme allo standard FIPS transitorio restituirà sempre una maschera di bit in cui tutti questi bit vengono impostati.  
+ Un driver di livello conformi a FIPS transitorio restituirà sempre una maschera di bit in cui tutti questi bit vengono impostati.  
   
  SQL_TIMEDATE_FUNCTIONS ODBC (1.0)  
  Nota: Il tipo di informazioni è stata introdotta in ODBC 1.0; ogni maschera di bit viene etichettato con la versione in cui è stato introdotto in.  
@@ -1691,7 +1691,7 @@ SQLRETURN SQLGetInfo(
   
  Per impostare il livello di isolamento delle transazioni, un'applicazione chiama **SQLSetConnectAttr** per impostare l'attributo SQL_ATTR_TXN_ISOLATION. Per altre informazioni, vedere [funzione SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md).  
   
- Un driver di livello conforme allo standard SQL-92 voce restituirà sempre SQL_TXN_SERIALIZABLE supportato. Un driver di livello conforme allo standard FIPS transitorio restituirà sempre tutte queste opzioni supportate.  
+ Un driver conforme a livello di SQL-92 voce restituirà sempre SQL_TXN_SERIALIZABLE supportato. Un driver di livello conformi a FIPS transitorio restituirà sempre tutte queste opzioni supportate.  
   
  SQL_UNION (ODBC 2.0)  
  Maschera di bit SQLUINTEGER l'enumerazione il supporto per la **unione** clausola:  
@@ -1700,7 +1700,7 @@ SQLRETURN SQLGetInfo(
   
  SQL_U_UNION_ALL = l'origine dati supporta la **tutte** parola chiave nel **UNION** clausola. (**SQLGetInfo** in questo caso vengono restituiti sia SQL_U_UNION sia SQL_U_UNION_ALL.)  
   
- Un driver di livello conforme allo standard SQL-92 voce restituirà sempre entrambe le opzioni supportate.  
+ Un driver conforme a livello di SQL-92 voce restituirà sempre entrambe le opzioni supportate.  
   
  SQL_USER_NAME ODBC (1.0)  
  Una stringa di caratteri con il nome usato in un determinato database, che può essere diverso dal nome dell'account di accesso.  
@@ -1722,10 +1722,10 @@ SQLRETURN SQLGetInfo(
   
  SQL_AF_ALLSQL_AF_AVGSQL_AF_COUNTSQL_AF_DISTINCTSQL_AF_MAXSQL_AF_MINSQL_AF_SUM  
   
- Un driver di livello conforme allo standard SQL-92 voce restituirà sempre tutte queste opzioni supportate.  
+ Un driver conforme a livello di SQL-92 voce restituirà sempre tutte queste opzioni supportate.  
   
  SQL_ALTER_DOMAIN (ODBC 3.0)  
- Maschera di bit SQLUINTEGER l'enumerazione le clausole nel **ALTER dominio** istruzione, come definito in SQL-92, supportati dall'origine dati. Un driver conforme a livello completo di SQL-92 restituirà sempre tutte le maschere di bit. Il valore restituito pari a "0" indica che il **ALTER dominio** istruzione non è supportata.  
+ Maschera di bit SQLUINTEGER l'enumerazione le clausole nel **ALTER dominio** istruzione, come definito in SQL-92, supportati dall'origine dati. Un driver conforme con livello SQL-92 completo restituirà sempre tutte le maschere di bit. Il valore restituito pari a "0" indica che il **ALTER dominio** istruzione non è supportata.  
   
  Il livello di conformità SQL-92 o FIPS in corrispondenza del quale deve essere supportata questa funzionalità è racchiusa tra parentesi accanto a ogni maschera di bit.  
   

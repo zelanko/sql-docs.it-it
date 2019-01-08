@@ -1,5 +1,5 @@
 ---
-title: Proprietà della memoria | Microsoft Docs
+title: Proprietà della memoria di Analysis Services | Microsoft Docs
 ms.date: 10/03/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: a080bed935a8f981376ff40dc36e19ef61a3c144
-ms.sourcegitcommit: 448106b618fe243e418bbfc3daae7aee8d8553d2
+ms.openlocfilehash: 763c085e9a4dbc6ecb459ffcd17f5185531b98fb
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48264881"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53071998"
 ---
 # <a name="memory-properties"></a>Proprietà della memoria
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -35,7 +35,7 @@ Tenere presente che le impostazioni di configurazione si intendono per istanza. 
 
 La tabella seguente descrive brevemente le impostazioni di memoria più comuni. Per informazioni più dettagliate, vedere la sezione di riferimento. Configurare queste impostazioni solo se Analysis Services entra in competizione per la memoria con altre applicazioni sullo stesso server:
 
-Impostazione | Description
+Impostazione | Descrizione
 --------|------------
 LowMemoryLimit | Per le istanze multidimensionali, una soglia inferiore a cui il server inizia prima il rilascio della memoria allocata agli oggetti usati raramente.
 VertiPaqMemoryLimit | Per le istanze tabulari, una soglia inferiore a cui il server inizia prima il rilascio della memoria allocata agli oggetti usati raramente.
@@ -66,7 +66,7 @@ Solo per Azure Analysis Services. Una proprietà avanzata per controllare la qua
  **VertiPaqPagingPolicy**  
   Solo per le istanze tabulari, specifica il comportamento di paging nel caso in cui la memoria del server sia insufficiente. I valori validi sono i seguenti:  
   
-Impostazione  |Description  
+Impostazione  |Descrizione  
 ---------|---------
 **0**     |  (impostazione predefinita per Azure Analysis Services) Disabilita il paging. Se la memoria è insufficiente, l'elaborazione ha esito negativo e provoca un errore memoria insufficiente. Se si disabilita il paging, è necessario concedere i privilegi di Windows all'account del servizio. Per istruzioni, vedere [Configurare gli account del servizio &#40;Analysis Services&#41;](../../analysis-services/instances/configure-service-accounts-analysis-services.md). 
 **1**     |  (impostazione predefinita per SQL Server Analysis Services) Questa proprietà abilita il paging su disco utilizzando il file di paging del sistema operativo (Pagefile. sys).   
@@ -88,7 +88,7 @@ Quando è impostata su 1, è meno probabile che l'elaborazione non venga complet
  **MemoryHeapType**  
   Proprietà avanzata che deve essere modificata solo sotto la supervisione del servizio di supporto tecnico [!INCLUDE[msCoName](../../includes/msconame-md.md)] . I valori validi in SQL Server 2016 SP1 e versioni successive di Analysis Services sono i seguenti:
   
-  Impostazione | Description
+  Impostazione | Descrizione
 --------|------------
 **-1** | (Impostazione predefinita) Automatico. Il motore stabilirà il valore da usare.
 **1** | Heap Analysis Services.
@@ -100,7 +100,7 @@ Quando è impostata su 1, è meno probabile che l'elaborazione non venga complet
  **HeapTypeForObjects**  
   Proprietà avanzata che deve essere modificata solo sotto la supervisione del servizio di supporto tecnico [!INCLUDE[msCoName](../../includes/msconame-md.md)] . I valori validi sono i seguenti:
   
-   Impostazione | Description
+   Impostazione | Descrizione
 --------|------------
 **-1** | (Impostazione predefinita) Automatico. Il motore stabilirà il valore da usare.
 **0** | Heap LFH Windows.

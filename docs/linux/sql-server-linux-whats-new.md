@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 456b6f31-6b97-4e31-80ab-b40151ec4868
-ms.openlocfilehash: d255d242fa2f5b8615c06097620d7e85e0b895fd
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: b248578015e8d821c3c76314ecbbabdf75600a52
+ms.sourcegitcommit: de8ef246a74c935c5098713f14e9dd06c4733713
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51659212"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53160529"
 ---
 # <a name="whats-new-for-sql-server-on-linux"></a>Novità di SQL Server in Linux
 
@@ -34,7 +34,7 @@ Questo articolo descrive le funzionalità principali e i servizi disponibili per
 - Supporto dei percorsi nativi di Linux.
 - Supporto per IPv6.
 - Supporto per file di database su NFS.
-- Abilitata [trasparente Layer Security](sql-server-linux-encrypted-connections.md) crittografia (TLS).
+- Abilitata [Transport Layer Security](sql-server-linux-encrypted-connections.md) crittografia (TLS).
 - Abilitata [autenticazione di Active Directory](sql-server-linux-active-directory-authentication.md).
 - [La funzionalità gruppi di disponibilità](sql-server-linux-availability-group-overview.md) per la disponibilità elevata.
 - [Ricerca full-text](sql-server-linux-setup-full-text-search.md) supportano.

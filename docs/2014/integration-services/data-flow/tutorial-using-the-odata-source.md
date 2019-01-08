@@ -4,21 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 2c64cf8b-5edb-48df-8ffe-697096258f71
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 32d4e2f651fe4a080c1b75c4bd8c00ded7940bae
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 693eb9b33c753f1d87b4b5635e47de82ca7e4b59
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48155001"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52805153"
 ---
-# <a name="tutorial-using-the-odata-source-ssis"></a>Esercitazione: utilizzo dell'origine OData [SSIS]
+# <a name="tutorial-using-the-odata-source-ssis"></a>Esercitazione: Uso dell'origine OData [SSIS]
   In questa esercitazione viene eseguito il processo per estrarre la raccolta **Dipendenti** del servizio **Northwind** OData di esempio (http://services.odata.org/V3/Northwind/Northwind.svc/) e caricarla in un file flat.  
   
 ## <a name="1-create-an-integration-services-project"></a>1. Creare un progetto di Integration Services  
@@ -43,7 +42,7 @@ ms.locfileid: "48155001"
   
 4.  Fare doppio clic sul componente **Origine OData** per aprire la finestra di dialogo **Editor origine OData** .  
   
-5.  Fare clic su **Nuovo…** per aggiungere una nuova gestione connessione OData.  
+5.  Fare clic su **Nuovo** per aggiungere una nuova gestione connessione OData.  
   
 6.  Immettere l'URL del servizio OData in **percorso documento di servizio**. Può essere l'URL del documento di servizio o l'URL di un'entità o di un feed specifico. Ai fini di questa esercitazione, digitare [ http://services.odata.org/V3/Northwind/Northwind.svc/ ](http://services.odata.org/V3/Northwind/Northwind.svc/).  
   

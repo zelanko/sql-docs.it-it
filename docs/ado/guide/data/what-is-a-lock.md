@@ -14,17 +14,17 @@ ms.assetid: f8989555-28c6-4c17-9bf8-7f44a8a5c407
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 981b2b5dc1f76d879b18e5569e7fb70dbece1538
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 744ae9a9541b5c73d579e097f375b4141e771fce
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47813079"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52501758"
 ---
 # <a name="what-is-a-lock"></a>Informazioni sui blocchi
 Il blocco è il processo mediante il quale un DBMS limita l'accesso a una riga in un ambiente multiutente. Quando una riga o colonna viene bloccato in modo esclusivo, altri utenti non sono consentiti per accedere ai dati bloccati fino a quando il blocco viene rilasciato. Ciò garantisce che due utenti non è possibile aggiornare contemporaneamente la stessa colonna in una riga.  
   
- I blocchi possono essere molto onerosa dal punto di vista della risorsa e devono essere utilizzati solo quando necessario per mantenere l'integrità dei dati. In un database in cui è stato possibile cercare centinaia o migliaia di utenti per accedere a un record di ogni secondo, ad esempio un database connesso a Internet, ovvero numero eccessivo di blocchi è stato possibile generare rapidamente rallenterà le prestazioni dell'applicazione.  
+ I blocchi possono essere molto onerosa dal punto di vista della risorsa e devono essere utilizzati solo quando necessario per mantenere l'integrità dei dati. In un database in cui è stato possibile cercare centinaia o migliaia di utenti per accedere a un record di ogni secondo, ad esempio un database connesso a Internet - numero eccessivo di blocchi può rapidamente comportare rallentamento delle prestazioni nell'applicazione.  
   
  È possibile controllare come l'origine dati e la libreria di cursori di ADO gestire la concorrenza, scegliendo l'opzione di blocco appropriato.  
   

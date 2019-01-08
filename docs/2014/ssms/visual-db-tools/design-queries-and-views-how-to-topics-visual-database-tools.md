@@ -4,10 +4,10 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
-- • vs.solutionexplorer.file.query
+- vs.solutionexplorer.file.query
 helpviewer_keywords:
 - queries [Visual Database Tools]
 - View Designer, about View Designer
@@ -20,17 +20,17 @@ ms.assetid: 200903f4-1208-4563-9dca-26aabaacfa20
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1652e8a15b973e46a6692fcc2f79bc56cc2fdff8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ca92258bb764014b6f985ea08aa1a2606037a019
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48108361"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53328381"
 ---
 # <a name="design-queries-and-views-how-to-topics-visual-database-tools"></a>Procedure per la progettazione di query e viste (Visual Database Tools)
   Progettazione query e Progettazione viste può essere utile per la creazione e manutenzione dei componenti per il recupero e la manipolazione dei dati di un'applicazione.  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Aprire Progettazione query e Progettazione viste &#40;Visual Database Tools&#41;](visual-database-tools.md)  
  Viene descritta la procedura per aprire una query o una vista nuova o esistente in Progettazione query e Progettazione viste.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "48108361"
  [Eseguire operazioni di base con le query &#40;Visual Database Tools&#41;](perform-basic-operations-with-queries-visual-database-tools.md)  
  Vengono elencati gli argomenti relativi alla creazione, modifica, esecuzione e copia di query, nonché gli argomenti di base relativi all'ordinamento e alla stampa dei risultati delle query.  
   
- [Specifica dei criteri di ricerca &#40;Visual Database Tools&#41;](specify-search-criteria-visual-database-tools.md)  
+ [Specifica di criteri di ricerca &#40;Visual Database Tools&#41;](specify-search-criteria-visual-database-tools.md)  
  Vengono elencate le regole e le convenzioni per la creazione di query, nonché le procedure per l'utilizzo di criteri per ottenere risultati specifici.  
   
  [Eseguire query con join &#40;Visual Database Tools&#41;](query-with-joins-visual-database-tools.md)  
@@ -61,5 +61,3 @@ ms.locfileid: "48108361"
 ## <a name="related-sections"></a>Sezioni correlate  
  [Progettazione di tabelle &#40;Visual Database Tools&#41;](design-tables-visual-database-tools.md)  
  Procedure dettagliate per la progettazione e la gestione della struttura di un database mediante tabelle, colonne, chiavi, indici, stored procedure e altro ancora.  
-  
-  

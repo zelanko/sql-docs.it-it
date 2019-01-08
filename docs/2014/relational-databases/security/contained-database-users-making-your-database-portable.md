@@ -13,12 +13,12 @@ ms.assetid: e57519bb-e7f4-459b-ba2f-fd42865ca91d
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: e793680a5171493460ff1f66caf7a918103619cf
-ms.sourcegitcommit: b75fc8cfb9a8657f883df43a1f9ba1b70f1ac9fb
+ms.openlocfilehash: a10f892c8fd635892d76061e9f33649340e69593
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48851818"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53351550"
 ---
 # <a name="contained-database-users---making-your-database-portable"></a>Utenti di database indipendente: rendere portabile un database
   Usare gli utenti di database indipendente per autenticare le connessioni [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e [!INCLUDE[ssSDS](../../includes/sssds-md.md)] a livello di database. Un database indipendente è un database isolato dagli altri database e dall'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/[!INCLUDE[ssSDS](../../includes/sssds-md.md)] (e del database master) che ospita il database. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta gli utenti di database indipendente per l'autenticazione di Windows e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Quando si usa [!INCLUDE[ssSDS](../../includes/sssds-md.md)], combinare gli utenti di del database indipendente con le regole firewall a livello di database. Questo argomento illustra le differenze e i vantaggi correlati all'uso del modello di database indipendente rispetto al modello tradizionale basato su account di accesso/utente e alle regole firewall a livello di server o Windows. L'uso del modello tradizionale basato su account di accesso/utente e delle regole firewall a livello di server può essere ancora necessario in scenari specifici, per la gestibilità o per la logica di business dell'applicazione.  
@@ -49,9 +49,9 @@ ms.locfileid: "48851818"
   
  Per altre informazioni sulle regole del firewall del [!INCLUDE[ssSDS](../../includes/sssds-md.md)] , vedere gli argomenti seguenti:  
   
--   [Firewall del database SQL di Azure](http://msdn.microsoft.com/library/azure/ee621782.aspx)  
+-   [Firewall del database SQL di Azure](https://msdn.microsoft.com/library/azure/ee621782.aspx)  
   
--   [Procedura: Configurare le impostazioni del firewall (database SQL di Azure)](http://msdn.microsoft.com/library/azure/jj553530.aspx)  
+-   [Come si fa: Configurare le impostazioni del Firewall (Database SQL di Azure)](https://msdn.microsoft.com/library/azure/jj553530.aspx)  
   
 -   [sp_set_firewall_rule &#40;Database di SQL Azure&#41;](/sql/relational-databases/system-stored-procedures/sp-set-firewall-rule-azure-sql-database)  
   
@@ -63,7 +63,7 @@ ms.locfileid: "48851818"
 |-----------------------|-----------------------------------|  
 |Quando connesso al database master:<br /><br /> `CREATE LOGIN login_name  WITH PASSWORD = 'strong_password';`<br /><br /> Quindi, quando connesso a un database utente:<br /><br /> `CREATE USER 'user_name' FOR LOGIN 'login_name';`|Quando connesso a un database utente:<br /><br /> `CREATE USER user_name  WITH PASSWORD = 'strong_password';`|  
   
-|Modello tradizionale|Modello basato su utente di database indipendente|  
+|Modello tradizionale|Modello di utente di database indipendente|  
 |-----------------------|-----------------------------------|  
 |Per cambiare la password, nel contesto del database master:<br /><br /> `ALTER LOGIN login_name  WITH PASSWORD = 'strong_password';`|Per cambiare la password, nel contesto del database utente:<br /><br /> `ALTER USER user_name  WITH PASSWORD = 'strong_password';`|  
   

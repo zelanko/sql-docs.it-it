@@ -13,12 +13,12 @@ ms.assetid: 440b5a09-5fd4-4c3a-b510-f3c33cbf1c82
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 3a3300f448d9bc3df34369963cd4b697ada44211
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9ba41b602ec91516e87b7fe5ec0276c586b17613
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48150544"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53352977"
 ---
 # <a name="execution-account-ssrs-native-mode"></a>Account di esecuzione (modalità nativa SSRS)
   Utilizzare questa pagina per configurare un account da utilizzare per l'esecuzione automatica. L'account verrà utilizzato in circostanze particolari, ovvero quando non sono disponibili altre origini di credenziali, in particolare:  
@@ -36,9 +36,9 @@ ms.locfileid: "48150544"
  È possibile utilizzare qualsiasi account utente di Windows. Per ottenere risultati ottimali, scegliere un account che disponga delle autorizzazioni di lettera e di accesso alla rete per supportare le connessioni ad altri computer. Deve disporre di autorizzazioni di lettura per qualsiasi immagine o file di dati esterno da utilizzare in un report. Non specificare un account locale se tutte le origini dati e tutte le immagini esterne per i report non sono archiviate sul computer del server di report. Utilizzare l'account solo per l'elaborazione automatica dei report.  
   
 > [!NOTE]  
->  Se si utilizza [!INCLUDE[ssExpressEd11](../../includes/ssexpressed11-md.md)] with Advanced Services, è necessario configurare questo account solo se si fa riferimento a immagini esterne in un report ed è necessaria l'autorizzazione per accedere al file di immagine. In SQL Server Express la connessione all'origine dati in un server remoto non è supportata. Per un elenco delle funzionalità supportate dalle edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [Funzionalità supportate dalle edizioni di SQL Server 2012](http://go.microsoft.com/fwlink/?linkid=232473).  
+>  Se si utilizza [!INCLUDE[ssExpressEd11](../../includes/ssexpressed11-md.md)] with Advanced Services, è necessario configurare questo account solo se si fa riferimento a immagini esterne in un report ed è necessaria l'autorizzazione per accedere al file di immagine. In SQL Server Express la connessione all'origine dati in un server remoto non è supportata. Per un elenco delle funzionalità supportate dalle edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere la pagina relativa alle [funzionalità supportate dalle edizioni di SQL Server 2012](https://go.microsoft.com/fwlink/?linkid=232473).  
   
- Per aprire questa pagina, avviare il [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager e selezionare **Account di esecuzione** nel riquadro di spostamento. Per altre informazioni, vedere [Gestione configurazione Reporting Services &#40;modalità nativa&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md).  
+ Per aprire questa pagina, avviare Gestione configurazione [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e selezionare **Account di esecuzione** nel riquadro di navigazione. Per altre informazioni, vedere [Gestione configurazione Reporting Services &#40;modalità nativa&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md).  
   
 ## <a name="options"></a>Opzioni  
  **Specifica account di esecuzione**  

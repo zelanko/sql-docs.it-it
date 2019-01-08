@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - summarizing query results
@@ -13,12 +13,12 @@ ms.assetid: f5af876e-f937-4110-ba09-07999c35a699
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6a19834bc54a75e685782b0d73aadf0070bdff62
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 33d44b48571839d9695893021f6cdc1c8bb63f06
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48227711"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52812803"
 ---
 # <a name="summarize-or-aggregate-values-for-all-rows-in-a-table-visual-database-tools"></a>Riepilogo o aggregazione di valori per tutte le righe di una tabella (Visual Database Tools)
   Con una funzione di aggregazione è possibile creare un riepilogo di tutti i valori di una tabella. Per visualizzare, ad esempio, il prezzo totale di tutti i libri nella tabella `titles`, è possibile creare una query analoga alla seguente:  
@@ -45,7 +45,7 @@ FROM titles
  Quando si crea un singolo valore di aggregazione per tutte le righe di una tabella, vengono visualizzati solo i valori aggregati. Se ad esempio si calcola il valore totale della colonna `price` della tabella `titles` , non vengono visualizzati i singoli titoli, i nomi dei server di pubblicazione e così via.  
   
 > [!NOTE]  
->  Quando si crea un subtotale e dunque si creano gruppi, è possibile visualizzare i valori delle colonne per ciascun gruppo. Per informazioni dettagliate, vedere [Raggruppare righe nei risultati di una query &#40;Visual Database Tools&#41;](group-rows-in-query-results-visual-database-tools.md).  
+>  Quando si crea un subtotale e dunque si creano gruppi, è possibile visualizzare i valori delle colonne per ogni gruppo. Per informazioni dettagliate, vedere [Raggruppare righe nei risultati di una query &#40;Visual Database Tools&#41;](group-rows-in-query-results-visual-database-tools.md).  
   
 ### <a name="to-aggregate-values-for-all-rows"></a>Per aggregare i valori di tutte le righe  
   
@@ -57,7 +57,7 @@ FROM titles
   
      Verrà assegnato automaticamente un alias di colonna alla colonna di cui si effettua il riepilogo. Tale alias può essere sostituito con un alias più significativo. Per altre informazioni dettagliate, vedere [Creazione di alias di colonna &#40;Visual Database Tools&#41;](create-column-aliases-visual-database-tools.md).  
   
-4.  Nella colonna della griglia **Group By** selezionare la funzione di aggregazione appropriata, ad esempio **Sum**, **Avg**, **Min**, **Max**, **Count**. Per aggregare solo le righe univoche nel set di risultati, scegliere una funzione di aggregazione con l'opzione DISTINCT, ad esempio **Min Distinct**. Non scegliere **Group By**, **Expression**o **Where**, in quanto tali opzioni non sono applicabili per l'aggregazione di tutte le righe.  
+4.  Nel **Group By** colonna della griglia, Seleziona funzione di aggregazione appropriata, ad esempio: **Somma**, **Avg**, **Min**, **Max**, **conteggio**. Per aggregare solo le righe univoche nel set di risultati, scegliere una funzione di aggregazione con l'opzione DISTINCT, ad esempio **Min Distinct**. Non scegliere **Group By**, **Expression**o **Where**, in quanto tali opzioni non sono applicabili per l'aggregazione di tutte le righe.  
   
      Il nome della colonna nell'istruzione del [riquadro SQL](sql-pane-visual-database-tools.md) verrà sostituito con la funzione di aggregazione specificata in Progettazione query e Progettazione viste. L'istruzione SQL, ad esempio, può essere analoga alla seguente:  
   

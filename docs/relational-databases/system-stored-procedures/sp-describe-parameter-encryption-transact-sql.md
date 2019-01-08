@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 87a5be3dc726b86b1710dd45416404cf3899f4c9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 243207c6175f5604e7cc887bd7c67085e2d86291
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47595699"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507637"
 ---
 # <a name="spdescribeparameterencryption-transact-sql"></a>sp_describe_parameter_encryption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ sp_describe_parameter_encryption
   
  Ogni riga del primo set di risultati descrive una coppia di chiavi; una chiave di crittografia di colonna crittografata e la chiave master della colonna corrispondente.  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**column_encryption_key_ordinal**|**int**|ID della riga nel set di risultati.|  
 |**database_id**|**int**|Id del database.|  
@@ -75,12 +75,12 @@ sp_describe_parameter_encryption
   
  Ogni riga del secondo set di risultati contiene i metadati di crittografia per un parametro.  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**parameter_ordinal**|**int**|ID della riga nel set di risultati.|  
 |**parameter_name**|**sysname**|Nome di uno dei parametri specificati nel  *\@params* argomento.|  
 |**column_encryption_algorithm**|**tinyint**|Il codice che indica l'algoritmo di crittografia configurato per la colonna, il parametro corrisponde al. I valori attualmente supportati sono: 2 per **AEAD_AES_256_CBC_HMAC_SHA_256**.|  
-|**column_encryption_type**|**tinyint**|Codice che indica il tipo di crittografia configurato per la colonna, il parametro corrisponde alla. I valori supportati sono:<br /><br /> 0-testo normale (la colonna non è crittografata)<br /><br /> 1 – la crittografia casuale<br /><br /> 2: crittografia deterministica.|  
+|**column_encryption_type**|**tinyint**|Codice che indica il tipo di crittografia configurato per la colonna, il parametro corrisponde alla. I valori supportati sono:<br /><br /> 0 - testo normale (la colonna non è crittografata)<br /><br /> 1 - casuale di crittografia<br /><br /> 2 - crittografia deterministica.|  
 |**column_encryption_key_ordinal**|**int**|Codice della riga nel risultato del primo set. La riga di cui viene fatto riferimento descrive la chiave di crittografia della colonna configurata per la colonna, il parametro corrisponde alla.|  
 |**column_encryption_normalization_rule_version**|**tinyint**|Numero di versione dell'algoritmo di normalizzazione di tipo.|  
   

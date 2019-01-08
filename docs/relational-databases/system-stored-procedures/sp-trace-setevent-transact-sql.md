@@ -18,12 +18,12 @@ ms.assetid: 7662d1d9-6d0f-443a-b011-c901a8b77a44
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 59351e8ec30cf02dc74b2d47d6ef160cd5aff74e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cae733bf78928ccd83550adc8a4b525f6a996189
+ms.sourcegitcommit: 1e7ec3b11f25d469163bdc9096a475411eacf79a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47739909"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53266102"
 ---
 # <a name="sptracesetevent-transact-sql"></a>sp_trace_setevent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ sp_trace_setevent [ @traceid = ] trace_id
   
  Nella tabella seguente vengono descritti gli eventi che è possibile aggiungere o rimuovere in una traccia.  
   
-|Numero evento|Nome evento|Description|  
+|Numero evento|Nome evento|Descrizione|  
 |------------------|----------------|-----------------|  
 |0-9|Riservato|Riservato|  
 |10|RPC:Completed|Viene generato al completamento di una chiamata di procedura remota (RPC).|  
@@ -209,17 +209,17 @@ sp_trace_setevent [ @traceid = ] trace_id
 |178|Audit Database Operation Event|Viene generato quando si eseguono operazioni di database, come la creazione di checkpoint o la sottoscrizione di notifica delle query.|  
 |180|Audit Database Object Access Event|Viene generato per l'accesso a oggetti di database, come gli schemi.|  
 |181|TM: Begin Tran starting|Viene generato all'avvio di una richiesta BEGIN TRANSACTION.|  
-|182|TM: Begin Tran completed|Viene generato al completamento di una richiesta BEGIN TRANSACTION.|  
-|183|TM: Promote Tran starting|Viene generato all'avvio di una richiesta PROMOTE TRANSACTION.|  
-|184|TM: Promote Tran completed|Viene generato al completamento di una richiesta PROMOTE TRANSACTION.|  
-|185|TM: Commit Tran starting|Viene generato all'avvio di una richiesta COMMIT TRANSACTION.|  
-|186|TM: Commit Tran completed|Viene generato al completamento di una richiesta COMMIT TRANSACTION.|  
-|187|TM: Rollback Tran starting|Viene generato all'avvio di una richiesta ROLLBACK TRANSACTION.|  
-|188|TM: Rollback Tran completed|Viene generato al completamento di una richiesta ROLLBACK TRANSACTION.|  
+|182|TM: Begin Tran completata|Viene generato al completamento di una richiesta BEGIN TRANSACTION.|  
+|183|TM: Alzare di livello Tran starting|Viene generato all'avvio di una richiesta PROMOTE TRANSACTION.|  
+|184|TM: Promote Tran completata|Viene generato al completamento di una richiesta PROMOTE TRANSACTION.|  
+|185|TM: Eseguire il commit Tran starting|Viene generato all'avvio di una richiesta COMMIT TRANSACTION.|  
+|186|TM: Eseguire il commit Tran completata|Viene generato al completamento di una richiesta COMMIT TRANSACTION.|  
+|187|TM: Eseguire il rollback Tran starting|Viene generato all'avvio di una richiesta ROLLBACK TRANSACTION.|  
+|188|TM: Rollback Tran completata|Viene generato al completamento di una richiesta ROLLBACK TRANSACTION.|  
 |189|Lock:Timeout (timeout > 0)|Viene generato quando si verifica il timeout di una richiesta di blocco su una risorsa, ad esempio una pagina.|  
-|190|Progress Report: Online Index Operation|Indica lo stato di un'operazione di compilazione di un indice online durante l'esecuzione del processo di compilazione.|  
-|191|TM: Save Tran starting|Viene generato all'avvio di una richiesta SAVE TRANSACTION.|  
-|192|TM: Save Tran completed|Viene generato al completamento di una richiesta SAVE TRANSACTION.|  
+|190|Progress Report: Operazione sull'indice online|Indica lo stato di un'operazione di compilazione di un indice online durante l'esecuzione del processo di compilazione.|  
+|191|TM: Salvare Tran starting|Viene generato all'avvio di una richiesta SAVE TRANSACTION.|  
+|192|TM: Save Tran completata|Viene generato al completamento di una richiesta SAVE TRANSACTION.|  
 |193|Background Job Error|Viene generato quando un processo in background termina in modo anomalo.|  
 |194|OLEDB Provider Information|Viene generato quando si esegue una query distribuita e tale query raccoglie informazioni corrispondenti alla connessione del provider.|  
 |195|Mount Tape|Viene generato alla ricezione di una richiesta di montaggio nastro.|  
@@ -233,7 +233,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |212|Avviso bitmap|Indica quando i filtri bitmap sono stati disabilitati in una query.|  
 |213|Database Suspect Data Page|Indica quando una pagina viene aggiunta per il **suspect_pages** nella tabella **msdb**.|  
 |214|CPU threshold exceeded|Indica quando Resource Governor rileva che una query ha superato il valore soglia della CPU (REQUEST_MAX_CPU_TIME_SEC).|  
-|215|Indica quando un trigger LOGON o la funzione di classificazione di Resource Governor avvia l'esecuzione.|Indica quando un trigger LOGON o la funzione di classificazione di Resource Governor avvia l'esecuzione.|  
+|215|PreConnect:Starting|Indica quando un trigger LOGON o la funzione di classificazione di Resource Governor avvia l'esecuzione.|  
 |216|PreConnect:Completed|Indica quando un trigger LOGON o la funzione di classificazione di Resource Governor completa l'esecuzione.|  
 |217|Plan Guide Successful|Indica che in SQL Server è stato correttamente eseguito un piano di esecuzione per una query o un batch contenente una guida di piano.|  
 |218|Plan Guide Unsuccessful|Indica che in SQL Server non è stato possibile creare un piano di esecuzione per una query o un batch contenente una guida di piano. SQL Server ha tentato di generare un piano di esecuzione per questa query o batch senza applicare la guida di piano. Una guida di piano non valida potrebbe essere la causa di questo problema. È possibile convalidare la guida di piano utilizzando la funzione di sistema sys.fn_validate_plan_guide.|  
@@ -244,7 +244,7 @@ sp_trace_setevent [ @traceid = ] trace_id
   
  Nella tabella seguente sono incluse le colonne che è possibile aggiungere per un evento.  
   
-|Numero colonna|Nome colonna|Description|  
+|Numero colonna|Nome colonna|Descrizione|  
 |-------------------|-----------------|-----------------|  
 |1|**TextData**|Valore di testo che dipende dalla classe di evento acquisita nella traccia.|  
 |2|**BinaryData**|Valore binario che dipende dalla classe di evento acquisita nella traccia.|  
@@ -275,7 +275,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |27|**EventClass**|Tipo di classe di evento che viene registrato.|  
 |28|**ObjectType**|Tipo di oggetto, ad esempio tabella, funzione o stored procedure.|  
 |29|**NestLevel**|Livello di nidificazione in cui viene eseguita la stored procedure. Visualizzare [@@NESTLEVEL &#40;Transact-SQL&#41;](../../t-sql/functions/nestlevel-transact-sql.md).|  
-|30|**State**|Stato del server in caso di errore.|  
+|30|**Stato**|Stato del server in caso di errore.|  
 |31|**Errore**|Numero di errore.|  
 |32|**Mode**|Modalità del blocco acquisito. Questa colonna non viene popolata per le **blocco: rilasciato** evento.|  
 |33|**Handle**|Handle dell'oggetto a cui si fa riferimento nell'evento.|  
@@ -330,7 +330,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 ## <a name="return-code-values"></a>Valori restituiti  
  Nella tabella seguente vengono descritti i possibili valori di codice visualizzati al completamento della stored procedure.  
   
-|Codice restituito|Description|  
+|Codice restituito|Descrizione|  
 |-----------------|-----------------|  
 |0|Nessun errore.|  
 |1|Errore sconosciuto.|  

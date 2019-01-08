@@ -5,8 +5,7 @@ ms.date: 03/08/2016
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_table_validation_TSQL
@@ -17,12 +16,12 @@ ms.assetid: 31b25f9b-9b62-496e-a97e-441d5fd6e767
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4f19ad878499d9739745f29aa8c2f749fe2b3132
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 41e5f03dbe8619ca2e00d70b2c569d90f75d2d2f
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47843379"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53211281"
 ---
 # <a name="sptablevalidation-transact-sql"></a>sp_table_validation (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -71,7 +70,7 @@ sp_table_validation [ @table = ] 'table'
  [  **@full_or_fast=**] *full_or_fast*  
  Metodo utilizzato per il conteggio delle righe. *full_or_fast* viene **tinyint**, il valore predefinito è **2**, i possibili valori sono i seguenti.  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |**0**|Esegue un conteggio completo con COUNT(*).|  
 |**1**|Un conteggio rapido in **sysindexes**. Conteggio delle righe **sysindexes** è molto più veloce rispetto al conteggio delle righe nella tabella effettiva. Tuttavia, poiché **sysindexes** in modalità differita è aggiornato, il conteggio delle righe potrebbe non essere accurata.|  
@@ -98,7 +97,7 @@ sp_table_validation [ @table = ] 'table'
   
  Quando si esegue un'operazione di checksum, è necessario che la struttura della tabella nei due server sia identica, ovvero le tabelle nei due server devono includere le stesse colonne nel medesimo ordine aventi lo stesso tipo di dati, la stessa lunghezza e le stesse condizioni NULL/NOT NULL. Se, ad esempio, nel server di pubblicazione è stata eseguita un'istruzione CREATE TABLE e quindi un'istruzione ALTER TABLE per l'inserimento di colonne, ma lo script applicato al Sottoscrittore è una tabella CREATE semplice, la struttura NON è identica. Se non si è certi che la struttura delle due tabelle sia identica, esaminare [syscolumns](../../relational-databases/system-compatibility-views/sys-syscolumns-transact-sql.md) e verificare che l'offset di ogni tabella è lo stesso.  
   
- Valori a virgola mobile sono probabile che generino differenze di checksum se in modalità carattere **bcp** è stata usata, che si verifica se la pubblicazione esistono non[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sottoscrittori. Ciò è dovuto a differenze di precisione minime ma inevitabili nella conversione da e verso la modalità carattere.  
+ Valori a virgola mobile sono probabile che generino differenze di checksum se in modalità carattere **bcp** è stata usata, che si verifica se la pubblicazione esistono non [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sottoscrittori. Ciò è dovuto a differenze di precisione minime ma inevitabili nella conversione da e verso la modalità carattere.  
   
 ## <a name="permissions"></a>Permissions  
  Per eseguire **sp_table_validation**, è necessario disporre delle autorizzazioni SELECT sulla tabella da convalidare.  

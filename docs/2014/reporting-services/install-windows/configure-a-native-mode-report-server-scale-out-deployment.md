@@ -15,12 +15,12 @@ ms.assetid: b30d0308-4d9b-4f85-9f83-dece4dcb2775
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: cbd26f431b71013400593858e6038fc4326f4d14
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 68951c637d0c0db1fc86bab6405868e73770aca2
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606851"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52395234"
 ---
 # <a name="configure-a-native-mode-report-server-scale-out-deployment-ssrs-configuration-manager"></a>Configurare una distribuzione con scalabilità orizzontale di un server di report in modalità nativa (Gestione configurazione SSRS)
 
@@ -111,9 +111,9 @@ ms.locfileid: "51606851"
 3.  Nella pagina distribuzione con scalabilità orizzontale, selezionare l'istanza di server di report che è in attesa di aggiunta alla distribuzione, quindi fare clic su **Aggiungi Server**.  
   
     > [!NOTE]  
-    >  **Problema:** quando si cerca di aggiungere un'istanza del server di report di Reporting Services alla distribuzione con scalabilità orizzontale, è possibile che vengano visualizzati messaggi di errore simili a quelli tramite cui viene indicata la negazione dell'accesso.  
+    >  **Problema:** Quando si tenta di unire un'istanza di server di report di Reporting Services alla distribuzione con scalabilità orizzontale, potrebbero verificarsi messaggi di errore simili a "Accesso negato".  
     >   
-    >  **Soluzione alternativa:** eseguire il backup della chiave di crittografia di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dalla prima istanza di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e ripristinare la chiave nel secondo server di report di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Successivamente, tentare di aggiungere il secondo server alla distribuzione con scalabilità orizzontale di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
+    >  **Soluzione alternativa:** Eseguire il backup di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] chiave di crittografia dal primo [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dell'istanza e ripristinare la chiave nel secondo [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] server di report. Successivamente, tentare di aggiungere il secondo server alla distribuzione con scalabilità orizzontale di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
 4.  A questo punto dovrebbe essere possibile verificare che entrambe le istanze del server di report siano operative. Per verificare la seconda istanza, è possibile utilizzare lo strumento di configurazione di Reporting Services per connettersi al server di report e fare clic su URL servizio Web o URL Gestione report.  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 02/29/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - surface area configuration [SQL Server], sp_configure
@@ -28,12 +27,12 @@ ms.assetid: 9f38eba6-39b1-4f1d-ba24-ee4f7e2bc969
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a903a3246b8a91a8ff0b42862b7bbf4046497c3c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 645aee1374f7dbf3c290500bb35ca47115983670
+ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48088711"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52640552"
 ---
 # <a name="server-configuration-options-sql-server"></a>Opzioni di configurazione del server (SQL Server)
   È possibile gestire e ottimizzare le risorse di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tramite le opzioni di configurazione, utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oppure la stored procedure di sistema sp_configure. Le opzioni di configurazione del server utilizzate più di frequente sono disponibili in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Tramite la stored procedure sp_configure è possibile accedere a tutte le opzioni di configurazione. Prima di impostare tali opzioni è importante valutare con attenzione i possibili effetti sul sistema. Per altre informazioni, vedere [Visualizzare o modificare le proprietà del server &#40;SQL Server&#41;](view-or-change-server-properties-sql-server.md).  
@@ -65,7 +64,7 @@ ms.locfileid: "48088711"
   
 -   SC = opzioni a configurazione automatica.  
   
-    |Opzione di configurazione|Valore minimo|Valore massimo|Default|  
+    |Opzione di configurazione|Valore minimo|Valore massimo|Impostazione predefinita|  
     |--------------------------|-------------------|-------------------|-------------|  
     |[access check cache bucket count](access-check-cache-server-configuration-options.md) (A)|0|16384|0|  
     |[access check cache quota](access-check-cache-server-configuration-options.md) (A)|0|2147483647|0|  

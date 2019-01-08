@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: fbab3ea6efe0c1e5b896febeef4d1f38877b8965
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: f4bd21ab1463d40b0eb9b83e5686951e43dee885
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145656"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542196"
 ---
 # <a name="drilldownlevel-mdx"></a>DrilldownLevel (MDX)
 
@@ -79,7 +79,7 @@ FROM [Adventure Works]
   
  Si noti che il set di risultati è identico alla query precedente. Come regola generale, non è necessario impostare il livello di indice a meno che non si voglia avviare il drill-down in un livello specifico. Rieseguire la query precedente, impostando il valore di indice su 1, quindi su 2. Con un valore di indice impostato su 1, il drill-down viene avviato nel secondo livello della gerarchica. Con un valore di indice impostato su 2, il drill-down viene avviato nel terzo livello, il livello più alto in questo esempio. Più elevato è il numero, più alto è il livello di indice.  
   
- **Esempio 3: illustra un'espressione di livello**  
+ **Esempio 3: viene illustrata un'espressione di livello**  
   
  L'esempio successivo mostra come usare un'espressione di livello. Con un set che rappresenta una struttura gerarchica, l'uso di un'espressione di livello consente di scegliere un livello nella gerarchia in cui avviare il drill-down.  
   
@@ -98,7 +98,7 @@ SELECT [Measures].[Internet Sales Amount] ON COLUMNS,
 FROM [Adventure Works]  
 ```  
   
- **Esempio 4: includere membri calcolati**  
+ **Esempio 4: inclusi i membri calcolati**  
   
  Nell'ultimo esempio viene illustrato un membro calcolato, viene visualizzato nella parte inferiore del risultato impostato quando si aggiunge il **include_calculated_members** flag. Si noti che il flag viene specificato come quarto parametro.  
   

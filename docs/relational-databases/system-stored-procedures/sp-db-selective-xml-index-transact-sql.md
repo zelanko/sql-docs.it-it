@@ -18,12 +18,12 @@ ms.assetid: 017301a2-4a23-4e68-82af-134f3d4892b3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 07145e608c850a877a984c7467da6b8974f0d151
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8978c40141d0cd6031b9569ab0daa945666e7e85
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47744599"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52415158"
 ---
 # <a name="spdbselectivexmlindex-transact-sql"></a>sp_db_selective_xml_index (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "47744599"
  Nome del database in cui abilitare o disabilitare l'indice XML selettivo. Se *db_name* è NULL, si presuppone che il database corrente.  
   
  [  **@action =** ] **'***azione***'**  
- Determina se abilitare o disabilitare l'indice. Se viene passato un altro valore ad eccezione di 'on', 'true', 'off' o 'false', verrà generato un errore.  
+ Determina se abilitare o disabilitare l'indice. Se un altro valore ad eccezione del fatto 'on', 'true', 'off' o 'false' è passato, verrà generato un errore.  
   
 ```  
   
@@ -79,7 +79,7 @@ EXECUTE sys.sp_db_selective_xml_index
 GO  
 ```  
   
-### <a name="b-disable-selective-xml-index-functionality"></a>B. Disabilitare la funzionalità degli indici XML selettivi  
+### <a name="b-disable-selective-xml-index-functionality"></a>b. Disabilitare la funzionalità degli indici XML selettivi  
  Nell'esempio seguente viene disabilitato l'indice XML selettivo nel database corrente.  
   
 ```  

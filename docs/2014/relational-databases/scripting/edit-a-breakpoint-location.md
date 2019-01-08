@@ -7,20 +7,18 @@ ms.reviewer: ''
 ms.technology:
 - database-engine
 ms.topic: conceptual
-f1_keywords:
-- vs.debug.breakpt.location.file
 helpviewer_keywords:
 - Transact-SQL debugger, breakpoint location
 ms.assetid: 5c28e411-0377-4210-a7ce-2a5c13dcdf74
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ffa9cad3ef994f3306a485d5a911f2e03eff0f2a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 36833c6eb5fc588edb2d12716ba439140b8a1cbe
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48211441"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53327332"
 ---
 # <a name="edit-a-breakpoint-location"></a>Modifica della posizione di un punto di interruzione
   La posizione del punto di interruzione specifica la riga e il carattere in cui si trova il punto di interruzione in un file di script [!INCLUDE[tsql](../../includes/tsql-md.md)] . È possibile modificare la posizione del punto di interruzione per spostare il punto di interruzione in un'altra posizione nello script o in uno script diverso.  
@@ -44,6 +42,4 @@ ms.locfileid: "48211441"
  [Specifica di un numero di passaggi](specify-a-hit-count.md)   
  [Impostazione di un'azione del punto di interruzione](specify-a-breakpoint-action.md)   
  [Impostare una condizione del punto di interruzione](specify-a-breakpoint-condition.md)   
- [Specificare un filtro per un punto di interruzione](specify-a-breakpoint-filter.md)  
-  
-  
+ [Impostazione di un filtro per un punto di interruzione](specify-a-breakpoint-filter.md)  

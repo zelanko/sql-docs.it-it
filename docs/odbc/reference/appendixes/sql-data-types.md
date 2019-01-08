@@ -15,12 +15,12 @@ ms.assetid: 1b22f985-f5e4-4779-87eb-e43329a442b1
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b932b7f102e304ad110e5073005d2623cee2693c
-ms.sourcegitcommit: fff9db8affb094a8cce9d563855955ddc1af42d2
+ms.openlocfilehash: 623ac38791eebc6db84380dfadd499651af938af
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49324594"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507498"
 ---
 # <a name="sql-data-types"></a>Tipi di dati SQL
 Ogni sistema DBMS definisce i proprio tipi SQL. Ogni driver ODBC espone solo questi tipi di dati SQL che definisce il sistema DBMS associato. Informazioni sulle modalità di mapping di un driver SQL DBMS tipi per gli identificatori di tipo definite da ODBC SQL e come un driver esegue il mapping di tipi SQL DBMS per i proprio identificatori dei tipi specifici del driver SQL viene restituito tramite una chiamata a **SQLGetTypeInfo**. Un driver restituisce anche i tipi di dati SQL quando si descrivono i tipi di dati delle colonne e i parametri tramite le chiamate a **SQLColAttribute**, **SQLColumns**, **SQLDescribeCol**, **SQLDescribeParam**, **SQLProcedureColumns**, e **SQLSpecialColumns**.  
@@ -39,23 +39,23 @@ Ogni sistema DBMS definisce i proprio tipi SQL. Ogni driver ODBC espone solo que
 |------------------------------|------------------------------------|------------------------------|  
 |SQL_CHAR|CHAR (*n*)|Stringa di lunghezza fissa di caratteri *n*.|  
 |SQL_VARCHAR|VARCHAR (*n*)|Stringa di caratteri a lunghezza variabile con lunghezza massima delle stringhe *n*.|  
-|SQL_LONGVARCHAR|LONG VARCHAR|Dati di caratteri di lunghezza variabile. Lunghezza massima è dipende dall'origine dati. [9]|  
+|SQL_LONGVARCHAR|LONG VARCHAR|Dati di caratteri di lunghezza variabile. Lunghezza massima è dipendente dall'origine dati. [9]|  
 |SQL_WCHAR|WCHAR (*n*)|Stringa di caratteri Unicode di lunghezza stringa fissa *n*|  
 |SQL_WVARCHAR|VARWCHAR (*n*)|Stringa di caratteri di lunghezza variabile Unicode con lunghezza massima delle stringhe *n*|  
 |SQL_WLONGVARCHAR|LONGWVARCHAR|Dati di tipo carattere a lunghezza variabile Unicode. Lunghezza massima: dipende dall'origine dati|  
 |SQL_DECIMAL|DECIMAL (*p*,*s*)|Firmato, a valore numerico esatto con precisione pari ad almeno *p* e la scala *s.* (La precisione massima è definito dal driver). (1 < = *p* < = 15; *s* <= *p*). [ 4]|  
 |SQL_NUMERIC|NUMERICO (*p*,*s*)|Firmato, a valore numerico esatto con precisione *p* e la scalabilità *s* (1 < = *p* < = 15; *s* <= *p*). [ 4]|  
-|SQL_SMALLINT|SMALLINT|Valore numerico esatto con precisione 5 e scala 0 (firmato: -32.768 < = *n* < = 32.767, senza segno: 0 < = *n* < = 65.535) [3].|  
-|SQL_INTEGER|INTEGER|Valore numerico esatto con precisione 10 e scala 0 (firmato: -2 [31] < = *n* < = 2 [31]-1, senza segno: 0 < = *n* < = 2 [32]-1) [3].|  
-|SQL_REAL|real|Valore con segno, numerico approssimativo con una precisione binaria di 24 (zero o valore assoluto da 10 [–38] a 10[38]).|  
+|SQL_SMALLINT|SMALLINT|Valore numerico esatto con precisione 5 e scala 0 (firmato:-32.768 e < = *n* < = 32.767, senza segno:  0 < = *n* < = 65.535) [3].|  
+|SQL_INTEGER|INTEGER|Valore numerico esatto con precisione 10 e scala 0 (firmato: -2 [31] < = *n* < = 2 [31] - 1, senza segno:  0 < = *n* < = 2 [32] - 1) [3].|  
+|SQL_REAL|real|Valore con segno, numerico approssimativo con una precisione binaria di 24 (zero o valore assoluto da 10 [-38] a 10[38]).|  
 |SQL_FLOAT|FLOAT (*p*)|Valore con segno, numerico approssimativo con una precisione binaria di almeno *p*. (La precisione massima è definito dal driver). [5]|  
-|SQL_DOUBLE|DOUBLE PRECISION|Valore con segno, numerico approssimativo con una precisione binaria di 53 (zero o valore assoluto da 10 [–308] a 10[308]).|  
+|SQL_DOUBLE|DOUBLE PRECISION|Valore con segno, numerico approssimativo con una precisione binaria di 53 (zero o valore assoluto da 10 [-308] a 10[308]).|  
 |SQL_BIT|BIT|Dati binari a singolo bit. [8]|  
-|SQL_TINYINT|TINYINT|Valore numerico esatto con precisione 3 e scala 0 (firmato: -128 < = *n* < = 127, senza segno: 0 < = *n* < = 255) [3].|  
-|SQL_BIGINT|bigint|Esatto valore numerico con precisione 19 (con segno) o 20 (se senza segno) e scala 0 (firmato: -2 [63] < = *n* < = 2 [63]-1, senza segno: 0 < = *n* < = 2 [64]-1) [3], [9].|  
+|SQL_TINYINT|TINYINT|Valore numerico esatto con precisione 3 e scala 0 (firmato: da -128 < = *n* < = 127, senza segno:  0 < = *n* < = 255) [3].|  
+|SQL_BIGINT|bigint|Esatto valore numerico con precisione 19 (con segno) o 20 (se senza segno) e scala 0 (firmato: -2 [63] < = *n* < = 2 [63] - 1, senza segno: 0 < = *n* < = 2 [64] - 1) [3], [9].|  
 |SQL_BINARY|BINARIO (*n*)|Dati binari a lunghezza fissa *n*. [ 9]|  
 |SQL_VARBINARY|VARBINARY (*n*)|Dati binari a lunghezza variabile di lunghezza massima *n*. Il valore massimo è impostato dall'utente. [9]|  
-|SQL_LONGVARBINARY|LONG VARBINARY|Dati binari a lunghezza variabile. Lunghezza massima è dipende dall'origine dati. [9]|  
+|SQL_LONGVARBINARY|LONG VARBINARY|Dati binari a lunghezza variabile. Lunghezza massima è dipendente dall'origine dati. [9]|  
 |SQL_TYPE_DATE [6]|DATE|Anno, mese e giorno campi, conforme alle regole del calendario gregoriano. (Vedere [vincoli del calendario gregoriano](../../../odbc/reference/appendixes/constraints-of-the-gregorian-calendar.md), più avanti in questa appendice.)|  
 |SQL_TYPE_TIME [6]|TEMPO (*p*)|Ora, minuto e secondo campi, con i valori validi per ore di valori validi da 00 a 23, da 00 a 59 minuti e i valori validi per i secondi da 00 a 61. Precisione *p* indica la precisione dei secondi.|  
 |SQL_TYPE_TIMESTAMP [6]|TIMESTAMP (*p*)|Anno, mese, giorno, ora, minuto e secondo campi, con i valori validi come definito per i tipi di dati data e ora.|  
@@ -78,7 +78,7 @@ Ogni sistema DBMS definisce i proprio tipi SQL. Ogni driver ODBC espone solo que
   
  [1]. questo è il valore restituito nella colonna DATA_TYPE da una chiamata a **SQLGetTypeInfo**.  
   
- [2] si tratta del valore restituito nella colonna nome e la creazione di parametri da una chiamata a **SQLGetTypeInfo**. La colonna nome restituisce la designazione, ad esempio, CHAR, mentre la colonna creare PARAMS restituisce un elenco delimitato da virgole dei parametri di creazione, ad esempio precisione, scala e lunghezza.  
+ [2] si tratta del valore restituito nella colonna nome e la creazione di parametri da una chiamata a **SQLGetTypeInfo**. La colonna nome restituisce la designazione-CHAR, ad esempio,-mentre la colonna creare PARAMS restituisce un elenco delimitato da virgole dei parametri di creazione, ad esempio precisione, scala e lunghezza.  
   
  [3] un'applicazione utilizza **SQLGetTypeInfo** oppure **SQLColAttribute** per determinare se un particolare tipo di dati o una colonna specifica in un set di risultati è senza segno.  
   

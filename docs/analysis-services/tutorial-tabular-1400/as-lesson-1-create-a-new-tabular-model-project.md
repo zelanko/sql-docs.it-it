@@ -1,5 +1,5 @@
 ---
-title: 'Analysis Services tutorial-lezione 1: creare un nuovo progetto di modello tabulare | Microsoft Docs'
+title: 'Analysis Services tutorial-lezione 1: Creare un nuovo progetto di modello tabulare | Microsoft Docs'
 ms.date: 08/27/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: df9595071c60680db94a18dc373ce24f1f9b4ea5
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 9135df30afcec9bdae307d9b12aec6810baa98ec
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43108670"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52417232"
 ---
 # <a name="create-a-tabular-model-project"></a>Creare un progetto di modello tabulare
 
@@ -80,7 +80,7 @@ Esplorare alcune delle finestre di dialogo e posizioni per diverse funzionalità
 
 ## <a name="whats-next"></a>Quali sono le operazioni successive?
 
-[Lezione 2: Ottenere i dati](../tutorial-tabular-1400/as-lesson-2-get-data.md).
+[Lezione 2: Ottenere dati](../tutorial-tabular-1400/as-lesson-2-get-data.md).
 
   
   

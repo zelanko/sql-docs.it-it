@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: d1e1254f8a3b3cd994c31f252ca61a0384dc9bdf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e951e87abf7e88502597b6a3caf6f7ca4e34e60b
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47692139"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53205750"
 ---
 # <a name="create-and-configure-an-availability-group-for-sql-server-on-linux"></a>Creare e configurare un gruppo di disponibilità per SQL Server in Linux
 
@@ -71,7 +71,7 @@ sudo systemctl restart mssql-server
 
 Un gruppo di disponibilità Usa endpoint TCP per la comunicazione. In Linux, gli endpoint per un gruppo di disponibilità sono supportati solo se si usano certificati per l'autenticazione. Ciò significa che il certificato da un'istanza deve essere ripristinato in tutte le altre istanze che saranno le repliche nello stesso gruppo di disponibilità. Il processo dei certificati è necessario anche per una replica di sola configurazione. 
 
-Creazione di endpoint e il ripristino dei certificati possono essere eseguite solo tramite Transact-SQL. È possibile utilizzare non[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]-anche i certificati generati. È necessario anche un processo per gestire e sostituire i certificati che scadono.
+Creazione di endpoint e il ripristino dei certificati possono essere eseguite solo tramite Transact-SQL. È possibile utilizzare non [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]-anche i certificati generati. È necessario anche un processo per gestire e sostituire i certificati che scadono.
 
 > [!IMPORTANT]
 > Se si prevede di usare il [!INCLUDE[ssmanstudiofull-md](../includes/ssmanstudiofull-md.md)] procedura guidata per creare il gruppo di disponibilità, è comunque necessario creare e ripristinare i certificati tramite Transact-SQL in Linux.
@@ -353,9 +353,9 @@ Questa sezione illustra come creare un gruppo di disponibilità con un tipo di c
 
 11. Se viene creato un listener per gli scenari leggibili, SQL Server Management Studio 17.3 o successiva consente di creare il routing in sola lettura nella procedura guidata. Può anche essere aggiunto in un secondo momento tramite SSMS o Transact-SQL. Per aggiungere routing ora di sola lettura:
 
-    A.  Selezionare la scheda di Routing di sola lettura.
+    a.  Selezionare la scheda di Routing di sola lettura.
 
-    B.  Immettere l'URL per le repliche di sola lettura. Questi URL sono simili agli endpoint, ad eccezione del fatto che usa la porta dell'istanza, non l'endpoint.
+    b.  Immettere l'URL per le repliche di sola lettura. Questi URL sono simili agli endpoint, ad eccezione del fatto che usa la porta dell'istanza, non l'endpoint.
 
     c.  Selezionare ogni URL e dal basso, selezionare le repliche leggibili. Per la selezione multipla, tenere premuto MAIUSC o fare clic e trascinare.
 
@@ -378,7 +378,7 @@ In questa sezione vengono illustrati esempi di creazione di un gruppo di disponi
 -   [Configurare il Routing di sola lettura per un gruppo di disponibilità (SQL Server)](../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md)
 -   [Creare o configurare un listener del gruppo di disponibilità (SQL Server)](../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)
 
-#### <a name="example-one--two-replicas-with-a-configuration-only-replica-external-cluster-type"></a>Repliche di esempio uno-due con una sola configurazione replica (tipo di cluster esterna)
+#### <a name="example-one---two-replicas-with-a-configuration-only-replica-external-cluster-type"></a>Repliche di esempio uno-due con una sola configurazione replica (tipo di cluster esterna)
 
 In questo esempio viene illustrato come creare un gruppo di disponibilità con due repliche che usa una replica di sola configurazione.
 
@@ -424,7 +424,7 @@ In questo esempio viene illustrato come creare un gruppo di disponibilità con d
     GO
    ```
 
-#### <a name="example-two--three-replicas-with-read-only-routing-external-cluster-type"></a>Repliche di esempio 2 – 3 con il routing di sola lettura (tipo di cluster esterna)
+#### <a name="example-two---three-replicas-with-read-only-routing-external-cluster-type"></a>Repliche di esempio due-tre con il routing di sola lettura (tipo di cluster esterna)
 
 Questo esempio mostra tre completa le repliche e la modalità sola lettura e routing possono essere configurati come parte della creazione iniziale del gruppo di disponibilità.
 
@@ -482,7 +482,7 @@ Questo esempio mostra tre completa le repliche e la modalità sola lettura e rou
     
 3.  Ripetere il passaggio 2 per la replica di terza.
 
-#### <a name="example-three--two-replicas-with-read-only-routing-none-cluster-type"></a>Repliche di esempio 3: due con sola lettura di routing (nessuno tipo di cluster)
+#### <a name="example-three---two-replicas-with-read-only-routing-none-cluster-type"></a>Repliche di esempio due di tre con sola lettura di routing (nessuno tipo di cluster)
 
 In questo esempio viene illustrata la creazione di una configurazione con due repliche utilizzando un tipo di cluster None. Viene usato per lo scenario di scalabilità in lettura in cui non è previsto alcun failover. Verrà creato il listener che è effettivamente la replica primaria, nonché di sola lettura il routing, usando la funzionalità round robin.
 

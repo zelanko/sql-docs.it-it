@@ -10,12 +10,12 @@ ms.assetid: d840ee51-b863-4e77-84aa-37d3f094bfed
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 46d91efa1451749d8d1cce2b1a8cf361cc30986a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6965d67b6dae484b3fa72f215446682f9aa6760c
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47737309"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52394874"
 ---
 # <a name="sql-modes-mysqltosql"></a>Modalità SQL (MySQLToSQL)
 SSMA per MySQL può funzionare in modalità diverse di SQL che è possibile applicare queste modalità in modo diverso per diversi client.  
@@ -24,11 +24,11 @@ Modalità di definizione della sintassi SQL che devono supportare MySQL e contro
   
 ## <a name="sql-modes-grid"></a>Griglia di modalità SQL:  
   
--   SQL modalità griglia a livello di radice contiene le colonne seguenti: **nome modalità SQL**, **caricato SQL modalità**, e **efficace modalità SQL**.  
+-   SQL modalità griglia a livello di radice contiene le colonne seguenti: **Nome modalità SQL**, **caricato modalità SQL**, e **modalità SQL efficace**.  
   
--   Griglia di modalità SQL al database categoria, Database, tabella categoria, categoria di istruzioni, categoria di viste, tabella, vista, funzioni, procedure, funzione definita dall'utente e a livello di oggetto evento contiene le colonne seguenti: **nome della modalità SQL**,  **Ereditata SQL modalità**, e **modalità SQL efficace**.  
+-   Griglia di modalità SQL al database categoria, Database, tabella categoria, categoria di istruzioni, categoria di viste, tabella, vista, funzioni, procedure, funzione definita dall'utente e a livello di oggetto evento contiene le colonne seguenti: **Nome modalità SQL**, **ereditato modalità SQL**, e **modalità SQL efficace**.  
   
--   SQL modalità griglia a livello di Stored Procedure, funzione archiviati e Trigger contiene le colonne seguenti: **nome della modalità SQL**, **modalità SQL originale**, e **efficace modalità SQL**.  
+-   Griglia di modalità SQL a livello di Stored Procedure, funzione archiviati e Trigger contiene le colonne seguenti: **Nome della modalità SQL**, **modalità SQL originale**, e **modalità SQL efficace**.  
   
 > [!NOTE]  
 > Modalità gruppo verrà visualizzata in grassetto, sotto la colonna 'SQL modalità Name'.  

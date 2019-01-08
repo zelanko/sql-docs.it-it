@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: e37742d4-541c-4d43-9ec7-a5f9b2c0e5d1
-ms.openlocfilehash: 6bc375492034f4e9b05eda85805cd452fe6d3557
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1273d445d52c00db01cac884b171e8feedceb49a
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47723189"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206620"
 ---
 # <a name="always-on-availability-groups-on-linux"></a>Gruppi di disponibilità in Linux Always On
 
@@ -43,7 +43,7 @@ Repliche secondarie leggibili sono supportate solo con [!INCLUDE[ssenterprise-md
 
 ## <a name="cluster-type-and-failover-mode"></a>Modalità di tipo e il failover del cluster
 
-Novità di [!INCLUDE[sssql17-md](../includes/sssql17-md.md)] è l'introduzione di un tipo di cluster per gruppi di disponibilità. Per Linux, esistono due valori validi: esterno e nessuno. Un tipo di cluster External significa che Pacemaker verrà usato di sotto del gruppo di disponibilità. Uso esterno per tipo di cluster richiede che la modalità di failover sia impostata anche su External (altra novità in [!INCLUDE[sssql17-md](../includes/sssql17-md.md)]). Failover automatico è supportato, ma a differenza di un cluster WSFC, la modalità di failover è impostata su esterno, non è automatica, quando Pacemaker viene utilizzato. A differenza di un cluster WSFC, la parte di Pacemaker del gruppo di disponibilità viene creata dopo aver configurato il gruppo di disponibilità.
+Novità di [!INCLUDE[sssql17-md](../includes/sssql17-md.md)] è l'introduzione di un tipo di cluster per gruppi di disponibilità. Per Linux, esistono due valori validi: Esterno e nessuno. Un tipo di cluster External significa che Pacemaker verrà usato di sotto del gruppo di disponibilità. Uso esterno per tipo di cluster richiede che la modalità di failover sia impostata anche su External (altra novità in [!INCLUDE[sssql17-md](../includes/sssql17-md.md)]). Failover automatico è supportato, ma a differenza di un cluster WSFC, la modalità di failover è impostata su esterno, non è automatica, quando Pacemaker viene utilizzato. A differenza di un cluster WSFC, la parte di Pacemaker del gruppo di disponibilità viene creata dopo aver configurato il gruppo di disponibilità.
 
 Un tipo di cluster None indica che non è presente alcun requisito per, e il gruppo di disponibilità userà, Pacemaker. Anche su server dotati di Pacemaker configurato, se un gruppo di disponibilità è configurato con un tipo di cluster None, Pacemaker non visualizzare o gestire tale gruppo di disponibilità. Un tipo di cluster None supporta solo il failover manuale da un database primario a una replica secondaria. Un gruppo di disponibilità creato con nessuno è destinata principalmente per la scalabilità in lettura out scenario così come gli aggiornamenti. Anche se può funzionare in scenari come il ripristino di emergenza o disponibilità locale in cui non è necessario alcun failover automatico, non è consigliabile. La storia del listener è anche più complessa senza Pacemaker.
 
@@ -51,15 +51,15 @@ Tipo di cluster verrà archiviato nel [!INCLUDE[ssnoversion-md](../includes/ssno
 
 ## <a name="requiredsynchronizedsecondariestocommit"></a>obbligatorio\_sincronizzata\_repliche secondarie\_a\_commit
 
-Familiarità con [!INCLUDE[sssql17-md](../includes/sssql17-md.md)] è un'impostazione utilizzata da gruppi di disponibilità denominati `required_synchronized_secondaries_to_commit`. Il gruppo di disponibilità indica il numero di repliche secondarie che devono essere indirizzata con la replica primaria. Ciò consente ad esempio il failover automatico (solo quando l'integrazione con Pacemaker con un tipo di cluster External) e controlla il comportamento delle operazioni, ad esempio la disponibilità del database primario se il numero corretto di repliche secondarie è online o offline. Per altre informazioni sul funzionamento, vedere [elevata disponibilità e protezione dei dati per le configurazioni di gruppo di disponibilità](sql-server-linux-availability-group-ha.md). Il `required_synchronized_secondaries_to_commit` valore è impostato per impostazione predefinita e gestita da Pacemaker /[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]. È possibile eseguire manualmente l'override di questo valore.
+Familiarità con [!INCLUDE[sssql17-md](../includes/sssql17-md.md)] è un'impostazione utilizzata da gruppi di disponibilità denominati `required_synchronized_secondaries_to_commit`. Il gruppo di disponibilità indica il numero di repliche secondarie che devono essere indirizzata con la replica primaria. Ciò consente ad esempio il failover automatico (solo quando l'integrazione con Pacemaker con un tipo di cluster External) e controlla il comportamento delle operazioni, ad esempio la disponibilità del database primario se il numero corretto di repliche secondarie è online o offline. Per altre informazioni sul funzionamento, vedere [elevata disponibilità e protezione dei dati per le configurazioni di gruppo di disponibilità](sql-server-linux-availability-group-ha.md). Il `required_synchronized_secondaries_to_commit` valore è impostato per impostazione predefinita e gestita da Pacemaker / [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]. È possibile eseguire manualmente l'override di questo valore.
 
 La combinazione delle `required_synchronized_secondaries_to_commit` e il nuovo numero di sequenza (che viene archiviato `sys.availability_groups`) indica a Pacemaker e [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] che, ad esempio, può verificarsi il failover automatico. In tal caso, una replica secondaria avrebbe lo stesso numero di sequenza del database primario, vale a dire che viene aggiornato con tutte le informazioni di configurazione più recente.
 
 Sono disponibili tre valori che possono essere impostati per `required_synchronized_secondaries_to_commit`: 0, 1 o 2. Questi controllano il comportamento di ciò che accade quando una replica diventa non disponibile. I numeri corrispondono al numero di repliche secondarie che devono essere sincronizzati con la replica primaria. Il comportamento è come indicato di seguito in Linux:
 
--   0 – alcun failover automatico non è possibile perché nessuna replica secondaria è necessaria la sincronizzazione. Il database primario è disponibile in qualsiasi momento.
--   Da 1 a una replica secondaria deve essere in uno stato sincronizzato con quello primario. il failover automatico è possibile. Il database primario non è disponibile fino a quando non è disponibile una replica secondaria sincrona.
--   2 – sia nelle repliche secondarie in una configurazione di gruppi di disponibilità tre o più nodi deve essere sincronizzato con quello primario. il failover automatico è possibile.
+-   0 - alcun failover automatico non è possibile perché nessuna replica secondaria è necessaria la sincronizzazione. Il database primario è disponibile in qualsiasi momento.
+-   1 - una replica secondaria deve essere in uno stato sincronizzato con quello primario. il failover automatico è possibile. Il database primario non è disponibile fino a quando non è disponibile una replica secondaria sincrona.
+-   2 - sia nelle repliche secondarie in una configurazione di gruppi di disponibilità tre o più nodi deve essere sincronizzato con quello primario. il failover automatico è possibile.
 
 `required_synchronized_secondaries_to_commit` Consente di controllare non solo il comportamento di failover con repliche sincrone, ma la perdita di dati. Con un valore pari a 1 o 2, una replica secondaria deve sempre essere sincronizzati, pertanto sarà sempre presente la ridondanza dei dati. Ciò significa che senza perdita di dati.
 
@@ -147,11 +147,11 @@ Un gruppo di disponibilità con un tipo di cluster NONE può avere le relative r
 
 ![Ibrida None](./media/sql-server-linux-availability-group-overview/image1.png)
 
-Un gruppo di disponibilità distribuito può coinvolgere anche i limiti del sistema operativo. I gruppi di disponibilità sottostanti sono associati dalle regole per la relativa configurazione, ad esempio quello configurato con l'esterno da solo Linux, ma è stato possibile configurare il gruppo di disponibilità è unita in join alla usando un cluster WSFC. Si consideri l'esempio descritto di seguito.
+Un gruppo di disponibilità distribuito può coinvolgere anche i limiti del sistema operativo. I gruppi di disponibilità sottostanti sono associati dalle regole per la relativa configurazione, ad esempio quello configurato con l'esterno da solo Linux, ma è stato possibile configurare il gruppo di disponibilità è unita in join alla usando un cluster WSFC. Si consideri l'esempio seguente:
 
 ![Gruppo di disponibilità del database di distribuzione ibrida](./media/sql-server-linux-availability-group-overview/image2.png)
 
-<!-- Distributed AGs are also supported for upgrades from [!INCLUDE[sssql15-md](../includes/sssql15-md.md)] to [!INCLUDE[sssql17-md](../includes/sssql17-md.md)]. For more information on how to achieve this, see [the article “x”].
+<!-- Distributed AGs are also supported for upgrades from [!INCLUDE[sssql15-md](../includes/sssql15-md.md)] to [!INCLUDE[sssql17-md](../includes/sssql17-md.md)]. For more information on how to achieve this, see [the article "x"].
 
 If using automatic seeding with a distributed availability group that crosses OSes, it can handle the differences in folder structure. How this works is described in [the documentation for automatic seeding].
 -->

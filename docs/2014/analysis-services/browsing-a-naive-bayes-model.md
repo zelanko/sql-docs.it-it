@@ -11,12 +11,12 @@ ms.assetid: f9160b48-3beb-439c-9694-f084e1afa625
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: bdc6b3aa34ae3d2a75e78fe70862d3186c959f82
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 91d39b174a0febed1aa6fd57140412828adc843b
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48223311"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52419016"
 ---
 # <a name="browsing-a-naive-bayes-model"></a>Esplorazione di un modello Naïve Bayes
   Quando si apre un modello Naïve Bayes utilizzando **Sfoglia**, il modello viene visualizzato in un visualizzatore interattivo con quattro diversi riquadri. Il visualizzatore consente di esplorare le correlazioni e ottenere informazioni sul modello e sui dati sottostanti.  

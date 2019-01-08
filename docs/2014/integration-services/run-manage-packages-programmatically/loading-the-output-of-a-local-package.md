@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- integration-services
+ms.technology: integration-services
 ms.topic: reference
 dev_langs:
 - VB
@@ -18,12 +16,12 @@ ms.assetid: aba8ecb7-0dcf-40d0-a2a8-64da0da94b93
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b8214e3da53bf87ea96edcf5fb77d9bc774f65aa
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3fecc2dcd609cb297aba7c2a2aa63fb8fdcf32e4
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48155061"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53350596"
 ---
 # <a name="loading-the-output-of-a-local-package"></a>Caricamento dell'output di un pacchetto locale
   Le applicazioni client possono leggere l'output dei pacchetti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] quando viene salvato nelle destinazioni [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tramite [!INCLUDE[vstecado](../../includes/vstecado-md.md)] o quando viene salvato in una destinazione file flat usando le classi dello spazio dei nomi **System.IO**. Tuttavia, un'applicazione client può anche leggere l'output di un pacchetto direttamente dalla memoria, senza la necessità di un passaggio intermedio per rendere persistenti i dati. La chiave per questa soluzione è il `Microsoft.SqlServer.Dts.DtsClient` spazio dei nomi che contiene implementazioni speciali delle `IDbConnection`, `IDbCommand`, e **IDbDataParameter** interfacce dal **System. Data** dello spazio dei nomi. L'assembly Microsoft.SqlServer.Dts.DtsClient.dll è installato per impostazione predefinita in **%ProgramFiles%\Microsoft SQL Server\100\DTS\Binn**.  
@@ -31,7 +29,7 @@ ms.locfileid: "48155061"
 > [!NOTE]  
 >  Per la procedura descritta in questo argomento, è necessario che la proprietà DelayValidation dell'attività Flusso di dati e di eventuali oggetti padre sia impostata sul valore predefinito, ovvero **False**.  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>Descrizione  
  In questa procedura viene illustrato lo sviluppo di un'applicazione client in codice gestito che carica l'output di un pacchetto con una destinazione DataReader direttamente dalla memoria. I passaggi riepilogati in questa sezione sono illustrati nel codice di esempio seguente.  
   
 #### <a name="to-load-data-package-output-into-a-client-application"></a>Per caricare l'output del pacchetto di dati in un'applicazione client  
@@ -47,7 +45,7 @@ ms.locfileid: "48155061"
   
 4.  Creare un oggetto di tipo `DtsClient.DtsCommand` che utilizza l'oggetto `DtsConnection` creato in precedenza e impostare la relativa proprietà `CommandText` sul nome della destinazione DataReader nel pacchetto. Chiamare quindi il metodo `ExecuteReader` dell'oggetto comando per caricare i risultati del pacchetto in un nuovo DataReader.  
   
-5.  Facoltativamente, è possibile parametrizzare indirettamente l'output del pacchetto utilizzando la raccolta di oggetti `DtsDataParameter` nell'oggetto `DtsCommand` per passare i valori alle variabili definite nel pacchetto. All'interno del pacchetto è possibile utilizzare queste variabili come parametri di query o in espressioni per influire sui risultati restituiti alla destinazione DataReader. È necessario definire queste variabili nel pacchetto nel **DtsClient** dello spazio dei nomi prima di usarli con la `DtsDataParameter` oggetti da un'applicazione client. Può essere necessario fare clic sul pulsante della barra degli strumenti **Selezione colonne finestra Variabili** nella finestra **Variabili** per visualizzare la colonna **Spazio dei nomi**. Nel codice client, quando si aggiunge un oggetto `DtsDataParameter` alla raccolta `Parameters` di `DtsCommand`, omettere il riferimento allo spazio dei nomi DtsClient dal nome della variabile. Esempio:  
+5.  Facoltativamente, è possibile parametrizzare indirettamente l'output del pacchetto utilizzando la raccolta di oggetti `DtsDataParameter` nell'oggetto `DtsCommand` per passare i valori alle variabili definite nel pacchetto. All'interno del pacchetto è possibile utilizzare queste variabili come parametri di query o in espressioni per influire sui risultati restituiti alla destinazione DataReader. È necessario definire queste variabili nel pacchetto nel **DtsClient** dello spazio dei nomi prima di usarli con la `DtsDataParameter` oggetti da un'applicazione client. Può essere necessario fare clic sul pulsante della barra degli strumenti **Selezione colonne finestra Variabili** nella finestra **Variabili** per visualizzare la colonna **Spazio dei nomi**. Nel codice client, quando si aggiunge un oggetto `DtsDataParameter` alla raccolta `Parameters` di `DtsCommand`, omettere il riferimento allo spazio dei nomi DtsClient dal nome della variabile. Ad esempio:  
   
     ```  
     command.Parameters.Add(new DtsDataParameter("MyVariable", 1));  
@@ -295,7 +293,7 @@ namespace DtsClientWParamCS
 }  
 ```  
   
-![Icona di Integration Services (piccola)](../media/dts-16.gif "icona di Integration Services (piccola)")**rimangono fino a Date con Integration Services** <br /> Per i download, gli articoli, gli esempi e i video Microsoft più recenti, oltre alle soluzioni selezionate dalla community, visitare la pagina [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sul sito MSDN:<br /><br /> [Visita la pagina di Integration Services su MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Per ricevere una notifica automatica su questi aggiornamenti, sottoscrivere i feed RSS disponibili nella pagina.  
+![Icona di Integration Services (piccola)](../media/dts-16.gif "icona di Integration Services (piccola)")**rimangono fino a Date con Integration Services**<br /> Per i download, gli articoli, gli esempi e i video Microsoft più recenti, oltre alle soluzioni selezionate dalla community, visitare la pagina [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sul sito MSDN:<br /><br /> [Visita la pagina di Integration Services su MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Per ricevere una notifica automatica su questi aggiornamenti, sottoscrivere i feed RSS disponibili nella pagina.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Differenze tra l'esecuzione locale e remota](../run-manage-packages-programmatically/understanding-the-differences-between-local-and-remote-execution.md)   

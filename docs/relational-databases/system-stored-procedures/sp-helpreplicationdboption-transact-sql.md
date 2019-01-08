@@ -5,8 +5,7 @@ ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_helpreplicationdboption_TSQL
@@ -17,12 +16,12 @@ ms.assetid: 143ce689-108b-49d7-9892-fd3a86897f38
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b035e07f7536ce84e298b9c87c25915e004938bc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 29fcbe7f5e7b2b7e72c88390df9d5fe20c0f7352
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47690719"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52812033"
 ---
 # <a name="sphelpreplicationdboption-transact-sql"></a>sp_helpreplicationdboption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +46,7 @@ sp_helpreplicationdboption [ [ @dbname =] 'dbname' ]
  [  **@type=**] **'***tipo***'**  
  Limita il set di risultati al database in cui l'opzione di replica specificato *tipo* valore è stato abilitato. *tipo di* viene **sysname**, e può essere uno dei valori seguenti.  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |**pubblicare**|È consentita la replica transazionale.|  
 |**pubblicazione di tipo merge**|È consentita la replica di tipo merge.|  
@@ -58,7 +57,7 @@ sp_helpreplicationdboption [ [ @dbname =] 'dbname' ]
   
 ## <a name="result-sets"></a>Set di risultati  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|Nome del database.|  
 |**id**|**int**|Identificatore del database.|  

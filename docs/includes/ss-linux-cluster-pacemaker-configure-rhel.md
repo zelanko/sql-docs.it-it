@@ -7,8 +7,8 @@
 
    > Se il firewall non ha una configurazione a disponibilità elevata predefinita, aprire le porte seguenti per Pacemaker.
    >
-   > * TCP: porte 2224, 3121, 21064
-   > * UDP: porta 5405
+   > * TCP: Porte 2224, 3121, 21064
+   > * UDP: Porta 5405
 
 1. Installare i pacchetti Pacemaker in tutti i nodi.
 

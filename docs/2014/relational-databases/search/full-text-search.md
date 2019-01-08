@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: search
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - full-text search [SQL Server]
@@ -12,15 +12,15 @@ ms.assetid: a0ce315d-f96d-4e5d-b4eb-ff76811cab75
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8ef3beb381aa9cb5f6638920826d92bf01624e96
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 560761383a06bf9e3b319546011d58c7c1bdecb4
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48144191"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52788643"
 ---
 # <a name="full-text-search"></a>Ricerca full-text
-  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] la ricerca full-text consente a utenti e applicazioni di eseguire query full-text su dati di tipo carattere in tabelle di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Affinché le query full-text possano essere eseguite in una determinata tabella, l'amministratore del database deve prima creare un indice full-text nella tabella in questione. L'indice full-text include una o più colonne basate su caratteri nella tabella. Tali colonne possono presentare uno qualsiasi dei tipi di dati seguenti: `char`, `varchar`, `nchar`, `nvarchar`, `text`, `ntext`, `image`, `xml`, o `varbinary(max)` e FILESTREAM. Ogni indice full-text consente di indicizzare una o più colonne della tabella e ciascuna colonna può essere utilizzata con una lingua specifica.  
+  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] la ricerca full-text consente a utenti e applicazioni di eseguire query full-text su dati di tipo carattere in tabelle di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Affinché le query full-text possano essere eseguite in una determinata tabella, l'amministratore del database deve prima creare un indice full-text nella tabella in questione. L'indice full-text include una o più colonne basate su caratteri nella tabella. In queste colonne possono essere presenti i seguenti tipi di dati: `char`, `varchar`, `nchar`, `nvarchar`, `text`, `ntext`, `image`, `xml`, o `varbinary(max)` e FILESTREAM. Ogni indice full-text consente di indicizzare una o più colonne della tabella e ciascuna colonna può essere utilizzata con una lingua specifica.  
   
  Attraverso le query full-text è possibile eseguire ricerche linguistiche rispetto ai dati di testo contenuti negli indici full-text, utilizzando parole e frasi in base alle regole di una determinata lingua, come ad esempio l'inglese o il giapponese. Le query full-text possono contenere semplici parole e frasi oppure più forme di una parola o frase. Una query full-text restituisce qualsiasi documento contenente almeno una corrispondenza, nota anche come *riscontro*. Si ottiene una corrispondenza quando un documento di destinazione contiene tutti i termini specificati nella query full-text e soddisfa qualsiasi altra condizione di ricerca, come ad esempio la distanza entro i termini corrispondenti.  
   
@@ -28,7 +28,7 @@ ms.locfileid: "48144191"
 >  La ricerca full-text è un componente facoltativo del Motore di database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per altre informazioni, vedere [installare SQL Server 2014](../../database-engine/install-windows/install-sql-server.md).  
   
 ##  <a name="benefits"></a> Che cosa può fare con ricerca Full-Text?  
- La ricerca full-text può essere utilizzata in un'ampia gamma di scenari aziendali, ad esempio nel commercio elettronico per la ricerca di articoli in un sito Web, negli uffici legali per la ricerca di casi in un repository di dati legali oppure nei reparti delle risorse umane per l'abbinamento dei posti di lavoro disponibili ai curriculum vitae in archivio. Le attività di sviluppo e amministrazione di base della ricerca full-text sono equivalenti indipendentemente dagli scenari aziendali. In uno scenario aziendale, tuttavia, l'indice e le query full-text possono essere modificati in base agli obiettivi aziendali da raggiungere. È ad esempio probabile che per un'attività di commercio elettronico l'ottimizzazione delle prestazioni sia ritenuta più importante della classificazione dei risultati, dell'accuratezza delle chiamate (quante delle corrispondenze esistenti vengono effettivamente restituite da una query full-text) o del supporto di più lingue. Per un ufficio legale, invece, l'aspetto più importante potrebbe essere la restituzione di ogni possibile occorrenza (*richiamo totale* delle informazioni).  
+ Ricerca full-text è applicabile a una vasta gamma di scenari aziendali, ad esempio e le aziende-ricerca per gli elementi in un sito web. legge le aziende-cercando le cronologie di case in un repository di dati legali; o descrizioni del processo di ricerca i reparti delle risorse umane ai curriculum. Le attività di sviluppo e amministrazione di base della ricerca full-text sono equivalenti indipendentemente dagli scenari aziendali. In uno scenario aziendale, tuttavia, l'indice e le query full-text possono essere modificati in base agli obiettivi aziendali da raggiungere. È ad esempio probabile che per un'attività di commercio elettronico l'ottimizzazione delle prestazioni sia ritenuta più importante della classificazione dei risultati, dell'accuratezza delle chiamate (quante delle corrispondenze esistenti vengono effettivamente restituite da una query full-text) o del supporto di più lingue. Per un ufficio legale, invece, l'aspetto più importante potrebbe essere la restituzione di ogni possibile occorrenza (*richiamo totale* delle informazioni).  
   
  [Contenuto dell'argomento](#top)  
   
@@ -49,7 +49,7 @@ ms.locfileid: "48144191"
   
  Per le query di ricerca full-text non viene fatta distinzione tra maiuscole e minuscole. Ad esempio, dalla ricerca di "Alluminio" o "alluminio" vengono restituiti gli stessi risultati.  
   
- Nelle query full-text viene utilizzato un set ridotto di predicati (CONTAINS e FREETEXT) e funzioni (CONTAINSTABLE e FREETEXTTABLE) [!INCLUDE[tsql](../../../includes/tsql-md.md)] . Tuttavia, gli obiettivi di ricerca di un determinato scenario aziendale influiscono sulla struttura delle query full-text. Esempio:  
+ Nelle query full-text viene utilizzato un set ridotto di predicati (CONTAINS e FREETEXT) e funzioni (CONTAINSTABLE e FREETEXTTABLE) [!INCLUDE[tsql](../../../includes/tsql-md.md)] . Tuttavia, gli obiettivi di ricerca di un determinato scenario aziendale influiscono sulla struttura delle query full-text. Ad esempio:  
   
 -   Commercio elettronico: ricerca di un prodotto in un sito Web  
   
@@ -192,7 +192,7 @@ ms.locfileid: "48144191"
   
     -   [Scegliere una lingua durante la creazione di un indice full-text](choose-a-language-when-creating-a-full-text-index.md)  
   
-    -   [Popolare gli indici full-text](populate-full-text-indexes.md)  
+    -   [Popolamento degli indici full-text](populate-full-text-indexes.md)  
   
     -   [Gestire indici full-text](../../database-engine/manage-full-text-indexes.md)  
   

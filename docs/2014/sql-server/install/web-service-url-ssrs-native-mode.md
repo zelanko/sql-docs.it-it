@@ -15,25 +15,25 @@ ms.assetid: 9d210b5d-2a08-4e56-a4f5-c16715b00d79
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: abb2e425df70a3425a6dfc7eef278f6bd6aa6cc2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5371060acadc0def9a8105616b36d8687eb5a87e
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48099031"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53203358"
 ---
 # <a name="web-service-url-ssrs-native-mode"></a>URL servizio Web (modalità nativa SSRS)
   Utilizzare la pagina URL servizio Web per configurare o modificare l'URL utilizzato per accedere al server di report. In base all'URL specificato, verrà creata una *prenotazione URL* . La prenotazione URL definisce la sintassi e le regole per tutti gli URL che sarà possibile utilizzare in seguito per accedere al servizio Web ReportServer e specifica il prefisso, l'host, la porta e la directory virtuale per il servizio Web ReportServer. A seconda di come si specifica l'host, per una singola prenotazione sono possibili più URL. Il valore predefinito per l'host specifica un carattere jolly complesso. Un carattere jolly complesso consente di specificare in un URL qualsiasi nome host che possa essere risolto nel computer che ospita il server di report. Per altre informazioni sulla configurazione di URL e le prenotazioni, vedere [configurare un URL &#40;Gestione configurazione SSRS&#41; ](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md) e [configurare gli URL del Server di Report &#40;Gestione configurazione SSRS&#41; ](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md).  
   
  [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
- Per aprire questa pagina, avviare il [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager e fare clic su **URL del servizio Web** nel riquadro di spostamento. Per altre informazioni, vedere [Gestione configurazione Reporting Services &#40;modalità nativa&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md).  
+ Per aprire questa pagina, avviare Gestione configurazione [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e fare clic su **URL servizio Web** nel riquadro di navigazione. Per altre informazioni, vedere [Gestione configurazione Reporting Services &#40;modalità nativa&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md).  
   
  In questa pagina sono disponibili i valori comunemente utilizzati negli URL del server di report. Se si desidera creare URL aggiuntivi, utilizzare intestazioni host o specificare l'indirizzo IP in un formato specifico, fare clic su **Avanzate**.  
   
  Dopo che si fa clic su **Applica**, in questa pagina verrà visualizzato un collegamento al servizio Web. Se si fa clic sul collegamento prima che venga creato il database del server di report, è probabile che venga visualizzato il messaggio di errore "Impossibile trovare la pagina". Una volta configurato il database, questo errore non verrà più visualizzato. Per altre informazioni, vedere [Creare un database del server di report in modalità nativa &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md).  
   
- Se è stato reinstallato [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e ritiene che si verificano errori quando si prova a usare il valore dell'indirizzo IP predefinito tutti assegnati e la porta 80, è in genere possibile risolvere l'errore ricreando l'URL dopo il riavvio del servizio.  
+ Se [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] è stato reinstallato e vengono restituiti errori quando si tenta di utilizzare la porta 80 e il valore predefinito Tutti assegnati per l'indirizzo IP, è in genere possibile risolvere l'errore ricreando l'URL dopo il riavvio del servizio.  
   
 ## <a name="options"></a>Opzioni  
  **Directory virtuale**  
@@ -58,7 +58,7 @@ ms.locfileid: "48099031"
  **Certificato SSL**  
  Consente di associare un certificato all'indirizzo IP specificato. Il certificato deve essere installato e configurato nel computer. Reporting Services non fornisce caratteristiche per la gestione di certificati. Il certificato deve essere rilasciato a un nome host o a un nome computer risolto nell'indirizzo IP. Ad esempio, per usare un certificato rilasciato a http://salesreports, l'indirizzo IP specificato deve essere risolto in un server denominato "salesreports".  
   
- Se si usa un certificato, è necessario modificare il `UrlRoot` impostazione di configurazione in RSReportServer. config del file in modo che specifichi il nome completo del computer per il quale viene registrato il certificato. Per altre informazioni, vedere [Configurare connessioni SSL in un server di report in modalità nativa](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md) nella documentazione online di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+ Se si utilizza un certificato, è necessario modificare l'impostazione di configurazione `UrlRoot` nel file RSReportServer.config in modo che specifichi il nome completo del computer per cui viene registrato il certificato. Per altre informazioni, vedere [Configurare connessioni SSL in un server di report in modalità nativa](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md) nella documentazione online di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  **Porta SSL**  
  Consente di specificare la porta per le connessioni SSL.  
@@ -69,17 +69,17 @@ ms.locfileid: "48099031"
  **Advanced**  
  Fare clic su questa opzione per creare URL aggiuntivi per l'istanza dell'applicazione corrente.  
   
-> [!NOTE]  
+> [!NOTE]
 >  Se si dispone di associazioni SSL esistenti e di prenotazioni di URL e si desidera modificare l'associazione SSL, ad esempio per utilizzare un'intestazione host o un certificato diverso, è consigliabile completare in ordine i passaggi seguenti:  
->   
+> 
 >  1.  Innanzitutto rimuovere tutte le prenotazioni di URL.  
 > 2.  Successivamente rimuovere tutte le associazioni SSL.  
 > 3.  Infine ricreare gli URL e le associazioni SSL.  
->   
+> 
 >  I passaggi precedenti possono essere completati utilizzando Gestione configurazione [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
->   
+> 
 >  Microsoft Windows supporta un'associazione per ogni combinazione di indirizzo IP e porta. Se un server di report viene configurato in modo che venga utilizzato un valore di intestazione host specifico e il certificato relativo alla combinazione tra porta e indirizzo IP viene emesso con un valore di intestazione host diverso, nel browser verrà visualizzato un avviso in cui viene indicato che il certificato non corrisponde all'URL in uso.  
->   
+> 
 >  Per risolvere questo problema, eliminare tutte le associazioni, quindi crearne di nuove con impostazioni univoche o configurare le registrazioni di URL di Reporting Services con caratteri jolly.  
   
 ## <a name="see-also"></a>Vedere anche  

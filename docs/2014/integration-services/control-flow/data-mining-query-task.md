@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.dataminingquerytask.f1
@@ -16,12 +15,12 @@ ms.assetid: f489348c-2008-4f66-8c2c-c07c3029439a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4eddd53df9d9a373a9a4101686dd016a09d20e38
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: aa3e66397a61dc6cf5679e089bc03ce0e2d252cc
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48225161"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52785033"
 ---
 # <a name="data-mining-query-task"></a>Attività Query di data mining
   L'attività Query di data mining consente di eseguire query di stima basate sui modelli di data mining compilati in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Una query di stima genera una stima per nuovi dati utilizzando modelli di data mining. È ad esempio possibile utilizzare una query di stima per stimare il numero di barche a vela che si prevede di vendere durante i mesi estivi o per generare un elenco dei potenziali clienti che probabilmente acquisteranno una barca a vela.  
@@ -52,18 +51,18 @@ ms.locfileid: "48225161"
   
  Per ulteriori informazioni sulle proprietà che è possibile impostare in Progettazione [!INCLUDE[ssIS](../../../includes/ssis-md.md)] , fare clic su uno degli argomenti seguenti:  
   
--   [Editor attività Query di Data Mining &#40;scheda modello di Data Mining&#41;](../data-mining-query-task-editor-mining-model-tab.md)  
+-   [Editor attività Query di data mining &#40;scheda Modello di data mining&#41;](../data-mining-query-task-editor-mining-model-tab.md)  
   
--   [Editor attività Query di Data Mining &#40;scheda Query&#41;](../data-mining-query-task-editor-query-tab.md)  
+-   [Editor attività Query di data mining &#40;scheda Query&#41;](../data-mining-query-task-editor-query-tab.md)  
   
--   [Editor attività Query di Data Mining &#40;scheda di Output&#41;](../data-mining-query-task-editor-output-tab.md)  
+-   [Editor attività Query di data mining &#40;scheda Output&#41;](../data-mining-query-task-editor-output-tab.md)  
   
 > [!NOTE]  
 >  L'Editor attività Query di data mining non include la pagina Espressioni. È tuttavia possibile usare la finestra **Proprietà** per accedere agli strumenti per la creazione e la gestione di espressioni di proprietà per le proprietà dell'attività Query di data mining.  
   
  Per altre informazioni sull'impostazione di queste proprietà in Progettazione [!INCLUDE[ssIS](../../../includes/ssis-md.md)] , fare clic sull'argomento seguente:  
   
--   [Impostare le proprietà di un'attività o di un contenitore](../set-the-properties-of-a-task-or-container.md)  
+-   [Impostazione delle proprietà di un'attività o di un contenitore](../set-the-properties-of-a-task-or-container.md)  
   
 ## <a name="programmatic-configuration-of-data-mining-query-task"></a>Configurazione a livello di codice dell'attività Query di data mining  
  Per ulteriori informazioni sull'impostazione di queste proprietà a livello di codice, fare clic su uno degli argomenti seguenti:  

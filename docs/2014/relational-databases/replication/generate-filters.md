@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.newpubwizard.generatefilters.f1
@@ -13,12 +12,12 @@ ms.assetid: be28515c-5d6d-467b-b933-d7c8d97a45b4
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8b87d9ff8173c5c708628befb3fd3c900fd7f0bd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cae79be898c326b395e781db741c87578edfe7ff
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48194113"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52815363"
 ---
 # <a name="generate-filters"></a>Genera filtri
   La finestra di dialogo **Genera filtri** consente di definire un filtro di riga in una tabella in una pubblicazione di tipo merge. Durante la replica, il filtro viene esteso automaticamente alle altre tabelle correlate tramite relazioni di chiave esterna. Se ad esempio si definisce un filtro in una tabella clienti in modo che contenga solo dati su clienti francesi, la replica estenderà tale filtro affinché nelle tabelle degli ordini e dei dettagli ordine correlate vengano incluse solo informazioni relative ai clienti francesi.  

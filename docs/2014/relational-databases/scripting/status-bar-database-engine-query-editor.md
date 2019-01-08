@@ -11,12 +11,12 @@ ms.assetid: e7f2d6f4-bb94-4cf5-a096-c34397e679af
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 133a21d00442859738ac6114847f68ab7bfb1564
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 11b55e2faeb251f8c3a7ab5220d9716476e66639
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48093431"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512084"
 ---
 # <a name="status-bar-database-engine-query-editor"></a>Barra di stato (editor di query del Motore di database)
   La barra di stato delle finestre dell'editor di query di [!INCLUDE[ssDE](../../includes/ssde-md.md)] può apparire di colore diverso in modo da indicare a quale istanza di [!INCLUDE[ssDE](../../includes/ssde-md.md)] è connessa ciascuna finestra.  
@@ -25,7 +25,7 @@ ms.locfileid: "48093431"
   
 2.  **Per impostare un colore di stato del server in:**  [Esplora oggetti](#SetOEServerColor), [Server registrato](#SetRegServerColor)  
   
-3.  **Per utilizzare un colore di stato:**  [Aprire l'editor di query con un colore per il server](#OpenServerColor), [Aprire l'editor di query specificato un colore di stato](#OpenSpecColor)  
+3.  **Per usare un colore di stato:**  [Aprire l'Editor di Query utilizzando un colore di Server](#OpenServerColor), [aprire un Editor di Query specificando un colore di stato](#OpenSpecColor)  
   
 ##  <a name="StatusBarColors"></a> Colori della barra di stato  
  È possibile associare un colore della barra di stato a uno specifico nodo server in **Esplora oggetti** o **Server registrati**. È possibile specificare i colori solo per nodi server connessi a un'istanza di [!INCLUDE[ssDE](../../includes/ssde-md.md)], non ai nodi server per altre tecnologie SQL Server. È inoltre possibile specificare anche un colore della barra di stato personalizzato ogni volta che si connette una nuova finestra dell'editor di query di [!INCLUDE[ssDE](../../includes/ssde-md.md)] a un'istanza di [!INCLUDE[ssDE](../../includes/ssde-md.md)]. È quindi possibile aprire una finestra dell'editor di query utilizzando il colore di stato definito per il nodo server oppure specificare un colore univoco per la finestra in questione.  
@@ -35,13 +35,13 @@ ms.locfileid: "48093431"
 ##  <a name="SetOEServerColor"></a> Impostare il colore di stato per un server in Esplora oggetti  
  **Per impostare un colore di stato per un server in Esplora oggetti**  
   
-1.  In **Esplora oggetti**fare clic sul pulsante **Connetti** , quindi selezionare **Motore di database**.  
+1.  In **Esplora oggetti** fare clic sul pulsante **Connetti**, quindi selezionare **Motore di database...**  
   
 2.  Nella finestra di dialogo **Connetti al server** selezionare **Opzioni >>**.  
   
 3.  Selezionare la casella di controllo **Usa colore personalizzato** .  
   
-4.  Per selezionare il colore, fare clic sul pulsante **Seleziona** .  
+4.  Per selezionare il colore, fare clic sul pulsante **Seleziona...**  
   
 5.  Selezionare un colore di base o personalizzato, quindi scegliere OK.  
   
@@ -50,13 +50,13 @@ ms.locfileid: "48093431"
 ##  <a name="SetRegServerColor"></a> Impostare il colore di stato per un server registrato  
  **Per impostare il colore di stato per un server registrato**  
   
-1.  In **Server registrati**fare clic con il pulsante destro del mouse sul nodo server desiderato, quindi scegliere **Proprietà**.  
+1.  In **Server registrati** fare clic con il pulsante destro del mouse sul nodo server desiderato, quindi scegliere **Proprietà...**  
   
 2.  Nella finestra di dialogo **Modifica proprietà registrazione server** selezionare la scheda **Proprietà connessione** .  
   
 3.  Selezionare la casella di controllo **Usa colore personalizzato** .  
   
-4.  Per selezionare il colore, fare clic sul pulsante **Seleziona** .  
+4.  Per selezionare il colore, fare clic sul pulsante **Seleziona...**  
   
 5.  Selezionare un colore di base o personalizzato, quindi scegliere OK.  
   
@@ -80,7 +80,7 @@ ms.locfileid: "48093431"
   
 -   Selezionare la casella di controllo **Usa colore personalizzato** .  
   
--   Per selezionare il colore, fare clic sul pulsante **Seleziona** .  
+-   Per selezionare il colore, fare clic sul pulsante **Seleziona...**  
   
 -   Selezionare un colore di base o personalizzato, quindi scegliere OK.  
   

@@ -1,5 +1,5 @@
 ---
-title: Gestione di modelli multidimensionali assembly | Documenti Microsoft
+title: Gestione di assembly di modelli multidimensionali | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: df015e99df80915c68fa8f45e9f31ec475e22bc2
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 5b7b04f074dcd11eec022a689f865454681d2ae8
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34025668"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53215790"
 ---
 # <a name="multidimensional-model-assemblies-management"></a>Gestione di assembly di modelli multidimensionali
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] offre una vasta gamma di funzioni intrinseche da utilizzare con i linguaggi MDX (Multidimensional Expressions) e DMX Data Mining Extensions (), progettate per l'esecuzione di tutti gli elementi dai calcoli statistici standard all'attraversamento dei membri in una gerarchia. Come avviene per qualsiasi altro prodotto complesso e affidabile, tuttavia, si avverte sempre l'esigenza di estendere ulteriormente la funzionalità di questo servizio.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] offre una vasta gamma di funzioni intrinseche da usare con i linguaggi MDX (Multidimensional Expressions) e DMX (Data Mining Extensions), progettate per eseguire qualsiasi tipo di operazione, dai calcoli statistici standard all'attraversamento dei membri di una gerarchia. Come avviene per qualsiasi altro prodotto complesso e affidabile, tuttavia, si avverte sempre l'esigenza di estendere ulteriormente la funzionalità di questo servizio.  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] consente pertanto di aggiungere assembly a un database o a un'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Gli assembly consentono di creare funzioni esterne definite dall'utente mediante qualsiasi linguaggio Common Language Runtime (CLR), ad esempio Microsoft Visual Basic .NET o Microsoft Visual C#. È inoltre possibile utilizzare linguaggi di automazione COM (Component Object Model), ad esempio Microsoft Visual Basic o Microsoft Visual C++.  
   
@@ -29,7 +29,7 @@ ms.locfileid: "34025668"
   
  Un assembly con nuove procedure e funzioni può essere aggiunto al server. È possibile utilizzare gli assembly per migliorare o aggiungere funzionalità personalizzate non fornite dal server. Gli assembly consentono di aggiungere nuove funzioni in formato MDX (Multidimensional Expressions) e DMX (Data Mining Extensions) o stored procedure. Gli assembly vengono caricati dal percorso di esecuzione dell'applicazione personalizzata e una copia del file binario dell'assembly viene salvata nel server insieme ai dati del database. La rimozione di un assembly implica anche la rimozione dell'assembly copiato dal server.  
   
- Sono disponibili due tipi di assembly: COM e CLR. Gli assembly CLR sono sviluppati nei linguaggi di programmazione .NET Framework, ad esempio C#, Visual Basic .NET e C++ gestito. Gli assembly COM sono librerie COM che devono essere registrate nel server.  
+ Gli assembly possono essere di due tipi diversi: COM e CLR. Gli assembly CLR sono sviluppati nei linguaggi di programmazione .NET Framework, ad esempio C#, Visual Basic .NET e C++ gestito. Gli assembly COM sono librerie COM che devono essere registrate nel server.  
   
  È possibile aggiungere gli assembly a oggetti <xref:Microsoft.AnalysisServices.Server> o <xref:Microsoft.AnalysisServices.Database> . Gli assembly del server possono essere chiamati da qualsiasi utente connesso al server o da un oggetto nel server. Gli assembly del database possono essere chiamati solo da oggetti <xref:Microsoft.AnalysisServices.Database> o utenti connessi al database.  
   
@@ -68,16 +68,16 @@ Call MyAssembly.MyClass.MyVoidProcedure(a, b, c)
   
  *NomeAssembly*!*IDInterfaccia*!*NomeProcedura*(*Argomento1*, *Argomento2*, ...)  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>Sicurezza  
  La sicurezza degli assembly è basata sul modello di sicurezza dall'accesso di codice di .NET Framework. .NET Framework supporta un meccanismo di sicurezza dall'accesso di codice che presume che il run-time possa ospitare codice completamente o parzialmente attendibile. In genere, la sicurezza delle risorse mediante sicurezza dall'accesso di codice di .NET Framework viene eseguita tramite wrapping delle risorse con codice gestito, che richiede l'autorizzazione corrispondente prima di consentire l'accesso alla risorsa. La richiesta di autorizzazione viene soddisfatta solo se tutti i chiamanti a livello di assembly nello stack di chiamate dispongono dell'autorizzazione corrispondente per la risorsa.  
   
- Per gli assembly, l'autorizzazione relativa all'esecuzione viene passata con la proprietà **PermissionSet** sull'oggetto **Assembly** . Le autorizzazioni ricevute dal codice gestito sono determinate dai criteri di sicurezza attivi. In un ambiente diverso da[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] esistono già tre livelli di criteri attivi: organizzazione, computer e utente. L'elenco effettivo delle autorizzazioni ricevute dal codice è determinato dall'intersezione delle autorizzazioni ottenute da questi tre livelli.  
+ Per gli assembly, l'autorizzazione relativa all'esecuzione viene passata con la proprietà **PermissionSet** sull'oggetto **Assembly** . Le autorizzazioni ricevute dal codice gestito sono determinate dai criteri di sicurezza attivi. Esistono già tre livelli di criteri in vigore in non [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ambiente ospitato: enterprise, computer e utente. L'elenco effettivo delle autorizzazioni ricevute dal codice è determinato dall'intersezione delle autorizzazioni ottenute da questi tre livelli.  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] offre criteri di sicurezza a livello host per CLR, quando ospita tale ambiente. Questo livello di criteri aggiuntivo è sottostante ai tre livelli sempre attivi e viene impostato per ogni dominio applicazione creato da [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
  I criteri a livello host di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] sono una combinazione dei criteri fissi di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] per gli assembly di sistema e dei criteri specificati dall'utente per gli assembly utente. La parte dei criteri host di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] definita dall'utente è basata su uno dei tre bucket di autorizzazione specificati per ogni assembly dal relativo proprietario:  
   
-|Impostazione dell'autorizzazione|Description|  
+|Impostazione dell'autorizzazione|Descrizione|  
 |------------------------|-----------------|  
 |**Safe**|Garantisce l'autorizzazione per calcoli interni. Questo bucket non assegna autorizzazioni per l'accesso alle risorse protette di .NET Framework. Rappresenta il bucket di autorizzazione predefinito per un assembly se non ne è stato specificato uno con la proprietà **PermissionSet** .|  
 |**ExternalAccess**|Assicura lo stesso accesso dell'impostazione **Safe** , con la possibilità aggiuntiva di accedere a risorse di sistema esterne. Sebbene sia possibile proteggere questo scenario, tale bucket di autorizzazione non offre garanzie di sicurezza ma di affidabilità.|  
@@ -102,7 +102,7 @@ Call MyAssembly.MyClass.MyVoidProcedure(a, b, c)
  La ricerca degli assembly nello stesso dominio dell'applicazione non è affidabile, poiché il confine e gli assembly di ogni dominio dell'applicazione vengono definiti dall'implementazione.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Impostazione della protezione per le Stored procedure](../../analysis-services/multidimensional-models-extending-olap-stored-procedures/setting-security-for-stored-procedures.md)   
- [Definizione delle Stored procedure](../../analysis-services/multidimensional-models-extending-olap-stored-procedures/defining-stored-procedures.md)  
+ [Impostazione della sicurezza per stored procedure](../../analysis-services/multidimensional-models-extending-olap-stored-procedures/setting-security-for-stored-procedures.md)   
+ [Definizione delle stored procedure](../../analysis-services/multidimensional-models-extending-olap-stored-procedures/defining-stored-procedures.md)  
   
   

@@ -13,12 +13,12 @@ ms.assetid: c29e0f5e-9b3c-42b3-9856-755f4510832f
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 23e4d815e7f351bcc0c0220e32ad13051a23d97b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 855d0baf0b0b890b9343378f8060919979d5f206
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48120031"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52401616"
 ---
 # <a name="bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc"></a>Modifiche della copia bulk per i tipi di data e ora migliorati (OLE DB e ODBC)
   In questo argomento vengono descritti i miglioramenti apportati ai tipi di data/ora per supportare la funzionalità di copia bulk. Le informazioni incluse in questo argomento sono valide sia per OLE DB sia per ODBC in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
@@ -26,7 +26,7 @@ ms.locfileid: "48120031"
 ## <a name="format-files"></a>File di formato  
  Nella tabella seguente viene descritto l'input utilizzato per specificare i tipi di data/ora e i nomi dei tipi di dati del file host corrispondenti quando si compilano file di formato in modo interattivo.  
   
-|tipo di archiviazione di file|Tipo di dati del file host|Risposta alla richiesta: "Specificare il tipo di archiviazione di file del campo <nome_campo> [\<impostazione predefinita>]:"|  
+|tipo di archiviazione di file|Tipo di dati del file host|Risposta alla richiesta "Specificare il tipo di archiviazione di file del campo < nome_campo > [\<predefinito >]:"|  
 |-----------------------|-------------------------|-----------------------------------------------------------------------------------------------------|  
 |DATETIME|SQLDATETIME|d|  
 |Smalldatetime|SQLDATETIM4|D|  
@@ -61,7 +61,7 @@ ms.locfileid: "48120031"
 ```  
   
 ## <a name="character-data-files"></a>File di dati di tipo carattere  
- Nei file di dati di tipo carattere, i valori di data e ora vengono rappresentati come descritto nella sezione "Dati nei formati: stringhe e valori letterali" di [supporto dei tipi di dati per ODBC Date e miglioramenti per la fase](data-type-support-for-odbc-date-and-time-improvements.md) per ODBC o di [supporto dei tipi di dati per OLE DB data e miglioramenti per la fase](../native-client-ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md) per OLE DB.  
+ Nei file di dati di tipo carattere i valori di data e ora vengono rappresentati come descritto nella sezione "Formati di dati: Sezione stringhe e valori letterali"di [supporto dei tipi di dati per ODBC Date e miglioramenti per la fase](data-type-support-for-odbc-date-and-time-improvements.md) per ODBC o di [supporto dei tipi di dati per data OLE DB e miglioramenti per la fase](../native-client-ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md) per OLE DB.  
   
  In file di dati nativi, i valori di data e ora per i quattro nuovi tipi vengono rappresentati come rispettive rappresentazioni TDS con una scala pari a 7 (poiché si tratta di al massimo supportato dal [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e file di dati bcp non archiviano la scala di tali colonne). Non sussiste alcuna modifica nella risorsa di archiviazione esistenti `datetime` e `smalldatetime` rappresentazioni TDS di flusso di tipo o i relativi dati tabulari.  
   
@@ -90,7 +90,7 @@ ms.locfileid: "48120031"
 ## <a name="bcp-types-in-sqlnclih"></a>Tipi BCP in sqlncli.h  
  Di seguito vengono indicati i tipi definiti in sqlncli.h per l'utilizzo con le estensioni API BCP in ODBC. Questi tipi vengono passati con il *eUserDataType* parametro ibcpsession:: BCPColFmt in OLE DB.  
   
-|tipo di archiviazione di file|Tipo di dati del file host|Tipo in SQLNCLI. h per l'uso con ibcpsession:: BCPColFmt|valore|  
+|tipo di archiviazione di file|Tipo di dati del file host|Tipo in SQLNCLI. h per l'uso con ibcpsession:: BCPColFmt|Value|  
 |-----------------------|-------------------------|-----------------------------------------------------------|-----------|  
 |DATETIME|SQLDATETIME|BCP_TYPE_SQLDATETIME|0x3d|  
 |Smalldatetime|SQLDATETIM4|BCP_TYPE_SQLDATETIME4|0x3a|  
@@ -124,7 +124,7 @@ ms.locfileid: "48120031"
 |-|Non viene supportata alcuna conversione.<br /><br /> Viene generato un record di diagnostica ODBC con SQLSTATE 07006 e il messaggio "Violazione dell'attributo del tipo di dati".|  
 |1|Se i dati specificati non sono validi, viene generato un record di diagnostica ODBC con SQLSTATE 22007 e il messaggio "Formato di datetime non valido". Per i valori datetimeoffset, la parte relativa all'ora deve essere compresa nell'intervallo supportato in seguito alla conversione in UTC, anche se non è necessaria alcuna conversione in UTC. Ciò è dovuto al fatto che TDS e il server in genere normalizzano l'ora nei valori datetimeoffset per UTC. Di conseguenza, il client deve verificare che i componenti relativi all'ora siano compresi nell'intervallo supportato in seguito alla conversione in UTC.|  
 |2|Il componente relativo all'ora viene ignorato.|  
-|3|Per ODBC, se si verifica un troncamento con perdita di dati, viene generato un record di diagnostica con SQLSTATE 22001 e il messaggio "Troncamento a destra della stringa di dati". Il numero di cifre per i secondi frazionari, ovvero la scala, è determinato dalle dimensioni della colonna di destinazione in base alla tabella seguente. Per dimensioni di colonna maggiori dell'intervallo specificato nella tabella, si presuppone una scala di 7. Questa conversione deve consentire fino a nove cifre per i secondi frazionari, il massimo consentito in ODBC.<br /><br /> **Tipo:** DBTIME2<br /><br /> **Scala prevista 0** 8<br /><br /> **Scala 1..7 prevista** 10,16<br /><br /> <br /><br /> **Tipo:** DBTIMESTAMP<br /><br /> **Scala prevista 0:** 19<br /><br /> **Scala 1..7 prevista:** 21..27<br /><br /> <br /><br /> **Tipo:** DBTIMESTAMPOFFSET<br /><br /> **Scala prevista 0:** 26<br /><br /> **Scala 1..7 prevista:** 28..34<br /><br /> Per OLE DB, se si verifica un troncamento con perdita di dati, viene inserito un errore. Per datetime2 il numero di cifre per i secondi frazionari, ovvero la scala, è determinato dalle dimensioni della colonna di destinazione in base alla tabella seguente. Per dimensioni di colonna maggiori dell'intervallo specificato nella tabella, si presuppone una scala 9. Questa conversione deve consentire fino a nove cifre per i secondi frazionari, il massimo consentito da OLE DB.<br /><br /> **Tipo:** DBTIME2<br /><br /> **Scala prevista 0** 8<br /><br /> **Scala prevista 1..9** 1..9<br /><br /> <br /><br /> **Tipo:** DBTIMESTAMP<br /><br /> **Scala prevista 0:** 19<br /><br /> **Scala prevista 1..9:** 21..29<br /><br /> <br /><br /> **Tipo:** DBTIMESTAMPOFFSET<br /><br /> **Scala prevista 0:** 26<br /><br /> **Scala prevista 1..9:** 28..36|  
+|3|Per ODBC, se si verifica un troncamento con perdita di dati, viene generato un record di diagnostica con SQLSTATE 22001 e il messaggio 'Stringa di dati, troncata a destra' il numero di cifre per i secondi frazionari (scala) è determinato dalle dimensioni della colonna di destinazione in base al Nella tabella seguente. Per dimensioni di colonna maggiori dell'intervallo specificato nella tabella, si presuppone una scala di 7. Questa conversione deve consentire fino a nove cifre per i secondi frazionari, il massimo consentito in ODBC.<br /><br /> **Tipo:** DBTIME2<br /><br /> **Scala prevista 0** 8<br /><br /> **Scala 1..7 prevista** 10,16<br /><br /> <br /><br /> **Tipo:** DBTIMESTAMP<br /><br /> **Scala prevista 0:** 19<br /><br /> **Scala prevista 1..7:** 21..27<br /><br /> <br /><br /> **Tipo:** DBTIMESTAMPOFFSET<br /><br /> **Scala prevista 0:** 26<br /><br /> **Scala prevista 1..7:** 28..34<br /><br /> Per OLE DB, se si verifica un troncamento con perdita di dati, viene inserito un errore. Per datetime2 il numero di cifre per i secondi frazionari, ovvero la scala, è determinato dalle dimensioni della colonna di destinazione in base alla tabella seguente. Per dimensioni di colonna maggiori dell'intervallo specificato nella tabella, si presuppone una scala 9. Questa conversione deve consentire fino a nove cifre per i secondi frazionari, il massimo consentito da OLE DB.<br /><br /> **Tipo:** DBTIME2<br /><br /> **Scala prevista 0** 8<br /><br /> **Scala prevista 1..9** 1..9<br /><br /> <br /><br /> **Tipo:** DBTIMESTAMP<br /><br /> **Scala prevista 0:** 19<br /><br /> **Scala prevista 1..9:** 21..29<br /><br /> <br /><br /> **Tipo:** DBTIMESTAMPOFFSET<br /><br /> **Scala prevista 0:** 26<br /><br /> **Scala prevista 1..9:** 28..36|  
 |4|Il componente relativo alla data viene ignorato.|  
 |5|Il fuso orario è impostato su UTC, ad esempio 00:00.|  
 |6|L'ora è impostata su zero.|  

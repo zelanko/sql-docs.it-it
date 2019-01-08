@@ -22,17 +22,17 @@ ms.assetid: 86a8adda-c5ad-477f-870f-cb370c39ee13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bc96c78af702a2239b517b4fbde78f6926b8490a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5182ab1a72caac4181e50df2199f3e0457d3aaac
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48076701"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52806593"
 ---
 # <a name="autotranslation-of-character-data"></a>Conversione automatica dei dati di tipo carattere
   Dati di tipo carattere, ad esempio ANSI carattere variabili dichiarate con SQL_C_CHAR o i dati archiviati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando il **char**, **varchar**, o **testo** tipi di dati, possono rappresentano solo un numero limitato di caratteri. I dati di tipo carattere archiviati utilizzando un byte per carattere possono rappresentare solo 256 caratteri. I valori archiviati nelle variabili SQL_C_CHAR vengono interpretati mediante la tabella codici ANSI (ACP) del computer client. I valori archiviati utilizzando **char**, **varchar**, o **testo** i tipi di dati sul server vengono valutati tramite degli Stati ACP del server.  
   
- Se il server e i client hanno la stessa tabella codici ANSI, quindi non persistono l'interpretazione dei valori archiviati nelle SQL_C_CHAR **char**, **varchar**, o **testo** oggetti. Se il server e il client dispone di ACP differenti, i dati SQL_C_CHAR del client possono essere interpretati come un carattere diverso sul server se viene usata in **char**, **varchar**, o **testo** colonne, variabili o parametri. Ad esempio, un byte di carattere contenente il valore 0xA5 viene interpretato come carattere Ñ su un computer utilizzando codici 437 e viene interpretato come lo yen (¥) in un computer con tabella codici 1252.  
+ Se il server e i client hanno la stessa tabella codici ANSI, quindi non persistono l'interpretazione dei valori archiviati nelle SQL_C_CHAR **char**, **varchar**, o **testo** oggetti. Se il server e il client dispone di ACP differenti, i dati SQL_C_CHAR del client possono essere interpretati come un carattere diverso sul server se viene usata in **char**, **varchar**, o **testo** colonne, variabili o parametri. Ad esempio, un byte di caratteri che contiene il valore 0xA5 viene interpretato come carattere di?? in un computer usando il codice pagina 437 e può essere interpretato come lo yen accedere (?) in un computer con tabella codici 1252.  
   
  I dati Unicode vengono archiviati utilizzando due byte per carattere. Poiché tutti i caratteri estesi sono inclusi nella specifica Unicode, tutti i caratteri Unicode vengono interpretati allo stesso modo da tutti i computer.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "48076701"
   
  Poiché tutte queste conversioni vengono effettuate la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nativo Client ODBC driver in esecuzione sul client, il server ACP deve essere una delle pagine codice installate nel computer client.  
   
- L'utilizzo di Unicode consente di eseguire la conversione più appropriata di tutti i caratteri presenti in entrambe le tabelle codici. Se tuttavia un carattere esiste in una tabella codici ma non in un'altra, non può essere rappresentato nella tabella codici di destinazione. Il simbolo del marchio registrato (®), ad esempio, è presente nella tabella codici 1252, ma non nella tabella codici 437.  
+ L'utilizzo di Unicode consente di eseguire la conversione più appropriata di tutti i caratteri presenti in entrambe le tabelle codici. Se tuttavia un carattere esiste in una tabella codici ma non in un'altra, non può essere rappresentato nella tabella codici di destinazione. Tabella codici 1252, ad esempio, ha simbolo del marchio registrato (?), mentre la tabella codici 437 non.  
   
  L'impostazione di AutoTranslate non ha effetto sulle conversioni seguenti:  
   

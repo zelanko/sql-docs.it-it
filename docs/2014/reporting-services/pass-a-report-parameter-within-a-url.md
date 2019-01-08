@@ -14,12 +14,12 @@ ms.assetid: f93a94cc-27b5-435a-aa85-69e6ec6459ad
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 80450865b72360068555cb1a25224a3ea503e5a2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dfbf2362b06abc254879d25c4f8e7b8e876a6737
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48097581"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53215860"
 ---
 # <a name="pass-a-report-parameter-within-a-url"></a>Passare un parametro del report in un URL
   È possibile passare parametri del report a un report includendoli in un URL del report. Questi parametri URL non hanno il prefisso in quanto vengono passati direttamente al motore di elaborazione dei report.  
@@ -31,12 +31,12 @@ ms.locfileid: "48097581"
   
  Tutti i parametri di query possono disporre di parametri di report corrispondenti. Passare un parametro di query a un report passando il parametro di report corrispondente. Per altre informazioni, vedere [Compilare una query in Progettazione query relazionale &#40;Generatore report e SSRS&#41;](report-data/build-a-query-in-the-relational-query-designer-report-builder-and-ssrs.md).  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  Nei parametri dei report viene fatta distinzione tra maiuscole e minuscole.  
-  
-> [!NOTE]  
+> 
+> [!NOTE]
 >  Ai parametri del report viene applicata la distinzione tra maiuscole e minuscole e in essi vengono utilizzati i caratteri speciali seguenti:  
->   
+> 
 >  -   Qualsiasi spazio nella stringa dell'URL viene sostituito con i caratteri "% 20", in base agli standard di codifica degli URL.  
 > -   Lo spazio nella parte di parametro dell'URL viene sostituito con un carattere più (+).  
 > -   Il punto e virgola in una parte qualsiasi della stringa viene sostituito con i caratteri "%3A".  
@@ -49,7 +49,7 @@ ms.locfileid: "48097581"
 parameter=value  
 ```  
   
- Per specificare ad esempio due parametri, "ReportMonth" e "ReportYear", definiti in un report, utilizzare l'URL seguente relativo a un server di report in modalità nativa:  
+ Per specificare ad esempio due parametri, "ReportMonth" e "ReportYear", definiti in un report, usare l'URL seguente relativo a un server di report in modalità nativa:  
   
 ```  
 http://myrshost/ReportServer?/AdventureWorks 2008R2/Employee_Sales_Summary_2008R2&ReportMonth=3&ReportYear=2008  
@@ -100,7 +100,7 @@ https://myserver/Reportserver?/SQL+Server+User+Education+Team/_ContentTeams/fold
 https://myserver/Reportserver?/SQL+Server+User+Education+Team/_ContentTeams/folder123/team+project+report&teamgrouping2=xgroup&teamgrouping1=ygroup&OrderID=747&OrderID=787&OrderID=12  
 ```  
   
- Nell'esempio di URL seguente viene passato un singolo parametro *SellStartDate* con un valore "7/1/2005 ", per un server di report in modalità nativa.  
+ Nell'esempio di URL seguente viene passato un singolo parametro *SellStartDate* con un valore "7/1/2005", per un server di report in modalità nativa.  
   
 ```  
 http://myserver/ReportServer/Pages/ReportViewer.aspx?%2fProduct_and_Sales_Report_AdventureWorks&SellStartDate=7/1/2005  

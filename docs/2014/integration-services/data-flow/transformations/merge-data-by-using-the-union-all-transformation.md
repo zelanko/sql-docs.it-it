@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - merging datasets [Integration Services]
@@ -17,12 +16,12 @@ ms.assetid: 78304403-a81c-4101-b87e-ec80ddfdac98
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 76245adffaf5dfdacaf2ee8c234b81cfbaae9523
-ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
+ms.openlocfilehash: ed4ee0e1c46b2fd4b1ddb31c3cc5f1dc53be5b84
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49460366"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52782653"
 ---
 # <a name="merge-data-by-using-the-union-all-transformation"></a>Unione di dati tramite la trasformazione Unione input multipli
   È possibile aggiungere e configurare una trasformazione Unione input multipli solo se il pacchetto include già almeno un'attività Flusso di dati e due origini dati.  

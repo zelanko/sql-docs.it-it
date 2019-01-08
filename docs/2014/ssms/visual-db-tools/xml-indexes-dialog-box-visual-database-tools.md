@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - vdt.dlgbox.xmlindexes
@@ -12,12 +12,12 @@ ms.assetid: eef38310-4498-4ccc-bb77-5bbd1c7cc477
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8d0b162e8eb232f605e837a42fa55d3d39dcccd5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a0c946e0e195937dd2e722ac3f092a57e40427b8
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48100081"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52792275"
 ---
 # <a name="xml-indexes-dialog-box-visual-database-tools"></a>Finestra di dialogo Indici XML (Visual Database Tools)
   Usare la finestra di dialogo **Indici XML** per creare indici per le colonne con tipo di dati XML, le quali non possono essere indicizzate usando la finestra di dialogo **Indici/chiavi** . Ogni colonna XML può avere più indici XML, ma il primo indice creato (primario) verrà utilizzato come base degli altri (secondari). Eliminando l'indice XML primario, verranno eliminati anche gli indici secondari.  
@@ -53,11 +53,11 @@ ms.locfileid: "48100081"
  **Categoria Identità**  
  Se viene espansa, visualizza i campi delle proprietà **Nome** e **Descrizione** .  
   
- **Nome**  
+ **Name**  
  Visualizza il nome dell'indice XML. Quando si crea un nuovo indice, gli viene assegnato un nome predefinito sulla base della tabella presente nella finestra attiva di Progettazione tabelle. Il nome può essere modificato in qualunque momento.  
   
  **Descrizione**  
- Consente di descrivere l'indice. Per inserire una descrizione più dettagliata, fare clic su **Descrizione** e sui puntini di sospensione (**…**) a destra del campo della proprietà. Viene così visualizzata un'area più grande in cui scrivere il testo.  
+ Consente di descrivere l'indice. Per inserire una descrizione più dettagliata, fare clic su **Descrizione** e sui puntini di sospensione (**...**) a destra del campo della proprietà. Viene così visualizzata un'area più grande in cui scrivere il testo.  
   
  **Categoria Progettazione tabelle**  
  Se viene espansa, visualizza le informazioni relative alle proprietà dell'indice XML.  

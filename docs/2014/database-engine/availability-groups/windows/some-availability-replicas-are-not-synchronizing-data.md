@@ -14,12 +14,12 @@ ms.assetid: 3db6a569-e942-4321-a0dd-c4ab002087c8
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 03554319ea3bb9d8ae66bde44e7e4c5026c9da39
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0fb7d422687d0bc956937b30bae261b28edb3931
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48146531"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53351486"
 ---
 # <a name="some-availability-replicas-are-not-synchronizing-data"></a>Alcune repliche di disponibilità non stanno sincronizzando i dati.
     
@@ -29,16 +29,16 @@ ms.locfileid: "48146531"
 |-|-|  
 |**Nome criteri**|Stato di sincronizzazione dei dati delle repliche di disponibilità|  
 |**Problema**|Alcune repliche di disponibilità non prevedono la sincronizzazione dei dati.|  
-|**Category**|**Avviso**|  
+|**Categoria**|**Avviso**|  
 |**Facet**|gruppo di disponibilità|  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>Descrizione  
  Questi criteri consentono di eseguire il rollup dello stato di sincronizzazione dei dati di tutte le repliche di disponibilità nel gruppo di disponibilità e di verificare se la sincronizzazione di una qualsiasi replica di disponibilità non funzioni. I criteri si trovano in uno stato non integro se uno degli stati di sincronizzazione dei dati della replica di disponibilità è NON IN SINCRONIZZAZIONE.  
   
  Questi criteri sono in uno stato integro se nessuno degli stati di sincronizzazione dei dati della replica di disponibilità è NON IN SINCRONIZZAZIONE.  
   
 > [!NOTE]  
->  Per questa versione di [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], le informazioni sulle possibili cause e le soluzioni sono disponibili in [Alcune repliche di disponibilità non stanno sincronizzando i dati](http://go.microsoft.com/fwlink/p/?LinkId=220852) nella Wiki di TechNet.  
+>  Per questa versione di [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], le informazioni sulle possibili cause e le soluzioni sono disponibili in [Alcune repliche di disponibilità non stanno sincronizzando i dati](https://go.microsoft.com/fwlink/p/?LinkId=220852) nella Wiki di TechNet.  
   
 ## <a name="possible-causes"></a>Possibili cause  
  In questo gruppo di disponibilità, almeno una replica secondaria non si trova nello stato di sincronizzazione NON IN SINCRONIZZAZIONE e non riceve dati dalla replica primaria.  

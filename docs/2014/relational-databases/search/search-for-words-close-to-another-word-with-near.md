@@ -20,12 +20,12 @@ ms.assetid: 87520646-4865-49ae-8790-f766b80a41f3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 82e3388321e182e866eb229c7613a1950c80eda1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3493657fb537057f7c0ff8e126582ceb6faccc11
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48149021"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52502844"
 ---
 # <a name="search-for-words-close-to-another-word-with-near"></a>Ricerca di parole vicine a un'altra parola con NEAR
   Per cercare parole o frasi vicine, è possibile usare un termine di prossimità (NEAR) in un predicato [CONTAINS](/sql/t-sql/queries/contains-transact-sql) o in una funzione [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql). È inoltre possibile specificare il numero massimo di termini non di ricerca che separano il primo e l'ultimo termine di ricerca. È inoltre possibile cercare parole o frasi in qualsiasi ordine o parole e frasi nell'ordine in cui sono state specificate. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] supporta sia la precedente [termine di prossimità generico](#Generic_NEAR), che è ora deprecato e il [termine di prossimità personalizzato](#Custom_NEAR), che è una novità [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
@@ -51,11 +51,11 @@ ms.locfileid: "48149021"
   
  {  
   
- *termine_ricerca* [ ,…*n* ]  
+ *termine_ricerca* [,... *n* ]  
   
  |  
   
- (*termine_ricerca* [ ,…*n* ] ) [, <distanza_massima> [, <ordine_corrispondenza> ] ]  
+ (*termine_ricerca* [,... *n* ]) [, < distanza_massima > [, < ordine_corrispondenza >]]  
   
  }  
   
@@ -89,7 +89,7 @@ CONTAINS(column_name, 'NEAR((John, Smith), 2)')
  "`Cats` `enjoy` `hunting mice``, but usually avoid` `dogs``.`"  
   
 ### <a name="combining-a-custom-proximity-term-with-other-terms"></a>Combinazione di un termine di prossimità personalizzato con altri termini  
- È possibile combinare un termine di prossimità personalizzato con alcuni altri termini. È possibile usare AND (&), OR (|) oppure AND NOT (&!) per combinare un termine di prossimità personalizzato con un altro termine di prossimità personalizzato, un termine semplice o un termine prefisso. Esempio:  
+ È possibile combinare un termine di prossimità personalizzato con alcuni altri termini. È possibile usare AND (&), OR (|) oppure AND NOT (&!) per combinare un termine di prossimità personalizzato con un altro termine di prossimità personalizzato, un termine semplice o un termine prefisso. Ad esempio:  
   
 -   CONTAINS('NEAR((*term1*,*term2*),5) AND *term3*')  
   
@@ -107,7 +107,7 @@ CONTAINS(column_name, 'NEAR((John, Smith), 2)')
 CONTAINS(column_name, 'NEAR((term1, term2), 5, TRUE) AND term3')  
 ```  
   
- Non è possibile combinare un termine di prossimità personalizzato con un termine di prossimità generico (*term1* NEAR *term2*), un termine generazionale (ISABOUT …) o un termine ponderato (FORMSOF …).  
+ Non è possibile combinare un termine di prossimità personalizzato con un termine di prossimità generico (*term1* NEAR *term2*), un termine generazionale (ISABOUT...) o un termine ponderato (FORMSOF...).  
   
 ### <a name="example-using-the-custom-proximity-term"></a>Esempio: Utilizzo del termine di prossimità personalizzato  
  Nell'esempio seguente viene effettuata la ricerca nella tabella `Production.Document` del database di esempio `AdventureWorks2012` di tutti i riepiloghi di documenti che contengono sia la parola "riflettore" che la parola "supporto".  
@@ -160,7 +160,7 @@ GO
   
  Un termine di prossimità generico indica che i termini di ricerca specificati devono essere tutti presenti in un documento perché venga restituita una corrispondenza, indipendentemente dal numero di termini non di ricerca, ovvero la *distanza*, tra i termini di ricerca. La sintassi di base è la seguente:  
   
- { *termine_ricerca* { NEAR | ~ } *termine_ricerca* } [ ,…*n* ]  
+ { *termine_ricerca* {NEAR | ~} *termine_ricerca* } [,... *n* ]  
   
  Negli esempi seguenti le parole 'fox' e 'chicken', ad esempio, devono essere entrambe presenti, indipendentemente dall'ordine, per produrre una corrispondenza:  
   
@@ -174,7 +174,7 @@ GO
  Per altre informazioni, vedere "[Considerazioni aggiuntive per le ricerche per prossimità](#Additional_Considerations)" più avanti in questo argomento.  
   
 ### <a name="combining-a-generic-proximity-term-with-other-terms"></a>Combinazione di un termine di prossimità generico con altri termini  
- È possibile usare AND (&), OR (|) oppure AND NOT (&!) per combinare un termine di prossimità generico con un altro termine di prossimità generico, un termine semplice o un termine prefisso. Esempio:  
+ È possibile usare AND (&), OR (|) oppure AND NOT (&!) per combinare un termine di prossimità generico con un altro termine di prossimità generico, un termine semplice o un termine prefisso. Ad esempio:  
   
 ```  
 CONTAINSTABLE (Production.ProductDescription,  
@@ -184,7 +184,7 @@ CONTAINSTABLE (Production.ProductDescription,
 )  
 ```  
   
- Non è possibile combinare un termine di prossimità generico con un termine di prossimità personalizzato, ad esempio `NEAR((term1,term2),5)`, un termine ponderato (ISABOUT …) o un termine generazionale (FORMSOF …).  
+ È possibile combinare un termine di prossimità generico con un termine di prossimità personalizzato, ad esempio `NEAR((term1,term2),5)`, un termine ponderato (ISABOUT...) o un termine generazionale (FORMSOF...).  
   
 ### <a name="example-using-the-generic-proximity-term"></a>Esempio: Utilizzo del termine di prossimità generico  
  Nell'esempio seguente viene utilizzato il termine di prossimità generico per cercare la parola "reflector" nello stesso documento che contiene la parola "bracket".  

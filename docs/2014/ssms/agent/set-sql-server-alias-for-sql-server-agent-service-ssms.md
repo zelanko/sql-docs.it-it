@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - filters [SQL Server], traces
@@ -14,12 +13,12 @@ ms.assetid: 7b976a84-7381-43a6-a828-ba83ada71cbe
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: fed48fdb4b6e86bc2c1920e80ea9e62ba4b73a7b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 803acc60555c996a0556e456b8d31753506b43ab
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48177425"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53205790"
 ---
 # <a name="set-a-trace-filter-transact-sql"></a>Impostare un filtro di traccia (Transact-SQL)
   In questo argomento viene descritto come utilizzare stored procedure per creare un filtro che recupera solo le informazioni necessarie su un evento di cui è in corso la traccia.  
@@ -30,7 +29,7 @@ ms.locfileid: "48177425"
   
 2.  Eseguire **sp_trace_setfilter** per configurare il tipo di informazioni da recuperare per l'evento di cui è in corso la traccia.  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  A differenza di quanto avviene con le normali stored procedure, i parametri di tutte le stored procedure di [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] (**sp_trace_* xx***) sono fortemente tipizzati e non supportano la conversione automatica del tipo di dati. Se questi parametri non vengono chiamati con i tipi di dati corretti per i parametri di input, come indicato nella descrizione dell'argomento, la stored procedure restituirà un errore.  
   
 ## <a name="see-also"></a>Vedere anche  

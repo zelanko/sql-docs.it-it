@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: e00a7f272362a103e94d8cac686201ce79c06322
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 3498e841b70ca7a19d9353d277221a88b9cbf86f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38040349"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512249"
 ---
 # <a name="select-from-ltmodelgtcontent-dmx"></a>SELECT FROM &lt;modello&gt;. CONTENUTO (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -47,14 +47,14 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CONTENT
  Facoltativo. Espressione che restituisce un valore scalare.  
   
 ## <a name="remarks"></a>Note  
- Il **SELECT FROM**  *\<modello > * * *. CONTENUTO** contenuto specifico per ogni algoritmo restituito dall'istruzione. È ad esempio possibile utilizzare le descrizioni di tutte le regole di un modello Association Rules in un'applicazione personalizzata. È possibile usare una **SELECT FROM \<modello >. CONTENUTO** istruzione per restituire i valori nella colonna NODE_RULE del modello.  
+ Il **SELECT FROM**  _\<modello >_**. CONTENUTO** contenuto specifico per ogni algoritmo restituito dall'istruzione. È ad esempio possibile utilizzare le descrizioni di tutte le regole di un modello Association Rules in un'applicazione personalizzata. È possibile usare una **SELECT FROM \<modello >. CONTENUTO** istruzione per restituire i valori nella colonna NODE_RULE del modello.  
   
  Nella tabella seguente vengono elencate le colonne incluse nel contenuto del modello di data mining.  
   
 > [!NOTE]  
 >  Gli algoritmi possono interpretare le colonne in modo diverso al fine di rappresentarne correttamente il contenuto. Per una descrizione del contenuto per ogni algoritmo e suggerimenti su come interpretare ed eseguire query sul modello di data mining contenuto per ogni tipo di modello del modello di data mining, vedere [contenuto del modello di Data Mining &#40;Analysis Services - Data Mining&#41;](../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
   
-|Colonna del set di righe relativo al contenuto|Description|  
+|Colonna del set di righe relativo al contenuto|Descrizione|  
 |---------------------------|-----------------|  
 |MODEL_CATALOG|Nome di catalogo. Se il provider non supporta i cataloghi, ha valore NULL.|  
 |MODEL_SCHEMA|Nome di schema non qualificato. Se il provider non supporta gli schemi, ha valore NULL.|  
@@ -62,7 +62,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CONTENT
 |ATTRIBUTE_NAME|Nome dell'attributo che corrisponde al nodo.|  
 |NODE_NAME|Nome del nodo.|  
 |NODE_UNIQUE_NAME|Nome univoco del nodo all'interno del modello.|  
-|NODE_TYPE|Valore intero che rappresenta il tipo del nodo. ,|  
+|NODE_TYPE|Valore intero che rappresenta il tipo del nodo. .|  
 |NODE_GUID|GUID del nodo. Se il GUID non è presente, ha valore NULL.|  
 |NODE_CAPTION|Etichetta o didascalia associata al nodo. Utilizzata principalmente a scopo di visualizzazione. Se non esiste una didascalia, verrà restituito NODE_NAME.|  
 |CHILDREN_CARDINALITY|Numero di nodi figlio del nodo.|  
@@ -102,7 +102,7 @@ WHERE ISDESCENDANT('0')
   
  Risultati previsti:  
   
- Poiché il modello è un modello di albero delle decisioni, i discendenti del nodo padre del modello includono un singolo nodo delle statistiche marginali, un nodo che rappresenta l'attributo stimabile e più nodi che contengono valori e attributi di input. Per altre informazioni, vedere [Mining Model Content for Decision Tree Models &#40;Analysis Services - Data Mining&#41;](../analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md).  
+ Poiché il modello è un modello di albero delle decisioni, i discendenti del nodo padre del modello includono un singolo nodo delle statistiche marginali, un nodo che rappresenta l'attributo stimabile e più nodi che contengono valori e attributi di input. Per altre informazioni, vedere [Contenuto dei modelli di data mining per i modelli di albero delle decisioni &#40;Analysis Services - Data mining&#41;](../analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md).  
   
 ## <a name="using-the-flattened-keyword"></a>Utilizzo della parola chiave FLATTENED  
  Il contenuto del modello di data mining contiene spesso informazioni interessanti sul modello presente nelle colonne della tabella nidificata. La parola chiave FLATTENED consente di recuperare i dati da una colonna della tabella nidificata senza utilizzare un provider che supporta i set di righe gerarchici.  
@@ -137,7 +137,7 @@ WHERE NODE_TYPE = 26
   
  Risultati dell'esempio:  
   
-|MODEL_NAME|t.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|t.SUPPORT|  
+|MODEL_NAME|T.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|t.SUPPORT|  
 |-----------------|-----------------------|------------------------|---------------|  
 |TM_NaiveBayes|Bike Buyer|Missing|0|  
 |TM_NaiveBayes|Bike Buyer|0|6556|  

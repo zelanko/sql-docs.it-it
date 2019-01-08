@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: supportability
 ms.topic: conceptual
 helpviewer_keywords:
 - data collector [SQL Server], server activity
@@ -20,12 +20,12 @@ ms.assetid: 0b126b8d-4fe7-443d-8a9a-c266350181e5
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 691de067aca3b97dab69b0b1f28784305cd39c0f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 36aa1bbfd37642e66b232a1b532ff114397841d8
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48062173"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52788435"
 ---
 # <a name="system-data-collection-set-reports"></a>Report per i set di raccolta dati di sistema
   L'agente di raccolta dati fornisce un report cronologico per ognuno dei set di raccolta dati di sistema. Ognuno dei report seguenti utilizza i dati archiviati nel data warehouse di gestione:  
@@ -41,7 +41,7 @@ ms.locfileid: "48062173"
 ##  <a name="Disk"></a> Report Riepilogo utilizzo disco  
  Il report Riepilogo utilizzo disco contiene dati sull'utilizzo dello spazio su disco per tutti i database nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. I dati forniti nei report vengono ottenuti usando il set di raccolta Utilizzo disco, che usa il tipo di agente di raccolta Query T-SQL generico.  
   
- È possibile accedere al report Riepilogo utilizzo disco da Esplora oggetti. Per visualizzare il report, espandere la cartella **Gestione** , fare clic con il pulsante destro del mouse su **Raccolta dati**, scegliere **Report**, **Data warehouse di gestione**, quindi fare clic su **Riepilogo utilizzo disco**. Per altre informazioni, vedere [Visualizzare un report sui set di raccolta &#40;SQL Server Management Studio&#41;](view-a-collection-set-report-sql-server-management-studio.md).  
+ È possibile accedere al report Riepilogo utilizzo disco da Esplora oggetti. Per visualizzare il report, espandere la cartella **Gestione** , fare clic con il pulsante destro del mouse su **Raccolta dati**, scegliere **Report**, **Data warehouse di gestione**, quindi fare clic su **Riepilogo utilizzo disco**. Per altre informazioni, vedere [View a Collection Set Report &#40;SQL Server Management Studio&#41;](view-a-collection-set-report-sql-server-management-studio.md).  
   
 ### <a name="disk-usage-collection-set-report"></a>Report del set di raccolta Utilizzo disco  
  Il report del set di raccolta Utilizzo disco fornisce una panoramica dello spazio su disco utilizzato per tutti i database nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]e le tendenze di incremento per i file di dati e di log di ognuno di questi database.  
@@ -62,7 +62,7 @@ ms.locfileid: "48062173"
 |--------------|----------------|  
 |Indice|Quantità di spazio su disco utilizzato per contenere le pagine di indice.|  
 |Non allocato|Quantità di spazio su disco disponibile per il database ma non ancora allocato a un oggetto.|  
-|data|Quantità di spazio su disco utilizzato dalle pagine di dati.|  
+|Dati|Quantità di spazio su disco utilizzato dalle pagine di dati.|  
 |Non utilizzato|Quantità di spazio su disco allocato a uno o più oggetti ma non ancora utilizzato.|  
   
  Lo spazio utilizzato per il file di log delle transazioni è suddiviso in categorie relative a spazio utilizzato e spazio inutilizzato.  
@@ -81,21 +81,21 @@ ms.locfileid: "48062173"
   
  **Pulsanti di controllo e navigazione della sequenza temporale**  
   
- Utilizzare i pulsanti di controllo e navigazione della sequenza temporale per spostarsi all'intero della sequenza temporale o per selezionare un intervallo di date. I pulsanti freccia consentono lo scorrimento a sinistra e a destra per spostarsi avanti e indietro nella sequenza temporale. Per impostazione predefinita, le frecce consentono di spostarsi nella sequenza temporale con incrementi di 4 ore. Utilizzando i pulsanti di ingrandimento e riduzione è possibile espandere o ridurre l'incremento del tempo impostando uno dei valori seguenti: 15 minuti, 1 ora, 4 ore, 12 ore o 24 ore. L'intervallo di tempo attualmente selezionato è indicato dalla parte evidenziata della sequenza temporale e viene visualizzato nel testo al di sotto della sequenza temporale. I valori e i dati del report vengono aggiornati quando si fa clic sulla sequenza temporale o si utilizzano i pulsanti di navigazione.  
+ Utilizzare i pulsanti di controllo e navigazione della sequenza temporale per spostarsi all'intero della sequenza temporale o per selezionare un intervallo di date. I pulsanti freccia consentono lo scorrimento a sinistra e a destra per spostarsi avanti e indietro nella sequenza temporale. Per impostazione predefinita, le frecce consentono di spostarsi nella sequenza temporale con incrementi di 4 ore. Usando i pulsanti di lente di ingrandimento, è possibile espandere o incremento del tempo a uno dei valori seguenti: 15 minuti, 1 ora, 4 ore, 12 ore o 24 ore. L'intervallo di tempo attualmente selezionato è indicato dalla parte evidenziata della sequenza temporale e viene visualizzato nel testo al di sotto della sequenza temporale. I valori e i dati del report vengono aggiornati quando si fa clic sulla sequenza temporale o si utilizzano i pulsanti di navigazione.  
   
  **Pulsante calendario**  
   
  Utilizzare il pulsante calendario per specificare la data e l'ora di inizio nonché la durata dei dati per cui si desidera creare il report.  
   
 #### <a name="query-statistics-history-report"></a>Report Cronologia statistiche query  
- Nel grafico Prime query per tempo CPU totale viene indicato il costo relativo di ciascuna query per l'intervallo di tempo selezionato in base all'utilizzo totale della CPU. Per visualizzare una vista diversa del costo relativo della query, fare clic su uno dei collegamenti ipertestuali disponibili sotto il grafico: **Durata**, **Totale I/O**, **Letture fisiche**o **Scritture logiche**.  
+ Nel grafico Prime query per tempo CPU totale viene indicato il costo relativo di ciascuna query per l'intervallo di tempo selezionato in base all'utilizzo totale della CPU. Per visualizzare una vista diversa del costo della query relativa, fare clic su uno dei collegamenti ipertestuali disponibili sotto il grafico: **Durata**, **totale i/o**, **letture fisiche**, oppure **scritture logiche**.  
   
  Nella tabella al di sotto del grafico vengono forniti ulteriori dati sulle query. Viene riportato il testo per ogni query per cui è stato creato un grafico, insieme alle informazioni statistiche dettagliate. Si noti che le barre del grafico sono collegamenti attivi, come ciascuna delle query incluse nella tabella. Facendo clic su un collegamento attivo si apre il sottoreport Dettagli query per la query.  
   
 #### <a name="query-details-subreport"></a>Sottoreport Dettagli query  
  Nel sottoreport Dettagli query viene fornito il testo completo della query. Accanto alla query è disponibile un collegamento ipertestuale **Modifica testo query** . È possibile fare clic su questo collegamento per aprire la query nell'editor di query. Nella tabella al di sotto della query sono incluse le statistiche di esecuzione della query, ad esempio la durata media per ogni esecuzione della query.  
   
- Vengono visualizzati un grafico dei piani di query e la durata media per ogni esecuzione. Per visualizzare una vista diversa del costo relativo del piano di query, fare clic su uno dei collegamenti ipertestuali disponibili al di sotto del grafico: **Durata**, **Letture fisiche**o **Scritture logiche**. La linea del grafico è attiva ed è possibile fare clic su un punto qualsiasi per aprire il sottoreport Dettagli piano query.  
+ Vengono visualizzati un grafico dei piani di query e la durata media per ogni esecuzione. Per visualizzare una vista diversa del costo relativo query piano, fare clic su uno dei collegamenti ipertestuali vengono visualizzati sotto il grafico: **Durata**, **letture fisiche**, o **scritture logiche**. La linea del grafico è attiva ed è possibile fare clic su un punto qualsiasi per aprire il sottoreport Dettagli piano query.  
   
  Nella tabella al di sotto del grafico vengono visualizzati i primi 10 piani di query in base all'utilizzo della CPU per esecuzione. Ogni numero nella colonna **N. piano** è un collegamento attivo su cui è possibile fare clic per aprire il sottoreport Dettagli piano query.  
   
@@ -112,7 +112,7 @@ ms.locfileid: "48062173"
   
  **Pulsanti di controllo e navigazione della sequenza temporale**  
   
- Utilizzare i pulsanti di controllo e navigazione della sequenza temporale per spostarsi all'intero della sequenza temporale o per selezionare un intervallo di date. I pulsanti freccia consentono lo scorrimento a sinistra e a destra per spostarsi avanti e indietro nella sequenza temporale. Per impostazione predefinita, le frecce consentono di spostarsi nella sequenza temporale con incrementi di 4 ore. Utilizzando i pulsanti di ingrandimento e riduzione è possibile espandere o ridurre l'incremento del tempo impostando uno dei valori seguenti: 15 minuti, 1 ora, 4 ore, 12 ore o 24 ore. L'intervallo di tempo attualmente selezionato è indicato dalla parte evidenziata della sequenza temporale e viene visualizzato nel testo al di sotto della sequenza temporale. I valori e i dati del report vengono aggiornati quando si fa clic sulla sequenza temporale o si utilizzano i pulsanti di navigazione.  
+ Utilizzare i pulsanti di controllo e navigazione della sequenza temporale per spostarsi all'intero della sequenza temporale o per selezionare un intervallo di date. I pulsanti freccia consentono lo scorrimento a sinistra e a destra per spostarsi avanti e indietro nella sequenza temporale. Per impostazione predefinita, le frecce consentono di spostarsi nella sequenza temporale con incrementi di 4 ore. Usando i pulsanti di lente di ingrandimento, è possibile espandere o incremento del tempo a uno dei valori seguenti: 15 minuti, 1 ora, 4 ore, 12 ore o 24 ore. L'intervallo di tempo attualmente selezionato è indicato dalla parte evidenziata della sequenza temporale e viene visualizzato nel testo al di sotto della sequenza temporale. I valori e i dati del report vengono aggiornati quando si fa clic sulla sequenza temporale o si utilizzano i pulsanti di navigazione.  
   
  **Pulsante calendario**  
   

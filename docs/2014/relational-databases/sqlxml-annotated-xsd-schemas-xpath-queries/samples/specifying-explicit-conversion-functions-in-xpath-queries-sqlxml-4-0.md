@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - explicit conversion functions [SQLXML]
@@ -17,12 +15,12 @@ ms.assetid: 1111cb5d-2bd9-4bdb-8de2-dc0e47452dd6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1574e2c52a632526f6c6600d58695c16f74b6db2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 17f63eed1b0bed67b8a6c7208e9de377cec59e43
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48050981"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52807863"
 ---
 # <a name="specifying-explicit-conversion-functions-in-xpath-queries-sqlxml-40"></a>Specifica di funzioni di conversione esplicita in query XPath (SQLXML 4.0)
   Negli esempi seguenti viene illustrato come specificare le funzioni di conversione esplicita nelle query XPath. Le query XPath di questi esempi vengono specificate sullo schema di mapping contenuto in SampleSchema1.xml. Per informazioni su questo schema di esempio, vedere [Schema XSD con annotazioni di esempio per gli esempi XPath &#40;SQLXML 4.0&#41;](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
@@ -78,7 +76,7 @@ ms.locfileid: "48050981"
 </ROOT>  
 ```  
   
-### <a name="b-use-the-string-explicit-conversion-function"></a>B. Utilizzo della funzione di conversione esplicita string ()  
+### <a name="b-use-the-string-explicit-conversion-function"></a>b. Utilizzo della funzione di conversione esplicita string ()  
  La funzione `string()` converte un argomento in una stringa.  
   
  La query seguente converte **ContactID** in una stringa e la confronta con la stringa di valore "4". La query restituisce tutti  **\<Employee >** figli del nodo di contesto con un **ContactID** con un valore stringa "4":  

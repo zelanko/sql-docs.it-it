@@ -20,12 +20,12 @@ ms.assetid: 05b0a054-e28d-4e16-b5b0-07418486b372
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a7994e88d5b3e5649683651f7514c39ad791fc3e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 912e4d109a9e769442c65d292ff190d79705eb21
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47746159"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53201540"
 ---
 # <a name="sqlclosecursor-function"></a>Funzione SQLCloseCursor
 **Conformità**  
@@ -39,7 +39,7 @@ ms.locfileid: "47746159"
 ```  
   
 SQLRETURN SQLCloseCursor(  
-     SQLHSTMT     StatementHandle);  
+     SQLHSTMT     StatementHandle);  
 ```  
   
 ## <a name="arguments"></a>Argomenti  
@@ -52,7 +52,7 @@ SQLRETURN SQLCloseCursor(
 ## <a name="diagnostics"></a>Diagnostica  
  Quando **SQLCloseCursor** restituisce SQL_ERROR o SQL_SUCCESS_WITH_INFO, un valore SQLSTATE associato possono essere ottenuti chiamando **SQLGetDiagRec** con un *HandleType* di SQL _HANDLE_STMT e un *gestiscono* dei *StatementHandle*. Nella tabella seguente sono elencati i valori SQLSTATE comunemente restituiti da **SQLCloseCursor** e illustra ognuna nel contesto di questa funzione; la notazione "(DM)" precede le descrizioni di SQLSTATE restituiti da Gestione Driver. Il codice restituito a ogni valore SQLSTATE è SQL_ERROR, se non specificato diversamente.  
   
-|SQLSTATE|Errore|Description|  
+|SQLSTATE|Errore|Descrizione|  
 |--------------|-----------|-----------------|  
 |01000|Avviso generale|Messaggio informativo specifico del driver. (Funzione restituisce SQL_SUCCESS_WITH_INFO).|  
 |24000|Stato del cursore non valido|Nessun cursore è stato aperto nel *StatementHandle*. (Ciò viene restituita solo se un'applicazione ODBC 3. *x* driver.)|  

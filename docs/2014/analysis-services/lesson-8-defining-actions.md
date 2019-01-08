@@ -11,18 +11,18 @@ ms.assetid: 15459396-83c9-48a0-b10a-99ae38768c79
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: cfdec0d2b77b88cff7fad643606ee3da001a67a3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 92abf8eb92301af8dd3bf32d5ac5f6a38b1b5481
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48174341"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53351260"
 ---
-# <a name="lesson-8-defining-actions"></a>Lezione 8: Definizione di azioni
+# <a name="lesson-8-defining-actions"></a>Lezione 8: Definizione delle azioni
   In questa lezione verranno descritte le procedure per definire le azioni del progetto di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Un'azione è semplicemente un'istruzione MDX (Multidimensional Expressions) archiviata in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , che può essere incorporata in applicazioni client e avviata da un utente.  
   
 > [!NOTE]  
->  I progetti completati per tutte le lezioni in questa esercitazione sono disponibili online. È possibile passare a qualsiasi lezione utilizzando il progetto completato della lezione precedente come punto iniziale. [Fare clic qui](http://go.microsoft.com/fwlink/?LinkID=221866) per scaricare i progetti di esempio usati in questa esercitazione.  
+>  I progetti completati per tutte le lezioni in questa esercitazione sono disponibili online. È possibile passare a qualsiasi lezione utilizzando il progetto completato della lezione precedente come punto iniziale. [Fare clic qui](https://go.microsoft.com/fwlink/?LinkID=221866) per scaricare i progetti di esempio usati in questa esercitazione.  
   
  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] supporta i tipi di azioni descritti nella tabella seguente.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "48174341"
   
  Questa lezione include gli argomenti seguenti:  
   
- [Definizione e uso di un'azione drill-through](lesson-8-1-defining-and-using-a-drillthrough-action.md)  
+ [Definizione e utilizzo di un'azione drill-through](lesson-8-1-defining-and-using-a-drillthrough-action.md)  
  In questa procedura viene definita, utilizzata e utilizzerà e quindi modificata un'azione drill-through tramite la relazione di tipo Fatti citata precedentemente in questa esercitazione.  
   
 ## <a name="next-lesson"></a>Lezione successiva  

@@ -11,12 +11,12 @@ ms.assetid: addd6137-4b6e-4e88-a7e8-9600fcd1ccce
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 6a0318d041a43e96246931015ef35edaf7fd74a2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5aae805b154d8c8876766f98e4d17c277a034764
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48162871"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52528248"
 ---
 # <a name="highlight-chart-data-by-adding-strip-lines-report-builder-and-ssrs"></a>Evidenziare i dati del grafico mediante l'aggiunta di strisce (Generatore report e SSRS)
   Le strisce o bande sono intervalli orizzontali o verticali che applicano un'ombreggiatura allo sfondo del grafico a intervalli regolari o personalizzati. È possibile utilizzare le strisce per:  
@@ -50,7 +50,7 @@ ms.locfileid: "48162871"
   
      Nella finestra Proprietà verranno visualizzate le proprietà dell'asse.  
   
-2.  Nella sezione **Aspetto** del riquadro Proprietà, per la proprietà StripLines fare clic sul pulsante di modifica della raccolta (…) per aprire **Editor raccolte ChartStripLine**.  
+2.  Nella sezione **Aspetto** del riquadro Proprietà fare clic sul pulsante di modifica della raccolta (...) per la proprietà StripLines per aprire **Editor raccolte ChartStripLine**.  
   
 3.  Fare clic su **Aggiungi** per aggiungere una nuova striscia alla raccolta.  
   
@@ -64,6 +64,6 @@ ms.locfileid: "48162871"
 ## <a name="see-also"></a>Vedere anche  
  [Formattazione delle etichette degli assi in un grafico &#40;Generatore report e SSRS&#41;](formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
  [Formattazione di un grafico &#40;Generatore report e SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)   
- [Aggiungere una media mobile a un grafico &#40;Report e SSRS&#41;](add-a-moving-average-to-a-chart-report-builder-and-ssrs.md)  
+ [Aggiungere una media mobile a un grafico &#40;Generatore report e SSRS&#41;](add-a-moving-average-to-a-chart-report-builder-and-ssrs.md)  
   
   

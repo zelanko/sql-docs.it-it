@@ -21,19 +21,19 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a1336533eb3a7ffb8b3e30e252a1335012b7c373
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 634fbc4ddd96fd407aa124c98ae2b55897edaa71
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47812979"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52391224"
 ---
 # <a name="syscertificates-transact-sql"></a>sys.certificates (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Restituisce una riga per ogni certificato nel database.  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|Nome del certificato. Valore univoco all'interno del database.|  
 |**certificate_id**|**int**|ID del certificato. Valore univoco all'interno del database.|  
@@ -50,7 +50,7 @@ ms.locfileid: "47812979"
 |**start_date**|**datetime**|Data di inizio di validità del certificato.|  
 |**Identificazione personale**|**varbinary(32)**|Hash SHA-1 del certificato. L'hash SHA-1 è univoco globale.|  
 |**attested_by**|**nvarchar(260)**|Riservato per l'utilizzo nel sistema.|  
-|pvt_key_last_backup_date|**datetime**|Data e ora dell'ultima esportazione della chiave privata del certificato.|  
+|pvt_key_last_backup_date|**datetime**|Data e ora che ultima esportazione della chiave privata del certificato.|  
   
 ## <a name="permissions"></a>Permissions  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  

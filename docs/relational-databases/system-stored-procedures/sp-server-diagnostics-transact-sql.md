@@ -18,19 +18,19 @@ ms.assetid: 62658017-d089-459c-9492-c51e28f60efe
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d8266418969de6249f0e2313ad7368a8054576c0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a15e965cef7109d42383d1a4dc4750c5dfef7374
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47644695"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53213770"
 ---
 # <a name="spserverdiagnostics-transact-sql"></a>sp_server_diagnostics (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
 Acquisisce dati diagnostici e informazioni di integrità su [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per rilevare potenziali errori. La procedura viene eseguita in modalità di ripetizione e i risultati vengono inviati periodicamente. Può essere richiamata da una connessione normale o di applicazione livello dati.  
   
-**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
+**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
   
 ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -58,35 +58,35 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
 ## <a name="result-sets"></a>Set di risultati  
 **sp_server_diagnostics** restituisce le informazioni seguenti  
   
-|colonna|Tipo di dati|Description|  
+|colonna|Tipo di dati|Descrizione|  
 |------------|---------------|-----------------|  
 |**creation_time**|**datetime**|Indica il timestamp della creazione della riga. Ogni riga di un singolo set di righe dispone dello stesso timestamp.|  
 |**component_type**|**sysname**|Indica se la riga contiene le informazioni per il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] istanza livello di componente o per un gruppo di disponibilità Always On:<br /><br /> istanza<br /><br /> AlwaysOn: AvailabilityGroup|  
 |**nome_componente**|**sysname**|Indica il nome del componente o il nome del gruppo di disponibilità:<br /><br /> sistema<br /><br /> resource<br /><br /> query_processing<br /><br /> io_subsystem<br /><br /> eventi<br /><br /> *\<nome del gruppo di disponibilità >*|  
 |**state**|**int**|Indica lo stato di integrità del componente:<br /><br /> 0<br /><br /> 1<br /><br /> 2<br /><br /> 3|  
-|**state_desc**|**sysname**|Descrive la colonna contenente gli stati. Le descrizioni che corrispondono ai valori nella colonna contenente gli stati sono:<br /><br /> 0: sconosciuta<br /><br /> 1: pulita<br /><br /> 2: avviso<br /><br /> 3: errore|  
+|**state_desc**|**sysname**|Descrive la colonna contenente gli stati. Le descrizioni che corrispondono ai valori nella colonna contenente gli stati sono:<br /><br /> 0: Unknown<br /><br /> 1: pulita<br /><br /> 2: avviso<br /><br /> 3: errore|  
 |**data**|**varchar (max)**|Indica dati specifici del componente.|  
   
  Di seguito sono riportate le descrizioni dei cinque componenti:  
   
--   **sistema**: raccoglie dati da un punto di vista di sistema su spinlock, condizioni gravi di elaborazione, le attività non cede il controllo, gli errori di pagina e l'utilizzo della CPU. Queste informazioni producono un'indicazione dello stato di integrità complessiva.  
+-   **sistema**: Raccoglie i dati da un punto di vista di sistema su spinlock, condizioni gravi di elaborazione, le attività non cede il controllo, gli errori di pagina e l'utilizzo della CPU. Queste informazioni producono un'indicazione dello stato di integrità complessiva.  
   
--   **risorsa**: raccoglie dati da una prospettiva della risorsa su memoria fisica e virtuale, i pool di buffer, pagine, cache e altri oggetti di memoria. Queste informazioni producono un'indicazione dello stato di integrità complessiva.  
+-   **risorsa**:  Raccoglie i dati da una prospettiva della risorsa su memoria fisica e virtuale, i pool di buffer, pagine, cache e altri oggetti di memoria. Queste informazioni producono un'indicazione dello stato di integrità complessiva.  
   
--   **query_processing**: raccoglie dati da una prospettiva di elaborazione delle query sui thread di lavoro, attività, attendere i tipi, sessioni intensive della CPU e attività di blocco. Queste informazioni producono un'indicazione dello stato di integrità complessiva.  
+-   **query_processing**: Raccoglie i dati da una prospettiva di elaborazione delle query in cui il thread di lavoro, attività, tipi di attesa, sessioni intensive della CPU e attività di blocco. Queste informazioni producono un'indicazione dello stato di integrità complessiva.  
   
--   **io_subsystem**: raccoglie i dati in fase di IO. Oltre ai dati diagnostici, questo componente produce uno stato di integrità di avviso o integro e pulito solo per un sottosistema di IO.  
+-   **io_subsystem**: Raccoglie i dati in fase di IO. Oltre ai dati diagnostici, questo componente produce uno stato di integrità di avviso o integro e pulito solo per un sottosistema di IO.  
   
--   **gli eventi**: raccoglie dati e superfici tramite la stored procedure su errori ed eventi di interesse registrati dal server, incluse informazioni dettagliate sulle eccezioni del buffer circolare, circolare sul broker di memoria, memoria è esaurita, monitoraggio dell'utilità di pianificazione, gli eventi del buffer pool di buffer, gli spinlock, sicurezza e connettività. Gli eventi avranno sempre 0 come stato.  
+-   **gli eventi**: Raccoglie i dati e superfici tramite la stored procedure su errori ed eventi di interesse registrati dal server, incluse informazioni dettagliate sulle eccezioni del buffer circolare, gli eventi del buffer circolare sul broker di memoria, dalla memoria, il monitoraggio dell'utilità di pianificazione, pool di buffer, gli spinlock, sicurezza e connettività. Gli eventi avranno sempre 0 come stato.  
   
--   **\<nome del gruppo di disponibilità >**: raccoglie dati per il gruppo di disponibilità specificato (se component_type = "sempre sul: AvailabilityGroup").  
+-   **\<nome del gruppo di disponibilità >**: Raccoglie i dati per il gruppo di disponibilità specificato (se component_type = "sempre sul: AvailabilityGroup").  
   
 ## <a name="remarks"></a>Note  
 Da una prospettiva di errore, i componenti di elaborazione di query, risorsa e sistema verranno utilizzati per il rilevamento dell'errore mentre i componenti di eventi e io_subsystem verranno utilizzati solo per gli scopi diagnostici.  
   
 Nella tabella seguente viene eseguito il mapping dei componenti agli stati di integrità associati.  
   
-|Components|Pulito (1)|Avviso (2)|Errore (3)|Sconosciuto (0)|  
+|Componenti|Pulito (1)|Avviso (2)|Errore (3)|Sconosciuto (0)|  
 |----------------|-----------------|-------------------|-----------------|--------------------|  
 |sistema|x|x|x||  
 |resource|x|x|x||  

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: wmi
 ms.topic: reference
 api_name:
 - StartMode Property (SqlService Class)
@@ -20,12 +18,12 @@ ms.assetid: c0c2c7f8-d4ae-44f2-ad8e-aecfcb7c2878
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: dbdf2e807f5f36cf8814be95cb98ec53bb813790
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bf77e36824c05a0f07bc789c380cffbc1518669d
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48128441"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53353094"
 ---
 # <a name="startmode-property-sqlservice-class"></a>Proprietà StartMode (classe SqlService)
   Ottiene la modalità di avvio del servizio.  
@@ -50,13 +48,13 @@ object
  Avvio  
  Valore = 0. Servizio avviato dal caricatore del sistema operativo. Questa opzione è valida solo per i servizi del driver.  
   
- Di sistema  
+ Sistema  
  Valore = 1. Servizio avviato dal metodo `IoInitSystem`. Questa opzione è valida solo per i servizi del driver.  
   
  Automatico  
  Valore = 2. Servizio da avviare automaticamente da Gestione controllo servizi durante l'avvio del sistema.  
   
- Manuale  
+ Manual  
  Valore = 3. Servizio da avviare da Gestione computer quando un processo chiama il metodo `StartService`.  
   
  Disabilitata  
@@ -65,6 +63,6 @@ object
 ## <a name="remarks"></a>Note  
   
 ## <a name="see-also"></a>Vedere anche  
- [Avvio e arresto di servizi](http://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
+ [Avvio e arresto di servizi](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

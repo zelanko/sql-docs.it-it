@@ -1,22 +1,21 @@
 ---
-title: 'Passaggio 3: Modifica della gestione connessione file flat | Microsoft Docs'
+title: 'Passaggio 3: Modifica della gestione connessione File Flat | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 459e3995-2116-4f15-aaa2-32f26113869c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2e5f2aecb84754ee470a9cbafabdf06e38d38ae1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 16a72ca205e3c1ba972169e2114321d44a8caed8
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48102037"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52822105"
 ---
 # <a name="step-3-modifying-the-flat-file-connection-manager"></a>Passaggio 3: Modifica della gestione connessione file flat
   In questa attività verrà modificata la gestione connessione file flat creata e configurata nella lezione 1. Al momento della creazione, la gestione connessione file flat era stata configurata per caricare staticamente un singolo file. Per abilitare Gestione connessione file flat affinché carichi i file in modo iterativo, è necessario modificare la proprietà ConnectionString della gestione connessione in modo che accetti la variabile `User:varFileName`definita dall'utente contenente il percorso del file da caricare in fase di esecuzione.  
@@ -27,11 +26,11 @@ ms.locfileid: "48102037"
   
 1.  Nel riquadro **Gestioni connessioni** fare clic con il pulsante destro del mouse su **Sample Flat File Source Data**e scegliere **Proprietà**.  
   
-2.  Nella finestra Proprietà fare clic sulla cella vuota relativa a **Espressioni**e fare clic sul pulsante con i puntini di sospensione **(…)**.  
+2.  Nella finestra Proprietà fare clic sulla cella vuota relativa a **Espressioni**e fare clic sul pulsante con i puntini di sospensione **(...)**.  
   
 3.  Nel **Editor espressioni di proprietà** nella finestra di dialogo il **proprietà** colonna, digitare o selezionare `ConnectionString`.  
   
-4.  Nella colonna **Espressione** fare clic sul pulsante con i puntini di sospensione **(…)** per aprire la finestra di dialogo **Generatore di espressioni** .  
+4.  Nella colonna **Espressione** fare clic sul pulsante con i puntini di sospensione **(...)** per aprire la finestra di dialogo **Generatore di espressioni**.  
   
 5.  Nella finestra di dialogo **Generatore di espressioni** espandere il nodo **Variabili** .  
   
@@ -42,6 +41,6 @@ ms.locfileid: "48102037"
 8.  Fare nuovamente clic su **OK** per chiudere la finestra di dialogo **Editor espressioni di proprietà** .  
   
 ## <a name="next-lesson-task"></a>Attività della lezione successiva  
- [Passaggio 4: Test del pacchetto creato nella lezione 2 dell'esercitazione](../integration-services/lesson-2-4-testing-the-lesson-2-tutorial-package.md)  
+ [Passaggio 4: Test del pacchetto dell'esercitazione della lezione 2](../integration-services/lesson-2-4-testing-the-lesson-2-tutorial-package.md)  
   
   

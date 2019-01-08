@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLServer:Transactions
@@ -13,12 +13,12 @@ ms.assetid: 85240267-78fd-476a-9ef6-010d6cf32dd8
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: fb1efc812503a34d0bace9739a3de93f85059cdb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c7dffaac161a61496c296ec99ec1f9ad2e1951a9
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48196477"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52810653"
 ---
 # <a name="sql-server-transactions-object"></a>Oggetto Transactions di SQL Server
   L'oggetto **Transactions** , disponibile in Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , include i contatori per il monitoraggio del numero di transazioni attive in un'istanza di [!INCLUDE[ssDE](../../includes/ssde-md.md)], nonché per valutare gli effetti di tali transazioni sulle risorse, ad esempio l'archivio delle versioni di riga del livello di isolamento dello snapshot in **tempdb**. Le transazioni sono unità logiche di lavoro. Per salvaguardare l'integrità logica dei dati, l'intero set di operazioni deve essere eseguito correttamente o cancellato da un database. Le transazioni vengono utilizzate per tutte le modifiche apportate ai dati nei database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -29,13 +29,13 @@ ms.locfileid: "48196477"
   
  La tabella seguente descrive i contatori di **SQLServer:Transactions** .  
   
-|Contatori dell'oggetto Transactions di SQL Server|Description|  
+|Contatori dell'oggetto Transactions di SQL Server|Descrizione|  
 |--------------------------------------|-----------------|  
 |**Spazio disponibile in tempdb (KB)**|Spazio disponibile in **tempdb**espresso in KB. Lo spazio disponibile deve essere sufficiente per contenere sia l'archivio delle versioni del livello di isolamento dello snapshot che tutti i nuovi oggetti temporanei creati in questa istanza di [!INCLUDE[ssDE](../../includes/ssde-md.md)].|  
 |**Tempo massimo esecuzione transazione**|Durata in secondi dall'inizio della transazione che è stata attiva più a lungo di tutte le altre transazioni correnti. Questo contatore mostra attività solo quando il database è nel livello di isolamento dello snapshot Read committed. Non registra attività se il database si trova in un altro livello di isolamento.|  
 |**Transazioni di versione non snapshot**|Numero di transazioni attualmente attive che non usano il livello di isolamento dello snapshot e hanno apportato modifiche ai dati che hanno generato versioni di riga nell'archivio delle versioni di riga di **tempdb** .|  
-|**Transazioni snapshot**|Numero delle transazioni attualmente attive che utilizzano il livello di isolamento dello snapshot.<br /><br /> Nota: il contatore dell'oggetto **Transazioni snapshot** risponde quando viene eseguito il primo accesso ai dati, non quando viene eseguita l'istruzione `BEGIN TRANSACTION` .|  
-|**Transactions**|Numero delle transazioni attualmente attive di tutti i tipi.|  
+|**Transazioni snapshot**|Numero delle transazioni attualmente attive che utilizzano il livello di isolamento dello snapshot.<br /><br /> Nota: Il **transazioni Snapshot** contatore dell'oggetto risposta quando si verifica il primo accesso ai dati, non quando il `BEGIN TRANSACTION` viene utilizzata l'istruzione.|  
+|**Transazioni**|Numero delle transazioni attualmente attive di tutti i tipi.|  
 |**Percentuale conflitti aggiornamento**|Percentuale delle transazioni che utilizzano il livello di isolamento dello snapshot e hanno rilevato conflitti di aggiornamento nell'ultimo secondo. Un conflitto di aggiornamento si verifica quando una transazione del livello di isolamento dello snapshot tenta di modificare una riga modificata da un'altra transazione di cui non è stato eseguito il commit all'avvio della transazione del livello di isolamento dello snapshot.|  
 |**Transazioni snapshot di aggiornamento**|Numero delle transazioni attualmente attive che utilizzano il livello di isolamento dello snapshot e che hanno apportato modifiche ai dati.|  
 |**Frequenza pulizia versioni (KB/s)**|Frequenza, espressa in KB al secondo, con cui le versioni di riga vengono rimosse dall'archivio delle versioni di riga del livello di isolamento dello snapshot in **tempdb**.|  

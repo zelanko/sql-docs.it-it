@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.newsubwizard.subproperties.publisher.f1
@@ -15,12 +14,12 @@ ms.assetid: d4b2bc8b-0431-4331-8305-8992c96d0d34
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5b3d6b8de35ff65d0ea715ecaa9940e3f75ee42f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5213c07fcdf84db3297ae5737d1d8726f4355257
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48081441"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52794443"
 ---
 # <a name="subscription-properties---publisher"></a>Proprietà sottoscrizione - Server di pubblicazione
   La finestra di dialogo **Proprietà sottoscrizione** nel server di pubblicazione consente di visualizzare e impostare proprietà per le sottoscrizioni push. Sebbene sia possibile visualizzare alcune proprietà per le sottoscrizioni pull, nella finestra di dialogo **Proprietà sottoscrizione** nel Sottoscrizione sono incluse proprietà aggiuntive ed è possibile modificarle.  
@@ -36,7 +35,7 @@ ms.locfileid: "48081441"
  Se un'opzione è visualizzata in modalità di sola lettura, può essere impostata solo al momento della creazione della sottoscrizione. Se si desidera impostare opzioni non disponibili nella Creazione guidata nuova sottoscrizione, creare la sottoscrizione tramite stored procedure. Per ulteriori informazioni, vedere [Create a Pull Subscription](create-a-pull-subscription.md) e [Create a Push Subscription](create-a-push-subscription.md).  
   
 ## <a name="options-for-all-subscriptions"></a>Opzioni per tutte le sottoscrizioni  
- **Security**  
+ **Sicurezza**  
  Fare clic sulla riga **Account processo agente** e quindi sul pulsante delle proprietà (**...**) per modificare l'account utilizzato per l'esecuzione dell'agente di distribuzione o dell'agente di merge nel server di distribuzione. Per modificare l'account utilizzato dall'agente di distribuzione o dall'agente di merge per creare connessioni al Sottoscrittore, fare clic su **Connessione al Sottoscrittore**e quindi sul pulsante delle proprietà (**...**).  
   
  Per ulteriori informazioni sulle autorizzazioni necessarie per ogni agente, vedere [Replication Agent Security Model](security/replication-agent-security-model.md).  
@@ -50,7 +49,7 @@ ms.locfileid: "48081441"
   
 ## <a name="options-for-merge-subscriptions"></a>Opzioni per sottoscrizioni di tipo merge  
  **Definizione partizione (HOST_NAME)**  
- Nel caso di una pubblicazione che utilizza filtri con parametri, la replica di tipo merge valuta una delle due funzioni di sistema, o entrambe se il filtro fa riferimento sia all'una che all'altra, durante la sincronizzazione per determinare i dati che devono essere ricevuti dal Sottoscrittore, ovvero **SUSER_SNAME()** o **HOST_NAME()**. Per impostazione predefinita, **HOST_NAME()** restituisce il nome del computer in cui è in esecuzione l'agente di merge. È tuttavia possibile sostituire questo valore nella Creazione guidata nuova sottoscrizione. Per ulteriori sui filtri con parametri e la sostituzione di **HOST_NAME()**, vedere [Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md).  
+ Per una pubblicazione che utilizza filtri con parametri, replica di tipo merge valuta una delle due sistema funzioni (o entrambe se il filtro fa riferimento a entrambe le funzioni) durante la sincronizzazione per determinare i dati che deve ricevere un sottoscrittore: **SUSER_SNAME ()** oppure **HOST_NAME ()**. Per impostazione predefinita, **HOST_NAME()** restituisce il nome del computer in cui è in esecuzione l'agente di merge. È tuttavia possibile sostituire questo valore nella Creazione guidata nuova sottoscrizione. Per ulteriori sui filtri con parametri e la sostituzione di **HOST_NAME()**, vedere [Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md).  
   
  **Tipo di sottoscrizione** e **Priorità**  
  Indica se la sottoscrizione è una sottoscrizione client o server. Questa impostazione non può essere modificata dopo la creazione della sottoscrizione. Le sottoscrizioni server possono ripubblicare i dati in altri Sottoscrittori. A tali sottoscrizioni è inoltre possibile assegnare una priorità per la risoluzione dei conflitti.  

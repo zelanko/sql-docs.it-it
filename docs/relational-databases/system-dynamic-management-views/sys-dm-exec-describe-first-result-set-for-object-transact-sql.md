@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c63c004b3a7ac631a4914c681f7613b0bb010dd6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ffdedf95865e2653ea434c30eb5c07f19ba8286f
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47728189"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52409162"
 ---
 # <a name="sysdmexecdescribefirstresultsetforobject-transact-sql"></a>sys.dm_exec_describe_first_result_set_for_object (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ sys.dm_exec_describe_first_result_set_for_object
 ## <a name="table-returned"></a>Tabella restituita  
  Questi metadati comuni vengono restituiti come set di risultati con una riga per ogni colonna nei metadati dei risultati. Ogni riga descrive il tipo e l'ammissione di valori Null della colonna nel formato descritto nella sezione seguente. Se la prima istruzione non esiste per ogni percorso di controllo, viene restituito un set di risultati con zero righe.  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**is_hidden**|**bit**|Specifica se la colonna è una colonna aggiuntiva inserita per informazioni di esplorazione che non compare effettivamente nel set di risultati.|  
 |**column_ordinal**|**int**|Contiene la posizione ordinale della colonna nel set di risultati. La posizione della prima colonna viene specificata come 1.|  
@@ -62,8 +62,8 @@ sys.dm_exec_describe_first_result_set_for_object
 |**system_type_id**|**int**|Contiene il system_type_id del tipo di dati della colonna come specificato in sys. Types. Per i tipi CLR, anche se la colonna system_type_name restituisce NULL, in questa colonna viene restituito il valore 240.|  
 |**system_type_name**|**nvarchar(256)**|Contiene il nome del tipo di dati. Include gli argomenti (quali lunghezza, precisione, scala) specificati per il tipo di dati della colonna. Se il tipo di dati è un tipo di alias definito dall'utente, il tipo di sistema sottostante viene specificato qui. Se è un tipo CLR definito dall'utente, in questa colonna viene restituito NULL.|  
 |**max_length**|**smallint**|Lunghezza massima in byte della colonna.<br /><br /> -1 = il tipo di dati della colonna **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, oppure **xml**.<br /><br /> Per la **testo** colonne, il **max_length** valore sarà 16 o il valore impostato dal **sp_tableoption 'text in row'**.|  
-|**Precisione**|**tinyint**|Precisione della colonna se basata su valori numerici. In caso contrario, restituisce 0.|  
-|**Scalabilità**|**tinyint**|Scala della colonna se basata su valori numerici. In caso contrario, restituisce 0.|  
+|**precisione**|**tinyint**|Precisione della colonna se basata su valori numerici. In caso contrario, restituisce 0.|  
+|**scala**|**tinyint**|Scala della colonna se basata su valori numerici. In caso contrario, restituisce 0.|  
 |**nome_regole_di_confronto**|**sysname**|Nome delle regole di confronto della colonna se basata su caratteri. In caso contrario, viene restituito NULL.|  
 |**user_type_id**|**int**|Per i tipi di alias e CLR, contiene il valore user_type_id del tipo di dati della colonna come specificato in sys.types. In caso contrario, è NULL.|  
 |**user_type_database**|**sysname**|Per i tipi di alias e CLR, contiene il nome del database in cui è definito il tipo. In caso contrario, è NULL.|  
@@ -102,7 +102,7 @@ sys.dm_exec_describe_first_result_set_for_object
   
  Nella tabella seguente vengono elencati i tipi di errore con le relative descrizioni  
   
-|error_type|error_type|Description|  
+|error_type|error_type|Descrizione|  
 |-----------------|-----------------|-----------------|  
 |1|MISC|Tutti gli errori che non sono stati descritti.|  
 |2|SYNTAX|Errore di sintassi nel batch.|  
@@ -111,7 +111,7 @@ sys.dm_exec_describe_first_result_set_for_object
 |5|CLR_PROCEDURE|Impossibile determinare il risultato perché una stored procedure CLR potrebbe potenzialmente restituire il primo risultato.|  
 |6|CLR_TRIGGER|Impossibile determinare il risultato perché un trigger CLR potrebbe potenzialmente restituire il primo risultato.|  
 |7|EXTENDED_PROCEDURE|Impossibile determinare il risultato perché una stored procedure estesa potrebbe potenzialmente restituire il primo risultato.|  
-|8|UNDECLARED_PARAMETER|Non è stato possibile determinare il risultato perché il tipo di dati di una o più colonne del set di risultati dipende potenzialmente da un parametro non dichiarato.|  
+|8|UNDECLARED_PARAMETER|Non è stato possibile determinare il risultato perché il tipo di dati di uno o più colonne del set di risultati dipende potenzialmente da un parametro non dichiarato.|  
 |9|RECURSION|Non è stato possibile determinare il risultato perché il batch contiene un'istruzione ricorsiva.|  
 |10|TEMPORARY_TABLE|Non è stato possibile determinare il risultato perché il batch contiene una tabella temporanea e non è supportato dal **sp_describe_first_result_set** .|  
 |11|UNSUPPORTED_STATEMENT|Non è stato possibile determinare il risultato perché il batch contiene un'istruzione che non è supportata dal **sp_describe_first_result_set** (ad esempio FETCH, REVERT e così via.).|  
@@ -138,7 +138,7 @@ SELECT * FROM sys.dm_exec_describe_first_result_set_for_object(OBJECT_ID('TestPr
 GO  
 ```  
   
-### <a name="b-combining-the-sysdmexecdescribefirstresultsetforobject-function-and-a-table-or-view"></a>B. Combinazione della funzione sys.dm_exec_describe_first_result_set_for_object e di una tabella o vista  
+### <a name="b-combining-the-sysdmexecdescribefirstresultsetforobject-function-and-a-table-or-view"></a>b. Combinazione della funzione sys.dm_exec_describe_first_result_set_for_object e di una tabella o vista  
  L'esempio seguente usa sia la vista del catalogo Procedures sistema e il **DM exec_describe_first_result_set_for_object** funzione per visualizzare i metadati per i set di risultati di tutte le stored procedure di [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database.  
   
 ```  

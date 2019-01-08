@@ -15,12 +15,12 @@ ms.assetid: 565aa079-ac44-4407-8efc-cddab839de30
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 97abb785026fa4709e08526e8fb033e97120c97f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: efaadce1425de4468056f0df5e3d7106432ca804
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48095941"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52516104"
 ---
 # <a name="message-queue-task-editor-send-page"></a>Editor attività Message Queue (pagina Invio)
   Utilizzare la pagina **Invio** della finestra di dialogo **Editor attività Message Queue** per configurare un'attività Message Queue per l'invio di messaggi da un pacchetto [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
@@ -43,7 +43,7 @@ ms.locfileid: "48095941"
  **MessageType**  
  Consente di selezionare il tipo di messaggio. Per questa proprietà sono disponibili le opzioni elencate nella tabella seguente.  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |**Messaggio file di dati**|Il messaggio viene archiviato in un file. La selezione del valore determina la visualizzazione dell'opzione dinamica **DataFileMessage**.|  
 |**Messaggio variabili**|Il messaggio viene archiviato in una variabile. La selezione del valore determina la visualizzazione dell'opzione dinamica **VariableMessage**.|  
@@ -53,22 +53,22 @@ ms.locfileid: "48095941"
   
 ### <a name="messagetype--data-file-message"></a>MessageType = Messaggio file di dati  
  **DataFileMessage**  
- Consente di digitare il percorso del file di dati o di trovare il file usando il pulsante **(…)** .  
+ Digitare il percorso del file di dati o fare clic sui puntini di sospensione **(...)** e quindi individuare il file.  
   
 ### <a name="messagetype--variable-message"></a>MessageType = Messaggio variabili  
  **VariableMessage**  
- Consente di digitare i nomi delle variabili o di selezionare le variabili usando il pulsante **(…)** . Le variabili sono separate da virgole.  
+ Digitare i nomi delle variabili o fare clic sui puntini di sospensione **(...)** e quindi selezionare le variabili. Le variabili sono separate da virgole.  
   
  **Argomenti correlati:** Seleziona variabili  
   
 ### <a name="messagetype--string-message"></a>MessageType = Messaggio stringa  
  **StringMessage**  
- Consente di digitare il messaggio stringa direttamente o nella finestra di dialogo **Immettere il messaggio stringa** visualizzata facendo clic sul pulsante **(…)** .  
+ Digitare il messaggio stringa o fare clic sui puntini di sospensione **(...)** e quindi digitare il messaggio nella finestra di dialogo **Immettere il messaggio stringa**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Guida di riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor attività Message Queue &#40;pagina Generale&#41;](general-page-of-integration-services-designers-options.md)   
- [Editor attività Message Queue &#40;pagina di ricezione&#41;](../../2014/integration-services/message-queue-task-editor-receive-page.md)   
+ [Editor attività Message Queue &#40;pagina Ricezione&#41;](../../2014/integration-services/message-queue-task-editor-receive-page.md)   
  [Pagina Espressioni](expressions/expressions-page.md)  
   
   

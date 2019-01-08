@@ -20,16 +20,16 @@ ms.assetid: 03408162-8b63-4470-90c4-e6c7d8d33892
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4d48d9742f9b3fafe77f441226961218f47c6005
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f3cca214aeb63720e193f57f06a22481ae7d369f
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47719709"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53213440"
 ---
 # <a name="sqlfreestmt-function"></a>SQLFreeStmt Function
 **Conformità**  
- Versione introdotta: Conformità agli standard 1.0 di ODBC: ISO 92  
+ Versione introdotta: Conformità agli standard 1.0 ODBC: ISO 92  
   
  **Riepilogo**  
  **SQLFreeStmt** Arresta elaborazione associata a una specifica istruzione, chiude tutti i cursori aperti associati con l'istruzione, le variabili Discard risultati, in sospeso o, facoltativamente, rilascia tutte le risorse associate all'handle di istruzione.  
@@ -50,7 +50,7 @@ SQLRETURN SQLFreeStmt(
  *Opzione*  
  [Input] Una delle opzioni seguenti:  
   
- SQL _ Chiudi: Chiude il cursore associato *StatementHandle* (se è stato definito uno) ed Elimina tutti i risultati in sospeso. L'applicazione può riaprire questo cursore in un secondo momento tramite l'esecuzione di un **seleziona** istruzione nuovamente con i valori dei parametri uguali o diversi. Se nessun cursore è aperto, questa opzione ha effetto per l'applicazione. **SQLCloseCursor** può anche essere chiamato per chiudere un cursore. Per altre informazioni, vedere [chiusura del cursore](../../../odbc/reference/develop-app/closing-the-cursor.md).  
+ SQL _ CLOSE: Chiude il cursore associato *StatementHandle* (se è stato definito uno) ed Elimina tutti i risultati in sospeso. L'applicazione può riaprire questo cursore in un secondo momento tramite l'esecuzione di un **seleziona** istruzione nuovamente con i valori dei parametri uguali o diversi. Se nessun cursore è aperto, questa opzione ha effetto per l'applicazione. **SQLCloseCursor** può anche essere chiamato per chiudere un cursore. Per altre informazioni, vedere [chiusura del cursore](../../../odbc/reference/develop-app/closing-the-cursor.md).  
   
  SQL_DROP: Questa opzione è deprecata. Una chiamata a **SQLFreeStmt** con un *opzione* di SQL_DROP viene eseguito il mapping a in Gestione Driver [SQLFreeHandle](../../../odbc/reference/syntax/sqlfreehandle-function.md).  
   
@@ -64,7 +64,7 @@ SQLRETURN SQLFreeStmt(
 ## <a name="diagnostics"></a>Diagnostica  
  Quando **SQLFreeStmt** restituisce SQL_ERROR o SQL_SUCCESS_WITH_INFO, un valore SQLSTATE associato possono essere ottenuti chiamando **SQLGetDiagRec** con un *HandleType* di SQL _ HANDLE_STMT e un *gestiscono* dei *StatementHandle*. Nella tabella seguente sono elencati i valori SQLSTATE normalmente restituiti dal **SQLFreeStmt** e illustra ognuna nel contesto di questa funzione; la notazione "(DM)" precede le descrizioni di SQLSTATE restituiti da Gestione Driver. Il codice restituito a ogni valore SQLSTATE è SQL_ERROR, se non specificato diversamente.  
   
-|SQLSTATE|Errore|Description|  
+|SQLSTATE|Errore|Descrizione|  
 |--------------|-----------|-----------------|  
 |01000|Avviso generale|Messaggio informativo specifico del driver. (Funzione restituisce SQL_SUCCESS_WITH_INFO).|  
 |HY000|Errore generale|Si è verificato un errore per cui si è verificato alcun errore SQLSTATE specifico e per cui è stato definito alcun SQLSTATE specifici dell'implementazione. Il messaggio di errore restituito da **SQLGetDiagRec** nel  *\*MessageText* buffer viene descritto l'errore e la relativa causa.|  

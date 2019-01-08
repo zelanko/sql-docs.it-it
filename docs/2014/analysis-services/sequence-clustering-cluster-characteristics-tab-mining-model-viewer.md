@@ -13,19 +13,19 @@ ms.assetid: 3a9e8a0c-7d03-47cc-8625-e68d73a8c947
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2119013c1c735c9b35a3790fedbf1ac114e9964a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 156bd83662b9b6fa42eb99e8e5810bb4fc71d51a
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48196860"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52414850"
 ---
 # <a name="sequence-clustering-cluster-characteristics-tab-mining-model-viewer"></a>Scheda Caratteristiche cluster di Microsoft Sequence Clustering (Visualizzatore modello di data mining)
   Nella scheda **Caratteristiche cluster** in **Visualizzatore Microsoft Sequence Clustering** è disponibile un elenco dettagliato delle caratteristiche che definiscono un cluster di sequenza. In tali caratteristiche possono essere incluse semplici coppie attributo-valore, nonché transizioni tra stati.  
   
  Utilizzare questa vista di un modello Sequence Clustering per eseguire il drill-down nel contenuto del cluster e visualizzare le sequenze rappresentative di un cluster.  
   
- **Per altre informazioni:** [Algoritmo Microsoft Sequence Clustering](data-mining/microsoft-sequence-clustering-algorithm.md), [Visualizzare un modello usando il Visualizzatore Microsoft Sequence Clustering](data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
+ **Per altre informazioni:** [Algoritmo Microsoft Sequence Clustering](data-mining/microsoft-sequence-clustering-algorithm.md), [visualizzare un modello usando il visualizzatore Microsoft Sequence Clustering](data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
   
 ## <a name="options"></a>Opzioni  
  **Aggiorna contenuto visualizzatore**  
@@ -45,15 +45,15 @@ ms.locfileid: "48196860"
   
  Ad esempio, in un modello Sequence Clustering basato su Market basket analysis un cluster potrebbe disporre, come caratteristica principale, di un cliente che sceglie l'elemento di vendita e successivamente termina la transazione senza acquistare nient'altro. In un modello Sequence Clustering che consente di cercare di analizzare gli errori del server, le caratteristiche principali di un cluster potrebbero essere una serie di eventi di errore di frequenza elevata.  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |**Variabile**|In questa colonna viene indicato se la caratteristica è un valore o una transizione.<br /><br /> Se la caratteristica è un valore, il **variabile** colonna contiene il nome dell'attributo.<br /><br /> Se la caratteristica rappresenta una transizione di stato, il **variabile** colonna contiene il testo "Transizioni".|  
 |**Valori**|Il valore di questa colonna varia a seconda che la caratteristica sia una semplice coppia attributo-valore o una transizione di stato che rappresenta una sequenza comune di elementi o eventi.<br /><br /> Se la caratteristica è un valore, il **valore** colonna contiene lo stato.<br /><br /> Se la caratteristica rappresenta una transizione di stato, il **valore** colonna contiene la descrizione della transizione di stato.|  
 |**Probabilità**|In questa colonna viene visualizzata una barra tramite cui viene indicata la probabilità relativa che questa caratteristica (una semplice coppia attributo-valore o una combinazione di stati) sia membro del cluster corrente.<br /><br /> È possibile posizionare il mouse sulla coppia per visualizzare il valore di frequenza della caratteristica.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Algoritmi di Data Mining &#40;Analysis Services - Data Mining&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [Visualizzatori modello di data mining &#40;Progettazione modelli di Data Mining&#41;](mining-model-viewers-data-mining-model-designer.md)   
+ [Algoritmi di data mining &#40;Analysis Services - Data mining&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Visualizzatori modello di data mining &#40;Progettazione modelli di data mining&#41;](mining-model-viewers-data-mining-model-designer.md)   
  [Visualizzatori modello di data mining](data-mining/data-mining-model-viewers.md)  
   
   

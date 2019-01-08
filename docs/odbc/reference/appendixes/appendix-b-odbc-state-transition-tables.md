@@ -1,5 +1,5 @@
 ---
-title: 'Appendice b: tabelle della transizione di stato ODBC | Microsoft Docs'
+title: 'Appendice B: Tabelle della transizione di stato ODBC | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,12 +15,12 @@ ms.assetid: 15088dbe-896f-4296-b397-02bb3d0ac0fb
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 55fb40d6aa9b235837c761cf1362374d5c77d96d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 82c19931073aa96eb045f574e8670068f3d3c659
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47646219"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52541067"
 ---
 # <a name="appendix-b-odbc-state-transition-tables"></a>Appendice B: Tabelle della transizione di stato ODBC
 Le tabelle in questa appendice mostrano come funzioni ODBC causano le transizioni di ambiente, connessione, istruzione e gli stati del descrittore. Lo stato dell'ambiente, connessione, istruzione o descrittore determina in genere quando le funzioni che usano il corrispondente tipo di handle (ambiente, connessione, istruzione o descrittore) possono essere chiamate. Gli stati di ambiente, connessione, istruzione e descrittore si sovrappongono all'incirca, come illustrato nelle figure seguenti. Ad esempio, la sovrapposizione esatta della connessione stati C5 e C6 e istruzione dichiara che s1 tramite S12 sono dati dipende dall'origine, poiché le transazioni iniziano in momenti diversi in origini dati diverse e lo stato di descrittore D1i (allocato in modo implicito descrittore) dipende dal sullo stato dell'istruzione a cui il descrittore è associato, mentre state D1e (allocato in modo esplicito descrittore) è indipendenti dallo stato di qualsiasi istruzione. Per una descrizione di ogni stato, vedere [transizioni di ambiente](../../../odbc/reference/appendixes/environment-transitions.md), [transizioni di connessione](../../../odbc/reference/appendixes/connection-transitions.md), [transizioni di istruzione](../../../odbc/reference/appendixes/statement-transitions.md), e [transizioni dei descrittori ](../../../odbc/reference/appendixes/descriptor-transitions.md), più avanti in questa appendice.  
@@ -43,17 +43,18 @@ Le tabelle in questa appendice mostrano come funzioni ODBC causano le transizion
   
  Ogni voce in una tabella di transizione può essere uno dei valori seguenti:  
   
--   **--** Ovvero lo stato rimane invariato dopo l'esecuzione della funzione.  
+-   **--** -Lo stato rimane invariato dopo l'esecuzione della funzione.  
   
 -   **E**  
-     ***n*** , **C*n * * *, **S*n * **, oppure **1!d * n***  : sposta lo stato di ambiente, connessione, istruzione o descrittore il stato specificato.  
+
+     **_n_**  , **C_n_**, **S_n_**, oppure **D_n_** -lo stato di ambiente, connessione, istruzione o descrittore passa allo stato specificato.  
+ 
+-   **(IH)**  -È stato passato un handle non valido alla funzione. Ad esempio, se l'handle è un handle null oppure un handle valido del tipo errato - è stato passato un handle di connessione quando un handle di istruzione è stata necessario: la funzione non restituisca SQL_INVALID_HANDLE; in caso contrario, il comportamento è indefinito e probabilmente irreversibile. Questo errore viene visualizzato solo quando è il risultato della chiamata alla funzione nello stato specificato solo possibile. Questo errore non modifica lo stato e viene sempre rilevato da Gestione Driver, come indicato dalla parentesi.  
   
--   **(IH)**  , Ovvero un handle non valido passato alla funzione. Se l'handle è un handle null oppure un handle valido del tipo errato, ad esempio, è stato passato un handle di connessione quando era obbligatorio un handle di istruzione, ovvero la funzione non restituisca SQL_INVALID_HANDLE; in caso contrario, il comportamento è indefinito e probabilmente irreversibile. Questo errore viene visualizzato solo quando è il risultato della chiamata alla funzione nello stato specificato solo possibile. Questo errore non modifica lo stato e viene sempre rilevato da Gestione Driver, come indicato dalla parentesi.  
-  
--   **NS** , ovvero lo stato successivo. La transizione di istruzione è lo stesso come se l'istruzione non ha esaminato gli stati asincroni. Ad esempio, si supponga che un'istruzione che crea un set di risultati entra nello stato S11 dallo stato S1, poiché **SQLExecDirect** restituito SQL_STILL_EXECUTING. La notazione NS nello stato S11 significa che le transizioni per l'istruzione sono identici a quelli per un'istruzione nello stato S1 che viene creato un set di risultati. Se **SQLExecDirect** restituisce un errore, l'istruzione rimane nello stato S1; se ha esito positivo, l'istruzione passa allo stato S5; se necessita di dati, l'istruzione passa allo stato S8; e se è ancora in esecuzione, rimane nello stato S11.  
-  
--   ***XXXXX*** oppure **(*XXXXX*)** , ovvero un valore SQLSTATE correlata alla tabella delle transizioni; SQLSTATE rilevati da Gestione Driver sono racchiusi tra parentesi. La funzione ha restituito SQL_ERROR e il valore SQLSTATE specificato, ma non modifica lo stato. Ad esempio, se **SQLExecute** viene chiamato prima **SQLPrepare**, restituisce SQLSTATE HY010 (funzione di errore nella sequenza).  
-  
+-   **NS** -lo stato successivo. La transizione di istruzione è lo stesso come se l'istruzione non ha esaminato gli stati asincroni. Ad esempio, si supponga che un'istruzione che crea un set di risultati entra nello stato S11 dallo stato S1, poiché **SQLExecDirect** restituito SQL_STILL_EXECUTING. La notazione NS nello stato S11 significa che le transizioni per l'istruzione sono identici a quelli per un'istruzione nello stato S1 che viene creato un set di risultati. Se **SQLExecDirect** restituisce un errore, l'istruzione rimane nello stato S1; se ha esito positivo, l'istruzione passa allo stato S5; se necessita di dati, l'istruzione passa allo stato S8; e se è ancora in esecuzione, rimane nello stato S11.  
+
+-   **_XXXXX_**  oppure **(*XXXXX*)** : un valore SQLSTATE è correlata alla tabella delle transizioni; SQLSTATE rilevati da Gestione Driver sono racchiusi tra parentesi. La funzione ha restituito SQL_ERROR e il valore SQLSTATE specificato, ma non modifica lo stato. Ad esempio, se **SQLExecute** viene chiamato prima **SQLPrepare**, restituisce SQLSTATE HY010 (funzione di errore nella sequenza).  
+
 > [!NOTE]  
 >  Le tabelle non vengono visualizzati gli errori non correlati alle tabelle che non modificano lo stato di transizione. Ad esempio, quando **SQLAllocHandle** viene chiamato nello stato di ambiente E1 e restituisce SQLSTATE HY001 (errore di allocazione della memoria), l'ambiente rimane nello stato E1; ciò non è indicato nella tabella delle transizioni di ambiente per  **SQLAllocHandle**.  
   

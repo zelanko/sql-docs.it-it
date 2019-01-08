@@ -1,5 +1,5 @@
 ---
-title: Installare dati di esempio e progetti | Microsoft Docs
+title: Installare dati di esempio Analysis Services e progetti | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,19 +9,19 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 0ec266a98e3a27dd277ccd9f790ae73d1793ec38
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: df7311aad9c356376fffafc8a4882af8e29e746b
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38057969"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072728"
 ---
 # <a name="install-sample-data-and-multidimensional-projects"></a>Installare dati di esempio e progetti multidimensionali 
 [!INCLUDE[ssas-appliesto-sqlas-all](../includes/ssas-appliesto-sqlas-all.md)]
 
 Usare le istruzioni e i collegamenti forniti in questo articolo per installare i file di progetto e i dati utilizzati nelle esercitazioni su Analysis Services. 
   
-## <a name="step-1-install-prerequisites"></a>Passaggio 1: Installare i prerequisiti 
+## <a name="step-1-install-prerequisites"></a>Passaggio 1: Prerequisiti di installazione 
 Nelle lezioni di questa esercitazione si presuppone che siano installati i programmi software seguenti: È possibile installare tutte le funzionalità in un singolo computer. Per installare queste funzionalità, eseguire il programma di installazione di SQL Server e selezionarle dalla pagina Selezione funzionalità.  
   
 -   Motore di database di SQL Server  
@@ -45,10 +45,10 @@ Se si desidera è possibile installare Excel per esplorare i dati multidimension
   
 In alternativa, è possibile esplorare i dati utilizzando la progettazione query MDX incorporata in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. La progettazione query restituisce gli stessi dati, ad eccezione di quelli presentati come un set di righe flat.  
   
-## <a name="step-3-install-databases"></a>Passaggio 3: Installare database  
+## <a name="step-3-install-databases"></a>Passaggio 3: Installare i database  
 In un modello multidimensionale di Analysis Services vengono utilizzati i dati transazionali importati da un sistema di gestione di database relazionali. Ai fini di questa esercitazione, si usa il seguente database relazionale come origine dati.  
   
--   **AdventureWorksDW2012 o in un secondo momento** – si tratta di un data warehouse relazionale che viene eseguito in un'istanza del motore di Database. Fornisce i dati originali utilizzati dal database di Analysis Services e i progetti compilati e distribuiti nel corso dell'esercitazione. L'esercitazione presuppone che si sta utilizzando AdventureWorksDW2012, tuttavia, funzionano nelle versioni successive.
+-   **AdventureWorksDW2012 o in un secondo momento** -si tratta di un data warehouse relazionale che viene eseguito in un'istanza del motore di Database. Fornisce i dati originali utilizzati dal database di Analysis Services e i progetti compilati e distribuiti nel corso dell'esercitazione. L'esercitazione presuppone che si sta utilizzando AdventureWorksDW2012, tuttavia, funzionano nelle versioni successive.
   
     È possibile usare questo database di esempio con [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] e versioni successive. In generale, è consigliabile usare la versione del database di esempio corrispondente alla versione del motore di database.
   
@@ -80,7 +80,7 @@ Nei progetti di esempio vengono utilizzate impostazioni di rappresentazione dell
   
 6.  Selezionare la casella di controllo accanto al **AdventureWorksDW** database. L'appartenenza al ruolo deve includere automaticamente **db_datareader** e **public**. Fare clic su **OK** per accettare le impostazioni predefinite.  
   
-## <a name="step-5-install-projects"></a>Passaggio 5: I progetti di installazione  
+## <a name="step-5-install-projects"></a>Passaggio 5: Installa i progetti  
 
 Nell'esercitazione sono inclusi progetti di esempio per consentire il confronto dei risultati rispetto a un progetto finito o l'avvio di una lezione successiva nella sequenza.  
   
@@ -88,7 +88,7 @@ Nell'esercitazione sono inclusi progetti di esempio per consentire il confronto 
   
     I progetti dell'esercitazione funziona per [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] e versioni successive.  
   
-2.  Spostare il file con estensione zip in una cartella al livello immediatamente inferiore rispetto all'unità radice, ad esempio C:\Tutorial. Questo passaggio riduce la possibilità di errore a causa del percorso troppo lungo che talvolta può verificarsi se si tenta di decomprimere i file nella cartella Downloads.  
+2.  Spostare il file con estensione zip in una cartella al livello immediatamente inferiore rispetto all'unità radice, ad esempio C:\Tutorial. Questo passaggio consente di ridurre l'errore "Percorso troppo lungo" che talvolta si verifica se si prova a decomprimere i file nella cartella Downloads.  
   
 3.  Decomprimere i progetti di esempio: fare clic con il pulsante destro del mouse sul file e selezionare **Estrai tutto**. Dopo aver estratto i file, si dovrebbero avere cartelle lezione 1, 2, 3, 5, 6, 7, 8, 9, 10 completa e Lesson 4 Start. 
   

@@ -20,16 +20,16 @@ ms.assetid: bb2d9f21-bda0-4e50-a8be-f710db660034
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 52ad6bc3fc84b0d50675b4e0a4e7bb44a6ded1c6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f44ae90a82e778bf8e8564b719aa6b9f0157a05a
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47849359"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53204370"
 ---
 # <a name="sqlspecialcolumns-function"></a>Funzione SQLSpecialColumns
 **Conformità**  
- Versione introdotta: Conformità agli standard 1.0 di ODBC: Open Group  
+ Versione introdotta: Conformità agli standard 1.0 ODBC: Apri gruppo  
   
  **Riepilogo**  
  **SQLSpecialColumns** recupera le informazioni seguenti relative alle colonne all'interno di una tabella specificata:  
@@ -99,12 +99,12 @@ SQLRETURN SQLSpecialColumns(
   
  SQL_SCOPE_SESSION: Il valore rowid è garantito a essere validi per la durata della sessione (oltre i limiti delle transazioni).  
   
- *Ammette valori Null*  
+ *Ammette i valori Null*  
  [Input] Determina se restituire le colonne speciali che possono avere un valore NULL. I possibili valori sono i seguenti:  
   
  SQL_NO_NULLS: Escludere le colonne speciali che possono avere valori NULL. Alcuni driver non è in grado di supportare SQL_NO_NULLS e questi driver restituirà un risultato vuoto se è stato specificato SQL_NO_NULLS impostare. Le applicazioni devono prevedere in questo caso e richiesta SQL_NO_NULLS solo se assolutamente necessario.  
   
- SQL_NULLABLE: Restituire le colonne speciali, anche se possono avere valori NULL.  
+ SQL_NULLABLE: Restituisce le colonne speciali, anche se possono avere valori NULL.  
   
 ## <a name="returns"></a>Valori di codice restituiti  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_STILL_EXECUTING, SQL_ERROR o SQL_INVALID_HANDLE.  
@@ -112,7 +112,7 @@ SQLRETURN SQLSpecialColumns(
 ## <a name="diagnostics"></a>Diagnostica  
  Quando **SQLSpecialColumns** restituisce SQL_ERROR o SQL_SUCCESS_WITH_INFO, un valore SQLSTATE associato possono essere ottenuti chiamando **SQLGetDiagRec** con un *HandleType* di SQL_HANDLE_STMT e un *gestiscono* dei *StatementHandle*. Nella tabella seguente sono elencati i valori SQLSTATE comunemente restituiti da **SQLSpecialColumns** e illustra ognuna nel contesto di questa funzione; la notazione "(DM)" precede le descrizioni di SQLSTATE restituiti da Gestione Driver. Il codice restituito a ogni valore SQLSTATE è SQL_ERROR, se non specificato diversamente.  
   
-|SQLSTATE|Errore|Description|  
+|SQLSTATE|Errore|Descrizione|  
 |--------------|-----------|-----------------|  
 |01000|Avviso generale|Messaggio informativo specifico del driver. (Funzione restituisce SQL_SUCCESS_WITH_INFO).|  
 |08S01|Errore del collegamento di comunicazione|Il collegamento di comunicazione tra il driver e l'origine dati a cui è stato connesso il driver non è stato possibile prima dell'elaborazione di funzione è stata completata.|  
@@ -125,7 +125,7 @@ SQLRETURN SQLSpecialColumns(
 |HY009|Utilizzo non valido del puntatore null|Il *TableName* argomento era un puntatore null.<br /><br /> L'attributo di istruzione SQL_ATTR_METADATA_ID è stato impostato su SQL_TRUE, il *CatalogName* argomento era un puntatore null e il SQL_CATALOG_NAME *InfoType* restituisce che i nomi di catalogo sono supportati.<br /><br /> (DM) l'attributo di istruzione SQL_ATTR_METADATA_ID è stato impostato su SQL_TRUE e il *SchemaName* argomento era un puntatore null.|  
 |HY010|Errore nella sequenza della funzione|(DM) a cui è stata chiamata per l'handle di connessione che è associata una funzione in modo asincrono in esecuzione la *StatementHandle*. Questa funzione era ancora in esecuzione quando **SQLSpecialColumns** è stato chiamato.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, o **SQLMoreResults** è stato chiamato per il *StatementHandle* e restituito SQL_PARAM_DATA_ È DISPONIBILE. Questa funzione è stata chiamata prima per tutti i parametri trasmessi sono stati recuperati i dati.<br /><br /> (DM) a cui è stata chiamata per una funzione in modo asincrono in esecuzione, non è presente uno, il *StatementHandle* ed era ancora in esecuzione quando è stata chiamata questa funzione.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**, oppure **SQLSetPos** è stato chiamato per il  *StatementHandle* e restituito SQL_NEED_DATA. Questa funzione è stata chiamata prima dei dati è stati inviati per tutti i parametri data-at-execution o più colonne.|  
 |HY013|Errore di gestione della memoria|La chiamata di funzione non è stato possibile elaborare perché gli oggetti di memoria sottostante non sono accessibile, probabilmente a causa di condizioni di memoria insufficiente.|  
-|HY090|Lunghezza della stringa o buffer non valido|(DM) il valore di uno degli argomenti di lunghezza è minore di 0 ma non uguali a SQL_NTS.<br /><br /> Il valore di uno degli argomenti di lunghezza maggiore del valore di lunghezza massima consentita per il nome corrispondente. La lunghezza massima di ogni nome può essere ottenuta chiamando **SQLGetInfo** con il *InfoType* valori: SQL_MAX_CATALOG_NAME_LEN, SQL_MAX_SCHEMA_NAME_LEN o SQL_MAX_TABLE_NAME_LEN.|  
+|HY090|Lunghezza della stringa o buffer non valido|(DM) il valore di uno degli argomenti di lunghezza è minore di 0 ma non uguali a SQL_NTS.<br /><br /> Il valore di uno degli argomenti di lunghezza maggiore del valore di lunghezza massima consentita per il nome corrispondente. La lunghezza massima di ogni nome può essere ottenuta chiamando **SQLGetInfo** con il *InfoType* valori: SQL_MAX_CATALOG_NAME_LEN SQL_MAX_SCHEMA_NAME_LEN o SQL_MAX_TABLE_NAME_LEN.|  
 |HY097|Tipo di colonna non compreso nell'intervallo|(DM) non valido *IdentifierType* valore specificato.|  
 |HY098|Tipo di ambito non compreso nell'intervallo|(DM) non valido *ambito* valore specificato.|  
 |HY099|Tipo che ammette valori null non compreso nell'intervallo|(DM) non valido *Nullable* valore specificato.|  
@@ -169,10 +169,10 @@ SQLRETURN SQLSpecialColumns(
 |COLUMN_NAME (ODBC 1.0)|2|Non NULL varchar|Nome colonna. Il driver restituisce una stringa vuota per una colonna che non dispone di un nome.|  
 |DATA_TYPE (ODBC 1.0)|3|Smallint non NULL|Tipo di dati SQL. Può trattarsi di un tipo di dati SQL ODBC o un tipo di dati specifici del driver SQL. Per un elenco di tipi di dati SQL ODBC validi, vedere [tipi di dati SQL](../../../odbc/reference/appendixes/sql-data-types.md). Per informazioni sui tipi di dati specifici del driver SQL, vedere la documentazione del driver.|  
 |TYPE_NAME (ODBC 1.0)|4|Non NULL varchar|Nome del tipo di dati dipende dall'origine dati; ad esempio, "CHAR", "VARCHAR", "MONEY", "LONG VARBINARY" o "() CHAR FOR BIT DATA".|  
-|VALORE DI COLUMN_SIZE (ODBC 1.0)|5|Valore intero|Le dimensioni della colonna nell'origine dati. Per altre informazioni riguardanti le dimensioni di colonna, vedere [le dimensioni di colonna, cifre decimali, lunghezza dell'ottetto di trasferimento e dimensioni di visualizzazione](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md).|  
-|BUFFER_LENGTH (ODBC 1.0)|6|Valore intero|La lunghezza in byte dei dati trasferiti in un' **SQLGetData** oppure **SQLFetch** operazione se si specifica SQL_C_DEFAULT. Per i dati numerici, questa dimensione può essere diversa rispetto alla dimensione dei dati archiviati nell'origine dati. Questo valore è lo stesso nome di colonna COLUMN_SIZE per dati carattere o binario. Per altre informazioni, vedere [le dimensioni di colonna, cifre decimali, lunghezza dell'ottetto di trasferimento e dimensioni di visualizzazione](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md).|  
+|VALORE DI COLUMN_SIZE (ODBC 1.0)|5|Integer|Le dimensioni della colonna nell'origine dati. Per altre informazioni riguardanti le dimensioni di colonna, vedere [le dimensioni di colonna, cifre decimali, lunghezza dell'ottetto di trasferimento e dimensioni di visualizzazione](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md).|  
+|BUFFER_LENGTH (ODBC 1.0)|6|Integer|La lunghezza in byte dei dati trasferiti in un' **SQLGetData** oppure **SQLFetch** operazione se si specifica SQL_C_DEFAULT. Per i dati numerici, questa dimensione può essere diversa rispetto alla dimensione dei dati archiviati nell'origine dati. Questo valore è lo stesso nome di colonna COLUMN_SIZE per dati carattere o binario. Per altre informazioni, vedere [le dimensioni di colonna, cifre decimali, lunghezza dell'ottetto di trasferimento e dimensioni di visualizzazione](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md).|  
 |DECIMAL_DIGITS (ODBC 1.0)|7|Smallint|Le cifre decimali della colonna nell'origine dati. Viene restituito NULL per i tipi di dati in cui cifre decimali non sono applicabili. Per altre informazioni relative al cifre decimali, vedere [le dimensioni di colonna, cifre decimali, lunghezza dell'ottetto di trasferimento e dimensioni di visualizzazione](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md).|  
-|PSEUDO_COLUMN (ODBC 2.0)|8|Smallint|Indica se la colonna è una pseudo colonna, ad esempio Oracle ROWID:<br /><br /> SQL_PC_UNKNOWN SQL_PC_NOT_PSEUDO SQL_PC_PSEUDO **Nota:** per ottenere la massima interoperabilità, Pseudocolonne non devono essere delimitate con l'identificatore del tipo di virgolette restituito da **SQLGetInfo**.|  
+|PSEUDO_COLUMN (ODBC 2.0)|8|Smallint|Indica se la colonna è una pseudo colonna, ad esempio Oracle ROWID:<br /><br /> SQL_PC_UNKNOWN SQL_PC_NOT_PSEUDO SQL_PC_PSEUDO **Nota:**  Per garantire la massima interoperabilità, Pseudocolonne non devono essere delimitate con l'identificatore del tipo di virgolette restituito da **SQLGetInfo**.|  
   
  Dopo l'applicazione recupera i valori per SQL_BEST_ROWID, l'applicazione è possibile usare questi valori per selezionare nuovamente tale riga all'interno dell'ambito definito. Il **seleziona** istruzione è garantita per restituire alcuna riga o una riga.  
   

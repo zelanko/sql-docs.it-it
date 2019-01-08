@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - replication [SQL Server], distribution
@@ -21,12 +20,12 @@ ms.assetid: 94d52169-384e-4885-84eb-2304e967d9f7
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 794a5097e78c8a77bba8a6c5d37f49020372c88f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f001652af1f6ed627ded9be287b4910059cce9cf
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48202761"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52813833"
 ---
 # <a name="configure-distribution"></a>Configurazione della distribuzione
   Il server di distribuzione contiene il database di distribuzione, in cui vengono archiviati i metadati e i dati cronologici per tutti i tipi di replica e le transazioni per la replica transazionale. Per impostare la replica, è necessario configurare un server di distribuzione. Ogni server di pubblicazione può essere assegnato a una sola istanza del server di distribuzione, ma più server di pubblicazione possono condividere un server di distribuzione. Il server di distribuzione utilizza le risorse aggiuntive seguenti nel server in cui è installato:  

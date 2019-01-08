@@ -17,12 +17,12 @@ ms.assetid: c97e0f8d-7ddd-4941-8b51-e7832f30fbbe
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c80d2736082e99d2e08f4c30fe311d98beff137a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a88d312d2764d04d1766371463a1735737973164
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48169641"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53349739"
 ---
 # <a name="data-sources-supported-ssas-multidimensional"></a>Data Sources Supported (SSAS Multidimensional)
   In questo argomento vengono descritti i tipi di origini dati che possono essere utilizzati in un modello multidimensionale.  
@@ -47,16 +47,16 @@ ms.locfileid: "48169641"
   
  <sup>1</sup> origini dati ODBC non sono supportate per soluzioni multidimensionali. Anche se la connessione viene gestita direttamente da Analysis Services, le finestre di progettazione in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] usate per la compilazione di soluzioni non sono in grado di connettersi a un'origine dati ODBC, anche quando si usano driver MSDASQL. Se i requisiti aziendali includono un'origine dati ODBC, provare invece a compilare una soluzione tabulare.  
   
- <sup>2</sup> per altre informazioni, vedere [!INCLUDE[ssSDS](../../includes/sssds-md.md)]via [azure.microsoft.com](http://go.microsoft.com/fwlink/?LinkID=157856).  
+ <sup>2</sup> per altre informazioni, vedere [!INCLUDE[ssSDS](../../includes/sssds-md.md)]via [azure.microsoft.com](https://go.microsoft.com/fwlink/?LinkID=157856).  
   
- <sup>3</sup> per altre informazioni sul [!INCLUDE[ssSDS](../../includes/sssds-md.md)] PDW, vedere [SQL Server Parallel Data Warehouse](http://go.microsoft.com/fwlink/?LinkId=150895).  
+ <sup>3</sup> per altre informazioni sul [!INCLUDE[ssSDS](../../includes/sssds-md.md)] PDW, vedere [SQL Server Parallel Data Warehouse](https://go.microsoft.com/fwlink/?LinkId=150895).  
   
  <sup>4</sup> in alcuni casi, tramite il provider OLE DB MSDAORA può determinare errori di connessione, in particolare con le versioni più recenti di Oracle. Se vengono visualizzati degli errori, è consigliabile utilizzare uno dei provider elencati per Oracle.  
   
  <sup>5</sup> alcune funzionalità richiedono un database relazionale di SQL Server che viene eseguito in locale. In particolare, per il writeback e l'archiviazione ROLAP viene richiesto che l'origine dati sottostante sia un database relazionale di SQL Server.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Origini dati supportate &#40;tabulare di SSAS&#41;](../tabular-models/data-sources-supported-ssas-tabular.md)   
+ [Origini dati supportate &#40;SSAS tabulare&#41;](../tabular-models/data-sources-supported-ssas-tabular.md)   
  [Origini dati nei modelli multidimensionali](data-sources-in-multidimensional-models.md)   
  [Viste origine dati in modelli multidimensionali](data-source-views-in-multidimensional-models.md)  
   

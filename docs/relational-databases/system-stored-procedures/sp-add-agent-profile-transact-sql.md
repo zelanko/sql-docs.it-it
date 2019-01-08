@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_add_agent_profile
@@ -17,12 +16,12 @@ ms.assetid: 5c246a33-2c21-4a77-9c2a-a2c9f0c5dda1
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: b5c6b2c03ff9956a58bf7da8426c87b692d5f879
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: edb5fc6c24ce8e59c82b35ac10e6dddb67adeaf4
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47670435"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52752153"
 ---
 # <a name="spaddagentprofile-transact-sql"></a>sp_add_agent_profile (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,13 +46,13 @@ sp_add_agent_profile [ [ @profile_id= ] profile_id OUTPUT ]
  [ **@profile_id=** ] *profile_id*  
  ID associato al nuovo profilo inserito. *profile_id* viene **int** ed è un parametro OUTPUT facoltativo. Se viene specificato, il valore è impostato sull'ID del nuovo profilo.  
   
- [  **@profile_name=** ] **'***profile_name***'**  
+ [  **@profile_name=** ] **'**_profile_name_**'**  
  Nome del profilo. *profile_name* viene **sysname**, non prevede alcun valore predefinito.  
   
- [  **@agent_type=** ] **'***agent_type***'**  
+ [  **@agent_type=** ] **'**_agent_type_**'**  
  Tipo di agente di replica. *agent_type* viene **int**e non prevede alcun valore predefinito, i possibili valori sono i seguenti.  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |**1**|agente snapshot|  
 |**2**|Agente di lettura log|  
@@ -66,7 +65,7 @@ sp_add_agent_profile [ [ @profile_id= ] profile_id OUTPUT ]
   
  **0** indica un profilo del sistema. **1** indica un profilo personalizzato. Solo i profili personalizzati possono essere creati utilizzando questa stored procedure. pertanto è l'unico valore valido **1**. Solo [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Crea profili del sistema.  
   
- [  **@description=** ] **'***descrizione***'**  
+ [  **@description=** ] **'**_descrizione_**'**  
  Descrizione del profilo. *Descrizione* viene **nvarchar(3000)**, non prevede alcun valore predefinito.  
   
  [  **@default=** ] *predefinito*  

@@ -21,12 +21,12 @@ ms.assetid: e7c039f6-3266-4d84-bfbd-f99b6858acf4
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 355bb7a964ae5b70dd0d8bd71f371766c25e413e
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 3a0cb21136253767f009cb19604c8a0ea7e4c71a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50148006"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52503399"
 ---
 # <a name="mining-model-content-analysis-services---data-mining"></a>Mining Model Content (Analysis Services - Data Mining)
   In seguito alla progettazione e all'elaborazione di un modello di data mining mediante i dati della struttura di data mining sottostante, il modello di data mining è completo e contiene il *contenuto del modello di data mining*. È possibile utilizzare questo contenuto per eseguire stime o analisi di dati.  
@@ -171,7 +171,7 @@ ms.locfileid: "50148006"
   
  In un albero di classificazione, ad esempio, il valore di supporto indica il numero di case che dispongono della combinazione di attributi descritta.  
   
- In un albero delle decisioni, la somma del supporto in ciascun livello dell'albero ammonta al supporto del nodo padre. Se, ad esempio, un modello che contiene 1200 case viene diviso equamente per genere, e quindi suddiviso equamente per tre valori di reddito: basso, medio e alto, i nodi figlio del nodo (2), ovvero i nodi (4), (5) e (6), ammontano sempre allo stesso numero di case come nodo (2).  
+ In un albero delle decisioni, la somma del supporto in ciascun livello dell'albero ammonta al supporto del nodo padre. Ad esempio, se un modello che contiene 1200 case viene diviso equamente per genere e quindi suddiviso equamente per tre valori per i nodi di reddito basso, medio e alto, il figlio del nodo (2), che costituiscono nodi (4), (5) e (6), ammontano sempre allo stesso numero di case come nodo (2).  
   
 |ID e attributi del nodo|Conteggio del supporto|  
 |---------------------------------|-------------------|  
@@ -219,13 +219,13 @@ ms.locfileid: "50148006"
 |3|Continuo|Indica che il valore dell'attributo è un valore numerico continuo che può pertanto essere rappresentato da una media, insieme alle varianza e deviazione standard.|  
 |4|Discrete|Indica che un valore di testo o numerico viene trattato come discreto.<br /><br /> **Nota** i valori discreti possono anche essere mancanti; tuttavia, vengono gestiti in modo diverso durante l'esecuzione dei calcoli. Per informazioni, vedere [Valori mancanti &#40;Analysis Services - Data mining&#41;](missing-values-analysis-services-data-mining.md).|  
 |5|Discretizzato|Indica che l'attributo contiene valori numerici discretizzati. Il valore sarà una stringa formattata che descrive i bucket di discretizzazione.|  
-|6|Esistente|Indica che l'attributo dispone di valori numerici continui e che i valori sono stati forniti nei dati, a fronte di valori mancanti o derivati.|  
+|6|Existing|Indica che l'attributo dispone di valori numerici continui e che i valori sono stati forniti nei dati, a fronte di valori mancanti o derivati.|  
 |7|Coefficiente|Indica un valore numerico che rappresenta un coefficiente.<br /><br /> Un coefficiente è un valore che viene applicato durante il calcolo della variabile dipendente. Ad esempio, se il modello crea una formula di regressione che stima il reddito in base all'età, il coefficiente viene utilizzato nella formula di correlazione dell'età al reddito.|  
 |8|Miglioramento punteggio|Indica un valore numerico che rappresenta il miglioramento del punteggio di un attributo.|  
 |9|Statistiche|Indica un valore numerico che rappresenta una statistica per un regressore.|  
 |10|Nome univoco nodo|Indica che il valore non deve essere gestito come valore numerico o stringa, ma come l'identificatore univoco di un altro nodo di contenuto del modello.<br /><br /> In un modello di rete neurale, ad esempio, gli ID forniscono puntatori dai nodi presenti nel livello di output ai nodi nel livello nascosto, e dai nodi presenti nel livello nascosto ai nodi nel livello di input.|  
 |11|Intercetta|Indica un valore numerico che rappresenta l'intercetta in una formula di regressione.|  
-|12|Periodicità|Indica che il valore denota una struttura periodica nel modello.<br /><br /> Si applica solo a modelli Time Series che contengono un modello ARIMA.<br /><br /> Nota: l'algoritmo Microsoft Time Series rileva automaticamente le strutture periodiche basate sui dati di training; pertanto le periodicità del modello finale possono includere valori di periodicità che non sono stati forniti come parametri durante la creazione del modello.|  
+|12|Periodicità|Indica che il valore denota una struttura periodica nel modello.<br /><br /> Si applica solo a modelli Time Series che contengono un modello ARIMA.<br /><br /> Nota: L'algoritmo Microsoft Time Series rileva automaticamente le strutture periodiche basate sui dati di training; pertanto le periodicità del modello finale possono includere valori di periodicità che non sono stati forniti come parametri durante la creazione del modello.|  
 |13|Ordine autoregressivo|Indica che il valore rappresenta il numero di serie autoregressive.<br /><br /> Si applica a modelli Time Series che utilizzano l'algoritmo ARIMA.|  
 |14|Ordine media mobile|Rappresenta un valore che indica il numero di medie mobili in una serie.<br /><br /> Si applica a modelli Time Series che utilizzano l'algoritmo ARIMA.|  
 |15|Ordine delle differenze|Rappresenta un valore che indica il numero di volte in cui viene differenziata la serie.<br /><br /> Si applica a modelli Time Series che utilizzano l'algoritmo ARIMA.|  
@@ -249,9 +249,9 @@ ms.locfileid: "50148006"
   
 -   La**probabilità del nodo** è sempre minore o uguale alla **probabilità marginale**.  
   
- Ad esempio, se il popolamento di tutti i clienti in un albero delle decisioni è suddiviso equamente per genere e nessun valore è mancante, la probabilità dei nodi figlio sarà uguale a 0,5. Si supponga ora che ognuno dei nodi di genere venga equamente diviso per i livelli di reddito: alto, medio e basso. In questo caso il punteggio di MARGINAL_PROBABILITY di ciascun nodo figlio deve essere sempre 0,33, ma il valore di NODE_PROBABILTY sarà il prodotto di tutte le probabilità che conducono a quel nodo e pertanto sarà sempre inferiore al valore di MARGINAL_PROBABILITY.  
+ Ad esempio, se il popolamento di tutti i clienti in un albero delle decisioni è suddiviso equamente per genere e nessun valore è mancante, la probabilità dei nodi figlio sarà uguale a 0,5. Tuttavia, si supponga che ognuno dei nodi di genere venga equamente diviso per i livelli di reddito-High, Medium e Low. In questo caso il punteggio di MARGINAL_PROBABILITY di ciascun nodo figlio deve essere sempre 0,33, ma il valore di NODE_PROBABILTY sarà il prodotto di tutte le probabilità che conducono a quel nodo e pertanto sarà sempre inferiore al valore di MARGINAL_PROBABILITY.  
   
-|Livello e valore del nodo/attributo|Probabilità marginale|probabilità del nodo|  
+|Livello e valore del nodo/attributo|probabilità marginale|probabilità del nodo|  
 |----------------------------------------|--------------------------|----------------------|  
 |Nodo radice del modello<br /><br /> Tutti i clienti di destinazione|1|1|  
 |Clienti di destinazione suddivisi per genere|.5|.5|  
@@ -267,9 +267,9 @@ ms.locfileid: "50148006"
   
  Nella tabella seguente vengono forniti collegamenti agli argomenti disponibili per ogni tipo di algoritmo.  
   
--   **Argomenti sul contenuto del modello:** viene illustrato il significato di ciascun tipo di nodo per ogni tipo di algoritmo e vengono fornite istruzioni sui nodi di maggior interesse in un particolare tipo di modello.  
+-   **Argomenti sul contenuto del modello:** Viene illustrato il significato di ogni tipo di nodo per ogni tipo di algoritmo e fornire informazioni aggiuntive su quali nodi sono di particolare interesse in un determinato tipo di modello.  
   
--   **Argomenti sull'esecuzione di query:** vengono forniti esempi di query su un determinato tipo di modello e istruzioni su come interpretare i risultati.  
+-   **L'esecuzione di query argomenti:** Vengono forniti esempi di query su un particolare tipo di modello e istruzioni su come interpretare i risultati.  
   
 |Tipo di modello o di algoritmo|model content|Esecuzione di query sui modelli di data mining|  
 |-----------------------------|-------------------|----------------------------|  

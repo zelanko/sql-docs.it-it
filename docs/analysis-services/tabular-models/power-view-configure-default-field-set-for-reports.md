@@ -1,5 +1,5 @@
 ---
-title: Configurare il Set di campi predefinito per i report Power View | Documenti Microsoft
+title: Configurare il set di campi predefiniti per i report di Power View in Analysis Services | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 32d8d9c4acbc1c5eae47e90709c4ffdedd269f11
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 4b8549a384b8eb0e7625d354ccf4d5c4e8b5e664
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34041855"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072058"
 ---
-# <a name="power-view---configure-default-field-set-for-reports"></a>Power View: configurare i Set di campi predefinito per i report
+# <a name="power-view---configure-default-field-set-for-reports"></a>Power View: configurare i Set di campi predefiniti per i report
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
   Un set di campi predefiniti è un elenco predefinito di colonne e misure che vengono aggiunte automaticamente all'area di disegno di un report [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] quando si seleziona la tabella nell'elenco dei campi del report. I creatori del modello tabulare possono creare un set di campi predefinito per eliminare passaggi ridondanti per i creatori di report che utilizzano il modello. Ad esempio, se è noto che la maggior parte degli autori del report che utilizza le informazioni di contatto dei clienti desidera vedere sempre il nome di un contatto, il numero telefonico principale, un indirizzo di posta elettronica e il nome dell'azienda, è possibile pre-selezionare tali colonne in modo che vengano sempre aggiunte all'area di disegno del report quando l'autore fa clic sulla tabella Customer Contact.  
   
@@ -41,6 +41,6 @@ ms.locfileid: "34041855"
 6.  Ripetere questi passaggi per le altre tabelle della cartella di lavoro.  
   
 ## <a name="next-step"></a>Passaggio successivo  
- Dopo aver creato un set di campi predefinito, è possibile influire ulteriormente sulla progettazione dei report specificando etichette e immagini predefinite, un comportamento del gruppo predefinito o indicando se le righe contenenti lo stesso valore vengono raggruppate in una riga o elencate individualmente. Per ulteriori informazioni, vedere [configurare le proprietà del comportamento tabella per i report Power View](../../analysis-services/tabular-models/power-view-configure-table-behavior-properties-for-reports.md).  
+ Dopo aver creato un set di campi predefinito, è possibile influire ulteriormente sulla progettazione dei report specificando etichette e immagini predefinite, un comportamento del gruppo predefinito o indicando se le righe contenenti lo stesso valore vengono raggruppate in una riga o elencate individualmente. Per altre informazioni, vedere [configurare le proprietà di comportamento tabella per i report Power View](../../analysis-services/tabular-models/power-view-configure-table-behavior-properties-for-reports.md).  
   
   

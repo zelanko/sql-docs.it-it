@@ -14,17 +14,17 @@ ms.assetid: 5e7b1af4-996b-47c5-9161-c5575ad4fec9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 01f456527d7be8a954fecdace730bd1f8e47936b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2ba956d2e442c914ddc50f2f023f225252fb1295
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47813049"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52524503"
 ---
 # <a name="field-related-error-information"></a>Informazioni sugli errori correlati ai campi
-Se un errore è correlato direttamente a un campo, ad esempio, se i dati sono mancanti o se è di tipo non corretto per il campo, è possibile recuperare altre informazioni sulla causa del problema esaminando il **campo** dell'oggetto **stato**  proprietà. Questa proprietà è stata migliorata per fornire informazioni specifiche relative al problema. In questo caso, ad esempio, quando una chiamata a **UpdateBatch** ha esito negativo, la causa del problema può essere determinata esaminando la **stato** proprietà del **campi** in ognuna dell'interessati record. La proprietà conterrà uno dei valori di **FieldStatusEnum** costante. La tabella seguente include i valori che sono di particolare interesse quando si verifica un errore.  
+Se un errore è direttamente correlato a un campo, ad esempio, se i dati sono mancanti o se è di tipo non corretto per il campo - è possibile recuperare altre informazioni sulla causa del problema esaminando la **campo** dell'oggetto **stato**  proprietà. Questa proprietà è stata migliorata per fornire informazioni specifiche relative al problema. In questo caso, ad esempio, quando una chiamata a **UpdateBatch** ha esito negativo, la causa del problema può essere determinata esaminando la **stato** proprietà del **campi** in ognuna dell'interessati record. La proprietà conterrà uno dei valori di **FieldStatusEnum** costante. La tabella seguente include i valori che sono di particolare interesse quando si verifica un errore.  
   
-|Costante|valore|Description|  
+|Costante|Value|Descrizione|  
 |--------------|-----------|-----------------|  
 |**adFieldCantConvertValue**|2|Indica che il campo non può essere recuperato o archiviato senza perdita di dati.|  
 |**adFieldDataOverflow**|6|Indica che i dati restituiti dal provider di overflow rispetto al tipo di dati del campo.|  

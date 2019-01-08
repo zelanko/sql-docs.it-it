@@ -12,12 +12,12 @@ ms.assetid: cf0eb3b4-8b72-49fc-a845-95edc360cf93
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fc6a5254afc715a950f2d3c63d02bfca7a1890ea
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f04184e968b60a58c4adfa067d516b58b0a43292
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48076581"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53352629"
 ---
 # <a name="fetch-and-update-rowsets-odbc"></a>Recuperare e aggiornare set di righe (ODBC)
     
@@ -25,11 +25,11 @@ ms.locfileid: "48076581"
   
 1.  Facoltativamente, è possibile chiamare [SQLSetStmtAttr](../../native-client-odbc-api/sqlsetstmtattr.md) con SQL_ROW_ARRAY_SIZE per modificare il numero di righe (R) nel set di righe.  
   
-2.  Chiamare [SQLFetch](http://go.microsoft.com/fwlink/?LinkId=58401) oppure [SQLFetchScroll](../../native-client-odbc-api/sqlfetchscroll.md) per ottenere un set di righe.  
+2.  Chiamare [SQLFetch](https://go.microsoft.com/fwlink/?LinkId=58401) oppure [SQLFetchScroll](../../native-client-odbc-api/sqlfetchscroll.md) per ottenere un set di righe.  
   
 3.  Se si utilizzano colonne associate, utilizzare i valori dei dati e le lunghezze dei dati disponibili nei buffer delle colonne associate per il set di righe.  
   
-     Se si utilizzano colonne non associate, per ogni riga chiamare [SQLSetPos](http://go.microsoft.com/fwlink/?LinkId=58407) con SQL_POSITION per impostare la posizione del cursore; quindi, per ogni colonna non associata:  
+     Se si utilizzano colonne non associate, per ogni riga chiamare [SQLSetPos](https://go.microsoft.com/fwlink/?LinkId=58407) con SQL_POSITION per impostare la posizione del cursore; quindi, per ogni colonna non associata:  
   
     -   Chiamare [SQLGetData](../../native-client-odbc-api/sqlgetdata.md) uno o più volte per ottenere i dati relativi alle colonne non associate dopo l'ultima colonna del set di righe associata. Le chiamate a [SQLGetData](../../native-client-odbc-api/sqlgetdata.md) deve essere in ordine crescente numero di colonna.  
   
@@ -37,7 +37,7 @@ ms.locfileid: "48076581"
   
 4.  Configurare tutte le colonne data-at-execution di tipo text o image.  
   
-5.  Chiamare [SQLSetPos](http://go.microsoft.com/fwlink/?LinkId=58407) oppure [SQLBulkOperations](http://go.microsoft.com/fwlink/?LinkId=58398) per impostare la posizione del cursore, aggiornare, aggiornare, eliminare o aggiungere righe nel set di righe.  
+5.  Chiamare [SQLSetPos](https://go.microsoft.com/fwlink/?LinkId=58407) oppure [SQLBulkOperations](https://go.microsoft.com/fwlink/?LinkId=58398) per impostare la posizione del cursore, aggiornare, aggiornare, eliminare o aggiungere righe nel set di righe.  
   
      Se si utilizzano colonne data-at-execution di tipo text o image per un'operazione di aggiornamento o di aggiunta, è necessario gestirle.  
   

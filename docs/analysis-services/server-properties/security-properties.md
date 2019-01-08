@@ -1,5 +1,5 @@
 ---
-title: Le proprietà di sicurezza | Microsoft Docs
+title: Le proprietà di sicurezza di Analysis Services | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,19 +9,19 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 99678bc9a4a335ef39e10e41112551c751701b8f
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 31191e266b017400b8b8aceb2eb912f9bebca3d5
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37991463"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53071728"
 ---
 # <a name="security-properties"></a>Proprietà di sicurezza
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
 
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] supporta le proprietà di sicurezza del server elencate nella tabella seguente. Per altre informazioni sulle proprietà aggiuntive del server e sulla relativa impostazione, vedere [Proprietà server in Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md).  
   
- **Si applica a:** modalità server multidimensionale e tabulare  
+ **Si applica a:** Modalità server multidimensionale e tabulare  
   
 ## <a name="properties"></a>Proprietà  
  **RequireClientAuthentication**  
@@ -51,7 +51,7 @@ ms.locfileid: "37991463"
  **DataProtection\ RequiredProtectionLevel**  
  Proprietà a valore integer a 32 bit con segno che definisce il livello di protezione richiesto per tutte le richieste client. Questa proprietà può assumere uno dei valori elencati nella tabella seguente.  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |*0*|Nessun livello di protezione, è consentito l'utilizzo di testo non crittografato.|  
 |*1*|Valore predefinito. È necessaria la crittografia, non è consentito l'utilizzo di testo non crittografato.|  

@@ -15,12 +15,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0b3b9b66ee257cb3d82acb18112ed46d837a3468
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1640ff8c4daab2260253d1104f1f8099d306120a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47798569"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512749"
 ---
 # <a name="guidelines-and-limitations-of-xml-bulk-load-sqlxml-40"></a>Linee guida e limitazioni per il caricamento bulk XML (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "47798569"
   
 -   Un documento XML viene controllato per verificare che utilizzi un formato corretto, ma non viene convalidato.  
   
-     Il caricamento bulk XML controlla il documento XML per determinare se è nel formato corretto, ovvero per garantire che i dati XML rispondano ai requisiti di sintassi della specifica XML 1.0 del World Wide Web Consortium. Se il formato del documento non è corretto, il caricamento bulk XML annulla l'elaborazione e restituisce un errore. L'unica eccezione a questo comportamento è costituita dal caso in cui il documento è un frammento, ad esempio non dispone di un singolo elemento radice. In questo caso, il documento verrà caricato.  
+     Caricamento Bulk XML controlla il documento XML per determinare se sia ben-formed-che è, per garantire che il codice XML sia conforme ai requisiti di sintassi della raccomandazione XML 1.0 del World Wide Web Consortium. Se il formato del documento non è corretto, il caricamento bulk XML annulla l'elaborazione e restituisce un errore. L'unica eccezione a questo comportamento è costituita dal caso in cui il documento è un frammento, ad esempio non dispone di un singolo elemento radice. In questo caso, il documento verrà caricato.  
   
      Il caricamento bulk XML non convalida il documento rispetto ad alcuno schema dati XML o DTD definito o a cui si fa riferimento all'interno del file di dati XML. Il caricamento bulk XML, inoltre, non convalida il file di dati XML rispetto allo schema di mapping fornito.  
   
@@ -160,7 +160,7 @@ ms.locfileid: "47798569"
   
      Vengono create le tabelle identificate nello schema di mapping (il database deve essere presente). Se esiste già uno o più delle tabelle nel database, la proprietà SGDropTables determina se queste tabelle preesistenti devono essere eliminati e ricreati.  
   
--   Se si specifica la proprietà SchemaGen (ad esempio, SchemaGen = true), vengono create le tabelle che vengono identificate nello schema di mapping. Ma SchemaGen non crea alcun vincolo (ad esempio, i vincoli PRIMARY KEY/FOREIGN KEY) su queste tabelle con una sola eccezione: se i nodi XML che costituiscono la chiave primaria in una relazione sono definiti come aventi un tipo XML dell'ID (ovvero, **tipo = "xsd: ID"** per XSD) e la proprietà SGUseID è impostata su True per SchemaGen, quindi non solo le chiavi primarie create da ID tipizzata nodi, ma vengono create relazioni di chiave esterna/chiave primarie da relazioni dello schema di mapping.  
+-   Se si specifica la proprietà SchemaGen (ad esempio, SchemaGen = true), vengono create le tabelle che vengono identificate nello schema di mapping. SchemaGen senza tuttavia creare eventuali vincoli (ad esempio i vincoli di chiave primaria/chiave esterna) in tali tabelle con una sola eccezione: Se i nodi XML che costituiscono la chiave primaria in una relazione sono definiti con un tipo XML dell'ID (vale a dire **tipo = "xsd: ID"** per XSD) e sguseid-proprietà è impostata su True per SchemaGen, quindi non solo le chiavi primarie create da l'ID digitato i nodi, ma primarie/chiave relazioni di chiave esterna vengono create dal mapping di relazioni dello schema.  
   
 -   SchemaGen non utilizza estensioni e i facet dello schema XSD per generare il relazionale [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] schema.  
   

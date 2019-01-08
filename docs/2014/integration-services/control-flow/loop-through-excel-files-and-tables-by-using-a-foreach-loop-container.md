@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - connections [Integration Services], Excel
@@ -15,12 +14,12 @@ ms.assetid: a5393c1a-cc37-491a-a260-7aad84dbff68
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 98cdf4263025f202279e4496b67f23eb0780b633
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 959344c0c191f390a6f6ec61f05467af1f88107b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48048351"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52766663"
 ---
 # <a name="loop-through-excel-files-and-tables-by-using-a-foreach-loop-container"></a>Esecuzione di un ciclo su file e tabelle di Excel utilizzando un contenitore Ciclo Foreach
   In questo argomento vengono illustrate le procedure per l'esecuzione di un ciclo sulle cartelle di lavoro di Excel archiviate in una directory oppure sulle tabelle incluse in una cartella di Excel mediante il contenitore Ciclo Foreach con l'enumeratore appropriato.  
@@ -46,7 +45,7 @@ ms.locfileid: "48048351"
     > [!IMPORTANT]  
     >  Per evitare errori di convalida durante la configurazione delle attività e dei componenti dei flussi di dati che usano questa gestione connessione Excel, selezionare una cartella di lavoro di Excel esistente nella finestra di dialogo **Editor gestione connessione Excel**. Questa cartella di lavoro non verrà utilizzata dalla gestione connessione in fase di esecuzione dopo aver configurato un'espressione per la proprietà `ConnectionString`, come descritto nella procedura seguente. Dopo aver creato e configurato il pacchetto, è possibile cancellare il valore della proprietà `ConnectionString` nella finestra Proprietà. Se, tuttavia, si cancella questo valore, la proprietà relativa alla stringa di connessione della gestione connessione Excel non sarà più valida fino a quando non viene eseguito il ciclo Foreach. Per evitare errori di convalida, è pertanto necessario impostare la proprietà `DelayValidation` su `True` nelle attività in cui viene utilizzata la gestione connessione o nel pacchetto.  
     >   
-    >  È anche necessario usare il valore predefinito `False` per il `RetainSameConnection` proprietà della gestione connessione Excel. Se si modifica questo valore in `True`, ogni iterazione del ciclo continuerà ad aprire la prima cartella di lavoro di Excel.  
+    >  È inoltre necessario utilizzare il valore predefinito `False` per la proprietà `RetainSameConnection` della gestione connessione Excel. Se si modifica questo valore in `True`, ogni iterazione del ciclo continuerà ad aprire la prima cartella di lavoro di Excel.  
   
 8.  Selezionare la nuova gestione connessione Excel, fare clic sulla proprietà **Espressioni** nella finestra Proprietà e quindi fare clic sul pulsante con i puntini di sospensione (...).  
   
@@ -97,6 +96,6 @@ ms.locfileid: "48048351"
  [Gestione connessione Excel](../connection-manager/excel-connection-manager.md)   
  [Origine Excel](../data-flow/excel-source.md)   
  [Destinazione Excel](../data-flow/excel-destination.md)   
- [Utilizzo di file di Excel con l'attività Script](script-task.md)  
+ [Uso di file di Excel con l'attività Script](script-task.md)  
   
   

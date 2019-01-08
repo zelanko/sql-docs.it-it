@@ -1,5 +1,5 @@
 ---
-title: Modificare la proprietà KeyColumn di un attributo | Documenti Microsoft
+title: Modificare la proprietà KeyColumn di un attributo | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 278780dd8457a90a6ee2fba632216bd1697ec0f7
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 4415c5dba3382e636488ac94408f163c8e54dc6f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34021488"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52539035"
 ---
-# <a name="attribute-properties---modify-the-keycolumn-property"></a>Attributo di proprietà, modificare la proprietà KeyColumn
+# <a name="attribute-properties---modify-the-keycolumn-property"></a>Proprietà degli attributi - Modificare la proprietà KeyColumn
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   È possibile modificare la proprietà **KeyColumns** di un attributo. Ad esempio, è possibile specificare una chiave composta anziché una chiave semplice come chiave dell'attributo.  
   
@@ -28,11 +28,11 @@ ms.locfileid: "34021488"
   
     -   In **Esplora soluzioni**fare clic con il pulsante destro del mouse sulla dimensione nella cartella **Dimensioni** e quindi scegliere **Apri** o **Progettazione viste**.  
   
-         -oppure-  
+         oppure  
   
-    -   In Progettazione cubi, nel **struttura cubo** espandere la dimensione del cubo nel **dimensioni** riquadro e fare clic su **modifica \<dimensione >**.  
+    -   In Progettazione cubi nel **struttura cubo** scheda, espandere la dimensione del cubo nel **dimensioni** riquadro e fare clic su **modifica \<dimensione >**.  
   
-3.  Nel riquadro **Attributi** della scheda **Struttura dimensione** fare clic sull'attributo per il quale si vuole modificare la proprietà **KeyColumns**.  
+3.  Nel riquadro **Attributi** della scheda **Struttura dimensione** fare clic sull'attributo per il quale si vuole modificare la proprietà **KeyColumns** .  
   
 4.  Nella finestra **Proprietà** fare clic sul valore della proprietà **KeyColumns** .  
   
@@ -50,6 +50,6 @@ ms.locfileid: "34021488"
 8.  Per modificare l'ordine delle colonne chiave, selezionare una colonna e quindi fare clic sul pulsante **Su** o **Giù** .  
   
 ## <a name="see-also"></a>Vedere anche  
- [Dimension Attribute Properties Reference](../../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)  
+ [Riferimento alle proprietà degli attributi delle dimensioni](../../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)  
   
   

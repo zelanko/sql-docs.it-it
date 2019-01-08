@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: supportability
 ms.topic: conceptual
 helpviewer_keywords:
 - transaction logs [SQL Server], size management
@@ -12,15 +12,15 @@ ms.assetid: 3a70e606-303f-47a8-96d4-2456a18d4297
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9a681921eb1db363f8a2ddf7fc14836e0d9b781b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b2ebcd653adebed5541b1d2cdf814f638d0af683
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48066761"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52816613"
 ---
 # <a name="manage-the-size-of-the-transaction-log-file"></a>Gestione delle dimensioni del file di log delle transazioni
-  In alcuni casi, può essere utile compattare fisicamente o espandere il file di log fisico del log delle transazioni di un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database. In questo argomento sono contenute informazioni sul monitoraggio delle dimensioni di un log delle transazioni [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , sulla relativa compattazione, sull'aumento delle dimensioni di un file di log delle transazioni, sull'ottimizzazione del tasso di aumento del log delle transazioni di **tempdb** e sul controllo dell'aumento delle dimensioni di un file di log delle transazioni.  
+  In alcuni casi, può essere utile per ridurre o espandere fisicamente il file di log fisico del log delle transazioni di un database [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . In questo argomento sono contenute informazioni sul monitoraggio delle dimensioni di un log delle transazioni [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , sulla relativa compattazione, sull'aumento delle dimensioni di un file di log delle transazioni, sull'ottimizzazione del tasso di aumento del log delle transazioni di **tempdb** e sul controllo dell'aumento delle dimensioni di un file di log delle transazioni.  
   
   
 ##  <a name="MonitorSpaceUse"></a> Monitoraggio dell'utilizzo spazio Log  
@@ -55,7 +55,7 @@ ms.locfileid: "48066761"
 -   [sys.database_files &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql) (Vedere le colonne **size**, **max_size** e **growth** per il file o i file di log).  
   
 > [!NOTE]  
->  La compattazione dei file di log e di database può essere impostata in modo da essere eseguita automaticamente. È consigliabile tuttavia evitare di eseguire la compattazione automatica impostando la proprietà del database `autoshrink` su FALSE per impostazione predefinita. Se `autoshrink` viene impostato su TRUE, la compattazione automatica riduce le dimensioni di un file solo quando più del 25 percento dello spazio del file risulta inutilizzato. Il file viene compattato fino a quando la percentuale di spazio inutilizzato nel file non risulta pari al 25 percento oppure fino a quando il file non raggiunge le dimensioni originali, a seconda di quale tra questi due sia il valore maggiore. Per informazioni sulla modifica dell'impostazione del `autoshrink` proprietà, vedere [visualizzare o modificare le proprietà di un Database](../databases/view-or-change-the-properties-of-a-database.md), usare il **Auto Shrink** proprietà il **opzioni**pagina, oppure [opzioni ALTER DATABASE SET &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options): usare l'opzione AUTO_SHRINK.  
+>  La compattazione dei file di log e di database può essere impostata in modo da essere eseguita automaticamente. È consigliabile tuttavia evitare di eseguire la compattazione automatica impostando la proprietà del database `autoshrink` su FALSE per impostazione predefinita. Se `autoshrink` viene impostato su TRUE, la compattazione automatica riduce le dimensioni di un file solo quando più del 25 percento dello spazio del file risulta inutilizzato. Il file viene compattato fino a quando la percentuale di spazio inutilizzato nel file non risulta pari al 25 percento oppure fino a quando il file non raggiunge le dimensioni originali, a seconda di quale tra questi due sia il valore maggiore. Per informazioni sulla modifica dell'impostazione del `autoshrink` proprietà, vedere [consente di visualizzare o modificare le proprietà di un Database](../databases/view-or-change-the-properties-of-a-database.md)-usare i **Auto Shrink** proprietà il **opzioni**pagina- o [opzioni ALTER DATABASE SET &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options)-usare l'opzione AUTO_SHRINK.  
   
   
 ##  <a name="AddOrEnlarge"></a> Aggiungere o aumentare le dimensioni di un File di Log  
@@ -71,7 +71,7 @@ ms.locfileid: "48066761"
   
   
 ##  <a name="ControlGrowth"></a> Controllare l'aumento delle dimensioni di un File di Log delle transazioni  
- È possibile usare l'istruzione [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql) per gestire la crescita di un file di log delle transazioni. Si noti quanto segue:  
+ È possibile usare l'istruzione [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql) per gestire la crescita di un file di log delle transazioni. Tenere presente quanto segue:  
   
 -   Per modificare le dimensioni del file corrente in unità KB, MB, GB e TB, utilizzare l'opzione SIZE.  
   

@@ -13,15 +13,15 @@ ms.assetid: fb420903-df54-4016-bab6-49e6dfbdedc7
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: e255d37a5f6fff65b223d889755bab4cf70d0687
-ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
+ms.openlocfilehash: 9be3645ec0846970cc7bcaaff237c4864bfe1216
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49072275"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52544631"
 ---
 # <a name="move-a-tde-protected-database-to-another-sql-server"></a>Spostare un database protetto da TDE in un'altra istanza di SQL Server
-  In questo argomento descrive come proteggere un database tramite transparent data encryption (TDE) e quindi spostare il database in un'altra istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usando [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)]. TDE consente di eseguire la crittografia e la decrittografia I/O in tempo reale dei file di dati e di log. Per la crittografia viene usata una chiave di crittografia del database (DEK), archiviata nel record di avvio del database affinché sia disponibile durante le operazioni di recupero. La chiave di decrittografia è una chiave simmetrica protetta tramite un certificato archiviato nel database `master` del server o una chiave asimmetrica protetta da un modulo EKM.  
+  Questo argomento illustra come proteggere un database tramite TDE (Transparent Data Encryption) e spostare il database in un'altra istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usando [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)]. TDE consente di eseguire la crittografia e la decrittografia I/O in tempo reale dei file di dati e di log. Per la crittografia viene usata una chiave di crittografia del database (DEK), archiviata nel record di avvio del database affinché sia disponibile durante le operazioni di recupero. La chiave di decrittografia è una chiave simmetrica protetta tramite un certificato archiviato nel database `master` del server o una chiave asimmetrica protetta da un modulo EKM.  
   
  **Contenuto dell'argomento**  
   
@@ -29,7 +29,7 @@ ms.locfileid: "49072275"
   
      [Limitazioni e restrizioni](#Restrictions)  
   
-     [Security](#Security)  
+     [Sicurezza](#Security)  
   
 -   **Per creare un database protetto con TDE usando:**  
   
@@ -75,7 +75,7 @@ ms.locfileid: "49072275"
   
 4.  Nella finestra di dialogo **Nuovo database** digitare il nome del nuovo database nella casella **Nome database** .  
   
-5.  Nella casella **Proprietario** digitare il nome del proprietario del nuovo database. In alternativa, fare clic sui puntini di sospensione **(...)** per aprire la finestra di dialogo **Seleziona proprietario database** . Per altre informazioni sulla creazione di un nuovo database, vedere [Create a Database](../../databases/create-a-database.md).  
+5.  Nella casella **Proprietario** digitare il nome del proprietario del nuovo database. In alternativa, fare clic sui puntini di sospensione **(...)** per aprire la finestra di dialogo **Seleziona proprietario database**. Per altre informazioni sulla creazione di un nuovo database, vedere [Create a Database](../../databases/create-a-database.md).  
   
 6.  In Esplora oggetti fare clic sul segno più per espandere la cartella **Database** .  
   
@@ -161,7 +161,7 @@ ms.locfileid: "49072275"
   
 ###  <a name="SSMSMove"></a> Utilizzo di SQL Server Management Studio  
   
-1.  In Esplora oggetti fare clic con il pulsante destro del mouse sul database crittografato in precedenza, scegliere **Attività** e fare clic su **Scollega…**.  
+1.  In Esplora oggetti fare clic con il pulsante destro del mouse sul database crittografato in precedenza, scegliere **Attività** e fare clic su **Scollega...**.  
   
      Nella finestra di dialogo **Scollega database** sono disponibili le opzioni seguenti.  
   
@@ -184,14 +184,14 @@ ms.locfileid: "49072275"
      Per impostazione predefinita, con l'operazione di scollegamento è possibile mantenere eventuali cataloghi full-text associati al database. Per rimuoverli, deselezionare la casella di controllo **Mantieni cataloghi full-text** . Questa opzione è visualizzata solo quando si aggiorna un database da [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)].  
   
      **Stato**  
-     Consente di visualizzare uno degli stati seguenti: **Pronto** o **Non pronto**.  
+     Consente di visualizzare uno degli stati seguenti: **Pronti** oppure **non pronto**.  
   
      **Message**  
      Nella colonna **Messaggio** possono essere visualizzate informazioni sul database simili alle seguenti:  
   
     -   Quando un database è coinvolto nella replica, lo **Stato** è **Non pronto** e nella colonna **Messaggio** viene visualizzato **Database replicato**.  
   
-    -   Quando un database ha una o più connessioni attive, il valore di **Stato** è **Non pronto** e la colonna **Messaggio** visualizza *Connessioni attive: <numero_di_connessioni_attive>*****, ad esempio **Connessioni attive: 1**. Prima di poter scollegare il database è necessario disconnettere tutte le connessioni attive selezionando **Interrompi connessioni**.  
+    -   Quando un database dispone di uno o più connessioni attive, il **lo stato** viene **non pronto** e il **messaggio** colonna Visualizza *< numero_di_connessioni_attive > * * * connessioni attive:**, ad esempio: **Connessioni attive 1:**. Prima di poter scollegare il database è necessario disconnettere tutte le connessioni attive selezionando **Interrompi connessioni**.  
   
      Per ottenere ulteriori informazioni su un messaggio, fare clic sul testo del collegamento ipertestuale per aprire Monitoraggio attività.  
   
@@ -205,11 +205,11 @@ ms.locfileid: "49072275"
   
 6.  Ricreare il certificato del server usando il file di backup del certificato del server originale. Per altre informazioni, vedere **Uso di Transact-SQL** di seguito.  
   
-7.  In Esplora oggetti in [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], fare clic con il pulsante destro del mouse sulla cartella **Database** e selezionare **Collega…**.  
+7.  In Esplora oggetti in [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], fare clic con il pulsante destro del mouse sulla cartella **Database** e selezionare **Collega...**.  
   
 8.  Nella finestra di dialogo **Collega database** , in **Database da collegare**fare clic su **Aggiungi**.  
   
-9. Nella finestra di dialogo **Individua file di database -***nome_server* selezionare il file di database da collegare al nuovo server e fare clic su **OK**.  
+9. Nel **Individua file di Database-* * * server_name* finestra di dialogo, seleziona il file di database da collegare al nuovo server e fare clic su **OK**.  
   
      Nella finestra di dialogo **Collega database** sono disponibili le opzioni seguenti.  
   
@@ -234,13 +234,13 @@ ms.locfileid: "49072275"
      **Stato**  
      Consente di visualizzare lo stato del base in base alla tabella seguente.  
   
-    |Icona|Testo Stato|Description|  
+    |Icona|Testo Stato|Descrizione|  
     |----------|-----------------|-----------------|  
     |(Nessuna icona)|(Nessun testo)|L'operazione di collegamento non è stata avviata o può essere sospesa per questo oggetto. È il valore predefinito all'apertura della finestra di dialogo.|  
     |Triangolo verde che punta a destra|In corso|L'operazione di collegamento è stata avviata ma non ancora completata.|  
-    |Segno di spunta verde|Esito positivo|L'oggetto è stato collegato.|  
+    |Segno di spunta verde|Riuscito|L'oggetto è stato collegato.|  
     |Cerchio rosso con croce bianca|Errore|Si è verificato un errore durante l'operazione. Il collegamento non è stato completato.|  
-    |Cerchio con due quadranti neri a destra e a sinistra e due quadranti bianchi in alto e in basso|Arrestato|L'operazione di collegamento non è stata completata perché l'utente ne ha arrestato l'esecuzione.|  
+    |Cerchio con due quadranti neri a destra e a sinistra e due quadranti bianchi in alto e in basso|Stopped|L'operazione di collegamento non è stata completata perché l'utente ne ha arrestato l'esecuzione.|  
     |Cerchio con freccia curva che punta in senso antiorario.|È stato eseguito il rollback|L'operazione di collegamento è stata completata ma ne è stato eseguito il rollback a causa di un errore durante il collegamento di un altro oggetto.|  
   
      **Message**  
@@ -253,7 +253,7 @@ ms.locfileid: "49072275"
      Consente di rimuovere il file selezionato dalla griglia **Database da collegare** .  
   
      **"** *<database_name>* **" dettagli database**  
-     Consente di visualizzare i nomi dei file da collegare. Per verificare o modificare il percorso di un file, fare clic sul pulsante **Sfoglia** (**…**).  
+     Consente di visualizzare i nomi dei file da collegare. Per verificare o modificare il percorso di un file, fare clic sul pulsante **Sfoglia** (**...**).  
   
     > [!NOTE]  
     >  Se il file non esiste, nella colonna **Messaggio** verrà visualizzato il testo "File non trovato". Se non rilevato, un file di log può trovarsi in un'altra directory o essere stato eliminato. È necessario aggiornare il percorso del file nella griglia **Dettagli database** in modo che indichi la posizione corretta oppure rimuovere il file di log dalla griglia. Se non viene rilevato un file di dati con estensione ndf, è necessario aggiornare il percorso nella griglia in modo che indichi la posizione corretta.  

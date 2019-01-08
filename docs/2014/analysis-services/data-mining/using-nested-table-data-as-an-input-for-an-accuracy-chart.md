@@ -16,12 +16,12 @@ ms.assetid: 162e0686-ada3-4dd3-9151-9589926e6613
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9ffec1e01fd5e1c0c35a2088235cc2979a7694f3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2cd9c01ada73773f826c8ff45c55687158480841
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48196691"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518283"
 ---
 # <a name="using-nested-table-data-as-an-input-for-an-accuracy-chart"></a>Utilizzo di dati di tabelle nidificate come input per un grafico di accuratezza
   Quando si esegue il test dell'accuratezza di un modello di data mining utilizzando dati esterni, se il modello di data mining contiene tabelle nidificate, anche i dati esterni devono contenere una tabella del case e una tabella nidificata associata.  
@@ -44,7 +44,7 @@ ms.locfileid: "48196691"
   
 3.  In **Seleziona set di dati da utilizzare per il grafico di accuratezza**selezionare l'opzione **Specifica un set di dati diverso**.  
   
-4.  Fare clic sul pulsante Sfoglia **(…)** per scegliere il set di dati esterno da un elenco di viste origine dati nel server corrente.  
+4.  Fare clic sul pulsante **(...)**  per scegliere il set di dati esterno da un elenco di viste origine dati nel server corrente.  
   
 5.  Fare clic su **Seleziona tabella del case**. Nella finestra di dialogo **Seleziona tabella** scegliere una tabella dalla vista origine dati che contiene i dati del case e quindi fare clic su **OK**.  
   

@@ -15,12 +15,12 @@ ms.assetid: 8b4d13f7-ab37-40b4-a9c6-145e7385352f
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 01de6a3707ea2ed96399c678625f3e94c13fc5db
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7487d073b95190418ee7f6900390a2d60ce42e13
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47649569"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52516860"
 ---
 # <a name="desktop-database-drivers-architecture"></a>Architettura dei driver di database desktop
 Questi driver sono progettati per l'uso in Microsoft Windows 95 o versioni successive, o Windows NT 4.0 e Windows 2000. Sono supportate solo le applicazioni a 32 bit in Windows 95 o versione successiva. le applicazioni a 16 bit e a 32 bit sono supportate in Windows NT 4.0 e Windows 2000.  
@@ -40,9 +40,9 @@ Questi driver sono progettati per l'uso in Microsoft Windows 95 o versioni succe
   
  ![App&#47;architettura del driver: NT 4.0 e Windows 2000](../../odbc/microsoft/media/odbcjetarch2.gif "ODBCJetArch2")  
   
- I driver di Database Desktop sono i driver a due livelli. In una configurazione a due livelli, il driver non esegue il processo di analisi, convalida, ottimizzare e l'esecuzione della query. Al contrario, Microsoft Jet esegue queste attività. Elabora chiamate all'API ODBC e agisce come un motore SQL. Microsoft Jet è diventata una parte integrante e Inseparabile del driver: viene fornito con i driver e si trova con i driver, anche se nessun altra applicazione nel computer lo usa.  
+ I driver di Database Desktop sono i driver a due livelli. In una configurazione a due livelli, il driver non esegue il processo di analisi, convalida, ottimizzare e l'esecuzione della query. Al contrario, Microsoft Jet esegue queste attività. Elabora chiamate all'API ODBC e agisce come un motore SQL. Microsoft Jet è diventata una parte integrante e Inseparabile del driver: Viene fornito con i driver e si trova con i driver, anche se nessun altra applicazione nel computer lo usa.  
   
- I driver di Database Desktop è costituito da sei diversi driver, o, più precisamente, un driver del file (Odbcjt32.dll) che ODBC [gestione Driver](../../odbc/reference/the-driver-manager.md) utilizza in sei modi diversi. Il flag DRIVERID nella voce del Registro di sistema per un'origine dati determina quali driver in Odbcjt32.dll Usa gestione Driver. Un'applicazione passa questo flag nella stringa di connessione inclusa in una chiamata a **SQLDriverConnect**. Per impostazione predefinita, il flag è l'ID del driver Microsoft Access.  
+ I driver di Database Desktop è costituito da sei diversi driver - o, più precisamente, un file del driver (Odbcjt32.dll) che ODBC [gestione Driver](../../odbc/reference/the-driver-manager.md) utilizza in sei modi diversi. Il flag DRIVERID nella voce del Registro di sistema per un'origine dati determina quali driver in Odbcjt32.dll Usa gestione Driver. Un'applicazione passa questo flag nella stringa di connessione inclusa in una chiamata a **SQLDriverConnect**. Per impostazione predefinita, il flag è l'ID del driver Microsoft Access.  
   
  Il file di installazione di driver modifica il flag DRIVERID in fase di installazione. Tutti i driver tranne il driver Microsoft Access dispone di una DLL di installazione associato. Quando fa clic su **programma di installazione** nel [Amministrazione origine dati ODBC di Microsoft](../../odbc/admin/odbc-data-source-administrator.md) per un'origine dati, il programma di installazione ODBC DLL (Odbccp32.dll) consente di caricare la DLL di installazione. La DLL di installazione consente di esportare la funzione di programma di installazione ODBC **SQLConfigDataSource**. Se un handle di finestra viene passato a **SQLConfigDataSource**, questa funzione consente di visualizzare una finestra del programma di installazione e il flag DRIVERID in base al driver selezionato dall'interfaccia utente viene modificato.  
   

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: ''
 ms.topic: reference
 helpviewer_keywords:
 - methods [SMO]
@@ -17,12 +15,12 @@ ms.assetid: c88d5c5f-9ff0-4f84-b2b6-24c6b90fa15e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0f0e816cce3b43a95cac481e4fe84f5ad11060a0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5c3a004d30a5edb20da77e6f93bf51a94472419b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48181771"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52807323"
 ---
 # <a name="calling-methods"></a>Chiamata di metodi
   Metodi di eseguono attività specifiche correlate all'oggetto, ad esempio emissione di un `Checkpoint` in un database o la richiesta di un elenco enumerato di account di accesso per l'istanza di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
@@ -57,7 +55,7 @@ db.Create();
  }  
   
 ## <a name="using-an-smo-method-with-a-parameter-in-visual-basic"></a>Utilizzo di un metodo SMO con un parametro in Visual Basic  
- Il <xref:Microsoft.SqlServer.Management.Smo.Table> oggetto ha un metodo denominato <xref:Microsoft.SqlServer.Management.Smo.Table.RebuildIndexes%2A>. Questo metodo richiede un parametro numerico che specifica `FillFactor`.  
+ L'oggetto <xref:Microsoft.SqlServer.Management.Smo.Table> include un metodo denominato <xref:Microsoft.SqlServer.Management.Smo.Table.RebuildIndexes%2A>. Questo metodo richiede un parametro numerico che specifica `FillFactor`.  
   
 ```  
 Dim srv As Server  
@@ -68,7 +66,7 @@ tb.RebuildIndexes(70)
 ```  
   
 ## <a name="using-an-smo-method-with-a-parameter-in-visual-c"></a>Utilizzo di un metodo SMO con un parametro in Visual C#  
- Il <xref:Microsoft.SqlServer.Management.Smo.Table> oggetto ha un metodo denominato <xref:Microsoft.SqlServer.Management.Smo.Table.RebuildIndexes%2A>. Questo metodo richiede un parametro numerico che specifica `FillFactor`.  
+ L'oggetto <xref:Microsoft.SqlServer.Management.Smo.Table> include un metodo denominato <xref:Microsoft.SqlServer.Management.Smo.Table.RebuildIndexes%2A>. Questo metodo richiede un parametro numerico che specifica `FillFactor`.  
   
 ```  
 {   
@@ -81,7 +79,7 @@ tb.RebuildIndexes(70);
 ```  
   
 ## <a name="using-an-enumeration-method-that-returns-a-datatable-object-in-visual-basic"></a>Utilizzo di un metodo di enumerazione che restituisce un oggetto DataTable in Visual Basic  
- Questa sezione descrive come chiamare un metodo di enumerazione e come gestire i dati nell'oggetto restituito <xref:System.Data.DataTable> oggetto.  
+ In questa sezione viene descritto come chiamare un metodo di enumerazione e come gestire i dati nell'oggetto <xref:System.Data.DataTable> restituito.  
   
  Il metodo <xref:Microsoft.SqlServer.Management.Smo.Server.EnumCollations%2A> restituisce un oggetto <xref:System.Data.DataTable>, che richiede ulteriore navigazione per accedere a tutte le informazioni sulle regole di confronto disponibili relative all'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
@@ -105,9 +103,9 @@ Next
 ```  
   
 ## <a name="using-an-enumeration-method-that-returns-a-datatable-object-in-visual-c"></a>Utilizzo di un metodo di enumerazione che restituisce un oggetto DataTable in Visual C#  
- Questa sezione descrive come chiamare un metodo di enumerazione e come gestire i dati nell'oggetto restituito <xref:System.Data.DataTable> oggetto.  
+ In questa sezione viene descritto come chiamare un metodo di enumerazione e come gestire i dati nell'oggetto <xref:System.Data.DataTable> restituito.  
   
- Il <xref:Microsoft.SqlServer.Management.Smo.Server.EnumCollations%2A> metodo viene restituito un sistema <xref:System.Data.DataTable> oggetto. Il <xref:System.Data.DataTable> oggetto richiede ulteriore navigazione per accedere a tutte le regole di confronto disponibili informazioni sull'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ Il metodo <xref:Microsoft.SqlServer.Management.Smo.Server.EnumCollations%2A> restituisce un oggetto <xref:System.Data.DataTable> di sistema. L'oggetto <xref:System.Data.DataTable> richiede ulteriore navigazione per accedere a tutte le informazioni sulle regole di confronto disponibili relative all'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ```  
 //Connect to the local, default instance of SQL Server.   
@@ -158,12 +156,12 @@ Console.WriteLine(d.Name);
 ```  
   
 ## <a name="copying-an-smo-object-in-visual-basic"></a>Copia di un oggetto SMO in Visual Basic  
- Questo esempio di codice Usa il <xref:Microsoft.SqlServer.Management.Common.ServerConnection.Copy%2A> metodo per creare una copia del <xref:Microsoft.SqlServer.Management.Smo.Server> oggetto. Il <xref:Microsoft.SqlServer.Management.Smo.Server> oggetto rappresenta una connessione a un'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ In questo esempio di codice viene utilizzato il metodo <xref:Microsoft.SqlServer.Management.Common.ServerConnection.Copy%2A> per creare una copia dell'oggetto <xref:Microsoft.SqlServer.Management.Smo.Server>. L'oggetto <xref:Microsoft.SqlServer.Management.Smo.Server> rappresenta una connessione a un'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 <!-- TODO: review snippet reference  [!CODE [SMO How to#SMO_VCMethods6](SMO How to#SMO_VCMethods6)]  -->  
   
 ## <a name="copying-an-smo-object-in-visual-c"></a>Copia di un oggetto SMO in Visual C#  
- Questo esempio di codice Usa il <xref:Microsoft.SqlServer.Management.Common.ServerConnection.Copy%2A> metodo per creare una copia del <xref:Microsoft.SqlServer.Management.Smo.Server> oggetto. Il <xref:Microsoft.SqlServer.Management.Smo.Server> oggetto rappresenta una connessione a un'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ In questo esempio di codice viene utilizzato il metodo <xref:Microsoft.SqlServer.Management.Common.ServerConnection.Copy%2A> per creare una copia dell'oggetto <xref:Microsoft.SqlServer.Management.Smo.Server>. L'oggetto <xref:Microsoft.SqlServer.Management.Smo.Server> rappresenta una connessione a un'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ```  
 {   
@@ -181,12 +179,12 @@ Console.WriteLine(srv2.ConnectionContext.ConnectTimeout.ToString);
 ```  
   
 ## <a name="monitoring-server-processes-in-visual-basic"></a>Monitoraggio di processi server in Visual Basic  
- È possibile ottenere le informazioni sul tipo di stato corrente relative all'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tramite i metodi di enumerazione. Nell'esempio di codice viene utilizzato il metodo <xref:Microsoft.SqlServer.Management.Smo.Server.EnumProcesses%2A> per individuare informazioni sui processi correnti. Viene inoltre illustrato come utilizzare le colonne e le righe nell'oggetto <xref:System.Data.DataTable> restituito.  
+ È possibile ottenere le informazioni sul tipo di stato corrente relative all'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] utilizzando metodi di enumerazione. Nell'esempio di codice viene utilizzato il metodo <xref:Microsoft.SqlServer.Management.Smo.Server.EnumProcesses%2A> per individuare informazioni sui processi correnti. Viene inoltre illustrato come utilizzare le colonne e le righe nell'oggetto <xref:System.Data.DataTable> restituito.  
   
 <!-- TODO: review snippet reference  [!CODE [SMO How to#SMO_VBMethods5](SMO How to#SMO_VBMethods5)]  -->  
   
 ## <a name="monitoring-server-processes-in-visual-c"></a>Monitoraggio di processi server in Visual C#  
- È possibile ottenere le informazioni sul tipo di stato corrente relative all'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tramite i metodi di enumerazione. Nell'esempio di codice viene utilizzato il metodo <xref:Microsoft.SqlServer.Management.Smo.Server.EnumProcesses%2A> per individuare informazioni sui processi correnti. Viene inoltre illustrato come utilizzare le colonne e le righe nell'oggetto <xref:System.Data.DataTable> restituito.  
+ È possibile ottenere le informazioni sul tipo di stato corrente relative all'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] utilizzando metodi di enumerazione. Nell'esempio di codice viene utilizzato il metodo <xref:Microsoft.SqlServer.Management.Smo.Server.EnumProcesses%2A> per individuare informazioni sui processi correnti. Viene inoltre illustrato come utilizzare le colonne e le righe nell'oggetto <xref:System.Data.DataTable> restituito.  
   
 ```  
 //Connect to the local, default instance of SQL Server.   

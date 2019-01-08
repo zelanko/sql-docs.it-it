@@ -18,12 +18,12 @@ ms.assetid: 42b0b5a4-bdd6-4a60-b451-c87f14758d4b
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 51f65bc99f5fa4ac3840c283c110594eeb48800c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 268204e17083d5ddfe02fefca97a3cea6c857c88
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48156111"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52814553"
 ---
 # <a name="define-the-serialization-of-xml-data"></a>Definire la serializzazione di dati XML
   Quando si esegue il cast esplicito o implicito del tipo di dati xml a un tipo SQL stringa o binario, il contenuto del tipo di dati xml verrà serializzato in base alle regole illustrate in questo argomento.  
@@ -31,13 +31,13 @@ ms.locfileid: "48156111"
 ## <a name="serialization-encoding"></a>Codifica della serializzazione  
  Se il tipo SQL di destinazione è VARBINARY, il risultato viene serializzato nel formato UTF-16 preceduto da un indicatore dell'ordine dei byte UTF-16, ma senza una dichiarazione XML. Se il tipo di destinazione è di grandezza troppo ridotta, viene generato un errore.  
   
- Esempio:  
+ Ad esempio:  
   
 ```  
-select CAST(CAST(N'<Δ/>' as XML) as VARBINARY(MAX))  
+select CAST(CAST(N'<??/>' as XML) as VARBINARY(MAX))  
 ```  
   
- Risultato:  
+ Questo è il risultato:  
   
 ```  
 0xFFFE3C0094032F003E00  
@@ -45,27 +45,27 @@ select CAST(CAST(N'<Δ/>' as XML) as VARBINARY(MAX))
   
  Se il tipo SQL di destinazione è NVARCHAR o NCHAR, il risultato viene serializzato nel formato UTF-16 non preceduto dall'indicatore dell'ordine dei byte e senza una dichiarazione XML. Se il tipo di destinazione è di grandezza troppo ridotta, viene generato un errore.  
   
- Esempio:  
+ Ad esempio:  
   
 ```  
-select CAST(CAST(N'<Δ/>' as XML) as NVARCHAR(MAX))  
+select CAST(CAST(N'<??/>' as XML) as NVARCHAR(MAX))  
 ```  
   
- Risultato:  
+ Questo è il risultato:  
   
 ```  
-<Δ/>  
+<??/>  
 ```  
   
  Se il tipo SQL di destinazione è VARCHAR o NCHAR, il risultato viene serializzato nella codifica corrispondente alla tabella codici delle regole di confronto del database, senza un indicatore dell'ordine dei byte o una dichiarazione XML. Se il tipo di destinazione è di grandezza troppo ridotta o se non è possibile eseguire il mapping del valore alla tabella codici delle regole di confronto di destinazione, viene generato un errore.  
   
- Esempio:  
+ Ad esempio:  
   
 ```  
-select CAST(CAST(N'<Δ/>' as XML) as VARCHAR(MAX))  
+select CAST(CAST(N'<??/>' as XML) as VARCHAR(MAX))  
 ```  
   
- In questo caso è possibile che venga generato un errore se la tabella codici delle regole di confronto corrente non è in grado di rappresentare il carattere Unicode Δ, oppure tale carattere verrà rappresentato nella codifica specifica.  
+ Questo può comportare un errore, se i codici di regole di confronto correnti non può rappresentare il carattere Unicode??, o rappresenterà la codifica specifici.  
   
  Per la restituzione dei risultati XML al lato client, i dati verranno inviati con la codifica UTF-16. Il provider sul lato client esporrà quindi i dati in base alle regole delle relative API.  
   
@@ -87,7 +87,7 @@ select CAST(CAST(N'<Δ/>' as XML) as VARCHAR(MAX))
   
 -   Per proteggere i nodi di testo che contengono solo spazi vuoti, uno degli spazi vuoti (in genere l'ultimo) viene sostituito con l'entità rappresentata dal relativo riferimento a un carattere numerico. In questo modo, durante l'analisi il nodo di testo con spazi vuoti viene mantenuto, indipendentemente da come vengono gestiti gli spazi vuoti durante l'analisi.  
   
- Esempio:  
+ Ad esempio:  
   
 ```  
 declare @u NVARCHAR(50)  
@@ -96,11 +96,11 @@ set @u = N'<a a="
 select CAST(CONVERT(XML,@u,1) as NVARCHAR(50))  
 ```  
   
- Risultato:  
+ Questo è il risultato:  
   
 ```  
 <a a="  
-    𐌀>">     
+    ????>">     
 </a>  
 ```  
   
@@ -118,7 +118,7 @@ set @x = N'<a>This example contains an entitized char: <.</a>'
 select @x.query('/a/text()')  
 ```  
   
- Risultato:  
+ Questo è il risultato:  
   
 ```  
 This example contains an entitized char: <.  
@@ -130,7 +130,7 @@ This example contains an entitized char: <.
 select @x.value('(/a/text())[1]', 'nvarchar(100)')  
 ```  
   
- Risultato:  
+ Questo è il risultato:  
   
 ```  
 This example contains an entitized char: <.  

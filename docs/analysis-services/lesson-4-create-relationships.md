@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: bbddc0966729b93b2e9ac202966dff645c28c32c
-ms.sourcegitcommit: e8e013b4d4fbd3b25f85fd6318d3ca8ddf73f31e
+ms.openlocfilehash: 2cfa28b4fa5575fbdda06ed64f8f52994b596186
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42792031"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52411298"
 ---
-# <a name="lesson-4-create-relationships"></a>Lezione 4: Creare relazioni
+# <a name="lesson-4-create-relationships"></a>Lezione 4: Crea relazioni
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
 
 In questa lezione verranno verificate le relazioni create automaticamente al momento dell'importazione dei dati e verranno aggiunte nuove relazioni tra tabelle diverse. Una relazione è una connessione tra due tabelle che stabilisce in che modo devono essere correlati i dati nelle due tabelle. Ad esempio, la tabella DimProduct e la tabella DimProductSubcategory dispongono di una relazione basata sul fatto che ogni prodotto appartiene a una sottocategoria. Per altre informazioni, vedere [relazioni](../analysis-services/tabular-models/relationships-ssas-tabular.md).
@@ -24,7 +24,7 @@ In questa lezione verranno verificate le relazioni create automaticamente al mom
 Tempo stimato per il completamento della lezione: **10 minuti**  
   
 ## <a name="prerequisites"></a>Prerequisiti  
-Questo argomento fa parte di un'esercitazione relativa alla modellazione tabulare che deve essere completata nell'ordine specificato. Prima di eseguire le attività in questa lezione, è necessario avere completato la lezione precedente: [lezione 3: contrassegna come tabella data](../analysis-services/lesson-3-mark-as-date-table.md). 
+Questo argomento fa parte di un'esercitazione relativa alla modellazione tabulare che deve essere completata nell'ordine specificato. Prima di eseguire le attività in questa lezione, è necessario avere completato la lezione precedente: [Lezione 3: Contrassegna come tabella data](../analysis-services/lesson-3-mark-as-date-table.md). 
   
 ## <a name="review-existing-relationships-and-add-new-relationships"></a>Esaminare le relazioni esistenti e aggiungere nuove relazioni  
 Quando sono stati importati i dati tramite l'importazione guidata tabella, si sono ottenute sette tabelle dal database AdventureWorksDW. In genere, quando si importano dati da un'origine relazionale, le relazioni esistenti vengono importate automaticamente insieme ai dati. Prima di procedere con la creazione del modello, è tuttavia necessario verificare che le relazioni tra tabelle siano state create correttamente. Per questa esercitazione, verranno inoltre aggiunte tre nuove relazioni.  
@@ -41,7 +41,7 @@ Quando sono stati importati i dati tramite l'importazione guidata tabella, si so
   
 2.  Fare clic su linea continua tra il **DimCustomer** tabella e il **DimGeography** tabella. La linea continua tra queste due tabelle indica che questa relazione è attiva, ovvero viene utilizzata per impostazione predefinita nel calcolo delle formule DAX.  
   
-    Si noti che il **GeographyKey** colonna il **DimCustomer** tabella e il **GeographyKey** colonna nel **DimGeography** tabella ora entrambe visualizzate all'interno di una finestra. Questa visualizzazione sono le colonne utilizzate nella relazione. Le proprietà della relazione sono ora visualizzate nella finestra **Proprietà** .  
+    Si noti che il **GeographyKey** colonna il **DimCustomer** tabella e il **GeographyKey** colonna nel **DimGeography** tabella ora entrambe visualizzate all'interno di una finestra. Questa visualizzazione sono le colonne utilizzate nella relazione. Le proprietà della relazione sono ora visualizzate nella **proprietà** finestra.  
   
     > [!TIP]  
     > Oltre a usare Progettazione modelli in vista diagramma, è anche possibile usare la finestra di dialogo Gestisci relazioni per mostrare le relazioni tra tutte le tabelle in un formato tabella. Fare doppio clic su **relazioni** in Esplora modelli tabulari e quindi fare clic su **Gestisci relazioni**. La finestra di dialogo Gestisci relazioni per mostrare le relazioni create automaticamente quando sono stati importati i dati.  
@@ -50,13 +50,13 @@ Quando sono stati importati i dati tramite l'importazione guidata tabella, si so
   
     |Attiva|Tabella|Tabella di ricerca correlata|  
     |----------|---------|------------------------|  
-    |Sì|**DimCustomer [GeographyKey]**|**DimGeography [GeographyKey]**|  
-    |Sì|**DimProduct [ProductSubcategoryKey]**|**DimProductSubcategory [ProductSubcategoryKey]**|  
-    |Sì|**DimProductSubcategory [ProductCategoryKey]**|**DimProductCategory [ProductCategoryKey]**|  
-    |Sì|**FactInternetSales [CustomerKey]**|**DimCustomer [CustomerKey]**|  
-    |Sì|**FactInternetSales [ProductKey]**|**DimProduct [ProductKey]**|  
+    |Yes|**DimCustomer [GeographyKey]**|**DimGeography [GeographyKey]**|  
+    |Yes|**DimProduct [ProductSubcategoryKey]**|**DimProductSubcategory [ProductSubcategoryKey]**|  
+    |Yes|**DimProductSubcategory [ProductCategoryKey]**|**DimProductCategory [ProductCategoryKey]**|  
+    |Yes|**FactInternetSales [CustomerKey]**|**DimCustomer [CustomerKey]**|  
+    |Yes|**FactInternetSales [ProductKey]**|**DimProduct [ProductKey]**|  
   
-    Se una delle relazioni nella tabella precedente sono manca, verificare che il modello includa le tabelle seguenti: DimCustomer, DimDate, DimGeography, DimProduct, DimProductCategory, DimProductSubcategory e FactInternetSales. Se tabelle della stessa connessione all'origine dati vengono importate in momenti distinti, non verranno create relazioni tra tali tabelle, che dovranno essere create manualmente.  
+    Se sono presenti le relazioni nella tabella precedente mancante, verificare che il modello includa le tabelle seguenti: DimCustomer, DimDate, DimGeography, DimProduct, DimProductCategory, DimProductSubcategory e FactInternetSales. Se tabelle della stessa connessione all'origine dati vengono importate in momenti distinti, non verranno create relazioni tra tali tabelle, che dovranno essere create manualmente.  
 
 ### <a name="take-a-closer-look"></a>Un attento
 Nella vista diagramma, si noterà una freccia, un asterisco e un numero sulle linee che mostrano la relazione tra tabelle.
@@ -91,7 +91,7 @@ In alcuni casi, potrebbe essere necessario creare relazioni aggiuntive tra tabel
      ![come-tabulare-lesson4-newinactive](../analysis-services/media/as-tabular-lesson4-newinactive.png)
   
 ## <a name="whats-next"></a>Quali sono le operazioni successive?
-Passare alla lezione successiva: [lezione 5: creare colonne calcolate](../analysis-services/lesson-5-create-calculated-columns.md).
+Passare alla lezione successiva: [Lezione 5: Creare colonne calcolate](../analysis-services/lesson-5-create-calculated-columns.md).
   
   
   

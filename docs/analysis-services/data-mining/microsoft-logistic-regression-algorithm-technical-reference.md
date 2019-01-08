@@ -1,5 +1,5 @@
 ---
-title: Riferimento tecnico l'algoritmo Microsoft Logistic Regression | Documenti Microsoft
+title: Riferimento tecnico l'algoritmo Microsoft Logistic Regression | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: ffe5299530f75706a5d7c348bd39d5cc2e883641
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: a07998d0b0e1fd5b9123c553f650f00e23e22223
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34017018"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52530185"
 ---
 # <a name="microsoft-logistic-regression-algorithm-technical-reference"></a>Riferimento tecnico per l'algoritmo Microsoft Logistic Regression
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -23,7 +23,7 @@ ms.locfileid: "34017018"
 ## <a name="implementation-of-the-microsoft-logistic-regression-algorithm"></a>Implementazione dell'algoritmo Microsoft Logistic Regression  
  Si supponga che la colonna stimabile contenga solo due stati e che tuttavia si intenda eseguire comunque un'analisi di regressione, stabilendo una relazione tra le colonne di input e la probabilità che la colonna stimabile includa uno stato specifico. Nel diagramma seguente sono illustrati i risultati che si otterranno se si assegnano i valori 1 e 0 agli stati della colonna stimabile, si calcola la probabilità che la colonna contenga uno stato specifico e si esegue una regressione lineare in base a una variabile di input.  
   
- ![Modellati in modo insufficiente con regressione lineare dati](../../analysis-services/data-mining/media/logistic-linear-regression.gif "modellati in modo insufficiente con regressione lineare di dati")  
+ ![Uso della regressione lineare dati modellati in modo inadeguato](../../analysis-services/data-mining/media/logistic-linear-regression.gif "modellati in modo insufficiente con regressione lineare dei dati")  
   
  L'asse x contiene i valori di una colonna di input. L'asse y contiene le probabilità che la colonna stimabile includa solo uno stato o l'altro. In questo caso, il problema è che la regressione lineare non vincola la colonna a valori compresi tra 0 e 1, anche se questi sono rispettivamente il valore minimo e massimo della colonna. Uno dei modi per risolvere tale problema consiste nell'esecuzione della regressione logistica. Anziché creare una linea retta, l'analisi di regressione logistica crea una curva a forma di "S" che contiene i vincoli minimi e massimi. Ad esempio, nel diagramma seguente sono illustrati i risultati che si otterranno se si esegue una regressione logistica in base agli stessi dati utilizzati nell'esempio precedente.  
   
@@ -37,13 +37,13 @@ ms.locfileid: "34017018"
 ### <a name="scoring-inputs"></a>Valutazione degli input  
  Per*assegnazione di punteggi* nel contesto di un modello di rete neurale o di un modello di regressione logistica si intende la conversione dei valori presenti nei dati in un set di valori che usano la stessa scala e possono quindi essere confrontati tra loro. Si supponga ad esempio che l'intervallo degli input per Income sia compreso tra 0 e 100.000 mentre quello degli input per [Number of Children] sia compreso tra 0 e 5. Questo processo di conversione permette di confrontare l'importanza di ogni input indipendentemente dalla differenza dei valori.  
   
- Per ogni stato visualizzato nel set di training, il modello genera un input. Per gli input discreti o discretizzati, viene creato un input aggiuntivo per rappresentare lo stato Missing, se tale stato è visualizzato almeno una volta nel set di training. Per gli input continui vengono creati al massimo due nodi di input: uno per i valori Missing, se presenti nei dati di training, e uno per tutti i valori esistenti o non Null. Ogni input viene ridimensionato in base a un formato numerico usando il metodo di normalizzazione del punteggio z, `(x – μ)\StdDev`.  
+ Per ogni stato visualizzato nel set di training, il modello genera un input. Per gli input discreti o discretizzati, viene creato un input aggiuntivo per rappresentare lo stato Missing, se tale stato è visualizzato almeno una volta nel set di training. Per gli input continui vengono creati al massimo due nodi di input: uno per i valori Missing, se presenti nei dati di training, e uno per tutti i valori esistenti o non Null. Ogni input viene ridimensionato in base a un formato numerico usando il metodo di normalizzazione del punteggio z, `(x - μ)\StdDev`.  
   
  Durante la normalizzazione del punteggio z, si ottengono la media (μ) e la deviazione standard sul set di training completo.  
   
  **Valori continui**  
   
- Il valore è presente:   `(X – μ)/σ ` (X è l'effettivo valore codificato)  
+ Valore è presente:   `(X - μ)/σ ` (X è l'effettivo valore codificato)  
   
  Il valore è assente:    `-   μ/σ `  (mu negativo diviso sigma)  
   
@@ -53,9 +53,9 @@ ms.locfileid: "34017018"
   
  StdDev  `= sqrt(p\(1-p))`  
   
- Il valore è presente:     `\(1 – μ)/σ` (1 meno mu diviso sigma)  
+ Valore è presente:     `\(1 - μ)/σ` (1 meno mu diviso sigma)  
   
- Il valore è assente:     `(– μ)/σ` (mu negativo diviso sigma)  
+ Il valore è assente:     `(- μ)/σ` (mu negativo diviso sigma)  
   
 ### <a name="understanding-logistic-regression-coefficients"></a>Informazioni sui coefficienti di regressione logistica  
  Sono disponibili vari metodi nella letteratura statistica per l'esecuzione della regressione logistica, tuttavia un aspetto importante comune a tutti i metodi è la valutazione dell'adattamento del modello. Sono state proposte statistiche con vari livelli di adattamento, tra cui i rapporti di disparità e i criteri covariati. Una descrizione dettagliata delle modalità di misurazione dell'adattamento di un modello esula dall'ambito del presente argomento, tuttavia è possibile recuperare il valore dei coefficienti nel modello e utilizzarli per progettare misure di adattamento personalizzate.  
@@ -73,9 +73,9 @@ FROM <model name>.CONTENT
 WHERE NODE_TYPE = 23  
 ```  
   
- Per ogni valore di output, questa query restituisce i coefficienti e un ID che punta nuovamente al nodo di input correlato. Restituisce anche una riga che contiene il valore dell'output e l'intercetta. Ogni input X dispone di un proprio coefficiente (Ci), ma nella tabella nidificata è contenuto anche un coefficiente (Co) "libero" calcolato sulla base della formula seguente:  
+ Per ogni valore di output, questa query restituisce i coefficienti e un ID che punta nuovamente al nodo di input correlato. Restituisce anche una riga che contiene il valore dell'output e l'intercetta. Ogni input X dispone di un proprio coefficiente (Ci), ma la tabella nidificata contiene anche un "gratuito" coefficiente (Co), calcolato in base alla formula seguente:  
   
- `F(X) = X1*C1 + X2*C2 + … +Xn*Cn + X0`  
+ `F(X) = X1*C1 + X2*C2 + ... +Xn*Cn + X0`  
   
  Attivazione: `exp(F(X)) / (1 + exp(F(X)) )`  
   
@@ -128,7 +128,7 @@ WHERE NODE_TYPE = 23
  Si applica alle colonne della struttura di data mining.  
   
  MODEL_EXISTENCE_ONLY  
- Indica che la colonna verrà considerata come se presentasse due stati possibili: **Missing** e **Existing**. Un valore Null è un valore mancante.  
+ Indica che la colonna verrà considerata come se presentasse due stati possibili: **Mancano** e **esistenti**. Un valore Null è un valore mancante.  
   
  Si applica alla colonna del modello di data mining.  
   
@@ -138,15 +138,15 @@ WHERE NODE_TYPE = 23
 ### <a name="input-and-predictable-columns"></a>Colonne di input e stimabili  
  L'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Logistic Regression supporta i tipi di contenuto delle colonne di input, i tipi di contenuto delle colonne stimabili e i flag di modellazione specifici elencati nella tabella seguente. Per altre informazioni sul significato dei tipi di contenuto usati in un modello di data mining, vedere [Tipi di contenuto &#40;Data mining&#41;](../../analysis-services/data-mining/content-types-data-mining.md).  
   
-|Colonna|Tipi di contenuto|  
+|colonna|Tipi di contenuto|  
 |------------|-------------------|  
 |Attributo di input|Continuous, Discrete, Discretized, Key, Table|  
 |Attributo stimabile|Continuous, Discrete, Discretized|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Algoritmo Microsoft Logistic Regression](../../analysis-services/data-mining/microsoft-logistic-regression-algorithm.md)   
- [Esempi di Query del modello di regressione lineare](../../analysis-services/data-mining/linear-regression-model-query-examples.md)   
- [Contenuto del modello di data mining per i modelli di regressione logistica & #40; Analysis Services - Data Mining & #41;](../../analysis-services/data-mining/mining-model-content-for-logistic-regression-models.md)   
+ [Esempi di query sul modello di regressione lineare](../../analysis-services/data-mining/linear-regression-model-query-examples.md)   
+ [Contenuto dei modelli di data mining per i modelli di regressione logistica &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/mining-model-content-for-logistic-regression-models.md)   
  [Algoritmo Microsoft Neural Network](../../analysis-services/data-mining/microsoft-neural-network-algorithm.md)  
   
   

@@ -15,12 +15,12 @@ ms.assetid: 9ccc9a23-5597-4b35-a05f-2fc8eb885147
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: eeb95d0fb8d1e89fe5c2dc66362641c96f2230af
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 967de27eb9bc1f191b138e8b5962b04c145fe191
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48114441"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52510752"
 ---
 # <a name="apply-filters-to-model-testing-data"></a>Applicare filtri ai dati di test del modello
   Quando si specifica un'origine dati esterna da usare per il test di un modello, è possibile applicare un filtro per limitare i dati di input. È ad esempio possibile testare il modello in modo specifico per le stime sui clienti in una determinata fascia di reddito.  
@@ -47,7 +47,7 @@ ms.locfileid: "48114441"
   
  Per determinare se un modello contiene un filtro predefinito che potrebbe influire sui risultati, è possibile cercare la proprietà **Filtro** nel riquadro **Proprietà** oppure eseguire una query sul modello tramite i set di righe dello schema di data mining. La query seguente, ad esempio, restituisce il testo del filtro per il modello specificato:  
   
- `SELECT [FILTER] FROM $system.DMSCHEMA_MINING_MODELS WHERE MODEL_NAME = 'name of model’`  
+ `SELECT [FILTER] FROM $system.DMSCHEMA_MINING_MODELS WHERE MODEL_NAME = 'name of model'`  
   
 > [!WARNING]  
 >  Se si desidera rimuovere il filtro da un modello di data mining esistente o modificare le condizioni del filtro, è necessario rielaborare il modello di data mining.  
@@ -62,7 +62,7 @@ ms.locfileid: "48114441"
   
 3.  Nell'area **Seleziona set di dati da usare per il grafico di accuratezza** della scheda **Selezione input**selezionare l'opzione **Specifica un set di dati diverso**.  
   
-4.  Fare clic sul pulsante sfoglia **(…)** per aprire una finestra di dialogo e scegliere il set di dati esterno.  
+4.  Fare clic sul pulsante **(...)**  per aprire una finestra di dialogo e scegliere il set di dati esterno.  
   
 5.  Scegliere la tabella del case e aggiungere, se necessario, una tabella nidificata. Se necessario, eseguire il mapping delle colonne del modello alle colonne del set di dati esterno. Chiudere la finestra di dialogo **Specifica mapping colonne** per salvare la definizione della tabella di origine.  
   
@@ -82,7 +82,7 @@ ms.locfileid: "48114441"
   
 9. Fare clic sulla casella di testo **And/Or** e selezionare un operatore logico per definire la modalità di combinazione di più condizioni.  
   
-10. Facoltativamente, fare clic sul pulsante sfoglia **(…)** a destra della casella di testo **Valore** per aprire la finestra di dialogo **Filtro** e impostare le condizioni nella tabella annidata o nelle singole colonne della tabella del case.  
+10. Facoltativamente, fare clic sul pulsante Sfoglia **(...)**  a destra della **valore** casella di testo per aprire la **filtro** dialogo casella e impostare le condizioni sulla tabella nidificata o nelle colonne della tabella del case singolo.  
   
 11. Verificare la correttezza delle condizioni di filtro completate visualizzando il testo nel riquadro **Espressione** .  
   
@@ -92,7 +92,7 @@ ms.locfileid: "48114441"
   
 ## <a name="see-also"></a>Vedere anche  
  [Scegliere ed eseguire il mapping dei dati di test del modello](choose-and-map-model-testing-data.md)   
- [Utilizzo di dati di tabelle nidificate come Input per un grafico di accuratezza](using-nested-table-data-as-an-input-for-an-accuracy-chart.md)   
+ [Utilizzo di dati di tabelle nidificate come input per un grafico di accuratezza](using-nested-table-data-as-an-input-for-an-accuracy-chart.md)   
  [Scegliere un tipo di grafico di accuratezza e impostare le opzioni del grafico](choose-an-accuracy-chart-type-and-set-chart-options.md)  
   
   

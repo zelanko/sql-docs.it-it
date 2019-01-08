@@ -1,5 +1,5 @@
 ---
-title: 'Esempio: Configurazione del mirroring del database tramite certificati (Transact-SQL) | Microsoft Docs'
+title: 'Esempio: Impostazione del mirroring tramite certificati (Transact-SQL) | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,12 +15,12 @@ ms.assetid: df489ecd-deee-465c-a26a-6d1bef6d7b66
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: e5afcf2441de59e233abb3f1d211e0f14e517a43
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2eb63756a6ddf5e8a47f27f9f3d2f349c0bdf339
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48065701"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512185"
 ---
 # <a name="example-setting-up-database-mirroring-using-certificates-transact-sql"></a>Esempio: Impostazione del mirroring del database tramite certificati (Transact-SQL)
   In questo esempio vengono illustrati tutti i passaggi necessari per la creazione di una sessione di mirroring del database tramite l'autenticazione basata sui certificati. Negli esempi di questo argomento viene utilizzato [!INCLUDE[tsql](../../includes/tsql-md.md)]. A meno che la sicurezza della rete in uso non sia già garantita, è consigliabile utilizzare la crittografia per le connessioni per il mirroring del database.  
@@ -32,7 +32,7 @@ ms.locfileid: "48065701"
   
  Il ruolo principale viene inizialmente assunto da HOST_A e il ruolo di server mirror da HOST_B.  
   
- La configurazione del mirroring del database eseguita tramite certificati è costituita da quattro fasi generali. Le fasi 1, 2 e 4 vengono illustrate in questo esempio. Le fasi sono le seguenti:  
+ La configurazione del mirroring del database eseguita con i certificati è costituita da quattro fasi generali. Le fasi 1, 2 e 4 vengono illustrate in questo esempio. Le fasi sono le seguenti:  
   
 1.  [Configurazione delle connessioni in uscita](#ConfiguringOutboundConnections)  
   
@@ -222,7 +222,7 @@ ms.locfileid: "48065701"
 > [!IMPORTANT]  
 >  Se si prevede di utilizzare la modalità a sicurezza elevata con failover automatico, è necessario ripetere gli stessi passaggi di impostazione per configurare il server di controllo del mirroring per connessioni in uscita e in ingresso. Per configurare le connessioni in ingresso per un server di controllo del mirroring è necessario impostare account di accesso e utenti per il server di controllo del mirroring in entrambi i partner e per entrambi i partner nel server di controllo del mirroring.  
   
- Per altre informazioni, vedere [Impostazione dell'endpoint del mirroring del database per l'utilizzo di certificati per le connessioni in ingresso &#40;Transact-SQL&#41;](database-mirroring-use-certificates-for-inbound-connections.md).  
+ Per altre informazioni, vedere [Allow a Database Mirroring Endpoint to Use Certificates for Inbound Connections &#40;Transact-SQL&#41;](database-mirroring-use-certificates-for-inbound-connections.md).  
   
 ### <a name="creating-the-mirror-database"></a>Creazione del database mirror  
  Per informazioni su come creare un database mirror, vedere [Preparazione di un database mirror per il mirroring &#40;SQL Server&#41;](prepare-a-mirror-database-for-mirroring-sql-server.md).  

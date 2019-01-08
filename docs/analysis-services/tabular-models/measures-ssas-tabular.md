@@ -1,5 +1,5 @@
 ---
-title: Le misure | Microsoft Docs
+title: Le misure nei modelli tabulari di Analysis Services | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: cbd53d9d49c937967e88cefa95750dca41631876
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 508558f4458496ab4d376ec8906544f6656a25a5
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38045329"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072198"
 ---
 # <a name="measures"></a>Misure
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -50,13 +50,13 @@ Sum of TotalProfit: =SUM([TotalProfit])
 |**Grand Total**|**$4,691,673,731.53**|  
   
 ##  <a name="bkmk_def_mg"></a> Defining measures by using the measure grid  
- Le misure vengono create in fase di progettazione tramite la relativa griglia in Progettazione modelli. Ogni tabella dispone di una griglia delle misure. Per impostazione predefinita, la griglia delle misure viene visualizzata sotto ogni tabella in Progettazione modelli. È inoltre possibile scegliere di non visualizzare la griglia delle misure per una determinata tabella. Per attivare o disattivare la visualizzazione della griglia delle misure di una tabella, fare clic sul menu **Tabella** e quindi su **Mostra griglia delle misure**.  
+ Le misure vengono create in fase di progettazione tramite la relativa griglia in Progettazione modelli. Ogni tabella dispone di una griglia delle misure. Per impostazione predefinita, la griglia delle misure viene visualizzata sotto ogni tabella in Progettazione modelli. È inoltre possibile scegliere di non visualizzare la griglia delle misure per una determinata tabella. Per attivare o disattivare la visualizzazione della griglia delle misure di una tabella, scegliere il **tabella** menu e quindi fare clic su **Mostra griglia delle misure**.  
   
  Nella griglia delle misure è possibile creare misure nelle modalità seguenti:  
   
 -   Fare clic su una cella vuota della griglia delle misure, quindi digitare una formula DAX nella barra della formula. Quando si preme INVIO per completare la formula, la misura viene visualizzata nella cella della griglia delle misure.  
   
--   Creare una misura utilizzando una funzione di aggregazione standard facendo clic su una colonna, quindi sul pulsante Somma automatica (∑) nella barra degli strumenti e, infine, su una funzione di aggregazione standard. Le aggregazioni standard sono: Sum, Average, Count, DistinctCount, Max, Min. Le misure create utilizzando il pulsante Somma automatica verranno sempre visualizzate direttamente nella griglia delle misure, sotto la colonna.  
+-   Creare una misura utilizzando una funzione di aggregazione standard facendo clic su una colonna, quindi sul pulsante Somma automatica (∑) nella barra degli strumenti e, infine, su una funzione di aggregazione standard. Le aggregazioni standard sono: SUM, Average, Count, DistinctCount, Max, Min. Le misure create utilizzando il pulsante Somma automatica verranno sempre visualizzate direttamente nella griglia delle misure, sotto la colonna.  
   
  Per impostazione predefinita, quando si utilizza la somma automatica, il nome della misura viene definito in base al nome della colonna associata, seguito da due punti e successivamente dalla formula. Il nome può essere modificato nella barra della formula o nell'impostazione della proprietà **Nome misura** nella finestra Proprietà. Quando si crea una misura tramite una formula personalizzata, è possibile digitare un nome nella barra della formula, seguito da due punti e successivamente dalla formula oppure è possibile digitare un nome nell'impostazione delle proprietà **Nome misura** della finestra Proprietà.  
   
@@ -65,12 +65,12 @@ Sum of TotalProfit: =SUM([TotalProfit])
 > [!TIP]  
 >  È possibile raggruppare le misure di più tabelle in un'unica tabella creando una tabella vuota e quindi spostando o creando al suo interno le nuove misure. Tenere presente che potrebbe essere necessario includere i nomi di tabella nelle formule DAX per fare riferimento alle colonne in altre tabelle.  
   
- Se sono state definite prospettive per il modello, le misure non vengono aggiunte automaticamente a qualsiasi prospettiva. È necessario aggiungere manualmente misure a una prospettiva tramite la finestra di dialogo Prospettive. Per altre informazioni, vedere [prospettive](../../analysis-services/tabular-models/perspectives-ssas-tabular.md).  
+ Se sono state definite prospettive per il modello, le misure non vengono aggiunte automaticamente a qualsiasi prospettiva. È necessario aggiungere manualmente misure a una prospettiva tramite la finestra di dialogo Prospettive. Per altre informazioni, vedere [Prospettive](../../analysis-services/tabular-models/perspectives-ssas-tabular.md).  
   
 ##  <a name="bkmk_properties"></a> Proprietà delle misure  
  Ogni misura dispone di proprietà che ne consentono la definizione. Le proprietà delle misure, insieme a quelle della colonna associata, possono essere modificate nella finestra Proprietà. Di seguito sono riportate le proprietà delle misure:  
   
-|Proprietà|Impostazione predefinita|Description|  
+|Proprietà|Impostazione predefinita|Descrizione|  
 |--------------|---------------------|-----------------|  
 |**Descrizione**|Vuoto|Descrizione della misura. La descrizione non verrà visualizzata con la misura in uno strumento client di creazione report.|  
 |**Formato**|Determinato automaticamente in base al tipo di dati della colonna a cui viene fatto riferimento nell'espressione della formula.|Formato della misura, ad esempio, valuta o percentuale.|  
@@ -84,7 +84,7 @@ Sum of TotalProfit: =SUM([TotalProfit])
   
 ##  <a name="bkmk_rel_tasks"></a> Related tasks  
   
-|Argomento|Description|  
+|Argomento|Descrizione|  
 |-----------|-----------------|  
 |[Creare e gestire misure](../../analysis-services/tabular-models/create-and-manage-measures-ssas-tabular.md)|Viene descritto come creare e gestire misure utilizzando la griglia delle misure in Progettazione modelli.|  
   

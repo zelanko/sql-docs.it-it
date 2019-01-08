@@ -1,5 +1,5 @@
 ---
-title: 'Lesson 3: Design the Parent Report using the Report Wizard (Lezione 3: Progettare il report padre tramite la Creazione guidata report) | Microsoft Docs'
+title: 'Lezione 3: Progettare il Report padre tramite la creazione guidata rapporto | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,14 @@ ms.assetid: 2f69dcd3-cd6d-45a9-a62a-ba6f5f3179d8
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: d2b872449bf553a00b53bcf6153befd68b6053d9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 331d073082ce68f3ad1b58749256c5a177897e07
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48219991"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52395066"
 ---
-# <a name="lesson-3-design-the-parent-report-using-the-report-wizard"></a>Lezione 3: Progettare il report padre tramite la Creazione guidata report
+# <a name="lesson-3-design-the-parent-report-using-the-report-wizard"></a>Lezione 3: Progettare il Report padre tramite la creazione guidata Report
   Dopo aver creato una connessione dati e una tabella di dati per il report padre, il passaggio successivo consiste nel progettare il report padre utilizzando la Creazione guidata report in Progettazione report. Per altre informazioni sulla progettazione dei report, vedere [Progettare report con Progettazione report &#40;SSRS&#41;](tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md).  
   
 ### <a name="to-design-the-parent-report-using-the-report-wizard"></a>Per progettare il report padre tramite la Creazione guidata report  
@@ -31,7 +31,7 @@ ms.locfileid: "48219991"
   
      Verrà avviata la Creazione guidata report.  
   
-4.  Nel **proprietà set di dati** nella pagina il **zdroj dat** , quindi selezionare il **DataSet1** creato in [lezione 2: definire una connessione dati e una tabella di dati per Report padre](lesson-2-define-a-data-connection-and-data-table-for-parent-report.md).  
+4.  Nel **proprietà set di dati** nella pagina il **zdroj dat** , quindi selezionare il **DataSet1** creato in [lezione 2: Definire una connessione dati e un tabella di dati per il Report padre](lesson-2-define-a-data-connection-and-data-table-for-parent-report.md).  
     La casella **Available datasets** (Set di dati disponibili) viene aggiornata automaticamente con l'oggetto **DataTable** creato in precedenza.  
   
 5.  Scegliere **Avanti**.  

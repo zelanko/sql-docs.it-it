@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - MSsubscriptions_TSQL
@@ -19,19 +18,19 @@ ms.assetid: b7e8301d-d115-41f6-8d4f-e0d25f453b25
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 22a80f913566a65596d86bd08fce9ff9c7ee1570
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4b0c5d53519b09c9f30ccdf7e973e25e5a06a6a3
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47728859"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52823595"
 ---
 # <a name="mssubscriptions-transact-sql"></a>MSsubscriptions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Il **MSsubscriptions** tabella contiene una riga per ogni articolo pubblicato in una sottoscrizione gestita dal server di distribuzione locale. Questa tabella è archiviata nel database di distribuzione.  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**publisher_database_id**|**int**|ID del database del server di pubblicazione.|  
 |**publisher_id**|**smallint**|ID del server di pubblicazione.|  
@@ -47,7 +46,7 @@ ms.locfileid: "47728859"
 |**snapshot_seqno_flag**|**bit**|Indica l'origine del numero di sequenza delle transazioni snapshot, dove il valore **1** significa che **subscription_seqno** è il numero di sequenza dello snapshot.|  
 |**independent_agent**|**bit**|Indica se per questa pubblicazione è disponibile un agente di distribuzione autonomo.|  
 |**subscription_time**|**datetime**|Solo per uso interno.|  
-|**loopback_detection**|**bit**|Si applica alle sottoscrizioni che fanno parte di una topologia di replica transazionale bidirezionale. Il rilevamento di loopback determina se l'agente di distribuzione deve inviare nuovamente al Sottoscrittore le transazioni provenienti dal Sottoscrittore:<br /><br /> **1** = non restituisce le transazioni.<br /><br /> **0** = restituisce le transazioni.<br /><br /> Nota: Questa colonna è supportata solo per garantire la compatibilità con la funzionalità di replica bidirezionale [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]. Con le versioni più recenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è consigliabile utilizzare la replica peer-to-peer. Per altre informazioni, vedere [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md).|  
+|**loopback_detection**|**bit**|Si applica alle sottoscrizioni che fanno parte di una topologia di replica transazionale bidirezionale. Il rilevamento di loopback determina se l'agente di distribuzione deve inviare nuovamente al Sottoscrittore le transazioni provenienti dal Sottoscrittore:<br /><br /> **1** = non restituisce le transazioni.<br /><br /> **0** = restituisce le transazioni.<br /><br /> Nota: Questa colonna è supportata solo per compatibilità con la funzionalità di replica bidirezionale disponibile in [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]. Con le versioni più recenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è consigliabile utilizzare la replica peer-to-peer. Per altre informazioni, vedere [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md).|  
 |**agent_id**|**int**|ID dell'agente.|  
 |**update_mode**|**tinyint**|Tipo di aggiornamento.|  
 |**publisher_seqno**|**varbinary(16)**|Numero di sequenza della transazione nel server di pubblicazione per questa sottoscrizione.|  

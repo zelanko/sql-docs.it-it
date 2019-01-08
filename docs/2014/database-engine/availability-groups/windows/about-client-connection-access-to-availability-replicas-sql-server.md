@@ -17,12 +17,12 @@ ms.assetid: 29027e46-43e4-4b45-b650-c4cdeacdf552
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9e4e680bc7b22e31bf9da0c3502adf49d3bc8159
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 13a863603353ee47639cd327c8c5eebd6df8e12a
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48153672"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53352612"
 ---
 # <a name="about-client-connection-access-to-availability-replicas-sql-server"></a>Informazioni sull'accesso alla connessione client per le repliche di disponibilità (SQL Server)
   In un gruppo di disponibilità AlwaysOn è possibile configurare una o più repliche di disponibilità per consentire connessioni di sola lettura quando in esecuzione nel ruolo secondario, cioè quando in esecuzione come replica secondaria. È inoltre possibile configurare ogni replica di disponibilità per consentire o escludere le connessioni di sola lettura quando l'esecuzione avviene nel ruolo primario, ossia come replica primaria.  
@@ -80,13 +80,13 @@ ms.locfileid: "48153672"
   
 |Ruolo di replica|Accesso alla connessione supportato sulla replica|Finalità di connessione|Risultato tentativo di connessione|  
 |------------------|--------------------------------------------|-----------------------|--------------------------------|  
-|Secondari|All|Finalità di lettura, lettura e scrittura o nessuna finalità di connessione specificata|Esito positivo|  
+|Secondari|All|Finalità di lettura, lettura e scrittura o nessuna finalità di connessione specificata|Riuscito|  
 |Secondari|Nessuno (comportamento predefinito nel ruolo secondario).|Finalità di lettura, lettura e scrittura o nessuna finalità di connessione specificata|Failure|  
-|Secondari|Solo finalità di lettura|Con finalità di lettura|Esito positivo|  
+|Secondari|Solo finalità di lettura|Con finalità di lettura|Riuscito|  
 |Secondari|Solo finalità di lettura|Finalità di lettura e scrittura o nessuna finalità di connessione specificata|Failure|  
-|Primaria|Tutto (comportamento predefinito del ruolo primario).|Sola lettura, lettura e scrittura o nessuna finalità di connessione specificata|Esito positivo|  
-|Primaria|Lettura/scrittura|Solo finalità di lettura|Failure|  
-|Primaria|Lettura/scrittura|Finalità di lettura e scrittura o nessuna finalità di connessione specificata|Esito positivo|  
+|Primario|Tutto (comportamento predefinito del ruolo primario).|Sola lettura, lettura e scrittura o nessuna finalità di connessione specificata|Riuscito|  
+|Primario|Lettura/scrittura|Solo finalità di lettura|Failure|  
+|Primario|Lettura/scrittura|Finalità di lettura e scrittura o nessuna finalità di connessione specificata|Riuscito|  
   
  Per informazioni sulla configurazione di un gruppo di disponibilità in modo che accetti le connessioni dei client alle proprie repliche, vedere [Listener del gruppo di disponibilità, connettività client e failover dell'applicazione &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md).  
   
@@ -97,7 +97,7 @@ ms.locfileid: "48153672"
   
 |Replica|Modalità di commit|Ruolo iniziale|Accesso alla connessione per il ruolo secondario|Accesso alla connessione per il ruolo primario|  
 |-------------|-----------------|------------------|------------------------------------------|----------------------------------------|  
-|Replica1|Sincrona|Primaria|None|Lettura/scrittura|  
+|Replica1|Sincrona|Primario|None|Lettura/scrittura|  
 |Replica2|Sincrona|Secondari|None|Lettura/scrittura|  
 |Replica3|Asincrona|Secondari|Solo con finalità di lettura|Lettura/scrittura|  
 |Replica4|Asincrono|Secondari|Solo finalità di lettura|Lettura/scrittura|  
@@ -118,9 +118,9 @@ ms.locfileid: "48153672"
   
 ##  <a name="RelatedContent"></a> Contenuto correlato  
   
--   [Microsoft SQL Server AlwaysOn Solutions Guide for High Availability and Disaster Recovery](http://go.microsoft.com/fwlink/?LinkId=227600)  
+-   [Microsoft SQL Server AlwaysOn Solutions Guide for High Availability and Disaster Recovery](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
--   [SQL Server AlwaysOn Team Blog: Il Blog ufficiale di SQL Server AlwaysOn Team](http://blogs.msdn.com/b/sqlalwayson/)  
+-   [SQL Server AlwaysOn Team Blog: Il Team Blog ufficiale di SQL Server AlwaysOn](https://blogs.msdn.com/b/sqlalwayson/)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Panoramica di gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   

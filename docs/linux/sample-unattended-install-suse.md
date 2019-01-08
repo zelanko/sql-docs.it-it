@@ -1,5 +1,6 @@
 ---
-title: Installazione automatica per SQL Server su SUSE Linux Enterprise Server | Microsoft Docs
+title: Installazione automatica per SQL Server su SUSE Linux Enterprise Server
+titleSuffix: SQL Server
 description: Esempio di Script SQL Server - installazione automatica su SUSE Linux Enterprise Server
 author: rothja
 ms.author: jroth
@@ -7,16 +8,16 @@ manager: craigg
 ms.date: 10/02/2017
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
+ms.custom: sql-linux, seodec18
 ms.technology: linux
-ms.openlocfilehash: 9eb7c5585cd752719e7294fea96abe0c0d66a512
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 33341becf4c441383fda90fbc6f3d95e09a6d56d
+ms.sourcegitcommit: de8ef246a74c935c5098713f14e9dd06c4733713
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47650829"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53160509"
 ---
-# <a name="sample-unattended-sql-server-installation-script-for-suse-linux-enterprise-server"></a>Esempio: Script di installazione automatica di SQL Server per SUSE Linux Enterprise Server
+# <a name="sample-unattended-sql-server-installation-script-for-suse-linux-enterprise-server"></a>Esempio: Script di installazione di SQL Server automatico per SUSE Linux Enterprise Server
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 

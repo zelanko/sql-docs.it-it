@@ -19,12 +19,12 @@ ms.assetid: 4d933d19-8d21-4aa1-8153-d230cb3a3f99
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 1b08652d94022aaad7219483e1d638e2e7686411
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bad28d9b10d09cbf08e3568d9f994c7d5b84dfda
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48131201"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53205380"
 ---
 # <a name="full-database-backups-sql-server"></a>Backup completo del database (SQL Server)
   Un backup completo del database consente di eseguire il backup dell'intero database. Tale backup include la parte del log delle transazioni sufficiente per consentire il recupero del database completo dopo il ripristino del backup completo del database. I backup completi del database rappresentano il database al momento del completamento del backup.  
@@ -50,7 +50,7 @@ ms.locfileid: "48131201"
   
  ![Rischio di perdita di dati tra due backup del database](../../database-engine/media/bnr-rmsimple-1-fulldb-backups.gif "Rischio di perdita di dati tra due backup del database")  
   
-### <a name="example-includetsqlincludestsql-mdmd"></a>Esempio ([!INCLUDE[tsql](../../../includes/tsql-md.md)])  
+### <a name="example--includetsqlincludestsql-mdmd"></a>Esempio ( [!INCLUDE[tsql](../../../includes/tsql-md.md)])  
  Nell'esempio seguente viene illustrato come creare un backup completo del database utilizzando WITH FORMAT per sovrascrivere eventuali backup esistenti e creare un nuovo set di supporti.  
   
 ```  
@@ -68,7 +68,7 @@ GO
   
  Per informazioni sulle modalità di creazione dei backup di log, vedere [Backup di log delle transazioni &#40; SQL Server&#41;](transaction-log-backups-sql-server.md).  
   
-### <a name="example-includetsqlincludestsql-mdmd"></a>Esempio ([!INCLUDE[tsql](../../../includes/tsql-md.md)])  
+### <a name="example--includetsqlincludestsql-mdmd"></a>Esempio ( [!INCLUDE[tsql](../../../includes/tsql-md.md)])  
  Nell'esempio seguente viene illustrato come creare un backup completo del database utilizzando WITH FORMAT per sovrascrivere eventuali backup esistenti e creare un nuovo set di supporti. Viene quindi eseguito il backup del log delle transazioni. In una situazione reale sarebbe necessario eseguire una serie di backup del log regolari. In questo caso il database di esempio [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] viene impostato per l'utilizzo del modello di recupero con registrazione completa.  
   
 ```  

@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0b2f1bf4cf990c7888088388a8d9c65a45865a9f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1fb79f056e533f4aabacdab5e3467bedce22b696
+ms.sourcegitcommit: e0178cb14954c45575a0bab73dcc7547014d03b3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47727119"
+ms.lasthandoff: 12/04/2018
+ms.locfileid: "52860094"
 ---
 # <a name="sysdmexecqueryprofiles-transact-sql"></a>sys.dm_exec_query_profiles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "47727119"
 ## <a name="table-returned"></a>Tabella restituita  
  I contatori restituiti sono specifici per ogni operatore per ogni thread. I risultati sono dinamici e non corrispondono ai risultati delle opzioni esistenti come SET STATISTICS XML ON che creano l'output solo al termine della query.  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |session_id|**smallint**|Identifica la sessione in cui viene eseguita la query. Fa riferimento a dm_exec_sessions.session_id.|  
 |request_id|**int**|Identifica la richiesta di destinazione. Fa riferimento a dm_exec_sessions.request_id.|  
@@ -58,7 +58,7 @@ ms.locfileid: "47727119"
 |last_row_time|**bigint**|Timestamp in cui è stata aperta l'ultima riga in millisecondi.|  
 |close_time|**bigint**|Timestamp chiusura in millisecondi.|  
 |elapsed_time_ms|**bigint**|Tempo totale trascorso, in millisecondi, usato finora dalle operazioni del nodo di destinazione.|  
-|cpu_time_ms|**bigint**|Tempo CPU totale, in millisecondi, usato finora dalle operazioni del nodo di destinazione.|  
+|cpu_time_ms|**bigint**|Totale CPU (in millisecondi) utilizzo finora dalle operazioni del nodo di destinazione.|  
 |database_id|**smallint**|ID del database contenente l'oggetto in cui vengono eseguite le letture e le scritture.|  
 |object_id|**int**|Identificatore dell'oggetto in cui vengono eseguite le letture e le scritture. Fa riferimento a sys.objects.object_id.|  
 |index_id|**int**|Indice in cui viene aperto il set di righe.|  
@@ -73,7 +73,7 @@ ms.locfileid: "47727119"
 |segment_read_count|**int**|Numero di letture anticipate di segmenti.|  
 |segment_skip_count|**int**|Numero di segmenti ignorati finora.| 
 |actual_read_row_count|**bigint**|Numero di righe lette da un operatore, prima è stato applicato il predicato residuo.| 
-|estimated_read_row_count|**bigint**|**Si applica a:** partire [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1. <br/>Numero stimato di righe da leggere da un operatore prima che è stato applicato il predicato residuo.|  
+|estimated_read_row_count|**bigint**|**Si applica a:** A partire da [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1. <br/>Numero stimato di righe da leggere da un operatore prima che è stato applicato il predicato residuo.|  
   
 ## <a name="general-remarks"></a>Osservazioni generali  
  Se il nodo del piano di query non contiene I/O, tutti i contatori correlati alle operazioni di I/O vengono impostati su NULL.  
@@ -84,20 +84,30 @@ ms.locfileid: "47727119"
   
 -   In caso di analisi parallela, questa DMV restituisce i contatori per ogni thread parallelo usato nell'analisi.
  
- A partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1, le statistiche di esecuzione di query standard dell'infrastruttura di profilatura è presente side-by-side con un'infrastruttura di analisi le statistiche di esecuzione query lightweight. Nuova query esecuzione infrastruttura delle statistiche profilatura riduce l'overhead delle prestazioni di raccolta delle statistiche di esecuzione query per ogni operatore, ad esempio il numero effettivo di righe. Questa funzionalità può essere abilitata tramite globale avvio [flag di traccia 7412](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md), o viene attivata automaticamente quando l'evento esteso query_thread_profile viene utilizzato.
+A partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1, le statistiche di esecuzione di query standard dell'infrastruttura di profilatura è presente side-by-side con un'infrastruttura di analisi le statistiche di esecuzione query lightweight. Nuova query esecuzione infrastruttura delle statistiche profilatura riduce l'overhead delle prestazioni di raccolta delle statistiche di esecuzione query per ogni operatore, ad esempio il numero effettivo di righe. Questa funzionalità può essere abilitata tramite globale avvio [flag di traccia 7412](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md), o viene attivata automaticamente quando l'evento esteso query_thread_profile viene utilizzato.
 
 >[!NOTE]
 > CPU e il tempo trascorso non sono supportati in infrastruttura profilatura delle statistiche esecuzione query lightweight per ridurre l'impatto sulle prestazioni.
 
- SET STATISTICS XML ON e SET STATISTICS PROFILE ON utilizzare sempre le statistiche di esecuzione di query legacy infrastruttura di analisi.
-  
+SET STATISTICS XML ON e SET STATISTICS PROFILE ON utilizzare sempre le statistiche di esecuzione di query legacy infrastruttura di analisi.
+
+Per abilitare l'output in DM exec_query_profiles effettuare quanto segue:
+
+In [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 e in un secondo momento usare SET STATISTICS PROFILE ON o SET STATISTICS XML ON insieme alle query in corso il controllo. Ciò consente all'infrastruttura di profilatura e produce i risultati nella DMV per la sessione in cui è stato eseguito il comando SET. Se si sta analizzando una query in esecuzione da un'applicazione e non è possibile abilitare le opzioni SET con esso, è possibile creare un evento esteso tramite l'evento query_post_execution_showplan che attiverà l'infrastruttura di profilatura. 
+
+Nelle [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1, è possibile essere attivare [flag di traccia 7412](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) o usare l'evento esteso query_thread_profile.
+
+>[!NOTE]
+> La query in corso il controllo deve iniziare dopo aver abilitato la profilatura dell'infrastruttura. Se è già in esecuzione la query, avvio una sessione eventi estesi non produrrà i risultati in DM exec_query_profiles.
+
+
 ## <a name="permissions"></a>Permissions  
 
 Sul [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], è necessario `VIEW SERVER STATE` autorizzazione.   
 Sul [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], è necessario il `VIEW DATABASE STATE` autorizzazione nel database.   
    
 ## <a name="examples"></a>Esempi  
- Passaggio 1: Accedere a una sessione in cui si prevede di eseguire la query da che analizzare con DM exec_query_profiles. Per configurare la query per la profilatura utilizzare SET STATISTICS PROFILE in. Eseguire la query in questa stessa sessione.  
+ Passaggio 1: accedere a una sessione in cui si intende eseguire la query da analizzare con sys.dm_exec_query_profiles. Per configurare la query per la profilatura utilizzare SET STATISTICS PROFILE in. Eseguire la query in questa stessa sessione.  
   
 ```  
 --Configure query for profiling with sys.dm_exec_query_profiles  
@@ -111,7 +121,7 @@ GO
 --Next, run your query in this session, or in any other session if query profiling has been enabled globally 
 ```  
   
- Passaggio 2: Accedere a una seconda sessione diversa dalla sessione in cui viene eseguita la query.  
+ Passaggio 2: accedere a una seconda sessione, diversa dalla sessione in cui viene eseguita la query.  
   
  L'istruzione seguente riepiloga lo stato di avanzamento della query attualmente in esecuzione nella sessione 54. A tale scopo, viene calcolato il numero totale di righe di output restituite da tutti i thread per ogni nodo e confrontato con il numero stimato di righe di output per tale nodo.  
   

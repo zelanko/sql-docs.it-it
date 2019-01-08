@@ -5,8 +5,7 @@ ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_helppublication_TSQL
@@ -17,12 +16,12 @@ ms.assetid: e801c3f0-dcbd-4b4a-b254-949a05f63518
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c1293084c422c73bba83ee66e2242b9416368db6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7a0e823731ff80c714bc31a54210dbcd0e0fea18
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47624219"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53205210"
 ---
 # <a name="sphelppublication-transact-sql"></a>sp_helppublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,14 +47,14 @@ sp_helppublication [ [ @publication = ] 'publication' ]
  Flag che indica le righe che restituiscono valori. *trovato*viene **int** e un parametro di OUTPUT con valore predefinito è **23456**. **1** indica la pubblicazione è stata trovata. **0** indica la pubblicazione non è stata trovata.  
   
  [ **@publisher** =] **'***publisher***'**  
- Specifica un server di pubblicazione non [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *server di pubblicazione* is sysname con valore predefinito è NULL.  
+ Specifica un non - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] server di pubblicazione. *server di pubblicazione* is sysname con valore predefinito è NULL.  
   
 > [!NOTE]  
 >  *server di pubblicazione* non deve essere specificato quando si richiedono informazioni sulla pubblicazione da un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] server di pubblicazione.  
   
 ## <a name="result-sets"></a>Set di risultati  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |pubid|**int**|ID della pubblicazione.|  
 |NAME|**sysname**|Nome della pubblicazione.|  
@@ -92,9 +91,9 @@ sp_helppublication [ [ @publication = ] 'publication' ]
 |centralized_conflicts|**bit**|Specifica se i record dei conflitti vengono archiviati nel server di pubblicazione:<br /><br /> **0** = i record dei conflitti vengono archiviati sia il server di pubblicazione e nel Sottoscrittore che ha causato il conflitto.<br /><br /> **1** = i record dei conflitti vengono archiviati nel server di pubblicazione.|  
 |conflict_retention|**int**|Specifica il periodo di memorizzazione dei conflitti, espresso in giorni.|  
 |conflict_policy|**int**|Specifica i criteri di risoluzione dei conflitti adottati quando viene utilizzata l'opzione per Sottoscrittori ad aggiornamento in coda. I possibili valori sono i seguenti:<br /><br /> **1** = prevale il server di pubblicazione.<br /><br /> **2** = prevale il sottoscrittore.<br /><br /> **3** = sottoscrizione viene reinizializzata.|  
-|queue_type||Specifica il tipo di coda da utilizzare. I possibili valori sono i seguenti:<br /><br /> **MSMQ** = utilizza [!INCLUDE[msCoName](../../includes/msconame-md.md)] Accodamento per archiviare le transazioni.<br /><br /> **SQL** = utilizza [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per archiviare le transazioni.<br /><br /> Nota: Supporto per l'accodamento messaggi è stato interrotto.|  
+|queue_type||Specifica il tipo di coda da utilizzare. I possibili valori sono i seguenti:<br /><br /> **MSMQ** = utilizza [!INCLUDE[msCoName](../../includes/msconame-md.md)] Accodamento per archiviare le transazioni.<br /><br /> **SQL** = utilizza [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per archiviare le transazioni.<br /><br /> Nota: Il servizio di accodamento messaggi non è più supportato.|  
 |backward_comp_level||Livello di compatibilità del database. I possibili valori sono i seguenti:<br /><br /> **90** = [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> **100** = [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|  
-|publish_to_AD|**bit**|Specifica se la pubblicazione è pubblicata in [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory™. Un valore pari **1** indica che viene pubblicato e il valore **0** indica che non è pubblicata.|  
+|publish_to_AD|**bit**|Specifica se la pubblicazione è pubblicata nel [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory???. Un valore pari **1** indica che viene pubblicato e il valore **0** indica che non è pubblicata.|  
 |allow_initialize_from_backup|**bit**|Specifica se i Sottoscrittori possono inizializzare una sottoscrizione di questa pubblicazione da un backup anziché da uno snapshot iniziale. **1** significa che le sottoscrizioni possono essere inizializzate da un backup, e **0** indica che essi non è possibile. Per altre informazioni, vedere [inizializzare una sottoscrizione transazionale senza uno Snapshot](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md) una sottoscrizione transazionale senza uno snapshot.|  
 |replicate_ddl|**int**|Indica se per la pubblicazione è supportata la replica dello schema. **1** indica che vengono replicate istruzioni di data definition language (DDL) eseguite nel server di pubblicazione, e **0** indica che le istruzioni DDL non vengono replicate. Per altre informazioni, vedere [Apportare modifiche allo schema nei database di pubblicazione](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md).|  
 |enabled_for_p2p|**int**|Indica se la pubblicazione può essere utilizzata in una topologia di replica peer-to-peer. **1** indica che la pubblicazione supporta la replica peer-to-peer. Per altre informazioni, vedere [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md).|  
@@ -103,8 +102,8 @@ sp_helppublication [ [ @publication = ] 'publication' ]
 |enabled_for_p2p_conflictdetection|**int**|Specifica se l'Agente di Distribuzione rileva i conflitti per una pubblicazione abilitata per la replica peer-to-peer. Un valore pari **1** significa che i conflitti vengono rilevati. Per altre informazioni, vedere [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md).|  
 |originator_id|**int**|Specifica un ID per un nodo in una topologia peer-to-peer. Questo ID viene utilizzato per il rilevamento dei conflitti se **enabled_for_p2p_conflictdetection** è impostata su **1**. Per un elenco degli ID che sono già stati utilizzati, eseguire una query sulla tabella di sistema [Mspeer_originatorid_history](../../relational-databases/system-tables/mspeer-originatorid-history-transact-sql.md) .|  
 |p2p_continue_onconflict|**int**|Specifica se l'agente di distribuzione continua a elaborare le modifiche quando viene rilevato un conflitto. Un valore pari **1** significa che l'agente continua a elaborare le modifiche.<br /><br /> **\*\* Attenzione \* \***  è consigliabile usare il valore predefinito **0**. Quando questa opzione è impostata su **1**, l'agente di distribuzione tenta di eseguire la convergenza dei dati nella topologia applicando la riga in conflitto dal nodo con l'ID di origine più elevato. Questo metodo non garantisce la convergenza. Dopo il rilevamento di un conflitto, è necessario assicurarsi che la topologia sia coerente. Per ulteriori informazioni, vedere la sezione relativa alla gestione dei conflitti in [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md).|  
-|allow_partition_switch|**int**|Specifica se le istruzioni ALTER TABLE...SWITCH possono essere eseguite sul database pubblicato. Per altre informazioni, vedere [Replicare tabelle e indici partizionati](../../relational-databases/replication/publish/replicate-partitioned-tables-and-indexes.md).|  
-|replicate_partition_switch|**int**|Specifica se le istruzioni ALTER TABLE...SWITCH eseguite sul database pubblicato devono essere replicate ai Sottoscrittori. Questa opzione è valida solo se *allow_partition_switch* è impostata su **1**.|  
+|allow_partition_switch|**int**|Specifica se ALTER TABLE... Istruzioni SWITCH possono essere eseguite sul database pubblicato. Per altre informazioni, vedere [Replicare tabelle e indici partizionati](../../relational-databases/replication/publish/replicate-partitioned-tables-and-indexes.md).|  
+|replicate_partition_switch|**int**|Specifica se ALTER TABLE... Istruzioni SWITCH eseguite sul database pubblicato devono essere replicate ai sottoscrittori. Questa opzione è valida solo se *allow_partition_switch* è impostata su **1**.|  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  **0** (esito positivo) o **1** (errore)  
@@ -120,7 +119,7 @@ sp_helppublication [ [ @publication = ] 'publication' ]
 ## <a name="permissions"></a>Permissions  
  Solo i membri del ruolo predefinito del server sysadmin nel server di pubblicazione o i membri del ruolo predefinito del database db_owner nel database di pubblicazione o gli utenti nell'elenco di accesso alla pubblicazione possono eseguire sp_helppublication.  
   
- Per server di pubblicazione non [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], solo i membri del ruolo predefinito del server sysadmin nel server di distribuzione o i membri del ruolo predefinito del database db_owner nel database di distribuzione o gli utenti nell'elenco di accesso alla pubblicazione possono eseguire sp_helppublication.  
+ Per non - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] server di pubblicazione, solo i membri del ruolo di sysadmin predefinito del server nel server di distribuzione membri del ruolo predefinito del database db_owner nel database di distribuzione o gli utenti nell'elenco di accesso possono eseguire sp_helppublication.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Visualizzare e modificare le proprietà della pubblicazione](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   

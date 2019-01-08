@@ -20,20 +20,20 @@ ms.assetid: 86a15b33-4d03-4549-8ea2-b45e4f1baad7
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6bdc16e4bd09a0f5e93b0335cb8383040e778dc7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ff76632459f25981041e5585cd9cbb3dbcf906c5
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48220961"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53349558"
 ---
 # <a name="always-on-failover-cluster-instances-sql-server"></a>Istanze del cluster di failover Always On (SQL Server)
-  Nell'offerta [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Always On le istanze del cluster di failover Always On usano la funzionalità clustering di failover di Windows Server (WSFC, Windows Server Failover Clustering) per fornire la disponibilità elevata in locale tramite la ridondanza a livello di istanza del server: l' *istanza del cluster di failover* . Un'istanza del cluster di failover è una sola istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] installata nei nodi del clustering di failover di Windows Server (WSFC) e, possibilmente, in più subnet. In rete, un'istanza del cluster di failover appare come un'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in esecuzione in un singolo computer, le cui funzionalità forniscono il failover da un nodo WSFC a un altro, quando il nodo corrente non è più disponibile.  
+  Nell'offerta [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Always On le istanze del cluster di failover Always On usano la funzionalità clustering di failover di Windows Server (WSFC, Windows Server Failover Clustering) per fornire la disponibilità elevata in locale tramite la ridondanza a livello di istanza del server, ovvero un'*istanza del cluster di failover*. Un'istanza del cluster di failover è una sola istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] installata nei nodi del clustering di failover di Windows Server (WSFC) e, possibilmente, in più subnet. In rete, un'istanza del cluster di failover appare come un'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in esecuzione in un singolo computer, le cui funzionalità forniscono il failover da un nodo WSFC a un altro, quando il nodo corrente non è più disponibile.  
   
  Un'istanza del cluster di failover può sfruttare i [gruppi di disponibilità AlwaysOn](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md) per offrire ripristino di emergenza remoto a livello di database. Per altre informazioni, vedere [Clustering di failover e gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md).  
   
 > [!NOTE]  
->  A partire da [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)], le istanze del cluster di failover Always On supportano i volumi condivisi cluster sia in [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] che in [!INCLUDE[win8srv](../../../includes/win8srv-md.md)]. Per ulteriori informazioni sui volumi condivisi cluster, vedere [Informazioni sui volumi condivisi del cluster in un cluster di failover](http://technet.microsoft.com/library/dd759255.aspx).  
+>  A partire da [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)], le istanze del cluster di failover Always On supportano i volumi condivisi cluster sia in [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] che in [!INCLUDE[win8srv](../../../includes/win8srv-md.md)]. Per ulteriori informazioni sui volumi condivisi cluster, vedere [Informazioni sui volumi condivisi del cluster in un cluster di failover](https://technet.microsoft.com/library/dd759255.aspx).  
   
  **Contenuto dell'argomento**  
   
@@ -153,7 +153,7 @@ ms.locfileid: "48220961"
 |----------------------------|---------------|  
 |Descrive come installare e configurare una nuova istanza del cluster di failover di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|[Creare un nuovo Cluster di Failover SQL Server (; Programma di installazione);](../install/create-a-new-sql-server-failover-cluster-setup.md)|  
 |Descrive la modalità di aggiornamento a un cluster di failover di [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] .|[Aggiornare un cluster di failover di SQL Server](upgrade-a-sql-server-failover-cluster-instance.md)|  
-|Descrive i concetti relativi al clustering di failover di Windows e fornisce collegamenti ad attività correlate al clustering di failover di Windows|[!INCLUDE[nextref_longhorn](../../../includes/nextref-longhorn-md.md)]: [Panoramica dei cluster di failover](http://go.microsoft.com/fwlink/?LinkId=177878)<br /><br /> [!INCLUDE[nextref_longhorn](../../../includes/nextref-longhorn-md.md)] R2: [Panoramica dei cluster di failover](http://go.microsoft.com/fwlink/?LinkId=177879)|  
+|Descrive i concetti relativi al clustering di failover di Windows e fornisce collegamenti ad attività correlate al clustering di failover di Windows|[!INCLUDE[nextref_longhorn](../../../includes/nextref-longhorn-md.md)]: [Panoramica dei cluster di Failover](https://go.microsoft.com/fwlink/?LinkId=177878)<br /><br /> [!INCLUDE[nextref_longhorn](../../../includes/nextref-longhorn-md.md)] R2: [Panoramica dei cluster di Failover](https://go.microsoft.com/fwlink/?LinkId=177879)|  
 |Descrive le diversità tra il concetto di nodo in un'istanza del cluster di failover e di replica in un gruppo di disponibilità e le considerazioni per l'utilizzo di un'istanza del cluster di failover per ospitare una replica per un gruppo di disponibilità.|[Clustering di failover e gruppi di disponibilità Always On (SQL Server)](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)|  
   
   

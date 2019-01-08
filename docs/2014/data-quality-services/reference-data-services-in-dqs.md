@@ -10,12 +10,12 @@ ms.assetid: ef217717-6d05-443e-af26-44dc745a349d
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 64ff0ae59b817f0d2f2df73f90aea0a5a0b0f3ac
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: c9d1af9671765908fad41a7c558c9cef3cce4794
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51031918"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53349774"
 ---
 # <a name="reference-data-services-in-dqs"></a>Servizi dati di riferimento in DQS
   I dati di riferimento sono un set accurato e completo di dati globali correlati o categorizzati (oltre i limiti di un'impresa) disponibile presso domini pubblici attendibili o da provider premium di contenuti commerciali.  
@@ -31,11 +31,11 @@ ms.locfileid: "51031918"
 -   La funzionalità supporta l'utilizzo di dati di riferimento da Windows Azure Marketplace e direttamente dai provider di dati di riferimento di terze parti.  
   
 ##  <a name="Marketplace"></a> Utilizzo dei dati di riferimento da Windows Azure Marketplace  
- DQS supporta l'utilizzo di dati di riferimento da Windows Azure Marketplace per consentire ai provider di contenuti di fornire servizi dati di riferimento mediante il servizio Marketplace. Marketplace è un servizio Microsoft che fornisce un singolo marketplace e canale di recapito per dati e applicazioni di alta qualità come servizi cloud. Per altre informazioni su Marketplace, vedere [Learn About Windows Azure Marketplace](http://go.microsoft.com/fwlink/?LinkId=211291) (Informazioni su Windows Azure Marketplace) (http://go.microsoft.com/fwlink/?LinkId=211291).  
+ DQS supporta l'utilizzo di dati di riferimento da Windows Azure Marketplace per consentire ai provider di contenuti di fornire servizi dati di riferimento mediante il servizio Marketplace. Marketplace è un servizio Microsoft che fornisce un singolo marketplace e canale di recapito per dati e applicazioni di alta qualità come servizi cloud. Per altre informazioni su Marketplace, vedere [Learn About Windows Azure Marketplace](https://go.microsoft.com/fwlink/?LinkId=211291) (Informazioni su Windows Azure Marketplace) (https://go.microsoft.com/fwlink/?LinkId=211291).  
   
  La perfetta integrazione tra Marketplace e DQS semplifica i passaggi associati all'individuazione, all'esplorazione e all'acquisizione di informazioni per i progetti Data Quality dall'interno di DQS. I dati vengono utilizzati in DQS e aiutano gli utenti di DQS a ottenere un'elevata qualità dei dati unendo in modo del tutto innovativo le funzionalità di DQS, Marketplace e dei provider di servizi dati di riferimento.  
   
- Per utilizzare dati di riferimento da Marketplace in DQS per l'attività di pulizia, è necessario avere una chiave account Marketplace. La creazione di una chiave account Marketplace è gratuita ed è richiesto un pagamento solo se si richiedono set di dati a pagamento. Non vi sono spese per la sottoscrizione né per l'utilizzo di set di dati gratuiti. Per informazioni dettagliate sulla creazione di una chiave account Marketplace, vedere [Creazione di un account](http://go.microsoft.com/fwlink/?LinkId=212936) (http://go.microsoft.com/fwlink/?LinkId=212936).  
+ Per utilizzare dati di riferimento da Marketplace in DQS per l'attività di pulizia, è necessario avere una chiave account Marketplace. La creazione di una chiave account Marketplace è gratuita ed è richiesto un pagamento solo se si richiedono set di dati a pagamento. Non vi sono spese per la sottoscrizione né per l'utilizzo di set di dati gratuiti. Per informazioni dettagliate sulla creazione di una chiave account Marketplace, vedere [Creazione di un account](https://go.microsoft.com/fwlink/?LinkId=212936) (https://go.microsoft.com/fwlink/?LinkId=212936).  
   
  È inoltre possibile eseguire le seguenti attività Marketplace dall'interno di DQS:  
   
@@ -48,22 +48,22 @@ ms.locfileid: "51031918"
  È possibile eseguire tali attività nella scheda **Dati di riferimento** della schermata **Configurazione** in [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)].  
   
 ##  <a name="Direct"></a> Utilizzo dei dati di riferimento direttamente dai provider di dati di riferimento di terze parti  
- Se non si è connessi a Internet, e pertanto non in grado di utilizzare Marketplace, DQS supporta anche la connessione diretta a provider di dati disponibili all'interno della rete della propria organizzazione. Per utilizzare dati di riferimento da provider di dati di riferimento di terze parti online, è necessario creare un record per il provider di dati in DQS.  
+ Se non si è connessi a Internet, e quindi non è possibile usare Marketplace, DQS supporta anche la connessione diretta a provider di dati disponibili all'interno della rete della propria organizzazione. Per utilizzare dati di riferimento da provider di dati di riferimento di terze parti online, è necessario creare un record per il provider di dati in DQS.  
   
 ##  <a name="HowToCleanse"></a> Come pulire i dati utilizzando i dati di riferimento  
  La pulizia dei dati in DQS utilizzando dati di riferimento prevede i tre passaggi seguenti:  
   
-1.  **Configurazione dei dettagli del provider di dati di riferimento in DQS**: prima che sia possibile utilizzare dati di riferimento in DQS, è necessario configurare i dettagli del servizio dati di riferimento in DQS.  
+1.  **Configurare i dettagli del provider di dati di riferimento in DQS**: Prima che sia possibile utilizzare i dati di riferimento in DQS, è necessario configurare i dettagli del servizio dati di riferimento in DQS.  
   
-    1.  Se si utilizza Marketplace, fornire una chiave account Marketplace valida, passare alla categoria dati [Data Quality Services](http://go.microsoft.com/fwlink/?LinkId=227587) in Marketplace, quindi effettuare la sottoscrizione ai provider desiderati.  
+    1.  Se si utilizza Marketplace, fornire una chiave account Marketplace valida, passare alla categoria dati [Data Quality Services](https://go.microsoft.com/fwlink/?LinkId=227587) in Marketplace, quindi effettuare la sottoscrizione ai provider desiderati.  
   
     2.  Se si utilizza un provider di dati di riferimento online diretto, è necessario aggiungere i dettagli diretti del provider di dati di riferimento in DQS prima che sia possibile utilizzarlo.  
   
      La configurazione dei dettagli del provider di dati di riferimento in DQS è un'attività che si esegue una sola volta per ogni provider di dati specifico. Solo gli amministratori DQS possono configurare le impostazioni relative ai dati di riferimento in DQS.  
   
-2.  **Eseguire il mapping di un dominio/dominio composito in una Knowledge Base al servizio dati di riferimento**: eseguire il mapping di un dominio/dominio composito al servizio dati di riferimento appropriato sottoscritto/aggiunto nel passaggio 1.  
+2.  **Eseguire il mapping di un dominio/dominio composito in una knowledge base per il servizio dati di riferimento**: Eseguire il mapping di un dominio/dominio composito al servizio dati di riferimento appropriato sottoscritto/aggiunto nel passaggio 1.  
   
-3.  **Utilizzare i domini con mapping per l'attività Pulizia in un progetto Data Quality**: durante la creazione di un progetto Data Quality per l'attività **Pulizia** , selezionare la Knowledge Base che contiene i domini/domini compositi di cui è stato eseguito il mapping ai servizi dati di riferimento nel passaggio 2 ed eseguire l'attività di pulizia.  
+3.  **Usare i domini con mapping per l'attività di pulizia in un progetto data quality**: Durante la creazione di un progetto data quality per la **pulizia** attività, selezionare la knowledge base che contiene domini/domini compositi mappati ai servizi dati di riferimento nel passaggio 2 ed eseguire l'attività di pulizia.  
   
 ## <a name="related-tasks"></a>Attività correlate  
   

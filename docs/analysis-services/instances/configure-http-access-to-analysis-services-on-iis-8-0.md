@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: b3d45b5f1e3dc47aa47a4478cb8408626ad73de3
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 7482b4a2ac81541cdd9f6317d7f76291e34aa162
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50148146"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52420652"
 ---
 # <a name="configure-http-access-to-analysis-services-on-iis-80"></a>Configurare l'accesso HTTP ad Analysis Services in IIS 8.0
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -91,12 +91,12 @@ ms.locfileid: "50148146"
 > [!NOTE]  
 >  Ricordarsi di sbloccare le porte in Windows Firewall per consentire le connessioni client a un server Analysis Services remoto. Per altre informazioni, vedere [Configure the Windows Firewall to Allow Analysis Services Access](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md).  
   
-##  <a name="bkmk_copy"></a> Passaggio 1: Copiare i file MSMDPUMP in una cartella nel server Web  
+##  <a name="bkmk_copy"></a> Passaggio 1: Copiare i file MSMDPUMP in una cartella sul server Web  
  A ogni endpoint HTTP creato deve essere associato un proprio set di file MSMDPUMP. In questo passaggio si esegue la copia del file eseguibile MSMDPUMP, del file di configurazione e della cartella delle risorse dalle cartelle di programma di Analysis Services in una cartella della directory virtuale IIS che verrà creata nel file system del computer in cui è in esecuzione IIS.  
   
  È necessario formattare l'unità per il file system NTFS. Il percorso della cartella creata non deve contenere spazi.  
   
-1.  Copiare i file seguenti, disponibili in \<unità >: \Programmi\Microsoft SQL Server\\< istanza\>\OLAP\bin\isapi: MSMDPUMP. DLL, MSMDPUMP. INI e una cartella Resources.  
+1.  Copiare i file seguenti, disponibili in \<unità >: \Programmi\Microsoft SQL Server\\< istanza\>\OLAP\bin\isapi: MSMDPUMP.DLL, MSMDPUMP.INI e una cartella Resources.  
   
      ![Struttura di cartelle di file MSMDPUMP](../../analysis-services/instances/media/ssas-httpaccess-msmdpumpfilecopy.PNG "struttura di cartelle di file MSMDPUMP")  
   
@@ -165,9 +165,9 @@ ms.locfileid: "50148146"
   
  L'**autenticazione anonima** viene spesso usata durante il test iniziale, perché la relativa semplicità di configurazione consente di convalidare rapidamente la connettività HTTP ad Analysis Services. In soli pochi passaggi è possibile assegnare un account utente univoco come identità, concedere all'account le autorizzazioni in Analysis Services, utilizzare l'account per verificare l'accesso ai dati in un'applicazione client e infine disabilitare l'autenticazione anonima al completamento del test.  
   
- È anche possibile usare l'autenticazione anonima in un ambiente di produzione se gli utenti non hanno account utente di Windows, ma si attengono alle procedure consigliate bloccando le autorizzazioni nel sistema host, come illustrato nell'articolo: [Enable Anonymous Authentication (IIS 7)](http://technet.microsoft.com/library/cc731244\(v=ws.10\).aspx)(Abilitare l'autenticazione anonima (IIS 7)). Assicurarsi che l'autenticazione sia impostata nella directory virtuale e non nel sito Web padre, per ridurre ulteriormente il livello di accesso dell'account.  
+ È anche possibile usare l'autenticazione anonima in un ambiente di produzione se gli utenti non hanno account utente di Windows, ma si attengono alle procedure consigliate bloccando le autorizzazioni nel sistema host, come illustrato nell'articolo [Abilitare l'autenticazione anonima (IIS 7)](http://technet.microsoft.com/library/cc731244\(v=ws.10\).aspx). Assicurarsi che l'autenticazione sia impostata nella directory virtuale e non nel sito Web padre, per ridurre ulteriormente il livello di accesso dell'account.  
   
- Quando è abilitata l'autenticazione anonima, la connessione come utente anonimo è consentita per qualsiasi connessione utente all'endpoint HTTP. Non sarà possibile controllare le singole connessioni utente né usare l'identità utente per selezionare i dati da un modello. Come è possibile vedere, l'utilizzo dell'autenticazione anonima ha impatto su vari aspetti, dalla progettazione dei modelli, all'aggiornamento dei dati e all'accesso a questi ultimi. Tuttavia, se gli utenti non dispongono di un account di accesso di Windows con cui iniziare, è possibile che l'unica opzione disponibile sia l'account anonimo.  
+ Quando è abilitata l'autenticazione anonima, la connessione come utente anonimo è consentita per qualsiasi connessione utente all'endpoint HTTP. Sarà in grado di controllare le connessioni di singolo utente, né utilizzare l'identità dell'utente per selezionare i dati da un modello. Come è possibile vedere, l'utilizzo dell'autenticazione anonima ha impatto su vari aspetti, dalla progettazione dei modelli, all'aggiornamento dei dati e all'accesso a questi ultimi. Tuttavia, se gli utenti non dispongono di un account di accesso di Windows con cui iniziare, è possibile che l'unica opzione disponibile sia l'account anonimo.  
   
 #### <a name="set-the-authentication-type-and-add-a-script-map"></a>Impostare il tipo di autenticazione e aggiungere un mapping di script  
   
@@ -188,7 +188,7 @@ ms.locfileid: "50148146"
   
 5.  Disabilitare **Autenticazione anonima** se si usa l'autenticazione di Windows o di base. Quando abilitata, l'autenticazione anonima viene sempre utilizzata per prima in IIS, persino se si abilitano altri metodi di autenticazione.  
   
-     Con l'autenticazione anonima, il data pump (msmdpump.dll) viene eseguito come account utente stabilito per l'utente anonimo. Non esiste alcuna distinzione tra l'utente connesso a IIS e quello connesso ad Analysis Services. Per impostazione predefinita, in IIS viene utilizzato l'account IUSR, ma è possibile impostarlo su un account utente di dominio con autorizzazioni di rete. Sarà necessaria questa funzionalità se IIS e Analysis Services si trovano in computer diversi.  
+     Con l'autenticazione anonima, il data pump (msmdpump.dll) viene eseguito come account utente stabilito per l'utente anonimo. Non esiste alcuna distinzione tra l'utente connesso a IIS e quello connesso ad Analysis Services. Per impostazione predefinita, in IIS viene utilizzato l'account IUSR, ma è possibile impostarlo su un account utente di dominio con autorizzazioni di rete. Questa funzionalità è necessario se IIS e Analysis Services si trovano in computer diversi.  
   
      Per istruzioni su come configurare le credenziali per l'autenticazione anonima, vedere [Anonymous Authentication](http://www.iis.net/configreference/system.webserver/security/authentication/anonymousauthentication)(Autenticazione anonima).  
   
@@ -242,7 +242,7 @@ ms.locfileid: "50148146"
   
  Per altre informazioni, vedere [Autorizzazione dell'accesso a oggetti e operazioni &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)(Autenticazione a Microsoft BI e delega d'identità).  
   
-##  <a name="bkmk_test"></a> Passaggio 6: Verificare la configurazione  
+##  <a name="bkmk_test"></a> Passaggio 6: Testare la configurazione  
  La sintassi della stringa di connessione per MSMDPUMP è l'URL del MSMDPUMP.dll.  
   
  Se l'applicazione web è in ascolto su una porta fissa, aggiungere il numero di porta per il nome del server o l'indirizzo IP (ad esempio, `http://my-web-srv01:8080/OLAP/msmdpump.dll` o `http://123.456.789.012:8080/OLAP/msmdpump.dll`.  
@@ -251,7 +251,7 @@ ms.locfileid: "50148146"
   
  **Risolvere i problemi delle connessioni con Internet Explorer**  
   
- Una richiesta di connessione che termina con l'errore potrebbe non fornire proseguire: "non è possibile prevedere una connessione a '\<nome server >', o servizio di analisi non è in esecuzione sul server".  
+ Una richiesta di connessione che termina con l'errore potrebbe non fornire proseguire:  "Impossibile eseguire una connessione '\<nome server >', o servizio di analisi non è in esecuzione sul server".  
   
  Per ottenere un errore con maggiori informazioni, procedere come segue:  
   

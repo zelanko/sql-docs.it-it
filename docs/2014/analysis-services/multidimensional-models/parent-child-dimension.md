@@ -21,15 +21,15 @@ ms.assetid: 4657f5dc-d88e-48d2-a448-08f79bc89546
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d20b40f89aeea9c4131ecc921754b1f1140d352c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: be08164b3e96f5995c5ed1b64edc83699c7d8b40
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48124291"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52505557"
 ---
 # <a name="parent-child-hierarchy"></a>Gerarchia padre-figlio
-  Una gerarchia padre-figlio è una gerarchia in una dimensione standard contenente un attributo padre. Un attributo padre descrive una *relazione autoreferenziale*, o *self join*, in una tabella della dimensione principale. Le gerarchie padre-figlio vengono create da un unico attributo padre. A una gerarchia padre-figlio viene assegnato un solo livello, in quanto i livelli presenti nella gerarchia sono derivati dalle relazioni padre-figlio tra i membri associati all'attributo padre. La posizione di un membro in una gerarchia padre-figlio è determinata dal `KeyColumns` e `RootMemberIf` delle proprietà dell'elemento padre dell'attributo, mentre la posizione di un membro in un livello è determinata dal `OrderBy` proprietà dell'attributo padre. Per altre informazioni sulle proprietà degli attributi, vedere [Attributi e gerarchie di attributi](../multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md).  
+  Una gerarchia padre-figlio è una gerarchia in una dimensione standard contenente un attributo padre. Un attributo padre descrive una *relazione autoreferenziale*, o *self join*, in una tabella della dimensione principale. Le gerarchie padre-figlio vengono create da un unico attributo padre. A una gerarchia padre-figlio viene assegnato un solo livello, in quanto i livelli presenti nella gerarchia sono derivati dalle relazioni padre-figlio tra i membri associati all'attributo padre. La posizione di un membro in una gerarchia padre-figlio è determinata dalle proprietà `KeyColumns` e `RootMemberIf` dell'attributo padre, mentre la posizione di un membro in un livello è determinata dalla proprietà `OrderBy` dell'attributo padre. Per altre informazioni sulle proprietà degli attributi, vedere [Attributi e gerarchie di attributi](../multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md).  
   
  A causa delle relazioni padre-figlio tra livelli in una gerarchia padre-figlio, alcuni membri non foglia potrebbero includere anche dati derivati dalle origini dei dati sottostanti oltre ai dati aggregati dai membri figlio.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "48124291"
   
  Nelle dimensioni padre-figlio, tuttavia, le gerarchie vengono create analizzando i dati contenuti nella tabella della dimensione principale e quindi valutando le relazioni padre-figlio tra i record della tabella. Per altre informazioni sulle gerarchie padre-figlio, vedere [Gerarchie definite dall'utente](../multidimensional-models-olap-logical-dimension-objects/user-hierarchies.md).  
   
- Le gerarchie padre-figlio non derivano i nomi dei livelli in una gerarchia padre-figlio dagli attributi utilizzati per creare la gerarchia. I nomi dei livelli vengono invece creati automaticamente utilizzando un modello di denominazione, ovvero un'espressione stringa che è possibile specificare al livello dell'attributo padre che controlla la generazione della gerarchia dell'attributo. Per altre informazioni sull'impostazione del modello di denominazione per un attributo padre, vedere [Attributi e gerarchie di attributi](../multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md).  
+ Le gerarchie padre-figlio non derivano i nomi dei livelli in una gerarchia padre-figlio dagli attributi utilizzati per creare la gerarchia. Invece di creare nomi di livello tali dimensioni automaticamente usando un'espressione di modello, ovvero una stringa dei nomi è possibile specificare a livello di attributo padre che controlla di controllare l'attributo la gerarchia dell'attributo. Per altre informazioni sull'impostazione del modello di denominazione per un attributo padre, vedere [Attributi e gerarchie di attributi](../multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md).  
   
 ## <a name="data-members"></a>Membri dei dati  
  In genere, i membri foglia di una dimensione contengono dati derivati direttamente dalle origini dei dati sottostanti, mentre i membri non foglia contengono dati derivati dalle aggregazioni eseguite sui membri figlio.  

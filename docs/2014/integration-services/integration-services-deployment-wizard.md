@@ -13,12 +13,12 @@ ms.assetid: f3d93e13-2d85-47ff-a913-cda4046491c4
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d8a5b2cea7ae8b0166c0190044524941ca28ddca
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8f90613d3c8e0204e2861008a5f7be0846eca64a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48086297"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535900"
 ---
 # <a name="integration-services-deployment-wizard"></a>Distribuzione guidata Integration Services
   Con la Distribuzione guidata [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] è possibile distribuire progetti nel catalogo SSISDB in un'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utilizzando il modello di distribuzione del progetto.  
@@ -29,9 +29,9 @@ ms.locfileid: "48086297"
   
 1.  **Seleziona origine** : selezionare il [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] progetto che si desidera distribuire.  
   
-2.  **Seleziona destinazione** – selezionare la destinazione del progetto.  
+2.  **Seleziona destinazione** -selezionare la destinazione del progetto.  
   
-3.  **Revisione** : Visualizza le opzioni selezionate.  
+3.  **Revisione** -consente di visualizzare le opzioni selezionate.  
   
 4.  **Distribuisci/risultati** : distribuisce il progetto e visualizza i risultati.  
   
@@ -54,7 +54,7 @@ ms.locfileid: "48086297"
  Per uscire dalla procedura guidata, fare clic su **Chiudi**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Distribuire progetti nel Server Integration Services](../../2014/integration-services/deploy-projects-to-integration-services-server.md)   
+ [Distribuire progetti nel server Integration Services](../../2014/integration-services/deploy-projects-to-integration-services-server.md)   
  [Distribuzione di progetti e pacchetti](packages/deploy-integration-services-ssis-projects-and-packages.md)  
   
   

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - IDREFS relationships [SQLXML]
@@ -30,12 +28,12 @@ ms.assetid: 98820afa-74e1-4e62-b336-6111a3dede4c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e5ca0676d280a266561c45388beac938366d17ca
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1ae1037a8b04ad1a16b8d42485105927015359a1
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48144911"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52814873"
 ---
 # <a name="specifying-relationships-using-sqlrelationship-sqlxml-40"></a>Definizione di relazioni tramite sql:relationship (SQLXML 4.0)
   Gli elementi in un documento XML possono essere correlati. È possibile nidificare gerarchicamente gli elementi e specificare relazioni ID, IDREF o IDREFS tra gli elementi.  
@@ -52,7 +50,7 @@ ms.locfileid: "48144911"
   
  Per fornire i nomi di tabella e le necessarie informazioni sull'unione in join, nell'annotazione `sql:relationship` vengono specificati gli attributi seguenti. Questi attributi sono validi solo con il  **\<SQL: Relationship >** elemento:  
   
- **Nome**  
+ **Name**  
  Specifica il nome univoco della relazione,  
   
  **Parent**  
@@ -186,7 +184,7 @@ ms.locfileid: "48144911"
 </ROOT>  
 ```  
   
-### <a name="b-specifying-a-relationship-chain"></a>B. Definizione di una catena di relazioni  
+### <a name="b-specifying-a-relationship-chain"></a>b. Definizione di una catena di relazioni  
  Per questo esempio, si supponga di voler fare in modo che il documento XML seguente utilizzi dati ottenuti dal database di AdventureWorks:  
   
 ```  
@@ -200,7 +198,7 @@ ms.locfileid: "48144911"
   
  Per ogni ordine nella tabella Sales. SalesOrderHeader, il documento XML contiene un  **\<ordine >** elemento. E ogni  **\<ordine >** elemento contiene un elenco delle  **\<Product >** gli elementi figlio, uno per ogni prodotto richiesto nell'ordine.  
   
- Per specificare uno schema XSD che produrrà questa gerarchia, è necessario definire due relazioni: OrderOD e ODProduct. La relazione OrderOD specifica la relazione padre-figlio tra le tabelle Sales.SalesOrderHeader e Sales.SalesOrderDetail. La relazione ODProduct specifica la relazione tra le tabelle Sales.SalesOrderDetail e Production.Product.  
+ Per specificare uno schema XSD che produrrà questa gerarchia, è necessario specificare due relazioni: OrderOD e ODProduct. La relazione OrderOD specifica la relazione padre-figlio tra le tabelle Sales.SalesOrderHeader e Sales.SalesOrderDetail. La relazione ODProduct specifica la relazione tra le tabelle Sales.SalesOrderDetail e Production.Product.  
   
  Nello schema seguente, il `msdata:relationship` annotazione in di  **\<Product >** elemento specifica due valori: OrderOD e ODProduct. L'ordine in cui sono elencati gli attributi è importante.  
   

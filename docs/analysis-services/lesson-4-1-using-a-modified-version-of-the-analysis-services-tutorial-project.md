@@ -1,5 +1,5 @@
 ---
-title: Utilizzando una versione modificata dell'analisi di servizi progetto Tutorial | Documenti Microsoft
+title: Usando una versione modificata dell'analisi dei servizi di progetto dell'esercitazione | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 93847b7e6cade7d77774603ba1852c16a5a783b7
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 4d3fb90b8823ff8a8585647bf60b87ed4098bc6e
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34017698"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52401114"
 ---
-# <a name="lesson-4-1---using-a-modified-version-of-the-analysis-services-tutorial-project"></a>Lezione 4-1-utilizzo di una versione modificata del progetto Analysis Services Tutorial
+# <a name="lesson-4-1---using-a-modified-version-of-the-analysis-services-tutorial-project"></a>Lezione 4-1: uso di una versione modificata del progetto Analysis Services Tutorial
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
 Le lezioni rimanenti di questa esercitazione sono basate su una versione migliorata del progetto [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial completato nelle prime tre lezioni. Altre tabelle e calcoli denominati sono stati aggiunti alla vista origine dati **Adventure Works DW 2012** ; sono state aggiunte altre dimensioni al progetto e al cubo [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial. Infine, è stato aggiunto un secondo gruppo di misure contenente le misure di una seconda tabella dei fatti. Il progetto migliorato consente di approfondire la conoscenza delle tecniche per l'aggiunta di funzionalità alla propria applicazione di Business Intelligence senza la necessità di tornare su informazioni già acquisite.  
@@ -41,9 +41,9 @@ Per continuare l'esercitazione è necessario scaricare, estrarre, caricare ed el
   
 ## <a name="loading-and-processing-the-enhanced-project"></a>Caricamento ed elaborazione del progetto migliorato  
   
-1.  In [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]scegliere **Chiudi soluzione** dal menu **File** per chiudere i file che non verranno usati.  
+1.  Nelle [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]via il **File** menu, fare clic su **Chiudi soluzione** per chiudere i file non è possibile utilizzare.  
   
-2.  Scegliere **Apri** dal menu **File** e fare clic su **Progetto/Soluzione**.  
+2.  Scegliere **Apri** dal menu **File**e fare clic su **Progetto/Soluzione**.  
   
 3.  Passare al percorso in cui sono stati estratti i file di progetto dell'esercitazione.  
   

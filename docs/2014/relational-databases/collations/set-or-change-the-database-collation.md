@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - collations [SQL Server], database
@@ -14,12 +13,12 @@ ms.assetid: 1379605c-1242-4ac8-ab1b-e2a2b5b1f895
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3c554ec2d49e9e03c3381a54b8c834514bd16e34
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: aa7359fc1436cfbb4222dcc63f9bb700720bf3cb
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48071911"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52772563"
 ---
 # <a name="set-or-change-the-database-collation"></a>Impostare o modificare le regole di confronto del database
   In questo argomento viene descritto come impostare e modificare le regole di confronto del database in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Se non viene specificata alcuna regola di confronto, vengono utilizzate le regole di confronto del server.  
@@ -32,7 +31,7 @@ ms.locfileid: "48071911"
   
      [Indicazioni](#Recommendations)  
   
-     [Security](#Security)  
+     [Sicurezza](#Security)  
   
 -   **Per impostare o modificare le regole di confronto del database utilizzando:**  
   
@@ -58,7 +57,7 @@ ms.locfileid: "48071911"
   
     -   Tutti i parametri di tipo `char`, `varchar`, `text`, `nchar`, `nvarchar` o `ntext` e i valori scalari restituiti per le stored procedure e le funzioni definite dall'utente vengono modificati in base alle nuove regole di confronto.  
   
-    -   Il `char`, `varchar`, `text`, `nchar`, `nvarchar`, o `ntext` tipi di dati di sistema e tutti i tipi di dati definito dall'utente basati su questi tipi di dati di sistema, vengono modificati per le nuove regole di confronto predefinite.  
+    -   I tipi di dati di sistema `char`, `varchar`, `text`, `nchar`, `nvarchar` o `ntext` e tutti i tipi di dati definiti dall'utente basati sui questi tipi di dati di sistema vengono modificati in base alle nuove regole di confronto predefinite.  
   
 -   È possibile modificare le regole di confronto di qualsiasi nuovo oggetto creato in un database utente utilizzando la clausola COLLATE dell'istruzione [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql) . Questa istruzione non consente di modificare le regole di confronto delle colonne delle tabelle definite dall'utente esistenti. Per modificare le regole di confronto delle colonne, è necessario utilizzare la clausola COLLATE dell'istruzione [ALTER TABLE](/sql/t-sql/statements/alter-table-transact-sql).  
   
@@ -83,7 +82,7 @@ ms.locfileid: "48071911"
   
 3.  Al termine dell'operazione scegliere **OK**.  
   
-##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
   
 #### <a name="to-set-the-database-collation"></a>Per impostare le regole di confronto del database  
   

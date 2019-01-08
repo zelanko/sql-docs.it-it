@@ -1,22 +1,21 @@
 ---
-title: "Passaggio 2: Esecuzione dell'Installazione guidata pacchetti | Microsoft Docs"
+title: "Passaggio 2: Esegue l'installazione guidata pacchetti | Microsoft Docs"
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: f91fbb89-4626-4c47-b96d-56052dc45861
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 661b411c87d5a1f570545d2e8d174c8900274bb2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d1af58b00b41b741ea0540a2fa29503dc33badcf
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48053364"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53351801"
 ---
 # <a name="step-2-running-the-package-installation-wizard"></a>Passaggio 2: Esecuzione dell'Installazione guidata pacchetti
   In questa attività verrà eseguita l'Installazione guidata pacchetti per distribuire i pacchetti del progetto Deployment Tutorial in un'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Nella tabella sysssispackages del database msdb di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] possono essere installati solo i pacchetti. I file di supporto inclusi nel pacchetto di distribuzione verranno installati nel file system.  
@@ -29,7 +28,7 @@ ms.locfileid: "48053364"
   
 1.  Individuare il pacchetto di distribuzione nel computer di destinazione.  
   
-     Se è stato utilizzato il valore predefinito, ovvero bin\Deployment, come percorso dell'utilità di distribuzione, il pacchetto di distribuzione corrispondente si trova nella cartella Deployment del progetto Deployment Tutorial.  
+     Se è stato usato il valore predefinito, ovvero bin\Deployment, come percorso dell'utilità di distribuzione, il pacchetto di distribuzione corrispondente si trova nella cartella Deployment del progetto Deployment Tutorial.  
   
 2.  Nella cartella Deployment fare doppio clic sul file manifesto Deployment Tutorial.SSISDeploymentManifest.  
   
@@ -66,14 +65,14 @@ ms.locfileid: "48053364"
   
 16. Nell'elenco **File di configurazione** fare clic su **datatransferconfig.dtsconfig**, espandere Property nella colonna **Percorso** della casella **Configurazioni** e aggiornare la colonna **Valore** con i valori seguenti:  
   
-    |Proprietà|valore|Valore aggiornato|  
+    |Proprietà|Value|Valore aggiornato|  
     |--------------|-----------|-------------------|  
     |\Package.Connections[Deployment Tutorial Log].Properties[ConnectionString]|C:\Programmi\Microsoft SQL Server\100\Samples\Integration Services\Tutorial\Deploying Packages\Completed Packages\Deployment Tutorial Log|C:\DeploymentTutorialInstall\Deployment Tutorial Log|  
     |\Package.Connections[NewCustomers].Properties[ConnectionString]|C:\Programmi\Microsoft SQL Server\100\Samples\Integration Services\Tutorial\Deploying Packages\Sample Data\NewCustomers.txt|C:\DeploymentTutorialInstall\NewCustomers.txt|  
   
 17. Nell'elenco **File di configurazione** fare clic su loadxmldataconfig.dtsconfig, espandere Property nella colonna **Percorso** della casella **Configurazioni** e aggiornare la colonna **Valore** con i valori seguenti:  
   
-    |Proprietà|valore|Valore aggiornato|  
+    |Proprietà|Value|Valore aggiornato|  
     |--------------|-----------|-------------------|  
     |\Package.LoadXMLData.Properties[[XML Source].[XMLData]]|C:\Programmi\Microsoft SQL Server\100\Samples\Integration Services\Tutorial\Deploying Packages\Sample Data\orders.xml|C:\DeploymentTutorialInstall\orders.xml|  
     |\Package.LoadXMLData.Properties[[XML Source].[XMLSchemaDefinition]]|C:\Programmi\Microsoft SQL Server\100\Samples\Integration Services\Tutorial\Deploying Packages\Sample Data\orders.xsd|C:\DeploymentTutorialInstall\orders.xsd|  
@@ -82,11 +81,11 @@ ms.locfileid: "48053364"
   
      Poiché i valori delle variabili di ambiente nel computer di destinazione differiscono da quelli delle variabili di ambiente nel computer di sviluppo, nella pagina di convalida dei pacchetti verranno visualizzati diversi avvisi. È probabile che vengano visualizzati quattro avvisi:  
   
-    -   Il nome del file di configurazione "C:\DeploymentTutorial\DataTransferConfig.dtsConfig" non è valido. Controllare il nome del file di configurazione.  
+    -   Il file di configurazione: "C:\DeploymentTutorial\DataTransferConfig.dtsConfig" non è valido. Controllare il nome del file di configurazione.  
   
     -   Impossibile caricare almeno una voce di configurazione per il pacchetto. Controllare le voci di configurazione e gli avvisi precedenti per visualizzare le descrizioni delle voci di configurazione con problemi.  
   
-    -   Il nome del file di configurazione "C:\DeploymentTutorial\LoadXMLDataConfig.dtsConfig non è valido. Controllare il nome del file di configurazione.  
+    -   Il file di configurazione: "C:\DeploymentTutorial\LoadXMLDataConfig.dtsConfig non è valido. Controllare il nome del file di configurazione.  
   
     -   Impossibile caricare almeno una voce di configurazione per il pacchetto. Controllare le voci di configurazione e gli avvisi precedenti per visualizzare le descrizioni delle voci di configurazione con problemi.  
   
@@ -102,7 +101,7 @@ ms.locfileid: "48053364"
 ## <a name="next-task-in-lesson"></a>Attività successiva della lezione  
  [Passaggio 3: Test dei pacchetti distribuiti](../integration-services/lesson-3-3-testing-the-deployed-packages.md)  
   
-![Icona di Integration Services (piccola)](media/dts-16.gif "icona di Integration Services (piccola)")**rimangono fino a Date con Integration Services** <br /> Per i download, gli articoli, gli esempi e i video Microsoft più recenti, oltre alle soluzioni selezionate dalla community, visitare la pagina [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] sul sito MSDN:<br /><br /> [Visita la pagina di Integration Services su MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Per ricevere una notifica automatica su questi aggiornamenti, sottoscrivere i feed RSS disponibili nella pagina.  
+![Icona di Integration Services (piccola)](media/dts-16.gif "icona di Integration Services (piccola)")**rimangono fino a Date con Integration Services**<br /> Per i download, gli articoli, gli esempi e i video Microsoft più recenti, oltre alle soluzioni selezionate dalla community, visitare la pagina [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] sul sito MSDN:<br /><br /> [Visita la pagina di Integration Services su MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Per ricevere una notifica automatica su questi aggiornamenti, sottoscrivere i feed RSS disponibili nella pagina.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Servizio Integration Services &#40;servizio SSIS&#41;](service/integration-services-service-ssis-service.md)   

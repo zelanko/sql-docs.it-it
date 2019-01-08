@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: ''
 ms.topic: reference
 topic_type:
 - apiref
@@ -16,21 +14,21 @@ ms.assetid: f8674dbb-9bc0-488f-9def-e9e0ce1ddf86
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 17e154743d221cfd4a2070c56634c6364a910afb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 88f1d38f1769659842757d535309c6e42d70a289
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48081635"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52807713"
 ---
 # <a name="implementing-endpoints"></a>Implementazione di endpoint
-  Un endpoint è un servizio che può restare in attesa di richieste a livello nativo. SMO supporta vari tipi di endpoint tramite il <xref:Microsoft.SqlServer.Management.Smo.Endpoint> oggetto. È possibile creare un servizio di endpoint che gestisce un tipo specifico di payload, il quale utilizza un protocollo specifico, creando un'istanza di un oggetto <xref:Microsoft.SqlServer.Management.Smo.Endpoint> e impostandone le proprietà.  
+  Un endpoint è un servizio che può restare in attesa di richieste a livello nativo. In SMO sono supportati vari tipi di endpoint tramite l'oggetto <xref:Microsoft.SqlServer.Management.Smo.Endpoint>. È possibile creare un servizio di endpoint che gestisce un tipo specifico di payload, il quale utilizza un protocollo specifico, creando un'istanza di un oggetto <xref:Microsoft.SqlServer.Management.Smo.Endpoint> e impostandone le proprietà.  
   
- Il <xref:Microsoft.SqlServer.Management.Smo.Endpoint.EndpointType%2A> proprietà del <xref:Microsoft.SqlServer.Management.Smo.Endpoint> oggetto può essere utilizzato per specificare uno dei seguenti tipi di payload:  
+ La proprietà <xref:Microsoft.SqlServer.Management.Smo.Endpoint.EndpointType%2A> dell'oggetto <xref:Microsoft.SqlServer.Management.Smo.Endpoint> può essere utilizzata per specificare uno dei seguenti tipi di payload:  
   
 -   Mirroring del database  
   
--   SOAP (il supporto per gli endpoint SOAP è presente in [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] e nelle versioni precedenti di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)])  
+-   SOAP (il supporto per gli endpoint SOAP è presente in [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] e nelle versioni precedenti di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] )  
   
 -   Service Broker  
   
@@ -42,11 +40,11 @@ ms.locfileid: "48081635"
   
 -   Protocollo TCP  
   
- Avendo specificato il tipo di payload, il payload effettivo può essere impostato utilizzando il <xref:Microsoft.SqlServer.Management.Smo.Endpoint.Payload%2A> proprietà dell'oggetto. La proprietà dell'oggetto <xref:Microsoft.SqlServer.Management.Smo.Payload> fornisce un riferimento a un oggetto payload del tipo specificato, per cui è possibile modificare le proprietà.  
+ Avendo specificato il tipo di payload, il payload effettivo può essere impostato tramite la proprietà dell'oggetto <xref:Microsoft.SqlServer.Management.Smo.Endpoint.Payload%2A>. La proprietà dell'oggetto <xref:Microsoft.SqlServer.Management.Smo.Payload> fornisce un riferimento a un oggetto payload del tipo specificato, per cui è possibile modificare le proprietà.  
   
- Per l'oggetto <xref:Microsoft.SqlServer.Management.Smo.DatabaseMirroringPayload>, è necessario specificare il ruolo di mirroring e se è abilitata o meno la crittografia. Il <xref:Microsoft.SqlServer.Management.Smo.ServiceBrokerPayload> oggetto richiede informazioni sull'inoltro di messaggi, numero massimo di connessioni consentite e la modalità di autenticazione. L'oggetto <xref:Microsoft.SqlServer.Management.Smo.SoapPayloadMethod.%23ctor%2A> richiede l'impostazione di varie proprietà tra cui la proprietà dell'oggetto <xref:Microsoft.SqlServer.Management.Smo.SoapPayloadMethodCollection.Add%2A> che specifica i metodi di payload SOAP disponibili ai client (stored procedure e funzioni definite dall'utente).  
+ Per l'oggetto <xref:Microsoft.SqlServer.Management.Smo.DatabaseMirroringPayload>, è necessario specificare il ruolo di mirroring e se è abilitata o meno la crittografia. L'oggetto <xref:Microsoft.SqlServer.Management.Smo.ServiceBrokerPayload> richiede informazioni sull'inoltro di messaggi, sul numero massimo di connessioni consentite e sulla modalità di autenticazione. L'oggetto <xref:Microsoft.SqlServer.Management.Smo.SoapPayloadMethod.%23ctor%2A> richiede l'impostazione di varie proprietà tra cui la proprietà dell'oggetto <xref:Microsoft.SqlServer.Management.Smo.SoapPayloadMethodCollection.Add%2A> che specifica i metodi di payload SOAP disponibili ai client (stored procedure e funzioni definite dall'utente).  
   
- Analogamente, il protocollo può essere impostato tramite la proprietà dell'oggetto <xref:Microsoft.SqlServer.Management.Smo.Endpoint.Protocol%2A> che fa riferimento a un oggetto protocollo del tipo specificato dalla proprietà <xref:Microsoft.SqlServer.Management.Smo.Endpoint.ProtocolType%2A>. L'oggetto <xref:Microsoft.SqlServer.Management.Smo.HttpProtocol> richiede un elenco di indirizzi IP con restrizioni e informazioni relative a porte, siti Web e autenticazione. Il <xref:Microsoft.SqlServer.Management.Smo.TcpProtocol> oggetto richiede inoltre un elenco di indirizzi IP con restrizioni e informazioni sulla porta.  
+ Analogamente, il protocollo può essere impostato tramite la proprietà dell'oggetto <xref:Microsoft.SqlServer.Management.Smo.Endpoint.Protocol%2A> che fa riferimento a un oggetto protocollo del tipo specificato dalla proprietà <xref:Microsoft.SqlServer.Management.Smo.Endpoint.ProtocolType%2A>. L'oggetto <xref:Microsoft.SqlServer.Management.Smo.HttpProtocol> richiede un elenco di indirizzi IP con restrizioni e informazioni relative a porte, siti Web e autenticazione. L'oggetto <xref:Microsoft.SqlServer.Management.Smo.TcpProtocol> richiede inoltre un elenco di indirizzi IP con restrizioni e informazioni relative alle porte.  
   
  Quando l'endpoint è stato creato e definito completamente, è possibile concedere, revocare e negare l'accesso a utenti, gruppi, ruoli e account di accesso del database.  
   

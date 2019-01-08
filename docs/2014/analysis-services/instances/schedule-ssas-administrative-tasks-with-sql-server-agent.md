@@ -11,12 +11,12 @@ ms.assetid: 2d1484b3-51d9-48a0-93d2-0c3e4ed22b87
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3b76142fe806e7a294eb67e5e3d43cbf56713760
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cea836d49b46bd7931d7230d3d22824af9506961
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48080351"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53350875"
 ---
 # <a name="schedule-ssas-administrative-tasks-with-sql-server-agent"></a>Pianificare attività amministrative SSAS con SQL Server Agent
   Usando il servizio SQL Server Agent, è possibile pianificare l'esecuzione delle attività amministrative di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] nell'ordine e agli orari necessari. Le attività pianificate consentono di automatizzare processi eseguiti in cicli regolari o prevedibili. È possibile pianificare l'esecuzione di attività amministrative, ad esempio l'elaborazione di cubi, nei periodi in cui l'attività aziendale è ridotta. È inoltre possibile determinare l'ordine di esecuzione delle attività creando passaggi di processo in un processo di SQL Server Agent. È possibile ad esempio elaborare un cubo ed eseguirne quindi un backup.  
@@ -54,7 +54,7 @@ ms.locfileid: "48080351"
      In questo passaggio lo script XMLA viene copiato negli Appunti di Windows. È possibile lasciare lo script XMLA negli Appunti o incollarlo nel Blocco note o un altro editor di testo. Di seguito è riportato un esempio di script XMLA.  
   
     ```  
-    <Batch xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">  
+    <Batch xmlns="https://schemas.microsoft.com/analysisservices/2003/engine">  
      <Parallel>  
       <Process xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
         <Object>  
@@ -106,7 +106,7 @@ ms.locfileid: "48080351"
   
 15. Al termine del processo fare clic su **Chiudi**.  
   
-## <a name="example-2-batch-processing-a-dimension-and-a-partition-in-a-scheduled-task"></a>Esempio 2: Elaborazione batch di una dimensione e una partizione in un'attività pianificata  
+## <a name="example-2-batch-processing-a-dimension-and-a-partition-in-a-scheduled-task"></a>Esempio 2: Una dimensione e una partizione in un'attività pianificata per l'elaborazione batch  
  Le procedure in questo esempio dimostrano come creare e pianificare un processo per l'elaborazione batch di una dimensione database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e contemporaneamente per l'elaborazione di una partizione del cubo che dipende dalla dimensione per l'aggregazione. Per altre informazioni sull'elaborazione batch di oggetti di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], vedere [Elaborazione batch &#40;Analysis Services&#41;](../multidimensional-models/batch-processing-analysis-services.md).  
   
 ###  <a name="bkmk_BatchProcess"></a> Creare uno script per l'elaborazione batch di una dimensione e una partizione in un processo di SQL Server Agent  
@@ -156,7 +156,7 @@ ms.locfileid: "48080351"
      Nell'esempio seguente viene illustrato lo script XMLA modificato.  
   
     ```  
-    <Batch xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">  
+    <Batch xmlns="https://schemas.microsoft.com/analysisservices/2003/engine">  
      <Parallel>  
       <Process xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
         <Object>  
@@ -224,6 +224,6 @@ ms.locfileid: "48080351"
   
 ## <a name="see-also"></a>Vedere anche  
  [Opzioni e impostazioni di elaborazione &#40;Analysis Services&#41;](../multidimensional-models/processing-options-and-settings-analysis-services.md)   
- [Lo script attività amministrative in Analysis Services](../script-administrative-tasks-in-analysis-services.md)  
+ [Creare script per le attività amministrative in Analysis Services](../script-administrative-tasks-in-analysis-services.md)  
   
   

@@ -14,24 +14,24 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5911783558ff259eef7488df082560cfe56a4dfb
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 028da8892406be7c29d604cc0357f0006bacc4cb
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51665920"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53215437"
 ---
 # <a name="process-odbc-errors-odbc"></a>Elaborare errori ODBC (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  È possibile usare due chiamate di funzione ODBC per recuperare messaggi ODBC: [SQLGetDiagRec](https://go.microsoft.com/fwlink/?LinkId=58402) e [SQLGetDiagField](../../relational-databases/native-client-odbc-api/sqlgetdiagfield.md). Per ottenere informazioni correlate a ODBC nei campi di diagnostica **SQLState**, **pfNative** e **ErrorMessage**, chiamare [SQLGetDiagRec](https://go.microsoft.com/fwlink/?LinkId=58402) fino a quando no viene restituito SQL_NO_DATA. Per ogni record di diagnostica, è possibile chiamare [SQLGetDiagField](../../relational-databases/native-client-odbc-api/sqlgetdiagfield.md) per recuperare i singoli campi. Tutti i campi specifici del driver devono essere recuperati usando **SQLGetDiagField**.  
+  Due chiamate di funzione ODBC possono essere utilizzate per recuperare messaggi ODBC: [SQLGetDiagRec](https://go.microsoft.com/fwlink/?LinkId=58402) e [SQLGetDiagField](../../relational-databases/native-client-odbc-api/sqlgetdiagfield.md). Per ottenere informazioni correlate a ODBC nei campi di diagnostica **SQLState**, **pfNative** e **ErrorMessage**, chiamare [SQLGetDiagRec](https://go.microsoft.com/fwlink/?LinkId=58402) fino a quando no viene restituito SQL_NO_DATA. Per ogni record di diagnostica, è possibile chiamare [SQLGetDiagField](../../relational-databases/native-client-odbc-api/sqlgetdiagfield.md) per recuperare i singoli campi. Tutti i campi specifici del driver devono essere recuperati usando **SQLGetDiagField**.  
   
  L'elaborazione di [SQLGetDiagRec](https://go.microsoft.com/fwlink/?LinkId=58402) e [SQLGetDiagField](../../relational-databases/native-client-odbc-api/sqlgetdiagfield.md) viene eseguita da Gestione driver ODBC, non da un singolo driver. Gestione driver ODBC memorizza nella cache i campi di diagnostica specifici del driver solo dopo che è stata stabilita una connessione. È possibile chiamare [SQLGetDiagField](../../relational-databases/native-client-odbc-api/sqlgetdiagfield.md) per i campi di diagnostica specifici del driver solo dopo che è stata stabilita una connessione. Sono inclusi i comandi della connessione ODBC, anche se restituiscono SQL_SUCCESS_WITH_INFO. I campi di diagnostica specifici dei driver non saranno disponibili sino alla successiva chiamata alla funzione ODBC.  
   
 ## <a name="example"></a>Esempio  
   
-### <a name="description"></a>Description  
+### <a name="description"></a>Descrizione  
  Questo esempio illustra un semplice gestore degli errori che chiama [SQLGetDiagRec](https://go.microsoft.com/fwlink/?LinkId=58402) per informazioni ODBC standard. Il gestore verifica quindi l'esistenza di una connessione valida e, se è presente, chiama **SQLGetDiagField** per i campi di diagnostica specifici del driver ODBC di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Questo esempio non è supportato in IA64.  
   
  L'esempio è stato sviluppato per ODBC versione 3.0 o successiva.  
@@ -43,13 +43,13 @@ ms.locfileid: "51665920"
   
  In questo esempio viene eseguita la connessione all'istanza predefinita di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nel computer in uso. Per connettersi a un'istanza denominata, modificare la definizione dell'origine dati ODBC per specificare l'istanza in base al formato: server\istanzadenominata. Per impostazione predefinita, [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] viene installato in un'istanza denominata.  
   
- Eseguire il primo listato di codice ([!INCLUDE[tsql](../../includes/tsql-md.md)]) per creare la stored procedure utilizzata dall'esempio.  
+ Eseguire il primo ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) per creare la stored procedure utilizzata dall'esempio listato di codice.  
   
  Compilare il secondo listato di codice (C++) con odbc32.lib. Eseguire quindi il programma.  
   
- Eseguire il terzo listato di codice ([!INCLUDE[tsql](../../includes/tsql-md.md)]) per eliminare la stored procedure utilizzata dall'esempio.  
+ Eseguire il terzo ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) listato per eliminare la stored procedure utilizzata dall'esempio di codice.  
   
-### <a name="code"></a>codice  
+### <a name="code"></a>Codice  
   
 ```  
 use AdventureWorks  
@@ -64,7 +64,7 @@ SELECT * FROM Purchasing.Vendor
 Go  
 ```  
   
-### <a name="code"></a>codice  
+### <a name="code"></a>Codice  
   
 ```  
 // compile with: odbc32.lib  
@@ -232,7 +232,7 @@ void ProcessLogMessages(SQLSMALLINT plm_handle_type, SQLHANDLE plm_handle, char 
 }  
 ```  
   
-### <a name="code"></a>codice  
+### <a name="code"></a>Codice  
   
 ```  
 use AdventureWorks  

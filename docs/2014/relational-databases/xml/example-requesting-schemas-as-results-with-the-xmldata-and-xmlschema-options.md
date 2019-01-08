@@ -1,5 +1,5 @@
 ---
-title: 'Esempio: richiesta di schemi di risultato mediante le opzioni XMLDATA e XMLSCHEMA | Microsoft Docs'
+title: 'Esempio: Richiesta di schemi di risultato mediante le opzioni XMLDATA e XMLSCHEMA | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,14 +13,14 @@ ms.assetid: 3504ca38-be66-42b2-8dab-f499c9584840
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: dfbd60d67bc768eb50387ad7b86250acd9006550
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a2f6a8395db11179d78a6f513890fd307acbd82c
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159231"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53352049"
 ---
-# <a name="example-requesting-schemas-as-results-with-the-xmldata-and-xmlschema-options"></a>Esempio: richiesta di schemi di risultato mediante le opzioni XMLDATA e XMLSCHEMA
+# <a name="example-requesting-schemas-as-results-with-the-xmldata-and-xmlschema-options"></a>Esempio: Richiesta di schemi di risultato mediante le opzioni XMLDATA e XMLSCHEMA
   La query seguente restituisce lo schema XML-DATA che contiene la descrizione della struttura del documento.  
   
 ## <a name="example"></a>Esempio  
@@ -35,7 +35,7 @@ FOR XML RAW, XMLDATA
 GO  
 ```  
   
- Risultato:  
+ Questo è il risultato:  
   
 ```  
 <Schema name="Schema1" xmlns="urn:schemas-microsoft-com:xml-data"   
@@ -51,7 +51,7 @@ GO
 <row xmlns="x-schema:#Schema1" ProductModelID="119" Name="Bike Wash" />  
 ```  
   
-> [!NOTE]  
+> [!NOTE]
 >  <`Schema`> viene considerato come uno spazio dei nomi. Al fine di evitare collisioni a livello di spazi dei nomi quando vengono richiesti più schemi XML-Data in query FOR XML diverse, l'identificatore dello spazio dei nomi, in questo esempio `Schema1` , cambia a ogni esecuzione della query. L'identificatore dello spazio dei nomi è composto da **Schema*n***, dove ***n*** è un numero intero.  
   
  Specificando l'opzione `XMLSCHEMA` è possibile richiedere lo schema XSD per il risultato.  
@@ -66,11 +66,11 @@ FOR XML RAW, XMLSCHEMA
 GO  
 ```  
   
- Risultato:  
+ Questo è il risultato:  
   
 ```  
-<xsd:schema targetNamespace="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sqltypes="http://schemas.microsoft.com/sqlserver/2004/sqltypes" elementFormDefault="qualified">  
-  <xsd:import namespace="http://schemas.microsoft.com/sqlserver/2004/sqltypes" schemaLocation="http://schemas.microsoft.com/sqlserver/2004/sqltypes/sqltypes.xsd" />  
+<xsd:schema targetNamespace="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sqltypes="https://schemas.microsoft.com/sqlserver/2004/sqltypes" elementFormDefault="qualified">  
+  <xsd:import namespace="https://schemas.microsoft.com/sqlserver/2004/sqltypes" schemaLocation="https://schemas.microsoft.com/sqlserver/2004/sqltypes/sqltypes.xsd" />  
   <xsd:element name="row">  
     <xsd:complexType>  
       <xsd:attribute name="ProductModelID" type="sqltypes:int" use="required" />  
@@ -101,11 +101,11 @@ FOR XML RAW, XMLSCHEMA ('urn:example.com')
 GO  
 ```  
   
- Risultato:  
+ Questo è il risultato:  
   
 ```  
-<xsd:schema targetNamespace="urn:example.com" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sqltypes="http://schemas.microsoft.com/sqlserver/2004/sqltypes" elementFormDefault="qualified">  
-  <xsd:import namespace="http://schemas.microsoft.com/sqlserver/2004/sqltypes" schemaLocation="http://schemas.microsoft.com/sqlserver/2004/sqltypes/sqltypes.xsd" />  
+<xsd:schema targetNamespace="urn:example.com" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sqltypes="https://schemas.microsoft.com/sqlserver/2004/sqltypes" elementFormDefault="qualified">  
+  <xsd:import namespace="https://schemas.microsoft.com/sqlserver/2004/sqltypes" schemaLocation="https://schemas.microsoft.com/sqlserver/2004/sqltypes/sqltypes.xsd" />  
   <xsd:element name="row">  
     <xsd:complexType>  
       <xsd:attribute name="ProductModelID" type="sqltypes:int" use="required" />  

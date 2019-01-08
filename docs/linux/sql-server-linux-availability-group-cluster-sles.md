@@ -1,21 +1,22 @@
 ---
-title: Configurare Cluster SLES per gruppo di disponibilità di SQL Server | Microsoft Docs
-description: ''
+title: Configurare Cluster SLES per gruppo di disponibilità di SQL Server
+titleSuffix: SQL Server
+description: Informazioni su come creare cluster di gruppo di disponibilità per SQL Server su SUSE Linux Enterprise Server (SLES)
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.date: 04/30/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
+ms.custom: sql-linux, seodec18
 ms.technology: linux
 ms.assetid: 85180155-6726-4f42-ba57-200bf1e15f4d
-ms.openlocfilehash: 3db679a5df861cbdbf08443b5fdd85e99b01d3b3
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: cab40f66976677fee78e79de2f2996653aee9446
+ms.sourcegitcommit: de8ef246a74c935c5098713f14e9dd06c4733713
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51670620"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53160629"
 ---
 # <a name="configure-sles-cluster-for-sql-server-availability-group"></a>Configurare Cluster SLES per gruppo di disponibilità di SQL Server
 
@@ -118,9 +119,9 @@ Nei server Linux, configurare il gruppo di disponibilità e quindi configurare l
 
 3. Per configurare il livello di comunicazione del cluster (Corosync): 
 
-   A. Immettere un indirizzo di rete a cui associarsi. Per impostazione predefinita, lo script viene proposto l'indirizzo di rete di eth0. In alternativa, immettere un indirizzo di rete diversi, ad esempio l'indirizzo di bond0. 
+   a. Immettere un indirizzo di rete a cui associarsi. Per impostazione predefinita, lo script viene proposto l'indirizzo di rete di eth0. In alternativa, immettere un indirizzo di rete diversi, ad esempio l'indirizzo di bond0. 
 
-   B. Immettere un indirizzo multicast. Lo script viene proposto un indirizzo casuale che è possibile utilizzare come valore predefinito. 
+   b. Immettere un indirizzo multicast. Lo script viene proposto un indirizzo casuale che è possibile utilizzare come valore predefinito. 
 
    c. Immettere una porta di multicast. Lo script viene proposto 5405 come predefinito. 
 
@@ -220,7 +221,7 @@ Isolamento a livello di risorsa principalmente assicura che non vi sia alcun dan
 
 Isolamento a livello di nodo assicura che un nodo non viene eseguita alcuna risorsa. In tal caso, reimpostare il nodo e l'implementazione di Pacemaker di esso viene chiamato STONITH (che è l'acronimo di "girare in altro nodo nell'intestazione"). Pacemaker supporta una vasta gamma di dispositivi, ad esempio un uninterruptible power supply o gestione schede di interfaccia di per i server di conflitti.
 
-Per altre informazioni, vedere [cluster Pacemaker da zero](https://clusterlabs.org/doc/en-US/Pacemaker/1.1-plugin/html/Clusters_from_Scratch/ch05.html), [Fencing e Stonith](https://clusterlabs.org/doc/crm_fencing.html) e [documentazione SUSE a disponibilità elevata: Fencing e STONITH](https://www.suse.com/documentation/sle_ha/book_sleha/data/cha_ha_fencing.html).
+Per altre informazioni, vedere [cluster Pacemaker da zero](https://clusterlabs.org/doc/en-US/Pacemaker/1.1-plugin/html/Clusters_from_Scratch/ch05.html), [Fencing e Stonith](https://clusterlabs.org/doc/crm_fencing.html) e [documentazione SUSE a disponibilità elevata: L'isolamento e STONITH](https://www.suse.com/documentation/sle_ha/book_sleha/data/cha_ha_fencing.html).
 
 In fase di inizializzazione del cluster, se non viene rilevata alcuna configurazione di STONITH è disabilitata. Può essere abilitata in un secondo momento usando il comando seguente:
 

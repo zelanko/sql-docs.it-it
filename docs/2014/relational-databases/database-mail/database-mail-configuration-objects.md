@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.sqlimail.manageexistingaccount.f1
@@ -33,15 +32,15 @@ ms.assetid: 03f6e4c0-04ff-490a-bd91-637806215bd1
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1a42886a0477c6844b2e59d439cd9748adcaa4b0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 71a2805eb935088f39c6b4a86714f263dc5ba643
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48089671"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52772635"
 ---
 # <a name="database-mail-configuration-objects"></a>Oggetti di configurazione di Posta elettronica database
-  Posta elettronica database dispone di due oggetti di configurazione: gli oggetti di configurazione del database forniscono una modalità per configurare le impostazioni che Posta elettronica database deve utilizzare per l'invio di messaggi posta elettronica dall'applicazione di database o da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
+  Posta elettronica database ha due oggetti di configurazione: Gli oggetti di configurazione database forniscono una modalità per configurare le impostazioni di tale Database di posta elettronica deve utilizzare quando si invia un messaggio di posta elettronica dall'applicazione di database o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dell'agente.  
   
 -   Account di Posta elettronica database  
   
@@ -59,11 +58,11 @@ ms.locfileid: "48089671"
   
  Posta elettronica database supporta tre metodi di autenticazione per la comunicazione con un server SMTP:  
   
--   Autenticazione di Windows: Posta elettronica database utilizza le credenziali dell'account servizio Windows del [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] per l'autenticazione sul server SMTP.  
+-   Autenticazione di Windows: Posta elettronica database utilizza le credenziali del [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] Windows account del servizio per l'autenticazione nel server SMTP.  
   
--   Autenticazione di base: Posta elettronica database utilizza il nome utente e la password specificati per l'autenticazione sul server SMTP.  
+-   Autenticazione di base:  Posta elettronica database utilizza il nome utente e la password specificati per l'autenticazione nel server SMTP.  
   
--   Autenticazione anonima: il server SMTP non richiede autenticazione.  Posta elettronica database non utilizzerà credenziali per l'autenticazione nel server SMTP.  
+-   Autenticazione anonima:  Il server SMTP non richiede alcuna autenticazione.  Posta elettronica database non utilizzerà credenziali per l'autenticazione nel server SMTP.  
   
  Le informazioni sull'account vengono archiviate nel database **msdb** . Ciascun account include le informazioni seguenti:  
   
@@ -128,14 +127,14 @@ ms.locfileid: "48089671"
   
 ### <a name="database-mail-settings"></a>Impostazioni di Posta elettronica database  
   
-|nome|Description|  
+|nome|Descrizione|  
 |----------|-----------------|  
 |[sysmail_configure_sp (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sysmail-configure-sp-transact-sql)|Modifica le impostazioni di configurazione per Posta elettronica database.|  
 |[sysmail_help_configure_sp (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sysmail-help-configure-sp-transact-sql)|Visualizza le impostazioni di configurazione per Posta elettronica database.|  
   
 ### <a name="accounts-and-profiles"></a>Account e profili  
   
-|nome|Description|  
+|nome|Descrizione|  
 |----------|-----------------|  
 |[sysmail_add_profileaccount_sp (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sysmail-add-profileaccount-sp-transact-sql)|Aggiunge un account di posta a un profilo di Posta elettronica database.|  
 |[sysmail_delete_account_sp (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sysmail-delete-account-sp-transact-sql)|Elimina un account di Posta elettronica database.|  
@@ -150,7 +149,7 @@ ms.locfileid: "48089671"
   
 ### <a name="security"></a>Sicurezza  
   
-|nome|Description|  
+|nome|Descrizione|  
 |----------|-----------------|  
 |[sysmail_add_principalprofile_sp (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sysmail-add-principalprofile-sp-transact-sql)|Concede le autorizzazioni necessarie a una entità database per utilizzare un profilo di Posta elettronica database.|  
 |[sysmail_delete_principalprofile_sp (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sysmail-delete-principalprofile-sp-transact-sql)|Rimuove le autorizzazioni che consentono a un utente di database di utilizzare un profilo pubblico o privato di Posta elettronica database.|  
@@ -159,7 +158,7 @@ ms.locfileid: "48089671"
   
 ### <a name="system-state"></a>Stato del sistema  
   
-|nome|Description|  
+|nome|Descrizione|  
 |----------|-----------------|  
 |[sysmail_start_sp &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sysmail-start-sp-transact-sql)|Avvia il programma esterno Posta elettronica database e la coda associata di SQL Service Broker.|  
 |[sysmail_stop_sp &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sysmail-stop-sp-transact-sql)|Arresta il programma esterno Posta elettronica database e la coda associata di SQL Service Broker.|  

@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
-f1_keywords:
-- vs.lookin
 ms.assetid: 2eaba888-68b2-4bc1-8f62-e96e710c3db9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0010ab5333237eac6504986f0ac8a042d861e712
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6c76fc0d5247d2a9f07fcf97677ac1f24b9635e5
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48095151"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53328611"
 ---
 # <a name="choose-search-folders-dialog-box-visual-studio"></a>Finestra di dialogo Seleziona cartelle di ricerca (Visual Studio)
   Consente di assemblare, salvare e rivedere i propri set denominati di cartelle di ricerca e di specificare l'ordine di ricerca. Per visualizzare questa finestra di dialogo, fare clic sul pulsante **Sfoglia (...)** accanto all'elenco a discesa **Cerca in** nella scheda Cerca nei file o Sostituisci nei file della finestra di dialogo Trova e sostituisci.  
@@ -56,5 +54,3 @@ ms.locfileid: "48095151"
   
  **Applica**  
  Consente di salvare l'insieme di cartelle di ricerca contenute nell'elenco **Cartelle selezionate** come insieme denominato di cartelle. Tale insieme di cartelle può quindi essere selezionato nel campo **Cerca in** in tutte le schede della finestra **Trova e sostituisci** . Chiude la finestra di dialogo Seleziona cartelle di ricerca.  
-  
-  

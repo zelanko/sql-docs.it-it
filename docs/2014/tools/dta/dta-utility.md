@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 helpviewer_keywords:
 - physical design structures [SQL Server]
@@ -21,12 +20,12 @@ ms.assetid: a0b210ce-9b58-4709-80cb-9363b68a1f5a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 174343d5c937c8c58277579192a9deb968355a0c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: edafb305050b36798990ecea21b08dde42e3f068
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48091736"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52770713"
 ---
 # <a name="dta-utility"></a>dta - utilità
   L'utilità **dta** è la versione per il prompt dei comandi dello strumento Ottimizzazione guidata motore di database. L'utilità **dta** è stata sviluppata per consentire l'utilizzo della funzionalità Ottimizzazione guidata motore di database in applicazioni e script.  
@@ -41,7 +40,7 @@ ms.locfileid: "48091736"
 [ -? ] |  
 [  
       [ -S server_name[ \instance ] ]  
-      { { -U login_id [-P password ] } | –E  }  
+      { { -U login_id [-P password ] } | -E  }  
       { -D database_name [ ,...n ] }  
       [ -ddatabase_name ]   
       [ -Tltable_list | -Tf table_list_file ]  
@@ -103,13 +102,13 @@ ms.locfileid: "48091736"
  Specifica il nome di ogni database da ottimizzare. Il primo database è il database predefinito. Per specificare più database, separare i relativi nomi con una virgola, ad esempio:  
   
 ```  
-dta –D database_name1, database_name2...  
+dta -D database_name1, database_name2...  
 ```  
   
- In alternativa, è possibile specificare più database utilizzando l'argomento **–D** per ogni nome di database, ad esempio:  
+ In alternativa, è possibile specificare più database usando l'argomento **-D** per ogni nome di database, ad esempio:  
   
 ```  
-dta –D database_name1 -D database_name2... n  
+dta -D database_name1 -D database_name2... n  
 ```  
   
  L'argomento **-D** è obbligatorio. Se si omette l'argomento **-d** , **dta** si connette inizialmente al database specificato nella prima clausola `USE database_name` del carico di lavoro. Se non è presente alcuna clausola `USE database_name` esplicita nel carico di lavoro, è necessario usare l'argomento **-d** .  
@@ -127,7 +126,7 @@ dta -D db_name1, db_name2 -d db_name1
 ```  
   
  **-d** *database_name*  
- Specifica il primo database al quale si connette **dta** per ottimizzare un carico di lavoro. Per questo argomento è possibile specificare solo un database. Esempio:  
+ Specifica il primo database al quale si connette **dta** per ottimizzare un carico di lavoro. Per questo argomento è possibile specificare solo un database. Ad esempio:  
   
 ```  
 dta -d AdventureWorks2012 ...  
@@ -149,7 +148,7 @@ dta -d AdventureWorks2012 ...
   
 |Parametro|Valore predefinito|  
 |---------------|-------------------|  
-|*database_name*|*database_name* specificato con l'opzione **–D**|  
+|*database_name*|*database_name* specificato con l'opzione **-D**|  
 |*owner_name*|**dbo**<br /><br /> Nota: *owner_name* deve essere **dbo**. Se si specifica un qualsiasi altro valore, l'esecuzione di **dta** ha esito negativo e viene restituito un errore.|  
 |*table_name*|None|  
   
@@ -164,7 +163,7 @@ dta -d AdventureWorks2012 ...
  **-fa** *physical_design_structures_to_add*  
  Specifica i tipi di strutture di progettazione fisica che **dta** deve includere nell'indicazione. Nella tabella seguente sono riportati e descritti i valori che è possibile specificare per questo argomento. Quando viene specificato alcun valore, **dta** Usa il valore predefinito **-fa**`IDX`.  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |IDX_IV|Indici e viste indicizzate.|  
 |IDX|Solo indici.|  
@@ -177,7 +176,7 @@ dta -d AdventureWorks2012 ...
  **-fk** *keep_existing_option*  
  Specifica le strutture di progettazione fisica esistenti che **dta** deve conservare durante la generazione dell'indicazione. Nella tabella seguente sono riportati e descritti i valori che è possibile specificare per questo argomento.  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |Nessuno|Nessuna struttura esistente.|  
 |ALL|Tutte le strutture esistenti.|  
@@ -188,7 +187,7 @@ dta -d AdventureWorks2012 ...
  **-fp** *partitioning_strategy*  
  Specifica se le nuove strutture di progettazione fisica, ovvero indici e viste indicizzate, proposte da **dta** devono essere partizionate e definisce la modalità di partizionamento. Nella tabella seguente sono riportati e descritti i valori che è possibile specificare per questo argomento.  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |Nessuno|Nessun partizionamento.|  
 |FULL|Partizionamento completo (scegliere questo valore per ottimizzare le prestazioni).|  
@@ -203,10 +202,10 @@ dta -d AdventureWorks2012 ...
  Specifica l'identificatore numerico per la sessione di ottimizzazione. Se omesso, **dta** genera un numero di identificazione. È possibile utilizzare questo identificatore per visualizzare le informazioni relative alle sessioni di ottimizzazione correnti. Se per **-ID**non si specifica alcun valore, è necessario specificare un nome di sessione usando **-s**.  
   
  **-ip**  
- Specifica che la cache dei piani deve essere utilizzata come carico di lavoro. Vengono analizzati i primi 1.000 eventi della cache dei piani per i database selezionati in modo esplicito. Questo valore può essere modificato tramite l'opzione **–n** .  
+ Specifica che la cache dei piani deve essere utilizzata come carico di lavoro. Vengono analizzati i primi 1.000 eventi della cache dei piani per i database selezionati in modo esplicito. Questo valore può essere modificato tramite l'opzione **-n**.  
   
  **-ipf**  
- Specifica che la cache dei piani deve essere utilizzata come carico di lavoro. Vengono analizzati i primi 1.000 eventi della cache dei piani per tutti i database. Questo valore può essere modificato tramite l'opzione **–n** .  
+ Specifica che la cache dei piani deve essere utilizzata come carico di lavoro. Vengono analizzati i primi 1.000 eventi della cache dei piani per tutti i database. Questo valore può essere modificato tramite l'opzione **-n**.  
   
  **-if** *workload_file*  
  Specifica il percorso e il nome del file del carico di lavoro da utilizzare come input per l'ottimizzazione. Il file deve essere in formato trc (file di traccia di SQL Server Profiler), sql (file SQL) oppure log (file di traccia di[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ). È inoltre necessario specificare un file o una tabella del carico di lavoro.  
@@ -218,7 +217,7 @@ dta -d AdventureWorks2012 ...
   
 |Parametro|Valore predefinito|  
 |---------------|-------------------|  
-|*database_name*|*database_name* specificato con l'opzione **–D** .|  
+|*database_name*|*database_name* specificato con l'opzione **-D**.|  
 |*owner_name*|**dbo**|  
 |*table_name*|Nessuna.|  
   
@@ -234,7 +233,7 @@ dta -d AdventureWorks2012 ...
  **-N** *online_option*  
  Specifica se le strutture di progettazione fisica vengono create online. Nella tabella seguente sono riportati e descritti i valori che è possibile specificare per questo argomento.  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |OFF|Le strutture di progettazione fisica indicate non possono essere create online.|  
 |ON|Tutte le strutture di progettazione fisica indicate possono essere create online.|  
@@ -275,7 +274,7 @@ dta -n number_of_events -A 0
  **-rl** *analysis_report_list*  
  Specifica l'elenco dei report di analisi da generare. Nella tabella seguente sono riportati i valori che è possibile specificare per questo argomento.  
   
-|valore|Report|  
+|Value|Report|  
 |-----------|------------|  
 |ALL|Tutti i report di analisi|  
 |STMT_COST|Report costo istruzioni|  
@@ -344,7 +343,7 @@ dta -n number_of_events -A 0
  Questo esempio usa una connessione sicura (`-E`) per connettersi al database **tpcd1G** in MyServer per analizzare un carico di lavoro e creare indicazioni. Scrive l'output in un file di script denominato script.sql. Se script.sql esiste già, l'utilità **dta** sovrascriverà il file in quanto è stato specificato l'argomento `-F` . La sessione di ottimizzazione viene eseguita per un periodo illimitato di tempo per garantire l'analisi completa del carico di lavoro (`-A 0`). L'indicazione deve fornire un miglioramento minimo del 5% (`-m 5`). **dta** deve includere indici e viste indicizzate nell'indicazione finale (`-fa IDX_IV`).  
   
 ```  
-dta –S MyServer –E -D tpcd1G -if tpcd_22.sql -F –of script.sql –A 0 -m 5 -fa IDX_IV  
+dta -S MyServer -E -D tpcd1G -if tpcd_22.sql -F -of script.sql -A 0 -m 5 -fa IDX_IV  
 ```  
   
  **B. Limitazione dell'utilizzo del disco**  
@@ -352,7 +351,7 @@ dta –S MyServer –E -D tpcd1G -if tpcd_22.sql -F –of script.sql –A 0 -m 5
  Nell'esempio seguente viene limitata la dimensione totale del database, che include i dati non elaborati e gli indici aggiuntivi, a 3 GB (`-B 3000`) e l'output viene reindirizzato su d:\result_dir\script1.sql. Il tempo di esecuzione non è maggiore di 1 ora (`-A 60`).  
   
 ```  
-dta –D tpcd1G –if tpcd_22.sql -B 3000 –of "d:\result_dir\script1.sql" –A 60  
+dta -D tpcd1G -if tpcd_22.sql -B 3000 -of "d:\result_dir\script1.sql" -A 60  
 ```  
   
  **C. Limitazione del numero di query ottimizzate**  
@@ -360,7 +359,7 @@ dta –D tpcd1G –if tpcd_22.sql -B 3000 –of "d:\result_dir\script1.sql" –A
  Nell'esempio seguente il numero di query lette dal file orders_wkld.sql viene limitato a un massimo di 10 (`-n 10`) oppure il tempo di esecuzione viene limitato a 15 minuti (`-A 15`), a seconda di quale dei due eventi si verifica per primo. Per assicurarsi che tutte e 10 le query vengano ottimizzate, specificare un tempo di ottimizzazione illimitato tramite `-A 0`. Se il fattore tempo è rilevante, specificare un limite di tempo adeguato impostando il numero di minuti disponibili per l'ottimizzazione con l'argomento `-A` come illustrato nell'esempio seguente.  
   
 ```  
-dta –D orders –if orders_wkld.sql –of script.sql –A 15 -n 10  
+dta -D orders -if orders_wkld.sql -of script.sql -A 15 -n 10  
 ```  
   
  **D. Ottimizzazione di tabelle specifiche elencate in un file**  
@@ -386,11 +385,11 @@ AdventureWorks2012.Production.Product  2000000
  La durata dell'ottimizzazione è pari a 2 ore (`-A 120`) e l'output viene scritto in un file XML (`-ox XMLTune.xml`).  
   
 ```  
-dta –D pubs –if pubs_wkld.sql –ox XMLTune.xml –A 120 –Tf table_list.txt  
+dta -D pubs -if pubs_wkld.sql -ox XMLTune.xml -A 120 -Tf table_list.txt  
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento all'utilità di prompt dei comandi &#40;motore di Database&#41;](../command-prompt-utility-reference-database-engine.md)   
- [Ottimizzazione guidata motore di database](../../relational-databases/performance/database-engine-tuning-advisor.md)  
+ [Guida di riferimento alle utilità del prompt dei comandi &#40;Motore di database&#41;](../command-prompt-utility-reference-database-engine.md)   
+ [Database Engine Tuning Advisor](../../relational-databases/performance/database-engine-tuning-advisor.md)  
   
   

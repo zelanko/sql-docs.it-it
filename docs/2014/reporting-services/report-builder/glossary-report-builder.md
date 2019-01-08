@@ -11,19 +11,19 @@ ms.assetid: 525820a2-7eba-4982-8518-e6db041b1fc6
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 95b59bf6b406a4dcbaabc956147f4216cfdda0e5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8afbe5f3bd711aac8ac1d7a0dd3d3258a6d4305d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48095381"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52522384"
 ---
 # <a name="glossary-report-builder"></a>Glossario (Generatore report)
   
   
 |Nome|Definizione|  
 |----------|----------------|  
-|.NET Framework|Componente integrante di Windows che supporta la compilazione, la distribuzione e l'esecuzione di applicazioni e servizi Web di nuova generazione. Rende disponibile un ambiente per più linguaggi basato su standard e altamente produttivo per l'integrazione di investimenti esistenti con applicazioni e servizi di nuova generazione ed è caratterizzato dalla flessibilità necessaria per affrontare le sfide connesse alla distribuzione e all'esecuzione di applicazioni di tipo Internet. .NET Framework è costituito da tre parti principali, ovvero Common Language Runtime, un set gerarchico di librerie di classi unificate e una versione di ASP basata su componenti denominata ASP.NET. Vedere anche: ASP.NET, Common Language Runtime, libreria di classi .NET Framework.|  
+|.NET Framework|Componente integrante di Windows che supporta la compilazione, la distribuzione e l'esecuzione di applicazioni e servizi Web di nuova generazione. Rende disponibile un ambiente per più linguaggi basato su standard e altamente produttivo per l'integrazione di investimenti esistenti con applicazioni e servizi di nuova generazione ed è caratterizzato dalla flessibilità necessaria per affrontare le sfide connesse alla distribuzione e all'esecuzione di applicazioni di tipo Internet. .NET Framework è costituito da tre parti principali, ovvero Common Language Runtime, un set gerarchico di librerie di classi unificate e una versione di ASP basata su componenti denominata ASP.NET. Vedere anche: ASP.NET, common language runtime, libreria di classi .NET Framework.|  
 |ActiveX Data Objects (ADO)|Oggetti COM che forniscono l'accesso alle origini dati. Tale API fornisce un livello tra OLE DB e linguaggi di programmazione diversi, ad esempio Visual Basic, Visual Basic, Applications Edition, pagine ASP e Visual Basic Scripting di Microsoft Internet Explorer.|  
 |report ad hoc|Report con estensione rdl creato in Generatore report 1.0 che accede a modelli di report.|  
 |area di controllo|Area di controllo o di stato collegata al bordo di un riquadro o di una finestra, ad esempio una barra degli strumenti o un righello.|  
@@ -169,7 +169,7 @@ ms.locfileid: "48095381"
 |mappa termica|Tipo di presentazione di mappa in cui l'intensità di colore per ogni poligono corrisponde ai dati analitici correlati. I valori minori in un intervallo, ad esempio, vengono visualizzati in blu (freddo), mentre quelli maggiori vengono visualizzati in rosso (caldo).|  
 |gerarchia|Struttura logica ad albero che consente di organizzare i membri di una dimensione in modo tale che ogni membro sia associato a un membro padre e a nessuno o più membri figlio.|  
 |disponibilità elevata|Stato di una risorsa che rimane operativa e utilizzabile dai client la maggior parte del tempo con una percentuale di errori che interrompono il servizio molto bassa.|  
-|HTML|Vedere: Hypertext Markup Language|  
+|HTML|Vedere Hypertext Markup Language|  
 |Visualizzatore HTML|Interfaccia utente costituita da una barra degli strumenti del report e da altri elementi di navigazione che consentono di utilizzare un report.|  
 |Hypertext Markup Language|Linguaggio di markup di testo utilizzato per creare documenti per il Web. Il linguaggio HTML definisce la struttura e il layout di un documento Web utilizzando numerosi tag e attributi.|  
 |identificatore|Nome di un oggetto in un database.|  
@@ -180,16 +180,16 @@ ms.locfileid: "48095381"
 |istanza|1. Copia di SQL Server in esecuzione in un computer. 2. Copia specifica di un elemento del report, ad esempio una parte del report, un sottoreport, un membro dinamico o un gruppo.|  
 |integer|Categoria di tipi di dati numerici che include i tipi di dati bigint, int, smallint e tinyint.|  
 |Internet Protocol Security|Regole che vengono seguite dai computer per garantire comunicazioni private e protette su reti Internet Protocol (IP) tramite l'utilizzo di servizi di sicurezza basati su crittografia.|  
-|IPsec|Vedere: Internet Protocol Security|  
+|IPsec|Vedere Internet Protocol Security|  
 |ISO|Uno dei due organismi responsabili dello sviluppo di standard internazionali per le comunicazioni di dati. L'International Organization for Standardization (ISO) collabora con l'International Electrotechnical Commission (IEC) per la definizione di standard in ambiente di elaborazione. I due organismi hanno pubblicato insieme lo standard ISO/IEC SQL-92 per SQL.|  
 |assegnazione di ruolo a livello di elemento|Criteri di sicurezza che si applicano a un elemento nella cartella del server di report.|  
 |assegnazione di ruolo a livello di elemento|Modello di sicurezza che definisce un ruolo utilizzato per controllare l'accesso o l'interazione con un elemento nello spazio dei nomi della cartella del server di report.|  
 |indicatore di prestazioni chiave (KPI)|Metrica standardizzata quantificabile che riflette una variabile aziendale critica, ad esempio una quota di mercato, misurata nel tempo.|  
-|parola chiave|Parola riservata in SQL Server che esegue una funzione specifica, ad esempio la definizione, la modifica o l'accesso agli oggetti di database. Ad esempio, SELECT, FROM ed AND.|  
+|parola chiave|Parola riservata in SQL Server che esegue una funzione specifica, ad esempio la definizione, la modifica o l'accesso agli oggetti di database. Ad esempio: SELECT, FROM, e and.|  
 |Indicatore KPI|Vedere: indicatore di prestazioni chiave (KPI)|  
 |campo etichette|Campo del set di dati di un report che identifica un'etichetta per un campo chiave corrispondente. I parametri e le aree dati possono visualizzare l'etichetta per un campo chiave anziché il valore.|  
 |latenza|Quantità di tempo che intercorre tra il completamento di una modifica dei dati in un server e il momento in cui tale modifica è visibile in un altro server.|  
-|latitudine|Coordinata di latitudine espressa come valore in gradi decimali del sistema World Geodetic System (WGS 84). L'intervallo valido è compreso tra -90,0 a +90,0.|  
+|latitudine|Coordinata di latitudine espressa come valore in gradi decimali del sistema World Geodetic System (WGS 84). L'intervallo valido è compreso tra -90,0 e +90,0.|  
 |livello|In un elemento di report mappa, specifica il tipo e la presentazione di un singolo tipo di dati spaziali. Un elemento di report mappa è un contenitore per più livelli.|  
 |LCID|Numero univoco che identifica le impostazioni locali in ambiente Windows.|  
 |legenda|In un grafico, una mappa o un'area dati del misuratore di un report, elemento che fornisce indicazioni tra la presentazione visualizzata dei dati e i valori dei dati sottostanti.|  
@@ -202,7 +202,7 @@ ms.locfileid: "48095381"
 |file di log|File o set di file che contiene i record delle modifiche apportate a un database.|  
 |nome logico|Nome utilizzato da SQL Server per identificare un file.|  
 |operatori logici|Operatori AND, OR e NOT utilizzati per collegare le condizioni di ricerca nelle clausole WHERE.|  
-|longitudine|Coordinata espressa come valore in gradi decimali del sistema World Geodetic System (WGS 84). L'intervallo valido è compreso tra -180 a +180.|  
+|longitudine|Coordinata espressa come valore in gradi decimali del sistema World Geodetic System (WGS 84). L'intervallo valido è compreso tra -180,0 e +180,0.|  
 |relazione molti-a-molti|Relazione tra due tabelle in cui alle righe di ogni tabella corrispondono più righe della tabella correlata. Ogni fattura di vendita, ad esempio, può contenere più prodotti, ma ogni prodotto può essere incluso in più fatture di vendita.|  
 |relazione molti-a-uno|Relazione tra due tabelle in cui una riga di una tabella può essere associata a più righe dell'altra tabella.|  
 |mappa|Elemento di report che funge da contenitore per titoli, diversi tipi di legende e livelli mappa.|  
@@ -213,7 +213,7 @@ ms.locfileid: "48095381"
 |file master|File installato con le versioni precedente di SQL Server utilizzato per archiviare i database di sistema master, model e tempdb e i relativi log delle transazioni, nonché il database di esempio pubs e il relativo log delle transazioni.|  
 |campi delle corrispondenze|Set di campi utilizzati per compilare una relazione tra dati analitici e dati spaziali.|  
 |area dati matrice|Area dati in un layout report che fornisce funzionalità simili a schede incrociate e report di tabella pivot. In fase di esecuzione, quando si combinano i dati del report e le aree dati, la matrice si espande orizzontalmente e verticalmente nella pagina. I valori contenuti nelle celle della matrice rappresentano valori aggregati che hanno come ambito l'intersezione dei gruppi di righe e di colonne ai quali appartiene la cella.|  
-|MDX|Vedere: MDX (Multidimensional Expressions)|  
+|MDX|Vedere Espressioni MDX (MDX)|  
 |proiezione Mercator|In un elemento di report mappa, proiezione di mappa cilindrica ideata da Gerardus Mercator nel 1569.|  
 |metadati|Informazioni sulle proprietà dei dati, ad esempio il tipo di dati in una colonna (numerico, di testo e così via) o la lunghezza di una colonna; informazioni su un file, quali titolo, descrizione, data di creazione e data dell'ultima modifica; informazioni sulla struttura dei dati o informazioni che specificano la progettazione di oggetti quali cubi o dimensioni.|  
 |metodo|Funzione che esegue un'azione tramite l'utilizzo di un oggetto COM, come avviene in SQL-DMO, OLE DB e ADO (ActiveX Data Objects).|  
@@ -264,7 +264,7 @@ ms.locfileid: "48095381"
 |protocol|Set standard di formati e procedure che consentono lo scambio di informazioni tra computer.|  
 |provider|1. Provider OLE DB. 2. Libreria di collegamento dinamico (DLL, Dynamic Link Library) in-process che consente di accedere a un database.|  
 |parametri di query|Parametri specificati in una query del set di dati, ad esempio una query Transact-SQL.|  
-|RDL|Vedere: Report Definition Language|  
+|RDL|Vedere Report Definition Language|  
 |record|Gruppo di campi di informazioni correlati (colonne) trattati come unità. Un record viene in genere definito riga in un database relazionale.|  
 |rettangolo|Elemento del report che può essere utilizzato come contenitore per più elementi del report o come elemento grafico in un report.|  
 |gerarchia ricorsiva|1. Gerarchia di dati da un singolo set di dati di un report che include più livelli gerarchici in una struttura gerarchia, ad esempio il report per definire la struttura di relazioni tra responsabili e dipendenti in una gerarchia organizzativa. 2. In Master Data Services, gerarchia derivata che include una relazione ricorsiva. Una relazione ricorsiva si verifica quando un'entità include un attributo basato su dominio che si fonda sull'entità stessa.|  
@@ -332,12 +332,12 @@ ms.locfileid: "48095381"
 |SKU|Modalità di identificazione di edizioni diverse dello stesso prodotto. Anche acronimo di Stock Keeping Unit (codice di riferimento del prodotto), terminologia aziendale standard.|  
 |sezione|Subset di dati di un cubo, specificato limitando una o più dimensioni in base ai membri della dimensione.|  
 |smart tag|Espone le configurazioni chiave direttamente nell'area di progettazione per garantire una maggiore produttività in fase di progettazione in Visual Studio 2005.|  
-|SMDL|Vedere: linguaggio SMDL|  
+|SMDL|Vedere SMDL|  
 |snapshot|Vedere: snapshot del report|  
 |ordinamento|Set di regole nelle regole di confronto che definiscono il modo in cui verranno valutati i caratteri nelle operazioni di confronto e la sequenza in cui verranno ordinati.|  
 |dati spaziali|Dati che specificano le posizioni degli oggetti su una superficie piana o curva. I dati spaziali possono essere punti, linee o poligoni.|  
 |tipi di dati spaziali|Specificano i dati che rappresentano informazioni geometriche (planari) o geografiche (geodetiche).|  
-|SQL|Vedere: Structured Query Language (SQL)|  
+|SQL|Vedere Structured Query Language (SQL)|  
 |query SQL|Istruzione SQL, ad esempio SELECT, INSERT, UPDATE, DELETE o CREATE TABLE.|  
 |autenticazione di SQL Server|Meccanismo per convalidare un tentativo di connessione a un'istanza di SQL Server specificando un ID e una password per l'accesso a SQL Server.|  
 |accesso di SQL Server|Account archiviato in SQL Server che consente agli utenti di connettersi a SQL Server.|  
@@ -366,11 +366,11 @@ ms.locfileid: "48095381"
 |Strumentazione gestione Windows (WMI)|Interfaccia che fornisce informazioni sugli oggetti in un ambiente gestito.|  
 |WKB|Rappresentazione di dati well-know binary, in base a quanto specificato dall'Open Geospatial Consortium (OGC).|  
 |WKT|Rappresentazione di dati well-know text, in base a quanto specificato dall'Open Geospatial Consortium (OGC).|  
-|WMI|Vedere: Strumentazione gestione Windows|  
+|WMI|Vedere Strumentazione gestione Windows (WMI)|  
 |asse x|Vedere: asse delle categorie (x)|  
 |asse y|Vedere: asse dei valori (y)|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Concetti relativi alla creazione di report &#40;Report e SSRS&#41;](../report-design/report-authoring-concepts-report-builder-and-ssrs.md)  
+ [Concetti relativi alla creazione di report &#40;Generatore report e SSRS&#41;](../report-design/report-authoring-concepts-report-builder-and-ssrs.md)  
   
   

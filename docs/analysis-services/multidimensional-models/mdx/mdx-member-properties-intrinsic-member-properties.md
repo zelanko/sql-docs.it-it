@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: a2e30dcf1875b09630516be9d9deb3248a95481e
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: e54aa6bb53e6ce9f34e6647927f29b7aadb97180
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50146169"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206880"
 ---
 # <a name="mdx-member-properties---intrinsic-member-properties"></a>Proprietà dei membri MDX - proprietà intrinseche dei membri
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -26,9 +26,9 @@ ms.locfileid: "50146169"
   
  Per un'introduzione all'uso e alla visualizzazione delle proprietà del membro di dimensione, vedere [Viewing SSAS Member Properties within an MDX Query Window in SSMS (Visualizzazione delle proprietà del membro SSAS in una finestra di query MDX in SSMS)](http://go.microsoft.com/fwlink/?LinkId=317362).  
   
-> [!NOTE]  
+> [!NOTE]
 >  Essendo un provider conforme alla sezione OLAP della specifica OLE DB del mese di marzo 1999 (2.6), [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] supporta le proprietà intrinseche dei membri elencate in questo argomento.  
->   
+> 
 >  I provider diversi da [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] possono supportare altre proprietà intrinseche dei membri. Per ulteriori informazioni sulle proprietà intrinseche dei membri supportate da altri provider, consultare la documentazione fornita con tali provider.  
   
 ## <a name="types-of-member-properties"></a>Tipi di proprietà dei membri  
@@ -57,12 +57,12 @@ ms.locfileid: "50146169"
 ## <a name="context-sensitive-member-properties"></a>Proprietà dei membri sensibili al contesto  
  Tutti i membri delle dimensioni e dei livelli supportano un elenco di proprietà intrinseche sensibili al contesto. Nella tabella seguente sono elencate tali proprietà sensibili al contesto.  
   
-|Proprietà|Description|  
+|Proprietà|Descrizione|  
 |--------------|-----------------|  
 |**ID**|ID gestito internamente per il membro.|  
 |**Key**|Valore della chiave del membro nel tipo di dati originale. MEMBER_KEY è disponibile per compatibilità con le versioni precedenti.  MEMBER_KEY ha lo stesso valore di KEY0 per le chiavi non composte e la proprietà MEMBER_KEY è Null per le chiavi composte.|  
-|**KEYx**|Chiave del membro, in cui x è il numero ordinale in base zero della chiave. KEY0 è disponibile per le chiavi composte e non composte, ma è utilizzato principalmente per le chiavi composte.<br /><br /> Le chiavi KEY0, KEY1, KEY2 e via di seguito formano collettivamente una chiave composta. È possibile utilizzare ciascuna chiave in modo indipendente in una query per restituire la parte corrispondente della chiave composta. Se ad esempio si specifica KEY0, viene restituita la prima parte della chiave composta, se si specifica KEY1 viene restituita la parte successiva e così via.<br /><br /> Se la chiave non è composta, KEY0 equivale a **Key**.<br /><br /> Notare che **KEYx** può essere usata sia in contesto che fuori contesto. Per questo motivo appare in entrambi gli elenchi.<br /><br /> Per un esempio di come usare la proprietà dei membri, vedere [A Simple MDX Tidbit: Key0, Key1, Key2](http://go.microsoft.com/fwlink/?LinkId=317364)(Tidbit MDX semplice: Key0, Key1, Key2).|  
-|**Nome**|Nome del membro.|  
+|**KEYx**|Chiave del membro, in cui x è il numero ordinale in base zero della chiave. KEY0 è disponibile per le chiavi composte e non composte, ma è utilizzato principalmente per le chiavi composte.<br /><br /> Le chiavi KEY0, KEY1, KEY2 e via di seguito formano collettivamente una chiave composta. È possibile utilizzare ciascuna chiave in modo indipendente in una query per restituire la parte corrispondente della chiave composta. Se ad esempio si specifica KEY0, viene restituita la prima parte della chiave composta, se si specifica KEY1 viene restituita la parte successiva e così via.<br /><br /> Se la chiave non è composta, KEY0 equivale a **Key**.<br /><br /> Notare che **KEYx** può essere usata sia in contesto che fuori contesto. Per questo motivo appare in entrambi gli elenchi.<br /><br /> Per un esempio di come usare la proprietà dei membri, vedere [Tidbit MDX semplice: Key0, Key1, Key2](http://go.microsoft.com/fwlink/?LinkId=317364).|  
+|**Name**|Nome del membro.|  
   
 ### <a name="properties-syntax-for-context-sensitive-properties"></a>Sintassi della parola chiave PROPERTIES per le proprietà sensibili al contesto  
  Queste proprietà dei membri possono essere utilizzate nel contesto di una dimensione o di un livello specifico e definiscono valori per ogni membro della dimensione o del livello specificato.  
@@ -87,7 +87,7 @@ ms.locfileid: "50146169"
 > [!NOTE]  
 >  Le colonne nel set di righe dello schema MEMBERS supportano le proprietà intrinseche dei membri elencate nella tabella seguente. Per altre informazioni sul set di righe dello schema **MEMBERS** , vedere [Set di righe MDSCHEMA_MEMBERS](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-members-rowset).  
   
-|Proprietà|Description|  
+|Proprietà|Descrizione|  
 |--------------|-----------------|  
 |**CATALOG_NAME**|Nome del cubo a cui appartiene il membro.|  
 |**CHILDREN_CARDINALITY**|Numero di elementi figlio del membro. Poiché può trattarsi di una stima, il conteggio potrebbe non essere esatto. I provider restituiscono la migliore stima possibile.|  
@@ -98,7 +98,7 @@ ms.locfileid: "50146169"
 |**HIERARCHY_UNIQUE_NAME**|Nome univoco della gerarchia. Se il membro appartiene a più di una gerarchia, sarà presente una riga per ogni gerarchia a cui appartiene il membro. Per i provider che generano nomi univoci tramite qualificazione, i singoli componenti di tale nome sono delimitati.|  
 |**IS_DATAMEMBER**|Valore booleano che indica se il membro è un membro dati.|  
 |**IS_PLACEHOLDERMEMBER**|Valore booleano che indica se il membro è un segnaposto.|  
-|**KEYx**|Chiave del membro, in cui x è il numero ordinale in base zero della chiave. KEY0 è disponibile per le chiavi composte e non composte.<br /><br /> Se la chiave non è composta, KEY0 equivale a **Key**.<br /><br /> Le chiavi KEY0, KEY1, KEY2 e via di seguito formano collettivamente una chiave composta. È possibile fare riferimento a ciascuna chiave in modo indipendente in una query per restituire la parte corrispondente della chiave composta. Se ad esempio si specifica KEY0, viene restituita la prima parte della chiave composta, se si specifica KEY1 viene restituita la parte successiva e così via.<br /><br /> Notare che **KEYx** può essere usata sia in contesto che fuori contesto. Per questo motivo appare in entrambi gli elenchi.<br /><br /> Per un esempio di come usare la proprietà dei membri, vedere [A Simple MDX Tidbit: Key0, Key1, Key2](http://go.microsoft.com/fwlink/?LinkId=317364)(Tidbit MDX semplice: Key0, Key1, Key2).|  
+|**KEYx**|Chiave del membro, in cui x è il numero ordinale in base zero della chiave. KEY0 è disponibile per le chiavi composte e non composte.<br /><br /> Se la chiave non è composta, KEY0 equivale a **Key**.<br /><br /> Le chiavi KEY0, KEY1, KEY2 e via di seguito formano collettivamente una chiave composta. È possibile fare riferimento a ciascuna chiave in modo indipendente in una query per restituire la parte corrispondente della chiave composta. Se ad esempio si specifica KEY0, viene restituita la prima parte della chiave composta, se si specifica KEY1 viene restituita la parte successiva e così via.<br /><br /> Notare che **KEYx** può essere usata sia in contesto che fuori contesto. Per questo motivo appare in entrambi gli elenchi.<br /><br /> Per un esempio di come usare la proprietà dei membri, vedere [Tidbit MDX semplice: Key0, Key1, Key2](http://go.microsoft.com/fwlink/?LinkId=317364).|  
 |**LCID** *x*|Conversione della didascalia del membro del valore esadecimale dell'ID impostazioni locali, dove *x* è il valore decimale dell'ID impostazioni locali, ad esempio LCID1009 per Inglese-Canada. È disponibile solo se nella conversione la colonna della didascalia è associata all'origine dei dati.|  
 |**LEVEL_NUMBER**|Distanza del membro dalla radice della gerarchia. Per il livello radice è zero.|  
 |**LEVEL_UNIQUE_NAME**|Nome univoco del livello a cui appartiene il membro. Per i provider che generano nomi univoci tramite qualificazione, i singoli componenti di tale nome sono delimitati.|  
@@ -131,7 +131,7 @@ ms.locfileid: "50146169"
 ### <a name="example"></a>Esempio  
  Negli esempi seguenti vengono illustrate query MDX che restituiscono proprietà intrinseche.  
   
- **Esempio 1: utilizzare proprietà intrinseche sensibili al contesto in una query**  
+ **Esempio 1: Utilizzare proprietà intrinseche sensibili al contesto di query**  
   
  Nell'esempio seguente vengono restituiti l'ID padre, la chiave e il nome per ciascuna categoria di prodotti. Notare il modo in cui le proprietà sono esposte come misure. Ciò consente di visualizzare le proprietà in un set di celle quando si esegue la query, anziché nella finestra di dialogo Proprietà membro in SSMS. Questo tipo di query può essere eseguito per recuperare i metadati dei membri da un cubo già distribuito.  
   
@@ -149,7 +149,7 @@ SELECT
 FROM [Adventure Works]  
 ```  
   
- **Esempio 2: utilizzare proprietà intrinseche non sensibili al contesto**  
+ **Esempio 2: Proprietà intrinseche non sensibili al contesto**  
   
  Nell'esempio seguente è riportato l'elenco completo delle proprietà intrinseche non sensibili al contesto. Dopo aver eseguito la query in SSMS, fare clic sui singoli membri per visualizzare le proprietà nella finestra di dialogo Proprietà membro.  
   
@@ -187,7 +187,7 @@ FROM [Adventure Works]
 WHERE [Employee].[Employee Department].[Department].&[Sales]  
 ```  
   
- **Esempio 3: restituire le proprietà dei membri come dati in un set di risultati**  
+ **Esempio 3: Restituisce le proprietà dei membri come dati in un set di risultati**  
   
  Nell'esempio seguente viene restituita la didascalia tradotta del membro della categoria di prodotto della dimensione Prodotto nel cubo Adventure Works per impostazioni locali specifiche.  
   

@@ -14,12 +14,12 @@ ms.assetid: 409c5076-c4c3-4f09-8f30-d3297df45f13
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ae0e86016d21e33507544747a44e5fc48b273ae2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9109f47ba1173c115234f9040445fb110e3f0e3c
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48094121"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52419682"
 ---
 # <a name="classify-wizard-data-mining-add-ins-for-excel"></a>Procedura guidata Classificazione (componenti aggiuntivi Data mining per Excel)
   ![Procedura guidata classificazione sulla barra multifunzione Data Mining](media/dmc-classify.gif "procedura guidata classificazione sulla barra multifunzione Data Mining")  
@@ -34,7 +34,7 @@ ms.locfileid: "48094121"
   
 2.  Nel **selezione dati di origine** pagina, scegliere i dati da analizzare.  
   
-     Questa procedura guidata supporta più tipi di dati: tabelle di Excel, intervalli di Excel e origini dati esterne. Con i dati esterni, è possibile aggiungerli in Excel oppure scegliere un set di tabelle o viste in un'origine dati di Analysis Services. È inoltre possibile aggiungere tabelle e modificare le colonne per creare origini dati ad hoc.  
+     Questa procedura guidata supporta più tipi di dati: Tabelle di Excel, intervalli di Excel e origini dati esterne. Con i dati esterni, è possibile aggiungerli in Excel oppure scegliere un set di tabelle o viste in un'origine dati di Analysis Services. È inoltre possibile aggiungere tabelle e modificare le colonne per creare origini dati ad hoc.  
   
 3.  Nel **classificazione** pagina, scegliere la colonna che si desidera classificare.  
   
