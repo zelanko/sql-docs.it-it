@@ -14,12 +14,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e73aa99ec25e1cdf084dc2a5f7a8dfa4c08f6c90
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: c7765138f3ff4fd1ef31b6d3a606d427020c376d
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018636"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979827"
 ---
 # <a name="linestring"></a>LineString
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "51018636"
   
  ![Esempi di istanze di geometria LineString](../../relational-databases/spatial/media/linestring.gif "Esempi di istanze di geometria LineString")  
   
- Come indicato nell'illustrazione:  
+Come indicato nell'illustrazione:  
   
 -   La figura 1 rappresenta un'istanza **LineString** semplice non chiusa.  
   
@@ -41,69 +41,69 @@ ms.locfileid: "51018636"
 -   La figura 4 rappresenta un'istanza **LineString** non semplice chiusa che, di conseguenza, non è un anello.  
   
 ### <a name="accepted-instances"></a>Istanze accettate  
- Le istanze **LineString** accettate possono essere di input in una variabile geometry, ma è possibile che non siano istanze **LineString** valide. Per poter essere accettata, un'istanza **LineString** deve soddisfare i criteri seguenti. L'istanza deve essere composta da almeno due punti distinti e deve essere vuota. Di seguito sono riportate le istanze LineString accettate.  
+Le istanze **LineString** accettate possono essere di input in una variabile geometry, ma è possibile che non siano istanze **LineString** valide. Per poter essere accettata, un'istanza **LineString** deve soddisfare i criteri seguenti. L'istanza deve essere composta da almeno due punti distinti e deve essere vuota. Di seguito sono riportate le istanze LineString accettate.  
   
-```  
+```sql  
 DECLARE @g1 geometry = 'LINESTRING EMPTY';  
 DECLARE @g2 geometry = 'LINESTRING(1 1,2 3,4 8, -6 3)';  
 DECLARE @g3 geometry = 'LINESTRING(1 1, 1 1)';  
 ```  
   
- `@g3` indica che un'istanza **LineString** può essere accettata, ma non è valida.  
+`@g3` indica che un'istanza **LineString** può essere accettata, ma non è valida.  
   
- L'istanza **LineString** seguente non viene accettata. Verrà generata un'eccezione `System.FormatException`.  
+L'istanza **LineString** seguente non viene accettata. Verrà generata un'eccezione `System.FormatException`.  
   
-```  
+```sql  
 DECLARE @g geometry = 'LINESTRING(1 1)';  
 ```  
   
 ### <a name="valid-instances"></a>Istanze valide  
- Per poter essere valida, un'istanza **LineString** deve soddisfare i criteri seguenti.  
+Per poter essere valida, un'istanza **LineString** deve soddisfare i criteri seguenti.  
   
 1.  L'istanza **LineString** deve essere accettata.  
-  
 2.  Se un'istanza **LineString** non è vuota, deve contenere almeno due punti distinti.  
-  
 3.  L'istanza **LineString** non può sovrapporsi a un intervallo di due o più punti consecutivi.  
   
- Di seguito sono riportate le istanze **LineString** valide.  
+Di seguito sono riportate le istanze **LineString** valide.  
   
-```  
+```sql  
 DECLARE @g1 geometry= 'LINESTRING EMPTY';  
 DECLARE @g2 geometry= 'LINESTRING(1 1, 3 3)';  
 DECLARE @g3 geometry= 'LINESTRING(1 1, 3 3, 2 4, 2 0)';  
 DECLARE @g4 geometry= 'LINESTRING(1 1, 3 3, 2 4, 2 0, 1 1)';  
 SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid(), @g4.STIsValid();  
-  
 ```  
   
- Di seguito sono riportate le istanze **LineString** non valide.  
+Di seguito sono riportate le istanze **LineString** non valide.  
   
-```  
+```sql  
 DECLARE @g1 geometry = 'LINESTRING(1 4, 3 4, 2 4, 2 0)';  
 DECLARE @g2 geometry = 'LINESTRING(1 1, 1 1)';  
 SELECT @g1.STIsValid(), @g2.STIsValid();  
 ```  
   
 > [!WARNING]  
->  Il rilevamento delle sovrapposizioni di **LineString** è basato su calcoli a virgola mobile inesatti.  
+> Il rilevamento delle sovrapposizioni di **LineString** è basato su calcoli a virgola mobile inesatti.  
   
 ## <a name="examples"></a>Esempi  
- L'esempio seguente illustra come creare un'istanza `geometry``LineString` con tre punti e un SRID di 0:  
+### <a name="example-a"></a>Esempio A.    
+L'esempio seguente illustra come creare un'istanza `geometry``LineString` con tre punti e un SRID di 0:  
   
-```  
+```sql  
 DECLARE @g geometry;  
 SET @g = geometry::STGeomFromText('LINESTRING(1 1, 2 4, 3 9)', 0);  
 ```  
   
- Ogni punto nell'istanza `LineString` può contenere valori Z (innalzamento) e M (misura). In questo esempio vengono aggiunti i valori M all'istanza `LineString` creata nell'esempio precedente. M e Z possono essere valori Null.  
+### <a name="example-b"></a>Esempio B.   
+Ogni punto nell'istanza `LineString` può contenere valori Z (innalzamento) e M (misura). In questo esempio vengono aggiunti i valori M all'istanza `LineString` creata nell'esempio precedente. M e Z possono essere valori Null.  
   
-```  
+```sql  
 DECLARE @g geometry;  
 SET @g = geometry::STGeomFromText('LINESTRING(1 1 NULL 0, 2 4 NULL 12.3, 3 9 NULL 24.5)', 0);  
 ```  
   
- Nell'esempio seguente viene illustrato come creare un'istanza `geometry LineString` con due punti uguali. Una chiamata a `IsValid` indica che l'istanza **LineString** non è valida e una chiamata a `MakeValid` convertirà l'istanza **LineString** in un'istanza **Point**.  
+### <a name="example-c"></a>Esempio C.   
+Nell'esempio seguente viene illustrato come creare un'istanza `geometry LineString` con due punti uguali. Una chiamata a `IsValid` indica che l'istanza **LineString** non è valida e una chiamata a `MakeValid` convertirà l'istanza **LineString** in un'istanza **Point**.  
   
 ```sql  
 DECLARE @g geometry  
@@ -118,11 +118,10 @@ ELSE
      SET @g = @g.MakeValid();  
      SELECT @g.ToString() + ' is a valid Point.';    
   END  
-  
 ```  
   
- Il frammento di codice precedente restituirà quando segue:  
-  
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)]
+
 ```  
 LINESTRING(1 3, 1 3) is not a valid LineString  
 POINT(1 3) is a valid Point.  

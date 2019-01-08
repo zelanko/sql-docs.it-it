@@ -38,12 +38,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e91131cdd88d9439ad51432f18e7c88a65432e64
-ms.sourcegitcommit: ef15fa253d98c62538bf9b6fe191af7f8ef8f6c8
+ms.openlocfilehash: 7f0e93aaff4ed0f8eb02de0acb3e9362c1a390a1
+ms.sourcegitcommit: a11e733bd417905150567dfebc46a137df85a2fa
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "49991244"
+ms.lasthandoff: 01/03/2019
+ms.locfileid: "53991914"
 ---
 # <a name="create-view-transact-sql"></a>CREATE VIEW (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -367,7 +367,7 @@ GO
   
 ```  
   
-### <a name="b-using-with-encryption"></a>B. Utilizzo della clausola WITH ENCRYPTION  
+### <a name="b-using-with-encryption"></a>b. Utilizzo della clausola WITH ENCRYPTION  
  Nell'esempio seguente viene utilizzata l'opzione `WITH ENCRYPTION` e vengono illustrate colonne calcolate, colonne rinominate e più colonne.  
   
 **Si applica a** : da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] fino a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
@@ -458,7 +458,7 @@ UNION ALL
 SELECT supplyID, supplier  
   FROM dbo.SUPPLY4;  
 GO
-INSERT dbo.SUPPLY1 VALUES ('1', 'CaliforniaCorp'), ('5', 'BraziliaLtd')  
+INSERT dbo.all_supplier_view VALUES ('1', 'CaliforniaCorp'), ('5', 'BraziliaLtd')    
 , ('231', 'FarEast'), ('280', 'NZ')  
 , ('321', 'EuroGroup'), ('442', 'UKArchip')  
 , ('475', 'India'), ('521', 'Afrique');  

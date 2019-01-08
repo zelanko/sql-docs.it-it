@@ -12,19 +12,19 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 32d5372f66881b130de832b8457e0618fc4d7364
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 3964fc0563ae31fa5966b0652389a4b0deb41b88
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51666180"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979127"
 ---
 # <a name="circularstring"></a>CircularString
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   **CircularString** è una raccolta di zero o più segmenti di arco circolare continui. Un segmento di arco circolare è un segmento curvo definito da tre punti su un piano bidimensionale. Il primo punto non può corrispondere al terzo punto. Se tutti e tre i punti di un segmento di arco circolare sono collineari, il segmento di arco verrà gestito come un segmento di linea.  
   
 > [!IMPORTANT]  
->  Per una descrizione dettagliata ed esempi delle nuove funzionalità spaziali introdotte in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], tra cui il sottotipo **CircularString** , scaricare il white paper relativo alle [nuove funzionalità spaziali in SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=226407).  
+> Per una descrizione dettagliata ed esempi delle nuove funzionalità spaziali introdotte in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], tra cui il sottotipo **CircularString** , scaricare il white paper relativo alle [nuove funzionalità spaziali in SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=226407).  
   
 ## <a name="circularstring-instances"></a>Istanze CircularString  
  Nel disegno seguente vengono illustrate le istanze **CircularString** valide:  
@@ -34,7 +34,7 @@ ms.locfileid: "51666180"
 ### <a name="accepted-instances"></a>Istanze accettate  
  Un'istanza **CircularString** viene accettata se è vuota o contiene un numero dispari di punti, n, dove n > 1. Le istanze **CircularString** seguenti vengono accettate.  
   
-```  
+```sql  
 DECLARE @g1 geometry = 'CIRCULARSTRING EMPTY';  
 DECLARE @g2 geometry = 'CIRCULARSTRING(1 1, 2 0, -1 1)';  
 DECLARE @g3 geometry = 'CIRCULARSTRING(1 1, 2 0, 2 0, 2 0, 1 1)';  
@@ -42,7 +42,7 @@ DECLARE @g3 geometry = 'CIRCULARSTRING(1 1, 2 0, 2 0, 2 0, 1 1)';
   
  `@g3` mostra che l'istanza **CircularString** può essere accettata, ma non è valida. La dichiarazione dell'istanza CircularString seguente non viene accettata. Questa dichiarazione genera un'eccezione `System.FormatException`.  
   
-```  
+```sql  
 DECLARE @g geometry = 'CIRCULARSTRING(1 1, 2 0, 2 0, 1 1)';  
 ```  
   
@@ -50,18 +50,14 @@ DECLARE @g geometry = 'CIRCULARSTRING(1 1, 2 0, 2 0, 1 1)';
  Un'istanza **CircularString** valida deve essere vuota o disporre degli attributi seguenti:  
   
 -   Deve contenere almeno un segmento di arco circolare, cioè avere un minimo di tre punti.  
-  
 -   L'ultimo endpoint per ogni segmento di arco circolare nella sequenza, a eccezione dell'ultimo segmento, deve essere il primo endpoint per il segmento successivo nella sequenza.  
-  
 -   Deve contenere un numero di punti dispari.  
-  
 -   Non deve sovrapporsi a un intervallo.  
-  
 -   Anche se è possibile che le istanze **CircularString** contengano segmenti di linea, questi ultimi devono essere definiti da tre punti collineari.  
   
- Nell'esempio seguente vengono illustrate le istanze **CircularString** valide.  
+Nell'esempio seguente vengono illustrate le istanze **CircularString** valide.  
   
-```  
+```sql  
 DECLARE @g1 geometry = 'CIRCULARSTRING EMPTY';  
 DECLARE @g2 geometry = 'CIRCULARSTRING(1 1, 2 0, -1 1)';  
 DECLARE @g3 geometry = 'CIRCULARSTRING(1 1, 2 0, 2 0, 1 1, 0 1)';  
@@ -69,23 +65,21 @@ DECLARE @g4 geometry = 'CIRCULARSTRING(1 1, 2 2, 2 2)';
 SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid(),@g4.STIsValid();  
 ```  
   
- Un'istanza **CircularString** deve contenere almeno due segmenti di arco circolare per definire un cerchio completo. Un'istanza **CircularString** non può usare un singolo segmento di arco circolare, ad esempio (1 1, 3 1, 1 1), per definire un cerchio completo. Utilizzare (1 1, 2 2, 3 1, 2 0, 1 1) per definire il cerchio.  
+Un'istanza **CircularString** deve contenere almeno due segmenti di arco circolare per definire un cerchio completo. Un'istanza **CircularString** non può usare un singolo segmento di arco circolare, ad esempio (1 1, 3 1, 1 1), per definire un cerchio completo. Utilizzare (1 1, 2 2, 3 1, 2 0, 1 1) per definire il cerchio.  
   
- Nell'esempio seguente vengono illustrate le istanze CircularString non valide.  
+Nell'esempio seguente vengono illustrate le istanze CircularString non valide.  
   
-```  
+```sql  
 DECLARE @g1 geometry = 'CIRCULARSTRING(1 1, 2 0, 1 1)';  
 DECLARE @g2 geometry = 'CIRCULARSTRING(0 0, 0 0, 0 0)';  
 SELECT @g1.STIsValid(), @g2.STIsValid();  
 ```  
   
 ### <a name="instances-with-collinear-points"></a>Istanze con punti collineari  
- Nei casi seguenti un segmento di arco circolare sarà considerato come un segmento di linea:  
+Nei casi seguenti un segmento di arco circolare sarà considerato come un segmento di linea:  
   
 -   Quando tutti e i tre punti sono collineari, ad esempio, (1 3, 4 4, 7 5).  
-  
 -   Quando il primo punto e il punto medio sono gli stessi, ma il terzo punto è diverso, ad esempio, (1 3, 1 3, 7 5).  
-  
 -   Quando il punto medio e l'ultimo punto sono gli stessi, ma il primo punto è diverso, ad esempio, (1 3, 4 4, 4 4).  
   
 ## <a name="examples"></a>Esempi  
@@ -98,7 +92,7 @@ DECLARE @g geometry;
 SET @g = geometry::Parse('CIRCULARSTRING EMPTY');  
 ```  
   
-### <a name="b-instantiating-a-geometry-instance-using-a-circularstring-with-one-circular-arc-segment"></a>B. Creazione di un'istanza Geometry utilizzando un'istanza CircularString con un segmento di arco circolare  
+### <a name="b-instantiating-a-geometry-instance-using-a-circularstring-with-one-circular-arc-segment"></a>b. Creazione di un'istanza Geometry utilizzando un'istanza CircularString con un segmento di arco circolare  
  L'esempio seguente mostra come creare un'istanza **CircularString** con un singolo segmento di arco circolare (mezzo cerchio):  
   
 ```sql  
@@ -116,13 +110,13 @@ SET @g = geometry::Parse('CIRCULARSTRING(2 1, 1 2, 0 1, 1 0, 2 1)');
 SELECT 'Circumference = ' + CAST(@g.STLength() AS NVARCHAR(10));    
 ```  
   
- Viene prodotto l'output seguente:  
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
 ```  
 Circumference = 6.28319  
 ```  
   
- Confrontare l'output quando viene utilizzata **LineString** anziché **CircularString**:  
+Confrontare l'output quando viene utilizzata **LineString** anziché **CircularString**:  
   
 ```sql  
 DECLARE @g geometry;  
@@ -130,13 +124,13 @@ SET @g = geometry::STGeomFromText('LINESTRING(2 1, 1 2, 0 1, 1 0, 2 1)', 0);
 SELECT 'Perimeter = ' + CAST(@g.STLength() AS NVARCHAR(10));  
 ```  
   
- Viene prodotto l'output seguente:  
-  
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)]
+
 ```  
 Perimeter = 5.65685  
 ```  
   
- Si noti che il valore per l'esempio **CircularString** è vicino a 2∏, che è la circonferenza effettiva del cerchio.  
+Si noti che il valore per l'esempio **CircularString** è vicino a 2∏, che è la circonferenza effettiva del cerchio.  
   
 ### <a name="d-declaring-and-instantiating-a-geometry-instance-with-a-circularstring-in-the-same-statement"></a>D. Dichiarazione e creazione di un'istanza Geometry utilizzando un'istanza CircularString nella stessa istruzione  
  In questo frammento viene illustrato come dichiarare e creare un'istanza **geometry** con un'istanza **CircularString** nella stessa istruzione:  

@@ -20,12 +20,12 @@ ms.assetid: 85f4e7e6-a330-4de0-9048-64f386ccc314
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 56fbd27b9e5e4d4e760743d94948540f0f6d87ad
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 622e6be1e798569de5184333144ff53e3e7d80a6
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47667129"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979587"
 ---
 # <a name="alter-database-audit-specification-transact-sql"></a>ALTER DROP DATABASE AUDIT SPECIFICATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -93,11 +93,11 @@ ALTER DATABASE AUDIT SPECIFICATION audit_specification_name
  Dopo essere stata creata, la specifica del controllo del database può essere visualizzata dalle entità che dispongono dell'autorizzazione CONTROL SERVER o ALTER ANY DATABASE AUDIT o dell'account sysadmin oppure dalle entità che possono accedere esplicitamente al controllo.  
   
 ## <a name="examples"></a>Esempi  
- Nell'esempio seguente viene modificata una specifica del controllo del database denominata `HIPPA_Audit_DB_Specification` che controlla le istruzioni `SELECT` mediante l'utente `dbo`, per un oggetto [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit denominato `HIPPA_Audit`.  
+ Nell'esempio seguente viene modificata una specifica del controllo del database denominata `HIPAA_Audit_DB_Specification` che controlla le istruzioni `SELECT` mediante l'utente `dbo`, per un oggetto [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit denominato `HIPAA_Audit`.  
   
 ```  
-ALTER DATABASE AUDIT SPECIFICATION HIPPA_Audit_DB_Specification  
-FOR SERVER AUDIT HIPPA_Audit  
+ALTER DATABASE AUDIT SPECIFICATION HIPAA_Audit_DB_Specification  
+FOR SERVER AUDIT HIPAA_Audit  
     ADD (SELECT  
          ON OBJECT::dbo.Table1  
          BY dbo)  

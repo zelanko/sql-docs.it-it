@@ -16,12 +16,12 @@ ms.assetid: c2bfe9b8-57a4-48b4-b028-e1a3ed5ece88
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f5bca48c2aa30bf1a3616076c61d06f69dc5dab2
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: 8c2169a32c9d82cd32491b1dabe5a87436623c80
+ms.sourcegitcommit: a11e733bd417905150567dfebc46a137df85a2fa
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49168955"
+ms.lasthandoff: 01/03/2019
+ms.locfileid: "53991844"
 ---
 # <a name="compress-transact-sql"></a>COMPRESS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
@@ -77,14 +77,14 @@ INSERT INTO player (name, surname, info )
 VALUES (N'Michael', N'Raheem', compress(@info));  
 ```  
   
-### <a name="b-archive-compressed-version-of-deleted-rows"></a>B. Archiviare la versione compressa di righe eliminate  
+### <a name="b-archive-compressed-version-of-deleted-rows"></a>b. Archiviare la versione compressa di righe eliminate  
 Questa istruzione elimina i record obsoleti Player (Giocatore) dalla tabella `player`, dopo di ché, per risparmiare spazio, archivia i record nella tabella `inactivePlayer` usando un formato compresso.
   
 ```sql
-DELETE player  
-WHERE datemodified < @startOfYear  
-OUTPUT id, name, surname datemodifier, COMPRESS(info)   
-INTO dbo.inactivePlayers ;  
+DELETE FROM player  
+OUTPUT deleted.id, deleted.name, deleted.surname, deleted.datemodifier, COMPRESS(deleted.info)   
+INTO dbo.inactivePlayers
+WHERE datemodified < @startOfYear; 
 ```  
   
 ## <a name="see-also"></a>Vedere anche

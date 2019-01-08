@@ -22,12 +22,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7e15f069c14131f6e75c1062e981b04aa6ef93a0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a23f24cc0ad15ab217f328a1a2dd42737e7c6b57
+ms.sourcegitcommit: a11e733bd417905150567dfebc46a137df85a2fa
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47835922"
+ms.lasthandoff: 01/03/2019
+ms.locfileid: "53991794"
 ---
 # <a name="-string-concatenation-transact-sql"></a>+ (concatenazione di stringhe) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -48,7 +48,7 @@ expression + expression
   
  Per la concatenazione di stringhe binarie e dei caratteri tra le stringhe binarie, è necessario eseguire una conversione esplicita in dati di tipo carattere. Nell'esempio seguente viene illustrato quando è necessario eseguire la funzione `CONVERT` o `CAST` per la concatenazione binaria e quando invece l'uso di `CONVERT` o `CAST`non è richiesto.  
   
-```  
+```sql
 DECLARE @mybin1 varbinary(5), @mybin2 varbinary(5)  
 SET @mybin1 = 0xFF  
 SET @mybin2 = 0xA5  
@@ -78,7 +78,7 @@ SELECT CAST(@mybin1 AS varchar(5)) + ' '
 ### <a name="a-using-string-concatenation"></a>A. Utilizzo della concatenazione di stringhe  
  Nell'esempio seguente viene creata una singola colonna sotto l'intestazione `Name` in base a più colonne di tipo carattere, con il cognome della persona seguito da una virgola, uno spazio e successivamente il nome. Il set di risultati è visualizzato in ordine alfabetico crescente in base prima al cognome e quindi al nome.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT (LastName + ', ' + FirstName) AS Name  
@@ -86,10 +86,10 @@ FROM Person.Person
 ORDER BY LastName ASC, FirstName ASC;  
 ```  
   
-### <a name="b-combining-numeric-and-date-data-types"></a>B. Combinazione di tipi di dati numeric e date  
+### <a name="b-combining-numeric-and-date-data-types"></a>b. Combinazione di tipi di dati numeric e date  
  Nell'esempio seguente viene usata la funzione `CONVERT` per concatenare i tipi di dati **numeric** e **date**.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT 'The order is due on ' + CONVERT(varchar(12), DueDate, 101)  
@@ -109,7 +109,7 @@ GO
 ### <a name="c-using-multiple-string-concatenation"></a>C. Utilizzo della concatenazione di più stringhe  
  Nell'esempio seguente vengono concatenate più stringhe per ottenere un'unica stringa di lunghezza maggiore per visualizzare il cognome e l'iniziale del nome dei vicepresidenti in [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)]. Vengono aggiunti una virgola dopo il cognome e un punto dopo l'iniziale del nome.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT (LastName + ',' + SPACE(1) + SUBSTRING(FirstName, 1, 1) + '.') AS Name, e.JobTitle  
@@ -136,7 +136,7 @@ GO
 ### <a name="d-using-large-strings-in-concatenation"></a>D. Uso di stringhe di grandi dimensioni nella concatenazione
 Nell'esempio seguente si concatenano più stringhe per formare una stringa lunga e quindi si prova a calcolare la lunghezza della stringa finale. La lunghezza del set di risultati finale è 16000, perché l'espressione di valutazione viene avviata da sinistra, ovvero @x + @z + @y => (@x + @z) + @y. In questo caso, il risultato di (@x + @z) viene troncato a 8000 byte, quindi @y viene aggiunto al set di risultati. Pertanto la lunghezza finale della stringa è 16000. Dato che @y è una stringa con tipo di dati per valori di grandi dimensioni non si verifica nessun troncamento.
 
-```
+```sql
 DECLARE @x varchar(8000) = replicate('x', 8000)
 DECLARE @y varchar(max) = replicate('y', 8000)
 DECLARE @z varchar(8000) = replicate('z',8000)
@@ -159,7 +159,7 @@ GO
 ### <a name="e-using-multiple-string-concatenation"></a>E. Utilizzo della concatenazione di più stringhe  
  Nell'esempio seguente vengono concatenate più stringhe per ottenere un'unica stringa di lunghezza maggiore per visualizzare il cognome e l'iniziale del nome dei vicepresidenti in un database di esempio. Vengono aggiunti una virgola dopo il cognome e un punto dopo l'iniziale del nome.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT (LastName + ', ' + SUBSTRING(FirstName, 1, 1) + '.') AS Name, Title  

@@ -193,30 +193,12 @@ items:
       - name: Java
         href: /sql/advanced-analytics/java/
         homepage: /sql/advanced-analytics/java/extension-java
-      - name: R
-        href: /sql/advanced-analytics/r/
-        homepage: /sql/advanced-analytics/r/architecture-overview-sql-server-r
-      - name: Python
-        href: /sql/advanced-analytics/python/
-        homepage: /sql/advanced-analytics/python/sql-server-python-services
       - name: Install
         href: /sql/advanced-analytics/install/
-        homepage: /sql/advanced-analytics/install/sql-machine-learning-services-windows-install.md
-      - name: Informazioni
+        homepage: /sql/advanced-analytics/install/sql-machine-learning-services-windows-install
+      - name: Esercitazioni
         href: /sql/advanced-analytics/tutorials/
         homepage: /sql/advanced-analytics/tutorials/machine-learning-services-tutorials
-      - name: Python
-        href: /sql/advanced-analytics/python/
-        homepage: /sql/advanced-analytics/python/dmvs-for-python
-    - name: R
-      href: /sql/advanced-analytics/r/
-      homepage: /sql/advanced-analytics/r/architecture-overview-sql-server-r
-    - name: Installazione e configurazione
-      href: /sql/advanced-analytics/install/
-      homepage: /sql/advanced-analytics/install/sql-machine-learning-services-windows-install.md
-    - name: Esercitazioni
-      href: /sql/advanced-analytics/tutorials/
-      homepage: /sql/advanced-analytics/tutorials/machine-learning-services-tutorials
     - name: SQL Server
       href: /sql/sql-server/
       homepage: /sql/sql-server/sql-server-technical-documentation
@@ -654,7 +636,7 @@ items:
       - name: Eventi estesi
         href: /sql/relational-databases/extended-events/
         homepage: /sql/relational-databases/extended-events/extended-events
-      - name: Grafici
+      - name: SQL Graph
         href: /sql/relational-databases/graphs/
         homepage: /sql/relational-databases/graphs/sql-graph-overview
       - name: Importare ed esportare
@@ -756,7 +738,7 @@ items:
       - name: Service Broker
         href: /sql/relational-databases/service-broker/
         homepage: /sql/relational-databases/service-broker/event-notifications
-      - name: Spaziale
+      - name: Dati spaziali
         href: /sql/relational-databases/spatial/
         homepage: /sql/relational-databases/spatial/spatial-data-sql-server
       - name: Traccia SQL
@@ -1228,9 +1210,9 @@ items:
       - name: SSMA Sybase
         href: /sql/ssma/sybase/
         homepage: /sql/ssma/sybase/installing-ssma-for-sybase-sybasetosql
-ms.openlocfilehash: 92e80f150594f0b9190f1e9570e4e10b6fbefdd4
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 0f92879379c4acd3dabf40da787aa70c2b03c629
+ms.sourcegitcommit: baca29731a1be4f8fa47567888278394966e2af7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51639108"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54046561"

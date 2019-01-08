@@ -20,12 +20,12 @@ ms.assetid: 9cac288b-940e-4c16-88d6-de06aeed2b47
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: f8ec3babd503117e70affa28ccd1a123d0f09894
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 01490d9fe252d17c6d4b25eebd5e160ebe79a33a
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47752289"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980237"
 ---
 # <a name="alter-server-audit-specification-transact-sql"></a>ALTER SERVER AUDIT SPECIFICATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -69,11 +69,11 @@ ALTER SERVER AUDIT SPECIFICATION audit_specification_name
  Dopo essere stata creata, la specifica del controllo del server può essere visualizzata dalle entità che dispongono dell'autorizzazione CONTROL SERVER oALTER ANY SERVER AUDIT o dell'account sysadmin oppure dalle entità che possono accedere esplicitamente al controllo.  
   
 ## <a name="examples"></a>Esempi  
- Nell'esempio seguente viene crea una specifica del controllo del server denominata `HIPPA_Audit_Specification`. Nell'esempio viene eliminato il gruppo di azioni di controllo per gli accessi non riusciti e viene aggiunto un gruppo di azioni di controllo per l'accesso a un oggetto di database per un oggetto [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit denominato `HIPPA_Audit`.  
+ Nell'esempio seguente viene crea una specifica del controllo del server denominata `HIPAA_Audit_Specification`. Nell'esempio viene eliminato il gruppo di azioni di controllo per gli accessi non riusciti e viene aggiunto un gruppo di azioni di controllo per l'accesso a un oggetto di database per un oggetto [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit denominato `HIPAA_Audit`.  
   
 ```  
-ALTER SERVER AUDIT SPECIFICATION HIPPA_Audit_Specification  
-FOR SERVER AUDIT HIPPA_Audit  
+ALTER SERVER AUDIT SPECIFICATION HIPAA_Audit_Specification  
+FOR SERVER AUDIT HIPAA_Audit  
     DROP (FAILED_LOGIN_GROUP)  
     ADD (DATABASE_OBJECT_ACCESS_GROUP);  
 GO  
