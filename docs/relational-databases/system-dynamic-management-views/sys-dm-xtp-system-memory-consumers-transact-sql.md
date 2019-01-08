@@ -19,12 +19,12 @@ ms.assetid: 9eb0dd82-7920-42e0-9e50-7ce6e7ecee8b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8341ac09af815f2e96eadd1616fd02cc75810644
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fbab6be30b0d268c7632180caaf939a54e672fbf
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47815049"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52544027"
 ---
 # <a name="sysdmxtpsystemmemoryconsumers-transact-sql"></a>sys.dm_xtp_system_memory_consumers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -38,12 +38,12 @@ select * from sys.dm_xtp_system_memory_consumers
   
  Per altre informazioni, vedere [OLTP in memoria &#40;ottimizzazione in memoria&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md).  
   
-|Nome colonna|Tipo|Description|  
+|Nome colonna|Tipo|Descrizione|  
 |-----------------|----------|-----------------|  
 |memory_consumer_id|**bigint**|ID interno del consumer di memoria.|  
-|memory_consumer_type|**int**|Numero intero che rappresenta il tipo del consumer di memoria con uno dei valori seguenti:<br /><br /> 0 – Non deve essere visualizzato. Aggrega l'utilizzo della memoria due o più consumer.<br /><br /> 1 – LOOKASIDE: Tiene traccia dell'utilizzo di memoria per un lookaside del sistema.<br /><br /> 2 - VARHEAP: Tiene traccia dell'utilizzo di memoria per un heap a lunghezza variabile.<br /><br /> 4 - pool di pagine i/o: tiene traccia dell'utilizzo di memoria per un pool di pagine di sistema utilizzato per le operazioni dei / o.|  
-|memory_consumer_type_desc|**nvarchar (16)**|Descrizione del tipo del consumer di memoria:<br /><br /> 0 – Non deve essere visualizzato.<br /><br /> 1 – LOOKASIDE<br /><br /> 2 - VARHEAP<br /><br /> 4 - PGPOOL|  
-|memory_consumer_desc|**nvarchar(64)**|Descrizione dell'istanza del consumer di memoria:<br /><br /> VARHEAP: <br />Heap di sistema. Uso generale. Utilizzato solo per allocare gli elementi di lavoro di Garbage Collection.<br />oppure<br />Heap di lookaside. Utilizzato da looksides quando il numero di elementi contenuti nell'elenco raggiunge un limite predeterminato (in genere circa 5.000 elementi).<br /><br /> PGPOOL: Per il sistema dei / o pool vi sono tre pool di pagine di dimensioni diverse System 4K, riserva di paging System 64K e riserva di paging System 256K.|  
+|memory_consumer_type|**int**|Numero intero che rappresenta il tipo del consumer di memoria con uno dei valori seguenti:<br /><br /> 0 - non deve essere visualizzato. Aggrega l'utilizzo della memoria due o più consumer.<br /><br /> 1 - ELENCO LOOKASIDE DA: Tiene traccia dell'utilizzo di memoria per un lookaside del sistema.<br /><br /> 2 - VARHEAP: Tiene traccia dell'utilizzo di memoria per un heap a lunghezza variabile.<br /><br /> 4: riserva di paging IO: Tiene traccia dell'utilizzo di memoria per un pool di pagine del sistema utilizzato per le operazioni di I/O.|  
+|memory_consumer_type_desc|**nvarchar (16)**|Descrizione del tipo del consumer di memoria:<br /><br /> 0 - non deve essere visualizzato.<br /><br /> 1 - LOOKASIDE<br /><br /> 2 - VARHEAP<br /><br /> 4 - PGPOOL|  
+|memory_consumer_desc|**nvarchar(64)**|Descrizione dell'istanza del consumer di memoria:<br /><br /> VARHEAP: <br />Heap di sistema. Uso generale. Utilizzato solo per allocare gli elementi di lavoro di Garbage Collection.<br />oppure<br />Heap di lookaside. Utilizzato da looksides quando il numero di elementi contenuti nell'elenco raggiunge un limite predeterminato (in genere circa 5.000 elementi).<br /><br /> PGPOOL: Per i pool di sistema I/O esistono pool di pagine di tre dimensioni diverse: System 4K, System 64K e System 256K.|  
 |lookaside_id|**bigint**|ID del provider di memoria dell'elenco lookaside e locale a livello di thread.|  
 |pagepool_id|**bigint**|ID del provider di memoria del pool di pagine e locale a livello di thread.|  
 |allocated_bytes|**bigint**|Numero di byte riservati al consumer.|  

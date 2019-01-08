@@ -17,12 +17,12 @@ ms.assetid: 20b0248f-36da-4fc3-97d2-3789fcf6e084
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e79e83263ab498a86a82fcdc65d56f6f8910d497
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f16cadbb06d1d25000aefada172a783a5a19c79c
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48222963"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53368103"
 ---
 # <a name="allowing-partially-trusted-callers"></a>Accettazione di chiamanti parzialmente attendibili
   La condivisione delle librerie di codice rappresenta uno scenario comune quando si utilizza l'integrazione con Common Language Runtime (CLR), in cui a un assembly che contiene un tipo definito dall'utente, una stored procedure, una funzione definita dall'utente, un'aggregazione definita dall'utente, un trigger o una classe di utilità spesso accede un altro assembly o applicazione. Le librerie di codice per le quali è prevista la condivisione da parte di più applicazioni devono essere firmate con un nome sicuro.  
@@ -47,7 +47,7 @@ Microsoft.Samples.SqlServer.TestResultSet.Test()
   
 ## <a name="example"></a>Esempio  
   
-### <a name="description"></a>Description  
+### <a name="description"></a>Descrizione  
  Si supponga di disporre di una classe di utilità che risulta utile per molte applicazioni di integrazione con CLR sul lato server, ad esempio una classe che rappresenta i risultati della chiamata a una query. Per abilitare la condivisione di questo componente, questa classe di utilità viene inserita in un assembly separato a cui viene quindi fatto riferimento dai vari altri assembly che contengono oggetti dell'integrazione con CLR. Poiché questa classe di utilità è utilizzata in molte applicazioni server diverse, essa viene sottoposta a un'attenta revisione e gli eventuali problemi legati alla sicurezza vengono risolti. L'attributo `AllowPartiallyTrustedCallers` viene quindi applicato all'assembly che contiene la classe di utilità, in modo che gli oggetti dell'integrazione con CLR contenuti negli assembly contrassegnati con i set di autorizzazioni `SAFE` o `EXTERNAL_ACCESS` possano utilizzare i metodi e la classe di utilità anche se si trovano in un assembly separato.  
   
  A volte può rivelarsi utile poter eseguire comandi mentre si stanno leggendo i risultati di una query senza dover aprire una nuova connessione e senza dover leggere tutti i risultati in memoria. La caratteristica Multiple Active Result Set (MARS) di ADO.NET 2.0 è una tecnologia che consente di raggiungere tale obiettivo. Attualmente questa funzionalità non è implementata per il provider in-process utilizzato nella programmazione sul lato server. Per ovviare a questa limitazione è possibile utilizzare cursori sul lato server. Questo esempio illustra come utilizzare i cursori sul lato server per ovviare alla mancanza del supporto MARS nella programmazione sul lato server.  
@@ -62,7 +62,7 @@ Microsoft.Samples.SqlServer.TestResultSet.Test()
   
  L'esempio illustra inoltre l'utilizzo dell'attributo "Allow partially trusted callers" per indicare che l'assembly del set di risultati è una libreria che può essere chiamata da altri assembly senza problemi. Questo approccio è leggermente più complesso ma molto più sicuro rispetto alla registrazione dell'assembly chiamante tramite l'autorizzazione UNSAFE. È più sicuro in quanto, registrando l'assembly chiamante come sicuro, si limitano le risorse interessate al di fuori del server e si evitano danni all'integrità del server.  
   
- Le istruzioni di compilazione per questo esempio presuppongono che i file di codice sorgente si trovino in una directory denominata c:\samples.  Se si utilizza un directory diversa, è necessario modificare gli script [!INCLUDE[tsql](../../includes/tsql-md.md)]. Il [!INCLUDE[tsql](../../includes/tsql-md.md)] degli script richiede anche il database AdventureWorks. È possibile scaricare il database di esempio AdventureWorks dal [Microsoft SQL Server Samples and Community Projects](http://go.microsoft.com/fwlink/?LinkID=85384) home page di.  
+ Le istruzioni di compilazione per questo esempio presuppongono che i file di codice sorgente si trovino in una directory denominata c:\samples.  Se si utilizza un directory diversa, è necessario modificare gli script [!INCLUDE[tsql](../../includes/tsql-md.md)]. Il [!INCLUDE[tsql](../../includes/tsql-md.md)] degli script richiede anche il database AdventureWorks. È possibile scaricare il database di esempio AdventureWorks dal [Microsoft SQL Server Samples and Community Projects](https://go.microsoft.com/fwlink/?LinkID=85384) home page di.  
   
  Per compilare ed eseguire l'esempio, incollare il primo listato di codice in un file denominato ResultSet.cs ed eseguire la compilazione con csc /target:library ResultSet.cs.  
   
@@ -74,7 +74,7 @@ Microsoft.Samples.SqlServer.TestResultSet.Test()
   
  Incollare il quinto listato di codice in un file denominato Cleanup.sql ed eseguire la compilazione con sqlcmd -E -I -i Cleanup.sql.  
   
-### <a name="code"></a>codice  
+### <a name="code"></a>Codice  
   
 ```  
 // ResultSet.cs  
@@ -879,7 +879,7 @@ namespace Microsoft.Samples.SqlServer {
 }  
 ```  
   
-### <a name="code"></a>codice  
+### <a name="code"></a>Codice  
   
 ```  
 // TestResultSet.cs  
@@ -992,7 +992,7 @@ namespace Microsoft.Samples.SqlServer {
 }  
 ```  
   
-### <a name="code"></a>codice  
+### <a name="code"></a>Codice  
   
 ```  
 -- InstallCS.sql  
@@ -1046,7 +1046,7 @@ WHERE ProductID = @ProductID;
 GO  
 ```  
   
-### <a name="code"></a>codice  
+### <a name="code"></a>Codice  
   
 ```  
 -- test.sql  
@@ -1076,7 +1076,7 @@ GO
   
 ```  
   
-### <a name="code"></a>codice  
+### <a name="code"></a>Codice  
   
 ```  
 -- Cleanup.sql  

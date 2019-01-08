@@ -13,15 +13,15 @@ ms.assetid: 59440510-2d76-41dc-9b55-edc15259f9da
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ca7b73e08941d42ceccd1ff3dab04a686b120d98
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 40e802ac33c7aa9b97267a725b20eb0d2f00dbb1
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48201401"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52410358"
 ---
 # <a name="create-a-calculated-column-ssas-tabular"></a>Creare una colonna calcolata (SSAS tabulare)
-  Le colonne calcolate consentono di aggiungere nuovi dati al modello. Invece di incollare o importare i valori nella colonna, viene creata una formula DAX che consente di definire i valori a livello di riga della colonna. I valori in ogni riga di una colonna calcolata vengono calcolati e popolati quando si crea una formula valida e si fa clic su INVIO. La colonna calcolata può essere aggiunta a un'applicazione di analisi o di creazione di report come qualsiasi altra colonna di dati. In questo argomento viene descritto come creare una nuova colonna calcolata tramite la barra della formula DAX in Progettazione modelli.  
+  Le colonne calcolate consentono di aggiungere nuovi dati al modello. Anziché incollare o importare i valori nella colonna, si crea una formula DAX che definisce i valori a livello di riga della colonna. I valori in ogni riga di una colonna calcolata vengono calcolati e popolati quando si crea una formula valida e si fa clic su INVIO. La colonna calcolata può essere aggiunta a un'applicazione di analisi o di creazione di report come qualsiasi altra colonna di dati. In questo argomento viene descritto come creare una nuova colonna calcolata tramite la barra della formula DAX in Progettazione modelli.  
   
 #### <a name="to-create-a-new-calculated-column"></a>Per creare una nuova colonna calcolata  
   
@@ -47,7 +47,7 @@ ms.locfileid: "48201401"
 >  È possibile utilizzare Completamento automatico formule DAX in una formula esistente con funzioni nidificate. Il testo immediatamente prima del punto di inserimento viene utilizzato per visualizzare i valori nell'elenco a discesa mentre tutto il testo dopo tale punto rimane invariato.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Le colonne calcolate &#40;tabulare di SSAS&#41;](ssas-calculated-columns.md)   
- [Le misure &#40;tabulare di SSAS&#41;](measures-ssas-tabular.md)  
+ [Colonne calcolate &#40;SSAS tabulare&#41;](ssas-calculated-columns.md)   
+ [Misure &#40;SSAS tabulare&#41;](measures-ssas-tabular.md)  
   
   

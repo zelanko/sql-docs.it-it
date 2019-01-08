@@ -1,5 +1,5 @@
 ---
-title: Creare una colonna calcolata | Documenti Microsoft
+title: Creare una colonna calcolata in Analysis Services | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 25121b53ce050da38a6d19d0c458585acf7a9abd
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 705428d2c2a6671452a1d95e06e500f4860574e0
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34039661"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53071938"
 ---
 # <a name="create-a-calculated-column"></a>Creare una colonna calcolata
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-  Le colonne calcolate consentono di aggiungere nuovi dati al modello. Invece di incollare o importare i valori nella colonna, viene creata una formula DAX che consente di definire i valori a livello di riga della colonna. I valori in ogni riga di una colonna calcolata vengono calcolati e popolati quando si crea una formula valida e si fa clic su INVIO. La colonna calcolata può essere aggiunta a un'applicazione di analisi o di creazione di report come qualsiasi altra colonna di dati. In questo articolo viene descritto come creare una nuova colonna calcolata utilizzando la barra della formula DAX in Progettazione modelli.  
+  Le colonne calcolate consentono di aggiungere nuovi dati al modello. Anziché incollare o importare i valori nella colonna, si crea una formula DAX che definisce i valori a livello di riga della colonna. I valori in ogni riga di una colonna calcolata vengono calcolati e popolati quando si crea una formula valida e si fa clic su INVIO. La colonna calcolata può essere aggiunta a un'applicazione di analisi o di creazione di report come qualsiasi altra colonna di dati. Questo articolo descrive come creare una nuova colonna calcolata usando la barra della formula DAX in Progettazione modelli.  
   
 #### <a name="to-create-a-new-calculated-column"></a>Per creare una nuova colonna calcolata  
   

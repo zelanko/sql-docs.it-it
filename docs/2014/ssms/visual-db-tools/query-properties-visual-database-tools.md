@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - vdtsql.chm:69636
@@ -13,12 +13,12 @@ ms.assetid: 07495669-6ed5-4004-904e-aae1230be5e4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6ba37a19f072292178ab96d01561004c55383cc4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6e9232f5de2172c7dfbe503a26188fdf4d05550c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48052397"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52759957"
 ---
 # <a name="query-properties-visual-database-tools"></a>Proprietà delle query (Visual Database Tools)
   Queste proprietà vengono visualizzate nella finestra Proprietà quando in Progettazione query e Progettazione viste è aperta una query. Se non specificato diversamente, tali proprietà possono essere modificate nella finestra Proprietà.  
@@ -30,7 +30,7 @@ ms.locfileid: "48052397"
  **Categoria Identità**  
  Viene espansa per visualizzare la proprietà **Nome** .  
   
- **Nome**  
+ **Name**  
  Visualizza il nome della query corrente. Non è possibile modificarlo in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
  **Database Name**  
@@ -60,10 +60,10 @@ ms.locfileid: "48052397"
  Specifica che tutte le colonne di tutte le tabelle nella query corrente saranno presenti nel set di risultati. Selezionare questa opzione equivale a specificare un asterisco (*) al posto dei singoli nomi di colonne dopo la parola chiave SELECT nell'istruzione SQL.  
   
  **Elenco parametri query**  
- Visualizza i parametri della query. Per modificarli, fare clic sulla proprietà e quindi sui puntini di sospensione **(…)** a destra della proprietà. (si applica solo a OLE DB generico).  
+ Visualizza i parametri della query. Per modificarli, fare clic sulla proprietà e quindi sui puntini di sospensione **(...)** a destra della proprietà. (si applica solo a OLE DB generico).  
   
  **Commento SQL**  
- Visualizza una descrizione delle istruzioni SQL. Per visualizzare la descrizione completa o modificarla, fare clic su di essa, quindi sui puntini di sospensione **(…)** a destra della proprietà. Nei commenti è possibile specificare ad esempio chi utilizza la query e quando (si applica solo a database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 o versione successiva).  
+ Visualizza una descrizione delle istruzioni SQL. Per visualizzare la descrizione completa o modificarla, fare clic su di essa, quindi sui puntini di sospensione **(...)** a destra della proprietà. Nei commenti è possibile specificare ad esempio chi utilizza la query e quando (si applica solo a database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 o versione successiva).  
   
  **Categoria Specifica Top**  
  Viene espansa per visualizzare le proprietà relative alle proprietà **In alto**, **Percentuale**, **Espressione**e **Con valori equivalenti** .  

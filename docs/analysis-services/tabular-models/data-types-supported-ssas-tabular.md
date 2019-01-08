@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 8b70cb96a7ed5f0b7df229a0d5de59e14a4e6f77
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 33618c019e59c044e681c45130130adc79d53122
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38983693"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52414838"
 ---
 # <a name="data-types-supported-in-tabular-models"></a>Tipi di dati supportati nei modelli tabulari
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -34,20 +34,20 @@ Quando si importano i dati o si utilizza un valore in una formula, anche se nell
 |Numero intero|Valore intero a 64 bit (otto byte)*<br /><br /> Nota:<br />         Le formule DAX non supportano i tipi di dati troppo piccoli per contenere il valore minimo indicato nella descrizione.|Numeri senza cifre decimali. I numeri interi possono essere positivi o negativi ma devono essere numeri interi compresi tra -9.223.372.036.854.775.808 (-2^63) e 9.223.372.036.854.775.807 (2^63-1).|  
 |Numero decimale|Numero reale a 64 bit (otto byte)*<br /><br /> Nota:<br />         Le formule DAX non supportano i tipi di dati troppo piccoli per contenere il valore minimo indicato nella descrizione.|I numeri reali sono numeri che possono avere cifre decimali e coprono un ampio intervallo di valori:<br /><br /> Valori negativi compresi tra -1,79E +308 e -2,23E -308<br /><br /> Zero<br /><br /> Valori positivi compresi tra 2,23E -308 e 1,79E + 308<br /><br /> Tuttavia, il numero di cifre significative è limitato a 17 cifre decimali.|  
 |Boolean|Boolean|Valore True o False.|  
-|Text|String|Stringa di dati di tipo carattere Unicode. Possono essere stringhe, numeri o date rappresentati in un formato di testo.|  
-|date|Date/time|Date e ore in una rappresentazione di data e ora valida.<br /><br /> Le date valide sono tutte le date successive al 1 marzo del 1900.|  
+|Testo|String|Stringa di dati di tipo carattere Unicode. Possono essere stringhe, numeri o date rappresentati in un formato di testo.|  
+|date|Data/ora|Date e ore in una rappresentazione di data e ora valida.<br /><br /> Le date valide sono tutte le date successive al 1 marzo del 1900.|  
 |Currency|Currency|Il tipo di dati currency consente valori compresi tra -922.337.203.685.477,5808 e 922.337.203.685.477,5807 con quattro cifre decimali di precisione fissa.|  
 |N/D|Vuoto|Un tipo di dati blank in DAX rappresenta e sostituisce i valori Null di SQL. È possibile creare un tipo di dati blank utilizzando la funzione BLANK, nonché verificare la presenza di tipi di dati blank utilizzando la funzione logica ISBLANK.|  
   
  \* Se si prova a importare dati con valori numerici elevati, importazione potrebbe non riuscire con l'errore seguente:  
   
- Errore del database in memoria: il '\<nome colonna >' della colonna del '\<nome tabella >' tabella contiene un valore, ' 1.7976931348623157E+308 ', che non è supportato. L'operazione è stata annullata.  
+ Errore del database in memoria: Il '\<nome colonna >' della colonna del '\<nome tabella >' tabella contiene un valore, ' 1.7976931348623157E+308 ', che non è supportato. L'operazione è stata annullata.  
   
  Questo errore si verifica perché in Progettazione modelli viene utilizzato questo valore per rappresentare valori Null. I valori nell'elenco seguente sono sinonimi del già menzionato valore Null:  
   
 ||  
 |-|  
-|valore|  
+|Value|  
 |9223372036854775807|  
 |-9223372036854775808|  
 |1,7976931348623158e+308|  
@@ -65,9 +65,9 @@ Quando si importano i dati o si utilizza un valore in una formula, anche se nell
   
  Ogni funzione DAX prevede requisiti specifici relativi ai tipi di dati utilizzati come input e output. Alcune funzioni, ad esempio, richiedono numeri interi per determinati argomenti e date per altri. Altre funzioni richiedono testo o tabelle.  
   
- Se i dati della colonna specificata come argomento non sono compatibili con il tipo di dati richiesto dalla funzione, DAX in molti casi restituirà un errore. Tuttavia, ovunque si possibili DAX tenta di convertire in modo implicito i dati per il tipo di dati richiesto. Esempio:  
+ Se i dati della colonna specificata come argomento non sono compatibili con il tipo di dati richiesto dalla funzione, DAX in molti casi restituirà un errore. Tuttavia, ovunque si possibili DAX tenta di convertire in modo implicito i dati per il tipo di dati richiesto. Ad esempio:  
   
--   È possibile digitare un numero, ad esempio "123", come stringa. DAX consente di analizzare la stringa e tenterà di specificarla come tipo di dati numerico.  
+-   È possibile digitare un numero, ad esempio "123", sotto forma di stringa. DAX consente di analizzare la stringa e tenterà di specificarla come tipo di dati numerico.  
   
 -   È possibile aggiungere TRUE + 1 e ottenere il risultato 2, in quanto TRUE viene convertito in modo implicito nel numero 1 e viene eseguita l'operazione 1+1.  
   

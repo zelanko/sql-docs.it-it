@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,46 +14,46 @@ ms.assetid: 784707b5-cc67-46a3-8ae6-8f8ecf4b27c0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 51e98ef765b230cf9f304473854b48deccabd170
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2d6f29eba93e7841d2d64db57266d8f2ad859377
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48072881"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52804443"
 ---
 # <a name="brokerconversation-event-class"></a>Broker:Conversation - classe di evento
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] genera un evento **Broker:Conversation** per indicare lo stato di una conversazione di Service Broker.  
   
 ## <a name="brokerconversation-event-class-data-columns"></a>Colonne di dati della classe di evento Broker:Conversation  
   
-|Colonna di dati|Tipo|Description|Numero colonna|Filtrabile|  
+|Colonna di dati|Tipo|Descrizione|Numero colonna|Filtrabile|  
 |-----------------|----------|-----------------|-------------------|----------------|  
-|**ApplicationName**|`nvarchar`|Nome dell'applicazione client in cui è stata creata la connessione a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Questa colonna viene popolata con i valori passati dall'applicazione al posto del nome visualizzato del programma.|10|Sì|  
-|**ClientProcessID**|`int`|ID assegnato dal computer host al processo in cui è in esecuzione l'applicazione client. Questa colonna di dati viene popolata se l'ID del processo client viene fornito dal client.|9|Sì|  
-|**DatabaseID**|`int`|ID del database specificato dall'istruzione USE *database* oppure ID del database predefinito, se non è stata eseguita un'istruzione USE *database*. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] visualizza il nome del database se la colonna di dati **ServerName** è acquisita nella traccia e il server è disponibile. È possibile determinare il valore per un database tramite la funzione **DB_ID** .|3|Sì|  
-|**EventClass**|`int`|Tipo di classe di evento acquisita. Per **Broker:Conversation** è sempre **124**.|27|no|  
-|**EventSequence**|`int`|Numero di sequenza dell'evento.|51|no|  
-|**EventSubClass**|`nvarchar`|Tipo di sottoclasse di evento. Fornisce ulteriori informazioni su ogni classe di evento.|21|Sì|  
-|**GUID**|`uniqueidentifier`|ID della conversazione della finestra. Questo identificatore viene trasmesso come parte del messaggio e viene condiviso da entrambi i lati della conversazione.|54|no|  
-|**HostName**|`nvarchar`|Nome del computer in cui è in esecuzione il client. Questa colonna di dati viene popolata se il nome host viene fornito dal client. Per determinare il nome host, usare la funzione **HOST_NAME** .|8|Sì|  
-|**IsSystem**|`int`|Indica se l'evento è stato generato per un processo di sistema o un processo utente.<br /><br /> 0 = utente<br /><br /> 1 = sistema|60|no|  
-|**LoginSid**|`image`|ID di sicurezza (SID) dell'utente connesso. Il SID è univoco per ogni account di accesso nel server.|41|Sì|  
-|**MethodName**|`nvarchar`|Gruppo di conversazioni al quale la conversazione appartiene.|47|no|  
-|**NTDomainName**|`nvarchar`|Dominio di Windows a cui appartiene l'utente.|7|Sì|  
-|**NTUserName**|`nvarchar`|Nome dell'utente proprietario della connessione che ha generato questo evento.|6|Sì|  
-|**ObjectName**|`nvarchar`|Handle di conversazione del dialogo.|34|no|  
-|**Priorità**|`int`|Livello di priorità della conversazione|5|Sì|  
-|**RoleName**|`nvarchar`|Ruolo dell'handle di conversazione. I valori possibili sono **initiator** o **target**.|38|no|  
-|**ServerName**|`nvarchar`|Nome dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tracciata.|26|no|  
-|**Severity**|`int`|Gravità dell'errore di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , se l'evento indica un errore.|29|no|  
-|**SPID**|`int`|ID del processo server assegnato da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] al processo associato al client.|12|Sì|  
-|**StartTime**|`datetime`|Ora di inizio dell'evento, se disponibile.|14|Sì|  
-|**TextData**|`ntext`|Stato corrente della conversazione. I tipi validi sono:<br /><br /> **SO**. Avviata in uscita (Started outbound). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ha elaborato un'istruzione BEGIN CONVERSATION per la conversazione, ma non sono stati inviati messaggi.<br /><br /> **SI**. Avviata in ingresso (Started inbound). Un'altra istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] ha avviato una nuova conversazione con l'istanza corrente, che tuttavia non ha completato la ricezione del primo messaggio. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] potrebbe creare una conversazione in questo stato se il primo messaggio fosse frammentato oppure se [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ricevesse messaggi non ordinati. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] potrebbe tuttavia creare la conversazione nello stato CO se la prima trasmissione ricevuta per la conversazione contenesse il primo messaggio per intero.<br /><br /> **CO**. In corso (Conversing). La conversazione è stata stabilita ed entrambi i lati della conversazione possono inviare messaggi. La maggior parte delle comunicazioni di un servizio tipico ha luogo quando la conversazione è in questo stato.<br /><br /> **DI**. Disconnessa in ingresso (Disconnected inbound). Il lato remoto della conversazione ha eseguito un'istruzione END CONVERSATION. La conversazione rimane in questo stato finché il lato locale della conversazione non esegue un'istruzione END CONVERSATION. Un'applicazione può ancora ricevere messaggi per la conversazione. Poiché sul lato remoto la conversazione è terminata, non può invece inviare messaggi nella conversazione. Quando un'applicazione esegue un'istruzione END CONVERSATION, la conversazione passa allo stato CLOSED (CD).<br /><br /> **DO**. Disconnessa in uscita (Disconnected outbound). Il lato locale della conversazione ha eseguito un'istruzione END CONVERSATION. La conversazione rimane in questo stato finché il lato remoto della conversazione invia un acknowledgement dell'istruzione END CONVERSATION. Un'applicazione non può inviare o ricevere messaggi per la conversazione. Quando il lato remoto della conversazione invia un acknowledgement per END CONVERSATION, la conversazione passa allo stato CLOSED (CD).<br /><br /> **ER**. Errore. In questo endpoint si è verificato un errore. Le colonne Error, Severity e State contengono informazioni sull'errore specifico verificatosi.<br /><br /> **CD**. Chiusa. L'endpoint di conversazione non è più in uso.|1|Sì|  
-|**TransactionID**|`bigint`|ID della transazione assegnato dal sistema.|4|no|  
+|**ApplicationName**|`nvarchar`|Nome dell'applicazione client in cui è stata creata la connessione a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Questa colonna viene popolata con i valori passati dall'applicazione al posto del nome visualizzato del programma.|10|Yes|  
+|**ClientProcessID**|`int`|ID assegnato dal computer host al processo in cui è in esecuzione l'applicazione client. Questa colonna di dati viene popolata se l'ID del processo client viene fornito dal client.|9|Yes|  
+|**DatabaseID**|`int`|ID del database specificato dall'istruzione USE *database* oppure ID del database predefinito, se non è stata eseguita un'istruzione USE *database*. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] visualizza il nome del database se la colonna di dati **ServerName** è acquisita nella traccia e il server è disponibile. È possibile determinare il valore per un database tramite la funzione **DB_ID** .|3|Yes|  
+|**EventClass**|`int`|Tipo di classe di evento acquisita. Per **Broker:Conversation** è sempre **124**.|27|No|  
+|**EventSequence**|`int`|Numero di sequenza dell'evento.|51|No|  
+|**EventSubClass**|`nvarchar`|Tipo di sottoclasse di evento. Fornisce ulteriori informazioni su ogni classe di evento.|21|Yes|  
+|**GUID**|`uniqueidentifier`|ID della conversazione della finestra. Questo identificatore viene trasmesso come parte del messaggio e viene condiviso da entrambi i lati della conversazione.|54|No|  
+|**HostName**|`nvarchar`|Nome del computer in cui è in esecuzione il client. Questa colonna di dati viene popolata se il nome host viene fornito dal client. Per determinare il nome host, usare la funzione **HOST_NAME** .|8|Yes|  
+|**IsSystem**|`int`|Indica se l'evento è stato generato per un processo di sistema o un processo utente.<br /><br /> 0 = utente<br /><br /> 1 = sistema|60|No|  
+|**LoginSid**|`image`|ID di sicurezza (SID) dell'utente connesso. Il SID è univoco per ogni account di accesso nel server.|41|Yes|  
+|**MethodName**|`nvarchar`|Gruppo di conversazioni al quale la conversazione appartiene.|47|No|  
+|**NTDomainName**|`nvarchar`|Dominio di Windows a cui appartiene l'utente.|7|Yes|  
+|**NTUserName**|`nvarchar`|Nome dell'utente proprietario della connessione che ha generato questo evento.|6|Yes|  
+|**ObjectName**|`nvarchar`|Handle di conversazione del dialogo.|34|No|  
+|**Priorità**|`int`|Livello di priorità della conversazione|5|Yes|  
+|**RoleName**|`nvarchar`|Ruolo dell'handle di conversazione. I valori possibili sono **initiator** o **target**.|38|No|  
+|**ServerName**|`nvarchar`|Nome dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tracciata.|26|No|  
+|**Severity**|`int`|Gravità dell'errore di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , se l'evento indica un errore.|29|No|  
+|**SPID**|`int`|ID del processo server assegnato da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] al processo associato al client.|12|Yes|  
+|**StartTime**|`datetime`|Ora di inizio dell'evento, se disponibile.|14|Yes|  
+|**TextData**|`ntext`|Stato corrente della conversazione. I tipi validi sono:<br /><br /> **SO**. Avviata in uscita (Started outbound). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ha elaborato un'istruzione BEGIN CONVERSATION per la conversazione, ma non sono stati inviati messaggi.<br /><br /> **SI**. Avviata in ingresso (Started inbound). Un'altra istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] ha avviato una nuova conversazione con l'istanza corrente, che tuttavia non ha completato la ricezione del primo messaggio. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] potrebbe creare una conversazione in questo stato se il primo messaggio fosse frammentato oppure se [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ricevesse messaggi non ordinati. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] potrebbe tuttavia creare la conversazione nello stato CO se la prima trasmissione ricevuta per la conversazione contenesse il primo messaggio per intero.<br /><br /> **CO**. In corso (Conversing). La conversazione è stata stabilita ed entrambi i lati della conversazione possono inviare messaggi. La maggior parte delle comunicazioni di un servizio tipico ha luogo quando la conversazione è in questo stato.<br /><br /> **DI**. Disconnessa in ingresso (Disconnected inbound). Il lato remoto della conversazione ha eseguito un'istruzione END CONVERSATION. La conversazione rimane in questo stato finché il lato locale della conversazione non esegue un'istruzione END CONVERSATION. Un'applicazione può ancora ricevere messaggi per la conversazione. Poiché sul lato remoto la conversazione è terminata, non può invece inviare messaggi nella conversazione. Quando un'applicazione esegue un'istruzione END CONVERSATION, la conversazione passa allo stato CLOSED (CD).<br /><br /> **DO**. Disconnessa in uscita (Disconnected outbound). Il lato locale della conversazione ha eseguito un'istruzione END CONVERSATION. La conversazione rimane in questo stato finché il lato remoto della conversazione invia un acknowledgement dell'istruzione END CONVERSATION. Un'applicazione non può inviare o ricevere messaggi per la conversazione. Quando il lato remoto della conversazione invia un acknowledgement per END CONVERSATION, la conversazione passa allo stato CLOSED (CD).<br /><br /> **ER**. Errore. In questo endpoint si è verificato un errore. Le colonne Error, Severity e State contengono informazioni sull'errore specifico verificatosi.<br /><br /> **CD**. Chiusa. L'endpoint di conversazione non è più in uso.|1|Yes|  
+|**TransactionID**|`bigint`|ID della transazione assegnato dal sistema.|4|No|  
   
  Nella tabella seguente sono elencati i valori delle sottoclassi di questa classe di evento.  
   
-|ID|Sottoclasse|Description|  
+|ID|Sottoclasse|Descrizione|  
 |--------|--------------|-----------------|  
 |1|SEND Message|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] genera un evento **SEND Message** quando il [!INCLUDE[ssDE](../../includes/ssde-md.md)] esegue un'istruzione SEND.|  
 |2|END CONVERSATION|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] genera un evento **END CONVERSATION** quando il [!INCLUDE[ssDE](../../includes/ssde-md.md)] esegue un'istruzione END CONVERSATION che non include la clausola WITH ERROR.|  

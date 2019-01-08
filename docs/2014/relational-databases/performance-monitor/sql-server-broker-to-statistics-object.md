@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - Broker Transmission Object object
@@ -13,12 +13,12 @@ ms.assetid: b5bc5dde-e540-4848-8aa3-5735c51df2fb
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 8a9574e4ab6618d08df94e8bd3de3c2b21d6000c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1a8c5bc039e4e6c18680ba4e290ea7e69fa87804
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48207931"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52782294"
 ---
 # <a name="sql-server-broker-to-statistics-object"></a>Oggetto Statistiche Broker TO di SQL Server
   L'oggetto prestazione SQLServer:Broker TO Statistics contiene informazioni sul numero di volte in cui le finestre di dialogo di [!INCLUDE[ssSB](../../includes/sssb-md.md)] richiedono oggetti trasmissione e sulla frequenza di scrittura degli oggetti trasmissione in **tempdb**.  
@@ -27,7 +27,7 @@ ms.locfileid: "48207931"
   
  Nella tabella seguente sono elencati i contatori inclusi nell'oggetto.  
   
-|Contatori dell'oggetto Statistiche Broker TO di SQL Server|Description|  
+|Contatori dell'oggetto Statistiche Broker TO di SQL Server|Descrizione|  
 |----------------------------------------------|-----------------|  
 |**Lunghezza media scritture in batch**|La quantità media di oggetti di trasmissione salvati in un batch.|  
 |**Tempo medio scrittura in batch (ms)**|Il tempo medio espresso in millisecondi richiesto per salvare un batch di oggetti di trasmissione.|  

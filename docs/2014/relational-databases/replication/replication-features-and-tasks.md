@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - development [SQL Server replication]
@@ -15,17 +14,17 @@ ms.assetid: 47c613e4-7fe9-462a-89b4-659b14825b70
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6ff469192ae7a39eefdc949f48f058f52ca007ce
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 40239944bd2c25c0275aa8e65327b3dd8f1620e5
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48191681"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52816683"
 ---
 # <a name="replication-features-and-tasks"></a>Caratteristiche e attività di replica
-  In questo argomento sono incluse le informazioni che consentono a qualsiasi tipologia di utente (designer, sviluppatore, analista o amministratore) di progettare e implementare soluzioni di replica.  
+  Questo argomento include informazioni utili a qualsiasi tipologia di utente (designer, sviluppatore, analista o amministratore) per progettare e implementare soluzioni di replica.  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>In questa sezione  
   
 -   [Tipi di replica](types-of-replication.md)  
   

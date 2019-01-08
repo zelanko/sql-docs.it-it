@@ -16,20 +16,20 @@ ms.assetid: 2f0ab717-05f3-427e-b8cd-a8bdca374add
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4a988044b258eb114a0a58ed7902e58c41d340e3
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: ea756a960ee5030d974ef38a3ceeb1b72d1ad703
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50144248"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53351444"
 ---
 # <a name="monitor-an-analysis-services-instance"></a>Monitorare un'istanza di Analysis Services
   È possibile monitorare le prestazioni di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] usando [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] o Performance Monitor, un'applicazione talvolta denominata **PerfMon**. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] consente di creare e gestire le tracce, nonché analizzare e riprodurre i risultati delle tracce. Tramite Performance Monitor vengono creati report sullo stato del server, indicizzato tramite contatori specifici, che verranno trattati nella sezione successiva.  
   
 > [!NOTE]  
->  Per altre informazioni sul monitoraggio, vedere il documento [SQL Server 2008 R2 Operations Guide](http://go.microsoft.com/fwlink/?LinkID=225539)(Guida alle operazioni di SQL Server 2008 R2).  
+>  Per altre informazioni sul monitoraggio, vedere il documento [SQL Server 2008 R2 Operations Guide](https://go.microsoft.com/fwlink/?LinkID=225539)(Guida alle operazioni di SQL Server 2008 R2).  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  Vedere i collegamenti seguenti per ulteriori informazioni sul monitoraggio.  
   
  [Eventi di traccia di Analysis Services](https://docs.microsoft.com/bi-reference/trace-events/analysis-services-trace-events)  

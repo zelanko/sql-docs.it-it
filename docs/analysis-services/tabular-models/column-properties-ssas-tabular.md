@@ -1,5 +1,5 @@
 ---
-title: Proprietà colonna | Documenti Microsoft
+title: Proprietà delle colonne nei modelli tabulari di Analysis Services | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,54 +9,55 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 4da1159bfc4582705710735c53300d9c51627398
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 95a8f86b2cf2bc3cf28a128349540183c88d7fd0
+ms.sourcegitcommit: c51f7f2f5d622a1e7c6a8e2270bd25faba0165e7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34044915"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53626291"
 ---
 # <a name="column-properties"></a>Proprietà delle colonne 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-  In questo articolo vengono descritte le proprietà di colonna di modello tabulare.  
+  Questo articolo descrive le proprietà colonna del modello tabulare.  
   
->  [!NOTE]  
->  Alcune proprietà non sono supportate in tutti i livelli di compatibilità.    
+> [!NOTE]
+>  Alcune proprietà non supportate in tutti i livelli di compatibilità.    
   
 ##  <a name="bkmk_properties"></a> Proprietà delle colonne  
-**Avanzate**  
+**Advanced**  
   
-|Proprietà|Impostazione predefinita|Description|  
+|Proprietà|Impostazione predefinita|Descrizione|  
 |--------------|---------------------|-----------------|  
-|**Cartella di visualizzazione**||Cartella singola o annidata per l'organizzazione delle colonne nell'elenco di campi dell'applicazione client.|  
+|**Cartella di visualizzazione**||Una cartella singola o annidata per l'organizzazione delle colonne in un elenco di campi client dell'applicazione.|  
 
-**Basic**  
+**Base**  
   
-|Proprietà|Impostazione predefinita|Description|  
+|Proprietà|Impostazione predefinita|Descrizione|  
 |--------------|---------------------|-----------------|  
 |**Nome colonna**||Nome della colonna come archiviato nel modello e come visualizzato nell'elenco dei campi di uno strumento client di creazione report.|  
 |**Formato dati**|Determinato automaticamente durante l'importazione.|Viene specificato il formato di visualizzazione da utilizzare per i dati in questa colonna. Per questa proprietà sono disponibili le opzioni seguenti:<br /><br /> **Generale**<br /><br /> **Decimal Number**<br /><br /> **Numero intero**<br /><br /> **Currency**<br /><br /> **Percentuale**<br /><br /> **Notazione scientifica**<br /><br /> Dopo aver impostato un formato dati, è possibile impostare proprietà specifiche per ogni formato. Ad esempio, se si sceglie il formato **Valuta** , è possibile impostare il numero di posizioni decimali visibili e scegliere il separatore delle migliaia e il simbolo di valuta.<br /><br /> <br /><br /> Se nei valori della colonna sono incluse immagini, vedere **Immagine rappresentativa**.|  
 |**Tipo di dati**|Determinato automaticamente durante l'importazione.|Viene specificato il tipo di dati per tutti i valori nella colonna.|  
-|**Description**||Descrizione del testo della colonna.<br /><br /> In determinati client di creazione di report, se un utente finale posiziona il cursore su questa colonna nell'elenco di campi, la descrizione viene visualizzata come descrizione comando.|  
-|**Hidden**|False|Viene specificato se la colonna è nascosta dalla visualizzazione negli elenchi dei campi dello strumento client di creazione report.<br /><br /> Impostare questa proprietà su **True** per nascondere questa colonna nella visualizzazione. Ad esempio, colonne contenenti identificatori o chiavi non sono in genere utili all'utente finale.<br /><br /> Se si nasconde una colonna dalla visualizzazione nello strumento client di creazione report, il campo non viene eliminato nei dati del modello. Tale campo è comunque visibile se viene creata una query sul contenuto del modello. Una colonna nascosta può ancora essere utilizzata per il raggruppamento o l'ordinamento.<br /><br /> La proprietà **Nascosta** non fornisce alcuna forma di sicurezza dei dati. Per proteggere i dati, utilizzare filtri di riga nei ruoli. Per ulteriori informazioni, vedere [ruoli](../../analysis-services/tabular-models/roles-ssas-tabular.md).|  
+|**Descrizione**||Descrizione del testo della colonna.<br /><br /> In determinati client di creazione di report, se un utente finale posiziona il cursore su questa colonna nell'elenco di campi, la descrizione viene visualizzata come descrizione comando.|  
+|**Hidden**|False|Viene specificato se la colonna è nascosta dalla visualizzazione negli elenchi dei campi dello strumento client di creazione report.<br /><br /> Impostare questa proprietà su **True** per nascondere questa colonna nella visualizzazione. Ad esempio, colonne contenenti identificatori o chiavi non sono in genere utili all'utente finale.<br /><br /> Se si nasconde una colonna dalla visualizzazione nello strumento client di creazione report, il campo non viene eliminato nei dati del modello. Tale campo è comunque visibile se viene creata una query sul contenuto del modello. Una colonna nascosta può ancora essere utilizzata per il raggruppamento o l'ordinamento.<br /><br /> La proprietà **Nascosta** non fornisce alcuna forma di sicurezza dei dati. Per proteggere i dati, utilizzare filtri di riga nei ruoli. Per altre informazioni, vedere [ruoli](../../analysis-services/tabular-models/roles-ssas-tabular.md).|  
 |**Ordina per colonna**||Viene specificata un'altra colonna per ordinare i valori in questa colonna. Tra le due colonne deve esistere una relazione.<br /><br /> Questo valore deve essere il nome di una colonna esistente. Non è possibile specificare una formula o una misura.|  
+|**Univoco**||Può essere impostato su impone l'univocità dei valori nella colonna. Sempre true per le colonne calcolate, anche se l'univocità è false.|  
 
  **Varie**  
   
-|Proprietà|Impostazione predefinita|Description|  
+|Proprietà|Impostazione predefinita|Descrizione|  
 |--------------|---------------------|-----------------|  
-|**Hint di codifica**|Valore predefinito|Specifica la codifica per ottimizzare l'elaborazione. Valore di codifica, è possibile migliorare le prestazioni delle query per le colonne numeriche in genere utilizzato nelle aggregazioni. La codifica hash è per colonne di raggruppamento (spesso valori di tabella della dimensione) e le chiavi esterne. Colonne di tipo stringa sono sempre con codificata hash.|  
+|**Hint di codifica**|Impostazione predefinita|Specifica la codifica per ottimizzare l'elaborazione. Valore di codifica, è possibile migliorare le prestazioni delle query per le colonne numeriche in genere utilizzato nelle aggregazioni. La codifica hash è per le chiavi esterne e colonne group by (spesso valori di tabella delle dimensioni). Colonne di tipo stringa sono sempre hash con codificata.|  
 
  **Proprietà report**  
   
-|Proprietà|Impostazione predefinita|Description|  
+|Proprietà|Impostazione predefinita|Descrizione|  
 |--------------|---------------------|-----------------|  
 |Immagine predefinita|False|Specifica quale colonna fornisce un'immagine per rappresentare i dati della riga, ad esempio un ID foto in un record dipendente.|  
 |Etichetta predefinita|False|Specifica quale colonna fornisce un nome visualizzato per rappresentare i dati della riga, ad esempio il nome del dipendente in un record dipendente.|  
-|URL immagine/categoria di dati (SP1)|False|Specifica il valore in questa colonna come collegamento ipertestuale a un'immagine su un server. Esempio: `http://localhost/images/image1.jpg`.|  
+|URL immagine/categoria di dati (SP1)|False|Specifica il valore in questa colonna come collegamento ipertestuale a un'immagine su un server. Ad esempio: `http://localhost/images/image1.jpg`.|  
 |Mantieni righe univoche|False|Specifica quali colonne forniscono valori che devono essere considerati come univoci anche se duplicati, ad esempio nome e cognome del dipendente, nei casi in cui due o più dipendenti abbiano lo stesso nome.|  
 |Identificatore di riga|False|Specifica una colonna che contiene solo valori univoci, consentendo l'utilizzo di tale colonna come una chiave di raggruppamento interna.|  
-|Riepiloga per|Valore predefinito|Specifica che gli strumenti client di creazione report applicano la funzione di aggregazione SUM per i calcoli della colonna quando questa colonna viene aggiunta a un elenco Campo. Per modificare il calcolo predefinito, selezionarlo dall'elenco a discesa. Questa proprietà viene applicata solo alle colonne di tipo aggregabile.|  
+|Riepiloga per|Impostazione predefinita|Specifica che gli strumenti client di creazione report applicano la funzione di aggregazione SUM per i calcoli della colonna quando questa colonna viene aggiunta a un elenco Campo. Per modificare il calcolo predefinito, selezionarlo dall'elenco a discesa. Questa proprietà viene applicata solo alle colonne di tipo aggregabile.|  
 |Posizione dettagli tabella|Nessun set di campi predefinito|Specifica che questa colonna o misura può essere aggiunta a un set di campi di una sola tabella per migliorare la visualizzazione della tabella in uno strumento client di creazione report.|  
   
 ##  <a name="bkmk_config_prop"></a> Configurare le impostazioni delle proprietà delle colonne  

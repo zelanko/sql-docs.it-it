@@ -10,12 +10,12 @@ ms.assetid: 5d84b51a-ec17-4c5c-b80e-9e994fc8ae80
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 17461cb9fcde8e37118a275512b332085beb5313
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 40420db76ee8ce5b1fcf1d085a78d7b17690105d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48112121"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52538588"
 ---
 # <a name="cross-container-transactions"></a>Transazioni tra contenitori
   Le transazioni tra contenitori sono transazioni utente implicite o esplicite che includono chiamate a stored procedure compilate in modo nativo o operazioni in tabelle ottimizzate per la memoria.  
@@ -37,13 +37,13 @@ set transaction isolation level serializable
 go  
   
 begin transaction  
- ……  
+ ......  
   set transaction isolation level repeatable read  
   
   insert t3 select * from t1 join t2 on t1.id=t2.id  
   
   set transaction isolation level serializable  
- ……  
+ ......  
 commit  
 ```  
   
@@ -54,11 +54,11 @@ set transaction isolation level read committed
 go  
   
 begin transaction  
- ……  
+ ......  
   
   insert t3 select * from t1 (serializable) join t2 (snapshot) on t1.id=t2.id  
   
-  ……  
+  ......  
 commit  
 ```  
   
@@ -80,7 +80,7 @@ commit
  La coerenza transazionale per un set di letture indica se per tutte le versioni delle righe lette è garantita l'inclusione di aggiornamenti esattamente dallo stesso set di transazioni.  
   
  Garanzie di stabilità per i dati letti fornite automaticamente alla transazione T.  
- La stabilità indica se le operazioni di lettura della transazione sono ripetibili, ovvero se in caso di ripetizione di tali operazioni verrebbero restituite le stesse righe e le stesse versioni di riga.  
+ La stabilità indica se operazioni di lettura della transazione sono ripetibili. ovvero se in caso di ripetizione di tali operazioni verrebbero restituite le stesse righe e le stesse versioni di riga.  
   
  Alcune garanzie fanno riferimento all'ora di fine logica della transazione. L'ora di fine logica è in genere l'ora in cui viene eseguito il commit della transazione nel database. Se la transazione accede a tabelle ottimizzate per la memoria, l'ora di fine logica è tecnicamente l'inizio della fase di convalida. (Per altre informazioni, vedere la discussione su durata delle transazioni nel [transazioni in tabelle ottimizzate per la memoria](../relational-databases/in-memory-oltp/memory-optimized-tables.md).  
   

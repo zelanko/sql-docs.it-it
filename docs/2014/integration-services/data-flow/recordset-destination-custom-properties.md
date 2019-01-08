@@ -4,26 +4,25 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 1568ed6a-022c-4839-b73e-4eb49558bbc2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7eaad112f18c340f28e85cb68691693d36c1e273
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fa8464744681984373fa2e69f7a4fc7dacee1f0b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48050221"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52771323"
 ---
 # <a name="recordset-destination-custom-properties"></a>Proprietà personalizzate della destinazione recordset
   La destinazione recordset include sia proprietà personalizzate che le proprietà comuni a tutti i componenti del flusso di dati.  
   
  Nella tabella seguente vengono descritte le proprietà personalizzate della destinazione recordset. Tutte le proprietà sono di lettura/scrittura.  
   
-|Nome proprietà|Tipo di dati|Description|  
+|Nome proprietà|Tipo di dati|Descrizione|  
 |-------------------|---------------|-----------------|  
 |VariableName|String|Nome della variabile che contiene il recordset ADO.|  
   

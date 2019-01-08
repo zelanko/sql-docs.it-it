@@ -19,12 +19,12 @@ ms.assetid: 82a51a99-66f0-4b0c-b05b-07d22387adb0
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: e1ea6363f2acb76d7c95fb6d2e8f7c0e9dbdbc6a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 08840dee8164ae1dd460d1a5d5905ecda937dba6
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48108931"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53351109"
 ---
 # <a name="verify-a-reporting-services-installation"></a>Verify a Reporting Services Installation
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] possono essere installati in modalità nativa o in modalità SharePoint. La procedura da seguire per verificare l'installazione dipende dalla modalità del server di report.  
@@ -75,7 +75,7 @@ ms.locfileid: "48108931"
   
 1.  In una raccolta documenti di SharePoint creare un report semplice di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] contenente solo una casella di testo, ad esempio un titolo. Il report non contiene origini dati e set di dati. L'obiettivo consiste nel verificare che sia possibile aprire Generatore report. In tal caso, verrà visualizzato in anteprima un report di base.  
   
-2.  Salvare il report nella raccolta documenti e quindi eseguire il report dalla raccolta. Per altre informazioni sulla creazione di report con Generatore report, vedere [Avviare Generatore report (Generatore report)](http://technet.microsoft.com/library/ms159221.aspx).  
+2.  Salvare il report nella raccolta documenti e quindi eseguire il report dalla raccolta. Per altre informazioni sulla creazione di report con Generatore report, vedere [Avviare Generatore report (Generatore report)](https://technet.microsoft.com/library/ms159221.aspx).  
   
 #### <a name="reporting-services-samples"></a>Esempi di Reporting Services  
   
@@ -113,7 +113,7 @@ ms.locfileid: "48108931"
 2.  Se si sono installati esempi di report, aprire i file di progetto dei report di esempio e pubblicare i report in un server di report.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Risolvere i problemi di installazione di Reporting Services](troubleshoot-a-reporting-services-installation.md)   
+ [Risoluzione dei problemi di installazione di Reporting Services](troubleshoot-a-reporting-services-installation.md)   
  [Causa e risoluzione degli errori di Reporting Services](../troubleshooting/cause-and-resolution-of-reporting-services-errors.md)  
   
   

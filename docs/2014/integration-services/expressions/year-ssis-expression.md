@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - dates [Integration Services], YEAR
@@ -14,12 +13,12 @@ ms.assetid: 9d88dead-ace8-44b9-b8e2-916c1842e155
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0276dd964bd0ed5a4ea2a703ffc6d32d1ed52bce
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f228aa02e5537ddd52a7acb0fe4c7d4fbb855d5b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48140321"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52767889"
 ---
 # <a name="year-ssis-expression"></a>YEAR (espressione SSIS)
   Viene restituito un valore integer che rappresenta la parte corrispondente all'anno di una data.  
@@ -44,7 +43,7 @@ YEAR(date)
  Per i valori letterali di data è necessario eseguire il cast esplicito a uno dei tipi di dati date. Per altre informazioni, vedere [Tipi di dati di Integration Services](../data-flow/integration-services-data-types.md).  
   
 > [!NOTE]  
->  La convalida dell'espressione non riesce quando viene eseguito il cast esplicito di un valore letterale di data a uno di questi tipi di dati relativi alle date: DT_DBTIMESTAMPOFFSET e DT_DBTIMESTAMP2.  
+>  L'espressione di convalida non riesce quando un valore letterale data in modo esplicito viene eseguito il cast a uno di questi tipi di dati di data: DT_DBTIMESTAMPOFFSET e DT_DBTIMESTAMP2.  
   
  La funzione YEAR costituisce una forma più breve, ma equivalente, della funzione DATEPART("Year", date).  
   
@@ -68,11 +67,11 @@ YEAR(GETDATE())
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [DATEADD &#40;espressione di SSIS&#41;](dateadd-ssis-expression.md)   
- [DATEDIFF &#40;espressione di SSIS&#41;](datediff-ssis-expression.md)   
+ [DATEADD &#40;espressione SSIS&#41;](dateadd-ssis-expression.md)   
+ [DATEDIFF &#40;espressione SSIS&#41;](datediff-ssis-expression.md)   
  [DATEPART &#40;espressione SSIS&#41;](datepart-ssis-expression.md)   
  [DAY &#40;espressione SSIS&#41;](day-ssis-expression.md)   
  [MONTH &#40;espressione SSIS&#41;](month-ssis-expression.md)   
- [Le funzioni &#40;espressione di SSIS&#41;](functions-ssis-expression.md)  
+ [Funzioni &#40;espressione SSIS&#41;](functions-ssis-expression.md)  
   
   

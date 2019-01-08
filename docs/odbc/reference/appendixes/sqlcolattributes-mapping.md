@@ -14,17 +14,17 @@ ms.assetid: 30e25719-176b-4c48-97d4-920766b22412
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d0332e38a96d17589d9aa75bfe2a3c918dcc78d2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a7a1508d10431ba9975c44a2002faa4e5b913312
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47639649"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53205340"
 ---
 # <a name="sqlcolattributes-mapping"></a>Mapping di SQLColAttributes
 Quando un'applicazione chiama **SQLColAttributes** tramite un'applicazione ODBC 3 *. x* driver, la chiamata al **SQLColAttributes** è mappato a **SQLColAttribute** come indicato di seguito:  
   
-> [!NOTE]  
+> [!NOTE]
 >  Il prefisso utilizzato nelle *FieldIdentifier* i valori in ODBC 3 *. x* è stato modificato da tale utilizzato in ODBC 2. *x*. Il nuovo prefisso è "SQL_DESC"; il prefisso precedente era "SQL_COLUMN".  
   
 1.  Se l'applicazione è un'API ODBC 2. *x* applicazione *fDescType* è SQL_COLUMN_TYPE e il tipo restituito è un tipo DATETIME conciso, le mappe di gestione Driver la restituzione di valori per i codici di date, time e timestamp.  
@@ -33,4 +33,4 @@ Quando un'applicazione chiama **SQLColAttributes** tramite un'applicazione ODBC 
   
  Un'applicazione ODBC 3 *. x* driver devono supportare tutte le 3 ODBC *. x* *FieldIdentifiers* elencati per **SQLColAttribute**.  
   
- Un'applicazione ODBC 3*x* driver devono supportare SQL_COLUMN_PRECISION e SQL_DESC_PRECISION, SQL_COLUMN_SCALE e SQL_DESC_SCALE e SQL_COLUMN_LENGTH e SQL_DESC_LENGTH. Questi valori sono diversi perché la precisione, scala e lunghezza vengono definite in modo diverso in ODBC 3 *. x* rispetto a ODBC 2. *x*. Per altre informazioni, vedere [le dimensioni di colonna, cifre decimali, lunghezza dell'ottetto di trasferimento e dimensioni di visualizzazione](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md) nell'appendice d: i tipi di dati.
+ Un'applicazione ODBC 3*x* driver devono supportare SQL_COLUMN_PRECISION e SQL_DESC_PRECISION, SQL_COLUMN_SCALE e SQL_DESC_SCALE e SQL_COLUMN_LENGTH e SQL_DESC_LENGTH. Questi valori sono diversi perché la precisione, scala e lunghezza vengono definite in modo diverso in ODBC 3 *. x* rispetto a ODBC 2. *x*. Per altre informazioni, vedere [le dimensioni di colonna, cifre decimali, lunghezza dell'ottetto di trasferimento e dimensioni di visualizzazione](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md) nell'appendice d: Tipi di dati.

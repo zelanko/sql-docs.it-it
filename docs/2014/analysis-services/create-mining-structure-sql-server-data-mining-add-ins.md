@@ -13,12 +13,12 @@ ms.assetid: b8b1eedc-4d6d-4429-a578-e629ec573934
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 166689f175485af66ca140f82fa968512baf8519
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2788c663553d8b01e6a047be70f101dc364d6042
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48086341"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542973"
 ---
 # <a name="create-mining-structure-sql-server-data-mining-add-ins"></a>Crea struttura di data mining (componenti aggiuntivi Data mining di SQL Server)
   ![Pulsante Crea struttura di Data Mining, barra multifunzione Data Mining](media/dmc-createstruct.gif "pulsante Crea struttura di Data Mining, barra multifunzione Data Mining")  
@@ -93,7 +93,7 @@ ms.locfileid: "48086341"
 ###  <a name="Bkmk_strctcolumn"></a> Impostazione utilizzo colonne nella creazione guidata di struttura di Data Mining  
  Quando si crea una nuova struttura di data mining, è possibile specificare quali colonne dell'origine dati devono essere incluse nella struttura e come verranno utilizzate tali colonne. Tenere presente che una struttura di data mining può supportare più modelli di data mining.  
   
-|Valori|Description|  
+|Valori|Descrizione|  
 |------------|-----------------|  
 |**includere**|Consente di specificare che la colonna contiene dati utilizzabili per l'analisi o per la stima.|  
 |**Key**|Consente di specificare che nella colonna è contenuto un ID transazione, un ID serie o un'altra chiave necessaria per l'elaborazione.<br /><br /> Tutti gli algoritmi richiedono una colonna Chiave. Con alcuni algoritmi è tuttavia consentita una sola chiave, mentre con altri sono consentite più chiavi.<br /><br /> Se la colonna contiene una chiave ma non è necessaria per l'elaborazione, selezionare **non si usano**.|  

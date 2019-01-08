@@ -1,22 +1,21 @@
 ---
-title: 'Passaggio 2: Aggiunta e configurazione del contenitore Ciclo Foreach | Microsoft Docs'
+title: 'Passaggio 2: Aggiunta e configurazione del contenitore ciclo Foreach | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 88a973cc-0f23-4ecf-adb6-5b06279c2df6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9f4227b819597573d51b9720006fe6536f774103
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2aa42ac9ab25c9765aac2afa10abdd50f2df4cb7
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48197981"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53360114"
 ---
 # <a name="step-2-adding-and-configuring-the-foreach-loop-container"></a>Passaggio 2: Aggiunta e configurazione del contenitore Ciclo Foreach
   In questa attività verrà aggiunta la capacità di creare un ciclo in una cartella di file flat e applicare la stessa trasformazione del flusso di dati utilizzata nella lezione 1 a ognuno di questi file flat. Ciò si ottiene tramite l'aggiunta e la configurazione di un contenitore Ciclo Foreach al flusso di controllo.  
@@ -25,9 +24,9 @@ ms.locfileid: "48197981"
   
  Al momento, la gestione connessione file flat della lezione 1 si connette a un solo file flat specifico. Per ottenere la connessione in modo iterativo a ogni file flat della cartella, sarà necessario configurare il contenitore Ciclo Foreach e la gestione connessione file flat come segue:  
   
--   **Contenitore Ciclo Foreach:** sul valore enumerato del contenitore verrà eseguito il mapping a una variabile di pacchetto definita dall'utente. Il contenitore utilizzerà poi questa variabile definita dall'utente per modificare in modo dinamico la proprietà `ConnectionString` della gestione connessione file flat e connettersi in modo iterativo a ogni file flat della cartella.  
+-   **Contenitore ciclo foreach:** Il valore enumerato del contenitore verrà eseguito il mapping a una variabile di pacchetto definita dall'utente. Il contenitore utilizzerà poi questa variabile definita dall'utente per modificare in modo dinamico la proprietà `ConnectionString` della gestione connessione file flat e connettersi in modo iterativo a ogni file flat della cartella.  
   
--   **Gestione connessione File flat:** si modificherà la gestione connessione che è stata creata nella lezione 1 usando una variabile definita dall'utente per popolare la gestione connessione `ConnectionString` proprietà.  
+-   **Gestione connessione File flat:** Si modificherà la gestione connessione che è stata creata nella lezione 1 usando una variabile definita dall'utente per popolare la gestione connessione `ConnectionString` proprietà.  
   
  Le procedure di questa attività mostrano come creare e modificare il contenitore Ciclo Foreach per utilizzare una variabile di pacchetto definita dall'utente ed aggiungere l'attività flusso di dati al ciclo. Si imparerà a modificare la gestione connessione file flat per utilizzare una variabile definita dall'utente nella successiva attività.  
   
@@ -62,7 +61,7 @@ ms.locfileid: "48197981"
   
      Questi dati di esempio sono inclusi nei pacchetti di lezioni di [!INCLUDE[ssIS](../includes/ssis-md.md)] . Per scaricare i dati di esempio e i pacchetti di lezioni, effettuare le operazioni seguenti.  
   
-    1.  Passare alla pagina relativa agli [esempi di prodotti di Integration Services](http://go.microsoft.com/fwlink/?LinkId=275027)  
+    1.  Passare alla pagina relativa agli [esempi di prodotti di Integration Services](https://go.microsoft.com/fwlink/?LinkId=275027)  
   
     2.  Fare clic sulla scheda **DOWNLOADS** .  
   
@@ -74,7 +73,7 @@ ms.locfileid: "48197981"
   
 1.  Fare clic su **Mapping variabili**.  
   
-2.  Nella colonna **Variabile** della pagina **Mapping variabili**, fare clic sulla cella vuota e selezionare **\<Nuova variabile>**.  
+2.  Nella colonna **Variabile** della pagina **Mapping variabili**, fare clic sulla cella vuota e selezionare **\<Nuova variabile...>**.  
   
 3.  Nel **Aggiungi variabile** della finestra di dialogo per **Name**, tipo `varFileName`.  
   
@@ -90,10 +89,10 @@ ms.locfileid: "48197981"
 -   Trascinare il **Extract Sample Currency Data** attività flusso di dati nel contenitore ciclo Foreach ora ridenominato `Foreach File in Folder`.  
   
 ## <a name="next-lesson-task"></a>Attività della lezione successiva  
- [Passaggio 3: Modifica della gestione connessione file flat](lesson-2-3-modifying-the-flat-file-connection-manager.md)  
+ [Passaggio 3: Modifica della gestione connessione File Flat](lesson-2-3-modifying-the-flat-file-connection-manager.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Configurare un contenitore ciclo Foreach](control-flow/foreach-loop-container.md)   
+ [Configurare un contenitore Ciclo Foreach](control-flow/foreach-loop-container.md)   
  [Uso di variabili nei pacchetti](use-variables-in-packages.md)  
   
   

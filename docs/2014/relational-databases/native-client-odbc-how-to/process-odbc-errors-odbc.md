@@ -12,29 +12,29 @@ ms.assetid: 66ab0762-79fe-4a31-b655-27dd215a0af7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5299054716b644b5b6271dcc72d9e596e78da1cb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: deab0fc5535b188016d018c34587995c65356fb3
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48192941"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53354722"
 ---
 # <a name="process-odbc-errors-odbc"></a>Elaborare errori ODBC (ODBC)
-  È possibile usare due chiamate di funzione ODBC per recuperare messaggi ODBC: [SQLGetDiagRec](http://go.microsoft.com/fwlink/?LinkId=58402) e [SQLGetDiagField](../native-client-odbc-api/sqlgetdiagfield.md). Per ottenere informazioni correlate a ODBC nei campi di diagnostica **SQLState**, **pfNative** e **ErrorMessage**, chiamare [SQLGetDiagRec](http://go.microsoft.com/fwlink/?LinkId=58402) fino a quando no viene restituito SQL_NO_DATA. Per ogni record di diagnostica, è possibile chiamare [SQLGetDiagField](../native-client-odbc-api/sqlgetdiagfield.md) per recuperare i singoli campi. Tutti i campi specifici del driver devono essere recuperati utilizzando `SQLGetDiagField`.  
+  Due chiamate di funzione ODBC possono essere utilizzate per recuperare messaggi ODBC: [SQLGetDiagRec](https://go.microsoft.com/fwlink/?LinkId=58402) e [SQLGetDiagField](../native-client-odbc-api/sqlgetdiagfield.md). Per ottenere informazioni correlate a ODBC nei campi di diagnostica **SQLState**, **pfNative** e **ErrorMessage**, chiamare [SQLGetDiagRec](https://go.microsoft.com/fwlink/?LinkId=58402) fino a quando no viene restituito SQL_NO_DATA. Per ogni record di diagnostica, è possibile chiamare [SQLGetDiagField](../native-client-odbc-api/sqlgetdiagfield.md) per recuperare i singoli campi. Tutti i campi specifici del driver devono essere recuperati utilizzando `SQLGetDiagField`.  
   
- L'elaborazione di [SQLGetDiagRec](http://go.microsoft.com/fwlink/?LinkId=58402) e [SQLGetDiagField](../native-client-odbc-api/sqlgetdiagfield.md) viene eseguita da Gestione driver ODBC, non da un singolo driver. Gestione driver ODBC memorizza nella cache i campi di diagnostica specifici del driver solo dopo che è stata stabilita una connessione. È possibile chiamare [SQLGetDiagField](../native-client-odbc-api/sqlgetdiagfield.md) per i campi di diagnostica specifici del driver solo dopo che è stata stabilita una connessione. Sono inclusi i comandi della connessione ODBC, anche se restituiscono SQL_SUCCESS_WITH_INFO. I campi di diagnostica specifici dei driver non saranno disponibili sino alla successiva chiamata alla funzione ODBC.  
+ L'elaborazione di [SQLGetDiagRec](https://go.microsoft.com/fwlink/?LinkId=58402) e [SQLGetDiagField](../native-client-odbc-api/sqlgetdiagfield.md) viene eseguita da Gestione driver ODBC, non da un singolo driver. Gestione driver ODBC memorizza nella cache i campi di diagnostica specifici del driver solo dopo che è stata stabilita una connessione. È possibile chiamare [SQLGetDiagField](../native-client-odbc-api/sqlgetdiagfield.md) per i campi di diagnostica specifici del driver solo dopo che è stata stabilita una connessione. Sono inclusi i comandi della connessione ODBC, anche se restituiscono SQL_SUCCESS_WITH_INFO. I campi di diagnostica specifici dei driver non saranno disponibili sino alla successiva chiamata alla funzione ODBC.  
   
 ## <a name="example"></a>Esempio  
   
-### <a name="description"></a>Description  
- Questo esempio illustra un semplice gestore degli errori che chiama [SQLGetDiagRec](http://go.microsoft.com/fwlink/?LinkId=58402) per informazioni ODBC standard. Il gestore verifica quindi l'esistenza di una connessione valida e, se è presente, chiama `SQLGetDiagField` per ottenere i campi di diagnostica specifici del driver ODBC di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Questo esempio non è supportato in IA64.  
+### <a name="description"></a>Descrizione  
+ Questo esempio illustra un semplice gestore degli errori che chiama [SQLGetDiagRec](https://go.microsoft.com/fwlink/?LinkId=58402) per informazioni ODBC standard. Il gestore verifica quindi l'esistenza di una connessione valida e, se è presente, chiama `SQLGetDiagField` per ottenere i campi di diagnostica specifici del driver ODBC di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Questo esempio non è supportato in IA64.  
   
  L'esempio è stato sviluppato per ODBC versione 3.0 o successiva.  
   
 > [!IMPORTANT]  
->  Se possibile, usare l'autenticazione di Windows. Se non è disponibile, agli utenti verrà richiesto di immettere le credenziali in fase di esecuzione. Evitare di archiviare le credenziali in un file. Se è necessario rendere persistenti le credenziali, è consigliabile crittografarle usando l'[API di crittografia Win32](http://go.microsoft.com/fwlink/?LinkId=64532).  
+>  Se possibile, usare l'autenticazione di Windows. Se non è disponibile, agli utenti verrà richiesto di immettere le credenziali in fase di esecuzione. Evitare di archiviare le credenziali in un file. Se è necessario rendere persistenti le credenziali, è consigliabile crittografarle usando l'[API di crittografia Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
   
- È necessaria un'origine dati ODBC denominata AdventureWorks, il cui database predefinito è il database di esempio AdventureWorks. È possibile scaricare il database di esempio AdventureWorks dalla home page del sito relativo a [progetti della community ed esempi per Microsoft SQL Server](http://go.microsoft.com/fwlink/?LinkID=85384). Questa origine dati deve essere basata sul driver ODBC fornito dal sistema operativo (il nome del driver è "SQL Server"). Se questo esempio viene compilato ed eseguito come applicazione a 32 bit in un sistema operativo a 64 bit, è necessario creare l'origine dati ODBC con Amministratore ODBC in %windir%\SysWOW64\odbcad32.exe.  
+ È necessaria un'origine dati ODBC denominata AdventureWorks, il cui database predefinito è il database di esempio AdventureWorks. È possibile scaricare il database di esempio AdventureWorks dalla home page del sito relativo a [progetti della community ed esempi per Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkID=85384). Questa origine dati deve essere basata sul driver ODBC fornito dal sistema operativo (il nome del driver è "SQL Server"). Se questo esempio viene compilato ed eseguito come applicazione a 32 bit in un sistema operativo a 64 bit, è necessario creare l'origine dati ODBC con Amministratore ODBC in %windir%\SysWOW64\odbcad32.exe.  
   
  In questo esempio viene eseguita la connessione all'istanza predefinita di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nel computer in uso. Per connettersi a un'istanza denominata, modificare la definizione dell'origine dati ODBC per specificare l'istanza in base al formato: server\istanzadenominata. Per impostazione predefinita, [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] viene installato in un'istanza denominata.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "48192941"
   
  Eseguire il terzo listato di codice ([!INCLUDE[tsql](../../includes/tsql-md.md)]) per eliminare la stored procedure utilizzata dall'esempio.  
   
-### <a name="code"></a>codice  
+### <a name="code"></a>Codice  
   
 ```  
 use AdventureWorks  
@@ -59,7 +59,7 @@ SELECT * FROM Purchasing.Vendor
 Go  
 ```  
   
-### <a name="code"></a>codice  
+### <a name="code"></a>Codice  
   
 ```  
 // compile with: odbc32.lib  
@@ -227,7 +227,7 @@ void ProcessLogMessages(SQLSMALLINT plm_handle_type, SQLHANDLE plm_handle, char 
 }  
 ```  
   
-### <a name="code"></a>codice  
+### <a name="code"></a>Codice  
   
 ```  
 use AdventureWorks  

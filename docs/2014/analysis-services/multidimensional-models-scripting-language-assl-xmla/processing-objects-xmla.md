@@ -23,12 +23,12 @@ ms.assetid: a65b3249-303d-49c6-98af-6ac6eed11a03
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 711909975507e7382fff80d9b83483d54aad4c6f
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: a4bf1f7abd985c7ef3544a722351a2d049f6ea83
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145666"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53370903"
 ---
 # <a name="processing-objects-xmla"></a>Elaborazione di oggetti (XMLA)
   Nelle [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], l'elaborazione è il passaggio o serie di passaggi necessari per trasformare i dati in informazioni per l'analisi di business. L'elaborazione varia a seconda del tipo di oggetto, ma rappresenta sempre una fase della trasformazione dei dati in informazioni.  
@@ -114,13 +114,13 @@ ms.locfileid: "50145666"
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="description"></a>Description  
+### <a name="description"></a>Descrizione  
  Nell'esempio seguente viene elaborato completamente il database di esempio [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)] di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
-### <a name="code"></a>codice  
+### <a name="code"></a>Codice  
   
 ```  
-<Process xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">  
+<Process xmlns="https://schemas.microsoft.com/analysisservices/2003/engine">  
   <Object>  
     <DatabaseID>Adventure Works DW Multidimensional 2012</DatabaseID>  
   </Object>  
@@ -129,13 +129,13 @@ ms.locfileid: "50145666"
 </Process>  
 ```  
   
-### <a name="description"></a>Description  
+### <a name="description"></a>Descrizione  
  Elabora in modo incrementale nell'esempio seguente il **Internet_Sales_2004** partizionare nel **Internet Sales** gruppo di misure del **Adventure Works DW** cubo nel [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)] esempio [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database. Il `Process` comando viene aggiunta aggregazioni per l'ordine date successive al 31 dicembre 2006 alla partizione tramite un'associazione out-of-line query nel `Bindings` proprietà del `Process` comando per recuperare le righe della tabella dei fatti da cui generare aggregazioni da aggiungere alla partizione.  
   
-### <a name="code"></a>codice  
+### <a name="code"></a>Codice  
   
 ```  
-<Process ProcessAffectedObjects="true" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">  
+<Process ProcessAffectedObjects="true" xmlns="https://schemas.microsoft.com/analysisservices/2003/engine">  
   <Object>  
     <DatabaseID>Adventure Works DW Multidimensional 2012</DatabaseID>  
     <CubeID>Adventure Works DW</CubeID>  

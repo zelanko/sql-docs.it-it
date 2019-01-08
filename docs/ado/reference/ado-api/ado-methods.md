@@ -14,20 +14,20 @@ ms.assetid: a38c5670-ba28-44f3-bd5b-fcb46880e904
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: eb7cf0945eb15d0f741e5b5fcba6c6e28fbe4955
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 12b78faed3c45a92c1b20796ade5ce0a6844a84e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47660589"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52530237"
 ---
 # <a name="ado-methods"></a>Metodi ADO
 |||  
 |-|-|  
 |[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)|Crea un nuovo record per un aggiornabile **Recordset** oggetto.|  
-|[Append](../../../ado/reference/ado-api/append-method-ado.md)|Aggiunge un oggetto a una raccolta. Se la raccolta è **i campi**, un nuovo **campo** oggetto può essere creato prima di essere aggiunta alla raccolta.|  
+|[Accoda](../../../ado/reference/ado-api/append-method-ado.md)|Aggiunge un oggetto a una raccolta. Se la raccolta è **i campi**, un nuovo **campo** oggetto può essere creato prima di essere aggiunta alla raccolta.|  
 |[AppendChunk](../../../ado/reference/ado-api/appendchunk-method-ado.md)|Accoda i dati a un testo di grandi dimensioni o dati binari **campo**, o a un **parametro** oggetto.|  
-|[BeginTrans, CommitTrans e RollbackTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)|Gestisce l'elaborazione all'interno delle transazioni di un **connessione** oggetto come indicato di seguito:<br /><br /> **BeginTrans** , inizia una nuova transazione.<br /><br /> **CommitTrans** , Salva le modifiche e termina la transazione corrente. Anche possibile avviare una nuova transazione.<br /><br /> **RollbackTrans** : Annulla le modifiche e termina la transazione corrente. Anche possibile avviare una nuova transazione.|  
+|[BeginTrans, CommitTrans e RollbackTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)|Gestisce l'elaborazione all'interno delle transazioni di un **connessione** oggetto come indicato di seguito:<br /><br /> **BeginTrans** -inizia una nuova transazione.<br /><br /> **CommitTrans** : Salva eventuali modifiche apportate e termina la transazione corrente. Anche possibile avviare una nuova transazione.<br /><br /> **RollbackTrans** : Annulla le modifiche e termina la transazione corrente. Anche possibile avviare una nuova transazione.|  
 |[Annulla](../../../ado/reference/ado-api/cancel-method-ado.md)|Annulla l'esecuzione di un'in sospeso, chiamata asincrona al metodo.|  
 |[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|Annulla un aggiornamento batch in sospeso.|  
 |[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|Annulla tutte le modifiche apportate alla riga corrente o nuova di un' **Recordset** oggetto, o il **campi** raccolta di un **Record** oggetto, prima di chiamare il  **Aggiornamento** (metodo).|  
@@ -74,7 +74,7 @@ ms.locfileid: "47660589"
 |[Metodo SetEOS](../../../ado/reference/ado-api/seteos-method.md)|Imposta la posizione che rappresenta la fine del flusso.|  
 |[SkipLine](../../../ado/reference/ado-api/skipline-method.md)|Ignora un'intera riga durante la lettura di un flusso di testo.|  
 |[Stat](../../../ado/reference/ado-api/stat-method.md)|Ottiene le informazioni statistiche su un flusso aperto.|  
-|[Supporta](../../../ado/reference/ado-api/supports-method.md)|Determina se un oggetto specificato **Recordset** oggetto supporta un determinato tipo di funzionalità.|  
+|[Supporti](../../../ado/reference/ado-api/supports-method.md)|Determina se un oggetto specificato **Recordset** oggetto supporta un determinato tipo di funzionalità.|  
 |[Update](../../../ado/reference/ado-api/update-method.md)|Salva le modifiche apportate alla riga corrente di un **Recordset** oggetto, o il **campi** raccolta di un **Record** oggetto.|  
 |[Metodo UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|Scrive tutti gli aggiornamenti in blocco in sospeso sul disco.|  
 |[scrittura](../../../ado/reference/ado-api/write-method.md)|Scrive dati binari in una **Stream** oggetto.|  
@@ -85,7 +85,7 @@ ms.locfileid: "47660589"
  [Raccolte di ADO](../../../ado/reference/ado-api/ado-collections.md)   
  [Proprietà dinamiche ADO](../../../ado/reference/ado-api/ado-dynamic-properties.md)   
  [Costanti enumerate ADO](../../../ado/reference/ado-api/ado-enumerated-constants.md)   
- [Appendice b: errori ADO](../../../ado/guide/appendixes/appendix-b-ado-errors.md)   
+ [Appendice b: Errori ADO](../../../ado/guide/appendixes/appendix-b-ado-errors.md)   
  [Eventi ADO](../../../ado/reference/ado-api/ado-events.md)   
  [Modello a oggetti ADO](../../../ado/reference/ado-api/ado-object-model.md)   
  [Interfacce e oggetti ADO](../../../ado/reference/ado-api/ado-objects-and-interfaces.md)   

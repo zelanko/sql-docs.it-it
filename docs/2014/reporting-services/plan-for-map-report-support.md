@@ -11,12 +11,12 @@ ms.assetid: 5ddc97a7-7ee5-475d-bc49-3b814dce7e19
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 243c2ba1d998acd15f92e6e995d9390c7a32c84f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bc5bf036d3d00033077ad0054572c0375b6b6f55
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48105881"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53366600"
 ---
 # <a name="plan-for-map-report-support"></a>Pianificare il supporto dei report mappa
   [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] supporta i report di mappa che utilizzano origini dati spaziali. I dati spaziali possono provenire da database di SQL Server, da file di forma ESRI o dalla raccolta mappe installata con Reporting Services o Generatore report. In una mappa è inoltre possibile visualizzare uno sfondo a sezioni di Bing Map. L'autore del report è possibile creare un report che specifica i dati spaziali o sezioni di Bing map come dinamici e recuperati in fase di esecuzione o come statici e incorporati nella definizione del report.  
@@ -27,7 +27,7 @@ ms.locfileid: "48105881"
  In ogni report gli autori del report possono specificare se utilizzare una connessione Secure Sockets Layer (SSL) per recuperare sezioni dal server delle sezioni. A tale scopo, nel riquadro proprietà per il livello sezione, è necessario impostare la proprietà booleana UseSecureConnection a `true`.  
   
 > [!NOTE]  
->  Per altre informazioni sull'utilizzo delle tessere mappa di Bing nel report, vedere [Ulteriori condizioni di utilizzo](http://go.microsoft.com/fwlink/?LinkId=151371) e [Informativa sulla privacy](http://go.microsoft.com/fwlink/?LinkId=151372).  
+>  Per altre informazioni sull'utilizzo delle tessere mappa di Bing nel report, vedere [Ulteriori condizioni di utilizzo](https://go.microsoft.com/fwlink/?LinkId=151371) e [Informativa sulla privacy](https://go.microsoft.com/fwlink/?LinkId=151372).  
   
 ## <a name="report-design-recommendations"></a>Indicazioni sulla progettazione di report  
  Una buona progettazione di report per i report delle mappe richiede una valutazione da parte dell'autore in termini di compromessi tra i dati spaziali statici e quelli dinamici nonché l'individuazione di un equilibrio utile agli utenti dei report. Gli elementi della mappa incorporati possono aumentare notevolmente le dimensioni della definizione del report, ma riducono il tempo necessario per visualizzare il report della mappa. Gli elementi dinamici della mappa riducono le dimensioni della definizione del report, ma aumentano il tempo necessario per elaborare e visualizzare la mappa. L'autore del report deve trovare il giusto equilibrio tra questi due aspetti.  
@@ -51,6 +51,6 @@ ms.locfileid: "48105881"
  Per altre informazioni, [Maps &#40;Generatore Report e SSRS&#41;](report-design/maps-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Risolvere i problemi di report: I report di mappa &#40;Report e SSRS&#41;](report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
+ [Risolvere i problemi di report: Eseguire il mapping di report &#40;Report e SSRS&#41;](report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
   

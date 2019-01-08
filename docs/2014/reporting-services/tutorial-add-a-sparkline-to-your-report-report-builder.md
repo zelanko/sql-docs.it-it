@@ -1,5 +1,5 @@
 ---
-title: 'Esercitazione: Aggiunta di un grafico sparkline al report (Generatore report) | Microsoft Docs'
+title: 'Esercitazione: Aggiungere un grafico Sparkline al Report (Generatore Report) | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,21 +11,21 @@ ms.assetid: 18c90a36-48bf-4805-a960-2d1e8f00c2dc
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 542720be68e6fabd2cb16e25928d73efa4f41d66
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dcadf726623b71daa0f9bf3e699c6bd8ac3ab122
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48091481"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376673"
 ---
 # <a name="tutorial-add-a-sparkline-to-your-report-report-builder"></a>Esercitazione: Aggiungere un grafico sparkline al report (Generatore report)
   In questa esercitazione si creerà un report tabella semplice basato su dati di vendita di esempio, quindi si aggiungerà un grafico sparkline a una cella della tabella.  
   
- Una versione avanzata del report che verrà creato in questa esercitazione è disponibile come report di esempio di Generatore report di [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Per altre informazioni sul download di questo report di esempio e ad altri utenti, vedere [Report di Generatore report di esempio](http://go.microsoft.com/fwlink/?LinkId=184851). Nell'immagine seguente viene illustrato il report di esempio simile a quello che verrà creato.  
+ Una versione avanzata del report che verrà creato in questa esercitazione è disponibile come report di esempio di Generatore report di [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Per altre informazioni sul download di questo report di esempio e ad altri utenti, vedere [Report di Generatore report di esempio](https://go.microsoft.com/fwlink/?LinkId=184851). Nell'immagine seguente viene illustrato il report di esempio simile a quello che verrà creato.  
   
  ![rs_SparklineMatrixTutorial](../../2014/tutorials/media/rs-sparklinematrixtutorial.gif "rs_SparklineMatrixTutorial")  
   
- Il video [procedura: creare un grafico Sparkline in una tabella (Video su Generatore Report)](http://technet.microsoft.com/bi/ff871942.aspx) viene illustrato come creare un report simile con grafici sparkline.  
+ Il video [come: Creare un grafico Sparkline in una tabella (Video di Generatore Report)](https://technet.microsoft.com/bi/ff871942.aspx) viene illustrato come creare un report simile con grafici sparkline.  
   
 ##  <a name="BackToTop"></a> Lezioni dell'esercitazione  
  In questa esercitazione verranno illustrate le operazioni seguenti:  
@@ -183,7 +183,7 @@ ms.locfileid: "48091481"
   
 14. La tabella viene aggiunta all'area di progettazione. Nella tabella sono presenti tre colonne e altrettante righe.  
   
-     Osservare il riquadro di raggruppamento. Se il riquadro Raggruppamento non è visualizzato, scegliere **Raggruppamento** dal menu **Visualizza**. Nel riquadro Gruppi di righe viene visualizzato un gruppo di righe, ovvero **Product**. Nel riquadro Gruppi di colonne viene visualizzato un gruppo di colonne, ovvero **SalesDate**. I dati dettaglio costituiscono tutti i dati recuperati dalla query del set di dati.  
+     Osservare il riquadro di raggruppamento. Se il riquadro Raggruppamento non è visualizzato, scegliere **Raggruppamento** dal menu **Visualizza**. Nel riquadro Gruppi di righe viene visualizzato un gruppo di righe: **Prodotto**. Nel riquadro Gruppi di colonne viene visualizzato un gruppo di colonne: **SalesDate**. I dati dettaglio costituiscono tutti i dati recuperati dalla query del set di dati.  
   
 15. Fare clic su **Esegui** per visualizzare l'anteprima del report.  
   
@@ -213,12 +213,12 @@ ms.locfileid: "48091481"
   
      Si noti che sono presenti grafici sparkline in ogni riga della tabella, che tuttavia non sono corretti. Le barre nei grafici non sono allineate l'una all'altra. Nella seconda riga di dati sono presenti solo quattro barre; pertanto le barre risultano più ampie di quelle nella prima riga, che ne contiene sei. Non è possibile confrontare i valori di ogni prodotto per giorno. È necessario che le barre siano allineate.  
   
-     Per ogni riga si noti inoltre che la barra più alta per la riga specifica corrisponde all'altezza della riga stessa. Anche questo è fuorviante, in quanto i valori più grandi per ogni riga non sono uguali: il valore più grande per Budget Movie-Maker è $10.400, mentre il valore più grande per Slim Digital è $26.576, più del doppio. Inoltre, le barre più grandi in quelle due righe hanno all'incirca la stessa altezza. L'altezza deve inoltre essere ridimensionata conformemente agli altri grafici sparkline.  
+     Per ogni riga si noti inoltre che la barra più alta per la riga specifica corrisponde all'altezza della riga stessa. Anche questo è fuorviante, perché i valori più grandi per ogni riga non sono uguali: il valore più grande per Budget Movie-Maker è $10.400, ma il valore più grande per Slim Digital è $26.576, più di due volte più grande. Inoltre, le barre più grandi in quelle due righe hanno all'incirca la stessa altezza. L'altezza deve inoltre essere ridimensionata conformemente agli altri grafici sparkline.  
   
      ![rs_SprklineMtrxUnaligndBars](../../2014/tutorials/media/rs-sprklinemtrxunaligndbars.gif "rs_SprklineMtrxUnaligndBars")  
   
 ##  <a name="AlignSparklines"></a> 4. Allineare i grafici sparkline verticalmente e orizzontalmente  
- I grafici sparkline risultano di difficile lettura quando in essi non vengono utilizzate le stesse misure. È necessario che vi sia corrispondenza tra gli assi orizzontale e verticale di ognuno.  
+ I grafici sparkline risultano di difficili lettura quando in essi non vengono utilizzate le stesse misure. È necessario che vi sia corrispondenza tra gli assi orizzontale e verticale di ognuno.  
   
 #### <a name="to-set-alignment-for-the-sparklines-in-the-table"></a>Per impostare l'allineamento per i grafici sparkline nella tabella  
   

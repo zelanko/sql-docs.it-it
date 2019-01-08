@@ -13,17 +13,17 @@ ms.assetid: 98c879ee-7257-40c9-bc85-6766bd3b4885
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7b13e56895a9880a8bffc319c247769b4f5b2911
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a9e8dd851604203a9a6c02959c3d11002145f9dc
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48191071"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53354308"
 ---
 # <a name="connect-to-a-microsoft-sql-server-parallel-data-warehouse-ssas"></a>Connettersi a Microsoft SQL Server Parallel Data Warehouse (SSAS)
   Questa pagina dell'**Importazione guidata tabella** consente di specificare le impostazioni per connettersi a Microsoft SQL Server Parallel Data Warehouse (PDW). Per accedere alla procedura guidata da [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], dal menu **Modello** selezionare **Importa da origine dati**.  
   
- SQL Server PDW è uno strumento estremamente scalabile che offre prestazioni a basso costo tramite un sistema di elaborazione parallela massiva. Per altre informazioni su SQL Server PDW, vedere il sito Web [SQL Server 2008 R2 Parallel Data Warehouse](http://go.microsoft.com/fwlink/?LinkId=150895). È possibile connettersi al data warehouse tramite l'autenticazione SQL Server. Per connettersi a un'origine dati, è necessario che nel computer sia installato il provider appropriato.  
+ SQL Server PDW è uno strumento estremamente scalabile che offre prestazioni a basso costo tramite un sistema di elaborazione parallela massiva. Per altre informazioni su SQL Server PDW, vedere il sito Web [SQL Server 2008 R2 Parallel Data Warehouse](https://go.microsoft.com/fwlink/?LinkId=150895). È possibile connettersi al data warehouse tramite l'autenticazione SQL Server. Per connettersi a un'origine dati, è necessario che nel computer sia installato il provider appropriato.  
   
 > [!NOTE]  
 >  Le credenziali dell'utente corrente vengono utilizzate in caso di selezione di un database in questa pagina. Tuttavia, l'importazione non verrà completata se l'utente specificato nella pagina Impostazioni di rappresentazione non dispone di privilegi sufficienti per leggere dal database selezionato.  

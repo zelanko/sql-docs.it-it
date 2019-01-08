@@ -17,12 +17,12 @@ ms.assetid: 0e93d79b-b12e-4e98-889e-c2dfcca20fd0
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4583337cf9908f266fe1a85510d4beaae5a5af65
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 641a08567e990134d49d32ae7ebecaf7d2b8de5a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47714373"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52533088"
 ---
 # <a name="item-property-ado-md-cellset"></a>Proprietà Item (Cellset - ADO MD)
 Recupera una cella da un [cellset](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) utilizzando le coordinate.  

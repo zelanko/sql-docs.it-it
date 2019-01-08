@@ -10,28 +10,28 @@ ms.assetid: 6d1ac280-87db-4bd8-ad43-54353647d8b5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 40ea7c27958fe2a245b2279dc35f2029f81e21d8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 56999c5e74648ecd36adea3ee941627c1e2e607b
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48147421"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53377901"
 ---
 # <a name="determining-the-correct-bucket-count-for-hash-indexes"></a>Determinazione del numero di bucket corretto per gli indici hash
-  È necessario specificare un valore per il `BUCKET_COUNT` parametro quando si crea la tabella con ottimizzazione per la memoria. In questo argomento vengono fornite indicazioni per determinare il valore appropriato per il parametro `BUCKET_COUNT`. Se non è possibile determinare il numero di bucket corretto, utilizzare in alternativa un indice non cluster.  Un valore `BUCKET_COUNT` errato, in particolare se troppo basso, può influire in modo significativo sulle prestazioni del carico di lavoro e sul tempo di recupero del database. È consigliabile sovrastimare il numero di bucket.  
+  È necessario specificare un valore per il parametro `BUCKET_COUNT` durante la creazione della tabella ottimizzata per la memoria. In questo argomento vengono fornite indicazioni per determinare il valore appropriato per il parametro `BUCKET_COUNT`. Se non è possibile determinare il numero di bucket corretto, utilizzare in alternativa un indice non cluster.  Un valore `BUCKET_COUNT` errato, in particolare se troppo basso, può influire in modo significativo sulle prestazioni del carico di lavoro e sul tempo di recupero del database. È consigliabile sovrastimare il numero di bucket.  
   
  Le chiavi duplicate dell'indice possono ridurre le prestazioni con un indice hash perché viene eseguito l'hash delle chiavi nello stesso bucket, causando un aumento della catena del bucket.  
   
- Per altre informazioni sugli indici hash non cluster, vedere [indici Hash](hash-indexes.md) e [linee guida per Using Indexes on Memory-Optimized Tables](../relational-databases/in-memory-oltp/memory-optimized-tables.md).  
+ Per ulteriori informazioni sugli indici hash non cluster, vedere [Hash Indexes](hash-indexes.md) e [Guidelines for Using Indexes on Memory-Optimized Tables](../relational-databases/in-memory-oltp/memory-optimized-tables.md).  
   
  Una tabella hash viene allocata per ogni indice hash in una tabella ottimizzata per la memoria. Le dimensioni della tabella hash allocata per un indice viene specificato per il `BUCKET_COUNT` parametro nel [CREATE TABLE &#40;Transact-SQL&#41; ](/sql/t-sql/statements/create-table-transact-sql) o [CREATE TYPE &#40;Transact-SQL&#41; ](/sql/t-sql/statements/create-type-transact-sql). Il numero di bucket verrà arrotondato internamente per eccesso alla potenza più vicina di due. Se, ad esempio, si specifica un numero di bucket pari a 300.000 si avrà un numero di bucket effettivo pari a 524.288.  
   
- Per i collegamenti a un articolo e a un video sul numero di bucket, vedere [Come determinare 'esatto numero di bucket per gli indici hash (OLTP in memoria)](http://go.microsoft.com/fwlink/p/?LinkId=525853).  
+ Per i collegamenti a un articolo e a un video sul numero di bucket, vedere [Come determinare 'esatto numero di bucket per gli indici hash (OLTP in memoria)](https://go.microsoft.com/fwlink/p/?LinkId=525853).  
   
 ## <a name="recommendations"></a>Indicazioni  
  Nella maggior parte dei casi, il numero di bucket dovrebbe essere impostato su un valore compreso tra una e due volte il numero di valori distinct nella chiave di indice. Se la chiave di indice contiene molti valori duplicati (in media sono presenti più di 10 righe per ogni valore di chiave di indice), utilizzare in alternativa un indice non cluster.  
   
- Non è sempre possibile stimare quanti valori ha o potrebbe avere una particolare chiave di indice. Le prestazioni dovrebbero essere accettabili se il `BUCKET_COUNT` valore è all'interno di 5 volte il numero effettivo dei valori di chiave.  
+ Non è sempre possibile stimare quanti valori ha o potrebbe avere una particolare chiave di indice. Le prestazioni dovrebbero essere accettabili se il valore `BUCKET_COUNT` non supera di 5 volte il numero effettivo dei valori di chiave.  
   
  Per determinare il numero delle chiavi di indice univoche nei dati esistenti, utilizzare query simili agli esempi seguenti:  
   
@@ -87,7 +87,7 @@ FROM sys.dm_db_xtp_hash_index_stats AS hs
  Se *empty_bucket_percent* è minore del 10%, il numero di bucket è probabilmente troppo basso. In teoria, il valore *empty_bucket_percent* dovrebbe essere pari al 33% o superiore. Se il numero di bucket corrisponde al numero di valori di chiave di indice, circa 1/3 dei bucket è vuoto, a causa della distribuzione hash.  
   
  *avg_chain_length*  
- *avg_chain_length* indica la lunghezza media delle catene di righe nei bucket di hash.  
+ *avg_chain_length* indica la lunghezza media delle catene di righe nel bucket di hash.  
   
  Se *avg_chain_length* è maggiore di 10 e *empty_bucket_percent* è maggiore del 10%, probabilmente sono presenti molti valori di chiave di indice duplicati ed è più adatto un indice non cluster. La lunghezza media ideale della catena è pari a 1.  
   
@@ -137,13 +137,13 @@ GO
   
  Si considerino i tre indici hash in questa tabella:  
   
--   IX_Status: il 50 percento dei bucket sono vuoti, una condizione positiva. Tuttavia, la lunghezza media della catena è molto elevata (65.536). Ciò indica un numero alto di valori duplicati. Pertanto, l'utilizzo di un indice hash non cluster non è appropriato in questo caso. È più opportuno utilizzare in alternativa un indice non cluster.  
+-   IX_Status: il 50 percento dei bucket è vuoto, una condizione positiva. Tuttavia, la lunghezza media della catena è molto elevata (65.536). Ciò indica un numero alto di valori duplicati. Pertanto, l'utilizzo di un indice hash non cluster non è appropriato in questo caso. È più opportuno utilizzare in alternativa un indice non cluster.  
   
 -   IX_OrderSequence: lo 0 percento dei bucket è vuoto, un valore troppo basso. Inoltre, la lunghezza media della catena è pari a 8. I valori di questo indice sono univoci e ciò implica che, in media, viene eseguito il mapping di 8 valori per ogni bucket. Il numero di bucket deve essere aumentato. Poiché la chiave di indice ha 262.144 valori univoci, il numero di bucket deve essere pari ad almeno 262.144. Se si prevede una crescita futura, il numero deve essere maggiore.  
   
--   Indice di chiave primaria (PK__SalesOrder...): il 36% dei bucket è vuoto, una condizione positiva. Inoltre, la lunghezza media della catena è pari a 1, un'altra condizione positiva. Non è necessario apportare alcuna modifica.  
+-   Indice di chiave primaria (PK): 36% dei bucket è vuoto, condizione positiva. Inoltre, la lunghezza media della catena è pari a 1, un'altra condizione positiva. Non è necessario apportare alcuna modifica.  
   
- Per altre informazioni sulla risoluzione dei problemi con gli indici hash ottimizzati per la memoria, vedere [Troubleshooting Common Performance Problems con gli indici Hash ottimizzati per la memoria](../../2014/database-engine/troubleshooting-common-performance-problems-with-memory-optimized-hash-indexes.md).  
+ Per ulteriori informazioni sulla risoluzione dei problemi relativi agli indici hash ottimizzati per la memoria, vedere [Troubleshooting Common Performance Problems with Memory-Optimized Hash Indexes](../../2014/database-engine/troubleshooting-common-performance-problems-with-memory-optimized-hash-indexes.md).  
   
 ## <a name="detailed-considerations-for-further-optimization"></a>Considerazioni dettagliate per un'ulteriore ottimizzazione  
  In questa sezione vengono presentate altre considerazioni per l'ottimizzazione del numero di bucket.  
@@ -152,7 +152,7 @@ GO
   
 -   Più alto è il valore del numero di bucket, maggiore sarà il numero di bucket vuoti nell'indice. Ciò influisce sull'utilizzo della memoria (8 byte per bucket) e sulle prestazioni delle analisi di tabella, in quanto ogni bucket viene analizzato come parte di un'analisi di tabella.  
   
--   Più basso è il numero di bucket, più saranno i valori assegnati a un singolo bucket. Ciò riduce le prestazioni per le ricerche di punti e gli inserimenti, perché [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] potrebbe essere necessario attraversare diversi valori in un singolo bucket per trovare il valore specificato nel predicato di ricerca.  
+-   Più basso è il numero di bucket, più saranno i valori assegnati a un singolo bucket. Ciò riduce le prestazioni per le ricerche di punti e gli inserimenti, perché in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] può essere necessario attraversare diversi valori in un singolo bucket per trovare il valore specificato nel predicato.  
   
  Se il numero di bucket è notevolmente inferiore al numero di chiavi di indice univoche, verrà eseguito il mapping di molti valori a ogni bucket. Ciò comporta una riduzione delle prestazioni della maggior parte delle operazioni DML, in particolare delle ricerche di punti (ricerca di singole chiavi di indice) e delle operazioni di inserimento. Ad esempio, si può avere un peggioramento delle prestazioni delle query SELECT e delle operazioni UPDATE e DELETE con predicati di uguaglianza corrispondenti alle colonne chiave di indice nella clausola WHERE. Un numero di bucket basso influisce anche sul tempo di recupero del database, in quanto gli indici vengono ricreati all'avvio del database.  
   

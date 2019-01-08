@@ -11,12 +11,12 @@ ms.assetid: 21cbdc9d-d33c-4026-b9ef-1be2bd92b3b1
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 27f0ea7b8e215735a0d5ef2f3deb8e354567216a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f1864bd14a3822269594773afa8b01fe36723f6a
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48134549"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52392004"
 ---
 # <a name="create-an-olap-mining-structure"></a>Create an OLAP Mining Structure
   La creazione di un modello di data mining basato su un cubo OLAP o un altro archivio dati multidimensionale presenta numerosi vantaggi. Una soluzione OLAP contiene già enormi quantità di dati ben organizzati, puliti e formattati correttamente; tuttavia, la complessità dei dati è tale che difficilmente gli utenti possono trovare modelli significativi tramite l'esplorazione ad hoc. Il data mining consente di individuare nuove correlazioni e fornire informazioni su cui è possibile eseguire azioni.  
@@ -45,30 +45,30 @@ ms.locfileid: "48134549"
 ##  <a name="bkmk_Overview"></a> Cenni preliminari sul processo di data mining OLAP  
  Avviare la Creazione guidata modello di data mining facendo clic con il pulsante destro del mouse sul nodo **Strutture di data mining** in Esplora soluzioni e scegliendo  **Nuova struttura di data mining**. La procedura guidata consente di eseguire in modo semplificato i passaggi indicati di seguito per la creazione di una nuova struttura e un nuovo modello:  
   
-1.  **Selezione metodo di definizione**: consente di selezionare un tipo di origine dati e scegliere **Da cubo esistente**.  
+1.  **Selezione metodo di definizione**: Consente di selezionare una data tipo di origine e scegliere **da cubo esistente**.  
   
     > [!NOTE]  
     >  Il cubo OLAP utilizzato come origine deve esistere all'interno dello stesso database della struttura di data mining, come descritto sopra. Inoltre, non è possibile utilizzare un cubo creato dal componente aggiuntivo PowerPivot per Excel come origine per il data mining.  
   
-2.  **Crea la struttura di data mining**: consente di determinare se verrà compilata solo una struttura o una struttura con un modello di data mining.  
+2.  **Creare la struttura di Data Mining**: Determinare se verrà compilata solo una struttura o una struttura con un modello di data mining.  
   
      È inoltre necessario scegliere un algoritmo appropriato per l'analisi dei dati. Per informazioni aggiuntive sull'algoritmo migliore per determinate attività, vedere HYPERLINK "ms-help://SQL111033/as_1devconc/html/ed1fc83b-b98c-437e-bf53-4ff001b92d64.htm" Algoritmi di data mining (Analysis Services - Data mining).  
   
-3.  **Selezione dimensione cubo di origine**: questo passaggio è uguale a quello di selezione dell'origine dati. È necessario scegliere la singola dimensione che contiene i dati più importanti utilizzati per il training del modello. È possibile aggiungere dati da altre dimensioni in un secondo momento oppure filtrare la dimensione.  
+3.  **Selezione dimensione cubo di origine**: Questo passaggio è quello utilizzato per la selezione di un'origine dati. È necessario scegliere la singola dimensione che contiene i dati più importanti utilizzati per il training del modello. È possibile aggiungere dati da altre dimensioni in un secondo momento oppure filtrare la dimensione.  
   
-4.  **Selezione chiave del case**: all'interno della dimensione appena selezionata scegliere un attributo (colonna) da usare come identificatore univoco per i dati del case.  
+4.  **Selezione chiave del Case**: All'interno della dimensione appena selezionata, scegliere un attributo (colonna) da usare come identificatore univoco per i dati del case.  
   
      Una colonna sarà in genere preselezionata, ma è possibile modificarla se sono presenti più chiavi.  
   
-5.  **Selezione colonne livello case**: consente di scegliere gli attributi dalla dimensione selezionata e le misure correlate, rilevanti per l'analisi. Questo passaggio equivale alla selezione di colonne da una tabella.  
+5.  **Selezione colonne livello Case**: Qui si scelgono gli attributi dalla dimensione selezionata e le misure correlate, rilevanti per l'analisi. Questo passaggio equivale alla selezione di colonne da una tabella.  
   
      Nella creazione guidata sono automaticamente incluse per la revisione e la selezione eventuali misure create utilizzando gli attributi dalla dimensione selezionata.  
   
-     Ad esempio, se il cubo contiene una misura per il calcolo del costo di spedizione in base all'ubicazione geografica del cliente e si sceglie la dimensione Customer come origine dati principale per la modellazione, la misura sarà proposta come candidato per l'aggiunta al modello. Prestare attenzione ad aggiungere troppe misure già basate direttamente sugli attributi, poiché esiste già una relazione implicita tra le colonne, come definito nella formula della misura, e la forza di questa correlazione (prevista) può nascondere altre relazioni che diversamente si potrebbero individuare.  
+     Ad esempio, se il cubo contiene una misura che calcola il costo di spedizione in base alla posizione geografica del cliente e si sceglie la dimensione Customer come origine dati principale per la modellazione, la misura sarà proposta come candidato per l'aggiunta al modello. Prestare attenzione ad aggiungere troppe misure già basate direttamente sugli attributi, poiché esiste già una relazione implicita tra le colonne, come definito nella formula della misura, e la forza di questa correlazione (prevista) può nascondere altre relazioni che diversamente si potrebbero individuare.  
   
-6.  **Impostazione utilizzo colonne modello di data mining**: per ogni attributo o misura aggiunta alla struttura, è necessario specificare se l'attributo deve essere utilizzato per la stima o come input. Se non si seleziona una di queste opzioni, i dati verranno elaborati ma non saranno utilizzati per l'analisi; tuttavia, saranno disponibili come dati in background nel caso successivamente si abiliti il drill-through.  
+6.  **Specificare l'utilizzo colonne modello di Data Mining**: Per ogni attributo o misura aggiunta alla struttura, è necessario specificare se l'attributo deve essere utilizzato per la stima o utilizzato come input. Se non si seleziona una di queste opzioni, i dati verranno elaborati ma non saranno utilizzati per l'analisi; tuttavia, saranno disponibili come dati in background nel caso successivamente si abiliti il drill-through.  
   
-7.  **Aggiungi tabelle nidificate**: fare clic per aggiungere tabelle correlate. Nella finestra di dialogo **Selezione dimensione gruppo di misure** è possibile scegliere una singola dimensione tra quelle correlate alla dimensione corrente.  
+7.  **Aggiungi tabelle nidificate**: Fare clic per aggiungere tabelle correlate. Nella finestra di dialogo **Selezione dimensione gruppo di misure** è possibile scegliere una singola dimensione tra quelle correlate alla dimensione corrente.  
   
      Successivamente, utilizzare la finestra di dialogo **Seleziona colonna chiave tabella nidificata** per definire la modalità di correlazione della nuova dimensione alla dimensione che contiene i dati del case.  
   
@@ -76,21 +76,21 @@ ms.locfileid: "48134549"
   
      Dopo avere aggiunto tutti gli attributi nidificati che potrebbero essere necessari, tornare alla pagina **Impostazione utilizzo colonne modello di data mining**e fare clic su **Avanti**.  
   
-8.  **Impostazione tipo di contenuto e dati delle colonne**: a questo punto sono stati aggiunti tutti i dati che saranno utilizzati per l'analisi ed è necessario specificare il *tipo di dati* e il *tipo di contenuto* per ogni attributo.  
+8.  **Specificare il contenuto delle colonne e tipo di dati**: A questo punto, sono stati aggiunti tutti i dati che verranno utilizzati per l'analisi e devono specificare il *tipo di dati* e *tipo di contenuto* per ogni attributo.  
   
      In un modello OLAP non è possibile rilevare automaticamente i tipi di dati, perché il tipo di dati è già definito dalla soluzione multidimensionale e non può essere modificato. Anche le chiavi vengono identificate automaticamente. Per altre informazioni, vedere [Tipi di dati &#40;data mining&#41;](data-types-data-mining.md).  
   
      Il *tipo di contenuto* scelto per ogni colonna utilizzata nel modello indica all'algoritmo in che modo devono essere elaborati i dati. Per altre informazioni, vedere [Tipi di contenuto &#40;Data mining&#41;](content-types-data-mining.md).  
   
-9. **Sezionamento cubo di origine**: consente di definire i filtri in un cubo per selezionare solo un subset di dati ed eseguire il training dei modelli più interessati.  
+9. **Sezionamento cubo di origine**: Qui è possibile definire filtri in un cubo per selezionare solo un subset di dati e il training dei modelli più interessati.  
   
      Per filtrare un cubo scegliere la dimensione in base a cui filtrare, selezionare il livello della gerarchia che contiene i criteri da utilizzare, quindi digitare una condizione da utilizzare come filtro.  
   
-10. **Crea set di testing**: in questa pagina è possibile definire nella procedura guidata la quantità di dati da mettere da parte durante il test del modello. Se i dati supporteranno più modelli, è consigliabile creare un set di dati di controllo, in modo da poter eseguire il test di tutti i modelli sugli stessi dati.  
+10. **Creare Set di Testing**: In questa pagina, è possibile definire nella procedura guidata la quantità di dati da mettere da utilizzare nel test del modello. Se i dati supporteranno più modelli, è consigliabile creare un set di dati di controllo, in modo da poter eseguire il test di tutti i modelli sugli stessi dati.  
   
      Per altre informazioni, vedere [Test e convalida &#40;Data mining&#41;](testing-and-validation-data-mining.md).  
   
-11. **Completamento procedura guidata**: in questa pagina si assegna un nome alla nuova struttura di data mining e al modello di data mining associato, quindi si salvano struttura e modello.  
+11. **Completamento procedura guidata**: In questa pagina, si assegna un nome alla nuova struttura di data mining e il modello di data mining associato e salvano struttura e modello.  
   
      In questa pagina è inoltre possibile impostare le opzioni seguenti:  
   
@@ -121,7 +121,7 @@ ms.locfileid: "48134549"
   
  In questo scenario si creerebbero due filtri:  
   
--   Per il primo filtro scegliere la dimensione Geography e la gerarchia per Region e quindi usare l'elenco **Espressione filtro** per scegliere "United Kingdom" tra i valori possibili.  
+-   Per il primo filtro, potrebbe scegliere la dimensione Geography, scegliere la gerarchia per Region e quindi usare il **espressione di filtro** elenco per scegliere "United Kingdom" tra i valori possibili.  
   
 -   Per il secondo filtro scegliere la dimensione Customer, selezionare l'attributo Gender e quindi "Female" dall'elenco di valori di attributo.  
   
@@ -139,11 +139,11 @@ ms.locfileid: "48134549"
   
  Ad esempio, se la dimensione principale usata per i dati del case è Customer, è possibile aggiungere come dimensione correlata la dimensione Products, poiché si prevede che un cliente possa avere acquistato più prodotti nel tempo e nel cubo ogni cliente è già collegato ai diversi prodotti tramite le tabelle dei fatti degli ordini.  
   
- Le tabelle nidificate vengono aggiunte nella pagina **Impostazione utilizzo colonne modello di data mining** della procedura guidata, facendo clic su **Aggiungi tabelle nidificate**. Verrà visualizzata una finestra di dialogo che agevola il processo di scelta di una dimensione correlata e di eventuali misure. Il case e le dimensioni nidificate devono essere correlati da una chiave esterna e le misure devono utilizzare uno degli attributi già inclusi nel case o nelle tabelle nidificate. Purtroppo, queste restrizioni in realtà non hanno alcun effetto sulla limitazione dell'ambito, pertanto è necessario fare attenzione nel selezionare solo gli attributi utili per la modellazione.  
+ Le tabelle nidificate vengono aggiunte nella pagina **Impostazione utilizzo colonne modello di data mining** della procedura guidata, facendo clic su **Aggiungi tabelle nidificate**. Verrà visualizzata una finestra di dialogo che agevola il processo di scelta di una dimensione correlata e di eventuali misure. Il case e le dimensioni nidificate devono essere correlati da una chiave esterna e le misure devono utilizzare uno degli attributi già inclusi nel case o nelle tabelle nidificate. Sfortunatamente, queste restrizioni in realtà non molto per restringere l'ambito, pertanto è necessario prestare attenzione a selezionare solo gli attributi che sono utili per la modellazione.  
   
  Per ogni attributo o misura che si aggiunge alla tabella nidificata, è necessario specificare se l'attributo nidificato sarà utilizzato o meno per la stima, selezionando **Stimabile** o **Input** nella finestra di dialogo **Selezione colonne tabella nidificata** . Se non si seleziona una di queste opzioni, i dati verranno aggiunti alla struttura di data mining senza essere utilizzati per l'analisi.  
   
- Per ogni attributo e misura, è inoltre necessario specificare se l'attributo è discreto, discretizzato o continuo. Nella procedura guidata verrà preselezionato un valore predefinito in base al tipo di dati dell'attributo, ma potrebbe essere necessario modificare questa selezione, a seconda dei requisiti dell'algoritmo. Se si sceglie un tipo di contenuto non compatibile con l'algoritmo scelto (ad esempio, si utilizza un tipo numerico continuo con un modello Naive Bayes), non si otterrà un messaggio di errore finché non si tenta di elaborare il modello.  
+ Per ogni attributo e misura, è inoltre necessario specificare se l'attributo è discreto, discretizzato o continuo. Nella procedura guidata verrà preselezionato un valore predefinito in base al tipo di dati dell'attributo, ma potrebbe essere necessario modificare questa selezione, a seconda dei requisiti dell'algoritmo. Se si sceglie un tipo di contenuto che non è compatibile con l'algoritmo scelto (ad esempio, si utilizza un tipo numerico continuo con un modello Naïve Bayes), si otterranno un messaggio di errore fino a quando non si tenta di elaborare il modello.  
   
  Al termine dell'importazione di queste opzioni, la tabella nidificata verrà aggiunta alla tabella del case tramite la procedura guidata. Il nome predefinito della tabella nidificata corrisponde al nome della dimensione nidificata. È tuttavia possibile rinominare sia la tabella nidificata che le colonne corrispondenti. È possibile ripetere il processo per aggiungere più tabelle nidificate alla struttura di data mining.  
   
@@ -160,10 +160,10 @@ ms.locfileid: "48134549"
 >  Solo questi tipi di modelli supportano la creazione di dimensioni di data mining: modelli basati sull'algoritmo Microsoft Clustering, Microsoft Decision Trees o Microsoft Association.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Algoritmi di Data Mining &#40;Analysis Services - Data Mining&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
+ [Algoritmi di data mining &#40;Analysis Services - Data mining&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
  [Colonne della struttura di data mining](mining-structure-columns.md)   
  [Colonne del modello di data mining](mining-model-columns.md)   
- [Proprietà modello di data mining](mining-model-properties.md)   
+ [Proprietà dei modelli di data mining](mining-model-properties.md)   
  [Proprietà delle strutture di data mining e delle colonne delle strutture di data mining](properties-for-mining-structure-and-structure-columns.md)  
   
   

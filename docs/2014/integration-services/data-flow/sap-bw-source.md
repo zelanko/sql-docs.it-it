@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 749afb64-3567-4dc9-8431-783d650c25db
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4ef77f630142cf5b7202a30b928ac6e049584071
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 63f87a7d2897f069f4447437dd3a837d92af18f3
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159979"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53374750"
 ---
 # <a name="sap-bw-source"></a>Origine SAP BW
   L'origine SAP BW è il componente di origine di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW. Pertanto, l'origine SAP BW estrae i dati da un sistema SAP Netweaver BW versione 7 e li rende disponibili al flusso di dati in un pacchetto di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
@@ -107,7 +106,7 @@ ms.locfileid: "48159979"
   
     -   Per l'opzione **E - Solo estrazione** , fornire l'ID richiesta.  
   
--   Specificare le regole per la conversione di stringhe. (Ad esempio, convertire tutte le stringhe a seconda del fatto che il sistema SAP Netweaver BW sia Unicode oppure No o convertire tutte le stringhe in `varchar` o `nvarchar`).  
+-   Specificare le regole per la conversione di stringhe. Convertire, ad esempio, tutte le stringhe a seconda che il sistema SAP Netweaver BW sia Unicode oppure no; in alternativa, convertire tutte le stringhe in `varchar` o `nvarchar`.  
   
 -   Utilizzare le opzioni selezionate per visualizzare in anteprima i dati da estrarre.  
   
@@ -115,18 +114,18 @@ ms.locfileid: "48159979"
   
  Se non si conoscono tutti i valori richiesti per configurare l'origine, può essere necessario consultare l'amministratore SAP.  
   
- Per una procedura dettagliata che illustra come configurare e utilizzare la gestione connessione, l'origine e la destinazione SAP BW, vedere il white paper [Utilizzo dei servizi di integrazione SQL Server 2008 con SAP BI 7.0](http://go.microsoft.com/fwlink/?LinkID=137090). Nel white paper viene anche indicato come configurare gli oggetti necessari in SAP BW.  
+ Per una procedura dettagliata che illustra come configurare e utilizzare la gestione connessione, l'origine e la destinazione SAP BW, vedere il white paper [Utilizzo dei servizi di integrazione SQL Server 2008 con SAP BI 7.0](https://go.microsoft.com/fwlink/?LinkID=137090). Nel white paper viene anche indicato come configurare gli oggetti necessari in SAP BW.  
   
 ### <a name="using-the-ssis-designer-to-configure-the-source"></a>Utilizzo di Progettazione SSIS per configurare l'origine  
  Per ulteriori informazioni sulle proprietà dell'origine SAP BW che è possibile impostare in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] , fare clic su uno degli argomenti seguenti:  
   
 -   [Editor origine SAP BW &#40;pagina Gestione connessione&#41;](sap-bw-source-editor-connection-manager-page.md)  
   
--   [Editor origine SAP BW &#40;(pagina colonne)&#41;](sap-bw-source-editor-columns-page.md)  
+-   [Editor origine SAP BW &#40;pagina Colonne&#41;](sap-bw-source-editor-columns-page.md)  
   
--   [Editor origine SAP BW &#40;pagina dell'Output degli errori&#41;](sap-bw-source-editor-error-output-page.md)  
+-   [Editor origine SAP BW &#40;pagina Output degli errori&#41;](sap-bw-source-editor-error-output-page.md)  
   
--   [Editor origine SAP BW &#40;pagina avanzate&#41;](sap-bw-source-editor-advanced-page.md)  
+-   [Editor origine SAP BW &#40;pagina Avanzate&#41;](sap-bw-source-editor-advanced-page.md)  
   
  Quando si configura l'origine SAP BW, è inoltre possibile utilizzare varie finestre di dialogo per cercare gli oggetti SAP Netweaver BW o visualizzare in anteprima i dati di origine. Per ulteriori informazioni su queste finestre di dialogo, fare clic su uno degli argomenti seguenti:  
   

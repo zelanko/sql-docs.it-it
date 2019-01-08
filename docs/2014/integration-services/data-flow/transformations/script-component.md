@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.scriptcomponentdetails.f1
@@ -18,12 +17,12 @@ ms.assetid: 131c2d0c-2e33-4785-94af-ada5c049821e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8907bc0df08010b49bdfcb2a7f4b77ea646fbcf6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5db2b6e6467dec58f6a8aa6e6bfc9f105073fbfe
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48084621"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52818048"
 ---
 # <a name="script-component"></a>Componente script
   Il componente Script ospita lo script e consente a un pacchetto di includere ed eseguire codice script personalizzato. È possibile utilizzare il componente script nei pacchetti per gli scopi seguenti:  
@@ -57,7 +56,7 @@ ms.locfileid: "48084621"
  In Progettazione [!INCLUDE[ssIS](../../../includes/ssis-md.md)] sono disponibili due modalità per il componente script: progettazione metadati e progettazione codice. In modalità progettazione metadati è possibile aggiungere e modificare gli input e gli output del componente script, ma non scrivere codice. Dopo avere configurato tutti gli input e gli output è possibile passare alla modalità progettazione codice per creare lo script. Il componente script genera automaticamente il codice di base dai metadati degli input e degli output. Se si modificano i metadati dopo la generazione del codice di base, non sarà più possibile compilare il codice perché il codice di base aggiornato potrebbe essere incompatibile con quello inserito dall'utente.  
   
 ## <a name="writing-the-script-that-the-component-uses"></a>Scrittura dello script utilizzato dal componente  
- Il componente script usa [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools for Applications (VSTA) come ambiente di scrittura degli script. Si accede a VSTA dall' **Editor trasformazione Script**. Per altre informazioni, vedere [Script Transformation Editor &#40;Script Page&#41;](../../script-transformation-editor-script-page.md).  
+ Il componente script usa [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools for Applications (VSTA) come ambiente di scrittura degli script. Si accede a VSTA dall' **Editor trasformazione Script**. Per altre informazioni, vedere [Editor trasformazione Script &#40;pagina Script&#41;](../../script-transformation-editor-script-page.md).  
   
  Il componente script fornisce un progetto VSTA che include una classe generata automaticamente, ScriptMain, che rappresenta i metadati del componente. Se ad esempio il componente script viene utilizzato come trasformazione con tre output, la classe ScriptMain includerà un metodo per ogni output. La classe ScriptMain costituisce il punto di ingresso dello script.  
   
@@ -91,17 +90,17 @@ ms.locfileid: "48084621"
 ### <a name="configuring-the-script-component-in-the-designer"></a>Configurazione del componente script in Progettazione  
  Per altre informazioni sulle proprietà che è possibile impostare nella finestra di dialogo **Editor trasformazione Script**, fare clic su uno degli argomenti seguenti:  
   
--   [Editor trasformazione script &#40;Input (pagina colonne)&#41;](../../script-transformation-editor-input-columns-page.md)  
+-   [Editor trasformazione Script &#40;pagina Colonne di input&#41;](../../script-transformation-editor-input-columns-page.md)  
   
--   [Editor trasformazione script &#40;di input e output di pagina&#41;](../../script-transformation-editor-inputs-and-outputs-page.md)  
+-   [Editor trasformazione Script &#40;pagina Input e output&#41;](../../script-transformation-editor-inputs-and-outputs-page.md)  
   
--   [Editor trasformazione script &#40;pagina Script&#41;](../../script-transformation-editor-script-page.md)  
+-   [Editor trasformazione Script &#40;pagina Script&#41;](../../script-transformation-editor-script-page.md)  
   
--   [Editor trasformazione script &#40;pagina gestioni connessioni&#41;](../../script-transformation-editor-connection-managers-page.md)  
+-   [Editor trasformazione Script &#40;pagina Gestioni connessioni&#41;](../../script-transformation-editor-connection-managers-page.md)  
   
  Per altre informazioni sull'impostazione di queste proprietà in Progettazione [!INCLUDE[ssIS](../../../includes/ssis-md.md)] , fare clic sull'argomento seguente:  
   
--   [Impostare le proprietà di un componente del flusso di dati](../set-the-properties-of-a-data-flow-component.md)  
+-   [Impostazione delle proprietà di un componente del flusso di dati](../set-the-properties-of-a-data-flow-component.md)  
   
 ### <a name="configuring-the-script-component-programmatically"></a>Configurazione del componente script a livello di codice  
  Per altre informazioni sulle proprietà che è possibile impostare nella finestra **Proprietà** o a livello di codice, fare clic su uno degli argomenti seguenti:  
@@ -112,7 +111,7 @@ ms.locfileid: "48084621"
   
  Per ulteriori informazioni sulle procedure per l'impostazione delle proprietà, fare clic su uno degli argomenti seguenti:  
   
--   [Impostare le proprietà di un componente del flusso di dati](../set-the-properties-of-a-data-flow-component.md)  
+-   [Impostazione delle proprietà di un componente del flusso di dati](../set-the-properties-of-a-data-flow-component.md)  
   
 ## <a name="related-content"></a>Contenuto correlato  
  [Trasformazioni di Integration Services](integration-services-transformations.md)  

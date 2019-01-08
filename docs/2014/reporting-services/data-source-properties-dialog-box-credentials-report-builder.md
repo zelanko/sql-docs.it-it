@@ -13,12 +13,12 @@ ms.assetid: 4531f09f-d653-4c05-a120-d7788838bc99
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 18c950015de84ac6b4204e657dfd52f894b6bced
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 21fad41528bfc47ae2b117db68e73320109c98be
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48207431"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53374747"
 ---
 # <a name="data-source-properties-dialog-box-credentials-report-builder"></a>Finestra di dialogo Proprietà origine dati, Credenziali (Generatore report)
   Selezionare **Credenziali** nella finestra di dialogo **Proprietà origine dati** per visualizzare e modificare le credenziali per la connessione a un'origine dati incorporata nel report. Le credenziali fornite dall'utente vengono utilizzate per accedere all'origine dati per la visualizzazione in anteprima dei report. Per altre informazioni sulle credenziali, vedere [Specificare credenziali in Generatore report](../../2014/reporting-services/specify-credentials-in-report-builder.md).  
@@ -28,7 +28,7 @@ ms.locfileid: "48207431"
  Selezionare questa opzione per utilizzare l'autenticazione di Windows.  
   
  **Usare questo nome utente e password**  
- Selezionare questa opzione per specificare nome utente e password specifici. Per le origini dei dati incorporate, quando si pubblica il progetto del server di report nel server di destinazione, il nome utente e la password vengono salvati come credenziali archiviate per il database. Se si desidera utilizzare il nome utente e la password come credenziali di Windows, è possibile modificare le proprietà dell'origine dati condivisa pubblicata nel server di destinazione. Per altre informazioni, vedere [Creare, eliminare o modificare un'origine dei dati condivisa &#40;Gestione report&#41;](../../2014/reporting-services/create-delete-or-modify-a-shared-data-source-report-manager.md) nella documentazione relativa a [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] inclusa nella [documentazione online di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]](http://go.microsoft.com/fwlink/?linkid=121312).  
+ Selezionare questa opzione per specificare nome utente e password specifici. Per le origini dei dati incorporate, quando si pubblica il progetto del server di report nel server di destinazione, il nome utente e la password vengono salvati come credenziali archiviate per il database. Se si desidera utilizzare il nome utente e la password come credenziali di Windows, è possibile modificare le proprietà dell'origine dati condivisa pubblicata nel server di destinazione. Per altre informazioni, vedere [Creare, eliminare o modificare un'origine dei dati condivisa &#40;Gestione report&#41;](../../2014/reporting-services/create-delete-or-modify-a-shared-data-source-report-manager.md) nella documentazione relativa a [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] inclusa nella [documentazione online di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]](https://go.microsoft.com/fwlink/?linkid=121312).  
   
  **Nome utente**  
  Consente di digitare un nome utente da utilizzare per l'accesso all'origine dei dati.  
@@ -47,7 +47,7 @@ ms.locfileid: "48207431"
   
  Da alcune estensioni per i dati è necessario configurare l'account di esecuzione automatica nel server di report.  
   
- Per altre informazioni, vedere l'argomento per il tipo di origine dati corrispondente in [Aggiungere dati da origini dati esterne &#40;SSRS&#41;](report-data/add-data-from-external-data-sources-ssrs.md) e [Configurare l'account di esecuzione automatica &#40;Gestione configurazione SSRS&#41;](install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md) nella documentazione relativa a [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] inclusa nella [documentazione online di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]](http://go.microsoft.com/fwlink/?linkid=121312).  
+ Per altre informazioni, vedere l'argomento per il tipo di origine dati corrispondente in [Aggiungere dati da origini dati esterne &#40;SSRS&#41;](report-data/add-data-from-external-data-sources-ssrs.md) e [Configurare l'account di esecuzione automatica &#40;Gestione configurazione SSRS&#41;](install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md) nella documentazione relativa a [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] inclusa nella [documentazione online di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]](https://go.microsoft.com/fwlink/?linkid=121312).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Guida di Generatore report per finestre di dialogo, riquadri e procedure guidate](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)   

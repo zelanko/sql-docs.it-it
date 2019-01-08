@@ -1,5 +1,5 @@
 ---
-title: Aggiungere modelli di Data Mining a una struttura (Analysis Services - Data Mining) | Documenti Microsoft
+title: Aggiungere modelli di Data Mining a una struttura (Analysis Services - Data Mining) | Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: c32140e639a0e79b8736036392104f593a305b30
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: a3647ff06d00aebc4b5feb735d5a69b0b8db79e7
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34014438"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52524577"
 ---
 # <a name="add-mining-models-to-a-structure-analysis-services---data-mining"></a>Aggiungere modelli di data mining a una struttura (Analysis Services - Data mining)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "34014438"
  Quando si utilizza Creazione guidata modello di data mining per creare un nuovo modello di data mining, per impostazione predefinita è sempre necessario creare prima una struttura di data mining. Tramite la procedura guidata è quindi possibile aggiungere un modello di data mining iniziale alla struttura. Tuttavia, non è necessario creare immediatamente un modello. Se si crea solo la struttura, non è necessario prendere una decisione in merito alla colonna da utilizzare come attributo stimabile o su come utilizzare i dati in un determinato modello. Al contrario, è sufficiente impostare la struttura dei dati generale da utilizzare in futuro e in seguito utilizzare [Data Mining Designer](../../analysis-services/data-mining/data-mining-designer.md) per aggiungere nuovi modelli di data mining basati su tale struttura.  
   
 > [!NOTE]  
->  In DMX l'istruzione CREATE MINING MODEL inizia con il modello di data mining. Ovvero, si definisce il modello di data mining prescelto e la struttura sottostante viene automaticamente generata in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . In seguito è possibile continuare ad aggiungere nuovi modelli di data mining alla struttura usando l'istruzione ALTER STRUCTURE… ADD MODEL.  
+>  In DMX l'istruzione CREATE MINING MODEL inizia con il modello di data mining. Ovvero, si definisce il modello di data mining prescelto e la struttura sottostante viene automaticamente generata in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . In un secondo momento è possibile continuare ad aggiungere nuovi modelli di data mining alla struttura utilizzando l'istruzione ALTER STRUCTURE... ADD MODEL.  
   
 ## <a name="choosing-an-algorithm"></a>Scelta di un algoritmo  
  Quando si aggiunge un nuovo modello a una struttura esistente, la prima operazione da eseguire è la selezione di un algoritmo di data mining da utilizzare in tale modello. La scelta dell'algoritmo è importante perché ogni algoritmo esegue un tipo diverso di analisi e presenta requisiti diversi.  
@@ -54,9 +54,9 @@ ms.locfileid: "34014438"
  In alcuni casi può anche essere necessario specificare il *contenuto della colonna*. Nel data mining di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , la proprietà Tipo di contenuto di ogni colonna di dati indica all'algoritmo come devono essere elaborati i dati in tale colonna. Se ad esempio i dati includono una colonna Income, è necessario specificare che la colonna contiene numeri continui impostando il tipo di contenuto su Continuous. Tuttavia, è anche possibile specificare che i numeri della colonna Income devono essere raggruppati in bucket impostando il tipo di contenuto su Discretized e, se si desidera, specificando il numero esatto di bucket. È possibile creare modelli diversi che gestiscono le colonne in modo diverso. Ad esempio, è possibile provare con un modello che raggruppa i clienti in tre bucket di età e un altro che li raggruppa in 10 bucket di età.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Strutture di data mining & #40; Analysis Services - Data Mining & #41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
- [Creare una struttura di Data Mining relazionale](../../analysis-services/data-mining/create-a-relational-mining-structure.md)   
- [Proprietà modello di data mining](../../analysis-services/data-mining/mining-model-properties.md)   
+ [Strutture di data mining &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
+ [Creare una struttura di data mining relazionale](../../analysis-services/data-mining/create-a-relational-mining-structure.md)   
+ [Proprietà dei modelli di data mining](../../analysis-services/data-mining/mining-model-properties.md)   
  [Colonne del modello di data mining](../../analysis-services/data-mining/mining-model-columns.md)  
   
   
