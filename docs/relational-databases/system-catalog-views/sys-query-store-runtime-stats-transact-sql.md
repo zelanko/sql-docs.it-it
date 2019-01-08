@@ -1,7 +1,7 @@
 ---
 title: Sys. query_store_runtime_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/29/2016
+ms.date: 11/29/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -22,25 +22,25 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 48e9993ecacc1365f961255b99c24eb7f456e0d1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b53020f747b84c824ae8cd816c3b7ba1975df80b
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47710849"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52712432"
 ---
 # <a name="sysquerystoreruntimestats-transact-sql"></a>Sys. query_store_runtime_stats (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
   Contiene informazioni sulle informazioni statistiche esecuzione runtime per la query.  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**runtime_stats_id**|**bigint**|Identificatore della riga che rappresenta le statistiche di esecuzione runtime per il **plan_id**, **execution_type** e **runtime_stats_interval_id**. È univoco solo per gli ultimi intervalli di statistiche di runtime. Per l'intervallo attualmente attivo possono esistere più righe che rappresenta le statistiche di runtime per il piano fa **plan_id**, con il tipo di esecuzione rappresentato dal **execution_type**. In genere, una riga rappresenta le statistiche di runtime che vengono scaricate su disco, mentre altri (s) rappresentano lo stato in memoria. Per ottenere lo stato effettivo per ogni intervallo è pertanto necessario aggregare le metriche, raggruppare **plan_id**, **execution_type** e **runtime_stats_interval_id**. |  
 |**plan_id**|**bigint**|Chiave esterna. Crea un join al [Sys. query_store_plan &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md).|  
 |**runtime_stats_interval_id**|**bigint**|Chiave esterna. Crea un join al [sys.query_store_runtime_stats_interval &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md).|  
-|**execution_type**|**tinyint**|Determina il tipo di esecuzione di query:<br /><br /> 0 – esecuzione normale (correttamente completata)<br /><br /> 3 – inizializzata sul lato client ha interrotto l'esecuzione<br /><br /> 4 - eccezione ha interrotto l'esecuzione|  
-|**execution_type_desc**|**nvarchar(128)**|Descrizione testuale del campo di tipo di esecuzione:<br /><br /> 0-normale<br /><br /> 3 – interrotta<br /><br /> 4 - eccezione|  
+|**execution_type**|**tinyint**|Determina il tipo di esecuzione di query:<br /><br /> 0 - esecuzione normale (correttamente completata)<br /><br /> 3 - client ha avviato ha interrotto l'esecuzione<br /><br /> 4 - eccezione ha interrotto l'esecuzione|  
+|**execution_type_desc**|**nvarchar(128)**|Descrizione testuale del campo di tipo di esecuzione:<br /><br /> 0 - normale<br /><br /> 3 - interrotta<br /><br /> 4 - eccezione|  
 |**first_execution_time**|**datetimeoffset**|Ora della prima esecuzione del piano di query entro l'intervallo di aggregazione.|  
 |**last_execution_time**|**datetimeoffset**|Ora dell'ultima esecuzione della query prevede entro l'intervallo di aggregazione.|  
 |**count_executions**|**bigint**|Numero totale di esecuzioni del piano di query entro l'intervallo di aggregazione.|  

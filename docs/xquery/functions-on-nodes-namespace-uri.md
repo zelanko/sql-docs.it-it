@@ -16,12 +16,12 @@ ms.assetid: 9b48d216-26c8-431d-9ab4-20ab187917f4
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 046017ed9e7a9f99f2fde48426888045b4a02890
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 78d3d96e1340bb3cd8e57a930129e2c70157e61b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51667171"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512406"
 ---
 # <a name="functions-on-nodes---namespace-uri"></a>Funzioni su nodi - namespace-uri
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -72,13 +72,13 @@ FROM Production.ProductModel
 WHERE ProductModelID=7  
 ```  
   
- Risultato:  
+ Questo è il risultato:  
   
 ```  
 https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions  
 ```  
   
-### <a name="b-using-namespace-uri-without-argument-in-a-predicate"></a>B. Utilizzo di namespace-uri() senza argomento in un predicato  
+### <a name="b-using-namespace-uri-without-argument-in-a-predicate"></a>b. Utilizzo di namespace-uri() senza argomento in un predicato  
  La query seguente viene specificata sulla colonna XML tipizzata CatalogDescription. L'espressione restituisce tutti i nodi elemento il cui URI dello spazio dei nomi è `https://www.adventure-works.com/schemas/OtherFeatures`. Spazio dei nomi -**URI ()** funzione viene specificata senza un argomento e utilizza il nodo di contesto.  
   
 ```  
@@ -96,7 +96,7 @@ WHERE ProductModelID=19
 <p1:wheel xmlns:p1="https://www.adventure-works.com/schemas/OtherFeatures">High performance wheels.</p1:wheel>  
 <p2:saddle xmlns:p2="https://www.adventure-works.com/schemas/OtherFeatures">  
   <p3:i xmlns:p3="https://www.w3.org/1999/xhtml">Anatomic design</p3:i> and made from durable leather for a full-day of riding in comfort.</p2:saddle>  
-…  
+...  
 ```  
   
  È possibile modificare l'URI dello spazio dei nomi nella query precedente in `https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain`. Verranno così restituiti tutti i nodi figlio dell'elemento <`ProductDescription`> in cui la parte dell'URI dello spazio dei nomi del QName esteso è `https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain`.  

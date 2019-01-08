@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: 880ccf036a12d5cc8e7e2bd56aa3bbcc58a2984f
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
-ms.translationtype: HT
+ms.openlocfilehash: 85ea90343ebf1cac9ba04a4b9252a6dd9fb748bf
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51665675"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52533074"
 ---
 # <a name="sql-server-availability-basics-for-linux-deployments"></a>Nozioni fondamentali sulla disponibilità di SQL Server per le distribuzioni di Linux
 
@@ -39,15 +39,15 @@ In Linux, molti comandi devono essere eseguite con privilegi elevati, analogamen
 2. I più comuni e sicurezza cosciente per eseguire operazioni consiste nell'utilizzo `sudo` prima di eseguire alcuna operazione. Molti degli esempi in questo articolo usano `sudo`.
 
 Alcuni comandi comuni, ognuna delle quali dispone di diversi parametri e opzioni che possono essere analizzate in linea:
--   `cd` – modificare la directory
--   `chmod` – modificare le autorizzazioni di un file o directory
--   `chown` – modificare la proprietà di un file o directory
--   `ls` : Mostra il contenuto di una directory
--   `mkdir` : creare una cartella (directory) in un'unità
--   `mv` – Sposta un file da una posizione a un'altra
+-   `cd` -modificare la directory
+-   `chmod` -modificare le autorizzazioni di un file o directory
+-   `chown` -modificare la proprietà di un file o directory
+-   `ls` -visualizzare il contenuto di una directory
+-   `mkdir` -creare una cartella (directory) in un'unità
+-   `mv` -spostare un file da una posizione a un'altra
 -   `ps` -Mostra tutti i processi di lavoro
--   `rm` : elimina un file in un server locale
--   `rmdir` : eliminare una cartella (directory)
+-   `rm` -eliminare un file in un server locale
+-   `rmdir` -eliminare una cartella (directory)
 -   `systemctl` -avviare, arrestare o attivare i servizi
 -   Comandi dell'editor di testo. In Linux, sono disponibili diverse opzioni di editor di testo, ad esempio emacs e vi.
 
@@ -68,7 +68,7 @@ Quando si usa `scp`, è necessario fornire le credenziali del server se non è l
 scp MyAGCert.cer username@servername:/folder/subfolder
 ```
 
-Copia il file MyAGCert.cer nella cartella specificata in altro server. Si noti che è necessario disporre delle autorizzazioni: ed eventualmente la proprietà – del file da copiare, quindi `chown` potrebbe essere necessario anche essere usati prima della copia. Sul lato ricevente, allo stesso modo, l'utente deve accedere per modificare il file. Ad esempio, per ripristinare il file certificato, il `mssql` utente deve essere in grado di accedervi.
+Copia il file MyAGCert.cer nella cartella specificata in altro server. Si noti che è necessario avere autorizzazioni - ed eventualmente la proprietà - del file da copiare, quindi `chown` potrebbe essere necessario anche essere usati prima della copia. Sul lato ricevente, allo stesso modo, l'utente deve accedere per modificare il file. Ad esempio, per ripristinare il file certificato, il `mssql` utente deve essere in grado di accedervi.
 
 Samba, ovvero la variante Linux del (SMB) server message block, consente inoltre di creare le condivisioni a cui accede percorsi UNC, ad esempio `\\SERVERNAME\SHARE`. Per altre informazioni sulla configurazione Samba, vedere le informazioni visitando i collegamenti seguenti per ogni distribuzione:
 -   [RHEL](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/html/Managing_Confined_Services/chap-Managing_Confined_Services-Samba.html)
@@ -87,26 +87,26 @@ Analogamente a Windows, distribuzioni Linux hanno un firewall incorporato. Se l'
 | Numero di porta | Tipo     | Description                                                                                                                 |
 |-------------|----------|-----------------------------------------------------------------------------------------------------------------------------|
 | 111         | TCP/UDP  | NFS: `rpcbind/sunrpc`                                                                                                    |
-| 135         | TCP      | Samba (se usati): Mapper di endpoint                                                                                          |
-| 137         | UDP      | Samba (se usati) – servizio nomi NetBIOS                                                                                      |
-| 138         | UDP      | Samba (se usati) – datagrammi NetBIOS                                                                                          |
-| 139         | TCP      | Samba (se usati) – sessione NetBIOS                                                                                           |
-| 445         | TCP      | Samba (se usati) – SMB su TCP                                                                                              |
-| 1433        | TCP      | [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] : porta; predefinita Se si desidera, è possibile modificare con `mssql-conf set network.tcpport <portnumber>`                       |
+| 135         | TCP      | Samba (se usati) - Mapper di endpoint                                                                                          |
+| 137         | UDP      | Samba (se usati) - servizio nomi NetBIOS                                                                                      |
+| 138         | UDP      | Samba (se usati) - datagrammi NetBIOS                                                                                          |
+| 139         | TCP      | Samba (se usati) - sessione NetBIOS                                                                                           |
+| 445         | TCP      | Samba (se usati) - SMB su TCP                                                                                              |
+| 1433        | TCP      | [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] -porta; predefinita Se si desidera, è possibile modificare con `mssql-conf set network.tcpport <portnumber>`                       |
 | 2049        | TCP, UDP | NFS (se usati)                                                                                                               |
-| 2224        | TCP      | Pacemaker-utilizzato da `pcsd`                                                                                                |
-| 3121        | TCP      | Pacemaker-richiesto se sono presenti nodi remoti Pacemaker                                                                    |
-| 3260        | TCP      | iSCSI Initiator (se usati): può essere modificata `/etc/iscsi/iscsid.config` (RHEL), ma deve corrispondere a porta di destinazione iSCSI |
+| 2224        | TCP      | Pacemaker - utilizzato da `pcsd`                                                                                                |
+| 3121        | TCP      | Pacemaker - richiesto se sono presenti nodi remoti Pacemaker                                                                    |
+| 3260        | TCP      | iSCSI Initiator (se usati) - può essere modificata `/etc/iscsi/iscsid.config` (RHEL), ma deve corrispondere a porta di destinazione iSCSI |
 | 5022        | TCP      | [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] -usata per un endpoint del gruppo di disponibilità; porta predefinita può essere modificato durante la creazione dell'endpoint                                |
 | 5403        | TCP      | Pacemaker                                                                                                                   |
-| 5404        | UDP      | Pacemaker-richiesto dal Corosync se tramite multicast UDP                                                                     |
-| 5405        | UDP      | Pacemaker: richiesti da Corosync                                                                                            |
-| 21064       | TCP      | Pacemaker-necessari per le risorse usando DLM                                                                                 |
+| 5404        | UDP      | Pacemaker - richiesto dal Corosync se tramite multicast UDP                                                                     |
+| 5405        | UDP      | Pacemaker - richiesto da Corosync                                                                                            |
+| 21064       | TCP      | Pacemaker - necessari per le risorse usando DLM                                                                                 |
 | Variabile    | TCP      | Porta dell'endpoint del gruppo di disponibilità; impostazione predefinita è la 5022                                                                                           |
-| Variabile    | TCP      | La porta per NFS: `LOCKD_TCPPORT` (disponibili in `/etc/sysconfig/nfs` in RHEL)                                              |
-| Variabile    | UDP      | La porta per NFS: `LOCKD_UDPPORT` (disponibili in `/etc/sysconfig/nfs` in RHEL)                                              |
-| Variabile    | TCP/UDP  | La porta per NFS: `MOUNTD_PORT` (disponibili in `/etc/sysconfig/nfs` in RHEL)                                                |
-| Variabile    | TCP/UDP  | La porta per NFS: `STATD_PORT` (disponibili in `/etc/sysconfig/nfs` in RHEL)                                                 |
+| Variabile    | TCP      | La porta per NFS - `LOCKD_TCPPORT` (disponibili in `/etc/sysconfig/nfs` in RHEL)                                              |
+| Variabile    | UDP      | La porta per NFS - `LOCKD_UDPPORT` (disponibili in `/etc/sysconfig/nfs` in RHEL)                                              |
+| Variabile    | TCP/UDP  | La porta per NFS - `MOUNTD_PORT` (disponibili in `/etc/sysconfig/nfs` in RHEL)                                                |
+| Variabile    | TCP/UDP  | La porta per NFS - `STATD_PORT` (disponibili in `/etc/sysconfig/nfs` in RHEL)                                                 |
 
 Per altre porte che possono essere usate da Samba, vedere [uso delle porte Samba](https://wiki.samba.org/index.php/Samba_Port_Usage).
 
@@ -121,7 +121,7 @@ sudo firewall-cmd --permanent --add-service=high-availability
 -   [SLES](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html)
 
 ### <a name="install-includessnoversion-mdincludesssnoversion-mdmd-packages-for-availability"></a>Installare [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] pacchetti per la disponibilità
-In un Windows basato su [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] installazione, alcuni componenti vengono installati anche in un'installazione del motore di base, mentre altri no. In Linux, solo il [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] motore viene installato come parte del processo di installazione. Tutto il resto è facoltativo. Per la disponibilità elevata [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] istanze in Linux, è consigliabile installare due pacchetti con [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]: [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] agente (*mssql-server-agent*) e il pacchetto di disponibilità elevata (HA) ( *MSSQL-server-ha*). Sebbene [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] agente è tecnicamente facoltativo, ma [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]dell'utilità di pianificazione per i processi ed è richiesto dal log shipping, pertanto, è consigliabile installare. Nelle installazioni dei componenti basati su Windows, [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] agente non è facoltativo.
+In un Windows basato su [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] installazione, alcuni componenti vengono installati anche in un'installazione del motore di base, mentre altri no. In Linux, solo il [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] motore viene installato come parte del processo di installazione. Tutto il resto è facoltativo. Per la disponibilità elevata [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] istanze in Linux, è consigliabile installare due pacchetti con [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]: [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Agent (*mssql-server-agent*) e il pacchetto di disponibilità elevata (HA) (*mssql-server-ha*). Sebbene [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] agente è tecnicamente facoltativo, ma [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]dell'utilità di pianificazione per i processi ed è richiesto dal log shipping, pertanto, è consigliabile installare. Nelle installazioni dei componenti basati su Windows, [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] agente non è facoltativo.
 
 >[!NOTE]
 >Per chi non ha esperienza a [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)], [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] agente è [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]dell'utilità di pianificazione di processi predefinite. È un modo comune per gli amministratori di database pianificare operazioni quali backup e altre [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] manutenzione. A differenza di un'installazione basata su Windows di [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] in cui [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Agent è un servizio completamente diverso, in Linux [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] agente viene eseguito nel contesto di [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] stesso.
@@ -134,12 +134,12 @@ Gli altri pacchetti facoltativi per [!INCLUDE[ssnoversion-md](../includes/ssnove
 Come in precedenza indicato, l'unico meccanismo clustering attualmente supportato da Microsoft per gruppi di disponibilità e le istanze FCI è Pacemaker con Corosync. Questa sezione descrive le informazioni di base per comprendere la soluzione, nonché come pianificare e distribuire per [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] configurazioni.
 
 ### <a name="ha-add-onextension-basics"></a>Nozioni di base componenti pratici/estensione a disponibilità elevata
-Tutte le distribuzioni supportate attualmente spedire un'elevata disponibilità componenti-pratici/estensione, che si basa su di Pacemaker clustering dello stack. Questo stack include due componenti principali: Corosync e Pacemaker. Tutti i componenti dello stack sono:
--   Pacemaker-di base del clustering di componente, che esegue operazioni come coordinata tra i computer in cluster.
--   Corosync: un framework e un set di API che fornisce elementi come quorum, la possibilità di riavvio non è riuscito dei processi e così via.
--   libQB – fornisce elementi come la registrazione.
--   Agente delle risorse: funzionalità specifica fornita in modo che un'applicazione può essere integrato con Pacemaker.
--   Limite agente-script/funzionalità di isolare i nodi e gestirli se si verificano problemi.
+Tutte le distribuzioni supportate attualmente spedire un'elevata disponibilità componenti-pratici/estensione, che si basa su di Pacemaker clustering dello stack. Questo stack include due componenti principali: Corosync e pacemaker. Tutti i componenti dello stack sono:
+-   Pacemaker - di base del clustering di componente, che esegue operazioni come coordinata tra i computer in cluster.
+-   Corosync - un framework e un set di API che fornisce elementi come quorum, la possibilità di riavvio non è riuscito dei processi e così via.
+-   libQB - offre elementi quali la registrazione.
+-   Agente delle risorse - funzionalità specifica fornita in modo che un'applicazione può essere integrato con Pacemaker.
+-   Limite agent - script/funzionalità di isolare i nodi e gestirli se si verificano problemi.
     
 > [!NOTE]
 > Lo stack di cluster è noto come Pacemaker nel mondo Linux.
@@ -169,7 +169,7 @@ Un cluster WSFC sia un cluster Pacemaker prevedono il concetto di una risorsa. U
 
 Pacemaker dispone di risorse standard e clone. Le risorse di clonazione sono quelle che vengono eseguiti simultaneamente in tutti i nodi. Un esempio sarebbe un indirizzo IP che viene eseguito su più nodi per scopi di bilanciamento del carico. Qualsiasi risorsa che viene creato per le istanze FCI utilizza una risorsa standard, poiché un solo nodo può ospitare un'istanza FCI in qualsiasi momento.
 
-Quando viene creato un gruppo di disponibilità, richiede un tipo speciale di una risorsa clone denominata una risorsa più stata. Mentre un gruppo di disponibilità ha solo una replica primaria, il gruppo di disponibilità è in esecuzione in tutti i nodi che è configurato per funzionare su e può consentire operazioni quali accesso di sola lettura. Poiché si tratta di un utilizzo "attivo" del nodo, le risorse hanno il concetto di due stati: master e slave. Per altre informazioni, vedere [le risorse più state: risorse che dispongono di più modalità](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/html/Configuring_the_Red_Hat_High_Availability_Add-On_with_Pacemaker/s1-multistateresource-HAAR.html).
+Quando viene creato un gruppo di disponibilità, richiede un tipo speciale di una risorsa clone denominata una risorsa più stata. Mentre un gruppo di disponibilità ha solo una replica primaria, il gruppo di disponibilità è in esecuzione in tutti i nodi che è configurato per funzionare su e può consentire operazioni quali accesso di sola lettura. Poiché si tratta di un utilizzo "attivo" del nodo, le risorse hanno il concetto di due stati: master e slave. Per altre informazioni, vedere [risorse più state: Le risorse con più modalità](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/html/Configuring_the_Red_Hat_High_Availability_Add-On_with_Pacemaker/s1-multistateresource-HAAR.html).
 
 #### <a name="resource-groupssets"></a>I gruppi o set di risorse
 Analogamente ai ruoli in un cluster WSFC, un cluster Pacemaker è il concetto di un gruppo di risorse. Un gruppo di risorse (definito set di SLES) è una raccolta di risorse che funzionano insieme e possono eseguire il failover da un nodo a altro come singola unità. Gruppi di risorse non possono contenere le risorse che sono configurate come  primaria/secondaria; di conseguenza, non è possibile usare per gruppi di disponibilità. Mentre un gruppo di risorse può essere usato per le istanze FCI, non è in genere una configurazione consigliata.
@@ -200,7 +200,7 @@ Il `corosync.conf` file contiene la configurazione del cluster. Si trova in `/et
 #### <a name="cluster-log-location"></a>Percorso del registro cluster
 Percorsi dei log per i cluster Pacemaker differiscono a seconda della distribuzione.
 -   RHEL e SLES: `/var/log/cluster/corosync.log`
--   Ubuntu: `/var/log/corosync/corosync.log`
+-   Ubuntu- `/var/log/corosync/corosync.log`
 
 Per modificare il percorso di registrazione predefinito, modificare `corosync.conf`.
 
@@ -213,8 +213,8 @@ Utilizzo delle macchine virtuali per la distribuzione basati su Linux [!INCLUDE[
 Quando si tratta di gruppi di disponibilità e le istanze FCI in virtualization, assicurarsi che Microsoft anti-affinità viene impostata per i nodi di un determinato cluster Pacemaker. Quando è configurato per la disponibilità elevata in una configurazione del gruppo di disponibilità o FCI, le macchine virtuali che ospitano [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] mai deve essere in esecuzione nello stesso host hypervisor. Ad esempio, se viene distribuita un'infrastruttura di classificazione file due nodi, si dovranno essere *almeno* tre host hypervisor in modo che in una posizione per una delle VM che ospita un nodo per passare in caso di un errore dell'host, soprattutto se le funzionalità come Live Migrazione o vMotion.
 
 Per informazioni più specifiche, consultare:
--   Documentazione di Hyper-V – [tramite Clustering Guest per la disponibilità elevata](https://technet.microsoft.com/library/dn440540(v=ws.11).aspx)
--   White paper (scritto per le distribuzioni basate su Windows, ma la maggior parte dei concetti ancora applicare) – [pianificazione della disponibilità elevata, SQL Server distribuzioni di importanza strategica con VMware vSphere](https://www.vmware.com/content/dam/digitalmarketing/vmware/en/pdf/solutions/vmware-vsphere-highly-available-mission-critical-sql-server-deployments.pdf)
+-   Documentazione di Hyper-V - [tramite Clustering Guest per la disponibilità elevata](https://technet.microsoft.com/library/dn440540(v=ws.11).aspx)
+-   White paper, scritti per le distribuzioni basate su Windows, ma la maggior parte dei concetti ancora applicare, - [pianificazione della disponibilità elevata, SQL Server distribuzioni di importanza strategica con VMware vSphere](https://www.vmware.com/content/dam/digitalmarketing/vmware/en/pdf/solutions/vmware-vsphere-highly-available-mission-critical-sql-server-deployments.pdf)
 
 >[!NOTE]
 >RHEL con un cluster Pacemaker con STONITH non è ancora supportato da Hyper-V. Fino a quando non supportata, per altre informazioni e aggiornamenti, consultare [criteri di supporto per i cluster a disponibilità elevata RHEL](https://access.redhat.com/articles/29440#3physical_host_mixing).

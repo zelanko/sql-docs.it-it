@@ -4,26 +4,25 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: scripting
 ms.topic: conceptual
 ms.assetid: ab9212a6-6628-4f08-a38c-d3156e05ddea
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 61dbea86eabc0395b2f314f170aa97c5067880fd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0992e3a956a2b498d92186fa91c0ed4fbddf6102
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48163561"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52778523"
 ---
 # <a name="manage-authentication-in-database-engine-powershell"></a>Gestire l'autenticazione in motore di database PowerShell
-  Per impostazione predefinita, i componenti PowerShell di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utilizzano l'autenticazione di Windows in caso di connessione a un'istanza del [!INCLUDE[ssDE](../includes/ssde-md.md)]. È possibile usare l'autenticazione di SQL Server definendo un'unità virtuale PowerShell o specificando il `–Username` e `–Password` parametri per `Invoke-Sqlcmd`.  
+  Per impostazione predefinita, i componenti PowerShell di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utilizzano l'autenticazione di Windows in caso di connessione a un'istanza del [!INCLUDE[ssDE](../includes/ssde-md.md)]. È possibile utilizzare l'autenticazione di SQL Server definendo un'unità virtuale PowerShell o specificando i parametri `-Username` e `-Password` per `Invoke-Sqlcmd`.  
   
 1.  **Prima di iniziare:**  [Autorizzazioni](#Permissions)  
   
-2.  **Per impostare l'autenticazione usando**  [un'unità virtuale](#SQLAuthVirtDrv), [Invoke-Sqlcmd](#SQLAuthInvSqlCmd)  
+2.  **Per impostare l'autenticazione, usando:**  [Un'unità virtuale](#SQLAuthVirtDrv), [Invoke-Sqlcmd](#SQLAuthInvSqlCmd)  
   
 ##  <a name="Permissions"></a> Permissions  
  Tutte le azioni eseguibili in un'istanza del [!INCLUDE[ssDE](../includes/ssde-md.md)] vengono controllate dalle autorizzazioni concesse alle credenziali di autenticazione utilizzate per connettersi all'istanza. Per impostazione predefinita, il provider e i cmdlet di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utilizzano l'account di Windows in esecuzione per eseguire una connessione con autenticazione di Windows al [!INCLUDE[ssDE](../includes/ssde-md.md)].  
@@ -41,7 +40,7 @@ ms.locfileid: "48163561"
   
     3.  Utilizzare `new-object` per creare un oggetto delle credenziali.  
   
-    4.  Usa `new-psdrive` per creare un'unità virtuale con le credenziali fornite.  
+    4.  Utilizzare `new-psdrive` per creare un'unità virtuale con le credenziali fornite.  
   
 2.  Richiamare la funzione per creare un'unità virtuale con le credenziali fornite.  
   
@@ -71,7 +70,7 @@ cd SQLAuth
 ##  <a name="SQLAuthInvSqlCmd"></a> Autenticazione di SQL Server tramite Invoke-Sqlcmd  
  **Per utilizzare Invoke-Sqlcmd con l'autenticazione di SQL Server**  
   
-1.  Usare la `–Username` parametro per specificare un ID di accesso e la `–Password` parametro per specificare la password associata.  
+1.  Utilizzare il parametro `-Username` per specificare un ID di accesso e il parametro `-Password` per specificare la password associata.  
   
 ### <a name="example-invoke-sqlcmd"></a>Esempio (Invoke-Sqlcmd)  
  In questo esempio viene utilizzato l'host della lettura cmdlet per la richiesta di una password all'utente, quindi viene stabilita la connessione tramite l'autenticazione di SQL Server.  
@@ -80,7 +79,7 @@ cd SQLAuth
 ## Prompt the user for their password.  
 $pwd = read-host -AsSecureString -Prompt "Password"  
   
-Invoke-Sqlcmd -Query "SELECT GETDATE() AS TimeOfQuery;" -ServerInstance "MyComputer\MyInstance" –Username “MyLogin” –Password $pwd  
+Invoke-Sqlcmd -Query "SELECT GETDATE() AS TimeOfQuery;" -ServerInstance "MyComputer\MyInstance" -Username "MyLogin" -Password $pwd  
 ```  
   
 ## <a name="see-also"></a>Vedere anche  

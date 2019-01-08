@@ -4,24 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 9ed9ca8e-8b1e-48d9-907d-285516d6562b
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3bc06bbc38809f3ae3921fb59f11aedad0f3ce1a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9358d3d7d014f7dc69dad00605ebdaaa2ef70707
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48135221"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53352239"
 ---
 # <a name="integration-services-ssis-parameters"></a>Parametri di Integration Services (SSIS)
   I parametri (SSIS) di[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] consentono di assegnare valori alle proprietà incluse nei pacchetti durante la fase di esecuzione. È possibile creare *parametri di progetto* al livello del progetto e *parametri di pacchetto* al livello del pacchetto. I parametri del progetto vengono utilizzati per fornire input esterno ricevuto dal progetto a uno o più pacchetti nel progetto. I parametri del pacchetto consentono di modificare l'esecuzione del pacchetto senza doverlo modificare e ridistribuire.  
   
- In [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] è possibile creare, modificare o eliminare i parametri di progetto utilizzando la finestra **Project.params** . Per creare, modificare ed eliminare i parametri di pacchetto, utilizzare la scheda **Parametri** in Progettazione [!INCLUDE[ssIS](../includes/ssis-md.md)] . Per associare un parametro nuovo o esistente a una proprietà di un'attività, utilizzare la finestra di dialogo **Imposta parametri** . Per altre informazioni sull'uso di **Project. params** finestra e il **parametri** scheda, vedere [Create Parameters](create-parameters.md). Per altre informazioni sul **imposta parametri** finestra di dialogo, vedere [parametrizzare la finestra di dialogo](parameterize-dialog-box.md).  
+ In [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] è possibile creare, modificare o eliminare i parametri di progetto utilizzando la finestra **Project.params** . Per creare, modificare ed eliminare i parametri di pacchetto, utilizzare la scheda **Parametri** in Progettazione [!INCLUDE[ssIS](../includes/ssis-md.md)] . Per associare un parametro nuovo o esistente a una proprietà di un'attività, utilizzare la finestra di dialogo **Imposta parametri** . Per altre informazioni sull'utilizzo della finestra **Project.params** e della scheda **Parametri** , vedere [Create Parameters](create-parameters.md). Per altre informazioni sulla finestra di dialogo **Imposta parametri** , vedere [Parameterize Dialog Box](parameterize-dialog-box.md).  
   
 ## <a name="parameters-and-package-deployment-model"></a>Parametri e modello di distribuzione del pacchetto  
  In generale, se un pacchetto viene distribuito mediante il relativo modello di distribuzione, è necessario utilizzare le configurazioni anziché i parametri.  
@@ -29,7 +28,7 @@ ms.locfileid: "48135221"
  Quando si distribuisce un pacchetto che contiene parametri utilizzando il modello di distribuzione del pacchetto e quindi si esegue il pacchetto, i parametri non vengono chiamati durante l'esecuzione. Se il pacchetto contiene espressioni e parametri di pacchetto all'interno del pacchetto, utilizzare i parametri per applicare i valori risultanti in fase di esecuzione. Se il pacchetto contiene parametri di progetto, è possibile che l'esecuzione del pacchetto non venga completata.  
   
 ## <a name="parameters-and-project-deployment-model"></a>Parametri e modello di distribuzione del progetto  
- Quando si distribuisce un progetto nel server [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], è possibile utilizzare viste, stored procedure e l'interfaccia utente di [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] per gestire i parametri di progetto e di pacchetto. Per ulteriori informazioni, vedere gli argomenti seguenti.  
+ Quando si distribuisce un progetto nel server [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , è possibile utilizzare viste, stored procedure e l'interfaccia utente di [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] per gestire i parametri di progetto e di pacchetto. Per ulteriori informazioni, vedere gli argomenti seguenti.  
   
 -   [Viste &#40;catalogo di Integration Services&#41;](/sql/integration-services/system-views/views-integration-services-catalog)  
   
@@ -44,10 +43,10 @@ ms.locfileid: "48135221"
   
  Nella tabella riportata di seguito sono elencati i tipi di valori.  
   
-|Nome del valore|Description|Tipo di valore|  
+|Nome del valore|Descrizione|Tipo di valore|  
 |----------------|-----------------|-------------------|  
 |Valore di esecuzione|Valore assegnato a un'istanza specifica di esecuzione del pacchetto. Questa assegnazione esegue l'override di tutti gli altri valori, tuttavia è applicabile a una sola istanza di esecuzione del pacchetto.|Valore letterale|  
-|Valore del server|Valore assegnato al parametro nell'ambito del progetto, dopo la distribuzione di quest'ultimo nel server [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Questo valore esegue l'override del valore predefinito di progettazione.|Valore letterale o riferimento a una variabile di ambiente|  
+|Valore del server|Valore assegnato al parametro nell'ambito del progetto, dopo la distribuzione di quest'ultimo nel server [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Questo valore esegue l'override del valore predefinito di progettazione.|Valore letterale o riferimento a una variabile di ambiente|  
 |Valore di progettazione|Valore assegnato al parametro durante la creazione o modifica del progetto in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]. Questo valore rimane persistente nel progetto.|Valore letterale|  
   
  È possibile utilizzare un solo parametro per assegnare un valore a più proprietà del pacchetto. A una singola proprietà del pacchetto è possibile assegnare un valore solo da un singolo parametro.  
@@ -83,7 +82,7 @@ ms.locfileid: "48135221"
   
  È inoltre possibile utilizzare la finestra di dialogo **Esegui pacchetto** in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] per modificare il valore di un parametro. Per altre informazioni, vedere [Execute Package Dialog Box](../../2014/integration-services/execute-package-dialog-box.md).  
   
- È anche possibile usare il dtexec `/Parameter` opzione per modificare un valore di parametro. Per altre informazioni, vedere [dtexec Utility](packages/dtexec-utility.md).  
+ È inoltre possibile utilizzare l'opzione dtexec `/Parameter` per modificare il valore di un parametro. Per altre informazioni, vedere [dtexec Utility](packages/dtexec-utility.md).  
   
 ### <a name="parameter-validation"></a>Convalida dei parametri  
  Se i valori dei parametri non possono essere risolti, il pacchetto corrispondente non viene eseguito. Per evitare errori, è possibile convalidare progetti e pacchetti mediante la finestra di dialogo **Convalida** in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Tramite la convalida è possibile confermare che tutti i parametri dispongono dei valori necessari o che possono risolvere i valori necessari con riferimenti all'ambiente specifici. Durante la convalida vengono inoltre verificati altri problemi comuni relativi ai pacchetti.  
@@ -103,6 +102,6 @@ ms.locfileid: "48135221"
  [Impostare i valori dei parametri dopo la distribuzione del progetto](../../2014/integration-services/set-parameter-values-after-the-project-is-deployed.md)  
   
 ## <a name="related-content"></a>Contenuto correlato  
- Intervento nel blog riguardante un [suggerimento rapido relativo ai parametri obbligatori in SQL Server Integration Services](http://go.microsoft.com/fwlink/?LinkId=239781)sul sito Web mattmasson.com.  
+ Intervento nel blog concernente [Suggerimento rapido su SSIS: I parametri obbligatori](https://go.microsoft.com/fwlink/?LinkId=239781), sul sito Web mattmasson.com.  
   
   

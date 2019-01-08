@@ -18,12 +18,12 @@ ms.assetid: 04b35145-1cca-45f4-9eb7-990abf2e647d
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6605840bc887f4869d1ed0c153de7ca4374053fd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ad003060588215c0d5a218ade5103f5748e5ebfc
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48183161"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53369563"
 ---
 # <a name="generate-an-inline-xsd-schema"></a>Generazione di uno schema XSD inline
   In una clausola FOR XML è possibile richiedere che la query restituisca uno schema inline oltre ai risultati della query. Per ottenere uno schema XDR, utilizzare la parola chiave XMLDATA nella clausola FOR XML. Per ottenere uno schema XSD, utilizzare invece la parola chiave XMLSCHEMA.  
@@ -32,15 +32,15 @@ ms.locfileid: "48183161"
   
 -   È possibile specificare la parola chiave XMLSCHEMA unicamente nelle modalità RAW e AUTO e non nella modalità EXPLICIT.  
   
--   Se una query FOR XML nidificata è specificata la direttiva TYPE, il risultato della query è di `xml` tipo e viene considerato come un'istanza di dati XML non tipizzati. Per altre informazioni, vedere [Dati XML &#40;SQL Server&#41;](xml-data-sql-server.md).  
+-   Se in una query FOR XML nidificata è specificata la direttiva TYPE, il risultato della query sarà di tipo `xml` e verrà considerato come un'istanza di dati XML non tipizzati. Per altre informazioni, vedere [Dati XML &#40;SQL Server&#41;](xml-data-sql-server.md).  
   
  Se si specifica la parola chiave XMLSCHEMA in una query FOR XML, si otterrà sia uno schema che i dati XML, ovvero il risultato della query. Ogni elemento di livello principale dei dati fa riferimento allo schema precedente tramite una dichiarazione dello spazio dei nomi predefinito che, a sua volta, fa riferimento allo spazio dei nomi di destinazione dello schema inline.  
   
- Esempio:  
+ Ad esempio:  
   
 ```  
-<xsd:schema targetNamespace="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:schema="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sqltypes="http://schemas.microsoft.com/sqlserver/2004/sqltypes" elementFormDefault="qualified">  
-  <xsd:import namespace="http://schemas.microsoft.com/sqlserver/2004/sqltypes" schemaLocation="http://schemas.microsoft.com/sqlserver/2004/sqltypes/sqltypes.xsd" />  
+<xsd:schema targetNamespace="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:schema="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sqltypes="https://schemas.microsoft.com/sqlserver/2004/sqltypes" elementFormDefault="qualified">  
+  <xsd:import namespace="https://schemas.microsoft.com/sqlserver/2004/sqltypes" schemaLocation="https://schemas.microsoft.com/sqlserver/2004/sqltypes/sqltypes.xsd" />  
   <xsd:element name="Production.ProductModel">  
     <xsd:complexType>  
       <xsd:attribute name="ProductModelID" type="sqltypes:int" use="required" />  
@@ -65,7 +65,7 @@ ms.locfileid: "48183161"
   
 -   Un altro documento di schema che descrive la forma del risultato della query FOR XML.  
   
- Inoltre, se tipizzati `xml` tipi di dati sono inclusi nel risultato della query, gli schemi associati a quelli tipizzati `xml` sono inclusi i tipi di dati.  
+ Se il risultato della query contiene tipi di dati `xml` tipizzati, verranno inclusi anche gli schemi associati a tali tipi di dati `xml` tipizzati.  
   
  Lo spazio dei nomi di destinazione del documento di schema che descrive la forma del risultato della query FOR XML contiene una parte fissa e una parte numerica che viene incrementata automaticamente. Di seguito è illustrato il formato di questo spazio dei nomi, dove *n* è un numero intero positivo. Ad esempio, nella query precedente urn:schemas-microsoft-com:sql:SqlRowSet1 rappresenta lo spazio dei nomi di destinazione.  
   
@@ -94,7 +94,7 @@ WHERE BusinessEntityID = 1
 FOR XML AUTO, ELEMENTS  
 ```  
   
- Risultato:  
+ Questo è il risultato:  
   
  `<Person>`  
   
@@ -114,11 +114,11 @@ AND     SalesOrderHeader.SalesOrderID=5001
 FOR XML AUTO, ELEMENTS, XMLSCHEMA  
 ```  
   
- Nella query è specificata la direttiva ELEMENTS e pertanto il codice XML risultante è incentrato sugli elementi. Nella query è inoltre specificata la direttiva XMLSCHEMA e pertanto viene restituito uno schema XSD inline. Risultato:  
+ Nella query è specificata la direttiva ELEMENTS e pertanto il codice XML risultante è incentrato sugli elementi. Nella query è inoltre specificata la direttiva XMLSCHEMA e pertanto viene restituito uno schema XSD inline. Questo è il risultato:  
   
- `<xsd:schema targetNamespace="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:schema="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sqltypes="http://schemas.microsoft.com/sqlserver/2004/sqltypes" elementFormDefault="qualified">`  
+ `<xsd:schema targetNamespace="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:schema="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sqltypes="https://schemas.microsoft.com/sqlserver/2004/sqltypes" elementFormDefault="qualified">`  
   
- `<xsd:import namespace="http://schemas.microsoft.com/sqlserver/2004/sqltypes" schemaLocation="http://schemas.microsoft.com/sqlserver/2004/sqltypes/sqltypes.xsd" />`  
+ `<xsd:import namespace="https://schemas.microsoft.com/sqlserver/2004/sqltypes" schemaLocation="https://schemas.microsoft.com/sqlserver/2004/sqltypes/sqltypes.xsd" />`  
   
  `<xsd:element name="Sales.SalesOrderHeader">`  
   
@@ -194,9 +194,9 @@ FOR XML RAW, XMLSCHEMA, ELEMENTS
   
  Di seguito è riportato il risultato. Si noti che nello schema XSD inline, l'elemento OrderID è definito due volte. Per una dichiarazione minOccurs è impostato su 0 e corrisponde all'elemento OrderID della tabella CustOrderDetail e la seconda dichiarazione esegue il mapping alla colonna chiave primaria OrderID della tabella `CustOrder` , nella quale minOccurs è 1 per impostazione predefinita.  
   
- `<xsd:schema targetNamespace="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sqltypes="http://schemas.microsoft.com/sqlserver/2004/sqltypes" elementFormDefault="qualified">`  
+ `<xsd:schema targetNamespace="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sqltypes="https://schemas.microsoft.com/sqlserver/2004/sqltypes" elementFormDefault="qualified">`  
   
- `<xsd:import namespace="http://schemas.microsoft.com/sqlserver/2004/sqltypes" schemaLocation="http://schemas.microsoft.com/sqlserver/2004/sqltypes/sqltypes.xsd" />`  
+ `<xsd:import namespace="https://schemas.microsoft.com/sqlserver/2004/sqltypes" schemaLocation="https://schemas.microsoft.com/sqlserver/2004/sqltypes/sqltypes.xsd" />`  
   
  `<xsd:element name="row">`  
   
@@ -239,11 +239,11 @@ for    XML RAW, ELEMENTS, XMLSCHEMA
   
  Di seguito è riportato il codice XML generato, nel quale è visualizzata solo una frazione dello schema XSD inline:  
   
- `…`  
+ `...`  
   
- `<xsd:schema targetNamespace="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sqltypes="http://schemas.microsoft.com/sqlserver/2004/sqltypes" elementFormDefault="qualified">`  
+ `<xsd:schema targetNamespace="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sqltypes="https://schemas.microsoft.com/sqlserver/2004/sqltypes" elementFormDefault="qualified">`  
   
- `<xsd:import namespace="http://schemas.microsoft.com/sqlserver/2004/sqltypes" />`  
+ `<xsd:import namespace="https://schemas.microsoft.com/sqlserver/2004/sqltypes" />`  
   
  `<xsd:element name="row">`  
   
@@ -277,11 +277,11 @@ for    XML RAW, ELEMENTS, XMLSCHEMA
   
 -   Poiché il valore `DealerPrice` è NULL nella tabella, nel risultato viene restituito solo `ListPrice` come elemento <`Price`>. Se si aggiunge il parametro `XSINIL` alla direttiva ELEMENTS, si otterranno entrambi gli elementi con il valore `xsi:nil` impostato su TRUE per l'elemento <`Price`> corrispondente a DealerPrice. Si otterranno inoltre due elementi figlio <`Price`> nella definizione del tipo complesso <`row`> dello schema XSD inline, con l'attributo `nillable` impostato su TRUE per entrambi. Di seguito è riportato un frammento che rappresenta un risultato parziale:  
   
- `…`  
+ `...`  
   
- `<xsd:schema targetNamespace="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sqltypes="http://schemas.microsoft.com/sqlserver/2004/sqltypes" elementFormDefault="qualified">`  
+ `<xsd:schema targetNamespace="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sqltypes="https://schemas.microsoft.com/sqlserver/2004/sqltypes" elementFormDefault="qualified">`  
   
- `<xsd:import namespace="http://schemas.microsoft.com/sqlserver/2004/sqltypes" />`  
+ `<xsd:import namespace="https://schemas.microsoft.com/sqlserver/2004/sqltypes" />`  
   
  `<xsd:element name="row">`  
   
@@ -313,7 +313,7 @@ for    XML RAW, ELEMENTS, XMLSCHEMA
   
  `</row>`  
   
-### <a name="case-2-one-key-and-one-nonkey-column-of-the-same-type"></a>Caso 2: Una colonna chiave e una colonna non chiave dello stesso tipo  
+### <a name="case-2-one-key-and-one-nonkey-column-of-the-same-type"></a>Caso 2: Una chiave e una colonna non chiave dello stesso tipo  
  La query seguente illustra una colonna chiave e una colonna non chiave dello stesso tipo.  
   
 ```  
@@ -333,11 +333,11 @@ FOR XML RAW, ELEMENTS, XMLSCHEMA
   
  Di seguito è riportato il risultato. nel quale è visualizzato solo un frammento dello schema XSD inline.  
   
- `…`  
+ `...`  
   
- `<xsd:schema targetNamespace="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sqltypes="http://schemas.microsoft.com/sqlserver/2004/sqltypes" elementFormDefault="qualified">`  
+ `<xsd:schema targetNamespace="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sqltypes="https://schemas.microsoft.com/sqlserver/2004/sqltypes" elementFormDefault="qualified">`  
   
- `<xsd:import namespace="http://schemas.microsoft.com/sqlserver/2004/sqltypes" />`  
+ `<xsd:import namespace="https://schemas.microsoft.com/sqlserver/2004/sqltypes" />`  
   
  `<xsd:element name="row">`  
   
@@ -391,7 +391,7 @@ FOR XML RAW, ELEMENTS, XMLSCHEMA
   
  Si noti che per l'elemento <`Col`> dello schema XSD inline, minOccurs è impostato su 0.  
   
-### <a name="case-3-both-elements-of-different-types-and-corresponding-columns-can-be-null"></a>Caso 3: Entrambi gli elementi sono di tipo diverso e le colonne corrispondenti possono essere NULL  
+### <a name="case-3-both-elements-of-different-types-and-corresponding-columns-can-be-null"></a>Caso 3: Entrambi gli elementi di tipo diverso e le colonne corrispondenti possono essere NULL  
  La query seguente viene eseguita sulla tabella di esempio illustrata nel caso 2:  
   
 ```  
@@ -402,11 +402,11 @@ FOR XML RAW, ELEMENTS, XMLSCHEMA
   
  Nella query seguente, a Col2 e Col3 sono assegnati gli stessi alias. Nel risultato vengono pertanto generati due elementi di pari livello con lo stesso nome ed entrambi figli dell'elemento <`raw`>. Entrambe le colonne sono di tipo diverso e possono essere NULL. Di seguito è riportato il risultato. nel quale è visualizzato solo uno schema XSD inline parziale.  
   
- `…`  
+ `...`  
   
- `<xsd:schema targetNamespace="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sqltypes="http://schemas.microsoft.com/sqlserver/2004/sqltypes" elementFormDefault="qualified">`  
+ `<xsd:schema targetNamespace="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sqltypes="https://schemas.microsoft.com/sqlserver/2004/sqltypes" elementFormDefault="qualified">`  
   
- `<xsd:import namespace="http://schemas.microsoft.com/sqlserver/2004/sqltypes" />`  
+ `<xsd:import namespace="https://schemas.microsoft.com/sqlserver/2004/sqltypes" />`  
   
  `<xsd:simpleType name="Col1">`  
   

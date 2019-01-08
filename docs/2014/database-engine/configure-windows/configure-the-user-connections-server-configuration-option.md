@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 12/02/2015
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - simultaneous connections [SQL Server]
@@ -17,12 +16,12 @@ ms.assetid: 53beee6e-59fe-4276-9abb-8f1cec2a3508
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a1d1d29ee5c4fcfc7b13267e6ea4e6b0e96d1269
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 477b61320413f83be28b9cc5e87d2c8eb26b4105
+ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48122311"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52639509"
 ---
 # <a name="configure-the-user-connections-server-configuration-option"></a>Configurare l'opzione di configurazione del server user connections
   In questo argomento si illustra come impostare l'opzione di configurazione del server **user connections** in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Con l'opzione **user connections** è possibile specificare il numero massimo di connessioni utente simultanee permesse in un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Il numero effettivo di connessioni utente consentite dipende inoltre dalla versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizzata nonché dai limiti delle applicazioni e dei componenti hardware. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è consentito un massimo di 32.767 connessioni utente. Poiché **user connections** è un'opzione dinamica a configurazione automatica, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] regola automaticamente il numero massimo di connessioni utente come necessario, fino al valore massimo consentito. Se, ad esempio, sono connessi solo 10 utenti, vengono allocati 10 oggetti connessione utente. Nella maggior parte dei casi, non è necessario modificare il valore dell'opzione. Il valore predefinito è 0, che indica che è consentito il numero massimo di connessioni utente (32.767).  
@@ -35,7 +34,7 @@ ms.locfileid: "48122311"
   
      [Indicazioni](#Recommendations)  
   
-     [Security](#Security)  
+     [Sicurezza](#Security)  
   
 -   **Per configurare l'opzione user connections utilizzando:**  
   
@@ -58,7 +57,7 @@ ms.locfileid: "48122311"
   
 ###  <a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorizzazioni  
  Le autorizzazioni di esecuzione per **sp_configure** senza alcun parametro o solo con il primo parametro vengono assegnate per impostazione predefinita a tutti gli utenti. Per eseguire **sp_configure** con entrambi i parametri per la modifica di un'opzione di configurazione o per l'esecuzione dell'istruzione RECONFIGURE, a un utente deve essere concessa l'autorizzazione a livello di server ALTER SETTINGS. L'autorizzazione ALTER SETTINGS è assegnata implicitamente ai ruoli predefiniti del server **sysadmin** e **serveradmin** .  
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
@@ -73,7 +72,7 @@ ms.locfileid: "48122311"
   
 4.  Riavviare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
   
 #### <a name="to-configure-the-user-connections-option"></a>Per configurare l'opzione user connections  
   

@@ -4,24 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: bea8ce8d-cf63-4257-840a-fc9adceade8c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9648e78567bbddf9209c53923cfe6c12d046d1a3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9bd9e036baa91991352d00f97fcf2c8e689bae6c
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48200901"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53372153"
 ---
 # <a name="deployment-of-projects-and-packages"></a>Distribuzione di progetti e pacchetti
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] supporta due modelli di distribuzione, il modello di distribuzione del progetto e il modello di distribuzione del pacchetto. Tramite il modello di distribuzione del progetto è possibile distribuire i progetti nel server [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
- Per altre informazioni sulla distribuzione di progetti nel server [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], vedere [Distribuire progetti nel server Integration Services](../deploy-projects-to-integration-services-server.md).  
+ Per altre informazioni sulla distribuzione di progetti nel server [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , vedere [Distribuire progetti nel server Integration Services](../deploy-projects-to-integration-services-server.md).  
   
  Per altre informazioni sul modello di distribuzione del pacchetto, vedere [pacchetto di distribuzione &#40;SSIS&#41;](legacy-package-deployment-ssis.md).  
   
@@ -37,7 +36,7 @@ ms.locfileid: "48200901"
 |L'integrazione con CLR è necessaria nel motore di database.|L'integrazione con CLR non è necessaria nel motore di database.|  
 |I valori dei parametri specifici dell'ambiente vengono archiviati nelle variabili di ambiente.|I valori di configurazione specifici dell'ambiente vengono archiviati nei file di configurazione.|  
 |I progetti e i pacchetti nel catalogo possono essere convalidati nel server prima dell'esecuzione. È possibile utilizzare SQL Server Management Studio, le stored procedure o il codice gestito per eseguire la convalida.|I pacchetti vengono convalidati appena prima dell'esecuzione. È anche possibile convalidare un pacchetto con dtExec o codice gestito.|  
-|I pacchetti vengono eseguiti avviando un'esecuzione nel motore di database. L'identificatore di un progetto, i valori di parametri espliciti (facoltativi) e i riferimenti all'ambiente (facoltativi) vengono assegnati a un'esecuzione prima dell'avvio.<br /><br /> I pacchetti possono anche essere eseguiti utilizzando `dtExec`.|I pacchetti vengono eseguiti usando il `dtExec` e `DTExecUI` utilità di esecuzione. Le configurazioni applicabili vengono identificate tramite argomenti del prompt dei comandi (facoltativo).|  
+|I pacchetti vengono eseguiti avviando un'esecuzione nel motore di database. L'identificatore di un progetto, i valori di parametri espliciti (facoltativi) e i riferimenti all'ambiente (facoltativi) vengono assegnati a un'esecuzione prima dell'avvio.<br /><br /> I pacchetti possono anche essere eseguiti utilizzando `dtExec`.|I pacchetti vengono eseguiti utilizzando le utilità di esecuzione `dtExec` e `DTExecUI`. Le configurazioni applicabili vengono identificate tramite argomenti del prompt dei comandi (facoltativo).|  
 |Durante l'esecuzione, gli eventi generati dal pacchetto vengono acquisiti automaticamente e salvati nel catalogo. È possibile eseguire query su questi eventi con le viste Transact-SQL.|Durante l'esecuzione, gli eventi generati da un pacchetto non vengono acquisiti automaticamente. Per acquisire gli eventi, è necessario aggiungere un provider di log al pacchetto.|  
 |I pacchetti vengono eseguiti in un processo di Windows separato.|I pacchetti vengono eseguiti in un processo di Windows separato.|  
 |Per pianificare l'esecuzione dei pacchetti si utilizza SQL Server Agent.|Per pianificare l'esecuzione dei pacchetti si utilizza SQL Server Agent.|  
@@ -45,7 +44,7 @@ ms.locfileid: "48200901"
 ## <a name="features-of-project-deployment-model"></a>Funzionalità del modello di distribuzione del progetto  
  Nella tabella seguente sono elencate le funzionalità disponibili per i progetti sviluppati solo per il modello di distribuzione del progetto.  
   
-|Funzionalità|Description|  
+|Funzionalità|Descrizione|  
 |-------------|-----------------|  
 |Parametri|Un parametro specifica i dati che verranno utilizzati da un pacchetto. È possibile determinare l'ambito dei parametri a livello di pacchetto o di progetto, rispettivamente con i parametri di pacchetto e i parametri di progetto. I parametri possono essere utilizzati in espressioni o attività. Quando il progetto viene distribuito nel catalogo, è possibile assegnare un valore letterale a ogni parametro oppure utilizzare il valore predefinito assegnato in fase di progettazione. Al posto di un valore letterale, è anche possibile fare riferimento a una variabile di ambiente. I valori delle variabili di ambiente vengono risolti al momento dell'esecuzione del pacchetto.|  
 |Ambienti|Un ambiente è un contenitore di variabili a cui i progetti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] possono fare riferimento. Ogni progetto può presentare più riferimenti all'ambiente, tuttavia una singola istanza di esecuzione del pacchetto può fare riferimento solo alle variabili di un ambiente. Gli ambienti consentono di organizzare i valori assegnati a un pacchetto. È ad esempio possibile disporre di ambienti denominati "Dev", "test" e "Produzione".|  
@@ -61,7 +60,7 @@ ms.locfileid: "48200901"
 -   [Distribuire progetti nel server Integration Services](../deploy-projects-to-integration-services-server.md)  
   
 ## <a name="related-content"></a>Contenuto correlato  
- Intervento nel blog sulle [opinioni relative alle strategie di diramazione per i progetti SSIS](http://go.microsoft.com/fwlink/?LinkId=245739)sul sito Web mattmasson.com.  
+ Intervento nel blog sulle [opinioni relative alle strategie di diramazione per i progetti SSIS](https://go.microsoft.com/fwlink/?LinkId=245739)sul sito Web mattmasson.com.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Utilità dtexec](dtexec-utility.md)  

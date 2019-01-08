@@ -1,5 +1,5 @@
 ---
-title: Origini dati e associazioni (SSAS multidimensionale) | Documenti Microsoft
+title: Origini dati e associazioni (SSAS multidimensionale) | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 2461bbdc3707ed30e130aaa32e117f24f9fe379d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 76afbfcd2cd7668cfc65fc5078a1015ac33bc964
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34025040"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52529112"
 ---
 # <a name="data-sources-and-bindings-ssas-multidimensional"></a>Origini dati e associazioni (SSAS - multidimensionale)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -26,24 +26,24 @@ ms.locfileid: "34025040"
   
  La modalità di espressione dell'origine dati varia in base al tipo di origine dati. Un'origine dati relazionale si distingue ad esempio per la stringa di connessione. Per altre informazioni sulle origini dati, vedere [Origini dati nei modelli multidimensionali](../../analysis-services/multidimensional-models/data-sources-in-multidimensional-models.md).  
   
- Indipendentemente dall'origine dati utilizzata, la vista origine dati contiene i metadati per l'origine dati. Le associazioni per un cubo o altri oggetti [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] sono pertanto espresse sotto forma di associazioni alla vista origine dati. Tali associazioni possono includere associazioni a oggetti logici, quali viste, colonne calcolate e relazioni che non esistono fisicamente nell'origine dati. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] aggiunge una colonna calcolata che incapsula l'espressione nella vista origine dati, quindi associa la misura OLAP corrispondente a tale colonna nella vista origine dati. Per altre informazioni sulle viste origine dati, vedere [Viste origine dati in modelli multidimensionali](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md).  
+ Indipendentemente dall'origine dati utilizzata, la vista origine dati contiene i metadati per l'origine dati. Le associazioni per un cubo o altri oggetti [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] sono pertanto espresse sotto forma di associazioni alla vista origine dati. Queste associazioni possono includere associazioni a oggetti di oggetti logici, ad esempio viste, colonne calcolate e relazioni che non esistono fisicamente nell'origine dati. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] aggiunge una colonna calcolata che incapsula l'espressione nella vista origine dati, quindi associa la misura OLAP corrispondente a tale colonna nella vista origine dati. Per altre informazioni sulle viste origine dati, vedere [Viste origine dati in modelli multidimensionali](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md).  
   
  Ciascun oggetto [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] viene associato all'origine dati in modo specifico. Inoltre, le associazioni dati per tali oggetti e la definizione dell'origine dati possono essere fornite inline con la definizione dell'oggetto associato a dati, ad esempio la dimensione, oppure out-of-line come un set di definizioni distinto.  
   
 ## <a name="analysis-services-data-types"></a>Tipi di dati di Analysis Services  
  I tipi di dati usati nelle associazioni devono corrispondere ai tipi di dati supportati da [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. In [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]sono definiti i tipi di dati seguenti:  
   
-|Tipo di dati di Analysis Services|Description|  
+|Tipo di dati di Analysis Services|Descrizione|  
 |---------------------------------|-----------------|  
 |BigInt|Intero con segno a 64 bit. Per questo tipo di dati viene eseguito il mapping al tipo di dati Int64 in Microsoft [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] e al tipo di dati DBTYPE_I8 in OLE DB.|  
 |Bool|Valore booleano. Per questo tipo di dati viene eseguito il mapping al tipo di dati Boolean in [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] e al tipo di dati DBTYPE_BOOL in OLE DB.|  
 |Currency|Valore di valuta compreso nell'intervallo tra -2 63 (o -922337.203.685.477,5808) e 2 63 -1 (o +922.337.203.685.477,5807) con un'approssimazione pari a dieci millesimi di unità di valuta. Per questo tipo di dati viene eseguito il mapping al tipo di dati Decimal in [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] e al tipo di dati DBTYPE_CY in OLE DB.|  
-|Data|Dati di data, archiviati come numero a virgola mobile a precisione doppia. La parte intera è il numero di giorni a partire dal 30 dicembre 1899 mentre la parte frazionaria rappresenta una frazione del giorno. Per questo tipo di dati viene eseguito il mapping al tipo di dati DateTime in [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] e al tipo di dati DBTYPE_DATE in OLE DB.|  
+|date|Dati di data, archiviati come numero a virgola mobile a precisione doppia. La parte intera è il numero di giorni a partire dal 30 dicembre 1899 mentre la parte frazionaria rappresenta una frazione del giorno. Per questo tipo di dati viene eseguito il mapping al tipo di dati DateTime in [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] e al tipo di dati DBTYPE_DATE in OLE DB.|  
 |Double|Numero a virgola mobile a precisione doppia compreso tra -1.79E +308 e 1.79E +308. Per questo tipo di dati viene eseguito il mapping al tipo di dati Double in [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] e al tipo di dati DBTYPE_R8 in OLE DB.|  
 |Integer|Intero con segno a 32 bit. Per questo tipo di dati viene eseguito il mapping al tipo di dati Int32 in [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] e al tipo di dati DBTYPE_I4 in OLE DB.|  
 |Single|Numero a virgola mobile a precisione singola compreso tra -3.40E +38 e 3.40E +38. Per questo tipo di dati viene eseguito il mapping al tipo di dati Single in [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] e al tipo di dati DBTYPE_R4 in OLE DB.|  
 |SmallInt|Intero con segno a 16 bit. Per questo tipo di dati viene eseguito il mapping al tipo di dati Int16 in [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] e al tipo di dati DBTYPE_I2 in OLE DB.|  
-|TinyInt|Numero intero con segno a 8 bit. Per questo tipo di dati viene eseguito il mapping al tipo di dati SByte in [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] e al tipo di dati DBTYPE_I1 in OLE DB.<br /><br /> Nota: se un'origine dati contiene campi di tipo tinyint e la proprietà AutoIncrement è impostata su True, i valori dei campi saranno convertiti in numeri interi nella vista origine dati.|  
+|TinyInt|Numero intero con segno a 8 bit. Per questo tipo di dati viene eseguito il mapping al tipo di dati SByte in [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] e al tipo di dati DBTYPE_I1 in OLE DB.<br /><br /> Nota: Se un'origine dati contiene campi di tipo tinyint e la proprietà AutoIncrement è impostata su True, i valori dei campi saranno convertiti in valori interi nella vista origine dati.|  
 |UnsignedBigInt|Intero senza segno a 64 bit. Per questo tipo di dati viene eseguito il mapping al tipo di dati UInt64 in [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] e al tipo di dati DBTYPE_UI8 in OLE DB.|  
 |UnsignedInt|Intero senza segno a 32 bit. Per questo tipo di dati viene eseguito il mapping al tipo di dati UInt32 in [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] e al tipo di dati DBTYPE_UI4 in OLE DB.|  
 |UnsignedSmallInt|Numero intero non firmato a 16 bit. Per questo tipo di dati viene eseguito il mapping al tipo di dati UInt16 in [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] e al tipo di dati DBTYPE_UI2 in OLE DB.|  
@@ -52,7 +52,7 @@ ms.locfileid: "34025040"
  Tutti dati ricevuti dall'origine dati vengono convertiti nel tipo [!INCLUDE[ssAS](../../includes/ssas-md.md)] specificato nell'associazione, in genere durante l'elaborazione. Viene generato un errore se non è possibile eseguire la conversione (ad esempio da String a Int). [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] imposta in genere il tipo di dati nell'associazione su quello che corrisponde meglio al tipo di origine nell'origine dati. Ad esempio, per i tipi di dati SQL Date, DateTime, SmallDateTime, DateTime2, DateTimeOffset viene eseguito il mapping a [!INCLUDE[ssAS](../../includes/ssas-md.md)] Date e il tipo SQL Time a String.  
   
 ## <a name="bindings-for-dimensions"></a>Associazioni per dimensioni  
- Ciascun attributo di una dimensione è associato a una colonna in una vista origine dati. Tutti gli attributi di una dimensione devono provenire da una singola origine dati. È tuttavia possibile associare gli attributi a colonne di diverse tabelle. Le relazioni tra le tabelle sono definite nella vista origine dati. Se sono presenti più set di relazioni nella stessa tabella, potrebbe essere necessario introdurre una query denominata nella vista origine dati da utilizzare come tabella di 'alias'. Le espressioni e i filtri sono definiti nella tabella origine dati mediante calcoli denominati e query denominate.  
+ Ciascun attributo di una dimensione è associato a una colonna in una vista origine dati. Tutti gli attributi di una dimensione devono provenire da una singola origine dati. È tuttavia possibile associare gli attributi a colonne di diverse tabelle. Le relazioni tra le tabelle sono definite nella vista origine dati. Nel caso in cui è presente più di un set di relazioni alla stessa tabella, potrebbe essere necessario introdurre una query denominata nella vista origine dati come tabella di 'alias'. Le espressioni e i filtri sono definiti nella tabella origine dati mediante calcoli denominati e query denominate.  
   
 ## <a name="bindings-for-measuregroups-measures-and-partitions"></a>Associazioni per gruppi di misure, misure e partizioni  
  Ciascun gruppo di misure dispone delle seguenti associazioni predefinite:  
@@ -145,7 +145,7 @@ ms.locfileid: "34025040"
   
  Le associazioni out-of-line vengono specificate includendo l'oggetto raccolta **Bindings** facoltativo nel comando di elaborazione. La raccolta **Bindings** facoltativa contiene i seguenti elementi.  
   
-|Proprietà|Cardinalità|Tipo|Description|  
+|Proprietà|Cardinalità|Tipo|Descrizione|  
 |--------------|-----------------|----------|-----------------|  
 |**Associazione**|0-n|**Associazione**|Fornisce una raccolta di nuove associazioni.|  
 |**DataSource**|0-1|**DataSource**|Sostituisce **DataSource** dal server da utilizzare.|  
@@ -154,9 +154,9 @@ ms.locfileid: "34025040"
  Tutti gli elementi che fanno riferimento alle associazioni out-of-line sono facoltativi. Per qualsiasi elemento non specificato, ASSL utilizza la specifica contenuta nell'istruzione DDL dell'oggetto persistente. La specifica di **DataSource** o **DataSourceView** nel comando **Process** è facoltativa. Se si specifica **DataSource** o **DataSourceView** , la relativa istanza non viene creata. Gli oggetti non risultano inoltre persistenti una volta completato il comando **Process** .  
   
 ### <a name="definition-of-the-out-of-line-binding-type"></a>Definizione del tipo di associazione out-of-line  
- Nella raccolta **Bindings** out-of-line, ASSL supporta una raccolta di associazioni per più oggetti, una per ogni proprietà **Binding**. Ogni proprietà **Binding** ha un riferimento all'oggetto esteso, che è simile al riferimento all'oggetto, ma può riferirsi anche a oggetti minori, ad esempio attributi della dimensione e attributi del gruppo di misure. Questo oggetto assume il formato flat tipico del **oggetto** elemento **processo** comandi, a meno che il \< *oggetto* > \< */Object*> non siano presenti tag.  
+ Nella raccolta **Bindings** out-of-line, ASSL supporta una raccolta di associazioni per più oggetti, una per ogni proprietà **Binding**. Ogni proprietà **Binding** ha un riferimento all'oggetto esteso, che è simile al riferimento all'oggetto, ma può riferirsi anche a oggetti minori, ad esempio attributi della dimensione e attributi del gruppo di misure. Questo oggetto assume il formato flat tipico del **oggetto** nell'elemento **processo** comandi, a meno che il \< *oggetto* > \< */Oggetto*> non siano presenti tag.  
   
- Ciascun oggetto per cui è specificata l'associazione è identificato da un elemento XML nel formato \< *oggetto*> ID (ad esempio, **DimensionID**). Dopo aver identificato l'oggetto in modo specifico con il modulo \< *oggetto*> ID, si identifica l'elemento per cui è stata specificata l'associazione, che è in genere **origine**. Una situazione comune da tenere in considerazione è quella in cui **Source** è una proprietà in **DataItem**, come nel caso delle associazioni di colonna in un attributo. In questo caso, non specificare il tag **DataItem** . Specificare solo la proprietà **Source** , come se si trovasse direttamente nella colonna da associare.  
+ Ogni oggetto per cui è specificata l'associazione è identificato da un elemento XML nel formato \< *oggetto*> ID (ad esempio **DimensionID**). Dopo aver identificato l'oggetto in modo specifico con il modulo \< *oggetto*> ID, si identifica l'elemento per cui è stata specificata l'associazione, ovvero in genere **origine**. Una situazione comune da tenere in considerazione è quella in cui **Source** è una proprietà in **DataItem**, come nel caso delle associazioni di colonna in un attributo. In questo caso, non specificare il tag **DataItem** . Specificare solo la proprietà **Source** , come se si trovasse direttamente nella colonna da associare.  
   
  L'identificazione di**KeyColumns** viene effettuata in base all'ordinamento nella raccolta **KeyColumns** . Non è possibile ad esempio specificare solo la prima e la terza colonna chiave di un attributo, perché non è possibile indicare di ignorare la seconda colonna chiave. Tutte le colonne chiave devono essere presenti nell'associazione out-of-line per un attributo della dimensione.  
   

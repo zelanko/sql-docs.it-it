@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.maint.backup.f1
@@ -16,12 +15,12 @@ ms.assetid: ed1ef012-fa14-4ba5-bafe-d1527ba065b3
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 177c5f7406ec3af9ebaa200376611f5327e76260
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4a31052bb0633d370098e328741432f6b854d65e
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48111331"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52774653"
 ---
 # <a name="back-up-database-task-maintenance-plan"></a>Attività Backup database (Piano di manutenzione)
   Usare la finestra di dialogo **Attività Backup database** per aggiungere un'attività di backup al piano di manutenzione. L'esecuzione di backup del database è importante in caso di guasti al sistema o all'hardware, nonché di errori degli utenti, che possono danneggiare il database e rendere pertanto necessaria la disponibilità di una copia di backup per il ripristino. Questa attività consente di eseguire backup completi e differenziali, di file e filegroup, nonché del log delle transazioni.  
@@ -38,7 +37,7 @@ ms.locfileid: "48111331"
  Consente di creare una nuova connessione server da utilizzare per l'esecuzione dell'attività. La finestra di dialogo **Nuova connessione** è descritta di seguito.  
   
  **Database**  
- Consente di specificare i database su cui verrà eseguita l'attività. Quando viene selezionato, l'elenco a discesa include le opzioni seguenti: **Tutti i database**, **Tutti i database di sistema**, **Tutti i database utente**, **Database specifici**.  
+ Consente di specificare i database su cui verrà eseguita l'attività. Quando viene selezionato, l'elenco a discesa include le opzioni seguenti: **Tutti i database**, **tutti i database di sistema**, **tutti i database utente**, **database specifici**.  
   
  **Tutti i database**  
  Consente di generare un piano per l'esecuzione di attività di manutenzione su tutti i database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  

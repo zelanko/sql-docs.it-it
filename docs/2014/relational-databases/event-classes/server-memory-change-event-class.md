@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,32 +14,32 @@ ms.assetid: c9836484-39c5-4a89-b080-3567783b6fff
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 00d392e5a72e05d55217f4a0cbae25bdb59df441
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 358d468c900d367496cd904b4f401b0948af0853
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48058321"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52793438"
 ---
 # <a name="server-memory-change-event-class"></a>Server Memory Change - classe di evento
   La classe di evento **Server Memory Change** viene generata quando l'utilizzo di memoria di [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è aumentato o diminuito di 1 MB o del 5% della quantità di memoria massima del server, a seconda del valore maggiore.  
   
 ## <a name="server-memory-change-event-class-data-columns"></a>Colonne di dati della classe di evento Server Memory Change  
   
-|Nome colonna di dati|Tipo di dati|Description|ID colonna|Sì|  
+|Nome colonna di dati|Tipo di dati|Descrizione|ID colonna|Yes|  
 |----------------------|---------------|-----------------|---------------|---------|  
-|**EventClass**|**int**|Tipo di evento = 81.|27|no|  
-|**EventSequence**|**int**|Sequenza di un determinato evento all'interno della richiesta.|51|no|  
-|**EventSubClass**|**int**|Tipo di sottoclasse di evento.<br /><br /> 1=Aumento della memoria<br /><br /> 2=Riduzione della memoria|21|Sì|  
-|**IntegerData**|**int**|Nuova quantità di memoria, in megabyte (MB).|25|Sì|  
-|**IsSystem**|**int**|Indica se l'evento è stato generato per un processo di sistema o un processo utente. 1 = sistema, 0 = utente.|60|Sì|  
-|**RequestID**|**int**|ID della richiesta contenente l'istruzione.|49|Sì|  
-|**ServerName**|**nvarchar**|Nome dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tracciata.|26|no|  
-|**SessionLoginName**|**nvarchar**|Nome dell'account di accesso dell'utente che ha avviato la sessione. Se ad esempio si stabilisce la connessione a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con l'account di accesso Login1 e si esegue un'istruzione con l'account di accesso Login2, **SessionLoginName** indica Login1 e **LoginName** indica Login2. In questa colonna sono visualizzati sia gli account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che quelli di Windows.|64|Sì|  
-|**SPID**|**int**|ID della sessione in cui si è verificato l'evento.|12|Sì|  
-|**StartTime**|**datetime**|Ora di inizio dell'evento, se disponibile.|14|Sì|  
-|**TransactionID**|**bigint**|ID della transazione assegnato dal sistema.|4|Sì|  
-|**XactSequence**|**bigint**|Token utilizzato per descrivere la transazione corrente.|50|Sì|  
+|**EventClass**|**int**|Tipo di evento = 81.|27|No|  
+|**EventSequence**|**int**|Sequenza di un determinato evento all'interno della richiesta.|51|No|  
+|**EventSubClass**|**int**|Tipo di sottoclasse di evento.<br /><br /> 1=Aumento della memoria<br /><br /> 2=Riduzione della memoria|21|Yes|  
+|**IntegerData**|**int**|Nuova quantità di memoria, in megabyte (MB).|25|Yes|  
+|**IsSystem**|**int**|Indica se l'evento è stato generato per un processo di sistema o un processo utente. 1 = sistema, 0 = utente.|60|Yes|  
+|**RequestID**|**int**|ID della richiesta contenente l'istruzione.|49|Yes|  
+|**ServerName**|**nvarchar**|Nome dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tracciata.|26|No|  
+|**SessionLoginName**|**nvarchar**|Nome dell'account di accesso dell'utente che ha avviato la sessione. Se ad esempio si stabilisce la connessione a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con l'account di accesso Login1 e si esegue un'istruzione con l'account di accesso Login2, **SessionLoginName** indica Login1 e **LoginName** indica Login2. In questa colonna sono visualizzati sia gli account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che quelli di Windows.|64|Yes|  
+|**SPID**|**int**|ID della sessione in cui si è verificato l'evento.|12|Yes|  
+|**StartTime**|**datetime**|Ora di inizio dell'evento, se disponibile.|14|Yes|  
+|**TransactionID**|**bigint**|ID della transazione assegnato dal sistema.|4|Yes|  
+|**XactSequence**|**bigint**|Token utilizzato per descrivere la transazione corrente.|50|Yes|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Eventi estesi](../extended-events/extended-events.md)   

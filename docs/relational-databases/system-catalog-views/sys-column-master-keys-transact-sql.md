@@ -26,27 +26,27 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: af9802fbf1568e7ce9d15882a29b96bbe0ad1762
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1cb1740bdb0ae26d91e2a9ad9e2becb69d3b2810
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47711009"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518709"
 ---
 # <a name="syscolumnmasterkeys-transact-sql"></a>sys.column_master_keys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Restituisce una riga per ogni chiave master del database aggiunta tramite il [CREATE MASTER KEY](../../t-sql/statements/create-column-master-key-transact-sql.md) istruzione. Ogni riga rappresenta una chiave master di colonna (CMK).  
     
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|Il nome di CMK.|  
 |**column_master_key_id**|**int**|ID della chiave master della colonna.|  
 |**create_date**|**datetime**|Data che Creazione chiave master della colonna.|  
 |**modify_date**|**datetime**|Data che ultima modifica della chiave master della colonna.|  
-|**key_store_provider_name**|**sysname**|Nome del provider per l'archivio chiavi master della colonna che contiene la chiave CMK. I valori consentiti sono:<br /><br /> MSSQL_CERTIFICATE_STORE: se l'archivio chiavi master della colonna è un certificato Store.<br /><br /> Un valore definito dall'utente, se l'archivio chiavi master della colonna è di tipo personalizzato.|  
+|**key_store_provider_name**|**sysname**|Nome del provider per l'archivio chiavi master della colonna che contiene la chiave CMK. I valori consentiti sono:<br /><br /> MSSQL_CERTIFICATE_STORE - se l'archivio chiavi master della colonna è un certificato Store.<br /><br /> Un valore definito dall'utente, se l'archivio chiavi master della colonna è di tipo personalizzato.|  
 |**key_path**|**nvarchar(4000)**|Un percorso di specifiche dell'archivio di chiave master della colonna della chiave. Il formato del percorso dipende dal tipo archivio chiave master della colonna. Esempio:<br /><br /> `'CurrentUser/Personal/'<thumbprint>`<br /><br /> Per un archivio chiavi master della colonna personalizzata, lo sviluppatore è responsabile della definizione è il percorso di una chiave per l'archivio chiavi master della colonna personalizzata.|  
-|**allow_enclave_computations**|**bit**|Indica se la chiave master della colonna è l'enclave abilitato, (se le chiavi di crittografia di colonna, crittografate con la chiave master, possono essere usate per i calcoli all'interno di zone franche sicuri sul lato server). Per altre informazioni, vedere [Always Encrypted con zone franche sicuri](../../relational-databases/security/encryption/always-encrypted-enclaves.md).|  
+|**allow_enclave_computations**|**bit**|Indica se la chiave master della colonna è l'enclave abilitato, (se le chiavi di crittografia di colonna, crittografate con la chiave master, possono essere usate per i calcoli all'interno di zone franche sicuri sul lato server). Per altre informazioni, vedere [Always Encrypted con enclave sicuri](../../relational-databases/security/encryption/always-encrypted-enclaves.md).|  
 |**signature**|**varbinary(max)**|Una firma digitale **key_path** e **allow_enclave_computations**, prodotto utilizzando la chiave master della colonna, che fa riferimento **key_path**.|
 
 

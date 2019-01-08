@@ -18,12 +18,12 @@ ms.assetid: 4a3e9173-7e3c-4100-a9ac-2f5d2c60a8b0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 192747d920f92681617d0dc19cc562e52e9c310e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1583f6de4938451b03eabfb7c9425120fa37f2fc
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47641716"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52537828"
 ---
 # <a name="spapplyjobtotargets-transact-sql"></a>sp_apply_job_to_targets (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,19 +46,19 @@ sp_apply_job_to_targets { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
  [ **@job_id =**] *job_id*  
  Numero di identificazione del processo da applicare ai server o ai gruppi di server di destinazione specificati. *job_id* viene **uniqueidentifier**, con un valore predefinito è NULL.  
   
- [ **@job_name =**] **'***job_name***'**  
+ [  **@job_name =**] **'**_job_name_**'**  
  Nome del processo da applicare ai server o ai gruppi di server di destinazione specificati. *nome_processo* viene **sysname**, con un valore predefinito è NULL.  
   
 > [!NOTE]  
 >  Entrambi *job_id* oppure *job_name* devono essere specificati, ma non è possibile specificarli entrambi.  
   
- [  **@target_server_groups =**] **'***target_server_groups***'**  
+ [  **@target_server_groups =**] **'**_target_server_groups_**'**  
  Elenco delimitato da virgole dei gruppi di server di destinazione ai quali si desidera applicare il processo specificato. *target_server_groups* viene **nvarchar(2048)**, con un valore predefinito è NULL.  
   
- [  **@target_servers=** ] **'***target_servers***'**  
+ [  **@target_servers=** ] **'**_target_servers_**'**  
  Elenco delimitato da virgole dei server di destinazione ai quali si desidera applicare il processo specificato. *target_servers*viene **nvarchar(2048)**, con un valore predefinito è NULL.  
   
- [  **@operation=** ] **'***operazione***'**  
+ [  **@operation=** ] **'**_operazione_**'**  
  Indica se il processo specificato deve essere applicato o rimosso dai server o dai gruppi di server di destinazione specificati. *operazione*viene **varchar(7)**, con un valore predefinito è APPLY. Operazioni valide sono **APPLY** e **rimuovere**.  
   
 ## <a name="return-code-values"></a>Valori restituiti  

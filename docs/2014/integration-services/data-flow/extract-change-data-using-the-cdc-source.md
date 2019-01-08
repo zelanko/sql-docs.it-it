@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 604fbafb-15fa-4d11-8487-77d7b626eed8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 29e8c0afa66e5f6f667ef9435470146109f5676d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a96c531302c92e61e2a2e0b9feb875d0a1097c43
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48140661"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52805193"
 ---
 # <a name="extract-change-data-using-the-cdc-source"></a>Estrarre dati delle modifiche tramite l'origine CDC
   Per aggiungere e configurare un'origine CDC, è necessario che il pacchetto includa già almeno un'attività Flusso di dati e un'attività di controllo CDC.  
@@ -45,15 +44,15 @@ ms.locfileid: "48140661"
   
 8.  Selezionare la modalità di elaborazione più adatta per le esigenze di elaborazione correnti. Di seguito sono elencate le opzioni possibili:  
   
-    -   **All**: restituisce le modifiche nell'intervallo CDC corrente senza i valori **Before Update** .  
+    -   **tutti i**: Restituisce le modifiche nell'intervallo CDC corrente senza il **Before Update** valori.  
   
-    -   **All with old values**: restituisce le modifiche nell'intervallo di elaborazione CDC corrente inclusi i valori precedenti (**Before Update**). Ogni operazione di aggiornamento prevede due righe: una con i valori prima dell'aggiornamento e una con i valori dopo l'aggiornamento.  
+    -   **Tutto con i valori precedenti**: Restituisce le modifiche nell'intervallo di elaborazione CDC corrente inclusi i valori precedenti (**Before Update**). Ogni operazione di aggiornamento prevede due righe: una con i valori prima dell'aggiornamento e una con i valori dopo l'aggiornamento.  
   
-    -   **Net**: restituisce una sola riga delle modifiche per ogni riga di origine modificata nell'intervallo di elaborazione CDC corrente. Se una riga di origine è stata aggiornata più volte, viene restituita la modifica combinata (ad esempio, inserimento+aggiornamento viene prodotto come un singolo aggiornamento e aggiornamento+eliminazione viene prodotto come una singola eliminazione). Quando si utilizza la modalità di elaborazione delle modifiche Net, è possibile suddividere le modifiche negli output Delete, Insert e Update e gestirli in parallelo, perché la singola riga di origine viene visualizzata in più output.  
+    -   **NET**: Restituisce una sola modifica riga per ogni riga di origine modificata nell'intervallo di elaborazione CDC corrente. Se una riga di origine è stata aggiornata più volte, viene restituita la modifica combinata (ad esempio, inserimento+aggiornamento viene prodotto come un singolo aggiornamento e aggiornamento+eliminazione viene prodotto come una singola eliminazione). Quando si utilizza la modalità di elaborazione delle modifiche Net, è possibile suddividere le modifiche negli output Delete, Insert e Update e gestirli in parallelo, perché la singola riga di origine viene visualizzata in più output.  
   
-    -   **Net with update mask**: questa modalità è simile alla modalità Net standard, ma aggiunge anche colonne booleane con il modello di nome **__$\<<nome-colonna>\___Changed**, che indica la presenza di colonne modificate nella riga delle modifiche corrente.  
+    -   **NET con maschera di aggiornamento**: Questa modalità è simile alla modalità Net standard, ma aggiunge anche colonne booleane con il modello di nome **_ $\<nome-colonna >\_Changed** che indica colonne modificate nell'attuale modifiche di riga.  
   
-    -   **Net with merge**: questa modalità è simile alla modalità Net standard, ma con le operazioni Insert e Update unite in una singola operazione Merge (UPSERT).  
+    -   **NET con merge**: Questa modalità è simile al normale modalità di rete, ma con le operazioni Insert e Update unite in una singola operazione di Merge (UPSERT).  
   
 9. Selezionare la variabile del pacchetto di stringhe SSIS che gestisce lo stato CDC per il contesto CDC corrente. Per altre informazioni sulla variabile di stato CDC, vedere [Definire una variabile di stato](define-a-state-variable.md).  
   
@@ -73,7 +72,7 @@ ms.locfileid: "48140661"
   
 ## <a name="see-also"></a>Vedere anche  
  [Editor origine CDC &#40;pagina Gestione connessione&#41;](../cdc-source-editor-connection-manager-page.md)   
- [Editor origine CDC &#40;(pagina colonne)&#41;](../cdc-source-editor-columns-page.md)   
- [Editor origine CDC &#40;pagina dell'Output degli errori&#41;](../cdc-source-editor-error-output-page.md)  
+ [Editor origine CDC &#40;pagina Colonne&#41;](../cdc-source-editor-columns-page.md)   
+ [Editor origine CDC &#40;pagina Output degli errori&#41;](../cdc-source-editor-error-output-page.md)  
   
   

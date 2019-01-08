@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: f7362e216213bc27efab0fd49f3ded2f15c37bdb
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: d459bafe395a10af75f8c0a721f0a8a08f39b3c6
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38050789"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52509679"
 ---
 # <a name="running-the-analysis-services-deployment-wizard"></a>Esecuzione della Distribuzione guidata Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "38050789"
 -   **Dal prompt dei comandi** quando viene eseguita al prompt dei comandi di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] distribuzione guidata genera uno script di distribuzione basato alle opzioni utilizzabili per eseguire la procedura guidata. Tramite la procedura guidata potrebbe venire richiesto l'input dell'utente e potrebbero venire modificati i file di input in base a tale input, potrebbe venire eseguita una distribuzione automatica invisibile all'utente oppure potrebbe venire creato uno script di distribuzione da utilizzare successivamente.  
   
 ## <a name="running-the-analysis-services-deployment-wizard-interactively"></a>Esecuzione della Distribuzione guidata Analysis Services in modo interattivo  
- Quando viene eseguita in modo interattivo, la Distribuzione guidata [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] legge i valori dei file di input e presenta le relative informazioni agli utenti. È possibile modificare i valori di input, ad esempio destinazione di distribuzione, impostazioni di configurazione, opzioni di distribuzione e password della stringa di connessione, oppure lasciarli inalterati. Se si modificano i valori di input, la procedura guidata Usa queste modifiche durante la generazione di script di distribuzione. Tramite la procedura guidata non vengono tuttavia apportate modifiche al file di input.  
+ Quando viene eseguita in modo interattivo, la Distribuzione guidata [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] legge i valori dei file di input e presenta le relative informazioni agli utenti. È possibile modificare questi valori, quali input come destinazione di distribuzione, le impostazioni di configurazione, le opzioni di distribuzione e password della stringa di connessione- o lasciarli inalterati. Se si modificano i valori di input, la procedura guidata Usa queste modifiche durante la generazione di script di distribuzione. Tramite la procedura guidata non vengono tuttavia apportate modifiche al file di input.  
   
 > [!NOTE]  
 >  Se si desidera utilizzare la Distribuzione guidata [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] per modificare i valori di input, eseguire la procedura guidata al prompt dei comandi e impostarla per l'esecuzione in modalità file di risposte.  
@@ -37,7 +37,7 @@ ms.locfileid: "38050789"
   
 -   Fare clic su **avviare** > **di Microsoft SQL Server** > **distribuzione guidata**.  
   
-     -oppure-  
+     oppure  
   
 -   Nel **progetti** cartella del [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] del progetto, fare doppio clic su di \<nome progetto > file con estensione asdatabase.
     > [!NOTE]  
@@ -73,6 +73,6 @@ ms.locfileid: "38050789"
   
 ## <a name="see-also"></a>Vedere anche  
  [Informazioni sullo script di distribuzione di Analysis Services](../../analysis-services/multidimensional-models/understanding-the-analysis-services-deployment-script.md)   
- [Distribuire soluzioni di modelli tramite la Distribuzione guidata](../../analysis-services/multidimensional-models/deploy-model-solutions-using-the-deployment-wizard.md)  
+ [Deploy Model Solutions Using the Deployment Wizard](../../analysis-services/multidimensional-models/deploy-model-solutions-using-the-deployment-wizard.md)  
   
   

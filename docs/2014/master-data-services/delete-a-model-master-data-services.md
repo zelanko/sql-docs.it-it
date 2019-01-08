@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - deleting models [Master Data Services]
@@ -14,12 +13,12 @@ ms.assetid: f0ad3cc4-aed7-47c8-94bc-2971fe9fe871
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: b7ed724e37a657a9d4a8e9b28b3fefc17e19ef28
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d053ee3d9e48e261eb7fe1ed8f89b7429949cd50
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48150361"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52796843"
 ---
 # <a name="delete-a-model-master-data-services"></a>Eliminare un modello (Master Data Services)
   Eliminare un modello per rimuoverlo, inclusi tutti i relativi dati, da [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)].  
@@ -49,7 +48,7 @@ ms.locfileid: "48150361"
 6.  Nell'ulteriore finestra di dialogo di conferma fare clic su **OK**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [I modelli &#40;Master Data Services&#41;](../../2014/master-data-services/models-master-data-services.md)   
+ [Modelli &#40;Master Data Services&#41;](../../2014/master-data-services/models-master-data-services.md)   
  [Creare un modello &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-model-master-data-services.md)  
   
   

@@ -22,19 +22,19 @@ ms.assetid: c117af35-aa53-44a5-8034-fa8715dc735f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ad76099b7cc6386e20b8c46f300298a13492f32b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ded740286ac86deee92d6822aaa5b3130f796849
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48104931"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52529541"
 ---
 # <a name="deploy-a-data-tier-application"></a>Distribuire un'applicazione livello dati
   È possibile distribuire un'applicazione livello dati (DAC) da un pacchetto di applicazione livello dati all'istanza esistente del [!INCLUDE[ssDE](../../includes/ssde-md.md)] o di [!INCLUDE[ssSDS](../../includes/sssds-md.md)] usando una procedura guidata o uno script di PowerShell. Il processo di distribuzione registra un'istanza di applicazione livello dati archiviando la definizione dell'applicazione livello dati nel database di sistema **msdb** (**master** in [!INCLUDE[ssSDS](../../includes/sssds-md.md)]), crea un database e quindi lo popola con tutti gli oggetti di database definiti nell'applicazione livello dati.  
   
--   **Prima di iniziare:**  [Utilità SQL Server](#SQLUtility), [Opzioni e impostazioni del database](#DBOptSettings), [Limitazioni e restrizioni](#LimitationsRestrictions), [Prerequisiti](#Prerequisites), [Sicurezza](#Security), [Autorizzazioni](#Permissions)  
+-   **Prima di iniziare:**  [Utilità SQL Server&#41](#SQLUtility), [opzioni e impostazioni del Database](#DBOptSettings), [limitazioni e restrizioni](#LimitationsRestrictions), [prerequisiti](#Prerequisites), [sicurezza](#Security), [Autorizzazioni](#Permissions)  
   
--   **Per distribuire un'applicazione livello dati, usando:**  [procedura guidata Distribuisci applicazione livello dati](#UsingDeployDACWizard), [PowerShell](#DeployDACPowerShell)  
+-   **Per distribuire un'applicazione livello dati, utilizzando:**  [La distribuzione guidata di applicazione livello dati](#UsingDeployDACWizard), [PowerShell](#DeployDACPowerShell)  
   
 ##  <a name="BeforeBegin"></a> Prima di iniziare  
  È possibile distribuire più volte lo stesso pacchetto di applicazione livello dati in una sola istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] , le distribuzioni devono, tuttavia, essere eseguite una alla volta. Il nome dell'istanza di applicazione livello dati specificato per ogni distribuzione deve essere univoco all'interno dell'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
@@ -68,7 +68,7 @@ ms.locfileid: "48104931"
   
 1.  In **Esplora oggetti**espandere il nodo per le istanze a cui si desidera distribuire l'applicazione livello dati.  
   
-2.  Fare clic con il pulsante destro del mouse sul nodo **Database** e quindi scegliere **Distribuisci applicazione livello dati**  
+2.  Fare clic con il pulsante destro del mouse sul nodo **Database** e quindi selezionare **Distribuisci applicazione livello dati**.  
   
 3.  Completare le finestre di dialogo della procedura guidata.  
   
@@ -189,13 +189,13 @@ ms.locfileid: "48104931"
   
 1.  Creare un oggetto server SMO e impostarlo sull'istanza a cui distribuire l'applicazione livello dati.  
   
-2.  Aprire un `ServerConnection` oggetti e connettersi alla stessa istanza.  
+2.  Aprire un oggetto `ServerConnection` e collegarlo alla stessa istanza.  
   
-3.  Usare `System.IO.File` per caricare il file del pacchetto dell'applicazione livello dati.  
+3.  Usare `System.IO.File` per caricare il file del pacchetto di applicazione livello dati.  
   
 4.  Usare `add_DacActionStarted` e `add_DacActionFinished` per sottoscrivere gli eventi di distribuzione dell'applicazione livello dati.  
   
-5.  Impostare il `DatabaseDeploymentProperties`.  
+5.  Impostare `DatabaseDeploymentProperties`.  
   
 6.  Usare il metodo `DacStore.Install` per distribuire l'applicazione livello dati.  
   

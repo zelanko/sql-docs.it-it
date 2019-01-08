@@ -11,23 +11,23 @@ ms.assetid: 8311ed32-00f3-451d-8279-946429f5fee1
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 28366043f6681ab01cd3d1912d5180ae06914ae8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 19d1fdd45018e436dddab95cfe01173ec63f794d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48157651"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52511668"
 ---
 # <a name="error-page-report-manager"></a>Pagina Errore (Gestione report)
-  La pagina Errore consente di visualizzare informazioni dettagliate su una condizione di errore. In questa pagina vengono visualizzati gli errori relativi al server o alla sessione. Gli errori di convalida correlati a controlli specifici della pagina vengono visualizzati accanto al controllo.  
+  La pagina Errore consente di visualizzare informazioni dettagliate su una condizione di errore. Gli errori di server locali o basati su sessione vengono visualizzati in questa pagina. Gli errori di convalida correlati a controlli specifici della pagina vengono visualizzati accanto al controllo.  
   
--   Se si sta esplorando un server di report locale e vengono visualizzati errori simili al seguente, vedere: [configurare un Server di Report in modalità nativa per l'amministrazione locale &#40;SSRS&#41;](report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)  
+-   Se si sta esplorando un server di report locale e vengono visualizzati errori simili al seguente, vedere: [Configurare un server di report in modalità nativa per gli amministratori locali &#40;SSRS&#41;](report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)  
   
      Utente "dominio\\[nome utente]' non dispone delle autorizzazioni necessarie. Verificare che siano state concesse autorizzazioni sufficienti e che le restrizioni di Controllo account utente di Windows siano state gestite.  
   
--   Se vengono visualizzati messaggi di errore simili al seguente, vedere [configurare un Server di Report per l'amministrazione remota](report-server/configure-a-report-server-for-remote-administration.md).  
+-   Se vengono visualizzati messaggi di errore simili al seguente, vedere [Configure a Report Server for Remote Administration](report-server/configure-a-report-server-for-remote-administration.md).  
   
-     Impossibile trovare il computer. "Il server RPC non è disponibile. Eccezione da HRESULT: 0x800706BA.  
+     Impossibile trovare il computer. "Il server RPC non è disponibile. (Eccezione da HRESULT: 0x800706ba) ".  
   
 -   È possibile impostare le proprietà di un server di report [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] in modo che vengano restituite ulteriori informazioni sulle condizioni di errore che si verificano nei server remoti. Se un messaggio di errore contiene il testo "Per altre informazioni su questo errore, passare al server di report nel computer server locale oppure abilitare errori remoti", vedere [Abilita errori remoti &#40;Reporting Services&#41;](report-server/enable-remote-errors-reporting-services.md).  
   

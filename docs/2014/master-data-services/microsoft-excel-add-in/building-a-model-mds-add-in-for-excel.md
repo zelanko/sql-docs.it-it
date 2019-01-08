@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 8ae26ec3-c5d5-4c4f-a810-2951a7454439
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 297441a73dcf2ff6f6e0e1808f863c7641edfa30
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0076abb28b486627d12c177d7f301b274239225c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48190571"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52784453"
 ---
 # <a name="building-a-model-mds-add-in-for-excel"></a>Compilazione di un modello (componente aggiuntivo MDS per Excel)
   In [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]gli amministratori possono eseguire un subset delle funzioni amministrative disponibili nell'applicazione Web [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] .  
@@ -38,7 +37,7 @@ ms.locfileid: "48190571"
 |Creare un'entità.|[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] (applicazione Web), servizio Web o [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]|[Creare un'entità &#40;componente aggiuntivo MDS per Excel&#41;](create-an-entity-mds-add-in-for-excel.md)|  
 |Creare un attributo basato su dominio.|[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] (applicazione Web), servizio Web o [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]|[Creare un attributo basato su dominio &#40;componente aggiuntivo MDS per Excel&#41;](create-a-domain-based-attribute-mds-add-in-for-excel.md)|  
 |Creare gruppi di attributi.|[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] applicazione Web o servizio Web|[Creare un gruppo di attributi &#40;Master Data Services&#41;](../create-an-attribute-group-master-data-services.md)|  
-|Creare regole business.|[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] applicazione Web o servizio Web|[Creare e pubblicare una regola Business &#40;Master Data Services&#41;](../create-and-publish-a-business-rule-master-data-services.md)|  
+|Creare regole business.|[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] applicazione Web o servizio Web|[Creare e pubblicare una regola di business &#40;Master Data Services&#41;](../create-and-publish-a-business-rule-master-data-services.md)|  
 |Creare viste sottoscrizioni.|[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] applicazione Web o servizio Web|[Creare una vista sottoscrizioni &#40;Master Data Services&#41;](../create-a-subscription-view-to-export-data-master-data-services.md)|  
 |Creare gerarchie.|[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] applicazione Web o servizio Web|[Creare una gerarchia derivata &#40;Master Data Services&#41;](../create-a-derived-hierarchy-master-data-services.md)<br /><br /> [Creare una gerarchia esplicita &#40;Master Data Services&#41;](../create-an-explicit-hierarchy-master-data-services.md)|  
 |Creare raccolte.|[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] applicazione Web o servizio Web|[Creare una raccolta &#40;Master Data Services&#41;](../create-a-collection-master-data-services.md)|  
@@ -51,21 +50,21 @@ ms.locfileid: "48190571"
   
 -   [Entità &#40;Master Data Services&#41;](../entities-master-data-services.md)  
   
--   [Gli attributi &#40;Master Data Services&#41;](../attributes-master-data-services.md)  
+-   [Attributi &#40;Master Data Services&#41;](../attributes-master-data-services.md)  
   
 -   [Attributi basati su dominio &#40;Master Data Services&#41;](../domain-based-attributes-master-data-services.md)  
   
 -   [Gruppi di attributi &#40;Master Data Services&#41;](../attribute-groups-master-data-services.md)  
   
--   [Le regole di business &#40;Master Data Services&#41;](../business-rules-master-data-services.md)  
+-   [Regole di business &#40;Master Data Services&#41;](../business-rules-master-data-services.md)  
   
 -   [Esportazione di dati &#40;Master Data Services&#41;](../overview-exporting-data-master-data-services.md)  
   
--   [Gerarchie di &#40;Master Data Services&#41;](../hierarchies-master-data-services.md)  
+-   [Gerarchie &#40;Master Data Services&#41;](../hierarchies-master-data-services.md)  
   
--   [Le raccolte &#40;Master Data Services&#41;](../collections-master-data-services.md)  
+-   [Raccolte &#40;Master Data Services&#41;](../collections-master-data-services.md)  
   
--   [Le versioni &#40;Master Data Services&#41;](../versions-master-data-services.md)  
+-   [Versioni &#40;Master Data Services&#41;](../versions-master-data-services.md)  
   
 -   [Sicurezza &#40;Master Data Services&#41;](../security-master-data-services.md)  
   

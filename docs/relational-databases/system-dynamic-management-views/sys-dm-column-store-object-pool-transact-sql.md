@@ -14,19 +14,19 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f70f0a6f6c4dc8ba4e72b30918c882c103c9410f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d9d88d2084533904dcbb47aad0d629b1aa8171e8
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47669109"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52544236"
 ---
 # <a name="sysdmcolumnstoreobjectpool-transact-sql"></a>sys.dm_column_store_object_pool (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
  Restituisce i conteggi dei diversi tipi di oggetto pool di utilizzo della memoria per gli oggetti indice columnstore.  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |`database_id`|`int`|ID del database. Questo è univoco all'interno di un'istanza di un database di SQL Server o un server di database SQL di Azure. |  
 |`object_id`|`int`|ID dell'oggetto. L'oggetto è uno degli oggetti object_type. | 
@@ -35,7 +35,7 @@ ms.locfileid: "47669109"
 |`column_id`|`int`|ID della colonna columnstore. È NULL per DELETE_BITMAP.| 
 |`row_group_id`|`int`|ID del rowgroup.|
 |`object_type`|`smallint`|1 = COLUMN_SEGMENT<br /><br /> 2 = COLUMN_SEGMENT_PRIMARY_DICTIONARY<br /><br /> 3 = COLUMN_SEGMENT_SECONDARY_DICTIONARY<br /><br /> 4 = COLUMN_SEGMENT_BULKINSERT_DICTIONARY<br /><br /> 5 = COLUMN_SEGMENT_DELETE_BITMAP|  
-|`object_type_desc`|`nvarchar(60)`|COLUMN_SEGMENT – un segmento di colonna. `object_id` è l'ID del segmento. Un segmento archivia tutti i valori per una colonna all'interno di un rowgroup. Ad esempio, se una tabella ha 10 colonne, esistono 10 segmenti di colonna per ogni rowgroup. <br /><br /> COLUMN_SEGMENT_PRIMARY_DICTIONARY – globale dizionario che contiene le informazioni di ricerca su tutti i segmenti di colonna nella tabella.<br /><br /> COLUMN_SEGMENT_SECONDARY_DICTIONARY - dizionario locale associato a una colonna.<br /><br /> COLUMN_SEGMENT_BULKINSERT_DICTIONARY: un'altra rappresentazione nel dizionario globale. In questo modo una ricerca inversa del valore da dictionary_id. Utilizzato per creare segmenti compressi come parte del processo Tuple-Mover o il caricamento Bulk.<br /><br /> COLUMN_SEGMENT_DELETE_BITMAP: Elimina una bitmap che tiene traccia di segmento. È presente una singola bitmap delete per ogni partizione.|  
+|`object_type_desc`|`nvarchar(60)`|COLUMN_SEGMENT - un segmento di colonna. `object_id` è l'ID del segmento. Un segmento archivia tutti i valori per una colonna all'interno di un rowgroup. Ad esempio, se una tabella ha 10 colonne, esistono 10 segmenti di colonna per ogni rowgroup. <br /><br /> COLUMN_SEGMENT_PRIMARY_DICTIONARY - globale dizionario che contiene le informazioni di ricerca su tutti i segmenti di colonna nella tabella.<br /><br /> COLUMN_SEGMENT_SECONDARY_DICTIONARY - dizionario locale associato a una colonna.<br /><br /> COLUMN_SEGMENT_BULKINSERT_DICTIONARY - un'altra rappresentazione nel dizionario globale. In questo modo una ricerca inversa del valore da dictionary_id. Utilizzato per creare segmenti compressi come parte del processo Tuple-Mover o il caricamento Bulk.<br /><br /> COLUMN_SEGMENT_DELETE_BITMAP - Elimina una bitmap che tiene traccia di segmento. È presente una singola bitmap delete per ogni partizione.|  
 |`access_count`|`int`|Numero di leggere o scrittura gli accessi a questo oggetto.|  
 |`memory_used_in_bytes`|`bigint`|Memoria utilizzata da questo oggetto nel pool di oggetti.|  
 |`object_load_time`|`datetime`|Ora per quando è stato portato object_id nel pool di oggetti.|  

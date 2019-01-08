@@ -5,8 +5,7 @@ ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - IHpublishercolumns
@@ -19,12 +18,12 @@ ms.assetid: a5347750-224c-40d9-ae12-57e7213b7db9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6a8a2c4d6850b814d79b360ff9748579cf44b7b1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f965bb76f13c01531ba5007d82de9e42c8138f05
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47757569"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52802493"
 ---
 # <a name="ihpublishercolumns-transact-sql"></a>IHpublishercolumns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +32,7 @@ ms.locfileid: "47757569"
   
 ## <a name="definition"></a>Definizione  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**publishercolumn_id**|**int**|Identifica una colonna pubblicata.|  
 |**table_id**|**int**|Identifica la tabella di origine [IHpublishertables](../../relational-databases/system-tables/ihpublishertables-transact-sql.md) a cui appartiene la colonna.|  
@@ -41,9 +40,9 @@ ms.locfileid: "47757569"
 |**name**|**sysname**|Nome della colonna pubblicata.|  
 |**column_ordinal**|**int**|Identifica la colonna in base all'ordine.|  
 |**type**|**varchar(255)**|Tipo di dati della colonna di origine nel server di pubblicazione.|  
-|**Lunghezza**|**bigint**|Lunghezza della colonna di origine nel server di pubblicazione.|  
+|**length**|**bigint**|Lunghezza della colonna di origine nel server di pubblicazione.|  
 |**Prec**|**int**|Precisione della colonna di origine nel server di pubblicazione.|  
-|**Scalabilità**|**int**|Scala della colonna di origine nel server di pubblicazione.|  
+|**scala**|**int**|Scala della colonna di origine nel server di pubblicazione.|  
 |**IsNullable**|**bit**|Indica se la colonna accetta valori NULL, dove **1** significa che i valori NULL vengono accettati.|  
 |**iscaptured**|**bit**|Indica se esiste un trigger nella colonna. Il trigger potrebbe esistere anche se la colonna non è pubblicata in un articolo. Un valore pari **1** significa che il trigger esiste nella colonna.|  
   

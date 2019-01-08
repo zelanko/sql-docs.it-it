@@ -23,12 +23,12 @@ ms.assetid: 591fe30b-d88f-4a71-94d4-4a3907fc275d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 185e9a154a7eb51ff15ce1b45bfd82dc2e36adf0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 78172be64641195f787e0e807149b4995c3b5805
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48087771"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52530589"
 ---
 # <a name="browse-a-model-using-the-microsoft-cluster-viewer"></a>Visualizzare un modello utilizzando il Visualizzatore Microsoft Clustering
   Il Visualizzatore [!INCLUDE[msCoName](../../includes/msconame-md.md)] Clustering disponibile in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] consente di visualizzare i modelli di data mining compilati con l'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Clustering. L'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Clustering è un algoritmo di segmentazione da usare per l'esplorazione dei dati al fine di identificare eventuali anomalie e creare stime. Per altre informazioni su questo algoritmo, vedere [Algoritmo Microsoft Clustering](microsoft-clustering-algorithm.md).  
@@ -50,7 +50,7 @@ ms.locfileid: "48087771"
 ###  <a name="BKMK_Diagram"></a> Diagramma dei cluster  
  Nella scheda **Diagramma dei cluster** del Visualizzatore [!INCLUDE[msCoName](../../includes/msconame-md.md)] Clustering vengono visualizzati tutti i cluster di un modello di data mining. L'ombreggiatura della linea che collega un cluster all'altro rappresenta il grado di somiglianza dei cluster. Se l'ombreggiatura è chiara o inesistente, il grado di somiglianza dei cluster è basso. Man mano che la linea diventa più scura, il grado di somiglianza dei collegamenti aumenta. È possibile modificare il numero di linee visualizzate regolando il dispositivo di scorrimento a destra dei cluster. Se si sposta il dispositivo di scorrimento verso il basso, vengono visualizzati solo i collegamenti più attendibili.  
   
- Per impostazione predefinita, l'ombreggiatura rappresenta la popolazione del cluster. Le opzioni **Variabile****ombreggiatura** e **Stato** consentono di selezionare la coppia attributo/stato rappresentata dall'ombreggiatura. Più scura è l'ombreggiatura, maggiore è la distribuzione dell'attributo per uno stato specifico. La distribuzione diminuisce man mano che l'ombreggiatura diventa più chiara.  
+ Per impostazione predefinita, l'ombreggiatura rappresenta la popolazione del cluster. Tramite il **Variabileombreggiatura** e **stato** opzioni, è possibile selezionare quale attributo e la coppia di stati è l'ombreggiatura rappresenta. Più scura è l'ombreggiatura, maggiore è la distribuzione dell'attributo per uno stato specifico. La distribuzione diminuisce man mano che l'ombreggiatura diventa più chiara.  
   
  Per rinominare un cluster, fare clic con il pulsante destro del mouse sul nodo corrispondente e scegliere **Rinomina cluster**. Il nuovo nome è persistente nel server.  
   
@@ -81,9 +81,9 @@ ms.locfileid: "48087771"
   
 ## <a name="see-also"></a>Vedere anche  
  [Algoritmo Microsoft Clustering](microsoft-clustering-algorithm.md)   
- [Attività del Visualizzatore modelli e procedure dettagliate di data mining](mining-model-viewer-tasks-and-how-tos.md)   
- [Attività del Visualizzatore modelli e procedure dettagliate di data mining](mining-model-viewer-tasks-and-how-tos.md)   
- [Strumenti di Data Mining](data-mining-tools.md)   
+ [Attività e procedure relative al visualizzatore modello di data mining](mining-model-viewer-tasks-and-how-tos.md)   
+ [Attività e procedure relative al visualizzatore modello di data mining](mining-model-viewer-tasks-and-how-tos.md)   
+ [Strumenti di data mining](data-mining-tools.md)   
  [Visualizzatori modello di data mining](data-mining-model-viewers.md)  
   
   

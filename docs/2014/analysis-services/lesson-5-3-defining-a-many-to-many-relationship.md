@@ -11,12 +11,12 @@ ms.assetid: 7bebb174-148c-4cbb-a285-2f6d536a16d5
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 50997645272c5ec900a8a89a8da41a1da421ac5c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2c05e45f5641c2d325c5e7d05472e3881ee7c807
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48105431"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52531163"
 ---
 # <a name="defining-a-many-to-many-relationship"></a>Definizione di una relazione molti-a-molti
   Quando si definisce una dimensione, generalmente ogni fatto viene unito in join a un solo membro della dimensione, mentre un singolo membro della dimensione può essere associato a molti fatti. A ogni cliente possono essere ad esempio associati più ordini, ma ogni ordine appartiene a un unico cliente. Nella terminologia dei database relazionali, questa viene definita una *relazione uno-a-molti*. A volte, tuttavia, è possibile che un singolo fatto venga unito in join a più membri della dimensione. Nella terminologia dei database relazionali, questa viene definita una *relazione molti-a-molti*. Ad esempio, i motivi che determinano un acquisto da parte di un cliente possono essere diversi e un motivo per l'acquisto può essere associato a più acquisti. Una tabella di join viene utilizzata per definire i motivi di vendita correlati a ogni acquisto. Una dimensione Sales Reason creata a partire da relazioni di questo tipo può disporre quindi di più membri che corrispondono a una singola transazione di vendita. Le dimensioni molti-a-molti consentono di espandere la modellazione dimensionale oltre lo schema star classico e supportano analisi complesse quando le dimensioni non sono direttamente associate a una tabella dei fatti.  
@@ -26,7 +26,7 @@ ms.locfileid: "48105431"
  Con una dimensione molti-a-molti, i valori sono di tipo distinct sommati, ovvero non verranno aggregati più di una volta nel membro Totale.  
   
 > [!NOTE]  
->  Per supportare una relazione delle dimensioni molti-a-molti, nella vista origine dati è necessario definire una relazione tra chiave primaria e chiave esterna tra tutte le tabelle coinvolte. In caso contrario, non sarà possibile selezionare il gruppo di misure intermedio corretto quando la relazione viene stabilita nella scheda **Utilizzo dimensioni** di Progettazione cubi.  
+>  Per supportare una relazione tra dimensioni molti-a-molti, una relazione di chiave esterna-chiave primaria deve essere definita nella vista origine dati tra tutte le tabelle coinvolte. In caso contrario, non sarà possibile selezionare il gruppo di misure intermedio corretto quando la relazione viene stabilita nella scheda **Utilizzo dimensioni** di Progettazione cubi.  
   
  Per altre informazioni, vedere [Relazioni tra dimensioni](multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)e [Definire una relazione molti-a-molti e le relative proprietà](multidimensional-models/define-a-many-to-many-relationship-and-many-to-many-relationship-properties.md).  
   
@@ -44,7 +44,7 @@ ms.locfileid: "48105431"
   
 5.  Nella finestra di dialogo **Aggiungi/Rimuovi tabelle** aggiungere le tabelle **DimSalesReason** e **FactInternetSalesReason** all'elenco **Oggetti inclusi** e quindi fare clic su **OK**.  
   
-     Si noti che le relazioni tra chiave primaria e chiave esterna tra le tabelle coinvolte vengono stabilite automaticamente poiché le relazioni sono definite nel database relazionale sottostante. Se le relazioni non fossero definite nel database relazionale sottostante, sarebbe necessario definirle nella vista origine dati.  
+     Si noti che le relazioni di chiave esterna-chiave primarie tra le tabelle coinvolte vengono stabilite automaticamente poiché le relazioni sono definite nel database relazionale sottostante. Se le relazioni non fossero definite nel database relazionale sottostante, sarebbe necessario definirle nella vista origine dati.  
   
 6.  Scegliere **Layout automatico** dal menu **Formato**e quindi fare clic su **Diagramma**.  
   

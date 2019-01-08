@@ -17,12 +17,12 @@ ms.assetid: 56b5982e-cb94-46c0-8fbb-772fc275354a
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 35ef352eda0d712098ce0453caccf4bc2422b4b4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 52f677c99b72de5a4342d534bddcd216027e4e0d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48122621"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52540917"
 ---
 # <a name="create-unique-indexes"></a>Creare indici univoci
   In questo argomento si illustra come creare un indice univoco per una tabella in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Un indice univoco consente di garantire che nella chiave dell'indice non siano contenuti valori duplicati e che pertanto ogni riga della tabella sia univoca. Non vi sono differenze significative tra la creazione di un vincolo UNIQUE e la creazione di un indice univoco indipendente da un vincolo. La convalida dei dati viene eseguita nello stesso modo e da Query Optimizer non viene applicata alcuna distinzione tra un indice univoco creato tramite un vincolo o manualmente. Tuttavia, se si crea un vincolo UNIQUE nella colonna, l'obiettivo dell'indice è chiaro. Per ulteriori informazioni sui vincoli UNIQUE, vedere [Unique Constraints and Check Constraints](../tables/unique-constraints-and-check-constraints.md).  
@@ -42,7 +42,7 @@ ms.locfileid: "48122621"
   
      [Limitazioni e restrizioni](#Restrictions)  
   
-     [Security](#Security)  
+     [Sicurezza](#Security)  
   
 -   **Per creare un indice univoco per una tabella utilizzando:**  
   
@@ -112,7 +112,7 @@ ms.locfileid: "48122621"
   
 7.  In **(Generale)** nella griglia principale selezionare **Tipo** , quindi scegliere **Indice** dall'elenco.  
   
-8.  Selezionare **Colonne**, quindi fare clic sul pulsante con i puntini di sospensione **(…)**.  
+8.  Selezionare **Colonne** e quindi fare clic sul pulsante con i puntini di sospensione **(...)**.  
   
 9. In **Nome colonna** della finestra di dialogo **Colonne indice**selezionare le colonne da indicizzare. È possibile selezionare fino a 16 colonne. Per ottenere prestazioni ottimali, selezionare una o due colonne per indice. Per ogni colonna selezionata, è possibile specificare se nell'indice i valori della colonna dovranno essere organizzati in ordine crescente o decrescente.  
   
@@ -120,7 +120,7 @@ ms.locfileid: "48122621"
   
 11. In **(Generale)** nella griglia principale selezionare **Univoco** , quindi scegliere **Sì** dall'elenco.  
   
-12. Facoltativo: In **Progettazione tabelle**nella griglia principale selezionare **Ignora chiavi duplicate** , quindi scegliere **Sì** dall'elenco. Eseguire questa operazione se si desidera ignorare i tentativi per aggiungere dati che comporterebbero la creazione di una chiave duplicata nell'indice univoco.  
+12. Facoltativo: Nella griglia principale, sotto **Progettazione tabelle**, selezionare **Ignora chiavi Duplicate** e quindi scegliere **Sì** dall'elenco. Eseguire questa operazione se si desidera ignorare i tentativi per aggiungere dati che comporterebbero la creazione di una chiave duplicata nell'indice univoco.  
   
 13. Scegliere **Chiudi**.  
   
@@ -134,7 +134,7 @@ ms.locfileid: "48122621"
   
 3.  Espandere la tabella in cui si desidera creare un indice univoco.  
   
-4.  Fare clic con il pulsante destro del mouse sulla cartella **Indici** , scegliere **Nuovo indice**e selezionare **Indice non cluster**.  
+4.  Fare clic con il pulsante destro del mouse sulla cartella **Indici**, scegliere **Nuovo indice**e selezionare **Indice non cluster**.  
   
 5.  Nella pagina **Generale** della finestra di dialogo **Nuovo indice** immettere il nome del nuovo indice nella casella **Nome indice** .  
   
@@ -148,7 +148,7 @@ ms.locfileid: "48122621"
   
 10. Nella finestra di dialogo **Nuovo indice** fare clic su **OK**.  
   
-##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
   
 #### <a name="to-create-a-unique-index-on-a-table"></a>Per creare un indice univoco per una tabella  
   

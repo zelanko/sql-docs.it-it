@@ -27,12 +27,12 @@ ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 089ced09d718b0716f0c19d4553e52ff02c3d505
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 07aae4f4e619e38d41cd16a08e1e8f7267f5ed29
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51665580"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52533564"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017-on-linux"></a>Edizioni e funzionalità supportate di SQL Server 2017 in Linux
 
@@ -58,7 +58,7 @@ Per un elenco delle funzionalità di SQL Server non è disponibile in Linux, ved
 |Edizione di[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] |Definizione|  
 |---------------------------------------|----------------|  
 |Enterprise|L'offerta premium, [!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Enterprise edition offre funzionalità complete di datacenter fascia alta con prestazioni velocissime, abilitando livelli di servizio elevati per carichi di lavoro di importanza strategica.|  
-|Standard|[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Edizione standard offre gestione di dati di base per i reparti e piccole organizzazioni di eseguire le applicazioni e supporta gli strumenti di sviluppo comuni locali e cloud, abilitando una gestione efficace del database con risorse IT minime.|  
+|Standard|[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Standard edition offre gestione di dati di base per i reparti e piccole organizzazioni di eseguire le applicazioni e supporta gli strumenti di sviluppo comuni locali e cloud, abilitando una gestione efficace del database con risorse IT minime.|  
 |Web|[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Web Edition costituisce un'opzione con un costo totale di proprietà ridotto per provider di servizi di hosting Web e VAP Web, offrendo funzionalità di scalabilità, convenienza e facilità di gestione per proprietà Web di ogni dimensione.|  
 |Developer|L'edizione[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Developer consente agli sviluppatori di compilare qualsiasi tipo di applicazione in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Benché includa tutte le funzionalità dell'edizione Enterprise, ne è consentito l'utilizzo solo come sistema di sviluppo e di prova e non come server di produzione. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Developer rappresenta la scelta ideale per chi desidera compilare e testare applicazioni.|  
 |Express edition|L'edizione Express è un database di base gratuito, ideale per l'apprendimento e la compilazione di applicazioni basate sui dati desktop e server di piccole dimensioni. Questa edizione costituisce la scelta ottimale per fornitori di software indipendenti, sviluppatori e sviluppatori amatoriali di applicazioni client. Se sono necessarie funzionalità di database più avanzate, è possibile aggiornare facilmente [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Express a versioni di fascia superiore di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].|  
@@ -71,7 +71,7 @@ Per un elenco delle funzionalità di SQL Server non è disponibile in Linux, ved
 
 SQL Server 2017 in Linux supporta il motore di database di SQL Server. Nella tabella seguente vengono descritte le funzionalità nel motore di database.   
   
-|Componenti server|Description|  
+|Componenti server|Descrizione|  
 |-----------------------|-----------------|  
 |[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]|[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] include il [!INCLUDE[ssDE](../includes/ssde-md.md)], il servizio principale per l'archiviazione, elaborazione e la protezione dei dati, replica, ricerca full-text, strumenti per la gestione relazionali e dati XML e in integrazione analitica di database.|  
 
@@ -97,23 +97,23 @@ L'edizione Developer continua a supportare un solo client per la [riesecuzione d
   
 |Funzionalità|Enterprise|Standard|Web|Express|  
 |-------------|----------------|--------------|---------|------------------------|  
-|Log shipping|Sì|Sì|Sì|no|  
-|Compressione backup|Sì|Sì|no|no| 
-|Snapshot del database|Sì|no|no|no|
-|Always On istanza del cluster di failover<sup>1</sup>|Sì|Sì|no|no| 
-|I gruppi di disponibilità Always On<sup>2</sup>|Sì|no|no|no|
-|I gruppi di disponibilità di base <sup>3</sup>|no|Sì|no|no|
-|Gruppo di disponibilità con commit di un numero minimo di repliche|Sì|Sì|no|no|
-|Gruppo di disponibilità senza cluster|Sì|Sì|no|no|
-|Ripristino di pagine e file online|Sì|no|no|no|
-|Indicizzazione online|Sì|no|no|no|
-|Ricompilazioni degli indici online ripristinabili|Sì|no|no|no|
-|Modifica dello schema online|Sì|no|no|no|
-|Recupero rapido|Sì|no|no|no|
-|Backup con mirroring|Sì|no|no|no|
-|Aggiunta di memoria a caldo e CPU|Sì|no|no|no|
-|Backup crittografato|Sì|Sì|no|no|
-|Backup ibrido in Microsoft Azure (backup nell'URL)|Sì|Sì|no|no|
+|Log shipping|Yes|Yes|Yes|No|  
+|Compressione backup|Yes|Yes|No|No| 
+|Snapshot del database|Yes|No|No|No|
+|Always On istanza del cluster di failover<sup>1</sup>|Yes|Yes|No|No| 
+|I gruppi di disponibilità Always On<sup>2</sup>|Yes|No|No|No|
+|I gruppi di disponibilità di base <sup>3</sup>|No|Yes|No|No|
+|Gruppo di disponibilità con commit di un numero minimo di repliche|Yes|Yes|No|No|
+|Gruppo di disponibilità senza cluster|Yes|Yes|No|No|
+|Ripristino di pagine e file online|Yes|No|No|No|
+|Indicizzazione online|Yes|No|No|No|
+|Ricompilazioni degli indici online ripristinabili|Yes|No|No|No|
+|Modifica dello schema online|Yes|No|No|No|
+|Recupero rapido|Yes|No|No|No|
+|Backup con mirroring|Yes|No|No|No|
+|Aggiunta di memoria a caldo e CPU|Yes|No|No|No|
+|Backup crittografato|Yes|Yes|No|No|
+|Backup ibrido in Microsoft Azure (backup nell'URL)|Yes|Yes|No|No|
   
 <sup>1</sup> su Enterprise edition, il numero di nodi è il valore massimo del sistema operativo. In Standard Edition è presente il supporto per due nodi. 
 
@@ -125,23 +125,23 @@ L'edizione Developer continua a supportare un solo client per la [riesecuzione d
   
 |Funzionalità|Enterprise|Standard|Web|Express|  
 |-------------|----------------|--------------|---------|------------------------| 
-|Columnstore <sup>1</sup>|Sì|Sì|Sì|Sì|  
-|File binari di oggetti di grandi dimensioni in indici columnstore cluster|Sì|Sì|Sì|Sì|  
-|Ricompilazione degli indici columnstore non cluster online|Sì|no|no|no|
-|OLTP in memoria <sup>1</sup>|Sì|Sì|Sì|Sì|
-|Memoria principale persistente|Sì|Sì|Sì|Sì|
-|Partizionamento di tabelle e indici|Sì|Sì|Sì|Sì|  
-|Compressione dati|Sì|Sì|Sì|Sì|
-|Resource Governor|Sì|no|no|no|  
-|Parallelismo della tabella partizionata|Sì|no|no|no|
-|Allocazione di una matrice di buffer e di memoria in pagine grandi con supporto NUMA|Sì|no|no|no|
-|Governance delle risorse di I/O|Sì|no|no|no|  
-|Durabilità posticipata|Sì|Sì|Sì|Sì|
-|Ottimizzazione automatica|Sì|no|no|no|
-|Join adattivi in modalità batch|Sì|no|no|no|
-|Feedback delle concessioni di memoria in modalità batch|Sì|no|no|no|
-|Esecuzione interleaved per funzioni con valori di tabella a più istruzioni|Sì|Sì|Sì|Sì|
-|Miglioramenti dell'inserimento bulk|Sì|Sì|Sì|Sì|
+|Columnstore <sup>1</sup>|Yes|Yes|Yes|Yes|  
+|File binari di oggetti di grandi dimensioni in indici columnstore cluster|Yes|Yes|Yes|Yes|  
+|Ricompilazione degli indici columnstore non cluster online|Yes|No|No|No|
+|OLTP in memoria <sup>1</sup>|Yes|Yes|Yes|Yes|
+|Memoria principale persistente|Yes|Yes|Yes|Yes|
+|Partizionamento di tabelle e indici|Yes|Yes|Yes|Yes|  
+|Compressione dati|Yes|Yes|Yes|Yes|
+|Resource Governor|Yes|No|No|No|  
+|Parallelismo della tabella partizionata|Yes|No|No|No|
+|Allocazione di una matrice di buffer e di memoria in pagine grandi con supporto NUMA|Yes|No|No|No|
+|Governance delle risorse di I/O|Yes|No|No|No|  
+|Durabilità posticipata|Yes|Yes|Yes|Yes|
+|Ottimizzazione automatica|Yes|No|No|No|
+|Join adattivi in modalità batch|Yes|No|No|No|
+|Feedback delle concessioni di memoria in modalità batch|Yes|No|No|No|
+|Esecuzione interleaved per funzioni con valori di tabella a più istruzioni|Yes|Yes|Yes|Yes|
+|Miglioramenti dell'inserimento bulk|Yes|Yes|Yes|Yes|
 
 
 <sup>1</sup> Le dimensioni dati OLTP in memoria e la cache dei segmenti Columnstore sono limitate alla quantità di memoria specificata dall'edizione nella sezione Limiti di scalabilità. I gradi di parallelismo (DOP) massimi sono limitati. I gradi di parallelismo del processo (DOP) per la compilazione di un indice è limitato a 2 DOP per l'edizione Standard e 1 DOP per le edizioni Web ed Express. Questo si riferisce agli indici columnstore creati tramite le tabelle basate su disco e le tabelle ottimizzate per la memoria.
@@ -150,52 +150,52 @@ L'edizione Developer continua a supportare un solo client per la [riesecuzione d
   
 |Funzionalità|Enterprise|Standard|Web|Express|
 |-------------|----------------|--------------|---------|------------------------------------| 
-|Sicurezza a livello di riga|Sì|Sì|Sì|Sì|  
-|Crittografia sempre attiva|Sì|Sì|Sì|Sì| 
-|Mascheramento dati dinamici|Sì|Sì|Sì|Sì|   
-|Controllo di base|Sì|Sì|Sì|Sì| 
-|Controllo con granularità fine|Sì|Sì|Sì|Sì| 
-|Crittografia trasparente del database|Sì|no|no|no|   
-|Ruoli definiti dall'utente|Sì|Sì|Sì|Sì| 
-|Database indipendenti|Sì|Sì|Sì|Sì| 
-|Crittografia per backup|Sì|Sì|no|no|  
+|Sicurezza a livello di riga|Yes|Yes|Yes|Yes|  
+|Crittografia sempre attiva|Yes|Yes|Yes|Yes| 
+|Mascheramento dati dinamici|Yes|Yes|Yes|Yes|   
+|Controllo di base|Yes|Yes|Yes|Yes| 
+|Controllo con granularità fine|Yes|Yes|Yes|Yes| 
+|Crittografia trasparente del database|Yes|No|No|No|   
+|Ruoli definiti dall'utente|Yes|Yes|Yes|Yes| 
+|Database indipendenti|Yes|Yes|Yes|Yes| 
+|Crittografia per backup|Yes|Yes|No|No|  
 
 ##  <a name="RDBMSM"></a> Gestione RDBMS  
   
 |Funzionalità|Enterprise|Standard|Web|Express|   
 |-------------|----------------|--------------|---------|------------------------|  
-|Connessione amministrativa dedicata|Sì|Sì|Sì|Sì, con flag di traccia|Sì, con flag di traccia|   
-|Supporto per script di PowerShell|Sì|Sì|Sì|Sì| 
-|Supporto per le operazioni del componente dell'applicazione livello dati (DAC) - estrazione, distribuzione, aggiornamento, eliminazione|Sì|Sì|Sì|Sì| 
-|Automazione dei criteri (controllo pianificato e modifica)|Sì|Sì|Sì|no|no|   
-|Agente di raccolta dati relativi alle prestazioni|Sì|Sì|Sì|no|no| 
-|Report di prestazioni standard|Sì|Sì|Sì|no|no| 
-|Guide di piano e blocco del piano per le guide di piano|Sì|Sì|Sì|no|no|   
-|Query diretta di viste indicizzate (tramite hint NOEXPAND)|Sì|Sì|Sì|Sì| 
-|Gestione automatica viste indicizzate|Sì|Sì|Sì|no|no| 
-|Viste partizionate distribuite|Sì|no|no|no| 
-|Operazioni indicizzate parallele|Sì|no|no|no|  
-|Utilizzo automatico di viste indicizzate da Query Optimizer|Sì|no|no|no| 
-|Verifica di coerenza parallela|Sì|no|no|no| 
-|Punto di controllo dell'Utilità SQL Server|Sì|no|no|no|    
+|Connessione amministrativa dedicata|Yes|Yes|Yes|Sì, con flag di traccia|Sì, con flag di traccia|   
+|Supporto per script di PowerShell|Yes|Yes|Yes|Yes| 
+|Supporto per le operazioni del componente dell'applicazione livello dati (DAC) - estrazione, distribuzione, aggiornamento, eliminazione|Yes|Yes|Yes|Yes| 
+|Automazione dei criteri (controllo pianificato e modifica)|Yes|Yes|Yes|No|No|   
+|Agente di raccolta dati relativi alle prestazioni|Yes|Yes|Yes|No|No| 
+|Report di prestazioni standard|Yes|Yes|Yes|No|No| 
+|Guide di piano e blocco del piano per le guide di piano|Yes|Yes|Yes|No|No|   
+|Query diretta di viste indicizzate (tramite hint NOEXPAND)|Yes|Yes|Yes|Yes| 
+|Gestione automatica viste indicizzate|Yes|Yes|Yes|No|No| 
+|Viste partizionate distribuite|Yes|No|No|No| 
+|Operazioni indicizzate parallele|Yes|No|No|No|  
+|Utilizzo automatico di viste indicizzate da Query Optimizer|Yes|No|No|No| 
+|Verifica di coerenza parallela|Yes|No|No|No| 
+|Punto di controllo dell'Utilità SQL Server|Yes|No|No|No|    
 
 ##  <a name="Programmability"></a> Programmability  
   
 |Funzionalità|Enterprise|Standard|Web|Express 
 |-------------|----------------|--------------|---------|------------------------|  
-|JSON|Sì|Sì|Sì|Sì|   
-|Archivio query|Sì|Sì|Sì|Sì|   
-|Temporale|Sì|Sì|Sì|Sì|   
-|Supporto XML nativo|Sì|Sì|Sì|Sì| 
-|Indicizzazione XML|Sì|Sì|Sì|Sì| 
-|Funzionalità MERGE e UPSERT|Sì|Sì|Sì|Sì|   
-|Tipi di dati data e ora|Sì|Sì|Sì|Sì|  
-|Supporto di internazionalizzazione|Sì|Sì|Sì|Sì| 
-|Ricerca full-text e semantica|Sì|Sì|Sì|Sì|no| 
-|Impostazione della lingua nelle query|Sì|Sì|Sì|Sì|no|   
-|Service Broker (messaggistica)|Sì|Sì|No (solo client)|No (solo client)|No (solo client)|   
-|Transact-SQL - endpoint|Sì|Sì|Sì|no|no| 
-|Grafico|Sì|Sì|Sì|Sì|  
+|JSON|Yes|Yes|Yes|Yes|   
+|Archivio query|Yes|Yes|Yes|Yes|   
+|Temporale|Yes|Yes|Yes|Yes|   
+|Supporto XML nativo|Yes|Yes|Yes|Yes| 
+|Indicizzazione XML|Yes|Yes|Yes|Yes| 
+|Funzionalità MERGE e UPSERT|Yes|Yes|Yes|Yes|   
+|Tipi di dati data e ora|Yes|Yes|Yes|Yes|  
+|Supporto di internazionalizzazione|Yes|Yes|Yes|Yes| 
+|Ricerca full-text e semantica|Yes|Yes|Yes|Yes|No| 
+|Impostazione della lingua nelle query|Yes|Yes|Yes|Yes|No|   
+|Service Broker (messaggistica)|Yes|Yes|No (solo client)|No (solo client)|No (solo client)|   
+|Transact-SQL - endpoint|Yes|Yes|Yes|No|No| 
+|Grafico|Yes|Yes|Yes|Yes|  
 
 
 <sup>1</sup> La scalabilità orizzontale con più nodi di calcolo richiede un nodo head.
@@ -208,10 +208,10 @@ Per informazioni sulle funzionalità di Integration Services (SSIS) supportate d
   
 |Nome funzionalità|Enterprise|Standard|Web|Express|  
 |------------------|----------------|--------------|---------|------------------------------------|------------------------|
-|Indici spaziali|Sì|Sì|Sì|Sì|   
-|Tipi di dati planari e geodetici|Sì|Sì|Sì|Sì| 
-|Librerie spaziali avanzate|Sì|Sì|Sì|Sì|   
-|Importazione/esportazione di formati di dati spaziali standard del settore|Sì|Sì|Sì|Sì|   
+|Indici spaziali|Yes|Yes|Yes|Yes|   
+|Tipi di dati planari e geodetici|Yes|Yes|Yes|Yes| 
+|Librerie spaziali avanzate|Yes|Yes|Yes|Yes|   
+|Importazione/esportazione di formati di dati spaziali standard del settore|Yes|Yes|Yes|Yes|   
 
   
 ## <a name="next-steps"></a>Passaggi successivi 

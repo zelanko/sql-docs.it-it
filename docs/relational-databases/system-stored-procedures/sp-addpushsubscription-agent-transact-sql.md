@@ -5,8 +5,7 @@ ms.date: 06/15/2018
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_addpushsubscription_agent_TSQL
@@ -17,12 +16,12 @@ ms.assetid: 1fdd2052-50d8-4318-8aa7-fc635d5cad18
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f037d88ed536cf3fecc0b658dcba3f62d1e1bd47
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e438e8584312964d3d16651cb5551a4fb949597d
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47832319"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53209805"
 ---
 # <a name="spaddpushsubscriptionagent-transact-sql"></a>sp_addpushsubscription_agent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -110,7 +109,7 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
  [  **@frequency_type =** ] *frequency_type*  
  Frequenza di pianificazione dell'agente di distribuzione. *frequency_type* viene **int**, e può essere uno dei valori seguenti.  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |**1**|Una volta|  
 |**2**|Su richiesta|  
@@ -130,7 +129,7 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
  [  **@frequency_relative_interval =** ] *frequency_relative_interval*  
  Data dell'agente di distribuzione. Questo parametro viene utilizzato quando *frequency_type* è impostata su **32** (frequenza mensile relativa). *frequency_relative_interval* viene **int**, e può essere uno dei valori seguenti.  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |**1** (impostazione predefinita)|Primo|  
 |**2**|Secondo|  
@@ -144,7 +143,7 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
  [  **@frequency_subday =** ] *frequency_subday*  
  Frequenza di ripianificazione durante il periodo definito. *frequency_subday* viene **int**, e può essere uno dei valori seguenti.  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |**1**|Una volta|  
 |**2**|Secondo|  
@@ -188,19 +187,19 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
  Nome del server di pubblicazione. *server di pubblicazione* viene **sysname**, con un valore predefinito NULL.  
   
  [  **@subscriber_provider=** ] **'***subscriber_provider***'**  
- ProgID univoco con cui è registrato il provider OLE DB per l'origine dati non [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *subscriber_provider* viene **sysname**, con valore predefinito è NULL. *subscriber_provider* deve essere univoco per il provider OLE DB installato nel server di distribuzione. *subscriber_provider* è supportata solo per non -[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sottoscrittori.  
+ È l'identificatore univoco a livello di codice (PROGID) con cui il provider OLE DB per non [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] origine dati viene registrata. *subscriber_provider* viene **sysname**, con valore predefinito è NULL. *subscriber_provider* deve essere univoco per il provider OLE DB installato nel server di distribuzione. *subscriber_provider* è supportata solo per non - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sottoscrittori.  
   
  [  **@subscriber_datasrc=** ] **'***subscriber_datasrc***'**  
- Nome dell'origine dei dati riconosciuto dal provider OLE DB. *subscriber_datasrc* viene **nvarchar (4000)**, con un valore predefinito NULL. *subscriber_datasrc* viene passato come proprietà DBPROP_INIT_DATASOURCE per inizializzare il provider OLE DB. *subscriber_datasrc* è supportata solo per non -[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sottoscrittori.  
+ Nome dell'origine dei dati riconosciuto dal provider OLE DB. *subscriber_datasrc* viene **nvarchar (4000)**, con un valore predefinito NULL. *subscriber_datasrc* viene passato come proprietà DBPROP_INIT_DATASOURCE per inizializzare il provider OLE DB. *subscriber_datasrc* è supportata solo per non - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sottoscrittori.  
   
  [  **@subscriber_location=** ] **'***subscriber_location***'**  
- Percorso del database riconosciuto dal provider OLE DB. *subscriber_location* viene **nvarchar (4000)**, con un valore predefinito NULL. *subscriber_location* viene passato come proprietà DBPROP_INIT_LOCATION per inizializzare il provider OLE DB. *subscriber_location* è supportata solo per non -[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sottoscrittori.  
+ Percorso del database riconosciuto dal provider OLE DB. *subscriber_location* viene **nvarchar (4000)**, con un valore predefinito NULL. *subscriber_location* viene passato come proprietà DBPROP_INIT_LOCATION per inizializzare il provider OLE DB. *subscriber_location* è supportata solo per non - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sottoscrittori.  
   
  [  **@subscriber_provider_string=** ] **'***subscriber_provider_string***'**  
- Stringa di connessione specifica del provider OLE DB che consente di identificare l'origine dei dati. *subscriber_provider_string* viene **nvarchar (4000)**, con un valore predefinito NULL. *subscriber_provider_string* viene passato a IDataInitialize o impostato come proprietà DBPROP_INIT_PROVIDERSTRING per inizializzare il provider OLE DB. *subscriber_provider_string* è supportata solo per non -[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sottoscrittori.  
+ Stringa di connessione specifica del provider OLE DB che consente di identificare l'origine dei dati. *subscriber_provider_string* viene **nvarchar (4000)**, con un valore predefinito NULL. *subscriber_provider_string* viene passato a IDataInitialize o impostato come proprietà DBPROP_INIT_PROVIDERSTRING per inizializzare il provider OLE DB. *subscriber_provider_string* è supportata solo per non - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sottoscrittori.  
   
  [  **@subscriber_catalog=** ] **'***subscriber_catalog***'**  
- Catalogo da utilizzare per stabilire una connessione al provider OLE DB *subscriber_catalog* viene **sysname**, con valore predefinito è NULL. *subscriber_catalog* viene passato come proprietà DBPROP_INIT_CATALOG per inizializzare il provider OLE DB. *subscriber_catalog* è supportata solo per non -[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sottoscrittori.  
+ Catalogo da utilizzare per stabilire una connessione al provider OLE DB *subscriber_catalog* viene **sysname**, con valore predefinito è NULL. *subscriber_catalog* viene passato come proprietà DBPROP_INIT_CATALOG per inizializzare il provider OLE DB. *subscriber_catalog* è supportata solo per non - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sottoscrittori.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  **0** (esito positivo) o **1** (errore)  

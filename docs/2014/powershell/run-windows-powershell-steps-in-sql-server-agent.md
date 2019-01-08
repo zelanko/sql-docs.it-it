@@ -4,33 +4,32 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: scripting
 ms.topic: conceptual
 ms.assetid: f25f7549-c9b3-4618-85f2-c9a08adbe0e3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6e87aa1b7fd49681594220f81e447abbadc6716d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 460d66b7e2d4f314db65213819fca1800af2da4f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48204241"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52798203"
 ---
 # <a name="run-windows-powershell-steps-in-sql-server-agent"></a>Esecuzione di passaggi di Windows PowerShell in SQL Server Agent
   Utilizzare SQL Server Agent per eseguire script di SQL Server PowerShell a orari pianificati.  
   
 1.  **Prima di iniziare:**  [Limitazioni e restrizioni](#LimitationsRestrictions)  
   
-2.  **Per eseguire PowerShell da SQL Server Agent, utilizzando:**  [Passaggio processo di PowerShell](#PShellJob), [Passaggio processo del prompt dei comandi](#CmdExecJob)  
+2.  **Per eseguire PowerShell da SQL Server Agent tramite:**  [Passaggio di processo di PowerShell](#PShellJob), [passaggio del processo prompt dei comandi](#CmdExecJob)  
   
 ## <a name="before-you-begin"></a>Prima di iniziare  
  Sono disponibili molti tipi di passaggi del processo di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent. Ogni tipo è associato a un sottosistema che implementa un ambiente specifico, ad esempio un agente di replica o un ambiente del prompt dei comandi. È possibile codificare gli script di Windows PowerShell, quindi utilizzare [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent per includere gli script nei processi eseguiti in base a orari pianificati o in risposta a eventi di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . È possibile eseguire gli script di Windows PowerShell con un passaggio del processo del prompt dei comandi o di PowerShell.  
   
 1.  Utilizzare un passaggio del processo di PowerShell per fare in modo che il sottosistema [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent esegua l'utilità `sqlps`, che avvia PowerShell 2.0 e importa il modulo `sqlps`.  
   
-2.  Utilizzare un passaggio di processo del prompt dei comandi eseguire PowerShell.exe e specificare uno script che importa il `sqlps` modulo.  
+2.  Utilizzare un passaggio del processo del prompt dei comandi per eseguire PowerShell.exe e specificare uno script che importa il modulo `sqlps`.  
   
 ###  <a name="LimitationsRestrictions"></a> Limitazioni e restrizioni  
   

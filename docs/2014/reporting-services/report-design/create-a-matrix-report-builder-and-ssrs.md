@@ -11,21 +11,21 @@ ms.assetid: 493e63b9-ecd0-4054-97ec-92d84e9b8182
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 2e520e394ba98cc4dddb0057abde1598da352045
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b61dfe7512f17b6c67c93d02d6b4a9e11164d6b4
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48223351"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53361693"
 ---
 # <a name="matrices-report-builder-and-ssrs"></a>Matrici (Generatore report e SSRS)
   Usare una matrice per visualizzare dati raggruppati e informazioni di riepilogo. È possibile raggruppare i dati per più campi o espressioni in gruppi di righe e di colonne. Le funzionalità offerte dalle matrici sono analoghe a quelle dei campi incrociati e delle tabelle pivot. In fase di esecuzione, quando si combinano i dati del report e le aree dati, la matrice si espande orizzontalmente e verticalmente nella pagina. I valori contenuti nelle celle della matrice rappresentano valori aggregati che hanno come ambito l'intersezione dei gruppi di righe e di colonne ai quali appartiene la cella. È possibile formattare le righe e le colonne in modo da evidenziare i dati sui quali concentrarsi. È inoltre possibile includere elementi Toggle di drill-down per nascondere inizialmente i dati dettaglio. Successivamente, l'utente potrà fare clic su tali elementi per visualizzare un numero maggiore o minore di dettagli in base alle necessità.  
   
  Al termine della progettazione iniziale, è possibile continuare a sviluppare una matrice per migliorare la visualizzazione per l'utente. Per altre informazioni, vedere [Controllo della visualizzazione dell'area dati Tablix in una pagina del report &#40;Generatore report e SSRS&#41;](controlling-the-tablix-data-region-display-on-a-report-page.md).  
   
- Per una rapida introduzione alle matrici, vedere [Esercitazione: Creazione di un report matrice &#40;Generatore report&#41;](../tutorial-creating-a-matrix-report-report-builder.md).  
+ Per iniziare rapidamente con matrici, vedere [esercitazione: Creazione di un Report matrice &#40;Generatore Report&#41;](../tutorial-creating-a-matrix-report-report-builder.md).  
   
- Nei report di esempio di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sono inclusi diversi report in cui vengono usate matrici. Per informazioni sulle matrici, esplorare la definizione di un report di esempio in Generatore report o Progettazione report oppure visualizzare in anteprima il report generato in Generatore report o Progettazione report. Per altre informazioni sul download dei report di esempio, vedere [(SSRS) Reporting Services Samples](http://go.microsoft.com/fwlink/?LinkID=198283).  
+ Nei report di esempio di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sono inclusi diversi report in cui vengono usate matrici. Per informazioni sulle matrici, esplorare la definizione di un report di esempio in Generatore report o Progettazione report oppure visualizzare in anteprima il report generato in Generatore report o Progettazione report. Per altre informazioni sul download dei report di esempio, vedere [(SSRS) Reporting Services Samples](https://go.microsoft.com/fwlink/?LinkID=198283).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -93,7 +93,7 @@ ms.locfileid: "48223351"
  Per aggiungere una colonna del totale per un gruppo di colonne adiacente, fare clic nella cella di definizione del gruppo di colonne e usare il comando **Aggiungi totale** . Verrà aggiunta una nuova colonna statica accanto al gruppo di colonne, con una somma di aggregazione predefinita per ogni campo numerico nelle righe esistenti. Per modificare l'espressione, apportare modifiche manuali all'aggregazione predefinita, ad esempio `Avg([Sales])`. Per altre informazioni, vedere [Aggiungere un totale a un gruppo o a un'area dati Tablix &#40;Generatore report e SSRS&#41;](add-a-total-to-a-group-or-tablix-data-region-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento a funzioni di aggregazione &#40;Report e SSRS&#41;](report-builder-functions-aggregate-functions-reference.md)   
+ [Riferimento a funzioni di aggregazione &#40;Generatore report e SSRS&#41;](report-builder-functions-aggregate-functions-reference.md)   
  [Esempi di espressioni &#40;Generatore report e SSRS&#41;](expression-examples-report-builder-and-ssrs.md)  
   
   

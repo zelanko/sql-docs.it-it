@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - output data [Integration Services]
@@ -18,12 +17,12 @@ ms.assetid: 7a50de3c-4ca0-4922-8028-fdddeb47e5b0
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3df6a97e37f301c4ac55b8e662e81098023a5064
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 038fdb6f07604d3fac1fcbd8e9ee632e3af2fbdc
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159511"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53360243"
 ---
 # <a name="data-flow"></a>Flusso di dati
   In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] sono disponibili tre diversi tipi di componenti flusso di dati: origini, trasformazioni e destinazioni. Le origini estraggono dati da archivi dati quali tabelle e viste di database relazionali, file e database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Tramite le trasformazioni è possibile modificare, riepilogare e pulire i dati. Le destinazioni consentono di caricare dati in archivi dati o di creare set di dati in memoria.  
@@ -98,18 +97,18 @@ ms.locfileid: "48159511"
 ### <a name="sources-available-for-download"></a>Origini disponibili per il download  
  Nella tabella seguente sono elencate le origini aggiuntive che è possibile scaricare dal sito Web di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .  
   
-|Origine|Description|  
+|Origine|Descrizione|  
 |------------|-----------------|  
-|Origine Oracle|L'origine Oracle è il componente di origine del connettore [!INCLUDE[msCoName](../../../includes/msconame-md.md)] per Oracle di Attunity. Il connettore [!INCLUDE[msCoName](../../../includes/msconame-md.md)] per Oracle di Attunity include anche una gestione connessione e una destinazione. Per ulteriori informazioni, vedere la pagina di download relativa ai [connettori Microsoft per Oracle e Teradata di Attunity](http://go.microsoft.com/fwlink/?LinkId=254963).|  
-|Origine SAP BI|L'origine SAP BI è il componente di origine del connettore [!INCLUDE[msCoName](../../../includes/msconame-md.md)] per SAP BI. Il connettore [!INCLUDE[msCoName](../../../includes/msconame-md.md)] per SAP BI include anche una gestione connessione e una destinazione. Per ulteriori informazioni, vedere la pagina di download relativa al [Feature Pack di Microsoft SQL Server 2008](http://go.microsoft.com/fwlink/?LinkId=110393).|  
-|Origine Teradata|L'origine Teradata è il componente di origine del connettore [!INCLUDE[msCoName](../../../includes/msconame-md.md)] per Teradata di Attunity. Il connettore [!INCLUDE[msCoName](../../../includes/msconame-md.md)] per Teradata di Attunity include anche una gestione connessione e una destinazione. Per ulteriori informazioni, vedere la pagina di download relativa ai [connettori Microsoft per Oracle e Teradata di Attunity](http://go.microsoft.com/fwlink/?LinkId=254963).|  
+|Origine Oracle|L'origine Oracle è il componente di origine del connettore [!INCLUDE[msCoName](../../../includes/msconame-md.md)] per Oracle di Attunity. Il connettore [!INCLUDE[msCoName](../../../includes/msconame-md.md)] per Oracle di Attunity include anche una gestione connessione e una destinazione. Per ulteriori informazioni, vedere la pagina di download relativa ai [connettori Microsoft per Oracle e Teradata di Attunity](https://go.microsoft.com/fwlink/?LinkId=254963).|  
+|Origine SAP BI|L'origine SAP BI è il componente di origine del connettore [!INCLUDE[msCoName](../../../includes/msconame-md.md)] per SAP BI. Il connettore [!INCLUDE[msCoName](../../../includes/msconame-md.md)] per SAP BI include anche una gestione connessione e una destinazione. Per ulteriori informazioni, vedere la pagina di download relativa al [Feature Pack di Microsoft SQL Server 2008](https://go.microsoft.com/fwlink/?LinkId=110393).|  
+|Origine Teradata|L'origine Teradata è il componente di origine del connettore [!INCLUDE[msCoName](../../../includes/msconame-md.md)] per Teradata di Attunity. Il connettore [!INCLUDE[msCoName](../../../includes/msconame-md.md)] per Teradata di Attunity include anche una gestione connessione e una destinazione. Per ulteriori informazioni, vedere la pagina di download relativa ai [connettori Microsoft per Oracle e Teradata di Attunity](https://go.microsoft.com/fwlink/?LinkId=254963).|  
   
- Per una dimostrazione sull'uso dei miglioramenti delle prestazioni del connettore [!INCLUDE[msCoName](../../../includes/msconame-md.md)] per Oracle di Attunity, vedere la pagina [Performance of Microsoft Connector for Oracle by Attunity (SQL Server Video)](http://go.microsoft.com/fwlink/?LinkID=210369)(Prestazioni del connettore Microsoft per Oracle di Attunity (video di SQL Server)).  
+ Per una dimostrazione sull'uso dei miglioramenti delle prestazioni del connettore [!INCLUDE[msCoName](../../../includes/msconame-md.md)] per Oracle di Attunity, vedere la pagina [Performance of Microsoft Connector for Oracle by Attunity (SQL Server Video)](https://go.microsoft.com/fwlink/?LinkID=210369)(Prestazioni del connettore Microsoft per Oracle di Attunity (video di SQL Server)).  
   
 ## <a name="transformations"></a>Trasformazioni  
  Le trasformazioni possono avere funzionalità molto diverse. Possono eseguire attività quali aggiornamento, riepilogo, pulitura, unione e distribuzione dei dati. Consentono di modificare valori nelle colonne, cercare valori nelle tabelle, eliminare dati e aggregare valori nelle colonne.  
   
- Gli input e gli output di una trasformazione definiscono le colonne dei dati in entrata e in uscita. Alcune trasformazioni includono un singolo input e più output, mentre altre includono più input e un singolo output, a seconda delle operazioni eseguite sui dati. Nelle trasformazioni possono anche essere inclusi gli output degli errori tramite cui vengono fornite informazioni sugli errori generati, oltre ai dati che li hanno provocati, ad esempio dati stringa che non è stato possibile convertire in un tipo di dati Integer. Il modello a oggetti di [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] non prevede alcun limite al numero degli input, degli output regolari e degli output degli errori di una trasformazione. È possibile creare trasformazioni personalizzate che implementano qualsiasi combinazione di più input, output regolari e output degli errori.  
+ Gli input e gli output di una trasformazione definiscono le colonne dei dati in entrata e in uscita. Alcune trasformazioni includono un singolo input e più output, mentre altre includono più input e un singolo output, a seconda delle operazioni eseguite sui dati. Le trasformazioni possono includere anche output degli errori, che offrono informazioni sull'errore che si è verificata, insieme ai dati che non è riuscita: Dati stringa, ad esempio, che non è stato possibile convertire un tipo di dati integer. Il modello a oggetti di [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] non prevede alcun limite al numero degli input, degli output regolari e degli output degli errori di una trasformazione. È possibile creare trasformazioni personalizzate che implementano qualsiasi combinazione di più input, output regolari e output degli errori.  
   
  L'input di una trasformazione è definito come una o più colonne di input. Alcune trasformazioni di [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] possono inoltre fare riferimento a colonne esterne come input. L'input della trasformazione Comando OLE DB, ad esempio, include colonne esterne. Una colonna di output è una colonna che la trasformazione aggiunge al flusso di dati. Sia gli output regolari che gli output degli errori possono contenere colonne di output. Le colonne di output diventano le colonne di input per il successivo componente flusso di dati, che può essere costituito da un'altra trasformazione o da una destinazione.  
   
@@ -159,13 +158,13 @@ ms.locfileid: "48159511"
 ### <a name="destinations-available-for-download"></a>Destinazioni disponibili per il download  
  Nella tabella seguente sono elencate le destinazioni aggiuntive che è possibile scaricare dal sito Web di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .  
   
-|Origine|Description|  
+|Origine|Descrizione|  
 |------------|-----------------|  
-|Destinazione Oracle|La destinazione Oracle è il componente di destinazione del connettore [!INCLUDE[msCoName](../../../includes/msconame-md.md)] per Oracle di Attunity. Il connettore [!INCLUDE[msCoName](../../../includes/msconame-md.md)] per Oracle di Attunity include anche una gestione connessione e un'origine. Per ulteriori informazioni, vedere la pagina di download relativa ai [connettori Microsoft per Oracle e Teradata di Attunity](http://go.microsoft.com/fwlink/?LinkId=254963).|  
-|Destinazione SAP BI|La destinazione SAP BI è il componente di destinazione del connettore [!INCLUDE[msCoName](../../../includes/msconame-md.md)] per SAP BI. Il connettore [!INCLUDE[msCoName](../../../includes/msconame-md.md)] per SAP BI include anche una gestione connessione e un'origine. Per ulteriori informazioni, vedere la pagina di download relativa al [Feature Pack di Microsoft SQL Server 2008](http://go.microsoft.com/fwlink/?LinkId=110393).|  
-|Destinazione Teradata|La destinazione Teradata è il componente di destinazione del connettore [!INCLUDE[msCoName](../../../includes/msconame-md.md)] per Teradata di Attunity. Il connettore [!INCLUDE[msCoName](../../../includes/msconame-md.md)] per Teradata di Attunity include anche una gestione connessione e un'origine. Per ulteriori informazioni, vedere la pagina di download relativa ai [connettori Microsoft per Oracle e Teradata di Attunity](http://go.microsoft.com/fwlink/?LinkId=254963).|  
+|Destinazione Oracle|La destinazione Oracle è il componente di destinazione del connettore [!INCLUDE[msCoName](../../../includes/msconame-md.md)] per Oracle di Attunity. Il connettore [!INCLUDE[msCoName](../../../includes/msconame-md.md)] per Oracle di Attunity include anche una gestione connessione e un'origine. Per ulteriori informazioni, vedere la pagina di download relativa ai [connettori Microsoft per Oracle e Teradata di Attunity](https://go.microsoft.com/fwlink/?LinkId=254963).|  
+|Destinazione SAP BI|La destinazione SAP BI è il componente di destinazione del connettore [!INCLUDE[msCoName](../../../includes/msconame-md.md)] per SAP BI. Il connettore [!INCLUDE[msCoName](../../../includes/msconame-md.md)] per SAP BI include anche una gestione connessione e un'origine. Per ulteriori informazioni, vedere la pagina di download relativa al [Feature Pack di Microsoft SQL Server 2008](https://go.microsoft.com/fwlink/?LinkId=110393).|  
+|Destinazione Teradata|La destinazione Teradata è il componente di destinazione del connettore [!INCLUDE[msCoName](../../../includes/msconame-md.md)] per Teradata di Attunity. Il connettore [!INCLUDE[msCoName](../../../includes/msconame-md.md)] per Teradata di Attunity include anche una gestione connessione e un'origine. Per ulteriori informazioni, vedere la pagina di download relativa ai [connettori Microsoft per Oracle e Teradata di Attunity](https://go.microsoft.com/fwlink/?LinkId=254963).|  
   
- Per una dimostrazione sull'uso dei miglioramenti delle prestazioni del connettore [!INCLUDE[msCoName](../../../includes/msconame-md.md)] per Oracle di Attunity, vedere la pagina [Performance of Microsoft Connector for Oracle by Attunity (SQL Server Video)](http://go.microsoft.com/fwlink/?LinkID=210369)(Prestazioni del connettore Microsoft per Oracle di Attunity (video di SQL Server)).  
+ Per una dimostrazione sull'uso dei miglioramenti delle prestazioni del connettore [!INCLUDE[msCoName](../../../includes/msconame-md.md)] per Oracle di Attunity, vedere la pagina [Performance of Microsoft Connector for Oracle by Attunity (SQL Server Video)](https://go.microsoft.com/fwlink/?LinkID=210369)(Prestazioni del connettore Microsoft per Oracle di Attunity (video di SQL Server)).  
   
 ## <a name="connection-managers"></a>Gestioni connessioni  
  Molti componenti flusso di dati si connettono a origini dati e, affinché sia possibile configurare correttamente i componenti, è necessario aggiungere al pacchetto le gestioni connessioni richieste dai componenti stessi. È possibile aggiungere le gestioni connessioni prima o durante la costruzione del flusso di dati. Per altre informazioni, vedere [Connessioni in Integration Services &#40;SSIS&#41;](../connection-manager/integration-services-ssis-connections.md) e [Creazione di gestioni connessioni](../create-connection-managers.md).  
@@ -179,18 +178,18 @@ ms.locfileid: "48159511"
  Le origini includono output, le destinazioni includono input e le trasformazioni includono sia input che output. Molti componenti flusso di dati possono essere inoltre configurati per l'utilizzo di un output degli errori.  
   
 ### <a name="inputs"></a>Input  
- Le destinazioni e le trasformazioni includono input. Un input contiene una o più colonne di input, che possono fare riferimento a colonne esterne se il componente flusso di dati è stato configurato per utilizzarne. Gli input possono essere configurati in modo da monitorare e controllare il flusso di dati: è ad esempio possibile specificare se il componente non deve essere completato correttamente in risposta a un errore, se gli errori devono essere ignorati o se le righe con errori devono essere reindirizzate all'output degli errori. È inoltre possibile assegnare una descrizione all'input o aggiornarne il nome. Per configurare gli input in Progettazione [!INCLUDE[ssIS](../../../includes/ssis-md.md)] , è possibile usare la finestra di dialogo **Editor avanzato** . Per altre informazioni su **Editor avanzato** , vedere [Interfaccia utente di Integration Services](../integration-services-user-interface.md).  
+ Le destinazioni e le trasformazioni includono input. Un input contiene una o più colonne di input, che possono fare riferimento a colonne esterne se il componente flusso di dati è stato configurato per utilizzarne. Gli input possono essere configurati per monitorare e controllare il flusso di dati: Ad esempio, è possibile specificare se il componente deve avere esito negativo in risposta a un errore, ignorare gli errori o reindirizzare le righe di errore all'output degli errori. È inoltre possibile assegnare una descrizione all'input o aggiornarne il nome. Per configurare gli input in Progettazione [!INCLUDE[ssIS](../../../includes/ssis-md.md)] , è possibile usare la finestra di dialogo **Editor avanzato** . Per altre informazioni su **Editor avanzato** , vedere [Interfaccia utente di Integration Services](../integration-services-user-interface.md).  
   
 ### <a name="outputs"></a>Output  
  Origini e trasformazioni includono sempre output. Un output contiene una o più colonne di output, che possono fare riferimento a colonne esterne se il componente flusso di dati è stato configurato per utilizzarne. Gli output possono essere configurati in modo da fornire informazioni utili per le operazioni di elaborazione dei dati a valle. È ad esempio possibile indicare se l'output è ordinato. È inoltre possibile specificare una descrizione per l'output o aggiornarne il nome. Per configurare gli output in Progettazione [!INCLUDE[ssIS](../../../includes/ssis-md.md)] , è possibile usare la finestra di dialogo **Editor avanzato** .  
   
 ### <a name="error-outputs"></a>Output degli errori  
- Origini, destinazioni e trasformazioni possono includere output degli errori. Usando la finestra di dialogo **Configura output errori** è possibile specificare come il componente flusso di dati risponde agli errori in ogni input o colonna. Se in fase di esecuzione si verifica un errore o un troncamento di dati e il componente flusso di dati è configurato per il reindirizzamento delle righe, le righe di dati con l'errore verranno inviate all'output degli errori. L'output degli errori può essere connesso a trasformazioni che applicano ulteriori trasformazioni o indirizzano i dati verso un'altra destinazione. Per impostazione predefinita un output degli errori contiene le colonne di output e due colonne di informazioni sugli errori: **ErrorCode** e **ErrorColumn**. Le colonne di output contengono i dati della riga che ha generato l'errore, **ErrorCode** contiene il codice di errore ed **ErrorColumn** identifica la colonna che provoca l'errore.  
+ Origini, destinazioni e trasformazioni possono includere output degli errori. Usando la finestra di dialogo **Configura output errori** è possibile specificare come il componente flusso di dati risponde agli errori in ogni input o colonna. Se in fase di esecuzione si verifica un errore o un troncamento di dati e il componente flusso di dati è configurato per il reindirizzamento delle righe, le righe di dati con l'errore verranno inviate all'output degli errori. L'output degli errori può essere connesso a trasformazioni che applicano ulteriori trasformazioni o indirizzano i dati verso un'altra destinazione. Per impostazione predefinita, un output degli errori contiene le colonne di output e due colonne di errore: **ErrorCode** e **ErrorColumn**. Le colonne di output contengono i dati della riga che ha generato l'errore, **ErrorCode** contiene il codice di errore ed **ErrorColumn** identifica la colonna che provoca l'errore.  
   
  Per altre informazioni, vedere [Gestione degli errori nei dati](error-handling-in-data.md).  
   
 ### <a name="columns"></a>Colonne  
- Input, output e output degli errori sono raccolte di colonne. Ogni colonna è configurabile e, a seconda del tipo di colonna, input, output o esterna,[!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] offre proprietà diverse per la colonna. [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] offre tre modi diversi per impostare le proprietà della colonna: a livello di codice, tramite finestre di dialogo specifiche del componente o tramite la finestra di dialogo **Editor avanzato**.  
+ Input, output e output degli errori sono raccolte di colonne. Ogni colonna è configurabile e, a seconda la colonna tipo di input, output o esterna - [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] offre proprietà diverse per la colonna. [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] offre tre modi diversi per impostare le proprietà della colonna: a livello di codice, tramite finestre di dialogo specifiche del componente o tramite la finestra di dialogo **Editor avanzato**.  
   
 ## <a name="paths"></a>Percorsi  
  I percorsi connettono i componenti flusso di dati. In Progettazione [!INCLUDE[ssIS](../../../includes/ssis-md.md)] è possibile visualizzare e modificare le proprietà di un percorso, visualizzare i metadati di output per il punto iniziale di un percorso e collegare i visualizzatori dati a un percorso.  
@@ -217,8 +216,8 @@ ms.locfileid: "48159511"
 -   [Connettere componenti in un flusso di dati](connect-components-in-a-data-flow.md)  
   
 ## <a name="related-content"></a>Contenuto correlato  
- Video sulle [prestazioni del connettore Microsoft per Oracle di Attunity (video di SQL Server)](http://go.microsoft.com/fwlink/?LinkID=210369)sul sito Web technet.microsoft.com.  
+ Video sulle [prestazioni del connettore Microsoft per Oracle di Attunity (video di SQL Server)](https://go.microsoft.com/fwlink/?LinkID=210369)sul sito Web technet.microsoft.com.  
   
- Risposta curata [How to Create a Dynamic Connection String in SSIS](http://go.microsoft.com/fwlink/?LinkId=321994)(Procedura di creazione di una stringa di connessione dinamica in SSIS) su curatedviews.cloudapp.net.  
+ Risposta curata [How to Create a Dynamic Connection String in SSIS](https://go.microsoft.com/fwlink/?LinkId=321994)(Procedura di creazione di una stringa di connessione dinamica in SSIS) su curatedviews.cloudapp.net.  
   
   

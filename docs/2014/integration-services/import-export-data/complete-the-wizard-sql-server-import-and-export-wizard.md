@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.impexpwizard.completewizard.f1
@@ -13,12 +12,12 @@ ms.assetid: fbf0aa37-fd9e-47e1-82b4-26c1359ec3da
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d809d72d0dcea7e6f1dcfd5d65bab416766413c3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 23b21d05866fb4bfe4f1bd6e5b34eab3958e93ec
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48125881"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52782803"
 ---
 # <a name="complete-the-wizard-sql-server-import-and-export-wizard"></a>Completamento procedura guidata (Importazione/Esportazione guidata SQL Server)
   Usare la **completare la procedura guidata** pagina per confermare le scelte effettuate nella procedura guidata, prima di copiare i dati.  

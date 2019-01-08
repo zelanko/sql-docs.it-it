@@ -15,12 +15,12 @@ ms.assetid: 8f25e6dc-b753-400e-9e9a-50f4f35bf6c4
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 9bfbae24063bfa3daa7fbafd1004125e826f6886
-ms.sourcegitcommit: b75fc8cfb9a8657f883df43a1f9ba1b70f1ac9fb
+ms.openlocfilehash: 39f3b68f816594d275f48723865c7497f5352fbb
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48851866"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52527715"
 ---
 # <a name="install-reporting-services-native-mode-report-server"></a>Installare un server di report in modalità nativa di Reporting Services
   Un server di report in modalità nativa di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] può essere installato dall'installazione guidata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o dalla riga di comando. Nell'Installazione guidata è possibile scegliere di installare i file e di configurare il server con le impostazioni predefinite oppure di installare solo i file e di non configurare il server. In questo argomento viene esaminata la *configurazione predefinita per la modalità nativa* in cui tramite il programma di installazione viene sia installata e configurata un'istanza del server di report. Al termine dell'installazione, il server di report è in esecuzione e pronto per essere utilizzato. Un server di report in modalità nativa viene eseguito come server applicazioni autonomo. La modalità nativa è la modalità predefinita del server.  
@@ -95,7 +95,7 @@ ms.locfileid: "48851866"
 ##  <a name="bkmk_defaultURLreservations"></a> Prenotazioni URL predefinite  
  Le prenotazioni URL sono composte da un prefisso, un nome host, una porta e una directory virtuale:  
   
-|Parte|Description|  
+|Parte|Descrizione|  
 |----------|-----------------|  
 |Prefisso|Il prefisso predefinito è HTTP. Se in precedenza è stato installato un certificato SSL (Secure Sockets Layer), il programma di installazione tenterà di creare prenotazioni URL che utilizzano il prefisso HTTPS.|  
 |Nome host|Il nome host predefinito è un carattere jolly complesso (+). Specifica che il server di report accetterà qualsiasi richiesta HTTP sulla porta designata per qualsiasi nome host risolto nel computer, tra cui http://\<nomecomputer > / reportserver, http://localhost/reportserver, o http://\<IPAddress > / ReportServer.|  
@@ -121,7 +121,7 @@ ms.locfileid: "48851866"
   
     -   **Reporting Services-nativo**.  
   
-    -   **Strumenti di gestione - Di base**. Gli strumenti di gestione non sono obbligatori ma consigliati, a meno che non si disponga di un'altra installazione di strumenti di gestione. L'opzione di configurazione predefinito causerà un server di report funzionante, ma è possibile modificare le opzioni di configurazione in un secondo momento. Alcune opzioni, ad esempio "Report personali", sono gestite tramite [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]  
+    -   **Strumenti di gestione - base**. Gli strumenti di gestione non sono obbligatori ma consigliati, a meno che non si disponga di un'altra installazione di strumenti di gestione. L'opzione di configurazione predefinito causerà un server di report funzionante, ma è possibile modificare le opzioni di configurazione in un secondo momento. Alcune opzioni, ad esempio "Report personali" vengono gestite tramite [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]  
   
      ![Selezionare la modalità nativa di SSRS nella selezione funzionalità](../../../2014/sql-server/install/media/rs-setupfeatureselection-native-withcircles.gif "Selezionare la modalità nativa di SSRS nella selezione funzionalità")  
   

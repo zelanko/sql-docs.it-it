@@ -20,12 +20,12 @@ ms.assetid: cf32f1f3-153e-476f-91a4-bb834ec7c88d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 856da25d126c93a370c7d028106df75124f5ec72
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 157baeb7e5bd8fb53b2435f55e3e71c098632002
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48094281"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518047"
 ---
 # <a name="microsoft-logistic-regression-algorithm-technical-reference"></a>Riferimento tecnico per l'algoritmo Microsoft Logistic Regression
   L'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Logistic Regression è una variante dell'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Neural Network, in cui il parametro *HIDDEN_NODE_RATIO* è impostato su 0. Questa impostazione creerà un modello di rete neurale che non contiene un livello nascosto e che pertanto è equivalente alla regressione logistica.  
@@ -47,25 +47,25 @@ ms.locfileid: "48094281"
 ### <a name="scoring-inputs"></a>Valutazione degli input  
  Per*assegnazione di punteggi* nel contesto di un modello di rete neurale o di un modello di regressione logistica si intende la conversione dei valori presenti nei dati in un set di valori che usano la stessa scala e possono quindi essere confrontati tra loro. Si supponga ad esempio che l'intervallo degli input per Income sia compreso tra 0 e 100.000 mentre quello degli input per [Number of Children] sia compreso tra 0 e 5. Questo processo di conversione consente *punteggio*, o di confrontarla, l'importanza di ogni input indipendentemente dalla differenza dei valori.  
   
- Per ogni stato visualizzato nel set di training, il modello genera un input. Per gli input discreti o discretizzati, viene creato un input aggiuntivo per rappresentare lo stato Missing, se tale stato è visualizzato almeno una volta nel set di training. Per gli input continui vengono creati al massimo due nodi di input: uno per i valori Missing, se presenti nei dati di training, e uno per tutti i valori esistenti o non Null. Ogni input viene ridimensionato in base a un formato numerico usando il metodo di normalizzazione del punteggio z, (x – μg) o StdDev.  
+ Per ogni stato visualizzato nel set di training, il modello genera un input. Per gli input discreti o discretizzati, viene creato un input aggiuntivo per rappresentare lo stato Missing, se tale stato è visualizzato almeno una volta nel set di training. Per gli input continui vengono creati al massimo due nodi di input: uno per i valori Missing, se presenti nei dati di training, e uno per tutti i valori esistenti o non Null. Ogni input viene ridimensionato in base a un formato numerico usando il metodo di normalizzazione del punteggio z, (x - μg) o StdDev.  
   
  Durante la normalizzazione del punteggio z, si ottengono la media (μ) e la deviazione standard sul set di training completo.  
   
  **Valori continui**  
   
- Valore è presente: (X – μg) / σ / / X è l'effettivo valore codificato)  
+ Valore è presente:   (X-μ)/σ / / X è l'effettivo valore codificato)  
   
  Valore è assente: μg/σ: / / mu negativo diviso sigma)  
   
  **Valori discreti**  
   
- Μg = p: (probabilità precedente di uno stato)  
+ Μg = p - (probabilità precedente di uno stato)  
   
  StdDev = sqrt(p(1-p))  
   
- Valore è presente: (1 – μg) / σ / / (1 meno mu) diviso sigma)  
+ Valore è presente:     (1-μ)/σ / / (1 meno mu) diviso sigma)  
   
- Valore è assente: (– μg) / σ / / mu negativo diviso sigma)  
+ Valore è assente: (-μg) / σ / / mu negativo diviso sigma)  
   
 ### <a name="understanding-logistic-regression-coefficients"></a>Informazioni sui coefficienti di regressione logistica  
  Sono disponibili vari metodi nella letteratura statistica per l'esecuzione della regressione logistica, tuttavia un aspetto importante comune a tutti i metodi è la valutazione dell'adattamento del modello. Sono state proposte statistiche con vari livelli di adattamento, tra cui i rapporti di disparità e i criteri covariati. Una descrizione dettagliata delle modalità di misurazione dell'adattamento di un modello esula dall'ambito del presente argomento, tuttavia è possibile recuperare il valore dei coefficienti nel modello e utilizzarli per progettare misure di adattamento personalizzate.  
@@ -83,9 +83,9 @@ FROM <model name>.CONTENT
 WHERE NODE_TYPE = 23  
 ```  
   
- Per ogni valore di output, questa query restituisce i coefficienti e un ID che punta nuovamente al nodo di input correlato. Restituisce anche una riga che contiene il valore dell'output e l'intercetta. Ogni input X dispone di un proprio coefficiente (Ci), ma nella tabella nidificata è contenuto anche un coefficiente (Co) "libero" calcolato sulla base della formula seguente:  
+ Per ogni valore di output, questa query restituisce i coefficienti e un ID che punta nuovamente al nodo di input correlato. Restituisce anche una riga che contiene il valore dell'output e l'intercetta. Ogni input X dispone di un proprio coefficiente (Ci), ma la tabella nidificata contiene anche un "gratuito" coefficiente (Co), calcolato in base alla formula seguente:  
   
- F (X) = X1 * C1 + X2\*C2 +... + Xn\*Cn + X0  
+ F (x) = X1 * C1 + X2\*C2 + + Xn\*Cn + X0  
   
  Attivazione: esp(F(X)) / (1 + esp(F(X)) )  
   
@@ -155,8 +155,8 @@ WHERE NODE_TYPE = 23
   
 ## <a name="see-also"></a>Vedere anche  
  [Algoritmo Microsoft Logistic Regression](microsoft-logistic-regression-algorithm.md)   
- [Esempi di Query del modello di regressione lineare](linear-regression-model-query-examples.md)   
- [Contenuto dei modelli di regressione logistica modelli di data mining &#40;Analysis Services - Data Mining&#41;](mining-model-content-for-logistic-regression-models.md)   
+ [Esempi di query sul modello di regressione lineare](linear-regression-model-query-examples.md)   
+ [Contenuto dei modelli di data mining per i modelli di regressione logistica &#40;Analysis Services - Data mining&#41;](mining-model-content-for-logistic-regression-models.md)   
  [Algoritmo Microsoft Neural Network](microsoft-neural-network-algorithm.md)  
   
   

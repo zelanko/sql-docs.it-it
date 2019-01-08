@@ -11,15 +11,15 @@ ms.assetid: 6401fd92-f43b-450e-8298-12db644c25bc
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4f06745f47bd78df8d9464c090afb46116594e8b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 96b7798dcacc69b1de233b330b053b2d9a2bd776
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48104801"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53370083"
 ---
 # <a name="configure-powerpivot-and-deploy-solutions-sharepoint-2013"></a>Configurare PowerPivot e distribuire soluzioni (SharePoint 2013)
-  Questo argomento vengono descritte la distribuzione e la configurazione di miglioramenti di livello intermedio alle funzionalità di PowerPivot in [!INCLUDE[SPS2013](../../../includes/sps2013-md.md)] , tra cui raccolta PowerPivot, pianificazione provider di dati, Dashboard di gestione e l'aggiornamento dati. Eseguire lo strumento di **configurazione di PowerPivot per SharePoint 2013** per completare le operazioni seguenti:  
+  In questo argomento vengono descritte la distribuzione e la configurazione di miglioramenti di livello intermedio alle funzionalità di PowerPivot in [!INCLUDE[SPS2013](../../../includes/sps2013-md.md)] , tra cui la raccolta PowerPivot, la pianificazione dell'aggiornamento dati, il dashboard di gestione e i provider di dati. Eseguire lo strumento di **configurazione di PowerPivot per SharePoint 2013** per completare le operazioni seguenti:  
   
 -   Distribuire i file di soluzione SharePoint.  
   
@@ -38,20 +38,20 @@ ms.locfileid: "48104801"
  [Risolvere eventuali problemi](#bkmk_troubleshoot_issues)  
   
 ##  <a name="bkmk_run_configuration_tool"></a> Esecuzione di PowerPivot per SharePoint 2013  
- **Nota:** tramite l'Installazione guidata di [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] vengono installati due strumenti di configurazione diversi per [!INCLUDE[ssGeminiLong](../../../includes/ssgeminilong-md.md)]. Ognuno supporta una versione diversa di SharePoint.  
+ **Nota:** Il [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] installazione guidata vengono installati due strumenti di configurazione diversi per [!INCLUDE[ssGeminiLong](../../../includes/ssgeminilong-md.md)]. Ognuno supporta una versione diversa di SharePoint.  
   
-|nome|Description|  
+|nome|Descrizione|  
 |----------|-----------------|  
 |configurazione di PowerPivot per SharePoint 2013|SharePoint 2013|  
 |Strumento di configurazione PowerPivot|SharePoint 2010 con SharePoint 2010 Service Pack 1 (SP1)|  
   
- **Nota:** per completare i passaggi seguenti, è necessario essere un amministratore di farm. Se viene visualizzato un messaggio di errore simile al seguente,  
+ **Nota:** Per completare questa procedura, è necessario essere un amministratore della farm. Se viene visualizzato un messaggio di errore simile al seguente,  
   
--   "L'utente non è un amministratore di farm. Risolvere gli errori di convalida e riprovare".  
+-   "L'utente non è un amministratore della farm. Risolvere gli errori di convalida e riprovare".  
   
  Effettuare l'accesso con l'account tramite cui è stato installato SharePoint oppure configurare l'account di configurazione come amministratore principale del sito Amministrazione centrale SharePoint.  
   
-1.  Nel **avviare** menu, fare clic su **tutti i programmi**e quindi fare clic su [!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)], fare clic su **strumenti di configurazione**e quindi fare clic su **PowerPivot per SharePoint Configurazione 2013**. Lo strumento viene elencato solo quando PowerPivot per SharePoint è installato nel server locale.  
+1.  Nel menu **Start** fare clic su **Tutti i programmi**, quindi scegliere [!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)], **Strumenti di configurazione**e, successivamente, selezionare **Configurazione di PowerPivot per SharePoint 2013**. Lo strumento viene elencato solo quando PowerPivot per SharePoint è installato nel server locale.  
   
 2.  Fare clic su **Configura o ripristina PowerPivot per SharePoint** , quindi scegliere **OK**.  
   
@@ -59,15 +59,15 @@ ms.locfileid: "48104801"
   
 4.  Nella scheda **Parametri** :  
   
-    1.  **Nome utente account predefinito**: immettere un account utente di dominio per l'account predefinito. L'account verrà utilizzato per eseguire il provisioning dei servizi, incluso il pool di applicazioni del servizio PowerPivot. Non specificare un account predefinito quale Servizio di rete o Sistema locale. Le configurazioni tramite cui vengono specificati account predefiniti vengono bloccate dallo strumento.  
+    1.  **Nome utente Account predefinito**: Immettere un account utente di dominio per l'account predefinito. L'account verrà utilizzato per eseguire il provisioning dei servizi, incluso il pool di applicazioni del servizio PowerPivot. Non specificare un account predefinito quale Servizio di rete o Sistema locale. Le configurazioni tramite cui vengono specificati account predefiniti vengono bloccate dallo strumento.  
   
-    2.  **Server di database**: è possibile utilizzare il motore di database di SQL Server supportato per la farm di SharePoint.  
+    2.  **Server di database**: È possibile usare il motore di Database di SQL Server supportato per la farm di SharePoint.  
   
-    3.  **Passphrase**: immettere una passphrase. Se si crea una nuova farm di SharePoint, la passphrase viene utilizzata ogni volta che si aggiunge un server o un'applicazione alla farm di SharePoint. Se la farm esiste già, immettere la passphrase che consente di aggiungere un'applicazione server alla farm.  
+    3.  **Passphrase**: Immettere una passphrase. Se si crea una nuova farm di SharePoint, la passphrase viene utilizzata ogni volta che si aggiunge un server o un'applicazione alla farm di SharePoint. Se la farm esiste già, immettere la passphrase che consente di aggiungere un'applicazione server alla farm.  
   
-    4.  **PowerPivot Server per Excel Services**: digitare il nome di un [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] server in modalità SharePoint. In una distribuzione a server singolo è uguale al server di database. `[ServerName]\powerpivot`  
+    4.  **Server PowerPivot per Excel Services**: Digitare il nome di un [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] server in modalità SharePoint. In una distribuzione a server singolo è uguale al server di database. `[ServerName]\powerpivot`  
   
-    5.  Fare clic su **Creare raccolta siti** nella finestra a sinistra. Annotarsi l' **URL sito** in modo che sia possibile utilizzarlo come riferimento nei passaggi successivi. Se il server SharePoint non è ancora configurato, tramite la Configurazione guidata l'applicazione Web e gli URL della raccolta siti vengono impostati in modo predefinito sulla radice di `http://[ServerName]`. Per modificare le impostazioni predefinite, rivedere le seguenti pagine della finestra a sinistra: **Creare applicazione Web predefinita** e **Distribuire la soluzione applicazione Web**  
+    5.  Fare clic su **Creare raccolta siti** nella finestra a sinistra. Annotarsi l' **URL sito** in modo che sia possibile utilizzarlo come riferimento nei passaggi successivi. Se il server SharePoint non è ancora configurato, tramite la Configurazione guidata l'applicazione Web e gli URL della raccolta siti vengono impostati in modo predefinito sulla radice di `http://[ServerName]`. Per modificare le impostazioni predefinite, rivedere le pagine seguenti nella finestra a sinistra: **Creare applicazione Web predefinita** e **distribuire la soluzione applicazione Web**  
   
 5.  Facoltativamente, rivedere i valori di input rimanenti usati per completare ogni azione. Fare clic su ogni azione nella finestra a sinistra per visualizzare e verificare i dettagli dell'azione. Per altre informazioni su ciascuno di essi, vedere la sezione "valori di Input usati per configurare il server in [Configura o Ripristina PowerPivot per SharePoint 2010 &#40;PowerPivot Configuration Tool&#41; ](../../../analysis-services/configure-repair-powerpivot-sharepoint-2010.md) India la presente argomento.  
   
@@ -135,8 +135,8 @@ ms.locfileid: "48104801"
   
 5.  Fare clic su **OK**.  
   
- Per altre informazioni sull'aggiornamento dei dati di risoluzione dei problemi, vedere [risoluzione dei problemi di aggiornamento dati PowerPivot](http://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx) (http://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx).  
+ Per altre informazioni sull'aggiornamento dei dati di risoluzione dei problemi, vedere [risoluzione dei problemi di aggiornamento dati PowerPivot](https://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx) (https://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx).  
   
- Per altre informazioni sullo strumento di configurazione, vedere [strumenti di configurazione PowerPivot](../../power-pivot-sharepoint/power-pivot-configuration-tools.md).  
+ Per ulteriori informazioni sullo strumento di configurazione, vedere [PowerPivot Configuration Tools](../../power-pivot-sharepoint/power-pivot-configuration-tools.md).  
   
   

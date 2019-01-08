@@ -11,27 +11,27 @@ ms.assetid: 05d7d5ab-a96c-4f82-94b1-48a657d7c580
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9db2bfec3a189fcad99d72821e1415e935b1368c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a7d4e13542e8361fb9f4bf4fb05509ebe01669ad
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48168581"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53365793"
 ---
 # <a name="performance-counters-ssas"></a>Contatori delle prestazioni (SSAS)
   Con Performance Monitor è possibile monitorare le prestazioni di un'istanza di Microsoft SQL Server Analysis Services (SSAS) tramite i contatori delle prestazioni.  
   
  Performance Monitor è uno snap-in di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Control (MMC) che consente di tenere traccia dell'utilizzo delle risorse. È possibile avviare lo snap-in MMC digitando **PerfMon** al prompt dei comandi o dal Pannello di controllo facendo clic su **Strumenti di amministrazione**, quindi su **Performance Monitor**. Performance Monitor consente di tenere traccia delle prestazioni e delle attività del server e dei processi tramite oggetti e contatori predefiniti, nonché monitorare eventi tramite contatori definiti dall'utente. Tramite Performance Monitor vengono raccolti i conteggi anziché i dati sugli eventi, ad esempio l'utilizzo della memoria, il numero di transazioni attive o l'attività della CPU. È inoltre possibile impostare valore soglia per contatori specifici allo scopo di generare avvisi per la notifica agli operatori.  
   
- Con Performance Monitor è possibile monitorare le istanze remote e locali di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per ulteriori informazioni, vedere la pagina relativa all' [utilizzo di Performance Monitor](http://technet.microsoft.com/library/cc749115.aspx).  
+ Con Performance Monitor è possibile monitorare le istanze remote e locali di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per ulteriori informazioni, vedere la pagina relativa all' [utilizzo di Performance Monitor](https://technet.microsoft.com/library/cc749115.aspx).  
   
- Per visualizzare la descrizione dei contatori che possono essere utilizzati con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], in Performance Monitor visualizzare la finestra di dialogo **Aggiungi contatori** , selezionare un oggetto prestazione, quindi fare clic su **Mostra descrizione**. I contatori più importanti sono Utilizzo CPU, Utilizzo memoria e Velocità di trasferimento di I/O su disco. È consigliabile familiarizzare innanzitutto con questi contatori per passare poi a utilizzare contatori più dettagliati che consentono di eseguire un monitoraggio più dettagliato. Per ulteriori informazioni sui contatori da includere, vedere la pagina relativa alla [guida sulle operazioni di SQL Server 2008 R2](http://go.microsoft.com/fwlink/?LinkID=225539).  
+ Per visualizzare la descrizione dei contatori che possono essere utilizzati con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], in Performance Monitor visualizzare la finestra di dialogo **Aggiungi contatori** , selezionare un oggetto prestazione, quindi fare clic su **Mostra descrizione**. I contatori più importanti sono Utilizzo CPU, Utilizzo memoria e Velocità di trasferimento di I/O su disco. È consigliabile familiarizzare innanzitutto con questi contatori per passare poi a utilizzare contatori più dettagliati che consentono di eseguire un monitoraggio più dettagliato. Per ulteriori informazioni sui contatori da includere, vedere la pagina relativa alla [guida sulle operazioni di SQL Server 2008 R2](https://go.microsoft.com/fwlink/?LinkID=225539).  
   
  I contatori sono stati raggruppati in modo da agevolare la ricerca dei contatori correlati.  
   
 ## <a name="counters-by-groups"></a>Contatori per gruppi  
   
-|Raggruppa|Description|  
+|Raggruppa|Descrizione|  
 |-----------|-----------------|  
 |[Cache](#bkmk_Cache)|Statistiche correlate alla cache delle aggregazioni di Analysis Services.|  
 |[Connessione](#bkmk_Connection)|Statistiche correlate alle connessioni di Microsoft Analysis Services.|  
@@ -50,7 +50,7 @@ ms.locfileid: "48168581"
 ###  <a name="bkmk_Cache"></a> Cache  
  Statistiche correlate alla cache delle aggregazioni di Microsoft Analysis Services.  
   
-|Contatore|Description|  
+|Contatore|Descrizione|  
 |-------------|-----------------|  
 |KB memoria corrente|Memoria attualmente utilizzata dalla cache delle aggregazioni, in KB.|  
 |KB aggiunti/sec|Velocità con cui la memoria viene aggiunta alla cache, in KB al secondo.|  
@@ -72,7 +72,7 @@ ms.locfileid: "48168581"
 ###  <a name="bkmk_Connection"></a> Connessione  
  Statistiche correlate alle connessioni di Microsoft Analysis Services.  
   
-|Contatore|Description|  
+|Contatore|Descrizione|  
 |-------------|-----------------|  
 |Connessioni correnti|Numero corrente delle connessioni client stabilite.|  
 |Richieste/sec|Frequenza delle richieste di connessione  in arrivo.|  
@@ -86,7 +86,7 @@ ms.locfileid: "48168581"
 ###  <a name="bkmk_DataMiningModelProcessing"></a> Elaborazione modello di data mining  
  Statistiche correlate all'elaborazione del modello di data mining di Microsoft Analysis Services.  
   
-|Contatore|Description|  
+|Contatore|Descrizione|  
 |-------------|-----------------|  
 |Case/sec|Frequenza di elaborazione dei case.|  
 |Modelli elaborati correnti|Numero corrente dei modelli in fase di elaborazione.|  
@@ -94,7 +94,7 @@ ms.locfileid: "48168581"
 ###  <a name="bkmk_DataMiningPrediction"></a> Stima data mining  
  Statistiche correlate alle stime basate sui modelli di data mining di Microsoft Analysis Services.  
   
-|Contatore|Description|  
+|Contatore|Descrizione|  
 |-------------|-----------------|  
 |Query di data mining simultanee|Numero corrente delle query di data mining in fase di elaborazione.|  
 |Stime/sec|Numero di stime generate nelle query di data mining|  
@@ -107,7 +107,7 @@ ms.locfileid: "48168581"
 ###  <a name="bkmk_Locks"></a> Locks  
  Statistiche correlate ai blocchi del server interni di Microsoft Analysis Services.  
   
-|Contatore|Description|  
+|Contatore|Descrizione|  
 |-------------|-----------------|  
 |Attese di latch correnti|Numero corrente dei thread in attesa di un latch.  Si riferisce alle richieste di latch che non possono essere soddisfatte immediatamente e sono in stato di attesa.|  
 |Attese latch/sec|Frequenza delle richieste di latch che non possono essere soddisfatte immediatamente e devono attendere la concessione del latch.|  
@@ -123,7 +123,7 @@ ms.locfileid: "48168581"
 ###  <a name="bkmk_MDX"></a> MDX  
  Statistiche correlate ai calcoli MDX di Microsoft Analysis Services.  
   
-|Contatore|Description|  
+|Contatore|Descrizione|  
 |-------------|-----------------|  
 |Numero di calcoli copertura|Numero totale di nodi di valutazione creati dai piani di esecuzione MDX, compresi quelli attivi e memorizzati nella cache.|  
 |Numero corrente di nodi di valutazione|Numero corrente (approssimativo) di nodi di valutazione creati dai piani di esecuzione MDX, compresi quelli attivi e memorizzati nella cache.|  
@@ -156,7 +156,7 @@ ms.locfileid: "48168581"
 ###  <a name="bkmk_Memory"></a> Memoria  
  Statistiche correlate alla memoria interna del server di Microsoft Analysis Services.  
   
-|Contatore|Description|  
+|Contatore|Descrizione|  
 |-------------|-----------------|  
 |Riserva di paging da 64 KB allocata|Memory presa in prestito dal sistema, in KB.  Tale memoria viene allocata ad altre aree del server.|  
 |KB riserva di paging in elenco lookaside da 64 KB|Memoria corrente (in KB) nell'elenco lookaside da 64 KB.  Si riferisce alle pagine di memoria pronte all'uso.|  
@@ -233,7 +233,7 @@ ms.locfileid: "48168581"
 ###  <a name="bkmk_ProactiveCaching"></a> Memorizzazione nella cache attiva  
  Statistiche correlate al caching attivo di Microsoft Analysis Services.  
   
-|Contatore|Description|  
+|Contatore|Descrizione|  
 |-------------|-----------------|  
 |Notifiche/sec|Frequenza delle notifiche inviate dal database relazionale.|  
 |Annullamenti elaborazione/sec|Frequenza di annullamenti dell'elaborazione causati dalle notifiche.|  
@@ -243,7 +243,7 @@ ms.locfileid: "48168581"
 ###  <a name="bkmk_ProcAggregations"></a> Elaborazione di aggregazioni  
  Statistiche correlate all'elaborazione di aggregazioni di Microsoft Analysis Services nei file di dati MOLAP.  
   
-|Contatore|Description|  
+|Contatore|Descrizione|  
 |-------------|-----------------|  
 |Partizioni correnti|Numero corrente delle partizioni da elaborare.|  
 |Totale partizioni|Numero totale delle partizioni elaborate (con esito positivo o negativo).|  
@@ -257,7 +257,7 @@ ms.locfileid: "48168581"
 ###  <a name="bkmk_ProcIndexes"></a> Elaborazione di indici  
  Statistiche correlate all'elaborazione di Microsoft Analysis Services degli indici per i file di dati MOLAP.  
   
-|Contatore|Description|  
+|Contatore|Descrizione|  
 |-------------|-----------------|  
 |Partizioni correnti|Numero corrente delle partizioni da elaborare.|  
 |Totale partizioni|Numero totale delle partizioni elaborate (con esito positivo o negativo).|  
@@ -267,7 +267,7 @@ ms.locfileid: "48168581"
 ###  <a name="bkmk_Processing"></a> Elaborazione  
  Statistiche correlate all'elaborazione dei dati di Microsoft Analysis Services.  
   
-|Contatore|Description|  
+|Contatore|Descrizione|  
 |-------------|-----------------|  
 |Righe lette/sec|Velocità di lettura delle righe da tutti i database relazionali.|  
 |Totale righe lette|Numero totale delle righe lette da tutti i database relazionali.|  
@@ -279,7 +279,7 @@ ms.locfileid: "48168581"
 ###  <a name="bkmk_StorageEngineQuery"></a> Query motore di archiviazione  
  Statistiche correlate alle query del motore di archiviazione di Microsoft Analysis Services.  
   
-|Contatore|Description|  
+|Contatore|Descrizione|  
 |-------------|-----------------|  
 |Query correnti gruppo di misure|Numero corrente delle query sul gruppo di misure in fase di elaborazione.|  
 |Query gruppo di misure/sec|Frequenza delle query sul gruppo di misure|  
@@ -322,7 +322,7 @@ ms.locfileid: "48168581"
 ###  <a name="bkmk_Threads"></a> Thread  
  Statistiche correlate ai thread di Microsoft Analysis Services.  
   
-|Contatore|Description|  
+|Contatore|Descrizione|  
 |-------------|-----------------|  
 |Thread inattivi per analisi dei thread brevi|Numero dei thread inattivi nel pool dei thread per l'analisi dei thread brevi.|  
 |Thread occupati per analisi dei thread brevi|Numero dei thread occupati nel pool dei thread per l'analisi dei thread brevi.|  

@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 05/19/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: supportability
 ms.topic: conceptual
 helpviewer_keywords:
 - delayed durability
@@ -13,12 +13,12 @@ ms.assetid: 3ac93b28-cac7-483e-a8ab-ac44e1cc1c76
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1ff62ed93210521c9bc5499c5518edae7cf7d2ab
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7e217aedd1c6d3b2c58d946ed455bf9398cd7798
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48147166"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52818353"
 ---
 # <a name="control-transaction-durability"></a>Controllo della durabilità delle transazioni
   Il commit delle transazioni di[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] può essere completamente durevole, l'impostazione predefinita di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , oppure con durabilità ritardata (noto come Lazy Commit).  
@@ -83,7 +83,7 @@ ms.locfileid: "48147166"
   
      Se è stato completato il commit di una transazione completamente durevole o di sp_flush_log, tutte le transazioni con durabilità ritardata di cui è stato eseguito il commit in precedenza diventano durevoli.  
   
- Il log può essere scaricato su disco periodicamente. Tuttavia, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non fornisce alcuna garanzia di durabilità le transazioni durevoli e a sp_flush_log.  
+ Il log può essere scaricato su disco periodicamente. Tuttavia, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non fornisce alcuna garanzia di durabilità oltre alle transazioni durevoli e a sp_flush_log.  
   
 ## <a name="how-to-control-transaction-durability"></a>Come controllare la durabilità delle transazioni  
   
@@ -91,19 +91,19 @@ ms.locfileid: "48147166"
  L'amministratore del database può controllare se gli utenti possono utilizzare le transazioni con durabilità ritardata in un database con l'istruzione seguente. È necessario impostare il valore per la durabilità ritardata con ALTER DATABASE.  
   
 ```tsql  
-ALTER DATABASE … SET DELAYED_DURABILITY = { DISABLED | ALLOWED | FORCED }  
+ALTER DATABASE ... SET DELAYED_DURABILITY = { DISABLED | ALLOWED | FORCED }  
 ```  
   
  `DISABLED`  
  [impostazione predefinita] Con questa impostazione, tutte le transazioni di cui è stato eseguito il commit nel database sono completamente durevoli, indipendentemente dall'impostazione del livello di commit (DELAYED_DURABILITY=[ON | OFF]). Non è necessaria alcuna modifica e ricompilazione delle stored procedure. In questo modo è possibile garantire che i dati non verranno in alcun modo messi in pericolo dalla durabilità ritardata.  
   
  `ALLOWED`  
- Con questa impostazione, la durabilità di ogni transazione viene determinata a livello di transazione - DELAYED_DURABILITY = { *OFF* | ON }. Per altre informazioni, vedere [Controllo a livello di blocco atomico - Stored procedure compilate in modo nativo](control-transaction-durability.md#compiledproccontrol) e [Controllo a livello di COMMIT – Transact-SQL](control-transaction-durability.md#bkmk_t-sqlcontrol) .  
+ Con questa impostazione, la durabilità di ogni transazione viene determinata a livello di transazione (DELAYED_DURABILITY = { *OFF* | ON }). Per altre informazioni, vedere [Controllo a livello di blocco atomico: stored procedure compilate in modo nativo](control-transaction-durability.md#compiledproccontrol) e [Controllo a livello di COMMIT - Transact-SQL](control-transaction-durability.md#bkmk_t-sqlcontrol).  
   
  `FORCED`  
  Con questa impostazione, ogni transazione di cui viene eseguito il commit nel database è con durabilità ritardata. Indipendentemente dal fatto che venga specificata una transazione completamente durevole (DELAYED_DURABILITY = OFF) o non venga specificata alcuna impostazione, la transazione è con durabilità ritardata. Tale impostazione risulta utile quando è necessario specificare le transazioni con durabilità ritardata per un database e non si desidera modificare il codice dell'applicazione.  
   
-###  <a name="CompiledProcControl"></a> Controllo a livello di blocco atomico - Stored procedure compilate in modo nativo  
+###  <a name="CompiledProcControl"></a> Controllo a livello di blocco atomico: stored procedure compilate in modo nativo  
  Il codice seguente va inserito nel blocco atomico.  
   
 ```tsql  
@@ -119,14 +119,14 @@ DELAYED_DURABILITY = { OFF | ON }
  **Codice di esempio:**  
   
 ```tsql  
-CREATE PROCEDURE <procedureName> …  
+CREATE PROCEDURE <procedureName> ...  
 WITH NATIVE_COMPILATION, SCHEMABINDING, EXECUTE AS OWNER  
 AS BEGIN ATOMIC WITH   
 (  
     DELAYED_DURABILITY = ON,  
     TRANSACTION ISOLATION LEVEL = SNAPSHOT,  
     LANGUAGE = N'English'  
-    …  
+    ...  
 )  
 END  
 ```  
@@ -159,8 +159,8 @@ COMMIT [ { TRAN | TRANSACTION } ] [ transaction_name | @tran_name_variable ] ] [
 |--------------------------------------|-------------------------------------|------------------------------------|-----------------------------------|  
 |`DELAYED_DURABILITY = OFF` Transazioni a livello di database.|La transazione è completamente durevole.|La transazione è completamente durevole.|La transazione è con durabilità ritardata.|  
 |`DELAYED_DURABILITY = ON` Transazioni a livello di database.|La transazione è completamente durevole.|La transazione è con durabilità ritardata.|La transazione è con durabilità ritardata.|  
-|`DELAYED_DURABILITY = OFF` O tra database delle transazioni distribuite.|La transazione è completamente durevole.|La transazione è completamente durevole.|La transazione è completamente durevole.|  
-|`DELAYED_DURABILITY = ON` O tra database delle transazioni distribuite.|La transazione è completamente durevole.|La transazione è completamente durevole.|La transazione è completamente durevole.|  
+|`DELAYED_DURABILITY = OFF` Transazione distribuita o tra database.|La transazione è completamente durevole.|La transazione è completamente durevole.|La transazione è completamente durevole.|  
+|`DELAYED_DURABILITY = ON` Transazione distribuita o tra database.|La transazione è completamente durevole.|La transazione è completamente durevole.|La transazione è completamente durevole.|  
   
 ## <a name="how-to-force-a-transaction-log-flush"></a>Come forzare lo scaricamento di un log delle transazioni  
  Sono disponibili due metodi per forzare lo scaricamento del log delle transazioni su disco.  

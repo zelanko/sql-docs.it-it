@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - disabling publishing
@@ -19,12 +18,12 @@ ms.assetid: 6d4a1474-4d13-4826-8be2-80050fafa8a5
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0c21b53f55f0fe32c71e6d2e4f08d068f96431fd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 46cdf7ad91de4eacae513399dc7b0c88ad9831fe
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48111408"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52765443"
 ---
 # <a name="disable-publishing-and-distribution"></a>Disabilitazione della pubblicazione e della distribuzione
   In questo argomento viene descritto come disabilitare la pubblicazione e la distribuzione in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]o RMO (Replication Management Objects).  
@@ -68,7 +67,7 @@ ms.locfileid: "48111408"
   
 3.  Eseguire i vari passaggi della Disabilitazione guidata pubblicazione e distribuzione.  
   
-##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
  La pubblicazione e la distribuzione della replica possono essere disabilitate a livello di programmazione tramite le stored procedure di replica.  
   
 #### <a name="to-disable-publishing-and-distribution"></a>Per disabilitare la pubblicazione e la distribuzione  
@@ -111,13 +110,13 @@ ms.locfileid: "48111408"
   
 4.  Creare un'istanza della classe <xref:Microsoft.SqlServer.Replication.DistributionPublisher> . Specificare la proprietà <xref:Microsoft.SqlServer.Replication.DistributionPublisher.Name%2A> e passare l'oggetto <xref:Microsoft.SqlServer.Management.Common.ServerConnection> ottenuto al passaggio 3.  
   
-5.  (Facoltativo) Chiamare il metodo <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> per ottenere le proprietà dell'oggetto e verificare che il server di pubblicazione esista. Se questo metodo restituisce `false`, il nome del server di pubblicazione impostato al passaggio 4 è corretto oppure il server di pubblicazione non viene usato dal server di distribuzione.  
+5.  (Facoltativo) Chiamare il metodo <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> per ottenere le proprietà dell'oggetto e verificare che il server di pubblicazione esista. Se il metodo restituisce `false`, il nome del server di pubblicazione impostato al passaggio 4 non è corretto oppure il server di pubblicazione non è utilizzato da questo server di distribuzione.  
   
-6.  Chiamare il metodo <xref:Microsoft.SqlServer.Replication.DistributionPublisher.Remove%2A> . Passare il valore `true` per *forzare* se il server di pubblicazione e server di distribuzione si trovano in server diversi e quando il server di pubblicazione deve essere disinstallato dal server di distribuzione senza prima verificare non esistano più pubblicazioni nel Server di pubblicazione.  
+6.  Chiamare il metodo <xref:Microsoft.SqlServer.Replication.DistributionPublisher.Remove%2A>. Passare il valore `true` per *forzare* se il server di pubblicazione e server di distribuzione si trovano in server diversi e quando il server di pubblicazione deve essere disinstallato dal server di distribuzione senza prima verificare non esistano più pubblicazioni nel Server di pubblicazione.  
   
 7.  Creare un'istanza della classe <xref:Microsoft.SqlServer.Replication.ReplicationServer> . Passare l'oggetto <xref:Microsoft.SqlServer.Management.Common.ServerConnection> indicato nel passaggio 3.  
   
-8.  Chiamare il metodo <xref:Microsoft.SqlServer.Replication.ReplicationServer.UninstallDistributor%2A> . Passare il valore `true` per *forzare* rimuova tutti gli oggetti di replica nel server di distribuzione senza prima verificare che tutti i database di pubblicazione locali siano stati disabilitati e i database di distribuzione siano stati disinstallati.  
+8.  Chiamare il metodo <xref:Microsoft.SqlServer.Replication.ReplicationServer.UninstallDistributor%2A>. Passare il valore `true` per *forzare* rimuova tutti gli oggetti di replica nel server di distribuzione senza prima verificare che tutti i database di pubblicazione locali siano stati disabilitati e i database di distribuzione siano stati disinstallati.  
   
 ###  <a name="PShellExample"></a> Esempi (RMO)  
  In questo esempio viene rimossa la registrazione del server di pubblicazione nel database di distribuzione, viene eliminato il database di distribuzione e viene disinstallato il database di distribuzione.  
@@ -134,6 +133,6 @@ ms.locfileid: "48111408"
   
 ## <a name="see-also"></a>Vedere anche  
  [Replication Management Objects Concepts](concepts/replication-management-objects-concepts.md)   
- [Concetti di base relativi alle stored procedure del sistema di replica](concepts/replication-system-stored-procedures-concepts.md)  
+ [Replication System Stored Procedures Concepts](concepts/replication-system-stored-procedures-concepts.md)  
   
   

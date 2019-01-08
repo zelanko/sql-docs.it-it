@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial: Create a Quick Chart Report Offline (Report Builder) (Esercitazione: Creare un report grafico rapido offline (Generatore report)) | Microsoft Docs'
+title: 'Esercitazione: Creare un Report grafico rapido Offline (Generatore Report) | Microsoft Docs'
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -15,15 +15,15 @@ ms.assetid: 6b1db67a-cf75-494c-b70c-09f1e6a8d414
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: da0f35362a329974f8044da21b125d545c7bb323
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 677469c2110bee76870e9f30ed470f894200d2ad
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48091371"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52526997"
 ---
-# <a name="tutorial-create-a-quick-chart-report-offline-report-builder"></a>Esercitazione: Creare un report grafico rapido offline (Generatore report)
-  In questa esercitazione verrà creato un grafico a torta utilizzando una procedura guidata e verranno quindi apportate alcune modifiche allo scopo di illustrare le potenzialità offerte all'utente. È possibile eseguire questa esercitazione in due modi diversi. Con entrambi i metodi si otterrà lo stesso risultato, ovvero un grafico a torta simile a quello riportato nell'illustrazione seguente:  
+# <a name="tutorial-create-a-quick-chart-report-offline-report-builder"></a>Esercitazione: Creare un Report grafico rapido Offline (Generatore Report)
+  In questa esercitazione verrà creato un grafico a torta utilizzando una procedura guidata e verranno quindi apportate alcune modifiche allo scopo di illustrare le potenzialità offerte all'utente. È possibile eseguire questa esercitazione in due modi diversi. Entrambi i metodi presentano stesso risultato: un grafico a torta simile a quello nell'illustrazione seguente:  
   
  ![Consente di visualizzare "Mio primo grafico a torta" in esecuzione](../media/rs-my1stpierunview.gif "My primo grafico a torta nella visualizzazione Esegui")  
   
@@ -42,11 +42,11 @@ ms.locfileid: "48091371"
  [Creare il grafico a torta con dati XML](#CreatePieChartXML)  
   
 ### <a name="using-a-transact-sql-query-that-contains-data-for-this-tutorial"></a>Utilizzo di una query Transact-SQL contenente dati per l'esercitazione  
- È possibile copiare una query contenente dati da questo argomento e incollarla nella procedura guidata. È necessario il nome di un'istanza di [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] e credenziali sufficienti per l'accesso in lettura a qualsiasi database. Per la query del set di dati dell'esercitazione vengono utilizzati dati letterali, ma è necessario elaborare la query da un'istanza di [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] per restituire i metadati richiesti per un set di dati del report.  
+ È possibile copiare una query contenente dati da questo argomento e incollarla nella procedura guidata. Sarà necessario disporre del nome di un'istanza di [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] e di credenziali sufficienti per l'accesso in sola lettura a qualsiasi database. Per la query del set di dati dell'esercitazione vengono utilizzati dati letterali, ma è necessario elaborare la query da un'istanza di [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] per restituire i metadati richiesti per un set di dati del report.  
   
  Il vantaggio dell'utilizzo della query [!INCLUDE[tsql](../../../includes/tsql-md.md)] è dato dal fatto che in tutte le altre esercitazioni di Generatore report viene utilizzato lo stesso metodo, pertanto durante le altre esercitazioni si conosceranno già le azioni da effettuare.  
   
- Il [!INCLUDE[tsql](../../../includes/tsql-md.md)] query necessari pochi altri prerequisiti. Per altre informazioni, vedere [Prerequisiti per le esercitazioni &#40;Generatore report&#41;](../report-builder-tutorials.md).  
+ Per la query [!INCLUDE[tsql](../../../includes/tsql-md.md)] sono necessari pochi altri prerequisiti. Per altre informazioni, vedere [Prerequisiti per le esercitazioni &#40;Generatore report&#41;](../report-builder-tutorials.md).  
   
  [Creare il grafico a torta con una query Transact-SQL contenente dati](#CreatePieQueryData)  
   
@@ -133,7 +133,7 @@ ms.locfileid: "48091371"
   
  ![Icona freccia usata con il collegamento Torna all'inizio](../../2014-toc/media/uparrow16x16.gif "Icona freccia usata con il collegamento Torna all'inizio") [Torna all'inizio](#TwoWays)  
   
-##  <a name="CreatePieQueryData"></a> Creazione del grafico a torta con una [!INCLUDE[tsql](../../../includes/tsql-md.md)] query  
+##  <a name="CreatePieQueryData"></a> Creazione del grafico a torta con una query [!INCLUDE[tsql](../../../includes/tsql-md.md)]  
   
 #### <a name="to-create-the-pie-chart-with-a-includetsqlincludestsql-mdmd-query-that-contains-data"></a>Per creare il grafico a torta con una query [!INCLUDE[tsql](../../../includes/tsql-md.md)] contenente dati  
   
@@ -203,7 +203,7 @@ ms.locfileid: "48091371"
   
 3.  Tipo di `#PERCENT{P0}` per il **dati etichetta** opzione.  
   
-     Il `{P0}` specifica la percentuale senza cifre decimali. Se si digita solo `#PERCENT`, i numeri avranno due cifre decimali. `#PERCENT` è una parola chiave che esegue un calcolo o una funzione per l'utente; Esistono molti altri.  
+     Il testo `{P0}` specifica la percentuale senza cifre decimali. Se si digita solo `#PERCENT`, i numeri avranno due cifre decimali. `#PERCENT` è una parola chiave che esegue un calcolo o una funzione. Ne sono disponibili anche diverse altre.  
   
  Per altre informazioni sulla personalizzazione di etichette e legende dei grafici, vedere [Visualizzare i valori in percentuale in un grafico a torta &#40;Generatore report e SSRS&#41;](../report-design/display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md) e [Modificare il testo di un elemento legenda &#40;Generatore report e SSRS&#41;](../report-design/chart-legend-change-item-text-report-builder.md).  
   
@@ -212,7 +212,7 @@ ms.locfileid: "48091371"
 ##  <a name="WhatsNext"></a> Operazioni successive  
  Al termine della creazione del primo report in Generatore report, è possibile provare a eseguire le altre esercitazioni e iniziare a creare report basati su dati personalizzati. Per eseguire Generatore Report, è necessario disporre dell'autorizzazione per accedere alle origini dati, ad esempio database, con un *stringa di connessione*, che stabilisce l'effettiva connessione all'origine dati. L'amministratore di sistema disporrà di queste informazioni e potrà procedere alla configurazione.  
   
- Per eseguire le altre esercitazioni, è necessario il nome di un'istanza di [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] e credenziali sufficienti per l'accesso in lettura a qualsiasi database. L'amministratore di sistema potrà fornire i dati necessari.  
+ Per eseguire le altre esercitazioni, è necessario disporre del nome di un'istanza di [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] e di credenziali sufficienti per l'accesso in sola lettura a qualsiasi database. L'amministratore di sistema potrà fornire i dati necessari.  
   
  Per salvare infine i report in un server di report o in un sito di SharePoint integrato con un server di report, è necessario disporre dell'URL e delle autorizzazioni appropriate. Tutti i report creati possono essere eseguiti direttamente dal computer, tuttavia quando vengono eseguiti dal server di report o dal sito di SharePoint i report offrono maggiori funzionalità. Per eseguire i propri report o quelli presenti sul server di report o nel sito di SharePoint in cui vengono pubblicati è necessario disporre delle autorizzazioni appropriate. Per ottenere l'accesso è necessario rivolgersi all'amministratore di sistema.  
   

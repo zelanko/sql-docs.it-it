@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - inserting tables
@@ -14,15 +14,15 @@ ms.assetid: 6551aa7e-31a1-4636-852a-819bc53d658b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a58a2514009eab620f484afd8552fbb34a568857
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ba3957eb5b0c88396376d615033107b13d0621ae
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48170871"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52781563"
 ---
 # <a name="add-tables-to-queries-visual-database-tools"></a>Aggiunta di tabelle a query (Visual Database Tools)
-  Quando si crea una query, si recuperano dati da una tabella o da altri oggetti con struttura di tabelle, come viste e alcune funzioni definite dall'utente. Per usare uno qualsiasi di questi oggetti nelle query, è necessario aggiungerlo nel **riquadro Diagramma**.  
+  Quando si crea una query, si recuperano dati da una tabella o da altri oggetti strutturati come tabelle, come viste e alcune funzioni definite dall'utente. Per usare uno qualsiasi di questi oggetti nelle query, è necessario aggiungerlo nel **riquadro Diagramma**.  
   
 ### <a name="to-add-a-table-or-table-valued-object-to-a-query"></a>Per aggiungere una tabella o un oggetto con valori di tabella a una query  
   
@@ -48,7 +48,7 @@ ms.locfileid: "48170871"
   
 3.  Aprire Progettazione query dalla query esistente. A questo punto saranno aperte due istanze di Progettazione query.  
   
-4.  Visualizzare il **riquadro SQL** relativo alla query interna, ovvero la query esistente da includere nella nuova query esterna.  
+4.  Visualizzare il **riquadro SQL** per la query interna, ossia la query esistente da includere nella nuova query esterna.  
   
 5.  Selezionare tutto il testo presente nel **riquadro SQL**e copiarlo negli Appunti.  
   

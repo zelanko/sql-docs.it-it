@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: profiler
 ms.topic: conceptual
 helpviewer_keywords:
 - traces [SQL Server], replaying
@@ -14,12 +13,12 @@ ms.assetid: 6a0ad817-3d8d-4495-889d-c66a7ef9e8bb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 163332d281309ff2a3deef16ac8f96f0517346da
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6e80a18cef595ae3543aba8a656aca9267607e38
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48147306"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52809553"
 ---
 # <a name="replay-a-trace-table-sql-server-profiler"></a>Riprodurre una tabella di traccia (SQL Server Profiler)
   La funzionalità di riproduzione è la capacità di aprire una traccia salvata e riprodurla nuovamente. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] include un motore di riproduzione a thread multipli in grado di simulare le connessioni utente e l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . La funzionalità di riproduzione risulta utile per la risoluzione dei problemi a livello di applicazione o di processo. Quando si identifica il problema e si implementano le correzioni adeguate, eseguire nell'applicazione o nel processo la traccia con cui è stato rilevato il possibile problema. Riprodurre quindi la traccia originale e confrontare i risultati.  
@@ -42,7 +41,7 @@ ms.locfileid: "48147306"
   
 5.  Selezionare **Riproduci gli eventi nell'ordine in cui sono stati inseriti nella traccia**oppure **Riproduci gli eventi usando più thread**. Nella tabella seguente viene spiegata la differenza tra queste impostazioni.  
   
-    |Opzione|Description|  
+    |Opzione|Descrizione|  
     |------------|-----------------|  
     |**Riproduci gli eventi nell'ordine in cui sono stati inseriti nella traccia**|Gli eventi vengono riprodotti nell'ordine in cui sono stati inseriti nella traccia. Questa opzione consente il debug.|  
     |**Riproduci gli eventi usando più thread**|Vengono utilizzati più thread per riprodurre i vari eventi, indipendentemente dalla sequenza. Questa opzione consente di ottimizzare le prestazioni.|  
@@ -60,7 +59,7 @@ ms.locfileid: "48147306"
     -   Per controllare la modalità di gestione dei processi da parte di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] durante la riproduzione, configurare le **Opzioni Health Monitor**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Autorizzazioni necessarie per eseguire SQL Server Profiler](sql-server-profiler.md)   
+ [Autorizzazioni necessarie per l'esecuzione di SQL Server Profiler](sql-server-profiler.md)   
  [Riprodurre le tracce](replay-traces.md)   
  [Aprire una tabella di traccia &#40;SQL Server Profiler&#41;](open-a-trace-table-sql-server-profiler.md)   
  [SQL Server Profiler](sql-server-profiler.md)  

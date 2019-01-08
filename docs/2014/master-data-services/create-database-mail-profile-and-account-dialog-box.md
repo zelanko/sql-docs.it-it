@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.mds.configmanager.dbmailprofileacct.f1
@@ -13,12 +12,12 @@ ms.assetid: b93ea3d4-9f22-490e-8e26-d766b454aed6
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: da77653fa78503a62ec974aa88d41dee020a34d8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 521afe37ef58a8b2e325bb513c7bdee2a1ed66a2
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48089181"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52760973"
 ---
 # <a name="create-database-mail-profile-and-account-dialog-box-master-data-services-configuration-manager"></a>Finestra di dialogo Create account e profili di Posta elettronica database (Gestione configurazione Master Data Services)
   Usare la finestra di dialogo **Crea account e profilo di Posta elettronica database** per creare un profilo di Posta elettronica database e un account di Posta elettronica database per il database [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]. Questo profilo verrà utilizzato per avvisare utenti e gruppi tramite posta elettronica quando la convalida delle regole business ha esito negativo.  
@@ -29,14 +28,14 @@ ms.locfileid: "48089181"
 > [!NOTE]  
 >  Non è possibile utilizzare [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] per aggiornare gli account e i profili di Posta elettronica database esistenti, né è possibile configurare più di un account per un profilo. Per eseguire attività più avanzate con Posta elettronica database, è possibile usare [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] o gli script Transact-SQL. Per altre informazioni, vedere la sezione [Oggetti di configurazione di Posta elettronica database](../relational-databases/database-mail/database-mail-configuration-objects.md) nella documentazione online di SQL Server.  
   
-|Nome del controllo|Description|  
+|Nome del controllo|Descrizione|  
 |------------------|-----------------|  
 |**Nome profilo**|Digitare un nome per il nuovo profilo di Posta elettronica database. Deve essere un nome univoco nei profili di Posta elettronica database configurati per il database [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .<br /><br /> Dopo che è stato creato, il profilo risulterà disponibile e selezionato nella pagina **Database** in [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)].|  
 |**Nome account**|Digitare un nome per il nuovo account di Posta elettronica database da associare al profilo. Deve essere un nome univoco negli account di Posta elettronica database configurati per il database [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . L'account non deve corrispondere a un account di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] o a un account utente di Windows.|  
   
 ## <a name="outgoing-smtp-mail-server"></a>Server della posta in uscita (SMTP)  
   
-|Nome del controllo|Description|  
+|Nome del controllo|Descrizione|  
 |------------------|-----------------|  
 |**Indirizzo di posta elettronica**|Digitare il nome associato all'indirizzo di posta elettronica relativo all'account. Questo è l'indirizzo di posta elettronica dal quale viene inviata la posta elettronica e deve essere nel formato *nome_posta_elettronica*@*nome_dominio*. Un esempio di indirizzo di posta elettronica è sales@contoso.com.|  
 |**Nome visualizzato**|Impostazione facoltativa. Digitare il nome da visualizzare nei messaggi di posta elettronica inviati dall'account. Un esempio di nome visualizzato è Contoso Sales Group.|  
@@ -48,7 +47,7 @@ ms.locfileid: "48089181"
 ## <a name="smtp-authentication"></a>Autenticazione SMTP  
  È possibile inviare Posta elettronica database usando le credenziali di [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)], altre credenziali specificate dall'utente oppure in modo anonimo. In base alla procedura consigliata, se il server di posta elettronica richiede l'autenticazione, è consigliabile creare un account utente specifico da utilizzare in modo specifico per Posta elettronica database. L'account utente deve disporre di autorizzazioni minime e non deve essere utilizzato per altri scopi.  
   
-|Nome del controllo|Description|  
+|Nome del controllo|Descrizione|  
 |------------------|-----------------|  
 |**Autenticazione di Windows con credenziali del servizio Motore di database**|Specificare che Posta elettronica database deve usare le credenziali dell'account del servizio Windows del [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] per l'autenticazione nel server SMTP.|  
 |**Autenticazione di base**|Specificare che Posta elettronica database deve utilizzare un nome utente e una password specifici per l'autenticazione nel server SMTP. Queste informazioni vengono utilizzate solo per l'autenticazione con il server di posta elettronica e non è necessario che l'account corrisponda a un utente di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] o a un utente nel computer che esegue [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].|  

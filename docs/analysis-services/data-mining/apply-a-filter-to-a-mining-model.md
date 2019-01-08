@@ -1,5 +1,5 @@
 ---
-title: Applicare un filtro a un modello di Data Mining | Documenti Microsoft
+title: Applicare un filtro a un modello di Data Mining | Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: a3e192718ed0e1c3597f4e0f76c951a96530c6c7
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 5430aa0125e621a574d8fb9cc6b28f6b73794b46
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34014598"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52519265"
 ---
 # <a name="apply-a-filter-to-a-mining-model"></a>Applicare un filtro a un modello di data mining
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -41,7 +41,7 @@ WHERE [Model] <> 'Water Bottle' )
   
 3.  Selezionare il modello, quindi fare clic con il pulsante destro del mouse per aprire il menu di scelta rapida.  
   
-     -oppure-  
+     oppure  
   
      Selezionare il modello. quindi scegliere **Imposta filtro modello** dal menu **Modello di data mining**.  
   
@@ -81,7 +81,7 @@ WHERE [Model] <> 'Water Bottle' )
   
 ### <a name="to-add-a-filter-on-the-nested-table-in-a-mining-model"></a>Per aggiungere un filtro nella tabella nidificata in un modello di data mining  
   
-1.  Nel  **\<nome > filtro modello** finestra di dialogo fare clic su una riga vuota nella griglia in **colonna della struttura di Data Mining**.  
+1.  Nel  **\<nome > filtro modello** finestra di dialogo fare clic su una riga vuota nella griglia sotto **colonna della struttura di Data Mining**.  
   
 2.  Selezionare il nome della tabella nidificata dall'elenco a discesa.  
   
@@ -91,7 +91,7 @@ WHERE [Model] <> 'Water Bottle' )
   
      Queste sono le uniche condizioni disponibili per la tabella nidificata nella finestra di dialogo **Filtro modello** , perché la tabella del case è stata limitata solo ai case che contengono un determinato valore nella tabella nidificata. Il valore per la condizione nella tabella nidificata verrà impostato nel passaggio successivo.  
   
-4.  Fare clic sulla casella **Valore** e quindi sul pulsante (**…**) per creare un'espressione.  
+4.  Fare clic sui **valore** e quindi scegliere il **(...)**  per compilare un'espressione.  
   
      Il  **\<nome > filtro** verrà visualizzata la finestra di dialogo. Questa finestra di dialogo consente di impostare condizioni solo nella tabella corrente, che in questo caso è la tabella nidificata.  
   
@@ -120,8 +120,8 @@ EXISTS (SELECT * FROM [<nested table name>] WHERE [Model] <> 'Water Bottle' )
     >  Se si modifica manualmente una parte di un'espressione di filtro, la griglia verrà disabilitata e da quel momento sarà necessario utilizzare l'espressione di filtro solo in modalità di modifica di testo. Per ripristinare la modalità di modifica della griglia, è necessario cancellare l'espressione di filtro e ricominciare.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Filtri per i modelli di Data Mining & #40; Analysis Services - Data Mining & #41;](../../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)   
- [Procedure dettagliate e attività di modello di data mining](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)   
- [Eliminare un filtro da un modello di Data Mining](../../analysis-services/data-mining/delete-a-filter-from-a-mining-model.md)  
+ [Filtri per i modelli di data mining &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)   
+ [Attività e procedure relative al modello di data mining](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)   
+ [Eliminare un filtro da un modello di data mining](../../analysis-services/data-mining/delete-a-filter-from-a-mining-model.md)  
   
   

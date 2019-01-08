@@ -19,12 +19,12 @@ ms.assetid: 670a5181-ab80-436a-be96-d9498fbe2c09
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 70afd9ea708a82e45ba10e90022224c6ffdc088a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d272b3ea7efa7800c30518aa2ffb7b43bf7fccb7
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48229508"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514673"
 ---
 # <a name="choose-a-language-when-creating-a-full-text-index"></a>Scelta di una lingua durante la creazione di un indice full-text
   Quando si crea un indice full-text, è necessario specificare una lingua a livello di colonna per la colonna indicizzata. Il [word breaker e gli stemmer](configure-and-manage-word-breakers-and-stemmers-for-search.md) della lingua specificata verranno usati dalle query full-text sulla colonna. Quando si crea un indice full-text, è necessario considerare alcuni aspetti relativi alla scelta della lingua delle colonne. Tali considerazioni riguardano il modo in cui il testo viene suddiviso in token e quindi indicizzato dal motore di ricerca full-text.  
@@ -59,7 +59,7 @@ ms.locfileid: "48229508"
   
      I word breaker sono di nuova progettazione e i test effettuati hanno dimostrato una qualità semantica migliore rispetto a quella dei word breaker precedenti. Ne risulta una maggiore accuratezza delle chiamate.  
   
--   Per numerose lingue, word breaker sono inclusi [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] orizzontale della finestra e abilitato per impostazione predefinita.  
+-   I word breaker, disponibili per numerose lingue, sono inclusi direttamente in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e abilitati per impostazione predefinita.  
   
  Per un elenco delle lingue per cui [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] include un word breaker e stemmer, vedere [Sys. fulltext_languages &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql).  
   
@@ -69,7 +69,7 @@ ms.locfileid: "48229508"
  Quando si crea un indice full-text, è necessario specificare un nome di lingua valido per ogni colonna. Se un nome di lingua è valido, ma non restituito dalla vista del catalogo [sys.fulltext_languages &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql) , la ricerca full-text opta per il nome di lingua disponibile più simile nella stessa famiglia, se disponibile. Se non è disponibile una lingua simile, viene specificato il word breaker neutro. Questo comportamento potrebbe influire negativamente sull'accuratezza delle chiamate. Per creare un indice full-text, è pertanto consigliabile specificare un nome di lingua valido e disponibile per ogni colonna.  
   
 > [!NOTE]  
->  L'identificatore LCID viene utilizzato per tutti i tipi di dati considerati idonei per l'indicizzazione full-text, ad esempio `char` o `nchar`. Se si dispone dell'ordinamento di una `char`, `varchar`, o `text` colonna con tipo impostato su una lingua diversa da quella identificata dal LCID, l'identificatore LCID verrà utilizzato comunque durante l'indicizzazione e query di quelle colonne full-text.  
+>  L'identificatore LCID viene utilizzato per tutti i tipi di dati considerati idonei per l'indicizzazione full-text, ad esempio `char` o `nchar`. Se l'ordinamento di una colonna di tipo `char`, `varchar` o `text` è impostato su una lingua diversa da quella identificata dall'LCID, l'LCID verrà utilizzato comunque durante l'indicizzazione full-text e le query di quelle colonne.  
   
 
   
@@ -96,7 +96,7 @@ ms.locfileid: "48229508"
   
 -   Contenuto di testo normale  
   
-     Quando il contenuto è testo normale, è possibile convertirlo per il `xml` tipo di dati e aggiungere tag che indichino la lingua corrispondente a ogni sezione di documento o un documento specifico. Affinché questa soluzione funzioni, tuttavia, è necessario conoscere la lingua prima di procedere all'indicizzazione full-text.  
+     Se il contenuto è di testo normale, è possibile convertirlo nel tipo di dati `xml` e aggiungere tag che indichino la lingua corrispondente a ogni documento o sezione di documento specifica. Affinché questa soluzione funzioni, tuttavia, è necessario conoscere la lingua prima di procedere all'indicizzazione full-text.  
   
 
   
@@ -106,9 +106,9 @@ ms.locfileid: "48229508"
 
   
 ##  <a name="type"></a> Effetto del tipo di colonna sulla ricerca full-text  
- Un'altra considerazione relativa alla scelta della lingua riguarda la modalità di rappresentazione dei dati. Per i dati che non vengono memorizzati in `varbinary(max)` colonna, nessun filtro speciale viene eseguita. Il testo, al contrario, viene normalmente passato tramite il componente per l'esecuzione del word breaking così com'è.  
+ Un'altra considerazione relativa alla scelta della lingua riguarda la modalità di rappresentazione dei dati. Ai dati non archiviati nella colonna `varbinary(max)` non vengono applicati filtri speciali. Il testo, al contrario, viene normalmente passato tramite il componente per l'esecuzione del word breaking così com'è.  
   
- I word breaker, inoltre, vengono progettati soprattutto per elaborare il testo scritto. Ne consegue che, se il testo include un tipo qualsiasi di markup (ad esempio HTML) le operazioni di indicizzazione e ricerca potrebbero non essere sufficientemente accurate dal punto di vista linguistico. In tal caso esistono due possibilità. Il metodo preferito consiste semplicemente nell'archiviare i dati di testo nella colonna `varbinary(max)` e indicare il tipo del documento per consentire l'applicazione del filtro. Se questa operazione non è possibile, valutare la possibilità di utilizzare il word breaker neutro ed eventualmente di aggiungere dati di markup, ad esempio "br" nel codice HTML, agli elenchi delle parole non significative.  
+ I word breaker, inoltre, vengono progettati soprattutto per elaborare il testo scritto. Ne consegue che, se il testo include un tipo qualsiasi di markup (ad esempio HTML) le operazioni di indicizzazione e ricerca potrebbero non essere sufficientemente accurate dal punto di vista linguistico. In quanto i casi, sono disponibili due opzioni, il preferito metodo consiste semplicemente nell'archiviare i dati di testo in `varbinary(max)` colonna e indicare il tipo di documento in modo che l'applicazione del filtro. Se questa operazione non è possibile, valutare la possibilità di utilizzare il word breaker neutro ed eventualmente di aggiungere dati di markup, ad esempio "br" nel codice HTML, agli elenchi delle parole non significative.  
   
 > [!NOTE]  
 >  Lo stemming basato sulla lingua non viene eseguito se si specifica la lingua neutra.  

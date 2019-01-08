@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - monitoring performance [SQL Server replication], Replication Monitor
@@ -20,12 +19,12 @@ ms.assetid: f212397d-1bfd-496b-a246-668952891d09
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2dd079ec5abc9ef0ef8600f882236d44dd45b1b0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c84d808b84a70ae9d70eff308351ff1e7f3df8e0
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48086491"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52815573"
 ---
 # <a name="monitor-performance-with-replication-monitor"></a>Monitoraggio delle prestazioni con Monitoraggio replica
   Monitoraggio replica di[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] consente di monitorare le prestazioni della replica transazionale e della replica di tipo merge nei modi seguenti:  
@@ -76,7 +75,7 @@ ms.locfileid: "48086491"
   
     |Eccellenti|Buone|Discrete|Scarse|Critico|  
     |---------------|----------|----------|----------|--------------|  
-    |0 – 34%|35 – 59%|60 – 84%|85 – 99%|100% +|  
+    |0 - 34%|35 - 59%|60 - 84%|85 - 99%|100% +|  
   
 -   Per la replica di tipo merge la qualità delle prestazioni è indipendente dalla soglia. La soglia di elaborazione delle righe determina in realtà se il valore **Prestazioni critiche** viene visualizzato nella colonna **Stato** . La qualità delle prestazioni è determinata dal confronto tra le prestazioni delle singole sottoscrizioni e le prestazioni medie cronologiche delle sottoscrizioni, che utilizzano lo stesso tipo di connessione (remota o LAN), rispetto alla pubblicazione. In Monitoraggio replica viene visualizzato un valore dopo cinque sincronizzazioni con 50 o più modifiche eseguite con lo stesso tipo di connessione. Se sono state eseguite meno di cinque sincronizzazioni con 50 o più modifiche oppure la sincronizzazione più recente include meno di 50 modifiche, in Monitoraggio replica non viene visualizzato alcun valore.  
   
@@ -84,7 +83,7 @@ ms.locfileid: "48086491"
   
     |Eccellenti|Buone|Discrete|Scarse|  
     |---------------|----------|----------|----------|  
-    |151+%|76 – 150%|26 – 75%|0 – 25%|  
+    |151+%|76 - 150%|26 - 75%|0 - 25%|  
   
  Per altre informazioni sulla visualizzazione delle informazioni relative alle sottoscrizioni, vedere [Visualizzare le informazioni ed eseguire attività per una sottoscrizione &#40;Monitoraggio replica&#41;](view-information-and-perform-tasks-for-a-subscription-replication-monitor.md).  
   
@@ -99,6 +98,6 @@ ms.locfileid: "48086491"
   
 ## <a name="see-also"></a>Vedere anche  
  [Monitoraggio della replica](../monitoring-replication.md)   
- [Impostare valori di soglia e avvisi in Monitoraggio replica](set-thresholds-and-warnings-in-replication-monitor.md)  
+ [Set Thresholds and Warnings in Replication Monitor](set-thresholds-and-warnings-in-replication-monitor.md)  
   
   

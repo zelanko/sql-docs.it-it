@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: table-view-index
+ms.technology: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.managepartition.getstart.f1
@@ -23,12 +23,12 @@ ms.assetid: e2478d26-dea4-428d-98c5-aad2d2a30da8
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: e706a867c9192f4b447badc70db46dc4b0abc338
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6a19bfa830b8f57d8df891fb2cfea9435c2716b4
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48130671"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52781003"
 ---
 # <a name="manage-partition-wizard-f1-help"></a>Guida sensibile al contesto della Gestione guidata partizione
   Usare la **Gestione guidata partizione** per gestire e modificare tabelle partizionate esistenti tramite il cambio della partizione o l'implementazione di uno scenario basato su finestra temporale scorrevole. Questa procedura guidata può semplificare la gestione delle partizioni e la normale migrazione di dati all'interno e all'esterno delle tabelle.  
@@ -178,7 +178,7 @@ ms.locfileid: "48130671"
 ### <a name="options"></a>Opzioni  
  Selezionare il tipo di pianificazione desiderata per il processo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
   
- **Nome**  
+ **Name**  
  Consente di digitare un nuovo nome per la pianificazione.  
   
  **Processi nella pianificazione**  
@@ -303,6 +303,6 @@ ms.locfileid: "48130671"
  ![Icona freccia usata con il collegamento Torna all'inizio](../../2014-toc/media/uparrow16x16.gif "Icona freccia usata con il collegamento Torna all'inizio") [In questa sezione](#Top)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Partitioned Tables and Indexes](partitioned-tables-and-indexes.md)  
+ [Tabelle e indici partizionati](partitioned-tables-and-indexes.md)  
   
   

@@ -16,12 +16,12 @@ ms.assetid: 167ebe77-487d-4ca8-9452-4b2c7d5cb96e
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 65af75296064cd33e1c057126754339499f8b93f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6fa11684cc9f35eb662ca41c731f11887e1bce32
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48070381"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52534038"
 ---
 # <a name="move-an-existing-index-to-a-different-filegroup"></a>Spostare un indice esistente in un filegroup diverso
   In questo argomento viene descritta la procedura per spostare un indice esistente dal relativo filegroup corrente in un filegroup diverso in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -32,7 +32,7 @@ ms.locfileid: "48070381"
   
      [Limitazioni e restrizioni](#Restrictions)  
   
-     [Security](#Security)  
+     [Sicurezza](#Security)  
   
 -   **Per spostare un indice esistente in un filegroup diverso tramite:**  
   
@@ -99,7 +99,7 @@ ms.locfileid: "48070381"
   
 8.  Fare clic su **OK**.  
   
- Le informazioni seguenti sono disponibili nella pagina **Archiviazione** della finestra di dialogo **Proprietà indice –** *nome_indice* :  
+ Le informazioni seguenti sono disponibili nella pagina **Archiviazione** della finestra di dialogo **Proprietà indice -** *nome_indice*:  
   
  **Filegroup**  
  Archivia l'indice nel filegroup specificato. Nell'elenco sono visualizzati solo filegroup standard (ROW). La selezione predefinita nell'elenco è il filegroup PRIMARY del database.  
@@ -141,7 +141,7 @@ ms.locfileid: "48070381"
 > [!NOTE]  
 >  Se viene specificato un valore maggiore del numero di CPU disponibili, verrà usato l'effettivo numero di CPU disponibili.  
   
-##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
   
 #### <a name="to-move-an-existing-index-to-a-different-filegroup"></a>Per spostare un indice esistente in un filegroup diverso  
   

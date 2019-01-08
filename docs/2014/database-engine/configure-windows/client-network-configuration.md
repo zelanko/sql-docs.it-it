@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - client configuration [SQL Server], connections
@@ -19,12 +18,12 @@ ms.assetid: c382eacd-0a0c-40a4-958f-9b774eb2d734
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 15e016802fd57a1c9363ceba0dfa22b33ac30126
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 862c13e61513b46b44ce55df9e66170bbb1ac219
+ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48131161"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52641052"
 ---
 # <a name="client-network-configuration"></a>Configurazione di rete dei client
   Il software client consente ai computer di connettersi a un'istanza di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] disponibile in rete. Un client è un'applicazione front-end che utilizza i servizi forniti da un server quale [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Il computer nel quale è installata l'applicazione viene definito *computer client*.  
@@ -64,7 +63,7 @@ ms.locfileid: "48131161"
   
      Amministrazione origine dati ODBC consente di creare e modificare origini dati ODBC in computer su cui è in esecuzione il sistema operativo Microsoft Windows.  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Configurazione di protocolli client](configure-client-protocols.md)  
   
  [Creare o eliminare un alias server per l'uso da parte di un client &#40;Gestione configurazione SQL Server Manager&#41;](create-or-delete-a-server-alias-for-use-by-a-client.md)  

@@ -21,12 +21,12 @@ ms.assetid: 4fae8193-1f88-48fd-a94a-4786efe8d6af
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c3f19fed072e693de6bbebb53354eae8c0bfaa0e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 86db5a13ab1bdac2b35c6d5128ba1b2234bc24b7
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47827909"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52536406"
 ---
 # <a name="managedbackupspbackupconfigadvanced-transact-sql"></a>managed_backup.sp_backup_config_advanced (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ EXEC managed_backup.sp_backup_config_advanced
  Il nome del database per l'abilitazione del backup gestito in un database specifico. Se è NULL o *, il backup gestito verrà applicata a tutti i database nel server.  
   
  @encryption_algorithm  
- Nome dell'algoritmo di crittografia utilizzato durante il backup per crittografare il file di backup. Il @encryption_algorithm viene **SYSNAME**. È un parametro obbligatorio quando si configura il [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] per la prima volta per il database. Specificare **NO_ENCRYPTION** se non si desidera crittografare il file di backup. Quando si modificano le impostazioni di configurazione del [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)], questo parametro è facoltativo. Se il parametro non viene specificato, vengono mantenuti i valori di configurazione esistenti. I valori consentiti per questo parametro sono:  
+ Nome dell'algoritmo di crittografia utilizzato durante il backup per crittografare il file di backup. Il @encryption_algorithm viene **SYSNAME**. È un parametro obbligatorio quando si configura il [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] per la prima volta per il database. Specificare **NO_ENCRYPTION** se non si desidera crittografare il file di backup. Quando si modifica il [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] impostazioni di configurazione, questo parametro è facoltativo: se il parametro non viene specificato quindi i valori di configurazione esistenti vengono mantenuti. I valori consentiti per questo parametro sono:  
   
 -   AES_128  
   

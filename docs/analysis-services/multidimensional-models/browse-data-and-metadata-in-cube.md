@@ -1,5 +1,5 @@
 ---
-title: Esplorare dati e metadati in un cubo | Documenti Microsoft
+title: Esplorare dati e metadati in un cubo | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 7bd1940a21407375015e6b732ab129653bff01e6
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: fda788cecbad21a73186b96a6c360ceeae3948e3
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34022608"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52537283"
 ---
 # <a name="browse-data-and-metadata-in-cube"></a>Esplorare dati e metadati in un cubo
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -22,7 +22,7 @@ ms.locfileid: "34022608"
   
  Prima di visualizzare un cubo, è necessario elaborarlo e riconnetterlo. Al termine dell'elaborazione, aprire la scheda **Esplorazione** di Progettazione cubi. Sulla barra degli strumenti fare clic sul pulsante Riconnetti per aggiornare la connessione.  
   
- La scheda **Esplorazione** dispone di tre riquadri: Metadati, Filtro e Dati. Utilizzare il riquadro Metadati per esaminare la struttura del cubo nel formato albero. Usare il riquadro Filtro nella parte superiore della scheda **Esplorazione** per definire un qualsiasi sottocubo si voglia visualizzare. Utilizzare il riquadro Dati per visualizzare i set di risultati ed eseguire il drill-down tramite le gerarchie di dimensione.  
+ Il **Browser** scheda include tre riquadri: il riquadro dei metadati, il riquadro filtro e il riquadro dei dati. Utilizzare il riquadro Metadati per esaminare la struttura del cubo nel formato albero. Usare il riquadro Filtro nella parte superiore della scheda **Esplorazione** per definire un qualsiasi sottocubo si voglia visualizzare. Utilizzare il riquadro Dati per visualizzare i set di risultati ed eseguire il drill-down tramite le gerarchie di dimensione.  
   
 ## <a name="setting-up-the-browser"></a>Configurazione di Esplorazione  
  Per preparare la visualizzazione di un cubo, è possibile specificare una prospettiva o una traduzione che si desidera utilizzare. Aggiungere misure e dimensioni al riquadro Dati e specificare tutti i filtri nel riquadro Filtro.  
@@ -31,7 +31,7 @@ ms.locfileid: "34022608"
  Usare l'elenco **Prospettiva** per scegliere una prospettiva da definire per il cubo. Le prospettive vengono definite nella scheda **Prospettive** di Progettazione cubi. Per passare a una prospettiva diversa, selezionare una qualsiasi prospettiva nell'elenco.  
   
 ##### <a name="specifying-a-translation"></a>Specifica di una traduzione  
- Usare l'elenco **Lingua** per scegliere una traduzione da definire per il cubo. Le traduzioni vengono definite nella **relativa scheda** di Progettazione cubi. La scheda **Esplorazione** visualizza inizialmente le didascalie per la lingua predefinita, specificata dalla proprietà **Lingua** del cubo. Per passare a una lingua diversa, selezionare una qualsiasi lingua nell'elenco.  
+ Usare l'elenco **Lingua** per scegliere una traduzione da definire per il cubo. Le traduzioni sono definite nella scheda **Traduzioni** di Cube Designer. La scheda **Esplorazione** visualizza inizialmente le didascalie per la lingua predefinita, specificata dalla proprietà **Lingua** del cubo. Per passare a una lingua diversa, selezionare una qualsiasi lingua nell'elenco.  
   
 ##### <a name="formatting-the-data-pane"></a>Formattazione del riquadro Dati  
  È possibile formattare didascalie e celle nel riquadro Dati. Fare clic con il pulsante destro del mouse sulle celle o didascalie selezionate che si vuole formattare e quindi fare clic su **Comandi e opzioni**. A seconda della selezione, nella finestra di dialogo **Comandi e opzioni** vengono visualizzate le impostazioni per **Formato**, **Filtra e raggruppa**, **Report**e **Comportamento**.  
@@ -57,11 +57,11 @@ ms.locfileid: "34022608"
   
      \- - oppure -  
   
--   Nel **dimensione** colonna del **filtro** riquadro, fare clic su  **\<selezionare una dimensione >** e selezionare una dimensione dall'elenco, quindi fare clic su  **\<Seleziona gerarchia >** nel **gerarchia** colonna e selezionare una gerarchia dall'elenco.  
+-   Nel **dimensione** della colonna della **filtro** riquadro, fare clic su  **\<selezionare una dimensione >** e selezionare una dimensione dall'elenco, quindi fare clic su  **\<Seleziona gerarchia >** nel **gerarchia** colonna e selezionare una gerarchia dall'elenco.  
   
  Dopo aver specificato la gerarchia, indicare l'operatore e l'espressione di filtro. Nella tabella seguente vengono descritti gli operatori e le espressioni di filtro.  
   
-|Operatore|Espressione filtro|Description|  
+|Operatore|Espressione filtro|Descrizione|  
 |--------------|-----------------------|-----------------|  
 |Uguale a|Uno o più membri|I valori devono essere uguali a un membro specificato.<br /><br /> Fornisce la selezione di più membri per le gerarchie di attributi, a eccezione delle gerarchie padre-figlio, e la selezione di un solo membro per le altre gerarchie.|  
 |Diverso da|Uno o più membri|I valori devono essere diversi da un membro specificato.<br /><br /> Fornisce la selezione di più membri per le gerarchie di attributi, a eccezione delle gerarchie padre-figlio, e la selezione di un solo membro per le altre gerarchie.|  

@@ -14,12 +14,12 @@ ms.assetid: 5d48bb98-61f0-4b99-8f1a-b53f831d63d0
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 20c4cc7fe03d9c57ea45575b243a24da690ba88d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3f70ddfc241a902a59dff989323a75b17f7af55e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48064471"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52541888"
 ---
 # <a name="allow-a-database-mirroring-endpoint-to-use-certificates-for-inbound-connections-transact-sql"></a>Impostazione dell'endpoint del mirroring del database per l'utilizzo di certificati per le connessioni in entrata (Transact-SQL)
   In questo argomento viene illustrata la procedura per configurare le istanze del server in modo da utilizzare i certificati per l'autenticazione delle connessioni in ingresso per il mirroring del database. Prima di impostare le connessioni in entrata, è necessario configurare le connessioni in uscita in ogni istanza del server. Per altre informazioni, vedere [Impostare l'endpoint del mirroring del database per l'uso di certificati per le connessioni in uscita &#40;Transact-SQL&#41;](database-mirroring-use-certificates-for-outbound-connections.md).  
@@ -113,7 +113,7 @@ ms.locfileid: "48064471"
   
 5.  Concedere l'autorizzazione CONNECT per l'account di accesso per l'endpoint del mirroring remoto.  
   
-     Ad esempio, per concedere l'autorizzazione in HOST_A all'istanza del server remoto in HOST_B per la connessione al relativo account di accesso locale, ovvero per la connessione a `HOST_B_login`, utilizzare le istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] seguenti:  
+     Per concedere l'autorizzazione in HOST_A all'istanza del server remoto in HOST_B per la connessione al relativo account di accesso locale `HOST_B_login`, ad esempio, usare le istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] seguenti:  
   
     ```  
     USE master;  
@@ -155,9 +155,9 @@ GO
   
  Se si prevede di utilizzare la modalità a sicurezza elevata con failover automatico, è necessario ripetere gli stessi passaggi di impostazione per configurare il server di controllo del mirroring per connessioni in uscita e in ingresso.  
   
- Per informazioni sulla creazione di un database mirror e un esempio di Transact-SQL, vedere [Preparare un database mirror per il mirroring &#40;SQL Server&#41;](prepare-a-mirror-database-for-mirroring-sql-server.md).  
+ Per informazioni sulla creazione di un database mirror e un esempio di Transact-SQL, vedere [Preparazione di un database mirror per il mirroring &#40;SQL Server&#41;](prepare-a-mirror-database-for-mirroring-sql-server.md).  
   
- Per un esempio di Transact-SQL per stabilire una sessione in modalità a prestazioni elevate, vedere [Esempio: Impostazione del mirroring del database tramite certificati &#40;Transact-SQL&#41;](example-setting-up-database-mirroring-using-certificates-transact-sql.md).  
+ Per un esempio di Transact-SQL di stabilire una sessione in modalità a prestazioni elevate, vedere [esempio: Configurare tramite certificati di mirroring del Database &#40;Transact-SQL&#41;](example-setting-up-database-mirroring-using-certificates-transact-sql.md).  
   
 ## <a name="net-framework-security"></a>Sicurezza di .NET Framework  
  Quando si copia un certificato in un altro sistema, utilizzare un metodo di copia sicuro. È estremamente importante garantire la protezione di tutti i certificati.  
@@ -165,7 +165,7 @@ GO
 ## <a name="see-also"></a>Vedere anche  
  [Sicurezza del trasporto per i gruppi di disponibilità AlwaysOn e mirroring del Database &#40;SQL Server&#41;](transport-security-database-mirroring-always-on-availability.md)   
  [GRANT Endpoint Permissions &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-endpoint-permissions-transact-sql)   
- [Impostare un database mirror crittografato](set-up-an-encrypted-mirror-database.md)   
+ [Impostazione di un database mirror crittografato](set-up-an-encrypted-mirror-database.md)   
  [Endpoint del mirroring del database &#40;SQL Server&#41;](the-database-mirroring-endpoint-sql-server.md)   
  [Risolvere i problemi relativi alla configurazione del mirroring del database &#40;SQL Server&#41;](troubleshoot-database-mirroring-configuration-sql-server.md)  
   

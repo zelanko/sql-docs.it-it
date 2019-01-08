@@ -15,12 +15,12 @@ ms.assetid: 182b115e-0fe2-4717-8dff-183f9eb6e397
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f0e98d0653bf73c96448291d4c25654cdf5ea753
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c7a971b96de66cf766541b741c48f5477cf9db65
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48177473"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53350433"
 ---
 # <a name="sign-a-package-by-using-a-digital-certificate"></a>Firma di un pacchetto tramite certificato digitale
   Questo argomento illustra come firmare un pacchetto di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] con un certificato digitale. È possibile utilizzare una firma digitale, insieme ad altre impostazioni, per evitare il caricamento e l'esecuzione di pacchetti non validi.  
@@ -33,11 +33,11 @@ ms.locfileid: "48177473"
   
     -   Ottenere un certificato da un'autorità di certificazione commerciale pubblica che emette certificati.  
   
-    -   Ottenere un certificato da un server dei certificati che consente alle organizzazioni di emettere certificati internamente. È necessario aggiungere il certificato radice usato per firmare il certificato nell'archivio **Autorità di certificazione radice disponibili nell'elenco locale** . Per aggiungere il certificato radice, è possibile utilizzare lo snap-in Certificati per [!INCLUDE[msCoName](../includes/msconame-md.md)] Management Console (MMC). Per altre informazioni, vedere l'argomento "[Certificate Services](http://go.microsoft.com/fwlink/?LinkId=100755)" (Servizi certificati) in MSDN Library.  
+    -   Ottenere un certificato da un server dei certificati che consente alle organizzazioni di emettere certificati internamente. È necessario aggiungere il certificato radice usato per firmare il certificato nell'archivio **Autorità di certificazione radice disponibili nell'elenco locale** . Per aggiungere il certificato radice, è possibile utilizzare lo snap-in Certificati per [!INCLUDE[msCoName](../includes/msconame-md.md)] Management Console (MMC). Per altre informazioni, vedere l'argomento "[Certificate Services](https://go.microsoft.com/fwlink/?LinkId=100755)" (Servizi certificati) in MSDN Library.  
   
-    -   Creare un certificato solo a scopo di testing. Lo strumento di creazione certificati (Makecert.exe) genera certificati X.509 solo a scopo di testing. Per altre informazioni, vedere l'argomento "[Strumento di creazione certificati (Makecert.exe)](http://go.microsoft.com/fwlink/?LinkId=100756)" in MSDN Library.  
+    -   Creare un certificato solo a scopo di testing. Lo strumento di creazione certificati (Makecert.exe) genera certificati X.509 solo a scopo di testing. Per altre informazioni, vedere l'argomento "[Strumento di creazione certificati (Makecert.exe)](https://go.microsoft.com/fwlink/?LinkId=100756)" in MSDN Library.  
   
-     Per ulteriori informazioni sui certificati, vedere la Guida relativa allo snap-in Certificati. Per altre informazioni sulla firma di risorse digitali, vedere l'argomento "[Signing and Checking Code with Authenticode](http://go.microsoft.com/fwlink/?LinkId=78100)" (Firma e verifica del codice con Authenticode) in MSDN Library.  
+     Per ulteriori informazioni sui certificati, vedere la Guida relativa allo snap-in Certificati. Per altre informazioni sulla firma di risorse digitali, vedere l'argomento "[Signing and Checking Code with Authenticode](https://go.microsoft.com/fwlink/?LinkId=78100)" (Firma e verifica del codice con Authenticode) in MSDN Library.  
   
 -   Verificare che il certificato sia stato abilitato per la firma di codice. Per determinare se un certificato è abilitato per la firma di codice, controllare le proprietà del certificato nello snap-in Certificati.  
   
@@ -68,6 +68,6 @@ ms.locfileid: "48177473"
      Anche se il pacchetto è stato firmato, è necessario configurare [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] per controllare o verificare la firma digitale prima del caricamento del pacchetto. Per altre informazioni, vedere [Identificazione dell'origine dei pacchetti con firme digitali](security/identify-the-source-of-packages-with-digital-signatures.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Panoramica della sicurezza &#40;Integration Services&#41;](security/security-overview-integration-services.md)  
+ [Panoramica sulla sicurezza &#40;Integration Services&#41;](security/security-overview-integration-services.md)  
   
   

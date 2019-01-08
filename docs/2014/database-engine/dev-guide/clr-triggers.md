@@ -27,12 +27,12 @@ ms.assetid: 302a4e4a-3172-42b6-9cc0-4a971ab49c1c
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a2827d98dda93a59b3e599f1db07ebb3fadd234d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c755b605b834d5c31a7017358fb6e714cfde7964
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48226701"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52522887"
 ---
 # <a name="clr-triggers"></a>Trigger CLR
   Grazie all'integrazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con CLR (Common Language Runtime) di [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], è possibile utilizzare qualsiasi linguaggio [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] per creare trigger CLR. In questa sezione vengono fornite informazioni specifiche relative ai trigger implementati utilizzando l'integrazione con CLR. Per una descrizione completa dei trigger, vedere [trigger DDL](../../relational-databases/triggers/ddl-triggers.md).  
@@ -76,7 +76,7 @@ ms.locfileid: "48226701"
 ### <a name="using-the-inserted-and-deleted-tables"></a>Utilizzo delle tabelle Inserted e Deleted  
  Nelle istruzioni di trigger DML vengono utilizzate due tabelle speciali: il **inserito** tabella e il **eliminato** tabella. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] crea e gestisce queste tabelle automaticamente. È possibile utilizzare queste tabelle temporanee per verificare gli effetti di determinate modifiche apportate ai dati e impostare le condizioni per le azioni dei trigger DML. Non è tuttavia possibile modificare direttamente i dati nelle tabelle.  
   
- Trigger CLR possono accedere le **inserito** e **eliminato** tabelle tramite il provider in-process CLR. A tale scopo è necessario ottenere un oggetto `SqlCommand` dall'oggetto SqlContext. Esempio:  
+ Trigger CLR possono accedere le **inserito** e **eliminato** tabelle tramite il provider in-process CLR. A tale scopo è necessario ottenere un oggetto `SqlCommand` dall'oggetto SqlContext. Ad esempio:  
   
  C#  
   
@@ -500,7 +500,7 @@ EXTERNAL NAME SQLCLRTest.CLRTriggers.EmailAudit
 ```  
 Msg 6549, Level 16, State 1, Procedure trig_InsertValidator, Line 0  
 A .NET Framework error occurred during execution of user defined routine or aggregate 'trig_InsertValidator':   
-System.Data.SqlClient.SqlException: Transaction is not allowed to roll back inside a user defined routine, trigger or aggregate because the transaction is not started in that CLR level. Change application logic to enforce strict transaction nesting… User transaction, if any, will be rolled back.  
+System.Data.SqlClient.SqlException: Transaction is not allowed to roll back inside a user defined routine, trigger or aggregate because the transaction is not started in that CLR level. Change application logic to enforce strict transaction nesting... User transaction, if any, will be rolled back.  
 ```  
   
  Questa eccezione è prevista e il blocco try/catch è necessario per continuare a eseguire il codice. Al termine dell'esecuzione del codice del trigger, viene generata un'altra eccezione  

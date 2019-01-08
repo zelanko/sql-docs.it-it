@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.newpubwizard.articleproperties.f1
@@ -15,12 +14,12 @@ ms.assetid: 6dd601a4-1233-43d9-a9f0-bc8d84e5d188
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d9c136f2eb27f4c999d71c398b14b67405cee108
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c426781f52a513cca1e90e5f83eac7feab79fdaf
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48128321"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52785223"
 ---
 # <a name="article-properties---ltarticlegt"></a>Proprietà articolo - &lt;Articolo&gt;
   È possibile accedere alla finestra **Proprietà articolo** dalla Creazione guidata nuova pubblicazione e dalla finestra di dialogo **Proprietà pubblicazione** . Questa finestra di dialogo consente di visualizzare e impostare le proprietà per tutti i tipi di articoli. Alcune proprietà possono essere impostate solo dopo aver creato la pubblicazione, mentre altre possono essere impostate solo se la pubblicazione non dispone di sottoscrizioni attive. Le proprietà non impostabili vengono visualizzate in sola lettura.  
@@ -89,7 +88,7 @@ ms.locfileid: "48128321"
  Questa opzione si applica solo alle stored procedure e determina se replicare la definizione della stored procedure, ovvero l'istruzione CREATE PROCEDURE, oppure la relativa esecuzione. Se si replica l'esecuzione della procedura, la definizione della procedura viene replicata nel Sottoscrittore nel momento in cui la sottoscrizione viene inizializzata. Quando la procedura viene eseguita nel server di pubblicazione, il processo di replica esegue la procedura corrispondente nel Sottoscrittore. Ciò consente di ottenere un miglioramento significativo delle prestazioni nel caso in cui vengano eseguite operazioni su batch di grandi dimensioni. Per altre informazioni, vedere [Publishing Stored Procedure Execution in Transactional Replication](transactional/publishing-stored-procedure-execution-in-transactional-replication.md).  
   
 ## <a name="options-for-merge-publications"></a>Opzioni per le pubblicazioni di tipo merge  
- La finestra di dialogo **Proprietà articolo** per le pubblicazioni di tipo merge dispone di due schede: **Proprietà** e **Sistema di risoluzione**.  
+ Il **le proprietà degli articoli** finestra di dialogo per le pubblicazioni di tipo merge dispone di due schede: **Le proprietà** e **Resolver**.  
   
 ### <a name="properties-tab"></a>Scheda Proprietà  
  **Direzione sincronizzazione**  
@@ -125,7 +124,7 @@ ms.locfileid: "48128321"
  Se si seleziona il sistema di risoluzione predefinito, i conflitti vengono risolti in base alla priorità assegnata a ogni Sottoscrittore o alla prima modifica scritta nel server di pubblicazione, a seconda del tipo di sottoscrizioni utilizzate. Per altre informazioni, vedere [Rilevare e risolvere i conflitti tra repliche di tipo merge](merge/advanced-merge-replication-resolve-merge-replication-conflicts.md).  
   
  **Usa un sistema di risoluzione personalizzato (registrato nel server di distribuzione)**  
- Se si sceglie di utilizzare un sistema di risoluzione dei conflitti dell'articolo fornito da [!INCLUDE[msCoName](../../includes/msconame-md.md)] o scritto dall'utente, è necessario selezionare un sistema di risoluzione nella casella di riepilogo. Per altre informazioni, vedere [Rilevamento e risoluzione avanzati dei conflitti nella replica di tipo merge](merge/advanced-merge-replication-conflict-detection-and-resolution.md).  
+ Se si sceglie di utilizzare un sistema di risoluzione dei conflitti dell'articolo fornito da [!INCLUDE[msCoName](../../includes/msconame-md.md)] o scritto dall'utente, è necessario selezionare un sistema di risoluzione nella casella di riepilogo. Per altre informazioni, vedere [Advanced Merge Replication Conflict Detection and Resolution](merge/advanced-merge-replication-conflict-detection-and-resolution.md).  
   
  Se il sistema di risoluzione necessita di un input, specificarlo nella casella di testo **Immettere le informazioni necessarie per il sistema di risoluzione** . Per ulteriori informazioni sull'input richiesto dai sistemi di risoluzione dei conflitti personalizzati forniti da [!INCLUDE[msCoName](../../includes/msconame-md.md)] , vedere [Microsoft COM-Based Resolvers](merge/advanced-merge-replication-conflict-com-based-resolvers.md).  
   
@@ -136,7 +135,7 @@ ms.locfileid: "48128321"
  Tutti i sistemi di risoluzione dei conflitti basati su COM forniti da [!INCLUDE[msCoName](../../includes/msconame-md.md)] sono firmati. Selezionare questa opzione per verificare la validità del sistema di risoluzione dei conflitti durante la sincronizzazione.  
   
 ## <a name="options-for-oracle-publications"></a>Opzioni per le pubblicazioni Oracle  
- La finestra di dialogo **Proprietà articolo** per le pubblicazioni Oracle dispone di due schede: **Proprietà** e **Mapping dei dati**. Le pubblicazioni Oracle non supportano tutte le proprietà supportate dalle pubblicazioni [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Per altre informazioni, vedere [Design Considerations and Limitations for Oracle Publishers](non-sql/design-considerations-and-limitations-for-oracle-publishers.md).  
+ Il **le proprietà degli articoli** finestra di dialogo per le pubblicazioni Oracle dispone di due schede: **Le proprietà** e **Mapping di dati**. Le pubblicazioni Oracle non supportano tutte le proprietà supportate dalle pubblicazioni [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Per altre informazioni, vedere [Design Considerations and Limitations for Oracle Publishers](non-sql/design-considerations-and-limitations-for-oracle-publishers.md).  
   
 ### <a name="properties-tab"></a>Scheda Proprietà  
  **Copia stored procedure INSERT, UPDATE e DELETE**  

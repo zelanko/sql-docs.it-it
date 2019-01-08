@@ -12,12 +12,12 @@ ms.assetid: f12a17e4-bd3d-42b0-b253-efc36876db37
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c2c0ed3a548ffb67557a9ffb7bdbe932c2187ebc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8ab7963d83937c3572363ea921724cefb8b4adff
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48205781"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507695"
 ---
 # <a name="filetable-compatibility-with-other-sql-server-features"></a>Compatibilità di FileTable con altre funzionalità di SQL Server
   Viene descritto il funzionamento delle tabelle FileTable con altre funzionalità di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -85,11 +85,11 @@ ms.locfileid: "48205781"
   
 -   Nella vista non sarà disponibile alcuna semantica FileTable, ad esempio il comportamento delle colonne nella vista, incluse le colonne degli attributi dei file, sarà quello di normali colonne della vista senza alcuna semantica speciale. Lo stesso vale per le righe che rappresentano file/directory.  
   
--   È possibile che la vista sia aggiornabile in base alla semantica relativa alle viste aggiornabili, ma i vincoli di tabella sottostanti possono rifiutare gli aggiornamenti come nella tabella.  
+-   La vista potrebbe essere aggiornabile in base alla semantica delle viste aggiornabili, ma i vincoli di tabella sottostanti possono rifiutare gli aggiornamenti come nella tabella.  
   
--   È possibile visualizzare il percorso per un file nella vista aggiungendolo come colonna esplicita nella vista. Esempio:  
+-   È possibile visualizzare il percorso per un file nella vista aggiungendolo come colonna esplicita nella vista. Ad esempio:  
   
-     `CREATE VIEW MP3FILES AS SELECT column1, column2, …, GetFileNamespacePath() AS PATH, column3,…  FROM Documents`  
+     `CREATE VIEW MP3FILES AS SELECT column1, column2, ..., GetFileNamespacePath() AS PATH, column3,...  FROM Documents`  
   
  **Viste indicizzate**  
  Attualmente le viste indicizzate non possono includere colonne FILESTREAM o colonne calcolate/calcolate persistenti che dipendono dalle colonne FILESTREAM. Questo comportamento è lo stesso anche per le viste definite nella tabella FileTable.  

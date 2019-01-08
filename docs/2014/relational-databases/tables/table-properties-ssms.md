@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: table-view-index
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.tableproperties.storage.f1
@@ -17,12 +16,12 @@ ms.assetid: ad8a2fd4-f092-4c0f-be85-54ce8b9d725a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e2b518a0044c4d4778fa2b94a6643c805e7c19ca
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b07f157294700b3b3b7958ce4cdc6f1589bff864
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48096661"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53356284"
 ---
 # <a name="table-properties"></a>Table Properties
   In questo argomento vengono descritte le proprietà della tabella visualizzate nella finestra di dialogo Proprietà tabella in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Per altre informazioni su come visualizzare queste proprietà, vedere [Visualizzare la definizione di una tabella](view-the-table-definition.md).  
@@ -50,7 +49,7 @@ ms.locfileid: "48096661"
  **Data creazione**  
  Data e ora di creazione della tabella.  
   
- **Nome**  
+ **Name**  
  Nome della tabella.  
   
  **Schema**  
@@ -66,7 +65,7 @@ ms.locfileid: "48096661"
  Indica se l'oggetto è stato creato con l'opzione quoted identifier impostata su ON. Per altre informazioni, vedere [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-quoted-identifier-transact-sql).  
   
  **Escalation blocchi**  
- Indica la granularità dell'escalation dei blocchi della tabella. Per altre informazioni sui blocchi nel motore di database, vedere [Guida per il controllo delle versioni delle righe e il blocco della transazione di SQL Server](http://msdn.microsoft.com/library/jj856598.aspx). I valori possibili sono:  
+ Indica la granularità dell'escalation dei blocchi della tabella. Per altre informazioni sui blocchi nel motore di database, vedere [Guida per il controllo delle versioni delle righe e il blocco della transazione di SQL Server](https://msdn.microsoft.com/library/jj856598.aspx). I valori possibili sono:  
   
  AUTO  
  Questa opzione consente al [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] di selezionare la granularità dell'escalation dei blocchi appropriata per lo schema della tabella.  
@@ -136,7 +135,7 @@ ms.locfileid: "48096661"
  I valori possibili sono `True` e `False`.  
   
  **Filegroup FILESTREAM**  
- Specificare il nome del filegroup di dati FILESTREAM se la tabella include un `varbinary(max)` colonna che ha l'attributo FILESTREAM. Il filegroup di dati FILESTREAM predefinito è indicato per impostazione predefinita.  
+ Specificare il nome del filegroup di dati FILESTREAM se la tabella contiene una colonna `varbinary(max)` con l'attributo FILESTREAM. Il filegroup di dati FILESTREAM predefinito è indicato per impostazione predefinita.  
   
  Se la tabella non contiene dati FILESTREAM, il campo è vuoto.  
   
@@ -154,7 +153,7 @@ ms.locfileid: "48096661"
  Quantità di spazio occupata dai dati nella tabella, espressa in megabyte.  
   
 ### <a name="partitioning"></a>Partizionamento  
- Questa sezione è disponibile solo se la tabella è partizionata. Per altre informazioni, vedere [Partitioned Tables and Indexes](../partitions/partitioned-tables-and-indexes.md).  
+ Questa sezione è disponibile solo se la tabella è partizionata. Per ulteriori informazioni, vedere [Partitioned Tables and Indexes](../partitions/partitioned-tables-and-indexes.md).  
   
  **Colonna di partizione**  
  Nome della colonna in relazione alla quale è partizionata la tabella.  

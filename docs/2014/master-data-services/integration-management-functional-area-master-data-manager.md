@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 41ac0e62-860a-4905-a318-68d6f814fb59
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: b977353dcea1a404d3ad561558a9e1e5c8d9e6bb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 31cf50a29e9dfcc0952df7132dcbed1690aeb831
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48215931"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53353607"
 ---
 # <a name="integration-management-functional-area-master-data-manager"></a>Area funzionale Gestione integrazione (Gestione dati master)
   Nell'area funzionale Gestione Integrazione, gli amministratori possono importare dati dalle tabelle di staging e possono creare viste delle sottoscrizioni da utilizzare per i sistemi di sottoscrizione. Per altre informazioni sugli amministratori, vedere [Amministratori &#40;Master Data Services&#41;](administrators-master-data-services.md).  
@@ -30,7 +29,7 @@ ms.locfileid: "48215931"
   
  [Visualizzare gli errori che si verificano durante il processo di gestione temporanea &#40;Master Data Services&#41;](view-errors-that-occur-during-staging-master-data-services.md)  
   
- [Risoluzione dei problemi relativi al processo di gestione temporanea (Master Data Services)](http://social.technet.microsoft.com/wiki/contents/articles/troubleshooting-the-staging-process-master-data-services.aspx)  
+ [Risoluzione dei problemi relativi al processo di gestione temporanea (Master Data Services)](https://social.technet.microsoft.com/wiki/contents/articles/troubleshooting-the-staging-process-master-data-services.aspx)  
   
 ## <a name="export-data"></a>Esportare dati  
  [Esportazione di dati &#40;Master Data Services&#41;](overview-exporting-data-master-data-services.md)  

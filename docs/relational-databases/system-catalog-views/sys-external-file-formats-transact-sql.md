@@ -14,12 +14,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4a9d7d8e73dc61afc90485c0d5cd36b3bb009fda
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b16deb7ed2bd43cc45966d27b79729897e76405c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47658949"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52532363"
 ---
 # <a name="sysexternalfileformats-transact-sql"></a>sys.external_file_formats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "47658949"
   
  Contiene una riga per ogni formato di file esterno nel server per [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
   
-|Nome colonna|Tipo di dati|Description|Intervallo|  
+|Nome colonna|Tipo di dati|Descrizione|Intervallo|  
 |-----------------|---------------|-----------------|-----------|  
 |file_format_id|**int**|ID oggetto per il formato di file esterno.||  
 |NAME|**sysname**|Nome del formato di file. nelle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], questo valore è univoco per il database. In [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], questo valore è univoco per il server.||  
@@ -36,7 +36,7 @@ ms.locfileid: "47658949"
 |carattere_terminazione_campo|**nvarchar(10)**|Per format_type = DELIMITEDTEXT, questo è il carattere di terminazione del campo.||  
 |string_delimiter|**nvarchar(10)**|Per format_type = DELIMITEDTEXT, questo è il delimitatore di stringa.||  
 |date_format|**nvarchar(50)**|Per format_type = DELIMITEDTEXT, si tratta della data definito dall'utente e il formato dell'ora.||  
-|use_type_default|**bit**|Per format_type = delimitato da testo: specifica come gestire valori mancanti quando PolyBase sta importando dati da file di testo HDFS in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].|0 – archiviare i valori mancanti come stringa 'NULL'.<br /><br /> 1: archiviare i valori mancanti come il valore predefinito della colonna.|  
+|use_type_default|**bit**|Per format_type = delimitato da testo: specifica come gestire valori mancanti quando PolyBase sta importando dati da file di testo HDFS in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].|0 - archiviare i valori mancanti come stringa 'NULL'.<br /><br /> 1: archiviare i valori mancanti come il valore predefinito della colonna.|  
 |serde_method|**nvarchar(255)**|Per format_type = RCFILE, si tratta del metodo di serializzazione/deserializzazione.||  
 |carattere_terminazione_riga|**nvarchar(10)**|Per format_type = DELIMITEDTEXT, questa è la stringa di carattere che interrompe ogni riga nel file Hadoop esterno.|Sempre '\n'.|  
 |codifica|**nvarchar(10)**|Per format_type = DELIMITEDTEXT, si tratta del metodo di codifica per il file Hadoop esterno.|Sempre 'UTF8'.|  

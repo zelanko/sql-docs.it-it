@@ -15,12 +15,12 @@ ms.assetid: 7028756d-1dcc-480c-bbcd-e9654f0772a0
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0226a655ff1adc7269e0ee66996e7680f659826e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8227fe1c7cfe63772ff092d9cd30b6ea8b07271a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48060849"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52545626"
 ---
 # <a name="message-queue-task-editor-receive-page"></a>Editor attività Message Queue (pagina Ricezione)
   Usare la pagina **Ricezione** della finestra di dialogo **Editor attività Message Queue** per configurare un'attività Message Queue che consenta di ricevere messaggi di [!INCLUDE[msCoName](../includes/msconame-md.md)] Message Queuing (MSMQ).  
@@ -40,7 +40,7 @@ ms.locfileid: "48060849"
  **MessageType**  
  Consente di selezionare il tipo di messaggio. Per questa proprietà sono disponibili le opzioni elencate nella tabella seguente.  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |**Messaggio file di dati**|Il messaggio viene archiviato in un file. La selezione del valore determina la visualizzazione dell'opzione dinamica **DataFileMessage**.|  
 |**Messaggio variabili**|Il messaggio viene archiviato in una variabile. La selezione del valore determina la visualizzazione dell'opzione dinamica **VariableMessage**.|  
@@ -51,7 +51,7 @@ ms.locfileid: "48060849"
   
 ### <a name="messagetype--data-file-message"></a>MessageType = Messaggio file di dati  
  **SaveFileAs**  
- Digitare il percorso del file da usare oppure fare clic sul pulsante con i puntini di sospensione **(…)** per individuare il file.  
+ Digitare il percorso del file da usare o fare clic sul pulsante con i puntini di sospensione **(...)** e quindi individuare il file.  
   
  **Overwrite**  
  Consente di indicare se sovrascrivere i dati in un file esistente durante il salvataggio del contenuto di un messaggio con file di dati. Il valore predefinito è `False`.  
@@ -59,7 +59,7 @@ ms.locfileid: "48060849"
  **Filter**  
  Consente di specificare se applicare un filtro al messaggio. Per questa proprietà sono disponibili le opzioni elencate nella tabella seguente.  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |**Nessun filtro**|L'attività non filtra i messaggi. La selezione del valore determina la visualizzazione dell'opzione dinamica **IdentifierReadOnly**.|  
 |**Dal pacchetto**|Il messaggio riceve solo messaggi dal pacchetto specificato. La selezione del valore determina la visualizzazione dell'opzione dinamica **Identifier**.|  
@@ -71,8 +71,8 @@ ms.locfileid: "48060849"
  Questa opzione è di sola lettura. Può essere vuota o contenere il GUID di un pacchetto se la proprietà Filter è stata impostata in precedenza.  
   
 #### <a name="filter--from-package"></a>Filter = Dal pacchetto  
- **Identifier**  
- Se si sceglie di applicare un filtro, digitare l'identificatore univoco del pacchetto dal quale possono essere ricevuti i messaggi oppure fare clic sul pulsante con i puntini di sospensione **(…)** per specificare il pacchetto.  
+ **Identificatore**  
+ Se si sceglie di applicare un filtro, digitare l'identificatore univoco del pacchetto da cui si possono ricevere i messaggi oppure fare clic sul pulsante con i puntini di sospensione **(...)** e specificare il pacchetto.  
   
  **Argomenti correlati:** [Seleziona pacchetto](control-flow/select-a-package.md)  
   
@@ -80,13 +80,13 @@ ms.locfileid: "48060849"
  **Filter**  
  Consente di specificare se applicare un filtro ai messaggi. Per questa proprietà sono disponibili le opzioni elencate nella tabella seguente.  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |**Nessun filtro**|L'attività non filtra i messaggi. La selezione del valore determina la visualizzazione dell'opzione dinamica **IdentifierReadOnly**.|  
 |**Dal pacchetto**|Il messaggio riceve solo messaggi dal pacchetto specificato. La selezione del valore determina la visualizzazione dell'opzione dinamica **Identifier**.|  
   
  **Variabile**  
- Digitare il nome della variabile oppure fare clic su \<**Nuova variabile…**> per configurare una nuova variabile.  
+ Digitare il nome della variabile oppure fare clic su \<**Nuova variabile...**> per configurare una nuova variabile.  
   
  **Argomenti correlati:** [Aggiungi variabile](../../2014/integration-services/add-variable.md)  
   
@@ -97,8 +97,8 @@ ms.locfileid: "48060849"
  Questa opzione è vuota.  
   
 #### <a name="filter--from-package"></a>Filter = Dal pacchetto  
- **Identifier**  
- Se si sceglie di applicare un filtro, digitare l'identificatore univoco del pacchetto dal quale possono essere ricevuti i messaggi oppure fare clic sul pulsante con i puntini di sospensione **(…)** per specificare il pacchetto.  
+ **Identificatore**  
+ Se si sceglie di applicare un filtro, digitare l'identificatore univoco del pacchetto da cui si possono ricevere i messaggi oppure fare clic sul pulsante con i puntini di sospensione **(...)** e specificare il pacchetto.  
   
  **Argomenti correlati:** [Seleziona pacchetto](control-flow/select-a-package.md)  
   
@@ -106,9 +106,9 @@ ms.locfileid: "48060849"
  **Compare**  
  Consente di specificare se applicare un filtro ai messaggi. Per questa proprietà sono disponibili le opzioni elencate nella tabella seguente.  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
-|**Nessuno**|I messaggi non vengono confrontati.|  
+|**None**|I messaggi non vengono confrontati.|  
 |**Corrispondenza esatta**|I messaggi devono corrispondere esattamente alla stringa nell'opzione indicata **CompareString** .|  
 |**Ignora maiuscole/minuscole**|I messaggi devono corrispondere alla stringa indicata nell'opzione **CompareString** , ma nel confronto non viene rilevata la distinzione tra maiuscole e minuscole.|  
 |**Stringa contenente**|Il messaggio deve contenere la stringa indicata nell'opzione **CompareString** .|  
@@ -120,9 +120,9 @@ ms.locfileid: "48060849"
  **Compare**  
  Consente di specificare se applicare un filtro ai messaggi. Per questa proprietà sono disponibili le opzioni elencate nella tabella seguente.  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
-|**Nessuno**|I messaggi non vengono confrontati.|  
+|**None**|I messaggi non vengono confrontati.|  
 |**Corrispondenza esatta**|I messaggi devono corrispondere esattamente alla stringa indicata nell'opzione **CompareString** .|  
 |**Ignora maiuscole/minuscole**|I messaggi devono corrispondere alla stringa indicata nell'opzione **CompareString** , ma nel confronto non viene rilevata la distinzione tra maiuscole e minuscole.|  
 |**Stringa contenente**|Il messaggio deve contenere la stringa indicata nell'opzione **CompareString** .|  
@@ -131,15 +131,15 @@ ms.locfileid: "48060849"
  Specificare la stringa con cui confrontare il messaggio, a meno che l'opzione **Compare** sia impostata su **Nessuno**.  
   
  **Variabile**  
- Digitare il nome della variabile per la memorizzazione del messaggio ricevuto oppure fare clic su \<**Nuova variabile…**> per configurare una nuova variabile.  
+ Digitare il nome della variabile per la memorizzazione del messaggio ricevuto oppure fare clic su \<**Nuova variabile...**> e quindi configurare una nuova variabile.  
   
  **Argomenti correlati:** [Aggiungi variabile](../../2014/integration-services/add-variable.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Guida di riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor attività Message Queue &#40;pagina Generale&#41;](general-page-of-integration-services-designers-options.md)   
- [Editor attività Message Queue &#40;Invia pagina&#41;](../../2014/integration-services/message-queue-task-editor-send-page.md)   
- [Pagina espressioni](expressions/expressions-page.md)   
- [Attività Message Queue](control-flow/message-queue-task.md)  
+ [Editor attività Message Queue &#40;pagina Invio&#41;](../../2014/integration-services/message-queue-task-editor-send-page.md)   
+ [Pagina Espressioni](expressions/expressions-page.md)   
+ [Message Queue Task](control-flow/message-queue-task.md)  
   
   

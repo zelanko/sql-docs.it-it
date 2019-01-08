@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - sql:guid
@@ -25,12 +23,12 @@ ms.assetid: 7661dfd0-6573-4692-a8f1-3597adcd33c4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 40cfd0a589682f9c9a07fc4db1bb62f2e934ada7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bb953042707054a7dbfdee697b986e7e65f7059b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48061481"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52786183"
 ---
 # <a name="using-the-sqlidentity-and-sqlguid-annotations"></a>Utilizzo delle annotazioni sql:identity e sql:guid
   È possibile specificare il `sql:identity` e `sql:guid` annotazioni in uno schema XSD su qualsiasi nodo che esegue il mapping a una colonna di database in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Il formato dell'updategram supporta gli attributi `updg:at-identity` e `updg:guid` che invece non vengono supportati dal formato DiffGram. L'attributo `updg:at-identity` definisce il comportamento relativo all'aggiornamento di una colonna di tipo IDENTITY. L'attributo `updg:guid` consente di ottenere un valore GUID da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e di utilizzarlo nell'updategram. Per altre informazioni ed esempi, vedere [inserimento di dati mediante Updategram XML &#40;SQLXML 4.0&#41;](../sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/inserting-data-using-xml-updategrams-sqlxml-4-0.md).  
@@ -42,7 +40,7 @@ ms.locfileid: "48061481"
  Le annotazioni `sql:identity` e `sql:guid` possono essere definite su un elemento di contenuto complesso.  
   
 ## <a name="sqlidentity-annotation"></a>Annotazione sql:identity  
- È possibile specificare l'annotazione `sql:identity` nello schema XSD su qualsiasi nodo che esegue il mapping a una colonna di database di tipo IDENTITY. Il valore specificato per questa annotazione definisce la modalità di aggiornamento della colonna di tipo IDENTITY (ovvero utilizzando il valore fornito nell'updategram per modificare la colonna o ignorando il valore. Nel secondo caso per la colonna viene utilizzato un valore generato da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ È possibile specificare l'annotazione `sql:identity` nello schema XSD su qualsiasi nodo che esegue il mapping a una colonna di database di tipo IDENTITY. Il valore specificato per questa annotazione definisce come viene aggiornata la colonna di tipo IDENTITY (utilizzando il valore fornito nell'updategram per modificare la colonna o ignorando il valore, nel qual caso una [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-valore generato viene utilizzato per la colonna).  
   
  All'annotazione `sql:identity` è possibile assegnare due valori:  
   
@@ -63,6 +61,6 @@ ms.locfileid: "48061481"
  Specifica che il valore GUID generato da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve essere utilizzato per la colonna specifica nell'operazione di aggiornamento.  
   
  useValue  
- Specifica che per la colonna deve essere utilizzato il valore specificato nell'updategram. Si tratta del valore predefinito.  
+ Specifica che per la colonna deve essere utilizzato il valore specificato nell'updategram. Rappresenta il valore predefinito.  
   
   

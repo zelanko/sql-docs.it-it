@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.flatfiledest.f1
@@ -18,12 +17,12 @@ ms.assetid: e0d6e356-8db4-48aa-ba66-029397f98f61
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d9cc425ca170a8b6619bead023f76b163e698aab
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ed4cb484f89d44ed31b4c82a9e1349dfab925dac
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48058791"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52761753"
 ---
 # <a name="flat-file-destination"></a>file flat - destinazione
   La destinazione file flat scrive dati in un file di testo che può essere in formato delimitato, a larghezza fissa, a larghezza fissa con delimitatore di riga o non allineato a destra.  
@@ -45,9 +44,9 @@ ms.locfileid: "48058791"
   
  Per altre informazioni sulle proprietà che è possibile impostare nella finestra di dialogo **Editor origine file flat**, fare clic su uno degli argomenti seguenti:  
   
--   [Editor destinazione File flat &#40;pagina Gestione connessione&#41;](../flat-file-destination-editor-connection-manager-page.md)  
+-   [Editor destinazione file flat &#40;pagina Gestione connessione&#41;](../flat-file-destination-editor-connection-manager-page.md)  
   
--   [Editor destinazione File flat &#40;pagina mapping&#41;](../flat-file-destination-editor-mappings-page.md)  
+-   [Editor destinazione file flat &#40;pagina Mapping&#41;](../flat-file-destination-editor-mappings-page.md)  
   
  Nella finestra di dialogo **Editor avanzato** sono disponibili le proprietà che è possibile impostare a livello di codice. Per ulteriori informazioni sulle proprietà che è possibile impostare nella finestra di dialogo **Editor avanzato** o a livello di codice, fare clic su uno degli argomenti seguenti:  
   
@@ -59,7 +58,7 @@ ms.locfileid: "48058791"
  Per informazioni su come impostare le proprietà di un componente del flusso di dati, vedere [Impostazione delle proprietà di un componente del flusso di dati](set-the-properties-of-a-data-flow-component.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Origine File flat](flat-file-source.md)   
+ [Origine file flat](flat-file-source.md)   
  [Flusso di dati](data-flow.md)  
   
   

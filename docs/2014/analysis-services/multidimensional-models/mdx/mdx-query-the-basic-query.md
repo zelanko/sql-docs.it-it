@@ -17,15 +17,15 @@ ms.assetid: 4fa5a95a-fec9-4584-875c-dbf030c53e82
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5f577d48d14790ca946348ccff030f4ff31d9c2a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 785a03a5d9fffe3adf072a32f578b0ba936ae6f1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48169721"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52521025"
 ---
 # <a name="the-basic-mdx-query-mdx"></a>Query MDX di base
-  La query MDX (Multidimensional Expressions) di base corrisponde all'istruzione SELECT, la query eseguita più di frequente in MDX. Se si conosce la sintassi dell'istruzione MDX SELECT, si sa creare una semplice query tramite questa istruzione e si capisce perché in un'istruzione SELECT è necessario specificare un set di risultati, si avrà la padronanza dell'utilizzo di MDX per l'esecuzione di query in dati multidimensionali.  
+  La query MDX (Multidimensional Expressions) di base è la query utilizzata più di frequente: l'istruzione SELECT in MDX. Se si conosce la sintassi dell'istruzione MDX SELECT, si sa creare una semplice query tramite questa istruzione e si capisce perché in un'istruzione SELECT è necessario specificare un set di risultati, si avrà la padronanza dell'utilizzo di MDX per l'esecuzione di query in dati multidimensionali.  
   
 ## <a name="specifying-a-result-set"></a>Impostazione di un set di risultati  
  In MDX l'istruzione SELECT specifica un set di risultati contenente un subset dei dati multidimensionali di un cubo che sono stati restituiti. Per specificare un set di risultati, una query MDX deve contenere le informazioni seguenti:  
@@ -110,7 +110,7 @@ WHERE ( [Sales Territory].[Southwest] )
  Per esempi più dettagliati, vedere [Impostazione del contenuto di un asse della query &#40;MDX&#41;](mdx-query-and-slicer-axes-specify-the-contents-of-a-query-axis.md)e [Impostazione del contenuto di un asse di sezionamento &#40;MDX&#41;](mdx-query-and-slicer-axes-specify-the-contents-of-a-slicer-axis.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Concetti chiave per MDX &#40;Analysis Services&#41;](../key-concepts-in-mdx-analysis-services.md)   
+ [Concetti chiave di MDX &#40;Analysis Services&#41;](../key-concepts-in-mdx-analysis-services.md)   
  [Istruzione SELECT &#40;MDX&#41;](/sql/mdx/mdx-data-manipulation-select)  
   
   

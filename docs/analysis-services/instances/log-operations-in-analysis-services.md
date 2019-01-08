@@ -9,18 +9,18 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: a4332497abe58a610a4ebba2d1c92b24aa9f5bd6
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 9f597f1968f947b9e0dd792568ea59f42af1d2a0
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701639"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52521087"
 ---
 # <a name="log-operations-in-analysis-services"></a>Registrare le operazioni in Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  Un'istanza di Analysis Services registrerà le notifiche, gli errori e gli avvisi del server nel file msmdsrv.log: uno per ogni istanza installata. Gli amministratori fanno riferimento a questo log per informazioni sulla routine nonché per eventi straordinari. Nelle versioni recenti la registrazione è stata migliorata per includere altre informazioni. I record di log includono ora informazioni sull'edizione e la versione del prodotto, nonché eventi del processore, della memoria, della connettività e di blocco. È possibile consultare l'elenco completo delle modifiche in [Miglioramenti della registrazione](http://support.microsoft.com/kb/2965035).  
+  Un'istanza di Analysis Services registrerà le notifiche di server, errori e avvisi per il file msmdsrv log: uno per ogni istanza installata. Gli amministratori fanno riferimento a questo log per informazioni sulla routine nonché per eventi straordinari. Nelle versioni recenti la registrazione è stata migliorata per includere altre informazioni. I record di log includono ora informazioni sull'edizione e la versione del prodotto, nonché eventi del processore, della memoria, della connettività e di blocco. È possibile consultare l'elenco completo delle modifiche in [Miglioramenti della registrazione](http://support.microsoft.com/kb/2965035).  
   
- Oltre alla funzionalità di registrazione predefinita, molti amministratori e sviluppatori usano anche gli strumenti forniti dalla community di Analysis Services, ad esempio **ASTrace**, per raccogliere i dati relativi alle operazioni del server. Vedere [Microsoft SQL Server Community Samples: Analysis Services](https://sqlsrvanalysissrvcs.codeplex.com/) (Esempi della community di Microsoft SQL Server: Analysis Services) per i collegamenti per il download.  
+ Oltre alla funzionalità di registrazione predefinita, molti amministratori e sviluppatori usano anche gli strumenti forniti dalla community di Analysis Services, ad esempio **ASTrace**, per raccogliere i dati relativi alle operazioni del server. Vedere [esempi della Community di Microsoft SQL Server: Analysis Services](https://sqlsrvanalysissrvcs.codeplex.com/) collegamenti per il download.  
   
  In questo argomento sono incluse le sezioni seguenti:  
   
@@ -42,11 +42,11 @@ ms.locfileid: "51701639"
   
 |Posizione o nome del file|Tipo|Utilizzo|Attivato per impostazione predefinita|  
 |---------------------------|----------|--------------|-------------------|  
-|Msmdsrv.log|Log degli errori|Monitoraggio della routine e risoluzione dei problemi di base|Sì|  
-|Tabella OlapQueryLog in un database relazionale|Log di query|Raccolta di input per l'Ottimizzazione guidata basata sulle statistiche di utilizzo|no|  
-|File SQLDmp\<guid > i file con estensione mdmp|Arresti anomali ed eccezioni|Risoluzione dei problemi completa|no|  
+|Msmdsrv.log|Log degli errori|Monitoraggio della routine e risoluzione dei problemi di base|Yes|  
+|Tabella OlapQueryLog in un database relazionale|Log di query|Raccolta di input per l'Ottimizzazione guidata basata sulle statistiche di utilizzo|No|  
+|File SQLDmp\<guid > i file con estensione mdmp|Arresti anomali ed eccezioni|Risoluzione dei problemi completa|No|  
   
- Per altre risorse di informazioni non incluse nel presente argomento, è consigliabile consultare il collegamento seguente: [Initial data collection tips from Microsoft Support](http://blogs.msdn.com/b/as_emea/archive/2012/01/02/initial-data-collection-for-troubleshooting-analysis-services-issues.aspx)(Suggerimenti per la raccolta dati iniziale forniti dal supporto tecnico Microsoft).  
+ Per altre risorse di informazioni non incluse nel presente argomento, è consigliabile consultare il collegamento seguente: [Suggerimenti di raccolta dati dal supporto Microsoft iniziale](http://blogs.msdn.com/b/as_emea/archive/2012/01/02/initial-data-collection-for-troubleshooting-analysis-services-issues.aspx).  
   
 ##  <a name="bkmk_general"></a> Informazioni generali sulle impostazioni di configurazione dei file di log  
  È possibile trovare le sezioni per ogni log nel file di configurazione del server msmdsrv.ini, che si trova nella cartella \Programmi\Microsoft SQL Server\MSAS13.MSSQLSERVER\OLAP\Config. Per istruzioni su come modificare il file, vedere [Proprietà del server in Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md) .  
@@ -146,11 +146,11 @@ ms.locfileid: "51701639"
   
  **Configurare le segnalazioni di arresti anomali**  
   
- Se non diversamente indicato dal supporto tecnico Microsoft, la maggior parte degli amministratori usa le impostazioni predefinite. Questo articolo non recente della Knowledge Base viene ancora usato per fornire istruzioni su come configurare i file di dump: [Come configurare SQL Server 2005 Analysis Services per generare file di dump di memoria](http://support.microsoft.com/kb/919711).  
+ Se non diversamente indicato dal supporto tecnico Microsoft, la maggior parte degli amministratori usa le impostazioni predefinite. Per istruzioni su come configurare i file di dump, è possibile usare ancora il seguente articolo della Knowledge Base anche se non molto recente: [Come configurare Analysis Services per generare file di dump di memoria](http://support.microsoft.com/kb/919711).  
   
  L'impostazione di configurazione che verrà modificata con maggiore probabilità è **CreateAndSendCrashReports** , usata per determinare se verrà generato o meno un file di dump di memoria.  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |0|Disattiva il file di dump di memoria. Tutte le altre impostazioni nella sezione Eccezioni vengono ignorate.|  
 |1|(Impostazione predefinita) Abilita ma non invia il file di dump di memoria.|  
@@ -173,9 +173,9 @@ ms.locfileid: "51701639"
   
 -   Configurare il file msmdsrv.log per controllare le dimensioni e il numero di file di log msmdsrv. Le impostazioni non vengono abilitate per impostazione predefinita, pertanto assicurarsi di aggiungerle come passaggio di post-installazione. Vedere [File di log del servizio MSMDSRV](#bkmk_msmdsrv) in questo argomento.  
   
--   Leggere questo post di blog del supporto tecnico Microsoft per informazioni sulle risorse da usare per ottenere informazioni sulle operazioni del server: [Initial Data Collection](http://blogs.msdn.com/b/as_emea/archive/2012/01/02/initial-data-collection-for-troubleshooting-analysis-services-issues.aspx)(Raccolta dati iniziale).  
+-   Leggere questo post di blog del supporto tecnico Microsoft per informazioni sulle risorse da usare per ottenere informazioni sulle operazioni del server: [Raccolta dati iniziale](http://blogs.msdn.com/b/as_emea/archive/2012/01/02/initial-data-collection-for-troubleshooting-analysis-services-issues.aspx)  
   
--   Usare ASTrace2012, anziché un log di query, per identificare gli utenti che eseguono query sui cubi. Il log di query viene usato generalmente per fornire un input all'Ottimizzazione guidata basata sulle statistiche di utilizzo e i dati acquisiti non sono facili da leggere o interpretare. ASTrace2012 è uno strumento della community, ampiamente usato, che acquisisce le operazioni di query. Vedere [Microsoft SQL Server Community Samples: Analysis Services](https://sqlsrvanalysissrvcs.codeplex.com/)(Esempi della community di Microsoft SQL Server: Analysis Services).  
+-   Usare ASTrace2012, anziché un log di query, per identificare gli utenti che eseguono query sui cubi. Il log di query viene usato generalmente per fornire un input all'Ottimizzazione guidata basata sulle statistiche di utilizzo e i dati acquisiti non sono facili da leggere o interpretare. ASTrace2012 è uno strumento della community, ampiamente usato, che acquisisce le operazioni di query. Vedere [esempi della Community di Microsoft SQL Server: Analysis Services](https://sqlsrvanalysissrvcs.codeplex.com/).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Gestione di un'istanza di Analysis Services](../../analysis-services/instances/analysis-services-instance-management.md)   

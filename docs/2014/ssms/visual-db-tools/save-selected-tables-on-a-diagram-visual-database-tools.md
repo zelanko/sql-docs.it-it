@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - saving tables
@@ -12,12 +12,12 @@ ms.assetid: 86943b49-48f3-432c-8021-928c13edfbcf
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c81952706f2e2353406a9d916c8e53d4336d2c07
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f10ba1f9ff6837d1ca308872ef166e04c417981c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48125261"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52817033"
 ---
 # <a name="save-selected-tables-on-a-diagram-visual-database-tools"></a>Salvataggio di tabelle selezionate di un diagramma (Visual Database Tools)
   Se non si desidera salvare tutte le modifiche apportate in un diagramma di database, è possibile salvare una specifica tabella o un set di tabelle.  

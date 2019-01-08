@@ -17,12 +17,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c60f391f1429b8693feaee5c2d8e9716a3d74bfe
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a764a077f1be87f6c846589b9a1fb1e989a8e93a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47823279"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52537328"
 ---
 # <a name="handling-smo-exceptions"></a>Gestione delle eccezioni SMO
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "47823279"
   
  In SMO esistono classi di eccezioni diverse. È possibile estrarre informazioni sull'eccezione dalle proprietà dell'eccezione, ad esempio la proprietà **Message** fornisce un messaggio di testo sull'eccezione.  
   
- Le istruzioni relative alla gestione delle eccezioni sono specifiche del linguaggio di programmazione. Ad esempio, nella [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic è il **Catch** istruzione.  
+ Le istruzioni relative alla gestione delle eccezioni sono specifiche del linguaggio di programmazione. In [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic, ad esempio, è l'istruzione **Catch** .  
   
 ## <a name="inner-exceptions"></a>Eccezioni interne  
  Le eccezioni possono essere generali o specifiche. Le eccezioni generali contengono un set di eccezioni specifiche. È possibile utilizzare diverse istruzioni **Catch** per gestire gli errori anticipati e fare in modo che gli errori rimanenti vengano passati al codice di gestione delle eccezioni generali. Le eccezioni si verificano spesso in una sequenza a cascata. Accade di frequente che un'eccezione SMO sia stata causata da un'eccezione SQL. È possibile stabilirlo utilizzando in successione la proprietà **InnerException** per determinare l'eccezione originale che ha provocato l'eccezione finale di livello superiore.  
@@ -47,7 +47,7 @@ ms.locfileid: "47823279"
  Per usare qualsiasi esempio di codice fornito, è necessario scegliere l'ambiente di programmazione, il modello di programmazione e il linguaggio di programmazione per la creazione dell'applicazione. Per altre informazioni, vedere [creare un Visual C&#35; progetto SMO in Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).
   
 ## <a name="catching-an-exception-in-visual-basic"></a>Rilevamento di un'eccezione in Visual Basic  
- Questo esempio di codice viene illustrato come utilizzare il **Try... Catch... Infine** [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] istruzione per rilevare un'eccezione SMO. Tutte le eccezioni SMO sono di tipo SmoException e sono elencate nella documentazione di riferimento di SMO. La sequenza di eccezioni interne viene visualizzata per mostrare la radice dell'errore. Per altre informazioni, vedere il [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] documentazione di .NET.  
+ Questo esempio di codice viene illustrato come utilizzare il **Try... Catch... Infine** [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] istruzione per rilevare un'eccezione SMO. Tutte le eccezioni SMO sono di tipo SmoException e sono elencate nella documentazione di riferimento di SMO. La sequenza di eccezioni interne viene visualizzata per mostrare la radice dell'errore. Per ulteriori informazioni, vedere la documentazione di [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] .NET.  
   
 ```VBNET
 'This sample requires the Microsoft.SqlServer.Management.Smo.Agent namespace is included.
@@ -84,7 +84,7 @@ End Try
 ``` 
   
 ## <a name="catching-an-exception-in-visual-c"></a>Rilevamento di un'eccezione in Visual C#  
- In questo esempio di codice viene illustrato come utilizzare l'istruzione **Try…Catch…Finally** Visual C# per rilevare un'eccezione SMO. Tutte le eccezioni SMO sono di tipo SmoException e sono elencate nella documentazione di riferimento di SMO. La sequenza di eccezioni interne viene visualizzata per mostrare la radice dell'errore. Per ulteriori informazioni, vedere la documentazione di Visual C#.  
+ Questo esempio di codice viene illustrato come utilizzare il **Try... Catch... Infine** Visual C# istruzione per rilevare un'eccezione SMO. Tutte le eccezioni SMO sono di tipo SmoException e sono elencate nella documentazione di riferimento di SMO. La sequenza di eccezioni interne viene visualizzata per mostrare la radice dell'errore. Per ulteriori informazioni, vedere la documentazione di Visual C#.  
   
 ```csharp  
 {   

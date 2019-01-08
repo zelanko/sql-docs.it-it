@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: b0a49925ec0d0592adfd131e0ab994e5e8356f95
-ms.sourcegitcommit: 3e1efbe460723f9ca0a8f1d5a0e4a66f031875aa
+ms.openlocfilehash: 94c8d399f7b6ba36b48b4c5aa7f35bbd67ce6909
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "50236937"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52527807"
 ---
 # <a name="configure-polybase-to-access-external-data-in-hadoop"></a>Configurare PolyBase per l'accesso a dati esterni in Hadoop
 
@@ -24,10 +24,10 @@ L'articolo illustra come usare PolyBase in un'appliance APS per eseguire query s
 
 PolyBase supporta due provider di Hadoop, Hortonworks Data Platform (HDP) e Cloudera Distributed Hadoop (CDH). Hadoop segue il modello "principale.secondaria.versione" per le nuove versioni e sono supportate tutte le versioni all'interno di una versione principale e secondaria supportata. Sono supportati i provider Hadoop seguenti:
  - Hortonworks HDP 1.3 su Linux/Windows Server  
- - Hortonworks HDP 2.1 - 2.6 su Linux
+ - Hortonworks HDP 2.1-2.6 su Linux
  - Hortonworks HDP 2.1 - 2.3 su Windows Server  
  - Cloudera CDH 4.3 su Linux  
- - Cloudera CDH 5.1 – 5.5, 5.9 - 5.13 su Linux
+ - Cloudera CDH 5.1-5.5, 5.9-5.13 su Linux
 
 ### <a name="configure-hadoop-connectivity"></a>Configurare la connettività Hadoop
 

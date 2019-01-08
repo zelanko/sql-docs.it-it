@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - HAVING clause, query summary results
@@ -15,12 +15,12 @@ ms.assetid: 1b82681f-3d4f-4b9a-bb1d-2060e44f2577
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8671fb9fe3de95d4480f7f293668dd124d2cc3a8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c14608a34c2df5a0e93fea985d8135a37d5ffa53
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48127921"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52795943"
 ---
 # <a name="work-with-columns-in-aggregate-queries-visual-database-tools"></a>Utilizzo di colonne in query di aggregazione (Visual Database Tools)
   Quando si creano query di aggregazione con [Progettazione query e Progettazione viste](visual-database-tools.md) , le operazioni vengono eseguite sulla base di alcuni presupposti che garantiscono la generazione di una query valida. Se, ad esempio, si crea una query di aggregazione e si contrassegna una colonna di dati per l'output, in Progettazione query e Progettazione viste la colonna viene automaticamente inserita nella clausola GROUP BY, in modo che non sia possibile visualizzare inavvertitamente il contenuto di una singola riga in un riepilogo.  
@@ -55,7 +55,7 @@ ms.locfileid: "48127921"
     WHERE price > 10  
     ```  
   
--   Se si crea una condizione di ricerca che coinvolge una colonna utilizzata anche in una clausola GROUP BY o in una funzione di aggregazione, la condizione di ricerca potrà essere indicata come una clausola WHERE o HAVING. La clausola da utilizzare può essere scelta quando si definisce la condizione. La seguente istruzione consente di calcolare, ad esempio, il prezzo medio dei libri di ogni editore, quindi visualizza la media calcolata per gli editori il cui prezzo medio è maggiore di 10 dollari.  
+-   Se si crea una condizione di ricerca che coinvolge una colonna usata anche in una clausola GROUP BY o in una funzione di aggregazione, la condizione di ricerca potrà essere indicata come una clausola WHERE o HAVING. La clausola da usare può essere scelta quando si definisce la condizione. La seguente istruzione consente di calcolare, ad esempio, il prezzo medio dei libri di ogni editore, quindi visualizza la media calcolata per gli editori il cui prezzo medio è maggiore di 10 dollari.  
   
     ```  
     SELECT pub_id, AVG(price)  

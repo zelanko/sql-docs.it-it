@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - leaf members [Master Data Services]
@@ -18,12 +17,12 @@ ms.assetid: 0fda32b9-677d-4ba2-bb28-f76f2383a30f
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: b07719a39cd8f82561bd92635dcba8e97ffee532
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8125a27eed225a137a5665d87c923271cb592859
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48096041"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52793133"
 ---
 # <a name="members-master-data-services"></a>Membri (Master Data Services)
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]i membri sono i dati master fisici. Ad esempio, un membro può essere una bicicletta Road-150 in un'entità Product o un cliente specifico in un'entità Customer.  
@@ -63,7 +62,7 @@ ms.locfileid: "48096041"
 |Descrizione dell'attività|Argomento|  
 |----------------------|-----------|  
 |Creare un nuovo membro foglia.|[Creare un membro foglia &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-leaf-member-master-data-services.md)|  
-|Creare un nuovo membro consolidato.|[Creare un membro consolidato &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-consolidated-member-master-data-services.md)|  
+|Creare un nuovo membro consolidato.|[Creare membri consolidati &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-consolidated-member-master-data-services.md)|  
 |Eliminare un membro o una raccolta esistente.|[Eliminare un membro o una raccolta &#40;Master Data Services&#41;](../../2014/master-data-services/delete-a-member-or-collection-master-data-services.md)|  
 |Riattivare una raccolta o un membro eliminato.|[Riattivare un membro o una raccolta &#40;Master Data Services&#41;](../../2014/master-data-services/reactivate-a-member-or-collection-master-data-services.md)|  
 |Aggiornare i valori dell'attributo di un membro.|[Modificare il tipo di attributo &#40;componente aggiuntivo MDS per Excel&#41;](microsoft-excel-add-in/change-the-attribute-type-mds-add-in-for-excel.md)|  
@@ -75,11 +74,11 @@ ms.locfileid: "48096041"
   
 -   [Entità &#40;Master Data Services&#41;](../../2014/master-data-services/entities-master-data-services.md)  
   
--   [Gli attributi &#40;Master Data Services&#41;](../../2014/master-data-services/attributes-master-data-services.md)  
+-   [Attributi &#40;Master Data Services&#41;](../../2014/master-data-services/attributes-master-data-services.md)  
   
--   [Gerarchie di &#40;Master Data Services&#41;](hierarchies-master-data-services.md)  
+-   [Gerarchie &#40;Master Data Services&#41;](hierarchies-master-data-services.md)  
   
--   [Le raccolte &#40;Master Data Services&#41;](../../2014/master-data-services/collections-master-data-services.md)  
+-   [Raccolte &#40;Master Data Services&#41;](../../2014/master-data-services/collections-master-data-services.md)  
   
 -   [Autorizzazioni per elementi foglia &#40;Master Data Services&#41;](../../2014/master-data-services/leaf-permissions-master-data-services.md)  
   

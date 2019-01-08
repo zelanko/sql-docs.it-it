@@ -13,12 +13,12 @@ ms.assetid: fe84588b-66a3-4100-a1cf-59b21b7adf01
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: aa283164549ba6c675632b65e40cfe636a0491eb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6225e17feef079fba352b0656fb8fc9d28c86748
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48177821"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518981"
 ---
 # <a name="define-database-dimensions"></a>Definire le dimensioni del database
   Usare Progettazione dimensioni in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] per configurare una dimensione di database esistente in un progetto o un database di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Progettazione dimensioni consente di eseguire le operazioni seguenti:  
@@ -41,9 +41,9 @@ ms.locfileid: "48177821"
   
  In Progettazione dimensioni sono disponibili tre diverse schede, descritte nella tabella seguente.  
   
-|Scheda|Description|  
+|Scheda|Descrizione|  
 |---------|-----------------|  
-|**Struttura dimensione**|Utilizzare questa scheda per operare sulla struttura di una dimensione, ovvero per esaminare o creare lo schema della vista origine dati per una dimensione, modificare gli attributi e organizzarli in gerarchie definite dall'utente.|  
+|**Struttura dimensione**|Utilizzare questa scheda per operare sulla struttura di una dimensione per esaminare o creare lo schema della vista origine dati per una dimensione, per lavorare con gli attributi e organizzarli in gerarchie definite dall'utente.|  
 |**Relazioni tra attributi**|Utilizzare questa scheda per creare, modificare o eliminare le relazioni tra attributi di una dimensione.|  
 |**Traduzioni**|Utilizzare questa scheda per aggiungere e modificare traduzioni di metadati delle dimensioni in diverse lingue.|  
 |**Browser**|Utilizzare questa scheda per esaminare i membri di una dimensione elaborata e per controllare le traduzioni dei metadati delle dimensioni.|  

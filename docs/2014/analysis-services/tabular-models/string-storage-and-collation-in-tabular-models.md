@@ -11,12 +11,12 @@ ms.assetid: 8516f0ad-32ee-4688-a304-e705143642ca
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f8b451134d621c8f151fa43ec4214317ab087918
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c9bc74d7ac6c1e3fb826e2a1b3ebdc0122fd2720
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48072733"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53353771"
 ---
 # <a name="string-storage-and-collation-in-tabular-models"></a>Archivio di stringhe e regole di confronto nei modelli tabulari
   Le stringhe (valori di testo) vengono archiviate in un formato altamente compresso nei modelli tabulari. A causa di questa compressione, è possibile ottenere risultati imprevisti quando si recuperano stringhe intere o parziali. Inoltre, poiché le regole di confronto e le impostazioni locali delle stringhe vengono ereditate in modo gerarchico dall'oggetto padre più prossimo, se la lingua della stringa non viene definita in modo esplicito, le impostazioni locali e le regole di confronto dell'oggetto padre possono influire sulla modalità di archiviazione di ogni stringa e determinare se la stringa è univoca o unita a stringhe simili secondo quanto definito nelle regole di confronto padre.  
@@ -55,7 +55,7 @@ ms.locfileid: "48072733"
 |trEE|  
 |PlAnT|  
   
- Se si utilizza la colonna **Classification – English**nel modello, nella classificazione della pianta non verranno visualizzati i valori originali, con utilizzi diversi di maiuscole e minuscole, ma solo la prima istanza. Il motivo è che tutti i diversi utilizzi delle maiuscole e minuscole della parola **tree** vengono considerati equivalenti da queste regole di confronto e da queste impostazioni locali. Di conseguenza, è stata mantenuta una sola stringa e la prima istanza di tale stringa rilevata dal sistema è quella che è stata salvata.  
+ Se si utilizza la colonna **Classification - English**, nel modello di classificazione della pianta è verranno visualizzati non i valori originali, con utilizzi diversi di maiuscole e minuscole, ma solo la prima istanza. Il motivo è che tutti i diversi utilizzi delle maiuscole e minuscole della parola **tree** vengono considerati equivalenti da queste regole di confronto e da queste impostazioni locali. Di conseguenza, è stata mantenuta una sola stringa e la prima istanza di tale stringa rilevata dal sistema è quella che è stata salvata.  
   
 > [!WARNING]  
 >  È possibile decidere quale stringa sarà la prima a essere archiviata, in base a ciò che viene considerato corretto, ma tale operazione potrebbe risultare molto difficile. Non esiste un modo semplice per determinare in anticipo quale riga deve essere elaborata per prima dal motore, considerando che tutti i valori vengono considerati equivalenti. In alternativa, se è necessario impostare il valore standard, è necessario eseguire la pulizia di tutte le stringhe prima di caricare il modello.  
@@ -71,7 +71,7 @@ ms.locfileid: "48072733"
   
 -   Le regole di confronto definiscono l'ordinamento dei caratteri e la relativa equivalenza.  
   
- È importante notare che un identificatore della lingua non identifica soltanto una lingua, ma anche il paese o l'area geografica in cui tale lingua viene utilizzata. Ogni identificatore della lingua è associato anche a regole di confronto specificate. Per ulteriori informazioni sugli identificatori di lingua, vedere la pagina relativa agli [ID delle impostazioni locali assegnati da Microsoft](http://msdn.microsoft.com/goglobal/bb964664.aspx). È possibile utilizzare la colonna LCID Dec per ottenere l'ID corretto quando si inserisce manualmente un valore. Per altre informazioni sul concetto SQL delle regole di confronto, vedere [COLLATE &#40;Transact-SQL&#41;](/sql/t-sql/statements/collations). Per informazioni sulle designazioni delle regole di confronto e sugli stili di confronto per i nomi delle regole di confronto di Windows, vedere [Windows_collation_name &#40;Transact-SQL&#41;](/sql/t-sql/statements/windows-collation-name-transact-sql). L'argomento [Nome delle regole di confronto di SQL Server &#40;Transact-SQL&#41;](/sql/t-sql/statements/sql-server-collation-name-transact-sql) offre una mappa dei nomi delle regole di confronto di Windows e i nomi usati per SQL.  
+ È importante notare che un identificatore della lingua non identifica soltanto una lingua, ma anche il paese o l'area geografica in cui tale lingua viene utilizzata. Ogni identificatore della lingua è associato anche a regole di confronto specificate. Per ulteriori informazioni sugli identificatori di lingua, vedere la pagina relativa agli [ID delle impostazioni locali assegnati da Microsoft](https://msdn.microsoft.com/goglobal/bb964664.aspx). È possibile utilizzare la colonna LCID Dec per ottenere l'ID corretto quando si inserisce manualmente un valore. Per altre informazioni sul concetto SQL delle regole di confronto, vedere [COLLATE &#40;Transact-SQL&#41;](/sql/t-sql/statements/collations). Per informazioni sulle designazioni delle regole di confronto e sugli stili di confronto per i nomi delle regole di confronto di Windows, vedere [Windows_collation_name &#40;Transact-SQL&#41;](/sql/t-sql/statements/windows-collation-name-transact-sql). L'argomento [Nome delle regole di confronto di SQL Server &#40;Transact-SQL&#41;](/sql/t-sql/statements/sql-server-collation-name-transact-sql) offre una mappa dei nomi delle regole di confronto di Windows e i nomi usati per SQL.  
   
  Dopo avere creato il database del modello tabulare, tutti i nuovi oggetti del modello erediteranno gli attributi della lingua e delle regole di confronto dagli attributi del database. Questo vale per tutti gli oggetti. Il percorso di ereditarietà ha inizio dall'oggetto. Nell'elemento padre vengono cercati eventuali attributi della lingua e delle regole di confronto da ereditare e se non ne vengono trovati la ricerca di tali attributi viene spostata al livello del database. In altre parole, se non si specificano gli attributi della lingua e delle regole di confronto per un oggetto, per impostazione predefinita l'oggetto eredita gli attributi dall'elemento padre più prossimo.  
   

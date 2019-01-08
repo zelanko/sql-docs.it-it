@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: c29383e02746ac3abb60a15d2d0368483d2ee13e
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: ea15a8fc5eaf066b5a64cf73192f64dd0078434e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699446"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52534085"
 ---
 # <a name="transparent-data-encryption"></a>Transparent Data Encryption
 Per proteggere il database è possibile adottare alcune accortezze, tra cui la progettazione di un sistema sicuro, la crittografia dei dati riservati e la compilazione di un firewall attorno ai server di database. Tuttavia, per uno scenario in cui si appropria i supporti fisici (ad esempio le unità o nastri di backup), un utente malintenzionato può semplicemente ripristinare o collegare il database ed esplorare i dati. Una soluzione per ovviare al problema consiste nel crittografare i dati sensibili nel database e proteggere con un certificato le chiavi usate per la crittografia. In questo modo si impedisce a chi è sprovvisto delle chiavi di usare i dati; tuttavia, questo tipo di protezione deve essere pianificato in anticipo.  
@@ -56,7 +56,7 @@ Per usare TDE, eseguire le operazioni seguenti: I primi tre passaggi vengono ese
   
 L'esempio seguente illustra la crittografia di `AdventureWorksPDW2012` il database con un certificato denominato `MyServerCert`, creato in SQL Server PDW.  
   
-**Primo passaggio: Abilitare TDE in SQL Server PDW.** Questa azione è necessaria solo una volta.  
+**Prima: Abilitare Transparent Data Encryption in SQL Server PDW.** Questa azione è necessaria solo una volta.  
   
 ```sql  
 USE master;  
@@ -93,7 +93,7 @@ BACKUP CERTIFICATE MyServerCert
 GO  
 ```  
   
-**Ultima: Creare la chiave DEK e usare ALTER DATABASE per crittografare un database utente.** Questa azione viene ripetuta per ogni database protetto con TDE.  
+**Ultimo: Creare la chiave DEK e usare ALTER DATABASE per crittografare un database utente.** Questa azione viene ripetuta per ogni database protetto con TDE.  
   
 ```sql  
 USE AdventureWorksPDW2012;  
@@ -238,11 +238,11 @@ Se è presente una DMK nell'appliance in cui è stata eseguita l'aggiornamento o
   
 Esempio di azione di aggiornamento. Sostituire `**********` con la password DMK.  
   
-`setup.exe /Action=ProvisionUpgrade … DMKPassword='**********'  `  
+`setup.exe /Action=ProvisionUpgrade ... DMKPassword='**********'  `  
   
 Esempio di azione per sostituire una macchina virtuale.  
   
-`setup.exe /Action=ReplaceVM … DMKPassword='**********'  `  
+`setup.exe /Action=ReplaceVM ... DMKPassword='**********'  `  
   
 Durante l'aggiornamento, se un database utente è crittografato e la password DMK non viene specificata, l'azione di aggiornamento avrà esito negativo. Durante la sostituzione, se la password corretta non è disponibile quando è presente una DMK, l'operazione ignorerà il passaggio di recupero DMK. Tutti gli altri passaggi verranno completati al termine dell'azione di sostituzione della macchina virtuale, ma l'azione segnala un errore alla fine per indicare che sono necessari passaggi aggiuntivi. Nei log del programma di installazione (che si trova **\ProgramData\Microsoft\Microsoft SQL Server Parallel Data Warehouse\100\Logs\Setup\\\Detail-Setup < timestamp >**), verrà visualizzato l'avviso seguente verso la fine.  
   

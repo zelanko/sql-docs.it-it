@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: performance
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.rg.properties.f1
@@ -15,19 +14,19 @@ ms.assetid: de3510df-f792-4a9d-80fa-f198fd36cdc8
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 4a3e2caa3c2b89ead6ee109ea13fa6783cc61dab
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c1093297892ea2e03cb9583a1e5c40a1c2a85b19
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48116411"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52781264"
 ---
 # <a name="view-resource-governor-properties"></a>View Resource Governor Properties
   È possibile creare o configurare entità Resource Governor, ad esempio pool di risorse e gruppi di carico di lavoro, tramite la pagina Proprietà di Resource Governor in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 1.  **Prima di iniziare:**  [Autorizzazioni](#Permissions)  
   
-2.  **Per visualizzare le proprietà di Resource Governor usando:**  [Pagina Proprietà di Resource Governor](#ViewRGProp)  
+2.  **Per visualizzare le proprietà di Resource Governor, utilizzando:**  [Pagina delle proprietà di Resource Governor](#ViewRGProp)  
   
 ##  <a name="BeforeYouBegin"></a> Prima di iniziare  
  Oltre a visualizzare le proprietà di entità Resource Governor, è possibile eseguire diverse attività di configurazione tramite la pagina **Proprietà di Resource Governor** . Per altre informazioni, vedere gli argomenti seguenti:  
@@ -76,7 +75,7 @@ ms.locfileid: "48116411"
  **Pool di risorse**  
  Consente di creare o modificare la configurazione del pool di risorse utilizzando la griglia fornita. Questa griglia viene popolata con le informazioni sui pool interni e sui pool predefiniti. Selezionare un pool da utilizzare facendo clic sulla prima colonna nella riga del pool. Per creare un nuovo pool di risorse, fare clic sulla riga preceduta dall'asterisco (**\***).  
   
- **Nome**  
+ **Name**  
  Consente di specificare il nome del pool di risorse.  
   
  **% CPU minima**  
@@ -96,7 +95,7 @@ ms.locfileid: "48116411"
  **Gruppi del carico di lavoro per pool di risorse**  
  Consente di creare o modificare la configurazione del gruppo del carico di lavoro utilizzando la griglia fornita. Questa griglia viene popolata con le informazioni sui gruppi interni e sui gruppi predefiniti. Selezionare un gruppo da utilizzare facendo clic sulla prima colonna nella riga del pool. Per creare un nuovo gruppo del carico di lavoro, fare clic sulla riga preceduta dall'asterisco (**\***).  
   
- **Nome**  
+ **Name**  
  Consente di specificare il nome del gruppo del carico di lavoro.  
   
  **Priorità**  

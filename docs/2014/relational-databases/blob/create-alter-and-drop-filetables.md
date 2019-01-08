@@ -14,12 +14,12 @@ ms.assetid: 47d69e37-8778-4630-809b-2261b5c41c2c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4d515496ec264e4b6331021d385a8d42a981fbbb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 373cee8bf85815db18c50eb2919600ffec258f0b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48058361"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52516497"
 ---
 # <a name="create-alter-and-drop-filetables"></a>Creare, modificare e rilasciare FileTables
   Viene descritto come creare una nuova tabella FileTable o modificarne o eliminarne una esistente.  
@@ -35,7 +35,7 @@ ms.locfileid: "48058361"
   
 -   Nomi da utilizzare per i 3 vincoli di chiave primaria e univoci creati automaticamente.  
   
-###  <a name="HowToCreate"></a> Procedura: Creazione di una tabella FileTable  
+###  <a name="HowToCreate"></a> Come si fa: Creare una tabella FileTable  
  **Creare una tabella FileTable tramite Transact-SQL**  
  Creare una tabella FileTable chiamando l'istruzione [CREATE TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql) con l'opzione **AS FileTable**. Poiché una tabella FileTable ha uno schema fisso, non è necessario specificare un elenco di colonne. È invece possibile specificare le impostazioni seguenti per la nuova tabella FileTable:  
   
@@ -96,7 +96,7 @@ GO
   
 -   Poiché una tabella FileTable contiene una colonna FILESTREAM, tale tabella richiede un filegroup FILESTREAM valido. È eventualmente possibile specificare un filegroup FILESTREAM valido come parte del comando **CREATE TABLE** per la creazione di una tabella FileTable. Se non si specifica un filegroup, la tabella FileTable utilizza il filegroup FILESTREAM predefinito per il database. Se il database non include un filegroup FILESTREAM, viene generato un errore.  
   
--   Non è possibile creare un vincolo di tabella come parte di un'istruzione **CREATE TABLE…AS FILETABLE** . Sarà tuttavia possibile aggiungere il vincolo in seguito utilizzando un'istruzione **ALTER TABLE** .  
+-   Non è possibile creare un vincolo di tabella come parte di un'istruzione **CREATE TABLE...AS FILETABLE**. Sarà tuttavia possibile aggiungere il vincolo in seguito utilizzando un'istruzione **ALTER TABLE** .  
   
 -   Non è possibile creare una tabella FileTable nel database **tempdb** o in qualsiasi altro database di sistema.  
   
@@ -107,7 +107,7 @@ GO
   
  Per informazioni sull'uso dell'istruzione ALTER TABLE per abilitare o disabilitare lo spazio dei nomi FileTable, inclusi i vincoli definiti dal sistema, vedere [Gestione di tabelle FileTable](manage-filetables.md).  
   
-###  <a name="HowToChange"></a> Procedura: Modifica della directory per una tabella FileTable  
+###  <a name="HowToChange"></a> Come si fa: Modificare la Directory per una tabella FileTable  
  **Modificare la directory per una tabella FileTable tramite Transact-SQL**  
  Chiamare l'istruzione ALTER TABLE e specificare un nuovo valore valido per l'opzione SET di **FILETABLE_DIRECTORY** .  
   

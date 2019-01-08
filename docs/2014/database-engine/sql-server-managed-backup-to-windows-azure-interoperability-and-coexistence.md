@@ -1,5 +1,5 @@
 ---
-title: 'SQL Server Managed Backup in Windows Azure: interoperabilità e coesistenza | Microsoft Docs'
+title: 'SQL Server Managed Backup in Windows Azure: Interoperabilità e coesistenza | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -10,18 +10,18 @@ ms.assetid: 78fb78ed-653f-45fe-a02a-a66519bfee1b
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c825ca99e120dce81cb4a18dc65413c1f5d03c4a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d4d883d54a1ad933d4e248f292d9b6a222915a00
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48184241"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52509129"
 ---
-# <a name="sql-server-managed-backup-to-windows-azure-interoperability-and-coexistence"></a>Backup gestito di SQL Server in Windows Azure: interoperabilità e coesistenza
-  In questo argomento vengono descritte l'interoperabilità e la coesistenza di [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] con alcune funzionalità di [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], tra cui gruppi di disponibilità AlwaysOn, mirroring del database, piani di manutenzione di backup, log shipping, backup ad hoc, scollegamento del database ed eliminazione del database.  
+# <a name="sql-server-managed-backup-to-windows-azure-interoperability-and-coexistence"></a>SQL Server Managed Backup in Windows Azure: Interoperabilità e coesistenza
+  In questo argomento vengono descritte l'interoperabilità e la coesistenza di [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] con alcune funzionalità di [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], Di seguito vengono descritte alcune di queste caratteristiche: Gruppi di disponibilità AlwaysOn, mirroring del Database, piani di manutenzione di Backup, Log Shipping, backup Ad hoc, Scollega Database e Drop Database.  
   
 ### <a name="alwayson-availability-groups"></a>Gruppi di disponibilità AlwaysOn  
- I gruppi di disponibilità AlwaysOn configurati come soluzione unica di Windows Azure sono supportati per [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]. Le configurazioni del gruppo di disponibilità AlwaysOn ibride o solo in locale non sono supportate. Per altre informazioni e altre considerazioni, vedere [configurazione di SQL Server Managed Backup to Windows Azure per i gruppi di disponibilità](../../2014/database-engine/setting-up-sql-server-managed-backup-to-windows-azure-for-availability-groups.md)  
+ Gruppi di disponibilità AlwaysOn configurati come una soluzione solo Azure supportata per Windows [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]. Le configurazioni del gruppo di disponibilità AlwaysOn ibride o solo in locale non sono supportate. Per altre informazioni e altre considerazioni, vedere [configurazione di SQL Server Managed Backup to Windows Azure per i gruppi di disponibilità](../../2014/database-engine/setting-up-sql-server-managed-backup-to-windows-azure-for-availability-groups.md)  
   
 ### <a name="database-mirroring"></a>Mirroring del database  
  [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] è supportato solo nel database principale. Se sia il server principale che il server mirror sono configurati per l'utilizzo di [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)], il database con mirroring viene ignorato e non ne verrà eseguito il backup. Tuttavia, in caso di failover, tramite [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] verrà avviato il processo di backup dopo il completamento del cambio di ruolo da parte del mirror e quest'ultimo è online. I backup verranno archiviati in un nuovo contenitore in questo caso. Se il mirror non è configurato per utilizzare [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)], in caso di failover non verrà eseguito alcun backup. È consigliabile configurare [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] sia nel server principale che nel server mirror in modo tale che i backup possano continuare in caso di failover.  
@@ -55,7 +55,7 @@ ms.locfileid: "48184241"
   
  **Backup basati su Data Protection Manager (DPM):** Microsoft Data Protection Manager consente di eseguire backup completi e incrementali. I backup incrementali sono backup del log tramite cui viene eseguito un troncamento del log dopo la creazione di un backup della parte finale del log. Pertanto, la configurazione di DPM e di [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] per lo stesso database non è supportata.  
   
- **Strumenti di terze parti o script:** qualsiasi strumento di terze parti o script che eseguono i backup del log che provocano il troncamento del log non è compatibile con [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]e non è supportato.  
+ **Strumenti di terze parti o script:** Qualsiasi strumento di terze parti o script che eseguono i backup del log che provocano il troncamento del log non è compatibile con [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]e non è supportato.  
   
  Se hai [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] abilitata per un'istanza di database e si desidera eseguire un backup ad hoc è possibile usare il [smart_admin.sp_backup_on_demand &#40;Transact-SQL&#41; ](/sql/relational-databases/system-stored-procedures/managed-backup-sp-backup-on-demand-transact-sql) stored procedure, come descritto in precedenza sezione. Se inoltre si ha l'esigenza di pianificare o eseguire backup periodici all'esterno di [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)], è possibile utilizzare Backup di sola copia.  Per altre informazioni, vedere [Backup di sola copia &#40;SQL Server&#41;](../relational-databases/backup-restore/copy-only-backups-sql-server.md).  
   

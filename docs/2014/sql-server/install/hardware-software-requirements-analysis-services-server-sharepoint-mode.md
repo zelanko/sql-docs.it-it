@@ -11,12 +11,12 @@ ms.assetid: fb86ca0a-518c-4c61-ae78-7680c57fae1f
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: e5c405862dfb13bf8db1a619f052e6ca9206f1f8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bff920677482fa8857024cfe6e993b3c84cf13f8
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48167747"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53371423"
 ---
 # <a name="hardware-and-software-requirements-for-analysis-services-server-in-sharepoint-mode-sql-server-2014"></a>Requisiti hardware e software per il server Analysis Services in modalità SharePoint (SQL Server 2014)
   [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] supporta SharePoint 2010 e SharePoint 2013. [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2013 viene eseguito all'esterno della farm di SharePoint sebbene possa essere installato nei server SharePoint. [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2010 viene eseguito nei server applicazioni in una farm di SharePoint 2010 e, per supportare le operazioni del server, vengono utilizzate le funzionalità e l'infrastruttura di SharePoint. Per installare [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] per qualsiasi versione di SharePoint, utilizzare l'Installazione guidata di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Al termine dell'installazione, eseguire le operazioni seguenti:  
@@ -27,18 +27,18 @@ ms.locfileid: "48167747"
 
   
 ##  <a name="bkmk_sqleditions"></a> Requisiti relativi all'edizione di SQL Server  
- Funzionalità di business intelligence non sono tutti disponibili in tutte le edizioni di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Per informazioni dettagliate, vedere [funzionalità supportate dalle edizioni di SQL Server 2014](../../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md) e [edizioni e componenti di SQL Server 2014](../editions-and-components-of-sql-server-2016.md).  
+ Non tutte le funzionalità di Business Intelligence sono disponibili in ogni edizione di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Per informazioni dettagliate, vedere [funzionalità supportate dalle edizioni di SQL Server 2014](../../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md) e [edizioni e componenti di SQL Server 2014](../editions-and-components-of-sql-server-2016.md).  
   
- Vedere le note sulla versione corrente [Microsoft SQL Server 2014 Release Notes](http://go.microsoft.com/fwlink/?LinkID=296445).  
+ Vedere le note sulla versione corrente [Microsoft SQL Server 2014 Release Notes](https://go.microsoft.com/fwlink/?LinkID=296445).  
   
 
   
 ##  <a name="bkmk_sqllicense"></a> Licenza di SQL Server  
  Per ulteriori informazioni sulle licenza di SQL Server, vedere quanto riportato di seguito:  
   
--   [Foglio dati delle licenze di SQL Server 2014](http://download.microsoft.com/download/6/6/F/66FF3259-1466-4BBA-A505-2E3DA5B2B1FA/SQL_Server_2014_Licensing_Datasheet.pdf) (http://download.microsoft.com/download/6/6/F/66FF3259-1466-4BBA-A505-2E3DA5B2B1FA/SQL_Server_2014_Licensing_Datasheet.pdf).  
+-   [Foglio dati delle licenze di SQL Server 2014](https://download.microsoft.com/download/6/6/F/66FF3259-1466-4BBA-A505-2E3DA5B2B1FA/SQL_Server_2014_Licensing_Datasheet.pdf) (https://download.microsoft.com/download/6/6/F/66FF3259-1466-4BBA-A505-2E3DA5B2B1FA/SQL_Server_2014_Licensing_Datasheet.pdf).  
   
--   [Come acquistare: Modelli di licenza di SQL Server il supporto](http://www.microsoft.com/server-cloud/products/sql-server/buy.aspx#fbid=Zae0-E6r5oh) (http://www.microsoft.com/server-cloud/products/sql-server/buy.aspx#fbid=Zae0-E6r5oh).  
+-   [Modalità di acquisto: Supporto di modelli di licenza di SQL Server](https://www.microsoft.com/server-cloud/products/sql-server/buy.aspx#fbid=Zae0-E6r5oh) (https://www.microsoft.com/server-cloud/products/sql-server/buy.aspx#fbid=Zae0-E6r5oh).  
   
 
   
@@ -64,7 +64,7 @@ ms.locfileid: "48167747"
   
 -   [Requisiti hardware e software per l'installazione di SQL Server 2014](hardware-and-software-requirements-for-installing-sql-server.md)  
   
--   [Requisiti hardware e software per SharePoint 2013](http://technet.microsoft.com/library/cc262485\(office.15\).aspx).  
+-   [Requisiti hardware e software per SharePoint 2013](https://technet.microsoft.com/library/cc262485\(office.15\).aspx).  
   
  Le indicazioni standard relative al software e all'hardware di SharePoint 2013 riguardano una soluzione di gestione documenti basata sul Web per un gruppo di lavoro o un team. Poiché nell'elaborazione di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] impiega un'elevata quantità di dati, l'indicazione standard è sufficiente solo se il carico di lavoro complessivo è ridotto, ad esempio meno di 100 utenti o cartelle di lavoro. Per una distribuzione di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] di dimensioni maggiori è richiesta una potenza di calcolo superiore.  
   
@@ -76,16 +76,16 @@ ms.locfileid: "48167747"
 |Componente|Requisito|  
 |---------------|-----------------|  
 |Versione di SharePoint|SharePoint 2010 Enterprise con Excel Services, servizio di archiviazione sicura e Attestazioni per il servizio token Windows configurati nella stessa server farm.<br /><br /> SharePoint deve essere installato utilizzando l'opzione Server farm in Installazione di SharePoint (l'opzione di installazione autonoma di SharePoint non è supportata). [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] richiede un'infrastruttura di server farm per supportare l'accesso amministrativo e ai dati. L'installazione autonoma non fornisce questi servizi.<br /><br /> L'edizione Developer, eseguita in Windows 7 o Windows Vista, non è supportata per le installazioni del server [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)].|  
-|Service Pack|È richiesto SharePoint Server 2010 Service Pack 1 (SP1).<br /><br /> È necessaria per SharePoint 2010 Service Pack 1 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] funzionalità.<br /><br /> È richiesto l'aggiornamento cumulativo di agosto 2010 di SharePoint 2010 o versione successiva in caso di aggiornamento da una versione precedente di [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] a [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. È consigliabile installare l'aggiornamento cumulativo di agosto 2010 o versione successiva dopo l'installazione di SharePoint Service Pack 1. Una nuova installazione di [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] non richiede l'aggiornamento cumulativo. Per altre informazioni, vedere [agosto 2010 è stato rilasciato un aggiornamento cumulativo per SharePoint](http://blogs.technet.com/b/stefan_gossner/archive/2010/09/02/august-2010-cumulative-update-for-sharepoint-has-been-released.aspx).|  
+|Service Pack|È richiesto SharePoint Server 2010 Service Pack 1 (SP1).<br /><br /> È richiesto SharePoint 2010 Service Pack 1 per le funzionalità di [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)][!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)].<br /><br /> È richiesto l'aggiornamento cumulativo di agosto 2010 di SharePoint 2010 o versione successiva in caso di aggiornamento da una versione precedente di [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] a [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. È consigliabile installare l'aggiornamento cumulativo di agosto 2010 o versione successiva dopo l'installazione di SharePoint Service Pack 1. Una nuova installazione di [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] non richiede l'aggiornamento cumulativo. Per altre informazioni, vedere [agosto 2010 è stato rilasciato un aggiornamento cumulativo per SharePoint](http://blogs.technet.com/b/stefan_gossner/archive/2010/09/02/august-2010-cumulative-update-for-sharepoint-has-been-released.aspx).|  
 |Applicazione Web SharePoint|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per SharePoint 2010 supporta solo le applicazioni Web SharePoint configurate per l'autenticazione in modalità classica. Se si aggiunge [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per SharePoint a una farm esistente, assicurarsi che l'applicazione Web con cui si intende utilizzarlo sia configurata per l'autenticazione in modalità classica. Per istruzioni su come controllare la modalità di autenticazione, vedere la sezione "verificare che l'applicazione Web utilizzi l'autenticazione in modalità classica" in [distribuire soluzioni PowerPivot in SharePoint](../../analysis-services/power-pivot-sharepoint/deploy-power-pivot-solutions-to-sharepoint.md).|  
-|Provider di dati necessari per l'aggiornamento dei dati lato server [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]|Per l'aggiornamento dei dati lato server vengono ripetuti gli stessi passaggi per il recupero dei dati utilizzati per importare inizialmente i dati. Questo significa che i provider di dati utilizzati per importare i dati in una workstation client devono essere presenti anche nel server [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per SharePoint.<br /><br /> Inoltre, utilizzando feed di dati in un server SharePoint è necessario disporre di ADO.NET Data Services. Questo software non viene installato tramite il programma di installazione dei prerequisiti di SharePoint. È necessario installare il software seguente manualmente.<br /><br /> Assembly di runtime di ADO.NET Data Services 3.5 SP1, utilizzati per esportare un elenco SharePoint come feed di dati. Scaricare e installare la versione che corrisponde al sistema operativo:<br /><br /> Per Windows Server 2008 R2, utilizzare [aggiornamento di ADO.NET Data Services per .NET Framework 3.5 SP1 per Windows 7 e windows Server 2008 R2 (http://go.microsoft.com/fwlink/?LinkId=182557)](http://go.microsoft.com/fwlink/?LinkId=182557). Windows Server 2008 R2 **SP1** contiene già il provider aggiornato.<br /><br /> Per Windows Server 2008, utilizzare [aggiornamento di ADO.NET Data Services per .NET Framework 3.5 SP1 per Windows 2000, Windows Server 2003, Windows XP, Windows Vista e Windows Server 2008 (http://go.microsoft.com/fwlink/?LinkId=158125)](http://go.microsoft.com/fwlink/?LinkId=158125).|  
+|Provider di dati necessari per l'aggiornamento dei dati lato server [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]|Per l'aggiornamento dei dati lato server vengono ripetuti gli stessi passaggi per il recupero dei dati utilizzati per importare inizialmente i dati. Questo significa che i provider di dati utilizzati per importare i dati in una workstation client devono essere presenti anche nel server [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per SharePoint.<br /><br /> Inoltre, utilizzando feed di dati in un server SharePoint è necessario disporre di ADO.NET Data Services. Questo software non viene installato tramite il programma di installazione dei prerequisiti di SharePoint. È necessario installare il software seguente manualmente.<br /><br /> Assembly di runtime di ADO.NET Data Services 3.5 SP1, utilizzati per esportare un elenco SharePoint come feed di dati. Scaricare e installare la versione che corrisponde al sistema operativo:<br /><br /> Per Windows Server 2008 R2, utilizzare [aggiornamento di ADO.NET Data Services per .NET Framework 3.5 SP1 per Windows 7 e windows Server 2008 R2 (https://go.microsoft.com/fwlink/?LinkId=182557)](https://go.microsoft.com/fwlink/?LinkId=182557). Windows Server 2008 R2 **SP1** contiene già il provider aggiornato.<br /><br /> Per Windows Server 2008, utilizzare [aggiornamento di ADO.NET Data Services per .NET Framework 3.5 SP1 per Windows 2000, Windows Server 2003, Windows XP, Windows Vista e Windows Server 2008 (https://go.microsoft.com/fwlink/?LinkId=158125)](https://go.microsoft.com/fwlink/?LinkId=158125).|  
   
- [Determinare l'Hardware e Software (requisiti (SharePoint 2010)http://go.microsoft.com/fwlink/?LinkId=169734)](http://go.microsoft.com/fwlink/?LinkId=169734)  
+ [Determinare l'Hardware e Software (requisiti (SharePoint 2010)https://go.microsoft.com/fwlink/?LinkId=169734)](https://go.microsoft.com/fwlink/?LinkId=169734)  
   
  
   
 ## <a name="additional-information"></a>Informazioni aggiuntive  
- Per informazioni sulle modifiche di SharePoint, vedere [modifiche da SharePoint 2010 a SharePoint 2013](http://technet.microsoft.com/library/ff607742\(office.15\).aspx) (http://technet.microsoft.com/library/ff607742(office.15).aspx).  
+ Per informazioni sulle modifiche di SharePoint, vedere [modifiche da SharePoint 2010 a SharePoint 2013](https://technet.microsoft.com/library/ff607742\(office.15\).aspx) (https://technet.microsoft.com/library/ff607742(office.15).aspx).  
   
 
   

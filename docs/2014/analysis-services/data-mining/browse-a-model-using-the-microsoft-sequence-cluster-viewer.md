@@ -21,12 +21,12 @@ ms.assetid: 3ada00aa-da9e-488a-9f53-c3e188f81f84
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5571c8bc684a8d57f8696b3a5630170679c1cf63
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 870e0fb8cb24a62a2914281e58915c7749771213
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48229471"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52521212"
 ---
 # <a name="browse-a-model-using-the-microsoft-sequence-cluster-viewer"></a>Visualizzare un modello usando il Visualizzatore Microsoft Sequence Clustering
   Il Visualizzatore [!INCLUDE[msCoName](../../includes/msconame-md.md)] Sequence Clustering disponibile in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] consente di visualizzare i modelli di data mining compilati con l'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Sequence Clustering. L'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Sequence Clustering è un algoritmo di analisi delle sequenze da usare per l'esplorazione di dati contenenti eventi che possono essere collegati dai percorsi o *sequenze*seguenti. Per altre informazioni su questo algoritmo, vedere [Algoritmo Microsoft Sequence Clustering](microsoft-sequence-clustering-algorithm.md).  
@@ -35,7 +35,7 @@ ms.locfileid: "48229471"
 >  Per visualizzare informazioni dettagliate sulle equazioni utilizzate nel modello e sui modelli individuati, utilizzare il visualizzatore [!INCLUDE[msCoName](../../includes/msconame-md.md)] Generic Content Tree Viewer. Per altre informazioni, vedere [Visualizzare un modello utilizzando Microsoft Generic Content Tree Viewer](browse-a-model-using-the-microsoft-generic-content-tree-viewer.md) o [Microsoft Generic Content Tree Viewer &#40;Data Mining&#41;](../microsoft-generic-content-tree-viewer-data-mining.md).  
   
 > [!NOTE]  
->  Nel Visualizzatore [!INCLUDE[msCoName](../../includes/msconame-md.md)] Sequence Clustering sono disponibili funzionalità e opzioni analoghe a quelle del Visualizzatore [!INCLUDE[msCoName](../../includes/msconame-md.md)] Clustering. Per altre informazioni, vedere [Visualizzare un modello usando il Visualizzatore Microsoft Clustering](browse-a-model-using-the-microsoft-cluster-viewer.md).  
+>  Nel Visualizzatore [!INCLUDE[msCoName](../../includes/msconame-md.md)] Sequence Clustering sono disponibili funzionalità e opzioni analoghe a quelle del Visualizzatore [!INCLUDE[msCoName](../../includes/msconame-md.md)] Clustering. Per altre informazioni, vedere [Visualizzare un modello utilizzando il Visualizzatore Microsoft Clustering](browse-a-model-using-the-microsoft-cluster-viewer.md).  
   
 ##  <a name="BKMK_ViewerTabs"></a> Schede del visualizzatore  
  Per la visualizzazione di un modello di data mining in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]viene utilizzato il visualizzatore appropriato nella scheda **Visualizzatore modello di data mining** di Progettazione modelli di data mining. Per l'esplorazione di modelli di data mining per il clustering delle sequenze, nel Visualizzatore [!INCLUDE[msCoName](../../includes/msconame-md.md)] Sequence Clustering sono disponibili le schede seguenti:  
@@ -53,7 +53,7 @@ ms.locfileid: "48229471"
 ###  <a name="BKMK_Diagram"></a> Diagramma dei cluster  
  Nella scheda **Diagramma dei cluster** del Visualizzatore [!INCLUDE[msCoName](../../includes/msconame-md.md)] Sequence Clustering vengono visualizzati tutti i cluster di un modello di data mining. L'ombreggiatura della linea che collega un cluster all'altro rappresenta il grado di somiglianza dei cluster. Se l'ombreggiatura è chiara o inesistente, il grado di somiglianza dei cluster è basso. Man mano che la linea diventa più scura, il grado di somiglianza dei collegamenti aumenta. È possibile modificare il numero di linee visualizzate regolando il dispositivo di scorrimento a destra dei cluster. Se si sposta il dispositivo di scorrimento verso il basso, vengono visualizzati solo i collegamenti più attendibili.  
   
- Per impostazione predefinita, l'ombreggiatura rappresenta la popolazione del cluster. Le opzioni **Variabile****ombreggiatura** e **Stato** consentono di selezionare la coppia attributo/stato rappresentata dall'ombreggiatura. Più scura è l'ombreggiatura, maggiore è la distribuzione dell'attributo per uno stato specifico. La distribuzione diminuisce man mano che l'ombreggiatura diventa più chiara.  
+ Per impostazione predefinita, l'ombreggiatura rappresenta la popolazione del cluster. Tramite il **Variabileombreggiatura** e **stato** opzioni, è possibile selezionare quale attributo e la coppia di stati è l'ombreggiatura rappresenta. Più scura è l'ombreggiatura, maggiore è la distribuzione dell'attributo per uno stato specifico. La distribuzione diminuisce man mano che l'ombreggiatura diventa più chiara.  
   
  Per rinominare un cluster, fare clic con il pulsante destro del mouse sul nodo corrispondente e scegliere **Rinomina cluster**. Il nuovo nome è persistente nel server.  
   
@@ -92,11 +92,11 @@ ms.locfileid: "48229471"
  [Torna all'inizio](#BKMK_ViewerTabs)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Attività del Visualizzatore modelli e procedure dettagliate di data mining](mining-model-viewer-tasks-and-how-tos.md)   
- [Attività del Visualizzatore modelli e procedure dettagliate di data mining](mining-model-viewer-tasks-and-how-tos.md)   
+ [Attività e procedure relative al visualizzatore modello di data mining](mining-model-viewer-tasks-and-how-tos.md)   
+ [Attività e procedure relative al visualizzatore modello di data mining](mining-model-viewer-tasks-and-how-tos.md)   
  [Algoritmo Microsoft Sequence Clustering](microsoft-sequence-clustering-algorithm.md)   
- [Strumenti di Data Mining](data-mining-tools.md)   
- [Visualizzatori modello di Data Mining](data-mining-model-viewers.md)   
- [Visualizzare un modello usando il Visualizzatore Microsoft Clustering](browse-a-model-using-the-microsoft-cluster-viewer.md)  
+ [Strumenti di data mining](data-mining-tools.md)   
+ [Visualizzatori modello di data mining](data-mining-model-viewers.md)   
+ [Visualizzare un modello utilizzando il Visualizzatore Microsoft Clustering](browse-a-model-using-the-microsoft-cluster-viewer.md)  
   
   

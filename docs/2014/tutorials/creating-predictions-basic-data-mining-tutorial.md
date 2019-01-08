@@ -11,12 +11,12 @@ ms.assetid: a8410ed2-bb98-4d51-a9eb-b239be1201c2
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3940f7c214ab3f9d5d48e83acef5ed2237ceeac3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0001b04a93c1aacfbf2e7701faada815cb6316ac
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48206531"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52515452"
 ---
 # <a name="creating-predictions-basic-data-mining-tutorial"></a>Creazione di stime (Esercitazione di base sul data mining)
   Dopo aver testato l'accuratezza dei modelli di data mining e ha deciso che si è soddisfatti dei risultati, è quindi possibile generare stime tramite il generatore di Query di stima nel **stima modello di Data Mining** scheda modelli di Data Mining Finestra di progettazione.  
@@ -157,7 +157,7 @@ ms.locfileid: "48206531"
   
         2.  Digitare un nome per la tabella in cui saranno contenuti i risultati della query.  
   
-        3.  Usare l'opzione **Aggiungi a vista origine dati**, per creare la tabella e aggiungerla a una vista origine dati esistente. Questa opzione è utile se si desidera mantenere tutte le tabelle correlate per un modello, quali dati di training, dati di stima dell'origine e risultati query, nella stessa vista origine dati.  
+        3.  Usare l'opzione **Aggiungi a vista origine dati**, per creare la tabella e aggiungerla a una vista origine dati esistente. Ciò è utile se si desidera mantenere tutte le tabelle correlate per un modello, ad esempio dati di training, dati di origine di stima e query risultati aggiuntivo la stessa vista origine dati.  
   
         4.  Usare l'opzione **Sovrascrivi se esistente**, per aggiornare una tabella esistente con i risultati più recenti.  
   

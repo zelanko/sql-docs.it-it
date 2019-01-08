@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 94f887aa48a63fbc84e941e6259839bff1327bd3
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: cc0286a3799aa56090fc6861b0a79b302b47aa26
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38984763"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52544274"
 ---
 # <a name="deploy-power-pivot-solutions-to-sharepoint"></a>Distribuire soluzioni PowerPivot in SharePoint
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -26,19 +26,19 @@ ms.locfileid: "38984763"
   
  In questo argomento sono incluse le sezioni seguenti:  
   
- [Prerequisito: verificare che l'applicazione Web utilizzi l'autenticazione in modalità classica](#bkmk_classic)  
+ [Prerequisito: Verificare che l'applicazione Web utilizzi l'autenticazione in modalità classica](#bkmk_classic)  
   
- [Passaggio 1: distribuire la soluzione farm](#bkmk_farm)  
+ [Passaggio 1: Distribuire la soluzione Farm](#bkmk_farm)  
   
- [Passaggio 2: distribuire la soluzione applicazione Web PowerPivot in Amministrazione centrale](#deployCA)  
+ [Passaggio 2: Distribuire la soluzione applicazione Web PowerPivot in Amministrazione centrale](#deployCA)  
   
- [Passaggio 3: distribuire la soluzione applicazione Web PowerPivot ad altre applicazioni Web](#deployUI)  
+ [Passaggio 3: Distribuire la soluzione applicazione Web PowerPivot ad altre applicazioni Web](#deployUI)  
   
  [Ridistribuire o ritirare la soluzione](#retract)  
   
  [Informazioni sulle soluzioni PowerPivot](#intro)  
   
-##  <a name="bkmk_classic"></a> Prerequisito: verificare che l'applicazione Web utilizzi l'autenticazione in modalità classica  
+##  <a name="bkmk_classic"></a> Prerequisito: Verificare che l'applicazione Web utilizzi l'autenticazione in modalità classica  
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per SharePoint è supportato solo per le applicazioni Web che usano l'autenticazione in modalità classica di Windows. Per controllare se l'applicazione usa la modalità di distribuzione classica, eseguire il cmdlet di PowerShell seguente dal **Shell di gestione SharePoint 2010**, sostituendo **http://\<nome sito di livello superiore >** con il nome del sito di SharePoint:  
   
 ```  
@@ -47,7 +47,7 @@ Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthent
   
  Il valore restituito dovrebbe essere **false**. Se **true**, non è possibile accedere ai dati [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] con questa applicazione Web.  
   
-##  <a name="bkmk_farm"></a> Passaggio 1: distribuire la soluzione farm  
+##  <a name="bkmk_farm"></a> Passaggio 1: Distribuire la soluzione Farm  
  Questa sezione illustra come distribuire le soluzioni usando PowerShell, ma è anche possibile usare lo strumento di configurazione [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per completare questa attività. Per altre informazioni, vedere [Configurare o ripristinare PowerPivot per SharePoint 2010 (strumento di configurazione PowerPivot)](http://msdn.microsoft.com/d61f49c5-efaa-4455-98f2-8c293fa50046).  
   
  È necessario eseguire questa attività una sola volta dopo l'installazione di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per SharePoint.  
@@ -57,7 +57,7 @@ Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthent
 2.  Eseguire il seguente cmdlet per aggiungere la soluzione farm.  
   
     ```  
-    Add-SPSolution –LiteralPath “C:\Program Files\Microsoft SQL Server\110\Tools\PowerPivotTools\ConfigurationTool\Resources\PowerPivotFarm.wsp”  
+    Add-SPSolution -LiteralPath "C:\Program Files\Microsoft SQL Server\110\Tools\PowerPivotTools\ConfigurationTool\Resources\PowerPivotFarm.wsp"  
     ```  
   
      Il cmdlet restituisce il nome e l'ID della soluzione e Deployed=False. Nel passaggio successivo la soluzione verrà distribuita.  
@@ -65,10 +65,10 @@ Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthent
 3.  Eseguire il successivo cmdlet per distribuire la soluzione farm:  
   
     ```  
-    Install-SPSolution –Identity PowerPivotFarm.wsp –GACDeployment -Force  
+    Install-SPSolution -Identity PowerPivotFarm.wsp -GACDeployment -Force  
     ```  
   
-##  <a name="deployCA"></a> Passaggio 2: distribuire la soluzione applicazione Web PowerPivot in Amministrazione centrale  
+##  <a name="deployCA"></a> Passaggio 2: Distribuire la soluzione applicazione Web PowerPivot in Amministrazione centrale  
  Dopo la distribuzione della soluzione farm, è necessario distribuire la soluzione applicazione Web in Amministrazione centrale. Tramite questo passaggio viene aggiunto il dashboard di gestione [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] in Amministrazione centrale.  
   
 1.  Aprire una shell di gestione di SharePoint 2010 utilizzando l'opzione **Esegui come amministratore** .  
@@ -82,7 +82,7 @@ Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthent
 3.  Eseguire il seguente cmdlet per aggiungere la soluzione farm.  
   
     ```  
-    Add-SPSolution –LiteralPath “C:\Program Files\Microsoft SQL Server\110\Tools\PowerPivotTools\ConfigurationTool\Resources\PowerPivotWebApp.wsp”  
+    Add-SPSolution -LiteralPath "C:\Program Files\Microsoft SQL Server\110\Tools\PowerPivotTools\ConfigurationTool\Resources\PowerPivotWebApp.wsp"  
     ```  
   
      Il cmdlet restituisce il nome e l'ID della soluzione e Deployed=False. Nel passaggio successivo la soluzione verrà distribuita.  
@@ -95,7 +95,7 @@ Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthent
   
  Dopo la distribuzione della soluzione applicazione Web in Amministrazione centrale, sarà possibile utilizzare questo strumento per completare tutti i passaggi di configurazione rimanenti.  
   
-##  <a name="deployUI"></a> Passaggio 3: distribuire la soluzione applicazione Web PowerPivot ad altre applicazioni Web  
+##  <a name="deployUI"></a> Passaggio 3: Distribuire la soluzione applicazione Web PowerPivot ad altre applicazioni Web  
  Nell'attività precedente si è distribuito Powerpivotwebapp.wsp in Amministrazione centrale. In questa sezione si provvederà alla distribuzione di powerpivotwebapp.wsp in un'applicazione Web esistente che supporta l'accesso ai dati [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Se in seguito si aggiungono altre applicazioni Web, assicurarsi di ripetere questo passaggio anche per tali applicazioni.  
   
 1.  In Impostazioni sistema di Amministrazione centrale fare clic su **Gestisci soluzioni farm**.  
@@ -142,7 +142,7 @@ Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthent
   
  La soluzione applicazione Web viene inizialmente distribuita ad Amministrazione centrale, seguita dalle distribuzioni successive della soluzione a qualsiasi applicazione Web aggiuntiva che supporterà le richieste di dati [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Per distribuire la soluzione applicazione Web in Amministrazione centrale, è necessario usare lo strumento di configurazione [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] o il cmdlet PowerShell. Per tutte le altre applicazioni Web, è possibile distribuire la soluzione applicazione Web manualmente utilizzando Amministrazione centrale o PowerShell.  
   
-|Soluzione|Description|  
+|Soluzione|Descrizione|  
 |--------------|-----------------|  
 |Powerpivotfarm.wsp|Consente di aggiungere il file Microsoft.AnalysisServices.SharePoint.Integration.dll all'assembly globale.<br /><br /> Consente di aggiungere il file Microsoft.AnalysisServices.ChannelTransport.dll all'assembly globale.<br /><br /> Consente di installare funzionalità e file di risorse nonché di registrare i tipi di contenuto.<br /><br /> Aggiunge modelli di raccolta per Raccolta [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] e le raccolte di feed di dati.<br /><br /> Aggiunge pagine dell'applicazione per la configurazione dell'applicazione del servizio, il dashboard di gestione di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , l'aggiornamento dati e la raccolta [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .|  
 |powerpivotwebapp.wsp|Aggiunge i file di risorse Microsoft.AnalysisServices.SharePoint.Integration.dll alla cartella delle estensioni per il server Web nel server Web front-end.<br /><br /> Aggiunge il servizio Web [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] al server Web front-end.<br /><br /> Aggiunge la generazione di immagini di anteprima per Raccolta [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .|  

@@ -15,12 +15,12 @@ ms.assetid: d5789450-b668-4753-96c8-6789e955e7ed
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ab9f381706aaf5fe2f87051e1aada23ccf6dea16
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dc229e2bef69069ba1fc5f8cb3077e592d959a55
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47668349"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52521927"
 ---
 # <a name="explicit-data-type-conversion-function"></a>Funzione di conversione esplicita del tipo di dati
 Conversione tipo di dati esplicito è specificata in termini di definizioni dei tipi di dati SQL.  
@@ -29,7 +29,7 @@ Conversione tipo di dati esplicito è specificata in termini di definizioni dei 
   
  Il formato del **CONVERTIRE** funzione è:  
   
- **CONVERTIRE (** *value_exp*, *data_type * * *)**  
+ **CONVERTIRE (** *value_exp*, _data_type_**)**  
   
  La funzione restituisce il valore specificato da *value_exp* convertito all'entità specificata *data_type*, dove *data_type* è una delle parole chiave seguenti:  
   
@@ -57,7 +57,7 @@ Conversione tipo di dati esplicito è specificata in termini di definizioni dei 
   
  La sintassi ODBC per la funzione di conversione tipo di dati esplicito supporta l'impostazione del formato di conversione. Se specifica dei formati espliciti è supportata dall'origine dati sottostante, un driver necessario specificare un valore predefinito o implementare specifica di formato.  
   
- L'argomento *value_exp* può essere un nome di colonna, il risultato di un'altra funzione scalare o un valore numerico o stringa letterale. Esempio:  
+ L'argomento *value_exp* può essere un nome di colonna, il risultato di un'altra funzione scalare o un valore numerico o stringa letterale. Ad esempio:  
   
 ```  
 { fn CONVERT( { fn CURDATE() }, SQL_CHAR ) }  

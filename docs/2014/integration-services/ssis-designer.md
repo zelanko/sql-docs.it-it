@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Integration Services, SSIS Designer
@@ -18,12 +17,12 @@ ms.assetid: 006d68ea-1b5c-4c1e-8079-3910288e012c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 18f8ee2b794488a098e68ff54803b624c8fa4455
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c056a6a1ebf5958b980c21e3d36d6bc1291f8869
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48144721"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52792859"
 ---
 # <a name="ssis-designer"></a>Progettazione SSIS
   [!INCLUDE[ssIS](../includes/ssis-md.md)] - Progettazione SSIS è uno strumento grafico che è possibile usare per creare e gestire pacchetti di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . [!INCLUDE[ssIS](../includes/ssis-md.md)] - Progettazione SSIS è disponibile in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] nell'ambito di un progetto di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
@@ -51,7 +50,7 @@ ms.locfileid: "48144721"
 ## <a name="undo-and-redo"></a>Annullare e ripristinare  
  È possibile annullare e ripristinare fino a 20 azioni in Progettazione [!INCLUDE[ssIS](../includes/ssis-md.md)] . Per un pacchetto, la funzionalità di annullamento o ripristino è disponibile nelle schede **Flusso di controllo**, **Flusso di dati**, **Gestori eventi**e **Parametri** e nella finestra **Variabili** . Per un progetto, tale funzionalità è disponibile nella finestra **Parametri progetto** .  
   
- Non è possibile annullare/ripristinare le modifiche alla nuova **Casella degli strumenti SSIS**.  
+ Non è possibile annullare/ripristinare le modifiche apportate alla nuova **Casella degli strumenti SSIS**.  
   
  Quando si apportano modifiche a un componente utilizzando l'editor del componente, è possibile annullare o ripristinare le modifiche come set anziché annullare e ripristinare modifiche singole. Il set di modifiche viene visualizzato come un'azione singola nell'elenco a discesa di annullamento e ripristino.  
   

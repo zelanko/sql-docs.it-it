@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: table-view-index
 ms.topic: conceptual
 f1_keywords:
 - vdtsql.chm:65538
@@ -17,12 +16,12 @@ ms.assetid: 0c9ca80d-d79b-44c4-a21e-0fce39c398ec
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a07b83aa6c7556cc8404dab6ff5e26e75800e340
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 50e6886e9ef69842432a0759095f11335cfbb494
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48130631"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52797663"
 ---
 # <a name="modify-foreign-key-relationships"></a>Modifica di relazioni di chiave esterna
   È possibile modificare il lato chiave esterna di una relazione in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Cambiando la chiave esterna di una tabella vengono modificate le colonne correlate alle colonne della tabella della chiave primaria.  
@@ -33,7 +32,7 @@ ms.locfileid: "48130631"
   
      [Limitazioni e restrizioni](#Restrictions)  
   
-     [Security](#Security)  
+     [Sicurezza](#Security)  
   
 -   **Per modificare una chiave esterna tramite:**  
   
@@ -83,7 +82,7 @@ ms.locfileid: "48130631"
      Consente di verificare in base al vincolo tutti i dati esistenti nella tabella prima della creazione o della riabilitazione del vincolo.  
   
      **Categoria Specifica tabelle e colonne**  
-     Viene espansa per visualizzare le colonne che fungono da chiave esterna e chiave primaria o univoca nella relazione, nonché le tabelle in cui sono contenute. Per modificare o definire questi valori, fare clic sul pulsante con puntini di sospensione (**…**) a destra del campo della proprietà.  
+     Viene espansa per visualizzare le colonne che fungono da chiave esterna e chiave primaria o univoca nella relazione, nonché le tabelle in cui sono contenute. Per modificare o definire questi valori, fare clic sul pulsante con puntini di sospensione (**...**) a destra del campo della proprietà.  
   
      **Tabella di base chiavi esterne**  
      Visualizza la tabella in cui è contenuta la colonna che funge da chiave esterna nella relazione selezionata.  
@@ -100,7 +99,7 @@ ms.locfileid: "48130631"
      **Categoria Identità**  
      Viene espansa per visualizzare i campi delle proprietà **Nome** e **Descrizione**.  
   
-     **Nome**  
+     **Name**  
      Visualizza il nome della relazione. Quando viene creata una nuova relazione, le viene assegnato un nome predefinito sulla base della tabella presente nella finestra attiva di **Progettazione tabelle**. Il nome può essere modificato in qualunque momento.  
   
      **Descrizione**  
@@ -142,7 +141,7 @@ ms.locfileid: "48130631"
   
 4.  Scegliere **Salva***nome tabella* dal menu **File**.  
   
-##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
  **Per modificare una chiave esterna**  
   
  Per modificare un vincolo FOREIGN KEY utilizzando Transact-SQL, è innanzitutto necessario eliminare il vincolo FOREIGN KEY esistente, quindi ricrearlo con la nuova definizione. Per ulteriori informazioni, vedere [Delete Foreign Key Relationships](delete-foreign-key-relationships.md) e [Create Foreign Key Relationships](create-foreign-key-relationships.md).  

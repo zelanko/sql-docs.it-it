@@ -17,17 +17,17 @@ ms.assetid: a3c32e4b-8fe7-4a33-ae39-ae664001f315
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7827a42a58e11847cdf9c3a63f4a7424eb5cfc5c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 47e1250a92b78aefdc1611fd88e0ee9b0f772ad0
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47654967"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52539897"
 ---
 # <a name="multiple-results"></a>Risultati multipli
 Oggetto *risultato* è un elemento restituito dall'origine dati dopo che viene eseguita un'istruzione. ODBC include due tipi di risultati: set di risultati e conteggio delle righe. *Conteggio delle righe* sono il numero di righe interessate da un aggiornamento, eliminazione o istruzione insert. Batch, descritto nella [batch di istruzioni SQL](../../../odbc/reference/develop-app/batches-of-sql-statements.md), è possibile generare più risultati.  
   
- La tabella seguente elenca i **SQLGetInfo** opzioni un'applicazione utilizza per determinare se un'origine dati restituisce più risultati per ogni tipo di batch. In particolare, un'origine dati può restituire un conteggio delle righe solo per l'intero batch di istruzioni o i conteggi delle righe singole per ogni istruzione nel batch. Nel caso di un'istruzione con-generazione di set di risultati eseguita con una matrice di parametri, l'origine dati può restituire un singolo set di risultati per tutti i set di parametri o singoli set di risultati per ogni set di parametri.  
+ La tabella seguente elenca i **SQLGetInfo** opzioni un'applicazione utilizza per determinare se un'origine dati restituisce più risultati per ogni tipo di batch. In particolare, un'origine dati può restituire un conteggio delle righe solo per l'intero batch di istruzioni o i conteggi delle righe singole per ogni istruzione nel batch. Nel caso di un'istruzione di generazione di set di risultati eseguita con una matrice di parametri, l'origine dati può restituire un singolo set di risultati per tutti i set di parametri o singoli set di risultati per ogni set di parametri.  
   
 |Tipo batch|Conteggio delle righe|Set di risultati|  
 |----------------|----------------|-----------------|  
@@ -35,9 +35,9 @@ Oggetto *risultato* è un elemento restituito dall'origine dati dopo che viene e
 |Routine|SQL_BATCH_ROW_COUNT [a]|-[b].|  
 |Matrici di parametri|SQL_PARAM_ARRAYS_ROW_COUNTS|SQL_PARAM_ARRAYS_SELECTS|  
   
- [a] riga potrebbero essere più supportate: generazione di conteggio delle istruzioni in un batch, ma la restituzione dei conteggi delle righe non è supportato. L'opzione SQL_BATCH_SUPPORT **SQLGetInfo** indica se sono consentite istruzioni: generazione di conteggio delle righe in batch, l'opzione SQL_BATCH_ROW_COUNTS indica se i conteggi delle righe vengono restituite all'applicazione.  
+ [a] riga numero di generazione di istruzioni in un batch potrebbero essere più supportate, ma la restituzione dei conteggi delle righe non è supportato. L'opzione SQL_BATCH_SUPPORT **SQLGetInfo** indica se sono consentite istruzioni di generazione di conteggio delle righe in batch, l'opzione SQL_BATCH_ROW_COUNTS indica se i conteggi delle righe vengono restituite all'applicazione.  
   
- [b] batch esplicite e alle procedure sempre restituiscono più set di risultati quando si includono più istruzioni di creazione di set di risultati.  
+ [b] batch esplicite e alle procedure sempre restituiscono più set di risultati quando si includono più istruzioni che generano set di risultati.  
   
 > [!NOTE]  
 >  L'opzione SQL_MULT_RESULT_SETS introdotta in ODBC 1.0 fornisce informazioni generali solo sul fatto che possono essere restituiti più set di risultati. In particolare, è impostato su "Y" se vengono restituiti i bit SQL_BS_SELECT_EXPLICIT o SQL_BS_SELECT_PROC per SQL_BATCH_SUPPORT o se viene restituito SQL_PAS_BATCH per SQL_PARAM_ARRAYS_SELECT.  

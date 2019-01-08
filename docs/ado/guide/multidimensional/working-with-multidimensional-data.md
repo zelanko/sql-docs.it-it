@@ -13,12 +13,12 @@ ms.assetid: 84387746-aa3e-44fd-ad6c-a8214a6966dc
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cb1f29a3037cafdddc14973f77d7bb3d8c52f296
-ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
+ms.openlocfilehash: a284254c058eae0362fe23860e1b406a97f0bf49
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51350272"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507252"
 ---
 # <a name="working-with-multidimensional-data"></a>Utilizzo dei dati multidimensionali
 Oggetto *cellset* è il risultato di una query sui dati multidimensionali. È costituito da una raccolta di assi, in genere non più di quattro assi e in genere solo due o tre. Un' *asse* è una raccolta di membri di uno o più dimensioni, che consente di individuare o filtrare i valori specifici in un cubo.  
@@ -33,13 +33,13 @@ Oggetto *cellset* è il risultato di una query sui dati multidimensionali. È co
   
 -   Venditore  
   
--   Geography (gerarchia naturale), ovvero continenti, paesi, stati e così via  
+-   Geography (gerarchia naturale) - continenti, paesi, stati e così via  
   
--   Trimestri, ovvero Giorni di trimestri, mesi,  
+-   Trimestri-trimestri, mesi, giorni  
   
 -   Years  
   
--   Le misure: Vendite, valori, VenditePreviste  
+-   Misure: vendite, valori, VenditePreviste  
   
 -   Products  
   
@@ -50,19 +50,19 @@ Oggetto *cellset* è il risultato di una query sui dati multidimensionali. È co
   
  Come indicato di seguito sono riportate le caratteristiche di questo set di celle:  
   
--   Le dimensioni dell'asse: trimestri, venditore, Geography  
+-   Dimensioni dell'asse: Trimestri, venditore, Geography  
   
--   Filtrare le dimensioni: misure, anni, i prodotti  
+-   Dimensioni di filtro: Le misure, anni, i prodotti  
   
--   Due assi: colonna (x o asse 0) e riga (y, o asse 1)  
+-   Due assi: COLONNA (x o asse 0) e riga (y, o asse 1)  
   
 -   asse x: due dimensioni nidificate, venditore e area geografica  
   
--   asse y: dimensione trimestri  
+-   asse y: Dimensione trimestri  
   
- L'asse x dispone di due dimensioni nidificate: venditore e area geografica. Da geografia, sono selezionati quattro membri: Seattle, Boston, Stati Uniti-meridionale e Giappone. Due membri vengono selezionati dal venditore: Nash e San Valentino. Ciò produce un totale di otto posizioni in questo asse (4 * 8 = 2).  
+ L'asse x dispone di due dimensioni annidate: Venditore e area geografica. Da geografia, sono selezionati quattro membri: Seattle, Boston, Stati Uniti-meridionale e Giappone. Dall'agente sono selezionati due membri: San Valentino e Nash. Ciò produce un totale di otto posizioni in questo asse (4 * 8 = 2).  
   
- Ogni coordinate è rappresentata come una posizione con due membri: uno dalla dimensione venditore e un altro della dimensione Geografia:  
+ Ogni coordinata è rappresentato come una posizione con due membri: uno dalla dimensione di venditore e l'altro della dimensione Geografia:  
   
 ```console
 (Valentine, Seattle), (Valentine, Boston), (Valentine, USA_North),  
@@ -76,7 +76,7 @@ Oggetto *cellset* è il risultato di una query sui dati multidimensionali. È co
 Jan, Feb, Mar, Qtr2, Qtr3, Oct, Nov, Dec  
 ```  
   
- Set di celle, le celle, assi e le posizioni sono tutti rappresentate in ADO MD dagli oggetti corrispondenti: [Cellset](../../../ado/reference/ado-md-api/cellset-object-ado-md.md), [cella](../../../ado/reference/ado-md-api/cell-object-ado-md.md), [asse](../../../ado/reference/ado-md-api/axis-object-ado-md.md), e [posizione](../../../ado/reference/ado-md-api/position-object-ado-md.md).  
+ Set di celle, le celle, assi e le posizioni sono tutti rappresentate in ADO MD dagli oggetti corrispondenti: [Set di celle](../../../ado/reference/ado-md-api/cellset-object-ado-md.md), [cella](../../../ado/reference/ado-md-api/cell-object-ado-md.md), [asse](../../../ado/reference/ado-md-api/axis-object-ado-md.md), e [posizione](../../../ado/reference/ado-md-api/position-object-ado-md.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Modello a oggetti ADO MD](../../../ado/reference/ado-md-api/ado-md-object-model.md)   

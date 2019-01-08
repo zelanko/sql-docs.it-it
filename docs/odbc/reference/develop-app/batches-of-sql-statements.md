@@ -15,12 +15,12 @@ ms.assetid: 766488cc-450c-434c-9c88-467f6c57e17c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fb6d91fef3e12a26d7082defa5b579e00dbae4ba
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 09805ab73af76bc55890222fc1ffd0e1857d0f33
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47775105"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52531239"
 ---
 # <a name="batches-of-sql-statements"></a>Batch di istruzioni SQL
 Un batch di istruzioni SQL è un gruppo di due o più istruzioni SQL o una singola istruzione SQL che ha lo stesso effetto di un gruppo di due o più istruzioni SQL. In alcune implementazioni, viene eseguita l'istruzione dell'intero batch prima che i risultati siano disponibili. Ciò è spesso più efficiente rispetto all'invio di istruzioni separatamente, perché il traffico di rete possa spesso essere ridotto e l'origine dati in alcuni casi può ottimizzare l'esecuzione di un batch di istruzioni SQL. Nelle altre implementazioni di chiamata **SQLMoreResults** attiva l'esecuzione dell'istruzione successiva nel batch. ODBC supporta i seguenti tipi di batch:  
@@ -40,7 +40,7 @@ Un batch di istruzioni SQL è un gruppo di due o più istruzioni SQL o una singo
        VALUES (2002, 4, 412, 500)  
     ```  
   
--   **Le procedure** se una procedura contiene più di un'istruzione SQL, è considerato un batch di istruzioni SQL. Ad esempio, l'istruzione specifici per SQL Server seguente crea una routine che restituisce un set di risultati contenente informazioni su un cliente e un elenco di tutti gli ordini di vendita open per quel cliente di set di risultati:  
+-   **Le procedure** se una procedura contiene più di un'istruzione SQL, è considerato un batch di istruzioni SQL. Ad esempio, l'istruzione specifici di SQL Server seguente crea una routine che restituisce un set di risultati contenente informazioni su un cliente e un elenco di tutti gli ordini di vendita open per quel cliente di set di risultati:  
   
     ```  
     CREATE PROCEDURE GetCustInfo (@CustomerID INT) AS  

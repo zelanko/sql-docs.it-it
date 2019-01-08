@@ -11,12 +11,12 @@ ms.assetid: 7c888c95-8986-461e-9f11-2395044b9d97
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 94d1ea0bf396b8d839463fa648dffc3aacee9ab5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d212cf20e8701f9fc9af5266308f81873e6fc4c6
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48080471"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52541247"
 ---
 # <a name="exploring-and-cleaning-data"></a>Esplorazione e pulizia dei dati
   La preparazione dei dati non è una semplice pulizia dei dati. Si tenga presente che la modalità con cui i dati vengono preparati influisce anche su come i risultati alla fine vengono interpretati. La preparazione dei dati include le attività seguenti:  
@@ -69,7 +69,7 @@ ms.locfileid: "48080471"
   
 -   Suddividere i dati creando gruppi per rappresentare intervalli di numeri.  
   
-     Potrebbe ad esempio, si desidera sostituire, ad esempio una colonna Income dei numeri con etichette **Income – Moderate** e **reddito elevato**.  
+     Potrebbe ad esempio, si desidera sostituire, ad esempio una colonna Income dei numeri con etichette **reddito - moderato** e **reddito - alto**.  
   
 -   Comprimere i valori discreti in categorie.  
   

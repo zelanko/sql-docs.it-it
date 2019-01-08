@@ -17,12 +17,12 @@ ms.assetid: f229c3ef-f2ca-448f-98f1-b8df350b9992
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 7c0672fedcf39a2787f7229a8e359d6042d99088
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 276e99716b310afd2fbcd9b5bf2033e4b4738165
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48166741"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53371113"
 ---
 # <a name="the-role-of-soap-in-reporting-services"></a>Ruolo di SOAP in Reporting Services
   Il servizio Web ReportServer utilizza la messaggistica SOAP (Simple Object Access Protocol) per inviare comandi basati su testo in una rete. Questi comandi sono in formato di testo XML e vengono inviati nel World Wide Web utilizzando HTTP. Grazie all'utilizzo di SOAP come protocollo di comunicazione, il servizio Web ReportServer consente alle applicazioni e ai componenti di scambiare dati con il server di report utilizzando un'infrastruttura aperta molto diffusa. Lo standard SOAP è definito nel sito www.w3.org/TR/SOAP (informazioni in lingua inglese).  
@@ -36,7 +36,7 @@ ms.locfileid: "48166741"
 ```  
 <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">  
     <soap:Body>  
-        <DeleteItem xmlns="http://www.microsoft.com/sql/ReportingServer">  
+        <DeleteItem xmlns="https://www.microsoft.com/sql/ReportingServer">  
             <item>/Samples/Report1</item>  
         </DeleteItem>  
     </soap:Body>  
@@ -54,7 +54,7 @@ public void DeleteItem(string item);
 ```  
 <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">  
     <soap:Body>  
-        <DeleteItemResponse xmlns="http://www.microsoft.com/sql/ReportingServer" />  
+        <DeleteItemResponse xmlns="https://www.microsoft.com/sql/ReportingServer" />  
     </soap:Body>  
 </soap:Envelope>  
 ```  

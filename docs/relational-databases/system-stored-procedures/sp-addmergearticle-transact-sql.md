@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_addmergearticle
@@ -17,12 +16,12 @@ ms.assetid: 0df654ea-24e2-4c61-a75a-ecaa7a140a6c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f64a1719ea74448c6c4cc7402f2e6b1afd2be185
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f7894d5f7f3d3c686c8984c0386f1025f00c2890
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47653319"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52770143"
 ---
 # <a name="spaddmergearticle-transact-sql"></a>sp_addmergearticle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -75,19 +74,19 @@ sp_addmergearticle [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@publication=** ] **'***pubblicazione***'**  
+ [  **@publication=** ] **'**_pubblicazione_**'**  
  Nome della pubblicazione in cui è contenuto l'articolo. *pubblicazione* viene **sysname**, non prevede alcun valore predefinito.  
   
- [  **@article=** ] **'***articolo***'**  
+ [  **@article=** ] **'**_articolo_**'**  
  Nome dell'articolo. Deve essere un nome univoco all'interno della pubblicazione. *articolo* viene **sysname**, non prevede alcun valore predefinito. *articolo* deve essere nel computer locale che esegue [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]e devono essere conformi alle regole per gli identificatori.  
   
- [  **@source_object=** ] **'***source_object***'**  
+ [  **@source_object=** ] **'**_source_object_**'**  
  Oggetto di database da pubblicare. *source_object* viene **sysname**, non prevede alcun valore predefinito. Per altre informazioni sui tipi di oggetti che possono essere pubblicati tramite la replica di tipo merge, vedere [pubblicare dati e oggetti di Database](../../relational-databases/replication/publish/publish-data-and-database-objects.md).  
   
- [  **@type=** ] **'***tipo***'**  
+ [  **@type=** ] **'**_tipo_**'**  
  Tipo di articolo. *tipo di* viene **sysname**, il valore predefinito è **tabella**, e può essere uno dei valori seguenti.  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |**tabella** (impostazione predefinita)|Tabella con schema e dati. La tabella viene monitorata per determinare i dati da replicare.|  
 |**Func schema solo**|Funzione con solo schema.|  
@@ -96,29 +95,29 @@ sp_addmergearticle [ @publication = ] 'publication'
 |**solo schema sinonimo**|Sinonimo con solo schema.|  
 |**solo schema della vista**|Vista con solo schema.|  
   
- [  **@description=** ] **'***descrizione***'**  
+ [  **@description=** ] **'**_descrizione_**'**  
  Descrizione dell'articolo. *Descrizione* viene **nvarchar(255**, con un valore predefinito è NULL.  
   
- [  **@column_tracking=** ] **'***column_tracking***'**  
+ [  **@column_tracking=** ] **'**_column_tracking_**'**  
  Impostazione per il rilevamento a livello di colonna. *column_tracking* viene **nvarchar(10)**, con un valore predefinito è FALSE. **true**attivare il controllo delle colonne. **false** disattiva e mantiene il rilevamento dei conflitti a livello di riga. Se la tabella è già pubblicata in altre pubblicazioni di tipo merge, è necessario utilizzare lo stesso valore di rilevamento a livello di colonna utilizzato dagli articoli esistenti basati su questa tabella. Questo parametro è disponibile solo per gli articoli di tabelle.  
   
 > [!NOTE]  
 >  Se si utilizza il rilevamento a livello di riga per il rilevamento dei conflitti (impostazione predefinita), la tabella di base può includere fino a 1.024 colonne, che devono tuttavia essere filtrate dall'articolo in modo da pubblicare un massimo di 246 colonne. Se viene utilizzato il rilevamento a livello di colonna, nella tabella di base possono essere incluse al massimo 246 colonne.  
   
- [  **@status=** ] **'***stato***'**  
+ [  **@status=** ] **'**_stato_**'**  
  Stato dell'articolo. *lo stato* viene **nvarchar(10)**, il valore predefinito è **unsynced**. Se **active**, viene eseguito lo script di elaborazione iniziale per pubblicare la tabella. Se **unsynced**, viene eseguito lo script di elaborazione iniziale per pubblicare la tabella alla successiva esecuzione dell'agente Snapshot.  
   
- [  **@pre_creation_cmd=** ] **'***pre_creation_cmd***'**  
+ [  **@pre_creation_cmd=** ] **'**_pre_creation_cmd_**'**  
  Azione eseguita dal sistema se, quando si applica lo snapshot, la tabella esiste già nel Sottoscrittore. *pre_creation_cmd* viene **nvarchar(10)**, e può essere uno dei valori seguenti.  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |**Nessuno**|Se la tabella esiste già nel Sottoscrittore, non viene eseguita alcuna azione.|  
 |**delete**|Esegue un'operazione di eliminazione in base alla clausola WHERE del filtro di subset.|  
 |**DROP** (impostazione predefinita)|Elimina la tabella prima di ricrearla. Necessario per supportare [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssEW](../../includes/ssew-md.md)] sottoscrittori.|  
 |**truncate**|Tronca la tabella di destinazione.|  
   
- [  **@creation_script=** ] **'***creation_script***'**  
+ [  **@creation_script=** ] **'**_creation_script_**'**  
  Percorso e nome di uno script facoltativo dello schema dell'articolo usato per creare l'articolo nel database di sottoscrizione. *creation_script* viene **nvarchar(255**, con un valore predefinito è NULL.  
   
 > [!NOTE]  
@@ -127,7 +126,7 @@ sp_addmergearticle [ @publication = ] 'publication'
  [  **@schema_option=** ] *schema_option*  
  Mappa di bit dell'opzione di generazione dello schema per l'articolo specificato. *schema_option* viene **binari (8)** e può essere il [| (OR bit per bit) ](../../t-sql/language-elements/bitwise-or-transact-sql.md) prodotto di uno o più dei valori seguenti.  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |**0x00**|Disabilita la creazione di script dell'agente Snapshot e utilizza lo script di creazione preliminare fornito lo schema definito in *creation_script*.|  
 |**0x01**|Genera le istruzioni per la creazione di oggetti (CREATE TABLE, CREATE PROCEDURE e così via). Questo è il valore predefinito per gli articoli di stored procedure.|  
@@ -174,32 +173,32 @@ sp_addmergearticle [ @publication = ] 'publication'
 > [!NOTE]  
 >  Il *schema_option* parametro interessa solo le opzioni di replica per lo snapshot iniziale. Dopo aver generato dall'agente Snapshot e applicato al sottoscrittore lo schema iniziale, la replica delle modifiche dello schema di pubblicazione al sottoscrittore si verificano in base alle regole di replica modifiche dello schema e il *replicate_ddl* impostazione del parametro specificato nella [sp_addmergepublication](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md). Per altre informazioni, vedere [Apportare modifiche allo schema nei database di pubblicazione](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md).  
   
- [  **@subset_filterclause=** ] **'***subset_filterclause***'**  
+ [  **@subset_filterclause=** ] **'**_subset_filterclause_**'**  
  Clausola WHERE che specifica il filtraggio orizzontale di un articolo di tabella senza la parola WHERE. *subset_filterclause* presenta **nvarchar(1000)**, con un valore predefinito di una stringa vuota.  
   
 > [!IMPORTANT]  
 >  Per motivi relativi alle prestazioni, è consigliabile evitare di applicare funzioni ai nomi di colonna nelle clausole di filtro di riga con parametri, come `LEFT([MyColumn]) = SUSER_SNAME()`. Se si usa [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) in una clausola di filtro e si sostituisce il valore di HOST_NAME, potrebbe essere necessario convertire i tipi di dati tramite [CONVERTIRE](../../t-sql/functions/cast-and-convert-transact-sql.md). Per altre informazioni sulle procedure consigliate per questo caso, vedere la sezione "Eseguire l'override del valore di HOST_NAME ()" nella [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
- [  **@article_resolver=** ] **'***article_resolver***'**  
+ [  **@article_resolver=** ] **'**_article_resolver_**'**  
  Sistema di risoluzione basato su COM utilizzato per risolvere i conflitti nell'articolo di tabella oppure assembly .NET Framework richiamato per eseguire una logica di business personalizzata sull'articolo di tabella. *article_resolver* viene **nvarchar (255)**, con un valore predefinito è NULL. I valori disponibili per questi parametri sono elencati nell'argomento relativo ai sistemi di risoluzione personalizzati [!INCLUDE[msCoName](../../includes/msconame-md.md)]. Se il valore specificato non corrisponde a uno dei sistemi di risoluzione [!INCLUDE[msCoName](../../includes/msconame-md.md)], in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene utilizzato il sistema di risoluzione specificato anziché quello di sistema. Uso **sp_enumcustomresolvers** per enumerare l'elenco dei sistemi di risoluzione personalizzati disponibili. Per altre informazioni, vedere [eseguire la logica di Business durante la sincronizzazione Merge](../../relational-databases/replication/merge/execute-business-logic-during-merge-synchronization.md) e [Advanced Merge Replication Conflict Detection and risoluzione](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md).  
   
- [  **@resolver_info=** ] **'***resolver_info***'**  
+ [  **@resolver_info=** ] **'**_resolver_info_**'**  
  Specifica le informazioni aggiuntive necessarie per un sistema di risoluzione personalizzato. Alcuni sistemi di risoluzione [!INCLUDE[msCoName](../../includes/msconame-md.md)] richiedono una colonna come input. *resolver_info* viene **nvarchar(255**, con un valore predefinito è NULL. Per altre informazioni, vedere [Sistemi di risoluzione dei conflitti basati su Microsoft COM](../../relational-databases/replication/merge/advanced-merge-replication-conflict-com-based-resolvers.md).  
   
- [  **@source_owner=** ] **'***source_owner***'**  
+ [  **@source_owner=** ] **'**_source_owner_**'**  
  È il nome del proprietario della *source_object*. *source_owner* viene **sysname**, con un valore predefinito è NULL. Se il valore è NULL, l'utente corrente verrà considerato il proprietario.  
   
- [  **@destination_owner=** ] **'***destination_owner***'**  
+ [  **@destination_owner=** ] **'**_destination_owner_**'**  
  Proprietario dell'oggetto nel database di sottoscrizione, se diverso da 'dbo'. *destination_owner* viene **sysname**, con un valore predefinito è NULL. Se NULL, 'dbo' verrà considerato il proprietario.  
   
- [  **@vertical_partition=** ] **'***column_filter***'**  
+ [  **@vertical_partition=** ] **'**_column_filter_**'**  
  Abilita e disabilita l'applicazione di filtri alle colonne in un articolo di tabella. *vertical_partition* viene **nvarchar(5** con valore predefinito è FALSE.  
   
  **false** indica non è applicato alcun filtro verticale e pertanto pubblicate tutte le colonne.  
   
  **true** Cancella tutte le colonne ad eccezione della chiave primaria dichiarata e delle colonne ROWGUID. Le colonne vengono aggiunte utilizzando **sp_mergearticlecolumn**.  
   
- [  **@auto_identity_range=** ] **'***automatic_identity_range***'**  
+ [  **@auto_identity_range=** ] **'**_automatic_identity_range_**'**  
  Abilita e disabilita la gestione automatica degli intervalli di valori Identity per l'articolo di tabella specificato di una pubblicazione al momento della creazione. *auto_identity_range* viene **nvarchar(5**, con un valore predefinito è FALSE. **true** intervallo di valori identity automatico consente la gestione, mentre **false** lo disabilita.  
   
 > [!NOTE]  
@@ -224,22 +223,22 @@ sp_addmergearticle [ @publication = ] 'publication'
   
  **1** specifica che la firma verrà verificata per stabilire se proviene da una fonte attendibile.  
   
- [  **@destination_object=** ] **'***destination_object***'**  
+ [  **@destination_object=** ] **'**_destination_object_**'**  
  Nome dell'oggetto nel database di sottoscrizione. *destination_object* viene **sysname**, con un valore predefinito di quali sono le novità **@source_object**. È possibile specificare questo parametro solo se l'articolo include solo lo schema, come nel caso di stored procedure, viste e funzioni definite dall'utente. Se l'articolo specificato è un articolo di tabella, il valore in *@source_object* sostituisce il valore nel *destination_object*.  
   
- [  **@allow_interactive_resolver=** ] **'***allow_interactive_resolver***'**  
+ [  **@allow_interactive_resolver=** ] **'**_allow_interactive_resolver_**'**  
  Abilita o disabilita l'utilizzo del sistema di risoluzione interattivo in un articolo. *allow_interactive_resolver* viene **nvarchar(5**, con un valore predefinito è FALSE. **true** consente l'uso di risoluzione interattivo per l'articolo; **false** lo disabilita.  
   
 > [!NOTE]  
 >  Il sistema di risoluzione interattivo non è supportato dai Sottoscrittori [!INCLUDE[ssEW](../../includes/ssew-md.md)].  
   
- [  **@fast_multicol_updateproc=** ] **'***fast_multicol_updateproc***'**  
+ [  **@fast_multicol_updateproc=** ] **'**_fast_multicol_updateproc_**'**  
  Questo parametro è deprecato ed è ancora disponibile per compatibilità con gli script di versioni precedenti.  
   
  [  **@check_permissions=** ] *check_permissions*  
  Mappa di bit delle autorizzazioni a livello di tabella verificate quando l'agente di merge applica le modifiche nel server di pubblicazione. Se l'account di accesso o l'account utente del server di pubblicazione utilizzato per il processo di merge non dispone delle autorizzazioni corrette per le tabelle, le modifiche non valide vengono registrate come conflitti. *check_permissions* viene **int**e può essere il [| (OR bit per bit) ](../../t-sql/language-elements/bitwise-or-transact-sql.md) prodotto di uno o più dei valori seguenti.  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |**0x00** (impostazione predefinita)|Le autorizzazioni non vengono controllate.|  
 |**0x10**|Le autorizzazioni vengono controllate nel server di pubblicazione prima di consentire il caricamento delle operazioni di inserimento eseguite nel Sottoscrittore.|  
@@ -253,7 +252,7 @@ sp_addmergearticle [ @publication = ] 'publication'
   
  **1** specifica che l'aggiunta di un articolo può invalidare lo snapshot non è valido e se sono disponibili sottoscrizioni che richiedono un nuovo snapshot, consente l'autorizzazione per lo snapshot esistente deve essere contrassegnato come obsoleto e di generarne uno nuovo. *force_invalidate_snapshot* è impostata su **1** quando si aggiunge un articolo a una pubblicazione con uno snapshot esistente.  
   
- [  **@published_in_tran_pub=** ] **'***published_in_tran_pub***'**  
+ [  **@published_in_tran_pub=** ] **'**_published_in_tran_pub_**'**  
  Indica che un articolo in una pubblicazione di tipo merge viene pubblicato anche in una pubblicazione transazionale. *published_in_tran_pub* viene **nvarchar(5**, con un valore predefinito è FALSE. **true** specifica che l'articolo è pubblicato anche in una pubblicazione transazionale.  
   
  [  **@force_reinit_subscription=** ] *force_reinit_subscription*  
@@ -263,7 +262,7 @@ sp_addmergearticle [ @publication = ] 'publication'
   
  **1** indica che le modifiche apportate all'articolo di merge causano reinizializzazione delle sottoscrizioni esistenti e autorizza la reinizializzazione della sottoscrizione. *force_reinit_subscription* è impostata su **1** quando *subset_filterclause* specifica un filtro di riga con parametri.  
   
- [  **@logical_record_level_conflict_detection=** ] **'***logical_record_level_conflict_detection***'**  
+ [  **@logical_record_level_conflict_detection=** ] **'**_logical_record_level_conflict_detection_**'**  
  Specifica il livello di rilevamento dei conflitti per un articolo membro di un record logico. *logical_record_level_conflict_detection* viene **nvarchar(5**, con un valore predefinito è FALSE.  
   
  **true** specifica che verrà rilevato un conflitto se vengono apportate modifiche in qualsiasi punto del record logico.  
@@ -273,7 +272,7 @@ sp_addmergearticle [ @publication = ] 'publication'
 > [!NOTE]  
 >  Poiché i record logici non sono supportati da [!INCLUDE[ssEW](../../includes/ssew-md.md)] sottoscrittori, è necessario specificare un valore di **false** per *logical_record_level_conflict_detection* per supportare tali sottoscrittori.  
   
- [  **@logical_record_level_conflict_resolution=** ] **'***logical_record_level_conflict_resolution***'**  
+ [  **@logical_record_level_conflict_resolution=** ] **'**_logical_record_level_conflict_resolution_**'**  
  Specifica il livello di risoluzione dei conflitti per un articolo membro di un record logico. *logical_record_level_conflict_resolution* viene **nvarchar(5**, con un valore predefinito è FALSE.  
   
  **true** specifica che l'intero record logico prevalente sovrascrive il record logico perdente.  
@@ -286,7 +285,7 @@ sp_addmergearticle [ @publication = ] 'publication'
  [  **@partition_options=** ] *partition_options*  
  Definisce il modo in cui vengono partizionati i dati nell'articolo. Ciò consente di ottimizzare le prestazioni se tutte le righe appartengono a un'unica partizione o a un'unica sottoscrizione. *partition_options* viene **tinyint**, e può essere uno dei valori seguenti.  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |**0** (predefinito)|Il filtro applicato all'articolo è statico oppure non restituisce un subset di dati univoco per ogni partizione, ovvero si creano partizioni sovrapposte.|  
 |**1**|Le partizioni sono sovrapposte e gli aggiornamenti DML (Data Manipulation Language) eseguiti nel Sottoscrittore non possono modificare la partizione a cui appartiene una riga.|  
@@ -302,7 +301,7 @@ sp_addmergearticle [ @publication = ] 'publication'
  [  **@subscriber_upload_options=** ] *subscriber_upload_options*  
  Specifica le restrizioni per gli aggiornamenti eseguiti in un Sottoscrittore con una sottoscrizione client. Per altre informazioni, vedere [Ottimizzare le prestazioni della replica di tipo merge con gli articoli di solo download](../../relational-databases/replication/merge/optimize-merge-replication-performance-with-download-only-articles.md). *subscriber_upload_options* viene **tinyint**, e può essere uno dei valori seguenti.  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |**0** (predefinito)|Nessuna restrizione. Le modifiche eseguite nel Sottoscrittore vengono caricate nel server di pubblicazione.|  
 |**1**|Sono consentite modifiche in un Sottoscrittore, ma tali modifiche non vengono caricate nel server di pubblicazione.|  
@@ -316,7 +315,7 @@ sp_addmergearticle [ @publication = ] 'publication'
  [  **@identityrangemanagementoption=** ] *identityrangemanagementoption*  
  Specifica la modalità di gestione degli intervalli di valori Identity per l'articolo. *identityrangemanagementoption* viene **nvarchar(10)**, e può essere uno dei valori seguenti.  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |**Nessuno**|Disabilita la gestione degli intervalli di valori Identity.|  
 |**Manuale**|Contrassegna la colonna Identity con NOT FOR REPLICATION per consentire la gestione manuale degli intervalli di valori Identity.|  
@@ -325,7 +324,7 @@ sp_addmergearticle [ @publication = ] 'publication'
   
  Per garantire la compatibilità con le versioni precedenti, quando il valore di *identityrangemanagementoption* è NULL, il valore di *auto_identity_range* sia selezionata. Tuttavia, quando il valore di *identityrangemanagementoption* non è NULL, il valore di *auto_identity_range* viene ignorato. Per altre informazioni, vedere [Replicare colonne Identity](../../relational-databases/replication/publish/replicate-identity-columns.md).  
   
- [  **@delete_tracking=** ] **'***delete_tracking***'**  
+ [  **@delete_tracking=** ] **'**_delete_tracking_**'**  
  Indica se viene eseguita la replica delle eliminazioni. *delete_tracking* viene **nvarchar(5**, con un valore predefinito è TRUE. **false** indica che le eliminazioni non vengono replicate, e **true** indica che le eliminazioni vengono replicate, situazione corrispondente al normale funzionamento della replica di tipo merge. Quando *delete_tracking* è impostata su **false**, le righe eliminate nel Sottoscrittore devono essere rimosse manualmente nel server di pubblicazione e le righe eliminate nel server di pubblicazione devono essere rimosse manualmente nel Sottoscrittore.  
   
 > [!IMPORTANT]  
@@ -334,13 +333,13 @@ sp_addmergearticle [ @publication = ] 'publication'
 > [!NOTE]  
 >  *delete_tracking* opzioni non possono essere impostate usando il **Creazione guidata nuova pubblicazione** o il **le proprietà della pubblicazione** nella finestra di dialogo.  
   
- [  **@compensate_for_errors=** ] **'***compensate_for_errors***'**  
+ [  **@compensate_for_errors=** ] **'**_compensate_for_errors_**'**  
  Specifica se devono essere eseguite azioni di compensazione quando vengono rilevati errori durante la sincronizzazione. *compensate_for_errors ho*s **nvarchar(5**, con un valore predefinito è FALSE. Se impostato su **true**, le modifiche che non può essere applicato a un sottoscrittore o server di pubblicazione durante la sincronizzazione vengono sempre causare azioni di compensazione per annullare la modifica; tuttavia, una configurata in modo non corretto sottoscrittore che genera un errore può provocare modifiche in altri sottoscrittori e server di pubblicazione per essere annullata. **false** Disabilita queste azioni di compensazione, tuttavia, gli errori vengono comunque registrate con compensazione e le successive operazioni di unione continua a tentare di applicare le modifiche fino a quando non è riuscita.  
   
 > [!IMPORTANT]  
 >  Anche se i dati nelle righe interessate potrebbero sembrare non convergenti, non appena vengono risolti gli eventuali errori generati le modifiche potranno essere applicate e si otterrà la convergenza dei dati. Se la tabella di origine per un articolo è già pubblicata in un'altra pubblicazione, il valore della *compensate_for_errors* deve coincidere per entrambi gli articoli.  
   
- [  **@stream_blob_columns=** ] **'***stream_blob_columns***'**  
+ [  **@stream_blob_columns=** ] **'**_stream_blob_columns_**'**  
  Specifica se viene utilizzata l'ottimizzazione del flusso di dati per la replica di colonne BLOB (Binary Large Object). *stream_blob_columns* viene **nvarchar(5**, con un valore predefinito è FALSE. **true** significa che l'ottimizzazione verrà tentata. *stream_blob_columns* è impostato su true se FILESTREAM è abilitato. In questo modo, la replica dei dati FILESTREAM può essere eseguita in maniera ottimale e si riduce l'utilizzo della memoria. Per imporre gli articoli di tabella FILESTREAM non utilizzino flussi blob, usare **sp_changemergearticle** per impostare *stream_blob_columns* su false.  
   
 > [!IMPORTANT]  

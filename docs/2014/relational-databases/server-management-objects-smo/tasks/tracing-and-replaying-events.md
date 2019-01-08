@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: ''
 ms.topic: reference
 topic_type:
 - apiref
@@ -19,12 +17,12 @@ ms.assetid: f41b3f85-2f6c-4c3e-9776-8c73d2cc7a53
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a24c1da04128c2da01b4496e511f22f15f1f8efd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d478fa9203988d043212e4187792d816a69c0402
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48188723"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52808833"
 ---
 # <a name="tracing-and-replaying-events"></a>Traccia e riproduzione di eventi
   In SMO gli oggetti `Trace` e `Replay` nello spazio dei nomi <xref:Microsoft.SqlServer.Management.Trace> forniscono l'accesso a livello di programmazione alla funzionalità [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)], utilizzata per monitorare un'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] o [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. È possibile acquisire e salvare i dati di ogni evento in un file o in una tabella per operazioni di analisi successive. È ad esempio possibile monitorare un ambiente di produzione per verificare le stored procedure che influiscono sulle prestazioni a causa di un'esecuzione troppo lenta.  
@@ -57,7 +55,7 @@ ms.locfileid: "48188723"
   
  Gli oggetti di traccia SMO risiedono nello spazio dei nomi <xref:Microsoft.SqlServer.Management.Trace>, che richiede un riferimento al file Microsoft.SQLServer.ConnectionInfo.dll.  
   
- Il `Trace` e `Replay` oggetti richiedono una <xref:Microsoft.SqlServer.Management.Common.ServerConnection> <xref:Microsoft.SqlServer.Management.Smo.Server.%23ctor%2A> oggetto per stabilire una connessione all'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. L'oggetto <xref:Microsoft.SqlServer.Management.Common.ServerConnection> risiede nello spazio dei nomi <xref:Microsoft.SqlServer.Management.Common>, che richiede un riferimento al file Microsoft.SQLServer.ConnectionInfo.dll.  
+ Gli oggetti `Trace` e `Replay` richiedono un oggetto <xref:Microsoft.SqlServer.Management.Common.ServerConnection><xref:Microsoft.SqlServer.Management.Smo.Server.%23ctor%2A> per stabilire una connessione con l'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. L'oggetto <xref:Microsoft.SqlServer.Management.Common.ServerConnection> risiede nello spazio dei nomi <xref:Microsoft.SqlServer.Management.Common>, che richiede un riferimento al file Microsoft.SQLServer.ConnectionInfo.dll.  
   
 > [!NOTE]  
 >  Gli oggetti `Trace` e `Replay` non sono supportati in una piattaforma a 64 bit.  

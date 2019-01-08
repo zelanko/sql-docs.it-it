@@ -15,12 +15,12 @@ ms.assetid: 6a34a7ef-50cc-4c3d-82f7-106b9a8f3caf
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c00420d6bed0b49c6e136c82f03460dcaaea8a85
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 802838b50a663d98441512a8548bf9b2e883cc4c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51604881"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52541927"
 ---
 # <a name="absolute-and-relative-urls"></a>URL relativi e assoluti
 Un URL specifica la posizione di una destinazione archiviata in un computer locale o in rete. La destinazione può essere un file, directory, pagina HTML, image, programma e così via *.*  

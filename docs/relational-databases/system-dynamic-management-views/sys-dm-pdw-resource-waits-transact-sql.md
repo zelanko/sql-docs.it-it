@@ -13,19 +13,19 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: ef5b5b551d06281cef03dbfd68d5bea190126285
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9be76f5f308213f905224de5ade9b604ec119c30
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47674341"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514648"
 ---
 # <a name="sysdmpdwresourcewaits-transact-sql"></a>sys.dm_pdw_resource_waits (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   Consente di visualizzare informazioni per tutti i tipi di risorse in attesa [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].  
   
-|Nome colonna|Tipo di dati|Description|Intervallo|  
+|Nome colonna|Tipo di dati|Descrizione|Intervallo|  
 |-----------------|---------------|-----------------|-----------|  
 |wait_id|**bigint**|Posizione della richiesta nella lista di attesa.|ordinale in base 0. Ciò non è univoco in tutte le voci di attesa.|  
 |session_id|**nvarchar(32)**|ID della sessione in cui si è verificato lo stato di attesa.|Vedere ID_sessione [DM pdw_exec_sessions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md).|  
@@ -37,7 +37,7 @@ ms.locfileid: "47674341"
 |acquire_time|**datetime**|Ora in cui è stata acquisita il blocco o risorsa.||  
 |state|**nvarchar(50)**|Stato di stato di attesa.|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
 |priority|**int**|Priorità dell'elemento in attesa.|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
-|concurrency_slots_used|**int**|Numero di slot di concorrenza (massimo 32) riservato per questa richiesta.|1 – per SmallRC<br /><br /> 3 – per MediumRC<br /><br /> 7 per LargeRC<br /><br /> 22: per XLargeRC|  
+|concurrency_slots_used|**int**|Numero di slot di concorrenza (massimo 32) riservato per questa richiesta.|1 - per SmallRC<br /><br /> 3 - per MediumRC<br /><br /> 7 per LargeRC<br /><br /> 22 - per XLargeRC|  
 |resource_class|**nvarchar(20)**|La classe di risorse per questa richiesta.|SmallRC<br /><br /> MediumRC<br /><br /> LargeRC<br /><br /> XLargeRC|  
   
 ## <a name="see-also"></a>Vedere anche  

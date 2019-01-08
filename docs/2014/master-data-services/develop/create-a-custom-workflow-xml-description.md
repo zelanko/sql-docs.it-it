@@ -4,18 +4,18 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: master-data-services
+ms.technology: ''
 ms.topic: reference
 ms.assetid: e267e5f4-38bb-466d-82e8-871eabeec07e
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: e8edbfcc8637b1c7246f4a06470eeafcd0d67724
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cec0a0378acceef269b17c93cdc0e2f5e816e437
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48149601"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52789773"
 ---
 # <a name="custom-workflow-xml-description-master-data-services"></a>Descrizione XML del flusso di lavoro personalizzato (Master Data Services)
   In [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] il metodo <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender.StartWorkflow%2A> viene chiamato da SQL Server MDS Workflow Integration Service all'avvio di un flusso di lavoro. Questo metodo riceve i metadati e i dati sull'elemento che ha attivato la regola business del flusso di lavoro come blocco di XML. Per un esempio di codice che implementa un gestore del flusso di lavoro, vedere [Creare un flusso di lavoro personalizzato - Esempio &#40;Master Data Services&#41;](create-a-custom-workflow-example.md).  
@@ -62,7 +62,7 @@ ms.locfileid: "48149601"
   
  Nella tabella seguente vengono descritti alcuni dei tag contenuti nel codice XML:  
   
-|Tag|Description|  
+|Tag|Descrizione|  
 |---------|-----------------|  
 |\<Type>|Testo immesso nella casella di testo **Tipo di flusso di lavoro** in [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] per identificare l'assembly del flusso di lavoro personalizzato da caricare.|  
 |\<SendData >|Valore booleano gestito dalla casella di controllo **Includi dati membro nel messaggio** in [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]. Il valore 1 indica che la sezione \<MemberData> viene inviata; se il valore non è 1 la sezione \<MemberData> non viene inviata.|  

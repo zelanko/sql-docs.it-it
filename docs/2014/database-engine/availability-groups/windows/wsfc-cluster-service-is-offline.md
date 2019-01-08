@@ -14,12 +14,12 @@ ms.assetid: d502548d-ece6-4a42-9ded-2157d33e3d21
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2fd89cf306116a0554366984f864c6f0f6020a20
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cfab5de4cd3d171d4d8b7515e65b0a9cd117ac16
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48126011"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53377463"
 ---
 # <a name="wsfc-cluster-service-is-offline"></a>Il servizio cluster WSFC è offline
     
@@ -29,16 +29,16 @@ ms.locfileid: "48126011"
 |-|-|  
 |**Nome criteri**|Stato del cluster WSFC|  
 |**Problema**|Il servizio cluster WSFC è offline.|  
-|**Category**|**Critico**|  
+|**Categoria**|**Critico**|  
 |**Facet**|Istanza di SQL Server|  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>Descrizione  
  Questi criteri consentono di controllare lo stato di WSCF (Windows Server Failover Clustering). I criteri sono in uno stato non integro e viene generato un avviso quando il cluster WSFC è offline o nello stato di quorum forzato. Tutti i gruppi di disponibilità ospitati all'interno di questo cluster sono offline oppure è necessaria un'azione di ripristino di emergenza.  
   
  Lo stato dei criteri è integro quando quello del cluster è nel quorum normale.  
   
 > [!NOTE]  
->  Per questa versione di [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], le informazioni sulle possibili cause e le soluzioni sono disponibili nella pagina relativa alla situazione in cui il [servizio cluster WSFC è offline](http://go.microsoft.com/fwlink/p/?LinkId=220849) su Wiki di TechNet.  
+>  Per questa versione di [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], le informazioni sulle possibili cause e le soluzioni sono disponibili nella pagina relativa alla situazione in cui il [servizio cluster WSFC è offline](https://go.microsoft.com/fwlink/p/?LinkId=220849) su Wiki di TechNet.  
   
 ## <a name="possible-causes"></a>Possibili cause  
  Questo problema può essere causato da un problema del servizio cluster o dalla perdita del quorum nel cluster.  

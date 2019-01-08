@@ -12,12 +12,12 @@ ms.assetid: 0a2ea462-d613-42b6-870f-c7fa086a6b42
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4ff7549e5a892f6048d6f737382f489dd0bf2ab2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 26bcf31c2d4e0d188e93587dd9bdec1a9ff382e0
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48131613"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52533977"
 ---
 # <a name="binding-and-data-transfer-of-table-valued-parameters-and-column-values"></a>Associazione e trasferimento dati di valori di colonna e parametri con valori di tabella
   Analogamente agli altri parametri, i parametri con valori di tabella devono essere associati prima di poter essere passati al server. L'applicazione associa i parametri con valori di tabella esattamente come si esegue l'associazione di altri parametri: usando la funzione SQLBindParameter o chiamate equivalenti a SQLSetDescField o SQLSetDescRec. Il tipo di dati del server per un parametro con valori di tabella è SQL_SS_TABLE. Il tipo C può essere specificato come SQL_C_DEFAULT o SQL_C_BINARY.  
@@ -30,7 +30,7 @@ ms.locfileid: "48131613"
   
  La ricezione e l'invio di dati effettivi non riguardano il parametro con valori di tabella stesso ma ognuna delle colonne che lo costituiscono. Poiché il parametro con valori di tabella è una pseudo colonna, vengono usati i parametri di SQLBindParameter per fare riferimento ad attributi diversi dagli altri tipi di dati, come indicato di seguito:  
   
-|Parametro|Attributo correlato per i tipi di parametro non con valori di tabella, incluse le colonne|Attributo correlato per i parametri con valori di tabella|  
+|Parametro|Attributo correlato per i tipi di parametro non-con valori di tabella, incluse le colonne|Attributo correlato per i parametri con valori di tabella|  
 |---------------|--------------------------------------------------------------------------------|----------------------------------------------------|  
 |*InputOutputType*|SQL_DESC_PARAMETER_TYPE in IPD.<br /><br /> Per le colonne dei parametri con valori di tabella, deve corrispondere all'impostazione per il parametro con valori di tabella stesso.|SQL_DESC_PARAMETER_TYPE in IPD.<br /><br /> Deve essere SQL_PARAM_INPUT.|  
 |*ValueType*|SQL_DESC_TYPE, SQL_DESC_CONCISE_TYPE in APD.|SQL_DESC_TYPE, SQL_DESC_CONCISE_TYPE in APD.<br /><br /> Deve essere SQL_C_DEFAULT o SQL_C_BINARY.|  

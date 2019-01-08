@@ -20,25 +20,25 @@ ms.assetid: fa496c6c-2a54-4fda-a238-db490c6b3afd
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0b8b642797808b023e200f1f59ae162f09cea514
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 061636210c76bace7ae483e277c624bb291cdeb8
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47780319"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52510002"
 ---
 # <a name="sysserverauditspecifications-transact-sql"></a>sys.server_audit_specifications (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Contiene informazioni sulle specifiche del controllo del server in un controllo di SQL Server in un'istanza del server. Per altre informazioni su SQL Server Audit, vedere [SQL Server Audit &#40;motore di database&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|Nome della specifica del server.|  
 |**server_specification_id**|**Int**|ID del **server_specification**.|  
 |**create_date**|**DateTime**|Data di creazione della specifica del controllo del server.|  
 |**modified_date**|**DateTime**|Data dell'ultima modifica della specifica del controllo del server.|  
-|**is_state_enabled**|**tinyint**|Stato della specifica del controllo:<br /><br /> 0 - DISABILITATO<br /><br /> 1 - ABILITATO|  
+|**is_state_enabled**|**tinyint**|Stato della specifica del controllo:<br /><br /> 0 - DISABILITATO<br /><br /> 1 - ABILITATA|  
 |**audit_GUID**|**uniqueidentifier**|GUID del controllo che contiene questa specifica. Viene utilizzato durante l'enumerazione delle specifiche del controllo del server membro durante l'avvio del server.|  
   
 ## <a name="permissions"></a>Permissions  

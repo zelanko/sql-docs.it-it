@@ -10,20 +10,20 @@ ms.assetid: 808595c3-8ef1-40bd-a93e-5cf237950e08
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: f1a2840fbdf8fbafae3b4a8e17c200c32d4da65f
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 00144c51e60b72fe043443d2a9c8d1d51a6cb8da
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51669780"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542065"
 ---
 # <a name="creating-variable-value-files-accesstosql"></a>Creazione di file di valore della variabile (AccessToSQL)
-Un File con valori di variabile è un file XML che includono i valori dei parametri dei comandi (ad esempio il nome di server di origine o destinazione) che cambiano di frequente tra le migrazioni di server. Quando si verifica un numero elevato di migrazioni del database, più file variabili per archiviare il valore di ogni server di origine vengono creati e fa riferimento a un file di script master con il **– v** passare alla riga di comando. Questo comportamento consente di mantenere valori statici in alcuni file di script con i valori delle variabili in più file di variabili.  
+Un File con valori di variabile è un file XML che includono i valori dei parametri dei comandi (ad esempio il nome di server di origine o destinazione) che cambiano di frequente tra le migrazioni di server. Quando si verifica un numero elevato di migrazioni del database, più file variabili per archiviare il valore di ogni server di origine vengono creati e fa riferimento a un file di script master con il **- v** passare alla riga di comando. Questo comportamento consente di mantenere valori statici in alcuni file di script con i valori delle variabili in più file di variabili.  
   
 > [!NOTE]  
 > -  I nomi delle variabili sono il prefisso e suffisso con un simbolo di dollaro $. Se una variabile non viene assegnata un valore nel file di valore della variabile, verificherà un errore durante l'analisi del file di script, risultante in blocco il processo di esecuzione della console.  
 > -  Il carattere di escape per **$** viene **$$**. Se il valore di un valore statico o variabile di un parametro contiene un **$** simbolo (dollaro), quindi **$$** deve essere specificata di considerarlo come un carattere anziché una variabile.  
-> -  Ai fini delle manutenibilità, le variabili possono essere dichiarate all'interno di `‘variable-group’` elementi per la separazione logica delle variabili definite dall'utente.  Utilizzo di questo elemento non è obbligatorio.  
+> -  Ai fini delle manutenibilità, le variabili possono essere dichiarate all'interno di `'variable-group'` elementi per la separazione logica delle variabili definite dall'utente.  Utilizzo di questo elemento non è obbligatorio.  
   
 **Esempi:**  
   

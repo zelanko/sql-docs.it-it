@@ -1,5 +1,5 @@
 ---
-title: Modifica della dimensione Customer | Documenti Microsoft
+title: Modifica della dimensione Customer | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: d9f922dfcc073ce72834515b42691bef2e3c90d3
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 2d777d39bed047ac1807ebb2413eec3539d70428
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019048"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514714"
 ---
 # <a name="lesson-3-2---modifying-the-customer-dimension"></a>Lezione 3-2: modifica della dimensione Customer
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -32,11 +32,11 @@ ms.locfileid: "34019048"
   
 3.  Modificare i nomi degli attributi seguenti allo stesso modo:  
   
-    -   **English Education** : modificare in **Education**  
+    -   **English Education** degli attributi - modificare **Education**  
   
-    -   **English Occupation** : modificare in **Occupation**  
+    -   **English Occupation** degli attributi - modificare **Occupation**  
   
-    -   **State Province Name** : modificare in **State-Province**  
+    -   **State Province Name** degli attributi - modificare **State-Province**  
   
 4.  Scegliere **Salva tutti** dal menu **File**.  
   
@@ -106,7 +106,7 @@ Dopo aver creato un calcolo denominato nella vista origine dati, è possibile ut
   
 4.  Nel campo proprietà **Name** digitare **Full Name**.  
   
-5.  Fare clic nel campo proprietà **NameColumn** nella parte inferiore e quindi fare clic sul pulsante Sfoglia (**…**) per aprire la finestra di dialogo **Colonna nome** .  
+5.  Fare clic nella **NameColumn** proprietà campo nella parte inferiore e quindi fare clic su Sfoglia (**...** ) per aprire la **colonna nome** nella finestra di dialogo.  
   
 6.  Selezionare **FullName** nella parte inferiore dell'elenco **Colonna di origine** , quindi fare clic su **OK**.  
   
@@ -184,7 +184,7 @@ La proprietà **KeyColumns** contiene la colonna o le colonne che rappresentano 
   
     Le colonne **City** e **StateProvinceName** sono ora visualizzate nell'elenco **Colonne chiave** .  
   
-5.  Scegliere **OK**.  
+5.  Fare clic su **OK**.  
   
 6.  Per impostare la proprietà **NameColumn** dell'attributo **City** , fare clic nel campo **NameColumn** della finestra Proprietà e fare clic sul pulsante Sfoglia (**...**).  
   
@@ -204,7 +204,7 @@ La proprietà **KeyColumns** contiene la colonna o le colonne che rappresentano 
   
     Le colonne **EnglishCountryRegionName** e **StateProvinceName** sono ora visualizzate nell'elenco **Colonne chiave** .  
   
-5.  Scegliere **OK**.  
+5.  Fare clic su **OK**.  
   
 6.  Per impostare la proprietà **NameColumn** dell'attributo **State-Province** fare clic nel campo **NameColumn** della finestra Proprietà e fare clic sul pulsante Sfoglia (**...**).  
   
@@ -235,7 +235,7 @@ Se i dati sottostanti le supportano, è consigliabile definire relazioni tra gli
   
 8.  Nell'elenco **Tipo di relazione** impostare il tipo di relazione su **Rigida**.  
   
-9. Scegliere **OK**.  
+9. Fare clic su **OK**.  
   
 10. Scegliere **Salva tutti** dal menu **File**.  
   

@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent, multiserver environments
@@ -15,12 +15,12 @@ ms.assetid: edc2b60d-15da-40a1-8ba3-f1d473366ee6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bacf87c25d7949580eb3d366467e1dae9381e8a4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0c5c59a8802597b893110a5f2c26c919c16c8e83
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48115591"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52795616"
 ---
 # <a name="create-a-multiserver-environment"></a>Creazione di un ambiente multiserver
   L'amministrazione multiserver richiede l'impostazione di un server master (MSX) e di uno o più server di destinazione (TSX). I processi che verranno eseguiti in tutti i server di destinazione vengono innanzitutto definiti nel server master e quindi scaricati nei server di destinazione.  
@@ -37,13 +37,13 @@ ms.locfileid: "48115591"
   
 ||**TSX = 7.0**|**TSX = 8.0 &LT; SP3**|**TSX = 8.0 SP3 o versione successiva**|**TSX = 9.0**|**TSX = 10.0**|**TSX = 10.5**|**TSX = 11.0**|  
 |-|--------------------|---------------------------|----------------------------------|--------------------|--------------------|---------------------|---------------------|  
-|**MSX = 7.0**|Sì|Sì|no|no|no|no|no|  
-|**MSX = 8.0 &LT; SP3**|Sì|Sì|no|no|no|no|no|  
-|**MSX = 8.0 SP3 o versione successiva**|no|no|Sì|Sì|Sì|Sì|Sì|  
-|**MSX = 9.0**|no|no|no|Sì|Sì|Sì|Sì|  
-|**MSX = 10.0**|no|no|no|no|Sì|Sì|Sì|  
-|**MSX = 10.5**|no|no|no|no|no|Sì|Sì|  
-|**MSX = 11.0**|no|no|no|no|no|no|Sì|  
+|**MSX = 7.0**|Yes|Yes|No|No|No|No|No|  
+|**MSX = 8.0 &LT; SP3**|Yes|Yes|No|No|No|No|No|  
+|**MSX = 8.0 SP3 o versione successiva**|No|No|Yes|Yes|Yes|Yes|Yes|  
+|**MSX = 9.0**|No|No|No|Yes|Yes|Yes|Yes|  
+|**MSX = 10.0**|No|No|No|No|Yes|Yes|Yes|  
+|**MSX = 10.5**|No|No|No|No|No|Yes|Yes|  
+|**MSX = 11.0**|No|No|No|No|No|No|Yes|  
   
  Al momento della creazione di un ambiente multiserver, è opportuno considerare i problemi seguenti:  
   
@@ -58,7 +58,7 @@ ms.locfileid: "48115591"
 ## <a name="related-tasks"></a>Attività correlate  
  Negli argomenti seguenti vengono illustrate le attività comuni necessarie per la creazione di un ambiente multiserver.  
   
-|Description|Argomento|  
+|Descrizione|Argomento|  
 |-----------------|-----------|  
 |Viene illustrato come creare un server master.|[Configurare un server master](make-a-master-server.md)|  
 |Viene illustrato come creare un server di destinazione.|[Configurare un server di destinazione](make-a-target-server.md)|  

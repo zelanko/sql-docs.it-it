@@ -28,12 +28,12 @@ ms.assetid: 6e89815e-187e-45bf-bf63-3d5c4a246360
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 59a80fcb9fdbd758f1ca76e73d279cdc6b3810d1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 619f96921f1fbbaf3d1eec8d2c89a25491b46180
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48137627"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53364773"
 ---
 # <a name="add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs"></a>Aggiungere, modificare o eliminare una mappa o un livello mappa (Generatore report e SSRS)
   Una mappa è una raccolta di livelli. Quando si aggiunge una mappa a un report, si definisce il primo livello. È possibile creare livelli aggiuntivi tramite la creazione guidata del livello mappa.  
@@ -46,7 +46,7 @@ ms.locfileid: "48137627"
   
  Nella tabella seguente vengono visualizzate le icone della barra degli strumenti per il riquadro **Mappa** .  
   
-|Simbolo|Description|Utilizzo|  
+|Simbolo|Descrizione|Utilizzo|  
 |------------|-----------------|-----------------|  
 |![rs_IconMapLayerWizard](../../tutorials/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard")|Creazione guidata livello mappa|Per aggiungere un livello tramite una procedura guidata, fare clic su **Creazione guidata nuovo livello**.|  
 |![rs_IconMapAddLayer](../../tutorials/media/rs-iconmapaddlayer.gif "rs_IconMapAddLayer")|Aggiungi livello|Per aggiungere manualmente un livello, fare clic su **Aggiungi livello**, quindi scegliere il tipo di livello mappa da aggiungere.|  
@@ -57,7 +57,7 @@ ms.locfileid: "48137627"
   
  Nella parte inferiore del riquadro della mappa si trova l'area della vista mappa. Per modificare le opzioni di allineamento al centro o zoom della mappa, utilizzare i tasti di direzione in modo da regolare il centro della vista e il dispositivo di scorrimento che consente di modificare il livello di zoom.  
   
- Per altre informazioni sui livelli, vedere [Maps &#40;Report Builder and SSRS&#41;](maps-report-builder-and-ssrs.md).  
+ Per altre informazioni sui livelli, vedere [Mappe &#40;Generatore report e SSRS&#41;](maps-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -82,7 +82,7 @@ ms.locfileid: "48137627"
   
 1.  Fare clic sulla mappa finché non viene visualizzato il riquadro della mappa.  
   
-2.  Nella barra degli strumenti fare clic sul pulsante **Aggiungi livello** e, dall'elenco a discesa, scegliere il tipo di livello da aggiungere: **Punto**, **Linea**o **Poligono**.  
+2.  Sulla barra degli strumenti, scegliere il **Aggiungi livello** pulsante e l'elenco a discesa, scegliere il tipo di livello che si desidera aggiungere: **Punto**, **Line**, o **poligono**.  
   
     > [!NOTE]  
     >  Sebbene sia possibile aggiungere un livello alla mappa e configurarlo manualmente, è consigliabile utilizzare la Creazione guidata livello mappa per aggiungere nuovi livelli. Per avviare la procedura guidata dal riquadro Mappa della barra degli strumenti, fare clic sul pulsante della creazione guidata del livello (![rs_IconMapLayerWizard](../../tutorials/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard")).  
@@ -125,9 +125,9 @@ ms.locfileid: "48137627"
   
 1.  Selezionare **Generale** nella finestra di dialogo **Proprietà punto mappa** per modificare le opzioni relative all'etichetta, alla descrizione comando e al tipo di indicatore per gli elementi della mappa seguenti:  
   
-    -   Tutti i punti dinamici o incorporati su un livello punto. Le regole relative al colore, alle dimensioni e al tipo di marcatore per i punti ignorano queste opzioni. Per ignorare le opzioni per un punto incorporato specifico, usare il [finestra punto incorporato mappa proprietà finestra di dialogo, marcatore](../map-embedded-point-properties-dialog-box-marker.md) pagina.  
+    -   Tutti i punti dinamici o incorporati su un livello punto. Le regole relative al colore, alle dimensioni e al tipo di marcatore per i punti ignorano queste opzioni. Per sostituire le opzioni per un punto incorporato specifico, usare la pagina [Finestra di dialogo Proprietà punto incorporato mappa, Indicatore](../map-embedded-point-properties-dialog-box-marker.md) .  
   
-    -   Punto centrale per tutti i poligoni dinamici o incorporati su un livello poligono. Le regole relative al colore, alle dimensioni e al tipo di marcatore per i punti centrali ignorano queste opzioni. Per sostituire le opzioni per un punto centrale specifico, usare la pagina [Finestra di dialogo Proprietà punto incorporato mappa, Indicatore](../map-embedded-point-properties-dialog-box-marker.md).  
+    -   Punto centrale per tutti i poligoni dinamici o incorporati su un livello poligono. Le regole relative al colore, alle dimensioni e al tipo di marcatore per i punti centrali ignorano queste opzioni. Per sostituire le opzioni per un punto centrale specifico, usare la pagina [Finestra di dialogo Proprietà punto incorporato mappa, Indicatore](../map-embedded-point-properties-dialog-box-marker.md) .  
   
  ![Icona freccia usata con il collegamento Torna all'inizio](../../2014-toc/media/uparrow16x16.gif "Icona freccia usata con il collegamento Torna all'inizio") [Torna all'inizio](#BackToTop)  
   
@@ -161,7 +161,7 @@ ms.locfileid: "48137627"
 4.  In **Nome file**digitare il percorso di un file di forma ESRI o fare clic su **Sfoglia** per selezionare un file di forma ESRI.  
   
     > [!NOTE]  
-    >  Se il file di forma si trova sul computer locale, i dati spaziali sono incorporati nella definizione del report. Per recuperare in modo dinamico i dati durante l'elaborazione del report, è necessario caricare il file ESRI con estensione shp e il file di supporto con estensione dbf sul server di report. Per altre informazioni, vedere "Procedura: Caricamento di un file o di un report (Gestione report)" nella [documentazione relativa a Reporting Services](http://go.microsoft.com/fwlink/?linkid=121312) inclusa nella documentazione online di SQL Server.  
+    >  Se il file di forma si trova sul computer locale, i dati spaziali sono incorporati nella definizione del report. Per recuperare in modo dinamico i dati durante l'elaborazione del report, è necessario caricare il file ESRI con estensione shp e il file di supporto con estensione dbf sul server di report. Per altre informazioni, vedere "procedura: Caricare un File o un Report (gestione Report) "nel [documentazione di Reporting Services](https://go.microsoft.com/fwlink/?linkid=121312) nella documentazione Online di SQL Server.  
   
 5.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -190,7 +190,7 @@ ms.locfileid: "48137627"
 2.  Sulla barra degli strumenti fare clic sul pulsante **Aggiungi livello** e, dall'elenco a discesa, scegliere **Livello sezione**.  
   
     > [!NOTE]  
-    >  Per altre informazioni sull'utilizzo delle tessere mappa di Bing nel report, vedere [Ulteriori condizioni di utilizzo](http://go.microsoft.com/fwlink/?LinkId=151371) e [Informativa sulla privacy](http://go.microsoft.com/fwlink/?LinkId=151372).  
+    >  Per altre informazioni sull'utilizzo delle tessere mappa di Bing nel report, vedere [Ulteriori condizioni di utilizzo](https://go.microsoft.com/fwlink/?LinkId=151371) e [Informativa sulla privacy](https://go.microsoft.com/fwlink/?LinkId=151372).  
   
 3.  Fare clic con il pulsante destro del mouse sul livello sezione nel riquadro della mappa, quindi scegliere **Proprietà sezione**.  
   
@@ -283,6 +283,6 @@ ms.locfileid: "48137627"
   
 ## <a name="see-also"></a>Vedere anche  
  [Mappe &#40;Generatore report e SSRS&#41;](maps-report-builder-and-ssrs.md)   
- [Risolvere i problemi di report: I report di mappa &#40;Report e SSRS&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
+ [Risolvere i problemi di report: Eseguire il mapping di report &#40;Report e SSRS&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
   

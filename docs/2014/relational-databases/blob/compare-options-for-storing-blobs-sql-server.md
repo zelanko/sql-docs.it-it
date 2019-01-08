@@ -10,12 +10,12 @@ ms.assetid: 6038697b-36a9-49e8-a02a-2ad9e2e60e5a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 48a46b3f35b8ce19382996bf8c0667b6222dc5c8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c90dd764a04b3eb470f0cf76d29e2ee2002d6b97
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48059731"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53364709"
 ---
 # <a name="compare-options-for-storing-blobs-sql-server"></a>Confrontare opzioni per l'archiviazione di BLOB (SQL Server)
   Vengono descritte e confrontate le opzioni disponibili per l'archiviazione di file e documenti in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -47,16 +47,16 @@ ms.locfileid: "48059731"
   
 |Funzionalità|Soluzione file server e database|Soluzione FILESTREAM|Soluzione FileTable|  
 |-------------|---------------------------------------|-------------------------|------------------------|  
-|**Singola soluzione per le attività di gestione**|no|Sì|**Sì**|  
-|**Singolo set di servizi**: ricerca, creazione di report, esecuzione di query e così via|no|Sì|**Sì**|  
-|**Modello di sicurezza integrata**|no|Sì|**Sì**|  
-|**Aggiornamenti sul posto di dati FILESTREAM**|Sì|no|**Sì**|  
-|**Gerarchia di file e directory gestita nel database**|no|no|**Sì**|  
-|**Compatibilità delle applicazioni di Windows**|Sì|no|**Sì**|  
-|**Accesso relazionale agli attributi dei file**|no|no|**Sì**|  
+|**Singola soluzione per le attività di gestione**|No|Yes|**Sì**|  
+|**Singolo set di servizi**: ricerca, creazione di report, esecuzione di query e così via|No|Yes|**Sì**|  
+|**Modello di sicurezza integrata**|No|Yes|**Sì**|  
+|**Aggiornamenti sul posto di dati FILESTREAM**|Yes|No|**Sì**|  
+|**Gerarchia di file e directory gestita nel database**|No|No|**Sì**|  
+|**Compatibilità delle applicazioni di Windows**|Yes|No|**Sì**|  
+|**Accesso relazionale agli attributi dei file**|No|No|**Sì**|  
   
 ##  <a name="CompareRBS"></a> Confronto tra FILESTREAM e Archivio BLOB remoti (Remote BLOB Store, RBS)  
- Per un confronto tra queste due caratteristiche, vedere il post di blog del team RBS: [Confronto tra le funzionalità Archivio BLOB remoti e FILESTREAM di SQL Server](http://go.microsoft.com/fwlink/?LinkId=210317).  
+ Per un confronto tra queste due funzionalità, vedere questo blog post del team RBS: [Confronto tra le funzionalità FILESTREAM e SQL Server Remote BLOB Store](https://go.microsoft.com/fwlink/?LinkId=210317).  
   
 ##  <a name="more"></a> Ulteriori informazioni  
  [FILESTREAM &#40;SQL Server&#41;](filestream-sql-server.md)  

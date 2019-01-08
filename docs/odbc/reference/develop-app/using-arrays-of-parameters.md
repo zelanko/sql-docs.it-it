@@ -14,12 +14,12 @@ ms.assetid: 5a28be88-e171-4f5b-bf4d-543c4383c869
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d7990c1c8524063c16b44464828900450d5241ad
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7ff4a76c38f04c7b9b12842ef800bc8a26a27ed9
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47777879"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52529335"
 ---
 # <a name="using-arrays-of-parameters"></a>Uso delle matrici di parametri
 Usare matrici di parametri, l'applicazione chiama **SQLSetStmtAttr** con un *attributo* argomento di SQL_ATTR_PARAMSET_SIZE per specificare il numero di set di parametri. Viene chiamato **SQLSetStmtAttr** con un *attributo* argomento di SQL_ATTR_PARAMS_PROCESSED_PTR per specificare l'indirizzo di una variabile in cui il driver può restituire il numero di set di parametri elaborati, inclusi i set di errore. Viene chiamato **SQLSetStmtAttr** con un *attributo* argomento di SQL_ATTR_PARAM_STATUS_PTR in modo che punti a una matrice in cui si desidera ottenere informazioni sullo stato per ogni riga di valori di parametro. Il driver archivia questi indirizzi nella struttura che viene mantenuta per l'istruzione.  
@@ -35,7 +35,7 @@ Usare matrici di parametri, l'applicazione chiama **SQLSetStmtAttr** con un *att
   
 -   Verificare il supporto di matrici di parametri in fase di esecuzione. Un driver supporta matrici di parametri se è possibile impostare l'attributo di istruzione SQL_ATTR_PARAMSET_SIZE su un valore maggiore di 1. Applicazioni generiche e applicazioni verticali comunemente verificare il supporto di matrici di parametri in fase di esecuzione.  
   
- La disponibilità dei set di risultati in esecuzione con parametri e i conteggi delle righe può essere determinata chiamando **SQLGetInfo** con le opzioni SQL_PARAM_ARRAY_ROW_COUNTS e SQL_PARAM_ARRAY_SELECTS. Per **inserire**, **UPDATE**, e **eliminare** (istruzioni), l'opzione SQL_PARAM_ARRAY_ROW_COUNTS indica se i conteggi delle righe singole (uno per ogni set di parametri) disponibile (SQL_PARC_BATCH) o se i conteggi delle righe vengono raggruppate in un unico (SQL_PARC_NO_BATCH). Per la **seleziona** (istruzioni), l'opzione SQL_PARAM_ARRAY_SELECTS indica se un set di risultati è disponibile per ogni set di parametri (SQL_PAS_BATCH) o se solo un set di risultati è disponibile (SQL_PAS_NO_BATCH). Se il driver non supporta istruzioni: generazione di set di risultati deve essere eseguito con una matrice di parametri, SQL_PARAM_ARRAY_SELECTS restituisce SQL_PAS_NO_SELECT. Si tratta di dati specifici dell'origine se le matrici di parametri possono essere usate con altri tipi di istruzioni, soprattutto perché l'utilizzo di parametri in queste istruzioni sarebbe specifici dell'origine dati e non seguirà la grammatica SQL ODBC.  
+ La disponibilità dei set di risultati in esecuzione con parametri e i conteggi delle righe può essere determinata chiamando **SQLGetInfo** con le opzioni SQL_PARAM_ARRAY_ROW_COUNTS e SQL_PARAM_ARRAY_SELECTS. Per **inserire**, **UPDATE**, e **eliminare** (istruzioni), l'opzione SQL_PARAM_ARRAY_ROW_COUNTS indica se i conteggi delle righe singole (uno per ogni set di parametri) disponibile (SQL_PARC_BATCH) o se i conteggi delle righe vengono raggruppate in un unico (SQL_PARC_NO_BATCH). Per la **seleziona** (istruzioni), l'opzione SQL_PARAM_ARRAY_SELECTS indica se un set di risultati è disponibile per ogni set di parametri (SQL_PAS_BATCH) o se solo un set di risultati è disponibile (SQL_PAS_NO_BATCH). Se il driver non supporta istruzioni che generano set di risultati deve essere eseguito con una matrice di parametri, SQL_PARAM_ARRAY_SELECTS restituisce SQL_PAS_NO_SELECT. Si tratta di dati specifici dell'origine se le matrici di parametri possono essere usate con altri tipi di istruzioni, soprattutto perché l'utilizzo di parametri in queste istruzioni sarebbe specifiche dell'origine dati e non seguirà la grammatica SQL ODBC.  
   
  La matrice a cui punta l'attributo di istruzione SQL_ATTR_PARAM_OPERATION_PTR può essere utilizzata per ignorare le righe di parametri. Se un elemento della matrice è impostato su SQL_PARAM_IGNORE, il set di parametri corrisponde a tale elemento è escluso dal **SQLExecute** oppure **SQLExecDirect** chiamare. La matrice a cui punta l'attributo SQL_ATTR_PARAM_OPERATION_PTR viene allocata e compilata dall'applicazione e letti dal driver. Se righe recuperate vengono usate come parametri di input, i valori della matrice di stato di riga possono essere usati nella matrice di operazione del parametro.  
   
