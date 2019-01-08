@@ -4,18 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: master-data-services
+ms.technology: ''
 ms.topic: reference
 ms.assetid: e3f346b5-7e26-481d-9821-1846e2e91289
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 48a4fcdf1d1bb0f3f0736abfac5946e066937ae7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e3e0d205cba04fd0d45249eb2b1915310f98d6a9
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48064131"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52814583"
 ---
 # <a name="categorized-web-service-operations-master-data-services"></a>Operazioni del servizio Web per categoria (Master Data Services)
   Il servizio Web [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] contiene un set completo di operazioni che consentono di scrivere il codice per controllare tutte le caratteristiche implementate da [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] tramite l'interfaccia utente. Le operazioni del servizio Web sono definite dall'interfaccia <xref:Microsoft.MasterDataServices.IService> e vengono implementate come metodi nella classe <xref:Microsoft.MasterDataServices.ServiceClient>. In questo argomento le operazioni del servizio Web vengono raggruppate in categorie concettuali per consentire all'utente di capire come utilizzare l'API del servizio Web.  

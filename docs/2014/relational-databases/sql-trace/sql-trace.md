@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 ms.assetid: 83c6d1d9-19ce-43fe-be9a-45aaa31f20cb
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e0a1091e56ee505731fb9ce0d683975caa9c3d29
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a1dd2e117207f3737f54e2cd0269c51918a199f2
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48193191"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52823485"
 ---
 # <a name="sql-trace"></a>Traccia SQL
   In Traccia SQL vengono raccolti unicamente gli eventi che rappresentano istanze delle classi di evento elencate nella definizione di traccia. Tali eventi possono essere esclusi dalla traccia tramite un filtro oppure essere inseriti in coda per la relativa destinazione. La destinazione può essere un file o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Objects (SMO), che è in grado di utilizzare le informazioni della traccia nelle applicazioni che gestiscono [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
@@ -71,11 +70,11 @@ ms.locfileid: "48193191"
 ## <a name="use-data-columns-to-describe-returned-events"></a>Utilizzare le colonne di dati per descrivere gli eventi restituiti  
  Traccia SQL utilizza le colonne di dati nell'output di traccia per descrivere gli eventi restituiti quando viene eseguita la traccia. Nella tabella seguente vengono descritte le colonne di dati di [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] che sono le stesse utilizzate da Traccia SQL e vengono indicate le colonne selezionate per impostazione predefinita.  
   
-|Colonna di dati|Numero colonna|Description|  
+|Colonna di dati|Numero colonna|Descrizione|  
 |-----------------|-------------------|-----------------|  
 |**ApplicationName** <sup>1</sup>|10|Nome dell'applicazione client in cui è stata creata la connessione a un'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Questa colonna viene popolata con i valori passati dall'applicazione anziché con il nome visualizzato del programma.|  
-|**BigintData1**|52|Valore (`bigint` tipo di dati), che dipende dalla classe di evento specificata nella traccia.|  
-|**BigintData2**|53|Valore (`bigint` tipo di dati), che dipende dalla classe di evento specificata nella traccia.|  
+|**BigintData1**|52|Valore (tipo di dati `bigint`) che dipende dalla classe di evento specificata nella traccia.|  
+|**BigintData2**|53|Valore (tipo di dati `bigint`) che dipende dalla classe di evento specificata nella traccia.|  
 |**Binary Data**|2|Valore binario che dipende dalla classe di evento acquisita nella traccia.|  
 |**ClientProcessID** <sup>1</sup>|9|ID assegnato dal computer host al processo in cui è in esecuzione l'applicazione client. Questa colonna di dati viene popolata se l'ID del processo client viene fornito dal client.|  
 |**ColumnPermissions**|44|Indica se è stata impostata un'autorizzazione a livello di colonna. È possibile analizzare il testo dell'istruzione per determinare con esattezza quali autorizzazioni sono state impostate per quali colonne.|  
@@ -127,7 +126,7 @@ ms.locfileid: "48193191"
 |**SPID**|12|ID del processo server (SPID) che [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] assegna al processo associato al client.|  
 |**SqlHandle**|63|Hash a 64 bit basato sul testo di una query ad hoc oppure ID del database e dell'oggetto di un oggetto SQL. È possibile passare questo valore a **sys.dm_exec_sql_text()** per recuperare il testo SQL associato.|  
 |**StartTime** <sup>1</sup>|14|Ora di inizio dell'evento, se disponibile.|  
-|**State**|30|Codice dello stato di errore.|  
+|**Stato**|30|Codice dello stato di errore.|  
 |**Esito positivo**|23|Indica l'esito dell'evento. I possibili valori sono:<br /><br /> **1** = esito positivo.<br /><br /> **0** = esito negativo<br /><br /> Ad esempio, **1** indica l'esito positivo di un controllo delle autorizzazioni e **0** indica l'esito negativo di tale controllo.|  
 |**TargetLoginName**|42|Per le azioni relative a un account di accesso, ad esempio l'aggiunta di un nuovo account di accesso, il nome dell'account di accesso specifico.|  
 |**TargetLoginSid**|43|Per le azioni relative a un account di accesso, ad esempio l'aggiunta di un nuovo account di accesso, il SID dell'account di accesso specifico.|  

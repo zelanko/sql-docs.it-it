@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - control flow [Integration Services], copying objects
@@ -16,12 +15,12 @@ ms.assetid: 99b85e5c-d6bd-4e7c-afe4-51f6ce151c2f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 43378e9129b40324144a2f20f2039f6f376fa39d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5c1ebef7107ed58629502457bdc81bfe3e07f337
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48200521"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52805673"
 ---
 # <a name="copy-package-objects"></a>Copia di oggetti di pacchetto
   In questo argomento viene descritta la procedura per copiare elementi di un flusso di controllo, elementi di un flusso di dati e gestioni connessioni all'interno di un pacchetto o tra pacchetti diversi.  
@@ -37,7 +36,7 @@ ms.locfileid: "48200521"
 4.  Selezionare gli elementi del flusso di controllo o di dati che si desidera copiare. È possibile selezionare un elemento alla volta, facendo clic sugli elementi desiderati mentre si tiene premuto il tasto MAIUSC, oppure selezionarli come gruppo, trascinando il puntatore del mouse sugli elementi desiderati.  
   
     > [!IMPORTANT]  
-    >  Quando si selezionano due elementi connessi, i vincoli di precedenza e i percorsi che li connettono non vengono selezionati automaticamente. Per copiare un flusso di lavoro ordinato, ovvero un segmento di un flusso di controllo o di dati, è necessario copiare anche i vincoli di precedenza e i percorsi.  
+    >  Quando si selezionano due elementi connessi, i vincoli di precedenza e i percorsi che li connettono non vengono selezionati automaticamente. Per copiare un flusso di lavoro ordinato, come un segmento di un flusso di controllo o di dati, assicurarsi di copiare anche i percorsi e i vincoli di precedenza.  
   
 5.  Fare clic con il pulsante destro del mouse su un elemento selezionato e quindi scegliere **Copia**.  
   

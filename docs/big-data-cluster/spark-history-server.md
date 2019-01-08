@@ -1,20 +1,21 @@
 ---
-title: Debug e diagnosticare le applicazioni Spark nei cluster di big data di SQL Server in Server cronologia Spark
-description: Debug e diagnosticare le applicazioni Spark nei cluster di big data di SQL Server in Server cronologia Spark
-services: SQL Server 2019 big data cluster spark
-ms.service: SQL Server 2019 big data cluster spark
+title: Diagnosi/debug delle applicazioni Spark
+titleSuffix: SQL Server 2019 big data clusters
+description: Usare il Server cronologia Spark per eseguire il debug e diagnosticare le applicazioni Spark in esecuzione nei cluster di SQL Server 2019 dei big Data.
 author: jejiang
 ms.author: jejiang
 ms.reviewer: jroth
-ms.custom: ''
+manager: craigg
+ms.date: 12/06/2018
 ms.topic: conceptual
-ms.date: 10/01/2018
-ms.openlocfilehash: 09d22e5d3b55f48ab1873507e6f474f07d842801
-ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
+ms.prod: sql
+ms.custom: seodec18
+ms.openlocfilehash: a9416f774e84d6b458e14aeb28db2ab39ad8543e
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49460866"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53029745"
 ---
 # <a name="debug-and-diagnose-spark-applications-on-sql-server-big-data-clusters-in-spark-history-server"></a>Debug e diagnosticare le applicazioni Spark nei cluster di big data di SQL Server in Server cronologia Spark
 
@@ -25,7 +26,7 @@ Questo articolo fornisce indicazioni su come usare il Server cronologia Spark es
 L'esperienza utente di Spark cronologia server di origine aprire è stata migliorata con le informazioni, che includono dati specifici del processo e la visualizzazione interattiva dei flussi di dati e grafico processo per cluster di big data. 
 
 ### <a name="open-the-spark-history-server-web-ui-by-url"></a>Aprire il sito Web Server cronologia Spark dell'interfaccia utente dall'URL
-Aprire il Server cronologia Spark passando all'URL seguente, sostituire `<Ipaddress>` e `<Port>` con informazioni specifiche del cluster di big data. Sono possibile fare riferimento altre informazioni: [cluster di big data distribuisce SQL Server](quickstart-big-data-cluster-deploy.md)
+Aprire il Server cronologia Spark passando all'URL seguente, sostituire `<Ipaddress>` e `<Port>` con informazioni specifiche del cluster di big data. Sono possibile fare riferimento altre informazioni: [Distribuire il cluster di big data di SQL Server](quickstart-big-data-cluster-deploy.md)
 
 ```
 https://<Ipaddress>:<Port>/gateway/default/sparkhistory
@@ -41,31 +42,31 @@ Selezionare l'ID di processo, quindi scegliere **dati** nel menu degli strumenti
 
 + Controllare la **input**, **Outputs**, e **operazioni su tabella** selezionando le schede separatamente.
 
-    ![Schede di dati](./media/apache-azure-spark-history-server/sparkui-data-tabs.png)
+    ![Schede di dati Server cronologia Spark](./media/apache-azure-spark-history-server/sparkui-data-tabs.png)
 
 + Copiare tutte le righe facendo clic sul pulsante **copia**.
 
-    ![Copia dei dati](./media/apache-azure-spark-history-server/sparkui-data-copy.png)
+    ![Copiare tutte le righe](./media/apache-azure-spark-history-server/sparkui-data-copy.png)
 
 + Salvare tutti i dati come file con estensione CSV facendo clic sul pulsante **csv**.
 
-    ![Data di salvataggio](./media/apache-azure-spark-history-server/sparkui-data-save.png)
+    ![Salvare i dati come file CSV](./media/apache-azure-spark-history-server/sparkui-data-save.png)
 
 + Ricerca immettendo parole chiave nel campo **ricerca**, il risultato della ricerca verrà visualizzati immediatamente.
 
-    ![Ricerca di dati](./media/apache-azure-spark-history-server/sparkui-data-search.png)
+    ![Eseguire una ricerca con parole chiave](./media/apache-azure-spark-history-server/sparkui-data-search.png)
 
 + Fare clic sull'intestazione di colonna per ordinare tabelle, fare clic sul segno più per espandere una riga per visualizzare altri dettagli o fare clic sul segno meno per comprimere una riga.
 
-    ![Tabella di dati](./media/apache-azure-spark-history-server/sparkui-data-table.png)
+    ![Funzionalità della tabella di dati](./media/apache-azure-spark-history-server/sparkui-data-table.png)
 
 + Scaricare un singolo file facendo clic sul pulsante **Download parziale** che posizionare a destra, quindi il file selezionato viene scaricato alla posizione locale. Se il file non esiste più, si aprirà una nuova scheda per visualizzare i messaggi di errore.
 
-    ![Riga di download di dati](./media/apache-azure-spark-history-server/sparkui-data-download-row.png)
+    ![Download di una riga di dati](./media/apache-azure-spark-history-server/sparkui-data-download-row.png)
 
 + Copia percorso completo o relativo, selezionando il **Copia percorso completo**, **Copia percorso relativo** vengono espanse dal menu di download. Per i file di archiviazione di azure data lake, **aperto in Azure Storage Explorer** avvierà Azure Storage Explorer. E individuare la cartella esatta durante l'accesso.
 
-    ![Percorso di copia dei dati](./media/apache-azure-spark-history-server/sparkui-data-copy-path.png)
+    ![Copiare un percorso completo o relativo](./media/apache-azure-spark-history-server/sparkui-data-copy-path.png)
 
 + Scegliere il numero di tabella seguente per passare pagine quando troppo molte righe per visualizzare in un'unica pagina. 
 
@@ -99,11 +100,11 @@ Selezionare l'ID di processo, quindi scegliere **Graph** dal menu dello strument
 
 + Riprodurre il processo facendo il **riproduzione** pulsante e arrestare in qualsiasi momento facendo clic sul pulsante Arresta. La visualizzazione di attività a colori per visualizzare lo stato di diversi durante la riproduzione:
 
-    + Verde per ha avuto esito positivo: il processo è stata completata.
-    + Arancione per ritentare: le istanze di attività non riuscite ma che non influiscono sul risultato finale del processo. Queste attività erano duplicati o ripetere le istanze che può essere completata in un secondo momento.
-    + Blu per l'esecuzione: l'esecuzione dell'attività.
-    + Bianco per l'attesa o ignorata: l'attività è in attesa di esecuzione o la fase è ignorato.
-    + Rosso per non è riuscita: l'attività non è riuscita.
+    + Verde per ha avuto esito positivo: Il processo è stata completata.
+    + Arancione per ripetuti: Istanze di attività non riuscite ma che non influiscono sul risultato finale del processo. Queste attività erano duplicati o ripetere le istanze che può essere completata in un secondo momento.
+    + Blu per esecuzione: L'attività è in esecuzione.
+    + Bianco per l'attesa o ignorate: L'attività è in attesa di esecuzione o la fase è ignorato.
+    + Non è riuscita rosso per: L'attività non è riuscita.
 
     ![esempio di colore grafico, in esecuzione](./media/apache-azure-spark-history-server/sparkui-graph-color-running.png)
  
@@ -161,7 +162,7 @@ Selezionare l'ID di processo, quindi scegliere **diagnosi** nel menu degli strum
 ### <a name="data-skew"></a>Asimmetria dei dati
 Fare clic su **asimmetria dei dati** corrispondente della scheda vengono visualizzate attività differente in base ai parametri specificati. 
 
-+ **Specificare i parametri** -la prima sezione Visualizza i parametri, che consentono di rilevare differenze dei dati. La regola predefinita è: dati attività letti è maggiori di tre volte di leggere i dati di attività medio e i dati attività letti sono superiore a 10 MB. Se si desidera definire una regola personalizzata per le attività asimmetriche, è possibile scegliere i parametri, il **fase asimmetrica**, e **inclinare Char** sezione verrà aggiornata di conseguenza. 
++ **Specificare i parametri** -la prima sezione Visualizza i parametri, che consentono di rilevare differenze dei dati. La regola predefinita è: Dati attività letti è maggiori di tre volte in cui i dati di attività medio di lettura e i dati attività letti sono superiore a 10 MB. Se si desidera definire una regola personalizzata per le attività asimmetriche, è possibile scegliere i parametri, il **fase asimmetrica**, e **inclinare Char** sezione verrà aggiornata di conseguenza. 
 
 + **Asimmetria fase** -nella seconda sezione vengono visualizzate le fasi, che sono asimmetrici attività che soddisfano i criteri specificati in precedenza. Se è presente più di un'attività asimmetriche in una fase, la tabella fase asimmetrica viene visualizzato solo l'attività più differente (ad esempio, i dati più grande di asimmetria dei dati). 
 

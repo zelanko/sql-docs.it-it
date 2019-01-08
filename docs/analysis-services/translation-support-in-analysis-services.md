@@ -1,5 +1,5 @@
 ---
-title: Supporto delle traduzioni in Analysis Services | Documenti Microsoft
+title: Supporto delle traduzioni in Analysis Services | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 882434c2bd0a194a2ecbe21a62d3b22964b30f09
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 18b0dd9990c863d6630e63969250bc60b3287255
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34041835"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53213630"
 ---
 # <a name="translation-support-in-analysis-services"></a>Supporto delle traduzioni in Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "34041835"
  Una traduzione è costituita da un identificatore delle impostazioni locali (LCID), una didascalia tradotta per l'oggetto (ad esempio, il nome di una dimensione o di un attributo), e facoltativamente un'associazione a una colonna che fornisce i valori dei dati nella lingua di destinazione. È possibile avere più traduzioni, ma è possibile usarne solo una per ogni connessione specifica. In teoria, non vi sono limiti al numero di traduzioni che è possibile incorporare nel modello, ma ogni traduzione aggiunge complessità al test e tutte le traduzioni devono condividere le stesse regole di confronto, pertanto quando si progetta la soluzione tenere presenti questi vincoli normali.  
   
 > [!TIP]  
->  È possibile usare le applicazioni client quali Excel, Management Studio e SQL Server Profiler per restituire le stringhe tradotte. Per informazioni dettagliate, vedere [Suggerimenti e procedure consigliate per la globalizzazione &#40;Analysis Services&#41;](../analysis-services/globalization-tips-and-best-practices-analysis-services.md).  
+>  È possibile usare le applicazioni client quali Excel, Management Studio e SQL Server Profiler per restituire le stringhe tradotte. Per informazioni dettagliate, vedere [Suggerimenti e procedure consigliate per la globalizzazione &#40;Analysis Services&#41;](../analysis-services/globalization-tips-and-best-practices-analysis-services.md) .  
   
 ## <a name="how-to-add-translated-metadata-to-model-in-analysis-services"></a>Come aggiungere metadati tradotti al modello in Analysis Services  
  Per istruzioni dettagliate, usare questi collegamenti:  
@@ -39,8 +39,8 @@ ms.locfileid: "34041835"
   
 ## <a name="see-also"></a>Vedere anche  
  [Scenari di globalizzazione per Analysis Services](../analysis-services/globalization-scenarios-for-analysis-services.md)   
- [Lingue e regole di confronto & #40; Analysis Services & #41;](../analysis-services/languages-and-collations-analysis-services.md)   
+ [Lingue e regole di confronto &#40;Analysis Services&#41;](../analysis-services/languages-and-collations-analysis-services.md)   
  [Impostare o modificare le regole di confronto delle colonne](../relational-databases/collations/set-or-change-the-column-collation.md)   
- [Suggerimenti per la globalizzazione e procedure consigliate & #40; Analysis Services & #41;](../analysis-services/globalization-tips-and-best-practices-analysis-services.md)  
+ [Suggerimenti e procedure consigliate per la globalizzazione &#40;Analysis Services&#41;](../analysis-services/globalization-tips-and-best-practices-analysis-services.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: La Query MDX di base (MDX) | Documenti Microsoft
+title: La Query MDX di base (MDX) | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 7f3a1610f19bc99ce063d815f74906f10ddc2c7f
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 61975b6b24cda25454d10eb1eeb5b452cad0f1ba
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34026608"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52529213"
 ---
-# <a name="mdx-query---the-basic-query"></a>Query MDX, la Query di base
+# <a name="mdx-query---the-basic-query"></a>Query MDX - Query di base
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-  La query MDX (Multidimensional Expressions) di base corrisponde all'istruzione SELECT, la query eseguita più di frequente in MDX. Se si conosce la sintassi dell'istruzione MDX SELECT, si sa creare una semplice query tramite questa istruzione e si capisce perché in un'istruzione SELECT è necessario specificare un set di risultati, si avrà la padronanza dell'utilizzo di MDX per l'esecuzione di query in dati multidimensionali.  
+  La query MDX (Multidimensional Expressions) di base è la query utilizzata più di frequente: l'istruzione SELECT in MDX. Se si conosce la sintassi dell'istruzione MDX SELECT, si sa creare una semplice query tramite questa istruzione e si capisce perché in un'istruzione SELECT è necessario specificare un set di risultati, si avrà la padronanza dell'utilizzo di MDX per l'esecuzione di query in dati multidimensionali.  
   
 ## <a name="specifying-a-result-set"></a>Impostazione di un set di risultati  
  In MDX l'istruzione SELECT specifica un set di risultati contenente un subset dei dati multidimensionali di un cubo che sono stati restituiti. Per specificare un set di risultati, una query MDX deve contenere le informazioni seguenti:  
@@ -35,7 +35,7 @@ ms.locfileid: "34026608"
   
 -   Clausola SELECT che determina gli assi della query di un'istruzione MDX SELECT. Per altre informazioni sulla formulazione degli assi della query in una clausola SELECT, vedere [Impostazione del contenuto di un asse della query &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-specify-the-contents-of-a-query-axis.md).  
   
--   Clausola FROM che determina il cubo su cui eseguire la query. Per altre informazioni sulla clausola FROM, vedere [SELECT Statement &#40;MDX&#41;](../../../mdx/mdx-data-manipulation-select.md).  
+-   Clausola FROM che determina il cubo su cui eseguire la query. Per altre informazioni sulla clausola FROM, vedere [Istruzione SELECT &#40;MDX&#41;](../../../mdx/mdx-data-manipulation-select.md).  
   
 -   Clausola WHERE facoltativa che determina i membri o le tuple da utilizzare nell'asse di sezionamento per limitare i dati restituiti. Per altre informazioni sulla formulazione di un asse di sezionamento in una clausola WHERE, vedere [Impostazione del contenuto di un asse di sezionamento &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-specify-the-contents-of-a-slicer-axis.md).  
   
@@ -54,7 +54,7 @@ FROM <SELECT subcube clause>
 [ <SELECT cell property list clause> ]  
 ```  
   
- L'istruzione MDX SELECT supporta sintassi facoltativa, ad esempio la parola chiave WITH, l'utilizzo di funzioni MDX per la creazione di membri calcolati per l'inclusione di un asse o un asse di sezionamento e la restituzione dei valori di proprietà di celle specifiche come parte della query. Per altre informazioni sull'istruzione MDX SELECT, vedere [SELECT Statement &#40;MDX&#41;](../../../mdx/mdx-data-manipulation-select.md).  
+ L'istruzione MDX SELECT supporta sintassi facoltativa, ad esempio la parola chiave WITH, l'utilizzo di funzioni MDX per la creazione di membri calcolati per l'inclusione di un asse o un asse di sezionamento e la restituzione dei valori di proprietà di celle specifiche come parte della query. Per altre informazioni sull'istruzione MDX SELECT, vedere [Istruzione SELECT &#40;MDX&#41;](../../../mdx/mdx-data-manipulation-select.md).  
   
 ### <a name="comparing-the-syntax-of-the-mdx-select-statement-to-sql"></a>Confronto tra la sintassi dell'istruzione MDX SELECT e SQL  
  Il formato della sintassi di un'istruzione MDX SELECT è simile alla sintassi SQL. Sussistono tuttavia diverse differenze essenziali:  
@@ -103,7 +103,7 @@ WHERE ( [Sales Territory].[Southwest] )
  Per esempi più dettagliati, vedere [Impostazione del contenuto di un asse della query &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-specify-the-contents-of-a-query-axis.md)e [Impostazione del contenuto di un asse di sezionamento &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-specify-the-contents-of-a-slicer-axis.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Concetti chiave di MDX & #40; Analysis Services & #41;](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
- [Istruzione SELECT & #40; MDX & #41;](../../../mdx/mdx-data-manipulation-select.md)  
+ [Concetti chiave di MDX &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
+ [Istruzione SELECT &#40;MDX&#41;](../../../mdx/mdx-data-manipulation-select.md)  
   
   

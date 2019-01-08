@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - entities [Master Data Services], about entities
@@ -14,12 +13,12 @@ ms.assetid: 0af057d5-6b73-472b-99eb-9f5eb61a9b5b
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 97a3fe9e9552170332e6be0d5cf5a3cb8541fe9b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bb54250b1be15916055dd59a3f2e6d37330d5d93
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48072911"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52800913"
 ---
 # <a name="entities-master-data-services"></a>Entità (Master Data Services)
   Le entità sono oggetti contenuti nei modelli [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . Ogni entità contiene membri che sono le righe dei dati master gestiti.  
@@ -50,7 +49,7 @@ ms.locfileid: "48072911"
  È possibile concedere agli utenti l'autorizzazione per un'entità che include oggetti modello correlati. Per altre informazioni, vedere [Autorizzazioni per le entità &#40;Master Data Services&#41;](../../2014/master-data-services/entity-permissions-master-data-services.md).  
   
 ## <a name="entity-examples"></a>Esempi di entità  
- Nell'esempio seguente viene illustrata un'entità che dispone degli attributi Name, Code, Subcategory, StandardCost, ListPrice e FilePhoto. Tali attributi descrivono i membri. Ogni membro viene rappresentato da una singola riga di valori di attributo.  
+ L'esempio seguente illustra un'entità che dispone di questi attributi: Name, Code, Subcategory, StandardCost, ListPrice e FilePhoto. Tali attributi descrivono i membri. Ogni membro viene rappresentato da una singola riga di valori di attributo.  
   
  ![Tabella dell'entità prodotto bicicletta](../../2014/master-data-services/media/mds-conc-entity-table-w-data.gif "Tabella dell'entità prodotto bicicletta")  
   
@@ -75,8 +74,8 @@ ms.locfileid: "48072911"
   
 -   [Modelli &#40;Master Data Services&#41;](../../2014/master-data-services/models-master-data-services.md)  
   
--   [I membri &#40;Master Data Services&#41;](../../2014/master-data-services/members-master-data-services.md)  
+-   [Membri &#40;Master Data Services&#41;](../../2014/master-data-services/members-master-data-services.md)  
   
--   [Gli attributi &#40;Master Data Services&#41;](../../2014/master-data-services/attributes-master-data-services.md)  
+-   [Attributi &#40;Master Data Services&#41;](../../2014/master-data-services/attributes-master-data-services.md)  
   
   

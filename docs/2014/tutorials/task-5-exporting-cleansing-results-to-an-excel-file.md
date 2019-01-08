@@ -1,5 +1,5 @@
 ---
-title: 'Attività 5: Esportazione di pulizia dei risultati in un File di Excel | Microsoft Docs'
+title: 'Attività 5: Esportazione dei risultati in un File di Excel di pulizia | Microsoft Docs'
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -13,15 +13,15 @@ ms.assetid: eaeafd65-d0d4-4a7d-a3ad-110ef644e90b
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d2d52304ff9a8dae16e74d9d5aa7324adb2aac4f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e9b01c9394419a4e526969c4a8ecccaf262f576d
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48138171"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53368213"
 ---
 # <a name="task-5-exporting-cleansing-results-to-an-excel-file"></a>Attività 5: Esportazione dei risultati della pulizia in un file di Excel
-  In questa attività vengono esportati i risultati dell'attività di pulizia in un file di Excel. Visualizzare [fase di esportazione](http://msdn.microsoft.com/library/hh213061.aspx#Export) per altre informazioni.  
+  In questa attività vengono esportati i risultati dell'attività di pulizia in un file di Excel. Visualizzare [fase di esportazione](https://msdn.microsoft.com/library/hh213061.aspx#Export) per altre informazioni.  
   
 1.  Nel riquadro di destra, selezionare **Excel** per il **tipo di destinazione**.  
   
@@ -39,7 +39,7 @@ ms.locfileid: "48138171"
   
 7.  Aprire il **Cleansed Supplier List. xls** eseguire le operazioni seguenti:  
   
-    1.  Assicurarsi che non vi siano indirizzi di posta elettronica che terminino con adventure-work.com (senza la lettera "s ") cercando adventure-work.com nel foglio di lavoro.  
+    1.  Assicurarsi che non sono presenti indirizzi di posta elettronica che terminano con Adventure-Work.com (senza del carattere ') cercando Adventure-Work.com nel foglio di lavoro.  
   
     2.  Riscontrerebbe che è presente alcun **Stati Uniti** valore nel **paese** colonna.  
   

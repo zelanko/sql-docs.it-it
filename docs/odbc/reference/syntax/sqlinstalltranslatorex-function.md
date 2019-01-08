@@ -20,12 +20,12 @@ ms.assetid: a0630602-53c1-4db0-98ce-70d160aedf8d
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3506e1421ef47c4bb74537f81b7007348895555b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 276b8627588bcd3472c12564db1e8c6e6af1ef2b
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47742379"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53212530"
 ---
 # <a name="sqlinstalltranslatorex-function"></a>Funzione SQLInstallTranslatorEx
 **Conformità**  
@@ -88,7 +88,7 @@ BOOL SQLInstallTranslatorEx(
 ## <a name="diagnostics"></a>Diagnostica  
  Quando **SQLInstallTranslatorEx** FALSO, restituisce un oggetto associato  *\*pfErrorCode* valore può essere ottenuto chiamando **SQLInstallerError**. La tabella seguente elenca i  *\*pfErrorCode* i valori che possono essere restituiti da **SQLInstallerError** e illustra ognuna nel contesto di questa funzione.  
   
-|*\*pfErrorCode*|Errore|Description|  
+|*\*pfErrorCode*|Errore|Descrizione|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_GENERAL_ERR|Errore di programma di installazione generale|Errore per cui si è verificato alcun errore di programma di installazione specifico.|  
 |ODBC_ERROR_INVALID_BUFF_LEN|Lunghezza del buffer non valido|Il *lpszPathOut* argomento non era sufficientemente grande da contenere il percorso di output. Il buffer contiene il percorso troncato.<br /><br /> Il *cbPathOutMax* argomento era 0 e il *trattano* argomento era ODBC_INSTALL_COMPLETE.|  

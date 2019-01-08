@@ -17,12 +17,12 @@ ms.assetid: 3236749c-4b71-4235-89e2-ccdfaaa9319d
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7c1a53f8c310f43503b7dde8c85beb862a66e953
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: c2b02ac3d8e95bb583515dfa780f473402ea798f
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606678"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206320"
 ---
 # <a name="open-method-ado-recordset"></a>Metodo Open (Recordset - ADO)
 Apre un cursore in un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) oggetto.  
@@ -61,7 +61,7 @@ recordset.Open Source, ActiveConnection, CursorType, LockType, Options
   
  Usando il **aperto** metodo su un **Recordset** oggetto viene aperto un cursore che rappresenta i record da una tabella di base, i risultati di una query o salvato in precedenza **Recordset**.  
   
- Usare l'opzione facoltativa *origine* argomento per specificare un'origine dati usando uno dei seguenti: un **comando** variabile oggetto, un'istruzione SQL, una stored procedure, un nome di tabella, un URL o un nome di percorso completo del file. Se *origine* è un nome di percorso di file, può essere un percorso completo ("c:\dir\file.rst"), un percorso relativo (".. \File.rst"), o un URL ("https://files/file.rst").  
+ Usare l'opzione facoltativa *origine* argomento per specificare un'origine dati usando uno dei seguenti: un **comando** variabile oggetto, un'istruzione SQL, una stored procedure, un nome di tabella, un URL o un nome di percorso completo del file. Se *origine* è un nome di percorso di file, può essere un percorso completo ("c:\dir\file.rst"), un percorso relativo (".. \File.rst"), o un URL ("<https://files/file.rst>").  
   
  Non è consigliabile usare la *origine* argomento delle **Open** metodo per eseguire una query di comando che non restituisce i record in quanto non esiste un modo semplice per determinare se la chiamata ha avuto esito positivo. Il **Recordset** restituito da ad una query verrà chiusa. Per eseguire una query che restituiscono record, ad esempio un'istruzione SQL INSERT, chiamare il [Execute](../../../ado/reference/ado-api/execute-method-ado-command.md) metodo di un **comando** oggetto o nella [Execute](../../../ado/reference/ado-api/execute-method-ado-connection.md) metodo di un [Connessione](../../../ado/reference/ado-api/connection-object-ado.md) invece dell'oggetto.  
   

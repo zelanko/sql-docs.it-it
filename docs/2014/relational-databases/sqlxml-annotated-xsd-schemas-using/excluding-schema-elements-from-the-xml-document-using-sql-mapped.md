@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - element does not map [SQLXML]
@@ -24,12 +22,12 @@ ms.assetid: 7d2649dd-0038-4a2c-b16d-f80f7c306966
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 96afa13033fee6a2767fc1ad3f6b6761c4a8247f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 50ec2b9a4c35fdf16b8d7f696b9d227eb63ff7cb
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48222313"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52793803"
 ---
 # <a name="excluding-schema-elements-from-the-resulting-xml-document-using-sqlmapped-sqlxml-40"></a>Esclusione di elementi dello schema dal documento XML risultante tramite sql:mapped (SQLXML 4.0)
   A causa del mapping predefinito, viene eseguito il mapping di ogni elemento e attributo nello schema XSD a una vista/tabella e a una colonna di database. Se si desidera creare un elemento nello schema XSD di cui non venga eseguito il mapping a qualsiasi tabella (vista) o colonna di database e che non venga visualizzato in XML, è possibile specificare l'annotazione `sql:mapped`.  

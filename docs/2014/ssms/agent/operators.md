@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - operators (users) [Database Engine]
@@ -23,12 +23,12 @@ ms.assetid: 38e8488f-2669-4cea-b9c3-5f394a663678
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a8bbc084acec25b6a410aae1ffdb98940f53d90c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 03deab738f374716002c4d78e07078e90fb41822
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48098768"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52797993"
 ---
 # <a name="operators"></a>Operatori
   Gli operatori sono alias per persone o gruppi che possono ricevere notifiche elettroniche a completamento dei processi o quando vengono generati avvisi. Il servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent supporta il servizio di notifica degli amministratori tramite gli operatori. Gli operatori consentono di abilitare la notifica e le funzionalità di monitoraggio di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  

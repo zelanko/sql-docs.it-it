@@ -22,12 +22,12 @@ ms.assetid: 7adf2ad7-015d-4cbe-9e29-abaefd779008
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 2df9244f042098be8b0e7898b70254a2b4c50d85
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 714bfb68234a10a61b8ed41651da4f9f7037320e
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48072651"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53351740"
 ---
 # <a name="server-level-roles"></a>Ruoli a livello di server
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fornisce ruoli a livello di server per semplificare la gestione delle autorizzazioni in un server. Questi ruoli sono entità di sicurezza che raggruppano altre entità. L'ambito delle autorizzazioni dei ruoli a livello di server è l'intero server. I*ruoli* equivalgono ai *gruppi* nel sistema operativo Windows.  
@@ -41,7 +41,7 @@ ms.locfileid: "48072651"
 ## <a name="fixed-server-level-roles"></a>Ruoli predefiniti a livello di server  
  Nella tabella seguente vengono illustrati i ruoli predefiniti a livello di server e le relative funzionalità.  
   
-|Ruolo predefinito a livello di server|Description|  
+|Ruolo predefinito a livello di server|Descrizione|  
 |------------------------------|-----------------|  
 |sysadmin|I membri del ruolo predefinito del server sysadmin possono eseguire qualsiasi attività nel server.|  
 |serveradmin|I membri del ruolo predefinito del server serveradmin sono autorizzati a modificare le opzioni di configurazione a livello di server e ad arrestare il server.|  
@@ -54,10 +54,10 @@ ms.locfileid: "48072651"
 |pubblico|Ogni accesso [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] appartiene al ruolo del server public. Quando a un'entità del server non sono state concesse o sono state negate autorizzazioni specifiche per un oggetto a protezione diretta, l'utente eredita le autorizzazioni concesse a public su tale oggetto. Assegnare le autorizzazioni public per un oggetto solo quando si desidera che l'oggetto sia disponibile a tutti gli utenti. Non è possibile modificare l'appartenenza a public.<br /><br /> Nota: public viene implementato in modo diverso rispetto agli altri ruoli. È possibile, tuttavia, concedere, negare o revocare autorizzazioni da public.|  
   
 ## <a name="permissions-of-fixed-server-roles"></a>Autorizzazioni dei ruoli predefiniti del server  
- A ogni ruolo predefinito del server vengono assegnate autorizzazioni specifiche. Per un grafico delle autorizzazioni assegnate ai ruoli del server, vedere la pagina relativa ai [ruoli predefiniti del server e del database del motore di database](http://social.technet.microsoft.com/wiki/contents/articles/2024.database-engine-fixed-server-and-fixed-database-roles.aspx).  
+ A ogni ruolo predefinito del server vengono assegnate autorizzazioni specifiche. Per un grafico delle autorizzazioni assegnate ai ruoli del server, vedere la pagina relativa ai [ruoli predefiniti del server e del database del motore di database](https://social.technet.microsoft.com/wiki/contents/articles/2024.database-engine-fixed-server-and-fixed-database-roles.aspx).  
   
 > [!IMPORTANT]  
->  Il `CONTROL SERVER` l'autorizzazione è simile ma non identica al `sysadmin` ruolo predefinito del server. Le autorizzazioni non implicano le appartenenze ai ruoli e le appartenenze ai ruoli non concedono autorizzazioni. Ad esempio, `CONTROL SERVER` non implica l'appartenenza al ruolo predefinito del server `sysadmin`. Talvolta, tuttavia, è possibile equiparare ruoli e autorizzazioni equivalenti. La maggior parte dei comandi `DBCC` e molte stored procedure di sistema richiedono l'appartenenza al ruolo predefinito del server `sysadmin`. Per un elenco di sistema 171 stored procedure che richiedono `sysadmin` appartenenza, vedere il blog di Andreas Wolter relativo a post [CONTROL SERVER e sysadmin/sa: le autorizzazioni, procedure di sistema, DBCC, creazione automatica dello schema e dei privilegi escalation - avvertenze](http://www.insidesql.org/blogs/andreaswolter/2013/08/control-server-vs-sysadmin-sa-permissions-privilege-escalation-caveats).  
+>  L'autorizzazione `CONTROL SERVER` è simile ma non identica al ruolo predefinito del server `sysadmin`. Le autorizzazioni non implicano le appartenenze ai ruoli e le appartenenze ai ruoli non concedono autorizzazioni. Ad esempio, `CONTROL SERVER` non implica l'appartenenza al ruolo predefinito del server `sysadmin`. Talvolta, tuttavia, è possibile equiparare ruoli e autorizzazioni equivalenti. La maggior parte dei comandi `DBCC` e molte stored procedure di sistema richiedono l'appartenenza al ruolo predefinito del server `sysadmin`. Per un elenco di sistema 171 stored procedure che richiedono `sysadmin` appartenenza, vedere il blog di Andreas Wolter relativo a post [CONTROL SERVER e sysadmin/sa: le autorizzazioni, procedure di sistema, DBCC, creazione automatica dello schema e dei privilegi escalation - avvertenze](http://www.insidesql.org/blogs/andreaswolter/2013/08/control-server-vs-sysadmin-sa-permissions-privilege-escalation-caveats).  
   
 ## <a name="server-level-permissions"></a>Autorizzazioni a livello di server  
  Ai ruoli del server definiti dall'utente è possibile aggiungere solo autorizzazioni a livello di server. Per elencare le autorizzazioni a livello di server, eseguire la seguente istruzione. Di seguito sono elencate le autorizzazioni a livello di server:  
@@ -71,7 +71,7 @@ SELECT * FROM sys.fn_builtin_permissions('SERVER') ORDER BY permission_name;
 ## <a name="working-with-server-level-roles"></a>Lavorare con i ruoli a livello di server.  
  Nella tabella seguente vengono illustrati i comandi, le viste e le funzioni che consentono di utilizzare ruoli a livello di server.  
   
-|Funzionalità|Tipo|Description|  
+|Funzionalità|Tipo|Descrizione|  
 |-------------|----------|-----------------|  
 |[sp_helpsrvrole &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helpsrvrole-transact-sql)|Metadati|Restituisce un elenco di ruoli a livello di server.|  
 |[sp_helpsrvrolemember &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helpsrvrolemember-transact-sql)|Metadati|Restituisce informazioni sui membri di un ruolo a livello di server.|  

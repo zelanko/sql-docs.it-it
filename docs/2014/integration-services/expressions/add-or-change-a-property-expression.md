@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - expressions [Integration Services], creating
@@ -14,12 +13,12 @@ ms.assetid: cb5da499-065f-4fa6-9f6d-5bc5f385241e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5c571f92879a31399c0db4c7bc0acacc1355e169
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8144f0a050afd484d77a12c13780de461587513b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48178501"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52807383"
 ---
 # <a name="add-or-change-a-property-expression"></a>Aggiunta o modifica di un'espressione di proprietà
   È possibile creare espressioni di proprietà per pacchetti, attività, contenitori Ciclo Foreach, contenitori Ciclo For, contenitori Sequenza, gestori di eventi, gestioni connessioni a livello di pacchetto e progetto e provider di log.  
@@ -38,13 +37,13 @@ ms.locfileid: "48178501"
   
     -   Fare clic con il pulsante destro del mouse sull'elemento e scegliere **Proprietà**.  
   
-3.  Fare clic nella casella **Espressioni** e quindi sui puntini di sospensione (…).  
+3.  Fare clic nella casella **Espressioni** e quindi sui puntini di sospensione (...).  
   
 4.  Nell' **Editor espressioni di proprietà**selezionare una proprietà nell'elenco **Proprietà** ed eseguire una delle operazioni seguenti:  
   
     -   Digitare o modificare direttamente l'espressione di proprietà nella colonna **Espressione** , quindi fare clic su **OK**.  
   
-         -oppure-  
+         oppure  
   
     -   Fare clic sui puntini di sospensione (...) nella riga dell'espressione della proprietà per aprire il **Generatore di espressioni**.  
   
@@ -68,7 +67,7 @@ ms.locfileid: "48178501"
 ## <a name="see-also"></a>Vedere anche  
  [Espressioni di Integration Services &#40;SSIS&#41;](integration-services-ssis-expressions.md)   
  [Utilizzo delle espressioni di proprietà nei pacchetti](use-property-expressions-in-packages.md)   
- [Integration Services &#40;SSIS&#41; i pacchetti](../integration-services-ssis-packages.md)   
+ [Pacchetti di Integration Services &#40;SSIS&#41;](../integration-services-ssis-packages.md)   
  [Contenitori in Integration Services](../control-flow/integration-services-containers.md)   
  [Attività di Integration Services](../control-flow/integration-services-tasks.md)   
  [Gestori eventi di Integration Services &#40;SSIS&#41;](../integration-services-ssis-event-handlers.md)   

@@ -11,22 +11,22 @@ ms.assetid: 64f8805c-1ddc-4c96-a47c-22917d12e1ab
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 9bac1f166472fa6f4285779f2054d7121133693f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b1a59c1e32773ddc022319a9357ea61802864a77
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48194571"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53372583"
 ---
 # <a name="lesson-2-create-a-sql-server-credential"></a>Lezione 2: Creare le credenziali di SQL Server
-  **Credenziale:** una credenziale di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] è un oggetto utilizzato per archiviare le informazioni di autenticazione necessarie per connettersi a una risorsa all'esterno di SQL Server.  In questo caso, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] processi di backup e ripristino usano credenziali per l'autenticazione al servizio di archiviazione Blob di Windows Azure. Nelle credenziali vengono archiviati il nome dell'account di archiviazione e i relativi valori della **chiave di accesso** . Una volta create, le credenziali devono essere specificate nell'opzione WITH CREDENTIAL durante l'esecuzione delle istruzioni BACKUP/RESTORE. Per altre informazioni su come visualizzare, copiare o rigenerare le **access keys**dell'account di archiviazione, vedere la pagina relativa alle [chiavi di accesso dell'account di archiviazione](http://msdn.microsoft.com/library/windowsazure/hh531566.aspx).  
+  **Credenziali:** una credenziale di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] è un oggetto usato per archiviare le informazioni di autenticazione necessarie per la connessione a una risorsa all'esterno di SQL Server.  In questo caso, nei processi di backup e ripristino di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] le credenziali vengono utilizzate per l'autenticazione per il servizio di archiviazione BLOB di Windows Azure. Nelle credenziali vengono archiviati il nome dell'account di archiviazione e i relativi valori della **chiave di accesso** . Una volta create, le credenziali devono essere specificate nell'opzione WITH CREDENTIAL durante l'esecuzione delle istruzioni BACKUP/RESTORE. Per altre informazioni su come visualizzare, copiare o rigenerare le **access keys**dell'account di archiviazione, vedere la pagina relativa alle [chiavi di accesso dell'account di archiviazione](https://msdn.microsoft.com/library/windowsazure/hh531566.aspx).  
   
- Per informazioni generali sulle credenziali, vedere [credenziali](../relational-databases/security/authentication-access/credentials-database-engine.md).  
+ Per informazioni generali sulle credenziali, vedere la pagina relativa alle [credenziali](../relational-databases/security/authentication-access/credentials-database-engine.md).  
   
- Per informazioni su altri esempi in cui vengono utilizzate le credenziali, vedere [creare un Proxy di SQL Server Agent](../ssms/agent/create-a-sql-server-agent-proxy.md).  
+ Per informazioni o altri esempi in cui vengono utilizzate le credenziali, vedere [Creazione di un proxy di SQL Server Agent](../ssms/agent/create-a-sql-server-agent-proxy.md).  
   
 > [!IMPORTANT]  
->  I requisiti per la creazione di una credenziale di SQL Server descritta di seguito sono specifici per i processi di backup di SQL Server ([SQL Server Backup to URL](../relational-databases/backup-restore/sql-server-backup-to-url.md), e [SQL Server Managed Backup to Windows Azure](../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)). Per accedere alla risorsa di archiviazione di Azure, SQL Server usa le informazioni sul nome dell'account di archiviazione e sulla chiave di accesso.  Per altre informazioni sulla creazione delle credenziali per l'archiviazione file di database in archiviazione di Azure, vedere [lezione 3: creare una credenziale di SQL Server](../relational-databases/lesson-2-create-a-sql-server-credential-using-a-shared-access-signature.md)  
+>  I requisiti per la creazione delle credenziali di SQL Server descritti di seguito sono specifici per i processi di backup di SQL Server ([SQL Server Backup to URL](../relational-databases/backup-restore/sql-server-backup-to-url.md)e [SQL Server Managed  Backup to Windows Azure](../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)). Per accedere alla risorsa di archiviazione di Azure, SQL Server usa le informazioni sul nome dell'account di archiviazione e sulla chiave di accesso.  Per altre informazioni sulla creazione delle credenziali per l'archiviazione file di database in archiviazione di Azure, vedere [lezione 3: Creare una credenziale di SQL Server](../relational-databases/lesson-2-create-a-sql-server-credential-using-a-shared-access-signature.md)  
   
 ## <a name="create-a-sql-server-credential"></a>Creare le credenziali di SQL Server  
  Per creare le credenziali di SQL Server, attenersi ai passaggi seguenti:  
@@ -41,8 +41,8 @@ ms.locfileid: "48194571"
   
     ```  
     CREATE CREDENTIAL mycredential   
-    WITH IDENTITY= 'mystorageaccount' – this is the name of the storage account you specified when creating a storage account (See Lesson 1)   
-    , SECRET = '<storage account access key>' – this should be either the Primary or Secondary Access Key for the storage account (See Lesson 1)  
+    WITH IDENTITY= 'mystorageaccount' - this is the name of the storage account you specified when creating a storage account (See Lesson 1)   
+    , SECRET = '<storage account access key>' - this should be either the Primary or Secondary Access Key for the storage account (See Lesson 1)  
   
     ```  
   

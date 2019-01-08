@@ -20,16 +20,16 @@ ms.assetid: 9e84a58e-db48-4821-a0cd-5c711fcbe36b
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d211fff7cdc008988dd9f984e64838c8903c6dc9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 61e32c11aafeaf693188a96b48ddd60728ba5bc4
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47813949"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53203950"
 ---
 # <a name="sqldisconnect-function"></a>Funzione SQLDisconnect
 **Conformità**  
- Versione introdotta: Conformità agli standard 1.0 di ODBC: ISO 92  
+ Versione introdotta: Conformità agli standard 1.0 ODBC: ISO 92  
   
  **Riepilogo**  
  **SQLDisconnect** chiude la connessione associata a un handle di connessione specifica.  
@@ -39,7 +39,7 @@ ms.locfileid: "47813949"
 ```  
   
 SQLRETURN SQLDisconnect(  
-     SQLHDBC     ConnectionHandle);  
+     SQLHDBC     ConnectionHandle);  
 ```  
   
 ## <a name="arguments"></a>Argomenti  
@@ -52,7 +52,7 @@ SQLRETURN SQLDisconnect(
 ## <a name="diagnostics"></a>Diagnostica  
  Quando **SQLDisconnect** restituisce SQL_ERROR o SQL_SUCCESS_WITH_INFO, un valore SQLSTATE associato possono essere ottenuti chiamando **SQLGetDiagRec** con un *HandleType* di SQL _ HANDLE_DBC e un *gestiscono* dei *ConnectionHandle*. Nella tabella seguente sono elencati i valori SQLSTATE comunemente restituiti da **SQLDisconnect** e illustra ognuna nel contesto di questa funzione; la notazione "(DM)" precede le descrizioni di SQLSTATE restituiti da Gestione Driver. Il codice restituito a ogni valore SQLSTATE è SQL_ERROR, se non specificato diversamente.  
   
-|SQLSTATE|Errore|Description|  
+|SQLSTATE|Errore|Descrizione|  
 |--------------|-----------|-----------------|  
 |01000|Avviso generale|Messaggio informativo specifico del driver. (Funzione restituisce SQL_SUCCESS_WITH_INFO).|  
 |01002|Errore di disconnessione|Si è verificato un errore durante la disconnessione. Tuttavia, la disconnessione è stata completata. (Funzione restituisce SQL_SUCCESS_WITH_INFO).|  

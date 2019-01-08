@@ -13,15 +13,15 @@ ms.assetid: 43e50133-45ef-47a2-b575-34dfcc28ec98
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 604a290e0f8ac64c9edbcba72c488c0ad67f7b9a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 25fd4b521ba46e2a4e47dea9e7c2fd962d3c8895
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48167051"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53364133"
 ---
 # <a name="dataset-properties-dialog-box-options-report-builder"></a>Finestra di dialogo Proprietà set di dati, Opzioni (Generatore report)
-  Selezionare **Opzioni** nella finestra di dialogo **Proprietà set di dati** per modificare le opzioni relative ai dati, ad esempio le regole di confronto e la gestione dei subtotali come dati dettaglio, per la query. Per altre informazioni sulle regole di confronto, vedere [Regole di confronto e supporto Unicode](../../relational-databases/collations/collation-and-unicode-support.md) nella [documentazione online di SQL Server](http://go.microsoft.com/fwlink/?linkid=98335).  
+  Selezionare **Opzioni** nella finestra di dialogo **Proprietà set di dati** per modificare le opzioni relative ai dati, ad esempio le regole di confronto e la gestione dei subtotali come dati dettaglio, per la query. Per altre informazioni sulle regole di confronto, vedere [Regole di confronto e supporto Unicode](../../relational-databases/collations/collation-and-unicode-support.md) nella [documentazione online di SQL Server](https://go.microsoft.com/fwlink/?linkid=98335).  
   
  Le opzioni relative ai dati che sono parte di una definizione del set di dati condiviso nel server di report sono valide per tutti i report in cui viene utilizzato il set di dati condiviso. È possibile ignorare le opzioni per il set di dati condiviso una volta aggiunto a un report. Queste modifiche vengono applicate solo al report nel quale sono definite.  
   
@@ -51,7 +51,7 @@ ms.locfileid: "48167051"
 ## <a name="see-also"></a>Vedere anche  
  [Guida di Generatore report per finestre di dialogo, riquadri e procedure guidate](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)   
  [Funzione di aggregazione &#40;Generatore report e SSRS&#41;](../report-design/report-builder-functions-aggregate-function.md)   
- [Filtro, raggruppamento e ordinamento di dati &#40;Generatore report e SSRS&#41;](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
+ [Filtrare, raggruppare e ordinare i dati &#40;Generatore report e SSRS&#41;](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [Set di dati condivisi e incorporati del report &#40;Generatore report e SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
  [Finestra di dialogo Proprietà set di dati, Query &#40;Generatore report&#41;](dataset-properties-dialog-box-query-report-builder.md)  
   

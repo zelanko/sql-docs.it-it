@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - PowerShell [SQL Server], job steps
@@ -15,12 +15,12 @@ ms.assetid: 50afcf84-fae0-4eb5-9b0f-f2cf144c1433
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 68f671d8c0345db830a6cdac463869b531b39011
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 08a27fd6edbfa93fd76ae99186e2425e5279e8aa
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48104611"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52818078"
 ---
 # <a name="create-a-powershell-script-job-step"></a>Create a PowerShell Script Job Step
   In questo argomento vengono descritte le procedure per la creazione e la definizione di un passaggio di processo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent mediante il quale viene eseguito uno script di PowerShell in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -29,7 +29,7 @@ ms.locfileid: "48104611"
   
 -   **Prima di iniziare:**  
   
-     [Security](#Security)  
+     [Sicurezza](#Security)  
   
 -   **Per creare un passaggio di processo di uno script di PowerShell utilizzando:**  
   
@@ -42,7 +42,7 @@ ms.locfileid: "48104611"
 ##  <a name="BeforeYouBegin"></a> Prima di iniziare  
   
 ###  <a name="Security"></a> Sicurezza  
- Per informazioni dettagliate, vedere [Implement SQL Server Agent Security](implement-sql-server-agent-security.md).  
+ Per informazioni dettagliate, vedere [Implementazione della sicurezza di SQL Server Agent](implement-sql-server-agent-security.md).  
   
 ##  <a name="SSMS"></a> Utilizzo di SQL Server Management Studio  
   
@@ -64,7 +64,7 @@ ms.locfileid: "48104611"
   
 8.  Fare clic sulla pagina **Avanzate** per impostare le opzioni seguenti relative al passaggio di processo: l'azione da eseguire in caso di esito positivo o negativo del passaggio, il numero di tentativi di esecuzione del passaggio che devono essere effettuati da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent e gli intervalli tra tentativi successivi.  
   
-##  <a name="TSQL"></a> Uso di Transact-SQL  
+##  <a name="TSQL"></a> Utilizzo di Transact-SQL  
   
 #### <a name="to-create-a-powershell-script-job-step"></a>Per creare un passaggio di processo di uno script di PowerShell  
   
@@ -93,6 +93,6 @@ ms.locfileid: "48104611"
 ##  <a name="SMO"></a> Utilizzo di SQL Server Management Objects  
  **Per creare un passaggio di processo di uno script di PowerShell**  
   
- Usare il `JobStep` classe utilizzando un linguaggio di programmazione desiderato, ad esempio Visual Basic, Visual c# o PowerShell.  
+ Usare la classe `JobStep` tramite un linguaggio di programmazione scelto come Visual Basic, Visual C# o PowerShell.  
   
   

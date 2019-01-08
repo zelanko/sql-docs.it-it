@@ -4,26 +4,25 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: install
 ms.topic: conceptual
 ms.assetid: 44a73ddb-18ad-415c-bfbe-126ab2e3290b
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6dbd6a425222c0e3f31d55a590294e9d3554f96e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9f9439fd1b0844b09e26331859ce37d18817f908
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48181111"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52822115"
 ---
 # <a name="modify-the-controller-and-client-services-accounts"></a>Modificare gli account dei servizi controller e client
   In questo argomento verrà illustrato come modificare gli account dei servizi client e controller di Riesecuzione distribuita e quindi riapplicare gli elenchi di controllo di accesso (ACL).  
   
 ### <a name="to-start-or-stop-the-distributed-replay-services-using-computer-management"></a>Per avviare o arrestare i servizi client Riesecuzione distribuita tramite Gestione computer  
   
-1.  Nel computer in cui sono installati i servizi client riesecuzione distribuita dal prompt dei comandi, digitare `dcomcnfg`.  
+1.  Nel computer in cui sono installati i servizi Riesecuzione distribuita digitare `dcomcnfg` al prompt dei comandi.  
   
 2.  Fare doppio clic su **Servizi**, scorrere verso il basso e fare clic con il pulsante destro del mouse su **nome servizio>\< Riesecuzione distribuita di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** e quindi fare clic su **Avvia** o **Arresta**.  
   
@@ -35,7 +34,7 @@ ms.locfileid: "48181111"
   
 3.  Nella scheda **Accesso** della finestra **Proprietà di Controller di Riesecuzione distribuita di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** selezionare **Account seguente**, digitare il nuovo account di accesso o fare clic su **Sfoglia** per selezionarlo, quindi fare clic su **OK**.  
   
-     **Importante**: quando si configura il Controller di Riesecuzione distribuita, è possibile specificare uno o più account utente da usare per eseguire i servizi client Riesecuzione distribuita. Di seguito viene fornito l'elenco degli account supportati:  
+     **Importante**: Quando si configura Distributed Replay Controller, è possibile specificare uno o più account utente che verrà utilizzato per eseguire i servizi Client riesecuzione distribuita. Di seguito viene fornito l'elenco degli account supportati:  
   
     -   Account utente di dominio  
   
@@ -57,7 +56,7 @@ ms.locfileid: "48181111"
   
     1.  Arrestare il servizio controller di Riesecuzione distribuita di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-    2.  Nel computer controller in cui è installato il servizio controller, dal prompt dei comandi, digitare `dcomcnfg`.  
+    2.  Nel computer controller in cui è installato il relativo servizio, digitare `dcomcnfg` dal prompt dei comandi.  
   
     3.  Nella finestra **Servizi componenti** passare a **Radice console -> Servizi componenti -> Computer -> Risorse del computer -> Config DCOM ->DReplayController**.  
   

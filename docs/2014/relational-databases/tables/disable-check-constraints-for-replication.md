@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: table-view-index
 ms.topic: conceptual
 helpviewer_keywords:
 - CHECK constraints, disabling
@@ -16,12 +15,12 @@ ms.assetid: af98fc70-24dd-4bd3-a0a3-f701dfa67b2c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f0ffb9af3b02bf8c92041d64b54d06b55a24f42a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 957fcd77a6443cf2e23be8965a68823085db870c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48061571"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52807523"
 ---
 # <a name="disable-check-constraints-for-replication"></a>Disabilitare un vincolo CHECK per la replica
   È possibile disabilitare i vincoli CHECK in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. I vincoli CHECK possono essere espressamente disabilitati per la replica e ciò può essere utile quando si pubblicano dati da una versione precedente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -48,7 +47,7 @@ ms.locfileid: "48061571"
   
 4.  Scegliere **Chiudi**.  
   
-##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
   
 #### <a name="to-disable-a-check-constraint-for-replication"></a>Per disabilitare un vincolo CHECK per la replica  
   

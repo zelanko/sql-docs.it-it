@@ -18,12 +18,12 @@ ms.assetid: 06a776e6-296c-4ec7-9fa5-0794709ccb17
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 66714f9f401c8a5061b1cff2d316555d5e9a71bc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 914a1f0eb36ad0da4076f487d1771a8dfd23bfb1
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48093341"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52807253"
 ---
 # <a name="limit-search-results-with-rank"></a>Limitazione dei risultati della ricerca mediante RANK
   Le funzioni [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) e [FREETEXTTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) restituiscono una colonna denominata RANK che contiene valori ordinali compresi tra 0 e 1000 (valori di classificazione). Questi valori vengono utilizzati per classificare le righe restituite in base al grado di corrispondenza con i criteri di selezione. I valori di pertinenza indicano solo un ordine relativo di pertinenza delle righe nel set di risultati, dove un valore inferiore indica una pertinenza inferiore. I valori effettivi sono senza importanza e in genere variano ogni volta che viene eseguita la query.  
@@ -37,7 +37,7 @@ ms.locfileid: "48093341"
   
 ##  <a name="examples"></a> Esempi di utilizzo di RANK per limitare i risultati della ricerca  
   
-### <a name="example-a-searching-for-only-the-top-three-matches"></a>Esempio A: Ricerca delle prime tre corrispondenze  
+### <a name="example-a-searching-for-only-the-top-three-matches"></a>Esempio A: Cercare solo le prime tre corrispondenze  
  Nell'esempio seguente viene utilizzato CONTAINSTABLE per restituire solo le prime tre corrispondenze.  
   
 ```  
@@ -68,7 +68,7 @@ RANK        Address                          City
 ```  
   
   
-### <a name="example-b-searching-for-the-top-ten-matches"></a>Esempio B: Ricerca delle prime dieci corrispondenze  
+### <a name="example-b-searching-for-the-top-ten-matches"></a>Esempio B: La ricerca per prime dieci corrispondenze  
  Nell'esempio seguente viene utilizzato CONTAINSTABLE per restituire la descrizione dei primi 5 prodotti la cui colonna `Description` include la parola "aluminum" accanto alla parola "light" o "lightweight".  
   
 ```  
@@ -141,7 +141,7 @@ GO
 ### <a name="rank-computation-issues"></a>Problemi nel calcolo della pertinenza  
  Il processo di calcolo della pertinenza dipende da alcuni fattori.  I word breaker delle diverse lingue suddividono il testo in token in modo diverso. La stringa "pick-up", ad esempio, potrebbe essere suddivisa in "pick" "up" da un word breaker e in "pick-up" da un altro. Ciò significa che la corrispondenza e il calcolo della pertinenza variano in base alla lingua specificata, poiché non solo le parole sono diverse, ma lo è anche la lunghezza dei documenti. La differenza di lunghezza dei documenti può influire sul calcolo della pertinenza per tutte le query.  
   
- Le statistiche, ad esempio `IndexRowCount` possono variare notevolmente. Se, ad esempio, un catalogo presenta 2 miliardi di righe nell'indice master, un nuovo documento viene indicizzato in un indice intermedio in memoria e la pertinenza corrispondente basata sul numero di documenti dell'indice in memoria potrebbe essere asimmetrica rispetto alla pertinenza per i documenti dall'indice master. Per questo motivo, dopo ogni popolamento che determini l'indicizzazione o la reindicizzazione di un grande numero di righe è consigliabile unire gli indici in un indice master utilizzando l'istruzione ALTER FULLTEXT CATALOG ... Istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] REORGANIZE. Il motore di ricerca full-text, inoltre, unirà automaticamente gli indici in base a parametri quali il numero e le dimensioni di indici intermedi.  
+ Statistiche quali `IndexRowCount` possono variare notevolmente. Se, ad esempio, un catalogo presenta 2 miliardi di righe nell'indice master, un nuovo documento viene indicizzato in un indice intermedio in memoria e la pertinenza corrispondente basata sul numero di documenti dell'indice in memoria potrebbe essere asimmetrica rispetto alla pertinenza per i documenti dall'indice master. Per questo motivo, dopo ogni popolamento che determini l'indicizzazione o la reindicizzazione di un grande numero di righe è consigliabile unire gli indici in un indice master utilizzando l'istruzione ALTER FULLTEXT CATALOG ... Istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] REORGANIZE. Il motore di ricerca full-text, inoltre, unirà automaticamente gli indici in base a parametri quali il numero e le dimensioni di indici intermedi.  
   
  I valori `MaxOccurrence` vengono normalizzati in 1 di 32 intervalli. Ciò significa, ad esempio, che un documento di 50 parole di lunghezza viene gestito come un documento di 100 parole. Di seguito viene riportata la tabella utilizzata per la normalizzazione. Poiché le lunghezze rientrano nell'intervallo tra i valori di tabella adiacenti 32 e 128, i documenti vengono di fatto gestiti come se avessero la stessa lunghezza, 128 (32 < `docLength` <= 128).  
   
@@ -176,9 +176,9 @@ Rank = min( MaxQueryRank, HitCount * 16 * StatisticalWeight / MaxOccurrence )
 ```  
 ContainsRank = same formula used for CONTAINSTABLE ranking of a single term (above).  
 Weight = the weight specified in the query for each term. Default weight is 1.  
-WeightedSum = Σ[key=1 to n] ContainsRankKey * WeightKey  
-Rank =  ( MaxQueryRank * WeightedSum ) / ( ( Σ[key=1 to n] ContainsRankKey^2 )   
-      + ( Σ[key=1 to n] WeightKey^2 ) - ( WeightedSum ) )  
+WeightedSum = ??[key=1 to n] ContainsRankKey * WeightKey  
+Rank =  ( MaxQueryRank * WeightedSum ) / ( ( ??[key=1 to n] ContainsRankKey^2 )   
+      + ( ??[key=1 to n] WeightKey^2 ) - ( WeightedSum ) )  
   
 ```  
   
@@ -187,14 +187,14 @@ Rank =  ( MaxQueryRank * WeightedSum ) / ( ( Σ[key=1 to n] ContainsRankKey^2 )
  Il calcolo della pertinenza di[FREETEXTTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) si basa sulla formula OKAPI BM25. Le query FREETEXTTABLE aggiungono parole alla query tramite generazione flessiva (forme flesse delle parole della query originale). Queste parole vengono gestite separatamente, senza nessuna relazione particolare con le parole di origine. I sinonimi generati dal thesaurus vengono gestiti come termini separati, con lo stesso valore ponderato. Ogni parola nella query contribuisce alla pertinenza.  
   
 ```  
-Rank = Σ[Terms in Query] w ( ( ( k1 + 1 ) tf ) / ( K + tf ) ) * ( ( k3 + 1 ) qtf / ( k3 + qtf ) ) )  
+Rank = ??[Terms in Query] w ( ( ( k1 + 1 ) tf ) / ( K + tf ) ) * ( ( k3 + 1 ) qtf / ( k3 + qtf ) ) )  
 Where:   
 w is the Robertson-Sparck Jones weight.   
 In simplified form, w is defined as:   
-w = log10 ( ( ( r + 0.5 ) * ( N – R + r + 0.5 ) ) / ( ( R – r + 0.5 ) * ( n – r + 0.5 ) )  
+w = log10 ( ( ( r + 0.5 ) * ( N - R + r + 0.5 ) ) / ( ( R - r + 0.5 ) * ( n - r + 0.5 ) )  
 N is the number of indexed rows for the property being queried.   
 n is the number of rows containing the word.   
-K is ( k1 * ( ( 1 – b ) + ( b * dl / avdl ) ) ).   
+K is ( k1 * ( ( 1 - b ) + ( b * dl / avdl ) ) ).   
 dl is the property length, in word occurrences.   
 avdl is the average length of the property being queried, in word occurrences.   
 k1, b, and k3 are the constants 1.2, 0.75, and 8.0, respectively.   
@@ -204,6 +204,6 @@ qtf is the frequency of the term in the query.
   
   
 ## <a name="see-also"></a>Vedere anche  
- [Eseguire query con ricerca full-text](query-with-full-text-search.md)  
+ [Esecuzione della query con ricerca Full-Text](query-with-full-text-search.md)  
   
   

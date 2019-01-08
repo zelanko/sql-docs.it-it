@@ -14,12 +14,12 @@ ms.assetid: 0f144059-24e0-40c0-bde4-d48c75e46598
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 90b8f11b303c72eedbf116ae4154ce9d611a401c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d1d563b4cefc2e074c437fa0ab3b66bfea9796fb
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48164861"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53372223"
 ---
 # <a name="analysis-services-personalization-extensions"></a>Analysis Services Personalization Extensions
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] le estensioni della personalizzazione sono alla base di base dell'implementazione di un'architettura plug-in. In un'architettura plug-in è possibile sviluppare dinamicamente nuovi oggetti cubo e funzionalità e condividerli facilmente con gli altri sviluppatori. Di conseguenza, [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] estensioni della personalizzazione forniscono le funzionalità che rende possibile raggiungere i seguenti obiettivi:  
@@ -43,7 +43,7 @@ ms.locfileid: "48164861"
  All'avvio del servizio [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] carica gli assembly necessari e determina quali classi dispongono di <xref:Microsoft.AnalysisServices.AdomdServer.PlugInAttribute> attributo personalizzato.  
   
 > [!NOTE]  
->  [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] definisce gli attributi personalizzati come un modo per descrivere il codice e influisce sul comportamento in fase di esecuzione. Per altre informazioni, vedere l'argomento "[Cenni preliminari sugli attributi](http://go.microsoft.com/fwlink/?LinkId=82929)," nel [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Guida per sviluppatori su MSDN.  
+>  [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] definisce gli attributi personalizzati come un modo per descrivere il codice e influisce sul comportamento in fase di esecuzione. Per altre informazioni, vedere l'argomento "[Cenni preliminari sugli attributi](https://go.microsoft.com/fwlink/?LinkId=82929)," nel [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Guida per sviluppatori su MSDN.  
   
  Per tutte le classi con il <xref:Microsoft.AnalysisServices.AdomdServer.PlugInAttribute> dell'attributo personalizzato, [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] richiama i costruttori predefiniti. Richiamare tutti i costruttori all'avvio fornisce un percorso comune da cui compilare nuovi oggetti e che è indipendente da qualsiasi attività dell'utente.  
   
@@ -141,10 +141,10 @@ ms.locfileid: "48164861"
  I comandi CREATE KPI e DROP KPI sono stati aggiunti alla sintassi MDX. Gli indicatori KPI possono essere creati dinamicamente da qualsiasi script MDX.  
   
 ### <a name="schema-rowsets-extensions"></a>Estensioni dei set di righe degli schemi  
- In MDSCHEMA_MEMBERS *ambito* viene aggiunta. I valori di ambito sono i seguenti: MDMEMBER_SCOPE_GLOBAL=1, MDMEMBER_SCOPE_SESSION=2.  
+ In MDSCHEMA_MEMBERS *ambito* viene aggiunta. I valori di ambito sono i seguenti: MDMEMBER_SCOPE_GLOBAL=1 = 1, MDMEMBER_SCOPE_SESSION=2 = 2.  
   
- In MDSCHEMA_SETS *set_evaluation_context* viene aggiunta. I valori di contesto di valutazione dei set sono i seguenti: MDSET_RESOLUTION_STATIC = 1, MDSET_RESOLUTION_DYNAMIC = 2.  
+ In MDSCHEMA_SETS *set_evaluation_context* viene aggiunta. Impostare il contesto di valutazione valori sono i seguenti: MDSET_RESOLUTION_STATIC = 1, MDSET_RESOLUTION_DYNAMIC = 2.  
   
- In MDSCHEMA_KPIS è stata aggiunta la colonna Scope. I valori di ambito sono i seguenti: MDKPI_SCOPE_GLOBAL=1, MDKPI_SCOPE_SESSION=2.  
+ In MDSCHEMA_KPIS è stata aggiunta la colonna Scope. I valori di ambito sono i seguenti: MDKPI_SCOPE_GLOBAL=1 = 1, MDKPI_SCOPE_SESSION=2 = 2.  
   
   

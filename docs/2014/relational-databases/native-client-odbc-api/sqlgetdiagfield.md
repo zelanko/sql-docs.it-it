@@ -14,17 +14,17 @@ ms.assetid: 395245ba-0372-43ec-b9a4-a29410d85a6d
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 20b84484500e338136ff0ab99af7890d06a466e3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8fb158b2c11f48733c5eacb3827a43a3303c4a51
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48109517"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53368113"
 ---
 # <a name="sqlgetdiagfield"></a>SQLGetDiagField
   Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC Native Client specifica i campi di diagnostica aggiuntivi seguenti per `SQLGetDiagField`. Questi campi supportano la segnalazione dettagliata degli errori per le applicazioni [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e sono disponibili in tutti i record di diagnostica generati negli handle di istruzione ODBC e di connessione ODBC collegati. I campi sono definiti in sqlncli.h.  
   
-|Campo del record di diagnostica|Description|  
+|Campo del record di diagnostica|Descrizione|  
 |------------------------------|-----------------|  
 |SQL_DIAG_SS_LINE|Segnala il numero di riga di una stored procedure che genera un errore. Il valore di SQL_DIAG_SS_LINE è significativo solo se SQL_DIAG_SS_PROCNAME restituisce un valore. Il valore viene restituito come numero intero senza segno a 16 bit.|  
 |SQL_DIAG_SS_MSGSTATE|Stato di un messaggio di errore. Per informazioni sullo stato del messaggio di errore, vedere [RAISERROR](/sql/t-sql/language-elements/raiserror-transact-sql). Il valore viene restituito come numero intero con segno a 32 bit.|  
@@ -100,7 +100,7 @@ ms.locfileid: "48109517"
  Per altre informazioni sui parametri con valori di tabella, vedere [parametri con valori di tabella &#40;ODBC&#41;](../native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Funzione SQLGetDiagField](http://go.microsoft.com/fwlink/?LinkId=59352)   
+ [Funzione SQLGetDiagField](https://go.microsoft.com/fwlink/?LinkId=59352)   
  [Dettagli di implementazione dell'API ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

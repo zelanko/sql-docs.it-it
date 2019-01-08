@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - change data capture [SQL Server], monitoring
@@ -15,12 +14,12 @@ ms.assetid: 23bda497-67b2-4e7b-8e4d-f1f9a2236685
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: dc1702fd89a232d6b939dc8300e42925a0da293b
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: c3843fafac0616ffed52e82a307b1f3bfa801cc2
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51560168"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52788903"
 ---
 # <a name="administer-and-monitor-change-data-capture-sql-server"></a>Amministrare e monitorare Change Data Capture (SQL Server)
   In questo argomento viene descritto come amministrare ed eseguire il monitoraggio dell'acquisizione dati delle modifiche.  
@@ -32,7 +31,7 @@ ms.locfileid: "51560168"
  Per acquisire familiarità con il comportamento del processo di acquisizione, è necessario comprendere il modo in cui i parametri configurabili vengono utilizzati dalla stored procedure `sp_cdc_scan`.  
   
 #### <a name="maxtrans-parameter"></a>Parametro maxtrans  
- Il parametro *maxtrans* specifica il numero massimo di transazioni che possono essere elaborate in un singolo ciclo di analisi del log. Se, durante l'analisi, il numero di transazioni da elaborare raggiunge questo limite, nessuna transazione aggiuntiva vengono incluse nell'analisi corrente. Al termine di un ciclo di analisi, il numero di transazioni elaborate sarà sempre minore o uguale a *maxtrans*.  
+ Il parametro *maxtrans* specifica il numero massimo di transazioni che possono essere elaborate in un singolo ciclo di analisi del log. Se durante l'analisi il numero di transazioni da elaborare raggiunge tale limite, nell'analisi corrente non viene inclusa alcuna transazione aggiuntiva. Al termine di un ciclo di analisi, il numero di transazioni elaborate sarà sempre minore o uguale a *maxtrans*.  
   
 #### <a name="maxscans-parameter"></a>Parametro maxscans  
  Il parametro *maxscans* specifica il numero massimo di tentativi di cicli di analisi per svuotare il log prima dell’uscita (parametro continuous = 0) o dell'esecuzione di un'istruzione WAITFOR (parametro continuous = 1).  
@@ -76,7 +75,7 @@ ms.locfileid: "51560168"
  Quando viene eseguita una pulizia, il limite minimo per tutte le istanze di acquisizione viene inizialmente aggiornato in una singola transazione. Viene quindi effettuato il tentativo di rimozione delle voci obsolete dalle tabelle delle modifiche e dalla tabella cdc.lsn_time_mapping. Il valore soglia configurabile limita il numero di voci eliminate in ogni singola istruzione. La mancata esecuzione dell'eliminazione in una singola tabella non impedirà il tentativo di eliminazione nelle altre.  
   
 ### <a name="cleanup-job-customization"></a>Personalizzazione del processo di pulizia  
- Per il processo di pulizia, la possibilità di personalizzazione consiste nella strategia utilizzata per determinare le voci delle tabelle delle modifiche da ignorare. L'unica strategia supportata nel processo di pulizia è basata sul tempo. In questa situazione, il nuovo limite minimo viene calcolato sottraendo il periodo di memorizzazione consentito dall'ora di esecuzione del commit dell'ultima transazione elaborata. Poiché le procedure di pulizia sottostanti sono basate sui `lsn` anziché sul tempo, un numero qualsiasi di strategie può essere utilizzato per determinare il più piccolo `lsn` mantenere nelle tabelle delle modifiche. Solo alcuni di questi valori sono rigorosamente basati sul tempo. È possibile, ad esempio, utilizzare le informazioni sui client come valida alternativa in caso di mancata esecuzione dei processi a valle che richiedono l'accesso alle tabelle delle modifiche. Benché la strategia predefinita applichi lo stesso valore `lsn` per pulire tutte le tabelle delle modifiche dei database, inoltre, è possibile chiamare la procedura di pulizia sottostante anche per eseguire la pulizia a livello di istanza di acquisizione.  
+ Per il processo di pulizia, la possibilità di personalizzazione consiste nella strategia utilizzata per determinare le voci delle tabelle delle modifiche da ignorare. L'unica strategia supportata nel processo di pulizia è basata sul tempo. In questa situazione, il nuovo limite minimo viene calcolato sottraendo il periodo di memorizzazione consentito dall'ora di esecuzione del commit dell'ultima transazione elaborata. Poiché le procedure di pulizia sottostanti sono basate sui `lsn` anziché sul tempo, un numero qualsiasi di strategie può essere utilizzato per determinare il più piccolo `lsn` mantenere nelle tabelle delle modifiche. Solo alcuni di questi valori sono rigorosamente basati sul tempo. È possibile, ad esempio, utilizzare le informazioni sui client come valida alternativa in caso di mancata esecuzione dei processi a valle che richiedono l'accesso alle tabelle delle modifiche. Inoltre, anche se la strategia predefinita applica lo stesso `lsn` per pulire le tabelle delle modifiche di tutti i database, la procedura di pulizia sottostante, può anche essere chiamato per eseguire la pulizia a livello di istanza di acquisizione.  
   
 ##  <a name="Monitor"></a> Monitoraggio del processo Change Data Capture  
  Il monitoraggio del processo Change Data Capture consente di determinare se le modifiche vengono scritte correttamente e con una latenza ragionevole nelle tabelle delle modifiche. L'esecuzione il monitoraggio può consentire anche di identificare gli errori che si potrebbero verificare. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono incluse due DMV per monitorare Change Data Capture: [sys.dm_cdc_log_scan_sessions](../native-client-ole-db-data-source-objects/sessions.md) e [sys.dm_cdc_errors](../native-client-ole-db-errors/errors.md).  

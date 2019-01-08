@@ -1,5 +1,5 @@
 ---
-title: Creare un cubo da un modello senza utilizzare una vista origine dati | Documenti Microsoft
+title: Creare un cubo da un modello senza utilizzare una vista origine dati | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 654278ee171666564771a3e620c903e598039a74
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 28f87d9cbe6dfa0bf41a0d0547e8da7bec5659bf
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34025898"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52521352"
 ---
 # <a name="create-a-cube-from-a-template-without-using-a-data-source-view"></a>Creare un cubo da un modello senza utilizzare una vista origine dati
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "34025898"
   
  Sia nella griglia **Selezionare le misure dal modello** sia nella griglia **Aggiungi nuove misure** vengono visualizzati i valori delle colonne descritte nella tabella seguente. È possibile fare clic su un valore in entrambi gli elenchi per modificarlo.  
   
-|Colonna|Description|  
+|colonna|Descrizione|  
 |------------|-----------------|  
 |**Nome misura**|Un valore in questa colonna consente di definire il nome di una misura nel cubo. Fare clic su un valore in questa colonna per digitare un nome. Fare clic su **Aggiungi nuova misura** in questa colonna per creare una nuova misura. Questa colonna consente di impostare la proprietà **Name** nell'oggetto misura.|  
 |**Gruppo di misure**|Nome del gruppo di misure contenente la misura. Fare clic su questo valore per scegliere o digitare un nome. Se si eliminano tutte le misure che appartengono a un particolare gruppo, viene rimosso anche quest'ultimo. Questa colonna consente di impostare la proprietà **Name** per l'oggetto gruppo di misure.|  
@@ -55,10 +55,10 @@ ms.locfileid: "34025898"
   
  Sia nella griglia **Selezionare le dimensioni dal modello** sia nella griglia **Aggiungi nuove dimensioni** vengono visualizzati i valori delle colonne descritte nella tabella seguente. È possibile fare clic su un valore in entrambi gli elenchi per modificarlo.  
   
-|Colonna|Description|  
+|colonna|Descrizione|  
 |------------|-----------------|  
 |**Tipo**|Viene visualizzato il tipo di dimensione per una dimensione del modello. Fare clic su questa cella per modificare il tipo di dimensione per una dimensione. Questa colonna consente di impostare la proprietà **Tipo** per l'oggetto dimensione.|  
-|**Nome**|Viene visualizzato il nome della dimensione. Fare clic su questa cella per digitare un nome diverso. Questo valore consente di impostare la proprietà **Nome** per l'oggetto dimensione.|  
+|**Name**|Viene visualizzato il nome della dimensione. Fare clic su questa cella per digitare un nome diverso. Questo valore consente di impostare la proprietà **Nome** per l'oggetto dimensione.|  
 |**Dimensione a modifica lenta**|Viene specificato che si tratta di una dimensione a modifica lenta. Se si seleziona questa casella di controllo, alla dimensione vengono aggiunti gli attributi relativi alla data di inizio, alla data di fine, all'ID originale e allo stato della dimensione a modifica lenta. L'opzione**Dimensione a modifica lenta** è selezionata per impostazione predefinita se si usa un modello per creare il cubo e la procedura guidata rileva questi quattro tipi di attributo in una dimensione del modello.|  
 |**Attributi**|Vengono visualizzati gli attributi che devono essere creati per la dimensione. Ogni nome di attributo nell'elenco è preceduto dal nome della dimensione. Questo elenco è di sola lettura. È possibile modificare gli attributi tramite Progettazione dimensioni dopo il completamento della procedura guidata.|  
   
@@ -79,10 +79,10 @@ ms.locfileid: "34025898"
 ## <a name="specifying-additional-calendars"></a>Specifica di calendari aggiuntivi  
  Nella pagina **Impostazione calendari aggiuntivi** della procedura guidata selezionare i calendari su cui basare le gerarchie nella dimensione. È possibile scegliere i calendari indicati di seguito.  
   
-|Calendario|Description|  
+|Calendario|Descrizione|  
 |--------------|-----------------|  
 |Calendario fiscale|Calendario fiscale di dodici mesi. Se si seleziona questo calendario, specificare il giorno e il mese di inizio dell'anno fiscale in uso nell'organizzazione.|  
-|Calendario report (o marketing)|Calendario di report di dodici mesi in cui sono inclusi due mesi di quattro settimane e un mese di cinque settimane in un modello periodico di tre mesi (trimestre). Se si seleziona questo calendario, specificare il giorno e il mese di inizio e il modello trimestrale di 4-4-5, 4-5-4 o 5-4-4 settimane, dove ogni cifra rappresenta il numero di settimane in un mese.|  
+|Calendario report (o marketing)|Calendario di report di dodici mesi in cui sono inclusi due mesi di quattro settimane e un mese di cinque settimane in un modello periodico di tre mesi (trimestre). Se si seleziona questo calendario, specificare il giorno e mese e il modello di tre mesi di 4-4 e 5, 4-5-4 o 5-4-4 settimane, dove ogni cifra rappresenta il numero di settimane al mese.|  
 |Calendario produzione|Calendario in cui vengono utilizzati 13 periodi di quattro settimane, divisi in tre trimestri di quattro periodi e un trimestre di cinque periodi. Se si seleziona questo calendario, specificare la settimana di inizio, compresa tra 1 e 4, il mese per l'anno di produzione, nonché il trimestre con periodi aggiuntivi.|  
 |Calendario ISO 8601|Calendario standard ISO (International Organization for Standardization) per il formato della data e dell'ora (8601). Calendario costituito da un numero intero di settimane di sette giorni. Per evitare di dividere una settimana, il calendario inizia un nuovo anno pochi giorni prima o dopo il primo gennaio.|  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 helpviewer_keywords:
 - maintenance plans [SQL Server], creating
@@ -13,12 +12,12 @@ ms.assetid: a945cb65-ba7a-42f4-bbd9-6ec675745523
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 3a40eb53444fb71158e79a566f2f27f2482e0079
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: de7ff72e7ce135ab477e3d254eeb26193c8bbc69
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48208641"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52801543"
 ---
 # <a name="create-a-maintenance-plan"></a>Creare un piano di manutenzione
   In questo argomento viene illustrato come creare un piano di manutenzione a uno o più server in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Tramite [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]è possibile creare questi piani di manutenzione in uno di due modi: utilizzando la Creazione guidata piano di manutenzione o l'area di progettazione. La procedura guidata è più appropriata per la creazione di piani di manutenzione di base, mentre con l'area di progettazione sono disponibili funzionalità avanzate per i flussi di lavoro.  
@@ -29,7 +28,7 @@ ms.locfileid: "48208641"
   
      [Limitazioni e restrizioni](#Restrictions)  
   
-     [Security](#Security)  
+     [Sicurezza](#Security)  
   
 -   **Per creare un piano di manutenzione utilizzando:**  
   
@@ -69,7 +68,7 @@ ms.locfileid: "48208641"
   
 4.  Creare un piano di manutenzione seguendo i passaggi illustrati in [Creare un piano di manutenzione &#40;area di progettazione del piano di manutenzione&#41;](create-a-maintenance-plan-maintenance-plan-design-surface.md).  
   
-##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
   
 #### <a name="to-create-a-maintenance-plan"></a>Per creare un piano di manutenzione  
   

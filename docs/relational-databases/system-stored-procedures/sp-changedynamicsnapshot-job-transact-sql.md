@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_changedynamicsnapshot_job
@@ -17,12 +16,12 @@ ms.assetid: ea0dacd2-a5fd-42f4-88dd-7d289b0ae017
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 984967c174e35115124054f68a70627b974d8ef4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1b3f2d65811e856bfec95fcd5ffa1749f62c58c3
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47779769"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52822475"
 ---
 # <a name="spchangedynamicsnapshotjob-transact-sql"></a>sp_changedynamicsnapshot_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +64,7 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
  [  **@frequency_type =** ] *frequency_type*  
  Frequenza per l'esecuzione pianificata dell'agente. *frequency_type* viene **int**, e può essere uno dei valori seguenti.  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |**1**|Una volta|  
 |**2**|Su richiesta|  
@@ -80,7 +79,7 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
  [  **@frequency_interval =** ] *frequency_interval*  
  Giorni in cui viene eseguito l'agente. *frequency_interval* viene **int**, e può essere uno dei valori seguenti.  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |**1**|Domenica|  
 |**2**|Lunedì|  
@@ -97,7 +96,7 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
  [  **@frequency_subday =** ] *frequency_subday*  
  Frequenza di ripianificazione durante il periodo definito. *frequency_subday* viene **int**, e può essere uno dei valori seguenti.  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |**1**|Una volta|  
 |**2**|Secondo|  
@@ -111,7 +110,7 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
  [  **@frequency_relative_interval =** ] *frequency_relative_interval*  
  Data di esecuzione dell'agente di merge. Questo parametro viene utilizzato quando *frequency_type* è impostata su **32** (frequenza mensile relativa). *frequency_relative_interval* viene **int**, e può essere uno dei valori seguenti.  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |**1**|Primo|  
 |**2**|Secondo|  

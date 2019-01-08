@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - deployment tutorial [Integration Services]
@@ -21,12 +20,12 @@ ms.assetid: de18468c-cff3-48f4-99ec-6863610e5886
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 49aff131d55dbc38511fdae0dc930e161904a985
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f55b593bc172174002074de759f45b9b5f7d8243
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48188971"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53368253"
 ---
 # <a name="ssis-tutorial-deploying-packages"></a>Esercitazione SSIS: Distribuzione di pacchetti
   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] include strumenti che consentono di distribuire in modo semplice i pacchetti in un altro computer. Gli strumenti di distribuzione consentono inoltre di gestire eventuali dipendenze, ad esempio configurazioni e file necessari per il pacchetto. In questa esercitazione verrà illustrato come utilizzare tali strumenti per installare pacchetti e relative dipendenze in un computer di destinazione.  
@@ -47,7 +46,7 @@ ms.locfileid: "48188971"
  Il modo più efficace per acquisire familiarità con i nuovi strumenti e controlli e con le caratteristiche disponibili in [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] consiste nell'usarli. Questa esercitazione consente di eseguire in modo semplificato i passaggi necessari per creare un progetto di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] e quindi aggiungervi i pacchetti e gli altri file necessari. Dopo aver completato il progetto, si procederà alla creazione di un pacchetto di distribuzione, alla copia del pacchetto nel computer di destinazione e quindi all'installazione in quest'ultimo dei pacchetti.  
   
 ## <a name="requirements"></a>Requisiti  
- Questa esercitazione è destinata agli utenti già esperti nelle operazioni di base sul file system, ma con una limitata conoscenza delle nuove caratteristiche disponibili in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Per comprendere meglio basic [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] concetti che verranno usati in questa esercitazione, si potrebbe risultare utile completare prima la seguente [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] esercitazioni: [esegue il SQL Server importazione / esportazione guidata](import-export-data/start-the-sql-server-import-and-export-wizard.md) e[ Esercitazione SSIS: Creazione di un pacchetto ETL semplice](../integration-services/ssis-how-to-create-an-etl-package.md).  
+ Questa esercitazione è destinata agli utenti già esperti nelle operazioni di base sul file system, ma con una limitata conoscenza delle nuove caratteristiche disponibili in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Per comprendere meglio basic [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] concetti che verranno usati in questa esercitazione, si potrebbe risultare utile completare prima la seguente [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] esercitazioni: [Eseguire SQL Server importazione / esportazione guidata](import-export-data/start-the-sql-server-import-and-export-wizard.md) e [esercitazione SSIS: Creazione di un pacchetto ETL semplice](../integration-services/ssis-how-to-create-an-etl-package.md).  
   
  **Computer di origine.** È necessario che nel computer in cui verrà creato il pacchetto di distribuzione siano installati i componenti seguenti:  
   
@@ -73,7 +72,7 @@ ms.locfileid: "48188971"
   
  Se si prevede di distribuire i pacchetti nello stesso computer in cui si crea il pacchetto di distribuzione, è necessario che tale computer soddisfi i requisiti di entrambi i sistemi di origine e di destinazione.  
   
- **Tempo stimato per il completamento dell'esercitazione:** 2 ore  
+ **Tempo stimato per completare questa esercitazione:** 2 ore  
   
 ## <a name="lessons-in-this-tutorial"></a>Lezioni dell'esercitazione  
  [Lezione 1: Preparazione alla creazione del pacchetto di distribuzione](../integration-services/lesson-1-preparing-to-create-the-deployment-bundle.md)  
@@ -82,9 +81,9 @@ ms.locfileid: "48188971"
  [Lezione 2: Creazione del pacchetto di distribuzione](../integration-services/lesson-2-create-the-deployment-bundle-in-ssis.md)  
  In questa lezione verrà compilata un'utilità di distribuzione e verrà verificato che il pacchetto di distribuzione includa i file necessari.  
   
- [Lezione 3: Installazione dei pacchetti](../integration-services/lesson-3-install-ssis-package.md)  
+ [Lezione 3: L'installazione dei pacchetti](../integration-services/lesson-3-install-ssis-package.md)  
  In questa lezione si procederà alla copia del pacchetto di distribuzione nel computer di destinazione, all'installazione e quindi all'esecuzione dei pacchetti.  
   
-![Icona di Integration Services (piccola)](media/dts-16.gif "icona di Integration Services (piccola)")**rimangono fino a Date con Integration Services** <br /> Per i download, gli articoli, gli esempi e i video Microsoft più recenti, oltre alle soluzioni selezionate dalla community, visitare la pagina [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] sul sito MSDN:<br /><br /> [Visita la pagina di Integration Services su MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Per ricevere una notifica automatica su questi aggiornamenti, sottoscrivere i feed RSS disponibili nella pagina.  
+![Icona di Integration Services (piccola)](media/dts-16.gif "icona di Integration Services (piccola)")**rimangono fino a Date con Integration Services**<br /> Per i download, gli articoli, gli esempi e i video Microsoft più recenti, oltre alle soluzioni selezionate dalla community, visitare la pagina [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] sul sito MSDN:<br /><br /> [Visita la pagina di Integration Services su MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Per ricevere una notifica automatica su questi aggiornamenti, sottoscrivere i feed RSS disponibili nella pagina.  
   
   

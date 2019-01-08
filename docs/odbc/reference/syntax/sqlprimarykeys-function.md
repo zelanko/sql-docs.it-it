@@ -20,16 +20,16 @@ ms.assetid: 3f809b09-3c1b-415e-80c5-a603e8e25d5b
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6e041c4152a2f2b02a57164dbe43d62ae54d09d2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 37d6bdb61e23c3a48b54aa7d0e6488122486ffe5
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47619709"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53205265"
 ---
 # <a name="sqlprimarykeys-function"></a>SQLPrimaryKeys Function
 **Conformità**  
- Versione introdotta: Conformità agli standard 1.0 di ODBC: ODBC  
+ Versione introdotta: Conformità agli standard 1.0 ODBC: ODBC  
   
  **Riepilogo**  
  **SQLPrimaryKeys** restituisce i nomi delle colonne che costituiscono il database primario della chiave per una tabella. Il driver restituisce le informazioni come set di risultati. Questa funzione non supporta la restituzione di chiavi primarie da più tabelle in un'unica chiamata.  
@@ -82,7 +82,7 @@ SQLRETURN SQLPrimaryKeys(
 ## <a name="diagnostics"></a>Diagnostica  
  Quando **SQLPrimaryKeys** restituisce SQL_ERROR o SQL_SUCCESS_WITH_INFO, un valore SQLSTATE associato possono essere ottenuti chiamando **SQLGetDiagRec** con un *HandleType* di SQL _HANDLE_STMT e un *gestiscono* dei *StatementHandle*. Nella tabella seguente sono elencati i valori SQLSTATE comunemente restituiti da **SQLPrimaryKeys** e illustra ognuna nel contesto di questa funzione; la notazione "(DM)" precede le descrizioni di SQLSTATE restituiti da Gestione Driver. Il codice restituito a ogni valore SQLSTATE è SQL_ERROR, se non specificato diversamente.  
   
-|SQLSTATE|Errore|Description|  
+|SQLSTATE|Errore|Descrizione|  
 |--------------|-----------|-----------------|  
 |01000|Avviso generale|Messaggio informativo specifico del driver. (Funzione restituisce SQL_SUCCESS_WITH_INFO).|  
 |08S01|Errore del collegamento di comunicazione|Il collegamento di comunicazione tra il driver e l'origine dati a cui è stato connesso il driver non è stato possibile prima dell'elaborazione di funzione è stata completata.|  

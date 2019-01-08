@@ -18,12 +18,12 @@ ms.assetid: c1fb63b7-af50-45d6-8dec-ae6ea7119527
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7752c1c1d5184ddb1beea26d7c35e29ea5769796
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cf8e7552faf9567dab25ee3dc5b7b293034faef0
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47644329"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52538748"
 ---
 # <a name="time-and-date-functions-visual-foxpro-odbc-driver"></a>Funzioni data e ora (driver ODBC Visual FoxPro)
 La tabella seguente elenca le funzioni di data e ora ODBC supportate per il Driver ODBC Visual FoxPro; Quando la grammatica di Visual FoxPro per la stessa funzione differisce dalla sintassi ODBC, viene elencato l'equivalente di Visual FoxPro.  
@@ -57,8 +57,8 @@ La tabella seguente elenca le funzioni di data e ora ODBC supportate per il Driv
  Il driver supporta anche la sequenza di escape ODBC per i dati di data e timestamp. La sintassi della clausola di escape è come segue:  
   
 ```  
---(*vendor(Microsoft),product(ODBC) d 'value' *)—  
---(*vendor(Microsoft),product(ODBC) ts ''value' *)—  
+--(*vendor(Microsoft),product(ODBC) d 'value' *)-  
+--(*vendor(Microsoft),product(ODBC) ts ''value' *)-  
 ```  
   
  In questa sintassi **1!d** indica che *valore* data nel *aaaa-mm-gg* formato e **ts** indica che *valore*  è un timestamp nel *aaaa-mm-gg hh.mm.ss*[.*f...*] formato. La sintassi abbreviata per i dati di data e timestamp è come segue:  

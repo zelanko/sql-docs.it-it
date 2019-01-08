@@ -1,7 +1,8 @@
 ---
-title: Scaricare e installare Data Studio di Azure | Microsoft Docs
+title: Scaricare e installare
+titleSuffix: Azure Data Studio
 description: Scaricare e installare Studio dati Azure per Windows, macOS o Linux
-ms.custom: tools|sos
+ms.custom: seodec18
 ms.date: 11/06/2018
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -10,12 +11,12 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f177b7756a1afc7d28f4f3bd85ac46c1f7563cbe
-ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
+ms.openlocfilehash: 7ab531acaf5b8246da6603807760d716ab7ffb74
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51217809"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030655"
 ---
 # <a name="download-and-install-azure-data-studio"></a>Scaricare e installare Data Studio di Azure
 
@@ -160,7 +161,7 @@ Per verificare gli aggiornamenti più recenti, fare clic sull'icona a forma di i
 
 ## <a name="supported-sql-offerings"></a>Offerte di SQL supportate
 
-* Questa versione di Studio dei dati di Azure funziona con tutte le [le versioni supportate di SQL Server 2014 - [!INCLUDE [sql-server-2019](..\includes\sssqlv15-md.md)]](https://support.microsoft.com/lifecycle?C2=1044) e fornisce il supporto per l'utilizzo con le funzionalità cloud più recenti nel Database SQL di Azure e Azure SQL Data Warehouse. Azure Data Studio fornisce anche supporto in anteprima per istanza gestita SQL di Azure.
+* Questa versione di Studio dei dati di Azure funziona con tutte le [le versioni supportate di SQL Server 2014 - [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] ](https://support.microsoft.com/lifecycle?C2=1044) e fornisce il supporto per l'utilizzo con le funzionalità cloud più recenti nel Database SQL di Azure e Azure SQL Data Warehouse. Azure Data Studio fornisce anche supporto in anteprima per istanza gestita SQL di Azure.
 
 ## <a name="move-user-settings"></a>Spostare le impostazioni utente
 

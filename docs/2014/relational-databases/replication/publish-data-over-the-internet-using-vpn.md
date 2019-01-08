@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - VPNs [SQL Server replication]
@@ -15,12 +14,12 @@ ms.assetid: 9ffb6546-9973-4574-aaa0-8fe0017e3601
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ae02e735defc099c0074c17a97e103d3ea938670
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f090e48f97f4756f6c87b7cac2a6db64105ef265
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48218473"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52804473"
 ---
 # <a name="publish-data-over-the-internet-using-vpn"></a>Pubblicazione dei dati su Internet utilizzando VPN
   La reti private virtuali (VPN) consentono a utenti domestici, succursali, client remoti e altre società di connettersi a una rete aziendale tramite Internet senza alcun rischio di protezione per le comunicazioni. Gli utenti possono utilizzare l'autenticazione di Windows come se fossero connessi a una rete locale (LAN). Tutti i tipi di replica di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consentono di replicare i dati su una rete VPN, ma, se si utilizza una replica di tipo merge, è consigliabile valutare l'opportunità di optare per la sincronizzazione tramite il Web, soluzione che elimina la necessità di una rete VPN. Per altre informazioni, vedere [Web Synchronization for Merge Replication](web-synchronization-for-merge-replication.md).  

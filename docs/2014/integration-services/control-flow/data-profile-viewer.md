@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Data Profile Viewer [Integration Services]
@@ -14,12 +13,12 @@ ms.assetid: b9043428-ce26-45bb-910c-588d07579565
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 009ac57e854323c1340d600063dd1aee7fda2875
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: b05c023e8b0c54f0037af7829421f8f69f2595d4
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48905744"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52805003"
 ---
 # <a name="data-profile-viewer"></a>Visualizzatore profilo dati
   La visualizzazione e l'analisi dei profili dati costituiscono il passaggio successivo del processo di profiling dei dati. È possibile visualizzare tali profili dopo avere eseguito l'attività Profiling dati in un pacchetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] e avere calcolato i profili dati. Per altre informazioni su come configurare ed eseguire le attività Profiling dati, vedere [Impostazione dell'attività Profiling dati](data-profiling-task.md).  
@@ -61,7 +60,7 @@ ms.locfileid: "48905744"
 > [!IMPORTANT]  
 >  La funzionalità di drill-down, disponibile nel Visualizzatore profilo dati, consente di inviare query in tempo reale all'origine dati originale. Queste query possono avere un impatto negativo sulle prestazioni del server.  
 >   
->  Se il drill-down da un file di output che non è stato creato di recente, le query di drill-down potrebbero restituire un set diverso di righe rispetto a quelle su cui sono stato calcolato all'output originale.  
+>  Se si esegue il drill-down da un file di output non creato recentemente, le query di drill-down potrebbero restituire un set di righe diverso rispetto a quello usato per calcolare l'output originale.  
   
  Per altre informazioni sull'interfaccia utente del Visualizzatore profilo dati, vedere [Guida sensibile al contesto del Visualizzatore profilo dati](../data-profile-viewer-f1-help.md).  
   

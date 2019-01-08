@@ -4,18 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: tools-other
 ms.topic: conceptual
 ms.assetid: ea89386e-1598-4412-8b37-680d14b2a5b6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9805f9b14222d8b12b052c3a340ec7ee7183d749
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 42e06144f35ab2db8f124dddff74fb836b6d9c4c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48177051"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52761013"
 ---
 # <a name="status-option-distributed-replay-administration-tool"></a>Opzione status (strumento di amministrazione Distributed Replay)
   Il [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] strumento di amministrazione riesecuzione distribuita `DReplay.exe`, è uno strumento da riga di comando che è possibile usare per comunicare con distributed replay controller. Questo argomento descrive l'opzione della riga di comando **status** e la sintassi corrispondente.  
@@ -46,7 +46,7 @@ dreplay status [-mcontroller] [-fstatus_interval]
  Nell'esempio seguente lo stato corrente viene visualizzato ogni 60 secondi. Il valore `localhost` indica che il servizio controller viene eseguito nello stesso computer dello strumento di amministrazione.  
   
 ```  
-dreplay status –m localhost -f 60  
+dreplay status -m localhost -f 60  
 ```  
   
 ## <a name="permissions"></a>Permissions  

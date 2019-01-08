@@ -13,12 +13,12 @@ ms.assetid: 5eed0488-81d2-40e8-8fdf-b0a640a591d0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9fa559d0aaf1f805f7885b931bcce7f78b012701
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a0dfa9a95697c4bb1fcb2e4e5d3798f18e305e42
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48063831"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52393705"
 ---
 # <a name="rename-views"></a>Rinominare viste
   È possibile rinominare una vista in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -32,7 +32,7 @@ ms.locfileid: "48063831"
   
      [Prerequisiti](#Prerequisites)  
   
-     [Security](#Security)  
+     [Sicurezza](#Security)  
   
 -   **Per rinominare una vista usando:**  
   
@@ -40,7 +40,7 @@ ms.locfileid: "48063831"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **Follow Up:**  [After renaming a view](#FollowUp)  
+-   **Completamento:**  [Dopo la rinomina di una vista](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> Prima di iniziare  
   
@@ -62,7 +62,7 @@ ms.locfileid: "48063831"
   
 3.  Immettere il nuovo nome della vista.  
   
-##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
  **Per rinominare una vista**  
   
  Nonostante sia possibile usare **sp_rename** per modificare il nome della vista, si consiglia di eliminare quella esistente e di ricrearla con il nuovo nome.  
@@ -70,6 +70,6 @@ ms.locfileid: "48063831"
  Per altre informazioni, vedere [CREATE VIEW &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-view-transact-sql) e [DROP VIEW &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-view-transact-sql).  
   
 ##  <a name="FollowUp"></a> Completamento: Dopo la rinomina di una vista  
- Assicurarsi che per tutti gli oggetti, script e applicazioni che fanno riferimento al nome obsoleto della vista venga usato il nuovo nome.  
+ Assicurarsi che tutti gli oggetti, gli script e le applicazioni che fanno riferimento al nome precedente della vista usino ora il nuovo nome.  
   
   

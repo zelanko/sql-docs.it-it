@@ -15,12 +15,12 @@ ms.assetid: f3395c65-0320-47f9-8d83-daaa082d8713
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: aa56e9366fdc60a5b411e19b200706f0404e7312
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2991d6b79c9cbfbd37466484e1c4394b6e0fb804
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48209731"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53369363"
 ---
 # <a name="lookup-transformation-editor-advanced-page"></a>Editor trasformazione Ricerca (pagina Avanzate)
   La pagina **Avanzate** della finestra di dialogo **Editor trasformazione Ricerca** consente di configurare la memorizzazione nella cache parziale e di modificare l'istruzione SQL della trasformazione Ricerca.  
@@ -44,20 +44,20 @@ ms.locfileid: "48209731"
  Consente di modificare l'istruzione SQL utilizzata per generare il set di dati di riferimento.  
   
 > [!NOTE]  
->  L'istruzione SQL facoltativa specificata in questa pagina sostituisce il nome tabella specificato nella pagina **Connessione** di **Editor trasformazione Ricerca**. Per altre informazioni, vedere [Lookup Transformation Editor &#40;Connection Page&#41;](../../2014/integration-services/lookup-transformation-editor-connection-page.md).  
+>  L'istruzione SQL facoltativa specificata in questa pagina sostituisce il nome tabella specificato nella pagina **Connessione** di **Editor trasformazione Ricerca**. Per altre informazioni, vedere [Editor trasformazione Ricerca &#40;pagina Connessione&#41;](../../2014/integration-services/lookup-transformation-editor-connection-page.md).  
   
  **Impostazione dei parametri**  
  Consente di eseguire il mapping delle colonne di input ai parametri mediante la finestra di dialogo **Imposta parametri query** .  
   
 ## <a name="external-resources"></a>Risorse esterne  
- Intervento nel blog sulle [modalità cache di ricerca](http://go.microsoft.com/fwlink/?LinkId=219518) su blogs.msdn.com  
+ Intervento nel blog sulle [modalità cache di ricerca](https://go.microsoft.com/fwlink/?LinkId=219518) su blogs.msdn.com  
   
 ## <a name="see-also"></a>Vedere anche  
- [Editor trasformazione ricerca &#40;pagina Generale&#41;](general-page-of-integration-services-designers-options.md)   
- [Editor trasformazione ricerca &#40;pagina di connessione&#41;](../../2014/integration-services/lookup-transformation-editor-connection-page.md)   
+ [Editor trasformazione Ricerca &#40;pagina Generale&#41;](general-page-of-integration-services-designers-options.md)   
+ [Editor trasformazione Ricerca &#40;pagina Connessione&#41;](../../2014/integration-services/lookup-transformation-editor-connection-page.md)   
  [Editor trasformazione Ricerca &#40;pagina Colonne&#41;](../../2014/integration-services/lookup-transformation-editor-columns-page.md)   
- [Editor trasformazione ricerca &#40;pagina dell'Output degli errori&#41;](../../2014/integration-services/lookup-transformation-editor-error-output-page.md)   
- [Riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Editor trasformazione Ricerca &#40;pagina Output degli errori&#41;](../../2014/integration-services/lookup-transformation-editor-error-output-page.md)   
+ [Guida di riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Trasformazione Ricerca fuzzy](data-flow/transformations/fuzzy-lookup-transformation.md)  
   
   

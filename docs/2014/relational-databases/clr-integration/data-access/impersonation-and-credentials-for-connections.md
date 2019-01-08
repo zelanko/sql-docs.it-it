@@ -19,12 +19,12 @@ ms.assetid: 293dce7d-1db2-4657-992f-8c583d6e9ebb
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 05f3255dac93940439174c20b11769a022bcb7bd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 50069ad5b96914d98f3d08e795467c2693fabe87
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48072701"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53360310"
 ---
 # <a name="impersonation-and-credentials-for-connections"></a>Rappresentazione e credenziali per le connessioni
   Nell'integrazione con Common Language Runtime (CRL) di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], l'utilizzo dell'autenticazione di Windows è complesso, ma più sicuro rispetto all'autenticazione di SQL Server. Utilizzando l'autenticazione di Windows, è necessario tenere conto di alcune considerazioni.  
@@ -73,7 +73,7 @@ catch
 > [!NOTE]  
 >  Per informazioni sulle modifiche del comportamento della rappresentazione, vedere [le modifiche di rilievo alle funzionalità del motore di Database in SQL Server 2014](../../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md).  
   
- Inoltre, se è stata ottenuta l'istanza dell'identità di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows, per impostazione predefinita non è possibile propagarla in un altro computer, in quanto la propagazione è limitata dall'infrastruttura di sicurezza di Windows. Esiste tuttavia un meccanismo noto come "delega" che abilita la propagazione delle identità di Windows in più computer attendibili. Altre informazioni sulla delega nell'articolo di TechNet, "[Kerberos Protocol Transition and Constrained Delegation](http://go.microsoft.com/fwlink/?LinkId=50419)".  
+ Inoltre, se è stata ottenuta l'istanza dell'identità di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows, per impostazione predefinita non è possibile propagarla in un altro computer, in quanto la propagazione è limitata dall'infrastruttura di sicurezza di Windows. Esiste tuttavia un meccanismo noto come "delega" che abilita la propagazione delle identità di Windows in più computer attendibili. Altre informazioni sulla delega nell'articolo di TechNet, "[Kerberos Protocol Transition and Constrained Delegation](https://go.microsoft.com/fwlink/?LinkId=50419)".  
   
 ## <a name="see-also"></a>Vedere anche  
  [Oggetto SqlContext](../../clr-integration-data-access-in-process-ado-net/sqlcontext-object.md)  

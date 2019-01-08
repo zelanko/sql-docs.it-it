@@ -1,22 +1,21 @@
 ---
-title: 'Passaggio 2: Aggiunta e configurazione di una gestione connessione file flat | Microsoft Docs'
+title: 'Passaggio 2: Aggiunta e configurazione di una gestione connessione File Flat | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 9a77dd32-d8c2-4961-ad37-2a971f9d6043
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e2d22c652ce63bfc3069756251ff554a5d13c186
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 88ee64782479e0ffed967485372dea8eae775430
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48197351"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53362663"
 ---
 # <a name="step-2-adding-and-configuring-a-flat-file-connection-manager"></a>Passaggio 2: Aggiunta e configurazione di una gestione connessione file flat
   In questa attività si aggiungerà una gestione connessione file flat al pacchetto appena creato. Una gestione connessione file flat abilita un pacchetto all'estrazione di dati da un file flat. Utilizzando tale gestione connessione è possibile specificare il nome file e la posizione, le impostazioni locali e la tabella codici e il formato del file, inclusi i delimitatori di colonna, da applicare quando il pacchetto estrae i dati dal file flat. È anche possibile specificare manualmente il tipo di dati per le singole colonne o usare la finestra di dialogo **Suggerisci tipo di colonne** per eseguire automaticamente il mapping delle colonne di dati estratti ai tipi di dati di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
@@ -25,9 +24,9 @@ ms.locfileid: "48197351"
   
  Per questa esercitazione si configureranno le seguenti proprietà nella gestione connessione file flat:  
   
--   **Nomi di colonne:** dal momento che il file flat non presenta nomi di colonne, con la gestione connessione file flat vengono creati nomi di colonna predefiniti. Questi nomi predefiniti non sono utili per identificare i dati rappresentati da ogni colonna. Per rendere questi nomi predefiniti più utili, è necessario modificarli in nomi che corrispondano alla tabella dei fatti in cui i dati dei file flat devono essere caricati.  
+-   **Nomi delle colonne:** Perché il file flat non presenta nomi di colonna, la gestione connessione File Flat crea automaticamente i nomi di colonna predefinito. Questi nomi predefiniti non sono utili per identificare i dati rappresentati da ogni colonna. Per rendere questi nomi predefiniti più utili, è necessario modificarli in nomi che corrispondano alla tabella dei fatti in cui i dati dei file flat devono essere caricati.  
   
--   **Mapping dei dati:** i mapping dei tipi di dati specificati per la gestione connessione file flat verranno usati da tutti i componenti di origine dati dei file flat che fanno riferimento alla gestione connessione. È possibile eseguire manualmente il mapping dei tipi di dati usando la gestione connessione file flat oppure usare la finestra di dialogo **Suggerisci tipi di colonne** . In questa esercitazione verranno visualizzati i mapping suggeriti nella finestra di dialogo **Suggerisci tipi di colonne** e quindi verranno effettuati manualmente i mapping necessari nella finestra di dialogo **Editor gestione connessione file flat** .  
+-   **Mapping dei dati:** I mapping dei tipi di dati specificato per la gestione connessione File Flat verranno utilizzati da tutti i componenti di origine dati file flat che fanno riferimento alla gestione connessione. È possibile eseguire manualmente il mapping dei tipi di dati usando la gestione connessione file flat oppure usare la finestra di dialogo **Suggerisci tipi di colonne** . In questa esercitazione verranno visualizzati i mapping suggeriti nella finestra di dialogo **Suggerisci tipi di colonne** e quindi verranno effettuati manualmente i mapping necessari nella finestra di dialogo **Editor gestione connessione file flat** .  
   
  Gestione connessione file flat fornisce informazioni sulle impostazioni locali per il file di dati. Se il computer non è configurato per l'uso dell'opzione Inglese (Stati Uniti), è necessario impostare proprietà aggiuntive nella finestra di dialogo **Editor gestione connessione file flat** .  
   
@@ -43,7 +42,7 @@ ms.locfileid: "48197351"
   
      I dati di esempio sono inclusi nei pacchetti di lezioni di [!INCLUDE[ssIS](../includes/ssis-md.md)] . Per scaricare i dati di esempio e i pacchetti di lezioni, effettuare le operazioni seguenti.  
   
-    1.  Passare alla pagina relativa agli [esempi di prodotti di Integration Services](http://go.microsoft.com/fwlink/?LinkId=275027)  
+    1.  Passare alla pagina relativa agli [esempi di prodotti di Integration Services](https://go.microsoft.com/fwlink/?LinkId=275027)  
   
     2.  Fare clic sulla scheda **DOWNLOADS** .  
   

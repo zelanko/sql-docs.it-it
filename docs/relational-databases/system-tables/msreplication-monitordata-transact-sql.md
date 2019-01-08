@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - MSreplication_monitordata_TSQL
@@ -19,19 +18,19 @@ ms.assetid: 843d3ffd-a1ef-4fd5-a744-c2252199793e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ffb47b123059f6329554026308fb204b48c8295f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 898990152a86380ae9ba28e9766ae47675a39706
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47806209"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52775533"
 ---
 # <a name="msreplicationmonitordata-transact-sql"></a>MSreplication_monitordata (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Il **MSreplication_monitordata** tabella contiene dati memorizzati nella cache utilizzati da Monitoraggio replica, con una riga per ogni sottoscrizione monitorata. Questa tabella è archiviata nel database di distribuzione.  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**lastrefresh**|**datetime**|Data e ora dell'ultimo aggiornamento dei dati di monitoraggio.|  
 |**computeTime**|**int**|Tempo, espresso in secondi, necessario per calcolare i dati di monitoraggio.|  
@@ -47,7 +46,7 @@ ms.locfileid: "47806209"
 |**job_id**|**uniqueidentifier**|GUID del processo dell'agente di replica.|  
 |**status**|**int**|Stato dell'agente di replica. I possibili valori sono i seguenti.<br /><br /> **1** = avviato<br /><br /> **2** = ha avuto esito positivo<br /><br /> **3** = in corso<br /><br /> **4** = inattivo<br /><br /> **5** = nuovo tentativo in corso<br /><br /> **6** = non è riuscita|  
 |**isagentrunningnow**|**bit**|Un flag che indica se il processo dell'agente è attualmente in esecuzione, dove il valore **1** significa che l'esecuzione del processo.|  
-|**avviso**|**int**|Avviso di soglia generato da una sottoscrizione, che può corrispondere al risultato dell'applicazione dell'operatore OR logico a uno o più dei valori seguenti.<br /><br /> **1** = expiration-una sottoscrizione di una pubblicazione transazionale ha superato il periodo di memorizzazione rispetto al valore soglia consentito, come percentuale del periodo di conservazione.<br /><br /> **2** = latency - il tempo necessario per replicare i dati da un server di pubblicazione transazionale al sottoscrittore supera la soglia, espresso in secondi.<br /><br /> **4** = mergeexpiration - una sottoscrizione a una pubblicazione di tipo merge ha superato il periodo di memorizzazione rispetto al valore soglia consentito, come percentuale del periodo di conservazione. 8 = mergefastrunduration - è stata superata la soglia espressa in secondi relativa al tempo necessario per completare la sincronizzazione di una sottoscrizione di tipo merge tramite una connessione di rete veloce.<br /><br /> **16** = mergeslowrunduration - il tempo impiegato per completare la sincronizzazione di una sottoscrizione di tipo merge supera la soglia, espresso in secondi, tramite una connessione di rete lenta o remota.<br /><br /> **32** = mergefastrunspeed – la velocità di recapito delle righe durante la sincronizzazione di una sottoscrizione di tipo merge è minore della soglia, in righe al secondo, su una connessione di rete veloce.<br /><br /> **64** = mergeslowrunspeed – la velocità di recapito delle righe durante la sincronizzazione di una sottoscrizione di tipo merge è minore della soglia, in righe al secondo, su una connessione di rete lenta o remota.|  
+|**avviso**|**int**|Avviso di soglia generato da una sottoscrizione, che può corrispondere al risultato dell'applicazione dell'operatore OR logico a uno o più dei valori seguenti.<br /><br /> **1** = expiration - una sottoscrizione di una pubblicazione transazionale ha superato il periodo di memorizzazione rispetto al valore soglia consentito, come percentuale del periodo di conservazione.<br /><br /> **2** = latency - il tempo necessario per replicare i dati da un server di pubblicazione transazionale al sottoscrittore supera la soglia, espresso in secondi.<br /><br /> **4** = mergeexpiration - una sottoscrizione a una pubblicazione di tipo merge ha superato il periodo di memorizzazione rispetto al valore soglia consentito, come percentuale del periodo di conservazione. 8 = mergefastrunduration - è stata superata la soglia espressa in secondi relativa al tempo necessario per completare la sincronizzazione di una sottoscrizione di tipo merge tramite una connessione di rete veloce.<br /><br /> **16** = mergeslowrunduration - il tempo impiegato per completare la sincronizzazione di una sottoscrizione di tipo merge supera la soglia, espresso in secondi, tramite una connessione di rete lenta o remota.<br /><br /> **32** = mergefastrunspeed: la velocità di recapito delle righe durante la sincronizzazione di una sottoscrizione di tipo merge è minore della soglia, in righe al secondo, su una connessione di rete veloce.<br /><br /> **64** = mergeslowrunspeed: la velocità di recapito delle righe durante la sincronizzazione di una sottoscrizione di tipo merge è minore della soglia, in righe al secondo, su una connessione di rete lenta o remota.|  
 |**last_distsync**|**datetime**|Data e ora dell'ultima esecuzione dell'agente di distribuzione.|  
 |**agentstoptime**|**datetime**|Data e ora di arresto dell'agente.|  
 |**distdb**|**sysname**|Nome del database di distribuzione per la sottoscrizione.|  

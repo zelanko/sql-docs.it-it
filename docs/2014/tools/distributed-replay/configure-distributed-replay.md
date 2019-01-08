@@ -4,18 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: tools-other
 ms.topic: conceptual
 ms.assetid: aee11dde-daad-439b-b594-9f4aeac94335
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3619426117b6c1bcb17860b9d179716f22ff5c8b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 39f81a2e2d1762ac60ba34490844b123d3ae8fbe
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48122514"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376693"
 ---
 # <a name="configure-distributed-replay"></a>Configurare Distributed Replay
   I dettagli relativi alla configurazione di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay sono specificati in file XML in Distributed Replay Controller, nei client e nelle posizioni in cui è installato lo strumento di amministrazione. ovvero i file seguenti:  
@@ -28,14 +28,14 @@ ms.locfileid: "48122514"
   
 -   [File di configurazione della riproduzione](#ReplayConfig)  
   
-##  <a name="DReplayController"></a> File di configurazione del controller: DReplayController.config  
+##  <a name="DReplayController"></a> File di configurazione di controller: Dreplaycontroller. config  
  All'avvio del servizio Distributed Replay Controller di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , viene caricato il livello di registrazione dal file di configurazione del controller, ovvero `DReplayController.config`. Questo file si trova nella cartella in cui è stato installato il servizio Distributed Replay Controller:  
   
  **\<percorso installazione controller>\DReplayController.config**  
   
  Nel livello di registrazione specificato nel file di configurazione del controller è inclusa la seguente impostazione:  
   
-|Impostazione|Elemento XML|Description|Valori consentiti|Obbligatorio|  
+|Impostazione|Elemento XML|Descrizione|Valori consentiti|Obbligatorio|  
 |-------------|-----------------|-----------------|--------------------|--------------|  
 |Livello di registrazione|`<LoggingLevel>`|Specifica il livello di registrazione per il servizio controller.|`INFORMATION` &#124; `WARNING` &#124; `CRITICAL`|No. Per impostazione predefinita, il valore è `CRITICAL`.|  
   
@@ -49,14 +49,14 @@ ms.locfileid: "48122514"
 </Options>  
 ```  
   
-##  <a name="DReplayClient"></a> File di configurazione del client: DReplayClient.config  
+##  <a name="DReplayClient"></a> File di configurazione client: Dreplayclient. config  
  All'avvio del servizio client Distributed Replay di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vengono caricate le impostazioni di configurazione dal file di configurazione del client, ovvero `DReplayClient.config`. Questo file si trova in ogni client, nella cartella in cui è stato installato il servizio client Distributed Replay:  
   
  **\<percorso installazione client>\DReplayClient.config**  
   
  Di seguito vengono indicate le impostazioni specificate nel file di configurazione del client:  
   
-|Impostazione|Elemento XML|Description|Valori consentiti|Obbligatorio|  
+|Impostazione|Elemento XML|Descrizione|Valori consentiti|Obbligatorio|  
 |-------------|-----------------|-----------------|--------------------|--------------|  
 |Controller|`<Controller>`|Specifica il nome computer del controller. Il client tenterà di registrarsi nell'ambiente Distributed Replay contattando il controller.|È possibile utilizzare "`localhost`" o "`.`" per fare riferimento al computer locale.|No. Per impostazione predefinita, viene effettuato un tentativo di registrazione del client nell'istanza del controller eseguita in locale ("`.`"), se presente.|  
 |Directory di lavoro client|`<WorkingDirectory>`|Percorso locale nel client in cui vengono salvati i file di recapito.<br /><br /> I file inclusi in questa directory vengono sovrascritti alla riproduzione successiva.|Nome di directory completo, che inizia con la lettera di unità.|No. Se non è specificato alcun valore, i file di recapito verranno salvati nello stesso percorso del file di configurazione del client predefinito. Se viene specificato un valore e la cartella non esiste nel client, il servizio client non verrà avviato.|  
@@ -76,7 +76,7 @@ ms.locfileid: "48122514"
 </Options>  
 ```  
   
-##  <a name="PreprocessConfig"></a> File di configurazione della pre-elaborazione: DReplay.exe.preprocess.config  
+##  <a name="PreprocessConfig"></a> Pre-elaborare File di configurazione: DReplay.exe.preprocess.config  
  Quando si utilizza lo strumento di amministrazione per avviare la fase di pre-elaborazione, lo strumento di amministrazione carica le impostazioni di pre-elaborazione dal file di configurazione della pre-elaborazione, ovvero `DReplay.exe.preprocess.config`.  
   
  Usare il file di configurazione predefinito o il parametro **-c** dello strumento di amministrazione per specificare il percorso di un file di configurazione di pre-elaborazione modificato. Per altre informazioni sull'uso dell'opzione preprocess dello strumento di amministrazione, vedere [Opzione preprocess &#40;strumento di amministrazione Riesecuzione distribuita&#41;](preprocess-option-distributed-replay-administration-tool.md).  
@@ -87,7 +87,7 @@ ms.locfileid: "48122514"
   
  Le impostazioni di configurazione della pre-elaborazione vengono specificate in elementi XML figli dell'elemento `<PreprocessModifiers>` nel file di configurazione della pre-elaborazione. Sono incluse le seguenti impostazioni:  
   
-|Impostazione|Elemento XML|Description|Valori consentiti|Obbligatorio|  
+|Impostazione|Elemento XML|Descrizione|Valori consentiti|Obbligatorio|  
 |-------------|-----------------|-----------------|--------------------|--------------|  
 |Inclusione delle attività della sessione di sistema|`<IncSystemSession>`|Indica se le attività della sessione di sistema eseguite durante l'acquisizione verranno incluse durante la riproduzione.|`Yes` &#124; `No`|No. Per impostazione predefinita, il valore è `No`.|  
 |Tempo massimo di inattività|`<MaxIdleTime>`|Fissa il tempo di inattività su un numero assoluto (in secondi).|Un numero intero > = -1<br /><br /> `-1` indica nessuna modifica rispetto al valore originale nel file di traccia originale.<br /><br /> `0` indica che sono in corso una o più attività in un momento specificato.|No. Per impostazione predefinita, il valore è `-1`.|  
@@ -119,7 +119,7 @@ ms.locfileid: "48122514"
 ### <a name="replayoptions-element"></a>\<ReplayOptions > elemento  
  Di seguito vengono indicate le impostazioni specificate dal file di configurazione della riproduzione nell'elemento `<ReplayOptions>` :  
   
-|Impostazione|Elemento XML|Description|Valori consentiti|Obbligatorio|  
+|Impostazione|Elemento XML|Descrizione|Valori consentiti|Obbligatorio|  
 |-------------|-----------------|-----------------|--------------------|--------------|  
 |Istanza di destinazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (server di prova)|`<Server>`|Specifica il nome del server e dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a cui connettersi.|*server_name*[\\*instance_name*]<br /><br /> Non è possibile utilizzare "`localhost`" o "`.`" per rappresentare l'host locale.|No, se il nome del server è già specificato tramite il parametro **-s***target server* con l'opzione **replay** dello strumento di amministrazione.|  
 |Modalità di sequenza|`<SequencingMode>`|Specifica la modalità utilizzata per la pianificazione degli eventi.|`synchronization` &#124; `stress`|No. Per impostazione predefinita, il valore è `stress`.|  
@@ -134,7 +134,7 @@ ms.locfileid: "48122514"
 ### <a name="outputoptions-element"></a>\<OutputOptions > elemento  
  Di seguito vengono indicate le impostazioni specificate dal file di configurazione della riproduzione nell'elemento `<OutputOptions>` :  
   
-|Impostazione|Elemento XML|Description|Valori consentiti|Obbligatorio|  
+|Impostazione|Elemento XML|Descrizione|Valori consentiti|Obbligatorio|  
 |-------------|-----------------|-----------------|--------------------|--------------|  
 |Registrazione del conteggio delle righe|`<RecordRowCount>`|Indica se deve essere registrato il conteggio delle righe per ogni set di risultati.|`Yes` &#124; `No`|No. Per impostazione predefinita, il valore è `Yes`.|  
 |Registrazione del set di risultati|`<RecordResultSet>`|Indica se deve essere registrato il contenuto di tutti i set di risultati.|`Yes` &#124; `No`|No. Per impostazione predefinita, il valore è `No`.|  
@@ -164,10 +164,10 @@ ms.locfileid: "48122514"
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Opzioni della riga di comando dello strumento di amministrazione &#40;Distributed Replay Utility&#41;](administration-tool-command-line-options-distributed-replay-utility.md)   
+ [Opzioni della riga di comando dello strumento di amministrazione &#40;Utilità Riesecuzione distribuita&#41;](administration-tool-command-line-options-distributed-replay-utility.md)   
  [SQL Server Distributed Replay](sql-server-distributed-replay.md)   
- [Forum di SQL Server Distributed Replay](http://social.technet.microsoft.com/Forums/sl/sqldru/)   
- [Using Distributed Replay to Load Test Your SQL Server – Part 2](http://blogs.msdn.com/b/mspfe/archive/2012/11/14/using-distributed-replay-to-load-test-your-sql-server-part-2.aspx)  (Uso di Riesecuzione distribuita per testare il caricamento di SQL Server, seconda parte)  
- [Using Distributed Replay to Load Test Your SQL Server - Part 1](http://blogs.msdn.com/b/mspfe/archive/2012/11/08/using-distributed-replay-to-load-test-your-sql-server-part-1.aspx) (Uso di Riesecuzione distribuita per testare il caricamento di SQL Server, prima parte)  
+ [Forum di SQL Server Distributed Replay](https://social.technet.microsoft.com/Forums/sl/sqldru/)   
+ [Using Distributed Replay to Load Test Your SQL Server - Part 2](https://blogs.msdn.com/b/mspfe/archive/2012/11/14/using-distributed-replay-to-load-test-your-sql-server-part-2.aspx)  (Uso di Riesecuzione distribuita per testare il caricamento di SQL Server, seconda parte)  
+ [Using Distributed Replay to Load Test Your SQL Server - Part 1](https://blogs.msdn.com/b/mspfe/archive/2012/11/08/using-distributed-replay-to-load-test-your-sql-server-part-1.aspx) (Uso di Riesecuzione distribuita per testare il caricamento di SQL Server, prima parte)  
   
   

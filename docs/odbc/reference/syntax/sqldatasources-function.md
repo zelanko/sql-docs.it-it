@@ -20,16 +20,16 @@ ms.assetid: 3f63b1b4-e70e-44cd-96c6-6878d50d0117
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f9055fa6c277ebcbeccae909ddd397d39d62cf04
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b7b04dc2554b820fc6ac8344457754aae984d4b8
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47846059"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53213110"
 ---
 # <a name="sqldatasources-function"></a>Funzione SQLDataSources
 **Conformità**  
- Versione introdotta: Conformità agli standard 1.0 di ODBC: ISO 92  
+ Versione introdotta: Conformità agli standard 1.0 ODBC: ISO 92  
   
  **Riepilogo**  
  **SQLDataSources** restituisce informazioni su un'origine dati. Questa funzione è implementata solo da Gestione Driver.  
@@ -88,9 +88,9 @@ SQLRETURN SQLDataSources(
 ## <a name="diagnostics"></a>Diagnostica  
  Quando **SQLDataSources** restituisce SQL_ERROR o SQL_SUCCESS_WITH_INFO, un valore SQLSTATE associato può essere ottenuto chiamando **SQLGetDiagRec** con un *HandleType*SQL_HANDLE_ENV e una *gestiscono* dei *EnvironmentHandle*. Nella tabella seguente sono elencati i valori SQLSTATE normalmente restituiti dal **SQLDataSources** e illustra ognuna nel contesto di questa funzione; la notazione "(DM)" precede le descrizioni di SQLSTATE restituiti da Gestione Driver. Il codice restituito a ogni valore SQLSTATE è SQL_ERROR, se non specificato diversamente.  
   
-|SQLSTATE|Errore|Description|  
+|SQLSTATE|Errore|Descrizione|  
 |--------------|-----------|-----------------|  
-|01000|Avviso generale|(DM) messaggio informativo specifici del Driver Manager. (Funzione restituisce SQL_SUCCESS_WITH_INFO).|  
+|01000|Avviso generale|(DM) messaggio informativo di gestione Driver specifico. (Funzione restituisce SQL_SUCCESS_WITH_INFO).|  
 |01004|Stringa troncati di dati a destra|(DM) il buffer \* *ServerName* non era sufficientemente grande per restituire il nome dell'origine dati completa. Pertanto, il nome è stato troncato. Viene restituita la lunghezza del nome dell'origine dati intera \* *NameLength1Ptr*. (Funzione restituisce SQL_SUCCESS_WITH_INFO).<br /><br /> (DM) il buffer \* *descrizione* non era sufficientemente grande per restituire la descrizione completa del driver. Pertanto, la descrizione sono stata troncata. Viene restituita la lunghezza della descrizione dell'origine dati non troncato **NameLength2Ptr*. (Funzione restituisce SQL_SUCCESS_WITH_INFO).|  
 |HY000|Errore generale|(DM) di un errore per cui si è verificato alcun errore SQLSTATE specifico per il quale è stato definito alcun SQLSTATE specifici dell'implementazione. Il messaggio di errore restituito da **SQLGetDiagRec** nel  *\*MessageText* buffer viene descritto l'errore e la relativa causa.|  
 |HY001|Errore di allocazione della memoria|(DM) The Driver Manager: Impossibile allocare la memoria che è necessario per supportare l'esecuzione o il completamento della funzione.|  

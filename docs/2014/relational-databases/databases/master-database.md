@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - master database [SQL Server], about
@@ -14,12 +13,12 @@ ms.assetid: 660e909f-61eb-406b-bbce-8864dd629ba0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: fa7cb2ad5c23900bd44aae89e1af6f8478fb2f74
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 767d77eefe8c54fe5a3d584c670cc991b284178e
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48095867"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52784543"
 ---
 # <a name="master-database"></a>Database master
   Nel database **master** vengono registrate tutte le informazioni a livello di sistema relative a un sistema [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . inclusi i metadati a livello globale dell'istanza quali gli account di accesso, gli endpoint, i server collegati e le impostazioni di configurazione di sistema. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], gli oggetti di sistema non sono più archiviati nel database **master** , ma sono archiviati nel [database Resource](resource-database.md). Nel database **master** vengono inoltre registrate l'esistenza di tutti gli altri database e la posizione dei relativi file di database, nonché le informazioni di inizializzazione per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Non è pertanto possibile avviare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se il database **master** non è disponibile.  
@@ -39,34 +38,34 @@ ms.locfileid: "48095867"
   
 |Opzione di database|Valore predefinito|Modificabile|  
 |---------------------|-------------------|---------------------|  
-|ALLOW_SNAPSHOT_ISOLATION|ON|no|  
-|ANSI_NULL_DEFAULT|OFF|Sì|  
-|ANSI_NULLS|OFF|Sì|  
-|ANSI_PADDING|OFF|Sì|  
-|ANSI_WARNINGS|OFF|Sì|  
-|ARITHABORT|OFF|Sì|  
-|AUTO_CLOSE|OFF|no|  
-|AUTO_CREATE_STATISTICS|ON|Sì|  
-|AUTO_SHRINK|OFF|no|  
-|AUTO_UPDATE_STATISTICS|ON|Sì|  
-|AUTO_UPDATE_STATISTICS_ASYNC|OFF|Sì|  
-|CHANGE_TRACKING|OFF|no|  
-|CONCAT_NULL_YIELDS_NULL|OFF|Sì|  
-|CURSOR_CLOSE_ON_COMMIT|OFF|Sì|  
-|CURSOR_DEFAULT|GLOBAL|Sì|  
-|Opzioni relative alla disponibilità del database|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|no<br /><br /> no<br /><br /> no|  
-|DATE_CORRELATION_OPTIMIZATION|OFF|Sì|  
-|DB_CHAINING|ON|no|  
-|ENCRYPTION|OFF|no|  
-|NUMERIC_ROUNDABORT|OFF|Sì|  
-|PAGE_VERIFY|CHECKSUM|Sì|  
-|PARAMETERIZATION|SIMPLE|Sì|  
-|QUOTED_IDENTIFIER|OFF|Sì|  
-|READ_COMMITTED_SNAPSHOT|OFF|no|  
-|RECOVERY|SIMPLE|Sì|  
-|RECURSIVE_TRIGGERS|OFF|Sì|  
-|Opzioni relative a Service Broker|DISABLE_BROKER|no|  
-|TRUSTWORTHY|OFF|Sì|  
+|ALLOW_SNAPSHOT_ISOLATION|ON|No|  
+|ANSI_NULL_DEFAULT|OFF|Yes|  
+|ANSI_NULLS|OFF|Yes|  
+|ANSI_PADDING|OFF|Yes|  
+|ANSI_WARNINGS|OFF|Yes|  
+|ARITHABORT|OFF|Yes|  
+|AUTO_CLOSE|OFF|No|  
+|AUTO_CREATE_STATISTICS|ON|Yes|  
+|AUTO_SHRINK|OFF|No|  
+|AUTO_UPDATE_STATISTICS|ON|Yes|  
+|AUTO_UPDATE_STATISTICS_ASYNC|OFF|Yes|  
+|CHANGE_TRACKING|OFF|No|  
+|CONCAT_NULL_YIELDS_NULL|OFF|Yes|  
+|CURSOR_CLOSE_ON_COMMIT|OFF|Yes|  
+|CURSOR_DEFAULT|GLOBAL|Yes|  
+|Opzioni relative alla disponibilità del database|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|No<br /><br /> No<br /><br /> No|  
+|DATE_CORRELATION_OPTIMIZATION|OFF|Yes|  
+|DB_CHAINING|ON|No|  
+|ENCRYPTION|OFF|No|  
+|NUMERIC_ROUNDABORT|OFF|Yes|  
+|PAGE_VERIFY|CHECKSUM|Yes|  
+|PARAMETERIZATION|SIMPLE|Yes|  
+|QUOTED_IDENTIFIER|OFF|Yes|  
+|READ_COMMITTED_SNAPSHOT|OFF|No|  
+|RECOVERY|SIMPLE|Yes|  
+|RECURSIVE_TRIGGERS|OFF|Yes|  
+|Opzioni relative a Service Broker|DISABLE_BROKER|No|  
+|TRUSTWORTHY|OFF|Yes|  
   
  Per una descrizione di queste opzioni di database, vedere [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql).  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - + (add)
@@ -15,12 +14,12 @@ ms.assetid: 44df4154-fed5-4e7f-9995-e703a0164f6a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 68222335dadbbccabd0bf53282fe9df4c7e6045c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f80063d9e567cc9bb31545f9ce5a27f82c55bd5d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48080101"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52814776"
 ---
 # <a name="-add-ssis"></a>+ (addizione) (SSIS)
   Vengono aggiunte due espressioni numeriche.  
@@ -64,6 +63,6 @@ StandardCost + (StandardCost * @[Profit%])
   
 ## <a name="see-also"></a>Vedere anche  
  [Precedenza e associatività degli operatori](operator-precedence-and-associativity.md)   
- [Gli operatori &#40;espressione di SSIS&#41;](operators-ssis-expression.md)  
+ [Operatori &#40;espressione SSIS&#41;](operators-ssis-expression.md)  
   
   

@@ -16,12 +16,12 @@ ms.assetid: 2c470e54-0600-4b2b-b1f3-9885cb28a01a
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: df78a4890658ec83a62eeccbce23d891d5afc56d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 74d4ceb4532ee09004f035958860833aef488aaa
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47812105"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206208"
 ---
 # <a name="interface-conformance-levels"></a>Livelli di conformità di interfaccia
 Lo scopo di livellamento è informare l'applicazione di quali funzionalità sono disponibili a esso dal driver. Uno schema di livellamento basato sulle funzioni non sufficientemente raggiungere tale obiettivo. In ODBC 3. *x*, i driver sono classificati in base alle funzionalità di cui dispongono. La funzionalità di supporto può includere che supportano la funzione. può inoltre includere il supporto di un campo di descrizione, un attributo di istruzione, un valore "Y" per un tipo di informazioni restituito da **SQLGetInfo**e così via.  
@@ -36,7 +36,7 @@ Lo scopo di livellamento è informare l'applicazione di quali funzionalità sono
   
  Esistono tre livelli di conformità di interfaccia ODBC: Core, livello 1 e Level 2.  
   
-> [!NOTE]  
+> [!NOTE]
 >  Questi livelli di conformità hanno requisiti diversi rispetto i livelli di conformità API ODBC lo stesso nome in ODBC 2*x*. In particolare, tutte le funzionalità di cui è inclusa l'API ODBC 2*x* conformità API livello 1 fanno ora parte di livello la conformità di interfaccia di Core. Di conseguenza, molti driver ODBC può segnalare la conformità di interfaccia a livello di base.  
   
  In questa sezione vengono trattati gli argomenti seguenti.  

@@ -13,12 +13,12 @@ ms.assetid: afa5289c-641a-4c03-8749-44862384ec5f
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e1e4c878004f3cdcc492637d338e8ff6c8d92937
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 815f549cf9ab6dd7fe748c08ae7f32683c9d8551
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48104172"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53350015"
 ---
 # <a name="always-on-policies-for-operational-issues-with-always-on-availability-groups-sql-server"></a>Criteri Always On per problemi operativi con gruppi di disponibilità Always On (SQL Server)
   Il modello di integrità [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] consente di valutare un set di criteri di gestione basata su criteri (PBM, Policy Based Management) predefiniti. Questi criteri possono essere utilizzati per la visualizzazione dell'integrità di un gruppo di disponibilità, nonché delle repliche e dei database di disponibilità relativi in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
@@ -84,9 +84,9 @@ ms.locfileid: "48104172"
 ##  <a name="ExtendHealthModel"></a> Estensione del modello di integrità AlwaysOn  
  L'estensione del modello di integrità [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] riguarda semplicemente la creazione di propri criteri definiti dall'utente e l'inserimento in determinate categorie in base al tipo di oggetto di cui si sta eseguendo il monitoraggio.  Dopo aver modificato alcune impostazioni, tramite il dashboard AlwaysOn verranno valutati automaticamente i propri criteri definiti dall'utente, nonché i criteri predefiniti AlwaysOn.  
   
- I criteri definiti dall'utente possono usare qualsiasi facet della gestione basata su criteri disponibile, inclusi quelli utilizzati dai criteri predefiniti AlwaysOn (vedere [Criteri predefiniti e problemi](#AlwaysOnPBM), precedentemente in questo argomento). Il facet Server fornisce le proprietà seguenti per il monitoraggio [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] integrità: (`IsHadrEnabled` e `HadrManagerStatus`). Fornisce inoltre le proprietà dei seguenti criteri per il monitoraggio della configurazione del cluster WSFC: `ClusterQuorumType` e `ClusterQuorumState`.  
+ I criteri definiti dall'utente possono usare qualsiasi facet della gestione basata su criteri disponibile, inclusi quelli utilizzati dai criteri predefiniti AlwaysOn (vedere [Criteri predefiniti e problemi](#AlwaysOnPBM), precedentemente in questo argomento). Il facet Server fornisce le proprietà seguenti per il monitoraggio dell'integrità [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]: (`IsHadrEnabled` e `HadrManagerStatus`). Fornisce inoltre le proprietà dei seguenti criteri per il monitoraggio della configurazione del cluster WSFC: `ClusterQuorumType` e `ClusterQuorumState`.  
   
- Per altre informazioni, vedere la pagina relativa alla [seconda parte del modelli di integrità AlwaysOn riguardante l’estensione del modello di integrità](http://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx) (blog del team di SQL Server AlwaysOn).  
+ Per altre informazioni, vedere la pagina relativa alla [seconda parte del modelli di integrità AlwaysOn riguardante l’estensione del modello di integrità](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx) (blog del team di SQL Server AlwaysOn).  
   
 ##  <a name="RelatedTasks"></a> Attività correlate  
   
@@ -104,11 +104,11 @@ ms.locfileid: "48104172"
   
 ##  <a name="RelatedContent"></a> Contenuto correlato  
   
--   [Il modello dell'integrità AlwaysOn-parte 1: architettura del modello di integrità](http://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx)  
+-   [Il modello dell'integrità AlwaysOn-parte 1: architettura del modello di integrità](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx)  
   
--   [Il modello dell'integrità AlwaysOn-parte 2: estensione del modello di integrità](http://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx)  
+-   [Il modello dell'integrità AlwaysOn-parte 2: estensione del modello di integrità](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx)  
   
--   [Microsoft SQL Server AlwaysOn Solutions Guide for High Availability and Disaster Recovery](http://go.microsoft.com/fwlink/?LinkId=227600)  
+-   [Microsoft SQL Server AlwaysOn Solutions Guide for High Availability and Disaster Recovery](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Gruppi di disponibilità AlwaysOn (SQL Server)](always-on-availability-groups-sql-server.md)   

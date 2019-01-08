@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: f34454f292e7efc92c960930b6a9218edae6a70f
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 6c451d13016915c9218efb2963429f8f5a7709e2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50148316"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52544227"
 ---
 # <a name="performing-batch-operations-xmla"></a>Esecuzione di operazioni batch (XMLA)
   È possibile usare la [Batch](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/batch-element-xmla) comando in XML for Analysis (XMLA) per eseguire più comandi XMLA utilizzando un singolo XMLA [Execute](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-execute) (metodo). È possibile eseguire più comandi contenuti nel **Batch** comando come una singola transazione o in transazioni separate per ogni comando, in serie o in parallelo. È inoltre possibile specificare associazioni out-of-line e altre proprietà di **Batch** comando per l'elaborazione di più [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] oggetti.  
@@ -23,12 +23,12 @@ ms.locfileid: "50148316"
  Il **Batch** comando esegue comandi in uno dei due modi:  
   
  **Transazionale**  
- Se il **transazione** attributo del **Batch** command è impostato su true, il **Batch** comandi eseguito tutti i comandi contenuti dal comando il **Batch** comando in una singola transazione, ovvero un *transazionale* batch.  
+ Se il **transazione** attributo del **Batch** command è impostato su true, il **Batch** comandi eseguito tutti i comandi contenuti dal comando il **Batch** comando in una singola transazione-a *transazionale* batch.  
   
  Se un comando non riesce in un batch transazionale, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] rollback di qualsiasi comando nel **Batch** comando eseguito prima del comando che non è riuscita e il **Batch** comando termina immediatamente. Tutti i comandi nel **Batch** non vengono eseguiti i comandi che non hanno ancora eseguito. Dopo il **Batch** comando termina, il **Batch** comando segnala tutti gli errori che si sono verificati per il comando non riuscito.  
   
  **Non transazionale**  
- Se il **transazione** attributo è impostato su false, il **Batch** comando viene eseguito ogni comando contenuto il **Batch** comando in una transazione separata, ovvero un  *non transazionale* batch. Se un comando non riesce in un batch non transazionale, il **Batch** comando continua a eseguire i comandi successivi al comando non è riuscita. Dopo il **Batch** comando tenta di eseguire tutti i comandi che la **Batch** comando contiene, il **Batch** comando segnala tutti gli errori che si sono verificati.  
+ Se il **transazione** attributo è impostato su false, il **Batch** comando viene eseguito ogni comando contenuto il **Batch** comando in una transazione a  *non transazionale* batch. Se un comando non riesce in un batch non transazionale, il **Batch** comando continua a eseguire i comandi successivi al comando non è riuscita. Dopo il **Batch** comando tenta di eseguire tutti i comandi che la **Batch** comando contiene, il **Batch** comando segnala tutti gli errori che si sono verificati.  
   
  Tutti i risultati restituiti dai comandi contenuti in un **Batch** comando vengono restituiti nello stesso ordine in cui i comandi sono contenuti nel **Batch** comando. I risultati restituiti da una **Batch** comandi variano a seconda se il **Batch** comando è transazionale o non transazionale.  
   

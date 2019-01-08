@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: backup-restore
 ms.topic: conceptual
 helpviewer_keywords:
 - full-text search [SQL Server], back up and restore
@@ -19,12 +18,12 @@ ms.assetid: b93e9701-72a0-408e-958c-dc196872c040
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b51404c994bd4a5029bc9e2d592db020747492fb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5a35156a465e521ceea60fa090142836da6a4c1a
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48057191"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52787833"
 ---
 # <a name="copy-databases-with-backup-and-restore"></a>Copiare database tramite backup e ripristino
   In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] è possibile creare un nuovo database ripristinando un backup di un database utente creato tramite [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] o una versione successiva. Tuttavia, i backup di **master**, **model** e **msdb** creati con una versione precedente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non possono essere ripristinati da [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Inoltre, i backup di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] non possono essere ripristinati da una qualsiasi versione precedente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -63,7 +62,7 @@ ms.locfileid: "48057191"
  Per evitare errori e conseguenze impreviste, prima dell'operazione di ripristino, è possibile usare la [backupfile](/sql/relational-databases/system-tables/backupfile-transact-sql) tabella di cronologia per trovare i file di database e log nel backup si intende ripristinare.  
   
 ## <a name="moving-the-database-files"></a>Spostamento dei file di database  
- Se per i motivi elencati in precedenza non è possibile ripristinare i file di backup del database nel computer di destinazione, sarà necessario spostare i file in un nuovo percorso mano a mano che vengono ripristinati, Esempio:  
+ Se per i motivi elencati in precedenza non è possibile ripristinare i file di backup del database nel computer di destinazione, sarà necessario spostare i file in un nuovo percorso mano a mano che vengono ripristinati, Ad esempio:  
   
 -   Si supponga di voler ripristinare un database da backup creati nella posizione predefinita di versioni precedenti.  
   
@@ -101,7 +100,7 @@ ms.locfileid: "48057191"
   
  **Per ripristinare file e filegroup in un nuovo percorso**  
   
--   [Ripristino dei file in una nuova posizione &#40;SQL Server&#41;](../backup-restore/restore-files-to-a-new-location-sql-server.md)  
+-   [Ripristinare file in un percorso nuovo &#40;SQL Server&#41;](../backup-restore/restore-files-to-a-new-location-sql-server.md)  
   
 -   [Ripristinare un Backup del Database &#40;SQL Server Management Studio&#41;](../backup-restore/restore-a-database-backup-using-ssms.md)  
   

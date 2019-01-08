@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.adonetdest.f1
@@ -16,17 +15,17 @@ ms.assetid: cb883990-d875-4d8b-b868-45f9f15ebeae
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ebabe8a6b188c704a45ce022b430156fed17d861
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: aefe3276e11cb4da2523d0e089afc7220eb07ded
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48165071"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53351375"
 ---
 # <a name="ado-net-destination"></a>Destinazione ADO NET
   La destinazione ADO NET consente di caricare i dati in un'ampia gamma di database compatibili con [!INCLUDE[vstecado](../../includes/vstecado-md.md)]che utilizzano una tabella o una vista di database. È disponibile l'opzione per caricare i dati in una tabella o in una vista esistenti o è possibile creare una nuova tabella e caricare i dati in essa.  
   
- È possibile usare la destinazione ADO NET per connettersi a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. La connessione a [!INCLUDE[ssSDS](../../includes/sssds-md.md)] tramite OLE DB non è supportata. Per altre informazioni su [!INCLUDE[ssSDS](../../includes/sssds-md.md)], vedere la pagina relativa alle [linee guida e limitazioni generali (database SQL di Windows Azure)](http://go.microsoft.com/fwlink/?LinkId=248228).  
+ È possibile usare la destinazione ADO NET per connettersi a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. La connessione a [!INCLUDE[ssSDS](../../includes/sssds-md.md)] tramite OLE DB non è supportata. Per altre informazioni su [!INCLUDE[ssSDS](../../includes/sssds-md.md)], vedere la pagina relativa alle [linee guida e limitazioni generali (database SQL di Windows Azure)](https://go.microsoft.com/fwlink/?LinkId=248228).  
   
 ## <a name="troubleshooting-the-ado-net-destination"></a>Risoluzione dei problemi relativi alla destinazione ADO NET  
  È possibile registrare le chiamate eseguite dalla destinazione ADO NET a provider di dati esterni. Questa nuova funzionalità di registrazione può essere utilizzata per risolvere i problemi relativi al salvataggio di dati in origini di dati esterne da parte della destinazione ADO NET. Per registrare le chiamate eseguite dalla destinazione ADO NET a provider di dati esterni, abilitare la registrazione dei pacchetti e selezionare l'evento **Diagnostica** a livello di pacchetto. Per altre informazioni, vedere [Risoluzione dei problemi relativi agli strumenti per l'esecuzione del pacchetto](../troubleshooting/troubleshooting-tools-for-package-execution.md).  
@@ -50,9 +49,9 @@ ms.locfileid: "48165071"
   
 -   [Editor destinazione ADO NET &#40;pagina Gestione connessione&#41;](../ado-net-destination-editor-connection-manager-page.md)  
   
--   [Editor destinazione ADO NET &#40;pagina mapping&#41;](../ado-net-destination-editor-mappings-page.md)  
+-   [Editor destinazione ADO NET &#40;pagina Mapping&#41;](../ado-net-destination-editor-mappings-page.md)  
   
--   [Editor destinazione ADO NET &#40;pagina dell'Output degli errori&#41;](../ado-net-destination-editor-error-output-page.md)  
+-   [Editor destinazione ADO NET &#40;pagina Output errori&#41;](../ado-net-destination-editor-error-output-page.md)  
   
  Nella finestra di dialogo **Editor avanzato** sono disponibili le proprietà che è possibile impostare a livello di codice. Per ulteriori informazioni sulle proprietà che è possibile impostare nella finestra di dialogo **Editor avanzato** o a livello di codice, fare clic su uno degli argomenti seguenti:  
   
@@ -60,6 +59,6 @@ ms.locfileid: "48165071"
   
 -   [Proprietà personalizzate ADO NET](ado-net-custom-properties.md)  
   
- Per altre informazioni su come impostare le proprietà, vedere [Impostazione delle proprietà di un componente flusso di dati](set-the-properties-of-a-data-flow-component.md).  
+ Per altre informazioni su come impostare le proprietà, vedere [Impostazione delle proprietà di un componente del flusso di dati](set-the-properties-of-a-data-flow-component.md).  
   
   

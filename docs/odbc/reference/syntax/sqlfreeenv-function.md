@@ -20,22 +20,22 @@ ms.assetid: 32000150-e120-445e-b269-43200f813b2a
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ba28c2b952874aeea79a1c8104805771afbd494b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 979e34f89128a27a416f0af9305b1f97c6d0d385
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47786619"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53203780"
 ---
 # <a name="sqlfreeenv-function"></a>Funzione SQLFreeEnv
 **Conformità**  
- Versione introdotta: Conformità agli standard 1.0 di ODBC: deprecato  
+ Versione introdotta: Conformità agli standard 1.0 ODBC: Deprecato  
   
  **Riepilogo**  
  In ODBC 3 *. x*, la funzione ODBC 2.0 **SQLFreeEnv** è stata sostituita da **SQLFreeHandle**. Per altre informazioni, vedere [SQLFreeHandle](../../../odbc/reference/syntax/sqlfreehandle-function.md).  
   
-> [!NOTE]  
->  Per altre informazioni su ciò che Gestione Driver esegue il mapping a questa funzione quando un ODBC 2 *. x* applicazione funziona con un'applicazione ODBC 3 *. x* driver, vedere [Mapping di funzioni deprecate](../../../odbc/reference/appendixes/mapping-deprecated-functions.md)nell'appendice g: Driver le linee guida per la compatibilità con le versioni precedenti.  
+> [!NOTE]
+>  Per altre informazioni su ciò che Gestione Driver esegue il mapping a questa funzione quando un ODBC 2 *. x* applicazione funziona con un'applicazione ODBC 3 *. x* driver, vedere [Mapping di funzioni deprecate](../../../odbc/reference/appendixes/mapping-deprecated-functions.md)nell'appendice g: Driver linee guida per la compatibilità con le versioni precedenti.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Riferimento all'API ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   

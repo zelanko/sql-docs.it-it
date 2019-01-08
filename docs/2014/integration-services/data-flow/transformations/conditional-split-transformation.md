@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.conditionalsplittrans.f1
@@ -16,12 +15,12 @@ ms.assetid: 3f8b5825-226f-413c-ba8f-0bb931ca3770
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b6cfae604393fa2fec1c8d3a22edf2c0379581b9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f6d5c075898bc503a58c6b90641788d01e9b97d0
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48073578"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52814913"
 ---
 # <a name="conditional-split-transformation"></a>Suddivisione condizionale - trasformazione
   La trasformazione Suddivisione condizionale consente di indirizzare righe di dati verso output diversi a seconda del contenuto dei dati. L'implementazione della trasformazione Suddivisione condizionale è simile a una struttura decisionale CASE in un linguaggio di programmazione. La trasformazione valuta una o più espressioni e, in base ai risultati, dirige la riga di dati verso l'output specificato. Questa trasformazione prevede inoltre un output predefinito, verso il quale vengono indirizzate le righe che non corrispondono ad alcuna espressione.  
@@ -47,7 +46,7 @@ ms.locfileid: "48073578"
   
  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] include funzioni e operatori che è possibile usare per creare le espressioni che valutano i dati di input e dirigono i dati di output. Per altre informazioni, vedere [Espressioni di Integration Services &#40;SSIS&#41;](../../expressions/integration-services-ssis-expressions.md).  
   
- La trasformazione Suddivisione condizionale include la `FriendlyExpression` proprietà personalizzata. che può essere aggiornata da un'espressione di proprietà al caricamento del pacchetto. Per altre informazioni, vedere [Utilizzo delle espressioni di proprietà nei pacchetti](../../expressions/use-property-expressions-in-packages.md) e [Proprietà personalizzate delle trasformazioni](transformation-custom-properties.md).  
+ La trasformazione Suddivisione condizionale include la proprietà personalizzata `FriendlyExpression`, che può essere aggiornata da un'espressione di proprietà al caricamento del pacchetto. Per altre informazioni, vedere [Utilizzo delle espressioni di proprietà nei pacchetti](../../expressions/use-property-expressions-in-packages.md) e [Proprietà personalizzate delle trasformazioni](transformation-custom-properties.md).  
   
  Questa trasformazione include un input, uno o più output e un output degli errori.  
   
@@ -65,10 +64,10 @@ ms.locfileid: "48073578"
   
 -   [Dividere un set di dati tramite la trasformazione Suddivisione condizionale](conditional-split-transformation.md)  
   
--   [Impostare le proprietà di un componente del flusso di dati](../set-the-properties-of-a-data-flow-component.md)  
+-   [Impostazione delle proprietà di un componente del flusso di dati](../set-the-properties-of-a-data-flow-component.md)  
   
 ## <a name="related-tasks"></a>Attività correlate  
- [Dividere un set di dati tramite la trasformazione Suddivisione condizionale](conditional-split-transformation.md)  
+ [Divisione di un set di dati tramite la trasformazione Suddivisione condizionale](conditional-split-transformation.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Flusso di dati](../data-flow.md)   

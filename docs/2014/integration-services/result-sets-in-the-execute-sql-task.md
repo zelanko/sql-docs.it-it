@@ -14,12 +14,12 @@ ms.assetid: 62605b63-d43b-49e8-a863-e154011e6109
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 25f917dc3831f0915b87c4a93dbb4197a3d25df0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c9ac0e67e4e1c48fd1ccdd8d8b4021541b0bf4c9
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48053367"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53366313"
 ---
 # <a name="result-sets-in-the-execute-sql-task"></a>Set di risultati nell’attività Esegui SQL
   La restituzione di un set di risultati all'attività Esegui SQL in un pacchetto di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] dipende dal tipo di comando SQL utilizzato dall'attività. Se si utilizzano ad esempio le istruzioni SELECT, viene in genere restituito un set di risultati, mentre questo non avviene per le istruzioni INSERT.  
@@ -58,18 +58,18 @@ ms.locfileid: "48053367"
   
  Quando si esegue il mapping di una variabile a un set di risultati con il tipo di set di risultati **Riga singola** , la variabile deve avere un tipo di dati compatibile con quello della colonna contenuta nel set di risultati. Non è possibile, ad esempio, eseguire il mapping di un set di risultati che contiene una colonna con un tipo di dati `String` a una variabile con un tipo di dati numerico. Quando si impostano i **TypeConversionMode** proprietà `Allowed`, l'attività Esegui SQL tenterà di convertire il parametro di output e risultati per i dati di tipo della variabile i risultati della query sono assegnati.  
   
- È possibile eseguire il mapping di un set di risultati XML solo a una variabile con il tipo di dati `String` o `Object`. Se la variabile ha il `String` tipo di dati, l'attività Esegui SQL restituisce una stringa e l'origine XML può utilizzare i dati XML. Se la variabile ha il `Object` tipo di dati, l'attività Esegui SQL restituisce un oggetto Strumentazione gestione Windows (DOM, Document Object Model).  
+ È possibile eseguire il mapping di un set di risultati XML solo a una variabile con il tipo di dati `String` o `Object`. Se la variabile ha il tipo di dati `String`, l'attività Esegui SQL restituisce una stringa e l'origine XML può utilizzare i dati XML. Se la variabile ha il tipo di dati `Object`, l'attività Esegui SQL restituisce un oggetto DOM (Document Object Model).  
   
- Oggetto **set dei risultati completo** deve eseguire il mapping a una variabile del `Object` tipo di dati. Il risultato restituito è un oggetto set di righe. È possibile usare un contenitore Ciclo ForEach per estrarre i valori di riga della tabella archiviati nella variabile Object nelle variabili del pacchetto e quindi usare un'attività Script per scrivere in un file i dati archiviati nelle variabili del pacchetto. Per una dimostrazione dell'esecuzione di questa operazione tramite un contenitore Ciclo ForEach e un'attività Script, vedere l'esempio CodePlex, relativo all' [esecuzione di parametri SQL e set di risultati](http://go.microsoft.com/fwlink/?LinkId=157863)sul sito Web msftisprodsamples.codeplex.com.  
+ Oggetto **set dei risultati completo** deve eseguire il mapping a una variabile del `Object` tipo di dati. Il risultato restituito è un oggetto set di righe. È possibile usare un contenitore Ciclo ForEach per estrarre i valori di riga della tabella archiviati nella variabile Object nelle variabili del pacchetto e quindi usare un'attività Script per scrivere in un file i dati archiviati nelle variabili del pacchetto. Per una dimostrazione dell'esecuzione di questa operazione tramite un contenitore Ciclo ForEach e un'attività Script, vedere l'esempio CodePlex, relativo all' [esecuzione di parametri SQL e set di risultati](https://go.microsoft.com/fwlink/?LinkId=157863)sul sito Web msftisprodsamples.codeplex.com.  
   
  Nella tabella seguente è disponibile un riepilogo dei tipi di dati delle variabili di cui è possibile eseguire il mapping a set di risultati.  
   
 |Tipo di set di risultati|Tipo di dati della variabile|Tipo di oggetto|  
 |---------------------|---------------------------|--------------------|  
 |Riga singola|Qualunque tipo compatibile con la colonna del tipo nel set di risultati.|Non applicabile|  
-|Set dei risultati predefinito|`Object`|Se l'attività utilizza una gestione connessione nativa, incluse le gestioni connessioni ADO, OLE DB, Excel e ODBC, l'oggetto restituito è un oggetto ADO `Recordset`.<br /><br /> Se l'attività utilizza una gestione connessione gestita, ad esempio la [!INCLUDE[vstecado](../includes/vstecado-md.md)] gestione connessione, l'oggetto restituito è un `System.Data.DataSet`.<br /><br /> È possibile usare un'attività Script per accedere la `System.Data.DataSet` dell'oggetto, come illustrato nell'esempio seguente.<br /><br /> `Dim dt As Data.DataTable` <br /> `Dim ds As Data.DataSet = CType(Dts.Variables("Recordset").Value, DataSet)` <br /> `dt = ds.Tables(0)`|  
+|Set dei risultati completo|`Object`|Se l'attività usa una gestione connessione nativa, incluse le gestioni connessioni ADO, OLE DB, Excel e ODBC, l'oggetto restituito è un oggetto `Recordset` ADO.<br /><br /> Se nell'attività viene usata una gestione connessione gestita, ad esempio la gestione connessione [!INCLUDE[vstecado](../includes/vstecado-md.md)], l'oggetto restituito è un oggetto `System.Data.DataSet`.<br /><br /> È possibile usare un'attività Script per accedere all'oggetto `System.Data.DataSet`, come illustrato nell'esempio seguente.<br /><br /> `Dim dt As Data.DataTable` <br /> `Dim ds As Data.DataSet = CType(Dts.Variables("Recordset").Value, DataSet)` <br /> `dt = ds.Tables(0)`|  
 |XML|`String`|`String`|  
-|XML|`Object`|Se l'attività utilizza una gestione connessione nativa, incluse le gestioni connessioni ADO, OLE DB, Excel e ODBC, l'oggetto restituito è un `MSXML6.IXMLDOMDocument`.<br /><br /> Se l'attività usa una gestione connessione gestita, ad esempio la gestione connessione [!INCLUDE[vstecado](../includes/vstecado-md.md)], l'oggetto restituito è un oggetto `System.Xml.XmlDocument`.|  
+|XML|`Object`|Se nell'attività è usata una gestione connessione nativa, incluse le gestioni connessioni ADO, OLE DB, Excel e ODBC, l'oggetto restituito è un oggetto `MSXML6.IXMLDOMDocument`.<br /><br /> Se l'attività usa una gestione connessione gestita, ad esempio la gestione connessione [!INCLUDE[vstecado](../includes/vstecado-md.md)], l'oggetto restituito è un oggetto `System.Xml.XmlDocument`.|  
   
  La variabile può essere definita nell'ambito dell'attività Esegui SQL o nell'ambito del pacchetto. Se la variabile viene definita nell'ambito del pacchetto, il set di risultati sarà disponibile per altre attività e contenitori all'interno del pacchetto e per altri pacchetti eseguiti dalle attività Esegui pacchetto o Esegui pacchetto DTS 2000.  
   
@@ -88,13 +88,13 @@ ms.locfileid: "48053367"
   
  Per altre informazioni sull'impostazione di queste proprietà in Progettazione [!INCLUDE[ssIS](../includes/ssis-md.md)] , fare clic sull'argomento seguente:  
   
--   [Impostare le proprietà di un'attività o di un contenitore](../../2014/integration-services/set-the-properties-of-a-task-or-container.md)  
+-   [Impostazione delle proprietà di un'attività o di un contenitore](../../2014/integration-services/set-the-properties-of-a-task-or-container.md)  
   
 ## <a name="related-tasks"></a>Attività correlate  
  [Mapping di set di risultati a variabili in un'attività Esegui SQL](control-flow/execute-sql-task.md)  
   
 ## <a name="related-content"></a>Contenuto correlato  
   
--   Esempio CodePlex sull' [esecuzione di parametri SQL e set di risultati](http://go.microsoft.com/fwlink/?LinkId=157863)sul sito Web msftisprodsamples.codeplex.com  
+-   Esempio CodePlex sull' [esecuzione di parametri SQL e set di risultati](https://go.microsoft.com/fwlink/?LinkId=157863)sul sito Web msftisprodsamples.codeplex.com  
   
   

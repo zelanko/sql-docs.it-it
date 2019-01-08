@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - enterprise automatic administration [SQL Server]
@@ -20,12 +20,12 @@ ms.assetid: 44d8365b-42bd-4955-b5b2-74a8a9f4a75f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5f4e14eabe3d94f4497d6c4e622ff62e0ef8258b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b3be16ea856b5d632ba5a0285bad2c4d2d93709c
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48181903"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53210180"
 ---
 # <a name="automated-administration-across-an-enterprise"></a>Amministrazione automatizzata in un'organizzazione
   L'automazione dell'amministrazione in più istanze di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] viene definita *amministrazione multiserver*. Utilizzare l'amministrazione multiserver per eseguire le operazioni seguenti:  
@@ -56,7 +56,7 @@ ms.locfileid: "48181903"
 > [!NOTE]  
 >  Le caratteristiche di amministrazione multiserver sono riservate ai membri del ruolo sysadmin. Un membro del ruolo sysadmin nel server di destinazione non può tuttavia modificare le operazioni eseguite in tale server dal server master. Questa misura di sicurezza impedisce l'eliminazione accidentale di passaggi del processo ed evita l'interruzione delle operazioni nel server di destinazione.  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Creazione di un ambiente multiserver](create-a-multiserver-environment.md)  
  Contiene informazioni sulla creazione e la gestione di server master e di destinazione.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "48181903"
  Contiene informazioni sull'impatto dell'utilizzo degli account di Windows non amministrativi o dell'account di sistema locale sul servizio [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent negli ambienti multiserver.  
   
  [Impostazione delle opzioni di crittografia nei server di destinazione](set-encryption-options-on-target-servers.md)  
- Sono incluse informazioni sull'impostazione della sottochiave MsxEncryptChannelOptions del Registro di sistema di[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent nei server di destinazione.  
+ Sono incluse informazioni sull'impostazione della sottochiave MsxEncryptChannelOptions del Registro di sistema di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent nei server di destinazione.  
   
  [Gestire i processi in un'azienda](manage-jobs-across-an-enterprise.md)  
  Contiene informazioni su verifica dello stato dei processi, modifica dei server di destinazione per i processi, sincronizzazione dei clock dei server e polling dei server master per determinare lo stato attuale dei processi.  

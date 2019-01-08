@@ -5,8 +5,7 @@ ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - MSmerge_settingshistory
@@ -19,24 +18,24 @@ ms.assetid: 0bdf2d5f-5502-44cd-aa9d-2d5006ad20ce
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c35438b1b6df4b2df3ae1af25cb9479f676d9ee5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 25505e0b96c627feb51fd59abfe587851520b724
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47782919"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52817303"
 ---
 # <a name="msmergesettingshistory-transact-sql"></a>MSmerge_settingshistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Il **MSmerge_settingshistory** tabella viene utilizzata per memorizzare una cronologia delle modifiche apportate alle proprietà di articolo e pubblicazione di replica di tipo merge con una riga per ogni modifica apportata a una topologia di replica di tipo merge. Nella tabella sono inoltre archiviate informazioni sulle impostazioni iniziali delle proprietà. Questa tabella è archiviata nei database di pubblicazione e di sottoscrizione.  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**EventTime**|**datetime**|Data e ora in cui è stato generato l'evento.|  
 |**pubid**|**uniqueidentifier**|Identificatore univoco per la pubblicazione specificata.|  
 |**artid**|**uniqueidentifier**|Identificatore univoco per l'articolo specificato.|  
-|**il tipo di evento**|**tinyint**|Specifica il tipo di evento registrato. I possibili valori sono i seguenti:<br /><br /> **1** – impostazione proprietà del livello di pubblicazione iniziale.<br /><br /> **2** -modifica di una proprietà di pubblicazione.<br /><br /> **101** -impostazione di proprietà di articolo iniziale.<br /><br /> **102** -modifica di una proprietà di articolo.|  
+|**il tipo di evento**|**tinyint**|Specifica il tipo di evento registrato. I possibili valori sono i seguenti:<br /><br /> **1** -impostazione di proprietà del livello di pubblicazione iniziale.<br /><br /> **2** -modifica di una proprietà di pubblicazione.<br /><br /> **101** -impostazione di proprietà di articolo iniziale.<br /><br /> **102** -modifica di una proprietà di articolo.|  
 |**propertyname**|**sysname**|Nome della proprietà impostata o modificata.|  
 |**valore previousvalue**|**sysname**|Valore precedente di una proprietà modificata.|  
 |**NewValue**|**sysname**|Valore con cui viene modificata o creata la proprietà.|  

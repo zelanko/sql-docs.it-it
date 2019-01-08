@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 08/22/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.ftptask.f1
@@ -15,12 +14,12 @@ ms.assetid: 41c3f2c4-ee04-460a-9822-bb9ae4036c2e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1ba03c8bcfad515fbe7a651822177ffa349dff25
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cce297bd0a894a432cd05ae10c7b4a0689321bbd
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48079177"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52805453"
 ---
 # <a name="ftp-task"></a>Attività FTP
   L'attività FTP consente di caricare e scaricare file di dati, nonché di gestire directory nei server. Un pacchetto può ad esempio scaricare file di dati da un server remoto o da un indirizzo Internet nell'ambito del flusso di lavoro di un pacchetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . È possibile utilizzare l'attività FTP per gli scopi seguenti:  
@@ -49,7 +48,7 @@ ms.locfileid: "48079177"
 ## <a name="predefined-ftp-operations"></a>Operazioni FTP predefinite  
  L'attività FTP include un set predefinito di operazioni, descritte nella tabella seguente.  
   
-|Operazione|Description|  
+|Operazione|Descrizione|  
 |---------------|-----------------|  
 |Invia file|Invia un file dal computer locale al server FTP.|  
 |Ricevi file|Salva sul computer locale un file scaricato dal server FTP.|  
@@ -63,7 +62,7 @@ ms.locfileid: "48079177"
 ## <a name="custom-log-entries-available-on-the-ftp-task"></a>Voci di log personalizzate disponibili nell'attività FTP  
  Nella tabella seguente sono elencate le voci di log personalizzate disponibili per l'attività FTP. Per altre informazioni, vedere [Registrazione di Integration Services &#40;SSIS&#41;](../performance/integration-services-ssis-logging.md) e [Messaggi personalizzati per la registrazione](../custom-messages-for-logging.md).  
   
-|Voce di log|Description|  
+|Voce di log|Descrizione|  
 |---------------|-----------------|  
 |`FTPConnectingToServer`|Indica che l'attività ha stabilito una connessione al server FTP.|  
 |`FTPOperation`|Specifica l'inizio e il tipo dell'operazione FTP eseguita dall'attività.|  
@@ -77,7 +76,7 @@ ms.locfileid: "48079177"
   
 ## <a name="see-also"></a>Vedere anche  
  [Editor attività FTP &#40;pagina Generale&#41;](../general-page-of-integration-services-designers-options.md)   
- [Editor attività FTP &#40;pagina trasferimento File&#41;](../ftp-task-editor-file-transfer-page.md)   
+ [Editor attività FTP &#40;pagina Trasferimento file&#41;](../ftp-task-editor-file-transfer-page.md)   
  [Attività di Integration Services](integration-services-tasks.md)   
  [Flusso di controllo](control-flow.md)  
   

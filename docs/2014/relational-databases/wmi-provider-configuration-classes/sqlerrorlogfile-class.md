@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: wmi
 ms.topic: reference
 ms.assetid: 2b83ae4a-c0d4-414c-b6e5-a41ec7c13159
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 1cd24b1717bca086bf1419a2df3b44b57104d1f7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8c5c6f1998cffc268a57318e0124f74d3411a3b4
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48226611"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53370443"
 ---
 # <a name="sqlerrorlogfile-class"></a>Classe SqlErrorLogFile
   Fornisce proprietà per la visualizzazione delle informazioni relative a un file di log di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -42,11 +40,11 @@ class SQLErrorLogFile
   
 |||  
 |-|-|  
-|ArchiveNumber|Tipo di dati: `uint32`<br /><br /> Tipo di accesso: sola lettura<br /><br /> <br /><br /> Numero dell'archivio per il file di log.|  
-|InstanceName|Tipo di dati: `string`<br /><br /> Tipo di accesso: sola lettura<br /><br /> Qualificatori: chiave<br /><br /> <br /><br /> Nome dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in cui si trova il file di log.|  
-|LastModified|Tipo di dati: `datetime`<br /><br /> Tipo di accesso: sola lettura<br /><br /> <br /><br /> Data dell'ultima modifica apportata al file di log.|  
-|LogFileSize|Tipo di dati: `uint32`<br /><br /> Tipo di accesso: sola lettura<br /><br /> <br /><br /> Dimensione del file di log, in byte.|  
-|nome|Tipo di dati: `string`<br /><br /> Tipo di accesso: sola lettura<br /><br /> Qualificatori: chiave<br /><br /> <br /><br /> Nome del file di log.|  
+|ArchiveNumber|Tipo di dati: `uint32`<br /><br /> Tipo di accesso: Sola lettura<br /><br /> <br /><br /> Numero dell'archivio per il file di log.|  
+|InstanceName|Tipo di dati: `string`<br /><br /> Tipo di accesso: Sola lettura<br /><br /> Qualificatori: Chiave<br /><br /> <br /><br /> Nome dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in cui si trova il file di log.|  
+|LastModified|Tipo di dati: `datetime`<br /><br /> Tipo di accesso: Sola lettura<br /><br /> <br /><br /> Data dell'ultima modifica apportata al file di log.|  
+|LogFileSize|Tipo di dati: `uint32`<br /><br /> Tipo di accesso: Sola lettura<br /><br /> <br /><br /> Dimensione del file di log, in byte.|  
+|nome|Tipo di dati: `string`<br /><br /> Tipo di accesso: Sola lettura<br /><br /> Qualificatori: Chiave<br /><br /> <br /><br /> Nome del file di log.|  
   
 ## <a name="remarks"></a>Note  
   
@@ -54,7 +52,7 @@ class SQLErrorLogFile
 |-|-|  
 |MOF|Sqlmgmprovider xpsp2up.mof|  
 |DLL|Sqlmgmprovider.dll|  
-|Namespace|\root\Microsoft\SqlServer\ComputerManagement10|  
+|Spazio dei nomi|\root\Microsoft\SqlServer\ComputerManagement10|  
   
 ## <a name="example"></a>Esempio  
  Nell'esempio seguente viene illustrato come recuperare informazioni su tutti i file di log di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un'istanza specificata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per eseguire l'esempio, sostituire \< *nome_istanza*> con il nome dell'istanza, ad esempio "Istanza1".  
@@ -95,7 +93,7 @@ Next
   
      **\<Unità >: \Programmi\Microsoft SQL Server\MSSQL11** **.\< NomeIstanza > \mssql\log.**  
   
- Se si sta eseguendo la connessione attraverso un firewall, assicurarsi che sia impostata un'eccezione nel firewall per WMI nei computer di destinazione remoti. Per altre informazioni, vedere [la connessione a WMI in modalità remota a partire da Windows Vista](http://go.microsoft.com/fwlink/?LinkId=178848).  
+ Se si sta eseguendo la connessione attraverso un firewall, assicurarsi che sia impostata un'eccezione nel firewall per WMI nei computer di destinazione remoti. Per altre informazioni, vedere [la connessione a WMI in modalità remota a partire da Windows Vista](https://go.microsoft.com/fwlink/?LinkId=178848).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Classe SqlErrorLogEvent](sqlerrorlogevent-class.md)   

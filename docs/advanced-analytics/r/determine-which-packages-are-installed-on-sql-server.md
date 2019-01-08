@@ -1,5 +1,5 @@
 ---
-title: Ottenere informazioni sul pacchetto R e Python in SQL Server Machine Learning | Microsoft Docs
+title: Ottenere informazioni sul pacchetto R e Python - servizi di SQL Server Machine Learning
 description: Determinare la versione del pacchetto R e Python, è possibile verificarla e ottenere un elenco dei pacchetti installati in SQL Server R Services o servizi di Machine Learning.
 ms.custom: ''
 ms.prod: sql
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 96cda599e260982b26e6c565bd38c5097fc01763
-ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
+ms.openlocfilehash: 47badb15b5f5a2d0eabc63b8fd1be3e83a0caffb
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51291537"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53645370"
 ---
 #  <a name="get-r-and-python-package-information"></a>Ottenere informazioni sul pacchetto R e Python
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -91,9 +91,9 @@ Esistono diversi modi che è possibile ottenere un elenco completo dei pacchetti
 
 ### <a name="r"></a>R
 
-Nell'esempio seguente viene utilizzata la funzione R `installed.packages()` in un [!INCLUDE [tsql](..\..\includes\tsql-md.md)] stored procedure per ottenere una matrice di pacchetti che sono stati installati nella libreria R_SERVICES per l'istanza corrente. Questo script restituisce i campi nome e la versione del pacchetto nel file di descrizione, viene restituito solo il nome.
+Nell'esempio seguente viene utilizzata la funzione R `installed.packages()` in un [!INCLUDE[tsql](../../includes/tsql-md.md)] stored procedure per ottenere una matrice di pacchetti che sono stati installati nella libreria R_SERVICES per l'istanza corrente. Questo script restituisce i campi nome e la versione del pacchetto nel file di descrizione, viene restituito solo il nome.
 
-```SQL
+```sql
 EXECUTE sp_execute_external_script
   @language=N'R',
   @script = N'str(OutputDataSet);
@@ -142,7 +142,7 @@ EXECUTE sp_execute_external_script
 GO
 ```
 
-+ Se il pacchetto viene trovato, viene restituito un messaggio: "Comandi riusciti"
++ Se il pacchetto viene trovato, viene restituito un messaggio: "Comandi completati".
 
 + Se il pacchetto non può essere disponibile o non caricato, viene visualizzato un errore che contiene il testo: "non c'è nessun pacchetto denominato 'MissingPackageName'"
 

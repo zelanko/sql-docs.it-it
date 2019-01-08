@@ -1,20 +1,22 @@
 ---
-title: Monitorare i cluster di big data di SQL Server (anteprima) con il portale di amministrazione cluster | Microsoft Docs
+title: Portale di amministrazione cluster
+titleSuffix: SQL Server 2019 big data clusters
 description: Informazioni su come usare il portale di amministrazione cluster per monitorare i cluster di big data di SQL Server 2019 (anteprima).
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.date: 11/06/2018
+ms.date: 12/07/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: eaff715d1fe29e1484dec7bde24de6bb16449458
-ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
+ms.custom: seodec18
+ms.openlocfilehash: 46d2565ac90bfd007bbe0f3c9e8a2382ca5eeb74
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51221467"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53215537"
 ---
-# <a name="introduction-to-the-cluster-administration-portal"></a>Introduzione al portale di amministrazione del cluster
+# <a name="how-to-use-the-cluster-administration-portal-to-monitor-a-sql-server-big-data-cluster"></a>Come usare il portale di amministrazione cluster per monitorare un cluster di big data di SQL Server
 
 Se si desidera monitorare o risolverne i problemi del cluster di big data di SQL Server 2019 (anteprima), usare il portale di amministrazione cluster.
 
@@ -29,10 +31,10 @@ Nel portale di amministrazione del cluster consente di:
 
 Seguire le [avvio rapido per distribuire il cluster di big data](quickstart-big-data-cluster-deploy.md) finché non viene visualizzata la **portale di amministrazione cluster** sezione. Dopo aver creato il cluster di big data in esecuzione con mssqlctl, seguire queste istruzioni:
 
-Il pod controller è in esecuzione, è possibile utilizzare il portale di amministrazione cluster per monitorare la distribuzione. È possibile accedere al portale con l'esterno indirizzo IP e porta numero per il `service-proxy-lb` (ad esempio: **https://\<ip-address\>: 30777**). Le credenziali per accedere al portale di amministrazione sono i valori delle `CONTROLLER_USERNAME` e `CONTROLLER_PASSWORD` variabili di ambiente fornite sopra.
+Il pod controller è in esecuzione, è possibile utilizzare il portale di amministrazione cluster per monitorare la distribuzione. È possibile accedere al portale con l'esterno indirizzo IP e porta numero per il `service-proxy-lb` (ad esempio: **https://\<ip-address\>: 30777/portale**). Le credenziali per accedere al portale di amministrazione sono i valori delle `CONTROLLER_USERNAME` e `CONTROLLER_PASSWORD` variabili di ambiente fornite sopra.
 
 > [!NOTE]
-> Per la versione CTP 2.1, è un avviso di sicurezza all'accesso alla pagina web poiché utilizza i certificati SSL generati automaticamente.
+> Per CTP 2.2, sussiste un avviso di sicurezza all'accesso alla pagina web poiché utilizza i certificati SSL generati automaticamente.
 
 ## <a name="overview"></a>Panoramica
 

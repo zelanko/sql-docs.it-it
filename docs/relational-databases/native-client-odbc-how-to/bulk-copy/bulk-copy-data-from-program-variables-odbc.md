@@ -15,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0e01f9a772b306616c8ac2ca3763a01f820e7854
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: d8d0d377cff846bcabac999667718c5696089971
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661150"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53216050"
 ---
 # <a name="bulk-copy-data-from-program-variables-odbc"></a>Eseguire una copia bulk di dati da variabili di programma (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "51661150"
   
     -   Nome di un file di dati per la ricezione di eventuali messaggi di errore della copia bulk (specificare NULL se non si desidera che venga creato un file dei messaggi).  
   
-    -   Direzione della copia, ovvero DB_IN per indicare la copia dall'applicazione alla vista o alla tabella oppure DB_OUT per indicare la copia dalla tabella o dalla vista all'applicazione.  
+    -   La direzione della copia: DB_IN dall'applicazione per la vista o tabella oppure DB_OUT per l'applicazione dalla tabella o vista.  
   
 5.  Chiamare [bcp_bind](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md) per ogni colonna della copia bulk da associare alla colonna a una variabile di programma.  
   
@@ -67,11 +67,11 @@ ms.locfileid: "51661150"
   
  In questo esempio viene eseguita la connessione all'istanza predefinita di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nel computer in uso. Per connettersi a un'istanza denominata, modificare la definizione dell'origine dati ODBC per specificare l'istanza in base al formato: server\istanzadenominata. Per impostazione predefinita, [!INCLUDE[ssExpress](../../../includes/ssexpress-md.md)] viene installato in un'istanza denominata.  
   
- Eseguire il primo listato di codice ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) per creare le tabelle che verranno utilizzate dall'esempio.  
+ Eseguire il primo ( [!INCLUDE[tsql](../../../includes/tsql-md.md)]) listato per creare tabelle che verrà usato l'esempio di codice.  
   
  Compilare il secondo listato di codice (C++) con odbc32.lib e odbcbcp.lib. Se è stata eseguita la compilazione con MSBuild.exe, copiare Bcpfmt.fmt e Bcpodbc.bcp dalla directory del progetto in quella contenente il file con estensione exe e quindi richiamare tale file.  
   
- Eseguire il terzo listato di codice ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) per eliminare le tabelle utilizzate dall'esempio.  
+ Eseguire il terzo ( [!INCLUDE[tsql](../../../includes/tsql-md.md)]) listato per eliminare le tabelle utilizzate dall'esempio di codice.  
   
 ```  
 // compile with: odbc32.lib odbcbcp.lib  

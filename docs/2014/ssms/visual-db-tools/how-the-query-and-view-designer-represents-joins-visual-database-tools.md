@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL pane [Visual Database Tools]
@@ -14,12 +14,12 @@ ms.assetid: 20a99dcb-83bd-4aa6-9139-92e2e5ba4887
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1e03e7ef3899b4f01b0844d5d721fa3a86eb6d4b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: abd8dd7c3c23a13b1cdff7a2d6f76fb99375a641
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48100107"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52812773"
 ---
 # <a name="how-the-query-and-view-designer-represents-joins-visual-database-tools"></a>Rappresentazione di join in Progettazione query e Progettazione viste (Visual Database Tools)
   Se due o più tabelle sono unite tramite join, in [Progettazione query e Progettazione viste](visual-database-tools.md) il join verrà rappresentato in forma grafica all'interno del [riquadro Diagramma](diagram-pane-visual-database-tools.md) e mediante la sintassi SQL all'interno del [riquadro SQL](sql-pane-visual-database-tools.md).  

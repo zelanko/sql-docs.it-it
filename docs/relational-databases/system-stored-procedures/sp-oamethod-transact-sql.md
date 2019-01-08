@@ -18,12 +18,12 @@ ms.assetid: 1dfaebe2-c7cf-4041-a586-5d04faf2e25e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9b0e2e11dd905f48eaed16e0c083f11bde103a80
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 525a66fa00981c4360295ee9c704102cd1224220
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47704439"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591465"
 ---
 # <a name="spoamethod-transact-sql"></a>sp_OAMethod (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ sp_OAMethod objecttoken , methodname
  *MethodName*  
  Nome del metodo dell'oggetto OLE da chiamare.  
   
- *ReturnValue***OUTPUT**  
+ _ReturnValue_**OUTPUT**  
  Valore restituito del metodo dell'oggetto OLE. Se specificato, deve essere una variabile locale del tipo di dati appropriato.  
   
  Se il metodo restituisce un valore singolo, specificare una variabile locale per *returnvalue*, che restituisce il metodo restituisce un valore nella variabile locale o non si specifica *returnvalue*, che restituisce il metodo restituito al client come set di risultati a colonna singola, singola riga.  
@@ -65,17 +65,17 @@ sp_OAMethod objecttoken , methodname
   
 -   Il metodo restituisce una matrice come parametro di output.  
   
- [  *@parametername* * * =**] *parametro*[ **OUTPUT** ]  
+ [ _@parametername_ **=** ] *parametro*[ **OUTPUT** ]  
  Parametro del metodo. Se specificato, *parametro* deve essere un valore del tipo di dati appropriato.  
   
  Per ottenere il valore restituito di un parametro di output *parametri* deve essere una variabile locale del tipo di dati appropriato, e **OUTPUT** deve essere specificato. Se viene specificato un parametro costante oppure se **OUTPUT** non viene specificato, qualsiasi restituito da un parametro di output valore viene ignorato.  
   
- Se specificato, *parametername* deve essere il nome delle [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] parametro denominato. Si noti che  **@** *parametername*non è un [!INCLUDE[tsql](../../includes/tsql-md.md)] variabile locale. Il simbolo di chiocciola (**@ * *) viene rimosso, e *parametername*viene passato all'oggetto OLE come nome del parametro. Tutti i parametri denominati devono essere specificati dopo tutti i parametri posizionali.  
+ Se specificato, *parametername* deve essere il nome delle [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] parametro denominato. Si noti che **@**_parametername_is non un [!INCLUDE[tsql](../../includes/tsql-md.md)] variabile locale. Il simbolo di chiocciola (**@**) viene rimosso, e *parametername*viene passato all'oggetto OLE come nome del parametro. Tutti i parametri denominati devono essere specificati dopo tutti i parametri posizionali.  
   
  *n*  
  Segnaposto che indica la possibilità di specificare più parametri.  
   
-> [!NOTE]  
+> [!NOTE]
 >  *@parametername* può essere un parametro denominato perché fa parte del metodo specificato e viene passato all'oggetto. Gli altri parametri della stored procedure vengono specificati in base alla posizione e non in base al nome.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
@@ -124,7 +124,7 @@ BEGIN
 END;  
 ```  
   
-### <a name="b-getting-a-property"></a>B. Recupero di una proprietà  
+### <a name="b-getting-a-property"></a>b. Recupero di una proprietà  
  L'esempio seguente ottiene i `HostName` proprietà (dell'oggetto creato in precedenza **SQLServer** oggetto) e lo archivia in una variabile locale.  
   
 ```  

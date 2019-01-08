@@ -13,12 +13,12 @@ ms.assetid: 82796217-02e2-4bc5-9ab5-218bae11a2d6
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6e3df0527e02bd69bfbb198888e82045d067a61a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3141146842bd568336033073f07b41c636129ee7
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48091621"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52543576"
 ---
 # <a name="database-mirroring-and-replication-sql-server"></a>Mirroring e replica del database (SQL Server)
   Per migliorare la disponibilità del database di pubblicazione è possibile utilizzare il mirroring del database in combinazione con la replica. Il mirroring del database coinvolge due copie di un unico database che in genere risiedono in computer diversi. In un momento dato solo una copia del database risulta disponibile per i client. Questa copia viene definita database principale. Gli aggiornamenti apportati dai client al database principale vengono applicati all'altra copia del database, definita database mirror. Il processo di mirroring prevede l'applicazione nel database mirror del log delle transazioni relativo a ogni operazione di inserimento, aggiornamento o eliminazione eseguita sul database principale.  
@@ -75,7 +75,7 @@ ms.locfileid: "48091621"
   
     -   Impostare il valore del parametro **@working_directory** sulla cartella snapshot usata dal server principale.  
   
-4.  Specificare il nome del database mirror per il parametro dell'agente **–PublisherFailoverPartner** . Questo parametro è necessario per l'identificazione del database mirror dopo il failover da parte degli agenti seguenti:  
+4.  Specificare il nome del database mirror per il parametro dell'agente **-PublisherFailoverPartner**. Questo parametro è necessario per l'identificazione del database mirror dopo il failover da parte degli agenti seguenti:  
   
     -   Agente snapshot (per tutte le pubblicazioni)  
   
@@ -95,9 +95,9 @@ ms.locfileid: "48091621"
   
     -   [Visualizzare e modificare i parametri del prompt dei comandi dell'agente di replica &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/agents/view-and-modify-replication-agent-command-prompt-parameters.md)  
   
-    -   [Concetti di base relativi ai file eseguibili dell'agente di replica](../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
+    -   [Replication Agent Executables Concepts](../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
   
-     È consigliabile aggiungere il parametro **–PublisherFailoverPartner** a un profilo agente e quindi specificare il nome del database mirror nel profilo. Se ad esempio si sta configurando la replica con stored procedure:  
+     È consigliabile aggiungere il parametro **-PublisherFailoverPartner** a un profilo agente e quindi specificare il nome del database mirror nel profilo. Se ad esempio si sta configurando la replica con stored procedure:  
   
     ```  
     -- Execute sp_help_agent_profile in the context of the distribution database to get the list of profiles.  

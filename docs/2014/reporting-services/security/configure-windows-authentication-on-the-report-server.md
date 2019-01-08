@@ -14,12 +14,12 @@ ms.assetid: 4de9c3dd-0ee7-49b3-88bb-209465ca9d86
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: b0ce020f0d3df8b91591daf083748f909edbb1e7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6e2359a87dab19356f87574f9444962b5440c71b
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48116347"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53359255"
 ---
 # <a name="configure-windows-authentication-on-the-report-server"></a>Configurare l'autenticazione di Windows nel server di report.
   Per impostazione predefinita, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] accetta richieste che specificano l'autenticazione con negoziazione o NTLM. Se nella distribuzione sono incluse applicazioni client e browser che utilizzano tali provider di sicurezza, è possibile utilizzare i valori predefiniti senza alcuna configurazione aggiuntiva. Se si desidera utilizzare un provider di sicurezza diverso per la sicurezza integrata di Windows, ad esempio se si desidera utilizzare direttamente l'autenticazione Kerberos, o se i valori predefiniti sono stati modificati e si desidera ripristinare le impostazioni originali, è possibile utilizzare le informazioni contenute in questo argomento per specificare le impostazioni di autenticazione nel server di report.  
@@ -28,10 +28,10 @@ ms.locfileid: "48116347"
   
  È necessario inoltre che siano soddisfatti i seguenti requisiti aggiuntivi:  
   
--   I file RSReportServer devono avere `AuthenticationType` impostata su `RSWindowsNegotiate`, `RSWindowsKerberos`, o `RSWindowsNTLM`. Per impostazione predefinita, il file RSReportServer.config include l'impostazione `RSWindowsNegotiate` se l'account del servizio del server di report è NetworkService o LocalSystem; in caso contrario, viene utilizzata l'impostazione `RSWindowsNTLM`. Se sono presenti applicazioni che utilizzano solo l'autenticazione Kerberos, è possibile aggiungere `RSWindowsKerberos`.  
+-   Nei file RSeportServer.config `AuthenticationType` deve essere impostato su `RSWindowsNegotiate`, `RSWindowsKerberos` o `RSWindowsNTLM`. Per impostazione predefinita, il file RSReportServer.config include l'impostazione `RSWindowsNegotiate` se l'account del servizio del server di report è NetworkService o LocalSystem; in caso contrario, viene utilizzata l'impostazione `RSWindowsNTLM`. Se sono presenti applicazioni che utilizzano solo l'autenticazione Kerberos, è possibile aggiungere `RSWindowsKerberos`.  
   
     > [!IMPORTANT]  
-    >  Usando `RSWindowsNegotiate` causerà un errore di autenticazione Kerberos se è stato configurato il servizio Server di Report per l'esecuzione con un account utente di dominio e non è stato registrato un nome dell'entità di servizio (SPN) per l'account. Per altre informazioni, vedere [Risoluzione di errori di autenticazione Kerberos durante la connessione a un server di report](#proxyfirewallRSWindowsNegotiate) in questo argomento.  
+    >  L'utilizzo di `RSWindowsNegotiate` comporterà un errore di autenticazione Kerberos se il servizio del server di report è stato configurato per essere eseguito con un account utente di dominio e non è stato registrato un nome SPN per l'account. Per altre informazioni, vedere [Risoluzione di errori di autenticazione Kerberos durante la connessione a un server di report](#proxyfirewallRSWindowsNegotiate) in questo argomento.  
   
 -   [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] deve essere configurato per usare l'autenticazione di Windows. Per impostazione predefinita, i file Web. config per il servizio Web ReportServer e gestione Report includono il \<modalità di autenticazione = "Windows" > impostazione. Se l'impostazione viene modificata in \<authentication mode="Forms">, l'autenticazione di Windows per [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] avrà esito negativo.  
   
@@ -41,20 +41,20 @@ ms.locfileid: "48116347"
   
  Per modificare le impostazioni di autenticazione del server di report, modificare gli elementi XML e i valori nel file RSReportServer.config. È possibile copiare e incollare gli esempi disponibili in questo argomento per implementare combinazioni specifiche.  
   
- Le impostazioni predefinite funzionano in modo ottimale se tutti i computer client e server si trovano nello stesso dominio o in un dominio di tipo trusted e se il server di report è distribuito per l'accesso Intranet attraverso un firewall aziendale. I domini singoli e di tipo trusted sono un requisito per il passaggio delle credenziali di Windows. Le credenziali possono essere passate più volte se si abilita il protocollo Kerberos versione 5 per i server. In caso contrario, le credenziali possono essere passate solo una volta prima che scadano. Per altre informazioni sulla configurazione delle credenziali per più connessioni di computer, vedere [specificare le credenziali e informazioni di connessione per origini dati del Report](../report-data/specify-credential-and-connection-information-for-report-data-sources.md).  
+ Le impostazioni predefinite funzionano in modo ottimale se tutti i computer client e server si trovano nello stesso dominio o in un dominio di tipo trusted e se il server di report è distribuito per l'accesso Intranet attraverso un firewall aziendale. I domini singoli e di tipo trusted sono un requisito per il passaggio delle credenziali di Windows. Le credenziali possono essere passate più volte se si abilita il protocollo Kerberos versione 5 per i server. In caso contrario, le credenziali possono essere passate solo una volta prima che scadano. Per altre informazioni sulla configurazione delle credenziali per più connessioni del computer, vedere [Specificare le credenziali e le informazioni sulla connessione per le origini dati del report](../report-data/specify-credential-and-connection-information-for-report-data-sources.md).  
   
  Le istruzioni seguenti sono relative a un server di report in modalità nativa. Se il server di report è distribuito in modalità integrata SharePoint, è necessario utilizzare le impostazioni di autenticazione predefinite che specificano la sicurezza integrata di Windows. Per supportare server di report in modalità integrata SharePoint, il server di report utilizza caratteristiche interne nell'estensione di autenticazione di Windows predefinita.  
   
 ## <a name="extended-protection-for-authentication"></a>Protezione estesa per l'autenticazione  
- A partire da [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], è disponibile il supporto per la protezione estesa per l'autenticazione. La caratteristica di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta l'uso del binding di canale e dell'associazione al servizio per migliorare la protezione dell'autenticazione. Le funzionalità di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] devono essere utilizzate con un sistema operativo che supporti la protezione estesa. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] La configurazione per la protezione estesa è determinata dalle impostazioni presenti nel file RSReportServer.config. È possibile aggiornare il file modificandolo o utilizzando le API di WMI. Per altre informazioni, vedere [protezione estesa per l'autenticazione con Reporting Services](extended-protection-for-authentication-with-reporting-services.md).  
+ A partire da [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], è disponibile il supporto per la protezione estesa per l'autenticazione. La caratteristica di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta l'uso del binding di canale e dell'associazione al servizio per migliorare la protezione dell'autenticazione. Le funzionalità di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] devono essere utilizzate con un sistema operativo che supporti la protezione estesa. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] La configurazione per la protezione estesa è determinata dalle impostazioni presenti nel file RSReportServer.config. È possibile aggiornare il file modificandolo o utilizzando le API di WMI. Per altre informazioni, vedere [Protezione estesa per l'autenticazione con Reporting Services](extended-protection-for-authentication-with-reporting-services.md).  
   
 ### <a name="to-configure-a-report-server-to-use-windows-integrated-security"></a>Per configurare un server di report per l'utilizzo della sicurezza integrata di Windows  
   
 1.  Aprire RSReportServer.config in un editor di testo.  
   
-2.  Trovare <`Authentication`>.  
+2.  Individuare <`Authentication`>.  
   
-3.  Tra le strutture XML seguenti, copiare quella che corrisponde meglio alle proprie esigenze. È possibile specificare `RSWindowsNegotiate`, `RSWindowsNTLM`, e `RSWindowsKerberos` in qualsiasi ordine. Se si desidera autenticare la connessione anziché ogni singola richiesta, è necessario abilitare la persistenza dell'autenticazione in modo che tutte le richieste per cui è necessaria l'autenticazione verranno consentite per la durata della connessione.  
+3.  Tra le strutture XML seguenti, copiare quella che corrisponde meglio alle proprie esigenze. È possibile specificare `RSWindowsNegotiate`, `RSWindowsNTLM` e `RSWindowsKerberos` in qualsiasi ordine. Se si desidera autenticare la connessione anziché ogni singola richiesta, è necessario abilitare la persistenza dell'autenticazione in modo che tutte le richieste per cui è necessaria l'autenticazione verranno consentite per la durata della connessione.  
   
      La prima struttura XML è la configurazione predefinita quando l'account del servizio del server di report è NetworkService o LocalSystem:  
   
@@ -133,7 +133,7 @@ ms.locfileid: "48116347"
   
 -   Modificare l'account del servizio in modo che venga eseguito con un account predefinito, ad esempio Servizio di rete. Gli account predefiniti eseguono il mapping del nome SPN HTTP al nome SPN dell'host, definito quando un computer viene collegato a una rete. Per altre informazioni, vedere [Configurare un account del servizio &#40;Gestione configurazione SSRS&#41;](../../sql-server/install/configure-a-service-account-ssrs-configuration-manager.md).  
   
--   Utilizzare NTLM, che in genere funzionerà nei casi in cui l'autenticazione Kerberos ha esito negativo. Per usare NTLM, rimuovere `RSWindowsNegotiate` da RSReportServer. config file e verificare che solo `RSWindowsNTLM` è specificato. Se si sceglie questo approccio, è possibile continuare a utilizzare un account utente di dominio per il servizio del server di report anche se per tale account non si definisce un nome SPN.  
+-   Utilizzare NTLM, che in genere funzionerà nei casi in cui l'autenticazione Kerberos ha esito negativo. Per utilizzare NTLM, rimuovere `RSWindowsNegotiate` dal file RSReportServer.config e verificare che sia specificato solo `RSWindowsNTLM`. Se si sceglie questo approccio, è possibile continuare a utilizzare un account utente di dominio per il servizio del server di report anche se per tale account non si definisce un nome SPN.  
   
 #### <a name="logging-information"></a>Informazioni di registrazione  
  Esistono diverse origini di informazioni di registrazione che possono consentire la risoluzione dei problemi relativi a Kerberos.  
@@ -149,7 +149,7 @@ ms.locfileid: "48116347"
   
 -   Un'opzione per la conversione del valore decimale in formato esadecimale è rappresentata dalla Calcolatrice di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. Tale calcolatrice supporta diverse modalità che includono le opzioni "Dec" ed "Hex". Selezionare l'opzione "Dec", incollare o digitare il valore decimale nel file di log, quindi selezionare l'opzione "Hex".  
   
--   Fare quindi riferimento all'argomento [User-Account-Control Attribute](http://go.microsoft.com/fwlink/?LinkId=183366) (Attributo UserAccountControl) per derivare l'attributo per l'account di servizio.  
+-   Fare quindi riferimento all'argomento [User-Account-Control Attribute](https://go.microsoft.com/fwlink/?LinkId=183366) (Attributo UserAccountControl) per derivare l'attributo per l'account di servizio.  
   
 ##### <a name="spns-configured-in-active-directory-for-the-reporting-services-service-account"></a>Nomi SPN configurati in Active Directory per l'account di servizio di Reporting Services.  
  Per registrare i nomi SPN nel file di log di traccia del servizio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , è possibile abilitare temporaneamente la caratteristica Protezione estesa di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
@@ -176,7 +176,7 @@ ms.locfileid: "48116347"
 <RSWindowsExtendedProtectionScenario>Proxy</RSWindowsExtendedProtectionScenario>  
 ```  
   
- Per altre informazioni, vedere [protezione estesa per l'autenticazione con Reporting Services](extended-protection-for-authentication-with-reporting-services.md)  
+ Per altre informazioni, vedere [Protezione estesa per l'autenticazione con Reporting Services](extended-protection-for-authentication-with-reporting-services.md)  
   
 #### <a name="how-the-browser-chooses-negotiated-kerberos-or-negotiated-ntlm"></a>Scelta tra l'autenticazione negoziata Kerberos o NTLM da parte del browser  
  Quando si utilizza Internet Explorer per connettersi al server di report, nell'intestazione di autenticazione viene specificata l'autenticazione negoziata Kerberos o NTLM. Di seguito vengono riportati i casi in cui viene utilizzata l'autenticazione NTLM anziché l'autenticazione Kerberos:  
@@ -203,13 +203,13 @@ ms.locfileid: "48116347"
   
 ## <a name="external-resources"></a>Risorse esterne  
   
--   Per altre informazioni su server di report e Kerberos, vedere [Deploying a Business Intelligence Solution Using SharePoint, Reporting Services, and PerformancePoint Monitoring Server with Kerberos](http://go.microsoft.com/fwlink/?LinkID=177751)(Distribuzione di una soluzione di Business Intelligence utilizzando SharePoint, Reporting Services e server di monitoraggio di PerformancePoint con Kerberos).  
+-   Per altre informazioni su server di report e Kerberos, vedere [Deploying a Business Intelligence Solution Using SharePoint, Reporting Services, and PerformancePoint Monitoring Server with Kerberos](https://go.microsoft.com/fwlink/?LinkID=177751)(Distribuzione di una soluzione di Business Intelligence utilizzando SharePoint, Reporting Services e server di monitoraggio di PerformancePoint con Kerberos).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Autenticazione con il server di report](authentication-with-the-report-server.md)   
  [Concessione di autorizzazioni in un server di report in modalità nativa](granting-permissions-on-a-native-mode-report-server.md)   
  [File di configurazione RSReportServer](../report-server/rsreportserver-config-configuration-file.md)   
- [Configurare l'autenticazione di base nel Server di Report](configure-basic-authentication-on-the-report-server.md)   
+ [Configurare l'autenticazione di base nel server di report](configure-basic-authentication-on-the-report-server.md)   
  [Configurare l'autenticazione personalizzata o basata su form nel server di report](configure-custom-or-forms-authentication-on-the-report-server.md)   
  [Protezione estesa per l'autenticazione con Reporting Services](extended-protection-for-authentication-with-reporting-services.md)  
   

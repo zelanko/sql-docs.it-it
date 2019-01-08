@@ -20,12 +20,12 @@ ms.assetid: ac6d186f-b394-406c-94c4-c6331d1ca468
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: dd3604b6de03d6344470758c4de14c15ad47e572
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f22fc952f0394f9e59ca8d67c76d0b00594b0759
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47602679"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53212427"
 ---
 # <a name="sqlmanagedatasources"></a>SQLManageDataSources
 **Conformità**  
@@ -39,7 +39,7 @@ ms.locfileid: "47602679"
 ```  
   
 BOOL SQLManageDataSources(  
-     HWND     hwnd);  
+     HWND     hwnd);  
 ```  
   
 ## <a name="arguments"></a>Argomenti  
@@ -52,7 +52,7 @@ BOOL SQLManageDataSources(
 ## <a name="diagnostics"></a>Diagnostica  
  Quando **SQLManageDataSources** FALSO, restituisce un oggetto associato  *\*pfErrorCode* valore può essere ottenuto chiamando **SQLInstallerError**. La tabella seguente elenca i  *\*pfErrorCode* i valori che possono essere restituiti da **SQLInstallerError** e illustra ognuna nel contesto di questa funzione.  
   
-|*\*pfErrorCode*|Errore|Description|  
+|*\*pfErrorCode*|Errore|Descrizione|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_GENERAL_ERR|Errore di programma di installazione generale|Errore per cui si è verificato alcun errore di programma di installazione specifico.|  
 |ODBC_ERROR_REQUEST_FAILED|*Richiedere* non è riuscita|La chiamata a **ConfigDSN** non è riuscita.|  
@@ -64,7 +64,7 @@ BOOL SQLManageDataSources(
   
  ![Finestra di dialogo Amministrazione origine dati ODBC](../../../odbc/reference/syntax/media/ch23e.gif "CH23E")  
   
- La finestra di dialogo consente di visualizzare le origini dati elencate nelle informazioni di sistema in tre schede: **DSN utente**, **DSN di sistema**, e **DSN su File**. Se l'utente fa doppio clic su un'origine dati o seleziona un'origine dati e sceglie **Configure**, **SQLManageDataSources** chiamate **ConfigDSN** nel programma di installazione DLL con il ODBC_CONFIG_ Opzione DSN.  
+ La finestra di dialogo consente di visualizzare le origini dati elencate nelle informazioni di sistema in tre schede: **Utente a DSN**, **DSN di sistema**, e **File DSN**. Se l'utente fa doppio clic su un'origine dati o seleziona un'origine dati e sceglie **Configure**, **SQLManageDataSources** chiamate **ConfigDSN** nel programma di installazione DLL con il ODBC_CONFIG_ Opzione DSN.  
   
  Se l'utente fa clic **Add**, **SQLManageDataSources** consente di visualizzare il **Crea nuova origine dati** dialogo illustrata nella figura seguente.  
   

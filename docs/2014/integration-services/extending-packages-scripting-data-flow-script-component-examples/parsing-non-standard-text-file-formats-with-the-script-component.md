@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- integration-services
+ms.technology: integration-services
 ms.topic: reference
 helpviewer_keywords:
 - text file reading [Integration Services]
@@ -17,24 +15,24 @@ ms.assetid: 1fda034d-09e4-4647-9a9f-e8d508c2cc8f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 28ee2db3094944b28cd1cbc42e25015a88b04b9f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8f1a294c808850407fccb25f5661fc18083d94f4
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48183761"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53351688"
 ---
 # <a name="parsing-non-standard-text-file-formats-with-the-script-component"></a>Analisi di formati di file di testo non standard con il componente script
   Quando i dati di origine sono disposti in un formato non standard, può risultare utile consolidare tutta la logica di analisi in un singolo script anziché concatenare più trasformazioni di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] per ottenere lo stesso risultato.  
   
- [Esempio 1: analisi di record delimitati da righe](#example1)  
+ [Esempio 1: Analisi di record delimitati da righe](#example1)  
   
- [Esempio 2: divisione di record padre e figlio](#example2)  
+ [Esempio 2: Divisione di record padre e figlio](#example2)  
   
 > [!NOTE]  
 >  Se si desidera creare un componente da riutilizzare più facilmente con più attività Flusso di dati e più pacchetti, è possibile utilizzare il codice di questo esempio di componente script come punto iniziale per un componente del flusso di dati personalizzato. Per altre informazioni, vedere [Sviluppo di un componente del flusso di dati personalizzato](../extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md).  
   
-##  <a name="example1"></a>Esempio 1: analisi di record delimitati da righe  
+##  <a name="example1"></a> Esempio 1: Analisi di record delimitati da righe  
  In questo esempio viene illustrato come utilizzare il componente script per analizzare in una tabella di destinazione un file di testo in cui ogni colonna di dati appare in una riga distinta.  
   
  Per altre informazioni su come configurare il componente Script per l'utilizzo come trasformazione nel flusso di dati, vedere [creazione di una trasformazione sincrona con il componente Script](../extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md)e [creando un asincrono Trasformazione con il componente Script](../extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md).  
@@ -102,7 +100,7 @@ ms.locfileid: "48183761"
   
     -   LastName  
   
-    -   Title  
+    -   Titolo  
   
     -   Città  
   
@@ -189,7 +187,7 @@ public override void Input0_ProcessInputRow(Input0Buffer Row)
     }  
 ```  
   
-##  <a name="example2"></a> Esempio 2: divisione di record padre e figlio  
+##  <a name="example2"></a> Esempio 2: Divisione di record padre e figlio  
  In questo esempio viene illustrato come utilizzare il componente script per analizzare in tabelle di destinazione padre e figlio correttamente normalizzate un file di testo in cui una riga del separatore precede una riga di record padre seguita da un numero indefinito di righe di record figlio. Questo semplice esempio può essere facilmente adottato per file di origine che utilizzano più di una riga o colonna per ogni record padre e figlio, purché esista la possibilità di identificare l'inizio e la fine di ogni record.  
   
 > [!CAUTION]  
@@ -348,7 +346,7 @@ public override void Input0_ProcessInputRow(Input0Buffer Row)
     }  
 ```  
   
-![Icona di Integration Services (piccola)](../media/dts-16.gif "icona di Integration Services (piccola)")**rimangono fino a Date con Integration Services** <br /> Per i download, gli articoli, gli esempi e i video Microsoft più recenti, oltre alle soluzioni selezionate dalla community, visitare la pagina [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sul sito MSDN:<br /><br /> [Visita la pagina di Integration Services su MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Per ricevere una notifica automatica su questi aggiornamenti, sottoscrivere i feed RSS disponibili nella pagina.  
+![Icona di Integration Services (piccola)](../media/dts-16.gif "icona di Integration Services (piccola)")**rimangono fino a Date con Integration Services**<br /> Per i download, gli articoli, gli esempi e i video Microsoft più recenti, oltre alle soluzioni selezionate dalla community, visitare la pagina [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sul sito MSDN:<br /><br /> [Visita la pagina di Integration Services su MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Per ricevere una notifica automatica su questi aggiornamenti, sottoscrivere i feed RSS disponibili nella pagina.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Creazione di una trasformazione sincrona con il componente script](../extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md)  

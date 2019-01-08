@@ -19,12 +19,12 @@ ms.assetid: a4cd47fe-2127-4930-b18f-3edd17ee9a65
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4121f988d8cdaa22d2249a76aeb542f80fbebd8a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5d69af9ad01e001394836449f97c48b4dae8dab7
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48086351"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376933"
 ---
 # <a name="microsoft-naive-bayes-algorithm-technical-reference"></a>Riferimento tecnico per l'algoritmo Microsoft Naive Bayes
   L'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes è un algoritmo di classificazione per la modellazione predittiva incluso in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . L'algoritmo calcola la probabilità condizionale tra colonne di input e stimabili e presuppone che le colonne siano indipendenti. Il nome Naive Bayes deriva da questo presupposto di indipendenza.  
@@ -32,7 +32,7 @@ ms.locfileid: "48086351"
 ## <a name="implementation-of-the-microsoft-naive-bayes-algorithm"></a>Implementazione dell'algoritmo Microsoft Naive Bayes  
  Questo algoritmo include funzionalità di calcolo più semplici di quelle di altri algoritmi [!INCLUDE[msCoName](../../includes/msconame-md.md)] ed è utile pertanto per generare rapidamente i modelli di data mining al fine di individuare le relazioni tra colonne di input e colonne stimabili. L'algoritmo considera ogni coppia di valori di attributi di input e di output.  
   
- Una descrizione delle proprietà matematiche del teorema di Bayes esula dagli scopi di questa documentazione. Per altre informazioni, vedere il documento di Microsoft Research [Learning Bayesian Networks: The Combination of Knowledge and Statistical Data](http://go.microsoft.com/fwlink/?LinkId=207029) (Informazioni sulle reti bayesiane: combinazione di conoscenza e dati statistici).  
+ Una descrizione delle proprietà matematiche del teorema di Bayes esula dall'ambito di questa documentazione; per altre informazioni, vedere il documento di Microsoft Research intitolato [Learning Bayesian Networks: La combinazione di conoscenza e dati statistici](https://go.microsoft.com/fwlink/?LinkId=207029).  
   
  Per una descrizione della modifica delle probabilità in tutti i modelli in modo da tenere conto dei potenziali valori mancanti, vedere [Valori mancanti &#40;Analysis Services - Data mining &#41;](missing-values-analysis-services-data-mining.md).  
   
@@ -73,16 +73,16 @@ ms.locfileid: "48086351"
  Il valore predefinito è 0.5.  
   
  *MAXIMUM_STATES*  
- Specifica il numero massimo di stati degli attributi supportati dall'algoritmo. Se il numero di stati di un attributo è maggiore del numero massimo, l'algoritmo utilizza gli stati più frequenti e considera gli stati rimanenti come mancanti.  
+ Specifica il numero massimo di stati degli attributi supportati dall'algoritmo. Se il numero di stati di un attributo è maggiore del numero massimo di stati, l'algoritmo utilizza stati più frequenti dell'attributo e considera gli stati rimanenti come mancanti.  
   
  Il valore predefinito è 100.  
   
 ### <a name="modeling-flags"></a>Flag di modellazione  
  L'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees supporta i flag di modellazione seguenti. Quando si crea la struttura o il modello di data mining, i flag di modellazione vengono definiti per specificare la modalità di gestione dei valori presenti in ogni colonna durante l'analisi. Per altre informazioni, vedere [Flag di modellazione &#40;data mining&#41;](modeling-flags-data-mining.md).  
   
-|Flag di modellazione|Description|  
+|Flag di modellazione|Descrizione|  
 |-------------------|-----------------|  
-|MODEL_EXISTENCE_ONLY|Indica che la colonna verrà considerata come se presentasse due stati possibili, ovvero Missing ed Existing. Un valore Null è un valore mancante.<br /><br /> Si applica alla colonna del modello di data mining.|  
+|MODEL_EXISTENCE_ONLY|Indica che la colonna verrà considerata come se presentasse due stati possibili: Missing ed Existing. Un valore Null è un valore mancante.<br /><br /> Si applica alla colonna del modello di data mining.|  
 |NOT NULL|Indica che la colonna non può contenere un valore Null. Se Analysis Services rileva un valore Null durante il training del modello, viene generato un errore.<br /><br /> Si applica alla colonna della struttura di data mining.|  
   
 ## <a name="requirements"></a>Requisiti  
@@ -101,7 +101,7 @@ ms.locfileid: "48086351"
   
 ## <a name="see-also"></a>Vedere anche  
  [Algoritmo Microsoft Naive Bayes](microsoft-naive-bayes-algorithm.md)   
- [Esempi di Query sul modello Naive Bayes](naive-bayes-model-query-examples.md)   
- [Contenuto dei modelli per i modelli Naive Bayes di data mining &#40;Analysis Services - Data Mining&#41;](mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)  
+ [Naive Bayes Model Query Examples](naive-bayes-model-query-examples.md)   
+ [Contenuto dei modelli di data mining per i modelli Naïve Bayes &#40;Analysis Services - Data mining&#41;](mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)  
   
   

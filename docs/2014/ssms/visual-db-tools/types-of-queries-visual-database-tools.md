@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - queries [Visual Database Tools]
@@ -16,17 +16,17 @@ ms.assetid: 76b6fc0e-c324-4d66-b6ed-496fa25fea1e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e12595ddb5074ac780e997f2d0255e57c4470aa8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: afcc330c2b87573f766a7b0728662af9de841962
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48165231"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52807113"
 ---
 # <a name="types-of-queries-visual-database-tools"></a>Tipi di query (Visual Database Tools)
   In Progettazione query e Progettazione viste sono disponibili caratteristiche incorporate per alcuni tipi di query, ovvero query di selezione (Select), di accodamento (Insert Results), di accodamento valori (Insert Values), di aggiornamento (Update), di eliminazione (Delete) e di creazione tabella (Make Table), e sono supportate le query di unione (UNION), di ricerca full-text e con l'espressione CASE.  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Tipi di query supportati &#40;Visual Database Tools&#41;](visual-database-tools.md)  
  Vengono descritti i tipi di query che è possibile utilizzare con Progettazione query e Progettazione viste.  
   
@@ -51,7 +51,7 @@ ms.locfileid: "48165231"
  [Creare query di aggiornamento &#40;Visual Database Tools&#41;](create-update-queries-visual-database-tools.md)  
  Viene descritto come creare una query per l'aggiornamento di una tabella.  
   
-## <a name="reference"></a>Riferimento  
+## <a name="reference"></a>Riferimenti  
  [Proprietà delle query &#40;Visual Database Tools&#41;](query-properties-visual-database-tools.md)  
  Vengono illustrate le proprietà disponibili quando si progettano le query.  
   

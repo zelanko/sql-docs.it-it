@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - identity values [SQL Server replication]
@@ -17,12 +16,12 @@ ms.assetid: 98892836-cf63-494a-bd5d-6577d9810ddf
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a05cbb061c2f0df716458de35b3a1bad9fbae7e2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 12233854049cf83f809a434b0e28dd4fb06d8d65
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48198261"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52816643"
 ---
 # <a name="manage-identity-columns"></a>Gestione delle colonne Identity
   In questo argomento viene descritto come gestire le colonne Identity in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Quando gli inserimenti del Sottoscrittore vengono replicati nel server di pubblicazione, è necessario gestire le colonne Identity in modo da evitare l'assegnazione dello stesso valore Identity sia al Sottoscrittore che al server di pubblicazione. È possibile gestire automaticamente intervalli di valori Identity tramite la replica oppure scegliere di gestirli manualmente.  Per informazioni sulle opzioni di gestione degli intervalli di valori Identity fornite dalla replica, vedere [Replicare colonne Identity](replicate-identity-columns.md).  
@@ -57,11 +56,11 @@ ms.locfileid: "48198261"
   
 5.  Se nel passaggio 4 è stato selezionato **Automatico** o **True** , immettere i valori per le opzioni nella tabella che segue. Per altre informazioni su come usare queste impostazioni, vedere la sezione "Assegnazione degli intervalli di valori Identity" di [Replicare colonne Identity](replicate-identity-columns.md).  
   
-    |Opzione|valore|Description|  
+    |Opzione|Value|Descrizione|  
     |------------|-----------|-----------------|  
     |**Dimensioni intervallo server di pubblicazione**|Valore intero per le dimensioni dell'intervallo, ad esempio 20000.|Vedere la sezione "Assegnazione degli intervalli di valori Identity" di [Replicare colonne Identity](replicate-identity-columns.md).|  
     |**Dimensioni intervallo Sottoscrittore**|Valore intero per le dimensioni dell'intervallo, ad esempio 10000.|Vedere la sezione "Assegnazione degli intervalli di valori Identity" di [Replicare colonne Identity](replicate-identity-columns.md).|  
-    |**Percentuale soglia intervallo**|Valore intero percentuale per la soglia dell'intervallo, ad esempio 90 è equivalente a 90%.|Percentuale dei valori Identity totali utilizzati in corrispondenza di un nodo prima dell'assegnazione di un nuovo intervallo di valori Identity.<br /><br /> Nota: questo valore deve essere specificato, ma viene usato solo dai Sottoscrittori che usano sottoscrizioni ad aggiornamento in coda e dai Sottoscrittori per pubblicazioni di tipo merge che eseguono [!INCLUDE[ssEW](../../../includes/ssew-md.md)] o una versione precedente di altre edizioni di SQL Server. Per altre informazioni, vedere la sezione "Assegnazione degli intervalli di valori Identity" di [Replicare colonne Identity](replicate-identity-columns.md).|  
+    |**Percentuale soglia intervallo**|Valore intero percentuale per la soglia dell'intervallo, ad esempio 90 è equivalente a 90%.|Percentuale dei valori Identity totali utilizzati in corrispondenza di un nodo prima dell'assegnazione di un nuovo intervallo di valori Identity.<br /><br /> Nota: Questo valore deve essere specificato, ma viene usato solo da: Sottoscrizioni ad aggiornamento in coda di sottoscrittori che usano i sottoscrittori che eseguono le pubblicazioni di tipo merge e [!INCLUDE[ssEW](../../../includes/ssew-md.md)] o una versione precedente di altre edizioni di SQL Server. Per altre informazioni, vedere la sezione "Assegnazione degli intervalli di valori Identity" di [Replicare colonne Identity](replicate-identity-columns.md).|  
     |**Valore iniziale intervallo successivo**|Valore intero. Di sola lettura.|Il valore in corrispondenza del quale inizierà l'intervallo successivo. Ad esempio, se l'intervallo corrente è 5001-6000, questo valore sarà 6001.|  
     |**Valore Identity massimo**|Valore intero. Di sola lettura.|Il valore maggiore per la colonna Identity. Determinato dal tipo di dati di base della colonna.|  
     |**Incremento valore Identity**|Valore intero. Di sola lettura.|La quantità in base alla quale il numero nella colonna Identity deve aumentare o diminuire per ciascun inserimento: in genere è impostata su 1.|  
@@ -74,13 +73,13 @@ ms.locfileid: "48198261"
   
 2.  Fare clic su **Proprietà articolo**e quindi su **Imposta proprietà dell'articolo di tabella evidenziato**.  
   
-3.  Nella scheda **Proprietà** della finestra di dialogo **Proprietà articoli - \<Articolo>**, nella sezione **Gestione intervalli di valori Identity**, immettere i valori per una o più delle proprietà seguenti: **Dimensioni intervallo server di pubblicazione**, **Dimensioni intervallo Sottoscrittore** e **Percentuale soglia intervallo**.  
+3.  Nel **proprietà** scheda della finestra di **proprietà articolo - \<articolo >** nella finestra di dialogo il **Gestione intervalli di valori Identity** sezione, immettere i valori per uno o più le proprietà seguenti: **Dimensioni intervallo server di pubblicazione**, **dimensioni intervallo Sottoscrittore**, e **Percentuale soglia intervallo**.  
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 5.  Fare clic su **OK** nella finestra di dialogo **Proprietà pubblicazione - \<Pubblicazione>**.  
   
-##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
  È possibile utilizzare stored procedure di replica per specificare le opzioni di gestione degli intervalli di valori Identity durante la creazione di un articolo.  
   
 #### <a name="to-enable-automatic-identity-range-management-when-defining-articles-for-a-transactional-publication"></a>Per abilitare la gestione automatica degli intervalli di valori Identity durante la definizione di articoli per una pubblicazione transazionale  

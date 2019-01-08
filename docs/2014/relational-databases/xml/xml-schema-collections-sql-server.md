@@ -21,12 +21,12 @@ ms.assetid: 659d41aa-ccec-4554-804a-722a96ef25c2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f8a2b5668ba75c2825ab62b2a86aafb84f1f1488
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3a86a39aa3473495b5eed6bc2eff92376a5a68cc
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48054737"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53362783"
 ---
 # <a name="xml-schema-collections-sql-server"></a>Raccolte di XML Schema (SQL Server)
   Come descritto nell'argomento [xml &#40;Transact-SQL&#41;](/sql/t-sql/xml/xml-transact-sql), SQL Server fornisce l'archiviazione nativa dei dati XML tramite la `xml` tipo di dati. È facoltativamente possibile associare schemi XSD a una variabile o una colonna di `xml` tipo tramite una raccolta XML schema. Una raccolta di XML Schema archivia gli elementi XML Schema importati e può essere quindi utilizzata per eseguire le operazioni seguenti:  
@@ -48,7 +48,7 @@ ms.locfileid: "48054737"
  La raccolta di XML Schema può essere utilizzata anche per tipizzare variabili, parametri e colonne XML.  
   
 ##  <a name="ddl"></a> Istruzioni DDL per la gestione di raccolte di XML Schema  
- È possibile creare raccolte di XML schema nel database e associarle a variabili e colonne di `xml` tipo. Per gestire le raccolte di schemi nel database, in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono disponibili le istruzioni DDL seguenti:  
+ È possibile creare raccolte di XML Schema nel database e associarle a variabili e colonne di tipo `xml`. Per gestire le raccolte di schemi nel database, in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono disponibili le istruzioni DDL seguenti:  
   
 -   [CREATE XML SCHEMA COLLECTION &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-xml-schema-collection-transact-sql) Importa i componenti di schema in un database.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "48054737"
   
 -   [DROP XML SCHEMA COLLECTION &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-xml-schema-collection-transact-sql) Elimina l'intera raccolta XML Schema e tutti i relativi componenti.  
   
- Per utilizzare una raccolta XML Schema e i relativi schemi, è necessario innanzitutto creare la raccolta e gli schemi utilizzando l'istruzione CREATE XML SCHEMA COLLECTION. Dopo aver creata la raccolta di schemi, è possibile quindi creare variabili e colonne di `xml` digitare e associare la raccolta di schemi. Si noti che dopo aver creato la raccolta, nei metadati verranno archiviati diversi componenti degli schemi. È inoltre possibile utilizzare l'istruzione ALTER XML SCHEMA COLLECTION per aggiungere altri componenti agli schemi o nuovi schemi alla raccolta.  
+ Per utilizzare una raccolta XML Schema e i relativi schemi, è necessario innanzitutto creare la raccolta e gli schemi utilizzando l'istruzione CREATE XML SCHEMA COLLECTION. Dopo aver creato la raccolta di schemi, è quindi possibile creare le variabili e le colonne di tipo `xml` e associare a esse la raccolta di schemi. Si noti che dopo aver creato la raccolta, nei metadati verranno archiviati diversi componenti degli schemi. È inoltre possibile utilizzare l'istruzione ALTER XML SCHEMA COLLECTION per aggiungere altri componenti agli schemi o nuovi schemi alla raccolta.  
   
  Per eliminare la raccolta di schemi, utilizzare l'istruzione DROP XML SCHEMA COLLECTION, che consente di eliminare tutti gli schemi contenuti nella raccolta e di rimuovere l'oggetto raccolta. Si noti che prima di eliminare una raccolta di schemi è necessario soddisfare le condizioni descritte in [DROP XML SCHEMA COLLECTION &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-xml-schema-collection-transact-sql).  
   
@@ -111,7 +111,7 @@ ms.locfileid: "48054737"
   
 -   MODELGROUP  
   
- Esempio:  
+ Ad esempio:  
   
 -   **SomeAttribute** è un componente di tipo ATTRIBUTE.  
   
@@ -171,7 +171,7 @@ ms.locfileid: "48054737"
   
  Queste tecniche di enumerazione sono illustrate negli esempi seguenti.  
   
-### <a name="example-enumerate-the-xml-namespaces-in-an-xml-schema-collection"></a>Esempio: enumerazione degli spazi dei nomi XML in una raccolta di XML Schema  
+### <a name="example-enumerate-the-xml-namespaces-in-an-xml-schema-collection"></a>Esempio: Enumerare gli spazi dei nomi XML in una raccolta XML Schema  
  Per la raccolta di XML Schema "myCollection" utilizzare la query seguente:  
   
 ```  
@@ -181,7 +181,7 @@ FROM    sys.xml_schema_collections XSC JOIN sys.xml_schema_namespaces XSN
 WHERE    XSC.name = 'myCollection'     
 ```  
   
-### <a name="example-enumerate-the-contents-of-an-xml-schema-collection"></a>Esempio: enumerazione del contenuto di una raccolta di XML Schema  
+### <a name="example-enumerate-the-contents-of-an-xml-schema-collection"></a>Esempio: Enumerare il contenuto di una raccolta XML Schema  
  L'istruzione seguente enumera il contenuto della raccolta di XML Schema "myCollection" nell'ambito dello schema relazionale dbo.  
   
 ```  
@@ -190,12 +190,12 @@ SELECT XML_SCHEMA_NAMESPACE (N'dbo', N'myCollection')
   
  Singoli elementi di XML schema all'interno della raccolta possono essere ottenuti come `xml` istanze con tipo di dati specificando lo spazio dei nomi di destinazione come terzo argomento **xml_schema_namespace ()**. come illustrato nell'esempio seguente.  
   
-### <a name="example-output-a-specified-schema-from-an-xml-schema-collection"></a>Esempio: restituzione di uno schema specifico da una raccolta di XML Schema  
- L'istruzione seguente restituisce l'elemento XML Schema con spazio dei nomi di destinazione "http://www.microsoft.com/books" dalla raccolta di XML Schema "myCollection" nell'ambito dello schema relazionale dbo.  
+### <a name="example-output-a-specified-schema-from-an-xml-schema-collection"></a>Esempio: Uno Schema specifico da una raccolta XML Schema di output  
+ L'istruzione seguente restituisce l'elemento XML Schema con spazio dei nomi di destinazione "<https://www.microsoft.com/books>" dalla raccolta di XML Schema "myCollection" nell'ambito dello schema relazionale dbo.  
   
 ```  
 SELECT XML_SCHEMA_NAMESPACE (N'dbo', N'myCollection',   
-N'http://www.microsoft.com/books')  
+N'https://www.microsoft.com/books')  
 ```  
   
 ### <a name="querying-xml-schemas"></a>Esecuzione di query su elementi XML Schema  
@@ -203,7 +203,7 @@ N'http://www.microsoft.com/books')
   
 -   Scrivere query Transact-SQL sulle viste del catalogo per gli spazi dei nomi degli elementi XML Schema.  
   
--   Creare una tabella contenente una colonna con tipo di dati `xml` per archiviare gli elementi XML Schema e quindi caricarli nel sistema di tipi XML. È possibile eseguire una query sulla colonna XML utilizzando il `xml` metodi con tipo di dati. È inoltre possibile compilare un indice XML su questa colonna. Questo approccio richiede tuttavia che l'applicazione mantenga la consistenza tra gli elementi XML Schema archiviati nella colonna XML e il sistema di tipi XML. Se ad esempio si elimina lo spazio dei nomi di un elemento XML Schema dal sistema di tipi XML, per mantenere la consistenza sarà necessario eliminarlo anche dalla tabella.  
+-   Creare una tabella contenente una colonna con tipo di dati `xml` per archiviare gli elementi XML Schema e quindi caricarli nel sistema di tipi XML. Per eseguire query sulla colonna XML, è possibile utilizzare i metodi per il tipo di dati `xml`. È inoltre possibile compilare un indice XML su questa colonna. Questo approccio richiede tuttavia che l'applicazione mantenga la consistenza tra gli elementi XML Schema archiviati nella colonna XML e il sistema di tipi XML. Se ad esempio si elimina lo spazio dei nomi di un elemento XML Schema dal sistema di tipi XML, per mantenere la consistenza sarà necessario eliminarlo anche dalla tabella.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Visualizzare una raccolta di XML Schema archiviata](../xml/view-a-stored-xml-schema-collection.md)   

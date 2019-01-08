@@ -18,15 +18,15 @@ ms.assetid: e38031af-22df-4cd9-a14e-e316b822f91b
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 708aed70836bfc5fdccb9dd8ba3afc2545e093f3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9e43af2841de0f2e5a00bf4e7871f71092e6bc87
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48089321"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53373783"
 ---
 # <a name="view-a-stored-xml-schema-collection"></a>Visualizzazione di una raccolta di XML Schema archiviata
-  Dopo aver importato una raccolta di XML Schema tramite l'istruzione [CREATE XML SCHEMA COLLECTION](/sql/t-sql/statements/create-xml-schema-collection-transact-sql), i componenti di schema vengono archiviati nei metadati. Per ricostruire la raccolta di XML Schema, è possibile usare la funzione intrinseca [xml_schema_namespace](/sql/t-sql/xml/xml-schema-namespace). Questa funzione restituisce un `xml` istanza del tipo di dati.  
+  Dopo aver importato una raccolta di XML Schema tramite l'istruzione [CREATE XML SCHEMA COLLECTION](/sql/t-sql/statements/create-xml-schema-collection-transact-sql), i componenti di schema vengono archiviati nei metadati. Per ricostruire la raccolta di XML Schema, è possibile usare la funzione intrinseca [xml_schema_namespace](/sql/t-sql/xml/xml-schema-namespace). Questa funzione restituisce un'istanza del tipo di dati `xml`.  
   
  Ad esempio, la query seguente restituisce una raccolta di XML Schema (`ProductDescriptionSchemaCollection`) dallo schema relazionale di produzione nel database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] .  
   
@@ -35,7 +35,7 @@ SELECT xml_schema_namespace(N'Production',N'ProductDescriptionSchemaCollection')
 GO  
 ```  
   
- Se si desidera visualizzare solo uno schema dalla raccolta di XML schema, è possibile specificare query XQuery sul `xml` restituito dal risultato di tipo `xml_schema_namespace`.  
+ Se si desidera visualizzare solo uno schema della raccolta di XML Schema, è possibile specificare una query XQuery sul risultato di tipo `xml` restituito dalla funzione `xml_schema_namespace`.  
   
 ```  
 SELECT xml_schema_namespace(N'RelationalSchemaName',N'XmlSchemaCollectionName').query('  
@@ -48,7 +48,7 @@ GO
   
 ```  
 SELECT xml_schema_namespace(N'Production',N'ProductDescriptionSchemaCollection').query('  
-/xs:schema[@targetNamespace="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain"]  
+/xs:schema[@targetNamespace="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain"]  
 ')  
 GO  
 ```  
@@ -56,7 +56,7 @@ GO
  Per recuperare uno schema specifico dalla raccolta, è inoltre possibile passare lo spazio dei nomi di destinazione facoltativo come terzo parametro della funzione `xml_schema_namespace` , come illustrato nella query seguente:  
   
 ```  
-SELECT xml_schema_namespace(N'Production',N'ProductDescriptionSchemaCollection', N'http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain')  
+SELECT xml_schema_namespace(N'Production',N'ProductDescriptionSchemaCollection', N'https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain')  
 GO  
 ```  
   

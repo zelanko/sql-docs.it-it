@@ -5,8 +5,7 @@ ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sysreplicationalerts_TSQL
@@ -19,19 +18,19 @@ ms.assetid: 6ed15828-8cca-4cf0-b2ff-1ecd0d8db11a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1932ad1a889d32cd3bef1c26916e79960370b52f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4a9ecac73840636e1ddf089f53ead61504767a61
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47783369"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52808693"
 ---
 # <a name="sysreplicationalerts-transact-sql"></a>sysreplicationalerts (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Contiene informazioni sulle condizioni che provocano l'attivazione di un avviso di replica. Questa tabella è archiviata nel **msdb** database.  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**alert_id**|**int**|ID dell'avviso.|  
 |**status**|**int**|Valore definito dall'utente:<br /><br /> **0** = non gestito.<br /><br /> **1** = serviti.|  

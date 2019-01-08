@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - explicit hierarchies, about explicit hierarchies
@@ -15,12 +14,12 @@ ms.assetid: e6f44e37-e1f0-4c38-a816-1935a856d5a4
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 41a2e720490e67158847152e1cdf1d8f37ee3cae
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 90153c2ed0524a486fe7014890e7e1a30d987d84
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48062473"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52809273"
 ---
 # <a name="explicit-hierarchies-master-data-services"></a>Gerarchie esplicite (Master Data Services)
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]una gerarchia esplicita consente di organizzare i membri di una sola entità secondo qualsiasi modalità specificata. La struttura può essere incompleta e, a differenza delle gerarchie derivate, le gerarchie esplicite non sono basate su relazioni tra attributi basati su dominio.  
@@ -70,7 +69,7 @@ ms.locfileid: "48062473"
 |Possono essere incomplete|Contengono sempre un numero coerente di livelli|  
   
 ## <a name="explicit-hierarchy-example"></a>Esempio di gerarchia esplicita  
- Nell'esempio seguente, l'entità Product contiene i seguenti membri foglia: BK-M101 {Mountain-100}, BK-M201 {Mountain-200}, BK-M301 {Mountain-300}, BK-R150 {Road-150}, BK-R450 {Road-450} e BK-R650 {Road-650}.  
+ Nell'esempio seguente l'entità Product contiene i membri foglia seguenti: BK-M101 {Mountain-100}, BK-M201 {Mountain-200}, BK-M301 {Mountain-300}, BK-R150 {Road-150}, BK-R450 {Road-450} e BK-R650 {Road-650}.  
   
  Per riepilogare i membri foglia in corrispondenza di punti di consolidamento specifici, è possibile creare membri consolidati nell'entità Product. Inserire i membri consolidati nei livelli dell'albero gerarchico nel punto in cui si desidera riepilogare i membri foglia. Non sussistono limitazioni rispetto al punto di inserimento dei membri consolidati. Ogni membro (foglia o consolidato) può tuttavia essere utilizzato una sola volta.  
   
@@ -92,6 +91,6 @@ ms.locfileid: "48062473"
   
 -   [Gerarchie derivate &#40;Master Data Services&#41;](../../2014/master-data-services/derived-hierarchies-master-data-services.md)  
   
--   [Le raccolte &#40;Master Data Services&#41;](../../2014/master-data-services/collections-master-data-services.md)  
+-   [Raccolte &#40;Master Data Services&#41;](../../2014/master-data-services/collections-master-data-services.md)  
   
   

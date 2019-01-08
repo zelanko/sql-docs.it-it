@@ -16,12 +16,12 @@ ms.assetid: b681d260-3dbb-47df-a616-4910d727add7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d1372b868499bc6b903dd7fb6c4022e724870b67
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3f948b50fae0995e16024ac41d8dd891630d1dbe
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47782199"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53208462"
 ---
 # <a name="c-data-types"></a>Tipi di dati C
 Tipi di dati C ODBC indicano il tipo di dati di C buffer usato per archiviare i dati nell'applicazione.  
@@ -109,7 +109,7 @@ struct tagSQL_NUMERIC_STRUCT {
    SQLCHAR precision;  
    SQLSCHAR scale;  
    SQLCHAR sign[g];  
-   SQLCHAR val[SQL_MAX_NUMERIC_LEN];[e], [f]   
+   SQLCHAR val[SQL_MAX_NUMERIC_LEN];[e], [f]   
 } SQL_NUMERIC_STRUCT;  
 ```  
   
@@ -138,7 +138,7 @@ struct tagSQLGUID {
   
  numero [e] A viene archiviato nel *val* campo della struttura SQL_NUMERIC_STRUCT come un integer ridotto, in modalità little-endian piccolo (il byte più a sinistra in corso il byte meno significativo). È ad esempio, aumentare il numero 10,001 in base 10, con una scala pari a 4, per un numero intero di 100010. Poiché si tratta 186AA in formato esadecimale, il valore in SQL_NUMERIC_STRUCT sarebbe "AA 86 01 00 00... 00", con il numero di byte definito dal SQL_MAX_NUMERIC_LEN **#define**.  
   
- Per altre informazioni sulle **SQL_NUMERIC_STRUCT**, vedere [procedura: recupero di dati numerici con SQL_NUMERIC_STRUCT](retrieve-numeric-data-sql-numeric-struct-kb222831.md).  
+ Per altre informazioni sulle **SQL_NUMERIC_STRUCT**, vedere [HOWTO: Recupero di dati numerici con SQL_NUMERIC_STRUCT](retrieve-numeric-data-sql-numeric-struct-kb222831.md).  
   
  [f] i campi di precisione e scala di quelli SQL_C_NUMERIC digitare areused per l'input da un'applicazione e per l'output dal driver per l'applicazione. Quando il driver scrive un valore numerico nel SQL_NUMERIC_STRUCT, userà il proprio predefinito specifico del driver come valore per il *precisione* campo che userà il valore nel campo del descrittore applicazione (SQL_DESC_SCALE quale valore predefinito è 0) per il *scalabilità* campo. Un'applicazione può fornire i propri valori per la precisione e scala definendo i campi SQL_DESC_PRECISION e SQL_DESC_SCALE del descrittore dell'applicazione.  
   

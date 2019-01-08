@@ -1,5 +1,6 @@
 ---
-title: Esercitazione sull'autenticazione di Active Directory per SQL Server in Linux | Microsoft Docs
+title: 'Esercitazione: Autenticazione di Active Directory per SQL Server in Linux'
+titleSuffix: SQL Server
 description: Questa esercitazione illustra i passaggi di configurazione di autenticazione di AAD per SQL Server in Linux.
 author: meet-bhagdev
 ms.date: 02/23/2018
@@ -7,18 +8,18 @@ ms.author: meetb
 manager: craigg
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
+ms.custom: sql-linux, seodec18
 ms.technology: linux
 helpviewer_keywords:
 - Linux, AAD authentication
-ms.openlocfilehash: c641b6ee84ffd13e17bc540b3272ba9a95d74648
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 237924a1bc4309b4e4d686076d1e0862ea3afe92
+ms.sourcegitcommit: de8ef246a74c935c5098713f14e9dd06c4733713
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51658497"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53160602"
 ---
-# <a name="tutorial-use-active-directory-authentication-with-sql-server-on-linux"></a>Esercitazione: L'autenticazione utilizzo di Active Directory con SQL Server in Linux
+# <a name="tutorial-use-active-directory-authentication-with-sql-server-on-linux"></a>Esercitazione: Usare l'autenticazione di Active Directory con SQL Server in Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
@@ -230,7 +231,7 @@ Per altre informazioni, vedere la documentazione di Red Hat per [scoperta e aggi
    ```
 
    > [!NOTE]
-   > I nomi SPN possono richiedere alcuni minuti per propagarsi attraverso il dominio, soprattutto se il dominio è di grandi dimensioni. Se viene visualizzato l'errore, "kvno: Server non trovato nel database Kerberos durante il recupero delle credenziali per MSSQLSvc /\*\*\<il nome di dominio completo del computer host\>\*\*:\* \* \<porta tcp\>\*\*\@CONTOSO.COM ", attendere qualche minuto e riprovare.
+   > I nomi SPN possono richiedere alcuni minuti per propagarsi attraverso il dominio, soprattutto se il dominio è di grandi dimensioni. Se viene visualizzato l'errore, "kvno: Server non è stato trovato nel database Kerberos durante il recupero delle credenziali per MSSQLSvc /\*\*\<il nome di dominio completo del computer host\>\*\*:\* \* \< la porta TCP\>\*\*\@CONTOSO.COM ", attendere qualche minuto e riprovare.
 
 2. Crea un file keytab **[ktutil](https://web.mit.edu/kerberos/krb5-1.12/doc/admin/admin_commands/ktutil.html)** per l'utente di Active Directory creato nel passaggio precedente. Quando richiesto, immettere la password per tale account di Active Directory.
 
@@ -339,9 +340,9 @@ Il parametro della stringa di connessione specifiche per i client di usare l'aut
 
 * Autenticazione di Active Directory con altri driver di client
 
-  * JDBC: [Kerberos mediante l'autenticazione integrata di connessione SQL Server](https://docs.microsoft.com/sql/connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server)
-  * ODBC: [usando l'autenticazione integrata](https://docs.microsoft.com/sql/connect/odbc/linux/using-integrated-authentication)
-  * ADO.NET: [sintassi della stringa di connessione](https://msdn.microsoft.com/library/system.data.sqlclient.sqlauthenticationmethod(v=vs.110).aspx)
+  * JDBC: [Tramite l'autenticazione integrata Kerberos di connessione SQL Server](https://docs.microsoft.com/sql/connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server)
+  * ODBC: [Uso dell'autenticazione integrata](https://docs.microsoft.com/sql/connect/odbc/linux/using-integrated-authentication)
+  * ADO.NET: [Sintassi della stringa di connessione](https://msdn.microsoft.com/library/system.data.sqlclient.sqlauthenticationmethod(v=vs.110).aspx)
 
 ## <a name="performance-improvements"></a>Miglioramenti alle prestazioni
 Se si nota che ricerche di account Active Directory richiede un po' di tempo e che sono stati verificati è la configurazione di AD è valida con i passaggi descritti in [Usa autenticazione di Active Directory con SQL Server in Linux tramite i provider di terze parti AD](sql-server-linux-active-directory-third-party-providers.md), è possibile aggiungere il le righe di sotto di `/var/opt/mssql/mssql.conf` per ignorare le chiamate SSSD e usare direttamente le chiamate LDAP.

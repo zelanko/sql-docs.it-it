@@ -20,12 +20,12 @@ ms.assetid: 17a6fcdc-b05a-4de7-be93-a316f39696a1
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 14d883228c17b24f42765c6fbf8484592b5fa117
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f63af414d59afed2bbe2e8eed3fba7a1362bb4bb
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47820199"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53203910"
 ---
 # <a name="sqlfreehandle-function"></a>SQLFreeHandle Function
 **Conformità**  
@@ -34,7 +34,7 @@ ms.locfileid: "47820199"
  **Riepilogo**  
  **SQLFreeHandle** libera le risorse associate a un handle di ambiente, connessione, istruzione o descrittore specifico.  
   
-> [!NOTE]  
+> [!NOTE]
 >  Questa funzione è una funzione generica per il rilascio di handle. Sostituisce le funzioni ODBC 2.0 **SQLFreeConnect** (per il rilascio di un handle di connessione) e **SQLFreeEnv** (per il rilascio di un handle di ambiente). **SQLFreeConnect** e **SQLFreeEnv** sono entrambe deprecate in ODBC 3*x*. **SQLFreeHandle** sostituisce anche la funzione ODBC 2.0 **SQLFreeStmt** (con il SQL_DROP *opzione*) per il rilascio di un handle di istruzione. Per altre informazioni, vedere "Commenti". Per altre informazioni su cosa the Driver Manager esegue il mapping a questa funzione quando un'applicazione ODBC 3 *. x* applicazione funziona con un'API ODBC 2 *. x* driver, vedere [Mapping di funzioni di sostituzione per Aut Compatibilità delle applicazioni](../../../odbc/reference/develop-app/mapping-replacement-functions-for-backward-compatibility-of-applications.md).  
   
 ## <a name="syntax"></a>Sintassi  
@@ -75,7 +75,7 @@ SQLRETURN SQLFreeHandle(
 ## <a name="diagnostics"></a>Diagnostica  
  Quando **SQLFreeHandle** restituisce SQL_ERROR, un valore SQLSTATE associato possono essere ottenuti dalla struttura di dati di diagnostica per l'handle che **SQLFreeHandle** ha provato a gratuito ma non è riuscito. Nella tabella seguente sono elencati i valori SQLSTATE normalmente restituiti dal **SQLFreeHandle** e illustra ognuna nel contesto di questa funzione; la notazione "(DM)" precede le descrizioni di SQLSTATE restituiti da Gestione Driver. Il codice restituito a ogni valore SQLSTATE è SQL_ERROR, se non specificato diversamente.  
   
-|SQLSTATE|Errore|Description|  
+|SQLSTATE|Errore|Descrizione|  
 |--------------|-----------|-----------------|  
 |HY000|Errore generale|Si è verificato un errore per cui si è verificato alcun errore SQLSTATE specifico e per cui è stato definito alcun SQLSTATE specifici dell'implementazione. Il messaggio di errore restituito da **SQLGetDiagRec** nel  *\*MessageText* buffer viene descritto l'errore e la relativa causa.|  
 |HY001|Errore di allocazione della memoria|Il driver non è riuscito ad allocare memoria che è necessario per supportare l'esecuzione o il completamento della funzione.|  
@@ -109,7 +109,7 @@ SQLRETURN SQLFreeHandle(
 ## <a name="freeing-a-descriptor-handle"></a>Rilascio di un Handle descrittore  
  Una chiamata a **SQLFreeHandle** con un *HandleType* di SQL_HANDLE_DESC rilascia l'handle descrittore nel *gestire*. La chiamata a **SQLFreeHandle** non rilasci di qualsiasi quantità di memoria allocata dall'applicazione che potrà farvi riferimento da un campo del puntatore (inclusi SQL_DESC_DATA_PTR, SQL_DESC_INDICATOR_PTR e SQL_DESC_OCTET_LENGTH_PTR) il record del descrittore dei *gestire*. La memoria allocata dal driver per i campi che non sono campi puntatore viene liberata quando l'handle viene liberata. Quando viene liberato un handle di descrittore allocato dall'utente, tutte le istruzioni che era stato associato l'handle liberato ripristino relativi handle di descrittore allocato automaticamente corrispondente.  
   
-> [!NOTE]  
+> [!NOTE]
 >  ODBC 2*x* driver non supportano liberata handle descrittore, semplicemente perché non supportano allocare gli handle di descrittore.  
   
  Si noti che **SQLDisconnect** automaticamente elimina eventuali istruzioni e i descrittori di aprire la connessione. Quando un'applicazione libera un handle di istruzione, il driver libera tutti i descrittori generati automaticamente associati con tale handle.  
@@ -119,7 +119,7 @@ SQLRETURN SQLFreeHandle(
 ## <a name="code-example"></a>Esempio di codice  
  Per ulteriori esempi di codice, vedere [SQLBrowseConnect](../../../odbc/reference/syntax/sqlbrowseconnect-function.md) e [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md).  
   
-### <a name="code"></a>codice  
+### <a name="code"></a>Codice  
   
 ```  
 // SQLFreeHandle.cpp  

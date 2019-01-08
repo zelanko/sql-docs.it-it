@@ -13,19 +13,19 @@ ms.assetid: d3898a47-2985-4a08-bc70-fd8331a01b7b
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 36a6a30ffbf5a0991e2b55ba655549454516e82d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8b72f500a425b7a55cab285a881c3ff915b9fb82
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48147101"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53358703"
 ---
 # <a name="native-compilation-advisor"></a>Assistente compilazione nativa
   Lo strumento dei report sulle prestazioni delle transazioni (vedere [Determinare se una tabella o una stored procedure deve essere trasferita a OLTP in memoria](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)) indica quali stored procedure interpretate nel database trarranno vantaggio se trasferite per utilizzare la compilazione nativa. Una volta identificata la stored procedure da trasferire per l'utilizzo nella compilazione nativa, è possibile utilizzare l'Assistente compilazione nativa per facilitare la migrazione della stored procedure interpretata alla compilazione nativa. Per altre informazioni sulle stored procedure compilate in modo nativo, vedere [Natively Compiled Stored Procedures](natively-compiled-stored-procedures.md).  
   
  Connettersi innanzitutto all'istanza contenente la stored procedure interpretata. È possibile connettersi all'istanza di [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]o [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] . Tuttavia, se si desidera effettuare la migrazione con il supporto dell'Assistente compilazione nativa, è necessario connettersi a un'istanza di [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] in cui la funzionalità OLTP in memoria sia abilitata. Per ulteriori informazioni sui requisiti di OLTP in memoria, vedere [Requirements for Using Memory-Optimized Tables](memory-optimized-tables.md).  
   
- Per informazioni sulle metodologie di migrazione, vedere la pagina relativa a [OLTP in memoria: considerazioni sulla migrazione e sui modelli di carico di lavoro comuni](http://msdn.microsoft.com/library/dn673538.aspx).  
+ Per informazioni sulle metodologie di migrazione, vedere [In-Memory OLTP - Common Workload Patterns and Migration Considerations](https://msdn.microsoft.com/library/dn673538.aspx) (OLTP in memoria: considerazioni sulla migrazione e sui modelli di carico di lavoro comuni).  
   
 ## <a name="walkthrough-using-the-native-compilation-advisor"></a>Procedura dettagliata per l'utilizzo dell'Assistente compilazione nativa  
  In **Esplora oggetti**fare clic con il pulsante destro del mouse sulla stored procedure che si desidera convertire, quindi selezionare **Assistente compilazione nativa**. Verrà visualizzata la pagina introduttiva di **Assistente compilazione nativa stored procedure**. Fare clic su **Avanti** per continuare.  

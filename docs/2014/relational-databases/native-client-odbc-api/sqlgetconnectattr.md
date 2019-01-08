@@ -14,12 +14,12 @@ ms.assetid: 26e4e69a-44fd-45e3-b47a-ae39184f041b
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5f62ec88ad7dc3ad7837a73b57abd215be29c3e3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 818c136814062c94491cfa02b84d2fff443a1f0a
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48089421"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53375643"
 ---
 # <a name="sqlgetconnectattr"></a>SQLGetConnectAttr
   Il driver ODBC di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client definisce gli attributi di connessione specifici del driver. Alcuni attributi sono disponibili per `SQLGetConnectAttr`, e la funzione viene utilizzata per segnalare le relative impostazioni correnti. I valori segnalati per questi attributi sono garantiti solo dopo che è stata stabilita una connessione o l'attributo è stato impostato utilizzando [SQLSetConnectAttr](sqlsetconnectattr.md).  
@@ -32,7 +32,7 @@ ms.locfileid: "48089421"
 > [!NOTE]  
 >  L'attributo di connessione ODBC standard SQL_COPT_SS_CONNECTION_DEAD restituisce lo stato più recente della connessione. Tale stato potrebbe non essere quello corrente.  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |SQL_CD_TRUE|La connessione al server è stata persa.|  
 |SQL_CD_FALSE|La connessione è aperta e disponibile per l'elaborazione di istruzioni.|  
@@ -48,7 +48,7 @@ ms.locfileid: "48089421"
   
  Per altre informazioni, vedere [l'accesso a informazioni di diagnostica nel Log degli eventi estesi](../native-client/features/accessing-diagnostic-information-in-the-extended-events-log.md).  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |SQL_ERROR|Connessione non riuscita.|  
 |SQL_SUCCESS|Connessione attivata. L'ID di connessione client verrà trovato nel buffer di output.|  
@@ -56,7 +56,7 @@ ms.locfileid: "48089421"
 ## <a name="sqlcoptssperfdata"></a>SQL_COPT_SS_PERF_DATA  
  Tramite l'attributo SQL_COPT_SS_PERF_DATA viene restituito un puntatore a una struttura SQLPERF contenente le statistiche correnti sulle prestazioni del driver. `SQLGetConnectAttr` Restituisce NULL se non è abilitata la registrazione delle prestazioni. Le statistiche nella struttura SQLPERF non vengono aggiornate in modo dinamico dal driver. Chiamare `SQLGetConnectAttr` ogni volta che le statistiche sulle prestazioni devono essere aggiornati.  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |NULL|La registrazione delle prestazioni non è abilitata.|  
 |Qualsiasi altro valore|Puntatore a una struttura SQLPERF.|  
@@ -67,7 +67,7 @@ ms.locfileid: "48089421"
 ## <a name="sqlcoptssuserdata"></a>SQL_COPT_SS_USER_DATA  
  L'attributo SQL_COPT_SS_USER_DATA recupera il puntatore ai dati utente. I dati utente vengono archiviati nella memoria del client e registrati per singola connessione. Se il puntatore ai dati utente SQL_UD_NOTSET non è stato impostato, viene restituito un puntatore NULL.  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |SQL_UD_NOTSET|Non è impostato alcun puntatore ai dati utente.|  
 |Qualsiasi altro valore|Puntatore ai dati utente.|  
@@ -82,7 +82,7 @@ ms.locfileid: "48089421"
  Per altre informazioni sui nomi SPN, vedere [nomi delle entità servizio &#40;SPN&#41; nelle connessioni Client &#40;ODBC&#41;](../native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Funzione SQLGetConnectAttr](http://go.microsoft.com/fwlink/?LinkId=59347)   
+ [Funzione SQLGetConnectAttr](https://go.microsoft.com/fwlink/?LinkId=59347)   
  [Dettagli di implementazione di API ODBC](odbc-api-implementation-details.md)   
  [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-quoted-identifier-transact-sql)   
  [SET ANSI_NULLS &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-nulls-transact-sql)   

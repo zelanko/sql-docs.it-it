@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: table-view-index
 ms.topic: conceptual
 helpviewer_keywords:
 - table deletions [SQL Server]
@@ -16,12 +15,12 @@ ms.assetid: ca6aa3e9-9885-44c3-bafc-aec441fd97ec
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 60b92e01601a2c0103594405e9adca41969142fb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f040c9907574bba718827999bb9c0fbb432a0bd0
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48165501"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52814513"
 ---
 # <a name="delete-tables-database-engine"></a>Elimina tabelle (motore di database)
   È possibile eliminare una tabella dal database in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -35,7 +34,7 @@ ms.locfileid: "48165501"
   
      [Limitazioni e restrizioni](#Restrictions)  
   
-     [Security](#Security)  
+     [Sicurezza](#Security)  
   
 -   **Per eliminare una tabella:**  
   
@@ -51,7 +50,7 @@ ms.locfileid: "48165501"
   
 -   Con l'eliminazione di una tabella, le regole o i valori predefiniti della tabella vengono disassociati e i vincoli o trigger associati alla tabella vengono eliminati automaticamente. Se la tabella viene ricreata, è necessario associare nuovamente le regole e i valori predefiniti appropriati, ricreare eventuali trigger e aggiungere tutti i vincoli necessari.  
   
--   Se si elimina una tabella che contiene un `varbinary (max)` colonna con l'attributo FILESTREAM, tutti i dati archiviati nel file system non verrà rimossi.  
+-   Se si elimina una tabella che contiene una colonna `varbinary (max)` con l'attributo FILESTREAM, non verrà rimosso alcun dato archiviato nel file system.  
   
 -   DROP TABLE e CREATE TABLE non devono essere eseguiti nella stessa tabella nello stesso batch. In caso contrario, è possibile che si verifichi un errore imprevisto.  
   
@@ -75,7 +74,7 @@ ms.locfileid: "48165501"
     > [!NOTE]  
     >  Eliminando una tabella verranno eliminate automaticamente anche tutte le corrispondenti relazioni.  
   
-##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
   
 #### <a name="to-delete-a-table-in-query-editor"></a>Per eliminare una tabella in Editor di query  
   

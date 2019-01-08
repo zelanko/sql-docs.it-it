@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_changesubstatus
@@ -17,12 +16,12 @@ ms.assetid: 9370e47a-d128-4f15-9224-1c3642770c39
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 029b946f3729208300a48f97766146fa7da42ece
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: aa9452d7dc2e611b1b581c12cf33e88950eacc2a
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47723179"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53212340"
 ---
 # <a name="spchangesubstatus-transact-sql"></a>sp_changesubstatus (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -78,7 +77,7 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
  [  **@status =**] **'***stato***'**  
  Stato della sottoscrizione nella **syssubscriptions** tabella. *lo stato* viene **sysname**e non prevede alcun valore predefinito, i possibili valori sono i seguenti.  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |**Attiva**|Il Sottoscrittore è sincronizzato e in fase di ricezione dei dati.|  
 |**inattivo**|Alla voce relativa al Sottoscrittore non è associata alcuna sottoscrizione.|  
@@ -99,7 +98,7 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
  [  **@frequency_relative_interval=**] *frequency_relative_interval*  
  Data dell'attività di distribuzione. Questo parametro viene utilizzato quando *frequency_type* è impostato su 32 (mensile relativa). *frequency_relative_interval* viene **int**, i possibili valori sono i seguenti.  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |**1**|Primo|  
 |**2**|Secondo|  
@@ -114,7 +113,7 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
  [  **@frequency_subday=**] *frequency_subday*  
  Frequenza di ripianificazione in minuti durante il periodo definito. *frequency_subday* viene **int**, i possibili valori sono i seguenti.  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |**1**|Una volta|  
 |**2**|Secondo|  
@@ -176,7 +175,7 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
  Nome del processo di distribuzione. *job_name* viene **sysname**, con un valore predefinito è NULL.  
   
  [ **@publisher**=] **'***publisher***'**  
- Specifica un non -[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] server di pubblicazione. *server di pubblicazione* viene **sysname**, con un valore predefinito è NULL.  
+ Specifica un non - [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] server di pubblicazione. *server di pubblicazione* viene **sysname**, con un valore predefinito è NULL.  
   
 > [!NOTE]  
 >  *server di pubblicazione* non deve essere utilizzata quando si modificano le proprietà degli articoli in una [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] server di pubblicazione.  

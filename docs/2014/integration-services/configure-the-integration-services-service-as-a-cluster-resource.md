@@ -11,12 +11,12 @@ ms.assetid: 367835aa-9855-4791-a989-b3d08402ad4c
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3ec1406b5259a68eadc821092bea3cccd10e032d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0bd0382906d3ee56055cc026036816af64b55dc6
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48185821"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52408970"
 ---
 # <a name="configure-the-integration-services-service-as-a-cluster-resource"></a>Configurazione del servizio Integration Services come risorsa cluster
   In questa sezione vengono fornite le istruzioni necessarie per la configurazione per i clienti che ritengono che i vantaggi della configurazione del servizio [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] come risorsa cluster siano prevalenti rispetto agli svantaggi. [!INCLUDE[msCoName](../includes/msconame-md.md)] non consiglia tuttavia la configurazione del servizio [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] come risorsa cluster.  
@@ -79,7 +79,7 @@ ms.locfileid: "48185821"
   
 4.  Scegliere **Nuovo** dal menu **File**e quindi fare clic su **Risorsa**.  
   
-5.  Nella pagina **Nuova risorsa** della procedura guidata di creazione di una nuova risorsa selezionare **"Servizio generico"** come **Tipo di servizio**. Non modificare il valore di **Gruppo**. Scegliere **Avanti**.  
+5.  Nella pagina **Nuova risorsa** della procedura guidata per la creazione di risorse selezionare **"Servizio generico"** come **Tipo di servizio**. Non modificare il valore di **Gruppo**. Scegliere **Avanti**.  
   
 6.  Nella pagina **Proprietari possibili** aggiungere o rimuovere i nodi del cluster come possibili proprietari della risorsa. Scegliere **Avanti**.  
   
@@ -101,7 +101,7 @@ ms.locfileid: "48185821"
   
 2.  Nel disco condiviso creare una nuova cartella denominata **Pacchetti** da usare come archivio pacchetti. Concedere le autorizzazioni di visualizzazione delle cartelle e di scrittura per la nuova cartella agli utenti e ai gruppi appropriati.  
   
-3.  Nel disco condiviso aprire il file di configurazione in un editor di testo o XML. Modificare il valore della `ServerName` elemento per il nome del commutatore [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] è nello stesso gruppo di risorse.  
+3.  Nel disco condiviso aprire il file di configurazione in un editor di testo o XML. Modificare il valore dell'elemento `ServerName` impostando il nome del server [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] virtuale presente nello stesso gruppo di risorse.  
   
 4.  Modificare il valore della `StorePath` per il percorso completo dell'elemento il **pacchetti** cartella creata nel disco condiviso in un passaggio precedente.  
   

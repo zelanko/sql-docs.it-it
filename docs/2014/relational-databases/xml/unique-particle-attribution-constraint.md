@@ -17,12 +17,12 @@ ms.assetid: 6bb879e9-a5ee-402e-94e4-fe8cec5966b0
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: cbcbf7f2e0a6423e9e2ea918d5bb561a9ec1c97c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4e38ceb561c2b0d66cbf274e09d61fc327d8543f
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48076796"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53372603"
 ---
 # <a name="unique-particle-attribution-constraint"></a>Vincolo di attribuzione di particelle univoche
   In XSD i modelli di contenuto complessi sono soggetti alla regola del vincolo di attribuzione di particelle univoche (UPA, Unique Particle Attribution). Tale regola prevede che ogni elemento in un documento dell'istanza corrisponda in modo non ambiguo a una particella `<xsd:element>` o `<xsd:any>` nel relativo modello di contenuto padre. Ogni schema che contiene un tipo con un modello di contenuto potenzialmente ambiguo viene rifiutato.  
@@ -86,7 +86,7 @@ ms.locfileid: "48076796"
   
 -   Appendix H: Analysis of the Unique Particle Attribution Constraint (non-normative)  
   
- Per vedere il documento, visitare [http://www.w3.org/TR/xmlschema-1](http://go.microsoft.com/fwlink/?linkid=48881).  
+ Per vedere il documento, visitare [http://www.w3.org/TR/xmlschema-1](https://go.microsoft.com/fwlink/?linkid=48881).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Raccolte di XML Schema &#40;SQL Server&#41;](xml-schema-collections-sql-server.md)  

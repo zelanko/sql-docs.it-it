@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/22/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: release-landing
 ms.topic: conceptual
 helpviewer_keywords:
 - what's new [SQL Server Database Engine]
@@ -14,12 +13,12 @@ ms.assetid: 8f625d5a-763c-4440-97b8-4b823a6e2439
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: ac9a6a1b2d4107d420bab68659b6d05f25805a38
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0650d15ece36593139ae804f6535315eacbf9294
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48067027"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53371553"
 ---
 # <a name="what39s-new-database-engine"></a>Cosa&#39;s (motore di Database)
   In quest'ultima versione di [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] sono stati apportati miglioramenti e introdotte nuove funzionalità per offrire ulteriori opportunità a progettisti, sviluppatori e amministratori che progettano, sviluppano e gestiscono sistemi di archiviazione dati e anche per migliorare la loro produttività. Di seguito sono indicate le aree del [!INCLUDE[ssDE](../includes/ssde-md.md)] in cui sono stati apportati miglioramenti.  
@@ -35,7 +34,7 @@ ms.locfileid: "48067027"
   
   
 ###  <a name="AzureVM"></a> Ospitare un Database SQL Server in una finestra di macchina virtuale di Azure  
- Usare la [distribuire un Database di SQL Server a una macchina virtuale di Windows Azure](http://msdn.microsoft.com/library/dn195938\(v=sql.120\).aspx) guidata consente di ospitare un database da un'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] in una macchina virtuale di Windows Azure.  
+ Usare la [distribuire un Database di SQL Server a una macchina virtuale di Windows Azure](https://msdn.microsoft.com/library/dn195938\(v=sql.120\).aspx) guidata consente di ospitare un database da un'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] in una macchina virtuale di Windows Azure.  
   
   
 ###  <a name="Backup"></a> Backup e ripristino migliorate  
@@ -51,11 +50,11 @@ ms.locfileid: "48067027"
   
 -   **Crittografia per backup**  
   
-     È ora possibile scegliere di crittografare il file di backup durante l'operazione di backup.  La crittografia per backup supporta vari algoritmi di crittografia, tra cui AES 128, AES 192, AES 256 e Triple DES. È necessario utilizzare un certificato o una chiave asimmetrica per eseguire la crittografia durante il backup. Per altre informazioni, vedere [crittografia dei Backup](../relational-databases/backup-restore/backup-encryption.md).  
+     È ora possibile scegliere di crittografare il file di backup durante l'operazione di backup.  La crittografia per backup supporta vari algoritmi di crittografia, tra cui AES 128, AES 192, AES 256 e Triple DES. È necessario utilizzare un certificato o una chiave asimmetrica per eseguire la crittografia durante il backup. Per altre informazioni, vedere [Crittografia dei backup](../relational-databases/backup-restore/backup-encryption.md).  
   
   
 ###  <a name="CE"></a> Nuovo Design per la stima della cardinalità  
- La logica di stima della cardinalità, denominata strumento di stima della cardinalità, è stata riprogettata in [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] per migliorare la qualità dei piani di query e pertanto migliorare le prestazioni delle query. Nel nuovo strumento di stima della cardinalità sono incorporati presupposti e algoritmi maggiormente adatti ai i carichi di lavoro di data warehouse e alle soluzioni OLTP più recenti. Lo strumento è basato sulla ricerca approfondita della stima della cardinalità sui carichi di lavoro più recenti e sulle conoscenze relative al miglioramento della stima della cardinalità di SQL Server acquisite nel corso degli ultimi 15 anni. I commenti e i suggerimenti dei clienti indicano che sebbene la maggior parte delle query registrerà un miglioramento o rimarrà invariata a seguito della modifica, una percentuale minima potrebbe registrare una regressione rispetto allo strumento di stima della cardinalità precedente. Per indicazioni per il test e ottimizzazione delle prestazioni, vedere [stima di cardinalità &#40;SQL Server&#41;](../relational-databases/performance/cardinality-estimation-sql-server.md).  
+ La logica di stima della cardinalità, denominata strumento di stima della cardinalità, è stata riprogettata in [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] per migliorare la qualità dei piani di query e, di conseguenza, per ottimizzare le prestazioni delle query. Nel nuovo strumento di stima della cardinalità sono incorporati presupposti e algoritmi maggiormente adatti ai i carichi di lavoro di data warehouse e alle soluzioni OLTP più recenti. Lo strumento è basato sulla ricerca approfondita della stima della cardinalità sui carichi di lavoro più recenti e sulle conoscenze relative al miglioramento della stima della cardinalità di SQL Server acquisite nel corso degli ultimi 15 anni. I commenti e i suggerimenti dei clienti indicano che sebbene la maggior parte delle query registrerà un miglioramento o rimarrà invariata a seguito della modifica, una percentuale minima potrebbe registrare una regressione rispetto allo strumento di stima della cardinalità precedente. Per indicazioni per il test e ottimizzazione delle prestazioni, vedere [stima di cardinalità &#40;SQL Server&#41;](../relational-databases/performance/cardinality-estimation-sql-server.md).  
    
   
 ###  <a name="Durability"></a> Durabilità ritardata  
@@ -97,11 +96,11 @@ ms.locfileid: "48067027"
   
 -   **SHOWPLAN**  
   
-     SHOWPLAN consente di visualizzare informazioni sugli indici columnstore. Il **EstimatedExecutionMode** e **Estimatedexecutionmode** le proprietà sono possibili due valori: **Batch** oppure **riga**.  Il **memorizzazione** proprietà è possibili due valori: **RowStore** e **ColumnStore**.  
+     SHOWPLAN consente di visualizzare informazioni sugli indici columnstore. Il **Actualexecutionmode** e **ActualExecutionMode** proprietà sono possibili due valori: **Batch** oppure **riga**.  Il **archiviazione** proprietà è possibili due valori: **RowStore** e **ColumnStore**.  
   
 -   **Compressione dell'archivio dati**  
   
-     ALTER INDEX … REBUILD include una nuova opzione di compressione dati COLUMNSTORE_ARCHIVE che comprime ulteriormente le partizioni specificate di un indice columnstore. Può essere utilizzata per l'archiviazione o in altre situazioni in cui sono richieste dimensioni di archiviazione dati inferiori ed è possibile concedere più tempo per l'archiviazione e il recupero. Per altre informazioni, vedere [ALTER INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql).  
+     ALTER INDEX ... REBUILD include una nuova opzione di compressione dati COLUMNSTORE_ARCHIVE che comprime ulteriormente le partizioni specificate di un indice columnstore. Può essere utilizzata per l'archiviazione o in altre situazioni in cui sono richieste dimensioni di archiviazione dati inferiori ed è possibile concedere più tempo per l'archiviazione e il recupero. Per altre informazioni, vedere [ALTER INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql).  
    
   
 ###  <a name="Buffer"></a> Estensione del Pool di buffer  
@@ -119,7 +118,7 @@ ms.locfileid: "48067027"
   
   
 ###  <a name="OnlineEvent"></a> Classe di evento online Index Operation  
- Il report di stato per la classe di evento operazione sugli indici online ha ora due nuove colonne di dati: **PartitionId** e **PartitionNumber**. Per altre informazioni, vedere [Progress Report: Online Index Operation Event Class](../relational-databases/event-classes/progress-report-online-index-operation-event-class.md).  
+ Il rapporto di stato per la classe di evento operazione sugli indici online presenta ora due nuove colonne di dati: **PartitionId** e **PartitionNumber**. Per altre informazioni, vedere [Progress Report: Classe di evento online Index Operation](../relational-databases/event-classes/progress-report-online-index-operation-event-class.md).  
   
   
 ###  <a name="Compat"></a> Livello di compatibilità del database  
@@ -130,8 +129,8 @@ ms.locfileid: "48067027"
 ### <a name="inline-specification-of-clustered-and-nonclustered"></a>Specifica inline di CLUSTERED e NONCLUSTERED  
  La specifica inline degli indici `CLUSTERED` e `NONCLUSTERED` è ora consentita per le tabelle basate su disco. La creazione di una tabella con indici inline equivale a rilasciare una tabella create seguita dalle istruzioni `CREATE INDEX` corrispondenti. Le condizioni di filtro e le colonne incluse non sono supportate con gli indici inline.  
   
-### <a name="select--into"></a>SELECT … INTO  
- L'istruzione `SELECT … INTO` è stata migliorata e ora può essere eseguita in parallelo. Il livello di compatibilità del database deve essere impostato almeno su 110.  
+### <a name="select--into"></a>SELEZIONA... INTO  
+ L'istruzione `SELECT ... INTO` è stata migliorata e ora può essere eseguita in parallelo. Il livello di compatibilità del database deve essere impostato almeno su 110.  
   
 ### <a name="includetsqlincludestsql-mdmd-enhancements-for-in-memory-oltp"></a>Miglioramenti a [!INCLUDE[tsql](../includes/tsql-md.md)] per OLTP in memoria  
  Per informazioni sul [!INCLUDE[tsql](../includes/tsql-md.md)] modifiche per supportare OLTP In memoria, vedere [supporto Transact-SQL per OLTP In memoria](../relational-databases/in-memory-oltp/transact-sql-support-for-in-memory-oltp.md).  

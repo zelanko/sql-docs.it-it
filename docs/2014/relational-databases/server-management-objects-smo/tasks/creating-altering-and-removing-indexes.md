@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: ''
 ms.topic: reference
 helpviewer_keywords:
 - indexes [SMO]
@@ -14,12 +12,12 @@ ms.assetid: ad1befa5-46e0-4895-b9d3-42852e07607b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4a335f0c62c4dcaa0ab69eac80488703c9372c3a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7e2bf2f470c7605f5535f66d19531e6a8e34cd39
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48136881"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52814113"
 ---
 # <a name="creating-altering-and-removing-indexes"></a>Creazione, modifica e rimozione di indici
   Nella gerarchia SMO ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Objects) gli indici sono rappresentati dall'oggetto <xref:Microsoft.SqlServer.Management.Smo.Index>. Le colonne indicizzate sono rappresentate da una raccolta di oggetti <xref:Microsoft.SqlServer.Management.Smo.IndexedColumn> rappresentati dalla proprietà <xref:Microsoft.SqlServer.Management.Smo.Index.IndexedColumns%2A>.  

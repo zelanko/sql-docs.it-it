@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- integration-services
+ms.technology: integration-services
 ms.topic: reference
 dev_langs:
 - VB
@@ -21,12 +19,12 @@ ms.assetid: b5a121a1-b87c-441b-a42c-2cec628dc81c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4b39095b87737fa8d13e665bf19a38e90861576d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 24debd25c95242ae78142e1de597b2b5b632c197
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48185591"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53354773"
 ---
 # <a name="design-time-methods-of-a-data-flow-component"></a>Metodi della fase di progettazione di un componente del flusso di dati
   Prima dell'esecuzione, l'attività Flusso di dati si trova nel cosiddetto stato della fase di progettazione, quando viene sottoposta a modifiche incrementali. Tali modifiche possono includere l'aggiunta o la rimozione di componenti, l'aggiunta o la rimozione degli oggetti percorso che connettono i componenti e modifiche ai metadati dei componenti. Quando si verificano modifiche ai metadati, il componente può monitorarle e rispondere. Ad esempio, un componente può impedire determinate modifiche o aggiungerne altre in risposta a una modifica. In fase di progettazione la finestra di progettazione interagisce con un componente tramite l'interfaccia <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSDesigntimeComponent100> della fase di progettazione.  
@@ -102,7 +100,7 @@ customProperty.TypeConverter = GetType(MyValidValues).AssemblyQualifiedName
 customProperty.Value = MyValidValues.ValueOne  
 ```  
   
- Per altre informazioni, vedere gli argomenti relativi alla conversione di tipi generalizzata e all'implementazione del convertitore di tipi in [MSDN Library](http://go.microsoft.com/fwlink/?LinkId=7022).  
+ Per altre informazioni, vedere gli argomenti relativi alla conversione di tipi generalizzata e all'implementazione del convertitore di tipi in [MSDN Library](https://go.microsoft.com/fwlink/?LinkId=7022).  
   
  È possibile specificare una finestra di dialogo dell'editor personalizzata per il valore della proprietà personalizzata tramite la proprietà <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSCustomProperty100.UITypeEditor%2A>, come illustrato nell'esempio seguente. Creare innanzitutto un editor di tipo personalizzato che eredita da `System.Drawing.Design.UITypeEditor`, se non è possibile individuare una classe di editor di tipo dell'interfaccia utente che soddisfa le esigenze specifiche.  
   
@@ -136,9 +134,9 @@ customProperty.Name = "My Custom Property"
 customProperty.UITypeEditor = GetType(MyCustomTypeEditor).AssemblyQualifiedName  
 ```  
   
- Per altre informazioni, vedere "implementazione di un editor di tipi con interfaccia utente" in [MSDN Library](http://go.microsoft.com/fwlink/?LinkId=7022).  
+ Per altre informazioni, vedere "implementazione di un editor di tipi con interfaccia utente" in [MSDN Library](https://go.microsoft.com/fwlink/?LinkId=7022).  
   
-![Icona di Integration Services (piccola)](../../media/dts-16.gif "icona di Integration Services (piccola)")**rimangono fino a Date con Integration Services** <br /> Per i download, gli articoli, gli esempi e i video Microsoft più recenti, oltre alle soluzioni selezionate dalla community, visitare la pagina [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] sul sito MSDN:<br /><br /> [Visita la pagina di Integration Services su MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Per ricevere una notifica automatica su questi aggiornamenti, sottoscrivere i feed RSS disponibili nella pagina.  
+![Icona di Integration Services (piccola)](../../media/dts-16.gif "icona di Integration Services (piccola)")**rimangono fino a Date con Integration Services**<br /> Per i download, gli articoli, gli esempi e i video Microsoft più recenti, oltre alle soluzioni selezionate dalla community, visitare la pagina [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] sul sito MSDN:<br /><br /> [Visita la pagina di Integration Services su MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Per ricevere una notifica automatica su questi aggiornamenti, sottoscrivere i feed RSS disponibili nella pagina.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Metodi di runtime di un componente flusso di dati](run-time-methods-of-a-data-flow-component.md)  

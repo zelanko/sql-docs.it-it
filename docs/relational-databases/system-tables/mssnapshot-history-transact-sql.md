@@ -5,8 +5,7 @@ ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - MSsnapshot_history
@@ -19,19 +18,19 @@ ms.assetid: 56bf4128-1689-4963-9343-432dd0898d31
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 627e741c243b71d4e6b310f49b2f03091c4f9c63
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ca24fdce036c4f63e49e7d0eb12054d2d67aa6aa
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47807679"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52800723"
 ---
 # <a name="mssnapshothistory-transact-sql"></a>MSsnapshot_history (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Il **MSsnapshot_history** tabella contiene righe di cronologia per gli agenti Snapshot associati al server di distribuzione locale. Questa tabella è archiviata nel database di distribuzione.  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**agent_id**|**int**|ID dell'agente snapshot.|  
 |**runstatus**|**int**|Stato di esecuzione:<br /><br /> **1** = avvio.<br /><br /> **2** = esito positivo.<br /><br /> **3** = in corso.<br /><br /> **4** = inattivo.<br /><br /> **5** = nuovo tentativo.<br /><br /> **6** = esito negativo.|  

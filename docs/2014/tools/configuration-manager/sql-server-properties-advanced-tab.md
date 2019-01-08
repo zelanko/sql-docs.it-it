@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- configmgr-client
+ms.technology: configuration
 ms.topic: conceptual
 ms.assetid: 2ffd10fd-bac1-478f-9cff-96ed6c8b787f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 196347ff0d0a5fb7cbf19ebd679c7a9583ea3a8d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1bab4c78cdb4aee364cc8f41aff70578b8a6df0b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48206381"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52788133"
 ---
 # <a name="sql-server-properties-advanced-tab"></a>Proprietà - SQL Server (scheda Avanzate)
   Le proprietà descritte di seguito sono presenti nella scheda **Avanzate** per impostazione predefinita. Se sono state definite proprietà personalizzate, verranno visualizzate anche in questa scheda con i rispettivi valori.  
@@ -64,7 +63,7 @@ ms.locfileid: "48206381"
  **SKU**  
  Visualizza il numero del codice di riferimento del prodotto (SKU).  
   
- **Versione**  
+ **Version**  
  Visualizza il numero di versione dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  **Nome server virtuale**  

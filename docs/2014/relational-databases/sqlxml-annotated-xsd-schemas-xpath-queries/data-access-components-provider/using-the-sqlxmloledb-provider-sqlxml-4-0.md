@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - sample applications [SQLXML]
@@ -16,12 +14,12 @@ ms.assetid: fbcefac5-29c9-478b-b0e0-d510b593f446
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f9ab7301e4a4754c552b8a0b100e2b11ed031225
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: abf009296c72c298b77e563f5de5482d298ac2df
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48056121"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52823565"
 ---
 # <a name="using-the-sqlxmloledb-provider-sqlxml-40"></a>Utilizzo del provider SQLXMLOLEDB (SQLXML 4.0)
   Negli argomenti di questa sezione vengono fornite applicazioni ADO di esempio che illustrano l'utilizzo delle proprietà specifiche del provider SQLXMLOLEDB.  
@@ -41,7 +39,7 @@ ms.locfileid: "48056121"
   
      Per altre informazioni, vedere sul [concetti relativi alla programmazione SQLXML 4.0](../../sqlxml/sqlxml-4-0-programming-concepts.md) e [installazione di SQL Server Native Client](../../native-client/applications/installing-sql-server-native-client.md).  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Esecuzione di query SQL &#40;Provider SQLXMLOLEDB&#41;](executing-sql-queries-sqlxmloledb-provider.md)  
  Viene illustrato l'utilizzo delle proprietà radice ClientSideXML e xml per eseguire query SQL.  
   

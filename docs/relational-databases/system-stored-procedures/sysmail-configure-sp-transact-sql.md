@@ -18,12 +18,12 @@ ms.assetid: 73b33c56-2bff-446a-b495-ae198ad74db1
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5e44edb404d21e3be482bf83cf6db37a522cfa36
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: abe47df497b61d35c66bfebfb3ba5a75fad0e183
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47594830"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53588555"
 ---
 # <a name="sysmailconfiguresp-transact-sql"></a>sysmail_configure_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,13 +42,13 @@ sysmail_configure_sp [ [ @parameter_name = ] 'parameter_name' ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [**@parameter_name** =] **'***parameter_name***'**  
+ [**@parameter_name** =] **'**_parameter_name_**'**  
  Nome del parametro da modificare.  
   
- [**@parameter_value** =] **'***parameter_value***'**  
+ [**@parameter_value** =] **'**_parameter_value_**'**  
  Nuovo valore del parametro  
   
- [**@description** =] **'***descrizione***'**  
+ [**@description** =] **'**_descrizione_**'**  
  Descrizione del parametro.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
@@ -62,7 +62,7 @@ sysmail_configure_sp [ [ @parameter_name = ] 'parameter_name' ]
   
 ||||  
 |-|-|-|  
-|Nome parametro|Description|Valore predefinito|  
+|Nome parametro|Descrizione|Valore predefinito|  
 |*AccountRetryAttempts*|Numero di tentativi di invio del messaggio di posta elettronica da parte del processo di posta elettronica esterno, utilizzando ogni account nel profilo specificato.|**1**|  
 |*AccountRetryDelay*|Tempo di attesa, in secondi, del processo di posta elettronica esterno tra tentativi di invio di un messaggio.|**5000**|  
 |*DatabaseMailExeMinimumLifeTime*|Periodo minimo di tempo, in secondi, durante il quale il processo di posta elettronica esterno resta attivo. Quando Posta elettronica database invia molti messaggi, aumentare questo valore per far restare Posta elettronica database attivo ed evitare l'overhead di avvii e arresti frequenti.|**600**|  

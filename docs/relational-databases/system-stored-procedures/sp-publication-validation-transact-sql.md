@@ -5,8 +5,7 @@ ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_publication_validation
@@ -17,12 +16,12 @@ ms.assetid: 06be2363-00c0-4936-97c1-7347f294a936
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7f90e172030193cf3ae1209829aa58512cf56fd0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8612b3713113435461ca59845710b9f7284f1a78
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47608679"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591405"
 ---
 # <a name="sppublicationvalidation-transact-sql"></a>sp_publication_validation (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,22 +42,22 @@ sp_publication_validation [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [**@publication=**] **' * * * pubblicazione '*  
+ [**@publication=**] **'**_pubblicazione '_  
  Nome della pubblicazione. *pubblicazione* viene **sysname**, non prevede alcun valore predefinito.  
   
  [**@rowcount_only=**] *rowcount_only*  
  Indica se restituire solo il conteggio delle righe per la tabella. *rowcount_only* viene **smallint** e può essere uno dei valori seguenti.  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
-|**0**|Esegue un checksum compatibile con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0.<br /><br /> Nota: Quando un articolo è filtrato orizzontalmente, invece di un'operazione di checksum viene eseguita un'operazione di conteggio delle righe.|  
+|**0**|Esegue un checksum compatibile con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0.<br /><br /> Nota: Quando a un articolo è applicato un filtro orizzontale, viene eseguita un'operazione di conteggio delle righe anziché di checksum.|  
 |**1** (impostazione predefinita)|Esegue solo la convalida mediante conteggio delle righe.|  
-|**2**|Esegue la convalida mediante conteggio delle righe e checksum binario.<br /><br /> Nota: Per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sottoscrittori versione 7.0, solo una convalida mediante conteggio delle righe viene eseguito.|  
+|**2**|Esegue la convalida mediante conteggio delle righe e checksum binario.<br /><br /> Nota: Per i Sottoscrittori di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versione 7.0, viene eseguita solo la convalida con conteggio delle righe.|  
   
  [**@full_or_fast=**] *full_or_fast*  
  Metodo utilizzato per il conteggio delle righe. *full_or_fast* viene **tinyint** e può essere uno dei valori seguenti.  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |**0**|Esegue un conteggio completo con COUNT(*).|  
 |**1**|Un conteggio rapido in **sysindexes**. Conteggio delle righe [sysindexes](../../relational-databases/system-compatibility-views/sys-sysindexes-transact-sql.md) è molto più veloce rispetto al conteggio delle righe nella tabella effettiva. Tuttavia, poiché [sysindexes](../../relational-databases/system-compatibility-views/sys-sysindexes-transact-sql.md) in modalità differita è aggiornato, il conteggio delle righe potrebbe non essere accurata.|  
@@ -67,8 +66,8 @@ sp_publication_validation [ @publication = ] 'publication'
  [  **@shutdown_agent=**] *shutdown_agent*  
  Indica se l'agente di distribuzione deve essere chiuso immediatamente dopo il completamento della convalida. *shutdown_agent* viene **bit**, il valore predefinito è **0**. Se **0**, l'agente di replica non viene arrestato. Se **1**, l'agente di replica viene chiuso al termine della convalida dell'ultimo articolo.  
   
- [ **@publisher** =] **'***publisher***'**  
- Specifica un server di pubblicazione non [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *server di pubblicazione* viene **sysname**, con un valore predefinito è NULL.  
+ [ **@publisher** =] **'**_editore_**'**  
+ Specifica un non - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] server di pubblicazione. *server di pubblicazione* viene **sysname**, con un valore predefinito è NULL.  
   
 > [!NOTE]  
 >  *server di pubblicazione* non deve essere utilizzata quando si richiede la convalida in un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] server di pubblicazione.  

@@ -54,12 +54,12 @@ ms.assetid: 33fd90ee-cead-48f0-8ff9-9b458994c766
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b72ef3d7579cdcd8e1d3be83d7caf8d202d1bca7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: da1f12da9dc3ff3145e2fc1ea9f592e70cfe0c3c
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48204841"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53374593"
 ---
 # <a name="log-properties"></a>Proprietà dei log
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] supporta le proprietà dei log server elencate nelle tabelle seguenti. Per altre informazioni sulle proprietà aggiuntive del server e sulla relativa impostazione, vedere [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md).  
@@ -86,11 +86,11 @@ ms.locfileid: "48204841"
  Proprietà usata come impostazione predefinita durante operazioni di elaborazione eseguite sul server.  
   
  **ErrorLog\KeyErrorAction**  
- Specifica l'azione eseguita dal server quando un `KeyNotFound` errore si verifica. Le risposte valide a questo errore sono le seguenti:  
+ Specifica l'azione eseguita dal server quando si verifica un errore `KeyNotFound`. Le risposte valide a questo errore sono le seguenti:  
   
--   `ConvertToUnknown` indica al server di allocare il valore della chiave errore al membro sconosciuto.  
+-   `ConvertToUnknown`: indica al server di allocare il valore della chiave con errore al membro sconosciuto.  
   
--   `DiscardRecord` indica al server di escludere il record.  
+-   `DiscardRecord`: indica al server di escludere il record.  
   
  **ErrorLog\KeyErrorLogFile**  
  Si tratta di un nome di file definito dall'utente che deve avere un'estensione di file log ed essere posizionato in una cartella in cui l'account del servizio dispone delle autorizzazioni di lettura-scrittura. Il file di log conterrà solo gli errori generati durante l'elaborazione. Se sono necessarie informazioni più dettagliate, usare utilità Traccia eventi.  
@@ -106,22 +106,22 @@ ms.locfileid: "48204841"
 -   `StopLogging` indica al server di arrestare la registrazione degli errori quando il limite errori viene raggiunto, senza interrompere però l'elaborazione.  
   
  **ErrorLog\ LogErrorTypes\KeyNotFound**  
- Specifica l'azione eseguita dal server quando un `KeyNotFound` errore si verifica. Le risposte valide a questo errore sono le seguenti:  
+ Specifica l'azione eseguita dal server quando si verifica un errore `KeyNotFound`. Le risposte valide a questo errore sono le seguenti:  
   
--   `IgnoreError` indica al server di continuare l'elaborazione senza registrare l'errore né conteggiarlo per il limite degli errori di chiave. Ignorando l'errore, si consente semplicemente la continuazione dell'elaborazione senza aggiungere l'errore al numero complessivo e senza registrarlo nella schermata o nel file di log. Per il record specifico è presente un problema di integrità dei dati. Di conseguenza, il record non può essere aggiunto al database Il record verrà essere rimosso o aggregato al membro sconosciuto, come determinato dal `KeyErrorAction` proprietà.  
+-   `IgnoreError`: indica al server di continuare l'elaborazione senza registrare l'errore né conteggiarlo ai fini del limite degli errori di chiave. Ignorando l'errore, si consente semplicemente la continuazione dell'elaborazione senza aggiungere l'errore al numero complessivo e senza registrarlo nella schermata o nel file di log. Per il record specifico è presente un problema di integrità dei dati. Di conseguenza, il record non può essere aggiunto al database e verrà rimosso o aggregato al membro sconosciuto, come determinato dalla proprietà `KeyErrorAction`.  
   
 -   `ReportAndContinue` indica al server di registrare l'errore, di conteggiarlo per il limite di errori di chiave e di continuare l'elaborazione. Il record che ha attivato l'errore viene rimosso o convertito in membro sconosciuto.  
   
 -   `ReportAndStop` indica al server di registrare l'errore e di arrestare immediatamente l'elaborazione, indipendentemente dal limite di errori di chiave. Il record che ha attivato l'errore viene rimosso o convertito in membro sconosciuto.  
   
  **ErrorLog\ LogErrorTypes\KeyDuplicate**  
- Specifica l'azione eseguita dal server in caso di chiave duplicata. I valori validi includono `IgnoreError` per continuare l'elaborazione come se non si è verificato l'errore, `ReportAndContinue` per registrare l'errore e continuare l'elaborazione, e `ReportAndStop` per registrare l'errore e arrestare immediatamente l'elaborazione, anche se il numero di errori è di sotto del limite degli errori.  
+ Specifica l'azione eseguita dal server in caso di chiave duplicata. I valori validi includono `IgnoreError` per continuare l'elaborazione come se non si fosse verificato alcun errore, `ReportAndContinue` per registrare l'errore e continuare l'elaborazione e `ReportAndStop` per registrare l'errore e arrestare immediatamente l'elaborazione, anche se il numero di errori è inferiore al limite.  
   
  **ErrorLog\ LogErrorTypes\NullKeyConvertedToUnknown**  
- Specifica l'azione eseguita dal server quando una chiave Null è stata convertita nel membro sconosciuto. I valori validi includono `IgnoreError` per continuare l'elaborazione come se non si è verificato l'errore, `ReportAndContinue` per registrare l'errore e continuare l'elaborazione, e `ReportAndStop` per registrare l'errore e arrestare immediatamente l'elaborazione, anche se il numero di errori è di sotto del limite degli errori.  
+ Specifica l'azione eseguita dal server quando una chiave Null è stata convertita nel membro sconosciuto. I valori validi includono `IgnoreError` per continuare l'elaborazione come se non si fosse verificato alcun errore, `ReportAndContinue` per registrare l'errore e continuare l'elaborazione e `ReportAndStop` per registrare l'errore e arrestare immediatamente l'elaborazione, anche se il numero di errori è inferiore al limite.  
   
  **ErrorLog\ LogErrorTypes\NullKeyNotAllowed**  
- Specifica l'azione eseguita dal server quando `NullProcessing` è impostata su `Error` per un attributo della dimensione. Viene generato un errore quando un valore Null non è consentito in un attributo specificato. Questa proprietà di configurazione errori indica il passaggio successivo, ovvero la segnalazione dell'errore e la continuazione dell'elaborazione fino al raggiungimento del limite degli errori. I valori validi includono `IgnoreError` per continuare l'elaborazione come se non si è verificato l'errore, `ReportAndContinue` per registrare l'errore e continuare l'elaborazione, e `ReportAndStop` per registrare l'errore e arrestare immediatamente l'elaborazione, anche se il numero di errori è di sotto del limite degli errori.  
+ Specifica l'azione eseguita dal server quando `NullProcessing` è impostato su `Error` per un attributo della dimensione. Viene generato un errore quando un valore Null non è consentito in un attributo specificato. Questa proprietà di configurazione errori indica il passaggio successivo, ovvero la segnalazione dell'errore e la continuazione dell'elaborazione fino al raggiungimento del limite degli errori. I valori validi includono `IgnoreError` per continuare l'elaborazione come se non si fosse verificato alcun errore, `ReportAndContinue` per registrare l'errore e continuare l'elaborazione e `ReportAndStop` per registrare l'errore e arrestare immediatamente l'elaborazione, anche se il numero di errori è inferiore al limite.  
   
  **ErrorLog\ LogErrorTypes\CalculationError**  
  Proprietà usata come impostazione predefinita durante operazioni di elaborazione eseguite sul server.  
@@ -199,7 +199,7 @@ ms.locfileid: "48204841"
  Il valore predefinito di questa proprietà è False e indica che il server non crea automaticamente la tabella del log e non registra eventi di query.  
   
 > [!NOTE]  
->  Per altre informazioni sulla configurazione del log di query, vedere [Configurazione del log di query di Analysis Services](http://go.microsoft.com/fwlink/?LinkId=81890).  
+>  Per altre informazioni sulla configurazione del log di query, vedere [Configurazione del log di query di Analysis Services](https://go.microsoft.com/fwlink/?LinkId=81890).  
   
 ## <a name="trace"></a>Trace  
  **Trace\TraceBackgroundDistributionPeriod**  

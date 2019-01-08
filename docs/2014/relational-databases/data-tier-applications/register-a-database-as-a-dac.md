@@ -20,19 +20,19 @@ ms.assetid: 08e52aa6-12f3-41dd-a793-14b99a083fd5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c5bf53045abe0f93e2ff1e07ec17d31f7d58248b
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: c0411281173339c46eb629dc6aad757337b3c41c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51814074"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52761451"
 ---
 # <a name="register-a-database-as-a-dac"></a>Registrare un database come applicazione livello dati
   Usare la **registrazione guidata dell'applicazione livello dati** o uno PowerShell di Windows script per compilare un livello dati (DAC) che descrive gli oggetti in un database esistente e registrare la definizione DAC nel `msdb` database di sistema (**master** in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]).  
   
--   **Prima di iniziare:**  [Limitazioni e restrizioni](#LimitationsRestrictions), [Autorizzazioni](#Permissions)  
+-   **Prima di iniziare:**  [Limitazioni e restrizioni](#LimitationsRestrictions), [autorizzazioni](#Permissions)  
   
--   **Per aggiornare un'applicazione livello dati tramite:**  [la procedura guidata Registra applicazione livello dati](#UsingRegisterDACWizard), [PowerShell](#RegisterDACPowerShell)  
+-   **Per eseguire l'aggiornamento di un'applicazione livello dati, utilizzando:**  [La procedura guidata dell'applicazione livello dati Register](#UsingRegisterDACWizard), [PowerShell](#RegisterDACPowerShell)  
   
 ## <a name="before-you-begin"></a>Prima di iniziare  
  Il processo di registrazione genera una definizione di applicazione livello dati che definisce gli oggetti nel database. La definizione dell'applicazione livello dati e il database combinati costituiscono un'istanza di applicazione livello dati. Se si registra un database come applicazione livello dati in un'istanza gestita del Motore di database, l'applicazione livello dati registrata viene incorporata in Utilità SQL Server al successivo invio del set di raccolta dell'utilità dall'istanza al punto di controllo dell'utilità. L'applicazione livello dati sarà quindi presente nel nodo **Applicazioni livello dati distribuite** nell'area [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **Utility Explorer** and reported in the **Applicazioni livello dati distribuite** details page.  
@@ -52,7 +52,7 @@ ms.locfileid: "51814074"
   
 2.  Espandere il nodo di **Database** .  
   
-3.  Fare clic con il pulsante destro del mouse sul database da registrare, scegliere **Attività**, quindi selezionare **Registra come applicazione livello dati**.  
+3.  Fare clic con il pulsante destro del mouse sul database da registrare, scegliere **Attività** e quindi selezionare **Registra come applicazione livello dati**.  
   
 4.  Completare le finestre di dialogo della procedura guidata.  
   
@@ -76,7 +76,7 @@ ms.locfileid: "51814074"
 ##  <a name="Set_properties"></a> Pagina Imposta proprietà  
  Utilizzare questa pagina per specificare le proprietà a livello di applicazione livello dati quali il nome dell'applicazione e la versione.  
   
- **Nome applicazione** -Stringa che specifica il nome utilizzato per identificare la definizione di applicazione livello dati, il campo viene popolata con il nome del database.  
+ **Nome applicazione** - Stringa che specifica il nome usato per identificare la definizione dell'applicazione livello dati; il campo viene popolato con il nome del database.  
   
  **Versione** - Valore numerico che identifica la versione dell'applicazione livello dati. La versione DAC viene utilizzata in Visual Studio per identificare la versione della DAC alla quale stanno lavorando gli sviluppatori. Quando si distribuisce un'applicazione livello dati, la versione viene archiviata nel `msdb` del database e può essere visualizzata successivamente nel **Data-tier Applications** nodo [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   

@@ -11,15 +11,15 @@ ms.assetid: 38fc34a6-aae7-4dde-9ad2-f1eee0c42a9f
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 0bebe156765726cee5f76d11c830dad56ebf92cf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c2e6d846be6b4ff3d13b840d3cc67064aeaf5240
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48217761"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52404536"
 ---
 # <a name="configure-e-mail-for-a-reporting-services-service-application-sharepoint-2010-and-sharepoint-2013"></a>Configurare le impostazioni di posta elettronica per l'applicazione di servizio Reporting Services (SharePoint 2010 e SharePoint 2013)
-  Gli avvisi dati di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] consentono di inviare avvisi come messaggi di posta elettronica. Per inviare messaggi di posta elettronica potrebbe essere necessario configurare l'applicazione di servizio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , nonché modificare l'estensione per il recapito tramite posta elettronica per l'applicazione di servizio. Le impostazioni della posta elettronica sono anche richieste se si prevede di utilizzare l'estensione per il recapito tramite posta elettronica per la funzionalità di sottoscrizione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] gli avvisi dati consentono di inviare avvisi come messaggi di posta elettronica. Per inviare messaggi di posta elettronica potrebbe essere necessario configurare l'applicazione di servizio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , nonché modificare l'estensione per il recapito tramite posta elettronica per l'applicazione di servizio. Le impostazioni della posta elettronica sono anche richieste se si prevede di utilizzare l'estensione per il recapito tramite posta elettronica per la funzionalità di sottoscrizione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
 ||  
 |-|  
@@ -49,16 +49,16 @@ ms.locfileid: "48217761"
   
 ### <a name="ntlm-authentication"></a>Autenticazione NTLM  
   
-1.  Se il proprio ambiente di posta elettronica richiede l'autenticazione NTLM e non consente l'accesso anonimo, è necessario modificare la configurazione dell'estensione per il recapito tramite posta elettronica per le applicazioni di servizio di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Modificare **SMTPAuthenticate** per utilizzare un valore "2". Non è possibile modificare questo valore dall'interfaccia utente. Nell'esempio di script PowerShell seguente, viene aggiornata la configurazione per l'estensione per il recapito tramite posta elettronica del server di report per l'applicazione di servizio denominata “SSRS_TESTAPPLICATION”. Alcuni dei nodi elencati nello script possono anche essere impostati dall'interfaccia utente, ad esempio l'indirizzo “Da”.  
+1.  Se il proprio ambiente di posta elettronica richiede l'autenticazione NTLM e non consente l'accesso anonimo, è necessario modificare la configurazione dell'estensione per il recapito tramite posta elettronica per le applicazioni di servizio di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Modificare **SMTPAuthenticate** in modo che usi il valore "2". Non è possibile modificare questo valore dall'interfaccia utente. Nell'esempio di script PowerShell seguente viene aggiornata la configurazione per l'estensione per il recapito tramite posta elettronica del server di report per l'applicazione di servizio denominata "SSRS_TESTAPPLICATION". Alcuni dei nodi elencati nello script possono anche essere impostati dall'interfaccia utente, ad esempio l'indirizzo "Da".  
   
     ```  
     $app=get-sprsserviceapplication |where {$_.name -like "SSRS_TESTAPPLICATION *"}  
     $emailCfg = Get-SPRSExtension -identity $app -ExtensionType "Delivery" -name "Report Server Email" | select -ExpandProperty ConfigurationXml   
     $emailXml = [xml]$emailCfg   
-    $emailXml.SelectSingleNode("//SMTPServer").InnerText = “your email server name"  
+    $emailXml.SelectSingleNode("//SMTPServer").InnerText = "your email server name"  
     $emailXml.SelectSingleNode("//SendUsing").InnerText = "2"  
     $emailXml.SelectSingleNode("//SMTPAuthenticate").InnerText = "2"  
-    $emailXml.SelectSingleNode("//From").InnerText = “your FROM email address”  
+    $emailXml.SelectSingleNode("//From").InnerText = "your FROM email address"  
     Set-SPRSExtension -identity $app -ExtensionType "Delivery" -name "Report Server Email" -ExtensionConfiguration $emailXml.OuterXml  
     ```  
   
@@ -68,14 +68,14 @@ ms.locfileid: "48217761"
     get-sprsserviceapplication  
     ```  
   
-3.  Nell'esempio seguente, vengono restituiti i valori correnti dell'estensione per il recapito tramite posta elettronica per l'applicazione di servizio denominata “SSRS_TESTAPPLICATION”.  
+3.  Nell'esempio seguente vengono restituiti i valori correnti dell'estensione per il recapito tramite posta elettronica per l'applicazione di servizio denominata "SSRS_TESTAPPLICATION".  
   
     ```  
     $app=get-sprsserviceapplication |where {$_.name -like "SSRSTEST_APPLICATION*"}  
     Get-SPRSExtension -identity $app -ExtensionType "Delivery" -name "Report Server Email" | select -ExpandProperty ConfigurationXml  
     ```  
   
-4.  Nell'esempio seguente, viene creato un nuovo file denominato “emailconfig.txt” con i valori correnti dell'estensione per il recapito tramite posta elettronica per l'applicazione di servizio denominata “SSRS_TESTAPPLICATION”  
+4.  Nell'esempio seguente viene creato un nuovo file denominato "emailconfig.txt" con i valori correnti dell'estensione per il recapito tramite posta elettronica per l'applicazione di servizio denominata "SSRS_TESTAPPLICATION".  
   
     ```  
     $app=get-sprsserviceapplication |where {$_.name -like "SSRS_TESTAPPLICATION*"}  

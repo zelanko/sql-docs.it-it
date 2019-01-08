@@ -12,12 +12,12 @@ ms.assetid: 68467e6a-09d8-478f-8bd9-3bb09453ada3
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 37bc819ab06a960887963b48be70c18e2ce8f656
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8ad75e136c4bef59f24b451b84f03e06d71a32ec
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48131941"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53362843"
 ---
 # <a name="mssqlserver8992"></a>MSSQLSERVER_8992
     
@@ -30,7 +30,7 @@ ms.locfileid: "48131941"
 |Origine evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbolico|DBCC3_CHECK_CATALOG|  
-|Testo del messaggio|Messaggio di controllo del catalogo ERROR, stato STATE: MESSAGE.|  
+|Testo del messaggio|Controllo catalogo Msg errore stato STATE: MESSAGGIO.|  
   
 ## <a name="explanation"></a>Spiegazione  
  DBCC CHECKCATALOG o DBCC CHECKDB ha rilevato un'incoerenza nelle tabelle di metadati di sistema per l'oggetto specificato. Ciò significa che vi è un'incoerenza tra l'ID dell'oggetto registrato e l'oggetto specificato nel messaggio di errore.  
@@ -75,6 +75,6 @@ ms.locfileid: "48131941"
  Non effettuare aggiornamenti manuali alle tabelle di sistema. SQL Server non supporta alcuna modifica manuale ai database di sistema. Se si aggiorna una tabella di sistema in un database di SQL Server, vengono registrati due eventi, evento ID 17659 ed evento ID 3859. Per ulteriori informazioni, vedere l'articolo della Knowledge Base 2688307 relativo agli eventi ID 17659 e ID 3859 registrati durante l'aggiornamento di tabelle di sistema in un database di SQL Server.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Gli eventi con ID 17659 e ID 3859 vengono registrati durante l'aggiornamento delle tabelle di sistema in un database di SQL Server](http://support.microsoft.com/kb/2688307/EN-US)  
+ [Gli eventi con ID 17659 e ID 3859 vengono registrati durante l'aggiornamento delle tabelle di sistema in un database di SQL Server](https://support.microsoft.com/kb/2688307/EN-US)  
   
   

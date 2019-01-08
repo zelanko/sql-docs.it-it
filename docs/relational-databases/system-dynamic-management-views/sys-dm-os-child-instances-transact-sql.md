@@ -21,12 +21,12 @@ ms.assetid: 1bef3074-0ccc-48fa-8f3d-14f3d99df86b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4bf6602e8ff631831e07d17cf9fc22515f610191
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: a57719becab0c7dda9d684e4de3218e29418b6a3
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51673720"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53203451"
 ---
 # <a name="sysdmoschildinstances-transact-sql"></a>sys.dm_os_child_instances (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,11 +37,11 @@ ms.locfileid: "51673720"
   
  Le informazioni restituite da **sys.dm_os_child_instances** può essere usato per determinare lo stato di ogni istanza utente (heart_beat) e per ottenere il nome della pipe (instance_pipe_name) che può essere utilizzato per creare una connessione all'utente Istanza utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o SQLCmd. È possibile connettersi a un'istanza utente solo dopo che è stata avviata da un processo esterno, ad esempio un'applicazione client. Gli strumenti di gestione di SQL non possono avviare un'istanza utente.  
   
-> **Nota:** le istanze utente sono una funzionalità di [!INCLUDE[ssExpressEd11](../../includes/ssexpressed11-md.md)] solo.  
-  
+> **NOTA:** Le istanze utente sono una funzionalità disponibile solo in [!INCLUDE[ssExpressEd11](../../includes/ssexpressed11-md.md)].  
+> 
 > **Nota** chiamarla da [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] oppure [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], usare il nome **sys.dm_pdw_nodes_os_child_instances**.  
   
-|colonna|Tipo di dati|Description|  
+|colonna|Tipo di dati|Descrizione|  
 |------------|---------------|-----------------|  
 |**owning_principal_name**|**nvarchar(256)**|Nome dell'utente per cui è stata creata l'istanza utente.|  
 |owning_principal_sid|nvarchar(256)|ID di sicurezza (SID) dell'entità proprietaria dell'istanza utente. Questo valore corrisponde al SID di Windows.|  

@@ -10,12 +10,12 @@ ms.assetid: 999eb741-4a60-43f6-ab37-2df7dce845c1
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2d423dc8eb00dfce0434c680046f39e0fb9dfa8b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5f0eb497499eafe16756becfb9607b925add08e9
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48101511"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53351657"
 ---
 # <a name="utility-dashboard-sql-server-utility"></a>Dashboard Utilità (Utilità SQL Server)
   Per visualizzare i dati inclusi nel dashboard Utilità [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], nell'albero Gestione Utilità selezionare il nodo principale, con l'etichetta "Utilità<Nome_PuntoDiControlloUtilità">\\(NomeComputer\PuntoDiControlloUtilità)". Il dashboard include i dati di riepilogo e i dettagli relativi a tutte le istanze gestite di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e a tutte le applicazioni di livello dati nell'utilità di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Per aggiornare dati nel dashboard, fare clic con il pulsante destro del mouse sul nodo principale nell'albero Esplora utilità e selezionare **Aggiorna**.  
@@ -83,7 +83,7 @@ ms.locfileid: "48101511"
  Le informazioni di stato dettagliate per ogni parametro di integrità sono elencate negli indicatori scorrevoli. La frazione a destra degli indicatori scorrevoli mostra il numero di applicazioni di livello dati incluso in ogni categoria di stato. Per altre informazioni sulla visualizzazione dello stato di integrità per le singole applicazioni di livello dati o per visualizzare o modificare le impostazioni di configurazione dei criteri, vedere [Dettagli di applicazioni di livello dati distribuite &#40;Utilità SQL Server&#41;](../../2014/database-engine/deployed-data-tier-application-details-sql-server-utility.md).  
   
  Cronologia di utilizzo dello spazio di archiviazione utilità  
- La cronologia di utilizzo viene mostrata in un grafico temporale nella parte inferiore del dashboard utilità di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Si noti che i dati relativi all'ora mostrano la data e l'ora locale del punto di controllo utilità utilizzando il tipo di dati datetime. Per altre informazioni, vedere l'argomento [datetime (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=164071) nella documentazione online di SQL Server. Quando si utilizza il modello a oggetti dell'utilità, si noti che SSMS utilizza il tipo di dati datetimeoffset. Per altre informazioni, vedere l'argomento [datetimeoffset (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=141713) nella documentazione online di SQL Server.  
+ La cronologia di utilizzo viene mostrata in un grafico temporale nella parte inferiore del dashboard utilità di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Si noti che i dati relativi all'ora mostrano la data e l'ora locale del punto di controllo utilità utilizzando il tipo di dati datetime. Per altre informazioni, vedere l'argomento [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) nella documentazione online di SQL Server. Quando si utilizza il modello a oggetti dell'utilità, si noti che SSMS utilizza il tipo di dati datetimeoffset. Per altre informazioni, vedere l'argomento [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) nella documentazione online di SQL Server.  
   
  Utilizzare i pulsanti di opzione a sinistra dell'area di visualizzazione per modificare il periodo del report per il grafico.  
   

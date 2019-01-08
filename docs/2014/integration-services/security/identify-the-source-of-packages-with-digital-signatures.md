@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - signing packages [Integration Services]
@@ -17,12 +16,12 @@ ms.assetid: a433fbef-1853-4740-9d5e-8a32bc4ffbb2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f8a94f52f72f91a465adcb4fba1d9a6e8c95375d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8e1bf17207e57f8488e10c6b37cc7fa876d511b4
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48073501"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52798913"
 ---
 # <a name="identify-the-source-of-packages-with-digital-signatures"></a>Identificazione dell'origine dei pacchetti con firme digitali
   Un pacchetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] può essere firmato con un certificato digitale per identificarne l'origine. Dopo la firma di un pacchetto con un certificato digitale, è possibile configurare [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] per controllare o verificare la firma digitale prima del caricamento del pacchetto. Per fare in modo che [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] controlli la firma, impostare un'opzione in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] o nell'utilità **dtexec** (dtexec.exe) oppure impostare un valore facoltativo del Registro di sistema.  
@@ -44,7 +43,7 @@ ms.locfileid: "48073501"
 >  Il valore facoltativo **BlockedSignatureStates** del registro di sistema può specificare un'impostazione più restrittiva rispetto all'opzione per la firma digitale impostata in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] o alla riga di comando **dtexec** . In questo caso, l'impostazione del Registro di sistema più restrittiva ha la precedenza rispetto ad altre impostazioni.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Integration Services &#40;SSIS&#41; i pacchetti](../integration-services-ssis-packages.md)   
+ [Pacchetti di Integration Services &#40;SSIS&#41;](../integration-services-ssis-packages.md)   
  [Panoramica della sicurezza &#40;Integration Services&#41;](security-overview-integration-services.md)  
   
   

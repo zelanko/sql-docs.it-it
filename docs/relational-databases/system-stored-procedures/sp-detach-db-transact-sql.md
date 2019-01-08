@@ -19,12 +19,12 @@ ms.assetid: abcb1407-ff78-4c76-b02e-509c86574462
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b727bceb20b275128ea030f87c85872a88e931d3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bf38282332f1cf8c3a5d3dd7716f9adc21e7bd8f
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47825669"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53201910"
 ---
 # <a name="spdetachdb-transact-sql"></a>sp_detach_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ sp_detach_db [ @dbname= ] 'database_name'
  [  **@keepfulltextindexfile=** ] **'***KeepFulltextIndexFile***'**  
  Specifica che il file di indice full-text associato al database che si desidera scollegare non verrà eliminato durante l'operazione di scollegamento del database. *KeepFulltextIndexFile* è un **nvarchar(10)** valore e il valore predefinito **true**. Se *KeepFulltextIndexFile* viene **false**, tutti i file di indice full-text associati al database e vengono eliminati i metadati dell'indice full-text, a meno che il database è di sola lettura. Se è NULL oppure **true**, full-text relativi metadati vengono mantenuti.  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  Il**@keepfulltextindexfile** parametro verrà rimosso in una versione futura di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Non utilizzare questo parametro in un nuovo progetto di sviluppo e modificare non appena possibile le applicazioni in cui viene attualmente utilizzato.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
@@ -114,7 +114,7 @@ GO
 ```  
   
 > [!NOTE]  
->  Forzare corrente gli utenti all'esterno del database immediatamente o entro un numero specificato di secondi, utilizzano anche l'opzione ROLLBACK: ALTER DATABASE *database_name* SET SINGLE_USER WITH ROLLBACK *rollback_option*. Per altre informazioni, vedere [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).  
+>  Per forzare gli utenti correnti dal database immediatamente o entro un numero specificato di secondi, utilizzare anche l'opzione ROLLBACK: ALTER DATABASE *database_name* SET SINGLE_USER WITH ROLLBACK *rollback_option*. Per altre informazioni, vedere [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).  
   
 ## <a name="reattaching-a-database"></a>Ricollegamento di un database  
  I file scollegati non vengono eliminati e possono essere ricollegati tramite CREATE DATABASE (con l'opzione FOR ATTACH o FOR ATTACH_REBUILD_LOG). È possibile spostare e quindi collegare tali file in un altro server.  

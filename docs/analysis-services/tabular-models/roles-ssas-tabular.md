@@ -1,5 +1,5 @@
 ---
-title: I ruoli | Microsoft Docs
+title: I ruoli del modello tabulare di Analysis Services | Microsoft Docs
 ms.date: 09/17/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 2f33d46750085f06f890a101382d7949a85048b9
-ms.sourcegitcommit: aa9d2826e3c451f4699c0e69c9fcc8a2781c6213
+ms.openlocfilehash: bbbf4f080696d41360e7fd654ef4b6878df268a6
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45975690"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072168"
 ---
 # <a name="roles"></a>Ruoli
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "45975690"
   
  Ciascun ruolo può disporre di una delle seguenti autorizzazioni definite:  
   
-|Permissions|Description|Filtri di riga tramite DAX|  
+|Permissions|Descrizione|Filtri di riga tramite DAX|  
 |-----------------|-----------------|----------------------------|  
 |None|I membri non possono apportare alcuna modifica allo schema del database modello, né eseguire query sui dati.|Filtri di riga non applicabili. Agli utenti con questo ruolo non è visibile alcun dato.|  
 |lettura|I membri possono eseguire query sui dati, in base ai filtri di riga, ma non possono visualizzare il database modello in SSMS, né possono apportare modifiche allo schema del database modello e l'utente non può elaborare il modello.|Filtri di riga applicabili. Agli utenti sono visibili solo i dati specificati nella formula DAX del filtro di riga.|  
@@ -63,14 +63,14 @@ ms.locfileid: "45975690"
   
  I filtri di riga possono essere definiti solo per ruoli con le autorizzazioni di lettura e di lettura ed elaborazione. Per impostazione predefinita, se per una particolare tabella non è stato definito alcun filtro di riga, i membri di un ruolo con l'autorizzazione di lettura o di lettura ed elaborazione saranno in grado di eseguire query su tutte le righe della tabella, a meno che non venga applicato il filtro incrociato da un'altra tabella.  
   
- Una volta definito un filtro di riga per una determinata tabella, una formula DAX da cui deve essere restituito un valore TRUE o FALSE, tale filtro consente di definire le righe in cui i membri di tale particolare ruolo possono eseguire query. Non sarà possibile eseguire query sulle righe non incluse nella formula DAX. Ad esempio, se nella tabella Customers è presente l'espressione dei filtri di riga seguente, *=Customers [Country] = “USA”*, i membri del ruolo relativo alle vendite potranno visualizzare solo i clienti negli Stati Uniti.  
+ Una volta definito un filtro di riga per una determinata tabella, una formula DAX da cui deve essere restituito un valore TRUE o FALSE, tale filtro consente di definire le righe in cui i membri di tale particolare ruolo possono eseguire query. Non sarà possibile eseguire query sulle righe non incluse nella formula DAX. Ad esempio, per i membri del ruolo relativo alle vendite, la tabella Customers con la riga seguente espressione dei filtri, *= Customers [Country] = 'USA'*, i membri del ruolo relativo alle vendite, sarà solo in grado di visualizzare i clienti negli Stati Uniti.  
   
  I filtri di riga vengono applicati alle righe specificate e a quelle correlate. Quando una tabella dispone di più relazioni, tramite i filtri viene applicata la sicurezza alla relazione che è attiva. I filtri di riga saranno intersecati con altri relativi filtri definiti per le tabelle correlate, ad esempio:  
   
 |Tabella|Espressione DAX|  
 |-----------|--------------------|  
-|Region|=Region[Country]="USA"|  
-|ProductCategory|=ProductCategory[Name]="Bicycles"|  
+|Region|= Area [Paese] = 'USA'|  
+|ProductCategory|= ProductCategory [nome] = "Biciclette"|  
 |Transazioni|=Transactions[Year]=2008|  
   
  Il risultato finale di queste autorizzazioni nella tabella Transactions è che i membri potranno eseguire query sulle righe di dati se il cliente si trova negli Stati Uniti, la categoria di prodotto è quella delle biciclette e l'anno è il 2008. Gli utenti non saranno in grado di eseguire query su alcuna transazione al di fuori degli Stati Uniti, che non riguardi biciclette o che non appartenga al 2008, a meno che non siano membri di un altro ruolo che garantisce tali autorizzazioni.  
@@ -82,7 +82,7 @@ ms.locfileid: "45975690"
   
  Per implementare la sicurezza dinamica, è possibile utilizzare le funzioni seguenti come parte di una formula DAX per restituire il nome dell'utente attualmente connesso o la proprietà CustomData in una stringa di connessione:  
   
-|Funzione|Description|  
+|Funzione|Descrizione|  
 |--------------|-----------------|  
 |[Funzione USERNAME (DAX)](http://msdn.microsoft.com/22dddc4b-1648-4c89-8c93-f1151162b93f)|Viene restituito il valore dominio\nomeutente dell'utente attualmente connesso.|  
 |[Funzione CUSTOMDATA (DAX)](http://msdn.microsoft.com/58235ad8-226c-43cc-8a69-5a52ac19dd4e)|Viene restituita la proprietà CustomData in una stringa di connessione.|  
@@ -117,19 +117,19 @@ ms.locfileid: "45975690"
 |7|Sales and Marketing|  
   
 ##  <a name="bkmk_testroles"></a> Testing roles  
- Quando si crea un progetto di modello, è possibile utilizzare la funzionalità Analizza in Excel in Progettazione modelli per eseguire un test circa l'efficacia dei ruoli definiti. Se si sceglie **Analizza in Excel** dal menu **Modello**in Progettazione modelli prima che venga aperto Excel, viene visualizzata la finestra di dialogo **Choose Credentials and Perspective** (Scegli credenziali e prospettiva). In questa finestra di dialogo è possibile specificare il nome utente corrente, un nome utente diverso, un ruolo e una prospettiva che verranno utilizzati per la connessione al modello dell'area di lavoro come origine dati. Per altre informazioni, vedere [analizza in Excel](../../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md).  
+ Quando si crea un progetto di modello, è possibile utilizzare la funzionalità Analizza in Excel in Progettazione modelli per eseguire un test circa l'efficacia dei ruoli definiti. Se si sceglie **Analizza in Excel** dal menu **Modello**in Progettazione modelli prima che venga aperto Excel, viene visualizzata la finestra di dialogo **Choose Credentials and Perspective** (Scegli credenziali e prospettiva). In questa finestra di dialogo è possibile specificare il nome utente corrente, un nome utente diverso, un ruolo e una prospettiva che verranno utilizzati per la connessione al modello dell'area di lavoro come origine dati. Per i dettagli, vedere [Analizza in Excel](../../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md).  
   
 ##  <a name="bkmk_rt"></a> Related tasks  
   
-|Argomento|Description|  
+|Argomento|Descrizione|  
 |-----------|-----------------|  
 |[Creare e gestire ruoli](../../analysis-services/tabular-models/create-and-manage-roles-ssas-tabular.md)|Nelle attività di questo argomento viene descritto come creare e gestire ruoli tramite la finestra di dialogo **Gestione ruoli** .|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Prospettive](../../analysis-services/tabular-models/perspectives-ssas-tabular.md)   
- [Analizza in Excel](../../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md)   
+ [Modello](../../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md)   
  [Funzione USERNAME (DAX)](http://msdn.microsoft.com/22dddc4b-1648-4c89-8c93-f1151162b93f)   
- [Funzione LOOKUPVALUE (DAX)](http://msdn.microsoft.com/73a51c4d-131c-4c33-a139-b1342d10caab)   
+ [LOOKUPVALUE (DAX) - funzione](http://msdn.microsoft.com/73a51c4d-131c-4c33-a139-b1342d10caab)   
  [Funzione CUSTOMDATA (DAX)](http://msdn.microsoft.com/58235ad8-226c-43cc-8a69-5a52ac19dd4e)  
   
   

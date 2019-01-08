@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: release-landing
 ms.topic: conceptual
 helpviewer_keywords:
 - VIA protocol
@@ -34,12 +33,12 @@ ms.assetid: d686cdf0-d11d-4dba-9ec8-de1a5f189f25
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 9d5d292421616d9c3d6043cf792345a8de0d8840
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 27eb70cb687553b11fefae423a7544609836c5c8
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48135291"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53357027"
 ---
 # <a name="discontinued-database-engine-functionality-in-sql-server-2014"></a>Funzionalità del Motore di database non più utilizzate in SQL Server 2014
   In questo argomento vengono descritte le funzionalità di [!INCLUDE[ssDE](../includes/ssde-md.md)] che non sono più disponibili in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
@@ -66,17 +65,17 @@ ms.locfileid: "48135291"
 |Posta elettronica|SQL Mail|Usare la posta elettronica database. Per altre informazioni, vedere [posta elettronica Database](../relational-databases/database-mail/database-mail.md) e [Use Database Mail Instead of SQL Mail](../relational-databases/policy-based-management/use-database-mail-instead-of-sql-mail.md).|  
 |Gestione della memoria|Estensioni AWE (Address Windowing Extensions) a 32 bit e supporto per l'aggiunta della memoria a caldo a 32 bit.|Utilizzare un sistema operativo a 64 bit.|  
 |Metadati|`DATABASEPROPERTY`|`DATABASEPROPERTYEX`|  
-|Programmabilità|SQL Server DMO (SQL-Distributed Management Objects)|SQL Server Management Objects (SMO)|  
+|Programmabilità|SQL Server DMO (SQL-Distributed Management Objects)|Oggetti SMO (SQL Server Management Objects)|  
 |Hint per la query|Hint `FASTFIRSTROW`|`OPTION (FAST` *n* `)`.|  
 |Server remoti|La possibilità per gli utenti di creare nuovi server remoti tramite `sp_addserver` non è più utilizzata. Rimane disponibile `sp_addserver` con l'opzione 'locale'. È possibile utilizzare i server remoti mantenuti durante l'aggiornamento o creati dalla replica.|Sostituire i server remoti utilizzando server collegati.|  
-|Sicurezza|`sp_dropalias`|Sostituire gli alias con una combinazione di account utente e ruoli del database. Usare `sp_dropalias` per rimuovere gli alias nei database aggiornati.|  
+|Sicurezza|`sp_dropalias`|Sostituire gli alias con una combinazione di account utente e ruoli del database. Usare `sp_dropalias` per rimuovere gli alias in database aggiornati.|  
 |Sicurezza|Il parametro della versione di **PWDCOMPARE** che rappresenta un valore di un account di accesso antecedente a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2000 non è più disponibile.|None|  
 |Programmazione con Service Broker in SMO|Il **Microsoft.SqlServer.Management.Smo.Broker.BrokerPriority** classe non implementa il **Microsoft.SqlServer.Management.Smo.IObjectPermission** interfaccia.||  
 |Opzioni SET|`SET DISABLE_DEF_CNST_CHK`|Nessuna.|  
 |Tabelle di sistema|sys.database_principal_aliases|Usare ruoli anziché alias.|  
 |Transact-SQL|Il parametro `RAISERROR` nel formato `RAISERROR integer 'string'` non è più utilizzato.|Riscrivere l'istruzione utilizzando l'oggetto corrente **RAISERROR**  sintassi.|  
 |Sintassi Transact-SQL|`COMPUTE / COMPUTE BY`|Utilizzare `ROLLUP`.|  
-|Sintassi Transact-SQL|Sfrutta **\* =** e **=\***|Utilizzare la sintassi di join ANSI. Per altre informazioni, vedere [da (Transact-SQL).](http://msdn.microsoft.com/library/ms177634\(SQL.105\).aspx)|  
+|Sintassi Transact-SQL|Sfrutta **\* =** e **=\***|Utilizzare la sintassi di join ANSI. Per altre informazioni, vedere [da (Transact-SQL).](https://msdn.microsoft.com/library/ms177634\(SQL.105\).aspx)|  
 |XEvents|databases_data_file_size_changed, databases_log_file_size_changed<br /><br /> eventdatabases_log_file_used_size_changed<br /><br /> locks_lock_timeouts_greater_than_0<br /><br /> locks_lock_timeouts|Sostituito dal database_file_size_change event, database_file_size_change<br /><br /> database_file_size_change event<br /><br /> lock_timeout_greater_than_0<br /><br /> lock_timeout|  
   
  **Modifiche XEvent aggiuntive**  

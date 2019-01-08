@@ -42,12 +42,12 @@ ms.assetid: 619facba-5cf4-4474-9577-9e2d82a851fb
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 416540095fe08c5777b453db5875212fbea80989
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8f79b36232ef099ee211a9f718668d02cb7992ab
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48064882"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53355110"
 ---
 # <a name="getting-sql-server-assistance"></a>Assistenza su SQL Server
   In [!INCLUDE[msCoName](../includes/msconame-md.md)] sono disponibili tre fonti principali di informazioni su [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]:  
@@ -80,19 +80,19 @@ ms.locfileid: "48064882"
   
 |Risorsa|Destinatari|  
 |--------------|--------------|  
-|[Centro per sviluppatori di SQL Server](http://msdn.microsoft.com/sqlserver/)|Sviluppatori che compilano database, sistemi per la gestione di report e soluzioni di Business Intelligence per [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e che progettano applicazioni e siti Web per l'utilizzo di questi sistemi.|  
-|[Centro per sviluppatori XML](http://go.microsoft.com/fwlink/?LinkId=42458)|Creatori di siti Web e sviluppatori di applicazioni i cui siti e le cui applicazioni utilizzano il linguaggio XML per l'archiviazione e la manipolazione dei dati.|  
-|[Sito TechNet SQL Server](http://technet.microsoft.com/sqlserver/dn135309)|Amministratori e operatori che pianificano, distribuiscono, amministrano e supportano sistemi che utilizzano [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].|  
+|[Centro per sviluppatori di SQL Server](https://msdn.microsoft.com/sqlserver/)|Sviluppatori che compilano database, sistemi per la gestione di report e soluzioni di Business Intelligence per [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e che progettano applicazioni e siti Web per l'utilizzo di questi sistemi.|  
+|[Centro per sviluppatori XML](https://go.microsoft.com/fwlink/?LinkId=42458)|Creatori di siti Web e sviluppatori di applicazioni i cui siti e le cui applicazioni utilizzano il linguaggio XML per l'archiviazione e la manipolazione dei dati.|  
+|[Sito TechNet SQL Server](https://technet.microsoft.com/sqlserver/dn135309)|Amministratori e operatori che pianificano, distribuiscono, amministrano e supportano sistemi che utilizzano [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].|  
   
 ## <a name="additional-online-information"></a>Ulteriori informazioni online  
  Informazioni aggiuntive su [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sono disponibili nei siti Web [!INCLUDE[msCoName](../includes/msconame-md.md)] seguenti.  
   
-|Risorsa|Description|  
+|Risorsa|Descrizione|  
 |--------------|-----------------|  
-|[Microsoft SQL Server](http://go.microsoft.com/fwlink/?linkid=8504)|Informazioni di prevendita per la valutazione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] come strumento per l'archiviazione dei dati e per soluzioni di Business Intelligence.|  
-|[Della Microsoft Knowledge Base](http://go.microsoft.com/fwlink/?LinkId=42461)|Repository in cui è possibile eseguire la ricerca di articoli relativi a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] scritti dai tecnici del Servizio Supporto Tecnico Clienti [!INCLUDE[msCoName](../includes/msconame-md.md)].|    
+|[Microsoft SQL Server](https://go.microsoft.com/fwlink/?linkid=8504)|Informazioni di prevendita per la valutazione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] come strumento per l'archiviazione dei dati e per soluzioni di Business Intelligence.|  
+|[Della Microsoft Knowledge Base](https://go.microsoft.com/fwlink/?LinkId=42461)|Repository in cui è possibile eseguire la ricerca di articoli relativi a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] scritti dai tecnici del Servizio Supporto Tecnico Clienti [!INCLUDE[msCoName](../includes/msconame-md.md)].|    
   
- I prodotti [!INCLUDE[msCoName](../includes/msconame-md.md)] dispongono di un ciclo di vita del supporto che ne definisce il periodo di disponibilità per ciascuna versione. Nel sito relativo al supporto tecnico [!INCLUDE[msCoName](../includes/msconame-md.md)] è disponibile una pagina in cui viene definito il ciclo di vita del supporto per i prodotti [!INCLUDE[msCoName](../includes/msconame-md.md)]. Nella pagina sono presenti collegamenti ad altre pagine che specificano la disponibilità del supporto per i prodotti [!INCLUDE[msCoName](../includes/msconame-md.md)]. Per altre informazioni, vedere [di Microsoft Support Lifecycle](http://go.microsoft.com/fwlink/?LinkId=98306).  
+ I prodotti [!INCLUDE[msCoName](../includes/msconame-md.md)] dispongono di un ciclo di vita del supporto che ne definisce il periodo di disponibilità per ciascuna versione. Nel sito relativo al supporto tecnico [!INCLUDE[msCoName](../includes/msconame-md.md)] è disponibile una pagina in cui viene definito il ciclo di vita del supporto per i prodotti [!INCLUDE[msCoName](../includes/msconame-md.md)]. Nella pagina sono presenti collegamenti ad altre pagine che specificano la disponibilità del supporto per i prodotti [!INCLUDE[msCoName](../includes/msconame-md.md)]. Per altre informazioni, vedere [di Microsoft Support Lifecycle](https://go.microsoft.com/fwlink/?LinkId=98306).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Utilizzare la documentazione del prodotto per SQL Server](../2014-toc/books-online-for-sql-server-2014.md)  

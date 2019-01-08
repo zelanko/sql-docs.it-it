@@ -4,18 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 ms.assetid: 8f1a0ee6-49ff-4080-94ca-d661daeff2a6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f23c4817ff1a09c7d25b636049c22410003da002
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2bf10e4357579bcda5ec9ac3bef92b49f596b7a9
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48221161"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52812293"
 ---
 # <a name="change-steps-of-a-sql-server-agent-master-job"></a>Change Steps of a SQL Server Agent Master Job
   In questo argomento verrà descritto come apportare modifiche ai passaggi di un processo master di SQL Server Agent in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -26,7 +26,7 @@ ms.locfileid: "48221161"
   
      [Limitazioni e restrizioni](#Restrictions)  
   
-     [Security](#Security)  
+     [Sicurezza](#Security)  
   
 -   **Per apportare modifiche ai passaggi di un processo master di SQL Server Agent tramite:**  
   
@@ -42,7 +42,7 @@ ms.locfileid: "48221161"
 ###  <a name="Security"></a> Sicurezza  
   
 ####  <a name="Permissions"></a> Permissions  
- È possibile modificare solo i processi di cui si è proprietari, a meno che non si appartenga al ruolo predefinito del server **sysadmin** . Per informazioni dettagliate, vedere [Implement SQL Server Agent Security](implement-sql-server-agent-security.md).  
+ È possibile modificare solo i processi di cui si è proprietari, a meno che non si appartenga al ruolo predefinito del server **sysadmin** . Per informazioni dettagliate, vedere [Implementazione della sicurezza di SQL Server Agent](implement-sql-server-agent-security.md).  
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
   
@@ -56,15 +56,15 @@ ms.locfileid: "48221161"
   
 4.  Fare clic con il pulsante destro del mouse sul processo in cui si intende modificare passaggi e scegliere **Proprietà**.  
   
-5.  Nella finestra di dialogo **Proprietà processo –***nome_processo* selezionare **Passaggi** in **Seleziona una pagina**.  
+5.  Nel **proprietà processo-* * * nome_processo* nella finestra di dialogo **selezione pagina**, selezionare **passaggi**.  
   
-6.  Fare clic su **Modifica** per aprire la finestra di dialogo **Proprietà passaggio processo –***nome_passaggio_processo*. Per altre informazioni sulle opzioni disponibili nella finestra di dialogo, vedere [proprietà passaggio processo: nuovo passaggio di processo &#40;pagina Generale&#41; ](../../integration-services/general-page-of-integration-services-designers-options.md) e [proprietà passaggio processo: nuovo passaggio di processo &#40;avanzate&#41; ](job-step-properties-new-job-step-advanced-page.md).  
+6.  Fare clic su **Edit** per aprire la **proprietà passaggio processo-* * * nome_passaggio_processo* nella finestra di dialogo. Per altre informazioni sulle opzioni disponibili nella finestra di dialogo, vedere [proprietà passaggio processo: Nuovo passaggio di processo &#40;General Page&#41; ](../../integration-services/general-page-of-integration-services-designers-options.md) e [proprietà passaggio processo: Nuovo passaggio di processo &#40;pagina avanzate&#41;](job-step-properties-new-job-step-advanced-page.md).  
   
 7.  Al termine, fare clic su **OK**.  
   
-8.  Nella finestra di dialogo **Proprietà processo –***nome_processo* scegliere **OK**.  
+8.  Nel **proprietà processo-* * * nome_processo* finestra di dialogo, fare clic su **OK**.  
   
-##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
   
 #### <a name="to-make-changes-to-the-steps-of-a-sql-server-agent-master-job"></a>Per apportare modifiche ai passaggi di un processo master di SQL Server Agent  
   

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: ''
 ms.topic: reference
 helpviewer_keywords:
 - languages [SMO]
@@ -19,17 +17,17 @@ ms.assetid: f5e5a832-03e9-477b-b55d-491c678ebb43
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 51345bea67d1a1ca8a3f74eecfec8041a75a506e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: feca89ac2ac888c2fa9f082595e761e898dea971
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48215541"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52815053"
 ---
 # <a name="programming-languages"></a>Linguaggi di programmazione
   Questa sezione viene descritto come programmare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO) in [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET, Visual Basic [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual c# .NET, e [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C++.  
   
-|Argomento|Description|  
+|Argomento|Descrizione|  
 |-----------|-----------------|  
 |[Guida introduttiva a Visual Basic .NET](../../database-engine/dev-guide/getting-started-in-visual-basic-net.md)|Fornisce informazioni su come iniziare a scrivere un programma SMO in Visual Basic .NET|  
 |[Guida introduttiva a Visual C#&#35; .NET](smo-programming-getting-started-in-visual-csharp-net.md)|Fornisce informazioni su come iniziare a scrivere un programma SMO in Visual c# .NET|  

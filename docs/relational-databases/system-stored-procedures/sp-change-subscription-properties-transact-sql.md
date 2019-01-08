@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_change_subscription_properties_TSQL
@@ -17,12 +16,12 @@ ms.assetid: cf8137f9-f346-4aa1-ae35-91a2d3c16f17
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f87fb9b43b723fa489e42f05f5f4f727bafd18dc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 45aadf2eab3cad31bfc376de59e8cce25126533f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47692289"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52785733"
 ---
 # <a name="spchangesubscriptionproperties-transact-sql"></a>sp_change_subscription_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +61,7 @@ sp_change_subscription_properties [ @publisher = ] 'publisher'
  [  **@publication_type =** ] *publication_type*  
  Specifica il tipo di replica della pubblicazione. *publication_type* viene **int**, i possibili valori sono i seguenti.  
   
-|valore|Tipo di pubblicazione|  
+|Value|Tipo di pubblicazione|  
 |-----------|----------------------|  
 |**0**|Transazionale|  
 |**1**|Snapshot|  
@@ -71,7 +70,7 @@ sp_change_subscription_properties [ @publisher = ] 'publisher'
   
  Nella tabella seguente vengono descritte le proprietà degli articoli e i valori corrispondenti.  
   
-|Proprietà|valore|Description|  
+|Proprietà|Value|Descrizione|  
 |--------------|-----------|-----------------|  
 |**alt_snapshot_folder**||Specifica la posizione della cartella alternativa per lo snapshot. Se il valore è NULL, i file di snapshot vengono prelevati dalla posizione predefinita specificata dal server di pubblicazione.|  
 |**distrib_job_login**||Account di accesso per l'account di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows utilizzato per l'esecuzione dell'agente.|  
@@ -81,7 +80,7 @@ sp_change_subscription_properties [ @publisher = ] 'publisher'
 |**distributor_security_mode**|**1**|Consente di utilizzare l'autenticazione di Windows per la connessione al server di distribuzione.|  
 ||**0**|Consente di utilizzare l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per la connessione al server di distribuzione.|  
 |**dts_package_name**||Specifica il nome del pacchetto di SQL Server 2000 Data Transformation Services (DTS). Questo valore può essere specificato solo se la pubblicazione è di tipo transazionale o snapshot.|  
-|**dts_package_password**||Specifica la password per il pacchetto. *dts_package_password* viene **sysname** con valore predefinito è NULL, che indica che la proprietà della password deve rimanere invariata.<br /><br /> Nota: Un pacchetto DTS deve avere una password.<br /><br /> Questo valore può essere specificato solo se la pubblicazione è di tipo transazionale o snapshot.|  
+|**dts_package_password**||Specifica la password per il pacchetto. *dts_package_password* viene **sysname** con valore predefinito è NULL, che indica che la proprietà della password deve rimanere invariata.<br /><br /> Nota: A ogni pacchetto DTS deve essere associata una password.<br /><br /> Questo valore può essere specificato solo se la pubblicazione è di tipo transazionale o snapshot.|  
 |**dts_package_location**||Posizione di archiviazione del pacchetto DTS. Questo valore può essere specificato solo se la pubblicazione è di tipo transazionale o snapshot.|  
 |**dynamic_snapshot_location**||Specifica il percorso della cartella in cui vengono salvati i file di snapshot. Questo valore può essere specificato solo se la pubblicazione è di tipo merge.|  
 |**ftp_address**||Disponibile solo per compatibilità con le versioni precedenti.|  
@@ -92,7 +91,7 @@ sp_change_subscription_properties [ @publisher = ] 'publisher'
 |**internet_login**||Account di accesso utilizzato dall'agente di merge per la connessione al server Web che ospita la sincronizzazione Web tramite l'autenticazione di base.|  
 |**internet_password**||Password utilizzata dall'agente di merge per la connessione al server Web in cui ha luogo la sincronizzazione Web mediante l'autenticazione di base.|  
 |**internet_security_mode**|**1**|Consente di utilizzare l'autenticazione integrata di Windows per la sincronizzazione Web. È consigliabile utilizzare l'autenticazione di base per la sincronizzazione Web. Per altre informazioni, vedere [Configure Web Synchronization](../../relational-databases/replication/configure-web-synchronization.md).|  
-||**0**|Consente di utilizzare l'autenticazione di base per la sincronizzazione Web.<br /><br /> Nota: La sincronizzazione Web richiede una connessione SSL al server Web.|  
+||**0**|Consente di utilizzare l'autenticazione di base per la sincronizzazione Web.<br /><br /> Nota: Per la sincronizzazione Web è necessaria una connessione SSL al server Web.|  
 |**internet_timeout**||Periodo di tempo, espresso in secondi, al termine del quale una richiesta di sincronizzazione Web scade.|  
 |**internet_url**||URL che rappresenta la posizione del listener per la replica per la sincronizzazione Web.|  
 |**merge_job_login**||Account di accesso per l'account di Windows utilizzato per l'esecuzione dell'agente.|  

@@ -12,12 +12,12 @@ ms.assetid: 4c59256f-99a8-4351-9559-a455813dbd06
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: d994b13d063c3a72e6273b95d47e320285cd2d16
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 96e2bee47c97e85421b074e870c9dab1dd46220a
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51667020"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53212460"
 ---
 # <a name="loading-converted-database-objects-into-sql-server-sybasetosql"></a>Caricamento di oggetti di database convertiti in SQL Server (SybaseToSQL)
 Dopo aver convertito gli oggetti di database di Sybase Adaptive Server Enterprise (ASE) a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure, è possibile caricare gli oggetti di database risultante in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure. È possibile avere SSMA creare gli oggetti, oppure è possibile creare script degli oggetti ed eseguire gli script manualmente. Inoltre, SSMA consente di aggiornare i metadati di destinazione con il contenuto effettivo della [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o database di SQL Azure.  
@@ -100,9 +100,9 @@ Dopo aver salvato la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o
   
 4.  Per eseguire un set di istruzioni, selezionare le istruzioni nella finestra dell'editor di query e quindi premere il **F5** chiave.  
   
-Per altre informazioni su come usare l'editor di query per eseguire gli script, vedere "[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)] Query" in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] documentazione Online.  
+Per altre informazioni su come usare l'editor di query per eseguire gli script, vedere " [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)] Query" in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] documentazione Online.  
   
-È anche possibile eseguire gli script dalla riga di comando usando il **sqlcmd** utilità e da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dell'agente. Per altre informazioni sulle **sqlcmd**, vedere la sezione "utilità sqlcmd" in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] documentazione Online. Per altre informazioni sulle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, vedere "automazione delle attività amministrative ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] agente)" in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] documentazione Online.  
+È anche possibile eseguire gli script dalla riga di comando usando il **sqlcmd** utilità e da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dell'agente. Per altre informazioni sulle **sqlcmd**, vedere la sezione "utilità sqlcmd" in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] documentazione Online. Per altre informazioni sulle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, vedere "automazione delle attività amministrative ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] agente)" in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] documentazione Online.  
   
 ## <a name="securing-objects-in-sql-server"></a>Protezione degli oggetti in SQL Server  
 Dopo aver caricato gli oggetti di database convertiti in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], è possibile concedere e negare le autorizzazioni per tali oggetti. È consigliabile eseguire questa operazione prima della migrazione dei dati a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per informazioni su come proteggere gli oggetti nello [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere "Protezione considerazioni per i database e applicazioni di Database" nella [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] documentazione Online.  

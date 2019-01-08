@@ -7,20 +7,18 @@ ms.reviewer: ''
 ms.technology:
 - database-engine
 ms.topic: conceptual
-f1_keywords:
-- VS.BookmarkWindow
 helpviewer_keywords:
 - bookmarks [SQL Server Management Studio]
 ms.assetid: 67cc3fd6-3238-4c58-a3ec-2d3b0438143a
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0f79c1074d829697b996de532bff777ea0df0733
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 76105982e4a1655fcb91e8432ea69bcee658a7fd
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48208261"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53328671"
 ---
 # <a name="manage-bookmarks"></a>Gestione di segnalibri
   Quando si lavora in un editor di codice, la finestra **Segnalibri** consente di creare collegamenti a righe di codice specifiche all'interno del documento. Per visualizzare questa finestra, usare il menu **Visualizza** .  
@@ -95,5 +93,3 @@ ms.locfileid: "48208261"
   
 ## <a name="see-also"></a>Vedere anche  
  [Tasti di scelta rapida di SQL Server Management Studio](../../ssms/sql-server-management-studio-keyboard-shortcuts.md)  
-  
-  

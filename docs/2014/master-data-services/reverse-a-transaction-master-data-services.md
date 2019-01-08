@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - transactions [Master Data Services], reversing
@@ -13,12 +12,12 @@ ms.assetid: 6f7c3f07-0f64-4283-8c9c-93facd00a046
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 572a0fbe10594226a755a4f7ecb59c2e52ef6c82
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 24e1c1fea5404d984f05391624fd244960c0eec3
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48140674"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52822995"
 ---
 # <a name="reverse-a-transaction-master-data-services"></a>Invertire una transazione (Master Data Services)
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]gli amministratori possono invertire una transazione quando è necessario annullare un'azione. Esempi di transazioni sono modifiche al valore dell'attributo, spostamenti di gerarchie o eliminazioni di membri.  
@@ -46,7 +45,7 @@ ms.locfileid: "48140674"
 7.  Nella finestra di dialogo di conferma fare clic su **OK**. Un'altra transazione viene aggiunta alla griglia per registrare la transazione invertita.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Le transazioni &#40;Master Data Services&#41;](../../2014/master-data-services/transactions-master-data-services.md)   
+ [Transazioni &#40;Master Data Services&#41;](../../2014/master-data-services/transactions-master-data-services.md)   
  [Riattivare un membro o una raccolta &#40;Master Data Services&#41;](../../2014/master-data-services/reactivate-a-member-or-collection-master-data-services.md)  
   
   

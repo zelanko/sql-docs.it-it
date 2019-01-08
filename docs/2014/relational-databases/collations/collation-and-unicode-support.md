@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 07/17/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - binary collations [SQL Server]
@@ -28,15 +27,15 @@ ms.assetid: 92d34f48-fa2b-47c5-89d3-a4c39b0f39eb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7f313854119094b4407dc8bf4f6e62fdf7a31677
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1985e7c3fc55f6783c88569c196713050fa40287
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48126531"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53377871"
 ---
 # <a name="collation-and-unicode-support"></a>Collation and Unicode Support
-  Le regole di confronto di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] forniscono regole di ordinamento e proprietà di distinzione tra maiuscole e minuscole e tra caratteri accentati e non accentati per i dati. Le regole di confronto utilizzate con, ad esempio i tipi di dati character `char` e `varchar` dettare il codice di pagina e i caratteri corrispondenti che possono essere rappresentati per quel tipo di dati. Sia che si installi una nuova istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], si ripristini il backup di un database o si stabiliscano connessioni tra database server e client, è importante comprendere i requisiti delle impostazioni locali, l'ordinamento e la modalità di distinzione tra maiuscole e minuscole e tra caratteri accentati e non accentati dei dati da usare. Per visualizzare l'elenco delle regole di confronto disponibili nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [sys.fn_helpcollations &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/sys-fn-helpcollations-transact-sql).  
+  Le regole di confronto di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] forniscono regole di ordinamento e proprietà di distinzione tra maiuscole e minuscole e tra caratteri accentati e non accentati per i dati. Le regole di confronto usate con dati di tipo carattere, quali `char` e `varchar`, definiscono la tabella codici e i caratteri corrispondenti che possono essere rappresentati per quel tipo di dati. Sia che si installi una nuova istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], si ripristini il backup di un database o si stabiliscano connessioni tra database server e client, è importante comprendere i requisiti delle impostazioni locali, l'ordinamento e la modalità di distinzione tra maiuscole e minuscole e tra caratteri accentati e non accentati dei dati da usare. Per visualizzare l'elenco delle regole di confronto disponibili nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [sys.fn_helpcollations &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/sys-fn-helpcollations-transact-sql).  
   
  Selezionando le regole di confronto per un server, un database, una colonna o un'espressione, vengono assegnate determinate caratteristiche ai dati che influiranno sui risultati di molte operazioni eseguite nel database. Ad esempio, quando viene costruita una query tramite ORDER BY, l'ordinamento del set di risultati può dipendere dalle regole di confronto applicate al database o specificate in una clausola COLLATE al livello di espressione della query.  
   
@@ -50,11 +49,11 @@ ms.locfileid: "48126531"
   
  Le opzioni associate alle regole di confronto sono: distinzione tra maiuscole e minuscole, distinzione tra caratteri accentati e non accentati, distinzione Kana e distinzione di larghezza. Tali opzioni vengono specificate aggiungendole al nome delle regole di confronto. Ad esempio, le regole di confronto `Japanese_Bushu_Kakusu_100_CS_AS_KS_WS` prevedono: distinzione tra maiuscole e minuscole, distinzione tra caratteri accentati e non accentati, distinzione Kana e distinzione di larghezza. Nella tabella riportata di seguito viene descritto il comportamento associato a queste opzioni.  
   
-|Opzione|Description|  
+|Opzione|Descrizione|  
 |------------|-----------------|  
 |Distinzione maiuscole/minuscole (_CS)|Opera una distinzione tra lettere maiuscole e minuscole. Se viene selezionata questa opzione, le lettere minuscole precedono le versioni maiuscole corrispondenti nell'ordinamento. Se questa opzione non viene selezionata, le regole di confronto non effettueranno distinzione tra maiuscole e minuscole. Ovvero, in SQL Server non viene operata una distinzione tra lettere maiuscole e minuscole, che vengono considerate identiche ai fini dell'ordinamento. È possibile selezionare in modo esplicito l'esclusione della distinzione tra maiuscole e minuscole specificando _CI.|  
-|Distinzione caratteri accentati/non accentati (_AS)|Opera una distinzione tra caratteri accentati e non accentati. Il carattere 'a', ad esempio, non viene considerato uguale ad 'ấ'. Se questa opzione non viene selezionata, le regole di confronto non effettueranno distinzione tra caratteri accentati e non accentati. Ovvero, in SQL Server non viene opera una distinzione tra caratteri accentati e non accentati, che vengono considerati identici ai fini dell'ordinamento. È possibile selezionare in modo esplicito l'esclusione della distinzione tra caratteri accentati e non accentati specificando _AI.|  
-|Distinzione Kana (_KS)|Opera una distinzione tra i due tipi di caratteri Kana giapponesi: Hiragana e Katakana. Se questa opzione non viene selezionata, le regole di confronto non effettuano distinzione tra caratteri Kana. Ovvero, in SQL Server i caratteri Hiragana e Katakana vengono considerati identici ai fini dell'ordinamento. Omettere questa opzione è il solo metodo per specificare di non effettuare la distinzione Kana.|  
+|Distinzione caratteri accentati/non accentati (_AS)|Opera una distinzione tra caratteri accentati e non accentati. Ad esempio, 'un 'non è uguale a'???'. Se questa opzione non viene selezionata, le regole di confronto non effettueranno distinzione tra caratteri accentati e non accentati. Ovvero, in SQL Server non viene opera una distinzione tra caratteri accentati e non accentati, che vengono considerati identici ai fini dell'ordinamento. È possibile selezionare in modo esplicito l'esclusione della distinzione tra caratteri accentati e non accentati specificando _AI.|  
+|Distinzione Kana (_KS)|Opera una distinzione tra i due tipi di caratteri Kana giapponesi, ovvero Hiragana e Katakana. Se questa opzione non viene selezionata, le regole di confronto non effettuano distinzione tra caratteri Kana. Ovvero, in SQL Server i caratteri Hiragana e Katakana vengono considerati identici ai fini dell'ordinamento. Omettere questa opzione è il solo metodo per specificare di non effettuare la distinzione Kana.|  
 |Distinzione larghezza (_WS)|Opera una distinzione tra caratteri a larghezza intera e caratteri a metà larghezza. Se questa opzione non viene selezionata, SQL Server considera identiche le rappresentazioni con caratteri a larghezza intera e a metà larghezza dello stesso carattere ai fini dell'ordinamento. Omettere questa opzione è il solo metodo per specificare di non effettuare la distinzione larghezza.|  
   
  In[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono supportati i seguenti set di regole di confronto:  
@@ -70,9 +69,9 @@ ms.locfileid: "48126531"
  regole di confronto di SQL Server  
  Le regole di confronto[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SQL_*) garantiscono la compatibilità di ordinamento con le versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le regole di ordinamento del dizionario per i dati non Unicode sono compatibili con qualsiasi routine di ordinamento fornita dai sistemi operativi Windows. Tuttavia l'ordinamento dei dati Unicode è compatibile con una versione specifica di regole di ordinamento di Windows. Poiché le regole di confronto di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] differiscono per i dati non Unicode e i dati Unicode, confrontando gli stessi dati verranno visualizzati risultati diversi, a seconda del tipo di dati sottostante. Per altre informazioni, vedere [Nome delle regole di confronto di SQL Server &#40;Transact-SQL&#41;](/sql/t-sql/statements/sql-server-collation-name-transact-sql).  
   
-> [!NOTE]  
+> [!NOTE]
 >  Quando si aggiorna un'istanza in lingua inglese di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], è possibile specificare le regole di confronto di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SQL_*) per assicurare la compatibilità con le istanze esistenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Poiché le regole di confronto predefinite per un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengono definite durante la configurazione, è importante specificare attentamente le impostazioni delle regole di confronto quando le condizioni riportate di seguito sono vere:  
->   
+> 
 >  -   Il codice dell'applicazione dipende dal comportamento di regole di confronto di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] precedenti.  
 > -   È necessario archiviare dati di tipo carattere in più lingue.  
   
@@ -88,7 +87,7 @@ ms.locfileid: "48126531"
   
  Non è possibile modificare le regole di confronto del database di sistema se non modificandole per il server.  
   
- Le regole di confronto del database vengono usate per tutti i metadati nel database e rappresentano l'impostazione predefinita per tutte le colonne stringa, gli oggetti temporanei, i nomi di variabili e qualsiasi altra stringa usata nel database. Quando le regole di confronto di un database utente vengono modificate, è possibile che si verifichino conflitti tra le regole di confronto quando vengono eseguite query nelle tabelle temporanee di accesso al database. Le tabelle temporanee sono sempre archiviate nel `tempdb` database di sistema, che userà le regole di confronto per l'istanza. L'esecuzione di query di confronto dei dati di tipo carattere tra database utente e `tempdb` può non riuscire se le regole di confronto causano un conflitto nella valutazione dei dati di tipo carattere. È possibile risolvere il problema specificando la clausola COLLATE nella query. Per altre informazioni, vedere [COLLATE &#40;Transact-SQL&#41;](/sql/t-sql/statements/collations).  
+ Le regole di confronto del database vengono usate per tutti i metadati nel database e rappresentano l'impostazione predefinita per tutte le colonne stringa, gli oggetti temporanei, i nomi di variabili e qualsiasi altra stringa usata nel database. Quando le regole di confronto di un database utente vengono modificate, è possibile che si verifichino conflitti tra le regole di confronto quando vengono eseguite query nelle tabelle temporanee di accesso al database. Le tabelle temporanee sono sempre archiviate nel database di sistema `tempdb`, che utilizzerà le regole di confronto per l'istanza. L'esecuzione di query di confronto dei dati di tipo carattere tra database utente e `tempdb` può non riuscire se le regole di confronto causano un conflitto nella valutazione dei dati di tipo carattere. È possibile risolvere il problema specificando la clausola COLLATE nella query. Per altre informazioni, vedere [COLLATE &#40;Transact-SQL&#41;](/sql/t-sql/statements/collations).  
   
  Regole di confronto a livello di colonna  
  Quando una tabella viene creata o modificata, è possibile specificare regole di confronto per ciascuna colonna di stringhe di caratteri utilizzando la clausola COLLATE. Se non si specificano regole di confronto, alla colonna verranno assegnate le regole di confronto predefinite del database.  
@@ -102,7 +101,7 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
   
   
 ###  <a name="Locale_Defn"></a> Impostazioni locali  
- Le impostazioni locali rappresentano un set di informazioni associate a un paese o a una lingua. Possono includere il nome e l'identificatore della lingua parlata, lo script usato per la scrittura della lingua e le convenzioni culturali. Le regole di confronto possono essere associate a uno o più set di impostazioni locali. Per altre informazioni, vedere [ID delle impostazioni locali assegnati da Microsoft](http://msdn.microsoft.com/goglobal/bb964664.aspx).  
+ Le impostazioni locali rappresentano un set di informazioni associate a un paese o a una lingua. Possono includere il nome e l'identificatore della lingua parlata, lo script usato per la scrittura della lingua e le convenzioni culturali. Le regole di confronto possono essere associate a uno o più set di impostazioni locali. Per altre informazioni, vedere [ID delle impostazioni locali assegnati da Microsoft](https://msdn.microsoft.com/goglobal/bb964664.aspx).  
   
   
 ###  <a name="Code_Page_Defn"></a> Code Page  
@@ -114,7 +113,7 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
   
   
 ##  <a name="Unicode_Defn"></a> Supporto Unicode  
- Unicode è uno standard per il mapping dei punti di codice ai caratteri. Dato che è progettato per supportare tutti i caratteri di tutte le lingue del mondo, non è necessario che set di caratteri diversi vengano gestiti da tabelle codici diverse. Se si archiviano dati di tipo carattere che riflettono più lingue, usare sempre tipi di dati Unicode (`nchar`, `nvarchar`, e `ntext`) anziché i tipi di dati non Unicode (`char`, `varchar`, e `text`).  
+ Unicode è uno standard per il mapping dei punti di codice ai caratteri. Dato che è progettato per supportare tutti i caratteri di tutte le lingue del mondo, non è necessario che set di caratteri diversi vengano gestiti da tabelle codici diverse. Se vengono archiviati dati di tipo carattere che riflettono più lingue, usare sempre tipi di dati Unicode (`nchar`, `nvarchar` e `ntext`) anziché tipi di dati non Unicode (`char`, `varchar` e `text`).  
   
  Ai tipi di dati non Unicode sono associate numerose limitazioni, in quanto nei computer non Unicode sarà disponibile una sola tabella codici. Utilizzando tipi di dati Unicode è possibile ottenere prestazioni migliori, in quanto è necessario un minor numero di conversioni tramite la tabella codici. Le regole di confronto Unicode devono essere selezionate singolarmente a livello di database, di colonna o di espressione perché non sono supportate a livello di server.  
   
@@ -211,11 +210,11 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
   
   
 ##  <a name="Related_Content"></a> Contenuto correlato  
- [SQL Server Best Practices Collation Change](http://go.microsoft.com/fwlink/?LinkId=113891)  
+ [SQL Server Best Practices Collation Change](https://go.microsoft.com/fwlink/?LinkId=113891)  
   
- [SQL Server Best Practices Migration to Unicode](http://go.microsoft.com/fwlink/?LinkId=113890)  
+ [SQL Server Best Practices Migration to Unicode](https://go.microsoft.com/fwlink/?LinkId=113890)  
   
- [Sito Web Unicode Consortium](http://go.microsoft.com/fwlink/?LinkId=48619)  
+ [Sito Web Unicode Consortium](https://go.microsoft.com/fwlink/?LinkId=48619)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Regole di confronto dei database indipendenti](../databases/contained-database-collations.md)   

@@ -1,5 +1,5 @@
 ---
-title: Database dell'area di lavoro in SQL Server Data Tools | Microsoft Docs
+title: Il database dell'area di lavoro di Analysis Services in SQL Server Data Tools | Microsoft Docs
 ms.date: 09/17/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 8ebea50408a46ea2ac79030228ee06f149cece4c
-ms.sourcegitcommit: aa9d2826e3c451f4699c0e69c9fcc8a2781c6213
+ms.openlocfilehash: b3f9d94d35d5aaa4ea86cf1f1d9dc845b67eaf4f
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45975720"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072268"
 ---
 # <a name="workspace-database"></a>Database dell'area di lavoro
 
@@ -81,7 +81,7 @@ Usando le proprietà Database dell'area di lavoro e Server dell'area di lavoro p
 > [!NOTE]  
 >  Le proprietà **Modalità area di lavoro integrata**, **Server dell'area di lavoro**, **Memorizzazione area di lavoro** e **Backup dei dati** hanno impostazioni predefinite che vengono applicate quando si crea un nuovo progetto di modello. È possibile modificare le impostazioni predefinite per nuovi progetti di modello nella pagina **Modellazione dati** nelle impostazioni di **Analysis Server** in Strumenti\finestra di dialogo Opzioni. Queste proprietà, come altre, possono essere impostate anche per ogni progetto di modello nella finestra **Proprietà** . Le modifiche apportate alle impostazioni predefinite non verranno applicate ai progetti di modello già creati. Per altre informazioni, vedere [configurare le proprietà di modellazione e alla distribuzione dei dati predefinite](../../analysis-services/tabular-models/configure-default-data-modeling-and-deployment-properties-ssas-tabular.md).  
   
-|Proprietà|Impostazione predefinita|Description|  
+|Proprietà|Impostazione predefinita|Descrizione|  
 |--------------|---------------------|-----------------|  
 |**Modalità area di lavoro integrata**|True, False|Se si seleziona la modalità Area di lavoro integrata per il database dell'area di lavoro quando viene creato il progetto, questa proprietà sarà True. Se si seleziona la modalità **Server dell'area di lavoro** quando viene creato il progetto, questa proprietà sarà False. | 
 |**Database dell'area di lavoro**|nome|Nome del database dell'area di lavoro. Questa proprietà non può essere modificata se **Modalità area di lavoro integrata** è **True**.|  

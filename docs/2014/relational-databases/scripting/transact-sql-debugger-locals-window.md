@@ -7,20 +7,18 @@ ms.reviewer: ''
 ms.technology:
 - database-engine
 ms.topic: conceptual
-f1_keywords:
-- vs.debug.locals
 helpviewer_keywords:
 - Locals Window [Transact-SQL]
 ms.assetid: 59bea640-7823-4b4d-832c-f384d83cca2f
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c6e79bed7775a55d52382d38eb44f6711ed1050c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 22090b4bdb1827be4add47ec2f539cde0ea70827
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48221311"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53327401"
 ---
 # <a name="locals-window"></a>finestra Variabili locali
   Nella finestra **Variabili locali** vengono visualizzate informazioni sulle espressioni locali nell'ambito corrente del debugger [!INCLUDE[tsql](../../includes/tsql-md.md)] . L'ambito è impostato sul frame dello stack di chiamate corrente selezionato nella finestra **Stack di chiamate** . Per visualizzare espressioni locali, è necessario utilizzare la modalità di debug.  
@@ -35,7 +33,7 @@ ms.locfileid: "48221311"
 -   Fare clic con il pulsante destro del mouse sull'espressione e scegliere **Modifica valore**.  
   
 ## <a name="columns"></a>Colonne  
- **Nome**  
+ **Name**  
  Nome dell'espressione locale. Nel debugger [!INCLUDE[tsql](../../includes/tsql-md.md)] vengono elencati parametri, variabili e funzioni di sistema i cui nomi iniziano per @@.  
   
  **Value**  
@@ -55,5 +53,3 @@ ms.locfileid: "48221311"
  [Finestra Stack di chiamate](transact-sql-debugger-call-stack-window.md)   
  [Finestra di dialogo Controllo immediato](transact-sql-debugger-quickwatch-dialog-box.md)   
  [Espressioni &#40; Transact-SQL &#41;](/sql/t-sql/language-elements/expressions-transact-sql)  
-  
-  

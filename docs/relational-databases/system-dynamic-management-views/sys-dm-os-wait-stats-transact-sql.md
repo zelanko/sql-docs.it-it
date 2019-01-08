@@ -1,7 +1,7 @@
 ---
 title: sys.dm_os_wait_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 04/23/2018
+ms.date: 12/04/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -21,12 +21,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 513b85aafb4cd25d55dfb40e37dabd6fc47b814f
-ms.sourcegitcommit: ce4b39bf88c9a423ff240a7e3ac840a532c6fcae
+ms.openlocfilehash: d271d8e7a0601353439df8a5848978f2a89af3e2
+ms.sourcegitcommit: 0330cbd1490b63e88334a9f9e421f4bd31a6083f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48878194"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52886886"
 ---
 # <a name="sysdmoswaitstats-transact-sql"></a>sys.dm_os_wait_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -36,7 +36,7 @@ Restituisce informazioni su tutte le attese rilevate dai thread eseguiti. È pos
 > [!NOTE] 
 > Per chiamare questo elemento dal **[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] oppure [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]**, usare il nome **sys.dm_pdw_nodes_os_wait_stats**.  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |wait_type|**nvarchar(60)**|Nome del tipo di attesa. Per altre informazioni, vedere [tipi di attesa](#WaitTypes), più avanti in questo argomento.|  
 |waiting_tasks_count|**bigint**|Numero di attese del tipo specificato. Questo contatore viene incrementato all'inizio di ogni attesa.|  
@@ -89,7 +89,7 @@ Questo comando reimposta tutti i contatori su 0.
   
  Nella tabella seguente sono elencati i tipi di attesa rilevati dalle attività.  
 
-|Tipo |Description| 
+|Tipo |Descrizione| 
 |-------------------------- |--------------------------| 
 |ABR |Identificato solo a scopo informativo. Non supportato. Non è garantita la compatibilità con le versioni future.| | 
 |AM_INDBUILD_ALLOCATION |TBD <br />**Si applica a**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
@@ -168,8 +168,8 @@ Questo comando reimposta tutti i contatori su 0.
 |CONNECTION_ENDPOINT_LOCK |TBD <br /> **Si applica a**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |COUNTRECOVERYMGR |TBD <br /> **Si applica a**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |CREATE_DATINISERVICE |TBD <br /> **Si applica a**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
-|CXCONSUMER |Si verifica con i piani di query in parallelo quando un thread consumer in attesa di un thread producer inviare le righe. Questa è una parte normale di esecuzione di query parallele. <br /> **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2, [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3), [!INCLUDE[ssSDS](../../includes/sssds-md.md)]|
-|CXPACKET |Si verifica con piani di query paralleli durante la sincronizzazione di iteratore di scambio di query processor e se producono e usano le righe. Se l'attesa è eccessiva e non è possibile ridurla ottimizzando la query (ad esempio aggiungendo indici), regolare l'opzione Cost threshold for parallelism o abbassare il grado di parallelismo.<br /> **Nota:** partire [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 e [!INCLUDE[ssSDS](../../includes/sssds-md.md)], CXPACKET si riferisce solo alla sincronizzazione di iteratore di scambio di query processor e per la produzione di righe per i thread consumer. Nel tipo di attesa CXCONSUMER thread consumer viene tenuta traccia separatamente.| 
+|CXCONSUMER |Si verifica con i piani di query in parallelo quando un thread consumer in attesa di un thread producer inviare le righe. Questa è una parte normale di esecuzione di query parallele. <br /> **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (A partire [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2, [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3), [!INCLUDE[ssSDS](../../includes/sssds-md.md)]|
+|CXPACKET |Si verifica con piani di query paralleli durante la sincronizzazione di iteratore di scambio di query processor e se producono e usano le righe. Se l'attesa è eccessiva e non è possibile ridurla ottimizzando la query (ad esempio aggiungendo indici), regolare l'opzione Cost threshold for parallelism o abbassare il grado di parallelismo.<br /> **Nota:** A partire [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 e [!INCLUDE[ssSDS](../../includes/sssds-md.md)], CXPACKET si riferisce solo alla sincronizzazione di iteratore di scambio di query processor e per la produzione di righe per i thread consumer. Nel tipo di attesa CXCONSUMER thread consumer viene tenuta traccia separatamente.| 
 |CXROWSET_SYNC |Si verifica durante un'analisi di intervalli parallela.| 
 |DAC_INIT |Si verifica durante l'inizializzazione della connessione amministrativa dedicata.| 
 |DBCC_SCALE_OUT_EXPR_CACHE |TBD <br /> **Si applica a**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
@@ -931,6 +931,7 @@ Questo comando reimposta tutti i contatori su 0.
 |VIA_ACCEPT |Si verifica quando una connessione del provider VIA (Virtual Interface Adapter) viene completata durante l'avvio.| 
 |VIEW_DEFINITION_MUTEX |Si verifica durante la sincronizzazione dell'accesso a definizioni delle viste memorizzate nella cache.| 
 |WAIT_FOR_RESULTS |Si verifica durante l'attesa dell'attivazione di una notifica di query.| 
+|WAIT_ON_SYNC_STATISTICS_REFRESH |Si verifica quando in attesa di aggiornamento delle statistiche sincrone per completare prima della compilazione di query e l'esecuzione può riprendere.<br /> **Si applica a**: A partire da [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]|
 |WAIT_SCRIPTDEPLOYMENT_REQUEST |TBD <br /> **Si applica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |WAIT_SCRIPTDEPLOYMENT_WORKER |TBD <br /> **Si applica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |WAIT_XLOGREAD_SIGNAL |TBD <br /> **Si applica a**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
