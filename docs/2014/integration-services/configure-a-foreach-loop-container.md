@@ -14,12 +14,12 @@ ms.assetid: 519c6f96-5e1f-47d2-b96a-d49946948c25
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9d63a4f168c4a426c06bb00c634f89e328735332
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: eb1e3ca9e8576bf340560c45582c9b01bd453c14
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159761"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52529054"
 ---
 # <a name="configure-a-foreach-loop-container"></a>Configurare un contenitore Ciclo Foreach
   Questa procedura descrive la configurazione di un contenitore Ciclo Foreach, incluse le espressioni di proprietà a livello di enumeratore e contenitore.  
@@ -66,7 +66,7 @@ ms.locfileid: "48159761"
   
     -   Per usare l'enumeratore Foreach SMO, selezionare una connessione ADO.NET esistente oppure fare clic su **Nuova connessione** nell'elenco **Connessione** e quindi digitare la stringa da usare oppure fare clic su **Sfoglia**. Se si fa clic su **Sfoglia**, nella finestra di dialogo **Seleziona enumerazione SMO** selezionare il tipo di oggetto da enumerare e il tipo di enumerazione e quindi fare clic su **OK**.  
   
-6.  Facoltativamente, fare clic sul pulsante Sfoglia **(…)** nella casella di testo **Espressioni** della pagina **Raccolta** per creare le espressioni che aggiornano i valori delle proprietà. Per altre informazioni, vedere [Aggiungere o modificare un'espressione di proprietà](expressions/add-or-change-a-property-expression.md).  
+6.  Facoltativamente, fare clic sul pulsante sfoglia **(...)** nella casella di testo **Espressioni** della pagina **Raccolta** per creare espressioni che aggiornano i valori delle proprietà. Per altre informazioni, vedere [Aggiunta o modifica di un'espressione di proprietà](expressions/add-or-change-a-property-expression.md).  
   
     > [!NOTE]  
     >  Le proprietà incluse nell'elenco **Proprietà** variano a seconda dell'enumeratore.  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - merge replication conflict resolution [SQL Server replication], levels
@@ -15,12 +14,12 @@ ms.assetid: 81e9ecb6-1d31-4a78-b32a-96f7f4d67077
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 11eed64a7acefb0202553c4e3e99d18333b47910
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3ff61c601be83ac27c4febb7f31598bdb8fce037
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48228421"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52810273"
 ---
 # <a name="specify-the-conflict-tracking-and-resolution-level-for-merge-articles"></a>Specifica del livello di rilevamento e risoluzione dei conflitti per gli articoli di merge
   In questo argomento viene descritto come specificare il livello di rilevamento e risoluzione dei conflitti per gli articoli di merge in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
@@ -56,11 +55,11 @@ ms.locfileid: "48228421"
   
 2.  Fare clic su **Proprietà articolo**, quindi su **Imposta proprietà dell'articolo di tabella evidenziato** o su **Imposta proprietà di tutti gli articoli di tabelle**.  
   
-3.  Nella scheda **Proprietà** della finestra di dialogo **Proprietà articolo \<Articolo>** selezionare uno dei valori seguenti per la proprietà **Livello rilevamento**: **Rilevamento a livello di riga** o **Rilevamento a livello di colonna**.  
+3.  Nel **proprietà** scheda della finestra di **proprietà articolo \<articolo >** finestra di dialogo, seleziona uno dei seguenti valori per il **rilevamento a livello di** proprietà: **Rilevamento a livello di riga** oppure **rilevamento a livello di colonna**.  
   
 4.  Se è visualizzata la finestra di dialogo **Proprietà pubblicazione - \<Pubblicazione>** fare clic su **OK** per salvare e chiudere la finestra di dialogo.  
   
-##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
   
 #### <a name="to-specify-conflict-tracking-options-for-a-new-merge-article"></a>Per specificare le opzioni di rilevamento dei conflitti per un nuovo articolo di merge  
   
@@ -84,8 +83,8 @@ ms.locfileid: "48228421"
   
 ## <a name="see-also"></a>Vedere anche  
  [Advanced Merge Replication Conflict Detection and Resolution](../merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
- [Rilevamento e risoluzione dei conflitti nei record logici](../merge/advanced-merge-replication-conflict-resolving-in-logical-record.md)   
- [Definire una relazione tra record logici degli articoli di tabelle di merge](define-a-logical-record-relationship-between-merge-table-articles.md)   
+ [Detecting and Resolving Conflicts in Logical Records](../merge/advanced-merge-replication-conflict-resolving-in-logical-record.md)   
+ [Define a Logical Record Relationship Between Merge Table Articles](define-a-logical-record-relationship-between-merge-table-articles.md)   
  [Rilevare e risolvere i conflitti tra repliche di tipo merge](../merge/advanced-merge-replication-resolve-merge-replication-conflicts.md)  
   
   

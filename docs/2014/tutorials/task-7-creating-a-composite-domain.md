@@ -13,15 +13,15 @@ ms.assetid: ae778647-1df0-4952-9a69-0ef6177eea9c
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 18ab1fb6986941355a89cb8075897de07fc9ff3c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d804e3d2b7f851f8142f0e9c95158cb56ea521ed
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48175831"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53371703"
 ---
-# <a name="task-7-creating-a-composite-domain"></a>Attività 7: Creazione di una regola per un dominio composito
-  In questa attività si crea un dominio composito, **Address Validation**, che comprende **Address Line**, **City**, **stato**e  **Codice postale** domini. Un dominio composito consente di definire una regola tra domini che interessa più domini di una regola. Vi sono altri vantaggi correlati a un dominio composito, quale la possibilità di analizzare un valore di campo in più domini.  Ad esempio, un valore per un campo Nome completo può essere analizzato in domini diversi First Name, Middle Name e Last Name. In questa esercitazione viene definita solo una regola tra domini. Visualizzare [Managing a Composite Domain](http://msdn.microsoft.com/library/hh510399.aspx) per altri dettagli.  
+# <a name="task-7-creating-a-composite-domain"></a>Attività 7: Creazione di un dominio composito
+  In questa attività si crea un dominio composito, **Address Validation**, che comprende **Address Line**, **City**, **stato**e  **Codice postale** domini. Un dominio composito consente di definire una regola tra domini che interessa più domini di una regola. Vi sono altri vantaggi correlati a un dominio composito, quale la possibilità di analizzare un valore di campo in più domini.  Ad esempio, un valore per un campo Nome completo può essere analizzato in domini diversi First Name, Middle Name e Last Name. In questa esercitazione viene definita solo una regola tra domini. Visualizzare [Managing a Composite Domain](https://msdn.microsoft.com/library/hh510399.aspx) per altri dettagli.  
   
 1.  Nel riquadro sinistro, fare clic su **crea un dominio composito** pulsante sulla barra degli strumenti.  
   
@@ -36,6 +36,6 @@ ms.locfileid: "48175831"
 4.  Scegliere **OK** per chiudere la finestra di dialogo.  
   
 ## <a name="next-step"></a>Passaggio successivo  
- [Attività 8: Creazione di una regola per un dominio composito](../../2014/tutorials/task-8-creating-a-composite-domain-rule.md)  
+ [Attività 8: Creazione di una regola dominio composito](../../2014/tutorials/task-8-creating-a-composite-domain-rule.md)  
   
   

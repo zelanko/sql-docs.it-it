@@ -18,12 +18,12 @@ ms.assetid: 6f0221bd-70b4-4b04-b15d-722235aceb3c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f0213e831f6613acc0ce5cc0a802240c2e3979fc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fcde4fd9439862dd88bdb1ff8c9eb40ff85ce0d4
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47772339"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590425"
 ---
 # <a name="spprocoption-transact-sql"></a>sp_procoption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,13 +42,13 @@ sp_procoption [ @ProcName = ] 'procedure'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@ProcName =** ] **'***procedure***'**  
+ [  **@ProcName =** ] **'**_procedure_**'**  
  È il nome della routine per cui si desidera impostare un'opzione. *routine* viene **nvarchar(776)**, non prevede alcun valore predefinito.  
   
- [  **@OptionName =** ] **'***opzione***'**  
+ [  **@OptionName =** ] **'**_opzione_**'**  
  Nome dell'opzione da impostare. L'unico valore per *opzione* viene **avvio**.  
   
- [  **@OptionValue =** ] **'***valore***'**  
+ [  **@OptionValue =** ] **'**_valore_**'**  
  Indica se attivare l'opzione (**true** o **sul**) o su off (**false** oppure **off**). *valore* viene **varchar(12)**, non prevede alcun valore predefinito.  
   
 ## <a name="return-code-values"></a>Valori restituiti  

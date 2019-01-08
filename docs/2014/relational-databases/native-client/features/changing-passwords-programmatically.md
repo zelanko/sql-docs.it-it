@@ -21,33 +21,33 @@ ms.assetid: 624ad949-5fed-4ce5-b319-878549f9487b
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 82b31b8a2a1a50b1ee3c9cad37f8f5db5374c6cb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0ec1db8e0f88bea5a02eb54b94a88194882ad9ff
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48229921"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53370493"
 ---
 # <a name="changing-passwords-programmatically"></a>Modifica delle password a livello di programmazione
   Nelle versioni precedenti a [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] una password di un utente scaduta può essere reimpostata solo da un amministratore. A partire [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client supporta la gestione della scadenza della password a livello di codice sia tramite il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provider OLE DB Native Client e il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] driver ODBC Native Client e attraverso modifiche al **Account di accesso di SQL Server** finestre di dialogo.  
   
 > [!NOTE]  
->  Quando possibile, richiedere agli utenti di immettere le credenziali in fase di esecuzione ed evitare di archiviarle in un formato persistente. Se è necessario rendere persistenti le credenziali, è consigliabile crittografarle usando l'[API di crittografia Win32](http://go.microsoft.com/fwlink/?LinkId=64532). Per altre informazioni sull'uso delle password, vedere [Password complesse](../../security/strong-passwords.md).  
+>  Quando possibile, richiedere agli utenti di immettere le credenziali in fase di esecuzione ed evitare di archiviarle in un formato persistente. Se è necessario rendere persistenti le credenziali, è consigliabile crittografarle usando l'[API di crittografia Win32](https://go.microsoft.com/fwlink/?LinkId=64532). Per altre informazioni sull'uso delle password, vedere [Password complesse](../../security/strong-passwords.md).  
   
 ## <a name="sql-server-login-error-codes"></a>Codici di errore degli account di accesso di SQL Server  
  Quando non è possibile stabilire una connessione a causa di problemi di autenticazione, sarà disponibile uno dei codici di errore di SQL Server seguenti per consentire la diagnosi e il recupero.  
   
 |Codice di errore di SQL Server|Messaggio di errore|  
 |---------------------------|-------------------|  
-|15113|Accesso non riuscito per l'utente '%.*ls' Motivo: impossibile convalidare la password. L'account è bloccato.|  
-|18463|Accesso non riuscito per l'utente '%.*ls'. Motivo: impossibile modificare la password. Impossibile utilizzare la password in questo momento.|  
-|18464|Accesso non riuscito per l'utente '%.*ls'. Motivo: impossibile modificare la password. La password non soddisfa i criteri di Windows in quanto è troppo breve.|  
-|18465|Accesso non riuscito per l'utente '%.*ls'. Motivo: impossibile modificare la password. La password non soddisfa i criteri di Windows in quanto è troppo lunga.|  
-|18466|Accesso non riuscito per l'utente '%.*ls'. Motivo: impossibile modificare la password. La password non soddisfa i criteri di Windows in quanto non è sufficientemente complessa.|  
-|18467|Accesso non riuscito per l'utente '%.*ls'. Motivo: impossibile modificare la password. La password non soddisfa i requisiti della DLL per il filtro delle password.|  
-|18468|Accesso non riuscito per l'utente '%.*ls'. Motivo: impossibile modificare la password. Si è verificato un errore imprevisto durante la convalida della password.|  
-|18487|Accesso non riuscito per l'utente '%.*ls'. Motivo: la password dell'account è scaduta.|  
-|18488|Accesso non riuscito per l'utente '%.*ls'. Motivo: è necessario modificare la password dell'account.|  
+|15113|Accesso non riuscito per l'utente ' %. * motivo ls': Impossibile convalidare la password. L'account è bloccato.|  
+|18463|Accesso non riuscito per l'utente '%.*ls'. Motivo: Modifica della password non riuscita. Impossibile utilizzare la password in questo momento.|  
+|18464|Accesso non riuscito per l'utente '%.*ls'. Motivo: Modifica della password non riuscita. La password non soddisfa i criteri di Windows in quanto è troppo breve.|  
+|18465|Accesso non riuscito per l'utente '%.*ls'. Motivo: Modifica della password non riuscita. La password non soddisfa i criteri di Windows in quanto è troppo lunga.|  
+|18466|Accesso non riuscito per l'utente '%.*ls'. Motivo: Modifica della password non riuscita. La password non soddisfa i criteri di Windows in quanto non è sufficientemente complessa.|  
+|18467|Accesso non riuscito per l'utente '%.*ls'. Motivo: Modifica della password non riuscita. La password non soddisfa i requisiti della DLL per il filtro delle password.|  
+|18468|Accesso non riuscito per l'utente '%.*ls'. Motivo: Modifica della password non riuscita. Si è verificato un errore imprevisto durante la convalida della password.|  
+|18487|Accesso non riuscito per l'utente '%.*ls'. Motivo: La password dell'account è scaduta.|  
+|18488|Accesso non riuscito per l'utente '%.*ls'. Motivo: La password dell'account deve essere modificata.|  
   
 ## <a name="sql-server-native-client-ole-db-provider"></a>Provider OLE DB di SQL Server Native Client  
  Il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provider OLE DB Native Client supporta la scadenza password mediante un'interfaccia utente e a livello di codice.  

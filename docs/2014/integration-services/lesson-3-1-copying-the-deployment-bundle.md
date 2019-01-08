@@ -1,22 +1,21 @@
 ---
-title: 'Passaggio 1: Copia del pacchetto di distribuzione| Microsoft Docs'
+title: 'Passaggio 1: Copia il pacchetto di distribuzione | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: b6ef1e56-d278-4a24-afd3-68d8e0595cbb
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1317cfd51aec5e32fab0f1a02ecc3313525ae5f6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cacb3c9e14e49ef4f755d9c19f3782aa62c69c9d
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48101431"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53375443"
 ---
 # <a name="step-1-copying-the-deployment-bundle"></a>Passaggio 1: Copia del pacchetto di distribuzione
   In questa attività si procederà alla copia del pacchetto di distribuzione nel computer di destinazione.  
@@ -34,8 +33,8 @@ ms.locfileid: "48101431"
 3.  Individuare la condivisione pubblica in cui si desidera copiare la cartella nel computer di destinazione e scegliere **Incolla**.  
   
 ## <a name="next-task-in-lesson"></a>Attività successiva della lezione  
- [Passaggio 2: Esecuzione dell'Installazione guidata pacchetti](../integration-services/lesson-3-2-running-the-package-installation-wizard.md)  
+ [Passaggio 2: Esegue l'installazione guidata pacchetti](../integration-services/lesson-3-2-running-the-package-installation-wizard.md)  
   
-![Icona di Integration Services (piccola)](media/dts-16.gif "icona di Integration Services (piccola)")**rimangono fino a Date con Integration Services** <br /> Per i download, gli articoli, gli esempi e i video Microsoft più recenti, oltre alle soluzioni selezionate dalla community, visitare la pagina [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] sul sito MSDN:<br /><br /> [Visita la pagina di Integration Services su MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Per ricevere una notifica automatica su questi aggiornamenti, sottoscrivere i feed RSS disponibili nella pagina.  
+![Icona di Integration Services (piccola)](media/dts-16.gif "icona di Integration Services (piccola)")**rimangono fino a Date con Integration Services**<br /> Per i download, gli articoli, gli esempi e i video Microsoft più recenti, oltre alle soluzioni selezionate dalla community, visitare la pagina [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] sul sito MSDN:<br /><br /> [Visita la pagina di Integration Services su MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Per ricevere una notifica automatica su questi aggiornamenti, sottoscrivere i feed RSS disponibili nella pagina.  
   
   

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: wmi
 ms.topic: reference
 api_name:
 - GetCurrentCertificate Method (ServerSettings Class)
@@ -20,12 +18,12 @@ ms.assetid: 450e33c6-91d4-420f-ab7c-1905111f5658
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: af928b31db241ef23e9463f1d8cd9bc951584c38
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 30b704d26d2b6ac080f32034bb78fddcee446bdb
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48105661"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53366333"
 ---
 # <a name="getcurrentcertificate-method-serversettings-class"></a>Metodo GetCurrentCertificate (classe ServerSettings)
   Ottiene il certificato di sicurezza corrente.  
@@ -47,7 +45,7 @@ SHA
   
 #### <a name="parameters"></a>Parametri  
   
-|Parametro|Description|  
+|Parametro|Descrizione|  
 |---------------|-----------------|  
 |*SHA*|Valore oggetto stringa (parametro di output) che specifica il certificato di sicurezza corrente dopo il completamento del metodo.|  
   
@@ -57,6 +55,6 @@ SHA
 ## <a name="remarks"></a>Note  
   
 ## <a name="see-also"></a>Vedere anche  
- [Configurazione di protocolli di rete Server e le librerie di rete](http://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+ [Configurazione di protocolli di rete Server e le librerie di rete](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

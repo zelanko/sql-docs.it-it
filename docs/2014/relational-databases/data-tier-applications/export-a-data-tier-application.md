@@ -24,12 +24,12 @@ ms.assetid: 61915bc5-0f5f-45ac-8cfe-3452bc185558
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ae726d90d71259715f9eb80619e74c7bfbf990dd
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 85e3268bcca9f4800bd59fa5be541dc6f9502ef5
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43810887"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53368703"
 ---
 # <a name="export-a-data-tier-application"></a>Esportazione di un'applicazione livello dati
   L'esportazione di un database o di un'applicazione livello dati distribuita crea un file di esportazione contenente sia le definizioni degli oggetti del database che tutti i dati contenuti nelle tabelle. Il file di esportazione può quindi essere importato in un'altra istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] o in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Le operazioni di importazione ed esportazione possono essere combinate per eseguire la migrazione di un'applicazione livello dati tra istanze o per creare un backup logico o per creare una copia on-premise di un database distribuito in [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
@@ -37,13 +37,13 @@ ms.locfileid: "43810887"
 ## <a name="before-you-begin"></a>Prima di iniziare  
  Il processo di esportazione compila un nuovo file di esportazione dell'applicazione livello dati in due fasi.  
   
-1.  L'esportazione compila una definizione dell'applicazione livello dati nel file di esportazione (file BACPAC) nello stesso modo in cui un'operazione di estrazione dell'applicazione livello dati compila una definizione dell'applicazione livello dati in un file del pacchetto di applicazione livello dati. La definizione del pacchetto di applicazione livello dati esportata include tutti gli oggetti del database corrente. Se il processo di esportazione viene eseguito su un database distribuito originariamente da un'applicazione livello dati, e le modifiche sono state apportate direttamente al database dopo la distribuzione, la definizione esportata corrisponderà al set di oggetti del database e non alle definizioni dell'applicazione livello dati originale.  
+1.  L'esportazione compila una definizione dell'applicazione livello dati nel file di esportazione (file BACPAC) così come un'operazione di estrazione dell'applicazione livello dati compila una definizione dell'applicazione livello dati in un file del pacchetto di applicazione livello dati. La definizione del pacchetto di applicazione livello dati esportata include tutti gli oggetti del database corrente. Se il processo di esportazione viene eseguito su un database distribuito originariamente da un'applicazione livello dati, e le modifiche sono state apportate direttamente al database dopo la distribuzione, la definizione esportata corrisponderà al set di oggetti del database e non alle definizioni dell'applicazione livello dati originale.  
   
 2.  L'esportazione consente di eseguire una copia bulk dei dati da tutte le tabelle del database e di incorporarli nel file di esportazione.  
   
  Il processo di esportazione imposta la versione dell'applicazione livello dati su 1.0.0.0 e la descrizione dell'applicazione livello dati nel file di esportazione su una stringa vuota. Se il database è stato distribuito da un'applicazione livello dati, la definizione dell'applicazione livello dati nel file di esportazione conterrà il nome assegnato all'applicazione livello dati originale, in caso contrario il nome dell'applicazione livello dati verrà impostato sul nome del database.  
   
- È disponibile un'applicazione di esempio nelle esercitazioni di [!INCLUDE[ssSDS](../../includes/sssds-md.md)] che è possibile usare per testare l'esportazione e l'importazione di applicazioni livello dati e database. Per istruzioni su come scaricare e usare l'esempio, vedere la pagina relativa all' [importazione e all'esportazione del database per il database SQL di Windows Azure](http://go.microsoft.com/fwlink/?LinkId=219404).  
+ È disponibile un'applicazione di esempio nelle esercitazioni di [!INCLUDE[ssSDS](../../includes/sssds-md.md)] che è possibile usare per testare l'esportazione e l'importazione di applicazioni livello dati e database. Per istruzioni su come scaricare e usare l'esempio, vedere la pagina relativa all' [importazione e all'esportazione del database per il database SQL di Windows Azure](https://go.microsoft.com/fwlink/?LinkId=219404).  
   
 ###  <a name="LimitationsRestrictions"></a> Limitazioni e restrizioni  
  Un database o un'applicazione livello dati può essere esportata solo da un database in [!INCLUDE[ssSDS](../../includes/sssds-md.md)]o [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 4 (SP4) o versioni successive.  
@@ -62,7 +62,7 @@ ms.locfileid: "43810887"
   
 3.  Fare clic con il pulsante destro del mouse sul nome del database.  
   
-4.  Fare clic su **Attività** , quindi selezionare **Esporta l'applicazione livello dati**  
+4.  Fare clic su **Attività** e quindi selezionare **Esporta l'applicazione livello dati**.  
   
 5.  Completare le finestre di dialogo della procedura guidata.  
   
@@ -87,12 +87,12 @@ ms.locfileid: "43810887"
   
  **Avanti** : consente di passare alla pagina **Selezione pacchetto di applicazione livello dati** .  
   
- **Annulla** : annulla l'operazione e chiude la procedura guidata.  
+ **Annulla**: annulla l'operazione e chiude la procedura guidata.  
   
 ##  <a name="Export_settings"></a> Pagina Impostazioni di esportazione  
  Utilizzare questa pagina per specificare il percorso in cui creare il file BACPAC.  
   
--   **Salva su disco locale** : crea un file BACPAC in una directory nel computer locale. Fare clic su **Sfoglia** per selezionare un percorso nel computer locale o specificare il percorso nell'apposito campo. Il nome del percorso deve includere un nome file e l'estensione .bacpac.  
+-   **Salva su disco locale** : crea un file BACPAC in una directory nel computer locale. Fare clic su **Sfoglia** per selezionare un percorso nel computer locale oppure specificare il percorso nell'apposito campo. Il nome del percorso deve includere un nome file e l'estensione .bacpac.  
   
 -   **Salva in Windows Azure** : crea un file BACPAC in un contenitore Windows Azure. È necessario connettersi a un contenitore Windows Azure per convalidare questa opzione. Questa opzione richiede inoltre che si specifichi una directory locale per il file temporaneo. Il file temporaneo verrà creato nel percorso specificato, dove vi rimarrà una volta completata l'operazione.  
   
@@ -117,11 +117,11 @@ ms.locfileid: "43810887"
 ##  <a name="NetApp"></a> Utilizzo di un'applicazione .NET Framework  
  **Per esportare un'applicazione livello dati con il metodo Export() in un'applicazione .NET Framework.**  
   
- Per visualizzare un esempio di codice, scaricare l'applicazione di esempio dell'applicazione livello dati da [Codeplex](http://go.microsoft.com/fwlink/?LinkId=219575).  
+ Per visualizzare un esempio di codice, scaricare l'applicazione di esempio dell'applicazione livello dati da [Codeplex](https://go.microsoft.com/fwlink/?LinkId=219575).  
   
 1.  Creare un oggetto server SMO e impostarlo sull'istanza contenente l'applicazione livello dati da esportare.  
   
-2.  Aprire un `ServerConnection` oggetti e connettersi alla stessa istanza.  
+2.  Aprire un oggetto `ServerConnection` e collegarlo alla stessa istanza.  
   
 3.  Utilizzare il metodo `Export` del tipo `Microsoft.SqlServer.Management.Dac.DacStore` per esportare l'applicazione livello dati. Specificare il nome dell'applicazione livello dati da esportare e il percorso della cartella in cui salvare il file di esportazione.  
   

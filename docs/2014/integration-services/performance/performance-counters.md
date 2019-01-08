@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - logs [Integration Services], performance counters
@@ -17,12 +16,12 @@ ms.assetid: 11e17f4e-72ed-44d7-a71d-a68937a78e4c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8edbd94ef143eeb4f8b029f8f8d567cc3c571a19
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 70694b2814ab23ad13e29a1348e7bfb73d884fbc
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48140741"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53367673"
 ---
 # <a name="performance-counters"></a>Contatori delle prestazioni
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] installa un set di contatori delle prestazioni che è possibile usare per monitorare le prestazioni del motore flusso di dati. Ad esempio controllando il contatore "Buffer con spooling" è possibile stabilire se i buffer dei dati vengano scritti temporaneamente sul disco mentre il pacchetto è in esecuzione. Lo swapping riduce le prestazioni e indica che la memoria del computer è insufficiente.  
@@ -32,7 +31,7 @@ ms.locfileid: "48140741"
   
  Nella tabella seguente sono descritti i contatori delle prestazioni disponibili.  
   
-|Contatore delle prestazioni|Description|  
+|Contatore delle prestazioni|Descrizione|  
 |-------------------------|-----------------|  
 |Byte BLOB letti|Numero di byte dei dati BLOB (oggetto binario di grandi dimensioni) letti dal motore flusso di dati in tutte le origini.|  
 |Byte BLOB scritti|Numero di byte dei dati BLOB scritti dal motore flusso di dati in tutte le destinazioni.|  
@@ -72,11 +71,11 @@ select * from [catalog].[dm_execution_performance_counters] (NULL)
   
 ## <a name="related-content"></a>Contenuto correlato  
   
--   Strumento nella [SSIS Performance Visualization for Business Intelligence Development Studio (CodePlex Project)](http://go.microsoft.com/fwlink/?LinkId=146626)(Visualizzazione delle prestazione di SSIS per Business Intelligence Development Studio (progetto CodePlex)) nel sito codeplex.com.  
+-   Strumento nella [SSIS Performance Visualization for Business Intelligence Development Studio (CodePlex Project)](https://go.microsoft.com/fwlink/?LinkId=146626) (Visualizzazione delle prestazione di SSIS per Business Intelligence Development Studio (progetto CodePlex)) nel sito codeplex.com.  
   
--   Video [Measuring and Understanding the Performance of Your SSIS Packages in the Enterprise (SQL Server Video)](http://go.microsoft.com/fwlink/?LinkId=150497)(Misurazione e comprensione delle prestazioni dei pacchetti SSIS nell'organizzazione (video di SQL Server)) nel sito msdn.microsoft.com.  
+-   Video [Measuring and Understanding the Performance of Your SSIS Packages in the Enterprise (SQL Server Video)](https://go.microsoft.com/fwlink/?LinkId=150497) (Misurazione e comprensione delle prestazioni dei pacchetti SSIS nell'organizzazione (video di SQL Server)) nel sito msdn.microsoft.com.  
   
--   Articolo di supporto [The SSIS performance counter is no longer available in the Performance Monitor after you upgrade to Windows Server 2008](http://go.microsoft.com/fwlink/?LinkId=235319) (Mancata disponibilità del contatore delle prestazioni di SSIS in Performance Monitor dopo l'aggiornamento a Windows Server 2008) nel sito support.microsoft.com.  
+-   Articolo di supporto [The SSIS performance counter is no longer available in the Performance Monitor after you upgrade to Windows Server 2008](https://go.microsoft.com/fwlink/?LinkId=235319) (Mancata disponibilità del contatore delle prestazioni di SSIS in Performance Monitor dopo l'aggiornamento a Windows Server 2008) nel sito support.microsoft.com.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Esecuzione di progetti e pacchetti](../packages/run-integration-services-ssis-packages.md)  

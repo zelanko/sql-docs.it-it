@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/22/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - fixed port
@@ -18,12 +17,12 @@ ms.assetid: 2276a5ed-ae3f-4855-96d8-f5bf01890640
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d408c25216139a173dced0ae19f9ddea7d1ba4d5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 16249e9b9a1af56793d30cef48a9e1573f883c57
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48088071"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53371193"
 ---
 # <a name="configure-a-server-to-listen-on-a-specific-tcp-port-sql-server-configuration-manager"></a>Configurazione di un server per l'attesa su una porta TCP specifica (Gestione configurazione SQL Server)
   In questo argomento viene descritto come configurare un'istanza del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] per essere in ascolto su una porta fissa specifica tramite Gestione configurazione SQL Server. Se abilitata, l'istanza predefinita del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] rimane in attesa sulla porta TCP 1433. Le istanze denominate del [!INCLUDE[ssDE](../../includes/ssde-md.md)] e di [!INCLUDE[ssEW](../../includes/ssew-md.md)] sono configurate per porte dinamiche. Questo significa che selezionano una porta disponibile quando viene avviato il servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Quando ci si connette a un'istanza denominata tramite un firewall, configurare [!INCLUDE[ssDE](../../includes/ssde-md.md)] per l'ascolto su una porta specifica, in modo da consentire l'apertura della porta appropriata nel firewall.  
@@ -31,7 +30,7 @@ ms.locfileid: "48088071"
  Per altre informazioni sulle impostazioni predefinite di Windows Firewall e per una descrizione delle porte TCP che interessano il motore di database, Analysis Services, Reporting Services e Integration Services, vedere [Configurare Windows Firewall per consentire l'accesso a SQL Server](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md).  
   
 > [!TIP]  
->  Quando si seleziona un numero di porta, vedere la pagina [http://www.iana.org/assignments/port-numbers](http://www.iana.org/assignments/port-numbers) per un elenco di numeri di porta assegnati ad applicazioni specifiche. Selezionare un numero di porta non assegnato. Per altre informazioni, vedere la pagina relativa all' [intervallo di porte dinamiche predefinite per TCP/IP modificato in Windows Vista e in Windows Server 2008](http://support.microsoft.com/kb/929851).  
+>  Quando si seleziona un numero di porta, vedere la pagina [http://www.iana.org/assignments/port-numbers](http://www.iana.org/assignments/port-numbers) per un elenco di numeri di porta assegnati ad applicazioni specifiche. Selezionare un numero di porta non assegnato. Per altre informazioni, vedere la pagina relativa all' [intervallo di porte dinamiche predefinite per TCP/IP modificato in Windows Vista e in Windows Server 2008](https://support.microsoft.com/kb/929851).  
   
 > [!WARNING]  
 >  L'ascolto viene iniziato dal motore di database su una nuova porta al momento del riavvio. Tuttavia, tramite il servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser viene monitorato il Registro di sistema e viene segnalato il nuovo numero di porta appena la configurazione viene modificata, anche se non in uso da parte del motore di database. Riavviare il motore di database per garantire coerenza ed evitare errori di connessione.  

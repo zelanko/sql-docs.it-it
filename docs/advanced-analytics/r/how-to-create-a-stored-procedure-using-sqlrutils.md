@@ -1,5 +1,6 @@
 ---
-title: Come creare una stored procedure utilizzando sqlrutils | Documenti Microsoft
+title: Come creare una stored procedure con sqlrutils - servizi di SQL Server Machine Learning
+description: Per incorporare codice linguaggio R in una singola funzione che può essere passata come argomento a una stored procedure, utilizzare il pacchetto sqlrutils R in SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/15/2018
@@ -7,25 +8,25 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 82af827d95def976a04ac69073b58e1420cc9130
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: e347deb0a0f05da12a4281e77223a0492f04f13f
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31203703"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53432714"
 ---
-# <a name="create-a-stored-pprocedure-using-sqlrutils"></a>Creare una stored pProcedure utilizzando sqlrutils
+# <a name="create-a-stored-pprocedure-using-sqlrutils"></a>Creare una stored pProcedure con sqlrutils
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-In questo articolo vengono descritti i passaggi per la conversione del codice R per l'esecuzione di una stored procedure T-SQL archiviate. Per ottenere i migliori risultati possibili, può essere necessario modificare il codice per garantire che tutti gli input possano essere parametrizzati.
+Questo articolo descrive i passaggi per la conversione del codice R per l'esecuzione di una procedura T-SQL archiviate. Per ottenere i migliori risultati possibili, può essere necessario modificare il codice per garantire che tutti gli input possano essere parametrizzati.
 
 ## <a name="bkmk_rewrite"></a>Passaggio 1. Riscrivere lo Script R
 
-Per ottenere risultati ottimali, è necessario riscrivere il codice R per incapsularlo come una singola funzione.
+Per ottenere risultati ottimali, è necessario riscrivere il codice R per è preferibile incapsularla come una singola funzione.
 
-Tutte le variabili usate dalla funzione devono essere definite all'interno della funzione o devono essere definite come parametri di input. Vedere la [con codice di esempio](#samples) in questo articolo.
+Tutte le variabili usate dalla funzione devono essere definite all'interno della funzione, o devono essere definite come parametri di input. Vedere le [esempi di codice](#samples) in questo articolo.
 
-Inoltre, poiché i parametri di input per la funzione di R diventerà stored procedure di parametri di input dell'istruzione SQL, è necessario assicurarsi che l'input e output siano conformi ai requisiti del tipo seguente:
+Inoltre, poiché i parametri di input per la funzione R diventerà stored procedure di parametri di input di SQL, è necessario assicurarsi che l'input e output siano conformi ai requisiti del tipo seguente:
 
 ### <a name="inputs"></a>Input
 
@@ -33,7 +34,7 @@ Tra i parametri di input può esistere al massimo un frame di dati.
 
 Gli oggetti nel frame di dati e altri parametri di input della funzione devono essere dei tipi di dati R seguenti:
 - POSIXct
-- numeric
+- NUMERIC
 - character
 - integer
 - logical
@@ -51,9 +52,9 @@ La funzione può restituire uno degli elementi seguenti:
 
 ## <a name="step-2-generate-required-objects"></a>Passaggio 2. Generare oggetti necessari
 
-Dopo il codice R è stato pulito e può essere chiamato come una singola funzione, utilizzare le funzioni di **sqlrutils** pacchetto per preparare gli input e output in un formato che può essere passato al costruttore che crea il stored procedure.
+Dopo il codice R è stato pulito e può essere chiamato come una singola funzione, è necessario usare le funzioni nel **sqlrutils** pacchetto per preparare gli input e output in un formato che può essere passato al costruttore che crea il stored procedure.
 
-**sqlrutils** sono disponibili funzioni che definiscono lo schema di dati di input e un tipo, nonché definiscono lo schema di dati di output e tipo. Include inoltre funzioni che è possono convertire il tipo di output richiesto oggetti R. È possibile rendere più chiamate di funzione per creare gli oggetti necessari, a seconda dei tipi di dati che utilizza il codice.
+**sqlrutils** fornisce funzioni che definiscono lo schema di dati di input e il tipo e definiscono lo schema di dati di output e tipo. Include anche le funzioni in grado di convertire gli oggetti R per il tipo di output richiesto. È possibile apportare più chiamate di funzione per creare gli oggetti necessari, a seconda dei tipi di dati che nel codice viene utilizzata.
 
 ### <a name="inputs"></a>Input
 
@@ -62,64 +63,64 @@ Se la funzione accetta l'input, per ogni input, chiamare le funzioni seguenti:
 - `setInputData` Se l'input è un frame di dati
 - `setInputParameter` per tutti gli altri tipi di input
 
-Quando si esegue ogni funzione chiamata, viene creato un oggetto di R in un secondo momento si passerà come argomento di `StoredProcedure`, per creare la stored procedure completa.
+Quando si apportano ogni funzione chiamata, viene creato un oggetto R che passerà in un secondo momento come argomento a `StoredProcedure`, per creare la stored procedure completa.
 
 ### <a name="outputs"></a>Output
 
-**sqlrutils** fornisce più funzioni di conversione R oggetti quali elenchi di a data.frame richiesti da SQL Server.
+**sqlrutils** offre diverse funzioni per la conversione di R oggetti, ad esempio gli elenchi per il frame di dati necessari per SQL Server.
 Se la funzione restituisce un frame di dati direttamente, senza prima eseguirne il wrapping in un elenco, è possibile ignorare questo passaggio.
 È anche possibile ignorare la conversione in questo passaggio se la funzione restituisce NULL.
 
-Quando la conversione di un elenco o per ottenere un determinato elemento da un elenco, scegliere tra queste funzioni:
+Quando la conversione di un elenco o recupero di un particolare elemento da un elenco, scegliere tra queste funzioni:
 
 - `setOutputData` Se la variabile per ottenere l'elenco è un frame di dati
 - `setOutputParameter` per tutti gli altri membri dell'elenco
 
-Quando si esegue ogni funzione chiamata, viene creato un oggetto di R in un secondo momento si passerà come argomento di `StoredProcedure`, per creare la stored procedure completa.
+Quando si apportano ogni funzione chiamata, viene creato un oggetto R che passerà in un secondo momento come argomento a `StoredProcedure`, per creare la stored procedure completa.
 
 ## <a name="step-3-generate-the-stored-procedure"></a>Passaggio 3. Generare la Stored Procedure
 
 Quando tutti i parametri di input e outpui sono pronti, effettuare una chiamata al `StoredProcedure` costruttore.
 
-**Utilizzo**
+**Usage**
 
 `StoredProcedure (func, spName, ..., filePath = NULL ,dbName = NULL, connectionString = NULL, batchSeparator = "GO")`
 
-Per illustrare questo concetto, si supponga di voler creare una stored procedure denominata **sp_rsample** con i seguenti parametri:
+Per illustrare questo concetto, si supponga di voler creare una stored procedure denominata **sp_rsample** con questi parametri:
 
-- Utilizza una funzione esistente **foosql**. La funzione è stata basata sul codice esistente nella funzione R **foo**, ma è stato riscritto la funzione in modo conforme ai requisiti come descritto in [in questa sezione](#bkmk_rewrite)e la funzione aggiornata come denominato  **foosql**.
+- Usa una funzione esistente **foosql**. La funzione è stata basata sul codice esistente nella funzione R **foo**, ma si ha riscritto la funzione in modo conforme ai requisiti come descritto in [in questa sezione](#bkmk_rewrite)e la funzione di aggiornamento denominato  **foosql**.
 - Usa il frame di dati **queryinput** come input
 - Genera come output un frame di dati con il nome di variabile R **sqloutput**
-- Per creare il codice T-SQL come file in cui si desidera il `C:\Temp` cartella, in modo che sia possibile eseguire utilizzando SQL Server Management Studio in un secondo momento
+- Si vuole creare il codice T-SQL come file nei `C:\Temp` cartella, in modo che sia possibile eseguire usando SQL Server Management Studio in un secondo momento
 
 ```R
 StoredProcedure (foosql, sp_rsample, queryinput, sqloutput, filePath = "C:\\Temp")
 ```
 
 > [!NOTE]
-> Poiché si sta creando il file nel file System, è possibile omettere gli argomenti che definiscono la connessione al database.
+> Poiché si sta scrivendo il file nel file System, è possibile omettere gli argomenti che definiscono la connessione al database.
 
-L'output della funzione è una T-stored procedure SQL che può essere eseguita in un'istanza di SQL Server 2016 (richiede R Services) o SQL Server 2017 (richiede servizi di Machine Learning con R). 
+L'output della funzione è una procedura T-SQL archiviate che può essere eseguita in un'istanza di SQL Server 2016 (richiede R Services) o SQL Server 2017 (richiede servizi di Machine Learning con R). 
 
-Per ulteriori esempi, vedere la Guida di pacchetto, chiamando `help(StoredProcedure)` da un ambiente di R.
+Per altri esempi, vedere la Guida del pacchetto, chiamando `help(StoredProcedure)` da un ambiente R.
 
 ## <a name="step-4-register-and-run-the-stored-procedure"></a>Passaggio 4. Registrare ed eseguire la Stored Procedure
 
 Esistono due modi, che è possibile eseguire la stored procedure:
 
-- Utilizzando T-SQL, da qualsiasi client che supporta le connessioni all'istanza di SQL Server 2016 o 2017 di SQL Server
-- Da un ambiente di R
+- Tramite T-SQL, da qualsiasi client che supporta le connessioni all'istanza di SQL Server 2016 o SQL Server 2017
+- Da un ambiente R
 
-Entrambi i metodi richiedono che sia stata registrata la stored procedure nel database in cui si intende utilizzare la stored procedure.
+Entrambi i metodi richiedono che la stored procedure deve essere registrato nel database in cui si prevede di usare la stored procedure.
 
 ### <a name="register-the-stored-procedure"></a>Registrare la stored procedure
 
-È possibile registrare la stored procedure con R oppure è possibile eseguire l'istruzione CREATE PROCEDURE in T-SQL.
+È possibile registrare la stored procedure con R, oppure è possibile eseguire l'istruzione CREATE PROCEDURE in T-SQL.
 
-- Utilizzo di T-SQL.  Se si preferiscono con T-SQL, aprire SQl Server Management Studio (o qualsiasi altro client che è possibile eseguire comandi SQL DDL) ed eseguire l'istruzione CREATE PROCEDURE utilizzando il codice preparato la `StoredProcedure` (funzione).
-- Con R. Mentre si è ancora R nell'ambiente in uso, è possibile utilizzare il `registerStoredProcedure` funzionare in **sqlrutils** per registrare la stored procedure con il database.
+- Usando T-SQL.  Se si è più a proprio agio con T-SQL, aprire SQl Server Management Studio (o qualsiasi altro client che è possibile eseguire i comandi SQL DDL) ed eseguire l'istruzione CREATE PROCEDURE utilizzando il codice preparato dal `StoredProcedure` (funzione).
+- Usando R. Mentre si è ancora nell'ambiente R, è possibile usare il `registerStoredProcedure` funzionare **sqlrutils** per registrare la stored procedure con il database.
 
-  Ad esempio, è possibile registrare la stored procedure **sp_rsample** nell'istanza di database definiti in *sqlConnStr*, eseguendo questa chiamata R:
+  Ad esempio, è possibile registrare la stored procedure **sp_rsample** nell'istanza e al database definito nella *sqlConnStr*, con la chiamata R:
 
   ```R
   registerStoredProcedure(sp_rsample, sqlConnStr)
@@ -127,17 +128,17 @@ Entrambi i metodi richiedono che sia stata registrata la stored procedure nel da
 
 
 > [!IMPORTANT]
-> Sia che si utilizzi R o SQL, è necessario eseguire l'istruzione utilizzando un account che dispone delle autorizzazioni per creare nuovi oggetti di database.
+> Indipendentemente dal fatto che si usa R o SQL, è necessario eseguire l'istruzione utilizzando un account che disponga delle autorizzazioni per creare nuovi oggetti di database.
 
-### <a name="run-using-sql"></a>Eseguire l'utilizzo di SQL
+### <a name="run-using-sql"></a>Esecuzione con SQL
 
-Dopo aver creata la stored procedure, aprire una connessione al database SQL utilizzando qualsiasi client che supporta T-SQL e passare i valori per i parametri richiesti dalla stored procedure.
+Dopo aver creata la stored procedure, aprire una connessione al database SQL usando qualsiasi client che supporta T-SQL e passare i valori per i parametri richiesti dalla stored procedure.
 
-### <a name="run-using-r"></a>Eseguire l'uso di R
+### <a name="run-using-r"></a>Esegui con R
 
-Alcune attività di preparazione aggiuntivi è necessaria se si desidera eseguire la stored procedure dal codice R, anziché da SQL Server. Ad esempio, se la stored procedure richiede valori di input, è necessario impostare i parametri di input prima che la funzione può essere eseguita e quindi passa tali oggetti per la stored procedure nel codice R.
+Alcune attività di preparazione aggiuntivi è necessaria se si desidera eseguire la stored procedure dal codice R, piuttosto che da SQL Server. Ad esempio, se la stored procedure richiede i valori di input, è necessario impostare i parametri di input prima che la funzione può essere eseguita e quindi passa tali oggetti per la stored procedure nel codice R.
 
-Il processo generale di chiamata di preparata stored procedure SQL è il seguente:
+Il processo complessivo di chiamata preparata stored procedure SQL è come segue:
 
 1. Chiamare `getInputParameters` per ottenere un elenco di oggetti parametro di input.
 2. Definire `$query` o impostare `$value` per ogni parametro di input.
@@ -145,9 +146,9 @@ Il processo generale di chiamata di preparata stored procedure SQL è il seguent
 
 ## <a name = "samples"></a>Esempio
 
-Questo esempio mostra la prima e dopo le versioni di uno script R che ottiene dati da un database di SQL Server, esegue alcune trasformazioni dei dati di e viene salvato in un database diverso.
+Questo esempio mostra la prima e dopo le versioni di uno script R che ottiene dati da un database di SQL Server, esegue alcune trasformazioni sui dati e lo salva in un database diverso.
 
-Questo semplice esempio viene utilizzato solo per illustrare come è possibile riorganizzare codice R per rendere più semplice convertire una stored procedure.
+Questo semplice esempio viene usato solo per illustrare come è possibile riordinare il codice R per renderne più semplice convertire in una stored procedure.
 
 ### <a name="before-code-preparation"></a>Prima della preparazione di codice
 
@@ -187,12 +188,12 @@ rxDataStep(inData = dsSqlFrom,
 
 > [!NOTE]
 > 
-> Quando si utilizza una connessione ODBC invece di richiamare il *RxSqlServerData* funzione, è necessario aprire la connessione mediante *rxOpen* prima di eseguire le operazioni nel database.
+> Quando si usa una connessione ODBC anziché richiamare il *RxSqlServerData* funzione, è necessario aprire la connessione usando *rxOpen* prima di poter eseguire le operazioni nel database.
 
 
-### <a name="after-code-preparation"></a>Dopo la preparazione di codice
+### <a name="after-code-preparation"></a>Dopo la preparazione del codice
 
-Nella versione aggiornata, la prima riga definisce il nome della funzione. Tutto l'altro codice dalla soluzione R originale diventa una parte di tale funzione.
+Nella versione aggiornata, la prima riga definisce il nome della funzione. Tutto l'altro codice dalla soluzione R originale diventa parte di tale funzione.
 
 ```R
 myetl1function <- function() { 
@@ -230,6 +231,6 @@ myetl1function <- function() {
 
 ## <a name="see-also"></a>Vedere anche
 
-[Generating a Stored Procedure using sqlrutils](../../advanced-analytics/r-services/generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package.md)
+[sqlrutils (SQL)](ref-r-sqlrutils.md)
 
 

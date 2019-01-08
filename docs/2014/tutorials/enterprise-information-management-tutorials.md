@@ -13,12 +13,12 @@ ms.assetid: 8745dc80-193d-4de0-9f17-ba648ab1e81c
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fbbf4bc264e9dbff37c6dd06ceb1c6f4063e6c2a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9e40202ef0230fbbdddd1c596e5dc41b4d44a0fe
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48176381"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53373993"
 ---
 # <a name="enterprise-information-management-tutorials"></a>Esercitazioni sulla gestione di informazioni aziendali
   In questa sezione sono contenute esercitazioni per gestire le informazioni in un'organizzazione utilizzando le tecnologie di gestione di informazioni aziendali (EIM, Enterprise Information Management) disponibili in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]. La tecnologia EIM offre soluzioni che consentono alle organizzazioni di considerare attendibili la credibilità e la coerenza dei dati in modo che possano prendere decisioni aziendali critiche. In [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] sono disponibili le seguenti tecnologie che consentono l'implementazione di soluzioni EIM nell'organizzazione.  
@@ -33,6 +33,6 @@ ms.locfileid: "48176381"
  In questa esercitazione viene illustrato come utilizzare insieme SSIS, MDS e DQS per implementare una soluzione EIM di esempio. Innanzitutto, DQS viene utilizzato per creare una Knowledge Base con le informazioni sui dati fornitore (metadati), per pulire i dati in un file di Excel rispetto alla Knowledge Base e per far corrispondere i dati in modo da identificare e rimuovere i relativi duplicati. Successivamente, viene utilizzato il componente aggiuntivo MDS per Excel per caricare i dati puliti e corrispondenti in MDS. Infine, l'intero processo viene automatizzato mediante una soluzione SSIS.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Gestione delle informazioni aziendali-Microsoft SQL Server](http://go.microsoft.com/fwlink/?LinkId=270871)  
+ [Gestione delle informazioni aziendali - Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkId=270871)  
   
   

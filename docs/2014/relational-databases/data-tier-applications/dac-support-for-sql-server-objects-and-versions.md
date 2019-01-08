@@ -13,12 +13,12 @@ ms.assetid: b1b78ded-16c0-4d69-8657-ec57925e68fd
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 24c2184d01c52222dae0bad6bb05ddd7979dbac5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2c3cda314aacc2cc1f589fc762a21be411e16016
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48209387"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53361913"
 ---
 # <a name="dac-support-for-sql-server-objects-and-versions"></a>Supporto dell'applicazione livello dati per oggetti e versioni di SQL Server
   Un'applicazione livello dati (DAC) supporta gli oggetti del [!INCLUDE[ssDE](../../includes/ssde-md.md)] più comunemente utilizzati.  
@@ -38,20 +38,20 @@ ms.locfileid: "48209387"
   
 |||  
 |-|-|  
-|RUOLO DEL DATABASE|FUNZIONE: inline con valori di tabella|  
-|FUNZIONE: con valori di tabella e istruzioni multiple.|FUNZIONE: scalare|  
-|INDICE: cluster|INDICE: non cluster|  
-|INDICE: spaziale|INDICE: univoco|  
-|LOGIN|Permissions|  
+|RUOLO DEL DATABASE|FUNZIONE: Con valori di tabella inline|  
+|FUNZIONE: Con istruzioni multiple con valori di tabella|FUNZIONE: Scalare|  
+|INDICE: Cluster|INDICE: Non cluster|  
+|INDICE: Spaziale|INDICE: Univoco|  
+|Account di accesso|Permissions|  
 |Appartenenze a ruoli|SCHEMA|  
 |Statistiche|STORED PROCEDURE: Transact-SQL|  
-|Sinonimi|TABELLA: vincolo CHECK|  
-|TABELLA: regole di confronto|TABELLA: colonna, incluse le colonne calcolate|  
-|TABELLA: vincolo DEFAULT|TABELLA: vincoli FOREIGN KEY|  
-|TABELLA: vincoli, indice|TABELLA: vincolo PRIMARY KEY|  
-|TABELLA: vincolo UNIQUE|TRIGGER: DML|  
-|TIPO: HIERARCHYID, GEOMETRY, GEOGRAPHY|TIPO: tipo di dati definito dall'utente|  
-|TIPO: tipo di tabella definito dall'utente|USER|  
+|Sinonimi|TAVOLO: Vincolo CHECK|  
+|TAVOLO: Confronto|TAVOLO: Colonna, includendo le colonne calcolate|  
+|TAVOLO: Vincolo Default|TAVOLO: Vincoli Foreign Key|  
+|TAVOLO: Vincoli, indice|TAVOLO: Vincolo Primary Key|  
+|TAVOLO: Vincolo Unique|TRIGGER: DML|  
+|TIPO: HIERARCHYID, GEOMETRY, GEOGRAPHY|TIPO: Tipo di dati definito dall'utente|  
+|TIPO: Tipo di tabella definito dall'utente|Utente|  
 |VIEW||  
   
 ##  <a name="SupportByVersion"></a> Supporto dell'applicazione livello dati con le versioni di SQL Server  
@@ -82,38 +82,38 @@ ms.locfileid: "48209387"
 ##  <a name="DeploymentLimitations"></a> Limitazioni sulla distribuzione dei dati  
  Si notino le seguenti limitazioni di fedeltà nel motore di distribuzione dati di DAC Framework in SQL Server 2012 SP1. Le limitazioni si applicano alle azioni di DAC Framework seguenti: distribuzione o pubblicazione di un file con estensione dacpac e importazione di un file con estensione bacpac.  
   
-1.  Perdita di metadati in determinate situazioni e per alcuni tipi di base nelle colonne sql_variant. Nei casi interessati, verrà visualizzato un avviso con il messaggio seguente:  **Determinate proprietà in tipi di dati specifici utilizzati in una colonna sql_variant non vengono mantenute se distribuite mediante DAC Framework**.  
+1.  Perdita di metadati in determinate situazioni e per alcuni tipi di base nelle colonne sql_variant. Nei casi interessati, verrà visualizzato un avviso con il messaggio seguente:  **Determinate proprietà in determinati tipi di dati utilizzati in una colonna sql_variant non vengono mantenute se distribuite mediante DAC Framework.**  
   
-    -   Tipi di base MONEY, SMALLMONEY, NUMERIC, DECIMAL: la precisione non viene mantenuta.  
+    -   MONEY, SMALLMONEY, NUMERIC, DECIMAL tipi di base:  Precisione non viene mantenuta.  
   
         -   Tipi di base DECIMAL/NUMERIC con precisione 38: i metadati sql_variant "TotalBytes" sono sempre impostati su 21.  
   
-    -   Tutti i tipi di base di testo: le regole di confronto predefinite del database vengono applicate a tutto il testo.  
+    -   Tutti i tipi di base di testo:  Regole di confronto predefinite del database viene applicata per tutto il testo.  
   
-    -   Tipi di base BINARY: la proprietà Max Length non viene mantenuta.  
+    -   Tipi di base BINARY:  Proprietà max length non viene mantenuto.  
   
-    -   Tipi di base TIME, DATETIMEOFFSET: la precisione è sempre impostata su 7.  
+    -   ORA, tipi di base di DATETIMEOFFSET:  La precisione è sempre impostata su 7.  
   
-2.  Perdita di dati nelle colonne sql_variant. Nel caso interessato, verrà visualizzato un avviso con il messaggio seguente: **La distribuzione di un valore in una colonna sql_variant DATETIME2 con scala maggiore di 3 da parte di DAC Framework comporta la perdita di dati. Durante la distribuzione, il valore DATETIME2 è limitato a una scala uguale a 3.**  
+2.  Perdita di dati nelle colonne sql_variant. Nel caso interessato, verrà visualizzato un avviso con il messaggio seguente:  **Vi sarà perdita di dati quando viene distribuito un valore in una colonna sql_variant DATETIME2 con scala maggiore di 3 da DAC Framework. Durante la distribuzione, il valore DATETIME2 è limitato a una scala uguale a 3.**  
   
     -   Tipo di base DATETIME2 con scala maggiore di 3: la scala è limitata a uguale a 3.  
   
-3.  L'operazione di distribuzione non viene completata per le condizioni seguenti nelle colonne sql_variant. Nei casi interessati, verrà visualizzata una finestra di dialogo con il messaggio seguente:  **Operazione non riuscita a causa di limitazioni dei dati in DAC Framework**.  
+3.  L'operazione di distribuzione non viene completata per le condizioni seguenti nelle colonne sql_variant. Nei casi interessati, verrà visualizzata una finestra di dialogo con messaggio analogo al seguente:  **Operazione non riuscita a causa di limitazioni dei dati in DAC Framework.**  
   
-    -   Tipi di base DATETIME2, SMALLDATETIME e DATE: se il valore non è compreso nell'intervallo DATETIME, ad esempio, l'anno è inferiore al 1753.  
+    -   Tipi di base datetime2, SMALLDATETIME e DATE:  Se il valore è compreso nell'intervallo DATETIME, ad esempio, l'anno è inferiore al 1753.  
   
     -   Tipo di base DECIMAL, NUMERIC: quando la precisione del valore è maggiore di 28.  
   
 ##  <a name="Considerations"></a> Considerazioni aggiuntive per le azioni di distribuzione  
  Si tengano presenti le considerazioni seguenti per le azioni di distribuzione dati di DAC Framework:  
   
--   **Estrazione/Esportazione** : queste limitazioni non sono applicabili alle azioni che usano DAC Framework per creare un pacchetto da un database, ad esempio l'estrazione di un file con estensione dacpac e l'esportazione di un file con estensione bacpac. I dati del pacchetto sono una rappresentazione totalmente fedele dei dati nel database di origine. Se una di queste condizioni è presente nel pacchetto, nel registro di estrazione/esportazione sarà contenuto un riepilogo dei problemi tramite i messaggi indicati in precedenza. In questo modo, l'utente verrà avvisato di potenziali problemi di distribuzione dati con il pacchetto creato. Inoltre, visualizzerà il seguente messaggio di riepilogo contenuto nel registro: **Queste limitazioni non influiscono sulla fedeltà dei valori e tipi di dati archiviati nel pacchetto di applicazione livello dati (DAC) creato da DAC Framework. Le limitazioni sono applicabili unicamente ai valori e tipi di dati derivanti dalla distribuzione di un pacchetto di applicazione livello dati (DAC) in un database. Per altre informazioni sui dati interessati e su come risolvere questa limitazione, vedere** [in questo argomento](http://go.microsoft.com/fwlink/?LinkId=267086).  
+-   **Estrazione/Esportazione**: queste limitazioni non sono applicabili alle azioni che usano DAC Framework per creare un pacchetto da un database, ad esempio l'estrazione di un file con estensione dacpac e l'esportazione di un file con estensione bacpac. I dati del pacchetto sono una rappresentazione totalmente fedele dei dati nel database di origine. Se una di queste condizioni è presente nel pacchetto, nel registro di estrazione/esportazione sarà contenuto un riepilogo dei problemi tramite i messaggi indicati in precedenza. In questo modo, l'utente verrà avvisato di potenziali problemi di distribuzione dati con il pacchetto creato. L'utente visualizzerà anche il messaggio di riepilogo seguente nel log:  **Queste limitazioni non influiscono sulla fedeltà dei tipi di dati e i valori archiviati nel pacchetto di applicazione livello dati creato da DAC Framework; sono applicabili unicamente ai tipi di dati e i valori risultanti dalla distribuzione di un pacchetto di applicazione livello dati in un database. Per altre informazioni sui dati interessati e su come risolvere questa limitazione, vedere** [in questo argomento](https://go.microsoft.com/fwlink/?LinkId=267086).  
   
 -   **Distribuzione/Pubblicazione/Importazione** : queste limitazioni si applicano alle azioni che usano DAC Framework per distribuire un pacchetto in un database, ad esempio la distribuzione o pubblicazione di un file con estensione dacpac e l'importazione di un file con estensione bacpac. I dati presenti nel database di destinazione potrebbero non rappresentare in modo totalmente fedele quelli del pacchetto. Nel registro di distribuzione/importazione sarà contenuto un messaggio, indicato in precedenza, per ogni situazione in cui si è verificato il problema. L'operazione verrà bloccata da errori (vedere la categoria 3 precedente), ma continuerà con gli altri avvisi.  
   
-     Per altre informazioni sui dati interessati in questo scenario e su come risolvere questa limitazione per le azioni di distribuzione/pubblicazione/importazione, vedere [questo argomento](http://go.microsoft.com/fwlink/?LinkId=267087).  
+     Per altre informazioni sui dati interessati in questo scenario e su come risolvere questa limitazione per le azioni di distribuzione/pubblicazione/importazione, vedere [questo argomento](https://go.microsoft.com/fwlink/?LinkId=267087).  
   
--   **Soluzioni alternative** : le operazioni di estrazione ed esportazione comporteranno la scrittura di file di dati BCP totalmente fedeli nei file con estensione bacpac o dacpac. Per evitare limitazioni, utilizzare l'utilità della riga di comando BCP.exe di SQL Server per distribuire dati totalmente fedeli in un database di destinazione da un pacchetto di applicazione livello dati.  
+-   **Soluzioni alternative**: le operazioni di estrazione ed esportazione comporteranno la scrittura di file di dati BCP totalmente fedeli nei file con estensione bacpac o dacpac. Per evitare limitazioni, utilizzare l'utilità della riga di comando BCP.exe di SQL Server per distribuire dati totalmente fedeli in un database di destinazione da un pacchetto di applicazione livello dati.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Applicazioni livello dati](data-tier-applications.md)  

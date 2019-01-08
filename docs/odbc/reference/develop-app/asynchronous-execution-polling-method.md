@@ -13,12 +13,12 @@ ms.assetid: 8cd21734-ef8e-4066-afd5-1f340e213f9c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3200f4c83511f176c4d23af34f398a76047fe9a7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8ca0a5094e40f13aef4b4f87d5642e51e7a9b765
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47701085"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52523439"
 ---
 # <a name="asynchronous-execution-polling-method"></a>Esecuzione asincrona (metodo di polling)
 Prima di ODBC 3.8 e Windows 7 SDK, operazioni asincrone sono state consentite solo per le funzioni di istruzione. Per altre informazioni, vedere la **l'esecuzione di istruzione operazioni in modo asincrono**, più avanti in questo argomento.  
@@ -135,9 +135,9 @@ while ((rc = SQLExecDirect(hstmt1, SQLStatement, SQL_NTS)) == SQL_STILL_EXECUTIN
 }  
 ```  
   
- Quando un'applicazione chiama una funzione per determinare se è ancora in esecuzione in modo asincrono, deve usare l'handle di istruzione originale. Questo avviene perché l'esecuzione asincrona viene tenuta traccia in base a una singola istruzione. L'applicazione deve anche fornire i valori validi per gli altri argomenti, ovvero eseguiranno gli argomenti originali, ovvero per superare errori in Gestione Driver. Tuttavia, dopo che il driver controlla l'handle di istruzione e determina che l'istruzione viene eseguita in modo asincrono, ignora tutti gli altri argomenti.  
+ Quando un'applicazione chiama una funzione per determinare se è ancora in esecuzione in modo asincrono, deve usare l'handle di istruzione originale. Questo avviene perché l'esecuzione asincrona viene tenuta traccia in base a una singola istruzione. L'applicazione deve anche fornire i valori validi per gli altri argomenti - degli argomenti originali dovrà svolgere - per superare errori in Gestione Driver. Tuttavia, dopo che il driver controlla l'handle di istruzione e determina che l'istruzione viene eseguita in modo asincrono, ignora tutti gli altri argomenti.  
   
- Durante l'esecuzione di una funzione in modo asincrono, vale a dire, dopo che ha restituito SQL_STILL_EXECUTING e prima restituisce un codice diverso, ovvero l'applicazione può annullare l'operazione chiamando **SQLCancel** o **SQLCancelHandle** con lo stesso handle di istruzione. Non è garantita per annullare l'esecuzione della funzione. Ad esempio, la funzione potrebbe essere già stato completato. Inoltre, il codice restituito da **SQLCancel** oppure **SQLCancelHandle** indica solo se il tentativo di annullare la funzione ha avuto esito positivo, non se è effettivamente annullata la funzione. Per determinare se la funzione è stata annullata, l'applicazione chiama la funzione nuovamente. Se la funzione è stata annullata, viene restituito SQL_ERROR e SQLSTATE HY008 (operazione annullata). Se la funzione non è stata annullata, viene restituito un altro codice, come SQL_SUCCESS, SQL_STILL_EXECUTING o SQL_ERROR con SQLSTATE un diverso.  
+ Durante l'esecuzione di una funzione in modo asincrono, vale a dire, dopo che ha restituito SQL_STILL_EXECUTING e prima che venga restituito un codice diverso - l'applicazione possibile annullarlo chiamando **SQLCancel** o **SQLCancelHandle** con lo stesso handle di istruzione. Non è garantita per annullare l'esecuzione della funzione. Ad esempio, la funzione potrebbe essere già stato completato. Inoltre, il codice restituito da **SQLCancel** oppure **SQLCancelHandle** indica solo se il tentativo di annullare la funzione ha avuto esito positivo, non se è effettivamente annullata la funzione. Per determinare se la funzione è stata annullata, l'applicazione chiama la funzione nuovamente. Se la funzione è stata annullata, viene restituito SQL_ERROR e SQLSTATE HY008 (operazione annullata). Se la funzione non è stata annullata, viene restituito un altro codice, come SQL_SUCCESS, SQL_STILL_EXECUTING o SQL_ERROR con SQLSTATE un diverso.  
   
  Per disabilitare l'esecuzione asincrona di una particolare istruzione quando il driver supporta l'elaborazione asincrona a livello di istruzione, l'applicazione chiama **SQLSetStmtAttr** con il SQL_ATTR_ASYNC_ENABLE attributo e lo imposta su SQL _ ASYNC_ENABLE_OFF. Se il driver supporta l'elaborazione asincrona a livello di connessione, l'applicazione chiama **SQLSetConnectAttr** per impostare SQL_ATTR_ASYNC_ENABLE su SQL_ASYNC_ENABLE_OFF, che disabilita l'esecuzione asincrona di tutte le istruzioni di connessione.  
   
@@ -212,10 +212,10 @@ while ((rc = SQLExecDirect(hstmt1, SQLStatement, SQL_NTS)) == SQL_STILL_EXECUTIN
   
 ## <a name="example"></a>Esempio  
   
-### <a name="description"></a>Description  
+### <a name="description"></a>Descrizione  
  Nell'esempio seguente viene illustrato come utilizzare **SQLSetConnectAttr** per consentire l'esecuzione asincrona per le funzioni correlate alla connessione.  
   
-### <a name="code"></a>codice  
+### <a name="code"></a>Codice  
   
 ```  
 BOOL AsyncConnect (SQLHANDLE hdbc)   
@@ -266,10 +266,10 @@ BOOL AsyncConnect (SQLHANDLE hdbc)
   
 ## <a name="example"></a>Esempio  
   
-### <a name="description"></a>Description  
+### <a name="description"></a>Descrizione  
  In questo esempio vengono illustrate operazioni di commit asincrono. Operazioni di rollback possono essere eseguite anche in questo modo.  
   
-### <a name="code"></a>codice  
+### <a name="code"></a>Codice  
   
 ```  
 BOOL AsyncCommit ()   

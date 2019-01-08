@@ -14,17 +14,17 @@ ms.assetid: b7b97d68-4336-4091-aee4-1941fab568e3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: be5092eef0cab7d4f9681df91c933c94291dc4bc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 70f595643870548c8952070338cd5318eed1045b
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48093771"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53363057"
 ---
 # <a name="format-files-for-importing-or-exporting-data-sql-server"></a>File di formato per l'importazione o l'esportazione di dati (SQL Server)
   Quando si importando dati in blocco in una tabella di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o si esportano dati in blocco da una tabella, è possibile usare un *file di formato* per archiviare le informazioni sul formato necessarie all'esportazione o all'importazione in blocco dei dati. Sono incluse informazioni sul formato per ogni campo in un file di dati relativo a quella tabella.  
   
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] supporta due tipi di file di formato: file di formato XML e file di formato non XML. In entrambi i tipi di file di formato XML e non XML sono contenute descrizioni di ogni campo in un file di dati; nei file di formato XML sono inoltre presenti descrizioni delle colonne della tabella corrispondente. In generale, i file di formato XML e non XML sono intercambiabili. È tuttavia consigliabile utilizzare la sintassi XML per i nuovi file di formato, in quanto questo tipo di file offre numerosi vantaggi rispetto ai file di formato non XML. Per altre informazioni, vedere [File in formato XML &#40;SQL Server&#41;](xml-format-files-sql-server.md).  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] supporta due tipi di file di formato: Formati XML e i file di formato non XML. In entrambi i tipi di file di formato XML e non XML sono contenute descrizioni di ogni campo in un file di dati; nei file di formato XML sono inoltre presenti descrizioni delle colonne della tabella corrispondente. In generale, i file di formato XML e non XML sono intercambiabili. È tuttavia consigliabile utilizzare la sintassi XML per i nuovi file di formato, in quanto questo tipo di file offre numerosi vantaggi rispetto ai file di formato non XML. Per altre informazioni, vedere [File in formato XML &#40;SQL Server&#41;](xml-format-files-sql-server.md).  
   
  
   
@@ -57,7 +57,7 @@ The contents of this format file are as follows: 9.0
   
  
   
-### <a name="b-using-an-xml-format-file"></a>B. Utilizzo di un file di formato XML  
+### <a name="b-using-an-xml-format-file"></a>b. Utilizzo di un file di formato XML  
  Il seguente file di formato XML utilizza il formato nativo di dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per la tabella `HumanResources.myTeam` . Questo file di formato è stato creato utilizzando il comando `bcp` seguente.  
   
 ```  
@@ -68,7 +68,7 @@ bcp AdventureWorks.HumanResources.myTeam format nul -f myTeam.Xml -x -n -T
   
 ```  
  <?xml version="1.0"?>  
-<BCPFORMAT xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
+<BCPFORMAT xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
  <RECORD>  
   <FIELD ID="1" xsi:type="NativePrefix" LENGTH="1"/>  
   <FIELD ID="2" xsi:type="NCharPrefix" PREFIX_LENGTH="2" MAX_LENGTH="100" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>  
@@ -122,7 +122,7 @@ bcp AdventureWorks.HumanResources.myTeam format nul -f myTeam.Xml -x -n -T
   
 -   [Utilizzo di un file di formato per ignorare una colonna di una tabella &#40;SQL Server&#41;](use-a-format-file-to-skip-a-table-column-sql-server.md)  
   
--   [Usare un file di formato per escludere un campo di dati &#40;SQL Server&#41;](use-a-format-file-to-skip-a-data-field-sql-server.md)  
+-   [Utilizzo di un file di formato per escludere un campo di dati &#40;SQL Server&#41;](use-a-format-file-to-skip-a-data-field-sql-server.md)  
   
 -   [Utilizzo di un file di formato per eseguire il mapping tra le colonne della tabella e i campi del file di dati &#40;SQL Server&#41;](use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)  
   

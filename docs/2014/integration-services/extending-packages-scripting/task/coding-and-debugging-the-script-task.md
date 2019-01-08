@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- integration-services
+ms.technology: integration-services
 ms.topic: reference
 dev_langs:
 - VB
@@ -23,12 +21,12 @@ ms.assetid: 687c262f-fcab-42e8-92ae-e956f3d92d69
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9cc28e7645732d46bd9cf62eba049fbc7dd48ad7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4a84154aa1ea11ea432db46ad5b2a04c76dd6230
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48215271"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53372909"
 ---
 # <a name="coding-and-debugging-the-script-task"></a>Scrittura di codice e debug dell'attività Script
   Dopo avere configurato l'attività Script in **Editor attività Script**, scrivere il codice personalizzato nell'ambiente di sviluppo corrispondente.  
@@ -224,7 +222,7 @@ To open Help, press F1.
   
  La classe <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel> contiene anche alcuni membri pubblici che probabilmente non verranno utilizzati.  
   
-|Membro|Description|  
+|Membro|Descrizione|  
 |------------|-----------------|  
 |<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.VariableDispenser%2A>|La proprietà <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Variables%2A> fornisce un accesso più semplice alle variabili. Anche se è possibile utilizzare <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.VariableDispenser%2A>, è necessario chiamare in modo esplicito i metodi per bloccare e sbloccare le variabili per la lettura e la scrittura. L'attività Script gestisce automaticamente la semantica di blocco quando si utilizza la proprietà <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Variables%2A>.|  
   
@@ -245,9 +243,9 @@ To open Help, press F1.
   
 ## <a name="external-resources"></a>Risorse esterne  
   
--   Intervento del blog, [VSTA setup and configuration troubles for SSIS 2008 and R2 installations](http://go.microsoft.com/fwlink/?LinkId=215661) (Problemi di installazione e configurazione di VSTA per le installazioni SSIS 2008 e R2), in blogs.msdn.com.  
+-   Intervento del blog, [VSTA setup and configuration troubles for SSIS 2008 and R2 installations](https://go.microsoft.com/fwlink/?LinkId=215661) (Problemi di installazione e configurazione di VSTA per le installazioni SSIS 2008 e R2), in blogs.msdn.com.  
   
-![Icona di Integration Services (piccola)](../../media/dts-16.gif "icona di Integration Services (piccola)")**rimangono fino a Date con Integration Services** <br /> Per il download più recenti, articoli, esempi e i video [!INCLUDE[msCoName](../../../includes/msconame-md.md)], nonché soluzioni selezionate dalla community, visitare il [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] pagina su MSDN:<br /><br /> [Visita la pagina di Integration Services su MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Per ricevere una notifica automatica su questi aggiornamenti, sottoscrivere i feed RSS disponibili nella pagina.  
+![Icona di Integration Services (piccola)](../../media/dts-16.gif "icona di Integration Services (piccola)")**rimangono fino a Date con Integration Services**<br /> Per i download, gli articoli, gli esempi e i video [!INCLUDE[msCoName](../../../includes/msconame-md.md)] più recenti, oltre alle soluzioni selezionate dalla community, visitare la pagina [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] su MSDN:<br /><br /> [Visita la pagina di Integration Services su MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Per ricevere una notifica automatica su questi aggiornamenti, sottoscrivere i feed RSS disponibili nella pagina.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Riferimenti ad altri assembly nelle soluzioni di scripting](../referencing-other-assemblies-in-scripting-solutions.md)   

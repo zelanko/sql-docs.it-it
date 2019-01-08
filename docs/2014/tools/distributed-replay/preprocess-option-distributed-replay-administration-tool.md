@@ -4,18 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: tools-other
 ms.topic: conceptual
 ms.assetid: 9b5012fd-233e-4a25-a2e1-585c63b70502
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 28e4f41d6f11381fcb6fcdf82f708d185a293120
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6f5f4492dc18a93ab1fea9d34287eb90703bc3d5
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48174611"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52792803"
 ---
 # <a name="preprocess-option-distributed-replay-administration-tool"></a>Opzione preprocess (strumento di amministrazione Distributed Replay)
   Il [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] strumento di amministrazione riesecuzione distribuita `DReplay.exe`, è uno strumento da riga di comando che è possibile usare per comunicare con distributed replay controller. Questo argomento descrive l'opzione della riga di comando **preprocess** e la sintassi corrispondente.  
@@ -41,7 +41,7 @@ ms.locfileid: "48174611"
  **-i** *input_trace_file*  
  Specifica il percorso completo del file di traccia di input nel controller, ad esempio `D:\Mytrace.trc`. Il parametro **-i** è obbligatorio.  
   
- Se nella stessa directory sono presenti file di rollover, questi verranno caricati e utilizzati automaticamente. I file devono rispettare la convenzione di denominazione per il rollover dei file, ad esempio `Mytrace.trc`, `Mytrace_1.trc`, `Mytrace_2.trc`, `Mytrace_3.trc`, … `Mytrace_n.trc`.  
+ Se nella stessa directory sono presenti file di rollover, questi verranno caricati e utilizzati automaticamente. I file devono rispettare la convenzione di denominazione per il rollover dei file, ad esempio `Mytrace.trc`, `Mytrace_1.trc`, `Mytrace_2.trc`, `Mytrace_3.trc`, ... `Mytrace_n.trc`.  
   
 > [!NOTE]  
 >  Se si utilizza lo strumento di amministrazione in un computer diverso dal controller, sarà necessario copiare i file di traccia di input nel controller in modo da poter utilizzare un percorso locale per questo parametro.  
@@ -75,13 +75,13 @@ ms.locfileid: "48174611"
  In questo esempio la fase di pre-elaborazione viene avviata con tutte le impostazioni predefinite. Il valore `localhost` indica che il servizio controller viene eseguito nello stesso computer dello strumento di amministrazione. Il parametro *input_trace_file* specifica il percorso dei dati di traccia di input, ad esempio `c:\mytrace.trc`. Il file di traccia non viene filtrato, quindi è necessario specificare il parametro **-c** .  
   
 ```  
-dreplay preprocess –m localhost -i c:\mytrace.trc -d c:\WorkingDir  
+dreplay preprocess -m localhost -i c:\mytrace.trc -d c:\WorkingDir  
 ```  
   
- In questo esempio viene avviata la fase di pre-elaborazione e viene specificato un file di configurazione della pre-elaborazione modificato. A differenza dell'esempio precedente, il parametro **-c** viene usato per puntare al file di configurazione modificato, se è stato archiviato in un percorso diverso. Esempio:  
+ In questo esempio viene avviata la fase di pre-elaborazione e viene specificato un file di configurazione della pre-elaborazione modificato. A differenza dell'esempio precedente, il parametro **-c** viene usato per puntare al file di configurazione modificato, se è stato archiviato in un percorso diverso. Ad esempio:  
   
 ```  
-dreplay preprocess –m localhost -i c:\mytrace.trc -d c:\WorkingDir -c c:\DReplay.exe.preprocess.config  
+dreplay preprocess -m localhost -i c:\mytrace.trc -d c:\WorkingDir -c c:\DReplay.exe.preprocess.config  
 ```  
   
  Nel file di configurazione della pre-elaborazione modificato, viene aggiunta una condizione di filtro per filtrare le sessioni di sistema durante la riproduzione distribuita. Il filtro viene aggiunto modificando l'elemento `<PreprocessModifiers>` nel file di configurazione della pre-elaborazione `DReplay.exe.preprocess.config`.  
@@ -104,7 +104,7 @@ dreplay preprocess –m localhost -i c:\mytrace.trc -d c:\WorkingDir -c c:\DRepl
  Per altre informazioni, vedere [Sicurezza di Distributed Replay](distributed-replay-security.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Preparare i dati di traccia di Input](prepare-the-input-trace-data.md)   
+ [Preparazione dei dati di traccia di input](prepare-the-input-trace-data.md)   
  [SQL Server Distributed Replay](sql-server-distributed-replay.md)   
  [Configurare Riesecuzione distribuita](configure-distributed-replay.md)  
   

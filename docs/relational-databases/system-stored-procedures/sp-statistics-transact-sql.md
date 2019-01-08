@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4b365ad16ce7f96ba3e0dd14f278b1ce4db60a32
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 4bed4614f3d38ca7700d40b73347430f27e9d82b
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51657133"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591705"
 ---
 # <a name="spstatistics-transact-sql"></a>sp_statistics (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -47,24 +47,24 @@ sp_statistics [ @table_name = ] 'table_name'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@table_name=** ] **'***table_name***'**  
+ [  **@table_name=** ] **'**_table_name_**'**  
  Specifica la tabella utilizzata per restituire le informazioni del catalogo. *TABLE_NAME* viene **sysname**, non prevede alcun valore predefinito. I criteri di ricerca con caratteri jolly non sono supportati.  
   
- [  **@table_owner=** ] **'***proprietario***'**  
+ [  **@table_owner=** ] **'**_proprietario_**'**  
  Nome del proprietario della tabella utilizzata per restituire le informazioni del catalogo. *TABLE_OWNER* viene **sysname**, con un valore predefinito è NULL. I criteri di ricerca con caratteri jolly non sono supportati. Se *proprietario* non viene specificato, si applicano le regole di visibilità della tabella predefinite del sistema DBMS sottostante.  
   
  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], se l'utente corrente è il proprietario di una tabella con il nome specificato, vengono restituiti gli indici di tale tabella. Se *proprietario* non viene specificato e l'utente corrente non dispone di una tabella con la proprietà specificata *nome*, viene eseguita la ricerca per una tabella con la proprietà specificata *nome* di proprietà di proprietario del database. Se tale tabella esiste, vengono restituiti gli indici corrispondenti.  
   
- [  **@table_qualifier=** ] **'***qualificatore***'**  
- Nome del qualificatore di tabella. *qualificatore* viene **sysname**, con un valore predefinito è NULL. Vari prodotti DBMS supportano nomi di tabelle in tre parti (*qualificatore ***.*** proprietario ***.*** nome*). In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] questo parametro rappresenta il nome del database. In altri prodotti rappresenta il nome del server dell'ambiente di database della tabella.  
+ [  **@table_qualifier=** ] **'**_qualificatore_**'**  
+ Nome del qualificatore di tabella. *qualificatore* viene **sysname**, con un valore predefinito è NULL. Vari prodotti DBMS supportano nomi di tabelle in tre parti (_qualificatore_**.** _owner_**.** _nome_). In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] questo parametro rappresenta il nome del database. In altri prodotti rappresenta il nome del server dell'ambiente di database della tabella.  
   
- [  **@index_name=** ] **'***index_name***'**  
+ [  **@index_name=** ] **'**_index_name_**'**  
  Nome dell'indice. *index_name* viene **sysname**, con un valore predefinito è %. La ricerca con caratteri jolly è supportata.  
   
- [  **@is_unique=** ] **'***is_unique***'**  
+ [  **@is_unique=** ] **'**_is_unique_**'**  
  È se solo indici univoci (se **Y**) devono essere restituiti. *is_unique* viene **char (1)**, il valore predefinito è **N**.  
   
- [  **@accuracy=** ] **'***accuratezza***'**  
+ [  **@accuracy=** ] **'**_accuratezza_**'**  
  Livello di precisione della cardinalità e delle pagine per le statistiche. *accuratezza* viene **char (1)**, il valore predefinito è **Q**. Specificare **elettronica** per assicurarsi che le statistiche vengono aggiornate in modo che la cardinalità e le pagine siano accurate.  
   
  Il valore **elettronica** (SQL_ENSURE) chiede al driver di recuperare in modo incondizionato le statistiche.  
@@ -73,7 +73,7 @@ sp_statistics [ @table_name = ] 'table_name'
   
 ## <a name="result-sets"></a>Set di risultati  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**TABLE_QUALIFIER**|**sysname**|Nome del qualificatore della tabella. Questa colonna può essere NULL.|  
 |**TABLE_OWNER**|**sysname**|Nome del proprietario della tabella. In questa colonna viene sempre restituito un valore.|  

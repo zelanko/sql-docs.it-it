@@ -4,25 +4,25 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: performance
 ms.topic: conceptual
 ms.assetid: 64ae91e5-b420-44b4-af1a-f8bca83d7f41
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 02a690658842115de0284f19d8ecfc0ca590c3ec
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5796cc1184e862b4e8afe42b4fa5f5babe8358dd
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48123195"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52803612"
 ---
 # <a name="xtp-garbage-collection"></a>XTP Garbage Collection
   L'oggetto prestazione XTP Garbage Collection contiene contatori correlati al Garbage Collector del motore XTP.  
   
  La tabella seguente descrive la **XTP garbage Collection** contatori.  
   
-|Contatore|Description|  
+|Contatore|Descrizione|  
 |-------------|-----------------|  
 |**Tentativi di analisi di elementi nascosti/sec (GC- pubblicato)**|Numero medio di tentativi di analisi dovuti a conflitti di scrittura durante le operazioni su elementi nascosti eseguite dal Garbage Collector, al secondo. Si tratta di un contatore di livello molto basso, non destinato all'uso da parte del cliente.|  
 |**Elementi di lavoro GC principali/sec**|Numero di elementi di lavoro elaborati dal thread GC principale.|  

@@ -13,18 +13,18 @@ ms.assetid: 417544ff-c25c-496e-add4-2f278f8a4911
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 60e530c4d15b3c17412a7125d73cb5cc9e01d4cb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c2518404830577839bce3e84c4eac9b76c850cd3
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48228133"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53367953"
 ---
 # <a name="supported-net-framework-libraries"></a>Librerie .NET Framework supportate
   Grazie all'integrazione di CLR in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], è possibile creare stored procedure, trigger, funzioni definite dall'utente, tipi definiti dall'utente e aggregazioni definite dall'utente nel codice gestito. Con le librerie di classi .NET Framework è possibile accedere alle classi preesistenti che offrono funzionalità per manipolazione delle stringhe, operazioni matematiche avanzate, accesso ai file, crittografia e così via. A queste classi è possibile accedere da stored procedure gestite, tipi definiti dall'utente, trigger, funzioni definite dall'utente o funzioni di aggregazione definite dall'utente.  
   
 > [!NOTE]  
->  Se si gestiscono o aggiornano assembly non supportati nella global assembly cache (GAC), il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Se un assembly è presente sia in un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] integrazione con CLR. Se si gestiscono o aggiornano assembly della GAC registrati anche nel database, inclusi gli assembly .NET Framework non supportati, assicurarsi di gestirne o aggiornarne anche la copia che si trova nei database di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] con l'istruzione `ALTER ASSEMBLY`. Per altre informazioni, vedere [articolo 949080 della Knowledge Base](http://support.microsoft.com/kb/949080).  
+>  Se si gestiscono o aggiornano assembly non supportati nella global assembly cache (GAC), il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Se un assembly è presente sia in un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] integrazione con CLR. Se si gestiscono o aggiornano assembly della GAC registrati anche nel database, inclusi gli assembly .NET Framework non supportati, assicurarsi di gestirne o aggiornarne anche la copia che si trova nei database di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] con l'istruzione `ALTER ASSEMBLY`. Per altre informazioni, vedere [articolo 949080 della Knowledge Base](https://support.microsoft.com/kb/949080).  
   
 ## <a name="supported-libraries"></a>Librerie supportate  
  A partire [!INCLUDE[ssVersion2005](../../../includes/ssnoversion-md.md)] include un elenco di librerie .NET Framework supportate, che sono state testate per garantire che soddisfino gli standard di affidabilità e sicurezza per l'interazione con [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] li carica direttamente dalla Global Assembly Cache (GAC).  

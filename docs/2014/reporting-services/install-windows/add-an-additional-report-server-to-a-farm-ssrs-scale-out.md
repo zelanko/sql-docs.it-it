@@ -11,12 +11,12 @@ ms.assetid: c1a6b683-15cf-44ae-ac60-ceee63a60aaf
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 69388d1b8f3bf572b7db264c8ab1f56d9d7f454e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 290e88a1f96b6cec6d4120464bb098abb0f422ad
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48100971"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53360463"
 ---
 # <a name="add-an-additional-report-server-to-a-farm-ssrs-scale-out"></a>Aggiungere un ulteriore server di report a una farm (con scalabilità orizzontale SSRS)
   L'aggiunta di un secondo o altri server di report in modalità SharePoint alla farm di SharePoint può migliorare le prestazioni e il tempo di risposta dell'elaborazione del server di report. Se le prestazioni risultano rallentate dopo aver aggiunto altri utenti, report e applicazioni al server di report, l'aggiunta di ulteriori server di report può migliorare le prestazioni. È inoltre consigliabile aggiungere un secondo server di report per aumentare la disponibilità dei server di report in caso di problemi hardware o di manutenzione generale di singoli server di report nell'ambiente. A partire dalla versione [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] , la procedura per la scalabilità orizzontale dell'ambiente [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in modalità SharePoint segue la distribuzione standard della farm di SharePoint e sfrutta le funzionalità di bilanciamento del carico di SharePoint.  
@@ -29,7 +29,7 @@ ms.locfileid: "48100971"
   
  Per altre informazioni sul ridimensionamento dei server di report in modalità nativa, vedere [Configurare una distribuzione con scalabilità orizzontale di un server di report in modalità nativa &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md).  
   
--   [Il bilanciamento del carico](#bkmk_loadbalancing)  
+-   [Bilanciamento del carico](#bkmk_loadbalancing)  
   
 -   [Prerequisiti](#bkmk_prerequisites)  
   
@@ -75,7 +75,7 @@ ms.locfileid: "48100971"
 |----------|--------------------------|  
 |Eseguire l'Utilità preparazione prodotti SharePoint 2010.|È necessario disporre dei supporti di installazione di SharePoint 2010. L'utilità di preparazione corrisponde al file **PrerequisiteInstaller.exe** disponibile nei supporti di installazione.|  
 |Installare un prodotto SharePoint 2010.|1) selezionare il **Server Farm** tipo di installazione.<br /><br /> 2) selezionare **completa** per il tipo di server.<br /><br /> 3) Una volta completata l'installazione, non eseguire la Configurazione guidata Prodotti SharePoint se nella farm di SharePoint esistente è installato SharePoint 2010 SP1. È necessario installare SharePoint SP1 prima di eseguire la Configurazione guidata Prodotti SharePoint.|  
-|Installare SharePoint Server 2010 SP1.|Se nella farm di SharePoint esistente è installato SharePoint 2010 SP1 scaricare e installare SharePoint 2010 SP1 da:[http://support.microsoft.com/kb/2460045](http://go.microsoft.com/fwlink/p/?linkID=219697).<br /><br /> Per ulteriori informazioni su SharePoint 2010 SP1, vedere [Problemi noti durante l'installazione di Office 2010 SP1 e SharePoint 2010 SP1](http://support.microsoft.com/kb/2532126):|  
+|Installare SharePoint Server 2010 SP1.|Se nella farm di SharePoint esistente è installato SharePoint 2010 SP1 scaricare e installare SharePoint 2010 SP1 da:[https://support.microsoft.com/kb/2460045](https://go.microsoft.com/fwlink/p/?linkID=219697).<br /><br /> Per ulteriori informazioni su SharePoint 2010 SP1, vedere [Problemi noti durante l'installazione di Office 2010 SP1 e SharePoint 2010 SP1](https://support.microsoft.com/kb/2532126):|  
 |Eseguire la Configurazione guidata Prodotti SharePoint per aggiungere il server alla farm.|1) nella **prodotti Microsoft SharePoint 2010** gruppo di programmi, fare clic su **configurazione guidata prodotti di Microsoft SharePoint 2010**.<br /><br /> 2) nella **Connetti a una Server Farm** pagina Scegli **Connetti a una Farm esistente** e fare clic su **Next**.<br /><br /> 3) nella **specifica impostazioni Database di configurazione** , digitare il nome del server di database utilizzato per la farm esistente e il nome del database di configurazione. Scegliere **Avanti**.<br />**\*\* Importanti \* \***  se viene visualizzato un messaggio di errore simile al seguente ed è stata verificata la disponibilità delle autorizzazioni, quindi verificare che i protocolli sono abilitati per la configurazione di rete SQL Server in **Sql Server Configuration Manager**: "Impossibile connettersi al server di database. Verificare che il database esista, sia un Sql Server e di disporre delle autorizzazioni appropriate per accedere al server."<br />**\*\* Importanti \* \***  se viene visualizzata la pagina **stato di Patch e prodotti nella Server Farm**, sarà necessario esaminare le informazioni nella pagina e aggiornare il server con i file necessari prima di continuare con aggiunge il server alla farm.<br /><br /> 4) nella **specifica impostazioni sicurezza Farm** digitare la passphrase della farm e fare clic su **successivo**. Scegliere **Avanti** nella pagina di configurazione per eseguire la procedura guidata.<br /><br /> 5) fare clic su **successivo** per eseguire il **configurazione guidata Farm**.|  
 |Verificare che il server sia stato aggiunto alla farm di SharePoint.|1) Nel gruppo **Impostazioni di sistema** di Amministrazione centrale SharePoint fare clic su **Gestisci server della farm** .<br /><br /> 2) Verificare che il nuovo server sia stato aggiunto e che lo stato sia corretto.<br /><br /> 3) Nota Il servizio non viene visualizzata **servizio SQL Server Reporting Services** in esecuzione. Verrà installato nel passaggio successivo.<br /><br /> 4) per rimuovere questo server dal ruolo WFE, fare clic su **Gestisci servizi nel server** e arrestare il servizio **applicazione Web di Microsoft SharePoint Foundation**.|  
 |Installare e configurare la modalità SharePoint di Reporting Services|Eseguire il programma di installazione di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . Per altre informazioni sull'installazione del [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] modalità SharePoint, vedere [installare Reporting Services SharePoint Mode for SharePoint 2010](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md) se il server verrà utilizzato solo come un server applicazioni e il server verrà usati non come un server WFE, è necessario selezionare **componente aggiuntivo di Reporting Services per prodotti SharePoint** in:<br /><br /> il **ruolo di installazione** pagina, selezionare **installazione funzionalità SQL Server**<br /><br /> il **selezione delle caratteristiche** pagina, selezionare **Reporting Services - SharePoint**<br /><br /> oppure<br /><br /> il **configurazione di Reporting Services** verifica pagina le **solo installazione** sia selezionata l'opzione **Reporting Services SharePoint Mode**.|  
@@ -93,7 +93,7 @@ ms.locfileid: "48100971"
  Il servizio Web Reporting Services non è abilitato. Configurare almeno un'istanza di servizio Reporting Services SharePoint avere \<IsWebServiceEnable > impostato su true. Per altre informazioni, vedere [Modificare un file di configurazione di Reporting Services&#40;RSreportserver.config&#41;](../report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Aggiungere server web o applicazione server alle farm in SharePoint 2013](http://technet.microsoft.com/library/cc261752.aspx)   
- [Configurare i servizi (SharePoint Server 2010)](http://technet.microsoft.com/library/ee794878.aspx)  
+ [Aggiungere server web o applicazione server alle farm in SharePoint 2013](https://technet.microsoft.com/library/cc261752.aspx)   
+ [Configurare i servizi (SharePoint Server 2010)](https://technet.microsoft.com/library/ee794878.aspx)  
   
   

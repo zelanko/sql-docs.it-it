@@ -14,12 +14,12 @@ ms.assetid: 6c01ce0d-30d7-4c86-8705-3ab254d8a845
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4e81a2099cb06be63b6684f223277dcc127eab75
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8481b0f19566ed0e55f31480f9ab8be0c9441c7d
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48145541"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53360443"
 ---
 # <a name="sqlforeignkeys"></a>SQLForeignKeys
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta aggiornamento a catena ed esegue l'eliminazione tramite il meccanismo dei vincoli della chiave esterna. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituisce SQL_CASCADE per le colonne UPDATE_RULE e/o DELETE_RULE se l'opzione CASCADE viene specificata sulla clausola ON UPDATE e/o ON DELETE dei vincoli FOREIGN KEY. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituisce SQL_NO_ACTION per le colonne UPDATE_RULE e/o DELETE_RULE se l'opzione NO ACTION viene specificata sulla clausola ON UPDATE e/o ON DELETE dei vincoli FOREIGN KEY.  
@@ -28,10 +28,10 @@ ms.locfileid: "48145541"
   
  **SQLForeignKeys** può essere eseguito su un cursore server statico. Un tentativo di eseguire **SQLForeignKeys** su un cursore aggiornabile (dinamico o keyset) restituisce SQL_SUCCESS_WITH_INFO, che indica che il tipo di cursore è stato modificato.  
   
- Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC Native Client supporta la segnalazione di informazioni relative alle tabelle sui server collegati mediante l'accettazione di un nome in due parti per il *FKCatalogName* e *PKCatalogName* parametri:  *Linked_server_name*.  
+ Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC Native Client supporta la segnalazione di informazioni relative alle tabelle sui server collegati mediante l'accettazione di un nome in due parti per il *FKCatalogName* e *PKCatalogName* parametri: *Linked_server_name*.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Funzione SQLForeignKeys](http://go.microsoft.com/fwlink/?LinkId=59344)   
+ [Funzione SQLForeignKeys](https://go.microsoft.com/fwlink/?LinkId=59344)   
  [Dettagli di implementazione dell'API ODBC](odbc-api-implementation-details.md)  
   
   

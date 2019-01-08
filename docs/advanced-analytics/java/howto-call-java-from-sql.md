@@ -1,22 +1,22 @@
 ---
-title: Come chiamare Java da SQL | Microsoft Docs
+title: Come chiamare Java da SQL - SQL Server Machine Learning Services
 description: Informazioni su come chiamare classi Java da stored procedure SQL Server usando l'estensione del linguaggio in SQL Server 2019 di programmazione Java.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 09/24/2018
+ms.date: 12/07/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 08af5a18b827c783515ecd3b4ba4a802c3472f93
-ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
+ms.openlocfilehash: 438c1096a933932e08c5cbf21722ba75874bb1dc
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46715258"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53644760"
 ---
-# <a name="how-to-call-java-from-sql-server-2019"></a>Come chiamare Java da SQL Server 2019
+# <a name="how-to-call-java-from-sql-server-2019-preview"></a>Come chiamare Java dalla versione di anteprima di SQL Server 2019
 
 Quando si usa la [estensione del linguaggio Java](extension-java.md), il [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) sistema stored procedure è l'interfaccia utilizzata per chiamare il runtime di Java. Autorizzazioni per il database si applicano all'esecuzione di codice Java.
 
@@ -33,7 +33,7 @@ Questo articolo illustra i dettagli di implementazione per le classi Java e meto
 * "params" viene utilizzato per passare parametri a una classe Java. Chiamata a un metodo che richiede argomenti non è supportata, che rende l'unico modo per passare i valori di argomento al metodo di parametri. 
 
 > [!Note]
-> In questa nota Riformula supportate e non supportate operazioni specifiche del linguaggio nella versione CTP 2.0.
+> In questa nota Riformula supportate e non supportate operazioni specifiche del linguaggio nella versione CTP 2.x.
 > * La stored procedure, sono supportati i parametri di input. Non sono elencati i parametri di output.
 > * Lo streaming tramite il parametro sp_execute_external_script **@r_rowsPerRead** non è supportato.
 > * Tramite il partizionamento **@input_data_1_partition_by_columns** non è supportato.
@@ -41,7 +41,7 @@ Questo articolo illustra i dettagli di implementazione per le classi Java e meto
 
 ## <a name="call-spexecuteexternalscript"></a>Chiamata di sp_execute_external_script
 
-Il [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) sistema stored procedure è l'interfaccia utilizzata per chiamare il runtime di Java. L'esempio seguente illustra un sp_execute_external_script usando l'estensione di Java e i parametri per la specifica di percorso, script e il codice personalizzato.
+Applicabile sia Windows che Linux, il [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) sistema stored procedure è l'interfaccia utilizzata per chiamare il runtime di Java. L'esempio seguente illustra un sp_execute_external_script usando l'estensione di Java e i parametri per la specifica di percorso, script e il codice personalizzato.
 
 ```sql
 DECLARE @myClassPath nvarchar(30)
@@ -152,6 +152,8 @@ Questo NullMap deve essere popolato con il numero previsto di colonne e righe ch
 ```java
 public static boolean[][] outputNullMap
 ```
+<a name="create-external-library"></a>
+
 
 ## <a name="next-steps"></a>Passaggi successivi
 

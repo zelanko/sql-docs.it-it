@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Integration Services, upgrading
@@ -16,12 +15,12 @@ ms.assetid: 04f9863c-ba0b-47c5-af91-f2d41b078a23
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b6abc8e9e025bc24b4f456b58e0e9625e66b4b71
-ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
+ms.openlocfilehash: d1e40954a5a5eb7a69ba4f70b798356f38175fed
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49072025"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53365393"
 ---
 # <a name="upgrade-integration-services"></a>Aggiornare Integration Services
   Se nel computer è installato [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] o [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)], è possibile eseguire l'aggiornamento a [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)].  
@@ -36,16 +35,16 @@ ms.locfileid: "49072025"
 ## <a name="before-upgrading-integration-services"></a>Operazioni preliminari per l'aggiornamento di Integration Services  
  Prima di procedere all'aggiornamento a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], è consigliabile eseguire Preparazione aggiornamento. Preparazione aggiornamento segnala i problemi che potrebbero verificarsi se si esegue la migrazione dei pacchetti esistenti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] al nuovo formato dei pacchetti utilizzato da [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . Per altre informazioni, vedere [Use Upgrade Advisor to Prepare for Upgrades](../../sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md).  
   
-> [!NOTE]  
+> [!NOTE]
 >  Supporto per la migrazione o l'esecuzione di pacchetti Data Transformation Services (DTS) è stato interrotto nella versione corrente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Le seguenti funzionalità DTS non sono più utilizzate.  
->   
+> 
 >  -   DTS Runtime  
 > -   API DTS  
 > -   Migrazione guidata pacchetti per la migrazione dei pacchetti DTS alla versione successiva di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]  
 > -   Supporto per la gestione di pacchetti DTS in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
 > -   Attività Esegui pacchetto DTS 2000  
 > -   Analisi di pacchetti DTS in Preparazione aggiornamento.  
->   
+> 
 >  Per informazioni sulle altre funzionalità non più supportate, vedere [funzionalità di servizi di integrazione non più usate in SQL Server 2014](../discontinued-integration-services-functionality-in-sql-server-2014.md).  
   
 ## <a name="upgrading-integration-services"></a>aggiornamento di Integration Services  
@@ -145,6 +144,6 @@ ms.locfileid: "49072025"
 -   Non è possibile utilizzare processi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent in computer con [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] o [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] per eseguire pacchetti di [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] o [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] archiviati nell'istanza aggiornata del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 ## <a name="external-resources"></a>Risorse esterne  
- Intervento nel blog relativo all' [utilizzo delle applicazioni e delle estensioni SSIS personalizzate esistenti in Denali](http://go.microsoft.com/fwlink/?LinkId=238157)sul sito blogs.msdn.com.  
+ Intervento nel blog relativo all' [utilizzo delle applicazioni e delle estensioni SSIS personalizzate esistenti in Denali](https://go.microsoft.com/fwlink/?LinkId=238157)sul sito blogs.msdn.com.  
   
   

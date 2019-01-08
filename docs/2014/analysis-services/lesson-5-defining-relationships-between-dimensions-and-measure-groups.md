@@ -11,12 +11,12 @@ ms.assetid: 31aeb271-47a1-433b-a8a5-120bcb4584d7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 214b511a378e7e9ec21c4809e13ca9dbf7f654bc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: aaac863432c5ba289be43f24a384d392f0b42697
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48152832"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53368733"
 ---
 # <a name="lesson-5-defining-relationships-between-dimensions-and-measure-groups"></a>Lezione 5: Definizione delle relazioni tra dimensioni e gruppi di misure
   Nelle lezioni precedenti di questa esercitazione è stato spiegato che le dimensioni del database aggiunte a un cubo possono essere utilizzate come base per una o più dimensioni del cubo. In questa lezione verranno illustrate le procedure per definire tipi diversi di relazioni tra dimensioni e gruppi di misure del cubo, nonché per specificare le proprietà di tali relazioni.  
@@ -24,12 +24,12 @@ ms.locfileid: "48152832"
  Per altre informazioni, vedere [Relazioni tra dimensioni](multidimensional-models-olap-logical-cube-objects/dimension-relationships.md).  
   
 > [!NOTE]  
->  I progetti completati per tutte le lezioni in questa esercitazione sono disponibili online. È possibile passare a qualsiasi lezione utilizzando il progetto completato della lezione precedente come punto iniziale. [Fare clic qui](http://go.microsoft.com/fwlink/?LinkID=221866) per scaricare i progetti di esempio usati in questa esercitazione.  
+>  I progetti completati per tutte le lezioni in questa esercitazione sono disponibili online. È possibile passare a qualsiasi lezione utilizzando il progetto completato della lezione precedente come punto iniziale. [Fare clic qui](https://go.microsoft.com/fwlink/?LinkID=221866) per scaricare i progetti di esempio usati in questa esercitazione.  
   
  In questa lezione sono incluse le attività seguenti:  
   
  [Definizione di una relazione di tipo Riferimento](lesson-5-1-defining-a-referenced-relationship.md)  
- In questa attività verranno illustrate le procedure per collegare indirettamente una dimensione a una tabella dei fatti tramite una dimensione collegata mediante una relazione chiave primaria-chiave esterna.  
+ In questa attività informazioni su come collegare una dimensione per una tabella dei fatti indirettamente tramite una dimensione collegata direttamente tramite una relazione di chiave esterna-chiave primaria.  
   
  [Definizione di una relazione di tipo Fatti](lesson-5-2-defining-a-fact-relationship.md)  
  In questa attività verranno illustrate le procedure per definire una dimensione basata sui dati di una tabella dei fatti nonché per definire la relazione della dimensione come una relazione di tipo Fatti.  

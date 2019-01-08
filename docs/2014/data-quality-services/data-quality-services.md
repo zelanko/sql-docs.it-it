@@ -10,12 +10,12 @@ ms.assetid: 9c6b996c-e768-4bf5-837f-5436ed9cea1d
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7b7b1364d13bd653b81464e26c3f434525623451
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 9517595f183e85c3becc8a6b92b364c0b25e666c
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51033337"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53366923"
 ---
 # <a name="data-quality-services"></a>Data Quality Services
   [!INCLUDE[ssDQSnoversionLong](../includes/ssdqsnoversionlong-md.md)] (DQS) è un prodotto per la qualità dei dati basato sulle informazioni. DQS consente di compilare una Knowledge Base e utilizzarla per eseguire varie attività relative alla qualità dei dati di importanza fondamentale, tra cui correzione, arricchimento, standardizzazione e deduplicazione dei dati. DQS consente di eseguire la pulizia dei dati tramite servizi dati di riferimento basati su cloud forniti dai provider di dati di riferimento. DQS offre inoltre funzioni di profiling integrate nelle attività relative alla qualità dei dati, consentendo di analizzare l'integrità dei dati stessi.  
@@ -46,7 +46,7 @@ ms.locfileid: "51033337"
 ## <a name="see-also"></a>Vedere anche  
  [Introduzione a Data Quality Services](../../2014/data-quality-services/introduction-to-data-quality-services.md)   
  [Concetti di Data Quality Services](../../2014/data-quality-services/data-quality-services-concepts.md)   
- [Risorse di DQS](http://technet.microsoft.com/sqlserver/hh780961)   
- [Centro risorse di SQL Server](http://go.microsoft.com/fwlink/?linkID=219676)  
+ [Risorse di DQS](https://technet.microsoft.com/sqlserver/hh780961)   
+ [Centro risorse di SQL Server](https://go.microsoft.com/fwlink/?linkID=219676)  
   
   

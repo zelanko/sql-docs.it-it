@@ -15,12 +15,12 @@ ms.assetid: 2a8c0a59-71c4-4280-824c-2dc17999532e
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 788aead525e8a4d21728de60a2162aafb5d286cb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3e0ceb2ef7e152829cbb6bd33cdcb3d0812a69bf
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48163291"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53355648"
 ---
 # <a name="open-table-designer-visual-database-tools"></a>Apertura di Progettazione tabelle (Visual Database Tools)
   Progettazione tabelle è uno strumento grafico che consente di progettare e rappresentare graficamente le tabelle di un database a cui si è connessi. È possibile utilizzare Progettazione tabelle per creare, modificare o eliminare tabelle, colonne, chiavi, indici, relazioni e vincoli.  
@@ -34,7 +34,7 @@ ms.locfileid: "48163291"
      Il menu **Progettazione tabelle** viene aggiunto al menu principale e vengono aperti i riquadri di progettazione.  
   
 > [!NOTE]  
->  Se si è connessi a un database di SQL Azure, la nuova opzione di tabella avvierà uno script modello di creazione tabella. Modificare i parametri, quindi eseguire lo script per creare una nuova tabella. Per ulteriori informazioni, vedere [SQL Azure Overview](http://go.microsoft.com/fwlink/?LinkId=163948).  
+>  Se si è connessi a un database di SQL Azure, la nuova opzione di tabella avvierà uno script modello di creazione tabella. Modificare i parametri, quindi eseguire lo script per creare una nuova tabella. Per ulteriori informazioni, vedere [SQL Azure Overview](https://go.microsoft.com/fwlink/?LinkId=163948).  
   
 ### <a name="open-an-existing-table"></a>Aprire una tabella esistente  
   

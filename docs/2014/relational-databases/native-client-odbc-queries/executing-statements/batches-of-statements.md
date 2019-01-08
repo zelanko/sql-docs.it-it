@@ -17,15 +17,15 @@ ms.assetid: 057d7c1c-1428-4780-9447-a002ea741188
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: aa97baae4ad6331193cab16ae2609212753c5be0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8951469279e5c3577aef355e339397b329bb5d63
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48051937"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53368713"
 ---
 # <a name="batches-of-statements"></a>Batch di istruzioni
-  Un batch di [!INCLUDE[tsql](../../../includes/tsql-md.md)] istruzioni contiene due o più istruzioni, separate da punto e virgola (;), incorporato in una singola stringa passata a **SQLExecDirect** oppure [funzione SQLPrepare](http://go.microsoft.com/fwlink/?LinkId=59360). Esempio:  
+  Un batch di [!INCLUDE[tsql](../../../includes/tsql-md.md)] istruzioni contiene due o più istruzioni, separate da punto e virgola (;), incorporato in una singola stringa passata a **SQLExecDirect** oppure [funzione SQLPrepare](https://go.microsoft.com/fwlink/?LinkId=59360). Ad esempio:  
   
 ```  
 SQLExecDirect(hstmt,   

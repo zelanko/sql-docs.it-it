@@ -11,14 +11,14 @@ ms.assetid: 7d3ffabd-78ae-4204-8323-29949d030c16
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f9fe97795be77255412ecac2dbcda11214369c9b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a34938d97b26691dad0f1c4800b98af48434d7f4
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48218711"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53365165"
 ---
-# <a name="lesson-1-defining-a-data-source-view-within-an-analysis-services-project"></a>Lezione 1: Definizione di una vista origine dati in un progetto di Analysis Services
+# <a name="lesson-1-defining-a-data-source-view-within-an-analysis-services-project"></a>Lezione 1: Definizione di una vista origine dati all'interno di un'analisi di progetto di servizi
   La progettazione di un'applicazione di Business Intelligence in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] inizia con la creazione di un progetto di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Nel progetto vengono definiti tutti gli elementi della soluzione, a partire da una vista origine dati.  
   
  In questa lezione sono incluse le attività seguenti:  
@@ -35,7 +35,7 @@ ms.locfileid: "48218711"
  [Modifica dei nomi predefiniti delle tabelle](lesson-1-4-modifying-default-table-names.md)  
  In questa attività verranno modificati i nomi di tabella nella vista origine dati, in modo da semplificare i nomi degli oggetti di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] che saranno definiti successivamente.  
   
- Confrontare i risultati rispetto a un file del progetto di esempio compilato per questa lezione. Per altre informazioni sul download dei progetti di esempio usati in questa esercitazione, vedere i [progetti dei modelli multidimensionali SSAS per SQL Server 2012](http://go.microsoft.com/fwlink/p/?LinkID=221866) nella pagina di esempi del prodotto su codeplex.  
+ Confrontare i risultati rispetto a un file del progetto di esempio compilato per questa lezione. Per altre informazioni sul download dei progetti di esempio usati in questa esercitazione, vedere i [progetti dei modelli multidimensionali SSAS per SQL Server 2012](https://go.microsoft.com/fwlink/p/?LinkID=221866) nella pagina di esempi del prodotto su codeplex.  
   
 ## <a name="next-lesson"></a>Lezione successiva  
  [Lezione 2: Definizione e distribuzione di un cubo](lesson-2-defining-and-deploying-a-cube.md)  

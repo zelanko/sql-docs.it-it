@@ -12,12 +12,12 @@ ms.assetid: a7be05f0-6b11-4b53-9fbc-501e591eef09
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: da0cfb6552153676b838d7df4d526e12def3f517
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6b416d9f7fdd07613f684fb2b27ac058b60d5b3c
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48180991"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53352450"
 ---
 # <a name="use-rowset-binding-odbc"></a>Utilizzare l'associazione di set di righe (ODBC)
     
@@ -43,7 +43,7 @@ ms.locfileid: "48180991"
   
 3.  Eseguire l'istruzione.  
   
-4.  Ogni chiamata a [SQLFetch](http://go.microsoft.com/fwlink/?LinkId=58401) oppure [SQLFetchScroll](../../native-client-odbc-api/sqlfetchscroll.md) recupera R righe e trasferisce i dati nelle colonne associate.  
+4.  Ogni chiamata a [SQLFetch](https://go.microsoft.com/fwlink/?LinkId=58401) oppure [SQLFetchScroll](../../native-client-odbc-api/sqlfetchscroll.md) recupera R righe e trasferisce i dati nelle colonne associate.  
   
 ### <a name="to-use-row-wise-binding"></a>Per utilizzare l'associazione per riga  
   
@@ -67,7 +67,7 @@ ms.locfileid: "48180991"
   
 4.  Eseguire l'istruzione.  
   
-5.  Ogni chiamata a [SQLFetch](http://go.microsoft.com/fwlink/?LinkId=58401) oppure [SQLFetchScroll](../../native-client-odbc-api/sqlfetchscroll.md) recupera R righe e trasferisce i dati nelle colonne associate.  
+5.  Ogni chiamata a [SQLFetch](https://go.microsoft.com/fwlink/?LinkId=58401) oppure [SQLFetchScroll](../../native-client-odbc-api/sqlfetchscroll.md) recupera R righe e trasferisce i dati nelle colonne associate.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Usando procedure per cursori &#40;ODBC&#41;](using-cursors-how-to-topics-odbc.md)   

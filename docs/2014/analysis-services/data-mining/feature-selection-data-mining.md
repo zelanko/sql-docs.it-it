@@ -22,12 +22,12 @@ ms.assetid: b044e785-4875-45ab-8ae4-cd3b4e3033bb
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4d2cf693a4f4c909ef66b647f3ddd644a9bda6a4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6618a4a0818519ba4c3f0bbd63a46e02b4217296
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48067921"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53360143"
 ---
 # <a name="feature-selection-data-mining"></a>Selezione delle caratteristiche (Data mining)
   *Selezione delle caratteristiche* è un termine comunemente usato nel data mining per descrivere gli strumenti e tecniche disponibili per ridurre gli input a una dimensione gestibile per l'elaborazione e analisi. Selezione delle caratteristiche implica non solo *riduzione della cardinalità*, il che significa che impone un limite arbitraria o predefinita per il numero di attributi che possono essere considerati durante la creazione di un modello, ma anche la scelta degli attributi, vale a dire che l'analista o lo strumento di modellazione attivamente seleziona o Elimina gli attributi in base all'utilità per l'analisi.  
@@ -43,9 +43,9 @@ ms.locfileid: "48067921"
  Se solo in 50 delle 500 colonne dell'origine dati sono presenti informazioni utili per la compilazione di un modello, è possibile semplicemente non includerle nel modello oppure utilizzare le tecniche di selezione delle caratteristiche per individuare automaticamente le caratteristiche migliori ed escludere i valori che sono statisticamente insignificanti. La selezione delle caratteristiche consente di risolvere i problemi relativi alla presenza di una quantità eccessiva di dati di scarso valore o di una quantità ridotta di dati di valore elevato.  
   
 ## <a name="feature-selection-in-analysis-services-data-mining"></a>Selezione delle caratteristiche nel data mining in Analysis Services  
- In genere, selezione delle caratteristiche viene eseguita automaticamente nelle [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], e ogni algoritmo dispone di un set di tecniche predefinite per applicare in modo intelligente la riduzione delle funzionalità. La selezione delle caratteristiche viene sempre eseguita prima del training del modello per scegliere automaticamente gli attributi di un set di dati che hanno maggiori probabilità di essere utilizzati nel modello. Tuttavia, è anche possibile impostare manualmente i parametri per influire sul comportamento della selezione delle caratteristiche.  
+ Generalmente, la selezione delle caratteristiche viene eseguita automaticamente in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e in ogni algoritmo è disponibile un set di tecniche predefinite per applicare in modo intelligente la riduzione delle caratteristiche. La selezione delle caratteristiche viene sempre eseguita prima del training del modello per scegliere automaticamente gli attributi di un set di dati che hanno maggiori probabilità di essere utilizzati nel modello. Tuttavia, è anche possibile impostare manualmente i parametri per influire sul comportamento della selezione delle caratteristiche.  
   
- In genere, la selezione delle caratteristiche consente di calcolare un punteggio per ogni attributo, quindi di selezionare solo gli attributi con i punteggi migliori. Inoltre, è possibile regolare la soglia per i punteggi massimi. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] offre più metodi per calcolare questi punteggi e il metodo esatto applicato in qualsiasi modello dipende da fattori seguenti:  
+ In genere, la selezione delle caratteristiche consente di calcolare un punteggio per ogni attributo, quindi di selezionare solo gli attributi con i punteggi migliori. Inoltre, è possibile regolare la soglia per i punteggi massimi. In [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] sono disponibili più metodi per calcolare questi punteggi e il metodo esatto applicato in qualsiasi modello dipende dai fattori seguenti:  
   
 -   Algoritmo utilizzato nel modello  
   
@@ -90,7 +90,7 @@ ms.locfileid: "48067921"
 #### <a name="bayesian-with-k2-prior"></a>Bayes con probabilità a priori K2  
  In Analysis Services sono disponibili due punteggi della caratteristica di selezione degli attributi basati su reti Bayes. Una rete Bayes è un grafico *orientato* o *aciclico* di stati e di transizioni tra stati, ossia alcuni stati sono sempre precedenti allo stato corrente, alcuni sono successivi e il grafico non si ripete. Per definizione, le reti Bayes consentono l'utilizzo delle conoscenze precedenti. Tuttavia, la domanda in merito a quali stati precedenti utilizzare nel calcolo delle probabilità degli stati successivi è importante per la progettazione, le prestazioni e l'accuratezza dell'algoritmo.  
   
- L'algoritmo K2 per l'apprendimento di una rete Bayes, sviluppato da Cooper e Herskovits, viene utilizzato spesso nel data mining. È scalabile e consente di analizzare più variabili, ma richiede l'ordinamento delle variabili utilizzate come input. Per altre informazioni, vedere [Learning Bayesian Networks](http://go.microsoft.com/fwlink/?LinkId=105885) di Chickering, Geiger e Heckerman.  
+ L'algoritmo K2 per l'apprendimento di una rete Bayes, sviluppato da Cooper e Herskovits, viene utilizzato spesso nel data mining. È scalabile e consente di analizzare più variabili, ma richiede l'ordinamento delle variabili utilizzate come input. Per altre informazioni, vedere [Learning Bayesian Networks](https://go.microsoft.com/fwlink/?LinkId=105885) di Chickering, Geiger e Heckerman.  
   
  Questo metodo di assegnazione dei punteggi è disponibile per gli attributi discreti e discretizzati.  
   
@@ -99,7 +99,7 @@ ms.locfileid: "48067921"
   
  Il metodo equivalente Bayes Dirichlet con probabilità a priori a distribuzione uniforme (BDEU, Bayesian Dirichlet Equivalent with Uniform Prior) presuppone un caso speciale della distribuzione Dirichlet in cui viene utilizzata una costante matematica per creare una distribuzione fissa o uniforme di stati precedenti. Il punteggio BDE presuppone anche un'equivalenza di probabilità, ossia non è possibile prevedere che i dati discriminino strutture equivalenti. In altri termini, se il punteggio di Se A allora B è uguale al punteggio di Se B allora A, non è possibile distinguere le strutture in base ai dati e non è possibile derivare il rapporto di causa ed effetto.  
   
- Per altre informazioni sulle reti Bayes e sull'implementazione di questi metodi di assegnazione dei punteggi, vedere [Learning Bayesian Networks](http://go.microsoft.com/fwlink/?LinkId=105885).  
+ Per altre informazioni sulle reti Bayes e sull'implementazione di questi metodi di assegnazione dei punteggi, vedere [Learning Bayesian Networks](https://go.microsoft.com/fwlink/?LinkId=105885).  
   
 ### <a name="feature-selection-methods-used-by-analysis-services-algorithms"></a>Metodi per implementare la caratteristica di selezione degli attributi utilizzati dagli algoritmi di Analysis Services  
  Nella tabella seguente sono elencati gli algoritmi che supportano la caratteristica di selezione degli attributi, i metodi utilizzati dall'algoritmo e i parametri impostati per controllare il funzionamento di questa caratteristica:  

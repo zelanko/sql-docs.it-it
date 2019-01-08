@@ -11,17 +11,17 @@ ms.assetid: 9b8346a6-f4f4-4ad3-bc98-8f2be342ef2d
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 2d1807caf5b5ef2687121dd465e87eb55b9fd2df
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 14be04840683999430fc4bd1fd65ce35ea13eb2a
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48056211"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53355487"
 ---
 # <a name="prerequisites-for-tutorials-report-builder"></a>Prerequisiti per le esercitazioni (Generatore report)
   Nelle esercitazioni di Generatore report si presuppone che l'utente sia in grado di visualizzare e salvare report in un server di report o in un sito di SharePoint integrato in un server di report. Per quanto riguarda i dati, in tutte le esercitazioni vengono utilizzate query letterali che devono essere elaborate da un'istanza di [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
   
- Se non si dispone dell'accesso a un server di report, a un sito o a un'origine dati, sarà possibile apprendere l'utilizzo di Generatore report attraverso la compilazione di un report offline. Vedere [Esercitazione: Creare un report grafico rapido offline &#40;Generatore report&#41;](report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md).  
+ Se non si dispone dell'accesso a un server di report, a un sito o a un'origine dati, sarà possibile apprendere l'utilizzo di Generatore report attraverso la compilazione di un report offline. Vedere [esercitazione: Creare un Report grafico rapido Offline &#40;Generatore Report&#41;](report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md).  
   
 ## <a name="requirements"></a>Requisiti  
  Per completare le esercitazioni di Generatore report, è necessario soddisfare i requisiti seguenti:  
@@ -36,9 +36,9 @@ ms.locfileid: "48056211"
   
 -   Il nome di un [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] istanza e credenziali sufficienti per l'accesso in lettura a qualsiasi database. Per le query del set di dati delle esercitazioni vengono utilizzati dati letterali, ma per restituire i metadati necessari per un set di dati del report ogni query deve essere elaborata da un'istanza di [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] . Ad esempio, nella stringa di connessione seguente viene specificato solo un server: `data source=<servername>`. È necessario disporre dell'accesso in lettura al database predefinito assegnato all'utente dall'amministratore di sistema che concede l'autorizzazione per l'accesso al server. È inoltre possibile specificare un database, come illustrato nella stringa di connessione seguente: `data source=<servername>;initial catalog=<database>`.  
   
--   Per l'esercitazione in cui è inclusa una mappa, è necessario configurare il server di report affinché supporti le mappe Bing come sfondo. Per altre informazioni, vedere [piano di supporto dei Report mappa](plan-for-map-report-support.md) nelle [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] documentazione nella [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [documentazione in linea](http://go.microsoft.com/fwlink/?LinkId=154888) sul sito msdn.microsoft.com.  
+-   Per l'esercitazione in cui è inclusa una mappa, è necessario configurare il server di report affinché supporti le mappe Bing come sfondo. Per altre informazioni, vedere [piano di supporto dei Report mappa](plan-for-map-report-support.md) nelle [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] documentazione nella [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [documentazione in linea](https://go.microsoft.com/fwlink/?LinkId=154888) sul sito msdn.microsoft.com.  
   
--   L'esercitazione [esercitazione: creazione di drill-through e report principali &#40;Generatore Report&#41;](tutorial-creating-drillthrough-and-main-reports-report-builder.md), viene utilizzato il set di dati dimostrativo di business intelligence business di Contoso. Questo set di dati è costituito dal data warehouse ContosoDW e dal database dell'elaborazione analitica online (OLAP) di Contoso_Retail. I report che si creeranno in questa esercitazione recuperano i dati di report dal cubo vendite Contoso. Il database OLAP di Contoso_Retail può essere scaricato dall' [Area download Microsoft](http://go.microsoft.com/fwlink/?LinkID=191575). Sarà sufficiente scaricare solo il file ContosoBIdemoABF.exe. Il file contiene il database OLAP.  
+-   L'esercitazione, [esercitazione: Creazione di report principali e drill-through &#40;Generatore Report&#41;](tutorial-creating-drillthrough-and-main-reports-report-builder.md), viene utilizzato il set di dati dimostrativo di business intelligence business di Contoso. Questo set di dati è costituito dal data warehouse ContosoDW e dal database dell'elaborazione analitica online (OLAP) di Contoso_Retail. I report che si creeranno in questa esercitazione recuperano i dati di report dal cubo vendite Contoso. Il database OLAP di Contoso_Retail può essere scaricato dall' [Area download Microsoft](https://go.microsoft.com/fwlink/?LinkID=191575). Sarà sufficiente scaricare solo il file ContosoBIdemoABF.exe. Il file contiene il database OLAP.  
   
      L'altro file, ContosoBIdemoBAK.exe, è relativo al data warehouse ContosoDW, che non viene utilizzato in questa esercitazione.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "48056211"
   
      È necessario avere accesso a un'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] sulla quale installare il database OLAP.  
   
- L'amministratore del server di report deve concedere le autorizzazioni necessarie per il server di report, configurare [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] percorsi delle cartelle e le opzioni predefinite di Generatore Report. Per altre informazioni, vedere [di installazione, disinstallazione e supporto di Generatore Report](install-uninstall-and-report-builder-support.md).  
+ L'amministratore del server di report deve concedere le autorizzazioni necessarie per il server di report, configurare i percorsi delle cartelle [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] e configurare le opzioni predefinite di Generatore report. Per altre informazioni, vedere [di installazione, disinstallazione e supporto di Generatore Report](install-uninstall-and-report-builder-support.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Esercitazioni su &#40;Generatore Report&#41;](report-builder-tutorials.md)  

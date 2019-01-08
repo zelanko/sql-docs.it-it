@@ -14,12 +14,12 @@ ms.assetid: 1615db50-69de-4778-8be6-4e058c00ccd4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 62512268f5c4ee98fc20a142d97bf870d74d9ce6
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: 8f792d128d8d75bdf39a2b04b104b827d74c7b63
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018206"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376423"
 ---
 # <a name="spatial-data-types-overview"></a>Panoramica dei tipi di dati spaziali
   Esistono due tipi di dati spaziali. Il tipo di dati `geometry` supporta dati planari o euclidei (terra piatta). Il tipo di dati `geometry` è conforme a Open Geospatial Consortium (OGC) Simple Features for SQL Specification versione 1.1.0 e a SQL MM (standard ISO).  
@@ -27,7 +27,7 @@ ms.locfileid: "51018206"
  Inoltre, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supporta il tipo di dati `geography`, che archivia dati ellissoidali (terra rotonda), ad esempio coordinate di latitudine e longitudine GPS.  
   
 > [!IMPORTANT]  
->  Per una descrizione dettagliata e alcuni esempi delle funzionalità spaziali introdotte in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], tra cui i miglioramenti apportati ai tipi di dati spaziali, scaricare il white paper [Nuove funzionalità spaziali di SQL Server, nome in codice "Denali"](http://go.microsoft.com/fwlink/?LinkId=226407).  
+>  Per una descrizione dettagliata e alcuni esempi delle funzionalità spaziali introdotte in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], tra cui i miglioramenti apportati ai tipi di dati spaziali, scaricare il white paper [Nuove funzionalità spaziali di SQL Server, nome in codice "Denali"](https://go.microsoft.com/fwlink/?LinkId=226407).  
   
 ##  <a name="objects"></a> Oggetti dati spaziali  
  I tipi di dati `geometry` e `geography` supportano sedici oggetti dati spaziali o tipi di istanza. Solo per undici di questi tipi di istanza, tuttavia, è possibile *creare istanze*. È possibile creare e usare queste istanze (o crearne un'istanza) in un database. Queste istanze derivano determinate proprietà dai relativi tipi di dati padre che distinguono come `Points`, **LineStrings, CircularStrings**, `CompoundCurves`, `Polygons`, `CurvePolygons` o come più `geometry`oppure `geography` le istanze in un `GeometryCollection`. Il tipo `Geography` dispone di un tipo di istanza aggiuntivo, `FullGlobe`.  
@@ -99,9 +99,9 @@ ms.locfileid: "51018206"
   
  Per ulteriori informazioni sulle specifiche OGC, vedere quanto riportato di seguito:  
   
--   [OGC Specifications, Simple Feature Access Part 1 - Common Architecture](http://go.microsoft.com/fwlink/?LinkId=93627)  
+-   [OGC Specifications, Simple Feature Access Part 1 - Common Architecture](https://go.microsoft.com/fwlink/?LinkId=93627)  
   
--   [OGC Specifications, Simple Feature Access Part 2 – SQL Options](http://go.microsoft.com/fwlink/?LinkId=93628)  
+-   [OGC Specifications, Simple Feature Access Part 2 - SQL Options](https://go.microsoft.com/fwlink/?LinkId=93628) (Specifiche OGC, accesso semplificato alle caratteristiche Parte 2 - Opzioni SQL)  
   
   
 ##  <a name="circular"></a> Segmenti di arco circolare  
@@ -149,7 +149,7 @@ SELECT @g1.STLength() AS [LS Length], @g2.STLength() AS [CS Length];
   
 ```  
 LS LengthCS Length  
-5.65685…6.28318…  
+5.65685...6.28318...  
 ```  
   
  La figura seguente mostra come viene archiviato ogni tipo (linea rossa indica `LineString``@g1`blu, riga mostra `CircularString``@g2`):  

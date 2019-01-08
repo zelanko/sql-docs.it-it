@@ -12,12 +12,12 @@ ms.assetid: 931a28c3-8ea1-45d6-9ca1-2b8388c4d8b0
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5fb7c388d3a3e46b8f56a4bf002701e5be16e598
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f966d8aa907c6a92f4ac964fd7d937dab94afa95
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48155558"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53366803"
 ---
 # <a name="obtain-a-fastforward-cursor"></a>Ottenere un cursore FAST_FORWARD
   Per ottenere un cursore forward-only di sola lettura, impostare le proprietà del set di righe DBPROP_SERVERCURSOR, DBPROP_OTHERINSERT, DBPROP_OTHERUPDATEDELETE, DBPROP_OWNINSERT e DBPROP_OWNUPDATEDELETE su VARIANT_TRUE.  
@@ -25,7 +25,7 @@ ms.locfileid: "48155558"
  In un esempio completo viene illustrato come impostare le proprietà del set di righe per ottenere un cursore FAST_FORWARD. Dopo che le proprietà sono state impostate, viene eseguita un'istruzione SELECT per recuperare e visualizzare la colonna **Name** della tabella **Purchasing.Vendor** del database **AdventureWorks**.  
   
 > [!IMPORTANT]  
->  Se possibile, usare l'autenticazione di Windows. Se non è disponibile, agli utenti verrà richiesto di immettere le credenziali in fase di esecuzione. Evitare di archiviare le credenziali in un file. Se è necessario rendere persistenti le credenziali, è consigliabile crittografarle usando l'[API di crittografia Win32](http://go.microsoft.com/fwlink/?LinkId=64532).  
+>  Se possibile, usare l'autenticazione di Windows. Se non è disponibile, agli utenti verrà richiesto di immettere le credenziali in fase di esecuzione. Evitare di archiviare le credenziali in un file. Se è necessario rendere persistenti le credenziali, è consigliabile crittografarle usando l'[API di crittografia Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
   
 ### <a name="to-obtain-fastforward-cursor"></a>Per ottenere un cursore FAST_FORWARD  
   
@@ -38,7 +38,7 @@ ms.locfileid: "48155558"
 ## <a name="example"></a>Esempio  
  Nell'esempio seguente viene illustrato come impostare le proprietà di un set di righe in modo da ottenere un cursore FAST_FORWARD. Una volta impostate le proprietà, viene eseguita un'istruzione SELECT per recuperare e visualizzare la colonna Name della tabella Purchasing.Vendor del database AdventureWorks. Questo esempio non è supportato in IA64.  
   
- Per l'esempio è necessario il database di esempio AdventureWorks, che è possibile scaricare dalla home page del sito relativo a [progetti della community ed esempi per Microsoft SQL Server](http://go.microsoft.com/fwlink/?LinkID=85384).  
+ Per l'esempio è necessario il database di esempio AdventureWorks, che è possibile scaricare dalla home page del sito relativo a [progetti della community ed esempi per Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkID=85384).  
   
  Compilare il listato di codice C++ seguente con ole32.lib oleaut32.lib ed eseguirlo. In questa applicazione viene eseguita la connessione all'istanza predefinita di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nel computer in uso. In alcuni sistemi operativi Windows sarà necessario modificare (local) o (localhost) impostando il valore sul nome dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per connettersi a un'istanza denominata, modificare la stringa di connessione da L"(local)" in L"(local)\\\nome", dove nome rappresenta l'istanza denominata. Per impostazione predefinita, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express viene installato in un'istanza denominata. Verificare che nella variabile di ambiente INCLUDE sia presente la directory che contiene sqlncli.h.  
   

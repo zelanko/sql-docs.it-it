@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - best practices
@@ -13,12 +12,12 @@ ms.assetid: 773c5c62-fd44-44ab-9c6b-4257dbf8ffdb
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 70fb66a1b61dbbdec0fd8443ac150b32c3770818
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5df70271c281673c71fb378564f454f0822998ab
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48145527"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52786143"
 ---
 # <a name="best-practices-for-time-based-row-filters"></a>Procedure consigliate per i filtri di riga basati sul tempo
   Gli utenti delle applicazioni hanno spesso la necessità di recuperare da diverse tabelle determinati subset di dati basati sul tempo. Un venditore potrebbe ad esempio richiedere i dati relativi agli ordini dell'ultima settimana, così come un responsabile della pianificazione di eventi potrebbe aver bisogno di recuperare i dati relativi agli eventi della settimana in arrivo. Per soddisfare queste richieste, le applicazioni utilizzano, in numerosi casi, query contenenti la funzione `GETDATE()`. Si consideri l'istruzione di filtro di riga seguente:  
@@ -50,13 +49,13 @@ WHERE EventCoordID = CONVERT(INT,HOST_NAME()) AND EventDate <= (GETDATE()+6)
 ## <a name="recommendations-for-using-time-based-row-filters"></a>Indicazioni sull'utilizzo dei filtri di riga basati sul tempo  
  Il metodo seguente offre un approccio semplice ed efficace per il filtraggio basato sul tempo:  
   
--   Aggiungere una colonna alla tabella del tipo di dati `bit`. Questa colonna indica se è necessario replicare una riga.  
+-   Aggiungere alla tabella una colonna del tipo di dati `bit`. Questa colonna indica se è necessario replicare una riga.  
   
 -   Utilizzare un filtro di riga che fa riferimento alla nuova colonna, anziché a una colonna basata sul tempo.  
   
 -   Creare un processo di SQL Server Agent, o un processo pianificato tramite un altro meccanismo, per aggiornare la colonna prima dell'avvio pianificato dell'agente di merge.  
   
- Questo approccio superare i limiti di utilizzo `GETDATE()` o un altro metodo basati sul tempo e si evita di dover determinare quando i filtri vengono valutati per le partizioni. Si consideri la tabella **Events** seguente:  
+ Questo approccio consente di superare i limiti del metodo `GETDATE()` o di altri metodi basati sul tempo e di evitare il problema di determinare il momento della valutazione dei filtri per le partizioni. Si consideri la tabella **Events** seguente:  
   
 |**EventID**|**EventName**|**EventCoordID**|**EventDate**|**Replica**|  
 |-----------------|-------------------|----------------------|-------------------|-------------------|  

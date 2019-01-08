@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 f1_keywords:
 - Sql12.swb.sqlimail.newaccount.f1
@@ -40,12 +39,12 @@ ms.assetid: 7edc21d4-ccf3-42a9-84c0-3f70333efce6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2a1e6aa62858c85da20f13295cfb2dce0ee302ea
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 72f7ee857946267ca1c8732976cb31d30767bfed
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48217621"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53371183"
 ---
 # <a name="configure-database-mail"></a>Configurare Posta elettronica database
   In questo argomento viene illustrato come abilitare e configurare Posta elettronica database utilizzando la Configurazione guidata Posta elettronica database e come creare uno script di configurazione per Posta elettronica database utilizzando i modelli.  
@@ -79,11 +78,11 @@ ms.locfileid: "48217621"
 ###  <a name="Welcome"></a> Pagina introduttiva  
  In questa pagina vengono illustrati i passaggi necessari per configurare Posta elettronica database.  
   
- **Non visualizzare più questa pagina** : selezionare questa opzione per non visualizzare più la pagina introduttiva.  
+ **Non visualizzare più questa pagina**: selezionare questa opzione per non visualizzare più la pagina introduttiva.  
   
  **Avanti** : consente di passare alla pagina **Selezionare un'attività di configurazione** .  
   
- **Annulla** : consente di terminare la procedura guidata senza configurare Posta elettronica database  
+ **Annulla**: consente di terminare la procedura guidata senza configurare Posta elettronica database  
   
  
   
@@ -91,7 +90,7 @@ ms.locfileid: "48217621"
  Usare la pagina **Selezione attività di configurazione** per indicare quali attività verranno eseguite ogni volta che si usa la procedura guidata. Se si vuole cambiare tali attività prima del completamento della procedura guidata, fare clic sul pulsante **Indietro** per tornare in questa pagina e selezionare un'attività diversa.  
   
 > [!NOTE]  
->  Se la funzionalità Posta elettronica database non è stata abilitata, verrà visualizzato il messaggio **La caratteristica Posta elettronica database non è disponibile.  Abilitarla?** L'opzione **Sì**equivale ad abilitare la funzionalità Posta elettronica database usando l'opzione [Stored procedure estese di posta elettronica database](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md) della stored procedure di sistema **sp_configure** .  
+>  Se posta elettronica Database non è stato abilitato, si riceverà il messaggio: **La funzionalità di posta elettronica Database non è disponibile.  Abilitarla?** L'opzione **Sì**equivale ad abilitare la funzionalità Posta elettronica database usando l'opzione [Stored procedure estese di posta elettronica database](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md) della stored procedure di sistema **sp_configure** .  
   
  **Installa Posta elettronica database eseguendo le attività seguenti**  
  Consente di eseguire tutte le attività necessarie per installare Posta elettronica database per la prima volta. Questa opzione include tutte le altre tre.  
@@ -415,7 +414,7 @@ ms.locfileid: "48217621"
  Valore **mailitem_id** del messaggio di posta elettronica di prova.  
   
  **Risoluzione dei problemi**  
- Fare clic su questo pulsante per aprire la documentazione online relativa all'argomento [Risoluzione dei problemi relativi a Posta elettronica database](http://msdn.microsoft.com/library/ms188663.aspx).  
+ Fare clic su questo pulsante per aprire la documentazione online relativa all'argomento [Risoluzione dei problemi relativi a Posta elettronica database](https://msdn.microsoft.com/library/ms188663.aspx).  
   
 
   

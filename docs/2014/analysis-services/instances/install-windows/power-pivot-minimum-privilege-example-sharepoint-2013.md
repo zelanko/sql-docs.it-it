@@ -11,18 +11,18 @@ ms.assetid: c1e09e6c-52d3-48ab-8c70-818d5d775087
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 99ca1f404297c9897fde4c257872c6088d540654
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b79b9c6662b40b860cfacd85d77b09dbfb04117d
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48193941"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53368393"
 ---
 # <a name="example-of-a-minimum-privilege-configuration-for-powerpivot-for-sharepoint-2013"></a>Esempio di una configurazione con privilegi minimi per PowerPivot per SharePoint 2013
   In questo argomento viene illustrata una configurazione di esempio di PowerPivot per SharePoint 2013 con privilegi minimi. Nella configurazione viene utilizzato un account diverso per ognuno dei tre componenti e ogni account dispone del livello minimo di privilegi.  
   
 ## <a name="summary-of-accounts"></a>Riepilogo degli account  
- PowerPivot per SharePoint 2013 supporta l'utilizzo dell'account Servizio di rete per l'account del servizio Analysis Services. L'account Servizio di rete non è supportato con SharePoint 2010. Per altre informazioni sugli account di servizio, vedere [configurare gli account del servizio Windows e le autorizzazioni](../../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md) (http://msdn.microsoft.com/library/ms143504.aspx).  
+ PowerPivot per SharePoint 2013 supporta l'utilizzo dell'account Servizio di rete per l'account del servizio Analysis Services. L'account Servizio di rete non è supportato con SharePoint 2010. Per altre informazioni sugli account di servizio, vedere [configurare gli account del servizio Windows e le autorizzazioni](../../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md) (https://msdn.microsoft.com/library/ms143504.aspx).  
   
  Nella tabella seguente sono riepilogati i tre account utilizzati nell'esempio di configurazione con privilegi minimi.  
   

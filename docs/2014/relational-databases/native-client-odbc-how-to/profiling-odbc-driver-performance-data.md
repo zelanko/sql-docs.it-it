@@ -12,18 +12,18 @@ ms.assetid: b997790a-8cc6-4800-8867-74c1bef07be3
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3d6c9b42b89b20e2a4f72f1cf78a0a67c4f77c64
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a7de38f3c91814dbd364caee84b34dacdfbdf475
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48194721"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53357122"
 ---
 # <a name="profile-driver-performance-data-odbc"></a>Analizzare i dati relativi alle prestazioni del driver (ODBC)
   In questo esempio vengono illustrate le opzioni specifiche del driver ODBC di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per la registrazione delle statistiche relative alle prestazioni. L'esempio crea un file: odbcperf illustra la creazione di un file di log delle prestazioni dei dati e visualizzazione dei dati sulle prestazioni direttamente dalla struttura di dati (la struttura SQLPERF è definita in Odbcss. h.). L'esempio è stato sviluppato per ODBC versione 3.0 o successiva.  
   
 > [!IMPORTANT]  
->  Se possibile, usare l'autenticazione di Windows. Se non è disponibile, agli utenti verrà richiesto di immettere le credenziali in fase di esecuzione. Evitare di archiviare le credenziali in un file. Se è necessario rendere persistenti le credenziali, è consigliabile crittografarle usando l'[API di crittografia Win32](http://go.microsoft.com/fwlink/?LinkId=64532).  
+>  Se possibile, usare l'autenticazione di Windows. Se non è disponibile, agli utenti verrà richiesto di immettere le credenziali in fase di esecuzione. Evitare di archiviare le credenziali in un file. Se è necessario rendere persistenti le credenziali, è consigliabile crittografarle usando l'[API di crittografia Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
   
 ### <a name="to-log-driver-performance-data-using-odbc-administrator"></a>Per registrare i dati relativi alle prestazioni del driver tramite Amministratore ODBC  
   
@@ -41,7 +41,7 @@ ms.locfileid: "48194721"
   
 ### <a name="to-log-driver-performance-data-programmatically"></a>Per registrare i dati relativi alle prestazioni del driver a livello di programmazione  
   
-1.  Chiamare [SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md) con SQL_COPT_SS_PERF_DATA_LOG e il nome di file e percorso completo del file di log dei dati sulle prestazioni. Esempio:  
+1.  Chiamare [SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md) con SQL_COPT_SS_PERF_DATA_LOG e il nome di file e percorso completo del file di log dei dati sulle prestazioni. Ad esempio:  
   
     ```  
     "C:\\Odbcperf.log"  
@@ -62,7 +62,7 @@ ms.locfileid: "48194721"
 3.  Chiamare [SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md) con SQL_COPT_SS_PERF_DATA e SQL_PERF_STOP per arrestare la registrazione dei dati sulle prestazioni.  
   
 ## <a name="example"></a>Esempio  
- È necessaria un'origine dati ODBC denominata AdventureWorks, il cui database predefinito è il database di esempio AdventureWorks. È possibile scaricare il database di esempio AdventureWorks dalla home page del sito relativo a [progetti della community ed esempi per Microsoft SQL Server](http://go.microsoft.com/fwlink/?LinkID=85384). Questa origine dati deve essere basata sul driver ODBC fornito dal sistema operativo (il nome del driver è "SQL Server"). Se questo esempio viene compilato ed eseguito come applicazione a 32 bit in un sistema operativo a 64 bit, è necessario creare l'origine dati ODBC con Amministratore ODBC in %windir%\SysWOW64\odbcad32.exe.  
+ È necessaria un'origine dati ODBC denominata AdventureWorks, il cui database predefinito è il database di esempio AdventureWorks. È possibile scaricare il database di esempio AdventureWorks dalla home page del sito relativo a [progetti della community ed esempi per Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkID=85384). Questa origine dati deve essere basata sul driver ODBC fornito dal sistema operativo (il nome del driver è "SQL Server"). Se questo esempio viene compilato ed eseguito come applicazione a 32 bit in un sistema operativo a 64 bit, è necessario creare l'origine dati ODBC con Amministratore ODBC in %windir%\SysWOW64\odbcad32.exe.  
   
  In questo esempio viene eseguita la connessione all'istanza predefinita di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nel computer in uso. Per connettersi a un'istanza denominata, modificare la definizione dell'origine dati ODBC per specificare l'istanza in base al formato: server\istanzadenominata. Per impostazione predefinita, [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] viene installato in un'istanza denominata.  
   

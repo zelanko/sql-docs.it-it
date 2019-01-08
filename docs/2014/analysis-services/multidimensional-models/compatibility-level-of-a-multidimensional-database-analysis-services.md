@@ -11,12 +11,12 @@ ms.assetid: 978279e6-a581-4184-af9d-8701b9826a89
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ebe649261a1f97093f40ad2aa3f20f96306fd1b6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fcf32b558d34340d727a357136884b8d6530887b
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48219121"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53363763"
 ---
 # <a name="set-the-compatibility-level-of-a-multidimensional-database-analysis-services"></a>Impostare il livello di compatibilità di un database multidimensionale (Analysis Services)
   In [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]la proprietà del livello di compatibilità del database determina il livello funzionale di un database. I livelli di compatibilità sono univoci per ogni tipo di modello. Ad esempio, un livello di compatibilità di `1100` ha un significato diverso a seconda del fatto che il database è multidimensionale o tabulare.  
@@ -24,7 +24,7 @@ ms.locfileid: "48219121"
  In questo argomento viene descritto il livello di compatibilità solo per i database multidimensionali. Per altre informazioni sulle soluzioni tabulari, vedere [livello di compatibilità &#40;SP1 in formato tabulare SSAS&#41;](../tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md).  
   
 > [!NOTE]  
->  I modelli tabulari presentano livelli di compatibilità dei database aggiuntivi non applicabili ai modelli multidimensionali. Livello di compatibilità `1103` non esiste per i modelli multidimensionali. Visualizzare [quali sono le novità per il modello tabulare in SQL Server 2012 SP1 e livello di compatibilità](http://go.microsoft.com/fwlink/?LinkId=301727) per altre informazioni sulle `1103` per le soluzioni tabulari.  
+>  I modelli tabulari presentano livelli di compatibilità dei database aggiuntivi non applicabili ai modelli multidimensionali. Il livello di compatibilità `1103` non esiste per i modelli multidimensionali. Visualizzare [quali sono le novità per il modello tabulare in SQL Server 2012 SP1 e livello di compatibilità](https://go.microsoft.com/fwlink/?LinkId=301727) per altre informazioni sulle `1103` per le soluzioni tabulari.  
   
  **Livelli di compatibilità per database multidimensionali**  
   
@@ -32,7 +32,7 @@ ms.locfileid: "48219121"
   
  Per un database multidimensionale, tra i valori validi per la proprietà `CompatibilityLevel` sono inclusi i seguenti:  
   
-|Impostazione|Description|  
+|Impostazione|Descrizione|  
 |-------------|-----------------|  
 |`1050`|Questo valore non è visibile negli script o negli strumenti, ma corrisponde ai database creati in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]o [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]. Qualsiasi database il cui `CompatibilityLevel` non è impostato in modo esplicito viene eseguito in modo implicito al livello `1050`.|  
 |`1100`|Si tratta del valore predefinito per i nuovi database creati in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Questa impostazione può essere specificata anche per i database creati in versioni precedenti di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] per consentire l'utilizzo di funzionalità che sono supportate solo a questo livello di compatibilità (vale a dire, archivio di stringhe esteso per misure Distinct Count o attributi della dimensione contenenti dati di tipo stringa).<br /><br /> I database con un `CompatibilityLevel` impostata su `1100` ottengono una proprietà aggiuntiva, `StringStoresCompatibilityLevel`, che consente di scegliere archiviazione alternativa di stringhe per partizioni e dimensioni.|  
@@ -50,7 +50,7 @@ ms.locfileid: "48219121"
 ## <a name="determine-the-existing-database-compatibility-level-for-a-multidimensional-database"></a>Determinare il livello di compatibilità del database esistente per un database multidimensionale  
  L'unico modo per visualizzare o modificare il livello di compatibilità del database è tramite XMLA. È possibile visualizzare o modificare lo script XMLA che specifica il database in SQL Server Management Studio.  
   
- Se si cerca la definizione XMLA di un database per la proprietà `CompatibilityLevel` e non esiste, molto probabile che il database sia eseguito il `1050` livello.  
+ Se si cerca la definizione XMLA di un database per la proprietà `CompatibilityLevel` e non esiste, è probabile che il database sia eseguito al livello di compatibilità `1050`.  
   
  Le istruzioni per la visualizzazione e la modifica dello script XMLA vengono fornite nella sezione successiva.  
   
@@ -90,9 +90,9 @@ ms.locfileid: "48219121"
 3.  La sincronizzazione di server è supportata solo per server in cui viene condivisa la stessa versione e lo stesso livello di compatibilità del database.  
   
 ## <a name="next-steps"></a>Passaggi successivi  
- Dopo aver aumentato il livello di compatibilità del database, è possibile impostare il `StringStoresCompatibilityLevel` proprietà [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]. In questo modo viene aumentato l'archivio di stringhe per misure e dimensioni. Per altre informazioni su questa funzionalità, vedere [Configurare l'archivio di stringhe per dimensioni e partizioni](configure-string-storage-for-dimensions-and-partitions.md).  
+ Dopo aver aumentato il livello di compatibilità del database, è possibile impostare la proprietà `StringStoresCompatibilityLevel` in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]. In questo modo viene aumentato l'archivio di stringhe per misure e dimensioni. Per altre informazioni su questa funzionalità, vedere [Configurare l'archivio di stringhe per dimensioni e partizioni](configure-string-storage-for-dimensions-and-partitions.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Il backup, ripristino e sincronizzazione dei database &#40;XMLA&#41;](../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)  
+ [Backup, ripristino e sincronizzazione di database &#40;XMLA&#41;](../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)  
   
   

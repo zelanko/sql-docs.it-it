@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: native-client
+ms.technology: ''
 ms.topic: reference
 helpviewer_keywords:
 - date/time [OLE DB], data type support
@@ -13,20 +13,20 @@ ms.assetid: d40e3fd6-9057-4371-8236-95cef300603e
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2ff3ef6c9fd7347585b4e7df026fdc95bafdd069
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 72bc879e1c04199f5e8e8cbdc1d630cf43113520
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48157921"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52807783"
 ---
 # <a name="data-type-support-for-ole-db-date-and-time-improvements"></a>Supporto dei tipi di dati per i miglioramenti relativi a data e ora OLE DB
   In questo argomento vengono fornite informazioni sui tipi OLE DB ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client) che supportano i tipi di dati di data/ora di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="data-type-mapping-in-rowsets-and-parameters"></a>Mapping dei tipi di dati in set di righe e parametri  
- OLE DB fornisce due nuovi tipi di dati per supportare i nuovi tipi di server: DBTYPE_DBTIME2 e DBTYPE_DBTIMESTAMPOFFSET. Nella tabella seguente viene illustrato il mapping completo per il tipo di server:  
+ OLE DB fornisce due nuovi tipi di dati per supportare nuovi tipi di server: DBTYPE_DBTIME2 e DBTYPE_DBTIMESTAMPOFFSET. Nella tabella seguente viene illustrato il mapping completo per il tipo di server:  
   
-|Tipo di dati [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|Tipo di dati OLE DB|valore|  
+|Tipo di dati [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|Tipo di dati OLE DB|Value|  
 |-----------------------------------------|----------------------|-----------|  
 |DATETIME|DBTYPE_DBTIMESTAMP|135 (oledb.h)|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|135 (oledb.h)|  
@@ -35,7 +35,7 @@ ms.locfileid: "48157921"
 |datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|146 (sqlncli.h)|  
 |datetime2|DBTYPE_DBTIMESTAMP|135 (oledb.h)|  
   
-## <a name="data-formats-strings-and-literals"></a>Formati di dati: stringhe e valori letterali  
+## <a name="data-formats-strings-and-literals"></a>Formati di dati: Le stringhe e valori letterali  
   
 |Tipo di dati [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|Tipo di dati OLE DB|Formato stringa per le conversioni client|  
 |-----------------------------------------|----------------------|------------------------------------------|  
@@ -56,7 +56,7 @@ ms.locfileid: "48157921"
   
  Una stringa vuota non è un valore letterale di data/ora valido e non rappresenta un valore NULL. Un tentativo di convertire una stringa vuota in un valore di data/ora genererà errori con SQLState 22018 e il messaggio "Carattere non valido per la specifica del cast".  
   
-## <a name="data-formats-data-structures"></a>Formati di dati: strutture di dati  
+## <a name="data-formats-data-structures"></a>Formati di dati: Strutture di dati  
  Nelle strutture specifiche di OLE DB descritte di seguito a OLE DB si applicano gli stessi vincoli di ODBC. Tali vincoli dipendono dal calendario gregoriano:  
   
 -   L'intervallo per i mesi è compreso tra 1 e 12.  

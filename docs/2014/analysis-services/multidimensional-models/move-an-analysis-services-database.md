@@ -15,12 +15,12 @@ ms.assetid: fa644e5d-e276-445e-98d9-673afcfb83fe
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 69a3d667bbe057387d05ffd814ca3ea1a3854238
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 0939540af0c302832925a7a1bef6367718b8c1be
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145326"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53369281"
 ---
 # <a name="move-an-analysis-services-database"></a>Spostare un database di Analysis Services
   Spesso, un amministratore del database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] desidera spostare un database multidimensionale o tabulare in un percorso diverso. Queste situazioni spesso sono determinate da esigenze aziendali, ad esempio lo spostamento del database in un disco diverso per migliorare le prestazioni, la necessità di ottenere più spazio per la crescita del database oppure per aggiornare un prodotto.  
@@ -44,7 +44,7 @@ ms.locfileid: "50145326"
   
 1.  Individuare il database da spostare nel riquadro sinistro o destro di SSMS.  
   
-2.  Fare clic con il pulsante destro del mouse sul database, quindi scegliere **Scollega**.  
+2.  Fare clic sul database e scegliere **Scollega...**  
   
 3.  Assegnare una password al database da scollegare, quindi fare clic su **OK** per eseguire il comando.  
   
@@ -52,9 +52,9 @@ ms.locfileid: "50145326"
   
 5.  Individuare la cartella **Database** nel riquadro sinistro o destro di SSMS.  
   
-6.  Fare clic con il pulsante destro del mouse sulla cartella **Database** , quindi scegliere **Collega**.  
+6.  Fare clic sui **database** cartella e selezionare **Connetti...**  
   
-7.  Nella casella di testo **cartella** digitare il nuovo percorso della cartella del database. In alternativa, è possibile usare il pulsante Sfoglia (**...**) per individuare la cartella del database.  
+7.  Nella casella di testo **cartella** digitare il nuovo percorso della cartella del database. In alternativa, è possibile usare il pulsante Sfoglia (**...** ) per individuare la cartella di database.  
   
 8.  Selezionare il `ReadWrite` modalità per il database.  
   
@@ -108,7 +108,7 @@ ms.locfileid: "50145326"
   
 2.  Copiare il modello di script seguente per XMLA:  
   
- `<Detach xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">`  
+ `<Detach xmlns="https://schemas.microsoft.com/analysisservices/2003/engine">`  
   
  `<Object>`  
   
@@ -128,11 +128,11 @@ ms.locfileid: "50145326"
   
 4.  Copiare il modello di script seguente per XMLA in una nuova scheda XMLA:  
   
- `<Attach xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">`  
+ `<Attach xmlns="https://schemas.microsoft.com/analysisservices/2003/engine">`  
   
  `<Folder>%dbFolder%</Folder>`  
   
- `<ReadWriteMode xmlns="http://schemas.microsoft.com/analysisservices/2008/engine/100">%ReadOnlyMode%</ReadWriteMode>`  
+ `<ReadWriteMode xmlns="https://schemas.microsoft.com/analysisservices/2008/engine/100">%ReadOnlyMode%</ReadWriteMode>`  
   
  `</Attach>`  
   

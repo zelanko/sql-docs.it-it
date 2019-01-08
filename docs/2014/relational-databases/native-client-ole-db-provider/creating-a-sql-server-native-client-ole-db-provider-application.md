@@ -14,12 +14,12 @@ ms.assetid: f3ae6815-f32d-4913-a1a2-2ba2f20cfd88
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8f2476ebb3997db16c8ffebdd0aac2d6eebe9a68
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0e422ac6535900a287ae610a85241dc67172c4f7
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48182691"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53357732"
 ---
 # <a name="creating-a-sql-server-native-client-ole-db-provider-application"></a>Creazione di un'applicazione del provider OLE DB di SQL Server Native Client
   Creazione di un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] applicazione del provider OLE DB Native Client implica questi passaggi:  
@@ -31,9 +31,9 @@ ms.locfileid: "48182691"
 3.  Elaborazione dei risultati.  
   
 > [!NOTE]  
->  Se possibile, usare l'autenticazione di Windows. Se non è disponibile, agli utenti verrà richiesto di immettere le credenziali in fase di esecuzione. Evitare di archiviare le credenziali in un file. Se è necessario rendere persistenti le credenziali, è consigliabile crittografarle usando [CryptoAPI Win32](http://go.microsoft.com/fwlink/?LinkId=9504).  
+>  Se possibile, usare l'autenticazione di Windows. Se non è disponibile, agli utenti verrà richiesto di immettere le credenziali in fase di esecuzione. Evitare di archiviare le credenziali in un file. Se è necessario rendere persistenti le credenziali, è consigliabile crittografarle usando [CryptoAPI Win32](https://go.microsoft.com/fwlink/?LinkId=9504).  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>In questa sezione  
   
 -   [Avvio di una connessione a un'origine dati](establishing-a-connection-to-a-data-source.md)  
   

@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e418dc2ba40965b3eb25382c0f9438edc2e6b0bd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: acbdb4b406d3ec0c2820e2be7988c32af249379c
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47846439"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590315"
 ---
 # <a name="spsettriggerorder-transact-sql"></a>sp_settriggerorder (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -44,22 +44,22 @@ sp_settriggerorder [ @triggername = ] '[ triggerschema. ] triggername'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@triggername=** ] **'**[ *triggerschema ***.**] *triggername * * * '**  
- Nome del trigger e schema al quale appartiene, se applicabile, il cui ordine deve essere impostato o modificato. [*triggerschema ***.**]* triggername * viene **sysname**. Se il nome specificato non corrisponde a un trigger oppure corrisponde a un trigger INSTEAD OF, viene restituito un errore. *triggerschema* non è possibile specificare per i trigger DDL o logon.  
+ [  **@triggername=** ] **'**[ _triggerschema_**.**] _triggername_**'**  
+ Nome del trigger e schema al quale appartiene, se applicabile, il cui ordine deve essere impostato o modificato. [_triggerschema_**.**] *triggername* viene **sysname**. Se il nome specificato non corrisponde a un trigger oppure corrisponde a un trigger INSTEAD OF, viene restituito un errore. *triggerschema* non è possibile specificare per i trigger DDL o logon.  
   
- [ **@order=** ] **'***valore***'**  
+ [ **@order=** ] **'**_value_**'**  
  Impostazione del nuovo ordine del trigger. *valore* viene **varchar (10)** e può essere uno dei valori seguenti.  
   
 > [!IMPORTANT]  
 >  Il **primo** e **ultima** trigger devono essere due trigger distinti.  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |**Primo**|Trigger avviato per primo.|  
 |**Ultimo**|Trigger avviato per ultimo.|  
-|**Nessuno**|Il trigger viene attivato in base a un ordine non definito.|  
+|**None**|Il trigger viene attivato in base a un ordine non definito.|  
   
- [  **@stmttype=** ] **'***statement_type***'**  
+ [  **@stmttype=** ] **'**_statement_type_**'**  
  Specifica l'istruzione SQL che attiva il trigger. *statement_type* viene **varchar (50)** e può essere INSERT, UPDATE, DELETE, LOGON o qualsiasi [!INCLUDE[tsql](../../includes/tsql-md.md)] elencato nell'evento dell'istruzione [eventi DDL](../../relational-databases/triggers/ddl-events.md). Non è possibile specificare gruppi di eventi.  
   
  Un trigger può essere designato come il **primo** oppure **ultima** trigger per un tipo di istruzione solo dopo che tale trigger è stato definito come trigger per tale tipo di istruzione. Ad esempio, attivare **TR1** può essere designato **primo** per l'inserimento nella tabella **T1** se **TR1** è definito come trigger INSERT. Il [!INCLUDE[ssDE](../../includes/ssde-md.md)] restituisce un errore se **TR1**, che è stata definita solo come trigger INSERT, viene impostato come una **prima**, oppure **ultimo**, trigger per un'istruzione UPDATE. Per altre informazioni, vedere la sezione Osservazioni.  
@@ -121,7 +121,7 @@ GO
 sp_settriggerorder @triggername= 'Sales.uSalesOrderHeader', @order='First', @stmttype = 'UPDATE';  
 ```  
   
-### <a name="b-setting-the-firing-order-for-a-ddl-trigger"></a>B. Impostazione dell'ordine di attivazione per un trigger DDL  
+### <a name="b-setting-the-firing-order-for-a-ddl-trigger"></a>b. Impostazione dell'ordine di attivazione per un trigger DDL  
  Nell'esempio seguente il trigger `ddlDatabaseTriggerLog` viene definito come primo trigger da attivare dopo che si è verificato un evento `ALTER_TABLE` nel database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
 ```  

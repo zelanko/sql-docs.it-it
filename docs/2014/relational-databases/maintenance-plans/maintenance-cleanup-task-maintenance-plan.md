@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.maint.cleanup.f1
@@ -15,12 +14,12 @@ ms.assetid: 022b679c-6799-4c13-9185-814224a20412
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 03e4059b6a35b1d447953c8816d40c1b753f59fe
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 175998d210bec502199922831adc3508cc9171a6
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48142301"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52801493"
 ---
 # <a name="maintenance-cleanup-task-maintenance-plan"></a>Attività Pulizia file manutenzione (Piano di manutenzione)
   Usare l' **Attività Pulizia file di manutenzione** per rimuovere file obsoleti correlati ai piani di manutenzione, inclusi i report in formato testo creati dai piani di manutenzione e i file di backup del database.  
@@ -78,7 +77,7 @@ ms.locfileid: "48142301"
  **Selezionare o immettere il nome di un server**  
  Consente di selezionare il server a cui connettersi per l'esecuzione dell'attività.  
   
- **…**  
+ **...**  
  Consente di visualizzare l'elenco dei server disponibili.  
   
  **Immettere le informazioni per l'accesso al server**  

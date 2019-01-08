@@ -14,21 +14,21 @@ ms.assetid: cca3dcf0-2a7e-465a-84de-7ce055360eb6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 915884866ce58346fa1257b6746c35b4f5cddc40
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5bf07f4e83cb58966b384a4bf0f523b7a1dd3881
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48085321"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53356328"
 ---
 # <a name="communicating-with-sql-server-odbc"></a>Comunicazione con SQL Server (ODBC)
   Per un'applicazione ODBC comunicare con un'istanza di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], è necessario che allochi ambiente e connection gestisce e connettersi all'origine dati. Una volta stabilita una connessione, l'applicazione può inviare query al server ed elaborare qualsiasi set di risultati. Quando l'applicazione ha completato l'utilizzo dell'origine dati, si disconnette dall'origine dati e rilascia l'handle di connessione. Quando l'applicazione ha rilasciato tutti gli handle di connessione, rilascia l'handle di ambiente.  
   
  Un'applicazione può connettersi a qualsiasi numero di origini dati. L'applicazione può utilizzare una combinazione di driver e origini dati, lo stesso driver e una combinazione di origini dati o persino lo stesso driver e più connessioni alla stessa origine dati.  
   
- È possibile scaricare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di esempi ODBC di Native Client dal [SQL Server Downloads](http://go.microsoft.com/fwlink/?LinkId=62796) pagina su MSDN.  
+ È possibile scaricare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di esempi ODBC di Native Client dal [SQL Server Downloads](https://go.microsoft.com/fwlink/?LinkId=62796) pagina su MSDN.  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>In questa sezione  
   
 -   [Allocazione di un handle di ambiente](allocating-an-environment-handle.md)  
   

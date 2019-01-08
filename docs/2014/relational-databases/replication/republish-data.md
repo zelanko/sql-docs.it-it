@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - republishing data
@@ -15,12 +14,12 @@ ms.assetid: a1485cf4-b1c4-49e9-ab06-8ccfaad998f3
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 08b24f4f2c881424c6e6bb5c1a9fb1e4217b74eb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 976520f5000d3a0f96ee3bdea25bcc9802939d36
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48057051"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52794193"
 ---
 # <a name="republish-data"></a>Ripubblicazione dei dati
   In un modello di ripubblicazione il server di pubblicazione invia i dati a un Sottoscrittore, il quale ripubblica i dati in un numero qualsiasi di altri Sottoscrittori. Si tratta di un comportamento utile quando un server di pubblicazione deve inviare dati ai Sottoscrittori tramite un collegamento di comunicazione lento o costoso. Se all'altro capo del collegamento sono presenti più Sottoscrittori, l'utilizzo di un server di ripubblicazione consente di trasferirvi il carico dell'attività di distribuzione.  
@@ -46,7 +45,7 @@ ms.locfileid: "48057051"
   
  ![Republishing data](media/repl-06a.gif "Republishing data")  
   
- Ogni server può operare sia come server di pubblicazione che come Sottoscrittore. Si consideri ad esempio la figura seguente, in cui la pubblicazione di una tabella ubicata a Londra deve essere distribuita in quattro diverse città degli Stati Uniti: Chicago, New York, San Diego e Seattle. Per la sottoscrizione della tabella pubblicata creata a Londra viene scelto il server di New York, in quanto risponde ai requisiti seguenti:  
+ Ogni server può operare sia come server di pubblicazione che come Sottoscrittore. Ad esempio, si consideri il diagramma seguente in cui una pubblicazione di una tabella ubicata a Londra e deve essere distribuita in quattro diverse città negli Stati Uniti: Chicago, New York, San Diego e Seattle. Per la sottoscrizione della tabella pubblicata creata a Londra viene scelto il server di New York, in quanto risponde ai requisiti seguenti:  
   
 -   La connessione di rete con Londra è relativamente affidabile.  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - snapshots [SQL Server replication], creating
@@ -14,12 +13,12 @@ ms.assetid: 742727a1-5189-44ec-b3ae-6fd7aa1f5347
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8bd30b84643032cf68796b9ebc14bf0407d76427
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a69d4805a21cfbd83bd9a8d79b5150460d4977be
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48215631"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53358193"
 ---
 # <a name="create-and-apply-the-initial-snapshot"></a>Creazione e applicazione dello snapshot iniziale
   In questo argomento viene descritto come creare e applicare lo snapshot iniziale in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]o RMO (Replication Management Objects). Per le pubblicazioni di tipo merge che utilizzano filtri con parametri è necessario uno snapshot a due parti. Per altre informazioni, vedere [Creazione di uno snapshot per una pubblicazione di tipo merge con filtri con parametri](create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
@@ -69,7 +68,7 @@ ms.locfileid: "48215631"
   
      Per ulteriori informazioni sulla sincronizzazione delle sottoscrizioni, vedere [Synchronize a Push Subscription](synchronize-a-push-subscription.md) e [Synchronize a Pull Subscription](synchronize-a-pull-subscription.md).  
   
-##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
  Gli snapshot iniziali possono essere creati a livello di programmazione creando ed eseguendo un processo dell'agente snapshot o eseguendo il file eseguibile dell'agente snapshot da un file batch. Dopo la generazione, lo snapshot iniziale viene trasferito e applicato al Sottoscrittore la prima volta che la sottoscrizione viene sincronizzata. Se si esegue l'agente snapshot da un prompt dei comandi o un file batch, sarà necessario rieseguirlo ogni volta che lo snapshot esistente diventa non valido.  
   
 > [!IMPORTANT]  
@@ -148,7 +147,7 @@ ms.locfileid: "48215631"
  L'agente snapshot genera gli snapshot al termine della creazione di una pubblicazione. È possibile generare questi snapshot a livello di programmazione tramite gli oggetti RMO (Replication Management Objects) e l'accesso diretto tramite codice gestito alle funzionalità dell'agente di replica. Gli oggetti utilizzati dipendono dal tipo di replica. L'agente snapshot può essere avviato in modo sincrono tramite l'oggetto <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent> o in modo asincrono tramite il processo dell'agente. Dopo la generazione, lo snapshot iniziale viene trasferito e applicato al Sottoscrittore la prima volta che la sottoscrizione viene sincronizzata. È necessario rieseguire l'agente ogni volta che lo snapshot esistente non contiene più dati validi e aggiornati. Per altre informazioni, vedere [Gestire le pubblicazioni](publish/maintain-publications.md).  
   
 > [!IMPORTANT]  
->  Se possibile, richiedere agli utenti di immettere le credenziali di sicurezza in fase di esecuzione. Se è necessario archiviare le credenziali, utilizzare i [servizi di crittografia](http://go.microsoft.com/fwlink/?LinkId=34733) offerti da [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows .NET Framework.  
+>  Se possibile, richiedere agli utenti di immettere le credenziali di sicurezza in fase di esecuzione. Se è necessario archiviare le credenziali, utilizzare i [servizi di crittografia](https://go.microsoft.com/fwlink/?LinkId=34733) offerti da [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows .NET Framework.  
   
 #### <a name="to-generate-the-initial-snapshot-for-a-snapshot-or-transactional-publication-by-starting-the-snapshot-agent-job-asynchronous"></a>Per generare lo snapshot iniziale per una pubblicazione snapshot o transazionale avviando il processo dell'agente snapshot (modo asincrono)  
   
@@ -156,13 +155,13 @@ ms.locfileid: "48215631"
   
 2.  Creare un'istanza della classe <xref:Microsoft.SqlServer.Replication.TransPublication> . Impostare le proprietà <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> e <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> per la pubblicazione, quindi impostare la proprietà <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> sulla connessione creata nel passaggio 1.  
   
-3.  Chiamare il metodo <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> per caricare le proprietà rimanenti dell'oggetto. Se questo metodo restituisce `false`, le proprietà della pubblicazione nel passaggio 2 sono state definite in modo non corretto o la pubblicazione non esiste.  
+3.  Chiamare il metodo <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> per caricare le proprietà rimanenti dell'oggetto. Se questo metodo restituisce `false`, le proprietà della pubblicazione sono state definite in modo non corretto nel passaggio 2 oppure la pubblicazione non esiste.  
   
-4.  Se il valore di <xref:Microsoft.SqlServer.Replication.Publication.SnapshotAgentExists%2A> viene `false`, chiamare <xref:Microsoft.SqlServer.Replication.Publication.CreateSnapshotAgent%2A> per creare il processo dell'agente snapshot per questa pubblicazione.  
+4.  Se il valore di <xref:Microsoft.SqlServer.Replication.Publication.SnapshotAgentExists%2A> è `false`, chiamare <xref:Microsoft.SqlServer.Replication.Publication.CreateSnapshotAgent%2A> per creare il processo dell'agente snapshot per questa pubblicazione.  
   
 5.  Chiamare il metodo <xref:Microsoft.SqlServer.Replication.Publication.StartSnapshotGenerationAgentJob%2A> per avviare il processo dell'agente che genera lo snapshot per la pubblicazione.  
   
-6.  (Facoltativo) Quando il valore di <xref:Microsoft.SqlServer.Replication.TransPublication.SnapshotAvailable%2A> è `true`, lo snapshot è disponibile ai sottoscrittori.  
+6.  (Facoltativo) Quando il valore di <xref:Microsoft.SqlServer.Replication.TransPublication.SnapshotAvailable%2A> è `true`, lo snapshot è disponibile per i Sottoscrittori.  
   
 #### <a name="to-generate-the-initial-snapshot-for-a-snapshot-or-transactional-publication-by-running-the-snapshot-agent-synchronous"></a>Per generare lo snapshot iniziale per una pubblicazione snapshot o transazionale eseguendo il processo dell'agente snapshot (modo sincrono)  
   
@@ -182,7 +181,7 @@ ms.locfileid: "48215631"
   
 2.  Impostare il valore <xref:Microsoft.SqlServer.Replication.ReplicationType.Transactional> o <xref:Microsoft.SqlServer.Replication.ReplicationType.Snapshot> per <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.ReplicationType%2A>.  
   
-3.  Chiamare il metodo <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.GenerateSnapshot%2A> .  
+3.  Chiamare il metodo <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.GenerateSnapshot%2A>.  
   
 #### <a name="to-generate-the-initial-snapshot-for-a-merge-publication-by-starting-the-snapshot-agent-job-asynchronous"></a>Per generare lo snapshot iniziale per una pubblicazione di tipo merge avviando il processo dell'agente snapshot (modo asincrono)  
   
@@ -190,13 +189,13 @@ ms.locfileid: "48215631"
   
 2.  Creare un'istanza della classe <xref:Microsoft.SqlServer.Replication.MergePublication> . Impostare le proprietà <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> e <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> per la pubblicazione, quindi impostare la proprietà <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> sulla connessione creata nel passaggio 1.  
   
-3.  Chiamare il metodo <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> per caricare le proprietà rimanenti dell'oggetto. Se questo metodo restituisce `false`, le proprietà della pubblicazione nel passaggio 2 sono state definite in modo non corretto o la pubblicazione non esiste.  
+3.  Chiamare il metodo <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> per caricare le proprietà rimanenti dell'oggetto. Se questo metodo restituisce `false`, le proprietà della pubblicazione sono state definite in modo non corretto nel passaggio 2 oppure la pubblicazione non esiste.  
   
-4.  Se il valore di <xref:Microsoft.SqlServer.Replication.Publication.SnapshotAgentExists%2A> viene `false`, chiamare <xref:Microsoft.SqlServer.Replication.Publication.CreateSnapshotAgent%2A> per creare il processo dell'agente snapshot per questa pubblicazione.  
+4.  Se il valore di <xref:Microsoft.SqlServer.Replication.Publication.SnapshotAgentExists%2A> è `false`, chiamare <xref:Microsoft.SqlServer.Replication.Publication.CreateSnapshotAgent%2A> per creare il processo dell'agente snapshot per questa pubblicazione.  
   
 5.  Chiamare il metodo <xref:Microsoft.SqlServer.Replication.Publication.StartSnapshotGenerationAgentJob%2A> per avviare il processo dell'agente che genera lo snapshot per la pubblicazione.  
   
-6.  (Facoltativo) Quando il valore di <xref:Microsoft.SqlServer.Replication.MergePublication.SnapshotAvailable%2A> è `true`, lo snapshot è disponibile ai sottoscrittori.  
+6.  (Facoltativo) Quando il valore di <xref:Microsoft.SqlServer.Replication.MergePublication.SnapshotAvailable%2A> è `true`, lo snapshot è disponibile per i Sottoscrittori.  
   
 #### <a name="to-generate-the-initial-snapshot-for-a-merge-publication-by-running-the-snapshot-agent-synchronous"></a>Per generare lo snapshot iniziale per una pubblicazione di tipo merge eseguendo il processo dell'agente snapshot (modo sincrono)  
   

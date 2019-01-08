@@ -11,12 +11,12 @@ ms.assetid: 5f5e1149-c967-454d-9a63-18ec4a33d985
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: bdc0c39d8b475ed90eba778ad46981c5ff4a2875
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 80287951be04d9d8381db0f05810e103c8bedfb8
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48166641"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53356628"
 ---
 # <a name="built-in-globals-and-users-references-report-builder-and-ssrs"></a>Riferimenti alle raccolte predefinite Globals e Users (Generatore report e SSRS)
   La raccolta di campi predefinita, in cui sono incluse le raccolte `Globals` e `User`, rappresenta i valori globali forniti da Reporting Services durante l'elaborazione di un report. La raccolta `Globals` fornisce valori come il nome del report, l'ora di inizio dell'elaborazione e i numeri di pagina correnti per l'intestazione o il piè di pagina. La raccolta `User` fornisce le impostazioni relative a ID utente e lingua. Questi valori possono essere usati nelle espressioni per filtrare i risultati in un report.  
@@ -25,7 +25,7 @@ ms.locfileid: "48166641"
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="using-the-globals-collection"></a>Utilizzo della raccolta Globals  
- Il `Globals` raccolta contiene le variabili globali per il report. Nell'area di progettazione queste variabili sono precedute dal prefisso & (e commerciale), ad esempio `[&ReportName]`. Nella tabella seguente vengono descritti i membri del `Globals` raccolta.  
+ La raccolta `Globals` contiene le variabili globali per il report. Nell'area di progettazione queste variabili sono precedute dal prefisso & (e commerciale), ad esempio `[&ReportName]`. Nella tabella seguente vengono descritti i membri della raccolta `Globals`.  
   
 |**Membro**|**Tipo**|**Descrizione**|  
 |----------------|--------------|---------------------|  
@@ -40,12 +40,12 @@ ms.locfileid: "48166641"
 |OverallTotalPages|`Integer`|Numero complessivo di pagine per l'intero report. ResetPageNumber non ha effetto su questo valore.<br /><br /> La proprietà OverallTotalPages può essere usata solo in espressioni presenti in un'intestazione o un piè di pagina.|  
 |RenderFormat|`RenderFormat`|Informazioni sulla richiesta di rendering corrente.<br /><br /> Per altre informazioni, vedere "RenderFormat" nella sezione successiva.|  
   
- I membri del `Globals` raccolta restituiscono una variante. Se si desidera usare un membro di questa raccolta in un'espressione che richiede un tipo di dati specifico, è necessario eseguire dapprima il cast della variabile. Per convertire, ad esempio, la variante relativa alla data e all'ora di esecuzione in un formato di data, usare `=CDate(Globals!ExecutionTime)`. Per altre informazioni, vedere [tipi di dati nelle espressioni di &#40;Generatore Report e SSRS&#41;](expressions-report-builder-and-ssrs.md).  
+ I membri della raccolta `Globals` restituiscono una variante. Se si desidera usare un membro di questa raccolta in un'espressione che richiede un tipo di dati specifico, è necessario eseguire dapprima il cast della variabile. Per convertire, ad esempio, la variante relativa alla data e all'ora di esecuzione in un formato di data, usare `=CDate(Globals!ExecutionTime)`. Per altre informazioni, vedere [Tipi di dati nelle espressioni &#40;Generatore report e SSRS&#41;](expressions-report-builder-and-ssrs.md).  
   
 ### <a name="renderformat"></a>RenderFormat  
  Nella tabella seguente vengono descritti i membri per `RenderFormat`.  
   
-|Membro|Tipo|Description|  
+|Membro|Tipo|Descrizione|  
 |------------|----------|-----------------|  
 |nome|`String`|Nome del renderer come registrato nel file di configurazione RSReportServer.<br /><br /> Disponibile durante determinate parti del ciclo di elaborazione/rendering del report.|  
 |IsInteractive|`Boolean`|Specifica se nella richiesta di rendering corrente è usato un formato di rendering interattivo.|  
@@ -69,16 +69,16 @@ ms.locfileid: "48166641"
      `=IIF(Globals!RenderFormat.Name = "EXCELOPENXML" OR Globals!RenderFormat.Name = "EXCEL", false, true)`  
   
 ## <a name="using-the-user-collection"></a>Utilizzo della raccolta User  
- Il `User` raccolta contiene i dati relativi all'utente che esegue il report. È possibile usare questa raccolta per filtrare i dati visualizzati in un report, per mostrare, ad esempio, solo quelli dell'utente corrente o visualizzare l'ID utente nel titolo del report. Nell'area di progettazione queste variabili sono precedute dal prefisso & (e commerciale), ad esempio `[&UserID]`.  
+ La raccolta `User` contiene i dati relativi all'utente che esegue il report. È possibile usare questa raccolta per filtrare i dati visualizzati in un report, per mostrare, ad esempio, solo quelli dell'utente corrente o visualizzare l'ID utente nel titolo del report. Nell'area di progettazione queste variabili sono precedute dal prefisso & (e commerciale), ad esempio `[&UserID]`.  
   
- Nella tabella seguente vengono descritti i membri del `User` raccolta.  
+ Nella tabella seguente vengono descritti i membri della raccolta `User`.  
   
 |**Membro**|**Tipo**|**Descrizione**|  
 |----------------|--------------|---------------------|  
-|`Language`|`String`|Lingua dell'utente che esegue il report. Ad esempio, `en-US`.|  
+|`Language`|`String`|Lingua dell'utente che esegue il report. Ad esempio `en-US`.|  
 |`UserID`|`String`|ID dell'utente che esegue il report. Se si usa l'autenticazione di Windows, questo valore corrisponde all'account di dominio dell'utente corrente. Il valore è determinato dall'estensione di sicurezza di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , che può usare l'autenticazione di Windows o quella personalizzata.|  
   
- Per altre informazioni sul supporto di più lingue in un report, vedere "Considerazioni sulla progettazione di soluzioni per distribuzioni multilingue o globali" nella documentazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] inclusa nella [documentazione online di SQL Server](http://go.microsoft.com/fwlink/?LinkId=120955).  
+ Per altre informazioni sul supporto di più lingue in un report, vedere "Considerazioni sulla progettazione di soluzioni per distribuzioni multilingue o globali" nella documentazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] inclusa nella [documentazione online di SQL Server](https://go.microsoft.com/fwlink/?LinkId=120955).  
   
 ### <a name="using-locale-settings"></a>Utilizzo delle impostazioni locali  
  È possibile utilizzare espressioni per fare riferimento alle impostazioni locali in un computer client tramite il valore `User.Language`, in modo da determinare la modalità di visualizzazione di un report all'utente. È possibile, ad esempio, creare un report in cui venga usata un'espressione di query diversa basata sul valore delle impostazioni locali. La query può essere modificata per recuperare informazioni localizzate da una colonna diversa, a seconda della lingua restituita. È inoltre possibile usare un'espressione per modificare le impostazioni relative alla lingua del report o degli elementi del report in base a questa variabile.  
@@ -93,7 +93,7 @@ ms.locfileid: "48166641"
  [Espressioni &#40;Generatore report e SSRS&#41;](expressions-report-builder-and-ssrs.md)   
  [Finestra di dialogo Espressione &#40;Generatore report&#41;](../expression-dialog-box-report-builder.md)   
  [Tipi di dati nelle espressioni &#40;Generatore report e SSRS&#41;](expressions-report-builder-and-ssrs.md)   
- [Formattazione di numeri e date di &#40;Report e SSRS&#41;](formatting-numbers-and-dates-report-builder-and-ssrs.md)   
+ [Formattazione di numeri e date &#40;Generatore report e SSRS&#41;](formatting-numbers-and-dates-report-builder-and-ssrs.md)   
  [Esempi di espressioni &#40;Generatore report e SSRS&#41;](expression-examples-report-builder-and-ssrs.md)  
   
   

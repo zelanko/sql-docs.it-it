@@ -17,12 +17,12 @@ ms.assetid: 10e7bac7-4121-48c2-be01-10083a8c65af
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d993ef299f08400a54487a4e7e99b017e8e9bc55
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5a05f52eceb554d8f4b023a3136fd4cf8e55d4fc
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48129041"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376313"
 ---
 # <a name="availability-modes-always-on-availability-groups"></a>Modalità di disponibilità (gruppi di disponibilità AlwaysOn)
   In [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]la *modalità di disponibilità* è una proprietà della replica tramite cui viene determinato se una replica di disponibilità specificata può essere eseguita in modalità con commit sincrono. La modalità di disponibilità per ogni replica di disponibilità deve essere configurata per la modalità con commit sincrono o per quella con commit asincrono.  Se la replica primaria è configurata per la *modalità con commit asincrono*, non attende che una replica secondaria scriva su disco dei record del log delle transazioni in entrata per *finalizzare il log*. Se una replica secondaria specificata viene configurata per la modalità con commit asincrono, tramite la replica primaria non viene attesa la finalizzazione del log da parte della replica secondaria. Se la replica primaria e una replica secondaria specifica vengono entrambe configurate per la *modalità con commit sincrono*, la replica primaria attende la conferma della finalizzazione del log da parte della replica secondaria, a meno che la replica secondaria non sia in grado di eseguire il ping alla replica primaria entro il *periodo di timeout della sessione*della replica primaria.  
@@ -32,7 +32,7 @@ ms.locfileid: "48129041"
   
   
 ##  <a name="SupportedAvModes"></a> Modalità di disponibilità supportate  
- [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] supporta due modalità di disponibilità: modalità con commit asincrono e modalità con commit sincrono, come indicato di seguito:  
+ [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] supporta due modalità di disponibilità modalità commit asincrono e modalità con commit sincrono, come indicato di seguito:  
   
 -   La*modalità con commit asincrono* è una soluzione di ripristino di emergenza che offre risultati ottimali quando le repliche di disponibilità sono distribuite a distanze considerevoli. Se tutte le repliche secondarie vengono eseguite in modalità con commit asincrono, con la replica primaria non si attende che il log venga finalizzato dalle repliche secondarie. Bensì, subito dopo la scrittura del record del log nel file di log locale, tramite la replica primaria viene inviata la conferma della transazione al client. La replica primaria viene eseguita con una latenza della transazione minima a fronte di una replica secondaria configurata in modalità con commit asincrono.  Se la replica primaria corrente è configurata in modalità di disponibilità commit asincrono, eseguirà il commit asincrono delle transazioni per tutte le repliche secondarie indipendentemente dalle singole impostazioni della modalità di disponibilità.  
   
@@ -50,10 +50,10 @@ ms.locfileid: "48129041"
   
 |Replica primaria corrente|Destinazioni di failover automatico|Comportamento in modalità con commit sincrono con|Comportamento in modalità con commit asincrono con|Failover automatico possibile|  
 |-----------------------------|--------------------------------|--------------------------------------------|---------------------------------------------|---------------------------------|  
-|01|02|02 e 03|04|Sì|  
-|02|01|01 e 03|04|Sì|  
-|03||01 e 02|04|no|  
-|04|||01, 02 e 03|no|  
+|01|02|02 e 03|04|Yes|  
+|02|01|01 e 03|04|Yes|  
+|03||01 e 02|04|No|  
+|04|||01, 02 e 03|No|  
   
  In genere il nodo 04 come replica con commit asincrono viene distribuito in un sito per il ripristino di emergenza. Il fatto che i nodi 01, 02 e 03 rimangano nella modalità con commit asincrono dopo il failover al nodo 04 contribuisce ad evitare possibili cali delle prestazioni nel gruppo di disponibilità dovute all'elevata latenza di rete tra i due siti.  
   
@@ -149,9 +149,9 @@ ms.locfileid: "48129041"
   
 ##  <a name="RelatedContent"></a> Contenuto correlato  
   
--   [Microsoft SQL Server AlwaysOn Solutions Guide for High Availability and Disaster Recovery](http://go.microsoft.com/fwlink/?LinkId=227600)  
+-   [Microsoft SQL Server AlwaysOn Solutions Guide for High Availability and Disaster Recovery](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
--   [SQL Server AlwaysOn Team Blog: Il Blog ufficiale di SQL Server AlwaysOn Team](http://blogs.msdn.com/b/sqlalwayson/)  
+-   [SQL Server AlwaysOn Team Blog: Il Team Blog ufficiale di SQL Server AlwaysOn](https://blogs.msdn.com/b/sqlalwayson/)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Panoramica di gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   

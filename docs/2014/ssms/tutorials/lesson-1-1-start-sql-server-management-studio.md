@@ -10,12 +10,12 @@ ms.assetid: 25ffaea6-0eee-4169-8dd0-1da417c28fc6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 91b962fd3691aff2986db40f187557f54247b897
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 94466dc6c069ced5b2743cbd8a14d98271303477
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159701"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53373633"
 ---
 # <a name="start-sql-server-management-studio"></a>Avviare SQL Server Management Studio
   Prima di iniziare questa esercitazione è opportuno esaminare brevemente [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
@@ -27,7 +27,7 @@ ms.locfileid: "48159701"
 1.  Nel **avviare** dal menu **tutti i programmi**, scegliere [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]e quindi fare clic su **SQL Server Management Studio**.  
   
     > [!NOTE]  
-    >  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] non è installato per impostazione predefinita. Se [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] non è disponibile, installarlo eseguendo il programma di installazione. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] non è disponibile con [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] Express è disponibile come download gratuito dal [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkID=37075&clcid=0x409), ma ha un'interfaccia utente diversa da quella descritta in questa esercitazione.  
+    >  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] non è installato per impostazione predefinita. Se [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] non è disponibile, installarlo eseguendo il programma di installazione. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] non è disponibile con [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] Express è disponibile come download gratuito dal [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkID=37075&clcid=0x409), ma ha un'interfaccia utente diversa da quella descritta in questa esercitazione.  
   
 2.  Nella finestra di dialogo **Connetti al server** verificare le impostazioni predefinite e quindi fare clic su **Connetti**. Per la connessione, il **nome Server** finestra deve contenere il nome del computer in cui [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è installato. Se il [!INCLUDE[ssDE](../../includes/ssde-md.md)] è un'istanza denominata, il **nome Server** casella deve essere contenuto anche il nome dell'istanza nel formato \< *nome_computer* > \\ < *instance_name*>.  
   

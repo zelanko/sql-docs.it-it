@@ -4,21 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 64cd24cc-ba8e-4bd7-b10b-6b80d8b04af6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7dc2b824ef3fb3b1809bf685b3b5b8409ca1f805
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 088afb5cdd4640aab550552d4fc15c25f3a852e1
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48196921"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53375283"
 ---
-# <a name="lesson-3-adding-logging"></a>Lezione 3: Aggiunta delle funzionalità di registrazione
+# <a name="lesson-3-adding-logging"></a>Lezione 3: Aggiunta di registrazione
   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] include funzionalità di registrazione che consentono di risolvere i problemi e monitorare l'esecuzione dei pacchetti offrendo una traccia degli eventi generati dalle attività e dai contenitori. Le caratteristiche di registrazione sono flessibili ed è possibile attivarle a livello di pacchetto o a livello di singole attività o contenitori del pacchetto. È possibile selezionare gli eventi che si desidera registrare e creare più log per un singolo pacchetto.  
   
  La registrazione è garantita da un provider di log. Ogni provider di log è in grado di scrivere le informazioni di registrazione in diversi formati e tipi di destinazione. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] rende disponibili i provider di log seguenti:  
@@ -33,19 +32,19 @@ ms.locfileid: "48196921"
   
 -   File XML  
   
- In questa lezione si creerà una copia del pacchetto creato nella [lezione 2: aggiungere cicli](lesson-2-adding-looping-with-ssis.md). Usando questo nuovo pacchetto, verranno aggiunte e configurate funzionalità di registrazione per monitorare eventi specifici durante l'esecuzione del pacchetto. Se non è stata completata nessuna delle lezioni precedenti, è possibile copiare il pacchetto della lezione 2 completato incluso nell'esercitazione.  
+ In questa lezione si creerà una copia del pacchetto creato nella [lezione 2: Aggiungere cicli](lesson-2-adding-looping-with-ssis.md). Usando questo nuovo pacchetto, verranno aggiunte e configurate funzionalità di registrazione per monitorare eventi specifici durante l'esecuzione del pacchetto. Se non è stata completata nessuna delle lezioni precedenti, è possibile copiare il pacchetto della lezione 2 completato incluso nell'esercitazione.  
   
 > [!IMPORTANT]  
->  Per eseguire questa esercitazione, è necessario il database di esempio **AdventureWorksDW2012** . Per altre informazioni su come installare e distribuire **AdventureWorksDW2012**, [Reporting Services Product Samples in CodePlex](http://go.microsoft.com/fwlink/p/?LinkID=52691).  
+>  Per eseguire questa esercitazione, è necessario il database di esempio **AdventureWorksDW2012** . Per altre informazioni su come installare e distribuire **AdventureWorksDW2012**, [Reporting Services Product Samples in CodePlex](https://go.microsoft.com/fwlink/p/?LinkID=52691).  
   
 ## <a name="lesson-tasks"></a>Argomenti della lezione  
  In questa lezione sono incluse le attività seguenti:  
   
 -   [Passaggio 1: Copia del pacchetto della lezione 2](lesson-3-1-copying-the-lesson-2-package.md)  
   
--   [Passaggio 2: Aggiunta e configurazione di funzionalità di registrazione](lesson-3-2-adding-and-configuring-logging.md)  
+-   [Passaggio 2: Aggiunta e configurazione di registrazione](lesson-3-2-adding-and-configuring-logging.md)  
   
--   [Passaggio 3: Test del pacchetto creato nella lezione 3 dell'esercitazione](../integration-services/lesson-3-3-testing-the-lesson-3-tutorial-package.md)  
+-   [Passaggio 3: Il pacchetto della lezione 3 dell'esercitazione di test](../integration-services/lesson-3-3-testing-the-lesson-3-tutorial-package.md)  
   
 ## <a name="start-the-lesson"></a>Inizio della lezione  
  [Passaggio 1: Copia del pacchetto della lezione 2](lesson-3-1-copying-the-lesson-2-package.md)  

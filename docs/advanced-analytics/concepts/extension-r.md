@@ -1,6 +1,6 @@
 ---
-title: Estensione di R in SQL Server | Microsoft Docs
-description: Informazioni sull'esecuzione del codice R e librerie di R incorporate in SQL Server.
+title: SQL Server Machine Learning - estensione del linguaggio di programmazione R
+description: Informazioni sull'esecuzione del codice R e librerie di R incorporate in SQL Server 2016 R Services o SQL Server 2017 Machine Learning Services.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 09/05/2018
@@ -8,23 +8,23 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: af71b03238a744702288f1f7411a5ebec3911f60
-ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
+ms.openlocfilehash: cb9b710ca5ec06e05a93dbee5f22ee0860f7f4ca
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43892885"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53432764"
 ---
-# <a name="r-extension-in-sql-server"></a>Estensione di R in SQL Server
+# <a name="r-language-extension-in-sql-server"></a>Estensione del linguaggio R in SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-L'estensione di R è parte del componente aggiuntivo SQL Server Machine Learning Services al motore di database relazionale. Aggiunge un ambiente di esecuzione di R, una distribuzione base di R con strumenti e librerie standard e le librerie R Microsoft: [RevoScaleR](../r/revoscaler-overview.md) per analitica su larga scala [MicrosoftML](../using-the-microsoftml-package.md) per machine learning gli algoritmi e altre librerie per l'accesso ai dati o del codice R in SQL Server.
+L'estensione di R è parte del componente aggiuntivo SQL Server Machine Learning Services al motore di database relazionale. Aggiunge un ambiente di esecuzione di R, una distribuzione base di R con strumenti e librerie standard e le librerie di Microsoft R: [RevoScaleR](../r/ref-r-revoscaler.md) per su larga scala, analitica [MicrosoftML](../r/ref-r-microsoftml.md) per algoritmi di machine learning e altre librerie per l'accesso ai dati o del codice R in SQL Server.
 
 Integrazione di R è disponibile in SQL Server in SQL Server 2016, a partire [R Services](../r/sql-server-r-services.md)e continuare come parte del rollforward [SQL Server Machine Learning Services](../what-is-sql-server-machine-learning.md).
 
 ## <a name="r-components"></a>Componenti R
 
-SQL Server include pacchetti open source e proprietari. Le librerie R di base vengono installate tramite distribuzione Microsoft di open source r: Microsoft R aprire (MRO). Gli utenti correnti di R devono essere in grado di trasferire il proprio codice R ed eseguirlo come un processo esterno in SQL Server con le modifiche pochissime o addirittura nessuna. MRO è installata indipendentemente da strumenti di SQL e viene eseguito all'esterno di processi del motore di base, nel framework di estendibilità. Durante l'installazione, è necessario accettare le condizioni di licenza open source. Successivamente, è possibile eseguire pacchetti R standard senza ulteriori modifiche esattamente come farebbe in qualsiasi altra distribuzione open source di R. 
+SQL Server include pacchetti open source e proprietari. Le librerie R di base vengono installate tramite distribuzione Microsoft di r open source: Microsoft R Open (MRO). Gli utenti correnti di R devono essere in grado di trasferire il proprio codice R ed eseguirlo come un processo esterno in SQL Server con le modifiche pochissime o addirittura nessuna. MRO è installata indipendentemente da strumenti di SQL e viene eseguito all'esterno di processi del motore di base, nel framework di estendibilità. Durante l'installazione, è necessario accettare le condizioni di licenza open source. Successivamente, è possibile eseguire pacchetti R standard senza ulteriori modifiche esattamente come farebbe in qualsiasi altra distribuzione open source di R. 
 
 SQL Server non modifica i file eseguibili R di base, ma è necessario usare la versione di R installato dal programma di installazione perché tale versione è quello che i pacchetti proprietari vengano compilati e testati in. Per altre informazioni sulle differenze MRO tra una distribuzione di base di R che si potrebbero ottenere da CRAN, vedere [interoperabilità con linguaggio R e i prodotti Microsoft R e funzionalità](https://docs.microsoft.com/r-server/what-is-r-server-interoperability).
 
@@ -32,10 +32,10 @@ La distribuzione di base dei pacchetti R installata dal programma di installazio
 
 I pacchetti R aggiunti per carichi di lavoro paralleli e distribuiti da Microsoft includono le librerie seguenti.
 
-| Libreria | Description |
+| Libreria | Descrizione |
 |---------|-------------|
 | [**RevoScaleR**](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) | Supporta gli oggetti origine dati ed esplorazione dei dati, manipolazione, trasformazione e la visualizzazione. Supporta la creazione di contesti di calcolo remoti, nonché un vari modelli scalabili di machine learning, ad esempio **rxLinMod**. Le API sono state ottimizzate per l'analisi dei set di dati troppo grandi per essere contenuti in memoria e per l'esecuzione di calcoli distribuiti su più core o processori. Il pacchetto RevoScaleR supporta anche il formato di file XDF per più rapido dello spostamento e l'archiviazione dei dati utilizzati per l'analisi. Il formato XDF usa l'archiviazione a colonne, è portabile e può essere usato per caricare e quindi manipolare i dati da diverse origini, tra cui testo, SPSS o una connessione ODBC. |
-| [**MicrosoftML**](https://docs.microsoft.com/r-server/r/concept-what-is-the-microsoftml-package) | Contiene algoritmi di machine learning che sono stati ottimizzati per la velocità e la precisione, nonché le trasformazioni per l'utilizzo di testo e immagini in linea. Per altre informazioni, vedere [usando il pacchetto MicrosoftML con SQL Server](https://docs.microsoft.com/sql/advanced-analytics/using-the-microsoftml-package). | 
+| [**MicrosoftML**](https://docs.microsoft.com/r-server/r/concept-what-is-the-microsoftml-package) | Contiene algoritmi di machine learning che sono stati ottimizzati per la velocità e la precisione, nonché le trasformazioni per l'utilizzo di testo e immagini in linea. Per altre informazioni, vedere [MicrosoftML in SQL Server](../r/ref-r-microsoftml.md). | 
 
 ## <a name="using-r-in-sql-server"></a>Uso di R in SQL Server
 

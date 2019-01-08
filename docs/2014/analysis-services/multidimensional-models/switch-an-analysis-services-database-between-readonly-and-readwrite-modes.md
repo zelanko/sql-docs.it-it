@@ -15,12 +15,12 @@ ms.assetid: 4eff8181-08dd-4fad-b091-d400fc21a020
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7b271d597f9941e83e9ad8ce6993831a738108e7
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 48bb00cba9a01029da31146f9e98e2ef8b3627d6
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50147876"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53362613"
 ---
 # <a name="switch-an-analysis-services-database-between-readonly-and-readwrite-modes"></a>Passare un database di Analysis Services tra le modalità ReadOnly e ReadWrite
   In alcune situazioni frequenti, un amministratore del database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] potrebbe voler modificare la modalità lettura/scrittura di un database tabulare o multidimensionale. Queste situazioni spesso sono determinate da esigenze aziendali, ad esempio condividere il database fra un pool di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] server per migliorare l'esperienza utente.  
@@ -44,7 +44,7 @@ ms.locfileid: "50147876"
     > [!IMPORTANT]  
     >  Non appena il database viene scollegato, [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] non consente più di ottenerne il percorso.  
   
-3.  Fare clic con il pulsante destro del mouse sul database, quindi scegliere **Scollega**  
+3.  Il database e scegliere **Scollega...**  
   
 4.  Assegnare una password al database da scollegare, quindi fare clic su **OK** per eseguire il comando.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "50147876"
   
 6.  Fare doppio clic il **database** cartella e selezionare **Connetti...**  
   
-7.  Nella casella di testo **cartella** digitare il percorso originale della cartella del database. In alternativa, è possibile usare il pulsante Sfoglia (**...**) per individuare la cartella del database.  
+7.  Nella casella di testo **cartella** digitare il percorso originale della cartella del database. In alternativa, è possibile usare il pulsante Sfoglia (**...** ) per individuare la cartella di database.  
   
 8.  Selezionare la modalità di lettura/scrittura per il database.  
   
@@ -137,7 +137,7 @@ ms.locfileid: "50147876"
   
 4.  Copiare il modello di script seguente per XMLA:  
   
- `<Detach xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">`  
+ `<Detach xmlns="https://schemas.microsoft.com/analysisservices/2003/engine">`  
   
  `<Object>`  
   
@@ -155,11 +155,11 @@ ms.locfileid: "50147876"
   
 3.  Copiare il modello di script seguente per XMLA in una nuova scheda XMLA:  
   
- `<Attach xmlns="http://schemas.microsoft.com/analysisservices/2003` `/engine` `">`  
+ `<Attach xmlns="https://schemas.microsoft.com/analysisservices/2003` `/engine` `">`  
   
  `<Folder>%dbFolder%</Folder>`  
   
- `<ReadWriteMode xmlns="http://schemas.microsoft.com/analysisservices/2008/engine/100">%ReadOnlyMode%</ReadWriteMode>`  
+ `<ReadWriteMode xmlns="https://schemas.microsoft.com/analysisservices/2008/engine/100">%ReadOnlyMode%</ReadWriteMode>`  
   
  `</Attach>`  
   

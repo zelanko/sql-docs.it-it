@@ -1,5 +1,5 @@
 ---
-title: "Lesson 6: Add a ReportViewer Control to the Application (Lezione 6: Aggiungere un controllo ReportViewer all'applicazione) | Microsoft Docs"
+title: "Lezione 6: Aggiungere un controllo ReportViewer all'applicazione | Microsoft Docs"
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,12 +11,12 @@ ms.assetid: f9492a97-5609-4059-ae76-0fba111d4968
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: afb73e5dc93efdadb0754072d652b7328aaa2151
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cf11d44179dadbc3362c2fcf6f946c30d6856a56
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48104001"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53361123"
 ---
 # <a name="lesson-6-add-a-reportviewer-control-to-the-application"></a>Lezione 6: Aggiungere un controllo ReportViewer all'applicazione
   Dopo aver progettato il report figlio tramite la Creazione guidata report, il passaggio successivo consiste nell'aggiungere un controllo ReportViewer all'applicazione del sito Web.  
@@ -33,9 +33,9 @@ ms.locfileid: "48104001"
   
 5.  Nella casella **Scegli report** selezionare il report padre creato.  
   
-     Quando si seleziona un report, le istanze delle origini dati utilizzate nel report vengono create automaticamente. Il codice viene generato per la creazione di un'istanza di ogni oggetto DataTable e del relativo contenitore [DataSet](http://msdn.microsoft.com/library/system.data.dataset\(v=vs.100\).aspx) . Un controllo [ObjectDataSource](http://msdn.microsoft.com/library/system.web.ui.webcontrols.objectdatasource\(v=vs.100\).aspx) viene aggiunto all'area di progettazione, corrispondente a ogni origine dati utilizzata nel report. Questo controllo dell'origine dati viene configurato automaticamente.  
+     Quando si seleziona un report, le istanze delle origini dati utilizzate nel report vengono create automaticamente. Il codice viene generato per la creazione di un'istanza di ogni oggetto DataTable e del relativo contenitore [DataSet](https://msdn.microsoft.com/library/system.data.dataset\(v=vs.100\).aspx) . Un controllo [ObjectDataSource](https://msdn.microsoft.com/library/system.web.ui.webcontrols.objectdatasource\(v=vs.100\).aspx) viene aggiunto all'area di progettazione, corrispondente a ogni origine dati usata nel report. Questo controllo dell'origine dati viene configurato automaticamente.  
   
-     Se si utilizza Microsoft Visual Studio 2012, verificare che il controllo ObjectDataSource sia associato a DataSet1, completo dello spazio dei nomi di progetto, se il nome completo è indicato nell'elenco a discesa **Seleziona oggetto business** , ad esempio Projectnamespace.DataSet1TableAdapters.ProductTableAdapter. Accedere alla casella di riepilogo facendo clic con il pulsante destro del mouse su ObjectDataSource e scegliendo **Configura origine dati**.  
+     Se si usa Microsoft Visual Studio 2012, assicurarsi che il controllo ObjectDataSource sia associato a DataSet1, completo con lo spazio dei nomi di progetto, se il nome completo è elencato nel **Seleziona oggetto business**casella di riepilogo a discesa (ad esempio Projectnamespace.DataSet1TableAdapters.ProductTableAdapter). Accedere alla casella di riepilogo facendo clic con il pulsante destro del mouse su ObjectDataSource e scegliendo **Configura origine dati**.  
   
 6.  Scegliere Compila sito Web dal menu Compila.  
   

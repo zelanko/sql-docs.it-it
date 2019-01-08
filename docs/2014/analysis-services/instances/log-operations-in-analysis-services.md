@@ -11,17 +11,17 @@ ms.assetid: aa1db060-95dc-4198-8aeb-cffdda44b140
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 89a99ed7f3f38abba8eeaaf8b2f420106dbbe790
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 58169ffcc696c87addee0417700ba131a71e12f0
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48198431"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53363753"
 ---
 # <a name="log-operations-in-analysis-services"></a>Registrare le operazioni in Analysis Services
-  Un'istanza di Analysis Services registrerà le notifiche, gli errori e gli avvisi del server nel file msmdsrv.log: uno per ogni istanza installata. Gli amministratori fanno riferimento a questo log per informazioni sulla routine nonché per eventi straordinari. Nelle versioni recenti la registrazione è stata migliorata per includere altre informazioni. I record di log includono ora informazioni sull'edizione e la versione del prodotto, nonché eventi del processore, della memoria, della connettività e di blocco. È possibile consultare l'elenco completo delle modifiche in [Miglioramenti della registrazione](http://support.microsoft.com/kb/2965035).  
+  Un'istanza di Analysis Services registrerà le notifiche di server, errori e avvisi per il file msmdsrv log: uno per ogni istanza installata. Gli amministratori fanno riferimento a questo log per informazioni sulla routine nonché per eventi straordinari. Nelle versioni recenti la registrazione è stata migliorata per includere altre informazioni. I record di log includono ora informazioni sull'edizione e la versione del prodotto, nonché eventi del processore, della memoria, della connettività e di blocco. È possibile consultare l'elenco completo delle modifiche in [Miglioramenti della registrazione](https://support.microsoft.com/kb/2965035).  
   
- Oltre alla funzionalità di registrazione predefinita, molti amministratori e sviluppatori usano anche gli strumenti forniti dalla community di Analysis Services, ad esempio **ASTrace**, per raccogliere i dati relativi alle operazioni del server. Vedere [Microsoft SQL Server Community Samples: Analysis Services](https://sqlsrvanalysissrvcs.codeplex.com/) (Esempi della community di Microsoft SQL Server: Analysis Services) per i collegamenti per il download.  
+ Oltre alla funzionalità di registrazione predefinita, molti amministratori e sviluppatori usano anche gli strumenti forniti dalla community di Analysis Services, ad esempio **ASTrace**, per raccogliere i dati relativi alle operazioni del server. Vedere [esempi della Community di Microsoft SQL Server: Analysis Services](https://sqlsrvanalysissrvcs.codeplex.com/) collegamenti per il download.  
   
  In questo argomento sono incluse le sezioni seguenti:  
   
@@ -38,18 +38,18 @@ ms.locfileid: "48198431"
 -   [Suggerimenti e procedure consigliate](#bkmk_tips)  
   
 > [!NOTE]  
->  Per informazioni sulla registrazione, potrebbe essere utile interessarsi alle operazioni di traccia che mostrano i percorsi di elaborazione e di esecuzione delle query. Oggetti di traccia per analisi ad hoc e prolungate (come il controllo dell'accesso ai cubi) e consigli sull'uso ottimale dell'Utilità Traccia eventi, di SQL Server Profiler e di xEvents sono disponibili accedendo ai collegamenti forniti nella pagina: [Monitorare un'istanza di Analysis Services](monitor-an-analysis-services-instance.md).  
+>  Per informazioni sulla registrazione, potrebbe essere utile interessarsi alle operazioni di traccia che mostrano i percorsi di elaborazione e di esecuzione delle query. Oggetti di traccia per analisi ad hoc e prolungate (come il controllo dell'accesso ai cubi) e consigli sull'uso ottimale dell'Utilità Traccia eventi, di SQL Server Profiler e di Xevent sono disponibili accedendo ai collegamenti forniti nella pagina [Monitorare un'istanza di Analysis Services](monitor-an-analysis-services-instance.md).  
   
 ##  <a name="bkmk_location"></a> Posizione e tipi di log  
  Analysis Services fornisce i log descritti di seguito.  
   
 |Posizione o nome del file|Tipo|Utilizzo|Attivato per impostazione predefinita|  
 |---------------------------|----------|--------------|-------------------|  
-|Msmdsrv.log|Log degli errori|Monitoraggio della routine e risoluzione dei problemi di base|Sì|  
-|Tabella OlapQueryLog in un database relazionale|Log di query|Raccolta di input per l'Ottimizzazione guidata basata sulle statistiche di utilizzo|no|  
-|File SQLDmp\<guid > i file con estensione mdmp|Arresti anomali ed eccezioni|Risoluzione dei problemi completa|no|  
+|Msmdsrv.log|Log degli errori|Monitoraggio della routine e risoluzione dei problemi di base|Yes|  
+|Tabella OlapQueryLog in un database relazionale|Log di query|Raccolta di input per l'Ottimizzazione guidata basata sulle statistiche di utilizzo|No|  
+|File SQLDmp\<guid > i file con estensione mdmp|Arresti anomali ed eccezioni|Risoluzione dei problemi completa|No|  
   
- Per altre risorse di informazioni non incluse nel presente argomento, è consigliabile consultare il collegamento seguente: [Initial data collection tips from Microsoft Support](http://blogs.msdn.com/b/as_emea/archive/2012/01/02/initial-data-collection-for-troubleshooting-analysis-services-issues.aspx)(Suggerimenti per la raccolta dati iniziale forniti dal supporto tecnico Microsoft).  
+ Per altre risorse di informazioni non incluse nel presente argomento, è consigliabile consultare il collegamento seguente: [Suggerimenti di raccolta dati dal supporto Microsoft iniziale](https://blogs.msdn.com/b/as_emea/archive/2012/01/02/initial-data-collection-for-troubleshooting-analysis-services-issues.aspx).  
   
 ##  <a name="bkmk_general"></a> Informazioni generali sulle impostazioni di configurazione dei file di log  
  È possibile trovare le sezioni per ogni log nel file di configurazione del server msmdsrv.ini, che si trova nella cartella \Programmi\Microsoft SQL Server\MSAS12.MSSQLSERVER\OLAP\Config. Visualizzare [Configure Server Properties in Analysis Services](../server-properties/server-properties-in-analysis-services.md) per istruzioni sulla modifica del file.  
@@ -63,9 +63,9 @@ ms.locfileid: "48198431"
   
  Questo file di log viene svuotato a ogni riavvio del servizio. Nelle versioni precedenti, gli amministratori a volte riavviavano il servizio al solo scopo di svuotare il file di log prima che diventasse talmente grande da non poter essere usato. Ciò non è più necessario. Le impostazioni di configurazione introdotte in SQL Server 2012 SP2 e versioni successive consentono di controllare le dimensioni del file di log e la relativa cronologia:  
   
--   `MaxFileSizeMB` Specifica una dimensione massima in megabyte. L'impostazione predefinita è 256. Un valore di sostituzione valido deve essere un numero intero positivo. Quando si `MaxFileSizeMB` viene raggiunto, Analysis Services Rinomina il file corrente come file msmdsrv {timestamp corrente}. log e inizia un nuovo file msmdsrv.  
+-   `MaxFileSizeMB` Specifica una dimensione massima in megabyte. L'impostazione predefinita è 256. Un valore di sostituzione valido deve essere un numero intero positivo. Quando viene raggiunto il valore `MaxFileSizeMB`, Analysis Services rinomina il file corrente come file msmdsrv{timestamp corrente}.log e inizia un nuovo file msmdsrv.log.  
   
--   `MaxNumberFiles` Specifica la memorizzazione dei file di log meno recenti. Il valore predefinito è 0 (disabilitata). È possibile modificare tale valore con un numero intero positivo per mantenere le versioni del file di log. Quando si `MaxNumberFiles` viene raggiunto, Analysis Services elimina il file con il timestamp meno recente nel relativo nome.  
+-   `MaxNumberFiles` Specifica la memorizzazione dei file di log meno recenti. Il valore predefinito è 0 (disabilitata). È possibile modificare tale valore con un numero intero positivo per mantenere le versioni del file di log. Quando viene raggiunto il valore `MaxNumberFiles`, Analysis Services elimina il file che contiene nel nome il timestamp meno recente.  
   
  Per usare queste impostazioni, eseguire le operazioni seguenti:  
   
@@ -124,7 +124,7 @@ ms.locfileid: "48198431"
   
  Consentire al log di query di raccogliere dati sufficienti per eseguire l'Ottimizzazione guidata basata sulle statistiche di utilizzo. Se i volumi di query sono ciclici, acquisire un volume di traffico sufficiente da avere un set di dati rappresentativo. Per istruzioni su come eseguire la procedura guidata, vedere [Ottimizzazione guidata basata sulle statistiche di utilizzo](https://msdn.microsoft.com/library/ms189706.aspx) .  
   
- Per altre informazioni sulla configurazione del log di query, vedere [Configuring the Analysis Services Query Log](http://technet.microsoft.com/library/Cc917676) (Configurazione del log di query di Analysis Services). Anche se il documento non è recente, la configurazione del log di query non è stata modificata nelle versioni recenti e le informazioni in esso contenute sono ancora valide.  
+ Per altre informazioni sulla configurazione del log di query, vedere [Configuring the Analysis Services Query Log](https://technet.microsoft.com/library/Cc917676) (Configurazione del log di query di Analysis Services). Anche se il documento non è recente, la configurazione del log di query non è stata modificata nelle versioni recenti e le informazioni in esso contenute sono ancora valide.  
   
 ##  <a name="bkmk_mdmp"></a> File di minidump (con estensione mdmp)  
  I file di dump acquisiscono i dati usati per l'analisi di eventi straordinari. Analysis Services genera automaticamente dei minidump (con estensione mdmp) in risposta a un arresto anomalo del server, a un'eccezione e ad alcuni errori di configurazione. La funzionalità è abilitata ma non invia automaticamente le segnalazioni di arresti anomali.  
@@ -149,11 +149,11 @@ ms.locfileid: "48198431"
   
  **Configurare le segnalazioni di arresti anomali**  
   
- Se non diversamente indicato dal supporto tecnico Microsoft, la maggior parte degli amministratori usa le impostazioni predefinite. Questo articolo non recente della Knowledge Base viene ancora usato per fornire istruzioni su come configurare i file di dump: [Come configurare SQL Server 2005 Analysis Services per generare file di dump di memoria](http://support.microsoft.com/kb/919711).  
+ Se non diversamente indicato dal supporto tecnico Microsoft, la maggior parte degli amministratori usa le impostazioni predefinite. Per istruzioni su come configurare i file di dump, è possibile usare ancora il seguente articolo della Knowledge Base anche se non molto recente: [Come configurare Analysis Services per generare file di dump di memoria](https://support.microsoft.com/kb/919711).  
   
- L'impostazione più soggette a modifiche di configurazione è la `CreateAndSendCrashReports` usata per determinare se verrà generato un file di dump di memoria.  
+ L'impostazione di configurazione che verrà modificata con maggiore probabilità è `CreateAndSendCrashReports`, usata per determinare se verrà generato o meno un file di dump di memoria.  
   
-|Valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |0|Disattiva il file di dump di memoria. Tutte le altre impostazioni nella sezione Eccezioni vengono ignorate.|  
 |1|(Impostazione predefinita) Abilita ma non invia il file di dump di memoria.|  
@@ -161,28 +161,28 @@ ms.locfileid: "48198431"
   
  `CrashReportsFolder` è il percorso dei file di dump. Per impostazione predefinita, il file con estensione mdmp e i record di log associati vengono archiviati nella cartella \Olap\Log.  
   
- `SQLDumperFlagsOn` Consente di generare un dump completo. Per impostazione predefinita, i dump completi non sono abilitati. È possibile impostare questa proprietà `0x34`.  
+ `SQLDumperFlagsOn` viene usata per generare un dump completo. Per impostazione predefinita, i dump completi non sono abilitati. È possibile impostare questa proprietà su `0x34`.  
   
  Per altre informazioni generiche, vedere i collegamenti seguenti:  
   
--   [Analisi dei minidump di SQL Server](http://blogs.msdn.com/b/sqlcat/archive/2009/09/11/looking-deeper-into-sql-server-using-minidumps.aspx)  
+-   [Analisi dei minidump di SQL Server](https://blogs.msdn.com/b/sqlcat/archive/2009/09/11/looking-deeper-into-sql-server-using-minidumps.aspx)  
   
--   [Come creare un file di dump in modalità utente](http://support.microsoft.com/kb/931673)  
+-   [Come creare un file di dump in modalità utente](https://support.microsoft.com/kb/931673)  
   
--   [Come usare l'utilità Sqldumper.exe per generare un file di dump in SQL Server](http://support.microsoft.com/kb/917825)  
+-   [Come usare l'utilità Sqldumper.exe per generare un file di dump in SQL Server](https://support.microsoft.com/kb/917825)  
   
 ##  <a name="bkmk_tips"></a> Suggerimenti e procedure consigliate  
  Questa sezione è un riepilogo dei suggerimenti indicati in questo articolo.  
   
 -   Configurare il file msmdsrv.log per controllare le dimensioni e il numero di file di log msmdsrv. Le impostazioni non vengono abilitate per impostazione predefinita, pertanto assicurarsi di aggiungerle come passaggio di post-installazione. Vedere [File di log del servizio MSMDSRV](#bkmk_msmdsrv) in questo argomento.  
   
--   Leggere questo post di blog del supporto tecnico Microsoft per informazioni sulle risorse da usare per ottenere informazioni sulle operazioni del server: [Initial Data Collection](http://blogs.msdn.com/b/as_emea/archive/2012/01/02/initial-data-collection-for-troubleshooting-analysis-services-issues.aspx)(Raccolta dati iniziale).  
+-   Leggere questo post di blog del supporto tecnico Microsoft per informazioni sulle risorse da usare per ottenere informazioni sulle operazioni del server: [Raccolta dati iniziale](https://blogs.msdn.com/b/as_emea/archive/2012/01/02/initial-data-collection-for-troubleshooting-analysis-services-issues.aspx)  
   
--   Usare ASTrace2012, anziché un log di query, per identificare gli utenti che eseguono query sui cubi. Il log di query viene usato generalmente per fornire un input all'Ottimizzazione guidata basata sulle statistiche di utilizzo e i dati acquisiti non sono facili da leggere o interpretare. ASTrace2012 è uno strumento della community, ampiamente usato, che acquisisce le operazioni di query. Vedere [Microsoft SQL Server Community Samples: Analysis Services](https://sqlsrvanalysissrvcs.codeplex.com/)(Esempi della community di Microsoft SQL Server: Analysis Services).  
+-   Usare ASTrace2012, anziché un log di query, per identificare gli utenti che eseguono query sui cubi. Il log di query viene usato generalmente per fornire un input all'Ottimizzazione guidata basata sulle statistiche di utilizzo e i dati acquisiti non sono facili da leggere o interpretare. ASTrace2012 è uno strumento della community, ampiamente usato, che acquisisce le operazioni di query. Vedere [esempi della Community di Microsoft SQL Server: Analysis Services](https://sqlsrvanalysissrvcs.codeplex.com/).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Gestione di un'istanza di Analysis Services](analysis-services-instance-management.md)   
- [Introduzione al monitoraggio di Analysis Services con SQL Server Profiler](introduction-to-monitoring-analysis-services-with-sql-server-profiler.md)   
+ [Introduzione al monitoraggio di Analysis Services tramite SQL Server Profiler](introduction-to-monitoring-analysis-services-with-sql-server-profiler.md)   
  [Configurare le proprietà del Server in Analysis Services](../server-properties/server-properties-in-analysis-services.md)  
   
   

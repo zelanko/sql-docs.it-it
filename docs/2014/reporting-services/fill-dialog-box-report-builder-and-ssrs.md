@@ -20,19 +20,19 @@ ms.assetid: 93a91d02-d558-4a0e-8d17-3fdf21e208d3
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 35c8786c571936a27570166c8d331cbd2a641b76
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 329cad1c2d60b40d3f8e448a1ea92b8ee5bebfb9
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48204651"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591435"
 ---
 # <a name="fill-dialog-box-report-builder-and-ssrs"></a>Finestra di dialogo Riempimento (Generatore report e SSRS)
   Nella scheda **Riempimento** è possibile specificare le opzioni relative al colore per lo sfondo di una o più celle in un'area dati o una casella di testo.  
   
 ## <a name="options"></a>Opzioni  
  **Colore di riempimento**  
- Fare clic sul pulsante del colore per selezionare un colore di riempimento per il rettangolo. Fare clic sui **Expression***(fx)* pulsante per modificare l'espressione, che può essere un valore esadecimale per il colore RGB o uno dei nomi di colore predefiniti specificati nella **espressione** nella finestra di dialogo. Per visualizzare un elenco di colori predefiniti, selezionare **Web** nel riquadro **Elemento**. I nomi di colore elencati nel riquadro **Titolo** possono essere digitati nel riquadro di testo dell'espressione. Quando si digita il nome del colore, non utilizzare un segno di uguale (=) o le virgolette ("").  
+ Fare clic sul pulsante del colore per selezionare un colore di riempimento per il rettangolo. Fare clic sul pulsante **Espressione**_(fx)_ per modificare l'espressione, che può essere un valore esadecimale per il colore RGB o uno dei nomi di colore predefiniti specificati nella finestra di dialogo **Espressione** . Per visualizzare un elenco di colori predefiniti, selezionare **Web** nel riquadro **Elemento**. I nomi di colore elencati nel riquadro **Titolo** possono essere digitati nel riquadro di testo dell'espressione. Quando si digita il nome del colore, non utilizzare un segno di uguale (=) o le virgolette ("").  
   
  **Selezionare l'origine dell'immagine**  
  Indicare il percorso di archiviazione dell'immagine in modo da consentire al processore del report di visualizzarla durante il rendering del report.  
@@ -61,7 +61,7 @@ ms.locfileid: "48204651"
   
 ## <a name="see-also"></a>Vedere anche  
  [Formattazione degli elementi del report &#40;Generatore report e SSRS&#41;](report-design/formatting-report-items-report-builder-and-ssrs.md)   
- [Formattazione di testo e segnaposto &#40;Report e SSRS&#41;](report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)   
- [Immagini &#40;Report e SSRS&#41;](report-design/images-report-builder-and-ssrs.md)  
+ [Formattazione di testo e segnaposto &#40;Generatore report e SSRS&#41;](report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)   
+ [Immagini &#40;Generatore report e SSRS&#41;](report-design/images-report-builder-and-ssrs.md)  
   
   

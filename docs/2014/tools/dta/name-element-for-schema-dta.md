@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 dev_langs:
 - XML
@@ -15,12 +14,12 @@ ms.assetid: 014e4854-fed2-454b-8557-5f7c5bb6b17a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cb954856e5d48a458652de15e7445c9232889b29
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 01b536c24661ce223e91cbe791c70529558388ab
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48096221"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52801703"
 ---
 # <a name="name-element-for-schema-dta"></a>Elemento Name per Schema (DTA)
   Contiene il nome dello schema.  
@@ -37,7 +36,7 @@ ms.locfileid: "48096221"
   
 ## <a name="element-characteristics"></a>Caratteristiche elemento  
   
-|Caratteristica|Description|  
+|Caratteristica|Descrizione|  
 |--------------------|-----------------|  
 |**Tipo di dati e lunghezza**|`string`, tra 1 e 255 caratteri|  
 |**Valore predefinito**|Nessuna.|  
@@ -47,13 +46,13 @@ ms.locfileid: "48096221"
   
 |Relazione|Elementi|  
 |------------------|--------------|  
-|**Elemento padre**|[Elemento schema per il Database &#40;DTA&#41;](schema-element-for-database-dta.md)|  
+|**Elemento padre**|[Elemento Schema per Database &#40;DTA&#41;](schema-element-for-database-dta.md)|  
 |**Elementi figlio**|Nessuna.|  
   
 ## <a name="example"></a>Esempio  
  Per un esempio di utilizzo di questo elemento, vedere [Elemento Server &#40;DTA&#41;](server-element-dta.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Guida di riferimento ai file di input XML &#40;Ottimizzazione guidata motore di database&#41;](xml-input-file-reference-database-engine-tuning-advisor.md)  
+ [Guida di riferimento ai file di input XML&#40; (Ottimizzazione guidata motore di database)&#41;](xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   

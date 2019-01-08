@@ -10,18 +10,18 @@ ms.assetid: 55548cb2-77a8-4953-8b5a-f2778a4f13cf
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: ad93f867eb10768806d3384c05596f7d4f008dce
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fa8a92b3727bf4c06a5b5a85c8359f96b592cd44
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48209151"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53359753"
 ---
 # <a name="monitoring-performance-of-natively-compiled-stored-procedures"></a>Monitoraggio delle prestazioni di stored procedure compilate in modo nativo
   In questo argomento viene illustrato come è possibile monitorare le prestazioni di stored procedure compilate in modo nativo  
   
 ## <a name="using-extended-events"></a>Utilizzo degli eventi estesi  
- Usare il `sp_statement_completed` eventi estesi per tenere traccia dell'esecuzione di una query. Creare una sessione di eventi estesi con questo evento, applicando facoltativamente un filtro a OBJECT_ID per una stored procedure compilata in modo nativo. L'evento esteso viene generato dopo l'esecuzione di ogni query. Il tempo e la durata della CPU segnalati dagli eventi estesi indicano la quantità di CPU utilizzata dalla query e il tempo di esecuzione. Una stored procedure compilata in modo nativo che utilizza un tempo di CPU elevato può presentare problemi di prestazioni.  
+ Utilizzare l'evento esteso `sp_statement_completed` per tracciare l'esecuzione di una query. Creare una sessione di eventi estesi con questo evento, applicando facoltativamente un filtro a OBJECT_ID per una stored procedure compilata in modo nativo. L'evento esteso viene generato dopo l'esecuzione di ogni query. Il tempo e la durata della CPU segnalati dagli eventi estesi indicano la quantità di CPU utilizzata dalla query e il tempo di esecuzione. Una stored procedure compilata in modo nativo che utilizza un tempo di CPU elevato può presentare problemi di prestazioni.  
   
  È possibile utilizzare `line_number` e `object_id` nell'evento esteso per esaminare la query. È possibile utilizzare la query seguente per recuperare la definizione della routine. Il numero di riga può essere utilizzato per identificare la query all'interno della definizione:  
   
@@ -29,7 +29,7 @@ ms.locfileid: "48209151"
 select [definition] from sys.sql_modules where object_id=object_id  
 ```  
   
- Per altre informazioni sul `sp_statement_completed` evento esteso, vedere [come recuperare l'istruzione che ha causato un evento](http://blogs.msdn.com/b/extended_events/archive/2010/05/07/making-a-statement-how-to-retrieve-the-t-sql-statement-that-caused-an-event.aspx).  
+ Per altre informazioni sul `sp_statement_completed` evento esteso, vedere [come recuperare l'istruzione che ha causato un evento](https://blogs.msdn.com/b/extended_events/archive/2010/05/07/making-a-statement-how-to-retrieve-the-t-sql-statement-that-caused-an-event.aspx).  
   
 ## <a name="using-data-management-views"></a>Utilizzo delle viste di gestione dati  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta la raccolta delle statistiche di esecuzione per le stored procedure compilate in modo nativo, sia a livello di routine sia a livello di query. La raccolta delle statistiche di esecuzione non è abilitata per impostazione predefinita a causa dell'impatto sulle prestazioni.  

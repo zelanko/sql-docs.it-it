@@ -11,12 +11,12 @@ ms.assetid: ed38291a-6afe-449f-9f32-3ae04502bd6f
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: c33524c5b526a0523fe866b6307e00cd52cf8003
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: 2ceecfb802437cc699dd84a6f935741a24b30e45
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48905815"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53357668"
 ---
 # <a name="security-report-builder"></a>Sicurezza (Generatore report)
   Generatore report è un'applicazione client di creazione di report progettata per utilizzare un server di report di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Il server di report può essere configurato per lavorare in modalità nativa come server autonomo o in modalità integrata SharePoint per supportare i report in un sito di SharePoint.  
@@ -46,7 +46,7 @@ ms.locfileid: "48905815"
   
      Per visualizzare o pubblicare elementi in un server di report, i set di autorizzazioni che si applicano a elementi correlati al report e le operazioni sono organizzati in ruoli. L'amministratore di un server di report assegna un utente a uno o più ruoli. Ad esempio, il ruolo predefinito Visitatore consente di visualizzare report, cartelle, modelli e risorse.  
   
-     Se non è possibile connettersi o passare a un server di report, contattare l'amministratore del server di report. Per altre informazioni, vedere [Sicurezza e protezione di Reporting Services](../security/reporting-services-security-and-protection.md) nella documentazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] nella [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Books Online](http://go.microsoft.com/fwlink/?linkid=121312).  
+     Se non è possibile connettersi o passare a un server di report, contattare l'amministratore del server di report. Per altre informazioni, vedere [Sicurezza e protezione di Reporting Services](../security/reporting-services-security-and-protection.md) nella documentazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] nella [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Books Online](https://go.microsoft.com/fwlink/?linkid=121312).  
   
 -   Server di report configurato in modalità integrata SharePoint  
   
@@ -69,7 +69,7 @@ ms.locfileid: "48905815"
   
  Per consentire ad altri utenti di visualizzare e trovare elementi pubblicati per essere condivisi, è necessario collaborare con l'amministratore del server di report per configurare un'organizzazione della cartella che fornisca l'accesso agli utenti. L'accesso deve essere disponibile per la creazione di report e per l'esecuzione di report pubblicati.  
   
- Per ulteriori informazioni, vedere gli argomenti seguenti nella documentazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] inclusa nella [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [di](http://go.microsoft.com/fwlink/?linkid=121312):  
+ Per ulteriori informazioni, vedere gli argomenti seguenti nella documentazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] inclusa nella [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [di](https://go.microsoft.com/fwlink/?linkid=121312):  
   
 -   [Ruoli e autorizzazioni &#40;Reporting Services&#41;](../security/roles-and-permissions-reporting-services.md)  
   
@@ -95,7 +95,7 @@ ms.locfileid: "48905815"
   
  In fase di progettazione del report, le credenziali vengono utilizzare per eseguire query di set di dati e visualizzare in anteprima il report. In fase di esecuzione, le credenziali vengono utilizzare per eseguire il report e memorizzare nella cache i risultati delle query. È inoltre possibile memorizzare indipendentemente nella cache i risultati di query del set di dati condiviso. Le credenziali nella fase di progettazione e nella fase di esecuzione possono essere differenti. Per altre informazioni, vedere [Specifica di credenziali in Generatore report](../specify-credentials-in-report-builder.md).  
   
- Per altre informazioni sulla sicurezza dei dati, vedere l'argomento seguente nella documentazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] inclusa nella [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [di](http://go.microsoft.com/fwlink/?linkid=121312):  
+ Per altre informazioni sulla sicurezza dei dati, vedere l'argomento seguente nella documentazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] inclusa nella [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [di](https://go.microsoft.com/fwlink/?linkid=121312):  
   
 -   [Centro di sicurezza per il motore di database di SQL Server e il database SQL di Azure](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   
@@ -115,9 +115,9 @@ ms.locfileid: "48905815"
   
 -   Non utilizzare parametri basati su parametri di query e che sono di tipo **Text** a meno che si forniscano valori validi. Un elenco dei valori disponibili aiuta un utente a scegliere solo valori validi. Senza questo elenco non è possibile limitare i valori che possono essere immessi da un utente.  
   
--   Non usare globale [& UserID] per proteggere i dati privati. Come parametro del report, questo valore può essere specificato in un URL del report tramite la sintassi di accesso agli URL. L'utilizzo di questo valore in un'espressione in un set di dati condiviso evita la memorizzazione nella cache del set di dati. Per altre informazioni, vedere [Riferimento ai parametri di accesso con URL](../url-access-parameter-reference.md) nella documentazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] nella [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Books Online](http://go.microsoft.com/fwlink/?linkid=121312).  
+-   Non usare il parametro globale [&UserID] per proteggere i dati privati. Come parametro del report, questo valore può essere specificato in un URL del report tramite la sintassi di accesso agli URL. L'utilizzo di questo valore in un'espressione in un set di dati condiviso evita la memorizzazione nella cache del set di dati. Per altre informazioni, vedere [Riferimento ai parametri di accesso con URL](../url-access-parameter-reference.md) nella documentazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] nella [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Books Online](https://go.microsoft.com/fwlink/?linkid=121312).  
   
- Una volta che gli elementi sono pubblicati in un server di report, l'amministratore del server di report può facilitarne la protezione assegnando la sicurezza basata sui ruoli o cartella e la sicurezza a livello di elemento. Per altre informazioni, vedere [Garantire la sicurezza di report e risorse](../security/secure-reports-and-resources.md) nella documentazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] nella [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Books Online](http://go.microsoft.com/fwlink/?linkid=121312).  
+ Una volta che gli elementi sono pubblicati in un server di report, l'amministratore del server di report può facilitarne la protezione assegnando la sicurezza basata sui ruoli o cartella e la sicurezza a livello di elemento. Per altre informazioni, vedere [Garantire la sicurezza di report e risorse](../security/secure-reports-and-resources.md) nella documentazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] nella [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Books Online](https://go.microsoft.com/fwlink/?linkid=121312).  
   
  
   

@@ -1,5 +1,5 @@
 ---
-title: Assegnazione dei punteggi nativa in SQL Server machine Learning Services | Microsoft Docs
+title: Punteggio nativo tramite l'istruzione T-SQL stimare - servizi di SQL Server Machine Learning
 description: Generare stime utilizzando la funzione di stima T-SQL, valutazione degli input dta rispetto a un modello con training preliminare scritte in R o Python in SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 372c81310fea86094543319f21e409142810de97
-ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
+ms.openlocfilehash: a14a4b188aa27acdef0bc836e939a7df0021e522
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46713153"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53645130"
 ---
 # <a name="native-scoring-using-the-predict-t-sql-function"></a>Punteggio nativo usando la funzione di stima T-SQL
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -70,7 +70,7 @@ Tipi di modelli non supportati includono i tipi seguenti:
 + Modelli di linguaggio PMML
 + Modelli creati con altre librerie open source o di terze parti
 
-## <a name="example-predict-t-sql"></a>Esempio: Stima (T-SQL)
+## <a name="example-predict-t-sql"></a>Esempio: STIMA (T-SQL)
 
 In questo esempio, si crea un modello e quindi chiama la funzione di stima in tempo reale da T-SQL.
 
@@ -78,7 +78,7 @@ In questo esempio, si crea un modello e quindi chiama la funzione di stima in te
 
 Eseguire il codice seguente per creare il database di esempio e le tabelle necessarie.
 
-```SQL
+```sql
 CREATE DATABASE NativeScoringTest;
 GO
 USE NativeScoringTest;
@@ -95,7 +95,7 @@ GO
 
 Usare l'istruzione seguente per popolare la tabella di dati con i dati di **iris** set di dati.
 
-```SQL
+```sql
 INSERT INTO iris_rx_data ("Sepal.Length", "Sepal.Width", "Petal.Length", "Petal.Width" , "Species")
 EXECUTE sp_execute_external_script
   @language = N'R'
@@ -107,7 +107,7 @@ GO
 
 A questo punto, creare una tabella per archiviare i modelli.
 
-```SQL
+```sql
 DROP TABLE IF EXISTS ml_models;
 GO
 CREATE TABLE ml_models ( model_name nvarchar(100) not null primary key
@@ -118,7 +118,7 @@ GO
 
 Il codice seguente crea un modello basato sul **iris** set di dati e lo salva nella tabella denominata **modelli**.
 
-```SQL
+```sql
 DECLARE @model varbinary(max);
 EXECUTE sp_execute_external_script
   @language = N'R'
@@ -138,7 +138,7 @@ EXECUTE sp_execute_external_script
 
 È possibile eseguire un'istruzione, ad esempio il comando seguente per visualizzare il modello archiviato in formato binario:
 
-```SQL
+```sql
 SELECT *, datalength(native_model_object)/1024. as model_size_kb
 FROM ml_models;
 ```
@@ -147,7 +147,7 @@ FROM ml_models;
 
 L'istruzione di stima semplice seguente ottiene una classificazione dal modello di albero delle decisioni usando il **assegnazione dei punteggi nativa** (funzione). Consente di prevedere la specie di iris in base agli attributi forniti, lunghezza del petalo e larghezza.
 
-```SQL
+```sql
 DECLARE @model varbinary(max) = (
   SELECT native_model_object
   FROM ml_models
@@ -168,5 +168,5 @@ Se viene visualizzato l'errore, "Errore durante l'esecuzione della funzione PRED
 
 Per una soluzione completa che include l'assegnazione dei punteggi nativa, vedere questi esempi dal team di sviluppo di SQL Server:
 
-+ Distribuire lo script di Machine Learning: [usando un modello Python](https://microsoft.github.io/sql-ml-tutorials/python/rentalprediction/step/3.html)
-+ Distribuire lo script di Machine Learning: [usando un modello R](https://microsoft.github.io/sql-ml-tutorials/R/rentalprediction/step/3.html)
++ Distribuire lo script di Machine Learning: [Usando un modello Python](https://microsoft.github.io/sql-ml-tutorials/python/rentalprediction/step/3.html)
++ Distribuire lo script di Machine Learning: [Usando un modello R](https://microsoft.github.io/sql-ml-tutorials/R/rentalprediction/step/3.html)

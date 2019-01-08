@@ -22,12 +22,12 @@ ms.assetid: 672afac9-364d-4946-ad5d-8a2d89cf8d81
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c682b29a4265b9c6955b440dc45e4920ca87d081
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f70b3367d2ca0b6c896c970f29b179dc969640c9
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48223381"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53366643"
 ---
 # <a name="quick-start-installation-of-sql-server-2014"></a>Guida introduttiva all'installazione di SQL Server 2014
     
@@ -82,7 +82,7 @@ ms.locfileid: "48223381"
   
      Visualizzare [installazione Cluster di Failover di SQL Server](../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md) per istruzioni sull'installazione [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] su un [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] cluster di failover.  
   
- Per impostazione predefinita, i database di esempio e il codice di esempio non vengono installati come parte dell'installazione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Per installare i database di esempio e il codice di esempio per le edizioni di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] diverse da Express, vedere il [sito Web CodePlex](http://go.microsoft.com/fwlink/?LinkId=87843). Per informazioni sul supporto per il codice e i database di esempio di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] per [!INCLUDE[ssExpress](../includes/ssexpress-md.md)], vedere [Panoramica di database ed esempi](http://go.microsoft.com/fwlink/?LinkId=110391).  
+ Per impostazione predefinita, i database di esempio e il codice di esempio non vengono installati come parte dell'installazione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Per installare i database di esempio e il codice di esempio per le edizioni di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] diverse da Express, vedere il [sito Web CodePlex](https://go.microsoft.com/fwlink/?LinkId=87843). Per informazioni sul supporto per il codice e i database di esempio di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] per [!INCLUDE[ssExpress](../includes/ssexpress-md.md)], vedere [Panoramica di database ed esempi](https://go.microsoft.com/fwlink/?LinkId=110391).  
   
 ## <a name="includessnoversionincludesssnoversion-mdmd-installation"></a>Installazione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  
  Indipendentemente dal fatto che si scelga di utilizzare l'Installazione guidata di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] o il prompt dei comandi per installare [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], il programma di istallazione prevede i passaggi seguenti.  
@@ -113,7 +113,7 @@ ms.locfileid: "48223381"
 ###  <a name="BKMK_Upgrading"></a> L'aggiornamento a [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]  
  È possibile aggiornare le istanze esistenti di [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] o [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] a [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Per altre informazioni, vedere [esegue l'aggiornamento a SQL Server 2014](../database-engine/install-windows/upgrade-sql-server.md). Prima di avviare il programma di installazione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] per eseguire l'aggiornamento a [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], vedere gli argomenti seguenti relativi al processo di aggiornamento:  
   
-|Description|Argomento|  
+|Descrizione|Argomento|  
 |-----------------|-----------|  
 |Vengono indicati i percorsi di aggiornamento supportati da [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].|[Aggiornamenti supportati](../database-engine/install-windows/supported-version-and-edition-upgrades.md)|  
 |Viene descritto lo strumento Preparazione aggiornamento, con cui analizzare le istanze di [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] e [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] per identificare i problemi di aggiornamento noti.|[Usare la Preparazione aggiornamento per preparare gli aggiornamenti](../../2014/sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md)|  
@@ -126,7 +126,7 @@ ms.locfileid: "48223381"
 ###  <a name="BKMK_Install"></a> Installazione di [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]  
  Per informazioni sui vari scenari di installazione per [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], vedere gli argomenti seguenti.  
   
-|Description|Argomento|  
+|Descrizione|Argomento|  
 |-----------------|-----------|  
 |Vengono forniti i collegamenti agli argomenti relativi all'installazione di vari componenti di [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] e agli argomenti contenenti la procedura per l'installazione di [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].|[Installare SQL Server 2014](../database-engine/install-windows/install-sql-server.md)|  
 |Vedere questo argomento per installare [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] in Windows Server Core.|[Installare SQL Server 2014 in Server Core](../database-engine/install-windows/install-sql-server-on-server-core.md)|  
@@ -143,7 +143,7 @@ ms.locfileid: "48223381"
 ###  <a name="BKMK_Configure"></a> La configurazione [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]  
  Al termine dell'installazione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], è possibile configurare ulteriormente [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tramite strumenti grafici e utilità del prompt dei comandi. Vedere gli argomenti seguenti per configurare [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] per la prima volta:  
   
-|Description|Argomento|  
+|Descrizione|Argomento|  
 |-----------------|-----------|  
 |Le informazioni fornite in questo argomento consentono di stabilire se è necessario sbloccare le porte di un firewall per consentire l'accesso ad [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] o PowerPivot per SharePoint. Le procedure descritte consentono di configurare le impostazioni sia delle porte che del firewall.|[Configurare Windows Firewall per consentire l'accesso ad Analysis Services](../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)|  
 |In questo argomento viene fornita una panoramica della configurazione del firewall e vengono riepilogate le informazioni utili a un amministratore di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .|[Configurare Windows Firewall per consentire l'accesso a SQL Server](../../2014/sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)|  
@@ -152,7 +152,7 @@ ms.locfileid: "48223381"
 ###  <a name="BKMK_Uninstalling"></a> La disinstallazione [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]  
  Negli argomenti seguenti viene descritto come disinstallare manualmente un'istanza autonoma e un'istanza cluster di failover di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]:  
   
-|Description|Argomento|  
+|Descrizione|Argomento|  
 |-----------------|-----------|  
 |In questo argomento viene descritto come disinstallare manualmente un'istanza autonoma di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].|[Disinstallare SQL Server 2014](../sql-server/install/uninstall-sql-server.md)|  
 |In questo argomento viene descritto come disinstallare un'istanza cluster di failover di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].|[Rimuovere un'istanza del cluster di failover di SQL Server &#40;programma di installazione&#41;](../sql-server/failover-clusters/install/remove-a-sql-server-failover-cluster-instance-setup.md)|  

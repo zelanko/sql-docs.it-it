@@ -1,5 +1,5 @@
 ---
-title: 'Esercitazione: Report mappa (Generatore report) | Microsoft Docs'
+title: 'Esercitazione: Report mappa (Generatore Report) | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,12 +11,12 @@ ms.assetid: 8d831356-7efa-40cc-ae95-383b3eecf833
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 2218fdb184fb4fe67d110b95c42f10f761ef3975
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 43135554b1340b92f4801a0f08e002142b443981
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48098851"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53359863"
 ---
 # <a name="tutorial-map-report-report-builder"></a>Esercitazione: Report mappa (Generatore report)
   Questa esercitazione intende fornire un approfondimento delle funzionalità della mappa che è possibile utilizzare per visualizzare i dati del report rispetto a uno sfondo geografico.  
@@ -63,7 +63,7 @@ ms.locfileid: "48098851"
 10. [Salvare il Report](#Save)  
   
 > [!NOTE]  
->  In questa esercitazione, i passaggi della procedura guidata sono consolidati in due procedure: una per la creazione del set di dati e un'altra per la creazione di una tabella. Per istruzioni dettagliate su come selezionare un server di report, scegliere un'origine dati, creare un set di dati ed eseguire la procedura guidata, vedere la prima esercitazione di questa serie: [Esercitazione: Creazione di un report tabella semplice &#40;Generatore report&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+>  In questa esercitazione, i passaggi della procedura guidata sono consolidati in due procedure: una per la creazione del set di dati e un'altra per la creazione di una tabella. Per istruzioni dettagliate su come selezionare un server di report, scegliere un'origine dati, creare un set di dati ed eseguire la procedura guidata, vedere la prima esercitazione di questa serie: [Esercitazione: Creazione di un Report tabella semplice &#40;Generatore Report&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
  Tempo previsto per il completamento di questa esercitazione: 30 minuti.  
   
@@ -194,7 +194,7 @@ ms.locfileid: "48098851"
   
 9. Nella barra degli strumenti Progettazione query fare clic su **Esegui** (**!**).  
   
-     Il set di risultati comprende sette colonne: StoreKey, StoreName, SellingArea, City, County, Sales e SpatialLocation. Questi dati rappresentano un set di punti vendita nello Stato di New York che vendono beni di consumo. Ogni riga del set di risultati contiene un identificatore del negozio, il nome del negozio, l'area disponibile per l'esposizione dei prodotti, la città e la regione in cui si trova il negozio, il totale vendite e la posizione indicata con longitudine e latitudine. L'area di visualizzazione varia da 455 piedi quadrati a 1125 piedi quadrati.  
+     Il set di risultati vengono visualizzate sette colonne: StoreKey, StoreName, SellingArea, City, County, Sales e SpatialLocation. Questi dati rappresentano un set di punti vendita nello Stato di New York che vendono beni di consumo. Ogni riga del set di risultati contiene un identificatore del negozio, il nome del negozio, l'area disponibile per l'esposizione dei prodotti, la città e la regione in cui si trova il negozio, il totale vendite e la posizione indicata con longitudine e latitudine. L'area di visualizzazione varia da 455 piedi quadrati a 1125 piedi quadrati.  
   
 10. Scegliere **Avanti**.  
   
@@ -581,7 +581,7 @@ ms.locfileid: "48098851"
 ## <a name="next-steps"></a>Passaggi successivi  
  Questa operazione conclude la procedura dettagliata per l'aggiunta di una mappa al report.  
   
- Per altre informazioni, vedere [Maps &#40;Generatore Report e SSRS&#41; ](report-design/maps-report-builder-and-ssrs.md) e il post di blog [Cartographic Adjustment of Spatial Data per SQL Server Reporting Services](http://go.microsoft.com/fwlink/?LinkId=152771) sul sito Web blogs.msdn.com.  
+ Per altre informazioni, vedere [Maps &#40;Generatore Report e SSRS&#41; ](report-design/maps-report-builder-and-ssrs.md) e il post di blog [Cartographic Adjustment of Spatial Data per SQL Server Reporting Services](https://go.microsoft.com/fwlink/?LinkId=152771) sul sito Web blogs.msdn.com.  
   
  Per altre esercitazioni, vedere [esercitazioni &#40;Generatore Report&#41;](report-builder-tutorials.md).  
   

@@ -24,15 +24,15 @@ ms.assetid: 085f5195-7b2c-411a-9813-0ff5c6066d13
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 94fa7654af0494d7d6bfec8396212634afade30f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ea5ccba5686c9f3716fd6931909ec28a79e00b8a
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48091651"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53362823"
 ---
 # <a name="memory-properties"></a>Proprietà della memoria
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] supporta le proprietà della memoria del server elencate nella tabella seguente. Per le linee guida di impostazione di queste proprietà, vedere la [Guida operativa di SQL Server 2008 R2 Analysis Services](http://go.microsoft.com/fwlink/?LinkID=225539).  
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] supporta le proprietà della memoria del server elencate nella tabella seguente. Per le linee guida di impostazione di queste proprietà, vedere la [Guida operativa di SQL Server 2008 R2 Analysis Services](https://go.microsoft.com/fwlink/?LinkID=225539).  
   
  I valori compresi tra 1 e 100 rappresentano le percentuali di **memoria fisica totale** o **spazio degli indirizzi virtuali**, a seconda di quale dei due elementi sia inferiore. I valori maggiori di 100 rappresentano limiti di memoria in byte.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "48091651"
  Si noti che `TotalMemoryLimit` deve essere sempre minore di `HardMemoryLimit`  
   
  `HardMemoryLimit`  
- Specifica una soglia di memoria superata la quale le sessioni utente attive verranno immediatamente terminate dall'istanza per ridurre l'utilizzo della memoria. Per tutte le sessioni terminate verrà visualizzato un errore che indica l'annullamento a causa di un numero eccessivo di richieste di memoria. Il valore predefinito, ovvero zero (0), il `HardMemoryLimit` verrà impostato su un valore mediano tra `TotalMemoryLimit` e la memoria fisica totale del sistema; se la memoria fisica del sistema è maggiore dello spazio di indirizzo virtuale dell'indirizzo del processo, quindi virtuale lo spazio verrà utilizzato per calcolare `HardMemoryLimit`.  
+ Specifica una soglia di memoria superata la quale le sessioni utente attive verranno immediatamente terminate dall'istanza per ridurre l'utilizzo della memoria. Per tutte le sessioni terminate verrà visualizzato un errore che indica l'annullamento a causa di un numero eccessivo di richieste di memoria. Con il valore predefinito, ovvero zero (0), il limite `HardMemoryLimit` sarà impostato su un valore mediano tra `TotalMemoryLimit` e la memoria fisica totale del sistema; se quest'ultima è maggiore dello spazio di indirizzo virtuale del processo, per calcolare il limite `HardMemoryLimit` sarà invece usato lo spazio di indirizzo virtuale.  
   
  `VirtualMemoryLimit`  
  Proprietà avanzata che deve essere modificata solo sotto la supervisione del servizio di supporto tecnico [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
@@ -60,9 +60,9 @@ ms.locfileid: "48091651"
   
  Il valore predefinito è**1** . Questa proprietà abilita il paging su disco utilizzando il file di paging del sistema operativo (pagefile.sys).  
   
- Quando si `VertiPaqPagingPolicy` è impostato su 1, l'elaborazione è meno probabile che venga completata a causa di limitazioni di memoria perché il server tenterà di eseguire il paging su disco utilizzando il metodo specificato. L'impostazione della proprietà `VertiPaqPagingPolicy` non garantisce che non si verificheranno mai gli errori della memoria. Gli errori di memoria insufficiente si possono comunque verificare nelle condizioni seguenti:  
+ Quando `VertiPaqPagingPolicy` è impostato su 1, è meno probabile che l'elaborazione non venga completata a causa di limitazioni di memoria perché il server tenterà di eseguire il paging su disco utilizzando il metodo specificato. L'impostazione della proprietà `VertiPaqPagingPolicy` non garantisce che non si verificheranno mai gli errori della memoria. Gli errori di memoria insufficiente si possono comunque verificare nelle condizioni seguenti:  
   
--   Non c'è abbastanza memoria per tutti i dizionari. Durante l'elaborazione, Analysis Services blocca i dizionari per ogni colonna in memoria e tutti i dizionari insieme non può essere maggiore del valore specificato per `VertiPaqMemoryLimit`.  
+-   Non c'è abbastanza memoria per tutti i dizionari. Durante l'elaborazione, Analysis Services blocca i dizionari per ogni colonna in memoria e tutti i dizionari insieme non possono essere maggiori del valore specificato per `VertiPaqMemoryLimit`.  
   
 -   Lo spazio dell'indirizzo virtuale è insufficiente per il processo.  
   
@@ -73,7 +73,7 @@ ms.locfileid: "48091651"
  `VertiPaqMemoryLimit`  
  Se il paging su disco è consentito, questa proprietà consente di specificare il livello di consumo di memoria (come percentuale della memoria totale) da cui avrà inizio il paging. Il valore predefinito è 60. Se il consumo di memoria è inferiore al 60%, il server non eseguirà il paging su disco.  
   
- Questa proprietà dipende il `VertiPaqPagingPolicyProperty`, che deve essere impostata su 1 affinché si verifichi il paging.  
+ Questa proprietà dipende da `VertiPaqPagingPolicyProperty`che deve essere impostata su 1 affinché si verifichi il paging.  
   
  Questo metodo si applica solo in modalità server tabulare.  
   

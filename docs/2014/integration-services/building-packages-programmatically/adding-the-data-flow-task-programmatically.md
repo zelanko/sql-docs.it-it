@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- integration-services
+ms.technology: integration-services
 ms.topic: reference
 dev_langs:
 - VB
@@ -20,17 +18,17 @@ ms.assetid: 0ca03712-a82e-4aa7-949b-f869a8936ddf
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5485f0094c822d641bf7f123d1d1f72f10662cf4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c9772198054595d82f648cec0cba8b6154039bae
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48102036"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53368433"
 ---
 # <a name="adding-the-data-flow-task-programmatically"></a>Aggiunta dell'attività Flusso di dati a livello di programmazione
   In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] è inclusa l'attività Flusso di dati, rappresentata dallo spazio dei nomi <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper> del modello a oggetti. Flusso di dati è un'attività speciale, a elevate prestazioni, dedicata alla trasformazione e allo spostamento dei dati durante l'esecuzione del pacchetto. Analogamente ad altre attività, Flusso di dati è inclusa nell'oggetto <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost> e dal punto di vista del motore di run-time è solo un'altra attività del pacchetto. Tuttavia, il flusso di dati contiene oggetti aggiuntivi denominati componenti del flusso di dati. Si tratta dei componenti che consentono lo spostamento dei dati da un'origine a una destinazione, a volte tramite una trasformazione. Tali componenti definiscono sia la direzione dello spostamento che la modalità di trasformazione dei dati. La configurazione dell'attività Flusso di dati implica l'aggiunta di componenti e quindi la relativa connessione per stabilire il flusso dei dati e ottenere la trasformazione desiderata.  
   
- Un'attività Flusso di dati include tre tipi di componenti: **Origini flusso di dati**, **Trasformazioni flusso di dati** e **Destinazioni flusso di dati**, visualizzati in questo ordine nella casella degli strumenti di Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)]. Questi tipi vengono anche definiti più semplicemente come origini, trasformazioni o destinazioni. Come implicano i nomi, i dati vengono spostati da un'origine a una trasformazione e quindi a una destinazione. Si tratta di una descrizione semplicistica del flusso di dati per illustrare il concetto, ma l'attività Flusso di dati è sufficientemente flessibile e potente da gestire più origini e da connettere molte trasformazioni che inviano l'output a molte destinazioni.  
+ Esistono tre tipi di componenti all'interno di un'attività flusso di dati: **Origini flusso di dati**, **trasformazioni flusso di dati**, e **destinazioni flusso di dati**, come illustrato in questo ordine all'interno di [!INCLUDE[ssIS](../../includes/ssis-md.md)] della casella degli strumenti di progettazione. Questi tipi vengono anche definiti più semplicemente come origini, trasformazioni o destinazioni. Come implicano i nomi, i dati vengono spostati da un'origine a una trasformazione e quindi a una destinazione. Si tratta di una descrizione semplicistica del flusso di dati per illustrare il concetto, ma l'attività Flusso di dati è sufficientemente flessibile e potente da gestire più origini e da connettere molte trasformazioni che inviano l'output a molte destinazioni.  
   
  L'attività Flusso di dati viene aggiunta in un pacchetto allo stesso modo delle altre attività. Una volta aggiunta, l'attività viene configurata con l'aggiunta, la configurazione e la connessione dei relativi componenti.  
   
@@ -79,9 +77,9 @@ End Module
 ```  
   
 ## <a name="external-resources"></a>Risorse esterne  
- Intervento nel blog sull'[aggiornamento di EzAPI per SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=243223) sul sito Web blogs.msdn.com.  
+ Intervento nel blog sull'[aggiornamento di EzAPI per SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=243223) sul sito Web blogs.msdn.com.  
   
-![Icona di Integration Services (piccola)](../media/dts-16.gif "icona di Integration Services (piccola)")**rimangono fino a Date con Integration Services** <br /> Per i download, gli articoli, gli esempi e i video Microsoft più recenti, oltre alle soluzioni selezionate dalla community, visitare la pagina [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sul sito MSDN:<br /><br /> [Visita la pagina di Integration Services su MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Per ricevere una notifica automatica su questi aggiornamenti, sottoscrivere i feed RSS disponibili nella pagina.  
+![Icona di Integration Services (piccola)](../media/dts-16.gif "icona di Integration Services (piccola)")**rimangono fino a Date con Integration Services**<br /> Per i download, gli articoli, gli esempi e i video Microsoft più recenti, oltre alle soluzioni selezionate dalla community, visitare la pagina [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sul sito MSDN:<br /><br /> [Visita la pagina di Integration Services su MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Per ricevere una notifica automatica su questi aggiornamenti, sottoscrivere i feed RSS disponibili nella pagina.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Individuazione dei componenti del flusso di dati a livello di programmazione](../building-packages-programmatically/discovering-data-flow-components-programmatically.md)  

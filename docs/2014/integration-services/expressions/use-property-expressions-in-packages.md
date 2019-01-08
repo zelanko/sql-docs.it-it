@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - packages [Integration Services], expressions
@@ -20,17 +19,17 @@ ms.assetid: a4bfc925-3ef6-431e-b1dd-7e0023d3a92d
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2e14b518f8b644d9d1b2670e90bbf27b09faf049
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a6dd870de31e6b3be65cac62cda84c3e9c9635c7
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48085731"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53373373"
 ---
 # <a name="use-property-expressions-in-packages"></a>utilizzo delle espressioni di proprietà nei pacchetti
   Un'espressione di proprietà è un'espressione assegnata a una proprietà per consentire l'aggiornamento dinamico della proprietà in fase di esecuzione. Un'espressione di proprietà, ad esempio, consente di aggiornare la riga A utilizzata dall'attività Invia messaggi inserendo un indirizzo di posta elettronica archiviato in una variabile.  
   
- È possibile aggiungere un'espressione a pacchetti, attività, cicli Foreach, cicli For, sequenze, enumeratori Foreach, gestori eventi, gestioni connessioni a livello di pacchetto o progetto oppure provider di log. Qualsiasi proprietà di questi oggetti che sia di lettura/scrittura può implementare un'espressione di proprietà. In [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] è supportato l'utilizzo delle espressioni di proprietà in alcune proprietà personalizzate di componenti del flusso di dati. Le variabili e i vincoli di precedenza non supportano le espressioni di proprietà, ma includono speciali proprietà in cui è possibile utilizzare espressioni.  
+ È possibile aggiungere un'espressione a pacchetti, attività, cicli Foreach, cicli For, sequenze, enumeratori Foreach, gestori eventi, gestioni connessioni a livello di pacchetto o progetto oppure provider di log. Qualsiasi proprietà di questi oggetti che sia di lettura/scrittura può implementare un'espressione di proprietà. [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] supporta l'utilizzo delle espressioni di proprietà in alcune proprietà personalizzate di componenti del flusso di dati. Le variabili e i vincoli di precedenza non supportano le espressioni di proprietà, ma includono speciali proprietà in cui è possibile utilizzare espressioni.  
   
  Le espressioni di proprietà possono essere aggiornate in modi diversi:  
   
@@ -53,10 +52,10 @@ ms.locfileid: "48085731"
   
  Una proprietà può utilizzare una sola espressione di proprietà e a sua volta un'espressione di proprietà può essere applicata a una sola proprietà. È tuttavia possibile compilare più espressioni di proprietà identiche e assegnarle a proprietà diverse.  
   
- Alcune proprietà vengono impostate utilizzando valori specificati da enumeratori. Per fare riferimento a un membro di un enumeratore in un'espressione di proprietà, è necessario utilizzare il valore numerico equivalente al nome descrittivo di tale membro dell'enumeratore. Ad esempio, se un'espressione di proprietà imposta la `LoggingMode` proprietà, che usa un valore compreso il `DTSLoggingMode` enumerazione, l'espressione di proprietà deve utilizzare 0, 1 o 2 anziché i nomi descrittivi `Enabled`, `Disabled`, o `UseParentSetting`. Per altre informazioni, vedere [Costanti enumerate in espressioni di proprietà](enumerated-constants-in-property-expressions.md).  
+ Alcune proprietà vengono impostate utilizzando valori specificati da enumeratori. Per fare riferimento a un membro di un enumeratore in un'espressione di proprietà, è necessario utilizzare il valore numerico equivalente al nome descrittivo di tale membro dell'enumeratore. Se ad esempio un'espressione di proprietà imposta la proprietà `LoggingMode` in cui viene utilizzato un valore dell'enumerazione `DTSLoggingMode`, l'espressione di proprietà dovrà utilizzare 0, 1 o 2, anziché i nomi descrittivi `Enabled`, `Disabled` o `UseParentSetting`. Per altre informazioni, vedere [Costanti enumerate in espressioni di proprietà](enumerated-constants-in-property-expressions.md).  
   
 ## <a name="property-expression-user-interface"></a>Interfaccia utente delle espressioni di proprietà  
- [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] fornisce un set di strumenti per la creazione e la gestione delle espressioni di proprietà.  
+ [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] offre un set di strumenti per la compilazione e la gestione delle espressioni di proprietà.  
   
 -   Pagina **Espressioni** degli editor personalizzati delle attività e dei contenitori Ciclo For e Ciclo Foreach. In pagina **Espressioni** è possibile modificare espressioni e visualizzare un elenco delle espressioni di proprietà usate da un'attività o da un contenitore Ciclo Foreach o Ciclo For.  
   
@@ -70,13 +69,13 @@ ms.locfileid: "48085731"
   
  ![Interfaccia utente per espressioni di proprietà](../media/ssis-propertyexpressionui.gif "Interfaccia utente per espressioni di proprietà")  
   
- Nella finestra **Proprietà** e nella pagina **Espressioni** fare clic sul pulsante Sfoglia **(…)** al livello della raccolta **Espressioni** per aprire la finestra di dialogo **Editor espressioni di proprietà** . Nella finestra Editor espressioni di proprietà è possibile eseguire il mapping una proprietà a un'espressione e digitare espressioni di proprietà. Se per creare e convalidare l'espressione si desidera usare gli strumenti grafici, fare clic sul pulsante Sfoglia **(…)** al livello dell'espressione per aprire la finestra di dialogo **Generatore di espressioni** , quindi creare o modificare e facoltativamente convalidare l'espressione.  
+ Nella finestra **Proprietà** e nella pagina **Espressioni** fare clic sul pulsante Sfoglia **(...)** al livello della raccolta **Espressioni** per aprire la finestra di dialogo **Editor espressioni di proprietà**. Nella finestra Editor espressioni di proprietà è possibile eseguire il mapping una proprietà a un'espressione e digitare espressioni di proprietà. Se per creare e convalidare l'espressione si vogliono usare gli strumenti grafici, fare clic sul pulsante Sfoglia **(...)** al livello dell'espressione per aprire la finestra di dialogo **Generatore di espressioni**, quindi creare o modificare e facoltativamente convalidare l'espressione.  
   
  È possibile accedere alla finestra di dialogo **Generatore di espressioni** anche dalla finestra di dialogo **Editor espressioni di proprietà** .  
   
 #### <a name="to-work-with-property-expressions"></a>Per utilizzare le espressioni di proprietà  
   
--   [Aggiungere o modificare un'espressione di proprietà](add-or-change-a-property-expression.md)  
+-   [Aggiunta o modifica di un'espressione di proprietà](add-or-change-a-property-expression.md)  
   
 ### <a name="setting-property-expressions-of-data-flow-components"></a>Impostazione di espressioni di proprietà per i componenti dei flussi di dati  
  Se si crea un pacchetto in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], le proprietà dei componenti di un flusso di dati che supportano espressioni di proprietà vengono esposte sull'attività Flusso di dati a cui appartengono. Per aggiungere, modificare e rimuovere le espressioni di proprietà dei componenti di un flusso di dati, è necessario fare clic con il pulsante destro del mouse sull'attività Flusso di dati a cui appartengono tali componenti e scegliere **Proprietà**. Nella finestra Proprietà sono elencate le proprietà dei componenti del flusso di dati per le quali è possibile utilizzare espressioni di proprietà. Per creare o modificare un'espressione di proprietà per la proprietà SamplingValue di una trasformazione Campionamento righe in un flusso di dati di nome SampleCustomer, ad esempio, fare clic con il pulsante destro del mouse sull'attività Flusso di dati a cui appartiene la trasformazione Campionamento righe e scegliere **Proprietà**. La proprietà SamplingValue è elencata nella finestra Proprietà, con il formato [SampleCustomer].[SamplingValue].  
@@ -105,9 +104,9 @@ ms.locfileid: "48085731"
 |Enumeratori Foreach|Dopo il caricamento delle configurazioni<br /><br /> Prima della convalida<br /><br /> Prima dell'esecuzione<br /><br /> Prima di ogni enumerazione del ciclo|  
   
 ## <a name="using-property-expressions-in-the-foreach-loop"></a>Utilizzo di espressioni di proprietà nel ciclo Foreach  
- È spesso consigliabile implementare un'espressione di proprietà per impostare il valore della proprietà `ConnectionString` delle gestioni connessioni utilizzate nel contenitore Ciclo Foreach. Dopo l'enumeratore esegue il mapping relativo valore corrente a una variabile in ogni iterazione del ciclo, l'espressione di proprietà può usare il valore di questa variabile per aggiornare il valore della `ConnectionString` proprietà in modo dinamico.  
+ È spesso consigliabile implementare un'espressione di proprietà per impostare il valore della proprietà `ConnectionString` delle gestioni connessioni utilizzate nel contenitore Ciclo Foreach. Dopo che l'enumeratore esegue il mapping tra il relativo valore corrente e una variabile in ogni iterazione del ciclo, l'espressione di proprietà può usare il valore di questa variabile per aggiornare dinamicamente il valore della proprietà `ConnectionString`.  
   
- Se si desidera utilizzare espressioni di proprietà con la proprietà `ConnectionString` delle gestioni connessioni per file, più file, file flat e più file flat utilizzate da un ciclo Foreach, sarà necessario tenere conto di alcuni aspetti. Un pacchetto può essere configurato in modo da eseguire contemporaneamente più file eseguibili impostando la proprietà `MaxConcurrentExecutables` su un valore maggiore di 1 o al valore -1. Il valore -1 indica che il numero massimo di file eseguibili che possono essere eseguiti contemporaneamente è uguale al numero di processori più due. Per evitare conseguenze negative dell'esecuzione parallela di file eseguibili, il valore di `MaxConcurrentExecutables` deve essere impostato su 1. Se `MaxConcurrentExecutables` non è impostata su 1, il valore della `ConnectionString` proprietà non può essere garantita e i risultati sono imprevedibili.  
+ Se si desidera utilizzare espressioni di proprietà con la proprietà `ConnectionString` delle gestioni connessioni per file, più file, file flat e più file flat utilizzate da un ciclo Foreach, sarà necessario tenere conto di alcuni aspetti. Un pacchetto può essere configurato in modo da eseguire contemporaneamente più file eseguibili impostando la proprietà `MaxConcurrentExecutables` su un valore maggiore di 1 o al valore -1. Il valore -1 indica che il numero massimo di file eseguibili che possono essere eseguiti contemporaneamente è uguale al numero di processori più due. Per evitare conseguenze negative dell'esecuzione parallela di file eseguibili, il valore di `MaxConcurrentExecutables` deve essere impostato su 1. Se la proprietà `MaxConcurrentExecutables` non è impostata su 1, il valore della proprietà `ConnectionString` non può essere garantito e i risultati sono imprevedibili.  
   
  Considerare, ad esempio, un ciclo Foreach che enumera i file in una cartella, recupera i nomi dei file e quindi utilizza l'attività Esegui SQL per inserire ogni nome di file in una tabella. Se la proprietà `MaxConcurrentExecutables` non è impostata su 1 e due istanze dell'attività Esegui SQL tentano di scrivere contemporaneamente nella tabella, potrebbero verificarsi conflitti di scrittura.  
   
@@ -126,7 +125,7 @@ ms.locfileid: "48085731"
   
  Se il nome del pacchetto è EmailRowCountPP, eseguito il 3/4/2005, con durata di esecuzione di 9 secondi, l'espressione viene valutata nella stringa seguente.  
   
- PExpression-->Package: (EmailRowCountPP) Started:3/4/2005 11:06:18 AM Duration:9 seconds.  
+ PExpression--> pacchetto: (EmailRowCountPP) Avviato: 3 o 4/2005 secondi di durata: 9 di 11 06 18 AM.  
   
 ### <a name="property-expression-for-the-message-of-an-e-mail-message"></a>Espressione di proprietà per il testo di un messaggio di posta elettronica  
  L'espressione di proprietà seguente consente di impostare la proprietà MessageSource dell'attività Invia messaggi. Nell'espressione vengono utilizzati valori letterali stringa, variabili definite dall'utente e l'operatore di concatenazione (+). Le variabili definite dall'utente sono denominate `nasdaqrawrows`, `nyserawrows`e `amexrawrows`. La stringa "\n" indica un ritorno a capo.  
@@ -137,11 +136,11 @@ ms.locfileid: "48085731"
   
  Rows Processed:  
   
- NASDAQ: 7058  
+ NASDAQ: 7058 7058  
   
- NYSE: 3528  
+ NYSE: 3528 3528  
   
- AMEX: 1102  
+ AMEX: 1102 1102  
   
 ### <a name="property-expression-for-the-executable-property-of-an-execute-process-task"></a>Espressione di proprietà per la proprietà Executable dell'attività Esegui processo  
  L'espressione di proprietà seguente consente di impostare la proprietà Executable dell'attività Esegui processo. Nell'espressione viene utilizzata una combinazione di valori letterali stringa, operatori e funzioni, e precisamente le funzioni DATEPART e GETDATE e l'operatore condizionale.  
@@ -168,9 +167,9 @@ ms.locfileid: "48085731"
   
 ## <a name="external-resources"></a>Risorse esterne  
   
--   [Espressione e Highlighter di configurazione (Progetto CodePlex)](http://go.microsoft.com/fwlink/?LinkId=146625)  
+-   [Espressione e Highlighter di configurazione (Progetto CodePlex)](https://go.microsoft.com/fwlink/?LinkId=146625)  
   
--   Articolo tecnico relativo agli [esempi di espressioni SSIS](http://go.microsoft.com/fwlink/?LinkId=220761)nel sito Web social.technet.microsoft.com  
+-   Articolo tecnico relativo agli [esempi di espressioni SSIS](https://go.microsoft.com/fwlink/?LinkId=220761)nel sito Web social.technet.microsoft.com  
   
 ## <a name="see-also"></a>Vedere anche  
  [Uso di variabili nei pacchetti](../use-variables-in-packages.md)  

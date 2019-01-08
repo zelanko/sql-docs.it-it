@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: table-view-index
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - partitioned tables [SQL Server], about partitioned tables
@@ -15,12 +15,12 @@ ms.assetid: cc5bf181-18a0-44d5-8bd7-8060d227c927
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 8d3342c6a45b705c72c113f58bde7d8df2ae71c3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 946b447b974be9c24403957681f26df627094084
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48229821"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53353407"
 ---
 # <a name="partitioned-tables-and-indexes"></a>Partitioned Tables and Indexes
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta il partizionamento di tabelle e indici. I dati di tabelle e indici partizionati vengono divisi in unità distribuibili tra più filegroup in un database. I dati sono partizionati in senso orizzontale, in modo che per gruppi di righe venga eseguito il mapping in singole partizioni. Tutte le partizioni di un singolo indice o di una singola tabella devono trovarsi nello stesso database. La tabella o indice viene gestito come singola entità logica quando si eseguono query o aggiornamenti sui dati. Le tabelle e gli indici partizionati sono disponibili solo in alcune edizioni di [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per un elenco delle funzionalità supportate dalle edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [Features Supported by the Editions of SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
@@ -45,13 +45,13 @@ ms.locfileid: "48229821"
  I termini seguenti sono applicabili al partizionamento di tabelle e indici.  
   
  Funzione di partizione  
- Oggetto di database che definisce la modalità con cui viene eseguito il mapping delle righe di una tabella o di un indice a un set di partizioni in base ai valori di una determinata colonna, denominata colonna di partizionamento. Ovvero, la funzione di partizione definisce il numero di partizioni che la tabella avrà e come sono definiti i limiti delle partizioni. Ad esempio, data una tabella che contiene i dati degli ordini, si potrebbe decidere di partizionare la tabella in dodici partizioni (mensili) basate su un `datetime` colonna, ad esempio una data di vendita.  
+ Oggetto di database che definisce la modalità con cui viene eseguito il mapping delle righe di una tabella o di un indice a un set di partizioni in base ai valori di una determinata colonna, denominata colonna di partizionamento. Ovvero, la funzione di partizione definisce il numero di partizioni che la tabella avrà e come sono definiti i limiti delle partizioni. Ad esempio, data una tabella che contiene i dati degli ordini di vendita, si può decidere di partizionare la tabella in dodici (ogni mese) partizioni basate su una colonna di tipo `datetime`, quale una data di vendita.  
   
  Schema di partizione  
  Oggetto di database che mappa le partizioni di una funzione di partizione a un set di filegroup. Il principale motivo per cui inserire le partizioni in filegroup separati consiste nel fatto che in tal modo è possibile eseguire operazioni di backup nelle partizioni in modo indipendente, in quanto è possibile eseguire backup in filegroup singoli.  
   
  Colonna di partizionamento  
- Colonna di una tabella o di un indice utilizzata da una funzione di partizione per partizionare la tabella o l'indice. Le colonne calcolate che partecipano a una funzione di partizione devono essere contrassegnate in modo esplicito come PERSISTED. Tutti i tipi di dati validi per utilizzano come colonne di indice possono essere utilizzate come colonna di partizionamento, ad eccezione di `timestamp`. Non è possibile specificare i tipi di dati `ntext`, `text`, `image`, `xml`, `varchar(max)`, `nvarchar(max)` o `varbinary(max)`. Inoltre, non è possibile specificare colonne di tipo definito dall'utente Common Language Runtime (CLR) di Microsoft .NET Framework né colonne di tipo di dati alias.  
+ Colonna di una tabella o di un indice utilizzata da una funzione di partizione per partizionare la tabella o l'indice. Le colonne calcolate che partecipano a una funzione di partizione devono essere contrassegnate in modo esplicito come PERSISTED. È possibile utilizzare come colonna di partizionamento tutti i tipi di dati che possono essere utilizzati come colonne di indice, eccetto il tipo di dati `timestamp`. Non è possibile specificare i tipi di dati `ntext`, `text`, `image`, `xml`, `varchar(max)`, `nvarchar(max)` o `varbinary(max)`. Inoltre, non è possibile specificare colonne di tipo definito dall'utente Common Language Runtime (CLR) di Microsoft .NET Framework né colonne di tipo di dati alias.  
   
  Indice allineato  
  Indice basato sullo stesso schema di partizione della relativa tabella corrispondente. Se una tabella e i relativi indici sono allineati, in SQL Server è possibile cambiare le partizioni in modo rapido ed efficiente, mantenendo inalterata la struttura della tabella e degli indici. Per poter essere allineato alla relativa tabella di base, non è necessario che un indice sia inserito nella stessa funzione di partizione denominata. Le funzioni di partizione dell'indice e della tabella di base devono tuttavia condividere alcune caratteristiche, ad esempio i tipi di dati degli argomenti devono essere uguali, il numero di partizioni definito deve corrispondere e i valori limite delle partizioni devono essere uguali.  
@@ -81,7 +81,7 @@ ms.locfileid: "48229821"
   
  La creazione e la ricompilazione di indici allineati possono richiedere più tempo a seconda del numero di partizioni. È consigliabile non eseguire più comandi di creazione e ricompilazione degli indici contemporaneamente poiché potrebbero verificarsi problemi di prestazioni e memoria.  
   
- Quando in SQL Server viene eseguito l'ordinamento per compilare indici partizionati, viene innanzitutto creata una tabella di ordinamento per ciascuna partizione. Compila quindi le tabelle di ordinamento nel rispettivo filegroup di ogni partizione o in `tempdb`, se l'opzione SORT_IN_TEMPDB è specificato. Per poter compilare una tabella di ordinamento, è necessaria una quantità di memoria minima che varia in base alla tabella. Quando si compila un indice partizionato allineato alla relativa tabella di base, le tabelle di ordinamento vengono compilate una alla volta e la quantità di memoria necessaria è minore. Quando invece si compila un indice partizionato non allineato, le tabelle di ordinamento vengono compilate simultaneamente. È pertanto necessaria una quantità di memoria sufficiente a gestire simultaneamente tali ordinamenti. Maggiore è il numero di partizioni e maggiore sarà la quantità di memoria necessaria. La dimensione minima di ogni tabella di ordinamento per ogni partizione è di 40 pagine, ognuna delle quali contiene 8 kilobyte. Ad esempio, per un indice partizionato non allineato con 100 partizioni è necessaria una quantità di memoria sufficiente per ordinare simultaneamente in modo seriale 4.000 (40 * 100) pagine. Se la memoria è disponibile, l'indice verrà compilato anche se è possibile che l'operazione influisca negativamente sulle prestazioni. Se la memoria non è disponibile, l'indice non verrà compilato. Per un indice partizionato allineato con 100 partizioni è invece necessaria solo la memoria per l'ordinamento di 40 pagine, perché gli ordinamenti non vengono eseguiti simultaneamente.  
+ Quando in SQL Server viene eseguito l'ordinamento per compilare indici partizionati, viene innanzitutto creata una tabella di ordinamento per ciascuna partizione. Vengono quindi compilate le tabelle di ordinamento nel rispettivo filegroup di ogni partizione oppure in `tempdb`, se è specificata l'opzione di indice SORT_IN_TEMPDB. Per poter compilare una tabella di ordinamento, è necessaria una quantità di memoria minima che varia in base alla tabella. Quando si compila un indice partizionato allineato alla relativa tabella di base, le tabelle di ordinamento vengono compilate una alla volta e la quantità di memoria necessaria è minore. Quando invece si compila un indice partizionato non allineato, le tabelle di ordinamento vengono compilate simultaneamente. È pertanto necessaria una quantità di memoria sufficiente a gestire simultaneamente tali ordinamenti. Maggiore è il numero di partizioni e maggiore sarà la quantità di memoria necessaria. La dimensione minima di ogni tabella di ordinamento per ogni partizione è di 40 pagine, ognuna delle quali contiene 8 kilobyte. Ad esempio, per un indice partizionato non allineato con 100 partizioni è necessaria una quantità di memoria sufficiente per ordinare simultaneamente in modo seriale 4.000 (40 * 100) pagine. Se la memoria è disponibile, l'indice verrà compilato anche se è possibile che l'operazione influisca negativamente sulle prestazioni. Se la memoria non è disponibile, l'indice non verrà compilato. Per un indice partizionato allineato con 100 partizioni è invece necessaria solo la memoria per l'ordinamento di 40 pagine, perché gli ordinamenti non vengono eseguiti simultaneamente.  
   
  È possibile che i requisiti di memoria per gli indici allineati e non allineati siamo maggiori se SQL Server applica gradi di parallelismo alla compilazione in un computer multiprocessore. Ciò dipende dal fatto che maggiori sono i gradi di parallelismo, maggiore sarà la quantità di memoria richiesta. Se ad esempio SQL Server imposta i gradi di parallelismo su 4, per un indice partizionato non allineato con 100 partizioni sarà necessaria una quantità di memoria che consenta a quattro processori di ordinare simultaneamente 4.000 pagine, ovvero 16.000 pagine in totale. Se l'indice partizionato è allineato, la quantità di memoria si riduce alla quantità necessaria a quattro processori per ordinare 40 pagine, ovvero 160 (4 * 40) pagine. Per ridurre manualmente i gradi di parallelismo, è possibile utilizzare l'opzione di indice MAXDOP.  
   
@@ -109,15 +109,15 @@ ms.locfileid: "48229821"
 ## <a name="related-content"></a>Contenuto correlato  
  I seguenti white paper sulle strategie e le implementazioni relative a tabelle e indici partizionati possono risultare particolarmente utili (le informazioni potrebbero essere in lingua inglese).  
   
--   [Strategie relative a tabelle e indici partizionati in SQL Server 2008](http://msdn.microsoft.com/library/dd578580\(SQL.100\).aspx)  
+-   [Strategie relative a tabelle e indici partizionati in SQL Server 2008](https://msdn.microsoft.com/library/dd578580\(SQL.100\).aspx)  
   
--   [Come implementare una finestra temporale scorrevole automatica](http://msdn.microsoft.com/library/aa964122\(SQL.90\).aspx)  
+-   [Come implementare una finestra temporale scorrevole automatica](https://msdn.microsoft.com/library/aa964122\(SQL.90\).aspx)  
   
--   [Caricamento bulk in una tabella partizionata](http://msdn.microsoft.com/library/cc966380.aspx)  
+-   [Caricamento bulk in una tabella partizionata](https://msdn.microsoft.com/library/cc966380.aspx)  
   
--   [Progetto REAL: ciclo di vita dei dati -- Partizionamento](http://www.microsoft.com/downloads/en/details.aspx?FamilyID=a4139d84-ad2d-4cd5-a463-239c6b7d88c9&DisplayLang=en)  
+-   [Progetto REAL: Ciclo di vita dei dati - partizionamento](https://www.microsoft.com/downloads/en/details.aspx?FamilyID=a4139d84-ad2d-4cd5-a463-239c6b7d88c9&DisplayLang=en)  
   
--   [Miglioramenti apportati all'elaborazione di query su tabelle e indici partizionati](http://msdn.microsoft.com/library/ms345599.aspx)  
+-   [Miglioramenti apportati all'elaborazione di query su tabelle e indici partizionati](https://msdn.microsoft.com/library/ms345599.aspx)  
   
 -   [Le 10 migliori procedure consigliate per la compilazione di un data warehouse relazionale su vasta scala](http://sqlcat.com/top10lists/archive/2008/02/06/top-10-best-practices-for-building-a-large-scale-relational-data-warehouse.aspx)  
   

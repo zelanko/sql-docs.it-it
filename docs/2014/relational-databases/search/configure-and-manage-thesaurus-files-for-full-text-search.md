@@ -14,22 +14,22 @@ ms.assetid: 3ef96a63-8a52-45be-9a1f-265bff400e54
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3a6d6197cb525ba4ad395da590ea113bdd0a1f0c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5089aaa229f77c6f0012f4ceae0d5d1b17a9c11a
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48220341"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52792263"
 ---
 # <a name="configure-and-manage-thesaurus-files-for-full-text-search"></a>Configurare e gestire i file del thesaurus per la ricerca full-text
-  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], le query full-text possono eseguire la ricerca di sinonimi dei termini specificati dall'utente tramite l'uso di un thesaurus. Oggetto [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *thesaurus* definisce un set di sinonimi per una lingua specifica. Gli amministratori di sistema possono definire due forme di sinonimi, i set di espansione e i set di sostituzione. Sviluppando un thesaurus basato sui dati full-text in uso, è possibile ampliare in modo efficace l'ambito delle query full-text su tali dati. Corrispondenza con il Thesaurus si verifica per tutte le [FREETEXT](/sql/t-sql/queries/freetext-transact-sql) e [FREETEXTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) query e per qualsiasi [CONTAINS](/sql/t-sql/queries/contains-transact-sql) e [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) che esegue una query specificare la clausola FORMSOF THESAURUS.  
+  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] le query full-text consentono di eseguire una ricerca di sinonimi dei termini specificati dall'utente tramite l'utilizzo di un thesaurus. In un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *di* viene definito un set di sinonimi per una lingua specifica. Gli amministratori di sistema possono definire due forme di sinonimi, i set di espansione e i set di sostituzione. Sviluppando un thesaurus basato sui dati full-text in uso, è possibile ampliare in modo efficace l'ambito delle query full-text su tali dati. La corrispondenza con il thesaurus si verifica per tutte le query [FREETEXT](/sql/t-sql/queries/freetext-transact-sql) e [FREETEXTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) e per tutte le query [CONTAINS](/sql/t-sql/queries/contains-transact-sql) e [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) che specificano la clausola FORMSOF THESAURUS.  
   
 ##  <a name="tasks"></a> Attività di base per la configurazione di un File del Thesaurus  
  Prima che le query di ricerca full-text nell'istanza del server siano in grado di eseguire la ricerca di sinonimi in una determinata lingua, è necessario definire mapping del thesaurus (sinonimi) per tale lingua. È necessario configurare manualmente ogni thesaurus per definire gli elementi seguenti:  
   
 -   Impostazione dei segni diacritici  
   
-     Per un determinato thesaurus, tutti i criteri di ricerca supportano o non supportano la distinzione relativa ai segni diacritici come la tilde (**~**), l'accento acuto (**´**) o l'umlaut (**¨**), ovvero *supportano la distinzione tra caratteri accentati e non accentati* o *non supportano la distinzione tra caratteri accentati e non accentati*. Si supponga, ad esempio, di specificare la sostituzione del criterio "café" con altri criteri in una query di ricerca full-text. Se il thesaurus non supporta la distinzione tra caratteri accentati e non accentati, tramite la ricerca full-text verranno sostituiti i criteri "café" e "cafe". Se il thesaurus supporta la distinzione tra caratteri accentati e non accentati, tramite la ricerca full-text verrà sostituito solo il criterio "café". Per impostazione predefinita, un thesaurus non supporta la distinzione tra caratteri accentati e non accentati.  
+     Per un determinato thesaurus, tutti i criteri di ricerca sono sensibili o distinzione relativa ai segni diacritici, ad esempio una tilde (**~**), mark latino (**??** ), o umlaut (**??** ) (vale a dire *accentati/non accentati* oppure */non accentati*). Ad esempio, si supponga di che specifica il modello "caf??" per essere sostituito con altri criteri in una query full-text. Se il thesaurus distinzione caratteri accentati, ricerca full-text verrà sostituito i modelli "caf??" e "Cafe". Se il thesaurus è sensibile alla distinzione tra caratteri accentati, ricerca full-text verrà sostituito solo il modello "caf??". Per impostazione predefinita, un thesaurus non supporta la distinzione tra caratteri accentati e non accentati.  
   
 -   Set di espansione  
   
@@ -107,13 +107,13 @@ ms.locfileid: "48220341"
   
   
 ##  <a name="structure"></a> Informazioni sulla struttura di un File del Thesaurus  
- Ogni file del thesaurus definisce un contenitore XML, il cui ID è `Microsoft Search Thesaurus`, e un commento, `<!--` … `-->`, che contiene un thesaurus di esempio. Il thesaurus è definito in un \<thesaurus > elemento contenente esempi degli elementi figlio che definiscono l'impostazione dei segni diacritici, set di espansione e set di sostituzione, come indicato di seguito:  
+ Ogni file del thesaurus definisce un contenitore XML, il cui ID è `Microsoft Search Thesaurus`, e un commento `<!--` ... `-->` che contiene un thesaurus di esempio. Il thesaurus è definito in un \<thesaurus > elemento contenente esempi degli elementi figlio che definiscono l'impostazione dei segni diacritici, set di espansione e set di sostituzione, come indicato di seguito:  
   
 -   Struttura XML dell'impostazione dei segni diacritici  
   
      L'impostazione dei segni diacritici di un thesaurus è specificata in un singolo elemento <diacritics_sensitive>, che contiene un valore intero che determina il supporto della distinzione tra caratteri accentati e non accentati, come indicato di seguito:  
   
-    |Impostazione dei segni diacritici|valore|XML|  
+    |Impostazione dei segni diacritici|Value|XML|  
     |------------------------|-----------|---------|  
     |non supportano la distinzione tra caratteri accentati e non accentati|0|`<diacritics_sensitive>0</diacritics_sensitive>`|  
     |supportano la distinzione tra caratteri accentati e non accentati|1|`<diacritics_sensitive>1</diacritics_sensitive>`|  

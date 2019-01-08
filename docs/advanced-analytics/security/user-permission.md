@@ -1,6 +1,6 @@
 ---
-title: Consentire agli utenti di servizi di SQL Server Machine Learning | Microsoft Docs
-description: Come autorizzare gli utenti a servizi di SQL Server Machine Learning.
+title: Concedere le autorizzazioni di database per l'esecuzione di script R e Python - servizi di SQL Server Machine Learning
+description: Come concedere autorizzazioni utente del database per l'esecuzione di script R e Python in SQL Server Machine Learning Services.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 10/17/2018
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 07268386ad66350eed7f1382348fa4d698863600
-ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
+ms.openlocfilehash: e281f1712163aeee1846565458c2b037077c8588
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49419066"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53644840"
 ---
 # <a name="give-users-permission-to-sql-server-machine-learning-services"></a>Consentire agli utenti di SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -30,7 +30,7 @@ Se è stato installato [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 La maggior parte degli utenti, tuttavia, si dispone di tali autorizzazioni con privilegi elevati. Ad esempio, gli utenti in un'organizzazione che usano account di accesso SQL per accedere al database in genere non è le autorizzazioni con privilegi elevate. Pertanto, per ogni utente che usa R o Python, è necessario concedere agli utenti di servizi di Machine Learning l'autorizzazione per eseguire gli script esterni in ogni database in cui viene utilizzata la lingua. Ecco come:
 
-```SQL
+```sql
 USE <database_name>
 GO
 GRANT EXECUTE ANY EXTERNAL SCRIPT TO [UserName]
@@ -49,7 +49,7 @@ Per ogni account utente di Windows o account di accesso SQL che esegue gli scrip
 
 Ad esempio, il seguente [!INCLUDE[tsql](../../includes/tsql-md.md)] istruzione offre l'accesso SQL *MySQLLogin* i diritti per eseguire query T-SQL *ML_Samples* database. Per eseguire questa istruzione, l'account di accesso SQL deve essere già presente nel contesto di sicurezza del server.
 
-```SQL
+```sql
 USE ML_Samples
 GO
 EXEC sp_addrolemember 'db_datareader', 'MySQLLogin'

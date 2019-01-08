@@ -13,15 +13,15 @@ ms.assetid: 6569d512-637d-4f7b-82e1-1e8582278b37
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 122bd2276705e2485afb296adb66accdaf1ccaaf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: caf0cb1f3d22c41fdc551988556a49f12ee22f36
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48150081"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53375253"
 ---
 # <a name="task-5-setting-term-based-relationships"></a>Attività 5: Impostazione delle relazioni basate su termini
-  In questa attività, è definito alcune relazioni basate su termini per i valori per il **Supplier Name** dominio. Una relazione basata su termini consente di effettuare una correzione a un termine che fa parte di un valore in un dominio, consentendo in questo modo a più valori identici ad eccezione dell'ortografia di una parte in comune tra essi di essere considerati sinonimi identici. Ad esempio, **Inc** possono essere corretti per **Incorporated**. Queste relazioni vengono utilizzate da DQS nei processi di individuazione delle informazioni, di pulizia o di corrispondenza. Visualizzare [basate su termini creare relazioni](http://msdn.microsoft.com/library/hh510404.aspx) per altri dettagli.  
+  In questa attività, è definito alcune relazioni basate su termini per i valori per il **Supplier Name** dominio. Una relazione basata su termini consente di effettuare una correzione a un termine che fa parte di un valore in un dominio, consentendo in questo modo a più valori identici ad eccezione dell'ortografia di una parte in comune tra essi di essere considerati sinonimi identici. Ad esempio, **Inc** possono essere corretti per **Incorporated**. Queste relazioni vengono utilizzate da DQS nei processi di individuazione delle informazioni, di pulizia o di corrispondenza. Visualizzare [basate su termini creare relazioni](https://msdn.microsoft.com/library/hh510404.aspx) per altri dettagli.  
   
 1.  Selezionare **Supplier Name** nel **elenco di domini**.  
   
@@ -33,7 +33,7 @@ ms.locfileid: "48150081"
   
 5.  Ripetere i due passaggi precedenti per i valori seguenti:  
   
-    |valore|Correggi in|  
+    |Value|Correggi in|  
     |-----------|----------------|  
     |Corp.|Corporation|  
     |Inc.|Incorporated|  

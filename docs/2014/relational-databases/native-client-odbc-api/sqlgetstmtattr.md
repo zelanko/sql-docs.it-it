@@ -14,12 +14,12 @@ ms.assetid: e64f4f94-eb73-4477-9745-080b6cbdc751
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cfd74525cda5946fb7c86f21638437ee91c3ac7f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5604aafbbc8a6d77081e829269955c8b7600f4ee
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48211193"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53359924"
 ---
 # <a name="sqlgetstmtattr"></a>SQLGetStmtAttr
   Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC Native Client estende SQLGetStmtAttr per esporre gli attributi di istruzione specifici del driver.  
@@ -32,7 +32,7 @@ ms.locfileid: "48211193"
 ## <a name="sqlsoptssnocountstatus"></a>SQL_SOPT_SS_NOCOUNT_STATUS  
  L'attributo SQL_SOPT_SS_NOCOUNT_STATUS indica l'impostazione corrente di NOCOUNT opzione, se i controlli [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] riporta i numeri di righe interessate da un'istruzione quando [SQLRowCount](sqlrowcount.md) viene chiamato. Il *ValuePtr* valore è di tipo SQLLEN.  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |SQL_NC_OFF|NOCOUNT è OFF. SQLRowCount restituisce numero di righe interessate.|  
 |SQL_NC_ON|NOCOUNT è ON. Il numero di righe interessate non viene restituito da SQLRowCount e il valore restituito è 0.|  
@@ -50,7 +50,7 @@ ms.locfileid: "48211193"
  Per altre informazioni sui parametri con valori di tabella, vedere [parametri con valori di tabella &#40;ODBC&#41;](../native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Funzione SQLSetStmtAttr](http://go.microsoft.com/fwlink/?LinkId=59370)   
+ [Funzione SQLSetStmtAttr](https://go.microsoft.com/fwlink/?LinkId=59370)   
  [Dettagli di implementazione dell'API ODBC](odbc-api-implementation-details.md)  
   
   

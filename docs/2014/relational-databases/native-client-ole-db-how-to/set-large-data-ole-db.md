@@ -12,22 +12,22 @@ ms.assetid: b057f04b-e5f4-466e-a39a-090dae797236
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: add630c98373a9b49cbb2469ab3eccfbe41b4f05
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 24d05ef704e37af9d0d8c1e2a9e9eefe0b20f1d8
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48161081"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53355978"
 ---
 # <a name="set-large-data-ole-db"></a>Impostare dati di grandi dimensioni (OLE DB)
   In questo esempio viene illustrato come impostare dati BLOB, creare una tabella, aggiungere un record di esempio, recuperare tale record nel set di righe e quindi impostare il valore del campo BLOB. Questo esempio non è supportato in IA64.  
   
  Per passare un puntatore al relativo oggetto di archiviazione, il consumer crea una funzione di accesso che associa il valore della colonna BLOB e quindi chiama il metodo `IRowsetChange::SetData` o `IRowsetChange::InsertRow`.  
   
- Per l'esempio è necessario il database di esempio AdventureWorks, che è possibile scaricare dalla home page del sito relativo a [progetti della community ed esempi per Microsoft SQL Server](http://go.microsoft.com/fwlink/?LinkID=85384).  
+ Per l'esempio è necessario il database di esempio AdventureWorks, che è possibile scaricare dalla home page del sito relativo a [progetti della community ed esempi per Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkID=85384).  
   
 > [!IMPORTANT]  
->  Se possibile, usare l'autenticazione di Windows. Se non è disponibile, agli utenti verrà richiesto di immettere le credenziali in fase di esecuzione. Evitare di archiviare le credenziali in un file. Se è necessario rendere persistenti le credenziali, è consigliabile crittografarle usando l'[API di crittografia Win32](http://go.microsoft.com/fwlink/?LinkId=64532).  
+>  Se possibile, usare l'autenticazione di Windows. Se non è disponibile, agli utenti verrà richiesto di immettere le credenziali in fase di esecuzione. Evitare di archiviare le credenziali in un file. Se è necessario rendere persistenti le credenziali, è consigliabile crittografarle usando l'[API di crittografia Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
   
 ## <a name="procedures"></a>Procedure  
   
@@ -47,10 +47,10 @@ ms.locfileid: "48161081"
   
 ## <a name="example"></a>Esempio  
   
-### <a name="description"></a>Description  
+### <a name="description"></a>Descrizione  
  Compilare il listato di codice C++ seguente con ole32.lib oleaut32.lib ed eseguirlo. In questa applicazione viene eseguita la connessione all'istanza predefinita di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nel computer in uso. In alcuni sistemi operativi Windows sarà necessario modificare (local) o (localhost) impostando il valore sul nome dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per connettersi a un'istanza denominata, modificare la stringa di connessione da L"(local)" in L"(local)\\\nome", dove nome rappresenta l'istanza denominata. Per impostazione predefinita, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express viene installato in un'istanza denominata. Verificare che nella variabile di ambiente INCLUDE sia presente la directory che contiene sqlncli.h.  
   
-### <a name="code"></a>codice  
+### <a name="code"></a>Codice  
   
 ```  
 // compile with: ole32.lib oleaut32.lib  

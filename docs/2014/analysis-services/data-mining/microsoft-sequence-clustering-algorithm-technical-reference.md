@@ -17,12 +17,12 @@ ms.assetid: 251c369d-6b02-4687-964e-39bf55c9b009
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7d0e9e49a61bef168af2703e83d027feec1d9daa
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 176bbc3f3078619541e14e21d03271d90f4c4c19
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48060431"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53367763"
 ---
 # <a name="microsoft-sequence-clustering-algorithm-technical-reference"></a>Riferimento tecnico per l'algoritmo Microsoft Sequence Clustering
   L'algoritmo Microsoft Sequence Clustering è un algoritmo ibrido in cui viene usata l'analisi delle catene di Markov per identificare le sequenze ordinate e consente di combinare i risultati di tale analisi con le tecniche di clustering per generare cluster in base alle sequenze e agli altri attributi del modello. In questo argomento viene illustrato come implementare e personalizzare l'algoritmo e vengono descritti requisiti speciali per i modelli Sequence Clustering.  
@@ -113,7 +113,7 @@ ms.locfileid: "48060431"
  Si applica alla colonna della struttura di data mining.  
   
  MODEL_EXISTENCE_ONLY  
- Indica che la colonna verrà considerata come se presentasse due stati possibili: `Missing` e `Existing`. Un valore null viene considerato come un `Missing` valore.  
+ Indica che la colonna verrà considerata come se presentasse due stati possibili: `Missing` e `Existing`. Un valore Null viene considerato come valore `Missing`.  
   
  Si applica alla colonna del modello di data mining.  
   
@@ -122,7 +122,7 @@ ms.locfileid: "48060431"
 ## <a name="requirements"></a>Requisiti  
  La tabella del case deve includere una colonna relativa agli ID e può contenere altre colonne che archiviano attributi sul case.  
   
- L'algoritmo Microsoft Sequence Clustering richiede informazioni sulla sequenza, archiviate come tabella nidificata. Nella tabella nidificata deve essere presente un'unica colonna Key Sequence. Oggetto `Key Sequence` colonna può contenere qualsiasi tipo di dati che è possibile ordinare, inclusi tipi di dati stringa, ma la colonna deve contenere valori univoci per ogni case. Prima di elaborare il modello, è inoltre necessario assicurarsi che sia la tabella del case sia la tabella nidificata vengano ordinate in ordine crescente sulla chiave che correla le tabelle.  
+ L'algoritmo Microsoft Sequence Clustering richiede informazioni sulla sequenza, archiviate come tabella nidificata. Nella tabella nidificata deve essere presente un'unica colonna Key Sequence. Una colonna `Key Sequence` può contenere qualsiasi tipo di dati che è possibile ordinare, inclusi tipi di dati string, ma deve contenere valori univoci per ogni case. Prima di elaborare il modello, è inoltre necessario assicurarsi che sia la tabella del case sia la tabella nidificata vengano ordinate in ordine crescente sulla chiave che correla le tabelle.  
   
 > [!NOTE]  
 >  Se si crea un modello che usano l'algoritmo di Microsoft Sequence ma non usano una colonna Sequence, il modello risultante non conterrà alcuna sequenza, ma raggrupperà semplicemente i case in base ad altri attributi inclusi nel modello.  
@@ -137,15 +137,15 @@ ms.locfileid: "48060431"
   
 ## <a name="remarks"></a>Note  
   
--   Usare la funzione [PredictSequence &#40;DMX&#41;](/sql/dmx/predictsequence-dmx) per la stima delle sequenze. Per altre informazioni sulle edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che supportano la stima delle sequenze, vedere [funzionalità supportate dalle edizioni di SQL Server 2012](http://go.microsoft.com/fwlink/?linkid=232473) (http://go.microsoft.com/fwlink/?linkid=232473).  
+-   Usare la funzione [PredictSequence &#40;DMX&#41;](/sql/dmx/predictsequence-dmx) per la stima delle sequenze. Per altre informazioni sulle edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che supportano la stima delle sequenze, vedere [funzionalità supportate dalle edizioni di SQL Server 2012](https://go.microsoft.com/fwlink/?linkid=232473) (https://go.microsoft.com/fwlink/?linkid=232473).  
   
 -   L'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Sequence Clustering non supporta l'uso dello standard PMML (Predictive Model Markup Language) per la creazione dei modelli di data mining.  
   
 -   L'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Sequence Clustering supporta il drill-through, l'utilizzo di modelli di data mining OLAP e l'utilizzo di dimensioni di data mining.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Algoritmo Microsoft Sequence Clustering](microsoft-sequence-clustering-algorithm.md)   
+ [Microsoft Sequence Clustering Algorithm](microsoft-sequence-clustering-algorithm.md)   
  [Sequence Clustering Model Query Examples](clustering-model-query-examples.md)   
- [Contenuto dei modelli per i modelli Sequence Clustering di data mining &#40;Analysis Services - Data Mining&#41;](mining-model-content-for-sequence-clustering-models.md)  
+ [Contenuto dei modelli di data mining per i modelli Sequence Clustering &#40;Analysis Services - Data Mining&#41;](mining-model-content-for-sequence-clustering-models.md)  
   
   

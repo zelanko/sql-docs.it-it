@@ -13,12 +13,12 @@ ms.assetid: 2738ce65-205e-4682-92d8-dc7e37c58b2b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: dbe9d1338e3b64bf829eec0be1cf33bee3d8591e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 865e8d720e9977f582ac5ae8a0e75d995fc82629
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48161941"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53364393"
 ---
 # <a name="prerequisites-for-migrating-from-log-shipping-to-alwayson-availability-groups-sql-server"></a>Prerequisiti per la migrazione dal log shipping ai gruppi di disponibilità AlwaysOn (SQL Server)
   In questo argomento vengono descritti i prerequisiti per convertire un database primario per il log shipping insieme a uno o più dei relativi database secondari in un database primario AlwaysOn e nei relativi database secondari.  
@@ -66,7 +66,7 @@ ms.locfileid: "48161941"
   
  **Per ulteriori informazioni:**  
   
- [Converting a logshipping configuration to Availability Group](http://blogs.msdn.com/b/sqlalwayson/archive/2012/01/09/converting-a-logshipping-configuration-to-availability-group.aspx) (Conversione di una configurazione per il log shipping in un gruppo di disponibilità) (blog su SQL Server)  
+ [Converting a logshipping configuration to Availability Group](https://blogs.msdn.com/b/sqlalwayson/archive/2012/01/09/converting-a-logshipping-configuration-to-availability-group.aspx) (Conversione di una configurazione per il log shipping in un gruppo di disponibilità) (blog su SQL Server)  
   
 ##  <a name="RelatedTasks"></a> Attività correlate  
  **Log shipping**  
@@ -93,19 +93,19 @@ ms.locfileid: "48161941"
   
 -   **Blog:**  
   
-     [Converting a logshipping configuration to Availability Group](http://blogs.msdn.com/b/sqlalwayson/archive/2012/01/09/converting-a-logshipping-configuration-to-availability-group.aspx)  
+     [Converting a logshipping configuration to Availability Group](https://blogs.msdn.com/b/sqlalwayson/archive/2012/01/09/converting-a-logshipping-configuration-to-availability-group.aspx)  
   
-     [Pagina relativa all'aggiunta di un database primario e di database secondari per il log shipping in un gruppo di disponibilità esistente](http://blogs.msdn.com/b/sqlalwayson/archive/2012/02/01/use-log-shipping-to-prepare-secondary-databases-for-an-existing-availability-group.aspx)  
+     [Pagina relativa all'aggiunta di un database primario e di database secondari per il log shipping in un gruppo di disponibilità esistente](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/01/use-log-shipping-to-prepare-secondary-databases-for-an-existing-availability-group.aspx)  
   
-     [SQL Server AlwaysOn Team blog: Il Blog ufficiale di SQL Server AlwaysOn Team](http://blogs.msdn.com/b/sqlalwayson/)  
+     [SQL Server AlwaysOn Team blog: Il Team Blog ufficiale di SQL Server AlwaysOn](https://blogs.msdn.com/b/sqlalwayson/)  
   
-     [Pagina relativa ai blog del Servizio Supporto Tecnico Clienti per gli ingegneri di SQL Server](http://blogs.msdn.com/b/psssql/)  
+     [Pagina relativa ai blog del Servizio Supporto Tecnico Clienti per gli ingegneri di SQL Server](https://blogs.msdn.com/b/psssql/)  
   
 -   **White paper:**  
   
-     [Guida alla migrazione: Migrazione a gruppi di disponibilità AlwaysOn da distribuzioni precedenti che combinano mirroring del Database e il Log Shipping](http://msdn.microsoft.com/library/jj635217)  
+     [Guida alla migrazione: Eseguire la migrazione ai gruppi di disponibilità AlwaysOn da distribuzioni precedenti che combinano mirroring del Database e il Log Shipping](https://msdn.microsoft.com/library/jj635217)  
   
-     [Pagina relativa ai white paper Microsoft per SQL Server 2012](http://msdn.microsoft.com/library/hh403491.aspx)  
+     [Pagina relativa ai white paper Microsoft per SQL Server 2012](https://msdn.microsoft.com/library/hh403491.aspx)  
   
      [Pagina relativa ai white paper del team di consulenza clienti di SQL Server](http://sqlcat.com/)  
   

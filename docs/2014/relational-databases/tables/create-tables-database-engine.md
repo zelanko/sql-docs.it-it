@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: table-view-index
 ms.topic: conceptual
 helpviewer_keywords:
 - table creation [SQL Server], Visual Database Tools
@@ -13,24 +12,24 @@ ms.assetid: 6f7c6ac5-e6d3-4dca-831e-b28442ba535b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 411599f503b13ed5f6000963da7b25cf73260e7f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ad54f13fbb939b9ac65f656f37bbba94560da829
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48081051"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53377433"
 ---
 # <a name="create-tables-database-engine"></a>Creare tabelle (motore di database)
   È possibile creare una nuova tabella, assegnarle un nome e aggiungerla a un database esistente in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
 > [!NOTE]  
->  Se si è connessi a un database di SQL Azure, l'opzione Nuova tabella avvierà uno script modello per la creazione della tabella. Modificare i parametri, quindi eseguire lo script per creare una nuova tabella. Per ulteriori informazioni, vedere [SQL Azure Overview](http://go.microsoft.com/fwlink/?LinkId=163948).  
+>  Se si è connessi a un database di SQL Azure, l'opzione Nuova tabella avvierà uno script modello per la creazione della tabella. Modificare i parametri, quindi eseguire lo script per creare una nuova tabella. Per ulteriori informazioni, vedere [SQL Azure Overview](https://go.microsoft.com/fwlink/?LinkId=163948).  
   
  **Contenuto dell'argomento**  
   
 -   **Prima di iniziare:**  
   
-     [Security](#Security)  
+     [Sicurezza](#Security)  
   
 -   **Per creare una tabella, utilizzando:**  
   
@@ -85,7 +84,7 @@ ms.locfileid: "48081051"
   
 11. Per visualizzare la nuova tabella, in **Esplora oggetti**espandere il nodo **Tabelle** e premere **F5** per aggiornare l'elenco di oggetti. La nuova tabella viene visualizzata nell'elenco di tabelle.  
   
-##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
   
 #### <a name="to-create-a-table-in-the-query-editor"></a>Per creare una tabella nell'editor di query  
   

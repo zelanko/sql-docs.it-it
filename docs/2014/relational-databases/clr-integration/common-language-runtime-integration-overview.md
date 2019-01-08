@@ -18,12 +18,12 @@ ms.assetid: 7be9e644-36a2-48fc-9206-faf59fdff4d7
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 817ff27eee40a36c2af3f73369c412722745ec7a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a7764c6e8e45b56e43e592e70b1c85b8d4744b69
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48191821"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53354848"
 ---
 # <a name="common-language-runtime-clr-integration-overview"></a>Panoramica dell'integrazione con CLR (Common Language Runtime)
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] include ora l'integrazione del componente CRL (Common Language Runtime) di .NET Framework per [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows. CLR fornisce codice gestito con servizi quali l'integrazione tra linguaggi diversi, la sicurezza da accesso di codice, la gestione della durata degli oggetti e il supporto per il debug e il profiling. Grazie all'integrazione con Common Language Runtime, gli sviluppatori di applicazioni e gli utenti di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] hanno ora la possibilità di scrivere stored procedure, trigger, tipi definiti dall'utente, funzioni definite dall'utente (scalari e con valori di tabella) e funzioni di aggregazione definite dall'utente utilizzando qualsiasi linguaggio di .NET Framework, inclusi [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic .NET e [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C#. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] include la versione preinstallata di 4 di .NET Framework.  
@@ -55,7 +55,7 @@ ms.locfileid: "48191821"
  Viene illustrato come abilitare l'integrazione con CLR.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Installazione di .NET Framework](http://technet.microsoft.com/library/ms166014\(v=SQL.105\).aspx)   
+ [Installazione di .NET Framework](https://technet.microsoft.com/library/ms166014\(v=SQL.105\).aspx)   
  [Prestazioni dell'integrazione con CLR](clr-integration-architecture-performance.md)  
   
   

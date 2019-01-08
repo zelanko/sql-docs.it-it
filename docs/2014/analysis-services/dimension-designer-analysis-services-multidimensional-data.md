@@ -13,12 +13,12 @@ ms.assetid: 46bf7d1c-a354-4212-9bfa-258361203b0e
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e7686f2db3e033fa6d38e0f7a7f9616d93c11a1a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fa14cea178d732332ab4729b1c653ef6d19cfab9
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48048781"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52528936"
 ---
 # <a name="dimension-designer-analysis-services---multidimensional-data"></a>Progettazione dimensioni (Analysis Services - Dati multidimensionali)
   Utilizzare Progettazione dimensioni in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] per esplorare i dati che la dimensione contiene e per modificare le varie proprietà di una dimensione esistente: inclusi gli attributi, le gerarchie, i livelli, le relazioni dell'attributo e le traduzioni.  
@@ -29,11 +29,11 @@ ms.locfileid: "48048781"
   
     -   Fare clic con il pulsante destro del mouse su una dimensione, quindi fare clic su **Apri** o su **Progettazione viste**.  
   
-         -oppure-  
+         oppure  
   
     -   Fare doppio clic su una dimensione.  
   
-## <a name="pages"></a>Pagine  
+## <a name="pages"></a>Pages  
  La finestra di Progettazione dimensioni contiene le seguenti pagine:  
   
  [Struttura dimensione](dimension-structure-dimension-designer-analysis-services-multidimensional-data.md)  

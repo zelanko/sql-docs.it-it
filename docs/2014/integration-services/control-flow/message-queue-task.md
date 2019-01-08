@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.messagequeuetask.f1
@@ -18,12 +17,12 @@ ms.assetid: ae1d8fad-6649-4e93-b589-14a32d07da33
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 31175748ef4f7998eae15dcd2a2c03e878abe071
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1b144e8e3ca5bcf96b588e8579dcdb52faa9e4f9
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48165151"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53360923"
 ---
 # <a name="message-queue-task"></a>Message Queue Task
   L'attività Message Queue consente di usare Microsoft Message Queuing (noto anche come MSMQ) per scambiare messaggi tra pacchetti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] o per inviare messaggi a una coda di applicazione elaborata da un'applicazione personalizzata. I messaggi possono essere in forma di testo semplice, di file o di variabili con i rispettivi valori.  
@@ -38,7 +37,7 @@ ms.locfileid: "48165151"
   
  Per inviare o ricevere messaggi, l'attività Message Queue utilizza uno dei tipi di messaggi seguenti: file di dati, stringa, messaggio stringa in variabile o variabile. I messaggi di tipo messaggio stringa in variabile possono essere utilizzati solo per la ricezione di messaggi.  
   
- Per connettersi a una coda di messaggi l'attività utilizza una gestione connessione MSMQ. Per altre informazioni, vedere [Gestione connessione MSMQ](../connection-manager/msmq-connection-manager.md). Per altre informazioni su Microsoft Message Queuing, vedere [MSDN Library](http://go.microsoft.com/fwlink/?LinkId=7022).  
+ Per connettersi a una coda di messaggi l'attività utilizza una gestione connessione MSMQ. Per altre informazioni, vedere [Gestione connessione MSMQ](../connection-manager/msmq-connection-manager.md). Per altre informazioni su Microsoft Message Queuing, vedere [MSDN Library](https://go.microsoft.com/fwlink/?LinkId=7022).  
   
  Affinché sia possibile usare l'attività Message Queue, è necessario avere installato il servizio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Alcuni dei componenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che è possibile selezionare per l'installazione nella pagina **Componenti da installare** o **Selezione funzionalità** dell'Installazione guidata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installano solo un subset parziale dei componenti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Tali componenti si rivelano utili per attività specifiche, ma le funzionalità di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] risulteranno limitate. L'opzione [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] , ad esempio, installa i componenti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] necessari per la progettazione dei pacchetti, ma il servizio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] non viene installato e l'attività Message Queue non è disponibile. Per garantire l'installazione completa di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], è necessario selezionare [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] nella pagina **Componenti da installare** . Per altre informazioni sull'installazione e l'esecuzione dell'attività Message Queue, vedere [Installazione di Integration Services](../install-windows/install-integration-services.md).  
   
@@ -48,13 +47,13 @@ ms.locfileid: "48165151"
 ## <a name="message-types"></a>Tipi di messaggi  
  Per configurare i tipi di messaggi disponibili per l'attività Message Queue, procedere nel modo seguente:  
   
--   `Data file` messaggio specifica che un file contiene il messaggio. Per quanto riguarda la ricezione dei messaggi, è possibile configurare l'attività in modo da salvare il file, sovrascrivere un file esistente e specificare il pacchetto da cui l'attività può ricevere messaggi.  
+-   Il tipo di messaggio `Data file` specifica che il messaggio è contenuto in un file. Per quanto riguarda la ricezione dei messaggi, è possibile configurare l'attività in modo da salvare il file, sovrascrivere un file esistente e specificare il pacchetto da cui l'attività può ricevere messaggi.  
   
--   `String` messaggio specifica il messaggio come stringa. Per quanto riguarda la ricezione dei messaggi, è possibile configurare l'attività in modo da confrontare la stringa ricevuta con una stringa definita dall'utente ed eseguire un'azione che dipende dal risultato del confronto. Il confronto tra le stringhe può essere esatto, con o senza distinzione tra maiuscole e minuscole oppure utilizzare una sottostringa.  
+-   Il tipo di messaggio `String` specifica che il messaggio è una stringa. Per quanto riguarda la ricezione dei messaggi, è possibile configurare l'attività in modo da confrontare la stringa ricevuta con una stringa definita dall'utente ed eseguire un'azione che dipende dal risultato del confronto. Il confronto tra le stringhe può essere esatto, con o senza distinzione tra maiuscole e minuscole oppure utilizzare una sottostringa.  
   
--   `String message to variable` Specifica l'origine del messaggio sotto forma di stringa che viene inviato a una variabile di destinazione. È possibile configurare l'attività in modo da confrontare la stringa ricevuta con una stringa definita dall'utente, utilizzando un confronto esatto, senza distinzione tra maiuscole e minuscole o tra sottostringhe. Questo tipo di messaggio è disponibile solo quando l'attività riceve messaggi.  
+-   Il tipo di messaggio `String message to variable` specifica che l'origine del messaggio è una stringa che viene inviata a una variabile di destinazione. È possibile configurare l'attività in modo da confrontare la stringa ricevuta con una stringa definita dall'utente, utilizzando un confronto esatto, senza distinzione tra maiuscole e minuscole o tra sottostringhe. Questo tipo di messaggio è disponibile solo quando l'attività riceve messaggi.  
   
--   `Variable` Specifica che il messaggio contiene una o più variabili. È possibile configurare l'attività in modo da specificare i nomi delle variabili incluse nel messaggio. Per quanto riguarda la ricezione dei messaggi, è possibile configurare l'attività in modo da specificare sia il pacchetto da cui può ricevere messaggi, sia la variabile che costituisce la destinazione del messaggio.  
+-   Il tipo di messaggio `Variable` specifica che il messaggio contiene una o più variabili. È possibile configurare l'attività in modo da specificare i nomi delle variabili incluse nel messaggio. Per quanto riguarda la ricezione dei messaggi, è possibile configurare l'attività in modo da specificare sia il pacchetto da cui può ricevere messaggi, sia la variabile che costituisce la destinazione del messaggio.  
   
 ## <a name="sending-messages"></a>sending messages  
  Quando si configura l'attività Message Queue per l'invio di messaggi, per crittografare i messaggi è possibile utilizzare uno degli algoritmi di crittografia attualmente supportati dalla tecnologia MSMQ, ovvero RC2 e RC4. Entrambi questi algoritmi di crittografia sono attualmente considerati vulnerabili rispetto ad algoritmi più recenti non ancora supportati dalla tecnologia MSMQ. È pertanto consigliabile valutare con attenzione le esigenze di crittografia ai fini dell'invio di messaggi tramite l'attività Message Queue.  
@@ -70,12 +69,12 @@ ms.locfileid: "48165151"
   
 -   Sovrascrivere un file esistente, se il messaggio è archiviato in un `Data file`.  
   
--   Salvare il file di messaggio con un nome di file diverso, se il messaggio di `Data file message` tipo.  
+-   Salvare il file del messaggio con un nome di file diverso, se il messaggio è di tipo `Data file message`.  
   
 ## <a name="custom-logging-messages-available-on-the-message-queue-task"></a>Messaggi di registrazione personalizzati disponibili nell'attività Message Queue  
  Nella tabella seguente sono elencate le voci di log personalizzate disponibili per l'attività Message Queue. Per altre informazioni, vedere [Registrazione di Integration Services &#40;SSIS&#41;](../performance/integration-services-ssis-logging.md) e [Messaggi personalizzati per la registrazione](../custom-messages-for-logging.md).  
   
-|Voce di log|Description|  
+|Voce di log|Descrizione|  
 |---------------|-----------------|  
 |`MSMQAfterOpen`|Indica che l'attività ha terminato l'apertura della coda di messaggi.|  
 |`MSMQBeforeOpen`|Indica che l'attività ha iniziato ad aprire la coda di messaggi.|  
@@ -91,9 +90,9 @@ ms.locfileid: "48165151"
   
 -   [Editor attività Message Queue &#40;pagina Generale&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [Editor attività Message Queue &#40;pagina di ricezione&#41;](../message-queue-task-editor-receive-page.md)  
+-   [Editor attività Message Queue &#40;pagina Ricezione&#41;](../message-queue-task-editor-receive-page.md)  
   
--   [Editor attività Message Queue &#40;Invia pagina&#41;](../message-queue-task-editor-send-page.md)  
+-   [Editor attività Message Queue &#40;pagina Invio&#41;](../message-queue-task-editor-send-page.md)  
   
 -   [Pagina Espressioni](../expressions/expressions-page.md)  
   

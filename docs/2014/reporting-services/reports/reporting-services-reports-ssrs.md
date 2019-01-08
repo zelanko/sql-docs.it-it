@@ -13,12 +13,12 @@ ms.assetid: 52ed9e74-f2c8-488b-a2c2-6dfbc2a2c8cc
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 464f5428f9c55ffa7d634e05fc54122882067674
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7372f5457e047772febf4cf040da3f897ae033a2
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48077821"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53362903"
 ---
 # <a name="reporting-services-reports-ssrs"></a>Report di Reporting Services (SSRS)
   I report di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] sono definizioni di report basate su XML che includono i dati e gli elementi di layout dei report. Su un file system client, i file di definizione di report hanno estensione .rdl. Dopo la pubblicazione, il report si converte in un elemento di report archiviato nel server di report o nel sito di SharePoint. I report sono una parte della piattaforma di report basata su server fornita da [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
@@ -64,11 +64,11 @@ ms.locfileid: "48077821"
 ## <a name="create-reports"></a>Creare report  
  Per creare un report:  
   
--   **Determinare lo scopo del report.** Identificare lo scopo del report in base al gruppo di destinatari che lo utilizza. Un report ben progettato fornisce ai lettori le informazioni necessarie per analisi e azione. Le decisioni relative alla progettazione effettuate durante questo passaggio influiscono sulla scelta dei parametri, la progettazione del layout e la modalità di visualizzazione del report. Per altre informazioni, vedere [Pianificazione di un report &#40;Generatore report&#41;](../report-design/planning-a-report-report-builder.md) e [Suggerimenti relativi alla progettazione di report &#40;Generatore report e SSRS&#41;](../report-design/report-design-tips-report-builder-and-ssrs.md) nella [documentazione di Generatore report](http://go.microsoft.com/fwlink/?LinkId=154494) nel sito msdn.microsoft.com.  
+-   **Determinare lo scopo del report.** Identificare lo scopo del report in base al gruppo di destinatari che lo utilizza. Un report ben progettato fornisce ai lettori le informazioni necessarie per analisi e azione. Le decisioni relative alla progettazione effettuate durante questo passaggio influiscono sulla scelta dei parametri, la progettazione del layout e la modalità di visualizzazione del report. Per altre informazioni, vedere [Pianificazione di un report &#40;Generatore report&#41;](../report-design/planning-a-report-report-builder.md) e [Suggerimenti relativi alla progettazione di report &#40;Generatore report e SSRS&#41;](../report-design/report-design-tips-report-builder-and-ssrs.md) nella [documentazione di Generatore report](https://go.microsoft.com/fwlink/?LinkId=154494) nel sito msdn.microsoft.com.  
   
 -   **Scegliere il tipo di query.** Determinare se usare una query del set di dati generalizzata e condivisa o una query del set di dati specifica del proprio set di report. Un set di dati condiviso con una query generalizzata è facile da gestire per l'utilizzo in più report, ma ogni persona che progetta il report deve filtrare i dati per il set specifico di report in base alle necessità. Per altre informazioni, vedere [Dati del report&#40;SSRS&#41;](../report-data/report-data-ssrs.md).  
   
--   **Pianificare viste di dati correlati.** Pianificare la modalità di visualizzazione dei lettori del report. L'uso di report di riepilogo con la possibilità di eseguire il drill-down all'interno dei dati dettagliati rappresenta un approccio utile per la gestione di grandi quantità di dati. Per altre informazioni, vedere [Drill-through, drill-down, sottoreport e aree dati annidate &#40;Generatore report e SSRS&#41;](../report-design/drillthrough-drilldown-subreports-and-nested-data-regions.md).  
+-   **Pianificare viste di dati correlati.** Pianificare la modalità di visualizzazione dei lettori del report. L'uso di report di riepilogo con la possibilità di eseguire il drill-down all'interno dei dati dettagliati rappresenta un approccio utile per la gestione di grandi quantità di dati. Per altre informazioni, vedere [Drill-through, drill-down, sottoreport e aree dati nidificate &#40;Generatore report e SSRS&#41;](../report-design/drillthrough-drilldown-subreports-and-nested-data-regions.md).  
   
 -   **Configurare i permessi.** Pianificare la strategia per concedere il corretto livello di autorizzazioni. Una strategia comune consiste nel creare una struttura di cartelle nel server di report e concedere l'accesso ai report e agli elementi correlati sulla base dei ruoli e la sicurezza della cartella. Per altre informazioni, vedere [Proteggere i report](#bkmk_SecureReportsSummary).  
   
@@ -80,11 +80,11 @@ ms.locfileid: "48077821"
   
     -   **Scegliere quali dati utilizzare da ogni origine.** Per ogni origine dati, definire il set di dati del report. In ogni set di dati viene inclusa una query per specificare quali dati utilizzare. Se si dispone di parametri di report, definire un set di dati per popolare l'elenco dei valori disponibile per ogni parametro. Per altre informazioni, vedere [Aggiungere dati a un report &#40;Generatore report e SSRS&#41;](../report-data/report-datasets-ssrs.md) e [Parametri report &#40;Generatore report e Progettazione report&#41;](../report-design/report-parameters-report-builder-and-report-designer.md).  
   
-    -   **Scegliere una visualizzazione dati.** Per ogni set di dati, specificare quale area dati usare per visualizzare i dati. Effettuare la scelta da un elenco di tabelle, grafici, misuratori e mappe. Per altre informazioni, vedere gli argomenti seguenti:  
+    -   **Scegliere una visualizzazione dati.** Per ogni set di dati, specificare quale area dati usare per visualizzare i dati. Effettuare la scelta da un elenco di tabelle, grafici, misuratori e mappe. Per altre informazioni, vedere i seguenti argomenti:  
   
         -   [Tabelle, matrici ed elenchi &#40;Generatore report e SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  
   
-        -   [Grafici &#40;Report e SSRS&#41;](../report-design/charts-report-builder-and-ssrs.md)  
+        -   [Grafici &#40;Generatore report e SSRS&#41;](../report-design/charts-report-builder-and-ssrs.md)  
   
         -   [Grafici sparkline e barre dei dati &#40;Generatore report e SSRS&#41;](../report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)  
   
@@ -94,9 +94,9 @@ ms.locfileid: "48077821"
   
         -   [Misuratori &#40;Generatore report e SSRS&#41;](../report-design/gauges-report-builder-and-ssrs.md)  
   
-    -   **Personalizzare i dati e il layout.** Progettare il layout del report. Una definizione di un report è formata da un corpo del report, origini dati, set di dati, aree dati, caselle di testo, righe e immagini. I rettangoli vengono utilizzati come contenitori per il layout e come elementi visivi. Personalizzare ogni area dati creando espressioni per il controllo di filtri, gruppi, ordinamento, formato e visualizzazione i dati. Aggiungere i nomi dei report, i percorsi e le altre informazioni di identificazione che semplifichino la gestione di decine o centinaia di report. Aggiungere elementi e contenitori visivi per organizzare gli elementi di layout sulla pagina. Per altre informazioni, vedere gli argomenti seguenti:  
+    -   **Personalizzare i dati e il layout.** Progettare il layout del report. Una definizione di un report è formata da un corpo del report, origini dati, set di dati, aree dati, caselle di testo, righe e immagini. I rettangoli vengono utilizzati come contenitori per il layout e come elementi visivi. Personalizzare ogni area dati creando espressioni per il controllo di filtri, gruppi, ordinamento, formato e visualizzazione i dati. Aggiungere i nomi dei report, i percorsi e le altre informazioni di identificazione che semplifichino la gestione di decine o centinaia di report. Aggiungere elementi e contenitori visivi per organizzare gli elementi di layout sulla pagina. Per altre informazioni, vedere i seguenti argomenti:  
   
-        -   [Filtrare, raggruppare e ordinare i dati &#40;Report e SSRS&#41;](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
+        -   [Filtro, raggruppamento e ordinamento di dati &#40;Generatore report e SSRS&#41;](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
   
         -   [Parametri report &#40;Generatore report e Progettazione report&#41;](../report-design/report-parameters-report-builder-and-report-designer.md)  
   
@@ -106,7 +106,7 @@ ms.locfileid: "48077821"
   
         -   [Immagini, caselle di testo, rettangoli e linee &#40;Generatore report e SSRS&#41;](../report-design/rectangles-and-lines-report-builder-and-ssrs.md)  
   
-        -   [Pagina Layout e Rendering della &#40;Report e SSRS&#41;](../report-design/page-layout-and-rendering-report-builder-and-ssrs.md)  
+        -   [Layout e rendering della pagina &#40;Generatore report e SSRS&#41;](../report-design/page-layout-and-rendering-report-builder-and-ssrs.md)  
   
     -   **Configurare le funzionalità relative all'interattività.** Aggiungere funzionalità interattive utilizzabili dai lettori del report. Ad esempio, aggiungere pulsanti di ordinamento o elementi Toggle per la visualizzazione delle query. Per altre informazioni, vedere [Ordinamento interattivo, mappe documento e collegamenti &#40;Generatore report e SSRS&#41;](../report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md).  
   
@@ -117,10 +117,10 @@ ms.locfileid: "48077821"
 -   **Considerare quali componenti possono essere utilizzati nuovamente.**  Determinare se un'origine dati o una query del set di dati può essere condivisa e utilizzata nuovamente. In questo caso, creare origini dati e set di dati condivisi nel server di report o nel sito di SharePoint. Determinare se le aree dati sono adatte per essere utilizzate nuovamente come parti del report. Per altre informazioni, vedere [Parti del report in Progettazione report &#40;SSRS&#41;](../report-design/report-parts-in-report-designer-ssrs.md).  
   
 ## <a name="preview-reports"></a>Anteprima dei report  
- Ogni strumento per la creazione di report supporta la visualizzazione in anteprima dei report. Per altre informazioni, vedere [Anteprima](../tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md#bkmk_Preview), [Generatore Report &#40;SSRS&#41;](../tools/report-builder-authoring-environment-ssrs.md) e [Anteprima di report in Generatore Report](../report-builder/previewing-reports-in-report-builder.md) nella [documentazione di Generatore Report](http://go.microsoft.com/fwlink/?LinkId=154494) nel sito msdn.microsoft.com.  
+ Ogni strumento per la creazione di report supporta la visualizzazione in anteprima dei report. Per altre informazioni, vedere [Anteprima](../tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md#bkmk_Preview), [Generatore Report &#40;SSRS&#41;](../tools/report-builder-authoring-environment-ssrs.md) e [Anteprima di report in Generatore Report](../report-builder/previewing-reports-in-report-builder.md) nella [documentazione di Generatore Report](https://go.microsoft.com/fwlink/?LinkId=154494) nel sito msdn.microsoft.com.  
   
 ## <a name="save-or-publish-reports"></a>Salvare o pubblicare report  
- Ogni strumento di creazione supporta il salvataggio locale o la pubblicazione dei report in un server di report o un sito di SharePoint. Per altre informazioni, vedere [Salvare e distribuire](../tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md#bkmk_SaveandDeploy), [Generatore Report &#40;SSRS&#41;](../tools/report-builder-authoring-environment-ssrs.md) e [Salvataggio di report &#40;Generatore Report&#41;](../report-builder/saving-reports-report-builder.md) nella [documentazione di Generatore Report](http://go.microsoft.com/fwlink/?LinkId=154494) nel sito msdn.microsoft.com.  
+ Ogni strumento di creazione supporta il salvataggio locale o la pubblicazione dei report in un server di report o un sito di SharePoint. Per altre informazioni, vedere [Salvare e distribuire](../tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md#bkmk_SaveandDeploy), [Generatore Report &#40;SSRS&#41;](../tools/report-builder-authoring-environment-ssrs.md) e [Salvataggio di report &#40;Generatore Report&#41;](../report-builder/saving-reports-report-builder.md) nella [documentazione di Generatore Report](https://go.microsoft.com/fwlink/?LinkId=154494) nel sito msdn.microsoft.com.  
   
 ## <a name="view-reports"></a>Visualizzare i report  
  Oltre alla visualizzazione in anteprima di un report salvato in locale o pubblicato in un server di report, è possibile fornire ai lettori del report un'ampia gamma di opzioni di visualizzazione. Per visualizzare un report:  
@@ -133,7 +133,7 @@ ms.locfileid: "48077821"
   
 -   **Stampa.**  Un lettore di report può stampare un report o alcune delle relative pagine, a seconda della modalità di visualizzazione. Per altre informazioni, vedere [Stampa di report &#40;Generatore report e SSRS&#41;](../report-builder/print-reports-report-builder-and-ssrs.md).  
   
--   **Applicazione Web o Windows Form.**  Utilizzare Visual Studio per sviluppare un'applicazione AJAX ASP.NET o un applicazione di Windows Form che ospiti il controllo del Visualizzatore report. Il controllo può puntare ai report pubblicati su un server di report. Per altre informazioni, vedere [Rapporti Microsoft](http://go.microsoft.com/fwlink/?LinkID=205399).  
+-   **Applicazione Web o Windows Form.**  Utilizzare Visual Studio per sviluppare un'applicazione AJAX ASP.NET o un applicazione di Windows Form che ospiti il controllo del Visualizzatore report. Il controllo può puntare ai report pubblicati su un server di report. Per altre informazioni, vedere [Rapporti Microsoft](https://go.microsoft.com/fwlink/?LinkID=205399).  
   
 ## <a name="manage-reports"></a>Gestire i report  
  Per gestire un report pubblicato:  
@@ -157,7 +157,7 @@ ms.locfileid: "48077821"
 ##  <a name="bkmk_SecureReportsSummary"></a> Proteggere i report  
  Per proteggere un report:  
   
--   Dall'amministratore del server di report, identificare l'autorizzazione e il sistema di autenticazione utilizzati per l'installazione di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. Per impostazione predefinita, [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] utilizza autenticazione Windows, la sicurezza integrata e assegnazione di ruolo per controllare l'accesso a report pubblicati. Per altre informazioni, vedere [Ruoli e autorizzazioni &#40;Reporting Services&#41;](../security/roles-and-permissions-reporting-services.md) e [Sicurezza e protezione di Reporting Services](../security/reporting-services-security-and-protection.md).  
+-   Dall'amministratore del server di report, identificare l'autorizzazione e il sistema di autenticazione utilizzati per l'installazione di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] . Per impostazione predefinita, in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] si usano autenticazione di Windows, sicurezza integrata e assegnazione di ruolo per consentire di controllare l'accesso ai report pubblicati. Per altre informazioni, vedere [Ruoli e autorizzazioni &#40;Reporting Services&#41;](../security/roles-and-permissions-reporting-services.md) e [Sicurezza e protezione di Reporting Services](../security/reporting-services-security-and-protection.md).  
   
 ## <a name="create-notifications-based-on-report-data"></a>Creare notifiche basate su dati dei report  
  È possibile creare avvisi relativi ai dati dei report pubblicati in un sito di SharePoint. Gli avvisi relativi ai dati sono basati su feed di dati dalle aree dati nel report. Per impostazione predefinita, le aree dati vengono denominate automaticamente. Gli autori del report possono agevolare la creazione di avvisi relativi ai dati nei loro report denominando le aree dati in base agli scopi aziendali. Quando si crea un avviso relativo ai dati, si riceve una notifica mediante posta elettronica nel momento in cui i dati soddisfano le condizioni specificate. Per altre informazioni, vedere [Generazione di feed di dati dai report &#40;Generatore report e SSRS&#41;](../report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md), [Creare un avviso dati nella finestra di progettazione Avviso dati](../create-a-data-alert-in-data-alert-designer.md) e [Avvisi dati di Reporting Services](../reporting-services-data-alerts.md).  

@@ -10,12 +10,12 @@ ms.assetid: 7d6c962b-c8d0-49f7-a2ac-00ad8dca930a
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5f369185b2d7d5e5d65fc98bca40ba66029ceaa8
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: 823967123c459112c77fb460eb10b011895110e8
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018666"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53374554"
 ---
 # <a name="install-sql-server-2014-servicing-updates"></a>Installare gli aggiornamenti dei servizi di SQL Server 2014
   In questo argomento vengono fornite informazioni sull'installazione degli aggiornamenti per [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. In questa sezione vengono fornite informazioni sui seguenti argomenti:  
@@ -37,7 +37,7 @@ ms.locfileid: "51018666"
   
 -   Condivisione di rete  
   
- Dopo avere individuato le versioni più recenti degli aggiornamenti applicabili, questi vengono scaricati e integrati dal programma di installazione con il processo di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] corrente. Tramite l'aggiornamento del prodotto è possibile includere un aggiornamento cumulativo, un Service Pack o un Service Pack con aggiornamento cumulativo. Funzionalità Aggiornamento prodotto è un'estensione del [funzionalità di integrazione](http://go.microsoft.com/fwlink/?LinkId=219945) disponibile in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] PCU1.  
+ Dopo avere individuato le versioni più recenti degli aggiornamenti applicabili, questi vengono scaricati e integrati dal programma di installazione con il processo di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] corrente. Tramite l'aggiornamento del prodotto è possibile includere un aggiornamento cumulativo, un Service Pack o un Service Pack con aggiornamento cumulativo. Funzionalità Aggiornamento prodotto è un'estensione del [funzionalità di integrazione](https://go.microsoft.com/fwlink/?LinkId=219945) disponibile in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] PCU1.  
   
 ## <a name="installing-updates-for-includesscurrentincludessscurrent-mdmd-after-it-has-already-been-installed"></a>Installazione di aggiornamenti per [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] dopo che è stato installato  
  In un'istanza installata di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], si consiglia di applicare tutti gli aggiornamenti disponibili: General Distribution Release (GDR - aggiornamenti di sicurezza o critico), Service Pack (SP), nonché la versione più recente disponibile aggiornamento Cumulativo.  

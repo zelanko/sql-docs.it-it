@@ -15,12 +15,12 @@ ms.assetid: 634b0504-1437-43e7-8ac7-3248ac7989a3
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2ec2b3a48dc76e4dd1d56128933841cdb7699996
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ad3d6233ef9678933aa9492ccc81f306186592b3
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48048801"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52530500"
 ---
 # <a name="refresh-the-schema-in-a-data-source-view-analysis-services"></a>Aggiornare lo schema in una vista origine dati (Analysis Services)
   Dopo la definizione di una vista origine dati in un database o un progetto di [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], è possibile che lo schema di un'origine dati sottostante venga modificato. Tali modifiche non vengono automaticamente rilevate o aggiornate in un progetto di sviluppo. Inoltre, se è stato distribuito il progetto in un server, verranno rilevati errori di elaborazione qualora non sia più possibile la connessione di Analysis Services all'origine dati esterna.  
@@ -53,7 +53,7 @@ ms.locfileid: "48048801"
   
  Nella finestra di dialogo vengono elencati tabelle, colonne, vincoli e relazioni che verranno eliminati o aggiunti nella vista origine dati. Inoltre, nel report viene elencato un calcolo o una query denominata che non è possibile preparare correttamente. Gli oggetti interessati vengono elencati in una visualizzazione albero contenente le colonne e le relazioni nidificate nelle tabelle e il tipo di modifica (eliminazione o aggiunta) indicata per ogni oggetto. Le icone di oggetti della vista origine dati standard indicano il tipo di oggetto interessato.  
   
- L'aggiornamento è basato esclusivamente sui nomi degli oggetti sottostanti. Se pertanto si rinomina un oggetto sottostante nell'origine dei dati, Progettazione vista origine dati considera l'oggetto rinominato come il risultato di due operazioni separate, un'eliminazione e un'aggiunta. In tal caso, potrebbe essere necessario raggiungere manualmente l'oggetto rinominato nella vista origine dati, nonché ricreare le relazioni o le chiavi primarie logiche.  
+ L'aggiornamento è basato esclusivamente sui nomi degli oggetti sottostanti. Pertanto, se un oggetto sottostante è stato rinominato nell'origine dati, progettazione vista origine dati considera l'oggetto rinominato come due distinti operations-a ed eliminazione un'aggiunta. In tal caso, potrebbe essere necessario raggiungere manualmente l'oggetto rinominato nella vista origine dati, nonché ricreare le relazioni o le chiavi primarie logiche.  
   
 > [!IMPORTANT]  
 >  Se è stata rinominata una tabella in un'origine dei dati, è possibile usare il comando **Sostituisci tabella** per sostituire la tabella con quella rinominata prima di aggiornare la vista origine dati. Per altre informazioni, vedere [Sostituire una tabella o una query denominata in una vista origine dati &#40;Analysis Services&#41;](replace-a-table-or-a-named-query-in-a-data-source-view-analysis-services.md).  

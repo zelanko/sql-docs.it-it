@@ -1,37 +1,32 @@
 ---
-title: Riquadro Dati report | Microsoft Docs
-ms.custom: ''
-ms.date: 06/13/2017
-ms.prod: sql-server-2014
-ms.reviewer: ''
-ms.technology:
-- reporting-services-native
-ms.topic: conceptual
-f1_keywords:
-- sql12.rtp.rptdesigner.reportdata.f1
-- "10039"
-helpviewer_keywords:
-- Report Data pane
-ms.assetid: aa9614a3-12e7-4e17-9de2-fafccd1f5f9d
+title: Riquadro dei dati del report
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 910f7f6d67b7e31922ed45006008d292e6f2a1c1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.reviewer: ''
+ms.prod: reporting-services-2014, sql-server-2014
+ms.prod_service: reporting-services-native, reporting-services-sharepoint
+ms.topic: conceptual
+ms.custom: seodec18
+ms.date: 12/14/2018
+ms.openlocfilehash: 1696ea3cb9fa238e3ac31418670a1d4195ab2e98
+ms.sourcegitcommit: 2f5773f4bc02bfff4f2924226ac5651eb0c00924
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48162781"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53553203"
 ---
-# <a name="report-data-pane"></a>Riquadro dei dati del report
+# <a name="report-data-pane-in-sql-server-reporting-services-ssrs"></a>Riquadro dati report in SQL Server Reporting Services (SSRS)
+
   Usare il riquadro **Dati report** per visualizzare i parametri, le origini dati, i set di dati, le raccolte di campi e le immagini attualmente definiti nel report. Nel riquadro dei dati del report è riportata una visualizzazione gerarchica degli elementi che rappresentano i dati del report. I nodi di livello superiore rappresentano campi, parametri, immagini e riferimenti a origini dati predefiniti. Espandere ogni nodo per visualizzare gli elementi dei dati. Ad esempio, quando si espande il nodo di un'origine dati, verranno visualizzati i set di dati definiti per tale origine dati. Quando si espande un set di dati, verrà visualizzata la relativa raccolta di campi. Trascinare gli elementi nell'area di progettazione del report per collegare i dati a elementi del report nella pagina.  
   
-## <a name="options"></a>Opzioni  
+## <a name="options"></a>Opzioni
+
  **Campi predefiniti**  
  Rappresenta i campi disponibili in Reporting Services comunemente utilizzati in un report, ad esempio il nome o il numero di pagina. Per altre informazioni, vedere [Raccolte predefinite nelle espressioni &#40;Generatore report e SSRS&#41;](../report-design/built-in-collections-in-expressions-report-builder.md).  
   
  **Parametri**  
- Rappresenta la raccolta dei parametri del report, che possono essere a valore singolo o multivalore. Per altre informazioni, vedere [Report Parameters &#40;Report Builder and Report Designer&#41;](../report-design/report-parameters-report-builder-and-report-designer.md).  
+ Rappresenta la raccolta dei parametri del report, che possono essere a valore singolo o multivalore. Per ulteriori informazioni, vedere la pagina relativa al [Parametri report &#40;Generatore report e Progettazione report&#41;](../report-design/report-parameters-report-builder-and-report-designer.md).  
   
  **Immagini**  
  Rappresenta il set di immagini utilizzato nel report. Per altre informazioni, vedere [Immagini &#40;Generatore report e SSRS&#41;](../report-design/images-report-builder-and-ssrs.md).  
@@ -42,8 +37,7 @@ ms.locfileid: "48162781"
  **Set di dati**  
  Rappresenta un singolo set di dati. Il set di dati corrisponde al nodo padre per la raccolta di campi specificati dalla query, inclusi eventuali campi calcolati. Reporting Services supporta le finestre di progettazione query che consentono di specificare una query. Per altre informazioni, vedere [aggiungere dati a un Report &#40;Generatore Report e SSRS&#41; ](report-datasets-ssrs.md) e [strumenti di progettazione Query nella finestra di progettazione di Report SQL Server Data Tools &#40;SSRS&#41;](query-design-tools-ssrs.md).  
   
-## <a name="see-also"></a>Vedere anche  
- [Raccolta di campi del set di dati &#40;Generatore report e SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md)   
- [Riquadro di raggruppamento](../tools/grouping-pane.md)  
-  
-  
+## <a name="next-steps"></a>Passaggi successivi
+
+ - [Raccolta di campi del set di dati &#40;Generatore report e SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md)
+ - [Riquadro di raggruppamento](../tools/grouping-pane.md)

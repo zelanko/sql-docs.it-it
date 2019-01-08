@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.adonetsource.f1
@@ -19,24 +18,24 @@ ms.assetid: 2a2f1750-2cda-4dda-9dca-623a96a6b3c0
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 43e7e3e85567b74b2195214c37f9761cde5f0d91
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b672d602666fd51f98cf1854917dd2a035157d5e
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48072161"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53352108"
 ---
 # <a name="ado-net-source"></a>Origine ADO NET
   L'origine ADO NET utilizza i dati di un provider .NET e li rende disponibili per il flusso di dati.  
   
- È possibile usare l'origine ADO NET per connettersi a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. La connessione a [!INCLUDE[ssSDS](../../includes/sssds-md.md)] tramite OLE DB non è supportata. Per altre informazioni su [!INCLUDE[ssSDS](../../includes/sssds-md.md)], vedere [Limitazioni e linee guida generali per il database SQL di Azure](http://go.microsoft.com/fwlink/?LinkId=248228).  
+ È possibile usare l'origine ADO NET per connettersi a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. La connessione a [!INCLUDE[ssSDS](../../includes/sssds-md.md)] tramite OLE DB non è supportata. Per altre informazioni su [!INCLUDE[ssSDS](../../includes/sssds-md.md)], vedere [Limitazioni e linee guida generali per il database SQL di Azure](https://go.microsoft.com/fwlink/?LinkId=248228).  
   
 ## <a name="data-type-support"></a>Supporto dei tipi di dati  
- Tramite l'origine viene convertito qualsiasi tipo di dati di cui non è stato eseguito il mapping a un tipo di dati specifico di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] nel tipo di dati DT_NTEXT di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Questa conversione si verifica anche se il tipo di dati è `System.Object`.  
+ Tramite l'origine viene convertito qualsiasi tipo di dati di cui non è stato eseguito il mapping a un tipo di dati specifico di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] nel tipo di dati DT_NTEXT di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . La conversione viene eseguita anche se il tipo di dati è `System.Object`.  
   
  È possibile modificare il tipo di dati DT_NTEXT nel tipo di dati DT_WSTR e vice versa. È possibile modificare i tipi di dati configurando la proprietà **DataType** nella finestra di dialogo **Editor avanzato** dell'origine ADO NET. Per altre informazioni, vedere [Proprietà comuni](../common-properties.md).  
   
- Il tipo di dati DT_NTEXT può anche essere convertito nel tipo di dati DT_BYTES o DT_STR utilizzando una trasformazione Conversione dati sull'origine ADO NET. Per altre informazioni, vedere [trasformazione Conversione dati](transformations/data-conversion-transformation.md).  
+ Il tipo di dati DT_NTEXT può anche essere convertito nel tipo di dati DT_BYTES o DT_STR utilizzando una trasformazione Conversione dati sull'origine ADO NET. Per altre informazioni, vedere [Trasformazione Conversione dati](transformations/data-conversion-transformation.md).  
   
  In [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]sui tipi di dati relativi alle date, DT_DBDATE, DT_DBTIME2, DT_DBTIMESTAMP2 e DT_DBTIMESTAMPOFFSET, viene eseguito il mapping a tipi di dati relativi alle date specifici in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. È possibile configurare l'origine ADO NET per convertire i tipi di dati relativi alle date usati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nei tipi usati in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Per configurare l'origine ADO NET per convertire questi tipi di dati relativi alle date, impostare la proprietà **Type System Version** della gestione connessione [!INCLUDE[vstecado](../../includes/vstecado-md.md)] su **Ultima versione**. La proprietà **Type System Version** si trova nella pagina **Tutto** della finestra di dialogo **Gestione connessione** . Per aprire la finestra di dialogo **Gestione connessione** , fare clic con il pulsante destro del mouse sulla gestione connessione [!INCLUDE[vstecado](../../includes/vstecado-md.md)] e quindi su **Modifica**.  
   
@@ -68,7 +67,7 @@ ms.locfileid: "48072161"
 >  Quando si utilizza un'istruzione SQL per richiamare una stored procedure che restituisce risultati da una tabella temporanea, utilizzare l'opzione WITH RESULT SETS per definire metadati per il set di risultati.  
   
 > [!NOTE]  
->  Se si usa un'istruzione SQL per eseguire una stored procedure e il pacchetto ha esito negativo con l'errore seguente, potrebbe essere in grado di risolvere il problema aggiungendo la `SET FMTONLY OFF` istruzione prima dell'istruzione exec.  
+>  Se si utilizza un'istruzione SQL per eseguire una stored procedure e l'esecuzione del pacchetto ha esito negativo con l'errore seguente, è possibile risolvere il problema aggiungendo l'istruzione `SET FMTONLY OFF` prima dell'istruzione exec.  
 >   
 >  **Impossibile trovare la colonna <nome_colonna> nell'origine dati.**  
   
@@ -84,7 +83,7 @@ ms.locfileid: "48072161"
   
 -   [Proprietà personalizzate ADO NET](ado-net-custom-properties.md)  
   
- Per altre informazioni su come impostare le proprietà, vedere [Impostazione delle proprietà di un componente flusso di dati](set-the-properties-of-a-data-flow-component.md).  
+ Per altre informazioni su come impostare le proprietà, vedere [Impostazione delle proprietà di un componente del flusso di dati](set-the-properties-of-a-data-flow-component.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Destinazione DataReader](datareader-destination.md)   

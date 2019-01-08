@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4158fd290b2a64ddf7e8f3a8fc9b566dd5602d4c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fb4742d65ca25ecf656e442d03e1925cbe1bb518
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47704369"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591782"
 ---
 # <a name="sphelpconstraint-transact-sql"></a>sp_helpconstraint (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -42,10 +42,10 @@ sp_helpconstraint [ @objname = ] 'table'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@objname=** ] **'***tabella***'**  
+ [  **@objname=** ] **'**_tabella_**'**  
  Tabella di cui si desidera ottenere informazioni sui vincoli. La tabella specificata deve essere locale rispetto al database corrente. *Nella tabella* viene **nvarchar(776)**, non prevede alcun valore predefinito.  
   
- [  **@nomsg=**] **'***no_message***'**  
+ [  **@nomsg=**] **'**_no_message_**'**  
  Parametro facoltativo che consente di stampare il nome della tabella. *no_message* viene **varchar (5)**, il valore predefinito è **msg**. **nomsg** Annulla la stampa.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
@@ -55,7 +55,7 @@ sp_helpconstraint [ @objname = ] 'table'
  **sp_helpconstraint** consente di visualizzare una colonna con indicizzazione decrescente se fanno parte di chiavi primarie. Nel set di risultati il nome di tali colonne viene seguito da un segno meno (-). Nel caso di colonne indicizzate in ordine crescente, come per impostazione predefinita, viene invece visualizzato solo il nome delle colonne.  
   
 ## <a name="remarks"></a>Note  
- L'esecuzione di **sp_help * * * tabella* tutte le informazioni sulla tabella specificata. Per visualizzare solo le informazioni sui vincoli, usare **sp_helpconstraint**.  
+ L'esecuzione **sp_help**_tabella_ tutte le informazioni sulla tabella specificata. Per visualizzare solo le informazioni sui vincoli, usare **sp_helpconstraint**.  
   
 ## <a name="permissions"></a>Permissions  
  È richiesta l'appartenenza al ruolo **public** .  

@@ -21,15 +21,15 @@ ms.assetid: 7c72d80e-913c-4bbe-b258-444294a78838
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 050a7e4b7b89eb52d9fcb8f9d7a6b8a911eaa825
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4a9c7a8152896aa3bd9f75cf483aaf29429a5638
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48134621"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53355818"
 ---
 # <a name="choosing-data-for-data-mining"></a>Scelta di dati per il data mining
-  Quando si inizia il data mining, possono sorgere dubbi sulla quantità di dati necessari oppure su eventuali requisiti speciali da considerare durante la pulizia o la formattazione dei dati.  
+  Quando si inizia il data mining, si potrebbe chiedere "quanti dati è necessario?" o "Sono previsti requisiti speciali che è necessario conoscere durante la pulizia o formattazione dei dati?"  
   
  In particolare, i meno esperti nel data mining si imbattono spesso in problemi relativi ai dati di Excel, ad esempio la necessità di formattare i dati in modo coerente nelle colonne, la pulizia dei valori mancanti o la creazione di contenitori per i numeri. In questa sezione sono inoltre elencati i requisiti di dati per tipi di modelli specifici.  
   
@@ -69,7 +69,7 @@ ms.locfileid: "48134621"
 ### <a name="how-much-data-do-i-need"></a>Quanti dati sono necessari  
  Come regola pratica, non prendere mai in considerazione meno di 50-100 righe di dati per i tipi di modelli e gli scenari più semplici. Ad esempio, per la previsione di un solo attributo tramite un modello Naïve Bayes e con un set di dati ben formato, si potrebbero generare stime abbastanza accurate utilizzando 50-100 righe di dati.  
   
- Per i modelli di associazione, sono in genere necessari molti più dati: un migliaio di righe potrebbe non essere sufficiente se si analizzano molti attributi, ad esempio le associazioni tra prodotti. Se il set di dati è troppo grande o troppo piccolo, si possono talvolta ottenere risultati migliori comprimendo le righe in categorie. Ad esempio, anziché analizzare associazioni tra i singoli prodotti, è possibile suddividere i prodotti in categorie.  
+ Per i modelli di associazione in genere necessari molti più dati: un migliaio di righe potrebbe non essere sufficiente se si analizzano molti attributi, ad esempio le associazioni tra prodotti. Se il set di dati è troppo grande o troppo piccolo, si possono talvolta ottenere risultati migliori comprimendo le righe in categorie. Ad esempio, anziché analizzare associazioni tra i singoli prodotti, è possibile suddividere i prodotti in categorie.  
   
  Se si dispone di un set di dati di dimensioni adeguate, incentrare l'analisi sulla qualità dei dati invece di aggiungere più dati. A un certo punto, tutti i modelli statisticamente validi saranno stati trovati e aggiungere più dati non ne migliora la validità. Viceversa, l'aggiunta di altri dati può talvolta introdurre correlazioni accidentali.  
   
@@ -113,7 +113,7 @@ ms.locfileid: "48134621"
 ##  <a name="bkmk_CommonDataProblems"></a> Problemi di dati comuni  
   
 ### <a name="excel-number-formats"></a>Formati numerici di Excel  
- Excel è uno strumento facile da utilizzare perché consente di inserire qualsiasi tipo di dati in qualsiasi punto. Tuttavia, prima di iniziare a cercare modelli e ad analizzare le correlazioni, è necessario imporre ai dati una struttura o alcuni vincoli.  
+ Excel è uno strumento facile da utilizzare, in quanto si tratta di crea dei problemi: è possibile inserire qualsiasi tipo di dati in qualsiasi punto. Tuttavia, prima di iniziare a cercare modelli e ad analizzare le correlazioni, è necessario imporre ai dati una struttura o alcuni vincoli.  
   
  Per impostazione predefinita, quando si importano dati numerici in [!INCLUDE[msCoName](../includes/msconame-md.md)] Office Excel, i numeri vengono archiviati in formato decimale con due cifre decimali. Se tale formato numerico non è appropriato, cambiare formato o cambiare il numero di cifre decimali.  
   
@@ -180,7 +180,7 @@ ms.locfileid: "48134621"
   
  Se, ad esempio, una colonna contiene numeri che si ripetono in un intervallo specifico per indicare i giorni della settimana, è possibile contrassegnare il tipo di contenuto di tale colonna come `Cyclical`.  
   
- Non occorre preoccuparsi dei tipi di contenuto se si utilizzano le procedure guidate e gli strumenti forniti in questo componente aggiuntivo. Tuttavia, se si usa la [aggiunta modello a struttura &#40;aggiuntivi di Data Mining per Excel&#41; ](add-model-to-structure-data-mining-add-ins-for-excel.md) modellazione opzione per aggiungere un nuovo modello ai dati esistenti, si verifichi un errore relativo ai tipi di contenuto.  
+ Non è necessario preoccuparsi di tipi di contenuto se si usa le procedure guidate e gli strumenti forniti in questo componente aggiuntivo. Tuttavia, se si usa la [aggiunta modello a struttura &#40;aggiuntivi di Data Mining per Excel&#41; ](add-model-to-structure-data-mining-add-ins-for-excel.md) modellazione opzione per aggiungere un nuovo modello ai dati esistenti, si verifichi un errore relativo ai tipi di contenuto.  
   
  Il motivo è che alcuni tipi di modello richiedono un determinato tipo di dati, ad esempio timestamp. Gli strumenti elaborano queste colonne in base ai requisiti specifici e aggiungono inoltre una proprietà del tipo di contenuto. Pertanto, se si riutilizzano i dati con un algoritmo completamente diverso, potrebbe essere necessario modificare il tipo di dati o il tipo di contenuto.  
   
@@ -206,14 +206,14 @@ ms.locfileid: "48134621"
   
  In genere la colonna chiave è un identificatore numerico o di testo che non deve essere utilizzato per l'analisi, ma solo per la registrazione di record. Le eccezioni sono chiavi della serie temporale e chiavi della sequenza.  
   
- **Chiavi delle tabelle annidate** vengono utilizzati solo quando si ottengono dati da un'origine dati esterna definita come un [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] vista origine dati. Per altre informazioni sulle tabelle annidate, vedere [ http://msdn.microsoft.com/library/ms175659.aspx ](http://msdn.microsoft.com/library/ms175659.aspx):  
+ **Chiavi delle tabelle annidate** vengono utilizzati solo quando si ottengono dati da un'origine dati esterna definita come un [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] vista origine dati. Per altre informazioni sulle tabelle annidate, vedere [ https://msdn.microsoft.com/library/ms175659.aspx ](https://msdn.microsoft.com/library/ms175659.aspx):  
   
  Questo tipo di contenuto può essere utilizzato con i tipi di dati seguenti: `Date`, `Double`, `Long` e `Text`.  
   
  **Sequenza di tasti**  
  La colonna contiene valori che rappresentano una sequenza di eventi. I valori sono ordinati, ma non è necessario che siano equidistanti.  
   
- Questo tipo di contenuto è supportato dai tipi di dati seguenti: `Double`, `Long`, `Text`, e `Date`.  
+ Questo tipo di contenuto è supportato dai tipi di dati `Double`, `Long`, `Text` e `Date`.  
   
  **Chiave temporale**  
  La colonna contiene valori ordinati che rappresentano una scala cronologica. È possibile utilizzare il tipo di contenuto chiave temporale solo se il modello è un modello Time Series o un modello Sequence Clustering.  

@@ -11,18 +11,18 @@ ms.assetid: a74239f4-0f38-43ed-82d3-bf742dbf8a54
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 71ebb54d32893f90dd1a88f56056d6db75644c9e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f588e5266b3707ac012d6e18e062d01d23fca56d
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48187211"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53362083"
 ---
 # <a name="lesson-10-defining-administrative-roles"></a>Lezione 10: Definizione dei ruoli amministrativi
   In questa lezione viene illustrato come definire i ruoli di sicurezza per le attività amministrative.  
   
 > [!NOTE]  
->  I progetti completati per tutte le lezioni in questa esercitazione sono disponibili online. È possibile passare a qualsiasi lezione utilizzando il progetto completato della lezione precedente come punto iniziale. [Fare clic qui](http://go.microsoft.com/fwlink/?LinkID=221866) per scaricare i progetti di esempio usati in questa esercitazione.  
+>  I progetti completati per tutte le lezioni in questa esercitazione sono disponibili online. È possibile passare a qualsiasi lezione utilizzando il progetto completato della lezione precedente come punto iniziale. [Fare clic qui](https://go.microsoft.com/fwlink/?LinkID=221866) per scaricare i progetti di esempio usati in questa esercitazione.  
   
  In questa lezione è contenuta l'attività seguente:  
   

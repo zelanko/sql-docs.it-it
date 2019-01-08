@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords:
 - facet See facets
@@ -20,12 +20,12 @@ ms.assetid: ef2a7b3b-614b-405d-a04a-2464a019df40
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 91483db92422a4510a6cefd2eca7d7f1f6f3f1e5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cb9d48156ecd1ca98dc36c10c2680883160582c1
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48067616"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53377483"
 ---
 # <a name="administer-servers-by-using-policy-based-management"></a>Amministrazione di server tramite la gestione basata su criteri
   La gestione basata su criteri è un sistema per la gestione di una o più istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Quando gli amministratori dei criteri di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizzano la gestione basata su criteri, utilizzano [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] per creare criteri per la gestione di entità nel server, quali l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], database o altri oggetti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -53,7 +53,7 @@ ms.locfileid: "48067616"
  Per i criteri con errori, in Esplora oggetti viene restituito un avviso di integrità critica come icona rossa accanto alla destinazione e ai nodi di livello superiore nell'albero.  
   
 > [!NOTE]  
->  Durante il calcolo del set di oggetti per i criteri, per impostazione predefinita gli oggetti di sistema sono esclusi.  Ad esempio, se il set di oggetti dei criteri si riferisce a tutte le tabelle, i criteri non verranno applicati alle tabelle di sistema. Se gli utenti desiderano valutare i criteri negli oggetti di sistema, possono aggiungere in modo esplicito questi oggetti al set di oggetti. Tuttavia, sebbene tutti i criteri siano supportati per la modalità di valutazione **Controllo su pianificazione** , per motivi di prestazioni, non tutti i criteri con i set di oggetti arbitrari sono supportati per la modalità di valutazione **Controllo su modifiche** . Per altre informazioni, vedere [http://blogs.msdn.com/b/sqlpbm/archive/2009/04/13/policy-evaluation-modes.aspx](http://blogs.msdn.com/b/sqlpbm/archive/2009/04/13/policy-evaluation-modes.aspx)  
+>  Durante il calcolo del set di oggetti per i criteri, per impostazione predefinita gli oggetti di sistema sono esclusi.  Ad esempio, se il set di oggetti dei criteri si riferisce a tutte le tabelle, i criteri non verranno applicati alle tabelle di sistema. Se gli utenti desiderano valutare i criteri negli oggetti di sistema, possono aggiungere in modo esplicito questi oggetti al set di oggetti. Tuttavia, sebbene tutti i criteri siano supportati per la modalità di valutazione **Controllo su pianificazione** , per motivi di prestazioni, non tutti i criteri con i set di oggetti arbitrari sono supportati per la modalità di valutazione **Controllo su modifiche** . Per altre informazioni, vedere [https://blogs.msdn.com/b/sqlpbm/archive/2009/04/13/policy-evaluation-modes.aspx](https://blogs.msdn.com/b/sqlpbm/archive/2009/04/13/policy-evaluation-modes.aspx)  
   
 ## <a name="policy-based-management-concepts"></a>Concetti relativi alla gestione basata su criteri  
  Nella gestione basata su criteri sono inclusi tre componenti:  

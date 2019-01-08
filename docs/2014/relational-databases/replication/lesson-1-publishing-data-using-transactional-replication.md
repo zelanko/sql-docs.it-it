@@ -13,12 +13,12 @@ ms.assetid: 9c55aa3c-4664-41fc-943f-e817c31aad5e
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 99a4e638ddacc5b112ef819826c3eae7f42c5078
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d75a44c44442917f61b52c7aa0f2e770dcdf5d83
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48226591"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590565"
 ---
 # <a name="lesson-1-publishing-data-using-transactional-replication"></a>Lezione 1: Pubblicazione dei dati tramite la replica transazionale
   In questa lezione verrà creata una pubblicazione transazionale con [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] per pubblicare un subset filtrato della tabella **Product** nel database di esempio [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . Verrà inoltre aggiunto l'account di accesso di SQL Server utilizzato dall'agente di distribuzione all'elenco di accesso alla pubblicazione. Per eseguire questa esercitazione è necessario avere completato l'esercitazione precedente [Preparazione del server per la replica](tutorial-preparing-the-server-for-replication.md).  
@@ -35,7 +35,7 @@ ms.locfileid: "48226591"
   
 4.  Nella pagina Tipo di pubblicazione selezionare **Pubblicazione transazionale**e quindi fare clic su **Avanti**.  
   
-5.  Nella pagina Articoli espandere il nodo **Tabelle** , selezionare la casella di controllo **Product** , quindi espandere **Product** e deselezionare le caselle di controllo **ListPrice** e **StandardCost** . Fare clic su **Avanti**.  
+5.  Nella pagina Articoli espandere il nodo **Tabelle** , selezionare la casella di controllo **Product** , quindi espandere **Product** e deselezionare le caselle di controllo **ListPrice** e **StandardCost** . Scegliere **Avanti**.  
   
 6.  Nella pagina Filtro righe tabella fare clic su **Aggiungi**.  
   
@@ -51,7 +51,7 @@ ms.locfileid: "48226591"
   
 10. Nella pagina Sicurezza agente deselezionare la casella di controllo **Usa le impostazioni di sicurezza dell'agente snapshot** .  
   
-11. Fare clic su **Impostazioni di sicurezza** accanto ad Agente snapshot, immettere \<*Nome_computer>***\repl_snapshot** nella casella **Account processo**, specificare la password per l'account e quindi fare clic su **OK**.  
+11. Fare clic su **Impostazioni di sicurezza** accanto ad Agente snapshot, immettere \<_Nome_computer>_**\repl_snapshot** nella casella **Account processo**, specificare la password per l'account e quindi fare clic su **OK**.  
   
 12. Ripetere il passaggio precedente per impostare repl_logreader come account di processo per l'agente di lettura log e quindi fare clic su **Fine**.  
   
@@ -77,10 +77,10 @@ ms.locfileid: "48226591"
   
 3.  Selezionare la pagina **Elenco di accesso alla pubblicazione** e fare clic su **Aggiungi**.  
   
-4.  Nella finestra di dialogo **Aggiungi accesso alla pubblicazione** selezionare *<Nome_computer>***\repl_distribution** e quindi fare clic su **OK**. Fare clic su **OK**.  
+4.  Nella finestra di dialogo **Aggiungi accesso alla pubblicazione** selezionare _<Machine_Name>_**\repl_distribution** e quindi fare clic su **OK**. Fare clic su **OK**.  
   
 ## <a name="next-steps"></a>Passaggi successivi  
- In questo modo è stata creata la pubblicazione transazionale. Il passaggio successivo consiste nel sottoscrivere la pubblicazione. Vedere [Lezione 2: Creazione di una sottoscrizione per una pubblicazione transazionale](lesson-2-creating-a-subscription-to-the-transactional-publication.md).  
+ In questo modo è stata creata la pubblicazione transazionale. Il passaggio successivo consiste nel sottoscrivere la pubblicazione. Vedere [lezione 2: Creazione di una sottoscrizione per una pubblicazione transazionale](lesson-2-creating-a-subscription-to-the-transactional-publication.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Filtrare i dati pubblicati](publish/filter-published-data.md)   

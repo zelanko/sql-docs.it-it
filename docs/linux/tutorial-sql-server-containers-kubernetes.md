@@ -9,12 +9,12 @@ ms.topic: tutorial
 ms.prod: sql
 ms.custom: sql-linux,mvc
 ms.technology: linux
-ms.openlocfilehash: 1053f3a11bed9efbf75d7270f677c9f226221a3f
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 669d02d32642ba4723892a98a1f4d0f3bc6e51f6
+ms.sourcegitcommit: c51f7f2f5d622a1e7c6a8e2270bd25faba0165e7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51674198"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53626321"
 ---
 # <a name="deploy-a-sql-server-container-in-kubernetes-with-azure-kubernetes-services-aks"></a>Distribuire un contenitore di SQL Server in Kubernetes con servizi Kubernetes di Azure (AKS)
 
@@ -41,11 +41,11 @@ Nel diagramma precedente `mssql-server` è un contenitore in un [pod](https://ku
 
 Nel diagramma seguente, il `mssql-server` contenitore non è riuscita. Come l'agente di orchestrazione Kubernetes garantisce il conteggio corretto delle istanze integre nella replica di impostarla e avvia un nuovo contenitore in base alla configurazione. L'agente di orchestrazione avvia un nuovo pod nello stesso nodo, e `mssql-server` si riconnette alla stessa risorsa di archiviazione permanente. Il servizio si connette a creati nuovamente `mssql-server`.
 
-![Diagramma del cluster Kubernetes SQL Server](media/tutorial-sql-server-containers-kubernetes/kubernetes-sql-after-node-fail.png)
+![Diagramma del cluster Kubernetes SQL Server](media/tutorial-sql-server-containers-kubernetes/kubernetes-sql-after-pod-fail.png)
 
 Nel diagramma seguente, il nodo che ospita il `mssql-server` contenitore non è riuscita. L'agente di orchestrazione avvia nuovi pod in un nodo diverso, e `mssql-server` si riconnette alla stessa risorsa di archiviazione permanente. Il servizio si connette a creati nuovamente `mssql-server`.
 
-![Diagramma del cluster Kubernetes SQL Server](media/tutorial-sql-server-containers-kubernetes/kubernetes-sql-after-pod-fail.png)
+![Diagramma del cluster Kubernetes SQL Server](media/tutorial-sql-server-containers-kubernetes/kubernetes-sql-after-node-fail.png)
 
 ## <a name="prerequisites"></a>Prerequisiti
 
@@ -174,13 +174,15 @@ In questo passaggio, creare un manifesto per descrivere il contenitore basato su
          terminationGracePeriodSeconds: 10
          containers:
          - name: mssql
-           image: mcr.microsoft.com/mssql/server/mssql-server-linux
+           image: mcr.microsoft.com/mssql/server:2017-latest
            ports:
            - containerPort: 1433
            env:
+           - name: MSSQL_PID
+             value: "Developer"
            - name: ACCEPT_EULA
              value: "Y"
-           - name: SA_PASSWORD
+           - name: MSSQL_SA_PASSWORD
              valueFrom:
                secretKeyRef:
                  name: mssql
@@ -209,12 +211,12 @@ In questo passaggio, creare un manifesto per descrivere il contenitore basato su
 
    Copiare il codice precedente in un nuovo file denominato `sqldeployment.yaml`. Aggiornare i valori seguenti: 
 
-   * `value: "Developer"`: Imposta il contenitore per l'esecuzione di SQL Server Developer edition. Edizione per sviluppatori non ha la licenza per i dati di produzione. Se la distribuzione di produzione, impostare l'edizione appropriata (`Enterprise`, `Standard`, o `Express`). 
+   * MSSQL_PID `value: "Developer"`: Imposta il contenitore per l'esecuzione di SQL Server Developer edition. Edizione per sviluppatori non ha la licenza per i dati di produzione. Se la distribuzione di produzione, impostare l'edizione appropriata (`Enterprise`, `Standard`, o `Express`). 
 
       >[!NOTE]
       >Per altre informazioni, vedere [licenza di SQL Server come](https://www.microsoft.com/sql-server/sql-server-2017-pricing).
 
-   * `persistentVolumeClaim`: Questo valore è necessario che una voce per `claimName:` che esegue il mapping al nome usato per l'attestazione di volume permanente. Questa esercitazione Usa `mssql-data`. 
+   * `persistentVolumeClaim`: È necessario che una voce per `claimName:` che esegue il mapping al nome usato per l'attestazione di volume permanente. Questa esercitazione Usa `mssql-data`. 
 
    * `name: SA_PASSWORD`: Configura l'immagine del contenitore per impostare la password dell'amministratore di sistema, come definito in questa sezione.
 

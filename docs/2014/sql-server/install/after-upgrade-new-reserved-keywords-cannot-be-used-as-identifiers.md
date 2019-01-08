@@ -15,12 +15,12 @@ ms.assetid: cb242081-54f8-4273-a8ef-52f3751c25ef
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e1a4078161203f335c295a660e7bd4e8e3e18ea0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8db9bcef48b28594187aab34fb0049689d907a47
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48150441"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376233"
 ---
 # <a name="after-upgrade-new-reserved-keywords-cannot-be-used-as-identifiers"></a>Dopo l'aggiornamento, le parole chiave riservate non possono essere utilizzate come identificatori.
   È stato rilevato l'utilizzo di parole che sono parole chiave riservate. Una parola chiave riservata non può essere utilizzata come identificatore o nome di oggetto a meno che il nome non sia delimitato.  
@@ -28,7 +28,7 @@ ms.locfileid: "48150441"
 ## <a name="component"></a>Componente  
  Motore di database  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>Descrizione  
  A livello di compatibilità 90 o inferiore, le parole seguenti non sono parole chiave riservate e possono essere utilizzate come identificatori o nomi di oggetto negli script [!INCLUDE[tsql](../../includes/tsql-md.md)]. A livello di compatibilità 100, tali parole sono parole chiave completamente riservate e non devono essere utilizzate con identificatori o nomi di oggetto.  
   
 -   EXTERNAL  
@@ -57,7 +57,7 @@ ms.locfileid: "48150441"
   
  [MERGE &#40;Transact-SQL&#41;](/sql/t-sql/statements/merge-transact-sql)  
   
- [Identificatori delimitati (motore di Database)](http://go.microsoft.com/fwlink/?LinkId=112509)  
+ [Identificatori delimitati (motore di Database)](https://go.microsoft.com/fwlink/?LinkId=112509)  
   
  [Livello di compatibilità ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level)  
   

@@ -13,12 +13,12 @@ ms.assetid: a3b11286-32c8-40e1-8ae7-090e2590345a
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 887f881ad6a4cefec80620ebedb2ac210692ce5d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cdb70467f5844c2d2dba623c340209f495002cdd
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48090098"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53357258"
 ---
 # <a name="ado-net-destination-editor-connection-manager-page"></a>Editor destinazione ADO NET (pagina Gestione connessione)
   Usare la pagina **Gestione connessione** della finestra di dialogo **Editor destinazione ADO NET** per selezionare la connessione [!INCLUDE[vstecado](../includes/vstecado-md.md)] per la destinazione. Tramite questa pagina è inoltre possibile selezionare una tabella o una vista del database.  
@@ -57,21 +57,21 @@ ms.locfileid: "48090098"
   
  Solo i provider ADO.NET che restituiscono un oggetto <xref:System.Data.SqlClient.SqlConnection> supportano l'uso dell'interfaccia <xref:System.Data.SqlClient.SqlBulkCopy> . Il provider di dati .NET per SQL Server (SqlClient) restituisce un oggetto <xref:System.Data.SqlClient.SqlConnection> e un provider personalizzato può restituire un oggetto <xref:System.Data.SqlClient.SqlConnection> .  
   
- È possibile usare il Provider di dati .NET per SQL Server (SqlClient) per connettersi a [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)].  
+ È possibile usare il provider di dati .NET per SQL Server (SqlClient) per connettersi a [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)].  
   
- Se si seleziona **Usa Inserimento bulk quando possibile**e si imposta l'opzione **Errore** su **Reindirizza riga**, il batch di dati che la destinazione reindirizza all'output degli errori può includere righe corrette. Per altre informazioni sulla gestione degli errori nelle operazioni bulk, vedere [Gestione degli errori nei dati](data-flow/error-handling-in-data.md). Per altre informazioni sul **errore** opzione, vedere [Editor destinazione ADO NET &#40;pagina Output degli errori&#41;](../../2014/integration-services/ado-net-destination-editor-error-output-page.md).  
+ Se si seleziona **Usa Inserimento bulk quando possibile**e si imposta l'opzione **Errore** su **Reindirizza riga**, il batch di dati che la destinazione reindirizza all'output degli errori può includere righe corrette. Per altre informazioni sulla gestione degli errori nelle operazioni bulk, vedere [Gestione degli errori nei dati](data-flow/error-handling-in-data.md). Per altre informazioni sull'opzione **Errore** , vedere [Editor destinazione ADO NET &#40;pagina Output degli errori&#41;](../../2014/integration-services/ado-net-destination-editor-error-output-page.md).  
   
 > [!NOTE]  
->  Se una tabella di origine [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] o Sybase include una colonna Identity, è necessario utilizzare Esegui attività di SQL per eseguire un'istruzione SET IDENTITY_INSERT prima e dopo la destinazione di ADO NET. La proprietà della colonna Identity specifica un valore incrementale per la colonna. L'istruzione SET IDENTITY_INSERT consente l'inserimento di valori espliciti nella colonna Identity. Per eseguire le istruzioni CREATE TABLE e SET IDENTITY sulla stessa connessione al database, impostare il `RetainSameConnection` proprietà del [!INCLUDE[vstecado](../includes/vstecado-md.md)] gestione connessione da `True`. Inoltre, utilizzare la stessa gestione connessione [!INCLUDE[vstecado](../includes/vstecado-md.md)] per le attività Esegui SQL e la destinazione ADO NET.  
+>  Se una tabella di origine [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] o Sybase include una colonna Identity, è necessario utilizzare Esegui attività di SQL per eseguire un'istruzione SET IDENTITY_INSERT prima e dopo la destinazione di ADO NET. La proprietà della colonna Identity specifica un valore incrementale per la colonna. L'istruzione SET IDENTITY_INSERT consente l'inserimento di valori espliciti nella colonna Identity. Per eseguire le istruzioni CREATE TABLE e SET IDENTITY sulla stessa connessione al database, impostare la proprietà `RetainSameConnection` della gestione connessione [!INCLUDE[vstecado](../includes/vstecado-md.md)] su `True`. Inoltre, utilizzare la stessa gestione connessione [!INCLUDE[vstecado](../includes/vstecado-md.md)] per le attività Esegui SQL e la destinazione ADO NET.  
 >   
 >  Per altre informazioni, vedere [SET IDENTITY_INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-identity-insert-transact-sql) e [IDENTITY &#40;proprietà&#41; &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql-identity-property).  
   
 ## <a name="external-resources"></a>Risorse esterne  
- Articolo tecnico [Loading data to Windows Azure SQL Database the fast way](http://go.microsoft.com/fwlink/?LinkId=244333)(Modalità rapida di caricamento di dati nel database SQL di Windows Azure) nel sito Web sqlcat.com  
+ Articolo tecnico [Loading data to Windows Azure SQL Database the fast way](https://go.microsoft.com/fwlink/?LinkId=244333)(Modalità rapida di caricamento di dati nel database SQL di Windows Azure) nel sito Web sqlcat.com  
   
 ## <a name="see-also"></a>Vedere anche  
- [Editor destinazione ADO NET &#40;pagina mapping&#41;](../../2014/integration-services/ado-net-destination-editor-mappings-page.md)   
- [Editor destinazione ADO NET &#40;pagina dell'Output degli errori&#41;](../../2014/integration-services/ado-net-destination-editor-error-output-page.md)   
+ [Editor destinazione ADO NET &#40;pagina Mapping&#41;](../../2014/integration-services/ado-net-destination-editor-mappings-page.md)   
+ [Editor destinazione ADO NET &#40;pagina Output degli errori&#41;](../../2014/integration-services/ado-net-destination-editor-error-output-page.md)   
  [Gestione connessione ADO.NET](connection-manager/ado-net-connection-manager.md)   
  [Attività Esegui SQL](control-flow/execute-sql-task.md)  
   

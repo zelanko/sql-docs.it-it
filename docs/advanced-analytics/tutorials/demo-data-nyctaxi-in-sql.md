@@ -1,5 +1,5 @@
 ---
-title: Scaricare i dati demo dei Taxi di NYC e gli script per embedded R e Python (SQL Server Machine Learning) | Microsoft Docs
+title: Scaricare i dati demo dei Taxi di NYC e gli script per embedded R e Python, SQL Server Machine Learning
 description: Istruzioni per scaricare i dati di esempio relativi ai taxi di New York City e creazione di un database. I dati viene usati nelle esercitazioni sul linguaggio di SQL Server Python e R che illustra come incorporare script nelle funzioni di T-SQL e stored procedure SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,17 +8,17 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: ea4651c76d0c8fbc14d22a51c7789d65a20b8484
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 25ac1b4884b0d12de9de59f44ba02ac9fec7e952
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701346"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53645028"
 ---
 # <a name="nyc-taxi-demo-data-for-sql-server-python-and-r-tutorials"></a>Dati demo dei Taxi di NYC per le esercitazioni di SQL Server Python e R
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Questo articolo illustra come configurare un database di esempio costituito da dati pubblici dal [Taxi di New York City and Limousine Commission](https://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml). Questi dati vengono utilizzati nelle esercitazioni diversi R e Python per analitica nel database in SQL Server. Per rendere più rapido eseguire il codice di esempio, è stato creato un campione rappresentativo di % 1 dei dati. Nel sistema, il file di backup di database è leggermente superiore a 90 MB, fornendo 1.7 milioni di righe nella tabella di dati primario.
+Questo articolo illustra come configurare un database di esempio costituito da dati pubblici dal [Taxi di New York City and Limousine Commission](http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml). Questi dati vengono utilizzati nelle esercitazioni diversi R e Python per analitica nel database in SQL Server. Per rendere più rapido eseguire il codice di esempio, è stato creato un campione rappresentativo di % 1 dei dati. Nel sistema, il file di backup di database è leggermente superiore a 90 MB, fornendo 1.7 milioni di righe nella tabella di dati primario.
 
 Per completare questo esercizio, è necessario disporre [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-2017) o un altro strumento che è possibile ripristinare un file di backup di database ed eseguire query T-SQL.
 
@@ -57,7 +57,7 @@ La tabella seguente riepiloga gli oggetti creati nel database di esempio dei Tax
 
 |**Nome oggetto**|**Tipo oggetto**|**Descrizione**|
 |----------|------------------------|---------------|
-|**NYCTaxi_Sample** | Database | Crea un database e due tabelle:<br /><br />Nella tabella dbo. nyctaxi_sample: contiene il set di dati principale NYC Taxi. Alla tabella viene aggiunto un indice columnstore cluster per migliorare le prestazioni di archiviazione e query. Il campione dell'1% del set di dati dei Taxi di NYC viene inserito in questa tabella.<br /><br />tabella dbo.nyc_taxi_models: usato per rendere permanente il modello con training analitica avanzata.|
+|**NYCTaxi_Sample** | Database | Crea un database e due tabelle:<br /><br />Nella tabella dbo. nyctaxi_sample: Contiene il set di dati principale NYC Taxi. Alla tabella viene aggiunto un indice columnstore cluster per migliorare le prestazioni di archiviazione e query. Il campione dell'1% del set di dati dei Taxi di NYC viene inserito in questa tabella.<br /><br />tabella dbo.nyc_taxi_models: Utilizzato per rendere permanente il modello con training analitica avanzata.|
 |**fnCalculateDistance** |funzione a valori scalari | Calcola la distanza diretta tra posizioni di salita e. Questa funzione viene utilizzata [creare funzionalità di dati](sqldev-create-data-features-using-t-sql.md), [training e salvataggio di un modello](sqldev-train-and-save-a-model-using-t-sql.md) e [Operazionalizzare il modello R](sqldev-operationalize-the-model.md).|
 |**fnEngineerFeatures** |funzione con valori di tabella | Crea nuova funzionalità di dati per il training del modello. Questa funzione viene utilizzata [creare funzionalità di dati](sqldev-create-data-features-using-t-sql.md) e [Operazionalizzare il modello R](sqldev-operationalize-the-model.md).|
 
@@ -88,7 +88,7 @@ Il database contiene 1.7 milioni di righe.
 
 3. All'interno del database è un **nyctaxi_sample** tabella che contiene il set di dati. La tabella è stata ottimizzata per i calcoli basati su set con l'aggiunta di un [indice columnstore](../../relational-databases/indexes/columnstore-indexes-overview.md). Eseguire questa istruzione per generare un breve riepilogo per la tabella.
 
-    ```SQL
+    ```sql
     SELECT DISTINCT [passenger_count]
         , ROUND (SUM ([fare_amount]),0) as TotalFares
         , ROUND (AVG ([fare_amount]),0) as AvgFares

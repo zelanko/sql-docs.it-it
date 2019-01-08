@@ -15,12 +15,12 @@ ms.assetid: f88c54df-b1aa-4701-807f-dc92c32363fd
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bd05102a9a146a4aa9439e86a76212872556a08d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3ae427f9f8d3391d8a8fcd0bff06a6ea3b97044c
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48071001"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53375713"
 ---
 # <a name="view-or-change-registered-filters-and-word-breakers"></a>Visualizzazione o modifica di word breaker e filtri registrati
   Dopo l'installazione o la disinstallazione di word breaker o filtri in un sistema, le modifiche non diventano automaticamente effettive nelle istanze server. In questo argomento viene descritto come visualizzare i word breaker o i filtri registrati, nonché come registrare i word breaker e i filtri appena installati in un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -78,7 +78,7 @@ ms.locfileid: "48071001"
   
      **Per installare e caricare filtri IFilter di Microsoft Filter Pack**  
   
-    -   [Come registrare IFilter di Microsoft Filter Pack con SQL Server](http://go.microsoft.com/fwlink/?LinkId=130439)  
+    -   [Come registrare IFilter di Microsoft Filter Pack con SQL Server](https://go.microsoft.com/fwlink/?LinkId=130439)  
   
 4.  Usare **sp_fulltext_service** per caricare i word breaker e i filtri appena installati nell'istanza del server nel modo seguente:  
   

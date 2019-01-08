@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: profiler
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Profiler, stopping traces
@@ -24,12 +23,12 @@ ms.assetid: aeeb38eb-229a-4c8b-ad66-57e9ce45fb6a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4b32b1d1d6416c6a8c6097a79dcba18eb62a89d8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1c53c039d6194edbc37438ef30ac4fef0113ae87
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48140249"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52794063"
 ---
 # <a name="start-a-trace"></a>Avviare una traccia
   Dopo aver definito una nuova traccia o creato un modello con [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], è possibile avviare, sospendere o arrestare l'acquisizione dei dati in base alla nuova definizione di traccia o modello.  
@@ -45,7 +44,7 @@ ms.locfileid: "48140249"
 >  Quando si utilizzano tracce esistenti, è possibile visualizzare le proprietà ma non modificarle. Per modificare le proprietà, arrestare o sospendere la traccia.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Avviare una traccia automaticamente dopo la connessione a un Server &#40;SQL Server Profiler&#41;](start-a-trace-automatically-after-connecting-to-a-server-sql-server-profiler.md)   
+ [Avviare una traccia automaticamente dopo la connessione a un server &#40;SQL Server Profiler&#41;](start-a-trace-automatically-after-connecting-to-a-server-sql-server-profiler.md)   
  [Sospendere una traccia &#40;SQL Server Profiler&#41;](pause-a-trace-sql-server-profiler.md)   
  [Arrestare una traccia &#40;SQL Server Profiler&#41;](stop-a-trace-sql-server-profiler.md)   
  [Cancellare il contenuto di una finestra di traccia &#40;SQL Server Profiler&#41;](clear-a-trace-window-sql-server-profiler.md)   

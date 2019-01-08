@@ -11,12 +11,12 @@ ms.assetid: 36f5686d-7e40-4f31-be81-bd197ca33a02
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: aa6994d4bcf01cc1de7036a45d52a7a090af80b7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 251ec4db1d1f1cb4ddebe447e095c3c2338ee0bb
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48218171"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53352142"
 ---
 # <a name="deployment-and-version-support-in-sql-server-data-tools-ssrs"></a>Deployment and Version Support in SQL Server Data Tools (SSRS)
   [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] supporta gli scenari seguenti:  
@@ -53,7 +53,7 @@ ms.locfileid: "48218171"
 ##  <a name="bkmk_SupportedVersions"></a> Versioni supportate  
   
 > [!NOTE]  
->  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], l'ambiente di sviluppo a 32 bit per progetti server di report, non può essere eseguito in computer basati su [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)] e non può essere installato nei server basati su [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)]. Tuttavia, è possibile usare [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] in computer con processore x64.  
+>  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], l'ambiente di sviluppo a 32 bit per progetti server di report, non è progettato per l'esecuzione in computer basati su [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)]e non può essere installato nei server basati su [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)]. Tuttavia, è possibile usare [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] in computer con processore x64.  
   
  Nella tabella seguente sono descritte le versioni supportate per la creazione e la pubblicazione di report in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
@@ -68,10 +68,10 @@ ms.locfileid: "48218171"
 |Progetto server di report<br /><br /> o Gestione configurazione<br /><br /> Progetto Creazione guidata report|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|Schema RDL 2008|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] solo server di report|Aggiornamenti dello schema da RDL 2003 e RDL 2005 a RDL 2008 in locale.|  
 |Progetto server di report<br /><br /> o Gestione configurazione<br /><br /> Progetto Creazione guidata report|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|Schema RDL 2005|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] oppure [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] server di report||  
 |Progetto server di report|[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]|Schema RDL 2003|Non supportato||  
-|[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Progettazione Report RDLC|[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 2005<br /><br /> [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 2008|Schema RDL 2005|Non supportato|Lo schema RDL 2008 non è supportato.|  
-|[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Controlli del Visualizzatore|[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 2005<br /><br /> [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 2008|RDL 2008 non supportato in modalità locale|N/D|Può visualizzare i report RDL 2008 nel [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] server di report in modalità server.|  
+|Progettazione report RDLC [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]|[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 2005<br /><br /> [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 2008|Schema RDL 2005|Non supportato|Lo schema RDL 2008 non è supportato.|  
+|Controlli dei visualizzatori di [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]|[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 2005<br /><br /> [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 2008|RDL 2008 non supportato in modalità locale|N/D|Consente di visualizzare i report RDL 2008 nel server di report di [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in modalità server.|  
   
- Per altre informazioni sull'apertura di report in una versione precedente dello schema di definizione del report, vedere [aggiornare i report](../install-windows/upgrade-reports.md). Per ulteriori informazioni su schemi di definizione dei report specifici, vedere la pagina relativa alla [specifica del linguaggio RDL](http://go.microsoft.com/fwlink/?linkid=116865).  
+ Per altre informazioni sull'apertura di report in una versione precedente dello schema di definizione del report, vedere [Aggiornare i report](../install-windows/upgrade-reports.md). Per ulteriori informazioni su schemi di definizione dei report specifici, vedere la pagina relativa alla [specifica del linguaggio RDL](https://go.microsoft.com/fwlink/?linkid=116865).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Pubblicazione di origini dati e report](../reports/publishing-data-sources-and-reports.md)  

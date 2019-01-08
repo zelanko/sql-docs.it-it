@@ -13,12 +13,12 @@ ms.assetid: 0209055e-cb6b-4a07-909e-836596727a2c
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f51d2f6f48263e764d73eb9fcd8ee0dcd27b26da
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bb79a52e8ce910425de44b5cf475400daa3f40aa
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48071761"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53356546"
 ---
 # <a name="task-6-adding-excel-source-to-the-data-flow"></a>Attività 6: Aggiunta dell'origine Excel al flusso di dati
   In questa attività viene aggiunta un'origine Excel al flusso di dati per leggere i dati del fornitore dal file di Excel di origine. Tramite l'origine Excel vengono estratti dati da fogli di lavoro o intervalli in cartelle di lavoro di Microsoft Excel. Visualizzare [origine Excel](../integration-services/data-flow/excel-source.md) per altre informazioni.  
@@ -45,9 +45,9 @@ ms.locfileid: "48071761"
   
 9. Scegliere **OK** per chiudere la finestra di dialogo.  
   
-10. Trascinare **DQS Cleansing** trasforma nello **altre trasformazioni** sul **casella degli strumenti SSIS** per il **del flusso di dati** disponibile nella scheda  **Leggere i dati fornitore dal File di Excel**. Nella trasformazione DQS Cleansing viene utilizzato Data Quality Services (DQS) per correggere i dati applicando le regole approvate nella Knowledge Base. In fase di esecuzione, tramite questa trasformazione viene creato un progetto DQS Cleansing nel server DQS. Visualizzare [trasformazione DQS Cleansing](http://msdn.microsoft.com/library/ee677619.aspx) per altre informazioni.  
+10. Trascinare **DQS Cleansing** trasforma nello **altre trasformazioni** sul **casella degli strumenti SSIS** per il **del flusso di dati** disponibile nella scheda  **Leggere i dati fornitore dal File di Excel**. Nella trasformazione DQS Cleansing viene utilizzato Data Quality Services (DQS) per correggere i dati applicando le regole approvate nella Knowledge Base. In fase di esecuzione, tramite questa trasformazione viene creato un progetto DQS Cleansing nel server DQS. Visualizzare [trasformazione DQS Cleansing](https://msdn.microsoft.com/library/ee677619.aspx) per altre informazioni.  
   
 ## <a name="next-step"></a>Passaggio successivo  
- [Attività 7: Aggiunta della trasformazione DQS Cleansing al flusso di dati](../integration-services/data-flow/data-flow.md)  
+ [Attività 7: Trasformazione Aggiunta DQS Cleansing al flusso di dati](../integration-services/data-flow/data-flow.md)  
   
   

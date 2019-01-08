@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- integration-services
+ms.technology: integration-services
 ms.topic: reference
 dev_langs:
 - VB
@@ -18,12 +16,12 @@ ms.assetid: b0dd77ee-ee11-4cd9-87aa-61dd67f2fe1c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fc1b364fba3e6807672ecf72a65d7319f6a5cb45
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1cb5174933c946b8ec790d0fa30fb090049a4a48
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48100113"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53362513"
 ---
 # <a name="script-task-examples"></a>Esempi di attività Script
   L'attività Script è uno strumento multifunzione che è possibile utilizzare in un pacchetto per rispondere ai requisiti non soddisfatti dalle attività incluse in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. In questo argomento sono riportati esempi di codice dell'attività Script che dimostrano alcune delle funzionalità disponibili.  
@@ -31,7 +29,7 @@ ms.locfileid: "48100113"
 > [!NOTE]  
 >  Se si desidera creare attività da riutilizzare più facilmente con più pacchetti, è possibile utilizzare il codice di questi esempi di attività Script come punto iniziale per attività personalizzate. Per altre informazioni, vedere [Sviluppo di un'attività personalizzata](../extending-packages-custom-objects/task/developing-a-custom-task.md).  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>In questa sezione  
   
 ### <a name="example-topics"></a>Argomenti di esempio  
  Questa sezione contiene esempi di codice che dimostrano i vari utilizzi delle classi di [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] che è possibile incorporare in un'attività Script di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]:  
@@ -78,6 +76,6 @@ ms.locfileid: "48100113"
  [Registrazione nell'attività Script](../extending-packages-scripting/task/logging-in-the-script-task.md)  
  Viene registrato il numero di elementi elaborati dall'attività nei provider di log abilitati.  
   
-![Icona di Integration Services (piccola)](../media/dts-16.gif "icona di Integration Services (piccola)")**rimangono fino a Date con Integration Services** <br /> Per i download, gli articoli, gli esempi e i video Microsoft più recenti, oltre alle soluzioni selezionate dalla community, visitare la pagina [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sul sito MSDN:<br /><br /> [Visita la pagina di Integration Services su MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Per ricevere notifica automatica su questi aggiornamenti, sottoscrivere i feed RSS disponibili nella pagina.  
+![Icona di Integration Services (piccola)](../media/dts-16.gif "icona di Integration Services (piccola)")**rimangono fino a Date con Integration Services**<br /> Per i download, gli articoli, gli esempi e i video Microsoft più recenti, oltre alle soluzioni selezionate dalla community, visitare la pagina [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sul sito MSDN:<br /><br /> [Visita la pagina di Integration Services su MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Per ricevere una notifica automatica su questi aggiornamenti, sottoscrivere i feed RSS disponibili nella pagina.  
   
   

@@ -17,12 +17,12 @@ ms.assetid: 4b634cc1-86dc-42ec-9804-a19292fe8448
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 25ca6a8a5769da023da506c25c858a012b7f7a7c
-ms.sourcegitcommit: 3cd6068f3baf434a4a8074ba67223899e77a690b
+ms.openlocfilehash: af20e220b4f1c2010606fec0d50e51025c73d31f
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49462017"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53366723"
 ---
 # <a name="bike-buyer-dmx-tutorial"></a>Esercitazione su DMX per Bike Buyer
   In questa esercitazione vengono descritte le procedure per la creazione, il training e l'esplorazione di modelli di data mining utilizzando il linguaggio di query DMX (Data Mining Extensions). Questi modelli di data mining verranno quindi utilizzati per la creazione di stime relative alla probabilità che un cliente acquisti una bicicletta.  
@@ -50,7 +50,7 @@ ms.locfileid: "49462017"
   
  DMX (Data Mining Extensions) è un linguaggio di query incluso in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] che è possibile utilizzare per creare e gestire modelli di data mining. L'algoritmo [!INCLUDE[msCoName](../includes/msconame-md.md)] Decision Trees consente di creare modelli che possono essere utilizzati per stimare se una persona acquisterà una bicicletta. Il modello risultante può utilizzare un singolo cliente o una tabella di clienti come input. L'algoritmo [!INCLUDE[msCoName](../includes/msconame-md.md)] Clustering consente di creare raggruppamenti di clienti in base a caratteristiche condivise. Lo scopo di questa esercitazione consiste nel fornire gli script DMX che verranno utilizzati nell'applicazione personalizzata.  
   
- **Per altre informazioni:** [soluzioni di Data Mining](../../2014/analysis-services/data-mining/data-mining-solutions.md)  
+ **Per ulteriori informazioni:** [Soluzioni di data mining](../../2014/analysis-services/data-mining/data-mining-solutions.md)  
   
 ## <a name="mining-structure-and-mining-models"></a>Struttura e modelli di data mining  
  Prima di iniziare a creare istruzioni DMX, è importante comprendere gli oggetti principali utilizzati da [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] per creare i modelli di data mining. Per struttura di data mining si intende una struttura di dati che definisce il dominio da cui vengono compilati i modelli di data mining. Una singola struttura di data mining può contenere più modelli di data mining che condividono lo stesso dominio. Un modello di data mining applica un algoritmo specifico ai dati rappresentati da una struttura di data mining.  
@@ -80,19 +80,19 @@ ms.locfileid: "49462017"
 ## <a name="what-you-will-learn"></a>Lezioni dell'esercitazione  
  L'esercitazione è suddivisa nelle lezioni seguenti:  
   
- [Lezione 1: Creazione della struttura di data mining Bike Buyer](../../2014/tutorials/lesson-1-creating-the-bike-buyer-mining-structure.md)  
+ [Lezione 1: Creazione della struttura di Data Mining Bike Buyer](../../2014/tutorials/lesson-1-creating-the-bike-buyer-mining-structure.md)  
  In questa lezione verranno illustrate le procedure per l'utilizzo dell'istruzione `CREATE` per creare strutture di data mining.  
   
- [Lezione 2: Aggiunta di modelli di data mining alla struttura di data mining Bike Buyer](../../2014/tutorials/lesson-2-adding-mining-models-to-the-bike-buyer-mining-structure.md)  
+ [Lezione 2: Aggiunta di modelli di Data Mining alla struttura di Data Mining Bike Buyer](../../2014/tutorials/lesson-2-adding-mining-models-to-the-bike-buyer-mining-structure.md)  
  In questa lezione verranno illustrate le procedure per l'utilizzo dell'istruzione `ALTER` per aggiungere modelli di data mining a una struttura di data mining.  
   
- [Lezione 3: Elaborazione della struttura di data mining Bike Buyer](../../2014/tutorials/lesson-3-processing-the-bike-buyer-mining-structure.md)  
+ [Lezione 3: L'elaborazione della struttura di Data Mining Bike Buyer](../../2014/tutorials/lesson-3-processing-the-bike-buyer-mining-structure.md)  
  In questa lezione verranno illustrate le procedure per l'utilizzo dell'istruzione `INSERT INTO` per elaborare le strutture di data mining e i modelli di data mining ad esse associati.  
   
- [Lezione 4: Esplorazione dei modelli di data mining Bike Buyer](../../2014/tutorials/lesson-4-browsing-the-bike-buyer-mining-models.md)  
+ [Lezione 4: Esplorazione di modelli di Data Mining Bike Buyer](../../2014/tutorials/lesson-4-browsing-the-bike-buyer-mining-models.md)  
  In questa lezione verranno illustrate le procedure per l'utilizzo dell'istruzione `SELECT` per esplorare il contenuto dei modelli di data mining.  
   
- [Lezione 5: Esecuzione di query di stima](../../2014/tutorials/lesson-5-executing-prediction-queries.md)  
+ [Lezione 5: L'esecuzione di query di stima](../../2014/tutorials/lesson-5-executing-prediction-queries.md)  
  In questa lezione verranno illustrate le procedure per l'utilizzo dell'istruzione `PREDICTION JOIN` per creare stime basate su modelli di data mining.  
   
 ## <a name="requirements"></a>Requisiti  
@@ -102,7 +102,7 @@ ms.locfileid: "49462017"
   
 -   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASversion2005](../includes/ssasversion2005-md.md)], [!INCLUDE[ssASversion10](../includes/ssasversion10-md.md)], [!INCLUDE[ssASCurrent](../includes/ssascurrent-md.md)], o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]  
   
--   Database [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] . Per una maggiore sicurezza, i database di esempio non vengono installati per impostazione predefinita. Per installare i database di esempio ufficiali per [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], visitare il [Microsoft SQL Sample Databases](http://go.microsoft.com/fwlink/?LinkId=88417) pagina e selezionare i database che si desidera installare...  
+-   Database [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] . Per una maggiore sicurezza, i database di esempio non vengono installati per impostazione predefinita. Per installare i database di esempio ufficiali per [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], visitare il [Microsoft SQL Sample Databases](https://go.microsoft.com/fwlink/?LinkId=88417) pagina e selezionare i database che si desidera installare...  
   
 > [!NOTE]  
 >  Quando si esaminano le esercitazioni, è consigliabile aggiungere **argomento successivo** e **argomento precedente** pulsanti alla barra degli strumenti del Visualizzatore di documenti.  

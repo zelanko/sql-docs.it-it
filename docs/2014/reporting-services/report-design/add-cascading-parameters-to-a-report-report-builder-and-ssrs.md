@@ -11,12 +11,12 @@ ms.assetid: 3a22eec3-57a7-478e-b6fc-102a9dbe0591
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: a4d5a4f3fb3fcc60e7d576b98ccacf88d027d287
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7eaddc16b25bc7ed1129cc89b67ae92ddb7aa129
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48078350"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376443"
 ---
 # <a name="add-cascading-parameters-to-a-report-report-builder-and-ssrs"></a>Aggiunta di parametri di propagazione a un report (Generatore report e SSRS)
   I parametri di propagazione consentono di gestire quantità elevate di dati del report. È possibile definire un set di parametri correlati in modo che l'elenco dei valori di un parametro dipenda dal valore scelto per un altro parametro. Il primo parametro può essere ad esempio indipendente e presentare un elenco di categorie di prodotti. Quando l'utente seleziona una categoria, il secondo parametro dipende dal valore del primo parametro. I relativi valori vengono aggiornati con un elenco di sottocategorie all'interno della categoria scelta. Quando l'utente visualizza il report, per filtrarne i dati vengono utilizzati sia i valori dei parametri di categoria che di sottocategoria.  
@@ -28,7 +28,7 @@ ms.locfileid: "48078350"
   
  Per i parametri di propagazione l'ordine è importante in quanto la query del set di dati relativa a un parametro riportato più avanti nell'elenco include un riferimento a ciascun parametro riportato in precedenza. In fase di esecuzione l'ordine dei parametri nel riquadro dei dati del report determina l'ordine in cui le query del parametro vengono visualizzate nel report e quindi l'ordine in cui un utente sceglie ogni valore del parametro successivo.  
   
- Per informazioni sulla creazione di parametri a cascata con più valori includendo la caratteristica Seleziona tutto, vedere [How to have a Select All Multi-Value Cascading Parameter](http://go.microsoft.com/fwlink/?LinkId=184757)(Come creare un parametro a cascata multivalore Seleziona tutto).  
+ Per informazioni sulla creazione di parametri a cascata con più valori includendo la caratteristica Seleziona tutto, vedere [How to have a Select All Multi-Value Cascading Parameter](https://go.microsoft.com/fwlink/?LinkId=184757)(Come creare un parametro a cascata multivalore Seleziona tutto).  
   
 ### <a name="to-create-the-main-dataset-with-a-query-that-includes-multiple-related-parameters"></a>Per creare il set di dati principale con una query che include più parametri correlati  
   
@@ -44,7 +44,7 @@ ms.locfileid: "48078350"
   
     1.  Un elenco di campi dell'origine dati. In un'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] , ad esempio, l'istruzione SELECT specifica un elenco di nomi di colonne del database di una determinata tabella o vista.  
   
-    2.  Un parametro della query per ogni parametro di propagazione. Un parametro della query limita i dati recuperati dall'origine dati specificando determinati valori da includere o escludere dalla query. In genere, i parametri della query si trovano in una clausola di restrizione nella query. In un'istruzione SELECT [!INCLUDE[tsql](../../includes/tsql-md.md)] , ad esempio, i parametri della query si trovano nella clausola WHERE. Per altre informazioni, vedere "Filtraggio delle righe usando WHERE e HAVING" nella documentazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] inclusa nella [documentazione online di SQL Server](http://go.microsoft.com/fwlink/?linkid=120955)  
+    2.  Un parametro della query per ogni parametro di propagazione. Un parametro della query limita i dati recuperati dall'origine dati specificando determinati valori da includere o escludere dalla query. In genere, i parametri della query si trovano in una clausola di restrizione nella query. In un'istruzione SELECT [!INCLUDE[tsql](../../includes/tsql-md.md)] , ad esempio, i parametri della query si trovano nella clausola WHERE. Per altre informazioni, vedere "Filtraggio delle righe usando WHERE e HAVING" nella documentazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] inclusa nella [documentazione online di SQL Server](https://go.microsoft.com/fwlink/?linkid=120955)  
   
 6.  Fare clic su **Esegui** (**!**). Dopo aver incluso i parametri della query e aver eseguito la query, verranno creati automaticamente i parametri del report corrispondenti ai parametri della query.  
   
@@ -155,9 +155,9 @@ ms.locfileid: "48078350"
 4.  Fare clic su **Visualizza report**. La visualizzazione del report verrà aggiornata in base ai parametri scelti.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Aggiungere, modificare o eliminare un parametro di Report &#40;Report e SSRS&#41;](add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)   
+ [Aggiungere, modificare o eliminare un parametro di report &#40;Generatore report e SSRS&#41;](add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)   
  [Parametri report &#40;Generatore report e Progettazione report&#41;](report-parameters-report-builder-and-report-designer.md)   
- [Esercitazione: Aggiungere un parametro al report &#40;Generatore report&#41;](../tutorial-add-a-parameter-to-your-report-report-builder.md)   
+ [Esercitazione: Aggiungere un parametro al Report &#40;Generatore Report&#41;](../tutorial-add-a-parameter-to-your-report-report-builder.md)   
  [Esercitazioni su &#40;Generatore Report&#41;](../report-builder-tutorials.md)   
  [Aggiungere filtri per set di dati, aree dati e gruppi &#40;Generatore report e SSRS&#41;](add-dataset-filters-data-region-filters-and-group-filters.md)   
  [Set di dati condivisi e incorporati del report &#40;Generatore report e SSRS&#41;](../report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  

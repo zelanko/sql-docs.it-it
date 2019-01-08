@@ -17,12 +17,12 @@ ms.assetid: d85b0833-ddeb-42e3-9397-97ea60d521b7
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c8ade9c0d0d877ca1c12c1361e0e0ba45c2e7ecb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8b12b22af124250fe05baab5d08a6585de061b56
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48209291"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53368073"
 ---
 # <a name="use-upgrade-advisor-to-prepare-for-upgrades"></a>Utilizzare Preparazione aggiornamento per preparare gli aggiornamenti
   Preparazione aggiornamento a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] semplifica le attività di preparazione per l'aggiornamento a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Preparazione aggiornamento consente di analizzare i componenti installati dalle versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e di generare un report contenente i problemi da correggere prima o dopo l'aggiornamento.  
@@ -57,7 +57,7 @@ ms.locfileid: "48209291"
 >  I report potrebbero contenere l'indicazione di altri problemi di aggiornamento non rilevati da Preparazione aggiornamento ma che potrebbero esistere sul server o nelle applicazioni. Esaminare l'elenco dei problemi non rilevabili e determinare se sia necessario apportare modifiche al server o alle applicazioni a causa di tali problemi.  
   
 ## <a name="how-to-install-and-run-upgrade-advisor"></a>Come installare e aggiornare Preparazione aggiornamento  
- Il percorso di installazione di Preparazione aggiornamento a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dipende dagli elementi analizzati. Preparazione aggiornamento supporta l'analisi remota di tutti i componenti supportati, ad eccezione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Se non si esegue l'analisi di istanze di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], è possibile installare Preparazione aggiornamento in qualsiasi computer in grado di connettersi all'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e che soddisfa i prerequisiti di Preparazione aggiornamento. Per altre informazioni, vedere [Supported Version and Edition Upgrades](../../database-engine/install-windows/supported-version-and-edition-upgrades.md). Se si prevede di analizzare le istanze di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], è necessario installare Preparazione aggiornamento nel server di report.  
+ Il percorso di installazione di Preparazione aggiornamento a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dipende dagli elementi analizzati. Preparazione aggiornamento supporta l'analisi remota di tutti i componenti supportati, ad eccezione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Se non si esegue l'analisi di istanze di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], è possibile installare Preparazione aggiornamento in qualsiasi computer in grado di connettersi all'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e che soddisfa i prerequisiti di Preparazione aggiornamento. Per altre informazioni, vedere [Aggiornamenti di versione ed edizione supportati](../../database-engine/install-windows/supported-version-and-edition-upgrades.md). Se si prevede di analizzare le istanze di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], è necessario installare Preparazione aggiornamento nel server di report.  
   
  Preparazione aggiornamento è disponibile in un feature pack.  
   
@@ -65,9 +65,9 @@ ms.locfileid: "48209291"
   
 -   [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] SP2, Windows 7 SP1 e [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1.  
   
--   Windows Installer a partire dalla versione 4.5. È possibile installare Windows Installer dal [sito Web di Windows Installer](http://go.microsoft.com/fwlink/?LinkId=49112).  
+-   Windows Installer a partire dalla versione 4.5. È possibile installare Windows Installer dal [sito Web di Windows Installer](https://go.microsoft.com/fwlink/?LinkId=49112).  
   
--   Microsoft .NET Framework 4. È disponibile in .NET framework 4 il [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] supporto del prodotto e dal [pagina di download di .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=209895).  
+-   Microsoft .NET Framework 4. È disponibile in .NET framework 4 il [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] supporto del prodotto e dal [pagina di download di .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=209895).  
   
     -   Per eseguire l'installazione di .NET Framework 4 dai supporti di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], individuare la radice dell'unità disco. Fare quindi doppio clic sulla cartella \redist, sulla cartella DotNetFrameworks ed eseguire dotNetFx40_Full_x86_x64.exe (sia per i sistemi operativi a 32 bit che per quelli a 64 bit).  
   

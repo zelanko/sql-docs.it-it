@@ -16,17 +16,17 @@ ms.assetid: 075548ef-08a3-413c-8ee0-4a074c276fcc
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e4dd5b6f8a241d3173cdca8b03cce4fb9a373b8d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 34de23fca71f4dc7949a04a36323d19d35826fa9
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48196041"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53359823"
 ---
 # <a name="database-dimension-properties"></a>Proprietà delle dimensioni del database
   Nelle [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], le caratteristiche di una dimensione sono definite dai metadati per la dimensione, in base alle impostazioni di diverse proprietà della dimensione e gli attributi o le gerarchie contenute nella dimensione. Nella tabella seguente vengono descritte le proprietà delle dimensioni in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
-|Proprietà|Description|  
+|Proprietà|Descrizione|  
 |--------------|-----------------|  
 |`AttributeAllMemberName`|Specifica il nome del membro Totale per gli attributi in una dimensione.|  
 |`Collation`|Determina le regole di confronto utilizzate dalla dimensione.|  
@@ -51,12 +51,12 @@ ms.locfileid: "48196041"
 |`WriteEnabled`|Indica se i writeback della dimensione sono disponibili, in base alle autorizzazioni di sicurezza.|  
   
 > [!NOTE]  
->  Per altre informazioni sull'impostazione di valori per le proprietà ErrorConfiguration e UnknownMember quando si lavora con i valori null e altri problemi di integrità dei dati, vedere [la gestione di problemi di integrità dei dati di Analysis Services 2005](http://go.microsoft.com/fwlink/?LinkId=81891).  
+>  Per altre informazioni sull'impostazione di valori per le proprietà ErrorConfiguration e UnknownMember quando si lavora con i valori null e altri problemi di integrità dei dati, vedere [la gestione di problemi di integrità dei dati di Analysis Services 2005](https://go.microsoft.com/fwlink/?LinkId=81891).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Gli attributi e gerarchie di attributi](attributes-and-attribute-hierarchies.md)   
+ [Attributi e gerarchie di attributi](attributes-and-attribute-hierarchies.md)   
  [Gerarchie definite dall'utente](user-hierarchies.md)   
  [Relazioni tra dimensioni](../multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   
- [Dimensioni &#40;Analysis Services - dati multidimensionali&#41;](dimensions-analysis-services-multidimensional-data.md)  
+ [Dimensioni &#40;Analysis Services - Dati multidimensionali&#41;](dimensions-analysis-services-multidimensional-data.md)  
   
   

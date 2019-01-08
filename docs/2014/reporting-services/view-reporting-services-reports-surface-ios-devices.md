@@ -17,18 +17,18 @@ ms.assetid: 2124bcf5-d60a-475f-a4ae-de6df44d2860
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a8f458589e995162a8753270fbdebe9554a44122
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2cc1725bc1cad98033fbc4c47c1611e7c8b35f32
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48188821"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53360233"
 ---
 # <a name="view-reporting-services-reports-on-microsoft-surface-devices-and--apple-ios-devices"></a>Visualizzare i report Reporting Services su dispositivi Microsoft Surface e Apple iOS
   In questo articolo vengono descritti i flussi di lavoro e le funzionalità di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] supportati per i dispositivi di Microsoft Surface e i dispositivi con Apple iOS 6 e Apple Safari come l'iPad.  
   
 ## <a name="view-and-interact-with-reports"></a>Visualizzare e interagire con i report  
- A partire [!INCLUDE[ssSQL11SP1long](../includes/sssql11sp1long-md.md)], [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] supporta la visualizzazione e base l'interattività dei report su dispositivi Microsoft Surface e Apple iOS 6 e il browser Apple Safari come l'iPad. Inoltre, è possibile pubblicare i report utilizzando i dispositivi di Microsoft Surface.  
+ A partire da [!INCLUDE[ssSQL11SP1long](../includes/sssql11sp1long-md.md)], [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] supporta la visualizzazione e l'interattività di base con i report nei dispositivi di Microsoft Surface e nei dispositivi con Apple iOS 6 e il browser Apple Safari come l'iPad. Inoltre, è possibile pubblicare i report utilizzando i dispositivi di Microsoft Surface.  
   
  ![Desktop IPad](media/videothumbnail.jpg "Desktop IPad")  
 Esaminare una dimostrazione per la visualizzazione dei report in un iPad.  
@@ -39,9 +39,9 @@ Esaminare una dimostrazione per la visualizzazione dei report in un iPad.
   
 -   Per un server di report in modalità nativa, installare [!INCLUDE[ssSQL11SP1long](../includes/sssql11sp1long-md.md)] o versioni successive.  
   
-     [!INCLUDE[ssSQL11SP1long](../includes/sssql11sp1long-md.md)] è disponibile per il download il [Microsoft Download Center](http://www.microsoft.com/download/details.aspx?id=35575).  
+     [!INCLUDE[ssSQL11SP1long](../includes/sssql11sp1long-md.md)] è disponibile per il download il [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=35575).  
   
--   Per un server di report in modalità SharePoint, installare [!INCLUDE[ssSQL11SP1long](../includes/sssql11sp1long-md.md)] o versione successiva del [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] aggiuntivo per prodotti SharePoint.  
+-   Per un server di report in modalità SharePoint, installare [!INCLUDE[ssSQL11SP1long](../includes/sssql11sp1long-md.md)] o versioni successive del componente aggiuntivo [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] per prodotti SharePoint.  
   
  **Per visualizzare e interagire con un report in un dispositivo iPad o Microsoft Surface**  
   
@@ -49,18 +49,18 @@ Esaminare una dimostrazione per la visualizzazione dei report in un iPad.
   
 2.  Aprire il report effettuando una delle operazioni seguenti.  
   
-    -   **Avvio dalla posta elettronica:** dal messaggio di posta elettronica creato da un [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] sottoscrizione, toccare l'URL del report. Il report verrà aperto nel browser.  
+    -   **Avvio dalla posta elettronica:** In un messaggio di posta elettronica creato da una sottoscrizione di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] toccare l'URL del report. Il report verrà aperto nel browser.  
   
-    -   **Avvio dal Server di Report:** passare alla directory nel [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] server di report e quindi toccare il nome del report per aprire il report.  
+    -   **Iniziare dal Server di Report:** passare alla directory nel server di report [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], quindi toccare il nome del report per aprirlo.  
   
-    -   **Avvio da una raccolta documenti di SharePoint:** passare a una raccolta documenti di SharePoint contenente [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] i report e quindi toccare il nome del report. È possibile visualizzare e interagire con il report.  
+    -   **Iniziare da una raccolta documenti di SharePoint:** passare a una raccolta documenti di SharePoint che contiene report di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], quindi toccare il nome del report. È possibile visualizzare e interagire con il report.  
   
         > [!IMPORTANT]  
         >  Per l'iPad, verificare che la proprietà relativa all'esplorazione privata per Safari sia disabilitata **.**  
   
-    -   **Web part di SharePoint:** se la web part è stata aggiunta a una pagina di SharePoint, è possibile visualizzare [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] i report.  
+    -   **Web part di SharePoint:** se la Web part è stata aggiunta a una pagina di SharePoint, è possibile visualizzare i report di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
   
-3.  Sul dispositivo Microsoft Surface è inoltre possibile aprire il report utilizzando Gestione report. Passare alla directory in [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] gestione Report e quindi toccare il nome del report per aprire il report.  
+3.  Sul dispositivo Microsoft Surface è inoltre possibile aprire il report utilizzando Gestione report. Sfogliare la directory in Gestione report di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , quindi toccare il nome del report per aprirlo.  
   
     > [!IMPORTANT]  
     >  La visualizzazione dei report in Gestione report non è supportata su un iPad.  
@@ -89,7 +89,7 @@ Esaminare una dimostrazione per la visualizzazione dei report in un iPad.
   
     -   Esportare il report toccando l'icona di **Menu a discesa Esporta** e, successivamente, un formato di file.  
   
-        -   Se il report viene visualizzato su un dispositivo di Microsoft Surface, è possibile esportarlo in uno dei formati riportati di seguito.  
+        -   Se si sta visualizzando il report in un dispositivo Microsoft Surface, è possibile esportare il report su uno dei formati seguenti.  
   
             -   File XML con dati del report  
   
@@ -105,14 +105,14 @@ Esaminare una dimostrazione per la visualizzazione dei report in un iPad.
   
             -   Word  
   
-        -   Se il report viene visualizzato su un iPad, è possibile esportarlo come file TIFF o PDF.  
+        -   Se si sta visualizzando il report in un iPad, è possibile esportare il report come file TIFF o PDF.  
   
 ## <a name="authentication"></a>Autenticazione  
- Usare l'autenticazione RSWindowsNTLM e RSWindowsBasic [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] in modalità nativa e con iPad.  
+ L'autenticazione RSWindowsNTLM e l'autenticazione RSWindowsBasic possono essere utilizzate con [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] in modalità nativa e con iPad.  
   
  In genere, è consigliabile non utilizzare RSWindowsBasic in ambienti non https, poiché questo tipo di autenticazione non offre riservatezza per le credenziali trasmesse.  
   
- Per altre informazioni sull'autenticazione RSWindowsNTLM e RSWindowsBasic, vedere [l'autenticazione con il Server di Report](security/authentication-with-the-report-server.md).  
+ Per ulteriori informazioni sui tipi di autenticazione RSWindowsNTLM e RSWindowsBasic, vedere [Authentication with the Report Server](security/authentication-with-the-report-server.md).  
   
 ## <a name="uploading-reports"></a>Caricamento di report  
  È possibile pubblicare i report da un dispositivo di Microsoft Surface utilizzando uno dei metodi seguenti, se si dispone delle autorizzazioni appropriate.  
@@ -125,20 +125,20 @@ Esaminare una dimostrazione per la visualizzazione dei report in un iPad.
 -   Caricare un file di definizione del report nel database del server di report aprendo Gestione report e toccando **Carica file**.  
   
 ## <a name="additional-information"></a>Informazioni aggiuntive  
- Per altre informazioni su [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] e browser supportati, vedere:  
+ Per ulteriori informazioni su [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] e sui browser supportati, vedere:  
   
 -   [Pianificazione per Reporting Services e supporto Browser per Power View &#40;Reporting Services 2014&#41;](../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md)  
   
  Per ulteriori informazioni su Microsoft Business Intelligence e sui dispositivi mobili, vedere gli argomenti seguenti:  
   
--   [Panoramica dei dispositivi mobili e SharePoint 2013](http://technet.microsoft.com/library/fp161351\(v=office.15\).aspx) (http://technet.microsoft.com/library/fp161351(v=office.15).aspx).  
+-   [Panoramica dei dispositivi mobili e SharePoint 2013](https://technet.microsoft.com/library/fp161351\(v=office.15\).aspx) (https://technet.microsoft.com/library/fp161351(v=office.15).aspx).  
   
--   [Browser per dispositivi mobili supportati in SharePoint 2013](http://technet.microsoft.com/library/fp161353\(v=office.15\).aspx) (http://technet.microsoft.com/library/fp161353(v=office.15).aspx).  
+-   [Browser per dispositivi mobili supportati in SharePoint 2013](https://technet.microsoft.com/library/fp161353\(v=office.15\).aspx) (https://technet.microsoft.com/library/fp161353(v=office.15).aspx).  
   
--   [Visualizzazione di report e scorecard in dispositivi Apple iPad (SharePoint Server 2010)](http://technet.microsoft.com/library/hh697482.aspx) (http://technet.microsoft.com/library/hh697482.aspx).  
+-   [Visualizzazione di report e scorecard in dispositivi Apple iPad (SharePoint Server 2010)](https://technet.microsoft.com/library/hh697482.aspx) (https://technet.microsoft.com/library/hh697482.aspx).  
   
--   [Visualizzazione di report di Reporting Services su un iPad (video)](http://technet.microsoft.com/sqlserver/jj873792.aspx) (http://technet.microsoft.com/sqlserver/jj873792.aspx).  
+-   [Visualizzazione di report di Reporting Services su un iPad (video)](https://technet.microsoft.com/sqlserver/jj873792.aspx) (https://technet.microsoft.com/sqlserver/jj873792.aspx).  
   
--   [Visualizzazione di report di Reporting Services in un dispositivo RT Microsoft Surface (video)](http://technet.microsoft.com/sqlserver/dn146017)  
+-   [Visualizzazione di report di Reporting Services in un dispositivo RT Microsoft Surface (video)](https://technet.microsoft.com/sqlserver/dn146017)  
   
   

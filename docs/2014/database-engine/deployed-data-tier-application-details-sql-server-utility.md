@@ -18,12 +18,12 @@ ms.assetid: 79c41dd9-abcb-434e-9326-00a341d5c867
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: eb7b23b6ff9bf81d9c156f52dd93797203c1161f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0ca9186b93e96c60e1c5128e385b5b77d5f2b94e
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48073297"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53354919"
 ---
 # <a name="deployed-data-tier-application-details-sql-server-utility"></a>Dettagli delle applicazioni livello dati distribuite (Utilità SQL Server)
   Le informazioni incluse nella vista Applicazioni livello dati distribuite di Gestione Utilità forniscono dati di utilizzo relativi a singole applicazioni livello dati, cronologia dell'utilizzo della CPU, dettagli sull'utilizzo dello spazio di archiviazione a livello di file e la possibilità di visualizzare e aggiornare le soglie dei criteri. È possibile controllare le soglie dei criteri a livello di applicazione del livello dati per utilizzo della CPU, file di database e file di log. È inoltre possibile visualizzare dettagli delle proprietà per le singole applicazioni di livello dati.  
@@ -60,7 +60,7 @@ ms.locfileid: "48073297"
   
     -   Freccia in giù verde - Lo stato di integrità di almeno un filegroup o gruppo file di log è sottoutilizzato, nessun filegroup o gruppo di file di log è sovrautilizzato.  
   
-    -   Freccia in su rossa - Lo stato di integrità di almeno un filegroup o il gruppo file di log è sovrautilizzato. Notare che se il database si trova nello stato di "emergenza", lo stato di integrità visualizzerà lo spazio sovrautilizzato del file di log.  
+    -   Freccia in su rossa - Lo stato di integrità di almeno un filegroup o il gruppo file di log è sovrautilizzato. Si noti che se il database si trova in stato di "emergenza", lo stato di integrità visualizzerà lo spazio sovrautilizzato del file di log.  
   
      Per visualizzare o modificare i limiti dei criteri di spazio per i file, fare clic sulla scheda **Utilizzo spazio di archiviazione** .  
   
@@ -76,17 +76,17 @@ ms.locfileid: "48073297"
   
 -   Data di distribuzione  
   
--   Attendibile: (True o False)  
+-   Trustworthy: (True o False)  
   
 -   Confronto  
   
 -   Livello di compatibilità: (ad esempio Versione100)  
   
--   Crittografia abilitata: (Vero o Falso)  
+-   Crittografia abilitata: (True o False)  
   
--   Modello di recupero: (Con registrazione minima, Con registrazione completa o Con registrazione minima delle operazioni bulk)  
+-   Modello di recupero: (Semplice, completo o con registrazione minima delle operazioni Bulk)  
   
--   Ultima ora registrata - Questa colonna restituisce la data e l'ora locale del punto di controllo utilità utilizzando il tipo di dati datetime. Per altre informazioni, vedere l'argomento [datetime (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=164071) nella documentazione online di SQL Server. Quando si utilizza il modello a oggetti dell'utilità, si noti che SSMS utilizza il tipo di dati datetimeoffset. Per altre informazioni, vedere l'argomento [datetimeoffset (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=141713) nella documentazione online di SQL Server.  
+-   Ora ultimo report: Questa colonna viene visualizzato il punto di controllo utilità data e ora locali utilizzando il tipo di dati datetime. Per altre informazioni, vedere l'argomento [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) nella documentazione online di SQL Server. Quando si utilizza il modello a oggetti dell'utilità, si noti che SSMS utilizza il tipo di dati datetimeoffset. Per altre informazioni, vedere l'argomento [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) nella documentazione online di SQL Server.  
   
  Scheda Utilizzo CPU  
  La scheda Utilizzo CPU mostra grafici affiancati con dati cronologici relativi all'applicazione del livello dati e all'utilizzo della CPU del computer.  
@@ -104,7 +104,7 @@ ms.locfileid: "48073297"
 -   1 anno, visualizzato in intervalli di 1 mese.  
   
  Scheda Utilizzo spazio di archiviazione  
- La scheda Utilizzo spazio di archiviazione include una visualizzazione albero con i dettagli relativi all'utilizzo dello spazio di archiviazione per file di database e file di log che appartengono all'applicazione del livello dati selezionata nella visualizzazione Elenco. Si noti che i dati relativi all'ora mostrano la data e l'ora locale del punto di controllo utilità utilizzando il tipo di dati datetime. Per altre informazioni, vedere l'argomento [datetime (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=164071) nella documentazione online di SQL Server. Quando si utilizza il modello a oggetti dell'utilità, si noti che SSMS utilizza il tipo di dati datetimeoffset. Per altre informazioni, vedere l'argomento [datetimeoffset (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=141713) nella documentazione online di SQL Server.  
+ La scheda Utilizzo spazio di archiviazione include una visualizzazione albero con i dettagli relativi all'utilizzo dello spazio di archiviazione per file di database e file di log che appartengono all'applicazione del livello dati selezionata nella visualizzazione Elenco. Si noti che i dati relativi all'ora mostrano la data e l'ora locale del punto di controllo utilità utilizzando il tipo di dati datetime. Per altre informazioni, vedere l'argomento [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) nella documentazione online di SQL Server. Quando si utilizza il modello a oggetti dell'utilità, si noti che SSMS utilizza il tipo di dati datetimeoffset. Per altre informazioni, vedere l'argomento [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) nella documentazione online di SQL Server.  
   
  È possibile raggruppare la visualizzazione in base al filegroup o al volume. Per utilizzare la visualizzazione albero filegroup, selezionare il pulsante di opzione **Filegroup** nella selezione **Raggruppa file per:** .  
   
@@ -124,7 +124,7 @@ ms.locfileid: "48073297"
   
 -   Freccia in giù verde - Lo spazio file per almeno un file di dati nel filegroup è sottoutilizzato e nessun file nel filegroup è sovrautilizzato.  
   
--   Freccia in su rossa - Lo spazio file per tutti i file di dati nel filegroup è sovrautilizzato. Notare che se il database si trova nello stato di "emergenza", lo stato di integrità visualizzerà lo spazio sovrautilizzato del file di log.  
+-   Freccia in su rossa - Lo spazio file per tutti i file di dati nel filegroup è sovrautilizzato. Si noti che se il database si trova in stato di "emergenza", lo stato di integrità visualizzerà lo spazio sovrautilizzato del file di log.  
   
  Per visualizzare i file in base al volume, selezionare il pulsante di opzione **Volume** nella selezione **Raggruppa file per:** . Il grafico della cronologia di utilizzo dello spazio di archiviazione consente di visualizzare lo spazio file utilizzato da tutti i file di dati e da tutti i file di log nel volume di archiviazione. Espandere l'albero per visualizzare i dettagli relativi ai singoli file di dati e file di log del database.  
   
@@ -153,17 +153,17 @@ ms.locfileid: "48073297"
   
 -   Data di distribuzione  
   
--   Attendibile: (True o False)  
+-   Trustworthy: (True o False)  
   
 -   Confronto  
   
 -   Livello di compatibilità: (ad esempio Versione100)  
   
--   Crittografia abilitata: (Vero o Falso)  
+-   Crittografia abilitata: (True o False)  
   
--   Modello di recupero: (Con registrazione minima, Con registrazione completa o Con registrazione minima delle operazioni bulk)  
+-   Modello di recupero: (Semplice, completo o con registrazione minima delle operazioni Bulk)  
   
--   Ultima ora registrata - Questa colonna restituisce la data e l'ora locale del punto di controllo utilità utilizzando il tipo di dati datetime. Per altre informazioni, vedere l'argomento [datetime (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=164071) nella documentazione online di SQL Server. Quando si utilizza il modello a oggetti dell'utilità, si noti che SSMS utilizza il tipo di dati datetimeoffset. Per altre informazioni, vedere l'argomento [datetimeoffset (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=141713) nella documentazione online di SQL Server.  
+-   Ora ultimo report: Questa colonna viene visualizzato il punto di controllo utilità data e ora locali utilizzando il tipo di dati datetime. Per altre informazioni, vedere l'argomento [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) nella documentazione online di SQL Server. Quando si utilizza il modello a oggetti dell'utilità, si noti che SSMS utilizza il tipo di dati datetimeoffset. Per altre informazioni, vedere l'argomento [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) nella documentazione online di SQL Server.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Dettagli di istanze gestite &#40;Utilità SQL Server&#41;](../../2014/database-engine/managed-instance-details-sql-server-utility.md)   

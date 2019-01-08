@@ -16,19 +16,19 @@ ms.assetid: 01daf21c-19c6-448d-ac30-accb54ad83da
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: a2cfa74b5f85b17c8f4dca36884943ad283422ad
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9306340695cffd621335d094e182898512c757c5
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48081006"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53367833"
 ---
 # <a name="feature-reference-reporting-services"></a>Guida di riferimento alle funzionalità (Reporting Services)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] include numerosi strumenti e applicazioni che è possibile usare per la creazione, la gestione e la visualizzazione di report. In questa sezione sono disponibili argomenti specifici che descrivono le finestre di dialogo, le pagine Web e le procedure guidate di tali strumenti e applicazioni.  
   
- Per accedere a un argomento relativo all'interfaccia utente mentre lo strumento o l'applicazione è in esecuzione, premere F1 oppure fare clic su **?** nella finestra di dialogo, nella pagina Web o nella procedura guidata aperta. Per altre informazioni sull'avvio degli strumenti di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], vedere [Esercitazione: Come individuare e avviare gli strumenti di Reporting Services &#40;SSRS&#41;](tools/tutorial-how-to-locate-and-start-reporting-services-tools-ssrs.md).  
+ Per accedere a un argomento relativo all'interfaccia utente mentre lo strumento o l'applicazione è in esecuzione, premere F1 oppure fare clic su **?** nella finestra di dialogo, nella pagina Web o nella procedura guidata aperta. Per altre informazioni sull'avvio di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] degli strumenti, vedere [esercitazione: Come individuare e avviare Reporting Services gli strumenti di &#40;SSRS&#41;](tools/tutorial-how-to-locate-and-start-reporting-services-tools-ssrs.md).  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Guida sensibile al contesto di Progettazione report](tools/report-designer-f1-help.md)  
  Guida per Progettazione report e le finestre di dialogo correlate, per Creazione guidata report e per Creazione guidata immagine.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "48081006"
  [Concetti relativi a Reporting Services &#40;SSRS&#41;](reporting-services-concepts-ssrs.md)   
  [Report di Reporting Services &#40;SSRS&#41;](reports/reporting-services-reports-ssrs.md)   
  [Aggiungere dati a un Report &#40;Report e SSRS&#41;](report-data/report-datasets-ssrs.md)   
- [Introduzione a Generatore report](http://www.microsoft.com/download/en/details.aspx?id=29072)   
- [Progettazione e implementazione di report tramite Generatore report 1.0](http://go.microsoft.com/fwlink/?LinkId=142601)  
+ [Introduzione a Generatore report](https://www.microsoft.com/download/en/details.aspx?id=29072)   
+ [Progettazione e implementazione di report tramite Generatore report 1.0](https://go.microsoft.com/fwlink/?LinkId=142601)  
   
   

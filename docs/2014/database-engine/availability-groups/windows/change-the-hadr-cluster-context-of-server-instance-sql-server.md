@@ -13,17 +13,17 @@ ms.assetid: ecd99f91-b9a2-4737-994e-507065a12f80
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3309d3754d8d4842ed238a54f0120b54bba1d596
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: de783ffdb5480a9cdebec2380f81e50a9cba11ec
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48219181"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53361350"
 ---
 # <a name="change-the-hadr-cluster-context-of-server-instance-sql-server"></a>Modificare il contesto del cluster HADR dell'istanza del server (SQL Server)
   In questo argomento viene descritto come cambiare il contesto del cluster HADR di un'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] utilizzando [!INCLUDE[tsql](../../../includes/tsql-md.md)] in [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] e versioni successive. Il *contesto del cluster HADR* determina il cluster WSFC (Windows Server Failover Clustering) che gestisce i metadati per le repliche di disponibilità ospitate dall'istanza del server.  
   
- Cambiare il contesto del cluster HADR solo durante una migrazione tra cluster di [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] a un'istanza di [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] in un nuovo cluster WSFC. La migrazione tra cluster di [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] supporta l'aggiornamento del sistema operativo a [!INCLUDE[win8](../../../includes/win8-md.md)] o a [!INCLUDE[win8srv](../../../includes/win8srv-md.md)] con tempi di inattività minimi dei gruppi di disponibilità. Per ulteriori informazioni, vedere [Migrazione tra cluster di gruppi di disponibilità AlwaysOn per l'aggiornamento del sistema operativo](http://msdn.microsoft.com/library/jj873730.aspx).  
+ Cambiare il contesto del cluster HADR solo durante una migrazione tra cluster di [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] a un'istanza di [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] in un nuovo cluster WSFC. La migrazione tra cluster di [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] supporta l'aggiornamento del sistema operativo a [!INCLUDE[win8](../../../includes/win8-md.md)] o a [!INCLUDE[win8srv](../../../includes/win8srv-md.md)] con tempi di inattività minimi dei gruppi di disponibilità. Per ulteriori informazioni, vedere [Migrazione tra cluster di gruppi di disponibilità AlwaysOn per l'aggiornamento del sistema operativo](https://msdn.microsoft.com/library/jj873730.aspx).  
   
 
   
@@ -52,7 +52,7 @@ ms.locfileid: "48219181"
   
     |Ruolo di replica|Azione|Collegamento|  
     |------------------|------------|----------|  
-    |Primaria|Gruppo di disponibilità offline.|[Portare un gruppo di disponibilità offline &#40;SQL Server&#41;](../../take-an-availability-group-offline-sql-server.md)|  
+    |Primario|Gruppo di disponibilità offline.|[Portare un gruppo di disponibilità offline &#40;SQL Server&#41;](../../take-an-availability-group-offline-sql-server.md)|  
     |Secondari|Rimozione della replica dal gruppo di disponibilità|[Rimuovere una replica secondaria da un gruppo di disponibilità &#40;SQL Server&#41;](remove-a-secondary-replica-from-an-availability-group-sql-server.md)|  
   
 -   Prima di poter passare da un cluster remoto al cluster locale, tutte le repliche con commit sincrono devono essere di tipo SYNCHRONIZED.  
@@ -85,7 +85,7 @@ ms.locfileid: "48219181"
   
  
   
-##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
  **Per modificare il contesto del cluster WSFC di una replica di disponibilità**  
   
 1.  Connettersi all'istanza del server che ospita la replica primaria o una replica secondaria del gruppo di disponibilità.  
@@ -154,9 +154,9 @@ SELECT cluster_name FROM sys.dm_hadr_cluster
   
 ##  <a name="RelatedContent"></a> Contenuto correlato  
   
--   [Articoli tecnici su SQL Server 2012](http://msdn.microsoft.com/library/bb418445\(SQL.10\).aspx)  
+-   [Articoli tecnici su SQL Server 2012](https://msdn.microsoft.com/library/bb418445\(SQL.10\).aspx)  
   
--   [SQL Server AlwaysOn Team Blog: Il Blog ufficiale di SQL Server AlwaysOn Team](http://blogs.msdn.com/b/sqlalwayson/)  
+-   [SQL Server AlwaysOn Team Blog: Il Team Blog ufficiale di SQL Server AlwaysOn](https://blogs.msdn.com/b/sqlalwayson/)  
   
   
   

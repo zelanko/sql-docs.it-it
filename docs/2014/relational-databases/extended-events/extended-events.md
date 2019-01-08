@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: xevents
 ms.topic: conceptual
 helpviewer_keywords:
 - extended events [SQL Server]
@@ -14,17 +13,17 @@ ms.assetid: bf3b98a6-51ed-4f2d-9c26-92f07f1fa947
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e436ba6a981ac03ca5f4b194e9dc257a22aba7a1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 485c748aad8b07a5e8b92a02c03d51a82e5f362a
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48221661"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53354056"
 ---
 # <a name="extended-events"></a>Eventi estesi
   Gli eventi estesi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono dotati di un'architettura estremamente scalabile e configurabile che consente agli utenti di raccogliere le informazioni necessarie per diagnosticare o identificare un problema legato alle prestazioni.  
   
- Per ulteriori informazioni sugli eventi estesi, visitare il sito Web [Eventi estesi di SQL Server](http://blogs.msdn.com/b/extended_events/).  
+ Per ulteriori informazioni sugli eventi estesi, visitare il sito Web [Eventi estesi di SQL Server](https://blogs.msdn.com/b/extended_events/).  
   
 ## <a name="benefits-of-includessnoversionincludesssnoversion-mdmd-extended-events"></a>Vantaggi degli eventi estesi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  Si tratta di un sistema di monitoraggio delle prestazioni leggero in cui vengono utilizzate poche risorse per le prestazioni. Per gli eventi estesi sono disponibili due interfacce utente grafiche (**Creazione guidata nuova sessione** e **Nuova sessione**) per creare, modificare, visualizzare e analizzare i dati della sessione.  
@@ -34,7 +33,7 @@ ms.locfileid: "48221661"
   
  Nella seguente tabella vengono descritti i concetti negli eventi estesi.  
   
-|Argomento|Description|  
+|Argomento|Descrizione|  
 |-----------|-----------------|  
 |[Pacchetti degli eventi estesi di SQL Server](sql-server-extended-events-packages.md)|Vengono descritti i pacchetti degli eventi estesi che contengono oggetti utilizzati per ottenere ed elaborare dati durante l'esecuzione di una sessione degli eventi estesi.|  
 |[Destinazioni degli eventi estesi di SQL Server](../../database-engine/sql-server-extended-events-targets.md)|Vengono descritti i consumer di eventi che possono ricevere dati durante una sessione dell'evento.|  

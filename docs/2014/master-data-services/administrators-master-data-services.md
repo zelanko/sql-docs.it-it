@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - administrators [Master Data Services], about administrators
@@ -15,12 +14,12 @@ ms.assetid: d330aa4e-6ade-4b09-b376-1b15d6c78f7d
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 676af20a08829dcc1bd4fda019c4f42b5d51eb51
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c47d1905602f5cd96b58265963072cdd2dc01939
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48083531"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52778243"
 ---
 # <a name="administrators-master-data-services"></a>Amministratori (Master Data Services)
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] sono presenti due tipi di amministratore: gli amministratori di modelli e l'amministratore di sistema [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)].  
@@ -34,7 +33,7 @@ ms.locfileid: "48083531"
   
  Ogni modello può avere più amministratori. Ogni utente può essere un amministratore di uno, alcuni o tutti i modelli della distribuzione [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .  
   
- Un utente può essere configurato come amministratore di modelli in [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] o a livello di codice. Per altre informazioni, vedere [Create a Model Administrator &#40;Master Data Services&#41;](create-a-model-administrator-master-data-services.md).  
+ Un utente può essere configurato come amministratore di modelli in [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] o a livello di codice. Per altre informazioni, vedere [Creare un amministratore di modelli &#40;Master Data Services&#41;](create-a-model-administrator-master-data-services.md).  
   
 ## <a name="master-data-services-system-administrator"></a>Amministratore del sistema Master Data Services  
  Esiste un solo amministratore del sistema [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]. L'amministratore di sistema è l'utente specificato per il **Account di amministratore** quando si crea il [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] database.  
@@ -49,9 +48,9 @@ ms.locfileid: "48083531"
   
 ## <a name="comparing-administrator-types"></a>Confronto tra tipi di amministratore  
   
-|Tipo di amministratore|Description|  
+|Tipo di amministratore|Descrizione|  
 |------------------------|-----------------|  
-|Amministratore del sistema [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]|Le autorizzazioni assegnate in [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] non influenzano l'accesso dell'amministratore.<br /><br /> Dispone automaticamente **Update** l'autorizzazione a tutti i modelli.<br /><br /> Dispone automaticamente dell'accesso a tutte le aree funzionali.<br /><br /> In MDM. tbluser il valore di **ID** colonna viene **1**.|  
+|Amministratore del sistema [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]|Le autorizzazioni assegnate in [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] non influiscono sull'accesso dell'amministratore.<br /><br /> Dispone automaticamente **Update** l'autorizzazione a tutti i modelli.<br /><br /> Dispone automaticamente dell'accesso a tutte le aree funzionali.<br /><br /> In MDM. tbluser il valore di **ID** colonna viene **1**.|  
 |Amministratore di modelli|Le autorizzazioni assegnate in [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] determinano se l'utente è o meno un amministratore di modelli.<br /><br /> Può essere un amministratore di modelli in base alle autorizzazioni assegnate in modo esplicito o in base alle autorizzazioni ereditate da un gruppo.<br /><br /> È un amministratore solo per i modelli che hanno **Update** assegnata all'oggetto modello di livello superiore l'autorizzazione e non altre autorizzazioni.<br /><br /> Dispone dell'accesso solo alle aree funzionali per le quali è stato concesso l'accesso.<br /><br /> In MDM. tbluser il valore di **ID** colonna non è **1**.|  
   
 ## <a name="see-also"></a>Vedere anche  

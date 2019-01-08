@@ -24,19 +24,19 @@ ms.assetid: ec40868a-6dc7-4dfa-aadc-dedf69e555eb
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 33f2e8751befd42ee0b92690a17d668ba37a4c9a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3bf6919230c1621d2b81eb41cd715fc1878a90c5
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48089721"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53371523"
 ---
 # <a name="microsoft-clustering-algorithm-technical-reference"></a>Riferimento tecnico per l'algoritmo Microsoft Clustering
   In questa sezione viene illustrata l'implementazione dell'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Clustering, inclusi i parametri che è possibile utilizzare per controllare il comportamento dei modelli di clustering. Vengono inoltre fornite istruzioni su come migliorare le prestazioni durante la creazione e l'elaborazione di modelli di clustering.  
   
  Per ulteriori informazioni sull'utilizzo dei modelli di clustering, vedere gli argomenti seguenti:  
   
--   [Contenuto dei modelli di data mining per i modelli di Clustering &#40;Analysis Services - Data Mining&#41;](mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
+-   [Contenuto dei modelli di data mining per i modelli di clustering &#40;Analysis Services - Data mining&#41;](mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
   
 -   [Esempi di query sul modello di clustering](clustering-model-query-examples.md)  
   
@@ -64,7 +64,7 @@ ms.locfileid: "48089721"
   
  L'implementazione Microsoft prevede due opzioni: EM scalabile e non scalabile. Per impostazione predefinita, nell'algoritmo EM scalabile vengono utilizzati i primi 50.000 record per inizializzare l'analisi iniziale. Se l'operazione riesce, il modello utilizza solo questi dati. Se non è possibile ottenere il fit del modello utilizzando 50.000 record, vengono letti altri 50.000 record. Nell'algoritmo EM non scalabile viene letto l'intero set di dati, indipendentemente dalla dimensione. Con questo metodo è possibile creare cluster più accurati, ma i requisiti di memoria possono essere significativi. Poiché EM scalabile opera su un buffer locale, le iterazioni nei dati sono molto più veloci e l'algoritmo utilizza la memoria cache della CPU in modo molto più efficace rispetto a EM non scalabile. Inoltre, EM scalabile è tre volte più veloce di EM non scalabile, anche se tutti i dati possono rientrare nella memoria principale. Nella maggior parte dei casi, il miglioramento delle prestazioni non implica una riduzione della qualità del modello completo.  
   
- Per un report tecnico in cui viene descritta l'implementazione di EM nell'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Clustering, vedere [Adattamento dell'algoritmo di clustering EM (Expectation Maximization) a database di grandi dimensioni](http://go.microsoft.com/fwlink/?LinkId=45964).  
+ Per un report tecnico in cui viene descritta l'implementazione di EM nell'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Clustering, vedere [Adattamento dell'algoritmo di clustering EM (Expectation Maximization) a database di grandi dimensioni](https://go.microsoft.com/fwlink/?LinkId=45964).  
   
 ### <a name="k-means-clustering"></a>Clustering K-means  
  Il clustering K-means è un metodo noto che consiste nell'assegnare l'appartenenza a un cluster riducendo le differenze tra gli elementi di un cluster e massimizzando allo stesso tempo la distanza tra i cluster. Il termine "means" in K-means fa riferimento al *centroide* del cluster, ovvero un punto dati scelto arbitrariamente e quindi perfezionato in modo iterativo finché non rappresenta la media reale di tutti i punti dati del cluster. La lettera "K" fa riferimento a un numero arbitrario di punti utilizzati per inizializzare il processo di clustering. L'algoritmo K-means calcola le distanze euclidee al quadrato tra i record di dati in un cluster e il vettore che rappresenta la media del cluster, quindi converge su un set finale di K cluster quando la somma raggiunge il valore minimo.  
@@ -160,13 +160,13 @@ ms.locfileid: "48089721"
 ### <a name="modeling-flags"></a>Flag di modellazione  
  L'algoritmo supporta i flag di modellazione seguenti. I flag di modellazione, definiti durante la creazione della struttura o del modello di data mining, specificano la modalità di gestione dei valori in ogni colonna durante l'analisi.  
   
-|Flag di modellazione|Description|  
+|Flag di modellazione|Descrizione|  
 |-------------------|-----------------|  
 |MODEL_EXISTENCE_ONLY|La colonna verrà considerata come se disponesse di due stati possibili: Missing ed Existing. Un valore Null è un valore mancante.<br /><br /> Si applica alla colonna del modello di data mining.|  
 |NOT NULL|La colonna non può contenere un valore Null. Se Analysis Services rileva un valore Null durante il training del modello, viene generato un errore.<br /><br /> Si applica alla colonna della struttura di data mining.|  
   
 ## <a name="requirements"></a>Requisiti  
- Un modello di clustering deve contenere una colonna chiave e le colonne di input. È inoltre possibile definire le colonne di input come stimabili. Le colonne impostate su `Predict Only` non vengono usati per compilare i cluster. La distribuzione di questi valori nel cluster viene calcolata dopo la compilazione dei cluster.  
+ Un modello di clustering deve contenere una colonna chiave e le colonne di input. È inoltre possibile definire le colonne di input come stimabili. Le colonne impostate su `Predict Only` non vengono utilizzate per la compilazione di cluster. La distribuzione di questi valori nel cluster viene calcolata dopo la compilazione dei cluster.  
   
 ### <a name="input-and-predictable-columns"></a>Colonne di input e stimabili  
  L'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Clustering supporta specifiche colonne di input e colonne stimabili, riportate nella tabella seguente. Per altre informazioni sul significato dei tipi di contenuto usati in un modello di data mining, vedere [Tipi di contenuto &#40;Data mining&#41;](content-types-data-mining.md).  
@@ -181,7 +181,7 @@ ms.locfileid: "48089721"
   
 ## <a name="see-also"></a>Vedere anche  
  [Algoritmo Microsoft Clustering](microsoft-clustering-algorithm.md)   
- [Esempi di Query del modello di clustering](clustering-model-query-examples.md)   
- [Contenuto dei modelli di data mining per i modelli di Clustering &#40;Analysis Services - Data Mining&#41;](mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
+ [Esempi di query sul modello di clustering](clustering-model-query-examples.md)   
+ [Contenuto dei modelli di data mining per i modelli di clustering &#40;Analysis Services - Data mining&#41;](mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
   
   

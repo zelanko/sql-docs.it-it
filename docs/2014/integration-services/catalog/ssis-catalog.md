@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 24bd987e-164a-48fd-b4f2-cbe16a3cd95e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1984802df92929cb4a311f1de8527f764d96d0fa
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a9eb4de07ad7bd564578462b053637bb472b22f6
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48201341"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53353978"
 ---
 # <a name="ssis-catalog"></a>Catalogo SSIS
   Il `SSISDB` catalogo è il punto centrale per l'utilizzo [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] progetti (SSIS) che è stato distribuito il [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server. Ad esempio, è possibile impostare parametri di progetti e pacchetti, configurare ambienti per specificare valori di runtime per i pacchetti, eseguire e risolvere i problemi dei pacchetti e gestire le operazioni del server [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
@@ -27,7 +26,7 @@ ms.locfileid: "48201341"
   
  Per gestire il database `SSISDB`, si consiglia di applicare criteri aziendali standard per la gestione di database utente. Per informazioni sulla creazione dei piani di manutenzione, vedere [Maintenance Plans](../../relational-databases/maintenance-plans/maintenance-plans.md).  
   
- Il `SSISDB` catalogo e `SSISDB` supporto database Windows PowerShell. Per altre informazioni sull'uso di SQL Server con Windows PowerShell, vedere [SQL Server PowerShell](../../powershell/sql-server-powershell.md). Per gli esempi di come usare Windows PowerShell per completare attività quali la distribuzione di un progetto, vedere l'intervento sul blog relativo a [SSIS e PowerShell in SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=242539)sul sito blogs.msdn.com.  
+ Il `SSISDB` catalogo e `SSISDB` supporto database Windows PowerShell. Per altre informazioni sull'uso di SQL Server con Windows PowerShell, vedere [SQL Server PowerShell](../../powershell/sql-server-powershell.md). Per gli esempi di come usare Windows PowerShell per completare attività quali la distribuzione di un progetto, vedere l'intervento sul blog relativo a [SSIS e PowerShell in SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=242539)sul sito blogs.msdn.com.  
   
  Per altre informazioni sulla visualizzazione dei dati di operazioni, vedere [il monitoraggio delle esecuzioni dei pacchetti e altre operazioni](../performance/monitor-running-packages-and-other-operations.md).  
   
@@ -39,7 +38,7 @@ ms.locfileid: "48201341"
 > [!NOTE]  
 >  Se il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dell'istanza che il `SSISDB` database è collegato a arrestata o non risponde, il ISServerExec.exe processo termina. Un messaggio verrà scritto nel log eventi di Windows.  
 >   
->  Se si verifica un failover delle risorse di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] come parte del failover di un cluster, i pacchetti in esecuzione non vengono riavviati. È possibile usare i checkpoint per riavviare i pacchetti. Per ulteriori informazioni, vedere [Riavvio dei pacchetti tramite checkpoint](../packages/restart-packages-by-using-checkpoints.md).  
+>  Se si verifica un failover delle risorse di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] come parte del failover di un cluster, i pacchetti in esecuzione non vengono riavviati. È possibile usare i checkpoint per riavviare i pacchetti. Per altre informazioni, vedere [Restart Packages by Using Checkpoints](../packages/restart-packages-by-using-checkpoints.md).  
   
 ## <a name="catalog-object-identifiers"></a>Identificatori dell'oggetto catalogo  
  Quando si crea un nuovo oggetto nel catalogo, assegnare un nome all'oggetto. Il nome di un oggetto costituisce l'identificatore. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] definisce le regole per i caratteri che possono essere usati in un identificatore. I nomi degli oggetti seguenti devono rispettare le regole per gli identificatori.  
@@ -98,7 +97,7 @@ ms.locfileid: "48201341"
  Quanto segue `SSISDB` definiscono le proprietà del catalogo come questo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] si comporta processo dell'agente. È possibile visualizzare e modificare le proprietà tramite la finestra di dialogo **Proprietà catalogo** oppure usando [catalog.catalog_properties &#40;Database SSISDB&#41;](/sql/integration-services/system-views/catalog-catalog-properties-ssisdb-database) e [catalog.configure_catalog &#40;Database SSISDB&#41;](/sql/integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database).  
   
  **Pulisci log periodicamente**  
- Il passaggio di processo per la pulizia delle operazioni viene eseguito quando questa proprietà è impostata su `True`.  
+ Il passaggio del processo per la pulizia delle operazioni viene eseguito quando questa proprietà è impostata su `True`.  
   
  **Periodo di memorizzazione (giorni)**  
  Definisce la validità massima di dati di operazioni consentiti (in giorni). I dati più obsoleti vengono rimossi.  
@@ -106,7 +105,7 @@ ms.locfileid: "48201341"
  Il valore minimo è 1 giorno. Il valore massimo è limitato solo dal valore massimo dei [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `int` dati. Per informazioni su questo tipo di dati, vedere [int, bigint, smallint e tinyint &#40;Transact-SQL&#41;](/sql/t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql).  
   
  **Rimuovi periodicamente versioni precedenti**  
- Il passaggio del processo di pulizia della versione del progetto viene eseguito quando questa proprietà è impostata su `True`.  
+ Il passaggio del processo per la pulizia della versione del progetto viene eseguito quando questa proprietà è impostata su `True`.  
   
  **Numero massimo di versioni per progetto**  
  Viene definito il numero di versioni di un progetto che vengono archiviate nel catalogo. Le versioni precedente dei progetti vengono rimosse.  
@@ -128,7 +127,7 @@ ms.locfileid: "48201341"
   
 -   DES  
   
- Quando si distribuisce un progetto [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] nel server [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], il catalogo crittografa automaticamente i dati del pacchetto e i valori sensibili. Il catalogo inoltre decrittografa automaticamente i dati quando viene recuperato. Il catalogo SSISDB usano il `ServerStorage` a livello di protezione. Per altre informazioni, vedere [Access Control for Sensitive Data in Packages](../security/access-control-for-sensitive-data-in-packages.md).  
+ Quando si distribuisce un progetto [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] nel server [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], il catalogo crittografa automaticamente i dati del pacchetto e i valori sensibili. Il catalogo inoltre decrittografa automaticamente i dati quando viene recuperato. Il catalogo SSISDB usano il livello di protezione `ServerStorage`. Per altre informazioni, vedere [Access Control for Sensitive Data in Packages](../security/access-control-for-sensitive-data-in-packages.md).  
   
  La modifica dell'algoritmo di crittografia è un'operazione che richiede molto tempo. Innanzitutto, nel server deve essere usato l'algoritmo specificato in precedenza per decrittografare tutti i valori di configurazione. Successivamente, deve essere usato il nuovo algoritmo per crittografare nuovamente i valori. Durante questa fase, nel server non è possibile eseguire altre operazioni usando [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Pertanto, per consentire il funzionamento di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] senza interruzioni, l'algoritmo di crittografia è un valore di sola lettura nella finestra di dialogo di [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
@@ -280,14 +279,14 @@ ms.locfileid: "48201341"
   
 -   [Creare il catalogo SSIS](ssis-catalog.md)  
   
--   [Backup, ripristino e spostamento del catalogo SSIS](../backup-restore-and-move-the-ssis-catalog.md)  
+-   [Backup, ripristino e spostamento del catalogo SSISDB](../backup-restore-and-move-the-ssis-catalog.md)  
   
 ## <a name="related-content"></a>Contenuto correlato  
   
--   Intervento nel blog su [SSIS e PowerShell in SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=242539)sul sito Web blogs.msdn.com.  
+-   Intervento nel blog su [SSIS e PowerShell in SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=242539)sul sito Web blogs.msdn.com.  
   
--   Intervento nel blog sui [suggerimenti per il controllo dell'accesso al catalogo SSIS](http://go.microsoft.com/fwlink/?LinkId=246669)sul sito Web blogs.msdn.com.  
+-   Intervento nel blog sui [suggerimenti per il controllo dell'accesso al catalogo SSIS](https://go.microsoft.com/fwlink/?LinkId=246669)sul sito Web blogs.msdn.com.  
   
--   Intervento nel blog relativo a [uno sguardo rapido del modello a oggetti gestito del catalogo SSIS](http://go.microsoft.com/fwlink/?LinkId=254267)su blogs.msdn.com.  
+-   Intervento nel blog relativo a [uno sguardo rapido del modello a oggetti gestito del catalogo SSIS](https://go.microsoft.com/fwlink/?LinkId=254267)su blogs.msdn.com.  
   
   

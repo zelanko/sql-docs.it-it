@@ -1,5 +1,5 @@
 ---
-title: Lezione 2 caratteristiche di dati crea usando funzioni di T-SQL (su R in Machine Learning di SQL Server) | Microsoft Docs
+title: Funzionalità di dati crea lezione 2 usando funzioni R e T-SQL - SQL Server Machine Learning
 description: Esercitazione che illustra come aggiungere calcoli per le stored procedure per l'utilizzo in modelli di machine learning R.
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 4986d7ae5e51eaf0e89b3ee986ac7597e4a5edb7
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 43086b8d3898e4d9096e82289ce6e6f196542997
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51031498"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53645400"
 ---
 # <a name="lesson-2-create-data-features-using-r-and-t-sql"></a>Lezione 2: Creare funzionalità di dati con R e T-SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -46,7 +46,7 @@ La funzione _fnCalculateDistance_ deve avere scaricata e registrata con [!INCLUD
 
 2. Fare clic con il pulsante destro del mouse su _fnCalculateDistance_e selezionare **Modifica** per aprire lo script [!INCLUDE[tsql](../../includes/tsql-md.md)] in una nuova finestra Query.
   
-    ```SQL
+    ```sql
     CREATE FUNCTION [dbo].[fnCalculateDistance] (@Lat1 float, @Long1 float, @Lat2 float, @Long2 float)  
     -- User-defined function that calculates the direct distance between two geographical coordinates.  
     RETURNS float  
@@ -80,7 +80,7 @@ Per aggiungere i valori calcolati in una tabella che può essere usata per il tr
 
 1. Osservare il codice della funzione T-SQL personalizzata _fnEngineerFeatures_, creata in preparazione a questa procedura dettagliata.
   
-    ```SQL
+    ```sql
     CREATE FUNCTION [dbo].[fnEngineerFeatures] (  
     @passenger_count int = 0,  
     @trip_distance float = 0,  
@@ -110,7 +110,7 @@ Per aggiungere i valori calcolati in una tabella che può essere usata per il tr
 
 2.  Per verificare che questa funzione funziona, usarlo per calcolare la distanza geografica per i viaggi in cui la distanza a consumo è 0 ma le posizioni di inizio e fine corsa erano diverse.
   
-    ```SQL
+    ```sql
         SELECT tipped, fare_amount, passenger_count,(trip_time_in_secs/60) as TripMinutes,
         trip_distance, pickup_datetime, dropoff_datetime,
         dbo.fnCalculateDistance(pickup_latitude, pickup_longitude,  dropoff_latitude, dropoff_longitude) AS direct_distance

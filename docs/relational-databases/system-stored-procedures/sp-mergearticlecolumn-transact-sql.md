@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_mergearticlecolumn
@@ -17,12 +16,12 @@ ms.assetid: b4f2b888-e094-4759-a472-d893638995eb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 479ac5e7d9a1d451ea489a3a43c0ff481a6a121f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d28c8da014a3922a9dbd1cba533b4cbf1d7a9215
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47837024"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590075"
 ---
 # <a name="spmergearticlecolumn-transact-sql"></a>sp_mergearticlecolumn (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,19 +44,19 @@ sp_mergearticlecolumn [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@publication =**] **'***pubblicazione***'**  
+ [  **@publication =**] **'**_pubblicazione_**'**  
  Nome della pubblicazione. *pubblicazione* viene **sysname**, non prevede alcun valore predefinito.  
   
- [  **@article =**] **'***articolo***'**  
+ [  **@article =**] **'**_articolo_**'**  
  Nome dell'articolo della pubblicazione. *articolo* viene **sysname**, non prevede alcun valore predefinito.  
   
- [  **@column =**] **'***colonna***'**  
+ [  **@column =**] **'**_colonna_**'**  
  Identifica le colonne su cui creare la partizione verticale. *colonna* viene **sysname**, con un valore predefinito è NULL. Se NULL e `@operation = N'add'`, per impostazione predefinita all'articolo vengono aggiunte tutte le colonne della tabella di origine. *colonna* non può essere NULL quando *operazione* è impostata su **drop**. Per escludere le colonne da un articolo, eseguire **sp_mergearticlecolumn** e specificare *colonna* e `@operation = N'drop'` per ogni colonna da rimuovere dall'oggetto specificato *articolo*.  
   
- [  **@operation =**] **'***operazione***'**  
+ [  **@operation =**] **'**_operazione_**'**  
  Stato della replica. *operazione* viene **nvarchar(4)**, con un valore predefinito di aggiunta. **aggiungere** contrassegna la colonna per la replica. **DROP** Cancella la colonna.  
   
- [  **@schema_replication=**] **'***schema_replication***'**  
+ [  **@schema_replication=**] **'**_schema_replication_**'**  
  Specifica che le modifiche dello schema verranno propagate quando verrà eseguito l'agente di merge. *schema_replication* viene **nvarchar(5**, con un valore predefinito è FALSE.  
   
 > [!NOTE]  
@@ -70,7 +69,7 @@ sp_mergearticlecolumn [ @publication = ] 'publication'
   
  **1** specifica che le modifiche apportate all'articolo di merge potrebbero invalidare lo snapshot non è valido, e se è il caso, il valore **1** concede l'autorizzazione per il nuovo snapshot.  
   
- [* *@force_reinit_subscription =] * * * force_reinit_subscription*  
+ [  **@force_reinit_subscription =]**_force_reinit_subscription_  
  Abilita o disabilita la funzionalità che consente di reinizializzare la sottoscrizione. *force_reinit_subscription* è di tipo bit e il valore predefinito **0**.  
   
  **0** indica che le modifiche apportate all'articolo di merge non comportano la reinizializzazione della sottoscrizione.  

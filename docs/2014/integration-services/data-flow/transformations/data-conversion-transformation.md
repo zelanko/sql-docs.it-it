@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.dataconversiontrans.f1
@@ -17,12 +16,12 @@ ms.assetid: fd515bbc-6f49-4d0c-ae7f-6ea3c3f24a1c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 29a88369b1764a9cd4d11cc476affbebca79dabb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 344b9a24e78960b9eb9f4fece56924b2eb941c0f
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48073491"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53358593"
 ---
 # <a name="data-conversion-transformation"></a>Conversione dati - trasformazione
   La trasformazione Conversione dati converte i dati in una colonna di input in un tipo di dati diverso e quindi li copia in una nuova colonna di output. Un pacchetto può ad esempio estrarre dati da più origini e quindi utilizzare questa trasformazione per convertire le colonne nel tipo di dati richiesto dall'archivio dati di destinazione. È possibile applicare più conversioni a una singola colonna di input.  
@@ -49,7 +48,7 @@ ms.locfileid: "48073491"
  È possibile impostare le proprietà tramite Progettazione [!INCLUDE[ssIS](../../../includes/ssis-md.md)] o a livello di codice. Per informazioni sull'utilizzo della trasformazione Conversione dati in Progettazione SSIS, vedere [Conversione di dati in un tipo di dati diverso utilizzando la trasformazione Conversione dati](data-conversion-transformation.md) e [Editor trasformazione Conversione dati](../../data-conversion-transformation-editor.md). Per informazioni sull'impostazione delle proprietà di questa trasformazione a livello di programmazione, vedere [Proprietà comuni](../../common-properties.md) e [Proprietà personalizzate delle trasformazioni](transformation-custom-properties.md).  
   
 ## <a name="related-content"></a>Contenuto correlato  
- Intervento nel blog sul [confronto delle prestazioni tra le tecniche di conversione dei tipi di dati in SSIS 2008](http://go.microsoft.com/fwlink/?LinkId=220823)su blogs.msdn.com.  
+ Intervento nel blog sul [confronto delle prestazioni tra le tecniche di conversione dei tipi di dati in SSIS 2008](https://go.microsoft.com/fwlink/?LinkId=220823)su blogs.msdn.com.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Analisi veloce](../../fast-parse.md)   

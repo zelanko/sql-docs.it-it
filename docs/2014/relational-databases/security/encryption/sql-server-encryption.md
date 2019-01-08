@@ -14,12 +14,12 @@ ms.assetid: ead0150e-4943-4ad5-84c8-36f85c7278f4
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: f5838d497808e9a251522536a00d590403674eda
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8a9018c43ace6ebbf0a905567bb806b616530a02
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48053771"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53352194"
 ---
 # <a name="sql-server-encryption"></a>Crittografia di SQL Server
   La crittografia è il processo che consiste nell'offuscare i dati tramite l'utilizzo di una chiave o di una password. È in grado di rendere i dati inutilizzabili se non si dispone della chiave di decrittografia o password corrispondente. La crittografia non risolve i problemi relativi al controllo di accesso, ma migliora la sicurezza limitando la perdita di dati anche se il controllo di accesso viene eluso. Se, ad esempio, il computer host del database è configurato scorrettamente e un pirata informatico ottiene dati riservati, le informazioni sottratte potrebbero essere inutilizzabili se crittografate.  
@@ -29,7 +29,7 @@ ms.locfileid: "48053771"
 > [!IMPORTANT]  
 >  Sebbene la crittografia sia un strumento prezioso per garantire la sicurezza, se ne sconsiglia l'utilizzo per tutti i dati o le connessioni. Per decidere se implementare la crittografia oppure no, considerare le modalità di accesso ai dati utilizzate dagli utenti. Se per accedere gli utenti utilizzano una rete pubblica, la crittografia dei dati potrebbe essere necessaria per aumentare il livello di sicurezza. Tuttavia, se tutti accedono attraverso una configurazione di Intranet sicura, la crittografia potrebbe non essere necessaria. L'utilizzo della crittografia comporta anche l'adozione di una strategia di manutenzione per password, chiavi e certificati.  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Gerarchia di crittografia](encryption-hierarchy.md)  
  Informazioni sulla gerarchia di crittografia in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
@@ -62,7 +62,7 @@ ms.locfileid: "48053771"
  Informazioni sull'utilizzo di un certificato per la crittografia dei dati.  
   
 ## <a name="external-resources"></a>Risorse esterne  
- [Microsoft TechNet: SQL Server TechCenter: Sicurezza e protezione di SQL Server 2005](http://www.microsoft.com/technet/prodtechnol/sql/2005/library/security.mspx)  
+ [Microsoft TechNet: TechCenter di SQL Server: Protezione e sicurezza di SQL Server 2005](https://www.microsoft.com/technet/prodtechnol/sql/2005/library/security.mspx)  
  Informazioni aggiornate sulla sicurezza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 ## <a name="see-also"></a>Vedere anche  

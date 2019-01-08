@@ -14,12 +14,12 @@ ms.assetid: 093c5208-bf7a-49f4-a546-72b48197cadf
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8f2d6612b50fc3bd9b07231c42363a8e1e6889e6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 35d8f9cdda7c3b85c77d290f9c793640705438e9
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48148721"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53359713"
 ---
 # <a name="availability-group-is-offline"></a>Il gruppo di disponibilità è offline
     
@@ -29,16 +29,16 @@ ms.locfileid: "48148721"
 |-|-|  
 |**Nome criteri**|Stato online del gruppo di disponibilità|  
 |**Problema**|Il gruppo di disponibilità è offline.|  
-|**Category**|**Critico**|  
+|**Categoria**|**Critico**|  
 |**Facet**|gruppo di disponibilità|  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>Descrizione  
  Questi criteri consentono di controllare lo stato online o offline del gruppo di disponibilità. I criteri si trovano in uno stato non integro e viene generato un avviso quando la risorsa cluster del gruppo di disponibilità è offline o nel gruppo di disponibilità non è disponibile una replica primaria.  
   
  I criteri si trovano in uno stato integro quando la risorsa cluster del gruppo di disponibilità è online e nel gruppo di disponibilità è disponibile una replica primaria.  
   
 > [!NOTE]  
->  Per questa versione di [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]le informazioni sulle possibili cause e le possibili soluzioni sono disponibili nella pagina [Availability group is offline](http://go.microsoft.com/fwlink/p/?LinkId=220850) (Il gruppo di disponibilità è offline) in TechNet Wiki.  
+>  Per questa versione di [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]le informazioni sulle possibili cause e le possibili soluzioni sono disponibili nella pagina [Availability group is offline](https://go.microsoft.com/fwlink/p/?LinkId=220850) (Il gruppo di disponibilità è offline) in TechNet Wiki.  
   
 ## <a name="possible-causes"></a>Possibili cause  
  Questo problema può essere causato da un errore nell'istanza del server in cui è ospitata la replica primaria o dal passaggio alla modalità offline della risorsa del gruppo di disponibilità WSCF (Windows Server Failover Clustering). Di seguito sono riportate le possibili cause del passaggio alla modalità offline del gruppo di disponibilità:  

@@ -13,17 +13,17 @@ ms.assetid: dd80a8e6-1e41-4c49-9898-02b1d2505a10
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d38af78e59a88e05fe874e4b4748b1f6f8b5049c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cf933017b77bf8f0c1980c00f8f669d92483a1c6
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48167701"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53367183"
 ---
 # <a name="task-12-discovering-knowledge-knowledge-discovery"></a>Attività 12: Individuazione delle informazioni (Individuazione informazioni)
   In questa attività viene eseguita la **individuazione informazioni** attività nei **Supplier ID** e **Supplier Name** domini. In questo scenario, tramite il processo di individuazione delle informazioni vengono importati principalmente i valori per questi due domini.  
   
- In questa esercitazione viene avviata la compilazione di una Knowledge Base nuova. Inoltre, è possibile avviare la creazione di una Knowledge Base eseguendo un'attività di individuazione delle informazioni. Quando fa clic su **creare una Knowledge Base** nella pagina principale, il client DQS consente di visualizzare una pagina con **Domain Management** attività selezionata per l'attività. È possibile modificare il **attività** al **Knowledge Discovery** e quindi nella pagina successiva è possibile creare domini come parte del processo di individuazione della Knowledge Base. Visualizzare [Perform Knowledge Discovery](http://msdn.microsoft.com/library/hh510398.aspx) per altri dettagli.  
+ In questa esercitazione viene avviata la compilazione di una Knowledge Base nuova. Inoltre, è possibile avviare la creazione di una Knowledge Base eseguendo un'attività di individuazione delle informazioni. Quando fa clic su **creare una Knowledge Base** nella pagina principale, il client DQS consente di visualizzare una pagina con **Domain Management** attività selezionata per l'attività. È possibile modificare il **attività** al **Knowledge Discovery** e quindi nella pagina successiva è possibile creare domini come parte del processo di individuazione della Knowledge Base. Visualizzare [Perform Knowledge Discovery](https://msdn.microsoft.com/library/hh510398.aspx) per altri dettagli.  
   
 1.  Nella pagina principale del Client DQS, nelle **Knowledge Base recente** fare clic su **freccia destra** accanto al **Suppliers** knowledge base e fare clic su **della Knowledge Base Individuazione**. In alternativa, è possibile fare clic su **Apri Knowledge Base**, selezionare **Suppliers** dal **elenco di knowledge base**, selezionare **Knowledge Discovery**come **impegno** e fare clic su **successiva**.  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.createrelationships.f1
@@ -13,12 +12,12 @@ ms.assetid: 6ebd305f-ffd2-4a1d-b24c-e28c151b94f5
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 730e203281c4bc964e2b2694e475095280483d58
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 23baf42a1ddc30ceccf5ec7c6f8b9db96e72e588
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48095785"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52804919"
 ---
 # <a name="create-relationships"></a>Crea relazioni
   Utilizzare la finestra di dialogo **Crea relazioni** per modificare i mapping tra le colonne di origine e le colonne della tabella di ricerca configurati nell'Editor trasformazione Ricerca fuzzy, nell'Editor trasformazione Ricerca e nell'Editor trasformazione Ricerca termini.  
@@ -50,9 +49,9 @@ ms.locfileid: "48095785"
  Consente di specificare il nome per una nuova colonna di output che contiene i punteggi di somiglianza per la colonna selezionata. Se non si specifica un valore, la colonna di output non viene creata.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento ai messaggi e agli errori di Integration Services](../../integration-services-error-and-message-reference.md)   
+ [Guida di riferimento ai messaggi e agli errori di Integration Services](../../integration-services-error-and-message-reference.md)   
  [Editor trasformazione Ricerca fuzzy &#40;scheda Colonne&#41;](../../fuzzy-lookup-transformation-editor-columns-tab.md)   
- [Editor trasformazione Ricerca &#40;pagina Colonne&#41;](../../lookup-transformation-editor-columns-page.md)   
+ [Editor trasformazione Ricerca &#40;scheda Colonne&#41;](../../lookup-transformation-editor-columns-page.md)   
  [Editor trasformazione Ricerca termini &#40;scheda Ricerca termini&#41;](../../term-lookup-transformation-editor-term-lookup-tab.md)  
   
   

@@ -14,18 +14,18 @@ ms.assetid: e7134d65-5c1c-4ae2-b119-d9b4b9a42483
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 26b00c4781624bf653ad9a8200a219951dc793c7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: da7d6541f7bf31920519cc7462bdfd24a5f6dc0d
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48097161"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53360633"
 ---
 # <a name="sqlclosecursor"></a>SQLCloseCursor
-  **SQLCloseCursor** sostituisce [SQLFreeStmt](sqlfreestmt.md) con un *opzione* valore SQL_CLOSE. Dal momento in cui **SQLCloseCursor**, il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC Native Client Elimina le righe del set di risultati in sospeso. Notare che le associazioni di parametro e colonna dell'istruzione, se presenti, non vengono modificate da **SQLCloseCursor**.  
+  **SQLCloseCursor** sostituisce [SQLFreeStmt](sqlfreestmt.md) con un *opzione* valore SQL_CLOSE. Alla ricezione di **SQLCloseCursor**, il driver ODBC di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client elimina le righe del set di risultati in sospeso. Notare che le associazioni di parametro e colonna dell'istruzione, se presenti, non vengono modificate da **SQLCloseCursor**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [SQLCloseCursor](http://go.microsoft.com/fwlink/?LinkId=59331)   
+ [SQLCloseCursor](https://go.microsoft.com/fwlink/?LinkId=59331)   
  [Dettagli di implementazione dell'API ODBC](odbc-api-implementation-details.md)  
   
   

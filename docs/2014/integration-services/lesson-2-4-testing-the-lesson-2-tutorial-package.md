@@ -1,22 +1,21 @@
 ---
-title: "Passaggio 4: Test del pacchetto creato nella lezione 2 dell'esercitazione | Microsoft Docs"
+title: "Passaggio 4: Test del pacchetto dell'esercitazione della lezione 2 | Microsoft Docs"
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 0e8c0a25-8f79-41df-8ed2-f82a74b129cd
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f9344531e59bd0b22ae99de4664c1433411b7f6e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5fd9233061b51da56b036526c3cac55c96a4e7fb
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48055981"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52802843"
 ---
 # <a name="step-4-testing-the-lesson-2-tutorial-package"></a>Passaggio 4: Test del pacchetto creato nella lezione 2 dell'esercitazione
   Dopo aver configurato il contenitore Ciclo Foreach e la gestione connessione file flat, il pacchetto creato nella lezione 2 consente di eseguire un'iterazione dell'insieme di 14 file flat contenuti nella cartella Sample Data. Ogni volta che viene trovato un nome di file corrispondente ai criteri specificati, il contenitore Ciclo Foreach popola la variabile definita dall'utente con il nome del file. Tale variabile aggiorna di conseguenza la proprietà ConnectionString della gestione connessione file flat e viene stabilita una connessione al nuovo file flat. Il contenitore Ciclo Foreach quindi esegue l'attività del flusso di dati non modificati sui dati del nuovo file flat prima di connettersi al file successivo contenuto nella cartella.  
@@ -46,7 +45,7 @@ ms.locfileid: "48055981"
 2.  Al termine dell'esecuzione del pacchetto, scegliere **Arresta debug** dal menu **Debug**.  
   
 ## <a name="next-lesson"></a>Lezione successiva  
- [Lezione 5: Aggiunta di configurazioni del pacchetto per il modello di distribuzione del pacchetto](../integration-services/lesson-5-add-ssis-package-configurations-for-the-package-deployment-model.md)  
+ [Lezione 5: Aggiunta delle configurazioni di pacchetto per il modello di distribuzione del pacchetto](../integration-services/lesson-5-add-ssis-package-configurations-for-the-package-deployment-model.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Esecuzione di progetti e pacchetti](packages/run-integration-services-ssis-packages.md)  

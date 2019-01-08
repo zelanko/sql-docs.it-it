@@ -14,12 +14,12 @@ ms.assetid: 29ac8f68-a28a-4a77-b67b-a8663001308c
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2d46a1874c530020f815d2854b4524dfb201d598
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8c5b17b45b50634806c60e5064efc6ebd9d03f8b
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48124431"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53353766"
 ---
 # <a name="implement-event-notifications"></a>Implementazione di notifiche degli eventi
   Per implementare una notifica degli eventi, è necessario prima creare un servizio di destinazione che riceverà le notifiche degli eventi.  
@@ -31,7 +31,7 @@ ms.locfileid: "48124431"
  Non è necessario creare un servizio di origine di [!INCLUDE[ssSB](../../includes/sssb-md.md)]perché [!INCLUDE[ssSB](../../includes/sssb-md.md)] include il tipo di messaggio e di contratto seguente specifico per le notifiche degli eventi:  
   
 ```  
-http://schemas.microsoft.com/SQL/Notifications/PostEventNotification  
+https://schemas.microsoft.com/SQL/Notifications/PostEventNotification  
 ```  
   
  Il servizio di destinazione che riceve le notifiche degli eventi deve rispettare il contratto esistente.  
@@ -41,7 +41,7 @@ http://schemas.microsoft.com/SQL/Notifications/PostEventNotification
 1.  Creare una coda per ricevere messaggi.  
   
     > [!NOTE]  
-    >  La coda riceve il tipo di messaggio seguente: `http://schemas.microsoft.com/SQL/Notifications/QueryNotification`.  
+    >  La coda riceve il tipo di messaggio seguente: `https://schemas.microsoft.com/SQL/Notifications/QueryNotification`.  
   
 2.  Creare un servizio nella coda che faccia riferimento al contratto per le notifiche degli eventi.  
   
@@ -58,7 +58,7 @@ GO
 CREATE SERVICE NotifyService  
 ON QUEUE NotifyQueue  
 (  
-[http://schemas.microsoft.com/SQL/Notifications/PostEventNotification]  
+[https://schemas.microsoft.com/SQL/Notifications/PostEventNotification]  
 );  
 GO  
 CREATE ROUTE NotifyRoute  
@@ -86,7 +86,7 @@ TO SERVICE 'NotifyService', '8140a771-3c4b-4479-8ac0-81008ab17984' ;
 >   
 >  `CREATE TABLE t1 (col1 int)`  
 >   
->  In questo caso la notifica dell'evento viene generata due volte, una prima volta quando viene generato l'evento CREATE_SCHEMA e una seconda volta quando viene generato l'evento CREATE_TABLE. È consigliabile non creare notifiche degli eventi sia negli eventi CREATE_SCHEMA che nel testo <schema_element> delle definizioni CREATE SCHEMA corrispondenti. In alternativa, compilare nell'applicazione la logica necessaria a evitare di acquisire dati per eventi non desiderati.  
+>  In questo caso, la notifica dell'evento viene generata due volte: Tempo Onne quando si verifica l'evento CREATE_SCHEMA, e anche in questo caso quando si verifica l'evento CREATE_TABLE. È consigliabile non creare notifiche degli eventi sia negli eventi CREATE_SCHEMA che nel testo <schema_element> delle definizioni CREATE SCHEMA corrispondenti. In alternativa, compilare nell'applicazione la logica necessaria a evitare di acquisire dati per eventi non desiderati.  
   
  **Per creare la notifica di un evento**  
   

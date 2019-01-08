@@ -22,12 +22,12 @@ ms.assetid: fb163e47-1546-4682-abaa-8c9494e9ddc7
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: c5ee501846746dfc5bb0700039c7bef8a0e15511
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c9ff712cb5915493f1ff285421bfe3edc8d7981f
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48190491"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53374763"
 ---
 # <a name="create-a-login"></a>Creazione di un account di accesso
   In questo argomento viene descritto come creare un account di accesso in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Un account di accesso è l'identità della persona o del processo che esegue la connessione a un'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
@@ -38,7 +38,7 @@ ms.locfileid: "48190491"
   
      [Background](#Background)  
   
-     [Security](#Security)  
+     [Sicurezza](#Security)  
   
 -   **Per creare un account di accesso, utilizzando:**  
   
@@ -46,7 +46,7 @@ ms.locfileid: "48190491"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **Completamento:**  [passaggi da effettuare dopo aver creato un account di accesso](#FollowUp)  
+-   **Completamento:**  [Passaggi da effettuare dopo aver creato un account di accesso](#FollowUp)  
   
 ##  <a name="Background"></a> Background  
  Un accesso è un'entità di sicurezza o un'entità che può essere autenticata da un sistema sicuro. Per connettersi a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], gli utenti necessitano di un account di accesso. È possibile creare un account di accesso basato su un'entità di Windows (quale un utente del dominio o un gruppo del dominio Windows) o è possibile creare un account di accesso che non è basato su un'entità di Windows (ad esempio, un accesso [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]).  
@@ -54,7 +54,7 @@ ms.locfileid: "48190491"
 > [!NOTE]  
 >  Per utilizzare l'autenticazione [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], [!INCLUDE[ssDE](../../../includes/ssde-md.md)] deve utilizzare l'autenticazione a modalità mista. Per altre informazioni, vedere [Scegliere una modalità di autenticazione](../choose-an-authentication-mode.md).  
   
- È possibile concedere autorizzazioni agli account di accesso, in quanto entità di sicurezza. L'ambito di un account di sicurezza è l'intero [!INCLUDE[ssDE](../../../includes/ssde-md.md)]. Affinché un account di accesso possa eseguire la connessione a un database specifico nell'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], è necessario eseguirne il mapping a un utente del database. Le autorizzazioni all'interno del database vengono concesse e negate all'utente del database, non all'account di accesso. Autorizzazioni di cui dispone l'ambito dell'intera istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (ad esempio, il `CREATE ENDPOINT` autorizzazione) possono essere concesse a un account di accesso.  
+ È possibile concedere autorizzazioni agli account di accesso, in quanto entità di sicurezza. L'ambito di un account di sicurezza è l'intero [!INCLUDE[ssDE](../../../includes/ssde-md.md)]. Affinché un account di accesso possa eseguire la connessione a un database specifico nell'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], è necessario eseguirne il mapping a un utente del database. Le autorizzazioni all'interno del database vengono concesse e negate all'utente del database, non all'account di accesso. È possibile concedere a un account di accesso le autorizzazioni il cui ambito è l'intera istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (ad esempio, l'autorizzazione `CREATE ENDPOINT`).  
   
 ##  <a name="Security"></a> Sicurezza  
   
@@ -67,19 +67,19 @@ ms.locfileid: "48190491"
   
 1.  In Esplora oggetti espandere la cartella dell'istanza del server in cui si desidera creare il nuovo account di accesso.  
   
-2.  Fare clic con il pulsante destro del mouse sulla cartella **Sicurezza** , scegliere **Nuovo**, quindi selezionare **Account di accesso**.  
+2.  Fare clic con il pulsante destro del mouse sulla cartella **Sicurezza**, scegliere **Nuovo** e selezionare **Account di accesso...**.  
   
-3.  Nella pagina **Generale** della finestra di dialogo **Nuovo account di accesso** immettere il nome di un utente nella casella **Nome account di accesso** . In alternativa, fare clic su **Cerca…** per aprire la finestra di dialogo **Seleziona utente o gruppo** .  
+3.  Nella pagina **Generale** della finestra di dialogo **Account di accesso - Nuovo** immettere il nome di un utente nella casella **Nome account di accesso**. In alternativa, fare clic su **Cerca...** per aprire la finestra di dialogo **Seleziona un utente o un gruppo**.  
   
      Se si fa clic su **Cerca...**:  
   
-    1.  In **Selezionare questo tipo di oggetto**fare clic su **Tipi di oggetti...** per aprire la finestra di dialogo **Tipi di oggetti** e selezionare tutte le seguenti opzioni o solo alcune di esse: **Entità di sicurezza predefinite**, **Gruppi**e **Utenti**. Le opzioni**Entità di sicurezza predefinite** e **Utenti** sono selezionate per impostazione predefinita. Al termine, fare clic su **OK**.  
+    1.  Sotto **selezionare il tipo di oggetto**, fare clic su **i tipi di oggetto...**  per aprire la **tipi di oggetto** finestra di dialogo e selezionare uno qualsiasi o tutte le operazioni seguenti: **Entità di sicurezza predefinite**, **gruppi**, e **utenti**. Le opzioni**Entità di sicurezza predefinite** e **Utenti** sono selezionate per impostazione predefinita. Al termine, fare clic su **OK**.  
   
-    2.  In **Da questo percorso**fare clic su **Percorsi...** per aprire la finestra di dialogo **Percorsi** e selezionare uno dei percorsi del server disponibili. Al termine, fare clic su **OK**.  
+    2.  In **Da questo percorso** fare clic su **Percorsi...** per aprire la finestra di dialogo **Percorsi** e selezionare uno dei percorsi server disponibili. Al termine, fare clic su **OK**.  
   
-    3.  In **Immettere il nome dell'oggetto da selezionare (esempi)**, immettere il nome dell'utente o del gruppo che si desidera trovare. Per ulteriori informazioni, vedere [Finestra di dialogo Seleziona utenti, computer o gruppi](http://technet.microsoft.com/library/cc771712.aspx).  
+    3.  In **Immettere il nome dell'oggetto da selezionare (esempi)**, immettere il nome dell'utente o del gruppo che si desidera trovare. Per ulteriori informazioni, vedere [Finestra di dialogo Seleziona utenti, computer o gruppi](https://technet.microsoft.com/library/cc771712.aspx).  
   
-    4.  Fare clic su **Avanzate...** per le opzioni di ricerca più avanzate. Per altre informazioni, vedere [Finestra di dialogo Seleziona utenti, computer o gruppi - Pagina Avanzate](http://technet.microsoft.com/library/cc733110.aspx).  
+    4.  Fare clic su **Avanzate...** per opzioni di ricerca più avanzate. Per altre informazioni, vedere [Finestra di dialogo Seleziona utenti, computer o gruppi - Pagina Avanzate](https://technet.microsoft.com/library/cc733110.aspx).  
   
     5.  Fare clic su **OK**.  
   
@@ -110,7 +110,7 @@ ms.locfileid: "48190491"
 11. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ### <a name="additional-options"></a>Opzioni aggiuntive  
- La finestra di dialogo **Nuovo account di accesso** offre inoltre opzioni in altre quattro pagine: **Ruoli del server**, **Mapping utenti**, **Entità a protezione diretta**e **Stato**.  
+ Il **account di accesso - nuovo** nella finestra di dialogo offre inoltre opzioni in altre quattro pagine: **Ruoli server**, **Mapping di utente**, **entità a protezione diretta**, e **stato**.  
   
 ### <a name="server-roles"></a>Ruoli del server  
  Nella pagina **Ruoli del server** sono elencati tutti i possibili ruoli che possono essere assegnati al nuovo account accesso. Sono disponibili le opzioni seguenti:  
@@ -176,26 +176,26 @@ ms.locfileid: "48190491"
   
 1.  Fare clic su **Cerca**.  
   
-2.  Nella finestra di dialogo **Aggiungi oggetti** selezionare una delle opzioni seguenti: **Oggetti specifici**, **Tutti gli oggetti di tipo** o **Il server***nome_server*. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+2.  Nel **Aggiungi oggetti** nella finestra di dialogo selezionare una delle opzioni seguenti: **Oggetti specifici...** , **Tutti gli oggetti dei tipi...** , o **server * * * nome_server*. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
     > [!NOTE]  
     >  Selezionare **server * * * nome_server* la griglia superiore viene automaticamente compilata con tutti gli oggetti a protezione diretta di tale server.  
   
-3.  Se si seleziona **Oggetti specifici…**:  
+3.  Se si seleziona **Oggetti specifici...**:  
   
-    1.  Nella finestra di dialogo **Seleziona oggetti** , fare clic su **Tipi di oggetti...** sotto **Selezionare i tipi di oggetti seguenti**.  
+    1.  Nella finestra di dialogo **Seleziona oggetti** in **Selezionare i tipi di oggetti seguenti** fare clic su **Tipi di oggetti...**.  
   
-    2.  Nella casella del finestra di dialogo **Seleziona tipi di oggetti** e selezionare tutte le seguenti opzioni o solo alcune di esse: **Endpoint**, **Account di accesso**, **Server**, **Gruppi di disponibilità**e **Ruoli del server**. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+    2.  Nel **Seleziona tipi di oggetti** finestra di dialogo, selezionare uno o tutti i tipi di oggetti seguenti: **Gli endpoint**, **gli account di accesso**, **server**, **gruppi di disponibilità**, e **ruoli Server**. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-    3.  In **Immettere i nomi degli oggetti da selezionare (esempi)**, fare clic su **Sfoglia…**.  
+    3.  In **Immettere i nomi degli oggetti da selezionare (esempi)** fare clic su **Sfoglia...**.  
   
     4.  Nella finestra di dialogo **Cerca oggetti** , selezionare gli oggetti disponibili del tipo selezionato nella finestra di dialogo **Seleziona tipi di oggetti** , quindi fare clic su **OK**.  
   
     5.  Nella finestra di dialogo **Seleziona oggetti** fare clic su **OK**.  
   
-4.  Se nella casella del finestra di dialogo **Seleziona tipi di oggetti**è stata selezionata l'opzione **Tutti gli oggetti di tipo...** e selezionare tutte le seguenti opzioni o solo alcune di esse: **Endpoint**, **Account di accesso**, **Server**, **Gruppi di disponibilità**e **Ruoli del server**. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+4.  Se si seleziona **tutti gli oggetti dei tipi...** , nella **Seleziona tipi di oggetti** finestra di dialogo, selezionare uno o tutti i tipi di oggetti seguenti: **Gli endpoint**, **gli account di accesso**, **server**, **gruppi di disponibilità**, e **ruoli Server**. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
- **Nome**  
+ **Name**  
  Nome di ogni entità o entità a sicurezza diretta aggiunto alla griglia.  
   
  **Tipo**  
@@ -239,7 +239,7 @@ ms.locfileid: "48190491"
  **SQL Server Authentication**  
  La casella di controllo **Account di accesso bloccato** è disponibile solo se l'account di accesso selezionato si connette utilizzando l'autenticazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ed è stato bloccato. Questa impostazione è di sola lettura. Per sbloccare un account di accesso bloccato, eseguire l'istruzione ALTER LOGIN con l'opzione UNLOCK.  
   
-##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
   
 #### <a name="to-create-a-login-using-windows-authentication"></a>Per creare un account di accesso tramite l'autenticazione di Windows  
   

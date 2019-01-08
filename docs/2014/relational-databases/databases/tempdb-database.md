@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - temporary tables [SQL Server], tempdb database
@@ -16,12 +15,12 @@ ms.assetid: ce4053fb-e37a-4851-b711-8e504059a780
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 81d2bf84e758ccfd8664408a760e77700a323e0e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1db606c086624610a158b6a87576188fa14aefaa
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48141061"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53357830"
 ---
 # <a name="tempdb-database"></a>Database tempdb
   Il database di sistema **tempdb** è una risorsa globale disponibile a tutti gli utenti connessi all'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e viene usata per contenere gli elementi seguenti:  
@@ -65,34 +64,34 @@ ms.locfileid: "48141061"
   
 |Opzione di database|Valore predefinito|Modificabile|  
 |---------------------|-------------------|---------------------|  
-|ALLOW_SNAPSHOT_ISOLATION|OFF|Sì|  
-|ANSI_NULL_DEFAULT|OFF|Sì|  
-|ANSI_NULLS|OFF|Sì|  
-|ANSI_PADDING|OFF|Sì|  
-|ANSI_WARNINGS|OFF|Sì|  
-|ARITHABORT|OFF|Sì|  
-|AUTO_CLOSE|OFF|no|  
-|AUTO_CREATE_STATISTICS|ON|Sì|  
-|AUTO_SHRINK|OFF|no|  
-|AUTO_UPDATE_STATISTICS|ON|Sì|  
-|AUTO_UPDATE_STATISTICS_ASYNC|OFF|Sì|  
-|CHANGE_TRACKING|OFF|no|  
-|CONCAT_NULL_YIELDS_NULL|OFF|Sì|  
-|CURSOR_CLOSE_ON_COMMIT|OFF|Sì|  
-|CURSOR_DEFAULT|GLOBAL|Sì|  
-|Opzioni relative alla disponibilità del database|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|no<br /><br /> no<br /><br /> no|  
-|DATE_CORRELATION_OPTIMIZATION|OFF|Sì|  
-|DB_CHAINING|ON|no|  
-|ENCRYPTION|OFF|no|  
-|NUMERIC_ROUNDABORT|OFF|Sì|  
-|PAGE_VERIFY|CHECKSUM per nuove installazioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> NONE per aggiornamenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|Sì|  
-|PARAMETERIZATION|SIMPLE|Sì|  
-|QUOTED_IDENTIFIER|OFF|Sì|  
-|READ_COMMITTED_SNAPSHOT|OFF|no|  
-|RECOVERY|SIMPLE|no|  
-|RECURSIVE_TRIGGERS|OFF|Sì|  
-|Opzioni relative a Service Broker|ENABLE_BROKER|Sì|  
-|TRUSTWORTHY|OFF|no|  
+|ALLOW_SNAPSHOT_ISOLATION|OFF|Yes|  
+|ANSI_NULL_DEFAULT|OFF|Yes|  
+|ANSI_NULLS|OFF|Yes|  
+|ANSI_PADDING|OFF|Yes|  
+|ANSI_WARNINGS|OFF|Yes|  
+|ARITHABORT|OFF|Yes|  
+|AUTO_CLOSE|OFF|No|  
+|AUTO_CREATE_STATISTICS|ON|Yes|  
+|AUTO_SHRINK|OFF|No|  
+|AUTO_UPDATE_STATISTICS|ON|Yes|  
+|AUTO_UPDATE_STATISTICS_ASYNC|OFF|Yes|  
+|CHANGE_TRACKING|OFF|No|  
+|CONCAT_NULL_YIELDS_NULL|OFF|Yes|  
+|CURSOR_CLOSE_ON_COMMIT|OFF|Yes|  
+|CURSOR_DEFAULT|GLOBAL|Yes|  
+|Opzioni relative alla disponibilità del database|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|No<br /><br /> No<br /><br /> No|  
+|DATE_CORRELATION_OPTIMIZATION|OFF|Yes|  
+|DB_CHAINING|ON|No|  
+|ENCRYPTION|OFF|No|  
+|NUMERIC_ROUNDABORT|OFF|Yes|  
+|PAGE_VERIFY|CHECKSUM per nuove installazioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> NONE per aggiornamenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|Yes|  
+|PARAMETERIZATION|SIMPLE|Yes|  
+|QUOTED_IDENTIFIER|OFF|Yes|  
+|READ_COMMITTED_SNAPSHOT|OFF|No|  
+|RECOVERY|SIMPLE|No|  
+|RECURSIVE_TRIGGERS|OFF|Yes|  
+|Opzioni relative a Service Broker|ENABLE_BROKER|Yes|  
+|TRUSTWORTHY|OFF|No|  
   
  Per una descrizione di queste opzioni di database, vedere [Opzioni ALTER DATABASE SET &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options).  
   
@@ -144,6 +143,6 @@ ms.locfileid: "48141061"
  [Spostare file del database](move-database-files.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Utilizzo di tempdb in SQL Server 2005](http://go.microsoft.com/fwlink/?LinkId=81216)  
+ [Utilizzo di tempdb in SQL Server 2005](https://go.microsoft.com/fwlink/?LinkId=81216)  
   
   

@@ -13,12 +13,12 @@ ms.assetid: a82df075-2243-4e19-bfe1-ae6d65dabd0f
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 33aaebe7172ac637354527bb9777afe5eb9a0a5a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1a15690eb5aff48ec0f72df16e8342ed5c0522c9
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48173417"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53370813"
 ---
 # <a name="create-clr-functions"></a>Creare funzioni CLR
   È possibile creare un oggetto di database all'interno di un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] programmata in un assembly creato in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Common Language Runtime (CLR). Gli oggetti di database in grado di sfruttare il ricco modello di programmazione fornito da CLR includono funzioni di aggregazione, funzioni, stored procedure, trigger e tipi.  
@@ -53,7 +53,7 @@ ms.locfileid: "48173417"
 -   [CREATE FUNCTION &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-function-transact-sql)  
   
 ## <a name="accessing-native-code"></a>Accesso al codice nativo  
- Le funzioni CLR possono essere usate per accedere al codice nativo (non gestito), ad esempio codice scritto in C o C++, tramite l'uso di PInvoke da codice gestito. Per informazioni dettagliate, vedere [Chiamata a funzioni native da codice gestito](http://go.microsoft.com/fwlink/?LinkID=181929) . In questo modo è possibile riutilizzare codice legacy, quali funzioni CLR definite dall'utente, o scrivere funzioni definite dall'utente critiche per le prestazioni in codice nativo. Tale operazione richiede l'utilizzo di un assembly UNSAFE. Vedere [Sicurezza dall'accesso di codice dell'integrazione con CLR](../clr-integration/security/clr-integration-code-access-security.md) per le cautele da prendere per l'uso di assembly UNSAFE.  
+ Le funzioni CLR possono essere usate per accedere al codice nativo (non gestito), ad esempio codice scritto in C o C++, tramite l'uso di PInvoke da codice gestito. Per informazioni dettagliate, vedere [Chiamata a funzioni native da codice gestito](https://go.microsoft.com/fwlink/?LinkID=181929) . In questo modo è possibile riutilizzare codice legacy, quali funzioni CLR definite dall'utente, o scrivere funzioni definite dall'utente critiche per le prestazioni in codice nativo. Tale operazione richiede l'utilizzo di un assembly UNSAFE. Vedere [Sicurezza dall'accesso di codice dell'integrazione con CLR](../clr-integration/security/clr-integration-code-access-security.md) per le cautele da prendere per l'uso di assembly UNSAFE.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Creare funzioni definite dall'utente &#40;Motore di database&#41;](create-user-defined-functions-database-engine.md)   

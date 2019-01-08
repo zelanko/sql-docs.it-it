@@ -1,5 +1,5 @@
 ---
-title: Aggiornare i componenti di R e Python in istanze di SQL Server (servizi di Machine Learning) | Microsoft Docs
+title: Aggiornare i componenti R e Python - servizi di SQL Server Machine Learning
 description: Eseguire l'aggiornamento di R e Python in servizi di SQL Server 2016 o SQL Server 2017 Machine Learning Services usare sqlbindr.exe da associare a Machine Learning Server.
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: c2677885719c0b9a54a39b1609a0c2652728820f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 897f83e7272a47428d696802adf79ff816805486
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48078891"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53645450"
 ---
 # <a name="upgrade-machine-learning-r-and-python-components-in-sql-server-instances"></a>Aggiornamento di machine learning (R e Python) componenti nelle istanze di SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -28,7 +28,7 @@ L'associazione è un processo di installazione che scambia il contenuto delle ca
 
 Insieme a componenti aggiornati viene fornito un commutatore in modelli di manutenzione. Anziché il [ciclo di vita del prodotto SQL Server](https://support.microsoft.com/lifecycle/search?alpha=SQL%20Server%202017), con [gli aggiornamenti cumulativi di SQL Server](https://support.microsoft.com/help/4047329/sql-server-2017-build-versions), gli aggiornamenti del servizio è ora conforme al [sequenza temporale del supporto per Microsoft R Server co & mputer Server di apprendimento](https://docs.microsoft.com/machine-learning-server/resources-servicing-support) nella [ciclo di vita moderni](https://support.microsoft.com/help/30881/modern-lifecycle-policy).
 
-Ad eccezione delle versioni dei componenti e gli aggiornamenti dei servizi, binding non modifica le nozioni di base dell'installazione: integrazione di R e Python è ancora parte di un'istanza di motore di database, gestione delle licenze non è stata modificata (alcun costo aggiuntivo associato all'associazione) e SQL I criteri di supporto di server mantiene il motore di database. La parte restante di questo articolo illustra il meccanismo di associazione e sul relativo funzionamento per ogni versione di SQL Server.
+Ad eccezione delle versioni dei componenti e gli aggiornamenti dei servizi, binding non modifica le nozioni di base dell'installazione: Integrazione di R e Python è ancora parte di un'istanza di motore di database, gestione delle licenze non è stata modificata (nessun costo aggiuntivo associato all'associazione) e i criteri di supporto di SQL Server mantiene il motore di database. La parte restante di questo articolo illustra il meccanismo di associazione e sul relativo funzionamento per ogni versione di SQL Server.
 
 > [!NOTE]
 > Binding si applica alle istanze (In-Database) solo che sono associate a istanze di SQL Server. Associazione non è rilevante per l'installazione (autonomo).
@@ -109,7 +109,7 @@ Il programma di installazione di Microsoft Machine Learning rileva le funzionali
 
 1. Controllare la versione di base di R e pacchetti RevoScaleR per verificare che siano inferiori rispetto a ciò che si prevede di sostituirle con le versioni esistenti. Per SQL Server 2016 R Services, pacchetto di Base di R è 3.2.2 e RevoScaleR è 8.0.3.
 
-    ```SQL
+    ```sql
     EXECUTE sp_execute_external_script
     @language=N'R'
     ,@script = N'str(OutputDataSet);
@@ -139,7 +139,7 @@ Il programma di installazione di Microsoft Machine Learning rileva le funzionali
 
    A destra, selezionare la casella di controllo accanto al nome dell'istanza. Se nessuna istanza è elencata, è necessario una combinazione compatibile. Se non si seleziona un'istanza, viene creata una nuova installazione autonoma di Machine Learning Server e le librerie di SQL Server sono identiche. Se non è possibile selezionare un'istanza, potrebbe non essere in [SP1 CU3](https://support.microsoft.com/help/4019916/cumulative-update-3-for-sql-server-2016-sp1). 
 
-    ![Installazione guidata di Microsoft Machine Learning Server](media/mls-931-installer-mssql13.png)
+    ![Configurare il passaggio di installazione](media/mls-931-installer-mssql13.png)
 
 1. Nel **contratto di licenza** pagina, selezionare **accetto le condizioni** per accettare le condizioni di licenza per Machine Learning Server. 
 
@@ -159,7 +159,7 @@ Se l'aggiornamento non riesce, controllare [codici di errore SqlBindR](#sqlbindr
 
 Controlla di nuovo la versione di R e RevoScaleR per confermare di che avere le versioni più recenti. Usare la console di R distribuita con i pacchetti di R nell'istanza del motore di database per ottenere informazioni sul pacchetto:
 
-```SQL
+```sql
 EXECUTE sp_execute_external_script
 @language=N'R'
 ,@script = N'str(OutputDataSet);
@@ -226,13 +226,13 @@ Dopo aver eseguito Microsoft Machine Learning Server, un'utilità della riga di 
 
 È possibile ripristinare un'istanza associata a un'installazione iniziale dei componenti R e Python, stabilite dal programma di installazione di SQL Server. Esistono tre parti di eseguendo il ripristino di SQL Server per la manutenzione.
 
-+ [Passaggio 1: Disassocia da Microsoft Machine Learning Server](#step-1-unbind)
++ [Passaggio 1: Annullare l'associazione a Microsoft Machine Learning Server](#step-1-unbind)
 + [Passaggio 2: Ripristinare l'istanza per lo stato originale](#step-2-restore)
 + [Passaggio 3: Reinstallare tutti i pacchetti che aggiungono all'installazione](#step-3-reinstall-packages)
 
 <a name="step-1-unbind"></a> 
 
-### <a name="step-1-unbind"></a>Passaggio 1: annullamento del binding
+### <a name="step-1-unbind"></a>Passaggio 1: Disassocia
 
 Si dispone di due opzioni per eseguire il rollback dell'associazione: ripetere nuovamente l'installazione oppure usare l'utilità della riga di comando SqlBindR.
 
@@ -271,19 +271,19 @@ Si potrebbero essere aggiunti altri pacchetti open source o di terze parti per l
 
 ## <a name="sqlbindrexe-command-syntax"></a>Sintassi del comando SqlBindR.exe
 
-### <a name="usage"></a>Utilizzo
+### <a name="usage"></a>Uso
 
 `sqlbindr [/list] [/bind <SQL_instance_ID>] [/unbind <SQL_instance_ID>]`
 
 ### <a name="parameters"></a>Parametri
 
-|nome|Description|
+|nome|Descrizione|
 |------|------|
 |*list*| Visualizza un elenco di tutti gli ID delle istanze di database SQL nel computer corrente|
 |*bind*| Aggiorna l'istanza di database SQL specificata alla versione più recente di R Server e assicura che all'istanza vengano applicati automaticamente gli aggiornamenti successivi di R Server|
 |*unbind*|Disinstalla la versione più recente di R Server dall'istanza di database SQL specificata e impedisce l'applicazione degli aggiornamenti successivi di R Server|
 
-<a name="sqlbinder-error-codes"><a/>
+<a name="sqlbindr-error-codes"><a/>
 
 ## <a name="binding-errors"></a>Errori di associazione
 
