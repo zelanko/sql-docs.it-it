@@ -1,5 +1,5 @@
 ---
-title: "Lesson 2: Modifying the Report Data Source Properties (Lezione 2: Modifica delle proprietà dell'origine dati del report) | Microsoft Docs"
+title: "Lezione 2: Modifica i dati del Report delle proprietà dell'origine | Microsoft Docs"
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,14 @@ ms.assetid: c962b0ff-ce8a-4742-8262-dc730901afcf
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: e2a729c844d88ffb11b5de3622868fc9bc2eee17
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: aa3dbc789b561702d21d705d1b9d362f7f3c01d7
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159621"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52416662"
 ---
-# <a name="lesson-2-modifying-the-report-data-source-properties"></a>Lesson 2: Modifying the Report Data Source Properties
+# <a name="lesson-2-modifying-the-report-data-source-properties"></a>Lezione 2: Modifica le proprietà dell'origine dati Report
   In questa lezione verrà utilizzato Gestione report per seleziona un report da recapitare ai destinatari. Con la sottoscrizione guidata dai dati che verrà definita verrà distribuito il report **Ordine vendita** creato nell'esercitazione [Creare un report tabella semplice &#40;esercitazione su SSRS&#41;](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md). Nei passaggi seguenti verranno modificate le informazioni di connessione all'origine dei dati utilizzate dal report per acquisire i dati. Solo i report in cui vengono usate **credenziali archiviate** per accedere a un'origine dati del report possono essere distribuiti attraverso una sottoscrizione guidata dai dati. Le credenziali archiviate sono necessarie per l'esecuzione automatica dei report.  
   
  Inoltre, verrà modificato il set di dati e il report per utilizzare un parametro al fine di filtrare il report in `[Order]` in modo che tramite la sottoscrizione sia possibile restituire istanze differenti del report per formati di rendering e ordini specifici.  
@@ -53,19 +53,19 @@ ms.locfileid: "48159621"
   
 6.  Fare clic su **Credenziali archiviate in modo protetto nel server di report**.  
   
-7.  Digitare il nome utente nel formato *dominio\utente*e la password. Se non si dispone dell'autorizzazione per accedere la [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] del database, specificare un account di accesso autorizzato.  
+7.  Digitare il nome utente nel formato *dominio\utente*e la password. Se non si dispone delle autorizzazioni per l'accesso al database [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] , specificare un account di accesso autorizzato.  
   
-8.  Fare clic su **Usa come credenziali di Windows per la connessione all'origine dei dati**e quindi su **OK**. Se non si usa un account di dominio (ad esempio, se si usa un [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] account di accesso), non selezionare questa casella di controllo.  
+8.  Fare clic su **Usa come credenziali di Windows per la connessione all'origine dei dati**e quindi su **OK**. Se non viene utilizzato un account di dominio, ad esempio se si utilizza un account di accesso di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], non selezionare questa casella di controllo.  
   
 9. Fare clic su **Test connessione** per verificare che sia possibile connettersi all'origine dati.  
   
 10. Fare clic su **Applica**.  
   
-11. Visualizzare il report per verificare che venga eseguito con le credenziali specificate. Per visualizzare il report, fare clic sulla scheda **Visualizza** . Si noti che dopo aver aperto il report, è necessario selezionare un nome di dipendente e quindi scegliere il **Visualizza Report** pulsante per visualizzare il report.  
+11. Visualizzare il report per verificare che venga eseguito con le credenziali specificate. Per visualizzare il report, fare clic sulla scheda **Visualizza** . Si noti che dopo l'apertura del report è necessario selezionare un nome di dipendente e quindi fare clic su **Visualizza report** per visualizzare il report.  
   
 ##  <a name="bkmk_modify_dataset"></a> Per modificare AdventureWorksDataset  
   
-1.  Aprire il report ordini vendita in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]  
+1.  Aprire il report Ordini vendita in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)].  
   
 2.  Fare clic con il pulsante destro del mouse sul set di dati `AdventureWorksDataset` e scegliere **Proprietà set di dati**.  
   
@@ -114,19 +114,19 @@ ms.locfileid: "48159621"
   
          ![Visualizzatore report con l'area dei parametri visibile](../../2014/tutorials/media/ssrs-tutorial-datadriven-reportviewer-parameter.gif "Visualizzatore Report con l'area dei parametri visibile")  
   
-8.  Distribuire di nuovo il report in modo che con la configurazione della sottoscrizione nella prossima lezione sia possibile utilizzare le modifiche apportate in questa lezione. Per altre informazioni sulle proprietà del progetto usate nell'esercitazione relativa alla tabella, vedere la sezione " (Facoltativo) Per pubblicare il report nel server di report" della [Lezione 6: Aggiunta di gruppi e totali &#40;Reporting Services&#41;](../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md).  
+8.  Distribuire di nuovo il report in modo che con la configurazione della sottoscrizione nella prossima lezione sia possibile utilizzare le modifiche apportate in questa lezione. Per altre informazioni sulle proprietà del progetto usato nell'esercitazione di tabella, vedere la sezione "Per pubblicare il Report nel Server di Report (facoltativo)" di [lezione 6: Aggiunta di gruppi e totali &#40;Reporting Services&#41;](../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md).  
   
 ##  <a name="bkmk_redeploy"></a> Per ridistribuire il Report  
   
-1.  Distribuire di nuovo il report in modo che con la configurazione della sottoscrizione nella prossima lezione sia possibile utilizzare le modifiche apportate in questa lezione. Per altre informazioni sulle proprietà del progetto usate nell'esercitazione relativa alla tabella, vedere la sezione " (Facoltativo) Per pubblicare il report nel server di report" della [Lezione 6: Aggiunta di gruppi e totali &#40;Reporting Services&#41;](../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md).  
+1.  Distribuire di nuovo il report in modo che con la configurazione della sottoscrizione nella prossima lezione sia possibile utilizzare le modifiche apportate in questa lezione. Per altre informazioni sulle proprietà del progetto usato nell'esercitazione di tabella, vedere la sezione "Per pubblicare il Report nel Server di Report (facoltativo)" di [lezione 6: Aggiunta di gruppi e totali &#40;Reporting Services&#41;](../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md).  
   
 2.  Sulla barra degli strumenti fare clic su **Compila** , quindi scegliere **Distribuisci Tutorial**.  
   
 ## <a name="next-steps"></a>Passaggi successivi  
- In questo modo il report è stato configurato per l'acquisizione di dati utilizzando credenziali archiviate. Il passaggio successivo consiste nell'impostazione della sottoscrizione tramite le pagine relative disponibili in Gestione report. Vedere [Lezione 3: Definizione di una sottoscrizione guidata dai dati](../reporting-services/lesson-3-defining-a-data-driven-subscription.md).  
+ In questo modo il report è stato configurato per l'acquisizione di dati utilizzando credenziali archiviate. Il passaggio successivo consiste nell'impostazione della sottoscrizione tramite le pagine relative disponibili in Gestione report. Vedere [lezione 3: Definizione di una sottoscrizione guidata dai dati](../reporting-services/lesson-3-defining-a-data-driven-subscription.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Gestire origini dati del Report](report-data/manage-report-data-sources.md)   
+ [Gestire origini dati dei report](report-data/manage-report-data-sources.md)   
  [Specificare le credenziali e le informazioni sulla connessione per le origini dati del report](report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
  [Creare una sottoscrizione guidata dai dati &#40;esercitazione su SSRS&#41;](../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md)   
  [Creare un report tabella semplice &#40;esercitazione su SSRS&#41;](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)  

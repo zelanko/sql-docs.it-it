@@ -11,12 +11,12 @@ ms.technology: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 ms.custom: sql-linux
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: 1a4b517374e19ab959a8c00b732d62643c32cff3
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 4078d2d660a2690983e34c6db024df3a93df97eb
+ms.sourcegitcommit: 1e7ec3b11f25d469163bdc9096a475411eacf79a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51657985"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53266062"
 ---
 # <a name="configure-sql-server-container-images-on-docker"></a>Configurare immagini del contenitore SQL Server in Docker
 
@@ -46,11 +46,11 @@ Tutta la documentazione sulle immagini di contenitore Linux di SQL Server del pu
 Ad esempio, il comando seguente esegue il pull il contenitore di anteprima più recente di SQL Server 2019 che utilizza RHEL:
 
 ```bash
-sudo docker pull mcr.microsoft.com/mssql/rhel/server:vNext-CTP2.0
+sudo docker pull mcr.microsoft.com/mssql/rhel/server:2019-CTP2.2
 ```
 
 ```PowerShell
-docker pull mcr.microsoft.com/mssql/rhel/server:vNext-CTP2.0
+docker pull mcr.microsoft.com/mssql/rhel/server:2019-CTP2.2
 ```
 
 ::: moniker-end
@@ -253,7 +253,7 @@ docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 14
 Questa tecnica consente anche di condividere e visualizzare i file nell'host all'esterno di Docker.
 
 > [!IMPORTANT]
-> Mapping del volume host per Docker nel Mac con SQL Server a un'immagine Linux non è supportato in questo momento. Usare i contenitori dei volumi di dati. Questa restrizione è specifica per il `/var/opt/mssql` directory. Durante la lettura da un directory montata di funziona correttamente. Ad esempio, è possibile montare una directory di host utilizzando – v in computer Mac e ripristinare un backup da un file con estensione bak che risiede nell'host.
+> Mapping del volume host per Docker nel Mac con SQL Server a un'immagine Linux non è supportato in questo momento. Usare i contenitori dei volumi di dati. Questa restrizione è specifica per il `/var/opt/mssql` directory. Durante la lettura da un directory montata di funziona correttamente. Ad esempio, è possibile montare una directory di host utilizzando - v in computer Mac e ripristinare un backup da un file con estensione bak che risiede nell'host.
 
 ### <a name="use-data-volume-containers"></a>Usare i contenitori dei volumi di dati
 
@@ -490,7 +490,7 @@ In Windows, verificare che si avvia PowerShell o prompt dei comandi come amminis
 
 Se il contenitore di SQL Server non viene eseguito correttamente, provare a eseguire i test seguenti:
 
-- Se si verifica un errore, ad esempio **' non è stato possibile creare endpoint CONTAINER_NAME nel bridge di rete. Errore durante l'avvio proxy: bind 0.0.0.0:1433 di ascolto tcp: indirizzo già in uso.'** , quindi si sta provando a eseguire il mapping a una porta che è già in uso la porta del contenitore 1433. Questa situazione può verificarsi se si esegue SQL Server in locale nel computer host. Può inoltre verificarsi se si avvia due contenitori di SQL Server e provare a eseguire il mapping di entrambi per la stessa porta host. In questo caso, usare il `-p` parametro per eseguire il mapping a una porta dell'host diversa la porta del contenitore 1433. Esempio: 
+- Se si verifica un errore, ad esempio **' non è stato possibile creare endpoint CONTAINER_NAME nel bridge di rete. Errore durante l'avvio proxy: bind 0.0.0.0:1433 di ascolto tcp: indirizzo già in uso.'** , quindi si sta provando a eseguire il mapping a una porta che è già in uso la porta del contenitore 1433. Questa situazione può verificarsi se si esegue SQL Server in locale nel computer host. Può inoltre verificarsi se si avvia due contenitori di SQL Server e provare a eseguire il mapping di entrambi per la stessa porta host. In questo caso, usare il `-p` parametro per eseguire il mapping a una porta dell'host diversa la porta del contenitore 1433. Ad esempio: 
 
 <!--SQL Server 2017 on Linux -->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"

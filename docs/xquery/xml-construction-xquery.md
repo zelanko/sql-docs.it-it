@@ -22,12 +22,12 @@ ms.assetid: a6330b74-4e52-42a4-91ca-3f440b3223cf
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 58a7f5c5702123ae6be475b1cb377b2f8a9c52fc
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 3ca45caed31d31b1614947cbcbf3fbf6c4c27273
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51657540"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52515373"
 ---
 # <a name="xml-construction-xquery"></a>Costruzione di strutture XML (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -79,7 +79,7 @@ This is product model catalog description.
 </ProductModel>  
 ```  
   
- Anche se la costruzione di elementi da espressioni costanti, come illustrato in questo esempio, può risultare utile, il punto forte di questa caratteristica del linguaggio XQuery è costituito dalla possibilità di costruire strutture XML che estraggono i dati da un database in modo dinamico. È possibile utilizzare le parentesi graffe per specificare le espressioni di query. Nel codice XML risultante l'espressione viene sostituita dal relativo valore. Ad esempio, la query seguente crea un elemento <`NewRoot`> con un elemento figlio (<`e`>). Il valore dell'elemento <`e`> viene calcolato specificando un'espressione di percorso fra parentesi graffe ({..." }").  
+ Anche se la costruzione di elementi da espressioni costanti, come illustrato in questo esempio, può risultare utile, il punto forte di questa caratteristica del linguaggio XQuery è costituito dalla possibilità di costruire strutture XML che estraggono i dati da un database in modo dinamico. È possibile utilizzare le parentesi graffe per specificare le espressioni di query. Nel codice XML risultante l'espressione viene sostituita dal relativo valore. Ad esempio, la query seguente crea un elemento <`NewRoot`> con un elemento figlio (<`e`>). Il valore dell'elemento <`e`> viene calcolato specificando un'espressione di percorso fra parentesi graffe ("{...}").  
   
 ```sql
 DECLARE @x xml;  
@@ -89,7 +89,7 @@ SELECT @x.query('<NewRoot><e> { /root } </e></NewRoot>');
   
  La parentesi fungono da token di cambio del contesto e attivano il passaggio dalla modalità di costruzione di strutture XML alla modalità di valutazione della query. In questo caso viene valutata l'espressione di percorso XQuery all'interno delle parentesi, `/root` e al suo posto vengono inseriti i relativi risultati.  
   
- Risultato:  
+ Questo è il risultato:  
   
 ```xml
 <NewRoot>  
@@ -112,7 +112,7 @@ SET @y = (SELECT @x.query('
 SELECT @y;  
 ```  
   
- Risultato:  
+ Questo è il risultato:  
   
 ```xml
 <NewRoot>  
@@ -131,7 +131,7 @@ SET @y = (SELECT @x.query('
 SELECT @y;  
 ```  
   
- Risultato:  
+ Questo è il risultato:  
   
 ```xml
 <NewRoot> Hello, I can use { and  } as part of my text</NewRoot>  
@@ -150,7 +150,7 @@ FROM Production.ProductModel
 WHERE ProductModelID=7;  
 ```  
   
- Risultato:  
+ Questo è il risultato:  
   
 ```xml
 <FirstLocation>  
@@ -253,7 +253,7 @@ SET @y = (SELECT @x.query('<NewRoot attr="{ data(/root) }" ></NewRoot>'));
 SELECT @y;  
 ```  
   
- Risultato:  
+ Questo è il risultato:  
   
 ```xml
 <NewRoot attr="5" />  
@@ -278,7 +278,7 @@ where ProductModelID=7;
   
 ```xml
 <FirstLocation LocationID="10" SetupHours="0.5" >  
-  <AWMI:step …   
+  <AWMI:step ...   
   </AWMI:step>  
   ...  
 </FirstLocation>  
@@ -309,7 +309,7 @@ where ProductModelID=7;
         SELECT @x.query( '<a attr="{''Item'', data(/x)}"/>' )   
         ```  
   
-         Risultato:  
+         Questo è il risultato:  
   
         ```xml
         <a attr="Item 5" />  
@@ -323,7 +323,7 @@ where ProductModelID=7;
   
          In questo caso, fra i due valori stringa non vengono aggiunti spazi. Se si desidera l'aggiunta di uno spazio fra i valori è necessario inserirlo esplicitamente.  
   
-         Risultato:  
+         Questo è il risultato:  
   
         ```xml
         <a attr="Item5" />  
@@ -351,7 +351,7 @@ where ProductModelID=7;
     SELECT @x.query( '<a attr="{''Item'', data(/x)}"/>' )   
     ```  
   
-     Risultato:  
+     Questo è il risultato:  
   
     ```xml
     <a attr="Item 5" />  
@@ -393,7 +393,7 @@ select @x.query( '
   </a>' )   
 ```  
   
- Risultato:  
+ Questo è il risultato:  
   
 ```xml
 <a xmlns="a">  
@@ -412,7 +412,7 @@ select @x.query( '
   </x:a>' )  
 ```  
   
- Risultato:  
+ Questo è il risultato:  
   
 ```xml
 <x:a xmlns:x="a">  
@@ -474,7 +474,7 @@ select @x.query( '
  Si noti che nella costruzione dell'elemento <`b`>, il valore dell'attributo di dichiarazione dello spazio dei nomi è specificato da una stringa vuota. In questo modo la dichiarazione dello spazio dei nomi predefinito dichiarato nel padre viene annullata.  
   
 
-Risultato:  
+Questo è il risultato:  
 
 ```xml
 <a xmlns="a">  
@@ -524,7 +524,7 @@ test
   
 ```  
   
- Risultato:  
+ Questo è il risultato:  
   
 ```xml
 -- result  

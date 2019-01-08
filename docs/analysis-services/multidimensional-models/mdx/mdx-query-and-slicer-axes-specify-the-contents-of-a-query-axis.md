@@ -1,5 +1,5 @@
 ---
-title: Impostazione del contenuto di un asse della Query (MDX) | Documenti Microsoft
+title: Impostazione del contenuto di un asse della Query (MDX) | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: bceafa9fb8ddd89162deca105404c317001a86bb
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 38a48fd99ae9a03599914a1dfdac0bf204301c4c
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34026808"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52399574"
 ---
-# <a name="mdx-query-and-slicer-axes---specify-the-contents-of-a-query-axis"></a>Query MDX e assi di sezionamento - specificare il contenuto di un asse della Query
+# <a name="mdx-query-and-slicer-axes---specify-the-contents-of-a-query-axis"></a>Query MDX e assi di sezionamento - Specificare il contenuto di un asse di query
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   Gli assi della query specificano i bordi di un set di celle restituito dall'istruzione SELECT di MDX (Multidimensional Expression). L'impostazione dei bordi di un set di celle consente di limitare i dati restituiti visibili al client.  
   
@@ -68,7 +68,7 @@ FROM [Adventure Works]
   
 ```  
   
- La parola chiave NON EMPTY, utilizzata prima delle definizione del set, è un rapido metodo per rimuovere tutte tuple vuote da un asse. Negli esempi è stato ad esempio osservato fino a questo punto come non vi siano dati nel cubo dall'agosto 2004 in poi. Per rimuovere tutte le righe dal set di celle che non includono dati in alcuna colonna, è sufficiente aggiungere NON EMPTY prima del set nella definizione dell'asse delle righe, nel modo seguente:  
+ La parola chiave NON EMPTY, utilizzata prima delle definizione del set, è un rapido metodo per rimuovere tutte tuple vuote da un asse. Ad esempio, negli esempi che abbiamo visto finora non vi è alcun dato nel cubo dall'agosto 2004 e versioni successive. Per rimuovere tutte le righe dal set di celle che non includono dati in alcuna colonna, è sufficiente aggiungere NON EMPTY prima del set nella definizione dell'asse delle righe, nel modo seguente:  
   
 ```  
 SELECT {[Measures].[Internet Sales Amount]} ON COLUMNS,  
@@ -112,6 +112,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Specifica il contenuto di un asse di sezionamento & #40; MDX & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-specify-the-contents-of-a-slicer-axis.md)  
+ [Impostazione del contenuto di un asse di sezionamento &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-specify-the-contents-of-a-slicer-axis.md)  
   
   

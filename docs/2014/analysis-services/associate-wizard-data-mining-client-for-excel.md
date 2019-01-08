@@ -14,12 +14,12 @@ ms.assetid: 4db6462f-93c7-443f-8ff7-39474dc7029e
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f9288c6a4f01cff6c3c4a19ff79a1d49775035cf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e5ee759c4a23ab2891597fd3a5c884ce7332ea4e
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48179431"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52400474"
 ---
 # <a name="associate-wizard-data-mining-client-for-excel"></a>Procedura guidata Associazione (client di data mining per Excel)
   ![Procedura guidata associazione sulla barra multifunzione Data Mining](media/dmc-associate.gif "procedura guidata nella barra multifunzione Data Mining di associazione")  
@@ -62,7 +62,7 @@ ms.locfileid: "48179431"
   
     -   Diminuendo la probabilità di una regola, si riducono i requisiti che una combinazione deve soddisfare per essere considerata importante nel contesto del set di dati complessivo.  
   
-     **Suggerimento:** è una buona idea per creare più modelli di data mining utilizzando combinazioni diverse di supporto e probabilità. Per tenere traccia delle impostazioni utilizzate per ogni modello, è possibile usare la **modello di documento** procedura guidata, disponibile nel Client di Data Mining per Excel e utilizzare il **Detailed** opzione del report. Per altre informazioni, vedere [documentare i modelli di Data Mining &#40;aggiuntivi di Data Mining per Excel&#41;](documenting-mining-models-data-mining-add-ins-for-excel.md).  
+     **Suggerimento:** È una buona idea per creare più modelli di data mining utilizzando combinazioni diverse di supporto e probabilità. Per tenere traccia delle impostazioni utilizzate per ogni modello, è possibile usare la **modello di documento** procedura guidata, disponibile nel Client di Data Mining per Excel e utilizzare il **Detailed** opzione del report. Per altre informazioni, vedere [documentare i modelli di Data Mining &#40;aggiuntivi di Data Mining per Excel&#41;](documenting-mining-models-data-mining-add-ins-for-excel.md).  
   
 6.  Facoltativamente, fare clic su **parametri** per modificare i parametri dell'algoritmo e personalizzare il comportamento del modello di data mining.  
   
@@ -80,7 +80,7 @@ ms.locfileid: "48179431"
   
          Il drill-through è utile, ad esempio, se si desidera fare clic su un set di elementi specifico e visualizzare i dati di origine.  
   
-    -   **Usa modello temporaneo**. Selezionare questa opzione se non si desidera che il modello venga salvato nel server. I modelli temporanei vengono eliminati quando si chiude Excel.  
+    -   **Usa modello temporaneo**. Selezionare questa opzione se non si vuole il modello salvato nel server. I modelli temporanei vengono eliminati quando si chiude Excel.  
   
 9. Tramite la procedura guidata vengono analizzate tutte le possibili combinazioni e viene creato un report contenente i set di elementi e le regole.  
   

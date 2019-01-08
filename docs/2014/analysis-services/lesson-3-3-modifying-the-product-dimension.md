@@ -11,12 +11,12 @@ ms.assetid: 8e3ffecd-7f40-41a8-8735-bc9858a310cb
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3a7851a9da990c36b813d5281cfbf6c174f3086f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 430ac56191fcfc2c601c50f9f31de128d5d58368
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48081541"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52523333"
 ---
 # <a name="modifying-the-product-dimension"></a>Modifica della dimensione Product
   Nelle attività di questo argomento si utilizzerà un calcolo denominato per fornire nomi più descrittivi per le linee di prodotti, si definirà una gerarchia nella dimensione Product e si specificherà il nome membro (Totale) per la gerarchia. Si raggrupperanno inoltre gli attributi in cartelle di visualizzazione.  
@@ -58,7 +58,7 @@ ms.locfileid: "48081541"
   
 2.  Nel riquadro **Attributi** della scheda **Struttura dimensione** selezionare **Product Line**.  
   
-3.  Nella finestra Proprietà a destra dello schermo fare clic sul campo proprietà **NameColumn** nella parte inferiore della finestra, quindi fare clic sul pulsante con i puntini di sospensione (**…**) per aprire la finestra di dialogo **Colonna nome** . Per aprire la finestra Proprietà, potrebbe essere necessario fare clic sulla scheda **Proprietà** sul lato destro dello schermo.  
+3.  Nella finestra proprietà sul lato destro dello schermo, scegliere il **NameColumn** campo nella parte inferiore della finestra proprietà e quindi fare clic su Sfoglia (**...** ) per aprire la **colonna nome** nella finestra di dialogo. Per aprire la finestra Proprietà, potrebbe essere necessario fare clic sulla scheda **Proprietà** sul lato destro dello schermo.  
   
 4.  Selezionare `ProductLineName` nella parte inferiore della **Source column** elenco e quindi fare clic su **OK**.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "48081541"
   
 5.  Nel riquadro **Attributi** della scheda **Struttura dimensione** selezionare **Product Key**.  
   
-6.  Nella finestra Proprietà fare clic nel campo proprietà **NameColumn** , quindi fare clic sui puntini di sospensione (**…**) per aprire la finestra di dialogo **Colonna nome** .  
+6.  Nella finestra Proprietà scegliere il **NameColumn** proprietà campo e quindi fare clic sui puntini (**...** ) per aprire la **colonna nome** nella finestra di dialogo.  
   
 7.  Selezionare **EnglishProductName** nell'elenco **Colonna di origine** , quindi fare clic su **OK**.  
   
@@ -110,7 +110,7 @@ ms.locfileid: "48081541"
   
     -   **Size Range**  
   
-    -   **Stile**  
+    -   **Stile di visualizzazione**  
   
     -   **Weight**  
   
@@ -185,6 +185,6 @@ ms.locfileid: "48081541"
 ## <a name="see-also"></a>Vedere anche  
  [Definire calcoli denominati in una vista origine dati &#40;Analysis Services&#41;](multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)   
  [Creare gerarchie definite dall'utente](multidimensional-models/user-defined-hierarchies-create.md)   
- [Configurare il &#40;tutti&#41; livello per le gerarchie di attributi](multidimensional-models/database-dimensions-configure-the-all-level-for-attribute-hierarchies.md)  
+ [Configurare il livello &#40;Totale&#41; per le gerarchie di attributi](multidimensional-models/database-dimensions-configure-the-all-level-for-attribute-hierarchies.md)  
   
   

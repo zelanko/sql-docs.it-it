@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -17,19 +16,19 @@ ms.assetid: 657aabe4-d3da-475e-87e5-cf9d33c976b1
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 73d874a85b25680cb106c7eadae2ac60e2058923
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 676e0deaea8fa740a9b9fb007a6217b91f1e3863
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48169408"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52800847"
 ---
 # <a name="scans-event-category"></a>categoria di eventi Analisi
   La categoria di eventi **Analisi** contiene eventi di analisi.  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>In questa sezione  
   
-|Argomento|Description|  
+|Argomento|Descrizione|  
 |-----------|-----------------|  
 |[Classe di evento Scan:Started](scan-started-event-class.md)|Indica l'avvio dell'analisi di una tabella o di un indice.|  
 |[Classe di evento Scan:Stopped](scan-stopped-event-class.md)|Indica l'arresto dell'analisi di una tabella o di un indice.|  

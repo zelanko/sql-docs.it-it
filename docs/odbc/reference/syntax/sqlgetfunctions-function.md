@@ -20,16 +20,16 @@ ms.assetid: 0451d2f9-0f4f-46ba-b252-670956a52183
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 98fb29265c17970fbcef0f21778d7a9130e52771
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7ac3d24b1213096be20658fb48dbfe9a6d39df8f
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47644519"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206970"
 ---
 # <a name="sqlgetfunctions-function"></a>SQLGetFunctions Function
 **Conformità**  
- Versione introdotta: Conformità agli standard 1.0 di ODBC: ISO 92  
+ Versione introdotta: Conformità agli standard 1.0 ODBC: ISO 92  
   
  **Riepilogo**  
  **SQLGetFunctions** restituisce informazioni sul fatto che un driver supporta la funzione ODBC specifica. Questa funzione è implementata in Gestione Driver. può inoltre essere implementata nel driver. Se un driver implementa **SQLGetFunctions**, gestione Driver chiama la funzione nel driver. In caso contrario, esegue la funzione stessa.  
@@ -68,7 +68,7 @@ SQLRETURN SQLGetFunctions(
 ## <a name="diagnostics"></a>Diagnostica  
  Quando **SQLGetFunctions** restituisce SQL_ERROR o SQL_SUCCESS_WITH_INFO, un valore SQLSTATE associato possono essere ottenuti chiamando **SQLGetDiagRec** con un *HandleType* di SQL_HANDLE_DBC e un *gestiscono* dei *ConnectionHandle*. Nella tabella seguente sono elencati i valori SQLSTATE comunemente restituiti da **SQLGetFunctions** e illustra ognuna nel contesto di questa funzione; la notazione "(DM)" precede le descrizioni di SQLSTATE restituiti da Gestione Driver. Il codice restituito a ogni valore SQLSTATE è SQL_ERROR, se non specificato diversamente.  
   
-|SQLSTATE|Errore|Description|  
+|SQLSTATE|Errore|Descrizione|  
 |--------|-----|-----------|  
 |01000|Avviso generale|Messaggio informativo specifico del driver. (Funzione restituisce SQL_SUCCESS_WITH_INFO).|  
 |08S01|Errore del collegamento di comunicazione|Il collegamento di comunicazione tra il driver e l'origine dati a cui è stato connesso il driver non è stato possibile prima dell'elaborazione di funzione è stata completata.|  
@@ -83,7 +83,7 @@ SQLRETURN SQLGetFunctions(
 ## <a name="comments"></a>Commenti  
  **SQLGetFunctions** restituisce sempre che **SQLGetFunctions**, **SQLDataSources**, e **SQLDrivers** sono supportati. Ciò avviene perché queste funzioni vengono implementate in Gestione Driver. Gestione Driver assocerà una funzione ANSI per la funzione Unicode corrispondente se la funzione Unicode esiste e verrà eseguito il mapping una funzione Unicode per la funzione ANSI corrispondente se esiste la funzione ANSI. Per informazioni su come usano le applicazioni **SQLGetFunctions**, vedere [livelli di conformità di interfaccia](../../../odbc/reference/develop-app/interface-conformance-levels.md).  
   
- Di seguito è riportato un elenco di valori validi per *FunctionId* per le funzioni conformi a livello di conformità agli standard – ISO 92:  
+ Di seguito è riportato un elenco di valori validi per *FunctionId* per le funzioni conformi a livello di conformità agli standard ISO 92:  
   
 |FunctionId valore|FunctionId valore|  
 |----------|----------|  
@@ -109,14 +109,14 @@ SQLRETURN SQLGetFunctions(
 |SQL_API_SQLGETCURSORNAME|SQL_API_SQLSETSTMTATTR|  
 |SQL_API_SQLGETDATA| |  
   
- Di seguito è riportato un elenco di valori validi per *FunctionId* per le funzioni conformi al livello di conformità agli standard – Open Group:  
+ Di seguito è riportato un elenco di valori validi per *FunctionId* per le funzioni conformi al livello di conformità agli standard Open Group:  
   
 |FunctionId valore|FunctionId valore|  
 |-|-|  
 |SQL_API_SQLCOLUMNS|SQL_API_SQLSTATISTICS|  
 |SQL_API_SQLSPECIALCOLUMNS|SQL_API_SQLTABLES|  
   
- Di seguito è riportato un elenco di valori validi per *FunctionId* per le funzioni conformi a livello di conformità agli standard – ODBC.  
+ Di seguito è riportato un elenco di valori validi per *FunctionId* per le funzioni conformi a livello di conformità agli standard di ODBC.  
   
 |FunctionId valore|FunctionId valore|  
 |-|-|  
@@ -142,7 +142,7 @@ SQLRETURN SQLGetFunctions(
 ## <a name="sqlfuncexists-macro"></a>SQL_FUNC_EXISTS (macro)  
  Il SQL_FUNC_EXISTS (*SupportedPtr*, *FunctionID*) macro viene usata per determinare il supporto di ODBC 3*x* o le funzioni precedenti dopo **SQLGetFunctions**  è stato chiamato con un *FunctionId* argomento di SQL_API_ODBC3_ALL_FUNCTIONS. L'applicazione chiama SQL_FUNC_EXISTS con il *SupportedPtr* argomento impostato sulle *SupportedPtr* passato *SQLGetFunctions*e con il  *FunctionID* argomento impostato il **#define** per la funzione. SQL_FUNC_EXISTS restituisce SQL_TRUE se la funzione è supportata e SQL_FALSE in caso contrario.  
   
-> [!NOTE]  
+> [!NOTE]
 >  Quando si lavora con un 2 ODBC *. x* driver ODBC 3 *. x* restituisce SQL_TRUE per gestione Driver **SQLAllocHandle** e **SQLFreeHandle**perché **SQLAllocHandle** viene eseguito il mapping a **SQLAllocEnv**, **SQLAllocConnect**, o **SQLAllocStmt**, e in quanto **SQLFreeHandle** viene eseguito il mapping al **SQLFreeEnv**, **SQLFreeConnect**, oppure **SQLFreeStmt**. **SQLAllocHandle** oppure **SQLFreeHandle** con un *HandleType* argomento di SQL_HANDLE_DESC non è supportato, tuttavia, anche se SQL_TRUE viene restituito per le funzioni, perché non esiste alcun ODBC 2*x* funzione per eseguire il mapping in questo caso.  
   
 ## <a name="code-example"></a>Esempio di codice  

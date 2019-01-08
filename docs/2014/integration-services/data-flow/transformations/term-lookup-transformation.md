@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.termlookuptrans.f1
@@ -21,12 +20,12 @@ ms.assetid: 3c0fa2f8-cb6a-4371-b184-7447be001de1
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e721fa24a987d0978c2c89f0c0fc81046c113560
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2286ba205d6ca12f025c8ac154b77a11e1754ff2
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48147401"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52749873"
 ---
 # <a name="term-lookup-transformation"></a>Ricerca termini - trasformazione
   La trasformazione Ricerca termini rileva le corrispondenze tra i termini estratti dal testo in una colonna di input della trasformazione e quelli contenuti in una tabella di riferimento, quindi conta il numero delle occorrenze di un termine della tabella di ricerca nel set di dati di input e scrive tale numero nelle colonne di output della trasformazione, insieme al termine della tabella di riferimento. Questa trasformazione può essere utilizzata per creare un elenco di termini personalizzato basato sul testo di input, completo di statistiche sulla frequenza dei termini.  
@@ -57,16 +56,16 @@ ms.locfileid: "48147401"
   
  Quando un elemento di ricerca contiene termini che si sovrappongono nel set di riferimento, ovvero viene trovato un termine secondario in più di un record di riferimento, la trasformazione Ricerca termini restituisce solo un risultato della ricerca. Nell'esempio seguente viene illustrato il risultato ottenuto quando un elemento di ricerca contiene un termine secondario sovrapposto. Il termine secondario sovrapposto in questo caso è *Windows*, presente in due termini di riferimento. La trasformazione non restituisce tuttavia due risultati ma solo un termine di riferimento, ovvero *Windows*. Il secondo termine di riferimento, *Windows 7 Professional*, non viene restituito.  
   
-|Elemento|valore|  
+|Elemento|Value|  
 |----------|-----------|  
 |Termine di input|Windows 7 Professional|  
 |Termini di riferimento|Windows 7 x64 Professional|  
-|Output|Windows|  
+|Output|WINDOWS|  
   
- La trasformazione Ricerca termini può trovare anche sostantivi e sintagmi nominali contenenti caratteri speciali che possono essere presenti anche nei dati della tabella di riferimento. I caratteri speciali sono i seguenti: %, @, &, $, #, \*, :, ;, ., **,** , !, ?, \<, >, +, =, ^, ~, |, \\, /, (, ), [, ], {, }, “ e ‘.  
+ La trasformazione Ricerca termini può trovare anche sostantivi e sintagmi nominali contenenti caratteri speciali che possono essere presenti anche nei dati della tabella di riferimento. I caratteri speciali sono i seguenti: %, @, &, $, #, \*, :, ;, ., **,**, !, ?, \<, >, +, =, ^, ~, |, \\, /, (, ), [, ], {, }, " e '.  
   
 ## <a name="data-types"></a>Tipi di dati  
- La trasformazione Ricerca termini può utilizzare solo colonne con tipo di dati DT_WSTR o DT_NTEXT. Se una colonna contiene testo ma non ha uno di questi tipi di dati, sarà possibile utilizzare la trasformazione Conversione dati per aggiungere al flusso di dati una colonna con tipo di dati DT_WSTR o DT_NTEXT e copiare nella nuova colonna i valori della colonna originale. L'output della trasformazione Conversione dati può essere quindi utilizzato come input della trasformazione Ricerca termini. Per altre informazioni, vedere [trasformazione Conversione dati](data-conversion-transformation.md).  
+ La trasformazione Ricerca termini può utilizzare solo colonne con tipo di dati DT_WSTR o DT_NTEXT. Se una colonna contiene testo ma non ha uno di questi tipi di dati, sarà possibile utilizzare la trasformazione Conversione dati per aggiungere al flusso di dati una colonna con tipo di dati DT_WSTR o DT_NTEXT e copiare nella nuova colonna i valori della colonna originale. L'output della trasformazione Conversione dati può essere quindi utilizzato come input della trasformazione Ricerca termini. Per altre informazioni, vedere [Trasformazione Conversione dati](data-conversion-transformation.md).  
   
 ## <a name="configuration-the-term-lookup-transformation"></a>Configurazione della trasformazione Ricerca termini  
  Le colonne di input della trasformazione Ricerca termini includono la proprietà InputColumnType che ne indica l'uso. InputColumnType può contenere i valori seguenti:  
@@ -79,7 +78,7 @@ ms.locfileid: "48147401"
   
  Le colonne di output della trasformazione la cui proprietà InputColumnType è impostata su 0 o 2 includono la proprietà CustomLineageID, che contiene l'identificatore di derivazione assegnato alla colonna da un componente a monte nel flusso di dati.  
   
- La trasformazione Ricerca termini aggiunge due colonne all'output della trasformazione, denominato per impostazione predefinita `Term` e `Frequency`. `Term` contiene un termine della tabella di ricerca, mentre la colonna `Frequency` contiene il numero di occorrenze di tale termine rilevato nel set di dati di input. Tali colonne non includono la proprietà CustomLineageID.  
+ La trasformazione Ricerca termini aggiunge all'output della trasformazione due colonne, che per impostazione predefinita sono denominate `Term` e `Frequency`. `Term` contiene un termine della tabella di ricerca, mentre la colonna `Frequency` contiene il numero di occorrenze di tale termine rilevato nel set di dati di input. Tali colonne non includono la proprietà CustomLineageID.  
   
  La tabella di ricerca deve essere una tabella di un database di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] o Access. Se l'output della trasformazione Estrazione termini viene salvato in una tabella, quest'ultima potrà essere utilizzata come tabella di riferimento, ma è possibile utilizzare anche altre tabelle. Il testo presente in file flat, cartelle di lavoro di Excel o altre origini deve essere importato in un database di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] o di Access, prima di usare la trasformazione Ricerca termini.  
   
@@ -95,7 +94,7 @@ ms.locfileid: "48147401"
   
  Per altre informazioni sulle proprietà che è possibile impostare nella finestra di dialogo **Editor trasformazione Ricerca termini**, fare clic su uno degli argomenti seguenti:  
   
--   [Editor trasformazione Ricerca termini &#40;scheda tabella di riferimento&#41;](../../term-lookup-transformation-editor-reference-table-tab.md)  
+-   [Editor trasformazione Ricerca termini &#40;scheda Tabella di riferimento&#41;](../../term-lookup-transformation-editor-reference-table-tab.md)  
   
 -   [Editor trasformazione Ricerca termini &#40;scheda Ricerca termini&#41;](../../term-lookup-transformation-editor-term-lookup-tab.md)  
   

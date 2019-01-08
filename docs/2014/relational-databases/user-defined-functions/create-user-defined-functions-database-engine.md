@@ -16,12 +16,12 @@ ms.assetid: f0d5dd10-73fd-4e05-9177-07f56552bdf7
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: d1db5b5dcf8e1bf5c06882971d3bf3cd2e5a0309
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 37a6846d8c185549bd6c54f32cb5ab02eb564d1d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48124901"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52531577"
 ---
 # <a name="create-user-defined-functions-database-engine"></a>Creazione di funzioni definite dall'utente (Motore di database)
   In questo argomento viene descritto come creare una funzione definita dall'utente in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizzando [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -32,7 +32,7 @@ ms.locfileid: "48124901"
   
      [Limitazioni e restrizioni](#Restrictions)  
   
-     [Security](#Security)  
+     [Sicurezza](#Security)  
   
 -   **Per creare una funzione definita dall'utente:**  
   
@@ -50,7 +50,7 @@ ms.locfileid: "48124901"
   
 -   Tramite le funzioni definite dall'utente non possono essere restituiti più set di risultati. Utilizzare una stored procedure se è necessario restituire più set di risultati.  
   
--   In una funzione definita dall'utente la gestione degli errori è limitata. Una funzione definita dall'utente non supporta TRY…CATCH, @ERROR o RAISERROR.  
+-   In una funzione definita dall'utente la gestione degli errori è limitata. Una funzione definita dall'utente non supporta TRY... RILEVARE, @ERROR o RAISERROR.  
   
 -   Tramite le funzioni definite dall'utente non è possibile chiamare una stored procedure normale, bensì una estesa.  
   

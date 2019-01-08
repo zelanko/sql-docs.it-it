@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - selTabCol
@@ -13,12 +12,12 @@ ms.assetid: bf73f80e-a954-4c5f-874e-17fdd4082715
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3c02f4a98ad0ee4d7b73fe20041a03b53b34b2b5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: af7f97d7d1671aada299b685981e81d62010df24
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48051374"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52788344"
 ---
 # <a name="select-oracle-tables-and-columns"></a>Selezionare tabelle e colonne Oracle
   Utilizzare la pagina Seleziona tabelle e colonne Oracle per selezionare le tabelle dal database di origine Oracle in cui vengono acquisite le modifiche. Nella pagina sono presenti gli elementi seguenti:  
@@ -27,15 +26,15 @@ ms.locfileid: "48051374"
  **Elenco tabelle**  
  Nell'elenco tabelle sono presenti tre colonne:  
   
--   **Nome tabella Oracle**: nome della tabella, incluso lo schema.  
+-   **Nome tabella Oracle**: Il nome della tabella, inclusi lo schema della tabella.  
   
--   **Istanza di acquisizione**: nome dell'istanza di acquisizione usato per denominare gli oggetti Change Data Capture specifici dell'istanza. L'istanza di acquisizione non può essere NULL.  
+-   **Istanza di acquisizione**: Il nome dell'istanza di acquisizione utilizzato per oggetti di nome specifico dell'istanza change data capture. L'istanza di acquisizione non può essere NULL.  
   
      Se non è specificato, il nome deriva dal nome dello schema di origine più il nome della tabella di origine nel formato `<schema-name>_<table-name>`. Il nome dell'istanza di acquisizione non può superare i 100 caratteri e deve essere univoco nel database.  
   
      È possibile fare clic in qualsiasi cella di questa colonna per modificare manualmente **capture_instance**.  
   
--   **Ruolo di sicurezza**: nome del ruolo del database utilizzato per controllare l'accesso ai dati delle modifiche.  
+-   **Ruolo di sicurezza**: Nome del ruolo utilizzato per controllare l'accesso ai dati delle modifiche del database.  
   
      È possibile fare clic in qualsiasi cella di questa colonna per modificare manualmente **security_role**.  
   
@@ -51,7 +50,7 @@ ms.locfileid: "48051374"
  Dopo aver [selezionato le tabelle Oracle per l'acquisizione delle modifiche](select-oracle-tables-for-capturing-changes.md) e/o [apportato modifiche alle tabelle selezionate per l'acquisizione di modifiche](make-changes-to-the-tables-selected-for-capturing-changes.md) usando le finestre di dialogo corrette, fare clic su **Avanti** e passare a [Generare ed eseguire lo script di registrazione supplementare](generate-and-run-the-supplemental-logging-script.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Come creare l'istanza di Database SQL Server Cambia](how-to-create-the-sql-server-change-database-instance.md)   
+ [Procedura di creazione dell'istanza del database delle modifiche di SQL Server](how-to-create-the-sql-server-change-database-instance.md)   
  [Modificare le tabelle](edit-tables.md)   
  [Aggiungere tabelle a un'istanza di CDC](add-tables-to-a-cdc-instance.md)   
  [Modificare le proprietà delle tabelle](edit-the-table-properties.md)  

@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - vs.saveas
@@ -14,12 +14,12 @@ ms.assetid: 61347757-f5a3-481d-8b05-1fed086629b6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4862c346e29eceb38712d0062c4f3f4865afabe1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 16376e7c1be1e22968846e7cbfbfc361fa8bb16e
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48116794"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53203407"
 ---
 # <a name="save-as"></a>Save As
   Utilizzare questa finestra di dialogo per salvare un'istanza dell'elemento corrente nel percorso e nel formato di file specificati. Per visualizzare questa finestra di dialogo, fare clic su **salvare**  *\<file >* **come** sul **File** menu (dove  *\<file >* è il nome dell'elemento corrente), oppure premere ALT + F, A nell'Editor del codice.  
@@ -31,8 +31,8 @@ ms.locfileid: "48116794"
  **Nome file**  
  Utilizzare questa opzione per visualizzare il nome del file corrente, modificare il nome del file oppure filtrare i file e le cartelle visualizzati. Per filtrare i file e le cartelle visualizzati, immettere un nome di file completo o parziale in base al quale filtrare. È possibile utilizzare l'asterisco (`*`) come carattere jolly.  
   
-> [!TIP]  
->  Per visualizzare file contenuti in percorsi di rete o Web, specificare un URL o un percorso di rete nella casella **Nome file** . Ad esempio, se si digita "http://mywebsite" vengono visualizzati i file disponibili nel percorso Web "mywebsite", mentre se si digita "\\" vengono visualizzati i file disponibili nel percorso "myshare" del server "myserver".  
+> [!TIP]
+>  Per visualizzare file contenuti in percorsi di rete o Web, specificare un URL o un percorso di rete nella casella **Nome file** . Ad esempio, se si digita "<http://mywebsite>" vengono visualizzati i file disponibili nel percorso Web "mywebsite", mentre se si digita "\\" vengono visualizzati i file disponibili nel percorso "myshare" del server "myserver".  
   
  **Salva come**  
  Utilizzare questa opzione per selezionare un nuovo tipo di file per l'elemento selezionato. I tipi di file visualizzati comprendono tutti i tipi di file disponibili in cui è possibile convertire l'elemento selezionato.  

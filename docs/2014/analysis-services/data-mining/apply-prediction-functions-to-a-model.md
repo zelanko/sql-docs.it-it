@@ -13,17 +13,17 @@ ms.assetid: cf9a97e2-c249-441b-af12-c977c1a91c44
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: acb86931d7343d375718efbae0186c67d7a38156
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 04b1afa7f9902d0e1510aaab5f84f96b4b01eacc
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48106680"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52519919"
 ---
 # <a name="apply-prediction-functions-to-a-model"></a>Applicare le funzioni di stima a un modello
   Per creare una query di stima, è innanzitutto necessario selezionare il modello di data mining su cui basare la query. È possibile selezionare qualsiasi modello di data mining esistente nel progetto corrente.  
   
- Dopo avere selezionato un modello, aggiungere una *funzione di stima* alla query. È importante comprendere che le funzioni di stima vengono utilizzate per molti scopi: è possibile stimare valori, ma anche ottenere statistiche correlate e informazioni utilizzate nella generazione della stima. Le funzioni di stima possono restituire i tipi seguenti di valori:  
+ Dopo avere selezionato un modello, aggiungere una *funzione di stima* alla query. È importante comprendere che le funzioni di stima vengono utilizzate per molti scopi: Sì, è possibile stimare valori, ma è anche possibile ottenere le statistiche correlate, nonché informazioni che è state utilizzate nella generazione della stima. Le funzioni di stima possono restituire i tipi seguenti di valori:  
   
 -   Nome dell'attributo di stima e valore che viene stimato.  
   
@@ -69,7 +69,7 @@ ms.locfileid: "48106680"
     |||  
     |-|-|  
     |**\<Nome modello >**|Selezionare questa opzione per includere i valori del modello di data mining nell'output. È possibile aggiungere unicamente colonne stimabili.<br /><br /> Quando si aggiunge una colonna dal modello, il risultato restituito è l'elenco non distinto di valori in quella colonna.<br /><br /> Le colonne che si aggiungono tramite questa opzione sono incluse nella parte SELECT dell'istruzione DMX risultante.|  
-    |**Prediction Function**|Selezionare questa opzione per esplorare un elenco di funzioni di stima.<br /><br /> I valori o le funzioni selezionate vengono aggiunte alla parte SELECT dell'istruzione DMX risultante.<br /><br /> L'elenco di funzioni di stima non è filtrato o vincolato dal tipo di modello selezionato. Pertanto, se non si sa con sicurezza se la funzione è supportata per il tipo di modello corrente, è possibile aggiungerla all'elenco e assicurarsi che non si verifichi alcun errore.<br /><br /> Gli elementi dell'elenco preceduti da $ (ad esempio $AdjustedProbability) rappresentano le colonne della tabella nidificata che viene restituita quando si usa la funzione, `PredictHistogram`. Si tratta di collegamenti che è possibile utilizzare per restituire una singola colonna e non una tabella nidificata.|  
+    |**Prediction Function**|Selezionare questa opzione per esplorare un elenco di funzioni di stima.<br /><br /> I valori o le funzioni selezionate vengono aggiunte alla parte SELECT dell'istruzione DMX risultante.<br /><br /> L'elenco di funzioni di stima non è filtrato o vincolato dal tipo di modello selezionato. Pertanto, se non si sa con sicurezza se la funzione è supportata per il tipo di modello corrente, è possibile aggiungerla all'elenco e assicurarsi che non si verifichi alcun errore.<br /><br /> Gli elementi dell'elenco preceduti da $ (AdjustedProbability $) rappresentano le colonne della tabella nidificata che viene restituita quando si utilizza la funzione, `PredictHistogram`. Si tratta di collegamenti che è possibile utilizzare per restituire una singola colonna e non una tabella nidificata.|  
     |**Espressione personalizzata**|Selezionare questa opzione per digitare un'espressione personalizzata e quindi assegnare un alias all'output.<br /><br /> L'espressione personalizzata viene aggiunta alla parte SELECT della query di stima DMX risultante.<br /><br /> Questa opzione è utile se si desidera aggiungere del testo per l'output con ogni riga, per chiamare funzioni VB o stored procedure personalizzate.<br /><br /> Per informazioni sull'uso di funzioni VBA e di Excel da DMX, vedere [Funzioni VBA in MDX e DAX](/sql/mdx/vba-functions-in-mdx-and-dax).|  
   
 3.  Dopo avere aggiunto ogni funzione o espressione, passare alla vista DMX per vedere come la funzione viene aggiunta all'interno dell'istruzione DMX.  
@@ -77,7 +77,7 @@ ms.locfileid: "48106680"
     > [!WARNING]  
     >  Il Generatore delle query di stima non convalida l'istruzione DMX finché non si fa clic su **Risultati**. Spesso, l'espressione che viene prodotta dal generatore di query non è una DMX valida. Le cause tipiche sono una colonna che non è correlata alla colonna stimabile o il tentativo di stimare una colonna in una tabella nidificata che richiede un'istruzione sub-SELECT. A questo punto, è possibile passare a vista DMX e continuare a modificare l'istruzione.  
   
-### <a name="example-create-a-query-on-a-clustering-model"></a>Esempio: creare una query in un modello di clustering  
+### <a name="example-create-a-query-on-a-clustering-model"></a>Esempio: Creare una query su un modello di clustering  
   
 1.  Se non è disponibile un modello di clustering per la generazione di questa query di esempio, creare il modello [TM_Clustering] facendo riferimento a [Esercitazione di base sul data mining](../../tutorials/basic-data-mining-tutorial.md).  
   
@@ -123,7 +123,7 @@ ms.locfileid: "48106680"
     |----------------|--------------|-------------|-------------|  
     |0|Cluster 8|954|953.948638926372|  
   
- Se si desidera aggiungere altre clausole nell'istruzione, ad esempio una clausola WHERE, non è possibile aggiungerle tramite la griglia, ma è necessario passare prima alla vista DMX.  
+ Se si desidera aggiungere altre clausole nell'istruzione, ad esempio, se si desidera aggiungere una clausola WHERE-non è possibile aggiungere tramite la griglia. è necessario passare innanzitutto alla vista DMX.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Query di data mining](data-mining-queries.md)  

@@ -16,12 +16,12 @@ ms.assetid: 16af4a6f-18d4-496a-a304-7a13aa32ee76
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b23083870b2f60e3d844d921705f4612ecc975f2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b596612d711925687087a2263013fdf13a0c491e
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48079421"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52418462"
 ---
 # <a name="query-sql-server-data-mining-add-ins"></a>Query (componenti aggiuntivi Data mining di SQL Server)
   ![Pulsante query modello, barra multifunzione Data Mining](media/dmc-query.gif "pulsante Query modello, barra multifunzione Data Mining")  
@@ -30,7 +30,7 @@ ms.locfileid: "48079421"
   
  Il **Query** guidata fornisce inoltre un editor avanzato per la creazione o modifica di modelli di data mining, per la generazione di query personalizzate o per l'utilizzo di strutture non supportate in altri strumenti, ad esempio set di dati nidificati.  
   
--   Utilizzare l'editor di testo per digitare o incollare le istruzioni DMX (Data Mining Extensions) create con altre procedure.  
+-   Usare l'editor di testo per digitare o incollare le istruzioni di Data Mining Extensions (DMX) creati in un' posizione.  
   
 -   Utilizzare il Generatore di query interattivo per comporre un'istruzione DMX personalizzata con l'aiuto di modelli e finestre di dialogo.  
   

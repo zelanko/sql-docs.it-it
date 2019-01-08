@@ -12,12 +12,12 @@ ms.assetid: a219df74-543a-4aec-aeeb-79f90ac3e2ee
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 0aed95b084970bf4aa24bd279d8f52af7a33cfc1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 48d5305854d214e61036e00ca23a94b85313138a
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47627545"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52402259"
 ---
 # <a name="selecting-and-configuring-affected-objects-sybasetosql"></a>Selezione e configurazione degli oggetti interessati (SybaseToSQL)
 In questa pagina è possibile selezionare tabelle e le chiavi esterne, le modifiche in cui devono essere confrontate quando SSMA verifica i risultati dell'esecuzione per gli oggetti scelto nel passaggio precedente. Inoltre, è possibile personalizzare i parametri di verifica.  
@@ -40,16 +40,16 @@ Scheda della tabella contiene la visualizzazione griglia della tabella seleziona
   
 -   Regola  
   
--   Default  
+-   Impostazione predefinita  
   
--   Identity  
+-   identità  
   
 -   Ammette valori Null  
   
 ## <a name="sql"></a>Sql  
 Scheda SQL contiene la tabella"Crea" SQL della tabella selezionata.  
   
-## <a name="data"></a>data  
+## <a name="data"></a>Dati  
 Scheda dati consente di visualizzare i dati presenti nella tabella selezionata.  
   
 ## <a name="properties"></a>Proprietà  

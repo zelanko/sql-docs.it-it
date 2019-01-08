@@ -11,12 +11,12 @@ ms.assetid: a8d24287-8557-4b03-bea7-ca087f449b62
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 60825f051b0e80cbd55ec36c5b3e49cf9838e77b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 51f5315633939431bb6e8287773453e08de188a7
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48204881"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52412028"
 ---
 # <a name="expression-scope-for-totals-aggregates-and-built-in-collections-report-builder-and-ssrs"></a>Ambito di espressioni per totali, aggregazioni e raccolte predefinite (Generatore report e SSRS)
   Quando si scrivono espressioni, si noterà che il termine *ambito* viene utilizzato in molti contesti. Può infatti specificare i dati da utilizzare per la valutazione di un'espressione, il set di caselle di testo in una pagina di cui è stato eseguito il rendering, il set di elementi del report che possono essere mostrati o nascosti in base a un elemento Toggle. Il termine *ambito* verrà utilizzato in argomenti correlati alla valutazione di un'espressione, alla sintassi della funzione di aggregazione, alla visibilità condizionale nonché nei messaggi di errore relativi a queste aree. Per comprendere il significato di *ambito* in un contesto specifico, utilizzare le descrizioni seguenti:  
@@ -71,7 +71,7 @@ ms.locfileid: "48204881"
      L'espressione seguente genera gli anni di intervallo tra SellStartDate e LastReceiptDate. Questi campi si trovano in due set di dati diversi, DataSet1 e DataSet2. La funzione di aggregazione [First &#40;Generatore report e SSRS&#41;](report-builder-functions-first-function.md) restituisce il primo valore di SellStartDate in DataSet1 e il primo valore di LastReceiptDate in DataSet2.  
   
     ```  
-    =DATEDIFF(“yyyy”, First(Fields!SellStartDate.Value, "DataSet1"), First(Fields!LastReceiptDate.Value, "DataSet2"))  
+    =DATEDIFF("yyyy", First(Fields!SellStartDate.Value, "DataSet1"), First(Fields!LastReceiptDate.Value, "DataSet2"))  
     ```  
   
 -   **Ambito di dominio** Chiamato anche ambito di sincronizzazione. Un tipo di ambito dei dati che si applica alla valutazione dell'espressione per le aree dati nidificate. L'ambito di dominio viene utilizzato per specificare aggregazioni in tutte le istanze di un gruppo in modo da allineare e facilmente confrontare le istanze nidificate. Ad esempio, per allineare i valori, è possibile allineare l'intervallo e l'altezza dei grafici sparkline incorporati in una tabella.  
@@ -158,20 +158,20 @@ ms.locfileid: "48204881"
 ##  <a name="Sort"></a> Specifica di un'espressione di ordinamento per la sincronizzazione dell'ordinamento  
  Quando si aggiunge un pulsante di ordinamento interattivo a una colonna della tabella, è possibile sincronizzare l'ordinamento per più elementi che dispongono di un ambito contenitore comune. Ad esempio, è possibile aggiungere un pulsante di ordinamento a un'intestazione di colonna in una matrice e specificare l'ambito contenitore come nome del set di dati associato alla matrice. Quando un utente fa clic sul pulsante di ordinamento, insieme alle righe della matrice vengono ordinati anche i gruppi di serie di grafici dei grafici associati allo stesso set di dati. In questo modo, tutte le aree dati che dipendono da quel set di dati possono essere sincronizzate per mostrare lo stesso ordinamento.  
   
- Per altre informazioni, vedere [Filtrare, raggruppare e ordinare i dati &#40;Generatore report e SSRS&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md).  
+ Per altre informazioni, vedere [Filtro, raggruppamento e ordinamento di dati &#40;Generatore report e SSRS&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md).  
   
   
   
 ##  <a name="Nulls"></a> Eliminazione di valori Null o zero in una cella  
- Per diversi report i calcoli che presentano i gruppi come ambito possono generare più celle con valori zero (0) o Null. Per evitare disordine nel report, aggiungere un'espressione che consenta di restituire spazi laddove il valore di aggregazione è uguale a 0. Per altre informazioni, vedere "Eliminazione di valori Null o zero in fase di esecuzione" in [Expression Examples &#40;Report Builder and SSRS&#41;](expression-examples-report-builder-and-ssrs.md).  
+ Per diversi report i calcoli che presentano i gruppi come ambito possono generare più celle con valori zero (0) o Null. Per evitare disordine nel report, aggiungere un'espressione che consenta di restituire spazi laddove il valore di aggregazione è uguale a 0. Per altre informazioni, vedere "Eliminazione di valori Null o zero in fase di esecuzione" in [Esempi di espressioni &#40;Generatore report e SSRS&#41;](expression-examples-report-builder-and-ssrs.md).  
   
   
   
 ## <a name="see-also"></a>Vedere anche  
  [Esempi di espressioni &#40;Generatore report e SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
  [Esempi di espressioni di raggruppamento &#40;Generatore report e SSRS&#41;](group-expression-examples-report-builder-and-ssrs.md)   
- [Creazione di gruppi di gerarchie ricorsive &#40;Report e SSRS&#41;](creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)   
+ [Creazione di gruppi di gerarchie ricorsive &#40;Generatore report e SSRS&#41;](creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)   
  [Elenchi &#40;Generatore report e SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md)   
- [Formattazione di testo e segnaposto &#40;Report e SSRS&#41;](formatting-text-and-placeholders-report-builder-and-ssrs.md)  
+ [Formattazione di testo e segnaposto &#40;Generatore report e SSRS&#41;](formatting-text-and-placeholders-report-builder-and-ssrs.md)  
   
   

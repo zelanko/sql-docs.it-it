@@ -15,18 +15,18 @@ ms.assetid: ''
 author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: e0d3ee1784653205feb4aa95a80a82d5ac27ec46
-ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
+ms.openlocfilehash: 3c16c87ea79e3c80de9f93bc3571a46d0610b22d
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49643839"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52395424"
 ---
 # <a name="upgrade-on-premises-sql-server-to-sql-server-or-sql-server-on-azure-vms-using-the-data-migration-assistant"></a>Eseguire l'aggiornamento in SQL Server locale a SQL Server o SQL Server in macchine virtuali di Azure usando Data Migration Assistant
 
 Data Migration Assistant offre valutazioni senza problemi di SQL Server in locale e gli aggiornamenti alle versioni successive di SQL Server o la migrazione a SQL Server in macchine virtuali di Azure o Database SQL di Azure.
 
-Questo articolo vengono fornite istruzioni dettagliate per l'aggiornamento di SQL Server locale alla versione più recente di SQL Server o a SQL Server in macchine virtuali di Azure usando Data Migration Assistant.   
+Questo articolo vengono fornite istruzioni dettagliate per l'aggiornamento di SQL Server locale alla versione più recente di SQL Server o a SQL Server in macchine virtuali di Azure usando Data Migration Assistant.   
 
 ## <a name="create-a-new-migration-project"></a>Creare un nuovo progetto di migrazione
 
@@ -34,7 +34,7 @@ Questo articolo vengono fornite istruzioni dettagliate per l'aggiornamento di SQ
 
 2. Il tipo di server di origine e di destinazione impostato su **SQL Server** se si sta aggiornando un SQL Server locale a una versione più recente di on-premises SQL Server.
 
-3. Selezionare **Crea**.
+3. Selezionare **Create**.
 
    ![Crea progetto di migrazione](../dma/media/NewCreate.png)
 
@@ -65,9 +65,9 @@ Questo articolo vengono fornite istruzioni dettagliate per l'aggiornamento di SQ
    > [!NOTE]
    > È possibile applicare le impostazioni di migrazione in tutti i database che si esegue la migrazione, selezionando il server nel riquadro sinistro. È anche possibile configurare un database singolo con impostazioni specifiche selezionando il database nel riquadro sinistro.
 
-    A. Specificare il **condiviso percorso accessibile dal server SQL di origine e destinazione per l'operazione di backup**. Assicurarsi che l'account del servizio in esecuzione l'origine SQL Server istanza dispone di scrivere privilegi per la posizione condivisa e l'account del servizio di destinazione dispone di privilegi di lettura per la posizione condivisa.
+    a. Specificare il **condiviso percorso accessibile dal server SQL di origine e destinazione per l'operazione di backup**. Assicurarsi che l'account del servizio in esecuzione l'origine SQL Server istanza dispone di scrivere privilegi per la posizione condivisa e l'account del servizio di destinazione dispone di privilegi di lettura per la posizione condivisa.
 
-    B. Specificare il percorso in cui ripristinare i dati e file di log transazionale nel server di destinazione.
+    b. Specificare il percorso in cui ripristinare i dati e file di log transazionale nel server di destinazione.
 
     ![Aggiungi pagina di database](../dma/media/AddDatabases.png)
 
@@ -79,7 +79,7 @@ Questo articolo vengono fornite istruzioni dettagliate per l'aggiornamento di SQ
 
    ![Opzione per copiare i backup dei database in un percorso diverso](../dma/media/CopyDatabaseDifferentLocation.png)
 
-5. Fare clic su **Avanti**.
+5. Selezionare **Avanti**.
 
 Data Migration Assistant esegue le convalide di cartelle di backup, dati e file di log. Se qualsiasi convalida non riesce, correggere le opzioni e quindi selezionare **successivo**.
 
@@ -111,5 +111,5 @@ Data Migration Assistant esegue le convalide di cartelle di backup, dati e file 
 ## <a name="see-also"></a>Vedere anche
 
 - [Data Migration Assistant (DMA)](../dma/dma-overview.md)
-- [Data Migration Assistant: Le impostazioni di configurazione](../dma/dma-configurationsettings.md)
-- [Data Migration Assistant: Procedure consigliate](../dma/dma-bestpractices.md)
+- [Data Migration Assistant: Impostazioni di configurazione](../dma/dma-configurationsettings.md)
+- [Data Migration Assistant: Le procedure consigliate](../dma/dma-bestpractices.md)

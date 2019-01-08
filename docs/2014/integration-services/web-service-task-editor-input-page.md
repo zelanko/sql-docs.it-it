@@ -15,12 +15,12 @@ ms.assetid: 93529c88-f540-47f2-a10a-12c87318ed6f
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: adc1283b3917bd82478ee4ed2e537926e73aa7e4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7eec6368855b52088d5ed5ff253ec6020286aadf
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48056691"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52515155"
 ---
 # <a name="web-service-task-editor-input-page"></a>Editor attività Servizio Web (pagina Input)
   Utilizzare la pagina **Input** della finestra di dialogo **Editor attività Servizio Web** per specificare il servizio Web, il metodo Web e i valori da fornire come input al metodo Web. I valori possono essere immessi digitando direttamente le stringhe nella colonna Valore o selezionando le variabili nella colonna Valore.  
@@ -35,9 +35,9 @@ ms.locfileid: "48056691"
  Consente di selezionare nell'elenco il metodo Web che l'attività deve eseguire.  
   
  **WebMethodDocumentation**  
- Digitare la descrizione del metodo Web oppure fare clic sul pulsante Sfoglia **(…)** e quindi digitare la descrizione nella finestra di dialogo **Documentazione metodo Web** .  
+ Digitare una descrizione del metodo Web oppure fare clic sul pulsante sfoglia **(...)** e quindi digitare la descrizione nella finestra di dialogo **Documentazione metodo Web**.  
   
- **Nome**  
+ **Name**  
  Elenca i nomi degli input per il metodo Web.  
   
  **Tipo**  
@@ -53,9 +53,9 @@ ms.locfileid: "48056691"
  Se le caselle di controllo Variabile sono selezionate, selezionare le variabili nell'elenco per l'invio degli input. In caso contrario, digitare i valori da utilizzare negli input.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor attività servizio Web &#40;pagina Generale&#41;](general-page-of-integration-services-designers-options.md)   
- [Editor attività servizio Web &#40;pagina di Output&#41;](../../2014/integration-services/web-service-task-editor-output-page.md)   
+ [Guida di riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Editor attività Servizio Web &#40;pagina Generale&#41;](general-page-of-integration-services-designers-options.md)   
+ [Editor attività Servizio Web &#40;pagina Output&#41;](../../2014/integration-services/web-service-task-editor-output-page.md)   
  [Pagina Espressioni](expressions/expressions-page.md)  
   
   

@@ -14,12 +14,12 @@ ms.assetid: 6d9d1481-18e4-4108-9efa-68152b0940c9
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: da1d5ceae73ae17f9e3689a13c21619dac5fbc93
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 596bc66152f36c25169e4a089644042d25f8c13b
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049071"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52391899"
 ---
 # <a name="table-analysis-tools-for-excel"></a>Strumenti di analisi tabelle per Excel
   Strumenti di data mining nel **Analyze** barra degli strumenti sono il modo più semplice per iniziare a usare il data mining. Ogni strumento analizza automaticamente la distribuzione e il tipo di dati e imposta i parametri per garantire la validità dei risultati. Non è necessario selezionare un algoritmo o configurare parametri complessi.  
@@ -34,7 +34,7 @@ ms.locfileid: "48049071"
  Il **analizza fattori di influenza chiave** strumento utilizza l'algoritmo Microsoft Naïve Bayes.  
   
  [Rileva categorie &#40;strumenti di analisi tabelle per Excel&#41;](detect-categories-table-analysis-tools-for-excel.md)  
- Questo strumento consente di aggiungere un set di dati e di applicare il clustering per trovare i raggruppamenti di dati. È utile per trovare analogie e creare gruppi in modo da effettuare ulteriori analisi.  
+ Questo strumento consente di aggiungere un set di dati e di applicare il clustering per trovare i raggruppamenti di dati. È utile per trovare analogie e creare gruppi per analizzare ulteriormente.  
   
  Il **rileva categorie** strumento utilizza l'algoritmo Microsoft Clustering.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "48049071"
  Il **previsione** strumento utilizza l'algoritmo Microsoft Time Series.  
   
  [Evidenzia eccezioni &#40;strumenti di analisi tabelle per Excel&#41;](highlight-exceptions-table-analysis-tools-for-excel.md)  
- Questo strumento consente di analizzare i modelli in una tabella di dati e di trovare le righe e i valori che non rientrano nel modello. È quindi possibile esaminarli e correggerli e infine rieseguire il modello o contrassegnare i valori per un'azione successiva.  
+ Questo strumento analizza i modelli in una tabella di dati e trova le righe e valori che non rientrano nel modello. È quindi possibile esaminarli e correggerli e infine rieseguire il modello o contrassegnare i valori per un'azione successiva.  
   
  Il **evidenzia eccezioni** strumento utilizza l'algoritmo Microsoft Clustering.  
   

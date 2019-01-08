@@ -13,12 +13,12 @@ ms.assetid: 237a577e-b42b-4adb-90cf-aa7fb174f3ab
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d7fe5ffc867063d745a01ed12024acc536f8f634
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cb12dbcee56debfd88b4706ad69ac3ac2d04113a
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48188081"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52398814"
 ---
 # <a name="specify-fill-factor-for-an-index"></a>Specificare un fattore di riempimento per un indice
   In questo argomento si descrive il fattore di riempimento e come specificare un valore del fattore di riempimento in un indice in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -36,7 +36,7 @@ ms.locfileid: "48188081"
   
      [Considerazioni sulle prestazioni](#Performance)  
   
-     [Security](#Security)  
+     [Sicurezza](#Security)  
   
 -   **Per specificare un fattore di riempimento in un indice tramite:**  
   
@@ -65,7 +65,7 @@ ms.locfileid: "48188081"
   
 #### <a name="to-specify-a-fill-factor-by-using-table-designer"></a>Per specificare un fattore di riempimento tramite Progettazione tabelle  
   
-1.  In Esplora oggetti fare clic sul segno più per espandere il database contenente la tabella in cui si desidera specificare il fattore di riempimento di un indice.  
+1.  In Esplora oggetti fare clic sul segno più per espandere il database contenente la tabella in cui si vuole specificare il fattore di riempimento di un indice.  
   
 2.  Fare clic sul segno più per espandere la cartella **Tabelle** .  
   
@@ -83,11 +83,11 @@ ms.locfileid: "48188081"
   
 #### <a name="to-specify-a-fill-factor-in-an-index-by-using-object-explorer"></a>Per specificare un fattore di riempimento in un indice tramite Esplora oggetti  
   
-1.  In Esplora oggetti fare clic sul segno più per espandere il database contenente la tabella in cui si desidera specificare il fattore di riempimento di un indice.  
+1.  In Esplora oggetti fare clic sul segno più per espandere il database contenente la tabella in cui si vuole specificare il fattore di riempimento di un indice.  
   
 2.  Fare clic sul segno più per espandere la cartella **Tabelle** .  
   
-3.  Fare clic sul segno più per espandere la tabella in cui si desidera specificare il fattore di riempimento di un indice.  
+3.  Fare clic sul segno più per espandere la tabella in cui si vuole specificare il fattore di riempimento di un indice.  
   
 4.  Fare clic sul segno più per espandere la cartella **Indici** .  
   
@@ -99,7 +99,7 @@ ms.locfileid: "48188081"
   
 8.  Fare clic su **OK**.  
   
-##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
   
 #### <a name="to-specify-a-fill-factor-in-an-existing-index"></a>Per specificare un fattore di riempimento in un indice esistente  
   

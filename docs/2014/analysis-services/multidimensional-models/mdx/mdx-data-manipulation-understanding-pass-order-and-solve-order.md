@@ -19,12 +19,12 @@ ms.assetid: 7ed7d4ee-4644-4c5d-99a4-c4b429d0203c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5d8d1797bc1ffdf937e37fb1ffae075691a892ab
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9531b22e8154796f4f36a5b5bca04d510877d0ba
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48083011"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52511010"
 ---
 # <a name="understanding-pass-order-and-solve-order-mdx"></a>Informazioni sull'ordine di calcolo e di valutazione (MDX)
   L'operazione di calcolo di un cubo, risultante da uno script MDX, può essere suddivisa in numerose fasi di calcolo a seconda dell'utilizzo delle varie funzionalità correlate ai calcoli. Ognuna di queste fasi viene indicata come sessione di calcolo.  
@@ -70,7 +70,7 @@ ms.locfileid: "48083011"
 > [!NOTE]  
 >  È possibile eseguire queste query MDX sul database multidimensionale di esempio Adventure Works. È possibile scaricare l'esempio relativo ai [modelli multidimensionali di AdventureWorks per SQL Server 2012](http://msftdbprodsamples.codeplex.com/releases/view/55330) dal sito codeplex.  
   
-### <a name="query-1differences-in-income-and-expenses"></a>Query 1 - Differenze tra reddito e spese  
+### <a name="query-1-differences-in-income-and-expenses"></a>Query 1-differenze tra reddito e spese  
  Per la prima query MDX, calcolare la differenza tra vendite e costi per ogni anno costruendo una semplice query MDX simile all'esempio seguente:  
   
 ```  
@@ -95,7 +95,7 @@ FROM [Adventure Works]
 |**CY 2008**|$9,770,899.74|$5,721,205.24|  
 |**Year Difference**|($20,160.56)|$2,878.06|  
   
-### <a name="query-2percentage-of-income-after-expenses"></a>Query 2 - Percentuale di reddito al netto delle spese  
+### <a name="query-2-percentage-of-income-after-expenses"></a>Query 2-percentuale di reddito al netto delle spese  
  Per la seconda query, calcolare la percentuale di reddito al netto delle spese per ogni anno utilizzando la query MDX seguente:  
   
 ```  
@@ -123,10 +123,10 @@ FROM [Adventure Works]
   
  Le differenze nei set di risultati della prima e della seconda query sono dovute alla diversa posizione del membro calcolato. Nella prima query il membro calcolato fa parte dell'asse ROWS e non dell'asse COLUMNS indicato nella seconda query. Questa differenza di posizione diventa importante nella query successiva, in cui i due membri calcolati vengono combinati in una singola query MDX.  
   
-### <a name="query-3combined-year-difference-and-net-income-calculations"></a>Query 3 - Calcolo combinato della differenza annuale e del reddito netto  
- Nella query finale, in cui vengono combinati entrambi gli esempi precedenti in una singola query MDX, l'ordine di valutazione diventa importante a causa dei calcoli in entrambe le colonne e le righe. Per assicurarsi che i calcoli vengano eseguiti nella sequenza corretta, definire la sequenza in cui i calcoli vengano eseguiti tramite il `SOLVE_ORDER` (parola chiave).  
+### <a name="query-3-combined-year-difference-and-net-income-calculations"></a>Eseguire una query differenza di combinazione di 3 anni e i calcoli di reddito netto  
+ Nella query finale, in cui vengono combinati entrambi gli esempi precedenti in una singola query MDX, l'ordine di valutazione diventa importante a causa dei calcoli in entrambe le colonne e le righe. Per assicurarsi che i calcoli vengano eseguiti nella sequenza corretta, definire la sequenza di esecuzione dei calcoli tramite la parola chiave `SOLVE_ORDER`.  
   
- La parola chiave `SOLVE_ORDER` consente di specificare l'ordine di valutazione dei membri calcolati in una query MDX o in un comando `CREATE MEMBER`. I valori integer utilizzati con la `SOLVE_ORDER` (parola chiave) sono relativi e non devono iniziare da zero e è necessario essere consecutivi. Il valore indica semplicemente al sistema MDX di calcolare un membro in base ai valori derivati dal calcolo dei membri con un valore superiore. Se un membro calcolato viene definito senza la `SOLVE_ORDER` parola chiave, il valore predefinito di tale membro è uguale a zero.  
+ La parola chiave `SOLVE_ORDER` consente di specificare l'ordine di valutazione dei membri calcolati in una query MDX o in un comando `CREATE MEMBER`. I valori integer utilizzati con la parola chiave `SOLVE_ORDER` sono relativi e non devono necessariamente iniziare da zero o essere consecutivi. Il valore indica semplicemente al sistema MDX di calcolare un membro in base ai valori derivati dal calcolo dei membri con un valore superiore. Se un membro calcolato viene definito senza la parola chiave `SOLVE_ORDER`, il relativo valore predefinito sarà zero.  
   
  Se ad esempio si combinano i calcoli utilizzati nelle prime due query di esempio, i due membri calcolati `Year Difference` e `Profit Margin`si intersecano in corrispondenza di una singola cella nel set di dati risultante dell'esempio di query MDX. L'unico modo per determinare come questa cella verrà valutata da [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] consiste nell'usare l'ordine di valutazione. Le formule utilizzate per creare la cella genereranno risultati diversi a seconda dell'ordine di valutazione dei due membri calcolati.  
   
@@ -217,6 +217,6 @@ FROM [Adventure Works]
  [CalculationCurrentPass &#40;MDX&#41;](/sql/mdx/calculationcurrentpass-mdx)   
  [CalculationPassValue &#40;MDX&#41;](/sql/mdx/calculationpassvalue-mdx)   
  [Istruzione CREATE MEMBER &#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-member)   
- [La modifica dei dati &#40;MDX&#41;](mdx-data-manipulation-manipulating-data.md)  
+ [Manipolazione dei dati &#40;MDX&#41;](mdx-data-manipulation-manipulating-data.md)  
   
   

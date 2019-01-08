@@ -18,12 +18,12 @@ ms.assetid: 95a455fb-664d-4c95-851e-c6b62d7ebe04
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 50600dcb20df520dc462ed64fcd11333a53d3a66
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3128828bd26e6d2755f30748c23873538b8a7649
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48066841"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52527714"
 ---
 # <a name="create-statistics"></a>Creare statistiche
   È possibile creare statistiche di ottimizzazione delle query per una o più colonne di una tabella o una vista indicizzata in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Per la maggior parte delle query, tramite Query Optimizer vengono già generate le statistiche necessarie per un piano di query di alta qualità, ma in alcuni casi è necessario creare statistiche aggiuntive.  
@@ -34,7 +34,7 @@ ms.locfileid: "48066841"
   
      [Limitazioni e restrizioni](#Restrictions)  
   
-     [Security](#Security)  
+     [Sicurezza](#Security)  
   
 -   **Creare statistiche tramite:**  
   
@@ -67,7 +67,7 @@ ms.locfileid: "48066841"
   
 3.  Fare clic sul segno più per espandere la tabella in cui si desidera creare una nuova statistica.  
   
-4.  Fare clic con il pulsante destro del mouse sulla cartella **Statistiche** e scegliere **Nuove statistiche**.  
+4.  Fare clic con il pulsante destro del mouse sulla cartella **Statistiche** e selezionare **Nuove statistiche...**.  
   
      Nella pagina **Generale** della finestra di dialogo **Nuove statistiche per Tabella***nome_tabella* vengono visualizzate le proprietà seguenti.  
   
@@ -80,7 +80,7 @@ ms.locfileid: "48066841"
      **Colonne statistiche**  
      In questa griglia vengono visualizzate le colonne descritte dal set di statistiche specifico. Tutti i valori presenti nella griglia sono di sola lettura.  
   
-     **Nome**  
+     **Name**  
      Consente di visualizzare il nome della colonna descritta dalle statistiche. Può trattarsi di una singola colonna o di una combinazione di colonne di una singola tabella.  
   
      **Tipo di dati**  
@@ -116,13 +116,13 @@ ms.locfileid: "48066841"
      Nella pagina **Filtro** della finestra di dialogo **Nuove statistiche per Tabella***nome_tabella* viene visualizzata la proprietà seguente.  
   
      **Espressione filtro**  
-     Specifica le righe di dati da includere nelle statistiche filtrate. Ad esempio: `Production.ProductSubcategoryID IN ( 1,2,3 )`.  
+     Specifica le righe di dati da includere nelle statistiche filtrate. Ad esempio, usare `Production.ProductSubcategoryID IN ( 1,2,3 )`  
   
 5.  Nella finestra di dialogo **Nuove statistiche per Tabella***nome_tabella* nella pagina **Generale** fare clic su **Aggiungi**.  
   
      Nella finestra di dialogo **Seleziona colonne** vengono visualizzate le proprietà seguenti. Queste informazioni sono di sola lettura.  
   
-     **Nome**  
+     **Name**  
      Consente di visualizzare il nome della colonna descritta dalle statistiche. Può trattarsi di una singola colonna o di una combinazione di colonne di una singola tabella.  
   
      **Tipo di dati**  
@@ -141,7 +141,7 @@ ms.locfileid: "48066841"
   
 7.  Nella finestra di dialogo **Nuove statistiche per Tabella***nome_tabella* fare clic su **OK**.  
   
-##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
   
 #### <a name="to-create-statistics"></a>Per creare statistiche  
   

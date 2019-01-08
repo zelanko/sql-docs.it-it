@@ -13,15 +13,15 @@ ms.assetid: 7538a82b-b08b-4c8f-9809-e4ccea16db11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0cdbb90bfbca6994a875a0653ee9d34c8e8ffb9e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d62c0864678e116e30a0673bdf2625d70de0cedd
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47775769"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52501777"
 ---
 # <a name="binding-parameters-odbc"></a>Associazione di parametri ODBC
-Ogni parametro in un'istruzione SQL deve essere associato, oppure *associata,* a una variabile nell'applicazione prima che venga eseguita l'istruzione. Quando l'applicazione associa una variabile a un parametro, descrive tale variabile, indirizzo, tipo di dati C e così via, del driver. Viene inoltre descritto il parametro stesso, ovvero i dati di SQL digitare, precisione e così via. Il driver di queste informazioni vengono memorizzate nella struttura mantiene per l'istruzione e utilizza le informazioni per recuperare il valore dalla variabile quando viene eseguita l'istruzione.  
+Ogni parametro in un'istruzione SQL deve essere associato, oppure *associata,* a una variabile nell'applicazione prima che venga eseguita l'istruzione. Quando l'applicazione associa una variabile a un parametro, descrive la variabile indirizzo, tipo di dati C e così via - il driver. Descrive anche il parametro - tipo di dati SQL, precisione e così via. Il driver di queste informazioni vengono memorizzate nella struttura mantiene per l'istruzione e utilizza le informazioni per recuperare il valore dalla variabile quando viene eseguita l'istruzione.  
   
  I parametri possono essere associati o riassociati in qualunque momento prima che venga eseguita un'istruzione. Se un parametro è riassociato dopo che viene eseguita un'istruzione, fino a quando non viene eseguita nuovamente l'istruzione non si applica l'associazione. Per associare un parametro a una variabile diversa, un'applicazione riassocia semplicemente il parametro con la nuova variabile; l'associazione precedente viene rilasciata automaticamente.  
   

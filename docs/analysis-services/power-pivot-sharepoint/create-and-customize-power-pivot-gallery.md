@@ -1,5 +1,5 @@
 ---
-title: Creare e personalizzare la raccolta Power Pivot | Documenti Microsoft
+title: Creare e personalizzare la raccolta Power Pivot | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 3c705a54d24b358593b1f1fafec328e3d2fa6fd9
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 0cc45718f864f14ade20348b5dae76286ea14f3a
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34025978"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52417122"
 ---
 # <a name="create-and-customize-power-pivot-gallery"></a>Creare e personalizzare la Raccolta PowerPivot
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -40,9 +40,9 @@ ms.locfileid: "34025978"
   
     > [!NOTE]  
     >  Con la raccolta di Power Pivot è richiesto Microsoft Silverlight.  Il browser Microsoft Edge non supporta Silverlight.   
-    > Per visualizzare il contenuto della raccolta in Edge, fare clic sulla scheda **Raccolta** nella raccolta di Power Pivot e quindi impostare la visualizzazione della raccolta documenti su **Tutti i documenti**.    
+    > Per visualizzare il contenuto della raccolta in Microsoft Edge, fare clic sulla scheda **Raccolta** nella raccolta di Power Pivot e quindi impostare la visualizzazione della raccolta documenti su **Tutti i documenti**.    
     > Per cambiare la visualizzazione predefinita, fare clic sulla scheda **Raccolta** e quindi scegliere Modifica visualizzazione. Fare clic su "Imposta come visualizzazione predefinita" e quindi su OK per salvare la visualizzazione predefinita.  
-    >  Per altre informazioni sulle funzionalità supportate in Microsoft Edge, vedere il post di blog di Windows sulle [differenze tra Edge e i browser precedenti e sul supporto di ActiveX, VBScript e altri componenti](https://blogs.windows.com/msedgedev/2015/05/06/a-break-from-the-past-part-2-saying-goodbye-to-activex-vbscript-attachevent/).  
+    >  Per altre informazioni su funzionalità supportate di Edge, vedere il blog di Windows, [un'interruzione passata, parte 2: Dire addio ActiveX, VBScript...](https://blogs.windows.com/msedgedev/2015/05/06/a-break-from-the-past-part-2-saying-goodbye-to-activex-vbscript-attachevent/)  
   
 -   Per creare una raccolta, è necessario essere proprietari del sito.  
   
@@ -64,13 +64,13 @@ ms.locfileid: "34025978"
 ##  <a name="createlib"></a> Creare la Raccolta Power Pivot  
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] viene creata durante l'installazione di [!INCLUDE[ssGeminiLong](../../includes/ssgeminilong-md.md)] tramite l'opzione di installazione Nuovo server. Se è stato aggiunto [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] a una farm esistente o si desidera una raccolta aggiuntiva, è possibile crearne una nuova per l'applicazione o il sito.  
   
-1.  1.  **SharePoint 2010**: fare clic su **Azioni sito** nell'angolo superiore sinistro della home page del sito.  
+1.  1.  **SharePoint 2010**: Fare clic su **Azioni sito** nell'angolo superiore sinistro della home page del sito.  
   
     2.  Fare clic su **Altre opzioni**.  
   
     3.  In Raccolte fare clic su **Raccolta [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]**.  
   
-    1.  **SharePoint 2013**: fare clic sull'icona impostazioni ![impostazioni SharePoint](../../analysis-services/media/as-sharepoint2013-settings-gear.gif "impostazioni SharePoint"). Fare clic su **Contenuto sito**.  
+    1.  **SharePoint 2013**: Fare clic sull'icona delle impostazioni ![impostazioni SharePoint](../../analysis-services/media/as-sharepoint2013-settings-gear.gif "impostazioni SharePoint"). Fare clic su **Contenuto sito**.  
   
     2.  Fare clic su **Aggiungi applicazione**.  
   
@@ -104,9 +104,9 @@ ms.locfileid: "34025978"
   
 2.  Nella barra multifunzione fare clic su **Raccolta**.  
   
-3.  **SharePoint 2010:** in Visualizzazioni personalizzate fare clic su **Modifica visualizzazione**.  
+3.  **SharePoint 2010:** In visualizzazioni personalizzate fare clic su **Modifica visualizzazione**.  
   
-     **SharePoint 2013:** in **Gestisci visualizzazioni**fare clic su **Modifica visualizzazione**.  
+     **SharePoint 2013:** Nelle **Gestisci visualizzazioni**, fare clic su **Modifica visualizzazione**.  
   
 4.  In Ordinamento specificare i criteri che verranno usati per determinare la modalità di visualizzazione delle cartelle di lavoro nell'elenco. Per impostazione predefinita, i documenti vengono elencati nell'ordine in cui sono stati aggiunti.  
   
@@ -121,7 +121,7 @@ ms.locfileid: "34025978"
   
  ![as_powerpivot_refresh_manage_reresh](../../analysis-services/power-pivot-sharepoint/media/as-powerpivot-refresh-manage-reresh.gif "as_powerpivot_refresh_manage_reresh")  
   
- Gli autori o i proprietari delle cartelle di lavoro devono disporre dell'autorizzazione **Collaborazione** per pianificare l'aggiornamento dati in una cartella di lavoro. Gli utenti che dispongono di autorizzazioni di collaborazione possono aprire e modificare la pagina di configurazione dell'aggiornamento dati della cartella di lavoro per specificare le credenziali e le informazioni di pianificazione usate per aggiornare i dati.  
+ Gli autori o i proprietari delle cartelle di lavoro devono disporre dell'autorizzazione **Collaborazione** per pianificare l'aggiornamento dati in una cartella di lavoro. Gli utenti con autorizzazioni di collaborazione possono aprire e modificare pagina Configurazione dell'aggiornamento dati della cartella di lavoro per specificare le credenziali e le informazioni utilizzate per aggiornare i dati di pianificazione.  
   
  Pertanto, gli utenti che dispongono unicamente di livelli di autorizzazione di **visualizzazione** o **lettura** non possono accedere al pulsante Aggiorna. Il pulsante Aggiorna è visibile ma disabilitato. Per altre informazioni, vedere [Autorizzazioni utente e livelli di autorizzazione in SharePoint 2013](http://technet.microsoft.com/library/cc721640.aspx).  
   
@@ -148,7 +148,7 @@ ms.locfileid: "34025978"
   
 ## <a name="see-also"></a>Vedere anche  
  [Risolvere i problemi relativi all'installazione di PowerPivot per SharePoint](../../analysis-services/troubleshoot-a-power-pivot-for-sharepoint-installation.md)   
- [Usare la raccolta Power Pivot](../../analysis-services/power-pivot-sharepoint/use-power-pivot-gallery.md)   
+ [Usare la Raccolta Power Pivot](../../analysis-services/power-pivot-sharepoint/use-power-pivot-gallery.md)   
  [Creare un percorso attendibile per i siti PowerPivot in Amministrazione centrale](../../analysis-services/power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)   
  [Eliminare una raccolta Power Pivot](../../analysis-services/power-pivot-sharepoint/delete-power-pivot-gallery.md)  
   

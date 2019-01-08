@@ -20,16 +20,16 @@ ms.assetid: 9a60f004-1477-4c54-a20c-7378e1116713
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 23a81ceda914bb43d4361e9c6fb8a2409bf2556e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f91799e5d484a763c23fcc132232a8a35fc6152c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47809069"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52517406"
 ---
 # <a name="sqlputdata-function"></a>SQLPutData Function
 **Conformità**  
- Versione introdotta: Conformità agli standard 1.0 di ODBC: ISO 92  
+ Versione introdotta: Conformità agli standard 1.0 ODBC: ISO 92  
   
  **Riepilogo**  
  **SQLPutData** consente a un'applicazione inviare i dati per un parametro o della colonna per il driver in fase di esecuzione di istruzione. Questa funzione è utilizzabile per l'invio di caratteri o valori di dati binari nelle parti a una colonna con un tipo specifico dell'origine dati carattere, binary o dati (ad esempio, i parametri dei tipi SQL_LONGVARBINARY o SQL_LONGVARCHAR). **SQLPutData** supporta l'associazione a un tipo di dati Unicode C, anche se il driver sottostante non supporta i dati Unicode.  
@@ -60,7 +60,7 @@ SQLRETURN SQLPutData(
   
 -   Il tipo di dati C è SQL_C_DEFAULT, e il tipo di dati C predefinito per il tipo di dati SQL specificato è SQL_C_CHAR o SQL_C_BINARY.  
   
- Per tutti gli altri tipi di dati C, se *StrLen_or_Ind* SQL_NULL_DATA o SQL_DEFAULT_PARAM, non il driver presuppone che le dimensioni dei \* *DataPtr* buffer è la dimensione del tipo di dati C specificato con *ValueType* oppure *TargetType* e invia l'intero valore dei dati. Per altre informazioni, vedere [conversione di dati da C a tipi di dati SQL](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md) nell'appendice d: i tipi di dati.  
+ Per tutti gli altri tipi di dati C, se *StrLen_or_Ind* SQL_NULL_DATA o SQL_DEFAULT_PARAM, non il driver presuppone che le dimensioni dei \* *DataPtr* buffer è la dimensione del tipo di dati C specificato con *ValueType* oppure *TargetType* e invia l'intero valore dei dati. Per altre informazioni, vedere [conversione di dati da C a tipi di dati SQL](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md) nell'appendice d: Tipi di dati.  
   
 ## <a name="returns"></a>Valori di codice restituiti  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_STILL_EXECUTING, SQL_ERROR o SQL_INVALID_HANDLE.  
@@ -68,7 +68,7 @@ SQLRETURN SQLPutData(
 ## <a name="diagnostics"></a>Diagnostica  
  Quando **SQLPutData** restituisce SQL_ERROR o SQL_SUCCESS_WITH_INFO, un valore SQLSTATE associato possono essere ottenuti chiamando **SQLGetDiagRec** con un *HandleType* di SQL _ HANDLE_STMT e un *gestiscono* dei *StatementHandle*. Nella tabella seguente sono elencati i valori SQLSTATE comunemente restituiti da **SQLPutData** e illustra ognuna nel contesto di questa funzione; la notazione "(DM)" precede le descrizioni di SQLSTATE restituiti da Gestione Driver. Il codice restituito a ogni valore SQLSTATE è SQL_ERROR, se non specificato diversamente.  
   
-|SQLSTATE|Errore|Description|  
+|SQLSTATE|Errore|Descrizione|  
 |--------------|-----------|-----------------|  
 |01000|Avviso generale|Messaggio informativo specifico del driver. (Funzione restituisce SQL_SUCCESS_WITH_INFO).|  
 |01004|Stringa troncati di dati a destra|Stringa o dati binari restituiti per un parametro di output ha comportato il troncamento del carattere non vuote o dati binari non NULL. Se si tratta di un valore stringa, era troncati a destra. (Funzione restituisce SQL_SUCCESS_WITH_INFO).|  

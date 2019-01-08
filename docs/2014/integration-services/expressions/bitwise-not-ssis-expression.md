@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - bitwise NOT (~)
@@ -14,12 +13,12 @@ ms.assetid: e4413ddd-0d0e-40c3-9c76-b5ce323218ec
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 655f09c1470e37f7d1503e1e3d151a734210e45c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e70e53d4cbcb0eab7c7484cafea303e758a5b000
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48154321"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52810353"
 ---
 # <a name="-bitwise-not-ssis-expression"></a>~ (NOT bit per bit) (espressione SSIS)
   Viene eseguita una negazione bit per bit di un valore integer. Questo operatore può essere applicato a tipi di dati integer con e senza segno.  
@@ -60,6 +59,6 @@ ms.locfileid: "48154321"
   
 ## <a name="see-also"></a>Vedere anche  
  [Precedenza e associatività degli operatori](operator-precedence-and-associativity.md)   
- [Gli operatori &#40;espressione di SSIS&#41;](operators-ssis-expression.md)  
+ [Operatori &#40;espressione SSIS&#41;](operators-ssis-expression.md)  
   
   

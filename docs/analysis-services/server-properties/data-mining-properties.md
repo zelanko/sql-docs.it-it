@@ -1,5 +1,5 @@
 ---
-title: Proprietà di Data Mining | Documenti Microsoft
+title: Proprietà di Data Mining di Analysis Services | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 9a5825df52bf839e604545acf56fa9650053e4a6
-ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
+ms.openlocfilehash: bd1440e5ce0649d31f0ae6c0577c61e9e081a800
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35238801"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072028"
 ---
 # <a name="data-mining-properties"></a>Proprietà di data mining
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

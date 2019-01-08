@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - containers [Integration Services], variables
@@ -17,22 +16,22 @@ ms.assetid: efecd0d4-1489-4eba-a8fe-275d647058b8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7c77ca84cd844b5c49f704d44f2eca3ba34c4269
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f0798b78aebb308d76585df0e5c7e6e9200e20b6
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48163471"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52792314"
 ---
 # <a name="system-variables"></a>Variabili di sistema
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] include un set di variabili di sistema in cui vengono archiviate informazioni sui pacchetti in esecuzione e sui relativi oggetti. Tali variabili possono essere utilizzate nelle espressioni e nelle espressioni di proprietà per personalizzare pacchetti, contenitori, attività e gestori di eventi.  
   
- Tutte le variabili, di sistema e definite dall'utente, possono essere utilizzate nelle associazioni di parametro utilizzate dall'attività Esegui SQL per il mapping di variabili a parametri.  
+ È possibile usare tutte le variabili, di sistema e definite dall'utente, nelle associazioni di parametro usate dall'attività Esegui SQL per il mapping delle variabili ai parametri.  
   
 ## <a name="system-variables-for-packages"></a>Variabili di sistema per i pacchetti  
  Nella tabella seguente vengono descritte le variabili di sistema disponibili in [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] per i pacchetti.  
   
-|Variabile di sistema|Tipo di dati|Description|  
+|Variabile di sistema|Tipo di dati|Descrizione|  
 |---------------------|---------------|-----------------|  
 |**CancelEvent**|Int32|Handle di un oggetto Eventi di Windows che l'attività può segnalare per indicare che l'attività deve essere arrestata.|  
 |`ContainerStartTime`|DateTime|Ora di inizio del contenitore.|  
@@ -60,14 +59,14 @@ ms.locfileid: "48163471"
 ## <a name="system-variables-for-containers"></a>Variabili di sistema per i contenitori  
  La tabella seguente descrive le variabili di sistema disponibili in [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] per i contenitori Ciclo For, Ciclo Foreach e Sequenza.  
   
-|Variabile di sistema|Tipo di dati|Description|Contenitore|  
+|Variabile di sistema|Tipo di dati|Descrizione|Contenitore|  
 |---------------------|---------------|-----------------|---------------|  
 |`LocaleId`|Int32|Impostazioni locali utilizzate dal contenitore.|Contenitore Ciclo For<br /><br /> Contenitore Ciclo Foreach<br /><br /> Sequenza - contenitore|  
   
 ## <a name="system-variables-for-tasks"></a>Variabili di sistema per le attività  
  Nella tabella seguente vengono descritte le variabili di sistema disponibili in [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] per le attività.  
   
-|Variabile di sistema|Tipo di dati|Description|  
+|Variabile di sistema|Tipo di dati|Descrizione|  
 |---------------------|---------------|-----------------|  
 |**CreationName**|String|Nome dell'attività.|  
 |`LocaleId`|Int32|Impostazioni locali utilizzate dall'attività.|  
@@ -78,7 +77,7 @@ ms.locfileid: "48163471"
 ## <a name="system-variables-for-event-handlers"></a>Variabili di sistema per i gestori di eventi  
  Nella tabella seguente vengono descritte le variabili di sistema disponibili in [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] per i gestori di eventi. Non tutte le variabili sono disponibili per tutti i gestori di eventi.  
   
-|Variabile di sistema|Tipo di dati|Description|Gestore di evento|  
+|Variabile di sistema|Tipo di dati|Descrizione|Gestore di evento|  
 |---------------------|---------------|-----------------|-------------------|  
 |**Annulla**|Boolean|Indica se l'esecuzione del gestore di evento viene arrestata in caso di errore, avviso o annullamento della query.|Gestore dell'evento OnError<br /><br /> Gestore dell'evento OnWarning<br /><br /> Gestore dell'evento OnQueryCancel|  
 |**ErrorCode**|Int32|Identificatore dell'errore.|Gestore dell'evento OnError<br /><br /> Gestore dell'evento OnInformation<br /><br /> Gestore dell'evento OnWarning|  
@@ -90,7 +89,7 @@ ms.locfileid: "48163471"
 |**ProgressCountHigh**|Int32|Parte più significativa di un valore a 64 bit che indica il numero totale delle operazioni elaborate dall'evento OnProgress.|Gestore dell'evento OnProgress|  
 |`ProgressCountLow`|Int32|Parte meno significativa di un valore a 64 bit che indica il numero totale delle operazioni elaborate dall'evento OnProgress.|Gestore dell'evento OnProgress|  
 |**ProgressDescription**|String|Descrizione dell'avanzamento.|Gestore dell'evento OnProgress|  
-|`Propagate`|Boolean|Indica se l'evento viene propagato a un gestore di evento di livello superiore.<br /><br /> Nota: Il valore della `Propagate` variabile viene ignorata durante la convalida del pacchetto.<br /><br /> Se si imposta `Propagate` su `False` in un pacchetto figlio, ciò non impedisce la propagazione di un evento fino al pacchetto padre.|Tutti i gestori di eventi|  
+|`Propagate`|Boolean|Indica se l'evento viene propagato a un gestore di evento di livello superiore.<br /><br /> Nota: Il valore della variabile `Propagate` viene ignorato durante la convalida del pacchetto.<br /><br /> Se si imposta `Propagate` su `False` in un pacchetto figlio, ciò non impedisce la propagazione di un evento fino al pacchetto padre.|Tutti i gestori di eventi|  
 |`SourceDescription`|String|Descrizione dell'eseguibile nel gestore di evento che ha generato l'evento.|Tutti i gestori di eventi|  
 |`SourceID`|String|Identificatore univoco dell'eseguibile nel gestore di evento che ha generato l'evento.|Tutti i gestori di eventi|  
 |**SourceName**|String|Nome dell'eseguibile nel gestore di evento che ha generato l'evento.|Tutti i gestori di eventi|  

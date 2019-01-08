@@ -1,5 +1,5 @@
 ---
-title: 'Analysis Services tutorial-lezione 4: creare relazioni | Microsoft Docs'
+title: 'Analysis Services tutorial-lezione 4: Creare relazioni | Microsoft Docs'
 ms.date: 08/27/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 1768bd38be49515012139f8cd93c749ac7e3c48c
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: a39978dc461bd660d932e13561ed4d00c4041e0e
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43063732"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52394521"
 ---
 # <a name="create-relationships"></a>Creare relazioni
 
@@ -26,7 +26,7 @@ Tempo stimato per il completamento della lezione: **10 minuti**
   
 ## <a name="prerequisites"></a>Prerequisiti  
 
-Questo articolo fa parte di un'esercitazione di modellazione tabulare, che deve essere completata nell'ordine. Prima di eseguire le attività in questa lezione, è necessario avere completato la lezione precedente: [lezione 3: contrassegna come tabella data](../tutorial-tabular-1400/as-lesson-3-mark-as-date-table.md). 
+Questo articolo fa parte di un'esercitazione di modellazione tabulare, che deve essere completata nell'ordine. Prima di eseguire le attività in questa lezione, è necessario avere completato la lezione precedente: [Lezione 3: Contrassegna come tabella data](../tutorial-tabular-1400/as-lesson-3-mark-as-date-table.md). 
   
 ## <a name="review-existing-relationships-and-add-new-relationships"></a>Esaminare le relazioni esistenti e aggiungere nuove relazioni  
 
@@ -50,7 +50,7 @@ Prima di procedere alla creazione del modello, è necessario verificare le relaz
   
 2.  Fare clic su linea continua tra il **DimCustomer** tabella e il **DimGeography** tabella. La linea continua tra queste due tabelle illustra che questa relazione è attiva, vale a dire, che viene utilizzato per impostazione predefinita quando si calcola le formule DAX.  
   
-    Si noti che il **GeographyKey** colonna il **DimCustomer** tabella e il **GeographyKey** colonna nel **DimGeography** tabella ora entrambe visualizzate all'interno di una finestra. Queste colonne vengono utilizzate nella relazione. Le proprietà della relazione sono ora visualizzate nella finestra **Proprietà** .  
+    Si noti che il **GeographyKey** colonna il **DimCustomer** tabella e il **GeographyKey** colonna nel **DimGeography** tabella ora entrambe visualizzate all'interno di una finestra. Queste colonne vengono utilizzate nella relazione. Le proprietà della relazione sono ora visualizzate nella **proprietà** finestra.  
   
     > [!TIP]  
     > È anche possibile usare la finestra di dialogo Gestisci relazioni per mostrare le relazioni tra tutte le tabelle in un formato tabella. In Esplora modelli tabulari, fare doppio clic su **relazioni** > **Gestisci relazioni**.
@@ -59,13 +59,13 @@ Prima di procedere alla creazione del modello, è necessario verificare le relaz
   
     |Attiva|Tabella|Tabella di ricerca correlata|  
     |----------|---------|------------------------|  
-    |Sì|**DimCustomer [GeographyKey]**|**DimGeography [GeographyKey]**|  
-    |Sì|**DimProduct [ProductSubcategoryKey]**|**DimProductSubcategory [ProductSubcategoryKey]**|  
-    |Sì|**DimProductSubcategory [ProductCategoryKey]**|**DimProductCategory [ProductCategoryKey]**|  
-    |Sì|**FactInternetSales [CustomerKey]**|**DimCustomer [CustomerKey]**|  
-    |Sì|**FactInternetSales [ProductKey]**|**DimProduct [ProductKey]**|  
+    |Yes|**DimCustomer [GeographyKey]**|**DimGeography [GeographyKey]**|  
+    |Yes|**DimProduct [ProductSubcategoryKey]**|**DimProductSubcategory [ProductSubcategoryKey]**|  
+    |Yes|**DimProductSubcategory [ProductCategoryKey]**|**DimProductCategory [ProductCategoryKey]**|  
+    |Yes|**FactInternetSales [CustomerKey]**|**DimCustomer [CustomerKey]**|  
+    |Yes|**FactInternetSales [ProductKey]**|**DimProduct [ProductKey]**|  
   
-    Se sono presenti le relazioni mancante, verificare il modello includa le tabelle seguenti: DimCustomer, DimDate, DimGeography, DimProduct, DimProductCategory, DimProductSubcategory e FactInternetSales. Se si importano tabelle dalla stessa connessione origine dati in momenti distinti, tutte le relazioni tra tali tabelle non vengono create e devono essere create manualmente. Se è visualizzata alcuna relazione, significa che non sono presenti relazioni nell'origine dati. È possibile crearli manualmente nel modello di dati.
+    Se sono presenti le relazioni mancante, verificare che il modello includa le tabelle seguenti: DimCustomer, DimDate, DimGeography, DimProduct, DimProductCategory, DimProductSubcategory e FactInternetSales. Se si importano tabelle dalla stessa connessione origine dati in momenti distinti, tutte le relazioni tra tali tabelle non vengono create e devono essere create manualmente. Se è visualizzata alcuna relazione, significa che non sono presenti relazioni nell'origine dati. È possibile crearli manualmente nel modello di dati.
 
 ### <a name="take-a-closer-look"></a>Un attento
 

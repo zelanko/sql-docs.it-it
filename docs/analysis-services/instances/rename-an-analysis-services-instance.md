@@ -1,5 +1,5 @@
 ---
-title: Rinominare un'istanza di Analysis Services | Documenti Microsoft
+title: Rinominare un'istanza di Analysis Services | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 6214dbcef4036bc545a931f90ee8dca4580ef287
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 7ec5f84d40c3ba0628ea111502dd2be41cc7d346
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34015918"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52393014"
 ---
 # <a name="rename-an-analysis-services-instance"></a>Rinominare un'istanza di Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "34015918"
   
      L'aggiornamento di un account di accesso al database o delle autorizzazioni per i file sarà necessario se per il provisioning del servizio è stato utilizzato un account virtuale. Gli account virtuali sono basati sul nome dell'istanza, pertanto se si rinomina l'istanza, verrà aggiornato contemporaneamente anche l'account virtuale. Ciò significa che qualsiasi account di accesso o autorizzazione precedente creata per l'istanza precedente non sarà più valida.  
   
-     Di seguito ne viene illustrato un esempio. Si supponga di avere installato un server in modalità tabulare come istanza denominata "Tabular" tramite l'account virtuale predefinito, che determina la configurazione seguente:  
+     Di seguito ne viene illustrato un esempio. Si supponga che un server in modalità tabulare è stato installato come istanza denominata "Tabular" tramite l'account virtuale predefinito, causando la configurazione seguente:  
   
     1.  Nome istanza = \<server > \TABULAR  
   
@@ -60,7 +60,7 @@ ms.locfileid: "34015918"
   
     3.  Account virtuale = NT Service\ MSOLAP$TABULAR  
   
-     Si supponga ora di rinominare l'istanza in "TAB2". Come un risultato della modifica del nome, la configurazione sarà simile alla seguente:  
+     Ora si supponga che si rinomina l'istanza in "TAB2". Come un risultato della modifica del nome, la configurazione sarà simile alla seguente:  
   
     1.  Nome istanza = \<server > \TAB2  
   
@@ -68,6 +68,6 @@ ms.locfileid: "34015918"
   
     3.  Account virtuale =NT Service\ MSOLAP$TAB2  
   
-     Come è possibile vedere, le autorizzazioni per database e i file concesse precedentemente a "NT Service\ MSOLAP$TABULAR" non sono più valide. Per accertarsi che attività e operazioni eseguite dal servizio vengano eseguite come prima, sarà necessario concedere nuove autorizzazioni per database e file a "NT Service\ MSOLAP$TAB2".  
+     Come può notare, le autorizzazioni di database e file concesse precedentemente a "NT Service \ MSOLAP$ TABULAR" non sono più valide. Per garantire che le attività e sulle operazioni eseguite dal servizio eseguite come prima, sarà ora necessario concedere nuove autorizzazioni di database e il file a "NT Service \ MSOLAP$TAB2".  
   
   

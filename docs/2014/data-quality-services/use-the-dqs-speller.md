@@ -10,12 +10,12 @@ ms.assetid: 65e4e53e-2699-4cae-a9e0-fe78547755b5
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 44169d3d7b2744b06af31eb6212383db3a0f8b36
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 7d3e0ab451344b443452052960c16f9ccfdc9462
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51032778"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52412948"
 ---
 # <a name="use-the-dqs-speller"></a>Utilizzare il correttore ortografico DQS
   Il correttore ortografico di [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) consente di controllare la sintassi, l'ortografia e la struttura della frase dei valori stringa in un dominio. Il correttore ortografico è una funzionalità autonoma lato client che non viene integrata con i motori lato server e non influisce sui flussi o gli stati correnti. Il correttore ortografico identifica i valori stringa che considera errori potenziali, quindi li contrassegna con una sottolineatura rossa nella stessa posizione in cui vengono apportate le altre modifiche manuali ai valori del dominio. Queste posizioni includono:  
@@ -64,7 +64,7 @@ ms.locfileid: "51032778"
   
 6.  Se si desidera aggiungere il valore al dizionario, fare clic su **Aggiungi al dizionario**. La sottolineatura rossa scomparirà dal valore.  
   
-##  <a name="FollowUp"></a> Completamento: fasi successive all'utilizzo del correttore ortografico  
+##  <a name="FollowUp"></a> Completamento: Dopo aver usato il correttore ortografico  
  Dopo avere eseguito il correttore ortografico, completare l'attività in cui si trova il dominio per utilizzare le correzioni suggerite dal correttore ortografico. Se il dominio si trova nell'attività di individuazione delle informazioni, gestione del dominio o criteri di corrispondenza, pubblicare la Knowledge Base per rendere disponibili i risultati dell'analisi del correttore ortografico e consentirne l'utilizzo nella Knowledge Base. Per altre informazioni, vedere [Eseguire l'individuazione delle informazioni](../../2014/data-quality-services/perform-knowledge-discovery.md), [Gestione di un dominio](../../2014/data-quality-services/managing-a-domain.md) o [Creare criteri di corrispondenza](../../2014/data-quality-services/create-a-matching-policy.md).  
   
 ##  <a name="How"></a> Funzionamento del correttore ortografico  

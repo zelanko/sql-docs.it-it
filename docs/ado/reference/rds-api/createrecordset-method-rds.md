@@ -20,12 +20,12 @@ ms.assetid: 6840b1e5-c04d-4d3e-9dcc-42128c83492f
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4b376924dfb1833165a1f40ecfd1487c49eb2dcb
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: a8646fba41809fe3ed6a062e7a066ed0dce5c007
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51604621"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52516723"
 ---
 # <a name="createrecordset-method-rds"></a>Metodo CreateRecordset (Servizi Desktop remoto)
 Crea un oggetto vuoto, disconnesso [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  
@@ -47,7 +47,7 @@ object.CreateRecordset(ColumnInfos)
  *ColumnsInfos*  
  Oggetto **Variant** matrice di attributi che definiscono ciascuna colonna il **Recordset** creato. Ogni definizione di colonna contiene una matrice di quattro attributi obbligatori e un attributo facoltativo.  
   
-|attribute|Description|  
+|attribute|Descrizione|  
 |---------------|-----------------|  
 |nome|Nome dell'intestazione di colonna.|  
 |Tipo|Valore intero del tipo di dati.|  
@@ -62,7 +62,7 @@ object.CreateRecordset(ColumnInfos)
   
  La tabella seguente elenca i [DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md) i valori supportati per il **CreateRecordset** (metodo). Il numero indicato è il numero di riferimento usato per definire i campi.  
   
- Ognuno dei tipi di dati è a lunghezza fissa o a lunghezza variabile. Tipi a lunghezza fissa devono essere definiti con una dimensione pari a – 1, perché la dimensione è predeterminata e una definizione di dimensioni è ancora necessaria. Tipi di dati a lunghezza variabile consentono una dimensione compreso tra 1 e 32767.  
+ Ognuno dei tipi di dati è a lunghezza fissa o a lunghezza variabile. Tipi a lunghezza fissa devono essere definiti con una dimensione di -1, perché la dimensione è predeterminata e una definizione di dimensioni è ancora necessaria. Tipi di dati a lunghezza variabile consentono una dimensione compreso tra 1 e 32767.  
   
  Per alcuni dei tipi di dati della variabile, il tipo può essere assegnato al tipo indicato nella colonna di sostituzione. Non si vedranno le sostituzioni fino a dopo il **Recordset** creato e riempito. È quindi possibile cercare il tipo di dati effettivo, se necessario.  
   

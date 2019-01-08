@@ -18,12 +18,12 @@ ms.assetid: b2018116-cf1a-4e54-b29c-39e0ca2bda77
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: da531e62f2067ff1ae217a313d1fdd0eb8ce24a7
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: 89f395d7456eaca66d2f225fd47e4cf957186fe2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120118"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518008"
 ---
 # <a name="data-alert-designer"></a>Finestra di progettazione Avviso dati
   Le definizioni di avviso dati vengono create e modificate nella finestra di progettazione Avviso dati. Una definizione di avviso è una raccolta di metadati, inclusi i dati del report a cui si è interessati, le regole che i dati del report devono soddisfare per creare istanze di avviso dati e inviare messaggi di avviso dati, i destinatari del messaggio di avviso e così via.  
@@ -147,13 +147,13 @@ ms.locfileid: "49120118"
 ### <a name="schedule-settings"></a>Impostazioni di pianificazione  
  Tramite la pianificazione definita per l'avviso dati viene stabilito il criterio di ricorrenza per l'invio del messaggio di avviso dati, nonché quando avviare e arrestare l'invio dei messaggi di avviso. I criteri prevedono singola occorrenza, minuto, giornaliero e settimanale. Anche se un avviso dispone di una sola pianificazione, utilizzando tali intervalli è possibile creare criteri di ricorrenza complessi in grado di soddisfare la maggior parte delle esigenze aziendali. Di seguito sono riportati esempi di criteri di ricorrenza comuni da utilizzare nelle pianificazioni:  
   
--   **Giornaliera, ogni 10 giorni** : gli avvisi vengono inviati una volta al giorno, ogni 10 giorni.  
+-   **Giornaliera, ogni 10 giorni**: gli avvisi vengono inviati una volta al giorno, ogni 10 giorni.  
   
--   **Settimanale, ogni 2 settimane di lunedì** : gli avvisi vengono inviati solo ogni due settimane di lunedì.  
+-   **Settimanale, ogni 2 settimane di lunedì**: gli avvisi vengono inviati solo ogni due settimane di lunedì.  
   
--   **Oraria, ogni 12 ore** : gli avvisi vengono inviati ogni 12 ore.  
+-   **Oraria, ogni 12 ore**: gli avvisi vengono inviati ogni 12 ore.  
   
--   **Minuto, ogni 30 minuti** : gli avvisi vengono inviati ogni 30 minuti.  
+-   **Minuto, ogni 30 minuti**: gli avvisi vengono inviati ogni 30 minuti.  
   
  Il criterio di ricorrenza consente di specificare quando viene inviato l'avviso. Se le regole vengono soddisfatte durante l'intervallo specificato dal criterio, l'avviso non viene inviato fino alla fine dell'intervallo.  
   
@@ -172,7 +172,7 @@ ms.locfileid: "49120118"
  Per altre informazioni sulla modalità di generazione del messaggio di posta elettronica, vedere [Reporting Services Data Alerts](../ssms/agent/alerts.md).  
   
 ##  <a name="CreateAlert"></a> Creare una definizione di avviso dati  
- Se all'utente vengono concesse le autorizzazioni Visualizzazione elementi e Creazione avvisi di SharePoint, potrà creare una definizione di avviso dati per qualsiasi report per il quale dispone dell'autorizzazione per la visualizzazione, a condizione che nel report vengano utilizzate credenziali archiviate o nessuna credenziale. Il report viene eseguito da una raccolta di SharePoint. I dati disponibili per l'utilizzo nella finestra di progettazione Avviso dati provengono dal report. Se il report include parametri, si potrebbe essere necessario eseguire il report utilizzando i valori di parametro diversi per garantire che i dati che sia interessati a verrà visualizzata nel report. Dopo aver aperto il report, scegliere **Nuovo avviso dati** dal menu **Azioni** sulla barra degli strumenti dei report per aprire la finestra di progettazione Avviso dati. Nell'immagine seguente viene illustrato come aprire la finestra di progettazione Avviso dati.  
+ Se all'utente vengono concesse le autorizzazioni Visualizzazione elementi e Creazione avvisi di SharePoint, potrà creare una definizione di avviso dati per qualsiasi report per il quale dispone dell'autorizzazione per la visualizzazione, a condizione che nel report vengano utilizzate credenziali archiviate o nessuna credenziale. Il report viene eseguito da una raccolta di SharePoint. I dati disponibili per l'utilizzo nella finestra di progettazione Avviso dati provengono dal report. Se il report è con parametri, potrebbe essere necessario eseguirlo usando valori dei parametri diversi per assicurarsi che i dati di interesse vengano visualizzati nel report. Dopo aver aperto il report, scegliere **Nuovo avviso dati** dal menu **Azioni** sulla barra degli strumenti dei report per aprire la finestra di progettazione Avviso dati. Nell'immagine seguente viene illustrato come aprire la finestra di progettazione Avviso dati.  
   
  ![Aprire la finestra di progettazione Avviso dati dalla raccolta di SharePoint](media/rs-openalertdesigneriw.gif "Aprire la finestra di progettazione Avviso dati dalla raccolta di SharePoint")  
   

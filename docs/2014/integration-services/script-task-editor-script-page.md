@@ -15,12 +15,12 @@ ms.assetid: 93da0e0d-83f5-406d-b144-4cce216571cb
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5ee7bb13e8a9fa4826297cd0c55b82881aee5296
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 959263ce45c5f15adab12625d8af10148d98dc22
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48198081"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52520707"
 ---
 # <a name="script-task-editor-script-page"></a>Editor attività Script (pagina Script)
   Utilizzare la pagina **Script** della finestra di dialogo **Editor attività Script** per impostare le proprietà dello script e specificare le variabili accessibili per lo script.  
@@ -44,13 +44,13 @@ ms.locfileid: "48198081"
  Se si modifica il nome del metodo nel progetto VSTA, è necessario modificare il valore della proprietà **EntryPoint** .  
   
  **ReadOnlyVariables**  
- Digitare un elenco delimitato da virgole di variabili di sola lettura disponibili per lo script oppure fare clic sul pulsante con i puntini di sospensione (**…**) e selezionare le variabili nella finestra di dialogo **Seleziona variabili** .  
+ Digitare un elenco delimitato da virgole di variabili di sola lettura disponibili per lo script oppure fare clic sul pulsante con i puntini di sospensione (**...**) e selezionare le variabili nella finestra di dialogo **Seleziona variabili**.  
   
 > [!NOTE]  
 >  Per i nomi delle variabili viene fatta distinzione tra maiuscole e minuscole.  
   
  **ReadWriteVariables**  
- Digitare un elenco delimitato da virgole di variabili di lettura/scrittura disponibili per lo script oppure fare clic sul pulsante con i puntini di sospensione (**…**) e selezionare le variabili nella finestra di dialogo **Seleziona variabili** .  
+ Digitare un elenco delimitato da virgole di variabili di lettura/scrittura disponibili per lo script oppure fare clic sul pulsante con i puntini di sospensione (**...**) e selezionare le variabili nella finestra di dialogo **Seleziona variabili**.  
   
 > [!NOTE]  
 >  Per i nomi delle variabili viene fatta distinzione tra maiuscole e minuscole.  
@@ -59,12 +59,12 @@ ms.locfileid: "48198081"
  Apre VSTA IDE, dove è possibile creare o modificare lo script.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Pagina Generale](general-page-of-integration-services-designers-options.md)   
- [Editor attività script &#40;pagina Generale&#41;](../../2014/integration-services/script-task-editor-general-page.md)   
- [Pagina espressioni](expressions/expressions-page.md)   
- [Esempi di attività script](extending-packages-scripting-task-examples/script-task-examples.md)   
- [Integration Services &#40;SSIS&#41; le variabili](integration-services-ssis-variables.md)   
+ [Guida di riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [General Page](general-page-of-integration-services-designers-options.md)   
+ [Editor attività Script &#40;pagina Generale&#41;](../../2014/integration-services/script-task-editor-general-page.md)   
+ [Pagina Espressioni](expressions/expressions-page.md)   
+ [Esempi di attività Script](extending-packages-scripting-task-examples/script-task-examples.md)   
+ [Variabili di Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md)   
  [Aggiungere, eliminare o modificare l'ambito di una variabile definita dall'utente in un pacchetto](../../2014/integration-services/add-delete-change-scope-of-user-defined-variable-in-a-package.md)  
   
   

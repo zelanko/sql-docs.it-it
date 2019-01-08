@@ -13,12 +13,12 @@ ms.assetid: 91220b21-adbc-49a9-b200-8bf0a724eff1
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 02bf9026d14f759b5e5931b132faae3ee0fec1a2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9cb98e29f320a64518c968f3bbc35b590c96a891
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48082941"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52508405"
 ---
 # <a name="delete-a-filter-from-a-mining-model"></a>Eliminare un filtro da un modello di data mining
   Quando si crea un filtro in un modello di data mining, è possibile creare modelli in un subset dei dati nella vista origine dati. I filtri sono anche utili per il test dell'accuratezza del modello su un subset dei dati originali.  
@@ -33,7 +33,7 @@ ms.locfileid: "48082941"
   
 3.  Selezionare il modello, quindi fare clic con il pulsante destro del mouse per aprire il menu di scelta rapida.  
   
-     -oppure-  
+     oppure  
   
      Selezionare il modello. Scegliere **Imposta filtro modello** dal menu **Modello di data mining**.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "48082941"
 -   Nella finestra di dialogo **Editor filtri** fare clic con il pulsante destro del mouse su una riga della griglia e quindi scegliere **Elimina tutto**.  
   
 ## <a name="working-with-model-filters-using-the-properties-window"></a>Utilizzo dei filtri di modelli con la finestra Proprietà  
- Se si desidera eliminare l'intero filtro, non è necessario aprire le finestre di dialogo Editor filtri. Le condizioni di filtro creata sono disponibili nel `Filter` proprietà del modello di data mining.  
+ Se si desidera eliminare l'intero filtro, non è necessario aprire le finestre di dialogo Editor filtri. Le condizioni di filtro create sono disponibili nella proprietà `Filter` del modello di data mining.  
   
 > [!NOTE]  
 >  È possibile visualizzare le proprietà di un modello di data mining in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], ma non in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
@@ -60,8 +60,8 @@ ms.locfileid: "48082941"
 3.  Premere il tasto BACKSPACE o CANC.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Il drill-Through nei dati del Case da un modello di Data Mining](drill-through-to-case-data-from-a-mining-model.md)   
- [Procedure dettagliate e le attività del modello di data mining](mining-model-tasks-and-how-tos.md)   
- [Filtri per i modelli di Data Mining &#40;Analysis Services - Data Mining&#41;](mining-models-analysis-services-data-mining.md)  
+ [Eseguire il drill-through sui dati del case da un modello di data mining](drill-through-to-case-data-from-a-mining-model.md)   
+ [Attività e procedure relative al modello di data mining](mining-model-tasks-and-how-tos.md)   
+ [Filtri per i modelli di data mining &#40;Analysis Services - Data mining&#41;](mining-models-analysis-services-data-mining.md)  
   
   

@@ -10,12 +10,12 @@ ms.assetid: e67136cc-f8c6-4cb3-ba0b-c966c636256c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 45909dae2443b594b12de98a2403178bdd7ce1ca
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 2f1da635e524b746bb96d0d19876285c869679e2
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51032708"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52395514"
 ---
 # <a name="data-cleansing"></a>Data Cleansing
   La pulizia dei dati è il processo di analisi della qualità dei dati in un'origine dati, con l'approvazione o il rifiuto manuale dei suggerimenti del sistema e la conseguente modifica dei dati. La pulizia dei dati in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) include un processo assistito da computer, che analizza la conformità dei dati alle informazioni in una Knowledge Base, e un processo interattivo, che consente all'amministratore dei dati di rivedere e modificare i risultati del processo assistito da computer per assicurarsi che la pulizia dei dati risponda esattamente alle aspettative.  
@@ -28,7 +28,7 @@ ms.locfileid: "51032708"
   
 -   Fornisce un processo a due passaggi per pulire i dati: *assistito da computer* e *interattivo*. Nel processo assistito da computer vengono utilizzate le informazioni di una Knowledge Base DQS per elaborare automaticamente i dati e vengono suggerite sostituzioni/correzioni. Nel passaggio interattivo successivo l'amministratore dei dati può approvare, rifiutare o modificare le modifiche proposte da DQS nel corso della pulizia assistita da computer.  
   
--   Standardizza e arricchisce dati dei clienti tramite valori e regole di dominio e dati di riferimento. Un esempio può essere la standardizzazione del termine "Lgo" in "Largo" o l'arricchimento dei dati con l'inserimento di elementi mancanti tramite la modifica di "1 Microsoft way Redmond 98006" in "1 Microsoft Way, Redmond, WA 98006, Stati Uniti".  
+-   Standardizza e arricchisce dati dei clienti tramite valori e regole di dominio e dati di riferimento. Un esempio può essere la standardizzazione del termine "Lgo" in "Largo" o l'arricchimento dei dati con l'inserimento di elementi mancanti modificando "1 Microsoft way Redmond 98006" in "1 Microsoft Way, Redmond, WA 98006, Stati Uniti".  
   
 -   Fornisce all'utente un'interfaccia simile a una procedura guidata semplice, intuitiva e coerente per spostarsi all'interno di dati e controllare errori in set di dati molto grandi.  
   
@@ -63,15 +63,15 @@ ms.locfileid: "51032708"
 ##  <a name="Interactive"></a> Pulizia interattiva  
  In base al processo di pulizia assistito da computer, all'amministratore dei dati vengono fornite le informazioni necessarie per prendere una decisione sulla modifica dei dati. DQS consente di suddividere i dati in categorie nelle cinque schede seguenti:  
   
--   **Suggeriti**: valori per i quali sono stati trovati suggerimenti con un livello di confidenza superiore al valore *soglia di suggerimento automatico* ma inferiore al valore *soglia di correzione automatica* . È necessario analizzare questi valori e approvarli o rifiutarli nel modo appropriato.  
+-   **Suggeriti**: I valori per i quali sono stati trovati suggerimenti con un livello di confidenza più elevato di *soglia di suggerimento automatico* ma inferiore al valore di *soglia di correzione automatica* valore. È necessario analizzare questi valori e approvarli o rifiutarli nel modo appropriato.  
   
--   **Nuovi**: valori validi per i quali non sono disponibili informazioni sufficienti (suggerimenti) in DQS e dei quali non è pertanto possibile eseguire il mapping a nessuna altra scheda. Questa scheda contiene inoltre valori che presentano un livello di confidenza inferiore al valore *soglia di suggerimento automatico* , ma sufficientemente elevato per essere contrassegnati come validi.  
+-   **Nuovo**: valori validi per i quali non sono disponibili informazioni sufficienti (suggerimenti) in DQS e dei quali non è pertanto possibile eseguire il mapping ad altre schede. Questa scheda contiene inoltre valori che presentano un livello di confidenza inferiore al valore *soglia di suggerimento automatico* , ma sufficientemente elevato per essere contrassegnati come validi.  
   
--   **Non validi**: valori contrassegnati come non validi nel dominio della Knowledge Base o valori non conformi a una regola di dominio o ai dati di riferimento. Questa scheda conterrà anche valori rifiutati dall'utente nelle altre quattro schede durante il processo di pulizia interattiva.  
+-   **Non è valido**: valori contrassegnati come non validi nel dominio della Knowledge Base o valori non conformi a una regola di dominio o ai dati di riferimento. Questa scheda conterrà anche valori rifiutati dall'utente nelle altre quattro schede durante il processo di pulizia interattiva.  
   
--   **Con correzione**: valori corretti da DQS durante il processo automatico di pulizia, nel caso in cui sia stata trovata una correzione per il valore con un livello di confidenza superiore al valore *soglia di correzione automatica* . Questa scheda conterrà anche valori per i quali l'utente ha specificato un valore corretto nella colonna **Correggi in** durante la pulizia interattiva e che ha quindi approvato facendo clic sul pulsante di opzione nella colonna **Approva** in una delle altre quattro schede.  
+-   **Correzione**: I valori corretti da DQS durante il processo di pulizia automatico perché è stata trovata una correzione per il valore con un livello di confidenza superiore di *soglia di correzione automatica* valore. Questa scheda conterrà anche valori per i quali l'utente ha specificato un valore corretto nella colonna **Correggi in** durante la pulizia interattiva e che ha quindi approvato facendo clic sul pulsante di opzione nella colonna **Approva** in una delle altre quattro schede.  
   
--   **Corretti**: valori trovati corretti. Ad esempio, un valore corrispondente a un valore di dominio. Se richiesto, è possibile eseguire l'override della pulizia DQS rifiutando i valori in questa scheda o specificando una parola alternativa nella colonna **Correggi in** e facendo clic quindi sul pulsante di opzione nella colonna **Accetta** . Questa scheda conterrà anche valori approvati dall'utente durante la pulizia interattiva facendo clic sul pulsante di opzione nella colonna **Approva** nelle schede **Nuovi** o **Non validi** .  
+-   **Corretto**: valori trovati corretti. Ad esempio, un valore corrispondente a un valore di dominio. Se richiesto, è possibile eseguire l'override della pulizia DQS rifiutando i valori in questa scheda o specificando una parola alternativa nella colonna **Correggi in** e facendo clic quindi sul pulsante di opzione nella colonna **Accetta** . Questa scheda conterrà anche valori approvati dall'utente durante la pulizia interattiva facendo clic sul pulsante di opzione nella colonna **Approva** nelle schede **Nuovi** o **Non validi** .  
   
 > [!NOTE]  
 >  Nelle schede **Suggeriti**, **Con correzione**e **Corretti** viene visualizzato il valore iniziale per un dominio, se applicabile, nella colonna **Correggi in** rispetto al relativo valore del dominio.  
@@ -87,7 +87,7 @@ ms.locfileid: "51032708"
  ![Pulizia dei dati in Data Quality Client](../../2014/data-quality-services/media/dqs-cleansingindqsclient.gif "Pulizia dei dati in Data Quality Client")  
   
 ##  <a name="Leading"></a> Correzione del valore iniziale  
- La correzione del valore iniziale si applica ai valori di dominio con sinonimi, quando l'utente desidera utilizzare uno dei sinonimi come valore iniziale, anziché altri, per rappresentare il valore in modo coerente. Ad esempio, "New York", "NYC" e "Grande mela" sono sinonimi e l'utente desidera utilizzare "New York" come valore iniziale, anziché "NYC" e "Grande mela". DQS supporta la correzione del valore iniziale durante il processo di pulizia per consentire di standardizzare i dati. La correzione del valore iniziale viene effettuata solo se il dominio è stato opportunamente abilitato al momento della creazione. Per impostazione predefinita, tutti i domini sono abilitati per la correzione del valore iniziale a meno che sia stata deselezionata la casella di controllo **Utilizza valori iniziali** durante la creazione di un dominio. Per ulteriori informazioni su questa casella di controllo, vedere [Set Domain Properties](../../2014/data-quality-services/set-domain-properties.md).  
+ La correzione del valore iniziale si applica ai valori di dominio con sinonimi, quando l'utente desidera utilizzare uno dei sinonimi come valore iniziale, anziché altri, per rappresentare il valore in modo coerente. Ad esempio, "New York", "NYC" e "Grande mela" sono sinonimi e l'utente vuole usare "New York" come valore iniziale, anziché "NYC" e "Grande mela". DQS supporta la correzione del valore iniziale durante il processo di pulizia per consentire di standardizzare i dati. La correzione del valore iniziale viene effettuata solo se il dominio è stato opportunamente abilitato al momento della creazione. Per impostazione predefinita, tutti i domini sono abilitati per la correzione del valore iniziale a meno che sia stata deselezionata la casella di controllo **Utilizza valori iniziali** durante la creazione di un dominio. Per ulteriori informazioni su questa casella di controllo, vedere [Set Domain Properties](../../2014/data-quality-services/set-domain-properties.md).  
   
 ##  <a name="Standardize"></a> Standardizzazione dei dati puliti  
  È possibile scegliere se esportare i dati puliti nel formato standardizzato basato sul formato di output definito per i domini. Durante la creazione di un dominio, è possibile selezionare la formattazione che verrà applicata alla restituzione dei valori dei dati nel dominio. Per ulteriori informazioni sulla specifica dei formati di output per un dominio, vedere l'elenco **Formato output in** in [Set Domain Properties](../../2014/data-quality-services/set-domain-properties.md).  

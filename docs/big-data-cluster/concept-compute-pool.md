@@ -1,20 +1,22 @@
 ---
-title: Che cos'è un pool di calcolo cluster SQL dei big Data? | Microsoft Docs
-description: Questo articolo descrive il pool di calcolo in un cluster di big data di SQL Server 2019.
+title: Quali sono i pool di calcolo?
+titleSuffix: SQL Server 2019 big data clusters
+description: Questo articolo descrive il pool di calcolo in un cluster di big data di SQL Server 2019 (anteprima).
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 11/06/2018
+ms.date: 12/07/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 6aa73c5881a4b6a17e190c26c15f97b3d8c79c14
-ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
+ms.custom: seodec18
+ms.openlocfilehash: f1e725580c98585ee86b401c0e8c12ea143cdab1
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51221797"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53207720"
 ---
-# <a name="what-is-a-sql-big-data-clusters-compute-pool"></a>Che cos'è un pool di calcolo cluster SQL dei big Data?
+# <a name="what-are-compute-pools-in-a-sql-server-2019-big-data-cluster"></a>Quali sono i pool di calcolo in un cluster di SQL Server 2019 big data?
 
 Questo articolo descrive il ruolo del *pool di calcolo di SQL Server* in un cluster di big data anteprima di SQL Server 2019. I pool di calcolo offrono le risorse di calcolo a scalabilità orizzontale per un cluster di big data. Le sezioni seguenti descrivono l'architettura e la funzionalità di un pool di calcolo.
 
@@ -23,7 +25,7 @@ Questo articolo descrive il ruolo del *pool di calcolo di SQL Server* in un clus
 Un pool di calcolo è costituito da uno o più POD in esecuzione in Kubernetes di calcolo. La creazione automatica e la gestione di questi POD è coordinata dal [istanza master di SQL Server](concept-master-instance.md). Ogni pod contiene un set di servizi di base e un'istanza del motore di database di SQL Server.
 
 > [!NOTE]
-> CTP 2.1 supporta solo un pool di calcolo singolo per ogni cluster.
+> CTP 2.2 supporta solo un pool di calcolo singolo per ogni cluster.
 
 ## <a name="scale-out-groups"></a>Gruppi con scalabilità orizzontale
 

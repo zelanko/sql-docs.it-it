@@ -10,12 +10,12 @@ ms.assetid: 5c3080c3-d074-4f99-a5f5-219ebeddc474
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: e109713ce9f6ec29a31d19d873c319d47c76fdab
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dc7976fae322dddc24eda7cf6ef84ef20a7a9e61
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47675499"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52394930"
 ---
 # <a name="working-with-the-sample-console-script-files-db2tosql"></a>Lavorare con i file di Script di esempio Console (DB2ToSQL)
 Alcuni file di esempio sono stati forniti insieme al prodotto per il riferimento all'utente e l'utilizzo. In questa sezione descrive il modo con facilità personalizzare questi script per soddisfare le esigenze degli utenti finali.  
@@ -41,11 +41,11 @@ I seguenti file script di esempio console relativi a diversi scenari sono stati 
   
     -   Per altre informazioni sulla connessione al server di origine e di destinazione, vedere [creazione di file di connessione del Server &#40;DB2ToSQL&#41; ](../../ssma/db2/creating-the-server-connection-files-db2tosql.md) .  
   
-2.  **: VariableValueFileSample.xml** tutte le variabili che sono state utilizzate nella console di esempio i file di script e `ServersConnectionFileSample.xml` sono stati confrontati in questo file. Per eseguire gli script di esempio console che l'utente deve semplicemente sostituire la variabile di esempio i valori con l'utente definito quelle e passare questo file come un argomento della riga di comando aggiuntivi insieme al file di script.  
+2.  **VariableValueFileSample.xml:** Tutte le variabili che sono state utilizzate nella console di esempio i file di script e `ServersConnectionFileSample.xml` sono stati confrontati in questo file. Per eseguire gli script di esempio console che l'utente deve semplicemente sostituire la variabile di esempio i valori con l'utente definito quelle e passare questo file come un argomento della riga di comando aggiuntivi insieme al file di script.  
   
     Per altre informazioni sul File con valori variabili, vedere [creazione di file di valore variabile &#40;DB2ToSQL&#41;](../../ssma/db2/creating-variable-value-files-db2tosql.md).  
   
-3.  **AssessmentReportGenerationSample.xml:** in questo esempio consente all'utente generare un report di valutazione di xml che può essere utilizzato dall'utente per l'analisi prima che inizi a convertire e la migrazione dei dati.  
+3.  **AssessmentReportGenerationSample.xml:** In questo esempio consente all'utente generare un report di valutazione di xml che può essere utilizzato dall'utente per l'analisi prima che inizi a convertire e la migrazione dei dati.  
   
     Nel `generate-assessment-report` l'utente deve modificare obbligatoriamente includere il valore della variabile di comando (fare riferimento **VariableValueFileSample.xml**) nella `object-name` attributo al nome di database da in uso dall'utente. A seconda del tipo dell'oggetto specificato, il `object-type` valore dovrà inoltre essere modificato.  
   
@@ -59,7 +59,7 @@ I seguenti file script di esempio console relativi a diversi scenari sono stati 
   
     Assicurarsi che l'argomento della riga di comando file connessione server viene passato all'applicazione console e il ServersConnectionFileSample.xml viene aggiornata con i valori dei parametri server corretto.  
   
-4.  **: SqlStatementConversionSample.xml** in questo esempio consente all'utente generare le corrispondenti `t-sql` script per database di origine `sql` comando fornito come input.  
+4.  **SqlStatementConversionSample.xml:** In questo esempio consente all'utente genera il corrispondente `t-sql` script per database di origine `sql` comando fornito come input.  
   
     Nel `convert-sql-statement` l'utente deve modificare obbligatoriamente includere il valore della variabile di comando (fare riferimento **VariableValueFileSample.xml**) nel `context` attributo al nome del database che è in corso in uso dall'utente. L'utente sarà inoltre necessario modificare il `sql` valore dell'attributo per il database di origine `sql` comando che può richiedere da convertire.  
   
@@ -68,9 +68,9 @@ I seguenti file script di esempio console relativi a diversi scenari sono stati 
     > [!NOTE]  
     > Assicurarsi che l'argomento della riga di comando file valore della variabile viene passato all'applicazione console e VariableValueFileSample.xml viene aggiornato con l'utente specificato i valori.  
   
-5.  **ConversionAndDataMigrationSample.xml:** in questo esempio consente all'utente di eseguire una migrazione end-to-end dalla conversione per la migrazione dei dati. L'elenco di valori di attributo obbligatorio che dovranno cambiare è elencato di seguito:  
+5.  **ConversionAndDataMigrationSample.xml:** In questo esempio consente all'utente di eseguire una migrazione end-to-end dalla conversione per la migrazione dei dati. L'elenco di valori di attributo obbligatorio che dovranno cambiare è elencato di seguito:  
   
-    |Nome del comando|Description|attribute|  
+    |Nome del comando|Descrizione|attribute|  
     |----------------|---------------|-------------|  
     |`map-schema`|Mapping dello schema del database di origine allo schema di destinazione.|`source-schema:` Specifica il database di origine che richiede da convertire.<br /><br />`sql-server-schema`: Specifica il database di destinazione che deve essere eseguita la migrazione a|  
     |`convert-schema`|Esegue la conversione dello schema di origine allo schema di destinazione.<br /><br />Se l'utente dispone valutare più oggetti / database è possibile specificare più `metabase-object` nodi come illustrato nella `convert-schema` 4 di esempio del comando del file di script di esempio console.|`object-name`: Specificare il database di origine / nome che richiede la conversione dell'oggetto. Assicurarsi che la corrispondente `object-type` viene modificato in base al tipo di oggetto specificato di `object-name`|  

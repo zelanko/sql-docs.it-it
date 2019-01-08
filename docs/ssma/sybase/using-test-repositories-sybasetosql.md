@@ -12,12 +12,12 @@ ms.assetid: c359c25c-db2a-4a20-afa9-62d87a62df72
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: fc4d537901d0352725260fadf1cb4446cb764419
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 939342a85ed657faa645c593018cbf39042031c2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47731119"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52505231"
 ---
 # <a name="using-test-repositories-sybasetosql"></a>Uso di repository test (SybaseToSQL)
 Gli archivi di Repository Test SSMA SSMA Tester test case e risultati dei test per un uso successivo. I dati del Repository vengono salvati nelle tabelle di SQL Server **TestCaseRepository** e **RunTestCaseResultRepository** nello schema **ssma_sybase_utilities** del **ssmatesterdb_syb** database.  
@@ -29,17 +29,17 @@ I pulsanti seguenti sono disponibili nella finestra di dialogo del Repository de
 -   Scegliere il **chiudere** per chiudere la finestra di dialogo del Repository del Test case.  
   
 ## <a name="test-cases-repository"></a>Repository di test case  
-È possibile visualizzare il Repository di Test case facendo **Test case...** dal **Tester** menu. SSMA consente quindi di visualizzare il **Repository del Test case** finestra di dialogo con un elenco dei case di test salvati sulle **Test case** pagina.  
+È possibile visualizzare il Repository di Test case facendo **Test case...**  dal **Tester** menu. SSMA consente quindi di visualizzare il **Repository del Test case** finestra di dialogo con un elenco dei case di test salvati sulle **Test case** pagina.  
   
 Nella griglia vengono visualizzate le informazioni seguenti su ogni test case:  
   
--   Nome: Nome del test case.  
+-   Nome: Il nome del test case.  
   
--   Create: Il test case data di creazione.  
+-   Create: La data di creazione test case.  
   
--   Modificato: Il test case data dell'ultima modifica.  
+-   Modificato: Data dell'ultima modifica del test case.  
   
--   Descrizione: Il test case descrizioni.  
+-   Descrizione: Le descrizioni dei test case.  
   
 I pulsanti seguenti sono disponibili nella pagina di Test case:  
   
@@ -52,21 +52,21 @@ I pulsanti seguenti sono disponibili nella pagina di Test case:
 -   Fare clic sui **eseguiti** pulsante per aprire il [che esegue Test case &#40;SybaseToSQL&#41; ](../../ssma/sybase/running-test-cases-sybasetosql.md) finestra di dialogo ed eseguire il test selezionato.  
   
 ## <a name="test-results-repository"></a>Repository dei risultati del test  
-È possibile visualizzare il Repository dei risultati del Test nella **i risultati del Test** pagina della **Repository del Test case** finestra. Aprirlo facendo **i risultati dei Test...** dal **Tester** menu.  
+È possibile visualizzare il Repository dei risultati del Test nella **i risultati del Test** pagina della **Repository del Test case** finestra. Aprirlo facendo **i risultati dei Test...**  dal **Tester** menu.  
   
 È possibile usare due filtri sul **i risultati dei Test** pagina:  
   
--   Il filtro del nome del Test Case: consente di scegliere i risultati dei test dal nome del test case. Questo filtro **tutti i Test Case** valore consente di visualizzare i risultati dei test per tutti i test case.  
+-   Il filtro di nome del Test Case: Consente di scegliere i risultati dei test dal nome del test case. Questo filtro **tutti i Test Case** valore consente di visualizzare i risultati dei test per tutti i test case.  
   
--   Il filtro data di esecuzione di Test Case: risultati dei test di filtri per la data di salvataggio. Questo filtro **periodo tutti** valore consente di visualizzare i risultati dei test per una data di salvataggio.  
+-   Il filtro data di esecuzione di Test Case: I filtri, i risultati dei test per la data di salvataggio. Questo filtro **periodo tutti** valore consente di visualizzare i risultati dei test per una data di salvataggio.  
   
 Le informazioni seguenti sui risultati dei test viene visualizzate nella griglia.  
   
--   Nome: nome di Test case.  
+-   Nome: Nome del test case.  
   
--   Avviato: Test Data del caso di esecuzione.  
+-   Inizio: Test case data di esecuzione.  
   
--   Risultato: Una breve descrizione dell'esecuzione del test (descrizione comando della cella, questo visualizza un riepilogo completo dell'esecuzione del test).  
+-   Risultato: Un breve riepilogo dell'esecuzione del test (descrizione comando della cella, questo visualizza un riepilogo completo dell'esecuzione del test).  
   
 I pulsanti seguenti sono disponibili nella pagina dei risultati dei Test:  
   

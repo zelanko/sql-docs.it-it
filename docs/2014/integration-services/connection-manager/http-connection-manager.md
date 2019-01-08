@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - HTTP connection manager
@@ -17,19 +16,19 @@ ms.assetid: 26b2b3e1-d02c-46ca-8d31-7aef2bbc3c53
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8b0552d4678df69620d4e97f6f4e1a942dd12330
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5d41fab7e891fd8393600224902ee36e2f6dad20
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48113088"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52764063"
 ---
 # <a name="http-connection-manager"></a>gestione connessione HTTP
   Una connessione HTTP consente a un pacchetto di accedere al server Web utilizzando il protocollo HTTP per l'invio o la ricezione di file. L'attività Servizio Web inclusa in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] usa questa gestione connessione.  
   
  Quando si aggiunge una gestione connessione HTTP a un pacchetto, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] crea una gestione connessione che in fase di esecuzione verrà risolta in una connessione HTTP, imposta le proprietà della gestione connessione e quindi la aggiunge alla raccolta `Connections` del pacchetto.  
   
- Il `ConnectionManagerType` della gestione connessione viene impostata su `HTTP.`  
+ La proprietà `ConnectionManagerType` della gestione connessione viene impostata su `HTTP.`  
   
  Per configurare la gestione connessione HTTP, procedere nel modo seguente:  
   
@@ -49,14 +48,14 @@ ms.locfileid: "48113088"
   
  Per ulteriori informazioni sulle proprietà che è possibile impostare in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] , fare clic su uno degli argomenti seguenti:  
   
--   [Editor gestione connessione HTTP &#40;pagina del Server&#41;](../http-connection-manager-editor-server-page.md)  
+-   [Editor gestione connessione HTTP &#40;pagina Server&#41;](../http-connection-manager-editor-server-page.md)  
   
--   [Editor gestione connessione HTTP &#40;pagina del Proxy&#41;](../http-connection-manager-editor-proxy-page.md)  
+-   [Editor gestione connessione HTTP &#40;pagina Proxy&#41;](../http-connection-manager-editor-proxy-page.md)  
   
  Per informazioni sulla configurazione di una gestione connessione a livello di codice, vedere <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager>.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Attività servizio Web](../control-flow/web-service-task.md)   
- [Integration Services &#40;SSIS&#41; le connessioni](integration-services-ssis-connections.md)  
+ [Attività Servizio Web](../control-flow/web-service-task.md)   
+ [Connessioni in Integration Services &#40;SSIS&#41;](integration-services-ssis-connections.md)  
   
   

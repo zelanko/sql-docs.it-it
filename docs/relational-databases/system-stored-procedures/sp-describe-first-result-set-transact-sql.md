@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 317defb8c3efd99274421f169424cc09ec4caf58
-ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
+ms.openlocfilehash: 62abd4d684c809e9dbf3f2863091f1f103808d87
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49072065"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52400634"
 ---
 # <a name="spdescribefirstresultset-transact-sql"></a>sp_describe_first_result_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -66,10 +66,10 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
 ## <a name="result-sets"></a>Set di risultati  
  Questi metadati comuni vengono restituiti come set di risultati con una riga per ogni colonna nei metadati dei risultati. Ogni riga descrive il tipo e l'ammissione di valori Null della colonna nel formato descritto nella sezione seguente. Se la prima istruzione non esiste per ogni percorso di controllo, viene restituito un set di risultati con zero righe.  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**is_hidden**|**bit non NULL**|Indica che la colonna è una colonna aggiuntiva aggiunta per informazioni di esplorazione che non compare effettivamente nel set di risultati.|  
-|**column_ordinal**|**int non NULL**|Contiene la posizione ordinale della colonna nel set di risultati. La posizione della prima colonna viene specificata come 1.|  
+|**column_ordinal**|**int non NULL**|Contiene la posizione ordinale della colonna nel set di risultati. Posizione della prima colonna viene specificata come 1.|  
 |**name**|**sysname NULL**|Contiene il nome della colonna se è possibile determinare un nome. In caso contrario, contiene NULL.|  
 |**is_nullable**|**bit non NULL**|Contiene il valore 1 se la colonna ammette valori Null, 0 se la colonna non ammette valori Null e 1 se non è possibile determinare se la colonna ammette valori Null.|  
 |**system_type_id**|**int non NULL**|Contiene il system_type_id del tipo di dati della colonna come specificato in sys. Types. Per i tipi CLR, anche se la colonna system_type_name restituisce NULL, in questa colonna viene restituito il valore 240.|  
@@ -179,7 +179,7 @@ WHERE object_id = @id1'
 , @params = N'@id1 int'  
 ```  
   
-#### <a name="b-browse-mode-examples"></a>B. Esempi di modalità browse  
+#### <a name="b-browse-mode-examples"></a>b. Esempi di modalità browse  
  Nei tre esempi seguenti viene illustrata la differenza principale tra le diverse modalità di informazioni di esplorazione. Nei risultati delle query sono state incluse solo le colonne attinenti.  
   
  Nell'esempio in cui viene utilizzato 0 non viene restituita alcuna informazione.  
@@ -273,7 +273,7 @@ ELSE
     SELECT d FROM t2; '  
 ```  
   
- Risultato: \<nome di colonna sconosciuto > **varchar (20) NULL**  
+ Risultato: \<Nome di colonna sconosciuto > **varchar (20) NULL**  
   
 #### <a name="column-name-forced-to-be-identical-through-aliasing"></a>Nome della colonna forzato a essere identico tramite aliasing  
  Come in precedenza, ma le colonne hanno lo stesso nome tramite l'aliasing delle colonne.  
@@ -355,7 +355,7 @@ IF(1=1)
 EXEC(@SQL); '  
 ```  
   
- Risultato: errore. Il risultato non è individuabile a causa di SQL dinamico.  
+ Risultato: Errore. Il risultato non è individuabile a causa di SQL dinamico.  
   
 #### <a name="result-set-specified-by-user"></a>Set di risultati specificato dall'utente  
  Il primo set di risultati viene specificato manualmente dall'utente.  
@@ -387,7 +387,7 @@ N'
 , @params = N'@p int'  
 ```  
   
- Risultato: errore. T1 può essere dbo.t1 o s1.t1, ognuno con un numero diverso di colonne.  
+ Risultato: Errore. T1 può essere dbo.t1 o s1.t1, ognuno con un numero diverso di colonne.  
   
 #### <a name="result-even-with-ambiguous-result-set"></a>Risultato anche con set di risultati ambiguo  
  Utilizzare le stesse ipotesi dell'esempio precedente.  

@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: e5ad1bdd-c054-4999-a5aa-00e74770b481
-ms.openlocfilehash: 4cce3c1f06978ba0ff5b9630bdaa5f5aebc0ddf1
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
-ms.translationtype: HT
+ms.openlocfilehash: 42af33d78a13961b7a85ae408a3c693edf759e75
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51667990"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52408868"
 ---
 # <a name="configure-sles-shared-disk-cluster-for-sql-server"></a>Configurare cluster di dischi condiviso SLES per SQL Server
 
@@ -102,7 +102,7 @@ Un'altra opzione di archiviazione consiste nell'usare una condivisione file SMB:
 
 ### <a name="configure-an-nfs-server"></a>Configurare un server NFS
 
-Per configurare un server NFS, vedere i passaggi seguenti nella documentazione di SUSE: [configurazione Server NFS](https://www.suse.com/documentation/sles-12/singlehtml/book_sle_admin/book_sle_admin.html#sec.nfs.configuring-nfs-server).
+Per configurare un server NFS, vedere i passaggi seguenti nella documentazione di SUSE: [Configurazione di Server NFS](https://www.suse.com/documentation/sles-12/singlehtml/book_sle_admin/book_sle_admin.html#sec.nfs.configuring-nfs-server).
 
 ### <a name="configure-all-cluster-nodes-to-connect-to-the-nfs-shared-storage"></a>Configurare tutti i nodi del cluster per la connessione alla risorsa di archiviazione condivise NFS
 
@@ -123,7 +123,7 @@ Prima di configurare il client NFS per montare il percorso di file di database d
     - [Configurazione dei client](https://www.suse.com/documentation/sles-12/singlehtml/book_sle_admin/book_sle_admin.html#sec.nfs.configuring-nfs-clients)
 
     > [!NOTE]
-    > È consigliabile seguire le procedure consigliate e indicazioni relative alle archivio altamente disponibile NFS di SUSE: [elevata NFS spazio di archiviazione disponibile con DRBD e Pacemaker](https://www.suse.com/documentation/sle-ha-12/book_sleha_techguides/data/art_ha_quick_nfs.html).
+    > È consigliabile seguire le procedure consigliate e indicazioni relative alle archivio altamente disponibile NFS di SUSE: [Archivio NFS a disponibilità elevata con DRBD e Pacemaker](https://www.suse.com/documentation/sle-ha-12/book_sleha_techguides/data/art_ha_quick_nfs.html).
 
 2. Verificare che SQL Server viene avviato correttamente con il nuovo percorso del file. Eseguire questa operazione in ogni nodo. A questo punto un solo nodo deve eseguire SQL Server alla volta. Non possono entrambi eseguono contemporaneamente perché sono entrambi tenterà di accedere ai file di dati contemporaneamente (per evitare accidentalmente l'avvio di SQL Server su entrambi i nodi, usare una risorsa cluster di File System per assicurarsi che la condivisione non è montata due volte per i vari nodi). I seguenti comandi avviare SQL Server, controllare lo stato e quindi arrestare SQL Server.
 
@@ -196,8 +196,8 @@ A questo punto, entrambe le istanze di SQL Server configurate per eseguire con i
 
 I passaggi seguenti illustrano come configurare la risorsa cluster per SQL Server. Esistono due impostazioni che è necessario personalizzare.
 
-- **Nome risorsa SQL Server**: un nome per la risorsa cluster di SQL Server. 
-- **Valore di timeout**: il valore di timeout è la quantità di tempo che il cluster rimane in attesa mentre una risorsa viene portata online. Per SQL Server, questo è l'ora in cui si prevede di SQL Server per portare il `master` online del database. 
+- **Nome risorsa SQL Server**: Un nome per la risorsa cluster di SQL Server. 
+- **Valore di timeout**: Il valore di timeout è la quantità di tempo che il cluster rimane in attesa mentre una risorsa viene portata online. Per SQL Server, questo è l'ora in cui si prevede di SQL Server per portare il `master` online del database. 
 
 Aggiornare i valori dallo script seguente per l'ambiente. Eseguire in un nodo per configurare e avviare il servizio cluster.
 
@@ -248,7 +248,7 @@ Full list of resources:
 
 ## <a name="managing-cluster-resources"></a>La gestione delle risorse cluster
 
-Per gestire le risorse del cluster, vedere l'argomento SUSE seguente: [gestione delle risorse Cluster](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#sec.ha.config.crm )
+Per gestire le risorse del cluster, vedere l'argomento SUSE seguente: [La gestione delle risorse Cluster](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#sec.ha.config.crm )
 
 ### <a name="manual-failover"></a>Failover manuale
 

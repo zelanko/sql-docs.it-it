@@ -11,12 +11,12 @@ ms.assetid: 5b5aed99-1760-4bc7-b248-52ecb0b97ebc
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: eb2d3f6ead3482a9f36807883f685eaed4225f29
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 55bf692e1b24bb0184f9b126a0bde5c0ee7e0657
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48178121"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52513274"
 ---
 # <a name="modifying-the-customer-dimension"></a>Modifica della dimensione Customer
   È possibile migliorare l'usabilità e le funzionalità delle dimensioni di un cubo in diversi modi. Nelle attività di questo argomento verrà modificata la dimensione Customer.  
@@ -32,11 +32,11 @@ ms.locfileid: "48178121"
   
 3.  Modificare i nomi degli attributi seguenti allo stesso modo:  
   
-    -   **English Education** attributo, impostare su `Education`  
+    -   **English Education** degli attributi - modificare in `Education`  
   
-    -   **English Occupation** attributo, impostare su `Occupation`  
+    -   **English Occupation** degli attributi - modificare in `Occupation`  
   
-    -   **State Province Name** attributo, impostare su `State-Province`  
+    -   **State Province Name** degli attributi - modificare in `State-Province`  
   
 4.  Scegliere **Salva tutti** dal menu **File**.  
   
@@ -106,7 +106,7 @@ ms.locfileid: "48178121"
   
 4.  Nel **Name** campo della proprietà, tipo `Full Name`.  
   
-5.  Fare clic nel campo proprietà **NameColumn** nella parte inferiore e quindi fare clic sul pulsante Sfoglia (**…**) per aprire la finestra di dialogo **Colonna nome** .  
+5.  Fare clic nella **NameColumn** proprietà campo nella parte inferiore e quindi fare clic su Sfoglia (**...** ) per aprire la **colonna nome** nella finestra di dialogo.  
   
 6.  Selezionare `FullName` nella parte inferiore della **Source column** elenco e quindi fare clic su **OK**.  
   
@@ -266,7 +266,7 @@ ms.locfileid: "48178121"
  [Modifica della dimensione Product](lesson-3-3-modifying-the-product-dimension.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Dimension Attribute Properties Reference](multidimensional-models/dimension-attribute-properties-reference.md)   
+ [Riferimento alle proprietà degli attributo delle dimensioni](multidimensional-models/dimension-attribute-properties-reference.md)   
  [Rimuovere un attributo da una dimensione](multidimensional-models/attribute-properties-remove-an-attribute-from-a-dimension.md)   
  [Rinominare un attributo](multidimensional-models/attribute-properties-rename-an-attribute.md)   
  [Definire calcoli denominati in una vista origine dati &#40;Analysis Services&#41;](multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)  

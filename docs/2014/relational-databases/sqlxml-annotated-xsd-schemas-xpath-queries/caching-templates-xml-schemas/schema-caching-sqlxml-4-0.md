@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - registry keys [SQLXML]
@@ -16,12 +14,12 @@ ms.assetid: 7e5fda21-b435-41fd-b637-8b616560a93f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: cfa52002e68fe8fa29a46a39cf224845274c2141
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2a9b4eced3cb4e02e2053a90edd701bda3139358
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48111986"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52793633"
 ---
 # <a name="schema-caching-sqlxml-40"></a>Memorizzazione nella cache degli schemi (SQLXML 4.0)
   Con un'installazione side-by-side di XML per Microsoft SQL Server 2000 Web Release 1, Microsoft SQLXML 2.0 e SQLXML 3.0, è possibile controllare in modo esplicito lo schema di memorizzazione nella cache in tutte le versioni utilizzando le seguenti chiavi del Registro di sistema:  

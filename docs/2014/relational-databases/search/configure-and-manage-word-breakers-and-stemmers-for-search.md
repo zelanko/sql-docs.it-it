@@ -20,12 +20,12 @@ ms.assetid: d4bdd16b-a2db-4101-a946-583d1c674229
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0804fedde52ad335197c142b897afab8743f45b2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8be3cc7da791b9ea5f950d83bd0f570ca42e686f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48199447"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52505839"
 ---
 # <a name="configure-and-manage-word-breakers-and-stemmers-for-search"></a>Configurazione e gestione di word breaker e stemmer per la ricerca
   Word breaker e stemmer eseguono l'analisi linguistica su tutti i dati con indicizzazione full-text. L'analisi linguistica riguarda la ricerca dell'inizio e della fine delle parole (isolamento delle parole) e la coniugazione dei verbi (flessione). Word breaker e stemmer sono specifici della lingua e le regole per l'analisi linguistica variano a seconda della lingua. Un *word breaker* identifica singole parole determinando i delimitatori di parola in base alle regole lessicali della lingua. Ogni parola ( *token*) viene inserita nell'indice full-text utilizzando una rappresentazione compressa per ridurre le relative dimensioni. Lo *stemmer* genera forme flessive di una particolare parola in base alle regole di quella lingua, ad esempio "running", "ran" e "runner" sono varie forme della parola "run".  
@@ -33,14 +33,14 @@ ms.locfileid: "48199447"
  L'utilizzo di word breaker specifici di ogni lingua consente una maggiore accuratezza dei termini risultanti per le diverse lingue. Se è disponibile un word breaker per la famiglia linguistica, ma non per una specifica lingua secondaria, viene utilizzata la lingua principale. Il word breaker francese viene ad esempio utilizzato anche per la gestione di testo redatto in francese canadese. Se per una particolare lingua non sono disponibili word breaker, verrà utilizzato il word breaker della lingua neutra. Con il word breaker della lingua neutra, le parole vengono spezzate in corrispondenza di caratteri neutri, ad esempio spazi e segni di punteggiatura.  
   
 ##  <a name="register"></a> Registrazione di Word breaker  
- Per potere utilizzare i word breaker di una determinata lingua, è necessario registrarli. Per i word breaker registrati, anche le risorse linguistiche associate, ovvero stemmer, parole non significative e thesaurus, risultano disponibili per le operazioni di indicizzazione e query full-text. Per visualizzare un elenco delle lingue i cui word breaker sono attualmente registrati con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], utilizzare l'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] seguente:  
+ Per potere utilizzare i word breaker di una determinata lingua, è necessario registrarli. Per word breaker registrati, associata alle risorse linguistiche-stemmer, parole non significative (parole non significative) e i file del thesaurus, diventano anche disponibili per l'indicizzazione e l'esecuzione di operazioni di query full-text. Per visualizzare un elenco delle lingue i cui word breaker sono attualmente registrati con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], utilizzare l'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] seguente:  
   
  SELECT * FROM sys.fulltext_languages  
   
  Se si aggiunge, rimuove o modifica un word breaker, è necessario aggiornare l'elenco degli identificatori delle impostazioni locali (LCID) di Microsoft Windows supportati per l'indicizzazione e le query full-text. Per altre informazioni, vedere [Visualizzazione o modifica di word breaker e filtri registrati](view-or-change-registered-filters-and-word-breakers.md).  
   
 ##  <a name="default"></a> Impostazione dell'opzione Default Full-Text Language  
- Per una versione localizzata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] configurare i set di `default full-text language` opzione per la lingua del server, se esiste una corrispondenza appropriata. Per le versioni non localizzate di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], il `default full-text language` opzione è l'inglese.  
+ Per una versione localizzata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] configurare i set di `default full-text language` opzione per la lingua del server, se esiste una corrispondenza appropriata. Per le versioni non localizzate di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], l'opzione `default full-text language` è impostata sull'inglese.  
   
  Quando si crea o modifica un indice full-text, è possibile specificare una lingua diversa per ogni colonna di indicizzazione full-text. Se per una colonna non è stata specificata alcuna lingua, il valore predefinito è quello dell'opzione di configurazione `default full-text language`.  
   

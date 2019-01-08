@@ -1,5 +1,5 @@
 ---
-title: (Livello di compatibilità 1200) di modellazione tabulare | Microsoft Docs
+title: Analysis Services (livello di compatibilità 1200) di modellazione tabulare | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: b0b8d60c6c365d48f8eccc46cbc9a3b0f5222ff5
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 43ef5c290e1234af4482f09f2ec7f01e2edbca99
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38054688"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072178"
 ---
 # <a name="tabular-modeling-1200-compatibility-level"></a>Modellazione tabulare (livello di compatibilità 1200)
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -75,7 +75,7 @@ L'esercitazione include le lezioni seguenti:
   
 |Lezione|Tempo stimato per il completamento|  
 |----------|------------------------------|  
-|[Lezione 1: Creare un nuovo modello di progetto tabulare](../analysis-services/lesson-1-create-a-new-tabular-model-project.md)|10 minuti|  
+|[Lezione 1: Creare un nuovo progetto di modello tabulare](../analysis-services/lesson-1-create-a-new-tabular-model-project.md)|10 minuti|  
 |[Lezione 2: Aggiungere dati](../analysis-services/lesson-2-add-data.md)|20 minuti|  
 |[Lezione 3: Contrassegna come tabella data](../analysis-services/lesson-3-mark-as-date-table.md)|3 minuti|  
 |[Lezione 4: Creare relazioni](../analysis-services/lesson-4-create-relationships.md)|10 minuti|  
@@ -98,7 +98,7 @@ In questa esercitazione sono incluse [Lezioni supplementari](http://msdn.microso
 
   
 ## <a name="next-step"></a>Passaggio successivo  
-Per iniziare l'esercitazione, passare alla prima lezione: [Lezione 1: Creare un nuovo modello di progetto tabulare](../analysis-services/lesson-1-create-a-new-tabular-model-project.md).  
+Per iniziare questa esercitazione, passare alla prima lezione: [Lezione 1: Creare un nuovo progetto di modello tabulare](../analysis-services/lesson-1-create-a-new-tabular-model-project.md).  
   
   
   

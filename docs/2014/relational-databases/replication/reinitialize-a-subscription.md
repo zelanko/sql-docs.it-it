@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - initializing subscriptions [SQL Server replication], reinitializing
@@ -15,12 +14,12 @@ ms.assetid: ca3625c5-c62e-4ab7-9829-d511f838e385
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 738b9179143b4c6b0c986f7f6a16464980b60f8f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3f148cc75ba7ae1987d0114186b76273f35e8d03
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48130340"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52771393"
 ---
 # <a name="reinitialize-a-subscription"></a>Reinizializzare una sottoscrizione
   In questo argomento viene descritto come reinizializzare una sottoscrizione in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]o RMO (Replication Management Objects). È possibile contrassegnare singole sottoscrizioni per la reinizializzazione in modo che nel corso della successiva sincronizzazione venga applicato un nuovo snapshot.  
@@ -103,7 +102,7 @@ ms.locfileid: "48130340"
   
 3.  Nella finestra di dialogo **Reinizializza sottoscrizioni** selezionare le opzioni desiderate e quindi fare clic su **Contrassegna per la reinizializzazione**.  
   
-##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
  È possibile reinizializzare le sottoscrizioni a livello di programmazione tramite le stored procedure di replica. La stored procedure utilizzata dipende dal tipo di sottoscrizione, ovvero push o pull, nonché dal tipo di pubblicazione a cui appartiene la sottoscrizione.  
   
 #### <a name="to-reinitialize-a-pull-subscription-to-a-transactional-publication"></a>Per reinizializzare una sottoscrizione pull in una pubblicazione transazionale  
@@ -174,9 +173,9 @@ ms.locfileid: "48130340"
 3.  Chiamare il metodo <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> per recuperare le proprietà dell'oggetto.  
   
     > [!NOTE]  
-    >  Se questo metodo restituisce `false`, le proprietà della sottoscrizione nel passaggio 2 sono state definite in modo non corretto o la sottoscrizione pull non esiste.  
+    >  Se questo metodo restituisce `false`, le proprietà di sottoscrizione sono state definite in modo non corretto nel passaggio 2 oppure la sottoscrizione pull non esiste.  
   
-4.  Chiamare il metodo <xref:Microsoft.SqlServer.Replication.TransPullSubscription.Reinitialize%2A> . Questo metodo contrassegna la sottoscrizione per la reinizializzazione.  
+4.  Chiamare il metodo <xref:Microsoft.SqlServer.Replication.TransPullSubscription.Reinitialize%2A>. Questo metodo contrassegna la sottoscrizione per la reinizializzazione.  
   
 5.  Sincronizzare la sottoscrizione pull. Per altre informazioni, vedere [Synchronize a Pull Subscription](synchronize-a-pull-subscription.md).  
   
@@ -189,9 +188,9 @@ ms.locfileid: "48130340"
 3.  Chiamare il metodo <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> per recuperare le proprietà dell'oggetto.  
   
     > [!NOTE]  
-    >  Se questo metodo restituisce `false`, le proprietà della sottoscrizione nel passaggio 2 sono state definite in modo non corretto o la sottoscrizione push non esiste.  
+    >  Se questo metodo restituisce `false`, le proprietà di sottoscrizione sono state definite in modo non corretto nel passaggio 2 oppure la sottoscrizione push non esiste.  
   
-4.  Chiamare il metodo <xref:Microsoft.SqlServer.Replication.TransSubscription.Reinitialize%2A> . Questo metodo contrassegna la sottoscrizione per la reinizializzazione.  
+4.  Chiamare il metodo <xref:Microsoft.SqlServer.Replication.TransSubscription.Reinitialize%2A>. Questo metodo contrassegna la sottoscrizione per la reinizializzazione.  
   
 5.  Sincronizzare la sottoscrizione push. Per altre informazioni, vedere [Synchronize a Push Subscription](synchronize-a-push-subscription.md).  
   
@@ -204,9 +203,9 @@ ms.locfileid: "48130340"
 3.  Chiamare il metodo <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> per recuperare le proprietà dell'oggetto.  
   
     > [!NOTE]  
-    >  Se questo metodo restituisce `false`, le proprietà della sottoscrizione nel passaggio 2 sono state definite in modo non corretto o la sottoscrizione pull non esiste.  
+    >  Se questo metodo restituisce `false`, le proprietà di sottoscrizione sono state definite in modo non corretto nel passaggio 2 oppure la sottoscrizione pull non esiste.  
   
-4.  Chiamare il metodo <xref:Microsoft.SqlServer.Replication.MergePullSubscription.Reinitialize%2A> . Passare il valore `true` per caricare le modifiche nel Sottoscrittore prima della reinizializzazione oppure il valore `false` per eseguire la reinizializzazione e perdere eventuali modifiche in sospeso nel Sottoscrittore. Questo metodo contrassegna la sottoscrizione per la reinizializzazione.  
+4.  Chiamare il metodo <xref:Microsoft.SqlServer.Replication.MergePullSubscription.Reinitialize%2A>. Passare il valore `true` per caricare le modifiche nel Sottoscrittore prima della reinizializzazione oppure il valore `false` per eseguire la reinizializzazione e perdere eventuali modifiche in sospeso nel Sottoscrittore. Questo metodo contrassegna la sottoscrizione per la reinizializzazione.  
   
     > [!NOTE]  
     >  Se la sottoscrizione è scaduta, non sarà possibile caricare le modifiche. Per altre informazioni, vedere [Set the Expiration Period for Subscriptions](publish/set-the-expiration-period-for-subscriptions.md).  
@@ -222,14 +221,14 @@ ms.locfileid: "48130340"
 3.  Chiamare il metodo <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> per recuperare le proprietà dell'oggetto.  
   
     > [!NOTE]  
-    >  Se questo metodo restituisce `false`, le proprietà della sottoscrizione nel passaggio 2 sono state definite in modo non corretto o la sottoscrizione push non esiste.  
+    >  Se questo metodo restituisce `false`, le proprietà di sottoscrizione sono state definite in modo non corretto nel passaggio 2 oppure la sottoscrizione push non esiste.  
   
-4.  Chiamare il metodo <xref:Microsoft.SqlServer.Replication.MergeSubscription.Reinitialize%2A> . Passare il valore `true` per caricare le modifiche nel Sottoscrittore prima della reinizializzazione oppure il valore `false` per eseguire la reinizializzazione e perdere eventuali modifiche in sospeso nel Sottoscrittore. Questo metodo contrassegna la sottoscrizione per la reinizializzazione.  
+4.  Chiamare il metodo <xref:Microsoft.SqlServer.Replication.MergeSubscription.Reinitialize%2A>. Passare il valore `true` per caricare le modifiche nel Sottoscrittore prima della reinizializzazione oppure il valore `false` per eseguire la reinizializzazione e perdere eventuali modifiche in sospeso nel Sottoscrittore. Questo metodo contrassegna la sottoscrizione per la reinizializzazione.  
   
     > [!NOTE]  
     >  Se la sottoscrizione è scaduta, non sarà possibile caricare le modifiche. Per altre informazioni, vedere [Set the Expiration Period for Subscriptions](publish/set-the-expiration-period-for-subscriptions.md).  
   
-5.  Sincronizzare la sottoscrizione push. Per altre informazioni, vedere [Sincronizzazione di una sottoscrizione push](synchronize-a-push-subscription.md).  
+5.  Sincronizzare la sottoscrizione push. Per altre informazioni, vedere [Synchronize a Push Subscription](synchronize-a-push-subscription.md).  
   
 ###  <a name="PShellExample"></a> Esempi (RMO)  
  In questo esempio viene eseguita la reinizializzazione di una sottoscrizione pull in una pubblicazione transazionale.  

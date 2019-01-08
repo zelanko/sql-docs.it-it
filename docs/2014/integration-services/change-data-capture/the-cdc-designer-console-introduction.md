@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 45298179-4ac1-4723-8b3c-56f5926be40a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a46478b31feb3a15a260ae2cd1598ae18f605c2b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d8df088a088a68d91668978bef5761cc2b5b543f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48107751"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52779893"
 ---
 # <a name="the-cdc-designer-console-introduction"></a>Introduzione a CDC Designer Console
   In questa sezione vengono illustrate le procedure di installazione relative a Progettazione Change Data Capture per Oracle di Attunity.  
@@ -40,11 +39,11 @@ ms.locfileid: "48107751"
   
  **Database Oracle**  
   
--   Database Oracle 10g Release 2: 10.2.0.1-10.2.0.5 (set di patch a partire da aprile 2010)  
+-   Oracle Database 10g Release 2: 10.2.0.1-10.2.0.5 (set di patch a partire da aprile 2010)  
   
--   Database Oracle 11g Release 1: 11.1.0.6-11.1.0.7 (set di patch a partire da settembre 2008)  
+-   Oracle Database 11g Release 1: 11.1.0.6-11.1.0.7 (set di patch a partire da settembre 2008)  
   
--   Database Oracle 11g Release 2: 11.2.0.1-11.2.0.3 (set di patch a partire da settembre 2011)  
+-   Oracle Database 11g Release 2: 11.2.0.1-11.2.0.3 (set di patch a partire da settembre 2011)  
   
  **Database SQL Server**  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Integration Services packages, troubleshooting
@@ -17,12 +16,12 @@ ms.assetid: 41dd248c-dab3-4318-b8ba-789a42d5c00c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8dc02c97daa09091c2f7ca4063c32325e0a39a3b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4e1935b7ffa0acc22183f91cf5c7fe3896c9e1a3
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48176691"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52792092"
 ---
 # <a name="troubleshooting-tools-for-package-development"></a>Risoluzione dei problemi relativi agli strumenti per lo sviluppo dei pacchetti
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] include funzionalità e strumenti per la risoluzione dei problemi che possono verificarsi durante lo sviluppo di pacchetti in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
@@ -44,9 +43,9 @@ ms.locfileid: "48176691"
   
 -   **Impostare tutto il pacchetto e tutte le connessioni per il funzionamento offline quando le origini dati non sono disponibili**. È possibile abilitare **Offline** dal menu **SSIS** . A differenza di `DelayValidation` proprietà, il **lavora Offline** opzione è disponibile anche prima di aprire un pacchetto. È anche possibile abilitare l'opzione **Offline** per rendere più veloci le operazioni di progettazione e disabilitarla solo quando si vuole convalidare il pacchetto.  
   
--   **Configurare la proprietà DelayValidation per gli elementi del pacchetto non validi fino alla fase di esecuzione**. È possibile impostare la proprietà `DelayValidation` su `True` per gli elementi del pacchetto la cui configurazione non è valida in fare di progettazione, per impedire gli errori di convalida. Potrebbe ad esempio essere presente un'attività Flusso di dati in cui viene utilizzata una tabella di destinazione che non esiste fino a quando non viene creata in fase di esecuzione da un'attività Esegui SQL. Il `DelayValidation` proprietà può essere abilitata a livello di pacchetto o a livello di singole attività e contenitori che include il pacchetto. In genere, è necessario lasciare impostata questa proprietà su `True` negli stessi elementi del pacchetto quando si distribuisce il pacchetto, per impedire gli stessi errori di convalida in fase di esecuzione.  
+-   **Configurare la proprietà DelayValidation per gli elementi del pacchetto non validi fino alla fase di esecuzione**. È possibile impostare la proprietà `DelayValidation` su `True` per gli elementi del pacchetto la cui configurazione non è valida in fare di progettazione, per impedire gli errori di convalida. Potrebbe ad esempio essere presente un'attività Flusso di dati in cui viene utilizzata una tabella di destinazione che non esiste fino a quando non viene creata in fase di esecuzione da un'attività Esegui SQL. La proprietà `DelayValidation` può essere abilitata a livello di pacchetto oppure delle singole attività e dei singoli contenitori del pacchetto. In genere, è necessario lasciare impostata questa proprietà su `True` negli stessi elementi del pacchetto quando si distribuisce il pacchetto, per impedire gli stessi errori di convalida in fase di esecuzione.  
   
-     Il `DelayValidation` proprietà può essere impostata su un'attività flusso di dati, ma non sui dati singoli componenti del flusso. È possibile ottenere un risultato simile impostando la proprietà <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A> dei singoli componenti flusso di dati su `false`. Tuttavia, quando il valore di questa proprietà è `false`, il componente non riconosce le modifiche ai metadati delle origini dati esterne.  
+     La proprietà `DelayValidation` può essere impostata in un'attività Flusso di dati ma non nei singoli componenti flusso di dati. È possibile ottenere un risultato simile impostando la proprietà <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A> dei singoli componenti flusso di dati su `false`. Quando, tuttavia, il valore di questa proprietà è impostato su `false`, il componente non riconosce le modifiche ai metadati delle origini dei dati esterne.  
   
  Se gli oggetti di database utilizzati dal pacchetto risultano bloccati durante la convalida, è possibile che il processo di convalida si arresti. In questi casi, si arresterà anche Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] . È possibile riprendere la convalida usando [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] per chiudere le sessioni associate in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Questo problema può essere evitato anche utilizzando le impostazioni descritte in questa sezione.  
   
@@ -90,7 +89,7 @@ ms.locfileid: "48176691"
  Se durante lo sviluppo di un pacchetto viene visualizzato un numero di errore di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] senza una descrizione, è possibile ottenere la descrizione in [Guida di riferimento ai messaggi e agli errori di Integration Services](../integration-services-error-and-message-reference.md). Al momento, nell'elenco non sono incluse informazioni per la risoluzione dei problemi.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Risoluzione dei problemi degli strumenti per l'esecuzione del pacchetto](troubleshooting-tools-for-package-execution.md)   
+ [Risoluzione dei problemi relativi agli strumenti per l'esecuzione del pacchetto](troubleshooting-tools-for-package-execution.md)   
  [Funzionalità delle prestazioni del flusso di dati](../data-flow/data-flow-performance-features.md)  
   
   

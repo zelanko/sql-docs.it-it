@@ -12,12 +12,12 @@ ms.assetid: f8a579c2-55d7-4278-8088-f1da1de5b2e6
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 0e26b2a9b172b477094de5f624b5e1948b3673a4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: debec2f4cf7e62552d82ee7a0f87a2a359f4aa34
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48188581"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542928"
 ---
 # <a name="database-mirroring-operating-modes"></a>Modalità di funzionamento del mirroring del database
   In questo argomento vengono illustrate le modalità di funzionamento sincrona e asincrona per le sessioni di mirroring del database.  
@@ -80,7 +80,7 @@ ms.locfileid: "48188581"
 -   Se il server principale viene perduto, per forzare il servizio sul server mirror è necessario che il server mirror sia connesso al server di controllo del mirroring.  
   
 > [!NOTE]  
->  Per informazioni sui tipi di quorum, vedere [Quorum: Impatto di un server di controllo del mirroring sulla disponibilità del database &#40;mirroring del database&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
+>  Per informazioni sui tipi di quorum, vedere [Quorum: Come un server di controllo influisce sulla disponibilità del Database &#40;mirroring del Database&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
   
 ###  <a name="WhenPrincipalFails"></a> Risposta agli errori del server principale  
  Quando si verifica un errore nel server principale, il proprietario del database può scegliere tra le operazioni seguenti:  
@@ -146,7 +146,7 @@ ms.locfileid: "48188581"
   
  A differenza dei due partner, il server di controllo del mirroring non serve il database, ma supporta semplicemente il failover automatico mediante la verifica dell'efficienza del server principale. Il server mirror avvia il failover automatico solo se il server mirror e il server di controllo del mirroring rimangono connessi tra loro dopo la disconnessione di entrambi dal server principale.  
   
- Quando viene impostato un server di controllo del mirroring, la sessione richiede il *quorum*, una relazione tra un minimo di due istanze del server che consente di rendere disponibile il database. Per altre informazioni, vedere [Server di controllo del mirroring del database](database-mirroring-witness.md) e [Quorum: Impatto di un server di controllo del mirroring sulla disponibilità del database &#40;mirroring del database&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
+ Quando viene impostato un server di controllo del mirroring, la sessione richiede il *quorum*, una relazione tra un minimo di due istanze del server che consente di rendere disponibile il database. Per altre informazioni, vedere [server di controllo del mirroring del Database](database-mirroring-witness.md) e [Quorum: Come un server di controllo influisce sulla disponibilità del Database &#40;mirroring del Database&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
   
  Per l'esecuzione del failover automatico è necessario che si verifichino le condizioni seguenti:  
   
@@ -208,7 +208,7 @@ ms.locfileid: "48188581"
   
 -   Quando è disponibile ma non è connesso a un partner, il server di controllo del mirroring si trova nello stato UNKNOWN o DISCONNECTED in relazione a tale partner. In questo caso, il server di controllo del mirroring non dispone del quorum con tale partner e, se i partner non sono connessi tra loro, il database non sarà più disponibile.  
   
- Per informazioni sul quorum, vedere [Quorum: Impatto di un server di controllo del mirroring sulla disponibilità del database &#40;mirroring del database&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
+ Per informazioni sul quorum, vedere [Quorum: Come un server di controllo influisce sulla disponibilità del Database &#40;mirroring del Database&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
   
  Lo stato di ogni server di controllo del mirroring in un'istanza del server viene registrato nelle colonne **mirroring_witness_state** e **mirroring_witness_state_desc** della vista del catalogo **sys.database_mirroring**. Per altre informazioni, vedere [sys.database_mirroring &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-mirroring-transact-sql).  
   
@@ -222,12 +222,12 @@ ms.locfileid: "48188581"
   
  <sup>1</sup> se il controllo del mirroring viene disconnesso, è consigliabile impostare WITNESS OFF finché l'istanza del server di controllo non è disponibile.  
   
- <sup>2</sup> se un controllo del mirroring è presente in modalità a prestazioni elevate, il controllo del mirroring non partecipa alla sessione. Tuttavia, per rendere disponibile il database, è necessario che almeno due istanze del server rimangano connesse. È pertanto consigliabile mantenere la proprietà WITNESS impostata su OFF nelle sessioni in modalità a prestazioni elevate. Per altre informazioni, vedere [Quorum: Impatto di un server di controllo del mirroring sulla disponibilità del database &#40;mirroring del database&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
+ <sup>2</sup> se un controllo del mirroring è presente in modalità a prestazioni elevate, il controllo del mirroring non partecipa alla sessione. Tuttavia, per rendere disponibile il database, è necessario che almeno due istanze del server rimangano connesse. È pertanto consigliabile mantenere la proprietà WITNESS impostata su OFF nelle sessioni in modalità a prestazioni elevate. Per altre informazioni, vedere [Quorum: Come un server di controllo influisce sulla disponibilità del Database &#40;mirroring del Database&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
   
 ###  <a name="ViewWitness"></a> Visualizzazione dell'impostazione di sicurezza e dello stato del server di controllo del mirroring  
  Per visualizzare l'impostazione di sicurezza e lo stato del server di controllo del mirroring per un database, usare la vista del catalogo **sys.database_mirroring** . Le colonne rilevanti sono le seguenti:  
   
-|Fattore|Colonne|Description|  
+|Fattore|Colonne|Descrizione|  
 |------------|-------------|-----------------|  
 |Livello di sicurezza delle transazioni|**mirroring_safety_level** o **mirroring_safety_level_desc**|Impostazione del livello di protezione delle transazioni per gli aggiornamenti nel database mirror, scelta tra le seguenti:<br /><br /> UNKNOWN<br /><br /> OFF<br /><br /> FULL<br /><br /> NULL = database non online|  
 |Disponibilità di un server di controllo del mirroring|**mirroring_witness_name**|Nome del server di controllo del mirroring del database o valore NULL se tale server non esiste.|  

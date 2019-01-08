@@ -14,15 +14,15 @@ ms.assetid: f082c717-4f82-4820-a2fa-ba607d8fd872
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 46b224e8167587c4e4860f171b132d23539143e8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 53e1afcc780ff06d1d453f94deac984163099444
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47695033"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52541228"
 ---
 # <a name="executing-batches"></a>Esecuzione di batch
-Prima di un'applicazione esegue un batch di istruzioni, è innanzitutto necessario verificare se sono supportate. A tale scopo, l'applicazione chiama **SQLGetInfo** con le opzioni SQL_BATCH_SUPPORT SQL_PARAM_ARRAY_ROW_COUNTS e SQL_PARAM_ARRAY_SELECTS. La prima opzione restituisce se count: generazione di riga e il risultato: generazione di set di istruzioni sono supportate in batch esplicite e le procedure, mentre le ultime due opzioni restituiscono informazioni sulla disponibilità del conteggio delle righe e risultato imposta in parametrizzata esecuzione.  
+Prima di un'applicazione esegue un batch di istruzioni, è innanzitutto necessario verificare se sono supportate. A tale scopo, l'applicazione chiama **SQLGetInfo** con le opzioni SQL_BATCH_SUPPORT SQL_PARAM_ARRAY_ROW_COUNTS e SQL_PARAM_ARRAY_SELECTS. La prima opzione restituisce se generazione di conteggio delle righe e risultato istruzioni che generano set sono supportate in batch esplicite e le procedure, mentre le ultime due opzioni restituiscono informazioni sulla disponibilità del conteggio delle righe e risultato imposta in parametrizzata esecuzione.  
   
  Batch di istruzioni vengono eseguite tramite **SQLExecute** oppure **SQLExecDirect**. Ad esempio, la chiamata seguente esegue un batch di istruzioni per aprire un nuovo ordine esplicito.  
   

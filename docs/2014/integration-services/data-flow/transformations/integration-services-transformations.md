@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - transformations [Integration Services], listed
@@ -22,12 +21,12 @@ ms.assetid: c70c4f6e-82dd-4948-b923-fd5193f67f7e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 288eb3b2e8e8b86d27c50efdaf6a1f6a2754e91d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 76157486751a08d17cf46de312f63e6e41dc3cb1
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48140720"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52785233"
 ---
 # <a name="integration-services-transformations"></a>Trasformazioni di Integration Services
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] Le trasformazioni sono i componenti nel flusso di dati di un pacchetto che aggregano, uniscono, distribuiscono e modificano i dati. Le trasformazioni possono inoltre eseguire operazioni di ricerca e generare set di dati campione. In questa sezione vengono descritte le trasformazioni incluse in [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] , illustrandone il funzionamento.  
@@ -35,7 +34,7 @@ ms.locfileid: "48140720"
 ## <a name="business-intelligence-transformations"></a>Trasformazioni di Business Intelligence  
  Le trasformazioni seguenti eseguono operazioni di Business Intelligence quali la pulitura dei dati, il text mining e l'esecuzione di query di stima basate su un modello di data mining.  
   
-|Trasformazione|Description|  
+|Trasformazione|Descrizione|  
 |--------------------|-----------------|  
 |[Trasformazione Dimensione a modifica lenta](slowly-changing-dimension-transformation.md)|Trasformazione che configura l'aggiornamento di una dimensione a modifica lenta.|  
 |[Trasformazione Raggruppamento fuzzy](fuzzy-grouping-transformation.md)|Trasformazione che standardizza i valori nei dati delle colonne.|  
@@ -48,7 +47,7 @@ ms.locfileid: "48140720"
 ## <a name="row-transformations"></a>Trasformazioni a livello di riga  
  Le trasformazioni elencate di seguito consentono di aggiornare i valori delle colonne e di creare nuove colonne. La trasformazione viene applicata a tutte le righe dell'input.  
   
-|Trasformazione|Description|  
+|Trasformazione|Descrizione|  
 |--------------------|-----------------|  
 |[Trasformazione Mappa caratteri](character-map-transformation.md)|Trasformazione che applica funzioni per i valori stringa a dati di tipo carattere.|  
 |[Trasformazione Copia colonna](copy-column-transformation.md)|Trasformazione che aggiunge copie delle colonne di input al proprio output.|  
@@ -62,19 +61,19 @@ ms.locfileid: "48140720"
 ## <a name="rowset-transformations"></a>Trasformazioni a livello di set di righe  
  Le trasformazioni seguenti creano nuovi set di righe. Il set di righe può includere valori aggregati e ordinati, set di righe campione o set di righe trasformati tramite Pivot o UnPivot.  
   
-|Trasformazione|Description|  
+|Trasformazione|Descrizione|  
 |--------------------|-----------------|  
 |[Trasformazione Aggregazione](aggregate-transformation.md)|Trasformazione che esegue aggregazioni quali AVERAGE, SUM e COUNT.|  
 |[Trasformazione Ordinamento](sort-transformation.md)|Trasformazione che ordina i dati.|  
 |[Trasformazione Campionamento percentuale](percentage-sampling-transformation.md)|Trasformazione che consente di creare un set di dati campione utilizzando una percentuale per specificare le dimensioni del campione.|  
 |[Trasformazione Campionamento righe](row-sampling-transformation.md)|Trasformazione che consente di creare un set di dati campione specificando il numero di righe del campione.|  
-|[Trasformazione Pivot](pivot-transformation.md)|Trasformazione che crea una versione meno normalizzata di una tabella normalizzata.|  
+|[Trasformazione pivot](pivot-transformation.md)|Trasformazione che crea una versione meno normalizzata di una tabella normalizzata.|  
 |[Trasformazione UnPivot](unpivot-transformation.md)|Trasformazione che crea una versione più normalizzata di una tabella non normalizzata.|  
   
 ## <a name="split-and-join-transformations"></a>Trasformazioni di divisione e di unione  
  Le trasformazioni seguenti distribuiscono le righe tra output diversi, creano copie degli input della trasformazione, uniscono più input in un singolo output ed eseguono operazioni di ricerca.  
   
-|Trasformazione|Description|  
+|Trasformazione|Descrizione|  
 |--------------------|-----------------|  
 |[Trasformazione Suddivisione condizionale](conditional-split-transformation.md)|Trasformazione che indirizza righe di dati verso output diversi.|  
 |[Trasformazione Multicast](multicast-transformation.md)|Trasformazione che distribuisce set di dati tra più output.|  
@@ -83,12 +82,12 @@ ms.locfileid: "48140720"
 |[Trasformazione Merge join](merge-join-transformation.md)|Trasformazione che unisce due set di dati utilizzando un join di tipo FULL, LEFT o INNER.|  
 |[Trasformazione Ricerca](lookup-transformation.md)|Trasformazione che esegue la ricerca di valori in una tabella di riferimento utilizzando una corrispondenza esatta.|  
 |[Trasformazione Cache](cache-transform.md)|Trasformazione che scrive dati da un'origine dati connessa nel flusso di dati a una gestione connessione cache che salva i dati in un file di cache. La trasformazione Ricerca esegue ricerche sui dati nel file di cache.|  
-|[Trasformazione Distribuzione di dati bilanciati](balanced-data-distributor-transformation.md)|Tramite la trasformazione vengono distribuiti in modo uniforme i buffer di righe in entrata negli output di thread distinti per migliorare le prestazioni di pacchetti SSIS in esecuzione in server a più processori e più core.|  
+|[Trasformazione del server di distribuzione di dati bilanciati](balanced-data-distributor-transformation.md)|Tramite la trasformazione vengono distribuiti in modo uniforme i buffer di righe in entrata negli output di thread distinti per migliorare le prestazioni di pacchetti SSIS in esecuzione in server a più processori e più core.|  
   
 ## <a name="auditing-transformations"></a>Trasformazioni di controllo  
  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] include le trasformazioni seguenti per l'aggiunta di informazioni di controllo e il conteggio delle righe.  
   
-|Trasformazione|Description|  
+|Trasformazione|Descrizione|  
 |--------------------|-----------------|  
 |[Trasformazione Controllo](audit-transformation.md)|Trasformazione che rende le informazioni sull'ambiente disponibili a un flusso di dati in un pacchetto.|  
 |[Trasformazione Conteggio righe](row-count-transformation.md)|Trasformazione che conta le righe al suo interno e archivia il totale in una variabile.|  

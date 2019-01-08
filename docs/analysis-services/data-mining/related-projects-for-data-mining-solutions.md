@@ -1,5 +1,5 @@
 ---
-title: Progetti correlati per soluzioni di Data Mining | Documenti Microsoft
+title: Progetti correlati per soluzioni di Data Mining | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: f884a7d70447771769ba2d6ff8928234095c7cae
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 5e7a1934a207beebca88e3939a211667e94be976
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019458"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52415608"
 ---
 # <a name="related-projects-for-data-mining-solutions"></a>Progetti correlati per soluzioni di data mining
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "34019458"
  [Indicizzazione semantica](#bkmk_SemSearch)  
   
 ##  <a name="bkmk_SSIS"></a> SQL Server Integration Services  
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]vengono forniti componenti e le funzionalità necessarie per le fasi di training di un progetto di data mining e la preparazione dei dati. Benché sia possibile eseguire molte attività di pulizia o preparazione dei dati tramite altri strumenti, ad esempio gli script, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] offre numerosi vantaggi per il data mining:  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] vengono forniti componenti e funzionalità richiesti per le fasi di preparazione dei dati e di training di un progetto di data mining. Benché sia possibile eseguire molte attività di pulizia o preparazione dei dati tramite altri strumenti, ad esempio gli script, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] offre numerosi vantaggi per il data mining:  
   
 -   Rappresenta le attività come parte di un flusso di lavoro che può essere ripetuto, automatizzato, ramificato ed esteso.  
   
@@ -65,27 +65,27 @@ ms.locfileid: "34019458"
   
 -   [Pulizia dei dati](../../data-quality-services/data-cleansing.md)  
   
--   [Attività Query di Data Mining](../../integration-services/control-flow/data-mining-query-task.md)  
+-   [Attività Query di data mining](../../integration-services/control-flow/data-mining-query-task.md)  
   
 -   [Attività Profiling dati](../../integration-services/control-flow/data-profiling-task.md)  
   
  **Componenti del flusso di dati**  
   
--   [Componenti del flusso di CDC](../../integration-services/data-flow/cdc-flow-components.md)  
+-   [Componenti di flusso CDC](../../integration-services/data-flow/cdc-flow-components.md)  
   
 -   [Trasformazione Suddivisione condizionale](../../integration-services/data-flow/transformations/conditional-split-transformation.md)  
   
--   [Trasformazione conversione dati](../../integration-services/data-flow/transformations/data-conversion-transformation.md)  
+-   [Trasformazione Conversione dati](../../integration-services/data-flow/transformations/data-conversion-transformation.md)  
   
--   [Destinazione Training modello di Data Mining](../../integration-services/data-flow/data-mining-model-training-destination.md)  
+-   [Destinazione Training modello di data mining](../../integration-services/data-flow/data-mining-model-training-destination.md)  
   
--   [Trasformazione Query di Data Mining](../../integration-services/data-flow/transformations/data-mining-query-transformation.md)  
+-   [Trasformazione Query di data mining](../../integration-services/data-flow/transformations/data-mining-query-transformation.md)  
   
 -   [Trasformazione Colonna derivata](../../integration-services/data-flow/transformations/derived-column-transformation.md)  
   
 -   [Trasformazione Campionamento percentuale](../../integration-services/data-flow/transformations/percentage-sampling-transformation.md)  
   
--   [Trasformazione estrazione termini](../../integration-services/data-flow/transformations/term-extraction-transformation.md)  
+-   [Trasformazione Estrazione termini](../../integration-services/data-flow/transformations/term-extraction-transformation.md)  
   
 -   [Trasformazione Ricerca termini](../../integration-services/data-flow/transformations/term-lookup-transformation.md)  
   
@@ -102,11 +102,11 @@ ms.locfileid: "34019458"
   
  Per ulteriori informazioni sull'utilizzo di Reporting Services con query DMX come origine dati, vedere i collegamenti seguenti:  
   
- [Recuperare dati da un modello di Data Mining & #40; DMX & #41; & #40; SSRS & #41;](../../reporting-services/report-data/retrieve-data-from-a-data-mining-model-dmx-ssrs.md)  
+ [Recuperare i dati da un modello di data mining &#40;DMX&#41; &#40;SSRS&#41;](../../reporting-services/report-data/retrieve-data-from-a-data-mining-model-dmx-ssrs.md)  
   
- [Interfaccia utente di progettazione di Query DMX di Analysis Services](../../reporting-services/report-data/analysis-services-dmx-query-designer-user-interface.md)  
+ [Interfaccia utente di Progettazione query DMX in Analysis Services](../../reporting-services/report-data/analysis-services-dmx-query-designer-user-interface.md)  
   
- [Tipo di connessione di Analysis Services per DMX & #40; SSRS & #41;](../../reporting-services/report-data/analysis-services-connection-type-for-dmx-ssrs.md)  
+ [Tipo di connessione di Analysis Services per DMX &#40;SSRS&#41;](../../reporting-services/report-data/analysis-services-connection-type-for-dmx-ssrs.md)  
   
  Tuttavia, non è necessario utilizzare DMX come origine dati. I componenti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] per il data mining supportano inoltre il salvataggio dei risultati di una query di stima in un database relazionale. Se si dispone di un flusso di lavoro stabilito per l'aggiornamento di modelli tramite [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], l'impostazione della persistenza di stime e altri risultati di query di data mining in SQL Server consente di utilizzare [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] per la creazione di report, nonché altri strumenti non interfacciati con DMX.  
   
@@ -161,7 +161,7 @@ ms.locfileid: "34019458"
   
  Per altre informazioni, vedere [Configurare e gestire word breaker e stemmer per la ricerca](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md).  
   
- La versione di una parola archiviata dopo l'indicizzazione full-text è un token in formato compresso. Le query successive nell'indice full-text generano più formati flessionali di una determinata parola basati sulle regole della lingua specifica, per garantire l'individuazione di tutte le corrispondenze probabili. Ad esempio, anche se il token archiviato è "acqua", tramite il motore di query vengono cercati anche i termini "acquario", "acquatico" e "acquaio", poiché sono variazioni morfologiche derivate regolarmente dalla radice "acqua".  
+ La versione di una parola archiviata dopo l'indicizzazione full-text è un token in formato compresso. Le query successive nell'indice full-text generano più formati flessionali di una determinata parola basati sulle regole della lingua specifica, per garantire l'individuazione di tutte le corrispondenze probabili. Ad esempio, anche se il token archiviato può essere "Esegui", il motore di query vengono cercati anche i termini "acquario", "ran" e "runner", perché questi sono variazioni morfologiche derivate regolarmente della parola radice "Esegui".  
   
  È inoltre possibile creare e compilare un thesaurus dell'utente per archiviare sinonimi e migliorare i risultati della ricerca o la categorizzazione dei termini. Sviluppando un thesaurus basato sui dati full-text in uso, è possibile ampliare in modo efficace l'ambito delle query full-text su tali dati. Per altre informazioni, vedere [Configurare e gestire i file del thesaurus per la ricerca full-text](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md).  
   

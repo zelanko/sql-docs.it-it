@@ -20,12 +20,12 @@ ms.assetid: c0243667-428c-4dda-ae91-3c307616a1ac
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 146967ebc31d5e7d8176d37ee5b8b0b97b6c0674
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f7b7e5141a465249c818b50466b34a8155adc1d6
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47769491"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52540807"
 ---
 # <a name="sqlfetchscroll-function"></a>Funzione SQLFetchScroll
 **Conformità**  
@@ -84,7 +84,7 @@ SQLRETURN SQLFetchScroll(
   
  Per tutti questi SQLSTATEs che può restituire SQL_SUCCESS_WITH_INFO o SQL_ERROR (eccetto SQLSTATEs 01xxx), viene restituito SQL_SUCCESS_WITH_INFO se si verifica un errore in uno o più, ma non tutte, le righe di un'operazione con più righe e viene restituito SQL_ERROR se si verifica un errore in un riga singola operazione.  
   
-|SQLSTATE|Errore|Description|  
+|SQLSTATE|Errore|Descrizione|  
 |--------------|-----------|-----------------|  
 |01000|Avviso generale|Messaggio informativo specifico del driver. (Funzione restituisce SQL_SUCCESS_WITH_INFO).|  
 |01004|Stringa troncati di dati a destra|Stringa o dati binari restituiti per una colonna ha comportato il troncamento del carattere non vuote o dati binari non NULL. Se si tratta di un valore stringa, era troncati a destra.|  
@@ -96,7 +96,7 @@ SQLRETURN SQLFetchScroll(
 |08S01|Errore del collegamento di comunicazione|Il collegamento di comunicazione tra il driver e l'origine dati a cui è stato connesso il driver non è stato possibile prima dell'elaborazione di funzione è stata completata.|  
 |22001|Stringa troncati di dati a destra|Un segnalibro a lunghezza variabile restituito per una colonna sono stato troncato.|  
 |22002|Variabile indicatore necessaria ma non fornito|Dati NULL è stati recuperati in una colonna la cui proprietà *StrLen_or_IndPtr* effettui **SQLBindCol** (o SQL_DESC_INDICATOR_PTR impostato da **SQLSetDescField** o  **SQLSetDescRec**) era un puntatore null.|  
-|22003|Valore numerico non compreso nell'intervallo|Restituzione del valore numerico (come valore numerico o stringa) per uno o più colonne associate avrebbe causato la parte intera (in contrapposizione frazionari) del numero da troncare.<br /><br /> Per altre informazioni, vedere [conversione di dati da SQL a tipi di dati C](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md) nelle [appendice d: i tipi di dati](../../../odbc/reference/appendixes/appendix-d-data-types.md).|  
+|22003|Valore numerico non compreso nell'intervallo|Restituzione del valore numerico (come valore numerico o stringa) per uno o più colonne associate avrebbe causato la parte intera (in contrapposizione frazionari) del numero da troncare.<br /><br /> Per altre informazioni, vedere [conversione di dati da SQL a tipi di dati C](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md) in [appendice d: Tipi di dati](../../../odbc/reference/appendixes/appendix-d-data-types.md).|  
 |22007|Formato di datetime non valido|Una colonna di tipo carattere nel set di risultati è stata associata a una data, ora o timestamp C struttura e un valore nella colonna non è, rispettivamente, una data non valida, ora o timestamp.|  
 |22012|Divisione per zero|Un valore da un'espressione aritmetica è stato restituito, ciò ha provocato la divisione per zero.|  
 |22015|Overflow del campo Interval|Assegnazione da un numerico esatto o l'intervallo di tipo SQL a un tipo di intervallo C, ha causato una perdita di cifre significative nel campo iniziale.<br /><br /> Durante il recupero di dati a un tipo di intervallo C, si è verificato alcun rappresentazione del valore del tipo SQL nel tipo di intervallo C.|  
@@ -122,7 +122,7 @@ SQLRETURN SQLFetchScroll(
 |IM018|**SQLCompleteAsync** non è stato chiamato per completare l'operazione asincrona precedente in questo handle.|Se la chiamata di funzione precedente dell'handle di restituisce SQL_STILL_EXECUTING e se è abilitata la modalità di notifica, **SQLCompleteAsync** deve essere chiamato su handle per eseguire operazioni di post-elaborazione e completare l'operazione.|  
   
 ## <a name="comments"></a>Commenti  
- **SQLFetchScroll** restituisce un set di righe specificato dal set di risultati. In base alla posizione assoluta o relativa o tramite segnalibro, è possibile specificare i set di righe. **SQLFetchScroll** può essere chiamato solo quando è presente un set di risultati, vale a dire, dopo una chiamata che crea un set di risultati e prima del cursore viene chiuso over che set di risultati. Se tutte le colonne sono associate, restituisce i dati in tali colonne. Se l'applicazione non è specificato un puntatore a un buffer in cui restituire il numero di righe recuperate, o una matrice di stato di riga **SQLFetchScroll** restituisce anche queste informazioni. Le chiamate a **SQLFetchScroll** possono essere combinate con le chiamate a **SQLFetch** ma ReadContentAsBase64 e ReadContentAsBinHex con chiamate a **SQLExtendedFetch**.  
+ **SQLFetchScroll** restituisce un set di righe specificato dal set di risultati. In base alla posizione assoluta o relativa o tramite segnalibro, è possibile specificare i set di righe. **SQLFetchScroll** può essere chiamato solo mentre è presente un set di risultati, vale a dire, dopo una chiamata che crea un set di risultati e prima del cursore over che set di risultati è chiuso. Se tutte le colonne sono associate, restituisce i dati in tali colonne. Se l'applicazione non è specificato un puntatore a un buffer in cui restituire il numero di righe recuperate, o una matrice di stato di riga **SQLFetchScroll** restituisce anche queste informazioni. Le chiamate a **SQLFetchScroll** possono essere combinate con le chiamate a **SQLFetch** ma ReadContentAsBase64 e ReadContentAsBinHex con chiamate a **SQLExtendedFetch**.  
   
  Per altre informazioni, vedere [cursori a blocchi usando](../../../odbc/reference/develop-app/using-block-cursors.md) e [utilizzando i cursori scorrevoli](../../../odbc/reference/develop-app/using-scrollable-cursors.md).  
   
@@ -141,7 +141,7 @@ SQLRETURN SQLFetchScroll(
   
  I driver non sono necessari per supportare tutti gli orientamenti di recupero; un'applicazione chiama **SQLGetInfo** con un tipo di informazioni di SQL_DYNAMIC_CURSOR_ATTRIBUTES1, SQL_KEYSET_CURSOR_ATTRIBUTES1 o SQL_STATIC_CURSOR_ATTRIBUTES1 (a seconda del tipo di cursore) per determinare quale operazione di recupero orientamenti supportati dal driver. L'applicazione deve esaminare le maschere SQL_CA1_NEXT, SQL_CA1_RELATIVE, SQL_CA1_ABSOLUTE e WQL_CA1_BOOKMARK in questi tipi di informazioni. Inoltre, se il cursore è forward-only e FetchOrientation non, SQL_FETCH_NEXT **SQLFetchScroll** restituisce SQLSTATE HY106 (tipo compreso nell'intervallo di recupero).  
   
- L'attributo di istruzione SQL_ATTR_ROW_ARRAY_SIZE specifica il numero di righe nel set di righe. Se il set di righe recuperate dal **SQLFetchScroll** fine del set di risultati, è sovrapposto **SQLFetchScroll** restituisce un set di righe parziale. Vale a dire se S + R-1 è maggiore di L, dove S è la riga iniziale del set di righe recuperate, R è la dimensione del set di righe e L è l'ultima riga nel set di risultati, quindi solo il primo G-S + 1 righe del set di righe sono validi. Le righe rimanenti sono vuote e con stato SQL_ROW_NOROW.  
+ L'attributo di istruzione SQL_ATTR_ROW_ARRAY_SIZE specifica il numero di righe nel set di righe. Se il set di righe recuperate dal **SQLFetchScroll** fine del set di risultati, è sovrapposto **SQLFetchScroll** restituisce un set di righe parziale. Vale a dire se S + R - 1 è maggiore di L, dove S è la riga iniziale del set di righe recuperate, R è la dimensione del set di righe e L è l'ultima riga nel set di risultati, quindi solo il primo G - S + 1 righe del set di righe sono validi. Le righe rimanenti sono vuote e con stato SQL_ROW_NOROW.  
   
  Dopo aver **SQLFetchScroll** viene restituito, la riga corrente è la prima riga del set di righe.  
   
@@ -178,9 +178,9 @@ SQLRETURN SQLFetchScroll(
 |*Prima dell'inizio*|*Prima dell'inizio*|  
 |*CurrRowsetStart = 1*|*Prima dell'inizio*|  
 |*1 < CurrRowsetStart < = RowsetSize* <sup>[2].</sup>|*1* <sup>[1]</sup>|  
-|*CurrRowsetStart > RowsetSize* <sup>[2]</sup>|*CurrRowsetStart – RowsetSize* <sup>[2]</sup>|  
+|*CurrRowsetStart > RowsetSize* <sup>[2]</sup>|*CurrRowsetStart - RowsetSize* <sup>[2]</sup>|  
 |*Dopo la fine e LastResultRow < RowsetSize* <sup>[2]</sup>|*1* <sup>[1]</sup>|  
-|*Dopo la fine LastResultRow e > = RowsetSize* <sup>[2]</sup>|*LastResultRow – RowsetSize + 1* <sup>[2].</sup>|  
+|*Dopo la fine LastResultRow e > = RowsetSize* <sup>[2]</sup>|*LastResultRow - RowsetSize + 1* <sup>[2].</sup>|  
   
  [1] **SQLFetchScroll** restituisce SQLSTATE 01S06 (tentativo di recupero prima che il set di risultati restituito il primo set di righe) e SQL_SUCCESS_WITH_INFO.  
   
@@ -236,7 +236,7 @@ SQLRETURN SQLFetchScroll(
   
 |Condizione|Prima riga del nuovo set di righe|  
 |---------------|-----------------------------|  
-|*RowsetSize* <sup>[1]</sup> < = LastResultRow|*LastResultRow – RowsetSize + 1* <sup>[1]</sup>|  
+|*RowsetSize* <sup>[1]</sup> < = LastResultRow|*LastResultRow - RowsetSize + 1* <sup>[1]</sup>|  
 |*RowsetSize* <sup>[1]</sup> > LastResultRow|*1*|  
   
  [1] se le dimensioni del set di righe sono stata modificata dalla chiamata precedente a recuperare le righe, questa è la nuova dimensione di set di righe.  
@@ -257,7 +257,7 @@ SQLRETURN SQLFetchScroll(
   
  Se il cursore rileva righe aggiunte al set di risultati o rimuove le righe eliminate dal set di risultati, viene visualizzato come se rileva queste modifiche solo quando il recupero dei dati. Include il caso quando **SQLFetchScroll** viene chiamato con FetchOrientation impostata SQL_FETCH_RELATIVE e FetchOffset impostata su 0 per recupera di nuovo set di righe dello stesso, ma non include il caso quando viene chiamato SQLSetPos con fOption impostato su SQL _ AGGIORNAMENTO. Nel secondo caso, vengono aggiornati i dati nei buffer di set di righe, ma non refetched ed eliminate righe non vengono rimosse dal set di risultati. Di conseguenza, quando una riga viene eliminata dal o inserita nel set di righe corrente, il cursore non modifica i buffer di righe. Al contrario, rileva la modifica quando recupera qualsiasi set di righe incluse in precedenza la riga eliminata o include ora la riga inserita.  
   
- Esempio:  
+ Ad esempio:  
   
 ```  
 // Fetch the next rowset.  
@@ -271,7 +271,7 @@ SQLSetPos(hstmt, 3, SQL_REFRESH, SQL_LOCK_NO_CHANGE);
 SQLFetchScroll(hstmt, SQL_FETCH_RELATIVE, 0);  
 ```  
   
- Quando **SQLFetchScroll** restituisce un nuovo set di righe con una posizione rispetto al set di righe corrente, ovvero FetchOrientation è SQL_FETCH_NEXT, SQL_FETCH_PRIOR o SQL_FETCH_RELATIVE, ovvero non include le modifiche al set di righe corrente Quando si calcola la posizione iniziale del nuovo set di righe. Tuttavia, sono incluse le modifiche all'esterno di righe corrente se è in grado di rilevarli. Inoltre, quando **SQLFetchScroll** restituisce un nuovo set di righe che dispone di una posizione indipendente del set di righe corrente, ovvero FetchOrientation è SQL_FETCH_FIRST, SQL_FETCH_LAST, SQL_FETCH_ABSOLUTE o impostato su SQL_FETCH_BOOKMARK:, include tutte le modifiche è in grado di rilevare, anche se sono il set di righe corrente.  
+ Quando **SQLFetchScroll** restituisce un nuovo set di righe con una posizione rispetto al set di righe corrente, vale a dire FetchOrientation è SQL_FETCH_NEXT, SQL_FETCH_PRIOR o SQL_FETCH_RELATIVE: non sono incluse le modifiche al set di righe corrente Quando si calcola la posizione iniziale del nuovo set di righe. Tuttavia, sono incluse le modifiche all'esterno di righe corrente se è in grado di rilevarli. Inoltre, quando **SQLFetchScroll** restituisce un nuovo set di righe che dispone di una posizione indipendente del set di righe corrente - FetchOrientation è SQL_FETCH_FIRST, SQL_FETCH_LAST, SQL_FETCH_ABSOLUTE o impostato su SQL_FETCH_BOOKMARK -, include tutte le modifiche è in grado di rilevare, anche se sono il set di righe corrente.  
   
  Per determinare se le righe appena aggiunte sono all'interno o all'esterno di righe corrente, un set di righe parziali viene considerato per terminare in corrispondenza dell'ultima riga valida; vale a dire, l'ultima riga per cui lo stato di riga non è SQL_ROW_NOROW. Si supponga, ad esempio, il cursore si trova in grado di rilevare le righe appena aggiunte, il set di righe corrente è un set di righe parziale, l'applicazione aggiunge nuove righe e il cursore queste righe vengono aggiunte alla fine del set di risultati. Se l'applicazione chiama **SQLFetchScroll** con FetchOrientation impostata su, SQL_FETCH_NEXT **SQLFetchScroll** restituisce il set di righe a partire dalla prima riga appena aggiunta.  
   
@@ -327,12 +327,12 @@ SQLFetchScroll(hstmt, SQL_FETCH_RELATIVE, 0);
  In ogni gruppo di record di stato che si applica a una singola riga, il primo record di stato restituito da SQLExtendedFetch deve contenere SQLSTATE 01S01 (errore nella riga). **SQLFetchScroll** non restituisce il valore SQLSTATE. Se SQLExtendedFetch è in grado di restituire altri SQLSTATEs, comunque deve restituire il valore SQLSTATE.  
   
 ## <a name="sqlfetchscroll-and-optimistic-concurrency"></a>SQLFetchScroll e concorrenza ottimistica  
- Se un cursore utilizza la concorrenza ottimistica, vale a dire, l'attributo di istruzione SQL_ATTR_CONCURRENCY ha un valore SQL_CONCUR_VALUES o SQL_CONCUR_ROWVER — **SQLFetchScroll** Aggiorna i valori di concorrenza ottimistica utilizzati dai dati origine per rilevare se una riga è stata modificata. Ciò si verifica ogni volta che **SQLFetchScroll** recupera un nuovo set di righe, ad esempio quando recupera nuovamente il set di righe corrente. (Viene chiamato con FetchOrientation impostata SQL_FETCH_RELATIVE e FetchOffset impostato su 0.)  
+ Se un cursore utilizza la concorrenza ottimistica, vale a dire, l'attributo di istruzione SQL_ATTR_CONCURRENCY ha un valore delle SQL_CONCUR_ROWVER, SQL_CONCUR_VALUES **SQLFetchScroll** Aggiorna i valori di concorrenza ottimistica utilizzati dai dati origine per rilevare se una riga è stata modificata. Ciò si verifica ogni volta che **SQLFetchScroll** recupera un nuovo set di righe, ad esempio quando recupera nuovamente il set di righe corrente. (Viene chiamato con FetchOrientation impostata SQL_FETCH_RELATIVE e FetchOffset impostato su 0.)  
   
 ## <a name="sqlfetchscroll-and-odbc-2x-drivers"></a>SQLFetchScroll e ODBC 2.x driver  
  Quando un'applicazione chiama **SQLFetchScroll** in un driver ODBC 2.x, gestione Driver esegue il mapping di questa chiamata a **SQLExtendedFetch**. Passa i valori seguenti per gli argomenti di **SQLExtendedFetch**.  
   
-|Argomento SQLExtendedFetch|valore|  
+|Argomento SQLExtendedFetch|Value|  
 |-------------------------------|-----------|  
 |StatementHandle|In StatementHandle **SQLFetchScroll**.|  
 |FetchOrientation|In FetchOrientation **SQLFetchScroll**.|  
@@ -340,7 +340,7 @@ SQLFetchScroll(hstmt, SQL_FETCH_RELATIVE, 0);
 |RowCountPtr|L'indirizzo specificato dall'attributo SQL_ATTR_ROWS_FETCHED_PTR istruzione.|  
 |RowStatusArray|L'indirizzo specificato nell'attributo di istruzione vengono impostati SQL_ATTR_ROW_STATUS_PTR.|  
   
- Per altre informazioni, vedere [cursori rettangolari, cursori scorrevoli e compatibilità con le versioni precedenti](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md) nell'appendice g: Driver le linee guida per la compatibilità con le versioni precedenti.  
+ Per altre informazioni, vedere [cursori rettangolari, cursori scorrevoli e compatibilità con le versioni precedenti](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md) nell'appendice g: Driver linee guida per la compatibilità con le versioni precedenti.  
   
 ## <a name="descriptors-and-sqlfetchscroll"></a>Descrittori e SQLFetchScroll  
  **SQLFetchScroll** interagisce con i descrittori in modo analogo **SQLFetch**. Per altre informazioni, vedere la sezione "Descrittori e SQLFetchScroll" nella [SQLFetch-funzione](../../../odbc/reference/syntax/sqlfetch-function.md).  

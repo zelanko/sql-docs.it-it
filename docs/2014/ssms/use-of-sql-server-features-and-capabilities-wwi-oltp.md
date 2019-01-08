@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - arguments [SQL Server Management Studio]
@@ -13,19 +13,19 @@ ms.assetid: 3991c13a-f23f-450b-a2ba-19391c399735
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b712c37d064d9eb345642272d69e599438ca4cd4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2365ec137329675e2cd88e7f5bf7e1781aa3308f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48208207"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52812413"
 ---
 # <a name="arguments-for-external-tools"></a>Strumenti esterni - Argomenti
   Gli argomenti sono variabili per le quali l'ambiente Visual Studio specifica dei valori quando viene avviato uno strumento esterno dal menu **Strumenti**. Al menu **Strumenti** è possibile aggiungere strumenti esterni, come il Blocco note, usando la finestra di dialogo **Strumenti esterni**.  
   
  Nella tabella seguente vengono elencati gli argomenti per gli strumenti esterni.  
   
-|nome|Argomento|Description|  
+|nome|Argomento|Descrizione|  
 |----------|--------------|-----------------|  
 |**Percorso elemento**|$(ItemPath)|Il nome file completo dell'origine corrente (definito come unità + percorso + nome file); vuoto se è attiva una finestra non di origine.|  
 |**Directory elemento**|$(ItemDir)|La directory dell'origine corrente (definita come unità + percorso); vuoto se è attiva una finestra non di origine.|  
