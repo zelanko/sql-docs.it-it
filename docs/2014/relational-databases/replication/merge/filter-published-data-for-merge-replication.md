@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - merge replication [SQL Server replication], filtering published data
@@ -14,12 +13,12 @@ ms.assetid: 46c5023d-7a3b-4455-becc-e159fcb5d6c4
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 60fe7e6fd2b818c653c3f5fd713de5b1945fb714
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 463a9385f4622f85cd1cbd5666517464be3cffd4
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48219581"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52780843"
 ---
 # <a name="filter-published-data-for-merge-replication"></a>Filtro dei dati pubblicati per la replica di tipo merge
   Oltre ai filtri di riga e di colonna statici che è possibile definire con altri tipi di replica, la replica di tipo merge offre filtri di riga con parametri e filtri join. Per altre informazioni sui filtri di riga e di colonna statici, vedere [Filtrare i dati pubblicati](../publish/filter-published-data.md).  

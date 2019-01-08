@@ -11,12 +11,12 @@ ms.assetid: 2a577e52-821d-4bd3-ba35-075a6be285c9
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4332d78fef98d653029d0913c6b7da8cfe5a75f0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7e3bee7fa85c98e50fdb940d2dfb23f76f3a462c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48048257"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52504686"
 ---
 # <a name="dmx-templates"></a>Modelli DMX
   I modelli di data mining consentono di compilare rapidamente query sofisticate. Sebbene la sintassi generale per le query DMX sia ben documentata, l'utilizzo dei modelli semplifica la compilazione delle query facendo clic e scegliendo gli argomenti e le origini dati.  
@@ -29,7 +29,7 @@ ms.locfileid: "48048257"
   
 3.  Nella pagina **Seleziona modello**, fare clic su **avanzate**.  
   
-     **Suggerimento:** se si intende creare una query di stima su un modello, è possibile selezionare prima il modello e quindi fare clic su **avanzate**per prepopolare il modello con il nome del modello.  
+     **Suggerimento:** Se si intende creare una query di stima su un modello, è possibile selezionare prima il modello e quindi fare clic su **avanzate**per prepopolare il modello con il nome del modello.  
   
 4.  Nel **Advanced Query Editor di Data Mining**, fare clic su **modelli DMX**e selezionare un modello.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "48048257"
   
  **Creare**  
   
- Utilizzare tali modelli per compilare modelli o strutture dei dati personalizzati. Non si è limitati ai modelli supportati dalle procedure guidate, è possibile utilizzare qualsiasi algoritmo di data mining dell'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] a cui si è connessi, inclusi gli algoritmi plug-in.  
+ Utilizzare tali modelli per compilare modelli o strutture dei dati personalizzati. Non si è limitati ai modelli supportati dalle procedure guidate: è possibile utilizzare qualsiasi algoritmo di data mining supportato dall'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] che è connessi, inclusi gli algoritmi plug-in.  
   
 -   Modello di data mining  
   

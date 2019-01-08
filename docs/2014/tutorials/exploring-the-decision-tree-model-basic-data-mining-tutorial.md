@@ -11,12 +11,12 @@ ms.assetid: 2e1472c2-3f3e-4dae-acb3-62fca374d397
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0a8d8a5238caa09d9b4a3d85d014b2891c3f427e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 45acf7bef608bb23d697fc18381872f741cc2e21
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48145911"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52401366"
 ---
 # <a name="exploring-the-decision-tree-model-basic-data-mining-tutorial"></a>Esplorazione del modello Decision Trees (Esercitazione di base sul data mining)
   L'algoritmo [!INCLUDE[msCoName](../includes/msconame-md.md)] Decision Trees consente di stimare quali colonne influiscono sulla decisione di acquistare una bicicletta in base alle colonne restanti nel set di training.  
@@ -101,7 +101,7 @@ ms.locfileid: "48145911"
  [Esplorazione del modello di Clustering &#40;esercitazione di base di Data Mining&#41;](../../2014/tutorials/exploring-the-clustering-model-basic-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Attività del Visualizzatore modelli e procedure dettagliate di data mining](../../2014/analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
+ [Attività e procedure relative al visualizzatore modello di data mining](../../2014/analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
  [Scheda albero decisionale &#40;visualizzatore modello di Data Mining&#41;](../../2014/analysis-services/decision-tree-tab-mining-model-viewer.md)   
  [Scheda rete di dipendenze &#40;visualizzatore modello di Data Mining&#41;](../../2014/analysis-services/dependency-network-tab-mining-model-viewer.md)   
  [Visualizzare un modello usando il Visualizzatore Microsoft Decision Trees](../../2014/analysis-services/data-mining/browse-a-model-using-the-microsoft-tree-viewer.md)  

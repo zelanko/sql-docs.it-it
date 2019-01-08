@@ -1,5 +1,5 @@
 ---
-title: 'Lezione 3: Rinominare colonne | Microsoft Docs'
+title: 'Lezione 3: Rinominare le colonne | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,12 +11,12 @@ ms.assetid: 5fc8ba1a-2b30-4775-9b3b-c09dee711b3e
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0037d13dd84f3db8243252717fad1d59fd380bd9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 056f386db58f01f663cc04e82ce04e0c6c6597a6
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48152957"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52416692"
 ---
 # <a name="lesson-3-rename-columns"></a>Lezione 3: Rinominare colonne
   In questa lezione verranno rinominate numerose colonne di ogni tabella importata. La ridenominazione semplifica l'identificazione e l'esplorazione delle colonne, sia in Progettazione di modelli che da parte degli utenti che selezionano campi in un'applicazione client. Per altre informazioni, vedere [Rinominare una tabella o una colonna &#40;SSAS tabulare&#41;](tabular-models/rename-a-table-or-column-ssas-tabular.md).  
@@ -27,7 +27,7 @@ ms.locfileid: "48152957"
  Tempo stimato per il completamento della lezione: **20 minuti**  
   
 ## <a name="prerequisites"></a>Prerequisiti  
- Questo argomento fa parte di un'esercitazione relativa alla modellazione tabulare che deve essere completata nell'ordine specificato. Prima di eseguire le attività in questa lezione è necessario aver completato la lezione precedente: [Lezione 2: Aggiungere dati](lesson-2-add-data.md).  
+ Questo argomento fa parte di un'esercitazione relativa alla modellazione tabulare che deve essere completata nell'ordine specificato. Prima di eseguire le attività in questa lezione, è necessario avere completato la lezione precedente: [Lezione 2: Aggiungere dati](lesson-2-add-data.md).  
   
 ## <a name="rename-columns"></a>Rinominare colonne  
   
@@ -40,7 +40,7 @@ ms.locfileid: "48152957"
 2.  Fare doppio clic il **CustomerKey** colonna nome, quindi digitare `Customer  Id`, quindi premere INVIO.  
   
     > [!TIP]  
-    >  È anche possibile rinominare una colonna nella proprietà **Nome colonna** della finestra **Proprietà** della colonna o nella vista diagramma.  
+    >  È anche possibile rinominare una colonna nel **nome della colonna** proprietà della colonna **proprietà** finestra o nella vista diagramma.  
   
 3.  Rinominare le colonne rimanenti della tabella **Customer** e le colonne delle tabelle rimanenti, sostituendo il nome di origine con il nome descrittivo:  
   
@@ -122,7 +122,7 @@ ms.locfileid: "48152957"
     |Dealer Price|Dealer Price|  
     |ModelName|Model Name|  
     |LargePhoto|Large Photo|  
-    |EnglishDescription|Description|  
+    |EnglishDescription|Descrizione|  
     |StartDate|Product Start Date|  
     |EndDate|Product End Date|  
     |Stato|Product Status|  

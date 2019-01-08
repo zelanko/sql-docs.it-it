@@ -10,12 +10,12 @@ ms.assetid: 69ef5fd9-190d-4c58-8199-b3f77d5e1883
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 491eec7c723681639308b05a78de2ab935bd81e7
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 2186599ac56be3d3adca986ae8f087ecb3b2218c
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51663861"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52390807"
 ---
 # <a name="generating-reports-db2tosql"></a>Generazione di report (DB2ToSQL)
 I report di determinate attività eseguite usando i comandi vengono generati nella Console SSMA a livello di oggetto dell'albero.  
@@ -86,7 +86,7 @@ Utilizzare la procedura seguente per generare report:
 ### <a name="synchronize-target"></a>synchronize-target:  
 Il comando **destinazione sincronizzare** ha **report errori-a-** parametro che specifica il percorso del report di errore per l'operazione di sincronizzazione. Quindi, un file con nome **TargetSynchronizationReport&lt;n&gt;. XML** viene creato nella posizione specificata, in cui **&lt;n&gt;** è il numero di file univoco che viene incrementato con una cifra a ogni esecuzione del comando stesso.  
   
-**Nota:** se viene specificato il percorso della cartella, il parametro 'report-errori-to' diventa un attributo facoltativo per il comando 'sincronizzare-target'.  
+**Nota:** Se il percorso della cartella è specificato, 'report-errori-to' parametro diventa un attributo facoltativo per il comando 'sincronizzare-target'.  
   
 ```  
 <!-- Example: Synchronize target entire Database with all attributes-->  
@@ -99,9 +99,9 @@ Il comando **destinazione sincronizzare** ha **report errori-a-** parametro che 
   
    report-errors-to="<file-name/folder-name>"/>  
 ```  
-**nome di oggetto:** specifica gli oggetti considerati per la sincronizzazione (può anche avere un nome di oggetto gruppo o nomi di oggetto individuali).  
+**Nome oggetto:** Specifica gli oggetti considerati per la sincronizzazione (può anche avere un nome di oggetto gruppo o nomi di oggetto individuali).  
   
-**in caso di errore:** consente di specificare se si desidera specificare gli errori di sincronizzazione come avvisi o errori. Opzioni disponibili per in caso di errore:  
+**in errore:** Specifica se specificare gli errori di sincronizzazione come avvisi o errori. Opzioni disponibili per in caso di errore:  
   
 -   -Totale report come avviso  
   
@@ -112,7 +112,7 @@ Il comando **destinazione sincronizzare** ha **report errori-a-** parametro che 
 ### <a name="refresh-from-database"></a>aggiornamento dal database:  
 Il comando **dal database di aggiornamento** ha **report errori-a-** parametro che specifica il percorso del report di errore per l'operazione di aggiornamento. Quindi, un file con nome **SourceDBRefreshReport&lt;n&gt;. XML** viene creato nella posizione specificata, in cui **&lt;n&gt;** è il numero di file univoco che viene incrementato con una cifra a ogni esecuzione del comando stesso.  
   
-**Nota:** se viene specificato il percorso della cartella, il parametro 'report-errori-to' diventa un attributo facoltativo per il comando 'sincronizzare-target'.  
+**Nota:** Se il percorso della cartella è specificato, 'report-errori-to' parametro diventa un attributo facoltativo per il comando 'sincronizzare-target'.  
   
 ```  
 <!-- Example: Refresh entire Schema (with all attributes)-->  
@@ -127,9 +127,9 @@ Il comando **dal database di aggiornamento** ha **report errori-a-** parametro c
   
    report-errors-to="<file-name/folder-name>"/>  
 ```  
-**nome di oggetto:** specifica gli oggetti considerati per l'aggiornamento (può anche avere un nome di oggetto gruppo o nomi di oggetto individuali).  
+**Nome oggetto:** Specifica gli oggetti considerati per l'aggiornamento (può anche avere un nome di oggetto gruppo o nomi di oggetto individuali).  
   
-**in caso di errore:** specifica se occorre indicare errori di aggiornamento come avvisi o errori. Opzioni disponibili per in caso di errore:  
+**in errore:** Specifica se occorre indicare errori di aggiornamento come avvisi o errori. Opzioni disponibili per in caso di errore:  
   
 -   -Totale report come avviso  
   

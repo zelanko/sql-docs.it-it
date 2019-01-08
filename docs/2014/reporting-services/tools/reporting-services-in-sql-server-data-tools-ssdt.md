@@ -13,12 +13,12 @@ ms.assetid: 0903c7b2-ac59-45f1-b7d0-922ecd9d76f8
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: fe561dcba4a0cff5b58ef7810b27f30b1c95e228
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: 5fafd1a86686b7609a8b6e0241c05cc858f2dc41
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48906301"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52409698"
 ---
 # <a name="reporting-services-in-sql-server-data-tools-ssdt"></a>Reporting Services in SQL Server Data Tools (SSDT)
   [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] è un [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] ambiente include miglioramenti specifici di soluzioni di business intelligence. [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] è incluso in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -49,7 +49,7 @@ ms.locfileid: "48906301"
  ![Icona freccia usata con il collegamento Torna all'inizio](../../2014-toc/media/uparrow16x16.gif "Icona freccia usata con il collegamento Torna all'inizio") [Torna all'inizio](#bkmk_Top)  
   
 ##  <a name="bkmk_ReportDesignerWindowsandPanes"></a> Finestre e riquadri Progettazione report  
- Progettazione report supporta due visualizzazioni: **Design** per definire i dati e il layout del report, e **anteprima** per visualizzare una visualizzazione sottoposta a rendering del report. In ogni visualizzazione è possibile aprire più finestre per progettare o visualizzare un report visualizzabile.  
+ Progettazione report supporta due visualizzazioni: **Progettazione** per definire i dati e il layout del report, e **anteprima** per visualizzare una visualizzazione sottoposta a rendering del report. In ogni visualizzazione è possibile aprire più finestre per progettare o visualizzare un report visualizzabile.  
   
 ###  <a name="bkmk_ReportDataPane"></a> Riquadro Dati report  
  Nel riquadro dei dati del report vengono visualizzati campi predefiniti, origini dati, set di dati, raccolte di campi, parametri di report e immagini.  
@@ -188,7 +188,7 @@ ms.locfileid: "48906301"
   
 -   **Proprietà report** Selezionare questa opzione per aprire la finestra di dialogo **Proprietà report** , in cui è possibile assegnare proprietà generali del report come il nome dell'autore e la spaziatura della griglia, nonché proprietà per il layout come il numero di colonne e le dimensioni pagina. È inoltre possibile includere codice personalizzato, riferimenti ad assembly e classi e i nomi di elementi di output dei dati, trasformazioni dati e schemi dati.  
   
--   **Visualizzazione** Consente di passare tra le due schede di Progettazione report: Progettazione e Anteprima.  
+-   **Visualizzazione** passare tra le due schede di progettazione Report: Progettazione e Anteprima.  
   
 -   **Intestazione pagina** Consente di aggiungere o eliminare un'intestazione di pagina nel report. L'eliminazione di un'intestazione di pagina implica la rimozione di tutti gli elementi al suo interno.  
   
@@ -297,7 +297,7 @@ ms.locfileid: "48906301"
   
 -   Controllare le finestre e le modalità di [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)]:  
   
-    |Description|Combinazione di tasti|  
+    |Descrizione|Combinazione di tasti|  
     |-----------------|---------------------|  
     |Consente di compilare il progetto selezionato|CTRL+SHIFT+B|  
     |Consente di visualizzare la finestra Proprietà|F4|  
@@ -307,7 +307,7 @@ ms.locfileid: "48906301"
   
 -   Consente di controllare gli elementi nell'area di progettazione del report  
   
-    |Description|Combinazione di tasti|  
+    |Descrizione|Combinazione di tasti|  
     |-----------------|---------------------|  
     |Consente di spostare lo stato attivo da un elemento del report all'elemento successivo|TAB|  
     |Consente di spostare l'elemento del report selezionato|Tasti di direzione|  

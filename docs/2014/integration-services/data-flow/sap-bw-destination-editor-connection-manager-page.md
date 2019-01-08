@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 04ae38f8-5287-45a3-826a-8aac5dd15a91
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 46572a9fac9e3d1749c65acf9370718fbc8b3dd0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e4d8da5c0b352964fe9017be902557e29e1e2ed3
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48125503"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52781423"
 ---
 # <a name="sap-bw-destination-editor-connection-manager-page"></a>Editor destinazione SAP BW (pagina Gestione connessione)
   Usare la pagina **Gestione connessione** della finestra di dialogo **Editor destinazione SAP BW** per selezionare la gestione connessione SAP BW che verrà usata dalla destinazione SAP BW. In questa pagina vengono inoltre selezionati i parametri per il caricamento dei dati nel sistema SAP Netweaver BW.  
@@ -60,7 +59,7 @@ ms.locfileid: "48125503"
  **Tipo**  
  Immettere il carattere singolo che identifica il tipo di InfoSource. Nella tabella seguente sono elencati i valori a carattere singolo accettabili.  
   
-|Valore|Description|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |**D**|Dati transazione|  
 |**M**|Dati master|  
@@ -111,7 +110,7 @@ ms.locfileid: "48125503"
 |**InfoPackage**|Creare un nuovo InfoPackage usando la finestra di dialogo **Crea InfoPackage** . Per altre informazioni su questa finestra di dialogo, vedere [Crea InfoPackage](create-infopackage.md).|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Editor destinazione SAP BW &#40;pagina mapping&#41;](sap-bw-destination-editor-mappings-page.md)   
+ [Editor destinazione SAP BW &#40;pagina Mapping&#41;](sap-bw-destination-editor-mappings-page.md)   
  [Editor destinazione SAP BW &#40;pagina Output degli errori&#41;](sap-bw-destination-editor-error-output-page.md)   
  [Editor destinazione SAP BW &#40;pagina Avanzate&#41;](sap-bw-destination-editor-advanced-page.md)   
  [Guida (F1) di Microsoft Connector 1.1 for SAP BW](../microsoft-connector-for-sap-bw-f1-help.md)  

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 47759ddc-358d-405b-acb9-189ada76ea6d
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ffa8524e3bf7423d4712eb1539d2b2cece8a8a0e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 61c63b771b7314f12c709e080aa7db581306e523
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48125971"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52780247"
 ---
 # <a name="the-oracle-cdc-service"></a>Servizio Oracle CDC
   Il servizio Oracle CDC è un servizio di Windows in cui viene eseguito il programma xdbcdcsvc.exe. È possibile configurare il servizio Oracle CDC per eseguire più servizi di Windows nello stesso computer, ciascuno con un nome del servizio Windows diverso. La creazione di più servizi Windows Oracle CDC in un solo computer viene spesso effettuata per migliorare la separazione tra gli stessi o quando ciascun servizio richiede l'utilizzo di un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] diversa.  
@@ -83,7 +82,7 @@ CREATE ASYMMETRIC KEY xdbcdc_asym_key
 ### <a name="oracle-cdc-service-windows-service-account"></a>Account del servizio di Windows del servizio Oracle CDC  
  L'account del servizio utilizzato con il servizio di Windows Oracle CDC non richiede privilegi aggiuntivi. Questo account deve essere in grado di utilizzare sia l'API di Oracle Native Client sia l'API ODBC di SQL Server Native Client. Deve essere inoltre in grado di accedere alla chiave di configurazione del servizio nel Registro di sistema; la console di configurazione del servizio CDC configura a tale scopo l'elenco di controllo di accesso (ACL).  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>In questa sezione  
   
 -   [Supporto a disponibilità elevata](high-availability-support.md)  
   
@@ -94,7 +93,7 @@ CREATE ASYMMETRIC KEY xdbcdc_asym_key
 -   [Uso del servizio Oracle CDC](the-oracle-cdc-service.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Come gestire un servizio CDC locale](how-to-manage-a-local-cdc-service.md)   
+ [Procedura di gestione di un servizio CDC locale](how-to-manage-a-local-cdc-service.md)   
  [Gestire un servizio Oracle CDC](manage-an-oracle-cdc-service.md)  
   
   

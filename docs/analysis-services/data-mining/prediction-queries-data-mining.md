@@ -1,5 +1,5 @@
 ---
-title: Query di stima (Data Mining) | Documenti Microsoft
+title: Query di stima (Data Mining) | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 7a8bc3dac0b76adc326b5beab8444475fb76af8d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 19d555e988ecc1093388d751ea9f66a720b21def
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34017848"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52506039"
 ---
 # <a name="prediction-queries-data-mining"></a>Prediction Queries (Data Mining)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -60,7 +60,7 @@ ms.locfileid: "34017848"
 ###  <a name="bkmk_PredFunc"></a> Aggiunta di funzioni di stima  
  Oltre a stimare un valore, è possibile personalizzare una query di stima per restituire vari tipi di informazioni correlate alla stima. Ad esempio, se tramite la stima viene creato un elenco di prodotti da consigliare a un cliente, è necessario restituire anche la probabilità per ogni stima, in modo che sia possibile classificarli e presentare all'utente solo i prodotti consigliati.  
   
- A tale scopo, aggiungere *funzioni di stima* alla query. Ogni tipo di modello o di query supporta funzioni specifiche. Ad esempio, i modelli di clustering supportano funzioni di stima speciali che forniscono dettagli aggiuntivi sui cluster creati dal modello, mentre i modelli Time Series dispongono di funzioni che consentono di calcolare le differenze nel corso del tempo. Sono inoltre disponibili funzioni di stima generali che funzionano con quasi tutti i tipi di modello. Per un elenco delle funzioni di stima supportate nei diversi tipi di query, vedere l'argomento sulla guida di riferimento a DMX: [Funzioni di stima correlate &#40;DMX&#41;](../../dmx/general-prediction-functions-dmx.md).  
+ A tale scopo, aggiungere *funzioni di stima* alla query. Ogni tipo di modello o di query supporta funzioni specifiche. Ad esempio, i modelli di clustering supportano funzioni di stima speciali che forniscono dettagli aggiuntivi sui cluster creati dal modello, mentre i modelli Time Series dispongono di funzioni che consentono di calcolare le differenze nel corso del tempo. Sono inoltre disponibili funzioni di stima generali che funzionano con quasi tutti i tipi di modello. Per un elenco di funzioni di stima supportate nei diversi tipi di query, vedere l'argomento di riferimento DMX:  [Funzioni di stima generale &#40;DMX&#41;](../../dmx/general-prediction-functions-dmx.md).  
   
 ###  <a name="bkmk_SingletonQuery"></a> Creazione di query di stima singleton  
  Una query di stima singleton risulta utile se si desidera creare stime rapide in tempo reale. Uno scenario comune potrebbe essere l'acquisizione di informazioni da un cliente tramite, ad esempio, un form in un sito Web, e il successivo invio di tali dati come input a una query di stima singleton. Ad esempio, quando un cliente sceglie un prodotto da un elenco, è possibile utilizzare tale selezione come input per una query che consente di stimare i migliori prodotti da consigliare.  
@@ -68,7 +68,7 @@ ms.locfileid: "34017848"
  Per le query di stima singleton non è necessaria una tabella separata contenente l'input. Al contrario, vengono fornite una o più righe di valori come input del modello e le stime vengono restituite in tempo reale.  
   
 > [!WARNING]  
->  Nonostante il nome, le query di stima singleton non consentono di eseguire solo singole stime, bensì è possibile generare più stime per ogni set di input. Specificare più case di input creando un'istruzione SELECT per ogni case di input e combinandoli con l'operatore UNION.  
+>  Nonostante il nome, le query di stima singleton non solo stime singole-è possibile generare più stime per ogni set di input. Specificare più case di input creando un'istruzione SELECT per ogni case di input e combinandoli con l'operatore UNION.  
   
  Quando si crea una query di stima singleton, è necessario fornire i nuovi dati al modello sotto forma di PREDICTION JOIN. Questo significa che anche se non si esegue il mapping a una tabella effettiva, è necessario assicurarsi che i nuovi dati corrispondano alle colonne esistenti nel modello di data mining. Se le nuove colonne di dati e i nuovi dati corrispondono in modo esatto, il mapping delle colonne verrà eseguito automaticamente in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Questa funzione è denominata *NATURAL PREDICTION JOIN*. Se tuttavia le colonne non corrispondono o se nei nuovi dati non è contenuto lo stesso tipo e la stessa quantità di dati presenti nel modello, è necessario specificare di quali colonne del modello eseguire il mapping ai nuovi dati oppure specificare i valori mancanti.  
   
@@ -148,7 +148,7 @@ FROM
  Se il provider non è in grado di gestire i set di righe gerarchici, è possibile fare in modo che i risultati vengano restituiti in formato flat utilizzando la parola chiave FLATTEN nella query di stima. Per altre informazioni, inclusi esempi di set di righe bidimensionali, vedere [SELECT &#40;DMX&#41;](../../dmx/select-dmx.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Contenuto di Data Mining query & #40; & #41;](../../analysis-services/data-mining/content-queries-data-mining.md)   
- [Query di definizione dei dati & #40; Data Mining & #41;](../../analysis-services/data-mining/data-definition-queries-data-mining.md)  
+ [Query sul contenuto &#40;Data mining&#41;](../../analysis-services/data-mining/content-queries-data-mining.md)   
+ [Query di definizione dei dati &#40;Data mining&#41;](../../analysis-services/data-mining/data-definition-queries-data-mining.md)  
   
   

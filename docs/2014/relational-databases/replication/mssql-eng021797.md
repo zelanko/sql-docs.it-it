@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - MSSQL_ENG021797 error
@@ -13,12 +12,12 @@ ms.assetid: 54d83a1e-43fd-449c-a2b2-fdda2609a534
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 03ebaa70dbb9fb7e774d48b59e06a6d4dc03b11b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 88f9fff576b52e83073bbf917a43edf0a7648086
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48097281"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52753783"
 ---
 # <a name="mssqleng021797"></a>MSSQL_ENG021797
     
@@ -31,7 +30,7 @@ ms.locfileid: "48097281"
 |Origine evento|MSSQLSERVER|  
 |Componente|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|  
 |Nome simbolico||  
-|Testo del messaggio|'%s' deve essere un account di accesso di Windows valido nel formato: 'COMPUTER\Account di accesso' o 'DOMINIO\Account di accesso'. Vedere la documentazione relativa a '%s'.|  
+|Testo del messaggio|'%s'' deve essere un account di accesso Windows valido nel formato: 'Computer\Account di accesso' o 'Dominio\account di accesso'. Vedere la documentazione relativa a '%s'.|  
   
 ## <a name="explanation"></a>Spiegazione  
  Questo errore viene generato dalle stored procedure di replica seguenti se il valore specificato per il parametro **@job_login** è Null o non valido. Questo errore può verificarsi se un membro del ruolo predefinito del database **db_owner** esegue script di precedenti versioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Il modello di sicurezza in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]è cambiato ed è necessario aggiornare questi script.  

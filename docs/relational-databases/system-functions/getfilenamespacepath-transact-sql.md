@@ -18,12 +18,12 @@ ms.assetid: b393ecef-baa8-4d05-a268-b2f309fce89a
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 72d1842f81a8a4a3558b96d1dbece16f8ea4352d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9c94fc80bd516c0be5b414aac98e0e4435ec8b53
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47727159"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52396184"
 ---
 # <a name="getfilenamespacepath-transact-sql"></a>GetFileNamespacePath (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "47727159"
  *is_full_path*  
  Espressione Integer che specifica se restituire un percorso relativo o assoluto. *is_full_path* può avere uno dei valori seguenti:  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |**0**|Restituisce il percorso relativo all'interno della directory a livello di database.<br /><br /> Si tratta del valore predefinito.|  
 |**1**|Restituisce il percorso UNC completo, che inizia con `\\computer_name`.|  
@@ -54,9 +54,9 @@ ms.locfileid: "47727159"
  *@option*  
  Espressione Integer che definisce la formattazione del componente server del percorso. *@option* Può avere uno dei valori seguenti:  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
-|**0**|Restituisce il nome del server convertito in formato NetBIOS, ad esempio:<br /><br /> `\\SERVERNAME\MSSQLSERVER\MyDocumentDatabase`<br /><br /> Si tratta del valore predefinito.|  
+|**0**|Restituisce il nome del server convertito in formato NetBIOS, ad esempio:<br /><br /> `\\SERVERNAME\MSSQLSERVER\MyDocumentDatabase`<br /><br /> Rappresenta il valore predefinito.|  
 |**1**|Restituisce il nome del server senza conversione, ad esempio:<br /><br /> `\\ServerName\MSSQLSERVER\MyDocumentDatabase`|  
 |**2**|Restituisce il percorso completo del server, ad esempio:<br /><br /> `\\ServerName.MyDomain.com\MSSQLSERVER\MyDocumentDatabase`|  
   
@@ -72,7 +72,7 @@ ms.locfileid: "47727159"
   
  `\\<machine>\<instance-level FILESTREAM share>\<database-level directory>\<FileTable directory>\...`  
   
- Questo percorso logico non corrisponde direttamente a un percorso NTFS fisico. Viene tradotto nel percorso fisico dal driver di filtro del file system di FILESTREAM e dall'agente di FILESTREAM. La separazione tra percorso logico e percorso fisico consente a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di riorganizzare i dati internamente senza incidere sulla validità del percorso.  
+ Questo percorso logico non corrisponde direttamente a un percorso NTFS fisico. Viene convertito al percorso fisico dal driver del filtro del FILESTREAM file system e l'agente di FILESTREAM. La separazione tra percorso logico e percorso fisico consente a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di riorganizzare i dati internamente senza incidere sulla validità del percorso.  
   
 ## <a name="best-practices"></a>Procedure consigliate  
  Per mantenere il codice e le applicazioni indipendenti dal database e dal computer correnti, evitare di scrivere codice basato su percorsi di file assoluti. Ottenere invece il percorso completo di un file in fase di esecuzione usando il **FileTableRootPath** e **GetFileNamespacePath** funzioni insieme, come illustrato nell'esempio seguente. Per impostazione predefinita, la funzione **GetFileNamespacePath** restituisce il percorso relativo del file all'interno del percorso radice per il database.  
@@ -84,7 +84,7 @@ SELECT @root = FileTableRootPath();
   
 @fullPath = varchar(1000);  
 SELECT @fullPath = @root + file_stream.GetFileNamespacePath() FROM DocumentStore  
-WHERE Name = N’document.docx’;  
+WHERE Name = N'document.docx';  
 ```  
   
 ## <a name="remarks"></a>Note  
@@ -93,13 +93,13 @@ WHERE Name = N’document.docx’;
  Gli esempi seguenti illustrano come chiamare le **GetFileNamespacePath** funzione per ottenere il percorso UNC per un file o directory in una tabella FileTable.  
   
 ```  
--- returns the relative path of the form “\MyFileTable\MyDocDirectory\document.docx”  
+-- returns the relative path of the form "\MyFileTable\MyDocDirectory\document.docx"  
 SELECT file_stream.GetFileNamespacePath() AS FilePath FROM DocumentStore  
-WHERE Name = N’document.docx’;  
+WHERE Name = N'document.docx';  
   
--- returns “\\MyServer\MSSQLSERVER\MyDocumentDatabase\MyFileTable\MyDocDirectory\document.docx”  
+-- returns "\\MyServer\MSSQLSERVER\MyDocumentDatabase\MyFileTable\MyDocDirectory\document.docx"  
 SELECT file_stream.GetFileNamespacePath(1, Null) AS FilePath FROM DocumentStore  
-WHERE Name = N’document.docx’;  
+WHERE Name = N'document.docx';  
 ```  
   
 ## <a name="see-also"></a>Vedere anche  

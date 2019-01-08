@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - incremental load [Integration Services],specifying interval
@@ -13,12 +12,12 @@ ms.assetid: 17899078-8ba3-4f40-8769-e9837dc3ec60
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ecf61c3a073e43dc8ee5b385bf3d84a96d79332a
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: 2fd8083c7043d5aeb7259e6a284b28ae66c82a02
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49119839"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52756963"
 ---
 # <a name="specify-an-interval-of-change-data"></a>Definizione di un intervallo dei dati delle modifiche
   Nel flusso di controllo di un pacchetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] che esegue un carico incrementale dei dati delle modifiche, la prima attività consiste nel calcolare gli endpoint dell'intervallo di modifiche. Tali endpoint sono valori `datetime` e verranno archiviati in variabili del pacchetto per l'utilizzo successivo nel pacchetto.  
@@ -101,12 +100,12 @@ ms.locfileid: "49119839"
 3.  Nella pagina **Set dei risultati** di **Editor attività Esegui SQL**eseguire il mapping tra il risultato di ExtractStartTime e la variabile del pacchetto ExtractStartTime e tra il risultato di ExtractEndTime e la variabile del pacchetto ExtractEndTime.  
   
     > [!NOTE]  
-    >  Quando si utilizza un'espressione per impostare il valore di un [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] variabile, l'espressione viene valutata ogni volta che il valore della variabile è accessibile.  
+    >  Quando si usa un'espressione per impostare il valore di una variabile in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], l'espressione viene valutata ogni volta che si accede al valore della variabile.  
   
 ## <a name="next-step"></a>Passaggio successivo  
  Dopo avere calcolato il punto iniziale e il punto finale per un intervallo di modifiche, il passaggio successivo consiste nel determinare se i dati delle modifiche sono pronti.  
   
- **Argomento successivo:** [Come determinare se i dati delle modifiche sono pronti](determine-whether-the-change-data-is-ready.md)  
+ **Argomento successivo:** [Determinare se i dati delle modifiche sono pronti](determine-whether-the-change-data-is-ready.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Utilizzo di variabili nei pacchetti](../use-variables-in-packages.md)   

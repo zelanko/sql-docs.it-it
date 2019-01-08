@@ -1,5 +1,5 @@
 ---
-title: Utilizzando i dati di tabella nidificata come Input per un grafico di accuratezza | Documenti Microsoft
+title: Uso di dati della tabella nidificata come Input per un grafico di accuratezza | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 68ab3e189bcf0637003f4ddae41e5f0209988241
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: d4217962e6bb899cbf2a838c5214eb35bb576be0
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34015679"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52505306"
 ---
 # <a name="using-nested-table-data-as-an-input-for-an-accuracy-chart"></a>Utilizzo di dati di tabelle nidificate come input per un grafico di accuratezza
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "34015679"
   
 3.  In **Seleziona set di dati da utilizzare per il grafico di accuratezza**selezionare l'opzione **Specifica un set di dati diverso**.  
   
-4.  Fare clic sul pulsante Sfoglia **(…)** per scegliere il set di dati esterno da un elenco di viste origine dati nel server corrente.  
+4.  Fare clic sul pulsante **(...)**  per scegliere il set di dati esterno da un elenco di viste origine dati nel server corrente.  
   
 5.  Fare clic su **Seleziona tabella del case**. Nella finestra di dialogo **Seleziona tabella** scegliere una tabella dalla vista origine dati che contiene i dati del case e quindi fare clic su **OK**.  
   
@@ -50,6 +50,6 @@ ms.locfileid: "34015679"
   
 ## <a name="see-also"></a>Vedere anche  
  [Scegliere ed eseguire il mapping dei dati di test del modello](../../analysis-services/data-mining/choose-and-map-model-testing-data.md)   
- [Applicare filtri ai dati di Testing del modello](../../analysis-services/data-mining/apply-filters-to-model-testing-data.md)  
+ [Applicare filtri ai dati di test del modello](../../analysis-services/data-mining/apply-filters-to-model-testing-data.md)  
   
   

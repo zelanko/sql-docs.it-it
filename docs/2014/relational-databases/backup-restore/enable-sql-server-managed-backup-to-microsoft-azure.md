@@ -10,12 +10,12 @@ ms.assetid: 68ebb53e-d5ad-4622-af68-1e150b94516e
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a80190c7a10ade3994fb9e12690b64b2e0e1b4df
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 493f0b885f25cfba956fc8e03505b705c731cf2b
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48124071"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52413858"
 ---
 # <a name="setting-up-sql-server-managed-backup-to-windows-azure"></a>Configurazione del backup gestito di SQL Server in Windows Azure
   In questo argomento vengono illustrate due esercitazioni:  
@@ -28,7 +28,7 @@ ms.locfileid: "48124071"
   
 ## <a name="setting-up-includesssmartbackupincludesss-smartbackup-mdmd"></a>Configurazione del [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]  
   
-### <a name="enable-and-configure-includesssmartbackupincludesss-smartbackup-mdmd-for-a-database"></a>Abilitare e configurare [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] per un Database  
+### <a name="enable-and-configure-includesssmartbackupincludesss-smartbackup-mdmd-for-a-database"></a>Abilitare e configurare [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] per un database  
  In questa esercitazione vengono descritti i passaggi necessari per abilitare e configurare il [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] per un database (TestDB), nonché i passaggi per abilitare il monitoraggio dello stato di integrità del [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].  
   
  **Autorizzazioni:**  
@@ -42,15 +42,15 @@ ms.locfileid: "48124071"
 -   È necessario `EXECUTE` le autorizzazioni per il `smart_admin.sp_set_instance_backup` e `smart_admin.sp_backup_master_switch` stored procedure.  
 
 
-1.  **Creare un account di archiviazione di Microsoft Azure:** i backup vengono archiviati nel servizio di archiviazione di Microsoft Azure. È innanzitutto necessario creare un account di archiviazione di Microsoft Azure, se non si dispone già di un account.
+1.  **Creare un account di archiviazione di Microsoft Azure:** I backup vengono archiviati nel servizio di archiviazione di Microsoft Azure. È innanzitutto necessario creare un account di archiviazione di Microsoft Azure, se non si dispone già di un account.
     - SQL Server 2014 Usa i BLOB di pagine, che sono diversi dai blocchi e BLOB di Accodamento. È pertanto necessario creare un account di uso generale e non un account del blob. Per altre informazioni, vedere [account di archiviazione di Azure su](http://azure.microsoft.com/documentation/articles/storage-create-storage-account/).
     - Prendere nota del nome dell'account di archiviazione e delle chiavi di accesso. Le informazioni sul nome dell'account di archiviazione e sulla chiave di accesso vengono usate per creare le credenziali SQL. Le credenziali SQL vengono usate per l'autenticazione dell'account di archiviazione.  
  
-2.  **Creare credenziali SQL:** creare credenziali SQL usando il nome dell'account di archiviazione come identità e la chiave di accesso di archiviazione come password.  
+2.  **Creare credenziali SQL:** creare credenziali SQL usando il nome dell'account di archiviazione come identità e la chiave di accesso alle risorse di archiviazione come password.  
   
-3.  **Verificare che servizio SQL Server Agent sia avviato e in esecuzione:** avviare SQL Server Agent se non è attualmente in esecuzione.  [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] è necessaria l'esecuzione di SQL Server Agent nell'istanza per poter eseguire le operazioni di backup.  Per assicurarsi che le operazioni in questione vengano eseguite regolarmente, è possibile impostare l'esecuzione automatica di SQL Server Agent.  
+3.  **Assicurarsi che il servizio SQL Server Agent sia avviato e in esecuzione:**  Avviare SQL Server Agent se non è attualmente in esecuzione.  [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] è necessaria l'esecuzione di SQL Server Agent nell'istanza per poter eseguire le operazioni di backup.  Per assicurarsi che le operazioni in questione vengano eseguite regolarmente, è possibile impostare l'esecuzione automatica di SQL Server Agent.  
   
-4.  **Determinare il periodo di memorizzazione** : determinare il periodo di memorizzazione per i file di backup. Il periodo di memorizzazione viene specificato in giorni in un intervallo compreso tra 1 e 30.  
+4.  **Determinare il periodo di conservazione:** determinare il periodo di memorizzazione per i file di backup. Il periodo di memorizzazione viene specificato in giorni in un intervallo compreso tra 1 e 30.  
   
 5.  **Abilitare e configurare [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] :** avviare SQL Server Management Studio e connettersi all'istanza in cui è installato il database. Nella finestra Query eseguire l'istruzione riportata di seguito dopo aver modificato i valori per le opzioni relative al nome del database, alle credenziali SQL, al periodo di memorizzazione e alla crittografia in base alle esigenze:  
   
@@ -73,7 +73,7 @@ ms.locfileid: "48124071"
   
      [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] ora è abilitato nel database specificato. L'inizio delle operazioni di backup nel database può richiedere fino a 15 minuti.  
   
-6.  **Esaminare la configurazione predefinita degli eventi estesi** : esaminare le impostazioni degli eventi estesi eseguendo l'istruzione Transact-SQL riportata di seguito.  
+6.  **Esaminare la configurazione predefinita degli eventi estesi:** esaminare le impostazioni degli eventi estesi eseguendo l'istruzione transact-SQL seguente.  
   
     ```  
     SELECT * FROM smart_admin.fn_get_current_xevent_settings()  
@@ -87,7 +87,7 @@ ms.locfileid: "48124071"
   
     2.  Configurare la notifica di SQL Server Agent per l'uso di Posta elettronica database. Per altre informazioni, vedere [Configure SQL Server Agent Mail to Use Database Mail](../database-mail/configure-sql-server-agent-mail-to-use-database-mail.md).  
   
-    3.  **Abilitare notifiche tramite posta elettronica per ricevere errori e avvisi di backup** : nella finestra Query eseguire le istruzioni Transact-SQL riportate di seguito:  
+    3.  **Abilitare le notifiche di posta elettronica ricevere avvisi ed errori di backup:** Nella finestra di query eseguire le istruzioni Transact-SQL seguenti:  
   
         ```  
         EXEC msdb.smart_admin.sp_set_parameter  
@@ -98,9 +98,9 @@ ms.locfileid: "48124071"
   
          Per altre informazioni e per uno script di esempio completo, vedere [monitoraggio di SQL Server Managed Backup to Microsoft Azure](sql-server-managed-backup-to-microsoft-azure.md).  
   
-8.  **Visualizzare i file di backup nell'account di archiviazione Microsoft Azure** : connettersi all'account di archiviazione da SQL Server Management Studio o dal portale di gestione di Azure. Verrà visualizzato un contenitore per l'istanza di SQL Server in cui viene ospitato il database configurato per utilizzare il [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. È inoltre possibile visualizzare un database e un backup del log entro 15 minuti dall'abilitazione del [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] per il database.  
+8.  **Visualizza i file di backup nell'Account di archiviazione di Microsoft Azure:** connettersi all'account di archiviazione da SQL Server Management Studio o dal portale di gestione di Azure. Verrà visualizzato un contenitore per l'istanza di SQL Server in cui viene ospitato il database configurato per usare il [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. È inoltre possibile visualizzare un database e un backup del log entro 15 minuti dall'abilitazione del [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] per il database.  
   
-9. **Monitorare lo stato di integrità**  : è possibile eseguire il monitoraggio attraverso notifiche di posta elettronica configurate in precedenza o monitorare attivamente gli eventi registrati. Di seguito sono riportate alcune istruzioni Transact-SQL di esempio utilizzate per visualizzare gli eventi:  
+9. **Monitorare lo stato di integrità:**  È possibile monitorare le notifiche di posta elettronica configurate in precedenza o monitorare attivamente gli eventi registrati. Di seguito sono riportate alcune istruzioni Transact-SQL di esempio utilizzate per visualizzare gli eventi:  
   
     ```  
     --  view all admin events  
@@ -161,15 +161,15 @@ ms.locfileid: "48124071"
 -   È necessario `EXECUTE` le autorizzazioni per il **smart_admin.sp_get_backup_diagnostics** stored procedure. È inoltre richiesta l'autorizzazione `VIEW SERVER STATE` poiché vengono chiamati internamente altri oggetti di sistema che richiedono tale autorizzazione.  
 
 
-1.  **Creare un account di archiviazione di Microsoft Azure:** i backup vengono archiviati nel servizio di archiviazione di Microsoft Azure. È innanzitutto necessario creare un account di archiviazione di Microsoft Azure, se non si dispone già di un account.
+1.  **Creare un account di archiviazione di Microsoft Azure:** I backup vengono archiviati nel servizio di archiviazione di Microsoft Azure. È innanzitutto necessario creare un account di archiviazione di Microsoft Azure, se non si dispone già di un account.
     - SQL Server 2014 Usa i BLOB di pagine, che sono diversi dai blocchi e BLOB di Accodamento. È pertanto necessario creare un account di uso generale e non un account del blob. Per altre informazioni, vedere [account di archiviazione di Azure su](http://azure.microsoft.com/documentation/articles/storage-create-storage-account/).
     - Prendere nota del nome dell'account di archiviazione e delle chiavi di accesso. Le informazioni sul nome dell'account di archiviazione e sulla chiave di accesso vengono usate per creare le credenziali SQL. Le credenziali SQL vengono usate per l'autenticazione dell'account di archiviazione.  
   
-2.  **Creare credenziali SQL:** creare credenziali SQL usando il nome dell'account di archiviazione come identità e la chiave di accesso di archiviazione come password.  
+2.  **Creare credenziali SQL:** creare credenziali SQL usando il nome dell'account di archiviazione come identità e la chiave di accesso alle risorse di archiviazione come password.  
   
-3.  **Assicurarsi che il servizio SQL Server Agent sia avviato e in esecuzione** : avviare SQL Server Agent se non è in esecuzione. [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] è necessaria l'esecuzione di SQL Server Agent nell'istanza per poter eseguire le operazioni di backup.  Per assicurarsi che le operazioni in questione vengano eseguite regolarmente, è possibile impostare l'esecuzione automatica di SQL Server Agent.  
+3.  **Assicurarsi che il servizio SQL Server Agent sia avviato e in esecuzione:** Avviare SQL Server Agent se non è attualmente in esecuzione. [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] è necessaria l'esecuzione di SQL Server Agent nell'istanza per poter eseguire le operazioni di backup.  Per assicurarsi che le operazioni in questione vengano eseguite regolarmente, è possibile impostare l'esecuzione automatica di SQL Server Agent.  
   
-4.  **Determinare il periodo di memorizzazione** : determinare il periodo di memorizzazione per i file di backup. Il periodo di memorizzazione viene specificato in giorni in un intervallo compreso tra 1 e 30. Dopo avere abilitato il [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] a livello di istanza con le impostazioni predefinite, tutti i nuovi database creati successivamente erediteranno le impostazioni. Solo i database impostati sui modelli di recupero con registrazione completa o con registrazione minima delle operazioni bulk sono supportati e saranno configurati automaticamente. È possibile disabilitare [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] per un database specifico in qualsiasi momento se non si desidera [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] configurato. È inoltre possibile modificare la configurazione per un database specifico configurando il [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] a livello di database.  
+4.  **Determinare il periodo di conservazione:** determinare il periodo di memorizzazione per i file di backup. Il periodo di memorizzazione viene specificato in giorni in un intervallo compreso tra 1 e 30. Dopo avere abilitato il [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] a livello di istanza con le impostazioni predefinite, tutti i nuovi database creati successivamente erediteranno le impostazioni. Solo i database impostati sui modelli di recupero con registrazione completa o con registrazione minima delle operazioni bulk sono supportati e saranno configurati automaticamente. È possibile disabilitare il [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] per un database specifico in qualsiasi momento se non si vuole che [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] venga configurato. È inoltre possibile modificare la configurazione per un database specifico configurando il [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] a livello di database.  
   
 5.  **Abilitare e configurare [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] :** avviare SQL Server Management Studio e connettersi all'istanza di SQL Server. Nella finestra Query eseguire l'istruzione riportata di seguito dopo aver modificato i valori per le opzioni relative al nome del database, alle credenziali SQL, al periodo di memorizzazione e alla crittografia in base alle esigenze:  
   
@@ -216,7 +216,7 @@ ms.locfileid: "48124071"
   
     2.  Configurare la notifica di SQL Server Agent per l'uso di Posta elettronica database. Per altre informazioni, vedere [Configure SQL Server Agent Mail to Use Database Mail](../database-mail/configure-sql-server-agent-mail-to-use-database-mail.md).  
   
-    3.  **Abilitare notifiche tramite posta elettronica per ricevere errori e avvisi di backup** : nella finestra Query eseguire le istruzioni Transact-SQL riportate di seguito:  
+    3.  **Abilitare le notifiche di posta elettronica ricevere avvisi ed errori di backup:** Nella finestra di query eseguire le istruzioni Transact-SQL seguenti:  
   
         ```  
         EXEC msdb.smart_admin.sp_set_parameter  
@@ -227,9 +227,9 @@ ms.locfileid: "48124071"
   
          Per altre informazioni su come monitorare e uno script di esempio completo, vedere [monitoraggio di SQL Server Managed Backup to Microsoft Azure](sql-server-managed-backup-to-microsoft-azure.md).  
   
-9. **Visualizzare i file di backup nell'account di archiviazione Microsoft Azure** : connettersi all'account di archiviazione da SQL Server Management Studio o dal portale di gestione di Azure. Verrà visualizzato un contenitore per l'istanza di SQL Server in cui viene ospitato il database configurato per utilizzare il [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. È inoltre possibile visualizzare un database e un backup del log entro 15 minuti dalla creazione di un nuovo database.  
+9. **Visualizza i file di backup nell'Account di archiviazione di Microsoft Azure:** connettersi all'account di archiviazione da SQL Server Management Studio o dal portale di gestione di Azure. Verrà visualizzato un contenitore per l'istanza di SQL Server in cui viene ospitato il database configurato per usare il [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. È inoltre possibile visualizzare un database e un backup del log entro 15 minuti dalla creazione di un nuovo database.  
   
-10. **Monitorare lo stato di integrità**  : è possibile eseguire il monitoraggio attraverso notifiche di posta elettronica configurate in precedenza o monitorare attivamente gli eventi registrati. Di seguito sono riportate alcune istruzioni Transact-SQL di esempio utilizzate per visualizzare gli eventi:  
+10. **Monitorare lo stato di integrità:**  È possibile monitorare le notifiche di posta elettronica configurate in precedenza o monitorare attivamente gli eventi registrati. Di seguito sono riportate alcune istruzioni Transact-SQL di esempio utilizzate per visualizzare gli eventi:  
   
     ```  
     --  view all admin events  

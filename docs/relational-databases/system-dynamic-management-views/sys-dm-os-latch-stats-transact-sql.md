@@ -19,26 +19,26 @@ ms.assetid: 2085d9fc-828c-453e-82ec-b54ed8347ae5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1fe8a78047be763aecb898a48a882b8f08d3bfb6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: eb61a77aca509393143d4abae98af0a9efb5e888
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47734031"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52407148"
 ---
 # <a name="sysdmoslatchstats-transact-sql"></a>sys.dm_os_latch_stats (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Restituisce informazioni relative a tutte le attese di latch organizzate per classe.  
   
 > [!NOTE]  
 >  Per chiamare questo elemento dal [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] oppure [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], usare il nome **sys.dm_pdw_nodes_os_latch_stats**.  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |latch_class|**nvarchar(120)**|Nome della classe di latch.|  
 |waiting_requests_count|**bigint**|Numero di attese di latch nella classe specifica. Questo contatore viene incrementato all'inizio di un'attesa di latch.|  
-|wait_time_ms|**bigint**|Tempo totale di attesa dei latch, espresso in millisecondi, nella classe specifica.<br /><br /> **Nota:** questa colonna viene aggiornata ogni cinque minuti durante un'attesa di latch e alla fine di un'attesa di latch.|  
+|wait_time_ms|**bigint**|Tempo totale di attesa dei latch, espresso in millisecondi, nella classe specifica.<br /><br /> **Nota:** Questa colonna viene aggiornata ogni cinque minuti durante un'attesa di latch e alla fine dell'attesa di latch specifica.|  
 |max_wait_time_ms|**bigint**|Tempo massimo che un oggetto memoria ha atteso il latch specifico. Un valore insolitamente elevato può indicare un deadlock interno.|  
 |pdw_node_id|**int**|**Si applica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> L'identificatore per il nodo in questa distribuzione.|  
   
@@ -74,7 +74,7 @@ GO
   
  Nella tabella seguente è riportata una breve descrizione delle varie classi di latch.  
   
-|Classe di latch|Description|  
+|Classe di latch|Descrizione|  
 |-----------------|-----------------|  
 |ALLOC_CREATE_RINGBUF|Utilizzato internamente da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per inizializzare la sincronizzazione della creazione di un buffer circolare per le allocazioni.|  
 |ALLOC_CREATE_FREESPACE_CACHE|Utilizzato per inizializzare la sincronizzazione delle cache dello spazio disponibile interno per gli heap.|  
@@ -173,7 +173,7 @@ GO
 |SERVICE_BROKER_MIRROR_ROUTE|Solo per uso interno.|  
 |TRACE_ID|Solo per uso interno.|  
 |TRACE_AUDIT_ID|Solo per uso interno.|  
-|TRACE|Solo per uso interno.|  
+|traccia|Solo per uso interno.|  
 |TRACE_CONTROLLER|Solo per uso interno.|  
 |TRACE_EVENT_QUEUE|Solo per uso interno.|  
 |TRANSACTION_DISTRIBUTED_MARK|Solo per uso interno.|  

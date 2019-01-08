@@ -21,12 +21,12 @@ ms.assetid: ''
 author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
-ms.openlocfilehash: 192300903c19913ff3762a744db9f999589e2c53
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 82cd70d9f1baa7741f4ecc449167d5c56e7fe954
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47822185"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52392634"
 ---
 # <a name="sysserverresourcestats-azure-sql-database"></a>Sys.server_resource_stats (Database SQL di Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ Il **sys.server_resource_stats** visualizzazione contiene diverse definizioni a 
   
  La tabella seguente descrive le colonne disponibili in un server v12:  
   
-|Colonne|Tipo di dati|Description|  
+|Colonne|Tipo di dati|Descrizione|  
 |----------------------------|---------------|-----------------|  
 |start_time|**datetime2**|Ora UTC che indica l'inizio dell'intervallo di reporting di quindici secondi|  
 |end_time|**datetime**|Ora UTC che indica la fine dell'intervallo di reporting di quindici secondi|

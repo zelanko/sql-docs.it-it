@@ -15,12 +15,12 @@ ms.assetid: ''
 author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: f748189446ca3d5cfd49c748fa058cf8dbef7fe7
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 3b36e720cc390311c851eef55d09a74cc5e5d6ad
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51601821"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52503283"
 ---
 # <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>Valutare un'azienda e di consolidare i report di valutazione con DMA
 
@@ -70,7 +70,7 @@ L'inventario può trovarsi in uno dei due formati:
 - Tabella di SQL Server
 
 ### <a name="if-using-a-csv-file"></a>Se si usa un file CSV
-Quando si usa un file csv per importare i dati, assicurarsi che esistono solo due colonne di dati – **nome istanza** e **Nome Database**, e che le colonne non includono le righe di intestazione.
+Quando si usa un file csv per importare i dati, assicurarsi che esistono solo due colonne di dati - **nome istanza** e **Nome Database**, e che le colonne non includono le righe di intestazione.
  
  ![contenuto del file CSV](../dma/media//dma-consolidatereports/dma-csv-file-contents.png)
 
@@ -96,7 +96,7 @@ Dopo il caricamento di moduli di PowerShell nella directory dei moduli e creazio
 
 I parametri associati alla funzione dmaDataCollector sono descritti nella tabella seguente.
 
-|Parametro  |Description
+|Parametro  |Descrizione
 |---------|---------|
 |**getServerListFrom** | L'inventario. I valori possibili sono **SqlServer** e **CSV**.<br/>Per altre informazioni, vedi [creare un inventario dei server SQL](#create-inventory). |
 |**serverName** | Il nome dell'istanza SQL Server dell'inventario quando si usa **SqlServer** nel **getServerListFrom** parametro. |
@@ -118,7 +118,7 @@ Al termine della valutazione, ora possibile importare i dati in SQL Server per l
 
 I parametri associati alla funzione dmaProcessor sono descritti nella tabella seguente.
 
-|Parametro  |Description
+|Parametro  |Descrizione
 |---------|---------|
 |**processTo**  | Il percorso in cui verrà elaborato il file JSON. I valori possibili sono **SQLServer** e **AzureSQLDatabase**. |
 |**serverName** | Istanza di SQL Server in cui verranno elaborati i dati.  Se si specifica **AzureSQLDatabase** per il **processTo** parametro, quindi includere solo il nome di SQL Server (non includono. database.windows.net). Verrà richiesto per due account di accesso quando la destinazione di Database SQL di Azure. il primo è le credenziali del tenant di Azure, mentre il secondo è l'account di accesso di amministratore per il Server SQL di Azure. |
@@ -218,7 +218,7 @@ Questo oggetto visivo Mostra i problemi che attualmente si verificano all'intern
 In questa sezione è la parte principale del report, che mostra l'idoneità di un database di istanza. Questo report include una gerarchia di drill-down di:
 - InstanceDatabase
 - ChangeCategory
-- Title
+- Titolo
 - ObjectType
 - ImpactedObjectName
 

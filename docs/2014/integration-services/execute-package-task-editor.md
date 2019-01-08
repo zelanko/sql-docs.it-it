@@ -15,12 +15,12 @@ ms.assetid: c2c96b4f-eb10-4d8b-be34-88edfd0785fb
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 468823b10b4b97fb2a4fe7fcd0a83f28af6fc5b4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 67f750d134459b55e3d14772bf8b4c6db25b1ab1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48119041"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52504524"
 ---
 # <a name="execute-package-task-editor"></a>Editor attività Esegui pacchetto
   Utilizzare l'editor attività Esegui pacchetto per configurare la relativa attività. L'attività Esegui pacchetto permette di estendere le funzionalità aziendali di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] consentendo ai pacchetti di eseguire altri pacchetti nell'ambito di un flusso di lavoro.  
@@ -42,7 +42,7 @@ ms.locfileid: "48119041"
 2.  Fare clic con il pulsante destro del mouse sull'attività disponibile in Progettazione SSIS, quindi scegliere **Modifica**.  
   
 ##  <a name="general"></a> Impostare le opzioni nella pagina Generale  
- **Nome**  
+ **Name**  
  Specificare un nome univoco per l'attività Esegui pacchetto. Tale nome viene utilizzato come etichetta nell'icona dell'attività.  
   
 > [!NOTE]  
@@ -59,7 +59,7 @@ ms.locfileid: "48119041"
 >  L'opzione **ReferenceType** è di sola lettura e viene impostata su **Riferimento esterno** se il progetto in cui è contenuto il pacchetto non è stato convertito nel modello di distribuzione del progetto. Per altre informazioni sulla conversione, vedere [Distribuire progetti nel server Integration Services](../../2014/integration-services/deploy-projects-to-integration-services-server.md).  
   
  **Password**  
- Se il pacchetto figlio è protetto con password, specificare la password per il pacchetto figlio oppure fare clic sul pulsante con i puntini di sospensione (…) per creare una nuova password per il pacchetto figlio.  
+ Se il pacchetto figlio è protetto con password, specificare la password del pacchetto figlio oppure fare clic sul pulsante con i puntini di sospensione (...) per creare una nuova password per il pacchetto figlio.  
   
  `ExecuteOutOfProcess`  
  Specificare se il pacchetto figlio viene eseguito nel processo del pacchetto padre o in un processo a parte. Per impostazione predefinita, la proprietà ExecuteOutOfProcess dell'attività Esegui pacchetto è impostata su `False`, e il pacchetto figlio viene eseguito nello stesso processo del pacchetto padre. Se si imposta questa proprietà su `true`, il pacchetto figlio viene eseguito in un processo separato. In questo modo è possibile che l'avvio del pacchetto figlio sia rallentato. Inoltre, se la proprietà viene impostata su `true`, non è possibile eseguire il debug del pacchetto in un'installazione di soli strumenti, ma è necessario installare il prodotto [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Per altre informazioni, vedere [Installazione di Integration Services](install-windows/install-integration-services.md).  
@@ -70,7 +70,7 @@ ms.locfileid: "48119041"
  **Percorso**  
  Selezionare il percorso del pacchetto figlio. Per questa proprietà sono disponibili le opzioni elencate nella tabella seguente.  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |**SQL Server**|Impostare il percorso su un'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].|  
 |**File system**|Impostare il percorso sul file system.|  
@@ -94,13 +94,13 @@ ms.locfileid: "48119041"
  **Argomenti correlati:** [Gestione connessione OLE DB](connection-manager/ole-db-connection-manager.md), [Configura gestione connessione OLE DB](../../2014/integration-services/configure-ole-db-connection-manager.md)  
   
  **PackageName**  
- Digitare il nome del pacchetto figlio oppure fare clic sul pulsante con i puntini di sospensione (…) per individuare il pacchetto.  
+ Digitare il nome del pacchetto figlio oppure fare clic sul pulsante con i puntini di sospensione (...) e quindi individuare il pacchetto.  
   
 #### <a name="location--file-system"></a>Percorso = File system  
  **Connessione**  
  Selezionare una gestione connessione file nell'elenco o fare clic su \<**Nuova connessione**> per creare una nuova gestione connessione.  
   
- **Argomenti correlati:** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
+ **Argomenti correlati:** [Gestione connessione file](connection-manager/file-connection-manager.md), [Editor gestione connessione File](../../2014/integration-services/file-connection-manager-editor.md)  
   
  **PackageNameReadOnly**  
  Viene visualizzato il nome del pacchetto.  

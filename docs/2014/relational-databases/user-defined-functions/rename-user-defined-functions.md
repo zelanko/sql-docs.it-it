@@ -10,12 +10,12 @@ ms.assetid: c2695a5c-9cc5-4b18-8771-53027ca9a9af
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: c0993dfccf1ab48d509f47e5d179402240b453cc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3419faca26d9d252610c07cb994ab5faa738f937
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48219947"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52399184"
 ---
 # <a name="rename-user-defined-functions"></a>Ridenominare funzioni definite dall'utente
   È possibile rinominare funzioni definite dall'utente in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -26,7 +26,7 @@ ms.locfileid: "48219947"
   
      [Limitazioni e restrizioni](#Restrictions)  
   
-     [Security](#Security)  
+     [Sicurezza](#Security)  
   
 -   **Rinominare funzioni definite dall'utente tramite:**  
   
@@ -69,10 +69,10 @@ ms.locfileid: "48219947"
   
 5.  Immettere il nuovo nome della funzione.  
   
-##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
  **Per rinominare funzioni definite dall'utente**  
   
- Non è possibile eseguire questa attività utilizzando istruzioni Transact-SQL. Per rinominare una funzione definita dall'utente tramite Transact-SQL, è innanzitutto necessario eliminare la funzione esistente e quindi ricrearla con il nuovo nome. Assicurarsi che tutto il codice e tutte le applicazioni che utilizzano il vecchio nome di funzione utilizzino ora il nuovo nome.  
+ Non è possibile eseguire questa attività utilizzando istruzioni Transact-SQL. Per rinominare una funzione definita dall'utente tramite Transact-SQL, è innanzitutto necessario eliminare la funzione esistente e quindi ricrearla con il nuovo nome. Assicurarsi che tutto il codice e tutte le applicazioni in cui è stato usato il nome precedente della funzione usino ora il nuovo nome.  
   
  Per altre informazioni, vedere [CREATE FUNCTION &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-function-transact-sql) e [DROP FUNCTION &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-function-transact-sql).  
   

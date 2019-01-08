@@ -1,5 +1,5 @@
 ---
-title: Configurare la raccolta di dati di utilizzo per (Power Pivot per SharePoint | Documenti Microsoft
+title: Configurare Usage Data Collection for (Power Pivot per SharePoint | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: bafa3d8b45dc2ad59314218f34959120b50e6bfe
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 52a2754a4c6410430042f2b31805db42def4ec1f
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34026878"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52420282"
 ---
 # <a name="configure-usage-data-collection-for-power-pivot-for-sharepoint"></a>Configurare la raccolta dati di utilizzo per PowerPivot per SharePoint
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "34026878"
   
 4.  Nella sezione **Eventi da registrare** selezionare o deselezionare le caselle di controllo per abilitare o disabilitare gli eventi di Analysis Services seguenti:  
   
-    |Evento|Description|  
+    |Evento|Descrizione|  
     |-----------|-----------------|  
     |**[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Connessioni**|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] viene usato per monitorare le connessioni al server [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] effettuate per conto di un utente.|  
     |**[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] - Utilizzo dati di caricamento**|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] viene usato per monitorare le richieste per il caricamento dei dati [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] nella memoria del server. Un evento di caricamento viene generato per i file di dati [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] caricati da un database del contenuto o dalla cache.|  
@@ -86,9 +86,9 @@ ms.locfileid: "34026878"
 ##  <a name="jobs"></a> Configurare i processi timer utilizzati nella raccolta dati di utilizzo  
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] vengono spostati in percorsi diversi nel sistema di raccolta dati di utilizzo tramite due processi timer:  
   
--   Tramite il processo timer "Importazione dati di utilizzo di Microsoft SharePoint Foundation" i dati di utilizzo di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] vengono spostati nel database dell'applicazione del servizio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
+-   Il processo timer di "Microsoft SharePoint Foundation importazione dati di utilizzo" Sposta [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] tra l'utilizzo del [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] database dell'applicazione di servizio.  
   
--   Tramite "Processo timer di elaborazione dashboard di gestione[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] " i dati vengono spostati in una cartella di lavoro di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] che rappresenta l'origine dati per report amministrativi predefiniti.  
+-   Il "[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] processo timer di elaborazione Dashboard di gestione" i dati da [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] della cartella di lavoro che rappresenta l'origine dei dati per report amministrativi predefiniti.  
   
  Se è necessario aggiornare i report amministrativi visualizzati più frequentemente nel dashboard di gestione [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , seguire questa procedura.  
   
@@ -123,12 +123,12 @@ ms.locfileid: "34026878"
   
      I dati verranno effettivamente eliminati al verificarsi dell'evento successivo. Il limite sulla cronologia dei dati sull'utilizzo viene controllato solo quando il sistema elabora un evento.  
   
-3.  Scegliere **OK**.  
+3.  Fare clic su **OK**.  
   
  Per altre informazioni sulla raccolta e sull'archiviazione dei dati di utilizzo, vedere [Raccolta dati di utilizzo di PowerPivot](../../analysis-services/power-pivot-sharepoint/power-pivot-usage-data-collection.md).  
   
 ##  <a name="qrh"></a> Definire le categorie delle risposte alle query veloce, media e lenta per la creazione di report  
- Le prestazioni di elaborazione query vengono misurate rispetto a categorie predefinite che definiscono un ciclo di risposta alle richieste in base al tempo necessario per il completamento. Le categorie predefinite includono: Semplice, Rapida, Prevista, Esecuzione prolungata e Superato. Ogni richiesta a un server [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] rientrerà in una di queste categorie in base al tempo necessario per il completamento.  
+ Le prestazioni di elaborazione query vengono misurate rispetto a categorie predefinite che definiscono un ciclo di risposta alle richieste in base al tempo necessario per il completamento. Le categorie predefinite includono: Semplice, rapida, prevista, con esecuzione prolungata e superata. Ogni richiesta a un server [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] rientrerà in una di queste categorie in base al tempo necessario per il completamento.  
   
  Le informazioni sulle risposte alle query vengono utilizzate nei report di attività. All'interno dei report, ogni categoria viene usata in modo diverso per rivelare nel modo migliore le tendenze delle prestazioni del sistema [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Ad esempio, le richieste semplici vengono escluse completamente per mostrare unicamente le tendenze più significative attraverso le categorie rimanenti. Le statistiche sulle richieste con esecuzione prolungata o superate sono invece molto presenti nei report per dare la possibilità agli amministratori o ai proprietari della cartella di lavoro di intraprendere immediatamente azioni correttive.  
   
@@ -146,7 +146,7 @@ ms.locfileid: "34026878"
   
      Le richieste che superano questo limite rientrano nella categoria *Superato*. Non è prevista alcuna soglia configurabile per *Superato*. Deriva dal limite superiore specificato in Limite massimo risposta lunga. Le richieste che rientrano nella categoria Superato hanno un'esecuzione più lunga di quanto non sia consentito dallo SLA definito.  
   
-6.  Scegliere **OK**.  
+6.  Fare clic su **OK**.  
   
 ##  <a name="ttr"></a> Specificare la frequenza con la quale le statistiche di query vengono segnalate nel sistema di raccolta dei dati di utilizzo  
  L'intervallo tempo-segnalazione specifica la frequenza con la quale le statistiche di query vengono segnalate nel sistema di raccolta dei dati sull'utilizzo. Le statistiche sulle query si accumulano in un processo e vengono riportate come un singolo evento a intervalli regolari. È possibile regolare l'intervallo per scrivere nel file di log con maggiore o minore frequenza.  
@@ -161,7 +161,7 @@ ms.locfileid: "34026878"
   
      Se questo valore viene aumentato in modo considerevole, è possibile che alcuni dati statistici vadano persi prima di essere registrati. Il riavvio di un servizio, ad esempio, causa la perdita delle statistiche relative alle query. Viceversa, se i report di attività predefiniti contengono dati insufficienti, considerare la possibilità di ridurre l'intervallo per ottenere più frequentemente eventi tempo-segnalazione.  
   
-3.  Scegliere **OK**.  
+3.  Fare clic su **OK**.  
   
 ##  <a name="openconfig"></a> Aprire la pagina dell'applicazione del servizio PowerPivot per accedere alle impostazioni di configurazione  
  Solo gli amministratori di un servizio o di una farm possono modificare le impostazioni dell'applicazione di servizio. Se nella farm sono state definite più applicazioni del servizio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , è necessario modificare ognuna singolarmente.  
@@ -182,7 +182,7 @@ ms.locfileid: "34026878"
 |Impostazione|Valore predefinito|Tipo|Intervallo valido|  
 |-------------|-------------------|----------|-----------------|  
 |**Eventi di uso di Analysis Services** (Connessione, Caricamento, Scaricamento, Richieste)|\<abilitato >|Boolean|Questi valori sono abilitati o disabilitati.|  
-|**Query Reporting interval**|300 (in secondi)|Valore intero|Tra 1 e qualsiasi numero intero positivo. Il valore predefinito è 5 minuti.|  
+|**Query Reporting interval**|300 (in secondi)|Integer|Tra 1 e qualsiasi numero intero positivo. Il valore predefinito è 5 minuti.|  
 |**Usage data history**|365 (in giorni)|Integer|0 specifica nessun limite, ma è anche possibile impostare un limite massimo per imporre una scadenza sui dati cronologici e l'eliminazione automatica. I valori validi per un periodo di memorizzazione limitato sono compresi tra 1 e 5000 (in giorni).|  
 |Limite massimo risposta semplice|500 (in millisecondi)|Integer|Imposta un limite massimo che definisce uno scambio richiesta-risposta semplice. Qualsiasi richiesta completata entro un intervallo di tempo compreso tra 0 e 500 millisecondi viene considerata una richiesta semplice e ignorata ai fini del report.|  
 |Limite massimo risposta rapida|1000 (in millisecondi)|Integer|Imposta un limite massimo che definisce uno scambio richiesta-risposta rapido.|  

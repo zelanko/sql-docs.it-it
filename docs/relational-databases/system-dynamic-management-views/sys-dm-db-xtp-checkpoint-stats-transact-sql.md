@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 216b04e58d741d3c44cd187ba94eaac7ee791762
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fdb255570febc6d37bef824958c15422b6fae733
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47837799"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52503187"
 ---
 # <a name="sysdmdbxtpcheckpointstats-transact-sql"></a>sys.dm_db_xtp_checkpoint_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ SELECT * FROM db.sys.dm_db_xtp_checkpoint_stats;
 ## <a name="includesssql15includessssql15-mdmd-and-later"></a>[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e versioni successive  
  Nella tabella seguente vengono descritte le colonne in `sys.dm_db_xtp_checkpoint_stats`, a partire **[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]**.  
   
-|Nome colonna|Tipo|Description|  
+|Nome colonna|Tipo|Descrizione|  
 |-----------------|----------|-----------------|  
 |last_lsn_processed|**bigint**|Ultimo LSN visualizzato dal controller.|  
 |end_of_log_lsn|**Numeric(38)**|LSN di fine del log.|  
@@ -67,7 +67,7 @@ SELECT * FROM db.sys.dm_db_xtp_checkpoint_stats;
 |last_closed_checkpoint_ts|**bigint**|Timestamp dell'ultimo checkpoint chiusi.|  
 |hardened_recovery_lsn|**Numeric(38)**|Verrà avviato il recupero da questo LSN.|  
 |hardened_root_file_guid|**uniqueidentifier**|GUID del file radice che finalizzati in seguito all'ultimo checkpoint completato.|  
-|hardened_root_file_watermark|**bigint**|**Interno solo**. Fino a che punto è possibile leggere il file radice fino a (questo è solo un tipo internamente rilevante chiamato BSN).|  
+|hardened_root_file_watermark|**bigint**|**Interno solo**. Fino a che punto è possibile leggere il file radice fino a (questo è un tipo internamente rilevante solo - denominato BSN).|  
 |hardened_truncation_lsn|**Numeric(38)**|LSN del punto di troncamento.|  
 |log_bytes_since_last_close|**bigint**|Byte dall'ultima chiusura alla fine corrente del log.|  
 |time_since_last_close_in_ms|**bigint**|Tempo trascorso dall'ultima chiusura del checkpoint.|  
@@ -86,7 +86,7 @@ SELECT * FROM db.sys.dm_db_xtp_checkpoint_stats;
 ##  <a name="bkmk_2014"></a> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
  Nella tabella seguente vengono descritte le colonne in `sys.dm_db_xtp_checkpoint_stats`, per **[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]**.  
   
-|Nome colonna|Tipo|Description|  
+|Nome colonna|Tipo|Descrizione|  
 |-----------------|----------|-----------------|  
 |log_to_process_in_bytes|**bigint**|Numero di byte di log tra il numero di sequenza del file di log (LSN) corrente e la fine del log del thread.|  
 |total_log_blocks_processed|**bigint**|Numero complessivo di blocchi di log elaborati dall'avvio del server.|  

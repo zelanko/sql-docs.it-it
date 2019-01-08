@@ -14,12 +14,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ad07d16aec3f215c8c9d854e872f8c0555f34747
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4f5df8d27f39918cb8ddac4dd46dd8b3ca4449c5
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47647419"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52399124"
 ---
 # <a name="conversions-performed-from-server-to-client"></a>Conversioni eseguite da server a client
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "47647419"
   In questo argomento vengono illustrate le conversioni di data/ora eseguite tra [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (o versione successiva) e un'applicazione client scritta con OLE DB di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
   
 ## <a name="conversions"></a>Conversioni  
- Nella tabella seguente vengono descritte le conversioni tra il tipo restituito al client e il tipo presente nell'associazione. Per i parametri di output, se è stato chiamato ICommandWithParameters:: SetParameterInfo e il tipo specificato in *pwszDataSourceType* non corrisponde il tipo effettivo del server, una conversione implicita verrà eseguito dal server , e il tipo restituito al client corrisponderà al tipo specificato tramite ICommandWithParameters:: SetParameterInfo. Se le regole di conversione del server sono diverse da quelle descritte in questo argomento, la conversione potrebbe dare risultati imprevisti. Quando ad esempio è necessario specificare una data predefinita, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizza 1900-1-1 anziché 1899-12-30.  
+ Nella tabella seguente vengono descritte le conversioni tra il tipo restituito al client e il tipo presente nell'associazione. Per i parametri di output, se è stato chiamato ICommandWithParameters:: SetParameterInfo e il tipo specificato in *pwszDataSourceType* non corrisponde il tipo effettivo del server, una conversione implicita verrà eseguito dal server , e il tipo restituito al client corrisponderà al tipo specificato tramite ICommandWithParameters:: SetParameterInfo. Questo può causare risultati di conversione imprevisti quando le regole di conversione del server sono diverse da quelli descritti in questo argomento. Quando ad esempio è necessario specificare una data predefinita, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizza 1900-1-1 anziché 1899-12-30.  
   
 |A -><br /><br /> From|DATE|DBDATE|DBTIME|DBTIME2|DBTIMESTAMP|DBTIMESTAMPOFFSET|FILETIME|BYTES|VARIANT|SSVARIANT|BSTR|STR|WSTR|  
 |----------------------|----------|------------|------------|-------------|-----------------|-----------------------|--------------|-----------|-------------|---------------|----------|---------|----------|  

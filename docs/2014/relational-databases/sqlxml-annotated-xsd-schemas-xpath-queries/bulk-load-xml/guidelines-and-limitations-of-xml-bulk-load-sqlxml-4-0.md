@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - XML Bulk Load [SQLXML], about XML Bulk Load
@@ -15,12 +13,12 @@ ms.assetid: c5885d14-c7c1-47b3-a389-455e99a7ece1
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7f8bb180ef8c0b7483ce8bab27d11804ac81a387
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b7a569bbc5672b0fc5996507e37ed250721bd2fe
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48082661"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52774923"
 ---
 # <a name="guidelines-and-limitations-of-xml-bulk-load-sqlxml-40"></a>Linee guida e limitazioni per il caricamento bulk XML (SQLXML 4.0)
   Quando si utilizza il caricamento bulk XML, è consigliabile disporre di una certa familiarità con le linee guida e le limitazioni seguenti:  
@@ -31,7 +29,7 @@ ms.locfileid: "48082661"
   
 -   Un documento XML viene controllato per verificare che utilizzi un formato corretto, ma non viene convalidato.  
   
-     Il caricamento bulk XML controlla il documento XML per determinare se è nel formato corretto, ovvero per garantire che i dati XML rispondano ai requisiti di sintassi della specifica XML 1.0 del World Wide Web Consortium. Se il formato del documento non è corretto, il caricamento bulk XML annulla l'elaborazione e restituisce un errore. L'unica eccezione a questo comportamento è costituita dal caso in cui il documento è un frammento, ad esempio non dispone di un singolo elemento radice. In questo caso, il documento verrà caricato.  
+     Caricamento Bulk XML controlla il documento XML per determinare se sia ben-formed-che è, per garantire che il codice XML sia conforme ai requisiti di sintassi della raccomandazione XML 1.0 del World Wide Web Consortium. Se il formato del documento non è corretto, il caricamento bulk XML annulla l'elaborazione e restituisce un errore. L'unica eccezione a questo comportamento è costituita dal caso in cui il documento è un frammento, ad esempio non dispone di un singolo elemento radice. In questo caso, il documento verrà caricato.  
   
      Il caricamento bulk XML non convalida il documento rispetto ad alcuno schema dati XML o DTD definito o a cui si fa riferimento all'interno del file di dati XML. Il caricamento bulk XML, inoltre, non convalida il file di dati XML rispetto allo schema di mapping fornito.  
   
@@ -159,7 +157,7 @@ ms.locfileid: "48082661"
   
      Vengono create le tabelle identificate nello schema di mapping (il database deve essere presente). Se esiste già uno o più delle tabelle nel database, la proprietà SGDropTables determina se queste tabelle preesistenti devono essere eliminati e ricreati.  
   
--   Se si specifica la proprietà SchemaGen (ad esempio, SchemaGen = true), vengono create le tabelle che vengono identificate nello schema di mapping. Ma SchemaGen eventuali vincoli (ad esempio i vincoli di chiave primaria/chiave esterna) in tali tabelle non viene creata con una sola eccezione: se i nodi XML che costituiscono la chiave primaria in una relazione sono definiti con un tipo XML dell'ID (vale a dire `type="xsd:ID"` per XSD) e sguseid-proprietà è impostata su True per SchemaGen, quindi non solo le chiavi primarie create da ID digitato i nodi, ma primarie/chiave relazioni di chiave esterna vengono create dal mapping di relazioni dello schema.  
+-   Se si specifica la proprietà SchemaGen (ad esempio, SchemaGen = true), vengono create le tabelle che vengono identificate nello schema di mapping. SchemaGen senza tuttavia creare eventuali vincoli (ad esempio i vincoli di chiave primaria/chiave esterna) in tali tabelle con una sola eccezione: Se i nodi XML che costituiscono la chiave primaria in una relazione sono definiti con un tipo XML dell'ID (vale a dire, `type="xsd:ID"` per XSD) e sguseid-proprietà è impostata su True per SchemaGen, quindi non sono chiavi primarie create solo dall'ID tipizzata nodi , ma primarie/chiave relazioni di chiave esterna vengono create dal mapping di relazioni dello schema.  
   
 -   SchemaGen non utilizza estensioni e i facet dello schema XSD per generare il relazionale [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] schema.  
   

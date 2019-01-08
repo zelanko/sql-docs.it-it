@@ -15,15 +15,15 @@ ms.assetid: 404fe5fe-3ba2-4b9b-8780-0d02343d467f
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 656e9dc84c2556cc4f5ea76858764ee9c1fbf556
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 418fdb56792c9d8e3ca15128ad8f93fed2ae9c47
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48068879"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52403816"
 ---
 # <a name="exclude-a-column-from-a-mining-model"></a>Escludere una colonna da un modello di data mining
-  Quando si crea un nuovo modello di data mining, potrebbe non essere necessario utilizzare tutte le colonne presenti nella struttura di data mining su cui il modello è basato. È ad esempio probabile che sia stata aggiunta una colonna nome cliente per il drill-through, ma che non si desideri utilizzarla per la modellazione. In alternativa, è possibile decidere di creare più copie di una colonna con discretizzazioni diverse e utilizzare solo una delle copie in ogni modello e ignorare il resto. È anche possibile aggiungere in modo selettivo le colonne di input in molti modelli diversi per capire come la variabile aggiunta influisce sulla colonna di output.  
+  Quando si crea un nuovo modello di data mining, potrebbe non essere necessario utilizzare tutte le colonne presenti nella struttura di data mining su cui il modello è basato. Ad esempio, si potrebbe avere aggiunto una colonna nome cliente per il drill-through, ma non si vuole usarlo per la modellazione. In alternativa, è possibile decidere di creare più copie di una colonna con discretizzazioni diverse e utilizzare solo una delle copie in ogni modello e ignorare il resto. È anche possibile aggiungere in modo selettivo le colonne di input in molti modelli diversi per capire come la variabile aggiunta influisce sulla colonna di output.  
   
  Non è necessario creare una nuova struttura di data mining per ogni combinazione di colonne; è semplicemente possibile contrassegnare una colonna come non utilizzata in un determinato modello.  
   

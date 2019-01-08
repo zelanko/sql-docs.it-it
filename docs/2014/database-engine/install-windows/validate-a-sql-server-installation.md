@@ -12,12 +12,12 @@ ms.assetid: 1689af50-d2b8-4aa6-8f27-cc7127157fc8
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0473a30a3c32b83a312aea92705f3f8e6e0b4dab
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: 34e4c29cb28f76c930f1f04152528ca1a8a89dfc
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018126"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52415694"
 ---
 # <a name="validate-a-sql-server-installation"></a>Convalidare un'installazione di SQL Server
   Il report sull'individuazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] può essere utilizzato per verificare la versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e le caratteristiche di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installate nel computer. Il **Installed [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] report sull'individuazione delle funzionalità** consente di visualizzare un report di tutti i [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)], [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], e [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] prodotti e funzionalità che vengono installati nel server locale. Il report sull'individuazione delle funzionalità di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è disponibile nella pagina **Strumenti** del Centro installazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  

@@ -18,12 +18,12 @@ ms.assetid: 491fdd22-2326-4f27-a0dd-0a02faae3fd8
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 598a0dcfd221add02cf09297687cff17c897c4e4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0b127b3dac76663e77b7ce0fa4faa76a91628ccc
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48076541"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507765"
 ---
 # <a name="work-with-diagrams-in-data-source-view-designer-analysis-services"></a>Utilizzare diagrammi in Progettazione vista origine dati (Analysis Services)
   Un diagramma vista origine dati è una rappresentazione visiva degli oggetti contenuti in tale vista. È possibile utilizzare il diagramma in modo interattivo per aggiungere, nascondere, eliminare o modificare oggetti specifici. Inoltre, è possibile creare più diagrammi nella stessa vista origine dati per concentrare l'attenzione su un subset degli oggetti.  
@@ -47,7 +47,7 @@ ms.locfileid: "48076541"
   
  Per creare un nuovo diagramma, fare clic con il pulsante destro del mouse in qualsiasi punto del riquadro **Libreria diagrammi** e scegliere **Nuovo diagramma**.  
   
- Quando si definisce inizialmente una vista origine dati (DSV) in un progetto di Analysis Services, tutte le tabelle e le viste aggiunte alla vista origine dati vengono aggiunti per il \<tutte le tabelle > diagramma. Questo diagramma viene visualizzato nel riquadro Libreria diagrammi di Progettazione vista origine dati, mentre le tabelle di tale diagramma e le relative colonne e relazioni vengono elencate nel riquadro Tabelle e visualizzate graficamente nel riquadro degli schemi. Tuttavia, quando si aggiungere tabelle, viste e query denominate al \<tutte le tabelle > diagramma, il numero degli oggetti nel diagramma rende complessa la visualizzazione relazioni, ovvero vengono aggiunte al diagramma, in particolare come più tabelle dei fatti e delle dimensioni due tabelle sono correlate a più tabelle dei fatti.  
+ Quando si definisce inizialmente una vista origine dati (DSV) in un progetto di Analysis Services, tutte le tabelle e le viste aggiunte alla vista origine dati vengono aggiunti per il \<tutte le tabelle > diagramma. Questo diagramma viene visualizzato nel riquadro Libreria diagrammi di Progettazione vista origine dati, mentre le tabelle di tale diagramma e le relative colonne e relazioni vengono elencate nel riquadro Tabelle e visualizzate graficamente nel riquadro degli schemi. Tuttavia, quando si aggiungere tabelle, viste e query denominate al \<tutte le tabelle > diagramma, il numero degli oggetti nel diagramma rende complessa la visualizzazione relazioni, in particolar modo vengono aggiunte al diagramma, più tabelle dei fatti e delle dimensioni due tabelle sono correlate a più tabelle dei fatti.  
   
  Per semplificare la rappresentazione visiva quando si desidera visualizzare soltanto un subset delle tabelle della vista origine dati, è possibile definire diagrammi secondari, denominati semplicemente diagrammi, costituiti da subset selezionati delle tabelle, delle viste e delle query denominate della vista origine dati. È possibile utilizzare i diagrammi per raggruppare gli elementi nella vista origine dati in base alle esigenze aziendali o ai requisiti delle soluzioni.  
   
@@ -69,9 +69,9 @@ ms.locfileid: "48076541"
   
      Per allineare al centro la visualizzazione in una tabella già inclusa nel diagramma, selezionarla nel riquadro **Tabelle** .  
   
--   Indicatore di posizione delle tabelle nel riquadro **Diagramma** : l'indicatore di posizione delle tabelle è un'icona a forma di freccia a 4 punte che si trova all'intersezione tra le barre di scorrimento orizzontale e verticale nell'angolo inferiore destro del riquadro **Diagramma** . Consente di visualizzare un'anteprima del diagramma corrente nel riquadro Diagramma. È possibile utilizzare questa anteprima per modificare la visualizzazione nel riquadro Diagramma in base a qualsiasi posizione nel diagramma.  
+-   Indicatore di posizione nella tabella **diagramma** locator riquadro: la tabella è un'icona di freccia a 4 vie che si trova all'intersezione tra le barre di scorrimento orizzontale e verticale nell'angolo inferiore destro del **diagramma** riquadro. Consente di visualizzare un'anteprima del diagramma corrente nel riquadro Diagramma. È possibile utilizzare questa anteprima per modificare la visualizzazione nel riquadro Diagramma in base a qualsiasi posizione nel diagramma.  
   
--   Usare la finestra di dialogo **Trova tabella** : fare clic con il pulsante destro del mouse in un'area vuota del riquadro Diagramma e scegliere **Trova tabella**. In alternativa, fare clic sul comando **Trova tabella** sulla barra degli strumenti o nel menu **Vista origine dati** .  
+-   Usare la **trova tabella** della finestra di dialogo-Right click su un'area vuota nel riquadro Diagramma e scegliere **trova tabella**. In alternativa, fare clic sul comando **Trova tabella** sulla barra degli strumenti o nel menu **Vista origine dati** .  
   
      È possibile digitare stringhe e caratteri jolly nella casella Filtro per visualizzare subset delle tabelle presenti nel diagramma.  
   
@@ -91,6 +91,6 @@ ms.locfileid: "48076541"
   
 ## <a name="see-also"></a>Vedere anche  
  [Viste origine dati in modelli multidimensionali](data-source-views-in-multidimensional-models.md)   
- [Progettazione vista origine dati &#40;Analysis Services - dati multidimensionali&#41;](../data-source-view-designer-analysis-services-multidimensional-data.md)  
+ [Progettazione vista origine dati &#40;Analysis Services - Dati multidimensionali&#41;](../data-source-view-designer-analysis-services-multidimensional-data.md)  
   
   

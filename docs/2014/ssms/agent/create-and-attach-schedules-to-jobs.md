@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - jobs [SQL Server]
@@ -18,12 +18,12 @@ ms.assetid: 079c2984-0052-4a37-a2b8-4ece56e6b6b5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: deef45ad1f173b4da056a203de198c4b2c40ce7d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 414ff334139919e08b06291ec910f8531c70cd55
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48200161"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52757537"
 ---
 # <a name="create-and-attach-schedules-to-jobs"></a>Creazione e collegamento di pianificazioni ai processi
   La pianificazione dei processi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent comporta la definizione della condizione o delle condizioni che provocano l'inizio dell'esecuzione del processo senza interazione dell'utente. È possibile pianificare l'esecuzione automatica di un processo creando una nuova pianificazione per il processo o collegando una pianificazione esistente al processo.  

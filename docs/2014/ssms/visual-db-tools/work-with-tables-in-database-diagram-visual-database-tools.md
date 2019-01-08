@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - database diagrams [SQL Server], tables
@@ -15,12 +15,12 @@ ms.assetid: ee2c5d84-22bf-4597-ac70-a27ed8cc94f4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 82a1c9d7f1b4c4c2c6dc5ac8ed5ebacd1e1d17ee
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a5d6fb1ca02bd6c6459476cb1d5830a536780a98
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48099581"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52759143"
 ---
 # <a name="work-with-tables-in-database-diagram-visual-database-tools"></a>Utilizzo di tabelle in diagrammi di database (Visual Database Tools)
   È possibile modificare e creare tabelle di database in Progettazione tabelle o in Progettazione diagrammi di database.  
@@ -28,7 +28,7 @@ ms.locfileid: "48099581"
 > [!NOTE]  
 >  Se la tabella viene pubblicata per la replica, è necessario apportare modifiche allo schema usando l'istruzione [ALTER TABLE](/sql/t-sql/statements/alter-table-transact-sql) di Transact-SQL oppure SMO (SQL Server Management Objects). Quando si apportano modifiche allo schema utilizzando Progettazione tabelle o Progettazione diagrammi di database, viene effettuato il tentativo di rimuovere e rigenerare la tabella. La modifica allo schema non riuscirà, poiché non è consentita la rimozione di oggetti pubblicati.  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Aggiunta di tabelle a diagrammi &#40;Visual Database Tools&#41;](visual-database-tools.md)  
   
  [Aggiungere tabelle correlate a diagrammi &#40;Visual Database Tools&#41;](add-related-tables-to-diagrams-visual-database-tools.md)  
@@ -43,7 +43,7 @@ ms.locfileid: "48099581"
   
  [Creazione di relazioni riflessive &#40;Visual Database Tools&#41;](draw-reflexive-relationships-visual-database-tools.md)  
   
-## <a name="reference"></a>Riferimento  
+## <a name="reference"></a>Riferimenti  
  [Finestra di dialogo Aggiungi tabella &#40;Database Designer&#41; &#40;Visual Database Tools&#41;](add-table-dialog-box-database-designer-visual-database-tools.md)  
   
 ## <a name="related-sections"></a>Sezioni correlate  

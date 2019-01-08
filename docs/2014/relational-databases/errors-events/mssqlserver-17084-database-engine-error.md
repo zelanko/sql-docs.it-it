@@ -12,12 +12,12 @@ ms.assetid: e579d104-3307-4edd-8587-b14ecbc02ed9
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8b3796b97b92c56618e1b9fa98198f83206c825d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 95d0da610a8030c68bcf25d650e68aef4ae83128
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48215641"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52396547"
 ---
 # <a name="mssqlserver17084"></a>MSSQLSERVER_17084
     
@@ -39,7 +39,7 @@ ms.locfileid: "48215641"
  I blocchi`ATOMIC` richiedono valori per le opzioni `WITH` `TRANSACTION ISOLATION LEVEL` e `LANGUAGE`. Ad esempio:  
   
 ```  
-BEGIN ATOMIC WITH (TRANSACTION ISOLATION LEVEL = SNAPSHOT, LANGUAGE= N’us_english’)  
+BEGIN ATOMIC WITH (TRANSACTION ISOLATION LEVEL = SNAPSHOT, LANGUAGE= N'us_english')  
 ```  
   
  Per altre informazioni, vedere [OLTP in memoria &#40;ottimizzazione in memoria&#41;](../in-memory-oltp/in-memory-oltp-in-memory-optimization.md).  

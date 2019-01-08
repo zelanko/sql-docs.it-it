@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - creating explicit hierarchies [Master Data Services]
@@ -14,12 +13,12 @@ ms.assetid: ba768393-6990-4eda-8cb0-d58cb3cfc2e2
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 71c695a31aacf146bf2e97dd0ad4a38044d6b8b5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b24a03ff71e6ddec125dfa40ae4c01b3062ada8c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48083581"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52761603"
 ---
 # <a name="create-an-explicit-hierarchy-master-data-services"></a>Creare una gerarchia esplicita (Master Data Services)
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]creare una gerarchia esplicita quando è necessaria una gerarchia incompleta nella quale possono esistere membri a qualsiasi livello. Nelle gerarchie esplicite sono inclusi membri da una singola entità.  
@@ -51,7 +50,7 @@ ms.locfileid: "48083581"
   
 7.  Nel **Aggiungi gerarchia esplicita** pagina il **nome gerarchia esplicita** casella, digitare un nome per la gerarchia.  
   
-8.  Facoltativamente, deselezionare la casella di controllo **Gerarchia obbligatoria** per creare una gerarchia come non obbligatoria. Per altre informazioni sui tipi di gerarchia, vedere [Explicit Hierarchies &#40;Master Data Services&#41;](../../2014/master-data-services/explicit-hierarchies-master-data-services.md).  
+8.  Facoltativamente, deselezionare la casella di controllo **Gerarchia obbligatoria** per creare una gerarchia come non obbligatoria. Per altre informazioni sui tipi di gerarchia, vedere [Gerarchie esplicite &#40;Master Data Services&#41;](../../2014/master-data-services/explicit-hierarchies-master-data-services.md).  
   
 9. Fare clic su **Salva gerarchia**.  
   
@@ -59,7 +58,7 @@ ms.locfileid: "48083581"
   
 ## <a name="next-steps"></a>Passaggi successivi  
   
--   [Creare un membro consolidato &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-consolidated-member-master-data-services.md)  
+-   [Creare membri consolidati &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-consolidated-member-master-data-services.md)  
   
 -   [Spostare membri all'interno di una gerarchia di &#40;Master Data Services&#41;](../../2014/master-data-services/move-members-within-a-hierarchy-master-data-services.md)  
   

@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
-ms.openlocfilehash: 21034e0e7ae4e84d245d12b631c96c41760c46c4
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 94d5aa81e6d9da31593f03b867a1f25b5ecc85b0
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51658813"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52401896"
 ---
 # <a name="configure-sql-server-on-linux-with-the-mssql-conf-tool"></a>Configurare SQL Server in Linux con lo strumento mssql-conf
 
@@ -394,7 +394,7 @@ La prima acquisizione di fase viene controllata dal **coredump.coredumptype** im
 
     La tabella seguente elenca i possibili **coredump.coredumptype** valori.
 
-    | Tipo | Description |
+    | Tipo | Descrizione |
     |-----|-----|
     | **mini** | Mini è il tipo di file di dump più piccolo. Usa le informazioni sul sistema di Linux per determinare i thread e i moduli del processo. Il dump contiene solo i moduli e gli stack di thread di ambiente host. Non contiene riferimenti indiretti memoria o alle raccolte globals. |
     | **miniplus** | È simile a mini miniPlus, ma include memoria aggiuntiva. Riconosce le caratteristiche interne di SQLPAL e l'ambiente host, aggiungere le seguenti aree di memoria per il dump:</br></br> -Funzioni globali varie</br> -Tutta la memoria superiori a 64TB</br> -All denominata area trovata **/proc/$ pid e mappe**</br> -Memoria indiretto dal thread e stack</br> -Informazioni thread</br> -Del Teb e associati di Peb</br> -Modulo informazioni</br> -VMM e VAD albero |
@@ -508,7 +508,7 @@ Oltre a impostare questi valori, è anche necessario configurare il routing e ag
 
 Esistono diverse altre impostazioni per mssql-conf che è possibile usare per monitorare e risolvere i problemi di MSDTC. Nella tabella seguente vengono descritte brevemente queste impostazioni. Per altre informazioni sul relativo uso, vedere i dettagli nell'articolo del supporto tecnico di Windows [come abilitare la traccia diagnostica per MS DTC](https://support.microsoft.com/help/926099/how-to-enable-diagnostic-tracing-for-ms-dtc-on-a-windows-based-compute).
 
-| impostazione MSSQL-conf | Description |
+| impostazione MSSQL-conf | Descrizione |
 |---|---|
 | distributedtransaction.allowonlysecurerpccalls | Configurare le chiamate rpc solo sicuro per le transazioni distribuite |
 | distributedtransaction.fallbacktounsecurerpcifnecessary | Configurare protezione per le chiamate rpc solo per distribuite |transazioni
@@ -587,11 +587,11 @@ Il **network.tcpport** quando si imposta la porta TCP in cui SQL Server è in as
 
 Le opzioni seguenti configurare TLS per un'istanza di SQL Server in esecuzione in Linux.
 
-|Opzione |Description |
+|Opzione |Descrizione |
 |--- |--- |
 |**network.forceencryption** |Se è 1, quindi [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] forza tutte le connessioni da crittografare. Per impostazione predefinita, questa opzione è 0. |
-|**network.tlscert** |Il percorso assoluto per il certificato del file che [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Usa per TLS. Esempio: `/etc/ssl/certs/mssql.pem` il file del certificato deve essere accessibile dall'account mssql. Microsoft consiglia di limitare l'accesso al file usando `chown mssql:mssql <file>; chmod 400 <file>`. |
-|**network.tlskey** |Il percorso assoluto della chiave privata del file che [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Usa per TLS. Esempio: `/etc/ssl/private/mssql.key` il file del certificato deve essere accessibile dall'account mssql. Microsoft consiglia di limitare l'accesso al file usando `chown mssql:mssql <file>; chmod 400 <file>`. |
+|**network.tlscert** |Il percorso assoluto per il certificato del file che [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Usa per TLS. Esempio:   `/etc/ssl/certs/mssql.pem`  Il file del certificato deve essere accessibile dall'account mssql. Microsoft consiglia di limitare l'accesso al file usando `chown mssql:mssql <file>; chmod 400 <file>`. |
+|**network.tlskey** |Il percorso assoluto della chiave privata del file che [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Usa per TLS. Esempio:  `/etc/ssl/private/mssql.key`  Il file del certificato deve essere accessibile dall'account mssql. Microsoft consiglia di limitare l'accesso al file usando `chown mssql:mssql <file>; chmod 400 <file>`. |
 |**network.tlsprotocols** |Elenco delimitato da virgole di cui TLS protocolli consentiti da SQL Server. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tenta sempre di negoziazione del protocollo consentito più attendibili. Se un client non supporta alcun protocollo consentito, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] rifiuta il tentativo di connessione.  Per garantire la compatibilità, sono consentiti tutti i protocolli supportati per impostazione predefinita (1.2, 1.1, 1.0).  Se i client supportano TLS 1.2, si consiglia di consentire solo TLS 1.2. |
 |**network.tlsciphers** |Specifica le crittografie consentite dal [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] per TLS. Questa stringa debba essere formattata secondo [formato di elenco di pacchetti di crittografia di OpenSSL](https://www.openssl.org/docs/man1.0.2/apps/ciphers.html). In generale, non è necessario modificare questa opzione. <br /> Per impostazione predefinita, sono consentite le crittografie seguenti: <br /> `ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES128-SHA256:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES128-SHA256:ECDHE-RSA-AES256-SHA384:ECDHE-ECDSA-AES256-SHA:ECDHE-ECDSA-AES128-SHA:ECDHE-RSA-AES256-SHA:ECDHE-RSA-AES128-SHA:AES256-GCM-SHA384:AES128-GCM-SHA256:AES256-SHA256:AES128-SHA256:AES256-SHA:AES128-SHA` |
 | **network.kerberoskeytabfile** |Percorso del file keytab Kerberos |

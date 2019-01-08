@@ -20,19 +20,19 @@ ms.assetid: 75cc9f52-3b1f-4754-b1e7-ce0dd3323bc9
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 5c434f47fdf6dcb17cccee5ca69cefe74971560e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fba195d53911264716c73b54ea8c639ca37951e6
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47594712"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52418312"
 ---
 # <a name="sysspflushlog-transact-sql"></a>sys.sp_flush_log (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Scarica su disco il log delle transazioni del database corrente, finalizzando in questo modo tutte le transazioni durevoli posticipate sottoposte a commit in precedenza.  
   
- Se si sceglie di utilizzare la durabilità delle transazioni posticipate a causa dei vantaggi a livello di prestazioni, ma si desidera disporre anche di un limite garantito sulla quantità di dati che vengono persi per un arresto anomalo del server o per un failover, eseguire `sys.sp_flush_log` regolarmente. Ad esempio, se si desidera assicurarsi di non perdere dati relativi a più di x secondi, eseguire `sp_flush_log` ogni x secondi.  
+ Se si sceglie di utilizzare la durabilità delle transazioni posticipate a causa dei vantaggi a livello di prestazioni, ma si desidera disporre anche di un limite garantito sulla quantità di dati che vengono persi per un arresto anomalo del server o per un failover, eseguire `sys.sp_flush_log` regolarmente. Ad esempio, se si desidera assicurarsi di non perdere più di x secondi dati relativi a, si eseguirà `sp_flush_log` ogni x secondi.  
   
  L'esecuzione di `sys.sp_flush_log` garantisce che tutte le transazioni durevoli posticipate sottoposte a commit in precedenza vengono rese durevoli. Vedere l'argomento concettuale [controllo della durabilità delle transazioni](../../relational-databases/logs/control-transaction-durability.md) per altre informazioni.  
   

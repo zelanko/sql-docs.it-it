@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - sql12.ag.msxwiz.complete.f1
@@ -21,12 +21,12 @@ ms.assetid: 05739a73-1fdf-4d9d-92a6-70f328380322
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 14e3d90b8406dc5411c1325038afee184684b7b8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ca0e79c617db6cc2906ac9225efd92e156699951
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48210571"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52752604"
 ---
 # <a name="make-a-master-server"></a>Configurare un server master
   In questo argomento viene descritto come configurare un server master [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -35,7 +35,7 @@ ms.locfileid: "48210571"
   
 -   **Prima di iniziare:**  
   
-     [Security](#Security)  
+     [Sicurezza](#Security)  
   
 -   **Per configurare un server master tramite:**  
   
@@ -63,7 +63,7 @@ ms.locfileid: "48210571"
      Per risolvere il problema, verificare che nel server di destinazione sia disponibile un account proxy con lo stesso nome dell'account proxy del server master utilizzato per l'esecuzione del passaggio di processo.  
   
 ####  <a name="Permissions"></a> Permissions  
- Le autorizzazioni per eseguire questa routine per impostazione predefinita ai membri del `sysadmin` ruolo predefinito del server.  
+ Le autorizzazioni di esecuzione per questa procedura vengono assegnate per impostazione predefinita ai membri del ruolo predefinito del server `sysadmin`.  
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
   
@@ -115,7 +115,7 @@ ms.locfileid: "48210571"
      **Crea un nuovo account di accesso se necessario e assegna i diritti per il server MSX**  
      Tramite questa opzione è possibile creare un nuovo account di accesso nel server di destinazione se l'account di accesso specificato non esiste già.  
   
-##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
   
 #### <a name="to-make-a-master-server"></a>Per configurare un server master  
   

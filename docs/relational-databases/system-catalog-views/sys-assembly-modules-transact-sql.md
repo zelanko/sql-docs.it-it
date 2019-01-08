@@ -21,19 +21,19 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3003873abc04c6999f3f94c3453fb0e1b78309f9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ade1adbfeb8292e894ce18db305687c7092707cf
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47704559"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52391447"
 ---
 # <a name="sysassemblymodules-transact-sql"></a>sys.assembly_modules (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
   Restituisce una riga per ogni funzione, procedura o trigger definito da un assembly CLR (Common Language Runtime). Questa vista del catalogo esegue il mapping di stored procedure CLR, trigger CLR o funzioni CLR all'implementazione sottostante corrispondente. Gli oggetti di tipo TA, AF, PC, FS e FT sono associati a un modulo in assembly. Per trovare l'associazione tra oggetto e assembly, è possibile unire questa vista del catalogo ad altre viste. Ad esempio, quando si crea una stored procedure CLR, è rappresentato da una riga nella **Sys. Objects**, uno nella riga **Procedures** (che eredita dalla classe **Sys. Objects**), e una riga nella **Sys. assembly_modules**. La stored procedure stessa è rappresentata dai metadati nel **Sys. Objects** e **Procedures**. I riferimenti all'implementazione CLR sottostante della stored procedure vengono trovati **Sys. assembly_modules**.  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|Numero di identificazione dell'oggetto SQL. Valore univoco all'interno di un database.|  
 |**assembly_id**|**int**|ID dell'assembly da cui è stato creato questo modulo.|  

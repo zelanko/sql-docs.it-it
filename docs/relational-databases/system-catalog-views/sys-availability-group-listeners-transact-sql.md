@@ -22,12 +22,12 @@ ms.assetid: b5e7d1fb-3ffb-4767-8135-604c575016b1
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 2e0075fed6695ffa106891843c4f42106e1bfc74
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 839e471e8861f081762f6129dff731e66bed77a7
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47625709"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52403486"
 ---
 # <a name="sysavailabilitygrouplisteners-transact-sql"></a>sys.availability_group_listeners (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -37,14 +37,14 @@ ms.locfileid: "47625709"
 > [!NOTE]  
 >  Questa vista del catalogo non descrive i dettagli di una configurazione IP, definita nel cluster WSFC.  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**group_id**|**uniqueidentifier**|ID del gruppo di disponibilità (**group_id**) da [Sys. availability_groups](../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md).|  
 |**listener_id**|**nvarchar(36)**|GUID dall'ID della risorsa del cluster.|  
 |**dns_name**|**nvarchar(63)**|Nome di rete configurato (nome host) del listener del gruppo di disponibilità.|  
 |**port**|**int**|Numero di porta TCP configurato per il listener del gruppo di disponibilità.<br /><br /> Null = Il listener è stato configurato all'esterno di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e il numero di porta non è stato aggiunto al gruppo di disponibilità. Per aggiungere la porta, Modify l'opzione Modifica LISTENER del [ALTER AVAILABILITY GROUP](../../t-sql/statements/alter-availability-group-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] istruzione.|  
-|**is_conformant**|**bit**|Se questa configurazione IP è conforme, uno di:<br /><br /> 1 = Il listener è conforme. Tra gli indirizzi IP (Internet Protocol) esistono sono relazioni "OR". *Conforme* comprende ogni una configurazione IP che è stata creata con il [CREATE AVAILABILITY GROUP](../../t-sql/statements/create-availability-group-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] istruzione. Inoltre, se una configurazione IP creata all'esterno di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ad esempio tramite Gestione cluster di failover WSFC, ma modificabile tramite l'istruzione Tsql ALTER AVAILABILITY GROUP, la configurazione IP viene qualificata come conforme.<br /><br /> 0 = Il listener non è conforme. In genere, indica un indirizzo IP che non può essere configurato tramite i comandi [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e che è stato definito direttamente nel cluster WSFC.|  
-|**ip_configuration_string_from_cluster**|**nvarchar(max)**|Eventuali stringhe di configurazione IP del cluster per questo listener. Null = Il listener non dispone di indirizzi IP virtuali. Esempio:<br /><br /> Indirizzo IPv4: `65.55.39.10`.<br /><br /> Indirizzo IPv6: `2001::4898:23:1002:20f:1fff:feff:b3a3`.|  
+|**is_conformant**|**bit**|Se questa configurazione IP è conforme, uno di:<br /><br /> 1 = Il listener è conforme. Sole relazioni "OR" esistono nei relativi indirizzi IP (Internet Protocol). *Conforme* comprende ogni una configurazione IP che è stata creata con il [CREATE AVAILABILITY GROUP](../../t-sql/statements/create-availability-group-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] istruzione. Inoltre, se una configurazione IP creata all'esterno di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ad esempio tramite Gestione cluster di failover WSFC, ma modificabile tramite l'istruzione Tsql ALTER AVAILABILITY GROUP, la configurazione IP viene qualificata come conforme.<br /><br /> 0 = Il listener non è conforme. In genere, indica un indirizzo IP che non può essere configurato tramite i comandi [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e che è stato definito direttamente nel cluster WSFC.|  
+|**ip_configuration_string_from_cluster**|**nvarchar(max)**|Eventuali stringhe di configurazione IP del cluster per questo listener. Null = Il listener non dispone di indirizzi IP virtuali. Ad esempio:<br /><br /> Indirizzo IPv4: `65.55.39.10`.<br /><br /> Indirizzo IPv6: `2001::4898:23:1002:20f:1fff:feff:b3a3`.|  
   
 ## <a name="security"></a>Sicurezza  
   

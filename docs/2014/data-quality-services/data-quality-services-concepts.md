@@ -10,12 +10,12 @@ ms.assetid: 837c71ee-48fa-4044-8744-2be9119aaa04
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e3ddffe0e468adcc004a8cb78a5f083a58dcf0c8
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: b139ff48d818ad586c029103f8d86e6ff2721af0
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51032120"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52414798"
 ---
 # <a name="data-quality-services-concepts"></a>Concetti di Data Quality Services
   In questo argomento viene fornito un breve riepilogo dei concetti di [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) nell'ambito della gestione delle informazioni, dei progetti Data Quality e dell'amministrazione della qualità dei dati.  
@@ -48,9 +48,9 @@ ms.locfileid: "51032120"
   
  La pulizia dei dati in DQS viene effettuata in base alle informazioni incluse nella Knowledge Base DQS e prevede un processo in due passaggi:  
   
--   **Pulizia assistita da computer**: in DQS vengono utilizzate le informazioni disponibili nella Knowledge Base selezionata per la pulizia di un progetto, al fine di proporre correzioni e suggerimenti relativi ai valori in un'origine dati.  
+-   **Pulizia computerizzata**: In DQS vengono utilizzate le informazioni nella knowledge base selezionata per il progetto di pulizia al fine di proporre correzioni e suggerimenti relativi ai valori in un'origine dati.  
   
--   **Pulizia interattiva**: l'amministratore dei dati può eseguire il processo di pulizia interattiva per modificare o aumentare le correzioni dei dati proposte dal processo di pulizia dei dati computerizzato. L'amministratore dei dati esegue questa operazione utilizzando livelli di confidenza e statistiche identificati dal processo di pulizia dei dati o immettendo manualmente le proprie modifiche nel progetto.  
+-   **Pulizia interattiva**: L'amministratore dei dati è possibile eseguire il processo di pulizia interattiva per modificare o aumentare le correzioni dei dati proposte dal processo di pulizia computerizzato. L'amministratore dei dati esegue questa operazione utilizzando livelli di confidenza e statistiche identificati dal processo di pulizia dei dati o immettendo manualmente le proprie modifiche nel progetto.  
   
  In seguito al processo di pulizia, l'amministratore può esportare i dati elaborati in un database di SQL Server, un file con estensione csv o un file di Excel. Per altre informazioni, vedere [Data Cleansing](../../2014/data-quality-services/data-cleansing.md).  
   

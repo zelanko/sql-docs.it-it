@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - sorting rows [SQL Server]
@@ -13,12 +13,12 @@ ms.assetid: 780ef467-f96e-4373-8235-6dacbedb05a2
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2183b8cb96895dc2bbb1308bccd818fb5a04dba5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3235c9a9305e4476214add63f8710ba9de7b4c19
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48156101"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52768599"
 ---
 # <a name="sort-rows-visual-database-tools"></a>Ordinamento di righe (Visual Database Tools)
   È possibile ordinare le righe nel risultato di una query. In altre parole, è possibile identificare una colonna o un set di colonne particolare i cui valori determinano l'ordine delle righe nel set di risultati.  
@@ -64,7 +64,7 @@ ms.locfileid: "48156101"
   
     ```  
   
--   **È possibile eseguire l'ordinamento in base a colonne derivate** È possibile, ad esempio, creare un set di risultati in cui ogni riga contenga il titolo di un libro, indicando per primi i libri con i diritti d'autore più elevati per una singola copia. Il codice SQL risultante potrebbe essere simile al seguente:  
+-   **È possibile eseguire l'ordinamento in base a colonne derivate**. Ad esempio, si può creare un set di risultati in cui ogni riga contiene il titolo di un libro, riportando per primi i libri con i diritti d'autore più elevati per singola copia. Il codice SQL risultante potrebbe essere simile al seguente:  
   
     ```  
     SELECT title, price * royalty / 100 as royalty_per_unit  
@@ -77,7 +77,7 @@ ms.locfileid: "48156101"
   
      Per calcolare una colonna derivata, è possibile utilizzare la sintassi SQL, come è stato fatto nell'esempio precedente, oppure è possibile utilizzare una funzione definita dall'utente che restituisca un valore scalare. Per ulteriori informazioni sulle funzioni definite dall'utente, vedere la documentazione di SQL Server.  
   
--   **È possibile ordinare righe raggruppate** È possibile ad esempio creare un set di risultati in cui ciascuna riga indichi una città e il numero di autori residenti in tale città, specificando per prime le città con più autori. Il codice SQL risultante potrebbe essere simile al seguente:  
+-   **È possibile ordinare righe raggruppate**. Ad esempio, si può creare un set di risultati in cui ogni riga descrive una città e il numero di autori in tale città, riportando per prime le città con più autori. Il codice SQL risultante potrebbe essere simile al seguente:  
   
     ```  
     SELECT city, state, COUNT(*)  
@@ -89,7 +89,7 @@ ms.locfileid: "48156101"
   
      Si noti che la query utilizza `state` come colonna di ordinamento secondaria. Due stati che hanno lo stesso numero di autori verranno quindi disposti in ordine alfabetico.  
   
--   **È possibile eseguire l'ordinamento usando dati internazionali** È possibile ordinare una colonna usando convenzioni di confronto diverse dalle convenzioni predefinite per tale colonna. È possibile ad esempio scrivere una query che recuperi tutti i libri di Jaime Patiño. Per visualizzare i titoli in ordine alfabetico, si utilizza una sequenza di confronto spagnola per la colonna title. Il codice SQL risultante potrebbe essere simile al seguente:  
+-   **È possibile eseguire l'ordinamento usando dati internazionali** È possibile ordinare una colonna usando convenzioni di confronto diverse dalle convenzioni predefinite per tale colonna. Ad esempio, è possibile scrivere una query che recupera tutti i titoli dei libri da Jaime Pati?? o. Per visualizzare i titoli in ordine alfabetico, si utilizza una sequenza di confronto spagnola per la colonna title. Il codice SQL risultante potrebbe essere simile al seguente:  
   
     ```  
     SELECT title  
@@ -105,7 +105,7 @@ ms.locfileid: "48156101"
                 =  titles.title_id   
     WHERE   
          au_fname = 'Jaime' AND   
-         au_lname = 'Patiño'  
+         au_lname = 'Pati??o'  
     ORDER BY   
          title COLLATE SQL_Spanish_Pref_CP1_CI_AS  
     ```  

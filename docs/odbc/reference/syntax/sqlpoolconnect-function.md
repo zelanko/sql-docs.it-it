@@ -13,16 +13,16 @@ ms.assetid: 41322737-890d-4a81-aed2-06cc3d546962
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: eb9f7b9aa75311850efe4a26dcbc373b8697e652
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4dda69fa741555f4402bded930f68260b154fd30
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47801879"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52404856"
 ---
 # <a name="sqlpoolconnect-function"></a>Funzione SQLPoolConnect
 **Conformità**  
- Versione introdotta: ODBC 3.8 aderenza agli standard: ODBC  
+ Versione introdotta: Conformità agli standard 3,8 ODBC: ODBC  
   
  **Riepilogo**  
  **SQLPoolConnect** consente di creare una nuova connessione se nessuna connessione nel pool può essere riutilizzata.  

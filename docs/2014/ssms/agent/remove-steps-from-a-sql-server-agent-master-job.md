@@ -4,18 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 ms.assetid: 871e6162-1221-464d-8f7f-7e454dcd9edb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9e5ef1f81accb5e47c3c971a0df098eda71d29b0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5bebe86c19482a7a86d1b19e19f0ac43292c8ece
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48165831"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52782865"
 ---
 # <a name="remove-steps-from-a-sql-server-agent-master-job"></a>Remove Steps from a SQL Server Agent Master Job
   In questo argomento verrà descritto come rimuovere passaggi da un processo master di SQL Server Agent in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -26,7 +26,7 @@ ms.locfileid: "48165831"
   
      [Limitazioni e restrizioni](#Restrictions)  
   
-     [Security](#Security)  
+     [Sicurezza](#Security)  
   
 -   **Per rimuovere passaggi da un processo master di SQL Server Agent tramite:**  
   
@@ -42,7 +42,7 @@ ms.locfileid: "48165831"
 ###  <a name="Security"></a> Sicurezza  
   
 ####  <a name="Permissions"></a> Permissions  
- È possibile modificare solo i processi di cui si è proprietari, a meno che non si appartenga al ruolo predefinito del server **sysadmin** . Per informazioni dettagliate, vedere [Implement SQL Server Agent Security](implement-sql-server-agent-security.md).  
+ È possibile modificare solo i processi di cui si è proprietari, a meno che non si appartenga al ruolo predefinito del server **sysadmin** . Per informazioni dettagliate, vedere [Implementazione della sicurezza di SQL Server Agent](implement-sql-server-agent-security.md).  
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
   
@@ -56,13 +56,13 @@ ms.locfileid: "48165831"
   
 4.  Fare clic con il pulsante destro del mouse sul processo in cui si intende eliminare passaggi e scegliere **Proprietà**.  
   
-5.  Nella finestra di dialogo **Proprietà processo –***nome_processo* selezionare **Passaggi** in **Seleziona una pagina**.  
+5.  Nel **proprietà processo-* * * nome_processo* nella finestra di dialogo **selezione pagina**, selezionare **passaggi**.  
   
 6.  In **Elenco dei passaggi del processo**selezionare il passaggio del processo che si desidera eliminare, quindi fare clic su **Elimina**.  
   
 7.  Al termine, fare clic su **OK**.  
   
-##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
   
 #### <a name="to-remove-steps-from-a-sql-server-agent-master-job"></a>Per rimuovere passaggi da un processo master di SQL Server Agent  
   

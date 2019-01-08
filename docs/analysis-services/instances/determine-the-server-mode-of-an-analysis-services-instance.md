@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 85501a0b8899e375965a7e999ce2d4e938f14cc0
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: 434996f53cefc3c30cc649411db7699ed2bd3f7e
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50099718"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52401024"
 ---
 # <a name="determine-the-server-mode-of-an-analysis-services-instance"></a>Determinare la modalità server di un'istanza di Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  Sono disponibili tre diverse modalità server per installare Analysis Services: multidimensionale e data mining (impostazione predefinita), [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per SharePoint e tabulare. La modalità server di un'istanza di Analysis Services è determinata durante l'installazione quando si scelgono le opzioni per l'installazione del server.  
+  È possibile installare Analysis Services in una di tre modalità server: Multidimensionale e Data Mining (impostazione predefinita), [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per SharePoint e tabulare. La modalità server di un'istanza di Analysis Services è determinata durante l'installazione quando si scelgono le opzioni per l'installazione del server.  
   
  La modalità server determina il tipo di soluzione creata e distribuita. Se non è stato installato il software server e si desidera sapere in quale modalità è stato installato il server, è possibile usare le informazioni di questo argomento per determinare tale modalità. Per altre informazioni sulle funzionalità disponibili in una modalità specifica, vedere [confronto tra tabulari e multidimensionali ](../../analysis-services/comparing-tabular-and-multidimensional-solutions-ssas.md).  
   
@@ -36,13 +36,13 @@ ms.locfileid: "50099718"
 >  Non modificare il valore della proprietà **DeploymentMode** . La modifica manuale della proprietà dopo l'installazione del server non è supportata.  
   
 ## <a name="about-the-deploymentmode-property"></a>Informazioni sulla proprietà DeploymentMode  
- La proprietà**DeploymentMode** consente di determinare il contesto operativo di un'istanza del server Analysis Services. Questa proprietà viene definita 'modalità server' in finestre di dialogo, messaggi e documentazione. Questa proprietà viene inizializzata dal programma di installazione in base alla modalità di installazione di Analysis Services e deve essere considerata solo per uso interno, usando sempre il valore specificato dal programma di installazione.  
+ La proprietà**DeploymentMode** consente di determinare il contesto operativo di un'istanza del server Analysis Services. Questa proprietà è definita 'modalità server' in finestre di dialogo, messaggi e documentazione. Questa proprietà viene inizializzata dal programma di installazione in base alla modalità di installazione di Analysis Services e deve essere considerata solo per uso interno, usando sempre il valore specificato dal programma di installazione.  
   
  Tra i valori validi per questa proprietà sono inclusi i seguenti:  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
-|0|Si tratta del valore predefinito. Specifica la modalità multidimensionale, usata per i database multidimensionali che usano l'archiviazione MOLAP, HOLAP e ROLAP, nonché i modelli di data mining.|  
+|0|Rappresenta il valore predefinito. Specifica la modalità multidimensionale, usata per i database multidimensionali che usano l'archiviazione MOLAP, HOLAP e ROLAP, nonché i modelli di data mining.|  
 |1|Specifica le istanze di Analysis Services installate nell'ambito di una distribuzione di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per SharePoint. Non modificare la proprietà della modalità di distribuzione dell'istanza di Analysis Services che fa parte di un'installazione di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per SharePoint. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] I dati di non verranno più eseguiti nel server se si cambia modalità.|  
 |2|Specifica la modalità tabulare usata per l'hosting dei database del modello tabulare che usano l'archiviazione in memoria o DirectQuery.|  
   

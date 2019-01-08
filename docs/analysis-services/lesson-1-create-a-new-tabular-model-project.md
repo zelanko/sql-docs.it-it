@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 61ac5b1a0bac9647e6163a13afd0bce6b251ac03
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 6b0c376c6ab8625d2f31e6ad6ea132842315b1e1
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38040859"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52410777"
 ---
 # <a name="lesson-1-create-a-new-tabular-model-project"></a>Lezione 1: Creare un nuovo modello di progetto tabulare
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -50,7 +50,7 @@ Questo argomento è la prima lezione di un'esercitazione sulla creazione di mode
       
     Se non SQL Server 2016 RTM (1200) nella casella di riepilogo livello compatibilità, non si usa la versione più recente di SQL Server Data Tools. Per ottenere l'ultima versione, vedere [Installare SQL Server Data Tools](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt).  
 
-    Se si usa la versione più recente di SSDT, è anche possibile scegliere SQL Server 2017 (1400). Tuttavia, per completare la lezione 13: distribuire, è necessario un server di Azure o SQL Server 2017 da distribuire.
+    Se si usa la versione più recente di SSDT, è anche possibile scegliere SQL Server 2017 (1400). Tuttavia, per completare la lezione 13: Distribuire, è necessario un SQL Server 2017 o a un server di Azure per distribuire in.
       
     Selezionare un livello di compatibilità precedenti è consigliabile solo se si vuole distribuire il modello tabulare in una diversa istanza di Analysis Services in esecuzione una versione precedente di SQL Server. Area di lavoro integrata non è supportata per i livelli di compatibilità precedenti. Per alte informazioni, vedere [Livello di compatibilità per i modelli tabulari in Analysis Services](../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md).   
   
@@ -87,7 +87,7 @@ Per altre informazioni sui diversi tipi di progetti di modelli tabulari, vedere 
   
 
 ## <a name="whats-next"></a>Quali sono le operazioni successive?
-Passare alla lezione successiva: [lezione 2: aggiungere dati](../analysis-services/lesson-2-add-data.md).
+Passare alla lezione successiva: [Lezione 2: Aggiungere dati](../analysis-services/lesson-2-add-data.md).
 
   
   

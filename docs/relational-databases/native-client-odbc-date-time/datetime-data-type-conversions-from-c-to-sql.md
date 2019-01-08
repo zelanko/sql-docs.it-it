@@ -14,12 +14,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c75f80d190926044fdffd80a9b0b75ad225246a1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e547a21eb86a76a76bc1d4560005bcd58595dfb3
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47706681"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52417222"
 ---
 # <a name="datetime-data-type-conversions-from-c-to-sql"></a>Conversioni dei tipi di dati datetime da C a SQL
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -49,37 +49,37 @@ ms.locfileid: "47706681"
   
 ## <a name="key-to-symbols"></a>Descrizione dei simboli  
   
--   **-**: Nessuna conversione è supportata. Viene generato un record di diagnostica con SQLSTATE 07006 e il messaggio "Violazione dell'attributo del tipo di dati".  
+-   **-**: Non viene supportata alcuna conversione. Viene generato un record di diagnostica con SQLSTATE 07006 e il messaggio "Violazione dell'attributo del tipo di dati".  
   
--   **1**: se i dati forniti non sono validi, viene generato un record di diagnostica con SQLSTATE 22007 e il messaggio "formato di datetime non valido".  
+-   **1**: Se i dati forniti non sono validi, viene generato un record di diagnostica con SQLSTATE 22007 e il messaggio "Formato di datetime non valido".  
   
--   **2**: i campi dell'ora devono essere zero o viene generato un record di diagnostica con SQLSTATE 22008 e il messaggio "Troncamento frazionario".  
+-   **2**: I campi dell'ora devono essere zero o viene generato un record di diagnostica con SQLSTATE 22008 e il messaggio "Troncamento frazionario".  
   
--   **3**: secondi frazionari devono essere zero o viene generato un record di diagnostica con SQLSTATE 22008 e il messaggio "Troncamento frazionario".  
+-   **3**: I secondi frazionari devono essere zero o viene generato un record di diagnostica con SQLSTATE 22008 e il messaggio "Troncamento frazionario".  
   
--   **4**: il componente relativo alla data viene ignorato.  
+-   **4**: Il componente relativo alla data viene ignorato.  
   
--   **5**: il fuso orario è impostato per l'impostazione del client sul fuso orario.  
+-   **5**: Il fuso orario viene impostato sul fuso orario del client.  
   
--   **6**: il tempo è impostato su zero.  
+-   **6**: L'ora è impostata su zero.  
   
--   **7**: la data viene impostata sulla data corrente.  
+-   **7**: La data viene impostata sulla data corrente.  
   
--   **8**: l'ora viene convertita dal fuso orario del client in formato UTC. Se si verifica un errore durante questa conversione, viene generato un record di diagnostica con l'identificativo SQLSTATE 22008 e il messaggio "Overflow del campo Datetime".  
+-   **8**: L'ora viene convertita dal fuso orario del client in formato UTC. Se si verifica un errore durante questa conversione, viene generato un record di diagnostica con l'identificativo SQLSTATE 22008 e il messaggio "Overflow del campo Datetime".  
   
--   **9**: la stringa viene analizzata e convertita in una data, datetime, datetimeoffset o valore di ora, in base al primo carattere di punteggiatura rilevato e la presenza di componenti rimanenti. La stringa viene quindi convertita nel tipo di destinazione, seguendo le regole nella tabella precedente per il tipo di origine individuato da questo processo. Se durante l'analisi dei dati viene rilevato un errore, viene generato un record di diagnostica con SQLSTATE 22018 e il messaggio "Carattere non valido per la specifica del cast". Per i parametri datetime e smalldatetime, se l'anno non è compreso nell'intervallo supportato da questi tipi, viene generato un record di diagnostica con SQLSTATE 22007 e il messaggio "Formato di datetime non valido".  
+-   **9**: La stringa viene analizzata e convertita in un valore date, datetime, datetimeoffset o time, in base al primo carattere di punteggiatura rilevato e alla presenza di componenti rimanenti. La stringa viene quindi convertita nel tipo di destinazione, seguendo le regole nella tabella precedente per il tipo di origine individuato da questo processo. Se durante l'analisi dei dati viene rilevato un errore, viene generato un record di diagnostica con SQLSTATE 22018 e il messaggio "Carattere non valido per la specifica del cast". Per i parametri datetime e smalldatetime, se l'anno non è compreso nell'intervallo supportato da questi tipi, viene generato un record di diagnostica con SQLSTATE 22007 e il messaggio "Formato di datetime non valido".  
   
      Per datetimeoffset, il valore deve essere compreso nell'intervallo supportato in seguito alla conversione in UTC, anche se non è necessaria alcuna conversione in UTC. Ciò è dovuto al fatto che TDS e il server normalizzano sempre l'ora in valori datetimeoffset per UTC. Il client deve pertanto verificare che i componenti relativi all'ora siano compresi nell'intervallo supportato in seguito alla conversione in UTC. Se il valore non è compreso nell'intervallo UTC supportato, viene generato un record di diagnostica con SQLSTATE 22007 e il messaggio "Formato di datetime non valido".  
   
--   **10**: se si verifica un troncamento con perdita di dati, viene generato un record di diagnostica con SQLSTATE 22008 e il messaggio "formato di ora non valida". Questo errore si verifica anche se il valore non è incluso nell'intervallo che può essere rappresentato dall'intervallo UTC utilizzato dal server.  
+-   **10**: Se si verifica un troncamento con perdita di dati, viene generato un record di diagnostica con SQLSTATE 22008 e il messaggio "Formato ora non valido". Questo errore si verifica anche se il valore non è incluso nell'intervallo che può essere rappresentato dall'intervallo UTC utilizzato dal server.  
   
--   **11**: se la lunghezza in byte dei dati sono uguali alle dimensioni della struttura richiesta dal tipo SQL, viene generato un record di diagnostica con SQLSTATE 22003 e il messaggio "Valore numerico non compreso nell'intervallo".  
+-   **11**: Se la lunghezza in byte dei dati non equivale alla dimensione della struttura richiesta dal tipo SQL, viene generato un record di diagnostica con SQLSTATE 22003 e il messaggio "Valore numerico non compreso nell'intervallo".  
   
--   **12**: se la lunghezza in byte dei dati è 4 o 8, i dati vengono inviati al server in formato di smalldatetime o datetime TDS non elaborato. Se la lunghezza in byte dei dati corrisponde esattamente alla dimensione di SQL_TIMESTAMP_STRUCT, i dati vengono convertiti nel formato TDS per datetime2.  
+-   **12**: Se la lunghezza in byte dei dati è 4 o 8, i dati vengono inviati al server in formato smalldatetime o datetime TDS non elaborato. Se la lunghezza in byte dei dati corrisponde esattamente alla dimensione di SQL_TIMESTAMP_STRUCT, i dati vengono convertiti nel formato TDS per datetime2.  
   
--   **13**: se si verifica un troncamento con perdita di dati, viene generato un record di diagnostica con SQLSTATE 22001 e il messaggio "Stringa di dati, troncata a destra".  
+-   **13**: Se si verifica un troncamento con perdita di dati, viene generato un record di diagnostica con SQLSTATE 22001 e il messaggio "Troncamento a destra della stringa di dati".  
   
-     Il numero di cifre per i secondi frazionari (scala) è determinato dalla dimensione della colonna di destinazione sulla base alla tabella seguente:  
+     Il numero di cifre per i secondi frazionari (scala) è determinato dalle dimensioni della colonna di destinazione in base alla tabella riportata di seguito:  
   
     ||||  
     |-|-|-|  
@@ -92,7 +92,7 @@ ms.locfileid: "47706681"
   
      Una dimensione della colonna pari a zero implica una dimensione illimitata per i tipi di carattere a lunghezza variabile in ODBC (9 cifre, a meno che non si applichi la regola delle 3 cifre per SQL_C_TYPE_TIMESTAMP). La specifica di una dimensione della colonna pari a zero con un tipo di carattere a lunghezza fissa è un errore.  
   
--   **N/d**: esistente [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e viene mantenuto il comportamento precedente.  
+-   **N/D**: Viene mantenuto il comportamento di [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versioni precedenti.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Data e miglioramenti per la fase &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  

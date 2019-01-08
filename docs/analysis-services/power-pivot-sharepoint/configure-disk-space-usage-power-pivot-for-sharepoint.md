@@ -1,5 +1,5 @@
 ---
-title: Configurare l'utilizzo di spazio su disco (PowerPivot per SharePoint) | Documenti Microsoft
+title: Configurare l'utilizzo di spazio su disco (Power Pivot per SharePoint) | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 24d96feb0e57bf0b1c62532cca63ddf07f96f21c
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 6fa6090a675326db06491d54b82a6844363ee3e9
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34024748"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52409198"
 ---
 # <a name="configure-disk-space-usage-power-pivot-for-sharepoint"></a>Configurare l'uso di spazio su disco (PowerPivot per SharePoint)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -50,11 +50,11 @@ ms.locfileid: "34024748"
   
  A livello di sistema, è possibile creare avvisi di posta elettronica tramite cui si notifica all'utente quando lo spazio su disco non è sufficiente. In Microsoft System Center è disponibile una funzionalità di avvisi di posta elettronica. Per impostare gli avvisi, è possibile utilizzare anche Gestione risorse file server, l'Utilità di pianificazione o uno script di PowerShell. Nei collegamenti seguenti vengono fornite informazioni utili per la configurazione di notifiche di spazio su disco insufficiente:  
   
--   [Novità in Gestione risorse File Server](http://technet.microsoft.com/library/hh831746.aspx) (http://technet.microsoft.com/library/hh831746.aspx).  
+-   [Quali sono le novità in Gestione risorse File Server](http://technet.microsoft.com/library/hh831746.aspx) (http://technet.microsoft.com/library/hh831746.aspx).  
   
--   [Guida dettagliata di gestione risorse file Server per Windows Server 2008 R2](http://go.microsoft.com/fwlink/?LinkID=204875) (http://go.microsoft.com/fwlink/?LinkID=204875).  
+-   [Guida dettagliata alla gestione risorse file Server per Windows Server 2008 R2](http://go.microsoft.com/fwlink/?LinkID=204875) (http://go.microsoft.com/fwlink/?LinkID=204875).  
   
--   [Impostazione avvisi di spazio su disco insufficiente in Windows Server 2008](http://go.microsoft.com/fwlink/?LinkID=204870) ( http://go.microsoft.com/fwlink/?LinkID=204870).  
+-   [L'impostazione di avvisi di spazio su disco insufficiente in Windows Server 2008](http://go.microsoft.com/fwlink/?LinkID=204870) ( http://go.microsoft.com/fwlink/?LinkID=204870).  
   
 ## <a name="how-to-limit-the-amount-of-disk-space-used-for-storing-cached-files"></a>Come limitare la quantità di spazio su disco utilizzata per l'archiviazione di file memorizzati nella cache  
   
@@ -66,7 +66,7 @@ ms.locfileid: "34024748"
   
 3.  In Utilizzo disco impostare un valore (in gigabyte) per **Totale spazio su disco utilizzato** per impostare un limite massimo per la quantità di spazio usato per la memorizzazione nella cache. Il valore predefinito è 0, che consente ad Analysis Services di utilizzare tutto lo spazio su disco disponibile.  
   
-4.  Nell'impostazione **Elimina database memorizzati nella cache nelle ultime 'n' ore** di Utilizzo disco specificare gli ultimi criteri usati per svuotare la cache quando lo spazio su disco è al limite massimo.  
+4.  In utilizzo disco nel **Elimina dalla cache database nelle ultime ' n'ore** impostazione, specificare ultimi criteri utilizzati per svuotare la cache quando lo spazio su disco è al limite massimo.  
   
      Il valore predefinito è 4 ore, pertanto tutti i database inattivi per almeno 4 ore vengono eliminati dal file system. I database che sono inattivi ma ancora in memoria vengono scaricati e quindi eliminati dal file system.  
   

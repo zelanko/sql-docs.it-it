@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords:
 - Best Practices [Database Engine]
@@ -12,12 +12,12 @@ ms.assetid: 8abdc79b-fc26-42e9-8f73-ec6c98713142
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: f1affe547a190ee4d3905ff5d038d4f087edf903
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7996eaaad9d900a8839191d22c86cf7ab014e516
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48170591"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52773333"
 ---
 # <a name="keep-the-affinity-mask-default-value"></a>Valore predefinito per la maschera di affinità
   Questa regola consente di controllare se l'opzione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per la maschera di affinità è impostata su 0, ovvero il valore predefinito. L'opzione relativa alla maschera di affinità determina in modo dinamico l'affinità della CPU.  

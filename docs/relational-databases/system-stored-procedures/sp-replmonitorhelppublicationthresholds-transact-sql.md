@@ -5,8 +5,7 @@ ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_replmonitorhelppublicationthresholds
@@ -17,12 +16,12 @@ ms.assetid: d6b1aa4b-3369-4255-a892-c0e5cc9cb693
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b9e2ecc46c668f8c9cb3bd8d9a2fb21d0c9787a6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 99b577b27b8edd2f37f1af3a13162f1b1aaa8c42
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47803209"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52747653"
 ---
 # <a name="spreplmonitorhelppublicationthresholds-transact-sql"></a>sp_replmonitorhelppublicationthresholds (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +54,7 @@ sp_replmonitorhelppublicationthresholds [ @publisher = ] 'publisher'
  [ **@publication_type**=] *publication_type*  
  Tipo di pubblicazione. *publication_type* viene **int**, i possibili valori sono i seguenti.  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |**0**|Pubblicazione transazionale.|  
 |**1**|Pubblicazione snapshot.|  
@@ -64,7 +63,7 @@ sp_replmonitorhelppublicationthresholds [ @publisher = ] 'publisher'
   
 ## <a name="result-sets"></a>Set di risultati  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**metric_id**|**int**|ID della misurazione delle prestazioni di replica. I possibili valori sono i seguenti:<br /><br /> **1expiration** -esegue il monitoraggio delle scadenze imminenti delle sottoscrizioni a pubblicazioni transazionali.<br /><br /> **2latency** -esegue il monitoraggio delle prestazioni delle sottoscrizioni di pubblicazioni transazionali.<br /><br /> **4mergeexpiration** -esegue il monitoraggio delle scadenze imminenti delle sottoscrizioni di pubblicazioni di tipo merge.<br /><br /> **5mergeslowrunduration** -monitora la durata delle sincronizzazioni di tipo merge attraverso connessioni a larghezza di banda ridotta (Remote).<br /><br /> **6mergefastrunduration** -monitora la durata delle sincronizzazioni di tipo merge attraverso connessioni a banda larga (LAN).<br /><br /> **7mergefastrunspeed** -monitora la frequenza di sincronizzazione delle sincronizzazioni di tipo merge attraverso connessioni a banda larga (LAN).<br /><br /> **8mergeslowrunspeed** -monitora la frequenza di sincronizzazione delle sincronizzazioni di tipo merge attraverso connessioni a larghezza di banda ridotta (Remote).|  
 |**title**|**sysname**|Nome della misurazione delle prestazioni di replica.|  

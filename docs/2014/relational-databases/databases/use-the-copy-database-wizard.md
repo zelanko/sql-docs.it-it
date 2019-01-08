@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.cdw.transfermethod.f1
@@ -26,15 +25,15 @@ ms.assetid: 7a999fc7-0a26-4a0d-9eeb-db6fc794f3cb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2d47f2e7ce32ef77ec7188efbc7c09d053cf8208
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e72b960db0fd5b733119cafeca98f124eaa15f38
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48108691"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52759113"
 ---
 # <a name="use-the-copy-database-wizard"></a>Utilizzo di Copia guidata database
-  Tramite Copia guidata database è possibile spostare o copiare con semplicità i database e i relativi oggetti da un server a un altro, senza alcun tempo di inattività del server. È inoltre possibile aggiornare i database da una precedente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versione a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Mediante questa procedura guidata è possibile effettuare le operazioni seguenti:  
+  Tramite Copia guidata database è possibile spostare o copiare con semplicità i database e i relativi oggetti da un server a un altro, senza alcun tempo di inattività del server. È inoltre possibile aggiornare i database da una versione precedente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Mediante questa procedura guidata è possibile effettuare le operazioni seguenti:  
   
 -   Selezionare un server di origine e uno di destinazione.  
   
@@ -60,7 +59,7 @@ ms.locfileid: "48108691"
   
      [Indicazioni](#Recommendations)  
   
-     [Security](#Security)  
+     [Sicurezza](#Security)  
   
 -   **Usando la copia guidata Database per:**  
   
@@ -68,7 +67,7 @@ ms.locfileid: "48108691"
   
 -   **Completamento dopo l'aggiornamento:**  
   
-     [Dopo l'aggiornamento di un Database di SQL Server](#FollowUp)  
+     [Dopo l'aggiornamento di un database SQL Server](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> Prima di iniziare  
   
@@ -88,7 +87,7 @@ ms.locfileid: "48108691"
   
 -   Se si seleziona l'opzione **Sposta** , il database di origine verrà automaticamente eliminato dopo lo spostamento del database. Se si seleziona l'opzione **Copia** , il database di origine non verrà eliminato.  
   
--   Se si usa il metodo SMO ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects) per spostare il catalogo full-text, è necessario ripopolare l'indice dopo lo spostamento.  
+-   Se si utilizza il metodo SMO ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Object) per spostare il catalogo full-text, è necessario ripopolare l'indice dopo lo spostamento.  
   
 -   Il metodo di collegamento e scollegamento consente di scollegare il database, spostare o copiare i file con estensione mdf, ndf e ldf del database e ricollegare quest'ultimo nella nuova posizione. Nel caso di questo metodo, non è possibile collegare sessioni attive al database da spostare o copiare, al fine di evitare la perdita o l'inconsistenza dei dati. Se sono presenti sessioni attive, l'operazione di copia o spostamento non verrà eseguita. Nel caso del metodo SMO ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Object), l'utilizzo delle sessioni attive è consentito, poiché il database non viene mai portato offline.  
   
@@ -108,7 +107,7 @@ ms.locfileid: "48108691"
   
 ##  <a name="Copy_Move"></a> Copiare, spostare o aggiornare i database  
   
-1.  Nelle [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], in Esplora oggetti, espandere **database**, fare doppio clic su un database, scegliere **attività**, quindi fare clic su **copia Database**.  
+1.  In Esplora oggetti di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]espandere il nodo **Database**, fare clic con il pulsante destro del mouse su un database, scegliere **Attività**, quindi **Copia database**.  
   
 2.  Nella pagina **Selezione server di origine** specificare il server in cui si trova il database da spostare o copiare e immettere le informazioni relative all'account di accesso. Dopo aver selezionato il metodo di autenticazione e immesso le informazioni per l'accesso, fare clic su **Avanti** per stabilire la connessione al server di origine. La connessione rimane aperta durante tutta la sessione.  
   
@@ -119,10 +118,10 @@ ms.locfileid: "48108691"
      Consente a un utente di connettersi tramite un account utente di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.  
   
      **Usa autenticazione di SQL Server**  
-     Consentire all'utente di connettersi, fornendo un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nome utente dell'autenticazione e la password.  
+     Consente all'utente di specificare una password e un nome utente dell'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per la connessione.  
   
      **Nome utente**  
-     Immettere il nome utente da utilizzare per la connessione. Questa opzione è disponibile solo se si è scelto di connettersi tramite [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l'autenticazione.  
+     Immettere il nome utente da utilizzare per la connessione. Questa opzione è disponibile solo se si è scelto di usare l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per la connessione.  
   
      **Password**  
      Immettere la password per l'account di accesso. Questa opzione è disponibile solo se si è scelto di utilizzare l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per la connessione.  
@@ -142,13 +141,13 @@ ms.locfileid: "48108691"
      Consente a un utente di connettersi tramite un account utente di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.  
   
      **Usa autenticazione di SQL Server**  
-     Consentire all'utente di connettersi, fornendo un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nome utente dell'autenticazione e la password.  
+     Consente all'utente di specificare una password e un nome utente dell'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per la connessione.  
   
      **Nome utente**  
-     Immettere il nome utente da utilizzare per la connessione. Questa opzione è disponibile solo se è stata selezionata [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l'autenticazione.  
+     Immettere il nome utente da utilizzare per la connessione. Questa opzione è disponibile solo se si è scelto di utilizzare l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
      **Password**  
-     Immettere la password per l'account di accesso. Questa opzione è disponibile solo se è stata selezionata [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l'autenticazione.  
+     Immettere la password per l'account di accesso. Questa opzione è disponibile solo se si è scelto di utilizzare l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
      **Avanti**  
      Consente di connettersi al server e di convalidare l'utente. Questo processo consente di controllare se l'utente dispone delle autorizzazioni elencate in precedenza per i computer selezionati.  
@@ -229,20 +228,20 @@ ms.locfileid: "48108691"
      **Percorso cartella**  
      Consente di specificare il percorso dei file di database di origine nel file system.  
   
-     Ad esempio: C:\Programmi\Microsoft SQL Server\MSSQL110.MSSQLSERVER\MSSQL\DATA  
+     Ad esempio: C:\Program Files\Microsoft SQL Server\MSSQL110. MSSQLSERVER\MSSQL\DATA  
   
      **Condivisione file nel server di origine**  
      Consente di specificare il percorso dei file del database di origine come percorso di una condivisione file.  
   
      Ad esempio: "\\\\*nome_server*\C$\Program Files\Microsoft SQL Server\MSSQL110. MSSQLSERVER\MSSQL\Data  
   
-9. La copia guidata Database consente di creare un [!INCLUDE[ssIS](../../includes/ssis-md.md)] per trasferire il database dal pacchetto i **configurare il pacchetto** pagina, è possibile personalizzare il pacchetto, se appropriato.  
+9. Tramite Copia guidata database è possibile creare un pacchetto [!INCLUDE[ssIS](../../includes/ssis-md.md)] per trasferire il database dalla pagina **Configurazione pacchetto** e, se necessario, personalizzare il pacchetto.  
   
      **Posizione pacchetto**  
-     Consente di visualizzare dove i [!INCLUDE[ssIS](../../includes/ssis-md.md)] pacchetto verrà scritto.  
+     Consente di visualizzare il punto in cui verrà scritto il pacchetto [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
   
      **Nome pacchetto**  
-     Immettere un nome per il [!INCLUDE[ssIS](../../includes/ssis-md.md)] pacchetto.  
+     Consente di immettere un nome per il pacchetto [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
   
      **Opzioni di registrazione**  
      Consente di indicare se le informazioni di registrazione devono essere archiviate nel registro eventi di Windows o in un file di testo.  
@@ -250,7 +249,7 @@ ms.locfileid: "48108691"
      **Percorso file log degli errori**  
      Consente di fornire un percorso per il file di log. Questa opzione è disponibile solo se è selezionata l'opzione per la registrazione di file di testo.  
   
-10. Nella pagina **Pianificazione pacchetto** specificare il momento in cui si desidera venga avviata l'operazione di copia o spostamento. Se non si è un amministratore di sistema, è necessario specificare una [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account Proxy dell'agente che ha accesso al [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sottosistema esecuzione pacchetti (SSIS).  
+10. Nella pagina **Pianificazione pacchetto** specificare il momento in cui si desidera venga avviata l'operazione di copia o spostamento. Se non si è un amministratore di sistema, è necessario specificare un account proxy di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent con accesso al sottosistema di esecuzione dei pacchetti [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] (SSIS).  
   
      **Run immediately**  
      L'operazione di spostamento o copia viene avviata dopo aver fatto clic su **Avanti**.  
@@ -264,7 +263,7 @@ ms.locfileid: "48108691"
      **Account proxy Integration Services**  
      Consente di selezionare un account proxy esistente. Per pianificare il trasferimento è necessario che sia disponibile almeno un account proxy per l'utente e che questo sia configurato con l'autorizzazione al sottosistema **esecuzione pacchetti di SQL Server Integration Services** .  
   
-     Per creare un account proxy per [!INCLUDE[ssIS](../../includes/ssis-md.md)] pacchetto di esecuzione, in Esplora oggetti, espandere **SQL Server Agent**, espandere **proxy**, fare doppio clic su **l'esecuzione del pacchetto SSIS**, quindi fare clic su **nuovo Proxy**.  
+     Per creare un account proxy per l'esecuzione di pacchetti [!INCLUDE[ssIS](../../includes/ssis-md.md)] , in Esplora oggetti espandere **SQL Server Agent**, espandere **Proxy**, fare clic con il pulsante destro del mouse su **Esecuzione pacchetto SSIS**e quindi fare clic su **Nuovo proxy**.  
   
      I membri del ruolo predefinito del server **sysadmin** possono selezionare **Account del servizio SQL Server Agent**se dispongono delle autorizzazioni necessarie.  
   

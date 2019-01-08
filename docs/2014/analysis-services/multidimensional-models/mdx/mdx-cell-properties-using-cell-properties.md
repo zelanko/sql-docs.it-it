@@ -16,12 +16,12 @@ ms.assetid: a593c74d-8c5e-485e-bd92-08f9d22451d4
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6b79e568f6dd8a3f0aac8e6f226f2b1719a41ff5
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 1a8b302391eb4e7384a54181b102f4ae8f3de522
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50148248"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52417752"
 ---
 # <a name="using-cell-properties-mdx"></a>Utilizzo delle proprietà delle celle (MDX)
   Nel linguaggio MDX (Multidimensional Expressions) le proprietà delle celle includono informazioni sul contenuto e il formato delle celle di un'origine dei dati multidimensionale, ad esempio un cubo.  
@@ -48,9 +48,9 @@ SELECT [<axis_specification>
 ## <a name="supported-intrinsic-cell-properties"></a>Proprietà intrinseche delle celle supportate  
  Nella tabella seguente sono elencate le proprietà intrinseche delle celle supportate che vengono utilizzate nel valore `<property>` .  
   
-|Proprietà|Description|  
+|Proprietà|Descrizione|  
 |--------------|-----------------|  
-|`ACTION_TYPE`|Maschera di bit che indica i tipi di azioni esistenti sulla cella. Di seguito vengono indicati i possibili valori della proprietà.<br /><br /> **MDACTION_TYPE_URL**<br /><br /> **MDACTION_TYPE_HTML**<br /><br /> **MDACTION_TYPE_STATEMENT**<br /><br /> **MDACTION_TYPE_DATASET**<br /><br /> **MDACTION_TYPE_ROWSET**<br /><br /> **MDACTION_TYPE_COMMANDLINE**<br /><br /> **MDACTION_TYPE_PROPRIETARY**<br /><br /> **MDACTION_TYPE_REPORT**<br /><br /> **MDACTION_TYPE_DRILLTHROUGH**<br /><br /> <br /><br /> Nota: le operazioni di drill-through non sono incluse per le query che contengono un set nella clausola WHERE.|  
+|`ACTION_TYPE`|Maschera di bit che indica i tipi di azioni esistenti sulla cella. Di seguito vengono indicati i possibili valori della proprietà.<br /><br /> **MDACTION_TYPE_URL**<br /><br /> **MDACTION_TYPE_HTML**<br /><br /> **MDACTION_TYPE_STATEMENT**<br /><br /> **MDACTION_TYPE_DATASET**<br /><br /> **MDACTION_TYPE_ROWSET**<br /><br /> **MDACTION_TYPE_COMMANDLINE**<br /><br /> **MDACTION_TYPE_PROPRIETARY**<br /><br /> **MDACTION_TYPE_REPORT**<br /><br /> **MDACTION_TYPE_DRILLTHROUGH**<br /><br /> <br /><br /> Nota: Le operazioni di drill-through non sono incluse per le query che contengono un set nella clausola WHERE.|  
 |**BACK_COLOR**|Colore di sfondo per la visualizzazione della proprietà `VALUE` o `FORMATTED_VALUE`. Per altre informazioni, vedere [Contenuto di FORE_COLOR e BACK_COLOR &#40;MDX&#41;](mdx-cell-properties-fore-color-and-back-color-contents.md).|  
 |`CELL_ORDINAL`|Numero ordinale della cella nel set di dati.|  
 |**FONT_FLAGS**|Maschera di bit che indica in dettaglio gli effetti sul carattere. Il valore 5 rappresenta ad esempio l'applicazione combinata degli effetti grassetto (`MDFF_BOLD`) e sottolineato (`MDFF_UNDERLINE`) al carattere. Il valore è il risultato di un'operazione con OR bit per bit su una o più delle costanti seguenti:<br /><br /> `MDFF_BOLD` = 1<br /><br /> `MDFF_ITALIC` = 2<br /><br /> `MDFF_UNDERLINE` = 4<br /><br /> `MDFF_STRIKEOUT` = 8|  

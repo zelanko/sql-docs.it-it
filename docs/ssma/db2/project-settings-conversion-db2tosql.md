@@ -10,12 +10,12 @@ ms.assetid: 538c93cf-c5bb-43d5-b758-186d9fb00c19
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: d2be16142733fe7c54558781e6f916d3c17e7484
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a446fd4ce116ee19aa8b38d1ae6d8213e35c16e1
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47717019"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52392475"
 ---
 # <a name="project-settings-conversion-db2tosql"></a>Impostazioni progetto (conversione) (DB2ToSQL)
 La pagina di conversione del **impostazioni del progetto** finestra di dialogo contiene impostazioni che consentono di personalizzare la modalità SSMA Converte la sintassi di DB2 per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sintassi.  
@@ -33,7 +33,7 @@ Specifica se SSMA genera messaggi informativi durante la conversione, li visuali
   
 Quando si seleziona una modalità di conversione di **modalità** SSMA finestra viene applicata l'impostazione seguente:  
   
-**La modalità predefinita/ottimistico:** No  
+**Modalità predefinita/ottimistico:** No  
   
 **Modalità completa:** No  
   
@@ -64,18 +64,18 @@ Quando si seleziona una modalità di conversione di **modalità** SSMA finestra 
   
 **Modalità predefinita/Full:** No  
   
-**La modalità ottimistico:** Sì  
+**Ottimistica modalità:** Yes  
   
 ### <a name="default-schema-mapping"></a>Mapping dello Schema predefinito  
 Questa impostazione specifica come vengono eseguito il mapping degli schemi DB2 a schemi SQL Server. Sono disponibili in questa impostazione di due opzioni:  
   
-1.  **Lo schema al database:** In questa modalità DB2 lo schema 'sch1' verrà mappato per impostazione predefinita allo schema di SQL Server 'dbo' nel database di SQL Server 'sch1'.  
+1.  **Schema di database:** In questo schema DB2 in modalità 'sch1' verrà mappato per impostazione predefinita allo schema di SQL Server 'dbo' nel database di SQL Server 'sch1'.  
   
 2.  **Schema allo schema:** In questa modalità DB2 lo schema 'sch1' verrà mappato per impostazione predefinita allo schema di SQL Server 'sch1' nel database di SQL Server predefinito fornito nella finestra di dialogo di connessione.  
   
 Quando si seleziona una modalità di conversione di **modalità** SSMA finestra viene applicata l'impostazione seguente:  
   
-**Modalità predefinita/Optimistic/Full:** dello Schema al database  
+**Modalità predefinita/ottimistica/Full:** Schema di database  
   
 ### <a name="conversion-ways-of-merge-statement"></a>Modalità di conversione dell'istruzione MERGE  
   
@@ -88,7 +88,7 @@ Quando si seleziona una modalità di conversione di **modalità** SSMA finestra 
   
 Quando si seleziona una modalità di conversione di **modalità** SSMA finestra viene applicata l'impostazione seguente:  
   
-**Modalità predefinita/Optimistic/Full:** Using MERGE istruzione  
+**Modalità predefinita/ottimistica/Full:** Usando l'istruzione MERGE  
   
 ### <a name="convert-calls-to-subprograms-that-use-default-arguments"></a>Convertire le chiamate a sottoprogrammi che usano argomenti predefiniti  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] le funzioni non supportano l'omissione dei parametri nella chiamata di funzione. Inoltre, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] procedure e funzioni non supportano le espressioni come valori di parametro predefiniti.  
@@ -99,7 +99,7 @@ Quando si seleziona una modalità di conversione di **modalità** SSMA finestra 
   
 Quando si seleziona una modalità di conversione di **modalità** SSMA finestra viene applicata l'impostazione seguente:  
   
-**Modalità predefinita/ottimistica/Full:** Sì  
+**Modalità predefinita/ottimistica/Full:** Yes  
   
 ### <a name="convert-count-function-to-countbig"></a>Converti la funzione COUNT in COUNT_BIG  
 Se le funzioni di conteggio sono probabile che restituire i valori maggiori di 2.147.483.647, ovvero 2<sup>31</sup>-1, è necessario convertire le funzioni di COUNT_BIG.  
@@ -110,9 +110,9 @@ Se le funzioni di conteggio sono probabile che restituire i valori maggiori di 2
   
 Quando si seleziona una modalità di conversione di **modalità** SSMA finestra viene applicata l'impostazione seguente:  
   
-**Modalità predefinita/Full:** Sì  
+**Modalità predefinita/Full:** Yes  
   
-**La modalità ottimistico:** No  
+**Ottimistica modalità:** No  
   
 ### <a name="convert-forall-statement-to-while-statement"></a>Convertire FORALL istruzione WHILE istruzione  
 Definisce il modo SSMA tratterà cicli FORALL sugli elementi della raccolta PL/SQL.  
@@ -123,9 +123,9 @@ Definisce il modo SSMA tratterà cicli FORALL sugli elementi della raccolta PL/S
   
 Quando si seleziona una modalità di conversione di **modalità** SSMA finestra viene applicata l'impostazione seguente:  
   
-**La modalità predefinita/ottimistico:** No  
+**Modalità predefinita/ottimistico:** No  
   
-**Modalità completa:** Sì  
+**Modalità completa:** Yes  
   
 ### <a name="convert-foreign-keys-with-set-null-referential-action-on-column-that-is-not-null"></a>Convertire le chiavi esterne con operazione referenziale SET NULL nella colonna che è non NULL  
 DB2 consente la creazione di vincoli di chiave esterna, in cui un'operazione SET NULL può non essere adottata perché non sono consentiti valori null nella colonna di riferimento. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non supporta tale configurazione della chiave esterna.  
@@ -151,7 +151,7 @@ SSMA è possibile convertire le chiamate alla funzione wrapper in chiamate alla 
   
 Quando si seleziona una modalità di conversione di **modalità** SSMA finestra viene applicata l'impostazione seguente:  
   
-**Modalità predefinita/Optimistic/Full:** quando possibile  
+**Modalità predefinita/ottimistica/Full:** Quando possibile  
   
 ### <a name="convert-lock-table-statements"></a>Convertire le istruzioni di blocco tabella  
 SSMA è possibile convertire molte istruzioni di blocco TABLE in hint di tabella. SSMA non è possibile convertire qualsiasi istruzione di blocco nella tabella che contengono partizioni, parte, @dblinke le clausole NOWAIT e verranno contrassegnate come tali istruzioni con messaggi di errore di conversione.  
@@ -174,7 +174,7 @@ Nella tabella seguente viene illustrato come SSMA converte le modalità di blocc
   
 Quando si seleziona una modalità di conversione di **modalità** SSMA finestra viene applicata l'impostazione seguente:  
   
-**Modalità predefinita/ottimistica/Full:** Sì  
+**Modalità predefinita/ottimistica/Full:** Yes  
   
 ### <a name="convert-open-for-statements-for-ref-cursor-out-parameters"></a>Convertire le istruzioni di OPEN FOR per i parametri REF CURSOR OUT  
 In DB2, l'istruzione OPEN-FOR è utilizzabile per restituire un set di risultati a un parametro OUT di tipo REF CURSOR del sottoprogramma. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], le stored procedure restituire direttamente i risultati delle istruzioni SELECT.  
@@ -187,7 +187,7 @@ SSMA è possibile convertire numerose istruzioni OPEN FOR in istruzioni SELECT.
   
 Quando si seleziona una modalità di conversione di **modalità** SSMA finestra viene applicata l'impostazione seguente:  
   
-**Modalità predefinita/ottimistica/Full:** Sì  
+**Modalità predefinita/ottimistica/Full:** Yes  
   
 ### <a name="convert-record-as-a-list-of-separates-variables"></a>Convertire i record come un elenco di variabili separa  
 SSMA è possibile convertire i record di DB2 in separa le variabili e le variabili XML con struttura specifica.  
@@ -198,7 +198,7 @@ SSMA è possibile convertire i record di DB2 in separa le variabili e le variabi
   
 Quando si seleziona una modalità di conversione di **modalità** SSMA finestra viene applicata l'impostazione seguente:  
   
-**Modalità predefinita/ottimistica/Full:** Sì  
+**Modalità predefinita/ottimistica/Full:** Yes  
   
 ### <a name="convert-substr-function-calls-to-substring-function-calls"></a>Convertire le chiamate di funzione SUBSTR alle chiamate di funzione SUBSTRING  
 SSMA è possibile convertire le chiamate di funzione SUBSTR DB2 in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **sottostringa** chiamate, a seconda del numero di parametri di funzione. Se SSMA non è possibile convertire una chiamata di funzione SUBSTR o il numero di parametri non è supportato, SSMA convertirà la chiamata di funzione SUBSTR in una chiamata di funzione SSMA personalizzata.  
@@ -209,7 +209,7 @@ SSMA è possibile convertire le chiamate di funzione SUBSTR DB2 in [!INCLUDE[ssN
   
 Quando si seleziona una modalità di conversione di **modalità** SSMA finestra viene applicata l'impostazione seguente:  
   
-**La modalità predefinita/ottimistico:** Sì  
+**Modalità predefinita/ottimistico:** Yes  
   
 **Modalità completa:** No  
   
@@ -253,7 +253,7 @@ Impossibile eseguire la migrazione di altri sinonimi. SSMA genera messaggi di er
   
 Quando si seleziona una modalità di conversione di **modalità** SSMA finestra viene applicata l'impostazione seguente:  
   
-**Modalità predefinita/ottimistica/Full:** Sì  
+**Modalità predefinita/ottimistica/Full:** Yes  
   
 ### <a name="convert-tochardate-format"></a>Convertire TO_CHAR (date, formato)  
 SSMA è possibile convertire TO_CHAR(date, format) DB2 in procedure dal database sysdb.  
@@ -264,9 +264,9 @@ SSMA è possibile convertire TO_CHAR(date, format) DB2 in procedure dal database
   
 Quando si seleziona una modalità di conversione di **modalità** SSMA finestra viene applicata l'impostazione seguente:  
   
-**Modalità predefinita/Optimistic:** Using TO_CHAR_DATE (funzione)  
+**Modalità predefinita/ottimistico:** Tramite la funzione TO_CHAR_DATE  
   
-**Modalità completa:** Using TO_CHAR_DATE_LS (NLS care) (funzione)  
+**Modalità completa:** Tramite la funzione TO_CHAR_DATE_LS (NLS care)  
   
 ### <a name="convert-transaction-processing-statements"></a>Convertire le istruzioni di elaborazione delle transazioni  
 SSMA è possibile convertire le istruzioni di elaborazione delle transazioni DB2:  
@@ -280,7 +280,7 @@ SSMA è possibile convertire le istruzioni di elaborazione delle transazioni DB2
   
 Quando si seleziona una modalità di conversione di **modalità** SSMA finestra viene applicata l'impostazione seguente:  
   
-**Modalità predefinita/ottimistica/Full:** Sì  
+**Modalità predefinita/ottimistica/Full:** Yes  
   
 ### <a name="emulate-db2-null-behavior-in-order-by-clauses"></a>Emulare il comportamento di null DB2 in clausole ORDER BY  
 I valori NULL vengono ordinati in modo diverso in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e DB2:  
@@ -299,9 +299,9 @@ SSMA è possibile emulare DB2 ORDER BY comportamento tramite il controllo dei va
   
 Quando si seleziona una modalità di conversione di **modalità** SSMA finestra viene applicata l'impostazione seguente:  
   
-**La modalità predefinita/ottimistico:** No  
+**Modalità predefinita/ottimistico:** No  
   
-**Modalità completa:** Sì  
+**Modalità completa:** Yes  
   
 ### <a name="emulate-row-count-exceptions-in-select"></a>Emulare le eccezioni di conteggio righe in SELECT  
 Se un'istruzione SELECT con una clausola INTO non restituisce alcuna riga, DB2 genera un'eccezione NO_DATA_FOUND. Se l'istruzione restituisce due o più righe, viene generato l'eccezione TOO_MANY_ROWS. L'istruzione convertita in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non genera alcuna eccezione se il conteggio delle righe è diverso da uno.  
@@ -312,7 +312,7 @@ Se un'istruzione SELECT con una clausola INTO non restituisce alcuna riga, DB2 g
   
 Quando si seleziona una modalità di conversione di **modalità** SSMA finestra viene applicata l'impostazione seguente:  
   
-**Modalità predefinita/ottimistica/Full:** Sì  
+**Modalità predefinita/ottimistica/Full:** Yes  
   
 ### <a name="generate-error-for-dbmssqlparse"></a>Genera l'errore per DBMS_SQL. ANALISI  
   
@@ -322,7 +322,7 @@ Quando si seleziona una modalità di conversione di **modalità** SSMA finestra 
   
 Quando si seleziona una modalità di conversione di **modalità** SSMA finestra viene applicata l'impostazione seguente:  
   
-**Modalità predefinita/ottimistica/Full:** errore  
+**Modalità predefinita/ottimistica/Full:** Errore  
   
 ### <a name="generate-rowid-column"></a>Genera colonna ROWID  
 Quando vengono create tabelle in SSMA [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], è possibile creare una colonna ROWID. Quando viene eseguita la migrazione dei dati, ogni riga Ottiene un nuovo valore UNIQUEIDENTIFIER generato dalla funzione NEWID ().  
@@ -338,16 +338,16 @@ Quando vengono create tabelle in SSMA [!INCLUDE[ssNoVersion](../../includes/ssno
   
 Quando si seleziona una modalità di conversione di **modalità** SSMA finestra viene applicata l'impostazione seguente:  
   
-**Modalità predefinita/Optimistic:** aggiungere ROWID colonna per le tabelle con trigger  
+**Modalità predefinita/ottimistico:** Aggiungere la colonna ROWID per le tabelle con trigger  
   
-**Modalità completa:** Sì  
+**Modalità completa:** Yes  
   
 ### <a name="generate-unique-index-on-rowid-column"></a>Generare un indice univoco sulla colonna ROWID  
 Specifica se SSMA genera colonne di indice univoco sulla colonna ROWID generato o non. Se l'opzione è impostata su "Sì", l'indice univoco viene generato e se è impostata su "NO", indice univoco non viene generato nella colonna ROWID.  
   
 Quando si seleziona una modalità di conversione di **modalità** SSMA finestra viene applicata l'impostazione seguente:  
   
-**Modalità predefinita/ottimistica/Full:** Sì  
+**Modalità predefinita/ottimistica/Full:** Yes  
   
 ### <a name="local-modules-conversion"></a>Conversione di moduli locali  
 Definisce il tipo di conversione sottoprogramma (dichiarato in autonomi stored procedure o funzioni) DB2 annidati.  
@@ -378,9 +378,9 @@ Istruzione ISNULL viene usato nelle chiamate di funzione REPLACE per emulare il 
   
 Quando si seleziona una modalità di conversione di **modalità** SSMA finestra viene applicata l'impostazione seguente:  
   
-**La modalità predefinita/ottimistico:** No  
+**Modalità predefinita/ottimistico:** No  
   
-**Modalità completa:** Sì  
+**Modalità completa:** Yes  
   
 ### <a name="use-isnull-in-concat-function-calls"></a>Utilizzare ISNULL nelle chiamate di funzione CONCAT  
 Istruzione ISNULL viene usato nelle chiamate di funzione CONCAT per emulare il comportamento di DB2. Le opzioni seguenti sono disponibili per questa impostazione:  
@@ -391,9 +391,9 @@ Istruzione ISNULL viene usato nelle chiamate di funzione CONCAT per emulare il c
   
 Quando si seleziona una modalità di conversione di **modalità** SSMA finestra viene applicata l'impostazione seguente:  
   
-**La modalità predefinita/ottimistico:** No  
+**Modalità predefinita/ottimistico:** No  
   
-**Modalità completa:** Sì  
+**Modalità completa:** Yes  
   
 ### <a name="use-native-convert-function-when-possible"></a>Utilizzare la funzione di conversione nativa quando possibile  
   
@@ -403,7 +403,7 @@ Quando si seleziona una modalità di conversione di **modalità** SSMA finestra 
   
 Quando si seleziona una modalità di conversione di **modalità** SSMA finestra viene applicata l'impostazione seguente:  
   
-**La modalità predefinita/ottimistico:** Sì  
+**Modalità predefinita/ottimistico:** Yes  
   
 **Modalità completa:** No  
   
@@ -429,7 +429,7 @@ DB2 fornisce una clausola RETURNING come un modo per ottenere immediatamente val
   
 Quando si seleziona una modalità di conversione di **modalità** SSMA finestra viene applicata l'impostazione seguente:  
   
-**Modalità predefinita/ottimistica/Full:** Sì  
+**Modalità predefinita/ottimistica/Full:** Yes  
   
 ### <a name="convert-returning-clause-in-insert-statement-to-output"></a>Convertire l'OUTPUT clausola RETURNING nell'istruzione INSERT  
 DB2 fornisce una clausola RETURNING come un modo per ottenere immediatamente i valori inseriti. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tale funzionalità con la clausola OUTPUT.  
@@ -440,7 +440,7 @@ DB2 fornisce una clausola RETURNING come un modo per ottenere immediatamente i v
   
 Quando si seleziona una modalità di conversione di **modalità** SSMA finestra viene applicata l'impostazione seguente:  
   
-**Modalità predefinita/ottimistica/Full:** Sì  
+**Modalità predefinita/ottimistica/Full:** Yes  
   
 ### <a name="convert-returning-clause-in-update-statement-to-output"></a>Convertire l'OUTPUT clausola RETURNING nell'istruzione UPDATE  
 DB2 fornisce una clausola RETURNING come un modo per ottenere immediatamente i valori aggiornati. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tale funzionalità con la clausola OUTPUT.  
@@ -451,7 +451,7 @@ DB2 fornisce una clausola RETURNING come un modo per ottenere immediatamente i v
   
 Quando si seleziona una modalità di conversione di **modalità** SSMA finestra viene applicata l'impostazione seguente:  
   
-**Modalità predefinita/ottimistica/Full:** Sì  
+**Modalità predefinita/ottimistica/Full:** Yes  
   
 ## <a name="sequence-conversion"></a>Conversione di sequenza  
   

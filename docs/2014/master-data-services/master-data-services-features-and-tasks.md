@@ -4,22 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 19519697-c219-44a8-9339-ee1b02545445
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 5a49218498e173d1f6b009f24dd580d37e923afb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7b614f31292999dd5424935d57e4cd1412dee864
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48158061"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52765463"
 ---
 # <a name="master-data-services-features-and-tasks"></a>Caratteristiche e attività di Master Data Services
-  Vengono fornite informazioni su come utilizzare [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] per gestire i dati master dell'organizzazione, come creare e gestire oggetti modello che rappresentano i contenitori per i dati, come organizzare e gestire i dati master stessi, come importare ed esportare i dati master, nonché condividere i modelli tra ambienti di test e di produzione e infine come sviluppare applicazioni personalizzate che accedono al servizio Web [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .  
+  Vengono fornite informazioni su come usare [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] per gestire i dati master dell'organizzazione, come creare e gestire oggetti modello che rappresentano i contenitori per i dati, come organizzare e gestire i dati master stessi, come importare ed esportare i dati master, nonché condividere i modelli tra ambienti di test e di produzione e infine come sviluppare applicazioni personalizzate che accedono al servizio Web [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .  
   
 ## <a name="create-structures-to-contain-data"></a>Creazione di strutture per contenere dati  
   
@@ -27,7 +26,7 @@ ms.locfileid: "48158061"
   
 -   [Entità &#40;Master Data Services&#41;](../../2014/master-data-services/entities-master-data-services.md)  
   
--   [Gli attributi &#40;Master Data Services&#41;](../../2014/master-data-services/attributes-master-data-services.md)  
+-   [Attributi &#40;Master Data Services&#41;](../../2014/master-data-services/attributes-master-data-services.md)  
   
 -   [Attributi basati su dominio &#40;Master Data Services&#41;](../../2014/master-data-services/domain-based-attributes-master-data-services.md)  
   
@@ -35,25 +34,25 @@ ms.locfileid: "48158061"
   
 ## <a name="maintain-master-data"></a>Gestione dati master  
   
--   [Il componente aggiuntivo Master Data Services per Microsoft Excel](microsoft-excel-add-in/master-data-services-add-in-for-microsoft-excel.md)  
+-   [Componente aggiuntivo Master Data Services per Microsoft Excel](microsoft-excel-add-in/master-data-services-add-in-for-microsoft-excel.md)  
   
--   [I membri &#40;Master Data Services&#41;](../../2014/master-data-services/members-master-data-services.md)  
+-   [Membri &#40;Master Data Services&#41;](../../2014/master-data-services/members-master-data-services.md)  
   
 -   [Transazioni &#40;Master Data Services&#41;](../../2014/master-data-services/transactions-master-data-services.md)  
   
--   [Le annotazioni &#40;Master Data Services&#41;](../../2014/master-data-services/annotations-master-data-services.md)  
+-   [Annotazioni &#40;Master Data Services&#41;](../../2014/master-data-services/annotations-master-data-services.md)  
   
--   [Gerarchie di &#40;Master Data Services&#41;](../../2014/master-data-services/hierarchies-master-data-services.md)  
+-   [Gerarchie &#40;Master Data Services&#41;](../../2014/master-data-services/hierarchies-master-data-services.md)  
   
--   [Le raccolte &#40;Master Data Services&#41;](../../2014/master-data-services/collections-master-data-services.md)  
+-   [Raccolte &#40;Master Data Services&#41;](../../2014/master-data-services/collections-master-data-services.md)  
   
 ## <a name="improve-data-quality"></a>Miglioramento della qualità dei dati  
   
--   [Le regole di business &#40;Master Data Services&#41;](../../2014/master-data-services/business-rules-master-data-services.md)  
+-   [Regole di business &#40;Master Data Services&#41;](../../2014/master-data-services/business-rules-master-data-services.md)  
   
 -   [Convalida &#40;Master Data Services&#41;](../../2014/master-data-services/validation-master-data-services.md)  
   
--   [Le versioni &#40;Master Data Services&#41;](../../2014/master-data-services/versions-master-data-services.md)  
+-   [Versioni &#40;Master Data Services&#41;](../../2014/master-data-services/versions-master-data-services.md)  
   
 -   [Notifiche &#40;Master Data Services&#41;](../../2014/master-data-services/notifications-master-data-services.md)  
   

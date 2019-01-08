@@ -22,12 +22,12 @@ ms.assetid: 1544472c-2803-448d-af52-e901cb457a00
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 4a1e17c424e4447e64d48bebbe25960aec165e5a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b052ccbd1b91ea66f150dc0995eeeb33994a5e53
+ms.sourcegitcommit: 60739bcb48ccce17bca4e11a85df443e93ca23e3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48225031"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52439523"
 ---
 # <a name="report-design-view-report-builder"></a>Visualizzazione di progettazione report (Generatore report)
   La finestra Generatore report è progettata per semplificare l'organizzazione delle risorse del report e per consentire una più rapida compilazione dei report necessari. L'area di progettazione si trova al centro della finestra, con la barra multifunzione nella parte superiore mentre i riquadri Dati report, Raggruppamento e Proprietà nonché Raccolta parti del report sono a sinistra, in basso e a destra. Nell'area di progettazione vengono aggiunti e organizzati gli elementi del report. Sulla barra multifunzione le voci di menu tradizionali sono suddivise in categorie che è possibile individuare e utilizzare facilmente. I riquadri consentono di aggiungere, selezionare e organizzare le risorse del report, nonché di modificare le proprietà degli elementi del report.  
@@ -37,7 +37,7 @@ ms.locfileid: "48225031"
 ##  <a name="Ribbon"></a> Barra multifunzione  
  La barra multifunzione è stata progettata per consentire la rapida individuazione dei comandi necessari per completare un'attività. I comandi sono organizzati in gruppi logici, raccolti all'interno di schede. Ogni scheda è correlata a un tipo di attività, ad esempio l'inserimento di elementi del report o la formattazione del testo.  
   
- Nella visualizzazione di progettazione report la barra multifunzione è suddivisa nelle schede Home, Inserisci e Visualizza. Se non è possibile trovare un'attività sulla barra multifunzione, alcuni gruppi della barra multifunzione dispongono di una finestra di dialogo correlata che è possibile aprire facendo clic sulla freccia in basso a destra del gruppo. Non è possibile ridurre a icona o eliminare la barra multifunzione né sostituirla con barre degli strumenti e menu.  
+ Nella visualizzazione Progettazione report, la barra multifunzione è suddivisa nelle schede: Home, Inserisci e Visualizza. Se non è possibile trovare un'attività sulla barra multifunzione, alcuni gruppi della barra multifunzione dispongono di una finestra di dialogo correlata che è possibile aprire facendo clic sulla freccia in basso a destra del gruppo. Non è possibile ridurre a icona o eliminare la barra multifunzione né sostituirla con barre degli strumenti e menu.  
   
  In modalità di esecuzione, la barra multifunzione dispone di una sola scheda **eseguiti**.  
   
@@ -78,7 +78,7 @@ ms.locfileid: "48225031"
 > [!NOTE]  
 >  Se si trascina un campo dal riquadro dei dati del report direttamente nell'area di progettazione del report anziché posizionarlo in un'area dati quale una tabella o un grafico, durante l'esecuzione del report verrà visualizzato solo il primo valore dei dati in tale campo.  
   
- Per informazioni sull'uso della tastiera per modificare gli elementi nell'area di progettazione, vedere [Tasti di scelta rapida &#40;Generatore report&#41](keyboard-shortcuts-report-builder.md)  
+ Per informazioni sull'uso della tastiera per modificare gli elementi nell'area di progettazione, vedere [Tasti di scelta rapida &#40;Generatore report&#41;](keyboard-shortcuts-report-builder.md)  
   
 ### <a name="design-surface-size-and-print-area"></a>Dimensioni dell'area di progettazione e area di stampa  
  Le dimensioni dell'area di progettazione potrebbero essere diverse da quelle dell'area di stampa della pagina specificata per stampare il report. La modifica delle dimensioni dell'area di progettazione non altera l'area di stampa del report. Indipendentemente dalle dimensioni impostate per l'area di stampa del report, le dimensioni totali dell'area di progettazione non vengono modificate. Per altre informazioni, vedere [Tipi di rendering  &#40;Generatore report e SSRS &#41;](../report-design/rendering-behaviors-report-builder-and-ssrs.md).  
@@ -101,11 +101,11 @@ ms.locfileid: "48225031"
   
  Per ulteriori informazioni sugli elementi nel riquadro dei dati del report, vedere gli argomenti seguenti:  
   
--   [Raccolte predefinite Globals e Users riferimenti &#40;Report e SSRS&#41;](../report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md)  
+-   [Riferimenti alle raccolte predefinite Globals e Users &#40;Generatore report e SSRS&#41;](../report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md)  
   
 -   [Parametri report &#40;Generatore report e Progettazione report&#41;](../report-design/report-parameters-report-builder-and-report-designer.md)  
   
--   [Immagini &#40;Report e SSRS&#41;](../report-design/images-report-builder-and-ssrs.md)  
+-   [Immagini &#40;Generatore report e SSRS&#41;](../report-design/images-report-builder-and-ssrs.md)  
   
 -   [Connessioni dati, origini dati e stringhe di connessione in Generatore report](../data-connections-data-sources-and-connection-strings-in-report-builder.md)  
   
@@ -144,13 +144,13 @@ ms.locfileid: "48225031"
  A seconda della proprietà, è possibile impostare un valore per la proprietà in un elenco a discesa, digitare il valore oppure fare clic su `<Expression>` per creare un'espressione.  
   
 ### <a name="changing-the-properties-pane-view"></a>Modifica della vista del riquadro Proprietà  
- Per impostazione predefinita, le proprietà visualizzate nel riquadro Proprietà sono organizzate in ampie categorie, ad esempio Azione, Bordo, Riempimento, Carattere e Generale. A ogni categoria è associato un set di proprietà. Nella categoria Carattere vengono ad esempio elencate le proprietà seguenti: Color, FontFamily, FontSize, FontStyle, FontWeight, LineHeight e TextDecoration. Se lo si desidera, è possibile ordinare alfabeticamente tutte le proprietà elencate nel riquadro. In questo modo, le categorie verranno rimosse e tutte le proprietà verranno elencate in ordine alfabetico, indipendentemente dalla categoria a cui appartengono.  
+ Per impostazione predefinita, le proprietà visualizzate nel riquadro Proprietà sono organizzate in ampie categorie, ad esempio Azione, Bordo, Riempimento, Carattere e Generale. A ogni categoria è associato un set di proprietà. Ad esempio, nella categoria carattere vengono elencate le proprietà seguenti: Color, FontFamily, FontSize, FontStyle, FontWeight, LineHeight e TextDecoration. Se lo si desidera, è possibile ordinare alfabeticamente tutte le proprietà elencate nel riquadro. In questo modo, le categorie verranno rimosse e tutte le proprietà verranno elencate in ordine alfabetico, indipendentemente dalla categoria a cui appartengono.  
   
- Nella parte superiore del riquadro Proprietà sono disponibili tre pulsanti, ovvero Per categoria, Per nome e Pagine delle proprietà. Fare clic sui pulsanti Categoria e Ordine alfabetico per passare da una vista all'altra del riquadro Proprietà. Fare clic sul pulsante **Pagine delle proprietà** per aprire la finestra di dialogo delle proprietà per l'elemento del report selezionato.  
+ Le proprietà sono disponibili tre pulsanti nella parte superiore del riquadro: Categoria di disporre in ordine alfabetico e pagine delle proprietà. Fare clic sui pulsanti Categoria e Ordine alfabetico per passare da una vista all'altra del riquadro Proprietà. Fare clic sul pulsante **Pagine delle proprietà** per aprire la finestra di dialogo delle proprietà per l'elemento del report selezionato.  
   
   
 ##  <a name="GroupPane"></a> Riquadro di raggruppamento (Generatore report)  
- I gruppi vengono utilizzati per organizzare i dati del report in una gerarchia visiva e per calcolare i totali. È possibile visualizzare i gruppi di righe e di colonne inclusi in un'area dati nell'area di progettazione e nel riquadro di raggruppamento. Il riquadro di raggruppamento dispone di due riquadri: Gruppi di righe e Gruppi di colonne. Quando si seleziona un'area dati, nel riquadro di raggruppamento vengono visualizzati tutti i gruppi inclusi in tale area dati sotto forma di elenco gerarchico: i gruppi figlio vengono visualizzati rientrati sotto i relativi gruppi padre.  
+ I gruppi vengono utilizzati per organizzare i dati del report in una gerarchia visiva e per calcolare i totali. È possibile visualizzare i gruppi di righe e di colonne inclusi in un'area dati nell'area di progettazione e nel riquadro di raggruppamento. Nel riquadro di raggruppamento è disponibili due riquadri: Gruppi di righe e gruppi di colonne. Quando si seleziona un'area dati, nel riquadro di raggruppamento vengono visualizzati tutti i gruppi all'interno di tale area dati come un elenco gerarchico: I gruppi figlio vengono visualizzati rientrati sotto i relativi gruppi padre.  
   
  ![Riquadro di raggruppamento per gruppi di righe e colonne annidate](../media/rs-basictablixdesigngroupingpanedefaultview.gif "Riquadro di raggruppamento per gruppi di righe e colonne annidate")  
   

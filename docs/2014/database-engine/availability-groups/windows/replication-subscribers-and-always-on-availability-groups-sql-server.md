@@ -14,12 +14,12 @@ ms.assetid: 0995f269-0580-43ed-b8bf-02b9ad2d7ee6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a0617135d1e7a07d30f4581783cefb7add601c88
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8968754a797c3f3b1a7e66886f7874c9bc13c5d3
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48153230"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52390665"
 ---
 # <a name="replication-subscribers-and-alwayson-availability-groups-sql-server"></a>Sottoscrittori della replica e gruppi di disponibilità AlwaysOn (SQL Server)
   Quando viene eseguito il failover di un gruppo di disponibilità AlwaysOn contenente un database che opera come sottoscrittore di replica, la sottoscrizione di replica potrebbe non venire completata. Per i sottoscrittori transazionali, l'agente di distribuzione continuerà a replicare automaticamente se la sottoscrizione utilizza il nome del listener del gruppo di disponibilità del sottoscrittore. Per i sottoscrittori di merge, un amministratore di replica deve riconfigurare manualmente il sottoscrittore ricreando la sottoscrizione.  
@@ -57,7 +57,7 @@ ms.locfileid: "48153230"
   
     4.  Modificare il parametro `-Subscriber` impostando il nome del listener del gruppo di disponibilità del sottoscrittore.  
   
- Quando si crea la sottoscrizione utilizzando questa procedura, non si dovranno eseguire azioni dopo un failover.  
+ Quando si crea la sottoscrizione usando questa procedura, non si dovranno eseguire azioni dopo un failover.  
   
 ## <a name="creating-a-transactional-replication-push-subscription"></a>Creazione di una sottoscrizione push di una replica transazionale  
   
@@ -81,7 +81,7 @@ GO
 ## <a name="to-resume-the-merge-agents-after-the-availability-group-of-the-subscriber-fails-over"></a>Per riprendere gli agenti di merge dopo il failover del gruppo di disponibilità del sottoscrittore  
  Per eseguire il merge della replica, un relativo amministratore deve riconfigurare manualmente il sottoscrittore attenendosi alla procedura seguente:  
   
-1.  Eseguire `sp_subscription_cleanup` per rimuovere la sottoscrizione precedente per il sottoscrittore. Effettuare questa operazione nella nuova replica primaria, che precedentemente era la secondaria.  
+1.  Per rimuovere la sottoscrizione precedente del sottoscrittore eseguire `sp_subscription_cleanup`. Effettuare questa operazione nella nuova replica primaria, che precedentemente era la secondaria.  
   
 2.  Ricreare la sottoscrizione creando una nuova sottoscrizione a partire da un nuovo snapshot.  
   

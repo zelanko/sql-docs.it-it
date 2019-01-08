@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - single-user mode [SQL Server], database option
@@ -13,12 +12,12 @@ ms.assetid: fb5254eb-b635-4b39-8361-136fd36f2b1f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a96597efbbc167cf0680c59971fd52797d018e7e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ea6e37603ae997c218db196c14fe7831bef95e81
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48221461"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52749033"
 ---
 # <a name="set-a-database-to-single-user-mode"></a>Impostare un database in modalità utente singolo
   In questo argomento si descrive come impostare un database definito dall'utente in modalità utente singolo in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Questa modalità consente l'accesso a un solo utente alla volta e viene in genere utilizzata per azioni di manutenzione.  
@@ -31,7 +30,7 @@ ms.locfileid: "48221461"
   
      [Prerequisiti](#Prerequisites)  
   
-     [Security](#Security)  
+     [Sicurezza](#Security)  
   
 -   **Per impostare un database in modalità utente singolo utilizzando:**  
   
@@ -72,7 +71,7 @@ ms.locfileid: "48221461"
   
  Tramite questa procedura, è inoltre possibile impostare l'accesso Multiple o Restricted per il database. Per altre informazioni sulle opzioni di limitazione dell'accesso, vedere [Proprietà del database &#40;pagina Opzioni&#41;](database-properties-options-page.md).  
   
-##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
   
 #### <a name="to-set-a-database-to-single-user-mode"></a>Per impostare un database in modalità utente singolo  
   

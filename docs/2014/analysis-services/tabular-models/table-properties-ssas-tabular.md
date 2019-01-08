@@ -13,12 +13,12 @@ ms.assetid: 16d3347b-7e43-4a6b-9956-fdd6ede092e6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 13a1b980174fa04428b1c9d525554501360db1cb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5b9fbcb4aa054d261d47bea61edf1d1815cba27f
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48169021"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52401034"
 ---
 # <a name="table-properties-ssas-tabular"></a>Table Properties (SSAS Tabular)
   In questo argomento vengono descritte le proprietà delle tabelle dei modelli tabulari. Le proprietà descritte differiscono da quelle presenti nella finestra di dialogo Modifica proprietà tabella, che consentono di definire quali colonne vengono importate dall'origine.  
@@ -32,20 +32,20 @@ ms.locfileid: "48169021"
 ##  <a name="bkmk_properties"></a> Table Properties  
  **Base**  
   
-|Proprietà|Impostazione predefinita|Description|  
+|Proprietà|Impostazione predefinita|Descrizione|  
 |--------------|---------------------|-----------------|  
-|**Nome connessione**|\<nome della connessione >|Nome della connessione all'origine dati della tabella.<br /><br /> Per modificare la connessione, fare clic sul pulsante.|  
+|**Nome connessione**|\<nome della connessione >|Il nome della connessione all'origine dati della tabella.<br /><br /> Per modificare la connessione, fare clic sul pulsante.|  
 |**Hidden**|False|Viene specificato se la tabella è nascosta dalla visualizzazione negli elenchi dei campi del client di creazione report.|  
 |**Partizioni**||Le partizioni per la tabella non possono essere visualizzate nella finestra **Proprietà** . Per visualizzare, creare o modificare partizioni, fare clic sul pulsante per aprire Gestione partizioni.|  
 |**Origine dati**||I dati di origine per la tabella non possono essere visualizzati nella finestra **Proprietà** . Per visualizzare o modificare i dati di origine, fare clic sul pulsante per aprire la finestra di dialogo Modifica proprietà tabella.|  
 |**Descrizione tabella**||Descrizione di testo per la tabella.<br /><br /> In [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)], se un utente finale posiziona il cursore su questa tabella nell'elenco dei campi, la descrizione viene visualizzata come descrizione comando.|  
-|**Nome tabella**|\<nome descrittivo >|Viene specificato il nome descrittivo della tabella. È possibile specificare il nome di tabella quando una tabella viene importata utilizzando l'Importazione guidata tabella oppure in qualsiasi momento dopo l'importazione. Il nome della tabella nel modello può essere diverso dalla tabella associata nell'origine. Il nome descrittivo della tabella viene visualizzato nell'elenco di campi dell'applicazione client di creazione report, nonché nel database modello in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].|  
+|**Nome tabella**|\<nome descrittivo >|Specifica nome descrittivo della tabella. È possibile specificare il nome di tabella quando una tabella viene importata utilizzando l'Importazione guidata tabella oppure in qualsiasi momento dopo l'importazione. Il nome della tabella nel modello può essere diverso dalla tabella associata nell'origine. Il nome descrittivo della tabella viene visualizzato nell'elenco di campi dell'applicazione client di creazione report, nonché nel database modello in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].|  
   
  **Proprietà report**  
   
  Per descrizioni dettagliate e informazioni sulla configurazione per le proprietà di creazione dei report, vedere [Proprietà report Power View &#40;SSAS tabulare&#41;](properties-ssas-tabular.md).  
   
-|Proprietà|Impostazione predefinita|Description|  
+|Proprietà|Impostazione predefinita|Descrizione|  
 |--------------|---------------------|-----------------|  
 |**Set di campi predefiniti**|||  
 |Comportamento tabella|||  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: xevents
 ms.topic: conceptual
 helpviewer_keywords:
 - PowerShell [SQL Server], xevent
@@ -15,17 +14,17 @@ ms.assetid: 0b10016f-a479-4444-a484-46cb4677cf64
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f500b1805d4af2e7b13ad74b439fff72d667060f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e0a7393a3b0547d37c5f69f4e75915f8706acf12
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48185081"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52752843"
 ---
 # <a name="use-the-powershell-provider-for-extended-events"></a>Utilizzare il provider PowerShell per eventi estesi
   È possibile gestire eventi estesi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tramite il provider PowerShell per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . La sottocartella XEvent è disponibile all'interno dell'unità SQLSERVER. È possibile accedere alla cartella utilizzando uno dei metodi seguenti:  
   
--   Un prompt dei comandi, digitare `sqlps`, quindi premere INVIO. Tipo `cd xevent`, quindi premere INVIO. Da qui, è possibile usare la **cd** e `dir` comandi (o **Set-Location** e **Get-Childitem** cmdlet) per passare al nome del server e al nome di istanza.  
+-   Al prompt dei comandi digitare `sqlps` e quindi premere INVIO. Digitare `cd xevent` e quindi premere INVIO. Da qui, è possibile usare la **cd** e `dir` comandi (o **Set-Location** e **Get-Childitem** cmdlet) per passare al nome del server e al nome di istanza.  
   
 -   In Esplora oggetti espandere il nome dell'istanza, espandere **Gestione**, fare clic con il pulsante destro del mouse su **Eventi estesi**, quindi scegliere **Avvia PowerShell**. Verrà avviato PowerShell nel percorso seguente:  
   
@@ -49,7 +48,7 @@ ms.locfileid: "48185081"
   
 -   È necessario salvare gli script con estensione ps1.  
   
--   I criteri di esecuzione di PowerShell devono consentire l'esecuzione dello script. Per impostare i criteri di esecuzione, usare il cmdlet **Set-Executionpolicy** (Per altre informazioni, digitare `get-help set-executionpolicy -detailed`, quindi premere INVIO.)  
+-   I criteri di esecuzione di PowerShell devono consentire l'esecuzione dello script. Per impostare i criteri di esecuzione, usare il cmdlet **Set-Executionpolicy** (per altre informazioni, digitare `get-help set-executionpolicy -detailed`, quindi premere INVIO).  
   
  Nello script seguente viene creata una nuova sessione denominata 'TestSession'.  
   

@@ -11,12 +11,12 @@ ms.assetid: 162ffe86-69c3-49d2-b9ed-49d097c05551
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 095d09011199aae209f4e659fdd1f9719a5a5ba8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 176766f1097e2edf010fa28cae51992e291dd92b
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48172101"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52394694"
 ---
 # <a name="rswindowsextendedprotectionlevel-property-wmi-msreportserverconfigurationsetting"></a>Proprietà RSWindowsExtendedProtectionLevel (MSReportServer_ConfigurationSetting WMI)
   Restituisce un valore stringa che indica il livello di protezione supportato dalla configurazione del server di report. Questa proprietà è di sola lettura.  
@@ -32,15 +32,15 @@ public string RSWindowsExtendedProtectionLevel;
 ```  
   
 ## <a name="remarks"></a>Note  
- Restituisce un valore stringa che indica il livello di protezione supportato dalla configurazione del server di report. Se il server di report al quale il provider WMI è connesso non supporta la protezione estesa, viene restituita una stringa vuota (""). Nell'elenco seguente sono indicati i valori validi:  
+ Restituisce un valore stringa che indica il livello di protezione supportato dalla configurazione del server di report. Se il server di report a cui è connesso il provider WMI non supporta la protezione estesa, viene restituita una stringa vuota (""). Nell'elenco seguente sono indicati i valori validi:  
   
- `“Off” | “Allow” | “Require”`  
+ `"Off" | "Allow" | "Require"`  
   
 ## <a name="example-code"></a>Codice di esempio  
  [Classe MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-class.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Proprietà RSWindowsExtendedProtectionScenario &#40;WMI MSReportServer_ConfigurationSetting&#41;](rswindowsextendedprotectionscenario-property.md)   
+ [Proprietà RSWindowsExtendedProtectionScenario &#40;MSReportServer_ConfigurationSetting WMI&#41;](rswindowsextendedprotectionscenario-property.md)   
  [Metodo SetExtendedProtectionSettings &#40;MSReportServer_ConfigurationSetting WMI&#41;](configurationsetting-method-setextendedprotectionsettings.md)   
  [Protezione estesa per l'autenticazione con Reporting Services](../security/extended-protection-for-authentication-with-reporting-services.md)   
  [File di configurazione RSReportServer](../report-server/rsreportserver-config-configuration-file.md)  

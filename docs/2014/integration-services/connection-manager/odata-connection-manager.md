@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 3caa4372-aff3-4c0f-9ecd-97870948b8d0
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ac0ffe016e2c88a381b230a26c58be2f6b2087a3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d4d88e90e595cd69da28c4767c723fed63b0e052
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48136631"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52756643"
 ---
 # <a name="odata-connection-manager"></a>Gestione connessione OData
   Con la gestione connessione OData è possibile connettere un pacchetto a un'origine OData. Tramite un componente di origine OData viene eseguita la connessione a un'origine OData mediante una gestione connessione OData e vengono utilizzati i dati del servizio. Visualizzare [origine OData](../data-flow/odata-source.md)sezione per informazioni dettagliate, incluse le istruzioni di installazione per questi componenti.  
@@ -24,7 +23,7 @@ ms.locfileid: "48136631"
 ## <a name="adding-connection-manager-to-an-ssis-package"></a>Aggiunta di gestione connessione a un pacchetto SSIS  
  È possibile aggiungere una nuova gestione connessione OData a un pacchetto SSIS nelle tre modalità seguenti:  
   
--   Fare clic sul pulsante **Nuovo** in **Editor origine OData**  
+-   Fare clic sul pulsante **Nuovo...** in **Editor origine OData**  
   
 -   Fare doppio clic su **gestioni connessioni** cartella le **Esplora soluzioni** e fare clic su **nuova gestione connessione**. Selezionare **ODATA** per **Tipo gestione connessione**.  
   
@@ -49,7 +48,7 @@ ms.locfileid: "48136631"
   
 |||  
 |-|-|  
-|Proprietà|Description|  
+|Proprietà|Descrizione|  
 |URL|URL del documento di servizio.|  
 |UserName|Nome utente da utilizzare per l'autenticazione di base.|  
 |Password|Password da utilizzare per l'autenticazione di base.|  

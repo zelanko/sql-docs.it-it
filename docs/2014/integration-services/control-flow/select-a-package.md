@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.selectapackage.f1
@@ -15,12 +14,12 @@ ms.assetid: 92b47a2b-21b5-460a-885d-6cc4bb567249
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 52f40a4729e0d4a76eae340fdc964f28283908bc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 78e8c773792e762c39f65fc10a12c4e3a6b5eec2
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48092756"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52779253"
 ---
 # <a name="select-a-package"></a>Seleziona pacchetto
   Utilizzare la finestra di dialogo **Seleziona pacchetto** per specificare il pacchetto da cui l'attività Message Queue può ricevere messaggi.  
@@ -29,7 +28,7 @@ ms.locfileid: "48092756"
  **Percorso**  
  Consente di specificare il percorso del pacchetto. Per questa proprietà sono disponibili le opzioni elencate nella tabella seguente.  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|Impostare il percorso su un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se si seleziona questo valore vengono visualizzate le opzioni dinamiche **Server**, **Usa autenticazione di Windows**, **Usa autenticazione di SQL Server**, **Nome utente**e **Password**.|  
 |File DTSX|Consente di impostare il percorso su un file DTSX. Se si seleziona questo valore viene visualizzata l'opzione dinamica **Nome file**.|  
@@ -53,11 +52,11 @@ ms.locfileid: "48092756"
  Se si usa l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , specificare il nome utente da usare per l'accesso al server.  
   
  **Password**  
- Se si usa l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , specificare una password.  
+ Se si utilizza l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , specificare una password.  
   
 ### <a name="location--dtsx-file"></a>Percorso = File DTSX  
  **Nome file**  
- Specificare il percorso di un pacchetto oppure fare clic sul pulsante Sfoglia **(…)** per individuare il pacchetto.  
+ Specificare il percorso di un pacchetto oppure fare clic sul pulsante Sfoglia **(...)** per trovare il pacchetto.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Attività Message Queue](message-queue-task.md)  

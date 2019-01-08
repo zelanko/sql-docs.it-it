@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: wmi
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.setbreakpoints.f1
@@ -15,12 +14,12 @@ ms.assetid: 876e61b7-875c-43f4-bbce-d7eeb90f6730
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 9269cd8d4e01257f4af2642ad767353d09444a6e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0c2c543343bd602be75d600a489edfd84663790b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48130339"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52776103"
 ---
 # <a name="set-breakpoints"></a>Imposta punti di interruzione
   Utilizzare la finestra di dialogo **Imposta punti di interruzione** per specificare gli eventi su cui abilitare i punti di interruzione e per controllarne il funzionamento.  
@@ -35,7 +34,7 @@ ms.locfileid: "48130339"
  **Tipo passaggi**  
  Consente di specificare quando il punto di interruzione diventa effettivo.  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |**Always**|L'esecuzione viene sempre sospesa al rilevamento di un punto di interruzione.|  
 |**Numero di passaggi uguale a**|L'esecuzione viene sospesa quando il punto di interruzione viene rilevato per un numero di volte uguale al numero di passaggi specificato.|  

@@ -11,12 +11,12 @@ ms.assetid: c9ff92d1-787a-4f34-990f-6676b61875d7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 85fbcf7fdf8a15f9705c9b27ba838b41911f31db
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 91cc8740dfaeddcf489f3274b6766cdb803b1321
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48113591"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52416932"
 ---
 # <a name="use-powerpivot-gallery"></a>Usare la raccolta PowerPivot
   La raccolta [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] è una raccolta documenti di SharePoint specifica che consente un'anteprima dettagliata e la gestione dei documenti per cartelle di lavoro pubblicate di Excel e report di Reporting Services contenenti dati PowerPivot.  
@@ -50,7 +50,7 @@ ms.locfileid: "48113591"
 >  Con la raccolta di Power Pivot è richiesto Microsoft Silverlight.  Il browser Microsoft Edge non supporta Silverlight.   
 > Per visualizzare il contenuto della raccolta in Microsoft Edge, fare clic sulla scheda **Raccolta** nella raccolta di Power Pivot e quindi impostare la visualizzazione della raccolta documenti su **Tutti i documenti**.    
 > Per cambiare la visualizzazione predefinita, fare clic sulla scheda **Raccolta** e quindi scegliere Modifica visualizzazione. Fare clic su "Imposta come visualizzazione predefinita" e quindi su OK per salvare la visualizzazione predefinita.  
->  Per altre informazioni sulle funzionalità supportate in Microsoft Edge, vedere il post di blog di Windows sulle [differenze tra Edge e i browser precedenti e sul supporto di ActiveX, VBScript e altri componenti](http://blogs.windows.com/msedgedev/2015/05/06/a-break-from-the-past-part-2-saying-goodbye-to-activex-vbscript-attachevent/).  
+>  Per altre informazioni su funzionalità supportate di Edge, vedere il blog di Windows, [un'interruzione passata, parte 2: Dire addio ActiveX, VBScript...](http://blogs.windows.com/msedgedev/2015/05/06/a-break-from-the-past-part-2-saying-goodbye-to-activex-vbscript-attachevent/)  
   
  Per un elenco completo dei prerequisiti, vedere [creare e personalizzare la raccolta PowerPivot](create-and-customize-power-pivot-gallery.md).  
   
@@ -70,13 +70,13 @@ ms.locfileid: "48113591"
   
 1.  Salvare il file.  
   
-2.  1.  **Excel 2010:** nel menu File fare clic su **Salva e invia**.  
+2.  1.  **Excel 2010:** Nel menu File fare clic su **Salva e invia**.  
   
     2.  Fare clic su **Salva in SharePoint**.  
   
     3.  Fare clic su **Opzioni pubblicazione** se si desidera usare Opzioni Excel Services per selezionare fogli o parametri singoli da pubblicare. Ad esempio, nella scheda Parametri in Opzioni Excel Services è possibile scegliere quali filtri dei dati visualizzare nella cartella di lavoro pubblicata.  
   
-    1.  **Excel 2013:**  nel menu File fare clic su **Salva**.  
+    1.  **Excel 2013:**  Nel menu File fare clic su **salvare**.  
   
     2.  Fare clic su **Opzioni visualizzazione browser** se si desidera usare Opzioni Excel Services per selezionare fogli o parametri singoli da pubblicare. Ad esempio, nella scheda Parametri in Opzioni Excel Services è possibile scegliere quali filtri dei dati visualizzare nella cartella di lavoro pubblicata.  
   
@@ -155,9 +155,9 @@ ms.locfileid: "48113591"
 ### <a name="document-type-is-not-supported"></a>Tipo di documento non supportato  
  Il tipo di contenuto **Documento raccolta PowerPivot** non è supportato. Se si abilita il tipo di contenuto **Documento raccolta PowerPivot** per una raccolta documenti e si tenta di creare un nuovo documento di tale tipo, verrà visualizzato un messaggio di errore simile a uno dei seguenti:  
   
--   'Nuovo documento' richiede un'applicazione e un Web browser compatibili con Microsoft Sharepoint. Per aggiungere un documento alla raccolta documenti, fare clic sul pulsante 'Carica documento'.  
+-   'Nuovo documento' richiede un browser web e applicazione compatibile con Microsoft Sharepoint Foundation. Per aggiungere un documento alla raccolta documenti, fare clic sul pulsante 'Carica documento'.  
   
--   "L'indirizzo Internet http://[nome server]/testSite/PowerPivot Gallery/ReportGallery/Forms/Template.xlsx non è valido". "Microsoft Excel: impossibile accedere al file http://[nome server]/testSite/PowerPivot Gallery/ReportGallery/Forms/Template.xlsx". I motivi possibili sono diversi:  
+-   "L'indirizzo Internet ' http://[server name] / Reportgallery/Gallery/ReportGallery/Forms/Template.xlsx ' non è valido." " Microsoft Excel non è possibile accedere al file ' nome http://[server] / Reportgallery/Gallery/ReportGallery/Forms/Template.xlsx '. I motivi possibili sono diversi:  
   
  Il tipo di contenuto **Documento raccolta PowerPivot** non viene aggiunto automaticamente alle raccolte documenti. Questo problema non viene riscontrato a meno che non si abiliti manualmente il tipo di contenuto non supportato.  
   

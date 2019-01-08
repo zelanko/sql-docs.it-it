@@ -20,17 +20,17 @@ ms.assetid: 157bc376-ab72-4c99-8bde-7b12db70843a
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 573ea25fdbb617f079fb71c08057294c5568d95c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dff50034b255ae2b2654f6250cf1c39aad092cb5
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48092487"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52390414"
 ---
 # <a name="backup-and-restore-operations-for-reporting-services"></a>Operazioni di backup e ripristino per Reporting Services
   In questo argomento viene fornita una panoramica di tutti i file di dati utilizzato in un'installazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e viene descritto quando e come è necessario eseguire il backup dei file. Lo sviluppo di un piano di backup e ripristino per i file dei database del server di report rappresenta la parte più importante di una strategia di recupero. Una strategia di recupero più completa include tuttavia i backup delle chiavi di crittografia, di estensioni o assembly personalizzati, dei file di configurazione e dei file di origine di report e modelli.  
   
- **[!INCLUDE[applies](../../includes/applies-md.md)]**  Modalità nativa di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] | Modalità SharePoint di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  
+ **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] | Modalità SharePoint di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]   
   
  Le operazioni di backup e ripristino vengono spesso utilizzate per spostare un'installazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] o parte di essa:  
   
@@ -40,7 +40,7 @@ ms.locfileid: "48092487"
   
     -   [Eseguire l'aggiornamento e la migrazione di Reporting Services](upgrade-and-migrate-reporting-services.md)  
   
-    -   [Eseguire la migrazione di un'installazione di Reporting Services &#40;modalità SharePoint&#41;](migrate-a-reporting-services-installation-sharepoint-mode.md)  
+    -   [Migrazione di un'installazione di Reporting Services in modalità SharePoint](migrate-a-reporting-services-installation-sharepoint-mode.md)  
   
     -   [Eseguire la migrazione di un'installazione di Reporting Services &#40;modalità nativa&#41;](migrate-a-reporting-services-installation-native-mode.md)  
   
@@ -56,15 +56,15 @@ ms.locfileid: "48092487"
  Per altre informazioni sul backup e il ripristino dei database relazionali di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vedere [Backup e ripristino di database SQL Server](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md).  
   
 > [!IMPORTANT]  
->  Se il server di report [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] è in modalità SharePoint, è necessario occuparsi di altri database, tra cui i database di configurazione di SharePoint e il database di avvisi di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . In modalità SharePoint vengono creati tre database per ciascuna applicazione di servizio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] : **reportserver**, **reportservertempdb**e **dataalerting** . Per altre informazioni vedere [Backup e ripristino configurazione di Reporting Services SharePoint applicazioni di servizio](../backup-and-restore-reporting-services-sharepoint-service-applications.md)  
+>  Se il server di report [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] è in modalità SharePoint, è necessario occuparsi di altri database, tra cui i database di configurazione di SharePoint e il database di avvisi di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . In modalità SharePoint vengono creati tre database per ciascuna applicazione di servizio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] : **reportserver**, **reportservertempdb**e **dataalerting** . Per altre informazioni, vedere [Eseguire il backup e il ripristino di applicazioni di servizio SharePoint di Reporting Services](../backup-and-restore-reporting-services-sharepoint-service-applications.md)  
   
 ## <a name="backing-up-the-encryption-keys"></a>Backup delle chiavi di crittografia  
- Quando si configura un'installazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] per la prima volta, è consigliabile eseguire il backup delle chiavi di crittografia. È inoltre consigliabile eseguire il backup delle chiavi ogni volta che si modifica l'identità degli account di servizio o si rinomina il computer. Per altre informazioni, vedere [Eseguire il backup e il ripristino delle chiavi di crittografia di Reporting Services](ssrs-encryption-keys-back-up-and-restore-encryption-keys.md). Per i server di report in modalità SharePoint, vedere la sezione "Gestione chiavi" di [gestire un'applicazione di servizio Reporting Services SharePoint](../manage-a-reporting-services-sharepoint-service-application.md).  
+ Quando si configura un'installazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] per la prima volta, è consigliabile eseguire il backup delle chiavi di crittografia. È inoltre consigliabile eseguire il backup delle chiavi ogni volta che si modifica l'identità degli account di servizio o si rinomina il computer. Per altre informazioni, vedere [Eseguire il backup e il ripristino delle chiavi di crittografia di Reporting Services](ssrs-encryption-keys-back-up-and-restore-encryption-keys.md). Per i server di report in modalità SharePoint, vedere la sezione "Gestione chiavi" in [Gestire un'applicazione di servizio SharePoint di Reporting Services](../manage-a-reporting-services-sharepoint-service-application.md).  
   
 ## <a name="backing-up-the-configuration-files"></a>Backup dei file di configurazione  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usa i file di configurazione per archiviare le impostazioni dell'applicazione. È consigliabile eseguire il backup dei file quando si configura il server per la prima volta e dopo avere distribuito eventuali estensioni personalizzate. I file di cui eseguire il backup includono:  
   
--   Rsreportserver.config  
+-   RSReportServer.config  
   
 -   Rssvrpolicy.config  
   
@@ -84,9 +84,9 @@ ms.locfileid: "48092487"
  Verificare di avere una copia di backup per tutte le estensioni e gli assembly personalizzati utilizzati.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Database del Server di report &#40;modalità nativa SSRS&#41;](../report-server/report-server-database-ssrs-native-mode.md)   
+ [Database del server di report &#40;modalità nativa SSRS&#41;](../report-server/report-server-database-ssrs-native-mode.md)   
  [File di configurazione di Reporting Services](../report-server/reporting-services-configuration-files.md)   
- [Utilità RSKEYMGMT &#40;SSRS&#41;](../tools/rskeymgmt-utility-ssrs.md)   
+ [Utilità rskeymgmt &#40;SSRS&#41;](../tools/rskeymgmt-utility-ssrs.md)   
  [Copiare database tramite backup e ripristino](../../relational-databases/databases/copy-databases-with-backup-and-restore.md)   
  [Amministrare un database del server di report &#40;modalità nativa SSRS&#41;](../report-server/administer-a-report-server-database-ssrs-native-mode.md)   
  [Configurare e gestire chiavi di crittografia &#40;Gestione configurazione SSRS&#41;](ssrs-encryption-keys-manage-encryption-keys.md)  

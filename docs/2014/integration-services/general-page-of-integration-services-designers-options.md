@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Business_Intelligence_Designers.Data_Transformation_Designers.General
@@ -13,12 +12,12 @@ ms.assetid: d695690a-923b-4036-945e-7621e8651deb
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 16a62e70239db5688fc37b34f3b11752f43178d6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ce643cbaa6cfade08b84894bdd1af9b24533392b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48151020"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52750114"
 ---
 # <a name="general-page"></a>Pagina Generale
   Usare la pagina **Generale** della pagina **Finestre di progettazione Integration Services** della finestra di dialogo **Opzioni** per specificare le opzioni per il caricamento, la visualizzazione e l'aggiornamento dei pacchetti.  
@@ -55,7 +54,7 @@ ms.locfileid: "48151020"
  Durante l'aggiornamento di [!INCLUDE[ssISversion2005](../includes/ssisversion2005-md.md)] , creare nuovi ID pacchetti per le versioni aggiornate dei pacchetti.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Panoramica della sicurezza &#40;Integration Services&#41;](security/security-overview-integration-services.md)   
+ [Panoramica sulla sicurezza &#40;Integration Services&#41;](security/security-overview-integration-services.md)   
  [Estensione di pacchetti tramite scripting](extending-packages-scripting/extending-packages-with-scripting.md)  
   
   

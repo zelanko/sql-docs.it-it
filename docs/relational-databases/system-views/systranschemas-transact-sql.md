@@ -5,8 +5,7 @@ ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - systranschemas
@@ -19,19 +18,19 @@ ms.assetid: 864c3966-cb61-4f2b-8939-ccda112de853
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 69dfb004d4a2ec7b60e9e98fce8b30f9425dd327
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3339cf1731c712cdfee7145390d5cc955c748a98
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47809189"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52760703"
 ---
 # <a name="systranschemas-transact-sql"></a>systranschemas (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Il **systranschemas** tabella viene utilizzata per tenere traccia delle modifiche dello schema negli articoli pubblicati in pubblicazioni transazionali e snapshot. Questa tabella è archiviata nei database di pubblicazione e di sottoscrizione.  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**tabid**|**int**|Identificatore dell'articolo di tabella nel quale è stata apportata la modifica dello schema.|  
 |**startlsn**|**binary**|Valore LSN all'inizio della modifica dello schema.|  

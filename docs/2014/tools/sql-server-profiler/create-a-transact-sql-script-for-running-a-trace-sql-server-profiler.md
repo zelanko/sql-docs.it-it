@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: profiler
 ms.topic: conceptual
 helpviewer_keywords:
 - traces [SQL Server], running
@@ -14,19 +13,19 @@ ms.assetid: 6b0e2519-998d-40d5-b8ba-5e6a773f91a6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 13bc8fb9497ce9d0cbb4e5adad21cc402217d3d2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 948ef7eb5fdfeabdbb2ba3829e172f7c9f4028da
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48138141"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52775183"
 ---
 # <a name="create-a-transact-sql-script-for-running-a-trace-sql-server-profiler"></a>Creare uno script Transact-SQL per l'esecuzione di una traccia (SQL Server Profiler)
   In questo argomento viene descritto come creare uno script Transact-SQL da un file o da una tabella di traccia esistente tramite [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
   
 ### <a name="to-create-a-transact-sql-script-to-run-a-trace"></a>Per creare uno script Transact-SQL per l'esecuzione di una traccia  
   
-1.  Aprire un file o una tabella di traccia. Per altre informazioni, vedere [Aprire un file di traccia &#40;SQL Server Profiler&#41;](open-a-trace-file-sql-server-profiler.md) o [Aprire una tabella di traccia &#40;SQL Server Profiler&#41;](open-a-trace-table-sql-server-profiler.md).  
+1.  Aprire un file o una tabella di traccia. Per altre informazioni, vedere [Aprire un file di traccia &#40;SQL Server Profiler&#41;](open-a-trace-file-sql-server-profiler.md) o Ottimizzazione guidata [Aprire una tabella di traccia &#40;SQL Server Profiler&#41;](open-a-trace-table-sql-server-profiler.md).  
   
 2.  Scegliere **Esporta** dal menu **File**, fare clic su **Crea script per definizione di traccia** e quindi fare clic sulla versione corrispondente al server di cui si vuole eseguire la traccia.  
   

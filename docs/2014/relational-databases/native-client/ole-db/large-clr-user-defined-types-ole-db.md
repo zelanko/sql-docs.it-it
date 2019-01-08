@@ -12,12 +12,12 @@ ms.assetid: 4bf12058-0534-42ca-a5ba-b1c23b24d90f
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 92569bd943801a5a8c45947a7fdee65192b398ad
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1aea946703b9ebe06c32fcc25044a3b68326625e
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48152757"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52398134"
 ---
 # <a name="large-clr-user-defined-types-ole-db"></a>Tipi CLR definiti dall'utente di grandi dimensioni (OLE DB)
   In questo argomento vengono illustrate le modifiche apportate a OLE DB in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client per supportare i tipi CLR (Common Language Runtime) definiti dall'utente di grandi dimensioni.  
@@ -29,7 +29,7 @@ ms.locfileid: "48152757"
   
  Nella tabella seguente viene illustrato il mapping dei tipi di dati nei parametri e nei set di righe:  
   
-|Tipo di dati di SQL Server|Tipo di dati OLE DB|Layout in memoria|valore|  
+|Tipo di dati di SQL Server|Tipo di dati OLE DB|Layout in memoria|Value|  
 |--------------------------|----------------------|-------------------|-----------|  
 |tipo CLR definito dall'utente|DBTYPE_UDT|BYTE[](matrice di byte\)|132 (oledb.h)|  
   
@@ -77,7 +77,7 @@ ms.locfileid: "48152757"
   
  Per i tipi definiti dall'utente vengono definite anche le colonne seguenti:  
   
-|Identificatore di colonna|Tipo|Description|  
+|Identificatore di colonna|Tipo|Descrizione|  
 |-----------------------|----------|-----------------|  
 |DBCOLUMN_UDT_CATALOGNAME|DBTYPE_WSTR|Per le colonne con tipo definito dall'utente, il nome del catalogo in cui è indicato il tipo definito dall'utente.|  
 |DBCOLUMN_UDT_SCHEMANAME|DBTYPE_WSTR|Per le colonne con tipo definito dall'utente, il nome dello schema in cui è indicato il tipo definito dall'utente.|  
@@ -102,7 +102,7 @@ ms.locfileid: "48152757"
   
  Per i tipi definiti dall'utente vengono definite le colonne aggiuntive seguenti:  
   
-|Identificatore di colonna|Tipo|Description|  
+|Identificatore di colonna|Tipo|Descrizione|  
 |-----------------------|----------|-----------------|  
 |SS_UDT_CATALOGNAME|DBTYPE_WSTR|Per le colonne con tipo definito dall'utente, il nome del catalogo in cui è indicato il tipo definito dall'utente.|  
 |SS_UDT_SCHEMANAME|DBTYPE_WSTR|Per le colonne con tipo definito dall'utente, il nome dello schema in cui è indicato il tipo definito dall'utente.|  

@@ -4,25 +4,25 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: performance
 ms.topic: conceptual
 ms.assetid: 84bf4654-3ef7-4d7f-a269-c8bb4ed4acad
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d31540020df2a4aa4f30f144de4d7e606b471e9e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b591aa8e89200ca863b1e8196c383c506401fc3e
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48097001"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52759673"
 ---
 # <a name="xtp-cursors"></a>XTP Cursors
-  L'oggetto prestazione XTP Cursors contiene contatori correlati ai cursori interni del motore XTP. I cursori sono gli utilizzi del motore XTP per elaborare di blocchi predefiniti di basso livello [!INCLUDE[tsql](../../includes/tsql-md.md)] le query. Di conseguenza, in genere non si ha controllo diretto su di essi.  
+  L'oggetto prestazione XTP Cursors contiene contatori correlati ai cursori interni del motore XTP. I cursori sono i blocchi predefiniti di basso livello utilizzati dal motore XTP per elaborare query [!INCLUDE[tsql](../../includes/tsql-md.md)]. Di conseguenza, in genere non si ha controllo diretto su di essi.  
   
  La tabella seguente descrive la **XTP Cursors** contatori.  
   
-|Contatore|Description|  
+|Contatore|Descrizione|  
 |-------------|-----------------|  
 |**Eliminazioni cursori/sec**|Numero medio di eliminazioni di cursori, al secondo.|  
 |**Inserimenti cursori/sec**|Numero medio di inserimenti di cursori, al secondo.|  

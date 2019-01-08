@@ -1,5 +1,5 @@
 ---
-title: Utilizzare diagrammi in Progettazione origine dati (Analysis Services) | Documenti Microsoft
+title: Utilizzare diagrammi in Progettazione vista origine dati (Analysis Services) | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: d105d9a9d446d1868fc6999953cbbfdc90c90715
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 3bd5ddc549be0750d2476673511bab4de9cdf411
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34023618"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512756"
 ---
 # <a name="work-with-diagrams-in-data-source-view-designer-analysis-services"></a>Utilizzare diagrammi in Progettazione vista origine dati (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -39,16 +39,16 @@ ms.locfileid: "34023618"
   
  Per creare un nuovo diagramma, fare clic con il pulsante destro del mouse in qualsiasi punto del riquadro **Libreria diagrammi** e scegliere **Nuovo diagramma**.  
   
- Quando si definisce inizialmente una vista origine dati (DSV) in un progetto di Analysis Services, tutte le tabelle e le viste aggiunte alla vista origine dati vengono aggiunti per il \<tutte le tabelle > diagramma. Questo diagramma viene visualizzato nel riquadro Libreria diagrammi di Progettazione vista origine dati, mentre le tabelle di tale diagramma e le relative colonne e relazioni vengono elencate nel riquadro Tabelle e visualizzate graficamente nel riquadro degli schemi. Tuttavia, quando si aggiungere tabelle, viste e query denominate per il \<tutte le tabelle > diagramma, il numero degli oggetti nel diagramma rende difficile visualizzare le relazioni, vengono aggiunte al diagramma, in particolare come più tabelle dei fatti e delle dimensioni due tabelle sono correlate a più tabelle dei fatti.  
+ Quando si definisce inizialmente una vista origine dati (DSV) in un progetto di Analysis Services, tutte le tabelle e le viste aggiunte alla vista origine dati vengono aggiunti per il \<tutte le tabelle > diagramma. Questo diagramma viene visualizzato nel riquadro Libreria diagrammi di Progettazione vista origine dati, mentre le tabelle di tale diagramma e le relative colonne e relazioni vengono elencate nel riquadro Tabelle e visualizzate graficamente nel riquadro degli schemi. Tuttavia, quando si aggiungere tabelle, viste e query denominate al \<tutte le tabelle > diagramma, il numero degli oggetti nel diagramma rende complessa la visualizzazione relazioni, in particolar modo vengono aggiunte al diagramma, più tabelle dei fatti e delle dimensioni due tabelle sono correlate a più tabelle dei fatti.  
   
  Per semplificare la rappresentazione visiva quando si desidera visualizzare soltanto un subset delle tabelle della vista origine dati, è possibile definire diagrammi secondari, denominati semplicemente diagrammi, costituiti da subset selezionati delle tabelle, delle viste e delle query denominate della vista origine dati. È possibile utilizzare i diagrammi per raggruppare gli elementi nella vista origine dati in base alle esigenze aziendali o ai requisiti delle soluzioni.  
   
- È possibile raggruppare query denominate e tabelle correlate in diagrammi separati per scopi aziendali, nonché per rendere maggiormente comprensibile una vista origine dati contenente un numero elevato di tabelle e query denominate. La stessa tabella o query denominata può essere incluso in più diagrammi, ad eccezione del \<tutte le tabelle > diagramma. Nel \<tutte le tabelle > diagramma, tutti gli oggetti contenuti nella vista origine dati vengono visualizzati una sola volta.  
+ È possibile raggruppare query denominate e tabelle correlate in diagrammi separati per scopi aziendali, nonché per rendere maggiormente comprensibile una vista origine dati contenente un numero elevato di tabelle e query denominate. La stessa tabella o query denominata può essere incluso in più diagrammi, ad eccezione di \<tutte le tabelle > diagramma. Nel \<tutte le tabelle > diagramma, tutti gli oggetti contenuti nella vista origine dati vengono visualizzati una sola volta.  
   
 ##  <a name="bkmk_edit"></a> Modificare o eliminare un diagramma  
  Quando si utilizza un diagramma, prestare molta attenzione ai comandi utilizzati per l'aggiunta e la rimozione di oggetti. Ad esempio, l'eliminazione di un oggetto da un diagramma ne comporterà l'eliminazione anche dalla vista origine dati. Se si desidera eliminare l'oggetto solo dal diagramma, usare invece **Nascondi tabella** .  
   
- ![Schermata dell'area di lavoro di diagramma, menu di scelta rapida](../../analysis-services/multidimensional-models/media/ssas-olapdsv-diagram.gif "schermata dell'area di lavoro di diagramma, menu di scelta rapida")  
+ ![Screenshot dell'area di lavoro di diagramma, menu di scelta rapida](../../analysis-services/multidimensional-models/media/ssas-olapdsv-diagram.gif "Screenshot dell'area di lavoro di diagramma, menu di scelta rapida")  
   
  Sebbene sia possibile nascondere gli oggetti singolarmente, restituendoli utilizzando il comando Mostra tabelle correlate vengono restituiti anche tutti gli oggetti correlati al diagramma. Per controllare quali oggetti vengono restituiti all'area di lavoro, trascinarli invece dal riquadro Tabelle.  
   
@@ -61,9 +61,9 @@ ms.locfileid: "34023618"
   
      Per allineare al centro la visualizzazione in una tabella già inclusa nel diagramma, selezionarla nel riquadro **Tabelle** .  
   
--   Indicatore di posizione delle tabelle nel riquadro **Diagramma** : l'indicatore di posizione delle tabelle è un'icona a forma di freccia a 4 punte che si trova all'intersezione tra le barre di scorrimento orizzontale e verticale nell'angolo inferiore destro del riquadro **Diagramma** . Consente di visualizzare un'anteprima del diagramma corrente nel riquadro Diagramma. È possibile utilizzare questa anteprima per modificare la visualizzazione nel riquadro Diagramma in base a qualsiasi posizione nel diagramma.  
+-   Indicatore di posizione nella tabella **diagramma** locator riquadro: la tabella è un'icona di freccia a 4 vie che si trova all'intersezione tra le barre di scorrimento orizzontale e verticale nell'angolo inferiore destro del **diagramma** riquadro. Consente di visualizzare un'anteprima del diagramma corrente nel riquadro Diagramma. È possibile utilizzare questa anteprima per modificare la visualizzazione nel riquadro Diagramma in base a qualsiasi posizione nel diagramma.  
   
--   Usare la finestra di dialogo **Trova tabella** : fare clic con il pulsante destro del mouse in un'area vuota del riquadro Diagramma e scegliere **Trova tabella**. In alternativa, fare clic sul comando **Trova tabella** sulla barra degli strumenti o nel menu **Vista origine dati** .  
+-   Usare la **trova tabella** della finestra di dialogo-Right click su un'area vuota nel riquadro Diagramma e scegliere **trova tabella**. In alternativa, fare clic sul comando **Trova tabella** sulla barra degli strumenti o nel menu **Vista origine dati** .  
   
      È possibile digitare stringhe e caratteri jolly nella casella Filtro per visualizzare subset delle tabelle presenti nel diagramma.  
   
@@ -82,7 +82,7 @@ ms.locfileid: "34023618"
  Per evitare il problema, aggiungere tutte le tabelle prima di procedere alle modifiche finali. In tal modo gli oggetti dovrebbero mantenere la relativa posizione nel diagramma quando verrà riaperto.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Viste origine dati nei modelli multidimensionali](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)   
- [Progettazione vista origine dati & #40; Analysis Services - dati multidimensionali & #41;](http://msdn.microsoft.com/library/6f40a074-761f-440b-a999-09b755bd86ce)  
+ [Viste origine dati in modelli multidimensionali](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)   
+ [Progettazione vista origine dati &#40;Analysis Services - Dati multidimensionali&#41;](http://msdn.microsoft.com/library/6f40a074-761f-440b-a999-09b755bd86ce)  
   
   

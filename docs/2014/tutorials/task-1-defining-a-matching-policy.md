@@ -1,5 +1,5 @@
 ---
-title: 'Attività 1: Definizione dei criteri di corrispondenza | Microsoft Docs'
+title: 'Attività 1: La definizione di criteri di corrispondenza | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,15 +13,15 @@ ms.assetid: 6f89a720-fce5-4f60-bef3-a159bbc9f25c
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6a94030fdf0f4ef42e0253022913f06f109e4dc3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 55739fd6cf7b6c395c2e7a66c3d80fad22607a83
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48107441"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52394194"
 ---
 # <a name="task-1-defining-a-matching-policy"></a>Attività 1: Definizione di criteri di corrispondenza
-  In questa attività vengono creati criteri di corrispondenza in cui è contenuta una regola. La regola avrà un solo prerequisito: **Supplier ID**, il che significa che gli ID dei fornitori devono corrispondere prima di usare gli altri domini nella regola. La regola usa due altri domini: **Supplier Name** con **somiglianza** valore impostato su **70%** e **Contact Email** con  **Somiglianza** valore impostato su **il 30%**.  
+  In questa attività vengono creati criteri di corrispondenza in cui è contenuta una regola. Alla regola è associato un prerequisito, **Supplier ID**, il che significa che gli ID dei fornitori devono corrispondere prima di usare gli altri domini nella regola. Nella regola vengono utilizzati altri due domini: **Nome fornitore** con **somiglianza** valore impostato su **70%** e **Contact Email** con **somiglianza** valore impostato su **30%**.  
   
 1.  Nella pagina principale del **Client DQS**, fare clic su **freccia destra** accanto a **Suppliers** knowledge base, quindi seleziona **criteri di corrispondenza**.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "48107441"
   
 10. Fare clic su **Aggiungi nuovo elemento di dominio** dalla barra degli strumenti.  
   
-11. Selezionare **Supplier Name** dominio, scegliere **simile** per **somiglianza**e il tipo **70** per il **peso**.  In questo caso, si specifica che i nomi dei fornitori non devono essere identici, ma possono essere simili per i record che devono essere considerati corrispondenti. Tramite il peso viene indicato il contributo del punteggio di questo campo al punteggio di corrispondenza complessivo.  
+11. Selezionare **Supplier Name** dominio, scegliere **simile** per **somiglianza**e il tipo **70** per il **peso**.  In questo caso, si specifica che i nomi dei fornitori non devono essere identici, ma possono essere simili per i record che devono essere considerati corrispondenti. Il peso indica il contributo del punteggio del campo al punteggio di corrispondenza complessivo.  
   
 12. Ripetere i due passaggi precedenti per aggiungere **Contact Email** dominio con **30** per il **peso**.  
   

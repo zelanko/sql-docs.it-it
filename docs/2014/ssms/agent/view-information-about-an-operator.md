@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent jobs, operators
@@ -17,12 +17,12 @@ ms.assetid: 92c82cdf-f704-444e-9539-82aea7fe6fb7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c6a20f68eb253f23871f91d95b8f514a9289895d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 361511051bec6cc33f3062c0c4da13fe8a39329b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48147781"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52751053"
 ---
 # <a name="view-information-about-an-operator"></a>Visualizzazione delle informazioni relative a un operatore
   In questo argomento viene descritta la procedura per visualizzare le infomazioni relative a un operatoe di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -31,7 +31,7 @@ ms.locfileid: "48147781"
   
 -   **Prima di iniziare:**  
   
-     [Security](#Security)  
+     [Sicurezza](#Security)  
   
 -   **Per visualizzare le informazioni relative a un operatore utilizzando:**  
   
@@ -76,7 +76,7 @@ ms.locfileid: "48147781"
   
 5.  Al termine, fare clic su **OK**.  
   
-##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
   
 #### <a name="to-view-information-about-an-operator"></a>Per visualizzare le informazioni relative a un operatore  
   
@@ -87,13 +87,13 @@ ms.locfileid: "48147781"
 3.  Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**.  
   
     ```  
-    -- reports information about operator François Ajenstat   
+    -- reports information about operator Fran??ois Ajenstat   
     -- This example assumes that the operator exists.  
     USE msdb ;  
     GO  
   
     EXEC dbo.sp_help_operator  
-        @operator_name = N'François Ajenstat' ;  
+        @operator_name = N'Fran??ois Ajenstat' ;  
     GO  
     ```  
   

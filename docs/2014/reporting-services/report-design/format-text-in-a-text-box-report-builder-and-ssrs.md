@@ -11,12 +11,12 @@ ms.assetid: df0794b5-96b0-4034-bd17-1be7f31e29db
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 49cdcd60c01bdbad2258d5098ac4db7483ba665e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7816944c854f7c7482902d4f681d54e295b05fff
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48149921"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52539999"
 ---
 # <a name="format-text-in-a-text-box-report-builder-and-ssrs"></a>Formattare il testo in una casella di testo (Generatore report e SSRS)
   È possibile formattare qualsiasi parte del testo all'interno di una casella di testo in modo indipendente e combinare testo segnaposto e testo statico in un'unica casella di testo. La possibilità di combinare i formati e aggiungere testo segnaposto consente di creare stampe unione o modelli per il testo nel report. Qualsiasi espressione può essere definita e formattata separatamente utilizzando un segnaposto.  
@@ -67,13 +67,13 @@ ms.locfileid: "48149921"
  L'elenco viene ripetuto una volta per ogni valore nel campo e il segnaposto *NomeCampo* viene sostituito ogni volta dal valore di quel campo nel set di dati.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Le caselle di testo &#40;Report e SSRS&#41;](text-boxes-report-builder-and-ssrs.md)   
- [Formattazione di testo e segnaposto &#40;Report e SSRS&#41;](formatting-text-and-placeholders-report-builder-and-ssrs.md)   
- [Uso delle espressioni nei report di &#40;Report e SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [Caselle di testo &#40;Generatore report e SSRS&#41;](text-boxes-report-builder-and-ssrs.md)   
+ [Formattazione di testo e segnaposto &#40;Generatore report e SSRS&#41;](formatting-text-and-placeholders-report-builder-and-ssrs.md)   
+ [Utilizzo delle espressioni nei report &#40;Generatore report e SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [Esempi di espressioni &#40;Generatore report e SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
  [Aggiungere il codice HTML a un report &#40;Generatore report e SSRS&#41;](add-html-into-a-report-report-builder-and-ssrs.md)   
  [Elenchi &#40;Generatore report e SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md)   
- [Formattazione di numeri e date di &#40;Report e SSRS&#41;](formatting-numbers-and-dates-report-builder-and-ssrs.md)   
+ [Formattazione di numeri e date &#40;Generatore report e SSRS&#41;](formatting-numbers-and-dates-report-builder-and-ssrs.md)   
  [Finestra di dialogo Proprietà segnaposto, Generale &#40;Generatore report e SSRS&#41;](../placeholder-properties-dialog-box-general-report-builder-and-ssrs.md)  
   
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: table-view-index
 ms.topic: conceptual
 helpviewer_keywords:
 - columns [SQL Server], names
@@ -15,12 +14,12 @@ ms.assetid: 7c71ec9f-0180-4398-b32a-4bfb7592e75d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4e09e9c5ea66582a2333693282496d9b3ddeed38
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cc2cc36a309f74c63ad13f93c9d5e76fb9140900
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48057201"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52770223"
 ---
 # <a name="rename-columns-database-engine"></a>Ridenominazione di colonne (motore di database)
   È possibile rinominare un nome tabella in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -31,7 +30,7 @@ ms.locfileid: "48057201"
   
      [Limitazioni e restrizioni](#Restrictions)  
   
-     [Security](#Security)  
+     [Sicurezza](#Security)  
   
 -   **Per rinominare colonne utilizzando:**  
   
@@ -70,7 +69,7 @@ ms.locfileid: "48057201"
 > [!NOTE]  
 >  Per cambiare il nome di una colonna, è anche possibile utilizzare la scheda **Proprietà colonne** . A tale scopo, selezionare la colonna di cui si desidera cambiare il nome e digitare un nuovo valore per **Nome**.  
   
-##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
  **Per rinominare una colonna**  
   
 #### <a name="to-rename-a-column"></a>Per rinominare una colonna  

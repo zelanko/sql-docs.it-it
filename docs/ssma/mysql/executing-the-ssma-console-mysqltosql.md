@@ -18,12 +18,12 @@ ms.assetid: e3e9f7e4-0619-4861-a202-3d5d39953b26
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: fd560a17c10b5e076236195107d0a9154921422a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 761cb5368c0b586b63f92952f3938d8708daaf86
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47701809"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52411258"
 ---
 # <a name="executing-the-ssma-console-mysqltosql"></a>Esecuzione della console SSMA (MySQLToSQL)
 Microsoft offre un solido set di script di comandi del file per eseguire e controllare le attività SSMA.  
@@ -59,7 +59,7 @@ I comandi di progetto di gestire la creazione di progetti, apertura, salvataggio
   
    overwrite-if-exists="<true/false>"   (optional)  
   
-   project-type==”<sql-server-2008 | sql-server-2005 | sql-server-2012 | sql-server-2014 | sql-azure>”   (optional)  
+   project-type=="<sql-server-2008 | sql-server-2005 | sql-server-2012 | sql-server-2014 | sql-azure>"   (optional)  
   
 />  
 ```  
@@ -106,7 +106,7 @@ Save-progetto: Salva il progetto di migrazione.
 **Command**  
   
 Chiudi progetto  
-                  : Consente di chiudere il progetto di migrazione.  
+                  : Chiude il progetto di migrazione.  
   
 **Script**  
   
@@ -118,7 +118,7 @@ Chiudi progetto
 **Command**  
   
 Chiudi progetto  
-                  : Consente di chiudere il progetto di migrazione.  
+                  : Chiude il progetto di migrazione.  
   
 **Script**  
   
@@ -307,7 +307,7 @@ o Gestione configurazione
 ## <a name="migration--script-file-commands"></a>Comandi di File di Script di migrazione  
 I comandi di migrazione convertire lo schema di database di destinazione per lo schema di origine e la migrazione dei dati al server di destinazione.  
   
-L'output di console predefinito impostazione per i comandi di migrazione è il report di output 'Full' con nessun report di errore dettagliato: riepilogo solo dal nodo radice dell'albero di origine oggetto.  
+L'output di console predefinito impostazione per i comandi di migrazione è il report di output 'Full' con nessun report di errore dettagliato: Riepilogo solo dal nodo radice dell'albero di origine oggetto.  
   
 **Command**  
   
@@ -402,7 +402,7 @@ migrate-data
 ```xml  
 <migrate-data  
   
-   write-summary-report-to="<file-name/folder-name>”  
+   write-summary-report-to="<file-name/folder-name>"  
   
    report-errors="true" verbose="true">  
   
@@ -429,7 +429,7 @@ o Gestione configurazione
   
    object-type="<object-category>"  
   
-   write-summary-report-to="<file-name/folder-name>”  
+   write-summary-report-to="<file-name/folder-name>"  
   
    report-errors="true" verbose="true"/>  
 ```  
@@ -463,7 +463,7 @@ Mapping dello schema del database di origine allo schema di destinazione.
 I comandi di facilità di gestione consentono di sincronizzare gli oggetti di database di destinazione con il database di origine.  
   
 > [!NOTE]  
-> L'output di console predefinito impostazione per i comandi di migrazione è il report di output 'Full' con nessun report di errore dettagliato: riepilogo solo dal nodo radice dell'albero di origine oggetto.  
+> L'output di console predefinito impostazione per i comandi di migrazione è il report di output 'Full' con nessun report di errore dettagliato: Riepilogo solo dal nodo radice dell'albero di origine oggetto.  
   
 **Command**  
   
@@ -593,7 +593,7 @@ o Gestione configurazione
 ```  
   
 ## <a name="script-generation-script-file-commands"></a>Comandi File Script di generazione script  
-I comandi di generazione dello Script eseguono due attività: consentono di salvare la console di output in un file di script. e registrare l'output di T-SQL per la console o un file basato sul parametro specificato.  
+I comandi di generazione dello Script seguire due attività: Consentono di salvare la console di output in un file di script. e registrare l'output di T-SQL per la console o un file basato sul parametro specificato.  
   
 **Command**  
   
@@ -626,7 +626,7 @@ Richiede uno o più nodi di metabase come parametro della riga di comando.
   
    object-type="<object-category>"  
   
-   destination="<file-name/folder-name>”  
+   destination="<file-name/folder-name>"  
   
    overwrite="<true/false>"   (optional)  
   
@@ -639,7 +639,7 @@ o Gestione configurazione
   
    metabase="<source/target>"  
   
-   destination="<file-name/folder-name>”  
+   destination="<file-name/folder-name>"  
   
       <metabase-object object-name="<object-name>"  
   

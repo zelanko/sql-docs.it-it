@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - manual subscription initialization [SQL Server replication]
@@ -15,12 +14,12 @@ ms.assetid: 27a1bc38-e498-4fff-8082-04b52aa4b22c
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: aaa09ef5afcd5bf889d0685631734a69624b8c09
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3bd621890bad3bc42fb2d4d5289d71efcbdbcc2b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48148781"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52777923"
 ---
 # <a name="initialize-a-subscription-manually"></a>Inizializzazione manuale di una sottoscrizione
   In questo argomento si descrive come inizializzare manualmente una sottoscrizione in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Anche se per inizializzare una sottoscrizione viene in genere utilizzato lo snapshot iniziale, è possibile inizializzare le sottoscrizioni di pubblicazioni senza uno snapshot, purché lo schema e i dati iniziali siano già presenti nel Sottoscrittore.  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: profiler
 ms.topic: conceptual
 helpviewer_keywords:
 - opening trace tables
@@ -13,12 +12,12 @@ ms.assetid: 8f7cc6b9-c717-4995-9af9-cacc6501aee2
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 290e8ee873b6a753a70b0770cacca3944e828b48
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 66329c13eff3d8691e44c5b0ca07171cb9493bc9
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48202961"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52757573"
 ---
 # <a name="open-a-trace-table-sql-server-profiler"></a>Aprire una tabella di traccia (SQL Server Profiler)
   In questo argomento viene descritto come aprire una tabella di traccia esistente utilizzando [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  

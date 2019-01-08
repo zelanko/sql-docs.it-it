@@ -18,12 +18,12 @@ ms.assetid: c96d43d5-6507-4d66-b3f5-f44c0617cb5c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 34a3ea4ac63a0ace769af174bbdbf433ad63b433
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 29fbce7f3e8fee200384f6162b28576d96593b37
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47700529"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52502985"
 ---
 # <a name="spcontrolplanguide-transact-sql"></a>sp_control_plan_guide (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,19 +58,19 @@ sp_control_plan_guide [ @operation = ] N'<control_option>'
  Elimina la Guida di piano specificata in *plan_guide_name*. Dopo l'eliminazione di una guida di piano, le future esecuzioni di una query a cui la guida di piano era in precedenza associata non saranno più influenzate dalla guida di piano.  
   
  DROP ALL  
- Elimina tutte le guide di piano nel database corrente. **N' * * * plan_guide_name* non può essere utilizzato quando DROP ALL è specificata.  
+ Elimina tutte le guide di piano nel database corrente. **N'**_plan_guide_name_ non può essere utilizzato quando DROP ALL è specificata.  
   
  DISABLE  
  Disabilita la Guida di piano specificata in *plan_guide_name*. Dopo la disabilitazione di una guida di piano, le future esecuzioni di una query a cui la guida di piano era in precedenza associata non saranno più influenzate dalla guida di piano.  
   
  DISABLE ALL  
- Disabilita tutte le guide di piano nel database corrente. **N' * * * plan_guide_name* non può essere utilizzato quando DISABLE ALL è specificata.  
+ Disabilita tutte le guide di piano nel database corrente. **N'**_plan_guide_name_ non può essere utilizzato quando DISABLE ALL è specificata.  
   
  ENABLE  
  Abilita la Guida di piano specificata in *plan_guide_name*. Dopo che è stata abilitata, una guida di piano può essere associata a una query idonea. Per impostazione predefinita, le guide di piano vengono abilitate in fase di creazione.  
   
  ENABLE ALL  
- Abilita tutte le guide di piano nel database corrente. **N'***plan_guide_name***'** non può essere utilizzato quando ENABLE ALL è specificata.  
+ Abilita tutte le guide di piano nel database corrente. **N'**_plan_guide_name_**'** non può essere utilizzato quando ENABLE ALL è specificata.  
   
 ## <a name="remarks"></a>Note  
  Se si tenta di eliminare o modificare una funzione, una stored procedure o un trigger DML a cui viene fatto riferimento in una guida di piano abilitata o disabilitata, viene generato un errore.  
@@ -125,7 +125,7 @@ GO
 EXEC sp_control_plan_guide N'DROP', N'Guide3';  
 ```  
   
-### <a name="b-disabling-all-plan-guides-in-the-current-database"></a>B. Disabilitazione di tutte le guide di piano nel database corrente  
+### <a name="b-disabling-all-plan-guides-in-the-current-database"></a>b. Disabilitazione di tutte le guide di piano nel database corrente  
  Nell'esempio seguente vengono disabilitate tutte le guide di piano nel database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
 ```  

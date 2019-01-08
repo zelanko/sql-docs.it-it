@@ -10,21 +10,21 @@ ms.assetid: d82f21fa-6be1-4723-a72e-f2526fafd1b6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6f7b32b9e3d87c783efe2a064714454c50a886c6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: db1f62b6562d794cf35a7bca680e523401c4c8cc
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48214251"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52407219"
 ---
 # <a name="managing-memory-for-in-memory-oltp"></a>Gestione della memoria per OLTP in memoria
   Le tabelle con ottimizzazione per la memoria richiedono memoria sufficiente per mantenere tutte le righe e tutti gli indici in memoria. Poiché la memoria è una risorsa limitata, è importante conoscere e gestire l'utilizzo di memoria nel sistema. Negli argomenti di questa sezione vengono illustrati gli scenari comuni di utilizzo e gestione della memoria.  
   
 ## <a name="in-this-section"></a>Contenuto della sezione  
   
-|Sezione|Description|  
+|Sezione|Descrizione|  
 |-------------|-----------------|  
-|[Stimare i requisiti di memoria delle tabelle con ottimizzazione per la memoria](../relational-databases/in-memory-oltp/memory-optimized-tables.md)|Stima dei requisiti di memoria di una tabella.|  
+|[Stimare i requisiti di memoria delle tabelle con ottimizzazione per la memoria](../relational-databases/in-memory-oltp/memory-optimized-tables.md)|Stimare le esigenze di memoria della tabella.|  
 |[Associare un database con tabelle con ottimizzazione per la memoria a un pool di risorse](../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)|Procedura dettagliata per associare un database a un pool di risorse.|  
 |[Monitorare e risolvere i problemi relativi all'utilizzo della memoria](../relational-databases/in-memory-oltp/monitor-and-troubleshoot-memory-usage.md)|Strumenti che è possibile utilizzare per monitorare l'utilizzo di memoria. Viene illustrata anche la risoluzione dei problemi nel caso in cui l'utilizzo di memoria diventi troppo elevato.|  
 |[Risolvere i problemi di memoria insufficiente](../relational-databases/in-memory-oltp/resolve-out-of-memory-issues.md)|Passaggi per recuperare da una situazione di memoria insufficiente.|  

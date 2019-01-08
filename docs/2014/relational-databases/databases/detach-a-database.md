@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.detachdatabase.f1
@@ -16,12 +15,12 @@ ms.assetid: f63d4107-13e4-4bfe-922d-5e4f712e472d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0b6f227a9ece5133917f435a79895092294df616
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 20dce5a584d7ae990b25dd10312c9474bd08c873
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48175851"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52749063"
 ---
 # <a name="detach-a-database"></a>Scollegare un database
   In questo argomento viene descritto come scollegare un database in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. I file scollegati non vengono eliminati e possono essere ricollegati tramite CREATE DATABASE con l'opzione FOR ATTACH o FOR ATTACH_REBUILD_LOG. È possibile spostare e quindi collegare tali file in un altro server.  
@@ -32,7 +31,7 @@ ms.locfileid: "48175851"
   
      [Limitazioni e restrizioni](#Restrictions)  
   
-     [Security](#Security)  
+     [Sicurezza](#Security)  
   
 -   **Per scollegare un database utilizzando:**  
   
@@ -79,23 +78,23 @@ ms.locfileid: "48175851"
      Per impostazione predefinita, con l'operazione di scollegamento è possibile mantenere eventuali cataloghi full-text associati al database. Per rimuoverli, deselezionare la casella di controllo **Mantieni cataloghi full-text** . Questa opzione è visualizzata solo quando si aggiorna un database da [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
   
      **Stato**  
-     Consente di visualizzare uno degli stati seguenti: **Pronto** o **Non pronto**.  
+     Consente di visualizzare uno degli stati seguenti: **Pronti** oppure **non pronto**.  
   
      **Message**  
      Nella colonna **Messaggio** possono essere visualizzate informazioni sul database simili alle seguenti:  
   
     -   Quando un database è coinvolto nella replica, lo **Stato** è **Non pronto** e nella colonna **Messaggio** viene visualizzato **Database replicato**.  
   
-    -   Quando un database ha una o più connessioni attive, il valore di **Stato** è **Non pronto** e la colonna **Messaggio** visualizza *Connessioni attive: <numero_di_connessioni_attive>*****, ad esempio **Connessioni attive: 1**. Prima di poter scollegare il database è necessario disconnettere tutte le connessioni attive selezionando **Interrompi connessioni**.  
+    -   Quando un database dispone di uno o più connessioni attive, il **lo stato** viene **non pronto** e il **messaggio** colonna Visualizza *< numero_di_connessioni_attive > * * * connessioni attive:**, ad esempio: **Connessioni attive 1:**. Prima di poter scollegare il database è necessario disconnettere tutte le connessioni attive selezionando **Interrompi connessioni**.  
   
      Per ottenere ulteriori informazioni su un messaggio, fare clic sul testo del collegamento ipertestuale per aprire Monitoraggio attività.  
   
 4.  Quando si è pronti per scollegare il database, fare clic su **OK**.  
   
 > [!NOTE]  
->  Il database scollegato rimarrà visibile nel nodo **Database** di Esplora oggetti fino all'aggiornamento della vista. Per aggiornare la vista in qualsiasi momento, fare clic sul riquadro Esplora oggetti, scegliere **Vista** dalla barra dei menu e quindi **Aggiorna**.  
+>  Il database scollegato rimarrà visibile nel nodo **Database** di Esplora oggetti fino all'aggiornamento della vista. È possibile aggiornare la vista in qualsiasi momento: Fare clic sul riquadro Esplora oggetti, dalla barra dei menu scegliere **View** e quindi **aggiornare**.  
   
-##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
   
 #### <a name="to-detach-a-database"></a>Per scollegare un database  
   

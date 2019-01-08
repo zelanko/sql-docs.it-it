@@ -15,12 +15,12 @@ ms.assetid: 0e5fb127-c7ff-4dfa-b90e-d9bcf0ce763b
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f7bb152f19bd2ed5e482cff2e57806c1653ef415
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1536c2fbb40fa44140cb7470db310ef633f67ede
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48227731"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52506792"
 ---
 # <a name="import-package-dialog-box-ui-reference"></a>Riferimento all'interfaccia utente della finestra di dialogo Importa pacchetto
   Usare la finestra di dialogo **Importa pacchetto** disponibile in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] per importare un pacchetto [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] e impostare o modificare il livello di protezione del pacchetto.  
@@ -54,18 +54,18 @@ ms.locfileid: "48227731"
  Se si utilizza l'autenticazione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , specificare una password.  
   
  **Percorso pacchetto**  
- Digitare il percorso del pacchetto oppure fare clic sul pulsante Sfoglia **(…)** per individuare il pacchetto.  
+ Digitare il percorso del pacchetto oppure fare clic sul pulsante Sfoglia **(...)** per individuare il pacchetto.  
   
  **Nome pacchetto**  
  Se lo si desidera, rinominare il pacchetto. Il nome predefinito è il nome del pacchetto da importare.  
   
  **Livello di protezione**  
- Fare clic sul pulsante Sfoglia **(…)** e aggiornare il livello di protezione nella finestra di dialogo **Livello di protezione pacchetto** . Per altre informazioni, vedere [Finestra di dialogo Livello di protezione pacchetto e Livello di protezione del progetto](../../2014/integration-services/package-and-project-protection-level-dialog-box.md).  
+ Fare clic sul pulsante Sfoglia **(...)** e aggiornare il livello di protezione nella finestra di dialogo **Livello di protezione pacchetto**. Per altre informazioni, vedere [Finestra di dialogo Livello di protezione pacchetto e Livello di protezione del progetto](../../2014/integration-services/package-and-project-protection-level-dialog-box.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Salva copia del pacchetto](../../2014/integration-services/save-copy-of-package.md)   
- [Riferimento all'interfaccia utente della finestra dialogo pacchetto di esportazione](../../2014/integration-services/export-package-dialog-box-ui-reference.md)   
- [Salvare i pacchetti](save-packages.md)   
+ [Riferimento all'interfaccia utente della finestra di dialogo Esporta pacchetto](../../2014/integration-services/export-package-dialog-box-ui-reference.md)   
+ [Salvataggio di pacchetti](save-packages.md)   
  [Importare ed esportare pacchetti &#40;servizio SSIS&#41;](../../2014/integration-services/import-and-export-packages-ssis-service.md)  
   
   

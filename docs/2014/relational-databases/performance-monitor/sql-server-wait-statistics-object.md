@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - Wait Statistics object
@@ -13,19 +13,19 @@ ms.assetid: cb7f917d-4291-4115-9b78-ee7692ebbb2d
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 3255ea68fe69631b266286cfdb78b33096a42625
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 28e7ee81273d47e285b9903575bdc40ccededbb5
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48124211"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52759463"
 ---
 # <a name="sql-server-wait-statistics-object"></a>Oggetto Statistiche attesa di SQL Server
   L'oggetto prestazioni **SQLServer:Statistiche attesa** contiene contatori delle prestazioni che forniscono informazioni sullo stato di attesa.  
   
  Nella tabella seguente sono elencati i contatori inclusi nell'oggetto Statistiche attesa.  
   
-|Contatori dell'oggetto Statistiche attesa di SQL Server|Description|  
+|Contatori dell'oggetto Statistiche attesa di SQL Server|Descrizione|  
 |-----------------------------------------|-----------------|  
 |**Attese di blocco**|Statistiche relative ai processi in attesa di un blocco.|  
 |**Attese buffer log**|Statistiche relative ai processi in attesa che il buffer del log diventi disponibile.|  
@@ -42,7 +42,7 @@ ms.locfileid: "48124211"
   
  Per ogni contatore nell'oggetto sono disponibili le istanze seguenti:  
   
-|Elemento|Description|  
+|Elemento|Descrizione|  
 |----------|-----------------|  
 |**Tempo medio di attesa (ms)**|Tempo medio per il tipo di attesa selezionato.|  
 |**Tempo di attesa (ms) cumulativo al secondo**|Tempo di attesa aggregato al secondo per il tipo di attesa selezionato|  

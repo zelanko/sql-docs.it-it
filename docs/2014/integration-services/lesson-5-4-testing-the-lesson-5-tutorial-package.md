@@ -1,22 +1,21 @@
 ---
-title: "Passaggio 4: Test del pacchetto creato nella lezione 5 dell'esercitazione | Microsoft Docs"
+title: "Passaggio 4: Test del pacchetto dell'esercitazione della lezione 5 | Microsoft Docs"
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 5215b77d-c2ec-4b25-a3de-ca49ea197d74
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3c9054cdbba90a3d0323a46e29aa4a860fbca7c7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 29154120646f74da7471f44a1630b3d99afefa4f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48060891"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52747483"
 ---
 # <a name="step-4-testing-the-lesson-5-tutorial-package"></a>Passaggio 4: Test del pacchetto creato nell'esercitazione della lezione 5
   In fase di esecuzione, il pacchetto ottiene il valore della proprietà `Directory` da una variabile aggiornata in fase di esecuzione, anziché utilizzare il nome della directory originale specificato quando è stato creato il pacchetto. Il valore della variabile è popolato dal file SSISTutorial.dtsConfig file.  
@@ -41,6 +40,6 @@ ms.locfileid: "48060891"
 2.  Al termine dell'esecuzione del pacchetto, scegliere **Arresta debug** dal menu **Debug**.  
   
 ## <a name="next-lesson"></a>Lezione successiva  
- [Lezione 6: Uso di parametri con il modello di distribuzione del progetto](../integration-services/lesson-6-using-parameters-with-the-project-deployment-model-in-ssis.md)  
+ [Lezione 6: Utilizzo di parametri con il modello di distribuzione](../integration-services/lesson-6-using-parameters-with-the-project-deployment-model-in-ssis.md)  
   
   

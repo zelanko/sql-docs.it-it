@@ -1,5 +1,5 @@
 ---
-title: Creare una nuova struttura di Data Mining OLAP | Documenti Microsoft
+title: Creare una nuova struttura di Data Mining OLAP | Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 672b94be0aad740ddcb2659b8cf82ef0cd7ab76e
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: d0a12d7fad2deb138d2dac445492ffce55f1493a
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34015698"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52390715"
 ---
 # <a name="create-a-new-olap-mining-structure"></a>Creare una nuova struttura di data mining OLAP
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -66,9 +66,9 @@ ms.locfileid: "34015698"
   
      Se si aggiungono dati nidificati, è necessario specificare due colonne aggiuntive:  
   
-    -   Chiave della tabella annidata: deve essere preselezionata nella pagina **Selezione chiave tabella annidata**.  
+    -   La chiave della tabella nidificata: Questo deve essere preselezionato nella pagina **Selezione chiave tabella annidata**.  
   
-    -   Attributi o attributi da usare per l'analisi: nella pagina **Selezione colonne tabella annidata**è contenuto un elenco delle misure e degli attributi nella selezione della tabella annidata.  
+    -   Gli attributi da utilizzare per l'analisi: La pagina **selezione colonne tabella nidificata**, fornisce un elenco delle misure e attributi nella selezione della tabella nidificata.  
   
         -   Per ogni attributo incluso nel modello, selezionare la casella nella colonna sinistra.  
   
@@ -76,7 +76,7 @@ ms.locfileid: "34015698"
   
         -   Se si desidera includere la colonna come uno degli attributi stimabili per il modello, selezionare **Stima**.  
   
-        -   Qualsiasi elemento incluso nella struttura, ma non specificato come un input o attributo stimabile viene aggiunto alla struttura con il flag **Ignora**. Ciò significa che i dati vengono elaborati quando si compila il modello, ma non vengono usati nell'analisi e sono disponibili solo per il drill-through. Questo aspetto può essere utile se si desidera includere dettagli come i nomi dei clienti, ma non si desidera utilizzarli nell'analisi.  
+        -   Qualsiasi elemento incluso nella struttura, ma non specificato come un input o attributo stimabile viene aggiunto alla struttura con il flag **Ignora**. Ciò significa che i dati vengono elaborati quando si compila il modello, ma non vengono usati nell'analisi e sono disponibili solo per il drill-through. Ciò può essere utile se si desidera includere dettagli quali i nomi dei clienti, ma non si desidera utilizzarli nell'analisi.  
   
      Fare clic su **Fine** per chiudere la parte della procedura guidata correlata alle tabelle annidate. È possibile ripetere il processo per aggiungere più colonne nidificate.  
   
@@ -91,17 +91,17 @@ ms.locfileid: "34015698"
   
      Sezionando il cubo si limitano i dati utilizzati per la compilazione del modello. È ad esempio possibile compilare modelli separati per ogni area sezionando in base alla gerarchia Geography e  
   
-    -   **Dimensione**: scegliere una dimensione correlata dall'elenco a discesa.  
+    -   **Dimensione**: Scegliere una dimensione correlata dall'elenco a discesa.  
   
-    -   **Gerarchia**: selezionare il livello della gerarchia di dimensione al quale si desidera applicare il filtro. Ad esempio, se si seziona in base alla dimensione [Geography], è necessario scegliere un livello di gerarchia come [Region Country Name].  
+    -   **Gerarchia**:  Selezionare il livello della gerarchia della dimensione in corrispondenza del quale si desidera applicare il filtro. Ad esempio, se si seziona in base alla dimensione [Geography], è necessario scegliere un livello di gerarchia come [Region Country Name].  
   
-    -   **Operatore**: scegliere un operatore dall'elenco.  
+    -   **Operatore**: Scegliere un operatore dall'elenco.  
   
-    -   **Espressione filtro**: digitare un valore o un'espressione da usare come condizione di filtro oppure usare l'elenco a discesa per selezionare un valore dall'elenco dei membri al livello specificato della gerarchia.  
+    -   **Espressione filtro**: Digitare un valore o un'espressione da utilizzare come condizione di filtro oppure usare l'elenco a discesa per selezionare un valore dall'elenco dei membri al livello specificato della gerarchia.  
   
          Ad esempio, se si è selezionato [Geography] come dimensione e [Region Country Name] come livello della gerarchia, l'elenco a discesa contiene tutti i paesi validi che è possibile usare come condizione di filtro. È possibile effettuare più selezioni. Di conseguenza, i dati nella struttura di data mining saranno limitati ai dati del cubo da queste aree geografiche.  
   
-    -   **Parametri**: ignorare questa casella di controllo. Questa finestra di dialogo supporta più scenari di applicazione filtri del cubo e questa opzione non è attinente alla compilazione di una struttura di data mining.  
+    -   **Parametri**: Ignorare questa casella di controllo. Questa finestra di dialogo supporta più scenari di applicazione filtri del cubo e questa opzione non è attinente alla compilazione di una struttura di data mining.  
   
      Scegliere **Avanti**.  
   
@@ -111,7 +111,7 @@ ms.locfileid: "34015698"
   
 13. Nella pagina **Completamento procedura guidata** specificare un nome per la nuova struttura di data mining OLAP e per il modello di data mining iniziale.  
   
-14. Fare clic su **Fine**.  
+14. Scegliere **Fine**.  
   
 15. Nella pagina **Completamento procedura guidata** è anche disponibile l'opzione per creare una dimensione del modello di data mining e/o un cubo usando la dimensione del modello di data mining. Queste opzioni sono supportate solo per i modelli compilati utilizzando gli algoritmi seguenti:  
   
@@ -121,11 +121,11 @@ ms.locfileid: "34015698"
   
     -   Algoritmo Microsoft Association Rules  
   
-     **Crea dimensione del modello di data mining**: selezionare questa casella di controllo e specificare un tipo per la dimensione del modello di data mining. Quando si utilizza questa opzione, viene creata una nuova dimensione all'interno del cubo originale utilizzato per compilare la struttura di data mining. È possibile utilizzare questa dimensione per eseguire il drill-down ed effettuare ulteriori analisi. Poiché si trova all'interno del cubo, viene automaticamente eseguito il mapping della dimensione alla dimensione dei dati del case.  
+     **Crea dimensione del modello di data mining**: Selezionare questa casella di controllo e specificare un nome di tipo per la dimensione del modello di data mining. Quando si utilizza questa opzione, viene creata una nuova dimensione all'interno del cubo originale utilizzato per compilare la struttura di data mining. È possibile utilizzare questa dimensione per eseguire il drill-down ed effettuare ulteriori analisi. Poiché si trova all'interno del cubo, viene automaticamente eseguito il mapping della dimensione alla dimensione dei dati del case.  
   
-     **Crea il cubo utilizzando la dimensione del modello di data mining**: selezionare questa casella di controllo e specificare un nome per il nuovo cubo. Quando si utilizza questa opzione, viene creato un nuovo cubo contenente sia le dimensioni esistenti utilizzate nella compilazione della struttura sia la nuova dimensione di data mining contenente i risultati del modello.  
+     **Crea il cubo utilizzando la dimensione del modello di data mining**: Selezionare questa casella di controllo e specificare un nome per il nuovo cubo. Quando si utilizza questa opzione, viene creato un nuovo cubo contenente sia le dimensioni esistenti utilizzate nella compilazione della struttura sia la nuova dimensione di data mining contenente i risultati del modello.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Data mining struttura attività e procedure](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)  
+ [Attività e procedure relative alla struttura di data mining](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)  
   
   

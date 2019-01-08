@@ -13,12 +13,12 @@ ms.assetid: 52d47ca4-fb8c-493d-8b2b-48bb269f859b
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c1e8c6381aaf8afd848831c8599c4534a77b179e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8fc33585e165b8cdac2f7d46c322741b3eb1756c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48084791"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52503735"
 ---
 # <a name="set-the-properties-of-a-task-or-container"></a>Impostazione delle proprietà di un'attività o di un contenitore
   È possibile impostare la maggior parte delle proprietà delle attività e dei contenitori usando la finestra **Proprietà**. Fanno eccezione le proprietà delle raccolte di attività e quelle troppo complesse per essere impostate nella finestra **Proprietà**. L'enumeratore usato dal contenitore Ciclo Foreach, ad esempio, non può essere configurato nella finestra **Proprietà**. Per impostare tali proprietà complesse, è necessario utilizzare un editor attività o contenitori. La maggior parte degli editor attività e contenitori include più nodi, ognuno dei quali contiene proprietà correlate. Il nome del nodo indica l'oggetto delle proprietà contenute.  
@@ -38,7 +38,7 @@ ms.locfileid: "48084791"
 5.  Nella finestra **Proprietà** aggiornare i valori delle proprietà.  
   
     > [!NOTE]  
-    >  È possibile impostare la maggior parte delle proprietà digitando un valore direttamente nella casella di testo o selezionandone uno in un elenco. Alcune proprietà sono tuttavia più complesse e dispongono di un editor proprietà personalizzato. Per impostare la proprietà, fare clic nella casella di testo, quindi sul pulsante di compilazione **(…)** per aprire l'editor personalizzato.  
+    >  È possibile impostare la maggior parte delle proprietà digitando un valore direttamente nella casella di testo o selezionandone uno in un elenco. Alcune proprietà sono tuttavia più complesse e dispongono di un editor proprietà personalizzato. Per impostare la proprietà, fare clic nella casella di testo, quindi sul pulsante di compilazione **(...)** per aprire l'editor personalizzato.  
   
 6.  Facoltativamente, creare espressioni di proprietà per aggiornare dinamicamente le proprietà dell'attività o del contenitore. Per altre informazioni, vedere [Aggiunta o modifica di un'espressione di proprietà](expressions/add-or-change-a-property-expression.md).  
   

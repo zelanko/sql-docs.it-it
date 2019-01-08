@@ -21,12 +21,12 @@ ms.assetid: 9997ffed-a4c1-428f-8bac-3b9e4b16d7cf
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ee55ca66cdddcc6fcb2a130bfd3427d210297aff
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b69bfb4da1bf20a8d74f5adcda44e55954bbdf65
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47806849"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52409638"
 ---
 # <a name="sysdmtcplistenerstates-transact-sql"></a>sys.dm_tcp_listener_states (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -36,9 +36,9 @@ ms.locfileid: "47806849"
 > [!NOTE]
 > Il listener del gruppo di disponibilità può rimanere in attesa sulla stessa porta del listener dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. In questo caso, i listener vengono elencati separatamente, proprio come un listener di Service Broker.  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
-|**listener_id**|**int**|ID interno del listener. Non ammette i valori Null.<br /><br /> Chiave primaria.|  
+|**listener_id**|**int**|ID interno del listener Non ammette i valori Null.<br /><br /> Chiave primaria.|  
 |**ip_address**|**nvarchar48**|L'indirizzo IP del listener online e attualmente in attesa. È consentito IPv4 o IPv6. Se un listener dispone di entrambi gli indirizzi, vengono elencati separatamente. Un carattere jolly IPv4 viene visualizzato come "0.0.0.0". Un carattere jolly IPv6 viene visualizzato come "::".<br /><br /> Non ammette i valori Null.|  
 |**is_ipv4**|**bit**|Tipo di indirizzo IP<br /><br /> 1 = IPv4<br /><br /> 0 = IPv6|  
 |**port**|**int**|Numero della porta su cui il listener rimane in attesa. Non ammette i valori Null.|  

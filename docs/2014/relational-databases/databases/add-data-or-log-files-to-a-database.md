@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - logs [SQL Server], files
@@ -19,12 +18,12 @@ ms.assetid: 8ead516a-1334-4f40-84b2-509d0a8ffa45
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 11e70904aa8a67a1290cd466aeabcd33d2e7e651
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4519ed412e3148d8e0c70a77c00db969be73a9c0
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48213461"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52778323"
 ---
 # <a name="add-data-or-log-files-to-a-database"></a>Aggiungere file di dati o file di log a un database
   In questo argomento si descrive come aggiungere file di dati o di log a un database in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -35,7 +34,7 @@ ms.locfileid: "48213461"
   
      [Limitazioni e restrizioni](#Restrictions)  
   
-     [Security](#Security)  
+     [Sicurezza](#Security)  
   
 -   **Per aggiungere file di dati o file di log a un database utilizzando:**  
   
@@ -76,7 +75,7 @@ ms.locfileid: "48213461"
   
 8.  Specificare le dimensioni iniziali del file. Creare file di dati delle dimensioni maggiori possibili, corrispondenti alla quantità massima di dati che si prevede di includere nel database.  
   
-9. Per specificare le modalità di aumento delle dimensioni del file, fare clic su **...** nella colonna **Aumento automatico** . Selezionare una delle seguenti opzioni:  
+9. Per specificare le modalità di aumento delle dimensioni del file, fare clic su **...** nella colonna **Aumento automatico**. Selezionare una delle seguenti opzioni:  
   
     1.  Per consentire l'aumento del file attualmente selezionato qualora sia necessario un maggiore spazio per i dati, selezionare la casella di controllo **Abilita aumento automatico dimensioni** e quindi selezionare una delle opzioni seguenti:  
   
@@ -102,7 +101,7 @@ ms.locfileid: "48213461"
   
 12. Fare clic su **OK**.  
   
-##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
   
 #### <a name="to-add-data-or-log-files-to-a-database"></a>Per aggiungere file di dati o file di log a un database  
   

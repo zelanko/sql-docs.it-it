@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - variables [Integration Services], passing between packages
@@ -19,12 +18,12 @@ ms.assetid: c1e81ad6-628b-46d4-9b09-d2866517b6ca
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5b30ae5c49ec66b5612e1472c896084ebb92991d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e6df40fef89955b792e31e0a7539a4adf9409d70
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48069741"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52772573"
 ---
 # <a name="integration-services-ssis-variables"></a>Variabili di Integration Services (SSIS)
   Nelle variabili vengono archiviati valori che possono essere usati in fase di esecuzione da un pacchetto di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] e dai relativi contenitori, attività e gestori di eventi. Anche gli script nell'attività Script e nel componente script possono utilizzare le variabili. I vincoli di precedenza che definiscono la sequenza delle attività e dei contenitori in un flusso di lavoro possono utilizzare variabili quando le definizioni di vincolo includono espressioni.  
@@ -46,7 +45,7 @@ ms.locfileid: "48069741"
 ## <a name="system-and-user-defined-variables"></a>Variabili definite dall'utente e variabili di sistema  
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] supporta due tipi di variabili: variabili definite dall'utente e variabili di sistema. Le variabili definite dall'utente vengono definite dagli sviluppatori dei pacchetti, mentre quelle di sistema sono definite da [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. È possibile creare un numero illimitato di variabili definite dall'utente, ma non è possibile creare ulteriori variabili di sistema.  
   
- Tutte le variabili, di sistema e definite dall'utente, possono essere utilizzate nelle associazioni di parametro utilizzate dall'attività Esegui SQL per il mapping variabili a parametri nelle istruzioni SQL. Per altre informazioni, vedere [Attività Esegui SQL](control-flow/execute-sql-task.md) e [Parametri e codici restituiti nell'attività Esegui SQL](../../2014/integration-services/parameters-and-return-codes-in-the-execute-sql-task.md).  
+ Tutte le variabili, sia di sistema che definite dall'utente, possono essere usate nelle associazioni di parametro con cui l'attività Esegui SQL esegue il mapping delle variabili ai parametri nelle istruzioni SQL. Per altre informazioni, vedere [Attività Esegui SQL](control-flow/execute-sql-task.md) e [Parametri e codici restituiti nell'attività Esegui SQL](../../2014/integration-services/parameters-and-return-codes-in-the-execute-sql-task.md).  
   
 > [!NOTE]  
 >  Per i nomi delle variabili di sistema e delle variabili definite dall'utente viene fatta distinzione tra maiuscole e minuscole.  
@@ -83,7 +82,7 @@ ms.locfileid: "48069741"
 > [!NOTE]  
 >  L'unica opzione configurabile delle variabili di sistema è quella che determina se debba essere generato o meno un evento quando il valore viene modificato.  
   
- Description  
+ Descrizione  
  Specifica la descrizione della variabile.  
   
  EvaluateAsExpression  
@@ -95,7 +94,7 @@ ms.locfileid: "48069741"
  nome  
  Specifica il nome della variabile.  
   
- Namespace  
+ Spazio dei nomi  
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] offre due spazi dei nomi: **User** e **System**. Per impostazione predefinita, le variabili personalizzate appartengono allo spazio dei nomi **User** , mentre le variabili di sistema appartengono allo spazio dei nomi **System** . È possibile creare altri spazi dei nomi per le variabili definite dall'utente e modificare il nome dello spazio dei nomi **User**, ma non è possibile modificare il nome dello spazio dei nomi **System**, né aggiungere variabili allo spazio dei nomi **System** o assegnare variabili di sistema a uno spazio dei nomi diverso.  
   
  RaiseChangedEvent  
@@ -127,7 +126,7 @@ ms.locfileid: "48069741"
   
  Durante la reimpostazione di **IncludeInDebugDump** possibilità `false`, ciò potrebbe quindi sostituire il valore selezionato dall'utente.  
   
- valore  
+ Value  
  Il valore di una variabile definita dall'utente può essere un valore letterale o un'espressione. Le variabili includono opzioni per l'impostazione del valore e del relativo tipo di dati. Queste due proprietà devono essere compatibili. Non è ad esempio possibile utilizzare un valore stringa insieme a un tipo di dati Integer.  
   
  Se la variabile è configurata in modo da essere valutata come espressione, sarà necessario specificare un'espressione. In fase di esecuzione l'espressione verrà valutata e la variabile verrà impostata sul risultato della valutazione. Se ad esempio una variabile usa l'espressione `DATEPART("month", GETDATE())` , assumerà un valore equivalente al numero del mese della data corrente. È necessario utilizzare un'espressione valida che utilizza la sintassi della grammatica delle espressioni di [!INCLUDE[ssIS](../includes/ssis-md.md)] . Quando si utilizza un'espressione con variabili, quest'ultima può includere valori letterali, nonché le funzioni e gli operatori previsti dalla grammatica delle espressioni, ma non può fare riferimento a colonne di un flusso di dati del pacchetto. Un'espressione può avere una lunghezza massima di 4000 caratteri. Per altre informazioni, vedere [Espressioni di Integration Services &#40;SSIS&#41;](expressions/integration-services-ssis-expressions.md).  
@@ -141,9 +140,9 @@ ms.locfileid: "48069741"
 ## <a name="configuring-variables"></a>Configurazione delle variabili  
  È possibile impostare le proprietà tramite Progettazione [!INCLUDE[ssIS](../includes/ssis-md.md)] o a livello di codice.  
   
- Per altre informazioni sulle proprietà che è possibile impostare in Progettazione [!INCLUDE[ssIS](../includes/ssis-md.md)], vedere [Finestra Variabili](../../2014/integration-services/variables-window.md).  
+ Per altre informazioni sulle proprietà che è possibile impostare in Progettazione [!INCLUDE[ssIS](../includes/ssis-md.md)] , vedere [Finestra Variabili](../../2014/integration-services/variables-window.md).  
   
- Per altre informazioni sulle proprietà delle variabili e per altre informazioni sull'impostazione a livello di programmazione di queste proprietà, vedere <xref:Microsoft.SqlServer.Dts.Runtime.Variable>.  
+ Per ulteriori informazioni sulle proprietà delle variabili e sull'impostazione di tali proprietà a livello di codice, vedere <xref:Microsoft.SqlServer.Dts.Runtime.Variable>.  
   
 ## <a name="related-tasks"></a>Attività correlate  
  [Aggiungere, eliminare o modificare l'ambito di una variabile definita dall'utente in un pacchetto](../../2014/integration-services/add-delete-change-scope-of-user-defined-variable-in-a-package.md)  
@@ -152,6 +151,6 @@ ms.locfileid: "48069741"
   
  [Usare i valori di variabili e parametri in un pacchetto figlio](../../2014/integration-services/use-the-values-of-variables-and-parameters-in-a-child-package.md)  
   
- [Mapping dei parametri di query a variabili in un componente flusso di dati](data-flow/map-query-parameters-to-variables-in-a-data-flow-component.md)  
+ [Mapping dei parametri di query a variabili in un componente del flusso di dati](data-flow/map-query-parameters-to-variables-in-a-data-flow-component.md)  
   
   

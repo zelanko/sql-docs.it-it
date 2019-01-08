@@ -14,12 +14,12 @@ ms.assetid: 4fae0d54-83b6-4ead-99cc-bcf532daa121
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7d2d2f8fce7b70c760707bd0d384ffa9b72f7a1d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: faa4d4887079064ac6ccbe9536ac6c36fe8b9f79
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47751770"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52516987"
 ---
 # <a name="operation-of-parameterized-commands"></a>Funzionamento dei comandi con parametri
 Se si lavora con un elemento figlio di grandi dimensioni **Recordset**, in particolare rispetto alle dimensioni dell'elemento padre **Recordset**, ma è necessario accedere solo ad alcuni capitoli figlio, può risultare più efficiente usare un' comando con parametri.  
@@ -53,7 +53,7 @@ SHAPE {SELECT * FROM customer}
   
 5.  Un riferimento alle righe figlio recuperati (vale a dire, il capitolo dell'elemento figlio **Recordset**) viene inserito nella colonna del capitolo della riga corrente dell'elemento padre **Recordset**.  
   
-6.  Passaggi da 3 a 5 vengono ripetuti quando si accede alla colonna del capitolo di un'altra riga.  
+6.  Quando si accede alla colonna del capitolo di un'altra riga, vengono ripetuti i passaggi 3-5.  
   
  Il **righe figlio della Cache** dinamica è impostata su **True** per impostazione predefinita. Il comportamento di memorizzazione nella cache varia in base ai valori di parametro della query. In una query con un singolo parametro, l'elemento figlio **Recordset** per un determinato parametro valore verrà memorizzato tra le richieste per un elemento figlio con tale valore. Il codice seguente illustra questo processo:  
   
@@ -75,7 +75,7 @@ Rst1.MovePrevious  ' RstChild now holds cached rs, saving round trip.
   
  Utilizzo di una gerarchia senza parametri, non è possibile correlare le tabelle di giochi e i team in modo che l'elemento figlio **Recordset** per ogni team contiene la pianificazione completa. È possibile creare capitoli che contengono la pianificazione iniziale o la pianificazione di viaggio, ma non entrambi. Infatti, la clausola RELATE è limitato a relazioni padre-figlio del form (pc1 = cc1) AND (pc2 = pc2). Pertanto, se il comando include "Sono correlati team_id a home_team, team_id TO visiting_team", si otterrebbe solo giochi in cui un team ricopriva stesso. È invece preferibile "(team_id=home_team) o (team_id = visiting_team)", ma il provider Shape non supporta la clausola OR.  
   
- Per ottenere il risultato desiderato, è possibile usare un comando con parametri. Esempio:  
+ Per ottenere il risultato desiderato, è possibile usare un comando con parametri. Ad esempio:  
   
 ```  
 SHAPE {SELECT * FROM teams}   

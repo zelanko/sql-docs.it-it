@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 04/26/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - subscriptions [SQL Server replication], security
@@ -15,12 +14,12 @@ ms.assetid: c8f0d62a-8b5d-4a21-9aec-223da52bb708
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0fccfdf6883a0b5c049824f75086a97a2533c3c9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b15344c41bcfe8f43606683dc2e94f848bdb5923
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48217787"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52780083"
 ---
 # <a name="secure-the-subscriber"></a>Sicurezza del Sottoscrittore
   Gli agenti di merge e di distribuzione si connettono al Sottoscrittore. Queste connessioni possono essere stabilite nel contesto di un account di accesso di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] o di Windows. È importante specificare un account di accesso appropriato per questi agenti, attenendosi al principio di concedere i diritti minimi necessari e proteggere l'archiviazione di tutte le password. Per informazioni sulle autorizzazioni necessarie per ogni agente, vedere [Replication Agent Security Model](replication-agent-security-model.md).  
@@ -72,7 +71,7 @@ ms.locfileid: "48217787"
     > [!IMPORTANT]  
     >  Utilizzare l'autenticazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] per le connessioni ai Sottoscrittori e specificare un diverso account per la connessione a ogni Sottoscrittore. Se si utilizza una sottoscrizione pull, la connessione viene sempre impostata dalla replica in modo da utilizzare l'autenticazione di Windows. Per le sottoscrizioni pull, la replica non può infatti accedere ai metadati nel Sottoscrittore necessari per utilizzare l'autenticazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . In questo caso, modificare la connessione in modo da utilizzare l'autenticazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dopo la configurazione della sottoscrizione.  
   
-     Per altre informazioni, vedere "Procedura: Creare una sottoscrizione aggiornabile di una pubblicazione transazionale (SQL Server Management Studio)" e [Visualizzare e modificare le impostazioni di sicurezza della replica](view-and-modify-replication-security-settings.md).  
+     Per altre informazioni, vedere Procedura: Creare una sottoscrizione aggiornabile di una pubblicazione transazionale (SQL Server Management Studio) e [consente di visualizzare e modificare le impostazioni di sicurezza della replica](view-and-modify-replication-security-settings.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Abilitare connessioni crittografate al motore di database &#40;Gestione configurazione SQL Server&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.impexpwizard.saveschedule.f1
@@ -13,12 +12,12 @@ ms.assetid: b582c462-3d7a-4a4c-a2a2-2c79fedab75a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: de6560f7bc91a76652be5ca198a91c4ab9c1f1af
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fc075a50f3b57cf4856dbcd2ee36c13b83d968d4
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48104507"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52773373"
 ---
 # <a name="save-and-execute-package-sql-server-import-and-export-wizard"></a>Salvataggio ed esecuzione pacchetto (Importazione/Esportazione guidata SQL Server)
   Usare la **salvare ed eseguire il pacchetto** finestra di dialogo per eseguire il pacchetto immediatamente, salvare l'esecuzione in un secondo momento o entrambi.  
@@ -38,7 +37,7 @@ ms.locfileid: "48104507"
  Consente di salvare il pacchetto per eseguirlo in un momento successivo con l'opzione per l'esecuzione immediata.  
   
 > [!NOTE]  
->  In [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)], l'opzione per salvare il pacchetto creato dalla procedura guidata non è disponibile.  
+>  In [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] l'opzione per salvare il pacchetto creato con la procedura guidata non è disponibile.  
   
  **SQL Server**  
  Selezionare questa opzione per salvare il pacchetto per il [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `msdb` database.  

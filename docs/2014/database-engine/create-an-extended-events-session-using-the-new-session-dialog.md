@@ -20,12 +20,12 @@ ms.assetid: 6b2244bc-df6a-4b0a-990e-ddd8d42f7907
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0bfce6c45fcfefd214511c994b3d87fd34bf8282
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e1135b4738aea40d4bf426dffc6bcccb64c9f59e
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48150611"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52408688"
 ---
 # <a name="create-an-extended-events-session-using-the-new-session-dialog"></a>Creare una sessione Eventi estesi utilizzando la finestra di dialogo Nuova sessione
   La finestra di dialogo Nuova sessione consente di definire una sessione di Eventi estesi che acquisisce, visualizza e analizza i dati. La finestra di dialogo Nuova sessione espone tutta la funzionalità di Eventi estesi.  
@@ -35,7 +35,7 @@ ms.locfileid: "48150611"
 ## <a name="before-you-begin"></a>Prima di iniziare  
  Per aprire la finestra di dialogo Nuova sessione, in Esplora oggetti espandere il nodo **Gestione** , quindi espandere **Eventi estesi**. Fare clic con il pulsante destro del mouse su **Sessioni**, quindi scegliere **Nuova sessione**.  
   
-##  <a name="BeforeYouBegin"></a> Autorizzazioni  
+##  <a name="BeforeYouBegin"></a> Permissions  
  Per creare una sessione Eventi estesi, è necessario disporre dell'autorizzazione ALTER ANY EVENT SESSION.  
   
 ## <a name="to-create-an-extended-events-session-using-the-new-session-dialog"></a>Per creare una sessione Eventi estesi utilizzando la finestra di dialogo Nuova sessione  
@@ -59,7 +59,7 @@ ms.locfileid: "48150611"
   
 6.  Nella sezione **Rilevamento causalità** selezionare la casella di controllo **Tenere traccia della correlazione degli eventi** per tenere traccia del lavoro in più attività.  
   
-     Per altre informazioni sul rilevamento della causalità, vedere "Contenuto e caratteristiche della sessione" nell'argomento [Sessioni Eventi estesi di SQL Server](../relational-databases/extended-events/sql-server-extended-events-sessions.md) .  
+     Per altre informazioni sul rilevamento della causalità, vedere "Contenuto e caratteristiche della sessione" nel [sessioni eventi estesi di SQL Server](../relational-databases/extended-events/sql-server-extended-events-sessions.md) argomento.  
   
      Per aggiungere eventi alla sessione, fare clic su **Eventi** nella sezione **Selezione pagina**.  
   
@@ -166,7 +166,7 @@ ms.locfileid: "48150611"
     |**destinazione event_counter**|Non vi sono proprietà di destinazione per il contatore eventi.|  
     |**event_file**|**Nome file sul server**. Immettere la directory e il nome del file di destinazione nel server oppure fare clic su **Sfoglia** per trovare e selezionare il file di destinazione.<br /><br /> **Dimensioni massime file**. Specificare le dimensioni massime del file per la destinazione file. Se non si specifica un valore massimo, le dimensioni del file aumenteranno fino a quando il disco non è pieno. Le dimensioni predefinite del file sono di 1 gigabyte (GB). È possibile selezionare un'unità di archiviazione diversa nell'elenco a discesa.<br /><br /> **Consenti rollover dei file**. Selezionare questa casella di controllo per abilitare il rollover dei file per la destinazione file.<br /><br /> **Numero massimo di file**. Immettere il numero massimo di file che si desidera mantenere nel file system.|  
     |**Istogramma**|**Evento in base a cui filtrare**. Selezionare l'evento in base al quale si desidera applicare il filtro nell'elenco a discesa. È possibile applicare un filtro in base a qualsiasi evento incluso nella sessione eventi. È anche possibile selezionare  **\<None >** nell'elenco di riepilogo a discesa per includere tutti gli eventi e i bucket di base sull'azione.<br /><br /> **Bucket di base in: Azione**. Selezionare questa opzione per basare i bucket sul nome dell'azione utilizzato come origine dati, quindi selezionare l'azione nell'elenco a discesa.<br /><br /> **Bucket di base in: Campo**. Selezionare questa opzione per basare i bucket sul campo evento utilizzato come origine dati, quindi selezionare il campo nell'elenco a discesa.<br /><br /> **Numero massimo di bucket**. Immettere il numero massimo di bucket che si desidera mantenere. Quando questo valore viene raggiunto, nella sessione eventi vengono ignorati i nuovi eventi che non appartengono ai bucket esistenti.|  
-    |**pair_matching**|**Eventi: Inizia con**. Selezionare nell'elenco a discesa il nome di evento che specifica l'evento iniziale in una sequenza associata.<br /><br /> **Eventi: Termina con**. Selezionare nell'elenco a discesa il nome di evento che specifica l'evento finale in una sequenza associata.<br /><br /> **Campi e azioni: Inizia con**. Selezionare nell'elenco a discesa il campo e/o l'azione iniziale in una sequenza associata.<br /><br /> **Campi e azioni: Termina con**. Selezionare nell'elenco a discesa il campo e/o l'azione finale in una sequenza associata.<br /><br /> **Elimina nuovi eventi non associati in caso di memoria insufficiente**. Selezionare questa casella di controllo per interrompere la raccolta di eventi nella destinazione pair_matching quando vi è un utilizzo eccessivo della memoria del computer. La raccolta di eventi riprenderà non appena viene liberata memoria.<br /><br /> **Numero massimo di eventi orfani**. Specificare il numero massimo di eventi orfani che si desidera mantenere in memoria.|  
+    |**pair_matching**|**Eventi: Iniziare con**. Selezionare nell'elenco a discesa il nome di evento che specifica l'evento iniziale in una sequenza associata.<br /><br /> **Eventi: Terminare con**. Selezionare nell'elenco a discesa il nome di evento che specifica l'evento finale in una sequenza associata.<br /><br /> **Campi e azioni: Iniziare con**. Selezionare nell'elenco a discesa il campo e/o l'azione iniziale in una sequenza associata.<br /><br /> **Campi e azioni: Terminare con**. Selezionare nell'elenco a discesa il campo e/o l'azione finale in una sequenza associata.<br /><br /> **Elimina nuovi eventi non associati in caso di memoria insufficiente**. Selezionare questa casella di controllo per interrompere la raccolta di eventi nella destinazione pair_matching quando vi è un utilizzo eccessivo della memoria del computer. La raccolta di eventi riprenderà non appena viene liberata memoria.<br /><br /> **Numero massimo di eventi orfani**. Specificare il numero massimo di eventi orfani che si desidera mantenere in memoria.|  
     |**ring_buffer**|**Numero di eventi da mantenere**. Utilizzare le frecce rivolte verso l'alto e verso il basso per specificare il numero di eventi che si desidera mantenere. Il valore predefinito è 1000.<br /><br /> **Dimensioni massime memoria buffer**. Immettere la quantità massima di memoria che può essere utilizzata. Quando questo valore viene raggiunto, gli eventi esistenti vengono eliminati. Il valore predefinito per le dimensioni della memoria è 0 megabyte (MB), che indica dimensioni illimitate. È possibile selezionare un'unità di archiviazione diversa nell'elenco a discesa.<br /><br /> **Mantenere un numero specificato di eventi (per tipo) quando il buffer è pieno**. Selezionare questa opzione per mantenere il numero specificato di eventi di ogni tipo nel buffer.<br /><br /> **Numero di eventi da mantenere (per tipo)**. Immettere il numero desiderato di eventi di ogni tipo da mantenere nel buffer.|  
   
 5.  Per impostare le proprietà di configurazione avanzate, selezionare **Avanzate** nella sezione **Selezione pagina** .  

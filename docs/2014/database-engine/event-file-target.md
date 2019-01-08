@@ -15,26 +15,26 @@ ms.assetid: 4f0ee6ec-a0a8-4c38-aa61-8293ab6ac7fd
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 66777a5db1812d1a63e100d4a02522bc1ac3b43a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4ea74f0361d5152ade31a91424d594d376e513f8
+ms.sourcegitcommit: b5cea9c67c7f896944065f09dace17b4929a34f7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48092853"
+ms.lasthandoff: 11/21/2018
+ms.locfileid: "52267896"
 ---
 # <a name="event-file-target"></a>Event File Target
   La destinazione file di eventi è una destinazione che esegue la scrittura di buffer completi sul disco.  
   
  La tabella seguente descrive le opzioni disponibili per configurare un file di eventi usato come destinazione.  
   
-|Opzione|Valori consentiti|Description|  
+|Opzione|Valori consentiti|Descrizione|  
 |------------|--------------------|-----------------|  
 |filename|Qualsiasi stringa contenente fino a 260 caratteri. Questo valore è obbligatorio.|Percorso del file e nome del file.<br /><br /> È possibile usare qualsiasi estensione per il file.|  
 |max_file_size|Qualsiasi valore intero a 64 bit. Questo valore è facoltativo.|Dimensioni massime del file in megabyte (MB). Se l'opzione max_file_size non è specificata, le dimensioni del file aumenteranno fino a quando il disco non è pieno. Il valore delle dimensioni predefinite del file è 1 GB.<br /><br /> Il valore di max_file_size deve essere maggiore delle dimensioni correnti dei buffer della sessione. In caso contrario, il file di destinazione non verrà inizializzato in modo corretto e verrà segnalato che il valore di max_file_size non è valido. Per visualizzare le dimensioni correnti dei buffer, eseguire una query sulla colonna buffer_size nella vista a gestione dinamica [sys.dm_xe_sessions](/sql/relational-databases/system-dynamic-management-views/sys-dm-xe-sessions-transact-sql) .<br /><br /> Se le dimensioni predefinite del file sono minori di quelle del buffer della sessione, è consigliabile impostare max_file_size sul valore specificato nella colonna max_memory nella vista del catalogo [sys.server_event_sessions](/sql/relational-databases/system-catalog-views/sys-server-event-sessions-transact-sql) .<br /><br /> Quando l'opzione max_file_size è impostata su dimensioni maggiori di quelle dei buffer della sessione, il valore può essere arrotondato per difetto al multiplo più vicino delle dimensioni dei buffer della sessione. In questo modo è possibile creare un file di destinazione minore del valore specificato di max_file_size. Se il valore delle dimensioni del buffer, ad esempio, è 100 MB e max_file_size è impostato su 150 MB, le dimensioni del file risultante vengono arrotondate per difetto al valore 100 MB perché i 50 MB di spazio non sarebbero sufficienti per il secondo buffer.<br /><br /> Se le dimensioni predefinite del file sono minori di quelle del buffer della sessione, è consigliabile impostare max_file_size sul valore nella colonna max_memory nella vista del catalogo [sys.server_event_sessions](/sql/relational-databases/system-catalog-views/sys-server-event-sessions-transact-sql) .|  
 |max_rollover_files|Qualsiasi valore intero a 32 bit. Questo valore è facoltativo.|Numero massimo di file da mantenere nel file system. Il valore predefinito è 5.|  
 |increment|Qualsiasi valore intero a 32 bit. Questo valore è facoltativo.|Crescita incrementale del file in megabyte (MB). Se non viene specificato, il valore predefinito per questa opzione è il doppio delle dimensioni del buffer della sessione.|  
   
- La prima volta che viene creata una destinazione del file di evento, il nome del file specificato viene aggiunto con _0\_ e un valore long integer. Il valore intero viene calcolato come il numero di millisecondi compresi tra l'1 gennaio 1600 e la data e l'ora di creazione del file. Questo formato viene usato anche da file di rollover successivi. L'analisi del valore long integer consente di determinare il file più recente. Nell'esempio seguente viene illustrato come denominare i file in uno scenario in cui l'opzione relativa al nome di file viene specificata come C:\OutputFiles\MyOutput.xel:  
+ La prima volta che viene creata una destinazione del file di evento, il nome del file specificato viene aggiunto con _0\_ e un valore long integer. Il valore intero viene calcolato come il numero di millisecondi compresi tra 1 gennaio 1601 e la data e ora il file viene creato. Questo formato viene usato anche da file di rollover successivi. L'analisi del valore long integer consente di determinare il file più recente. Nell'esempio seguente viene illustrato come denominare i file in uno scenario in cui l'opzione relativa al nome di file viene specificata come C:\OutputFiles\MyOutput.xel:  
   
 -   primo file creato - C:\OutputFiles\MyOutput_0_128500310259380000.xel  
   

@@ -15,15 +15,15 @@ ms.assetid: aaaa864a-6477-45ff-a50a-96d8db66a252
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cc3fc5502ee76cfd6aabb98eb719ca318026b73c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e41d71cd3651e1db5d1a533159012b645b8c7764
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47802461"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52504595"
 ---
 # <a name="core-interface-conformance"></a>Conformità di interfaccia Core
-Tutti i driver ODBC devono includere almeno a livello di base della conformità di interfaccia. Poiché le funzionalità di livello principale sono quelle richieste dalle applicazioni interoperative più generiche, il driver può lavorare con tali applicazioni. Le funzionalità di livello principale corrispondono anche alle funzionalità definite nella specifica ISO CLI e con le funzionalità necessari definite nella specifica Open dell'interfaccia della riga di gruppo. Un driver ODBC a livello di base conforme allo standard dell'interfaccia consente all'applicazione di eseguire tutte le operazioni seguenti:  
+Tutti i driver ODBC devono includere almeno a livello di base della conformità di interfaccia. Poiché le funzionalità di livello principale sono quelle richieste dalle applicazioni interoperative più generiche, il driver può lavorare con tali applicazioni. Le funzionalità di livello principale corrispondono anche alle funzionalità definite nella specifica ISO CLI e con le funzionalità necessari definite nella specifica Open dell'interfaccia della riga di gruppo. Un driver ODBC di interfaccia conformi a livello di base consente all'applicazione di eseguire tutte le operazioni seguenti:  
   
 -   Alloca e libera tutti i tipi di handle, chiamando **SQLAllocHandle** e **SQLFreeHandle**.  
   

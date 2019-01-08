@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - vdt.designers.properties.Column.ColumnIdentitySpec
@@ -16,12 +16,12 @@ ms.assetid: e549a2a8-4154-4ec8-b146-614564169b39
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ef49a4bee27339849cd7b2ec0f5d64701804284a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9865425573ae3d9c8f2e16af0da283c5ea684150
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48120303"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52757583"
 ---
 # <a name="column-properties-visual-database-tools"></a>Proprietà colonne (Visual Database Tools)
   Per le colonne sono disponibili due set di proprietà: il set completo, visualizzabile nella scheda **Proprietà colonna** in Progettazione tabelle (disponibile solo per i database di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) e un subset, visualizzabile nella finestra Proprietà in Esplora server.  
@@ -41,7 +41,7 @@ ms.locfileid: "48120303"
  **Categoria Identità**  
  Viene espansa per visualizzare le proprietà **Nome** e **Database** .  
   
- **Nome**  
+ **Name**  
  Consente di visualizzare il nome della colonna.  
   
  **Database**  
@@ -62,7 +62,7 @@ ms.locfileid: "48120303"
  **Identità**  
  Indica se la colonna selezionata è la colonna di identità per la tabella. (si applica solo a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]).  
   
- **Length**  
+ **Lunghezza**  
  Indica il numero di caratteri consentiti per i tipi di dati basati su caratteri.  
   
  **Ammette valori Null**  
@@ -83,7 +83,7 @@ ms.locfileid: "48120303"
  **Categoria Generale**  
  Viene espansa per visualizzare le proprietà **Nome**, **Consenti valori Null**, **Tipo di dati**, **Valore predefinito dell'associazione**, **Lunghezza**, **Precisione**e **Scala**.  
   
- **Nome**  
+ **Name**  
  Consente di visualizzare il nome della colonna. Per modificare il nome, digitarlo nella casella di testo.  
   
 > [!CAUTION]  
@@ -111,7 +111,7 @@ ms.locfileid: "48120303"
  Viene espansa per visualizzare le proprietà rimanenti.  
   
  **Regole di confronto**  
- Indica l'impostazione delle regole di confronto per la colonna selezionata. Per modificare questa impostazione, scegliere **Regole di confronto** e fare clic sui puntini di sospensione **(…)** a destra del valore.  
+ Indica l'impostazione delle regole di confronto per la colonna selezionata. Per modificare questa impostazione, scegliere **Regole di confronto** e fare clic sui puntini di sospensione **(...)** a destra del valore.  
   
  **Categoria Specifica colonna calcolata**  
  Si espande per visualizzare le proprietà **Formula** e **Persistente**. Se la colonna è calcolata, verrà visualizzata anche la formula. Per modificare la formula, espandere questa categoria e apportare la modifica nella proprietà **Formula** .  
@@ -126,7 +126,7 @@ ms.locfileid: "48120303"
  Consente di visualizzare informazioni sul tipo di dati del campo, nello stesso formato dell'istruzione SQL CREATE TABLE. Un campo contenente ad esempio una stringa di lunghezza variabile con un massimo di 20 caratteri viene rappresentato come "varchar(20)". Per modificare questa proprietà, digitare direttamente il valore desiderato.  
   
  **Descrizione**  
- Consente di visualizzare la descrizione della colonna. Per visualizzare la descrizione completa o modificarla, fare clic su Descrizione e sui puntini di sospensione **(…)** a destra della proprietà.  
+ Consente di visualizzare la descrizione della colonna. Per visualizzare la descrizione completa o modificarla, fare clic su Descrizione e sui puntini di sospensione **(...)** a destra della proprietà.  
   
  **Categoria Specifica full-text**  
  Viene espansa per visualizzare le proprietà specifiche per le colonne full-text.  

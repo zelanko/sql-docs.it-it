@@ -13,12 +13,12 @@ ms.assetid: 414ee58a-8251-4367-9a8e-10c068d17280
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 68a2b5b9a48523193f263ae0bba1c8eaddc186c0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: be7e09d5254efc35761b267655a8949e4b09173d
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48207321"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52403615"
 ---
 # <a name="rsprocessingerror---reporting-services-error"></a>rsProcessingError - Errore di Reporting Services
     
@@ -56,7 +56,7 @@ ms.locfileid: "48207321"
   
 -   Un parametro con le proprietà che ammette valori null è impostata su `False` ha rilevato un valore null nel parametro.  
   
--   Un'espressione relativa alla proprietà Hidden di un'area dati contiene il seguente errore: "Riferimento oggetto non impostato su un'istanza di un oggetto".  
+-   Un'espressione per la proprietà Hidden di un'area dati contiene un errore: "Riferimento oggetto non impostato su un'istanza di un oggetto".  
   
 -   Un'espressione ha incluso una chiamata di funzione non valida oppure un errore di sintassi.  
   
@@ -76,18 +76,18 @@ ms.locfileid: "48207321"
 -   Se l'accesso al server di report è stato eseguito come amministratore locale, ricercare `ReportProcessingException`nel file di log. Le voci del log contengono ulteriori informazioni. Il file di log del server di report si trova in genere nel percorso \<*unità*>:\Programmi\Microsoft SQL Server\MSRS12.MSSQLSERVER\Reporting Services\LogFiles\ReportServerService__*datetimestamp*.log. Per altre informazioni, vedere [File di log e origini di Reporting Services](../report-server/reporting-services-log-files-and-sources.md).  
   
 ### <a name="failed-to-load-expression-host-assembly"></a>Impossibile caricare l'assembly delle espressioni  
- Gli assembly personalizzati devono essere firmati con nome sicuro. È inoltre necessario che il relativo attributo AllowPartiallyTrustedCallers sia impostato. Per altre informazioni, vedere [utilizzo di assembly personalizzati con i report](../custom-assemblies/using-custom-assemblies-with-reports.md) e [informazioni sui criteri di sicurezza](../extensions/secure-development/understanding-security-policies.md).  
+ Gli assembly personalizzati devono essere firmati con nome sicuro. È inoltre necessario che il relativo attributo AllowPartiallyTrustedCallers sia impostato. Per altre informazioni, vedere [Utilizzo di assembly personalizzati con i report](../custom-assemblies/using-custom-assemblies-with-reports.md) e [Informazioni sui criteri di sicurezza](../extensions/secure-development/understanding-security-policies.md).  
   
 ### <a name="a-built-in-global-name-does-not-exist"></a>Impossibile trovare un nome globale predefinito  
  Controllare l'ortografia nelle espressioni. I nomi predefiniti globali, dei parametri e dei campi rispettano la distinzione tra maiuscole e minuscole. Nell'espressione che provoca l'errore controllare che il nome esista effettivamente nel report e che sia stato digitato correttamente. Per altre informazioni, vedere [Raccolte predefinite nelle espressioni &#40;Generatore report e SSRS&#41;](../report-design/built-in-collections-in-expressions-report-builder.md).  
   
 ### <a name="parameter-properties-and-null"></a>Proprietà dei parametri e valori Null  
- Il valore di un parametro multivalore non può essere Null. Per altre informazioni, vedere [Report Parameters &#40;Report Builder and Report Designer&#41;](../report-design/report-parameters-report-builder-and-report-designer.md).  
+ Il valore di un parametro multivalore non può essere Null. Per ulteriori informazioni, vedere la pagina relativa al [Parametri report &#40;Generatore report e Progettazione report&#41;](../report-design/report-parameters-report-builder-and-report-designer.md).  
   
 ### <a name="main-report-with-subreport-could-not-be-processed"></a>Impossibile elaborare un report principale con sottoreport  
  È necessario che un report con sottoreport venga elaborato dalla stessa versione di Elaborazione report di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Durante l'aggiornamento di report alla versione corrente dello schema di definizione del report, è possibile che il report principale e i sottoreport non vengano aggiornati contemporaneamente. Se la versione di un report non è compatibile con quella dei sottoreport, viene visualizzato un messaggio di errore che indica l'impossibilità di elaborare il sottoreport.  
   
- È necessario modificare il report principale o i sottoreport in modo che tutti i report possano essere elaborati dalla stessa versione di Elaborazione report. Per informazioni sui motivi per cui un report non riesce a eseguire l'aggiornamento, vedere [aggiornare i report](../install-windows/upgrade-reports.md).  
+ È necessario modificare il report principale o i sottoreport in modo che tutti i report possano essere elaborati dalla stessa versione di Elaborazione report. Per informazioni sui motivi relativi all'impossibilità di aggiornare un report, vedere [Aggiornare i report](../install-windows/upgrade-reports.md).  
   
 ### <a name="verify-function-calls-are-visual-basic-and-not-sql"></a>Chiamate di funzione di Visual Basic e non SQL  
  È possibile usare le funzioni SQL nel testo della query in un database relazionale. Nel testo della query non è possibile usare funzioni [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .  
@@ -105,7 +105,7 @@ ms.locfileid: "48207321"
   
 -   Impossibile valutare *\<nome proprietà>*. Fa riferimento a un campo del set di dati che contiene un errore: *\<stringa di errore>*.  
   
- Per altre informazioni, vedere [Filtrare, raggruppare e ordinare i dati &#40;Generatore report e SSRS&#41;](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md).  
+ Per altre informazioni, vedere [Filtro, raggruppamento e ordinamento di dati &#40;Generatore report e SSRS&#41;](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md).  
   
 ### <a name="invalid-or-conflicting-scope-specification-in-an-aggregate-function-call"></a>Specifica di un ambito non valido o in conflitto in una chiamata di funzione di aggregazione  
  Quando si includono chiamate di funzioni di aggregazione in un'espressione di una cella Tablix, in Elaborazione report l'espressione viene valutata nell'ambito dei gruppi più interni cui la cella appartiene.  
@@ -127,12 +127,12 @@ ms.locfileid: "48207321"
   
 ## <a name="see-also"></a>Vedere anche  
  [Espressioni &#40;Generatore report e SSRS&#41;](../report-design/expressions-report-builder-and-ssrs.md)   
- [Riferimento a funzioni di aggregazione &#40;Report e SSRS&#41;](../report-design/report-builder-functions-aggregate-functions-reference.md)   
+ [Riferimento a funzioni di aggregazione &#40;Generatore report e SSRS&#41;](../report-design/report-builder-functions-aggregate-functions-reference.md)   
  [Esempi di espressioni &#40;Generatore report e SSRS&#41;](../report-design/expression-examples-report-builder-and-ssrs.md)   
  [Aggiungere dati a un Report &#40;Report e SSRS&#41;](../report-data/report-datasets-ssrs.md)   
  [Filtri di uso comune &#40;Generatore report e SSRS&#41;](../report-design/commonly-used-filters-report-builder-and-ssrs.md)   
  [Raccolta di campi del set di dati &#40;Generatore report e SSRS&#41;](../report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
  [Riferimenti a codice personalizzato e ad assembly in espressioni in Progettazione report &#40;SSRS&#41;](../report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)   
- [Riferimenti alla raccolta Parameters &#40;Report e SSRS&#41;](../report-design/built-in-collections-parameters-collection-references-report-builder.md)  
+ [Riferimenti alla raccolta dei parametri &#40;Generatore report e SSRS&#41;](../report-design/built-in-collections-parameters-collection-references-report-builder.md)  
   
   

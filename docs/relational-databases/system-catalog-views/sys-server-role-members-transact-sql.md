@@ -21,19 +21,19 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9b5234cf66bc5f829ab9d83c2642da14b5716161
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4107e6c1f675f7fae78ca384c082ef12c2fa309b
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47735449"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52406458"
 ---
 # <a name="sysserverrolemembers-transact-sql"></a>sys.server_role_members (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
 
   Restituisce una riga per ogni membro di ogni ruolo del server predefinito e definito dall'utente.  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**role_principal_id**|**int**|ID dell'entità server del ruolo.|  
 |**member_principal_id**|**int**|ID dell'entità server del membro.|  
@@ -41,7 +41,7 @@ ms.locfileid: "47735449"
  Per aggiungere o rimuovere l'appartenenza al ruolo di server, usare il [ALTER SERVER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-role-transact-sql.md)istruzione.  
   
 ## <a name="permissions"></a>Permissions  
- Gli account di accesso possono visualizzare la propria appartenenza al ruolo del server e visualizzare gli oggetti principal_id dei membri dei ruoli predefiniti del server. Per visualizzare tutte le appartenenze al ruolo del server, è necessario il **VIEW DEFINITION ON SERVER ROLE** autorizzazioni o appartenenza al gruppo il **securityadmin** ruolo predefinito del server.  
+ Gli account di accesso possono visualizzare la propria appartenenza al ruolo di server e visualizzare gli oggetti principal_id dei membri dei ruoli predefiniti del server. Per visualizzare tutte le appartenenze al ruolo del server, è necessario il **VIEW DEFINITION ON SERVER ROLE** autorizzazioni o appartenenza al gruppo il **securityadmin** ruolo predefinito del server.  
   
  Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   

@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Management Studio [SQL Server], Help
@@ -14,12 +14,12 @@ ms.assetid: 59f76b28-ba78-4a1a-b5d5-8b581f30114d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f4917da0fcf09abacff567c7525cc01dce1db590
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fc15477759c7039533250cf98323729334cf5b80
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48116838"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52770433"
 ---
 # <a name="registered-servers-f1-help"></a>Guida sensibile al contesto di Server registrati
   In questa sezione vengono forniti gli argomenti della Guida sensibile al contesto relativi al componente Server registrati di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  

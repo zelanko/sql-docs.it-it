@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.maint.maintplanproperties.integrity.f1
@@ -16,12 +15,12 @@ ms.assetid: 3534494a-5dfe-4738-b49a-e7fabd731c47
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 5385aec450862a1f09dad45d94376f6f17a8d13a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 42fa69e6456b23f95d6a203062b580bd04f443fa
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48145941"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52779143"
 ---
 # <a name="check-database-integrity-task-maintenance-plan"></a>Attività Controlla integrità database (Piano di manutenzione)
   Usare la finestra di dialogo **Attività Controlla integrità database** per controllare l'allocazione e l'integrità strutturale delle tabelle utente e di sistema e degli indici del database eseguendo l'istruzione `DBCC CHECKDB`[!INCLUDE[tsql](../../includes/tsql-md.md)] . L'esecuzione di `DBCC` consente di individuare gli eventuali problemi di integrità nel database, in modo che l'amministratore di sistema o il proprietario del database possa analizzarli e correggerli in un secondo momento.  

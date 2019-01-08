@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - functional area permissions [Master Data Services], about functional area permissions
@@ -15,12 +14,12 @@ ms.assetid: a80b87b3-b904-4cda-8582-0761c2617c57
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 4332afe3936740fa801810676f301b8fefbe35c4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e856d99078363ee7c756dcbc98d99cce30fd2f0f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48202441"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52748103"
 ---
 # <a name="functional-area-permissions-master-data-services"></a>Autorizzazioni per aree funzionali (Master Data Services)
   È possibile assegnare autorizzazioni a ogni area funzionale dell'interfaccia utente di [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] . Sono presenti cinque aree funzionali, ovvero:  
@@ -44,7 +43,7 @@ ms.locfileid: "48202441"
 ## <a name="see-also"></a>Vedere anche  
  [Assegnare autorizzazioni per aree funzionali &#40;Master Data Services&#41;](../../2014/master-data-services/assign-functional-area-permissions-master-data-services.md)   
  [Autorizzazioni per oggetti modello &#40;Master Data Services&#41;](../../2014/master-data-services/model-object-permissions-master-data-services.md)   
- [Le autorizzazioni membri gerarchia &#40;Master Data Services&#41;](../../2014/master-data-services/hierarchy-member-permissions-master-data-services.md)   
- [Come vengono determinate le autorizzazioni &#40;Master Data Services&#41;](../../2014/master-data-services/how-permissions-are-determined-master-data-services.md)  
+ [Autorizzazioni membri gerarchie &#40;Master Data Services&#41;](../../2014/master-data-services/hierarchy-member-permissions-master-data-services.md)   
+ [Modalità di determinazione delle autorizzazioni &#40;Master Data Services&#41;](../../2014/master-data-services/how-permissions-are-determined-master-data-services.md)  
   
   

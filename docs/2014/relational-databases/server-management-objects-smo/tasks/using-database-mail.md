@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: ''
 ms.topic: reference
 helpviewer_keywords:
 - e-mail [SMO]
@@ -16,15 +14,15 @@ ms.assetid: 7605390f-b485-48cc-8d97-e364a066067b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: fcf6e57ed33e0799ae61610fdb15bd59aea45de8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 232ea094ac81badfe7a6ec378371b55a0b08103b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48221571"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52758533"
 ---
 # <a name="using-database-mail"></a>Utilizzo di Posta elettronica database
-  In SMO il sottosistema Posta elettronica database è rappresentato dall'oggetto <xref:Microsoft.SqlServer.Management.Smo.Mail.SqlMail> a cui fa riferimento la proprietà <xref:Microsoft.SqlServer.Management.Smo.Server.Mail%2A>. Tramite l'oggetto <xref:Microsoft.SqlServer.Management.Smo.Mail.SqlMail> SMO, è possibile configurare il sottosistema Posta elettronica database e gestire profili e account di posta elettronica. SMO <xref:Microsoft.SqlServer.Management.Smo.Mail.SqlMail> appartiene l'oggetto di `Server` oggetti, vale a dire che l'ambito degli account di posta elettronica è a livello di server.  
+  In SMO il sottosistema Posta elettronica database è rappresentato dall'oggetto <xref:Microsoft.SqlServer.Management.Smo.Mail.SqlMail> a cui fa riferimento la proprietà <xref:Microsoft.SqlServer.Management.Smo.Server.Mail%2A>. Tramite l'oggetto <xref:Microsoft.SqlServer.Management.Smo.Mail.SqlMail> SMO, è possibile configurare il sottosistema Posta elettronica database e gestire profili e account di posta elettronica. L'oggetto <xref:Microsoft.SqlServer.Management.Smo.Mail.SqlMail> SMO appartiene all'oggetto `Server`, di conseguenza l'ambito degli account di posta elettronica è a livello del server.  
   
 ## <a name="examples"></a>Esempi  
  Per usare qualsiasi esempio di codice fornito, è necessario scegliere l'ambiente di programmazione, il modello di programmazione e il linguaggio di programmazione per la creazione dell'applicazione. Per altre informazioni, vedere [creare un progetto Visual Basic SMO in Visual Studio .NET](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) oppure [creare un Visual C#&#35; progetto SMO in Visual Studio .NET](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  

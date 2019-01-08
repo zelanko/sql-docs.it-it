@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - merge replication [SQL Server replication], download-only articles
@@ -15,12 +14,12 @@ ms.assetid: 14839cec-6dbf-49c2-aa27-56847b09b4db
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 694644e51b134c0063c0162b163b83e94e53354a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5594c811642225336586c8bce040f7f69724cadb
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48145001"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52756193"
 ---
 # <a name="specify-that-a-merge-table-article-is-download-only"></a>Impostazione del tipo solo download per un articolo di tabella di merge
   In questo argomento viene descritto come specificare che un articolo di tabella del merge è di solo download in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Gli articoli di solo download sono progettati per le applicazioni i cui dati non vengono aggiornati nei Sottoscrittori. Per altre informazioni, vedere [Ottimizzare le prestazioni della replica di tipo merge con gli articoli di solo download](../merge/optimize-merge-replication-performance-with-download-only-articles.md).  
@@ -64,7 +63,7 @@ ms.locfileid: "48145001"
   
 4.  Se è visualizzata la finestra di dialogo **Proprietà pubblicazione - \<Pubblicazione>** fare clic su **OK** per salvare e chiudere la finestra di dialogo.  
   
-##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
   
 #### <a name="to-specify-that-a-new-merge-table-article-is-download-only"></a>Per specificare che un nuovo articolo di tabella di merge è di solo download  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: profiler
 ms.topic: conceptual
 helpviewer_keywords:
 - global trace options [SQL Server]
@@ -13,12 +12,12 @@ ms.assetid: 2854608a-c3c7-4eb8-b567-034bfec4b1a9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f46ddc342a3b10a757215882b08032eaee1f0f44
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c09927de3c10ab3b937101edc6b9da37503abb11
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48219631"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52775383"
 ---
 # <a name="set-global-trace-options-sql-server-profiler"></a>Impostare opzioni di traccia globali (SQL Server Profiler)
   In questo argomento viene illustrato come impostare opzioni applicabili a tutte le tracce create in un'istanza specifica di [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
@@ -45,7 +44,7 @@ ms.locfileid: "48219631"
   
     -   L'opzione**Numero predefinito di thread di riproduzione** consente di controllare il numero di thread del processore da usare durante la riproduzione. Un numero elevato di thread consente un completamento più rapido della riproduzione, ma provoca la riduzione delle prestazioni del server durante la riproduzione. L'impostazione consigliata è **4**. Nella tabella seguente sono elencate le opzioni disponibili:  
   
-        |valore|Description|  
+        |Value|Descrizione|  
         |-----------|-----------------|  
         |**2**|Valore minimo. Per la riproduzione vengono utilizzati due thread.|  
         |**4**|Valore predefinito.|  
@@ -53,7 +52,7 @@ ms.locfileid: "48219631"
   
     -   L'opzione**Intervallo di attesa predefinito Health Monitor (sec)** consente di impostare la quantità di tempo massima in secondi per cui un altro processo può essere bloccato da parte di un thread di riproduzione. Nella tabella riportata di seguito vengono illustrati i valori consentiti.  
   
-        |valore|Description|  
+        |Value|Descrizione|  
         |-----------|-----------------|  
         |**0**|Valore minimo. Se si imposta il valore **0** , [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] non arresterà mai un processo di blocco.|  
         |**3600**|Valore predefinito. Sono consentiti processi di blocco che non superano **3600** secondi, ovvero un'ora.|  
@@ -61,14 +60,14 @@ ms.locfileid: "48219631"
   
     -   L'opzione**Intervallo di polling predefinito Health Monitor (sec)** consente di impostare la frequenza del polling dei thread di riproduzione per i processi di blocco. Nella tabella riportata di seguito vengono illustrati i valori consentiti.  
   
-        |valore|Description|  
+        |Value|Descrizione|  
         |-----------|-----------------|  
         |**1**|Valore minimo. Se si imposta il valore **1** , [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] eseguirà il polling dei processi di blocco una volta al secondo.|  
         |**60**|Valore predefinito. Il polling dei processi di blocco viene eseguito una volta al minuto.|  
         |**86400**|Valore massimo. Il polling dei processi di blocco viene eseguito una volta ogni **86400** secondi, ovvero una volta al giorno.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Impostare i valori predefiniti di visualizzazione traccia &#40;SQL Server Profiler&#41;](sql-server-profiler.md)   
+ [Impostare i valori predefiniti per la visualizzazione delle tracce &#40;SQL Server Profiler&#41;](sql-server-profiler.md)   
  [SQL Server Profiler](sql-server-profiler.md)  
   
   

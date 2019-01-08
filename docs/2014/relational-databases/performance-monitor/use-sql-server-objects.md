@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - server performance [SQL Server], objects for monitoring
@@ -30,12 +30,12 @@ ms.assetid: bcd731b1-3c4e-4086-b58a-af7a3af904ad
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 0678c741387e6b9e3a252d03fcebad8dcb5e5a52
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: de0e30a3d0b7daf014753c225ca34bf7a1b0cd17
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48133031"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52753593"
 ---
 # <a name="use-sql-server-objects"></a>Utilizzare oggetti di SQL Server
   Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rende disponibili oggetti e contatori utilizzabili in Monitoraggio di sistema per il monitoraggio dell'attività nei computer che eseguono un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per oggetto si intende qualsiasi risorsa di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , ad esempio un blocco di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o un processo di Windows. Ogni oggetto contiene uno o più contatori che determinano diversi aspetti degli oggetti da monitorare. Ad esempio, l'oggetto **SQL Server Locks** contiene i contatori **Numero di blocchi critici deadlock/sec** e **Timeout blocchi/sec**.  
@@ -66,7 +66,7 @@ ms.locfileid: "48133031"
 ##  <a name="SQLServerAgentPOs"></a> Oggetti prestazione di SQL Server Agent  
  Nella tabella seguente sono indicati gli oggetti prestazione disponibili per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent:  
   
-|Oggetto prestazione|Description|  
+|Oggetto prestazione|Descrizione|  
 |------------------------|-----------------|  
 |[SQLAgent:Avvisi](sql-server-agent-alerts-object.md)|Offre informazioni relative agli avvisi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.|  
 |[SQLAgent:Processi](sql-server-agent-jobs-object.md)|Offre informazioni relative ai processi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.|  
@@ -76,7 +76,7 @@ ms.locfileid: "48133031"
 ##  <a name="ServiceBrokerPOs"></a> Oggetti prestazione di Service Broker  
  Nella tabella seguente sono indicati gli oggetti prestazione disponibili per [!INCLUDE[ssSB](../../includes/sssb-md.md)].  
   
-|Oggetto prestazione|Description|  
+|Oggetto prestazione|Descrizione|  
 |------------------------|-----------------|  
 |[SQLServer:Attivazione Broker](sql-server-broker-activation-object.md)|Offe informazioni sulle attività attivate da [!INCLUDE[ssSB](../../includes/sssb-md.md)].|  
 |[SQLServer:Statistiche Broker](sql-server-broker-statistics-object.md)|Offre informazioni generali relative a [!INCLUDE[ssSB](../../includes/sssb-md.md)] .|  
@@ -85,7 +85,7 @@ ms.locfileid: "48133031"
 ##  <a name="SQLServerPOs"></a> Oggetti prestazione di SQL Server  
  Nella seguente tabella vengono descritti gli oggetti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-|Oggetto prestazione|Description|  
+|Oggetto prestazione|Descrizione|  
 |------------------------|-----------------|  
 |[SQLServer:Access Methods](sql-server-access-methods-object.md)|Ricerca e misura l'allocazione degli oggetti di database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ad esempio, il numero di ricerche eseguite negli indici o il numero di pagine allocate per gli indici e i dati).|  
 |[SQLServer:Backup Device](sql-server-backup-device-object.md)|Offre informazioni sui dispositivi di backup utilizzati nelle operazioni di backup e ripristino, ad esempio la velocità effettiva del dispositivo di backup.|  
@@ -105,20 +105,20 @@ ms.locfileid: "48133031"
 |[SQLServer:Locks](sql-server-locks-object.md)|Offre informazioni sulle singole richieste di blocco eseguite da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ad esempio i timeout dei blocchi e i deadlock. Possono essere presenti più istanze di questo oggetto.|  
 |[SQLServer:Gestione memoria](sql-server-memory-manager-object.md)|Offre informazioni sull'utilizzo della memoria di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , ad esempio il numero totale delle strutture di blocco attualmente allocate.|  
 |[SQLServer:Plan Cache](sql-server-plan-cache-object.md)|Offre informazioni sulla cache di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizzata per archiviare oggetti, ad esempio stored procedure, trigger e piani delle query.|  
-|[SQLServer: Statistiche del pool di risorse](sql-server-resource-pool-stats-object.md)|Fornisce informazioni sulle statistiche del pool di risorse di Resource Governor.|  
+|[SQLServer: Statistiche del Pool di risorse](sql-server-resource-pool-stats-object.md)|Fornisce informazioni sulle statistiche del pool di risorse di Resource Governor.|  
 |[SQLServer:SQL Errors](sql-server-sql-errors-object.md)|Offre informazioni relative agli errori di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |[SQLServer:Statistiche SQL](sql-server-sql-statistics-object.md)|Offre informazioni su aspetti delle query [!INCLUDE[tsql](../../includes/tsql-md.md)] , ad esempio il numero dei batch di istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] ricevuti da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |[SQLServer:Transactions](sql-server-transactions-object.md)|Offre informazioni sulle transazioni attive in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ad esempio il numero totale di transazioni e il numero di transazioni snapshot.|  
 |[SQLServer:User Settable](sql-server-user-settable-object.md)|Esegue un monitoraggio personalizzato. Ogni contatore può essere rappresentato da una stored procedure personalizzata o da qualsiasi istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] che restituisce un valore da monitorare.|  
-|[SQLServer: Wait Statistics](sql-server-wait-statistics-object.md)|Offre informazioni relative alle attese.|  
-|[SQLServer: Statistiche gruppi del carico di lavoro](sql-server-workload-group-stats-object.md)|Offre informazioni sulle statistiche dei gruppi del carico di lavoro di Resource Governor.|  
+|[SQLServer: Le statistiche di attesa](sql-server-wait-statistics-object.md)|Offre informazioni relative alle attese.|  
+|[SQLServer: : Statistiche gruppi del carico di lavoro](sql-server-workload-group-stats-object.md)|Offre informazioni sulle statistiche dei gruppi del carico di lavoro di Resource Governor.|  
   
 ##  <a name="SQLServerReplicationPOs"></a> Oggetti prestazione della replica di SQL Server  
  Nella tabella seguente sono indicati gli oggetti prestazione disponibili per la replica di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  
   
-|Oggetto prestazione|Description|  
+|Oggetto prestazione|Descrizione|  
 |------------------------|-----------------|  
-|**SQLServer:Agenti di replica**<br /><br /> **SQLServer:Replication Snapshot**<br /><br /> **SQLServer:Replication Logreader**<br /><br /> **SQLServer:Replication Dist.**<br /><br /> **SQLServer:Replication Merge**<br /><br /> Per altre informazioni, vedere [Monitoring Replication with System Monitor](../replication/monitor/monitoring-replication-with-system-monitor.md).|Offre informazioni relative all'attività dell'agente di replica.|  
+|**SQLServer:Agenti di replica**<br /><br /> **SQLServer:Replication Snapshot**<br /><br /> **SQLServer:Replication Logreader**<br /><br /> **SQLServer:Replication Dist.**<br /><br /> **SQLServer:Replication Merge**<br /><br /> Per altre informazioni, vedere [Monitoraggio della replica con Monitor di sistema](../replication/monitor/monitoring-replication-with-system-monitor.md).|Offre informazioni relative all'attività dell'agente di replica.|  
   
 ##  <a name="SsisPipelineCounters"></a> Contatori delle pipeline SSIS  
  Per il contatore **SSIS Pipeline** , vedere [Contatori delle prestazioni](../../integration-services/performance/performance-counters.md).  

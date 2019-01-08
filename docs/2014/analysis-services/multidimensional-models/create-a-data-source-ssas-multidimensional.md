@@ -19,12 +19,12 @@ ms.assetid: 9fab8298-10dc-45a9-9a91-0c8e6d947468
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e5c6b02cba58b35472fc5d0224d7faf9534c332a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 54971b2b71d37ec4b246d982429fac3d6abf5b9a
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049491"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52412478"
 ---
 # <a name="create-a-data-source-ssas-multidimensional"></a>Crea un' origine dati (SSAS multidimensionale)
   In un modello multidimensionale di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] un oggetto di origine dati rappresenta una connessione all'origine dati dalla quale si elaborano o si importano dati. Un modello multidimensionale deve contenere almeno un oggetto di origine dati, tuttavia è possibile aggiungerne altri per combinare dati provenienti da diversi data warehouse. Utilizzare le istruzioni in questo argomento per creare un oggetto di origine dati per il modello. Per altre informazioni sull'impostazione delle proprietà per questo oggetto, vedere [Impostare le proprietà dell'origine dati &#40;SSAS multidimensionale&#41;](set-data-source-properties-ssas-multidimensional.md).  
@@ -67,7 +67,7 @@ ms.locfileid: "48049491"
 >  Per impostazione predefinita, le password non vengono salvate da [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] con la stringa di connessione. Se la password non viene salvata, in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ne verrà richiesta l'immissione quando necessaria. Se si sceglie di salvare la password, questa viene archiviata in formato crittografato nella stringa di connessione dati. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] consente di crittografare le informazioni sulla password per le origini dati usando la chiave di crittografia del database che contiene l'origine dati. In presenza di informazioni di connessione crittografate, è necessario usare Gestione configurazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per modificare la password o l'account di servizio di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . In caso contrario, le informazioni crittografate non potranno essere recuperate. Per altre informazioni, vedere [Gestione configurazione SQL Server](../../relational-databases/sql-server-configuration-manager.md).  
   
 ### <a name="defining-impersonation-information-for-data-mining-objects"></a>Definizione delle impostazioni di rappresentazione per gli oggetti di data mining  
- Le query di data mining possono essere eseguite sia nel contesto dell'account di servizio di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] che nel contesto dell'utente che ha inviato la query o di un utente specificato. Il contesto in cui una query viene eseguita può influire sui risultati della query. Per il data mining `OPENQUERY` digitare operazioni, è possibile che la query di data mining per l'esecuzione nel contesto dell'utente corrente o nel contesto di un utente specificato (indipendentemente dall'utente che esegue la query), anziché nel contesto dell'account del servizio. Ciò consente di eseguire la query con credenziali di sicurezza limitate. Per fare in modo che [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] rappresenti l'utente corrente o un utente specificato, selezionare l'opzione **Usa nome utente e password specifici** o **Usa credenziali dell'utente corrente** .  
+ Le query di data mining possono essere eseguite sia nel contesto dell'account di servizio di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] che nel contesto dell'utente che ha inviato la query o di un utente specificato. Il contesto in cui una query viene eseguita può influire sui risultati della query. Per operazioni di data mining di tipo `OPENQUERY`, può essere opportuno eseguire la query di data mining nel contesto dell'utente corrente o di un utente specificato (indipendentemente dall'utente che ha eseguito la query), anziché nel contesto dell'account di servizio. Ciò consente di eseguire la query con credenziali di sicurezza limitate. Per fare in modo che [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] rappresenti l'utente corrente o un utente specificato, selezionare l'opzione **Usa nome utente e password specifici** o **Usa credenziali dell'utente corrente** .  
   
 ##  <a name="bkmk_steps"></a> Creare un'origine dati con la Creazione guidata origine dati  
   
@@ -77,7 +77,7 @@ ms.locfileid: "48049491"
   
 3.  Nella pagina **Selezione metodo di definizione connessione** fare clic su **Crea un'origine dati basata su una connessione nuova o esistente** e quindi fare clic su **Nuova** per aprire **Gestione connessione**.  
   
-     Le nuove connessioni vengono create tramite Gestione connessione. In Gestione connessione è possibile selezionare un provider, quindi specificare le proprietà della stringa di connessione utilizzata per la connessione del provider ai dati sottostanti. Le informazioni esattamente necessarie dipendono dal provider selezionato, ma in genere includono un'istanza del server o del servizio, i dati per l'accesso a tale istanza, il nome di un database o un file e altre impostazioni specifiche del provider. Nella parte restante di questa procedura, si presuppone una connessione a un database di SQL Server.  
+     Le nuove connessioni vengono create tramite Gestione connessione. In Gestione connessione è possibile selezionare un provider, quindi specificare le proprietà della stringa di connessione utilizzata per la connessione del provider ai dati sottostanti. Le informazioni esattamente necessarie dipendono dal provider selezionato, ma in genere includono un'istanza del server o del servizio, i dati per l'accesso a tale istanza, il nome di un database o un file e altre impostazioni specifiche del provider. Nella parte restante di questa procedura, si presuppone una connessione al database SQL Server.  
   
 4.  Selezionare [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework o il provider OLE DB nativo da utilizzare per la connessione.  
   
@@ -152,13 +152,13 @@ ms.locfileid: "48049491"
  È possibile creare più di un oggetto di origine dati per supportare le connessioni a origini dati aggiuntive. Ogni origine dati deve disporre di colonne che sia possibile utilizzare per creare relazioni.  
   
 > [!NOTE]  
->  Se sono definite più origini dati e viene eseguita una query dei dati da più origini in una singola query, ad esempio per una dimensione con schema fiocco di neve, è necessario definire un'origine dati che supporta le query remote tramite `OpenRowset`. Si tratterà in genere di un'origine dati di Microsoft SQL Server.  
+>  Se vengono definite più origini dati e viene eseguita una singola query su dati di più origini, ad esempio per una dimensione con schema a fiocco di neve, è necessario definire un'origine dati in grado di supportare query remote tramite `OpenRowset`. Si tratterà in genere di un'origine dati di Microsoft SQL Server.  
   
  Tra i requisiti per l'utilizzo di più origini dati sono inclusi i seguenti:  
   
 -   Impostare un'origine dati come origine dati primaria, ovvero quella che viene utilizzata per creare una vista origine dati.  
   
--   Un'origine dati primaria deve supportare il `OpenRowset` (funzione).  Per altre informazioni su questa funzione in SQL Server, vedere <xref:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlTokenType.OpenRowSet>.  
+-   Un'origine dati primaria deve supportare la funzione `OpenRowset`.  Per altre informazioni su questa funzione in SQL Server, vedere <xref:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlTokenType.OpenRowSet>.  
   
  Per combinare dati da più origini dati, utilizzare l'approccio seguente:  
   

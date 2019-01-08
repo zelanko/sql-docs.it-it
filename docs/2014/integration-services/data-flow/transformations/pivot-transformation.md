@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.pivottrans.f1
@@ -19,12 +18,12 @@ ms.assetid: 55f5db6e-6777-435f-8a06-b68c129f8437
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bbca3b0ce90e56f3327e1e591a033e8d5fb212c2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4dd6e2b6fad2ea40c3a536b8b89eecbba441ecfd
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48157591"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52771883"
 ---
 # <a name="pivot-transformation"></a>Pivot - trasformazione
   La trasformazione Pivot consente di convertire un set di dati normalizzato in una versione meno normalizzata ma più compatta, trasformando i dati di input tramite Pivot in base a un valore di colonna. Un set di dati normalizzato di nome **Orders** che elenca nomi di clienti, prodotti e quantità vendute, ad esempio, include in genere più righe per ogni cliente che ha acquistato più prodotti, indicando su ogni riga i dettagli dell'ordine di un prodotto specifico. Trasformando il set di dati tramite Pivot in base alla colonna dei prodotti, la trasformazione Pivot può restituire in output un set di dati con una singola riga per cliente, nella quale sono elencati tutti gli acquisti effettuati dal cliente, utilizzando i nomi dei prodotti come nomi delle colonne e visualizzando le quantità come valori nelle colonne dei prodotti. Poiché non tutti i clienti acquistano tutti i prodotti, molte colonne possono contenere valori Null.  
@@ -98,7 +97,7 @@ ms.locfileid: "48157591"
 |----------|------------------|-----------|  
 |2004|HL Mountain Tire|1504884.15|  
 |2003|Road Tire Tube|35920.50|  
-|2004|Water Bottle – 30 oz.|2805.00|  
+|2004|Water Bottle - 30 oz.|2805.00|  
 |2002|Touring Tire|62364.225|  
   
  La tabella seguente mostra un set di dati dopo la trasformazione dei dati tramite Pivot in base alla colonna **Year** .  
@@ -107,7 +106,7 @@ ms.locfileid: "48157591"
 |-|----------|----------|----------|  
 |HL Mountain Tire|141164.10|446297.775|1504884.15|  
 |Road Tire Tube|3592.05|35920.50|89801.25|  
-|Water Bottle – 30 oz.|*NULL*|*NULL*|2805.00|  
+|Water Bottle - 30 oz.|*NULL*|*NULL*|2805.00|  
 |Touring Tire|62364.225|375051.60|1041810.00|  
   
  Per trasformare i dati tramite Pivot in base alla colonna **Year** , come mostrato in precedenza, vengono impostate le opzioni seguenti nella finestra di dialogo **Pivot** .  
@@ -135,7 +134,7 @@ ms.locfileid: "48157591"
  Per informazioni su come impostare le proprietà del componente, vedere [Impostare le proprietà di un componente del flusso di dati](../set-the-properties-of-a-data-flow-component.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [UNPIVOT-trasformazione](pivot-transformation.md)   
+ [Trasformazione UnPivot](pivot-transformation.md)   
  [Flusso di dati](../data-flow.md)   
  [Trasformazioni di Integration Services](integration-services-transformations.md)  
   

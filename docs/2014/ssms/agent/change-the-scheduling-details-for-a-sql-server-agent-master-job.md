@@ -4,18 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 ms.assetid: f5414451-4d8e-464b-bd9e-f2b70c6899b3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 17cc3b572076ebe1101ff309f26b54947ccae1f4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 13cd77270554a3c68ab07bfe8820295f9136f3dc
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48053293"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52751673"
 ---
 # <a name="change-the-scheduling-details-for-a-sql-server-agent-master-job"></a>Modificare i dettagli della pianificazione per un processo master di SQL Server Agent
   In questo argomento verrà descritto come modificare i dettagli della pianificazione per la definizione di un processo in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -26,7 +26,7 @@ ms.locfileid: "48053293"
   
      [Limitazioni e restrizioni](#Restrictions)  
   
-     [Security](#Security)  
+     [Sicurezza](#Security)  
   
 -   **Per modificare i dettagli della pianificazione per la definizione di un processo tramite:**  
   
@@ -42,7 +42,7 @@ ms.locfileid: "48053293"
 ###  <a name="Security"></a> Sicurezza  
   
 ####  <a name="Permissions"></a> Permissions  
- È possibile modificare solo i processi di cui si è proprietari, a meno che non si appartenga al ruolo predefinito del server **sysadmin** . Per informazioni dettagliate, vedere [Implement SQL Server Agent Security](implement-sql-server-agent-security.md).  
+ È possibile modificare solo i processi di cui si è proprietari, a meno che non si appartenga al ruolo predefinito del server **sysadmin** . Per informazioni dettagliate, vedere [Implementazione della sicurezza di SQL Server Agent](implement-sql-server-agent-security.md).  
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
   
@@ -56,11 +56,11 @@ ms.locfileid: "48053293"
   
 4.  Fare clic con il pulsante destro del mouse sul processo di cui si vuole modificare la pianificazione e selezionare **Proprietà**.  
   
-5.  Nella finestra di dialogo **Proprietà processo –***nome_processo* selezionare **Pianificazioni** in **Seleziona una pagina**. Per altre informazioni sulle opzioni disponibili in questa pagina, vedere [delle proprietà del processo: nuovo processo di &#40;pagina pianificazioni&#41;](job-properties-new-job-schedules-page.md).  
+5.  Nel **proprietà processo-* * * nome_processo* nella finestra di dialogo **selezione pagina**, selezionare **pianificazioni**. Per altre informazioni sulle opzioni disponibili in questa pagina, vedere [proprietà processo: Nuovo processo di &#40;pagina pianificazioni&#41;](job-properties-new-job-schedules-page.md).  
   
 6.  Al termine, fare clic su **OK**.  
   
-##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
   
 #### <a name="to-change-the-scheduling-details-for-a-job-definition"></a>Per modificare i dettagli della pianificazione per la definizione di un processo  
   

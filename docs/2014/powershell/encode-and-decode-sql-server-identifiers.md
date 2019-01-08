@@ -4,26 +4,25 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: scripting
 ms.topic: conceptual
 ms.assetid: bb9fe0d3-e432-42d3-b324-64dc908b544a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 82045ec643ae7cd1362a28b6aecf0c36bc4d328f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 57cab8512adb2f0377c932fbeb0140f1482ae454
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48088841"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52753153"
 ---
 # <a name="encode-and-decode-sql-server-identifiers"></a>Codificare e decodificare identificatori di SQL Server
   Gli identificatori delimitati di SQL Server possono contenere caratteri non supportati nei percorsi di Windows PowerShell. È possibile specificare questi caratteri codificando i valori esadecimali.  
   
 1.  **Prima di iniziare:**  [Limitazioni e restrizioni](#LimitationsRestrictions)  
   
-2.  **Per elaborare caratteri speciali:**  [Codifica di un identificatore](#EncodeIdent), [Decodifica di un identificatore](#DecodeIdent)  
+2.  **Per elaborare caratteri speciali:**  [Codifica di un identificatore](#EncodeIdent), [decodifica un identificatore](#DecodeIdent)  
   
 ## <a name="before-you-begin"></a>Prima di iniziare  
  I caratteri non supportati nei nomi dei percorsi di Windows PowerShell possono essere rappresentati o codificati come il carattere "%" seguito dal valore esadecimale del modello di bit che rappresenta il carattere, come in "**%** xx". La codifica può sempre essere utilizzata per gestire i caratteri non supportati nei percorsi di Windows PowerShell.  
@@ -31,7 +30,7 @@ ms.locfileid: "48088841"
  Il cmdlet **Encode-SqlName** accetta come input un identificatore di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Viene restituita una stringa con tutti i caratteri non supportati dal linguaggio di Windows PowerShell codificati con "% xx". Il cmdlet **Decode-SqlName** accetta come input un identificatore di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] codificato e restituisce l'identificatore originale.  
   
 ###  <a name="LimitationsRestrictions"></a> Limitazioni e restrizioni  
- Il `Encode-Sqlname` e `Decode-Sqlname` cmdlet solo codificare o decodificare i caratteri consentiti negli identificatori delimitati di SQL Server, ma non sono supportati nei percorsi di PowerShell. Caratteri codificati da **Encode-SqlName** e decodificati da **Decode-SqlName**:  
+ Nei cmdlet `Encode-Sqlname` e `Decode-Sqlname` è possibile codificare o decodificare solo i caratteri consentiti negli identificatori delimitati di SQL Server, ma non sono supportati nei percorsi di PowerShell. Caratteri codificati da **Encode-SqlName** e decodificati da **Decode-SqlName**:  
   
 |||||||||||||  
 |-|-|-|-|-|-|-|-|-|-|-|-|  
@@ -63,7 +62,7 @@ Set-Location (Encode-SqlName "Table:Test")
 ##  <a name="DecodeIdent"></a> Decodifica di un identificatore  
  **Per decodificare un identificatore di SQL Server da un percorso di PowerShell**  
   
- Usare il `Decode-Sqlname` cmdlet per sostituire le codifiche esadecimali con i caratteri rappresentati dalla codifica.  
+ Utilizzare il cmdlet `Decode-Sqlname` per sostituire le codifiche esadecimali con i caratteri rappresentati dalla codifica.  
   
 ### <a name="examples-decoding"></a>Esempi (decodifica)  
  In questo esempio viene restituito "Table:Test":  

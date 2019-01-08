@@ -1,22 +1,21 @@
 ---
-title: 'Passaggio 8: Semplificazione della comprensione del pacchetto della lezione 1 | Microsoft Docs'
+title: 'Passaggio 8: Effettua la comprensione del pacchetto della lezione 1 | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: e3751e53-77c7-47d0-8fe8-73ed1a53413a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e549018c7f0654ba40ddd486149059b37ddd46e9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 04614b8d54815e4286a55b7501187e8ed218db0f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48072531"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52750615"
 ---
 # <a name="step-8-making-the-lesson-1-package-easier-to-understand"></a>Passaggio 8: Semplificazione della comprensione del pacchetto della lezione 1
   Dopo avere completato la configurazione del pacchetto della lezione 1, può essere utile riordinarne il layout. Se le forme nel layout del flusso di controllo e del flusso di dati sono di dimensioni casuali o se non sono allineate o raggruppate, può risultare più difficile comprendere la funzionalità del pacchetto.  
@@ -52,6 +51,6 @@ ms.locfileid: "48072531"
      Se non si inserisce alcun testo nella casella delle annotazioni, quest'ultima scomparirà quando si farà clic al suo esterno.  
   
 ## <a name="next-steps"></a>Passaggi successivi  
- [Passaggio 9: Test del pacchetto creato nella lezione 1 dell'esercitazione](../integration-services/lesson-1-9-testing-the-lesson-1-tutorial-package.md)  
+ [Passaggio 9: Test del pacchetto dell'esercitazione della lezione 1](../integration-services/lesson-1-9-testing-the-lesson-1-tutorial-package.md)  
   
   

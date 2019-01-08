@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: f6fd6fc1-3569-42a5-b6cb-87a921c88f3b
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 70ec67afde5651054078223d4286b8b6a3efcc2b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 998588401c477d1a2022bdd7d19965c9c74ea2fa
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48158681"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52760403"
 ---
 # <a name="match-similar-data-mds-add-in-for-excel"></a>Cercare la corrispondenza tra dati simili (componente aggiuntivo MDS per Excel)
   Nel [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]usare la funzionalità Data Quality Services (DQS) per trovare analogie nei dati.  

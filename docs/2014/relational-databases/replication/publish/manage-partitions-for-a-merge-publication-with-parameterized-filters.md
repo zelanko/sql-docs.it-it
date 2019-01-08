@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - partitions [SQL Server replication]
@@ -15,12 +14,12 @@ ms.assetid: fb5566fe-58c5-48f7-8464-814ea78e6221
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 62675f5d2464bed9dd07b8a8477644d21ebbe828
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 01d2ee847c87fdab013b19edde3c20c9a03c8499
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48107891"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52763183"
 ---
 # <a name="manage-partitions-for-a-merge-publication-with-parameterized-filters"></a>Gestione delle partizioni di una pubblicazione di tipo merge con filtri con parametri
   In questo argomento viene descritto come gestire le partizioni per una pubblicazione di tipo merge con i filtri con parametri in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]o Replication Management Objects (RMO). È possibile utilizzare i filtri di riga con parametri per generare partizioni non sovrapposte. È possibile limitare tali partizioni in modo che solo una sottoscrizione riceva una determinata partizione. In questi casi, la presenza di un numero elevato di Sottoscrittori comporta un numero elevato di partizioni, che richiedono anche un numero uguale di snapshot partizionati. Per altre informazioni sui filtri di riga con parametri, vedere [Filtri di riga con parametri](../merge/parameterized-filters-parameterized-row-filters.md).  
@@ -88,7 +87,7 @@ ms.locfileid: "48107891"
   
 2.  Fare clic su **Elimina gli snapshot esistenti**.  
   
-##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
  Per migliorare la gestione di una pubblicazione con filtri con parametri, è possibile enumerare le partizioni esistenti a livello di programmazione, utilizzando stored procedure di replica. È inoltre possibile creare ed eliminare le partizioni esistenti. È possibile ottenere le informazioni seguenti sulle partizioni esistenti:  
   
 -   Modalità in cui una partizione viene filtrata (tramite [SUSER_SNAME &#40;Transact-SQL&#41;](/sql/t-sql/functions/suser-sname-transact-sql) o [HOST_NAME &#40;Transact-SQL&#41;](/sql/t-sql/functions/host-name-transact-sql)).  
@@ -138,7 +137,7 @@ ms.locfileid: "48107891"
   
 2.  Creare un'istanza della classe <xref:Microsoft.SqlServer.Replication.MergePublication> . Impostare le proprietà <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> e <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> per la pubblicazione, quindi impostare la proprietà <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> sull'oggetto <xref:Microsoft.SqlServer.Management.Common.ServerConnection> creato nel passaggio 1.  
   
-3.  Chiamare il metodo <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> per recuperare le proprietà dell'oggetto. Se questo metodo restituisce `false`, le proprietà della pubblicazione nel passaggio 2 sono state definite in modo non corretto o la pubblicazione non esiste.  
+3.  Chiamare il metodo <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> per recuperare le proprietà dell'oggetto. Se questo metodo restituisce `false`, le proprietà della pubblicazione sono state definite in modo non corretto nel passaggio 2 oppure la pubblicazione non esiste.  
   
 4.  Chiamare il metodo <xref:Microsoft.SqlServer.Replication.MergePublication.EnumMergePartitions%2A> e passare il risultato a una matrice di oggetti <xref:Microsoft.SqlServer.Replication.MergePartition> .  
   
@@ -150,7 +149,7 @@ ms.locfileid: "48107891"
   
 2.  Creare un'istanza della classe <xref:Microsoft.SqlServer.Replication.MergePublication> . Impostare le proprietà <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> e <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> per la pubblicazione, quindi impostare la proprietà <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> sull'oggetto <xref:Microsoft.SqlServer.Management.Common.ServerConnection> creato nel passaggio 1.  
   
-3.  Chiamare il metodo <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> per recuperare le proprietà dell'oggetto. Se questo metodo restituisce `false`, le proprietà della pubblicazione nel passaggio 2 sono state definite in modo non corretto o la pubblicazione non esiste.  
+3.  Chiamare il metodo <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> per recuperare le proprietà dell'oggetto. Se questo metodo restituisce `false`, le proprietà della pubblicazione sono state definite in modo non corretto nel passaggio 2 oppure la pubblicazione non esiste.  
   
 4.  Chiamare il metodo <xref:Microsoft.SqlServer.Replication.MergePublication.EnumMergePartitions%2A> e passare il risultato a una matrice di oggetti <xref:Microsoft.SqlServer.Replication.MergePartition> .  
   
@@ -162,6 +161,6 @@ ms.locfileid: "48107891"
   
 ## <a name="see-also"></a>Vedere anche  
  [Parameterized Row Filters](../merge/parameterized-filters-parameterized-row-filters.md)   
- [Snapshot per pubblicazioni di tipo merge con filtri con parametri](../snapshots-for-merge-publications-with-parameterized-filters.md)  
+ [Snapshots for Merge Publications with Parameterized Filters](../snapshots-for-merge-publications-with-parameterized-filters.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: La disponibilità elevata e scalabilità in Analysis Services | Documenti Microsoft
+title: Disponibilità elevata e scalabilità in Analysis Services | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: ece05b0bb8c21c628632e2efca8e54e317f38fab
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 1135074768a630e6d46844017b9c9aecbbccbf26
+ms.sourcegitcommit: 60739bcb48ccce17bca4e11a85df443e93ca23e3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35700902"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52439503"
 ---
 # <a name="high-availability-and-scalability-in-analysis-services"></a>Disponibilità elevata e scalabilità in Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -96,9 +96,9 @@ ms.locfileid: "35700902"
 
 - La configurazione Attivo/Attivo non è attualmente supportata. Attivo/Passivo (failover) è l'unica configurazione WSFC supportata per Analysis Services.
 - Quando si esegue il clustering di Analysis Services, assicurarsi che tutti i nodi coinvolti nel cluster vengano eseguiti su hardware identico o simile e che il contesto operativo di ciascun nodo sia lo stesso in termini di versione del sistema operativo e dei relativi Service Pack, di versione di Analysis Services e dei relativi Service Pack (o aggiornamenti cumulativi) e della modalità server.
-- Evitare il reimpiego di un nodo passivo come nodo attivo di un altro carico di lavoro. Se il nodo non è in grado di gestire entrambi i carichi di lavoro, qualsiasi vantaggio a breve termine riguardo l'utilizzo del computer si traduce in una perdita in caso di un'effettiva situazione di failover.
+- Evitare il reimpiego di un nodo passivo come nodo attivo del carico di lavoro un altro. Se il nodo non è in grado di gestire entrambi i carichi di lavoro, qualsiasi vantaggio a breve termine riguardo l'utilizzo del computer si traduce in una perdita in caso di un'effettiva situazione di failover.
  
- Istruzioni approfondite e informazioni di base per la distribuzione di Analysis Services in un cluster di failover sono disponibili nel white paper relativo a [How to Cluster SQL Server Analysis Services](https://msdn.microsoft.com/library/dn736073.aspx)(Come implementare cluster in SQL Server Analysis Services). Anche se scritte per SQL Server 2012, queste indicazioni sono ancora valide per le versioni più recenti di Analysis Services.  
+ In questo white paper vengono fornite istruzioni dettagliate e informazioni di base per la distribuzione di Analysis Services in un cluster di failover: [Come eseguire il clustering di SQL Server Analysis Services](https://msdn.microsoft.com/library/dn736073.aspx). Anche se scritte per SQL Server 2012, queste indicazioni sono ancora valide per le versioni più recenti di Analysis Services.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Sincronizzare database di Analysis Services](../../analysis-services/multidimensional-models/synchronize-analysis-services-databases.md)   

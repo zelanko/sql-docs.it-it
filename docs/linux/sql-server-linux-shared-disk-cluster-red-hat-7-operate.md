@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 075ab7d8-8b68-43f3-9303-bbdf00b54db1
-ms.openlocfilehash: 4b41e3adeaab22a958e94e373762c57a6d613f6d
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 2967277ca109b9ee55221a7b12f5af891a5e45a2
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661267"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52393575"
 ---
 # <a name="operate-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>Gestione cluster di dischi condivisi di Red Hat Enterprise Linux per SQL Server
 
@@ -142,10 +142,10 @@ Visualizzare i log dell'agente di risorsa in `/var/log/cluster/corosync.log`
    ```
 
    > [!NOTE]
-   > Se si sta usando un altro firewall che non ha una configurazione a disponibilità elevata predefinita, è necessario aprire le porte seguenti per consentire a Pacemaker di comunicare con altri nodi del cluster
+   > Se si usa un altro firewall che non dispone di una configurazione a disponibilità elevata predefinita, le porte seguenti devono essere aperte per consentire a essere in grado di comunicare con altri nodi del cluster Pacemaker
    >
-   > * TCP: porte 2224, 3121, 21064
-   > * UDP: porta 5405
+   > * TCP: Porte 2224, 3121, 21064
+   > * UDP: Porta 5405
 
 1. Installare i pacchetti Pacemaker nel nuovo nodo.
 
@@ -210,7 +210,7 @@ sudo pcs    resource op monitor interval=2s mssqlha
 
 Risoluzione dei problemi del cluster può essere utile per comprendere come i tre daemon funzionano insieme per gestire le risorse del cluster. 
 
-| Daemon | Description 
+| Daemon | Descrizione 
 | ----- | -----
 | Corosync | Fornisce l'appartenenza al quorum e la messaggistica tra i nodi del cluster.
 | Pacemaker | Si trova nella parte superiore Corosync e fornisce le macchine a stati per le risorse. 
@@ -261,7 +261,7 @@ Controllare i seguenti elementi quando un nodo è offline.
 
     Le porte seguenti devono essere aperte in tutti i nodi per Pacemaker essere in grado di comunicare.
     
-    - **TCP: 2224, 3121, 21064
+    - * * TCP: 2224, 3121, 21064
 
 - **Pacemaker o Corosync servizi in esecuzione**
 

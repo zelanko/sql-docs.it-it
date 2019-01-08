@@ -18,15 +18,15 @@ ms.assetid: a12ff02f-6d0b-4488-9846-3609fc0d0554
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 68f748ce1df9f1ae28600539759433188d534036
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d2fe6b8670e8ca6f35b5e3d89dfcac653566417b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48118421"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52506267"
 ---
 # <a name="creating-stored-procedures"></a>Creazione di stored procedure
-  Tutte le stored procedure devono essere associate a una classe CLR (Common Language Runtime) o COM (Component Object Model) per poter essere utilizzate. La classe deve essere installata nel server, ovvero in genere sotto forma di una [!INCLUDE[msCoName](../../includes/msconame-md.md)] ActiveX® libreria a collegamento dinamico (DLL) e registrata come assembly nel server o in un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database.  
+  Tutte le stored procedure devono essere associate a una classe CLR (Common Language Runtime) o COM (Component Object Model) per poter essere utilizzate. La classe deve essere installata nel server, in genere sotto forma di una [!INCLUDE[msCoName](../../includes/msconame-md.md)] ActiveX® dynamic link library (DLL) - e registrato come un assembly nel server o in un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database.  
   
  Le stored procedure vengono registrate in un server o in un database. Le stored procedure del server possono essere chiamate da qualsiasi contesto di query, mentre le stored procedure di database sono accessibili solo se il contesto del database è il database nel quale è stata definita la stored procedure. Se in un assembly sono presenti funzioni che chiamano funzioni di un assembly diverso, è necessario registrare entrambi gli assembly nello stesso contesto (server o database). Per un server o un distribuito [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database in un server, è possibile usare [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] per registrare un assembly. Per un progetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] è possibile utilizzare Progettazione [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] per registrare un assembly nel progetto.  
   

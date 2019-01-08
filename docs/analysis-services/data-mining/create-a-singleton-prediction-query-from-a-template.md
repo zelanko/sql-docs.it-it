@@ -1,5 +1,5 @@
 ---
-title: Creare una Query di stima Singleton da un modello | Documenti Microsoft
+title: Creare una Query di stima Singleton da un modello | Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: baa6153adde1a5cc5aaeaad5f8b04366dcb2dad8
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 72fadf42bae238fbc656a120e39317ce5211919e
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019768"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52392964"
 ---
 # <a name="create-a-singleton-prediction-query-from-a-template"></a>Creare una query di stima singleton da un modello
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  Una query singleton è utile quando si dispone di un modello che si desidera utilizzare per la stima, ma non si desidera eseguire il mapping a un set di dati di input esterno oppure eseguire stime bulk. Con una query singleton, è possibile fornire uno o più valori al modello e ottenere all'istante il valore stimato.  
+  Una query singleton è utile quando si dispone di un modello che si desidera utilizzare per la stima, ma non vuole eseguirne il mapping a un set di dati di input esterno oppure eseguire stime bulk. Con una query singleton, è possibile fornire uno o più valori al modello e ottenere all'istante il valore stimato.  
   
  Ad esempio, la query DMX seguente rappresenta una query singleton sul modello di mailing diretto, TM_Decision_Tree.  
   
@@ -91,6 +91,6 @@ AS [t]
 11. Fare clic su **Esegui**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Creazione di stime & #40; Esercitazione di base di Data Mining & #41;](http://msdn.microsoft.com/library/a8410ed2-bb98-4d51-a9eb-b239be1201c2)  
+ [Creazione di stime &#40;Esercitazione di base sul data mining&#41;](http://msdn.microsoft.com/library/a8410ed2-bb98-4d51-a9eb-b239be1201c2)  
   
   

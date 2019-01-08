@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.aggregatetrans.f1
@@ -18,12 +17,12 @@ ms.assetid: 2871cf2a-fbd3-41ba-807d-26ffff960e81
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 60375cc418cdc47cc0acc70d943e448e3e91f968
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: debbf39c69a6211e67d68a9206dad2687caad180
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48205531"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52750223"
 ---
 # <a name="aggregate-transformation"></a>Trasformazione Aggregazione
   La trasformazione Aggregazione applica funzioni di aggregazione, ad esempio Media, ai valori delle colonne e copia i risultati nell'output della trasformazione. Oltre alle funzioni di aggregazione, per questa trasformazione è disponibile la clausola GROUP BY, che consente di specificare i gruppi su cui eseguire l'aggregazione.  
@@ -31,12 +30,12 @@ ms.locfileid: "48205531"
 ## <a name="operations"></a>Operazioni  
  La trasformazione Aggregazione supporta le operazioni seguenti.  
   
-|Operazione|Description|  
+|Operazione|Descrizione|  
 |---------------|-----------------|  
 |Group by|Consente di dividere i set di dati in gruppi. Per il raggruppamento è possibile utilizzare colonne con qualsiasi tipo di dati. Per altre informazioni, vedere [GROUP BY &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-group-by-transact-sql).|  
-|SUM|Consente di sommare i valori di una colonna. È possibile sommare solo le colonne con tipi di dati numerici. Per altre informazioni, vedere [SUM &#40;Transact-SQL&#41;](/sql/t-sql/functions/sum-transact-sql).|  
-|Medio|Consente di restituire la media dei valori di una colonna. È possibile calcolare la media soltanto delle colonne con tipi di dati numerici. Per altre informazioni, vedere [AVG &#40;Transact-SQL&#41;](/sql/t-sql/functions/avg-transact-sql).|  
-|Count|Consente di restituire il numero di elementi di un gruppo. Per altre informazioni, vedere [COUNT &#40;Transact-SQL&#41;](/sql/t-sql/functions/count-transact-sql).|  
+|Sum|Consente di sommare i valori di una colonna. È possibile sommare solo le colonne con tipi di dati numerici. Per altre informazioni, vedere [SUM &#40;Transact-SQL&#41;](/sql/t-sql/functions/sum-transact-sql).|  
+|Media|Consente di restituire la media dei valori di una colonna. È possibile calcolare la media soltanto delle colonne con tipi di dati numerici. Per altre informazioni, vedere [AVG &#40;Transact-SQL&#41;](/sql/t-sql/functions/avg-transact-sql).|  
+|Conteggio|Consente di restituire il numero di elementi di un gruppo. Per altre informazioni, vedere [COUNT &#40;Transact-SQL&#41;](/sql/t-sql/functions/count-transact-sql).|  
 |Count Distinct|Consente di restituire il numero di valori non Null univoci di un gruppo.|  
 |Minimo|Restituisce il valore minimo in un gruppo. Per altre informazioni, vedere [MIN &#40;Transact-SQL&#41;](/sql/t-sql/functions/min-transact-sql). Diversamente dalla funzione Transact-SQL MIN, questa operazione può essere eseguita solo con tipi di dati numerici, di data e di ora.|  
 |Massimo|Restituisce il valore massimo in un gruppo. Per altre informazioni, vedere [MAX &#40;Transact-SQL&#41;](/sql/t-sql/functions/max-transact-sql). Diversamente dalla funzione Transact-SQL MAX, questa operazione può essere eseguita solo con tipi di dati numerici, di data e di ora.|  
@@ -101,7 +100,7 @@ ms.locfileid: "48205531"
   
  La trasformazione Aggregazione è asincrona, pertanto non legge e pubblica i dati riga per riga, ma legge l'intero set di righe, ne esegue i raggruppamenti e le aggregazioni e quindi pubblica i risultati.  
   
- Questa trasformazione non passa alcuna colonna, ma crea nuove colonne nel flusso di dati per i dati pubblicati. Solo le colonne di input a cui vengono applicate le funzioni di aggregazione e le colonne di input utilizzate dalla trasformazione per il raggruppamento vengono copiate nell'output della trasformazione. L'input di una trasformazione Aggregazione può includere ad esempio tre colonne: **CountryRegion**, **City**e **Population**. La trasformazione esegue un raggruppamento in base alla colonna **CountryRegion** e applica la funzione alla colonna **Population** . L'output non include pertanto la colonna **City** .  
+ Questa trasformazione non passa alcuna colonna, ma crea nuove colonne nel flusso di dati per i dati pubblicati. Solo le colonne di input a cui vengono applicate le funzioni di aggregazione e le colonne di input utilizzate dalla trasformazione per il raggruppamento vengono copiate nell'output della trasformazione. Ad esempio, un input della trasformazione aggregazione potrebbe avere tre colonne: **CountryRegion**, **Città**, e **popolamento**. La trasformazione esegue un raggruppamento in base alla colonna **CountryRegion** e applica la funzione alla colonna **Population** . L'output non include pertanto la colonna **City** .  
   
  È inoltre possibile aggiungere più output alla trasformazione Aggregazione e indirizzare ogni aggregazione a un output diverso. Se ad esempio la trasformazione Aggregazione applica le funzioni Somma e Media, ogni aggregazione potrà essere indirizzata a un output diverso.  
   
@@ -113,9 +112,9 @@ ms.locfileid: "48205531"
   
  Per altre informazioni sulle proprietà che è possibile impostare nella finestra di dialogo **Editor trasformazione Aggregazione** , fare clic su uno degli argomenti seguenti:  
   
--   [Editor trasformazione aggregazione &#40;scheda aggregazioni&#41;](../../aggregate-transformation-editor-aggregations-tab.md)  
+-   [Editor trasformazione Aggregazione &#40;scheda Aggregazioni&#41;](../../aggregate-transformation-editor-aggregations-tab.md)  
   
--   [Editor trasformazione aggregazione &#40;scheda Avanzate&#41;](../../aggregate-transformation-editor-advanced-tab.md)  
+-   [Editor trasformazione Aggregazione &#40;scheda Avanzate&#41;](../../aggregate-transformation-editor-advanced-tab.md)  
   
  Nella finestra di dialogo **Editor avanzato** sono disponibili le proprietà che è possibile impostare a livello di codice. Per ulteriori informazioni sulle proprietà che è possibile impostare nella finestra di dialogo **Editor avanzato** o a livello di codice, fare clic su uno degli argomenti seguenti:  
   
@@ -125,9 +124,9 @@ ms.locfileid: "48205531"
   
  Per ulteriori informazioni sulle procedure per l'impostazione delle proprietà, fare clic su uno degli argomenti seguenti:  
   
--   [Aggregare valori in un set di dati tramite la trasformazione Aggregazione](aggregate-values-in-a-dataset-by-using-the-aggregate-transformation.md)  
+-   [Aggregazione di valori in un set di dati utilizzando la trasformazione Aggregazione](aggregate-values-in-a-dataset-by-using-the-aggregate-transformation.md)  
   
--   [Impostare le proprietà di un componente del flusso di dati](../set-the-properties-of-a-data-flow-component.md)  
+-   [Impostazione delle proprietà di un componente del flusso di dati](../set-the-properties-of-a-data-flow-component.md)  
   
 -   [Ordinare i dati per le trasformazioni Unione e Merge Join](sort-data-for-the-merge-and-merge-join-transformations.md)  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.transfermasterspstask.f1
@@ -15,12 +14,12 @@ ms.assetid: 81702560-48a3-46d1-a469-e41304c7af8e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0b7763c8aeffe60c361a9f54ac3c9657653af40a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 734c659186f749b740bbde5ef7caa59b6925fa9f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48150231"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52761853"
 ---
 # <a name="transfer-master-stored-procedures-task"></a>Attività Trasferisci stored procedure master
   L'attività Trasferisci stored procedure master trasferisce una o più stored procedure definite dall'utente tra i database **master** di istanze diverse di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per trasferire una stored procedure dal database **master** , è necessario che il proprietario stored della procedure sia un dbo.  
@@ -46,7 +45,7 @@ ms.locfileid: "48150231"
  Non viene riportato lo stato incrementale del trasferimento, ma solo il completamento 0% e 100%.  
   
 ## <a name="execution-value"></a>Valore di esecuzione  
- Il valore di esecuzione, definito nel `ExecutionValue` proprietà dell'attività, restituisce il numero di stored procedure trasferite. Tramite l'assegnazione di una variabile definita dall'utente per il `ExecValueVariable` proprietà dell'attività Trasferisci Stored procedure Master, informazioni sul trasferimento di stored procedure possono essere rese disponibili ad altri oggetti nel pacchetto. Per altre informazioni, vedere [Variabili di Integration Services &#40;SSIS&#41;](../integration-services-ssis-variables.md) e [Utilizzo di variabili nei pacchetti](../use-variables-in-packages.md).  
+ Il valore di esecuzione, definito nella proprietà `ExecutionValue` dell'attività, restituisce il numero di stored procedure trasferite. Tramite l'assegnazione di una variabile definita dall'utente alla proprietà `ExecValueVariable` dell'attività, le informazioni sul trasferimento di stored procedure master possono essere rese disponibili ad altri oggetti del pacchetto. Per altre informazioni, vedere [Variabili di Integration Services &#40;SSIS&#41;](../integration-services-ssis-variables.md) e [Utilizzo di variabili nei pacchetti](../use-variables-in-packages.md).  
   
 ## <a name="log-entries"></a>Voci di log  
  L'attività Trasferisci stored procedure master include le voci di log personalizzate seguenti:  
@@ -55,7 +54,7 @@ ms.locfileid: "48150231"
   
 -   TransferSStoredProceduresTaskFinishedTransferringObjects  Indica che il trasferimento è stato completato. La voce di log include l'ora di fine.  
   
- Inoltre, una voce di log per il `OnInformation` indica il numero di stored procedure che sono state trasferite e una voce di log per il `OnWarning` viene scritto l'evento per ogni stored procedure nella destinazione viene sovrascritto.  
+ Inoltre, una voce di log per l'evento `OnInformation` indica il numero di stored procedure che sono state trasferite e viene scritta una voce di log per l'evento `OnWarning` per ogni stored procedure sovrascritta nella destinazione.  
   
 ## <a name="security-and-permissions"></a>Sicurezza e autorizzazioni  
  L'utente deve disporre dell'autorizzazione per la visualizzazione dell'elenco di stored procedure nel database **master** dell'origine ed essere un membro del ruolo del server amministratore di sistema o disporre dell'autorizzazione per la creazione di stored procedure nel database **master** del server di destinazione.  
@@ -65,9 +64,9 @@ ms.locfileid: "48150231"
   
  Per informazioni sulle proprietà che è possibile impostare in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] , fare clic su uno degli argomenti seguenti:  
   
--   [Le Stored procedure Editor attività Trasferisci Master &#40;pagina Generale&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [Editor attività Trasferisci stored procedure master &#40;pagina Generale&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [Le Stored procedure Editor attività Trasferisci Master &#40;Stored procedure&#41&#41;](../transfer-master-stored-procedures-task-editor-stored-procedures-page.md)  
+-   [Editor attività Trasferisci stored procedure master &#40;pagina Stored procedure&#41;](../transfer-master-stored-procedures-task-editor-stored-procedures-page.md)  
   
 -   [Pagina Espressioni](../expressions/expressions-page.md)  
   
@@ -80,10 +79,10 @@ ms.locfileid: "48150231"
 ## <a name="related-tasks"></a>Attività correlate  
  Per altre informazioni sull'impostazione di queste proprietà in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] , fare clic sull'argomento seguente:  
   
--   [Impostare le proprietà di un'attività o di un contenitore](../set-the-properties-of-a-task-or-container.md)  
+-   [Impostazione delle proprietà di un'attività o di un contenitore](../set-the-properties-of-a-task-or-container.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [SQL Server attività Trasferisci oggetti di](transfer-sql-server-objects-task.md)   
+ [Attività Trasferisci oggetti di SQL Server](transfer-sql-server-objects-task.md)   
  [Attività di Integration Services](integration-services-tasks.md)   
  [Flusso di controllo](control-flow.md)  
   

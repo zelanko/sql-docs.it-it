@@ -11,12 +11,12 @@ ms.assetid: 8c234077-b670-45c0-803f-51c5a5e0866e
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: bc5b6d6738523d359c72b2e294fe1225004ca388
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bf7824140a6072e58a9f84bc47943d7025aed7a8
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48059831"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52505457"
 ---
 # <a name="reporting-services-data-alerts"></a>Reporting Services Data Alerts
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] rappresentano una soluzione guidata dai dati che consente di essere informati sui dati dei report di proprio interesse o importanti al momento appropriato. Utilizzando gli avvisi dati non è più necessario andare in cerca di informazioni, che possono essere ottenute automaticamente.  
@@ -32,9 +32,9 @@ ms.locfileid: "48059831"
   
 -   **Definizione e salvataggio di definizioni di avviso dati**: viene eseguito un report, vengono create regole che identificano i valori dei dati interessanti, viene definito un criterio di ricorrenza per l'invio del messaggio di avviso dati e vengono specificati i destinatari del messaggio di avviso.  
   
--   **Esecuzione di definizioni di avviso dati**: tramite il servizio avvisi, le definizioni di avviso vengono elaborate a un'ora pianificata, i dati del report vengono recuperati e vengono create istanze di avviso dati in base alle regole nella definizione di avviso.  
+-   **Esecuzione di definizioni di avviso dati**: grazie al servizio avvisi, le definizioni di avviso vengono elaborate a un'ora pianificata, i dati del report vengono recuperati e vengono create istanze di avviso dati in base alle regole nella definizione di avviso.  
   
--   **Recapito di messaggi di avviso dati ai destinatari**: tramite il servizio avvisi viene creata un'istanza di avviso e viene inviato un messaggio di avviso ai destinatari tramite posta elettronica.  
+-   **Recapito di messaggi di avviso dati ai destinatari**: grazie al servizio avvisi viene creata un'istanza di avviso e viene inviato un messaggio di avviso ai destinatari via posta elettronica.  
   
  Il proprietario di un avviso dati può inoltre visualizzare informazioni sugli avvisi dati, nonché eliminare e modificare le definizioni di avviso dati. Un avviso ha un solo proprietario, cioè la persona che lo ha creato.  
   
@@ -113,7 +113,7 @@ ms.locfileid: "48059831"
 ##  <a name="InstallAlerting"></a> Installare avvisi dati  
  La funzionalità relativa agli avvisi dati è disponibile solo se [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] è installato in modalità SharePoint. Quando si installa [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] in modalità SharePoint, tramite l'installazione vengono creati automaticamente il database di avvisi in cui vengono archiviati i metadati di avviso e le definizioni di avviso dati, nonché due pagine di SharePoint per la gestione degli avvisi e la finestra di progettazione Avviso dati viene aggiunta al sito di SharePoint. Non vi sono passaggi specifici da eseguire o opzioni da impostare per gli avvisi durante l'installazione.  
   
- Per altre informazioni sull'installazione di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] in modalità SharePoint, inclusi il servizio condiviso [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] che rappresenta una novità in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] e l'applicazione del servizio [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] che è necessario creare e configurare per poter usare le funzionalità di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], vedere [Installare la modalità SharePoint di Reporting Services per SharePoint 2010](../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md) in MSDN Library.  
+ Per altre informazioni sull'installazione di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] in modalità SharePoint, inclusi il servizio condiviso [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] che rappresenta una novità in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] e l'applicazione del servizio [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] che è necessario creare e configurare per poter usare le funzionalità di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , vedere [Installare la modalità SharePoint di Reporting Services per SharePoint 2010](../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md) in MSDN Library.  
   
  Come illustrato nel diagramma riportato in precedenza in questo argomento, per gli avvisi dati vengono utilizzati processi di SQL Server Agent. Per creare i processi, è necessario che SQL Server Agent sia in esecuzione. SQL Server Agent potrebbe essere stato configurato per l'avvio automatico al momento dell'installazione di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. In caso contrario, è possibile avviare SQL Server Agent manualmente. Per altre informazioni, vedere [Configurare SQL Server Agent](../ssms/agent/configure-sql-server-agent.md) e [Avviare, arrestare, sospendere, riprendere, riavviare il motore di database, SQL Server Agent o SQL Server Browser](../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md).  
   
@@ -128,7 +128,7 @@ ms.locfileid: "48059831"
   
  Nella tabella seguente sono elencati gli elementi di configurazione per gli avvisi dati, i relativi valori predefiniti, le descrizioni e le posizioni.  
   
-|Impostazione|Valore predefinito|Description|Percorso|  
+|Impostazione|Valore predefinito|Descrizione|Località|  
 |-------------|-------------------|-----------------|--------------|  
 |AlertingCleanupCycleMinutes|20|Numero di minuti tra l'inizio di un ciclo di pulizia e l'altro.|File di configurazione del server di report|  
 |AlertingExecutionLogCleanupMinutes|10080|Numero di minuti di durata delle voci del log di esecuzione.|File di configurazione del server di report|  
@@ -142,7 +142,7 @@ ms.locfileid: "48059831"
 ### <a name="event-handlers-and-retry"></a>Gestori eventi e nuovo tentativo  
  I gestori di eventi sono i seguenti:  
   
-|Gestore evento|Description|  
+|Gestore evento|Descrizione|  
 |-------------------|-----------------|  
 |FireAlert|Fare clic su **Esegui**  in Gestione avvisi dati per avviare l'elaborazione immediata di una definizione di avviso.|  
 |FireSchedule|Tramite SQL Server Agent viene avviata la pianificazione del processo per una definizione di avviso.|  
@@ -157,14 +157,14 @@ ms.locfileid: "48059831"
 |Categoria di errore|<|\<|Tipo di evento||>|>|>|  
 |--------------------|--------|--------|----------------|-|--------|--------|--------|  
 ||**FireAlert**|**FireSchedule**|**CreateSchedule**|**UpdateSchedule**|**DeleteSchedule**|**GenerateAlert**|**DeliverAlert**|  
-|Memoria insufficiente|X|X|X|X|X|X|X|  
-|Interruzione del thread|X|X|X|X|X|X|X|  
-|SQL Agent non è in esecuzione|X||X|X|X|||  
-|Temporaneo. Causato principalmente da problemi di connessione, timeout e blocchi.|X|X|X|X|X|X|X|  
-|IOException|||||||X|  
-|WebException|||||||X|  
-|SocketException|||||||X|  
-|SMTPException **(\*)**|||||||X|  
+|Memoria insufficiente|x|X|X|X|X|X|x|  
+|Interruzione del thread|x|X|X|X|X|X|x|  
+|SQL Agent non è in esecuzione|x||X|X|x|||  
+|Temporaneo. Causato principalmente da problemi di connessione, timeout e blocchi.|x|X|X|X|X|X|X|  
+|IOException|||||||x|  
+|WebException|||||||x|  
+|SocketException|||||||x|  
+|SMTPException **(\*)**|||||||x|  
   
  **(\*)** Errori SMTP che attivano un nuovo tentativo:  
   
@@ -187,7 +187,7 @@ ms.locfileid: "48059831"
   
  `<IsAlertingService>True</IsAlertingService>`  
   
- `…`  
+ `...`  
   
  `</Service>`  
   
@@ -196,9 +196,9 @@ ms.locfileid: "48059831"
 ##  <a name="Permissions"></a> Autorizzazioni per gli avvisi dati  
  Prima di poter creare avvisi dati per i report, è necessario disporre dell'autorizzazione per l'esecuzione del report e la creazione di avvisi nel sito di SharePoint. Per ulteriori informazioni sulle autorizzazioni per i report, vedere quanto riportato di seguito.  
   
--   [Data di generazione di feed dal report &#40;Report e SSRS&#41;](report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md)  
+-   [Generazione di feed di dati dai report &#40;Generatore report e SSRS&#41;](report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md)  
   
--   [Impostare le autorizzazioni per elementi del Server di Report in un sito di SharePoint &#40;Reporting Services in SharePoint la modalità integrata&#41;](security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)  
+-   [Impostare autorizzazioni per gli elementi del server di report in un sito di SharePoint &#40;Reporting Services in modalità integrata SharePoint&#41;](security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)  
   
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] supportano due livelli di autorizzazioni: Information Worker e amministratore di avvisi. Nella tabella seguente sono elencate le autorizzazioni di SharePoint e le attività utente correlate.  
   
@@ -222,7 +222,7 @@ ms.locfileid: "48059831"
 ### <a name="logs"></a>Log  
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] fornisce numerosi log che consentono di ottenere ulteriori informazioni sui report eseguiti durante l'elaborazione delle definizioni di avviso dati, sulle istanze di avviso dati create e così via. Vi sono tre log particolarmente utili: il log di esecuzione degli avvisi, il log di esecuzione del server di report e il log di traccia del server di report.  
   
- Per informazioni su altri [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] log, vedere [del file di Log di Reporting Services e le origini](report-server/reporting-services-log-files-and-sources.md).  
+ Per informazioni su altri log di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , vedere [File di log e origini di Reporting Services](report-server/reporting-services-log-files-and-sources.md).  
   
 #### <a name="alerting-execution-log"></a>Log di esecuzione degli avvisi  
  Il servizio di runtime di avvisi scrive voci nella tabella ExecutionLogView del database di avvisi. È possibile eseguire una query sulla tabella oppure eseguire le stored procedure seguenti per ottenere informazioni di diagnostica più esaustive sugli avvisi dati salvati nel database di avvisi.  
@@ -277,13 +277,13 @@ ms.locfileid: "48059831"
 ##  <a name="UserInterface"></a> Interfaccia utente degli avvisi dati  
  Gli avvisi dati forniscono pagine di SharePoint per la gestione degli avvisi e una finestra di progettazione per la creazione e la modifica delle definizioni di avviso dati.  
   
--   **Finestra di progettazione Avviso dati** , per la creazione e la modifica di definizioni di avviso dati. Per altre informazioni, vedere [finestra di progettazione avviso dati](../../2014/reporting-services/data-alert-designer.md), [creare un avviso nella finestra di progettazione avviso dati](create-a-data-alert-in-data-alert-designer.md) e [modificare un avviso dati in Alert Designer](edit-a-data-alert-in-alert-designer.md).  
+-   **Finestra di progettazione Avviso dati** , per la creazione e la modifica di definizioni di avviso dati. Per altre informazioni, vedere [Finestra di progettazione Avviso dati](../../2014/reporting-services/data-alert-designer.md), [Creare un avviso dati nella finestra di progettazione Avviso dati](create-a-data-alert-in-data-alert-designer.md) e [Modificare un avviso dati nella finestra di progettazione di avvisi](edit-a-data-alert-in-alert-designer.md).  
   
 -   **Gestione avvisi dati** , per la visualizzazione di elenchi di avvisi dati, l'eliminazione di avvisi e l'apertura di avvisi per la modifica. Gestione avvisi dati è disponibile in due versioni: una per gli utenti per la gestione degli avvisi creati e una per gli amministratori per la gestione di avvisi che appartengono agli utenti del sito.  
   
-     Per altre informazioni sulla gestione degli avvisi dati creati, vedere [Gestione avvisi dati per gli utenti di SharePoint](../../2014/reporting-services/data-alert-manager-for-sharepoint-users.md) e [gestire gli avvisi dati in Gestione avvisi dati](manage-my-data-alerts-in-data-alert-manager.md).  
+     Per altre informazioni sulla gestione degli avvisi dati creati, vedere [Gestione avvisi dati per utenti di SharePoint](../../2014/reporting-services/data-alert-manager-for-sharepoint-users.md) e [Gestire gli avvisi dati in Gestione avvisi dati](manage-my-data-alerts-in-data-alert-manager.md).  
   
-     Per altre informazioni sulla gestione di tutti gli avvisi dati in un sito, vedere [Gestione avvisi dati per gli amministratori di avvisi](../../2014/reporting-services/data-alert-manager-for-alerting-administrators.md) e [gestire tutti gli avvisi di dati in un sito di SharePoint in Gestione avvisi dati](manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md).  
+     Per altre informazioni sulla gestione di tutti gli avvisi dati in un sito, vedere [Gestione avvisi dati per gli amministratori di avvisi](../../2014/reporting-services/data-alert-manager-for-alerting-administrators.md) e [Gestire tutti gli avvisi dati in un sito di SharePoint](manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md).  
   
 -   **Avvisi dati e sottoscrizioni provisioning** , per stabilire se tramite Reporting Services è possibile utilizzare SQL Server Agent per gli avvisi dati e per scaricare script che consentono l'accesso a SQL Server Agent. Per altre informazioni, vedere [Eseguire il provisioning di sottoscrizioni e avvisi per le applicazioni di servizio SSRS](install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md).  
   
@@ -300,7 +300,7 @@ ms.locfileid: "48059831"
   
 ##  <a name="HowTo"></a> Attività correlate  
   
--   [Salvare un Report in una raccolta di SharePoint &#40;Generatore Report&#41;](report-builder/save-a-report-to-a-sharepoint-library-report-builder.md)  
+-   [Salvare un report in una raccolta di SharePoint &#40;Generatore report&#41;](report-builder/save-a-report-to-a-sharepoint-library-report-builder.md)  
   
 -   [Creare un avviso dati nella finestra di progettazione Avviso dati](create-a-data-alert-in-data-alert-designer.md)  
   
@@ -308,12 +308,12 @@ ms.locfileid: "48059831"
   
 -   [Gestire gli avvisi dati in Gestione avvisi dati](manage-my-data-alerts-in-data-alert-manager.md)  
   
--   [Gestire tutti gli avvisi dati in un sito di SharePoint con Gestione avvisi dati](manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md)  
+-   [Gestire tutti gli avvisi dati in un sito di SharePoint](manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md)  
   
--   [Concedere autorizzazioni a utenti e amministratori di avvisi](grant-permissions-to-users-and-alerting-administrators.md)  
+-   [Concedere autorizzazione a utenti e amministratori di avvisi](grant-permissions-to-users-and-alerting-administrators.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Finestra di progettazione avviso dati](../../2014/reporting-services/data-alert-designer.md)   
+ [Finestra di progettazione Avviso dati](../../2014/reporting-services/data-alert-designer.md)   
  [Gestione avvisi dati per gli amministratori di avvisi](../../2014/reporting-services/data-alert-manager-for-alerting-administrators.md)   
  [Gestione avvisi dati per utenti di SharePoint](../../2014/reporting-services/data-alert-manager-for-sharepoint-users.md)  
   

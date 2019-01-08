@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - folders [Integration Services], connections
@@ -18,12 +17,12 @@ ms.assetid: 10bdc56e-c5cd-4ddb-b2f7-375fe57fe8b2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a0b08bcbf989f2c6fc0bc5b6cc163150b388d797
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d4db032d7ab26bb2ebace555b1594500dbd116b4
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48085951"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52762133"
 ---
 # <a name="multiple-files-connection-manager"></a>gestione connessione per più file
   Una gestione connessione per più file consente a un pacchetto di fare riferimento a file e cartelle esistenti o di creare file e cartelle in fase di esecuzione.  
@@ -34,9 +33,9 @@ ms.locfileid: "48085951"
 ## <a name="usage-types-of-the-multiple-files-connection-manager"></a>Tipi di utilizzo per la gestione connessione per più file  
  La proprietà `FileUsageType` della gestione connessione per più file specifica la modalità di utilizzo della connessione. La gestione connessione per più file consente sia di creare file e cartelle, sia di utilizzare file e cartelle esistenti.  
   
- Nella tabella seguente sono elencati i valori di `FileUsageType`.  
+ Nella tabella seguente vengono elencati i possibili valori di `FileUsageType`.  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |**0**|La gestione connessione per più file utilizza un file esistente.|  
 |**1**|La gestione connessione per più file crea un file.|  
@@ -46,7 +45,7 @@ ms.locfileid: "48085951"
 ## <a name="configuration-of-the-multiple-files-connection-manager"></a>Configurazione della gestione connessione per più file  
  Quando si aggiunge una gestione connessione per più file a un pacchetto, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] crea una gestione connessione che in fase di esecuzione verrà risolta in una connessione per più file, imposta le proprietà di tale connessione e quindi la aggiunge alla raccolta `Connections` del pacchetto.  
   
- Il `ConnectionManagerType` della gestione connessione viene impostata su `MULTIFILE`.  
+ La proprietà `ConnectionManagerType` della gestione connessione viene impostata su `MULTIFILE`.  
   
  Per configurare una gestione connessione per più file, procedere nel modo seguente:  
   
@@ -66,6 +65,6 @@ ms.locfileid: "48085951"
   
  Per altre informazioni sulle proprietà che è possibile impostare in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] , vedere [Riferimento all'interfaccia utente della finestra di dialogo Aggiungi gestione connessione file](add-file-connection-manager-dialog-box-ui-reference.md).  
   
- Per informazioni sulla configurazione di una gestione connessione a livello di codice, vedere <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> e [aggiunta di connessioni a livello di programmazione](../building-packages-programmatically/adding-connections-programmatically.md).  
+ Per informazioni sulla configurazione di una gestione connessione a livello di programmazione, vedere l'articolo relativo a <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> e [Aggiunta di connessioni a livello di programmazione](../building-packages-programmatically/adding-connections-programmatically.md).  
   
   

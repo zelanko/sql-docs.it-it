@@ -13,12 +13,12 @@ ms.assetid: d4ebe420-a4a9-4076-89d3-41abe726fc5c
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8e43f90743b2449b4be99a0169a061f76fdcf3fc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fa9f529e286951aab08bb2d29f8dcc06f837e8c2
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48084591"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52408969"
 ---
 # <a name="task-8-adding-conditional-split-transform-to-split-cleansing-output"></a>Attività 8: Aggiunta della trasformazione Suddivisione condizionale aggiunta dell'output di pulizia della suddivisione
   In questa trasformazione viene aggiunta la trasformazione Suddivisione condizionale al flusso di dati. La trasformazione Suddivisione condizionale consente di indirizzare le righe verso output diversi in base al contenuto dei dati. Per questa esercitazione, si utilizza il **stato Record** colonna di output dalla trasformazione DQS Cleansing. In questa esercitazione verranno caricati solo i record corretti o con correzione nel server MDS. Pertanto, controllare se il **stato Record** viene **correggere** oppure **con correzione**e combinare i record prima di caricarli in MDS.  
@@ -48,6 +48,6 @@ ms.locfileid: "48084591"
 10. Fare clic su **OK** per chiudere la **Editor trasformazione Suddivisione condizionale** nella finestra di dialogo.  
   
 ## <a name="next-step"></a>Passaggio successivo  
- [Attività 9: Aggiunta della trasformazione Unione input multipli a Combina record corretti e con correzione](../../2014/tutorials/task-9-adding-union-all-transform-to-combine-correct-and-corrected-records.md)  
+ [Attività 9: Aggiunta della Union trasformazione multipli a combina record corretti e con correzione](../../2014/tutorials/task-9-adding-union-all-transform-to-combine-correct-and-corrected-records.md)  
   
   

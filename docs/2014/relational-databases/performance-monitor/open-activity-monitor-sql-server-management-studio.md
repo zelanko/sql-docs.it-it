@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - Activity Monitor [SQL Server], setting the refresh interval
@@ -15,12 +15,12 @@ ms.assetid: 0a6eeb16-f02b-479d-9a60-543e40ebf46b
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: cf893c3d46530a8d4457e3d7e434be792d5647ae
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0d1c0312acfcd2e5dbb17d740fe2659cb8c91bbe
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48171661"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52755514"
 ---
 # <a name="open-activity-monitor-sql-server-management-studio"></a>Aprire Monitoraggio attività (SQL Server Management Studio)
   In questo argomento viene descritto come aprire Monitoraggio attività per ottenere informazioni sui processi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e sul modo in cui questi processi influiscono sull'istanza corrente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Viene inoltre descritto come impostare l'intervallo di aggiornamento del Monitoraggio attività.  
@@ -29,7 +29,7 @@ ms.locfileid: "48171661"
   
 -   **Prima di iniziare:**  
   
-     [Security](#Security)  
+     [Sicurezza](#Security)  
   
 -   **Per aprire l'utilizzo di Monitoraggio attività:**  
   

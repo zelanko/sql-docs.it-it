@@ -12,12 +12,12 @@ ms.assetid: a5f010a5-b762-41c9-881b-bf0c192dca83
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a9be71a421bf27aa3a492af1790ab085f404d3ea
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 5baacbca2f7882314ac62c1ef98e22ba6eca9aa8
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51032028"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507539"
 ---
 # <a name="open-a-knowledge-base"></a>Apertura di una Knowledge Base
   In questo argomento viene descritto come aprire una Knowledge Base esistente in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) e prepararla per le attività di gestione del dominio, individuazione delle informazioni o aggiunta di criteri di corrispondenza.  
@@ -68,7 +68,7 @@ ms.locfileid: "51032028"
   
 -   Per aprire una Knowledge Base presente nell'elenco delle Knowledge Base recenti ma che è stata bloccata da un altro utente, contattare l'utente per richiederne lo sblocco.  
   
-##  <a name="FollowUp"></a> Completamento: Operazioni successive all'apertura di una Knowledge Base  
+##  <a name="FollowUp"></a> Completamento: Dopo avere aperto una Knowledge Base  
  Dopo avere aperto una Knowledge Base, questa viene collocata nello stato indicato nella colonna Stato della relativa tabella. Per le attività di individuazione delle informazioni e quelle relative ai criteri di corrispondenza, la Knowledge Base verrà aperta in una pagina di procedura guidata specifica. Per l'attività di gestione del dominio, la Knowledge Base verrà aperta nella pagina di gestione del dominio. Per altre informazioni sugli stati, vedere [Eseguire l'individuazione delle informazioni](../../2014/data-quality-services/perform-knowledge-discovery.md), [Gestione di un dominio](../../2014/data-quality-services/managing-a-domain.md) o [Creare criteri di corrispondenza](../../2014/data-quality-services/create-a-matching-policy.md).  
   
 ##  <a name="Locked"></a> Se la Knowledge Base è bloccata  
@@ -77,20 +77,20 @@ ms.locfileid: "51032028"
 ##  <a name="State"></a> Stato di una Knowledge Base  
  Nel campo Stato viene indicata la fase di un'attività a cui si trova la Knowledge Base. Se si apre la Knowledge Base, verrà aperta in quella fase.  
   
--   **\<Vuoto>**: il campo Stato è vuoto se la Knowledge Base è stata pubblicata facendo clic su **Pubblica** nell'attività Gestione dominio e quindi su **Yes – Publish the knowledge base and exit** (Sì - Pubblica la Knowledge Base e chiudi).  
+-   **\<Vuoto >**: Il campo stato è vuoto per una knowledge base se la knowledge base è stata pubblicata facendo **Publish** nell'attività Gestione dominio e scegliendo **Sì - pubblica la knowledge base e Chiudi**.  
   
--   **In lavorazione**: il lavoro sulla Knowledge Base è stato salvato facendo clic su **Pubblica** nell'attività Gestione dominio e quindi su **No - Salva il lavoro relativo alla Knowledge Base e chiudi**.  
+-   **In lavorazione**: Lavoro sulla knowledge base è stato salvato facendo **Publish** nell'attività Gestione dominio e scegliendo **No - Salva il lavoro sulla knowledge base e uscire**.  
   
--   **Gestione dominio**: sono stati immessi dati per un dominio nella Knowledge Base, ma la Knowledge Base non è stata pubblicata e il lavoro rimane nell'attività Gestione dominio. L'attività Individuazione informazioni non è disponibile. Ciò si verifica quando si fa clic su **Chiudi** nella schermata **Gestione dominio** .  
+-   **Gestione del dominio**: Sono stati immessi dati per un dominio nella knowledge base, ma la knowledge base non è stata pubblicata e il lavoro rimane nell'attività Gestione dominio. L'attività Individuazione informazioni non è disponibile. Ciò si verifica quando si fa clic su **Chiudi** nella schermata **Gestione dominio** .  
   
--   **Individuazione - Mapping**: l'attività della Knowledge Base è stata chiusa nella pagina **Gestione Knowledge Base: Mapping** . La Knowledge Base è bloccata e le attività di gestione del dominio e di individuazione delle corrispondenze non sono disponibili.  
+-   **Individuazione - Mapping**: La knowledge base è stata chiusa nella **Gestione Knowledge Base: Mapping** pagina. La Knowledge Base è bloccata e le attività di gestione del dominio e di individuazione delle corrispondenze non sono disponibili.  
   
--   **Individuazione - Individuazione**: la Knowledge Base è stata chiusa nella pagina **Gestione Knowledge Base: Analizza** . La Knowledge Base è bloccata e l'attività di gestione del dominio non è disponibile.  
+-   **Individuazione - individuazione**: La knowledge base è stata chiusa nella **Gestione Knowledge Base: Analizzare** pagina. La Knowledge Base è bloccata e l'attività di gestione del dominio non è disponibile.  
   
--   **Individuazione - Gestione valore**: la Knowledge Base è stata chiusa nella pagina **Gestione Knowledge Base: Gestisci termini di dominio** . La Knowledge Base è bloccata e l'attività di gestione del dominio non è disponibile.  
+-   **Individuazione - gestione valore**: La knowledge base è stata chiusa nella **Gestione Knowledge Base: Gestisci termini di dominio** pagina. La Knowledge Base è bloccata e l'attività di gestione del dominio non è disponibile.  
   
--   **Criteri di corrispondenza - Criteri di corrispondenza**: la Knowledge Base è stata chiusa nella pagina **Criteri di corrispondenza - Criteri di corrispondenza** . La Knowledge Base è bloccata e le attività di gestione del dominio e di individuazione delle informazioni non sono disponibili.  
+-   **Criteri di corrispondenza - criteri di corrispondenza**: La knowledge base è stata chiusa nella **criteri di corrispondenza - criteri di corrispondenza** pagina. La Knowledge Base è bloccata e le attività di gestione del dominio e di individuazione delle informazioni non sono disponibili.  
   
--   **Criteri di corrispondenza - Risultati corrispondenza**: la Knowledge Base è stata chiusa nella pagina **Criteri di corrispondenza - Risultati corrispondenza** . La Knowledge Base è bloccata e le attività di gestione del dominio e di individuazione delle informazioni non sono disponibili.  
+-   **Criteri di corrispondenza - risultati corrispondenza**: La knowledge base è stata chiusa nella **criteri di corrispondenza - risultati corrispondenza** pagina. La Knowledge Base è bloccata e le attività di gestione del dominio e di individuazione delle informazioni non sono disponibili.  
   
   

@@ -10,12 +10,12 @@ ms.assetid: 05ff7bd4-e60b-4f48-a893-bc2346aa9a8a
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 4fe903d81bc698ff324b504034ed92025570254c
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: e9ccc7648be4915a68b798f314689d961113639a
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51656630"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52409510"
 ---
 # <a name="mapping-db2-schemas-to-sql-server-schemas-db2tosql"></a>Mapping di schemi DB2 a schemi SQL Server (DB2ToSQL)
 In DB2, ogni database dispone di uno o più schemi. Per impostazione predefinita, SSMA esegue la migrazione di tutti gli oggetti in uno schema DB2 a un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] denominato per lo schema di database. Tuttavia, è possibile personalizzare il mapping tra schemi DB2 e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database.  

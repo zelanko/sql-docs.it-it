@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Lookup transformation [Integration Services]
@@ -13,12 +12,12 @@ ms.assetid: c4150e1b-bdff-4f7a-af4c-3401c34def83
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5025524fb0f414a3a419b53d51868009eafc9820
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ab881af80386badae624b1d5910ba99ba67a4a43
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48147013"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52767823"
 ---
 # <a name="implement-a-lookup-transformation-in-full-cache-mode-using-the-ole-db-connection-manager"></a>Implementazione di una trasformazione Ricerca in modalità Full cache utilizzando la gestione connessione OLE DB
   È possibile configurare la trasformazione Ricerca per utilizzare la modalità Full Cache e una gestione connessione OLE DB. In modalità Full Cache il set di dati di riferimento viene caricato nella cache prima dell'esecuzione della trasformazione Ricerca.  
@@ -52,11 +51,11 @@ ms.locfileid: "48147013"
   
     -   Fare clic su **Usa una tabella o una vista**, quindi selezionare una tabella o una vista oppure fare clic su **Nuova** per creare una tabella o una vista.  
   
-         -oppure-  
+         oppure  
   
     -   Fare clic su **Usa i risultati di una query SQL**, quindi compilare una query nella finestra **Comando SQL** oppure fare clic su **Compila query** per compilare una query usando gli strumenti grafici disponibili in **Generatore query** .  
   
-         -oppure-  
+         oppure  
   
     -   In alternativa fare clic su **Sfoglia** per importare un'istruzione SQL da un file.  
   
@@ -83,8 +82,8 @@ ms.locfileid: "48147013"
 13. Fare clic su **OK** per salvare le modifiche alla trasformazione Ricerca e quindi eseguire il pacchetto.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Implementare una trasformazione Ricerca in modalità Full Cache tramite la gestione connessione della cache](lookup-transformation-full-cache-mode-ole-db-connection-manager.md)   
- [Implementare una ricerca in modalità No Cache o Partial Cache](../data-flow/transformations/implement-a-lookup-in-no-cache-or-partial-cache-mode.md)   
+ [Implementazione di una trasformazione Ricerca in modalità Full Cache utilizzando la gestione connessione della cache](lookup-transformation-full-cache-mode-ole-db-connection-manager.md)   
+ [Implementazione di una ricerca in modalità No Cache o Partial Cache](../data-flow/transformations/implement-a-lookup-in-no-cache-or-partial-cache-mode.md)   
  [Trasformazioni di Integration Services](../data-flow/transformations/integration-services-transformations.md)  
   
   

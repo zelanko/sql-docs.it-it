@@ -11,12 +11,12 @@ ms.assetid: fcc79e96-182a-45e9-8ae2-aeb440e9bedd
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b8f3cf856b7b4dbf77d4a426fcf35d969ce1a990
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: cb44454c12dec173e586fd2a94d0147dfde01eef
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145596"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52391864"
 ---
 # <a name="impersonation-ssas-tabular"></a>Rappresentazione (SSAS tabulare)
   In questo argomento vengono fornite agli autori di modelli tabulari informazioni sulla modalità di utilizzo delle credenziali di accesso da parte di Analysis Services in caso di connessione a un'origine dati per importare ed elaborare (aggiornare) i dati.  
@@ -38,7 +38,7 @@ ms.locfileid: "50145596"
   
  Le credenziali utilizzate per la rappresentazione sono diverse da quelle dell'utente attualmente connesso. Le credenziali dell'utente che ha effettuato l'accesso vengono utilizzate per particolari operazioni lato client in caso di creazione di un modello.  
   
- È importante comprendere come le credenziali di rappresentazione vengono specificate e protette nonché capire la differenza tra i contesti in cui vengono utilizzate sia le credenziali dell'attuale utente connesso sia altre credenziali.  
+ È importante comprendere come le credenziali di rappresentazione vengono specificate e protette nonché la differenza tra i contesti in cui le credenziali dell'utente connesso corrente e quando si utilizzano altre credenziali.  
   
  **Informazioni sulle credenziali lato server**  
   
@@ -56,7 +56,7 @@ ms.locfileid: "50145596"
   
  Analogamente, per modelli esistenti che sono già stati creati, è possibile usare la finestra di dialogo **Modifica proprietà tabella** per visualizzare in anteprima e filtrare i dati importati in una tabella. Per le funzionalità di anteprima e filtro viene usata la stessa funzionalità **Visualizza anteprima e applica filtro** nella pagina **Selezione tabelle e viste** dell'Importazione guidata tabella.  
   
- La funzionalità **Visualizza anteprima e applica filtro** e le finestre di dialogo **Proprietà tabella** e **Gestione partizioni** sono operazioni *lato client* in-process. Vale a dire che quanto effettuato durante questa operazione differisce dalla modalità con cui viene eseguita la connessione all'origine dati e con cui viene eseguito il recupero dei dati dall'origine dati, ovvero un'operazione lato server. Le credenziali utilizzate per l'anteprima e il filtro dei dati sono quelle dell'utente attualmente connesso. Nelle operazioni lato client vengono utilizzate sempre le credenziali di Windows dell'utente corrente per la connessione all'origine dati.  
+ La funzionalità **Visualizza anteprima e applica filtro** e le finestre di dialogo **Proprietà tabella** e **Gestione partizioni** sono operazioni *lato client* in-process. Vale a dire che quanto effettuato durante questa operazione differisce dalla modalità con cui viene eseguita la connessione all'origine dati e con cui viene eseguito il recupero dei dati dall'origine dati, ovvero un'operazione lato server. Le credenziali utilizzate per l'anteprima e il filtro dei dati sono quelle dell'utente attualmente connesso. Operazioni lato client usano sempre le credenziali di Windows dell'utente corrente per la connessione all'origine dati.  
   
  Questa separazione di credenziali usate durante le operazioni lato server e lato client può determinare una mancata corrispondenza tra gli elementi visualizzati dall'utente tramite la funzionalità **Visualizza anteprima e applica filtro** o la finestra di dialogo **Proprietà tabella** (operazioni lato client) e i dati che verranno recuperati durante un'importazione o un'elaborazione (operazione lato server). Se le credenziali dell'utente attualmente connesso e quelle di rappresentazione specificate sono diverse, i dati visualizzati nella funzionalità **Visualizza anteprima e applica filtro** o nella finestra di dialogo **Proprietà tabella** e i dati recuperati durante un'importazione o un'elaborazione possono differire a seconda delle credenziali richieste dall'origine dati.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "50145596"
 ##  <a name="bkmk_imp_info_options"></a> Opzioni  
  Quando si configura la rappresentazione o si modificano proprietà per una connessione all'origine dati esistente in Analysis Services, è possibile specificare una delle opzioni seguenti:  
   
-|Opzione|Valore di ImpersonationMode<sup>1</sup>|Description|  
+|Opzione|Valore di ImpersonationMode<sup>1</sup>|Descrizione|  
 |------------|-----------------------------------|-----------------|  
 |**Nome utente di Windows specifico e la password** <sup>2</sup>|ImpersonateWindowsUserAccount|Questa opzione consente di specificare che nel modello viene utilizzato un account utente di Windows per importare o elaborare dati dall'origine dati. Il dominio e il nome dell'account utente nel formato seguente:**\<nome di dominio >\\< nome dell'account utente\>**. Si tratta dell'opzione predefinita per la creazione di un nuovo modello tramite l'Importazione guidata tabella.|  
 |**Account servizio**|ImpersonateServiceAccount|Questa opzione consente di specificare che nel modello vengono utilizzate le credenziali di sicurezza associate all'istanza del servizio Analysis Services tramite cui viene gestito il modello.|  

@@ -8,17 +8,17 @@ ms.technology:
 - integration-services
 ms.topic: conceptual
 f1_keywords:
-- sql12.dts.designer.paramterwindow.f1
+- sql12.dts.designer.parameterwindow.f1
 ms.assetid: cd5d675b-dd5d-49cc-8b1f-dc717a973f99
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 12a896b305d15f33cf5fc1eb58562ca6b249ae63
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 75c36c5e061a10ec6fc5b2af17334d134a7bd9d2
+ms.sourcegitcommit: 1f10e9df1c523571a8ccaf3e3cb36a26ea59a232
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48174001"
+ms.lasthandoff: 11/17/2018
+ms.locfileid: "51858636"
 ---
 # <a name="create-parameters"></a>Create Parameters
   Usare [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] per creare parametri di progetto e parametri di pacchetto. Le procedure riportate di seguito contengono istruzioni dettagliate per la creazione di parametri di pacchetto/progetto.  
@@ -38,14 +38,14 @@ ms.locfileid: "48174001"
   
 3.  Immettere i valori per le proprietà **Nome**, **Tipo di dati**, **Valore**, **Sensibile** e **Richiesto** nell'elenco stesso o nella finestra **Proprietà**. Nella tabella seguente vengono descritte tali proprietà.  
   
-    |Proprietà|Description|  
+    |Proprietà|Descrizione|  
     |--------------|-----------------|  
     |nome|Nome del parametro.|  
     |Tipo di dati|Tipo di dati del parametro.|  
     |Valore predefinito|Valore predefinito del parametro assegnato in fase di progettazione. Noto anche come valore predefinito di progettazione.|  
     |Sensibile|I valori di parametri sensibili sono crittografati nel catalogo e risultano NULL quando vengono visualizzati con Transact-SQL o con SQL Server Management Studio.|  
     |Obbligatorio|Richiede che un valore diverso dal valore predefinito di progettazione venga specificato prima dell'esecuzione del pacchetto.|  
-    |Description|Per manutenzione, la descrizione del parametro. In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], impostare la descrizione del parametro nella finestra Proprietà di Visual Studio quando il parametro viene selezionato nella finestra dei parametri applicabile.|  
+    |Descrizione|Per manutenzione, la descrizione del parametro. In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], impostare la descrizione del parametro nella finestra Proprietà di Visual Studio quando il parametro viene selezionato nella finestra dei parametri applicabile.|  
   
     > [!NOTE]  
     >  Quando si distribuisce un progetto nel catalogo, molte più proprietà vengono associate al progetto. Per visualizzare tutte le proprietà di tutti i parametri nel catalogo, usare la vista [catalog.object_parameters &#40;database SSISDB&#41;](/sql/integration-services/system-views/catalog-object-parameters-ssisdb-database).  
@@ -72,14 +72,14 @@ ms.locfileid: "48174001"
   
 4.  Immettere valori per le proprietà **Nome**, **Tipo di dati**, **Valore**, **Sensibile** e **Richiesto**.  
   
-    |Proprietà|Description|  
+    |Proprietà|Descrizione|  
     |--------------|-----------------|  
     |nome|Nome del parametro.|  
     |Tipo di dati|Tipo di dati del parametro.|  
     |Valore predefinito|Valore predefinito del parametro assegnato in fase di progettazione. Noto anche come valore predefinito di progettazione.|  
     |Sensibile|I valori di parametri sensibili sono crittografati nel catalogo e risultano NULL quando vengono visualizzati con Transact-SQL o con SQL Server Management Studio.|  
     |Obbligatorio|Richiede che un valore diverso dal valore predefinito di progettazione venga specificato prima dell'esecuzione del pacchetto.|  
-    |Description|Per manutenzione, la descrizione del parametro. In [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], impostare la descrizione del parametro nella finestra Proprietà di Visual Studio quando il parametro viene selezionato nella finestra dei parametri applicabile.|  
+    |Descrizione|Per manutenzione, la descrizione del parametro. In [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], impostare la descrizione del parametro nella finestra Proprietà di Visual Studio quando il parametro viene selezionato nella finestra dei parametri applicabile.|  
   
 5.  Salvare il progetto per salvare le modifiche ai parametri. I valori dei parametri sono archiviati nelle configurazioni del file di progetto. Salvare il file di progetto per eseguire il commit al disco delle eventuali modifiche apportate ai valori dei parametri.  
   

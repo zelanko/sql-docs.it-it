@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - incremental load [Integration Services],preparing query
@@ -13,12 +12,12 @@ ms.assetid: 9ea2db7a-3dca-4bbf-9903-cccd2d494b5f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 79d862aa5fa2327a6b88ff1936d92e1c3f45f090
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 831e44cb232dea7f0730c73d360cd787f3895878
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48173251"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52756993"
 ---
 # <a name="prepare-to-query-for-the-change-data"></a>Preparazione dell'esecuzione di una query per i dati delle modifiche
   Nel flusso di controllo di un pacchetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] per l'esecuzione di un caricamento incrementale dei dati delle modifiche, la terza e ultima attività consiste nel preparare l'esecuzione di una query per i dati delle modifiche e nell'aggiungere un'attività Flusso di dati.  
@@ -125,7 +124,7 @@ ms.locfileid: "48173251"
   
         ```  
   
-5.  Lasciare la riga predefinita di codice che restituisce `DtsExecResult.Success` dall'esecuzione dello script.  
+5.  Lasciare la linea di codice predefinita, che restituisce `DtsExecResult.Success` dall'esecuzione dello script.  
   
 6.  Chiudere l'ambiente di sviluppo dello script ed **Editor attività Script**.  
   
@@ -171,7 +170,7 @@ ms.locfileid: "48173251"
         ```  
   
         > [!NOTE]  
-        >  Il `else` clausola in questo esempio genera una query per il caricamento iniziale dei dati delle modifiche passando un valore null per la data e ora di inizio. Questo esempio non si applica a uno scenario in cui le modifiche apportate prima dell'attivazione di Change Data Capture devono essere caricate anche nel data warehouse.  
+        >  In questo esempio la clausola `else` genera una query per il caricamento iniziale dei dati delle modifiche passando un valore Null per la data e l'ora di inizio. Questo esempio non si applica a uno scenario in cui le modifiche apportate prima dell'attivazione di Change Data Capture devono essere caricate anche nel data warehouse.  
   
 3.  Nella pagina **Mapping parametri** di **Editor attività Esegui SQL**creare i mapping seguenti:  
   

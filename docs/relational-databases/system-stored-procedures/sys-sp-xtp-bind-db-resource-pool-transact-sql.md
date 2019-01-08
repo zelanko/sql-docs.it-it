@@ -21,12 +21,12 @@ ms.assetid: c2a78073-626b-4159-996e-1808f6bfb6d2
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0a36ad2d94982a0e536f223ceff187a04632baa8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2e8182a0fca11105541f8dd435f352ba0d393731
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47647049"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52391654"
 ---
 # <a name="sysspxtpbinddbresourcepool-transact-sql"></a>sys.sp_xtp_bind_db_resource_pool (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -84,7 +84,7 @@ Resource pool 'Pool_Hekaton' does not exist or resource governor has not been re
 ```  
   
 **Pool_name fa riferimento a un pool di sistema riservato**  
- I nomi di pool "INTERNAL" e "DEFAULT" sono riservati ai pool di sistema.  Non è possibile associare in modo esplicito un database a uno di questi.  Se viene immesso un nome di pool di sistema, viene restituito l'errore seguente:  
+ I nomi di pool "INTERNAL" e "DEFAULT" sono riservati per i pool di sistema.  Non è possibile associare in modo esplicito un database a uno di questi.  Se viene immesso un nome di pool di sistema, viene restituito l'errore seguente:  
 *Pool di risorse %s è un pool di risorse di sistema.  I pool di risorse di sistema non possono essere associati in modo esplicito a un database tramite questa procedura.*  
   
 ```  
@@ -116,7 +116,7 @@ sys.sp_xtp_bind_db_resource_pool N'Hekaton_DB', N'Pool_Hekaton'
  
  L'associazione viene applicata alla successiva connessione del database.  
  
- B. Esempio esteso di esempio che include alcuni controlli di base precedente.  Eseguire il codice seguente [!INCLUDE[tsql](../../includes/tsql-md.md)] in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]\:
+ b. Esempio esteso di esempio che include alcuni controlli di base precedente.  Eseguire il codice seguente [!INCLUDE[tsql](../../includes/tsql-md.md)] in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]\:
  
 ```sql
 DECLARE @resourcePool sysname = N'Pool_Hekaton';
@@ -153,7 +153,7 @@ END
 -   È richiesta l'autorizzazione CONTROL SERVER.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Associazione di un database con tabelle con ottimizzazione per la memoria a un pool di risorse](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)   
+ [a un pool di risorse, vedere l'argomento](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)   
  [Sys.sp_xtp_unbind_db_resource_pool &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-unbind-db-resource-pool-transact-sql.md)  
   
   

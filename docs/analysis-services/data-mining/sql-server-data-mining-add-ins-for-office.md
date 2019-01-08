@@ -1,5 +1,5 @@
 ---
-title: Dati di SQL Server, componenti aggiuntivi Data Mining per Office | Documenti Microsoft
+title: Dati di SQL Server, componenti aggiuntivi Data Mining per Office | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,19 +9,19 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 2220bb48704fb29aa00236ebf1ec4ad46ecb4007
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 89986d3c8de4a1cbefbccf285a92a2dc19c6c7aa
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34014738"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52504738"
 ---
 # <a name="sql-server-data-mining-add-ins-for-office"></a>Componenti aggiuntivi Data mining di SQL Server per Office 2007
 
   [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Componenti aggiuntivi Data mining di SQL Server per Office è un semplice set di strumenti per l'analisi predittiva che consente l'utilizzo dei dati in Excel al fine di compilare modelli analitici per stima, indicazioni o esplorazione.  
   
 > [!IMPORTANT]
-> Il data mining componente aggiuntivo per Office è supportato in Office 2016 o versione successiva.
+> Il componente aggiuntivo data mining di dati per Office non è supportato in Office 2016 o versione successiva.
   
  Le procedure guidate e gli strumenti per la gestione dei dati nei componenti aggiuntivi forniscono istruzioni dettagliate per le seguenti attività comuni di data mining:  
   
@@ -45,11 +45,11 @@ ms.locfileid: "34014738"
   
      Gli utenti esperti possono compilare le query DMX personalizzate con l' **Editor avanzato query**con trascinamento della selezione o automatizzare le stime usando VBA di Excel.  
   
--   **Documentare e gestire.** Dopo avere creato un set di dati e compilato alcuni modelli, documentare il lavoro e le informazioni essenziali generando un riepilogo statistico dei parametri del modello e dei dati.  
+-   **Documentare e gestire.** Dopo aver creato un set di dati e compilato alcuni modelli, documentare il lavoro e le informazioni essenziali generando un riepilogo statistico dei parametri dei dati e il modello.  
   
--   **Esplorare e visualizzare.** Il data mining non è un'attività che è possibile automatizzare completamente. È necessario esplorare e comprendere i risultati per intraprendere un'azione significativa. I componenti aggiuntivi semplificano l'esplorazione tramite i visualizzatori interattivi dei modelli di Visio ed Excel che consentono di personalizzare i diagrammi del modello e di esportare i grafici e le tabelle in Excel per ulteriori attività di filtro o modifica.  
+-   **Esplorare e visualizzare.** Data mining non è un'attività che può essere completamente automatizzata, è necessario esplorare e comprendere i risultati per intraprendere un'azione significativa. I componenti aggiuntivi semplificano l'esplorazione tramite i visualizzatori interattivi dei modelli di Visio ed Excel che consentono di personalizzare i diagrammi del modello e di esportare i grafici e le tabelle in Excel per ulteriori attività di filtro o modifica.  
   
--   **Distribuire e integrare.** Dopo aver creato un modello utile, inserire il modello in produzione utilizzando gli strumenti di gestione per esportare il modello dal server sperimentale in un'altra istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
+-   **Distribuire e integrare.** Quando si crea un modello utile, inserito il modello in produzione, usando gli strumenti di gestione per esportare il modello dal server sperimentale in un'altra istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
      In alternativa, è possibile lasciare il modello nel server in cui è stato creato, ma aggiornare i dati di training ed eseguire le stime utilizzando script DMX o Integration Services.  
   
@@ -78,6 +78,6 @@ ms.locfileid: "34014738"
   
  A seconda dell'edizione di SQL Server Analysis Services a cui ci si connette, alcuni algoritmi avanzati potrebbero non essere disponibili. Per informazioni, vedere [Funzionalità supportate dalle edizioni di SQL Server 2016](../../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md).  
   
- Per ulteriori informazioni sull'installazione, vedere la pagina nell'area Download Microsoft: [http://www.microsoft.com/download/details.aspx?id=29061](http://www.microsoft.com/download/details.aspx?id=29061)  
+ Per altre informazioni sull'installazione, vedere la pagina nell'area download: [http://www.microsoft.com/download/details.aspx?id=29061](http://www.microsoft.com/download/details.aspx?id=29061)  
   
   

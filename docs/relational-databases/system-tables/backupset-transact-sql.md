@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7b5bf5ce20678845111a1f410739674c50c7bb61
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: baf454d021f64931d06c39b49ee0a18f92841507
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47596160"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52402855"
 ---
 # <a name="backupset-transact-sql"></a>backupset (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "47596160"
  Questa tabella è archiviata nel **msdb** database.  
 
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**backup_set_id**|**int**|Numero di identificazione univoco del set di backup. Identità, chiave primaria.|  
 |**backup_set_uuid**|**uniqueidentifier**|Numero di identificazione univoco del set di backup.|  
@@ -47,7 +47,7 @@ ms.locfileid: "47596160"
 |**last_media_number**|**smallint**|Numero del supporto in cui termina il set di backup. Può essere NULL.|  
 |**catalog_family_number**|**tinyint**|Numero del gruppo di supporti che include l'inizio della directory del set di backup. Può essere NULL.|  
 |**catalog_media_number**|**smallint**|Numero del supporto che include l'inizio della directory del set di backup. Può essere NULL.|  
-|**posizione**|**int**|Posizione del set di backup utilizzata nell'operazione di ripristino per individuare il set e i file di backup appropriati. Può essere NULL. Per altre informazioni, vedere FILE nel [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md).|  
+|**position**|**int**|Posizione del set di backup utilizzata nell'operazione di ripristino per individuare il set e i file di backup appropriati. Può essere NULL. Per altre informazioni, vedere FILE nel [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md).|  
 |**expiration_date**|**datetime**|Data e ora di scadenza del set di backup. Può essere NULL.|  
 |**software_vendor_id**|**int**|Numero di identificazione del produttore del software con cui viene scritta l'intestazione supporto di backup. Può essere NULL.|  
 |**name**|**nvarchar(128)**|Nome del set di backup. Può essere NULL.|  
@@ -100,7 +100,7 @@ ms.locfileid: "47596160"
 |**compressed_backup_size**|**Numeric(20,0)**|Numero totale di byte del backup archiviato nel disco.<br /><br /> Per calcolare il rapporto di compressione, utilizzare **compressed_backup_size** e **backup_size**.<br /><br /> Durante un' **msdb** esegue l'aggiornamento, questo valore è impostato su NULL. che indica un backup non compresso.|  
 |**key_algorithm**|**nvarchar(32)**|Algoritmo utilizzato per crittografare il backup. Il valore NO_Encryption indica che il backup non è stato crittografato.|  
 |**encryptor_thumbprint**|**varbinary(20)**|L'identificazione digitale del componente di crittografia che può essere utilizzato per trovare il certificato o la chiave asimmetrica nel database. Nel caso in cui il backup non è stato crittografato, questo valore è NULL.|  
-|**encryptor_type**|**nvarchar(32)**|Tipo di componente di crittografia: certificato o chiave asimmetrica. . Nel caso in cui il backup non è stato crittografato, questo valore è NULL.|  
+|**encryptor_type**|**nvarchar(32)**|Tipo di componente di crittografia usato: certificato o chiave asimmetrica. . Nel caso in cui il backup non è stato crittografato, questo valore è NULL.|  
   
 ## <a name="remarks"></a>Note  
  RESTORE VERIFYONLY FROM *dispositivo_backup* WITH LOADHISTORY popola la colonna delle **backupmediaset** tabella con i valori appropriati dall'intestazione del set di supporti.  

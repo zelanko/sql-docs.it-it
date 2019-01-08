@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 helpviewer_keywords:
 - displaying databases
@@ -16,12 +15,12 @@ ms.assetid: 9e8ac097-84b7-46c7-85e3-c1e79f94d747
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 29bf748ddcb04b99e610674f1b25c8121d4ab327
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b71a548dabd286437db73224195622ef576bd28b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48186241"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52748943"
 ---
 # <a name="view-or-change-the-properties-of-a-database"></a>Visualizzare o modificare le proprietà di un database
   In questo argomento si illustra come visualizzare o modificare le proprietà di un database in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Dopo aver modificato la proprietà di un database, la modifica diventa effettiva immediatamente.  
@@ -32,7 +31,7 @@ ms.locfileid: "48186241"
   
      [Indicazioni](#Recommendations)  
   
-     [Security](#Security)  
+     [Sicurezza](#Security)  
   
 -   **Per visualizzare o modificare le proprietà di un database utilizzando:**  
   
@@ -61,7 +60,7 @@ ms.locfileid: "48186241"
   
 3.  Nella finestra di dialogo **Proprietà database** selezionare una pagina per visualizzare le informazioni corrispondenti. Selezionare la pagina **File** , ad esempio, per visualizzare le informazioni sui file di dati e di log.  
   
-##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
   
 #### <a name="to-view-a-property-of-a-database-by-using-databasepropertyex"></a>Per visualizzare una proprietà di un database tramite DATABASEPROPERTYEX  
   

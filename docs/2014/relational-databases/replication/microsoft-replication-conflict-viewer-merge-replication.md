@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.replconflictviewer.cvmerge.f1
@@ -13,12 +12,12 @@ ms.assetid: bfef5e21-ac04-4bc5-a55e-595421e34923
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5ac6813542099b955b7430309fe6629f6a5648af
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e28a5077057c9a02a3b45de6a88180eab5c87b2b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48156071"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52756233"
 ---
 # <a name="microsoft-replication-conflict-viewer-merge-replication"></a>Visualizzatore conflitti di replica Microsoft (Merge repliche)
   Il Visualizzatore conflitti di replica consente di visualizzare tutti i conflitti verificatisi durante la sincronizzazione di repliche. Si verifica una situazione di conflitto quando gli stessi dati vengono modificati in due server distinti, ad esempio in un server di pubblicazione e in un Sottoscrittore oppure in due Sottoscrittori distinti. La replica risolve i conflitti automaticamente tramite il sistema di risoluzione dei conflitti selezionato al momento della creazione dell'articolo. Il Visualizzatore conflitti di replica consente tuttavia di scegliere una risoluzione dei conflitti diversa, se necessario. È possibile che si verifichino i conflitti seguenti:  
@@ -71,8 +70,8 @@ ms.locfileid: "48156071"
  **Mostra le prime cinque colonne e le altre colonne con dati in conflitto**  
  Selezionare questa opzione per visualizzare le prime cinque colonne e tutte le colonne contenenti conflitti. Questa opzione risulta utile quando nella tabella sono presenti numerose colonne, ma si desidera visualizzare solo le colonne più significative per la risoluzione dei conflitti. Le prime cinque colonne vengono sempre visualizzate perché i campi di identificazione di una riga, ad esempio i campi del nome o della chiave primaria, sono solitamente inclusi tra le prime colonne della tabella.  
   
- **Visualizza informazioni sulla colonna** (**…**)  
- Fare clic per visualizzare le informazioni sulla colonna, ovvero **Nome tabella**, **Nome colonna**, **Tipo di dati**e **Valore colonna**. È possibile modificare**Valore colonna** , purché il valore non sia visualizzato in modalità di sola lettura.  
+ **Visualizza informazioni sulla colonna** (**...**)  
+ Fare clic per visualizzare le informazioni di colonna: **Nome tabella**, **ColumnName**, **tipo di dati**, e **colonna valore**. È possibile modificare**Valore colonna** , purché il valore non sia visualizzato in modalità di sola lettura.  
   
  **Invia riga in conflitto confermata**  
  Fare clic su questo pulsante per mantenere la riga confermata dal sistema di risoluzione dei conflitti. Prima di fare clic su questo pulsante, è possibile modificare il valore di ogni colonna non visualizzata come di sola lettura.  

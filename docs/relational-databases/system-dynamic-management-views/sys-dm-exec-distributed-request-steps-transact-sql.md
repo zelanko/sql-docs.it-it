@@ -23,24 +23,24 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ccf2d3bc2b9bd40a141cae19a22ffde56ea16dd6
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 27df857e8863272f2b502c4950b4cc36ad936978
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51674300"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52401956"
 ---
 # <a name="sysdmexecdistributedrequeststeps-transact-sql"></a>sys.dm_exec_distributed_request_steps (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
   Contiene informazioni su tutti i passaggi che compongono una determinata richiesta PolyBase o query. Elenca una riga per ogni passaggio della query.  
   
-|Nome colonna|Tipo di dati|Description|Intervallo|  
+|Nome colonna|Tipo di dati|Descrizione|Intervallo|  
 |-----------------|---------------|-----------------|-----------|  
 |execution_id|**int**|valore di execution_id e step_index costituiscono la chiave per questa visualizzazione. Id numerico univoco associato alla richiesta.|Vedere ID nel [exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md).|  
 |step_index|**int**|La posizione di questo passaggio della sequenza di passaggi che compongono la richiesta.|0 per (n-1) per una richiesta con passaggi n.|  
-|operation_type|**nvarchar(128)**|Tipo dell'operazione rappresentata da questo passaggio.|'MoveOperation','OnOperation','RandomIDOperation','RemoteOperation','ReturnOperation','ShuffleMoveOperation','TempTablePropertiesOperation','DropDiagnosticsNotifyOperation', ‘HadoopShuffleOperation', ‘HadoopBroadCastOperation', ‘HadoopRoundRobinOperation'|  
-|distribution_type|**nvarchar(32)**|In cui è in esecuzione il passaggio.|‘AllComputeNodes','AllDistributions','ComputeNode','Distribution','AllNodes','SubsetNodes','SubsetDistributions','Unspecified'.|  
+|operation_type|**nvarchar(128)**|Tipo dell'operazione rappresentata da questo passaggio.|'MoveOperation', 'OnOperation', 'RandomIDOperation', 'RemoteOperation', 'ReturnOperation', 'ShuffleMoveOperation', 'TempTablePropertiesOperation', 'DropDiagnosticsNotifyOperation', 'HadoopShuffleOperation', 'HadoopBroadCastOperation', 'HadoopRoundRobinOperation'|  
+|distribution_type|**nvarchar(32)**|In cui è in esecuzione il passaggio.|'AllComputeNodes ',' 'AllDistributions, 'ComputeNode', 'Distribution', 'AllNodes', "SubsetNodes", 'SubsetDistributions',' non è specificato'.|  
 |location_type|**nvarchar(32)**|In cui è in esecuzione il passaggio.|'Compute', 'Head' o 'DMS'. Tutti i passaggi di spostamento dei dati mostrano 'DMS'.|  
 |status|**nvarchar(32)**|Stato di questo passaggio|'Sospeso', 'Running', 'Complete', 'Non riuscito', 'UndoFailed', 'PendingCancel', 'annullato', 'Annullate', 'Interrotta'|  
 |error_id|**nvarchar(36)**|Id univoco dell'errore associato con questo passaggio, se presente|Vedere id del [sys.dm_exec_compute_node_errors &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-node-errors-transact-sql.md)il valore è null, se si è verificato alcun errore.|  

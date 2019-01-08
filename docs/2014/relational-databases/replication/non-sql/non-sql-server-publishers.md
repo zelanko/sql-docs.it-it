@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - heterogeneous database replication, non-SQL Server Publishers
@@ -16,12 +15,12 @@ ms.assetid: 08a160a6-33be-46b5-bc7b-d53180d8bdf1
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: dcf0a38f9dedcae80badaa0ca7ba2462b1b808c9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 19db106c43007259754bace7f0e9d2938ad9cf1e
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48190761"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52752573"
 ---
 # <a name="non-sql-server-publishers"></a>server di pubblicazione non SQL Server
   La pubblicazione di dati da origini non[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] consente di consolidare dati in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] consente la sottoscrizione di dati snapshot o transazionali pubblicati da un database Oracle. Per altre informazioni sulla pubblicazione da sistemi Oracle, vedere [Panoramica della pubblicazione Oracle](oracle-publishing-overview.md).  
@@ -33,7 +32,7 @@ ms.locfileid: "48190761"
   
  La pubblicazione da database non[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] è ideale nei seguenti scenari:  
   
-|Scenario|Description|  
+|Scenario|Descrizione|  
 |--------------|-----------------|  
 |Distribuzioni di applicazioni[!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework|Sviluppo con [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Studio e [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , operando al contempo su dati replicati da un database non[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|  
 |Server di gestione temporanea di data warehousing|Mantenimento dei database di gestione temporanea di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sincronizzati con un database non[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|  

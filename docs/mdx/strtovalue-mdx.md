@@ -1,5 +1,5 @@
 ---
-title: StrToValue (MDX) | Documenti Microsoft
+title: StrToValue (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,17 +9,17 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 5a46b68ac8e93a00c7730b32593331a28655c1c5
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.openlocfilehash: c327dc55420cc89f5e76b6fae7822fad3a4e95f4
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743070"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52524351"
 ---
 # <a name="strtovalue-mdx"></a>StrToValue (MDX)
 
 
-  Restituisce il valore numerico specificato da una stringa con formato MDX (Multidimensional Expression).  
+  Restituisce il valore numerico specificato da una stringa di formato Multidimensional.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -32,10 +32,10 @@ StrToValue(MDX_Expression [,CONSTRAINED] )
  *MDX_Expression*  
  Espressione stringa valida che viene risolta, direttamente o indirettamente, in una singola cella.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  Il **StrToValue** funzione restituisce il valore numerico specificato dall'espressione MDX. Il **StrToValue** funzione viene in genere utilizzata con funzioni definite dall'utente per la restituzione di un'espressione MDX da una funzione esterna a un'istruzione MDX che può essere risolta in una singola cella.  
   
--   Quando viene utilizzato il flag CONSTRAINED, l'espressione MDX deve contenere solo un valore scalare. Questo flag viene utilizzato per ridurre il rischio di attacchi intrusivi tramite la stringa specificata. Se si specifica un'espressione MDX non direttamente risolvibile in un valore scalare, viene visualizzato l'errore seguente: "Le restrizioni imposte dal flag CONSTRAINED nella funzione STRTOVALUE sono state violate".  
+-   Quando viene utilizzato il flag CONSTRAINED, l'espressione MDX deve contenere solo un valore scalare. Questo flag viene utilizzato per ridurre il rischio di attacchi intrusivi tramite la stringa specificata. Se un'espressione MDX non direttamente risolvibile in un valore scalare, viene visualizzato l'errore seguente: "Le restrizioni imposte dal CONSTRAINED flag nella funzione STRTOVALUE sono state violate."  
   
 -   Quando non viene utilizzato il flag CONSTRAINED, non esistono limiti alla complessità dell'espressione MDX specificata, purché si risolva in un'espressione MDX (Multidimensional Expression) valida che restituisce una singola cella.  
   
@@ -58,6 +58,6 @@ WHERE [Product].[Product Categories].[Bikes]
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento alla funzione MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Guida di riferimento alle funzioni MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

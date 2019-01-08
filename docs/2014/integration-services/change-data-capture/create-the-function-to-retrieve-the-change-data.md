@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - incremental load [Integration Services],creating function
@@ -13,18 +12,18 @@ ms.assetid: 55dd0946-bd67-4490-9971-12dfb5b9de94
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d9749418654d76f542d865aad78135b1a11a987b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3b49001c7b62be67097223421ef85db2b475aa1d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48088601"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52761893"
 ---
 # <a name="create-the-function-to-retrieve-the-change-data"></a>Creazione della funzione per il recupero dei dati delle modifiche
   Dopo avere completato il flusso di controllo per un pacchetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] che esegue un caricamento incrementale dei dati delle modifiche, l'attività successiva consiste nella creazione di una funzione con valori di tabella per il recupero di tali dati. Questa funzione deve essere creata solo una volta, prima del primo caricamento incrementale.  
   
 > [!NOTE]  
->  La creazione di una funzione per il recupero dei dati delle modifiche rappresenta il secondo passaggio del processo di creazione di un pacchetto che esegue il caricamento incrementale di tali dati. Per una descrizione del processo completo di creazione del pacchetto, vedere [Change Data Capture &#40;SSIS&#41;](change-data-capture-ssis.md) (Modificare i dati di acquisizione &#40;SSIS&#41).  
+>  La creazione di una funzione per il recupero dei dati delle modifiche rappresenta il secondo passaggio del processo di creazione di un pacchetto che esegue il caricamento incrementale di tali dati. Per una descrizione del processo completo di creazione del pacchetto, vedere [Change Data Capture &#40;SSIS &#41;](change-data-capture-ssis.md) (Modificare i dati di acquisizione &#40;SSIS &#41;).  
   
 ## <a name="design-considerations-for-change-data-capture-functions"></a>Considerazioni sulla progettazione per le funzioni Change Data Capture  
  Per recuperare i dati delle modifiche, un componente di origine nel flusso di dati del pacchetto chiama una delle funzioni Change Data Capture seguenti:  
@@ -133,16 +132,16 @@ deallocate #hfunctions
   
 -   Tutte le colonne di dati di modifica richieste.  
   
--   Una colonna denominata __CDC_OPERATION che utilizza un campo di uno o due caratteri per identificare l'operazione associata alla riga. I valori validi per questo campo sono: 'I' per inserimento, 'D' per eliminazione, 'UO' per aggiornamento di valori vecchi e 'UN' per aggiornamento di valori nuovi.  
+-   Una colonna denominata __CDC_OPERATION che utilizza un campo di uno o due caratteri per identificare l'operazione associata alla riga. I valori validi per questo campo sono come segue: 'I' per l'inserimento, directory sincronizzate ' per l'eliminazione, 'UO' per Aggiorna i valori vecchi e ' un' ' per aggiornare i valori nuovi.  
   
--   Flag di aggiornamento, quando necessari, visualizzati come colonne bit dopo il codice dell'operazione e nell'ordine specificato nel parametro *@update_flag_list* . Il nome di queste colonne viene creato aggiungendo '_uflag' al nome della colonna associato.  
+-   Flag di aggiornamento, quando necessari, visualizzati come colonne bit dopo il codice dell'operazione e nell'ordine specificato nel parametro *@update_flag_list* . Per creare il nome di queste colonne, si aggiunge '_uflag' al nome della colonna associato.  
   
  Se il pacchetto chiama una funzione wrapper che esegue una query su tutte le modifiche, la funzione wrapper restituisce anche le colonne __CDC_STARTLSN e \__CDC_SEQVAL. Queste due colonne diventano rispettivamente la prima e la seconda colonna del set di risultati. La funzione wrapper ordina inoltre il set di risultati in base a queste due colonne.  
   
 ## <a name="writing-your-own-table-value-function"></a>Scrittura della funzione con valori di tabella personalizzata  
  È anche possibile usare [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] per scrivere una funzione wrapper con valori di tabella personalizzata che chiama la funzione di query Change Data Capture e archiviare la funzione wrapper con valori di tabella in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per altre informazioni sulla creazione di una funzione Transact-SQL, vedere [CREATE FUNCTION &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-function-transact-sql).  
   
- Nell'esempio seguente viene definita una funzione con valori di tabella per il recupero delle modifiche da una tabella Customer per l'intervallo di modifiche specificato. Questo funzioni funzione utilizza change data capture per eseguire il mapping di `datetime` valori number (LSN) che utilizzano internamente le tabelle delle modifiche di sequenza di valori nel registro binario. Questa funzione gestisce inoltre diverse condizioni speciali:  
+ Nell'esempio seguente viene definita una funzione con valori di tabella per il recupero delle modifiche da una tabella Customer per l'intervallo di modifiche specificato. La funzione utilizza le funzioni Change Data Capture per eseguire il mapping tra i valori `datetime` e i valori dei numeri di sequenza del file di log (LSN) binario utilizzati dalle tabelle delle modifiche. Questa funzione gestisce inoltre diverse condizioni speciali:  
   
 -   Quando viene passato un valore Null per l'ora di inizio, questa funzione utilizza il valore disponibile per primo.  
   
@@ -207,7 +206,7 @@ go
 ### <a name="retrieving-additional-metadata-with-the-change-data"></a>Recupero di metadati aggiuntivi con i dati di modifica  
  Anche se la funzione con valori di tabella creata dall'utente illustrata in precedenza usa solo la colonna **__$operation**, la funzione **cdc.fn_cdc_get_net_changes_<capture_instance>** restituisce quattro colonne di metadati per ogni riga di modifica. Se si desidera utilizzare questi valori nel flusso di dati, è possibile restituirli come colonne aggiuntive dalla funzione wrapper con valori di tabella.  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**__$start_lsn**|`binary(10)`|Valore LSN associato al commit della transazione per la modifica.<br /><br /> Tutte le modifiche di cui è stato eseguito il commit nella stessa transazione condividono lo stesso valore LSN di commit. Se, ad esempio, un'operazione di aggiornamento nella tabella di origine modifica due diverse righe, la tabella delle modifiche conterrà quattro righe, due con i valori precedenti e due con i nuovi valori, ognuna delle quali con lo stesso valore **__$start_lsn** .|  
 |**__$seqval**|`binary(10)`|Valore di sequenza utilizzato per ordinare le modifiche alle righe in una transazione.|  
@@ -220,6 +219,6 @@ go
 ## <a name="next-step"></a>Passaggio successivo  
  Dopo avere creato la funzione con valori di tabella per l'esecuzione di query per i dati delle modifiche, il passaggio successivo consiste nell'iniziare a progettare il flusso di dati nel pacchetto.  
   
- **Argomento successivo:** [Recuperare e comprendere i dati delle modifiche](retrieve-and-understand-the-change-data.md)  
+ **Argomento successivo:** [Recuperare e interpretare i dati delle modifiche](retrieve-and-understand-the-change-data.md)  
   
   

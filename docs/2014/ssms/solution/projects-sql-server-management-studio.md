@@ -4,18 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 ms.assetid: c13af859-ca66-4e43-b76a-0650ac6566c0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 29bb70b8f1acabc94798a4a86b52e9e0b149cd97
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 85bc34af971db386862528ac36ea04fef33f2daa
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48102703"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52759193"
 ---
 # <a name="projects-sql-server-management-studio"></a>Progetti (SQL Server Management Studio)
   Un progetto di [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] è una raccolta di file e script correlati logicamente che possono essere salvati insieme per l'amministrazione e lo sviluppo del database.  
@@ -48,7 +48,7 @@ ms.locfileid: "48102703"
 |----------------------|-----------|  
 |Viene descritto come creare un nuovo progetto in una soluzione.|[Creare un progetto](create-a-project.md)|  
 |Viene descritto come aggiungere un progetto esistente a una soluzione.|[Aggiunta di un progetto esistente a una soluzione](add-an-existing-project-to-a-solution.md)|  
-|Viene descritto come modificare il percorso predefinito in cui vengono salvati i file di progetto.|[Modificare il percorso predefinito per i progetti](change-the-default-location-for-projects.md)|  
+|Viene descritto come modificare il percorso predefinito in cui vengono salvati i file di progetto.|[Modifica del percorso predefinito per i progetti](change-the-default-location-for-projects.md)|  
 |Viene descritto come visualizzare le proprietà correnti di un progetto.|[Visualizzare le proprietà di un progetto](view-project-properties.md)|  
 |Viene descritto come aggiungere nuovi elementi, ad esempio connessioni o file di script, a un progetto.|[Aggiungere nuovi elementi a un progetto](add-new-items-to-a-project.md)|  
 |Viene descritto come definire le informazioni di connessione per una query.|[Associazione di una query a una connessione in un progetto](associate-a-query-with-a-connection-in-a-project.md)|  

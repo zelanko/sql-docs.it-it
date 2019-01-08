@@ -20,16 +20,16 @@ ms.assetid: 38349d4b-be03-46f9-9d6a-e50dd144e225
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8e46b6102f71e4ffcc00c4dd1367ab3beaa68732
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d318b73feaec0cfb48548b05ba6d7c06a697c6ca
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818569"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52503522"
 ---
 # <a name="sqlbindparameter-function"></a>Pagina relativa alla funzione SQLBindParameter
 **Conformità**  
- Versione introdotta: Conformità 2.0 standard ODBC: ODBC  
+ Versione introdotta: Conformità agli standard 2.0 ODBC: ODBC  
   
  **Riepilogo**  
  **SQLBindParameter** associa un buffer a un marcatore di parametro in un'istruzione SQL. **SQLBindParameter** supporta l'associazione a un tipo di dati Unicode C, anche se il driver sottostante non supporta i dati Unicode.  
@@ -95,7 +95,7 @@ SQLRETURN SQLBindParameter(
 ## <a name="diagnostics"></a>Diagnostica  
  Quando **SQLBindParameter** restituisce SQL_ERROR o SQL_SUCCESS_WITH_INFO, un valore SQLSTATE associato possono essere ottenuti chiamando **SQLGetDiagRec** con un *HandleType* di SQL_HANDLE_STMT e un *gestiscono* dei *StatementHandle*. Nella tabella seguente sono elencati i valori SQLSTATE normalmente restituiti dal **SQLBindParameter** e illustra ognuna nel contesto di questa funzione; la notazione "(DM)" precede le descrizioni di SQLSTATE restituiti da Gestione Driver. Il codice restituito a ogni valore SQLSTATE è SQL_ERROR, se non specificato diversamente.  
   
-|SQLSTATE|Errore|Description|  
+|SQLSTATE|Errore|Descrizione|  
 |--------------|-----------|-----------------|  
 |01000|Avviso generale|Messaggio informativo specifico del driver. (Funzione restituisce SQL_SUCCESS_WITH_INFO).|  
 |07006|Violazione dell'attributo del tipo di dati|Il tipo di dati identificato dal *ValueType* argomento non può essere convertito nel tipo di dati identificato dalle *ParameterType* argomento. Si noti che questo errore potrebbe essere restituito da **SQLExecDirect**, **SQLExecute**, o **SQLPutData** in fase di esecuzione, anziché mediante **SQLBindParameter**.|  
@@ -112,14 +112,14 @@ SQLRETURN SQLBindParameter(
 |HY104|Valore di precisione o scala non valido|Il valore specificato per l'argomento *ColumnSize* oppure *DecimalDigits* non rientra nell'intervallo dei valori supportati dall'origine dati per una colonna del tipo di dati SQL specificato da di  *ParameterType* argomento.|  
 |HY105|Tipo di parametro non valido|(DM) il valore specificato per l'argomento *InputOutputType* non è valido. (Vedere "Commenti".)|  
 |HY117|Connessione viene sospesa a causa dello stato di transazione sconosciuto. Solo disconnettere e le funzioni di sola lettura sono consentite.|(DM) per altre informazioni sullo stato sospeso, vedere [SQLEndTran-funzione](../../../odbc/reference/syntax/sqlendtran-function.md).|  
-|HYC00|Funzionalità opzionale non implementata|L'origine dati o driver non supporta la conversione specificata dalla combinazione del valore specificato per l'argomento *ValueType* e il valore specifico del driver specificato per l'argomento *ParameterType*.<br /><br /> Il valore specificato per l'argomento *ParameterType* era un identificatore di tipo di dati SQL ODBC valido per la versione di ODBC supportati dal driver, ma non era supportata dall'origine dati o driver.<br /><br /> Il driver supporta solo l'API ODBC 2. *x* e l'argomento *ValueType* era una delle operazioni seguenti:<br /><br /> SQL_C_NUMERIC SQL_C_SBIGINT SQL_C_UBIGINT<br /><br /> tutti i tipi di dati di intervallo C sono elencati nella [tipi di dati C](../../../odbc/reference/appendixes/c-data-types.md) nell'appendice d: i tipi di dati.<br /><br /> Il driver supporta solo le versioni ODBC precedenti alla versione 3.50 e l'argomento *ValueType* era SQL_C_GUID.|  
+|HYC00|Funzionalità opzionale non implementata|L'origine dati o driver non supporta la conversione specificata dalla combinazione del valore specificato per l'argomento *ValueType* e il valore specifico del driver specificato per l'argomento *ParameterType*.<br /><br /> Il valore specificato per l'argomento *ParameterType* era un identificatore di tipo di dati SQL ODBC valido per la versione di ODBC supportati dal driver, ma non era supportata dall'origine dati o driver.<br /><br /> Il driver supporta solo l'API ODBC 2. *x* e l'argomento *ValueType* era una delle operazioni seguenti:<br /><br /> SQL_C_NUMERIC SQL_C_SBIGINT SQL_C_UBIGINT<br /><br /> tutti i tipi di dati di intervallo C sono elencati nella [tipi di dati C](../../../odbc/reference/appendixes/c-data-types.md) nell'appendice d: Tipi di dati.<br /><br /> Il driver supporta solo le versioni ODBC precedenti alla versione 3.50 e l'argomento *ValueType* era SQL_C_GUID.|  
 |HYT01|Timeout di connessione scaduto|Il periodo di timeout di connessione è scaduto prima che l'origine dati ha risposto alla richiesta. Il periodo di timeout di connessione viene impostato tramite **SQLSetConnectAttr**, SQL_ATTR_CONNECTION_TIMEOUT.|  
 |IM001|Driver non supporta questa funzione|Il driver (DM) associato il *StatementHandle* non supporta la funzione.|  
   
 ## <a name="comments"></a>Commenti  
  Un'applicazione chiama **SQLBindParameter** associare ogni marcatore di parametro in un'istruzione SQL. Binding rimangono valide fino a quando l'applicazione chiama **SQLBindParameter** anche in questo caso, chiama **SQLFreeStmt** con l'opzione SQL_RESET_PARAMS o chiamate **SQLSetDescField** a impostare il campo di intestazione SQL_DESC_COUNT di APD su 0.  
   
- Per altre informazioni sui parametri, vedere [parametri delle istruzioni](../../../odbc/reference/develop-app/statement-parameters.md). Per altre informazioni sui tipi di dati di parametro e marcatori di parametro, vedere [tipi di dati di parametro](../../../odbc/reference/appendixes/parameter-data-types.md) e [marcatori di parametro](../../../odbc/reference/appendixes/parameter-markers.md) nell'appendice c: SQL grammatica.  
+ Per altre informazioni sui parametri, vedere [parametri delle istruzioni](../../../odbc/reference/develop-app/statement-parameters.md). Per altre informazioni sui tipi di dati di parametro e marcatori di parametro, vedere [tipi di dati di parametro](../../../odbc/reference/appendixes/parameter-data-types.md) e [marcatori di parametro](../../../odbc/reference/appendixes/parameter-markers.md) nell'appendice c: Grammatica SQL.  
   
 ## <a name="parameternumber-argument"></a>Argomento ParameterNumber  
  Se *ParameterNumber* nella chiamata a **SQLBindParameter** è maggiore del valore di, SQL_DESC_COUNT **SQLSetDescField** viene chiamato per aumentare il valore di SQL_DESC_ Per CONTARE *ParameterNumber*.  
@@ -166,11 +166,11 @@ L_PARAM_INPUT_OUTPUT_STREAM|SQL_LEN_DATA_AT_EXEC (*len*) o SQL_DATA_AT_EXEC|Inpu
 >  Il driver necessario decidere quali tipi SQL sono consentiti quando un'applicazione si associa un output o un parametro di input / output come state trasmesse. Gestione driver non genererà un errore per un tipo SQL non valido.  
   
 ## <a name="valuetype-argument"></a>Argomento ValueType  
- Il *ValueType* argomento specifica il tipo di dati C del parametro. Questo argomento imposta i campi SQL_DESC_TYPE SQL_DESC_CONCISE_TYPE e SQL_DESC_DATETIME_INTERVAL_CODE di APD. Deve essere uno dei valori di [tipi di dati C](../../../odbc/reference/appendixes/c-data-types.md) sezione Appendice d: tipi di dati.  
+ Il *ValueType* argomento specifica il tipo di dati C del parametro. Questo argomento imposta i campi SQL_DESC_TYPE SQL_DESC_CONCISE_TYPE e SQL_DESC_DATETIME_INTERVAL_CODE di APD. Deve essere uno dei valori di [tipi di dati C](../../../odbc/reference/appendixes/c-data-types.md) sezione dell'appendice d: Tipi di dati.  
   
- Se il *ValueType* degli argomenti è uno dei tipi di dati di intervallo, il campo SQL_DESC_TYPE delle *ParameterNumber* record di APD è impostata su SQL_INTERVAL, il campo SQL_DESC_CONCISE_TYPE di APD è impostato su il tipo di dati di intervallo concisa e il campo SQL_DESC_DATETIME_INTERVAL_CODE del *ParameterNumber* record è impostata su un codice secondario per il tipo di dati di intervallo specifico. (Vedere [appendice d: i tipi di dati](../../../odbc/reference/appendixes/appendix-d-data-types.md).) L'intervallo predefinito iniziali precisione (2) e la precisione dei secondi di intervallo predefinito (6), come set di campi SQL_DESC_DATETIME_INTERVAL_PRECISION e SQL_DESC_PRECISION di APD, rispettivamente, vengono usati per i dati. Se entrambi precisione predefinita non è appropriata, l'applicazione deve impostare in modo esplicito il campo di descrizione da una chiamata a **SQLSetDescField** oppure **SQLSetDescRec**.  
+ Se il *ValueType* degli argomenti è uno dei tipi di dati di intervallo, il campo SQL_DESC_TYPE delle *ParameterNumber* record di APD è impostata su SQL_INTERVAL, il campo SQL_DESC_CONCISE_TYPE di APD è impostato su il tipo di dati di intervallo concisa e il campo SQL_DESC_DATETIME_INTERVAL_CODE del *ParameterNumber* record è impostata su un codice secondario per il tipo di dati di intervallo specifico. (Vedere [appendice d: Tipi di dati](../../../odbc/reference/appendixes/appendix-d-data-types.md).) L'intervallo predefinito iniziali precisione (2) e la precisione dei secondi di intervallo predefinito (6), come set di campi SQL_DESC_DATETIME_INTERVAL_PRECISION e SQL_DESC_PRECISION di APD, rispettivamente, vengono usati per i dati. Se entrambi precisione predefinita non è appropriata, l'applicazione deve impostare in modo esplicito il campo di descrizione da una chiamata a **SQLSetDescField** oppure **SQLSetDescRec**.  
   
- Se il *ValueType* degli argomenti è uno dei tipi di dati Data/ora, il campo SQL_DESC_TYPE delle *ParameterNumber* record di APD è impostato su SQL_DATETIME, il campo SQL_DESC_CONCISE_TYPE del *ParameterNumber* record di APD è impostato il tipo di dati datetime concisa C e il campo SQL_DESC_DATETIME_INTERVAL_CODE del *ParameterNumber* record è impostata su un codice secondario per la data e ora specifica tipo di dati. (Vedere [appendice d: i tipi di dati](../../../odbc/reference/appendixes/appendix-d-data-types.md).)  
+ Se il *ValueType* degli argomenti è uno dei tipi di dati Data/ora, il campo SQL_DESC_TYPE delle *ParameterNumber* record di APD è impostato su SQL_DATETIME, il campo SQL_DESC_CONCISE_TYPE del *ParameterNumber* record di APD è impostato il tipo di dati datetime concisa C e il campo SQL_DESC_DATETIME_INTERVAL_CODE del *ParameterNumber* record è impostata su un codice secondario per la data e ora specifica tipo di dati. (Vedere [appendice d: Tipi di dati](../../../odbc/reference/appendixes/appendix-d-data-types.md).)  
   
  Se il *ValueType* argomento è un tipo di dati SQL_C_NUMERIC la precisione predefinita (che è definito dal driver) e la scala predefinita (0), come set di campi SQL_DESC_PRECISION e SQL_DESC_SCALE di APD, vengono usati per i dati. Se la precisione predefinita o la scala non è appropriata, l'applicazione deve impostare in modo esplicito il campo di descrizione da una chiamata a **SQLSetDescField** oppure **SQLSetDescRec**.  
   
@@ -178,10 +178,10 @@ L_PARAM_INPUT_OUTPUT_STREAM|SQL_LEN_DATA_AT_EXEC (*len*) o SQL_DATA_AT_EXEC|Inpu
   
  È anche possibile specificare un tipo di dati C esteso. Per altre informazioni, vedere [tipi di dati C in ODBC](../../../odbc/reference/develop-app/c-data-types-in-odbc.md).  
   
- Per altre informazioni, vedere [tipi di dati C predefiniti](../../../odbc/reference/appendixes/default-c-data-types.md), [convertendo i dati da C a tipi di dati SQL](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md), e [convertendo i dati da SQL a tipi di dati C](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md) nell'appendice d: i tipi di dati.  
+ Per altre informazioni, vedere [tipi di dati C predefiniti](../../../odbc/reference/appendixes/default-c-data-types.md), [convertendo i dati da C a tipi di dati SQL](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md), e [convertendo i dati da SQL a tipi di dati C](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md) nell'appendice d: Tipi di dati.  
   
 ## <a name="parametertype-argument"></a>Argomento ParameterType  
- Deve trattarsi di uno dei valori elencati nella [tipi di dati SQL](../../../odbc/reference/appendixes/sql-data-types.md) sezione dell'appendice d: i tipi di dati, oppure deve essere un valore specifico del driver. Questo argomento consente di impostare i campi SQL_DESC_TYPE SQL_DESC_CONCISE_TYPE e SQL_DESC_DATETIME_INTERVAL_CODE dell'IPD.  
+ Deve trattarsi di uno dei valori elencati nella [tipi di dati SQL](../../../odbc/reference/appendixes/sql-data-types.md) sezione dell'appendice d: Tipi di dati, oppure deve essere un valore specifico del driver. Questo argomento consente di impostare i campi SQL_DESC_TYPE SQL_DESC_CONCISE_TYPE e SQL_DESC_DATETIME_INTERVAL_CODE dell'IPD.  
   
  Se il *ParameterType* argomento è uno degli identificatori di data/ora, il campo SQL_DESC_TYPE dell'IPD è impostato su SQL_DATETIME, il campo SQL_DESC_CONCISE_TYPE dell'IPD è impostato per il tipo di dati SQL di data/ora concisa e il SQL_DESC_ Campo DATETIME_INTERVAL_CODE è impostato sul valore sottocodice datetime appropriato.  
   
@@ -189,12 +189,12 @@ L_PARAM_INPUT_OUTPUT_STREAM|SQL_LEN_DATA_AT_EXEC (*len*) o SQL_DATA_AT_EXEC|Inpu
   
  Se il *ValueType* argomento è un tipo di dati SQL_NUMERIC, la precisione predefinita (che è definito dal driver) e la scala predefinita (0), come set di campi di SQL_DESC_PRECISION e SQL_DESC_SCALE dell'IPD, vengono usati per i dati. Se la precisione predefinita o la scala non è appropriata, l'applicazione deve impostare in modo esplicito il campo di descrizione da una chiamata a **SQLSetDescField** oppure **SQLSetDescRec**.  
   
- Per informazioni sulla modalità di conversione dei dati, vedere [conversione di dati da C a tipi di dati SQL](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md) e [convertendo i dati da SQL a tipi di dati C](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md) nell'appendice d: i tipi di dati.  
+ Per informazioni sulla modalità di conversione dei dati, vedere [conversione di dati da C a tipi di dati SQL](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md) e [convertendo i dati da SQL a tipi di dati C](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md) nell'appendice d: Tipi di dati.  
   
 ## <a name="columnsize-argument"></a>ColumnSize argomento  
  Il *ColumnSize* argomento specifica le dimensioni della colonna o espressione che corrisponde al marcatore di parametro, la lunghezza di tali dati o entrambi. Questo argomento consente di impostare diversi campi dell'IPD, a seconda del tipo di dati SQL (il *ParameterType* argomento). Per questo mapping si applicano le regole seguenti:  
   
--   Se *ParameterType* è SQL_CHAR, SQL_VARCHAR, SQL_LONGVARCHAR, SQL_BINARY, SQL_VARBINARY, SQL_LONGVARBINARY, o uno dei concisa SQL datetime o intervallo di tipi di dati, il campo SQL_DESC_LENGTH dell'IPD è impostato sul valore del  *ColumnSize*. (Per altre informazioni, vedere la [le dimensioni di colonna, cifre decimali, lunghezza dell'ottetto di trasferimento e dimensioni di visualizzazione](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md) sezione Appendice d: tipi di dati.)  
+-   Se *ParameterType* è SQL_CHAR, SQL_VARCHAR, SQL_LONGVARCHAR, SQL_BINARY, SQL_VARBINARY, SQL_LONGVARBINARY, o uno dei concisa SQL datetime o intervallo di tipi di dati, il campo SQL_DESC_LENGTH dell'IPD è impostato sul valore del  *ColumnSize*. (Per altre informazioni, vedere la [le dimensioni di colonna, cifre decimali, lunghezza dell'ottetto di trasferimento e dimensioni di visualizzazione](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md) sezione nell'appendice d: Tipi di dati.)  
   
 -   Se *ParameterType* è SQL_DECIMAL, SQL_NUMERIC, SQL_FLOAT, SQL_REAL o SQL_DOUBLE, il campo SQL_DESC_PRECISION dell'IPD è impostato sul valore di *ColumnSize*.  
   
@@ -281,7 +281,7 @@ L_PARAM_INPUT_OUTPUT_STREAM|SQL_LEN_DATA_AT_EXEC (*len*) o SQL_DATA_AT_EXEC|Inpu
     > [!NOTE]  
     >  Anche se i parametri data-at-execution sono simili alle colonne data-at-execution, il valore restituito da **SQLParamData** è diverso per ognuno. I parametri data-at-execution sono parametri in un'istruzione SQL per il quale i dati verranno inviati con **SQLPutData** quando viene eseguita l'istruzione con **SQLExecDirect** o **SQLExecute**. Sono associate con **SQLBindParameter**. Il valore restituito da **SQLParamData** viene passato un valore del puntatore al **SQLBindParameter** nel *ParameterValuePtr* argomento. Le colonne data-at-execution sono colonne in un set di righe per cui i dati verranno inviati con **SQLPutData** quando viene aggiornata o aggiunto con una riga **SQLBulkOperations** o aggiornate con **SQLSetPos**. Sono associate con **SQLBindCol**. Il valore restituito da **SQLParamData** è l'indirizzo della riga di **TargetValuePtr* buffer (impostata da una chiamata a **SQLBindCol**) che viene elaborata.  
   
-5.  Le chiamate **SQLPutData** uno o più volte per inviare i dati per il parametro. Più di una chiamata è necessario se il valore dei dati è maggiore di \* *ParameterValuePtr* specificato nel buffer **SQLPutData**; più chiamate al metodo **SQLPutData**per lo stesso parametro sono consentiti solo quando si inviano dati di tipo carattere C a una colonna con un tipo di carattere, binary o dati specifici dell'origine dati o per l'invio di dati C binari a una colonna con un carattere, binario, o tipo di dati specifici dell'origine dati.  
+5.  Le chiamate **SQLPutData** uno o più volte per inviare i dati per il parametro. Più di una chiamata è necessario se il valore dei dati è maggiore di \* *ParameterValuePtr* specificato nel buffer **SQLPutData**; più chiamate al metodo **SQLPutData**per lo stesso parametro sono consentiti solo quando si inviano dati di tipo carattere C a una colonna con un tipo di carattere, binary o dati specifici dell'origine dati o per l'invio di dati C binari a una colonna con un carattere, binario, o del tipo di dati specifici dell'origine dati.  
   
 6.  Le chiamate **SQLParamData** nuovamente per segnalare che tutti i dati sono stati inviati per il parametro.  
   
@@ -305,7 +305,7 @@ L_PARAM_INPUT_OUTPUT_STREAM|SQL_LEN_DATA_AT_EXEC (*len*) o SQL_DATA_AT_EXEC|Inpu
   
  Quando viene elaborata una matrice di parametri, i conteggi di riga/set di risultati singolo (uno per ogni set di parametri) possono essere disponibili o i conteggi di righe/set di risultati possono essere eseguiti in un unico. Opzione il SQL_PARAM_ARRAY_ROW_COUNTS **SQLGetInfo** indica se sono disponibili per ogni set di parametri (SQL_PARC_BATCH) i conteggi delle righe o conteggio delle righe solo uno è disponibile (SQL_PARC_NO_BATCH).  
   
- Opzione il SQL_PARAM_ARRAY_SELECTS **SQLGetInfo** indica se un set di risultati è disponibile per ogni set di parametri (SQL_PAS_BATCH) o solo un set di risultati è disponibile (SQL_PAS_NO_BATCH). Se il driver non supporta un'istruzione di creazione di set di risultati deve essere eseguito con una matrice di parametri, SQL_PARAM_ARRAY_SELECTS restituisce SQL_PAS_NO_SELECT.  
+ Opzione il SQL_PARAM_ARRAY_SELECTS **SQLGetInfo** indica se un set di risultati è disponibile per ogni set di parametri (SQL_PAS_BATCH) o solo un set di risultati è disponibile (SQL_PAS_NO_BATCH). Se il driver non supporta un'istruzione di generazione di set di risultati deve essere eseguito con una matrice di parametri, SQL_PARAM_ARRAY_SELECTS restituisce SQL_PAS_NO_SELECT.  
   
  Per altre informazioni, vedere [funzione SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md).  
   

@@ -19,12 +19,12 @@ ms.assetid: ea8950b7-fabc-4aa4-89f8-9573a2617d70
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 517c96deaf37934e82c1161c66b8e5825d1b14b1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6cbdd0a1394114e3fdef0511c7ed14658f7dd9b0
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47780443"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52406408"
 ---
 # <a name="executing-the-ssma-console-sybasetosql"></a>Esecuzione della console SSMA (SybaseToSQL)
 Microsoft offre un solido set di script di comandi del file per eseguire e controllare le attività SSMA. Le sezioni che seguono in modo dettagliato lo stesso.  
@@ -57,7 +57,7 @@ Questo comando crea un nuovo progetto SSMA.
   
   overwrite-if-exists="<true/false>" (optional)  
   
-   project-type=”<sql-server-2008/sql-server-2005/sql-server-2012/sql-server-2014/sql-azure>”  
+   project-type="<sql-server-2008/sql-server-2005/sql-server-2012/sql-server-2014/sql-azure>"  
 />  
 ```  
 Attributo 'Sovrascrivi-if-exists' è **false** per impostazione predefinita.  
@@ -136,7 +136,7 @@ Questo comando richiede uno o più nodi di metabase come parametro della riga di
 **Esempio di sintassi:**  
   
 ```xml  
-<force-load metabase=”<source/target>” >  
+<force-load metabase="<source/target>" >  
   
   <metabase-object object-name="<object-name>"/>  
   
@@ -219,7 +219,7 @@ Errore di connessione al server di database di origine durante l'esecuzione del 
   
   object-type="<object-category>"  
   
-  write-summary-report-to="<file-name/folder-name>”             (optional)  
+  write-summary-report-to="<file-name/folder-name>"             (optional)  
   
   verbose="<true/false>"                       (optional)  
   
@@ -370,7 +370,7 @@ o Gestione configurazione
 Mapping dello schema tra i database di origine e di destinazione viene iniziata dal comando la preparazione della migrazione.  
   
 > [!NOTE]  
-> L'output di console predefinito impostazione per i comandi di migrazione è il report di output 'Full' con nessun report di errore dettagliato: riepilogo solo dal nodo radice dell'albero di origine oggetto.  
+> L'output di console predefinito impostazione per i comandi di migrazione è il report di output 'Full' con nessun report di errore dettagliato: Riepilogo solo dal nodo radice dell'albero di origine oggetto.  
   
 ### <a name="map-schema"></a>schema di mapping  
 Questo comando fornisce il mapping dello schema del database di origine allo schema di destinazione.  
@@ -391,7 +391,7 @@ sql-server-schema="<target-schema>"/>
 I comandi di facilità di gestione consentono di sincronizzare gli oggetti di database di destinazione con il database di origine.  
   
 > [!NOTE]  
-> L'output di console predefinito impostazione per i comandi di migrazione è il report di output 'Full' con nessun report di errore dettagliato: riepilogo solo dal nodo radice dell'albero di origine oggetto.  
+> L'output di console predefinito impostazione per i comandi di migrazione è il report di output 'Full' con nessun report di errore dettagliato: Riepilogo solo dal nodo radice dell'albero di origine oggetto.  
   
 ### <a name="synchronize-target"></a>synchronize-target  
 Questo comando consente di sincronizzare gli oggetti di destinazione con il database di destinazione.  

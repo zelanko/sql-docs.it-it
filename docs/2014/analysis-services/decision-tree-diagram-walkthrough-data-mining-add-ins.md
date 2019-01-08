@@ -16,12 +16,12 @@ ms.assetid: 9566f6a2-c750-4125-ba5e-42c7251a78c7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3b98c237b7cc8aaf58c177ee151e7a1398a4fd5c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 55bdeb41ed62fd727a6e5eb637734a67d21660fe
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48079711"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52391234"
 ---
 # <a name="decision-tree-diagram-walkthrough--data-mining-add-ins"></a>Descrizione dettagliata del diagramma dell'albero delle decisioni (componenti aggiuntivi Data Mining dei dati)
   Se è stato creato un modello di albero delle decisioni, è possibile creare un diagramma personalizzato in Visio tramite la forma Albero delle decisioni o la forma Rete di dipendenze. In questo argomento descrive le personalizzazioni è possibile eseguire utilizzando la **albero delle decisioni** questi controlli e forme:  
@@ -55,7 +55,7 @@ ms.locfileid: "48079711"
   
 6.  Nel **selezione albero delle decisioni** pagina, scegliere un singolo albero da visualizzare.  
   
-     In un albero vengono modellate le interazioni che portano un risultato specifico modellato; pertanto, anche se nel modello sono contenuti più risultati, è possibile visualizzare solo un albero alla volta.  
+     Un albero vengono modellate le interazioni che portano un risultato specifico modellato; Pertanto, anche se il modello contiene più risultati, è possibile visualizzare solo un albero alla volta.  
   
 7.  Nel **selezione albero delle decisioni** nella finestra di dialogo è inoltre possibile impostare queste opzioni di rendering:  
   

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - annotated XSD schemas, about annotated XSD schemas
@@ -19,12 +17,12 @@ ms.assetid: 78f318a4-7a36-473b-9852-a4bae6940ce5
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7a0e3356b4c83832ce40adabb00bdfdc671ec8ea
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 46d1a7ad03b30159b2efe10c0b215665a37f5a70
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48099701"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52756103"
 ---
 # <a name="using-annotations-in-xsd-schemas-sqlxml-40"></a>Utilizzo delle annotazioni negli schemi XSD (SQLXML 4.0)
   In [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQLXML 4.0 il linguaggio dello schema XSD supporta le annotazioni in una modalità analoga a quella delle annotazioni introdotte con il linguaggio dello schema XDR (XML-Data Reduced). In XSD sono state introdotte alcune annotazioni aggiuntive che non sono supportate in XDR.  
@@ -33,14 +31,14 @@ ms.locfileid: "48099701"
   
  Se non si specificano le annotazioni, viene eseguito il mapping predefinito. Per impostazione predefinita, un elemento XSD con un tipo complesso viene mappato a un nome di tabella (vista) nel database specificato e un elemento o attributo con un tipo semplice viene mappato alla colonna che riporta lo stesso nome dell'elemento o dell'attributo.  
   
- Queste annotazioni possono essere utilizzate anche per specificare le relazioni gerarchiche in XML e in questo caso rappresentano le relazioni nel database in quanto uno schema XSD è semplicemente una vista XML dei dati relazionali.  
+ Queste annotazioni possono essere utilizzate anche per specificare le relazioni gerarchiche in XML, pertanto rappresentano le relazioni nel database, in quanto uno schema XSD è semplicemente una vista XML dei dati relazionali.  
   
  In questa sezione vengono descritte le annotazioni che è possibile utilizzare con schemi XSD ed esempi pratici del loro utilizzo.  
   
 > [!NOTE]  
 >  In tutti gli esempi di questa sezione sono specificate query XPath semplici sullo schema XSD con annotazioni descritto in ogni esempio. Si presuppone che l'utente abbia già acquisito familiarità con il linguaggio XPath.  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Annotazioni XSD &#40;SQLXML 4.0&#41;](xsd-annotations-sqlxml-4-0.md)  
  Vengono elencate le annotazioni che è possibile utilizzare con gli schemi XSD, le relative descrizioni e le annotazioni equivalenti per XDR.  
   

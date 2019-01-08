@@ -4,22 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 19b354ee-2906-4cc7-ba2f-32b4543bddcf
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 42887c9126014a1a1bd56217a915539306959275
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bc686928863395217fa564ff04b7c26a52c1f1bb
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48207812"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52782403"
 ---
 # <a name="automatically-generate-code-attribute-values-master-data-services"></a>Generare automaticamente valori per l'attributo Code (Master Data Services)
-  In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]vengono automaticamente generati valori per l'attributo Code di un'entità quando si desidera che un valore intero venga assegnato automaticamente al valore Code ogni volta che viene creato un nuovo membro.  
+  In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] vengono automaticamente generati valori per l'attributo Code di un'entità quando si vuole che un valore intero venga assegnato automaticamente al valore Code ogni volta che si crea un nuovo membro.  
   
 ## <a name="prerequisites"></a>Prerequisiti  
  Per eseguire questa procedura:  
@@ -49,7 +48,7 @@ ms.locfileid: "48207812"
 8.  Fare clic su **Salva entità**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [La creazione automatica di codice &#40;Master Data Services&#41;](../../2014/master-data-services/automatic-code-creation-master-data-services.md)   
- [Generare automaticamente valori per attributi diversi da Code &#40;Master Data Services&#41;](../../2014/master-data-services/automatically-generate-attribute-values-other-than-code-master-data-services.md)  
+ [Creazione di codice automatica &#40;Master Data Services&#41;](../../2014/master-data-services/automatic-code-creation-master-data-services.md)   
+ [Generare automaticamente valori di attributi diversi da Code &#40;Master Data Services&#41;](../../2014/master-data-services/automatically-generate-attribute-values-other-than-code-master-data-services.md)  
   
   

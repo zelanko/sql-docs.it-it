@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - master database [SQL Server], rebuilding
@@ -16,12 +15,12 @@ ms.assetid: af457ecd-523e-4809-9652-bdf2e81bd876
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9cca83a20c7559a8b7192fd345b559226c9c7d57
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b58378e8ba2193a186fb58e3e784bf9bc3cb4d4c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48135501"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52749403"
 ---
 # <a name="rebuild-system-databases"></a>Ricompilare database di sistema
   Il processo di ricompilazione deve essere eseguito per correggere problemi di danneggiamento nei database di sistema [master](master-database.md), [model](model-database.md), [msdb](msdb-database.md)e [resource](resource-database.md) oppure per modificare le regole di confronto predefinite a livello di server. In questo argomento sono incluse istruzioni dettagliate per la ricompilazione di database di sistema in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -100,13 +99,13 @@ ms.locfileid: "48135501"
   
      `Setup /QUIET /ACTION=REBUILDDATABASE /INSTANCENAME=InstanceName /SQLSYSADMINACCOUNTS=accounts [ /SAPWD= StrongPassword ] [ /SQLCOLLATION=CollationName]`  
   
-    |Nome parametro|Description|  
+    |Nome parametro|Descrizione|  
     |--------------------|-----------------|  
     |/QUIET o /Q|Specifica che il programma di installazione verrà eseguito senza alcuna interfaccia utente.|  
     |/ACTION=REBUILDDATABASE|Specifica che il programma di installazione dovrà ricreare i database di sistema.|  
     |/INSTANCENAME=*InstanceName*|Nome dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per l'istanza predefinita, immettere MSSQLSERVER.|  
-    |/SQLSYSADMINACCOUNTS=*accounts*|Specifica i gruppi di Windows o singoli account da aggiungere per il `sysadmin` ruolo predefinito del server. Se si specificano più account, separarli con uno spazio. Ad esempio, immettere **BUILTIN\Administrators MyDomain\MyUser**. Quando si specifica un account che contiene uno spazio vuoto all'interno del nome dell'account, racchiudere l'account tra doppie virgolette. Ad esempio, immettere `NT AUTHORITY\SYSTEM`.|  
-    |[ /SAPWD=*StrongPassword* ]|Viene specificata la password per l'account `sa` di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Questo parametro è necessario se l'istanza usa la modalità autenticazione mista (autenticazione di[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e di Windows).<br /><br /> **\*\* Nota sulla sicurezza \* \***  il `sa` account è un noto [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account che viene spesso preso di mira da utenti malintenzionati. È molto importante utilizzare una password complessa per il `sa` account di accesso.<br /><br /> Non specificare questo parametro per la modalità di autenticazione di Windows.|  
+    |/SQLSYSADMINACCOUNTS=*accounts*|Specifica i gruppi o i singoli account di Windows da aggiungere al ruolo predefinito del server `sysadmin`. Se si specificano più account, separarli con uno spazio. Ad esempio, immettere **BUILTIN\Administrators MyDomain\MyUser**. Quando si specifica un account che contiene uno spazio vuoto all'interno del nome dell'account, racchiudere l'account tra doppie virgolette. Immettere ad esempio `NT AUTHORITY\SYSTEM`.|  
+    |[ /SAPWD=*StrongPassword* ]|Viene specificata la password per l'account `sa` di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Questo parametro è necessario se l'istanza usa la modalità autenticazione mista (autenticazione di[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e di Windows).<br /><br /> **\*\* Nota sulla sicurezza \* \***  il `sa` account è un noto [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account che viene spesso preso di mira da utenti malintenzionati. È estremamente importante utilizzare una password complessa per l'accesso all'account `sa`.<br /><br /> Non specificare questo parametro per la modalità di autenticazione di Windows.|  
     |[ /SQLCOLLATION=*CollationName* ]|Vengono specificate nuove regole di confronto a livello di server. Questo parametro è facoltativo. Se non viene specificato, verranno utilizzate le regole di confronto correnti del server.<br /><br /> **\*\* Importanti \* \***  modificando le regole di confronto a livello di server non modifica le regole di confronto dei database utente esistenti. Tutti i nuovi database utente creati utilizzeranno le nuove regole di confronto per impostazione predefinita.<br /><br /> Per altre informazioni, vedere [Impostare o modificare le regole di confronto del server](../collations/set-or-change-the-server-collation.md).|  
   
 3.  Al termine della ricompilazione dei database di sistema, verrà visualizzato di nuovo il prompt dei comandi senza messaggi. Esaminare il file di log Summary.txt per verificare che il processo sia stato completato correttamente. Il percorso di questo file è C:\Programmi\Microsoft SQL Server\120\Setup Bootstrap\Logs.  

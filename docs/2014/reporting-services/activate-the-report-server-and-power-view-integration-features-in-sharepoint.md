@@ -11,23 +11,23 @@ ms.assetid: c7f64a54-c555-4d31-bf99-3abe57dc8626
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 1ab486390e8da36d14d5aac1e1049a5836dd2be9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f31ea33f116cbabf1a808f30a9575ada43bae900
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48081828"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52392825"
 ---
 # <a name="activate-the-report-server-and-power-view-integration-features-in-sharepoint"></a>Attivare le funzionalità di integrazione per Power View e server di report in SharePoint
   Le funzionalità delle raccolte siti di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] sono in genere attivate per impostazione predefinita dopo l'installazione del componente aggiuntivo [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] per prodotti SharePoint. In alcune situazioni sarà necessario attivare manualmente le funzionalità.  
   
- Se si installa il componente aggiuntivo di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] per Prodotti SharePoint 2010 dopo l'installazione del prodotto SharePoint, la funzionalità di integrazione del server di report e la funzionalità di integrazione di Power View saranno attivate solo per le raccolte siti radice. Per le altre raccolte siti, sarà necessario attivare manualmente le funzionalità. Ad esempio se si dispone di una raccolta siti **http://[my il nome server] /sites/ [nome raccolta siti]** sarà necessario attivare manualmente il [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] caratteristiche raccolta siti.  
+ Se si installa il componente aggiuntivo di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] per Prodotti SharePoint 2010 dopo l'installazione del prodotto SharePoint, la funzionalità di integrazione del server di report e la funzionalità di integrazione di Power View saranno attivate solo per le raccolte siti radice. Per le altre raccolte siti, sarà necessario attivare manualmente le funzionalità. Ad esempio, se è presente una raccolta siti **http://[nome server]/sites/[nome raccolta siti]** , sarà necessario attivare manualmente le funzionalità delle raccolte siti di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] .  
   
- Quando non vi è alcuna raccolta siti radice, il [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] aggiuntivo registrerà un messaggio simile al seguente.  
+ Se non è presente alcuna raccolta siti radice, il componente aggiuntivo [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] registra un messaggio simile al seguente.  
   
  "L'applicazione Web SharePoint 80 non dispone della raccolta siti radice"  
   
- Il messaggio sarà registrato nel log dell'installazione del componente aggiuntivo, denominato "RS_SP_#.log" dove # è un numero incrementale. Il file di log si trova nella cartella Temp dell'utente corrente, ad esempio C:\Utenti\\[nome utente]\AppData\Local\Temp. Per altre informazioni sulle opzioni di registrazione con il componente aggiuntivo, vedere [installare o disinstallare il componente aggiuntivo di Reporting Services per SharePoint &#40;SharePoint 2010 e SharePoint 2013&#41;](install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md).  
+ Sarà Impossibile trovare il messaggio nel Registro di installazione del componente aggiuntivo, denominato "Rs_sp _ #. log" dove # è un numero incrementale. Il file di log si trova nella cartella Temp dell'utente corrente, ad esempio C:\Utenti\\[nome utente]\AppData\Local\Temp. Per altre informazioni sulle opzioni di registrazione con il componente aggiuntivo, vedere [installare o disinstallare il componente aggiuntivo di Reporting Services per SharePoint &#40;SharePoint 2010 e SharePoint 2013&#41;](install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md).  
   
  Contenuto dell'argomento:  
   

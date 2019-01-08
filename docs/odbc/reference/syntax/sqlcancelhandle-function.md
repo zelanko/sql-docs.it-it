@@ -15,18 +15,18 @@ ms.assetid: 16049b5b-22a7-4640-9897-c25dd0f19d21
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a814b15255a485bf6fbc28ad31d4e789f8482447
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 655c3c76794b170b113442b14ae75cf977ac024c
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47662119"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52391704"
 ---
 # <a name="sqlcancelhandle-function"></a>Funzione SQLCancelHandle
 **Conformità**  
  Versione introdotta: ODBC 3.8  
   
- Conformità agli standard: nessuno  
+ Conformità agli standard: None  
   
  È previsto che la maggior parte dei driver ODBC 3.8 (e versioni successive) implementerà questa funzione. Se un driver non, una chiamata a **SQLCancelHandle** con una connessione da gestire nel *gestire* parametro restituirà SQL_ERROR con SQLSTATE di IM001 e messaggio ' Driver non supporta questa funzione ' una chiamata per **SQLCancelHandle** con un'istruzione come handle di *gestire* parametro verrà mappato a una chiamata a **SQLCancel** da Gestione Driver e possono essere elaborati se il driver implementa **SQLCancel**. Un'applicazione può utilizzare **SQLGetFunctions** per determinare se un driver supporta **SQLCancelHandle**.  
   
@@ -59,7 +59,7 @@ SQLRETURN SQLCancelHandle(
   
  Nella tabella seguente sono elencati i valori SQLSTATE comunemente restituiti da **SQLCancelHandle** e illustra ognuna nel contesto di questa funzione; la notazione "(DM)" precede le descrizioni di SQLSTATE restituiti da Gestione Driver. Il codice restituito a ogni valore SQLSTATE è SQL_ERROR, se non specificato diversamente.  
   
-|SQLSTATE|Errore|Description|  
+|SQLSTATE|Errore|Descrizione|  
 |--------------|-----------|-----------------|  
 |01000|Avviso generale|Messaggio informativo specifico del driver. (Funzione restituisce SQL_SUCCESS_WITH_INFO).|  
 |HY000|Errore generale|Si è verificato un errore per cui si è verificato alcun errore SQLSTATE specifico e per cui è stato definito alcun SQLSTATE specifici dell'implementazione. Il messaggio di errore restituito da [SQLGetDiagRec](../../../odbc/reference/syntax/sqlgetdiagrec-function.md) nell'argomento  *\*MessageText* buffer viene descritto l'errore e la relativa causa.|  

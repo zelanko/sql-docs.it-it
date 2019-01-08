@@ -18,12 +18,12 @@ ms.assetid: 98cb6e58-4007-40fc-b048-449fb2e7e6be
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f9f86f83637cbf71dd128dd262ad1621b2d58270
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b79fbbd504f7294835e92401a2210e6acac3c440
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47658653"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514017"
 ---
 # <a name="spcolumnprivilegesex-transact-sql"></a>sp_column_privileges_ex (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,27 +44,27 @@ sp_column_privileges_ex [ @table_server = ] 'table_server'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@table_server =** ] **'***table_server***'**  
+ [  **@table_server =** ] **'**_table_server_**'**  
  Nome del server collegato per cui si desidera restituire le informazioni. *table_server* viene **sysname**, non prevede alcun valore predefinito.  
   
- [  **@table_name =** ] **'***table_name***'**  
+ [  **@table_name =** ] **'**_table_name_**'**  
  Nome della tabella che include la colonna specificata. *TABLE_NAME* viene **sysname**, con un valore predefinito è NULL.  
   
- [  **@table_schema =** ] **'***table_schema***'**  
+ [  **@table_schema =** ] **'**_table_schema_**'**  
  Schema della tabella. *TABLE_SCHEMA* viene **sysname**, con un valore predefinito è NULL.  
   
- [  **@table_catalog =** ] **'***table_catalog***'**  
+ [  **@table_catalog =** ] **'**_table_catalog_**'**  
  È il nome del database in cui l'oggetto specificato *table_name* risiede. *TABLE_CATALOG* viene **sysname**, con un valore predefinito è NULL.  
   
- [  **@column_name =** ] **'***column_name***'**  
+ [  **@column_name =** ] **'**_column_name_**'**  
  Nome della colonna di cui si desidera ottenere informazioni sui privilegi. *column_name* viene **sysname**, con un valore predefinito è NULL (tutte le comuni).  
   
 ## <a name="result-sets"></a>Set di risultati  
  Nella tabella seguente vengono descritte le colonne dei set di risultati. I risultati restituiti vengono ordinati **TABLE_QUALIFIER**, **TABLE_OWNER**, **TABLE_NAME**, **COLUMN_NAME**, e  **PRIVILEGIO**.  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
-|**TABLE_CAT**|**sysname**|Nome del qualificatore della tabella. Vari prodotti DBMS supportano nomi di tabelle in tre parti (*qualificatore ***.*** proprietario ***.*** nome*). In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] questa colonna rappresenta il nome del database. In altri prodotti rappresenta il nome del server dell'ambiente di database della tabella. Questo campo può essere NULL.|  
+|**TABLE_CAT**|**sysname**|Nome del qualificatore della tabella. Vari prodotti DBMS supportano nomi di tabelle in tre parti (_qualificatore_**.** _owner_**.** _nome_). In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] questa colonna rappresenta il nome del database. In altri prodotti rappresenta il nome del server dell'ambiente di database della tabella. Questo campo può essere NULL.|  
 |**TABLE_SCHEM**|**sysname**|Nome del proprietario della tabella. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] questa colonna rappresenta il nome dell'utente del database che ha creato la tabella. Questo campo restituisce sempre un valore.|  
 |**TABLE_NAME**|**sysname**|Nome della tabella. Questo campo restituisce sempre un valore.|  
 |**COLUMN_NAME**|**sysname**|Nome della colonna, per ogni colonna della **TABLE_NAME** restituito. Questo campo restituisce sempre un valore.|  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.transfersqlserverobjectstask.f1
@@ -15,12 +14,12 @@ ms.assetid: fe86d6e5-e415-406c-88f3-dc3ef71bd5f0
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7b45c0c3d20b3b7f6405e44a456cd5ebbce6472c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 163418048c50b35bd831174d6cd516d301dfa53f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48175471"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52761873"
 ---
 # <a name="transfer-sql-server-objects-task"></a>Attività Trasferisci oggetti di SQL Server
   L'attività Trasferisci oggetti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] trasferisce uno o più tipi di oggetti di un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tra istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ad esempio, tabelle e stored procedure. A seconda della versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usata come origine, sono disponibili per la copia tipi di oggetti diversi. Ad esempio, schemi e aggregati definiti dall'utente sono inclusi solo nei database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -33,7 +32,7 @@ ms.locfileid: "48175471"
 |Object|  
 |------------|  
 |Tabelle|  
-|Viste|  
+|Visualizzazioni|  
 |Stored procedure|  
 |Funzioni definite dall'utente|  
 |Valori predefiniti|  
@@ -80,7 +79,7 @@ ms.locfileid: "48175471"
  L'attività Trasferisci oggetti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non riporta lo stato incrementale del trasferimento, ma solo il completamento 0% e 100%.  
   
 ## <a name="execution-value"></a>Valore di esecuzione  
- Il valore di esecuzione, archiviato nel `ExecutionValue` proprietà dell'attività, restituisce il numero di oggetti trasferiti. Tramite l'assegnazione di una variabile definita dall'utente alla proprietà `ExecValueVariable` dell'attività Trasferisci oggetti di SQL Server, le informazioni sul trasferimento di oggetti possono essere rese disponibili anche ad altri oggetti nel pacchetto. Per altre informazioni, vedere [Variabili di Integration Services &#40;SSIS&#41;](../integration-services-ssis-variables.md) e [Utilizzo di variabili nei pacchetti](../use-variables-in-packages.md).  
+ Il valore di esecuzione, archiviato nella proprietà `ExecutionValue` dell'attività, restituisce il numero degli oggetti trasferiti. Tramite l'assegnazione di una variabile definita dall'utente alla proprietà `ExecValueVariable` dell'attività Trasferisci oggetti di SQL Server, le informazioni sul trasferimento di oggetti possono essere rese disponibili anche ad altri oggetti nel pacchetto. Per altre informazioni, vedere [Variabili di Integration Services &#40;SSIS&#41;](../integration-services-ssis-variables.md) e [Utilizzo di variabili nei pacchetti](../use-variables-in-packages.md).  
   
 ## <a name="log-entries"></a>Voci di log  
  L'attività Trasferisci oggetti di SQL Server include le voci di log personalizzate seguenti:  
@@ -89,7 +88,7 @@ ms.locfileid: "48175471"
   
 -   TransferSqlServerObjectsTaskFinishedTransferringObjects   Indica che il trasferimento è stato completato. La voce di log include l'ora di fine.  
   
- Inoltre, una voce di log per l'evento `OnInformation` riporta il numero di oggetti del tipo specificato selezionati per il trasferimento, il numero di oggetti trasferiti e le azioni, quale il troncamento delle tabelle, eseguite quando insieme alle tabelle vengono trasferiti anche i dati. Una voce di log per il `OnWarning` viene scritto l'evento per ogni oggetto nella destinazione viene sovrascritto.  
+ Inoltre, una voce di log per l'evento `OnInformation` riporta il numero di oggetti del tipo specificato selezionati per il trasferimento, il numero di oggetti trasferiti e le azioni, quale il troncamento delle tabelle, eseguite quando insieme alle tabelle vengono trasferiti anche i dati. Viene scritta una voce di log per l'evento `OnWarning` per ogni oggetto sovrascritto nella destinazione.  
   
 ## <a name="security-and-permissions"></a>Sicurezza e autorizzazioni  
  L'utente deve disporre dell'autorizzazione per l'esplorazione degli oggetti nel server di origine e l'autorizzazione per l'eliminazione e creazione di oggetti nel server di destinazione. Deve inoltre avere accesso al database e agli oggetti di database specificati.  
@@ -101,21 +100,21 @@ ms.locfileid: "48175471"
   
  Per migliorare ulteriormente la funzionalità degli oggetti trasferiti, è possibile configurare l'attività Trasferisci oggetti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in modo da includere nel trasferimento i nomi degli schemi, i dati, le proprietà estese degli oggetti trasferiti e gli oggetti dipendenti. Per la copia di dati, è possibile specificare se sostituire o appendere gli eventuali dati esistenti.  
   
- In fase di esecuzione, l'attività Trasferisci oggetti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] si connette al server di origine e di destinazione tramite due gestioni connessioni SMO. Le gestioni connessioni SMO vengono configurate separatamente dall'attività Trasferisci oggetti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , che vi fa quindi riferimento [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Le gestioni connessioni SMO specificano il server e la modalità di autenticazione da utilizzare per l'accesso al server. Per altre informazioni, vedere [Gestione connessione SMO](../connection-manager/smo-connection-manager.md).  
+ In fase di esecuzione, l'attività Trasferisci oggetti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] si connette al server di origine e di destinazione tramite due gestioni connessioni SMO. Le gestioni connessioni SMO vengono configurate separatamente dall'attività Trasferisci oggetti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , che vi fa quindi riferimento [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Le gestioni connessioni SMO specificano il server e la modalità di autenticazione da utilizzare per l'accesso al server. Per altre informazioni, vedere [Gestione connessione file](../connection-manager/smo-connection-manager.md).  
   
  È possibile impostare le proprietà tramite Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] o a livello di codice.  
   
  Per ulteriori informazioni sulle proprietà che è possibile impostare in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] , fare clic su uno degli argomenti seguenti:  
   
--   [SQL Server Editor attività Trasferisci oggetti &#40;pagina Generale&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [Editor attività Trasferisci oggetti di SQL Server &#40;pagina Generale&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [SQL Server Editor attività Trasferisci oggetti &#40;pagina di oggetti&#41;](../transfer-sql-server-objects-task-editor-objects-page.md)  
+-   [Editor attività Trasferisci oggetti di SQL Server &#40;pagina Oggetti&#41;](../transfer-sql-server-objects-task-editor-objects-page.md)  
   
 -   [Pagina Espressioni](../expressions/expressions-page.md)  
   
  Per altre informazioni sull'impostazione di queste proprietà in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] , fare clic sull'argomento seguente:  
   
--   [Impostare le proprietà di un'attività o di un contenitore](../set-the-properties-of-a-task-or-container.md)  
+-   [Impostazione delle proprietà di un'attività o di un contenitore](../set-the-properties-of-a-task-or-container.md)  
   
 ## <a name="programmatic-configuration-of-the-transfer-sql-server-objects-task"></a>Configurazione a livello di codice dell'attività Trasferisci oggetti di SQL Server  
  Per ulteriori informazioni sull'impostazione di queste proprietà a livello di codice, fare clic sull'argomento seguente:  

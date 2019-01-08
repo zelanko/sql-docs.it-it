@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - IHsyscolumns
@@ -19,26 +18,26 @@ ms.assetid: 263452f1-9708-48f0-9536-402a89e7f5bf
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f0e9e69891e759468ab0ae62a59c2fc61a19a9bd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 74116af7883c4b9a3f27c2afed88d16c993198ce
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47668879"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52747886"
 ---
 # <a name="ihsyscolumns-transact-sql"></a>IHsyscolumns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Il **IHsyscolumns** Vista espone informazioni sulla colonna per gli articoli pubblicati da un Server di pubblicazione non SQL. Questa vista è archiviata nel databasedistribuzione.  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|Nome della colonna o del parametro della procedura.|  
 |**id**|**int**|ID di oggetto della tabella a cui appartiene la colonna o ID della stored procedure a cui è associato il parametro.|  
 |**tipoX**|**tinyint**|Il tipo di archiviazione fisica [Sys. systypes &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-systypes-transact-sql.md).|  
 |**typestat**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**xusertype**|**tinyint**|ID del tipo di dati esteso definito dall'utente.|  
-|**Lunghezza**|**bigint**|La lunghezza massima di archiviazione fisica dal [Sys. systypes &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-systypes-transact-sql.md).|  
+|**length**|**bigint**|La lunghezza massima di archiviazione fisica dal [Sys. systypes &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-systypes-transact-sql.md).|  
 |**xprec**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**XScale**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**colid**|**int**|ID di colonna o di parametro.|  
@@ -48,7 +47,7 @@ ms.locfileid: "47668879"
 |**colstat**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**cdefault**|**int**|ID del valore predefinito della colonna.|  
 |**domain**|**int**|ID della regola o vincolo CHECK per la colonna.|  
-|**Numero**|**int**|Il numero di sottoprocedura quando la procedura è raggruppata (**0** per voci non di procedura).|  
+|**number**|**int**|Il numero di sottoprocedura quando la procedura è raggruppata (**0** per voci non di procedura).|  
 |**colorder**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**autoval**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**offset**|**int**|Offset nella riga in cui appare la colonna.|  
@@ -59,7 +58,7 @@ ms.locfileid: "47668879"
 |**usertype**|**tinyint**|L'ID del tipo di dati definito dall'utente dal [Sys. systypes &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-systypes-transact-sql.md).|  
 |**printfmt**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**Prec**|**int**|Livello di precisione della colonna|  
-|**Scalabilità**|**int**|Scala della colonna.|  
+|**scala**|**int**|Scala della colonna.|  
 |**iscomputed**|**int**|Flag che indica se si tratta di una colonna calcolata:<br /><br /> **0** = non calcolata.<br /><br /> **1** = calcolata.|  
 |**isoutparam**|**int**|Indica se il parametro della procedura è un parametro di output:<br /><br /> **1** = true.<br /><br /> **0** = false.|  
 |**IsNullable**|**int**|Indica se la colonna ammette valori Null:<br /><br /> **1** = true.<br /><br /> **0** = false.|  

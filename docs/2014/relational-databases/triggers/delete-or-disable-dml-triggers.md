@@ -17,12 +17,12 @@ ms.assetid: 0f97f953-33c5-4b26-afeb-db2a26ce38b4
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 1e00c9df182683727a449b47b061c550276aa3d6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8ed56b0d2c3ce14888f7856cadbcf1f1dc67a5ef
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48104739"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52760693"
 ---
 # <a name="delete-or-disable-dml-triggers"></a>Eliminare o disabilitare trigger DML
   In questo argomento viene descritto come eliminare o disabilitare un trigger DML in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -33,7 +33,7 @@ ms.locfileid: "48104739"
   
      [Indicazioni](#Recommendations)  
   
-     [Security](#Security)  
+     [Sicurezza](#Security)  
   
 -   **Per eliminare o disabilitare un trigger DML tramite:**  
   
@@ -80,7 +80,7 @@ ms.locfileid: "48104739"
   
 4.  Per abilitare il trigger, fare clic su **Abilita**.  
   
-##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
   
 #### <a name="to-delete-a-dml-trigger"></a>Per eliminare un trigger DML  
   

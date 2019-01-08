@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - vdtsql.chm:69645
@@ -13,18 +13,18 @@ ms.assetid: 31cdaee2-d7cd-4d64-a45f-924b27e8b1f0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c726b1a79544af126201f827b18ad4c69113b4b7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 61707b6ca955ee137cbbc93a6a108dc3930e1b12
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48181971"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52770153"
 ---
 # <a name="query-parameters-dialog-box-visual-database-tools"></a>Finestra di dialogo Parametri query (Visual Database Tools)
   Questa finestra di dialogo consente di immettere valori per i parametri definiti nella query. Viene visualizzata quando si esegue una query contenente parametri che richiedono la presenza dell'utente finale in fase di esecuzione.  
   
 ## <a name="options"></a>Opzioni  
- **Nome**  
+ **Name**  
  Elenca i parametri definiti per la query eseguita. Se la query contiene parametri denominati, i nomi vengono visualizzati nell'elenco. Se nella query sono contenuti parametri senza nome, per ogni parametro della query verranno elencati i nomi di parametro definiti dal sistema.  
   
  **Valore**  
@@ -40,6 +40,6 @@ WHERE   (LastName = @Param1);
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Esecuzione di query con parametri &#40;Visual Database Tools&#41;](visual-database-tools.md)  
+ [Esecuzione di query mediante parametri &#40;Visual Database Tools&#41;](visual-database-tools.md)  
   
   

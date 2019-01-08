@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: b613cef7-7993-4d89-a429-a8251d74d435
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e7cc4a80849f9dfd12bd7148351c0230e30e64ed
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: 02491a0773a3ecbaaf6384bf88d7c07d1549745b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48905041"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52752631"
 ---
 # <a name="step-4-deploying-the-lesson-6-package"></a>Passaggio 4: Distribuzione del pacchetto della lezione 6
   La distribuzione del pacchetto implica l'aggiunta del pacchetto al catalogo SSISDB in Integration Services in un'istanza di SQL Server. In questa lezione verranno illustrate le procedure per aggiungere il pacchetto creato nella lezione 6 al catalogo SSISDB, impostare il parametro ed eseguire il pacchetto. Per questa lezione verrà usato SQL Server Management Studio per aggiungere il pacchetto della lezione 6 al catalogo SSISDB e distribuire il pacchetto. Dopo avere distribuito il pacchetto, modificare il parametro in modo da puntare a un nuovo percorso, quindi eseguire il pacchetto.  

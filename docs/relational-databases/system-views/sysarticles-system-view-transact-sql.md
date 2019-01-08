@@ -5,8 +5,7 @@ ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sysarticles
@@ -19,19 +18,19 @@ ms.assetid: 18f8c9b3-cab7-4e8f-8754-11ac38c3f789
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b7eb6fb6bbaba72e6adb85f73c540b7d752021db
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9764c33f311aa799935a51301c2c5237abfc9d6c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47773885"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52759823"
 ---
 # <a name="sysarticles-system-view-transact-sql"></a>sysarticles (vista di sistema) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Il **sysarticles** visualizzazione espone proprietà di articolo. Questa vista è archiviata nel database di distribuzione.  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**artid**|**int**|Colonna Identity che offre un numero di ID univoco per l'articolo.|  
 |**creation_script**|**nvarchar(255)**|Script dello schema per l'articolo.|  

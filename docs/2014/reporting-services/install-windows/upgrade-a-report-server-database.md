@@ -15,19 +15,19 @@ ms.assetid: 4091cf87-9d97-4048-a393-67f1f9207401
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: dde7b2d66e7b2aebb67de799facf9016f3cd48e9
-ms.sourcegitcommit: b75fc8cfb9a8657f883df43a1f9ba1b70f1ac9fb
+ms.openlocfilehash: b0881bc82edd5a3d7fd8ca726c34cbf99de1b172
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48851816"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52413008"
 ---
 # <a name="upgrade-a-report-server-database"></a>Aggiornare un database del server di report
   Il database del server di report fornisce archiviazione per una o più istanze del server di report. Poiché lo schema del database del server di report può essere modificato con ogni nuova versione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], è necessario che la versione del database corrisponda alla versione dell'istanza del server di report in uso. Nella maggior parte dei casi, un database del server di report può essere aggiornato automaticamente senza alcun intervento dell'utente.  
   
- **Modalità nativa:** nella modalità nativa di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] il database del server di report è costituito in realtà da due database i cui nomi predefiniti sono "ReportServer" e "ReportServerTempDB".  
+ **Modalità nativa:** In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] modalità nativa, il database del server di report è costituita in realtà due database i cui nomi predefiniti di "ReportServer e ReportServerTempDB".  
   
- **Modalità SharePoint:** nelle [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] modalità SharePoint il database del server di report è in realtà una raccolta di database creata per ogni istanza del [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] applicazione del servizio.  
+ **Modalità SharePoint:** In [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] modalità SharePoint il database del server di report è in realtà una raccolta di database per ogni istanza di cui viene creata il [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] applicazione del servizio.  
   
 ## <a name="ways-to-upgrade-a-native-mode-report-server-database"></a>Modalità di aggiornamento di un database del server di report in modalità nativa  
  Nell'elenco seguente sono incluse le condizioni necessarie per l'aggiornamento di un database del server di report:  

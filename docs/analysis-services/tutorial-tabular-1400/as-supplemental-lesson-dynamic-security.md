@@ -1,5 +1,5 @@
 ---
-title: "Lezione supplementare dell'esercitazione di Analysis Services: sicurezza dinamica | Microsoft Docs"
+title: "Analysis Services lezione supplementare dell'esercitazione: La sicurezza dinamica | Microsoft Docs"
 ms.date: 08/27/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile"
-ms.openlocfilehash: 15ff0eebd7cbbb0815544b18f0f042ef411a3657
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 4abe105c2bb083ba4479d4d23418e0e73adce5f7
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43084594"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52398429"
 ---
 # <a name="supplemental-lesson---dynamic-security"></a>Lezione supplementare - Sicurezza dinamica
 
@@ -24,7 +24,7 @@ In questa lezione supplementare si crea un ruolo aggiuntivo che implementa la si
   
 Per implementare la sicurezza dinamica, è aggiungere una tabella al modello contenente i nomi degli utenti che possono connettersi al modello ed esplorare dati e oggetti modello. Il modello creato in questa esercitazione è nel contesto di Adventure Works; Tuttavia, per completare questa lezione, è necessario aggiungere una tabella contenente gli utenti del proprio dominio. Non è necessaria la password per i nomi utente aggiunti. Per creare una tabella EmployeeSecurity con un piccolo campione di utenti del proprio dominio, è usare la funzionalità Incolla e incollare i dati dei dipendenti da un foglio di calcolo di Excel. In uno scenario reale, la tabella contenente i nomi utente in genere sarebbe una tabella di un database effettivo come un'origine dati. ad esempio, una tabella DimEmployee reale.  
   
-Per implementare la sicurezza dinamica, utilizzare due funzioni DAX: [funzione USERNAME (DAX)](http://msdn.microsoft.com/22dddc4b-1648-4c89-8c93-f1151162b93f) e [funzione LOOKUPVALUE (DAX)](http://msdn.microsoft.com/73a51c4d-131c-4c33-a139-b1342d10caab). Queste funzioni applicate in una formula di filtro di riga vengono definite in un nuovo ruolo. Usando la funzione LOOKUPVALUE, la formula specifica un valore dalla tabella EmployeeSecurity. La formula passa quindi che valore alla funzione USERNAME, che specifica il nome utente dell'utente connesso appartiene a questo ruolo. L'utente può quindi esplorare solo i dati specificati dai filtri di riga del ruolo. In questo scenario, si specifica che i dipendenti possono esplorare solo i dati di vendite Internet per i territori di vendita in cui sono membri.  
+Per implementare la sicurezza dinamica, si usano due funzioni DAX: [Funzione USERNAME (DAX)](http://msdn.microsoft.com/22dddc4b-1648-4c89-8c93-f1151162b93f) e [LOOKUPVALUE (DAX)-funzione](http://msdn.microsoft.com/73a51c4d-131c-4c33-a139-b1342d10caab). Queste funzioni applicate in una formula di filtro di riga vengono definite in un nuovo ruolo. Usando la funzione LOOKUPVALUE, la formula specifica un valore dalla tabella EmployeeSecurity. La formula passa quindi che valore alla funzione USERNAME, che specifica il nome utente dell'utente connesso appartiene a questo ruolo. L'utente può quindi esplorare solo i dati specificati dai filtri di riga del ruolo. In questo scenario, si specifica che i dipendenti possono esplorare solo i dati di vendite Internet per i territori di vendita in cui sono membri.  
   
 Le attività che sono specifiche di questo scenario di modello tabulare Adventure Works, ma che potrebbero non applicarsi necessariamente a uno scenario realistico, vengono identificate come tali. Ogni attività include informazioni aggiuntive che descrivono lo scopo dell'attività.  
   
@@ -42,7 +42,7 @@ Per implementare la sicurezza dinamica per questo scenario di Adventure Works, �
   
 1.  In Esplora modelli tabulari > **Zdroje dat**, fare doppio clic la connessione e quindi fare clic su **Importa nuove tabelle**.  
 
-    Se viene visualizzata la finestra di dialogo Credenziali rappresentazione, digitare le credenziali di rappresentazione utilizzate nella Lezione 2: Aggiungere Dati.
+    Se viene visualizzata la finestra di dialogo credenziali di rappresentazione, digitare le credenziali di rappresentazione usate nella lezione 2: Aggiungere i dati.
   
 2.  Nel Pannello di navigazione selezionare la **DimSalesTerritory** tabella e quindi fare clic su **OK**.    
   
@@ -116,7 +116,7 @@ In questa attività è nascondere la tabella EmployeeSecurity, impedendone la vi
 In questa attività si creerà un ruolo utente. Questo ruolo include un filtro di riga che definisce le righe della tabella DimSalesTerritory che sono visibili agli utenti. Il filtro viene quindi applicato nella direzione relazione uno-a-molti a tutte le altre tabelle correlate a DimSalesTerritory. È inoltre possibile applicare un filtro che protegge l'intera tabella EmployeeSecurity impedendone da qualsiasi utente membro del ruolo.  
   
 > [!NOTE]  
-> Il ruolo Addetti alle vendite per territorio creato in questa lezione consente ai membri di esplorare o eseguire query solo sui dati di vendita relativi al territorio di vendita a cui appartengono. Se si aggiunge un utente come membro a addetti alle vendite dal ruolo territorio presente anche come membro in un ruolo creato nel [lezione 11: creare ruoli](../tutorial-tabular-1400/as-lesson-11-create-roles.md), si ottiene una combinazione di autorizzazioni. Se un utente è membro di più ruoli, le autorizzazioni e i filtri di riga definiti per ogni ruolo sono cumulativi, Vale a dire, l'utente dispone delle autorizzazioni maggiori determinate dalla combinazione dei ruoli.  
+> Il ruolo Addetti alle vendite per territorio creato in questa lezione consente ai membri di esplorare o eseguire query solo sui dati di vendita relativi al territorio di vendita a cui appartengono. Se si aggiunge un utente come membro a addetti alle vendite dal ruolo territorio presente anche come un membro in un ruolo creato nella [lezione 11: Creare ruoli](../tutorial-tabular-1400/as-lesson-11-create-roles.md), si ottiene una combinazione di autorizzazioni. Se un utente è membro di più ruoli, le autorizzazioni e i filtri di riga definiti per ogni ruolo sono cumulativi, Vale a dire, l'utente dispone delle autorizzazioni maggiori determinate dalla combinazione dei ruoli.  
   
 #### <a name="to-create-a-sales-employees-by-territory-user-role"></a>Per creare un ruolo utente Addetti alle vendite per territorio  
   

@@ -14,12 +14,12 @@ ms.assetid: f82d6918-a5a7-4af8-868e-4247f5b00c52
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: cf2a1c84bab547e7b3dbc4bd1a930b4605f4052f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cba784ed6e81152e91b8320ac5e441187c07df9c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48149641"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52504827"
 ---
 # <a name="copy-only-backups-sql-server"></a>Backup di sola copia (SQL Server)
   Un *backup di sola copia* è un backup di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] indipendente dalla sequenza di backup convenzionali di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . In genere, l'esecuzione di un backup comporta la modifica del database e influisce sulla modalità di ripristino dei backup successivi. In alcuni casi, tuttavia, è utile eseguire un backup per uno scopo speciale senza influire sulle procedure generali di backup e ripristino del database. I backup di sola copia hanno questo scopo.  
@@ -34,7 +34,7 @@ ms.locfileid: "48149641"
   
 -   Backup del log di sola copia (solo modello di recupero con registrazione completa e modello di recupero con registrazione minima delle operazioni bulk)  
   
-     Un backup del log di sola copia mantiene il punto di archiviazione del log esistente e pertanto non influisce sulla sequenza dei backup del log regolari. I backup del log di sola copia in genere non sono necessari. È invece possibile creare un nuovo backup del log di routine (con WITH NORECOVERY) e quindi utilizzare il backup in questione insieme a tutti i backup del log precedenti necessari per la sequenza di ripristino. Tuttavia, un backup del log di sola copia può talvolta essere utile per eseguire un ripristino in linea. Per un esempio di questo, vedere [Esempio: Ripristino online di un file di lettura/scrittura &#40;modello di recupero con registrazione completa&#41;](example-online-restore-of-a-read-write-file-full-recovery-model.md).  
+     Un backup del log di sola copia mantiene il punto di archiviazione del log esistente e pertanto non influisce sulla sequenza dei backup del log regolari. I backup del log di sola copia in genere non sono necessari. È invece possibile creare un nuovo backup del log di routine (con WITH NORECOVERY) e quindi utilizzare il backup in questione insieme a tutti i backup del log precedenti necessari per la sequenza di ripristino. Tuttavia, un backup del log di sola copia può talvolta essere utile per eseguire un ripristino in linea. Per un esempio di questo oggetto, vedere [esempio: Ripristino online di un File di lettura / scrittura &#40;modello di recupero completo&#41;](example-online-restore-of-a-read-write-file-full-recovery-model.md).  
   
      Il log delle transazioni non viene mai troncato dopo un backup di sola copia.  
   
@@ -47,23 +47,23 @@ ms.locfileid: "48149641"
   
 1.  Nella pagina **Generale** della finestra di dialogo **Backup database** selezionare l'opzione **Backup di sola copia**.  
   
-###  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
+###  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
  La sintassi [!INCLUDE[tsql](../../../includes/tsql-md.md)] essenziale è la seguente:  
   
 -   Per un backup completo di sola copia:  
   
-     BACKUP DATABASE *database_name* TO \<dispositivo_backup*>* ... WITH COPY_ONLY …  
+     BACKUP DATABASE *database_name* TO \<dispositivo_backup*>* ... WITH COPY_ONLY...  
   
     > [!NOTE]  
     >  L'opzione COPY_ONLY non ha alcun effetto quando specificata con l'opzione DIFFERENTIAL.  
   
 -   Per un backup del log di sola copia:  
   
-     BACKUP LOG *database_name* TO *\<* dispositivo_backup*>* ... WITH COPY_ONLY …  
+     BACKUP LOG *database_name* TO *\<* dispositivo_backup*>* ... WITH COPY_ONLY...  
   
 ###  <a name="PowerShellProcedure"></a> Utilizzo di PowerShell  
   
-1.  Usare la `Backup-SqlDatabase` cmdlet con il `-CopyOnly` parametro.  
+1.  Utilizzare il cmdlet `Backup-SqlDatabase` con il parametro `-CopyOnly`.  
   
 ##  <a name="RelatedTasks"></a> Attività correlate  
  **Per creare un backup completo o del log**  

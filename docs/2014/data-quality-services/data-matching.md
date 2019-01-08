@@ -10,12 +10,12 @@ ms.assetid: fe66d098-bec3-4258-b42a-479ae460feb3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 759c2eb56bb437f17c06229b7b6a85f22b040319
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: f271f8c3c2d3371326b1ffe8d7f1f55bf5ee89c4
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51031798"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52396538"
 ---
 # <a name="data-matching"></a>Corrispondenza di dati
   Il processo di corrispondenza tra dati [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) consente di ridurre la duplicazione dei dati e di migliorarne l'accuratezza in un'origine dati. Il processo analizza il livello di duplicazione in tutti i record di una singola origine dati, restituendo le probabilità ponderate di una corrispondenza per ciascun set di record confrontato. È possibile quindi decidere quali record corrispondono ed eseguire le azioni appropriate sui dati di origine.  
@@ -64,11 +64,11 @@ ms.locfileid: "51031798"
   
  Un progetto di corrispondenza dei dati è costituito da un processo computerizzato e da un processo interattivo. Il progetto corrispondente applica le regole di corrispondenza nei criteri di corrispondenza all'origine dati da valutare. Tale processo consente di valutare le probabilità che due righe coincidano tramite un punteggio di corrispondenza. Verranno considerati corrispondenti solo i record con probabilità di corrispondenza maggiori di un valore impostato dall'amministratore dei dati nei criteri di corrispondenza.  
   
- Quando DQS esegue l'analisi di corrispondenza, viene creato un cluster di record che DQS considera corrispondenze. DQS identifica casualmente uno dei record in ogni cluster come record pivot o principale. L'amministratore dei dati verifica i risultati corrispondenti e rifiuta qualsiasi record che non rappresenti una corrispondenza appropriata per un cluster. L'amministratore dei dati seleziona quindi una regola di sopravvivenza che DQS utilizzerà per determinare il record che supererà il processo di corrispondenza e sostituirà i record corrispondenti. La regola di sopravvivenza può essere "Record pivot" (il valore predefinito), "Il record più completo e più lungo", "Record più completo" o "Record più lungo". DQS determina il record superstite (principale) in ogni cluster in base al record che più si avvicina a soddisfare il criterio o criteri della regola di sopravvivenza. Se più record in un cluster specifico sono conformi alla regola di sopravvivenza, DQS ne seleziona uno in modo casuale. DQS consente di visualizzare i cluster che presentano record comuni come un solo cluster mediante la selezione dell'opzione "Mostra cluster non sovrapposti". Per visualizzare i risultati in base questa impostazione, il processo di corrispondenza deve essere eseguito.  
+ Quando DQS esegue l'analisi di corrispondenza, viene creato un cluster di record che DQS considera corrispondenze. DQS identifica casualmente uno dei record in ogni cluster come record pivot o principale. L'amministratore dei dati verifica i risultati corrispondenti e rifiuta qualsiasi record che non rappresenti una corrispondenza appropriata per un cluster. L'amministratore dei dati seleziona quindi una regola di sopravvivenza che DQS utilizzerà per determinare il record che supererà il processo di corrispondenza e sostituirà i record corrispondenti. La regola di sopravvivenza può essere "Record pivot" (il valore predefinito), "Il record più completo e più lungo", "Record più completo" o "Record più lungo". DQS determina il record superstite (principale) in ogni cluster in base al record che più si avvicina a soddisfare il criterio o criteri della regola di sopravvivenza. Se più record in un cluster specifico sono conformi alla regola di sopravvivenza, DQS ne seleziona uno in modo casuale. DQS consente di visualizzare i cluster che presentano record comuni come un solo cluster selezionando l'opzione "Mostra cluster non sovrapposti". Per visualizzare i risultati in base questa impostazione, il processo di corrispondenza deve essere eseguito.  
   
  È possibile esportare i risultati del processo di corrispondenza in una tabella di SQL Server o in un file csv. È possibile esportare risultati della corrispondenza in due modi: record corrispondenti e record non corrispondenti, oppure record superstiti che includono solo il record superstite per un cluster nonché i risultati non corrispondenti. Nei record superstiti, se lo stesso record viene identificato come superstite per più cluster, tale record verrà esportato solo una volta.  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  È possibile eseguire le attività seguenti in relazione all'individuazione di corrispondenze in DQS:  
   
 |||  

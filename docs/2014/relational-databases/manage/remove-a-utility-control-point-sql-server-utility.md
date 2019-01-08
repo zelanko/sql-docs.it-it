@@ -4,18 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: configuration
 ms.topic: conceptual
 ms.assetid: c048a416-900e-4c77-8243-e0f0d8b94068
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 719e50f8423a320abfb2476402cc437e1f2520a7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 46f440aa6b40d8a2e0ff48c59818b722073b1628
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48229571"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52767583"
 ---
 # <a name="remove-a-utility-control-point-sql-server-utility"></a>Rimuovere un punto di controllo dell'utilità (Utilità SQL Server)
   In questo argomento viene illustrato come rimuovere un punto di controllo dell'utilità di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dall'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -26,7 +26,7 @@ ms.locfileid: "48229571"
   
      [Limitazioni e restrizioni](#Restrictions)  
   
-     [Security](#Security)  
+     [Sicurezza](#Security)  
   
 -   **Per rimuovere un punto di controllo dell'utilità utilizzando:**  
   
@@ -46,9 +46,9 @@ ms.locfileid: "48229571"
 ###  <a name="Security"></a> Sicurezza  
   
 ####  <a name="Permissions"></a> Permissions  
- La procedura deve essere eseguita da un utente con `sysadmin` autorizzazioni; le stesse autorizzazioni necessarie per creare un punto di controllo utilità.  
+ La procedura deve essere eseguita da un utente che disponga di autorizzazioni `sysadmin`, le stesse necessarie per la creazione di un punto di controllo dell'utilità.  
   
-##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
   
 #### <a name="to-remove-a-utility-control-point"></a>Per rimuovere un punto di controllo dell'utilità  
   

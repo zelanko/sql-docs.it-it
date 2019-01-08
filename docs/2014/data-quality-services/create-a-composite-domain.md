@@ -13,12 +13,12 @@ ms.assetid: c7f0bd84-a02e-4a81-885d-985e6415c499
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b72ee81d92629baa657ffb3bde2596cdb2abb96a
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 9b2efda76c0e1005a298e67b139233a96796522b
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51030328"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52413778"
 ---
 # <a name="create-a-composite-domain"></a>Creazione di un dominio composito
   In questo argomento viene descritto come creare un dominio composito in una Knowledge Base in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Un dominio composito è costituito da uno o più singoli domini che si applicano a un singolo campo di dati. Per informazioni dettagliate sui domini compositi, vedere [Gestione di un dominio composito](../../2014/data-quality-services/managing-a-composite-domain.md).  
@@ -79,21 +79,21 @@ ms.locfileid: "51030328"
   
 4.  Selezionare una delle opzioni seguenti come **Metodo di analisi**:  
   
-    -   **Dati di riferimento**: analizza i valori del campo in base a come i dati vengono formattati dal servizio dati di riferimento. Data Quality Services invia i valori nel dominio composito al servizio dati di riferimento e quest'ultimo restituisce i dati corretti e analizzati in base al dominio nel dominio composito.  
+    -   **I dati di riferimento**: Analizzare i valori del campo in base al modo in cui i dati vengono formattati per il servizio dati (riferimento). Data Quality Services invia i valori nel dominio composito al servizio dati di riferimento e quest'ultimo restituisce i dati corretti e analizzati in base al dominio nel dominio composito.  
   
-    -   **In ordine**: analizza i valori del campo in base all'ordine dei domini nel dominio composito. Il primo valore verrà incluso nel primo dominio, il secondo valore nel secondo e così via.  
+    -   **In ordine**: Analizzare i valori del campo in base all'ordine dei domini nel dominio composito. Il primo valore verrà incluso nel primo dominio, il secondo valore nel secondo e così via.  
   
-    -   **Delimitatori**: analizza i valori del campo in base al delimitatore selezionato dai pulsanti di opzione visualizzati quando viene selezionata l'opzione Delimitatori. Il valore può essere **Tabulazione**, **Punto e virgola**, **Virgola**, **Spazio**o **Altro**. Se il valore è **Altro**, immettere il valore che servirà come delimitatore.  
+    -   **I delimitatori**: Analizza i valori del campo in base al delimitatore selezionato dai pulsanti di opzione visualizzati quando i delimitatori sia selezionata. Il valore può essere **Tabulazione**, **Punto e virgola**, **Virgola**, **Spazio**o **Altro**. Se il valore è **Altro**, immettere il valore che servirà come delimitatore.  
   
 5.  Se è stato selezionato **Delimitatori** per il metodo di analisi, è inoltre possibile selezionare **Usa analisi Knowledge Base**. Per altre informazioni, vedere [Knowledge-Based Parsing](#KnowledgeBaseParsing).  
   
 6.  Fare clic su **Fine** per completare l'attività di gestione del dominio, come descritto in [Sospensione dell'attività di gestione del dominio](../../2014/data-quality-services/end-the-domain-management-activity.md).  
   
-##  <a name="FollowUp"></a> Completamento: Dopo la creazione di un dominio composito  
+##  <a name="FollowUp"></a> Completamento: Dopo aver creato un dominio composito  
  Dopo avere creato un dominio composito, è possibile eseguire ulteriori attività di gestione sul dominio, quali l'individuazione delle informazioni per aggiungere informazioni o l'aggiunta di criteri di corrispondenza al dominio. Per altre informazioni, vedere [Eseguire l'individuazione delle informazioni](../../2014/data-quality-services/perform-knowledge-discovery.md), [Gestione di un dominio](../../2014/data-quality-services/managing-a-domain.md) o [Creare criteri di corrispondenza](../../2014/data-quality-services/create-a-matching-policy.md).  
   
 ##  <a name="KnowledgeBaseParsing"></a> Knowledge-Based Parsing  
- Data Quality Services consente di analizzare i dati in base alle informazioni e non solo in base al delimitatore o all'ordine. L'analisi basata sulle informazioni viene utilizzata quando viene eseguito il mapping di dati di origine complessi a un dominio composito e non si utilizzano servizi dati di riferimento. È possibile utilizzare l'analisi basata sulle informazioni per analizzare i dati dall'origine dati nei singoli domini interessati. Con l'analisi basata sulle informazioni, DQS tenterà in primo luogo di utilizzare le informazioni per analizzare dati complessi nei singoli domini. Se possibile, verranno identificate parti della stringa in uno o più domini e la stringa verrà analizzata nei vari domini. Si supponga ad esempio di disporre di un valore complesso denominato "John B. Doe" in un campo di nome completo rappresentato da un dominio composito Full Name. Se DQS identifica "John" come nel dominio Nome e "Doe" come nel dominio Cognome, verrà aggiunto "B." al dominio Secondo nome in base alle informazioni del dominio.  
+ Data Quality Services consente di analizzare i dati in base alle informazioni e non solo in base al delimitatore o all'ordine. L'analisi basata sulle informazioni viene utilizzata quando viene eseguito il mapping di dati di origine complessi a un dominio composito e non si utilizzano servizi dati di riferimento. È possibile utilizzare l'analisi basata sulle informazioni per analizzare i dati dall'origine dati nei singoli domini interessati. Con l'analisi basata sulle informazioni, DQS tenterà in primo luogo di utilizzare le informazioni per analizzare dati complessi nei singoli domini. Se possibile, verranno identificate parti della stringa in uno o più domini e la stringa verrà analizzata nei vari domini. Si supponga ad esempio di disporre di un valore complesso denominato "John B. Doe" in un campo di nome completo rappresentato da un dominio composito Full Name. Se DQS identifica "John" come nel dominio Nome e "Doe" come nel dominio Cognome, verrà aggiunto "B". al dominio Secondo nome in base alle informazioni del dominio.  
   
  È possibile utilizzare l'analisi basata sulle informazioni solo se si seleziona anche l'analisi basata su delimitatore. L'analisi basata sulle informazioni non sostituisce l'analisi basata su delimitatore, ma la rende più efficace. Solo nel caso in cui non esistano informazioni per tale tipo di esecuzione DQS utilizzerà un delimitatore per eseguire l'analisi. In alcune circostanze, DQS può effettuare alcune analisi mediante analisi basata sulle informazioni e altre mediante analisi basata su delimitatore.  
   

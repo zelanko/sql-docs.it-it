@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.forloopcontainerdetails.f1
@@ -17,15 +16,15 @@ ms.assetid: 44cf7355-992b-4bbf-a28c-bfb012de06f6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f1d04762b61376d2e9ede00467d89f62c55634d7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 92e1ff31c03e3de20d680544f7f432350151f33e
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48203731"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52761803"
 ---
 # <a name="for-loop-container"></a>Contenitore Ciclo For
-  Il contenitore Ciclo For definisce un flusso di controllo ripetuto all'interno di un pacchetto. L'implementazione del ciclo è simile alla struttura del ciclo **For** nei linguaggi di programmazione. Ogni ripetizione del ciclo, il contenitore ciclo For valuta un'espressione e ne ripete il flusso di lavoro fino a quando l'espressione restituisce `False`.  
+  Il contenitore Ciclo For definisce un flusso di controllo ripetuto all'interno di un pacchetto. L'implementazione del ciclo è simile alla struttura del ciclo **For** nei linguaggi di programmazione. A ogni ripetizione del ciclo il contenitore Ciclo For valuta un'espressione e ne ripete il flusso di lavoro finché tale espressione non restituisce `False`.  
   
  Per definire il ciclo, il contenitore Ciclo For usa gli elementi seguenti:  
   
@@ -35,7 +34,7 @@ ms.locfileid: "48203731"
   
 -   Un'espressione di iterazione facoltativa che incrementa o decrementa il contatore del ciclo.  
   
- Nella figura seguente viene illustrato un contenitore Ciclo For con un'attività Invia messaggi. Se l'espressione di inizializzazione è `@Counter = 0`, l'espressione di valutazione è `@Counter < 4` e l'espressione di iterazione è `@Counter = @Counter + 1`, il ciclo si ripeterà quattro volte e verranno inviati quattro messaggi di posta elettronica.  
+ Nella figura seguente viene illustrato un contenitore Ciclo For con un'attività Invia messaggi. Se l'espressione di inizializzazione è `@Counter = 0`, l'espressione di valutazione è `@Counter < 4`e l'espressione di iterazione è `@Counter = @Counter + 1`, il ciclo si ripeterà quattro volte e verranno inviati quattro messaggi di posta elettronica.  
   
  ![Un contenitore Ciclo For ripete un'attività quattro volte](../media/ssis-forloop.gif "Un contenitore Ciclo For ripete un'attività quattro volte")  
   
@@ -63,7 +62,7 @@ ms.locfileid: "48203731"
   
 -   [Configurazione di un contenitore Ciclo For](for-loop-container.md)  
   
--   [Impostare le proprietà di un'attività o di un contenitore](../set-the-properties-of-a-task-or-container.md)  
+-   [Impostazione delle proprietà di un'attività o di un contenitore](../set-the-properties-of-a-task-or-container.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Flusso di controllo](control-flow.md)   

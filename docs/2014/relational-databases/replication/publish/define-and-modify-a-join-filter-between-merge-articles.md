@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/30/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - filters [SQL Server replication], join
@@ -16,12 +15,12 @@ ms.assetid: f7f23415-43ff-40f5-b3e0-0be1d148ee5b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 11ca727e669457ca03d6a11244c22617c40ba464
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bf8b3b4f00ad2e8a3b9236292ee20948c852b6ef
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48177401"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52752344"
 ---
 # <a name="define-and-modify-a-join-filter-between-merge-articles"></a>Definizione e modifica di un filtro di join tra articoli di merge
   In questo argomento viene descritto come definire e modificare un filtro di join tra articoli di merge in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)]. La replica di tipo merge supporta i filtri di join, solitamente utilizzati in combinazione con filtri con parametri per estendere il partizionamento della tabella ad altri articoli correlati.  
@@ -102,7 +101,7 @@ ms.locfileid: "48177401"
   
 1.  Nella pagina **Filtro righe tabella** della Creazione guidata nuova pubblicazione o nella pagina **Filtro righe** di **Proprietà pubblicazione - \<Pubblicazione>** selezionare un filtro nel riquadro **Tabelle filtrate** e quindi fare clic su **Elimina**. Se il filtro di join eliminato è esteso da altri join, anch'essi verranno eliminati.  
   
-##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
  Tali procedure indicano un filtro con parametri su un articolo padre con filtri di join tra questo articolo e gli articoli figlio correlati. I filtri join possono essere definiti e modificati a livello di programmazione tramite le stored procedure di replica.  
   
 #### <a name="to-define-a-join-filter-to-extend-an-article-filter-to-related-articles-in-a-merge-publication"></a>Per definire un filtro join per estendere un filtro di articolo agli articoli correlati in una pubblicazione di tipo merge  

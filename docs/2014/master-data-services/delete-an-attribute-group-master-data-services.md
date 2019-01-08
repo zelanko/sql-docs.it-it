@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - deleting attribute groups [Master Data Services]
@@ -14,12 +13,12 @@ ms.assetid: f915e89b-629d-4725-aea6-a7f051978244
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 99c1f51f1bb9ac20571af3f6e39e357cfae976f0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 02a0eac15050584d2ce232a82bbf327db3b44fd9
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48208791"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52755429"
 ---
 # <a name="delete-an-attribute-group-master-data-services"></a>Eliminare un gruppo di attributi (Master Data Services)
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]è possibile eliminare un gruppo di attributi quando non è più necessario visualizzare la scheda nell'area funzionale **Visualizzatore** di [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)].  

@@ -13,12 +13,12 @@ ms.assetid: 143c68a5-589f-4e7f-be59-02707e1a430a
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: e5b14f73b3691bb194a0cc5b77401cb7a3fdde70
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 433c50834a7dc989d706cc2f67883cd43f5788d9
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48072981"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52508413"
 ---
 # <a name="establish-a-database-mirroring-session-using-windows-authentication-transact-sql"></a>Stabilire una sessione di mirroring del database tramite autenticazione di Windows (Transact-SQL)
     
@@ -42,7 +42,7 @@ ms.locfileid: "48072981"
      Per ogni istanza del server in una sessione di mirroring del database è necessario un endpoint di mirroring del database. Se l'endpoint non esiste, è necessario crearlo.  
   
     > [!NOTE]  
-    >  La forma di autenticazione utilizzata per il mirroring del database da un'istanza del server corrisponde a una proprietà dell'endpoint del mirroring del database dell'istanza. Per il mirroring del database sono disponibili due tipi di sicurezza del trasporto: l'autenticazione di Windows o l'autenticazione basata sui certificati. Per altre informazioni, vedere [protezione del trasporto per i gruppi di disponibilità AlwaysOn e mirroring del Database &#40;SQL Server&#41;](transport-security-database-mirroring-always-on-availability.md).  
+    >  La forma di autenticazione utilizzata per il mirroring del database da un'istanza del server corrisponde a una proprietà dell'endpoint del mirroring del database dell'istanza. Due tipi di sicurezza del trasporto sono disponibili per il mirroring del database: L'autenticazione di Windows o l'autenticazione basata su certificato. Per altre informazioni, vedere [protezione del trasporto per i gruppi di disponibilità AlwaysOn e mirroring del Database &#40;SQL Server&#41;](transport-security-database-mirroring-always-on-availability.md).  
   
      Assicurarsi che in ogni server partner server sia disponibile un endpoint per il mirroring del database. Indipendentemente dal numero di sessioni di mirroring da supportare, nell'istanza del server è consentito un solo endpoint del mirroring del database. Se si desidera usare questa istanza del server esclusivamente per i partner di sessioni di mirroring del database, è possibile assegnare il ruolo di partner all'endpoint (ROLE**=** PARTNER). Se si desidera utilizzare questo server anche per il server di controllo del mirroring in altre sessioni di mirroring del database, assegnare il ruolo dell'endpoint come ALL.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "48072981"
     ```  
   
     > [!IMPORTANT]  
-    >  Non riconfigurare un endpoint del mirroring del database in uso. Se un endpoint di mirroring del database è presente e già in uso, è consigliabile utilizzarlo per ogni sessione sull'istanza del server. L'eliminazione di un endpoint in uso può determinare il riavvio dell'endpoint, interrompendo le connessioni delle sessioni esistenti, cosa che ad altre istanze del server potrebbe apparire come un errore. Questa indicazione è particolarmente importante in modalità a sicurezza elevata con failover automatico, nella quale la riconfigurazione dell'endpoint in un partner potrebbe causare il verificarsi di un failover. Se un server di controllo del mirroring è stato impostato per una sessione, l'eliminazione dell'endpoint del mirroring del database può inoltre determinare la perdita del quorum da parte del server principale della sessione. Se si verifica questa situazione, il database viene portato offline e i suoi utenti vengono disconnessi. Per altre informazioni, vedere [Quorum: Impatto di un server di controllo del mirroring sulla disponibilità del database &#40;mirroring del database&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
+    >  Non riconfigurare un endpoint del mirroring del database in uso. Se un endpoint di mirroring del database è presente e già in uso, è consigliabile utilizzarlo per ogni sessione sull'istanza del server. L'eliminazione di un endpoint in uso può determinare il riavvio dell'endpoint, interrompendo le connessioni delle sessioni esistenti, cosa che ad altre istanze del server potrebbe apparire come un errore. Questa indicazione è particolarmente importante in modalità a sicurezza elevata con failover automatico, nella quale la riconfigurazione dell'endpoint in un partner potrebbe causare il verificarsi di un failover. Se un server di controllo del mirroring è stato impostato per una sessione, l'eliminazione dell'endpoint del mirroring del database può inoltre determinare la perdita del quorum da parte del server principale della sessione. Se si verifica questa situazione, il database viene portato offline e i suoi utenti vengono disconnessi. Per altre informazioni, vedere [Quorum: Come un server di controllo influisce sulla disponibilità del Database &#40;mirroring del Database&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
   
      Se un partner manca di un endpoint, vedere [Creare un endpoint del mirroring del database per l'autenticazione Windows &#40;Transact-SQL&#41;](create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md).  
   
@@ -73,7 +73,7 @@ ms.locfileid: "48072981"
   
      dove \<*indirizzo-sistema>* è una stringa che identifica in maniera univoca il computer di destinazione e \<*porta>* è il numero di porta usato dall'endpoint del mirroring dell'istanza del server partner. Per altre informazioni, vedere [Specificare un indirizzo di rete del server &#40;Mirroring del database&#41;](specify-a-server-network-address-database-mirroring.md).  
   
-     Ad esempio, sull'istanza del server mirror, l'istruzione ALTER DATABASE seguente imposta il partner come istanza del server principale originale. Il nome del database è **AdventureWorks**, l'indirizzo del sistema è DBSERVER1, nome del sistema partner, e il numero della porta utilizzata dall'endpoint del mirroring del database del partner è 7022:  
+     Ad esempio, sull'istanza del server mirror, l'istruzione ALTER DATABASE seguente imposta il partner come istanza del server principale originale. Il nome del database è **AdventureWorks**, l'indirizzo del sistema è DBSERVER1, ovvero il nome del sistema partner, e il numero della porta usata dall'endpoint del mirroring del database del partner è 7022:  
   
     ```  
     ALTER DATABASE AdventureWorks   
@@ -88,7 +88,7 @@ ms.locfileid: "48072981"
   
      Per ulteriori informazioni, vedere il passaggio 4.  
   
-     Ad esempio, sull'istanza del server principale, l'istruzione ALTER DATABASE seguente imposta il partner come istanza del server mirror originale. Il nome del database è **AdventureWorks**, l'indirizzo del sistema è DBSERVER2, nome del sistema partner e il numero della porta usata dall'endpoint del mirroring del database del partner è 7025:  
+     Ad esempio, sull'istanza del server principale, l'istruzione ALTER DATABASE seguente imposta il partner come istanza del server mirror originale. Il nome del database è **AdventureWorks**, l'indirizzo del sistema è DBSERVER2, ovvero il nome del sistema partner, e il numero della porta usata dall'endpoint del mirroring del database del partner è 7025:  
   
     ```  
     ALTER DATABASE AdventureWorks SET PARTNER = 'TCP://DBSERVER2:7022'  
@@ -107,7 +107,7 @@ ms.locfileid: "48072981"
          In alternativa, se si desidera evitare il failover automatico e si preferisce privilegiare le prestazioni rispetto alla disponibilità, disattivare la protezione delle transazioni. Per altre informazioni, vedere [Modifica della protezione delle transazioni in una sessione di mirroring del database &#40;SQL Server&#41;](change-transaction-safety-in-a-database-mirroring-session-transact-sql.md).  
   
         > [!NOTE]  
-        >  In modalità a prestazioni elevate, WITNESS deve essere impostato su OFF. Per altre informazioni, vedere [Quorum: Impatto di un server di controllo del mirroring sulla disponibilità del database &#40;mirroring del database&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
+        >  In modalità a prestazioni elevate, WITNESS deve essere impostato su OFF. Per altre informazioni, vedere [Quorum: Come un server di controllo influisce sulla disponibilità del Database &#40;mirroring del Database&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
   
 ## <a name="example"></a>Esempio  
   

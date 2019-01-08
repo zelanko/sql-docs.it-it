@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - vdt.dlgbox.checkconstraint
@@ -12,12 +12,12 @@ ms.assetid: ad0bbf7f-b0de-406a-bd0a-cb779816b101
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5f1840adadfe059939563dd2945db2883345fc51
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d41cc9f3b52c0c5e70ead6b93c0b929ef521f673
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48204981"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52763753"
 ---
 # <a name="check-constraint-dialog-box-visual-database-tools"></a>Finestra di dialogo Vincoli CHECK (Visual Database Tools)
   Questa finestra di dialogo viene visualizzata facendo clic con il pulsante destro del mouse sulla griglia della definizione di una tabella in Progettazione tabelle e scegliendo **Vincoli CHECK**. In tale finestra di dialogo è contenuto un set di proprietà relative ai vincoli non univoci associati alle tabelle del database. Le proprietà relative ai vincoli univoci invece vengono visualizzate nella finestra di dialogo **Indici/chiavi** .  
@@ -44,11 +44,11 @@ ms.locfileid: "48204981"
  **Categoria Identità**  
  Viene espansa per visualizzare le proprietà **Nome** e **Descrizione**.  
   
- **Nome**  
+ **Name**  
  Visualizza il nome del vincolo CHECK selezionato. Per modificare il nome del vincolo, digitare il testo direttamente nel campo della proprietà.  
   
  **Descrizione**  
- Descrive il vincolo CHECK. La descrizione può essere modificata digitando direttamente nel campo della proprietà oppure facendo clic sui puntini di sospensione (**…**) a destra del campo della proprietà e modificando il testo nella finestra di dialogo **Proprietà Descrizione** .  
+ Descrive il vincolo CHECK. La descrizione può essere modificata digitando direttamente nel campo della proprietà oppure facendo clic sui puntini di sospensione (**...**) a destra del campo della proprietà e modificando il testo nella finestra di dialogo **Proprietà Descrizione**.  
   
  **Categoria Progettazione tabelle**  
  Viene espansa per visualizzare le proprietà **Verifica dati esistenti durante la creazione o la riabilitazione**, **Attiva per istruzioni INSERTS e UPDATES**e **Attiva per replica**.  

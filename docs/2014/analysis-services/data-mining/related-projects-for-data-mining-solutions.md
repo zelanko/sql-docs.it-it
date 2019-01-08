@@ -11,12 +11,12 @@ ms.assetid: dc26489a-4c27-4b89-8215-6d245427c350
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8a99d28697a25e2b8fc6d1550765e03e52a8fdc3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 92384d07e258423e08793b08afe45b6d14253cff
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48106871"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52400655"
 ---
 # <a name="related-projects-for-data-mining-solutions"></a>Progetti correlati per soluzioni di data mining
   Come minimo, per una soluzione di data mining è richiesto il progetto di data mining, in cui si definiscono origini dati, viste origine dati, strutture di data mining e modelli di data mining. Tuttavia, quando i modelli di data mining vengono utilizzati nei processi decisionali quotidiani, è importante che il data mining sia integrato con altre parti di una soluzione analitica predittiva, che può includere i seguenti processi e componenti:  
@@ -162,7 +162,7 @@ ms.locfileid: "48106871"
   
  Per altre informazioni, vedere [Configurare e gestire word breaker e stemmer per la ricerca](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md).  
   
- La versione di una parola archiviata dopo l'indicizzazione full-text è un token in formato compresso. Le query successive nell'indice full-text generano più formati flessionali di una determinata parola basati sulle regole della lingua specifica, per garantire l'individuazione di tutte le corrispondenze probabili. Ad esempio, anche se il token archiviato è "acqua", tramite il motore di query vengono cercati anche i termini "acquario", "acquatico" e "acquaio", poiché sono variazioni morfologiche derivate regolarmente dalla radice "acqua".  
+ La versione di una parola archiviata dopo l'indicizzazione full-text è un token in formato compresso. Le query successive nell'indice full-text generano più formati flessionali di una determinata parola basati sulle regole della lingua specifica, per garantire l'individuazione di tutte le corrispondenze probabili. Ad esempio, anche se il token archiviato può essere "Esegui", il motore di query vengono cercati anche i termini "acquario", "ran" e "runner", perché questi sono variazioni morfologiche derivate regolarmente della parola radice "Esegui".  
   
  È inoltre possibile creare e compilare un thesaurus dell'utente per archiviare sinonimi e migliorare i risultati della ricerca o la categorizzazione dei termini. Sviluppando un thesaurus basato sui dati full-text in uso, è possibile ampliare in modo efficace l'ambito delle query full-text su tali dati. Per altre informazioni, vedere [Configurare e gestire i file del thesaurus per la ricerca full-text](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md).  
   
@@ -203,6 +203,6 @@ ms.locfileid: "48106871"
   
 ## <a name="see-also"></a>Vedere anche  
  [Soluzioni di modelli multidimensionali &#40;SSAS&#41;](../multidimensional-models/multidimensional-model-solutions-ssas.md)   
- [Soluzioni di modelli tabulari &#40;tabulare di SSAS&#41;](../tabular-model-solutions-ssas-tabular.md)  
+ [Soluzioni di modelli tabulari &#40;SSAS tabulare&#41;](../tabular-model-solutions-ssas-tabular.md)  
   
   

@@ -11,12 +11,12 @@ ms.assetid: c63d5cae-24fc-4fee-89a9-ad0367cddc3e
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3a7a38a3d71b28cc32b863bf95ca6b99fa2bddaa
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: b82e56dd7998ca19ce9e401369cd8d2f52b58573
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661750"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52417372"
 ---
 # <a name="developing-connection-pool-awareness-in-an-odbc-driver"></a>Sviluppo del rilevamento di pool di connessioni in un driver ODBC
 Questo argomento illustra i dettagli dello sviluppo di un driver ODBC che contiene informazioni sul modo in cui il driver deve fornire i servizi del pool di connessione.  
@@ -44,8 +44,8 @@ Questo argomento illustra i dettagli dello sviluppo di un driver ODBC che contie
   
 |Funzione|Aggiunta la funzionalità|  
 |--------------|-------------------------|  
-|[Funzione SQLAllocHandle](../../../odbc/reference/syntax/sqlallochandle-function.md)<br /><br /> [SQLFreeHandle](../../../odbc/reference/syntax/sqlfreehandle-function.md)<br /><br /> [SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md)<br /><br /> [SQLGetDiagRec](../../../odbc/reference/syntax/sqlgetdiagrec-function.md)|Supportano il nuovo tipo di handle: SQL_HANDLE_DBC_INFO_TOKEN (vedere la descrizione riportata di seguito).|  
-|[SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)|Supporta il nuovo attributo di connessione di sola: SQL_ATTR_DBC_INFO_TOKEN per la reimpostazione della connessione (vedere la descrizione riportata di seguito).|  
+|[Funzione SQLAllocHandle](../../../odbc/reference/syntax/sqlallochandle-function.md)<br /><br /> [SQLFreeHandle](../../../odbc/reference/syntax/sqlfreehandle-function.md)<br /><br /> [SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md)<br /><br /> [SQLGetDiagRec](../../../odbc/reference/syntax/sqlgetdiagrec-function.md)|Supporto per il nuovo tipo di handle: SQL_HANDLE_DBC_INFO_TOKEN (vedere la descrizione riportata di seguito).|  
+|[SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)|Supporto per il nuovo attributo di sola connessione: SQL_ATTR_DBC_INFO_TOKEN per la reimpostazione della connessione (vedere la descrizione riportata di seguito).|  
   
 > [!NOTE]  
 >  Funzioni deprecate, ad esempio **SQLError** e **SQLSetConnectOption** non sono supportate per il pool di connessioni compatibile con il driver.  

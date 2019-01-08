@@ -20,19 +20,19 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 57212bc80087e3f2227f90ab6fa16678df37517e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 251dcb7121b568444387a1e864294095a556b827
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47809079"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52396023"
 ---
 # <a name="sysdmgeoreplicationlinkstatus-azure-sql-database"></a>sys.dm_geo_replication_link_status (database SQL di Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
   Contiene una riga per ogni collegamento di replica tra i database primari e secondari in una relazione di replica geografica. Sono inclusi i database primari e secondari. Se esiste più di un collegamento di replica continua per un determinato database primario, questa tabella contiene una riga per ogni relazione. La vista viene creata in tutti i database, incluso il database master logico. Tuttavia, se si esegue una query su questa vista nel database master logico viene restituito un set vuoto.  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |link_guid|**uniqueidentifier**|ID univoco del collegamento di replica.|  
 |partner_server|**sysname**|Nome del server logico contenente il database collegato.|  
@@ -44,7 +44,7 @@ ms.locfileid: "47809079"
 |ruolo|**tinyint**|Ruolo replica geografica, uno di:<br /><br /> 0 = database primario. Il database_id fa riferimento al database primario nella relazione di replica geografica.<br /><br /> 1 = database secondario.  Il database_id fa riferimento al database primario nella relazione di replica geografica.|  
 |role_desc|**nvarchar(256)**|PRIMARY<br /><br /> SECONDARY|  
 |secondary_allow_connections|**tinyint**|Tipo secondario, uno di:<br /><br /> 0 non = Nessun direct sono consentite connessioni al database secondario e il database non è disponibile per l'accesso in lettura.<br /><br /> 2 = all sono consentite connessioni ai database nella replica secondaria; ication per l'accesso di sola lettura.|  
-|secondary_allow_connections_desc|**nvarchar(256)**|no<br /><br /> All|  
+|secondary_allow_connections_desc|**nvarchar(256)**|No<br /><br /> All|  
 |last_commit|**datetimeoffset**|Ora dell'ultima transazione di commit nel database. Se recuperata nel database primario, indica l'ultima ora di commit nel database primario. Se recuperata nel database secondario, indica l'ultima ora di commit nel database secondario. Se recuperata nel database secondario quando la replica primaria del collegamento di replica è verso il basso, indica fino a quando non punto in cui il database secondario viene aggiornato rispetto.|
   
 > [!NOTE]  

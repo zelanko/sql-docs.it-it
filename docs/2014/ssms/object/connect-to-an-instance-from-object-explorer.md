@@ -4,18 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 ms.assetid: 9803a8a0-a8f1-4b65-87b8-989b06850194
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7947bba9f41ffb77a1260ce79a5f4afb6c773295
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 92e3b7b2099aabaa763fb6f6642bcc6267ebe6f1
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48110931"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52748023"
 ---
 # <a name="connect-to-an-instance-from-object-explorer"></a>Connettersi a un'istanza da Esplora oggetti
   Per gestire oggetti tramite Esplora oggetti, è necessario connettere Esplora oggetti all'istanza che contiene gli oggetti. È possibile connettere Esplora oggetti a più istanze contemporaneamente.  
@@ -36,7 +36,7 @@ ms.locfileid: "48110931"
   
 4.  Fare clic sulla scheda **Proprietà connessione** per configurare le impostazioni aggiuntive. Le impostazioni disponibili variano in base al tipo di server. Per [!INCLUDE[ssDE](../../includes/ssde-md.md)]sono disponibili le opzioni seguenti.  
   
-    |Impostazione|Description|  
+    |Impostazione|Descrizione|  
     |-------------|-----------------|  
     |**Connetti al database**|Consente di eseguire selezioni dall'elenco dei database disponibili sul server. Questo elenco contiene solo i database che l'utente è autorizzato a visualizzare.|  
     |**Protocollo di rete**|Consente di selezionare tra Shared Memory, TCP/IP o Named pipe.|  

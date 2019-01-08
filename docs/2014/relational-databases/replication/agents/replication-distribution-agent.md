@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 29/10/2018
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - Distribution Agent, executables
@@ -16,12 +15,12 @@ ms.assetid: 7b4fd480-9eaf-40dd-9a07-77301e44e2ac
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7ba109b21eb8af1f4260aee43f8a9c5f8d3a3bdb
-ms.sourcegitcommit: 3a8293b769b76c5e46efcb1b688bffe126d591b3
+ms.openlocfilehash: 7568e9deb0462dec9e9527d9876aeefd9ed9c543
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "50226333"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52767663"
 ---
 # <a name="replication-distribution-agent"></a>Agente distribuzione repliche
   Agente distribuzione repliche è un eseguibile che consente di spostare lo snapshot (per la replica snapshot e transazionale) e le transazioni incluse nelle tabelle del database di distribuzione (per la replica transazionale) nelle tabelle di destinazione nei Sottoscrittori.  
@@ -135,14 +134,14 @@ ms.locfileid: "50226333"
  **-EncryptionLevel** [ **0** | **1** | **2** ]  
  Livello di crittografia SSL (Secure Sockets Layer) utilizzato dall'agente di distribuzione quando vengono stabilite le connessioni.  
   
-|Valore di EncryptionLevel|Description|  
+|Valore di EncryptionLevel|Descrizione|  
 |---------------------------|-----------------|  
 |**0**|Specifica che SSL non viene utilizzato.|  
 |**1**|Specifica che SSL viene utilizzato, ma l'agente non verifica che il certificato server SSL sia firmato da un'autorità emittente attendibile.|  
 |**2**|Specifica che SSL viene utilizzato e che il certificato viene verificato.|  
  
  > [!NOTE]  
- >  Un certificato SSL valido è definito con un nome di dominio completo del Server SQL. Affinché l'agente possa connettersi correttamente quando si imposta - EncryptionLevel su 2, creare un alias nel Server SQL locale. Il parametro 'Nome Alias' deve essere il nome del server e il parametro "Server" deve essere impostato per il nome completo di SQL Server.
+ >  Un certificato SSL valido è definito con un nome di dominio completo del Server SQL. Affinché l'agente possa connettersi correttamente quando si imposta - EncryptionLevel su 2, creare un alias nel Server SQL locale. Il parametro 'Nome alias' deve corrispondere al nome del server e il parametro 'Server' deve essere impostato sul nome completo dell'istanza di SQL Server.
 
  Per altre informazioni, vedere [Panoramica della sicurezza &#40;replica&#41;](../security/security-overview-replication.md).  
   
@@ -170,7 +169,7 @@ ms.locfileid: "50226333"
  **-HistoryVerboseLevel** [ **0** | **1** | **2** | **3** ]  
  Specifica la quantità di cronologia registrata durante un'operazione di distribuzione. Per ridurre al minimo l'effetto della registrazione della cronologia sulle prestazioni, selezionare **1**.  
   
-|Valore di HistoryVerboseLevel|Description|  
+|Valore di HistoryVerboseLevel|Descrizione|  
 |-------------------------------|-----------------|  
 |**0**|I messaggi di stato vengono scritti nella console o in un file di output. I record della cronologia non vengono registrati nel database di distribuzione.|  
 |**1**|Valore predefinito. Aggiorna sempre un messaggio di cronologia precedente con lo stesso stato (avvio, avanzamento, esito positivo e così via). Se non è presente un record precedente con lo stesso stato, inserisce un nuovo record.|  
@@ -205,7 +204,7 @@ ms.locfileid: "50226333"
  Se nell'origine non vi sono transazioni replicate disponibili, tramite l'agente viene inviato al server di distribuzione un messaggio che segnala l'assenza di transazioni. Questa opzione specifica per quanto tempo l'agente aspetta prima di inviare un altro messaggio di assenza di transazioni. Gli agenti inviano sempre un messaggio di assenza di transazioni quando rilevano che nell'origine non vi sono transazioni disponibili dopo aver elaborato in precedenza transazioni replicate. Il valore predefinito è 60 secondi.  
   
  **-OledbStreamThreshold** *oledb_stream_threshold*  
- Viene specificata la dimensione minima, in byte, per i dati BLOB (Binary Large Object), sopra la quale i dati verranno associati come flusso. Per usare questo parametro, è necessario specificare **–UseOledbStreaming** . I possibili valori sono compresi tra 400 e 1048576 byte. Il valore predefinito è 16384 byte.  
+ Viene specificata la dimensione minima, in byte, per i dati BLOB (Binary Large Object), sopra la quale i dati verranno associati come flusso. Per usare questo parametro, è necessario specificare **-UseOledbStreaming**. I possibili valori sono compresi tra 400 e 1048576 byte. Il valore predefinito è 16384 byte.  
   
  **-Output** *output_path_and_file_name*  
  Percorso del file di output dell'agente. Se non viene specificato il nome file, l'output viene inviato alla console. Se il nome file specificato esiste già, l'output viene aggiunto al file.  
@@ -249,7 +248,7 @@ ms.locfileid: "50226333"
  **-SubscriberType** [ **0**| **1**| **3**]  
  Specifica il tipo di connessione al Sottoscrittore utilizzata dall'agente di distribuzione.  
   
-|Valore di SubscriberType|Description|  
+|Valore di SubscriberType|Descrizione|  
 |--------------------------|-----------------|  
 |**0**|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]|  
 |**1**|Origine dati ODBC|  
@@ -274,7 +273,7 @@ ms.locfileid: "50226333"
  Specifica il tipo di sottoscrizione per la distribuzione. Un valore **0** indica una sottoscrizione push, un valore **1** indica una sottoscrizione pull e un valore **2** indica una sottoscrizione anonima.  
   
  **-TransactionsPerHistory** [ **0**| **1**|... **10000**]  
- Specifica l'intervallo delle transazioni per la registrazione della cronologia. Se il numero di transazioni di cui è stato eseguito il commit dopo l'ultima istanza di registrazione della cronologia è maggiore rispetto al valore di questa opzione, viene registrato un messaggio di cronologia. Il valore predefinito è 100. Un valore di **0** indica **TransactionsPerHistory**infinito. See the preceding **–MessageInterval**parameter.  
+ Specifica l'intervallo delle transazioni per la registrazione della cronologia. Se il numero di transazioni di cui è stato eseguito il commit dopo l'ultima istanza di registrazione della cronologia è maggiore rispetto al valore di questa opzione, viene registrato un messaggio di cronologia. Il valore predefinito è 100. Un valore di **0** indica **TransactionsPerHistory**infinito. Vedere il parametro precedente **-MessageInterval**.  
   
  **-UseDTS**  
  Deve essere specificato come parametro per una pubblicazione che consente la trasformazione dei dati.  

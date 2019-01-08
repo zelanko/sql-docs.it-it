@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: configuration
 ms.topic: conceptual
 f1_keywords:
 - SQL12.SWB.makemanaged.agentaccount.F1
@@ -20,12 +20,12 @@ ms.assetid: a801c619-611b-4e82-a8d8-d1e01691b7a1
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 382b2212ef32e47b0045285ad497f2d476099c79
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 98350d5d68990fdf31d42bacff2fc2ebb77c116b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48152731"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52762483"
 ---
 # <a name="enroll-an-instance-of-sql-server-sql-server-utility"></a>Registrare un'istanza di SQL Server (Utilità SQL Server)
   È possibile registrare un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un'utilità esistente di Utilità [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per monitorarne le prestazioni e la configurazione come istanza gestita di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Il punto di controllo dell'utilità raccoglie informazioni sulla configurazione e sulle prestazioni delle istanze gestite di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ogni 15 minuti. Queste informazioni vengono archiviate nel data warehouse di gestione dell'utilità (UMDW) nel punto di controllo dell'utilità; il nome del file UMDW è sysutility_mdw. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengono confrontati con i criteri per consentire l'identificazione di colli di bottiglia nell'utilizzo delle risorse e le possibilità di consolidamento.  
@@ -87,7 +87,7 @@ ms.locfileid: "48152731"
 -   [Registrazione dell'istanza di SQL Server](#Enrolling)  
   
 ##  <a name="Welcome"></a> Introduzione alla procedura guidata Registra istanza  
- Per avviare la procedura guidata, espandere l'albero in Esplora utilità fino a visualizzare un punto di controllo dell'utilità, fare clic con il pulsante destro del mouse su **Istanze gestite**e scegliere **Aggiungi istanza gestita**.  
+ Per avviare la procedura guidata, espandere l'albero in Esplora utilità fino a visualizzare un punto di controllo dell'utilità, fare clic con il pulsante destro del mouse su **Istanze gestite** e scegliere **Aggiungi istanza gestita**.  
   
  Scegliere **Avanti**per continuare.  
   
@@ -145,9 +145,9 @@ ms.locfileid: "48152731"
   
  Impostazioni istanza gestita  
   
--   Nome istanza di SQL Server: NomeComputer\NomeIstanza  
+-   Nome dell'istanza SQL Server: Nomecomputer\nomeistanza.  
   
--   Account set di raccolta utilità: NomeDominio\NomeUtente  
+-   Account Set di raccolta utilità: Nomedominio\nomeutente  
   
  Scegliere **Avanti**per continuare.  
   
@@ -169,12 +169,12 @@ ms.locfileid: "48152731"
 >   
 >  Eccezione durante l'esecuzione di un'istruzione o un batch Transact-SQL. (Microsoft.SqlServer.ConnectionInfo)  
 >   
->  Ulteriori informazioni: Non è stato possibile ottenere informazioni relative al gruppo/utente di Windows NT '\<NomeDominio\NomeAccount>', codice di errore 0x5. (Microsoft SQL Server, Errore: 15404)  
+>  Informazioni aggiuntive:  Impossibile ottenere informazioni relative al gruppo/utente Windows NT '\<Nomedominio\nomeaccount >', codice di errore 0x5. (Microsoft SQL Server, Errore: 10061) 15404)  
 >   
 >  Per altre informazioni sulla risoluzione di questo errore, vedere [Attività e funzionalità di Utilità SQL Server](../../database-engine/troubleshoot-the-sql-server-utility.md).  
   
 > [!IMPORTANT]  
->  Non modificare le proprietà del set di raccolta "Informazioni utilità" in un'istanza gestita di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]e non abilitare/disabilitare manualmente la raccolta dati, in quanto viene controllata da un processo dell'agente Utilità.  
+>  Non modificare le proprietà del set di raccolta "Informazioni utilità" in un'istanza gestita di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e non abilitare/disabilitare manualmente la raccolta dati, in quanto viene controllata da un processo dell'agente Utilità.  
   
  Dopo avere completato la Registrazione guidata istanza, fare clic sul nodo **Istanze gestite** nel riquadro di navigazione di **Esplora utilità** in SSMS. Le istanze registrate di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengono visualizzate nella visualizzazione elenco nel riquadro **Contenuto Esplora utilità** .  
   

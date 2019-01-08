@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - JobSteps object
@@ -13,19 +13,19 @@ ms.assetid: 44f9983c-1753-4fe0-8475-973aa2460b3a
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 5f268b9e0c90179e73395ad24500bcef0a4ebac2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 323bf0c943d12a2d05e5fde80194d35d9ab733cf
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48193951"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52753613"
 ---
 # <a name="sql-server-agent-jobsteps-object"></a>Oggetto JobSteps di SQL Server Agent
   L'oggetto prestazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] JobSteps **di** Agent contiene contatori delle prestazioni che forniscono informazioni relative ai passaggi di processo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Nella tabella seguente sono elencati i contatori inclusi nell'oggetto.  
   
  Nella tabella seguente sono inclusi i contatori **SQLAgent:Passaggi processi** .  
   
-|nome|Description|  
+|nome|Descrizione|  
 |----------|-----------------|  
 |**Passaggi attivi**|In questo contatore viene visualizzato il numero di passaggi del processo attualmente in esecuzione.|  
 |**Passaggi in coda**|In questo contatore viene visualizzato il numero di passaggi del processo pronti per l'esecuzione in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, ma la cui esecuzione non è ancora stata avviata.|  
@@ -33,7 +33,7 @@ ms.locfileid: "48193951"
   
  Per ogni contatore nell'oggetto sono disponibili le istanze seguenti:  
   
-|Istanza|Description|  
+|Istanza|Descrizione|  
 |--------------|-----------------|  
 |**_Total**|Informazioni su tutti i passaggi del processo.|  
 |**ActiveScripting**|Informazioni per i passaggi del processo che utilizzano il sottosistema **ActiveScripting** .|  
@@ -52,6 +52,6 @@ ms.locfileid: "48193951"
 ## <a name="see-also"></a>Vedere anche  
  [Gestire passaggi di processo](../../ssms/agent/manage-job-steps.md)   
  [Utilizzo degli oggetti prestazioni](../../ssms/agent/use-performance-objects.md)   
- [Monitorare l'utilizzo delle risorse &#40;Monitor di sistema&#41;](monitor-resource-usage-system-monitor.md)  
+ [Monitoraggio dell'utilizzo delle risorse &#40;Monitor di sistema&#41;](monitor-resource-usage-system-monitor.md)  
   
   

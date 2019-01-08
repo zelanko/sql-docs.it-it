@@ -13,12 +13,12 @@ ms.assetid: b06299ca-ed52-411a-b245-45eac4628c99
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 0532f2b9ab931eccda5403501a6fe74b3603525c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2da978efd869a748bb48f6d494d59ae2f4cfb019
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48165841"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52398954"
 ---
 # <a name="modify-statistics"></a>Modificare statistiche
   È possibile modificare statistiche esistenti in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -27,7 +27,7 @@ ms.locfileid: "48165841"
   
 -   **Prima di iniziare:**  
   
-     [Security](#Security)  
+     [Sicurezza](#Security)  
   
 -   **Modificare statistiche tramite:**  
   
@@ -60,11 +60,11 @@ ms.locfileid: "48165841"
   
 5.  Fare clic con il pulsante destro del mouse sull'oggetto statistiche che si vuole modificare e scegliere **Proprietà**.  
   
-6.  Nella pagina **nome_statistichee** *Proprietà statistiche -*  **nome_statistiche** fare clic su **Aggiungi**, **Rimuovi**, **Sposta su**o **Sposta giù**o any combination, to alter the properties of the statistics. Si noti che la posizione di una colonna nella griglia **Colonne statistiche** può avere un impatto significativo sull'utilità delle statistiche.  
+6.  Nella pagina **nome_statistichee** *Proprietà statistiche -* **nome_statistiche** fare clic su **Aggiungi**, **Rimuovi**, **Sposta su**o **Sposta giù**o qualsiasi combinazione, per modificare le proprietà delle statistiche. Si noti che la posizione di una colonna nella griglia **Colonne statistiche** può avere un impatto significativo sull'utilità delle statistiche.  
   
 7.  Fare clic su **OK**.  
   
-##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
  **Per modificare le statistiche**  
   
  Non è possibile eseguire questa attività utilizzando istruzioni Transact-SQL. Per modificare statistiche tramite Transact-SQL, è innanzitutto necessario eliminare la statistica esistente e quindi ricrearla con i nuovi attributi.  

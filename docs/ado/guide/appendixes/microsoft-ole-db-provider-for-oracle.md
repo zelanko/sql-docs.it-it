@@ -15,12 +15,12 @@ ms.assetid: 44fae9dd-5585-4cd6-8bbd-3248a78931b4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fce44a6059b82a5d5a6edeac30d4411afcbd96ce
-ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
+ms.openlocfilehash: 596d67527807782ee89043e0b198f0923552db7b
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51350235"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52390817"
 ---
 # <a name="microsoft-ole-db-provider-for-oracle-overview"></a>Provider Microsoft OLE DB per Oracle Panoramica
 > [!IMPORTANT]
@@ -48,7 +48,7 @@ MSDAORA
 
  La stringa è costituita da queste parole chiave:
 
-|Parola chiave|Description|
+|Parola chiave|Descrizione|
 |-------------|-----------------|
 |**Provider**|Specifica il Provider OLE DB per Oracle.|
 |**Data Source**|Specifica il nome di un server.|
@@ -63,7 +63,7 @@ MSDAORA
 
  Questi parametri sono descritti dettagliatamente nel [riferimento per programmatori OLE DB](https://msdn.microsoft.com/3c5e2dd5-35e5-4a93-ac3a-3818bb43bbf8). Il [indice proprietà dinamica ADO](../../../ado/reference/ado-api/ado-dynamic-property-index.md) fornisce un riferimento incrociato tra questi nomi di parametro e le proprietà OLE DB corrispondenti.
 
-|Parametro|Description|
+|Parametro|Descrizione|
 |---------------|-----------------|
 |**Handle di finestra**|Indica l'handle di finestra da usare per la richiesta di informazioni aggiuntive.|
 |**Locale Identifier**|Indica un numero a 32 bit univoco (ad esempio, 1033) che specifica le preferenze relative alla lingua dell'utente. Queste preferenze indicano vengono formattati come date e ore, gli elementi vengono ordinati in ordine alfabetico, le stringhe vengono confrontate e così via.|

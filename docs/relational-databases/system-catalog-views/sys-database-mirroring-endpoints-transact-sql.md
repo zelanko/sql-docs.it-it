@@ -23,12 +23,12 @@ ms.assetid: f2285199-97ad-473c-a52d-270044dd862b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c4a791f5d47382e78ce9bbfe34d939cffc273515
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0aa757203ba82794a0564e50c715134e502c6ac1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47734599"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52538067"
 ---
 # <a name="sysdatabasemirroringendpoints-transact-sql"></a>sys.database_mirroring_endpoints (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,16 +38,16 @@ ms.locfileid: "47734599"
 > [!NOTE]  
 >  Endpoint di mirroring del database supporta entrambe le sessioni tra i partner di mirroring del database e con i server di controllo e le sessioni tra la replica primaria di un gruppo di disponibilità Always On e delle relative repliche secondarie.  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
-|**\<colonne ereditate >**|—|Eredita le colonne da **Sys. Endpoints** (per altre informazioni, vedere [Sys. Endpoints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md)).|  
+|**\<colonne ereditate >**|-|Eredita le colonne da **Sys. Endpoints** (per altre informazioni, vedere [Sys. Endpoints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md)).|  
 |**Ruolo**|**tinyint**|Ruolo del mirroring. I possibili valori sono i seguenti:<br /><br /> **0** = nessuno<br /><br /> **1** = partner<br /><br /> **2** = server di controllo<br /><br /> **3** = all<br /><br /> Nota: Questo valore è rilevante solo per il mirroring del database.|  
 |**role_desc**|**nvarchar(60)**|Descrizione del ruolo del mirroring. I possibili valori sono i seguenti:<br /><br /> **NONE**<br /><br /> **PARTNER**<br /><br /> **CONTROLLO DEL MIRRORING**<br /><br /> **ALL**<br /><br /> Nota: Questo valore è rilevante solo per il mirroring del database.|  
 |**is_encryption_enabled**|**bit**|**1** significa che la crittografia è abilitata.<br /><br /> **0** significa che la crittografia è disabilitata.|  
 |**connection_auth**|**tinyint**|Tipo di autenticazione della connessione necessario per le connessioni all'endpoint. I possibili valori sono i seguenti:<br /><br /> **1** -NTLM<br /><br /> **2** -KERBEROS<br /><br /> **3** -NEGOTIATE<br /><br /> **4** -CERTIFICATO<br /><br /> **5** -NTLM, CERTIFICATO<br /><br /> **6** -KERBEROS, CERTIFICATO<br /><br /> **7** -NEGOTIATE, CERTIFICATI<br /><br /> **8** -CERTIFICATO, NTLM<br /><br /> **9** -CERTIFICATO, KERBEROS<br /><br /> **10** -CERTIFICATO, NEGOTIATE|  
 |**connection_auth_desc**|**Nvarchar (60)**|Descrizione del tipo di autenticazione necessario per le connessioni all'endpoint. I possibili valori sono i seguenti:<br /><br /> NTLM<br /><br /> KERBEROS<br /><br /> NEGOTIATE<br /><br /> CERTIFICATE<br /><br /> NTLM, CERTIFICATE<br /><br /> KERBEROS, CERTIFICATE<br /><br /> NEGOTIATE, CERTIFICATE<br /><br /> CERTIFICATE, NTLM<br /><br /> CERTIFICATE, KERBEROS<br /><br /> CERTIFICATE, NEGOTIATE|  
 |**certificate_id**|**int**|ID del certificato utilizzato per l'autenticazione, se disponibile.<br /><br /> 0 = viene utilizzata l'autenticazione di Windows.|  
-|**encryption_algorithm**|**tinyint**|Algoritmo di crittografia. I valori possibili sono i seguenti:<br /><br /> **0** : NESSUNO<br /><br /> **1** – RC4<br /><br /> **2** : AES<br /><br /> **3** – NONE, RC4<br /><br /> **4** : NONE, AES<br /><br /> **5** : RC4, AES<br /><br /> **6** : RC4, AES<br /><br /> **7** : NONE, RC4, AES<br /><br /> **8** : NONE, AES, RC4|  
+|**encryption_algorithm**|**tinyint**|Algoritmo di crittografia. I valori possibili sono i seguenti:<br /><br /> **0** -NESSUNO<br /><br /> **1** -RC4<br /><br /> **2** -AES<br /><br /> **3** -NONE, RC4<br /><br /> **4** -NESSUNO, AES<br /><br /> **5** -RC4, AES<br /><br /> **6** -AES, RC4<br /><br /> **7** -NONE, RC4, AES<br /><br /> **8** -NESSUNO, AES, RC4|  
 |**encryption_algorithm_desc**|**nvarchar(60)**|Descrizione dell'algoritmo di crittografia. I valori possibili sono i seguenti:<br /><br /> Nessuno<br /><br /> RC4<br /><br /> AES<br /><br /> NONE, RC4<br /><br /> NONE, AES<br /><br /> RC4, AES<br /><br /> AES, RC4<br /><br /> NONE, RC4, AES<br /><br /> NONE, AES, RC4|  
   
 ## <a name="remarks"></a>Note  

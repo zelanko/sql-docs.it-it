@@ -13,12 +13,12 @@ ms.assetid: 16485608-d3b9-49ee-8baa-948038cdd7ec
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e4036705b86b26e1f39bd42578c991014096f113
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c68ec29c2461cb7ffddfdbd2792e1a1a191076b2
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48089991"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52416652"
 ---
 # <a name="slice-source-cube-data-mining-wizard"></a>Sezionamento cubo di origine (Creazione guidata modello di data mining)
   È possibile utilizzare la finestra di dialogo **Sezionamento cubo di origine** per limitare i dati utilizzati per il training del modello. In genere un cubo contiene i dati correlati a molti attributi e dimensioni diversi, ad esempio tutti i negozi, tutte le aree e tutti i prodotti. Poiché non è pratico eseguire il training di un modello su un numero illimitato di combinazioni di attributi, utilizzare questa finestra di dialogo per scegliere un set specifico da utilizzare per il training di un modello.  
@@ -36,9 +36,9 @@ ms.locfileid: "48089991"
 >   
 >  Ad esempio, invece di usare [: &#40;intervallo&#41; &#40;MDX&#41; ](/sql/mdx/range-mdx) per definire un intervallo, è necessario enumerare ogni membro in base agli anni specifici.  
 >   
->  Se occorre definire una sezione complessa, è consigliabile definire le tuple nella sezione mediante uno script XMLA Alter. Quindi, è possibile usare lo strumento da riga di comando ascmd o SSIS [Analysis Services Execute DDL Task](../integration-services/control-flow/analysis-services-execute-ddl-task.md) per eseguire lo script e creare il set di membri specificato immediatamente prima dell'elaborazione della partizione.  
+>  Se occorre definire una sezione complessa, è consigliabile definire le tuple nella sezione mediante uno script XMLA Alter. È quindi possibile usare lo strumento da riga di comando ascmd o l'attività [Analysis Services Execute DDL Task](../integration-services/control-flow/analysis-services-execute-ddl-task.md) di SSIS per eseguire lo script e creare il set di membri specificato immediatamente prima dell'elaborazione della partizione.  
   
- **Per altre informazioni:** [Creazione guidata modello di data mining &#40;Analysis Services - Data mining&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md) e [Creare una struttura di data mining relazionale](data-mining/create-a-relational-mining-structure.md)  
+ **Per altre informazioni:** [Procedura guidata di Data Mining &#40;Analysis Services - Data Mining&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [creare una struttura di Data Mining relazionale](data-mining/create-a-relational-mining-structure.md)  
   
 ## <a name="options"></a>Opzioni  
  **Dimension**  
@@ -52,7 +52,7 @@ ms.locfileid: "48089991"
  **Operatore**  
  Selezionare l'operatore da utilizzare per la compilazione di un'espressione di sezione.  
   
- Se ad esempio si sceglie Geography come gerarchia, è possibile selezionare l'operatore = quindi digitare "Europe" come filtro, per ottenere i dati del cubo per solo per l'Europa.  
+ Ad esempio, se si sceglie Geography come gerarchia, è possibile selezionare l'operatore =, quindi digitare "Europe" come filtro, per ottenere solo i dati del cubo per l'Europa.  
   
  **Espressione filtro**  
  Digitare un'espressione da utilizzare come criterio per filtrare il cubo in base alla dimensione selezionata.  

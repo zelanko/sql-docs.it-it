@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 645e2603af6d0447aae22bc7c29b5413501b722f
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: 6ce978d7b05382b1a02018f3d5022b0f8bfaf585
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49168896"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52509323"
 ---
 # <a name="use-a-dns-forwarder-to-resolve-non-appliance-dns-names-in-analytics-platform-system"></a>Usare un server d'inoltro DNS per risolvere i nomi DNS Non Appliance nel sistema di piattaforma Analitica
 Un server d'inoltro DNS può essere configurato nei nodi di servizi di dominio Active Directory (**_appliance\_domain_-AD01** e  **_appliance\_ dominio_-AD02**) del dispositivo di sistema di piattaforma Analitica per consentire gli script e applicazioni software per accedere ai server esterni.  

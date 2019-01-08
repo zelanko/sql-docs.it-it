@@ -10,12 +10,12 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 60036d26-4797-4872-9a9e-3552841c61be
 ms.custom: sql-linux
-ms.openlocfilehash: f60b16d1fba4e6c6b46615e5a5fd512db20ab854
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3288bb18a4bc8d87b9be1eb8f57bbc66555b9db5
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47703799"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52401352"
 ---
 # <a name="walkthrough-for-the-performance-features-of-sql-server-on-linux"></a>Procedura dettagliata per le funzionalità delle prestazioni di SQL Server in Linux
 

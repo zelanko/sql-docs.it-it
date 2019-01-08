@@ -16,12 +16,12 @@ ms.assetid: 033a9c6b-0d7f-4f8a-ab60-33cd6fee0d33
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 961517ce1fe0c68b355b12b7749f13bdb9fb0d59
-ms.sourcegitcommit: ddb682c0061c2a040970ea88c051859330b8ac00
+ms.openlocfilehash: 54551e68d80b675ba040373c5c6bc8055a2162a2
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51570836"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52415868"
 ---
 # <a name="localdbgetversions-function"></a>Funzione LocalDBGetVersions
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "51570836"
   
 ## <a name="parameters"></a>Parametri  
  *pVersionNames*  
- [Output] Sono contenuti i nomi delle versioni del database locale disponibili nella workstation dell'utente.  
+ [Output] Contiene i nomi di versioni del database locale sono disponibili nella workstation dell'utente.  
   
  *lpdwNumberOfVersions*  
  [Input/Output] Per l'input contiene il numero di slot per le versioni nel *pVersionNames* buffer.   

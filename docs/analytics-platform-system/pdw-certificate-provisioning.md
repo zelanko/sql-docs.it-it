@@ -1,6 +1,6 @@
 ---
-title: Provisioning di certificati PDW - Analitica Platform System | Documenti Microsoft
-description: La pagina di Provisioning di certificati PDW delle Analitica piattaforma del sistema di Configuration Manager Importa o rimuove il certificato utilizzato dall'area PDW.
+title: Provisioning del certificato PDW - sistema di piattaforma Analitica | Microsoft Docs
+description: La pagina di Provisioning del certificato PDW di Analitica piattaforma di sistema di Configuration Manager Importa o rimuove il certificato usato dall'area PDW.
 author: mzaman1
 manager: craigg
 ms.prod: sql
@@ -9,69 +9,69 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: ea52c615f4629b579f5f239513c84d851de9e487
-ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
+ms.openlocfilehash: 4876b890067bd851167bc1e3e3c355c9701569d5
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/19/2018
-ms.locfileid: "31544933"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52405096"
 ---
-# <a name="pdw-certificate-provisioning---analytics-platform-system"></a>Provisioning di certificati PDW - Analitica Platform System
-Il **Provisioning di certificati PDW** pagina del sistema della piattaforma Analitica **Configuration Manager** Importa o rimuove il certificato utilizzato dall'area PDW. Utilizzando, un certificato per crittografare le connessioni consentono comunicazioni protette al nodo di controllo tramite client di SQL Server, gli strumenti che utilizzano il driver SQL Server PDW, il [Console di amministrazione](monitor-the-appliance-by-using-the-admin-console.md), e il caricamento di Integration Services.  
+# <a name="pdw-certificate-provisioning---analytics-platform-system"></a>Provisioning del certificato PDW - sistema di piattaforma Analitica
+Il **Provisioning del certificato PDW** pagina del sistema di piattaforma Analitica **Configuration Manager** Importa o rimuove il certificato usato dall'area PDW. L'uso, un certificato per crittografare le connessioni consente una comunicazione protetta il nodo di controllo tramite client di SQL Server, gli strumenti che utilizzano i driver di SQL Server PDW, il [Console di amministrazione](monitor-the-appliance-by-using-the-admin-console.md), e carica di Integration Services.  
   
 ## <a name="prerequisites"></a>Prerequisiti  
 Prima di installare il certificato, eseguire le operazioni seguenti:  
   
-1.  Ottenere un certificato di protezione. Se è necessario ulteriori informazioni su come ottenere un certificato protetto, contattare il supporto Microsoft.  
+1.  Ottenere un certificato protetto. Per altre informazioni su come ottenere un certificato protetto, contattare il supporto tecnico Microsoft.  
   
 2.  Salvare il certificato al nodo di controllo in un file PFX protetto da password.  
   
 ## <a name="for-security-reasons-obtain-a-trusted-certificate"></a>Per motivi di sicurezza, ottenere un certificato attendibile  
-SQL Server PDW supporta l'utilizzo di un certificato per crittografare le connessioni sul nodo di controllo. incluse le connessioni per il **Console di amministrazione**.  
+SQL Server PDW supporta l'utilizzo di un certificato per crittografare le connessioni al nodo di controllo; incluse le connessioni per il **Console di amministrazione**.  
   
-Per impostazione predefinita, il **Console di amministrazione** include un certificato autofirmato che fornisce privacy, ma non l'autenticazione server. Questo può rendere vulnerabile a un attacco man-in-the-middle le comunicazioni. Quando un utente si connette alla Console di amministrazione utilizzando il certificato autofirmato, Internet Explorer viene restituito l'errore: "Si verifica un problema con il certificato di sicurezza del sito Web".  
+Per impostazione predefinita, il **Console di amministrazione** include un certificato autofirmato che fornisce privacy, ma non l'autenticazione del server. Questo può rendere vulnerabile ad attacchi man-in-the-middle le comunicazioni. Quando un utente si connette alla Console di amministrazione tramite il certificato autofirmato, Internet Explorer restituisce l'errore: "Si è verificato un problema con il certificato di sicurezza di questo sito Web".  
   
-Anche se la connessione tramite il certificato autofirmato crittografa i dati in transito tra il client e il server, la connessione è ancora al rischio di attacchi da.  
+Anche se la connessione tramite il certificato autofirmato crittografa i dati in transito tra il client e server, la connessione è ancora soggetta a rischi da utenti malintenzionati.  
   
 > [!WARNING]  
-> Gli amministratori di accessorio immediatamente devono acquisire un certificato concatenato a un'autorità di certificazione riconosciuta dai client, per avere una connessione protetta e rimuovere l'errore che segnala Internet Explorer.  
+> Gli amministratori di Appliance devono acquisire immediatamente un certificato concatenato a un'autorità di certificazione attendibile riconosciuta dal client, allo scopo di avere una connessione sicura e rimuovere l'errore che segnala di Internet Explorer.  
   
-Il percorso di certificazione deve contenere il nome di dominio completo che viene eseguito il mapping al nodo di controllo indirizzo IP del Cluster (scelta consigliata) o il nome digitato dagli utenti, le barre di indirizzo del browser per accedere il **Console di amministrazione**.  
+Il percorso di certificazione deve contenere il nome di dominio completo che viene eseguito il mapping al nodo di controllo indirizzo IP del Cluster (scelta consigliata) o il nome che gli utenti digitano nella loro barre di indirizzi del browser per accedere al **Console di amministrazione**.  
   
-Utilizzare il sistema di piattaforma Analitica**Configuration Manager** per aggiungere o rimuovere il certificato attendibile. Direttamente tramite lo strumento di configurazione certificato Microsoft Windows HTTP Services (**winHttpCertCfg.exe**) per gestire il certificato non è supportata.  
+Utilizzare il sistema di piattaforma Analitica**Configuration Manager** per aggiungere o rimuovere il certificato attendibile. Direttamente usando lo strumento di configurazione certificato di servizi di Microsoft Windows HTTP (**winHttpCertCfg.exe**) per gestire il certificato non è supportata.  
   
 ## <a name="import-or-remove-the-certificate"></a>Importare o rimuovere il certificato  
-Le istruzioni seguenti viene illustrato come importare o rimuovere il certificato del dispositivo.  
+Le istruzioni seguenti illustrano come importare o rimuovere il certificato del dispositivo.  
   
 ### <a name="to-import-the-certificate"></a>Per importare il certificato  
   
-1.  Avviare il **Configuration Manager**. Per altre informazioni, vedere [avviare Gestione configurazione &#40;Analitica Platform System&#41;](launch-the-configuration-manager.md).  
+1.  Avviare il **Configuration Manager**. Per altre informazioni, vedere [avviare Gestione configurazione &#40;sistema di piattaforma Analitica&#41;](launch-the-configuration-manager.md).  
   
-2.  Nel riquadro sinistro della finestra di **Configuration Manager**, espandere **Parallel Data Warehouse topologia**e quindi fare clic su **certificati**.  
+2.  Nel riquadro sinistro della finestra di **Configuration Manager**, espandere **Parallel Data Warehouse topologia**, quindi fare clic su **certificati**.  
   
-3.  Selezionare **importare un certificato e configurare il dispositivo per usarlo**, quindi fare clic su **Sfoglia** per individuare e selezionare il file del certificato.  
+3.  Selezionare **importare un certificato e configurare l'appliance per usarlo**, quindi fare clic su **Sfoglia** per individuare e selezionare il file del certificato.  
   
-4.  Immettere la password per il certificato di **Password** campo.  
+4.  Immettere la password per il certificato nella **Password** campo.  
   
-5.  Fare clic su **applica** per configurare il certificato per l'applicazione.  
+5.  Fare clic su **applica** per configurare il certificato per l'appliance.  
   
-SQL Server PDW, non crittograferà connessione corrente utilizzando il certificato importato, ma utilizzerà il certificato per le nuove connessioni.  
+SQL Server PDW non crittograferà connessione corrente usando il certificato importato, ma userà il certificato per le nuove connessioni.  
   
-### <a name="to-remove-the-previously-imported-certificate"></a>Per rimuovere il certificato importato in precedenza  
+### <a name="to-remove-the-previously-imported-certificate"></a>Per rimuovere il certificato precedentemente importato  
   
-1.  Avviare il **Configuration Manager**. Per altre informazioni, vedere [avviare Gestione configurazione &#40;Analitica Platform System&#41;](launch-the-configuration-manager.md).  
+1.  Avviare il **Configuration Manager**. Per altre informazioni, vedere [avviare Gestione configurazione &#40;sistema di piattaforma Analitica&#41;](launch-the-configuration-manager.md).  
   
-2.  Nel riquadro sinistro della finestra di **Configuration Manager**, espandere **Parallel Data Warehouse topologia**e quindi fare clic su **certificati**.  
+2.  Nel riquadro sinistro della finestra di **Configuration Manager**, espandere **Parallel Data Warehouse topologia**, quindi fare clic su **certificati**.  
   
-3.  Selezionare **rimuovere qualsiasi certificato di provisioning nel dispositivo**.  
+3.  Selezionare **rimuovere qualsiasi certificato di provisioning nell'appliance**.  
   
-4.  Fare clic su **applica** per rimuovere il certificato importato in precedenza dal dispositivo.  
+4.  Fare clic su **applica** per rimuovere il certificato precedentemente importato dall'appliance.  
   
-SQL Server PDW continuerà a crittografare le connessioni correnti, ma non utilizzerà la rimozione del certificato per le nuove connessioni.  
+SQL Server PDW continueranno a crittografare le connessioni correnti, ma non utilizzerà la rimozione del certificato per le nuove connessioni.  
   
 ![Certificato PDW strumento DWConfig](./media/pdw-certificate-provisioning/SQL_Server_PDW_DWConfig_ApplPDWCert.png "SQL_Server_PDW_DWConfig_ApplPDWCert")  
   
 ## <a name="see-also"></a>Vedere anche  
-[Avviare Gestione configurazione &#40;Analitica Platform System&#41;](launch-the-configuration-manager.md)  
+[Avviare Gestione configurazione &#40;sistema di piattaforma Analitica&#41;](launch-the-configuration-manager.md)  
 <!-- MISSING LINKS [HDInsight Certificate Provisioning &#40;Analytics Platform System&#41;](hdinsight-certificate-provisioning.md)  -->  
   

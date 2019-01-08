@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 11/20/2015
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.linkedserver.properties.general.f1
@@ -18,12 +17,12 @@ ms.assetid: 3228065d-de8f-4ece-a9b1-e06d3dca9310
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1d4026596d06941286b137a60201ba0ee6489c34
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: eebda510e90c499a0bae774d1288d3b886896d25
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120208"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52766613"
 ---
 # <a name="create-linked-servers-sql-server-database-engine"></a>Creazione di server collegati (Motore di database di SQL Server)
   In questo argomento viene illustrato come creare un server collegato e come accedere ai dati da un'altra istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. La creazione di server collegati consente di utilizzare dati di più origini. Il server collegato non deve essere un'altra istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], tuttavia si tratta di uno scenario comune.  
@@ -82,7 +81,7 @@ ms.locfileid: "49120208"
     > [!NOTE]  
     >  Se l'istanza di **SQL Server** è quella predefinita, immettere il nome del computer che ospita l'istanza di **SQL Server**. Se l'istanza di **SQL Server** è un'istanza denominata, immettere il nome del computer e il nome dell'istanza, ad esempio **Contabilità\SQLExpress**.  
   
-3.  Nel **tipo di Server** area, selezionare **SQL Server** per indicare che il server collegato è un'altra istanza di **SQL Server**.  
+3.  Nell'area **Tipo di server** selezionare **SQL Server** per indicare che il server collegato è un'altra istanza di **SQL Server**.  
   
 4.  Nella pagina **Sicurezza** specificare il contesto di sicurezza che verrà utilizzato quando la connessione al server collegato viene eseguita dall'istanza originale di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . In un ambiente di dominio in cui gli utenti eseguono la connessione tramite account di dominio personalizzati, la selezione di **Verranno effettuate con il contesto di sicurezza corrente dell'account di accesso** è spesso la soluzione migliore. Quando gli utenti eseguono la connessione all'istanza originale di **SQL Server** utilizzando un account di accesso di **SQL Server** , la scelta ottimale spesso consiste nel selezionare **Verranno effettuate con il contesto di sicurezza seguente**, quindi fornendo le credenziali necessarie per l'autenticazione nel server collegato.  
   
@@ -193,7 +192,7 @@ ms.locfileid: "49120208"
      **Supporta l'operatore 'Like'**  
      Indica che il provider supporta le query che utilizzano la parola chiave LIKE.  
   
-###  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
+###  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
  Per creare un server collegato con [!INCLUDE[tsql](../../includes/tsql-md.md)], usare le istruzioni [sp_addlinkedserver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql)[CREATE LOGIN &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-login-transact-sql) e [sp_addlinkedsrvlogin &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql).  
   
 ##### <a name="to-create-a-linked-server-to-another-instance-of-sql-server-using-transact-sql"></a>Per creare un server collegato a un'altra istanza di SQL Server tramite Transact-SQL  

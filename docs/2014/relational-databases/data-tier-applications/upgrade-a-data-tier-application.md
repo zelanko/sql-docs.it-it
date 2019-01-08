@@ -24,19 +24,19 @@ ms.assetid: c117df94-f02b-403f-9383-ec5b3ac3763c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6b4876d7d41a286cae12a39e11d8442d1fbe360f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 553f35862684c7b7c860b70211f903dec253a799
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48152699"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52774323"
 ---
 # <a name="upgrade-a-data-tier-application"></a>Upgrade a Data-tier Application
   Utilizzare la procedura guidata Aggiorna applicazione livello dati o uno script di Windows PowerShell per modificare lo schema e le proprietà di un'applicazione livello dati (DAC) attualmente distribuita affinché corrispondano allo schema e alle proprietà definite in una nuova versione dell'applicazione livello dati.  
   
--   **Prima di iniziare:**  [Scelta delle opzioni di aggiornamento dell'applicazione livello dati](#ChoseDACUpgOptions), [Limitazioni e restrizioni](#LimitationsRestrictions), [Prerequisiti](#Prerequisites), [Sicurezza](#Security), [Autorizzazioni](#Permissions)  
+-   **Prima di iniziare:**  [Scelta di opzioni di aggiornamento dell'applicazione livello dati](#ChoseDACUpgOptions), [limitazioni e restrizioni](#LimitationsRestrictions), [prerequisiti](#Prerequisites), [sicurezza](#Security), [autorizzazioni](#Permissions)  
   
--   **Per aggiornare un'applicazione livello dati, usare:** [la procedura guidata Aggiorna applicazione livello dati](#UsingDACUpgradeWizard)[, PowerShell](#UpgradeDACPowerShell)  
+-   **Per eseguire l'aggiornamento di un'applicazione livello dati, utilizzando:**  [La creazione guidata applicazione livello dati aggiornamento](#UsingDACUpgradeWizard), [PowerShell](#UpgradeDACPowerShell)  
   
 ##  <a name="BeforeYouBegin"></a> Prima di iniziare  
  Un aggiornamento dell'applicazione livello dati è un processo sul posto che consente di modificare lo schema del database esistente affinché corrisponda allo schema definito in una nuova versione dell'applicazione livello dati. La nuova versione dell'applicazione livello dati è fornita in un file del pacchetto di applicazione livello dati. Per altre informazioni sulla creazione di un pacchetto di applicazione livello dati, vedere [Applicazioni livello dati](data-tier-applications.md).  
@@ -44,13 +44,13 @@ ms.locfileid: "48152699"
 ###  <a name="ChoseDACUpgOptions"></a> Scelta delle opzioni di aggiornamento dell'applicazione livello dati  
  Sono disponibili quattro opzioni per un aggiornamento sul posto:  
   
--   **Ignora perdita dati** : se `True`, l'aggiornamento viene continuato anche se alcune delle operazioni comportano la perdita di dati. Se `False`, queste operazioni comporteranno l'interruzione dell'aggiornamento. Ad esempio, se una tabella nel database corrente non è presente nello schema della nuova applicazione livello dati, la tabella viene rilasciata se `True` è specificato. L'impostazione predefinita è `True`.  
+-   **Ignora perdita dati** - se `True`, l'aggiornamento viene continuato anche se alcune delle operazioni comportano la perdita di dati. Se `False`, queste operazioni comporteranno l'interruzione dell'aggiornamento. Ad esempio, se una tabella nel database corrente non è presente nello schema della nuova applicazione livello dati, la tabella viene eliminata se è specificato `True`. L'impostazione predefinita è `True`.  
   
--   **Blocco su modifiche** : se `True`, l'aggiornamento viene terminato qualora lo schema del database è diverso da quello definito nell'applicazione livello dati precedente. Se `False`, l'aggiornamento continua anche se vengono rilevate modifiche. L'impostazione predefinita è `False`.  
+-   **Blocco su modifiche** - se `True`, l'aggiornamento viene terminato qualora lo schema del database è diverso da quello definito nell'applicazione livello dati precedente. Se `False`, l'aggiornamento continua anche se vengono rilevate delle modifiche. L'impostazione predefinita è `False`.  
   
--   **Eseguire il rollback in caso di errore** : se `True`, l'aggiornamento è incluso in una transazione, e se vengono rilevati errori verrà tentato un rollback. Se `False`, viene eseguito il commit di tutte le modifiche nel momento in cui vengono apportate e, in caso di errori, potrebbe essere necessario ripristinare un backup precedente del database. L'impostazione predefinita è `False`.  
+-   **Eseguire il rollback in caso di errore** - se `True`, l'aggiornamento è incluso in una transazione, e se vengono rilevati errori verrà tentato un rollback. Se `False`, viene eseguito il commit di tutte le modifiche nel momento in cui vengono apportate e, in caso di errori, potrebbe essere necessario ripristinare un backup precedente del database. L'impostazione predefinita è `False`.  
   
--   **Ignora convalida criteri** : se `True`, i criteri di selezione server dell'applicazione livello dati non viene valutato. Se `False`, i criteri vengono valutati e l'aggiornamento si arresta se si verifica un errore di convalida. L'impostazione predefinita è `False`.  
+-   **Ignora convalida criteri** - se `True`, i criteri di selezione server dell'applicazione livello dati non viene valutato. Se `False`, vengono valutati i criteri e l'aggiornamento termina in caso di errore di convalida. L'impostazione predefinita è `False`.  
   
 ###  <a name="LimitationsRestrictions"></a> Limitazioni e restrizioni  
  È possibile eseguire aggiornamenti dell'applicazione livello dati solo in [!INCLUDE[ssSDS](../../includes/sssds-md.md)]o [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 4 (SP4) o versioni successive.  
@@ -83,7 +83,7 @@ ms.locfileid: "48152699"
   
 2.  Espandere il nodo **Gestione** , quindi espandere il nodo **Applicazioni livello dati** .  
   
-3.  Fare clic con il pulsante destro del mouse sul nodo dell'applicazione livello dati da aggiornare e quindi scegliere **Aggiorna applicazione livello dati**  
+3.  Fare clic con il pulsante destro del mouse sul nodo dell'applicazione livello dati da aggiornare e quindi scegliere **Aggiorna applicazione livello dati**.  
   
 4.  Completare le finestre di dialogo della procedura guidata.  
   
@@ -178,7 +178,7 @@ ms.locfileid: "48152699"
 ## <a name="options-page"></a>Pagina Opzioni  
  Utilizzare questa pagina per selezionare l'opzione Rollback in caso di errore per l'aggiornamento.  
   
- **Rollback in caso di errore** - Selezionare questa opzione per includere l'aggiornamento in una transazione su cui la procedura guidata può tentare di eseguire il rollback se si verificano errori. Per ulteriori informazioni sull'opzione, vedere [Scelta delle opzioni di aggiornamento dell'applicazione livello dati](#ChoseDACUpgOptions).  
+ **Rollback in caso di errore**: selezionare questa opzione per includere l'aggiornamento in una transazione su cui la procedura guidata può provare a eseguire il rollback se si verificano errori. Per ulteriori informazioni sull'opzione, vedere [Scelta delle opzioni di aggiornamento dell'applicazione livello dati](#ChoseDACUpgOptions).  
   
  **Ripristina impostazioni predefinite**: consente di ripristinare l'impostazione predefinita dell'opzione, ovvero False.  
   
@@ -193,13 +193,13 @@ ms.locfileid: "48152699"
   
  **Le azioni seguenti saranno utilizzate per aggiornare l'applicazione livello dati.** Controllare le informazioni visualizzate per assicurarsi che le azioni che verranno eseguite siano corrette. Nella colonna **Azione** sono visualizzate le azioni, ad esempio le istruzioni Transact-SQL, che verranno eseguite per eseguire l'aggiornamento. Nella colonna **Perdita di dati** sarà contenuto un avviso qualora l'azione associata possa comportare l'eliminazione di dati.  
   
- **Aggiorna** - Consente di aggiornare l'elenco di azioni.  
+ **Aggiorna**: consente di aggiornare l'elenco di azioni.  
   
- **Salva report azioni** - Consente di salvare il contenuto della finestra delle azioni in un file HTML.  
+ **Salva report azioni**: consente di salvare il contenuto della finestra delle azioni in un file HTML.  
   
  **Continua ignorando la possibile perdita delle modifiche** specifica che l'utente è consapevole che alcuni degli oggetti o dei dati nel database corrente non saranno presenti nel nuovo database e che vuole procedere con l'aggiornamento. Scegliere questo pulsante solo se il report delle modifiche è stato analizzato e si conoscono i passaggi che è necessario eseguire per trasferire manualmente oggetti o dati necessari nel nuovo database. In caso di dubbi, fare clic sul pulsante **Salva report azioni** per salvare il report delle modifiche e sul pulsante **Salva script** per salvare lo script Transact-SQL, quindi scegliere **Annulla**. Analizzare il report e lo script, pianificare come trasferire gli oggetti e i dati necessari al termine dell'aggiornamento, quindi riavviare la procedura guidata.  
   
- **Salva script** salva in un file di testo le istruzioni Transact-SQL che verranno usate per eseguire l'aggiornamento.  
+ **Salva script**: salva in un file di testo le istruzioni Transact-SQL che verranno usate per eseguire l'aggiornamento.  
   
  **Ripristina impostazioni predefinite**: consente di ripristinare l'impostazione predefinita dell'opzione, ovvero False.  
   
@@ -234,15 +234,15 @@ ms.locfileid: "48152699"
   
 1.  Creare un oggetto server SMO e impostarlo sull'istanza contenente l'applicazione livello dati da aggiornare.  
   
-2.  Aprire un `ServerConnection` oggetti e connettersi alla stessa istanza.  
+2.  Aprire un oggetto `ServerConnection` e collegarlo alla stessa istanza.  
   
-3.  Usare `System.IO.File` per caricare il file del pacchetto dell'applicazione livello dati.  
+3.  Usare `System.IO.File` per caricare il file del pacchetto di applicazione livello dati.  
   
-4.  Uso `add_DacActionStarted` e `add_DacActionFinished` per sottoscrivere eventi di aggiornamento dell'applicazione livello dati.  
+4.  Utilizzare `add_DacActionStarted` e `add_DacActionFinished` per sottoscrivere gli eventi dell'aggiornamento dell'applicazione livello dati.  
   
-5.  Impostare il `DacUpgradeOptions`.  
+5.  Impostare `DacUpgradeOptions`.  
   
-6.  Usare il `IncrementalUpgrade` metodo per eseguire l'aggiornamento dell'applicazione livello dati.  
+6.  Utilizzare il metodo `IncrementalUpgrade` per aggiornare l'applicazione livello dati.  
   
 7.  Chiudere il flusso di file usato per leggere il file del pacchetto di applicazione livello dati.  
   

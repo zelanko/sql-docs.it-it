@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - COM-based resolvers [SQL Server replication]
@@ -14,12 +13,12 @@ ms.assetid: a6637e4b-4e6b-40aa-bee6-39d98cc507c8
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 66a8adfa8d9e060f316062e033be23ba8f5dbbc4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8fb5a27e9087044b1049106ca5abd071db74af9f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48186821"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52766414"
 ---
 # <a name="microsoft-com-based-resolvers"></a>Microsoft COM-Based Resolvers
   Tutti i sistemi di risoluzione basati su COM inclusi in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] gestiscono i conflitti di aggiornamento e, se specificato, i conflitti di inserimento ed eliminazione. Tutti i sistemi gestiscono il rilevamento a livello di colonna e la maggior parte di essi gestisce anche il rilevamento a livello di riga. Questi e tutti gli altri sistemi di risoluzione dei conflitti basati su COM dichiarano i tipi di conflitto che possono gestire. Per tutti gli altri tipi di conflitti l'agente di merge utilizza il sistema di risoluzione dei conflitti predefinito.  
@@ -30,7 +29,7 @@ ms.locfileid: "48186821"
   
  Nella tabella seguente vengono descritti gli attributi dei sistemi di risoluzione dei conflitti specifici.  
   
-|nome|Input richiesto|Description|Commenti|  
+|nome|Input richiesto|Descrizione|Commenti|  
 |----------|--------------------|-----------------|--------------|  
 |Sistema di risoluzione dei conflitti aggiuntivi[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] |Nome della colonna da sommare. Il tipo di dati deve essere aritmetico, ad esempio **int**, **smallint**, **numeric**e così via.|La riga in conflitto confermata viene determinata in base al valore di priorità. I valori della colonna specificati sono impostati sulla somma dei valori delle colonne di origine e di destinazione. Se un valore è impostato su NULL, i valori della colonna verranno impostati sul valore dell'altra colonna.|Supporta conflitti di aggiornamento con rilevamento solo a livello di colonna.|  
 |Sistema di risoluzione dei conflitti medi[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] |Nome della colonna di cui eseguire la media. Il tipo di dati deve essere aritmetico, ad esempio **int**, **smallint**, **numeric**e così via.|La riga in conflitto confermata viene determinata in base al valore di priorità. I valori della colonna risultanti sono impostati sulla media dei valori delle colonne di origine e di destinazione. Se un valore è impostato su NULL, i valori della colonna verranno impostati sul valore dell'altra colonna.|Supporta conflitti di aggiornamento con rilevamento solo a livello di colonna.|  

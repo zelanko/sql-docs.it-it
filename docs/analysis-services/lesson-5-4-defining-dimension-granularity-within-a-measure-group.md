@@ -1,5 +1,5 @@
 ---
-title: Definizione di granularità della dimensione all'interno di un gruppo di misure | Documenti Microsoft
+title: Definizione della granularità della dimensione all'interno di un gruppo di misure | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 9faa4c869591c6885a1856fca0ec63661af7799a
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: e047f955f9c4ecccc02404dc139d557935e0f090
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018818"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542236"
 ---
-# <a name="lesson-5-4---defining-dimension-granularity-within-a-measure-group"></a>Lezione 5-4-definizione granularità della dimensione all'interno di un gruppo di misure
+# <a name="lesson-5-4---defining-dimension-granularity-within-a-measure-group"></a>Lezione 5-4: definizione della granularità della dimensione all'interno di un gruppo di misure
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
 È possibile dimensionare le tabelle dei fatti a diversi livelli di dettaglio o granularità a seconda degli scopi. È ad esempio possibile registrare per ogni giorno i dati relativi alle vendite per rivenditore o le vendite effettuate tramite Internet, mentre le informazioni sulle quote di vendita esistono solo per il mese o il trimestre. In questi casi è possibile che la dimensione temporale abbia un livello di dettaglio diverso per ognuna di queste diverse tabelle dei fatti. Sebbene sia possibile definire una nuova dimensione del database come dimensione temporale con tale diverso livello di dettaglio, in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]è disponibile un modo più semplice.  
@@ -95,11 +95,11 @@ Nelle attività di questo argomento verrà aggiunto un gruppo di misure Sales Qu
   
 7.  Nell'elenco di campi della tabella pivot selezionare la gerarchia definita dall'utente **Sales Territories** e quindi fare clic sulla freccia giù visualizzata a destra.  
   
-    ![Gerarchia di aree di vendita nell'elenco dei campi](../analysis-services/media/l5-granularity-1a.png "gerarchia Sales Territories visualizzata nell'elenco dei campi")  
+    ![Gerarchia Sales Territories visualizzata nell'elenco dei campi](../analysis-services/media/l5-granularity-1a.png "gerarchia Sales Territories visualizzata nell'elenco dei campi")  
   
 8.  Nel filtro fare clic sulla casella di controllo Seleziona tutto per annullare tutte le selezioni, quindi scegliere solo **North America**.  
   
-    ![Riquadro filtro per la selezione di North America](../analysis-services/media/l5-granularity-1b.png "riquadro filtro per la selezione di North America")  
+    ![Riquadro filtro per la selezione di North America](../analysis-services/media/l5-granularity-1b.png "riquadro filtro per la selezione di America del Nord")  
   
 9. Nell'elenco di campi della tabella pivot espandere **Date**.  
   
@@ -113,7 +113,7 @@ Nelle attività di questo argomento verrà aggiunto un gruppo di misure Sales Qu
   
     Nell'immagine seguente vengono illustrati i valori per **Sales Amount Quota**.  
   
-    ![I valori per le vendite importo Quota](../analysis-services/media/l5-granularity-3.png "importo di valori per Sales Quota")  
+    ![I valori per Sales Amount Quota](../analysis-services/media/l5-granularity-3.png "valori Sales Amount Quota")  
   
 ## <a name="defining-dimension-usage-properties-for-the-sales-quotas-measure-group"></a>Definizione delle proprietà di utilizzo delle dimensioni per il gruppo di misure Sales Quotas  
   
@@ -127,7 +127,7 @@ Nelle attività di questo argomento verrà aggiunto un gruppo di misure Sales Qu
   
     Le dimensioni del cubo **Employee** e **Date** sono collegate ai gruppi di misure **Sales Quotas e Sales Quotas 1** tramite relazioni regolari. Si noti anche che la dimensione del cubo **Sales Territory** non è collegata a nessuno di questi gruppi di misure.  
   
-4.  Fare clic sulla cella nel punto di intersezione tra la dimensione **Sales Territory** e il gruppo di misure **Sales Quotas** e quindi fare clic sul pulsante Sfoglia (**…**). Verrà visualizzata la finestra di dialogo **Definisci relazione** .  
+4.  Fare clic nella cella all'intersezione tra il **territorio vendita** dimensione e il **Sales Quotas** gruppo di misure e quindi fare clic sul pulsante Sfoglia (**...** ). Verrà visualizzata la finestra di dialogo **Definisci relazione** .  
   
 5.  Nell'elenco **Selezionare il tipo di relazione** selezionare **Riferimento**.  
   
@@ -139,9 +139,9 @@ Nelle attività di questo argomento verrà aggiunto un gruppo di misure Sales Qu
   
 9. Verificare che la casella di controllo **Materializza** sia selezionata.  
   
-10. Scegliere **OK**.  
+10. Fare clic su **OK**.  
   
-11. Fare clic sulla cella nel punto di intersezione tra la dimensione **Sales Territory** e il gruppo di misure **Sales Quotas 1** e quindi fare clic sul pulsante Sfoglia (**…**). Verrà visualizzata la finestra di dialogo **Definisci relazione** .  
+11. Fare clic nella cella all'intersezione tra il **territorio vendita** dimensione e il **Sales Quotas 1** gruppo di misure e quindi fare clic sul pulsante Sfoglia (**...** ). Verrà visualizzata la finestra di dialogo **Definisci relazione** .  
   
 12. Nell'elenco **Selezionare il tipo di relazione** selezionare **Riferimento**.  
   
@@ -153,7 +153,7 @@ Nelle attività di questo argomento verrà aggiunto un gruppo di misure Sales Qu
   
 16. Verificare che la casella di controllo **Materializza** sia selezionata.  
   
-17. Scegliere **OK**.  
+17. Fare clic su **OK**.  
   
 18. Eliminare la dimensione **Date** del cubo.  
   
@@ -163,7 +163,7 @@ Nelle attività di questo argomento verrà aggiunto un gruppo di misure Sales Qu
   
     Rinominando la dimensione **Order Date** del cubo come **Date** se ne evidenzia meglio agli utenti il ruolo di dimensione primaria di data del cubo.  
   
-20. Fare clic sul pulsante Sfoglia (**…**) nella cella nel punto di intersezione tra il gruppo di misure **Sales Quotas** e la dimensione **Date** .  
+20. Fare clic sul pulsante Sfoglia (**...** ) nella cella nel punto di intersezione tra il **Sales Quotas** gruppo di misure e il **data** dimensione.  
   
 21. Nella finestra di dialogo **Definisci relazione** selezionare **Regolare** nell'elenco **Selezionare il tipo di relazione** .  
   
@@ -188,7 +188,7 @@ Nelle attività di questo argomento verrà aggiunto un gruppo di misure Sales Qu
   
 3.  Nella finestra di dialogo **Crea relazione tra attributi** l'opzione **Attributo di origine** è impostata su **Calendar Quarter**. Impostare **Attributo correlato** su **Fiscal Quarter**.  
   
-4.  Scegliere **OK**.  
+4.  Fare clic su **OK**.  
   
     Si noti che verrà visualizzato un messaggio per indicare che la dimensione **Date** contiene una o più relazioni tra attributi ridondanti, le quali potrebbero impedire l'aggregazione dei dati se un attributo non chiave viene usato come attributo di granularità.  
   

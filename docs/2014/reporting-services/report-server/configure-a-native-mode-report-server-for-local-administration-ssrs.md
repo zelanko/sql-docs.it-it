@@ -18,19 +18,19 @@ ms.assetid: 312c6bb8-b3f7-4142-a55f-c69ee15bbf52
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: be2f6f67182a9dd3dbc5866fa8690e5dcd018445
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f9dc5d0ae36feb5801f026f0fca77683004e23b3
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189071"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52400544"
 ---
 # <a name="configure-a-native-mode-report-server-for-local-administration-ssrs"></a>Configurare un server di report in modalità nativa per gli amministratori locali (SSRS)
   Per la distribuzione di un server di report [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in uno dei seguenti sistemi operativi sono necessarie ulteriori operazioni di configurazione se si desidera amministrare localmente un'istanza del server di report. Questo argomento spiega come configurare il server di report per l'amministrazione locale. Se non si è ancora installato o configurato il server di report, vedere [installare SQL Server 2014 dall'installazione guidata di &#40;installazione&#41; ](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md) e [gestire un Reporting Services in modalità Server di Report nativa](manage-a-reporting-services-native-mode-report-server.md).  
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] |  
   
 -   [!INCLUDE[winblue_server_2](../../includes/winblue-server-2-md.md)]  
   
@@ -119,7 +119,7 @@ ms.locfileid: "48189071"
 2.  Fare clic su **Impostazioni sito** nell'angolo superiore della home page.  
   
     > [!TIP]  
-    >  **Nota:** se l'opzione **Impostazioni sito** non è visualizzata, chiudere e riaprire il browser e accedere a Gestione report con privilegi di amministratore.  
+    >  **Nota:** Se non viene visualizzato il **Impostazioni sito** opzione, chiudere e riaprire il browser e passare a Gestione report con privilegi amministrativi.  
   
 3.  Fare clic su **Sicurezza**.  
   
@@ -163,7 +163,7 @@ ms.locfileid: "48189071"
   
 -   Quando si tenta di distribuire elementi dei report nel server di report del computer, viene visualizzato un messaggio di errore simile al seguente nella finestra **Elenco errori** :  
   
-    -   Le autorizzazioni concesse all'utente "Dominio\\<nome utente\>" non sono sufficienti per eseguire questa operazione.  
+    -   Le autorizzazioni concesse all'utente 'Dominio\\<nome utente\>' non sono sufficienti per eseguire questa operazione.  
   
  **Per eseguire con autorizzazioni elevate tutte le volte che si apre SSDT:**  
   
@@ -173,7 +173,7 @@ ms.locfileid: "48189071"
   
      Dal menu **Start** fare clic su **Tutti i programmi**, selezionare **SQL Server 2014**, fare clic con il pulsante destro del mouse su **SQL Server Data Tools**, quindi scegliere **Esegui come amministratore**.  
   
-2.  Fare clic su **Continua**.  
+2.  Scegliere **Continua**.  
   
 3.  Fare clic su **Esegui programma**.  
   
@@ -184,7 +184,7 @@ ms.locfileid: "48189071"
 -   Vedere le sezioni [Impostazioni cartella Gestione report)](#bkmk_configure_folder_settings) e [Impostazioni sito Gestione report](#bkmk_configure_site_settings) più indietro in questo argomento.  
   
 ##  <a name="bkmk_addiitonal_informaiton"></a> Informazioni aggiuntive  
- Un passaggio di configurazione aggiuntivo e comune correlato all'amministrazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] consiste nell'aprire la porta 80 in Windows Firewall per consentire l'accesso al computer del server di report. Per istruzioni, vedere [configurare un Firewall for Report Server Access](configure-a-firewall-for-report-server-access.md).  
+ Un passaggio di configurazione aggiuntivo e comune correlato all'amministrazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] consiste nell'aprire la porta 80 in Windows Firewall per consentire l'accesso al computer del server di report. Per istruzioni, vedere [Configure a Firewall for Report Server Access](configure-a-firewall-for-report-server-access.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Gestire un server di report in modalità nativa di Reporting Services](manage-a-reporting-services-native-mode-report-server.md)  

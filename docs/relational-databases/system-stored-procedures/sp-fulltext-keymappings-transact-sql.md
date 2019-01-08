@@ -21,12 +21,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e8e07af93050ec752a9cf26b56238269ca63aa9d
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 0e9f8894376712472c13479a32503954ad2694d7
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51660480"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52506317"
 ---
 # <a name="spfulltextkeymappings-transact-sql"></a>sp_fulltext_keymappings (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -60,10 +60,10 @@ sp_fulltext_keymappings { table_id | table_id, docid | table_id, NULL, key }
   
 ## <a name="result-sets"></a>Set di risultati  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |DocId|**bigint**|Colonna dell'identificatore interno del documento (DocID) corrispondente al valore della chiave.|  
-|Key|*|Valore di chiave full-text dalla tabella specificata.<br /><br /> Se nella tabella di mapping non esiste alcuna chiave full-text, viene restituito un set di righe vuoto.|  
+|Chiave|*|Valore di chiave full-text dalla tabella specificata.<br /><br /> Se nella tabella di mapping non esiste alcuna chiave full-text, viene restituito un set di righe vuoto.|  
   
  <sup>*</sup> Il tipo di dati per la chiave è lo stesso come il tipo di dati della colonna chiave full-text nella tabella di base.  
   
@@ -73,7 +73,7 @@ sp_fulltext_keymappings { table_id | table_id, docid | table_id, NULL, key }
 ## <a name="remarks"></a>Note  
  Nella tabella seguente viene descritto l'effetto ottenuto nel caso si utilizzino uno, due o tre parametri.  
   
-|Elenco parametri|Risultato|  
+|Questo elenco di parametri...|Permette di ottenere questo risultato...|  
 |--------------------------|----------------------|  
 |*table_id*|Quando viene richiamato solo con il *table_id* , sp_fulltext_keymappings restituisce tutti i valori chiave full-text (Key) dalla tabella di base specificata, nonché il valore DocId corrispondente a ogni chiave. Le chiavi in sospeso vengono eliminate.<br /><br /> Questa funzione consente di risolvere numerosi problemi ed è particolarmente utile per visualizzare il contenuto dell'indice full-text quando il tipo di dati della chiave full-text selezionata non è Integer. Ciò comporta l'unione in join i risultati di sp_fulltext_keymappings con i risultati della **DM fts_index_keywords_by_document**. Per altre informazioni, vedere [DM fts_index_keywords_by_document &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-document-transact-sql.md).<br /><br /> In generale, quando possibile, è consigliabile tuttavia eseguire sp_fulltext_keymappings con parametri che indicano una chiave full-text o un valore DocId specifico Questa operazione risulta molto più efficiente rispetto alla restituzione di un'intera mappa di chiavi, soprattutto per una tabella di dimensioni elevate per cui il costo in termini di prestazioni della restituzione dell'intera mappa di chiavi potrebbe essere significativo.|  
 |*table_id*, *docid*|Se solo il *table_id* e *docid* vengono specificati *docid* deve essere diverso da null e specificare un valore DocId valido nella tabella specificata. Questa funzione è utile per isolare la chiave full-text personalizzata della tabella di base corrispondente al valore DocId di un determinato indice full-text.|  
@@ -117,7 +117,7 @@ GO
 |`3`|`3`|`3`|  
 |`4`|`4`|`4`|  
   
-### <a name="b-obtaining-the-docid-value-for-a-specific-key-value"></a>B. Acquisizione del valore DocId per un valore Key specifico  
+### <a name="b-obtaining-the-docid-value-for-a-specific-key-value"></a>b. Acquisizione del valore DocId per un valore Key specifico  
  Nell'esempio seguente viene utilizzata un'istruzione DECLARE per creare una variabile locale, `@table_id`, e assegnare l'ID della tabella `ProductReview` come valore. Nell'esempio viene eseguita **sp_fulltext_keymappings** specificando `@table_id` per il *table_id* parametro, NULL per i *docid* parametro e 4 per il *chiave* parametro.  
   
 > [!NOTE]  

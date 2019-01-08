@@ -11,19 +11,19 @@ ms.assetid: 8bf03c45-caf5-4eda-9314-e4f8f24a159f
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7fa34786d8d939581c5b8fecfb54103229a2a2c8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c70d749a560ff5dcc39d36d84e8c9ff09b44894f
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48196581"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52404196"
 ---
 # <a name="implement-dynamic-security-by-using-row-filters"></a>Implementare la sicurezza dinamica mediante i filtri di riga
   In questa lezione supplementare verrà creato un ruolo aggiuntivo che implementa la sicurezza dinamica. La sicurezza dinamica offre la sicurezza a livello di riga in base al nome o all'ID di accesso dell'utente attualmente connesso. Per altre informazioni, vedere [Ruoli &#40;SSAS tabulare&#41;](../analysis-services/tabular-models/roles-ssas-tabular.md).  
   
  Per implementare la sicurezza dinamica, è necessario aggiungere una tabella al modello contenente i nomi degli utenti di Windows che possono creare una connessione al modello come origine dati ed esplorare oggetti modello e dati. Il modello creato in questa esercitazione è nel contesto di Adventure Works Corp. Tuttavia, per completare questa lezione, è necessario aggiungere una tabella contenente gli utenti del proprio dominio. Non saranno necessarie le password dei nomi utente che verranno aggiunti. Per creare una tabella Sicurezza dipendenti con una piccola parte degli utenti del proprio dominio, è possibile utilizzare la funzionalità Incolla per incollare i dati dei dipendenti da un foglio di calcolo di Excel. In uno scenario realistico la tabella che contiene i nomi utente da aggiungere a un modello utilizza in genere una tabella di un database effettivo come origine dati, ad esempio una tabella dimEmployee reale.  
   
- Per implementare la sicurezza dinamica, si useranno due nuove funzioni DAX: [funzione USERNAME &#40;DAX&#41; ](https://msdn.microsoft.com/library/hh230954.aspx) e [funzione LOOKUPVALUE &#40;DAX&#41;](https://msdn.microsoft.com/library/gg492170.aspx). Queste funzioni applicate in una formula di filtro di riga vengono definite in un nuovo ruolo. Utilizzando la funzione LOOKUPVALUE, la formula specifica un valore della tabella Sicurezza dipendenti, quindi passa il valore alla funzione USERNAME che specifica il nome dell'utente connesso appartenente a questo ruolo. L'utente può quindi esplorare solo i dati specificati dai filtri di riga del ruolo. In questo scenario verrà specificato che i dipendenti addetti alle vendite possono esplorare solo i dati relativi alle vendite Internet per i territori di vendita in cui sono membri.  
+ Per implementare la sicurezza dinamica, si useranno due nuove funzioni DAX: [Funzione USERNAME &#40;DAX&#41; ](https://msdn.microsoft.com/library/hh230954.aspx) e [funzione LOOKUPVALUE &#40;DAX&#41;](https://msdn.microsoft.com/library/gg492170.aspx). Queste funzioni applicate in una formula di filtro di riga vengono definite in un nuovo ruolo. Utilizzando la funzione LOOKUPVALUE, la formula specifica un valore della tabella Sicurezza dipendenti, quindi passa il valore alla funzione USERNAME che specifica il nome dell'utente connesso appartenente a questo ruolo. L'utente può quindi esplorare solo i dati specificati dai filtri di riga del ruolo. In questo scenario verrà specificato che i dipendenti addetti alle vendite possono esplorare solo i dati relativi alle vendite Internet per i territori di vendita in cui sono membri.  
   
  Per completare questa lezione supplementare, verrà completata una serie di attività. Le attività che sono specifiche di questo scenario di modello tabulare Adventure Works, ma che potrebbero non applicarsi necessariamente a uno scenario realistico, vengono identificate come tali. Ogni attività include informazioni aggiuntive che descrivono lo scopo dell'attività.  
   
@@ -39,9 +39,9 @@ ms.locfileid: "48196581"
   
 1.  In [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]fare clic sul menu **Modello** , quindi scegliere **Connessioni esistenti**.  
   
-2.  Nella finestra di dialogo **Connessioni esistenti** verificare che sia selezionata la connessione origine dati **Adventure Works DB da SQL**, quindi fare clic su **Apri**.  
+2.  Nella finestra di dialogo **Connessioni esistenti** verificare che sia selezionata la connessione origine dati **Adventure Works DB da SQL** , quindi fare clic su **Apri**.  
   
-     Se viene visualizzata la finestra di dialogo Credenziali rappresentazione, digitare le credenziali di rappresentazione utilizzate nella Lezione 2: Aggiungere Dati.  
+     Se viene visualizzata la finestra di dialogo credenziali di rappresentazione, digitare le credenziali di rappresentazione usate nella lezione 2: Aggiungere i dati.  
   
 3.  Nella pagina **Scelta della modalità di importazione dei dati** lasciare selezionata l'opzione **Seleziona da un elenco di tabelle e viste per scegliere i dati da importare** , quindi fare clic su **Avanti**.  
   
@@ -121,7 +121,7 @@ ms.locfileid: "48196581"
      Si noti che la proprietà Active di questa relazione è False, a indicare che non è attiva, poiché la tabella Vendite Internet già contiene un'altra relazione attiva utilizzata nelle misure.  
   
 ## <a name="hide-the-employee-security-table-from-client-applications"></a>Nascondere la tabella Sicurezza dipendenti alle applicazioni client  
- In questa attività verrà nascosta la tabella Sicurezza dipendenti impedendone la visualizzazione in un elenco di campi di un'applicazione client. Tenere presente che nascondere una tabella non significa proteggerla. Gli utenti possono ancora eseguire una query sui dati della tabella Sicurezza dipendenti se sanno come fare. Per proteggere i dati della tabella Sicurezza dipendenti, impedendo agli utenti di potervi eseguire una query, verrà applicato un filtro in un'attività successiva.  
+ In questa attività si nasconderà la tabella sicurezza dipendenti, impedendone la visualizzazione nell'elenco di campi di un'applicazione client. Tenere presente che nascondere una tabella non significa proteggerla. Gli utenti possono ancora eseguire una query sui dati della tabella Sicurezza dipendenti se sanno come fare. Per proteggere i dati della tabella Sicurezza dipendenti, impedendo agli utenti di potervi eseguire una query, verrà applicato un filtro in un'attività successiva.  
   
 #### <a name="to-hide-the-employee-table-from-client-applications"></a>Per nascondere la tabella Dipendente alle applicazioni client  
   
@@ -131,7 +131,7 @@ ms.locfileid: "48196581"
  In questa attività verrà creato un nuovo ruolo utente. Questo ruolo includerà un filtro di riga che definisce le righe della tabella Territorio vendita visibili agli utenti. Il filtro viene quindi applicato nella direzione della relazione uno-a-molti a tutte le altre tabelle correlate alla tabella Territorio vendita. Verrà inoltre applicato un semplice filtro per proteggere l'intera tabella Sicurezza dipendenti impedendone l'esecuzione di query da parte di tutti gli utenti membri del ruolo.  
   
 > [!NOTE]  
->  Il ruolo Addetti alle vendite per territorio creato in questa lezione consente ai membri di esplorare o eseguire query solo sui dati di vendita relativi al territorio di vendita a cui appartengono. Se si aggiunge un utente come membro al ruolo Addetti alle vendite per territorio presente anche come membro in un ruolo creato nella [Lezione 12: Creare ruoli](../analysis-services/lesson-11-create-roles.md), si otterrà una combinazione di autorizzazioni. Se un utente è membro di più ruoli, le autorizzazioni e i filtri di riga definiti per ogni ruolo sono cumulativi, ovvero l'utente disporrà di maggiori autorizzazioni determinate dalla combinazione dei ruoli.  
+>  Il ruolo Addetti alle vendite per territorio creato in questa lezione consente ai membri di esplorare o eseguire query solo sui dati di vendita relativi al territorio di vendita a cui appartengono. Se si aggiunge un utente come membro a addetti alle vendite dal ruolo territorio presente anche come un membro in un ruolo creato nella [lezione 12: Creare ruoli](../analysis-services/lesson-11-create-roles.md), si otterrà una combinazione di autorizzazioni. Se un utente è membro di più ruoli, le autorizzazioni e i filtri di riga definiti per ogni ruolo sono cumulativi, ovvero l'utente disporrà di maggiori autorizzazioni determinate dalla combinazione dei ruoli.  
   
 #### <a name="to-create-a-sales-employees-by-territory-user-role"></a>Per creare un ruolo utente Addetti alle vendite per territorio  
   

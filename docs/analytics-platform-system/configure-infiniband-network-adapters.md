@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: e0e0ed3aea02ae8a79d89871f6849b1cbf40c9d0
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: 0421361cf1718d6ee280269f9da125c148aa3afd
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49169330"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518267"
 ---
 # <a name="configure-infiniband-network-adapters-for-analytics-platform-system"></a>Configurare le schede di rete InfiniBand per il sistema di piattaforma Analitica
 Viene descritto come configurare le schede di rete InfiniBand in un server non appliance client per connettersi al nodo di controllo in Parallel Data Warehouse (PDW). Usare queste istruzioni per la connettività di base e per la disponibilità elevata, in modo che il caricamento, i processi di backup e altri si connettono automaticamente alla rete InfiniBand attiva.  
@@ -42,9 +42,9 @@ Dopo aver configurato le schede di rete InfiniBand, i processi client possono co
   
 Ad esempio, se il nome dell'area PDW è MyPDW e il nome dell'appliance è MyAPS, la specifica del server dwloader per il caricamento dei dati è uno dei seguenti:  
   
--   `dwloader –S MYPDW-SQLCTL01.MyAPS.pdw.local`  
+-   `dwloader -S MYPDW-SQLCTL01.MyAPS.pdw.local`  
   
--   `dwloader –S MYPDW-SQLCTL01`  
+-   `dwloader -S MYPDW-SQLCTL01`  
   
 ## <a name="BeforeBegin"></a>Prima di iniziare  
   
@@ -61,7 +61,7 @@ Usando SQLCTL01, il DNS di sistema di piattaforma Analitica collega il server di
   
 Per soddisfare i requisiti aziendali specifici, è anche possibile aggiungere il server di client a un dominio di Windows o il proprio gruppo di lavoro non appliance.  
   
-## <a name="Sec1"></a>Passaggio 1: Ottenere l'appliance le impostazioni di rete InfiniBand  
+## <a name="Sec1"></a>Passaggio 1: Ottenere le impostazioni di rete InfiniBand dell'appliance  
 *Per ottenere l'appliance le impostazioni di rete InfiniBand*  
   
 1.  Accedere all'appliance AD01 nodo con l'account appliance_domain\Administrator.  
@@ -161,7 +161,7 @@ Per soddisfare i requisiti aziendali specifici, è anche possibile aggiungere il
   
 1.  Nella finestra di connessioni di rete, fare clic su uno degli slot rete per la scheda Mellanox e selezionare proprietà.  
   
-2.  Fare clic su Avanzate... .  
+2.  Fare clic su avanzate pulsante.  
   
 3.  Nella finestra Impostazioni TCP/IP avanzate, se l'operazione di Accodamento opzione questi suffissi DNS (in ordine) non è disattivata, la casella denominata controllo Aggiungi questi suffissi DNS (in ordine): selezionare il suffisso di dominio di appliance e fare clic su Aggiungi... È il suffisso del dominio appliance `appliance_domain.local`  
   

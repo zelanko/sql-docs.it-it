@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - incremental load [Integration Services],determining readiness
@@ -13,12 +12,12 @@ ms.assetid: 04935f35-96cc-4d70-a250-0fd326f8daff
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: afdab0c6817e65e1562a6768394d842a8e944c8d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 00910fdb6800921a2c6eeae79340eb5d2a79db20
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48129166"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52756363"
 ---
 # <a name="determine-whether-the-change-data-is-ready"></a>Come determinare se i dati delle modifiche sono pronti
   Nel flusso di controllo di un pacchetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] che esegue un caricamento incrementale dei dati delle modifiche, la seconda attività consiste nel verificare che i dati delle modifiche per l'intervallo selezionato siano pronti. Questo passaggio è necessario in quanto il processo di acquisizione asincrono potrebbe non avere ancora elaborato tutte le modifiche fino all'endpoint selezionato.  
@@ -200,7 +199,7 @@ ms.locfileid: "48129166"
         > [!NOTE]  
         >  Come argomento del metodo `Thread.Sleep` è previsto un argomento specificato in millisecondi.  
   
-7.  Lasciare la riga predefinita di codice che restituisce `DtsExecResult.Success` dall'esecuzione dello script.  
+7.  Lasciare la linea di codice predefinita, che restituisce `DtsExecResult.Success` dall'esecuzione dello script.  
   
 8.  Chiudere l'ambiente di sviluppo dello script ed **Editor attività Script**.  
   
@@ -276,7 +275,7 @@ ms.locfileid: "48129166"
   
 6.  Nella pagina **Script**in **Editor attività Script** fare clic su **Modifica script** per aprire l'ambiente di sviluppo dello script.  
   
-7.  Nella routine Main immettere il codice per registrare un errore chiamando il `Dts.Log` metodo, o per generare un evento chiamando uno dei metodi del `Dts.Events` interfaccia. Informare dell'errore il pacchetto restituendo `Dts.TaskResult = Dts.Results.Failure`.  
+7.  Nella routine Main immettere il codice per registrare un errore chiamando il metodo `Dts.Log` o per generare un evento chiamando uno dei metodi dell'interfaccia `Dts.Events`. Informare dell'errore il pacchetto restituendo `Dts.TaskResult = Dts.Results.Failure`.  
   
      Nell'esempio seguente viene illustrato come scrivere un messaggio nel log. Per altre informazioni, vedere [Registrazione nell'attività Script](../extending-packages-scripting/task/logging-in-the-script-task.md), [Generazione di eventi nell'attività Script](../extending-packages-scripting/task/raising-events-in-the-script-task.md)e [Risultati restituiti dall'attività Script](../extending-packages-scripting/task/returning-results-from-the-script-task.md).  
   
@@ -335,6 +334,6 @@ ms.locfileid: "48129166"
 ## <a name="next-step"></a>Passaggio successivo  
  Dopo avere determinato che i dati delle modifiche sono pronti, il passaggio successivo consiste nel prepararsi a eseguire una query per tali dati delle modifiche.  
   
- **Argomento successivo:** [Preparazione dell'esecuzione di una query per i dati delle modifiche](prepare-to-query-for-the-change-data.md)  
+ **Argomento successivo:** [Preparare l'esecuzione di una query per i dati delle modifiche](prepare-to-query-for-the-change-data.md)  
   
   

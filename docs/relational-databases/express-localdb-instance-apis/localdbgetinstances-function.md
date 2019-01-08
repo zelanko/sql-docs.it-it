@@ -16,12 +16,12 @@ ms.assetid: f95a9980-8bc0-426c-8aa1-e2660b6784cf
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: a562aa5947444fe149c5e24f3a5a1b9cd74fe4d3
-ms.sourcegitcommit: ddb682c0061c2a040970ea88c051859330b8ac00
+ms.openlocfilehash: d04bc4e669faad149a4dccbfc1b40a82a9a1aae0
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51571221"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52398174"
 ---
 # <a name="localdbgetinstances-function"></a>Funzione LocalDBGetInstances
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,10 +41,10 @@ HRESULT LocalDBGetInstances(
   
 ## <a name="parameters"></a>Parametri  
  *pInstanceNames*  
- [Output] Il risultato restituito da questa funzione è costituito da nomi sia di istanze denominate sia di quelle predefinite del database locale nella workstation dell'utente.  
+ [Output] Quando questa funzione viene restituito, contiene i nomi di entrambi denominato e predefinito di istanze del database locale nella workstation dell'utente.  
   
  *lpdwNumberOfInstances*  
- [Input/Output] Per l'input, contiene il numero di slot per i nomi delle istanze nel *pInstanceNames* buffer. In fase di output, è invece incluso il numero di istanze del database locale trovate nella workstation dell'utente.  
+ [Input/Output] Per l'input, contiene il numero di slot per i nomi delle istanze nel *pInstanceNames* buffer. Nell'output contiene il numero di istanze di database locale trovate nella workstation dell'utente.  
   
 ## <a name="returns"></a>Valori di codice restituiti  
  S_OK  

@@ -15,12 +15,12 @@ ms.assetid: 8c0d2f39-59c1-4168-a649-65473f6a771b
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 67a6c074b6b2b65ef264118bd367e55920b166c7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b49b24db5dfa3c9b522247024e0cbb8dbd1a81d2
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48114051"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52411818"
 ---
 # <a name="view-plan-guide-properties"></a>Visualizzare le proprietà delle guide di piano
   È possibile visualizzare le proprietà delle guide di piano in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]  
@@ -29,7 +29,7 @@ ms.locfileid: "48114051"
   
 -   **Prima di iniziare:**  
   
-     [Security](#Security)  
+     [Sicurezza](#Security)  
   
 -   **Per visualizzare le proprietà delle guide di piano utilizzando:**  
   
@@ -62,7 +62,7 @@ ms.locfileid: "48114051"
      **Disabilitato**  
      Visualizza lo stato della guida di piano. I valori possibili sono **True** e **False**.  
   
-     **Nome**  
+     **Name**  
      Visualizza il nome della guida di piano.  
   
      **Parametri**  
@@ -85,7 +85,7 @@ ms.locfileid: "48114051"
   
 4.  Fare clic su **OK**.  
   
-##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
   
 #### <a name="to-view-the-properties-of-a-plan-guide"></a>Per visualizzare le proprietà di una guida di piano  
   
@@ -96,7 +96,7 @@ ms.locfileid: "48114051"
 3.  Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**.  
   
     ```  
-    -- If a plan guide named “Guide1” already exists in the AdventureWorks2012 database, delete it.  
+    -- If a plan guide named "Guide1" already exists in the AdventureWorks2012 database, delete it.  
     USE AdventureWorks2012;  
     GO  
     IF OBJECT_ID(N'Guide1') IS NOT NULL  
@@ -124,7 +124,7 @@ ms.locfileid: "48114051"
        hints,  
        is_disabled  
     FROM sys.plan_guides  
-    WHERE name = N’Guide1’;  
+    WHERE name = N'Guide1';  
     GO  
     ```  
   

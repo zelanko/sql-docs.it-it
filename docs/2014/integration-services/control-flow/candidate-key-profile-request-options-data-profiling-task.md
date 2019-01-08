@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Data Profiling Task Editor
@@ -13,12 +12,12 @@ ms.assetid: 8632dbc4-4394-4dc7-b19c-f9adeb21ba52
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 78fb82daf907173befd246799686433a6eab3b43
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 64975d3e249db13a956f6300d340ac77dfc29db8
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48190821"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52767153"
 ---
 # <a name="candidate-key-profile-request-options-data-profiling-task"></a>Opzioni di Richiesta profilo Chiave candidata (Attività Profiling dati)
   Usare il riquadro **Proprietà richiesta** della pagina **Richieste profilo** per impostare le opzioni di **Richiesta profilo Chiave candidata** selezionata nel riquadro delle richieste. Il profilo Chiave candidata segnala se una colonna o un set di colonne è una chiave o una chiave approssimativa per la tabella selezionata. Questo profilo consente inoltre di identificare eventuali problemi nei dati, ad esempio i valori duplicati in una possibile colonna chiave.  
@@ -93,7 +92,7 @@ ms.locfileid: "48190821"
 > [!NOTE]  
 >  Quando si usa il carattere jolly **(\*)** per **ColumnName**, la proprietà **CompareOptions** è di sola lettura ed è impostata su **Default**.  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |**Default**|Ordina e confronta i dati in base alle regole di confronto della colonna nella tabella di origine.|  
 |**BinarySort**|Ordina e confronta i dati di in base ai modelli di bit definiti per ogni carattere. L'ordinamento binario supporta la distinzione tra maiuscole e minuscole e tra caratteri accentati e non accentati e rappresenta inoltre il tipo di ordinamento più rapido.|  
@@ -101,7 +100,7 @@ ms.locfileid: "48190821"
   
  Se si seleziona **DictionarySort**, è inoltre possibile selezionare qualsiasi combinazione delle opzioni elencate nella tabella seguente. Per impostazione predefinita, nessuna di queste opzioni aggiuntive è selezionata.  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |**IgnoreCase**|Specifica se nel confronto viene fatta distinzione tra lettere maiuscole e minuscole. Se questa opzione è impostata, nel confronto tra stringhe verrà ignorata la combinazione di maiuscole e minuscole. Ad esempio, la stringa "ABC" verrà considerata identica alla stringa "abc".|  
 |**IgnoreNonSpace**|Specifica se nel confronto viene fatta distinzione tra i caratteri con spaziatura e quelli con segni diacritici. Se questa opzione è impostata, nel confronto verranno ignorati i segni diacritici. Ad esempio, il carattere "å" verrà considerato uguale al carattere "a".|  
@@ -116,9 +115,9 @@ ms.locfileid: "48190821"
  **ThresholdSetting**  
  Per questa proprietà sono disponibili le opzioni elencate nella tabella seguente. Il valore predefinito di questa proprietà è **Specified**.  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
-|**Nessuno**|Non viene specificata alcuna soglia. Il livello di attendibilità della chiave viene segnalato indipendentemente dal valore.|  
+|**None**|Non viene specificata alcuna soglia. Il livello di attendibilità della chiave viene segnalato indipendentemente dal valore.|  
 |**Specified**|Viene specificata una soglia in **KeyStrengthThreshold**. Il livello di attendibilità della chiave viene segnalato solo se è maggiore della soglia.|  
 |**Exact**|Non viene specificata alcuna soglia. Il livello di attendibilità della chiave viene segnalato solo se le colonne selezionate rappresentano una chiave esatta.|  
   

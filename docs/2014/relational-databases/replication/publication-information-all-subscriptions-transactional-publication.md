@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.monitor.publicationinfo.allsubscriptions.tran.f1
@@ -13,12 +12,12 @@ ms.assetid: 7073350c-f667-4f70-88e9-152c9a1b08dd
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 75db3b31fbc895aa72bb74d92aa8afb6d932ec95
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a1383a7cd470e162a2c25a121fea7455ea381c06
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48182441"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52762083"
 ---
 # <a name="publication-information-all-subscriptions-transactional-publication"></a>Informazioni sulla pubblicazione, Tutte le sottoscrizioni (Pubblicazione transazionale)
   La scheda **Tutte le sottoscrizioni** visualizza informazioni su tutte le sottoscrizioni della pubblicazione transazionale selezionata.  
@@ -26,13 +25,13 @@ ms.locfileid: "48182441"
 ## <a name="options"></a>Opzioni  
  Per ulteriori informazioni su una sottoscrizione e sulle attività correlate, fare clic con il pulsante destro del mouse sulla riga della sottoscrizione e quindi scegliere un'opzione dal menu di scelta rapida. Per modificare la modalità di visualizzazione dei dati nella griglia, fare clic con il pulsante destro del mouse sulla griglia, quindi scegliere una delle opzioni seguenti:  
   
--   **Ordinamento**: consente di ordinare una o più colonne nella finestra di dialogo **Ordina colonne** .  
+-   **Ordinamento**: Ordinare una o più colonne nella **Ordina colonne** nella finestra di dialogo.  
   
--   **Seleziona colonne da visualizzare**: consente di selezionare le colonne da visualizzare e l'ordine di visualizzazione nella finestra di dialogo **Seleziona colonne** .  
+-   **Seleziona colonne da visualizzare**: Selezionare le colonne da visualizzare e l'ordine in cui si desidera visualizzarli nel **Scegli colonne** nella finestra di dialogo.  
   
--   **Filtro**: consente di filtrare le righe nella griglia in base a valori di colonna nella finestra di dialogo **Impostazioni filtro** .  
+-   **Filtro**: Filtrare le righe nella griglia in base ai valori di colonna il **impostazioni filtro** nella finestra di dialogo.  
   
--   **Cancella filtro**: consente di cancellare qualsiasi impostazione di filtro per la griglia.  
+-   **Cancella filtro**: Cancellare qualsiasi impostazione di filtro per la griglia.  
   
  Le impostazioni di filtro sono specifiche di ogni griglia. La selezione e l'ordinamento delle colonne vengono applicati a tutte le griglie dello stesso tipo, ad esempio la griglia delle pubblicazioni per ogni server di pubblicazione.  
   
@@ -65,7 +64,7 @@ ms.locfileid: "48182441"
  I valori di stato **Prestazioni critiche** e **Scadenza imminente/Scaduta** vengono visualizzati sono se sono stati impostati valori soglia. Per informazioni sulle misurazioni delle prestazioni e sull'impostazione dei valori soglia, vedere [Monitorare le prestazioni con Monitoraggio replica](monitor/monitor-performance-with-replication-monitor.md) e [Impostare valori di soglia e avvisi in Monitoraggio replica](monitor/set-thresholds-and-warnings-in-replication-monitor.md).  
   
  **Sottoscrizione**  
- Nome di ogni sottoscrizione nel formato: *SubscriberName: SubscriptionDatabaseName*.  
+ Il nome di ogni sottoscrizione, nel formato: *SubscriberName: SubscriptionDatabaseName*.  
   
  **Prestazioni**  
  Solo[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versioni successive. La valutazione delle prestazioni per ogni sottoscrizione è basata sulle misure più recenti rilevate da Monitoraggio replica e non riflette le prestazioni cronologiche. Le prestazioni vengono misurate per le sottoscrizioni delle pubblicazioni per le quali sono state definite soglie di prestazione. Se le soglie di prestazione non sono state definite per una pubblicazione, in questa colonna viene visualizzato **Non attivato**. La valutazione delle prestazioni può corrispondere a uno dei valori seguenti:  

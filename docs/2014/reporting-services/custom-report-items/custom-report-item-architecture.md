@@ -14,12 +14,12 @@ ms.assetid: 2a88ea46-c9f8-4dd7-aad1-16de11da4f06
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: ee6af3d8a448a85818693a24b05eec2699b5f4fd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3d75fed63f44e0371b81fbd7309a0a3f826543b5
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48082071"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52401054"
 ---
 # <a name="custom-report-item-architecture"></a>Architettura di un elemento del report personalizzato
   Un elemento del report personalizzato è un'estensione di RDL (Report Definition Language) che consente agli sviluppatori di aggiungere funzionalità per le quali non è disponibile il supporto nativo in RDL o di estendere le funzionalità dei controlli esistenti. Un elemento del report personalizzato è costituito da due componenti principali: il componente della fase di esecuzione e quello della fase di progettazione. Questi componenti vengono implementati come assembly [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] e possono essere scritti in qualsiasi linguaggio conforme a CLS.  
@@ -37,6 +37,6 @@ ms.locfileid: "48082071"
 ## <a name="see-also"></a>Vedere anche  
  [Creazione di un componente runtime dell'elemento del report personalizzato](../custom-report-items/creating-a-custom-report-item-run-time-component.md)   
  [Creazione di un componente dell'elemento del report personalizzato per la fase di progettazione](../custom-report-items/creating-a-custom-report-item-design-time-component.md)   
- [Procedura: Distribuzione di un elemento del report personalizzato](../custom-report-items/how-to-deploy-a-custom-report-item.md)  
+ [Come si fa: Distribuire un elemento del Report personalizzato](../custom-report-items/how-to-deploy-a-custom-report-item.md)  
   
   

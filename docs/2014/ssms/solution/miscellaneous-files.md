@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - files [SQL Server Management Studio], miscellaneous
@@ -15,15 +15,15 @@ ms.assetid: 3c952b0b-8f5f-4d86-9e5d-616c10b9df0d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 385485f06760c099610d3450e6a27db8fdd68c4a
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: d37c7b2a75b6e0f6fa832fb562dd04aca77c88b1
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49119858"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52763903"
 ---
 # <a name="miscellaneous-files"></a>file esterni
-  I file di un progetto vengono chiamati *file esterni*. Quando una soluzione è aperta è possibile aprire e modificare i file esterni correlati al progetto. Un file viene classificato come esterno se la sua estensione non è associata all'editor del codice del progetto. In un progetto script [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , ad esempio, i file con estensione txt o mdx verranno trattati come file esterni. In un progetto MDX i file con estensione txt o sql verranno trattati come file esterni. Per associare un'estensione di file con un editor di codice, vedere [associazione di estensioni di File a un Editor di codice](../../relational-databases/scripting/associate-file-extensions-to-a-code-editor.md).  
+  I file al di fuori di un progetto vengono identificati come *file esterni*. Quando una soluzione è aperta è possibile aprire e modificare i file esterni correlati al progetto. Un file viene classificato come esterno se la sua estensione non è associata all'editor del codice del progetto. In un progetto script [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , ad esempio, i file con estensione txt o mdx verranno trattati come file esterni. In un progetto MDX i file con estensione txt o sql verranno trattati come file esterni. Per associare un'estensione di file con un editor di codice, vedere [associazione di estensioni di File a un Editor di codice](../../relational-databases/scripting/associate-file-extensions-to-a-code-editor.md).  
   
  La possibilità di aggiungere file esterni al progetto è utile per diverse ragioni. Un file potrebbe non essere necessariamente uno script riconosciuto e tuttavia essere parte integrante dello sviluppo della soluzione. Note o istruzioni di sviluppo, file di dati e segmenti di codice sono esempi comuni di tali file.  
   

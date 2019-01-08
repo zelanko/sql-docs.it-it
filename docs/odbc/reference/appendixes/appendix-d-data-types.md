@@ -1,5 +1,5 @@
 ---
-title: 'Appendice d: i tipi di dati | Microsoft Docs'
+title: 'Appendice D: Tipi di dati | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,17 +16,17 @@ ms.assetid: 981d49c3-3531-4543-aa75-5bd9e4f67000
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cfaecb5b3705e2c5affe8c2cda3e42eeaddf4156
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 75ff7e83aa87bca9f33a3a8f44447af2eb60c581
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47669379"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52504022"
 ---
 # <a name="appendix-d-data-types"></a>Appendice D: Tipi di dati
-ODBC definisce due set di tipi di dati: SQL tipi di dati e tipi di dati C. Tipi di dati SQL indicano il tipo di dati dei dati archiviati nell'origine dati. Tipi di dati C indicano il tipo di dati dei dati archiviati nel buffer dell'applicazione.  
+ODBC definisce due set di tipi di dati: Tipi di dati SQL e tipi di dati C. Tipi di dati SQL indicano il tipo di dati dei dati archiviati nell'origine dati. Tipi di dati C indicano il tipo di dati dei dati archiviati nel buffer dell'applicazione.  
   
- Per ogni sistema DBMS conforme allo standard SQL-92 sono definiti tipi di dati SQL. Per ogni tipo di dati SQL specificata nello standard SQL-92, ODBC definisce un identificatore di tipo, ovvero un **#define** valore che viene passato come argomento nelle funzioni ODBC o restituito nei metadati di un set di risultati. SQL-92 solo i tipi di dati non supportati da ODBC sono BIT (il tipo ODBC SQL_BIT ha caratteristiche diverse), BIT_VARYING, TIME_WITH_TIMEZONE, TIMESTAMP_WITH_TIMEZONE e NATIONAL_CHARACTER. I driver sono responsabili del mapping dei tipi di dati specifici dell'origine SQL per gli identificatori di tipo di dati SQL ODBC e identificatori dei tipi dati specifici del driver SQL. Il tipo di dati SQL viene specificato nel campo SQL_DESC_CONCISE_TYPE di un descrittore di implementazione.  
+ Per ogni sistema DBMS conforme allo standard SQL-92 sono definiti tipi di dati SQL. Per ogni tipo di dati SQL specificata nello standard SQL-92, ODBC definisce un identificatore di tipo, ovvero un **#define** valore che viene passato come argomento nelle funzioni ODBC o restituito nei metadati di un set di risultati. SQL-92 solo i tipi di dati non supportati da ODBC sono BIT (il tipo ODBC SQL_BIT ha caratteristiche diverse), BIT_VARYING, TIME_WITH_TIMEZONE, TIMESTAMP_WITH_TIMEZONE e NATIONAL_CHARACTER. I driver sono responsabili del mapping di tipi di dati SQL specifiche dell'origine dati per gli identificatori di tipo di dati SQL ODBC e identificatori dei tipi dati specifici del driver SQL. Il tipo di dati SQL viene specificato nel campo SQL_DESC_CONCISE_TYPE di un descrittore di implementazione.  
   
  ODBC definisce i tipi di dati C e i relativi identificatori di tipo ODBC corrispondenti. Un'applicazione specifica il tipo di dati C del buffer che riceverà i dati dei set di risultati, passando l'identificatore di tipo C appropriato nel *TargetType* argomento nella chiamata a **SQLBindCol** o  **SQLGetData**. Specifica il tipo C del buffer che contiene un parametro dell'istruzione passando l'identificatore di tipo C appropriato nel *ValueType* argomento nella chiamata a **SQLBindParameter**. Il tipo di dati C è specificato nel campo SQL_DESC_CONCISE_TYPE di un descrittore applicazione.  
   

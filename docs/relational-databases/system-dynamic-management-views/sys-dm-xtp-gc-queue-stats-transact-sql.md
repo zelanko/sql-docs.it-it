@@ -19,12 +19,12 @@ ms.assetid: addef774-318d-46a7-85df-f93168a800cb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7bb836b93a48317ad6573cace0546cb90fa9f370
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 189d6c83eee8caa891585f051d4ee66f4d22e44f
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47603719"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52413741"
 ---
 # <a name="sysdmxtpgcqueuestats-transact-sql"></a>sys.dm_xtp_gc_queue_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -33,12 +33,12 @@ ms.locfileid: "47603719"
   
  Il thread principale di Garbage Collection (thread inattivo) tiene traccia delle righe aggiornate, eliminate e inserite per tutte le transazioni completate adll'ultima chiamata del thred principale di Garbage Collection. Il thread di Garbage Collection una volta attivato determina se il timestamp della transazione attiva meno recente è cambiato. Se la transazione attiva meno recente è cambiata, il thread inattivo accoda gli elementi di lavoro (in blocchi di 16 righe) delle transazioni i cui set di scrittura non sono più necessari. Ad esempio, se si eliminano 1.024 righe, verranno accodati 64 elementi di lavoro di Garbage Collection ciascuno contenente 16 righe eliminate.  Dopo il commit di una transazione utente, vengono selezionati tutti gli elementi accodati nell'utilità di pianificazione. Se non vi sono elementi accodati nell'utilità di pianificazione, la transazione utente cercherà in ogni coda del nodo NUMA corrente.  
   
- È possibile determinare se Garbage Collection libera la memoria delle righe eliminate eseguendo sys.dm_xtp_gc_queue_stats per vedere se il lavoro accodato viene eseguito. Se le voci di current_queue_depth non vengono elaborate o se nessun nuovo elemento di lavoro viene aggiunti a current_queue_depth, questo è un valore che indica che la garbage collection non sta liberando la memoria. Ad esempio, non è possibile eseguire il Garbage Collection con una transazione con esecuzione prolungata.  
+ È possibile determinare se Garbage Collection libera la memoria delle righe eliminate eseguendo sys.dm_xtp_gc_queue_stats per vedere se il lavoro accodato viene eseguito. Se le voci di current_queue_depth non vengono elaborate o se nessun nuovo elemento di lavoro viene aggiunti a current_queue_depth, questo è un valore che indica che la garbage collection non sta liberando la memoria. Ad esempio, non può eseguire operazioni di garbage collection se è presente una transazione con esecuzione prolungata.  
   
  Per altre informazioni, vedere [OLTP in memoria &#40;ottimizzazione in memoria&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md).  
   
 
-|Nome colonna|Tipo|Description|  
+|Nome colonna|Tipo|Descrizione|  
 |-----------------|----------|-----------------|  
 |queue_id|**int**|Identificatore univoco della coda.|  
 |total_enqueues|**bigint**|Numero totale degli elementi di lavoro di Garbage Collection nella coda dall'avvio del server.|  

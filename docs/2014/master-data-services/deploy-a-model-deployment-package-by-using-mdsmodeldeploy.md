@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: fb2a4df4-5e0d-4b34-818f-383dbde1b15c
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 048929ec4ff58def3d392df3f326f31f98fe9d83
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 02db491e350de93aff1015583f71566af747c878
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48205871"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52780263"
 ---
 # <a name="deploy-a-model-deployment-package-by-using-mdsmodeldeploy"></a>Distribuire un pacchetto di distribuzione di modelli tramite MDSModelDeploy
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]utilizzare lo strumento MDSModelDeploy per distribuire un pacchetto contenente:  
@@ -39,7 +38,7 @@ ms.locfileid: "48205871"
   
 -   È necessario essere un amministratore nell'ambiente in cui viene distribuito il modello. Per altre informazioni, vedere [Administrators &#40;Master Data Services&#41;](administrators-master-data-services.md).  
   
--   Se si aggiorna un modello con i dati, la versione nella quale si esegue la distribuzione non può avere lo stato **Bloccato** o **Commit eseguito**.  
+-   Se si aggiorna un modello con i dati, lo stato della versione nella quale si esegue la distribuzione non può essere **Bloccato** o **Commit eseguito**.  
   
 ### <a name="to-deploy-a-model-deployment-package"></a>Per distribuire un pacchetto di distribuzione di modelli  
   
@@ -70,19 +69,19 @@ ms.locfileid: "48205871"
     -   Per creare un nuovo modello:  
   
         ```  
-        MDSModelDeploy deploynew –package PackageName -model ModelName -service ServiceName  
+        MDSModelDeploy deploynew -package PackageName -model ModelName -service ServiceName  
         ```  
   
     -   Per creare un clone di un modello:  
   
         ```  
-        MDSModelDeploy deployclone –package PackageName  
+        MDSModelDeploy deployclone -package PackageName  
         ```  
   
     -   Per aggiornare un modello esistente e i relativi dati:  
   
         ```  
-        MDSModelDeploy deployupdate –package PackageName –version VersionName  
+        MDSModelDeploy deployupdate -package PackageName -version VersionName  
         ```  
   
     > [!IMPORTANT]  

@@ -11,24 +11,24 @@ ms.assetid: 13c3a8cc-b1db-4aba-ad9b-038b7971be8d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d2ffda70d3af46434886a7f2878ce238d3190905
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 696b4e9402e58da6308e6746cadbc25d43396d8f
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049351"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52416352"
 ---
 # <a name="lesson-2-add-data"></a>Lezione 2: Aggiungere dati
   In questa lezione verrà utilizzata l'Importazione guidata tabella in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] per connettersi al database SQL AdventureWorksDW, selezionare i dati, visualizzare un'anteprima, filtrare i dati e quindi importarli nell'area di lavoro del modello.  
   
- Utilizzando l'Importazione guidata tabella è possibile importare dati da diverse origini relazionali, quali Access, SQL, Oracle, Sybase, Informix, DB2, Teradata e così via. I passaggi per l'importazione dei dati da ognuna di queste origini relazionali sono molto simili a quanto descritto di seguito. I dati possono inoltre essere selezionati utilizzando una stored procedure.  
+ Mediante l'Importazione guidata tabella è possibile importare dati da un'ampia gamma di origini relazionali: Access, SQL, Oracle, Sybase, Informix, DB2, Teradata e altre ancora. I passaggi per l'importazione dei dati da ognuna di queste origini relazionali sono molto simili a quanto descritto di seguito. I dati possono inoltre essere selezionati utilizzando una stored procedure.  
   
  Per altre informazioni sull'importazione di dati e sui diversi tipi di origine dati da cui è possibile importare, vedere [Origini dati &#40;SSAS tabulare&#41;](data-sources-ssas-tabular.md).  
   
  Tempo stimato per il completamento della lezione: **20 minuti**  
   
 ## <a name="prerequisites"></a>Prerequisiti  
- Questo argomento fa parte di un'esercitazione relativa alla modellazione tabulare che deve essere completata nell'ordine specificato. Prima di eseguire le attività in questa lezione, è necessario aver completato la lezione precedente: [Lezione 1: Creare un nuovo modello di progetto tabulare](lesson-1-create-a-new-tabular-model-project.md).  
+ Questo argomento fa parte di un'esercitazione relativa alla modellazione tabulare che deve essere completata nell'ordine specificato. Prima di eseguire le attività in questa lezione, è necessario avere completato la lezione precedente: [Lezione 1: Creare un nuovo progetto di modello tabulare](lesson-1-create-a-new-tabular-model-project.md).  
   
 ## <a name="create-a-connection"></a>Creare una connessione  
   
@@ -53,7 +53,7 @@ ms.locfileid: "48049351"
   
 7.  Nella pagina **Scelta della modalità di importazione dei dati** verificare che l'opzione **Seleziona da un elenco di tabelle e viste per scegliere i dati da importare** sia selezionata. Poiché si vuole selezionare da un elenco di tabelle e viste, fare clic su **Avanti** per visualizzare un elenco di tutte le tabelle di origine nel database di origine.  
   
-8.  Nella pagina **Selezione tabelle e viste** selezionare le caselle di controllo corrispondenti alle tabelle seguenti: **DimCustomer**, **DimDate**, **DimGeography**, **DimProduct**, **DimProductCategory**, **DimProductSubcategory**e **FactInternetSales**.  
+8.  Nel **selezione tabelle e viste** pagina, selezionare la casella di controllo per le tabelle seguenti: **DimCustomer**, **DimDate**, **DimGeography**, **DimProduct**, **DimProductCategory**,  **DimProductSubcategory**, e **FactInternetSales**.  
   
 9. Si desidera fornire nomi più comprensibili per le tabelle nel modello. Fare clic sulla cella nella colonna **Nome descrittivo** per **DimCustomer**. Rinominare la tabella rimuovendo "Dim" da DimCustomer.  
   
@@ -73,7 +73,7 @@ ms.locfileid: "48049351"
  Dopo avere stabilito la connessione al database, avere selezionato le tabelle da importare e avere assegnato nomi descrittivi alle tabelle, passare alla sezione successiva per [filtrare i dati della tabella prima dell'importazione](#FilterData).  
   
 ##  <a name="FilterData"></a> Filtrare i dati della tabella  
- La tabella DimCustomer importata dal database contiene un subset dei dati del database SQL Server Adventure Works originale. Verrà utilizzato un filtro per escludere alcune colonne della tabella DimCustomer che non sono necessarie. Quando possibile, utilizzare filtri per escludere dati che non verranno utilizzati, per risparmiare spazio in memoria utilizzato dal modello.  
+ La tabella DimCustomer importata dal database contiene un subset dei dati del database SQL Server Adventure Works originale. Verranno escluse tramite filtro alcune colonne della tabella DimCustomer che non sono necessarie. Quando possibile, utilizzare filtri per escludere dati che non verranno utilizzati, per risparmiare spazio in memoria utilizzato dal modello.  
   
 #### <a name="to-filter-the-table-data-prior-to-importing"></a>Per filtrare i dati della tabella prima dell'importazione  
   
@@ -92,7 +92,7 @@ ms.locfileid: "48049351"
   
 3.  Verificare che tutte le altre colonne siano selezionate e fare clic su **OK**.  
   
-     Si noti che viene visualizzata la dicitura **Filtri applicati** nella colonna **Dettagli filtro** nella riga **Customer** . Se si fa clic su tale collegamento, viene visualizzata una descrizione testuale dei filtri appena applicati.  
+     Si noti che le parole **filtri applicati** sono ora visualizzate nel **dettagli filtro** colonna il **cliente** riga; se si fa clic su tale collegamento, viene visualizzata una descrizione di testo il filtri che appena applicati.  
   
 4.  Filtrare le tabelle restanti deselezionando le caselle di controllo per le colonne seguenti in ogni tabella:  
   
@@ -165,6 +165,6 @@ ms.locfileid: "48049351"
 -   In [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]scegliere **Salva tutto** dal menu **File**.  
   
 ## <a name="next-step"></a>Passaggio successivo  
- Per continuare questa esercitazione, passare alla lezione successiva: [Lezione 3: Rinominare colonne](rename-columns.md).  
+ Per continuare questa esercitazione, passare alla lezione successiva: [Lezione 3: Rinominare le colonne](rename-columns.md).  
   
   

@@ -14,12 +14,12 @@ ms.assetid: 6b7a630e-47f8-4ee1-b2a7-476bc1d0b0d4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 37d8d67300ec29a2b346f5f6b958c1955d08db0a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 256e964e556421db62dc8f52fdc6bc759c3a200a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47792169"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52536856"
 ---
 # <a name="sqlgetinfo-text-file-driver"></a>SQLGetInfo (driver file di testo)
 > [!NOTE]  
@@ -27,11 +27,11 @@ ms.locfileid: "47792169"
   
  **SQLGetInfo** supporta il tipo di informazioni SQL_FILE_USAGE. Il valore restituito è un numero intero a 16 bit che indica il modo in cui il driver considera direttamente i file in un'origine dati:  
   
--   SQL_FILE_NOT_SUPPORTED, Il driver non è un driver a un solo livello.  
+-   SQL_FILE_NOT_SUPPORTED - il driver non è un driver a un solo livello.  
   
--   SQL_FILE_TABLE, ovvero Un driver a un solo livello di gestione dei file in un'origine dati come tabelle.  
+-   SQL_FILE_TABLE - un driver a un solo livello di gestione dei file in un'origine dati come tabelle.  
   
--   SQL_FILE_QUALIFIER, ovvero Un driver a un solo livello considera i file in un'origine dati come un qualificatore.  
+-   SQL_FILE_QUALIFIER - un driver a un solo livello considera i file in un'origine dati come un qualificatore.  
   
  Il driver ODBC restituisce SQL_FILE_TABLE per Textdriver, poiché ogni file è una tabella.  
   

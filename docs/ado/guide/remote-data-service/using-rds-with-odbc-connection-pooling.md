@@ -13,12 +13,12 @@ ms.assetid: e8b912c1-da5b-4e85-a000-1e6648a94237
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a65472e57d5ecc15f0e7302aa2f0b7972e5e7c78
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 7fbc75772a48b4990ebbc31877a3f7a95b442087
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51559598"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52506348"
 ---
 # <a name="using-rds-with-odbc-connection-pooling"></a>Uso di RDS con pool di connessioni ODBC
 Se si usa un'origine dati ODBC, è possibile usare l'opzione in Internet Information Services (IIS) al pool per ottenere la gestione di ad alte prestazioni del carico di lavoro client. Pool di connessioni è un gestore di risorse per le connessioni, mantenere lo stato aperto per le connessioni utilizzate di frequente.  

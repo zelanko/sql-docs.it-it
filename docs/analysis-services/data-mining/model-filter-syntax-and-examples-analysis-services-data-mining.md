@@ -1,5 +1,5 @@
 ---
-title: Esempi e sintassi di filtro del modello (Analysis Services - Data Mining) | Documenti Microsoft
+title: Esempi e sintassi del filtro del modello (Analysis Services - Data Mining) | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 467d3efbe979bf2ea58c700409913ef0767457ab
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: ae34f06997d1647f6345c0cf77494aa8688a8616
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018678"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52393547"
 ---
 # <a name="model-filter-syntax-and-examples-analysis-services---data-mining"></a>Sintassi ed esempi di filtri dei modelli (Analysis Services – Data mining)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -96,7 +96,7 @@ ms.locfileid: "34018678"
   
  Se l'argomento *avPredicate*si applica a una colonna discretizzata, il valore usato nel filtro può essere qualsiasi valore in un bucket specifico.  
   
- In altre parole, la condizione non viene definita come `AgeDisc = ’25-35’`, ma viene invece calcolata e viene quindi usato un valore dall'intervallo.  
+ In altre parole, la condizione non viene definita come `AgeDisc = '25-35'`, ma viene invece calcolata e viene quindi usato un valore dall'intervallo.  
   
  Esempio:  `AgeDisc = 27`  indica qualsiasi valore nello stesso intervallo di 27, in questo caso 25-35.  
   
@@ -122,7 +122,7 @@ ms.locfileid: "34018678"
 ## <a name="examples-of-filters"></a>Esempi di filtri  
  Negli esempi seguenti viene illustrato l'utilizzo di filtri applicati a un modello di data mining. Se si crea l'espressione di filtro usando [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], nella finestra **Proprietà** e nel riquadro **Espressione** della finestra di dialogo del filtro viene visualizzata solo la stringa presente dopo le parole chiave WITH FILTER. La definizione della struttura di data mining viene inclusa per semplificare e comprendere il tipo di colonna e l'utilizzo.  
   
-###  <a name="bkmk_Ex1"></a> Esempio 1: Applicazione di filtri tipica a livello del case  
+###  <a name="bkmk_Ex1"></a> Esempio 1: Applicazione di filtri a livello del Case tipico  
  In questo esempio viene mostrato un semplice filtro che limita i case utilizzati nel modello ai clienti la cui occupazione è architetto e la cui età è superiore a 30 anni.  
   
 ```  
@@ -133,7 +133,7 @@ Age,
 Occupation,  
 MaritalStatus PREDICT  
 )  
-WITH FILTER (Age > 30 AND Occupation=’Architect’)  
+WITH FILTER (Age > 30 AND Occupation='Architect')  
 ```  
   
   
@@ -151,17 +151,17 @@ Occupation,
 MaritalStatus PREDICT  
 )  
 WITH DRILLTHROUGH,   
-FILTER (Age > 30 AND EXISTS (SELECT * FROM Products WHERE ProductName=’Milk’)  
+FILTER (Age > 30 AND EXISTS (SELECT * FROM Products WHERE ProductName='Milk')  
 )  
 ```  
   
   
-###  <a name="bkmk_Ex3"></a> Esempio 3: Applicazione di filtri a livello del case su più attributi delle tabelle nidificate  
+###  <a name="bkmk_Ex3"></a> Esempio 3: Applicazione di filtri a livello del case su più attributi della tabella nidificata  
  In questo esempio viene mostrato un filtro in tre parti: una condizione viene applicata alla tabella del case, un'altra a un attributo nella tabella nidificata e un'altra a un valore specifico in una delle colonne della tabella nidificata.  
   
  La prima condizione nel filtro, `Age > 30`, si applica a una colonna nella tabella del case. Le altre condizioni vengono applicate alla tabella nidificata.  
   
- La seconda condizione, `EXISTS (SELECT * FROM Products WHERE ProductName=’Milk’`, verifica la presenza di almeno un acquisto nella tabella annidata che include il latte. La terza condizione, `Quantity>=2`, indica che il cliente deve aver acquistato almeno due unità di latte in una singola transazione.  
+ La seconda condizione, `EXISTS (SELECT * FROM Products WHERE ProductName='Milk'`, verifica la presenza di almeno un acquisto nella tabella annidata che include il latte. La terza condizione, `Quantity>=2`, indica che il cliente deve aver acquistato almeno due unità di latte in una singola transazione.  
   
 ```  
 ALTER MINING STRUCTURE MyStructure  ADD MINING MODEL MyModel_3  
@@ -176,12 +176,12 @@ ProductName KEY,
 Quantity        
 )  
 )  
-FILTER (Age > 30 AND EXISTS (SELECT * FROM Products WHERE ProductName=’Milk’  AND Quantity >= 2)   
+FILTER (Age > 30 AND EXISTS (SELECT * FROM Products WHERE ProductName='Milk'  AND Quantity >= 2)   
 )  
 ```  
   
   
-###  <a name="bkmk_Ex4"></a> Esempio 4: Applicazione di filtri a livello del case in assenza di attributi delle tabelle nidificate  
+###  <a name="bkmk_Ex4"></a> Esempio 4: Applicazione di filtri a livello del case in assenza di attributi della tabella nidificata  
  In questo esempio viene illustrata la limitazione dei case ai clienti che non ha acquistato un articolo specifico, filtrando in base all'assenza di un attributo nella tabella nidificata. In questo esempio, viene eseguito il training del modello utilizzando i clienti di età superiore ai 30 anni che non hanno mai comprato latte.  
   
 ```  
@@ -196,11 +196,11 @@ Products PREDICT
 ProductName  
 )  
 )  
-FILTER (Age > 30 AND NOT EXISTS (SELECT * FROM Products WHERE ProductName=’Milk’) )  
+FILTER (Age > 30 AND NOT EXISTS (SELECT * FROM Products WHERE ProductName='Milk') )  
 ```  
   
   
-###  <a name="bkmk_Ex5"></a> Esempio 5: Applicazione di filtri su più valori delle tabelle nidificate  
+###  <a name="bkmk_Ex5"></a> Esempio 5: Applicazione di filtri su più valori di tabella nidificata  
  Lo scopo dell'esempio è mostrare l'applicazione del filtro sulla tabella nidificata. Il filtro della tabella nidificata viene applicato dopo il filtro del case e si limita solo alle righe della tabella nidificata.  
   
  Questo modello può contenere più case con tabelle nidificate vuote perché EXISTS non è specificato.  
@@ -216,13 +216,13 @@ Products PREDICT
 (  
 ProductName KEY,  
 Quantity        
-) WITH FILTER(ProductName=’Milk’ OR ProductName=’bottled water’)  
+) WITH FILTER(ProductName='Milk' OR ProductName='bottled water')  
 )  
 WITH DRILLTHROUGH  
 ```  
   
   
-###  <a name="bkmk_Ex6"></a> Esempio 6: Applicazione di filtri in base agli attributi delle tabelle nidificate e alla clausola EXISTS  
+###  <a name="bkmk_Ex6"></a> Esempio 6: Applicazione di filtri su attributi delle tabelle nidificate e alla clausola EXISTS  
  In questo esempio, il filtro nella tabella nidificata limita le righe a quelle che contengono latte o acqua imbottigliata. Quindi, i case nel modello vengono limitati tramite un'istruzione **EXISTS** . Ciò assicura che la tabella nidificata non è vuota.  
   
 ```  
@@ -236,7 +236,7 @@ Products PREDICT
 (  
 ProductName KEY,  
 Quantity        
-) WITH FILTER(ProductName=’Milk’ OR ProductName=’bottled water’)  
+) WITH FILTER(ProductName='Milk' OR ProductName='bottled water')  
 )  
 FILTER (EXISTS (Products))  
 ```  
@@ -307,7 +307,7 @@ FILTER (EXISTS (Products))
   
   
 ## <a name="see-also"></a>Vedere anche  
- [Filtri per i modelli di Data Mining & #40; Analysis Services - Data Mining & #41;](../../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)   
- [Test e convalida & #40; Data Mining & #41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
+ [Filtri per i modelli di data mining &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)   
+ [Test e convalida &#40;Data mining&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
   
   

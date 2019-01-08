@@ -14,12 +14,12 @@ ms.assetid: 453b19a1-739a-4b67-aeea-2069b52204e1
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 72089aad9a38c488b36fdb65cc94060d70c6482c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f89a84f8e003063883d711f8908ac619d50e93df
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48104761"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52398672"
 ---
 # <a name="set-processing-options-reporting-services-in-sharepoint-integrated-mode"></a>Impostare le opzioni di elaborazione (Reporting Services in modalità integrata SharePoint)
   È possibile impostare le opzioni di elaborazione di un report [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] per determinare il momento in cui deve avvenire l'elaborazione dei dati. È inoltre possibile impostare un valore di timeout per l'elaborazione del report e opzioni che determinano se attivare o meno la cronologia del report per il report corrente.  
@@ -31,7 +31,7 @@ ms.locfileid: "48104761"
 -   La cronologia di un report è costituita dalla raccolta delle copie di un report eseguite in precedenza. È pertanto possibile usare la cronologia di un report per mantenere una registrazione dei diversi risultati dell'esecuzione del report ottenuti durante un determinato periodo di tempo. Non è consigliabile usare la cronologia del report per i report contenenti informazioni riservate e personali. Per questo motivo, la cronologia del report può essere creata solo per i report che eseguono query su origini dati che utilizzano un unico set di credenziali (credenziali archiviate o credenziali utilizzate per l'esecuzione automatica dei report), che sono disponibili a tutti gli utenti che eseguono il report.  
   
     > [!NOTE]  
-    >  L'integrazione di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] con SharePoint utilizza le caratteristiche di gestione contenuto di estrazione e archiviazione di SharePoint per salvare gli aggiornamenti nei tipi di contenuto di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], tra cui la creazione di snapshot dei report. Pertanto se è stato abilitato il controllo delle versioni su una raccolta documenti, verrà visualizzata la versione del report aggiornata quando viene creato un nuovo snapshot di cronologia del report. Si tratta di un effetto collaterale dell'aggiornamento di snapshot. L'aggiornamento di uno snapshot determina la modifica della proprietà LastExecution del report con una conseguente modifica della versione del report.  
+    >  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] con SharePoint utilizza le caratteristiche di gestione contenuto di estrazione e archiviazione di SharePoint per salvare gli aggiornamenti nei tipi di contenuto di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , tra cui la creazione di snapshot dei report. Pertanto se è stato abilitato il controllo delle versioni su una raccolta documenti, verrà visualizzata la versione del report aggiornata quando viene creato un nuovo snapshot di cronologia del report. Si tratta di un effetto collaterale dell'aggiornamento di snapshot. L'aggiornamento di uno snapshot determina la modifica della proprietà LastExecution del report con una conseguente modifica della versione del report.  
   
 -   È possibile specificare valori di timeout per limitare l'utilizzo delle risorse del sistema.  
   
@@ -103,11 +103,11 @@ ms.locfileid: "48104761"
   
 ##  <a name="bkmk_set_database_timeout"></a> Impostare il timeout del database  
   
-1.  Usare Windows PowerShell per impostare il timeout del database di un server di report di SharePoint. Per altre informazioni, vedere la "ottenere e impostare le proprietà del Database dell'applicazione Reporting Service" sezione dei [cmdlet di PowerShell per Reporting Services SharePoint Mode](../../2014/reporting-services/powershell-cmdlets-for-reporting-services-sharepoint-mode.md).  
+1.  Usare Windows PowerShell per impostare il timeout del database di un server di report di SharePoint. Per altre informazioni, vedere la sezione "Ottenere e impostare le proprietà del database di un'applicazione Reporting Service" dell'argomento [Cmdlet di PowerShell per la modalità SharePoint di Reporting Services](../../2014/reporting-services/powershell-cmdlets-for-reporting-services-sharepoint-mode.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Impostare le proprietà di elaborazione dei Report](report-server/set-report-processing-properties.md)   
+ [Impostare proprietà di elaborazione dei report](report-server/set-report-processing-properties.md)   
  [Memorizzazione dei report nella cache &#40;SSRS&#41;](report-server/caching-reports-ssrs.md)   
- [Impostazione dei valori di timeout per l'elaborazione di Report e set di dati condiviso &#40;SSRS&#41;](report-server/setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md)  
+ [Impostazione dei valori di timeout per l'elaborazione di report e di set di dati condivisi &#40;SSRS&#41;](report-server/setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md)  
   
   

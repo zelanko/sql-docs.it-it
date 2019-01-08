@@ -16,12 +16,12 @@ ms.assetid: c729d9b3-8fda-405e-9497-52b2d7493eae
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: cdf75e8911aaf4856092de273b332b3f4fb27aee
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5c9c148995dfe83d24798c31900874e4fe3e80df
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48225791"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52405366"
 ---
 # <a name="model-filter-syntax-and-examples-analysis-services---data-mining"></a>Sintassi ed esempi di filtri dei modelli (Analysis Services – Data mining)
   In questa sezione vengono fornite informazioni dettagliate sulla sintassi dei filtri dei modelli, insieme alle espressioni di esempio.  
@@ -31,7 +31,7 @@ ms.locfileid: "48225791"
 ##  <a name="bkmk_Syntax"></a> Filter Syntax  
  Le espressioni di filtro in genere sono equivalenti al contenuto di una clausola WHERE. È possibile connettere più condizioni utilizzando gli operatori logici `AND`, `OR` e `NOT`.  
   
- Nelle tabelle nidificate, è anche possibile usare la `EXISTS` e `NOT EXISTS` operatori. Una condizione `EXISTS` restituisce `true` se la sottoquery restituisce almeno una riga. Ciò risulta utile nei case in cui si desidera limitare il modello ai case che contengono un determinato valore nella tabella nidificata: ad esempio, i clienti che hanno acquistato almeno una volta un articolo.  
+ Nelle tabelle nidificate è anche possibile utilizzare gli operatori `EXISTS` e `NOT EXISTS` Una condizione `EXISTS` restituisce `true` se la sottoquery restituisce almeno una riga. Ciò risulta utile nei case in cui si desidera limitare il modello ai case che contengono un determinato valore nella tabella nidificata: ad esempio, i clienti che hanno acquistato almeno una volta un articolo.  
   
  Una condizione `NOT EXISTS` restituisce `true` se la condizione specifica nella sottoquery non esiste. Ad esempio, quando si desidera limitare il modello ai clienti che non hanno mai acquistato un determinato articolo.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "48225791"
 -   **\<=** (minore o uguale a)  
   
 > [!NOTE]  
->  Indipendentemente dal tipo di dati, questi operatori non possono essere applicati a una colonna che dispone del tipo `Discrete`, `Discretized`, o `Key`.  
+>  Indipendentemente dal tipo di dati, questi operatori non possono essere applicati a una colonna di tipo `Discrete`, `Discretized` o `Key`.  
   
  Un'espressione che utilizza alcuni degli operatori seguenti può essere applicata a una colonna continua, discreta, discretizzata o chiave:  
   
@@ -86,7 +86,7 @@ ms.locfileid: "48225791"
   
  Se l'argomento *avPredicate*si applica a una colonna discretizzata, il valore usato nel filtro può essere qualsiasi valore in un bucket specifico.  
   
- In altre parole, la condizione non viene definita come `AgeDisc = ’25-35’`, ma viene invece calcolata e viene quindi usato un valore dall'intervallo.  
+ In altre parole, la condizione non viene definita come `AgeDisc = '25-35'`, ma viene invece calcolata e viene quindi usato un valore dall'intervallo.  
   
  Esempio:  `AgeDisc = 27`  indica qualsiasi valore nello stesso intervallo di 27, in questo caso 25-35.  
   
@@ -112,7 +112,7 @@ ms.locfileid: "48225791"
 ## <a name="examples-of-filters"></a>Esempi di filtri  
  Negli esempi seguenti viene illustrato l'utilizzo di filtri applicati a un modello di data mining. Se si crea l'espressione di filtro usando [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], nella finestra **Proprietà** e nel riquadro **Espressione** della finestra di dialogo del filtro viene visualizzata solo la stringa presente dopo le parole chiave WITH FILTER. La definizione della struttura di data mining viene inclusa per semplificare e comprendere il tipo di colonna e l'utilizzo.  
   
-###  <a name="bkmk_Ex1"></a> Esempio 1: Applicazione di filtri tipica a livello del case  
+###  <a name="bkmk_Ex1"></a> Esempio 1: Applicazione di filtri a livello del Case tipico  
  In questo esempio viene mostrato un semplice filtro che limita i case utilizzati nel modello ai clienti la cui occupazione è architetto e la cui età è superiore a 30 anni.  
   
 ```  
@@ -123,7 +123,7 @@ Age,
 Occupation,  
 MaritalStatus PREDICT  
 )  
-WITH FILTER (Age > 30 AND Occupation=’Architect’)  
+WITH FILTER (Age > 30 AND Occupation='Architect')  
 ```  
   
 
@@ -142,18 +142,18 @@ Occupation,
 MaritalStatus PREDICT  
 )  
 WITH DRILLTHROUGH,   
-FILTER (Age > 30 AND EXISTS (SELECT * FROM Products WHERE ProductName=’Milk’)  
+FILTER (Age > 30 AND EXISTS (SELECT * FROM Products WHERE ProductName='Milk')  
 )  
 ```  
   
  
   
-###  <a name="bkmk_Ex3"></a> Esempio 3: Applicazione di filtri a livello del case su più attributi delle tabelle nidificate  
+###  <a name="bkmk_Ex3"></a> Esempio 3: Applicazione di filtri a livello del case su più attributi della tabella nidificata  
  In questo esempio viene mostrato un filtro in tre parti: una condizione viene applicata alla tabella del case, un'altra a un attributo nella tabella nidificata e un'altra a un valore specifico in una delle colonne della tabella nidificata.  
   
  La prima condizione nel filtro, `Age > 30`, si applica a una colonna nella tabella del case. Le altre condizioni vengono applicate alla tabella nidificata.  
   
- La seconda condizione, `EXISTS (SELECT * FROM Products WHERE ProductName=’Milk’`, verifica la presenza di almeno un acquisto nella tabella annidata che include il latte. La terza condizione, `Quantity>=2`, indica che il cliente deve aver acquistato almeno due unità di latte in una singola transazione.  
+ La seconda condizione, `EXISTS (SELECT * FROM Products WHERE ProductName='Milk'`, verifica la presenza di almeno un acquisto nella tabella annidata che include il latte. La terza condizione, `Quantity>=2`, indica che il cliente deve aver acquistato almeno due unità di latte in una singola transazione.  
   
 ```  
 ALTER MINING STRUCTURE MyStructure  ADD MINING MODEL MyModel_3  
@@ -168,13 +168,13 @@ ProductName KEY,
 Quantity        
 )  
 )  
-FILTER (Age > 30 AND EXISTS (SELECT * FROM Products WHERE ProductName=’Milk’  AND Quantity >= 2)   
+FILTER (Age > 30 AND EXISTS (SELECT * FROM Products WHERE ProductName='Milk'  AND Quantity >= 2)   
 )  
 ```  
   
 
   
-###  <a name="bkmk_Ex4"></a> Esempio 4: Applicazione di filtri a livello del case in assenza di attributi delle tabelle nidificate  
+###  <a name="bkmk_Ex4"></a> Esempio 4: Applicazione di filtri a livello del case in assenza di attributi della tabella nidificata  
  In questo esempio viene illustrata la limitazione dei case ai clienti che non ha acquistato un articolo specifico, filtrando in base all'assenza di un attributo nella tabella nidificata. In questo esempio, viene eseguito il training del modello utilizzando i clienti di età superiore ai 30 anni che non hanno mai comprato latte.  
   
 ```  
@@ -189,12 +189,12 @@ Products PREDICT
 ProductName  
 )  
 )  
-FILTER (Age > 30 AND NOT EXISTS (SELECT * FROM Products WHERE ProductName=’Milk’) )  
+FILTER (Age > 30 AND NOT EXISTS (SELECT * FROM Products WHERE ProductName='Milk') )  
 ```  
   
 
   
-###  <a name="bkmk_Ex5"></a> Esempio 5: Applicazione di filtri su più valori delle tabelle nidificate  
+###  <a name="bkmk_Ex5"></a> Esempio 5: Applicazione di filtri su più valori di tabella nidificata  
  Lo scopo dell'esempio è mostrare l'applicazione del filtro sulla tabella nidificata. Il filtro della tabella nidificata viene applicato dopo il filtro del case e si limita solo alle righe della tabella nidificata.  
   
  Questo modello può contenere più case con tabelle nidificate vuote perché EXISTS non è specificato.  
@@ -210,14 +210,14 @@ Products PREDICT
 (  
 ProductName KEY,  
 Quantity        
-) WITH FILTER(ProductName=’Milk’ OR ProductName=’bottled water’)  
+) WITH FILTER(ProductName='Milk' OR ProductName='bottled water')  
 )  
 WITH DRILLTHROUGH  
 ```  
   
 
   
-###  <a name="bkmk_Ex6"></a> Esempio 6: Applicazione di filtri in base agli attributi delle tabelle nidificate e alla clausola EXISTS  
+###  <a name="bkmk_Ex6"></a> Esempio 6: Applicazione di filtri su attributi delle tabelle nidificate e alla clausola EXISTS  
  In questo esempio, il filtro nella tabella nidificata limita le righe a quelle che contengono latte o acqua imbottigliata. Quindi, i case nel modello vengono limitati utilizzando un'istruzione `EXISTS`. Ciò assicura che la tabella nidificata non è vuota.  
   
 ```  
@@ -231,7 +231,7 @@ Products PREDICT
 (  
 ProductName KEY,  
 Quantity        
-) WITH FILTER(ProductName=’Milk’ OR ProductName=’bottled water’)  
+) WITH FILTER(ProductName='Milk' OR ProductName='bottled water')  
 )  
 FILTER (EXISTS (Products))  
 ```  
@@ -284,7 +284,7 @@ FILTER (EXISTS (Products))
 ###  <a name="bkmk_Ex8"></a> Esempio 8: Filtri sulle date  
  È possibile filtrare le colonne di input in base alle date, come per qualsiasi altro tipo di dati. Le date contenute in una colonna di tipo data/ora sono valori continui; è quindi possibile specificare un intervallo di date utilizzando operatori quali maggiore di (>) o minore di (<). Se l'origine dati non rappresenta le date come tipo di dati Continuous, ma come valori discreti o di testo, non sarà possibile filtrare in base a un intervallo di date, ma sarà necessario specificare singoli valori discreti.  
   
- Tuttavia, non è possibile creare un filtro sulla colonna delle date in un modello Time Series se la colonna delle date utilizzata per il filtro è anche la colonna chiave per il modello. Questo accade perché, nei modelli time series e sequence clustering, la colonna delle date potrebbe essere gestita come tipo `KeyTime` o `KeySequence`.  
+ Tuttavia, non è possibile creare un filtro sulla colonna delle date in un modello Time Series se la colonna delle date utilizzata per il filtro è anche la colonna chiave per il modello. Ciò accade perché nei modelli Time Series e Sequence Clustering la colonna delle date potrebbe essere gestita come tipo `KeyTime` o `KeySequence`.  
   
  Quando è necessario applicare un filtro alle date continue in un modello Time Series, è possibile creare una copia della colonna nella struttura di data mining e filtrare il modello nella nuova colonna.  
   
@@ -293,9 +293,9 @@ FILTER (EXISTS (Products))
  `=[DateCopy] > '12:31:2003:00:00:00'`  
   
 > [!NOTE]  
->  L'aggiunta di una qualsiasi colonna al modello può influire sui risultati. Pertanto, se non si desidera che la colonna venga utilizzata nel calcolo della serie, sarà necessario aggiungere la colonna solo alla struttura di data mining e non al modello. È anche possibile impostare il flag del modello nella colonna `PredictOnly` o a `Ignore`. Per altre informazioni, vedere [Flag di modellazione &#40;data mining&#41;](modeling-flags-data-mining.md).  
+>  L'aggiunta di una qualsiasi colonna al modello può influire sui risultati. Pertanto, se non si desidera che la colonna venga utilizzata nel calcolo della serie, sarà necessario aggiungere la colonna solo alla struttura di data mining e non al modello. È inoltre possibile impostare il flag del modello della colonna su `PredictOnly` o `Ignore`. Per altre informazioni, vedere [Flag di modellazione &#40;data mining&#41;](modeling-flags-data-mining.md).  
   
- Per altri tipi di modello, è possibile utilizzare le date come criteri di input o criteri di filtro come si farebbe per qualsiasi altra colonna. Tuttavia, se è necessario usare uno specifico livello di granularità che non è supportata da un `Continuous` tipo di dati, può creare un valore derivato nell'origine dati usando le espressioni per estrarre l'unità da usare filtri e analisi.  
+ Per altri tipi di modello, è possibile utilizzare le date come criteri di input o criteri di filtro come si farebbe per qualsiasi altra colonna. Tuttavia, se è necessario utilizzare un livello di granularità specifico non supportato da un tipo di dati `Continuous`, sarà possibile creare un valore derivato nell'origine dati utilizzando delle espressioni per estrarre l'unità da utilizzare per filtri e analisi.  
   
 > [!WARNING]  
 >  Quando si specificano le date come criteri di filtro, è necessario usare il formato seguente, indipendentemente dal formato di data del sistema operativo attualmente in uso: `mm/dd/yyyy`. Qualsiasi altro formato restituirà un errore.  
@@ -305,7 +305,7 @@ FILTER (EXISTS (Products))
  
   
 ## <a name="see-also"></a>Vedere anche  
- [Filtri per i modelli di Data Mining &#40;Analysis Services - Data Mining&#41;](mining-models-analysis-services-data-mining.md)   
- [Test e convalida &#40;Data Mining&#41;](testing-and-validation-data-mining.md)  
+ [Filtri per i modelli di data mining &#40;Analysis Services - Data mining&#41;](mining-models-analysis-services-data-mining.md)   
+ [Test e convalida &#40;Data mining&#41;](testing-and-validation-data-mining.md)  
   
   

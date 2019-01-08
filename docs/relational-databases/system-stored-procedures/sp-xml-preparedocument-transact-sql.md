@@ -18,15 +18,15 @@ ms.assetid: 95f41cff-c52a-4182-8ac6-bf49369d214c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c9b955f59cb1c7813be28c7edd46b32d0c8e44b1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e89ebe73f7bee6f44df353afca515aca4cbbdcf2
+ms.sourcegitcommit: f62f70298651d6223fa5d215b6a7a0d2ffecbd0d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47735469"
+ms.lasthandoff: 11/19/2018
+ms.locfileid: "51947622"
 ---
 # <a name="spxmlpreparedocument-transact-sql"></a>sp_xml_preparedocument (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Legge il testo in formato XML specificato come input, ne esegue l'analisi mediante il parser MSXML (Msxmlsql.dll) e restituisce il documento analizzato in un formato pronto per l'uso. Il documento analizzato corrisponde a una rappresentazione ad albero dei vari nodi (elementi, attributi, testo, commenti e così via) del documento XML.  
   
@@ -108,7 +108,7 @@ EXEC sp_xml_preparedocument @hdoc OUTPUT, @doc;
 exec sp_xml_removedocument @hdoc;  
 ```  
   
-### <a name="b-preparing-an-internal-representation-for-a-well-formed-xml-document-with-a-dtd"></a>B. Preparazione di una rappresentazione interna di un documento XML con DTD  
+### <a name="b-preparing-an-internal-representation-for-a-well-formed-xml-document-with-a-dtd"></a>b. Preparazione di una rappresentazione interna di un documento XML con DTD  
  Nell'esempio seguente viene restituito un handle per la nuova rappresentazione interna del documento XML specificato come input. Il documento caricato viene convalidato in base al valore DTD incluso nel documento. Nella chiamata a `sp_xml_preparedocument` viene utilizzato il mapping predefinito per i prefissi degli spazi dei nomi.  
   
 ```  

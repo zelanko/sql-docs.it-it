@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 08/29/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - bidirectional replication
@@ -17,12 +16,12 @@ ms.assetid: 23e7e8c1-002f-4e69-8c99-d63e4100de64
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 69aea0ec22ec03f05f05f10998e955d7f19bffd7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9513e58afc764fe8df5719ad03ac575a2632da6b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48216161"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52770083"
 ---
 # <a name="peer-to-peer-transactional-replication"></a>Replica transazionale peer-to-peer
   La replica peer-to-peer rappresenta una soluzione per la scalabilità orizzontale ad elevata disponibilità in quanto consente di gestire copie dei dati in più istanze del server, definite *nodi*. Compilata sulle basi della replica transazionale, la replica peer-to-peer propaga quasi in tempo reale modifiche coerenti dal punto di vista transazionale. In tal modo le applicazioni che richiedono la scalabilità orizzontale delle operazioni di lettura possono distribuire le operazioni di lettura dei client in più nodi. Perché i dati vengono gestiti nei nodi quasi in tempo reale, la replica peer-to-peer offre quella funzionalità di ridondanza dei dati che consente di aumentare la disponibilità dei dati.  
@@ -73,7 +72,7 @@ ms.locfileid: "48216161"
   
  Ogni sede dispone di un database e di un server applicazioni, che vengono utilizzati dai tecnici del supporto tecnico per l'immissione e l'aggiornamento delle informazioni sulle chiamate dei clienti. La topologia viene partizionata in base al tempo, pertanto gli aggiornamenti vengono eseguiti solo nel nodo in uso e successivamente vengono distribuiti agli altri database coinvolti. Questa topologia offre i vantaggi seguenti:  
   
--   Indipendenza senza isolamento: ogni ufficio può inserire, aggiornare o eliminare dati in modo indipendente e, al contempo, condividere i dati poiché essi vengono replicati in tutti gli altri database coinvolti.  
+-   Indipendenza senza isolamento: Ogni ufficio può inserire, aggiornare, o eliminare i dati in modo indipendente ma può anche condividere i dati poiché essi vengono replicati in tutti gli altri database coinvolti.  
   
 -   Maggiore disponibilità in caso di errore o manutenzione in uno o più dei database coinvolti.  
   
