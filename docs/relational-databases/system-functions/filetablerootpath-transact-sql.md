@@ -18,12 +18,12 @@ ms.assetid: 0cba908a-c85c-4b09-b16a-df1cb333c629
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: c74a17d9a3781948727f0eb28f4729967728e033
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b693f3318d3b5a30e10c267b52569c0b238eaca3
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47732929"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52407599"
 ---
 # <a name="filetablerootpath-transact-sql"></a>FileTableRootPath (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "47732929"
   
 ```  
   
-FileTableRootPath ( [ ‘[schema_name.]FileTable_name’ ], @option )  
+FileTableRootPath ( [ '[schema_name.]FileTable_name' ], @option )  
 ```  
   
 ## <a name="arguments"></a>Argomenti  
@@ -44,9 +44,9 @@ FileTableRootPath ( [ ‘[schema_name.]FileTable_name’ ], @option )
  *@option*  
  Espressione Integer che definisce la formattazione del componente server del percorso. *@option* Può avere uno dei valori seguenti:  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
-|**0**|Restituisce il nome del server convertito in formato NetBIOS, ad esempio:<br /><br /> `\\SERVERNAME\MSSQLSERVER\MyDocumentDatabase`<br /><br /> Si tratta del valore predefinito.|  
+|**0**|Restituisce il nome del server convertito in formato NetBIOS, ad esempio:<br /><br /> `\\SERVERNAME\MSSQLSERVER\MyDocumentDatabase`<br /><br /> Rappresenta il valore predefinito.|  
 |**1**|Restituisce il nome del server senza conversione, ad esempio:<br /><br /> `\\ServerName\MSSQLSERVER\MyDocumentDatabase`|  
 |**2**|Restituisce il percorso completo del server, ad esempio:<br /><br /> `\\ServerName.MyDomain.com\MSSQLSERVER\MyDocumentDatabase`|  
   
@@ -78,7 +78,7 @@ SELECT @root = FileTableRootPath();
   
 SELECT @fullPath = @root + file_stream.GetFileNamespacePath()  
 FROM DocumentStore  
-WHERE Name = N’document.docx’;  
+WHERE Name = N'document.docx';  
 ```  
   
 ## <a name="security"></a>Sicurezza  
@@ -95,13 +95,13 @@ WHERE Name = N’document.docx’;
   
 ```  
 USE MyDocumentDatabase;  
--- returns “\\MYSERVER\MSSQLSERVER\MyDocumentDatabase”  
+-- returns "\\MYSERVER\MSSQLSERVER\MyDocumentDatabase"  
 SELECT FileTableRootPath();  
   
--- returns “\\MYSERVER\MSSQLSERVER\MyDocumentDatabase\MyFileTable”  
+-- returns "\\MYSERVER\MSSQLSERVER\MyDocumentDatabase\MyFileTable"  
 SELECT FileTableRootPath(N'dbo.MyFileTable');  
   
--- returns “\\MYSERVER\MSSQLSERVER\MyDocumentDatabase\MyFileTable”  
+-- returns "\\MYSERVER\MSSQLSERVER\MyDocumentDatabase\MyFileTable"  
 SELECT FileTableRootPath(N'MyFileTable');  
 ```  
   

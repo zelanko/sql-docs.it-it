@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: b74edba7-d0a2-456b-9673-b1e02bcdea43
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 8ce9dd246ed810f1b7e04f22b43f9dec34f26ab1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f55a722f54b6697aacf7fea87e436d33a5479afb
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48050038"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52797962"
 ---
 # <a name="upgrade-database-wizard-master-data-services-configuration-manager"></a>Aggiornamento guidato database (Gestione configurazione Master Data Services)
   Usare l' **Aggiornamento guidato database** per aggiornare un database [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .  
@@ -27,7 +26,7 @@ ms.locfileid: "48050038"
 ## <a name="upgrade-review"></a>Controllo aggiornamento  
  Consente di controllare le informazioni specificate su questa pagina. Se corrette, fare clic su **Avanti** per aggiornare il database specificato.  
   
-|Nome del controllo|Description|  
+|Nome del controllo|Descrizione|  
 |------------------|-----------------|  
 |**Istanza di SQL Server**|Nome dell'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../includes/ssde-md.md)] attualmente selezionata.|  
 |**Database Master Data Services**|Nome del database [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] attualmente selezionato.|  

@@ -11,12 +11,12 @@ ms.assetid: c7e9db15-89f2-4d4d-8860-1e64c5821c4d
 author: heidisteen
 ms.author: heidist
 manager: craigg
-ms.openlocfilehash: 77a3e61d36ce9661a9b01095c868c7d54de81f0a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 33cc1b337666e1d628ae285a7df0ba43cc4fe140
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48130561"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53352840"
 ---
 # <a name="setup-role"></a>Impostazione ruolo
   Utilizzare questa pagina per specificare se utilizzare la pagina Selezione funzionalità per selezionare le funzionalità singole oppure eseguire l'installazione tramite un ruolo di installazione.  
@@ -32,20 +32,20 @@ ms.locfileid: "48130561"
   
  Se necessario, è possibile aggiungere un'istanza del motore di database relazionale all'installazione per ospitare i database in una farm di SharePoint. Se la farm è già configurata, è possibile ignorare questa opzione.  
   
- Al termine dell'installazione, è necessario configurare il software utilizzando uno degli approcci seguenti: strumento di configurazione PowerPivot, cmdlet di PowerShell o Amministrazione centrale SharePoint 2010. A differenza delle versioni precedenti, durante l'installazione non viene più eseguita alcuna attività di configurazione per un'installazione di PowerPivot.  
+ Al termine dell'installazione, è necessario configurare il software utilizzando uno degli approcci seguenti: Strumento di configurazione PowerPivot, cmdlet di PowerShell o amministrazione centrale SharePoint 2010. A differenza delle versioni precedenti, durante l'installazione non viene più eseguita alcuna attività di configurazione per un'installazione di PowerPivot.  
   
  In un'installazione basata su ruoli non è incluso [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerPivot per l'applicazione client di Excel. L'applicazione client viene installata separatamente.  
   
  **Tutte le funzionalità con valori predefiniti**  
  Scegliere questo ruolo per installare tutte le funzionalità disponibili per questa versione. Si noti che PowerPivot per SharePoint è escluso da questo ruolo. È necessario utilizzare il ruolo di installazione PowerPivot per SharePoint per installare tale funzionalità.  
   
- Il [!INCLUDE[ssDE](../../includes/ssde-md.md)] è configurato per l'avvio tramite l'account **NT AUTHORITY\NETWORK SERVICE**. Per l'utente corrente viene eseguito il provisioning come membro del ruolo **sysadmin** di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. È possibile eseguire l'override dei valori impostati con questa opzione specificando i parametri della riga di comando aggiuntivi.  
+ Il [!INCLUDE[ssDE](../../includes/ssde-md.md)] è configurato per l'avvio tramite l'account **NT AUTHORITY\NETWORK SERVICE** . Per l'utente corrente viene eseguito il provisioning come membro del ruolo **sysadmin** di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. È possibile eseguire l'override dei valori impostati con questa opzione specificando i parametri della riga di comando aggiuntivi.  
   
  Quando il sistema operativo non è un controller di dominio, per impostazione predefinita nel motore di database e in Reporting Services verrà utilizzato l'account NTAUTHORITY\NETWORK SERVICE, in Integration Services l'account NTAUTHORITY\NETWORK SERVICE e nell'Utilità di avvio del daemon filtri full-text di SQL l'account NTAUTHORITY\LOCAL SERVICE.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Installazione di PowerPivot per SharePoint](http://go.microsoft.com/fwlink/?LinkId=206906)   
- [Requisiti hardware e Software (PowerPivot per SharePoint](http://go.microsoft.com/fwlink/?LinkId=216823)   
+ [Installazione di PowerPivot per SharePoint](https://go.microsoft.com/fwlink/?LinkId=206906)   
+ [Requisiti hardware e Software (PowerPivot per SharePoint](https://go.microsoft.com/fwlink/?LinkId=216823)   
  [Selezione funzionalità](../../../2014/sql-server/install/feature-selection.md)  
   
   

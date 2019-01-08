@@ -11,12 +11,12 @@ ms.assetid: 822d414b-4a39-473f-80c3-53476e30655a
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 01142090276214f28e523dfc1c969747d5de60a6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d5311f08e9ec6b31fd0eabc1395baa31319eff64
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48222241"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52412208"
 ---
 # <a name="testing-accuracy-with-lift-charts-basic-data-mining-tutorial"></a>Test dell'accuratezza con i grafici di accuratezza (Esercitazione di base sul data mining)
   Nel **Mining grafico di accuratezza** scheda Progettazione modelli di Data Mining, è possibile calcolare come ognuno dei modelli di esegue le stime e confrontare i risultati di ogni modello direttamente con i risultati degli altri modelli. Questo metodo di confronto è noto come un *grafico di accuratezza*. In genere, l'accuratezza predittiva di un modello di data mining è misurata dall'accuratezza stessa del modello o dall'accuratezza della classificazione. Per questa esercitazione si utilizzerà solo il grafico di accuratezza.  
@@ -47,7 +47,7 @@ ms.locfileid: "48222241"
   
      Per utilizzare una colonna come le **nome colonna stimabile** in un grafico di accuratezza, le colonne devono avere il tipo di utilizzo `Predict` o `Predict Only`. Inoltre, il tipo di contenuto della colonna di destinazione deve essere `Discrete` o `Discretized`. In altre parole, non è possibile utilizzare grafici di accuratezza per misurare l'accuratezza su risultati numerici continui.  
   
--   Se si desidera misurare l'accuratezza generale del modello, oppure l'accuratezza del modello nella stima di un valore specifico (ad esempio [Bike Buyer] = "Sì")  
+-   Si desidera misurare l'accuratezza del modello generale, o l'accuratezza alla stima di un determinato valore (ad esempio [Bike Buyer] = "Sì")  
   
 #### <a name="to-generate-the-lift-chart"></a>Per generare il grafico di accuratezza  
   
@@ -83,7 +83,7 @@ ms.locfileid: "48222241"
  [Test di un modello filtrato &#40;esercitazione di base di Data Mining&#41;](../../2014/tutorials/testing-a-filtered-model-basic-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Grafico di accuratezza &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/data-mining/lift-chart-analysis-services-data-mining.md)   
+ [Grafico di accuratezza &#40;Analysis Services - Data mining&#41;](../../2014/analysis-services/data-mining/lift-chart-analysis-services-data-mining.md)   
  [Scheda grafico di accuratezza &#40;visualizzazione Grafico accuratezza di Data Mining&#41;](../../2014/analysis-services/lift-chart-tab-mining-accuracy-chart-view.md)  
   
   

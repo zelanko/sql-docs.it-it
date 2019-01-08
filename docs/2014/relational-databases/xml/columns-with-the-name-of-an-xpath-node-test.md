@@ -13,15 +13,15 @@ ms.assetid: b48adccd-3b6b-486a-b326-20f57170186f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c6d2ed88feef80027a7c52c89b3fe891d8f589c3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b2ac7154d80a33907cb27bf191dcb41bca866894
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48096141"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52783923"
 ---
 # <a name="columns-with-the-name-of-an-xpath-node-test"></a>Colonne con il nome di un test di nodo XPath
-  Se il nome della colonna è uno dei test di nodo XPath, il mapping del contenuto viene eseguito come illustrato nella tabella seguente. Quando il nome della colonna è un test di nodo XPath, il mapping viene eseguito tra il contenuto e il nodo corrispondente. Se il tipo SQL della colonna è `xml`, viene restituito un errore.  
+  Se il nome della colonna è uno dei test di nodo XPath, il mapping del contenuto viene eseguito come illustrato nella tabella seguente. Quando il nome della colonna è un test di nodo XPath, il mapping viene eseguito tra il contenuto e il nodo corrispondente. Se il tipo SQL della colonna è `xml`, viene generato un errore.  
   
 |Nome colonna|Comportamento|  
 |-----------------|--------------|  
@@ -57,7 +57,7 @@ WHERE  E.BusinessEntityID=1
 FOR XML PATH;  
 ```  
   
- Risultato:  
+ Questo è il risultato:  
   
  `<row EmpID="1">`  
   
@@ -71,7 +71,7 @@ FOR XML PATH;
   
  `<First>Ken</First>`  
   
- `<Last>Sánchez</Last>`  
+ `<Last>S??nchez</Last>`  
   
  `</EmpName>`  
   

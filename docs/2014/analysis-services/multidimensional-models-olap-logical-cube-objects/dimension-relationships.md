@@ -22,12 +22,12 @@ ms.assetid: de54c059-cb0f-4f66-bd70-8605af05ec4f
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 269cc4c9c8459154fd422ed7896304cc3da27db3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 91cba3e301a98c905b157959094a7075b0e3357d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48164521"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512767"
 ---
 # <a name="dimension-relationships"></a>Relazioni tra dimensioni
   L'utilizzo delle dimensioni definisce le relazioni tra le dimensioni e i gruppi di misure di un cubo. Una dimensione di un cubo è un'istanza di una dimensione del database utilizzata in un cubo specifico. Spesso un cubo contiene dimensioni che non sono correlate direttamente a un gruppo di misure, ma che possono essere correlate indirettamente al gruppo di misure tramite un'altra dimensione o un altro gruppo di misure. Quando si aggiunge un gruppo di misure o dimensioni di database a un cubo [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] tenta di determinare l'utilizzo delle dimensioni esaminando le relazioni tra le tabelle delle dimensioni e tabelle dei fatti nella vista origine dati del cubo ed esaminando le relazioni tra attributi nelle dimensioni. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] consente di configurare automaticamente le impostazioni delle dimensioni per le relazioni che è possibile rilevare.  
@@ -35,7 +35,7 @@ ms.locfileid: "48164521"
  Una relazione tra una dimensione e un gruppo di misure è costituita dalle tabelle delle dimensioni e dei fatti che partecipano alla relazione e da un attributo di granularità che specifica la granularità della dimensione nel particolare gruppo di misure.  
   
 ## <a name="regular-dimension-relationships"></a>Relazioni di tipo Regolare  
- Una relazione di tipo Regolare tra una dimensione del cubo e un gruppo di misure si verifica quando la colonna chiave della dimensione è unita in join direttamente alla tabella dei fatti. Questa relazione diretta è basata su una relazione tra chiave primaria e chiave esterna nel database relazionale sottostante, ma potrebbe anche essere basata su una relazione logica definita nella vista origine dati. Una relazione di tipo Regolare rappresenta la relazione tra le tabelle delle dimensioni e una tabella dei fatti in una progettazione con schema star tradizionale. Per altre informazioni sulle relazioni regolari, vedere [definire una relazione di tipo regolare e regolare le proprietà della relazione](../multidimensional-models/define-a-regular-relationship-and-regular-relationship-properties.md).  
+ Una relazione di tipo Regolare tra una dimensione del cubo e un gruppo di misure si verifica quando la colonna chiave della dimensione è unita in join direttamente alla tabella dei fatti. Questa relazione diretta è basata su una relazione di chiave esterna-chiave primaria nel database relazionale sottostante, ma potrebbe anche essere basata su una relazione logica definita nella vista origine dati. Una relazione di tipo Regolare rappresenta la relazione tra le tabelle delle dimensioni e una tabella dei fatti in una progettazione con schema star tradizionale. Per altre informazioni sulle relazioni regolari, vedere [definire una relazione di tipo regolare e regolare le proprietà della relazione](../multidimensional-models/define-a-regular-relationship-and-regular-relationship-properties.md).  
   
 ## <a name="reference-dimension-relationships"></a>Relazioni di tipo Riferimento  
  Una relazione di tipo Riferimento tra una dimensione del cubo e un gruppo di misure si verifica quando la colonna chiave della dimensione è unita in join direttamente alla tabella dei fatti tramite una chiave in un'altra tabella della dimensione, come illustrato nella figura seguente.  
@@ -61,7 +61,7 @@ ms.locfileid: "48164521"
   
  ![Le colonne in realtà tabella può supportare le dimensioni](../../../2014/analysis-services/dev-guide/media/as-factdim.gif "colonne infatti tabella può supportare le dimensioni")  
   
- Nella tabella sono contenute informazioni sugli attributi non solo per ogni riga di un ordine emesso da un rivenditore, ma anche per l'ordine stesso. Gli attributi di un cerchio nel diagramma precedente di identificare le informazioni di **FactResellerSales** tabella che può essere utilizzata come attributi in una dimensione. In questo caso, due ulteriori informazioni, ovvero il numero di registrazione dello spedizioniere e il numero dell'ordine di acquisto emesso dal rivenditore, vengono rappresentate dalle colonne attributo CarrierTrackingNumber e CustomerPONumber. Si tratta di informazioni interessanti. Gli utenti, ad esempio, saranno senz'altro interessati a visualizzare le informazioni aggregate, ad esempio il costo totale del prodotto per tutti gli ordini spediti con lo stesso numero di registrazione dello spedizioniere. Senza una dimensione, tuttavia, non è possibile organizzare o aggregare i dati per questi due attributi.  
+ Nella tabella sono contenute informazioni sugli attributi non solo per ogni riga di un ordine emesso da un rivenditore, ma anche per l'ordine stesso. Gli attributi di un cerchio nel diagramma precedente di identificare le informazioni di **FactResellerSales** tabella che può essere utilizzata come attributi in una dimensione. In questo caso, due ulteriori informazioni, ovvero il numero di registrazione dello spedizioniere e il numero dell'ordine di acquisto emesso dal rivenditore, vengono rappresentate dalle colonne attributo CarrierTrackingNumber e CustomerPONumber. Queste informazioni non interessante, ad esempio, gli utenti saranno senz'altro interessati a visualizzare informazioni aggregate, ad esempio il costo per tutti gli ordini spediti con lo stesso numero di registrazione totale del prodotto. Senza una dimensione, tuttavia, non è possibile organizzare o aggregare i dati per questi due attributi.  
   
  In teoria, sarebbe possibile creare una tabella della dimensione che utilizzi le stesse informazioni chiave della tabella FactResellerSales e spostare le altre due colonne attributo, CarrierTrackingNumber e CustomerPONumber, in questa tabella. In questo modo, tuttavia, si duplicherebbe una parte significativa dei dati e si aggiungerebbe complessità superflua al data warehouse per rappresentare solo due attributi come dimensione distinta.  
   
@@ -86,6 +86,6 @@ ms.locfileid: "48164521"
  Per altre informazioni sulle relazioni molti-a-molti, vedere [definire un molti-a-molti relazione e molti-a-molti proprietà relazione](../multidimensional-models/define-a-many-to-many-relationship-and-many-to-many-relationship-properties.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Dimensioni &#40;Analysis Services - dati multidimensionali&#41;](../multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)  
+ [Dimensioni &#40;Analysis Services - Dati multidimensionali&#41;](../multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)  
   
   

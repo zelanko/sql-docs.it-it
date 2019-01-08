@@ -20,19 +20,19 @@ ms.assetid: c2c4a000-1127-46a8-b1e9-947fd1136e1e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c89ec6b6054f6a681550fa3fb12aa925476bc0c4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1cf8e911f8b8e871cf7389bf40d6a84bc455bffa
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47742675"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52506359"
 ---
 # <a name="sysserveraudits-transact-sql"></a>sys.server_audits (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Contiene una riga per ogni controllo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un'istanza del server. Per altre informazioni, vedere [SQL Server Audit &#40;Motore di database&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**audit_id**|**int**|ID del controllo.|  
 |**name**|**sysname**|Nome del controllo.|  
@@ -40,9 +40,9 @@ ms.locfileid: "47742675"
 |**create_date**|**datetime**|Data UTC di creazione del controllo.|  
 |**modify_date**|**datetime**|Data UTC dell'ultima modifica del controllo.|  
 |**principal_id**|**int**|ID del proprietario del controllo registrato nel server.|  
-|**type**|**char(2)**|Tipo di controllo:<br /><br /> SL: registro eventi di sicurezza NT<br /><br /> AL: registro eventi applicazioni NT<br /><br /> FL: file nel file system|  
+|**type**|**char(2)**|Tipo di controllo:<br /><br /> SL: registro eventi di sicurezza NT<br /><br /> AL: registro eventi applicazioni NT<br /><br /> FL: File nel file system|  
 |**type_desc**|**nvarchar(60)**|SECURITY LOG<br /><br /> APPLICATION LOG<br /><br /> FILE|  
-|**ON_FAILURE**|**tinyint**|Voce in condizione di errore:<br /><br /> 0: continuare<br /><br /> 1: arresto dell'istanza del server<br /><br /> 2: errore operazione|  
+|**ON_FAILURE**|**tinyint**|Voce in condizione di errore:<br /><br /> 0 - continua<br /><br /> 1: arresto dell'istanza del server<br /><br /> 2 - Errore operazione|  
 |**on_failure_desc**|**nvarchar(60)**|Voce in condizione di errore:<br /><br /> CONTINUE<br /><br /> SHUTDOWN SERVER INSTANCE<br /><br /> FAIL_OPERATION|  
 |**is_state_enabled**|**tinyint**|0 - disabilitato<br /><br /> 1: abilitato|  
 |**QUEUE_DELAY**|**int**|Tempo massimo di attesa, in millisecondi, prima della scrittura su disco. Se il valore è 0, il controllo garantirà una scrittura prima che un evento possa continuare.|  

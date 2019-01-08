@@ -12,12 +12,12 @@ ms.technology: linux
 ms.assetid: ''
 helpviewer_keywords:
 - Linux, encrypted connections
-ms.openlocfilehash: 46795611f8bb3554491dbdd400d383a59a540b5c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9506c8c27e17f59c95a1cfeff5cd3885d1657b79
+ms.sourcegitcommit: 753364d8ac569c9f363d2eb6b1b8214948d2ed8c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47766591"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52826086"
 ---
 # <a name="encrypting-connections-to-sql-server-on-linux"></a>Crittografia delle connessioni a SQL Server in Linux
 
@@ -30,7 +30,7 @@ Prima di iniziare, è necessario assicurarsi che i certificati di rispettano i r
 - Dopo la valido dalla proprietà del certificato e prima la valido alla proprietà del certificato deve essere l'ora di sistema corrente.
 - Il certificato deve essere destinato all'autenticazione del server. Ciò richiede che la proprietà Enhanced Key Usage del certificato per specificare l'autenticazione Server (1.3.6.1.5.5.7.3.1).
 - Il certificato deve essere creato usando l'opzione KeySpec di AT_KEYEXCHANGE. Proprietà di utilizzo della chiave del certificato (KEY_USAGE) include in genere, anche la crittografia chiave (CERT_KEY_ENCIPHERMENT_KEY_USAGE).
-- La proprietà Subject del certificato deve indicare che il nome comune (CN) sia lo stesso come il nome host o nome di dominio completo (FQDN) del computer del server. Nota: i certificati con caratteri jolly sono supportati.
+- La proprietà Subject del certificato deve indicare che il nome comune (CN) sia lo stesso come il nome host o nome di dominio completo (FQDN) del computer del server. Nota: I certificati con caratteri jolly sono supportati.
 
 ## <a name="configuring-the-openssl-libraries-for-use-optional"></a>Configurare le librerie OpenSSL per l'utilizzo (facoltativo)
 È possibile creare collegamenti simbolici nel `/opt/mssql/lib/` directory che fanno riferimento a cui `libcrypto.so` e `libssl.so` librerie devono essere utilizzate per la crittografia. Ciò è utile se si vuole forzare il Server SQL da utilizzare una specifica versione di OpenSSL diverso da quello predefinito fornito dal sistema. Se questi collegamenti simbolici non sono presenti, SQL Server caricherà le librerie OpenSSL predefinito configurato nel sistema.
@@ -56,8 +56,8 @@ TLS è usato per crittografare le connessioni da un'applicazione client per [!IN
 
         systemctl stop mssql-server 
         cat /var/opt/mssql/mssql.conf 
-        sudo /opt/mssql/bin/mssql-conf set network.tlscert /etc/ssl/certs/mssqlfqdn.pem 
-        sudo /opt/mssql/bin/mssql-conf set network.tlskey /etc/ssl/private/mssqlfqdn.key 
+        sudo /opt/mssql/bin/mssql-conf set network.tlscert /etc/ssl/certs/mssql.pem 
+        sudo /opt/mssql/bin/mssql-conf set network.tlskey /etc/ssl/private/mssql.key 
         sudo /opt/mssql/bin/mssql-conf set network.tlsprotocols 1.2 
         sudo /opt/mssql/bin/mssql-conf set network.forceencryption 0 
 
@@ -65,10 +65,10 @@ TLS è usato per crittografare le connessioni da un'applicazione client per [!IN
 
     -   Se si usa certificato CA firmato, è necessario copiare il certificato di autorità di certificazione (CA) anziché il certificato utente al computer client. 
     -   Se si usa il certificato autofirmato, è sufficiente copiare il file con estensione PEM nelle cartelle seguenti corrispondente alla distribuzione ed eseguire i comandi per consentire loro 
-        - **Ubuntu**: certificato di copia al ```/usr/share/ca-certificates/``` rename estensione CRT usare i certificati della ca dpkg reconfigure per abilitarlo come certificato di sistema CA. 
-        - **RHEL**: certificato di copia al ```/etc/pki/ca-trust/source/anchors/``` usare ```update-ca-trust``` per abilitarlo come certificato di sistema CA.
-        - **SUSE**: certificato di copia al ```/usr/share/pki/trust/anchors/``` usare ```update-ca-certificates``` per abilitarlo come certificato di sistema CA.
-        - **Windows**: Importa il file con estensione PEM in un certificato in utente corrente -> attendibile l'autorità di certificazione radice -> certificati
+        - **Ubuntu**: Certificato di copia al ```/usr/share/ca-certificates/``` rename estensione CRT usare i certificati della ca dpkg reconfigure per abilitarlo come certificato di sistema CA. 
+        - **RHEL**: Certificato di copia al ```/etc/pki/ca-trust/source/anchors/``` usare ```update-ca-trust``` per abilitarlo come certificato di sistema CA.
+        - **SUSE**: Certificato di copia al ```/usr/share/pki/trust/anchors/``` usare ```update-ca-certificates``` per abilitarlo come certificato di sistema CA.
+        - **Windows**:  Importa il file con estensione PEM in un certificato in utente corrente -> attendibile l'autorità di certificazione radice -> certificati
         - **macOS**: 
            - Copiare il certificato al ```/usr/local/etc/openssl/certs```
            - Eseguire il comando seguente per ottenere il valore hash: ```/usr/local/Cellar/openssql/1.0.2l/openssql x509 -hash -in mssql.pem -noout```
@@ -106,8 +106,8 @@ TLS è usato per crittografare le connessioni da un'applicazione client per [!IN
 
         systemctl stop mssql-server 
         cat /var/opt/mssql/mssql.conf 
-        sudo /opt/mssql/bin/mssql-conf set network.tlscert /etc/ssl/certs/mssqlfqdn.pem 
-        sudo /opt/mssql/bin/mssql-conf set network.tlskey /etc/ssl/private/mssqlfqdn.key 
+        sudo /opt/mssql/bin/mssql-conf set network.tlscert /etc/ssl/certs/mssql.pem 
+        sudo /opt/mssql/bin/mssql-conf set network.tlskey /etc/ssl/private/mssql.key 
         sudo /opt/mssql/bin/mssql-conf set network.tlsprotocols 1.2 
         sudo /opt/mssql/bin/mssql-conf set network.forceencryption 1 
         
