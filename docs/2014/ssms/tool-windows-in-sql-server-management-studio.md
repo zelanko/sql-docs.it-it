@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Management Studio [SQL Server], tool windows
@@ -13,12 +13,12 @@ ms.assetid: d3be5062-234c-43a8-8d47-cce111dd3c25
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3cc2885149a4056fdf7a007003a48ad526feff83
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 398a808ab90ab3ea8b97304d4e22865b40cc0ac4
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48069345"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52806273"
 ---
 # <a name="tool-windows-in-sql-server-management-studio"></a>Finestre degli strumenti in SQL Server Management Studio
   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] offre numerose ed efficaci finestre degli strumenti per tutte le fasi di sviluppo e amministrazione. Alcuni strumenti possono essere utilizzati su qualsiasi componente di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , mentre altri sono disponibili solo per alcuni componenti. Nella tabella seguente vengono descritti gli strumenti che è possibile utilizzare per tutti i componenti di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
@@ -26,7 +26,7 @@ ms.locfileid: "48069345"
 |||  
 |-|-|  
 |**Strumento**|**Scopo**|  
-|[Visualizza](object/object-explorer.md)|Esplorare server, creare e individuare oggetti, gestire le origini dati e visualizzare i log. È possibile accedere a questo strumento dal menu **Visualizza** .|  
+|[Esplora oggetti](object/object-explorer.md)|Esplorare server, creare e individuare oggetti, gestire le origini dati e visualizzare i log. È possibile accedere a questo strumento dal menu **Visualizza** .|  
 |[Esplora soluzioni](solution/solution-explorer.md)|Archiviare e organizzare script e informazioni di connessione correlate all'interno dei progetti denominati script [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . È inoltre possibile archiviare diversi script [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] come soluzioni e utilizzare il controllo del codice sorgente per gestire l'evoluzione degli script nel tempo. È possibile accedere a questo strumento dal menu **Visualizza** .|  
 |[Esplora modelli](template/template-explorer.md)|Creare query basate sui modelli esistenti. È inoltre possibile creare query personalizzate o modificare i modelli esistenti per renderli più adeguati alle proprie esigenze. È possibile accedere a questo strumento dal menu **Visualizza** .|  
 |[Guida dinamica](sql-server-management-studio-ssms.md)|Visualizzare un elenco di argomenti correlati della Guida quando si fa clic su un componente o si digita un codice.|  
