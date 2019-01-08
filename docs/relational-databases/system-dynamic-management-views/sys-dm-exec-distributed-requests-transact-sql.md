@@ -23,21 +23,21 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c02ea165ceec8af546d092d955e9275dcc96b240
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 78604c723c4c19e68a6c29fd3113de3d69d36d44
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661187"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52532790"
 ---
 # <a name="sysdmexecdistributedrequests-transact-sql"></a>sys.dm_exec_distributed_requests (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
   Contiene informazioni su tutte le richieste attualmente o recentemente active nelle query di PolyBase. Elenca una riga per ogni richiesta o alla query.  
   
- Basato su sessione e un utente può richiedere ID, quindi recuperare le richieste distribuite effettive generate in modo da essere eseguito – tramite sys.dm_exec_distributed_requests. Ad esempio, una query che interessano SQL normali e le tabelle esterne SQL verrà scomposizione in varie istruzioni/richieste eseguite nei nodi di calcolo diversi. Per monitorare i passaggi distribuiti in tutti i nodi di calcolo, si introduce un ID esecuzione 'global' che può essere utilizzato per tenere traccia di tutte le operazioni sui nodi di calcolo associati a una determinata richiesta e un operatore, rispettivamente.  
+ Basato su sessione e un utente può richiedere ID, quindi recuperare le richieste distribuite effettive generate in modo da essere eseguito - tramite sys.dm_exec_distributed_requests. Ad esempio, una query che interessano SQL normali e le tabelle esterne SQL verrà scomposizione in varie istruzioni/richieste eseguite nei nodi di calcolo diversi. Per monitorare i passaggi distribuiti in tutti i nodi di calcolo, si introduce un ID esecuzione 'global' che può essere utilizzato per tenere traccia di tutte le operazioni sui nodi di calcolo associati a una determinata richiesta e un operatore, rispettivamente.  
   
-|Nome colonna|Tipo di dati|Description|Intervallo|  
+|Nome colonna|Tipo di dati|Descrizione|Intervallo|  
 |-----------------|---------------|-----------------|-----------|  
 |sql_handle|**varbinary(64)**|Chiave per questa visualizzazione. Id numerico univoco associato alla richiesta.|Deve essere univoco tra tutte le richieste nel sistema.|  
 |execution_id|**nvarchar(32**|Id numerico univoco associato alla sessione in cui è stata eseguita la query.||  

@@ -11,12 +11,12 @@ ms.assetid: b3884576-1f7e-4d40-bb7d-168312333bb3
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: e327923618c4c48073582b7f3a46aba00737788f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4c929542449ee5d88db7ab87e9b952f4a2c45ec8
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48183640"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53351985"
 ---
 # <a name="dataset-fields-collection-report-builder-and-ssrs"></a>Raccolta di campi del set di dati (Generatore report e SSRS)
   I campi del set di dati rappresentano i dati provenienti da una connessione dati. Un campo può presentare dati numerici o non numerici. Possono essere inclusi, ad esempio, importi delle vendite, vendite totali, nomi dei clienti, identificatori di database, URL, immagini, dati spaziali e indirizzi di posta elettronica. Nell'area di progettazione i campi vengono visualizzati come espressioni in elementi del report quali caselle di testo, tabelle e grafici.  
@@ -58,7 +58,7 @@ ms.locfileid: "48183640"
  Se si utilizza un'origine dati del modello di report, è necessario specificare le entità e i campi delle entità come dati del report in uso. In Progettazione query per un modello di report è possibile esplorare in modo interattivo e selezionare le entità correlate, nonché scegliere i campi che si desidera includere nel set di dati del report. Dopo aver completato la progettazione della query, è possibile vedere la raccolta di identificatori di entità e campi di entità nel riquadro dei dati del report. Gli identificatori di entità vengono generati automaticamente dal modello di report e in genere non vengono visualizzati dall'utente finale.  
   
 ### <a name="using-extended-field-properties"></a>Utilizzo delle proprietà di campo estese  
- Le origini dati che supportano query multidimensionali, ad esempio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], supportano anche le proprietà di campo per i campi. Tali proprietà vengono visualizzate nel set di risultati per una query, ma non sono visibili nel riquadro **Dati report** . È possibile comunque usarle nel report. Per fare riferimento a una proprietà per un campo, trascinare il campo nel report e modificare la proprietà predefinita `Value` impostandola sul nome del campo della proprietà desiderata. In un cubo di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , ad esempio, è possibile definire formati per i valori presenti nelle celle del cubo. Il valore formattato è disponibile tramite la proprietà di campo `FormattedValue`. Per usare direttamente il valore anziché usare un valore e impostare la proprietà del formato della casella di testo, trascinare il campo nella casella di testo e impostare l'espressione predefinita `=Fields!FieldName.Value` su `=Fields!FieldName.FormattedValue`.  
+ Le origini dati che supportano query multidimensionali, ad esempio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], supportano anche le proprietà di campo per i campi. Tali proprietà vengono visualizzate nel set di risultati per una query, ma non sono visibili nel riquadro **Dati report** . È possibile comunque usarle nel report. Per fare riferimento a una proprietà per un campo, trascinare il campo nel report e modificare la proprietà predefinita `Value` impostandola sul nome del campo della proprietà desiderata. In un cubo di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , ad esempio, è possibile definire formati per i valori presenti nelle celle del cubo. Il valore formattato è disponibile se si usa la proprietà di campo `FormattedValue`. Per usare direttamente il valore anziché usare un valore e impostare la proprietà del formato della casella di testo, trascinare il campo nella casella di testo e impostare l'espressione predefinita `=Fields!FieldName.Value` su `=Fields!FieldName.FormattedValue`.  
   
 > [!NOTE]  
 >  Solo alcune proprietà `Field` possono essere utilizzate per tutte le origini dati. Le proprietà `Value` e `IsMissing` vengono definite per tutte le origini dati. Altre proprietà predefinite, ad esempio `Key`, `UniqueName` e `ParentUniqueName` per origini dati multidimensionali, sono supportate solo se sono disponibili nell'origine dati. Le proprietà personalizzate sono supportate da alcuni provider di dati. Per altre informazioni, vedere gli argomenti specifici sulle proprietà di campo estese per il tipo di origine dati in [Set di dati condivisi e incorporati del report &#40;Generatore report e SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md). Ad esempio, per un'origine dati [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], vedere [Proprietà di campo estese per un database di Analysis Services &#40;SSRS&#41;](extended-field-properties-for-an-analysis-services-database-ssrs.md).  
@@ -77,17 +77,17 @@ ms.locfileid: "48183640"
 ##  <a name="DataTypes"></a> Tipi di dati dei campi  
  Quando si crea un set di dati, i tipi di dati dei campi nell'origine dati potrebbero non corrispondere esattamente ai tipi di dati utilizzati in un report. Ai tipi di dati possono essere applicati uno o due livelli di mapping. L'estensione per l'elaborazione dati o il provider di dati può eseguire il mapping dei tipi di dati dall'origine dati a tipi di dati CLR (Common Language Runtime). I tipi di dati restituiti dalle estensioni per l'elaborazione dei dati vengono su cui viene eseguito il mapping a un subset di tipi di dati CLR da [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)].  
   
- Nell'origine dati i dati vengono archiviati in tipi di dati supportati dall'origine stessa. Ad esempio, i dati in un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database deve essere uno degli [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipi di dati, ad esempio `nvarchar` o `datetime`. Quando vengono recuperati dall'origine dati, i dati vengono passati attraverso un'estensione per l'elaborazione dati o un provider di dati associato al tipo di origine dati. In base all'estensione per l'elaborazione dati, i dati possono essere convertiti dai tipi usati dall'origine dati in tipi di dati supportati dall'estensione per l'elaborazione dati. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usa i tipi di dati supportati da Common Language Runtime (CLR) installato con [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Il provider di dati esegue il mapping di ogni colonna nel set di risultati dal tipo di dati nativo a un tipo di dati CLR di [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] :  
+ Nell'origine dati i dati vengono archiviati in tipi di dati supportati dall'origine stessa. I dati presenti in un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ad esempio, devono essere di un tipo supportato da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], come `nvarchar` o `datetime`. Quando vengono recuperati dall'origine dati, i dati vengono passati attraverso un'estensione per l'elaborazione dati o un provider di dati associato al tipo di origine dati. In base all'estensione per l'elaborazione dati, i dati possono essere convertiti dai tipi utilizzati dall'origine dati in tipi di dati supportati dall'estensione per l'elaborazione dati. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usa i tipi di dati supportati da Common Language Runtime (CLR) installato con [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Il provider di dati esegue il mapping di ogni colonna nel set di risultati dal tipo di dati nativo a un tipo di dati CLR di [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] :  
   
  In ogni fase i dati vengono rappresentati dai tipi di dati in base a quanto descritto nell'elenco seguente.  
   
 -   **Origine dati** Tipi di dati supportati dalla versione del tipo di origine dati alla quale ci si sta connettendo.  
   
-     Tra i tipi di dati utilizzati in genere per un'origine dati [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono inclusi ad esempio `int`, `datetime` e `varchar`. I tipi di dati introdotti in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] forniscono il supporto per `date`, `time`, `datetimetz` e `datetime2`. Per altre informazioni, vedere [Tipi di dati (Transact-SQL)](http://go.microsoft.com/fwlink/?linkid=98362).  
+     Tra i tipi di dati utilizzati in genere per un'origine dati [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono inclusi ad esempio `int`, `datetime` e `varchar`. I tipi di dati introdotti in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] forniscono il supporto per `date`, `time`, `datetimetz` e `datetime2`. Per altre informazioni, vedere [Tipi di dati (Transact-SQL)](https://go.microsoft.com/fwlink/?linkid=98362).  
   
--   **Provider di dati o estensione per l'elaborazione dati** Tipi di dati supportati dalla versione del provider di dati dell'estensione per l'elaborazione dei dati selezionata al momento della connessione all'origine dei dati. I provider di dati basati su [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] usano tipi di dati supportati da CLR. Per altre informazioni sui tipi di dati del provider di dati [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] , vedere [Mapping di tipi di dati (ADO.NET)](http://go.microsoft.com/fwlink/?LinkId=112178) e [Utilizzo dei tipi di base](http://go.microsoft.com/fwlink/?LinkId=112177) su MSDN.  
+-   **Provider di dati o estensione per l'elaborazione dati** Tipi di dati supportati dalla versione del provider di dati dell'estensione per l'elaborazione dei dati selezionata al momento della connessione all'origine dei dati. I provider di dati basati su [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] usano tipi di dati supportati da CLR. Per altre informazioni sui tipi di dati del provider di dati [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] , vedere [Mapping di tipi di dati (ADO.NET)](https://go.microsoft.com/fwlink/?LinkId=112178) e [Utilizzo dei tipi di base](https://go.microsoft.com/fwlink/?LinkId=112177) su MSDN.  
   
-     Ad esempio, tipi di dati tipici supportati per il [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] includono `Int32` e `String`. Le date e le ore del calendario sono supportate dalla struttura `DateTime`. Il [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 2.0 Service Pack 1 è stato introdotto il supporto per il `DateTimeOffset` struttura per le date con una differenza di fuso orario.  
+     Tra i tipi di dati supportati in genere da [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] sono inclusi ad esempio `Int32` e `String`. Le date e le ore del calendario sono supportate dalla struttura `DateTime`. In [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 2.0 Service Pack 1 è stato introdotto il supporto per la struttura `DateTimeOffset` per le date con una differenza di fuso orario.  
   
     > [!NOTE]  
     >  Nel server di report vengono utilizzati i provider di dati installati e configurati nel server di report stesso. Nei client di creazione dei report in modalità di anteprima vengono utilizzate le estensioni per l'elaborazione dati installate e configurate nel computer client. È necessario eseguire il test del report sia nell'ambiente del client che nell'ambiente del server di report.  
@@ -96,14 +96,14 @@ ms.locfileid: "48183640"
   
      I tipi di dati usati ad esempio da Elaborazione report per i nuovi tipi date e time introdotti in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] sono riportati nella tabella seguente:  
   
-    |Tipo di dati SQL|Tipo di dati CLR|Description|  
+    |Tipo di dati SQL|Tipo di dati CLR|Descrizione|  
     |-------------------|-------------------|-----------------|  
     |`Date`|`DateTime`|Solo data|  
     |`Time`|`TimeSpan`|Solo ora|  
     |`DateTimeTZ`|`DateTimeOffset`|Data e ora con differenza di fuso orario|  
     |`DateTime2`|`DateTime`|Data e ora con millisecondi frazionari|  
   
- Per altre informazioni sui tipi di database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vedere [Tipi di dati (motore di database)](http://go.microsoft.com/fwlink/?linkid=98362) e [Funzioni e tipi di dati di data e ora (Transact-SQL)](http://go.microsoft.com/fwlink/?linkid=98360).  
+ Per altre informazioni sui tipi di database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vedere [Tipi di dati (motore di database)](https://go.microsoft.com/fwlink/?linkid=98362) e [Funzioni e tipi di dati di data e ora (Transact-SQL)](https://go.microsoft.com/fwlink/?linkid=98360).  
   
  Per altre informazioni sull'inclusione di riferimenti in un campo del set di dati da un'espressione, vedere [Tipi di dati nelle espressioni &#40;Generatore report e SSRS&#41;](../report-design/data-types-in-expressions-report-builder-and-ssrs.md).  
   
@@ -115,8 +115,8 @@ ms.locfileid: "48183640"
 
   
 ## <a name="see-also"></a>Vedere anche  
- [Finestra di dialogo Proprietà set di dati, i campi &#40;Generatore Report&#41;](../dataset-properties-dialog-box-fields-report-builder.md)   
- [Parti del report e set di dati in Generatore Report](report-parts-and-datasets-in-report-builder.md)   
+ [Finestra di dialogo Proprietà set di dati, Campi &#40;Generatore report&#41;](../dataset-properties-dialog-box-fields-report-builder.md)   
+ [Parti del report e set di dati in Generatore report](report-parts-and-datasets-in-report-builder.md)   
  [Set di dati condivisi e incorporati del report &#40;Generatore report e SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
   
   

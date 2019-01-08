@@ -13,16 +13,16 @@ ms.assetid: bfd4dfc2-fbca-4ef3-81e5-2706f2389256
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5b886bdf5ce769201addacfdfe9e2f22c6e8a15d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1c344315764eac32e2e63663f07b7f797571a0e6
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47706009"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53204690"
 ---
 # <a name="sqlsetdriverconnectinfo-function"></a>Funzione SQLSetDriverConnectInfo
 **Conformità**  
- Versione introdotta: Conformità 3,81 standard ODBC: ODBC  
+ Versione introdotta: Conformità agli standard 3,81 ODBC: ODBC  
   
  **Riepilogo**  
  **SQLSetDriverConnectInfo** consente di impostare la stringa di connessione in token le informazioni di connessione per un'applicazione **SQLDriverConnect** chiamare.  

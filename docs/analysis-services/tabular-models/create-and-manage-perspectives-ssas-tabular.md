@@ -1,5 +1,5 @@
 ---
-title: Creare e gestire prospettive | Documenti Microsoft
+title: Creare e gestire prospettive nei modelli tabulari di Analysis Services | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 56c8f35aa15debbc064cacd73205234377224a28
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 962b6b90de6d95107d1a4cdd3484a44205afb630
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34040595"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53071848"
 ---
 # <a name="create-and-manage-perspectives"></a>Creare e gestire prospettive 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -31,19 +31,19 @@ ms.locfileid: "34040595"
   
 ###  <a name="bkmk_edit"></a> Per modificare una prospettiva  
   
--   Per modificare una prospettiva, selezionare e deselezionare i campi nella colonna della prospettiva. In questo modo verranno aggiunti e rimossi oggetti campo dalla prospettiva.  
+-   Per modificare una prospettiva, selezionare e deselezionare i campi nella colonna della prospettiva, che aggiunge e rimuove gli oggetti campo dalla prospettiva.  
   
 ###  <a name="bkmk_rename"></a> Per rinominare una prospettiva  
   
--   Quando si passa il mouse sull'intestazione di colonna (nome della prospettiva) di una prospettiva, viene visualizzato il pulsante **Rinomina** . Per rinominare la prospettiva, fare clic su **Rinomina**, quindi immettere un nuovo nome o modificare quello esistente.  
+-   Quando passa il mouse sull'intestazione di colonna della prospettiva (il nome della prospettiva), il **Rinomina** viene visualizzato il pulsante. Per rinominare la prospettiva, fare clic su **Rinomina**, quindi immettere un nuovo nome o modificare quello esistente.  
   
 ###  <a name="bkmk_delete"></a> Per eliminare una prospettiva  
   
--   Quando si passa il mouse sull'intestazione di colonna (nome della prospettiva) di una prospettiva, viene visualizzato il pulsante **Elimina** . Per eliminare la prospettiva, fare clic sul pulsante **Elimina** , quindi scegliere **Sì** nella finestra di conferma.  
+-   Quando passa il mouse sull'intestazione di colonna della prospettiva (il nome della prospettiva), il **eliminare** viene visualizzato il pulsante. Per eliminare la prospettiva, fare clic sul pulsante **Elimina** , quindi scegliere **Sì** nella finestra di conferma.  
   
 ###  <a name="bkmk_copy"></a> Per copiare una prospettiva  
   
--   Quando si passa il mouse sull'intestazione di colonna di una prospettiva, viene visualizzato il pulsante **Copia** . Per creare una copia di tale prospettiva, fare clic sul pulsante **Copia** . Una copia della prospettiva selezionata viene aggiunta come nuova prospettiva a destra delle prospettive esistenti. Il nome della nuova prospettiva viene ereditato dalla prospettiva copiata e alla fine del nome viene accodata un'annotazione *- Copy* . Ad esempio, se viene creata una copia della prospettiva *Vendite* , la nuova prospettiva viene denominata *Vendite - Copia*.  
+-   Quando passa il mouse sull'intestazione di colonna della prospettiva, la **copia** viene visualizzato il pulsante. Per creare una copia di tale prospettiva, fare clic sul pulsante **Copia** . Una copia della prospettiva selezionata viene aggiunta come nuova prospettiva a destra delle prospettive esistenti. Il nome della nuova prospettiva viene ereditato dalla prospettiva copiata e alla fine del nome viene accodata un'annotazione *- Copy* . Se, ad esempio, una copia del *vendite* prospettiva viene creata, la nuova prospettiva viene denominata *vendite - copia*.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Prospettive](../../analysis-services/tabular-models/perspectives-ssas-tabular.md)   

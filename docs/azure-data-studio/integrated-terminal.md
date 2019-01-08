@@ -1,7 +1,8 @@
 ---
-title: Terminale integrato di Studio di Azure Data | Microsoft Docs
+title: Terminale integrato
+titleSuffix: Azure Data Studio
 description: Scopri il terminale integrato in Azure Data Studio.
-ms.custom: tools|sos
+ms.custom: seodec18
 ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -10,12 +11,12 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.openlocfilehash: 91adc56e93a7dc1b065b77169ad18fd977231d9f
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: 6677119a35d1d51ac8b6563d9bd9b9f32668c273
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49355982"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030435"
 ---
 # <a name="integrated-terminal"></a>Terminale integrato
 
@@ -89,7 +90,7 @@ Ad esempio, per eseguire bash come una shell di account di accesso (viene esegui
 
 ## <a id="key-bindings"></a>Tasti di scelta rapida del terminale
 
-Il comando **Visualizza: Attiva/Disattiva terminale integrato** è associato a **Ctrl+`** e mostra/nasconde rapidamente il pannello del terminale integrato.
+Il **Vista: Attiva/Disattiva terminale integrato** comando è associato a **Ctrl +'** per passare rapidamente il pannello terminale integrato da e verso visualizzazione.
 
 Di seguito sono elencati i tasti di scelta rapida per spostarsi rapidamente nel terminale integrato:
 
@@ -109,16 +110,16 @@ Sono disponibili altri comandi e possono essere associati ai tasti di scelta rap
 
 Sono:
 
-* `workbench.action.terminal.focus`: Imposta lo stato attivo del terminale. Corrisponde all'attivazione/disattivazione ma imposta lo stato attivo del terminale anziché nasconderlo, quando è visibile.
-* `workbench.action.terminal.focusNext`: Mostra l'istanza di terminale successiva.
-* `workbench.action.terminal.focusPrevious`: Mostra l'istanza di terminale precedente.
-* `workbench.action.terminal.kill`: Rimuove l'istanza di terminale corrente.
-* `workbench.action.terminal.runSelectedText`: Esegue il testo selezionato nell'istanza di terminale.
-* `workbench.action.terminal.runActiveFile`: Esegue il file attivo nell'istanza di terminale.
+* `workbench.action.terminal.focus`: Lo stato attivo al terminale. Corrisponde all'attivazione/disattivazione ma imposta lo stato attivo del terminale anziché nasconderlo, quando è visibile.
+* `workbench.action.terminal.focusNext`: Illustra l'istanza successiva terminal.
+* `workbench.action.terminal.focusPrevious`: Si concentra la precedente istanza terminal.
+* `workbench.action.terminal.kill`: Rimuovere l'istanza di terminale corrente.
+* `workbench.action.terminal.runSelectedText`: Eseguire il testo selezionato nell'istanza del terminale.
+* `workbench.action.terminal.runActiveFile`: Eseguire il file attivo nell'istanza del terminale.
 
 ### <a name="run-selected-text"></a>Eseguire il testo selezionato
 
-Per usare il comando `runSelectedText`, selezionare il testo in un editor ed eseguire il comando **Terminale: Esegui testo selezionato nel terminale attivo** tramite il **riquadro comandi** (**CTRL+MAIUSC+P**). Il terminale tenta di eseguire il testo selezionato:
+Usare la `runSelectedText` comando, selezionare il testo in un editor ed eseguire il comando **Terminal: Esecuzione del testo selezionato nel terminale Active** tramite il **riquadro comandi** (**Ctrl + MAIUSC + P**). Il terminale tenta di eseguire il testo selezionato:
 
 ![Eseguire il testo selezionato](media/integrated-terminal/terminal_run_selected.png)
 
@@ -128,9 +129,9 @@ Se non è selezionato alcun testo nell'editor attivo, viene eseguita nel termina
 
 I tasti di scelta rapida per copiare e incollare seguono gli standard di piattaforma:
 
-* Linux: **Ctrl + Maiusc + C** e **Ctrl + MAIUSC + V**
+* Linux: **CTRL + MAIUSC + C** e **Ctrl + MAIUSC + V**
 * Mac: **Cmd + C** e **Cmd + V**
-* Windows: **Ctrl + C** e **Ctrl + V**
+* Windows: **CTRL + C** e **Ctrl + V**
 
 ### <a name="find"></a>Trova
 
@@ -145,7 +146,7 @@ Se si desidera che **Ctrl+F** venga eseguito sulla shell anziché come ricerca i
 
 ### <a name="rename-terminal-sessions"></a>Rinominare le sessioni del terminale
 
-Le sessioni del terminale integrato possono essere rinominate ora utilizzando il comando **Terminale: Rinomina** (`workbench.action.terminal.rename`). Il nuovo nome viene visualizzato in terminal selezione elenco a discesa.
+Le sessioni terminale integrate possono essere rinominate ora utilizzando il **Terminal: Rinominare** (`workbench.action.terminal.rename`) comandi. Il nuovo nome viene visualizzato in terminal selezione elenco a discesa.
 
 ### <a name="forcing-key-bindings-to-pass-through-the-terminal"></a>Utilizzo forzato di tasti di scelta rapida per il passaggio tra i terminali
 

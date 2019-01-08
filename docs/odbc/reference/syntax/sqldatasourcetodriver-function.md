@@ -20,12 +20,12 @@ ms.assetid: 0d87fcac-30a0-4303-ad8f-a5b53f4b428d
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 631dcb0f76346de88a2a48e8dfb00060626d58f2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a0ad4a98689db00c6dcb484e7a04bb973d2e1761
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47813579"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206260"
 ---
 # <a name="sqldatasourcetodriver-function"></a>Funzione SQLDataSourceToDriver
 **SQLDataSourceToDriver** supportstranslations per i driver ODBC. Questa funzione non viene chiamata dalle applicazioni basate su ODBC; le applicazioni richiedono traduzione attraverso **SQLSetConnectAttr**. Il driver associato con il *ConnectionHandle* specificato in **SQLSetConnectAttr** chiama la DLL specificata per eseguire le traduzioni di tutti i dati provenienti dall'origine dati del driver. Una DLL di conversione predefinita può essere specificato nel file di inizializzazione ODBC.  
@@ -52,7 +52,7 @@ BOOL SQLDataSourceToDriver(
  [Input] Valore dell'opzione.  
   
  *fSqlType*  
- [Input] Il tipo di dati SQL. Questo argomento indica al driver come convertire *rgbValueIn* in un formato accettabile per l'applicazione. Per un elenco di tipi di dati SQL validi, vedere la [tipi di dati SQL](../../../odbc/reference/appendixes/sql-data-types.md) sezione Appendice d: tipi di dati.  
+ [Input] Il tipo di dati SQL. Questo argomento indica al driver come convertire *rgbValueIn* in un formato accettabile per l'applicazione. Per un elenco di tipi di dati SQL validi, vedere la [tipi di dati SQL](../../../odbc/reference/appendixes/sql-data-types.md) sezione nell'appendice d: Tipi di dati.  
   
  *rgbValueIn*  
  [Input] Valore da convertire.  

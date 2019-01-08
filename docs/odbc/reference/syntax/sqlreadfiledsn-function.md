@@ -20,12 +20,12 @@ ms.assetid: ead464aa-cdc3-47dd-a0c0-997711205d31
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cd56404bfedece75d78ebaabd670cf25f19cbb0d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9a247b9916bd4b8bfe8704d7f374ef027043e2ae
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47680229"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206590"
 ---
 # <a name="sqlreadfiledsn-function"></a>Funzione SQLReadFileDSN
 **Conformità**  
@@ -74,7 +74,7 @@ BOOL SQLReadFileDSN(
 ## <a name="diagnostics"></a>Diagnostica  
  Quando **SQLReadFileDSN** FALSO, restituisce un oggetto associato  *\*pfErrorCode* valore può essere ottenuto chiamando **SQLInstallerError**. La tabella seguente elenca i  *\*pfErrorCode* i valori che possono essere restituiti da **SQLInstallerError** e illustra ognuna nel contesto di questa funzione.  
   
-|*\*pfErrorCode*|Errore|Description|  
+|*\*pfErrorCode*|Errore|Descrizione|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_GENERAL_ERR|Errore di programma di installazione generale|Errore per cui si è verificato alcun errore di programma di installazione specifico.|  
 |ODBC_ERROR_INVALID_BUFF_LEN|Lunghezza del buffer non valido|Il *lpszString* argomento era NULL.<br /><br /> Il *cbString* argomento era minore o uguale a 0.|  

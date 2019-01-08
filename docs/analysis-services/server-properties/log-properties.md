@@ -1,4 +1,5 @@
 ---
+title: Proprietà di log di Analysis Services | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 4e76f53329280caa589b2e45c19a967dc7c4e7dc
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: db79a57c3e63cf09f36cd1b9af2d529811b67ea0
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37999343"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53071928"
 ---
 # <a name="log-properties"></a>Proprietà dei log
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -156,9 +157,6 @@ ms.locfileid: "37999343"
  Proprietà booleana che indica se creare la tabella del log delle query.  
   
  Il valore predefinito di questa proprietà è False e indica che il server non crea automaticamente la tabella del log e non registra eventi di query.  
-  
-> [!NOTE]  
->  Per altre informazioni sulla configurazione del log di query, vedere [Configurazione del log di query di Analysis Services](http://go.microsoft.com/fwlink/?LinkId=81890).  
   
 ## <a name="trace"></a>Trace  
  **Trace\TraceBackgroundDistributionPeriod**  

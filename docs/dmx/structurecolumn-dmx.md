@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: e1bf58c9477cc06855d332ec3bd69b50a6bf19dc
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: b6f552f009a93caab2437a5ae6a1533833d6054b
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37992411"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52412818"
 ---
 # <a name="structurecolumn-dmx"></a>StructureColumn (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -49,11 +49,11 @@ StructureColumn('structure column name')
 ## <a name="error-messages"></a>messaggi di errore  
  Se l'utente non dispone di autorizzazioni drill-through sulla struttura di data mining padre, viene generato l'errore di sicurezza seguente:  
   
- L'utente '%{user/} non dispone dell'autorizzazione per eseguire il drill-through nella struttura di data mining padre del modello di data mining '%{model/}'.  
+ Il ' % {utente /}' utente non dispone dell'autorizzazione per il drill-through nella struttura di data mining padre di ' % {model /}' modello di data mining.  
   
  Se il nome della colonna della struttura specificato non è valido, viene generato il messaggio di errore seguente:  
   
- Impossibile trovare la colonna della struttura di data mining '%{structure-column-name/}' nella struttura di data mining padre '%{structure/}' del contesto corrente (riga %{line/}, colonna %{column/}).  
+ Il ' % {structure-column-name /}' colonna della struttura di data mining non è stato trovato nel ' % {struttura /}' padre struttura di data mining nel contesto corrente (riga % {line /}, colonna % {colonna /}).  
   
 ## <a name="examples"></a>Esempi  
  Per questi esempi sarà utilizzata la struttura di data mining riportata di seguito. Si noti che la struttura di data mining contiene due colonne di tabelle nidificate, `Products` e `Hobbies`. La tabella nidificata nella colonna `Hobbies` contiene una singola colonna che viene utilizzata come chiave per la tabella nidificata. La tabella nidificata nella colonna `Products` è una tabella nidificata complessa con una colonna chiave e altre colonne utilizzate per l'input. Negli esempi seguenti viene illustrato come progettare una struttura di data mining per includere colonne diverse, anche se un modello potrebbe non utilizzare tutte le colonne. Alcune di queste colonne potrebbero non essere utili a livello di modello per la generalizzazione dei modelli, ma rivelarsi molto indicate per il drill-through.  
@@ -94,26 +94,26 @@ ProductName
 WITH FILTER(EXISTS (Products))  
 ```  
   
-### <a name="sample-query-1-returning-a-column-from-the-mining-structure"></a>Esempio di query 1: Restituzione di una colonna dalla struttura di data mining  
+### <a name="sample-query-1-returning-a-column-from-the-mining-structure"></a>Esempio di query 1: Restituzione di una colonna dalla struttura di Data Mining  
  Nella query di esempio seguente vengono restituite le colonne `CustomerName` e `Age`, definite come parte del modello di data mining. Tuttavia la query restituisce anche la colonna `Age`, che fa parte della struttura ma non è inclusa nel modello di data mining.  
   
 ```  
-SELECT CustomerName, Age, StructureColumn(‘Occupation’) FROM MyModel.CASES   
+SELECT CustomerName, Age, StructureColumn('Occupation') FROM MyModel.CASES   
 WHERE Age > 30  
 ```  
   
  Si noti che per limitare i case ai clienti di età superiore ai 30 anni il filtro delle righe viene applicato a livello del modello. Pertanto, questa espressione non restituisce case inclusi nei dati della struttura ma non utilizzati dal modello. Poiché la condizione di filtro utilizzata per creare il modello, `EXISTS (Products)`, limita i case solo ai clienti che hanno acquistato prodotti, nella struttura ci potrebbero essere case che non vengono restituiti dalla query.  
   
-### <a name="sample-query-2-applying-a-filter-to-the-structure-column"></a>Esempio di query 2: Applicazione di un filtro alla colonna della struttura  
+### <a name="sample-query-2-applying-a-filter-to-the-structure-column"></a>Esempio di query 2: Applicare un filtro alla colonna della struttura  
  Nella query di esempio seguente, oltre alle colonne del modello `CustomerName` e `Age` e alla tabella nidificata `Products`, viene restituito il valore della colonna `Quantity` nella tabella nidificata che non fa parte del modello.  
   
 ```  
 SELECT CustomerName, Age,  
-(SELECT ProductName, StructureColumn(‘Quantity’) FROM Products) FROM MA.CASES   
-WHERE StructureColumn(‘Occupation’) = ‘Architect’  
+(SELECT ProductName, StructureColumn('Quantity') FROM Products) FROM MA.CASES   
+WHERE StructureColumn('Occupation') = 'Architect'  
 ```  
   
- Si noti che, in questo esempio viene applicato un filtro alla colonna della struttura per limitare i case ai clienti con occupazione 'Architect' (`WHERE StructureColumn(‘Occupation’) = ‘Architect’`). Poiché la condizione di filtro del modello viene sempre applicata ai case al momento della creazione del modello, vengono inclusi nei case del modello solo i case con almeno una riga risultante nella tabella `Products`. Vengono pertanto applicati sia il filtro sulla tabella nidificata `Products` che il filtro sul case `(‘Occupation’)`.  
+ Si noti che, in questo esempio viene applicato un filtro alla colonna della struttura per limitare i case ai clienti con occupazione 'Architect' (`WHERE StructureColumn('Occupation') = 'Architect'`). Poiché la condizione di filtro del modello viene sempre applicata ai case al momento della creazione del modello, vengono inclusi nei case del modello solo i case con almeno una riga risultante nella tabella `Products`. Vengono pertanto applicati sia il filtro sulla tabella nidificata `Products` che il filtro sul case `('Occupation')`.  
   
 ### <a name="sample-query-3-selecting-columns-from-a-nested-table"></a>Esempio di query 3: Selezione di colonne da una tabella nidificata  
  Nella query di esempio seguente vengono restituiti i nomi dei clienti che sono stati utilizzati come case di training dal modello. Per ogni cliente, la query restituisce anche una tabella nidificata contenente i dettagli dell'acquisto. Anche se il modello include il `ProductName` colonna, il modello non utilizza il valore della `ProductName` colonna. Il modello di verifica solo se è stato acquistato il prodotto alle normali (`NOT``OnSale`) prezzo. Questa query non solo restituisce il nome del prodotto, ma anche la quantità acquistata che non è inclusa nel modello.  
@@ -126,7 +126,7 @@ FROM MyModel.CASES
   
  Si noti che non è possibile restituire la colonna `ProductName` o `Quantity` se non è attivato il drill-through nel modello di data mining.  
   
-### <a name="sample-query-4-filtering-on-and-returning-nested-table-columns"></a>Esempio di query 4: Applicazione di filtri e restituzione di colonne di tabella nidificata  
+### <a name="sample-query-4-filtering-on-and-returning-nested-table-columns"></a>Esempio di query 4: Applicazione di filtri e restituzione di colonne della tabella nidificata  
  Nella query di esempio seguente vengono restituite le colonne della tabella nidificata e del case incluse nella struttura di data mining ma non nel modello. Sul modello è già applicato un filtro relativo alla presenza di prodotti `OnSale`, ma questa query aggiunge un filtro nella colonna della struttura di data mining, `Quantity`:  
   
 ```  

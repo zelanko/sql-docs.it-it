@@ -1,22 +1,21 @@
 ---
-title: 'Passaggio 4: Aggiunta di una destinazione file flat | Microsoft Docs'
+title: 'Passaggio 4: Aggiunta di una destinazione File Flat | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: f4088de3-16d8-419c-96a1-a2cd005d0a5b
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2a29d4953919644100b5863c3f4766895ea356c5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c43885de9e2a6945a8a24263765df8ee8e26920a
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48075581"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52823375"
 ---
 # <a name="step-4-adding-a-flat-file-destination"></a>Passaggio 4: Aggiunta di una destinazione file flat
   L'output degli errori della trasformazione Lookup Currency Key reindirizza alla trasformazione Script tutte le righe di dati in cui l'operazione di ricerca ha avuto esito negativo. Per migliorare le informazioni sugli errori, la trasformazione Script esegue uno script che ottiene la descrizione degli errori.  
@@ -47,7 +46,7 @@ ms.locfileid: "48075581"
   
 11. Nel riquadro delle opzioni fare clic su **Colonne**.  
   
-     Si noti che oltre alle colonne del file dei dati di origine sono presenti tre nuove colonne: ErrorCode, ErrorColumn e ErrorDescription. Queste colonne vengono generate dall'output degli errori della trasformazione Lookup Currency Key e dallo script nella trasformazione Get Error Description e possono essere utilizzate per la risoluzione dei problemi relativi alla riga con esito negativo.  
+     Si noti che, oltre alle colonne dal file di dati di origine, sono presenti tre nuove colonne: ErrorCode, ErrorColumn ed ErrorDescription. Queste colonne vengono generate dall'output degli errori della trasformazione Lookup Currency Key e dallo script nella trasformazione Get Error Description e possono essere utilizzate per la risoluzione dei problemi relativi alla riga con esito negativo.  
   
 12. Fare clic su **OK**.  
   
@@ -60,6 +59,6 @@ ms.locfileid: "48075581"
 15. Fare clic su **OK**.  
   
 ## <a name="next-steps"></a>Passaggi successivi  
- [Passaggio 5: Test del pacchetto creato nell'esercitazione della lezione 4](../integration-services/lesson-4-5-testing-the-lesson-4-tutorial-package.md)  
+ [Passaggio 5: Il pacchetto della lezione 4 dell'esercitazione di test](../integration-services/lesson-4-5-testing-the-lesson-4-tutorial-package.md)  
   
   

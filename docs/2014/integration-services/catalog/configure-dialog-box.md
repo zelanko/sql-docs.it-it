@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - SQL12.SSIS.SSMS.ISPROJECTPROP.PARAMETERS.F1
@@ -15,12 +14,12 @@ ms.assetid: 10183c8d-b1be-420f-972a-96ea97d4f4d8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ac0637b19437c2570cbb87fb56b84641274d9d3c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2a4175429222306ac006122a3d36ee5ae97453ad
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48174191"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52793499"
 ---
 # <a name="configure-dialog-box"></a>Finestra di dialogo Configura
   Utilizzare la finestra di dialogo **Configura** per configurare i parametri, le gestioni connessioni e i riferimenti agli ambienti per pacchetti e progetti.  
@@ -57,7 +56,7 @@ ms.locfileid: "48174191"
  **Contenitore**  
  Viene elencato l'oggetto contenente il parametro.  
   
- **Nome**  
+ **Name**  
  Viene elencato il nome del parametro.  
   
  **Valore**  
@@ -68,7 +67,7 @@ ms.locfileid: "48174191"
  **Contenitore**  
  Viene elencato l'oggetto contenente la gestione connessione.  
   
- **Nome**  
+ **Name**  
  Viene elencato il nome della gestione connessione.  
   
  **Nome proprietà**  
@@ -80,7 +79,7 @@ ms.locfileid: "48174191"
 ##  <a name="references"></a> Impostare le opzioni nella pagina Riferimenti  
  Utilizzare la pagina **Riferimenti** per aggiungere e rimuovere i riferimenti agli ambienti e accedere alle proprietà dell'ambiente.  
   
- Un ambiente specifica i valori di runtime per i pacchetti contenuti nei progetti distribuiti nel server [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
+ Un ambiente specifica i valori di runtime per i pacchetti contenuti nei progetti distribuiti nel server [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
  **Ambiente**  
  Elenca l'ambiente  

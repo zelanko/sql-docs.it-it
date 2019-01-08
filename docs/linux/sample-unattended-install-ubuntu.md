@@ -1,5 +1,6 @@
 ---
-title: Installazione automatica per SQL Server su Ubuntu | Microsoft Docs
+title: Installazione automatica per SQL Server in Ubuntu
+titleSuffix: SQL Server
 description: Esempio di Script SQL Server - installazione automatica su Ubuntu
 author: rothja
 ms.author: jroth
@@ -7,16 +8,16 @@ manager: craigg
 ms.date: 10/02/2017
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
+ms.custom: sql-linux, seodec18
 ms.technology: linux
-ms.openlocfilehash: dc6d12a52c20bf3269f52fcc8d2ef87c4366061f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ab93dde353b8576f682a2e032888da36a5743012
+ms.sourcegitcommit: de8ef246a74c935c5098713f14e9dd06c4733713
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47626536"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53160499"
 ---
-# <a name="sample-unattended-sql-server-installation-script-for-ubuntu"></a>Esempio: Script di installazione automatica di SQL Server per Ubuntu
+# <a name="sample-unattended-sql-server-installation-script-for-ubuntu"></a>Esempio: Script di installazione di SQL Server automatico per Ubuntu
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 

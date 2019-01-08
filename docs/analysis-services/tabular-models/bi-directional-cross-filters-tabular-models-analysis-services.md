@@ -1,5 +1,5 @@
 ---
-title: Nei modelli tabulari filtri incrociati bidirezionali | Microsoft Docs
+title: Nei modelli tabulari di Analysis Services filtri incrociati bidirezionali | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 89c3aee1bb762a5725e3242c88284d07abdb8de7
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: eee2e859abf5b7924cb072c4653ac3e83e7b7824
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38033309"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072308"
 ---
 # <a name="bi-directional-cross-filters-in-tabular-models"></a>I filtri incrociati bidirezionali nei modelli tabulari
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -24,11 +24,11 @@ ms.locfileid: "38033309"
   
  ![SSAS-BIDI-1-Filteroption](../../analysis-services/tabular-models/media/ssas-bidi-1-filteroption.PNG "SSAS-BIDI-1-Filteroption")  
   
- Esistono due tipi di filtri incrociati: unidirezionale e bidirezionale il filtro. Il filtro unidirezionale è la direzione tradizionale del filtro molti-a-uno tra le tabelle dei fatti e le tabelle delle dimensioni in tale relazione. Il filtro bidirezionale è un filtro incrociato che abilita il contesto di filtro di una relazione in modo che sia usato come contesto di filtro per un'altra relazione di tabella, con una tabella comune a entrambe le relazioni.  
+ Esistono due tipi di filtri incrociati: Applicazione di filtri unidirezionali e bidirezionali. Il filtro unidirezionale è la direzione tradizionale del filtro molti-a-uno tra le tabelle dei fatti e le tabelle delle dimensioni in tale relazione. Il filtro bidirezionale è un filtro incrociato che abilita il contesto di filtro di una relazione in modo che sia usato come contesto di filtro per un'altra relazione di tabella, con una tabella comune a entrambe le relazioni.  
   
  Dati **DimDate** e **DimProduct** con relazioni di chiave esterna con **FactOnlineSales**, un filtro incrociato bidirezionale è equivalente a **FactOnlineSales-to-DimDate** più **FactOnlineSales-to-DimProduct** usati contemporaneamente.  
   
- I filtri incrociati bidirezionali possono rappresentare una facile correzione dei problemi di progettazione query molti-a-molti che gli sviluppatori di modelli tabulari e Power Pivot hanno dovuto risolvere in passato. Se è stata usata la soluzione DAX per le relazioni molti-a-molti nei modelli tabulari o Power Pivot, è possibile provare ad applicare un filtro bidirezionale per vedere se produce i risultati previsti.  
+ I filtri incrociati bidirezionali possono rappresentare una facile correzione dei problemi di progettazione query molti-a-molti che gli sviluppatori di modelli tabulari e Power Pivot hanno dovuto risolvere in passato. Se è stata usata la soluzione DAX per le relazioni molti-a-molti in tabulari o modelli Power Pivot, è possibile provare ad applicare un filtro bidirezionale per vedere se produce i risultati previsti.  
   
  Quando si crea un filtro incrociato bidirezionale, tenere presente quanto i punti seguenti:  
   
@@ -74,7 +74,7 @@ ms.locfileid: "38033309"
   
  Purché le misure vengano estratte dalla tabella dei fatti e il contesto di filtro termini in corrispondenza della tabella dei fatti, le aggregazioni verranno filtrate in modo corretto per questo modello. Ma cosa accade se si vogliono creare delle misure altrove, ad esempio una misura Distinct Count nella tabella Products o Customer o uno sconto medio nella tabella Promotion, e si estende un contesto di filtro esistente a tale misura?  
   
- È possibile provarlo aggiungendo una misura Distinct Count da **DimProducts** alla tabella pivot. Osservare i valori ripetuti per **Count Products**. A prima vista, sembra che manchi una relazione tra tabelle, ma nel modello in esame si noterà che tutte le relazioni sono completamente definite e attive. In questo caso, i valori si ripetono perché non sono presenti filtri per date nelle righe della tabella Product.  
+ È possibile provarlo aggiungendo una misura distinct count da **DimProducts** alla tabella pivot. Osservare i valori ripetuti per **Count Products**. A prima vista, sembra che manchi una relazione tra tabelle, ma nel modello in esame si noterà che tutte le relazioni sono completamente definite e attive. In questo caso, i valori si ripetono perché non sono presenti filtri per date nelle righe della tabella Product.  
   
  ![ssas-bidi-5-prodcount-nofilter](../../analysis-services/tabular-models/media/ssas-bidi-5-prodcount-nofilter.png "ssas-bidi-5-prodcount-nofilter")  
   
@@ -83,7 +83,7 @@ ms.locfileid: "38033309"
  ![ssas-bidi-6-prodcount-withfilter](../../analysis-services/tabular-models/media/ssas-bidi-6-prodcount-withfilter.png "ssas-bidi-6-prodcount-withfilter")  
   
 ## <a name="learn-step-by-step"></a>Informazioni dettagliate  
- È possibile provare i filtri incrociati bidirezionali eseguendo le istruzioni in questa procedura dettagliata. Per proseguire, è necessario avere:  
+ È possibile provare i filtri incrociati bidirezionali eseguendo le istruzioni in questa procedura dettagliata. Per seguire la procedura, è necessario:  
   
 -   Un'istanza di SQL Server 2016 Analysis Services, modalità tabulare, versione CTP più recente  
   
@@ -138,7 +138,7 @@ ms.locfileid: "38033309"
  Se si verificano errori, controllare che per l'account usato per connettersi al database sia presente un accesso di SQL Server con autorizzazioni di lettura nel data warehouse di Contoso. In una connessione remota, è opportuno controllare anche la configurazione della porta nel firewall per SQL Server.  
   
 ### <a name="review-default-table-relationships"></a>Esaminare le relazioni tra tabelle predefinite  
- Passare alla vista diagramma: **Modello** > **Vista modelli** > **Vista diagramma**. La cardinalità e le relazioni attive sono indicate in modo visivo. Tutte le relazioni sono uno-a-molti tra due tabelle correlate qualsiasi.  
+ Passare alla vista diagramma: **Modello** > **Vista modelli** > **visualizzazione Diagramma**. La cardinalità e le relazioni attive sono indicate in modo visivo. Tutte le relazioni sono uno-a-molti tra due tabelle correlate qualsiasi.  
   
  ![SSAS-BIDI-2-Model](../../analysis-services/tabular-models/media/ssas-bidi-2-model.PNG "SSAS-BIDI-2-Model")  
   
@@ -147,7 +147,7 @@ ms.locfileid: "38033309"
  ![SSAS-bidi-3-defaultrelationships](../../analysis-services/tabular-models/media/ssas-bidi-3-defaultrelationships.PNG "ssas-bidi-3-defaultrelationships")  
   
 ### <a name="create-measures"></a>Creare misure  
- È necessaria un'aggregazione per sommare gli importi di vendita per diversi facet dei dati dimensionali. In **DimProduct,** è possibile creare una misura che conti i prodotti e quindi usarla in un'analisi di merchandising del prodotto che mostra il numero di prodotti che hanno partecipato alle vendite per un determinato anno, una determinata area o un tipo di cliente.  
+ È necessaria un'aggregazione per gli importi di vendita di somma per diversi facet dei dati dimensionali. In **DimProduct,** è possibile creare una misura che conti i prodotti e quindi usarla in un'analisi di merchandising del prodotto che mostra il numero di prodotti che hanno partecipato alle vendite per un determinato anno, una determinata area o un tipo di cliente.  
   
 1.  Fare clic su **Modello** > **Vista modelli** > **Vista diagramma**.  
   
@@ -173,7 +173,7 @@ ms.locfileid: "38033309"
   
 4.  Selezionare **Data** > **Anno di calendario**.  
   
- Si noti che le vendite sono suddivise per anno e produttore come previsto. Il motivo è che il contesto di filtro predefinito tra **FactOnlineSales**, **DimProduct**e **DimDate** funziona correttamente per le misure sul lato "molti" della relazione.  
+ Si noti che le vendite sono suddivise per anno e produttore come previsto. Infatti, il valore predefinito contesto di filtro tra **FactOnlineSales**, **DimProduct**, e **DimDate** funziona correttamente per le misure sul lato "molti" della relazione.  
   
  Allo stesso tempo, si noterà che il numero di prodotti non seleziona lo stesso contesto di filtro delle vendite. Nonostante i numeri di prodotti siano filtrati correttamente in base al produttore (i numeri produttore e prodotto sono nella stessa tabella), il filtro per date non viene propagato al numero di prodotto.  
   
@@ -192,14 +192,14 @@ ms.locfileid: "38033309"
  Si noterà ora che il numero di prodotti e di vendite viene filtrato in base allo stesso contesto di filtro, che include non solo i produttori da **DimProducts** ma anche l'anno di calendario da **DimDate**.  
   
 ## <a name="next-steps"></a>Passaggi successivi  
- Comprendere quando e come usare un filtro incrociato bidirezionale può essere una questione di prove empiriche per verificarne il funzionamento nel proprio scenario. In alcuni casi, si noterà che i comportamenti predefiniti non sono sufficienti e sarà necessario ricorrere ai calcoli DAX per portare a termine il lavoro. Nella sezione **Vedere anche** sono disponibili diversi collegamenti a risorse aggiuntive sull'argomento.  
+ Comprendere quando e come usare un filtro incrociato bidirezionale può essere una questione di prove empiriche per verificarne il funzionamento nel proprio scenario. In alcuni casi, troverai che i comportamenti predefiniti non sono sufficienti e saranno necessario ricorrere ai calcoli DAX per svolgere il lavoro. Nel **vedere anche** sezione, si sono disponibili diversi collegamenti a risorse aggiuntive su questo argomento.  
   
- In termini pratici, i filtri incrociati possono consentire forme di esplorazione dei dati in genere consentite solo da un costrutto molti-a-molti. Detto questo, è importante riconoscere che i filtri incrociati bidirezionali non rappresentano un costrutto molti-a-molti.  In questa versione, non è supportata un'effettiva configurazione di tabella molti-a-molti nella finestra di progettazione per i modelli tabulari.  
+ In termini pratici, i filtri incrociati possono consentire forme di esplorazione dei dati in genere consentite solo da un costrutto molti-a-molti. Tuttavia, è importante riconoscere che bidirezionali filtro incrociato non è un costrutto molti-a-molti.  In questa versione, non è supportata un'effettiva configurazione di tabella molti-a-molti nella finestra di progettazione per i modelli tabulari.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Creare e gestire le relazioni in Power BI Desktop](https://support.powerbi.com/knowledgebase/articles/464155-create-and-manage-relationships-in-power-bi-desktop)   
  [Un esempio pratico di gestione di semplici relazioni molti-a-molti nei modelli tabulari e Power Pivot](http://social.technet.microsoft.com/wiki/contents/articles/22202.a-practical-example-of-how-to-handle-simple-many-to-many-relationships-in-power-pivotssas-tabular-models.aspx)   
- [Risoluzione delle relazioni molti-a-molti sfruttando DAX filtri incrociati tra tabelle](http://blog.gbrueckl.at/2012/05/resolving-many-to-many-relationships-leveraging-dax-cross-table-filtering/)   
- [Molti-a-rivoluzione molti (blog di SQLBI)](http://www.sqlbi.com/articles/many2many/)  
+ [Risoluzione delle relazioni molti-a-molti sfruttando i filtri incrociati DAX tra tabelle](http://blog.gbrueckl.at/2012/05/resolving-many-to-many-relationships-leveraging-dax-cross-table-filtering/)   
+ [La rivoluzione molti-a-molti (blog di SQLBI)](http://www.sqlbi.com/articles/many2many/)  
   
   

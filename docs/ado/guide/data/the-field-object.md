@@ -13,12 +13,12 @@ ms.assetid: 7d1c4ad5-4be3-42ab-b516-e7133ca300bc
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fc75b9a7ab93e3157d6594be15c0b2cc36456415
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e152c3147ab7c316494c6891424c0a7c8173f002
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47726159"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52516539"
 ---
 # <a name="the-field-object"></a>Oggetto Field
 Ciascuna **campo** oggetto in genere corrisponde a una colonna in una tabella di database. Tuttavia, un **campo** può inoltre rappresentare un puntatore a un'altra **Recordset**, chiamato un capitolo. Eccezioni, ad esempio le colonne a capitoli, verranno trattate più avanti in questa Guida.  
@@ -44,7 +44,7 @@ Ciascuna **campo** oggetto in genere corrisponde a una colonna in una tabella di
  Risolvere le differenze tra i valori dei campi durante l'aggiornamento in batch usando il **OriginalValue** e **UnderlyingValue** proprietà, se il provider supporta gli aggiornamenti in batch.  
   
 ## <a name="describing-a-field"></a>Che descrive un campo  
- Gli argomenti che seguono verranno illustrano le proprietà della [campo](../../../ado/reference/ado-api/field-object.md) oggetti che rappresentano le informazioni che descrivono le **campo** oggetto stesso, vale a dire, i metadati relativi al campo. Queste informazioni possono essere utilizzate per determinare le sullo schema del **Recordset**. Queste proprietà includono **tipo**, **DefinedSize** e **ActualSize**, **nome**, e **NumericScale**e **precisione**.  
+ Gli argomenti che seguono verranno illustrano le proprietà del [campo](../../../ado/reference/ado-api/field-object.md) oggetti che rappresentano le informazioni che descrivono le **campo** oggetto stesso, vale a dire, i metadati relativi al campo. Queste informazioni possono essere utilizzate per determinare le sullo schema del **Recordset**. Queste proprietà includono **tipo**, **DefinedSize** e **ActualSize**, **nome**, e **NumericScale**e **precisione**.  
   
 ### <a name="discovering-the-data-type"></a>Individuare il tipo di dati  
  Il **tipo** proprietà indica il tipo di dati del campo. Il tipo di dati costanti enumerate supportati da ADO sono descritti in [DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md) nel *riferimento per programmatori ADO*.  

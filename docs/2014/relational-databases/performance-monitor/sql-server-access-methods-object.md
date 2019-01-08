@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - Access Methods object
@@ -13,12 +13,12 @@ ms.assetid: 27558585-e780-48bb-a042-30d664662ebc
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 494b7cfa026c60195bab29c6241cadb1792fb989
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 96229c151957cd0b0bf91c248b4d96a294864181
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48072641"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52776433"
 ---
 # <a name="sql-server-access-methods-object"></a>Oggetto Metodi di accesso di SQL Server
   L'oggetto **Metodi di accesso** di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] include contatori che consentono di monitorare l'accesso ai dati logici all'interno del database. L'accesso fisico alle pagine del database su disco viene monitorato tramite i contatori di **Gestione buffer** . Il monitoraggio dei metodi utilizzati per accedere ai dati archiviati nel database consente di determinare se è possibile migliorare le prestazioni delle query aggiungendo o modificando gli indici, aggiungendo o spostando partizioni, aggiungendo file o gruppi di file, deframmentando gli indici o riscrivendo le query. I contatori dell'oggetto **Metodi di accesso** possono essere utilizzati anche per monitorare la quantità di dati, gli indici e lo spazio libero all'interno del database e determinare in tal modo il volume e la frammentazione dei dati per ogni istanza del server. Un'eccessiva frammentazione dell'indice può ridurre le prestazioni.  
@@ -43,7 +43,7 @@ ms.locfileid: "48072641"
   
  Nella seguente tabella vengono illustrati i contatori dell'oggetto [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Metodi di accesso** .  
   
-|Contatori di SQLServer:Metodi di accesso|Description|  
+|Contatori di SQLServer:Metodi di accesso|Descrizione|  
 |----------------------------------------|-----------------|  
 |**Batch pulizia unità di allocazione/sec**|Numero di batch al secondo completati correttamente dall'attività in background che consente di eliminare unità di allocazione rimosse posticipate.|  
 |**Pulizia unità di allocazione/sec**|Numero di unità di allocazione al secondo rimosse correttamente dall'attività in background che consente di eliminare unità di allocazione rimosse posticipate. Per la rimozione di ogni unità di allocazione sono necessari più batch.|  

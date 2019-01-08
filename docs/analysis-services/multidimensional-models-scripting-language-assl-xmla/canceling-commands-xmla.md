@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: babdafaaa1c507a609760b02895f9438baf21581
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 313708ad1575c7b9922ac796791d0d623c51b54b
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145017"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53207520"
 ---
 # <a name="canceling-commands-xmla"></a>Annullamento di comandi (XMLA)
   A seconda delle autorizzazioni amministrative dell'utente che invia il comando, il [annullare](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/cancel-element-xmla) comando nel codice XML per Analysis (XMLA) può annullare un comando in una sessione, una sessione, una connessione, un processo del server o una sessione associata o connessione.  
@@ -36,7 +36,7 @@ ms.locfileid: "50145017"
 ## <a name="canceling-connections"></a>Annullamento di connessioni  
  Specificando un identificatore di connessione nel [ConnectionID](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/connectionid-element-xmla) proprietà delle **Annulla** comando, un amministratore del server può annullare tutte le sessioni associate a una determinata connessione, inclusi tutti i esecuzione di comandi e annullare la connessione.  
   
-> [!NOTE]  
+> [!NOTE]
 >  Se l'istanza di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] non è possibile individuare e annullare le sessioni associate a una connessione, ad esempio quando il data pump apre più sessioni fornendo contemporaneamente connettività HTTP, l'istanza non è possibile annullare la connessione. Se questa situazione si verifica durante l'esecuzione di un **annullare** comando, si verifica un errore.  
   
  Un amministratore del server possa recuperare le connessioni attive per un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] istanza mediante il recupero di righe dello schema DISCOVER_CONNECTIONS tramite XMLA **Discover** (metodo).  
