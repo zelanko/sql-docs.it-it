@@ -15,12 +15,12 @@ ms.assetid: 909356a0-4709-43e5-b597-33bd9bb22882
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: fd9604fb38d20e03f33623bacb606d1a9d114ae9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2272cffe68db5c4ad417bfdbf81ed45a8d309a17
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48092483"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376913"
 ---
 # <a name="rendering-extensions-overview"></a>Cenni preliminari sulle estensioni per il rendering
   Un'estensione per il rendering è un componente o un modulo di un server di report che consente di trasformare le informazioni sul layout e i dati del report in un formato specifico del dispositivo. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] include sette estensioni per il rendering: HTML, Excel, Word, CSV o Text, XML, Image e PDF. È possibile creare estensioni per il rendering aggiuntive per generare report in altri formati.  
@@ -30,7 +30,7 @@ ms.locfileid: "48092483"
   
  Nella tabella seguente sono descritte le estensioni per il rendering incluse in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
   
-|Extension Name|Description|  
+|Extension Name|Descrizione|  
 |--------------------|-----------------|  
 |`XML`|Consente di eseguire il rendering di un report in formato XML. Il report viene aperto in un browser. Le trasformazioni aggiuntive applicate a questo output XML possono rappresentare un metodo efficace per evitare di sviluppare un'estensione per il rendering personalizzata.|  
 |`CSV`|Consente di eseguire il rendering di un report in formato con valori delimitati da virgole. Il report viene aperto in uno strumento di visualizzazione associato ai formati di file CSV.|  
@@ -58,7 +58,7 @@ ms.locfileid: "48092483"
   
  La scrittura di un'estensione per il rendering personalizzata è complessa. Un'estensione per il rendering deve in genere supportare tutte le combinazioni possibili di elementi del report e richiede l'implementazione di centinaia di classi, interfacce, metodi e proprietà. Se è necessario eseguire il rendering di un report in un formato non incluso in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] e si decide di scrivere un'implementazione di codice gestito di un'estensione per il rendering, è necessario che il codice dell'estensione per il rendering implementi l'interfaccia `Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension`, richiesta dal server di report.  
   
- Per documentazione e white paper aggiuntivi su [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], vedere le più recenti risorse tecniche nel [sito Web di Reporting Services](http://go.microsoft.com/fwlink/?LinkId=19951).  
+ Per documentazione e white paper aggiuntivi su [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], vedere le più recenti risorse tecniche nel [sito Web di Reporting Services](https://go.microsoft.com/fwlink/?LinkId=19951).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Implementazione di un'estensione per il rendering](implementing-a-rendering-extension.md)   

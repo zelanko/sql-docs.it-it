@@ -1,18 +1,20 @@
 ---
-title: Persistenza dei dati con SQL Server del cluster di big data in Kubernetes | Microsoft Docs
+title: Persistenza dei dati in Kubernetes
+titleSuffix: SQL Server 2019 big data clusters
 description: Informazioni sul funzionamento di persistenza dei dati in un cluster di big data di SQL Server 2019.
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 11/06/2018
+ms.date: 12/07/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 100372f339f2d064e14b7882fdfb1a661b824cc6
-ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
+ms.custom: seodec18
+ms.openlocfilehash: 75cf78e7c73ad61e5e28ed6f0707639899d8ec19
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51221787"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53207670"
 ---
 # <a name="data-persistence-with-sql-server-big-data-cluster-on-kubernetes"></a>Persistenza dei dati con cluster di big data di SQL Server in Kubernetes
 
@@ -23,8 +25,7 @@ ms.locfileid: "51221787"
 Il modo in cui il cluster di big data di SQL Server utilizza questi volumi permanenti consiste nell'usare [classi di archiviazione](https://kubernetes.io/docs/concepts/storage/storage-classes/). È possibile creare classi di archiviazione diversi per tipi diversi di archiviazione e specificarli al momento della distribuzione di cluster dei big Data. È possibile configurare la classe di archiviazione da usare per quale scopo (pool). Crea cluster di big data server&#41 [attestazioni di volume permanente](https://kubernetes.io/docs/concepts/storage/persistent-volumes/#persistentvolumeclaims) con il nome della classe di archiviazione specificato per ogni pod necessari volumi permanenti. Quindi consente di montare i volumi permanenti corrispondenti nel pod.
 
 > [!NOTE]
-
-> Per la versione CTP 2.1, solo `ReadWriteOnce` modalità di accesso per l'intero cluster è supportata.
+> Per la versione CTP 2.2, solo `ReadWriteOnce` modalità di accesso per l'intero cluster è supportata.
 
 ## <a name="deployment-settings"></a>Impostazioni di distribuzione
 
@@ -65,7 +66,7 @@ Kubeadm non viene fornito con una classe di archiviazione predefinito. È possib
 
 I cluster locali ovviamente non vengono forniti con qualsiasi classe di archiviazione predefinito, pertanto è necessario configurare [volumi permanenti](https://kubernetes.io/docs/concepts/storage/persistent-volumes/)/[strumenti di provisioning](https://kubernetes.io/docs/concepts/storage/dynamic-provisioning/) in anticipo e quindi usare la corrispondente classi di archiviazione durante la distribuzione di cluster di SQL Server i big Data.
 
-# <a name="customize-storage-size-for-each-pool"></a>Personalizzare le dimensioni di archiviazione per ogni pool
+## <a name="customize-storage-size-for-each-pool"></a>Personalizzare le dimensioni di archiviazione per ogni pool
 Per impostazione predefinita, le dimensioni del volume permanente sottoposta a provisioning per ognuno dei POD effettuato il provisioning del cluster sono 6 GB. Questa opzione è configurabile impostando la variabile di ambiente `STORAGE_SIZE` su un valore diverso. Ad esempio, è possibile eseguire comando seguente per impostare il valore su 10 GB, prima di eseguire il `mssqlctl create cluster command`.
 
 ```bash
@@ -82,7 +83,7 @@ export STORAGE_POOL_STORAGE_SIZE=100Gi
 
 Ecco un elenco completo delle variabili di ambiente relative all'impostazione di un archivio permanente per il cluster di big data di SQL Server:
 
-| Variabile di ambiente | Valore predefinito | Description |
+| Variabile di ambiente | Valore predefinito | Descrizione |
 |---|---|---|
 | **USE_PERSISTENT_VOLUME** | true | `true` Per utilizzare attestazioni Volume permanente Kubernetes per l'archiviazione di pod. `false` usare l'archiviazione temporanea host per l'archiviazione di pod. |
 | **STORAGE_CLASS_NAME** | predefiniti | Se `USE_PERSISTENT_VOLUME` è `true` viene indicato il nome della classe di archiviazione Kubernetes da usare. |

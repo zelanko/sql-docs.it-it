@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - filter_TSQL
@@ -23,12 +22,12 @@ ms.assetid: e9699d59-c8c9-45f6-a561-f7f95084a540
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bba95120f551af10d8a67d162339086c291190b9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c7e5a6e7745f6ccb66f4aa4674216566d935df06
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47708449"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52760203"
 ---
 # <a name="spcheckjoinfilter-transact-sql"></a>sp_check_join_filter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +57,7 @@ sp_check_join_filter [ @filtered_table = ] 'filtered_table'
   
 ## <a name="result-sets"></a>Set di risultati  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**can_use_partition_groups**|**bit**|Se la pubblicazione consente le partizioni pre-calcolate. in cui **1** significa che è possono utilizzare le partizioni di valore, e **0** significa che non possono essere utilizzate.|  
 |**has_dynamic_filters**|**bit**|Se la clausola di filtro include almeno una funzione di filtro con parametri; in cui **1** indica che viene utilizzata una funzione di filtro con parametri, e **0** significa che tale funzione non viene utilizzata.|  

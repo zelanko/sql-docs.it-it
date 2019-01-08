@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: df3e932427665e7225c83043fb48e933cb503028
-ms.sourcegitcommit: 731c5aed039607a8df34c63e780d23a8fac937e1
+ms.openlocfilehash: 3c43734dbd7ef1a766f3f1258f97565ab82e175d
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37909721"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52417562"
 ---
 # <a name="monitor-with-system-center-operations-manager---analytics-platform-system"></a>Monitoraggio con System Center Operations Manager - sistema di piattaforma Analitica
 Usare System Center Operations Manager (SCOM) per monitorare l'appliance del sistema di piattaforma Analitica (AP).
@@ -39,7 +39,7 @@ Usare System Center Operations Manager (SCOM) per monitorare l'appliance del sis
    
   
 ## <a name="to-monitor-sql-server-pdw-with-scom"></a>Per monitorare SQL Server PDW con SCOM  
-Dopo aver configurato i Management Pack SCOM, fare clic sul monitoraggio riquadro di SCOM ed eseguire il drill-down **SQL Server Appliance** e quindi **Microsoft SQL Server Parallel Data Warehouse**. Di sotto di Microsoft SQL Server Parallel Data Warehouse, sono disponibili quattro opzioni: avvisi, dispositivi, diagramma di Appliance e nodi.  
+Dopo aver configurato i Management Pack SCOM, fare clic sul monitoraggio riquadro di SCOM ed eseguire il drill-down **SQL Server Appliance** e quindi **Microsoft SQL Server Parallel Data Warehouse**. Di sotto di Microsoft SQL Server Parallel Data Warehouse, sono disponibili quattro opzioni: Gli avvisi, i dispositivi, diagramma di Appliance e nodi.  
   
 ### <a name="alerts"></a>Avvisi  
 Gli avvisi sono in cui è possibile trovare gli avvisi correnti per la gestione.  

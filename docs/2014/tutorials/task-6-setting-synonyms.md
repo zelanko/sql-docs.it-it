@@ -13,15 +13,15 @@ ms.assetid: b7d35ee9-d1c9-41d9-bbc5-0ca7db93e54d
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1a028a8cc32003dfb44f6ce449a5f6313492fcfd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 00640766d7a19c91f517d8e96e6de9f863d5ed54
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48211404"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53365703"
 ---
 # <a name="task-6-setting-synonyms"></a>Attività 6: Impostazione di sinonimi
-  In questa attività si definiscono due valori di dominio, **negli Stati Uniti** e **Stati Uniti**, del **Country** dominio come sinonimi con **United States** come il valore iniziale. Poiché il **utilizza valori iniziali** è stata selezionata l'opzione quando si crea il **paese** dominio, qualsiasi **negli Stati Uniti** valori per il **paese** dominio verranno restituiti come **Stati Uniti** (quanto United States è il valore iniziale). Visualizzare [Change Domain Values](http://msdn.microsoft.com/library/hh510408.aspx) per altri dettagli.  
+  In questa attività si definiscono due valori di dominio, **negli Stati Uniti** e **Stati Uniti**, del **Country** dominio come sinonimi con **United States** come il valore iniziale. Poiché il **utilizza valori iniziali** è stata selezionata l'opzione quando si crea il **paese** dominio, qualsiasi **negli Stati Uniti** valori per il **paese** dominio verranno restituiti come **Stati Uniti** (quanto United States è il valore iniziale). Visualizzare [Change Domain Values](https://msdn.microsoft.com/library/hh510408.aspx) per altri dettagli.  
   
 1.  Selezionare **paese** dall'elenco di domini.  
   
@@ -40,6 +40,6 @@ ms.locfileid: "48211404"
      ![Stati Uniti e USA come sinonimi](../../2014/tutorials/media/et-settingsynonyms-02.jpg "negli Stati Uniti e USA come sinonimi")  
   
 ## <a name="next-step"></a>Passaggio successivo  
- [Attività 7: Creazione di una regola per un dominio composito](../../2014/tutorials/task-7-creating-a-composite-domain.md)  
+ [Attività 7: Creazione di un dominio composito](../../2014/tutorials/task-7-creating-a-composite-domain.md)  
   
   

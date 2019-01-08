@@ -20,12 +20,12 @@ author: ''
 ms.author: pamela
 manager: amitban
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: adf5cc81979d8efe9426c082464cb7d7bba52c14
-ms.sourcegitcommit: 54e480afa91e041124c73b7206df73958f4dfa9e
+ms.openlocfilehash: 37c334f5c5107b2716601916517e888d90164226
+ms.sourcegitcommit: 0bb306da5374d726b1e681cd4b5459cb50d4a87a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50150202"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "53732078"
 ---
 # <a name="sysdmdbpageinfo-transact-sql"></a>Sys.dm_db_page_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -57,7 +57,7 @@ Determina il livello di dettaglio nell'output della funzione. "Limitato" restitu
 
 ## <a name="table-returned"></a>Tabella restituita  
 
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |database_id |INT |ID database |
 |file_id |INT |ID file |
@@ -118,7 +118,7 @@ Il `sys.dm_db_page_info` funzione a gestione dinamica restituisce informazioni s
 `sys.dm_db_page_info` può essere usato al posto di `DBCC PAGE` istruzione in molti casi, ma restituisce solo le informazioni di intestazione pagina, non il corpo della pagina. `DBCC PAGE` saranno ancora necessarie per casi d'uso in cui è necessario l'intero contenuto della pagina.
 
 ## <a name="using-in-conjunction-with-other-dmvs"></a>Uso in combinazione con altre viste a gestione dinamica
-Uno dei casi di utilizzo importante `sys.dm_db_page_info` consiste nel creare un join con altre viste a gestione dinamica che espongono le informazioni della pagina.  Per facilitare il caso d'uso, una nuova colonna denominata `page_resource` è stato aggiunto che espone informazioni sulla pagina in formato esadecimale a 8 byte. Questa colonna è stata aggiunta al `sys.dm_exec_processes` e `sys.sysprocesses` e verrà aggiunto a altre DMV in futuro in base alle esigenze.
+Uno dei casi di utilizzo importante `sys.dm_db_page_info` consiste nel creare un join con altre viste a gestione dinamica che espongono le informazioni della pagina.  Per facilitare il caso d'uso, una nuova colonna denominata `page_resource` è stato aggiunto che espone informazioni sulla pagina in formato esadecimale a 8 byte. Questa colonna è stata aggiunta al `sys.dm_exec_requests` e `sys.sysprocesses` e verrà aggiunto a altre DMV in futuro in base alle esigenze.
 
 Una nuova funzione `sys.fn_PageResCracker`, accetta il `page_resource` come input e restituisce una singola riga contenente `database_id`, `file_id` e `page_id`.  Questa funzione può quindi essere utilizzata per facilitare i join tra `sys.dm_exec_requests` oppure `sys.sysprocesses` e `sys.dm_db_page_info`.
 
@@ -135,7 +135,7 @@ SELECT *
 FROM sys.dm_db_page_info (5, 1, 15, DEFAULT)
 ```
 
-### <a name="b-using-sysdmdbpageinfo-with-other-dmvs"></a>B. Uso di sys.dm_db_page_info con altre viste a gestione dinamica 
+### <a name="b-using-sysdmdbpageinfo-with-other-dmvs"></a>b. Uso di sys.dm_db_page_info con altre viste a gestione dinamica 
 
 La query seguente restituisce una riga per ogni `wait_resource` esposti dal `sys.dm_exec_requests` quando la riga contiene un valore non null `page_resource`
 

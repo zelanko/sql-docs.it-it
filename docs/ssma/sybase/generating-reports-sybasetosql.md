@@ -14,12 +14,12 @@ ms.assetid: 19278f6a-6d58-4867-9d71-c6228040466e
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 9ee167a46472f4abd4794f767ab4a8e992f4b12a
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: bb377e36f73bad59da35fabc2f6e9189544230e1
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51667910"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52411028"
 ---
 # <a name="generating-reports-sybasetosql"></a>Generazione di report (SybaseToSQL)
 I report di determinate attività eseguite usando i comandi vengono generati nella Console SSMA a livello di oggetto dell'albero.  
@@ -90,7 +90,7 @@ Utilizzare la procedura seguente per generare report:
 ### <a name="synchronize-target"></a>synchronize-target:  
 Il comando **destinazione sincronizzare** ha **report errori-a-** parametro che specifica il percorso del report di errore per l'operazione di sincronizzazione. Quindi, un file con nome **TargetSynchronizationReport&lt;n&gt;. XML** viene creato nella posizione specificata, in cui **&lt;n&gt;** è il numero di file univoco che viene incrementato con una cifra a ogni esecuzione del comando stesso.  
   
-**Nota:** se viene specificato il percorso della cartella, il parametro 'report-errori-to' diventa un attributo facoltativo per il comando 'sincronizzare-target'.  
+**Nota:** Se il percorso della cartella è specificato, 'report-errori-to' parametro diventa un attributo facoltativo per il comando 'sincronizzare-target'.  
   
 ```xml  
 <!-- Example: Synchronize target entire Database with all attributes-->  
@@ -105,9 +105,9 @@ Il comando **destinazione sincronizzare** ha **report errori-a-** parametro che 
   
 />  
 ```  
-**nome di oggetto:** specifica gli oggetti considerati per la sincronizzazione (può anche avere un nome di oggetto gruppo o nomi di oggetto individuali).  
+**Nome oggetto:** Specifica gli oggetti considerati per la sincronizzazione (può anche avere un nome di oggetto gruppo o nomi di oggetto individuali).  
   
-**in caso di errore:** consente di specificare se si desidera specificare gli errori di sincronizzazione come avvisi o errori. Opzioni disponibili per in caso di errore:  
+**in errore:** Specifica se specificare gli errori di sincronizzazione come avvisi o errori. Opzioni disponibili per in caso di errore:  
   
 -   -Totale report come avviso  
   
@@ -118,7 +118,7 @@ Il comando **destinazione sincronizzare** ha **report errori-a-** parametro che 
 ### <a name="refresh-from-database"></a>aggiornamento dal database:  
 Il comando **dal database di aggiornamento** ha **report errori-a-** parametro che specifica il percorso del report di errore per l'operazione di aggiornamento. Quindi, un file con nome **SourceDBRefreshReport&lt;n&gt;. XML** viene creato nella posizione specificata, in cui **&lt;n&gt;** è il numero di file univoco che viene incrementato con una cifra a ogni esecuzione del comando stesso.  
   
-**Nota:** se viene specificato il percorso della cartella, il parametro 'report-errori-to' diventa un attributo facoltativo per il comando 'sincronizzare-target'.  
+**Nota:** Se il percorso della cartella è specificato, 'report-errori-to' parametro diventa un attributo facoltativo per il comando 'sincronizzare-target'.  
   
 ```xml  
 <!-- Example: Refresh entire Schema (with all attributes)-->  
@@ -135,9 +135,9 @@ Il comando **dal database di aggiornamento** ha **report errori-a-** parametro c
   
 />  
 ```  
-**nome di oggetto:** specifica gli oggetti considerati per l'aggiornamento (può anche avere un nome di oggetto gruppo o nomi di oggetto individuali).  
+**Nome oggetto:** Specifica gli oggetti considerati per l'aggiornamento (può anche avere un nome di oggetto gruppo o nomi di oggetto individuali).  
   
-**in caso di errore:** specifica se occorre indicare errori di aggiornamento come avvisi o errori. Opzioni disponibili per in caso di errore:  
+**in errore:** Specifica se occorre indicare errori di aggiornamento come avvisi o errori. Opzioni disponibili per in caso di errore:  
   
 -   -Totale report come avviso  
   

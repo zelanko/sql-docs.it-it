@@ -4,27 +4,27 @@ description: Questo articolo contiene le note sulla versione e funzionalità sup
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 10/29/2018
+ms.date: 12/18/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
-ms.openlocfilehash: 4760c70f71b798fb31d96c6b36fb91afe6de9667
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 49c16a062977e13f8bf30de10811f48f24d380d3
+ms.sourcegitcommit: 9ea11d738503223b46d2be5db6fed6af6265aecc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51666020"
+ms.lasthandoff: 01/07/2019
+ms.locfileid: "54069837"
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>Note sulla versione di SQL Server 2017 in Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Le note sulla versione seguenti si applicano a SQL Server 2017 in esecuzione su Linux. Questo articolo viene suddiviso in sezioni per ogni versione. La versione GA è supportability dettagliate ed elencati problemi noti. Ogni aggiornamento cumulativo (CU) o release generali di distribuzione (GDR) è disponibile un collegamento a un articolo di supporto che descrive il modifiche CU nonché collegamenti a Linux download del pacchetto.
+Le note sulla versione seguenti si applicano a [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] in esecuzione su Linux. Questo articolo viene suddiviso in sezioni per ogni versione. La versione GA è supportability dettagliate ed elencati problemi noti. Ogni aggiornamento cumulativo (CU) o release generali di distribuzione (GDR) è disponibile un collegamento a un articolo di supporto che descrive il modifiche CU nonché collegamenti a Linux download del pacchetto.
 
 > [!TIP]
-> Queste note sulla versione sono specificamente per le versioni di SQL Server 2017. Per altre informazioni sulla nuova versione di anteprima di SQL Server 2019, vedere [note sulla versione di anteprima di SQL Server 2019 in Linux](sql-server-linux-release-notes-2019.md?view=sql-server-ver15).
+> Queste note sulla versione sono specifici per [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] rilascia. Per altre informazioni sulla nuova [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)], vedere [note sulla versione di anteprima di SQL Server 2019 in Linux](sql-server-linux-release-notes-2019.md?view=sql-server-ver15).
 
 ## <a name="supported-platforms"></a>Piattaforme supportate
 
@@ -36,18 +36,19 @@ Le note sulla versione seguenti si applicano a SQL Server 2017 in esecuzione su 
 | Motore docker 1.8 + per Windows, Mac o Linux | N/D | [Guida all'installazione](quickstart-install-connect-docker.md) | 
 
 > [!TIP]
-> Per altre informazioni, vedere la [requisiti di sistema](sql-server-linux-setup.md#system) per SQL Server in Linux. Per i criteri di supporto più recenti per SQL Server 2017, vedere la [dei criteri di supporto tecnico per Microsoft SQL Server](https://support.microsoft.com/help/4047326/support-policy-for-microsoft-sql-server).
+> Per altre informazioni, vedere la [requisiti di sistema](sql-server-linux-setup.md#system) per [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] in Linux. Per i criteri di supporto più recenti per [!INCLUDE[ssSQL17](../includes/sssql17-md.md)], vedere la [dei criteri di supporto tecnico per Microsoft SQL Server](https://support.microsoft.com/help/4047326/support-policy-for-microsoft-sql-server).
 
 ## <a name="tools"></a>Strumenti
 
-La maggior parte degli strumenti client esistenti destinati a SQL Server possono facilmente con destinazione SQL Server in esecuzione su Linux. Alcuni strumenti potrebbero avere un requisito di versione specifico per l'uso con Linux. Per un elenco completo di strumenti di SQL Server, vedere [strumenti di SQL e le utilità per SQL Server](../tools/overview-sql-tools.md).
+Client la maggior parte degli strumenti destinati [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] possono fare facilmente riferimento [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] in esecuzione su Linux. Alcuni strumenti potrebbero avere un requisito di versione specifico per l'uso con Linux. Per un elenco completo delle [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] degli strumenti, vedere [SQL strumenti e utilità per SQL Server](../tools/overview-sql-tools.md).
 
 ## <a name="release-history"></a>Cronologia versioni
 
-La tabella seguente elenca la cronologia delle versioni di SQL Server 2017.
+La tabella seguente elenca la cronologia di rilascio per [!INCLUDE[ssSQL17](../includes/sssql17-md.md)].
 
 | Versione               | Versione       | Data di rilascio |
 |-----------------------|---------------|--------------|
+| [CU13](#CU13)         | 14.0.3048.4   | 2018-12-18   |
 | [CU12](#CU12)         | 14.0.3045.24  | 2018-10-24   |
 | [CU11](#CU11)         | 14.0.3038.14  | 2018-09-20   |
 | [CU10](#CU10)         | 14.0.3037.1   | 2018-08-27 relativo all'   |
@@ -67,18 +68,32 @@ La tabella seguente elenca la cronologia delle versioni di SQL Server 2017.
 
 ## <a id="cuinstall"></a> Come installare gli aggiornamenti
 
-Se è stato configurato il repository CU (**mssql-server-2017**), quindi si otterranno i pacchetti di aggiornamento Cumulativo di SQL Server più recenti quando si eseguono le nuove installazioni. Il repository CU è l'impostazione predefinita per tutti gli articoli di installazione di pacchetti per SQL Server in Linux. Se è stato configurato il repository GDR (**mssql-server-2017-gdr**), si otterrà solo gli aggiornamenti critici della sicurezza rilasciati dal livello generale. Se è necessario il contenitore Docker CU o gli aggiornamenti GDR, vedere le immagini ufficiali per [Microsoft SQL Server in Linux per il motore Docker](https://hub.docker.com/r/microsoft/mssql-server). Per altre informazioni sulla configurazione del repository, vedere [configurare i repository per SQL Server in Linux](sql-server-linux-change-repo.md).
+Se è stato configurato il repository CU (**mssql-server-2017**), si otterrà l'aggiornamento Cumulativo più recente di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] pacchetti quando si eseguono le nuove installazioni. Il repository CU è il valore predefinito per tutti i pacchetti di articoli di installazione per [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] in Linux. Se è stato configurato il repository GDR (**mssql-server-2017-gdr**), si otterrà solo gli aggiornamenti critici della sicurezza rilasciati dal livello generale. Se è necessario il contenitore Docker CU o gli aggiornamenti GDR, vedere le immagini ufficiali per [Microsoft SQL Server in Linux per il motore Docker](https://hub.docker.com/r/microsoft/mssql-server). Per altre informazioni sulla configurazione del repository, vedere [configurare i repository per SQL Server in Linux](sql-server-linux-change-repo.md).
 
-Se si aggiornano i pacchetti esistenti di SQL Server, eseguiti il comando di aggiornamento appropriato per ogni pacchetto ottenere l'aggiornamento Cumulativo più recente. Per istruzioni di aggiornamento specifico per ogni pacchetto, vedere le guide di installazione seguenti:
+Se si sta aggiornando esistente [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] pacchetti, eseguire il comando di aggiornamento appropriato per ogni pacchetto ottenere l'aggiornamento Cumulativo più recente. Per istruzioni di aggiornamento specifico per ogni pacchetto, vedere le guide di installazione seguenti:
 
 - [Installare il pacchetto di SQL Server](sql-server-linux-setup.md#upgrade)
 - [Installare il pacchetto di ricerca Full-text](sql-server-linux-setup-full-text-search.md)
 - [Installare SQL Server Integration Services](sql-server-linux-setup-ssis.md)
 - [Abilitare SQL Server Agent](sql-server-linux-setup-sql-agent.md)
 
+## <a id="CU13"></a> CU13 (dicembre 2018)
+
+Si tratta della versione 13 aggiornamento cumulativo (CU13) di [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]. Il [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] versione per questa versione è 14.0.3048.4. Per informazioni sulle correzioni e miglioramenti in questa versione, vedere [ https://support.microsoft.com/help/4466404 ](https://support.microsoft.com/help/4466404).
+
+### <a name="package-details"></a>Dettagli del pacchetto
+
+Per le installazioni manuali o offline del pacchetto, è possibile scaricare i pacchetti Debian e RPM con le informazioni nella tabella seguente:
+
+| Pacchetto | Versione del pacchetto | Download |
+|-----|-----|-----|
+| Pacchetto di Red Hat RPM | 14.0.3048.4-1 | [Pacchetto RPM motore](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-14.0.3048.4-1.x86_64.rpm)</br>[Pacchetto RPM disponibilità elevata](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-ha-14.0.3048.4-1.x86_64.rpm)</br>[Pacchetto RPM ricerca full-text](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-fts-14.0.3048.4-1.x86_64.rpm)</br>[Pacchetto SSIS](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-is-14.0.1000.169-1.x86_64.rpm) | 
+| Pacchetto RPM SLES | 14.0.3048.4-1 | [pacchetto RPM motore MSSQL-server](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3048.4-1.x86_64.rpm)</br>[Pacchetto RPM disponibilità elevata](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3048.4-1.x86_64.rpm)</br>[Pacchetto RPM ricerca full-text](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3048.4-1.x86_64.rpm) | 
+| Pacchetto Debian Ubuntu 16.04 | 14.0.3048.4-1 | [Pacchetto Debian motore](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3048.4-1_amd64.deb)</br>[Pacchetto Debian a disponibilità elevata](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3048.4-1_amd64.deb)</br>[Pacchetto Debian ricerca full-text](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3048.4-1_amd64.deb)<br/>[Pacchetto SSIS](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
+
 ## <a id="CU12"></a> CU12 (ottobre 2018)
 
-Si tratta della versione 12 di aggiornamento cumulativo (CU12) di SQL Server 2017. La versione del motore di SQL Server per questa versione è 14.0.3045.24. Per informazioni sulle correzioni e miglioramenti in questa versione, vedere [ https://support.microsoft.com/help/4464082 ](https://support.microsoft.com/help/4464082).
+Si tratta della versione 12 di aggiornamento cumulativo (CU12) di [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]. Il [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] versione per questa versione è 14.0.3045.24. Per informazioni sulle correzioni e miglioramenti in questa versione, vedere [ https://support.microsoft.com/help/4464082 ](https://support.microsoft.com/help/4464082).
 
 ### <a name="package-details"></a>Dettagli del pacchetto
 
@@ -92,7 +107,7 @@ Per le installazioni manuali o offline del pacchetto, è possibile scaricare i p
 
 ## <a id="CU11"></a> CU11 (settembre 2018)
 
-Si tratta della versione 11 aggiornamento cumulativo (CU11) di SQL Server 2017. La versione del motore di SQL Server per questa versione è 14.0.3038.14. Per informazioni sulle correzioni e miglioramenti in questa versione, vedere [ https://support.microsoft.com/help/4462262 ](https://support.microsoft.com/help/4462262).
+Si tratta della versione 11 aggiornamento cumulativo (CU11) di [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]. Il [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] versione per questa versione è 14.0.3038.14. Per informazioni sulle correzioni e miglioramenti in questa versione, vedere [ https://support.microsoft.com/help/4462262 ](https://support.microsoft.com/help/4462262).
 
 ### <a name="package-details"></a>Dettagli del pacchetto
 
@@ -106,7 +121,7 @@ Per le installazioni manuali o offline del pacchetto, è possibile scaricare i p
 
 ## <a id="CU10"></a> CU10 (agosto 2018)
 
-Si tratta della versione di aggiornamento cumulativo 10 (CU10) di SQL Server 2017. La versione del motore di SQL Server per questa versione è 14.0.3037.1. Per informazioni sulle correzioni e miglioramenti in questa versione, vedere [ https://support.microsoft.com/help/4342123 ](https://support.microsoft.com/help/4342123).
+Si tratta della versione di aggiornamento cumulativo 10 (CU10) di [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]. Il [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] versione per questa versione è 14.0.3037.1. Per informazioni sulle correzioni e miglioramenti in questa versione, vedere [ https://support.microsoft.com/help/4342123 ](https://support.microsoft.com/help/4342123).
 
 ### <a name="package-details"></a>Dettagli del pacchetto
 
@@ -120,7 +135,7 @@ Per le installazioni manuali o offline del pacchetto, è possibile scaricare i p
 
 ## <a id="CU9-GDR2"></a> CU9-GDR2 (agosto 2018)
 
-Si tratta di un aggiornamento della sicurezza che include anche l'aggiornamento Cumulativo rilasciato in precedenza (CU9) per SQL Server 2017. La versione del motore di SQL Server per questa versione è 14.0.3035.2. Per informazioni sulle correzioni e miglioramenti in questa versione, vedere [ https://support.microsoft.com/help/4293805 ](https://support.microsoft.com/help/4293805).
+Si tratta di un aggiornamento della sicurezza che include anche l'aggiornamento Cumulativo rilasciato in precedenza (CU9) per [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]. Il [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] versione per questa versione è 14.0.3035.2. Per informazioni sulle correzioni e miglioramenti in questa versione, vedere [ https://support.microsoft.com/help/4293805 ](https://support.microsoft.com/help/4293805).
 
 ### <a name="package-details"></a>Dettagli del pacchetto
 
@@ -134,7 +149,7 @@ Per le installazioni manuali o offline del pacchetto, è possibile scaricare i p
 
 ## <a id="GDR2"></a> GDR2 (agosto 2018)
 
-Si tratta di un aggiornamento della sicurezza che include solo le correzioni di sicurezza GDR2 (e GDR1) per SQL Server 2017.  La versione del motore di SQL Server per questa versione è 14.0.2002.14. Per informazioni sulle correzioni e miglioramenti in questa versione, vedere [ https://support.microsoft.com/help/4293803 ](https://support.microsoft.com/help/4293803).
+Si tratta di un aggiornamento della sicurezza che include solo le correzioni di sicurezza GDR2 (e GDR1) per [!INCLUDE[ssSQL17](../includes/sssql17-md.md)].  Il [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] versione per questa versione è 14.0.2002.14. Per informazioni sulle correzioni e miglioramenti in questa versione, vedere [ https://support.microsoft.com/help/4293803 ](https://support.microsoft.com/help/4293803).
 
 ### <a name="package-details"></a>Dettagli del pacchetto
 
@@ -148,7 +163,7 @@ Per le installazioni manuali o offline del pacchetto, è possibile scaricare i p
 
 ## <a id="CU9"></a> CU9 (luglio 2018)
 
-Si tratta della versione di aggiornamento cumulativo 9 (CU9) di SQL Server 2017. La versione del motore di SQL Server per questa versione è 14.0.3030.27. Per informazioni sulle correzioni e miglioramenti in questa versione, vedere [ https://support.microsoft.com/help/4341265 ](https://support.microsoft.com/help/4341265).
+Si tratta della versione di aggiornamento cumulativo 9 (CU9) di [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]. Il [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] versione per questa versione è 14.0.3030.27. Per informazioni sulle correzioni e miglioramenti in questa versione, vedere [ https://support.microsoft.com/help/4341265 ](https://support.microsoft.com/help/4341265).
 
 ### <a name="package-details"></a>Dettagli del pacchetto
 
@@ -162,7 +177,7 @@ Per le installazioni manuali o offline del pacchetto, è possibile scaricare i p
 
 ## <a id="CU8"></a> CU8 (giugno 2018)
 
-Si tratta della versione di aggiornamento cumulativo 8 (CU8) di SQL Server 2017. La versione del motore di SQL Server per questa versione è 14.0.3029.16. Per informazioni sulle correzioni e miglioramenti in questa versione, vedere [ https://support.microsoft.com/help/4338363 ](https://support.microsoft.com/help/4338363).
+Si tratta della versione di aggiornamento cumulativo 8 (CU8) di [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]. Il [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] versione per questa versione è 14.0.3029.16. Per informazioni sulle correzioni e miglioramenti in questa versione, vedere [ https://support.microsoft.com/help/4338363 ](https://support.microsoft.com/help/4338363).
 
 ### <a name="package-details"></a>Dettagli del pacchetto
 
@@ -176,7 +191,7 @@ Per le installazioni manuali o offline del pacchetto, è possibile scaricare i p
 
 ## <a id="CU7"></a> CU7 (maggio 2018)
 
-Si tratta della versione di aggiornamento cumulativo 7 (CU7) di SQL Server 2017. La versione del motore di SQL Server per questa versione è 14.0.3026.27. Per informazioni sulle correzioni e miglioramenti in questa versione, vedere [ https://support.microsoft.com/help/4229789 ](https://support.microsoft.com/help/4229789).
+Si tratta della versione di aggiornamento cumulativo 7 (CU7) di [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]. Il [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] versione per questa versione è 14.0.3026.27. Per informazioni sulle correzioni e miglioramenti in questa versione, vedere [ https://support.microsoft.com/help/4229789 ](https://support.microsoft.com/help/4229789).
 
 ### <a name="package-details"></a>Dettagli del pacchetto
 
@@ -190,7 +205,7 @@ Per le installazioni manuali o offline del pacchetto, è possibile scaricare i p
 
 ## <a id="CU6"></a> CU6 (aprile 2018)
 
-Si tratta della versione di aggiornamento cumulativo 6 (CU6) di SQL Server 2017. La versione del motore di SQL Server per questa versione è 14.0.3025.34. Per informazioni sulle correzioni e miglioramenti in questa versione, vedere [ https://support.microsoft.com/help/4101464 ](https://support.microsoft.com/help/4101464).
+Si tratta della versione di aggiornamento cumulativo 6 (CU6) di [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]. Il [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] versione per questa versione è 14.0.3025.34. Per informazioni sulle correzioni e miglioramenti in questa versione, vedere [ https://support.microsoft.com/help/4101464 ](https://support.microsoft.com/help/4101464).
 
 ### <a name="package-details"></a>Dettagli del pacchetto
 
@@ -204,11 +219,11 @@ Per le installazioni manuali o offline del pacchetto, è possibile scaricare i p
 
 ## <a id="CU5"></a> CU5 (marzo 2018)
 
-Si tratta della versione di aggiornamento cumulativo 5 (CU5) di SQL Server 2017. La versione del motore di SQL Server per questa versione è 14.0.3023.8. Per informazioni sulle correzioni e miglioramenti in questa versione, vedere [ https://support.microsoft.com/help/4092643 ](https://support.microsoft.com/help/4092643).
+Si tratta della versione di aggiornamento cumulativo 5 (CU5) di [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]. Il [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] versione per questa versione è 14.0.3023.8. Per informazioni sulle correzioni e miglioramenti in questa versione, vedere [ https://support.microsoft.com/help/4092643 ](https://support.microsoft.com/help/4092643).
 
 ### <a name="known-upgrade-issue"></a>Problema di aggiornamento noto
 
-Quando esegue l'aggiornamento da una versione precedente a CU5, SQL Server non venga avviato con l'errore seguente:
+Quando esegue l'aggiornamento da una versione precedente a CU5, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] non venga avviato con l'errore seguente:
 
 ```
 Error: 4860, Severity: 16, State: 1.
@@ -217,7 +232,7 @@ Error: 912, Severity: 21, State: 2.
 Script level upgrade for database 'master' failed because upgrade step 'msdb110_upgrade.sql' encountered error 200, state
 ```
 
-Per risolvere questo errore, abilitare SQL Server Agent e riavviare SQL Server con i comandi seguenti:
+Per risolvere questo errore, abilitare SQL Server Agent e riavviare [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] con i comandi seguenti:
 
 ```bash
 sudo /opt/mssql/bin/mssql-conf set sqlagent.enabled true
@@ -236,7 +251,7 @@ Per le installazioni manuali o offline del pacchetto, è possibile scaricare i p
 
 ## <a id="CU4"></a> CU4 (febbraio 2018)
 
-Si tratta della versione di aggiornamento cumulativo 4 (CU4) di SQL Server 2017. La versione del motore di SQL Server per questa versione è 14.0.3022.28. Per informazioni sulle correzioni e miglioramenti in questa versione, vedere [ https://support.microsoft.com/help/4056498 ](https://support.microsoft.com/help/4056498).
+Si tratta della versione di aggiornamento cumulativo 4 (CU4) di [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]. Il [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] versione per questa versione è 14.0.3022.28. Per informazioni sulle correzioni e miglioramenti in questa versione, vedere [ https://support.microsoft.com/help/4056498 ](https://support.microsoft.com/help/4056498).
 
 ### <a name="package-details"></a>Dettagli del pacchetto
 
@@ -253,7 +268,7 @@ Per le installazioni manuali o offline del pacchetto, è possibile scaricare i p
 
 ## <a id="GDR1"></a> GDR1 (gennaio 2018)
 
-Si tratta di un aggiornamento della sicurezza che include solo il GDR1 correzioni per la sicurezza per SQL Server 2017. La versione del motore di SQL Server per questa versione è 14.0.2000.63. Per informazioni sulle correzioni e miglioramenti in questa versione, vedere [ https://support.microsoft.com/help/4057122 ](https://support.microsoft.com/help/4057122).
+Si tratta di un aggiornamento della sicurezza che include solo il GDR1 le patch di protezione per [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]. Il [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] versione per questa versione è 14.0.2000.63. Per informazioni sulle correzioni e miglioramenti in questa versione, vedere [ https://support.microsoft.com/help/4057122 ](https://support.microsoft.com/help/4057122).
 
 ### <a name="package-details"></a>Dettagli del pacchetto
 
@@ -267,7 +282,7 @@ Per le installazioni manuali o offline del pacchetto, è possibile scaricare i p
 
 ## <a id="CU3"></a> CU3 (gennaio 2018)
 
-Si tratta della versione di aggiornamento cumulativo 3 (CU3) di SQL Server 2017. La versione del motore di SQL Server per questa versione è 14.0.3015.40. Per informazioni sulle correzioni e miglioramenti in questa versione, vedere [ https://support.microsoft.com/help/4052987 ](https://support.microsoft.com/help/4052987).
+Si tratta della versione di aggiornamento cumulativo 3 (CU3) di [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]. Il [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] versione per questa versione è 14.0.3015.40. Per informazioni sulle correzioni e miglioramenti in questa versione, vedere [ https://support.microsoft.com/help/4052987 ](https://support.microsoft.com/help/4052987).
 
 ### <a name="package-details"></a>Dettagli del pacchetto
 
@@ -281,7 +296,7 @@ Per le installazioni manuali o offline del pacchetto, è possibile scaricare i p
 
 ## <a id="CU2"></a> CU2 (Nov 2017)
 
-Si tratta della versione di aggiornamento cumulativo 2 (CU2) di SQL Server 2017. La versione del motore di SQL Server per questa versione è 14.0.3008.27. Per informazioni sulle correzioni e miglioramenti in questa versione, vedere [ https://support.microsoft.com/help/4052574 ](https://support.microsoft.com/help/4052574).
+Si tratta della versione di aggiornamento cumulativo 2 (CU2) di [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]. Il [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] versione per questa versione è 14.0.3008.27. Per informazioni sulle correzioni e miglioramenti in questa versione, vedere [ https://support.microsoft.com/help/4052574 ](https://support.microsoft.com/help/4052574).
 
 ### <a name="package-details"></a>Dettagli del pacchetto
 
@@ -295,7 +310,7 @@ Per le installazioni manuali o offline del pacchetto, è possibile scaricare i p
 
 ## <a id="CU1"></a> CU1 (ottobre 2017)
 
-Si tratta della versione di aggiornamento cumulativo 1 (CU1) di SQL Server 2017. La versione del motore di SQL Server per questa versione è 14.0.3006.16. Per informazioni sulle correzioni e miglioramenti in questa versione, vedere [ https://support.microsoft.com/help/KB4053439 ](https://support.microsoft.com/help/4038634).
+Si tratta della versione di aggiornamento cumulativo 1 (CU1) di [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]. Il [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] versione per questa versione è 14.0.3006.16. Per informazioni sulle correzioni e miglioramenti in questa versione, vedere [ https://support.microsoft.com/help/KB4053439 ](https://support.microsoft.com/help/4038634).
 
 ### <a name="package-details"></a>Dettagli del pacchetto
 
@@ -309,7 +324,7 @@ Per le installazioni manuali o offline del pacchetto, è possibile scaricare i p
 
 ## <a id="GA"></a> Disponibilità generale (ottobre 2017)
 
-Si tratta della versione GA (General Availability) di SQL Server 2017. La versione del motore di SQL Server per questa versione è 14.0.1000.169.
+Si tratta della versione GA (General Availability) di [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]. Il [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] versione per questa versione è 14.0.1000.169.
 
 ### <a name="package-details"></a>Dettagli del pacchetto
 
@@ -334,10 +349,11 @@ Le funzionalità e i servizi seguenti non sono disponibili in Linux al momento d
 |-----|-----|
 | **Motore di database** | Replica transazionale |
 | &nbsp; | Replica di tipo merge |
+| &nbsp; | Change Data Capture (vedere SQL Server Agent) |
 | &nbsp; | Stretch database |
 | &nbsp; | PolyBase |
 | &nbsp; | Query distribuita con le connessioni 3rd-party |
-| &nbsp; | Server collegati alle origini dati diverse da SQL Server |
+| &nbsp; | Server collegati alle origini di dati diverso da [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  |
 | &nbsp; | Sistema (XP_CMDSHELL e così via) di stored procedure estesa |
 | &nbsp; | Filetable FILESTREAM |
 | &nbsp; | Gli assembly CLR con il EXTERNAL_ACCESS o UNSAFE autorizzazione impostata |
@@ -345,10 +361,10 @@ Le funzionalità e i servizi seguenti non sono disponibili in Linux al momento d
 | **SQL Server Agent** |  Sottosistemi: CmdExec, PowerShell, agente di lettura coda, SSIS, SSAS, SSRS |
 | &nbsp; | Avvisi |
 | &nbsp; | Agente di lettura log |
-| &nbsp; | Change Data Capture |
+| &nbsp; | Change Data Capture (CDC) |
 | &nbsp; | Backup gestito |
 | **Disponibilità elevata** | Mirroring del database  |
-| **Security** | Extensible Key Management |
+| **Sicurezza** | Extensible Key Management |
 | &nbsp; | Autenticazione di Active Directory per i server collegati | 
 | &nbsp; | Autenticazione di Active Directory per i gruppi di disponibilità (gruppi di disponibilità) | 
 | &nbsp; | strumenti di terze parti AD 3rd (Centrify, Vintela, Powerbroker) | 
@@ -363,41 +379,41 @@ Le funzionalità e i servizi seguenti non sono disponibili in Linux al momento d
 
 ## <a name="known-issues"></a>Problemi noti
 
-Le sezioni seguenti descrivono problemi noti con il rilascio GA (General Availability) di SQL Server 2017 in Linux.
+Le sezioni seguenti descrivono i problemi noti con il rilascio GA (General Availability) di [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] in Linux.
 
 #### <a name="general"></a>Generale
 
-- Gli aggiornamenti alla versione disponibile a livello generale di SQL Server 2017 sono supportati solo da CTP 2.1 o versione successiva. 
+- Rilasciare gli aggiornamenti per la versione GA di [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] sono supportati solo da CTP 2.1 o versione successiva. 
 
-- La lunghezza del nome host in cui SQL Server è installato deve essere composto da 15 caratteri o meno. 
+- La lunghezza del nome host in cui [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] è installato deve essere composto da 15 caratteri o meno. 
 
-    - **Risoluzione**: modificare il nome in/e così via/nome host e un valore 15 caratteri lunghi o meno.
+    - **Risoluzione**: Modificare il nome in /etc/hostname a un valore 15 caratteri lunghi o meno.
 
-- Impostare manualmente con le versioni precedenti l'ora di sistema nel tempo causerà l'esecuzione SQL Server arrestare l'aggiornamento dell'ora di sistema interno all'interno di SQL Server.
+- Impostare manualmente con le versioni precedenti l'ora di sistema nel tempo determinerà [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] per arrestare l'aggiornamento dell'ora di sistema interno all'interno di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
 
-    - **Risoluzione**: riavvio di SQL Server.
+    - **Risoluzione**: Riavviare [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
 
 - Sono supportate solo le installazioni di istanza singola.
 
-    - **Risoluzione**: se si desidera avere più di un'istanza in un determinato host, è consigliabile usare le macchine virtuali o i contenitori Docker. 
+    - **Risoluzione**: Se si desidera avere più di un'istanza in un determinato host, è consigliabile usare le macchine virtuali o i contenitori Docker. 
 
-- Gestione configurazione SQL Server non è possibile connettersi a SQL Server in Linux.
+- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager non è possibile connettersi al [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] in Linux.
 
 - La lingua predefinita del **sa** account di accesso è impostata sull'inglese.
 
-    - **Risoluzione**: modificare la lingua del **sa** account di accesso con il **ALTER LOGIN** istruzione.
+    - **Risoluzione**: Modificare la lingua del **sa** account di accesso con il **ALTER LOGIN** istruzione.
 
 #### <a name="databases"></a>Database
 
 - Impossibile spostare il database master con l'utilità mssql-conf. Gli altri database di sistema possono essere spostati con mssql-conf.
 
-- Quando si ripristina un database di cui è stato eseguito il backup in SQL Server in Windows, è necessario usare il **WITH MOVE** clausola nell'istruzione Transact-SQL.
+- Quando si ripristina un database di cui è stato eseguito il backup su [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] in Windows, è necessario utilizzare il **WITH MOVE** clausola nell'istruzione Transact-SQL.
 
-- Le transazioni distribuite che richiedono il servizio Microsoft Distributed Transaction Coordinator non sono supportate in SQL Server in esecuzione su Linux. SQL Server a server collegati sono supportati a meno che non comportano il DTC di SQL Server. Per altre informazioni, vedere [le transazioni distribuite che richiedono il servizio Microsoft Distributed Transaction Coordinator non sono supportate in SQL Server in esecuzione su Linux](https://blogs.msdn.microsoft.com/bobsql/2017/12/11/sql-server-linux-distributed-transactions-requiring-the-microsoft-distributed-transaction-coordinator-service-are-not-supported-on-sql-server-running-on-linux-sql-server-to-sql-server-distributed-tr/).
+- Non sono supportate le transazioni distribuite che richiedono il servizio Microsoft Distributed Transaction Coordinator in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] in esecuzione su Linux. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] per [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sono supportati server collegati, a meno che non comportano il DTC. Per altre informazioni, vedere [le transazioni distribuite che richiedono il servizio Microsoft Distributed Transaction Coordinator non sono supportate in SQL Server in esecuzione su Linux](https://blogs.msdn.microsoft.com/bobsql/2017/12/11/sql-server-linux-distributed-transactions-requiring-the-microsoft-distributed-transaction-coordinator-service-are-not-supported-on-sql-server-running-on-linux-sql-server-to-sql-server-distributed-tr/).
 
-- Determinati algoritmi (pacchetti di crittografia) per Transport Layer Security (TLS) non funzionano correttamente con SQL Server in Linux. Ciò comporta errori di connessione quando si prova a connettersi a SQL Server, nonché i problemi per stabilire le connessioni tra repliche di gruppi di disponibilità elevata.
+- Determinati algoritmi (pacchetti di crittografia) per Transport Layer Security (TLS) non funzionano correttamente con [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] in Linux. Ciò comporta errori di connessione quando provano a connettersi a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], nonché i problemi per stabilire le connessioni tra repliche di gruppi di disponibilità elevata.
 
-   - **Risoluzione**: modificare il **mssql.conf** script di configurazione per SQL Server in Linux per disabilitare i pacchetti di crittografia problematico, eseguendo le operazioni seguenti:
+   - **Risoluzione**: Modificare il **mssql.conf** script di configurazione per [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] in Linux per disabilitare i pacchetti di crittografia problematico, eseguendo le operazioni seguenti:
 
       1. Aggiungere quanto segue per /var/opt/mssql/mssql.conf.
 
@@ -409,17 +425,17 @@ Le sezioni seguenti descrivono problemi noti con il rilascio GA (General Availab
          >[!NOTE]
          >In the preceding code, `!` negates the expression. This tells OpenSSL to not use the following cipher suite.  
 
-      1. Riavviare SQL Server con il comando seguente.
+      1. Riavviare [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] con il comando seguente.
 
       ```bash
       sudo systemctl restart mssql-server
       ```
 
-- Impossibile ripristinare il database di SQL Server 2014 in Windows che utilizzano OLTP In memoria in SQL Server 2017 in Linux. Per ripristinare un database di SQL Server 2014 che usa OLTP in memoria, aggiornare i database a SQL Server 2016 o SQL Server 2017 in Windows prima di spostarli in SQL Server in Linux tramite backup e ripristino o scollegare o collegare.
+- [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] non è possibile ripristinare i database su Windows che utilizzano OLTP In memoria in [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] in Linux. Per ripristinare un [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] database che usa OLTP in memoria, eseguire prima l'aggiornamento dei database del [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] oppure [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] in Windows prima di spostarli a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] su Linux tramite backup e ripristino o scollegare o collegare.
 
 - Autorizzazione utente **ADMINISTER BULK OPERATIONS** , in questo momento, non è supportato in Linux.
 
-#### <a name="networking"></a>Funzionalità di rete
+#### <a name="networking"></a>Rete
 
 Le funzionalità che coinvolgono le connessioni TCP in uscita dal processo sqlservr, ad esempio i server collegati o gruppi di disponibilità, potrebbero non funzionare se vengono soddisfatte entrambe le condizioni seguenti:
 
@@ -443,7 +459,7 @@ Per risolvere questo problema, effettuare una delle operazioni seguenti:
 Se si usa **Network File System (NFS)** condivisioni remote nell'ambiente di produzione, tenere presente i requisiti di supporto seguenti:
 
 - Usare la versione NFS **4.2 o versione successiva**. Le versioni precedenti di NFS non supportano le funzionalità necessarie, ad esempio la creazione di file sparse, comune a moderno file System e fallocate.
-- Individuare solo le **/var/opt/mssql** le directory di montaggio NFS. Altri file, ad esempio i file binari del sistema di SQL Server, non sono supportati.
+- Individuare solo le **/var/opt/mssql** le directory di montaggio NFS. Altri file, ad esempio il [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] file binari del sistema, non sono supportati.
 - Assicurarsi che i client NFS utilizzino l'opzione 'nolock' durante il montaggio di tale condivisione.
 
 #### <a name="localization"></a>Localizzazione
@@ -460,7 +476,7 @@ Se si usa **Network File System (NFS)** condivisioni remote nell'ambiente di pro
    sudo MSSQL_LCID=<LcidValue> /opt/mssql/bin/mssql-conf setup
    ```
 
-- Quando in esecuzione mssql-conf setup e l'esecuzione di un'installazione non in lingua inglese di SQL Server, non corretto caratteri estesi vengono visualizzati dopo il testo localizzato, "Configurazione di Server SQL...". O, per le installazioni di base non latini, la frase potrebbe non essere presente completamente. La frase manca deve visualizzare la stringa localizzata seguente: "il PID di licenze è stato elaborato correttamente.  La nuova edizione è [\<nome\> edition] ". Questa stringa viene restituita solo per scopi informativi e il successivo aggiornamento cumulativo di SQL Server si occuperanno per tutte le lingue. Questa operazione non influenza la corretta installazione di SQL Server in alcun modo. 
+- Quando si esegue il programma di installazione mssql-conf e l'esecuzione di un'installazione non in lingua inglese di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], errati caratteri estesi vengono visualizzati dopo il testo localizzato, "Configurazione di Server SQL...". O, per le installazioni di base non latini, la frase potrebbe non essere presente completamente. La frase manca deve visualizzare la stringa localizzata seguente: "Il PID di licenze è stato elaborato correttamente. La nuova edizione è [\<nome\> edition] ". Questa stringa è di output per a scopo esclusivamente informativo e quella successiva [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] si occuperanno questo aggiornamento cumulativo per tutte le lingue. Questa operazione non influenza la corretta installazione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] in alcun modo. 
 
 #### <a name="full-text-search"></a>Ricerca full-text
 
@@ -470,15 +486,15 @@ Se si usa **Network File System (NFS)** condivisioni remote nell'ambiente di pro
 
 - Il **mssql-server-è** pacchetto non è supportato in SUSE in questa versione. È attualmente supportata in Ubuntu e Red Hat Enterprise Linux (RHEL).
 
-- Con SSIS in Linux CTP 2.1 aggiornare e versioni successive, i pacchetti SSIS possono usare le connessioni ODBC in Linux. Questa funzionalità è stata testata con SQL Server e i driver ODBC MySQL, ma anche dovrebbe funzionare con qualsiasi driver ODBC Unicode che osserva la specifica ODBC. In fase di progettazione, è possibile fornire un DSN o una stringa di connessione per connettersi ai dati ODBC; è anche possibile usare l'autenticazione di Windows. Per altre informazioni, vedere la [post di blog annuncia il supporto ODBC in Linux](https://blogs.msdn.microsoft.com/ssis/2017/06/16/odbc-is-supported-in-ssis-on-linux-ssis-helsinki-ctp2-1-refresh/).
+- Con [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] in Linux CTP 2.1 aggiornare e versioni successive, [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] i pacchetti possono usare le connessioni ODBC in Linux. Questa funzionalità è stata testata con la [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e il driver ODBC MySQL, ma anche dovrebbe funzionare con qualsiasi driver ODBC Unicode che osserva la specifica ODBC. In fase di progettazione, è possibile fornire un DSN o una stringa di connessione per connettersi ai dati ODBC; è anche possibile usare l'autenticazione di Windows. Per altre informazioni, vedere la [post di blog annuncia il supporto ODBC in Linux](https://blogs.msdn.microsoft.com/ssis/2017/06/16/odbc-is-supported-in-ssis-on-linux-ssis-helsinki-ctp2-1-refresh/).
 
 - Le funzionalità seguenti non sono supportate in questa versione, quando si eseguono i pacchetti SSIS in Linux:
-  - Database del catalogo SSIS
+  - [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] Database del catalogo
   - Esecuzione del pacchetto pianificato da SQL Agent
   - Autenticazione di Windows
   - Componenti di terze parti
   - Change Data Capture (CDC)
-  - SSIS Scale Out
+  - [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] Scalabilità orizzontale
   - Azure Feature Pack per SSIS
   - Supporto di Hadoop e HDFS
   - Microsoft Connector for SAP BW
@@ -490,15 +506,15 @@ Per altre informazioni su SSIS in Linux, vedere gli articoli seguenti:
 -   [Installare SQL Server Integration Services (SSIS) in Linux](sql-server-linux-setup-ssis.md)
 -   [Estrarre, trasformare e caricare i dati in Linux con SSIS](sql-server-linux-migrate-ssis.md)
 
-#### <a name="-a-idssmsa-sql-server-management-studio-ssms"></a>< un id = "ssms" ></a> SQL Server Management Studio (SSMS)
+#### <a id="ssms"></a> SQL Server Management Studio (SSMS)
 
-Le limitazioni seguenti si applicano a SQL Server Management Studio in Windows connessi a SQL Server in Linux.
+Le limitazioni seguenti si applicano al [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] su Windows connessi a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] in Linux.
 
 - I piani di manutenzione non sono supportati.
 
-- Gestione Data Warehouse di gestione e l'agente di raccolta dati in SQL Server Management Studio non sono supportati. 
+- Gestione Data Warehouse di gestione e l'agente di raccolta dati in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] non sono supportati. 
 
-- I componenti SSMS UI con l'autenticazione di Windows o le opzioni del registro eventi di Windows non funzionano con Linux. È comunque possibile usare queste funzionalità con altre opzioni, ad esempio account di accesso SQL. 
+- [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] I componenti dell'interfaccia utente con l'autenticazione di Windows o le opzioni del registro eventi di Windows non funzionano con Linux. È comunque possibile usare queste funzionalità con altre opzioni, ad esempio account di accesso SQL. 
 
 - Impossibile modificare il numero di file di log da mantenere.
 

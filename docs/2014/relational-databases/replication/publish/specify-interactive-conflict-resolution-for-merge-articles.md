@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - merge replication conflict resolution [SQL Server replication], interactive resolvers
@@ -16,12 +15,12 @@ ms.assetid: e298dea0-b5ef-4907-a745-cfad9793653f
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 80f3817de3ff8242d24dfc0e1ca507f186e05508
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 710db513395aa5a9c51df55b54bafbdc425ecb5d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48205301"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52749294"
 ---
 # <a name="specify-interactive-conflict-resolution-for-merge-articles"></a>Impostazione della risoluzione interattiva dei conflitti per articoli di merge
   In questo argomento viene descritto come specificare la risoluzione interattiva dei conflitti per gli articoli di merge in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
@@ -64,11 +63,11 @@ ms.locfileid: "48205301"
   
 #### <a name="to-specify-that-a-subscription-should-use-interactive-conflict-resolution"></a>Per specificare che in una sottoscrizione dovrà essere utilizzata la risoluzione interattiva dei conflitti  
   
-1.  Nella finestra di dialogo **Proprietà sottoscrizione - \<Sottoscrittore>: \<DatabaseSottoscrizione>** specificare un valore **True** per l'opzione **Risoluzione interattiva dei conflitti**. Per ulteriori informazioni sull'accesso a questa finestra di dialogo, vedere [View and Modify Push Subscription Properties](../view-and-modify-push-subscription-properties.md) e [View and Modify Pull Subscription Properties](../view-and-modify-pull-subscription-properties.md).  
+1.  Nel **proprietà sottoscrizione - \<sottoscrittore >: \<Databasesottoscrizione >** finestra di dialogo, specificare un valore di **True** per il **risoluzione interattiva dei conflitti** opzione. Per ulteriori informazioni sull'accesso a questa finestra di dialogo, vedere [View and Modify Push Subscription Properties](../view-and-modify-push-subscription-properties.md) e [View and Modify Pull Subscription Properties](../view-and-modify-pull-subscription-properties.md).  
   
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
  È possibile impostare a livello di programmazione un Sottoscrittore in modo che utilizzi questa interfaccia grafica per risolvere conflitti relativi agli articoli quando viene creata una sottoscrizione pull di una pubblicazione di tipo merge. Nel sistema di risoluzione interattivo verranno visualizzati solo i conflitti relativi ad articoli che supportano questa opzione.  
   
 #### <a name="to-create-a-merge-pull-subscription-that-uses-the-interactive-resolver"></a>Per creare una sottoscrizione pull di tipo merge che utilizza il sistema di risoluzione interattivo  
